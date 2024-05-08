@@ -1,8 +1,8 @@
 # Scripts-16.0.0.txt
-# Date: 2024-02-02, 23:11:49 GMT
+# Date: 2024-04-30, 21:48:40 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
-# For terms of use, see https://www.unicode.org/terms_of_use.html
+# For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
 #   For documentation, see https://www.unicode.org/reports/tr44/
@@ -1155,7 +1155,7 @@ A8FF          ; Devanagari # Mn       DEVANAGARI VOWEL SIGN AY
 0C4A..0C4D    ; Telugu # Mn   [4] TELUGU VOWEL SIGN O..TELUGU SIGN VIRAMA
 0C55..0C56    ; Telugu # Mn   [2] TELUGU LENGTH MARK..TELUGU AI LENGTH MARK
 0C58..0C5A    ; Telugu # Lo   [3] TELUGU LETTER TSA..TELUGU LETTER RRRA
-0C5C..0C5D    ; Telugu # Lo   [2] TELUGU ARCHAIC SHRII..TELUGU LETTER NAKAARA POLLU
+0C5D          ; Telugu # Lo       TELUGU LETTER NAKAARA POLLU
 0C60..0C61    ; Telugu # Lo   [2] TELUGU LETTER VOCALIC RR..TELUGU LETTER VOCALIC LL
 0C62..0C63    ; Telugu # Mn   [2] TELUGU VOWEL SIGN VOCALIC L..TELUGU VOWEL SIGN VOCALIC LL
 0C66..0C6F    ; Telugu # Nd  [10] TELUGU DIGIT ZERO..TELUGU DIGIT NINE
@@ -1163,7 +1163,7 @@ A8FF          ; Devanagari # Mn       DEVANAGARI VOWEL SIGN AY
 0C78..0C7E    ; Telugu # No   [7] TELUGU FRACTION DIGIT ZERO FOR ODD POWERS OF FOUR..TELUGU FRACTION DIGIT THREE FOR EVEN POWERS OF FOUR
 0C7F          ; Telugu # So       TELUGU SIGN TUUMU
 
-# Total code points: 101
+# Total code points: 100
 
 # ================================================
 
@@ -1186,14 +1186,14 @@ A8FF          ; Devanagari # Mn       DEVANAGARI VOWEL SIGN AY
 0CCA..0CCB    ; Kannada # Mc   [2] KANNADA VOWEL SIGN O..KANNADA VOWEL SIGN OO
 0CCC..0CCD    ; Kannada # Mn   [2] KANNADA VOWEL SIGN AU..KANNADA SIGN VIRAMA
 0CD5..0CD6    ; Kannada # Mc   [2] KANNADA LENGTH MARK..KANNADA AI LENGTH MARK
-0CDC..0CDE    ; Kannada # Lo   [3] KANNADA ARCHAIC SHRII..KANNADA LETTER FA
+0CDD..0CDE    ; Kannada # Lo   [2] KANNADA LETTER NAKAARA POLLU..KANNADA LETTER FA
 0CE0..0CE1    ; Kannada # Lo   [2] KANNADA LETTER VOCALIC RR..KANNADA LETTER VOCALIC LL
 0CE2..0CE3    ; Kannada # Mn   [2] KANNADA VOWEL SIGN VOCALIC L..KANNADA VOWEL SIGN VOCALIC LL
 0CE6..0CEF    ; Kannada # Nd  [10] KANNADA DIGIT ZERO..KANNADA DIGIT NINE
 0CF1..0CF2    ; Kannada # Lo   [2] KANNADA SIGN JIHVAMULIYA..KANNADA SIGN UPADHMANIYA
 0CF3          ; Kannada # Mc       KANNADA SIGN COMBINING ANUSVARA ABOVE RIGHT
 
-# Total code points: 92
+# Total code points: 91
 
 # ================================================
 

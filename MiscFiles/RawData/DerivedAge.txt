@@ -1,8 +1,8 @@
 # DerivedAge-16.0.0.txt
-# Date: 2024-02-02, 23:11:18 GMT
+# Date: 2024-04-30, 21:48:12 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
-# For terms of use, see https://www.unicode.org/terms_of_use.html
+# For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
 #   For documentation, see https://www.unicode.org/reports/tr44/
@@ -2010,13 +2010,11 @@ FDFE..FDFF    ; 14.0 #   [2] ARABIC LIGATURE SUBHAANAHU WA TAAALAA..ARABIC LIGAT
 # Newly assigned in Unicode 16.0.0 (September, 2024)
 
 0897          ; 16.0 #       ARABIC PEPET
-0C5C          ; 16.0 #       TELUGU ARCHAIC SHRII
-0CDC          ; 16.0 #       KANNADA ARCHAIC SHRII
 1B4E..1B4F    ; 16.0 #   [2] BALINESE INVERTED CARIK SIKI..BALINESE INVERTED CARIK PAREREN
 1B7F          ; 16.0 #       BALINESE PANTI BAWAK
 1C89..1C8A    ; 16.0 #   [2] CYRILLIC CAPITAL LETTER TJE..CYRILLIC SMALL LETTER TJE
 2427..2429    ; 16.0 #   [3] SYMBOL FOR DELETE SQUARE CHECKER BOARD FORM..SYMBOL FOR DELETE MEDIUM SHADE FORM
-31E4..31E5    ; 16.0 #   [2] CJK STROKE HZXG..CJK STROKE SZP
+31E4..31E5    ; 16.0 #   [2] CJK STROKE HXG..CJK STROKE SZP
 A7CB..A7CD    ; 16.0 #   [3] LATIN CAPITAL LETTER RAMS HORN..LATIN SMALL LETTER S WITH DIAGONAL STROKE
 A7DA..A7DC    ; 16.0 #   [3] LATIN CAPITAL LETTER LAMBDA..LATIN CAPITAL LETTER LAMBDA WITH STROKE
 105C0..105F3  ; 16.0 #  [52] TODHRI LETTER A..TODHRI LETTER OO
@@ -2059,6 +2057,6 @@ A7DA..A7DC    ; 16.0 #   [3] LATIN CAPITAL LETTER LAMBDA..LATIN CAPITAL LETTER L
 1FAE9         ; 16.0 #       FACE WITH BAGS UNDER EYES
 1FBCB..1FBEF  ; 16.0 #  [37] WHITE CROSS MARK..TOP LEFT JUSTIFIED LOWER RIGHT QUARTER BLACK CIRCLE
 
-# Total code points: 5187
+# Total code points: 5185
 
 # EOF

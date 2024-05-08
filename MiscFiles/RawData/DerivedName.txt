@@ -1,8 +1,8 @@
 # DerivedName-16.0.0.txt
-# Date: 2024-02-02, 23:11:26 GMT
+# Date: 2024-04-30, 21:48:18 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
-# For terms of use, see https://www.unicode.org/terms_of_use.html
+# For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
 #   For documentation, see https://www.unicode.org/reports/tr44/
@@ -2837,7 +2837,6 @@
 0C58          ; TELUGU LETTER TSA
 0C59          ; TELUGU LETTER DZA
 0C5A          ; TELUGU LETTER RRRA
-0C5C          ; TELUGU ARCHAIC SHRII
 0C5D          ; TELUGU LETTER NAKAARA POLLU
 0C60          ; TELUGU LETTER VOCALIC RR
 0C61          ; TELUGU LETTER VOCALIC LL
@@ -2934,7 +2933,6 @@
 0CCD          ; KANNADA SIGN VIRAMA
 0CD5          ; KANNADA LENGTH MARK
 0CD6          ; KANNADA AI LENGTH MARK
-0CDC          ; KANNADA ARCHAIC SHRII
 0CDD          ; KANNADA LETTER NAKAARA POLLU
 0CDE          ; KANNADA LETTER FA
 0CE0          ; KANNADA LETTER VOCALIC RR
@@ -11695,7 +11693,7 @@
 31E1          ; CJK STROKE HZZZG
 31E2          ; CJK STROKE PG
 31E3          ; CJK STROKE Q
-31E4          ; CJK STROKE HZXG
+31E4          ; CJK STROKE HXG
 31E5          ; CJK STROKE SZP
 31EF          ; IDEOGRAPHIC DESCRIPTION CHARACTER SUBTRACTION
 31F0          ; KATAKANA LETTER SMALL KU
@@ -45369,6 +45367,6 @@ E01ED         ; VARIATION SELECTOR-254
 E01EE         ; VARIATION SELECTOR-255
 E01EF         ; VARIATION SELECTOR-256
 
-# Total code points: 155000
+# Total code points: 154998
 
 # EOF

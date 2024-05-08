@@ -1,8 +1,8 @@
 # PropList-16.0.0.txt
-# Date: 2024-02-02, 23:11:37 GMT
+# Date: 2024-04-30, 21:48:28 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
-# For terms of use, see https://www.unicode.org/terms_of_use.html
+# For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
 #   For documentation, see https://www.unicode.org/reports/tr44/
@@ -133,7 +133,8 @@ FF63          ; Quotation_Mark # Pe       HALFWIDTH RIGHT CORNER BRACKET
 0700..070A    ; Terminal_Punctuation # Po  [11] SYRIAC END OF PARAGRAPH..SYRIAC CONTRACTION
 070C          ; Terminal_Punctuation # Po       SYRIAC HARKLEAN METOBELUS
 07F8..07F9    ; Terminal_Punctuation # Po   [2] NKO COMMA..NKO EXCLAMATION MARK
-0830..083E    ; Terminal_Punctuation # Po  [15] SAMARITAN PUNCTUATION NEQUDAA..SAMARITAN PUNCTUATION ANNAAU
+0830..0835    ; Terminal_Punctuation # Po   [6] SAMARITAN PUNCTUATION NEQUDAA..SAMARITAN PUNCTUATION SHIYYAALAA
+0837..083E    ; Terminal_Punctuation # Po   [8] SAMARITAN PUNCTUATION MELODIC QITSA..SAMARITAN PUNCTUATION ANNAAU
 085E          ; Terminal_Punctuation # Po       MANDAIC PUNCTUATION
 0964..0965    ; Terminal_Punctuation # Po   [2] DEVANAGARI DANDA..DEVANAGARI DOUBLE DANDA
 0E5A..0E5B    ; Terminal_Punctuation # Po   [2] THAI CHARACTER ANGKHANKHU..THAI CHARACTER KHOMUT
@@ -226,7 +227,7 @@ FF64          ; Terminal_Punctuation # Po       HALFWIDTH IDEOGRAPHIC COMMA
 1BC9F         ; Terminal_Punctuation # Po       DUPLOYAN PUNCTUATION CHINOOK FULL STOP
 1DA87..1DA8A  ; Terminal_Punctuation # Po   [4] SIGNWRITING COMMA..SIGNWRITING COLON
 
-# Total code points: 278
+# Total code points: 277
 
 # ================================================
 
@@ -865,7 +866,7 @@ FA70..FAD9    ; Ideographic # Lo [106] CJK COMPATIBILITY IDEOGRAPH-FA70..CJK COM
 16FE4         ; Ideographic # Mn       KHITAN SMALL SCRIPT FILLER
 17000..187F7  ; Ideographic # Lo [6136] TANGUT IDEOGRAPH-17000..TANGUT IDEOGRAPH-187F7
 18800..18CD5  ; Ideographic # Lo [1238] TANGUT COMPONENT-001..KHITAN SMALL SCRIPT CHARACTER-18CD5
-18D00..18D08  ; Ideographic # Lo   [9] TANGUT IDEOGRAPH-18D00..TANGUT IDEOGRAPH-18D08
+18CFF..18D08  ; Ideographic # Lo  [10] KHITAN SMALL SCRIPT CHARACTER-18CFF..TANGUT IDEOGRAPH-18D08
 1B170..1B2FB  ; Ideographic # Lo [396] NUSHU CHARACTER-1B170..NUSHU CHARACTER-1B2FB
 20000..2A6DF  ; Ideographic # Lo [42720] CJK UNIFIED IDEOGRAPH-20000..CJK UNIFIED IDEOGRAPH-2A6DF
 2A700..2B739  ; Ideographic # Lo [4154] CJK UNIFIED IDEOGRAPH-2A700..CJK UNIFIED IDEOGRAPH-2B739
@@ -877,7 +878,7 @@ FA70..FAD9    ; Ideographic # Lo [106] CJK COMPATIBILITY IDEOGRAPH-FA70..CJK COM
 30000..3134A  ; Ideographic # Lo [4939] CJK UNIFIED IDEOGRAPH-30000..CJK UNIFIED IDEOGRAPH-3134A
 31350..323AF  ; Ideographic # Lo [4192] CJK UNIFIED IDEOGRAPH-31350..CJK UNIFIED IDEOGRAPH-323AF
 
-# Total code points: 106476
+# Total code points: 106477
 
 # ================================================
 
@@ -1890,5 +1891,19 @@ FE45..FE46    ; Pattern_Syntax # Po   [2] SESAME DOT..WHITE SESAME DOT
 1F1E6..1F1FF  ; Regional_Indicator # So  [26] REGIONAL INDICATOR SYMBOL LETTER A..REGIONAL INDICATOR SYMBOL LETTER Z
 
 # Total code points: 26
+
+# ================================================
+
+0654..0655    ; Modifier_Combining_Mark # Mn   [2] ARABIC HAMZA ABOVE..ARABIC HAMZA BELOW
+0658          ; Modifier_Combining_Mark # Mn       ARABIC MARK NOON GHUNNA
+06DC          ; Modifier_Combining_Mark # Mn       ARABIC SMALL HIGH SEEN
+06E3          ; Modifier_Combining_Mark # Mn       ARABIC SMALL LOW SEEN
+06E7..06E8    ; Modifier_Combining_Mark # Mn   [2] ARABIC SMALL HIGH YEH..ARABIC SMALL HIGH NOON
+08CA..08CB    ; Modifier_Combining_Mark # Mn   [2] ARABIC SMALL HIGH FARSI YEH..ARABIC SMALL HIGH YEH BARREE WITH TWO DOTS BELOW
+08CD..08CF    ; Modifier_Combining_Mark # Mn   [3] ARABIC SMALL HIGH ZAH..ARABIC LARGE ROUND DOT BELOW
+08D3          ; Modifier_Combining_Mark # Mn       ARABIC SMALL LOW WAW
+08F3          ; Modifier_Combining_Mark # Mn       ARABIC SMALL HIGH WAW
+
+# Total code points: 14
 
 # EOF
