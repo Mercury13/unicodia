@@ -94,6 +94,8 @@ If exception triggers, nothing else works. Exceptions also work for mixed case, 
 
 Otherwise first dictionary works, then idioms.
 
+## Dictionary
+
 Some types of dictionary entries:
 * Scripts (TRIG_SCRIPT, e.g. CYRILLIC): capitalize, trigger script-based rules
 * Keywords (TRIG_CAP_NEXT, e.g. TONE): capitalize next to it
