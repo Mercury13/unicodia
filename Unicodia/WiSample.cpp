@@ -131,7 +131,8 @@ QFont WiSample::showCpBriefly(const uc::Cp& ch)
 
 void WiSample::showCp(
         const uc::Cp& ch, uc::EmojiDraw emojiDraw,
-        const uc::GlyphStyleSets& glyphSets)
+        const uc::GlyphStyleSets& glyphSets,
+        bool isMainEmoji)
 {
     if (ch.isTrueSpace()) {
             auto palette = this->palette();
@@ -215,7 +216,7 @@ void WiSample::showCp(
         clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setEmoji(ch.subj);
-        headToLib(ch.subj);
+        headToLibIf(ch.subj, isMainEmoji);
         break;
     }
 }
@@ -229,12 +230,11 @@ void WiSample::showNothing()
 }
 
 
-void WiSample::showEmoji(std::u32string_view text)
+void WiSample::showEmoji(std::u32string_view text, bool isMainEmoji)
 {
     ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-    ui->pageSampleCustom->setEmoji(text);    
-    headToSample();
-    /// @todo [future] to main emoji library?
+    ui->pageSampleCustom->setEmoji(text);
+    headToLibIf(text, isMainEmoji);
 }
 
 void WiSample::translateMe()
@@ -261,4 +261,28 @@ void WiSample::headToLib(char32_t subj)
     char buf[200];
     snprintf(buf, std::size(buf), "<a href='glc:%04X' style='" STYLE_INET "'>", int(subj));
     ui->lbSampleTitle->setText(buf + sToLib + "</a>");
+}
+
+
+void WiSample::headToLibIf(char32_t subj, bool isMainEmoji)
+{
+    if (isMainEmoji) {
+        headToSample();
+    } else {
+        headToLib(subj);
+    }
+}
+
+
+void WiSample::headToLibIf(std::u32string_view text, bool isMainEmoji)
+{
+    if (!isMainEmoji) {
+        if (auto c = EmojiPainter::getCp(text)) {
+            /// @todo [future] We rely here on the fact that Library has no complex emoji
+            ///                outside main folder
+            headToLib(c.cp);
+            return;
+        }
+    }
+    headToSample();
 }

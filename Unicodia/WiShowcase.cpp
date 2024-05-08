@@ -278,11 +278,12 @@ void WiShowcase::set(
         auto len = node.value.length();
         auto emojiDraw = node.emojiDraw();
         bool needGraph = (len > 1 && emojiDraw != uc::EmojiDraw::FORCE_TEXT);
-        if (needGraph || node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
-            ui->wiSample->showEmoji(node.value);
+        bool isMainEmoji = node.flags.have(uc::Lfg::GRAPHIC_EMOJI);
+        if (needGraph || isMainEmoji) {
+            ui->wiSample->showEmoji(node.value, isMainEmoji);
         } else if (auto cp = uc::cpsByCode[node.value[0]]) {
             // Library uses default/empty settings
-            ui->wiSample->showCp(*cp, emojiDraw, uc::GlyphStyleSets::EMPTY);
+            ui->wiSample->showCp(*cp, emojiDraw, uc::GlyphStyleSets::EMPTY, isMainEmoji);
         } else  {
             ui->wiSample->showNothing();
         }
@@ -323,7 +324,7 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
     switch (fShownObj.clazz()) {
     case ShownClass::CP:
         if (auto cp = uc::cpsByCode[fShownObj.forceCp()]) {
-            ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
+            ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets, false);
             radioGlyphStyle.set(glyphSets[fCurrChannel]);
         } else {
             ui->wiSample->showNothing();

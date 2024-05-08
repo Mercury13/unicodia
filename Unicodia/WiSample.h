@@ -26,8 +26,9 @@ public:
 
     void showCp(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
-            const uc::GlyphStyleSets& sets);
-    void showEmoji(std::u32string_view text);
+            const uc::GlyphStyleSets& sets,
+            bool isMainEmoji);
+    void showEmoji(std::u32string_view text, bool isMainEmoji);
     void showNothing();
 
     void translateMe();
@@ -65,6 +66,8 @@ private:
 
     void headToSample();
     void headToLib(char32_t subj);
+    void headToLibIf(char32_t subj, bool isMainEmoji);
+    void headToLibIf(std::u32string_view text, bool isMainEmoji);
 signals:
     void linkActivated(QWidget* initiator, const QString& link);
 private slots:
