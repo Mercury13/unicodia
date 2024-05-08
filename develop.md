@@ -101,7 +101,7 @@
 1. Tulu-Tigalari Vedic tone Svarita
    * Gagged with idiom VEDIC TONE
 1. logic gate Or
-   * That’s a really special case, no point to write rules and hurt something now or in the future → exception!
+   * You may make an idiom LOGIC GATE. Or may add two exceptions
 1. musical symbol With fingernails
    * Our rules misfire here (WITH is a preposition rather than a conjunction), a clear exception!
 
