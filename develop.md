@@ -59,7 +59,7 @@
     * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
       * This ellipse will automatically go if you sort blocks by code
   * Block extension history:
-    * Add the new version to BlockExtensionHistory
+    * Add the new version to ``BlockExtensionHistory``
     * Run it, check if the block was extended/shrunk
     * Write that to ``UcBlocks.cpp``
       * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
@@ -86,7 +86,11 @@
     * (To be written)
   * Latin in Library
     * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
-* When Unicode transitions from beta to release, go to ``MiscFiles/RawData`` and change addresses to final ones
+* When Unicode transitions from beta to release:
+  * Go to ``MiscFiles/RawData`` and change addresses to final ones
+  * Load data, run AutoBuilder, replace files
+  * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
+  * Check block extension history once again
 
 # Decapitalization rules
 There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
