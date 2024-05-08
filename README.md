@@ -36,18 +36,16 @@ See [develop.md](develop.md).
 * Recently checked Windows 11, and it works.
 
 ## Tofu/misrenderings
-* **W10/11 should support everything possible, W7 base plane only**.
-* Some base plane scripts (e.g. Georgian Nuskhuri) will not be shown the best way in W7, but will be shown.
-* Of course, same for plane 1 scripts: if I find that some font supports e.g. Lycian, I’ll include it to font chain.
-* Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi. I’ll also support Gothic, just because its serif look is really “gothic”.
+* **W10/11 should support everything possible, W7 just runs somehow**
+* Previously W7 supported the entire base plane and three important plane 1 scripts. I dropped that guarantee, though I did nothing against it, just did not test
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Update Unicode
-Wartime: as soon as beta version arrives.
+Wartime: as soon as base arrives, and release date is frozen, even on alpha review stage
 
-Peacetime (probably): as soon as some big font covering major non-Han set arrives.
+Peacetime (probably): as soon as some big font covering a major set arrives. Han too if the coverage is really high
 
-Emergency releases of one or two characters (e.g. currency, Japanese era): instantly, then think about their images.
+Emergency releases of a few characters (e.g. currency, Japanese era): instantly, even if they are tofu
 
 ## Fonts
 Fonts are always updated to release versions. Font is updated to alpha/beta if fixes a major misrender, and/or professionally implements a new character.
