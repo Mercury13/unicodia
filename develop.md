@@ -60,7 +60,7 @@
     * Run it, check if the block was extended/shrunk
     * Write that to ``UcBlocks.cpp``
       * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
-  * Decapitalization rules
+  * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
     * They are in ``AutoBuilder/data.cpp``
   * Block icons
     * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
@@ -71,6 +71,7 @@
   * Placeholders for emoji: see above
   * Fonts
     * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
+	* There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
     * Modify block icon to permanent, see above
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
