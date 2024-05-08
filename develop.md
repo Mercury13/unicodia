@@ -103,7 +103,7 @@
 1. logic gate Or
    * You may make idiom LOGIC GATE. Or may add two exceptions
 1. musical symbol With fingernails
-   * Our rules misfire here (WITH is a preposition rather than a conjunction), a clear exception!
+   * Our rules misfire here (WITH is a preposition for instrumental case rather than a conjunction), a clear exception!
 
 # If you want to rebuild GlyphWiki font
 (This section is being written)
