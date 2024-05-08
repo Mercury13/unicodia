@@ -254,9 +254,6 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
 
         auto sCp = vals.at(0);
         info.cp = fromHex(sCp);
-        /// @todo [U16, #349] Check fate of those characters
-        if (info.cp == 0x0C5C || info.cp == 0x0CDC)
-            continue;
         info.generalCat = vals.at(2);
         info.bidiCat = vals.at(4);
 
