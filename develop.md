@@ -74,7 +74,7 @@
   * Block icons
     * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
     * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
-    * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (1 or 2) you drew and how to align that picture to pixels on HiDPI
+    * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (up to two) you drew and how to align that picture to pixels on HiDPI
 * When Unicode transitions from beta to release:
   * Go to ``MiscFiles/RawData`` and change addresses to final ones
   * Load data, run AutoBuilder, replace files
