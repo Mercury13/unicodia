@@ -29,7 +29,7 @@ namespace {
     constinit ucd::NumType NUM_CJK_ZHUANG { "CJK_ZHUANG" };
     constinit ucd::NumType NUM_CJK_VIETNAMESE { "CJK_VIETNAMESE" };
 
-    constinit ucd::Numeric NO_NUMERIC {
+    const ucd::Numeric NO_NUMERIC {
         .type = &NUM_NONE,
         .value{},
     };
