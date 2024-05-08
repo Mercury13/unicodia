@@ -63,6 +63,7 @@
     * Run it, check if the block was extended/shrunk
     * Write that to ``UcBlocks.cpp``
       * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
+	* As an alternative, you may check what changed in NEWEST Blocks.txt, as older data is already logged
   * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
     * They are in ``AutoBuilder/data.cpp``
 	* See Decapitalization rules below
