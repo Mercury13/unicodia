@@ -75,30 +75,31 @@
     * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
     * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
     * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (1 or 2) you drew and how to align that picture to pixels on HiDPI
-* Data “when-when”, really optional:
-  * Placeholders for emoji: see above
-  * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
-    * Add ``Vfg::TEXT`` flag to this version
-	* Write about this version in UTranslator. Again, original is English, the rest are translations
-  * Fonts
-    * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
-	* There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
-    * Modify block icon to permanent, see above
-    * Do not forget to remove ``Ifg::MISSING``
-    * When you remove this flag, synthesized icon will change, too. Do the following.
-      * Find one of your new characters OR open Terms and scroll to Versions
-      * Open your new Unicode version, click a tiny “Find” 🔍 icon next to # of new characters (now it’s the only, but things may change)
-      * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
-  * GlyphWiki’s placeholder of CJK fonts
-    * (To be written)
-  * Latin in Library
-    * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 * When Unicode transitions from beta to release:
   * Go to ``MiscFiles/RawData`` and change addresses to final ones
   * Load data, run AutoBuilder, replace files
   * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
   * Check block extension history once again
   * Do not forget to remove ``Vfg::BETA`` flag
+
+# Adding really optional data Unicodia can live without
+* Placeholders for emoji: see above
+* Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
+  * Add ``Vfg::TEXT`` flag to this version
+  * Write about this version in UTranslator. Again, original is English, the rest are translations
+* Fonts
+  * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
+  * There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
+  * Modify block icon to permanent, see above
+  * Do not forget to remove ``Ifg::MISSING``
+  * When you remove this flag, synthesized icon will change, too. Do the following.
+    * Find one of your new characters OR open Terms and scroll to Versions
+    * Open your new Unicode version, click a tiny “Find” 🔍 icon next to # of new characters (now it’s the only, but things may change)
+    * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
+* GlyphWiki’s placeholder of CJK fonts
+  * (To be written)
+* Latin in Library
+  * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 
 # Decapitalization rules
 There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
