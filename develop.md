@@ -87,7 +87,7 @@
     * Do not forget to remove ``Ifg::MISSING``
     * When you remove this flag, synthesized icon will change, too. Do the following.
       * Find one of your new characters OR open Terms and scroll to Versions
-      * Open your new Unicode version, click a tiny “Find” icon next to # of new characters (now it’s the only, but things may change)
+      * Open your new Unicode version, click a tiny “Find” 🔍 icon next to # of new characters (now it’s the only, but things may change)
       * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
