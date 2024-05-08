@@ -94,6 +94,14 @@ If exception triggers, nothing else works. Exceptions also work for mixed case, 
 
 Otherwise first dictionary works, then idioms.
 
+Some types of dictionary entries:
+* Scripts (TRIG_SCRIPT, e.g. CYRILLIC): capitalize, trigger script-based rules
+* Keywords (TRIG_CAP_NEXT, e.g. TONE): capitalize next to it
+* Adjectives (PART_ADJECTIVE, e.g. BREATHY): if capitalized, push capitalization to the right
+  * If chain of capitalization occurred, e.g. “letter Breathy long Foobar”, only the first adjective is capitalized
+* Nouns (PART_NOUN, e.g. COMMA): if capitalization pushed, stop and do not capitalize: “letter Breathy long Foobar”, but “letter Breathy long comma”
+
+## Examples
 1. Garay capital letter Ca
    * You should turn script mode on (it’ll automatically capitalize CA using keyword LETTER), and need one rule “GARAY”, flag TRIG_SCRIPT
 1. Myanmar Eastern Pwo Karen digit Zero
