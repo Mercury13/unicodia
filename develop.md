@@ -122,6 +122,8 @@ Some types of dictionary entries:
    * Our rules misfire here (musical symbol “With fingernails” if have quotes), a clear exception!
 1. Vedic tone Svarita
    * Exception, but why? It’s found in NamesList.txt in mixed case
+1. Toto letter Breathy Iu
+   * Two rules here, script TOTO and adjective BREATHY
 
 # If you want to rebuild GlyphWiki font
 (This section is being written)
