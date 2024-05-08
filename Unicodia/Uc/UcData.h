@@ -1067,6 +1067,7 @@ namespace uc {
     const Term* findTerm(std::string_view id);
 
     enum class OldComp {
+        NONE        = 0,
         AMSTRAD     = 1 << 0,
         APPLE       = 1 << 1,
         AQUARIUS    = 1 << 2,
@@ -1082,7 +1083,12 @@ namespace uc {
         TANDY_TRS80 = 1 << 12,
         TANDY_COCO  = 1 << 13,
         KORVET      = 1 << 14,
-        LAST = KORVET
+        SMALLTALK   = 1 << 15,
+        SHARP_MZ    = 1 << 16,
+        OHIO_SCIENTIFIC = 1 << 17,
+        // Technical
+        DUMMY,
+        LAST = DUMMY - 1
     };
     DEFINE_ENUM_OPS(OldComp)
 

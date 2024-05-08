@@ -1080,10 +1080,16 @@ constinit const uc::OldCompInfo uc::oldCompInfo[] {
     { u8"RISC OS" },
     { u8"Sinclair" NBSP "ZX80/81" },
     { {}, "Prop.OldComp.Teletext" },
-    { u8"Tandy" NBSP "TRS80" NBSP "Mark" NBSP "1" },
+    { u8"Tandy" NBSP "TRS80" NBSP "Model" NBSP "I/III/4" },
     { u8"Tandy" NBSP "TRS80" NBSP "Color" },
     { {}, "Prop.OldComp.Korvet" },
+    { u8"Smalltalk" },
+    { u8"Sharp" NBSP "MZ" },
+    { u8"Ohio" NBSP "Scientific" },
 };
+
+constexpr auto I_LAST_OLD_COMP = std::size(uc::oldCompInfo) - 1;
+static_assert((1 << I_LAST_OLD_COMP) == static_cast<int>(uc::OldComp::LAST));
 
 std::u8string uc::OldCompInfo::locName() const
 {
@@ -1096,12 +1102,12 @@ std::u8string uc::OldCompInfo::locName() const
     }
 }
 
-#define REP_2(x) x,x
-#define REP_3(x) x,x,x
-#define REP_4(x) x,x,x,x
-#define REP_5(x) x,x,x,x,x
-#define REP_6(x) x,x,x,x,x,x
-#define REP_7(x) x,x,x,x,x,x,x
+#define REP_2(x) (x),(x)
+#define REP_3(x) (x),(x),(x)
+#define REP_4(x) (x),(x),(x),(x)
+#define REP_5(x) (x),(x),(x),(x),(x)
+#define REP_6(x) (x),(x),(x),(x),(x),(x)
+#define REP_7(x) (x),(x),(x),(x),(x),(x),(x)
 #define REP_8(x) REP_4(x),REP_4(x)
 #define REP_10(x) REP_4(x),REP_4(x),x,x
 #define REP_11(x) REP_4(x),REP_4(x),REP_3(x)
@@ -1169,8 +1175,8 @@ namespace {
         REP_3  (OC::AMSTRAD),                                                   // C6..C8 three men
         REP_2  (OC::TANDY_TRS80),                                               // C9 woman
                                                                                 // CA chevron
-        REP_5  ({}),                                                            // CB..CF unused
-        REP_32 ({}),                                                            // D0..EF unused
+        REP_5  (OC::NONE),                                                      // CB..CF unused
+        REP_32 (OC::NONE),                                                      // D0..EF unused
         REP_10 (OC::ATARI_ST)                                                   // F0..F9 7seg digits
     };
     static_assert(std::size(primaryOldCompData) == 0xFA);                       // FA first free
@@ -1178,8 +1184,20 @@ namespace {
     constinit const Flags<uc::OldComp> arrowOldCompData[] {
         OC::ATARI_8BIT,
         OC::TANDY_TRS80,
+        OC::SMALLTALK,
+        REP_3(OC::SHARP_MZ),
+        OC::SHARP_MZ | OC::SMALLTALK,
+        OC::SHARP_MZ,
+        REP_4(OC::OHIO_SCIENTIFIC),
     };
-    static_assert(std::size(arrowOldCompData) == 2);
+    static_assert(std::size(arrowOldCompData) == 12);
+
+    constinit const Flags<uc::OldComp> controlPicOldCompData[] {
+        OC::APPLE,
+        OC::TANDY_TRS80,
+        OC::AMSTRAD,
+    };
+    static_assert(std::size(controlPicOldCompData) == 3);
 
     struct OldCompSpan {
         std::span<const Flags<uc::OldComp>> span;
@@ -1189,10 +1207,11 @@ namespace {
     inline bool operator < (char32_t x, const OldCompSpan& y) { return (x < y.firstCp); }
 
     constinit const OldCompSpan oldCompSpans[] { // Should go in increasing order
-        { .span = arrowOldCompData,   .firstCp = 0x1F8B0 },
-        { .span = primaryOldCompData, .firstCp = 0x1FB00 },
+        { .span = controlPicOldCompData, .firstCp = 0x2427  },
+        { .span = arrowOldCompData,      .firstCp = 0x1F8B0 },
+        { .span = primaryOldCompData,    .firstCp = 0x1FB00 },
     };
-    static_assert(std::size(oldCompSpans) == 2);
+    static_assert(std::size(oldCompSpans) == 3);
 
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
