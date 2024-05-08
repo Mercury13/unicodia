@@ -103,7 +103,7 @@
 1. logic gate Or
    * That’s a really special case, no point to write rules and hurt something now or in the future → exception!
 1. musical symbol With fingernails
-   * Our rules misfire here (WITH is not a preposition), a clear exception!
+   * Our rules misfire here (WITH is a preposition rather than a conjunction), a clear exception!
 
 # If you want to rebuild GlyphWiki font
 (This section is being written)
