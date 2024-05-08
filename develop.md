@@ -90,7 +90,7 @@
 # Decapitalization rules
 There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
 
-If exception triggers, it triggers and nothing else works. Exceptions also work for mixed case, when the rest rules are skipped.
+If exception triggers, nothing else works. Exceptions also work for mixed case, when the rest rules are just skipped.
 
 Otherwise first dictionary works, then idioms.
 
