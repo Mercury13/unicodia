@@ -88,6 +88,12 @@
 * When Unicode transitions from beta to release, go to ``MiscFiles/RawData`` and change addresses to final ones
 
 # Decapitalization rules
+There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
+
+If exception triggers, it triggers and nothing else works. Exceptions also work for mixed case, when the rest rules are skipped.
+
+Otherwise first dictionary works, then idioms.
+
 1. Garay capital letter Ca
    * You should turn script mode on (it’ll automatically capitalize CA using keyword LETTER), and need one rule “GARAY”, flag TRIG_SCRIPT
 1. Myanmar Eastern Pwo Karen digit Zero
@@ -104,6 +110,8 @@
    * You may make idiom LOGIC GATE. Or may add two exceptions
 1. musical symbol With fingernails
    * Our rules misfire here (WITH is a preposition for instrumental case rather than a conjunction), a clear exception!
+1. Vedic tone Svarita
+   * Exception, but why? It’s found in NamesList.txt in mixed case
 
 # If you want to rebuild GlyphWiki font
 (This section is being written)
