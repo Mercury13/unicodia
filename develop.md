@@ -88,7 +88,7 @@
 
 # Decapitalization rules
 * Example one: “Garay capital letter Ca”
-  * You should turn script mode on (it’ll automatically capitalize Ca), and need one rule “GARAY”, flag TRIG_SCRIPT
+  * You should turn script mode on (it’ll automatically capitalize CA using keyword LETTER), and need one rule “GARAY”, flag TRIG_SCRIPT
 * Example two: “Myanmar Eastern Pwo Karen digit Zero”
   * Myanmar/Karen/Zero already work, but need to do something with “Eastern Pwo”, and need two-word script EASTERN+PWO
 * Example three: “Ol Onal letter O”
