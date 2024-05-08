@@ -96,12 +96,14 @@
   * Already got two-word script “Ol Chiki”, but it’s possible to add “Ol Onal” to the same dictionary entry (AFAIR, up to 3 or 4 options)
 * Example four: “Tulu-Tigalari letter A”
   * If you just write as in example 1, it’ll automatically capitalize to “Tulu-tigalari”, and need a custom capitalization “Tulu-Tigalari”
-* Example five: “Tulu-Tigalari Vedic tone Svarita”
-  * You may do something with common rules, but I think it’s easier to coin an exception (keyword TONE is overloaded)
-* Example six: “Garay vowel length mark”
+* Example five: “Garay vowel length mark”
   * Add idiom VOWEL LENGTH MARK
+* Example six: “Tulu-Tigalari Vedic tone Svarita”
+  * Gagged with idiom VEDIC TONE
 * Example seven: “logic gate Or”
   * That’s a really special case, no point to write rules and hurt something now or in the future → exception!
+* Example eight: “musical symbol With fingernails”
+  * Our rules misfire here (WITH is not a preposition), a clear exception!
 
 # If you want to rebuild GlyphWiki font
 (This section is being written)
