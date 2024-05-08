@@ -47,7 +47,8 @@
 * Run it
 * Copy all ``UcAuto*`` to ``Unicodia/Uc``
 * Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new script/block data (``UcData``/``UcBlocks.cpp``)
-  * While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
+  * BLOCKS: While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
+  * VERSIONS: if it’s beta, add ``Vfg::BETA`` flag
   * Now Unicodia runs somehow!!
 * Non-compulsory data (but don’t release until you fill all somehow):
   * Texts
@@ -78,10 +79,14 @@
     * It’ll show SYNTHESIZED icon, not small 16×16. Make that icon in harmony with 16×16 using ``synthIcon`` field
 * Data “when-when”, really optional:
   * Placeholders for emoji: see above
+  * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
+    * Add ``Vfg::TEXT`` flag to this version
+	* Write about this version in UTranslator. Again, original is English, the rest are translations
   * Fonts
     * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
 	* There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
     * Modify block icon to permanent, see above
+	* Do not forget to remove ``Ifg::MISSING``
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
   * Latin in Library
@@ -91,6 +96,7 @@
   * Load data, run AutoBuilder, replace files
   * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
   * Check block extension history once again
+  * Do not forget to remove ``Vfg::BETA`` flag
 
 # Decapitalization rules
 There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
