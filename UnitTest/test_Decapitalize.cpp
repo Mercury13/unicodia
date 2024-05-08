@@ -987,6 +987,46 @@ TEST (Decap, Sun2)
 
 
 ///
+///  We find idiom
+///
+TEST (Decap, Idiom1)
+{
+    auto r = decapitalize("CYRILLIC FUNKY VOWEL LENGTH MARK");
+    EXPECT_EQ("Cyrillic funky vowel length mark", r);
+}
+
+
+///
+///  Idiom does not inhibit other rules
+///
+TEST (Decap, Idiom2)
+{
+    auto r = decapitalize("CYRILLIC FUNKY VOWEL LENGTH MARK LONG BREATHY FOOBAR");
+    EXPECT_EQ("Cyrillic funky vowel length mark Long breathy Foobar", r);
+}
+
+
+///
+///  “Vedic tone” idiom works badly
+///
+TEST (Decap, VedicTone1)
+{
+    auto r = decapitalize("VEDIC TONE FOOBAR");
+    EXPECT_EQ("Vedic tone Foobar", r);
+}
+
+
+///
+///  Same, word in dictionary
+///
+TEST (Decap, VedicTone2)
+{
+    auto r = decapitalize("VEDIC TONE SVARITA");
+    EXPECT_EQ("Vedic tone Svarita", r);
+}
+
+
+///
 ///  Short decapitalization: found in table
 ///
 TEST (ShortDecap, InTable)

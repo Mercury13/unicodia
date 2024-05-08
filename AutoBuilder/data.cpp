@@ -1133,8 +1133,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
 
     // BRAHMIC SCRIPTS
         // Common-Indic
-    EX("Vedic tone Dot below")                  // Not tone’s dot
-    EX("Vedic tone Ring above")                 // Not tone’s ring
     EX("siddham")                               // siddham sign
     EX("vowel half-U")
         // Beng
@@ -1142,8 +1140,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Bengali Va")
         // Deva
     EX("Devanagari letter Candra A") // Both Candra and A are tricky, better to make an exception
-    EX("Vedic tone Svarita")        // IDK
-    EX("Vedic tone Anudatta")
+    EX("Vedic tone Svarita")    // In NamesList.txt it’s in Mixed case → need
+    EX("Vedic tone Anudatta")   // Same
         // Diak
     EX("Dives Akuru medial Ya")
     EX("Dives Akuru initial Ra")
@@ -1152,24 +1150,16 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Gurmukhi Iri")      // Same as Gurmukhi letter Uu
     EX("Gurmukhi Ura")      // Same
     EX("Gurmukhi Ek Onkar") // Ligature of phrase
-        // Knda
-    EX("Kannada Ai length mark")    // IDK how to make rule, hand-checked Length
         // Kthi
     EX("Kaithi number sign above")  // Number’s mark → number is not keyword
         // Lana
     EX("Tai Tham consonant sign High Ratha or Low Pa")
         // Mymr
     EX("Myanmar sign Pao Karen tone")  // What to do, “tone” is overloaded
-        // Orya
-    EX("Oriya Ai length mark")      // IDK how to make rule, hand-checked Length
         // Sinh
     EX("Sinhala vowel sign Kombuva haa Aela-pilla")     // Haa is also a letter
     EX("Sinhala vowel sign Kombuva haa diga Aela-pilla")
     EX("Sinhala vowel sign Kombuva haa gayanukitta")
-        // Soyo
-    EX("Soyombo vowel length mark") // IDK how to make rule, hand-checked Length
-        // Telu
-    EX("Telugu Ai length mark")     // IDK how to make rule, hand-checked Length
         // Tglg
     EX("Zambales Ra")
         // Thai
@@ -1182,12 +1172,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("A-chung")
     EX("Ya-btags (Ya ta)")
     EX("Ra-btags (Ra ta)")
-        // Tutg
-    EX("Tulu-Tigalari Vedic tone Svarita")  // What to do?
-    EX("Tulu-Tigalari Vedic tone Anudatta")
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
-    EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
 
     // NON-BRAHMIC ASIAN AND OCEAN SCRIPTS
         // Arab
@@ -1233,8 +1219,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Hebrew ligature Yiddish double Vav")
     EX("Hebrew ligature Yiddish Yod Yod Patah")
     EX("Hebrew ligature Alef Lamed")
-        // Khar
-    EX("Kharoshthi vowel length mark")      // IDK how to make rule, hand-checked Length
         // Mand
     EX("pharyngeal Hu")
     EX("I")
@@ -1274,7 +1258,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     // MODERN ASIAN SCRIPTS
         // Hmnp
     EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
-    EX("Nyiakeng Puachue Hmong syllable lengthener")  // Syllable is not keyword here
         // Mong
     EX("Mongolian vowel separator")     // Vowel is not keyword
         // Olck
@@ -1305,11 +1288,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Coptic symbol Tau Ro")
     EX("Coptic symbol Khi Ro")
     EX("Coptic symbol Shima Sima")
-        // Ethi
-    EX("Ethiopic combining gemination and vowel length mark") // Vowel is not keyword here
-    EX("Ethiopic combining vowel length mark")                // Same
-        // Gara
-    EX("Garay vowel length mark") // Vowel is not keyword here
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
         // Tfng
@@ -1318,8 +1296,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Tifinagh letter Berber Academy Yaj")
     EX("Tuareg Yab")
     EX("Tuareg Yaw")            
-        // Vaii
-    EX("Vai syllable lengthener")   // Syllable is not keyword
         // Yiii
     EX("Yi syllable iteration mark")
 
@@ -1754,45 +1730,51 @@ const std::unordered_map<std::string_view, Exception> exceptions{
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
-const std::multiset<PrefixEntry> prefixes {
-    { { "APL"sv, "FUNCTIONAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
-    { { "QUADRANT"sv }, PrefixAction::NEXT_CAP },
-    { { "BOX"sv, "DRAWINGS"sv }, PrefixAction::NEXT_CAP },
-    { { "LARGE"sv, "TYPE"sv, "PIECE"sv }, PrefixAction::NEXT_CAP },
-    { { "MAHJONG"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
-    { { "DOMINO"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
-    { { "PLAYING"sv, "CARD"sv }, PrefixAction::REST_CAPSMALL },
-    { { "TIBETAN"sv, "DIGIT"sv, "HALF"sv }, PrefixAction::NEXT_SMALL },
-    { { "SUPERSCRIPT"sv }, PrefixAction::NEXT_CAP },
-    { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
-    { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
-    { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, PrefixAction::NEXT_CAP },
-    { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
-    { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
-    { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
-    { { "CJK"sv, "STROKE"sv }, PrefixAction::REST_ALLCAP },
-    { { "MIAO"sv, "LETTER"sv, "YI"sv }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
-    { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
-    { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
-    { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },
-    { { "LINEAR"sv, "A"sv, "SIGN"sv }, PrefixAction::REST_CAP },
-    { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
-    { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, PrefixAction::NEXT_CAP },   // Consonant is tricky
-    { { "SHORTHAND"sv, "FORMAT"sv }, PrefixAction::REST_CAPSMALL },
-    { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, PrefixAction::NEXT_CAP },
-    { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
-    { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
-    { { "TAG"sv }, PrefixAction::NEXT_CAP },                    // Tags
-    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },        // clock face XXX
-    { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // circled ideograph XXX
-    { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // parenthesized ideograph XXX
-    { { "CIRCLED"sv, "HANGUL"sv }, PrefixAction::REST_CAP },        // circled Hangul Xxx
-    { { "PARENTHESIZED"sv, "HANGUL"sv }, PrefixAction::REST_CAP },  // parenthesized Hangul Xxx
-    { { "BALINESE"sv, "MUSICAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
-    { { "IDEOGRAPHIC"sv, "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },   // ideographic tally mark One
-    { { "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },
-    { { "EMOJI"sv, "COMPONENT"sv }, PrefixAction::NEXT_CAP },
-    { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, PrefixAction::NEXT_CAP },
+const std::multiset<IdiomEntry> idioms {
+    // Prefixes
+    { { "APL"sv, "FUNCTIONAL"sv, "SYMBOL"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "QUADRANT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "BOX"sv, "DRAWINGS"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "LARGE"sv, "TYPE"sv, "PIECE"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "MAHJONG"sv, "TILE"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "DOMINO"sv, "TILE"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "PLAYING"sv, "CARD"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "TIBETAN"sv, "DIGIT"sv, "HALF"sv }, IsPrefix::YES, IdiomAction::NEXT_SMALL },
+    { { "SUPERSCRIPT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "SUBSCRIPT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, IsPrefix::YES, IdiomAction::REST_CAP },      // prevent next!
+    { { "RUNIC"sv, "LETTER"sv }, IsPrefix::YES, IdiomAction::REST_CAP },
+    { { "CIRCLED"sv, "KATAKANA"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },  // IDK what to do, normal rules fail
+    { { "CJK"sv, "STROKE"sv }, IsPrefix::YES, IdiomAction::REST_ALLCAP },
+    { { "MIAO"sv, "LETTER"sv, "YI"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP }, // Yi is ambiguous
+    { { "SQUARE"sv, "ERA"sv, "NAME"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "SQUARE"sv }, 0x3300, 0x3357, IsPrefix::YES, IdiomAction::NEXT_CAP },     // And what to do with those Katakana chars?
+    { { "CYPRO-MINOAN"sv, "SIGN"sv }, IsPrefix::YES, IdiomAction::REST_ALLCAP },
+    { { "LINEAR"sv, "A"sv, "SIGN"sv }, IsPrefix::YES, IdiomAction::REST_CAP },
+    { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, IsPrefix::YES, IdiomAction::REST_CAP },
+    { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },   // Consonant is tricky
+    { { "SHORTHAND"sv, "FORMAT"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "HEBREW"sv, "ACCENT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },     // Accent is tricky, though seemingly good
+    { { "HEBREW"sv, "POINT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },      // Point is really tricky
+    { { "TAG"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },                    // Tags
+    { { "CLOCK"sv, "FACE"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },        // clock face XXX
+    { { "CIRCLED"sv, "IDEOGRAPH"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP }, // circled ideograph XXX
+    { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP }, // parenthesized ideograph XXX
+    { { "CIRCLED"sv, "HANGUL"sv }, IsPrefix::YES, IdiomAction::REST_CAP },        // circled Hangul Xxx
+    { { "PARENTHESIZED"sv, "HANGUL"sv }, IsPrefix::YES, IdiomAction::REST_CAP },  // parenthesized Hangul Xxx
+    { { "BALINESE"sv, "MUSICAL"sv, "SYMBOL"sv }, IsPrefix::YES, IdiomAction::REST_CAPSMALL },
+    { { "IDEOGRAPHIC"sv, "TALLY"sv, "MARK"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },   // ideographic tally mark One
+    { { "TALLY"sv, "MARK"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "EMOJI"sv, "COMPONENT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    // Rest idioms
+    { { "VOWEL"sv, "LENGTH"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
+    { { "VEDIC"sv, "TONE"sv}, IsPrefix::NO, IdiomAction::NEXT_CAP },
+    { { "AI"sv, "LENGTH"sv, "MARK"sv}, IsPrefix::NO, IdiomAction::FIRST_CAP },
+    { { "SYLLABLE"sv, "LENGTHENER"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
 };
 
 
@@ -2336,49 +2318,63 @@ namespace {
         r.append(x.data() + 1, x.length() - 1);
     }
 
-    bool doWordsFit(const SafeVector<Word>& words, Buf1d<const std::string_view> prefix)
+    /// @param [in] wantWordAfter  [+] want at least one word after idiom
+    bool doesIdiomFit(const SafeVector<Word>& words, size_t pos,
+                    Buf1d<const std::string_view> idiom,
+                    bool wantWordAfter)
     {
-        return words.size() > prefix.size()
-                && std::equal(prefix.begin(), prefix.end(), words.begin(),
-                            +[](std::string_view x, const Word& y) {
+        size_t wantedSize = idiom.size() + pos + static_cast<int>(wantWordAfter);
+        return words.size() >= wantedSize
+                && std::equal(idiom.begin(), idiom.end(), words.begin() + pos,
+                            [](std::string_view x, const Word& y) {
                                 return x == y.original;
                             });
     }
 
-    void doPrefixAction(SafeVector<Word>& words, size_t prefixSize, PrefixAction action)
+    void doIdiomAction(SafeVector<Word>& words,
+                       size_t iStart, size_t iEndPlus,
+                       IdiomAction action)
     {
         // Prefix actions remove appropriate dictionary flags,
         // as they are more important than dic. properties
         switch (action) {
-        case PrefixAction::REST_SMALL:
-            for (size_t i = prefixSize; i < words.size(); ++i)
+        case IdiomAction::REST_SMALL:
+            for (size_t i = iEndPlus; i < words.size(); ++i)
                 words[i].isCapital = false;
             break;
-        case PrefixAction::REST_CAP:
-            for (size_t i = prefixSize; i < words.size(); ++i) {
+        case IdiomAction::SECOND_THIRD_SMALL:
+            for (size_t i = iStart + 1; i < iEndPlus; ++i) {
+                auto& w = words[i];
+                w.isCapital = false;
+            } break;
+        case IdiomAction::REST_CAP:
+            for (size_t i = iEndPlus; i < words.size(); ++i) {
                 auto& w = words[i];
                 w.isCapital = true;
                 w.dicFlags.remove(Dicf::CAP_SMALL);
             }
             break;
-        case PrefixAction::REST_ALLCAP:
-            for (size_t i = prefixSize; i < words.size(); ++i) {
+        case IdiomAction::REST_ALLCAP:
+            for (size_t i = iEndPlus; i < words.size(); ++i) {
                 auto& w = words[i];
                 w.isAllCap = true;
                 w.dicFlags.remove(Dicf::CAP_SMALL);
             }
             break;
-        case PrefixAction::REST_CAPSMALL:
-            for (size_t i = prefixSize + 1; i < words.size(); ++i)
+        case IdiomAction::REST_CAPSMALL:
+            for (size_t i = iEndPlus + 1; i < words.size(); ++i)
                 words[i].isCapital = false;
             [[fallthrough]];
-        case PrefixAction::NEXT_CAP: {
-                auto& wp = words[prefixSize];
+        case IdiomAction::NEXT_CAP: {
+                auto& wp = words[iEndPlus];
                 wp.isCapital = true;
                 wp.dicFlags.remove(Dicf::CAP_SMALL);
             } break;
-        case PrefixAction::NEXT_SMALL:
-            words[prefixSize].isCapital = false;
+        case IdiomAction::NEXT_SMALL:
+            words[iEndPlus].isCapital = false;
+            break;
+        case IdiomAction::FIRST_CAP:
+            words[iStart].isCapital = true;
             break;
         }
     }
@@ -2434,7 +2430,7 @@ namespace {
         for (auto& v : words) {
             std::cout << v.original << " ";
             dump(v.dicFlags);
-            std::cout << std::endl;
+            std::cout << '\n';
         }
     }
 
@@ -2683,14 +2679,18 @@ std::string decapitalize(
         }
     }
 
-    // Check for prefixes
-    PrefixEntry prefixKey { words[0].original, PrefixAction::NOMATTER };
-    auto range = prefixes.equal_range(prefixKey);
-    for (auto it = range.first; it != range.second; ++it) {
-        auto& entry = *it;
-        if (cp >= entry.lo && cp <= entry.hi && doWordsFit(words, entry.toBuf())) {
-            doPrefixAction(words, entry.nTriggers, entry.action);
-            break;
+    // Check for idioms
+    for (size_t posIdiom = 0; posIdiom < words.size(); ++posIdiom) {
+        IdiomEntry idiomKey { words[posIdiom].original, IsPrefix::NO, IdiomAction::NOMATTER };
+        auto range = idioms.equal_range(idiomKey);
+        for (auto it = range.first; it != range.second; ++it) {
+            auto& idiom = *it;
+            if ((!idiom.isPrefix() || posIdiom == 0)           // Prefix?
+                    && cp >= idiom.lo && cp <= idiom.hi      // Code point OK?
+                    && doesIdiomFit(words, posIdiom, idiom.toBuf(), idiom.doesNeedWordAfter())) {
+                doIdiomAction(words, posIdiom, posIdiom + idiom.nTriggers, idiom.action);
+                break;
+            }
         }
     }
 

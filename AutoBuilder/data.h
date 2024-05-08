@@ -71,48 +71,64 @@ struct DicEntry
 };
 
 
-enum class PrefixAction {
-    REST_CAPSMALL,
-    NEXT_CAP,
-    NEXT_SMALL,
-    REST_SMALL,
-    REST_CAP,
-    REST_ALLCAP,
-    NOMATTER = 0
+enum class IdiomAction {
+    // Work AFTER idiom
+    REST_CAPSMALL,       ///< Rest words → Sentence case
+    NEXT_CAP,            ///< Next word → Capital
+    NEXT_SMALL,          ///< Next word → small
+    REST_SMALL,          ///< Rest words → small case
+    REST_CAP,            ///< Rest words → Title Case
+    REST_ALLCAP,         ///< Rest words → ALL CAPS CASE
+    // Work ON idiom
+    SECOND_THIRD_SMALL,  ///< Second, third, fourth… words of idiom are small
+    FIRST_CAP,           ///< First word of idiom is capital
+    // Spefial constants
+    NOMATTER = 0,
+    FIRST_ON_IDIOM = SECOND_THIRD_SMALL,  ///< First action that works ON idiom
 };
 
-struct PrefixEntry {
+
+enum class IsPrefix : unsigned char { NO, YES };
+
+
+struct IdiomEntry {
 private:
-    using This = PrefixEntry;
+    using This = IdiomEntry;
 public:
     size_t nTriggers;
     enum { SZ = 10 };
     std::string_view triggers[SZ];
-    const PrefixAction action;
+    const IsPrefix ecIsPrefix;
+    const IdiomAction action;
     char32_t lo = 0, hi = 0xFFFFFF;
 
     template <size_t N>
-    constexpr PrefixEntry(const std::string_view (&aTriggers)[N],
-                          PrefixAction aAction)
-        :  nTriggers(N), action(aAction)
+    constexpr IdiomEntry(const std::string_view (&aTriggers)[N],
+                          IsPrefix aIsPrefix, IdiomAction aAction)
+        :  nTriggers(N), ecIsPrefix(aIsPrefix), action(aAction)
     {
         static_assert(N <= SZ, "Prefix too long");
         for (size_t i = 0; i < N; ++i)
             triggers[i] = aTriggers[i];
     }
     template <size_t N>
-    constexpr PrefixEntry(const std::string_view (&aTriggers)[N],
+    constexpr IdiomEntry(const std::string_view (&aTriggers)[N],
                           char32_t aLo, char32_t aHi,
-                          PrefixAction aAction)
-        : This(aTriggers, aAction)
+                          IsPrefix aIsPrefix,
+                          const IdiomAction& aAction)
+        : This(aTriggers, aIsPrefix, aAction)
         { lo = aLo; hi = aHi; }
-    PrefixEntry(std::string_view aTrigger, PrefixAction aAction)
-        : nTriggers(1), triggers { aTrigger, {} }, action(aAction) {}
+    IdiomEntry(std::string_view aTrigger, IsPrefix aIsPrefix, IdiomAction aAction)
+        : nTriggers(1), triggers { aTrigger, {} }, ecIsPrefix(aIsPrefix), action(aAction) {}
 
     Buf1d<const std::string_view> toBuf() const { return { nTriggers, triggers }; }
+    constexpr bool doesNeedWordAfter() const { return (action < IdiomAction::FIRST_ON_IDIOM); }
+    constexpr bool isPrefix() const { return static_cast<bool>(ecIsPrefix); }
 };
 
-inline bool operator < (const PrefixEntry& x, const PrefixEntry& y) { return x.triggers[0] < y.triggers[0]; }
+inline bool operator < (
+        const IdiomEntry& x, const IdiomEntry& y)
+    { return x.triggers[0] < y.triggers[0]; }
 
 ///
 ///  Deprecated info
@@ -123,7 +139,7 @@ struct DepInfo
 };
 
 extern const std::unordered_map<std::string_view, DicEntry> dictionary;
-extern const std::multiset<PrefixEntry> prefixes;
+extern const std::multiset<IdiomEntry> idioms;
 extern const std::set<std::string_view> langNames;
 extern const std::unordered_map<char32_t, std::string_view> abbrevs;
 extern const std::unordered_set<std::string_view> cuneiformKeywords;

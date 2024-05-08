@@ -98,7 +98,7 @@
 * Example five: “Tulu-Tigalari Vedic tone Svarita”
   * You may do something with common rules, but I think it’s easier to coin an exception (keyword TONE is overloaded)
 * Example six: “Garay vowel length mark”
-  * VOWEL is ofter a keyword (compare “Klingon vowel Foo”), but here it is NOT → just write an exception
+  * Added idiom VOWEL LENGTH MARK
 * Example seven: “logic gate Or”
   * That’s a really special case, no point to write rules and hurt something now or in the future → exception!
 
