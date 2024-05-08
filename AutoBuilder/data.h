@@ -79,7 +79,7 @@ enum class IdiomAction {
     REST_SMALL,          ///< Rest words → small case
     REST_CAP,            ///< Rest words → Title Case
     REST_ALLCAP,         ///< Rest words → ALL CAPS CASE
-    REST_DETECT_LETTERS, ///< Rest words → detect letters I J K
+    REST_DETECT_LETTERS, ///< Rest words → detect letters I J K some garbage
     // Work ON idiom
     SECOND_THIRD_SMALL,  ///< Second, third, fourth… words of idiom are small
     FIRST_CAP,           ///< First word of idiom is capital
