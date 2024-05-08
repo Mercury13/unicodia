@@ -7,13 +7,13 @@
 * Then you need to recreate working directory, symlinking all files/folders existing in original Unicodia.
 * Congratulations! You can now run Unicodia directly from Qt Creator!
 
-## Hidden commands
+# Hidden commands
 * Ctrl+T — tofu stats
 * F12 — reload translation from disk. Locale does NOT reload
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
 * Ctrl+Shift+Q — test emoji repainting engine
 
-## How to update emoji?
+# How to update emoji?
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * Originals is directory for original SVGs, Remakes if for remade but unoptimized
@@ -40,12 +40,51 @@
     * Check what’s different using QaCompareBmp. If some colour is repainted erroneously (teacher/blackboard, fireman/insignia) → change colour a bit and repeat
     * If you are satisfied with difference → press “Good” button in QaCompareBmp.
 
-## If you want to rebuild GlyphWiki font
+# How to update to next Unicode
+* Go to ``MiscFiles/RawData``, modify ``load.bat`` and load bases of the next Unicode
+* Make ``AutoBuilder`` run (who knows what will be added to the next bases)
+  * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: at the time of writing it’s #349
+* Run it
+* Copy all ``UcAuto*`` to ``Unicodia/Uc``
+* Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new script/block data (``UcData``/``UcBlocks.cpp``)
+  * While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
+  * Now Unicodia runs somehow!!
+* Non-compulsory data:
+  * Texts
+    * Run UTranslator, open ``en.uorig``
+    * Write additional data Unicodia may run w/o: first of all script/block textual info
+    * If you know languages, translate to Russian/Ukrainian using the same UTranslator
+    * If some blocks should be logically near, but specific language makes a mess (Greek/Ancient Greek numbers), add an ellipsis to the beginning using locale.xml
+  * Block extension history:
+    * Add the new version to BlockExtensionHistory
+    * Run it, check if the block was extended/shrunk
+    * Write that to ``UcBlocks.cpp``
+      * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
+  * Decapitalization rules
+    * They are in ``AutoBuilder/data.cpp``
+  * Block icons
+    * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
+    * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
+    * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (1 or 2) you drew and how to align that picture to pixels on HiDPI
+    * Open your new Unicode, clock “Find” icon
+    * It’ll show SYNTHESIZED icon, not small 16×16. Make that icon in harmony with 16×16 using ``synthIcon`` field
+  * Placeholders for emoji: see above
+  * Fonts
+    * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
+    * Modify block icon to permanent, see above
+  * GlyphWiki’s placeholder of CJK fonts
+    * (To be written)
+  * Latin in Library
+    * AutoBuilder has some sort of forget checker, and when the character becomes in the font, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
+* When Unicode transitions from beta to release, go to ``MiscFiles/RawData`` and change addresses to final ones
+
+# If you want to rebuild GlyphWiki font
 (This section is being written)
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
   * **Warning**: transition to older/newer Unicode requires a bit of handwork.
+* BlockExtensionHistory: 
 * GwLoader — loads glyphs from GlyphWiki
 * GwRemake — does an auto-remake of GlyphWiki
 * PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
