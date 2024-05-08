@@ -49,7 +49,7 @@
 * Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new script/block data (``UcData``/``UcBlocks.cpp``)
   * While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
   * Now Unicodia runs somehow!!
-* Non-compulsory data:
+* Non-compulsory data (but don’t release until you fill all somehow):
   * Texts
     * Run UTranslator, open ``en.uorig``
     * Write additional data Unicodia may run w/o: first of all script/block textual info
@@ -63,10 +63,10 @@
     * Run it, check if the block was extended/shrunk
     * Write that to ``UcBlocks.cpp``
       * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
-	* As an alternative, you may check what changed in NEWEST Blocks.txt, as older data is already logged
+	* As an alternative, you may check what changed in NEWEST Blocks.txt, as older data is already written
   * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
     * They are in ``AutoBuilder/data.cpp``
-	* See Decapitalization rules below
+	* See _Decapitalization rules_ below
     * Of course, run AutoBuilder
     * Always compare before and after with some diff tool! Heal one thing and hurt another — that’s frequent!
     * Copy CPP files again
@@ -76,6 +76,7 @@
     * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (1 or 2) you drew and how to align that picture to pixels on HiDPI
     * Open your new Unicode, clock “Find” icon
     * It’ll show SYNTHESIZED icon, not small 16×16. Make that icon in harmony with 16×16 using ``synthIcon`` field
+* Data “when-when”, really optional:
   * Placeholders for emoji: see above
   * Fonts
     * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
