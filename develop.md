@@ -88,7 +88,7 @@
     * When you remove this flag, synthesized icon will change, too. Do the following.
       * Find one of your new characters OR open Terms and scroll to Versions
       * Open your new Unicode version, click “Find” icon
-      * It’ll show SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
+      * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
   * Latin in Library
