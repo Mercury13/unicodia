@@ -303,7 +303,7 @@
 	</f>
 	<f loc="Latin3" forgetTest="1">
 		<f loc="SmallCap" forgetTest="0" hasText="1">
-			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ғ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ǫ ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x ʏ ᴢ</d>
+			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ғ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ǫ ʀ ꜱ s ᴛ ᴜ ᴠ ᴡ x ʏ ᴢ</d>
 		</f>
 		<f loc="SuperCap" forgetTest="0" tile="0">
 			<d>ᴬ ᴮ ꟲ ᴰ ᴱ ꟳ ᴳ ᴴ ᴵ ᴶ ᴷ ᴸ ᴹ ᴺ ᴼ ᴾ ꟴ ᴿ ᵀ ᵁ ⱽ ᵂ</d>
