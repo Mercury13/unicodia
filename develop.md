@@ -109,7 +109,7 @@ Otherwise first dictionary works, then idioms.
 1. logic gate Or
    * You may make idiom LOGIC GATE. Or may add two exceptions
 1. musical symbol With fingernails
-   * Our rules misfire here (WITH is a preposition for instrumental case rather than a conjunction), a clear exception!
+   * Our rules misfire here (musical symbol “With fingernails” if have quotes), a clear exception!
 1. Vedic tone Svarita
    * Exception, but why? It’s found in NamesList.txt in mixed case
 
