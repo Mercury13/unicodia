@@ -75,8 +75,6 @@
     * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
     * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
     * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (1 or 2) you drew and how to align that picture to pixels on HiDPI
-    * Open your new Unicode, clock “Find” icon
-    * It’ll show SYNTHESIZED icon, not small 16×16. Make that icon in harmony with 16×16 using ``synthIcon`` field
 * Data “when-when”, really optional:
   * Placeholders for emoji: see above
   * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
@@ -86,7 +84,11 @@
     * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
 	* There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
     * Modify block icon to permanent, see above
-	* Do not forget to remove ``Ifg::MISSING``
+    * Do not forget to remove ``Ifg::MISSING``
+    * When you remove this flag, synthesized icon will change, too. Do the following.
+      * Find one of your new characters OR open Terms and scroll to Versions
+      * Open your new Unicode version, click “Find” icon
+      * It’ll show SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
   * Latin in Library
