@@ -3437,7 +3437,7 @@
      <orig>Arrows supplemental C</orig>
     </text>
     <text id="Text">
-     <orig>As of Unicode{{_}}13.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, and two arrows from legacy computers. Unicode 14/15 introduced no new arrows.</orig>
+     <orig>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</orig>
     </text>
    </group>
    <group id="1F900">

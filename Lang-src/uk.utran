@@ -4611,8 +4611,8 @@
      <transl>Стрілки додаткові C</transl>
     </text>
     <text id="Text">
-     <orig>As of Unicode{{_}}13.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, and two arrows from legacy computers. Unicode 14/15 introduced no new arrows.</orig>
-     <transl>За станом на Юнікод{{_}}13.0{{-}}148 стрілок зі шрифтів ''Wingdings'' та ''Webdings'', і дві стрілки зі старих комп’ютерів. Юнікод{{_}}14.0 не{{_}}приніс нових стрілок.</transl>
+     <orig>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</orig>
+     <transl>За станом на Юнікод{{_}}16.0{{-}}148 стрілок зі шрифтів ''Wingdings'' та ''Webdings'', 12 стрілок зі старих комп’ютерів, та дві стрілки для [[ps:Egyp|єгипетських]] ієрогліфів (напрямок читання тексту стовпцями).</transl>
     </text>
    </group>
    <group id="1F900">
