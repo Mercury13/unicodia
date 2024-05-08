@@ -374,7 +374,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::TECHNICAL },
+            EcScript::NONE, EcFont::TECHNICAL, Bfg::EMOJI_BY_CASE },
     // Control pictures OK
     { 0x2400, 0x243F, { L'␣', EcContinent::NONE },
             "Control Pictures",

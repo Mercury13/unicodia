@@ -2353,11 +2353,23 @@ namespace {
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
+        // Misc technical
+        case 0x23CF:  // VCR eject
+        case 0x23ED:  // VCR next
+        case 0x23EE:  // VCR prev
+        case 0x23EF:  // VCR play/pause
+        case 0x23F8:  // VCR pause
+        case 0x23F9:  // VCR stop
+        case 0x23FA:  // VCR record
+        // Misc symbols
+        case 0x2611:  // ballot with check
+        case 0x2622:  // radioactive
+        case 0x2623:  // biohazard
         case 0x261D:  // finger up
         case 0x2626:  // Orthodox
         case 0x262A:  // Muslim
         case 0x262E:  // peace
-        case 0x262F:  // Dao
+        case 0x262F:  // Dao (yin/yang)
         case 0x2638:  // Hindu
         case 0x2639:  // sad smiley
         case 0x263A:  // smiley
@@ -2369,6 +2381,9 @@ namespace {
         case 0x2665:  // ♥
         case 0x2666:  // ♦
         case 0x2668:  // hot springs
+        case 0x267B:  // recycle
+        case 0x267E:  // non-acid (permanent) paper
+        case 0x26A7:  // transgender
             return false;
         default:
             return true;
