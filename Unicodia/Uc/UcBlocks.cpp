@@ -836,7 +836,7 @@ constinit const uc::Block uc::blocks[] {
             "Elbasan",
             { EcScript::Elba, 0 }, MapType::EU_OTHER_DEAD, EcScript::Elba },
     // Caucasian OK
-    { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE },
+    { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE, Ifg::HISTORICAL },
             "Caucasian Albanian",
             { EcScript::Aghb, 0 }, MapType::EU_OTHER_DEAD, EcScript::Aghb },
     // Vithkuqi OK
