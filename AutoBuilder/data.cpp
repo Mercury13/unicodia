@@ -1039,22 +1039,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("old Cyrillic yest")         // letter is SMALL
     EX("old Cyrillic i")            // letter is SMALL
         // Dupl
-    EX("Duployan letter D S")                       // Same
-    EX("Duployan letter R S")                       // Same
-    EX("Duployan letter M S")                       // Same
-    EX("Duployan letter N S")                       // Same
-    EX("Duployan letter J S")                       // Same
-    EX("Duployan letter S S")                       // Same
-    EX("Duployan letter M N S")                     // Same
-    EX("Duployan letter N M S")                     // Same
-    EX("Duployan letter J M S")                     // Same
-    EX("Duployan letter S J S")                     // Same
-    EX("Duployan letter J S with dot")              // Same
-    EX("Duployan letter J N S")                     // Same
-    EX("Duployan letter T S")                       // Same
-    EX("Duployan letter T R S")                     // Same
-    EX("Duployan letter K R S")                     // Same
-    EX("Duployan letter G R S")                     // Same
     EX("Duployan affix Attached I hook")            // Same
     EX("Duployan thick letter selector")            // A clear miss of my algo, IDK what to do
     EX("Shorthand format Letter overlap")           // Letter is not keyword
@@ -1296,8 +1280,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Tifinagh letter Berber Academy Yaj")
     EX("Tuareg Yab")
     EX("Tuareg Yaw")            
-        // Yiii
-    EX("Yi syllable iteration mark")
 
     // Misc letters
     EX2("A", Exf::MIXCASE)
@@ -1770,11 +1752,13 @@ const std::multiset<IdiomEntry> idioms {
     { { "TALLY"sv, "MARK"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     { { "EMOJI"sv, "COMPONENT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "DUPLOYAN"sv, "LETTER"sv }, IsPrefix::YES, IdiomAction::REST_DETECT_LETTERS },
     // Rest idioms
     { { "VOWEL"sv, "LENGTH"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
     { { "VEDIC"sv, "TONE"sv}, IsPrefix::NO, IdiomAction::NEXT_CAP },
     { { "AI"sv, "LENGTH"sv, "MARK"sv}, IsPrefix::NO, IdiomAction::FIRST_CAP },
     { { "SYLLABLE"sv, "LENGTHENER"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
+    { { "SYLLABLE"sv, "ITERATION"sv, "MARK"sv}, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
 };
 
 
@@ -2352,6 +2336,14 @@ namespace {
                 auto& w = words[i];
                 w.isCapital = true;
                 w.dicFlags.remove(Dicf::CAP_SMALL);
+            }
+            break;
+        case IdiomAction::REST_DETECT_LETTERS:
+            for (size_t i = iEndPlus; i < words.size(); ++i) {
+                auto& w = words[i];
+                if (w.original.length() == 1) {
+                    w.isCapital = true;
+                }
             }
             break;
         case IdiomAction::REST_ALLCAP:
