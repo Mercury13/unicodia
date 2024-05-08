@@ -53,8 +53,11 @@
   * Texts
     * Run UTranslator, open ``en.uorig``
     * Write additional data Unicodia may run w/o: first of all script/block textual info
+      * Better place the text in order using commands “Move up/Move down”
     * If you know languages, translate to Russian/Ukrainian using the same UTranslator
-    * If some blocks should be logically near, but specific language makes a mess (Greek/Ancient Greek numbers), add an ellipsis to the beginning using locale.xml
+      * File → Update data, Go → Find warnings → All, and close those changes
+    * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
+      * This ellipse will automatically go if you sort blocks by code
   * Block extension history:
     * Add the new version to BlockExtensionHistory
     * Run it, check if the block was extended/shrunk
@@ -62,6 +65,16 @@
       * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
   * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
     * They are in ``AutoBuilder/data.cpp``
+    * Example one: “Garay capital letter Ca”. You should turn script mode on (it’ll automatically capitalize Ca), and need one rule “GARAY”, flag TRIG_SCRIPT
+    * Example two: “Myanmar Eastern Pwo Karen digit Zero”. Myanmar/Karen/Zero already work, but need to do something with “Eastern Pwo”, and need two-word script EASTERN+PWO
+    * Example three: “Ol Onal letter O”. Already got two-word script “Ol Chiki”, but it’s possible to add “Ol Onal” to the same dictionary entry (AFAIR, up to 3 or 4 options)
+    * Example four: “Tulu-Tigalari letter A”. If you just write as in example 1, it’ll automatically capitalize to “Tulu-tigalari”, and need a custom capitalization
+    * Example five: “Tulu-Tigalari Vedic tone Svarita”. You may do something with common rules, but I think it’s easier to coin an exception (keyword TONE is overloaded)
+    * Example six: “Garay vowel length mark”. VOWEL is ofter a keyword (vowel Length), but here it is NOT → just write an exception
+    * Example seven: “logic gate Or”. That’s a really special case, no point to write rules and hurt something now or in the future → exception!
+    * Of course, run AutoBuilder
+    * Always compare before and after with some diff tool! Heal one thing and hurt another — that’s frequent!
+    * Copy CPP files again
   * Block icons
     * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
     * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
@@ -76,7 +89,7 @@
   * GlyphWiki’s placeholder of CJK fonts
     * (To be written)
   * Latin in Library
-    * AutoBuilder has some sort of forget checker, and when the character becomes in the font, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
+    * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 * When Unicode transitions from beta to release, go to ``MiscFiles/RawData`` and change addresses to final ones
 
 # If you want to rebuild GlyphWiki font
