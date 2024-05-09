@@ -3050,7 +3050,11 @@
      <orig>Symbols for legacy computing supplement</orig>
     </text>
     <text id="Text">
-     <orig>The final bit of symbols from old computers. There probably will be no more big additions of such symbols. Unicode{{_}}17 will disunify a few console symbols from emoji.</orig>
+     <orig>
+      <p>The final bit of symbols from old computers. There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
+      <p />
+      <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
+     </orig>
     </text>
    </group>
    <group id="1CF00">
@@ -3508,8 +3512,6 @@
       <p>'''Did not''' advance to standard:</p>
       <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together, but it’s impossible to show: none of known fonts supports both.</p>
-      <p />
-      <p>Unicode{{_}}17 will [[pt:unification|disunify]] [[pt:emoji|emoji]] and console characters.</p>
      </orig>
     </text>
    </group>
