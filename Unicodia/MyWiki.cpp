@@ -1480,7 +1480,12 @@ namespace {
         mywiki::appendNoFont(text, paragraph);
     }
 
-    void appendCpBullets(QString& text, const uc::Cp& cp, CpSerializations serializations)
+    enum class CpPlace { CP, LIB  };
+
+    /// @param [in] serializations  [+] write UTF-8, HTML etc
+    ///
+    void appendCpBullets(QString& text, const uc::Cp& cp,
+                         CpSerializations serializations, CpPlace place)
     {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
@@ -1559,7 +1564,7 @@ namespace {
         if (comps) {
             sp.sep();
             static constexpr std::string_view KEY = "Prop.Bullet.Computers";
-            if (cp.block().startingCp == 0x1FB00) {
+            if (cp.block().startingCp == 0x1FB00 && place == CpPlace::CP) {
                 appendNonBullet(text, KEY);
             } else {
                 appendNonBullet(text, KEY, "<a href='pk:1FB00' class='popup'>", "</a>");
@@ -1741,7 +1746,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     appendSgnwVariants(text, sw);
 
     {   // Info box
-        appendCpBullets(text, cp, CpSerializations::YES);
+        appendCpBullets(text, cp, CpSerializations::YES, CpPlace::CP);
 
         auto& blk = cp.block();
         if (blk.startingCp == 0) {
@@ -2122,7 +2127,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         text += buf;
         appendCopyable(text, cp->viewableName());
         text += "</h2>";
-        appendCpBullets(text, *cp, CpSerializations::NO);
+        appendCpBullets(text, *cp, CpSerializations::NO, CpPlace::LIB);
     } else if (auto letters = countryLetters(node.value)) {
         if (auto country = cou::find(letters)) {
             appendSubhead(text, "Lib.Cinfo.Info");
