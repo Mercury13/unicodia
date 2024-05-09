@@ -1558,7 +1558,12 @@ namespace {
         auto comps = uc::cpOldComps(cp.subj);
         if (comps) {
             sp.sep();
-            appendNonBullet(text, "Prop.Bullet.Computers");
+            static constexpr std::string_view KEY = "Prop.Bullet.Computers";
+            if (cp.block().startingCp == 0x1FB00) {
+                appendNonBullet(text, KEY);
+            } else {
+                appendNonBullet(text, KEY, "<a href='pk:1FB00' class='popup'>", "</a>");
+            }
             str::QSep spC(text, ", ");
             while (comps) {
                 // Extract and remove bit

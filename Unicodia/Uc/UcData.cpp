@@ -1069,7 +1069,7 @@ static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::
 
 constinit const uc::OldCompInfo uc::oldCompInfo[] {
     { u8"Amstrad" NBSP "CPC" },
-    { u8"Apple" NBSP "IIc+" },
+    { u8"Apple" NBSP "II+" },
     { u8"Mattel" NBSP "Aquaruis" },
     { u8"Atari" NBSP "ST" },
     { u8"Atari" NBSP "400/800" },

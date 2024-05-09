@@ -4684,7 +4684,7 @@
       <p>* Atari 400, 800 and ST{{-}}a line of successful American PCs;</p>
       <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 and Color){{-}}successful American PCs;</p>
       <p>* Oric{{-}}British PC that gained some popularity in France; also known by Bulgarian clone Pravets-8D;</p>
-      <p>* Apple IIc and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
+      <p>* Apple II and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
       <p>* Commodore PET and 64{{-}}super-successful American PCs;</p>
       <p>* Sinclair ZX80 and ZX81{{-}}successful British PCs;</p>
       <p>* MSX known in xUSSR as KUVT Yamaha{{-}}Japanese open standard of PCs;</p>
@@ -4693,10 +4693,18 @@
       <p>* Minitel{{-}}French terminal service;</p>
       <p>* and, by coincidence, Korvet{{-}}Soviet technological/educational PC.</p>
       <p />
+      <p>Unicode{{_}}16 added more systems:</p>
+      <p>* Smalltalk{{-}}programming language that initially used special characters;</p>
+      <p>* Sharp MZ and X1{{-}}Japanese PCs exported to Britain;</p>
+      <p>* Kaypro and Ohio Scientific{{-}}rare American PCs;</p>
+      <p>* Robotron KC{{-}}rare East German PC;</p>
+      <p>* HP terminals, also rare.</p>
+      <p />
       <p>'''Did not''' advance to standard:</p>
-      <p>* two Apple logos{{-}}Consortium’s policy prohibits inclusion of trademarks;</p>
       <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together, but it’s impossible to show: none of known fonts supports both.</p>
+      <p />
+      <p>Unicode{{_}}17 will [[pt:unification|disunify]] [[pt:emoji|emoji]] and console characters.</p>
      </orig>
      <transl>
       <p>Символи з різних комп’ютерів та систем 1970-х та 1980-х:</p>
@@ -4705,7 +4713,7 @@
       <p>* Atari 400, 800 та ST{{-}}серія успішних американських ПК;</p>
       <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 та Color){{-}}успішні американські ПК;</p>
       <p>* Oric{{-}}британський ПК, що отримав певну популярність у Франції та відомий завдяки болгарському клону «Правець-8D»;</p>
-      <p>* Apple IIc та більш пізні (кодування ''MouseText''){{-}}надуспішні американські ПК;</p>
+      <p>* Apple II та більш пізні (кодування ''MouseText''){{-}}надуспішні американські ПК;</p>
       <p>* Commodore PET та 64{{-}}надуспішні американські ПК;</p>
       <p>* Sinclair ZX80 та ZX81{{-}}успішні британські ПК;</p>
       <p>* MSX, він же КУВТ Ямаха (комплекс навчальної обчислювальної техніки){{-}}японський відкритий стандарт ПК;</p>
@@ -4714,10 +4722,18 @@
       <p>* Minitel{{-}}французька термінальна служба;</p>
       <p>* і, за випадковим співпадінням, «Корвет»{{-}}радянський технологічний/навчальний ПК.</p>
       <p />
+      <p>Юнікод{{_}}16 додав більше систем:</p>
+      <p>* Smalltalk{{-}}мова програмування, що початково використовувала спецсимволи;</p>
+      <p>* Sharp MZ та X1{{-}}японські ПК, що експортувались до Британії;</p>
+      <p>* Kaypro та Ohio Scientific{{-}}рідкі американські ПК;</p>
+      <p>* Robotron KC{{-}}рідкий ПК з НДР;</p>
+      <p>* термінали HP, теж рідкі.</p>
+      <p />
       <p>До стандарту '''не{{_}}увійшли''':</p>
-      <p>* два яблука Apple{{-}}через політику Консорціуму не{{_}}включати товарні знаки;</p>
       <p>* інверсна псевдографіка: наприклад, у Apple [[pt:mono|знакомісце]] 7×8, і щоб заливка не{{_}}була картатою, прямий символ заливки чергують з інверсним;</p>
       <p>* знаки, [[pt:unification|вже наявні]] у розділі [[pt:pseudographics|псевдографіки]]. У правильному шрифті стара псевдографіка повинна повністю стикуватися з новими символами{{-}}правда, неможливо показати: нема шрифта, що підтримує і стару, і нову псевдографіку.</p>
+      <p />
+      <p>Юнікод{{_}}17 [[pt:unification|розуніфікує]] [[pt:emoji|емодзі]] та консольні символи.</p>
      </transl>
     </text>
    </group>

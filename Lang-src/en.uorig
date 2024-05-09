@@ -3489,7 +3489,7 @@
       <p>* Atari 400, 800 and ST{{-}}a line of successful American PCs;</p>
       <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 and Color){{-}}successful American PCs;</p>
       <p>* Oric{{-}}British PC that gained some popularity in France; also known by Bulgarian clone Pravets-8D;</p>
-      <p>* Apple IIc and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
+      <p>* Apple II and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
       <p>* Commodore PET and 64{{-}}super-successful American PCs;</p>
       <p>* Sinclair ZX80 and ZX81{{-}}successful British PCs;</p>
       <p>* MSX known in xUSSR as KUVT Yamaha{{-}}Japanese open standard of PCs;</p>
@@ -3498,10 +3498,18 @@
       <p>* Minitel{{-}}French terminal service;</p>
       <p>* and, by coincidence, Korvet{{-}}Soviet technological/educational PC.</p>
       <p />
+      <p>Unicode{{_}}16 added more systems:</p>
+      <p>* Smalltalk{{-}}programming language that initially used special characters;</p>
+      <p>* Sharp MZ and X1{{-}}Japanese PCs exported to Britain;</p>
+      <p>* Kaypro and Ohio Scientific{{-}}rare American PCs;</p>
+      <p>* Robotron KC{{-}}rare East German PC;</p>
+      <p>* HP terminals, also rare.</p>
+      <p />
       <p>'''Did not''' advance to standard:</p>
-      <p>* two Apple logos{{-}}Consortium’s policy prohibits inclusion of trademarks;</p>
       <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together, but it’s impossible to show: none of known fonts supports both.</p>
+      <p />
+      <p>Unicode{{_}}17 will [[pt:unification|disunify]] [[pt:emoji|emoji]] and console characters.</p>
      </orig>
     </text>
    </group>
