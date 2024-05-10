@@ -306,7 +306,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::century(2), EcFont::COPTIC, Sfg::DISUNIFIED },
+        Dating::century(2), EcFont::FUNKY, Sfg::DISUNIFIED },
     // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,

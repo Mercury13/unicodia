@@ -264,7 +264,6 @@ namespace uc {
            Z_CJY_1,
            Z_CJY_2,
            Z_CJY_3,
-        COPTIC,
         CUNEIFORM,
         DEVANAGARI,
         DINGBAT,
