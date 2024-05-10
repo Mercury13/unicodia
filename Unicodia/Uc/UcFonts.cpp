@@ -125,7 +125,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                  // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { FNAME_KOREAN, 110_pc},                                                  // …3
-    { "newathuBold5_8.ttf", Ffg::BOLD },                                        // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
     { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },                // Dingbat
