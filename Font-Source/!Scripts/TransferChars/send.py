@@ -1,3 +1,4 @@
+# Character transferring from file to file, SENDING part
 import fontforge
 import os
 
