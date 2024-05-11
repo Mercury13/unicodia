@@ -47,8 +47,9 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::FUNKY },
     // Greek and Coptic OK
     { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
-        "Greek and Coptic",
-        { EcScript::Grek, 0 }, MapType::EU_OTHER },
+            "Greek and Coptic",
+            { EcScript::Grek, 0 }, MapType::EU_OTHER,
+            EcScript::NONE, EcFont::FUNKY, Bfg::SPILL_SCRIPT },
     // Cyrillic OK
     { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, {}, 12_hx },
             "Cyrillic",
