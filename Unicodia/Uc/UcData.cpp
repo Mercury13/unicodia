@@ -383,7 +383,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gran", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::special(), EcFont::GRANTHA },
-    // Greek OK, W7 Cambria + Noto do the job
+    // Greek OK, Noto does the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::crange_ins(-9, -8), EcFont::NOTO },
