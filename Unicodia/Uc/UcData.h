@@ -784,6 +784,8 @@ namespace uc {
         VIRAMA_UP       = 1<<12,    ///< [+] Move dotted circle ¼r upwards in virtual virama
         VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
         EMOJI_BY_CASE   = 1<<14,    ///< [+] Text/graphic VS16 emoji is case-by-case
+        /// @todo [urgent]
+        SPILL_SCRIPT    = 1<<15,    ///< [+] Scriptless characters are from the same script
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
