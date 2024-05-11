@@ -1411,7 +1411,7 @@ namespace {
         }
     }
 
-    enum class CpSerializations { NO, YES };
+    enum class CpSerializations : unsigned char { NO, YES };
 
     void appendCpAltNames(QString& text, const uc::Cp& cp)
     {
@@ -1480,7 +1480,7 @@ namespace {
         mywiki::appendNoFont(text, paragraph);
     }
 
-    enum class CpPlace { CP, LIB  };
+    enum class CpPlace : unsigned char { CP, LIB  };
 
     /// @param [in] serializations  [+] write UTF-8, HTML etc
     ///
