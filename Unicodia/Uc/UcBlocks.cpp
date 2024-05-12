@@ -50,7 +50,7 @@ constinit const uc::Block uc::blocks[] {
             "Greek and Coptic",
             { EcScript::Grek, 0 }, MapType::EU_OTHER,
             // We rely here that Noto does not implement A SINGLE char of Coptic,
-            // and Noto is backed by Funky
+            // and Noto is backed with Funky
             EcScript::Grek },
     // Cyrillic OK
     { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, {}, 12_hx },
