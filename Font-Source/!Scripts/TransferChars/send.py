@@ -26,7 +26,8 @@ def sendChar(file, glyph, code):
     wid = max(glyph.width, 0)
     fg = glyph.layers[1]   # foreground layer
     fname = 'u' + format(code, 'X') + '.svg'
-    print(fname + ' ' + str(code) + ' ' + str(wid), file=file, flush=True)
+    # TSV: fname → code → width
+    print(fname + '\t' + str(code) + '\t' + str(wid), file=file, flush=True)
     fg.export(fname)
 
 
