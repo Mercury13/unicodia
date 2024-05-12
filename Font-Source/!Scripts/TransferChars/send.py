@@ -1,10 +1,12 @@
-# Character transferring from file to file, SENDING part
+# Character transferring from font to font, SENDING part
+# Limitation: works with Unicode characters only, not ligatures
 import fontforge
 import os
 
+# Two numbers = range of CPs, one number = a single CP
 charsToSend = [ [ 0x2CA8, 0x2CF3 ], [ 0xFE24, 0xFE26], 0x0323 ]
 
-# Converts charsToSend to set of Unicode CPs
+# Expands charsToSend to set of Unicode CPs
 def getCps():
     r = set()
     for v in charsToSend:
@@ -24,11 +26,10 @@ def sendChar(file, glyph, code):
     if iSlot < 0:
         raise Exception('Character not found')
     wid = max(glyph.width, 0)
-    fg = glyph.layers[1]   # foreground layer
     fname = 'u' + format(code, 'X') + '.svg'
     # TSV: fname → code → width
     print(fname + '\t' + str(code) + '\t' + str(wid), file=file, flush=True)
-    fg.export(fname)
+    glyph.export(fname)
 
 
 fontforge.runInitScripts()
