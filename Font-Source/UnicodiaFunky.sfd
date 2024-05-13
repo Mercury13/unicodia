@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1715550677
+ModificationTime: 1715580526
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -775,7 +775,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 224 32 14
+WinInfo: 0 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -785,7 +785,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 658 658
+BeginChars: 659 659
 
 StartChar: SmallCircle
 Encoding: 632 -1 0
@@ -63833,7 +63833,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 384 721 basechar 0
+AnchorPoint: "Umlaut" 384 690 basechar 0
 AnchorPoint: "TopRight Cap" 739 700 basechar 0
 AnchorPoint: "Dot below" 388 -142 basechar 0
 LayerCount: 2
@@ -65103,7 +65103,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 239 760 basechar 0
+AnchorPoint: "Umlaut" 255 730 basechar 0
 AnchorPoint: "TopRight Cap" 490 759 basechar 0
 AnchorPoint: "Dot below" 214 0 basechar 0
 LayerCount: 2
@@ -65214,7 +65214,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 196 575 basechar 0
+AnchorPoint: "Umlaut" 208 550 basechar 0
 AnchorPoint: "TopRight" 430 575 basechar 0
 AnchorPoint: "Dot below" 192 0 basechar 0
 LayerCount: 2
@@ -65336,7 +65336,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 443 870 basechar 0
+AnchorPoint: "Umlaut" 443 850 basechar 0
 AnchorPoint: "TopRight Cap" 909 870 basechar 0
 AnchorPoint: "Dot below" 452 -142 basechar 0
 LayerCount: 2
@@ -65376,7 +65376,7 @@ EndChar
 StartChar: uni03EF
 Encoding: 46 1007 523
 Width: 533
-Flags: W
+Flags: WO
 HStem: 417 71<129 204 306 383>
 VStem: 204 102<-75.309 417 488 639.559>
 TtInstrs:
@@ -65459,7 +65459,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 254 646 basechar 0
+AnchorPoint: "Umlaut" 254 630 basechar 0
 AnchorPoint: "TopRight" 533 646 basechar 0
 AnchorPoint: "Dot below" 264 -104 basechar 0
 LayerCount: 2
@@ -75058,7 +75058,7 @@ IUP[x]
 EndTTInstrs
 AnchorPoint: "Umlaut" 406 700 basechar 0
 AnchorPoint: "TopRight Cap" 778 700 basechar 0
-AnchorPoint: "Dot below" 310 -170 basechar 0
+AnchorPoint: "Dot below" 540 74 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -75306,7 +75306,7 @@ IUP[x]
 EndTTInstrs
 AnchorPoint: "Umlaut" 333 593 basechar 0
 AnchorPoint: "TopRight" 636 594 basechar 0
-AnchorPoint: "Dot below" 246 -89 basechar 0
+AnchorPoint: "Dot below" 436 98 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -75682,8 +75682,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 444 970 basechar 0
-AnchorPoint: "TopRight Cap" 875 970 basechar 0
+AnchorPoint: "Umlaut" 444 950 basechar 0
+AnchorPoint: "TopRight Cap" 875 950 basechar 0
 AnchorPoint: "Dot below" 446 -70 basechar 0
 LayerCount: 2
 Fore
@@ -76119,8 +76119,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 361 780 basechar 0
-AnchorPoint: "TopRight Cap" 714 784 basechar 0
+AnchorPoint: "Umlaut" 361 750 basechar 0
+AnchorPoint: "TopRight Cap" 714 750 basechar 0
 AnchorPoint: "Dot below" 355 -50 basechar 0
 LayerCount: 2
 Fore
@@ -78798,7 +78798,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 274 800 basechar 0
+AnchorPoint: "Umlaut" 278 760 basechar 0
 AnchorPoint: "TopRight Cap" 542 800 basechar 0
 AnchorPoint: "Dot below" 254 0 basechar 0
 LayerCount: 2
@@ -78919,7 +78919,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 215 621 basechar 0
+AnchorPoint: "Umlaut" 232 590 basechar 0
 AnchorPoint: "TopRight Cap" 447 621 basechar 0
 AnchorPoint: "Dot below" 209 0 basechar 0
 LayerCount: 2
@@ -80271,7 +80271,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 376 860 basechar 0
+AnchorPoint: "Umlaut" 434 843 basechar 0
 AnchorPoint: "TopRight Cap" 869 863 basechar 0
 AnchorPoint: "Dot below" 424 0 basechar 0
 LayerCount: 2
@@ -80452,7 +80452,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 301 670 basechar 0
+AnchorPoint: "Umlaut" 352 651 basechar 0
 AnchorPoint: "TopRight Cap" 709 675 basechar 0
 AnchorPoint: "Dot below" 340 -0 basechar 0
 LayerCount: 2
@@ -80762,8 +80762,8 @@ Width: 852
 Flags: W
 HStem: 0 72<341.099 565.542> 451 90<556.86 680.576>
 VStem: 28 70<266.085 399.993> 725 80.037<244.55 383.908>
-AnchorPoint: "Umlaut" 436 800 basechar 0
-AnchorPoint: "TopRight Cap" 852 800 basechar 0
+AnchorPoint: "Umlaut" 436 750 basechar 0
+AnchorPoint: "TopRight Cap" 852 750 basechar 0
 AnchorPoint: "Dot below" 422 1 basechar 0
 LayerCount: 2
 Fore
@@ -80928,8 +80928,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 356 630 basechar 0
-AnchorPoint: "TopRight Cap" 696 629 basechar 0
+AnchorPoint: "Umlaut" 356 580 basechar 0
+AnchorPoint: "TopRight Cap" 696 580 basechar 0
 AnchorPoint: "Dot below" 340 0 basechar 0
 LayerCount: 2
 Fore
@@ -83469,9 +83469,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 402 700 basechar 0
+AnchorPoint: "Umlaut" 402 680 basechar 0
 AnchorPoint: "TopRight Cap" 821 700 basechar 0
-AnchorPoint: "Dot below" 406 0 basechar 0
+AnchorPoint: "Dot below" 406 52 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -83616,7 +83616,7 @@ IUP[x]
 EndTTInstrs
 AnchorPoint: "Umlaut" 314 550 basechar 0
 AnchorPoint: "TopRight" 657 550 basechar 0
-AnchorPoint: "Dot below" 324 0 basechar 0
+AnchorPoint: "Dot below" 324 36 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -84001,7 +84001,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 436 820 basechar 0
+AnchorPoint: "Umlaut" 436 780 basechar 0
 AnchorPoint: "TopRight Cap" 831 750 basechar 0
 AnchorPoint: "Dot below" 424 0 basechar 0
 LayerCount: 2
@@ -84204,7 +84204,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" 330 602 basechar 0
+AnchorPoint: "Umlaut" 330 570 basechar 0
 AnchorPoint: "TopRight" 643 550 basechar 0
 AnchorPoint: "Dot below" 322 0 basechar 0
 LayerCount: 2
@@ -84959,20 +84959,22 @@ SplineSet
  145 616 l 5,3,-1
  -145 616 l 5,0,-1
 EndSplineSet
+Substitution2: "Copt LOCL-1" Copt.Macron
 EndChar
 
 StartChar: Copt.bigI.macron
 Encoding: 655 -1 654
 Width: 338
-Flags: WO
+Flags: W
 LayerCount: 2
 Fore
 Refer: 653 772 N 1 0 0 1 168 164 2
 Refer: 542 11410 S 1 0 0 1 60 0 2
 Ligature2: "Copt CCMP-1" Copt.bigI Copt.Overline
 Ligature2: "Copt CCMP-1" Copt.bigI Uml.Overline
-LCarets2: 1 0
 Ligature2: "Copt CCMP-1" Copt.bigI Uml.Macron
+LCarets2: 1 0
+Ligature2: "Copt CCMP-1" Copt.bigI Copt.Macron
 EndChar
 
 StartChar: Copt.smallI.macron
@@ -84986,6 +84988,7 @@ Refer: 543 11411 S 1 0 0 1 60 0 2
 Ligature2: "Copt CCMP-1" Copt.smallI Copt.Overline
 Ligature2: "Copt CCMP-1" Copt.smallI Uml.Overline
 Ligature2: "Copt CCMP-1" Copt.smallI Uml.Macron
+Ligature2: "Copt CCMP-1" Copt.smallI Copt.Macron
 EndChar
 
 StartChar: Uml.Overline
@@ -85026,7 +85029,7 @@ EndSplineSet
 Substitution2: "Copt LOCL-1" Copt.Overline
 EndChar
 
-StartChar: Copt.Overline
+StartChar: Copt.Macron
 Encoding: 657 -1 657
 Width: 0
 Flags: W
@@ -85037,6 +85040,44 @@ AnchorPoint: "Umlaut" 0 536 mark 0
 LayerCount: 2
 Fore
 Refer: 656 773 N 1 0 0 1 0 -144 2
+EndChar
+
+StartChar: Copt.Overline
+Encoding: 658 -1 658
+Width: 0
+Flags: W
+HStem: 616 59<-244 244>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 4
+MDAP[rnd]
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 0 536 mark 0
+AnchorPoint: "Umlaut mark" 0 560 mark 0
+AnchorPoint: "Umlaut mark" 0 675 basemark 0
+LayerCount: 2
+Fore
+SplineSet
+-244 616 m 5,0,-1
+ -244 675 l 5,1,-1
+ 244 675 l 1,2,-1
+ 244 616 l 1,3,-1
+ -244 616 l 5,0,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
