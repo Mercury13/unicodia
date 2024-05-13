@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1715580526
+ModificationTime: 1715581271
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -775,7 +775,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 32 14
+WinInfo: 224 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -785,7 +785,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 659 659
+BeginChars: 660 660
 
 StartChar: SmallCircle
 Encoding: 632 -1 0
@@ -65376,7 +65376,7 @@ EndChar
 StartChar: uni03EF
 Encoding: 46 1007 523
 Width: 533
-Flags: WO
+Flags: W
 HStem: 417 71<129 204 306 383>
 VStem: 204 102<-75.309 417 488 639.559>
 TtInstrs:
@@ -68352,7 +68352,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: Copt.bigI
+StartChar: Copt.cap.I
 Encoding: 138 11410 542
 Width: 265
 Flags: W
@@ -68428,7 +68428,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: Copt.smallI
+StartChar: Copt.small.I
 Encoding: 139 11411 543
 Width: 224
 Flags: MW
@@ -76780,7 +76780,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2CC7
+StartChar: Copt.small.J
 Encoding: 191 11463 597
 Width: 323
 Flags: W
@@ -84962,7 +84962,7 @@ EndSplineSet
 Substitution2: "Copt LOCL-1" Copt.Macron
 EndChar
 
-StartChar: Copt.bigI.macron
+StartChar: Copt.cap.I.macron
 Encoding: 655 -1 654
 Width: 338
 Flags: W
@@ -84970,14 +84970,14 @@ LayerCount: 2
 Fore
 Refer: 653 772 N 1 0 0 1 168 164 2
 Refer: 542 11410 S 1 0 0 1 60 0 2
-Ligature2: "Copt CCMP-1" Copt.bigI Copt.Overline
-Ligature2: "Copt CCMP-1" Copt.bigI Uml.Overline
-Ligature2: "Copt CCMP-1" Copt.bigI Uml.Macron
+Ligature2: "Copt CCMP-1" Copt.cap.I Uml.Overline
+Ligature2: "Copt CCMP-1" Copt.cap.I Uml.Macron
+Ligature2: "Copt CCMP-1" Copt.cap.I Copt.Macron
+Ligature2: "Copt CCMP-1" Copt.cap.I Copt.Overline
 LCarets2: 1 0
-Ligature2: "Copt CCMP-1" Copt.bigI Copt.Macron
 EndChar
 
-StartChar: Copt.smallI.macron
+StartChar: Copt.small.I.macron
 Encoding: 656 -1 655
 Width: 304
 Flags: W
@@ -84985,10 +84985,10 @@ LayerCount: 2
 Fore
 Refer: 653 772 N 1 0 0 1 152 14 2
 Refer: 543 11411 S 1 0 0 1 60 0 2
-Ligature2: "Copt CCMP-1" Copt.smallI Copt.Overline
-Ligature2: "Copt CCMP-1" Copt.smallI Uml.Overline
-Ligature2: "Copt CCMP-1" Copt.smallI Uml.Macron
-Ligature2: "Copt CCMP-1" Copt.smallI Copt.Macron
+Ligature2: "Copt CCMP-1" Copt.small.I Uml.Macron
+Ligature2: "Copt CCMP-1" Copt.small.I Uml.Overline
+Ligature2: "Copt CCMP-1" Copt.small.I Copt.Overline
+Ligature2: "Copt CCMP-1" Copt.small.I Copt.Macron
 EndChar
 
 StartChar: Uml.Overline
@@ -85078,6 +85078,20 @@ SplineSet
  244 616 l 1,3,-1
  -244 616 l 5,0,-1
 EndSplineSet
+EndChar
+
+StartChar: Copt.small.J.macron
+Encoding: 659 -1 659
+Width: 323
+Flags: W
+LayerCount: 2
+Fore
+Refer: 653 772 N 1 0 0 1 173 0 2
+Refer: 597 11463 N 1 0 0 1 0 0 2
+Ligature2: "Copt CCMP-1" Copt.small.J Copt.Overline
+Ligature2: "Copt CCMP-1" Copt.small.J Copt.Macron
+Ligature2: "Copt CCMP-1" Copt.small.J Uml.Overline
+Ligature2: "Copt CCMP-1" Copt.small.J Uml.Macron
 EndChar
 EndChars
 EndSplineFont
