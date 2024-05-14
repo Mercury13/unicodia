@@ -59,12 +59,13 @@ These fonts are taken to Unicodia without author’s consent:
 * ASCII mapping is NOT a reason.
 
 ## Language
+**Common.** No war jargon. Describe 2022 war as neutral as possible.
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good.
 
-**Russian.** Ё is mandatory. No war jargon. No grammatical concessions to Ukrainian. Describe 2022 war as neutral as possible.
+**Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
-**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. No war jargon. Describe topics sensitive to nationalists as delicately as possible.
+**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
 
 ## Future functionality
 * Finish GlyphWiki loader.
