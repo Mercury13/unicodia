@@ -1,6 +1,6 @@
 # What is Unicodia?
 
-It is a simple Unicode encyclopedia and replacement for Character Map. Right now Windows only.
+It is a simple Unicode encyclopedia and the most comprehensive character map ever. Right now Windows only.
 
 **Lifecycle phase: 5** (production/stable). Minor troubles with sustainability, but generally survived two releases of Unicode.
 
