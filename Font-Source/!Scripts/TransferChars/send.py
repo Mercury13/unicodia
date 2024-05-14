@@ -4,7 +4,7 @@ import fontforge
 import os
 
 # Two numbers = range of CPs, one number = a single CP
-charsToSend = [ [ 0x2CA8, 0x2CF3 ], [ 0xFE24, 0xFE26], 0x0323 ]
+charsToSend = [ [ 0x21, 0x40 ], 0x5C, [ 0x5E, 0x60 ], [ 0x7B, 0x7E ], 0xA0, 0x374, 0x37E, 0x384, 0x387 ]
 
 # Expands charsToSend to set of Unicode CPs
 def getCps():
@@ -22,9 +22,6 @@ def getCps():
 
 # Sends one character, writes its info to file
 def sendChar(file, glyph, code):
-    iSlot = font.findEncodingSlot(code)
-    if iSlot < 0:
-        raise Exception('Character not found')
     wid = max(glyph.width, 0)
     fname = 'u' + format(code, 'X') + '.svg'
     # TSV: fname → code → width
