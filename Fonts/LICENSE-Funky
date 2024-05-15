@@ -10,23 +10,23 @@ All characters of Latin, Cyrillic and Balinese; Japanese and Korean umlauts
 Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.)
 
 
-== Unknown origin (probably someone from SIL International), SIL Open Font License ==
+== Toto • unknown origin ==
 
-Toto script, 1E290…1E2AF
-(probably fully working, I tried to copy all tables)
-
-
-== Junicode © Peter Baker, SIL Open Font License ==
-
-Gothic script, 10330…4A
-(Diaeresis works, numbers do not)
-(Matrix is ×135%)
+Probably someone from SIL International, SIL Open Font License
+Probably fully working, I tried to copy all tables
 
 
-== NewAthena © Society for Classical Studies, SIL Open Font License ==
+== Gothic • Junicode ==
 
-Coptic script. At least as working as Noto!
-Functionality is mine from scratch
+© Peter Baker, SIL Open Font License
+Diaeresis works, numbers do not
+Matrix is ×135%
+
+
+== Coptic • NewAthena  ==
+
+© Society for Classical Studies, SIL Open Font License
+Functionality is mine from scratch, at least as working as Noto!
 
 
 == Status of MY scripts ==
