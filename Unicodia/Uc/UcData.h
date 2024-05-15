@@ -191,7 +191,7 @@ namespace uc {
           Z_NOR_6,
           Z_NOR_7,
          NOTO,
-          Z_NOT_1,
+          Z_NOT_1,      ///< Funky, do not delete, needed for alias GREEK_COPTIC
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
           Z_N2B_1,
@@ -226,13 +226,13 @@ namespace uc {
         BAMUM,
         BASSA_VAH,
         BATAK,
-        VEDIC,      // Devanagari → Nadinagari → Bengali
+        VEDIC,      ///< Devanagari → Nadinagari → Bengali
           Z_VED_1,
         BENGALI,
         BHAIKSUKI,
         BRAHMI,
           Z_BRA_1,
-        BUGINESE,   // Here we use Lelewadee UI → specialized W7 font
+        BUGINESE,   ///< Here we use Lelewadee UI → specialized W7 font
           Z_BUG_1,
         BUHID,
         CANADIAN_ABORIGINAL,
@@ -256,10 +256,10 @@ namespace uc {
            Z_CJC_3,
          CJK_KANBUN,
          CJK_STRUCTURE,
-           CJK_STROKES,  // also dubbed as CJK strokes
+           CJK_STROKES,  ///< also dubbed as CJK strokes
            Z_CJS_2,
          CJK_NEWHAN,
-           CJK_UHAN,    // Unicodia Han
+           CJK_UHAN,    ///< Unicodia Han
          CJK_SYMBOLS,
            Z_CJY_1,
            Z_CJY_2,
@@ -271,7 +271,7 @@ namespace uc {
           Z_DIN_2,
           Z_DIN_3,
           Z_DIN_4,
-        DINGBAT2,       // Dingbats of BMP — need main font Cambria
+        DINGBAT2,       ///< Dingbats of BMP — need main font Cambria
           Z_DI2_1,
           Z_DI2_2,
           Z_DI2_3,
