@@ -1155,7 +1155,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Xsux, 1 }, MapType::AS_OTHER_DEAD,
             EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Early cuneiform OK
-    { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA },
+    { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA, Ifg::SMALLER },
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapType::AS_OTHER_DEAD, EcScript::Xsux },
     // Cypro-Minoan OK
