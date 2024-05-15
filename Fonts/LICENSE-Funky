@@ -1,29 +1,30 @@
 ﻿Copyright (c) 2021-2023 Mikhail Merkuryev
 You just DO WHAT THE FUNK YOU WANT TO
 
-Except some glyphs:
+== Except some glyphs: ==
 
-== © Google Noto, SIL Open Font License ==
+=== Latin, Cyrillic, Balinese, Japanese/Korean umlauts ===
 
-All characters of Latin, Cyrillic and Balinese; Japanese and Korean umlauts
-(Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+407; old chars Y+120.
-Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.)
+© Google Noto, SIL Open Font License
+
+Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+407; old chars Y+120.
+Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.
 
 
-== Toto • unknown origin ==
+=== Toto • unknown origin ===
 
 Probably someone from SIL International, SIL Open Font License
 Probably fully working, I tried to copy all tables
 
 
-== Gothic • Junicode ==
+=== Gothic • Junicode ===
 
 © Peter Baker, SIL Open Font License
 Diaeresis works, numbers do not
 Matrix is ×135%
 
 
-== Coptic • NewAthena  ==
+=== Coptic • NewAthena  ===
 
 © Society for Classical Studies, SIL Open Font License
 Functionality is mine from scratch, at least as working as Noto!
