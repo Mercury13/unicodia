@@ -242,7 +242,8 @@ namespace uc {
         //Zsym  no chars — misc symbols
         //Zxxx  no chars — unwritten documents
         //Zzzz  no chars — unencoded script
-        NONE = Zyyy
+        NONE = Zyyy,
+        UNDEF = ZARR,   // Undefined in queries
     };
 
     enum class Month : unsigned short {

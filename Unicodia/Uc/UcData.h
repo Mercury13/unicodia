@@ -828,6 +828,7 @@ namespace uc {
     using LocSortKey = signed short[40];
 
     /// Subdivision of blocks for (future) plane maps
+    /// @todo [future] Plane map
     enum class MapType {
         TECHNICAL,
         MULTIPLE,
