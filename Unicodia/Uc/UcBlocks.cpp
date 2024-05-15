@@ -13,13 +13,13 @@ constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
     { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, {}, SvgHint { 5, 15, ImbaX::RIGHT_3 } },
             "Basic Latin",
-            { EcScript::Latn, 0 }, MapType::MULTIPLE,
+            { EcScript::Latn, 0 }, MapType::EU_LATIN,
             EcScript::Latn, EcFont::NORMAL,
             Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin-1 OK
     { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
             "Latin-1 Supplement",
-            { EcScript::Latn, 1 }, MapType::MULTIPLE,
+            { EcScript::Latn, 1 }, MapType::EU_LATIN,
             EcScript::Latn, EcFont::NORMAL,
             Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin extended A OK
@@ -715,7 +715,7 @@ constinit const uc::Block uc::blocks[] {
     // Arabic presentation forms A OK
     { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA },
             "Arabic Presentation Forms-A",
-            { EcScript::Arab, 'a' }, MapType::MULTIPLE,
+            { EcScript::Arab, 'a' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,

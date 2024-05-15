@@ -829,29 +829,30 @@ namespace uc {
 
     /// Subdivision of blocks for (future) plane maps
     /// @todo [future] Plane map
-    enum class MapType {
-        TECHNICAL,      ///< technical characters: tags
-        MULTIPLE,       ///< multiple scrips
-        EU_LATIN,       ///< Europe/Latin: Latn only
-        EU_OTHER,       ///< Europe/other: Cyrl, Grek
-        EU_OTHER_DEAD,  ///< Europe/other/dead: Runr, Ogam
-        AS_BRAH,        ///< Asia/Brahmic: Deva, Guru
-        AS_BRAH_DEAD,   ///< Asia/Brahmic/dead: Gran, pan-Indic Vedic
-        AS_OTHER,       ///< Asia/other: Arab, Armn
-        AS_OTHER_DEAD,  ///< Asia/other/dead: Armi, Khar
-        CJ_HANI,        ///< CJK/Han: Hani only
-        CJ_OTHER,       ///< CJK/other: Kana, Hang
-        CJ_OTHER_DEAD,  ///< CJK/other/dead: Nshu, Kits
-        CJ_SYMBOL,      ///< CJK/symbols: punctuation, Tai Xuan
-        OC,             ///< Ocean: Thaa, Sinh
-        OC_DEAD,        ///< Ocean/dead:
-        AF,             ///< Africa: Tfng, Bamu
-        AF_DEAD,        ///< Africa/dead: Copt, Mero
-        AM,             ///< America: Cans, Cher, Hmnp
-        AM_DEAD,        ///< America/dead: Dsrt and Maya only
-        SYM_CODE,       ///< codes, shorthand, non-text, incl. notes
-        SYM_PUNCT,      ///< punctuation, diacritics
-        SYM_OTHER,      ///< modifier letters, maths, shapes, emoji
+    enum class MapType : unsigned char {
+        UNALLOCATED,    ///< unused in data, IDK what I do                      As white as possible
+        TECHNICAL,      ///< technical: VS, tags, specials, surrogate only      Green/acid
+        EU_LATIN,       ///< Europe/Latin: Latn only                            Blue/deep
+        EU_OTHER,       ///< Europe/other: Cyrl, Grek                           Blue
+        EU_OTHER_DEAD,  ///< Europe/other/dead: Runr, Ogam                      Blue/pale
+        AS_BRAH,        ///< Asia/Brahmic: Deva, Guru                           Orange
+        AS_BRAH_DEAD,   ///< Asia/Brahmic/dead: Gran, pan-Indic Vedic           Orange/pale
+        AS_OTHER,       ///< Asia/other: Arab, Armn                             Amber (like car blinkers)
+        AS_OTHER_DEAD,  ///< Asia/other/dead: Armi, Khar                        Yellow
+        CJ_HANI,        ///< CJK/Han: Hani only                                 Violet
+        CJ_OTHER,       ///< CJK/other: Kana, Hang                              Less violet
+        CJ_OTHER_DEAD,  ///< CJK/other/dead: Nshu, Kits                         Pink
+        CJ_SYMBOL,      ///< CJK/symbols: punctuation, Tai Xuan                 Fuchsia
+        OC,             ///< Ocean: Thaa, Sinh                                  Green
+        OC_DEAD,        ///< Ocean/dead:                                        Green/pale
+        AF,             ///< Africa: Tfng, Bamu                                 Chocolate
+        AF_DEAD,        ///< Africa/dead: Copt, Mero                            Beige
+        AM,             ///< America: Cans, Cher, Hmnp                          Red
+        AM_DEAD,        ///< America/dead: Dsrt and Maya only                   Red/pale
+        SYM_CODE,       ///< codes, shorthand, non-text, incl. notes            Aquamarine
+        SYM_PUNCT,      ///< modifiers, punctuation, diacritics                 Black
+        SYM_OTHER,      ///< maths, shapes, emoji                               Teal/steel
+        //FICTIONAL,      ///< Unused for now: Cirt, Teng                       Blue-violet
     };
 
     class BlockResizeSink {     // interface
