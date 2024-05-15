@@ -13394,6 +13394,24 @@
      </transl>
     </text>
    </group>
+   <group id="16.0">
+    <text id="Text">
+     <orig>
+      <p>Besides character additions, there were many internal changes in Unicode.</p>
+      <p>* Rewrote algorithms of rendering Arabic text.</p>
+      <p>* Wrote character sequences that should not exist in Unicode text.</p>
+      <p>* Added base of Egyptian hieroglyphs.</p>
+      <p>* Turned PDF specification to HTML site.</p>
+     </orig>
+     <transl>
+      <p>Кроме добавлений символов, было много внутренних изменений в Юникоде.</p>
+      <p>* Переписан алгоритм отображения арабского текста.</p>
+      <p>* Написаны последовательности символов, которых не должно быть в юникодном тексте.</p>
+      <p>* Добавлена база египетских иероглифов.</p>
+      <p>* PDF-спецификация превращена в HTML-сайт.</p>
+     </transl>
+    </text>
+   </group>
   </group>
   <group id="Update">
    <text id="Head">

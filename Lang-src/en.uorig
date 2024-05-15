@@ -9355,6 +9355,17 @@
      </orig>
     </text>
    </group>
+   <group id="16.0">
+    <text id="Text">
+     <orig>
+      <p>Besides character additions, there were many internal changes in Unicode.</p>
+      <p>* Rewrote algorithms of rendering Arabic text.</p>
+      <p>* Wrote character sequences that should not exist in Unicode text.</p>
+      <p>* Added base of Egyptian hieroglyphs.</p>
+      <p>* Turned PDF specification to HTML site.</p>
+     </orig>
+    </text>
+   </group>
   </group>
   <group id="Update">
    <text id="Head">
