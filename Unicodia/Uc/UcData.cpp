@@ -283,15 +283,15 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::unknown(), EcFont::CHAKMA },
+    // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
+    { "Cans", QFontDatabase::Any,
+        EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
+        Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
     // Carian OK, W10 P1
     /// @todo [font???] Carian
     { "Cari", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
-    // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
-    { "Cans", QFontDatabase::Any,
-        EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
-        Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(4), EcFont::CHAM },
@@ -857,14 +857,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::year(1844, StdNote::FIRST_KNOWN), EcFont::VITHKUQI },
-    // Wancho OK, W10 none, installed Google Noto
-    { "Wcho", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yrange(2001, 2012), EcFont::WANCHO },
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1950), EcFont::WARANG_CITI },
+    // Wancho OK, W10 none, installed Google Noto
+    { "Wcho", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::yrange(2001, 2012), EcFont::WANCHO },
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

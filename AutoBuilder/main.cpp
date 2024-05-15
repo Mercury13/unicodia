@@ -337,7 +337,7 @@ int main()
     ///// Property list ////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode property list..." << std::flush;
-    const ucd::PropBase propBase = ucd::loadPropBase();
+    ucd::PropBase propBase = ucd::loadPropBase();
     std::cout << "OK, " << propBase.nScripts() << " scripts." << '\n';
 
     ///// Script data //////////////////////////////////////////////////////////
@@ -717,6 +717,24 @@ int main()
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
     os << "}\n";
+    os.close();
+
+    ///// Write UcAutoScripts //////////////////////////////////////////////////
+
+    auto sToL = propBase.giveShortToLong();
+    sToL.erase("Zyyy");
+    sToL.erase("Zzzz");
+    sToL.erase("Zinh");
+    sToL.erase("Hrkt");
+    sToL.emplace("Hent", "Hentaigana");
+
+    os.open("UcAutoScripts.h");
+    for (auto& [sh, lo] : sToL) {
+        std::string spLo = lo;
+        str::replace(spLo, '_', ' ');
+        os << sh << ",  // " << spLo << '\n';
+    }
+    os.close();
 
     ///// Sutton SignWriting ///////////////////////////////////////////////////
 

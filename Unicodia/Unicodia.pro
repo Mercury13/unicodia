@@ -124,6 +124,7 @@ HEADERS += \
     Uc/FontMatch.h \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
+    Uc/UcAutoScripts.h \
     Uc/UcClipboard.h \
     Uc/UcContinents.h \
     Uc/UcCp.h \

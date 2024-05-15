@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UC_AUTO_DEFINES_H
+#define UC_AUTO_DEFINES_H
 
 // C++
 #include <cstdint>
@@ -27,221 +28,14 @@ namespace uc {
         ZSYM,   // Pseudo-script: Symbols and pictographs
         ZDIN,   // Pseudo-script: Dingbats
         ZDIA,   // Pseudo-script: Diacritical marks
-        Adlm,   // Adlam
-        Aghb,   // Caucasian Albanian
-        Ahom,   // Ahom
-        Arab,   // Arabic
-        Armi,   // Imperial Aramaic
-        Armn,   // Armenian
-        Avst,   // Avestan
-        Bali,   // Balinese
-        Bamu,   // Bamum
-        Bass,   // Bassa Vah
-        Batk,   // Batak
-        Beng,   // Bengali
-        Bhks,   // Bhaiksuki
-        Bopo,   // Bopomofo
-        Brah,   // Brahmi
-        Brai,   // Braille dots
-        Bugi,   // Buginese
-        Buhd,   // Buhid
-        Cakm,   // Chakma
-        Cari,   // Carian
-        Cans,   // Canadian syllabic
-        Cham,   // Cham
-        Cher,   // Cherokee
-        Chrs,   // Chorasmian
-        Copt,   // Coptic
-        Cpmn,   // Cypro-Minoan
-        Cprt,   // Cypriot
-        Cyrl,   // Cyrillic
-        Deva,   // Devanagari
-        Diak,   // Dives Akuru
-        Dogr,   // Dogra
-        Dsrt,   // Deseret (Mormon)
-        Dupl,   // Duployan shorthand
-        Egyp,   // Egyptian hieroglyphs
-        Elba,   // Elbasan Albanian
-        Elym,   // Elymaic
-        Ethi,   // Ethiopic
-        Gara,   // Garay
-        Geor,   // Georgian
-        Glag,   // Glagolitic
-        Gong,   // Gondi / Gunjala
-        Gonm,   // Gondi / Masaram
-        Goth,   // Gothic
-        Gran,   // Grantha
-        Grek,   // Greek
-        Gujr,   // Gujarati
-        Gukh,   // Gurung Khema
-        Guru,   // Gurmukhi
-        Hang,   // Hangul
-        Hani,   // Chinese hieroglyphs
-        Hano,   // Hanunoo
-        Hatr,   // Hatran
-        Hebr,   // Hebrew
-        Hent,   // Hentaigana
-        Hira,   // Hiragana
-        Hluw,   // Anatolian (Luwian, Hittite) hieroglyphs
-        Hmng,   // Pahawh Hmong
-        Hmnp,   // NP hmong (American script for White/Green Hmongs)
-        Hung,   // Old Hungarian runes
-        Ital,   // Old Italic
-        Java,   // Javanese
-        Kali,   // Kayah Li
-        Kana,   // Katakana
-        Kawi,   // Kawi (proto-Javanese)
-        Khar,   // Kharoshthi
-        Khmr,   // Khmer
-        Khoj,   // Khojki
-        Kits,   // Khitan small
-        Knda,   // Kannada
-        Krai,   // Kirat Rai
-        Kthi,   // Kaithi
-        Lana,   // Tai-tham = Lanna
-        Laoo,   // Lao
-        Latn,   // Latin
-        Lepc,   // Lepcha
-        Limb,   // Limbu
-        Lina,   // Linear A
-        Linb,   // Linear B
-        Lisu,   // Lisu
-        Lyci,   // Lycian
-        Lydi,   // Lydian
-        Mahj,   // Mahajani
-        Maka,   // Makasar
-        Mand,   // Mandaic
-        Mani,   // Manichean
-        Marc,   // Marchen
-        Medf,   // Medefaidrin
-        Mend,   // Mende Kikakui
-        Merc,   // Meroitic cursive
-        Mero,   // Meroitic hieroglyphs
-        Mlym,   // Malayalam
-        Modi,   // Modi
-        Mong,   // Mongolian (old)
-        Mroo,   // Mro
-        Mtei,   // Meitei Mayek
-        Mult,   // Multani
-        Mymr,   // Myanmar
-        Nagm,   // Nag alphabet (Mundari)
-        Nand,   // Nandinagari
-        Narb,   // North Arabian
-        Nbat,   // Nabataean
-        Newa,   // Newa
-        Nkoo,   // NKo
-        Nshu,   // Nushu
-        Ogam,   // Ogham
-        Olck,   // Ol Chiki
-        Onao,   // Ol Onal
-        Orkh,   // Turkic runes
-        Orya,   // Oriya
-        Osge,   // Osage
-        Osma,   // Osmanya
-        Ougr,   // Old Uyghur, U14
-        Palm,   // Palmyrene
-        Pauc,   // Pau Cin Hau
-        Perm,   // Old Permic
-        Phag,   // Phags-Pa
-        Phli,   // Inscriptional Pahlavi
-        Phlp,   // Psalter Pahlavi
-        Phnx,   // Phoenician
-        Plrd,   // Miao / Pollard
-        Prti,   // Inscriptional Parthian
-        Rjng,   // Rejang
-        Rohg,   // Hanifi Rohingya
-        Runr,   // European runes
-        Samr,   // Samaritan
-        Sarb,   // South Arabian
-        Saur,   // Saurashtra
-        Sgnw,   // Sutton SignWriting
-        Shaw,   // Shavian
-        Shrd,   // Sharada
-        Sidd,   // Siddham / Siddhamatrika
-        Sind,   // Sindhi (Khudawadi)
-        Sinh,   // Sinhala
-        Sogd,   // Sogdian
-        Sogo,   // Old Sogdian
-        Sora,   // Sora Sompeng
-        Soyo,   // Soyombo
-        Sund,   // Sundanese
-        Sunu,   // Sunuwar
-        Sylo,   // Syloti Nagri
-        Syrc,   // Syriac
-        Tagb,   // Tagbanwa
-        Takr,   // Takri
-        Tale,   // Tai Le (old)
-        Talu,   // New Tai Lue
-        Taml,   // Tamil
-        Tang,   // Tangut
-        Tavt,   // Tai Viet
-        Telu,   // Telugu
-        Tfng,   // Tifinagh
-        Tglg,   // Tagalog
-        Thaa,   // Thaana
-        Thai,   // Thai
-        Tibt,   // Tibetan
-        Tirh,   // Tirhuta
-        Tnsa,   // Tangsa
-        Todr,   // Todhri’s Albanian
-        Toto,   // Toto
-        Tutg,   // Tulu Tigalari
-        Ugar,   // Ugaritic
-        Vaii,   // Vai
-        Vith,   // Vithkuqi Albanian
-        Wcho,   // Wancho
-        Wara,   // Warang Citi
-        Xpeo,   // Old Persian cuneiform
-        Xsux,   // Cuneiform
-        Yezi,   // Yezidi
-        Yiii,   // Yi
-        Zanb,   // Zanabazar square
+
+#ifndef Q_MOC_RUN
+    // MOC creates CPPs rather than parses this enum, so probably OK
+    #include "UcAutoScripts.h"
+#endif
+
         Zinh,   // Unicode technical
         NN,
-
-        //Afak  no chars — Afaka (Suriname)
-        //Aran  no chars — Arabic Nastaliq
-        //Blis  no chars — Blissymbols
-        //Cirt  no chars — Cirth
-        //Cyrs  no chars — Cyrillic Old Church
-        //Egyd  no chars — Egyptian demotic
-        //Egyh  no chars — Egyptian hieratic
-        //Geok  no chars
-        //Hanb  no chars — Han + Bopomofo
-        //Hans  no chars — Han simplified
-        //Hant  no chars — Han traditional
-        //Hrkt  no chars — Hiragana + Katakana
-        //Inds  no chars — Indus
-        //Jamo  no chars — Hangul jamo
-        //Jpan  no chars — Japanese
-        //Jurc  no chars — Jurchen
-        //Kitl  no chars — Khitan large
-        //Kore  no chars — Hangul+Han
-        //Kpel  no chars — Kpelle (Africa)
-        //Latf  no chars — Latin Fraktur
-        //Latg  no chars — Latin Gaelic
-        //Leke  no chars — Leke (Pwo Karen)
-        //Loma  no chars — Loma (Africa)
-        //Maya  no chars — Maya
-        //Moon  no chars — Moon’s embossing
-        //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
-        //Nkgb  no chars — Naxi Geba
-        //Phlv  no chars — Book Pahvali
-        //Piqd  no chars — Klingon :)
-        //Roro  no chars — Rongorongo (Easter Island)
-        //Sara  no chars — Sarati (Tolkien)
-        //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
-        //Syre  no chars — Syriac Estrangelo
-        //Syrj  no chars — Syriac Western
-        //Syrn  no chars — Syriac Eastern
-        //Teng  no chars — Tengwar
-        //Visp  no chars — Visible speech
-        //Wole  no chars
-        //Zmth  no chars — math notation
-        //Zsye  no chars — emoji
-        //Zsym  no chars — misc symbols
-        //Zxxx  no chars — unwritten documents
-        //Zzzz  no chars — unencoded script
         NONE = Zyyy,
         UNDEF = ZARR,   // Undefined in queries
     };
@@ -653,3 +447,5 @@ namespace uc {
     std::span<const LibNode> allLibNodes();
 
 }   // namespace uc
+
+#endif
