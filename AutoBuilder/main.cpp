@@ -725,7 +725,7 @@ int main()
     sToL.erase("Zyyy");
     sToL.erase("Zzzz");
     sToL.erase("Zinh");
-    sToL.erase("Hrkt");
+    sToL.erase("Hrkt");  // Hiragana-Katakana, actually unused
     sToL.emplace("Hent", "Hentaigana");
 
     os.open("UcAutoScripts.h");
