@@ -729,6 +729,7 @@ int main()
     sToL.emplace("Hent", "Hentaigana");
 
     os.open("UcAutoScripts.h");
+    os << "// Automatically generated, do not edit!" "\n";
     for (auto& [sh, lo] : sToL) {
         std::string spLo = lo;
         str::replace(spLo, '_', ' ');
