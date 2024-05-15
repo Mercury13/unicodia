@@ -722,9 +722,9 @@ int main()
     ///// Write UcAutoScripts //////////////////////////////////////////////////
 
     auto sToL = propBase.giveShortToLong();
-    sToL.erase("Zyyy");
-    sToL.erase("Zzzz");
-    sToL.erase("Zinh");
+    sToL.erase("Zyyy");  // Written manually
+    sToL.erase("Zzzz");  // Unused
+    sToL.erase("Zinh");  // Written manually
     sToL.erase("Hrkt");  // Hiragana-Katakana, actually unused
     sToL.emplace("Hent", "Hentaigana");
 
