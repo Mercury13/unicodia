@@ -429,6 +429,9 @@ namespace uc {
         NN,
         ARABIC_NOTO = ARABIC,  ///< Both Scheh and Noto chains have Scheh → Noto → Funky,
                                ///< but do not lose difference
+        GREEK_COPTIC = NOTO,   ///< We rely here that Noto does not implement A SINGLE char of Coptic,
+                               ///< and Noto is backed with Funky
+
     };
 
     enum class Ffg {

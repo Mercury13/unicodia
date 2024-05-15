@@ -386,7 +386,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, Noto does the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::crange_ins(-9, -8), EcFont::NOTO },
+        Dating::crange_ins(-9, -8), EcFont::GREEK_COPTIC },
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
