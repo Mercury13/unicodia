@@ -98,10 +98,17 @@ ucd::PropBase ucd::loadPropBase()
 ///// PropBase /////////////////////////////////////////////////////////////////
 
 
+void ucd::PropBase::addScript(std::string_view longv, std::string_view shortv)
+{
+    scriptsLongToShort.emplace(longv, shortv);
+    scriptsShortToLong.emplace(shortv, longv);
+}
+
+
 std::string_view ucd::PropBase::shortenScript(std::string_view text) const
 {
-    auto q = scripts.find(text);
-    if (q == scripts.end())
+    auto q = scriptsLongToShort.find(text);
+    if (q == scriptsLongToShort.end())
         throw std::logic_error(str::cat("Cannot shorten script: ", text));
     return q->second;
 }

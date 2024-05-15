@@ -46,16 +46,19 @@ namespace ucd {
     class PropBase
     {
     public:
-        size_t nScripts() const { return scripts.size(); }
+        size_t nScripts() const { return scriptsLongToShort.size(); }
         std::string_view shortenScript(std::string_view text) const;
 
-        void addScript(std::string_view longv, std::string_view shortv)
-            { scripts.emplace(longv, shortv); }
+        void addScript(std::string_view longv, std::string_view shortv);
+        auto&& giveShortToLong() { return std::move(scriptsShortToLong); }
     private:
         /// Strange, but need std::equal_to!
-        using StoS = std::unordered_map<std::string, std::string, Hash, std::equal_to<>>;
+        using UStoS = std::unordered_map<std::string, std::string, Hash, std::equal_to<>>;
+        using MStoS = std::map<std::string, std::string>;
         /// key = long, value = short
-        StoS scripts;
+        UStoS scriptsLongToShort;
+        /// key = short, value = long
+        MStoS scriptsShortToLong;
     };
 
     PropBase loadPropBase();
