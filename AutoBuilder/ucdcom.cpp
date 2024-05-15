@@ -101,7 +101,16 @@ ucd::PropBase ucd::loadPropBase()
 void ucd::PropBase::addScript(std::string_view longv, std::string_view shortv)
 {
     scriptsLongToShort.emplace(longv, shortv);
-    scriptsShortToLong.emplace(shortv, longv);
+}
+
+
+ucd::PropBase::MStoS ucd::PropBase::buildShortToLong() const
+{
+    MStoS r;
+    for (auto& [l, s] : scriptsLongToShort) {
+        r.emplace(s, l);
+    }
+    return r;
 }
 
 

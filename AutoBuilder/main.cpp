@@ -337,7 +337,7 @@ int main()
     ///// Property list ////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode property list..." << std::flush;
-    ucd::PropBase propBase = ucd::loadPropBase();
+    const ucd::PropBase propBase = ucd::loadPropBase();
     std::cout << "OK, " << propBase.nScripts() << " scripts." << '\n';
 
     ///// Script data //////////////////////////////////////////////////////////
@@ -721,7 +721,7 @@ int main()
 
     ///// Write UcAutoScripts //////////////////////////////////////////////////
 
-    auto sToL = propBase.giveShortToLong();
+    auto sToL = propBase.buildShortToLong();
     sToL.erase("Zyyy");  // Written manually
     sToL.erase("Zzzz");  // Unused
     sToL.erase("Zinh");  // Written manually

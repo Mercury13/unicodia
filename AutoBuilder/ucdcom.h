@@ -50,15 +50,14 @@ namespace ucd {
         std::string_view shortenScript(std::string_view text) const;
 
         void addScript(std::string_view longv, std::string_view shortv);
-        auto&& giveShortToLong() { return std::move(scriptsShortToLong); }
+
+        using MStoS = std::map<std::string, std::string>;
+        MStoS buildShortToLong() const;
     private:
         /// Strange, but need std::equal_to!
         using UStoS = std::unordered_map<std::string, std::string, Hash, std::equal_to<>>;
-        using MStoS = std::map<std::string, std::string>;
         /// key = long, value = short
         UStoS scriptsLongToShort;
-        /// key = short, value = long
-        MStoS scriptsShortToLong;
     };
 
     PropBase loadPropBase();
