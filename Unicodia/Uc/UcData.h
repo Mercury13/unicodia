@@ -830,28 +830,28 @@ namespace uc {
     /// Subdivision of blocks for (future) plane maps
     /// @todo [future] Plane map
     enum class MapType {
-        TECHNICAL,
-        MULTIPLE,
-        EU_LATIN,
-        EU_OTHER,
-        EU_OTHER_DEAD,
-        AS_BRAH,
-        AS_BRAH_DEAD,
-        AS_OTHER,
-        AS_OTHER_DEAD,
-        CJ_HANI,
-        CJ_OTHER,
-        CJ_OTHER_DEAD,
-        CJ_SYMBOL,
-        OC,
-        OC_DEAD,
-        AF,
-        AF_DEAD,
-        AM,
-        AM_DEAD,
-        SYM_CODE,   ///< codes, shorthand, non-text, incl. notes
-        SYM_PUNCT,  ///< punctuation
-        SYM_OTHER,
+        TECHNICAL,      ///< technical characters: tags
+        MULTIPLE,       ///< multiple scrips
+        EU_LATIN,       ///< Europe/Latin: Latn only
+        EU_OTHER,       ///< Europe/other: Cyrl, Grek
+        EU_OTHER_DEAD,  ///< Europe/other/dead: Runr, Ogam
+        AS_BRAH,        ///< Asia/Brahmic: Deva, Guru
+        AS_BRAH_DEAD,   ///< Asia/Brahmic/dead: Gran, pan-Indic Vedic
+        AS_OTHER,       ///< Asia/other: Arab, Armn
+        AS_OTHER_DEAD,  ///< Asia/other/dead: Armi, Khar
+        CJ_HANI,        ///< CJK/Han: Hani only
+        CJ_OTHER,       ///< CJK/other: Kana, Hang
+        CJ_OTHER_DEAD,  ///< CJK/other/dead: Nshu, Kits
+        CJ_SYMBOL,      ///< CJK/symbols: punctuation, Tai Xuan
+        OC,             ///< Ocean: Thaa, Sinh
+        OC_DEAD,        ///< Ocean/dead:
+        AF,             ///< Africa: Tfng, Bamu
+        AF_DEAD,        ///< Africa/dead: Copt, Mero
+        AM,             ///< America: Cans, Cher, Hmnp
+        AM_DEAD,        ///< America/dead: Dsrt and Maya only
+        SYM_CODE,       ///< codes, shorthand, non-text, incl. notes
+        SYM_PUNCT,      ///< punctuation, diacritics
+        SYM_OTHER,      ///< modifier letters, maths, shapes, emoji
     };
 
     class BlockResizeSink {     // interface
