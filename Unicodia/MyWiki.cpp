@@ -319,7 +319,13 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
         // Check misc codes
         if (code == "v"sv) {
             if (auto version = uc::findVersion(value)) {
-                fields.version = static_cast<uc::EcVersion>(version - uc::versionInfo);
+                fields.ecVersion = version->stats.thisEcVersion;
+            } else {
+                return nullptr;
+            }
+        } else if (code == "s") {
+            if (auto script = uc::findScript(value)) {
+                fields.ecScript = static_cast<uc::EcScript>(script - uc::scriptInfo);
             } else {
                 return nullptr;
             }
@@ -740,9 +746,21 @@ namespace {
         return x.loc.name;
     }
 
+    void appendQuery(QString& text, std::string_view params)
+    {
+        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
+        auto names = font.familiesComma().toStdString();
+        text += loc::Fmt(
+                " &nbsp;&nbsp;<a href='srq:{1}' class='query' style='font-family: {2};'>&#{3};</a>")
+                       (params)
+                       (names)
+                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
+    }
+
     template <class T>
     inline void appendHeader(QString& text, const T& x,
-                             std::u8string_view addText = {})
+                             std::u8string_view addText = {},
+                             std::string_view qry = {})
     {
         str::append(text, "<p><nobr><b>");
         str::append(text, locName(x));
@@ -752,7 +770,11 @@ namespace {
             text += " ";
             str::append(text, addText);
         }
-        str::append(text, ")</nobr></p>"sv);
+        text += ')';
+        if (!qry.empty()) {
+            appendQuery(text, qry);
+        }
+        str::append(text, "</nobr></p>"sv);
     }
 
     template <class X>
@@ -1026,7 +1048,7 @@ QString mywiki::buildHtml(const uc::Script& x)
         add = loc::get("Prop.Head.NoHent").arg(u8"href='ps:Hent' class='popup'");
     }
     appendStylesheet(r);
-    appendHeader(r, x, add);
+    appendHeader(r, x, add, str::cat("s="sv, x.id));
     appendHtml(r, x, true);
     return r;
 }
@@ -2153,17 +2175,6 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 
 
 namespace {
-
-    void appendQuery(QString& text, std::string_view params)
-    {
-        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
-        auto names = font.familiesComma().toStdString();
-        text += loc::Fmt(
-                " &nbsp;&nbsp;<a href='srq:{1}' class='query' style='font-family: {2};'>&#{3};</a>")
-                       (params)
-                       (names)
-                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
-    }
 
     void appendValue(str::QSep& sp, const char* locKey, unsigned value,
                      std::u8string_view unicodeLink)

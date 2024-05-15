@@ -3,7 +3,7 @@
 
 uc::MultiResult uc::doRequest(const Request& rq)
 {
-    uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.version());
+    uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.ecVersion());
 
     const uc::Block* oldBlock = nullptr;
     uc::SearchGroup* lastGroup = nullptr;
@@ -35,7 +35,10 @@ uc::MultiResult uc::doRequest(const Request& rq)
 bool uc::FieldRequest::isOk(const Cp& cp) const
 {
     // Version
-    if (fields.version != uc::EcVersion::NONE && fields.version != cp.ecVersion)
+    if (fields.ecVersion != uc::EcVersion::NONE && fields.ecVersion != cp.ecVersion)
+        return false;
+    // Script
+    if (fields.ecScript != uc::EcScript::UNDEF && fields.ecScript != cp.ecScript)
         return false;
     return true;
 }
