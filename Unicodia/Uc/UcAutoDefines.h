@@ -125,7 +125,7 @@ namespace uc {
         EUROPEAN_SEPARATOR,         ///<  ES     +
         EUROPEAN_TERMINATOR,        ///<  ET     %
         LTR,                        ///<  L      →
-        NONSPACING_MARK,            ///<  NSM    Haček = caron + circle
+        NONSPACING_MARK,            ///<  NSM    Haček = caron
         OTHER_NEUTRAL,              ///<  ON     ©
         MIRRORED,                   ///<  ON + 'Y', [
         RTL,                        ///<  R      ←
