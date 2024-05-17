@@ -47,7 +47,7 @@
   * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: at the time of writing it’s #349
 * Run it
 * Copy all ``UcAuto*`` to ``Unicodia/Uc``
-* Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new script/block data (``UcData``/``UcBlocks.cpp``)
+* Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new version/block data (``UcData``/``UcBlocks.cpp``)
   * BLOCKS: While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
   * VERSIONS: if it’s beta, add ``Vfg::BETA`` flag
   * Now Unicodia runs somehow!!
