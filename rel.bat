@@ -115,7 +115,7 @@
 @%SMARTCOPY% %AB_UCLIB% Unicodia\Uc\%UCLIB%
 @%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
 @%SMARTCOPY% %AB_UCSUTTON% Unicodia\Uc\%UCSUTTON%
-@%SMARTCOPY% %AB_UCSCRIP% Unicodia\Uc\%UCSCRIPT%
+@%SMARTCOPY% %AB_UCSCRIPT% Unicodia\Uc\%UCSCRIPT%
 @if errorlevel 1 goto end
 
 @echo.
