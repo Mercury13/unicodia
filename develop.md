@@ -52,7 +52,7 @@
   * BLOCKS: they are in ``UcBlocks.cpp``. While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
   * SCRIPTS: they are in ``UcScripts.cpp``. **Do not mess up alphabetic order!**
   * Now Unicodia runs somehow!!
-* Non-compulsory data (but don’t release until you fill all somehow):
+* First-line data: don’t release until you fill all somehow
   * Block extension history:
     * Add the new version to ``BlockExtensionHistory``
     * Run it, check if the block was extended/shrunk
