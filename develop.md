@@ -44,14 +44,21 @@
 # How to update to next Unicode
 * Go to ``MiscFiles/RawData``, modify ``load.bat`` and load bases of the next Unicode
 * Make ``AutoBuilder`` run (who knows what will be added to the next bases)
-  * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: at the time of writing it’s #349
+  * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: see bug #349
 * Run it
 * Copy all ``UcAuto*`` to ``Unicodia/Uc``
-* Make Unicodia compile, first of all add new Unicode version (``EcVersion``), write manually new version/block data (``UcData``/``UcBlocks.cpp``)
-  * BLOCKS: While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
-  * VERSIONS: if it’s beta, add ``Vfg::BETA`` flag
+* Make Unicodia compile, first of all manually update version/script/block data:
+  * VERSIONS: add new Unicode and emoji versions (``EcVersion``). Write when it’s going to be released. If it’s beta, add ``Vfg::BETA`` flag
+  * BLOCKS: they are in ``UcBlocks.cpp``. While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
+  * SCRIPTS: they are in ``UcScripts.cpp``. **Do not mess up alphabetic order!**
   * Now Unicodia runs somehow!!
 * Non-compulsory data (but don’t release until you fill all somehow):
+  * Block extension history:
+    * Add the new version to ``BlockExtensionHistory``
+    * Run it, check if the block was extended/shrunk
+    * Write that to ``UcBlocks.cpp``
+      * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
+	* As an alternative, you may check what changed in the **newest** ``Blocks.txt``, as older data is already written
   * Texts
     * Run UTranslator, open ``en.uorig``
     * Write additional data Unicodia may run w/o: first of all script/block textual info
@@ -60,12 +67,6 @@
       * File → Update data, Go → Find warnings → All, and close those changes
     * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
       * This ellipse will automatically go if you sort blocks by code
-  * Block extension history:
-    * Add the new version to ``BlockExtensionHistory``
-    * Run it, check if the block was extended/shrunk
-    * Write that to ``UcBlocks.cpp``
-      * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
-	* As an alternative, you may check what changed in NEWEST Blocks.txt, as older data is already written
   * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
     * They are in ``AutoBuilder/data.cpp``
 	* See _Decapitalization rules_ below

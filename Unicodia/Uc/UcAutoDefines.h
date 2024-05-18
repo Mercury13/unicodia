@@ -40,6 +40,8 @@ namespace uc {
         UNDEF = ZARR,   // Undefined in queries
     };
 
+    constexpr auto N_SCRIPTS = static_cast<unsigned>(EcScript::NN);
+
     enum class Month : unsigned short {
         NUL = 0,
         JAN = 1,  FEB = 2,  MAR = 3,  APR = 4,  MAY = 5,  JUN = 6,

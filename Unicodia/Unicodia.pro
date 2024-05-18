@@ -65,6 +65,7 @@ SOURCES += \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
     Uc/UcRequest.cpp \
+    Uc/UcScripts.cpp \
     Uc/UcSearch.cpp \
     WiLibCp.cpp \
     WiOsStyle.cpp \
