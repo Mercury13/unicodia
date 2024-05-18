@@ -13355,7 +13355,7 @@
    </group>
    <group id="2.1">
     <text id="Text">
-     <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
+     <orig>Added euro '''€''' and object replacement character FFFC.</orig>
      <transl>Додані євро '''€''' та символ-замінник для об’єкта FFFC.</transl>
     </text>
    </group>

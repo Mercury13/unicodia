@@ -9326,7 +9326,7 @@
    </group>
    <group id="2.1">
     <text id="Text">
-     <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
+     <orig>Added euro '''€''' and object replacement character FFFC.</orig>
     </text>
    </group>
    <group id="6.2">
