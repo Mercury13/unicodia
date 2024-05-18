@@ -42,6 +42,7 @@
     * If you are satisfied with difference → press “Good” button in QaCompareBmp.
 
 # How to update to next Unicode
+## Adapting to new Unicode data
 * Go to ``MiscFiles/RawData``, modify ``load.bat`` and load bases of the next Unicode
 * Make ``AutoBuilder`` run (who knows what will be added to the next bases)
   * Warning, while Unicode is alpha/beta, AutoBuilder may contain manual patches: see bug #349
@@ -52,39 +53,41 @@
   * BLOCKS: they are in ``UcBlocks.cpp``. While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
   * SCRIPTS: they are in ``UcScripts.cpp``. **Do not mess up alphabetic order!**
   * Now Unicodia runs somehow!!
-* **First-line data: don’t release until you fill all somehow**
-  * Block extension history:
-    * Add the new version to ``BlockExtensionHistory``
-    * Run it, check if the block was extended/shrunk
-    * Write that to ``UcBlocks.cpp``
-      * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
-	* As an alternative, you may check what changed in the **newest** ``Blocks.txt``, as older data is already written
-  * Texts
-    * Run UTranslator, open ``en.uorig``
-    * Write additional data Unicodia may run w/o: first of all script/block textual info
-      * Better place the text in order using commands “Move up/Move down”
-    * If you know languages, translate to Russian/Ukrainian using the same UTranslator
-      * File → Update data, Go → Find warnings → All, and close those changes
-    * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
-      * This ellipse will automatically go if you sort blocks by code
-  * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
-    * They are in ``AutoBuilder/data.cpp``
-	* See _Decapitalization rules_ below
-    * Of course, run AutoBuilder
-    * Always compare before and after with some diff tool! Heal one thing and hurt another — that’s frequent!
-    * Copy CPP files again
-  * Block icons
-    * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
-    * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
-    * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (up to two) you drew and how to align that picture to pixels on HiDPI
-* When Unicode transitions from beta to release:
-  * Go to ``MiscFiles/RawData`` and change addresses to final ones
-  * Load data, run AutoBuilder, replace files
-  * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
-  * Check block extension history once again
-  * Do not forget to remove ``Vfg::BETA`` flag
 
-# Adding really optional data Unicodia can live without
+## Urgent first-party data: don’t release until you fill all somehow
+* Block extension history:
+  * Add the new version to ``BlockExtensionHistory``
+  * Run it, check if the block was extended/shrunk
+  * Write that to ``UcBlocks.cpp``
+    * Sample: during U2…16 three blocks were extended (Tibt, Ahom, Egyp format) and one shrunk (Tang supp)
+  * As an alternative, you may check what changed in the **newest** ``Blocks.txt``, as older data is already written
+* Texts
+  * Run UTranslator, open ``en.uorig``
+  * Write additional data Unicodia may run w/o: first of all script/block textual info
+    * Better place the text in order using commands “Move up/Move down”
+  * If you know languages, translate to Russian/Ukrainian using the same UTranslator
+    * File → Update data, Go → Find warnings → All, and close those changes
+  * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
+    * This ellipse will automatically go if you sort blocks by code
+* Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
+  * They are in ``AutoBuilder/data.cpp``
+  * See _Decapitalization rules_ below
+  * Of course, run AutoBuilder
+  * Always compare before and after with some diff tool! Heal one thing and hurt another — that’s frequent!
+  * Copy CPP files again
+* Block icons
+  * There are two ways to make a block icon, SVG and programmatic. I’ll talk about the former, default
+  * 16×16 px, scale 1. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
+  * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (up to two) you drew and how to align that picture to pixels on HiDPI
+
+## When Unicode transitions from beta to release:
+* Go to ``MiscFiles/RawData`` and change addresses to final ones
+* Load data, run AutoBuilder, replace files
+* Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
+* Check block extension history once again
+* Do not forget to remove ``Vfg::BETA`` flag
+
+## Adding really optional data Unicodia can live without
 * Placeholders for emoji: see above
 * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
   * Add ``Vfg::TEXT`` flag to this version
