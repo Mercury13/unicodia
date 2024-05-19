@@ -69,7 +69,7 @@
   * As an alternative, you may check what changed in the **newest** ``Blocks.txt``, as older data is already written
 * Texts
   * Run UTranslator, open ``en.uorig``
-  * Write additional data Unicodia may run w/o: first of all script/block textual info. For example, you decided to add Klingon script:
+  * For example, you decided to add Klingon script:
     * Go to ``Script`` folder, press _Original → Add group_. Ensure that folder is in ``Script``
     * Name it ``Klin``
     * Better move the group in order using commands “Move up/Move down”
