@@ -28,6 +28,7 @@ namespace uc {
         uc::EcScript ecScript = uc::EcScript::NO_VALUE;
         uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;
         uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
+        uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
     };
 
     class FieldRequest : public Request

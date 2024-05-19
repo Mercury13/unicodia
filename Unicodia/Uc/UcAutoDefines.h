@@ -135,6 +135,7 @@ namespace uc {
         SEGMENT_SEPARATOR,          ///<  S      Tab sign
         WHITE_SPACE,                ///<  WS     Space sign
         NN,
+        NO_VALUE = NN,
         z_FSI = BIDI_CONTROL,
         z_LRE = BIDI_CONTROL,
         z_LRI = BIDI_CONTROL,

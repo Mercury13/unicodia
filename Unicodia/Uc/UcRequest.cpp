@@ -32,16 +32,28 @@ uc::MultiResult uc::doRequest(const Request& rq)
 ///// FieldRequest /////////////////////////////////////////////////////////////
 
 
+namespace {
+
+    template <class Ec>
+    inline bool isIneq(Ec inFields, Ec inCp)
+        { return (inFields != Ec::NO_VALUE && inFields != inCp); }
+
+}   // anon namespace
+
+
 bool uc::FieldRequest::isOk(const Cp& cp) const
 {
     // Version
-    if (fields.ecVersion != uc::EcVersion::NO_VALUE && fields.ecVersion != cp.ecVersion)
+    if (isIneq(fields.ecVersion, cp.ecVersion))
         return false;
     // Script
-    if (fields.ecScript != uc::EcScript::NO_VALUE && fields.ecScript != cp.ecScript)
+    if (isIneq(fields.ecScript, cp.ecScript))
         return false;
     // Category
-    if (fields.ecCategory != uc::EcCategory::NO_VALUE && fields.ecCategory != cp.ecCategory)
+    if (isIneq(fields.ecCategory, cp.ecCategory))
+        return false;
+    // Bidirectional class
+    if (isIneq(fields.ecBidiClass, cp.ecBidiClass))
         return false;
     return true;
 }

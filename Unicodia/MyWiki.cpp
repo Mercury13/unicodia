@@ -335,6 +335,12 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
             } else {
                 return nullptr;
             }
+        } else if (code == "b") {
+            if (auto bdc = uc::findBidiClass(value)) {
+                fields.ecBidiClass = static_cast<uc::EcBidiClass>(bdc - uc::bidiClassInfo);
+            } else {
+                return nullptr;
+            }
         } else {
             return nullptr;
         }
@@ -909,7 +915,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x);
+    appendHeader(text, x, {}, str::cat("b=", x.id));
 
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
