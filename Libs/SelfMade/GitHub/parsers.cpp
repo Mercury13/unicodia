@@ -25,7 +25,7 @@ namespace {
     enum class SmallRes {
         BAD_JSON,       ///< Bad JSON
         GO_NEXT,        ///< Go on, check next version
-        STOP_EXACT,     ///< Stop, exact version found
+        STOP_EXACT,     ///< Stop, current/newer version found
         STOP_OVERSHOOT  ///< Stop, earlier version found
     };
 
