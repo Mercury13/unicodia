@@ -20,7 +20,14 @@ github::UpdateReply::UpdateReply(std::span<std::string_view> aPlats)
 
 namespace {
 
-    enum class SmallRes { BAD_JSON, GO_NEXT, STOP_EXACT, STOP_OVERSHOOT };
+    /// Result of checking of ONE version
+    ///
+    enum class SmallRes {
+        BAD_JSON,       ///< Bad JSON
+        GO_NEXT,        ///< Go on, check next version
+        STOP_EXACT,     ///< Stop, exact version found
+        STOP_OVERSHOOT  ///< Stop, earlier version found
+    };
 
     /// Checks whether documeht has one of equivPlatforms
     /// @param [in] goodCode    what to return if GOOD (result always STOP_EXACT)

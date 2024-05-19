@@ -1100,7 +1100,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA, {}, 9_hx },
             "Pau Cin Hau",
             { EcScript::Pauc, '0' }, MapType::AS_OTHER, EcScript::Pauc },
-    /// @todo [future] Deva ex A temporarily in Funky
+    // Deva Ex A OK
     { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapType::AS_BRAH_DEAD,
