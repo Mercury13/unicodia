@@ -69,8 +69,13 @@
   * As an alternative, you may check what changed in the **newest** ``Blocks.txt``, as older data is already written
 * Texts
   * Run UTranslator, open ``en.uorig``
-  * Write additional data Unicodia may run w/o: first of all script/block textual info
-    * Better place the text in order using commands “Move up/Move down”
+  * Write additional data Unicodia may run w/o: first of all script/block textual info. For example, you decided to add Klingon script:
+    * Go to ``Script`` folder, press _Original → Add group_. Ensure that folder is in ``Script``
+    * Name it ``Klin``
+    * Better move the group in order using commands “Move up/Move down”
+    * Press _Original → Add text_. Ensure that text is in ``Klin``
+    * Name it ``Name``, write _Klingon_
+    * Also ``Lang`` and ``Text`` texts
   * If you know languages, translate to Russian/Ukrainian using the same UTranslator
     * File → Update data, Go → Find warnings → All, and close those changes
   * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
