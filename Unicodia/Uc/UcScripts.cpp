@@ -112,7 +112,6 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
     // Carian OK, W10 P1
-    /// @todo [font???] Carian
     { "Cari", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
@@ -347,12 +346,10 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1915), EcFont::LISU },
     // Lycian OK, W10 P1 Segoe Historic
-    /// @todo [font???] Lycian
     { "Lyci", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(-6), EcFont::HISTORIC },
     // Lydian OK, W10 P1 Segoe Historic
-    /// @todo [font???] Lydian
     { "Lydi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         Dating::crange(-8, -7), EcFont::HISTORIC },
@@ -533,7 +530,6 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yrange(-600, -200), EcFont::SAMARITAN },
     // South Arabian OK, W10 Segoe UI Historic
-    /// @todo [font???] South Arabian
     { "Sarb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         Dating::century(-9, StdNote::FIRST_KNOWN), EcFont::HISTORIC },
