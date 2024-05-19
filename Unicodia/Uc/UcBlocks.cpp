@@ -939,7 +939,7 @@ constinit const uc::Block uc::blocks[] {
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
     // Garay OK somehow, though hangs
-    { 0x10D40, 0x10D8F, { 0x10D52, EcContinent::AFRICA, Ifg::MISSING  },
+    { 0x10D40, 0x10D8F, { 0x10D52, EcContinent::AFRICA, {}, SvgHint{ 14, 0, ImbaX::LEFT_3 } },
             "Garay",
             { EcScript::Gara, 0}, MapType::AF, EcScript::Gara },
     // Rumi OK
