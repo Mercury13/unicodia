@@ -694,7 +694,7 @@ namespace uc {
                 unsigned nTotal = 0;
             } scripts;
 
-            EcVersion thisEcVersion = EcVersion::NONE;
+            EcVersion thisEcVersion = EcVersion::NO_VALUE;
         } stats {};
 
         std::u8string locName() const;
@@ -744,7 +744,7 @@ namespace uc {
 
         mutable unsigned nChars = 0;
         mutable int plane = -1;
-        mutable EcVersion ecVersion = EcVersion::UNKNOWN;
+        mutable EcVersion ecVersion = EcVersion::TOO_HIGH;
         mutable const Block* mainBlock = nullptr;
         struct Loc {
             std::u8string_view name, timeComment, langs, description;
@@ -888,7 +888,7 @@ namespace uc {
         EcGlyphStyleChannel ecStyleChannel = EcGlyphStyleChannel::NONE;
         struct History {
             char32_t oldEndingCp = 0;
-            EcVersion ecVersion = EcVersion::NONE;
+            EcVersion ecVersion = EcVersion::NO_VALUE;
         } history {};
 
         /// @warning We do not delete that icon, strange constinit problems, but OK

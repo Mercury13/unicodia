@@ -733,7 +733,7 @@ QVariant SearchModel::groupData(size_t index, int role) const
         switch (role) {
         case Qt::DisplayRole: {
                 auto charsLine = loc::get("Prop.Head.NChars").arg(group.size());
-                if (version != uc::EcVersion::NONE) {
+                if (version != uc::EcVersion::NO_VALUE) {
                     if (blk->ecVersion == version && version != uc::EcVersion::FIRST_MEANING) {
                         // CREATED IN THIS VERSION
                         const char* key = "Search.Blk.New";

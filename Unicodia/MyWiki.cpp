@@ -1023,7 +1023,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             append(text, loc::get(x.life().locKey), x.font());
         }
         if (isScript) {
-            if (x.ecVersion != uc::EcVersion::UNKNOWN) {
+            if (x.ecVersion != uc::EcVersion::TOO_HIGH) {
                 sp.sep();
                 appendVersion(text, BULLET, x.version());
             }
@@ -2126,7 +2126,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
     appendNonBullet(text, "Prop.Bullet.AllVer");
     appendVersionValue(text, uc::versionInfo[static_cast<int>(ver)]);
 
-    if (node.ecEmojiVersion != uc::EcVersion::NONE) {
+    if (node.ecEmojiVersion != uc::EcVersion::NOT_EMOJI) {
         sp.sep();
         appendNonBullet(text, "Prop.Bullet.EmojiVer");
         appendEmojiValue(text, node.emojiVersion(), node.emojiPrevVersion());

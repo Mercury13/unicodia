@@ -35,13 +35,13 @@ uc::MultiResult uc::doRequest(const Request& rq)
 bool uc::FieldRequest::isOk(const Cp& cp) const
 {
     // Version
-    if (fields.ecVersion != uc::EcVersion::NONE && fields.ecVersion != cp.ecVersion)
+    if (fields.ecVersion != uc::EcVersion::NO_VALUE && fields.ecVersion != cp.ecVersion)
         return false;
     // Script
-    if (fields.ecScript != uc::EcScript::UNDEF && fields.ecScript != cp.ecScript)
+    if (fields.ecScript != uc::EcScript::NO_VALUE && fields.ecScript != cp.ecScript)
         return false;
     // Category
-    if (fields.ecCategory != uc::EcCategory::NN && fields.ecCategory != cp.ecCategory)
+    if (fields.ecCategory != uc::EcCategory::NO_VALUE && fields.ecCategory != cp.ecCategory)
         return false;
     return true;
 }

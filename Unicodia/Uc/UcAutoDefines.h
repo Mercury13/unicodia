@@ -37,7 +37,7 @@ namespace uc {
         Zinh,   // Unicode technical
         NN,
         NONE = Zyyy,
-        UNDEF = ZARR,   // Undefined in queries
+        NO_VALUE = ZARR,   // Undefined in queries
     };
 
     constexpr auto N_SCRIPTS = static_cast<unsigned>(EcScript::NN);
@@ -50,7 +50,7 @@ namespace uc {
 
     enum class EcVersion : unsigned char
     {
-        NONE,
+        NOT_EMOJI,
         //V_1_0,        unused
         //V_1_0_1,      unused
         V_1_1,
@@ -84,9 +84,10 @@ namespace uc {
         V_15_1,
         V_16_0,
         NN,
-        UNKNOWN = NN,
+        TOO_HIGH = NN,
         FIRST = 0,
         FIRST_MEANING = V_1_1,
+        NO_VALUE = NOT_EMOJI,
         LAST = NN - 1,
         E0_6 = V_6_0,
         E0_7 = V_7_0,
@@ -100,7 +101,7 @@ namespace uc {
         E14_0 = V_14_0,
         E15_0 = V_15_0,
         E15_1 = V_15_1,
-        E16_0 = V_16_0,
+        E16_0 = V_16_0,        
     };
     inline EcVersion& operator ++ (EcVersion& x) noexcept
     {
@@ -241,7 +242,8 @@ namespace uc {
         SEPARATOR_LINE,         ///< Zl   Enter sign
         SEPARATOR_PARAGRAPH,    ///< Zp   Paragraph sign
         SEPARATOR_SPACE,        ///< Zs   Space sign
-        NN
+        NN,
+        NO_VALUE = NN
     };
 
     struct Version;
@@ -418,7 +420,7 @@ namespace uc {
         std::u8string_view text;
         short iParent, nChildren, iFirstChild;
         Lfgs flags;
-        uc::EcVersion ecEmojiVersion = uc::EcVersion::NONE;
+        uc::EcVersion ecEmojiVersion = uc::EcVersion::NOT_EMOJI;
 
         EmojiDraw emojiDraw() const;
         inline const uc::Version& emojiVersion() const;

@@ -405,7 +405,7 @@ namespace {
         // version
               "EcVersion::";
         if (node.emojiVersion.empty()) {
-            os << "NONE";
+            os << "NOT_EMOJI";
         } else {
             std::string newVer = node.emojiVersion;
             str::replace(newVer, '.', '_');

@@ -16,7 +16,7 @@ namespace uc {
         virtual bool hasEmoji() const { return false; }
 
         /// @return   version is persent in query
-        virtual EcVersion ecVersion() const { return EcVersion::NONE; }
+        virtual EcVersion ecVersion() const { return EcVersion::NO_VALUE; }
 
         virtual bool isOk(const Cp& cp) const = 0;
         ~Request() = default;
@@ -25,9 +25,9 @@ namespace uc {
     MultiResult doRequest(const Request& rq);
 
     struct Fields {
-        uc::EcScript ecScript = uc::EcScript::UNDEF;
-        uc::EcVersion ecVersion = uc::EcVersion::NONE;
-        uc::EcCategory ecCategory = uc::EcCategory::NN;
+        uc::EcScript ecScript = uc::EcScript::NO_VALUE;
+        uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;
+        uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
     };
 
     class FieldRequest : public Request

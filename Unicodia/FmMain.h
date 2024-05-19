@@ -252,7 +252,7 @@ protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
 private:
     uc::ReplyStyle style = uc::ReplyStyle::FLAT;
-    uc::EcVersion version = uc::EcVersion::NONE;
+    uc::EcVersion version = uc::EcVersion::NO_VALUE;
     const PixSource* const sample;
     const uc::GlyphStyleSets& glyphSets;
     SafeVector<uc::SearchGroup> groups;

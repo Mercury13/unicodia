@@ -1905,7 +1905,7 @@ unsigned uc::Block::nNonChars() const
 
 void uc::Block::resizeHistory(const BlockResizeSink& x) const
 {
-    if (history.ecVersion != EcVersion::NONE) {
+    if (history.ecVersion != EcVersion::NO_VALUE) {
         x.act(history.ecVersion, history.oldEndingCp, endingCp);
     }
 }

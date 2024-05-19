@@ -120,7 +120,7 @@ namespace uc {
     struct MultiResult {
         SearchError err = SearchError::OK;
         ReplyStyle style = ReplyStyle::FLAT;
-        uc::EcVersion version = uc::EcVersion::NONE;
+        uc::EcVersion version = uc::EcVersion::NO_VALUE;
         SafeVector<SearchGroup> groups {};
 
         MultiResult(ReplyStyle x, EcVersion v) : style(x), version(v) {}
