@@ -266,6 +266,7 @@ namespace uc {
            Z_CJY_3,
         CUNEIFORM,
         DEVANAGARI,
+        DEVANAGARI_BIGGER,
         DINGBAT,
           Z_DIN_1,
           Z_DIN_2,

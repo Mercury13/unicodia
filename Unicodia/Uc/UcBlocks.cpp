@@ -631,7 +631,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA, {}, SvgHint{ 11, 1 } },
             "Devanagari Extended",
             { EcScript::Deva, 1 }, MapType::AS_BRAH_DEAD,
-            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Deva, EcFont::DEVANAGARI_BIGGER, Bfg::HAS_DESCRIPTION },
     // Kayah Li OK
     { 0xA900, 0xA92F, { U"\uA922\uA928", EcContinent::ASIA },
             "Kayah Li",
@@ -1104,7 +1104,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapType::AS_BRAH_DEAD,
-            EcScript::Deva, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
+            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Sunuwar OK, though font is horrible
     { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, {}, 7_hx },
             "Sunuwar",

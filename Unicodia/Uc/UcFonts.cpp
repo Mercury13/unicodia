@@ -31,7 +31,7 @@ constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
 constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
 
-constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
+constexpr std::string_view FNAME_DEVA = "UtoSerifDevanagari-Regular.ttf";
 constexpr uc::StyleSheet STYLE_NONE {};
 constexpr auto STYLE_DEVA = STYLE_NONE;
 constexpr auto SIZE_DEVA = 110_pc;
@@ -127,6 +127,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
+    { FNAME_DEVA, Ffg::DESC_STD, 10_top, SIZE_DEVA },                           // Devanagari bigger
     { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },                // Dingbat
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 20_bot },      // …1
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …2
