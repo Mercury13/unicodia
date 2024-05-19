@@ -6,6 +6,7 @@
 
 // STL
 #include <unordered_set>
+#include <unordered_map>
 
 // Lib
 #include "u_Vector.h"
@@ -30,6 +31,15 @@ namespace lib {
         unsigned maxValueLength() const;
     };
 
+    struct Hash32 : public std::hash<std::u32string_view> {
+        using is_transparent = void;
+    };
+
+    struct EmojiInfo {
+        std::string emojiVersion;
+    };
+
+    using MAll = std::unordered_map<std::u32string, EmojiInfo, Hash32>;
 
     struct EmojiData {
         /// Total # of emoji
@@ -39,6 +49,8 @@ namespace lib {
         std::unordered_set<char32_t> vs16;
         /// List of single-char emoji that are
         std::unordered_set<char32_t> misrenders;
+        /// All emoji together with Unicode versions
+        MAll all;
         /// Root of emoji branch
         Node root;
     };
@@ -51,7 +63,7 @@ namespace lib {
         forget::Map forgetMap;
     };
 
-    Manual loadManual(const char* fname);
+    Manual loadManual(const char* fname, const MAll& mAll);
 
     struct Result {
         int nNodes = 0;

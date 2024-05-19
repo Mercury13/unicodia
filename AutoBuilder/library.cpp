@@ -277,6 +277,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     r.vs16.insert(codes[0]);
                     mainCode = codes[0];
                 }
+                std::u32string_view myStr { codes.buffer(), nCodes };
                 // Add to tree
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
                 auto& newItem = treePath.top()->children.emplace_back();
@@ -313,6 +314,12 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     break;
                 case SearchLevel::HIDDEN: ;
                 }
+
+                // Emoji data
+                auto [itData, _] = r.all.try_emplace(std::u32string{myStr});
+                auto& v = itData->second;
+                v.emojiVersion = emVersion;
+
                 ++r.count;
             }
         }
@@ -535,6 +542,14 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
 
 namespace {
 
+    void retrieveEmojiVersion(lib::Node& node, const lib::MAll& mAll)
+    {
+        auto it = mAll.find(node.value);
+        if (it != mAll.end()) {
+            node.emojiVersion = it->second.emojiVersion;
+        }
+    }
+
     void loadName(lib::Node& result, pugi::xml_node tag)
     {
         if (tag.attribute("hasText").as_bool())
@@ -571,7 +586,8 @@ namespace {
 
     void appendDump(lib::Node& result, forget::Map& forgetMap,
                     pugi::xml_node tag, bool isForgetTest,
-                    std::string_view tilePattern, unsigned& indexInPattern)
+                    std::string_view tilePattern, unsigned& indexInPattern,
+                    const lib::MAll& mAll)
     {
         std::string_view text8 = tag.text().get();
         auto text32 = mojibake::toS<std::u32string>(text8);
@@ -581,6 +597,7 @@ namespace {
         for (auto v : sub32) {
             auto& node = result.children.emplace_back();
             node.value = v;
+            retrieveEmojiVersion(node, mAll);
             conditionalBan(node, tilePattern, indexInPattern);
             if (v.length() == 1) {
                 auto cp = v[0];
@@ -602,7 +619,8 @@ namespace {
 
     void appendRange(lib::Node& result, forget::Map& forgetMap,
                      pugi::xml_node tag, bool isForgetTest,
-                     std::string_view tilePattern, unsigned& indexInPattern)
+                     std::string_view tilePattern, unsigned& indexInPattern,
+                     const lib::MAll& mAll)
     {
         auto startCode = fromHex(tag.attribute("start").as_string());
         auto endCode = fromHex(tag.attribute("end").as_string());
@@ -615,6 +633,7 @@ namespace {
             char32_t cp = i;
             auto& node = result.children.emplace_back();
             node.value = std::u32string{ cp };
+            retrieveEmojiVersion(node, mAll);
             conditionalBan(node, tilePattern, indexInPattern);
             if (isForgetTest) {
                 auto& w = forgetMap[cp];
@@ -624,7 +643,8 @@ namespace {
     }
 
     void appendSequence(lib::Node& result, pugi::xml_node tag,
-                        std::string_view tilePattern, unsigned& indexInPattern)
+                        std::string_view tilePattern, unsigned& indexInPattern,
+                        const lib::MAll& mAll)
     {
         std::string_view value8 = tag.attribute("v").as_string();
         if (value8.empty())
@@ -635,12 +655,14 @@ namespace {
         auto& node = result.children.emplace_back();
         loadName(node, tag);
         node.value = std::move(value32);
+        retrieveEmojiVersion(node, mAll);
         conditionalBan(node, tilePattern, indexInPattern);
     }
 
     void loadRecurse(lib::Node& result, forget::Map& forgetMap,
                      pugi::xml_node tag, bool isForgetTest,
-                     std::string_view tilePattern)
+                     std::string_view tilePattern,
+                     const lib::MAll& mAll)
     {
         unsigned indexInPattern = 0;
         isForgetTest = tag.attribute("forgetTest").as_bool(isForgetTest);
@@ -651,14 +673,14 @@ namespace {
                 loadName(newFolder, v);
                 // As all tile patterns are taken from XML → they are null-term
                 std::string_view newTilePattern = v.attribute("tilePattern").as_string(tilePattern.data());
-                loadRecurse(newFolder, forgetMap, v, isForgetTest, newTilePattern);
+                loadRecurse(newFolder, forgetMap, v, isForgetTest, newTilePattern, mAll);
             } else if (v.name() == "d"sv) {
                 // Dump
-                appendDump(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern);
+                appendDump(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern, mAll);
             } else if (v.name() == "range"sv) {
-                appendRange(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern);
+                appendRange(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern, mAll);
             } else if (v.name() == "sq"sv) {
-                appendSequence(result, v, tilePattern, indexInPattern);
+                appendSequence(result, v, tilePattern, indexInPattern, mAll);
             }
         }
     }
@@ -666,7 +688,7 @@ namespace {
 }   // anon namespace
 
 
-lib::Manual lib::loadManual(const char* fname)
+lib::Manual lib::loadManual(const char* fname, const MAll& mAll)
 {
     pugi::xml_document doc;
     if (auto parseRes = doc.load_file(fname); !parseRes)
@@ -679,7 +701,7 @@ lib::Manual lib::loadManual(const char* fname)
         throw std::logic_error("No root");
 
     // Do not use empty tilePattern, need working data()
-    loadRecurse(r.root, r.forgetMap, root, false, ""sv);
+    loadRecurse(r.root, r.forgetMap, root, false, ""sv, mAll);
 
     return r;
 }
