@@ -40,5 +40,8 @@ bool uc::FieldRequest::isOk(const Cp& cp) const
     // Script
     if (fields.ecScript != uc::EcScript::UNDEF && fields.ecScript != cp.ecScript)
         return false;
+    // Category
+    if (fields.ecCategory != uc::EcCategory::NN && fields.ecCategory != cp.ecCategory)
+        return false;
     return true;
 }

@@ -329,6 +329,12 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
             } else {
                 return nullptr;
             }
+        } else if (code == "c") {
+            if (auto cat = uc::findCategory(value)) {
+                fields.ecCategory = static_cast<uc::EcCategory>(cat - uc::categoryInfo);
+            } else {
+                return nullptr;
+            }
         } else {
             return nullptr;
         }
@@ -924,7 +930,7 @@ QString mywiki::buildHtml(const uc::Category& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x);
+    appendHeader(text, x, {}, str::cat("c="sv, x.id));
     str::append(text, "<p>");
     appendNoFont(text, x.loc.description);
     return text;

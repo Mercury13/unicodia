@@ -975,8 +975,8 @@ namespace uc {
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
 
-    extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];
-    inline const Category* findCategory(std::string_view x) { return findInArray(x, categoryInfo); }
+    extern const Category categoryInfo[];
+    const Category* findCategory(std::string_view x);
 
     struct NumType
     {

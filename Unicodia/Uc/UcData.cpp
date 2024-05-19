@@ -142,7 +142,7 @@ constinit const uc::Version uc::versionInfo[] {
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
 
-constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
+constinit const uc::Category uc::categoryInfo[] {
     { UpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::YES },
     { UpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::YES },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
@@ -172,8 +172,11 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
     { UpCategory::SEPARATOR,    "Zl",   Graphical::NO,  Independent::YES },
     { UpCategory::SEPARATOR,    "Zp",   Graphical::NO,  Independent::YES },
     { UpCategory::SEPARATOR,    "Zs",   Graphical::YES, Independent::YES },
-    //{ u8"Error"sv },     //check for equal number
 };
+static_assert(std::size(uc::categoryInfo) == static_cast<int>(uc::EcCategory::NN));
+
+const uc::Category* uc::findCategory(std::string_view x)
+    { return findInArray(x, categoryInfo); }
 
 constexpr uc::NumType numTypeRawInfo[] {
     { {} },

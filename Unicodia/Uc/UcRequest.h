@@ -27,6 +27,7 @@ namespace uc {
     struct Fields {
         uc::EcScript ecScript = uc::EcScript::UNDEF;
         uc::EcVersion ecVersion = uc::EcVersion::NONE;
+        uc::EcCategory ecCategory = uc::EcCategory::NN;
     };
 
     class FieldRequest : public Request
