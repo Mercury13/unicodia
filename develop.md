@@ -14,6 +14,11 @@
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
 * Ctrl+Shift+Q — test emoji repainting engine
 
+# Update font: what to pay attention to?
+* First of all tofu stats (About → Tofu statistics / Ctrl+T): there should be no new tofu
+* Then display of characters and samples
+* If some character hangs → check whether it was fixed professionally
+
 # How to update emoji?
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
