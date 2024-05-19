@@ -228,7 +228,7 @@ namespace {
 
     bool hasEmojiSearch = false;
 
-    /// @todo [future] Can mocve this set to compile-time?
+    /// @todo [future] Can move this set to compile-time?
     std::unordered_map<char32_t, const uc::LibNode*> singleChars;
 
     /// @todo [future] Can move that trie to compile-time?
