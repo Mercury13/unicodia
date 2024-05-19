@@ -1009,7 +1009,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Sinh, 1 }, MapType::OC_DEAD,
             EcScript::Sinh, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Khojki OK
-    { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA },
+    { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA, Ifg::SHIFT_UP },
             "Khojki",
             { EcScript::Khoj, 0 }, MapType::AS_BRAH_DEAD, EcScript::Khoj },
     // Multani OK
@@ -1141,7 +1141,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Lisu, 1 }, MapType::AS_OTHER,
             EcScript::Lisu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tamil supp OK
-    { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA },
+    { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA, Ifg::SHIFT_UP },
             "Tamil Supplement",
             { EcScript::Taml, 1 }, MapType::AS_BRAH_DEAD,
             EcScript::Taml, EcFont::TAMIL_SUPPLEMENT, Bfg::HAS_DESCRIPTION },
