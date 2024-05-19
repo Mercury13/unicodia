@@ -75,7 +75,7 @@
     * Better move the group into its alphabetic place using commands _Original → Move up/Move down_
     * Press _Original → Add text_. Ensure that text is in ``Klin``
     * Name it ``Name``, write _Klingon_
-    * Also ``Lang`` and ``Text`` texts
+    * Also add ``Lang`` and ``Text`` texts
   * If you know languages, translate to Russian/Ukrainian using the same UTranslator
     * File → Update data, Go → Find warnings → All, and close those changes
   * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
