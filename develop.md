@@ -18,6 +18,7 @@
 * First of all tofu stats (About → Tofu statistics / Ctrl+T): there should be no new tofu
 * Then display of characters and samples
 * If some character hangs → check whether it was fixed professionally. Most hanging characters are done in UnicodiaFunky font, some in *Fixup.
+* Check license what was done by author of Unicodia, and whether we need it now.
 
 # How to update emoji?
 * Simple emoji (no skintones)
