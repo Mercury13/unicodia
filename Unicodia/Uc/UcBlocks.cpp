@@ -113,7 +113,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'A' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Devanagari OK
-    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
+    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, Ifg::SHIFT_DOWN, SvgHint{ 9, 2 } },
             "Devanagari",
             { EcScript::Deva, 0 }, MapType::AS_BRAH, EcScript::Deva },
     // Bengali OK
@@ -304,7 +304,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Sund, 1 }, MapType::OC_DEAD,
             EcScript::Sund, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Vedic ex OK
-    { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK },
+    { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK | Ifg::SHIFT_DOWN },
             "Vedic Extensions",
             MyName::INST, MapType::AS_BRAH_DEAD, EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
@@ -613,7 +613,7 @@ constinit const uc::Block uc::blocks[] {
             "Syloti Nagri",
             { EcScript::Sylo, 0 }, MapType::AS_BRAH, EcScript::Sylo },
     // Common Indic OK
-    { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA },
+    { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA, Ifg::SHIFT_DOWN },
             "Common Indic Number Forms",
             MyName::INST, MapType::AS_BRAH,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -628,7 +628,7 @@ constinit const uc::Block uc::blocks[] {
             "Saurashtra",
             { EcScript::Saur, 0 }, MapType::AS_BRAH, EcScript::Saur },
     // Devanagari ex OK
-    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA, {}, SvgHint{ 11, 1 } },
+    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA, Ifg::SHIFT_DOWN, SvgHint{ 11, 1 } },
             "Devanagari Extended",
             { EcScript::Deva, 1 }, MapType::AS_BRAH_DEAD,
             EcScript::Deva, EcFont::DEVANAGARI_BIGGER, Bfg::HAS_DESCRIPTION },
@@ -1101,7 +1101,7 @@ constinit const uc::Block uc::blocks[] {
             "Pau Cin Hau",
             { EcScript::Pauc, '0' }, MapType::AS_OTHER, EcScript::Pauc },
     // Deva Ex A OK
-    { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA },
+    { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA, Ifg::SHIFT_DOWN },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapType::AS_BRAH_DEAD,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
