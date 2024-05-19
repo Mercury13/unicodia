@@ -938,7 +938,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA, {}, SvgHint{ 4, 15 } },
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
-    /// @todo [U16, big tofu] Garay
+    // Garay OK somehow, though hangs
     { 0x10D40, 0x10D8F, { 0x10D52, EcContinent::AFRICA, Ifg::MISSING  },
             "Garay",
             { EcScript::Gara, 0}, MapType::AF, EcScript::Gara },

@@ -178,10 +178,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC },
-    /// @todo [U16, big tofu] Garay
+    // Garay OK somehow, though hangs
     { "Gara", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::year(1961), EcFont::NORMAL },
+        Dating::year(1961), EcFont::FUNKY_BIGGER, Sfg::STUB_RTL },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,

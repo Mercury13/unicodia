@@ -211,6 +211,7 @@ namespace uc {
          DEJAVU,
          FUNKY,
           Z_FUN_1,
+         FUNKY_BIGGER,
         ADLAM,
         AHOM,
         ANATOLIAN,
