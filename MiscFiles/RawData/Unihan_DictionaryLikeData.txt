@@ -1,6 +1,6 @@
 #
 # Unihan_DictionaryLikeData.txt
-# Date: 2024-04-24 00:00:00 GMT [KL]
+# Date: 2024-01-26 00:00:00 GMT [KL]
 # Unicode version: 16.0.0
 #
 # Unicode Character Database
@@ -653,13 +653,13 @@ U+3527	kCangjie	YTKS
 U+3527	kMojiJoho	MJ000255
 U+3528	kCangjie	PLPB
 U+3528	kMojiJoho	MJ000256
-U+3528	kPhonetic	1082*
+U+3528	kPhonetic	1009*
 U+3529	kCangjie	PGIT
 U+3529	kMojiJoho	MJ000257
-U+3529	kPhonetic	508*
+U+3529	kPhonetic	1009*
 U+352A	kCangjie	PYWI
 U+352A	kMojiJoho	MJ000258
-U+352A	kPhonetic	822*
+U+352A	kPhonetic	1009*
 U+352B	kCangjie	KP
 U+352B	kMojiJoho	MJ000259
 U+352C	kCangjie	PAJ
@@ -1153,7 +1153,6 @@ U+35FB	kMojiJoho	MJ000437 MJ000437:E0100 MJ000436:E0101
 U+35FB	kUnihanCore2020	H
 U+35FC	kCangjie	RTCD
 U+35FC	kMojiJoho	MJ000438
-U+35FC	kPhonetic	1589*
 U+35FD	kCangjie	VLR
 U+35FD	kMojiJoho	MJ000439
 U+35FE	kCangjie	RTJP
@@ -1611,7 +1610,6 @@ U+36D3	kMojiJoho	MJ000627
 U+36D3	kUnihanCore2020	H
 U+36D4	kCangjie	VHEJ
 U+36D4	kMojiJoho	MJ000628
-U+36D4	kPhonetic	405*
 U+36D4	kUnihanCore2020	H
 U+36D5	kCangjie	VRAU
 U+36D5	kMojiJoho	MJ000629
@@ -1864,7 +1862,7 @@ U+3743	kMojiJoho	MJ000728
 U+3743	kUnihanCore2020	H
 U+3744	kCangjie	YDPU
 U+3744	kMojiJoho	MJ000729
-U+3744	kPhonetic	316* 1385*
+U+3744	kPhonetic	1385*
 U+3745	kCangjie	GDHNE
 U+3745	kMojiJoho	MJ000730
 U+3745	kPhonetic	493
@@ -2422,7 +2420,6 @@ U+383F	kCangjie	YPLB
 U+383F	kMojiJoho	MJ000960
 U+3840	kCangjie	FBF
 U+3840	kMojiJoho	MJ000961
-U+3840	kPhonetic	1013A*
 U+3841	kCangjie	LBKMS
 U+3841	kMojiJoho	MJ000962
 U+3842	kCangjie	MNLB
@@ -2640,7 +2637,6 @@ U+38A2	kCangjie	FKT
 U+38A2	kMojiJoho	MJ001059 MJ001058:E0100 MJ001059:E0101
 U+38A3	kCangjie	TKT
 U+38A3	kMojiJoho	MJ001061 MJ001060:E0100 MJ001061:E0101
-U+38A3	kPhonetic	627*
 U+38A4	kCangjie	JIPS
 U+38A4	kStrange	I:U+39B2
 U+38A5	kCangjie	BRIP
@@ -2722,28 +2718,28 @@ U+38CB	kCangjie	TTHHH
 U+38CB	kMojiJoho	MJ001096
 U+38CC	kCangjie	YRHHH
 U+38CC	kMojiJoho	MJ001097
-U+38CC	kPhonetic	177*
+U+38CC	kPhonetic	1101*
 U+38CC	kUnihanCore2020	H
 U+38CD	kCangjie	IRHHH
 U+38CD	kMojiJoho	MJ001098
-U+38CD	kPhonetic	1373*
+U+38CD	kPhonetic	1101*
 U+38CE	kCangjie	HAFHH
 U+38CE	kMojiJoho	MJ001099
 U+38CF	kCangjie	KJHHH
 U+38CF	kMojiJoho	MJ001100
 U+38D0	kCangjie	HEHHH
 U+38D0	kMojiJoho	MJ001101
-U+38D0	kPhonetic	280*
+U+38D0	kPhonetic	1101*
 U+38D1	kCangjie	IBHHH
 U+38D1	kMojiJoho	MJ001102
-U+38D1	kPhonetic	1656*
+U+38D1	kPhonetic	1101*
 U+38D1	kUnihanCore2020	H
 U+38D2	kCangjie	CAHHH
 U+38D2	kMojiJoho	MJ001103
-U+38D2	kPhonetic	68*
+U+38D2	kPhonetic	1101*
 U+38D3	kCangjie	YDHHH
 U+38D3	kMojiJoho	MJ001104
-U+38D3	kPhonetic	31*
+U+38D3	kPhonetic	1101*
 U+38D4	kCangjie	HOMN
 U+38D4	kMojiJoho	MJ001105
 U+38D4	kUnihanCore2020	H
@@ -2864,7 +2860,7 @@ U+390B	kCangjie	PCSH
 U+390B	kMojiJoho	MJ001152
 U+390C	kCangjie	PTM
 U+390C	kMojiJoho	MJ001153
-U+390C	kPhonetic	650*
+U+390C	kPhonetic	564A*
 U+390D	kCangjie	MSP
 U+390D	kMojiJoho	MJ001154
 U+390E	kCangjie	KRP
@@ -2998,7 +2994,6 @@ U+3945	kCangjie	PBBE
 U+3945	kMojiJoho	MJ001209
 U+3946	kCangjie	PLE
 U+3946	kMojiJoho	MJ001210
-U+3946	kPhonetic	1372*
 U+3947	kCangjie	PII
 U+3947	kMojiJoho	MJ001211
 U+3948	kCangjie	LRP
@@ -3884,7 +3879,6 @@ U+3ABF	kCangjie	UUHML
 U+3ABF	kMojiJoho	MJ001561
 U+3AC0	kCangjie	AAHML
 U+3AC0	kMojiJoho	MJ001562
-U+3AC0	kPhonetic	119*
 U+3AC1	kCangjie	VUHML
 U+3AC1	kMojiJoho	MJ001563
 U+3AC2	kCangjie	IFHML
@@ -3983,7 +3977,7 @@ U+3AED	kCangjie	AGDI
 U+3AEE	kCangjie	YPA
 U+3AEF	kCangjie	AAMU
 U+3AEF	kMojiJoho	MJ001602
-U+3AEF	kPhonetic	919*
+U+3AEF	kPhonetic	963*
 U+3AF0	kCangjie	AIAV
 U+3AF0	kFourCornerCode	6303.2
 U+3AF0	kMojiJoho	MJ001604
@@ -4732,7 +4726,6 @@ U+3C49	kCangjie	TDNO
 U+3C49	kMojiJoho	MJ001931
 U+3C4A	kCangjie	MENO
 U+3C4A	kMojiJoho	MJ001932
-U+3C4A	kPhonetic	1504*
 U+3C4B	kCangjie	MGNO
 U+3C4B	kMojiJoho	MJ001933
 U+3C4C	kCangjie	SJNO
@@ -4860,7 +4853,7 @@ U+3C85	kCangjie	JRHNE
 U+3C85	kMojiJoho	MJ001986
 U+3C86	kCangjie	GEOII
 U+3C86	kMojiJoho	MJ001987
-U+3C86	kPhonetic	477*
+U+3C86	kPhonetic	812*
 U+3C87	kCangjie	GEHEY
 U+3C87	kMojiJoho	MJ001988
 U+3C88	kCangjie	GESHR
@@ -4955,7 +4948,7 @@ U+3CB2	kCangjie	WMHQU
 U+3CB2	kPhonetic	1347
 U+3CB3	kCangjie	HIHQU
 U+3CB3	kMojiJoho	MJ002027
-U+3CB3	kPhonetic	1135* 1307*
+U+3CB3	kPhonetic	1307*
 U+3CB4	kCangjie	ONL
 U+3CB4	kMojiJoho	MJ002028
 U+3CB5	kCangjie	ONFB
@@ -5138,7 +5131,6 @@ U+3D09	kMojiJoho	MJ002104
 U+3D0A	kCangjie	ETUN
 U+3D0A	kMojiJoho	MJ002105
 U+3D0B	kCangjie	ELX
-U+3D0B	kPhonetic	1261*
 U+3D0C	kCangjie	EVJR
 U+3D0D	kCangjie	ENNO
 U+3D0E	kCangjie	EKMF
@@ -5516,7 +5508,6 @@ U+3DBA	kCangjie	FMKR
 U+3DBA	kMojiJoho	MJ002263
 U+3DBB	kCangjie	HEQJF
 U+3DBB	kMojiJoho	MJ002264
-U+3DBB	kPhonetic	405*
 U+3DBC	kCangjie	FIOK
 U+3DBC	kMojiJoho	MJ002265
 U+3DBD	kCangjie	FROB
@@ -5749,7 +5740,7 @@ U+3E26	kCangjie	MVDO
 U+3E26	kMojiJoho	MJ002357
 U+3E27	kCangjie	MHAV
 U+3E27	kMojiJoho	MJ002358
-U+3E27	kPhonetic	575*
+U+3E27	kPhonetic	951*
 U+3E28	kCangjie	HQVL
 U+3E28	kMojiJoho	MJ002359
 U+3E29	kCangjie	HQMJ
@@ -5784,7 +5775,7 @@ U+3E36	kMojiJoho	MJ002373
 U+3E36	kPhonetic	1480*
 U+3E37	kCangjie	QHHQ
 U+3E37	kMojiJoho	MJ002374 MJ002374:E0100 MJ002375:E0101
-U+3E37	kPhonetic	539A*
+U+3E37	kPhonetic	964*
 U+3E38	kCangjie	HQHMR
 U+3E38	kMojiJoho	MJ002376
 U+3E38	kPhonetic	449*
@@ -5792,12 +5783,11 @@ U+3E39	kCangjie	HQBDI
 U+3E39	kMojiJoho	MJ002377
 U+3E3A	kCangjie	EHHQ
 U+3E3A	kMojiJoho	MJ002378
-U+3E3A	kPhonetic	1096*
+U+3E3A	kPhonetic	964*
 U+3E3B	kCangjie	HQIOK
 U+3E3B	kMojiJoho	MJ002379
 U+3E3C	kCangjie	HQHEJ
 U+3E3C	kMojiJoho	MJ002380
-U+3E3C	kPhonetic	405*
 U+3E3D	kCangjie	HQBUC
 U+3E3D	kMojiJoho	MJ002381
 U+3E3E	kCangjie	HQSIP
@@ -5814,7 +5804,7 @@ U+3E42	kMojiJoho	MJ002386
 U+3E43	kCangjie	LYHQ
 U+3E43	kCheungBauer	175/04;LYHQ;fe3,he3
 U+3E43	kMojiJoho	MJ002387
-U+3E43	kPhonetic	365*
+U+3E43	kPhonetic	964*
 U+3E43	kUnihanCore2020	H
 U+3E44	kCangjie	HQWCE
 U+3E44	kMojiJoho	MJ002388
@@ -5843,7 +5833,7 @@ U+3E4F	kCangjie	HQTLM
 U+3E4F	kMojiJoho	MJ002398
 U+3E50	kCangjie	HOHQ
 U+3E50	kMojiJoho	MJ002399
-U+3E50	kPhonetic	329*
+U+3E50	kPhonetic	964*
 U+3E51	kCangjie	HQIPC
 U+3E51	kMojiJoho	MJ002400
 U+3E52	kCangjie	HQTCO
@@ -5855,7 +5845,7 @@ U+3E54	kCangjie	HQMWM
 U+3E54	kMojiJoho	MJ002403
 U+3E55	kCangjie	MCHQ
 U+3E55	kMojiJoho	MJ002404
-U+3E55	kPhonetic	1624*
+U+3E55	kPhonetic	964*
 U+3E55	kUnihanCore2020	H
 U+3E56	kCangjie	HQFQO
 U+3E56	kMojiJoho	MJ002405
@@ -6137,7 +6127,6 @@ U+3ED5	kMojiJoho	MJ002515
 U+3ED5	kPhonetic	1449*
 U+3ED6	kCangjie	MGLE
 U+3ED6	kMojiJoho	MJ002516
-U+3ED6	kPhonetic	1372*
 U+3ED6	kUnihanCore2020	H
 U+3ED7	kCangjie	LYMGI
 U+3ED7	kMojiJoho	MJ002517
@@ -6400,7 +6389,7 @@ U+3F4E	kCangjie	TVLBU
 U+3F4E	kMojiJoho	MJ002616
 U+3F4F	kCangjie	ERTM
 U+3F4F	kFourCornerCode	3877.6
-U+3F4F	kPhonetic	509* 650*
+U+3F4F	kPhonetic	564A*
 U+3F4F	kUnihanCore2020	G
 U+3F50	kCangjie	TMTXC
 U+3F50	kMojiJoho	MJ002617
@@ -6474,7 +6463,7 @@ U+3F6F	kCangjie	WUOB
 U+3F6F	kMojiJoho	MJ002646
 U+3F70	kCangjie	BBNO
 U+3F70	kMojiJoho	MJ002647
-U+3F70	kPhonetic	1226*
+U+3F70	kPhonetic	1024*
 U+3F71	kCangjie	KVL
 U+3F71	kMojiJoho	MJ002648
 U+3F72	kCangjie	KMVS
@@ -6910,7 +6899,6 @@ U+4030	kCangjie	BUCOR
 U+4030	kMojiJoho	MJ002829
 U+4031	kCangjie	BUHEJ
 U+4031	kMojiJoho	MJ002830
-U+4031	kPhonetic	405*
 U+4032	kCangjie	BUOWY
 U+4032	kMojiJoho	MJ002831
 U+4033	kCangjie	BUDL
@@ -7400,7 +7388,7 @@ U+4106	kCangjie	IFHJR
 U+4106	kMojiJoho	MJ003046
 U+4107	kCangjie	IFRHG
 U+4107	kMojiJoho	MJ003049 MJ003049:E0100 MJ003050:E0101 MJ003048:E0102
-U+4107	kPhonetic	204*
+U+4107	kPhonetic	1348*
 U+4108	kCangjie	IFMRT
 U+4108	kMojiJoho	MJ003051
 U+4109	kCangjie	IFHQI
@@ -7839,7 +7827,6 @@ U+41CF	kMojiJoho	MJ003254
 U+41CF	kUnihanCore2020	H
 U+41D0	kCangjie	YTLE
 U+41D0	kMojiJoho	MJ003255
-U+41D0	kPhonetic	1372*
 U+41D1	kCangjie	YTHWJ
 U+41D1	kMojiJoho	MJ003256
 U+41D2	kCangjie	AUYT
@@ -7871,7 +7858,7 @@ U+41DD	kCangjie	HI
 U+41DD	kMojiJoho	MJ003269
 U+41DE	kCangjie	HTM
 U+41DE	kMojiJoho	MJ003270
-U+41DE	kPhonetic	650*
+U+41DE	kPhonetic	564A*
 U+41DF	kCangjie	HNIS
 U+41DF	kMojiJoho	MJ003271
 U+41E0	kCangjie	HYG
@@ -7931,7 +7918,7 @@ U+41F7	kCangjie	HRSN
 U+41F7	kMojiJoho	MJ003295
 U+41F8	kCangjie	HRMG
 U+41F8	kMojiJoho	MJ003296
-U+41F8	kPhonetic	204*
+U+41F8	kPhonetic	1348*
 U+41F9	kCangjie	HSKR
 U+41F9	kMojiJoho	MJ003298
 U+41F9	kUnihanCore2020	H
@@ -9074,7 +9061,6 @@ U+43F8	kPhonetic	947*
 U+43F9	kCangjie	BBUU
 U+43F9	kMojiJoho	MJ003816
 U+43FA	kCangjie	BHEJ
-U+43FA	kPhonetic	405*
 U+43FB	kCangjie	IBGI
 U+43FB	kMojiJoho	MJ003817
 U+43FB	kPhonetic	943
@@ -9385,27 +9371,27 @@ U+4489	kCangjie	HYOTQ
 U+4489	kMojiJoho	MJ003953
 U+448A	kCangjie	CSNAU
 U+448A	kMojiJoho	MJ003954
-U+448A	kPhonetic	428*
+U+448A	kPhonetic	1188*
 U+448B	kCangjie	LKNAU
 U+448B	kMojiJoho	MJ003955
 U+448B	kPhonetic	1528*
 U+448C	kCangjie	BCNAU
 U+448C	kMojiJoho	MJ003956
-U+448C	kPhonetic	902*
+U+448C	kPhonetic	1188*
 U+448D	kCangjie	YSNAU
 U+448D	kMojiJoho	MJ003957
-U+448D	kPhonetic	1081*
+U+448D	kPhonetic	1188*
 U+448E	kCangjie	TTNAU
 U+448E	kMojiJoho	MJ003958
-U+448E	kPhonetic	924*
+U+448E	kPhonetic	1188*
 U+448F	kCangjie	CANAU
 U+448F	kCheungBauer	139/12;CANAU;zang2
 U+448F	kMojiJoho	MJ003959
-U+448F	kPhonetic	68*
+U+448F	kPhonetic	1188*
 U+448F	kUnihanCore2020	H
 U+4490	kCangjie	TUNAU
 U+4490	kMojiJoho	MJ003960
-U+4490	kPhonetic	934*
+U+4490	kPhonetic	1188*
 U+4491	kAlternateTotalStrokes	3:J
 U+4491	kCangjie	CM
 U+4491	kMojiJoho	MJ003961
@@ -9444,7 +9430,7 @@ U+449F	kMojiJoho	MJ003977
 U+449F	kUnihanCore2020	H
 U+44A0	kCangjie	TQJ
 U+44A0	kMojiJoho	MJ003978
-U+44A0	kPhonetic	407*
+U+44A0	kPhonetic	539*
 U+44A0	kUnihanCore2020	H
 U+44A1	kCangjie	TNL
 U+44A1	kMojiJoho	MJ003979
@@ -9626,7 +9612,6 @@ U+44E7	kCangjie	TNEM
 U+44E7	kMojiJoho	MJ004066
 U+44E8	kCangjie	TBOU
 U+44E8	kFourCornerCode	4477.2
-U+44E8	kPhonetic	1587*
 U+44E8	kUnihanCore2020	G
 U+44E9	kCangjie	TDJE
 U+44E9	kUnihanCore2020	H
@@ -10126,7 +10111,6 @@ U+45C8	kCangjie	LIYVU
 U+45C8	kMojiJoho	MJ004319 MJ004319:E0100 MJ004320:E0101
 U+45C9	kCangjie	LIAA
 U+45C9	kMojiJoho	MJ004321
-U+45C9	kPhonetic	119*
 U+45CA	kCangjie	LIFF
 U+45CA	kMojiJoho	MJ004322
 U+45CB	kCangjie	LITMD
@@ -10668,7 +10652,6 @@ U+46C5	kCangjie	YRWL
 U+46C5	kMojiJoho	MJ004567
 U+46C6	kCangjie	YRLW
 U+46C6	kMojiJoho	MJ004568
-U+46C6	kPhonetic	1512*
 U+46C7	kCangjie	YRHNR
 U+46C7	kMojiJoho	MJ004569
 U+46C8	kCangjie	YROK
@@ -10838,7 +10821,6 @@ U+4717	kCangjie	YRIRP
 U+4717	kMojiJoho	MJ004645
 U+4718	kCangjie	YRTRK
 U+4718	kMojiJoho	MJ004646
-U+4718	kPhonetic	627*
 U+4718	kUnihanCore2020	H
 U+4719	kCangjie	YRAVF
 U+4719	kMojiJoho	MJ004647
@@ -10858,7 +10840,6 @@ U+4720	kCangjie	YRHLC
 U+4720	kMojiJoho	MJ004656
 U+4721	kCangjie	YRMBE
 U+4721	kMojiJoho	MJ004657
-U+4721	kPhonetic	1504*
 U+4722	kCangjie	YRJQP
 U+4722	kMojiJoho	MJ004659 MJ004658:E0100 MJ004659:E0101
 U+4723	kCangjie	IVHML
@@ -11088,7 +11069,6 @@ U+478B	kMojiJoho	MJ004755
 U+478C	kCangjie	BOHJR
 U+478D	kCangjie	BOQMB
 U+478E	kCangjie	BOAA
-U+478E	kPhonetic	119*
 U+478F	kCangjie	BOWP
 U+4790	kCangjie	BOQKA
 U+4791	kCangjie	GCM
@@ -11362,7 +11342,6 @@ U+4807	kMojiJoho	MJ004871
 U+4807	kPhonetic	1449*
 U+4808	kCangjie	RMLE
 U+4808	kMojiJoho	MJ004872
-U+4808	kPhonetic	1372*
 U+4809	kCangjie	RMJRR
 U+4809	kMojiJoho	MJ004873
 U+480A	kCangjie	RMLMY
@@ -11639,7 +11618,7 @@ U+4887	kCangjie	JUMVI
 U+4887	kMojiJoho	MJ004992
 U+4888	kCangjie	MVOMA
 U+4888	kMojiJoho	MJ004993
-U+4888	kPhonetic	1466*
+U+4888	kPhonetic	1129*
 U+4889	kCangjie	HXMMV
 U+4889	kMojiJoho	MJ004995 MJ004995:E0100 MJ004994:E0101
 U+488A	kCangjie	YND
@@ -11755,7 +11734,7 @@ U+48BC	kMojiJoho	MJ005052
 U+48BC	kUnihanCore2020	G
 U+48BD	kCangjie	TCRAU
 U+48BD	kMojiJoho	MJ005053
-U+48BD	kPhonetic	693*
+U+48BD	kPhonetic	1496*
 U+48BE	kCangjie	HUNL
 U+48BE	kMojiJoho	MJ005054
 U+48BF	kCangjie	JVNL
@@ -11815,7 +11794,7 @@ U+48D5	kCangjie	SFNL
 U+48D5	kMojiJoho	MJ005077
 U+48D6	kCangjie	SFRAU
 U+48D6	kMojiJoho	MJ005078
-U+48D6	kPhonetic	863*
+U+48D6	kPhonetic	1496*
 U+48D7	kCangjie	HJNL
 U+48D8	kCangjie	FGNL
 U+48D8	kFourCornerCode	9712.7
@@ -12174,7 +12153,6 @@ U+4972	kMojiJoho	MJ005232
 U+4972	kUnihanCore2020	H
 U+4973	kCangjie	CMBE
 U+4973	kMojiJoho	MJ005233
-U+4973	kPhonetic	1504*
 U+4974	kCangjie	CUOS
 U+4975	kCangjie	CAGU
 U+4975	kMojiJoho	MJ005234
@@ -12353,7 +12331,6 @@ U+49CD	kMojiJoho	MJ005302
 U+49CE	kCangjie	NLRB
 U+49CF	kCangjie	NLHEJ
 U+49CF	kMojiJoho	MJ005303
-U+49CF	kPhonetic	405*
 U+49D0	kCangjie	NLYRD
 U+49D0	kMojiJoho	MJ005304
 U+49D1	kCangjie	NLJMO
@@ -12657,7 +12634,6 @@ U+4A56	kCangjie	TJFH
 U+4A56	kMojiJoho	MJ005436
 U+4A57	kCangjie	TJB
 U+4A57	kMojiJoho	MJ005437
-U+4A57	kPhonetic	997*
 U+4A58	kCangjie	TJMVI
 U+4A58	kMojiJoho	MJ005438
 U+4A59	kCangjie	TJYVI
@@ -13695,7 +13671,7 @@ U+4C21	kMojiJoho	MJ005913
 U+4C21	kPhonetic	1135*
 U+4C22	kCangjie	HIHON
 U+4C22	kMojiJoho	MJ005914
-U+4C22	kPhonetic	435*
+U+4C22	kPhonetic	423A*
 U+4C23	kCangjie	HIBKK
 U+4C23	kMojiJoho	MJ005915
 U+4C24	kCangjie	DWHUI
@@ -14017,7 +13993,7 @@ U+4CB9	kMojiJoho	MJ006046
 U+4CB9	kPhonetic	1035*
 U+4CBA	kCangjie	TMHAF
 U+4CBA	kMojiJoho	MJ006047
-U+4CBA	kPhonetic	650*
+U+4CBA	kPhonetic	564A*
 U+4CBB	kCangjie	YIHAF
 U+4CBB	kMojiJoho	MJ006048
 U+4CBB	kPhonetic	1623*
@@ -14282,7 +14258,7 @@ U+4D29	kCangjie	IPMWF
 U+4D29	kMojiJoho	MJ006152
 U+4D2A	kCangjie	IPINE
 U+4D2A	kMojiJoho	MJ006153 MJ006154:E0100 MJ006153:E0101
-U+4D2A	kPhonetic	849*
+U+4D2A	kPhonetic	848*
 U+4D2B	kCangjie	IPMBI
 U+4D2B	kMojiJoho	MJ006155
 U+4D2C	kCangjie	JEIP
@@ -14309,7 +14285,6 @@ U+4D35	kCangjie	JETT
 U+4D35	kMojiJoho	MJ006166
 U+4D36	kCangjie	JEHEJ
 U+4D36	kMojiJoho	MJ006167
-U+4D36	kPhonetic	405*
 U+4D37	kCangjie	JEJMU
 U+4D37	kMojiJoho	MJ006168
 U+4D38	kCangjie	JEBND
@@ -14377,30 +14352,30 @@ U+4D53	kMojiJoho	MJ006197
 U+4D53	kPhonetic	1236*
 U+4D54	kCangjie	HEDW
 U+4D54	kMojiJoho	MJ006198
-U+4D54	kPhonetic	1403*
+U+4D54	kPhonetic	1236*
 U+4D55	kCangjie	HESJR
 U+4D55	kMojiJoho	MJ006199
-U+4D55	kPhonetic	671*
+U+4D55	kPhonetic	1236*
 U+4D56	kCangjie	SEHDE
 U+4D56	kMojiJoho	MJ006200
 U+4D57	kCangjie	HEMRW
 U+4D57	kMojiJoho	MJ006201
-U+4D57	kPhonetic	398*
+U+4D57	kPhonetic	1236*
 U+4D58	kCangjie	HEAMH
 U+4D58	kMojiJoho	MJ006202
-U+4D58	kPhonetic	1529*
+U+4D58	kPhonetic	1236*
 U+4D59	kCangjie	HEKNN
 U+4D59	kMojiJoho	MJ006203
-U+4D59	kPhonetic	1365*
+U+4D59	kPhonetic	1236*
 U+4D5A	kCangjie	HEBHX
 U+4D5A	kMojiJoho	MJ006204
 U+4D5A	kPhonetic	1599*
 U+4D5B	kCangjie	HESEG
 U+4D5B	kMojiJoho	MJ006205
-U+4D5B	kPhonetic	619*
+U+4D5B	kPhonetic	1236*
 U+4D5C	kCangjie	HETWV
 U+4D5C	kMojiJoho	MJ006206
-U+4D5C	kPhonetic	991*
+U+4D5C	kPhonetic	1236*
 U+4D5D	kCangjie	WFU
 U+4D5D	kMojiJoho	MJ006207
 U+4D5E	kCangjie	WFLN
@@ -14772,7 +14747,7 @@ U+4E1B	kPhonetic	295
 U+4E1B	kUnihanCore2020	G
 U+4E1C	kCangjie	KD
 U+4E1C	kFourCornerCode	4090
-U+4E1C	kPhonetic	1403
+U+4E1C	kPhonetic	549 1403
 U+4E1C	kUnihanCore2020	GH
 U+4E1D	kCangjie	VVM
 U+4E1D	kFourCornerCode	2210
@@ -14872,13 +14847,12 @@ U+4E2E	kMojiJoho	MJ006348
 U+4E2E	kUnihanCore2020	HMT
 U+4E2F	kCangjie	QJ
 U+4E2F	kMojiJoho	MJ006349
-U+4E2F	kPhonetic	539
 U+4E2F	kUnihanCore2020	H
 U+4E30	kCangjie	QJ
 U+4E30	kFenn	145K
 U+4E30	kFourCornerCode	5000.0
 U+4E30	kMojiJoho	MJ006350 MJ006350:E0102 MJ006351:E0103
-U+4E30	kPhonetic	404 407
+U+4E30	kPhonetic	404 407 539
 U+4E30	kUnihanCore2020	GHMPT
 U+4E31	kCangjie	VLLLM
 U+4E31	kFourCornerCode	2277.0
@@ -14999,7 +14973,7 @@ U+4E47	kUnihanCore2020	GHMT
 U+4E48	kCangjie	HI
 U+4E48	kFourCornerCode	2073.2
 U+4E48	kMojiJoho	MJ006382
-U+4E48	kPhonetic	862 920 1595
+U+4E48	kPhonetic	159 862 920 1595
 U+4E48	kUnihanCore2020	GHMT
 U+4E49	kCangjie	IK
 U+4E49	kFourCornerCode	4000
@@ -15060,7 +15034,7 @@ U+4E53	kFourCornerCode	7203.1
 U+4E53	kGradeLevel	2
 U+4E53	kHKGlyph	0034
 U+4E53	kMojiJoho	MJ006391
-U+4E53	kPhonetic	1052
+U+4E53	kPhonetic	1506*
 U+4E53	kStrange	I:U+5175
 U+4E53	kUnihanCore2020	GHMT
 U+4E54	kCangjie	HKLL
@@ -15896,7 +15870,7 @@ U+4EF8	kPhonetic	1594*
 U+4EF8	kUnihanCore2020	H
 U+4EF9	kCangjie	OQJ
 U+4EF9	kMojiJoho	MJ006551
-U+4EF9	kPhonetic	407*
+U+4EF9	kPhonetic	539*
 U+4EFA	kCangjie	OSM
 U+4EFA	kMojiJoho	MJ006552
 U+4EFA	kStrange	M
@@ -16050,7 +16024,7 @@ U+4F17	kUnihanCore2020	GH
 U+4F18	kCangjie	OIKU
 U+4F18	kFourCornerCode	2321.4
 U+4F18	kMojiJoho	MJ006584
-U+4F18	kPhonetic	1504* 1511*
+U+4F18	kPhonetic	1511*
 U+4F18	kUnihanCore2020	GHMT
 U+4F19	kCangjie	OF
 U+4F19	kFenn	446A
@@ -16823,7 +16797,7 @@ U+4FB0	kMojiJoho	MJ006730
 U+4FB0	kUnihanCore2020	H
 U+4FB1	kCangjie	ORMG
 U+4FB1	kMojiJoho	MJ006731 MJ006732:E0100 MJ006731:E0101
-U+4FB1	kPhonetic	204*
+U+4FB1	kPhonetic	1348*
 U+4FB2	kCangjie	OMMV
 U+4FB2	kFourCornerCode	2123.2
 U+4FB2	kMojiJoho	MJ006733
@@ -17555,7 +17529,6 @@ U+503D	kCangjie	XOOMR
 U+503D	kPhonetic	1152
 U+503E	kCangjie	OPMO
 U+503E	kFourCornerCode	2128
-U+503E	kPhonetic	628*
 U+503E	kUnihanCore2020	G
 U+503F	kCangjie	OYTV
 U+503F	kMojiJoho	MJ006884
@@ -19305,7 +19278,7 @@ U+5196	kUnihanCore2020	GHJ
 U+5197	kCangjie	BHN
 U+5197	kFourCornerCode	3721.7
 U+5197	kMojiJoho	MJ007329 MJ007329:E0101 MJ007330:E0102
-U+5197	kPhonetic	596 1477 1487
+U+5197	kPhonetic	16 596 1477 1487
 U+5197	kUnihanCore2020	GHJKMPT
 U+5198	kCangjie	LBU
 U+5198	kFenn	176P
@@ -19500,7 +19473,6 @@ U+51BF	kCangjie	IMLQ
 U+51BF	kMojiJoho	MJ007381
 U+51C0	kCangjie	IMNSD
 U+51C0	kFourCornerCode	3715
-U+51C0	kPhonetic	32*
 U+51C0	kUnihanCore2020	G
 U+51C1	kCangjie	IMDL
 U+51C1	kMojiJoho	MJ007382
@@ -20361,7 +20333,6 @@ U+5264	kUnihanCore2020	J
 U+5265	kCangjie	NELN
 U+5265	kFourCornerCode	2210.0
 U+5265	kMojiJoho	MJ007555
-U+5265	kPhonetic	849*
 U+5265	kUnihanCore2020	GJ
 U+5266	kCangjie	KULN
 U+5266	kMojiJoho	MJ007556
@@ -20757,7 +20728,7 @@ U+52B2	kUnihanCore2020	G
 U+52B3	kCangjie	TBKS
 U+52B3	kFourCornerCode	4442
 U+52B3	kMojiJoho	MJ007643
-U+52B3	kPhonetic	801 821 1587*
+U+52B3	kPhonetic	801 821
 U+52B3	kUnihanCore2020	G
 U+52B4	kCangjie	FBKS
 U+52B4	kFourCornerCode	3242.7 9042.7
@@ -21044,7 +21015,7 @@ U+52EF	kUnihanCore2020	HMT
 U+52F0	kCangjie	KSWP
 U+52F0	kFourCornerCode	4643.0
 U+52F0	kMojiJoho	MJ007728
-U+52F0	kPhonetic	478*
+U+52F0	kPhonetic	1174*
 U+52F0	kUnihanCore2020	GHMT
 U+52F1	kCangjie	TBKS
 U+52F1	kFourCornerCode	4442.7
@@ -21171,7 +21142,7 @@ U+5306	kPhonetic	327
 U+5306	kUnihanCore2020	GHJMT
 U+5307	kCangjie	PNI
 U+5307	kMojiJoho	MJ007762 MJ007761:E0102 MJ007762:E0103
-U+5307	kPhonetic	170*
+U+5307	kPhonetic	1009*
 U+5308	kCangjie	PUK
 U+5308	kFourCornerCode	2772.0
 U+5308	kHKGlyph	0405
@@ -21196,7 +21167,7 @@ U+530B	kPhonetic	1362
 U+530B	kUnihanCore2020	HMT
 U+530C	kCangjie	XPOMR
 U+530C	kMojiJoho	MJ007767
-U+530C	kPhonetic	509*
+U+530C	kPhonetic	1009*
 U+530D	kCangjie	PIJB
 U+530D	kFenn	597H
 U+530D	kFourCornerCode	2722.0
@@ -21225,19 +21196,19 @@ U+5310	kUnihanCore2020	GHJKMPT
 U+5311	kCangjie	PHHN
 U+5311	kFourCornerCode	2742.0
 U+5311	kMojiJoho	MJ007773
-U+5311	kPhonetic	685*
+U+5311	kPhonetic	1009*
 U+5311	kUnihanCore2020	HMT
 U+5312	kCangjie	PTOR
 U+5312	kFourCornerCode	2762.0
 U+5312	kMojiJoho	MJ007774
-U+5312	kPhonetic	1301*
+U+5312	kPhonetic	1009*
 U+5312	kUnihanCore2020	HMT
 U+5313	kAlternateTotalStrokes	13:J
 U+5313	kCangjie	PHPE
 U+5313	kMojiJoho	MJ007775
 U+5314	kCangjie	PHHR
 U+5314	kMojiJoho	MJ007776
-U+5314	kPhonetic	685*
+U+5314	kPhonetic	1009*
 U+5315	kCangjie	UH
 U+5315	kFenn	317K
 U+5315	kFourCornerCode	4071.0
@@ -21418,7 +21389,7 @@ U+5339	kFourCornerCode	7171.1
 U+5339	kGradeLevel	1
 U+5339	kHKGlyph	0420
 U+5339	kMojiJoho	MJ007818 MJ007818:E0102 MJ007817:E0103
-U+5339	kPhonetic	1008 1027A
+U+5339	kPhonetic	1008 1027
 U+5339	kUnihanCore2020	GHJKMPT
 U+533A	kCangjie	SK
 U+533A	kFourCornerCode	7171.4
@@ -21492,7 +21463,7 @@ U+5345	kCangjie	TJ
 U+5345	kFourCornerCode	4400.0
 U+5345	kHKGlyph	0426
 U+5345	kMojiJoho	MJ007838 MJ007838:E0101 MJ057092:E0102
-U+5345	kPhonetic	78 1097 1100 1132
+U+5345	kPhonetic	78 113 1097 1100
 U+5345	kUnihanCore2020	GHJMT
 U+5346	kCangjie	KNJ
 U+5346	kFourCornerCode	4040.1
@@ -21695,7 +21666,7 @@ U+536A	kCangjie	SLI
 U+536A	kMojiJoho	MJ007881
 U+536B	kCangjie	SLM
 U+536B	kFourCornerCode	1710
-U+536B	kPhonetic	208 1433
+U+536B	kPhonetic	208
 U+536B	kUnihanCore2020	G
 U+536C	kCangjie	HVSL
 U+536C	kFenn	308K
@@ -22898,7 +22869,7 @@ U+5448	kFourCornerCode	6010.4
 U+5448	kGradeLevel	5
 U+5448	kHKGlyph	0524
 U+5448	kMojiJoho	MJ008133 MJ008133:E0102 MJ008134:E0103 MJ008132:E0104
-U+5448	kPhonetic	204 1346
+U+5448	kPhonetic	204 1346 1348
 U+5448	kUnihanCore2020	GHJKMPT
 U+5449	kCangjie	RVNC
 U+5449	kFourCornerCode	2680.1
@@ -23655,7 +23626,7 @@ U+54D7	kUnihanCore2020	G
 U+54D8	kCangjie	RHON
 U+54D8	kFourCornerCode	6102.1
 U+54D8	kMojiJoho	MJ008268
-U+54D8	kPhonetic	435*
+U+54D8	kPhonetic	423A*
 U+54D8	kUnihanCore2020	J
 U+54D9	kCangjie	ROMI
 U+54D9	kFourCornerCode	6803
@@ -23996,7 +23967,6 @@ U+551F	kCangjie	GIRP
 U+551F	kMojiJoho	MJ068027
 U+5520	kCangjie	RTBS
 U+5520	kFourCornerCode	6402
-U+5520	kPhonetic	821*
 U+5520	kUnihanCore2020	G
 U+5521	kCangjie	RMOB
 U+5522	kCangjie	RFBO
@@ -24415,7 +24385,6 @@ U+5577	kFourCornerCode	6702.7
 U+5577	kUnihanCore2020	GHMT
 U+5578	kCangjie	XRLX
 U+5578	kFourCornerCode	6502
-U+5578	kPhonetic	1261*
 U+5578	kUnihanCore2020	G
 U+5579	kCangjie	RSJR
 U+5579	kCheungBauer	030/08;RSJR;geoi1,goe1,koe1
@@ -25031,7 +25000,6 @@ U+55EA	kFourCornerCode	6509
 U+55EA	kUnihanCore2020	GH
 U+55EB	kCangjie	RSJE
 U+55EB	kFourCornerCode	6104
-U+55EB	kPhonetic	979*
 U+55EB	kUnihanCore2020	G
 U+55EC	kCangjie	RTOR
 U+55EC	kCheungBauer	030/11;RTOR;ho2
@@ -25057,7 +25025,6 @@ U+55F1	kUnihanCore2020	H
 U+55F2	kCangjie	RCKN
 U+55F2	kCheungBauer	030/10;RCKN;de1,de2,de4
 U+55F2	kFourCornerCode	6802.7
-U+55F2	kPhonetic	1365*
 U+55F2	kUnihanCore2020	GHMT
 U+55F3	kCangjie	XRBBE
 U+55F3	kFourCornerCode	6204
@@ -25399,7 +25366,7 @@ U+5636	kPhonetic	1173
 U+5636	kUnihanCore2020	GHJKMPT
 U+5637	kCangjie	RHUJ
 U+5637	kMojiJoho	MJ008629
-U+5637	kPhonetic	639
+U+5637	kPhonetic	63
 U+5637	kUnihanCore2020	H
 U+5638	kCangjie	ROTF
 U+5638	kCheungBauer	030/12;ROTF;mou1
@@ -25526,7 +25493,6 @@ U+5650	kPhonetic	459
 U+5650	kUnihanCore2020	HJ
 U+5651	kCangjie	XRHAJ
 U+5651	kMojiJoho	MJ008628
-U+5651	kPhonetic	639
 U+5652	kCangjie	RFDQ
 U+5652	kCheungBauer	030/12;RFDQ;leon1
 U+5652	kMojiJoho	MJ008662
@@ -25750,7 +25716,6 @@ U+567B	kUnihanCore2020	GH
 U+567C	kCangjie	RSRJ
 U+567C	kCheungBauer	030/13;RSRJ;pek1,pet1,pet6
 U+567C	kFourCornerCode	6004
-U+567C	kPhonetic	1040*
 U+567C	kUnihanCore2020	GH
 U+567D	kCangjie	GRMFM
 U+567D	kMojiJoho	MJ008708
@@ -25881,7 +25846,6 @@ U+5697	kUnihanCore2020	HMT
 U+5698	kCangjie	RMBE
 U+5698	kFourCornerCode	6104.7
 U+5698	kMojiJoho	MJ008739
-U+5698	kPhonetic	1504*
 U+5698	kUnihanCore2020	HMT
 U+5699	kCangjie	RYMU
 U+5699	kFourCornerCode	6107.2
@@ -26552,7 +26516,6 @@ U+5723	kPhonetic	204 1207
 U+5723	kUnihanCore2020	GHMT
 U+5724	kCangjie	GY
 U+5724	kMojiJoho	MJ008898
-U+5724	kPhonetic	544 1094*
 U+5725	kCangjie	GHU
 U+5725	kMojiJoho	MJ008899
 U+5726	kCangjie	GO
@@ -27255,7 +27218,6 @@ U+57C3	kPhonetic	1549A
 U+57C3	kUnihanCore2020	GHJKMPT
 U+57C4	kCangjie	GHEJ
 U+57C4	kMojiJoho	MJ009051
-U+57C4	kPhonetic	405*
 U+57C4	kUnihanCore2020	H
 U+57C5	kCangjie	NSG
 U+57C5	kMojiJoho	MJ009052
@@ -29020,7 +28982,6 @@ U+5939	kPhonetic	550
 U+5939	kUnihanCore2020	G
 U+593A	kCangjie	KDI
 U+593A	kFourCornerCode	4034
-U+593A	kPhonetic	277* 1388A*
 U+593A	kUnihanCore2020	G
 U+593B	kCangjie	XKR
 U+593C	kCangjie	KLLL
@@ -29543,7 +29504,7 @@ U+59A4	kCangjie	VNIN
 U+59A4	kFourCornerCode	4742.2
 U+59A4	kHKGlyph	0879
 U+59A4	kMojiJoho	MJ009597
-U+59A4	kPhonetic	1603
+U+59A4	kPhonetic	141 1603
 U+59A4	kUnihanCore2020	GHMT
 U+59A5	kCangjie	BV
 U+59A5	kFenn	409B
@@ -31493,7 +31454,6 @@ U+5B51	kCangjie	NNM
 U+5B51	kFourCornerCode	1740.7
 U+5B51	kHKGlyph	0970
 U+5B51	kMojiJoho	MJ010052
-U+5B51	kPhonetic	134 633
 U+5B51	kUnihanCore2020	GHJKMPT
 U+5B52	kCangjie	XNNM
 U+5B52	kMojiJoho	MJ010053
@@ -32922,7 +32882,7 @@ U+5C53	kUnihanCore2020	HJ
 U+5C54	kCangjie	OMSP
 U+5C54	kFourCornerCode	0711.1
 U+5C54	kMojiJoho	MJ010360
-U+5C54	kPhonetic	946*
+U+5C54	kPhonetic	1506*
 U+5C54	kUnihanCore2020	HMT
 U+5C55	kCangjie	STV
 U+5C55	kFenn	354D
@@ -33391,7 +33351,7 @@ U+5CB9	kCangjie	XUSHR
 U+5CB9	kMojiJoho	MJ010461
 U+5CBA	kCangjie	UOII
 U+5CBA	kMojiJoho	MJ010462
-U+5CBA	kPhonetic	812A*
+U+5CBA	kPhonetic	812A
 U+5CBA	kUnihanCore2020	HKP
 U+5CBB	kCangjie	XUHVI
 U+5CBB	kFourCornerCode	2274.0
@@ -33558,7 +33518,7 @@ U+5CE4	kFourCornerCode	2272
 U+5CE4	kUnihanCore2020	G
 U+5CE5	kCangjie	UNSD
 U+5CE5	kFourCornerCode	2775
-U+5CE5	kPhonetic	32*
+U+5CE5	kPhonetic	32
 U+5CE5	kUnihanCore2020	GH
 U+5CE6	kCangjie	YCU
 U+5CE6	kFourCornerCode	0077
@@ -33698,7 +33658,6 @@ U+5D01	kMojiJoho	MJ010530
 U+5D01	kUnihanCore2020	GHMT
 U+5D02	kCangjie	UTBS
 U+5D02	kFourCornerCode	2472
-U+5D02	kPhonetic	821*
 U+5D02	kUnihanCore2020	G
 U+5D03	kCangjie	UDT
 U+5D03	kFourCornerCode	2579
@@ -35494,7 +35453,6 @@ U+5E82	kUnihanCore2020	HMT
 U+5E83	kCangjie	II
 U+5E83	kFourCornerCode	0023.2
 U+5E83	kMojiJoho	MJ010963
-U+5E83	kPhonetic	750*
 U+5E83	kUnihanCore2020	HJ
 U+5E84	kCangjie	IG
 U+5E84	kFenn	199C
@@ -35631,7 +35589,6 @@ U+5E9E	kFourCornerCode	0021
 U+5E9E	kUnihanCore2020	G
 U+5E9F	kCangjie	IIVE
 U+5E9F	kFourCornerCode	0024
-U+5E9F	kPhonetic	346*
 U+5E9F	kUnihanCore2020	G
 U+5EA0	kCangjie	ITQ
 U+5EA0	kFenn	151I
@@ -35779,7 +35736,6 @@ U+5EBB	kCangjie	ITOO
 U+5EBB	kMojiJoho	MJ011022 MJ011023:E0100 MJ011022:E0101
 U+5EBC	kCangjie	IPMO
 U+5EBC	kFourCornerCode	0028.2
-U+5EBC	kPhonetic	628*
 U+5EBC	kUnihanCore2020	G
 U+5EBD	kCangjie	IWLB
 U+5EBD	kMojiJoho	MJ011024
@@ -36673,7 +36629,7 @@ U+5F67	kMojiJoho	MJ011259
 U+5F67	kPhonetic	1416
 U+5F67	kUnihanCore2020	GHKMPT
 U+5F68	kCangjie	XMBHH
-U+5F68	kPhonetic	772*
+U+5F68	kPhonetic	772
 U+5F69	kCangjie	BDHHH
 U+5F69	kFenn	488A
 U+5F69	kFourCornerCode	2292.2
@@ -36715,7 +36671,7 @@ U+5F6E	kPhonetic	1657*
 U+5F6F	kCangjie	MFHHH
 U+5F6F	kFourCornerCode	1292.2
 U+5F6F	kMojiJoho	MJ011271
-U+5F6F	kPhonetic	1066*
+U+5F6F	kPhonetic	1101*
 U+5F6F	kUnihanCore2020	HMT
 U+5F70	kCangjie	YJHHH
 U+5F70	kFenn	92C
@@ -36896,7 +36852,7 @@ U+5F8D	kCangjie	HOGG
 U+5F8D	kMojiJoho	MJ011304
 U+5F8E	kCangjie	HORMG
 U+5F8E	kMojiJoho	MJ011305
-U+5F8E	kPhonetic	204*
+U+5F8E	kPhonetic	1348*
 U+5F8F	kCangjie	HOYLH
 U+5F8F	kMojiJoho	MJ011306 MJ011306:E0101 MJ011307:E0102
 U+5F8F	kPhonetic	1071*
@@ -37229,7 +37185,7 @@ U+5FD1	kCangjie	MYP
 U+5FD1	kFenn	119H
 U+5FD1	kFourCornerCode	1033.3
 U+5FD1	kMojiJoho	MJ011384
-U+5FD1	kPhonetic	1118 1299
+U+5FD1	kPhonetic	1118
 U+5FD1	kUnihanCore2020	GHMT
 U+5FD2	kCangjie	IPP
 U+5FD2	kFenn	328F
@@ -38244,7 +38200,7 @@ U+609B	kUnihanCore2020	GHJKMPT
 U+609C	kCangjie	PRHG
 U+609C	kFourCornerCode	9601.4
 U+609C	kMojiJoho	MJ011603
-U+609C	kPhonetic	204*
+U+609C	kPhonetic	1348*
 U+609C	kUnihanCore2020	HMT
 U+609D	kCangjie	PWG
 U+609D	kFourCornerCode	9601.4
@@ -38654,7 +38610,7 @@ U+60EA	kMojiJoho	MJ057511
 U+60EA	kPhonetic	171
 U+60EB	kCangjie	HEWP
 U+60EB	kFourCornerCode	2733
-U+60EB	kPhonetic	1034*
+U+60EB	kPhonetic	1174*
 U+60EB	kUnihanCore2020	G
 U+60EC	kCangjie	PSKT
 U+60EC	kFourCornerCode	9101
@@ -39172,7 +39128,6 @@ U+6150	kPhonetic	692*
 U+6150	kUnihanCore2020	H
 U+6151	kCangjie	PSJE
 U+6151	kFourCornerCode	9104
-U+6151	kPhonetic	979*
 U+6151	kUnihanCore2020	G
 U+6152	kCangjie	PTWA
 U+6152	kFourCornerCode	9406.7
@@ -39709,7 +39664,6 @@ U+61BB	kMojiJoho	MJ011962
 U+61BC	kCangjie	TKP
 U+61BC	kFourCornerCode	4833.4
 U+61BC	kMojiJoho	MJ011963 MJ011963:E0101 MJ011964:E0102
-U+61BC	kPhonetic	627*
 U+61BC	kUnihanCore2020	HMT
 U+61BD	kCangjie	PTPP
 U+61BD	kMojiJoho	MJ011965
@@ -40640,7 +40594,7 @@ U+626F	kUnihanCore2020	GHMT
 U+6270	kCangjie	QIKU
 U+6270	kFourCornerCode	5301.4
 U+6270	kMojiJoho	MJ012177
-U+6270	kPhonetic	1504* 1511*
+U+6270	kPhonetic	1511*
 U+6270	kUnihanCore2020	GHMT
 U+6271	kCangjie	QNHE
 U+6271	kCheungBauer	064/04;QNHE;[ng]ap6,gip1,kap1,kap6
@@ -41275,7 +41229,6 @@ U+62E2	kFourCornerCode	5301
 U+62E2	kUnihanCore2020	G
 U+62E3	kCangjie	QKVC
 U+62E3	kFourCornerCode	5509
-U+62E3	kPhonetic	549*
 U+62E3	kUnihanCore2020	G
 U+62E4	kCangjie	QYMY
 U+62E4	kFourCornerCode	5103.1
@@ -41294,7 +41247,6 @@ U+62E7	kPhonetic	267*
 U+62E7	kUnihanCore2020	G
 U+62E8	kCangjie	QIVE
 U+62E8	kFourCornerCode	5304
-U+62E8	kPhonetic	346*
 U+62E8	kUnihanCore2020	G
 U+62E9	kCangjie	QEQ
 U+62E9	kFourCornerCode	5705
@@ -41589,7 +41541,7 @@ U+6322	kFourCornerCode	5202
 U+6322	kUnihanCore2020	G
 U+6323	kCangjie	QNSD
 U+6323	kFourCornerCode	5705
-U+6323	kPhonetic	32*
+U+6323	kPhonetic	32
 U+6323	kUnihanCore2020	G
 U+6324	kCangjie	QYKL
 U+6324	kFourCornerCode	5002
@@ -41657,7 +41609,7 @@ U+632F	kPhonetic	1129
 U+632F	kUnihanCore2020	GHJKMPT
 U+6330	kCangjie	QRMG
 U+6330	kMojiJoho	MJ012361
-U+6330	kPhonetic	204*
+U+6330	kPhonetic	1348*
 U+6331	kCangjie	QEFH
 U+6331	kFenn	122F
 U+6331	kMojiJoho	MJ012362
@@ -41740,7 +41692,6 @@ U+633F	kUnihanCore2020	J
 U+6340	kCangjie	QHEJ
 U+6340	kFourCornerCode	5705.4
 U+6340	kMojiJoho	MJ012380
-U+6340	kPhonetic	405*
 U+6340	kUnihanCore2020	HMT
 U+6341	kCangjie	QHGR
 U+6341	kFourCornerCode	5406.1
@@ -41890,7 +41841,6 @@ U+635D	kPhonetic	1392
 U+635D	kUnihanCore2020	H
 U+635E	kCangjie	QTBS
 U+635E	kFourCornerCode	5402
-U+635E	kPhonetic	821*
 U+635E	kUnihanCore2020	G
 U+635F	kCangjie	QRBO
 U+635F	kFourCornerCode	5608
@@ -42018,7 +41968,6 @@ U+6377	kUnihanCore2020	GHJKMPT
 U+6378	kCangjie	QLE
 U+6378	kFourCornerCode	5503.2
 U+6378	kMojiJoho	MJ012444
-U+6378	kPhonetic	1372*
 U+6378	kUnihanCore2020	HMT
 U+6379	kCangjie	QKJT
 U+6379	kCheungBauer	064/08;QKJT;ban3,fang6,fing6
@@ -43099,7 +43048,6 @@ U+6443	kFourCornerCode	5108.2
 U+6443	kUnihanCore2020	HMT
 U+6444	kCangjie	XQSJE
 U+6444	kFourCornerCode	5104
-U+6444	kPhonetic	979*
 U+6444	kUnihanCore2020	G
 U+6445	kCangjie	XQYPP
 U+6445	kFourCornerCode	5103
@@ -43298,12 +43246,12 @@ U+646F	kCangjie	GIQ
 U+646F	kFourCornerCode	4450.2
 U+646F	kHKGlyph	1644
 U+646F	kMojiJoho	MJ012716
-U+646F	kPhonetic	69
+U+646F	kPhonetic	69 962
 U+646F	kUnihanCore2020	HJKMPT
 U+6470	kCangjie	GIQ
 U+6470	kFourCornerCode	4550.2
 U+6470	kMojiJoho	MJ012717
-U+6470	kPhonetic	962
+U+6470	kPhonetic	69 962
 U+6470	kUnihanCore2020	HMT
 U+6471	kCangjie	QAWE
 U+6471	kCheungBauer	064/11;QAWE;maan1
@@ -43806,7 +43754,6 @@ U+64CF	kCangjie	QTRK
 U+64CF	kCheungBauer	064/13;QTRK;geng6
 U+64CF	kFourCornerCode	5804.0
 U+64CF	kMojiJoho	MJ012823
-U+64CF	kPhonetic	627*
 U+64CF	kUnihanCore2020	HMT
 U+64D0	kCangjie	QWLV
 U+64D0	kFourCornerCode	5603.2
@@ -44777,7 +44724,6 @@ U+6588	kUnihanCore2020	HJ
 U+6589	kCangjie	YKLM
 U+6589	kFourCornerCode	0022.4
 U+6589	kMojiJoho	MJ013044 MJ013044:E0102 MJ059659:E0103
-U+6589	kPhonetic	56
 U+6589	kUnihanCore2020	HJ
 U+658A	kCangjie	YKSJ
 U+658A	kMojiJoho	MJ013045
@@ -46000,7 +45946,6 @@ U+667E	kPhonetic	622
 U+667E	kUnihanCore2020	GHMT
 U+667F	kCangjie	XAAA
 U+667F	kMojiJoho	MJ013326
-U+667F	kPhonetic	119*
 U+6680	kCangjie	AHOG
 U+6680	kFourCornerCode	6001.4
 U+6680	kMojiJoho	MJ013328 MJ013327:E0101 MJ013328:E0102
@@ -46384,7 +46329,6 @@ U+66D3	kCangjie	AUUJ
 U+66D3	kMojiJoho	MJ013440
 U+66D4	kCangjie	ATRK
 U+66D4	kMojiJoho	MJ013441
-U+66D4	kPhonetic	627*
 U+66D5	kCangjie	ANCR
 U+66D5	kMojiJoho	MJ013442
 U+66D6	kCangjie	ABBE
@@ -46437,7 +46381,7 @@ U+66DE	kMojiJoho	MJ013456
 U+66DE	kUnihanCore2020	HMT
 U+66DF	kCangjie	AAAV
 U+66DF	kMojiJoho	MJ013458
-U+66DF	kPhonetic	200*
+U+66DF	kPhonetic	1129*
 U+66E0	kCangjie	AITC
 U+66E0	kFenn	823B
 U+66E0	kFourCornerCode	6008.6
@@ -48448,7 +48392,6 @@ U+687A	kPhonetic	783
 U+687B	kCangjie	DHEJ
 U+687B	kFourCornerCode	4795.4
 U+687B	kMojiJoho	MJ013948
-U+687B	kPhonetic	405*
 U+687B	kUnihanCore2020	HMT
 U+687C	kCangjie	DOE
 U+687C	kFenn	527P
@@ -48791,7 +48734,6 @@ U+68C1	kPhonetic	1392
 U+68C1	kUnihanCore2020	GH
 U+68C2	kCangjie	DSMF
 U+68C2	kFourCornerCode	4798
-U+68C2	kPhonetic	809*
 U+68C2	kUnihanCore2020	G
 U+68C3	kCangjie	HHD
 U+68C3	kMojiJoho	MJ014031
@@ -50247,7 +50189,6 @@ U+69F8	kUnihanCore2020	HMT
 U+69F9	kCangjie	DHAJ
 U+69F9	kFourCornerCode	4694.1
 U+69F9	kMojiJoho	MJ014393
-U+69F9	kPhonetic	639
 U+69F9	kUnihanCore2020	HJ
 U+69FA	kCangjie	DILE
 U+69FA	kMojiJoho	MJ014394
@@ -50608,7 +50549,6 @@ U+6A42	kCangjie	DTWK
 U+6A42	kMojiJoho	MJ014486
 U+6A43	kCangjie	DNOE
 U+6A43	kMojiJoho	MJ014487
-U+6A43	kPhonetic	346*
 U+6A43	kUnihanCore2020	H
 U+6A44	kCangjie	DMJK
 U+6A44	kFenn	629E
@@ -50823,7 +50763,6 @@ U+6A6F	kMojiJoho	MJ014541
 U+6A6F	kUnihanCore2020	HMT
 U+6A70	kCangjie	DHUJ
 U+6A70	kMojiJoho	MJ014542
-U+6A70	kPhonetic	639
 U+6A71	kCangjie	DMMI
 U+6A71	kFourCornerCode	4194
 U+6A71	kMojiJoho	MJ014543
@@ -51214,7 +51153,6 @@ U+6ACB	kUnihanCore2020	HMT
 U+6ACC	kCangjie	DMBE
 U+6ACC	kFourCornerCode	4194.7
 U+6ACC	kMojiJoho	MJ014649
-U+6ACC	kPhonetic	1504*
 U+6ACC	kUnihanCore2020	HMT
 U+6ACD	kCangjie	DHLC
 U+6ACD	kFourCornerCode	4298.6
@@ -51445,7 +51383,6 @@ U+6B06	kMojiJoho	MJ014718
 U+6B06	kPhonetic	1162*
 U+6B07	kCangjie	DSJJ
 U+6B07	kMojiJoho	MJ014720 MJ014719:E0101 MJ014720:E0102
-U+6B07	kPhonetic	979*
 U+6B08	kCangjie	DUOB
 U+6B08	kFourCornerCode	4292.7
 U+6B08	kMojiJoho	MJ014721
@@ -51539,7 +51476,6 @@ U+6B1D	kUnihanCore2020	HJ
 U+6B1E	kCangjie	DMBM
 U+6B1E	kFourCornerCode	4191.4 4191.8
 U+6B1E	kMojiJoho	MJ014744
-U+6B1E	kPhonetic	809*
 U+6B1E	kUnihanCore2020	HMT
 U+6B1F	kCangjie	DTGU
 U+6B1F	kFourCornerCode	4691.0
@@ -52762,7 +52698,7 @@ U+6C11	kPhonetic	878
 U+6C11	kUnihanCore2020	GHJKMPT
 U+6C12	kCangjie	HPJ
 U+6C12	kMojiJoho	MJ015007
-U+6C12	kPhonetic	1132*
+U+6C12	kPhonetic	1184*
 U+6C13	kCangjie	YVRVP
 U+6C13	kFenn	358G
 U+6C13	kFourCornerCode	0774.7
@@ -53159,7 +53095,6 @@ U+6C61	kFourCornerCode	3112.7
 U+6C61	kGradeLevel	4
 U+6C61	kHKGlyph	2114
 U+6C61	kMojiJoho	MJ015085
-U+6C61	kPhonetic	1602B*
 U+6C61	kUnihanCore2020	GHMT
 U+6C62	kCangjie	XXEG
 U+6C62	kFourCornerCode	3411.0
@@ -53487,7 +53422,7 @@ U+6CA2	kMojiJoho	MJ015162
 U+6CA2	kUnihanCore2020	HJ
 U+6CA3	kCangjie	EQJ
 U+6CA3	kFourCornerCode	3510
-U+6CA3	kPhonetic	407*
+U+6CA3	kPhonetic	539*
 U+6CA3	kUnihanCore2020	G
 U+6CA4	kCangjie	ESK
 U+6CA4	kFourCornerCode	3111
@@ -53578,7 +53513,6 @@ U+6CB6	kUnihanCore2020	HMT
 U+6CB7	kCangjie	EIKK
 U+6CB7	kFourCornerCode	3314.7
 U+6CB7	kMojiJoho	MJ015177 MJ015178:E0100 MJ015177:E0101
-U+6CB7	kPhonetic	1027*
 U+6CB7	kUnihanCore2020	HMT
 U+6CB8	kCangjie	ELLN
 U+6CB8	kFenn	252H
@@ -53951,7 +53885,6 @@ U+6CFB	kMojiJoho	MJ015252 MJ015252:E0101 MJ015251:E0102
 U+6CFB	kUnihanCore2020	G
 U+6CFC	kCangjie	EIVE
 U+6CFC	kFourCornerCode	3314
-U+6CFC	kPhonetic	346*
 U+6CFC	kUnihanCore2020	G
 U+6CFD	kCangjie	EEQ
 U+6CFD	kFourCornerCode	3715
@@ -54042,7 +53975,7 @@ U+6D0F	kUnihanCore2020	HMT
 U+6D10	kCangjie	EHON
 U+6D10	kFourCornerCode	3211.2
 U+6D10	kMojiJoho	MJ015274
-U+6D10	kPhonetic	435*
+U+6D10	kPhonetic	423A*
 U+6D10	kUnihanCore2020	HMT
 U+6D11	kCangjie	EOIK
 U+6D11	kFenn	456E
@@ -54316,7 +54249,7 @@ U+6D43	kUnihanCore2020	G
 U+6D44	kCangjie	ENSD
 U+6D44	kFourCornerCode	3715.7
 U+6D44	kMojiJoho	MJ015333
-U+6D44	kPhonetic	32*
+U+6D44	kPhonetic	32
 U+6D44	kUnihanCore2020	J
 U+6D45	kCangjie	EIJ
 U+6D45	kFourCornerCode	3315.0
@@ -54459,7 +54392,7 @@ U+6D66	kUnihanCore2020	GHJKMPT
 U+6D67	kCangjie	ERHG
 U+6D67	kFourCornerCode	3611.4
 U+6D67	kMojiJoho	MJ015353
-U+6D67	kPhonetic	204*
+U+6D67	kPhonetic	1348*
 U+6D67	kUnihanCore2020	HMT
 U+6D68	kCangjie	EJD
 U+6D68	kFourCornerCode	3319.4
@@ -54520,7 +54453,6 @@ U+6D71	kUnihanCore2020	H
 U+6D72	kCangjie	EHEJ
 U+6D72	kFourCornerCode	3715.4
 U+6D72	kMojiJoho	MJ015366
-U+6D72	kPhonetic	405*
 U+6D72	kUnihanCore2020	GH
 U+6D73	kCangjie	EIPB
 U+6D73	kMojiJoho	MJ015367
@@ -54731,7 +54663,6 @@ U+6D9C	kMojiJoho	MJ015411
 U+6D9C	kUnihanCore2020	J
 U+6D9D	kCangjie	ETBS
 U+6D9D	kFourCornerCode	3412
-U+6D9D	kPhonetic	821*
 U+6D9D	kUnihanCore2020	G
 U+6D9E	kCangjie	EDT
 U+6D9E	kFourCornerCode	3519
@@ -55288,7 +55219,6 @@ U+6E0B	kMojiJoho	MJ015529
 U+6E0B	kUnihanCore2020	J
 U+6E0C	kCangjie	ENME
 U+6E0C	kFourCornerCode	3719
-U+6E0C	kPhonetic	849*
 U+6E0C	kUnihanCore2020	G
 U+6E0D	kCangjie	EQMO
 U+6E0D	kFourCornerCode	3518
@@ -55303,7 +55233,6 @@ U+6E10	kFourCornerCode	3212
 U+6E10	kUnihanCore2020	G
 U+6E11	kCangjie	ERLU
 U+6E11	kFourCornerCode	3611
-U+6E11	kPhonetic	879*
 U+6E11	kUnihanCore2020	G
 U+6E12	kCangjie	EHWJ
 U+6E12	kMojiJoho	MJ015531
@@ -56828,7 +56757,6 @@ U+6F46	kFourCornerCode	3419
 U+6F46	kUnihanCore2020	G
 U+6F47	kCangjie	XETLX
 U+6F47	kFourCornerCode	3412
-U+6F47	kPhonetic	1219*
 U+6F47	kUnihanCore2020	G
 U+6F48	kCangjie	XEWLO
 U+6F49	kCangjie	EUAP
@@ -57691,7 +57619,6 @@ U+6FFF	kUnihanCore2020	HMT
 U+7000	kCangjie	EMBE
 U+7000	kFourCornerCode	3114.7
 U+7000	kMojiJoho	MJ016118
-U+7000	kPhonetic	1504*
 U+7000	kUnihanCore2020	HMT
 U+7001	kCangjie	ETOV
 U+7001	kFourCornerCode	3813.2
@@ -58053,7 +57980,6 @@ U+7051	kCangjie	EMMP
 U+7051	kFourCornerCode	3111.1
 U+7051	kHKGlyph	2361
 U+7051	kMojiJoho	MJ016230
-U+7051	kPhonetic	772
 U+7051	kUnihanCore2020	HJKMPT
 U+7052	kCangjie	EHUC
 U+7052	kCheungBauer	085/19;EHUC;zaan3
@@ -58067,7 +57993,7 @@ U+7053	kMojiJoho	MJ016232
 U+7053	kPhonetic	833
 U+7054	kCangjie	ETTU
 U+7054	kMojiJoho	MJ016233
-U+7054	kPhonetic	771*
+U+7054	kPhonetic	1188*
 U+7054	kUnihanCore2020	H
 U+7055	kCangjie	EYBG
 U+7055	kFourCornerCode	3011.4
@@ -58211,7 +58137,7 @@ U+7072	kCangjie	FLN
 U+7072	kMojiJoho	MJ016269
 U+7073	kCangjie	PF
 U+7073	kMojiJoho	MJ016270
-U+7073	kPhonetic	370*
+U+7073	kPhonetic	1009*
 U+7074	kCangjie	FM
 U+7074	kFourCornerCode	9181.0
 U+7074	kMojiJoho	MJ016271
@@ -58541,7 +58467,6 @@ U+70BB	kMojiJoho	MJ016351
 U+70BB	kUnihanCore2020	GH
 U+70BC	kCangjie	FJVD
 U+70BC	kFourCornerCode	9589
-U+70BC	kPhonetic	549*
 U+70BC	kUnihanCore2020	GH
 U+70BD	kCangjie	FRC
 U+70BD	kFourCornerCode	9688
@@ -58747,7 +58672,7 @@ U+70EC	kUnihanCore2020	G
 U+70ED	kCangjie	QIF
 U+70ED	kFourCornerCode	5533
 U+70ED	kMojiJoho	MJ057989
-U+70ED	kPhonetic	962 1593
+U+70ED	kPhonetic	1593
 U+70ED	kUnihanCore2020	G
 U+70EE	kCangjie	XMNF
 U+70EE	kPhonetic	814*
@@ -60740,14 +60665,14 @@ U+7297	kUnihanCore2020	HMT
 U+7298	kCangjie	IDHQ
 U+7298	kFourCornerCode	0025.9
 U+7298	kMojiJoho	MJ016865
-U+7298	kPhonetic	862*
+U+7298	kPhonetic	964*
 U+7298	kUnihanCore2020	HMT
 U+7299	kCangjie	HQIIH
 U+7299	kMojiJoho	MJ016866
 U+729A	kCangjie	SIHQ
 U+729A	kFourCornerCode	7450.0
 U+729A	kMojiJoho	MJ016867
-U+729A	kPhonetic	1429*
+U+729A	kPhonetic	964*
 U+729A	kUnihanCore2020	HMT
 U+729B	kCangjie	JKMHQ
 U+729B	kFourCornerCode	5825.1
@@ -60767,12 +60692,12 @@ U+729E	kMojiJoho	MJ016871
 U+729E	kUnihanCore2020	HMT
 U+729F	kCangjie	NIHQ
 U+729F	kFourCornerCode	1650
-U+729F	kPhonetic	610*
+U+729F	kPhonetic	964*
 U+729F	kUnihanCore2020	GH
 U+72A0	kCangjie	HQTGI
 U+72A0	kFourCornerCode	2855.3
 U+72A0	kMojiJoho	MJ016872
-U+72A0	kPhonetic	1554*
+U+72A0	kPhonetic	964*
 U+72A0	kUnihanCore2020	J
 U+72A1	kCangjie	HQMTB
 U+72A1	kFourCornerCode	2152.7
@@ -60817,7 +60742,7 @@ U+72A8	kUnihanCore2020	GHMT
 U+72A9	kCangjie	HIHQ
 U+72A9	kFourCornerCode	2650.1
 U+72A9	kMojiJoho	MJ016881
-U+72A9	kPhonetic	961*
+U+72A9	kPhonetic	964*
 U+72A9	kUnihanCore2020	HMT
 U+72AA	kCangjie	HQTCE
 U+72AA	kFourCornerCode	2854.7
@@ -61146,7 +61071,6 @@ U+72EF	kFourCornerCode	4823
 U+72EF	kUnihanCore2020	G
 U+72F0	kCangjie	KHNSD
 U+72F0	kFourCornerCode	4725
-U+72F0	kPhonetic	32*
 U+72F0	kUnihanCore2020	G
 U+72F1	kCangjie	KHIVK
 U+72F1	kFourCornerCode	4328
@@ -61784,7 +61708,6 @@ U+7375	kUnihanCore2020	HJKMPT
 U+7376	kCangjie	KHMBE
 U+7376	kFourCornerCode	4124.7
 U+7376	kMojiJoho	MJ017096
-U+7376	kPhonetic	1504*
 U+7376	kUnihanCore2020	HMT
 U+7377	kCangjie	KHITC
 U+7377	kFourCornerCode	4028.1
@@ -62383,7 +62306,7 @@ U+73F4	kUnihanCore2020	HMT
 U+73F5	kCangjie	MGRHG
 U+73F5	kFourCornerCode	1611.4
 U+73F5	kMojiJoho	MJ017235 MJ017235:E0101 MJ017236:E0102
-U+73F5	kPhonetic	204*
+U+73F5	kPhonetic	1348*
 U+73F5	kUnihanCore2020	GHMT
 U+73F6	kCangjie	MGCNH
 U+73F6	kFourCornerCode	1812.7
@@ -62523,7 +62446,6 @@ U+7411	kCangjie	MGFB
 U+7411	kMojiJoho	MJ017266
 U+7411	kUnihanCore2020	H
 U+7412	kCangjie	MGHEJ
-U+7412	kPhonetic	405*
 U+7412	kUnihanCore2020	H
 U+7413	kCangjie	MGJMU
 U+7413	kMojiJoho	MJ017267
@@ -63199,7 +63121,6 @@ U+74A4	kUnihanCore2020	H
 U+74A5	kCangjie	MGTRK
 U+74A5	kFourCornerCode	1814.0
 U+74A5	kMojiJoho	MJ017449 MJ017449:E0101 MJ017450:E0102
-U+74A5	kPhonetic	627*
 U+74A5	kUnihanCore2020	GHKMPT
 U+74A6	kCangjie	MGBBE
 U+74A6	kFourCornerCode	1214.7
@@ -63348,7 +63269,6 @@ U+74C6	kPhonetic	72*
 U+74C6	kUnihanCore2020	HKP
 U+74C7	kCangjie	MGMBE
 U+74C7	kMojiJoho	MJ017491
-U+74C7	kPhonetic	1504*
 U+74C8	kCangjie	MGHHE
 U+74C8	kMojiJoho	MJ017493
 U+74C8	kPhonetic	769
@@ -64321,7 +64241,7 @@ U+758B	kFourCornerCode	1780.1
 U+758B	kHDZRadBreak	⽦[U+2F66]:42749.010
 U+758B	kHKGlyph	2636
 U+758B	kMojiJoho	MJ017735
-U+758B	kPhonetic	1027A 1226
+U+758B	kPhonetic	1027 1027A 1226
 U+758B	kUnihanCore2020	GHJKMPT
 U+758C	kCangjie	JLYO
 U+758C	kFourCornerCode	5080.1
@@ -64796,7 +64716,6 @@ U+75E7	kPhonetic	1096
 U+75E7	kUnihanCore2020	GHMT
 U+75E8	kCangjie	KTBS
 U+75E8	kFourCornerCode	0012
-U+75E8	kPhonetic	821*
 U+75E8	kUnihanCore2020	G
 U+75E9	kCangjie	KLWE
 U+75E9	kFourCornerCode	0014.7
@@ -65702,7 +65621,7 @@ U+769C	kUnihanCore2020	HMT
 U+769D	kCangjie	HGFMU
 U+769D	kFourCornerCode	2911.1
 U+769D	kMojiJoho	MJ018025
-U+769D	kPhonetic	749*
+U+769D	kPhonetic	1457*
 U+769D	kUnihanCore2020	HMT
 U+769E	kCangjie	HAHAJ
 U+769E	kFourCornerCode	2665.3
@@ -65742,7 +65661,7 @@ U+76A8	kCangjie	HAHAG
 U+76A8	kMojiJoho	MJ018040
 U+76A9	kCangjie	HGAFU
 U+76A9	kMojiJoho	MJ018041
-U+76A9	kPhonetic	749*
+U+76A9	kPhonetic	1457*
 U+76AA	kCangjie	HAVID
 U+76AA	kFourCornerCode	2269.4
 U+76AA	kMojiJoho	MJ018042
@@ -65936,7 +65855,7 @@ U+76CF	kFourCornerCode	5310
 U+76CF	kUnihanCore2020	G
 U+76D0	kCangjie	GYBT
 U+76D0	kFourCornerCode	4310
-U+76D0	kPhonetic	544 1094
+U+76D0	kPhonetic	1094
 U+76D0	kUnihanCore2020	G
 U+76D1	kCangjie	LIBT
 U+76D1	kFourCornerCode	2810
@@ -66186,7 +66105,7 @@ U+76FC	kPhonetic	353
 U+76FC	kUnihanCore2020	GHKMPT
 U+76FD	kCangjie	BUQJ
 U+76FD	kMojiJoho	MJ018135
-U+76FD	kPhonetic	407*
+U+76FD	kPhonetic	539*
 U+76FE	kCangjie	HJBU
 U+76FE	kFenn	844D
 U+76FE	kFourCornerCode	7226.4
@@ -66513,7 +66432,7 @@ U+7740	kUnihanCore2020	GHJKMP
 U+7741	kCangjie	BUNSD
 U+7741	kFourCornerCode	6705
 U+7741	kMojiJoho	MJ018214
-U+7741	kPhonetic	32*
+U+7741	kPhonetic	32
 U+7741	kUnihanCore2020	G
 U+7742	kCangjie	OLMBU
 U+7742	kMojiJoho	MJ018215
@@ -66544,7 +66463,7 @@ U+7747	kPhonetic	1310
 U+7747	kUnihanCore2020	GHJMT
 U+7748	kCangjie	BURMG
 U+7748	kMojiJoho	MJ018221
-U+7748	kPhonetic	204*
+U+7748	kPhonetic	1348*
 U+7749	kCangjie	BUOOG
 U+7749	kMojiJoho	MJ018222
 U+774A	kCangjie	BURB
@@ -67578,7 +67497,7 @@ U+7825	kFenn	349K
 U+7825	kFourCornerCode	1264.0
 U+7825	kHKGlyph	2813
 U+7825	kMojiJoho	MJ018456
-U+7825	kPhonetic	1307
+U+7825	kPhonetic	1184* 1307
 U+7825	kUnihanCore2020	GHJKMPT
 U+7826	kCangjie	YPMR
 U+7826	kFourCornerCode	2160.1
@@ -69150,7 +69069,6 @@ U+7983	kUnihanCore2020	H
 U+7984	kCangjie	IFNME
 U+7984	kFourCornerCode	3723.2
 U+7984	kMojiJoho	MJ018878 MJ018878:E0101 MJ018877:E0102 MJ018879:E0103
-U+7984	kPhonetic	849*
 U+7984	kUnihanCore2020	GJ
 U+7985	kCangjie	IFCWJ
 U+7985	kFourCornerCode	3925.6 3225.6
@@ -70774,7 +70692,6 @@ U+7AD5	kPhonetic	767
 U+7AD5	kUnihanCore2020	J
 U+7AD6	kCangjie	LEYT
 U+7AD6	kFourCornerCode	2710
-U+7AD6	kPhonetic	1241C* 1322*
 U+7AD6	kUnihanCore2020	G
 U+7AD7	kCangjie	YTFH
 U+7AD7	kMojiJoho	MJ068040
@@ -71424,7 +71341,6 @@ U+7B5C	kUnihanCore2020	G
 U+7B5D	kCangjie	HNSD
 U+7B5D	kFourCornerCode	8850.7
 U+7B5D	kMojiJoho	MJ019467
-U+7B5D	kPhonetic	32*
 U+7B5D	kUnihanCore2020	GJ
 U+7B5E	kCangjie	XHJD
 U+7B5E	kMojiJoho	MJ019468
@@ -71779,7 +71695,6 @@ U+7BAA	kUnihanCore2020	GJ
 U+7BAB	kCangjie	XHLX
 U+7BAB	kFenn	164aG
 U+7BAB	kFourCornerCode	8822
-U+7BAB	kPhonetic	1261*
 U+7BAB	kUnihanCore2020	G
 U+7BAC	kCangjie	HTKR
 U+7BAC	kFenn	182K
@@ -72389,7 +72304,6 @@ U+7C2D	kFourCornerCode	8860.8
 U+7C2D	kMojiJoho	MJ019704
 U+7C2D	kUnihanCore2020	HMT
 U+7C2E	kCangjie	HQOA
-U+7C2E	kPhonetic	25*
 U+7C2F	kCangjie	HDTC
 U+7C30	kCangjie	HLLJ
 U+7C30	kFourCornerCode	8824.6
@@ -72842,7 +72756,7 @@ U+7C92	kPhonetic	767
 U+7C92	kUnihanCore2020	GHJKMPT
 U+7C93	kCangjie	FDTM
 U+7C93	kMojiJoho	MJ019831
-U+7C93	kPhonetic	650*
+U+7C93	kPhonetic	564A*
 U+7C94	kCangjie	FDSS
 U+7C94	kFourCornerCode	9191.7
 U+7C94	kMojiJoho	MJ019832 MJ019832:E0101 MJ019833:E0102
@@ -74158,7 +74072,6 @@ U+7D97	kPhonetic	608
 U+7D97	kUnihanCore2020	H
 U+7D98	kCangjie	VFHEJ
 U+7D98	kMojiJoho	MJ020159
-U+7D98	kPhonetic	405*
 U+7D99	kCangjie	VFVFD
 U+7D99	kFourCornerCode	2991.9
 U+7D99	kMojiJoho	MJ020160
@@ -74474,7 +74387,7 @@ U+7DD5	kUnihanCore2020	J
 U+7DD6	kCangjie	XVFJK
 U+7DD6	kFenn	192G
 U+7DD6	kMojiJoho	MJ020239
-U+7DD6	kPhonetic	94*
+U+7DD6	kPhonetic	94
 U+7DD6	kUnihanCore2020	JKP
 U+7DD7	kCangjie	VFDBU
 U+7DD7	kFourCornerCode	2690.0
@@ -75144,7 +75057,7 @@ U+7E5A	kPhonetic	817
 U+7E5A	kUnihanCore2020	HJMT
 U+7E5B	kCangjie	QFYAJ
 U+7E5B	kMojiJoho	MJ020409
-U+7E5B	kPhonetic	108*
+U+7E5B	kPhonetic	1224*
 U+7E5B	kUnihanCore2020	H
 U+7E5C	kCangjie	VFTWI
 U+7E5C	kFourCornerCode	2894.6
@@ -75408,7 +75321,6 @@ U+7E8F	kFourCornerCode	2091.4
 U+7E8F	kGradeLevel	6
 U+7E8F	kHKGlyph	3168
 U+7E8F	kMojiJoho	MJ020475
-U+7E8F	kPhonetic	195
 U+7E8F	kUnihanCore2020	HJKMPT
 U+7E90	kCangjie	VFYKC
 U+7E90	kFourCornerCode	2198.6
@@ -75422,7 +75334,7 @@ U+7E91	kUnihanCore2020	HMT
 U+7E92	kCangjie	VFMWG
 U+7E92	kFourCornerCode	2191.4
 U+7E92	kMojiJoho	MJ020478 MJ020478:E0101 MJ020480:E0102 MJ020479:E0103
-U+7E92	kPhonetic	195*
+U+7E92	kPhonetic	195
 U+7E92	kUnihanCore2020	HJ
 U+7E93	kCangjie	VFBCV
 U+7E93	kFourCornerCode	2694.4
@@ -75490,7 +75402,6 @@ U+7E9F	kFourCornerCode	2010
 U+7E9F	kUnihanCore2020	GH
 U+7EA0	kCangjie	VMVL
 U+7EA0	kFourCornerCode	2210
-U+7EA0	kPhonetic	583*
 U+7EA0	kUnihanCore2020	G
 U+7EA1	kCangjie	VMMD
 U+7EA1	kFourCornerCode	2114
@@ -75526,7 +75437,6 @@ U+7EAA	kFourCornerCode	2711
 U+7EAA	kUnihanCore2020	G
 U+7EAB	kCangjie	VMSHI
 U+7EAB	kFourCornerCode	2712
-U+7EAB	kPhonetic	1492*
 U+7EAB	kUnihanCore2020	G
 U+7EAC	kCangjie	VMQS
 U+7EAC	kFourCornerCode	2512
@@ -75594,7 +75504,7 @@ U+7EBF	kFourCornerCode	2315
 U+7EBF	kUnihanCore2020	G
 U+7EC0	kCangjie	VMTM
 U+7EC0	kFourCornerCode	2417
-U+7EC0	kPhonetic	650*
+U+7EC0	kPhonetic	564A*
 U+7EC0	kUnihanCore2020	G
 U+7EC1	kCangjie	VMPT
 U+7EC1	kFourCornerCode	2411
@@ -75604,7 +75514,6 @@ U+7EC2	kFourCornerCode	2314
 U+7EC2	kUnihanCore2020	G
 U+7EC3	kCangjie	VMKVC
 U+7EC3	kFourCornerCode	2519
-U+7EC3	kPhonetic	549*
 U+7EC3	kUnihanCore2020	G
 U+7EC4	kCangjie	VMBM
 U+7EC4	kFourCornerCode	2711
@@ -75677,7 +75586,6 @@ U+7ED9	kFourCornerCode	2816
 U+7ED9	kUnihanCore2020	G
 U+7EDA	kCangjie	VMPA
 U+7EDA	kFourCornerCode	2712
-U+7EDA	kPhonetic	318*
 U+7EDA	kUnihanCore2020	G
 U+7EDB	kCangjie	VMHEQ
 U+7EDB	kFourCornerCode	2715
@@ -75756,7 +75664,6 @@ U+7EF2	kFourCornerCode	2611
 U+7EF2	kUnihanCore2020	G
 U+7EF3	kCangjie	VMRLU
 U+7EF3	kFourCornerCode	2611
-U+7EF3	kPhonetic	879*
 U+7EF3	kUnihanCore2020	G
 U+7EF4	kCangjie	VMOG
 U+7EF4	kFourCornerCode	2011
@@ -75797,7 +75704,6 @@ U+7EFE	kFourCornerCode	2317
 U+7EFE	kUnihanCore2020	G
 U+7EFF	kCangjie	VMNME
 U+7EFF	kFourCornerCode	2719
-U+7EFF	kPhonetic	849*
 U+7EFF	kUnihanCore2020	G
 U+7F00	kCangjie	VMEEE
 U+7F00	kFourCornerCode	2714
@@ -75904,7 +75810,6 @@ U+7F1F	kFourCornerCode	2012
 U+7F1F	kUnihanCore2020	G
 U+7F20	kCangjie	VMIWG
 U+7F20	kFourCornerCode	2011
-U+7F20	kPhonetic	195*
 U+7F20	kUnihanCore2020	G
 U+7F21	kCangjie	VMYUB
 U+7F21	kFourCornerCode	2012
@@ -75936,7 +75841,6 @@ U+7F29	kFourCornerCode	2316
 U+7F29	kUnihanCore2020	G
 U+7F2A	kCangjie	VMSMH
 U+7F2A	kFourCornerCode	2712
-U+7F2A	kPhonetic	819*
 U+7F2A	kUnihanCore2020	G
 U+7F2B	kCangjie	VMVVD
 U+7F2B	kFourCornerCode	2219
@@ -75970,7 +75874,6 @@ U+7F33	kFourCornerCode	2613
 U+7F33	kUnihanCore2020	G
 U+7F34	kCangjie	VMHSK
 U+7F34	kFourCornerCode	2814
-U+7F34	kPhonetic	635*
 U+7F34	kUnihanCore2020	G
 U+7F35	kCangjie	VMHUO
 U+7F35	kFourCornerCode	2418
@@ -77248,7 +77151,6 @@ U+802F	kUnihanCore2020	H
 U+8030	kCangjie	QDMBE
 U+8030	kFourCornerCode	5194.7
 U+8030	kMojiJoho	MJ020810
-U+8030	kPhonetic	1504*
 U+8030	kUnihanCore2020	GHMT
 U+8031	kCangjie	QDIDR
 U+8031	kFourCornerCode	5096
@@ -78475,7 +78377,7 @@ U+812C	kUnihanCore2020	GHMT
 U+812D	kCangjie	BRHG
 U+812D	kFourCornerCode	7621.4
 U+812D	kMojiJoho	MJ021077
-U+812D	kPhonetic	204*
+U+812D	kPhonetic	1348*
 U+812D	kUnihanCore2020	HMT
 U+812E	kCangjie	BBV
 U+812E	kMojiJoho	MJ021078
@@ -79902,7 +79804,6 @@ U+8241	kPhonetic	227 642
 U+8242	kCangjie	HYHEJ
 U+8242	kFourCornerCode	2745.4
 U+8242	kMojiJoho	MJ021410
-U+8242	kPhonetic	405*
 U+8242	kUnihanCore2020	HMT
 U+8243	kCangjie	HYWG
 U+8243	kMojiJoho	MJ021411
@@ -80131,7 +80032,7 @@ U+8272	kPhonetic	208 1188
 U+8272	kUnihanCore2020	GHJKMPT
 U+8273	kCangjie	QJNAU
 U+8273	kFourCornerCode	5701
-U+8273	kPhonetic	404* 407*
+U+8273	kPhonetic	1188*
 U+8273	kUnihanCore2020	G
 U+8274	kCangjie	LNNAU
 U+8274	kFourCornerCode	5701.7
@@ -80141,19 +80042,19 @@ U+8274	kUnihanCore2020	GHMT
 U+8275	kCangjie	TTNAU
 U+8275	kFourCornerCode	8741.7
 U+8275	kMojiJoho	MJ021476 MJ021477:E0100 MJ021476:E0101
-U+8275	kPhonetic	1055*
+U+8275	kPhonetic	1188*
 U+8275	kUnihanCore2020	HMT
 U+8276	kCangjie	TTNAU
 U+8276	kFourCornerCode	5711.7
 U+8276	kGradeLevel	4
 U+8276	kHKGlyph	3879
 U+8276	kMojiJoho	MJ021478
-U+8276	kPhonetic	771*
+U+8276	kPhonetic	1188*
 U+8276	kUnihanCore2020	HJKP
 U+8277	kCangjie	UTNAU
 U+8277	kFourCornerCode	5711.7
 U+8277	kMojiJoho	MJ021479
-U+8277	kPhonetic	404*
+U+8277	kPhonetic	1188*
 U+8277	kUnihanCore2020	HJMT
 U+8278	kCangjie	UU
 U+8278	kFourCornerCode	2244.7
@@ -80782,7 +80683,7 @@ U+82F6	kUnihanCore2020	HMT
 U+82F7	kCangjie	TTM
 U+82F7	kFourCornerCode	4477
 U+82F7	kMojiJoho	MJ021714 MJ021714:E0101 MJ021715:E0102
-U+82F7	kPhonetic	650*
+U+82F7	kPhonetic	564A*
 U+82F7	kUnihanCore2020	GH
 U+82F8	kCangjie	THFD
 U+82F8	kMojiJoho	MJ021716
@@ -80914,7 +80815,6 @@ U+8313	kFourCornerCode	4480.2
 U+8313	kUnihanCore2020	G
 U+8314	kCangjie	XTBG
 U+8314	kFourCornerCode	4410
-U+8314	kPhonetic	1587*
 U+8314	kUnihanCore2020	G
 U+8315	kCangjie	TBNJ
 U+8315	kFourCornerCode	4473
@@ -81291,22 +81191,19 @@ U+8362	kUnihanCore2020	H
 U+8363	kCangjie	TBD
 U+8363	kFourCornerCode	4490
 U+8363	kMojiJoho	MJ021918
-U+8363	kPhonetic	1451 1587*
+U+8363	kPhonetic	1451
 U+8363	kUnihanCore2020	GH
 U+8364	kCangjie	TBKQ
 U+8364	kFourCornerCode	4450
 U+8364	kUnihanCore2020	G
 U+8365	kCangjie	TBE
 U+8365	kFourCornerCode	4490
-U+8365	kPhonetic	1587*
 U+8365	kUnihanCore2020	G
 U+8366	kCangjie	TBHQ
 U+8366	kFourCornerCode	4450
-U+8366	kPhonetic	821* 1587*
 U+8366	kUnihanCore2020	GH
 U+8367	kCangjie	TBF
 U+8367	kFourCornerCode	4480
-U+8367	kPhonetic	1587*
 U+8367	kUnihanCore2020	G
 U+8368	kCangjie	XTSMI
 U+8368	kFourCornerCode	4434
@@ -81488,7 +81385,6 @@ U+8390	kMojiJoho	MJ021981
 U+8390	kUnihanCore2020	HMT
 U+8391	kCangjie	THEJ
 U+8391	kMojiJoho	MJ021982 MJ021982:E0100 MJ021983:E0101
-U+8391	kPhonetic	405*
 U+8391	kUnihanCore2020	H
 U+8392	kCangjie	TRHR
 U+8392	kFourCornerCode	4460.6
@@ -81670,11 +81566,9 @@ U+83B8	kFourCornerCode	4421
 U+83B8	kUnihanCore2020	G
 U+83B9	kCangjie	TBMG
 U+83B9	kFourCornerCode	4410
-U+83B9	kPhonetic	1587*
 U+83B9	kUnihanCore2020	GH
 U+83BA	kCangjie	TBPM
 U+83BA	kFourCornerCode	4412
-U+83BA	kPhonetic	1587*
 U+83BA	kUnihanCore2020	G
 U+83BB	kCangjie	TNSP
 U+83BB	kMojiJoho	MJ068044
@@ -82170,20 +82064,16 @@ U+8423	kUnihanCore2020	GHMT
 U+8424	kCangjie	TBLI
 U+8424	kFourCornerCode	4413
 U+8424	kMojiJoho	MJ022246
-U+8424	kPhonetic	1587*
 U+8424	kUnihanCore2020	GH
 U+8425	kCangjie	TBRR
 U+8425	kFourCornerCode	4460
 U+8425	kMojiJoho	MJ022247
-U+8425	kPhonetic	1587*
 U+8425	kUnihanCore2020	G
 U+8426	kCangjie	TBVF
 U+8426	kFourCornerCode	4490
-U+8426	kPhonetic	1587*
 U+8426	kUnihanCore2020	GH
 U+8427	kCangjie	XTLX
 U+8427	kFourCornerCode	4422
-U+8427	kPhonetic	1261*
 U+8427	kUnihanCore2020	G
 U+8428	kCangjie	TNLH
 U+8428	kFourCornerCode	4420
@@ -82579,7 +82469,7 @@ U+8477	kFenn	838A
 U+8477	kFourCornerCode	4450.6
 U+8477	kHKGlyph	3492
 U+8477	kMojiJoho	MJ022399 MJ022399:E0101 MJ022400:E0102
-U+8477	kPhonetic	723
+U+8477	kPhonetic	723 979
 U+8477	kUnihanCore2020	HJMT
 U+8478	kCangjie	TWP
 U+8478	kFourCornerCode	4433.6
@@ -84069,7 +83959,7 @@ U+85BA	kPhonetic	56*
 U+85BA	kUnihanCore2020	HJKMPT
 U+85BB	kCangjie	TEVD
 U+85BB	kMojiJoho	MJ023008
-U+85BB	kPhonetic	52
+U+85BB	kPhonetic	52 1567
 U+85BC	kCangjie	TIPG
 U+85BC	kMojiJoho	MJ023009 MJ023009:E0101 MJ023010:E0102
 U+85BD	kCangjie	TMGN
@@ -84771,7 +84661,7 @@ U+8656	kPhonetic	379 389
 U+8656	kUnihanCore2020	HMT
 U+8657	kCangjie	YPOM
 U+8657	kMojiJoho	MJ023289
-U+8657	kPhonetic	383*
+U+8657	kPhonetic	1506*
 U+8658	kCangjie	YPBM
 U+8658	kMojiJoho	MJ023290
 U+8658	kPhonetic	9 97
@@ -85881,7 +85771,6 @@ U+8746	kUnihanCore2020	HMT
 U+8747	kCangjie	LIRLU
 U+8747	kFourCornerCode	5611
 U+8747	kMojiJoho	MJ023550
-U+8747	kPhonetic	879*
 U+8747	kUnihanCore2020	G
 U+8748	kCangjie	LIWMI
 U+8748	kFourCornerCode	5610
@@ -86063,7 +85952,6 @@ U+876A	kUnihanCore2020	HJMT
 U+876B	kCangjie	LIJKA
 U+876B	kFourCornerCode	5416.0
 U+876B	kMojiJoho	MJ023592
-U+876B	kPhonetic	94*
 U+876B	kUnihanCore2020	HMT
 U+876C	kCangjie	LIUCE
 U+876C	kFourCornerCode	5214.7
@@ -86530,7 +86418,6 @@ U+87CE	kMojiJoho	MJ023702
 U+87CE	kUnihanCore2020	H
 U+87CF	kCangjie	XLITL
 U+87CF	kFourCornerCode	5412.7
-U+87CF	kPhonetic	1219*
 U+87CF	kUnihanCore2020	G
 U+87D0	kCangjie	LIFBB
 U+87D0	kFourCornerCode	5912.7
@@ -86739,7 +86626,6 @@ U+87FB	kUnihanCore2020	HJKMPT
 U+87FC	kCangjie	TKLMI
 U+87FC	kFourCornerCode	4813.6
 U+87FC	kMojiJoho	MJ023753
-U+87FC	kPhonetic	627*
 U+87FC	kUnihanCore2020	HMT
 U+87FD	kCangjie	LIYGQ
 U+87FD	kMojiJoho	MJ023754
@@ -87602,7 +87488,6 @@ U+88AE	kMojiJoho	MJ023966
 U+88AE	kUnihanCore2020	HJ
 U+88AF	kCangjie	LIVE
 U+88AF	kFourCornerCode	3324.7
-U+88AF	kPhonetic	346*
 U+88AF	kUnihanCore2020	G
 U+88B0	kCangjie	WYYHV
 U+88B0	kFourCornerCode	7773.2
@@ -87707,7 +87592,7 @@ U+88C3	kUnihanCore2020	J
 U+88C4	kCangjie	LHON
 U+88C4	kFourCornerCode	3122.1
 U+88C4	kMojiJoho	MJ023987
-U+88C4	kPhonetic	435*
+U+88C4	kPhonetic	423A*
 U+88C4	kUnihanCore2020	J
 U+88C5	kCangjie	IGYHV
 U+88C5	kFourCornerCode	3473.2
@@ -88370,7 +88255,6 @@ U+894E	kMojiJoho	MJ024139
 U+894F	kCangjie	LNOE
 U+894F	kFourCornerCode	3224.7
 U+894F	kMojiJoho	MJ024140
-U+894F	kPhonetic	346
 U+894F	kUnihanCore2020	HMT
 U+8950	kCangjie	LNAO
 U+8950	kFourCornerCode	3723.2
@@ -90051,7 +89935,6 @@ U+8AAE	kCangjie	YRTOP
 U+8AAE	kMojiJoho	MJ024537 MJ024537:E0101 MJ024538:E0102
 U+8AAF	kCangjie	YRAA
 U+8AAF	kMojiJoho	MJ024539
-U+8AAF	kPhonetic	119*
 U+8AAF	kUnihanCore2020	H
 U+8AB0	kCangjie	YROG
 U+8AB0	kFenn	52A
@@ -91290,7 +91173,6 @@ U+8BB0	kFourCornerCode	3771
 U+8BB0	kUnihanCore2020	G
 U+8BB1	kCangjie	IVSHI
 U+8BB1	kFourCornerCode	3772.0
-U+8BB1	kPhonetic	1492*
 U+8BB1	kUnihanCore2020	G
 U+8BB2	kCangjie	IVTT
 U+8BB2	kFourCornerCode	3570
@@ -91455,14 +91337,12 @@ U+8BE1	kPhonetic	959*
 U+8BE1	kUnihanCore2020	G
 U+8BE2	kCangjie	IVPA
 U+8BE2	kFourCornerCode	3772
-U+8BE2	kPhonetic	318*
 U+8BE2	kUnihanCore2020	GH
 U+8BE3	kCangjie	XIVPA
 U+8BE3	kFourCornerCode	3276
 U+8BE3	kUnihanCore2020	G
 U+8BE4	kCangjie	IVNSD
 U+8BE4	kFourCornerCode	3775
-U+8BE4	kPhonetic	32*
 U+8BE4	kUnihanCore2020	G
 U+8BE5	kCangjie	IVYVO
 U+8BE5	kFourCornerCode	3078.2
@@ -91541,7 +91421,7 @@ U+8BFB	kFourCornerCode	3478
 U+8BFB	kUnihanCore2020	G
 U+8BFC	kCangjie	IVMSO
 U+8BFC	kFourCornerCode	3173
-U+8BFC	kPhonetic	1323*
+U+8BFC	kPhonetic	510
 U+8BFC	kUnihanCore2020	G
 U+8BFD	kCangjie	IVLMY
 U+8BFD	kFourCornerCode	3171
@@ -91602,7 +91482,6 @@ U+8C0E	kFourCornerCode	3471
 U+8C0E	kUnihanCore2020	G
 U+8C0F	kCangjie	IVDWF
 U+8C0F	kFourCornerCode	3579
-U+8C0F	kPhonetic	549*
 U+8C0F	kUnihanCore2020	G
 U+8C10	kCangjie	IVPPA
 U+8C10	kFourCornerCode	3276
@@ -91693,7 +91572,6 @@ U+8C2B	kFourCornerCode	3872
 U+8C2B	kUnihanCore2020	G
 U+8C2C	kCangjie	IVSMH
 U+8C2C	kFourCornerCode	3772
-U+8C2C	kPhonetic	819*
 U+8C2C	kUnihanCore2020	G
 U+8C2D	kCangjie	IVMWJ
 U+8C2D	kFourCornerCode	3174
@@ -94234,7 +94112,7 @@ U+8E3D	kUnihanCore2020	GHMT
 U+8E3E	kCangjie	RMMRW
 U+8E3E	kFourCornerCode	6116.6
 U+8E3E	kMojiJoho	MJ025380
-U+8E3E	kPhonetic	398*
+U+8E3E	kPhonetic	156
 U+8E3E	kUnihanCore2020	HMT
 U+8E3F	kCangjie	RMHDF
 U+8E3F	kFourCornerCode	6918.0
@@ -94342,7 +94220,6 @@ U+8E50	kUnihanCore2020	GHJMT
 U+8E51	kCangjie	XRMSJ
 U+8E51	kFourCornerCode	6114
 U+8E51	kMojiJoho	MJ025405
-U+8E51	kPhonetic	979*
 U+8E51	kUnihanCore2020	G
 U+8E52	kCangjie	RMTMB
 U+8E52	kFourCornerCode	6412
@@ -94629,7 +94506,6 @@ U+8E8A	kFourCornerCode	6414.1
 U+8E8A	kGradeLevel	6
 U+8E8A	kHKGlyph	4017
 U+8E8A	kMojiJoho	MJ025467
-U+8E8A	kPhonetic	1149*
 U+8E8A	kUnihanCore2020	HJKMPT
 U+8E8B	kCangjie	RMYX
 U+8E8B	kFenn	421I
@@ -95734,7 +95610,6 @@ U+8F6A	kFourCornerCode	4453.0
 U+8F6A	kUnihanCore2020	G
 U+8F6B	kCangjie	KQSHI
 U+8F6B	kFourCornerCode	4752
-U+8F6B	kPhonetic	1492*
 U+8F6B	kUnihanCore2020	G
 U+8F6C	kCangjie	KQQNI
 U+8F6C	kFourCornerCode	4553
@@ -95872,7 +95747,6 @@ U+8F95	kFourCornerCode	4453
 U+8F95	kUnihanCore2020	G
 U+8F96	kCangjie	KQJQR
 U+8F96	kFourCornerCode	4356
-U+8F96	kPhonetic	491*
 U+8F96	kUnihanCore2020	G
 U+8F97	kCangjie	KQSTV
 U+8F97	kFourCornerCode	4753
@@ -95883,7 +95757,6 @@ U+8F98	kPhonetic	848*
 U+8F98	kUnihanCore2020	G
 U+8F99	kCangjie	KQYBK
 U+8F99	kFourCornerCode	4854
-U+8F99	kPhonetic	214*
 U+8F99	kUnihanCore2020	G
 U+8F9A	kCangjie	KQFDQ
 U+8F9A	kFourCornerCode	4955
@@ -96861,7 +96734,7 @@ U+9051	kFenn	74I
 U+9051	kFourCornerCode	3630.1
 U+9051	kHKGlyph	4137
 U+9051	kMojiJoho	MJ026051 MJ026051:E0101 MJ026050:E0102
-U+9051	kPhonetic	1457
+U+9051	kPhonetic	772 1457
 U+9051	kUnihanCore2020	GHJKMPT
 U+9052	kCangjie	YTCW
 U+9052	kFourCornerCode	3830.6
@@ -97352,7 +97225,7 @@ U+90AA	kPhonetic	98 951
 U+90AA	kUnihanCore2020	GHJKMPT
 U+90AB	kCangjie	QJRAU
 U+90AB	kMojiJoho	MJ026257 MJ026257:E0100 MJ026258:E0101
-U+90AB	kPhonetic	407*
+U+90AB	kPhonetic	1496*
 U+90AC	kCangjie	PMNL
 U+90AC	kFourCornerCode	2712
 U+90AC	kUnihanCore2020	G
@@ -97452,7 +97325,7 @@ U+90C1	kCheungBauer	163/06;DDBUH;juk1
 U+90C1	kFourCornerCode	4722.7
 U+90C1	kHKGlyph	4178
 U+90C1	kMojiJoho	MJ026281
-U+90C1	kPhonetic	1448 1517
+U+90C1	kPhonetic	1517
 U+90C1	kUnihanCore2020	GHJKMPT
 U+90C2	kCangjie	YONL
 U+90C2	kMojiJoho	MJ026282
@@ -97501,7 +97374,7 @@ U+90CB	kMojiJoho	MJ026291
 U+90CB	kUnihanCore2020	HMT
 U+90CC	kCangjie	GGRAU
 U+90CC	kMojiJoho	MJ026292
-U+90CC	kPhonetic	710*
+U+90CC	kPhonetic	1496*
 U+90CD	kCangjie	HYNL
 U+90CD	kMojiJoho	MJ026293
 U+90CE	kCangjie	IINL
@@ -97697,7 +97570,7 @@ U+90F5	kPhonetic	1255
 U+90F5	kUnihanCore2020	HJKMPT
 U+90F6	kCangjie	YRRAU
 U+90F6	kMojiJoho	MJ026335
-U+90F6	kPhonetic	1028*
+U+90F6	kPhonetic	1496*
 U+90F7	kCangjie	VHAIL
 U+90F7	kFourCornerCode	2772.7
 U+90F7	kMojiJoho	MJ026336
@@ -97937,7 +97810,7 @@ U+9127	kUnihanCore2020	HJKMPT
 U+9128	kCangjie	FKRAU
 U+9128	kFourCornerCode	9771.7
 U+9128	kMojiJoho	MJ026393
-U+9128	kPhonetic	1013*
+U+9128	kPhonetic	1496*
 U+9128	kUnihanCore2020	HMT
 U+9129	kCangjie	SINL
 U+9129	kFourCornerCode	2732.7
@@ -98041,7 +97914,6 @@ U+913D	kMojiJoho	MJ026419 MJ026419:E0101 MJ026420:E0102
 U+913E	kCangjie	MENL
 U+913E	kFourCornerCode	1242.7
 U+913E	kMojiJoho	MJ026421
-U+913E	kPhonetic	1504*
 U+913E	kUnihanCore2020	HMT
 U+913F	kCangjie	TJNL
 U+913F	kFourCornerCode	4752.7
@@ -98242,7 +98114,6 @@ U+9165	kPhonetic	1453
 U+9165	kUnihanCore2020	GHJMT
 U+9166	kCangjie	MWIVE
 U+9166	kFourCornerCode	1364.7
-U+9166	kPhonetic	346*
 U+9166	kUnihanCore2020	G
 U+9167	kCangjie	MWJDI
 U+9167	kMojiJoho	MJ026467
@@ -99146,7 +99017,7 @@ U+921C	kMojiJoho	MJ026688
 U+921C	kUnihanCore2020	HMT
 U+921D	kCangjie	CHQ
 U+921D	kMojiJoho	MJ026689
-U+921D	kPhonetic	566*
+U+921D	kPhonetic	964*
 U+921E	kCangjie	CPIM
 U+921E	kFenn	232F
 U+921E	kFourCornerCode	8712.0
@@ -99589,7 +99460,6 @@ U+9280	kPhonetic	575
 U+9280	kUnihanCore2020	HJKMPT
 U+9281	kCangjie	CPA
 U+9281	kMojiJoho	MJ026799
-U+9281	kPhonetic	318*
 U+9281	kUnihanCore2020	H
 U+9282	kCangjie	CILL
 U+9282	kFourCornerCode	8210.0
@@ -99723,7 +99593,6 @@ U+929D	kMojiJoho	MJ026832
 U+929D	kUnihanCore2020	HMT
 U+929E	kCangjie	PAC
 U+929E	kMojiJoho	MJ026833
-U+929E	kPhonetic	318*
 U+929F	kCangjie	CULB
 U+929F	kMojiJoho	MJ026834
 U+92A0	kCangjie	CJKP
@@ -100044,7 +99913,7 @@ U+92E4	kPhonetic	97 233
 U+92E4	kUnihanCore2020	HJKMPT
 U+92E5	kCangjie	CRHG
 U+92E5	kMojiJoho	MJ026912
-U+92E5	kPhonetic	204*
+U+92E5	kPhonetic	1348*
 U+92E5	kUnihanCore2020	H
 U+92E6	kCangjie	CSSR
 U+92E6	kFourCornerCode	8712.7
@@ -101417,7 +101286,6 @@ U+9415	kAlternateTotalStrokes	22:J
 U+9415	kCangjie	CMUA
 U+9415	kFourCornerCode	8116.3
 U+9415	kMojiJoho	MJ027256 MJ027256:E0101 MJ027255:E0102
-U+9415	kPhonetic	25*
 U+9415	kUnihanCore2020	HMT
 U+9416	kCangjie	CVII
 U+9416	kFourCornerCode	8215.3
@@ -101850,7 +101718,7 @@ U+9477	kCangjie	CSJJ
 U+9477	kFenn	633H
 U+9477	kFourCornerCode	8114.1
 U+9477	kMojiJoho	MJ027374 MJ027374:E0102 MJ027375:E0103 MJ027376:E0104
-U+9477	kPhonetic	979
+U+9477	kPhonetic	979*
 U+9477	kUnihanCore2020	HJMT
 U+9478	kCangjie	CWWG
 U+9478	kFourCornerCode	8611.4
@@ -102245,7 +102113,6 @@ U+94ED	kPhonetic	901*
 U+94ED	kUnihanCore2020	G
 U+94EE	kCangjie	XCNSD
 U+94EE	kFourCornerCode	8775
-U+94EE	kPhonetic	32*
 U+94EE	kUnihanCore2020	G
 U+94EF	kCangjie	XCNAU
 U+94EF	kFourCornerCode	8771
@@ -102316,7 +102183,7 @@ U+9502	kFourCornerCode	8671
 U+9502	kUnihanCore2020	G
 U+9503	kCangjie	XCRMG
 U+9503	kFourCornerCode	8671
-U+9503	kPhonetic	204*
+U+9503	kPhonetic	1348*
 U+9503	kUnihanCore2020	G
 U+9504	kCangjie	XCBMS
 U+9504	kFourCornerCode	8472
@@ -102332,7 +102199,7 @@ U+9507	kFourCornerCode	8375
 U+9507	kUnihanCore2020	G
 U+9508	kCangjie	XCHDS
 U+9508	kFourCornerCode	8272
-U+9508	kPhonetic	1145* 1261*
+U+9508	kPhonetic	1145*
 U+9508	kUnihanCore2020	G
 U+9509	kCangjie	XCOOG
 U+9509	kFourCornerCode	8871
@@ -102343,7 +102210,6 @@ U+950A	kPhonetic	835
 U+950A	kUnihanCore2020	G
 U+950B	kCangjie	XCHEJ
 U+950B	kFourCornerCode	8775
-U+950B	kPhonetic	405*
 U+950B	kUnihanCore2020	G
 U+950C	kCangjie	XCYTJ
 U+950C	kFourCornerCode	8074
@@ -102554,7 +102420,6 @@ U+9549	kPhonetic	542*
 U+9549	kUnihanCore2020	G
 U+954A	kCangjie	XCSJE
 U+954A	kFourCornerCode	8174
-U+954A	kPhonetic	979*
 U+954A	kUnihanCore2020	G
 U+954B	kCangjie	XCFBU
 U+954B	kFourCornerCode	8971.6
@@ -102627,7 +102492,6 @@ U+955F	kFourCornerCode	8878
 U+955F	kUnihanCore2020	G
 U+9560	kCangjie	XCSMH
 U+9560	kFourCornerCode	8772.2
-U+9560	kPhonetic	819*
 U+9560	kUnihanCore2020	G
 U+9561	kCangjie	XCMWJ
 U+9561	kFourCornerCode	8174
@@ -103046,7 +102910,7 @@ U+95BB	kFenn	683H
 U+95BB	kFourCornerCode	7777.7
 U+95BB	kHKGlyph	4348
 U+95BB	kMojiJoho	MJ027475 MJ027475:E0102 MJ027476:E0103
-U+95BB	kPhonetic	421 1567
+U+95BB	kPhonetic	421
 U+95BB	kUnihanCore2020	HJKMPT
 U+95BC	kCangjie	ANYSY
 U+95BC	kFourCornerCode	7723.3
@@ -103278,7 +103142,6 @@ U+95EE	kFourCornerCode	3760
 U+95EE	kUnihanCore2020	G
 U+95EF	kCangjie	LSNVM
 U+95EF	kFourCornerCode	3712
-U+95EF	kPhonetic	255*
 U+95EF	kUnihanCore2020	G
 U+95F0	kCangjie	LSMG
 U+95F0	kFourCornerCode	3710
@@ -103386,7 +103249,6 @@ U+9610	kFourCornerCode	3750
 U+9610	kUnihanCore2020	G
 U+9611	kCangjie	LSDWF
 U+9611	kFourCornerCode	3790
-U+9611	kPhonetic	549*
 U+9611	kUnihanCore2020	G
 U+9612	kCangjie	LSBUK
 U+9612	kFourCornerCode	3780
@@ -105028,7 +104890,7 @@ U+9758	kUnihanCore2020	HMT
 U+9759	kCangjie	QBNSD
 U+9759	kFourCornerCode	5725.7
 U+9759	kMojiJoho	MJ027906
-U+9759	kPhonetic	32*
+U+9759	kPhonetic	32
 U+9759	kUnihanCore2020	GJ
 U+975A	kCangjie	QBBUU
 U+975A	kCheungBauer	174/07;QBBUU;leng3
@@ -105328,7 +105190,7 @@ U+9792	kFourCornerCode	4252
 U+9792	kUnihanCore2020	G
 U+9793	kCangjie	TJRMG
 U+9793	kMojiJoho	MJ027986
-U+9793	kPhonetic	204*
+U+9793	kPhonetic	1348*
 U+9794	kCangjie	TJNAU
 U+9794	kCheungBauer	177/07;TJNAU;mong1
 U+9794	kFourCornerCode	4751.6 4752.6
@@ -105720,7 +105582,6 @@ U+97E6	kPhonetic	1433
 U+97E6	kUnihanCore2020	GH
 U+97E7	kCangjie	QSSHI
 U+97E7	kFourCornerCode	5702
-U+97E7	kPhonetic	1492*
 U+97E7	kUnihanCore2020	G
 U+97E8	kCangjie	QSIKE
 U+97E8	kFourCornerCode	5304.7
@@ -105799,7 +105660,6 @@ U+97F7	kMojiJoho	MJ028129
 U+97F8	kCangjie	YAHEJ
 U+97F8	kFourCornerCode	0765.4
 U+97F8	kMojiJoho	MJ028130
-U+97F8	kPhonetic	405*
 U+97F8	kUnihanCore2020	HMT
 U+97F9	kCangjie	YAHAG
 U+97F9	kFourCornerCode	0661.4
@@ -106450,7 +106310,6 @@ U+9876	kFourCornerCode	1128
 U+9876	kUnihanCore2020	G
 U+9877	kCangjie	PMBO
 U+9877	kFourCornerCode	2178
-U+9877	kPhonetic	628*
 U+9877	kUnihanCore2020	G
 U+9878	kCangjie	MJMBO
 U+9878	kFourCornerCode	1148.2
@@ -106463,7 +106322,7 @@ U+987A	kFourCornerCode	2108
 U+987A	kUnihanCore2020	G
 U+987B	kCangjie	HHMBO
 U+987B	kFourCornerCode	2128
-U+987B	kPhonetic	1252*
+U+987B	kPhonetic	1101*
 U+987B	kUnihanCore2020	G
 U+987C	kCangjie	MGMBO
 U+987C	kFourCornerCode	1118
@@ -106521,11 +106380,9 @@ U+988C	kFourCornerCode	8168
 U+988C	kUnihanCore2020	G
 U+988D	kCangjie	PEMBO
 U+988D	kFourCornerCode	2198
-U+988D	kPhonetic	628*
 U+988D	kUnihanCore2020	G
 U+988E	kCangjie	XPFMB
 U+988E	kFourCornerCode	2188.2
-U+988E	kPhonetic	628*
 U+988E	kUnihanCore2020	G
 U+988F	kCangjie	YOMBO
 U+988F	kFourCornerCode	0188
@@ -106546,10 +106403,8 @@ U+9894	kFourCornerCode	8168
 U+9894	kPhonetic	497*
 U+9894	kUnihanCore2020	G
 U+9895	kCangjie	PFMBO
-U+9895	kPhonetic	628*
 U+9896	kCangjie	PDMBO
 U+9896	kFourCornerCode	2198
-U+9896	kPhonetic	628*
 U+9896	kUnihanCore2020	G
 U+9897	kCangjie	WDMBO
 U+9897	kFourCornerCode	6198
@@ -106576,7 +106431,6 @@ U+989D	kFourCornerCode	3168
 U+989D	kUnihanCore2020	G
 U+989E	kCangjie	SEMBO
 U+989E	kFourCornerCode	1148.2
-U+989E	kPhonetic	979*
 U+989E	kUnihanCore2020	G
 U+989F	kCangjie	TBMBO
 U+989F	kFourCornerCode	4128
@@ -106616,7 +106470,7 @@ U+98A8	kUnihanCore2020	HJKMPT
 U+98A9	kCangjie	HNHHH
 U+98A9	kFourCornerCode	7221.2
 U+98A9	kMojiJoho	MJ028295
-U+98A9	kPhonetic	408*
+U+98A9	kPhonetic	1101*
 U+98A9	kUnihanCore2020	HMT
 U+98AA	kCangjie	MYHN
 U+98AA	kFourCornerCode	1021.7
@@ -108501,7 +108355,7 @@ U+9A46	kMojiJoho	MJ028796
 U+9A46	kUnihanCore2020	HMT
 U+9A47	kCangjie	XGISQ
 U+9A47	kMojiJoho	MJ028797
-U+9A47	kPhonetic	962*
+U+9A47	kPhonetic	69
 U+9A48	kCangjie	SFNHB
 U+9A48	kFourCornerCode	7732.7
 U+9A48	kMojiJoho	MJ028798
@@ -108807,7 +108661,6 @@ U+9A93	kUnihanCore2020	G
 U+9A94	kCangjie	NMJMF
 U+9A95	kCangjie	NMLX
 U+9A95	kFourCornerCode	7512.7
-U+9A95	kPhonetic	1261*
 U+9A95	kUnihanCore2020	G
 U+9A96	kCangjie	NMIKH
 U+9A96	kFourCornerCode	7312
@@ -109841,7 +109694,6 @@ U+9B77	kCangjie	NFIKU
 U+9B77	kFourCornerCode	2331.4
 U+9B77	kHKGlyph	4647
 U+9B77	kMojiJoho	MJ029077
-U+9B77	kPhonetic	1511*
 U+9B77	kUnihanCore2020	HMT
 U+9B78	kCangjie	XNFLL
 U+9B78	kMojiJoho	MJ029078
@@ -110747,7 +110599,6 @@ U+9C5C	kCangjie	NFVHL
 U+9C5C	kMojiJoho	MJ029374
 U+9C5D	kCangjie	NFJTC
 U+9C5D	kMojiJoho	MJ029375 MJ029375:E0101 MJ029376:E0102
-U+9C5D	kPhonetic	1020*
 U+9C5D	kUnihanCore2020	H
 U+9C5E	kCangjie	NFWLV
 U+9C5E	kFourCornerCode	2632.2
@@ -111189,7 +111040,7 @@ U+9CE0	kFourCornerCode	2414.7
 U+9CE0	kUnihanCore2020	G
 U+9CE1	kCangjie	NMIRP
 U+9CE1	kFourCornerCode	2313.5
-U+9CE1	kPhonetic	652*
+U+9CE1	kPhonetic	566A*
 U+9CE1	kUnihanCore2020	G
 U+9CE2	kCangjie	NMTWT
 U+9CE2	kFourCornerCode	2511
@@ -112287,7 +112138,7 @@ U+9DD9	kCangjie	GIHAF
 U+9DD9	kFenn	304I
 U+9DD9	kFourCornerCode	4532.7
 U+9DD9	kMojiJoho	MJ029693
-U+9DD9	kPhonetic	69
+U+9DD9	kPhonetic	304*
 U+9DD9	kUnihanCore2020	HJMT
 U+9DDA	kCangjie	SHHAF
 U+9DDA	kFourCornerCode	1722.7
@@ -112771,7 +112622,6 @@ U+9E52	kUnihanCore2020	G
 U+9E53	kCangjie	JUPYM
 U+9E54	kCangjie	LXPYM
 U+9E54	kFourCornerCode	5722.7
-U+9E54	kPhonetic	1261*
 U+9E54	kUnihanCore2020	G
 U+9E55	kCangjie	JRBPM
 U+9E55	kFourCornerCode	4762
@@ -113886,7 +113736,6 @@ U+9F41	kUnihanCore2020	GHMT
 U+9F42	kCangjie	HLLE
 U+9F42	kFourCornerCode	2523.2
 U+9F42	kMojiJoho	MJ030050
-U+9F42	kPhonetic	1372*
 U+9F42	kUnihanCore2020	HMT
 U+9F43	kCangjie	HLAPV
 U+9F43	kFourCornerCode	4642.7
@@ -114058,7 +113907,7 @@ U+9F61	kUnihanCore2020	HJKMPT
 U+9F62	kCangjie	YUOII
 U+9F62	kFourCornerCode	2873.7
 U+9F62	kMojiJoho	MJ030090
-U+9F62	kPhonetic	812*
+U+9F62	kPhonetic	812
 U+9F62	kUnihanCore2020	HJ
 U+9F63	kCangjie	YUPR
 U+9F63	kFenn	227H
@@ -114444,8 +114293,24 @@ U+F928	kUnihanCore2020	J
 U+F929	kUnihanCore2020	J
 U+F92C	kCangjie	IVNL
 U+F936	kUnihanCore2020	J
+U+F95B	kPhonetic	936
+U+F95C	kPhonetic	972
+U+F95F	kPhonetic	978
+U+F963	kPhonetic	1014
+U+F967	kPhonetic	1025
+U+F970	kPhonetic	1111
+U+F981	kPhonetic	990
+U+F983	kPhonetic	1000
+U+F98D	kPhonetic	972
+U+F98E	kPhonetic	977
+U+F995	kPhonetic	977
+U+F9A4	kPhonetic	976
+U+F9AA	kPhonetic	978
+U+F9BF	kPhonetic	972
 U+F9D0	kUnihanCore2020	J
+U+F9E3	kPhonetic	946
 U+FA0C	kCangjie	MU
+U+FA0C	kPhonetic	963
 U+FA0D	kCangjie	GRHNE
 U+FA0E	kCangjie	YGE
 U+FA0E	kMojiJoho	MJ030192 MJ030191:E0101 MJ030192:E0102
@@ -114462,6 +114327,7 @@ U+FA18	kCangjie	MFU
 U+FA19	kUnihanCore2020	J
 U+FA1A	kUnihanCore2020	J
 U+FA1B	kUnihanCore2020	J
+U+FA1E	kPhonetic	1613
 U+FA1F	kCangjie	TBAV
 U+FA1F	kMojiJoho	MJ030217 MJ030217:E0101 MJ030219:E0102 MJ030218:E0103
 U+FA1F	kUnihanCore2020	J
@@ -114821,7 +114687,7 @@ U+20191	kMojiJoho	MJ030522
 U+20193	kMojiJoho	MJ030523
 U+20195	kMojiJoho	MJ030525
 U+20199	kMojiJoho	MJ030526
-U+20199	kPhonetic	1522*
+U+20199	kPhonetic	1344*
 U+2019A	kMojiJoho	MJ030527
 U+2019B	kMojiJoho	MJ030528
 U+2019C	kMojiJoho	MJ030529
@@ -116078,7 +115944,7 @@ U+2089B	kMojiJoho	MJ031560
 U+208A0	kMojiJoho	MJ031561
 U+208A1	kMojiJoho	MJ031562
 U+208A2	kMojiJoho	MJ031563
-U+208A2	kPhonetic	1507* 1509*
+U+208A2	kPhonetic	1509*
 U+208A3	kMojiJoho	MJ031564
 U+208A4	kMojiJoho	MJ031565
 U+208A4	kPhonetic	668*
@@ -116115,7 +115981,7 @@ U+208C6	kMojiJoho	MJ031594
 U+208C7	kMojiJoho	MJ031595
 U+208C8	kMojiJoho	MJ031596
 U+208C9	kMojiJoho	MJ031597
-U+208C9	kPhonetic	899*
+U+208C9	kPhonetic	1250*
 U+208CA	kMojiJoho	MJ031598
 U+208CB	kMojiJoho	MJ031599
 U+208CD	kMojiJoho	MJ031600
@@ -116129,12 +115995,12 @@ U+208D2	kPhonetic	1486*
 U+208D4	kMojiJoho	MJ031606
 U+208D5	kCangjie	PYG
 U+208D5	kMojiJoho	MJ031607
-U+208D5	kPhonetic	263*
+U+208D5	kPhonetic	1009*
 U+208D5	kUnihanCore2020	H
 U+208D6	kMojiJoho	MJ031608
 U+208D6	kPhonetic	1623*
 U+208D8	kMojiJoho	MJ031609
-U+208D8	kPhonetic	77*
+U+208D8	kPhonetic	1009*
 U+208D9	kMojiJoho	MJ031610
 U+208DA	kMojiJoho	MJ031611
 U+208DE	kMojiJoho	MJ031612
@@ -116152,7 +116018,7 @@ U+208EA	kMojiJoho	MJ031624
 U+208EB	kMojiJoho	MJ031625
 U+208EF	kMojiJoho	MJ031626
 U+208F0	kMojiJoho	MJ031627
-U+208F0	kPhonetic	94*
+U+208F0	kPhonetic	1009*
 U+208F1	kMojiJoho	MJ031628
 U+208F4	kMojiJoho	MJ031629
 U+208F5	kMojiJoho	MJ031630
@@ -116169,9 +116035,9 @@ U+20908	kMojiJoho	MJ031640
 U+20908	kStrange	U
 U+20909	kMojiJoho	MJ031641
 U+2090A	kMojiJoho	MJ031642
-U+2090A	kPhonetic	685A*
+U+2090A	kPhonetic	1009*
 U+2090B	kMojiJoho	MJ031643
-U+2090D	kPhonetic	761*
+U+2090D	kPhonetic	1009*
 U+2090E	kMojiJoho	MJ031644
 U+2090E	kPhonetic	75
 U+2090F	kMojiJoho	MJ031645
@@ -116453,7 +116319,7 @@ U+20A60	kMojiJoho	MJ031882
 U+20A64	kMojiJoho	MJ031883
 U+20A64	kStrange	I:U+539F
 U+20A65	kMojiJoho	MJ031885
-U+20A65	kPhonetic	204*
+U+20A65	kPhonetic	1348*
 U+20A66	kMojiJoho	MJ031886
 U+20A67	kMojiJoho	MJ031887
 U+20A68	kMojiJoho	MJ031888
@@ -116709,7 +116575,6 @@ U+20B9B	kMojiJoho	MJ032105
 U+20B9C	kMojiJoho	MJ032106
 U+20B9E	kMojiJoho	MJ032107
 U+20B9F	kMojiJoho	MJ032108
-U+20B9F	kPhonetic	75*
 U+20B9F	kUnihanCore2020	HJ
 U+20BA0	kMojiJoho	MJ032109
 U+20BA1	kMojiJoho	MJ032110
@@ -117834,7 +117699,7 @@ U+2113D	kCangjie	REJF
 U+2113D	kCheungBauer	030/18;REJF;soe4
 U+2113D	kUnihanCore2020	H
 U+21144	kMojiJoho	MJ032764
-U+21144	kPhonetic	1294*
+U+21144	kPhonetic	1344*
 U+21145	kCangjie	RJRC
 U+21145	kUnihanCore2020	H
 U+21148	kCangjie	RCYQ
@@ -118585,7 +118450,7 @@ U+215AD	kMojiJoho	MJ033387
 U+215AF	kMojiJoho	MJ033388
 U+215B0	kMojiJoho	MJ033389
 U+215B2	kMojiJoho	MJ033390
-U+215B2	kPhonetic	1365* 1369*
+U+215B2	kPhonetic	1369*
 U+215B3	kMojiJoho	MJ033391
 U+215B4	kMojiJoho	MJ033395
 U+215B6	kMojiJoho	MJ033393
@@ -118843,7 +118708,7 @@ U+2170D	kUnihanCore2020	H
 U+2170E	kMojiJoho	MJ033587
 U+21710	kCangjie	VIHI
 U+21710	kUnihanCore2020	H
-U+2171A	kPhonetic	990*
+U+2171A	kPhonetic	1537*
 U+2171B	kMojiJoho	MJ033588
 U+2171C	kMojiJoho	MJ033589
 U+2171D	kMojiJoho	MJ033590
@@ -118899,7 +118764,7 @@ U+21757	kMojiJoho	MJ033627
 U+21757	kUnihanCore2020	H
 U+21759	kMojiJoho	MJ033628
 U+2175A	kMojiJoho	MJ033629
-U+2175A	kPhonetic	204*
+U+2175A	kPhonetic	1348*
 U+2175B	kMojiJoho	MJ033630
 U+2175C	kMojiJoho	MJ033631
 U+2175D	kMojiJoho	MJ033632
@@ -119293,7 +119158,7 @@ U+2193A	kMojiJoho	MJ033862
 U+2193B	kCangjie	VVFF
 U+2193B	kUnihanCore2020	H
 U+2193C	kMojiJoho	MJ033863
-U+2193C	kPhonetic	134*
+U+2193C	kPhonetic	134 633
 U+2193D	kMojiJoho	MJ033864
 U+2193E	kMojiJoho	MJ033865
 U+2193F	kMojiJoho	MJ033866
@@ -119795,7 +119660,7 @@ U+21C0A	kMojiJoho	MJ034285
 U+21C0B	kMojiJoho	MJ034286
 U+21C0C	kMojiJoho	MJ034287
 U+21C0E	kMojiJoho	MJ034289
-U+21C10	kPhonetic	515*
+U+21C10	kPhonetic	1511*
 U+21C12	kMojiJoho	MJ034292 MJ034292:E0100 MJ034293:E0101
 U+21C13	kMojiJoho	MJ034288
 U+21C14	kMojiJoho	MJ034291
@@ -119803,10 +119668,10 @@ U+21C15	kMojiJoho	MJ034290
 U+21C16	kMojiJoho	MJ034294
 U+21C17	kMojiJoho	MJ034297
 U+21C1A	kMojiJoho	MJ034296
-U+21C1A	kPhonetic	852*
+U+21C1A	kPhonetic	1511*
 U+21C1C	kMojiJoho	MJ034295
 U+21C1D	kMojiJoho	MJ034298
-U+21C1E	kPhonetic	761*
+U+21C1E	kPhonetic	963*
 U+21C1F	kMojiJoho	MJ034299
 U+21C21	kMojiJoho	MJ034300
 U+21C23	kMojiJoho	MJ034301
@@ -120042,7 +119907,7 @@ U+21D5C	kMojiJoho	MJ034503
 U+21D5C	kPhonetic	964*
 U+21D5D	kMojiJoho	MJ034504
 U+21D5E	kMojiJoho	MJ034505
-U+21D5E	kPhonetic	407*
+U+21D5E	kPhonetic	539*
 U+21D5E	kUnihanCore2020	H
 U+21D62	kMojiJoho	MJ034506
 U+21D6C	kMojiJoho	MJ034508
@@ -120079,7 +119944,7 @@ U+21D90	kCangjie	UKSR
 U+21D90	kMojiJoho	MJ034536
 U+21D90	kUnihanCore2020	H
 U+21D91	kMojiJoho	MJ034537
-U+21D91	kPhonetic	650*
+U+21D91	kPhonetic	564A*
 U+21D92	kMojiJoho	MJ034538
 U+21D93	kMojiJoho	MJ034539
 U+21D9A	kMojiJoho	MJ034540
@@ -120897,7 +120762,7 @@ U+2219C	kMojiJoho	MJ035225
 U+2219E	kFenn	501K
 U+2219E	kMojiJoho	MJ035223
 U+2219F	kMojiJoho	MJ035226 MJ035226:E0100 MJ035227:E0101
-U+2219F	kPhonetic	1055*
+U+2219F	kPhonetic	1512*
 U+221A1	kCangjie	BUOQ
 U+221A1	kCheungBauer	039/11;BUOQ;nin1
 U+221A1	kUnihanCore2020	H
@@ -121503,15 +121368,15 @@ U+2248A	kMojiJoho	MJ035756
 U+2248B	kCangjie	IEHHH
 U+2248B	kUnihanCore2020	H
 U+2248D	kMojiJoho	MJ035757
-U+2248D	kPhonetic	358*
+U+2248D	kPhonetic	1101*
 U+2248F	kMojiJoho	MJ035758
 U+22490	kMojiJoho	MJ035759
-U+22490	kPhonetic	236*
+U+22490	kPhonetic	1101*
 U+22491	kCangjie	OJHHH
 U+22491	kMojiJoho	MJ035760
 U+22491	kUnihanCore2020	H
 U+22492	kMojiJoho	MJ035761
-U+22492	kPhonetic	378*
+U+22492	kPhonetic	1101*
 U+22493	kMojiJoho	MJ035762
 U+22494	kMojiJoho	MJ035763
 U+22495	kMojiJoho	MJ035764
@@ -121521,7 +121386,7 @@ U+2249B	kMojiJoho	MJ035767
 U+2249C	kMojiJoho	MJ035768
 U+2249D	kMojiJoho	MJ035769
 U+2249E	kMojiJoho	MJ035770
-U+2249E	kPhonetic	549*
+U+2249E	kPhonetic	1101*
 U+2249F	kMojiJoho	MJ035771
 U+224A0	kMojiJoho	MJ035772
 U+224A1	kMojiJoho	MJ035773
@@ -121531,7 +121396,7 @@ U+224A5	kMojiJoho	MJ035776
 U+224A6	kMojiJoho	MJ035777
 U+224A7	kMojiJoho	MJ035778
 U+224A9	kMojiJoho	MJ035779
-U+224A9	kPhonetic	1099*
+U+224A9	kPhonetic	1101*
 U+224AA	kMojiJoho	MJ035780
 U+224AB	kMojiJoho	MJ035781
 U+224AC	kMojiJoho	MJ035782
@@ -121542,7 +121407,7 @@ U+224B0	kCangjie	KBIHM
 U+224B0	kMojiJoho	MJ035786
 U+224B0	kUnihanCore2020	H
 U+224B1	kMojiJoho	MJ035787
-U+224B1	kPhonetic	1254*
+U+224B1	kPhonetic	1101*
 U+224B2	kMojiJoho	MJ035788
 U+224B3	kMojiJoho	MJ035789
 U+224B4	kMojiJoho	MJ035790
@@ -122267,7 +122132,7 @@ U+22871	kUnihanCore2020	H
 U+22873	kMojiJoho	MJ036382
 U+22874	kMojiJoho	MJ036383
 U+22875	kMojiJoho	MJ036384
-U+22875	kPhonetic	1537A*
+U+22875	kPhonetic	1537*
 U+22877	kStrange	I
 U+22878	kMojiJoho	MJ036385
 U+22879	kMojiJoho	MJ036386
@@ -124005,7 +123870,7 @@ U+232B7	kPhonetic	1559*
 U+232B8	kMojiJoho	MJ037805 MJ037805:E0100 MJ037806:E0101
 U+232BD	kMojiJoho	MJ037807
 U+232C4	kMojiJoho	MJ037808
-U+232C4	kPhonetic	316*
+U+232C4	kPhonetic	1194*
 U+232C5	kMojiJoho	MJ037809
 U+232C9	kMojiJoho	MJ037810
 U+232CA	kMojiJoho	MJ037811
@@ -124402,7 +124267,7 @@ U+23567	kUnihanCore2020	H
 U+23572	kMojiJoho	MJ057768
 U+2357D	kMojiJoho	MJ038134
 U+2357E	kMojiJoho	MJ038135
-U+2357E	kPhonetic	776*
+U+2357E	kPhonetic	1059*
 U+2357F	kMojiJoho	MJ038136
 U+23580	kMojiJoho	MJ038137
 U+23581	kMojiJoho	MJ038138
@@ -124470,7 +124335,7 @@ U+235F5	kPhonetic	656*
 U+235F7	kMojiJoho	MJ038181
 U+235F8	kMojiJoho	MJ038182
 U+235F9	kMojiJoho	MJ038183
-U+235FB	kPhonetic	1373*
+U+235FB	kPhonetic	1135*
 U+23600	kCangjie	DOLH
 U+23600	kUnihanCore2020	H
 U+23605	kMojiJoho	MJ038184
@@ -124658,7 +124523,7 @@ U+2371C	kMojiJoho	MJ038318 MJ038318:E0101 MJ038319:E0102
 U+23720	kCangjie	DSUF
 U+23720	kUnihanCore2020	H
 U+23722	kMojiJoho	MJ038321
-U+23722	kPhonetic	744*
+U+23722	kPhonetic	1607*
 U+23723	kMojiJoho	MJ038322
 U+23724	kMojiJoho	MJ038323
 U+23725	kMojiJoho	MJ038324
@@ -124740,7 +124605,7 @@ U+23796	kMojiJoho	MJ038389
 U+23797	kMojiJoho	MJ038390
 U+23798	kMojiJoho	MJ038391
 U+23799	kMojiJoho	MJ038392
-U+23799	kPhonetic	1232*
+U+23799	kPhonetic	1241*
 U+2379A	kMojiJoho	MJ038393
 U+2379B	kMojiJoho	MJ038394
 U+2379C	kMojiJoho	MJ038395
@@ -124907,7 +124772,7 @@ U+238A1	kPhonetic	1107A*
 U+238A2	kMojiJoho	MJ038527
 U+238A4	kMojiJoho	MJ038529
 U+238A5	kMojiJoho	MJ038530
-U+238A5	kPhonetic	467*
+U+238A5	kPhonetic	1506*
 U+238A6	kMojiJoho	MJ038531
 U+238A7	kMojiJoho	MJ038532 MJ038532:E0100 MJ038533:E0101
 U+238A8	kMojiJoho	MJ038534
@@ -126791,7 +126656,7 @@ U+2435B	kMojiJoho	MJ040028
 U+2435C	kMojiJoho	MJ040029
 U+2435D	kMojiJoho	MJ040030
 U+2435E	kStrange	I:U+71C1
-U+24360	kPhonetic	69* 962
+U+24360	kPhonetic	962
 U+24362	kCangjie	FFFG
 U+24362	kUnihanCore2020	H
 U+24363	kCangjie	FYSG
@@ -127268,13 +127133,13 @@ U+24605	kPhonetic	951*
 U+24606	kMojiJoho	MJ040411
 U+24606	kPhonetic	951*
 U+24607	kMojiJoho	MJ040412
-U+24607	kPhonetic	177*
+U+24607	kPhonetic	951*
 U+24608	kMojiJoho	MJ040413
 U+24609	kMojiJoho	MJ040414
 U+2460A	kMojiJoho	MJ040415
-U+2460A	kPhonetic	353*
+U+2460A	kPhonetic	951*
 U+2460C	kMojiJoho	MJ040416
-U+2460C	kPhonetic	602*
+U+2460C	kPhonetic	951*
 U+24610	kMojiJoho	MJ040417
 U+24611	kMojiJoho	MJ040418
 U+24614	kMojiJoho	MJ040419
@@ -127290,7 +127155,7 @@ U+2461B	kMojiJoho	MJ040423
 U+2461C	kMojiJoho	MJ040424
 U+2461C	kPhonetic	1511*
 U+2461D	kMojiJoho	MJ040425
-U+2461D	kPhonetic	353*
+U+2461D	kPhonetic	964*
 U+2461E	kMojiJoho	MJ040426
 U+24620	kMojiJoho	MJ040427
 U+24621	kMojiJoho	MJ040428
@@ -127334,27 +127199,27 @@ U+2464C	kMojiJoho	MJ040457
 U+2464D	kMojiJoho	MJ040458
 U+2464E	kMojiJoho	MJ040459
 U+2464F	kMojiJoho	MJ040460
-U+2464F	kPhonetic	519*
+U+2464F	kPhonetic	964*
 U+24651	kMojiJoho	MJ040461
 U+24652	kMojiJoho	MJ040462
 U+24653	kMojiJoho	MJ040463
 U+24654	kMojiJoho	MJ040464
 U+24655	kMojiJoho	MJ040465
 U+24656	kMojiJoho	MJ040466
-U+24656	kPhonetic	509*
+U+24656	kPhonetic	964*
 U+24657	kMojiJoho	MJ040467
 U+24658	kMojiJoho	MJ040468
-U+24658	kPhonetic	1138*
+U+24658	kPhonetic	964*
 U+2465B	kMojiJoho	MJ040469
 U+2465C	kMojiJoho	MJ040470
-U+2465D	kPhonetic	964*
+U+2465D	kPhonetic	1496*
 U+2465E	kMojiJoho	MJ040471
 U+2465F	kMojiJoho	MJ040472
 U+24660	kMojiJoho	MJ040473
 U+24661	kMojiJoho	MJ040474
 U+24662	kMojiJoho	MJ040475
 U+24663	kMojiJoho	MJ040476
-U+24663	kPhonetic	497*
+U+24663	kPhonetic	964*
 U+24664	kMojiJoho	MJ040477
 U+24664	kPhonetic	378*
 U+24665	kCangjie	HQJRU
@@ -127385,7 +127250,7 @@ U+24684	kMojiJoho	MJ040496
 U+24685	kMojiJoho	MJ040497
 U+24688	kMojiJoho	MJ040498
 U+24689	kMojiJoho	MJ040499
-U+24689	kPhonetic	295*
+U+24689	kPhonetic	964*
 U+2468A	kMojiJoho	MJ040500
 U+2468C	kMojiJoho	MJ040501
 U+2468D	kMojiJoho	MJ040502
@@ -127441,7 +127306,7 @@ U+246CB	kMojiJoho	MJ040543
 U+246CC	kMojiJoho	MJ040544
 U+246CD	kMojiJoho	MJ040545
 U+246CE	kMojiJoho	MJ040546
-U+246CE	kPhonetic	880*
+U+246CE	kPhonetic	964*
 U+246CF	kMojiJoho	MJ040547
 U+246D0	kMojiJoho	MJ040548
 U+246D1	kMojiJoho	MJ040549
@@ -127455,7 +127320,7 @@ U+246DA	kMojiJoho	MJ040552
 U+246DB	kMojiJoho	MJ040553
 U+246DC	kMojiJoho	MJ040554
 U+246DD	kMojiJoho	MJ040555
-U+246DD	kPhonetic	1260*
+U+246DD	kPhonetic	964*
 U+246DF	kMojiJoho	MJ040556
 U+246E1	kMojiJoho	MJ040557
 U+246E2	kMojiJoho	MJ040558
@@ -127487,7 +127352,7 @@ U+246FC	kMojiJoho	MJ040580
 U+246FE	kMojiJoho	MJ040582
 U+246FF	kMojiJoho	MJ040583
 U+24702	kMojiJoho	MJ040584
-U+24702	kPhonetic	1433*
+U+24702	kPhonetic	964*
 U+24703	kMojiJoho	MJ040585
 U+24704	kMojiJoho	MJ040586
 U+24705	kMojiJoho	MJ040587
@@ -127509,7 +127374,7 @@ U+24714	kMojiJoho	MJ040600
 U+24715	kMojiJoho	MJ040601
 U+24716	kMojiJoho	MJ040602
 U+24718	kMojiJoho	MJ040603
-U+24718	kPhonetic	862*
+U+24718	kPhonetic	964*
 U+24719	kMojiJoho	MJ040604
 U+2471B	kMojiJoho	MJ040605
 U+2471C	kMojiJoho	MJ040606
@@ -127880,7 +127745,7 @@ U+248E5	kPhonetic	1623
 U+248E5	kStrange	I:U+7384
 U+248E6	kStrange	I
 U+248E7	kMojiJoho	MJ040930
-U+248E8	kPhonetic	510*
+U+248E8	kPhonetic	1623*
 U+248E9	kCangjie	MG
 U+248E9	kMojiJoho	MJ040931
 U+248E9	kUnihanCore2020	H
@@ -128498,7 +128363,7 @@ U+24BBB	kMojiJoho	MJ041286
 U+24BBC	kMojiJoho	MJ041287
 U+24BBC	kPhonetic	1558*
 U+24BBD	kMojiJoho	MJ041288
-U+24BBD	kPhonetic	650*
+U+24BBD	kPhonetic	564A*
 U+24BC1	kMojiJoho	MJ041289
 U+24BC2	kMojiJoho	MJ041290
 U+24BC4	kMojiJoho	MJ041291
@@ -128509,7 +128374,7 @@ U+24BC8	kMojiJoho	MJ041294
 U+24BC9	kMojiJoho	MJ041295
 U+24BCB	kMojiJoho	MJ041296
 U+24BCC	kMojiJoho	MJ041297
-U+24BCC	kPhonetic	650*
+U+24BCC	kPhonetic	564A*
 U+24BCD	kMojiJoho	MJ041298
 U+24BCE	kMojiJoho	MJ041299
 U+24BCF	kMojiJoho	MJ041300
@@ -128766,7 +128631,7 @@ U+24D21	kMojiJoho	MJ041515 MJ041515:E0100 MJ058117:E0101
 U+24D21	kPhonetic	135 1309
 U+24D22	kMojiJoho	MJ041516
 U+24D23	kMojiJoho	MJ041517
-U+24D23	kPhonetic	1040*
+U+24D23	kPhonetic	1027A*
 U+24D24	kMojiJoho	MJ041518
 U+24D25	kMojiJoho	MJ041519
 U+24D26	kMojiJoho	MJ041520
@@ -128876,7 +128741,7 @@ U+24DAE	kMojiJoho	MJ041611
 U+24DAF	kMojiJoho	MJ041612
 U+24DB0	kMojiJoho	MJ041613
 U+24DB2	kMojiJoho	MJ041614
-U+24DB2	kPhonetic	204*
+U+24DB2	kPhonetic	1348*
 U+24DB3	kMojiJoho	MJ041615
 U+24DB4	kMojiJoho	MJ041616
 U+24DB5	kMojiJoho	MJ041617
@@ -129275,7 +129140,7 @@ U+24FAB	kMojiJoho	MJ041948
 U+24FAC	kMojiJoho	MJ041949
 U+24FAC	kPhonetic	935*
 U+24FAD	kMojiJoho	MJ041950
-U+24FAD	kPhonetic	1235*
+U+24FAD	kPhonetic	1457*
 U+24FAE	kMojiJoho	MJ041951
 U+24FB2	kMojiJoho	MJ041952
 U+24FB4	kMojiJoho	MJ041953
@@ -129286,7 +129151,7 @@ U+24FB8	kMojiJoho	MJ041957
 U+24FB8	kPhonetic	1431
 U+24FB8	kUnihanCore2020	H
 U+24FBA	kMojiJoho	MJ041958
-U+24FBA	kPhonetic	1294*
+U+24FBA	kPhonetic	1457*
 U+24FBB	kMojiJoho	MJ041959
 U+24FBC	kMojiJoho	MJ041960
 U+24FBE	kMojiJoho	MJ041961
@@ -129655,7 +129520,7 @@ U+25177	kMojiJoho	MJ042270
 U+25178	kMojiJoho	MJ042271
 U+25179	kMojiJoho	MJ042272
 U+2517A	kMojiJoho	MJ042273
-U+2517A	kPhonetic	933*
+U+2517A	kPhonetic	1188*
 U+2517B	kPhonetic	325*
 U+2517C	kMojiJoho	MJ042274
 U+2517D	kCangjie	OMRU
@@ -131882,7 +131747,7 @@ U+25E18	kMojiJoho	MJ044167
 U+25E1A	kMojiJoho	MJ044168
 U+25E1C	kMojiJoho	MJ044169
 U+25E21	kMojiJoho	MJ044170
-U+25E21	kPhonetic	691*
+U+25E21	kPhonetic	652A*
 U+25E22	kMojiJoho	MJ044171
 U+25E23	kMojiJoho	MJ044172
 U+25E24	kMojiJoho	MJ044173
@@ -133147,11 +133012,11 @@ U+264D2	kMojiJoho	MJ045253
 U+264D3	kMojiJoho	MJ045254
 U+264D3	kPhonetic	1537*
 U+264D4	kMojiJoho	MJ045255
-U+264D4	kPhonetic	1537A*
+U+264D4	kPhonetic	1537*
 U+264D5	kMojiJoho	MJ045256
-U+264D5	kPhonetic	1472*
+U+264D5	kPhonetic	1537*
 U+264D6	kMojiJoho	MJ045257
-U+264D6	kPhonetic	1482*
+U+264D6	kPhonetic	1537*
 U+264D7	kMojiJoho	MJ045258
 U+264D8	kMojiJoho	MJ045259
 U+264DA	kMojiJoho	MJ045260
@@ -133370,7 +133235,7 @@ U+26612	kStrange	I:U+807F
 U+26612	kUnihanCore2020	H
 U+26613	kMojiJoho	MJ045447
 U+26614	kMojiJoho	MJ045448
-U+26614	kPhonetic	860*
+U+26614	kPhonetic	1101*
 U+26615	kMojiJoho	MJ045449
 U+26618	kMojiJoho	MJ045450
 U+2661B	kMojiJoho	MJ045451
@@ -133528,7 +133393,7 @@ U+266DB	kMojiJoho	MJ045581
 U+266DC	kMojiJoho	MJ045582
 U+266DD	kMojiJoho	MJ045583
 U+266DE	kMojiJoho	MJ045584
-U+266DE	kPhonetic	1639*
+U+266DE	kPhonetic	1496*
 U+266DF	kMojiJoho	MJ045585
 U+266DF	kPhonetic	578*
 U+266E0	kMojiJoho	MJ045586
@@ -133947,35 +133812,35 @@ U+26911	kUnihanCore2020	H
 U+26912	kMojiJoho	MJ045924
 U+26914	kMojiJoho	MJ045925
 U+26915	kMojiJoho	MJ045926
-U+26915	kPhonetic	667*
+U+26915	kPhonetic	91*
 U+26917	kMojiJoho	MJ045927
 U+26918	kMojiJoho	MJ045928
 U+26919	kMojiJoho	MJ045929
 U+26919	kPhonetic	980*
 U+2691A	kMojiJoho	MJ045930
-U+2691A	kPhonetic	1027*
+U+2691A	kPhonetic	91*
 U+2691C	kMojiJoho	MJ045931
 U+2691D	kMojiJoho	MJ045932 MJ045932:E0100 MJ045933:E0101
 U+2691E	kMojiJoho	MJ045934
 U+2691F	kMojiJoho	MJ045935
-U+2691F	kPhonetic	1269*
+U+2691F	kPhonetic	91*
 U+26921	kMojiJoho	MJ045936
 U+26922	kMojiJoho	MJ045937
 U+26923	kMojiJoho	MJ045938
-U+26923	kPhonetic	1093*
+U+26923	kPhonetic	91*
 U+26926	kCangjie	HKAPV
 U+26926	kCheungBauer	094/15;HKAPV;hot3
 U+26926	kMojiJoho	MJ045939
-U+26926	kPhonetic	510*
+U+26926	kPhonetic	91*
 U+26926	kUnihanCore2020	H
 U+26927	kMojiJoho	MJ045940
-U+26927	kPhonetic	987*
+U+26927	kPhonetic	91*
 U+26928	kMojiJoho	MJ045941
-U+26928	kPhonetic	1440*
-U+2692A	kPhonetic	510*
+U+26928	kPhonetic	91*
+U+2692A	kPhonetic	91*
 U+2692B	kMojiJoho	MJ045942
 U+2692C	kMojiJoho	MJ045943
-U+2692C	kPhonetic	491*
+U+2692C	kPhonetic	91*
 U+26932	kMojiJoho	MJ045944
 U+26933	kMojiJoho	MJ045945
 U+26934	kMojiJoho	MJ045946
@@ -134063,7 +133928,7 @@ U+26988	kMojiJoho	MJ046013
 U+26989	kMojiJoho	MJ046014
 U+2698A	kMojiJoho	MJ046015
 U+2698C	kMojiJoho	MJ046016
-U+2698C	kPhonetic	219* 1599*
+U+2698C	kPhonetic	1599*
 U+2698F	kMojiJoho	MJ046017
 U+26990	kMojiJoho	MJ046018
 U+26991	kMojiJoho	MJ046019
@@ -134344,38 +134209,38 @@ U+26ACE	kMojiJoho	MJ046248
 U+26AD2	kMojiJoho	MJ046249
 U+26AD3	kMojiJoho	MJ046250
 U+26AD4	kMojiJoho	MJ046251
-U+26AD4	kPhonetic	1092*
+U+26AD4	kPhonetic	1188*
 U+26AD5	kMojiJoho	MJ046252
-U+26AD5	kPhonetic	931*
+U+26AD5	kPhonetic	1188*
 U+26AD6	kMojiJoho	MJ046253
-U+26AD6	kPhonetic	1003*
+U+26AD6	kPhonetic	1188*
 U+26AD7	kMojiJoho	MJ046254
 U+26AD9	kMojiJoho	MJ046255
-U+26AD9	kPhonetic	1003*
+U+26AD9	kPhonetic	1188*
 U+26ADB	kMojiJoho	MJ046256
 U+26ADC	kMojiJoho	MJ046257
 U+26ADD	kMojiJoho	MJ046258
 U+26ADE	kMojiJoho	MJ046259
 U+26AE1	kMojiJoho	MJ046260
-U+26AE1	kPhonetic	604*
+U+26AE1	kPhonetic	1188*
 U+26AE2	kMojiJoho	MJ046261
 U+26AE3	kMojiJoho	MJ046262
 U+26AE4	kMojiJoho	MJ046263
-U+26AE4	kPhonetic	1588*
+U+26AE4	kPhonetic	1188*
 U+26AE6	kMojiJoho	MJ046264
 U+26AE8	kMojiJoho	MJ046265
 U+26AEA	kMojiJoho	MJ046266
-U+26AEA	kPhonetic	696*
+U+26AEA	kPhonetic	1188*
 U+26AEB	kMojiJoho	MJ046267
 U+26AEB	kPhonetic	1654*
 U+26AEC	kMojiJoho	MJ046268
-U+26AED	kPhonetic	63*
+U+26AED	kPhonetic	1188*
 U+26AEE	kMojiJoho	MJ046269
 U+26AEE	kPhonetic	1628*
 U+26AEF	kMojiJoho	MJ046270
-U+26AEF	kPhonetic	350*
+U+26AEF	kPhonetic	1188*
 U+26AF0	kMojiJoho	MJ046271
-U+26AF0	kPhonetic	934*
+U+26AF0	kPhonetic	1188*
 U+26AF1	kMojiJoho	MJ046272
 U+26AF3	kMojiJoho	MJ046273
 U+26AF6	kMojiJoho	MJ046274
@@ -135697,7 +135562,7 @@ U+2718A	kMojiJoho	MJ047356
 U+2718B	kMojiJoho	MJ047357
 U+2718F	kMojiJoho	MJ047358
 U+27190	kMojiJoho	MJ047359
-U+27190	kPhonetic	691*
+U+27190	kPhonetic	652A*
 U+27191	kMojiJoho	MJ047360
 U+27192	kMojiJoho	MJ047361
 U+27193	kMojiJoho	MJ047362
@@ -136552,7 +136417,7 @@ U+275E3	kMojiJoho	MJ048139
 U+275E4	kCangjie	HOHKN
 U+275E4	kUnihanCore2020	H
 U+275E6	kMojiJoho	MJ048140
-U+275E6	kPhonetic	103*
+U+275E6	kPhonetic	423A*
 U+275E7	kMojiJoho	MJ048141
 U+275E8	kMojiJoho	MJ048142
 U+275E9	kMojiJoho	MJ048143
@@ -137913,10 +137778,10 @@ U+27BF9	kMojiJoho	MJ049339
 U+27BFA	kMojiJoho	MJ049340
 U+27BFB	kMojiJoho	MJ049341
 U+27BFC	kMojiJoho	MJ049342
-U+27BFC	kPhonetic	80*
+U+27BFC	kPhonetic	1241*
 U+27BFD	kMojiJoho	MJ049343
 U+27BFE	kMojiJoho	MJ049344 MJ049344:E0100 MJ049345:E0101
-U+27BFE	kPhonetic	1403*
+U+27BFE	kPhonetic	1241*
 U+27BFF	kMojiJoho	MJ049346
 U+27C00	kMojiJoho	MJ049347
 U+27C03	kMojiJoho	MJ049348
@@ -137928,7 +137793,7 @@ U+27C07	kPhonetic	1609*
 U+27C08	kMojiJoho	MJ049353
 U+27C09	kMojiJoho	MJ049354
 U+27C0A	kMojiJoho	MJ049355
-U+27C0A	kPhonetic	63*
+U+27C0A	kPhonetic	1241*
 U+27C0B	kMojiJoho	MJ049356
 U+27C0C	kMojiJoho	MJ049357
 U+27C0D	kMojiJoho	MJ049358
@@ -137936,21 +137801,21 @@ U+27C10	kMojiJoho	MJ049359
 U+27C11	kMojiJoho	MJ049360
 U+27C12	kCangjie	GTWIM
 U+27C12	kMojiJoho	MJ049361
-U+27C12	kPhonetic	748*
+U+27C12	kPhonetic	1241*
 U+27C12	kUnihanCore2020	H
 U+27C13	kMojiJoho	MJ049362
 U+27C15	kMojiJoho	MJ049363
 U+27C18	kMojiJoho	MJ049364
-U+27C18	kPhonetic	1292*
+U+27C18	kPhonetic	1241*
 U+27C19	kMojiJoho	MJ049365
 U+27C1E	kStrange	I
 U+27C20	kMojiJoho	MJ049367
-U+27C20	kPhonetic	813*
+U+27C20	kPhonetic	1241*
 U+27C21	kMojiJoho	MJ049368
-U+27C21	kPhonetic	803*
+U+27C21	kPhonetic	1241*
 U+27C22	kMojiJoho	MJ049369
 U+27C23	kMojiJoho	MJ049370
-U+27C23	kPhonetic	350*
+U+27C23	kPhonetic	1241*
 U+27C25	kMojiJoho	MJ049371
 U+27C27	kMojiJoho	MJ049372
 U+27C27	kStrange	I:U+8C55
@@ -138288,7 +138153,7 @@ U+27D8D	kMojiJoho	MJ049655
 U+27D8E	kMojiJoho	MJ049656
 U+27D8F	kCangjie	MFRBC
 U+27D8F	kUnihanCore2020	H
-U+27D94	kPhonetic	204*
+U+27D94	kPhonetic	1348*
 U+27D95	kMojiJoho	MJ049657
 U+27D96	kMojiJoho	MJ049658
 U+27D96	kPhonetic	451*
@@ -138308,7 +138173,6 @@ U+27DA1	kPhonetic	884*
 U+27DA2	kMojiJoho	MJ049669
 U+27DA3	kMojiJoho	MJ049670
 U+27DA4	kMojiJoho	MJ049671
-U+27DA7	kPhonetic	119*
 U+27DA9	kMojiJoho	MJ049672
 U+27DAA	kMojiJoho	MJ049673
 U+27DB1	kMojiJoho	MJ049674
@@ -138380,7 +138244,7 @@ U+27E05	kMojiJoho	MJ049729
 U+27E06	kMojiJoho	MJ049730
 U+27E07	kMojiJoho	MJ049731
 U+27E08	kMojiJoho	MJ049732
-U+27E08	kPhonetic	1018*
+U+27E08	kPhonetic	1059*
 U+27E0A	kMojiJoho	MJ049733
 U+27E0B	kMojiJoho	MJ049734
 U+27E10	kMojiJoho	MJ049735
@@ -138399,7 +138263,7 @@ U+27E28	kMojiJoho	MJ049748
 U+27E29	kMojiJoho	MJ049749
 U+27E2A	kMojiJoho	MJ049754
 U+27E2B	kMojiJoho	MJ049750
-U+27E2B	kPhonetic	725*
+U+27E2B	kPhonetic	1628*
 U+27E2F	kMojiJoho	MJ049751
 U+27E31	kMojiJoho	MJ049752
 U+27E32	kMojiJoho	MJ049753
@@ -138426,7 +138290,7 @@ U+27E4E	kMojiJoho	MJ049769
 U+27E4F	kCangjie	BCHUC
 U+27E4F	kUnihanCore2020	H
 U+27E50	kMojiJoho	MJ049770
-U+27E53	kPhonetic	204*
+U+27E53	kPhonetic	1348*
 U+27E57	kPhonetic	1421*
 U+27E58	kMojiJoho	MJ049771
 U+27E59	kMojiJoho	MJ049772
@@ -138827,7 +138691,7 @@ U+2804B	kMojiJoho	MJ050108
 U+2804C	kMojiJoho	MJ050109
 U+2804D	kMojiJoho	MJ050110
 U+2804E	kMojiJoho	MJ050111
-U+2804E	kPhonetic	204*
+U+2804E	kPhonetic	1348*
 U+2804F	kMojiJoho	MJ050112
 U+2804F	kPhonetic	386*
 U+28050	kMojiJoho	MJ050113
@@ -139590,7 +139454,7 @@ U+28408	kUnihanCore2020	G
 U+2840B	kStrange	U
 U+2840C	kMojiJoho	MJ050724
 U+2840D	kMojiJoho	MJ050725
-U+2840D	kPhonetic	1124*
+U+2840D	kPhonetic	1101*
 U+2840F	kMojiJoho	MJ050726
 U+28410	kMojiJoho	MJ050727
 U+28411	kMojiJoho	MJ050728
@@ -139636,7 +139500,7 @@ U+28449	kMojiJoho	MJ050764
 U+2844A	kMojiJoho	MJ050765
 U+2844B	kMojiJoho	MJ050766
 U+2844C	kMojiJoho	MJ050767
-U+2844C	kPhonetic	841*
+U+2844C	kPhonetic	1129*
 U+2844D	kMojiJoho	MJ050768 MJ050769:E0100 MJ050768:E0101
 U+2844E	kMojiJoho	MJ050770
 U+2844E	kStrange	I:U+2847E
@@ -140085,7 +139949,7 @@ U+28699	kMojiJoho	MJ051214
 U+2869A	kMojiJoho	MJ051215
 U+2869B	kMojiJoho	MJ051216
 U+286A0	kMojiJoho	MJ051217
-U+286A1	kPhonetic	1210*
+U+286A1	kPhonetic	1496*
 U+286A2	kMojiJoho	MJ051218
 U+286A3	kMojiJoho	MJ051219
 U+286A3	kPhonetic	201*
@@ -140128,7 +139992,7 @@ U+286C6	kMojiJoho	MJ051244
 U+286C7	kMojiJoho	MJ051245
 U+286C8	kMojiJoho	MJ051246
 U+286C9	kMojiJoho	MJ051247
-U+286C9	kPhonetic	1496*
+U+286C9	kPhonetic	1188*
 U+286CA	kMojiJoho	MJ051248
 U+286CB	kMojiJoho	MJ051249
 U+286CC	kMojiJoho	MJ051250
@@ -140169,7 +140033,7 @@ U+286E6	kUnihanCore2020	H
 U+286E7	kMojiJoho	MJ051275
 U+286EB	kMojiJoho	MJ051276
 U+286EC	kMojiJoho	MJ051277
-U+286EC	kPhonetic	365*
+U+286EC	kPhonetic	1496*
 U+286ED	kMojiJoho	MJ051278
 U+286EE	kMojiJoho	MJ051279
 U+286EF	kMojiJoho	MJ051280
@@ -140284,7 +140148,7 @@ U+28763	kMojiJoho	MJ051374 MJ051374:E0100 MJ058877:E0101
 U+28764	kMojiJoho	MJ051375
 U+28765	kMojiJoho	MJ051376
 U+28766	kMojiJoho	MJ051377
-U+28766	kPhonetic	1382*
+U+28766	kPhonetic	1496*
 U+28767	kMojiJoho	MJ051378
 U+28768	kMojiJoho	MJ051379
 U+28769	kMojiJoho	MJ051380
@@ -140360,7 +140224,7 @@ U+287C0	kMojiJoho	MJ051443
 U+287C2	kMojiJoho	MJ051444
 U+287C3	kMojiJoho	MJ051445
 U+287C4	kMojiJoho	MJ051446
-U+287C4	kPhonetic	341*
+U+287C4	kPhonetic	1496*
 U+287C5	kMojiJoho	MJ051447
 U+287CA	kPhonetic	72*
 U+287CC	kMojiJoho	MJ051448
@@ -140452,7 +140316,7 @@ U+2882B	kUnihanCore2020	H
 U+2882C	kMojiJoho	MJ051519
 U+2882E	kMojiJoho	MJ051520
 U+28836	kMojiJoho	MJ051521
-U+28836	kPhonetic	1513*
+U+28836	kPhonetic	1188*
 U+28837	kMojiJoho	MJ051522
 U+28838	kMojiJoho	MJ051523
 U+2883D	kMojiJoho	MJ051524
@@ -140571,7 +140435,7 @@ U+288DA	kMojiJoho	MJ051626
 U+288DB	kMojiJoho	MJ051627
 U+288DC	kMojiJoho	MJ051628
 U+288DD	kMojiJoho	MJ051629
-U+288DD	kPhonetic	652*
+U+288DD	kPhonetic	566A*
 U+288E0	kMojiJoho	MJ051630
 U+288E1	kMojiJoho	MJ051631
 U+288E2	kMojiJoho	MJ051632
@@ -141254,7 +141118,7 @@ U+28C93	kPhonetic	1108*
 U+28C94	kMojiJoho	MJ052043
 U+28C95	kMojiJoho	MJ052044
 U+28C97	kMojiJoho	MJ052045
-U+28C97	kPhonetic	123*
+U+28C97	kPhonetic	1241*
 U+28C98	kMojiJoho	MJ052046
 U+28C99	kMojiJoho	MJ052047
 U+28C9A	kMojiJoho	MJ052048
@@ -141345,7 +141209,7 @@ U+28CFA	kMojiJoho	MJ052119
 U+28CFA	kPhonetic	1135*
 U+28CFB	kMojiJoho	MJ052120
 U+28CFC	kMojiJoho	MJ052121
-U+28CFC	kPhonetic	650*
+U+28CFC	kPhonetic	564A*
 U+28CFD	kMojiJoho	MJ052122
 U+28CFE	kMojiJoho	MJ052123
 U+28CFF	kMojiJoho	MJ052124
@@ -142332,7 +142196,7 @@ U+291D4	kMojiJoho	MJ052942
 U+291D4	kStrange	S:48 U
 U+291D5	kCangjie	QBHHH
 U+291D5	kMojiJoho	MJ052943 MJ052943:E0100 MJ052944:E0101
-U+291D5	kPhonetic	203*
+U+291D5	kPhonetic	1101*
 U+291D5	kUnihanCore2020	H
 U+291D6	kMojiJoho	MJ052945
 U+291D7	kMojiJoho	MJ052946
@@ -142464,7 +142328,7 @@ U+29265	kMojiJoho	MJ053060
 U+29265	kPhonetic	1443*
 U+29266	kMojiJoho	MJ053061
 U+29267	kMojiJoho	MJ053062
-U+29267	kPhonetic	407*
+U+29267	kPhonetic	539*
 U+29268	kMojiJoho	MJ053063
 U+29269	kMojiJoho	MJ053064
 U+2926A	kMojiJoho	MJ053065
@@ -142910,7 +142774,7 @@ U+29454	kMojiJoho	MJ053454
 U+29455	kMojiJoho	MJ053455
 U+29456	kMojiJoho	MJ053456
 U+29458	kMojiJoho	MJ053457
-U+29458	kPhonetic	1588*
+U+29458	kPhonetic	1101*
 U+29459	kMojiJoho	MJ053458
 U+2945A	kMojiJoho	MJ053459
 U+2945B	kMojiJoho	MJ053460
@@ -142923,7 +142787,7 @@ U+29463	kMojiJoho	MJ053466
 U+29463	kPhonetic	1511*
 U+29464	kMojiJoho	MJ053467
 U+29465	kMojiJoho	MJ053468
-U+29465	kPhonetic	1588*
+U+29465	kPhonetic	1184*
 U+29466	kMojiJoho	MJ053469
 U+29467	kMojiJoho	MJ053470
 U+29468	kMojiJoho	MJ053471
@@ -143268,7 +143132,7 @@ U+295E3	kMojiJoho	MJ053743
 U+295E4	kMojiJoho	MJ053744
 U+295E4	kPhonetic	502*
 U+295E5	kMojiJoho	MJ053745
-U+295E5	kPhonetic	408*
+U+295E5	kPhonetic	1496*
 U+295E7	kMojiJoho	MJ053746
 U+295E8	kMojiJoho	MJ053747
 U+295E9	kCangjie	CHNI
@@ -143699,7 +143563,7 @@ U+297F7	kMojiJoho	MJ054178
 U+297F8	kMojiJoho	MJ054179
 U+297FA	kMojiJoho	MJ054180
 U+297FD	kMojiJoho	MJ054181 MJ054181:E0100 MJ054182:E0101
-U+29801	kPhonetic	650*
+U+29801	kPhonetic	564A*
 U+2980A	kPhonetic	1383*
 U+2980C	kPhonetic	1276*
 U+29810	kCangjie	VVMBU
@@ -143761,7 +143625,7 @@ U+29858	kMojiJoho	MJ054229
 U+2985A	kMojiJoho	MJ054231
 U+2985D	kMojiJoho	MJ054232
 U+29860	kMojiJoho	MJ054234
-U+29860	kPhonetic	462*
+U+29860	kPhonetic	1236*
 U+29861	kMojiJoho	MJ054235
 U+29862	kMojiJoho	MJ054236
 U+29864	kMojiJoho	MJ054237
@@ -143822,7 +143686,7 @@ U+298A4	kCangjie	SFMGI
 U+298A4	kUnihanCore2020	H
 U+298A7	kMojiJoho	MJ054290
 U+298A8	kMojiJoho	MJ054291
-U+298A8	kPhonetic	650*
+U+298A8	kPhonetic	564A*
 U+298AA	kMojiJoho	MJ054292
 U+298AB	kMojiJoho	MJ054293
 U+298AD	kMojiJoho	MJ054294
@@ -144108,7 +143972,7 @@ U+299ED	kPhonetic	1135*
 U+299EE	kPhonetic	814*
 U+299F2	kPhonetic	1407*
 U+29A04	kPhonetic	1143*
-U+29A05	kPhonetic	1439*
+U+29A05	kPhonetic	1143*
 U+29A06	kPhonetic	1344*
 U+29A11	kMojiJoho	MJ054513
 U+29A12	kMojiJoho	MJ054514
@@ -145160,7 +145024,7 @@ U+29FD0	kMojiJoho	MJ055446
 U+29FD1	kMojiJoho	MJ055447
 U+29FD2	kMojiJoho	MJ055448
 U+29FD3	kMojiJoho	MJ055449
-U+29FD3	kPhonetic	982*
+U+29FD3	kPhonetic	964*
 U+29FD4	kMojiJoho	MJ055450
 U+29FD5	kMojiJoho	MJ055451
 U+29FD6	kMojiJoho	MJ055452
@@ -145733,7 +145597,7 @@ U+2A281	kMojiJoho	MJ055914
 U+2A282	kMojiJoho	MJ055915
 U+2A283	kMojiJoho	MJ055916
 U+2A284	kMojiJoho	MJ055917
-U+2A284	kPhonetic	652*
+U+2A284	kPhonetic	566A*
 U+2A286	kMojiJoho	MJ055918
 U+2A287	kMojiJoho	MJ055919
 U+2A288	kMojiJoho	MJ055920
@@ -146006,7 +145870,7 @@ U+2A3AA	kMojiJoho	MJ056149
 U+2A3AB	kMojiJoho	MJ056150
 U+2A3AC	kMojiJoho	MJ056151
 U+2A3AD	kMojiJoho	MJ056152
-U+2A3AD	kPhonetic	862*
+U+2A3AD	kPhonetic	1236*
 U+2A3AE	kMojiJoho	MJ056153
 U+2A3AF	kMojiJoho	MJ056154
 U+2A3B0	kMojiJoho	MJ056155 MJ056155:E0100 MJ056156:E0101
@@ -146074,49 +145938,49 @@ U+2A3EC	kMojiJoho	MJ056208
 U+2A3ED	kCangjie	HNOE
 U+2A3ED	kUnihanCore2020	H
 U+2A3EE	kMojiJoho	MJ056209
-U+2A3EE	kPhonetic	990*
+U+2A3EE	kPhonetic	1236*
 U+2A3EF	kMojiJoho	MJ056210
 U+2A3F0	kMojiJoho	MJ056211
 U+2A3F2	kMojiJoho	MJ056212
 U+2A3F3	kMojiJoho	MJ056213
 U+2A3F3	kPhonetic	1461*
 U+2A3F4	kMojiJoho	MJ056214
-U+2A3F4	kPhonetic	571*
-U+2A3F5	kPhonetic	883*
+U+2A3F4	kPhonetic	1236*
+U+2A3F5	kPhonetic	1236*
 U+2A3F6	kMojiJoho	MJ056215
-U+2A3F6	kPhonetic	1011*
+U+2A3F6	kPhonetic	1236*
 U+2A3F7	kMojiJoho	MJ056216
 U+2A3F8	kMojiJoho	MJ056217
-U+2A3F8	kPhonetic	946*
+U+2A3F8	kPhonetic	1236*
 U+2A3F9	kMojiJoho	MJ056218
 U+2A3FA	kMojiJoho	MJ056219
-U+2A3FA	kPhonetic	1059*
+U+2A3FA	kPhonetic	1236*
 U+2A3FB	kMojiJoho	MJ056220
-U+2A3FB	kPhonetic	753*
+U+2A3FB	kPhonetic	1236*
 U+2A3FC	kMojiJoho	MJ056221
 U+2A3FD	kMojiJoho	MJ056222
 U+2A3FF	kMojiJoho	MJ056223
-U+2A3FF	kPhonetic	260*
+U+2A3FF	kPhonetic	1236*
 U+2A400	kCheungBauer	202/06;;naa1
 U+2A400	kMojiJoho	MJ056224
 U+2A402	kMojiJoho	MJ056225
-U+2A402	kPhonetic	665*
+U+2A402	kPhonetic	1236*
 U+2A403	kMojiJoho	MJ056226
-U+2A403	kPhonetic	411*
+U+2A403	kPhonetic	1236*
 U+2A404	kMojiJoho	MJ056227
-U+2A404	kPhonetic	1029*
-U+2A406	kPhonetic	1013A*
+U+2A404	kPhonetic	1236*
+U+2A406	kPhonetic	1236*
 U+2A407	kMojiJoho	MJ056228
 U+2A408	kMojiJoho	MJ056229
-U+2A408	kPhonetic	332*
+U+2A408	kPhonetic	1236*
 U+2A409	kMojiJoho	MJ056230
 U+2A40B	kMojiJoho	MJ056231
-U+2A40B	kPhonetic	615*
+U+2A40B	kPhonetic	1236*
 U+2A40C	kMojiJoho	MJ056232
 U+2A40D	kMojiJoho	MJ056233
-U+2A40D	kPhonetic	808*
+U+2A40D	kPhonetic	1236*
 U+2A40E	kMojiJoho	MJ056234
-U+2A40E	kPhonetic	862*
+U+2A40E	kPhonetic	1236*
 U+2A40F	kMojiJoho	MJ056235
 U+2A411	kMojiJoho	MJ056236
 U+2A412	kMojiJoho	MJ056237
@@ -146125,7 +145989,7 @@ U+2A414	kMojiJoho	MJ056239
 U+2A414	kPhonetic	1432*
 U+2A415	kMojiJoho	MJ056240
 U+2A416	kMojiJoho	MJ056241
-U+2A416	kPhonetic	856*
+U+2A416	kPhonetic	1236*
 U+2A417	kMojiJoho	MJ056242
 U+2A418	kMojiJoho	MJ056243
 U+2A419	kMojiJoho	MJ056244
@@ -146470,7 +146334,7 @@ U+2A591	kMojiJoho	MJ056551
 U+2A592	kMojiJoho	MJ056552
 U+2A593	kMojiJoho	MJ056553
 U+2A595	kMojiJoho	MJ056554
-U+2A595	kPhonetic	1031*
+U+2A595	kPhonetic	951*
 U+2A597	kMojiJoho	MJ056555
 U+2A59A	kMojiJoho	MJ056556
 U+2A59B	kMojiJoho	MJ056557
@@ -146861,7 +146725,6 @@ U+2ABB2	kMojiJoho	MJ057572
 U+2ABB7	kMojiJoho	MJ057574
 U+2ABC6	kMojiJoho	MJ057584
 U+2ABD9	kMojiJoho	MJ057617
-U+2ABE0	kPhonetic	56
 U+2AC12	kMojiJoho	MJ057655
 U+2AC16	kMojiJoho	MJ059703
 U+2AC27	kMojiJoho	MJ059685
@@ -146895,7 +146758,6 @@ U+2ACC3	kMojiJoho	MJ057762
 U+2ACC6	kMojiJoho	MJ057758
 U+2ACC9	kMojiJoho	MJ057779
 U+2ACCA	kMojiJoho	MJ057780
-U+2ACCD	kPhonetic	979*
 U+2ACCF	kMojiJoho	MJ059734
 U+2ACD2	kMojiJoho	MJ057776
 U+2ACD3	kMojiJoho	MJ057808
@@ -147007,7 +146869,6 @@ U+2B1B7	kMojiJoho	MJ058397
 U+2B1BA	kMojiJoho	MJ058404
 U+2B1DC	kMojiJoho	MJ058435
 U+2B1E0	kMojiJoho	MJ058436
-U+2B1E6	kPhonetic	1587
 U+2B1E8	kMojiJoho	MJ058440
 U+2B1E9	kMojiJoho	MJ058442
 U+2B1ED	kFourCornerCode	4442.7
@@ -147071,7 +146932,6 @@ U+2B2FE	kMojiJoho	MJ058699
 U+2B300	kFourCornerCode	3528.2
 U+2B300	kUnihanCore2020	G
 U+2B305	kMojiJoho	MJ058698
-U+2B307	kPhonetic	979*
 U+2B308	kMojiJoho	MJ058701
 U+2B313	kMojiJoho	MJ058709
 U+2B31F	kMojiJoho	MJ057484
@@ -147115,7 +146975,6 @@ U+2B410	kUnihanCore2020	G
 U+2B413	kFourCornerCode	4759.4
 U+2B413	kPhonetic	1509*
 U+2B413	kUnihanCore2020	G
-U+2B416	kPhonetic	819*
 U+2B41E	kMojiJoho	MJ058838
 U+2B424	kMojiJoho	MJ058847
 U+2B42F	kMojiJoho	MJ058860
@@ -147152,13 +147011,10 @@ U+2B4E7	kFourCornerCode	8573.0
 U+2B4E7	kUnihanCore2020	G
 U+2B4EF	kFourCornerCode	8471.4
 U+2B4EF	kUnihanCore2020	G
-U+2B4F2	kPhonetic	318*
 U+2B4F6	kFourCornerCode	8672.7
 U+2B4F6	kUnihanCore2020	G
 U+2B4F9	kFourCornerCode	8478.1
 U+2B4F9	kUnihanCore2020	G
-U+2B500	kPhonetic	549*
-U+2B501	kPhonetic	1020*
 U+2B50D	kFourCornerCode	8276.9
 U+2B50D	kUnihanCore2020	G
 U+2B50E	kFourCornerCode	8772.7
@@ -147204,7 +147060,6 @@ U+2B623	kPhonetic	502*
 U+2B626	kFourCornerCode	7712.0
 U+2B626	kUnihanCore2020	G
 U+2B627	kFourCornerCode	7713.2
-U+2B627	kPhonetic	849*
 U+2B627	kUnihanCore2020	G
 U+2B628	kFourCornerCode	7618.1
 U+2B628	kUnihanCore2020	G
@@ -147257,7 +147112,6 @@ U+2B695	kUnihanCore2020	G
 U+2B696	kFourCornerCode	2210.6
 U+2B696	kUnihanCore2020	G
 U+2B699	kPhonetic	386*
-U+2B6A5	kPhonetic	534*
 U+2B6AD	kFourCornerCode	2211.6
 U+2B6AD	kUnihanCore2020	G
 U+2B6B4	kMojiJoho	MJ059998
@@ -147418,7 +147272,6 @@ U+2B81C	kFourCornerCode	2771.7
 U+2B81C	kUnihanCore2020	G
 U+2B81D	kMojiJoho	MJ059292
 U+2B820	kStrange	I:U+5F0B:U+6208
-U+2B823	kPhonetic	549
 U+2B825	kMojiJoho	MJ056870
 U+2B826	kMojiJoho	MJ031861
 U+2B829	kStrange	I:U+5179
@@ -147459,7 +147312,6 @@ U+2BA23	kStrange	F
 U+2BA2D	kMojiJoho	MJ057131
 U+2BA3B	kMojiJoho	MJ057915
 U+2BA51	kStrange	I:U+9762:U+9763
-U+2BA64	kPhonetic	1589*
 U+2BA66	kStrange	R:U+20C43
 U+2BA67	kMojiJoho	MJ057150
 U+2BA6E	kMojiJoho	MJ057152
@@ -147545,12 +147397,10 @@ U+2BE3E	kMojiJoho	MJ057471
 U+2BE53	kMojiJoho	MJ057486
 U+2BE67	kMojiJoho	MJ059029
 U+2BE68	kMojiJoho	MJ059030
-U+2BE8A	kPhonetic	56
 U+2BE8A	kStrange	I:U+2D75A
 U+2BE8F	kMojiJoho	MJ057502
 U+2BE94	kMojiJoho	MJ059613
 U+2BE97	kMojiJoho	MJ057509
-U+2BE98	kPhonetic	821*
 U+2BEAD	kMojiJoho	MJ057510
 U+2BEC3	kMojiJoho	MJ009310
 U+2BEDB	kMojiJoho	MJ057527 MJ057527:E0100 MJ057530:E0101
@@ -147704,7 +147554,6 @@ U+2C3BE	kMojiJoho	MJ059914
 U+2C3C8	kMojiJoho	MJ058098
 U+2C3D0	kMojiJoho	MJ058102
 U+2C3E3	kMojiJoho	MJ058118
-U+2C3E6	kPhonetic	346*
 U+2C3F6	kMojiJoho	MJ058121
 U+2C3FC	kMojiJoho	MJ058124
 U+2C424	kMojiJoho	MJ058146
@@ -148002,7 +147851,6 @@ U+2CB64	kFourCornerCode	9773.4
 U+2CB64	kUnihanCore2020	G
 U+2CB69	kFourCornerCode	8872.7
 U+2CB69	kUnihanCore2020	G
-U+2CB6A	kPhonetic	491*
 U+2CB6C	kFourCornerCode	8577.7
 U+2CB6C	kUnihanCore2020	G
 U+2CB6F	kFourCornerCode	8874.0
@@ -148013,7 +147861,6 @@ U+2CB76	kFourCornerCode	8673.1
 U+2CB76	kUnihanCore2020	G
 U+2CB78	kFourCornerCode	8975.9
 U+2CB78	kUnihanCore2020	G
-U+2CB7B	kPhonetic	635*
 U+2CB7C	kFourCornerCode	8873.3
 U+2CB7C	kUnihanCore2020	G
 U+2CB85	kMojiJoho	MJ058957
@@ -148026,7 +147873,6 @@ U+2CBB1	kUnihanCore2020	G
 U+2CBBF	kFourCornerCode	7221.7
 U+2CBBF	kUnihanCore2020	G
 U+2CBC0	kFourCornerCode	7022.4
-U+2CBC0	kPhonetic	56
 U+2CBC0	kStrange	I:U+2B545
 U+2CBC0	kUnihanCore2020	G
 U+2CBC1	kMojiJoho	MJ058968
@@ -148139,7 +147985,6 @@ U+2CD90	kUnihanCore2020	G
 U+2CD9F	kFourCornerCode	2210.0
 U+2CD9F	kUnihanCore2020	G
 U+2CDA0	kFourCornerCode	2519.6
-U+2CDA0	kPhonetic	549*
 U+2CDA0	kUnihanCore2020	G
 U+2CDA8	kFourCornerCode	7110.6
 U+2CDA8	kUnihanCore2020	G
@@ -148179,7 +148024,6 @@ U+2CE26	kFourCornerCode	0812.7
 U+2CE26	kUnihanCore2020	G
 U+2CE2A	kFourCornerCode	2762.7
 U+2CE2A	kUnihanCore2020	G
-U+2CE36	kPhonetic	119*
 U+2CE3D	kMojiJoho	MJ058368
 U+2CE3E	kStrange	I
 U+2CE75	kMojiJoho	MJ059283
@@ -148912,7 +148756,6 @@ U+2DA61	kMojiJoho	MJ057704
 U+2DA65	kMojiJoho	MJ057217
 U+2DA67	kMojiJoho	MJ059713
 U+2DA69	kMojiJoho	MJ059712
-U+2DA70	kPhonetic	346*
 U+2DA71	kMojiJoho	MJ057716
 U+2DA72	kMojiJoho	MJ057717
 U+2DA72	kStrange	I
@@ -149636,7 +149479,6 @@ U+2E672	kMojiJoho	MJ058785
 U+2E67E	kMojiJoho	MJ058788
 U+2E67F	kMojiJoho	MJ058787
 U+2E681	kMojiJoho	MJ060202
-U+2E681	kPhonetic	56
 U+2E683	kMojiJoho	MJ058789
 U+2E684	kMojiJoho	MJ058309
 U+2E685	kMojiJoho	MJ058792
@@ -149817,7 +149659,6 @@ U+2EA08	kMojiJoho	MJ059025
 U+2EA08	kStrange	O
 U+2EA0D	kMojiJoho	MJ060337
 U+2EA26	kMojiJoho	MJ059035
-U+2EA35	kPhonetic	819*
 U+2EA37	kMojiJoho	MJ059040
 U+2EA3D	kMojiJoho	MJ060339
 U+2EA3E	kMojiJoho	MJ060340
@@ -149969,57 +149810,39 @@ U+3016F	kStrange	U
 U+3018A	kStrange	B:U+3117
 U+301C8	kStrange	H:U+3131
 U+30255	kStrange	H:U+3131
-U+30300	kPhonetic	1587*
 U+30333	kStrange	I
 U+30367	kStrange	I:U+5C0F
 U+30368	kStrange	I:U+5C0F
 U+30481	kStrange	H:U+3131
 U+304A5	kStrange	R:U+6214
 U+304A8	kStrange	I:U+5E7E
-U+3054E	kPhonetic	214
-U+305F9	kPhonetic	1261*
-U+30613	kPhonetic	1587*
 U+30649	kStrange	U
-U+30651	kPhonetic	1261*
 U+306C4	kStrange	I:U+6C34
 U+306C5	kStrange	I:U+6C34
 U+3080A	kStrange	U
 U+3088A	kStrange	U
 U+308B5	kStrange	I:U+753B
 U+308DE	kStrange	U
-U+308EC	kPhonetic	56
 U+308EC	kStrange	I
 U+30912	kStrange	H:U+3131
 U+30A07	kStrange	R
-U+30A26	kPhonetic	56
 U+30A26	kStrange	I
-U+30B29	kPhonetic	1261*
-U+30B40	kPhonetic	1504*
 U+30B67	kStrange	I:U+8001
 U+30BEE	kStrange	H:U+3131
 U+30C2F	kStrange	H:U+3131
-U+30C48	kPhonetic	1587*
 U+30C6E	kPhonetic	843*
-U+30C85	kPhonetic	56*
 U+30C9E	kStrange	R:U+2BEFA
-U+30D2F	kPhonetic	1587*
 U+30D3F	kStrange	U
-U+30D79	kPhonetic	979*
 U+30D97	kStrange	H:U+3131
 U+30EDD	kStrange	S:43
 U+30EDE	kStrange	S:58
 U+30F18	kStrange	H:U+3131
 U+30F54	kStrange	S:76 U
-U+30FB7	kPhonetic	25*
 U+31044	kStrange	F
 U+3106A	kStrange	U
 U+3106C	kStrange	S:84
-U+31100	kPhonetic	1020*
 U+31152	kStrange	U
-U+3115E	kPhonetic	534*
-U+311FF	kPhonetic	1261*
 U+31317	kPhonetic	56
-U+31318	kPhonetic	56
 U+31318	kStrange	I
 U+3136B	kStrange	I:U+51F9 U
 U+31378	kStrange	I:U+6C0F
@@ -150056,7 +149879,6 @@ U+32053	kStrange	R
 U+320D4	kStrange	I:U+27FC7
 U+321A1	kStrange	F
 U+3228E	kStrange	U
-U+322A6	kPhonetic	56
 U+3238A	kStrange	I
 
 # EOF

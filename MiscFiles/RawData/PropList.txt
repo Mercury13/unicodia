@@ -1,5 +1,5 @@
 # PropList-16.0.0.txt
-# Date: 2024-05-08, 03:40:06 GMT
+# Date: 2024-04-30, 21:48:28 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -151,16 +151,13 @@ FF63          ; Quotation_Mark # Pe       HALFWIDTH RIGHT CORNER BRACKET
 1808..1809    ; Terminal_Punctuation # Po   [2] MONGOLIAN MANCHU COMMA..MONGOLIAN MANCHU FULL STOP
 1944..1945    ; Terminal_Punctuation # Po   [2] LIMBU EXCLAMATION MARK..LIMBU QUESTION MARK
 1AA8..1AAB    ; Terminal_Punctuation # Po   [4] TAI THAM SIGN KAAN..TAI THAM SIGN SATKAANKUU
-1B4E..1B4F    ; Terminal_Punctuation # Po   [2] BALINESE INVERTED CARIK SIKI..BALINESE INVERTED CARIK PAREREN
 1B5A..1B5B    ; Terminal_Punctuation # Po   [2] BALINESE PANTI..BALINESE PAMADA
 1B5D..1B5F    ; Terminal_Punctuation # Po   [3] BALINESE CARIK PAMUNGKAH..BALINESE CARIK PAREREN
-1B7D..1B7F    ; Terminal_Punctuation # Po   [3] BALINESE PANTI LANTANG..BALINESE PANTI BAWAK
+1B7D..1B7E    ; Terminal_Punctuation # Po   [2] BALINESE PANTI LANTANG..BALINESE PAMADA LANTANG
 1C3B..1C3F    ; Terminal_Punctuation # Po   [5] LEPCHA PUNCTUATION TA-ROL..LEPCHA PUNCTUATION TSHOOK
 1C7E..1C7F    ; Terminal_Punctuation # Po   [2] OL CHIKI PUNCTUATION MUCAAD..OL CHIKI PUNCTUATION DOUBLE MUCAAD
-2024          ; Terminal_Punctuation # Po       ONE DOT LEADER
 203C..203D    ; Terminal_Punctuation # Po   [2] DOUBLE EXCLAMATION MARK..INTERROBANG
 2047..2049    ; Terminal_Punctuation # Po   [3] DOUBLE QUESTION MARK..EXCLAMATION QUESTION MARK
-2CF9..2CFB    ; Terminal_Punctuation # Po   [3] COPTIC OLD NUBIAN FULL STOP..COPTIC OLD NUBIAN INDIRECT QUESTION MARK
 2E2E          ; Terminal_Punctuation # Po       REVERSED QUESTION MARK
 2E3C          ; Terminal_Punctuation # Po       STENOGRAPHIC FULL STOP
 2E41          ; Terminal_Punctuation # Po       REVERSED COMMA
@@ -179,8 +176,6 @@ AA5D..AA5F    ; Terminal_Punctuation # Po   [3] CHAM PUNCTUATION DANDA..CHAM PUN
 AADF          ; Terminal_Punctuation # Po       TAI VIET SYMBOL KOI KOI
 AAF0..AAF1    ; Terminal_Punctuation # Po   [2] MEETEI MAYEK CHEIKHAN..MEETEI MAYEK AHANG KHUDAM
 ABEB          ; Terminal_Punctuation # Po       MEETEI MAYEK CHEIKHEI
-FE12          ; Terminal_Punctuation # Po       PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC FULL STOP
-FE15..FE16    ; Terminal_Punctuation # Po   [2] PRESENTATION FORM FOR VERTICAL EXCLAMATION MARK..PRESENTATION FORM FOR VERTICAL QUESTION MARK
 FE50..FE52    ; Terminal_Punctuation # Po   [3] SMALL COMMA..SMALL FULL STOP
 FE54..FE57    ; Terminal_Punctuation # Po   [4] SMALL SEMICOLON..SMALL EXCLAMATION MARK
 FF01          ; Terminal_Punctuation # Po       FULLWIDTH EXCLAMATION MARK
@@ -208,7 +203,6 @@ FF64          ; Terminal_Punctuation # Po       HALFWIDTH IDEOGRAPHIC COMMA
 111DE..111DF  ; Terminal_Punctuation # Po   [2] SHARADA SECTION MARK-1..SHARADA SECTION MARK-2
 11238..1123C  ; Terminal_Punctuation # Po   [5] KHOJKI DANDA..KHOJKI DOUBLE SECTION MARK
 112A9         ; Terminal_Punctuation # Po       MULTANI SECTION MARK
-113D4..113D5  ; Terminal_Punctuation # Po   [2] TULU-TIGALARI DANDA..TULU-TIGALARI DOUBLE DANDA
 1144B..1144D  ; Terminal_Punctuation # Po   [3] NEWA DANDA..NEWA COMMA
 1145A..1145B  ; Terminal_Punctuation # Po   [2] NEWA DOUBLE COMMA..NEWA PLACEHOLDER MARK
 115C2..115C5  ; Terminal_Punctuation # Po   [4] SIDDHAM DANDA..SIDDHAM SEPARATOR BAR
@@ -229,12 +223,11 @@ FF64          ; Terminal_Punctuation # Po       HALFWIDTH IDEOGRAPHIC COMMA
 16AF5         ; Terminal_Punctuation # Po       BASSA VAH FULL STOP
 16B37..16B39  ; Terminal_Punctuation # Po   [3] PAHAWH HMONG SIGN VOS THOM..PAHAWH HMONG SIGN CIM CHEEM
 16B44         ; Terminal_Punctuation # Po       PAHAWH HMONG SIGN XAUS
-16D6E..16D6F  ; Terminal_Punctuation # Po   [2] KIRAT RAI DANDA..KIRAT RAI DOUBLE DANDA
 16E97..16E98  ; Terminal_Punctuation # Po   [2] MEDEFAIDRIN COMMA..MEDEFAIDRIN FULL STOP
 1BC9F         ; Terminal_Punctuation # Po       DUPLOYAN PUNCTUATION CHINOOK FULL STOP
 1DA87..1DA8A  ; Terminal_Punctuation # Po   [4] SIGNWRITING COMMA..SIGNWRITING COLON
 
-# Total code points: 291
+# Total code points: 277
 
 # ================================================
 
@@ -1537,16 +1530,13 @@ FF65          ; Other_ID_Continue # Po       HALFWIDTH KATAKANA MIDDLE DOT
 1809          ; Sentence_Terminal # Po       MONGOLIAN MANCHU FULL STOP
 1944..1945    ; Sentence_Terminal # Po   [2] LIMBU EXCLAMATION MARK..LIMBU QUESTION MARK
 1AA8..1AAB    ; Sentence_Terminal # Po   [4] TAI THAM SIGN KAAN..TAI THAM SIGN SATKAANKUU
-1B4E..1B4F    ; Sentence_Terminal # Po   [2] BALINESE INVERTED CARIK SIKI..BALINESE INVERTED CARIK PAREREN
 1B5A..1B5B    ; Sentence_Terminal # Po   [2] BALINESE PANTI..BALINESE PAMADA
 1B5E..1B5F    ; Sentence_Terminal # Po   [2] BALINESE CARIK SIKI..BALINESE CARIK PAREREN
-1B7D..1B7F    ; Sentence_Terminal # Po   [3] BALINESE PANTI LANTANG..BALINESE PANTI BAWAK
+1B7D..1B7E    ; Sentence_Terminal # Po   [2] BALINESE PANTI LANTANG..BALINESE PAMADA LANTANG
 1C3B..1C3C    ; Sentence_Terminal # Po   [2] LEPCHA PUNCTUATION TA-ROL..LEPCHA PUNCTUATION NYET THYOOM TA-ROL
 1C7E..1C7F    ; Sentence_Terminal # Po   [2] OL CHIKI PUNCTUATION MUCAAD..OL CHIKI PUNCTUATION DOUBLE MUCAAD
-2024          ; Sentence_Terminal # Po       ONE DOT LEADER
 203C..203D    ; Sentence_Terminal # Po   [2] DOUBLE EXCLAMATION MARK..INTERROBANG
 2047..2049    ; Sentence_Terminal # Po   [3] DOUBLE QUESTION MARK..EXCLAMATION QUESTION MARK
-2CF9..2CFB    ; Sentence_Terminal # Po   [3] COPTIC OLD NUBIAN FULL STOP..COPTIC OLD NUBIAN INDIRECT QUESTION MARK
 2E2E          ; Sentence_Terminal # Po       REVERSED QUESTION MARK
 2E3C          ; Sentence_Terminal # Po       STENOGRAPHIC FULL STOP
 2E53..2E54    ; Sentence_Terminal # Po   [2] MEDIEVAL EXCLAMATION MARK..MEDIEVAL QUESTION MARK
@@ -1562,8 +1552,6 @@ A9C8..A9C9    ; Sentence_Terminal # Po   [2] JAVANESE PADA LINGSA..JAVANESE PADA
 AA5D..AA5F    ; Sentence_Terminal # Po   [3] CHAM PUNCTUATION DANDA..CHAM PUNCTUATION TRIPLE DANDA
 AAF0..AAF1    ; Sentence_Terminal # Po   [2] MEETEI MAYEK CHEIKHAN..MEETEI MAYEK AHANG KHUDAM
 ABEB          ; Sentence_Terminal # Po       MEETEI MAYEK CHEIKHEI
-FE12          ; Sentence_Terminal # Po       PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC FULL STOP
-FE15..FE16    ; Sentence_Terminal # Po   [2] PRESENTATION FORM FOR VERTICAL EXCLAMATION MARK..PRESENTATION FORM FOR VERTICAL QUESTION MARK
 FE52          ; Sentence_Terminal # Po       SMALL FULL STOP
 FE56..FE57    ; Sentence_Terminal # Po   [2] SMALL QUESTION MARK..SMALL EXCLAMATION MARK
 FF01          ; Sentence_Terminal # Po       FULLWIDTH EXCLAMATION MARK
@@ -1582,7 +1570,6 @@ FF61          ; Sentence_Terminal # Po       HALFWIDTH IDEOGRAPHIC FULL STOP
 11238..11239  ; Sentence_Terminal # Po   [2] KHOJKI DANDA..KHOJKI DOUBLE DANDA
 1123B..1123C  ; Sentence_Terminal # Po   [2] KHOJKI SECTION MARK..KHOJKI DOUBLE SECTION MARK
 112A9         ; Sentence_Terminal # Po       MULTANI SECTION MARK
-113D4..113D5  ; Sentence_Terminal # Po   [2] TULU-TIGALARI DANDA..TULU-TIGALARI DOUBLE DANDA
 1144B..1144C  ; Sentence_Terminal # Po   [2] NEWA DANDA..NEWA DOUBLE DANDA
 115C2..115C3  ; Sentence_Terminal # Po   [2] SIDDHAM DANDA..SIDDHAM DOUBLE DANDA
 115C9..115D7  ; Sentence_Terminal # Po  [15] SIDDHAM END OF TEXT MARK..SIDDHAM SECTION MARK WITH CIRCLES AND FOUR ENCLOSURES
@@ -1599,12 +1586,11 @@ FF61          ; Sentence_Terminal # Po       HALFWIDTH IDEOGRAPHIC FULL STOP
 16AF5         ; Sentence_Terminal # Po       BASSA VAH FULL STOP
 16B37..16B38  ; Sentence_Terminal # Po   [2] PAHAWH HMONG SIGN VOS THOM..PAHAWH HMONG SIGN VOS TSHAB CEEB
 16B44         ; Sentence_Terminal # Po       PAHAWH HMONG SIGN XAUS
-16D6E..16D6F  ; Sentence_Terminal # Po   [2] KIRAT RAI DANDA..KIRAT RAI DOUBLE DANDA
 16E98         ; Sentence_Terminal # Po       MEDEFAIDRIN FULL STOP
 1BC9F         ; Sentence_Terminal # Po       DUPLOYAN PUNCTUATION CHINOOK FULL STOP
 1DA88         ; Sentence_Terminal # Po       SIGNWRITING FULL STOP
 
-# Total code points: 170
+# Total code points: 156
 
 # ================================================
 
