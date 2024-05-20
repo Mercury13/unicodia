@@ -9019,10 +9019,10 @@
      <orig>Cyrillic / by letter</orig>
     </text>
     <text id="CyrlGrek">
-     <orig>Cyrillic letters of Greek origin</orig>
+     <orig>Transliteration of Greek</orig>
     </text>
     <text id="CyrlMisc">
-     <orig>Cyrillic letters of different origin</orig>
+     <orig>Other origin</orig>
     </text>
    </group>
    <group id="Text">

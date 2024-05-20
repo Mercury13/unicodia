@@ -12958,12 +12958,12 @@
      <transl>Кирилиця / за літерами</transl>
     </text>
     <text id="CyrlGrek">
-     <orig>Cyrillic letters of Greek origin</orig>
-     <transl>Кирилічні літери грецького похождення</transl>
+     <orig>Transliteration of Greek</orig>
+     <transl>Транслітерація грецької</transl>
     </text>
     <text id="CyrlMisc">
-     <orig>Cyrillic letters of different origin</orig>
-     <transl>Кирилічні літери різного похождення</transl>
+     <orig>Other origin</orig>
+     <transl>Інше походження</transl>
     </text>
    </group>
    <group id="Text">
