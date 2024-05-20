@@ -301,163 +301,163 @@
 			<d>Ç ç Ä ä Ž ž Ň ň Ö ö Ş ş Ü ü Ý ý</d>
 		</f>
 	</f>
-	<f loc="Latin3" forgetTest="1">
-		<f loc="SmallCap" forgetTest="0" hasText="1">
+	<f loc="Latin3">
+		<f loc="SmallCap" hasText="1">
 			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ғ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ǫ ʀ ꜱ s ᴛ ᴜ ᴠ ᴡ x ʏ ᴢ</d>
 		</f>
-		<f loc="SuperCap" forgetTest="0" tile="0">
+		<f loc="SuperCap" tile="0">
 			<d>ᴬ ᴮ ꟲ ᴰ ᴱ ꟳ ᴳ ᴴ ᴵ ᴶ ᴷ ᴸ ᴹ ᴺ ᴼ ᴾ ꟴ ᴿ ᵀ ᵁ ⱽ ᵂ</d>
 		</f>
-		<f loc="SuperSmall" forgetTest="0">
+		<f loc="SuperSmall">
 			<d>ᵃ ᵇ ᶜ ᵈ ᵉ ᶠ ᵍ ʰ ⁱ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ 𐞥 ʳ ˢ ᵗ ᵘ ᵛ ʷ ˣ ʸ ᶻ</d>
 		</f>
-		<f loc="ParenCap" tile="0">
+		<f loc="ParenCap" forgetTest="1" tile="0">
 			<range start="1F110" end="1F129" />
 		</f>
-		<f loc="ParenSmall">
+		<f loc="ParenSmall" forgetTest="1">
 			<range start="249C" end="24B5" />
 		</f>
-		<f loc="CircCap">
+		<f loc="CircCap" forgetTest="1">
 			<range start="24B6" end="24CF" />
 		</f>
-		<f loc="CircSmall">
+		<f loc="CircSmall" forgetTest="1">
 			<range start="24D0" end="24E9" />
 		</f>
-		<f loc="NegCircCap">
+		<f loc="NegCircCap" forgetTest="1">
 			<range start="1F150" end="1F169" />
 		</f>
-		<f loc="SquareCap">
+		<f loc="SquareCap" forgetTest="1">
 			<range start="1F130" end="1F149" />
 		</f>
-		<f loc="NegSquareCap">
+		<f loc="NegSquareCap" forgetTest="1">
 			<range start="1F170" end="1F189" />
 		</f>
-		<f loc="BoldCap">
+		<f loc="BoldCap" forgetTest="1">
 			<range start="1D400" end="1D419" />
 		</f>
-		<f loc="BoldSmall">
+		<f loc="BoldSmall" forgetTest="1">
 			<range start="1D41A" end="1D433" />
 		</f>
-		<f loc="ItalCap">
+		<f loc="ItalCap" forgetTest="1">
 			<range start="1D434" end="1D44D" />
 		</f>
-		<f loc="ItalSmall">
+		<f loc="ItalSmall" forgetTest="1">
 			<range start="1D44E" end="1D454" />
 			<d>ℎ ℏ 𝑖 𝚤 𝑗 𝚥</d>
 			<range start="1D458" end="1D467" />
 		</f>
-		<f loc="BiCap">
+		<f loc="BiCap" forgetTest="1">
 			<range start="1D468" end="1D481" />
 		</f>
-		<f loc="BiSmall">
+		<f loc="BiSmall" forgetTest="1">
 			<range start="1D482" end="1D49B" />
 		</f>
-		<f loc="ScrCap">
+		<f loc="ScrCap" forgetTest="1">
 			<d>𝒜 ℬ 𝒞 𝒟 ℰ ℱ 𝒢 ℋ ℐ 𝒥 𝒦 ℒ ℳ 𝒩 𝒪 𝒫 𝒬 ℛ</d>
 			<range start="1D4AE" end="1D4B5" />
 		</f>
-		<f loc="ScrSmall">
+		<f loc="ScrSmall" forgetTest="1">
 			<range start="1D4B6" end="1D4B9" />
 			<d>ℯ 𝒻 ℊ</d>
 			<range start="1D4BD" end="1D4C1" />
 			<d>ℓ 𝓂 𝓃 ℴ</d>
 			<range start="1D4C5" end="1D4CF" />
 		</f>
-		<f loc="ScrBoldCap">
+		<f loc="ScrBoldCap" forgetTest="1">
 			<range start="1D4D0" end="1D4E9" />
 		</f>
-		<f loc="ScrBoldSmall">
+		<f loc="ScrBoldSmall" forgetTest="1">
 			<range start="1D4EA" end="1D503" />
 		</f>
-		<f loc="DoubleCap">
+		<f loc="DoubleCap" forgetTest="1">
 			<d>𝔸 𝔹 ℂ 𝔻 𝔼 𝔽 𝔾 ℍ 𝕀 𝕁 𝕂 𝕃 𝕄 ℕ 𝕆 ℙ ℚ ℝ 𝕊 𝕋 𝕌 𝕍 𝕎 𝕏 𝕐 ℤ</d>
 		</f>
-		<f loc="DoubleSmall">
+		<f loc="DoubleSmall" forgetTest="1">
 			<range start="1D552" end="1D56B" />
 		</f>
-		<f loc="DoubleMisc">
+		<f loc="DoubleMisc" forgetTest="1">
 			<d>ⅅ ⅆ ⅇ ⅈ ⅉ</d>
 		</f>
-		<f loc="FrakCap">
+		<f loc="FrakCap" forgetTest="1">
 			<d>𝔄 𝔅 ℭ 𝔇 𝔈 𝔉 𝔊 ℌ ℑ </d>
 			<range start="1D50D" end="1D514" />
 			<d>ℜ</d>
 			<range start="1D516" end="1D51C" />
 			<d>ℨ</d>
 		</f>
-		<f loc="FrakSmall">
+		<f loc="FrakSmall" forgetTest="1">
 			<range start="1D51E" end="1D537" />
 		</f>
-		<f loc="FrakBoldCap">
+		<f loc="FrakBoldCap" forgetTest="1">
 			<range start="1D56C" end="1D585" />
 		</f>
-		<f loc="FrakBoldSmall">
+		<f loc="FrakBoldSmall" forgetTest="1">
 			<range start="1D586" end="1D59F" />
 		</f>
-		<f loc="SansCap">
+		<f loc="SansCap" forgetTest="1">
 			<range start="1D5A0" end="1D5B9" />
 		</f>
-		<f loc="SansSmall">
+		<f loc="SansSmall" forgetTest="1">
 			<range start="1D5BA" end="1D5D3" />
 		</f>
-		<f loc="SansBoldCap">
+		<f loc="SansBoldCap" forgetTest="1">
 			<range start="1D5D4" end="1D5ED" />
 		</f>
-		<f loc="SansBoldSmall">
+		<f loc="SansBoldSmall" forgetTest="1">
 			<range start="1D5EE" end="1D607" />
 		</f>
-		<f loc="SansItalCap">
+		<f loc="SansItalCap" forgetTest="1">
 			<range start="1D608" end="1D621" />
 		</f>
-		<f loc="SansItalSmall">
+		<f loc="SansItalSmall" forgetTest="1">
 			<range start="1D622" end="1D63B" />
 		</f>
-		<f loc="SansBiCap">
+		<f loc="SansBiCap" forgetTest="1">
 			<range start="1D63C" end="1D655" />
 		</f>
-		<f loc="SansBiSmall">
+		<f loc="SansBiSmall" forgetTest="1">
 			<range start="1D656" end="1D66F" />
 		</f>
-		<f loc="MonoCap">
+		<f loc="MonoCap" forgetTest="1">
 			<range start="1D670" end="1D689" />
 		</f>
-		<f loc="MonoSmall">
+		<f loc="MonoSmall" forgetTest="1">
 			<range start="1D68A" end="1D6A3" />
 		</f>
-		<f loc="CjkCap">
+		<f loc="CjkCap" forgetTest="1">
 			<range start="FF21" end="FF3A" />
 		</f>
-		<f loc="CjkSmall">
+		<f loc="CjkSmall" forgetTest="1">
 			<range start="FF41" end="FF5A" />
 		</f>
-		<f loc="CjkSimIdeo" forgetTest="0"  tilePattern="10010101111">
+		<f loc="CjkSimIdeo" tilePattern="10010101111">
 			<d>𠔀 丹 卂 乃 㠯 匚 匸 刀 𠀉 𠂋 㔾 呂 𠂑 廾 丨 工 讠 丿 亅 片 𡿨 𣱱 乚 厶 𠃊 爪 从 几 𠘨 口 囗 尸 母 𠂀 𤆗 尺 丂 丁 凵 山 乂 㐅 丫 𠂈 乙 𠮺</d>
 		</f>
-		<f loc="CherCap" forgetTest="0">
+		<f loc="CherCap">
 			<d>Ꭺ Ᏼ Ꮯ Ꭰ Ꭼ Ꮁ Ꮐ Ꮋ Ꮖ Ꭻ Ꮶ Ꮮ Ꮇ Ꮑ Ꮎ Ꮲ Ꭴ Ꭱ Ꮪ Ꭲ Ꮼ Ꮩ Ꮃ Ꮂ Ꭹ Ꮓ</d>
 		</f>
-		<f loc="CherSmall" forgetTest="0">
+		<f loc="CherSmall">
 			<d>ꭺ ᏼ ꮯ ꭰ ꭼ ꮁ ᏽ ꮋ ꮖ ꭻ ꮶ ꮮ ꮇ ꮑ ꮎ ꮲ ꭴ ꭱ ꮪ ꭲ ꮼ ꮩ ꮤ ꮂ ꭹ ꮓ</d>
 		</f>
-		<f loc="Bamu" forgetTest="0">
+		<f loc="Bamu">
 			<d>𖧥 𖧳 𖥐 𖦧 𖠢 𖨨 ꛪ 𖦙 𖥣 𖨗 𖢉 ꛚ 𖢑 ꛘ 𖥕 𖡮 𖥨 𖦪 𖨚 𖢧 ꚶ 𖡥 𖧉 𖧦 ꚲ 𖣩</d>
 		</f>
-		<f loc="Vaii" forgetTest="0" tilePattern="101011">
+		<f loc="Vaii" tilePattern="101011">
 			<d>ꗇ ꕔ ꕗ ꔪ ꖀ ꕒ ꗋ ꗛ ꗍ ꗨ ꘓ ꗓ ꘘ ꕃ ꕄ ꗱ ꖾ ꔠ ꘡ ꕯ ꕈ ꔕ ꗣ ꕴ ꘢ ꕮ ꖦ ꖴ ꕺ ꗞ ꘖ ꘝ ꘫ ꕪ ꔵ ꔶ ꕶ ꗟ ꕷ ꔋ ꔉ ꖡ ꖹ ꘜ ꔗ ꘉ ꔇ ꕩ ꔙ ꕘ</d>
 		</f>
-		<f loc="Cans" forgetTest="0" tilePattern="101000110">
+		<f loc="Cans" tilePattern="101000110">
 			<d>ᗅ ᗩ ᗷ ᗽ ᑲ ᙖ ᑕ ᗞ ᐅ ᗴ ᕮ ᗕ ᖴ ᒋ ᘜ ᕋ ᕼ ᖺ ᑊ ᓵ ᒑ ᒎ ᒍ ᐸ ᒪ ᒫ ᖶ ᗰ ᘻ ᙢ ᗑ ᕬ ᘯ ᐱ ᗝ ᗜ ᕈ ᑭ ᖘ ᕵ ᖰ ᘝ ᑫ ᖇ ᖆ ᔑ ᐪ ᑌ ᙀ ᐯ ᐺ ᐻ ᕓ ᗯ ᘺ ᗐ ᕫ ᙭ ᙮ ᖿ ᔨ ᙆ</d>
 		</f>
-		<f loc="InvCap" forgetTest="0">
+		<f loc="InvCap">
 			<d>Ɐ ꓭ Ɔ  ꓷ Ⴇ Ɑ Ǝ Ⅎ ⅁ H I Ր ꓩ Ʞ Ꞁ ꟽ N O Ԁ Ò ꓤ S Ʇ Ո Ʌ M X ⅄ Z</d>
 		</f>
-		<f loc="InvSmall" forgetTest="0">
+		<f loc="InvSmall">
 			<d>ɐ q ɔ p ǝ ɟ ᵷ ɥ ᴉ ſ ɾ ʞ ꞁ ɯ u o d b ɹ s ʇ n ʌ ʍ x ʎ z</d>
 		</f>
-		<f loc="RevCap" forgetTest="0">
+		<f loc="RevCap">
 			<d>A ꓭ Ɔ  ꓷ Ⴇ Ɑ Ǝ ꟻ ᶗ H I ȴ ɭ Ʞ ⅃ M И O ꟼ Ǫ Я Ⴧ T U V W X Y</d>
 		</f>
-		<f loc="RevSmall" forgetTest="0">
+		<f loc="RevSmall">
 			<d>ɒ d ɔ b ɘ ʡ 𝼁  i ȴ ɭ 𝼃 l m n o q p ɿ ʅ ჷ շ Ɉ ֈ u v w x ү</d>
 		</f>		
 	</f>
