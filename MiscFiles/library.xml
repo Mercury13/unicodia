@@ -461,6 +461,107 @@
 			<d>ɒ d ɔ b ɘ ʡ 𝼁  i ȴ ɭ 𝼃 l m n o q p ɿ ʅ ჷ շ Ɉ ֈ u v w x ү</d>
 		</f>		
 	</f>
+	<f loc="Cyrl1" forgetTest="1">
+		<f name="А" tilePattern="10010110">
+			<d>А а Ӑ ӑ Ӓ ӓ Ӕ ӕ Ꙗ ꙗ 𞀰 𞁑</d>
+		</f>
+		<f name="Б" tilePattern="1011">
+			<d>Б б 𞀱 𞁒</d>
+		</f>
+		<f name="В" tilePattern="10111">
+			<d>В в ᲀ 𞀲 𞁓</d>
+		</f>
+		<f name="Г" tilePattern="10010110">
+			<d>Г г Ѓ ѓ Ґ ґ Ғ ғ Ӻ ӻ Ҕ ҕ Ӷ ӷ 𞀳 𞁔 𞁧</d>
+		</f>
+		<f name="Д" tilePattern="101010110">
+			<d>Д д ᲁ Ꚁ ꚁ Ԁ ԁ Ꙣ ꙣ Ԫ ԫ Ꚉ ꚉ Ԃ ԃ Ԭ ԭ 𞀴 𞁕 𞁊 </d>
+		</f>
+		<f name="ЕЭ" tilePattern="10010110">
+			<d>Е е Ѐ ѐ Ё ё Ӗ ӗ Є є Э э Ӭ ӭ Ә ә Ӛ ӛ Ҽ ҽ Ҿ ҿ Ѥ ѥ 𞀵 𞁖 𞁋 𞁈</d>
+		</f>
+		<f name="Ѣ" tilePattern="10011">
+			<d>Ѣ ѣ ᲇ Ꙓ ꙓ</d>
+		</f>
+		<f name="Ж" tilePattern="10010110">
+			<d>Ж ж Ӂ ӂ Ӝ ӝ Җ җ 𞀶 𞁗</d>
+		</f>
+		<f name="З" tilePattern="10010110">
+			<d>З з Ӟ ӟ Ҙ ҙ Ԑ ԑ Ꙁ ꙁ Ꙃ ꙃ Ѕ ѕ Ꚃ ꚃ Ꙅ ꙅ Ӡ ӡ Ԅ ԅ Ԇ ԇ Ꚅ ꚅ 𞀷 𞁘 𞁩</d>
+		</f>
+		<f name="ИЙ" tilePattern="10010110">
+			<d>И и Й й Ѝ ѝ Ӣ ӣ Ӥ ӥ Ҋ ҋ 𞀸 𞁙</d>
+		</f>
+		<f name="І" tilePattern="10010110">
+			<d>І і Ї ї Ӏ ӏ 𞁌 𞁐 𞁨</d>
+		</f>
+		<f name="К" tilePattern="10010110">
+			<d>К к Ќ ќ Ҡ ҡ Ҟ ҟ Ҝ ҝ Ԟ ԟ Ӄ ӄ Қ қ 𞀹 𞁚</d>
+		</f>
+		<f name="Л" tilePattern="10010110">
+			<d>Л л Ԡ ԡ Ӆ ӆ Ԯ ԯ Ԓ ԓ ᴫ Ꙥ ꙥ Ԕ ԕ Љ љ Ԉ ԉ 𞀺 𞁛</d>
+		</f>
+		<f name="М" tilePattern="10010110">
+			<d>М м Ӎ ӎ Ꙧ ꙧ 𞀻</d>
+		</f>
+		<f name="Н" tilePattern="10010110">
+			<d>Н н Ԣ ԣ Ӊ ӊ Ң ң Ԩ ԩ Ӈ ӈ Ҥ ҥ Њ њ Ԋ ԋ ᵸ</d>
+		</f>
+		<f name="О" tilePattern="101010110">
+			<d>О о ᲂ Ӧ ӧ Ө ө Ӫ ӫ Ꙩ ꙩ Ꙫ ꙫ Ꚛ ꚛ Ѻ ѻ Ꚙ ꚙ Ꙭ ꙭ ꙮ 𞀼 𞁎 𞁜</d>
+		</f>
+		<f name="П" tilePattern="10010110">
+			<d>П п Ҧ ҧ Ԥ ԥ 𞀽 𞁝</d>
+		</f>
+		<f name="Р" tilePattern="10010110">
+			<d>Р р Ҏ ҏ Ԗ ԗ 𞀾</d>
+		</f>
+		<f name="С" tilePattern="101010110">
+			<d>С с ᲃ Ҫ ҫ Ԍ ԍ 𞀿 𞁫 𞁞</d>
+		</f>
+		<f name="Т" tilePattern="10010110">
+			<d>Т т ᲄ ᲅ Ꚋ ꚋ Ԏ ԏ Ꚑ ꚑ Ꚍ ꚍ Ҭ ҭ Ҵ ҵ Ꚓ ꚓ Ᲊ ᲊ 𞁀</d>
+		</f>
+		<f name="У" tilePattern="10010110">
+			<d>У у Ў ў Ӯ ӯ Ӱ ӱ Ӳ ӳ Ү ү Ұ ұ Ѹ ѹ Ꙋ ꙋ ᲈ 𞁁 𞁏 𞁭 𞁟</d>
+		</f>
+		<f name="Ф" tilePattern="1011">
+			<d>Ф ф 𞁂 𞁠</d>
+		</f>
+		<f name="Х" tilePattern="10010110">
+			<d>Х х Ӿ ӿ Ҳ ҳ Ӽ ӽ 𞁃 𞁡</d>
+		</f>
+		<f name="Ц" tilePattern="10010110">
+			<d>Ц ц Ꚏ ꚏ Ꙡ ꙡ 𞁄 𞁢</d>
+		</f>
+		<f name="Ч" tilePattern="10010110">
+			<d>Ч ч Ӵ ӵ Ҹ ҹ Ӌ ӌ Ҷ ҷ Џ џ Ꚇ ꚇ 𞁅 𞁣 𞁪</d>
+		</f>
+		<f name="Ш" tilePattern="1011">
+			<d>Ш ш 𞁆 𞁤</d>
+		</f>
+		<f name="Щ" tilePattern="10010110">
+			<d>Щ щ Ꚗ ꚗ</d>
+		</f>
+		<f name="ЪЫЬ" tilePattern="101010110">
+			<d>Ъ ъ ᲆ Ы ы Ӹ ӹ Ь ь Ҍ ҍ Ꙏ ꙏ Ꙑ ꙑ ꚜ ꚝ 𞁥 𞁬 𞁇 𞁦</d>
+		</f>
+		<f name="Ю" tilePattern="10011">
+			<d>Ю ю Ꙕ ꙕ 𞁉</d>
+		</f>
+		<f name="Я" tilePattern="10010110">
+			<d>Я я Ԙ ԙ</d>
+		</f>
+		<f name="ѦѪ" tilePattern="10010110">
+			<d>Ѧ ѧ Ѫ ѫ Ꙙ ꙙ Ꙛ ꙛ Ѩ ѩ Ѭ ѭ Ꙝ ꙝ</d>
+		</f>
+		<f loc="CyrlGrek" tilePattern="10010110">
+			<d>Ѯ ѯ Ѱ ѱ Ѡ ѡ Ѽ ѽ Ѿ ѿ Ꙍ ꙍ Ѳ ѳ Ѵ ѵ Ѷ ѷ Ꙇ ꙇ Ҁ ҁ</d>
+		</f>
+		<f loc="CyrlMisc" tilePattern="10010110">
+			<d>Ҩ ҩ Һ һ Ꚕ ꚕ Ԧ ԧ Ђ ђ Ћ ћ Ј ј Ԛ ԛ Ԝ ԝ Ꙉ ꙉ Ꙟ ꙟ 𞁍</d>
+		</f>
+	</f>
 	<f loc="Business">
 		<f loc="Currencies">
 			<d>¤</d>

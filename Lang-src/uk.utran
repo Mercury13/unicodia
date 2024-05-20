@@ -12953,6 +12953,18 @@
      <orig>Checkers/draughts</orig>
      <transl>Шашки</transl>
     </text>
+    <text id="Cyrl1">
+     <orig>Cyrillic / by letter</orig>
+     <transl>Кирилиця / за літерами</transl>
+    </text>
+    <text id="CyrlGrek">
+     <orig>Cyrillic letters of Greek origin</orig>
+     <transl>Кирилічні літери грецького похождення</transl>
+    </text>
+    <text id="CyrlMisc">
+     <orig>Cyrillic letters of different origin</orig>
+     <transl>Кирилічні літери різного похождення</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

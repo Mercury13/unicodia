@@ -17,6 +17,7 @@ namespace {
 
     const std::unordered_map<std::string_view, ForgetChannel> forgetWords {
         // Script channel
+        { "CYRILLIC", ForgetChannel::SCRIPT },
         { "LATIN", ForgetChannel::SCRIPT },
         { "MODIFIER", ForgetChannel::SCRIPT },
         { "SUPERSCRIPT", ForgetChannel::SCRIPT },
@@ -32,6 +33,7 @@ namespace {
         { "AE", ForgetChannel::LETTER },
         { "ALPHA", ForgetChannel::LETTER },
         { "B", ForgetChannel::LETTER },
+        { "BE", ForgetChannel::LETTER },
         { "C", ForgetChannel::LETTER },
         { "D", ForgetChannel::LETTER },
         { "DZ", ForgetChannel::LETTER },
@@ -69,6 +71,7 @@ namespace {
         { "TZ", ForgetChannel::LETTER },
         { "U", ForgetChannel::LETTER },
         { "V", ForgetChannel::LETTER },
+        { "VE", ForgetChannel::LETTER },
         { "W", ForgetChannel::LETTER },
         { "X", ForgetChannel::LETTER },
         { "Y", ForgetChannel::LETTER },
@@ -76,7 +79,6 @@ namespace {
         { "EZH", ForgetChannel::LETTER},
 
         // Banned
-        { "CYRILLIC", ForgetChannel::BAN },
         { "SAMARITAN", ForgetChannel::BAN },
         { "COMBINING", ForgetChannel::BAN },
         { "BALLOT", ForgetChannel::BAN },       // Some UI character
@@ -85,9 +87,10 @@ namespace {
 
     const std::unordered_map<char32_t, bool> specialCps {
         { 0x00A9,  true  },  // ©
-        { 0x00AE,  true  },  // ®
+        { 0x00AE,  true  },  // ®        
         { 0x0149,  false },  // apos+n, banned from Unicode
         { 0x01A6,  true  },  // Latin letter Yr, small is small-cap R
+        { 0x0482,  false },  // Cyrillic thousands sign
         { 0x210E,  true  },  // Planck constant, italic h
         { 0x210F,  true  },  // Same with bar
         { 0x212A,  false },  // kelvin sign
@@ -95,6 +98,9 @@ namespace {
         { 0x2183,  true  },  // Number form, also letter reversed C
         { 0x02C0,  true  },  // modifier letter Glottal stop
         { 0x02C1,  true  },  // modifier letter Reversed glottal stop
+        { 0xA673,  false },  // Slavonic asterisk
+        { 0xA67E,  false },  // Cyrillic kavyka
+        { 0xA67F,  false },  // Cyrillic payerok
         { 0xA71D,  true  },  // modifier letter Raised exclamation mark
         { 0x10781, false },  // modifier letter Superscript triangular colon
         { 0x10782, false },  // modifier letter Superscript half triangular colon
@@ -112,6 +118,7 @@ namespace {
     };
 
     const std::unordered_set<char32_t> caseOk {
+        // Latn
         0x0131,     // Dotless i, special Turkic rules
         0x017F,     // Long s, upcases to normal S
         0x01C6,     // Digraph dz with caron, cap→title→small
@@ -119,6 +126,16 @@ namespace {
         0x01CC,     // Digraph nj, same
         0x01F3,     // Digraph dz, same
         0x1E9B,     // Long s with dot, upcases to normal S with dot
+        // Cyrl
+        0x1C80,     // Cyrillic small letter Rounded Ve, up is normal Ve
+        0x1C81,     // Cyrillic small letter Long-legged De, up is normal De
+        0x1C82,     // Cyrillic small letter Narrow O, up is normal O
+        0x1C83,     // Cyrillic small letter Wide Es, up is normal Es
+        0x1C84,     // Cyrillic small letter Tall Te, up is normal Te
+        0x1C85,     // Cyrillic small letter Three-legged Te, up is normal Te
+        0x1C86,     // Cyrillic small letter Tall hard sign, up is normal Hard
+        0x1C87,     // Cyrillic small letter Tall Yat, up is normal Yat
+        0x1C88,     // Cyrillic small letter Unblended Uk, up is some type of Uk
     };
 
 }   // anon namespace
@@ -157,7 +174,7 @@ bool forget::isIn(char32_t cp, std::string_view name, std::string_view script)
             }
         }
     }
-    return (hasScript && hasLetter) || (script == "Latn");
+    return (hasScript && hasLetter) || (script == "Latn") || (script == "Cyrl");
 ;
 }
 

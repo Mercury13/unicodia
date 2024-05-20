@@ -9015,6 +9015,15 @@
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
     </text>
+    <text id="Cyrl1">
+     <orig>Cyrillic / by letter</orig>
+    </text>
+    <text id="CyrlGrek">
+     <orig>Cyrillic letters of Greek origin</orig>
+    </text>
+    <text id="CyrlMisc">
+     <orig>Cyrillic letters of different origin</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
