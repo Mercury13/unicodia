@@ -357,10 +357,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mahj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::unknown(), EcFont::MAHAJANI },
-    // Makasar OK, installed strange font by Anshuman Pandey
+    // Makasar OK, recreated strange font by Anshuman Pandey in Funky/OpenType
     { "Maka", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::crange(16, 17), EcFont::MAKASAR },
+        Dating::crange(16, 17), EcFont::FUNKY_BIGGER },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,

@@ -329,7 +329,6 @@ namespace uc {
         LINEAR_B,
         LISU,
         MAHAJANI,
-        MAKASAR,
         MALAYALAM,
         MANDAIC,
         MANICHAEAN,

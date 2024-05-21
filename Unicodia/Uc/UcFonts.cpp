@@ -199,7 +199,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
-    { "MakasarGraphite.ttf", Ffg::STUB_OFF },                                   // Makasar
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
