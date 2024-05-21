@@ -61,7 +61,7 @@ These fonts are taken to Unicodia without author’s consent:
 ## Language
 **Common.** No war jargon. Describe 2022 war as neutral as possible.
 
-**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation inside quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
+**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
