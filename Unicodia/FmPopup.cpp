@@ -185,21 +185,24 @@ void FmPopup::popupAtY(
 
 void FmPopup::myAdjustSize(const QRect& screenRect)
 {
+    // My params
+    static constexpr int MAX_WIDTH = 900;       // maximum (non really tight) width
+    static constexpr int WIDTH_STEP = 50;
+    static constexpr int COOL_WIDTH = 450;
+    static constexpr int COOL_HEIGHT = 650;
+    static constexpr int HEIGHT_LEEWAY = 50;
+    static constexpr int WIDTH_LEEWAY = 10;
+
     adjustSize();
     if (height() >= 350) {
-        // Does not resize, but let it resize if wants
-        static constexpr int MAX_WIDTH = 900;
-        static constexpr int WIDTH_STEP = 50;
-        static constexpr int COOL_WIDTH = 450;
-        static constexpr int COOL_HEIGHT = 650;
-        static constexpr int HEIGHT_LEEWAY = 50;
+        auto maxWidth = std::min(MAX_WIDTH, screenRect.width() - WIDTH_LEEWAY - WIDTH_STEP);
         auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
         auto myW = std::max(width(), COOL_WIDTH - WIDTH_STEP);
         int h;
         do {
             myW += WIDTH_STEP;
             h = layout->heightForWidth(myW);
-        } while (h > rqHeight && myW < MAX_WIDTH);
+        } while (h > rqHeight && myW < maxWidth);
         resize(myW, h);
     }
 }
