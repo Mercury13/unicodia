@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716326285
+ModificationTime: 1716326568
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -123407,6 +123407,7 @@ SplineSet
  395 180 395 180 367.424242424 199.371212121 c 128,-1,47
  339.848484848 218.742424242 339.848484848 218.742424242 324.21097337 218.742424242 c 0,0,1
 EndSplineSet
+Kerns2: 803 -25 "Maka KERN-1"
 EndChar
 
 StartChar: u11EF2
@@ -123751,7 +123752,7 @@ SplineSet
  134 234 134 234 133 114 c 5,31,32
  128 20 128 20 107 5 c 4,0,1
 EndSplineSet
-Kerns2: 781 -44 "Maka KERN-1" 783 -55 "Maka KERN-1" 784 -107 "Maka KERN-1" 787 -94 "Maka KERN-1" 789 -125 "Maka KERN-1" 795 -153 "Maka KERN-1"
+Kerns2: 781 -44 "Maka KERN-1" 783 -55 "Maka KERN-1" 784 -107 "Maka KERN-1" 787 -94 "Maka KERN-1" 789 -125 "Maka KERN-1" 795 -153 "Maka KERN-1" 798 -50 "Maka KERN-1"
 EndChar
 
 StartChar: Maka.O
