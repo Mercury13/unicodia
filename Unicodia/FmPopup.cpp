@@ -197,14 +197,12 @@ void FmPopup::myAdjustSize(const QRect& screenRect)
         static constexpr int HEIGHT_LEEWAY = 50;
         auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
         auto myW = std::max(width(), COOL_WIDTH - WIDTH_STEP);
-        while (true) {
+        int h;
+        do {
             myW += WIDTH_STEP;
-            auto h = layout->heightForWidth(myW);
-            if (h < rqHeight || myW >= MAX_WIDTH) {
-                resize(myW, h);
-                break;
-            }
-        }
+            h = layout->heightForWidth(myW);
+        } while (h > rqHeight && myW < MAX_WIDTH);
+        resize(myW, h);
     }
 }
 
