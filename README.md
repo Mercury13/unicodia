@@ -43,7 +43,7 @@ See [develop.md](develop.md).
 ## Update Unicode
 Wartime: as soon as base arrives, and release date is frozen, even on alpha review stage
 
-Peacetime (probably): as soon as some big font covering a major set arrives. Han too if the coverage is really high
+Peacetime (probably): stable release + some big font covering a major set arrives. Han too if the coverage is really high
 
 Emergency releases of a few characters (e.g. currency, Japanese era): instantly, even if they are tofu
 
