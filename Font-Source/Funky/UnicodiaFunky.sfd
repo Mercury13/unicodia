@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716324382
+ModificationTime: 1716325893
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -56,7 +56,7 @@ Lookup: 4 0 0 "Copt CCMP" { "Copt CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'copt' <'
 Lookup: 1 0 0 "Copt macron" { "Copt macron-1"  } []
 Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'dflt' > ) ]
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
-Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [150,15,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
+Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm below" { "Nagm below-1"  } ['blwm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -791,7 +791,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 352 32 14
+WinInfo: 320 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -120142,7 +120142,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EE0
+StartChar: Maka.K
 Encoding: 491 73440 781
 Width: 710
 Flags: W
@@ -120350,6 +120350,7 @@ SplineSet
  111.4 329.8 111.4 329.8 112.68 329.8 c 0,98,99
  127 329.8 127 329.8 127 364.5 c 2,39,40
 EndSplineSet
+Kerns2: 803 -85 "Maka KERN-1"
 EndChar
 
 StartChar: u11EE1
@@ -120557,7 +120558,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EE2
+StartChar: Maka.Ng
 Encoding: 493 73442 783
 Width: 775
 Flags: W
@@ -120627,9 +120628,10 @@ SplineSet
  312 162 l 1,92,93
  265.869918699 219.662601626 265.869918699 219.662601626 265.869918699 237.349329103 c 0,47,48
 EndSplineSet
+Kerns2: 803 -103 "Maka KERN-1"
 EndChar
 
-StartChar: u11EE3
+StartChar: Maka.P
 Encoding: 494 73443 784
 Width: 765
 Flags: W
@@ -120803,6 +120805,7 @@ SplineSet
  569 26 569 26 563.5 19.5 c 128,-1,0
  558 13 558 13 552 8.5 c 128,-1,1
 EndSplineSet
+Kerns2: 803 -101 "Maka KERN-1"
 EndChar
 
 StartChar: u11EE4
@@ -121248,7 +121251,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EE6
+StartChar: Maka.T
 Encoding: 497 73446 787
 Width: 766
 Flags: W
@@ -121419,6 +121422,7 @@ SplineSet
  562 124 562 124 577.5 117.5 c 128,-1,62
  593 111 593 111 603 111 c 0,0,1
 EndSplineSet
+Kerns2: 803 -65 "Maka KERN-1"
 EndChar
 
 StartChar: u11EE7
@@ -121634,7 +121638,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EE8
+StartChar: Maka.N
 Encoding: 499 73448 789
 Width: 900
 Flags: W
@@ -121711,9 +121715,10 @@ SplineSet
  176.365452409 290.623971798 176.365452409 290.623971798 238.526301623 355.448857407 c 128,-1,0
  300.687150838 420.273743017 300.687150838 420.273743017 333.850286828 448.334858086 c 128,-1,1
 EndSplineSet
+Kerns2: 803 -161 "Maka KERN-1"
 EndChar
 
-StartChar: u11EE9
+StartChar: Maka.C
 Encoding: 500 73449 790
 Width: 851
 Flags: W
@@ -121928,6 +121933,7 @@ SplineSet
  199.6 75 199.6 75 219.3 88.5 c 128,-1,52
  239 102 239 102 256.5 134 c 128,-1,53
 EndSplineSet
+Kerns2: 803 -110 "Maka KERN-1"
 EndChar
 
 StartChar: u11EEA
@@ -122706,7 +122712,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EEE
+StartChar: Maka.L
 Encoding: 505 73454 795
 Width: 689
 Flags: W
@@ -123222,7 +123228,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EF1
+StartChar: Maka.A
 Encoding: 508 73457 798
 Width: 612
 Flags: W
@@ -123631,7 +123637,7 @@ StartChar: Maka.U
 Encoding: 511 73460 801
 Width: 0
 GlyphClass: 4
-Flags: WO
+Flags: W
 HStem: -237.797 140.595<-39.7332 32.7844>
 VStem: -77 150.604<-199.896 -131>
 AnchorPoint: "Dot below" 0 0 mark 0
@@ -123640,7 +123646,7 @@ Fore
 Refer: 800 73459 S 1 0 0 1 -1 -869 2
 EndChar
 
-StartChar: u11EF5
+StartChar: Maka.E
 Encoding: 512 73461 802
 Width: 335
 Flags: W
@@ -123743,10 +123749,10 @@ SplineSet
  134 234 134 234 133 114 c 5,31,32
  128 20 128 20 107 5 c 4,0,1
 EndSplineSet
-Kerns2: 784 -107 "Maka KERN-1" 787 -94 "Maka KERN-1" 789 -125 "Maka KERN-1" 795 -153 "Maka KERN-1"
+Kerns2: 781 -44 "Maka KERN-1" 784 -107 "Maka KERN-1" 787 -94 "Maka KERN-1" 789 -125 "Maka KERN-1" 795 -153 "Maka KERN-1"
 EndChar
 
-StartChar: u11EF6
+StartChar: Maka.O
 Encoding: 513 73462 803
 Width: 337
 Flags: W
@@ -124182,7 +124188,7 @@ EndChar
 StartChar: Maka.UU
 Encoding: 807 -1 807
 Width: 0
-Flags: HW
+Flags: W
 AnchorPoint: "Dot below" 0 0 mark 0
 LayerCount: 2
 Fore
