@@ -93,17 +93,19 @@ FmPopup::FmPopup(QWidget* owner, const char* color)
 {
     if (!owner)
         throw std::invalid_argument("[FmPopup] Need owner widget");
-    auto vl = new QVBoxLayout(this);
-    setLayout(vl);
+    layout = new QVBoxLayout(this);
+    setLayout(layout);
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
-        vl->setContentsMargins(10, 10, 10, 10);
+        layout->setContentsMargins(10, 10, 10, 10);
     } else {
-        vl->setContentsMargins(1, 1, 1, 1);
+        layout->setContentsMargins(0, 0, 0, 0);
     }
 
     lbText = new ClickableLabel("[QLabel]", this);
     lbText->setWordWrap(true);
-    vl->addWidget(lbText);
+    //lbText->setMaximumSize(10000000, 1000000);
+    setMaximumSize(10000000, 1000000);
+    layout->addWidget(lbText);
 
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
         setAttribute(Qt::WA_TranslucentBackground); //enable window to be transparent
@@ -118,7 +120,7 @@ FmPopup::FmPopup(QWidget* owner, const char* color)
     setStyleSheet("QWidget { background-color: black }");
     char buf[100];
     snprintf(buf, std::size(buf),
-             "QLabel { background-color: %s; padding: 10px; }",
+             "QLabel { background-color: %s; padding: 10px; border: 1px solid black }",
              color);
     lbText->setStyleSheet(buf);
     connect(lbText, &ClickableLabel::clicked, this, &This::hide);
@@ -183,10 +185,35 @@ void FmPopup::popupAtY(
 }
 
 
-FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
+void FmPopup::myAdjustSize(const QRect& screenRect)
 {
     adjustSize();
+    if (height() >= 350) {
+        // Does not resize, but let it resize if wants
+        static constexpr int MAX_WIDTH = 900;
+        static constexpr int WIDTH_STEP = 50;
+        static constexpr int COOL_WIDTH = 450;
+        static constexpr int COOL_HEIGHT = 650;
+        static constexpr int HEIGHT_LEEWAY = 50;
+        auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
+        auto myW = std::max(width(), COOL_WIDTH - WIDTH_STEP);
+        while (true) {
+            myW += WIDTH_STEP;
+            auto h = layout->heightForWidth(myW);
+            if (h < rqHeight || myW >= MAX_WIDTH) {
+                resize(myW, h);
+                break;
+            }
+        }
+    }
+}
+
+
+FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
+{
     auto screenRect = screen->availableGeometry();
+    hide();  // if shown
+    myAdjustSize(screenRect);
     auto ownerRect = fOwner->geometry().intersected(screenRect);
     eatBottomMargin(ownerRect, POPUP_BOTTOM_MARGIN);
 

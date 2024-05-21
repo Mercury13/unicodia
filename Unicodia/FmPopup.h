@@ -83,11 +83,13 @@ public:
 protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
+    virtual void myAdjustSize(const QRect& screenRect);
 private:
     QWidget* fOwner;
     ClickableLabel* lbText;    
     QRect fLastAbsRect;
     QWidget* fLastWidget;
+    class QVBoxLayout* layout;
 
     void popupAtY(
             const QRect& hotspotAbsRect,
