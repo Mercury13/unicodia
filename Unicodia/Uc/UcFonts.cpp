@@ -18,7 +18,7 @@ constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
 constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::RAW_FONT };
-constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
+constexpr uc::Family FNAME_NOTOMUSIC { "NotoMusic-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_MUSIC_FIXUP { "UnicodiaMusicFixup.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
