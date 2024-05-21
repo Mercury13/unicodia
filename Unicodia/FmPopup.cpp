@@ -103,8 +103,6 @@ FmPopup::FmPopup(QWidget* owner, const char* color)
 
     lbText = new ClickableLabel("[QLabel]", this);
     lbText->setWordWrap(true);
-    //lbText->setMaximumSize(10000000, 1000000);
-    setMaximumSize(10000000, 1000000);
     layout->addWidget(lbText);
 
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
