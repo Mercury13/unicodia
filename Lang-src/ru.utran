@@ -2116,7 +2116,7 @@
      <transl>Обрамлённые буквы и цифры</transl>
     </text>
     <text id="Text">
-     <orig>According to English Wikipedia, these characters are mainly used for lists{{-}}“half numbered, half bulleted.” {{em|Ⓜ}} is used as [[pt:emoji|emoji]] for metro/subway.</orig>
+     <orig>According to English Wikipedia, these characters are mainly used for lists{{-}}“half numbered, half bulleted”. {{em|Ⓜ}} is used as [[pt:emoji|emoji]] for metro/subway.</orig>
      <transl>По данным английской Википедии, эти символы в основном предназначены для списков{{-}}«наполовину маркированных, наполовину нумерованных». {{em|Ⓜ}} используется как [[pt:emoji|эмодзи]] для метро.</transl>
     </text>
    </group>
@@ -2526,7 +2526,7 @@
       <p />
       <p>Among supplementary elements: flat part B, circle Q, slant X, break Z. For every stroke it’s codified in what direction it must be written.</p>
       <p />
-      <p>All name are Chinese: for example, B from ''biǎn'' “flat.”</p>
+      <p>All name are Chinese: for example, B from ''biǎn'' “flat”.</p>
      </orig>
      <transl>
       <p>Иероглифы [[pt:cjk|ККЯ]] состоят из основных восьми элементов:</p>
@@ -4901,7 +4901,7 @@
       <p />
       <p>Alphabet invented by brothers Ibrahima and Abdoulaye Barry, then teenagers, to convey Fula languages better than Latin or Arabic. New script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
       <p />
-      <p>Alphabet is named for four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing.”</p>
+      <p>Alphabet is named for four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
       <p />
       <p>Before that there were two attempts to make Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greaty modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
      </orig>
@@ -5090,7 +5090,7 @@
      <transl>басса ''(Либерия, 400{{_}}тыс. на 2006)''</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign.” Authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
+     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. Authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
      <transl>Басса по имени Томас Льюис открыл, что бывшие рабы басса из Америки используют необычное письмо. По другим данным, он создал письмо сам. Сами басса называют письмо ''вах''{{-}}«ставить знак». Самобытное письмо было распространено в XX{{_}}веке, но в XXI всё больше заменяется [[ps:Latn|латиницей]].</transl>
     </text>
    </group>
@@ -5259,7 +5259,7 @@
      <orig>
       <p>Braille is a dot writing system for blind people. It uses groups 2×3{{_}}dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
       <p />
-      <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing.” Barbier used 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code. Braille invented his code in age of 15, worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
+      <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing”. Barbier used 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code. Braille invented his code in age of 15, worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
       <p />
       <p>Braille industrialized assistive technologies for blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to normal text for sighted people or even over it.</p>
      </orig>
@@ -9798,7 +9798,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>As Artemy Lebedev said, pictogram of drinking glass means drinking glass. Ideogram means drinking glass, glass as material, fragile, drunkenness… Both are called “hieroglyphs” sometimes. Chinese ideograph “man+tree” mean “rest.”</p>
+      <p>As Artemy Lebedev said, pictogram of drinking glass means drinking glass. Ideogram means drinking glass, glass as material, fragile, drunkenness… Both are called “hieroglyphs” sometimes. Chinese ideograph “man+tree” mean “rest”.</p>
       <p />
       <p>Writing short thoughts with pictograms and ideograms surrounds us everywhere: on road signs, in interfaces of appiances and software. But generally this writing has{{_}}not{{_}}advanced far from pictograms. Writing speech with ideograms is two steps forward: picture may mean a concept, and they are ordered by position in language, not{{_}}by{{_}}mutual relation. If “hunter killed a deer with a spear”, a sign for killing is made, and the spear is drawn the last, not{{_}}between hunter and deer.</p>
       <p />
@@ -10497,7 +10497,7 @@
      <orig>
       <p>From Japanese {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol''.</p>
       <p />
-      <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: highest school grade {{em|💯}} turned to “fully agree.”</p>
+      <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: highest school grade {{em|💯}} turned to “fully agree”.</p>
       <p />
       <p>Several old pre-2010 pictograms are guaranteed to show as emoji only with U+FE0F character (''aka'' variation selector 16).</p>
       <p />
