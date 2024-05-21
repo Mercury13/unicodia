@@ -1,6 +1,6 @@
 #
 # Unihan_NumericValues.txt
-# Date: 2024-01-26 00:00:00 GMT [KL]
+# Date: 2024-04-24 00:00:00 GMT [KL]
 # Unicode version: 16.0.0
 #
 # Unicode Character Database

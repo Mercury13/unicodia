@@ -1,7 +1,7 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 16.0.0
 @@@+	NamesList-16.0.0.txt
-@+	Generation Date: 2024-04-30, 11:19:40 GMT
+@+	Generation Date: 2024-05-17, 19:24:02 GMT
 	Unicode 16.0.0 names list.
 	Repertoire synched with UnicodeData-16.0.0d16.txt.
 	Pre-beta rollup of various fixes.
@@ -17,6 +17,7 @@
 	Add notices about use of colon in Egyptian hieroglyph annotations.
 	Add annotation for 0B35; update annotation for 0B55.
 	Add annotation for 1DF8.
+	Add formal name alias for 1680B.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -49481,6 +49482,7 @@ FFFF	<not a character>
 16809	BAMUM LETTER PHASE-A PON PA NJI PIPAEMGBIEE
 1680A	BAMUM LETTER PHASE-A PON PA NJI PIPAEMBA
 1680B	BAMUM LETTER PHASE-A MAEMBGBIEE
+	% BAMUM LETTER PHASE-A MAEMGBIEE
 1680C	BAMUM LETTER PHASE-A TU MAEMBA
 1680D	BAMUM LETTER PHASE-A NGANGU
 1680E	BAMUM LETTER PHASE-A MAEMVEUX
