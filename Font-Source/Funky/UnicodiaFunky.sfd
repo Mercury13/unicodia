@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716349342
+ModificationTime: 1716350041
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -120627,7 +120627,7 @@ EndChar
 StartChar: Maka.P
 Encoding: 494 73443 784
 Width: 765
-Flags: MW
+Flags: MWO
 HStem: 203.574 133.333<286.543 346.132>
 VStem: 514.056 82.1936<309.64 571.12> 543.229 71.2699<108.535 407.197>
 TtInstrs:
@@ -120732,7 +120732,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 387 13 basechar 0
+AnchorPoint: "Dot below" 346 28 basechar 0
 AnchorPoint: "Umlaut" 537 723 basechar 0
 LayerCount: 2
 Fore
