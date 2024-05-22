@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716348023
+ModificationTime: 1716348325
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -120733,7 +120733,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 387 13 basechar 0
-AnchorPoint: "Umlaut" 516 700 basechar 0
+AnchorPoint: "Umlaut" 537 723 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -120775,7 +120775,7 @@ EndChar
 StartChar: u11EE4
 Encoding: 495 73444 785
 Width: 952
-Flags: WO
+Flags: W
 HStem: -7.44524 116.045<410.869 535.791> 446.092 132.507<216.548 359.915> 466.645 138.26<644.47 777.035>
 TtInstrs:
 SVTCA[y-axis]
