@@ -14,33 +14,48 @@ Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y�
 === Toto • unknown origin ===
 
 Probably someone from SIL International, SIL Open Font License
-Probably fully working, I tried to copy all tables
+Status: probably fully working, I tried to copy all tables
 
 
 === Gothic • Junicode ===
 
 © Peter Baker, SIL Open Font License
-Diaeresis works, numbers do not
+Status: diaeresis works, numbers do not
 Matrix is ×135%
 
 
 === Coptic • NewAthena  ===
 
 © Society for Classical Studies, SIL Open Font License
-Functionality is mine from scratch, at least as working as Noto!
+Status: at least as functional as Noto and NewAthena combined!
 
 
 === Makasar • MakasarGraphite  ===
 
 © Anshuman Pandey, license unknown
-Functionality is mine from scratch, at OpenType instead of Graphite
 
 
 == Status of MY scripts ==
 
-Cypro-Minoan: should work
-Nag: working
-Garay: barely working, either improve or hand to other font
+=== Cypro-Minoan ===
+
+Source of inspiration: Michael Everson’s Unicode tracings
+Status: should work
+
+=== Garay ===
+
+Source of glyphs: some poor Latin-mapped font
+Status: barely working, either improve or hand to other font
+
+=== Makasar ===
+
+Source of inspiration: Makasar prince’s diaries and and his treaties with Dutch East-Indic Company, and Anshuman Pandey’s font
+Status: working, just Arabic-Indic digits are absent
+
+=== Nag Mundari ===
+
+Source of inspiration: none, it’s a simple font
+Status: working
 
 
 == Stability policy ==
