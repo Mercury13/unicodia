@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716368084
+ModificationTime: 1716368553
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -62,7 +62,7 @@ Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'na
 Lookup: 260 0 0 "Nagm below" { "Nagm below-1"  } ['blwm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "RtL ABVM" { "RtL ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common ABVM" { "Common ABVM-1"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common ABVM" { "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -791,7 +791,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 352 32 14
+WinInfo: 384 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -800,7 +800,7 @@ Grid
  2000 700 l 1024
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
+AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
 BeginChars: 808 808
 
 StartChar: SmallCircle
@@ -122563,8 +122563,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Maka uml right dot" 710 546 basechar 0
 AnchorPoint: "Dot below" 510 9 basechar 0
-AnchorPoint: "Umlaut" 495 541 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -123040,7 +123040,7 @@ StartChar: Maka.I
 Encoding: 510 73459 800
 Width: 0
 GlyphClass: 4
-Flags: W
+Flags: WO
 HStem: 631.203 140.595<-38.7332 33.7844>
 VStem: -76 150.604<669.104 738>
 TtInstrs:
@@ -123110,6 +123110,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Maka uml right dot" 0 543 mark 0
 AnchorPoint: "Umlaut" 0 543 mark 0
 LayerCount: 2
 Fore
@@ -123809,6 +123810,7 @@ StartChar: Maka.II
 Encoding: 806 -1 806
 Width: 0
 Flags: W
+AnchorPoint: "Maka uml right dot" 110 543 mark 0
 AnchorPoint: "Umlaut" 0 543 mark 0
 LayerCount: 2
 Fore
