@@ -70,3 +70,4 @@ These fonts are taken to Unicodia without author’s consent:
 ## Future functionality
 * Finish GlyphWiki loader.
 * Better CJK reference.
+* Plane map.
