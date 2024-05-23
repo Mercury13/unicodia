@@ -63,7 +63,7 @@ These fonts are taken to Unicodia without author’s consent:
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
-**Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
+**Russian.** Ё is mandatory. No grammatical concessions to Ukrainian. If adjective script has a strong connection to language, it’s male like language (грузинский). Otherwise female like script (батакская).
 
 **Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
 
