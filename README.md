@@ -36,7 +36,7 @@ See [develop.md](develop.md).
 * Recently checked Windows 11, and it works.
 
 ## Tofu/misrenderings
-* **W10/11 should support everything possible, W7 just runs somehow**
+* **W10/11 should support everything possible, W7 just runs somehow.** At the time of testing still no BMP tofu, per old policy.
 * Previously W7 supported the entire base plane and three important plane 1 scripts. I dropped that guarantee, though I did nothing against it, just did not test
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
