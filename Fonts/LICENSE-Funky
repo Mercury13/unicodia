@@ -58,4 +58,5 @@ Status: working
 Lone characters WILL eventually disappear
 Super/subscripts — IDK, while Unicodia’s main font is Cambria, won’t
 Working scripts will disappear only together with handing over to better font
+* Devanagari Jain symbols → use Noto
 * Ottoman Siyaq → use Noto
