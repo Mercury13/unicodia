@@ -7037,7 +7037,7 @@
      <orig>
       <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s{{_}}not{{_}}ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
       <p />
-      <p>Brahmic abugida consisting of 18 letters, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces, words and phrases are divided with vertical ellipsis. With such functionality, script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
+      <p>Brahmic abugida consisting of 17 consonants, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces, words and phrases are divided with vertical ellipsis. With such functionality, script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
       <p />
       <p>Both European and Arabic-Indic digits are attested. In one of manuscripts there’s a punctuation mark resembling a palm-tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
       <p />
@@ -7047,7 +7047,7 @@
      <transl>
       <p>Походить з [[ps:Kawi|каві]] (старояванської). За форму літер письмо одержало прізвисько «пташине». Коли письмо з’явилося{{-}}предмет суперечок, але воно не{{_}}давнє: відома форма пристосована до пера і паперу, а не{{_}}пальмового листя. Перше відоме джерело{{-}}підпис на угоді з Голландською Ост-Індською компанією (1667).</p>
       <p />
-      <p>Брахмійська абуґіда з 18 літер без [[pt:virama|вірами]]. Початкова голосна{{-}}літера {{sm|𑻱}} (можливо, з оголосами). Концеві приголосні{{-}}''м'', ''нн'' та гортанна змичка{{-}}опускаються. Пропусків нема, між словами та фразами ставиться вертикальна трикрапка. З такою функціональністю писемність буде неповною{{-}}тому до XIX{{_}}століття була повністю замінена [[ps:Bugi|лонтарою]], яка вважається сестринською.</p>
+      <p>Брахмійська абуґіда з 17 приголосних без [[pt:virama|вірами]]. Початкова голосна{{-}}літера {{sm|𑻱}} (можливо, з оголосами). Концеві приголосні{{-}}''м'', ''нн'' та гортанна змичка{{-}}опускаються. Пропусків нема, між словами та фразами ставиться вертикальна трикрапка. З такою функціональністю писемність буде неповною{{-}}тому до XIX{{_}}століття була повністю замінена [[ps:Bugi|лонтарою]], яка вважається сестринською.</p>
       <p />
       <p>Цифри зустрічалися як європейські, так і арабо-індійські. В одному з рукописів застрічався розділовий знак у вигляді пальми, [[pt:unification|уніфікований]] з [[pt:emoji|емодзі]] {{em|🌴}}.</p>
       <p />
@@ -11856,6 +11856,10 @@
    <text id="QaEgyp">
     <orig>for reviewing Egyptian font</orig>
     <transl>за ревізію єгипетського шрифта</transl>
+   </text>
+   <text id="OldMaka">
+    <orig>for old Makasar font</orig>
+    <transl>за старий макасарський шрифт</transl>
    </text>
   </group>
   <group id="Main">
