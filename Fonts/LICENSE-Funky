@@ -58,7 +58,7 @@ Status: working
 Lone characters WILL eventually disappear
 * Devanagari Jain symbols → use Noto
 
-ASCII and other support characters WILL NOT disapear
+ASCII and other auxiliary characters WILL NOT disapear
 
 Super/subscripts — IDK, while Unicodia’s main font is Cambria, won’t
 
