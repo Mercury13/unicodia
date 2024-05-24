@@ -4354,8 +4354,8 @@
    </group>
    <group id="1EC70">
     <text id="Name">
-     <orig>Indic Siyaq numbers</orig>
-     <transl>Индийские цифры сийяк</transl>
+     <orig>Siyaq numbers — Indic</orig>
+     <transl>Цифры сийяк — индийские</transl>
     </text>
     <text id="Text">
      <orig>
@@ -4372,8 +4372,8 @@
    </group>
    <group id="1ED00">
     <text id="Name">
-     <orig>Ottoman Siyaq numbers</orig>
-     <transl>Османские цифры сийяк</transl>
+     <orig>Siyaq numbers — Ottoman</orig>
+     <transl>Цифры сийяк — османские</transl>
     </text>
     <text id="Text">
      <orig>
