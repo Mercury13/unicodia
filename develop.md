@@ -124,6 +124,8 @@
   * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 
 # Decapitalization rules
+I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
+
 There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
 
 If exception triggers, nothing else works. Exceptions also work for mixed case, when the rest rules are just skipped.
