@@ -79,7 +79,7 @@
   * If you know languages, translate to Russian/Ukrainian using the same UTranslator
     * File → Update data, Go → Find warnings → All, and close those changes
   * If some blocks should be logically near, but specific language makes a mess (Greek → Ancient Greek numbers), add an ellipsis to the beginning using ``locale.xml``.
-    * This ellipse will automatically go if you sort blocks by code
+    * This ellipsis will automatically go if you sort blocks by code
 * Decapitalization rules: “LATIN CAPITAL LETTER A” → “Latin capital letter A”
   * They are in ``AutoBuilder/data.cpp``
   * See _Decapitalization rules_ below
