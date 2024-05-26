@@ -58,7 +58,7 @@
   * VERSIONS: add new Unicode and emoji versions (``EcVersion``). Write when it’s going to be released. If it’s beta, add ``Vfg::BETA`` flag
   * BLOCKS: they are in ``UcBlocks.cpp``. While the block is full of tofu, add ``Ifg::MISSING`` flag to synthIcon field
   * SCRIPTS: they are in ``UcScripts.cpp``. **Do not mess up alphabetic order!**
-  * Now Unicodia runs somehow!!
+* Now Unicodia runs somehow!!
 
 ## Urgent first-party data: don’t release until you fill all somehow
 * Block extension history:
