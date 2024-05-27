@@ -90,7 +90,12 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                                         sMain = "???";
                                     params.emplace_back(sMain);
                                 }
-                                return { type, Feature::NONE, pos, param.posNext, std::move(params) };
+                                return { .type = type,
+                                         .feature = Feature::NONE,
+                                         .posStart = pos,
+                                         .posNext = param.posNext,
+                                         .params = std::move(params),
+                                         .indentSize = 0 };
                             } break;
                         }
                     }   // loop
@@ -106,7 +111,12 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                 auto type = (nQuotes % 2 == 0)
                         ? ((nQuotes == 2) ? Type::ITALIC : Type::EMPTY)
                         : ((nQuotes == 5) ? Type::BOLD_ITALIC : Type::BOLD);
-                return { type, Feature::NONE, pos, q, {} };
+                return { .type = type,
+                         .feature = Feature::NONE,
+                         .posStart = pos,
+                         .posNext = q,
+                         .params = {},
+                         .indentSize = 0 };
             }
             break;
         case '\n': {
@@ -118,11 +128,17 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                 auto nLfs = q - pos;
                 // Detect feature
                 auto feature = Feature::NONE;
+                unsigned indentSize = 0;
                 if (q != end) {
                     switch (*q) {
                     case ':':
                         feature = Feature::INDENT;
                         ++q;
+                        indentSize = 1;
+                        while (q != end && *q == ':') {
+                            ++indentSize;
+                            ++q;
+                        }
                         break;
                     case '*':
                         feature = Feature::BULLET;
@@ -140,13 +156,24 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                         || currFeature != Feature::NONE     // Single LF in featured paragraph WORKS
                         || feature != Feature::NONE) {      // Single LF making featured paragraph WORKS
                     auto type = (nLfs == 1) ? Type::LINEBREAK : Type::PARAGRAPH;
-                    return { type, feature, pos, q, {} };
+                    return { .type = type,
+                             .feature = feature,
+                             .posStart = pos,
+                             .posNext = q,
+                             .params = {},
+                             .indentSize = indentSize };
                 }
             } break;
         default: ;
         }   // switch (c)
     }
-    return { Type::STRING_END, Feature::NONE, end, end, {} };
+    return {
+        .type = Type::STRING_END,
+        .feature = Feature::NONE,
+        .posStart = end,
+        .posNext = end,
+        .params = {},
+        .indentSize = 0 };
 }
 
 
@@ -204,11 +231,11 @@ void wiki::run(Engine& engine, const char* start, const char* end)
             engine.appendTemplate(x.params, (x.posNext != end));
             break;
         case Type::PARAGRAPH:
-            engine.appendBreak(Strength::PARAGRAPH, x.feature);
+            engine.appendBreak(Strength::PARAGRAPH, x.feature, x.indentSize);
             paraFeature = x.feature;
             break;
         case Type::LINEBREAK:
-            engine.appendBreak(Strength::BREAK, x.feature);
+            engine.appendBreak(Strength::BREAK, x.feature, x.indentSize);
             paraFeature = x.feature;
             break;
         }

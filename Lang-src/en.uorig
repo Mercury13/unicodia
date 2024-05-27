@@ -7937,8 +7937,8 @@
       <p>[[pt:format|Format]] character U+200D intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
       <p />
       <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]:</p>
-      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
-      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWJ + {{sm|ष}} ša = {{sm|क्‍ष}} alternate kša</p>
+      <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|*ष|ša =|*क्ष|kša}}</p>
+      <p>{{smtable|*क|ka +|**◌्|virama + ZWJ +|*ष|ša =|*क्‍ष|alternate kša}}</p>
       <p />
       <p>'''[[pt:emoji|Emoji]]'''</p>
       <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
@@ -7962,8 +7962,9 @@
       <p>: '''dys''' + ZWNJ + '''topia''' = '''dys&amp;zwnj;topia''' (no ligature between prefix and root)</p>
       <p />
       <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]</p>
-      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
-      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWNJ + {{sm|ष}} ša = {{sm|क्‌ष}} alternate kša, usually in compound words</p>
+      <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|**ष|ša =|*क्ष|kša}}</p>
+      <p>{{smtable|*क|ka +|**◌्|virama + ZWNJ +|*ष|ša =|*क्‌ष|alternate kša}}</p>
+      <p>::: (usually in compound words)</p>
      </orig>
     </text>
    </group>

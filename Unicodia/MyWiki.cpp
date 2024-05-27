@@ -435,7 +435,7 @@ namespace {
                 const SafeVector<std::string_view>& x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
-        void appendBreak(wiki::Strength strength, wiki::Feature feature) override;
+        void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
         void finish() override;
     protected:
         wiki::HtWeight weight;
@@ -488,7 +488,9 @@ namespace {
         }
     }
 
-    void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature)
+    void Eng::appendBreak(
+            wiki::Strength strength, wiki::Feature feature,
+            unsigned indentSize)
     {
         finishDiv();
         switch (strength) {
@@ -512,7 +514,9 @@ namespace {
         case wiki::Feature::NONE:
             break;
         case wiki::Feature::INDENT:
-            s += NBSP NBSP NBSP;
+            for (unsigned i = 0; i < indentSize; ++i) {
+                s += NBSP NBSP NBSP;
+            }
             break;
         case wiki::Feature::BULLET:
             str::append(s, BULLET);
@@ -650,7 +654,9 @@ namespace {
             } else {
                 if (i > 1)
                     s += "&nbsp;";
-                str::append(s, v);
+                auto u8 = str::toU8(v);
+                str::replace(u8, u8' ', u8"&nbsp;");
+                mywiki::append(s, u8, font);
                 if (i + 1 < n)
                     s += "&nbsp;";
             }

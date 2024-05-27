@@ -45,6 +45,7 @@ namespace wiki {
         const char* posStart;
         const char* posNext;
         SafeVector<std::string_view> params;
+        unsigned indentSize;
     };
 
     Thing findThing(const char* pos, const char* end, Feature currFeature);
@@ -81,7 +82,7 @@ namespace wiki {
         virtual void appendTemplate(
                     const SafeVector<std::string_view>& x,
                     bool hasRemainder) = 0;
-        virtual void appendBreak(Strength strength, Feature feature) = 0;
+        virtual void appendBreak(Strength strength, Feature feature, unsigned indentSize) = 0;
 
         /// Called after wiki parsing.
         /// Closes weight tags that are not open.

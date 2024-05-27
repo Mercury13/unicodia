@@ -289,8 +289,8 @@ constinit const uc::Term uc::terms[] {
     { "plane", EcTermCat::ENCODING, u8"plane" },
     { "private", EcTermCat::ENCODING, u8"private-use character" },
     { "reject", EcTermCat::ENCODING, {} },
-    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner" },
-    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner" },
+    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner", {}, EcFont::DEVANAGARI },
+    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner", {}, EcFont::DEVANAGARI },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
