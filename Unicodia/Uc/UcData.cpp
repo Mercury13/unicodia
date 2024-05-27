@@ -254,7 +254,7 @@ constinit const uc::Term uc::terms[] {
     { "nontext", EcTermCat::SCRIPT_CLASS, u8"non-text notation" },
 
     { "acrophonic", EcTermCat::CHAR_CLASS, u8"acrophonic character" },
-    { "virama", EcTermCat::CHAR_CLASS, u8"virama" },
+    { "virama", EcTermCat::CHAR_CLASS, u8"virama", {}, EcFont::DEVANAGARI },
     { "graphic", EcTermCat::CHAR_CLASS, u8"graphic character, printable character" },
     { "deprecated", EcTermCat::CHAR_CLASS, u8"deprecated character" },
     { "ignorable", EcTermCat::CHAR_CLASS, u8"default-ignorable character" },
