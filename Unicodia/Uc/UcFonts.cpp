@@ -129,7 +129,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { FNAME_DEVA, Ffg::DESC_BADLY_HINTED, STYLE_DEVA, SIZE_DEVA },              // Devanagari
+    { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
+      { "Arial Unicode MS" },                                                   // …1 for descriptions
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, 10_top, SIZE_DEVA },                    // Devanagari bigger
       { FNAME_DEVA, 10_top, SIZE_DEVA },                                        // …1
     { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },                // Dingbat

@@ -15,12 +15,6 @@ What was done by authors of Unicodia:
   - Rehinted with TtfAutoHint, see settings PNG
 * Syloti Nagri
   - Hinted with FontForge (except dotted circle)
-* Devanagari
-  - Added new anchor (Vedic letter) to 25CC and Vedic umlauts:
-     (596,427) on 25CC; (0,800) on 1CD0…D2, F4, A8E0…F1
-  - Dehinted 25CC
-* Hebrew
-  - Made 05EF yod triangle
 * Kannada
   - Reanchored candrabindu to dotted circle
 * Korean
