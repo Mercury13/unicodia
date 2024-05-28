@@ -227,7 +227,8 @@ namespace uc {
         BAMUM,
         BASSA_VAH,
         BATAK,
-        VEDIC,      ///< Devanagari → Nadinagari → Bengali
+        VEDIC,      ///< Devanagari fixup → Devanagari → Nadinagari → Bengali
+          Z_VED_2,
           Z_VED_1,
         BENGALI,
         BHAIKSUKI,
@@ -267,7 +268,8 @@ namespace uc {
            Z_CJY_3,
         CUNEIFORM,
         DEVANAGARI,
-        DEVANAGARI_BIGGER,
+        DEVANAGARI_BIGGER,  ///< Also use fixup font
+          Z_DE1_1,
         DINGBAT,
           Z_DIN_1,
           Z_DIN_2,
