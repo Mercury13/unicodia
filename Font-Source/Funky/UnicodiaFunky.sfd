@@ -5,7 +5,7 @@ FamilyName: UnicodiaFunky
 Weight: Regular
 Copyright: Copyright (c) 2021 Mikhail Merkuryev\nYou just DO WHAT THE FUNK YOU WANT TO.
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
-Version: 001.000
+Version: 2.7.2
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716798621
+ModificationTime: 1716886381
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
