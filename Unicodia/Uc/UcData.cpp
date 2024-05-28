@@ -246,7 +246,7 @@ constinit const uc::Term uc::terms[] {
     { "abjad", EcTermCat::SCRIPT_CLASS, u8"consonant script, abjad" },
     { "syllabic", EcTermCat::SCRIPT_CLASS, u8"syllabic script" },
     { "abugida", EcTermCat::SCRIPT_CLASS, u8"abugida", {}, EcFont::ETHIOPIC },
-    { "brahmic", EcTermCat::SCRIPT_CLASS, u8"Brahmic abugida, Indic script", {}, EcFont::Z_DEV_1 },
+    { "brahmic", EcTermCat::SCRIPT_CLASS, u8"Brahmic abugida, Indic script", {}, EcFont::DEVANAGARI_SYSTEM },
     { "alphabet", EcTermCat::SCRIPT_CLASS, u8"alphabet script" },
     { "arguable", EcTermCat::SCRIPT_CLASS, {} },
     { "cjk", EcTermCat::SCRIPT_CLASS, u8"CJK = Chinese, Japanese, Korean" },
@@ -254,7 +254,7 @@ constinit const uc::Term uc::terms[] {
     { "nontext", EcTermCat::SCRIPT_CLASS, u8"non-text notation" },
 
     { "acrophonic", EcTermCat::CHAR_CLASS, u8"acrophonic character" },
-    { "virama", EcTermCat::CHAR_CLASS, u8"virama", {}, EcFont::Z_DEV_1 },
+    { "virama", EcTermCat::CHAR_CLASS, u8"virama", {}, EcFont::DEVANAGARI_SYSTEM },
     { "graphic", EcTermCat::CHAR_CLASS, u8"graphic character, printable character" },
     { "deprecated", EcTermCat::CHAR_CLASS, u8"deprecated character" },
     { "ignorable", EcTermCat::CHAR_CLASS, u8"default-ignorable character" },
@@ -289,8 +289,8 @@ constinit const uc::Term uc::terms[] {
     { "plane", EcTermCat::ENCODING, u8"plane" },
     { "private", EcTermCat::ENCODING, u8"private-use character" },
     { "reject", EcTermCat::ENCODING, {} },
-    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner", {}, EcFont::Z_DEV_1 },
-    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner", {}, EcFont::Z_DEV_1 },
+    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner", {}, EcFont::DEVANAGARI_SYSTEM },
+    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner", {}, EcFont::DEVANAGARI_SYSTEM },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },

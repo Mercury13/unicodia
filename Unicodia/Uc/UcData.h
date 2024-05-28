@@ -268,7 +268,7 @@ namespace uc {
            Z_CJY_3,
         CUNEIFORM,
         DEVANAGARI,
-          Z_DEV_1,
+          DEVANAGARI_SYSTEM,
         DEVANAGARI_BIGGER,  ///< Also use fixup font
           Z_DE1_1,
         DINGBAT,
