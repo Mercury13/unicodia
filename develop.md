@@ -119,18 +119,22 @@
     * Open your new Unicode version, click a tiny “Find” 🔍 icon next to # of new characters (now it’s the only, but things may change)
     * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
 * GlyphWiki’s placeholder of CJK fonts
-  * (To be written)
+  * (See GlyphWiki below)
 * Latin in Library
-  * AutoBuilder has some sort of forget checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
+  * AutoBuilder has some sort of forget-checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 
 # Decapitalization rules
 I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
 
-There are several types of decapitalization rules, but the most frequent three are dictionary, idioms and exceptions.
+There are several types of decapitalization rules, but the most frequent three are dictionary, idioms, script-specific and exceptions.
 
-If exception triggers, nothing else works. Exceptions also work for mixed case, when the rest rules are just skipped.
+## Exceptions
 
-Otherwise first dictionary works, then idioms.
+* It means: human manually wrote how the text should decapitalize.
+* If exception triggers, nothing else works.
+* If string’s case is mixed, the rest rules are just skipped, but exceptions still work (see ``extractSynonym`` function).
+* Otherwise first dictionary works, then idioms.
+* Script-specific rules are just inserted somewhere.
 
 ## Dictionary
 
@@ -140,6 +144,10 @@ Some types of dictionary entries:
 * Adjectives (PART_ADJECTIVE, e.g. BREATHY): if capitalized, push capitalization to the right
   * If chain of capitalization occurred, e.g. “letter Breathy long Foobar”, only the first adjective is capitalized
 * Nouns (PART_NOUN, e.g. COMMA): if capitalization pushed, stop and do not capitalize: “letter Breathy long Foobar”, but “letter Breathy long comma”
+
+## Script-specific
+
+Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM times KUR plus RU”. See line ``if (words[0].original == "CUNEIFORM"sv) {``
 
 ## Examples
 1. Garay capital letter Ca
@@ -164,7 +172,17 @@ Some types of dictionary entries:
    * Two rules here, script TOTO and adjective BREATHY
 
 # If you want to rebuild GlyphWiki font
-(This section is being written)
+
+Need FontForge, TtfAutoHint.
+
+1. Data is in ``Font-Source/GlyphWiki``
+1. Font consists of manual and automatic glyphs. Manual ones are in UnicodiaHan.sfd and are taken from various sources. But we need automatic ones now!
+1. Rename GlyphWiki font temporarily. Open Unicodia, find Tofu Statistics, extract CJK tofu. Put to hani-tofu.txt. (See comments in , we also need Kangxi radicals just because 
+1. Run GwLoader. Put contents of ``hani-tofu.txt`` to editing box. Load data. Empty ``Font-Source/GlyphWiki/Raw``, move resulting SVGs here. This directory **is** versioned!
+1. Run GwRemake. Get AutoRemade directory. This directory **is not** versioned, just exists, and may contain lots of harmless garbage!
+1. Change in ``load-glyphs.py`` path to your TtfAutoHint
+1. Open ``UnicodiaHan.sfd``. Run script ``load-glyphs.py``. **Do not save!**
+1. VCS (Git etc) should notice changes in ``Font-Source/GlyphWiki/Raw`` and ``UnicodiaHan.ttf``.
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
