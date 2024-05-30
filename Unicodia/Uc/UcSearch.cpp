@@ -487,10 +487,14 @@ namespace {
         if (!isOk) {
             return std::nullopt;
         }
-        if (r == static_cast<int>(r)        // resulting number is integer
-                && std::abs(r) < 10'000     // less than 10k
-                && q.contains('e', Qt::CaseInsensitive)) {  // contains e
-            return std::nullopt;
+        int rint = r;
+        if (r == rint                       // resulting number is integer
+                && q.contains('e', Qt::CaseInsensitive)) {  // exponential way
+            // So, we wrote integer in an exponential way
+            if (std::abs(r) < 10'000    // less than 10k
+                    || QString::number(rint).length() < what.length()) { // not-really-economic way to write
+                return std::nullopt;
+            }
         }
         return r;
     }
