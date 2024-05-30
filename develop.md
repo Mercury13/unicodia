@@ -173,7 +173,7 @@ Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM 
 
 # If you want to rebuild GlyphWiki font
 
-Need FontForge, TtfAutoHint.
+Need FontForge, TtfAutoHint, Qt Creator.
 
 1. Data is in ``Font-Source/GlyphWiki``
 1. Font consists of manual and automatic glyphs. Manual ones are in UnicodiaHan.sfd and are taken from various sources. But we need automatic ones now!
