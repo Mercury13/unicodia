@@ -476,6 +476,24 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
 #undef REGISTER_RESULT
 }
 
+namespace {
+
+    std::optional<double> myToDouble(const QString& x)
+    {
+        bool isOk;
+        double r = x.toDouble(&isOk);
+        if (!isOk) {
+            return std::nullopt;
+        }
+        if (r == static_cast<int>(r) && std::abs(r) < 10'000
+                && x.contains('e', Qt::CaseInsensitive)) {
+            return std::nullopt;
+        }
+        return r;
+    }
+
+}
+
 
 uc::MultiResult uc::doSearch(QString what)
 {
@@ -606,13 +624,11 @@ uc::MultiResult uc::doSearch(QString what)
             } else {
                 QString q = what;
                 q.replace(',', '.');
-                bool isOk;
-                auto val = q.toDouble(&isOk);
-                if (isOk) {
+                if (auto val = myToDouble(q)) {
                     // Decimal fraction
                     // Need two digits after point; three and more → stop
                     int denom = 100;
-                    auto val1 = val * denom;
+                    auto val1 = (*val) * denom;
                     auto val2 = std::round(val1);
                     if (std::abs(val1 - val2) < 1e-5) {
                         int num = val2;
