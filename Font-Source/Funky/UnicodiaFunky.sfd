@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1716970886
+ModificationTime: 1717227534
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -56,7 +56,7 @@ Lookup: 4 0 0 "Copt CCMP" { "Copt CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'copt' <'
 Lookup: 1 0 0 "Copt macron" { "Copt macron-1"  } []
 Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'dflt' > ) ]
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
-Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
+Lookup: 258 0 0 "Maka KERN" { "Maka KERN-2" [190,30,2] "Maka KERN-1" [170,15,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm below" { "Nagm below-1"  } ['blwm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -67,6 +67,36 @@ Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'ar
 Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
+KernClass2: 14 16 "Maka KERN-2"
+ 20 Maka.K Maka.C Maka.Y
+ 6 Maka.G
+ 7 Maka.Ng
+ 6 Maka.P
+ 6 Maka.B
+ 15 Maka.M Maka.Ang
+ 6 Maka.T
+ 13 u11EE7 Maka.L
+ 6 Maka.N
+ 21 Maka.J Maka.Ny Maka.A
+ 6 u11EED
+ 6 Maka.V
+ 6 Maka.S
+ 6 Maka.K
+ 6 Maka.G
+ 7 Maka.Ng
+ 6 Maka.P
+ 28 Maka.B Maka.M Maka.J Maka.Ny
+ 6 Maka.T
+ 6 u11EE7
+ 6 Maka.N
+ 6 Maka.C
+ 6 Maka.Y
+ 15 u11EED Maka.Ang
+ 6 Maka.L
+ 6 Maka.V
+ 6 Maka.S
+ 6 Maka.A
+ 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -93 {} -39 {} 0 {} -48 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -53 {} 0 {} 0 {} 0 {} -83 {} 0 {} -172 {} -117 {} 0 {} -111 {} 0 {} -72 {} -56 {} 0 {} 0 {} -80 {} 0 {} 0 {} -40 {} 0 {} 0 {} -82 {} 0 {} -30 {} -68 {} -33 {} 0 {} -49 {} 0 {} 0 {} 0 {} -48 {} 0 {} 0 {} -47 {} 0 {} -46 {} -56 {} -82 {} -88 {} -51 {} -70 {} -20 {} -73 {} -74 {} 0 {} 0 {} -77 {} -81 {} -30 {} -67 {} 0 {} -65 {} 0 {} -40 {} -131 {} 0 {} -110 {} 0 {} -122 {} -100 {} 0 {} 0 {} -146 {} 0 {} -32 {} -71 {} 0 {} -85 {} 0 {} -60 {} -134 {} 0 {} -112 {} 0 {} -163 {} -110 {} 0 {} 0 {} -178 {} 0 {} 0 {} -90 {} 0 {} 0 {} -42 {} 0 {} 0 {} -51 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -34 {} 0 {} 0 {} -92 {} 0 {} -87 {} 0 {} -72 {} -78 {} -34 {} 0 {} -117 {} 0 {} -33 {} -70 {} 0 {} 0 {} -103 {} -109 {} 0 {} -162 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} -74 {} 0 {} -35 {} -147 {} 0 {} -100 {} 0 {} -149 {} -74 {} -7 {} 0 {} -207 {} 0 {} -47 {} -71 {} 0 {} 0 {} 0 {} -25 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -21 {} 0 {} 0 {} -92 {} 0 {} -56 {} 0 {} -93 {} -47 {} 0 {} 0 {} -160 {} 0 {} -45 {} -91 {} 0 {} -41 {} -84 {} 0 {} -96 {} -30 {} -96 {} 0 {} -100 {} -63 {} -36 {} 0 {} -127 {} 0 {} -51 {} -96 {}
 ChainSub2: coverage "Copt ABVF-1" 0 0 0 1
  1 0 1
   Coverage: 33 Copt.Cap.Phi Copt.Small.Phi u2CEA
@@ -787,12 +817,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 128800 32 14
+WinInfo: 384 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -120523,7 +120554,7 @@ EndSplineSet
 Kerns2: 803 -105 "Maka KERN-1"
 EndChar
 
-StartChar: u11EE4
+StartChar: Maka.B
 Encoding: 73444 73444 785
 Width: 952
 Flags: W
@@ -120662,7 +120693,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EE5
+StartChar: Maka.M
 Encoding: 73445 73445 786
 Width: 952
 Flags: W
@@ -121208,7 +121239,7 @@ EndSplineSet
 Kerns2: 803 -110 "Maka KERN-1"
 EndChar
 
-StartChar: u11EEA
+StartChar: Maka.J
 Encoding: 73450 73450 791
 Width: 877
 Flags: W
@@ -121257,7 +121288,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EEB
+StartChar: Maka.Ny
 Encoding: 73451 73451 792
 Width: 1167
 Flags: W
@@ -121952,7 +121983,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u11EEF
+StartChar: Maka.V
 Encoding: 73455 73455 796
 Width: 959
 Flags: W
@@ -122364,7 +122395,7 @@ EndSplineSet
 Kerns2: 803 -25 "Maka KERN-1"
 EndChar
 
-StartChar: u11EF2
+StartChar: Maka.Ang
 Encoding: 73458 73458 799
 Width: 626
 Flags: W
@@ -123490,7 +123521,7 @@ EndChar
 StartChar: u1F747
 Encoding: 128839 128839 810
 Width: 1010
-Flags: WO
+Flags: W
 HStem: -0.605469 21G<52.75 125.587 859.825 932.443> 63.75 69.6299<148.755 294.349 724.781 872.485> 233.605 69.6299<425.729 592.873>
 TtInstrs:
 SVTCA[y-axis]
