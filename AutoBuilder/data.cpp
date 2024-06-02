@@ -1478,6 +1478,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("bet symbol")
     EX("gimel symbol")
     EX("dalet symbol")
+    EX("nabla")                         // Other nablas are capital
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
