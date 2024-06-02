@@ -49,11 +49,19 @@ bool uc::FieldRequest::isOk(const Cp& cp) const
     // Script
     if (isIneq(fields.ecScript, cp.ecScript))
         return false;
-    // Category
-    if (isIneq(fields.ecCategory, cp.ecCategory))
-        return false;
+    // Category / up-category
+    if (fields.ecCategory != EcCategory::NO_VALUE) {
+        if (fields.ecCategory != cp.ecCategory)
+            return false;
+    } else if (fields.ecUpCat != EcUpCategory::NO_VALUE) {
+        if (fields.ecUpCat != cp.category().upCat)
+            return false;
+    }
     // Bidirectional class
     if (isIneq(fields.ecBidiClass, cp.ecBidiClass))
+        return false;
+    // Flags
+    if (fields.fgs && !cp.flags.haveAny(fields.fgs))
         return false;
     return true;
 }

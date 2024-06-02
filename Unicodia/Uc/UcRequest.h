@@ -26,15 +26,18 @@ namespace uc {
 
     struct Fields {
         uc::EcScript ecScript = uc::EcScript::NO_VALUE;
-        uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;
+        uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;        
         uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
+        uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
         uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
+        uc::Cfgs fgs {};
     };
 
     class FieldRequest : public Request
     {
     public:
-        FieldRequest(const Fields& x) : fields(std::move(x)) {}
+        static_assert(std::is_trivially_copy_constructible_v<Fields>, "Check ctors and choose the most");
+        FieldRequest(const Fields& x) : fields(x) {}
         bool hasChars() const override { return true; }
         EcVersion ecVersion() const override { return fields.ecVersion; }
         bool isOk(const Cp& cp) const override;

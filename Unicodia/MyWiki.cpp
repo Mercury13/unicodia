@@ -73,7 +73,15 @@ void mywiki::Gui::popupAtRelMaybe(
     }
 }
 
+template <>
+constexpr unsigned ec::size<uc::EcUpCategory>()
+    { return static_cast<unsigned>(uc::EcUpCategory::NN); }
+
 namespace {
+
+    constinit const ec::Array<char, uc::EcUpCategory> upCatNames {
+        'C', 'F', 'L', 'M', 'N', 'P', 'S', 'Z'
+    };
 
     template <class Thing>
     class PopLink : public mywiki::Link
@@ -307,6 +315,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
     auto parts = str::splitSv(target, '|');
     if (parts.empty())  // Won’t search for empty thing
         return {};
+    unsigned uTmp;
     for (auto part : parts) {
         auto posEqual = part.find('=');
         if (posEqual == std::string_view::npos)
@@ -317,31 +326,49 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
         if (value.empty())
             return nullptr;
         // Check misc codes
-        if (code == "v"sv) {
+        if (code.length() != 1)
+            return nullptr;
+        switch (code[0]) {
+        case 'v':   // version
             if (auto version = uc::findVersion(value)) {
                 fields.ecVersion = version->stats.thisEcVersion;
-            } else {
-                return nullptr;
+                break;
             }
-        } else if (code == "s") {
+            return nullptr;
+        case 's':   // script
             if (auto script = uc::findScript(value)) {
                 fields.ecScript = static_cast<uc::EcScript>(script - uc::scriptInfo);
-            } else {
-                return nullptr;
+                break;
             }
-        } else if (code == "c") {
+            return nullptr;
+        case 'c':   // category
             if (auto cat = uc::findCategory(value)) {
                 fields.ecCategory = static_cast<uc::EcCategory>(cat - uc::categoryInfo);
-            } else {
-                return nullptr;
+                break;
             }
-        } else if (code == "b") {
+            return nullptr;
+        case 'u':   // up-category
+            if (value.length() == 1) {
+                if (auto v = upCatNames.findDef(value[0], uc::EcUpCategory::NO_VALUE);
+                        v != uc::EcUpCategory::NO_VALUE) {
+                    fields.ecUpCat = v;
+                    break;
+                }
+            }
+            return nullptr;
+        case 'b':   // bidi property
             if (auto bdc = uc::findBidiClass(value)) {
                 fields.ecBidiClass = static_cast<uc::EcBidiClass>(bdc - uc::bidiClassInfo);
-            } else {
-                return nullptr;
+                break;
             }
-        } else {
+            return nullptr;
+        case 'f':   // flags
+            if (auto v = str::fromChars(value, uTmp); v.ec == std::errc{}) {
+                fields.fgs.setNumeric(uTmp);
+                break;
+            }
+            return nullptr;
+        default:
             return nullptr;
         }
     }
@@ -938,11 +965,22 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 }
 
 
+namespace {
+
+    std::string catQuery(const uc::Category& x)
+        { return str::cat("c="sv, x.id); }
+
+    inline std::string catQuery(const uc::EcCategory& x)
+        { return catQuery(uc::categoryInfo[static_cast<int>(x)]); }
+
+}   // anon namespace
+
+
 QString mywiki::buildHtml(const uc::Category& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, {}, str::cat("c="sv, x.id));
+    appendHeader(text, x, {}, catQuery(x));
     str::append(text, "<p>");
     appendNoFont(text, x.loc.description);
     return text;
@@ -1876,6 +1914,17 @@ QString mywiki::buildHtml(const uc::Term& x)
     if (isEngTermShown(x)) {
         str::append(text, u8"\u00A0/ "sv);
         str::append(text, x.engName);
+    }
+
+    // We always search by 1 object
+    if (x.search.ecCategory != uc::EcCategory::NO_VALUE) {
+        appendQuery(text, catQuery(x.search.ecCategory));
+    } else if (x.search.ecUpCat != uc::EcUpCategory::NO_VALUE) {
+        appendQuery(text, str::cat("u=", upCatNames[x.search.ecUpCat]));
+    } else if (x.search.fgs) {
+        char s[20];
+        snprintf(s, std::size(s), "f=%u", static_cast<unsigned>(x.search.fgs.numeric()));
+        appendQuery(text, s);
     }
 
     str::append(text, "<p>");

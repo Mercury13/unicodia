@@ -671,8 +671,8 @@ uc::MultiResult uc::doSearch(QString what)
                     auto block = blockOf(cp.subj);
                     bool isScript =
                             (cp.ecCategory == EcCategory::SYMBOL_MODIFIER   // Some chosen symbol types
-                            || cat.upCat == UpCategory::LETTER
-                            || cat.upCat == UpCategory::MARK
+                            || cat.upCat == EcUpCategory::LETTER
+                            || cat.upCat == EcUpCategory::MARK
                             || block->flags.have(Bfg::SCRIPTLIKE)           // …or char in script-like block
                             || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
                     auto hclass = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;

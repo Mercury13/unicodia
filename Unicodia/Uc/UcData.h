@@ -88,8 +88,7 @@ namespace uc {
     constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
     constexpr QChar STUB_PUA_PLUS { 0xE011 };               // Plus for synthesized virtual virama
 
-    enum class EcLangLife
-    {
+    enum class EcLangLife : unsigned char {
         NOMATTER,       ///< Symbols (language’s life does not matter)
         ALIVE,          ///< UNESCO safe (Ukrainian)
         ENDANGERED,     ///< UNESCO vulnerable (Belorussian)
@@ -111,8 +110,7 @@ namespace uc {
         NN
     };
 
-    enum class EcScriptType
-    {
+    enum class EcScriptType : unsigned char {
         NONE,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
         ARGUABLE,       ///< Alphabet scripts that use syllables as units
@@ -133,8 +131,7 @@ namespace uc {
         NN,
     };
 
-    enum class UpCategory
-    {
+    enum class EcUpCategory : unsigned char {
         CONTROL,
         FORMAT,
         LETTER,
@@ -142,11 +139,12 @@ namespace uc {
         NUMBER,
         PUNCTUATION,
         SYMBOL,
-        SEPARATOR
+        SEPARATOR,
+        NN,
+        NO_VALUE = NN
     };
 
-    enum class EcWritingDir
-    {
+    enum class EcWritingDir : unsigned char {
         NOMATTER,
         LTR,
         RTL,
@@ -955,7 +953,7 @@ namespace uc {
 
     struct Category
     {
-        UpCategory upCat;
+        EcUpCategory upCat;
         std::string_view id;
         /// [+] is graphical by Unicode’s rules, actually unused
         Graphical isGraphical;
@@ -1041,6 +1039,13 @@ namespace uc {
 
     extern const TermCat termCats[];
 
+    struct TermSearch
+    {
+        uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
+        uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
+        uc::Cfgs fgs {};
+    };
+
     struct Term
     {
         std::string_view key;
@@ -1048,6 +1053,7 @@ namespace uc {
         std::u8string_view engName;
         std::string_view borrowedDesc {};
         EcFont ecFont = EcFont::NORMAL;
+        TermSearch search {};
         struct Loc {
             std::u8string_view name;
             std::u8string_view description;

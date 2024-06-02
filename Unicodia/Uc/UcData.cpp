@@ -143,35 +143,35 @@ static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN)
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
 
 constinit const uc::Category uc::categoryInfo[] {
-    { UpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::YES },
-    { UpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::YES },
+    { EcUpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::YES },
+    { EcUpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::YES },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
     // SURROGATE,       -- unused as Unicodia has nothing to tell
-    { UpCategory::LETTER,       "Ll",   Graphical::YES, Independent::YES },
-    { UpCategory::LETTER,       "Lm",   Graphical::YES, Independent::YES },
-    { UpCategory::LETTER,       "Lo",   Graphical::YES, Independent::YES },
-    { UpCategory::LETTER,       "Lt",   Graphical::YES, Independent::YES },
-    { UpCategory::LETTER,       "Lu",   Graphical::YES, Independent::YES },
-    { UpCategory::MARK,         "Mc",   Graphical::YES, Independent::NO  },
-    { UpCategory::MARK,         "Me",   Graphical::YES, Independent::NO  },
-    { UpCategory::MARK,         "Mn",   Graphical::YES, Independent::NO  },
-    { UpCategory::NUMBER,       "Nd",   Graphical::YES, Independent::YES },
-    { UpCategory::NUMBER,       "Nl",   Graphical::YES, Independent::YES },
-    { UpCategory::NUMBER,       "No",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Pc",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Pd",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Pe",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Pf",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Pi",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Po",   Graphical::YES, Independent::YES },
-    { UpCategory::PUNCTUATION,  "Ps",   Graphical::YES, Independent::YES },
-    { UpCategory::SYMBOL,       "Sc",   Graphical::YES, Independent::NO  },
-    { UpCategory::SYMBOL,       "Sk",   Graphical::YES, Independent::YES },
-    { UpCategory::SYMBOL,       "Sm",   Graphical::YES, Independent::YES },
-    { UpCategory::SYMBOL,       "So",   Graphical::YES, Independent::YES },
-    { UpCategory::SEPARATOR,    "Zl",   Graphical::NO,  Independent::YES },
-    { UpCategory::SEPARATOR,    "Zp",   Graphical::NO,  Independent::YES },
-    { UpCategory::SEPARATOR,    "Zs",   Graphical::YES, Independent::YES },
+    { EcUpCategory::LETTER,       "Ll",   Graphical::YES, Independent::YES },
+    { EcUpCategory::LETTER,       "Lm",   Graphical::YES, Independent::YES },
+    { EcUpCategory::LETTER,       "Lo",   Graphical::YES, Independent::YES },
+    { EcUpCategory::LETTER,       "Lt",   Graphical::YES, Independent::YES },
+    { EcUpCategory::LETTER,       "Lu",   Graphical::YES, Independent::YES },
+    { EcUpCategory::MARK,         "Mc",   Graphical::YES, Independent::NO  },
+    { EcUpCategory::MARK,         "Me",   Graphical::YES, Independent::NO  },
+    { EcUpCategory::MARK,         "Mn",   Graphical::YES, Independent::NO  },
+    { EcUpCategory::NUMBER,       "Nd",   Graphical::YES, Independent::YES },
+    { EcUpCategory::NUMBER,       "Nl",   Graphical::YES, Independent::YES },
+    { EcUpCategory::NUMBER,       "No",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Pc",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Pd",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Pe",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Pf",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Pi",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Po",   Graphical::YES, Independent::YES },
+    { EcUpCategory::PUNCTUATION,  "Ps",   Graphical::YES, Independent::YES },
+    { EcUpCategory::SYMBOL,       "Sc",   Graphical::YES, Independent::NO  },
+    { EcUpCategory::SYMBOL,       "Sk",   Graphical::YES, Independent::YES },
+    { EcUpCategory::SYMBOL,       "Sm",   Graphical::YES, Independent::YES },
+    { EcUpCategory::SYMBOL,       "So",   Graphical::YES, Independent::YES },
+    { EcUpCategory::SEPARATOR,    "Zl",   Graphical::NO,  Independent::YES },
+    { EcUpCategory::SEPARATOR,    "Zp",   Graphical::NO,  Independent::YES },
+    { EcUpCategory::SEPARATOR,    "Zs",   Graphical::YES, Independent::YES },
 };
 static_assert(std::size(uc::categoryInfo) == static_cast<int>(uc::EcCategory::NN));
 
@@ -256,18 +256,25 @@ constinit const uc::Term uc::terms[] {
     { "acrophonic", EcTermCat::CHAR_CLASS, u8"acrophonic character" },
     { "virama", EcTermCat::CHAR_CLASS, u8"virama", {}, EcFont::DEVANAGARI_SYSTEM },
     { "graphic", EcTermCat::CHAR_CLASS, u8"graphic character, printable character" },
-    { "deprecated", EcTermCat::CHAR_CLASS, u8"deprecated character" },
-    { "ignorable", EcTermCat::CHAR_CLASS, u8"default-ignorable character" },
-    { "combining", EcTermCat::CHAR_CLASS, u8"combining mark" },
+    { "deprecated", EcTermCat::CHAR_CLASS, u8"deprecated character", {}, {},
+            { .fgs = uc::Cfg::U_DEPRECATED } },
+    { "ignorable", EcTermCat::CHAR_CLASS, u8"default-ignorable character", {}, {},
+            { .fgs = uc::Cfg::U_DEF_IGNORABLE } },
+    { "combining", EcTermCat::CHAR_CLASS, u8"combining mark", {}, {},
+            { .ecUpCat = uc::EcUpCategory::MARK } },
     { "ligature", EcTermCat::CHAR_CLASS, u8"ligature" },
     { "precomposed", EcTermCat::CHAR_CLASS, u8"precomposed character" },
-    { "space", EcTermCat::CHAR_CLASS, u8"whitespace", { "CharCat.Zs.Text" } },
+    { "space", EcTermCat::CHAR_CLASS, u8"whitespace", { "CharCat.Zs.Text" }, {},
+            { .ecCategory = uc::EcCategory::SEPARATOR_SPACE } },
     { "spacing", EcTermCat::CHAR_CLASS, u8"spacing character" },
     { "pseudographics", EcTermCat::CHAR_CLASS, u8"pseudographics, semigraphics, box drawing" },
-    { "control", EcTermCat::CHAR_CLASS, u8"control character", { "CharCat.Cc.Text" } },
+    { "control", EcTermCat::CHAR_CLASS, u8"control character", { "CharCat.Cc.Text" }, {},
+            { .ecCategory = uc::EcCategory::CONTROL} },
     { "obsolete", EcTermCat::CHAR_CLASS, u8"obsolete character" },
-    { "format", EcTermCat::CHAR_CLASS, u8"format character", { "CharCat.Cf.Text" } },
-    { "number", EcTermCat::CHAR_CLASS, u8"number character" },
+    { "format", EcTermCat::CHAR_CLASS, u8"format character", { "CharCat.Cf.Text" }, {},
+            { .ecCategory = uc::EcCategory::FORMAT } },
+    { "number", EcTermCat::CHAR_CLASS, u8"number character", {}, {},
+            { .ecUpCat = uc::EcUpCategory::NUMBER } },
     { "emoji", EcTermCat::CHAR_CLASS, u8"emoji" },
 
     { "stability", EcTermCat::PRINCIPLES, u8"stability guarantees" },
@@ -938,7 +945,7 @@ constexpr char32_t DOTTED_CIRCLE = 0x25CC;
 
 char32_t sw::Info::baseChar() const noexcept
 {
-    if (cp().category().upCat == uc::UpCategory::MARK) {
+    if (cp().category().upCat == uc::EcUpCategory::MARK) {
         return DOTTED_CIRCLE;
     }
     return 0;
@@ -1766,7 +1773,7 @@ QString uc::Cp::osProxy() const
         return {};
 
     switch (category().upCat) {
-    case UpCategory::MARK:
+    case EcUpCategory::MARK:
         return markProxy();
     default: ;
     }
@@ -1787,7 +1794,7 @@ const uc::Font& uc::Cp::firstFont() const
     // Priority: block → script — block’s script
     auto& blk = block();
     // Block
-    if (blk.flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == UpCategory::MARK) {
+    if (blk.flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == EcUpCategory::MARK) {
         // All enclosing marks are in Funky now,
         // and the rest are still in Noto
         if (ecCategory == EcCategory::MARK_ENCLOSING)
@@ -1821,7 +1828,7 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
         auto wantSkip = isBuggy
                 ? v->flags.have(Ffg::BUG_AVOID)     // BUGGY: avoid flag → bad, it’s for normal only
                 : v->flags.have(Ffg::BUG_FIXUP);    // NORMAL: fixup flag → bad, it’s for buggy only
-        if (category().upCat == uc::UpCategory::MARK) {
+        if (category().upCat == uc::EcUpCategory::MARK) {
             wantSkip |= v->flags.have(Ffg::MARK_AVOID);
         }
         if (!wantSkip) {

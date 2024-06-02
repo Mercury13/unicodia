@@ -203,7 +203,7 @@ void WiShowcase::set(
 
     if (ch) {
         // Character
-        if (ch->category().upCat == uc::UpCategory::MARK) {
+        if (ch->category().upCat == uc::EcUpCategory::MARK) {
             ui->btCopyEx->setText("+25CC");
             ui->btCopyEx->show();
         } else if (ch->isVs16Emoji()) {
