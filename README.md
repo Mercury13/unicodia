@@ -66,8 +66,8 @@ These fonts are taken to Unicodia without author’s consent:
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
 In English adjectives have no gender, and Ukrainian _писемність (script)_ and _мова (language)_ are both female. In Russian they are respectively female and male, and the rules are…
-* BLOCKS: if an adjective block is strongly connected to language, it’s male like language _(грузинский)_.
-* Otherwise female like script _(батакская)_. SCRIPTS: always female
+* BLOCKS: if an adjective block is strongly connected to language, it’s male like language _(грузинский)_. Otherwise female like script _(батакская)_.
+* SCRIPTS: always female
 
 **Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
 
