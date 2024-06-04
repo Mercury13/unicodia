@@ -62,8 +62,8 @@ These fonts are taken to Unicodia without author’s consent:
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian) in its international form. Write examples in appropriate language where feasible: e.g. English L10n → examples in English.
 
 (Currently Russian only but may apply to all languages with noun-adjective agreement.) Adjectives like _Georgian_ may agree to _script_, or to _language_. The rules are…
-* BLOCKS: strongly connected to language → to language _(грузинский=Georgian)_. Otherwise to script _(батакская=Batak)_.
-* SCRIPTS: of course agree to script _(грузинская=Georgian)_.
+* BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise to script _(батакская=Batak [script])_.
+* SCRIPTS: of course agree to script _(грузинская=Georgian [script])_.
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
