@@ -61,13 +61,13 @@ These fonts are taken to Unicodia without author’s consent:
 ## Language
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian) in its international form. Write examples in appropriate language where feasible: e.g. English L10n → examples in English.
 
+(Currently Russian only.) Adjectives like _Georgian_ may agree to _script_, or to _language_. The rules are…
+* BLOCKS: strongly connected to language → to language _(грузинский=Georgian)_. Otherwise to script _(батакская=Batak)_.
+* SCRIPTS: of course their form is like script _(грузинская)_.
+
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
-
-In English adjectives have no gender, and Ukrainian _писемність (script)_ and _мова (language)_ are both female. In Russian they are respectively female and male, and the rules are…
-* BLOCKS: if an adjective block is strongly connected to language, it’s male like language _(грузинский)_. Otherwise female like script _(батакская)_.
-* SCRIPTS: always female
 
 **Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
 
