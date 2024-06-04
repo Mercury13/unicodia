@@ -63,7 +63,7 @@ These fonts are taken to Unicodia without author’s consent:
 
 (Currently Russian only.) Adjectives like _Georgian_ may agree to _script_, or to _language_. The rules are…
 * BLOCKS: strongly connected to language → to language _(грузинский=Georgian)_. Otherwise to script _(батакская=Batak)_.
-* SCRIPTS: of course their form is like script _(грузинская)_.
+* SCRIPTS: of course agree to script _(грузинская=Georgian)_.
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
