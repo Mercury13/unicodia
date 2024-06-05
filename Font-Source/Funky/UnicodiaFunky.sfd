@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 128 32 14
+WinInfo: 160 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -126732,14 +126732,14 @@ EndChar
 StartChar: Todr.Ng
 Encoding: 67021 67021 829
 Width: 558
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 828 -1 S 1 0 0 1 18 0 2
 Refer: 827 67020 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: u105D2
+StartChar: Todr.I
 Encoding: 67026 67026 830
 Width: 240
 Flags: W
@@ -126806,10 +126806,10 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u105C9
+StartChar: Todr.Ei
 Encoding: 67017 67017 832
 Width: 240
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 831 -1 S 1 0 0 1 0 0 2
