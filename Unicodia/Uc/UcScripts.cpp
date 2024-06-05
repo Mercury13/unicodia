@@ -656,7 +656,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, big tofu] Todhri
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::yapprox(1780), EcFont::NORMAL },
+        Dating::yapprox(1780), EcFont::FUNKY },
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
