@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1717628003
+ModificationTime: 1717629119
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -819,13 +819,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 256 32 14
+WinInfo: 66976 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -837,7 +836,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114154 836
+BeginChars: 1114154 837
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -127065,6 +127064,39 @@ SplineSet
  307 724 307 724 326 708 c 0,39,40
  368 674 368 674 368 574 c 128,-1,41
  368 474 368 474 303 291 c 1,23,24
+EndSplineSet
+EndChar
+
+StartChar: Todr.C
+Encoding: 67012 67012 836
+Width: 535
+Flags: WO
+HStem: 0 50<345 500> 274.5 49.5<142.805 231> 674 50<150.112 223.412>
+VStem: 60 50<363.09 621.995> 245 100<50 295 335.812 651.576>
+LayerCount: 2
+Fore
+SplineSet
+245 295 m 1,0,1
+ 217 275 217 275 176 274.5 c 128,-1,2
+ 135 274 135 274 108 308 c 0,3,4
+ 60 369 60 369 60 520 c 0,5,6
+ 60 608 60 608 102 666 c 128,-1,7
+ 144 724 144 724 206.5 724 c 128,-1,8
+ 269 724 269 724 307 680.5 c 128,-1,9
+ 345 637 345 637 345 590 c 2,10,-1
+ 345 50 l 1,11,-1
+ 500 50 l 1,12,-1
+ 500 0 l 1,13,-1
+ 245 0 l 1,14,-1
+ 245 295 l 1,0,1
+245 567 m 2,15,16
+ 245 609 245 609 229.5 641.5 c 128,-1,17
+ 214 674 214 674 185.5 674 c 128,-1,18
+ 157 674 157 674 133.5 626 c 128,-1,19
+ 110 578 110 578 110 489 c 0,20,21
+ 110 324 110 324 189 324 c 0,22,23
+ 245 324 245 324 245 408 c 2,24,-1
+ 245 567 l 2,15,16
 EndSplineSet
 EndChar
 EndChars
