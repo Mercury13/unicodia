@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1717696841
+ModificationTime: 1717697549
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -819,12 +819,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66976 32 14
+WinInfo: 256 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -836,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114154 839
+BeginChars: 1114155 841
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -127103,7 +127104,7 @@ EndChar
 StartChar: Todr.Ch
 Encoding: 67013 67013 837
 Width: 504
-Flags: WO
+Flags: W
 HStem: -240 50<260 319.35> 101 51<203.411 297.947> 496 50<185.594 311.677>
 VStem: 60 89<220.446 428.921> 309 100<139.174 460.022> 344 100<-147.865 127.452>
 TtInstrs:
@@ -127465,6 +127466,68 @@ SplineSet
  212 -86 212 -86 212 -122 c 128,-1,46
  212 -158 212 -158 226.5 -174 c 128,-1,47
 EndSplineSet
+EndChar
+
+StartChar: Todr.Nxh.part
+Encoding: 1114154 -1 839
+Width: 1000
+HStem: 518 74<480.197 529.396>
+VStem: 539 50<337.557 512.471>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 2
+MDAP[rnd]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 23
+MDAP[rnd]
+PUSHB_1
+ 22
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+PUSHB_2
+ 24
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+528 499 m 128,-1,1
+ 517 518 517 518 503.5 518 c 128,-1,2
+ 490 518 490 518 480 512 c 1,3,4
+ 470 528 470 528 469 538 c 0,5,6
+ 469 567 469 567 496 584 c 0,7,8
+ 509 592 509 592 518 592 c 0,9,10
+ 552 592 552 592 567.5 567 c 128,-1,11
+ 583 542 583 542 586 517 c 128,-1,12
+ 589 492 589 492 589 466 c 0,13,14
+ 589 372 589 372 551 286 c 0,15,16
+ 498 164 498 164 401 90 c 1,17,-1
+ 370 130 l 1,18,19
+ 455 195 455 195 504 304 c 0,20,21
+ 538 380 538 380 539 458 c 0,22,0
+ 539 480 539 480 528 499 c 128,-1,1
+EndSplineSet
+EndChar
+
+StartChar: u105E9
+Encoding: 67049 67049 840
+Width: 667
+Flags: WO
+LayerCount: 2
+Fore
+Refer: 839 -1 S 1 0 0 1 18 0 2
+Refer: 838 67048 N 1 0 0 1 0 0 2
 EndChar
 EndChars
 EndSplineFont
