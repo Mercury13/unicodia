@@ -819,13 +819,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 288 32 14
+WinInfo: 66976 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -128077,7 +128076,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u105CE
+StartChar: Todr.Gj
 Encoding: 67022 67022 846
 Width: 578
 Flags: W
@@ -128290,7 +128289,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u105CF
+StartChar: Todr.Ngj
 Encoding: 67023 67023 847
 Width: 578
 Flags: HW
