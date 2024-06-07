@@ -8955,12 +8955,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian, purportedly even the entire Bible. Only few texts survived, particularly Gospel of John and some prayers. The script was used around Elbasan long after his death in 1805: in 1900 an old monk literate in Todhri was found, the last literate people purportedly died about 1930.</p>
+      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian, purportedly even the entire Bible. Only few texts survived, particularly Gospel of John and some prayers. The script was used around Elbasan long after his death in 1805: it was discovered about 1849 by Johann von Hahn (he considered it ancient despite name Todhri), and was still widely used. In 1900 an old monk literate in Todhri was found, the last literate people purportedly died about 1930.</p>
+      <p />
+      <p>Encoding order is different from Hahn’s, and is sutable for modern Albanian studies.</p>
       <p />
       <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
      </orig>
      <transl>
-      <p>Винайшов Теодор Хаджіфіліпп, він же Вчитель Тодрі. Він перевів багато християнських текстів на албанську, нібито навіть усю Біблію. Небагато текстів збереглося, зокрема Євангеліє від Іоана та кілька молитв. Письмо використовувалося навколо Ельбасану довго після його смерті у 1805: у 1900 знайшли старого ченця, письменного у Тодрі, останні письменні нібито померли біля 1930.</p>
+      <p>Винайшов Теодор Хаджіфіліпп, він же Вчитель Тодрі. Він перевів багато християнських текстів на албанську, нібито навіть усю Біблію. Небагато текстів збереглося, зокрема Євангеліє від Іоана та кілька молитв. Письмо використовувалося навколо Ельбасану довго після його смерті у 1805: його відкрив біля 1849 Йоганн фон Хан (він вважав його давнім, незважаючи на ім’я Тодрі), і воно все ще широко вживалося. У 1900 знайшли старого ченця, письменного у Тодрі, останні письменні нібито померли біля 1930.</p>
+      <p />
+      <p>Порядок кодування відрізняється від запропонованого Ханом, та придатний для сучасного вивчення албанської.</p>
       <p />
       <p>Не плутати з [[ps:Elba|алфавітом Ельбасанського Євангелія]]!</p>
      </transl>
