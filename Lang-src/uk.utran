@@ -8944,6 +8944,28 @@
      </transl>
     </text>
    </group>
+   <group id="Todr">
+    <text id="Name">
+     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
+     <transl>Алфавіт Тодрі (ельбасанський) для албанської</transl>
+    </text>
+    <text id="Lang">
+     <orig>Albanian</orig>
+     <transl>албанська</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian, purportedly even the entire Bible. Only few texts survived, particularly Gospel of John and some prayers. The script was used around Elbasan long after his death in 1805: in 1900 an old monk literate in Todhri was found, the last literate people purportedly died about 1930.</p>
+      <p />
+      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
+     </orig>
+     <transl>
+      <p>Винайшов Теодор Хаджіфіліпп, він же Вчитель Тодрі. Він перевів багато християнських текстів на албанську, нібито навіть усю Біблію. Небагато текстів збереглося, зокрема Євангеліє від Іоана та кілька молитв. Письмо використовувалося навколо Ельбасану довго після його смерті у 1805: у 1900 знайшли старого ченця, письменного у Тодрі, останні письменні нібито померли біля 1930.</p>
+      <p />
+      <p>Не плутати з [[ps:Elba|алфавітом Ельбасанського Євангелія]]!</p>
+     </transl>
+    </text>
+   </group>
    <group id="Toto">
     <text id="Name">
      <orig>Toto</orig>
@@ -9055,28 +9077,6 @@
       <p>Алфавіт добре відповідає фонетиці албанської, але чомусь нема літер для звуків «rr», «xh» та «zh».</p>
       <p />
       <p>Є декілька причин великої кількості албанських алфавітів ([[ps:Elba|ельбасанський]], віткутьський, [[ps:Todr|Тодрі]], Весо-Бея, Веллари): мислителі национально-визвольного руху дивились на слов’ян, греків та турків і хотіли свій алфавіт, і просто конспірація від турків (албанці одержали незалежність у 1912 з розпадом Туреччини). Для Наума причина точно перша: збереглись його листи, де він відповідав на критику, і алфавіт вийшов далеким від [[ps:Latn|латинки]], [[ps:Grek|грецької]] та [[ps:Arab|арабської]] заради релігійної нейтральності.</p>
-     </transl>
-    </text>
-   </group>
-   <group id="Todr">
-    <text id="Name">
-     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
-     <transl>Алфавіт Тодрі (ельбасанський) для албанської</transl>
-    </text>
-    <text id="Lang">
-     <orig>Albanian</orig>
-     <transl>албанська</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian. The script was used around Elbasan long after his death in 1805, some authors say that until 1930.</p>
-      <p />
-      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
-     </orig>
-     <transl>
-      <p>Винайшов Теодор Хаджіфіліпп, він же Вчитель Тодрі. Він перевів багато християнських текстів на албанську. Письмо використовувалося навколо Ельбасану довго після його смерті у 1805, деякі автори кажуть, що до 1930.</p>
-      <p />
-      <p>Не плутати з [[ps:Elba|алфавітом Ельбасанського Євангелія]]!</p>
      </transl>
     </text>
    </group>

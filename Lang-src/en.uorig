@@ -6301,6 +6301,21 @@
      </orig>
     </text>
    </group>
+   <group id="Todr">
+    <text id="Name">
+     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
+    </text>
+    <text id="Lang">
+     <orig>Albanian</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian, purportedly even the entire Bible. Only few texts survived, particularly Gospel of John and some prayers. The script was used around Elbasan long after his death in 1805: in 1900 an old monk literate in Todhri was found, the last literate people purportedly died about 1930.</p>
+      <p />
+      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
+     </orig>
+    </text>
+   </group>
    <group id="Toto">
     <text id="Name">
      <orig>Toto</orig>
@@ -6375,21 +6390,6 @@
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
       <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
-     </orig>
-    </text>
-   </group>
-   <group id="Todr">
-    <text id="Name">
-     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
-    </text>
-    <text id="Lang">
-     <orig>Albanian</orig>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian. The script was used around Elbasan long after his death in 1805, some authors say that until 1930.</p>
-      <p />
-      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
      </orig>
     </text>
    </group>
