@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1717875515
+ModificationTime: 1717879859
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -836,7 +836,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114155 859
+BeginChars: 1114155 860
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -129334,8 +129334,114 @@ SplineSet
 EndSplineSet
 EndChar
 
+StartChar: Todr.Rr
+Encoding: 67038 67038 858
+Width: 465
+Flags: WO
+HStem: 168 50<170 254.807> 496 50<170 256.091>
+VStem: 70 100<-154.105 168 218 496> 305 100<276.666 444.177>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 7
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_3
+ 7
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 7
+ 11
+ 9
+CALL
+PUSHB_1
+ 6
+MDAP[rnd]
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 23
+MDAP[rnd]
+PUSHB_1
+ 16
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 8
+MDRP[min,rnd,black]
+PUSHB_1
+ 0
+SHP[rp2]
+PUSHB_1
+ 8
+SRP0
+PUSHB_2
+ 3
+ 1
+CALL
+PUSHB_1
+ 21
+MDRP[min,rnd,black]
+PUSHB_2
+ 24
+ 1
+CALL
+PUSHB_2
+ 8
+ 16
+SRP1
+SRP2
+PUSHB_1
+ 10
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 6
+ 0
+SRP1
+SRP2
+PUSHB_2
+ 20
+ 21
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+170 218 m 1,0,1
+ 239 218 239 218 272 253.5 c 128,-1,2
+ 305 289 305 289 305 344 c 0,3,4
+ 305 421 305 421 273.5 458.5 c 128,-1,5
+ 242 496 242 496 170 496 c 1,6,-1
+ 170 218 l 1,0,1
+170 168 m 1,7,-1
+ 170 -127 l 2,8,9
+ 170 -178 170 -178 141.5 -209 c 128,-1,10
+ 113 -240 113 -240 77.5 -240 c 128,-1,11
+ 42 -240 42 -240 17.5 -221 c 128,-1,12
+ -7 -202 -7 -202 -7 -170 c 1,13,14
+ 26 -170 26 -170 48 -155.5 c 128,-1,15
+ 70 -141 70 -141 70 -113 c 2,16,-1
+ 70 546 l 1,17,-1
+ 120 546 l 2,18,19
+ 270 546 270 546 337.5 501.5 c 128,-1,20
+ 405 457 405 457 405 368.5 c 128,-1,21
+ 405 280 405 280 340.5 224 c 128,-1,22
+ 276 168 276 168 170 168 c 1,7,-1
+EndSplineSet
+EndChar
+
 StartChar: Todr.S
-Encoding: 67039 67039 858
+Encoding: 67039 67039 859
 Width: 472
 Flags: W
 LayerCount: 2
