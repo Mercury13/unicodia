@@ -819,13 +819,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 306 18 14
+WinInfo: 66996 18 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -127650,7 +127649,7 @@ EndChar
 StartChar: Todr.Dh
 Encoding: 67016 67016 843
 Width: 549
-Flags: WO
+Flags: W
 HStem: 0 50<170 379> 694 20G<70 170>
 VStem: 70 100<121 714> 379 100<50 259>
 TtInstrs:
