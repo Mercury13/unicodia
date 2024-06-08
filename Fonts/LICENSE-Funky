@@ -57,19 +57,19 @@ Status: working
 
 == Stability policy ==
 
-WILL EVENTUALLY DISAPPEAR:
-* Lone characters made to gag tofu
-* All non-functional scripts, both mine and others’
-* All craggy scripts, both mine and others’
+WILL STAY:
+* Working scripts of decent quality made by me: Makasar, Cypro-Minoan etc.
+* ASCII and other auxiliary characters. But they MAY switch to other font.
 
 WILL PROBABLY DISAPPEAR when better font arrives:
 * Scripts made by others
 * Super/subscripts: while Unicodia’s main font is Cambria, won’t
 
-WILL STAY:
-* Working scripts of decent quality made by me: Makasar, Cypro-Minoan etc.
-* ASCII and other auxiliary characters. But they MAY switch to other font.
+WILL SURELY DISAPPEAR:
+* Lone characters made to gag tofu
+* All non-functional scripts, both mine and others’
+* All craggy scripts, both mine and others’
 
-=== Better fonts ===
+ALREADY DISAPPEARED and handing to other fonts
 * Ottoman Siyaq numbers → use Noto Ottoman Siyaq
 * Devanagari Jain symbols → use Noto Devanagari
