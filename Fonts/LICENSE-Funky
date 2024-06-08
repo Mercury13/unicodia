@@ -46,13 +46,18 @@ Status: barely working, either improve or hand to other font
 
 === Makasar ===
 
-Source of inspiration: Makasar prince’s diaries and and his treaties with Dutch East-Indic Company, and Anshuman Pandey’s font
+Source of inspiration: Makasar prince’s diaries, Anshuman Pandey’s font
 Status: working, just Arabic-Indic digits are absent
 
 === Nag Mundari ===
 
 Source of inspiration: educational Nag specimen
 Status: working
+
+=== Todhri ===
+
+Source of inspiraion: Michael Everson’s font, Johann von Hahn’s description, handwritten notes from Unicode request
+Status: incomplete, no functionality at all
 
 
 == Stability policy ==
