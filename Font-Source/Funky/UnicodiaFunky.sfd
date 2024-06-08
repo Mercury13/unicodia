@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1717834272
+ModificationTime: 1717839368
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -127649,63 +127649,86 @@ EndChar
 
 StartChar: Todr.Dh
 Encoding: 67016 67016 843
-Width: 548
-Flags: W
-HStem: 0 50<170.018 378.604> 694 20G<70 170>
-VStem: 70 100<120.693 714> 378.604 100<50 258.588>
+Width: 549
+Flags: WO
+HStem: 0 50<170 379> 694 20G<70 170>
+VStem: 70 100<121 714> 379 100<50 259>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
- 2
+ 4
  1
  0
 CALL
 PUSHB_1
- 8
+ 13
 MDRP[min,rnd,black]
 PUSHB_3
- 3
+ 13
+ 4
+ 10
+CALL
+PUSHB_4
+ 64
+ 13
+ 10
+ 9
+CALL
+PUSHB_3
+ 7
  2
  0
 CALL
 SVTCA[x-axis]
 PUSHB_1
- 9
+ 15
 MDAP[rnd]
 PUSHB_1
- 2
+ 6
 MDRP[rp0,rnd,white]
 PUSHB_1
- 5
+ 9
 MDRP[min,rnd,black]
 PUSHB_1
- 8
+ 13
 SHP[rp2]
 PUSHB_1
- 5
+ 9
 SRP0
 PUSHB_2
- 6
+ 11
  1
 CALL
 PUSHB_1
  1
 MDRP[min,rnd,black]
 PUSHB_2
- 10
+ 16
  1
 CALL
-SVTCA[y-axis]
 PUSHB_2
- 3
- 8
+ 1
+ 11
 SRP1
 SRP2
-PUSHB_3
- 0
- 5
- 7
+PUSHB_1
+ 10
 IP
+SVTCA[y-axis]
+PUSHB_2
+ 13
+ 4
+SRP1
+SRP2
+PUSHB_1
+ 14
+IP
+PUSHB_1
+ 7
+SRP1
+PUSHB_2
+ 9
+ 12
 IP
 IP
 IUP[y]
@@ -127714,17 +127737,24 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
-478.603515625 429.298828125 m 1,0,-1
- 478.603515625 0 l 1,1,-1
- 70 0 l 1,2,-1
- 70 714 l 1,3,-1
- 170 714 l 1,4,-1
- 170 120.693359375 l 1,5,-1
- 478.603515625 429.298828125 l 1,0,-1
-378.603515625 50 m 1,6,-1
- 378.603515625 258.587890625 l 1,7,-1
- 170.017578125 50 l 1,8,-1
- 378.603515625 50 l 1,6,-1
+479 390 m 1,0,-1
+ 479 0 l 1,1,-1
+ 457 0 l 1,2,-1
+ 379 0 l 1,3,-1
+ 170 0 l 1,4,-1
+ 77 0 l 1,5,-1
+ 70 0 l 1,6,-1
+ 70 714 l 1,7,-1
+ 170 714 l 1,8,-1
+ 170 121 l 1,9,-1
+ 440 390 l 1,10,-1
+ 479 390 l 1,0,-1
+379 50 m 1,11,-1
+ 379 259 l 1,12,-1
+ 170 50 l 1,13,-1
+ 379 50 l 1,11,-1
+170 50 m 1,14,-1
+ 170 50 l 1,14,-1
 EndSplineSet
 EndChar
 
