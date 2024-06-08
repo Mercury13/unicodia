@@ -129021,7 +129021,7 @@ EndChar
 StartChar: Todr.P
 Encoding: 67035 67035 855
 Width: 697
-Flags: WO
+Flags: W
 HStem: 0 50<170 527>
 VStem: 70 100<121 536> 527 100<50 407>
 TtInstrs:
