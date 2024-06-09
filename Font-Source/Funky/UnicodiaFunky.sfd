@@ -824,7 +824,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66957 33 14
+WinInfo: 66978 18 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -127070,7 +127070,7 @@ EndChar
 StartChar: Todr.C
 Encoding: 67012 67012 836
 Width: 530
-Flags: HW
+Flags: W
 HStem: 0 21G<240 340> 0 50<317 495> 224 50<165.148 240> 674 50<151.385 220.48>
 VStem: 55 50<339.166 606.364> 240 100<0 224 274 655.754> 317 178<0 50>
 LayerCount: 2
@@ -128287,7 +128287,7 @@ EndChar
 StartChar: Todr.Ngj
 Encoding: 67023 67023 847
 Width: 573
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 828 -1 S 1 0 0 1 18 0 2
