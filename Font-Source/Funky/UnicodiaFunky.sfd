@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1717956586
+ModificationTime: 1717956703
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -130379,8 +130379,8 @@ StartChar: u105EF
 Encoding: 67055 67055 872
 Width: 572
 Flags: WO
-HStem: -10 50<195.447 364.203> 445 50<205.946 339.428> 674 40<205 483>
-VStem: 55 87<94.1702 163.574> 105 100<478 674> 418 99<127.077 345.977>
+HStem: -10 50<195.447 364.203> 445 50<205.946 339.428> 664 50<205 483>
+VStem: 55 87<94.1702 163.574> 105 100<478 664> 418 99<127.077 345.977>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -130533,8 +130533,8 @@ SplineSet
  105 432 l 1,27,-1
  105 714 l 1,28,-1
  483 714 l 1,29,-1
- 483 674 l 1,30,-1
- 205 674 l 1,31,-1
+ 483 664 l 5,30,-1
+ 205 664 l 5,31,-1
  205 478 l 1,0,1
 EndSplineSet
 EndChar
