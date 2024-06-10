@@ -1081,35 +1081,6 @@ namespace uc {
 
     const Term* findTerm(std::string_view id);
 
-    enum class OldComp : int32_t {
-        NONE        = 0,
-        AMSTRAD     = 1 << 0,
-        APPLE       = 1 << 1,
-        AQUARIUS    = 1 << 2,
-        ATARI_ST    = 1 << 3,
-        ATARI_8BIT  = 1 << 4,
-        MINITEL     = 1 << 5,
-        MSX         = 1 << 6,
-        ORIC        = 1 << 7,
-        COMMODORE   = 1 << 8,
-        RISC_OS     = 1 << 9,
-        SINCLAIR    = 1 << 10,
-        TELETEXT    = 1 << 11,
-        TANDY_TRS80 = 1 << 12,
-        TANDY_COCO  = 1 << 13,
-        KORVET      = 1 << 14,
-        SMALLTALK   = 1 << 15,
-        SHARP_MZ    = 1 << 16,
-        OHIO_SCIENTIFIC = 1 << 17,
-        ROBOTRON    = 1 << 18,
-        HP_TERMINAL = 1 << 19,
-        KAYPRO      = 1 << 20,
-        // Technical
-        DUMMY,
-        LAST = DUMMY - 1
-    };
-    DEFINE_ENUM_OPS(OldComp)
-
     struct OldCompInfo {
         std::u8string_view fixedName;
         std::string_view locKey {};
