@@ -374,6 +374,7 @@ namespace uc {
          PHAISTOS_DISC,
         POLLARD,
         PSALTER_PAHLAVI,
+        PSEUDOGRAPHICS,
         REJANG,
         ROHINGYA,
         RUNIC,

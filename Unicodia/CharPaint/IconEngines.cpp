@@ -608,9 +608,9 @@ void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// Legacy ///////////////////////////////////////////////////////////////////
 
-ie::Legacy::Legacy()
+ie::Legacy::Legacy(const char* fname)
 {
-    texture.load(":ScCustom/legacy.png");
+    texture.load(fname);
 }
 
 
@@ -628,9 +628,12 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
         times = 1;
     int ww = texture.width() * times;
     int hh = texture.height() * times;
-    int x0 = rect.left() + ((rect.width() - ww) >> 1);
-    if (x0 < 1)
-        x0 = 1;
+    int x0 = 0;
+    if (rect.width() > ww) {  // Those pics are always wide, not tall
+        x0 = rect.left() + ((rect.width() - ww) >> 1);
+        if (x0 < 1)
+            x0 = 1;
+    }
     int y0 = rect.top() + ((rect.height() - hh) >> 1);
 
     QRect rcDest { x0, y0, ww, hh };

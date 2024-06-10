@@ -3511,7 +3511,7 @@
       <p />
       <p>'''Did not''' advance to standard:</p>
       <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
-      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together, but it’s impossible to show: none of known fonts supports both.</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
      </orig>
     </text>
    </group>
@@ -9033,6 +9033,9 @@
     </text>
     <text id="CyrlMisc">
      <orig>Other origin</orig>
+    </text>
+    <text id="ConOut">
+     <orig>Console outlined</orig>
     </text>
    </group>
    <group id="Text">

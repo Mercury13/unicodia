@@ -153,7 +153,7 @@ namespace ie {
     class Legacy : public Veng
     {
     public:
-        Legacy();
+        Legacy(const char* fname);
         Legacy* clone() const override { return new Legacy(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:

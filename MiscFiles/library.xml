@@ -59,6 +59,9 @@
 		<f loc="7seg">
 			<range start="1FBF0" end="1FBF9" />
 		</f>
+		<f loc="ConOut">
+			<range start="1CCF0" end="1CCF9" />
+		</f>
 	</f>
 	<f loc="Latin" forgetTest="1">
 		<f name="A">
@@ -430,6 +433,9 @@
 		<f loc="CjkSmall" forgetTest="1">
 			<range start="FF41" end="FF5A" />
 		</f>
+		<f loc="ConOut" forgetTest="1">
+			<range start="1CCD6" end="1CCEF" />
+		</f>
 		<f loc="CjkSimIdeo" tilePattern="10010101111">
 			<d>𠔀 丹 卂 乃 㠯 匚 匸 刀 𠀉 𠂋 㔾 呂 𠂑 廾 丨 工 讠 丿 亅 片 𡿨 𣱱 乚 厶 𠃊 爪 从 几 𠘨 口 囗 尸 母 𠂀 𤆗 尺 丂 丁 凵 山 乂 㐅 丫 𠂈 乙 𠮺</d>
 		</f>
@@ -459,7 +465,7 @@
 		</f>
 		<f loc="RevSmall">
 			<d>ɒ d ɔ b ɘ ʡ 𝼁  i ȴ ɭ 𝼃 l m n o q p ɿ ʅ ჷ շ Ɉ ֈ u v w x ү</d>
-		</f>		
+		</f>
 	</f>
 	<f loc="Cyrl1" forgetTest="1">
 		<f name="А" tilePattern="10010110">

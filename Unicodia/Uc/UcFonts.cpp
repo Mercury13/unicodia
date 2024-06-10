@@ -52,7 +52,7 @@ constinit const uc::Font uc::fontInfo[] = {
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot },                            // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 30_bot }, // Noto symbol2 bigger
-      /// @todo [U16, gag] delete when control pictures are ready
+      // Intentionally unhinted
       { FNAME_FUNKY, 115_pc },                                                  // …1
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
@@ -250,6 +250,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
+    { "BabelStonePseudographica.ttf" },                                         // Pseudographics
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
     { "NotoSansRunic-Regular.ttf" },                                            // Runic

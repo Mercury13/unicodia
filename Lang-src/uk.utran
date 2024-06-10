@@ -4710,7 +4710,7 @@
       <p />
       <p>'''Did not''' advance to standard:</p>
       <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
-      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together, but it’s impossible to show: none of known fonts supports both.</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
      </orig>
      <transl>
       <p>Символи з різних комп’ютерів та систем 1970-х та 1980-х:</p>
@@ -4737,7 +4737,7 @@
       <p />
       <p>До стандарту '''не{{_}}увійшли''':</p>
       <p>* інверсна псевдографіка: наприклад, у Apple [[pt:mono|знакомісце]] 7×8, і щоб заливка не{{_}}була картатою, прямий символ заливки чергують з інверсним;</p>
-      <p>* знаки, [[pt:unification|вже наявні]] у розділі [[pt:pseudographics|псевдографіки]]. У правильному шрифті стара псевдографіка повинна повністю стикуватися з новими символами{{-}}правда, неможливо показати: нема шрифта, що підтримує і стару, і нову псевдографіку.</p>
+      <p>* знаки, [[pt:unification|вже наявні]] у розділі [[pt:pseudographics|псевдографіки]]. У правильному шрифті стара псевдографіка повинна повністю стикуватися з новими символами: {{sm|█🬗}}</p>
      </transl>
     </text>
    </group>
@@ -12981,6 +12981,10 @@
     <text id="CyrlMisc">
      <orig>Other origin</orig>
      <transl>Інше походження</transl>
+    </text>
+    <text id="ConOut">
+     <orig>Console outlined</orig>
+     <transl>Консольні обведені</transl>
     </text>
    </group>
    <group id="Text">

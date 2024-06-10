@@ -1284,11 +1284,11 @@ constinit const uc::Block uc::blocks[] {
             "Shorthand Format Controls",
             { EcScript::Dupl, 1}, MapType::SYM_CODE,
             EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
-    /// @todo [U16, huge tofu] Symbols for Legacy Computing Supplement
-    { 0x1CC00, 0x1CEBF, { 0x1CC00, EcContinent::NONE, Ifg::MISSING  },
+    // Legacy ex OK
+    { 0x1CC00, 0x1CEBF, { U"\U0001CCA4\U0001CCA5", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER  },
             "Symbols for Legacy Computing Supplement",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
     // Znamenny OK, found cool font on Ponomar
     { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation",
@@ -1480,7 +1480,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1FB00, 0x1FBFF, { U"\U0001FBB2\U0001FBB3", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER },
             "Symbols for Legacy Computing",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER, Bfg::HIPRIO_NUMBERS },
+            EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HIPRIO_NUMBERS },
     // CJK B OK
     { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK },
             "CJK Unified Ideographs Extension B",
