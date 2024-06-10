@@ -375,6 +375,9 @@ constinit const uc::OldCompInfo uc::oldCompInfo[] {
     { u8"Smalltalk" },
     { u8"Sharp" NBSP "MZ" },
     { u8"Ohio" NBSP "Scientific" },
+    { u8"Robotron" NBSP "Z9001" },
+    { {}, "Prop.OldComp.Hp" },
+    { u8"Kaypro" },
 };
 
 constexpr auto I_LAST_OLD_COMP = std::size(uc::oldCompInfo) - 1;
@@ -404,15 +407,21 @@ std::u8string uc::OldCompInfo::locName() const
 #define REP_13(x) REP_12(x),x
 #define REP_16(x) REP_4(x),REP_4(x),REP_4(x),REP_4(x)
 #define REP_32(x) REP_16(x),REP_16(x)
+#define REP_45(x) REP_16(x),REP_16(x),REP_13(x)
 #define REP_48(x) REP_16(x),REP_16(x),REP_16(x)
-#define REP_60(x) REP_48(x),REP_12(x)
 
 namespace {
 
     using OC = uc::OldComp;
 
+    constexpr auto OC_6BLOCK_USERS = OC::AQUARIUS | OC::TANDY_COCO | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET;
+
     constinit const Flags<uc::OldComp> primaryOldCompData[] {
-        REP_60 (OC::AQUARIUS | OC::TANDY_COCO | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET ), // 00..3B 6block
+        REP_45 (OC_6BLOCK_USERS),                                               // 00..2C 6block
+                OC_6BLOCK_USERS | OC::HP_TERMINAL,                              // 2D lower ⅓
+        REP_11 (OC_6BLOCK_USERS),                                               // 2E..38
+                OC_6BLOCK_USERS | OC::HP_TERMINAL,                              // 39 lower ⅔
+        REP_2  (OC_6BLOCK_USERS),
         REP_48 (OC::TELETEXT ),                                                 // 3C..6B diagonals and braided flags
         REP_4  (OC::MSX | OC::TELETEXT ),                                       // 6C..6F triangles
                 OC::COMMODORE | OC::TELETEXT,                                   // 70 col2
@@ -444,12 +453,12 @@ namespace {
                 OC::MSX | OC::COMMODORE,                                        // 95 checker1
                 OC::AMSTRAD | OC::COMMODORE,                                    // 96 checker2
                 OC::TANDY_TRS80,                                                // 97 heavy=
-        REP_2  (OC::MSX | OC::COMMODORE),                                       // 98,99 fill\ and /
+        REP_2  (OC::MSX | OC::COMMODORE),                                       // 98 99 fill\ and /
         REP_2  (OC::MSX),                                                       // 9A,9B butterflies
         REP_4  (OC::AMSTRAD),                                                   // 9C..9F diag50%
         REP_8  (OC::AMSTRAD | OC::MINITEL | OC::TELETEXT),                      // A0..A3 quarter / or \…
                                                                                 // A4..A7 two such slashes nearby
-        REP_2  (OC::AMSTRAD | OC::MINITEL),                                     // A8,A9 two such slashes opposite
+        REP_2  (OC::AMSTRAD | OC::MINITEL),                                     // A8 A9 two such slashes opposite
         REP_4  (OC::MINITEL),                                                   // AA..AD three such slashes
                 OC::AMSTRAD | OC::MINITEL,                                      // AE four such slashes
                 OC::MSX,                                                        // AF full -, incomplete |
@@ -457,15 +466,25 @@ namespace {
                 OC::APPLE | OC::COMMODORE,                                      // B1 inverse check
         REP_11 (OC::APPLE),                                                     // B2..BC misc Apple chars
         REP_3  (OC::ATARI_ST),                                                  // BD..BF inverse saltires
-                OC::RISC_OS | OC::TANDY_TRS80,                                  // C0 white saltire
+                OC::RISC_OS,                                                    // C0 white saltire (U16 disunified)
         REP_4  (OC::TANDY_TRS80),                                               // C1..C3 pointing finger
                                                                                 // C4 inverse ?
                 OC::AMSTRAD | OC::TANDY_TRS80,                                  // C5 man
         REP_3  (OC::AMSTRAD),                                                   // C6..C8 three men
-        REP_2  (OC::TANDY_TRS80),                                               // C9 woman
-                                                                                // CA chevron
-        REP_5  (OC::NONE),                                                      // CB..CF unused
-        REP_32 (OC::NONE),                                                      // D0..EF unused
+        REP_5  (OC::TANDY_TRS80),                                               // C9 woman, CA chevron, CB cross,
+                                                                                // CC small [, CD small chevron
+        REP_2  (OC::NONE),                                                      // CE CF ⅔ blocks
+        REP_8  (OC::OHIO_SCIENTIFIC | OC::ROBOTRON | OC::SHARP_MZ),             // D0..D7 diags 2:1
+        REP_4  (OC::OHIO_SCIENTIFIC),                                           // D8..DB corners 45°
+        REP_4  (OC::ROBOTRON),                                                  // DC..DF corners 2:1
+                OC::ROBOTRON,                                                   // E0 top ½ circle
+                OC::OHIO_SCIENTIFIC | OC::ROBOTRON,                             // E1 left ½ circle
+                OC::ROBOTRON,                                                   // E2 bottom ½ circle
+                OC::OHIO_SCIENTIFIC | OC::ROBOTRON,                             // E3 right ½ circle
+        REP_2  (OC::OHIO_SCIENTIFIC),                                           // E4,E5 upper/lower ¼
+        REP_2  (OC::KAYPRO | OC::OHIO_SCIENTIFIC),                              // E6,E7 left/right ¼
+        REP_4  (OC::AQUARIUS | OC::SHARP_MZ),                                   // E8..EB black ½ circles
+        REP_4  (OC::AQUARIUS),                                                  // EC..EF ¼ circles
         REP_10 (OC::ATARI_ST)                                                   // F0..F9 7seg digits
     };
     static_assert(std::size(primaryOldCompData) == 0xFA);                       // FA first free
@@ -482,9 +501,9 @@ namespace {
     static_assert(std::size(arrowOldCompData) == 12);
 
     constinit const Flags<uc::OldComp> controlPicOldCompData[] {
-        OC::APPLE,
-        OC::TANDY_TRS80,
-        OC::AMSTRAD,
+        OC::APPLE,                          // 2427
+        OC::TANDY_TRS80 | OC::HP_TERMINAL,  // 2428
+        OC::AMSTRAD,                        // 2429
     };
     static_assert(std::size(controlPicOldCompData) == 3);
 

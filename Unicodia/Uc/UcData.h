@@ -1081,7 +1081,7 @@ namespace uc {
 
     const Term* findTerm(std::string_view id);
 
-    enum class OldComp {
+    enum class OldComp : int32_t {
         NONE        = 0,
         AMSTRAD     = 1 << 0,
         APPLE       = 1 << 1,
@@ -1101,6 +1101,9 @@ namespace uc {
         SMALLTALK   = 1 << 15,
         SHARP_MZ    = 1 << 16,
         OHIO_SCIENTIFIC = 1 << 17,
+        ROBOTRON    = 1 << 18,
+        HP_TERMINAL = 1 << 19,
+        KAYPRO      = 1 << 20,
         // Technical
         DUMMY,
         LAST = DUMMY - 1

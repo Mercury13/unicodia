@@ -660,6 +660,10 @@
      <orig>Korvet</orig>
      <transl>Корвет</transl>
     </text>
+    <text id="Hp">
+     <orig>HP terminals</orig>
+     <transl>термінали HP</transl>
+    </text>
    </group>
    <group id="Num">
     <text id="Digit">
