@@ -24,11 +24,13 @@
 @set UCCOUNT=UcAutoCount.h
 @set UCSUTTON=UcAutoSutton.cpp
 @set UCSCRIPT=UcAutoScripts.h
+@set UCOLDCOMP=UcAutoOldComp.cpp
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
 @set AB_UCLIB=%BUILD_AB%/%UCLIB%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
 @set AB_UCSUTTON=%BUILD_AB%/%UCSUTTON%
 @set AB_UCSCRIPT=%BUILD_AB%/%UCSCRIPT%
+@set AB_UCOLDCOMP=%BUILD_AB%/%UCOLDCOMP%
 
 @path %MINGW%;%PATH%
 
@@ -116,6 +118,7 @@
 @%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
 @%SMARTCOPY% %AB_UCSUTTON% Unicodia\Uc\%UCSUTTON%
 @%SMARTCOPY% %AB_UCSCRIPT% Unicodia\Uc\%UCSCRIPT%
+@%SMARTCOPY% %AB_UCOLDCOMP% Unicodia\Uc\%UCOLDCOMP%
 @if errorlevel 1 goto end
 
 @echo.

@@ -1,7 +1,6 @@
 #ifndef U_TYPEDFLAGS_H
 #define U_TYPEDFLAGS_H
 
-#include <stdint.h>
 #include <type_traits>
 
 /// @warning
@@ -23,10 +22,12 @@ class Flags
 {
 public:
     using Storage = typename FlagStorage<En>::Type;
-    using SignedStorage = typename std::make_signed<Storage>::type;
+    using SignedStorage = std::make_signed_t<Storage>;
+    using UnsignedStorage = std::make_unsigned_t<Storage>;
     static inline constexpr Storage toStorage(En x) { return static_cast<Storage>(x); }
     static inline constexpr Storage toSignedStorage(En x) { return static_cast<SignedStorage>(x); }
     static inline constexpr Storage toSignedStorage(bool x) { return static_cast<SignedStorage>(x); }
+    static inline constexpr Storage toUnsignedStorage(En x) { return static_cast<UnsignedStorage>(x); }
 
     // ctor
     constexpr Flags() = default;
@@ -216,7 +217,9 @@ constexpr inline Flags<En> flagIf(bool x, En y)
     [[maybe_unused]] constexpr inline Flags<En> operator ~ (En x) { return Flags<En>(~Flags<En>::toStorage(x)); }
 
 #define DEFINE_ENUM_SHIFTS(En)  \
-    [[maybe_unused]] constexpr inline En operator << (En x, int y) { return static_cast<En>(Flags<En>::toStorage(x) << y); }  \
-    [[maybe_unused]] constexpr inline En operator >> (En x, int y) { return static_cast<En>(Flags<En>::toStorage(x) >> y); }
+    [[maybe_unused]] constexpr inline En operator << (En x, int y) { return static_cast<En>(Flags<En>::toUnsignedStorage(x) << y); }  \
+    [[maybe_unused]] constexpr inline En operator >> (En x, int y) { return static_cast<En>(Flags<En>::toUnsignedStorage(x) >> y); }  \
+    [[maybe_unused]] constexpr inline En& operator <<= (En& x, int y) { return (x = x << y); }  \
+    [[maybe_unused]] constexpr inline En& operator >>= (En& x, int y) { return (x = x >> y); }
 
 #endif // U_TYPEDFLAGS_H

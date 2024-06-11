@@ -57,6 +57,7 @@ SOURCES += \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
     Uc/UcAutoLib.cpp \
+    Uc/UcAutoOldComp.cpp \
     Uc/UcAutoSutton.cpp \
     Uc/UcBlocks.cpp \
     Uc/UcClipboard.cpp \

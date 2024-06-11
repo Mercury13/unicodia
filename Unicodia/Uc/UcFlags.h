@@ -4,11 +4,12 @@
 //  Flags are common for AutoBuilder and Unicodia
 //
 
-// C++
-#include <cassert>
-
 // What else used
 #include "u_TypedFlags.h"
+
+// C++
+#include <cassert>
+#include <cstdint>
 
 namespace uc {
 
@@ -133,7 +134,8 @@ namespace uc {
         KAYPRO      = 1 << 20,
         // Technical
         DUMMY,
-        LAST = DUMMY - 1
+        LAST = DUMMY - 1,
+        FIRST = 1
     };
     DEFINE_ENUM_OPS(OldComp)
 
