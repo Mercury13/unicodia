@@ -19,6 +19,7 @@
 #include "data.h"
 #include "egyptian.h"
 #include "entities.h"
+#include "legacy.h"
 #include "library.h"
 #include "loader.h"
 #include "sutton.h"
@@ -703,6 +704,13 @@ int main()
     auto longest = root.maxValueLength();
     std::cout << "OK, " << libr.nNodes << " nodes, longest is " << longest << '.' << '\n';
 
+    ///// Old computers ////////////////////////////////////////////////////////
+
+    std::cout << "Processing old computer base..." << std::flush;
+    auto oldr = old::process();
+    std::cout << "OK, " << oldr.nCps << " CPs, "
+                        << oldr.nRanges << " ranges." "\n";
+
     ///// Write UcAutoCount ////////////////////////////////////////////////////
 
     os.open("UcAutoCount.h");
@@ -716,6 +724,7 @@ int main()
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
+    os << "constexpr unsigned N_OLDCOMP_RANGES = " << std::dec << oldr.nRanges << ";\n";
     os << "}\n";
     os.close();
 

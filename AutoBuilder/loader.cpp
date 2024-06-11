@@ -10,8 +10,6 @@
 // Libs
 #include "u_TypedFlags.h"
 
-std::vector<unsigned char> memXml;
-
 namespace {
 
     class Action {  // interface
@@ -120,6 +118,12 @@ namespace {
         { RAWDATA EGYP_DESCRIPTION },
         { MISCFILES LIBRARY_XML },
         { MISCFILES SUTTON_TXT },
+
+        // Old computers
+        { MAPPINGS OLD_APPLE2_1 },
+        { MAPPINGS OLD_APPLE2_2 },
+        { MAPPINGS OLD_APPLE2_3 },
+        { MAPPINGS OLD_APPLE2_4 },
     };
 
 }

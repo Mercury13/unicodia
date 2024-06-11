@@ -1,7 +1,5 @@
 #pragma once
 
-#include <vector>
-
 #define UCD_PVA "PropertyValueAliases.txt"
 #define UCD_NAMES "NamesList.txt"
 #define UCD_ALIASES "NameAliases.txt"
@@ -26,6 +24,10 @@
 #define EGYP_DESCRIPTION "signdescriptioneng.xml"
 #define SUTTON_TXT "signwritingsequences.txt"
 
-extern std::vector<unsigned char> memXml;
+#define MAPPINGS "MiscFiles/Mappings/"
+#define OLD_APPLE2_1 "APL2ALT1.TXT"
+#define OLD_APPLE2_2 "APL2ALT2.TXT"
+#define OLD_APPLE2_3 "APL2ICHG.TXT"
+#define OLD_APPLE2_4 "APL2PRIM.TXT"
 
 void checkLoader();

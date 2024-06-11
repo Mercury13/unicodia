@@ -18,6 +18,7 @@ SOURCES += \
         egyptian.cpp \
         entities.cpp \
         forget.cpp \
+        legacy.cpp \
         library.cpp \
         loader.cpp \
         main.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     egyptian.h \
     entities.h \
     forget.h \
+    legacy.h \
     library.h \
     loader.h \
     sutton.h \
