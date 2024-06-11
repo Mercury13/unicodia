@@ -8,5 +8,5 @@ constexpr int N_BLOCKS = 332;
 constexpr int N_NUMERICS = 216;
 constexpr int N_EMOJI = 3790;
 constexpr unsigned LONGEST_LIB = 10;  // in codepoints
-constexpr unsigned N_OLDCOMP_RANGES = 14;
+constexpr unsigned N_OLDCOMP_SPANS = 30;
 }

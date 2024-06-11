@@ -1,5 +1,15 @@
 #pragma once
 
+// C++
+#include <filesystem>
+
+// STL
+#include <string_view>
+#include <span>
+
+// Unicode
+#include "UcFlags.h"
+
 #define UCD_PVA "PropertyValueAliases.txt"
 #define UCD_NAMES "NamesList.txt"
 #define UCD_ALIASES "NameAliases.txt"
@@ -24,10 +34,27 @@
 #define EGYP_DESCRIPTION "signdescriptioneng.xml"
 #define SUTTON_TXT "signwritingsequences.txt"
 
-#define MAPPINGS "MiscFiles/Mappings/"
-#define OLD_APPLE2_1 "APL2ALT1.TXT"
-#define OLD_APPLE2_2 "APL2ALT2.TXT"
-#define OLD_APPLE2_3 "APL2ICHG.TXT"
-#define OLD_APPLE2_4 "APL2PRIM.TXT"
+class LocalFile
+{
+public:
+    constexpr LocalFile(std::string_view aFname) : fname(aFname) {}
+    void preload() const;
+    std::filesystem::path localName() const;
+protected:
+    std::string_view fname;
+};
+
+constexpr std::string_view MAPPINGS = "MiscFiles/Mappings/";
+
+class OldCompInfo : public LocalFile
+{
+public:
+    const uc::OldComp flag;
+    consteval OldCompInfo(std::string_view aFname, uc::OldComp aFlag);
+
+    template<const std::string_view& aFname>
+    static consteval OldCompInfo mk(uc::OldComp aFlag);
+};
 
 void checkLoader();
+std::span<const OldCompInfo> allOldComps();

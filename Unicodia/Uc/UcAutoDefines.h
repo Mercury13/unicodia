@@ -451,6 +451,15 @@ namespace uc {
     size_t nLibNodes();
     std::span<const LibNode> allLibNodes();
 
+    struct OldCompSpan {
+        std::span<const Flags<uc::OldComp>> span;
+        char32_t firstCp;
+
+    };
+    inline bool operator < (char32_t x, const OldCompSpan& y) { return (x < y.firstCp); }
+
+    extern const uc::OldCompSpan oldCompSpans[];
+
 }   // namespace uc
 
 #endif

@@ -709,7 +709,7 @@ int main()
     std::cout << "Processing old computer base..." << std::flush;
     auto oldr = old::process();
     std::cout << "OK, " << oldr.nCps << " CPs, "
-                        << oldr.nRanges << " ranges." "\n";
+                        << oldr.nSpans << " spans." "\n";
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
 
@@ -724,7 +724,7 @@ int main()
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
-    os << "constexpr unsigned N_OLDCOMP_RANGES = " << std::dec << oldr.nRanges << ";\n";
+    os << "constexpr unsigned N_OLDCOMP_SPANS = " << std::dec << oldr.nSpans << ";\n";
     os << "}\n";
     os.close();
 

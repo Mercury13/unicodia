@@ -111,7 +111,7 @@ namespace uc {
     ///
     enum class OldComp : uint32_t {
         NONE        = 0,
-        AMSTRAD     = 1 << 0,
+        AMSTRAD_CPC = 1 << 0,
         APPLE       = 1 << 1,
         AQUARIUS    = 1 << 2,
         ATARI_ST    = 1 << 3,

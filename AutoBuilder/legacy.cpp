@@ -22,12 +22,31 @@ namespace {
 
     using Dic = std::map<char32_t, Fgs>;
 
-    void processMapping(Dic& dic, const char* fname, uc::OldComp comp)
+    bool isCpGood(char32_t x)
+    {
+        return (x >= 0x00A1 && x <= 0x00AC)  // Latin-1 up to SHY
+            || (x >= 0x00AE && x <= 0x00BF)  // Rest Latin-1
+            || (x == 0x00D7)                 // Two more chars of Latin-1
+            || (x == 0x00F7)
+            || (x >= 0x02B0 && x <= 0x02FF)  // Spacing modifiers, all
+            || (x >= 0x2010 && x <= 0x2027)  // Some punctuation, no spaces and marks
+            || (x >= 0x2030 && x <= 0x205E)  // More punctuation, no spaces
+            || (x >= 0x2070 && x <= 0x20CF)  // Super/sub, currencies
+            || (x >= 0x2100 && x <= 0x27FF)  // Technical, control pics etc
+            || (x >= 0x2900 && x <= 0x2BFF)  // Arrows etc
+            || (x >= 0x2E00 && x <= 0x2E7F)  // Supp punctuation
+            || (x >= 0x1CC00 && x <= 0x1CEBF)  // Legacy supp
+            || (x >= 0x1F100 && x <= 0x1F2FF)  // Enclosed things
+            || (x >= 0x1F780 && x <= 0x1F8FF)  // Shapes ex, arrows C
+            || (x >= 0x1FB00 && x <= 0x1FBFF); // Legacy
+    }
+
+    void processMapping(Dic& dic, const std::filesystem::path& fname, uc::OldComp comp)
     {
         std::ifstream is(fname);
         if (!is.is_open()) {
             char buf[100];
-            snprintf(buf, std::size(buf), "Cannot open file %s", fname);
+            snprintf(buf, std::size(buf), "Cannot open file %s", fname.string().c_str());
             throw std::logic_error(buf);
         }
 
@@ -54,21 +73,23 @@ namespace {
                     continue;
                 code = code.substr(2);
                 char32_t q = fromHex(code);
-                dic[q] |= comp;
+                if (isCpGood(q)) {
+                    dic[q] |= comp;
+                }
             }
         }
     }
 
     #define OLDCOMP_CPP "UcAutoOldComp.cpp"
 
-    struct OldRange {
+    struct OldSpan {
         Dic::const_iterator st, en;
         auto begin() const { return st; }
         auto end()   const { return en; }
         size_t nCps() const;
     };
 
-    size_t OldRange::nCps() const
+    size_t OldSpan::nCps() const
     {
         if (st == en)
             return 0;
@@ -77,9 +98,9 @@ namespace {
     }
 
 
-    using OldRanges = std::vector<OldRange>;
+    using OldSpans = std::vector<OldSpan>;
 
-    [[nodiscard]] OldRanges splitIntoRanges(const Dic& dic)
+    [[nodiscard]] OldSpans splitIntoSpans(const Dic& dic)
     {
         if (dic.empty())
             throw std::logic_error("Old computer dictionary is empty!");
@@ -87,7 +108,7 @@ namespace {
         constexpr int RANGE_GAP = 16;  // exceeds this gap → new range
         int oldCp = dic.begin()->first;
         Dic::const_iterator rangeStart = dic.begin();
-        OldRanges r;
+        OldSpans r;
         auto finishRange = [&](Dic::const_iterator x) {
             r.emplace_back(rangeStart, x);
         };
@@ -109,7 +130,7 @@ namespace {
     }
 
     constinit const char* oldCompNames[] {
-        "AMSTRAD",
+        "AMSTRAD_CPC",
         "APPLE",
         "AQUARIUS",
         "ATARI_ST",
@@ -142,7 +163,7 @@ namespace {
 
     [[nodiscard]] unsigned outBase(const Dic& dic)
     {
-        auto ranges = splitIntoRanges(dic);
+        auto spans = splitIntoSpans(dic);
         std::ofstream os(OLDCOMP_CPP);
         if (!os.is_open()) {
             throw std::logic_error("Cannot open file " OLDCOMP_CPP);
@@ -154,16 +175,16 @@ namespace {
 
         char bufId[40];
         size_t iRange = 0;
-        for (auto& rng : ranges) {
-            auto nCps = rng.nCps();
+        for (auto& spn : spans) {
+            auto nCps = spn.nCps();
             if (nCps == 0)
                 throw std::logic_error("Found empty range");
 
             writeId(bufId, iRange);
             os << "constinit const Flags<uc::OldComp> " << bufId << "[] {" "\n";
 
-            auto oldCp = rng.begin()->first;
-            for (auto& [cp, compMask] : rng) {
+            auto oldCp = spn.begin()->first;
+            for (auto& [cp, compMask] : spn) {
                 if (compMask.empty())
                     throw std::logic_error("CP has no old computers");
                 // Skipped flags
@@ -171,29 +192,43 @@ namespace {
                     os << "OC::NONE";
                     writeTail(os, skippedCp);
                 }
-                size_t bit = 0;
-                auto numMask = compMask.numeric();
                 bool hasAny = false;
-                for (; numMask != 0;
-                         numMask >>=1, ++bit) {
-                    if (numMask & 1) {
-                        if (hasAny) {
-                            os << " | ";
-                        }
-                        os << "OC::" << oldCompNames[bit];
-                        hasAny = true;
+                auto comps = compMask;
+                while (comps) {
+                    // Extract and remove bit
+                    auto bit = comps.smallest();
+                    comps.remove(bit);
+                    // Turn bit to index
+                    auto iBit = std::countr_zero(Flags<uc::OldComp>::toUnsignedStorage(bit));
+                    // Write what we got
+                    if (hasAny) {
+                        os << " | ";
                     }
+                    os << "OC::" << oldCompNames[iBit];
+                    hasAny = true;
                 }
                 writeTail(os, cp);
                 oldCp = cp;
             }
             os << "};" "\n";
             os << "static_assert(std::size(" << bufId << ") == "
-                 << std::dec << rng.nCps() << R"(, "Autotool failed");)" "\n\n";
+                 << std::dec << spn.nCps() << R"(, "Autotool failed");)" "\n\n";
             ++iRange;
         }
 
-        return ranges.size();
+        os << "constinit const uc::OldCompSpan uc::oldCompSpans[] {" "\n";
+        iRange = 0;
+        for (auto& spn : spans) {
+            writeId(bufId, iRange);
+            auto firstCp = spn.begin()->first;
+            os << "{ .span = " << bufId << ", .firstCp = 0x"
+                    << std::hex << static_cast<int>(firstCp) << "}," "\n";
+            ++iRange;
+        }
+        os << "};" "\n"
+              R"(static_assert(std::size(uc::oldCompSpans) == uc::N_OLDCOMP_SPANS, "Autotool failed");)" "\n";
+
+        return spans.size();
     }
 
 }   // anon namespace
@@ -202,15 +237,14 @@ namespace {
 old::Result old::process()
 {
     Dic dic;
-    processMapping(dic, OLD_APPLE2_1, uc::OldComp::APPLE);
-    processMapping(dic, OLD_APPLE2_2, uc::OldComp::APPLE);
-    processMapping(dic, OLD_APPLE2_3, uc::OldComp::APPLE);
-    processMapping(dic, OLD_APPLE2_4, uc::OldComp::APPLE);
+    for (auto& x : allOldComps()) {
+        processMapping(dic, x.localName(), x.flag);
+    }
 
-    auto nRanges = outBase(dic);
+    auto nSpans = outBase(dic);
 
     return {
         .nCps = static_cast<unsigned>(dic.size()),
-        .nRanges = nRanges,
+        .nSpans = nSpans,
     };
 }

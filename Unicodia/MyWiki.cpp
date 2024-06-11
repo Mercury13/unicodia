@@ -1653,7 +1653,7 @@ namespace {
                 auto bit = comps.smallest();
                 comps.remove(bit);
                 // Turn bit to index
-                auto iBit = std::countr_zero(static_cast<unsigned>(bit));
+                auto iBit = std::countr_zero(Flags<uc::OldComp>::toUnsignedStorage(bit));
                 // Write what we got
                 spC.sep();
                 str::append(text, uc::oldCompInfo[iBit].locName());
