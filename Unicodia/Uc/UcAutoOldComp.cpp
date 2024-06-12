@@ -74,7 +74,7 @@ OC::NONE,  // 2038
 OC::RISC_OS,  // 2039
 OC::RISC_OS,  // 203a
 OC::NONE,  // 203b
-OC::NONE,  // 203c
+OC::KORVET,  // 203c
 OC::NONE,  // 203d
 OC::NONE,  // 203e
 OC::NONE,  // 203f
@@ -142,12 +142,12 @@ OC::TELETEXT,  // 215e
 static_assert(std::size(oldCompRange_6) == 4, "Autotool failed");
 
 constinit const Flags<uc::OldComp> oldCompRange_7[] {
-OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 2190
-OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::ORIC | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 2191
-OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80,  // 2192
-OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80,  // 2193
+OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 2190
+OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::ORIC | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 2191
+OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET,  // 2192
+OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::RISC_OS | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET,  // 2193
 OC::NONE,  // 2194
-OC::NONE,  // 2195
+OC::KORVET,  // 2195
 OC::AQUARIUS,  // 2196
 OC::AQUARIUS,  // 2197
 OC::AQUARIUS,  // 2198
@@ -160,23 +160,35 @@ OC::NONE,  // 219e
 OC::NONE,  // 219f
 OC::NONE,  // 21a0
 OC::AMSTRAD_CPC,  // 21a1
-};
-static_assert(std::size(oldCompRange_7) == 18, "Autotool failed");
-
-constinit const Flags<uc::OldComp> oldCompRange_8[] {
+OC::NONE,  // 21a2
+OC::NONE,  // 21a3
+OC::NONE,  // 21a4
+OC::NONE,  // 21a5
+OC::NONE,  // 21a6
+OC::NONE,  // 21a7
+OC::KORVET,  // 21a8
+OC::NONE,  // 21a9
+OC::NONE,  // 21aa
+OC::NONE,  // 21ab
+OC::NONE,  // 21ac
+OC::NONE,  // 21ad
+OC::NONE,  // 21ae
+OC::NONE,  // 21af
+OC::NONE,  // 21b0
+OC::NONE,  // 21b1
 OC::AMSTRAD_CPC | OC::APPLE,  // 21b2
 };
-static_assert(std::size(oldCompRange_8) == 1, "Autotool failed");
+static_assert(std::size(oldCompRange_7) == 35, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_9[] {
+constinit const Flags<uc::OldComp> oldCompRange_8[] {
 OC::ATARI_ST | OC::RISC_OS,  // 21e6
 OC::ATARI_ST | OC::RISC_OS,  // 21e7
 OC::ATARI_ST | OC::RISC_OS,  // 21e8
 OC::ATARI_ST | OC::RISC_OS,  // 21e9
 };
-static_assert(std::size(oldCompRange_9) == 4, "Autotool failed");
+static_assert(std::size(oldCompRange_8) == 4, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_10[] {
+constinit const Flags<uc::OldComp> oldCompRange_9[] {
 OC::RISC_OS,  // 2202
 OC::NONE,  // 2203
 OC::NONE,  // 2204
@@ -249,9 +261,9 @@ OC::NONE,  // 2246
 OC::NONE,  // 2247
 OC::ATARI_ST | OC::MSX | OC::TANDY_TRS80,  // 2248
 };
-static_assert(std::size(oldCompRange_10) == 71, "Autotool failed");
+static_assert(std::size(oldCompRange_9) == 71, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_11[] {
+constinit const Flags<uc::OldComp> oldCompRange_10[] {
 OC::RISC_OS | OC::TANDY_TRS80,  // 2260
 OC::ATARI_ST | OC::MSX | OC::RISC_OS,  // 2261
 OC::NONE,  // 2262
@@ -259,9 +271,9 @@ OC::NONE,  // 2263
 OC::ATARI_ST | OC::MSX | OC::RISC_OS | OC::TANDY_TRS80,  // 2264
 OC::ATARI_ST | OC::MSX | OC::RISC_OS | OC::TANDY_TRS80,  // 2265
 };
-static_assert(std::size(oldCompRange_11) == 6, "Autotool failed");
+static_assert(std::size(oldCompRange_10) == 6, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_12[] {
+constinit const Flags<uc::OldComp> oldCompRange_11[] {
 OC::AMSTRAD_CPC,  // 2296
 OC::AMSTRAD_CPC,  // 2297
 OC::NONE,  // 2298
@@ -277,11 +289,11 @@ OC::NONE,  // 22a1
 OC::NONE,  // 22a2
 OC::AMSTRAD_CPC,  // 22a3
 };
-static_assert(std::size(oldCompRange_12) == 14, "Autotool failed");
+static_assert(std::size(oldCompRange_11) == 14, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_13[] {
+constinit const Flags<uc::OldComp> oldCompRange_12[] {
 OC::AMSTRAD_CPC | OC::TANDY_TRS80,  // 2301
-OC::ATARI_ST | OC::MSX,  // 2302
+OC::ATARI_ST | OC::MSX | OC::KORVET,  // 2302
 OC::NONE,  // 2303
 OC::NONE,  // 2304
 OC::NONE,  // 2305
@@ -314,9 +326,9 @@ OC::NONE,  // 231f
 OC::ATARI_ST | OC::MSX,  // 2320
 OC::ATARI_ST | OC::MSX,  // 2321
 };
-static_assert(std::size(oldCompRange_13) == 33, "Autotool failed");
+static_assert(std::size(oldCompRange_12) == 33, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_14[] {
+constinit const Flags<uc::OldComp> oldCompRange_13[] {
 OC::AMSTRAD_CPC,  // 237b
 OC::NONE,  // 237c
 OC::NONE,  // 237d
@@ -337,9 +349,9 @@ OC::NONE,  // 238b
 OC::NONE,  // 238c
 OC::AMSTRAD_CPC,  // 238d
 };
-static_assert(std::size(oldCompRange_14) == 19, "Autotool failed");
+static_assert(std::size(oldCompRange_13) == 19, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_15[] {
+constinit const Flags<uc::OldComp> oldCompRange_14[] {
 OC::AMSTRAD_CPC | OC::ATARI_8BIT | OC::MINITEL,  // 23b8
 OC::AMSTRAD_CPC | OC::ATARI_8BIT | OC::MINITEL,  // 23b9
 OC::AMSTRAD_CPC | OC::ATARI_8BIT | OC::MINITEL,  // 23ba
@@ -362,9 +374,9 @@ OC::AMSTRAD_CPC,  // 23ca
 OC::NONE,  // 23cb
 OC::AMSTRAD_CPC,  // 23cc
 };
-static_assert(std::size(oldCompRange_15) == 21, "Autotool failed");
+static_assert(std::size(oldCompRange_14) == 21, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_16[] {
+constinit const Flags<uc::OldComp> oldCompRange_15[] {
 OC::ATARI_ST,  // 240c
 OC::ATARI_ST | OC::TANDY_TRS80,  // 240d
 OC::NONE,  // 240e
@@ -396,9 +408,9 @@ OC::NONE,  // 2427
 OC::TANDY_TRS80,  // 2428
 OC::AMSTRAD_CPC,  // 2429
 };
-static_assert(std::size(oldCompRange_16) == 30, "Autotool failed");
+static_assert(std::size(oldCompRange_15) == 30, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_17[] {
+constinit const Flags<uc::OldComp> oldCompRange_16[] {
 OC::AMSTRAD_CPC | OC::APPLE | OC::ATARI_8BIT | OC::MINITEL | OC::MSX | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT,  // 2500
 OC::NONE,  // 2501
 OC::AMSTRAD_CPC | OC::AQUARIUS | OC::MINITEL | OC::MSX | OC::COMMODORE | OC::RISC_OS | OC::TELETEXT,  // 2502
@@ -464,9 +476,9 @@ OC::NONE,  // 253d
 OC::NONE,  // 253e
 OC::TELETEXT,  // 253f
 };
-static_assert(std::size(oldCompRange_17) == 64, "Autotool failed");
+static_assert(std::size(oldCompRange_16) == 64, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_18[] {
+constinit const Flags<uc::OldComp> oldCompRange_17[] {
 OC::COMMODORE | OC::RISC_OS,  // 256d
 OC::COMMODORE | OC::RISC_OS,  // 256e
 OC::COMMODORE | OC::RISC_OS,  // 256f
@@ -494,15 +506,15 @@ OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MSX | OC::COMMODORE | OC::
 OC::COMMODORE,  // 2585
 OC::AQUARIUS | OC::MSX | OC::COMMODORE,  // 2586
 OC::AQUARIUS | OC::COMMODORE,  // 2587
-OC::AMSTRAD_CPC | OC::AQUARIUS | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::RISC_OS | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 2588
+OC::AMSTRAD_CPC | OC::AQUARIUS | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::RISC_OS | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 2588
 OC::APPLE | OC::AQUARIUS | OC::COMMODORE,  // 2589
 OC::AQUARIUS | OC::MSX | OC::COMMODORE,  // 258a
 OC::COMMODORE,  // 258b
-OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 258c
+OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 258c
 OC::AQUARIUS | OC::COMMODORE,  // 258d
 OC::AQUARIUS | OC::MSX | OC::COMMODORE | OC::TANDY_TRS80,  // 258e
 OC::APPLE | OC::AQUARIUS | OC::COMMODORE,  // 258f
-OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 2590
+OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MINITEL | OC::MSX | OC::ORIC | OC::COMMODORE | OC::SINCLAIR | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 2590
 OC::NONE,  // 2591
 OC::AMSTRAD_CPC | OC::APPLE | OC::AQUARIUS | OC::ORIC | OC::COMMODORE | OC::RISC_OS | OC::SINCLAIR | OC::TELETEXT,  // 2592
 OC::NONE,  // 2593
@@ -530,7 +542,7 @@ OC::NONE,  // 25a8
 OC::NONE,  // 25a9
 OC::AQUARIUS,  // 25aa
 OC::NONE,  // 25ab
-OC::MSX,  // 25ac
+OC::MSX | OC::KORVET,  // 25ac
 OC::TANDY_TRS80,  // 25ad
 OC::NONE,  // 25ae
 OC::NONE,  // 25af
@@ -540,7 +552,7 @@ OC::AMSTRAD_CPC | OC::AQUARIUS,  // 25b2
 OC::NONE,  // 25b3
 OC::NONE,  // 25b4
 OC::NONE,  // 25b5
-OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT,  // 25b6
+OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::KORVET,  // 25b6
 OC::NONE,  // 25b7
 OC::NONE,  // 25b8
 OC::NONE,  // 25b9
@@ -550,7 +562,7 @@ OC::AMSTRAD_CPC | OC::AQUARIUS,  // 25bc
 OC::NONE,  // 25bd
 OC::NONE,  // 25be
 OC::NONE,  // 25bf
-OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT,  // 25c0
+OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::KORVET,  // 25c0
 OC::NONE,  // 25c1
 OC::NONE,  // 25c2
 OC::NONE,  // 25c3
@@ -574,7 +586,7 @@ OC::NONE,  // 25d4
 OC::NONE,  // 25d5
 OC::NONE,  // 25d6
 OC::NONE,  // 25d7
-OC::ATARI_8BIT | OC::MSX | OC::COMMODORE,  // 25d8
+OC::ATARI_8BIT | OC::MSX | OC::COMMODORE | OC::KORVET,  // 25d8
 OC::MSX | OC::COMMODORE,  // 25d9
 OC::NONE,  // 25da
 OC::NONE,  // 25db
@@ -607,13 +619,13 @@ OC::AMSTRAD_CPC,  // 25f5
 OC::AMSTRAD_CPC,  // 25f6
 OC::AMSTRAD_CPC,  // 25f7
 };
-static_assert(std::size(oldCompRange_18) == 139, "Autotool failed");
+static_assert(std::size(oldCompRange_17) == 139, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_19[] {
+constinit const Flags<uc::OldComp> oldCompRange_18[] {
 OC::AMSTRAD_CPC | OC::TANDY_TRS80,  // 2639
-OC::AMSTRAD_CPC | OC::MSX | OC::TANDY_TRS80,  // 263a
-OC::MSX,  // 263b
-OC::AMSTRAD_CPC | OC::MSX,  // 263c
+OC::AMSTRAD_CPC | OC::MSX | OC::TANDY_TRS80 | OC::KORVET,  // 263a
+OC::MSX | OC::KORVET,  // 263b
+OC::AMSTRAD_CPC | OC::MSX | OC::KORVET,  // 263c
 OC::NONE,  // 263d
 OC::NONE,  // 263e
 OC::NONE,  // 263f
@@ -621,9 +633,9 @@ OC::AMSTRAD_CPC | OC::MSX | OC::TANDY_TRS80,  // 2640
 OC::NONE,  // 2641
 OC::AMSTRAD_CPC | OC::MSX | OC::TANDY_TRS80,  // 2642
 };
-static_assert(std::size(oldCompRange_19) == 10, "Autotool failed");
+static_assert(std::size(oldCompRange_18) == 10, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_20[] {
+constinit const Flags<uc::OldComp> oldCompRange_19[] {
 OC::AMSTRAD_CPC | OC::AQUARIUS | OC::ATARI_8BIT | OC::MSX | OC::COMMODORE | OC::TANDY_TRS80,  // 2660
 OC::NONE,  // 2661
 OC::NONE,  // 2662
@@ -636,10 +648,11 @@ OC::NONE,  // 2668
 OC::AMSTRAD_CPC,  // 2669
 OC::AMSTRAD_CPC | OC::ATARI_ST | OC::MSX | OC::TELETEXT,  // 266a
 OC::MSX,  // 266b
+OC::KORVET,  // 266c
 };
-static_assert(std::size(oldCompRange_20) == 12, "Autotool failed");
+static_assert(std::size(oldCompRange_19) == 13, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_21[] {
+constinit const Flags<uc::OldComp> oldCompRange_20[] {
 OC::AQUARIUS,  // 2708
 OC::NONE,  // 2709
 OC::NONE,  // 270a
@@ -653,14 +666,14 @@ OC::NONE,  // 2711
 OC::NONE,  // 2712
 OC::AMSTRAD_CPC | OC::APPLE | OC::ATARI_ST | OC::COMMODORE | OC::TANDY_TRS80,  // 2713
 };
-static_assert(std::size(oldCompRange_21) == 12, "Autotool failed");
+static_assert(std::size(oldCompRange_20) == 12, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_22[] {
+constinit const Flags<uc::OldComp> oldCompRange_21[] {
 OC::MSX,  // 27ca
 };
-static_assert(std::size(oldCompRange_22) == 1, "Autotool failed");
+static_assert(std::size(oldCompRange_21) == 1, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_23[] {
+constinit const Flags<uc::OldComp> oldCompRange_22[] {
 OC::AMSTRAD_CPC,  // 2b1c
 OC::NONE,  // 2b1d
 OC::NONE,  // 2b1e
@@ -671,9 +684,9 @@ OC::NONE,  // 2b22
 OC::NONE,  // 2b23
 OC::AQUARIUS,  // 2b24
 };
-static_assert(std::size(oldCompRange_23) == 9, "Autotool failed");
+static_assert(std::size(oldCompRange_22) == 9, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_24[] {
+constinit const Flags<uc::OldComp> oldCompRange_23[] {
 OC::AMSTRAD_CPC | OC::TELETEXT,  // 2b60
 OC::AMSTRAD_CPC | OC::TELETEXT,  // 2b61
 OC::AMSTRAD_CPC | OC::TELETEXT,  // 2b62
@@ -681,9 +694,9 @@ OC::AMSTRAD_CPC | OC::TELETEXT,  // 2b63
 OC::AMSTRAD_CPC,  // 2b64
 OC::AMSTRAD_CPC,  // 2b65
 };
-static_assert(std::size(oldCompRange_24) == 6, "Autotool failed");
+static_assert(std::size(oldCompRange_23) == 6, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_25[] {
+constinit const Flags<uc::OldComp> oldCompRange_24[] {
 OC::AMSTRAD_CPC,  // 1cc57
 OC::NONE,  // 1cc58
 OC::NONE,  // 1cc59
@@ -699,9 +712,9 @@ OC::NONE,  // 1cc62
 OC::AMSTRAD_CPC,  // 1cc63
 OC::AMSTRAD_CPC,  // 1cc64
 };
-static_assert(std::size(oldCompRange_25) == 14, "Autotool failed");
+static_assert(std::size(oldCompRange_24) == 14, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_26[] {
+constinit const Flags<uc::OldComp> oldCompRange_25[] {
 OC::AQUARIUS,  // 1cde6
 OC::AQUARIUS,  // 1cde7
 OC::AQUARIUS,  // 1cde8
@@ -729,75 +742,93 @@ OC::AQUARIUS,  // 1cdfd
 OC::AQUARIUS,  // 1cdfe
 OC::AQUARIUS,  // 1cdff
 };
-static_assert(std::size(oldCompRange_26) == 26, "Autotool failed");
+static_assert(std::size(oldCompRange_25) == 26, "Autotool failed");
+
+constinit const Flags<uc::OldComp> oldCompRange_26[] {
+OC::KORVET,  // 1f15b
+OC::NONE,  // 1f15c
+OC::NONE,  // 1f15d
+OC::NONE,  // 1f15e
+OC::KORVET,  // 1f15f
+};
+static_assert(std::size(oldCompRange_26) == 5, "Autotool failed");
 
 constinit const Flags<uc::OldComp> oldCompRange_27[] {
+OC::KORVET,  // 1f17b
+OC::NONE,  // 1f17c
+OC::NONE,  // 1f17d
+OC::NONE,  // 1f17e
+OC::KORVET,  // 1f17f
+};
+static_assert(std::size(oldCompRange_27) == 5, "Autotool failed");
+
+constinit const Flags<uc::OldComp> oldCompRange_28[] {
 OC::ATARI_8BIT,  // 1f8b0
 OC::TANDY_TRS80,  // 1f8b1
 };
-static_assert(std::size(oldCompRange_27) == 2, "Autotool failed");
+static_assert(std::size(oldCompRange_28) == 2, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_28[] {
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb00
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb01
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb02
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb03
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb04
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb05
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb06
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb07
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb08
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb09
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0a
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0b
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0c
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0d
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0e
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb0f
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb10
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb11
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb12
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb13
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb14
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb15
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb16
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb17
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb18
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb19
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1a
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1b
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1c
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1d
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1e
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb1f
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb20
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb21
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb22
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb23
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb24
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb25
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb26
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb27
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb28
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb29
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2a
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2b
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2c
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2d
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2e
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb2f
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb30
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb31
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb32
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb33
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb34
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb35
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb36
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb37
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb38
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb39
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb3a
-OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO,  // 1fb3b
+constinit const Flags<uc::OldComp> oldCompRange_29[] {
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb00
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb01
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb02
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb03
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb04
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb05
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb06
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb07
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb08
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb09
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0a
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0b
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0c
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0d
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0e
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb0f
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb10
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb11
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb12
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb13
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb14
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb15
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb16
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb17
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb18
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb19
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1a
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1b
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1c
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1d
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1e
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb1f
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb20
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb21
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb22
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb23
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb24
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb25
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb26
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb27
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb28
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb29
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2a
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2b
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2c
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2d
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2e
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb2f
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb30
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb31
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb32
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb33
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb34
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb35
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb36
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb37
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb38
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb39
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb3a
+OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb3b
 OC::TELETEXT,  // 1fb3c
 OC::TELETEXT,  // 1fb3d
 OC::TELETEXT,  // 1fb3e
@@ -945,9 +976,9 @@ OC::TANDY_TRS80,  // 1fbcb
 OC::TANDY_TRS80,  // 1fbcc
 OC::TANDY_TRS80,  // 1fbcd
 };
-static_assert(std::size(oldCompRange_28) == 206, "Autotool failed");
+static_assert(std::size(oldCompRange_29) == 206, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_29[] {
+constinit const Flags<uc::OldComp> oldCompRange_30[] {
 OC::AQUARIUS,  // 1fbe8
 OC::AQUARIUS,  // 1fbe9
 OC::AQUARIUS,  // 1fbea
@@ -967,7 +998,7 @@ OC::ATARI_ST,  // 1fbf7
 OC::ATARI_ST,  // 1fbf8
 OC::ATARI_ST,  // 1fbf9
 };
-static_assert(std::size(oldCompRange_29) == 18, "Autotool failed");
+static_assert(std::size(oldCompRange_30) == 18, "Autotool failed");
 
 constinit const uc::OldCompSpan uc::oldCompSpans[] {
 { .span = oldCompRange_0, .firstCp = 0x2c6},
@@ -978,27 +1009,28 @@ constinit const uc::OldCompSpan uc::oldCompSpans[] {
 { .span = oldCompRange_5, .firstCp = 0x211e},
 { .span = oldCompRange_6, .firstCp = 0x215b},
 { .span = oldCompRange_7, .firstCp = 0x2190},
-{ .span = oldCompRange_8, .firstCp = 0x21b2},
-{ .span = oldCompRange_9, .firstCp = 0x21e6},
-{ .span = oldCompRange_10, .firstCp = 0x2202},
-{ .span = oldCompRange_11, .firstCp = 0x2260},
-{ .span = oldCompRange_12, .firstCp = 0x2296},
-{ .span = oldCompRange_13, .firstCp = 0x2301},
-{ .span = oldCompRange_14, .firstCp = 0x237b},
-{ .span = oldCompRange_15, .firstCp = 0x23b8},
-{ .span = oldCompRange_16, .firstCp = 0x240c},
-{ .span = oldCompRange_17, .firstCp = 0x2500},
-{ .span = oldCompRange_18, .firstCp = 0x256d},
-{ .span = oldCompRange_19, .firstCp = 0x2639},
-{ .span = oldCompRange_20, .firstCp = 0x2660},
-{ .span = oldCompRange_21, .firstCp = 0x2708},
-{ .span = oldCompRange_22, .firstCp = 0x27ca},
-{ .span = oldCompRange_23, .firstCp = 0x2b1c},
-{ .span = oldCompRange_24, .firstCp = 0x2b60},
-{ .span = oldCompRange_25, .firstCp = 0x1cc57},
-{ .span = oldCompRange_26, .firstCp = 0x1cde6},
-{ .span = oldCompRange_27, .firstCp = 0x1f8b0},
-{ .span = oldCompRange_28, .firstCp = 0x1fb00},
-{ .span = oldCompRange_29, .firstCp = 0x1fbe8},
+{ .span = oldCompRange_8, .firstCp = 0x21e6},
+{ .span = oldCompRange_9, .firstCp = 0x2202},
+{ .span = oldCompRange_10, .firstCp = 0x2260},
+{ .span = oldCompRange_11, .firstCp = 0x2296},
+{ .span = oldCompRange_12, .firstCp = 0x2301},
+{ .span = oldCompRange_13, .firstCp = 0x237b},
+{ .span = oldCompRange_14, .firstCp = 0x23b8},
+{ .span = oldCompRange_15, .firstCp = 0x240c},
+{ .span = oldCompRange_16, .firstCp = 0x2500},
+{ .span = oldCompRange_17, .firstCp = 0x256d},
+{ .span = oldCompRange_18, .firstCp = 0x2639},
+{ .span = oldCompRange_19, .firstCp = 0x2660},
+{ .span = oldCompRange_20, .firstCp = 0x2708},
+{ .span = oldCompRange_21, .firstCp = 0x27ca},
+{ .span = oldCompRange_22, .firstCp = 0x2b1c},
+{ .span = oldCompRange_23, .firstCp = 0x2b60},
+{ .span = oldCompRange_24, .firstCp = 0x1cc57},
+{ .span = oldCompRange_25, .firstCp = 0x1cde6},
+{ .span = oldCompRange_26, .firstCp = 0x1f15b},
+{ .span = oldCompRange_27, .firstCp = 0x1f17b},
+{ .span = oldCompRange_28, .firstCp = 0x1f8b0},
+{ .span = oldCompRange_29, .firstCp = 0x1fb00},
+{ .span = oldCompRange_30, .firstCp = 0x1fbe8},
 };
 static_assert(std::size(uc::oldCompSpans) == uc::N_OLDCOMP_SPANS, "Autotool failed");

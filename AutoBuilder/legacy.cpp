@@ -47,26 +47,46 @@ namespace {
         }
 
         std::string s;
+        int iLine = 0;
         while (std::getline(is, s)) {
+            ++iLine;
             std::string_view sv = str::trimRightSv(s);
             if (sv.empty())
                 continue;
             // Get rid of comment
             if (auto pHash = sv.find('#'); pHash != std::string_view::npos) {
                 sv = sv.substr(0, pHash);
-                sv = str::trimRightSv(s);
+                sv = str::trimRightSv(sv);
             }
             // Split line by TAB (TSV)
-            auto data = str::splitSv(s, '\t', false);
+            auto data = str::splitSv(sv, '\t', false);
             if (data.size() < 2)
                 continue;
-            // We don’t heed legacy code, just Unicode
+            // Just check legacy code
+            auto legacyCode = data[0];
+            if (legacyCode != "?") {    // ? = IDK legacy code
+                if (!legacyCode.starts_with("0x"))
+                    throw std::logic_error(str::cat(
+                            "File ", fname.string(), " line ", std::to_string(iLine),
+                            ": legacy code <", legacyCode, "> should start with 0x"));
+                legacyCode = legacyCode.substr(2);
+                try {
+                    fromHex(legacyCode);    // just check validity
+                } catch (std::exception(e)) {
+                    throw std::logic_error(str::cat(
+                            "File ", fname.string(), " line ", std::to_string(iLine),
+                            ": ", e.what()));
+                }
+            }
+            // Decode Unicode
             auto sCodes = data[1];
             // Split codes by +
             auto codes = str::splitSv(sCodes, '+');
             for (auto code : codes) {
-                if (!code.starts_with("0x"))
+                if (code.starts_with('<'))
                     continue;
+                if (!code.starts_with("0x"))
+                    throw std::logic_error("Unicode should start with 0x");
                 code = code.substr(2);
                 char32_t q = fromHex(code);
                 if (isCpGood(q)) {

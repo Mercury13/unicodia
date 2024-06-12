@@ -243,6 +243,7 @@ namespace {
     constexpr std::string_view OLD_COCO_1 = "COCOICHG.TXT";
     constexpr std::string_view OLD_COCO_2 = "COCOSGR4.TXT";
     constexpr std::string_view OLD_COCO_3 = "COCOSGR6.TXT";
+    constexpr std::string_view OLD_KORVET = "Korvet-Koi.txt";
 
     constinit const OldCompInfo allOldCompsFiles[] {
         // Old computers
@@ -324,6 +325,7 @@ namespace {
         OldCompInfo::mk<OLD_COCO_1>(uc::OldComp::TANDY_COCO),
         OldCompInfo::mk<OLD_COCO_2>(uc::OldComp::TANDY_COCO),
         OldCompInfo::mk<OLD_COCO_3>(uc::OldComp::TANDY_COCO),
+        OldCompInfo::mk<OLD_KORVET>(uc::OldComp::KORVET),
     };
 
 }
