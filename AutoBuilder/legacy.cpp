@@ -24,11 +24,7 @@ namespace {
 
     bool isCpGood(char32_t x)
     {
-        return (x >= 0x00A1 && x <= 0x00AC)  // Latin-1 up to SHY
-            || (x >= 0x00AE && x <= 0x00BF)  // Rest Latin-1
-            || (x == 0x00D7)                 // Two more chars of Latin-1
-            || (x == 0x00F7)
-            || (x >= 0x02B0 && x <= 0x02FF)  // Spacing modifiers, all
+        return (x >= 0x02B0 && x <= 0x02FF)  // Spacing modifiers, all
             || (x >= 0x2010 && x <= 0x2027)  // Some punctuation, no spaces and marks
             || (x >= 0x2030 && x <= 0x205E)  // More punctuation, no spaces
             || (x >= 0x2070 && x <= 0x20CF)  // Super/sub, currencies

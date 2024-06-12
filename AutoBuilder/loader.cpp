@@ -169,6 +169,73 @@ namespace {
     constexpr std::string_view OLD_AQUARIUS = "AQUARIUS.TXT";
     constexpr std::string_view OLD_ATARI_ST_1 = "ATARISTI.TXT";
     constexpr std::string_view OLD_ATARI_ST_2 = "ATARISTV.TXT";
+    constexpr std::string_view OLD_ATARI_8BIT_1 = "ATARI8IG.TXT";
+    constexpr std::string_view OLD_ATARI_8BIT_2 = "ATARI8II.TXT";
+    constexpr std::string_view OLD_ATARI_8BIT_3 = "ATARI8VG.TXT";
+    constexpr std::string_view OLD_ATARI_8BIT_4 = "ATARI8VI.TXT";
+    constexpr std::string_view OLD_MINITEL_1 = "MINITLG0.TXT";
+    constexpr std::string_view OLD_MINITEL_2 = "MINITLG1.TXT";
+    constexpr std::string_view OLD_MINITEL_STUB = "Minitel_stub.txt";
+    constexpr std::string_view OLD_MSX_01 = "MSXICH.TXT";
+    constexpr std::string_view OLD_MSX_02 = "MSXICHAE.TXT";
+    constexpr std::string_view OLD_MSX_03 = "MSXICHAR.TXT";
+    constexpr std::string_view OLD_MSX_04 = "MSXICHBG.TXT";
+    constexpr std::string_view OLD_MSX_05 = "MSXICHBH.TXT";
+    constexpr std::string_view OLD_MSX_06 = "MSXICHBR.TXT";
+    constexpr std::string_view OLD_MSX_07 = "MSXICHJP.TXT";
+    constexpr std::string_view OLD_MSX_08 = "MSXICHKR.TXT";
+    constexpr std::string_view OLD_MSX_09 = "MSXICHRU.TXT";
+    constexpr std::string_view OLD_MSX_10 = "MSXVID.TXT";
+    constexpr std::string_view OLD_MSX_11 = "MSXVIDAE.TXT";
+    constexpr std::string_view OLD_MSX_12 = "MSXVIDAR.TXT";
+    constexpr std::string_view OLD_MSX_13 = "MSXVIDBG.TXT";
+    constexpr std::string_view OLD_MSX_14 = "MSXVIDBH.TXT";
+    constexpr std::string_view OLD_MSX_15 = "MSXVIDBR.TXT";
+    constexpr std::string_view OLD_MSX_16 = "MSXVIDJP.TXT";
+    constexpr std::string_view OLD_MSX_17 = "MSXVIDKR.TXT";
+    constexpr std::string_view OLD_MSX_18 = "MSXVIDRU.TXT";
+    constexpr std::string_view OLD_ORIC_1 = "ORICG0.TXT";
+    constexpr std::string_view OLD_ORIC_2 = "ORICG1.TXT";
+    constexpr std::string_view OLD_C64_1 = "C64IALT.TXT";
+    constexpr std::string_view OLD_C64_2 = "C64IPRI.TXT";
+    constexpr std::string_view OLD_C64_3 = "C64VALT.TXT";
+    constexpr std::string_view OLD_C64_4 = "C64VPRI.TXT";
+    constexpr std::string_view OLD_PET_1 = "CPETIALT.TXT";
+    constexpr std::string_view OLD_PET_2 = "CPETIPRI.TXT";
+    constexpr std::string_view OLD_PET_3 = "CPETVALT.TXT";
+    constexpr std::string_view OLD_PET_4 = "CPETVPRI.TXT";
+    constexpr std::string_view OLD_VIC_1 = "CVICIALT.TXT";
+    constexpr std::string_view OLD_VIC_2 = "CVICIPRI.TXT";
+    constexpr std::string_view OLD_VIC_3 = "CVICVALT.TXT";
+    constexpr std::string_view OLD_VIC_4 = "CVICVPRI.TXT";
+    constexpr std::string_view OLD_RISC_1 = "RISCEFF.TXT";
+    constexpr std::string_view OLD_RISC_2 = "RISCOSB.TXT";
+    constexpr std::string_view OLD_RISC_3 = "RISCOSI.TXT";
+    constexpr std::string_view OLD_RISC_4 = "RISCOSV.TXT";
+    constexpr std::string_view OLD_SINC_1 = "ZX80.TXT";
+    constexpr std::string_view OLD_SINC_2 = "ZX81.TXT";
+    constexpr std::string_view OLD_TELETEXT_1 = "TELTXTG0.TXT";
+    constexpr std::string_view OLD_TELETEXT_2 = "TELTXTG1.TXT";
+    constexpr std::string_view OLD_TELETEXT_3 = "TELTXTG2.TXT";
+    constexpr std::string_view OLD_TELETEXT_4 = "TELTXTG3.TXT";
+    constexpr std::string_view OLD_TRS_01 = "TRSM1ICH.TXT";
+    constexpr std::string_view OLD_TRS_02 = "TRSM1ORG.TXT";
+    constexpr std::string_view OLD_TRS_03 = "TRSM1REV.TXT";
+    constexpr std::string_view OLD_TRS_04 = "TRSM3IIN.TXT";
+    constexpr std::string_view OLD_TRS_05 = "TRSM3IJP.TXT";
+    constexpr std::string_view OLD_TRS_06 = "TRSM3IRV.TXT";
+    constexpr std::string_view OLD_TRS_07 = "TRSM3VIN.TXT";
+    constexpr std::string_view OLD_TRS_08 = "TRSM3VJP.TXT";
+    constexpr std::string_view OLD_TRS_09 = "TRSM3VRV.TXT";
+    constexpr std::string_view OLD_TRS_10 = "TRSM4AIA.TXT";
+    constexpr std::string_view OLD_TRS_11 = "TRSM4AIP.TXT";
+    constexpr std::string_view OLD_TRS_12 = "TRSM4AIR.TXT";
+    constexpr std::string_view OLD_TRS_13 = "TRSM4AVA.TXT";
+    constexpr std::string_view OLD_TRS_14 = "TRSM4AVP.TXT";
+    constexpr std::string_view OLD_TRS_15 = "TRSM4AVR.TXT";
+    constexpr std::string_view OLD_COCO_1 = "COCOICHG.TXT";
+    constexpr std::string_view OLD_COCO_2 = "COCOSGR4.TXT";
+    constexpr std::string_view OLD_COCO_3 = "COCOSGR6.TXT";
 
     constinit const OldCompInfo allOldCompsFiles[] {
         // Old computers
@@ -182,6 +249,73 @@ namespace {
         OldCompInfo::mk<OLD_AQUARIUS>(uc::OldComp::AQUARIUS),
         OldCompInfo::mk<OLD_ATARI_ST_1>(uc::OldComp::ATARI_ST),
         OldCompInfo::mk<OLD_ATARI_ST_2>(uc::OldComp::ATARI_ST),
+        OldCompInfo::mk<OLD_ATARI_8BIT_1>(uc::OldComp::ATARI_8BIT),
+        OldCompInfo::mk<OLD_ATARI_8BIT_2>(uc::OldComp::ATARI_8BIT),
+        OldCompInfo::mk<OLD_ATARI_8BIT_3>(uc::OldComp::ATARI_8BIT),
+        OldCompInfo::mk<OLD_ATARI_8BIT_4>(uc::OldComp::ATARI_8BIT),
+        OldCompInfo::mk<OLD_MINITEL_1>(uc::OldComp::MINITEL),
+        OldCompInfo::mk<OLD_MINITEL_2>(uc::OldComp::MINITEL),
+        OldCompInfo::mk<OLD_MINITEL_STUB>(uc::OldComp::MINITEL),
+        OldCompInfo::mk<OLD_MSX_01>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_02>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_03>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_04>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_05>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_06>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_07>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_08>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_09>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_10>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_11>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_12>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_13>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_14>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_15>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_16>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_17>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_MSX_18>(uc::OldComp::MSX),
+        OldCompInfo::mk<OLD_ORIC_1>(uc::OldComp::ORIC),
+        OldCompInfo::mk<OLD_ORIC_2>(uc::OldComp::ORIC),
+        OldCompInfo::mk<OLD_C64_1>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_C64_2>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_C64_3>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_C64_4>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_PET_1>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_PET_2>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_PET_3>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_PET_4>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_VIC_1>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_VIC_2>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_VIC_3>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_VIC_4>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_RISC_1>(uc::OldComp::RISC_OS),
+        OldCompInfo::mk<OLD_RISC_2>(uc::OldComp::RISC_OS),
+        OldCompInfo::mk<OLD_RISC_3>(uc::OldComp::RISC_OS),
+        OldCompInfo::mk<OLD_RISC_4>(uc::OldComp::RISC_OS),
+        OldCompInfo::mk<OLD_SINC_1>(uc::OldComp::SINCLAIR),
+        OldCompInfo::mk<OLD_SINC_2>(uc::OldComp::SINCLAIR),
+        OldCompInfo::mk<OLD_TELETEXT_1>(uc::OldComp::TELETEXT),
+        OldCompInfo::mk<OLD_TELETEXT_2>(uc::OldComp::TELETEXT),
+        OldCompInfo::mk<OLD_TELETEXT_3>(uc::OldComp::TELETEXT),
+        OldCompInfo::mk<OLD_TELETEXT_4>(uc::OldComp::TELETEXT),
+        OldCompInfo::mk<OLD_TRS_01>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_02>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_03>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_04>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_05>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_06>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_07>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_08>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_09>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_10>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_11>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_12>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_13>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_14>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_TRS_15>(uc::OldComp::TANDY_TRS80),
+        OldCompInfo::mk<OLD_COCO_1>(uc::OldComp::TANDY_COCO),
+        OldCompInfo::mk<OLD_COCO_2>(uc::OldComp::TANDY_COCO),
+        OldCompInfo::mk<OLD_COCO_3>(uc::OldComp::TANDY_COCO),
     };
 
 }
