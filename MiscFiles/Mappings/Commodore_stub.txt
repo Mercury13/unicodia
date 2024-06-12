@@ -1,0 +1,4 @@
+# Characters of Commodore later mapped to other CPs
+
+-	0x1FB73
+-	0x1FB79

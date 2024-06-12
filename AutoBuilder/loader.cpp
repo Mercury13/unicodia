@@ -214,6 +214,7 @@ namespace {
     constexpr std::string_view OLD_VIC_2 = "CVICIPRI.TXT";
     constexpr std::string_view OLD_VIC_3 = "CVICVALT.TXT";
     constexpr std::string_view OLD_VIC_4 = "CVICVPRI.TXT";
+    constexpr std::string_view OLD_COMMOD_STUB = "Commodore_stub.txt";
     constexpr std::string_view OLD_RISC_1 = "RISCEFF.TXT";
     constexpr std::string_view OLD_RISC_2 = "RISCOSB.TXT";
     constexpr std::string_view OLD_RISC_3 = "RISCOSI.TXT";
@@ -294,6 +295,7 @@ namespace {
         OldCompInfo::mk<OLD_VIC_2>(uc::OldComp::COMMODORE),
         OldCompInfo::mk<OLD_VIC_3>(uc::OldComp::COMMODORE),
         OldCompInfo::mk<OLD_VIC_4>(uc::OldComp::COMMODORE),
+        OldCompInfo::mk<OLD_COMMOD_STUB>(uc::OldComp::COMMODORE),
         OldCompInfo::mk<OLD_RISC_1>(uc::OldComp::RISC_OS),
         OldCompInfo::mk<OLD_RISC_2>(uc::OldComp::RISC_OS),
         OldCompInfo::mk<OLD_RISC_3>(uc::OldComp::RISC_OS),
