@@ -39,6 +39,12 @@ void LocalFile::preload() const
 }
 
 
+void LocalFile::cleanUp() const
+{
+    std::filesystem::remove(localName());
+}
+
+
 std::filesystem::path LocalFile::localName() const
 {
     return std::filesystem::path{fname}.filename();
@@ -327,6 +333,17 @@ void checkLoader()
     }
     for (auto& oc: allOldCompsFiles) {
         oc.preload();
+    }
+}
+
+
+void cleanUpLoader()
+{
+    for (auto& lf : allLocalFiles) {
+        lf.cleanUp();
+    }
+    for (auto& oc: allOldCompsFiles) {
+        oc.cleanUp();
     }
 }
 

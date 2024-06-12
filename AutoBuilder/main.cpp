@@ -763,6 +763,12 @@ int main()
               << forgetStats.nExtra << " extra, "
               << forgetStats.nBadCase << " bad case, see " << FNAME_FORGET << "." << '\n';
 
+    ///// Temp files ///////////////////////////////////////////////////////////
+
+    std::cout << "Removing temp files..." << std::flush;
+    cleanUpLoader();
+    std::cout << "OK" "\n";
+
     ///// Done !! //////////////////////////////////////////////////////////////
 
     std::cout << "Successfully finished!" << "\n\n";

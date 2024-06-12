@@ -39,6 +39,7 @@ class LocalFile
 public:
     constexpr LocalFile(std::string_view aFname) : fname(aFname) {}
     void preload() const;
+    void cleanUp() const;
     std::filesystem::path localName() const;
 protected:
     std::string_view fname;
@@ -57,4 +58,5 @@ public:
 };
 
 void checkLoader();
+void cleanUpLoader();
 std::span<const OldCompInfo> allOldComps();
