@@ -45,8 +45,6 @@ protected:
     std::string_view fname;
 };
 
-constexpr std::string_view MAPPINGS = "MiscFiles/Mappings/";
-
 class OldCompInfo : public LocalFile
 {
 public:

@@ -745,30 +745,43 @@ OC::AQUARIUS,  // 1cdff
 static_assert(std::size(oldCompRange_25) == 26, "Autotool failed");
 
 constinit const Flags<uc::OldComp> oldCompRange_26[] {
+OC::SMALLTALK,  // 1ceb0
+OC::SMALLTALK,  // 1ceb1
+OC::SMALLTALK,  // 1ceb2
+OC::SMALLTALK,  // 1ceb3
+};
+static_assert(std::size(oldCompRange_26) == 4, "Autotool failed");
+
+constinit const Flags<uc::OldComp> oldCompRange_27[] {
 OC::KORVET,  // 1f15b
 OC::NONE,  // 1f15c
 OC::NONE,  // 1f15d
 OC::NONE,  // 1f15e
 OC::KORVET,  // 1f15f
 };
-static_assert(std::size(oldCompRange_26) == 5, "Autotool failed");
+static_assert(std::size(oldCompRange_27) == 5, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_27[] {
+constinit const Flags<uc::OldComp> oldCompRange_28[] {
 OC::KORVET,  // 1f17b
 OC::NONE,  // 1f17c
 OC::NONE,  // 1f17d
 OC::NONE,  // 1f17e
 OC::KORVET,  // 1f17f
 };
-static_assert(std::size(oldCompRange_27) == 5, "Autotool failed");
-
-constinit const Flags<uc::OldComp> oldCompRange_28[] {
-OC::ATARI_8BIT,  // 1f8b0
-OC::TANDY_TRS80,  // 1f8b1
-};
-static_assert(std::size(oldCompRange_28) == 2, "Autotool failed");
+static_assert(std::size(oldCompRange_28) == 5, "Autotool failed");
 
 constinit const Flags<uc::OldComp> oldCompRange_29[] {
+OC::ATARI_8BIT,  // 1f8b0
+OC::TANDY_TRS80,  // 1f8b1
+OC::SMALLTALK,  // 1f8b2
+OC::NONE,  // 1f8b3
+OC::NONE,  // 1f8b4
+OC::NONE,  // 1f8b5
+OC::SMALLTALK,  // 1f8b6
+};
+static_assert(std::size(oldCompRange_29) == 7, "Autotool failed");
+
+constinit const Flags<uc::OldComp> oldCompRange_30[] {
 OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb00
 OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb01
 OC::AQUARIUS | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::TANDY_COCO | OC::KORVET,  // 1fb02
@@ -976,9 +989,9 @@ OC::TANDY_TRS80,  // 1fbcb
 OC::TANDY_TRS80,  // 1fbcc
 OC::TANDY_TRS80,  // 1fbcd
 };
-static_assert(std::size(oldCompRange_29) == 206, "Autotool failed");
+static_assert(std::size(oldCompRange_30) == 206, "Autotool failed");
 
-constinit const Flags<uc::OldComp> oldCompRange_30[] {
+constinit const Flags<uc::OldComp> oldCompRange_31[] {
 OC::AQUARIUS,  // 1fbe8
 OC::AQUARIUS,  // 1fbe9
 OC::AQUARIUS,  // 1fbea
@@ -998,7 +1011,7 @@ OC::ATARI_ST,  // 1fbf7
 OC::ATARI_ST,  // 1fbf8
 OC::ATARI_ST,  // 1fbf9
 };
-static_assert(std::size(oldCompRange_30) == 18, "Autotool failed");
+static_assert(std::size(oldCompRange_31) == 18, "Autotool failed");
 
 constinit const uc::OldCompSpan uc::oldCompSpans[] {
 { .span = oldCompRange_0, .firstCp = 0x2c6},
@@ -1027,10 +1040,11 @@ constinit const uc::OldCompSpan uc::oldCompSpans[] {
 { .span = oldCompRange_23, .firstCp = 0x2b60},
 { .span = oldCompRange_24, .firstCp = 0x1cc57},
 { .span = oldCompRange_25, .firstCp = 0x1cde6},
-{ .span = oldCompRange_26, .firstCp = 0x1f15b},
-{ .span = oldCompRange_27, .firstCp = 0x1f17b},
-{ .span = oldCompRange_28, .firstCp = 0x1f8b0},
-{ .span = oldCompRange_29, .firstCp = 0x1fb00},
-{ .span = oldCompRange_30, .firstCp = 0x1fbe8},
+{ .span = oldCompRange_26, .firstCp = 0x1ceb0},
+{ .span = oldCompRange_27, .firstCp = 0x1f15b},
+{ .span = oldCompRange_28, .firstCp = 0x1f17b},
+{ .span = oldCompRange_29, .firstCp = 0x1f8b0},
+{ .span = oldCompRange_30, .firstCp = 0x1fb00},
+{ .span = oldCompRange_31, .firstCp = 0x1fbe8},
 };
 static_assert(std::size(uc::oldCompSpans) == uc::N_OLDCOMP_SPANS, "Autotool failed");
