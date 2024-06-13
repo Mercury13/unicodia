@@ -247,6 +247,23 @@ namespace {
     constexpr std::string_view OLD_COCO_3 = "COCOSGR6.TXT";
     constexpr std::string_view OLD_KORVET = "Korvet-Koi.txt";
     constexpr std::string_view OLD_SMALLTALK = "SmallTalk.txt";
+    constexpr std::string_view OLD_SHARP_MZ_1 = "MZ80VEUR.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_2 = "MZ80VJPN.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_3 = "MZ700IEU.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_4 = "MZ700IJP.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_5 = "MZ700VEA.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_6 = "MZ700VEP.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_7 = "MZ700VJA.TXT";
+    constexpr std::string_view OLD_SHARP_MZ_8 = "MZ700VJP.TXT";
+    constexpr std::string_view OLD_OHIO_SCIENTIFIC = "OSI.TXT";
+    constexpr std::string_view OLD_ROBOTRON = "ROBOTRON.TXT";
+    constexpr std::string_view OLD_HP_1 = "HP264XLC.TXT";
+    constexpr std::string_view OLD_HP_2 = "HP264XLG.TXT";
+    constexpr std::string_view OLD_HP_3 = "HP264XLN.TXT";
+    constexpr std::string_view OLD_HP_4 = "HP264XMA.TXT";
+    constexpr std::string_view OLD_HP_5 = "HP264XUC.TXT";
+    constexpr std::string_view OLD_KAYPRO_1 = "KAYPRONV.TXT";
+    constexpr std::string_view OLD_KAYPRO_2 = "KAYPRORV.TXT";
 
     constinit const OldCompInfo allOldCompsFiles[] {
         // Old computers
@@ -330,6 +347,24 @@ namespace {
         OldCompInfo::mk<OLD_COCO_3>(uc::OldComp::TANDY_COCO),
         OldCompInfo::mk<OLD_KORVET>(uc::OldComp::KORVET),
         OldCompInfo::mk<OLD_SMALLTALK>(uc::OldComp::SMALLTALK),
+        OldCompInfo::mk<OLD_SHARP_MZ_1>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_2>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_3>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_4>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_5>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_6>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_7>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_8>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_SHARP_MZ_8>(uc::OldComp::SHARP_MZ),
+        OldCompInfo::mk<OLD_OHIO_SCIENTIFIC>(uc::OldComp::OHIO_SCIENTIFIC),
+        OldCompInfo::mk<OLD_ROBOTRON>(uc::OldComp::ROBOTRON),
+        OldCompInfo::mk<OLD_HP_1>(uc::OldComp::HP_TERMINAL),
+        OldCompInfo::mk<OLD_HP_2>(uc::OldComp::HP_TERMINAL),
+        OldCompInfo::mk<OLD_HP_3>(uc::OldComp::HP_TERMINAL),
+        OldCompInfo::mk<OLD_HP_4>(uc::OldComp::HP_TERMINAL),
+        OldCompInfo::mk<OLD_HP_5>(uc::OldComp::HP_TERMINAL),
+        OldCompInfo::mk<OLD_KAYPRO_1>(uc::OldComp::KAYPRO),
+        OldCompInfo::mk<OLD_KAYPRO_2>(uc::OldComp::KAYPRO),
     };
 
 }

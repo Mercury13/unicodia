@@ -72,7 +72,7 @@ namespace {
                 legacyCode = legacyCode.substr(2);
                 try {
                     fromHex(legacyCode);    // just check validity
-                } catch (std::exception(e)) {
+                } catch (const std::exception& e) {
                     throw std::logic_error(str::cat(
                             "File ", fname.string(), " line ", std::to_string(iLine),
                             ": ", e.what()));
@@ -255,6 +255,11 @@ old::Result old::process()
     Dic dic;
     for (auto& x : allOldComps()) {
         processMapping(dic, x.localName(), x.flag);
+    }
+
+    // Add teletext chars
+    for (char32_t c = 0x1CE51; c <= 0x1CE8F; ++c) {
+        dic[c] |= uc::OldComp::TELETEXT;
     }
 
     auto nSpans = outBase(dic);
