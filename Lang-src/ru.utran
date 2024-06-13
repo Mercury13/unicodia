@@ -4622,8 +4622,16 @@
      <transl>Стрелки дополнительные C</transl>
     </text>
     <text id="Text">
-     <orig>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</orig>
-     <transl>По состоянию на Юникод{{_}}16.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', 12 стрелок со старых компьютеров, и две стрелки для [[ps:Egyp|египетских]] иероглифов (направление чтения текста по столбцам).</transl>
+     <orig>
+      <p>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
+      <p />
+      <p>Arrows 1F8B8…BC are very thick on Ohio Scientific, but Consortium decided to draw them in normal thickness.</p>
+     </orig>
+     <transl>
+      <p>По состоянию на Юникод{{_}}16.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', 12 стрелок со старых компьютеров, и две стрелки для [[ps:Egyp|египетских]] иероглифов (направление чтения текста по столбцам).</p>
+      <p />
+      <p>Стрелки 1F8B8…BC на Ohio Scientific очень толстые, но Консорциум решил рисовать их нормальной шириной.</p>
+     </transl>
     </text>
    </group>
    <group id="1F900">

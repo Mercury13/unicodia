@@ -1461,7 +1461,8 @@ constinit const uc::Block uc::blocks[] {
     // Arrows C OK
     { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE },
             "Supplemental Arrows-C",
-            { EcScript::ZARR, 'C' }, MapType::SYM_OTHER, },
+            { EcScript::ZARR, 'C' }, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Supp sym/picto OK
     { 0x1F900, 0x1F9FF, { 0x1F98A, EcContinent::NONE },
             "Supplemental Symbols and Pictographs",

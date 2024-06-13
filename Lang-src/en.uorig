@@ -3444,7 +3444,11 @@
      <orig>Arrows supplemental C</orig>
     </text>
     <text id="Text">
-     <orig>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</orig>
+     <orig>
+      <p>As of Unicode{{_}}16.0, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
+      <p />
+      <p>Arrows 1F8B8…BC are very thick on Ohio Scientific, but Consortium decided to draw them in normal thickness.</p>
+     </orig>
     </text>
    </group>
    <group id="1F900">

@@ -191,6 +191,8 @@ namespace uc {
          NOTO,
           Z_NOT_1,      ///< Funky, do not delete, needed for alias GREEK_COPTIC
          NOTO_SYMBOL2,
+          Z_NS2_1,      ///< Backed by Pseudographica
+          Z_NS2_2,      ///< Backed by Funky
          NOTO_SYMBOL2_BIGGER,
           Z_N2B_1,
          SYMBOL,

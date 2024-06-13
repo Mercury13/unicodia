@@ -49,8 +49,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
       { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
-     { FNAME_FUNKY },                                                           // …1
-    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot },                            // Noto symbol2
+      { FNAME_FUNKY },                                                          // …1
+    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },        // Noto symbol2
+      { "BabelStonePseudographica.ttf", Ffg::FALL_TO_NEXT },                    // …1
+      { FNAME_FUNKY },                                                          // …2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 30_bot }, // Noto symbol2 bigger
       // Intentionally unhinted
       { FNAME_FUNKY, 115_pc },                                                  // …1
@@ -310,4 +312,8 @@ constinit const uc::Font uc::fontInfo[] = {
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN), "fontInfo size?");
-static_assert (std::size(uc::fontInfo) < 250);      // Just for caching — unused for now
+//
+//  Warning: font array will jump over 256 soon.
+//  So if you cache fonts somehow, you’ll need to do nice programming:
+//    e.g. offset in font chain
+//
