@@ -726,7 +726,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_STRUCTURE },
     // Combining half marks OK
-    { 0xFE20, 0xFE2F, { U"\uFE20\uFE21", EcContinent::NONE },
+    { 0xFE20, 0xFE2F, { U"\uFE20\uFE21", EcContinent::NONE, Ifg::BOTH_DOTTED },
             "Combining Half Marks",
             MyName::INST, MapType::SYM_PUNCT,
             EcScript::NONE, EcFont::NOTO },

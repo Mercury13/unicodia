@@ -904,7 +904,11 @@ namespace {
     {
         if (s.empty())
             return;
-        auto cp = uc::cpsByCode[s[0]];
+        auto c = s[0];
+        if (c == cp::DOTTED_CIRCLE && s.length() > 1) {
+            c = s[1];
+        }
+        auto cp = uc::cpsByCode[c];
         auto font = fontAt(uc::DrawMethod::SAMPLE, sizePc, *cp);
         if (font)
             painter->setFont(*font);

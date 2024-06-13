@@ -11,6 +11,7 @@
 #include "u_Qstrings.h"
 
 // Unicode data
+#include "UcCp.h"
 #include "UcSkin.h"
 
 // Char paint
@@ -466,6 +467,17 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (si.flags.have(uc::Ifg::SMALLER))
         scale *= 0.8;
     auto size = lround(120 * scale);  // Draw icon a bit larger — 120%
+    // Prepare sample string
+    std::u32string_view sample = si.subj.sv();
+    char32_t newSample[5];  // max.4
+    if (si.flags.have(uc::Ifg::BOTH_DOTTED)) {
+        unsigned len = 0;
+        for (auto c : sample) {
+            newSample[len++] = cp::DOTTED_CIRCLE;
+            newSample[len++] = c;
+        }
+        sample = std::u32string_view{ newSample, len };
+    }
     // Rotation
     if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW | uc::Ifg::ROTATE_RTL_CCW)) {
         // Draw direction
@@ -475,10 +487,10 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         auto firstChar = si.subj.v[0];
         const uc::Cp& firstCp = *uc::cpsByCode[firstChar];
         auto font = fontAt(uc::DrawMethod::SAMPLE, size, firstCp);
-        drawVertical(painter, rcContent, *font, direction, clFg, str::toQ(si.subj.sv()));
+        drawVertical(painter, rcContent, *font, direction, clFg, str::toQ(sample));
     } else {
         // Synth icon always draws in default settings
-        drawIconChars(painter, rcContent, size, si.subj.sv(), clFg);
+        drawIconChars(painter, rcContent, size, sample, clFg);
     }
 }
 
