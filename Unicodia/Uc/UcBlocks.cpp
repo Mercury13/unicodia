@@ -1053,8 +1053,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri",
             { EcScript::Takr, 0 }, MapType::AS_BRAH_DEAD, EcScript::Takr },
-    /// @todo [U16, medium tofu] Myanmar ex C
-    { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, Ifg::MISSING  },
+    // Mymr ex C OK
+    { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, {}, 3_hx  },
             "Myanmar Extended-C",
             { EcScript::Mymr, 'C' }, MapType::AS_BRAH,
             EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
