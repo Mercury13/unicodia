@@ -844,8 +844,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
             "Vithkuqi",
             { EcScript::Vith, 0 }, MapType::EU_OTHER_DEAD, EcScript::Vith },
-    /// @todo [U16, big tofu] Todhri
-    { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE, Ifg::MISSING },
+    // Todhri OK, drew in Funky
+    { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE },
             "Todhri",
             { EcScript::Todr, 0 }, MapType::EU_OTHER_DEAD, EcScript::Todr },
     // Linear A OK

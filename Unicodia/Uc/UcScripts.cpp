@@ -653,7 +653,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1990), EcFont::TANGSA },
-    /// @todo [U16, big tofu] Todhri
+    // Todhri OK, drew in Funky
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(1780), EcFont::FUNKY },
