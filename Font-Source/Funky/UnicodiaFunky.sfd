@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1718451342
+ModificationTime: 1718452289
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 288 18 13
+WinInfo: 324 18 13
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -837,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114158 872
+BeginChars: 1114158 873
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -49311,7 +49311,7 @@ EndSplineSet
 Validated: 19489
 EndChar
 
-StartChar: UmlDiaeresis
+StartChar: Uml.Diaeresis
 Encoding: 776 776 289
 Width: 0
 HStem: 632 112<-298.045 -226.47 -108.045 -36.4702>
@@ -49397,7 +49397,7 @@ Refer: 291 -1 S 1 0 0 1 327 34 2
 Refer: 291 -1 N 1 0 0 1 88 34 2
 Refer: 271 66361 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "GothRLIG" GothI UmlDiaeresis
+Ligature2: "GothRLIG" GothI Uml.Diaeresis
 LCarets2: 1 0
 EndChar
 
@@ -125846,71 +125846,19 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: Todr.dot
-Encoding: 1114153 -1 821
-Width: 966
-HStem: 618 130<78.1197 161.88>
-VStem: 60 120<637.633 728.404>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 7
-MDAP[rnd]
-PUSHB_1
- 3
-MDRP[min,rnd,black]
-PUSHB_1
- 3
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 8
-MDAP[rnd]
-PUSHB_1
- 1
-MDRP[rp0,rnd,white]
-PUSHB_1
- 5
-MDRP[min,rnd,black]
-PUSHB_1
- 5
-MDRP[min,rnd,black]
-PUSHB_2
- 9
- 1
-CALL
-SVTCA[y-axis]
-IUP[y]
-IUP[x]
-EndTTInstrs
-LayerCount: 2
-Fore
-SplineSet
-60 683 m 132,-1,1
- 60 710 60 710 77.5 729 c 132,-1,2
- 95 748 95 748 120 748 c 128,-1,3
- 145 748 145 748 162.5 729 c 132,-1,4
- 180 710 180 710 180 683 c 132,-1,5
- 180 656 180 656 162.426757812 637.038085938 c 132,-1,6
- 145 618 145 618 120 618 c 132,-1,7
- 95 618 95 618 77.5732421875 637.038085938 c 132,-1,0
- 60 656 60 656 60 683 c 132,-1,1
-EndSplineSet
-EndChar
-
 StartChar: Todr.Ei
-Encoding: 67017 67017 822
+Encoding: 67017 67017 821
 Width: 250
 Flags: W
 AnchorPoint: "Umlaut" 126 747 basechar 0
 LayerCount: 2
 Fore
-Refer: 821 -1 N 1 0 0 1 5 0 2
+Refer: 871 729 N 1 0 0 1 29 -16 2
 Refer: 820 67026 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.O
-Encoding: 67034 67034 823
+Encoding: 67034 67034 822
 Width: 595
 Flags: W
 HStem: -10 71<272.453 400.44> 476 71<193.656 320.526>
@@ -126007,18 +125955,18 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.U
-Encoding: 67044 67044 824
+Encoding: 67044 67044 823
 Width: 595
 Flags: WO
-AnchorPoint: "Umlaut" 295 749 basechar 0
+AnchorPoint: "Umlaut" 296 749 basechar 0
 LayerCount: 2
 Fore
-Refer: 821 -1 N 1 0 0 1 176 0 2
-Refer: 823 67034 N 1 0 0 1 0 0 2
+Refer: 871 729 N 1 0 0 1 199 -15 2
+Refer: 822 67034 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.Mb
-Encoding: 67011 67011 825
+Encoding: 67011 67011 824
 Width: 445
 Flags: W
 HStem: -10 50<212.344 321.942> 264.341 49.6592<157 250.008> 674 50<238.143 303.881>
@@ -126156,7 +126104,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.C
-Encoding: 67012 67012 826
+Encoding: 67012 67012 825
 Width: 520
 Flags: W
 HStem: 0 21G<240 340> 0 50<317 495> 224 50<165.148 240> 674 50<151.385 220.48>
@@ -126164,12 +126112,12 @@ VStem: 55 50<339.166 606.364> 240 100<0 224 274 655.754> 317 178<0 50>
 AnchorPoint: "Umlaut" 206 702 basechar 0
 LayerCount: 2
 Fore
-Refer: 854 -1 N 1 0 0 1 -78 0 2
-Refer: 853 67042 N 1 0 0 1 0 0 2
+Refer: 853 -1 N 1 0 0 1 -78 0 2
+Refer: 852 67042 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.Ch
-Encoding: 67013 67013 827
+Encoding: 67013 67013 826
 Width: 504
 Flags: W
 HStem: -240 50<255 314.609> 101 51<198.004 292.947> 496 50<180.772 306.801>
@@ -126348,7 +126296,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Xh
-Encoding: 67048 67048 828
+Encoding: 67048 67048 827
 Width: 504
 Flags: W
 HStem: -240 50<216.883 316.06> 102 50<198.523 292.399> 496 50<182.872 307.005>
@@ -126547,7 +126495,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Nxh.part
-Encoding: 1114154 -1 829
+Encoding: 1114154 -1 828
 Width: 1000
 HStem: 518 74<510.649 560.044>
 VStem: 569 50<358.616 511.773>
@@ -126605,18 +126553,18 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Nxh
-Encoding: 67049 67049 830
+Encoding: 67049 67049 829
 Width: 687
 Flags: W
 AnchorPoint: "Umlaut" 239 536 basechar 0
 LayerCount: 2
 Fore
-Refer: 829 -1 N 1 0 0 1 13 0 2
-Refer: 828 67048 N 1 0 0 1 0 0 2
+Refer: 828 -1 N 1 0 0 1 13 0 2
+Refer: 827 67048 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.D
-Encoding: 67014 67014 831
+Encoding: 67014 67014 830
 Width: 665
 Flags: W
 HStem: 0 21G<40 99.456 512.657 624.855> 694 20G<272.972 391.884>
@@ -126638,7 +126586,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Nd
-Encoding: 67015 67015 832
+Encoding: 67015 67015 831
 Width: 810
 Flags: W
 HStem: 0 21G<40 109.468 336.532 474.429 643.571 770>
@@ -126697,7 +126645,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Dh
-Encoding: 67016 67016 833
+Encoding: 67016 67016 832
 Width: 549
 Flags: W
 HStem: 0 50<175 384> 694 20G<75 175>
@@ -126809,7 +126757,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.E
-Encoding: 67018 67018 834
+Encoding: 67018 67018 833
 Width: 433
 Flags: W
 HStem: 0 21G<100 168.625> 672 52<67.6395 198.432>
@@ -127031,7 +126979,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.F
-Encoding: 67019 67019 835
+Encoding: 67019 67019 834
 Width: 667
 Flags: W
 HStem: -10 50<270.897 439.012> 602 32<499.892 525.062> 696 32<442.862 484.844>
@@ -127172,7 +127120,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Gj
-Encoding: 67022 67022 836
+Encoding: 67022 67022 835
 Width: 578
 Flags: W
 HStem: -240 50<221.837 376.918> 0 21G<75 177> 128 10<270 282.778> 351 50<202.686 322.056> 694 20G<75 177>
@@ -127371,18 +127319,18 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Ngj
-Encoding: 67023 67023 837
+Encoding: 67023 67023 836
 Width: 573
 Flags: W
 AnchorPoint: "Umlaut" 279 714 basechar 0
 LayerCount: 2
 Fore
 Refer: 818 -1 N 1 0 0 1 28 0 2
-Refer: 836 67022 N 1 0 0 1 0 0 2
+Refer: 835 67022 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.H
-Encoding: 67024 67024 838
+Encoding: 67024 67024 837
 Width: 512
 Flags: W
 HStem: -10 48<263.901 427.955> 496 50<266.366 414.154>
@@ -127475,7 +127423,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Hj
-Encoding: 67025 67025 839
+Encoding: 67025 67025 838
 Width: 512
 Flags: W
 HStem: -10 50<97.846 245.634> 498 48<84.045 248.099>
@@ -127573,7 +127521,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.K
-Encoding: 67028 67028 840
+Encoding: 67028 67028 839
 Width: 422
 Flags: W
 HStem: -10 50<269.438 367> 496 50<265.648 367>
@@ -127648,7 +127596,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.J
-Encoding: 67027 67027 841
+Encoding: 67027 67027 840
 Width: 422
 Flags: W
 HStem: -10 50<55 156.352> 496 50<55 152.562>
@@ -127723,7 +127671,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.L
-Encoding: 67029 67029 842
+Encoding: 67029 67029 841
 Width: 543
 Flags: W
 HStem: -10 50<241.215 368> 315 50<219.737 368>
@@ -127836,7 +127784,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.LL
-Encoding: 67030 67030 843
+Encoding: 67030 67030 842
 Width: 521
 Flags: W
 HStem: 155 50<175 346> 320 50<175 346>
@@ -127947,7 +127895,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.M
-Encoding: 67031 67031 844
+Encoding: 67031 67031 843
 Width: 573
 Flags: W
 HStem: -10 50<238.177 378.539> 445 50<234.802 367.156>
@@ -128093,7 +128041,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.P
-Encoding: 67035 67035 845
+Encoding: 67035 67035 844
 Width: 707
 Flags: W
 HStem: 0 50<175 532>
@@ -128184,7 +128132,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Q
-Encoding: 67036 67036 846
+Encoding: 67036 67036 845
 Width: 696
 Flags: W
 HStem: -240 50<387 484.375> 496 50<211.625 309>
@@ -128346,7 +128294,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.R
-Encoding: 67037 67037 847
+Encoding: 67037 67037 846
 Width: 396
 Flags: W
 VStem: 65 100<369.317 536> 241 100<179.426 284.005>
@@ -128411,7 +128359,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Rr
-Encoding: 67038 67038 848
+Encoding: 67038 67038 847
 Width: 465
 Flags: W
 HStem: 168 50<175 259.807> 496 50<175 261.091>
@@ -128518,7 +128466,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.S
-Encoding: 67039 67039 849
+Encoding: 67039 67039 848
 Width: 472
 Flags: W
 AnchorPoint: "Umlaut" 250 536 basechar 0
@@ -128557,7 +128505,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Sh
-Encoding: 67040 67040 850
+Encoding: 67040 67040 849
 Width: 536
 Flags: W
 HStem: 0 21G<30 164.5 379.667 506> 674 50<230.396 322.75>
@@ -128601,7 +128549,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Sht
-Encoding: 67041 67041 851
+Encoding: 67041 67041 850
 Width: 581
 Flags: W
 HStem: 0 21G<30 164.5 379.667 506 455.518 505.518> 674 50<230.396 322.75>
@@ -128609,12 +128557,12 @@ VStem: 125 84<492.683 652.773> 352 50<480.192 641.72> 455.518 50<0 512.694>
 AnchorPoint: "Umlaut" 270 714 basechar 0
 LayerCount: 2
 Fore
-Refer: 852 -1 N 1 0 0 1 -25 0 2
-Refer: 850 67040 N 1 0 0 1 0 0 2
+Refer: 851 -1 N 1 0 0 1 -25 0 2
+Refer: 849 67040 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.Sht.part
-Encoding: 1114155 -1 852
+Encoding: 1114155 -1 851
 Width: 1000
 HStem: 0 21G<480.518 530.518>
 VStem: 480.518 50<0 512.694>
@@ -128634,7 +128582,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.T
-Encoding: 67042 67042 853
+Encoding: 67042 67042 852
 Width: 415
 Flags: W
 HStem: 0 21G<240 340> 224 50<161.216 240> 674 50<145.753 219.05>
@@ -128731,7 +128679,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Ca.part
-Encoding: 1114156 -1 854
+Encoding: 1114156 -1 853
 Width: 1000
 HStem: 0 50<395 573>
 VStem: 395 178<0 50>
@@ -128786,7 +128734,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Th
-Encoding: 67043 67043 855
+Encoding: 67043 67043 854
 Width: 507
 Flags: W
 HStem: -14 50<213.146 274.598> 216 77<65.781 141.812> 674 50<189.832 320.429>
@@ -128832,7 +128780,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.V
-Encoding: 67045 67045 856
+Encoding: 67045 67045 855
 Width: 408
 Flags: W
 HStem: -14 50<221.167 280> 674 50<209.547 292.045>
@@ -128930,7 +128878,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.X
-Encoding: 67046 67046 857
+Encoding: 67046 67046 856
 Width: 526
 Flags: W
 HStem: 486 50<50 198 252 364>
@@ -128988,7 +128936,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Nx
-Encoding: 67047 67047 858
+Encoding: 67047 67047 857
 Width: 531
 Flags: W
 HStem: 0 50<182 481> 486 50<50 198 252 346>
@@ -129071,7 +129019,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Y
-Encoding: 67050 67050 859
+Encoding: 67050 67050 858
 Width: 583
 Flags: W
 HStem: -10 50<133.288 241.088> 246 100<163.104 288> 694 20G<288 388>
@@ -129223,7 +129171,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Jy
-Encoding: 67051 67051 860
+Encoding: 67051 67051 859
 Width: 583
 Flags: W
 HStem: -10 50<133.288 241.088> 246 100<163.104 288> 694 20G<83.0098 183.01 288 388>
@@ -129231,12 +129179,12 @@ VStem: 50 50<75.623 191.445> 83.0098 100<239.35 714> 288 100<91.384 229 343 714>
 AnchorPoint: "Umlaut" 340 714 basechar 0
 LayerCount: 2
 Fore
-Refer: 861 -1 N 1 0 0 1 -89 0 2
-Refer: 859 67050 N 1 0 0 1 0 0 2
+Refer: 860 -1 N 1 0 0 1 -89 0 2
+Refer: 858 67050 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Todr.Jy.part
-Encoding: 1114157 -1 861
+Encoding: 1114157 -1 860
 Width: 1000
 HStem: 694 20G<172.01 272.01>
 VStem: 172.01 100<239.35 714>
@@ -129280,7 +129228,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.St
-Encoding: 67055 67055 862
+Encoding: 67055 67055 861
 Width: 577
 Flags: W
 HStem: -10 50<194.842 363.893> 445 50<206.414 336.243> 664 50<205 483>
@@ -129445,7 +129393,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Gh
-Encoding: 67054 67054 863
+Encoding: 67054 67054 862
 Width: 645
 Flags: W
 HStem: 0 21G<263.277 381.723> 694 20G<30 142.746 342 382 555.333 615>
@@ -129474,7 +129422,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Z
-Encoding: 67052 67052 864
+Encoding: 67052 67052 863
 Width: 689
 Flags: W
 HStem: 0 21G<149 302.5> 599.023 49.9767<410.065 442.544> 674 50<155.702 232>
@@ -129650,7 +129598,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Zh
-Encoding: 67053 67053 865
+Encoding: 67053 67053 864
 Width: 579
 Flags: W
 HStem: -10 50<185.447 358.915> 674 50<265.148 333.922>
@@ -129843,7 +129791,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Skan
-Encoding: 67056 67056 866
+Encoding: 67056 67056 865
 Width: 535
 Flags: W
 AnchorPoint: "Umlaut" 262 536.4 basechar 0
@@ -129893,7 +129841,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Ps
-Encoding: 67058 67058 867
+Encoding: 67058 67058 866
 Width: 707
 Flags: W
 HStem: -270 50<245.852 435.974> 0 50<175 532>
@@ -130032,7 +129980,7 @@ EndSplineSet
 EndChar
 
 StartChar: Todr.Kh
-Encoding: 67057 67057 868
+Encoding: 67057 67057 867
 Width: 549
 Flags: W
 HStem: 0 21G<40 107.98 388.532 509> 694 20G<60 180.468 421.02 489>
@@ -130095,7 +130043,7 @@ EndSplineSet
 EndChar
 
 StartChar: gravecomb
-Encoding: 768 768 869
+Encoding: 768 768 868
 Width: 0
 Flags: W
 HStem: 606 160
@@ -130109,7 +130057,7 @@ Refer: 692 96 S 1 0 0 1 -470 0 2
 EndChar
 
 StartChar: L1.Acute
-Encoding: 180 180 870
+Encoding: 180 180 869
 Width: 274
 Flags: W
 HStem: 606 160
@@ -130165,7 +130113,7 @@ EndSplineSet
 EndChar
 
 StartChar: acutecomb
-Encoding: 769 769 871
+Encoding: 769 769 870
 Width: 0
 Flags: W
 HStem: 606 160
@@ -130175,7 +130123,72 @@ AnchorPoint: "Umlaut mark" -245 536 mark 0
 AnchorPoint: "Umlaut" -245 536 mark 0
 LayerCount: 2
 Fore
-Refer: 870 180 N 1 0 0 1 -342 0 2
+Refer: 869 180 N 1 0 0 1 -342 0 2
+EndChar
+
+StartChar: Mod.DotAbove
+Encoding: 729 729 871
+Width: 194
+Flags: W
+HStem: 636 124<57.0175 136.467>
+VStem: 40 114<650.442 746.073>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 12
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_2
+ 13
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+97 636 m 0,0,1
+ 73 636 73 636 56.5 650 c 128,-1,2
+ 40 664 40 664 40 698 c 0,3,4
+ 40 733 40 733 56.5 746.5 c 128,-1,5
+ 73 760 73 760 97 760 c 0,6,7
+ 120 760 120 760 137 746.5 c 128,-1,8
+ 154 733 154 733 154 698 c 0,9,10
+ 154 664 154 664 137 650 c 128,-1,11
+ 120 636 120 636 97 636 c 0,0,1
+EndSplineSet
+EndChar
+
+StartChar: Uml.DotAbove
+Encoding: 775 775 872
+Width: 0
+Flags: W
+AnchorPoint: "Umlaut mark" -236 760 basemark 0
+AnchorPoint: "Umlaut mark" -236 536 mark 0
+AnchorPoint: "Umlaut" -236 536 mark 0
+LayerCount: 2
+Fore
+Refer: 871 729 N 1 0 0 1 -333 2 2
 EndChar
 EndChars
 EndSplineFont
