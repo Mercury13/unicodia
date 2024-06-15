@@ -57,7 +57,7 @@ Status: working
 === Todhri ===
 
 Source of inspiraion: Michael Everson’s font, Johann von Hahn’s description, handwritten notes from Unicode request
-Status: incomplete, no functionality at all
+Status: working, no kerning because of doubtful R
 
 
 == Stability policy ==
