@@ -4444,7 +4444,7 @@
      <orig>
       <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
       <p />
-      <p>Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+      <p>No ligatures for consonant conjuncts, [[pt:virama|virama]] (''tholhoma'') is always visible. Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
      </orig>
     </text>
    </group>
