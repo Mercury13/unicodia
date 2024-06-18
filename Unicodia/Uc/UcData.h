@@ -1083,12 +1083,42 @@ namespace uc {
 
     const Term* findTerm(std::string_view id);
 
-    struct OldCompInfo {
-        std::u8string_view fixedName;
-        std::string_view locKey {};
-        std::u8string locName() const;
-    };
-    extern const OldCompInfo oldCompInfo[];
+    namespace old {
+
+        enum class Type : unsigned char {
+            HOME_EDUC_PC,
+            ADVANCED_PC,
+            TERMINAL,
+            TERMINAL_SERVICE,
+            INFO_SERVICE,
+            PROGRAMMING_LANGUAGE
+        };
+
+        enum class Sales : unsigned char {
+            NOMATTER,
+            UNKNOWN,
+            OVER_3K,
+            OVER_10K,
+            OVER_30K,
+            OVER_100K,
+            OVER_300K,
+            OVER_1M,
+            OVER_3M,
+            OVER_10M
+        };
+
+        struct Info {
+            // Name
+            std::u8string_view fixedName;
+            std::string_view locKey {};
+            // Other data
+            Type type;
+            Sales sales;
+
+            std::u8string locName() const;
+        };
+        extern const Info info[];
+    }
 
     Flags<OldComp> cpOldComps(char32_t cp);
 

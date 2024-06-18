@@ -356,34 +356,101 @@ constinit const uc::Continent MISSING_CONTINENT
 
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
 
-constinit const uc::OldCompInfo uc::oldCompInfo[] {
-    { u8"Amstrad" NBSP "CPC" },
-    { u8"Apple" NBSP "II+" },
-    { u8"Mattel" NBSP "Aquaruis" },
-    { u8"Atari" NBSP "ST" },
-    { u8"Atari" NBSP "400/800" },
-    { u8"Minitel" },
-    { u8"MSX" },
-    { u8"Oric" },
-    { u8"Commodore" NBSP "PET/64" },
-    { u8"RISC OS" },
-    { u8"Sinclair" NBSP "ZX80/81" },
-    { {}, "Prop.OldComp.Teletext" },
-    { u8"Tandy" NBSP "TRS80" NBSP "Model" NBSP "I/III/4" },
-    { u8"Tandy" NBSP "TRS80" NBSP "Color" },
-    { {}, "Prop.OldComp.Korvet" },
-    { u8"Smalltalk" },
-    { u8"Sharp" NBSP "MZ" },
-    { u8"Ohio" NBSP "Scientific" },
-    { u8"Robotron" NBSP "Z9001" },
-    { {}, "Prop.OldComp.Hp" },
-    { u8"Kaypro" },
+constinit const uc::old::Info uc::old::info[] {
+    // Amstrad CPC
+    { .fixedName = u8"Amstrad" NBSP "CPC",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_3M },
+    // Apple II
+    { .fixedName = u8"Apple" NBSP "II+",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_3M },
+    // Mattel Aquarius
+    { .fixedName = u8"Mattel" NBSP "Aquaruis",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_10K },
+    // Atari ST
+    { .fixedName = u8"Atari" NBSP "ST",
+      .type = Type::ADVANCED_PC,
+      .sales = Sales::OVER_1M },
+    // Atari 400 / 800
+    { .fixedName = u8"Atari" NBSP "400/800",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_1M },
+    // Minitel
+    { .fixedName = u8"Minitel",
+      .type = Type::TERMINAL_SERVICE,
+      .sales = Sales::NOMATTER },
+    // MSX
+    { .fixedName = u8"MSX",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_3M },
+    // Oric
+    { .fixedName = u8"Oric",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
+    // Commodore
+    { .fixedName = u8"Commodore" NBSP "PET/64",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_10M },
+    // RISC OS
+    /// @todo [oldcomp, urgent] How to name it?
+    { .fixedName = u8"RISC OS",
+      .type = Type::ADVANCED_PC,
+      .sales = Sales::OVER_100K },
+    // Sinclair ZX80/81
+    { .fixedName = u8"Sinclair" NBSP "ZX80/81",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_1M },
+    // Teletext
+    { .fixedName = {},
+      .locKey = "Prop.OldComp.Teletext",
+      .type = Type::INFO_SERVICE,
+      .sales = Sales::NOMATTER },
+    // TRS-80
+    { .fixedName = u8"Tandy" NBSP "TRS80" NBSP "Model" NBSP "I/III/4",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
+    // Tandy CoCo
+    { .fixedName = u8"Tandy" NBSP "TRS80" NBSP "Color",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
+    // Korvet
+    { .fixedName {},
+      .locKey = "Prop.OldComp.Korvet",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
+    // Smalltalk
+    { .fixedName = u8"Smalltalk",
+      .type = Type::PROGRAMMING_LANGUAGE,
+      .sales = Sales::NOMATTER },
+    // Sharp MZ
+    { .fixedName = u8"Sharp" NBSP "MZ",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
+    // Ohio Scientific
+    { .fixedName = u8"Ohio" NBSP "Scientific",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_10K },
+    // Robotron
+    { .fixedName = u8"Robotron" NBSP "Z9001",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_30K },
+    // HP terminal
+    { .fixedName {},
+      .locKey = "Prop.OldComp.Hp",
+      .type = Type::TERMINAL,
+      .sales = Sales::OVER_30K },
+    // Kaypro
+    { .fixedName = u8"Kaypro",
+      .type = Type::HOME_EDUC_PC,
+      .sales = Sales::OVER_100K },
 };
 
-constexpr auto I_LAST_OLD_COMP = std::size(uc::oldCompInfo) - 1;
+constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;
 static_assert((1 << I_LAST_OLD_COMP) == static_cast<int>(uc::OldComp::LAST));
 
-std::u8string uc::OldCompInfo::locName() const
+std::u8string uc::old::Info::locName() const
 {
     if (locKey.empty()) {
         return std::u8string{fixedName};

@@ -1656,7 +1656,7 @@ namespace {
                 auto iBit = std::countr_zero(Flags<uc::OldComp>::toUnsignedStorage(bit));
                 // Write what we got
                 spC.sep();
-                str::append(text, uc::oldCompInfo[iBit].locName());
+                str::append(text, uc::old::info[iBit].locName());
             }
         }
 
