@@ -1107,13 +1107,40 @@ namespace uc {
             OVER_10M
         };
 
+        enum class Country : unsigned char {
+            DD, ///< West Germany
+            EU, ///< All Europe
+            FR, ///< France
+            GB, ///< Great Britain
+            JP, ///< Japan
+            SU, ///< Soviet Union
+            US, ///< United States
+            US_HK, ///< United States / Hong Kong
+            NN
+        };
+
+        enum class Graphics : unsigned char {
+            NOMATTER,
+            NO,
+            LATER_MODELS,
+            YES,
+            NN
+        };
+
         struct Info {
             // Name
             std::u8string_view fixedName;
             std::string_view locKey {};
+            std::u8string_view altName {};
             // Other data
+            Country country;
             Type type;
+            Graphics graphics;
             Sales sales;
+            unsigned short year;
+            struct Mem {
+                unsigned short lo = 0, hi = 0;
+            } mem;  /// Memory, in Kbytes
 
             std::u8string locName() const;
         };
