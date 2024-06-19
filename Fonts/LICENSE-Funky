@@ -50,6 +50,10 @@ Status: barely working, either improve or hand to other font
 Source of inspiration: Makasar prince’s diaries, Anshuman Pandey’s font
 Status: working, just Arabic-Indic digits are absent
 
+Rationale:
+* Drawn like in Pandey’s font, sometimes more streamlined.
+* As this font is not of print quality, I decided to use rounded ends everywhere
+
 === Nag Mundari ===
 
 Source of inspiration: educational Nag specimen
@@ -59,6 +63,12 @@ Status: working
 
 Source of inspiration: Michael Everson’s font, Johann von Hahn’s description, handwritten notes from Unicode request
 Status: working, no kerning because of doubtful R
+
+Rationale:
+* B: both closed and diverging letters are attested, and quick writing makes ends diverge. So I drew something in between.
+* R: drawn by printed sources, really doubtful
+* RR: the only handwritten specimen known to me is a mixture of Greek Rho and Latin P
+* T/C: somewhere in between printed and handwritten
 
 
 == Stability policy ==
