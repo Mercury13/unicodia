@@ -3,9 +3,9 @@ FontName: UnicodiaFunky
 FullName: UnicodiaFunky
 FamilyName: UnicodiaFunky
 Weight: Regular
-Copyright: Copyright (c) 2021 Mikhail Merkuryev\nYou just DO WHAT THE FUNK YOU WANT TO.
+Copyright: (c) 2021 -2024 Mikhail Merkuryev\nSIL Open Font License 1.1
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
-Version: 2.7.4
+Version: 2.7.5
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1718484209
+ModificationTime: 1718784402
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -67248,7 +67248,7 @@ EndChar
 StartChar: uni0315
 Encoding: 789 789 416
 Width: 0
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 876 8217 N 1 0 0 1 -208 144 2
@@ -102542,7 +102542,6 @@ EndChar
 StartChar: Uml.Macron
 Encoding: 772 772 643
 Width: 0
-Flags: H
 HStem: 616 59<-145 145>
 VStem: -145 290<616 675>
 AnchorPoint: "Umlaut mark" 0 675 basemark 0
@@ -125468,7 +125467,7 @@ EndChar
 StartChar: Todr.As
 Encoding: 67009 67009 810
 Width: 661
-Flags: HW
+Flags: W
 AnchorPoint: "Dot below" 242 0 basechar 0
 AnchorPoint: "TopRight" 661 536 basechar 0
 AnchorPoint: "Umlaut" 241 536 basechar 0
@@ -125567,7 +125566,7 @@ EndChar
 StartChar: Todr.Njan
 Encoding: 67033 67033 813
 Width: 626
-Flags: HW
+Flags: W
 AnchorPoint: "Dot below" 243 0 basechar 0
 AnchorPoint: "TopRight" 626 536 basechar 0
 AnchorPoint: "Umlaut" 262 536 basechar 0
@@ -126039,7 +126038,7 @@ EndChar
 StartChar: Todr.U
 Encoding: 67044 67044 823
 Width: 635
-Flags: HW
+Flags: W
 AnchorPoint: "Dot below" 333 0 basechar 0
 AnchorPoint: "TopRight" 635 746 basechar 0
 AnchorPoint: "Umlaut" 313 749 basechar 0
@@ -126658,7 +126657,7 @@ EndChar
 StartChar: Todr.Nxh
 Encoding: 67049 67049 829
 Width: 682
-Flags: HW
+Flags: W
 AnchorPoint: "Dot below" 274 -226 basechar 0
 AnchorPoint: "TopRight" 682 568 basechar 0
 AnchorPoint: "Umlaut" 239 536 basechar 0
