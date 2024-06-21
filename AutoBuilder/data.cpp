@@ -1991,9 +1991,7 @@ const std::set<RangeByEnd> alternateRanges {
 
     // Mathematical: Cambria → Funky
     { 0x222B, 0x2233 },     // Integrals bunch 1
-    { 0x2A0C, 0x2A16 },     // Integrals bunch 2
-    // 2A17 still missing
-    { 0x2A18, 0x2A1C },     // Part of bunch 2 — integral w/times .. lower integral
+    { 0x2A0A, 0x2A1C },     // Integrals bunch 2
 
     // Mathematical: Cambria → Noto
     { 0x2201 },         // set C
