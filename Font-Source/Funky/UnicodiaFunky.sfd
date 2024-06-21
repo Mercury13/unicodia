@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1718957648
+ModificationTime: 1718960653
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 110 22 14
+WinInfo: 44 22 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -837,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114170 913
+BeginChars: 1114171 915
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -131943,6 +131943,70 @@ LayerCount: 2
 Fore
 Refer: 911 -1 S 1 0 0 1 34.875 0 2
 Refer: 880 8747 N 1 0 0 1 40.875 0 2
+EndChar
+
+StartChar: Math.Integral.Ccw.Part
+Encoding: 1114170 -1 913
+Width: 1000
+HStem: 69 55<177.994 357.546>
+VStem: 18 54<230.285 287.037>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 21
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 26
+MDAP[rnd]
+PUSHB_1
+ 25
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_2
+ 27
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+72 294 m 1,0,1
+ 83 222 83 222 138.5 173 c 128,-1,2
+ 194 124 194 124 265 124 c 128,-1,3
+ 336 124 336 124 389 165.5 c 0,4,5
+ 432.223916506 199.34514217 432.223916506 199.34514217 451.503706932 248.155363166 c 1,6,7
+ 416.971472761 237.433183344 416.971472761 237.433183344 362 233 c 1,8,-1
+ 373 262 l 1,9,10
+ 455 293 455 293 506 340 c 1,11,-1
+ 520 335 l 1,12,13
+ 527 266 527 266 571 189 c 1,14,-1
+ 560 159 l 1,15,16
+ 523.212591422 194.931887448 523.212591422 194.931887448 502.527343719 227.936109283 c 1,17,18
+ 476.909551139 162.063581277 476.909551139 162.063581277 420 120 c 0,19,20
+ 351 69 351 69 270 69 c 0,21,22
+ 170 69 170 69 100 133 c 0,23,24
+ 31 197 31 197 18 286 c 1,25,-1
+ 72 294 l 1,0,1
+EndSplineSet
+EndChar
+
+StartChar: uni2A11
+Encoding: 10769 10769 914
+Width: 649
+Flags: WO
+LayerCount: 2
+Fore
+Refer: 913 -1 N 1 0 0 1 32 0 2
+Refer: 880 8747 N 1 0 0 1 38.3154 0 2
 EndChar
 EndChars
 EndSplineFont
