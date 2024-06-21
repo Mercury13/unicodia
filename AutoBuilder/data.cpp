@@ -1978,11 +1978,9 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x0333 },             // Basic umlauts: misrenders in Cambria
     { 0x2010, 0x203B },     // Several chars from Punctuation…
     { 0x203D, 0x203E },     // …Skip emoji and go on
-    { 0x222B, 0x2233 },     // Integrals bunch 1: redrawn in Funky
     { 0x23B0, 0x23B1 },     // Technical — two-storey {}, misrender in Cambria
     { 0x23B4, 0x23B6 },     // Technical — horz brackets, misrender in Cambria
     { 0x23DC, 0x23E0 },     // Same
-    { 0x2A0C },             // Quad integral: redrawn in Funky
     { 0x2C7C },             // Clipped below in Cambria
     // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
     { 0x3C43  },   // CJK A: a single char redrawn in U15 and already present in BS
@@ -1991,6 +1989,12 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x23F4E },   // 23F4E is G U3, SimSun shows T, BS OK
     { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
 
+    // Mathematical: Cambria → Funky
+    { 0x222B, 0x2233 },     // Integrals bunch 1
+    { 0x2A0C, 0x2A0E },     // Integrals bunch 2
+    { 0x2A16 },             // Part of bunch 2 — integral w/square
+    { 0x2A1B, 0x2A1C },     // Part of bunch 2 — upper/lower integral
+
     // Mathematical: Cambria → Noto
     { 0x2201 },         // set C
     { 0x2205 },         // empty set
@@ -1998,7 +2002,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x27EC, 0x27ED },
     { 0x298B, 0x298C },
     { 0x2997, 0x2998 },
-    { 0x2A1B, 0x2A1C },  // upper-lower integral
     { 0x2A79, 0x2AAD },  // greater-less
 };
 
