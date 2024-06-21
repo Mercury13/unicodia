@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.69575618"
-     inkscape:cx="351.41621"
-     inkscape:cy="316.92137"
+     inkscape:zoom="0.98394783"
+     inkscape:cx="491.38784"
+     inkscape:cy="639.76969"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -95,16 +95,31 @@
        id="guide13"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="860.99728,522.5"
+       position="861,522.5"
        orientation="-1,0"
        id="guide6"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="802.0051,665.11257"
+       position="54.616834,695.29556"
        orientation="0,-1"
        id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="645.34102,665.11257"
+       orientation="1,0"
+       id="guide14"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="437.99728,775.5"
+       orientation="0,-1"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="437.99728,269.5"
+       orientation="0,-1"
+       id="guide16"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
@@ -115,8 +130,8 @@
      id="layer1">
     <path
        id="path13"
-       style="opacity:0.748031;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:50;stroke-linejoin:round;stroke-miterlimit:2"
-       d="m 835.99728,477.5 c 0,139.62398 -178.09272,228 -398,228 -219.90727,0 -397.999996,-85.38743 -397.999996,-228 0,-142.61257 178.081116,-228 397.999996,-228 219.91888,0 398,88.37602 398,228 z"
+       style="opacity:0.748031;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:55;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 833.50001,477.5 c 0,170.90087 -188.40011,225.49999 -395.5,225.49999 -207.09991,0 -395.500009,-54.59912 -395.500009,-225.49999 0,-170.90087 189.458659,-225.5 395.500009,-225.5 206.04133,0 395.5,54.59913 395.5,225.5 z"
        sodipodi:nodetypes="zzzzz" />
   </g>
 </svg>

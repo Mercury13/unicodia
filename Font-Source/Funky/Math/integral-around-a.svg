@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.69575618"
-     inkscape:cx="467.83631"
-     inkscape:cy="319.79594"
+     inkscape:zoom="0.98394783"
+     inkscape:cx="158.03683"
+     inkscape:cy="460.89842"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -66,7 +66,7 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="514.86806,1068.2544"
+       position="520.99728,522.5"
        orientation="1,0"
        id="guide9"
        inkscape:locked="false" />
@@ -94,6 +94,16 @@
        orientation="0,-1"
        id="guide13"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="267.99728,775.5"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="267.99728,269.5"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs1" />
@@ -101,11 +111,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="opacity:0.748031;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:50;stroke-linejoin:round;stroke-miterlimit:2"
+    <ellipse
+       style="opacity:0.748031;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:55;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
        id="path13"
-       cx="267.99728"
-       cy="477.5"
-       r="228" />
+       cx="267.99997"
+       cy="477.49997"
+       rx="225.5"
+       ry="225.49998" />
   </g>
 </svg>
