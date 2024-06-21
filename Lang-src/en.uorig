@@ -2090,7 +2090,7 @@
    </group>
    <group id="A960">
     <text id="Name">
-     <orig> Hangul jamo extended A</orig>
+     <orig>Hangul jamo extended A</orig>
     </text>
     <text id="Text">
      <orig>Initial ''(choseong)'' old consonants of Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
