@@ -1990,6 +1990,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
 
     // Mathematical: Cambria → Funky
+    { 0x220F, 0x2211 },     // Big sums and products
     { 0x222B, 0x2233 },     // Integrals bunch 1
     { 0x2A0A, 0x2A1C },     // Integrals bunch 2
 
