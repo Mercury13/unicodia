@@ -3,7 +3,7 @@
    version="1.1"
    viewBox="-10 0 438 1000"
    id="svg1"
-   sodipodi:docname="LCurlySlashBase.svg"
+   sodipodi:docname="LCurlySlashBase-b.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,7 +23,7 @@
      showgrid="false"
      inkscape:zoom="0.781"
      inkscape:cx="92.829706"
-     inkscape:cy="155.56978"
+     inkscape:cy="584.50704"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -93,9 +93,23 @@
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,1269"
+       orientation="0,1"
+       id="guide16"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,-93"
+       orientation="0,1"
+       id="guide17"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <path
      id="path1"
-     d="M 355.92857,40 C 250,40 168,108.31126 168,225.85714 V 300 H 282 V 233 C 282,102.56213 351.24221,83 413.78571,83 H 462 V 40 Z"
-     sodipodi:nodetypes="ssccssccs" />
+     d="M 94.07227,-269 C 200.00073,-269 282,-200.68834 282,-83.142578 V 900 c 0,130.4377 69.24172,150 131.78516,150 H 462 v 43 H 355.92773 C 249.99927,1093 168,1024.6884 168,907.1426 V -76 C 168,-206.43774 98.75828,-226 36.21484,-226 H -12 v -43 z"
+     sodipodi:nodetypes="ssssccssssccs" />
 </svg>
