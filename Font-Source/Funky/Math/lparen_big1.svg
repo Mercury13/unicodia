@@ -81,19 +81,19 @@
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
-  <path
-     fill="currentColor"
-     d="M 161.00001,233.09802 H 47 C 47,613.70195 152.52424,817.2737 401.00002,928 V 875.5195 C 246.22981,780.88677 161.00001,629.46561 161.00001,233.09802 Z"
-     id="path1"
-     sodipodi:nodetypes="ccccc"
-     inkscape:transform-center-x="-38.431384"
-     inkscape:transform-center-y="347.45097"
-     style="stroke-width:1" />
   <rect
      style="opacity:0.430446;fill:#4e9a06;fill-rule:evenodd;stroke-width:50;stroke-miterlimit:2"
      id="rect6"
      width="114"
-     height="534.09802"
+     height="348.00003"
      x="47"
      y="-301" />
+  <path
+     fill="currentColor"
+     d="M 160.99999,47.00004 H 46.99998 C 46.99998,529.5315 152.52422,787.6207 401,928 l -2e-5,-52.4805 C 246.22978,753.4734 160.99999,558.1882 160.99999,47.00004 Z"
+     id="path1-9"
+     sodipodi:nodetypes="ccccc"
+     inkscape:transform-center-x="-38.431384"
+     inkscape:transform-center-y="347.45095"
+     style="stroke-width:1" />
 </svg>
