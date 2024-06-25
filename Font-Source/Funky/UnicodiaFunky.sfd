@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1719344055
+ModificationTime: 1719344966
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -824,7 +824,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8925 25 14
+WinInfo: 8975 25 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -836,7 +836,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114174 937
+BeginChars: 1114174 943
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -7851,7 +7851,7 @@ Validated: 19489
 Comment: "Y+-150 from actual position+AAoA(move to UnicodiaKawiPatch?)"
 EndChar
 
-StartChar: LeftSqBracket
+StartChar: Punc.LBracket
 Encoding: 91 91 56
 Width: 360
 Flags: W
@@ -7923,7 +7923,7 @@ EndSplineSet
 Validated: 19457
 EndChar
 
-StartChar: RightSqBracket
+StartChar: Punc.RBracket
 Encoding: 93 93 57
 Width: 360
 Flags: W
@@ -104062,7 +104062,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u28
+StartChar: Punc.LParen
 Encoding: 40 40 664
 Width: 346
 Flags: W
@@ -104122,7 +104122,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u29
+StartChar: Punc.RParen
 Encoding: 41 41 665
 Width: 346
 Flags: W
@@ -133941,7 +133941,7 @@ EndChar
 StartChar: Mtier.RParen.Bot
 Encoding: 9120 9120 935
 Width: 424
-Flags: WO
+Flags: W
 VStem: 260 114<479.987 1101>
 TtInstrs:
 SVTCA[y-axis]
@@ -133997,6 +133997,309 @@ VStem: 260 114<-320 1101>
 LayerCount: 2
 Fore
 Refer: 933 9116 N 1 0 0 1 210 0 2
+EndChar
+
+StartChar: Mtier.LBracket.Top
+Encoding: 9121 9121 937
+Width: 384
+Flags: W
+HStem: 728.52 52.4805<198.885 364>
+VStem: 50 114<-320 695.07>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_3
+ 3
+ 1
+ 10
+CALL
+PUSHB_4
+ 64
+ 3
+ 8
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 8
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_3
+ 7
+ 8
+ 10
+CALL
+PUSHB_4
+ 64
+ 7
+ 2
+ 9
+CALL
+PUSHB_2
+ 10
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+50 781 m 1,0,-1
+ 364 781 l 1,1,-1
+ 364 728.51953125 l 1,2,-1
+ 295.200195312 728.51953125 l 2,3,4
+ 240.80078125 728.51953125 240.80078125 728.51953125 202.400390625 708.51953125 c 128,-1,5
+ 164 688.51953125 164 688.51953125 164 613.319335938 c 2,6,-1
+ 164 -320 l 1,7,-1
+ 50 -320 l 1,8,-1
+ 50 781 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Mtier.LBracket.Mid
+Encoding: 9122 9122 938
+Width: 384
+Flags: W
+LayerCount: 2
+Fore
+Refer: 933 9116 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: Mtier.LBracket.Bot
+Encoding: 9123 9123 939
+Width: 384
+Flags: W
+HStem: -128 52.4805<198.885 364>
+VStem: 50 114<-42.0695 1100>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+PUSHB_3
+ 6
+ 8
+ 10
+CALL
+PUSHB_4
+ 64
+ 6
+ 1
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_3
+ 3
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 3
+ 8
+ 9
+CALL
+PUSHB_2
+ 10
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+50 -128 m 1,0,-1
+ 50 1100 l 1,1,-1
+ 164 1100 l 1,2,-1
+ 164 39.6806640625 l 2,3,4
+ 164 -35.51953125 164 -35.51953125 202.400390625 -55.51953125 c 128,-1,5
+ 240.799804688 -75.51953125 240.799804688 -75.51953125 295.200195312 -75.51953125 c 2,6,-1
+ 364 -75.51953125 l 1,7,-1
+ 364 -128 l 1,8,-1
+ 50 -128 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Mtier.RBracket.Top
+Encoding: 9124 9124 940
+Width: 384
+Flags: W
+HStem: 728.52 52.4805<20 185.115>
+VStem: 220 114<-320 695.07>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 7
+MDAP[rnd]
+PUSHB_1
+ 8
+MDRP[min,rnd,black]
+PUSHB_3
+ 7
+ 8
+ 10
+CALL
+PUSHB_4
+ 64
+ 7
+ 2
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_3
+ 2
+ 1
+ 10
+CALL
+PUSHB_4
+ 64
+ 2
+ 7
+ 9
+CALL
+PUSHB_2
+ 10
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+334 781 m 1,0,-1
+ 334 -320 l 1,1,-1
+ 220 -320 l 1,2,-1
+ 220 613.319335938 l 2,3,4
+ 220 688.51953125 220 688.51953125 181.599609375 708.51953125 c 128,-1,5
+ 143.19921875 728.51953125 143.19921875 728.51953125 88.7998046875 728.51953125 c 2,6,-1
+ 20 728.51953125 l 1,7,-1
+ 20 781 l 1,8,-1
+ 334 781 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Mtier.RBracket.Mid
+Encoding: 9125 9125 941
+Width: 384
+Flags: W
+LayerCount: 2
+Fore
+Refer: 933 9116 N 1 0 0 1 170 0 2
+EndChar
+
+StartChar: Mtier.RBracket.Bot
+Encoding: 9126 9126 942
+Width: 384
+Flags: W
+HStem: -128 52.4805<20 185.115>
+VStem: 220 114<-42.0695 1100>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 1
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+PUSHB_3
+ 2
+ 1
+ 10
+CALL
+PUSHB_4
+ 64
+ 2
+ 7
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 10
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_3
+ 6
+ 9
+ 10
+CALL
+PUSHB_4
+ 64
+ 6
+ 1
+ 9
+CALL
+PUSHB_2
+ 11
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 2
+ 1
+SRP1
+SRP2
+PUSHB_1
+ 9
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+334 -128 m 1,0,-1
+ 20 -128 l 1,1,-1
+ 20 -75.51953125 l 1,2,-1
+ 88.7998046875 -75.51953125 l 2,3,4
+ 143.200195312 -75.51953125 143.200195312 -75.51953125 181.599609375 -55.51953125 c 128,-1,5
+ 220 -35.51953125 220 -35.51953125 220 39.6806640625 c 2,6,-1
+ 220 1100.00097656 l 1,7,-1
+ 334 1100.00097656 l 1,8,-1
+ 334 -127.999023438 l 1,9,-1
+ 334 -128 l 1,0,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
