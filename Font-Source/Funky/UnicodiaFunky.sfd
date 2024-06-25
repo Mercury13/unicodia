@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1719348270
+ModificationTime: 1719348966
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -133748,7 +133748,7 @@ StartChar: Mtier.LParen.Top
 Encoding: 9115 9115 931
 Width: 424
 Flags: W
-VStem: 50 114<-320 173.013>
+VStem: 50 114<-320 175.5>
 TtInstrs:
 SVTCA[y-axis]
 SVTCA[x-axis]
@@ -133769,7 +133769,7 @@ CALL
 PUSHB_4
  64
  9
- 4
+ 5
  9
 CALL
 PUSHB_2
@@ -133784,11 +133784,12 @@ LayerCount: 2
 Fore
 SplineSet
 50 -100 m 2,0,1
- 50 261 50 261 133.5 468 c 128,-1,2
- 217 675 217 675 404 781 c 1,3,-1
- 404 729 l 1,4,5
- 284 635 284 635 226 461 c 0,6,7
- 164 274 164 274 164 -100 c 2,8,-1
+ 50 91 50 91 85.5 260.5 c 128,-1,2
+ 121 430 121 430 203 572 c 128,-1,3
+ 285 714 285 714 404 781 c 1,4,-1
+ 404 729 l 1,5,6
+ 290 639 290 639 227 416 c 128,-1,7
+ 164 193 164 193 164 -100 c 2,8,-1
  164 -320 l 1,9,-1
  50 -320 l 1,10,-1
  50 -100 l 2,0,1
@@ -133799,7 +133800,7 @@ StartChar: Mtier.LParen.Bot
 Encoding: 9117 9117 932
 Width: 424
 Flags: W
-VStem: 50 114<479.987 1101>
+VStem: 50 114<477.5 1101>
 TtInstrs:
 SVTCA[y-axis]
 SVTCA[x-axis]
@@ -133835,11 +133836,12 @@ LayerCount: 2
 Fore
 SplineSet
 164 753 m 2,0,1
- 164 379 164 379 226 192 c 0,2,3
- 284 19 284 19 404 -76 c 1,4,-1
- 404 -128 l 1,5,6
- 217 -22 217 -22 133.5 185 c 128,-1,7
- 50 392 50 392 50 753 c 2,8,-1
+ 164 460 164 460 227 237 c 128,-1,2
+ 290 14 290 14 404 -76 c 1,3,-1
+ 404 -128 l 1,4,5
+ 285 -61 285 -61 203 81 c 128,-1,6
+ 121 223 121 223 85.5 392.5 c 128,-1,7
+ 50 562 50 562 50 753 c 2,8,-1
  50 1101 l 1,9,-1
  164 1101 l 1,10,-1
  164 753 l 2,0,1
@@ -133889,7 +133891,7 @@ StartChar: Mtier.RParen.Top
 Encoding: 9118 9118 934
 Width: 424
 Flags: W
-VStem: 260 114<-320 173.013>
+VStem: 260 114<-320 175.5>
 TtInstrs:
 SVTCA[y-axis]
 SVTCA[x-axis]
@@ -133910,7 +133912,7 @@ CALL
 PUSHB_4
  64
  2
- 7
+ 6
  9
 CALL
 PUSHB_2
@@ -133928,11 +133930,12 @@ SplineSet
  374 -320 l 1,1,-1
  260 -320 l 1,2,-1
  260 -100 l 2,3,4
- 260 274 260 274 198 461 c 0,5,6
- 140 635 140 635 20 729 c 1,7,-1
- 20 781 l 1,8,9
- 207 675 207 675 290.5 468 c 128,-1,10
- 374 261 374 261 374 -100 c 2,0,-1
+ 260 193 260 193 197 416 c 128,-1,5
+ 134 639 134 639 20 729 c 1,6,-1
+ 20 781 l 1,7,8
+ 139 714 139 714 221 572 c 128,-1,9
+ 303 430 303 430 338.5 260.5 c 128,-1,10
+ 374 91 374 91 374 -100 c 2,0,-1
 EndSplineSet
 EndChar
 
@@ -133940,7 +133943,7 @@ StartChar: Mtier.RParen.Bot
 Encoding: 9120 9120 935
 Width: 424
 Flags: W
-VStem: 260 114<479.987 1101>
+VStem: 260 114<477.5 1101>
 TtInstrs:
 SVTCA[y-axis]
 SVTCA[x-axis]
@@ -133979,11 +133982,12 @@ SplineSet
  260 1101 l 1,1,-1
  374 1101 l 1,2,-1
  374 753 l 2,3,4
- 374 392 374 392 290.5 185 c 128,-1,5
- 207 -22 207 -22 20 -128 c 5,6,-1
- 20 -76 l 1,7,8
- 140 19 140 19 198 192 c 0,9,10
- 260 379 260 379 260 753 c 2,0,-1
+ 374 562 374 562 338.5 392.5 c 128,-1,5
+ 303 223 303 223 221 81 c 128,-1,6
+ 139 -61 139 -61 20 -128 c 1,7,-1
+ 20 -76 l 1,8,9
+ 134 14 134 14 197 237 c 128,-1,10
+ 260 460 260 460 260 753 c 2,0,-1
 EndSplineSet
 EndChar
 
@@ -133997,7 +134001,7 @@ Fore
 Refer: 933 9116 N 1 0 0 1 210 0 2
 EndChar
 
-StartChar: Mtier.LBracket.Top
+StartChar: Mtier.Lbracket.Top
 Encoding: 9121 9121 937
 Width: 384
 Flags: W
@@ -134069,7 +134073,7 @@ EndChar
 StartChar: Mtier.LBracket.Mid
 Encoding: 9122 9122 938
 Width: 384
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
 Refer: 933 9116 N 1 0 0 1 0 0 2
@@ -134216,7 +134220,7 @@ EndChar
 StartChar: Mtier.RBracket.Mid
 Encoding: 9125 9125 941
 Width: 384
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
 Refer: 933 9116 N 1 0 0 1 170 0 2
@@ -134454,7 +134458,7 @@ EndChar
 StartChar: Mtier.Curly.Ext
 Encoding: 9130 9130 945
 Width: 534
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
 Refer: 933 9116 N 1 0 0 1 160 0 2

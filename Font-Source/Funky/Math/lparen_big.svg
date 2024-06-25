@@ -21,8 +21,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.3905"
-     inkscape:cx="728.55313"
-     inkscape:cy="306.01792"
+     inkscape:cx="728.55314"
+     inkscape:cy="510.88348"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -31,10 +31,12 @@
      inkscape:current-layer="svg1"
      showguides="true">
     <sodipodi:guide
-       position="171,517"
-       orientation="1,0"
+       position="451,517"
+       orientation="-1,0"
        id="guide1"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="324,915"
        orientation="1,0"
@@ -88,7 +90,7 @@
   </sodipodi:namedview>
   <path
      fill="currentColor"
-     d="M 161.00001,900 47,900 C 47,417.46855 152.52424,159.3793 401.00002,19 L 401,71.48051 C 246.2298,193.52664 161.00001,388.8118 161.00001,900 Z"
+     d="M 161.00001,900 H 47 C 47,532.70543 152.52424,159.3793 401.00002,19 L 401,71.48051 C 246.2298,193.52664 161.00001,516.85277 161.00001,900 Z"
      id="path1"
      sodipodi:nodetypes="ccccc"
      inkscape:transform-center-x="-38.431384"

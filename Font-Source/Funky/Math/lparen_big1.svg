@@ -22,7 +22,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.5522504"
      inkscape:cx="279.7644"
-     inkscape:cy="368.49226"
+     inkscape:cy="513.35409"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -90,10 +90,10 @@
      y="-301" />
   <path
      fill="currentColor"
-     d="M 160.99999,47.00004 H 46.99998 C 46.99998,529.5315 152.52422,787.6207 401,928 l -2e-5,-52.4805 C 246.22978,753.4734 160.99999,558.1882 160.99999,47.00004 Z"
-     id="path1-9"
+     d="M 161,47.000031 H 47 C 47,414.29463 152.52424,787.62073 401.00002,928.00003 L 401,875.51953 C 246.2298,753.47343 161,430.14733 161,47.000031 Z"
+     id="path1"
      sodipodi:nodetypes="ccccc"
      inkscape:transform-center-x="-38.431384"
-     inkscape:transform-center-y="347.45095"
+     inkscape:transform-center-y="347.45093"
      style="stroke-width:1" />
 </svg>
