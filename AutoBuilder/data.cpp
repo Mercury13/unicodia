@@ -1992,6 +1992,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x220F, 0x2211 },     // Big sums and products
     { 0x222B, 0x2233 },     // Integrals bunch 1
     { 0x2320, 0x2321 },     // Multi-storey integrals part 1
+    { 0x239B, 0x23A0 },     // Multi-storey parentheses
     { 0x23AE },             // Mulli-storey integrals part 2
     { 0x23B0, 0x23B1 },     // Technical — two-storey {}, misrender in Cambria
     { 0x2A0A, 0x2A1C },     // Integrals bunch 2
