@@ -710,6 +710,8 @@ namespace {
             appendFont(s, font, x, SIZE_SAMPLE);
         } else if (name == "smb"sv) {
             appendFont(s, uc::EcFont::CJK_NEWHAN, x, 3);
+        } else if (name == "smfunky"sv) {
+            appendFont(s, uc::EcFont::FUNKY, x, 3);
         } else if (name == "smtable"sv) {
             appendSmTable(s, font, x);
         } else if (name == "_"sv) {
