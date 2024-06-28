@@ -260,6 +260,7 @@ namespace {
             case uc::TextRole::ALT_NAME:
             case uc::TextRole::HTML:
             case uc::TextRole::ABBREV:
+            case uc::TextRole::EMOJI_NAME:
                 r.push_back(text);
                 break;
             case uc::TextRole::MAIN_NAME:
@@ -286,6 +287,7 @@ namespace {
             case uc::TextRole::DEP_INSTEAD:
             case uc::TextRole::DEP_INSTEAD2:
             case uc::TextRole::CMD_END:
+            case uc::TextRole::EMOJI_NAME:
                 break;
             }
         });

@@ -87,6 +87,7 @@ namespace uc {
         HTML = 4,       // HTML mnemonic, WITH ampersand & and semicolon ;
         DEP_INSTEAD = 5, // For deprecated chars: what’s instead
         DEP_INSTEAD2 = 6, // For deprecated chars: alternative instead
+        EMOJI_NAME = 7, // Emoji name from Library, if inequal
     };
 
     enum {

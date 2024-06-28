@@ -1549,7 +1549,8 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         case TextRole::HTML:
         case TextRole::DEP_INSTEAD:
         case TextRole::DEP_INSTEAD2:
-        case TextRole::ABBREV: {
+        case TextRole::ABBREV:
+        case TextRole::EMOJI_NAME: {
                 auto length = static_cast<unsigned char>(*(p++));
                 std::u8string_view text {p, length};
                 auto action = sink.onText(role, text);
