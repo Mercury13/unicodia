@@ -39,6 +39,26 @@ void tx::Cp::eraseName(std::string_view x)
 
 namespace {
 
+    template <class U, class V, class T>
+    inline bool doesContain(const std::vector<U, V>& haystack, const T& needle)
+    {
+        return std::find(haystack.begin(), haystack.end(), needle) != haystack.end();
+    }
+
+}   // anon namespace
+
+bool tx::Cp::contains(std::string_view x) const
+{
+    if (x.empty())
+        return true;
+    return names.contains(x)
+         || doesContain(abbrs, x)
+         || doesContain(controls, x);
+}
+
+
+namespace {
+
 #ifdef DUMP_EQUALS
     std::ofstream osEqual("!equal.log");
 #endif

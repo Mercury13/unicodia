@@ -26,12 +26,15 @@ unsigned lib::Node::maxValueLength() const
 {
     unsigned r = value.length();
     for (auto& v : children) {
-        r = std::max(r, v.maxValueLength());
+        r = std::max(r, v->maxValueLength());
     }
     return r;
 }
 
-
+lib::Node& lib::Node::newChild()
+{
+    return *children.emplace_back(new Node);
+}
 
 namespace {
 
@@ -187,7 +190,7 @@ namespace {
     void addGroup(std::stack<lib::Node*>& x, size_t size, std::string_view name)
     {
         auto top = crop(x, size);
-        auto& newItem = top->children.emplace_back();
+        auto& newItem = top->newChild();
         newItem.name = str::toU8sv(name);
         newItem.flags |= uc::Lfg::TRANSLATE;
         if (NO_TILE.contains(newItem.name))
@@ -280,7 +283,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 std::u32string_view myStr { codes.buffer(), nCodes };
                 // Add to tree
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
-                auto& newItem = treePath.top()->children.emplace_back();
+                auto& newItem = treePath.top()->newChild();
                 if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
                 } else { // otherwise decapitalize
@@ -291,7 +294,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 newItem.emojiVersion = emVersion;
                 newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
                 if (mainCode != 0)
-                    r.allSingleChar.insert(mainCode);
+                    r.allSingleChar.emplace(mainCode, &newItem);
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= uc::Lfg::NO_TILE;
                 if (!FORCE_TILE.contains(newItem.value) && hasSkinGender(newItem.value))
@@ -326,7 +329,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
     }
     // Flags A…Z are also single-characters
     for (char32_t i = cp::FLAG_A; i <= cp::FLAG_Z; ++i)
-        r.allSingleChar.insert(i);
+        r.allSingleChar.emplace(i, nullptr);
     return r;
 }
 
@@ -336,10 +339,10 @@ namespace {
     void recurseEnum(const lib::Node& node, int& counter)
     {
         for (auto& v : node.children) {
-            v.cache.index = counter++;
+            v->cache.index = counter++;
         }
         for (auto& v : node.children) {
-            recurseEnum(v, counter);
+            recurseEnum(*v, counter);
         }
     }
 
@@ -399,7 +402,7 @@ namespace {
         if (node.children.empty()) {
             os << "-1";
         } else {
-            os << node.children[0].cache.index;
+            os << node.children[0]->cache.index;
         }
         os << ", ";
         // flags
@@ -427,10 +430,10 @@ namespace {
             const lib::Node& node)
     {
         for (auto& v : node.children) {
-            writeNode(os, v, node.cache.index);
+            writeNode(os, *v, node.cache.index);
         }
         for (auto& v : node.children) {
-            recurseWrite(os, v);
+            recurseWrite(os, *v);
         }
     }
 
@@ -497,7 +500,7 @@ lib::StrangeCjk::StrangeCjk()
     root.name = u8"Strange";
     root.flags |= uc::Lfg::TRANSLATE;
     for (auto& v : strangeCats) {
-        auto& cat = root.children.emplace_back();
+        auto& cat = root.newChild();
         cat.name.assign(1, v.key);
         cat.flags |= uc::Lfg::TRANSLATE;
     }
@@ -518,19 +521,19 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
             throw std::logic_error("Unknown strange category");
         auto iCat = whatFound - std::begin(strangeCats);
         auto& subcat = root.children[iCat];
-        auto& child = subcat.children.emplace_back();
+        auto& child = *subcat->children.emplace_back(new lib::Node);
         child.value.assign(1, cp);
         child.flags |= uc::Lfg::CODE_AS_NAME;
 
         if (whatFound->target == StrangeTarget::AFTER) {
             auto cpNames = str::splitSv(v.substr(1), ':');
             auto& parent = (cpNames.size() > 1)
-                    ? child : subcat;
+                    ? child : *subcat;
             for (auto cpName : cpNames) {
                 if (cpName.starts_with("U+")) {
                     auto sCode = cpName.substr(2);
                     auto code = fromHex(sCode);
-                    auto& child2 = parent.children.emplace_back();
+                    auto& child2 = *parent.children.emplace_back(new lib::Node);
                     child2.value.assign(1, code);
                     child2.flags = whatFound->targetFlags;
                 }
@@ -595,7 +598,7 @@ namespace {
         result.children.reserve(result.children.size() + sub32.size());
         char32_t cap = '!';     // something odd
         for (auto v : sub32) {
-            auto& node = result.children.emplace_back();
+            auto& node = *result.children.emplace_back(new lib::Node);
             node.value = v;
             retrieveEmojiVersion(node, mAll);
             conditionalBan(node, tilePattern, indexInPattern);
@@ -631,7 +634,7 @@ namespace {
         result.children.reserve(result.children.size() + nCodes);
         for (auto i = startCode; i <= endCode; ++i) {
             char32_t cp = i;
-            auto& node = result.children.emplace_back();
+            auto& node = *result.children.emplace_back(new lib::Node);
             node.value = std::u32string{ cp };
             retrieveEmojiVersion(node, mAll);
             conditionalBan(node, tilePattern, indexInPattern);
@@ -652,7 +655,7 @@ namespace {
         auto value32 = mojibake::toS<std::u32string>(value8);
         if (value32.empty())
             return;
-        auto& node = result.children.emplace_back();
+        auto& node = *result.children.emplace_back(new lib::Node);
         loadName(node, tag);
         node.value = std::move(value32);
         retrieveEmojiVersion(node, mAll);
@@ -669,7 +672,7 @@ namespace {
         for (auto v : tag.children()) {
             if (v.name() == "f"sv) {
                 // Folder
-                auto& newFolder = result.children.emplace_back();
+                auto& newFolder = result.newChild();
                 loadName(newFolder, v);
                 // As all tile patterns are taken from XML → they are null-term
                 std::string_view newTilePattern = v.attribute("tilePattern").as_string(tilePattern.data());

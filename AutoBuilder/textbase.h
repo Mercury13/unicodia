@@ -19,6 +19,7 @@ namespace tx {
         /// @todo [future] similar chars?
 
         void eraseName(std::string_view x);
+        bool contains(std::string_view x) const;
     };
 
     struct Empty {};

@@ -286,6 +286,37 @@ void NewLine::trigger()
 
 namespace {
     tx::Cp DUMMY_CP;
+
+    bool containsWordSeq(const std::string_view haystack, const std::string_view needle)
+    {
+        if (haystack.length() < needle.length())
+            return false;
+        if (haystack == needle)
+            return true;
+
+        std::string h1 = lat::toUpper(haystack);
+        std::string n1 = lat::toUpper(needle);
+        str::replace(h1, '-', ' ');
+        str::replace(n1, '-', ' ');
+        if (h1.length() == n1.length())
+            return (h1 == n1);
+
+        auto hwords = str::splitSv(h1, ' ');
+        auto nwords = str::splitSv(n1, ' ');
+        if (hwords.size() <= nwords.size())
+            return false;
+        auto beg = hwords.begin();
+        auto end = hwords.end();
+        for (auto& vn : nwords) {
+            auto whereFound = std::find(beg, end, vn);
+            if (whereFound == end)
+                return false;
+            beg = whereFound;
+            ++beg;
+        }
+        return true;
+    }
+
 }   // anon namespace
 
 
@@ -544,17 +575,22 @@ int main()
             flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
         // VS16
-        bool isVs16 = false;
         if (emoji.vs16.contains(cp)) {
             flags |= uc::Cfg::U_VS16_EMOJI;
-            isVs16 = true;
         }
         // Misrenders
         if (emoji.misrenders.contains(cp))
             flags |= uc::Cfg::G_MISRENDER;
         // SVG emoji
-        if (isVs16 || emoji.allSingleChar.contains(cp))
+        if (auto q = emoji.allSingleChar.find(cp); q != emoji.allSingleChar.end()) {
             flags |= uc::m::SVG_EMOJI;
+            if (auto p = q->second) {    // May have NULL here
+                auto name1 = str::toSv(p->name);
+                if (!containsWordSeq(sLowerName, name1) && !textCp->contains(name1)) {
+                    strings.forceRemember(cp, uc::TextRole::EMOJI_NAME, name1);
+                }
+            }
+        }
         // Special drawing
         if (auto q = drawMethods.find(cp); q != drawMethods.end())
             flags |= q->second;
@@ -692,13 +728,13 @@ int main()
     std::cout << "Saving library..." << std::flush;
     lib::Node root;
     // Node 1: emoji
-    root.children.emplace_back(std::move(emoji.root));
+    root.children.emplace_back(new lib::Node(std::move(emoji.root)));
     // Node 2+: manual library
     for (auto& v : manualLib.root.children) {
         root.children.emplace_back(std::move(v));
     }
     // Node N: strange hiero
-    root.children.emplace_back(strangeCjk.give());
+    root.children.emplace_back(new lib::Node(strangeCjk.give()));
     // Write!
     auto libr = lib::write(root, "UcAutoLib.cpp");
     auto longest = root.maxValueLength();

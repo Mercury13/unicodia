@@ -7,6 +7,7 @@
 // STL
 #include <unordered_set>
 #include <unordered_map>
+#include <memory>
 
 // Lib
 #include "u_Vector.h"
@@ -22,13 +23,14 @@ namespace lib {
     struct Node {
         std::u8string name;
         std::u32string value;
-        SafeVector<Node> children;
+        SafeVector<std::unique_ptr<Node>> children {};
         uc::Lfgs flags {};
         std::string emojiVersion;
         mutable struct Cache {
             int index = 0;
         } cache;
         unsigned maxValueLength() const;
+        [[nodiscard]] Node& newChild();
     };
 
     struct Hash32 : public std::hash<std::u32string_view> {
@@ -44,7 +46,7 @@ namespace lib {
     struct EmojiData {
         /// Total # of emoji
         size_t count = 0;
-        std::unordered_set<char32_t> allSingleChar;
+        std::unordered_map<char32_t, const Node*> allSingleChar;
         /// List of single-char emoji that use VS16
         std::unordered_set<char32_t> vs16;
         /// List of single-char emoji that are
