@@ -1,23 +1,11 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 16.0.0
 @@@+	NamesList-16.0.0.txt
-@+	Generation Date: 2024-05-17, 19:24:02 GMT
+@+	Generation Date: 2024-06-03, 12:53:56 GMT
 	Unicode 16.0.0 names list.
 	Repertoire synched with UnicodeData-16.0.0d16.txt.
-	Pre-beta rollup of various fixes.
-	Add xref between 131A6 and 13DEE.
-	Add xrefs between 01C3, A71D, 107B9.
-	Added xrefs from 1DF0A to A71D and 107B9.
-	Added formal aliases and annotation for 1E899, 1E89A
-	Removed unneeded subheads for two postponed archaic SHRII characters.
-	Added formal alias for 12327.
-	Added alias and annotation for 12326.
-	Added xrefs between 050F and 1C8A.
-	Added an annotation about Amerindian orthographic use for 00B7.
-	Add notices about use of colon in Egyptian hieroglyph annotations.
-	Add annotation for 0B35; update annotation for 0B55.
-	Add annotation for 1DF8.
-	Add formal name alias for 1680B.
+	Post-beta rollup of various fixes.
+	Add subheads and annotations for 1FB81, 1FB98, 1FB99.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -64096,7 +64084,10 @@ FFFF	<not a character>
 1FB7E	RIGHT AND UPPER ONE EIGHTH BLOCK
 1FB7F	RIGHT AND LOWER ONE EIGHTH BLOCK
 1FB80	UPPER AND LOWER ONE EIGHTH BLOCK
+@		Window title bar
+@+		This character is a legacy graphic used to draw the title bar of the active window. The lines corresponding to 3 and 5 are not actually block elements, but can show any horizontally repeating pattern.
 1FB81	HORIZONTAL ONE EIGHTH BLOCK-1358
+@		Block elements
 1FB82	UPPER ONE QUARTER BLOCK
 	x (lower one quarter block - 2582)
 1FB83	UPPER THREE EIGHTHS BLOCK
@@ -64138,6 +64129,8 @@ FFFF	<not a character>
 	* upper middle and lower one quarter block
 	x (geta mark - 3013)
 	x (block octant-3478 - 1CDB7)
+@		Diagonal fill characters
+@+		The filled area for these diagonal fill characters typically covers between one quarter and one half the total area. The diagonal lines should be of uniform width.
 1FB98	UPPER LEFT TO LOWER RIGHT FILL
 	x (square with upper left to lower right fill - 25A7)
 1FB99	UPPER RIGHT TO LOWER LEFT FILL
