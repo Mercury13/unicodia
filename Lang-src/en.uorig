@@ -4027,7 +4027,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was consonant, and writing in Egyptian with Greek letters was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. Two major dialects of Coptic are Sahidic (Upper Egypt, became literary in 4th century) and Bohairic (Lower Egypt, known since 9th century, became the official language of Coptic Church in 11th century).</p>
+      <p />
+      <p>Nowadays the language is used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek. Before that all purely Coptic characters were considered Greek.</p>
      </orig>
