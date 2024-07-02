@@ -4031,7 +4031,7 @@
       <p />
       <p>Nowadays the language is used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek. Before that all purely Coptic characters were considered Greek.</p>
+      <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
      </orig>
     </text>
    </group>

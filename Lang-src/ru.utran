@@ -5486,14 +5486,14 @@
       <p />
       <p>Nowadays the language is used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek. Before that all purely Coptic characters were considered Greek.</p>
+      <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
      </orig>
      <transl>
       <p>Язык происходит из [[ps:Egyp|древнеегипетского]] и является важным источником по нему, письменность{{-}}из [[ps:Grek|греческого]]. Демотическое письмо было консонантно-иероглифическим, и по-египетски греческими буквами регулярно писали с VI{{_}}века{{bc}}, задолго до завоевания Египта Александром. Окончательно от демотического к греческому перешли христиане около III{{_}}века. Собственно коптский алфавит появился, когда 6 или 7 букв (в зависимости от диалекта) позаимствовали из демотического письма. Два главных диалекта коптского{{-}}саидский (Верхний Египет, стал литературным в IV{{_}}веке) и бохайрский (Нижний Египет, известен с IX{{_}}века, стал официальным языком коптской церкви в XI{{_}}веке).</p>
       <p />
       <p>Ныне язык используется коптами (египетскими христианами) как богослужебный. Общаются копты [[ps:Arab|по-арабски]], как разговорный коптский умер от XVII до XIX{{_}}века.</p>
       <p />
-      <p>С Юникода 4.1 (2005) коптский [[pt:unification|разунифицирован]] с греческим. До этого все чисто коптские символы считались греческими.</p>
+      <p>В Юникоде{{_}}1.0 коптский был в [[pt:unification|унификации]] с греческим, и все чисто коптские буквы тоже считались греческими. С Юникода 4.1 (2005) языки разунифицированы: исследования по коптскому часто содержали греческий текст. Более того, только одна коптская буква имеет значительно разный рисунок в заглавном и строчном регистре: {{sm|Ϧϧ}}.</p>
      </transl>
     </text>
    </group>
