@@ -54,6 +54,8 @@ namespace srh {
 
     enum class Place { NONE, PARTIAL, INITIAL_SRIPT, INITIAL, EXACT_SCRIPT, EXACT };
 
+    /// @brief
+    ///   Just a normal T, but compares in reverse order
     /// @todo [future] Is Reverse object needed?
     template <class T>
     struct Reverse {
