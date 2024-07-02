@@ -54,11 +54,40 @@ namespace srh {
 
     enum class Place { NONE, PARTIAL, INITIAL_SRIPT, INITIAL, EXACT_SCRIPT, EXACT };
 
+    template <class T>
+    struct Reverse {
+    private:
+        using This = Reverse<T>;
+    public:
+        T value = 0;
+        // Ctor
+        constexpr Reverse() = default;
+        constexpr Reverse(const This&) = default;
+        constexpr Reverse(This&&) = default;
+        template <class U>
+                requires(!std::is_same_v<This, std::remove_cv<U>>)
+            constexpr Reverse(U&& data) : value(std::forward<U>(data)) {}
+        // Op=
+        constexpr Reverse& operator = (const This& x) = default;
+        constexpr Reverse& operator = (This&& x) = default;
+        template <class U>
+            constexpr Reverse& operator = (U&& data) { value = std::forward<U>(data); return *this; }
+        operator T& () { return value; }
+        operator T&& () && { return value; }
+        operator const T& () const { return value; }
+        bool operator == (const Reverse<T>& x) const = default;
+        bool operator < (const Reverse<T>& x) const { return (value > x.value); }
+        bool operator > (const Reverse<T>& x) const { return (value < x.value); }
+        bool operator <= (const Reverse<T>& x) const { return (value >= x.value); }
+        bool operator >= (const Reverse<T>& x) const { return (value <= x.value); }
+    };
+
     struct Prio {
         short high = 0;
         unsigned short exact = 0, exactScript = 0,
                        initial = 0, initialScript = 0,
                        partial = 0;
+        Reverse<unsigned short> emojiLength = 0;
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;
     };
