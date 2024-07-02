@@ -19,20 +19,36 @@ namespace {
 
     /// If we find those words → treat as low-priority
     /// @warning Alphabetical order, upper case
-    constinit DicWord DIC_WORDS[] {
+    /// Dislike such constexpr, but it’s within one TU, and need for static_assert
+    inline constexpr const DicWord DIC_WORDS[] {
         { u8"IDEOGRAM", srh::hc::EVERYWHERE },
         { u8"IDEOGRAPH", srh::hc::EVERYWHERE },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::hc::EVERYWHERE },
+        { u8"MAN", srh::HaystackClass::EMOJI },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
+        { u8"PERSON", srh::HaystackClass::EMOJI },
         { u8"SIGN", srh::hc::EVERYWHERE },
         { u8"SYLLABIC", srh::hc::EVERYWHERE },
         { u8"SYLLABICS", srh::hc::EVERYWHERE },
         { u8"SYLLABLE", srh::hc::EVERYWHERE },
         { u8"SYMBOL", srh::hc::EVERYWHERE },
+        { u8"WOMAN", srh::HaystackClass::EMOJI },
     };
 
     constexpr auto ALL_SEPARATORS = u8" ,()";
+
+    template <size_t N>
+    consteval bool isAsc(const DicWord (&x)[N])
+    {
+        for (size_t i = 1; i < std::size(x); ++i) {
+            if (x[i - 1].word >= x[i].word)
+                return false;
+        }
+        return true;
+    }
+
+    static_assert(isAsc(DIC_WORDS), "Words should be ascending");
 
 }
 
