@@ -51,11 +51,11 @@ namespace uc {
         const uc::Cp* cp = nullptr;         ///< code point
         const uc::LibNode* node = nullptr;  ///< library node
 
-        constexpr MiniLine() = default;
+        constexpr MiniLine() noexcept = default;
         // Clazy’s −warn
         constexpr MiniLine(char32_t aCode,
                  CpType aType = CpType::NONCHARACTER,
-                 const uc::Cp* aCp = nullptr)
+                 const uc::Cp* aCp = nullptr) noexcept
             : code(aCode), type(aType), cp(aCp) {}
         constexpr MiniLine(const uc::LibNode* aNode) : type(CpType::LIBNODE), node(aNode) {}
     };
@@ -66,21 +66,21 @@ namespace uc {
         unsigned nestLevel = 0;             ///< US = U + S: US level 0, U/S level 1
         std::unique_ptr<std::u8string> ownedString {};
         /// @warning in reverse order!!
-        std::partial_ordering operator <=>(const SearchLine& x) const
+        std::partial_ordering operator <=>(const SearchLine& x) const noexcept
             { return x.prio <=> prio; }
         static const SearchLine STUB;
         SearchLine() = default;
-        SearchLine(const MiniLine& x)
+        SearchLine(const MiniLine& x) noexcept
             : MiniLine{x} {}
-        SearchLine(const uc::Cp& cp)
+        SearchLine(const uc::Cp& cp) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
-        constexpr SearchLine(const uc::LibNode* node)
+        constexpr SearchLine(const uc::LibNode* node) noexcept
             : MiniLine{node} {}
-        SearchLine(const uc::Cp& cp, std::u8string_view tn)
+        SearchLine(const uc::Cp& cp, std::u8string_view tn) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
-        SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr)
+        SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn), prio(pr) {}
-        SearchLine(const uc::LibNode* node, const srh::Prio& pr)
+        SearchLine(const uc::LibNode* node, const srh::Prio& pr) noexcept
             : MiniLine(node), prio(pr) {}
 
         void giveTriggerName(std::u8string r)
