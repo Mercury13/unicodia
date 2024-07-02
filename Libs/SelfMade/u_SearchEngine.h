@@ -54,6 +54,7 @@ namespace srh {
 
     enum class Place { NONE, PARTIAL, INITIAL_SRIPT, INITIAL, EXACT_SCRIPT, EXACT };
 
+    /// @todo [future] Is Reverse object needed?
     template <class T>
     struct Reverse {
     private:
@@ -90,7 +91,6 @@ namespace srh {
         unsigned short exact = 0, exactScript = 0,
                        initial = 0, initialScript = 0,
                        partial = 0;
-        Reverse<unsigned short> emojiLength = 0;
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;
     };
