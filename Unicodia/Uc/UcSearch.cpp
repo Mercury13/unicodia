@@ -704,11 +704,22 @@ uc::MultiResult uc::doSearch(QString what)
                     }
                     if (best.prio > srh::Prio::EMPTY) {
                         if (best.name == names[0])
-                            best.name = std::u8string();
+                            best.name = u8""sv;
                         r.emplace_back(cp, best.name, best.prio);
                     }
                 }
             brk:;
+            }
+        }
+
+        // Same search, but emoji
+        for (auto& node: uc::allLibNodes()) {
+            if (!node.flags.have(uc::Lfg::SEARCHABLE))
+                continue;
+            auto prio = srh::findNeedle(
+                    node.text, needle, srh::HaystackClass::EMOJI, cache);
+            if (prio > srh::Prio::EMPTY) {
+                r.emplace_back(&node, prio);
             }
         }
 

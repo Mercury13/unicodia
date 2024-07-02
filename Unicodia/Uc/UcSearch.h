@@ -80,6 +80,8 @@ namespace uc {
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr)
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn), prio(pr) {}
+        SearchLine(const uc::LibNode* node, const srh::Prio& pr)
+            : MiniLine(node), prio(pr) {}
 
         void giveTriggerName(std::u8string r)
         {

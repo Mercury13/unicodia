@@ -26,6 +26,7 @@ namespace {
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::hc::EVERYWHERE },
         { u8"MAN", srh::HaystackClass::EMOJI },
+        { u8"OF", srh::hc::EVERYWHERE },  // No letter Of at all
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
         { u8"PERSON", srh::HaystackClass::EMOJI },
         { u8"SIGN", srh::hc::EVERYWHERE },
