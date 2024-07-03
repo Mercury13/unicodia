@@ -782,7 +782,8 @@
    </property>
    <property name="icon">
     <iconset resource="Resources/res.qrc">
-     <normaloff>:/Buttons/heart.svg</normaloff>:/Buttons/heart.svg</iconset>
+     <normaloff>:/Buttons/heart.svg</normaloff>
+     <normalon>:/Buttons/heart_full.svg</normalon>:/Buttons/heart.svg</iconset>
    </property>
    <property name="text">
     <string>[Add to favourites]</string>

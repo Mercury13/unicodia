@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>Buttons/globe.svg</file>
         <file>Buttons/heart.svg</file>
+        <file>Buttons/heart_full.svg</file>
         <file>Buttons/sort_0F.svg</file>
         <file>Buttons/sort_AZ.svg</file>
         <file>Buttons/sort_AYa.svg</file>
