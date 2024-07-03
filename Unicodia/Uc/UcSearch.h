@@ -5,7 +5,9 @@
 
 // Libs
 #include "u_Vector.h"
-#include "u_SearchEngine.h"
+
+// Search
+#include "Search/engine.h"
 
 // Unicode
 #include "UcAutoDefines.h"

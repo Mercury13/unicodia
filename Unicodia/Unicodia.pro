@@ -41,6 +41,7 @@ SOURCES += \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
+    Search/engine.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
@@ -49,7 +50,6 @@ SOURCES += \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
     ../Libs/SelfMade/i_TempFont.cpp \
-    ../Libs/SelfMade/u_SearchEngine.cpp \
     ../Libs/SelfMade/Strings/u_Decoders.cpp \
     ../Libs/SelfMade/Strings/u_Qstrings.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
@@ -103,7 +103,6 @@ HEADERS += \
     ../Libs/SelfMade/u_TinyOpt.h \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
-    ../Libs/SelfMade/u_SearchEngine.h \
     ../Libs/SelfMade/Strings/u_Decoders.h \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
@@ -114,6 +113,7 @@ HEADERS += \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
     CharPaint/emoji.h \
+    Search/engine.h \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
