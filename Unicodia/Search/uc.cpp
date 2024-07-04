@@ -664,6 +664,7 @@ uc::MultiResult uc::doSearch(QString what)
                             ? HIPRIO_NUMERIC_HI : HIPRIO_NUMERIC;
                 } else {
                     // Textual search
+                    /// @todo [search, urgent] Maybe avoid vector?
                     auto names = allSearchableNames(cp);
                     struct {
                         srh::Prio prio;
@@ -695,7 +696,9 @@ uc::MultiResult uc::doSearch(QString what)
                             }
                         } if (nm.find('#') == std::u8string_view::npos) {
                             // Search by keyword
-                            if (auto pr = srh::findNeedle(nm, needle, hclass, cache);
+                            /// @todo [search, urgent] what comparator?
+                            if (auto pr = srh::findNeedle(
+                                        nm, needle, hclass, cache, srh::DefaultComparator::INST);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm;
@@ -716,8 +719,9 @@ uc::MultiResult uc::doSearch(QString what)
         for (auto& node: uc::allLibNodes()) {
             if (!node.flags.have(uc::Lfg::SEARCHABLE))
                 continue;
+            /// @todo [search, urgent] what comparator?
             auto prio = srh::findNeedle(
-                    node.text, needle, srh::HaystackClass::EMOJI, cache);
+                    node.text, needle, srh::HaystackClass::EMOJI, cache, srh::DefaultComparator::INST);
             if (prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, prio);
             }

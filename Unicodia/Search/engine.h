@@ -26,6 +26,20 @@ namespace srh {
         constexpr auto EVERYWHERE = HaystackClass::NONSCRIPT | HaystackClass::SCRIPT | HaystackClass::EMOJI;
     }
 
+    enum class FindStatus : unsigned char {
+        NONE,           ///< not found
+        SUBSTR,         ///< found as substring
+        INITIAL,        ///< found as prefix
+        COMPLETE };     ///< found as complete match
+
+    class Comparator
+    {
+    public:
+        virtual srh::FindStatus find(
+                std::u8string_view haystack, std::u8string_view needle) const = 0;
+        virtual ~Comparator() = default;
+    };
+
     struct NeedleWord {
         std::u8string v;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
@@ -116,11 +130,19 @@ namespace srh {
     };
 
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
-                   HaystackClass hclass);
+                   HaystackClass hclass, const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                    HaystackClass hclass);
+                    HaystackClass hclass, const Comparator& comparator);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    HaystackClass hclass, Cache& cache);
+                    HaystackClass hclass, Cache& cache, const Comparator& comparator);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
+
+    class DefaultComparator : public Comparator
+    {
+    public:
+        srh::FindStatus find(
+                std::u8string_view haystack, std::u8string_view needle) const override;
+        static const DefaultComparator INST;
+    };
 
 }   // namespace srh

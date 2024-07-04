@@ -4,6 +4,28 @@
 #include "u_TypedFlags.h"
 
 const srh::Prio srh::Prio::EMPTY;
+const srh::DefaultComparator srh::DefaultComparator::INST;
+
+srh::FindStatus srh::DefaultComparator::find(
+        std::u8string_view haystack, std::u8string_view needle) const
+{
+    auto pos = haystack.find(needle);
+    if ( pos == std::u8string_view::npos)
+        return srh::FindStatus::NONE;
+    if (pos == 0) {
+        if (haystack.length() == needle.length()) {
+            return srh::FindStatus::COMPLETE;
+        } else {
+            return srh::FindStatus::INITIAL;
+        }
+    } else {
+        if (srh::classify(haystack.at(pos - 1)) == srh::Class::OTHER) {
+            return srh::FindStatus::INITIAL;
+        } else {
+            return srh::FindStatus::SUBSTR;
+        }
+    }
+}
 
 namespace {
 
@@ -143,37 +165,27 @@ namespace {
         return std::toupper(ch1) == std::toupper(ch2);
     }
 
-    enum class FindStatus : unsigned char { COMPLETE, INITIAL, OTHER };
-
     struct FindPlace {
         const srh::HayWord* word = nullptr;
         size_t iWord = std::numeric_limits<size_t>::max();
-        FindStatus status = FindStatus::OTHER;
+        srh::FindStatus status = srh::FindStatus::NONE;
 
         explicit operator bool() const { return word; }
         size_t length() const { return word ? word->length() : 0; }
     };
 
-    template<typename T>
-    FindPlace myFind(std::span<const srh::HayWord> haystack, const T& needle, size_t iStartWord)
+    FindPlace myFind(
+            const srh::Comparator& comparator,
+            std::span<const srh::HayWord> haystack,
+            std::u8string_view needle,
+            size_t iStartWord)
     {
         for (auto itHay = haystack.begin() + iStartWord;
              itHay != haystack.end();
              ++itHay) {
             auto hayword = itHay->sv();
-            auto pos = hayword.find(needle);
-            if ( pos != std::u8string_view::npos ) {
-                auto status = FindStatus::OTHER;
-                if (pos == 0) {
-                    if (hayword.length() == needle.length()) {
-                        status = FindStatus::COMPLETE;
-                    } else {
-                        status = FindStatus::INITIAL;
-                    }
-                } else {
-                    if (srh::classify(hayword.at(pos - 1)) == srh::Class::OTHER)
-                        status = FindStatus::INITIAL;
-                }
+            auto status = comparator.find(hayword, needle);
+            if (status != srh::FindStatus::NONE) {
                 return { .word = std::to_address(itHay),
                          .iWord = size_t(itHay - haystack.begin()),
                          .status = status };
@@ -184,14 +196,15 @@ namespace {
 
 }   // anon namespace
 
-srh::Place srh::findWord(std::span<HayWord> haystack, const NeedleWord& needle,
-                         HaystackClass hclass)
+srh::Place srh::findWord(
+        std::span<HayWord> haystack, const NeedleWord& needle,
+        HaystackClass hclass, const Comparator& comparator)
 {
     bool isNeedleLowPrio = needle.lowPrioClass.have(hclass);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
-        auto where = myFind(haystack, needle.sv(), pos);
+        auto where = myFind(comparator, haystack, needle.sv(), pos);
         if (!where)
             break;
         Place r1 = Place::PARTIAL;
@@ -203,7 +216,8 @@ srh::Place srh::findWord(std::span<HayWord> haystack, const NeedleWord& needle,
             r1 = where.word->lowPrioClass.have(hclass)
                  ?  Place::INITIAL_SRIPT : Place::INITIAL;
             break;
-        case FindStatus::OTHER:;
+        case FindStatus::SUBSTR:
+        case FindStatus::NONE: ;
         }
         // Check for dictionary word
         switch (r1) {
@@ -223,11 +237,11 @@ srh::Place srh::findWord(std::span<HayWord> haystack, const NeedleWord& needle,
 }
 
 srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                          HaystackClass hclass)
+                          HaystackClass hclass, const Comparator& comparator)
 {
     srh::Prio r;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, v, hclass);
+        auto type = findWord(haystack, v, hclass, comparator);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
         case Place::EXACT_SCRIPT: ++r.exactScript; break;
@@ -242,7 +256,8 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
 
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          HaystackClass hclass, Cache& cache)
+                          HaystackClass hclass, Cache& cache,
+                          const Comparator& comparator)
 {
     // Uppercase haystack
     cache.haystack = haystack;
@@ -257,5 +272,5 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         if (!v.empty())
             cache.words2.emplace_back(v);
     }
-    return findNeedle(cache.words2, needle, hclass);
+    return findNeedle(cache.words2, needle, hclass, comparator);
 }
