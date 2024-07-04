@@ -28,7 +28,9 @@
 
 // Unicode data
 #include "UcData.h"
-#include "UcSearch.h"
+
+// Search
+#include "Search/uc.h"
 
 // L10n
 #include "LocQt.h"

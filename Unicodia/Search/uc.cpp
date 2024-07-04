@@ -1,5 +1,5 @@
 // My header
-#include "UcSearch.h"
+#include "uc.h"
 
 // STL
 #include <unordered_set>

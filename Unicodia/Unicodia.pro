@@ -42,6 +42,8 @@ SOURCES += \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
     Search/engine.cpp \
+    Search/request.cpp \
+    Search/uc.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
@@ -65,9 +67,7 @@ SOURCES += \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
-    Uc/UcRequest.cpp \
     Uc/UcScripts.cpp \
-    Uc/UcSearch.cpp \
     WiLibCp.cpp \
     WiOsStyle.cpp \
     WiSample.cpp \
@@ -114,6 +114,8 @@ HEADERS += \
     CharPaint/global.h \
     CharPaint/emoji.h \
     Search/engine.h \
+    Search/request.h \
+    Search/uc.h \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
@@ -133,8 +135,6 @@ HEADERS += \
     Uc/UcData.h \
     Uc/UcDating.h \
     Uc/UcFlags.h \
-    Uc/UcRequest.h \
-    Uc/UcSearch.h \
     Uc/UcSkin.h \
     WiLibCp.h \
     WiOsStyle.h \

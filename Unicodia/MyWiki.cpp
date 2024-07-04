@@ -12,7 +12,9 @@
 // Unicode
 #include "UcData.h"
 #include "UcCp.h"
-#include "UcRequest.h"
+
+// Search
+#include "Search/request.h"
 
 // L10n
 #include "LocDic.h"

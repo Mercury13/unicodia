@@ -1,7 +1,7 @@
 #pragma once
 
 // Unicode
-#include "UcSearch.h"
+#include "Search/uc.h"
 #include "UcData.h"
 
 namespace uc {

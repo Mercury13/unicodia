@@ -43,7 +43,9 @@
 #include "UcCp.h"
 #include "UcClipboard.h"
 #include "UcSkin.h"
-#include "UcRequest.h"
+
+// Search
+#include "Search/request.h"
 
 // Char drawing
 #include "CharPaint/routines.h"

@@ -6,9 +6,11 @@
 
 // Unicode
 #include "UcData.h"
-#include "UcSearch.h"
 #include "UcCp.h"
 #include "FontMatch.h"
+
+// Search
+#include "Search/uc.h"
 
 // L10n
 #include "LocDic.h"
