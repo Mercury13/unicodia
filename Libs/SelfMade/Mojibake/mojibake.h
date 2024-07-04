@@ -572,7 +572,7 @@ namespace mojibake {
     class Utf16CallIterator : public CallIterator<Utf16, Func>
     {
     public:
-        using CallIterator<Utf8, Func>::CallIterator;
+        using CallIterator<Utf16, Func>::CallIterator;
     };
 
     template <class Func>
@@ -582,7 +582,7 @@ namespace mojibake {
     class Utf32CallIterator : public CallIterator<Utf32, Func>
     {
     public:
-        using CallIterator<Utf8, Func>::CallIterator;
+        using CallIterator<Utf32, Func>::CallIterator;
     };
 
     template <class Func>

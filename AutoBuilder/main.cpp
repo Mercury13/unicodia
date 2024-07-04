@@ -10,6 +10,7 @@
 
 // My libs
 #include "u_Strings.h"
+#include "mojibake.h"
 
 // Unicode
 #include "UcCp.h"
@@ -214,16 +215,24 @@ public:
             std::string_view s);
     void finishCp();
     auto& inOrder() const { return fInOrder; }
+    auto& nonAscii() const { return fNonAscii; }
 private:
     using M = std::unordered_map<std::string_view, StringData*>;
     M fNdx;
     std::deque<StringData> fInOrder;
     size_t fLength = 0;
+    std::set<char32_t> fNonAscii;
 };
 
 RememberResult StringLib::forceRemember(
         char32_t subj, uc::TextRole role, std::string_view aS)
 {
+    auto func = [this](char32_t c) {
+        if (c >= 128)
+            fNonAscii.insert(c);
+    };
+    mojibake::copyS(aS.begin(), aS.end(),
+            mojibake::Utf32CallIterator(func));
     auto& v = fInOrder.emplace_back(StringData{
                     .s = std::string { aS },
                     .subj = subj,
