@@ -91,7 +91,7 @@ namespace {
     inline bool charsCiEq(char8_t c1, char8_t c2)
     {
         return (c1 == c2
-            || std::toupper(c1) == std::toupper(c2));
+            || lat::toUpper(c1) == lat::toUpper(c2));
     }
 
 }   // anon namespace
