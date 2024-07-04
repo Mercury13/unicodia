@@ -808,6 +808,14 @@ int main()
               << forgetStats.nExtra << " extra, "
               << forgetStats.nBadCase << " bad case, see " << FNAME_FORGET << "." << '\n';
 
+    ///// Non-ASCII CPs ////////////////////////////////////////////////////////
+
+    os.open("non-ascii.log");
+    for (auto c : strings.nonAscii()) {
+        os << std::hex << (int)c << '\n';
+    }
+    os.close();
+
     ///// Temp files ///////////////////////////////////////////////////////////
 
     std::cout << "Removing temp files..." << std::flush;
