@@ -250,18 +250,26 @@ namespace {
 
     TrieNode trieRoot { Prealloc::INST };
 
-    SafeVector<std::u8string_view> allSearchableNames(const uc::Cp& cp)
+    struct SearchableName {
+        std::u8string_view value;
+        const srh::Comparator& comparator;
+    };
+
+    void allSearchableNamesTo(const uc::Cp& cp, SafeVector<SearchableName>& r)
     {
-        SafeVector<std::u8string_view> r;
+        r.clear();
         std::u8string_view it = cp.name.tech();
-        r.emplace_back(it);
+        r.emplace_back(it, srh::DefaultComparator::INST);
         cp.name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
             switch (role) {
-            case uc::TextRole::ALT_NAME:
             case uc::TextRole::HTML:
             case uc::TextRole::ABBREV:
+                r.emplace_back(text, srh::DefaultComparator::INST);
+                break;
+            case uc::TextRole::ALT_NAME:
             case uc::TextRole::EMOJI_NAME:
-                r.push_back(text);
+                /// @todo [search, urgent] maybe other comparator?
+                r.emplace_back(text, srh::DefaultComparator::INST);
                 break;
             case uc::TextRole::MAIN_NAME:
             case uc::TextRole::DEP_INSTEAD:
@@ -270,7 +278,6 @@ namespace {
                 break;
             }
         });
-        return r;
     }
 
     SafeVector<std::u8string_view> allHtmlNames(const uc::Cp& cp)
@@ -655,6 +662,7 @@ uc::MultiResult uc::doSearch(QString what)
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
         srh::Cache cache;
+        SafeVector<SearchableName> names;
         for (auto& cp : uc::cpInfo) {
             if (&cp != hex && &cp != dec) {  // Do not check what we found once again
                 // Numeric search
@@ -665,7 +673,7 @@ uc::MultiResult uc::doSearch(QString what)
                 } else {
                     // Textual search
                     /// @todo [search, urgent] Maybe avoid vector?
-                    auto names = allSearchableNames(cp);
+                    allSearchableNamesTo(cp, names);
                     struct {
                         srh::Prio prio;
                         std::u8string_view name;
@@ -680,33 +688,32 @@ uc::MultiResult uc::doSearch(QString what)
                             || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
                     auto hclass = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;
                     for (auto& nm : names) {
-                        if (nm.starts_with('&')) {
+                        if (nm.value.starts_with('&')) {
                             // Search by HTML mnemonic
-                            if (nm.size() == sv.size() + 2) {
-                                auto mnemo = nm.substr(1, sv.size());
+                            if (nm.value.size() == sv.size() + 2) {
+                                auto mnemo = nm.value.substr(1, sv.size());
                                 if (sv == mnemo) {
-                                    auto& bk = r.emplace_back(cp, nm);
+                                    auto& bk = r.emplace_back(cp, nm.value);
                                     bk.prio.high = HIPRIO_MNEMONIC_EXACT;
                                     goto brk;
                                 } else if (srh::stringsCiEq(sv, mnemo)) {
-                                    auto& bk = r.emplace_back(cp, nm);
+                                    auto& bk = r.emplace_back(cp, nm.value);
                                     bk.prio.high = HIPRIO_MNEMONIC_CASE;
                                     goto brk;
                                 }
                             }
-                        } if (nm.find('#') == std::u8string_view::npos) {
+                        } if (nm.value.find('#') == std::u8string_view::npos) {
                             // Search by keyword
-                            /// @todo [search, urgent] what comparator?
                             if (auto pr = srh::findNeedle(
-                                        nm, needle, hclass, cache, srh::DefaultComparator::INST);
+                                        nm.value, needle, hclass, cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
-                                best.name = nm;
+                                best.name = nm.value;
                             }
                         }
                     }
                     if (best.prio > srh::Prio::EMPTY) {
-                        if (best.name == names[0])
+                        if (best.name == names[0].value)
                             best.name = u8""sv;
                         r.emplace_back(cp, best.name, best.prio);
                     }
