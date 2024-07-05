@@ -42,6 +42,7 @@ SOURCES += \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
     Search/engine.cpp \
+    Search/nonAscii.cpp \
     Search/request.cpp \
     Search/uc.cpp \
     FmMessage.cpp \
@@ -114,6 +115,7 @@ HEADERS += \
     CharPaint/global.h \
     CharPaint/emoji.h \
     Search/engine.h \
+    Search/nonAscii.h \
     Search/request.h \
     Search/uc.h \
     FmMain.h \
