@@ -4027,9 +4027,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was ideo-consonant, and writing in Egyptian with Greek letters was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. Two major dialects of Coptic are Sahidic (Upper Egypt, became literary in 4th century) and Bohairic (Lower Egypt, known since 9th century, became the official language of Coptic Church in 11th century).</p>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script.</p>
       <p />
-      <p>Nowadays the language is used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
+      <p>The word “Copt” is “Egypt” shorteded under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script is still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
      </orig>

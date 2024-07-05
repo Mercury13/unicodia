@@ -5483,16 +5483,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was ideo-consonant, and writing in Egyptian with Greek letters was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. Two major dialects of Coptic are Sahidic (Upper Egypt, became literary in 4th century) and Bohairic (Lower Egypt, known since 9th century, became the official language of Coptic Church in 11th century).</p>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script.</p>
       <p />
-      <p>Nowadays the language is used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
+      <p>The word “Copt” is “Egypt” shorteded under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script is still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
      </orig>
      <transl>
       <p>Мова походить з [[ps:Egyp|давньоєгипетської]] і є важливим джерелом по ній, писемність{{-}}з [[ps:Grek|грецької]]. Демотичне письмо було консонантно-ієрогліфічним, і єгипетською грецькими літерами регулярно писали з VI{{_}}століття{{bc}}, задовго до завоювання Єгипта Олександром. Остаточно від демотичного до грецького перейшли християни біля III{{_}}століття. Власне коптський алфавіт з’явився, коли 6 чи 7 літер (залежно від діалекту) запозичили з демотичного письма. Два головних діалекти коптської{{-}}саїдський (Верхній Єгипет, став літературним у IV{{_}}столітті) та бохайрський (Нижній Єгипет, відомий з IX{{_}}століття, став офіційною мовою коптської церкви у XI{{_}}столітті).</p>
       <p />
-      <p>Нині мова використовується коптами (єгипетськими християнами) як богослужебна. Спілкуються копти [[ps:Arab|арабською]], як розмовна коптська померла від XVII до XIX{{_}}століття.</p>
+      <p>Слово «копт»{{-}}це «Єгипет», що скоротився під [[ps:Arab|арабським]] впливом. Його значення зсунулось від усього народу Єгипта до єгипетських християн. Мова та писемність і понині використовуються коптами як богослужебні. Спілкуються копти арабською, як розмовна коптська померла від XVII до XIX{{_}}століття.</p>
       <p />
       <p>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. З Юнікоду{{_}}4.1 (2005) мови розуніфіковані: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</p>
      </transl>
