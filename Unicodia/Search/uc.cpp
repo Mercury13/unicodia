@@ -14,6 +14,9 @@
 // Emoji painter
 #include "CharPaint/emoji.h"
 
+// Search
+#include "Search/nonAscii.h"
+
 using namespace std::string_view_literals;
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
@@ -155,6 +158,7 @@ bool uc::isNameChar(char32_t cp)
     case '.':   // Same
     case ',':   // Same
     case '-':
+    case '\'':  // Lots of apostrophes in Unicode
     case ' ':
         return true;
     default:
@@ -268,8 +272,7 @@ namespace {
                 break;
             case uc::TextRole::ALT_NAME:
             case uc::TextRole::EMOJI_NAME:
-                /// @todo [search, urgent] maybe other comparator?
-                r.emplace_back(text, srh::DefaultComparator::INST);
+                r.emplace_back(text, srh::NonAsciiComparator::INST);
                 break;
             case uc::TextRole::MAIN_NAME:
             case uc::TextRole::DEP_INSTEAD:
@@ -672,7 +675,6 @@ uc::MultiResult uc::doSearch(QString what)
                             ? HIPRIO_NUMERIC_HI : HIPRIO_NUMERIC;
                 } else {
                     // Textual search
-                    /// @todo [search, urgent] Maybe avoid vector?
                     allSearchableNamesTo(cp, names);
                     struct {
                         srh::Prio prio;
@@ -726,9 +728,9 @@ uc::MultiResult uc::doSearch(QString what)
         for (auto& node: uc::allLibNodes()) {
             if (!node.flags.have(uc::Lfg::SEARCHABLE))
                 continue;
-            /// @todo [search, urgent] what comparator?
             auto prio = srh::findNeedle(
-                    node.text, needle, srh::HaystackClass::EMOJI, cache, srh::DefaultComparator::INST);
+                    node.text, needle, srh::HaystackClass::EMOJI, cache,
+                    srh::NonAsciiComparator::INST);
             if (prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, prio);
             }

@@ -27,6 +27,14 @@ srh::FindStatus srh::DefaultComparator::find(
     }
 }
 
+
+void srh::DefaultComparator::prepareHaystack(
+        std::u8string_view haystack, std::u8string& result) const
+{
+    result = haystack;
+    str::toUpperInPlace(result);
+}
+
 namespace {
 
     enum class AlwaysLowPrio : unsigned char { NO, YES };
@@ -260,8 +268,7 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
                           const Comparator& comparator)
 {
     // Uppercase haystack
-    cache.haystack = haystack;
-    str::toUpperInPlace(cache.haystack);
+    comparator.prepareHaystack(haystack, cache.haystack);
     // Words — simple
     cache.words1.clear();
     str::splitByAnySvTo(cache.haystack, ALL_SEPARATORS, cache.words1);

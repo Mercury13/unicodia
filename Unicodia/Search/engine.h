@@ -35,6 +35,8 @@ namespace srh {
     class Comparator
     {
     public:
+        virtual void prepareHaystack(
+                std::u8string_view haystack, std::u8string& result) const = 0;
         virtual srh::FindStatus find(
                 std::u8string_view haystack, std::u8string_view needle) const = 0;
         virtual ~Comparator() = default;
@@ -140,8 +142,11 @@ namespace srh {
     class DefaultComparator : public Comparator
     {
     public:
+        void prepareHaystack(
+                std::u8string_view haystack, std::u8string& result) const override;
+        /// final just for optimization, w/o logical reason
         srh::FindStatus find(
-                std::u8string_view haystack, std::u8string_view needle) const override;
+                std::u8string_view haystack, std::u8string_view needle) const final;
         static const DefaultComparator INST;
     };
 
