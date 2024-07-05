@@ -14,7 +14,7 @@ const std::map<char32_t, char> NON_ASCII_MAP {
     { U'Ã', 'A' },
     { U'Ä', 'A' },
     { U'Å', 'A' },
-    // Æ unused
+    // Æ complex, unused
     { U'Ç', 'C' },
     // C8
     { U'È', 'E' },
@@ -50,7 +50,7 @@ const std::map<char32_t, char> NON_ASCII_MAP {
     { U'ã', 'a' },
     { U'ä', 'a' },
     { U'å', 'a' },
-    { U'æ', 'a' },  /// @todo [urgent] What to do with æ — it’s used
+    // æ used once, no reason to implement complex logic
     { U'ç', 'c' },
     // E8
     { U'è', 'e' },
@@ -62,7 +62,7 @@ const std::map<char32_t, char> NON_ASCII_MAP {
     { U'î', 'i' },
     { U'ï', 'i' },
     // F0
-    { U'ð', 'd' },  /// @todo [urgent] What to do with ð — it’s used
+    { U'ð', 'd' },  // Let it be, used once and it’s INDEED version of D
     { U'ñ', 'n' },
     { U'ò', 'o' },
     { U'ó', 'o' },
@@ -145,14 +145,14 @@ const std::map<char32_t, char> NON_ASCII_MAP {
     { U'ǎ', 'a' },
     // 2B*
     { U'ʼ', '\'' },
-    // 627 — Arabic (deprecated)
-    // 65F — Arabic (deprecated)
-    // F71 — Tibetan (deprecated)
-    // F80 — Tibetan (deprecated)
-    // FB2 — Tibetan (deprecated)
-    // FB3 — Tibetan (deprecated)
-    // 17A2 — Khmer (deprecated)
-    // 17B6 — Khmer (deprecated)
+    // 627 — Arabic (instead of deprecated)
+    // 65F — Arabic (instead of deprecated)
+    // F71 — Tibetan (instead of deprecated)
+    // F80 — Tibetan (instead of deprecated)
+    // FB2 — Tibetan (instead of deprecated)
+    // FB3 — Tibetan (instead of deprecated)
+    // 17A2 — Khmer (instead of deprecated)
+    // 17B6 — Khmer (instead of deprecated)
     // 201*
     { U'’', '\'' },
     { U'“', '"' },
@@ -161,8 +161,8 @@ const std::map<char32_t, char> NON_ASCII_MAP {
     // 2193 = ↓ (abbreviation)
     // 2194 = ↔ (abbreviation)
     // 2715 = ✕ (abbreviation)
-    // 27E8 = ⟨ (deprecated)
-    // 27E9 = ⟩ (deprecated)
-    // 3008 = 〈 (deprecated)
-    // 3009 = 〉 (deprecated)
+    // 27E8 = ⟨ (instead of deprecated)
+    // 27E9 = ⟩ (instead of deprecated)
+    // 3008 = 〈 (instead of deprecated)
+    // 3009 = 〉 (instead of deprecated)
 };
