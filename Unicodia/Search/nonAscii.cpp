@@ -188,9 +188,6 @@ namespace {
 void srh::NonAsciiComparator::prepareHaystack(
         std::u8string_view haystack, std::u8string& result) const
 {
-    if (haystack == u8"ten o’clock") {
-        std::cout << "Ten" "\n";
-    }
     result.clear();
     auto func = [&result](char32_t x) {
         if (x < 128) {
