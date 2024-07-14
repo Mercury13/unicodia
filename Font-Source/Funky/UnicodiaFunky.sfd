@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 350 25 12
+WinInfo: 275 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -7982,6 +7982,7 @@ LayerCount: 2
 Fore
 Refer: 59 -1 S 1 0 0 1 597.5 -787 2
 Refer: 1 9676 S 1 0 0 1 0 139 2
+Colour: 8000
 EndChar
 
 StartChar: BiggerPlus
@@ -8098,6 +8099,7 @@ LayerCount: 2
 Fore
 Refer: 64 -1 S 1 0 0 1 709 -316 2
 Refer: 1 9676 S 1 0 0 1 0 65 2
+Colour: 8000
 EndChar
 
 StartChar: uniE003
@@ -8110,6 +8112,7 @@ LayerCount: 2
 Fore
 Refer: 64 -1 N 1 0 0 1 643 -85 2
 Refer: 1 9676 N 1 0 0 1 0 0 2
+Colour: 8000
 EndChar
 
 StartChar: uniE004
@@ -8122,6 +8125,7 @@ LayerCount: 2
 Fore
 Refer: 64 -1 N 1 0 0 1 286 -4 2
 Refer: 1 9676 N 1 0 0 1 0 -56 2
+Colour: 8000
 EndChar
 
 StartChar: uniE005
@@ -8134,6 +8138,7 @@ LayerCount: 2
 Fore
 Refer: 64 -1 S 1 0 0 1 284 -638 2
 Refer: 1 9676 S 1 0 0 1 0 175 2
+Colour: 8000
 EndChar
 
 StartChar: MiaoToneUml
@@ -8214,6 +8219,7 @@ SplineSet
  -17.5 533 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: 8000
 EndChar
 
 StartChar: uniE006
@@ -8352,6 +8358,7 @@ SplineSet
  462.599609375 86.599609375 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: 8000
 EndChar
 
 StartChar: uniE007
@@ -8508,6 +8515,7 @@ SplineSet
  26.5 431.200195312 l 5,0,-1
 EndSplineSet
 Validated: 19457
+Colour: 8000
 EndChar
 
 StartChar: u10780
@@ -40149,6 +40157,7 @@ SplineSet
  594 566 594 566 589 558 c 2,0,1
 EndSplineSet
 Validated: 19457
+Colour: 8000
 EndChar
 
 StartChar: uniE009
@@ -40341,6 +40350,7 @@ SplineSet
  57 -70 l 1,45,-1
  57 160 l 1,33,-1
 EndSplineSet
+Colour: 8000
 EndChar
 
 StartChar: uni0488
@@ -78512,6 +78522,7 @@ SplineSet
  244.935546875 608.700195312 244.935546875 608.700195312 181.123046875 544.887695312 c 128,-1,19
  117.309570312 481.07421875 117.309570312 481.07421875 117.309570312 390.796875 c 128,-1,20
 EndSplineSet
+Colour: 8000
 EndChar
 
 StartChar: u1F8C0
