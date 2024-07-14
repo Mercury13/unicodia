@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1720915758
+ModificationTime: 1720946908
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -135162,7 +135162,7 @@ Fore
 SplineSet
 503 527 m 1,0,1
  604 593 604 593 661 714 c 1,2,-1
- 725 714 l 1,3,-1
+ 725 714 l 5,3,-1
  725 0 l 1,4,-1
  625 0 l 1,5,-1
  625 479 l 2,6,7
@@ -136699,7 +136699,7 @@ EndChar
 StartChar: Onao.Ah
 Encoding: 124377 124377 962
 Width: 728
-Flags: WO
+Flags: W
 HStem: -10 50<280.527 472.894> 254 50<486.006 553.508> 674 50<292.148 455.322>
 VStem: 55 100<206.516 507.077> 573 100<336.97 527.908>
 TtInstrs:
@@ -136956,9 +136956,189 @@ EndChar
 
 StartChar: Onao.Al
 Encoding: 124378 124378 963
-Width: 916
-Flags: W
+Width: 693
+Flags: WO
+HStem: -10 50<249.859 445.424> 422 55<251.844 305> 429 49<405 494.5> 664 50<76 305>
+VStem: 55 100<157.046 326.186> 305 100<329 422 474.832 664> 505 100<453 714>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_3
+ 13
+ 0
+ 0
+CALL
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_3
+ 26
+ 2
+ 0
+CALL
+PUSHB_1
+ 31
+SHP[rp1]
+PUSHB_1
+ 25
+MDRP[min,rnd,black]
+PUSHB_5
+ 28
+ 36
+ 13
+ 26
+ 13
+CALL
+PUSHB_1
+ 28
+MDRP[min,rnd,black]
+PUSHB_1
+ 23
+SHP[rp2]
+PUSHB_1
+ 28
+SRP0
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+PUSHB_3
+ 2
+ 28
+ 10
+CALL
+PUSHB_4
+ 64
+ 2
+ 34
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 37
+MDAP[rnd]
+PUSHB_1
+ 19
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 26
+SHP[rp2]
+PUSHB_1
+ 5
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+SRP0
+PUSHB_2
+ 1
+ 1
+CALL
+PUSHB_1
+ 23
+SHP[rp2]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_1
+ 27
+SHP[rp2]
+PUSHB_1
+ 0
+SRP0
+PUSHB_2
+ 30
+ 1
+CALL
+PUSHB_1
+ 33
+MDRP[min,rnd,black]
+PUSHB_2
+ 38
+ 1
+CALL
+PUSHB_2
+ 5
+ 19
+SRP1
+SRP2
+PUSHB_1
+ 25
+IP
+PUSHB_2
+ 0
+ 1
+SRP1
+SRP2
+PUSHB_2
+ 7
+ 13
+IP
+IP
+PUSHB_2
+ 33
+ 30
+SRP1
+SRP2
+PUSHB_2
+ 10
+ 34
+IP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 2
+ 7
+SRP1
+SRP2
+PUSHB_4
+ 0
+ 10
+ 11
+ 19
+DEPTH
+SLOOP
+IP
+PUSHB_2
+ 28
+ 36
+SRP1
+SRP2
+PUSHB_1
+ 30
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 LayerCount: 2
+Fore
+SplineSet
+405 302 m 1,0,-1
+ 305 329 l 1,1,-1
+ 305 422 l 1,2,3
+ 243 407 243 407 199 358.5 c 128,-1,4
+ 155 310 155 310 155 230.5 c 128,-1,5
+ 155 151 155 151 206 95.5 c 128,-1,6
+ 257 40 257 40 347 40 c 0,7,8
+ 409 40 409 40 459.5 68 c 128,-1,9
+ 510 96 510 96 573 167 c 1,10,-1
+ 653 135 l 1,11,12
+ 548 -10 548 -10 361 -10 c 0,13,14
+ 265 -10 265 -10 192 34 c 0,15,16
+ 109 83 109 83 74 162 c 0,17,18
+ 55 208 55 208 55 253 c 0,19,20
+ 55 348 55 348 139 414 c 0,21,22
+ 206 467 206 467 305 477 c 1,23,-1
+ 305 664 l 1,24,-1
+ 76 664 l 1,25,-1
+ 55 714 l 1,26,-1
+ 405 714 l 1,27,-1
+ 405 478 l 1,28,29
+ 449 473 449 473 505 453 c 1,30,-1
+ 505 714 l 1,31,-1
+ 605 714 l 1,32,-1
+ 605 364 l 1,33,-1
+ 579 364 l 1,34,35
+ 497 420 497 420 405 429 c 1,36,-1
+ 405 302 l 1,0,-1
+EndSplineSet
 EndChar
 
 StartChar: Onao.Aw
