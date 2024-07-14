@@ -1088,8 +1088,7 @@ FmMain::FmMain(QWidget *parent)
     // Popup link
     connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
 
-    // Tofu stats
-    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
+    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
 
     // Change language
