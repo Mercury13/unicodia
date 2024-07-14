@@ -1048,6 +1048,7 @@ namespace uc {
         uc::EcCategory ecCategory = uc::EcCategory::NO_VALUE;
         uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
         uc::Cfgs fgs {};
+        bool isNumber = false;
     };
 
     struct Term

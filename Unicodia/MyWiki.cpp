@@ -370,6 +370,11 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
                 break;
             }
             return nullptr;
+        case 'N':   // number
+            if (value == "1"sv) {
+                fields.isNumber = 1;
+            }
+            break;
         default:
             return nullptr;
         }
@@ -1930,6 +1935,8 @@ QString mywiki::buildHtml(const uc::Term& x)
         char s[20];
         snprintf(s, std::size(s), "f=%u", static_cast<unsigned>(x.search.fgs.numeric()));
         appendQuery(text, s);
+    } else if (x.search.isNumber) {
+        appendQuery(text, "N=1");
     }
 
     str::append(text, "<p>");

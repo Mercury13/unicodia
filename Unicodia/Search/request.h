@@ -31,6 +31,7 @@ namespace uc {
         uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
         uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
         uc::Cfgs fgs {};
+        bool isNumber = false;
     };
 
     class FieldRequest : public Request

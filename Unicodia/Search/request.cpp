@@ -63,5 +63,8 @@ bool uc::FieldRequest::isOk(const Cp& cp) const
     // Flags
     if (fields.fgs && !cp.flags.haveAny(fields.fgs))
         return false;
+    // Number
+    if (fields.isNumber && !cp.numeric().isPresent())
+        return false;
     return true;
 }

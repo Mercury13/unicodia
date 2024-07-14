@@ -274,7 +274,7 @@ constinit const uc::Term uc::terms[] {
     { "format", EcTermCat::CHAR_CLASS, u8"format character", { "CharCat.Cf.Text" }, {},
             { .ecCategory = uc::EcCategory::FORMAT } },
     { "number", EcTermCat::CHAR_CLASS, u8"number character", {}, {},
-            { .ecUpCat = uc::EcUpCategory::NUMBER } },
+            { .isNumber = true } },
     { "emoji", EcTermCat::CHAR_CLASS, u8"emoji" },
 
     { "stability", EcTermCat::PRINCIPLES, u8"stability guarantees" },
