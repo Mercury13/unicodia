@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1720962288
+ModificationTime: 1720977088
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 675 25 12
+WinInfo: 350 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -837,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114176 965
+BeginChars: 1114176 971
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -119415,6 +119415,7 @@ SplineSet
  444.67650972 449.024483022 444.67650972 449.024483022 490.509170808 454.880436263 c 1,70,71
 EndSplineSet
 Kerns2: 792 -93 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.G
@@ -119562,6 +119563,7 @@ SplineSet
  526.477539062 213.641601562 526.477539062 213.641601562 557.942382812 172.672851562 c 0,55,56
  620.510742188 91.208984375 620.510742188 91.208984375 620.510742188 3.775390625 c 0,33,34
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.Ng
@@ -119678,6 +119680,7 @@ SplineSet
  619.205275108 89.3287157314 619.205275108 89.3287157314 555.017775754 34.6381402137 c 0,28,29
 EndSplineSet
 Kerns2: 792 -103 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.P
@@ -119827,6 +119830,7 @@ SplineSet
  722 578 722 578 716.5 573 c 128,-1,1
 EndSplineSet
 Kerns2: 792 -105 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.B
@@ -119966,6 +119970,7 @@ SplineSet
  385.055664062 -7.4453125 385.055664062 -7.4453125 321.32421875 66.30078125 c 0,60,61
  275.114257812 119.771484375 275.114257812 119.771484375 268.576171875 196.8046875 c 0,39,40
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.M
@@ -120107,6 +120112,7 @@ SplineSet
  327.844726562 580.6328125 327.844726562 580.6328125 391.28125 519.119140625 c 0,62,63
  430.1953125 481.384765625 430.1953125 481.384765625 453.927734375 431.798828125 c 1,29,30
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.T
@@ -120247,6 +120253,7 @@ SplineSet
  163.143707649 339.811397987 163.143707649 339.811397987 321.373046875 495.1484375 c 0,0,1
 EndSplineSet
 Kerns2: 792 -60 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.D
@@ -120440,6 +120447,7 @@ SplineSet
  435.210055174 418.456551762 435.210055174 418.456551762 443.31640625 444.3046875 c 0,62,63
  460.239952758 498.269348477 460.239952758 498.269348477 513.603515625 523.67578125 c 0,0,1
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.N
@@ -120511,6 +120519,7 @@ SplineSet
  152.120334623 255.818694718 152.120334623 255.818694718 269.532550031 376.995271216 c 0,0,1
 EndSplineSet
 Kerns2: 792 -128 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.C
@@ -120736,6 +120745,7 @@ SplineSet
 453.023443148 511.73037454 m 1024,63,-1
 EndSplineSet
 Kerns2: 792 -110 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.J
@@ -120899,6 +120909,7 @@ SplineSet
  108.106445312 507.625 108.106445312 507.625 157.380859375 547.444335938 c 128,-1,50
  206.655273438 587.263671875 206.655273438 587.263671875 258.247070312 587.263671875 c 0,9,10
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.Ny
@@ -121158,6 +121169,7 @@ SplineSet
  487.243164062 161.912109375 487.243164062 161.912109375 487.243164062 196.30859375 c 0,75,76
  487.243164062 282.935546875 487.243164062 282.935546875 439.083007812 353.798828125 c 1,68,69
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.Y
@@ -121445,6 +121457,7 @@ SplineSet
  679.371738909 77.1568996205 679.371738909 77.1568996205 679.371738909 205.068605124 c 1,75,76
 EndSplineSet
 Kerns2: 792 -93 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.R
@@ -121459,6 +121472,7 @@ LayerCount: 2
 Fore
 Refer: 788 73458 N 1 0 0 1 0 0 2
 Refer: 797 -1 N 1 0 0 1 0 0 2
+Colour: ff00
 EndChar
 
 StartChar: Maka.L
@@ -121597,6 +121611,7 @@ SplineSet
  178.19554778 127.28557183 178.19554778 127.28557183 253.684998875 127.28557183 c 128,-1,39
  329.174449969 127.28557183 329.174449969 127.28557183 386.16796875 136.021484375 c 1,0,1
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.V
@@ -121780,6 +121795,7 @@ SplineSet
  883.125 430.67578125 883.125 430.67578125 900.11328125 317.162109375 c 0,65,66
  900.4453125 314.9375 900.4453125 314.9375 900.4453125 312.916015625 c 0,0,1
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.S
@@ -121917,6 +121933,7 @@ SplineSet
  381.729478908 173.382902981 381.729478908 173.382902981 381.729478908 150.920640519 c 0,0,1
 EndSplineSet
 Kerns2: 792 -49 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.A
@@ -122094,6 +122111,7 @@ SplineSet
  213.1796875 77.001953125 213.1796875 77.001953125 244.387695312 80.82421875 c 1,0,1
 EndSplineSet
 Kerns2: 792 -25 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.Ang
@@ -122196,6 +122214,7 @@ SplineSet
  577.666281321 466.118939249 577.666281321 466.118939249 577.666281321 420.030909224 c 0,29,30
  577.666281321 410.436068177 577.666281321 410.436068177 570.52734375 404.44140625 c 0,0,1
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.I
@@ -122311,6 +122330,7 @@ SplineSet
  21.4365234375 771.797851562 21.4365234375 771.797851562 8.1494140625 771.797851562 c 0,46,47
  6.4072265625 771.797851562 6.4072265625 771.797851562 4.900390625 771.333984375 c 0,32,33
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.U
@@ -122324,6 +122344,7 @@ AnchorPoint: "Dot below" 0 0 mark 0
 LayerCount: 2
 Fore
 Refer: 789 73459 S 1 0 0 1 -1 -869 2
+Colour: ff00
 EndChar
 
 StartChar: Maka.E
@@ -122491,6 +122512,7 @@ SplineSet
  86 354 86 354 105 464 c 4,0,1
 EndSplineSet
 Kerns2: 770 -80 "Maka KERN-1" 772 -55 "Maka KERN-1" 773 -157 "Maka KERN-1" 776 -94 "Maka KERN-1" 778 -125 "Maka KERN-1" 779 -102 "Maka KERN-1" 782 -21 "Maka KERN-1" 784 -153 "Maka KERN-1" 787 -93 "Maka KERN-1"
+Colour: ff00
 EndChar
 
 StartChar: Maka.O
@@ -122645,6 +122667,7 @@ SplineSet
  276.5 42 276.5 42 263.75 198 c 132,-1,30
  251 354 251 354 232 464 c 4,0,1
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: u11EF7
@@ -122733,6 +122756,7 @@ SplineSet
  49.775 488.8875 49.775 488.8875 85.3875 525.94375 c 128,-1,16
  121 563 121 563 144.5 563 c 128,-1,17
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: u11EF8
@@ -122966,6 +122990,7 @@ SplineSet
  49.775 488.8875 49.775 488.8875 85.3875 525.94375 c 132,-1,40
  121 563 121 563 144.5 563 c 132,-1,41
 EndSplineSet
+Colour: ff00
 EndChar
 
 StartChar: Maka.II
@@ -125388,6 +125413,7 @@ SplineSet
  253.354385965 128 l 1,12,13
  253.354385965 128 253.354385965 128 262 85 c 1,7,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.As
@@ -125401,6 +125427,7 @@ LayerCount: 2
 Fore
 Refer: 810 -1 N 1 0 0 1 -17 0 2
 Refer: 808 67008 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.As.part
@@ -125487,6 +125514,7 @@ SplineSet
  270.654545455 128 l 1,9,10
  270.654545455 128 270.654545455 128 381 536 c 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Njan
@@ -125500,6 +125528,7 @@ LayerCount: 2
 Fore
 Refer: 813 -1 N 1 0 0 1 -24 0 2
 Refer: 808 67008 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.Njan.Part
@@ -125658,6 +125687,7 @@ SplineSet
  435 220 l 1,20,-1
  536 483 l 1,16,17
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.OO
@@ -125740,6 +125770,7 @@ SplineSet
  438 316 l 1,21,-1
  338 53 l 1,17,18
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.G
@@ -125771,6 +125802,7 @@ SplineSet
  347 371 347 371 310 371 c 0,17,18
  274 370 274 370 245 361 c 0,0,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ng.Part
@@ -125828,6 +125860,7 @@ LayerCount: 2
 Fore
 Refer: 817 -1 N 1 0 0 1 22 0 2
 Refer: 816 67020 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.I
@@ -125846,6 +125879,7 @@ SplineSet
  175 0 l 1,3,-1
  75 0 l 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ei
@@ -125859,6 +125893,7 @@ LayerCount: 2
 Fore
 Refer: 870 729 N 1 0 0 1 29 -16 2
 Refer: 819 67026 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.O
@@ -125959,6 +125994,7 @@ SplineSet
  259 496 259 496 210 451 c 0,26,27
  155 400 155 400 155 298 c 0,14,15
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.U
@@ -125972,6 +126008,7 @@ LayerCount: 2
 Fore
 Refer: 870 729 N 1 0 0 1 216 -15 2
 Refer: 821 67034 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.Mb
@@ -126112,6 +126149,7 @@ SplineSet
  363 674 363 674 363 574 c 128,-1,45
  363 474 363 474 298 291 c 1,25,26
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.C
@@ -126127,6 +126165,7 @@ LayerCount: 2
 Fore
 Refer: 852 -1 N 1 0 0 1 -78 0 2
 Refer: 851 67042 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ch
@@ -126308,6 +126347,7 @@ SplineSet
  55 172 55 172 55 302 c 0,42,43
  55 455 55 455 144 517 c 0,17,18
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Xh
@@ -126520,6 +126560,7 @@ SplineSet
  272 -4 272 -4 239.5 -45 c 128,-1,50
  207 -86 207 -86 207 -129 c 0,41,42
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Nxh.part
@@ -126591,6 +126632,7 @@ LayerCount: 2
 Fore
 Refer: 827 -1 N 1 0 0 1 13 0 2
 Refer: 826 67048 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.D
@@ -126615,6 +126657,7 @@ SplineSet
  280 714 l 1,10,-1
  385 714 l 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Nd
@@ -126675,6 +126718,7 @@ SplineSet
  434 50 l 1,21,-1
  530 218 l 1,18,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Dh
@@ -126777,6 +126821,7 @@ SplineSet
  175 50 l 1,9,-1
  384 50 l 1,7,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.E
@@ -127001,6 +127046,7 @@ SplineSet
  380 434 380 434 352.5 366 c 128,-1,30
  325 298 325 298 290 232 c 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.F
@@ -127144,6 +127190,7 @@ SplineSet
  483 587 483 587 449.5 538.5 c 128,-1,36
  416 490 416 490 416 426 c 1,0,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Gj
@@ -127345,6 +127392,7 @@ SplineSet
  313 153 313 153 329 178.5 c 128,-1,41
  345 204 345 204 345 250 c 0,0,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ngj
@@ -127358,6 +127406,7 @@ LayerCount: 2
 Fore
 Refer: 817 -1 N 1 0 0 1 28 0 2
 Refer: 834 67022 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.H
@@ -127453,6 +127502,7 @@ SplineSet
  155 318 155 318 155 298 c 0,35,36
  155 244 155 244 166 201 c 1,31,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Hj
@@ -127553,6 +127603,7 @@ SplineSet
  357 218 357 218 357 238 c 0,35,36
  357 292 357 292 346 335 c 1,31,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.K
@@ -127630,6 +127681,7 @@ SplineSet
  235 -10 235 -10 149 55 c 0,27,0
  106 88 106 88 80.5 143 c 128,-1,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.J
@@ -127707,6 +127759,7 @@ SplineSet
  187 546 187 546 273 481 c 0,27,0
  316 448 316 448 341.5 393 c 128,-1,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.L
@@ -127822,6 +127875,7 @@ SplineSet
  274 40 274 40 348 40 c 2,25,-1
  368 40 l 1,15,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.LL
@@ -127935,6 +127989,7 @@ SplineSet
  346 205 l 1,15,-1
  346 320 l 1,12,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.M
@@ -128083,6 +128138,7 @@ SplineSet
  333 495 333 495 368 484 c 1,35,-1
  368 714 l 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.P
@@ -128176,6 +128232,7 @@ SplineSet
  532 50 l 1,9,-1
  532 407 l 1,7,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Q
@@ -128340,6 +128397,7 @@ SplineSet
  641 -121 641 -121 566.5 -180.5 c 128,-1,31
  492 -240 492 -240 387 -240 c 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.R
@@ -128407,6 +128465,7 @@ SplineSet
  158 325 158 325 65 331 c 1,19,-1
  65 536 l 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Rr
@@ -128516,6 +128575,7 @@ SplineSet
  410 280 410 280 345.5 224 c 128,-1,23
  281 168 281 168 175 168 c 1,7,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.S
@@ -128557,6 +128617,7 @@ SplineSet
  315.214858898 -10 315.214858898 -10 253.016601562 -10 c 0,38,39
  55 -10 55 -10 55 147 c 0,0,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Sh
@@ -128603,6 +128664,7 @@ SplineSet
  352 612 352 612 331 642 c 0,45,46
  309 674 309 674 274 674 c 0,25,26
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Sht
@@ -128618,6 +128680,7 @@ LayerCount: 2
 Fore
 Refer: 850 -1 N 1 0 0 1 -25 0 2
 Refer: 848 67040 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.Sht.part
@@ -128737,6 +128800,7 @@ SplineSet
  240 274 l 1,27,-1
  240 567 l 2,15,16
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ca.part
@@ -128840,6 +128904,7 @@ SplineSet
  281 122 281 122 223 162 c 1,46,47
  208 121 208 121 208 88 c 0,39,40
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.V
@@ -128940,6 +129005,7 @@ SplineSet
  270 378 270 378 303 493 c 0,22,23
  313 529 313 529 313 553 c 0,16,17
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.X
@@ -129000,6 +129066,7 @@ SplineSet
  364 486 l 1,12,-1
  252 486 l 1,9,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Nx
@@ -129085,6 +129152,7 @@ SplineSet
  346 486 l 1,15,-1
  252 486 l 1,12,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Y
@@ -129238,6 +129306,7 @@ SplineSet
  288 119 288 119 288 179 c 2,39,-1
  288 246 l 1,30,31
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Jy
@@ -129253,6 +129322,7 @@ LayerCount: 2
 Fore
 Refer: 859 -1 N 1 0 0 1 -89 0 2
 Refer: 857 67050 N 1 0 0 1 0 0 2
+Colour: ffff
 EndChar
 
 StartChar: Todr.Jy.part
@@ -129464,6 +129534,7 @@ SplineSet
  205 664 l 1,34,-1
  205 478 l 1,0,1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Gh
@@ -129495,6 +129566,7 @@ SplineSet
  358.787109375 108 l 1,15,16
  358.787109375 108 358.787109375 108 484 479 c 1,9,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Z
@@ -129673,6 +129745,7 @@ SplineSet
  428 379 428 379 442 481 c 1,57,58
  405 489 405 489 383 513 c 0,6,7
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Zh
@@ -129868,6 +129941,7 @@ SplineSet
  263 439 263 439 250 449 c 0,48,49
  169 513 169 513 169 598 c 0,17,18
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Skan
@@ -129920,6 +129994,7 @@ SplineSet
  150 166.834960938 150 166.834960938 150 138.28515625 c 128,-1,46
  150 109.735351562 150 109.735351562 169.025390625 79.6240234375 c 0,36,37
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ps
@@ -130061,6 +130136,7 @@ SplineSet
  632 404 l 1,27,-1
  632 -21 l 2,3,4
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Todr.Kh
@@ -130126,6 +130202,7 @@ SplineSet
  291.846575342 458.720547945 l 1,11,-1
  432 714 l 1,0,-1
 EndSplineSet
+Colour: ffff
 EndChar
 
 StartChar: Uml.Grave
@@ -135197,6 +135274,7 @@ SplineSet
  285 411 285 411 223 453 c 0,50,51
  182 480 182 480 171 517 c 1,34,35
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Om
@@ -135356,6 +135434,7 @@ SplineSet
  573 210 573 210 573 345.253810832 c 0,56,57
  573 430.5 573 430.5 548 518 c 1,38,-1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Ong
@@ -135584,6 +135663,7 @@ SplineSet
  55 174 55 174 55 321 c 0,57,58
  55 413 55 413 90 463 c 1,34,35
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Orr
@@ -135829,6 +135909,7 @@ SplineSet
  326 674 326 674 275.5 638.5 c 128,-1,47
  225 603 225 603 195 556 c 1,4,5
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.OO
@@ -136043,6 +136124,7 @@ SplineSet
  219.617021277 495.510638298 219.617021277 495.510638298 248 473 c 0,51,52
  261 463 261 463 268 451 c 1,0,1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Oy
@@ -136201,6 +136283,7 @@ SplineSet
  364 430 364 430 414.5 409.5 c 128,-1,48
  465 389 465 389 492 358 c 1,0,1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.A
@@ -136213,6 +136296,7 @@ LayerCount: 2
 Fore
 Refer: 961 -1 S 1 0 0 1 132 0 2
 Refer: 952 124368 N 1 0 0 1 0 0 2
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Ad
@@ -136469,6 +136553,7 @@ SplineSet
  442 498 442 498 470.5 498 c 128,-1,59
  499 498 499 498 514 501 c 1,50,51
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Ab
@@ -136647,6 +136732,7 @@ SplineSet
  486 340 486 340 499 306 c 0,50,51
  515 264 515 264 536 264 c 0,0,1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Part.Stick
@@ -136952,6 +137038,7 @@ SplineSet
  301 154 l 1,46,-1
  235 99 l 1,0,1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Al
@@ -137139,12 +137226,13 @@ SplineSet
  497 420 497 420 405 429 c 1,36,-1
  405 302 l 1,0,-1
 EndSplineSet
+Colour: ffff00
 EndChar
 
 StartChar: Onao.Aw
 Encoding: 124379 124379 964
 Width: 734
-Flags: WO
+Flags: W
 HStem: -10 50<234.809 349.202> 307 50<408 442 545 569> 419 50<226.281 369.747> 674 50<247.861 362.035>
 VStem: 55 100<184.666 446.536> 118 78<512.988 617.87> 442 101<198.665 307 357 451.777> 569 100<-1 307>
 TtInstrs:
@@ -137368,6 +137456,55 @@ SplineSet
  445 357 l 1,59,60
  445 414 445 414 441 453 c 1,44,45
 EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: Onao.I
+Encoding: 124380 124380 965
+Width: 922
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.It
+Encoding: 124381 124381 966
+Width: 938
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Ip
+Encoding: 124382 124382 967
+Width: 968
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Itt
+Encoding: 124383 124383 968
+Width: 954
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Id
+Encoding: 124384 124384 969
+Width: 938
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.In
+Encoding: 124385 124385 970
+Width: 950
+Flags: W
+LayerCount: 2
+Colour: ffff00
 EndChar
 EndChars
 EndSplineFont
