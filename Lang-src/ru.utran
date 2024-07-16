@@ -7271,23 +7271,25 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1917, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi.</p>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
       <p />
-      <p>Top line is usually drawn before writing, and spaces are barely seen. [[pt:virama|Virama]] is virtual, reduces the letter. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
+      <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
-      <p>But methods of affixing vowel marks are rather bizarre and make ligatures for themselves: </p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
+      <p>But methods of affixing vowel marks are rather bizarre and form ligatures for themselves: </p>
       <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
-      <p>Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
+      <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </orig>
      <transl>
-      <p>Письмо родственное с [[ps:Deva|деванáгари]], но значительно более [[pt:cursive|беглое]]. Есть две стандартных теории появления: Хемадри Пандит, дипломат и министр (около 1260), и Кхандерао Баллал, дипломат (около 1700). Использовалось вместе с деванагари до 1917, после чего стандартным письмом для маратхи объявили ''балбодх'' (дословно «понятный детям»), беглый стиль деванагари, существовавший минимум с 1800.</p>
+      <p>Письмо родственное с [[ps:Deva|деванáгари]], но значительно более [[pt:cursive|беглое]]. Есть две стандартных теории появления: Хемадри Пандит, дипломат и министр (около 1260), и Кхандерао Баллал, дипломат (около 1700). Использовалось вместе с деванагари до 1950-х, после чего стандартным письмом для маратхи объявили ''балбодх'' (дословно «понятный детям»), беглый стиль деванагари, существовавший минимум с 1800. В XXI{{_}}веке началось возрождение моди.</p>
       <p />
-      <p>Верхнюю черту обычно разлиновывают до того, как начать писать, из-за чего пробелы едва видны. [[pt:virama|Вирама]] виртуальная, уменьшает букву. [[pt:ligature|Лигатур]] на стыках согласных только две, {{t|ксə}} и {{t|трə}}.</p>
+      <p>Верхнюю черту обычно разлиновывают до того, как начать писать, из-за чего пробелы едва видны. На стыках одна из согласных (обычно первая) просто уменьшена. [[pt:ligature|Лигатур]]-стыков только две, {{t|ксə}} и {{t|трə}}.</p>
       <p>: кə {{sm|𑘎}} + вирама {{sm|◌𑘿}} + тə {{sm|𑘝}} = ктə {{sm|𑘎𑘿𑘝}}</p>
+      <p>: кə {{sm|𑘎}} + вирама {{sm|◌𑘿}} + рə {{sm|𑘨}} = крə {{sm|𑘎𑘿𑘨}}</p>
       <p>Однако методы прикрепления огласовок к согласным довольно причудливы и сами образуют лигатуры:</p>
       <p>: гə {{sm|𑘐}} + у: {{sm|◌𑘴}} = гу: {{sm|𑘐𑘴}}</p>
-      <p>Подстрочный знак, напоминающий вираму{{,-}}лигатуры с «р»:</p>
+      <p>[[pt:virama|Вирама]] не встречается в маратхи. Подстрочный знак, напоминающий вираму{{,-}}лигатура с «р»:</p>
       <p>: кə {{sm|𑘎}} + рə {{sm|𑘨}} = кəрə {{sm|𑘎𑘨}}</p>
      </transl>
     </text>
