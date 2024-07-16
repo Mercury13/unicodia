@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.562"
-     inkscape:cx="190.46095"
-     inkscape:cy="431.81818"
+     inkscape:zoom="0.781"
+     inkscape:cx="218.30986"
+     inkscape:cy="368.1178"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -132,11 +132,6 @@
      d="M 340,76 C 234.33699,76 143.82,133.89474 94.894531,241.82227 l 63.490239,41.64843 0.0508,0.0488 C 201.32252,212.95932 272.92967,176 355.6875,176 497.75067,174.71959 564,307.80061 564,431.47656 564,612.51264 458.81988,709.46156 324.3125,710 182.24508,710.56871 116,596.03464 116,489.0945 c 0,-36.40044 9.08706,-63.97509 28.66793,-91.6145 L 102.99172,355.68811 C 66.034526,393.16978 56,456.68754 56,479.49168 56,691.90094 180.88725,810 340,810 499.11275,810 624,678.86153 624,443 624,207.13847 499.11275,76 340,76 Z"
      sodipodi:nodetypes="sccccsssccssss" />
   <path
-     style="fill:#4e9a06;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 388.32018,252.25272 592.87311,83.411414 624,143.92574 419.44706,312.76702 Z"
-     id="path13"
-     sodipodi:nodetypes="ccccc" />
-  <path
      id="rect1"
      style="fill:#204a87;fill-rule:evenodd;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5"
      d="m 334.20616,456.54196 25.20225,-18.82882 3.3957,-70.12626 35,9.37822 V 760 h -70 l 0,-230.50527 z"
@@ -146,4 +141,11 @@
      d="M 158.38387,283.4699 C 111.66642,364.38689 168.59586,433 251.68275,433 c 45.9003,0 91.60869,-20.84282 111.12136,-65.41312 l 33.49929,34.85739 C 375.13666,456.2426 313.44431,513 245.89805,513 133.03696,513 38.715624,365.59336 94.831959,241.7811 Z"
      id="path4"
      sodipodi:nodetypes="csccscc" />
+  <path
+     style="fill:#4e9a06;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 411.87836,283.82945 599.4274,96.28041 633.84213,155.88848 446.29308,343.4375 Z"
+     id="path13"
+     sodipodi:nodetypes="ccccc"
+     inkscape:transform-center-x="-112.14794"
+     inkscape:transform-center-y="-65.136545" />
 </svg>
