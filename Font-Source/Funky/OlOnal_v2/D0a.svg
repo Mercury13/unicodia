@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="0.5522504"
-     inkscape:cx="411.95081"
-     inkscape:cy="471.70632"
+     inkscape:zoom="1.1045008"
+     inkscape:cx="281.12248"
+     inkscape:cy="487.55057"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -62,7 +62,7 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" /><sodipodi:guide
-       position="490,1000"
+       position="480,1000"
        orientation="-1,0"
        id="guide8"
        inkscape:label=""
@@ -98,7 +98,7 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" /><sodipodi:guide
-       position="120,1000"
+       position="130,1000"
        orientation="-1,0"
        id="guide14"
        inkscape:label=""
@@ -142,7 +142,7 @@
      style="stroke-width:0.100591" /><path
      id="path11"
      style="fill:#a40000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 295 76 C 160 76 62.560819 236.0663 60 443 C 57.439181 649.9337 150.86464 810 295 810 C 430 810 527.43918 649.9337 530 443 C 532.56082 236.0663 439.13536 76 295 76 z M 309.58789 176 C 351.50235 176 480 186.19361 480 431.45508 C 480 522.05549 416.27341 710 280.41211 710 C 238.49765 710 110 699.80639 110 454.54492 C 110 363.94451 173.72659 176 309.58789 176 z " /><path
+     d="M 295 76 C 160 76 62.560819 236.0663 60 443 C 57.439181 649.9337 150.86464 810 295 810 C 430 810 527.43918 649.9337 530 443 C 532.56082 236.0663 439.13536 76 295 76 z M 309.58789 176 C 351.50235 176 470 186.19361 470 431.45508 C 470 522.05549 416.27341 710 280.41211 710 C 238.49765 710 120 699.80639 120 454.54492 C 120 363.94451 173.72659 176 309.58789 176 z " /><path
      id="rect12"
      style="opacity:1;fill:#5c3566;fill-rule:evenodd;stroke-width:6.99999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5"
      d="M 649.66379,86 H 700 V 800 H 630 V 338.66837 c 0,-16.33777 14.40461,-121.01784 14.40461,-121.01784 z"
