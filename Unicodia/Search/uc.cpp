@@ -467,10 +467,11 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                     lastKnown.result = p->result;
                     lastKnown.iLastPos = index;
                 }
-                // Jump over
+                // Jump over dead-end branch
                 goto jumpOver;
             }
         }
+        // We are at dead end!
         if (p != &trieRoot) {
             // Found smth? (never in root)
             if (lastKnown.result) {
