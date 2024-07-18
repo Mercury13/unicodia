@@ -483,7 +483,7 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 // Counter-example: SMILIE FLAG_U FLAG_A
                 //   SMILIE is NOT decodeable, SMILIE U is a dead end,
                 //   and we miss UA
-                // But AFAIK, Unicode emoji possess an interesting property:
+                // But AFAIK Unicode emoji possess an interesting property:
                 //   A and ABC are emoji → BD is NOT emoji
                 //       for any A, B, C, D ≠ Ø
                 // Thus if we are stuck on D → no need to run through B again
