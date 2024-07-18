@@ -476,13 +476,18 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
             // Found smth? (never in root)
             if (lastKnown.result) {
                 REGISTER_RESULT
-                // I do not want to make true Aho-Corasick here! Just back down.
-                index = lastKnown.iLastPos;
+                // I do not want to make true Aho-Corasick here, but how to back down?
+                // If we had saved a non-decodeable emoji somehow, we’d write
+                //      index = lastKnown.iLastPos;
+                // AFAIK, Unicode emoji possess an interesting property:
+                //   A and ABC are emoji → BD is NOT emoji
+                //       for any A, B, C, D ≠ Ø
+                // Thus if we are stuck on D → no need to run through B again
+                lastKnown.result = nullptr;
             }
             // Anyway move to root
-            lastKnown.result = nullptr;
             p = &trieRoot;
-            // Try again, root’s children are always present
+            // Run through D again, root’s children are always present
             // (in root we already tried and no need 2nd time)
             auto itChild = p->children->find(c);
             if (itChild != p->children->end()) {
