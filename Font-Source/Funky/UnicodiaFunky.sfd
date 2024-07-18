@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721276982
+ModificationTime: 1721277474
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 675 25 12
+WinInfo: 700 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -837,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114176 971
+BeginChars: 1114176 977
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -138820,8 +138820,8 @@ StartChar: Onao.In
 Encoding: 124385 124385 970
 Width: 750
 Flags: WO
-HStem: 0 21G<40 155.497 331.503 426 610 680> 381 90<208.348 398.477> 624 100<181.999 352.391> 694 20G<599.5 680>
-VStem: 90 60<501.64 594.687> 460 50<246.532 419> 610 70<0 520.5>
+HStem: 0 21G<40 155.497 331.503 426 610 680> 381 90<208.259 399.17> 624 100<181.999 352.471> 694 20G<599.5 680>
+VStem: 90 60<501.64 594.687> 450 60<237.215 414> 610 70<0 520.5>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -138966,10 +138966,10 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
-355 99 m 1,0,1
- 460 236 460 236 460 366 c 0,2,3
- 460 388 460 388 457 419 c 1,4,5
- 377 381 377 381 306 381 c 0,6,7
+355 100 m 1,0,1
+ 450 225 450 225 450 364 c 0,2,3
+ 450 386 450 386 448 414 c 1,4,5
+ 373 381 373 381 306 381 c 0,6,7
  217 381 217 381 153.5 440.5 c 128,-1,8
  90 500 90 500 90 566.5 c 128,-1,9
  90 633 90 633 146 678.5 c 128,-1,10
@@ -138994,15 +138994,63 @@ SplineSet
  40 0 l 1,34,-1
  212 298 l 1,35,-1
  246 288 l 1,36,-1
- 355 99 l 1,0,1
-437 509 m 1,37,38
- 394 624 394 624 256 624 c 0,39,40
+ 355 100 l 1,0,1
+431 506 m 1,37,38
+ 392 624 392 624 262 624 c 0,39,40
  212 624 212 624 181 602.5 c 128,-1,41
  150 581 150 581 150 548.5 c 128,-1,42
  150 516 150 516 181 493.5 c 128,-1,43
- 212 471 212 471 286 471 c 128,-1,44
- 360 471 360 471 437 509 c 1,37,38
+ 212 471 212 471 284.5 471 c 128,-1,44
+ 357 471 357 471 431 506 c 1,37,38
 EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: Onao.U
+Encoding: 124386 124386 971
+Width: 954
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Uk
+Encoding: 124387 124387 972
+Width: 972
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Udd
+Encoding: 124388 124388 973
+Width: 964
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Uj
+Encoding: 124389 124389 974
+Width: 976
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Uny
+Encoding: 124390 124390 975
+Width: 982
+Flags: W
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: Onao.Ur
+Encoding: 124391 124391 976
+Width: 956
+Flags: W
+LayerCount: 2
 Colour: ffff00
 EndChar
 EndChars
