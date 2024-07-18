@@ -483,6 +483,7 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
             lastKnown.result = nullptr;
             p = &trieRoot;
             // Try again, root’s children are always present
+            // (in root we already tried and no need 2nd time)
             auto itChild = p->children->find(c);
             if (itChild != p->children->end()) {
                 p = &itChild->second;
