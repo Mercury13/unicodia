@@ -479,7 +479,11 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 // I do not want to make true Aho-Corasick here, but how to back down?
                 // If we had saved a non-decodeable emoji somehow, we’d write
                 //      index = lastKnown.iLastPos;
-                // AFAIK, Unicode emoji possess an interesting property:
+                // We’d lost Aho’s =n, but it’d been a general case.
+                // Counter-example: SMILIE FLAG_U FLAG_A
+                //   SMILIE is NOT decodeable, SMILIE U is a dead end,
+                //   and we miss UA
+                // But AFAIK, Unicode emoji possess an interesting property:
                 //   A and ABC are emoji → BD is NOT emoji
                 //       for any A, B, C, D ≠ Ø
                 // Thus if we are stuck on D → no need to run through B again
