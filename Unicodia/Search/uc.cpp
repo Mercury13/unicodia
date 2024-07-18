@@ -473,6 +473,8 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
         }
         // We are at dead end!
         if (p != &trieRoot) {
+            // Anyway move to root
+            p = &trieRoot;
             // Found smth? (never in root)
             if (lastKnown.result) {
                 REGISTER_RESULT
@@ -488,10 +490,10 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 //       for any A, B, C, D ≠ Ø
                 // This is NOT prefix code (A∈𝓟 → AB∉𝓟), but some sort of prefix-lite
                 // Thus if we are stuck on D → no need to run through B again
+                // index = … here and go through root otherwise would also be
+                //   a general case, but do we need it?
                 lastKnown.result = nullptr;
             }
-            // Anyway move to root
-            p = &trieRoot;
             // Run through D again, root’s children are always present
             // (in root we already tried and no need 2nd time)
             auto itChild = p->children->find(c);
