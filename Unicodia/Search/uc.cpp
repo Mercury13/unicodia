@@ -461,24 +461,26 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
         char32_t c = s[index];
         if (p->children) {
             auto itChild = p->children->find(c);
-            if (itChild == p->children->end()) {
-                // Dead end. Found smth?
-                if (lastKnown.result) {
-                    REGISTER_RESULT
-                    // I do not want to make true Aho-Corasick here! Just back down.
-                    index = lastKnown.iLastPos;
-                }
-                // Anyway move to root
-                p = &trieRoot;
-                lastKnown.result = nullptr;
-            } else {
+            if (itChild != p->children->end()) {
                 p = &itChild->second;
                 if (p->result && p->isDecodeable) {
                     lastKnown.result = p->result;
                     lastKnown.iLastPos = index;
                 }
+                // Jump over
+                goto jumpOver;
             }
         }
+        // Dead end. Found smth?
+        if (lastKnown.result) {
+            REGISTER_RESULT
+            // I do not want to make true Aho-Corasick here! Just back down.
+            index = lastKnown.iLastPos;
+        }
+        // Anyway move to root
+        p = &trieRoot;
+        lastKnown.result = nullptr;
+    jumpOver:;
     }
     if (lastKnown.result) {
         REGISTER_RESULT
