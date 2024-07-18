@@ -486,6 +486,7 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 // But AFAIK Unicode emoji possess an interesting property:
                 //   A and ABC are emoji → BD is NOT emoji
                 //       for any A, B, C, D ≠ Ø
+                // This is NOT prefix code (A∈𝓟 → AB∉𝓟), but some sort of prefix-lite
                 // Thus if we are stuck on D → no need to run through B again
                 lastKnown.result = nullptr;
             }
