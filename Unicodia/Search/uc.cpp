@@ -495,7 +495,7 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 lastKnown.result = nullptr;
                 index = lastKnown.iLastPos;
             } else {
-                // Run through D again, root’s children are always present
+                // Run through last character again, root’s children are always present
                 if (auto child = p->unsafeFind(c)) {
                     p = child;
                     // 1st is never decodeable
