@@ -484,33 +484,22 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 lastKnown.iLastPos = index;
             }
         } else if (p != &trieRoot) {
+            // p==&trieRoot → we already tried and no need 2nd time
             // We are at dead end!
             // Anyway move to root
             p = &trieRoot;
             // Found smth? (never in root)
             if (lastKnown.result) {
                 REGISTER_RESULT
-                // I do not want to make true Aho-Corasick here, but how to back down?
-                // If we had saved a non-decodeable emoji somehow, we’d write
-                //      index = lastKnown.iLastPos;
-                // We’d lost Aho’s complexity =n, but it’d been a general case.
-                // Counter-example: SMILIE FLAG_U FLAG_A
-                //   SMILIE is NOT decodeable, SMILIE U is a dead end,
-                //   no backtracking occurs, and we miss UA
-                // But AFAIK Unicode emoji possess an interesting property:
-                //   A and ABC are emoji → BD is NOT emoji
-                //       for any A, B, C ≠ Ø and arbitrary D
-                // This is NOT prefix code (A∈𝓟 → AB∉𝓟), but some sort of prefix-lite
-                // Thus if we are stuck on D → no need to run through B again
-                // index = … here and go through root otherwise would also be
-                //   a general case, but do we need it?
+                // I do not want to make true Aho-Corasick here, so back down
                 lastKnown.result = nullptr;
-            }
-            // Run through D again, root’s children are always present
-            // (p==&trieRoot → we already tried and no need 2nd time)
-            if (auto child = p->unsafeFind(c)) {
-                p = child;
-                // 1st is never decodeable
+                index = lastKnown.iLastPos;
+            } else {
+                // Run through D again, root’s children are always present
+                if (auto child = p->unsafeFind(c)) {
+                    p = child;
+                    // 1st is never decodeable
+                }
             }
         }
     }
