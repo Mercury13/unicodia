@@ -11,6 +11,10 @@ enum class Emoji {
     CUBA,
     PUERTO_RICO,
     SPAIN,
+    WOMAN_WHITE,
+    MAN_BLACK,
+    HEART_RED,
+    KISS_INTERRACIAL,
 };
 
 
@@ -27,6 +31,9 @@ Trie1::Trie1()
     addMulti(Emoji::SPAIN,       cp::FLAG_E, cp::FLAG_S);
 };
 
+///
+///  This was a trouble for #371
+///
 TEST (DecodeTrie, ThreeFlags)
 {
     Trie1 tr;
