@@ -6,6 +6,8 @@
 #include "u_Vector.h"
 #include "u_TypedFlags.h"
 
+#include "defs.h"
+
 namespace srh {
 
     enum class Class { OTHER, LETTER, DIGIT };
@@ -148,12 +150,6 @@ namespace srh {
         srh::FindStatus find(
                 std::u8string_view haystack, std::u8string_view needle) const final;
         static const DefaultComparator INST;
-    };
-
-    template <class T>
-    struct Decoded {
-        size_t index;
-        T result;
     };
 
 }   // namespace srh

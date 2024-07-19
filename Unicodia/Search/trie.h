@@ -8,7 +8,7 @@
 #include <u_Vector.h>
 
 // Search
-#include "engine.h"
+#include "defs.h"
 
 namespace srh {
 
