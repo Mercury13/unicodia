@@ -117,6 +117,7 @@ HEADERS += \
     Search/engine.h \
     Search/nonAscii.h \
     Search/request.h \
+    Search/trie.h \
     Search/uc.h \
     FmMain.h \
     FmMessage.h \

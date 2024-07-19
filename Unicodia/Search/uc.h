@@ -135,10 +135,7 @@ namespace uc {
         bool hasSmth() const { return !isEmpty(); }
     };
 
-    struct DecodedEmoji {
-        size_t index;
-        const uc::LibNode* node;
-    };
+    using DecodedEmoji = srh::Decoded<const uc::LibNode*>;
 
     constexpr long long NO_CODE = -1;
     SingleResult findCode(unsigned long long ull);

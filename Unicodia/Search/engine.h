@@ -150,4 +150,10 @@ namespace srh {
         static const DefaultComparator INST;
     };
 
+    template <class T>
+    struct Decoded {
+        size_t index;
+        T result;
+    };
+
 }   // namespace srh

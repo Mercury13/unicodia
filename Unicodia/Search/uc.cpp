@@ -15,7 +15,8 @@
 #include "CharPaint/emoji.h"
 
 // Search
-#include "Search/nonAscii.h"
+#include "nonAscii.h"
+#include "trie.h"
 
 using namespace std::string_view_literals;
 
@@ -235,42 +236,9 @@ namespace {
     /// @todo [future] Can move this set to compile-time?
     std::unordered_map<char32_t, const uc::LibNode*> singleChars;
 
-    /// @todo [future] Can move that trie to compile-time?
-    struct TriePath;
-
-    enum class Prealloc { INST };
-
-    struct TrieNode {
-        const uc::LibNode* result = nullptr;
-        using M = std::unordered_map<char32_t, TrieNode>;
-        std::unique_ptr<M> children;
-        bool isDecodeable = false;
-
-        constexpr TrieNode() = default;
-        TrieNode(Prealloc) : children(new M) {}
-
-        inline const TrieNode* unsafeFind(char32_t c) const;
-        const TrieNode* find(char32_t c) const;
-    };
-
-    inline const TrieNode* TrieNode::unsafeFind(char32_t c) const
-    {
-        if (auto x = children->find(c); x != children->end())
-            return &x->second;
-        return nullptr;
-    }
-
-    const TrieNode* TrieNode::find(char32_t c) const
-    {
-        if (!children)
-            return nullptr;
-        return unsafeFind(c);
-    }
-
-
-    struct TriePath : public std::unordered_map<char32_t, TrieNode> {};
-
-    TrieNode trieRoot { Prealloc::INST };
+    using MyNode = srh::TrieNode<const uc::LibNode*>;
+    using MyRoot = srh::TrieRoot<const uc::LibNode*>;
+    MyRoot trieRoot;
 
     struct SearchableName {
         std::u8string_view value;
@@ -438,14 +406,7 @@ void uc::ensureEmojiSearch()
         if (!node.value.empty() && node.flags.have(Lfg::GRAPHIC_EMOJI)) {
             // Build trie
             if (node.flags.have(Lfg::DECODEABLE)) {
-                auto* p = &trieRoot;
-                for (auto c : node.value) {
-                    if (!p->children)
-                        p->children = std::make_unique<TrieNode::M>();
-                    p = &p->children->operator[](c);
-                }
-                p->isDecodeable = true;
-                p->result = &node;
+                trieRoot.add(node.value, &node);
             }
             if (auto q = EmojiPainter::getCp(node.value)) {
                 singleChars[q.cp] = &node;
@@ -459,66 +420,7 @@ void uc::ensureEmojiSearch()
 SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
 {
     ensureEmojiSearch();
-
-    struct Last {
-        const LibNode* result = nullptr;
-        size_t iLastPos = 0;
-    } lastKnown;
-
-    SafeVector<uc::DecodedEmoji> r;
-
-    size_t index = 0;
-
-    auto registerResult = [&]() {
-        // Why +1? We do not search for single-char emoji, but if…
-        //   iLastPos == 0, length == 1 → how to make 0 out of them?
-        r.emplace_back(
-            lastKnown.iLastPos + 1 - lastKnown.result->value.length(),
-            lastKnown.result);
-        // I do not want to make true Aho-Corasick here, so back down
-        // Need backing down, counter-example: incomplete multi-racial kiss + A
-        //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
-        // After A we have WOMAN RACE1, but still want to identify HEART VS16
-        lastKnown.result = nullptr;
-        index = lastKnown.iLastPos;
-    };
-
-    for (; ; ++index) {
-        const TrieNode* p = &trieRoot;
-        for (; index < s.length(); ++index) {
-            char32_t c = s[index];
-            if (auto child = p->find(c)) {
-                p = child;
-                if (p->result && p->isDecodeable) {
-                    lastKnown.result = p->result;
-                    lastKnown.iLastPos = index;
-                }
-            } else if (p != &trieRoot) {
-                // p==&trieRoot → we already tried and no need 2nd time
-                // We are at dead end!
-                // Anyway move to root
-                p = &trieRoot;
-                // Found smth? (never in root)
-                if (lastKnown.result) {
-                    registerResult();
-                // Run through last character again, root’s children are always present
-                } else if (auto child = p->unsafeFind(c)) {
-                    p = child;
-                    // 1st is never decodeable
-                }
-            }
-        }
-        // Went out of loop — what have?
-        if (lastKnown.result) {
-            registerResult();
-            // Back down even here! (incomplete multi-pacial kiss, but no A afterwards)
-        } else {
-            break;  // The only exit from loop
-        }
-    }
-    return r;
-
-#undef REGISTER_RESULT
+    return trieRoot.decode(s);
 }
 
 namespace {
@@ -632,17 +534,14 @@ uc::MultiResult uc::doSearch(QString what)
             ensureEmojiSearch();
             static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
             const auto cp1 = char32_t(flagName[0]) + OFS_FLAGA;
-            auto where1 = trieRoot.children->find(cp1);
-            if (where1 != trieRoot.children->end()) {
+            if (auto where1 = trieRoot.unsafeFind(cp1)) {
                 const auto cp2 = char32_t(flagName[1]) + OFS_FLAGA;
-                if (auto children1 = where1->second.children.get()) {
-                    auto where2 = children1->find(cp2);
-                    if (where2 != children1->end() && where2->second.result) {
-                        // At last found
-                        auto& bk = r.emplace_back(where2->second.result);
-                        bk.prio.high = uc::HIPRIO_FLAG;
-                        bk.giveTriggerName(str::toU8(flagName));
-                    }
+                auto where2 = where1->find(cp2);
+                if (where2 && where2->result()) {
+                    // At last found
+                    auto& bk = r.emplace_back(where2->result());
+                    bk.prio.high = uc::HIPRIO_FLAG;
+                    bk.giveTriggerName(str::toU8(flagName));
                 }
             }
         }
@@ -782,7 +681,7 @@ uc::MultiResult uc::doSearch(QString what)
         for (size_t i32 = 0; i32 < u32.length(); ++i32) {
             // Insert emoji
             if (pEmoji != emojiList.end() && pEmoji->index == i32) {
-                auto& bk = r.emplace_back(pEmoji->node);
+                auto& bk = r.emplace_back(pEmoji->result);
                 bk.prio.high = HIPRIO_HEX;
                 iLevel1 = i32 + bk.node->value.length();
                 ++pEmoji;
