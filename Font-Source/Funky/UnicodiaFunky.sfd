@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 700 25 12
+WinInfo: 675 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -61734,6 +61734,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 392 -34 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D1
@@ -61871,6 +61872,7 @@ SplineSet
  173 262 l 1,15,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D2
@@ -61964,6 +61966,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 387 -55 "Nagm KERN-1" 392 -65 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D3
@@ -62180,6 +62183,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 364 -71 "Nagm KERN-1" 376 -71 "Nagm KERN-1" 382 -44 "Nagm KERN-1" 387 -47 "Nagm KERN-1" 392 -38 "Nagm KERN-1" 406 -71 "Nagm KERN-1" 408 -44 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D4
@@ -62283,6 +62287,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 379 -42 "Nagm KERN-1" 382 -47 "Nagm KERN-1" 385 -90 "Nagm KERN-1" 387 -82 "Nagm KERN-1" 392 -80 "Nagm KERN-1" 405 -42 "Nagm KERN-1" 408 -47 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.3curl
@@ -62516,6 +62521,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 369 -56 "Nagm KERN-1" 371 -41 "Nagm KERN-1" 376 -60 "Nagm KERN-1" 379 -110 "Nagm KERN-1" 387 -119 "Nagm KERN-1" 388 -79 "Nagm KERN-1" 392 -84 "Nagm KERN-1" 405 -110 "Nagm KERN-1" 406 -60 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D6
@@ -62651,6 +62657,7 @@ SplineSet
  379 311 379 311 331 373 c 1,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D7
@@ -62822,6 +62829,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 364 -80 "Nagm KERN-1" 372 -69 "Nagm KERN-1" 376 -62 "Nagm KERN-1" 377 -50 "Nagm KERN-1" 381 -92 "Nagm KERN-1" 382 -88 "Nagm KERN-1" 385 -144 "Nagm KERN-1" 387 -57 "Nagm KERN-1" 390 -64 "Nagm KERN-1" 392 -60 "Nagm KERN-1" 406 -62 "Nagm KERN-1" 407 -92 "Nagm KERN-1" 408 -88 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D8
@@ -62978,6 +62986,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 363 -31 "Nagm KERN-1" 369 -63 "Nagm KERN-1" 370 -54 "Nagm KERN-1" 371 -38 "Nagm KERN-1" 376 -55 "Nagm KERN-1" 378 -68 "Nagm KERN-1" 379 -65 "Nagm KERN-1" 387 -111 "Nagm KERN-1" 388 -64 "Nagm KERN-1" 389 -33 "Nagm KERN-1" 392 -70 "Nagm KERN-1" 405 -65 "Nagm KERN-1" 406 -55 "Nagm KERN-1" 410 -68 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4D9
@@ -63131,6 +63140,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 378 -59 "Nagm KERN-1" 379 -49 "Nagm KERN-1" 387 -83 "Nagm KERN-1" 392 -80 "Nagm KERN-1" 405 -49 "Nagm KERN-1" 410 -59 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4DA
@@ -63375,6 +63385,7 @@ SplineSet
  536 141 536 141 519 159 c 1,64,65
 EndSplineSet
 Validated: 19489
+Colour: ff9103
 EndChar
 
 StartChar: u1E4DB
@@ -63564,6 +63575,7 @@ SplineSet
  110 187 110 187 110 230 c 0,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: u1E4DC
@@ -63702,6 +63714,7 @@ SplineSet
  442 65 442 65 492 151 c 1,12,13
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Theta
@@ -63878,6 +63891,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 363 -81 "Nagm KERN-1" 368 -65 "Nagm KERN-1" 372 -92 "Nagm KERN-1" 373 -59 "Nagm KERN-1" 378 -110 "Nagm KERN-1" 379 -70 "Nagm KERN-1" 381 -53 "Nagm KERN-1" 385 -48 "Nagm KERN-1" 387 -108 "Nagm KERN-1" 389 -91 "Nagm KERN-1" 392 -80 "Nagm KERN-1" 405 -70 "Nagm KERN-1" 407 -53 "Nagm KERN-1" 409 -65 "Nagm KERN-1" 410 -110 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4DE
@@ -63982,6 +63996,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 392 45 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Crev
@@ -64068,6 +64083,7 @@ SplineSet
 EndSplineSet
 Validated: 19465
 Kerns2: 378 -55 "Nagm KERN-1" 379 -70 "Nagm KERN-1" 387 -86 "Nagm KERN-1" 392 -90 "Nagm KERN-1" 405 -70 "Nagm KERN-1" 410 -55 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.curvN
@@ -64262,6 +64278,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 364 -87 "Nagm KERN-1" 367 -40 "Nagm KERN-1" 369 -118 "Nagm KERN-1" 371 -81 "Nagm KERN-1" 374 -53 "Nagm KERN-1" 376 -66 "Nagm KERN-1" 379 -107 "Nagm KERN-1" 382 -50 "Nagm KERN-1" 385 -39 "Nagm KERN-1" 387 -146 "Nagm KERN-1" 388 -119 "Nagm KERN-1" 392 -102 "Nagm KERN-1" 405 -107 "Nagm KERN-1" 406 -66 "Nagm KERN-1" 408 -50 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E1
@@ -64483,6 +64500,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 382 -41 "Nagm KERN-1" 385 -43 "Nagm KERN-1" 387 -65 "Nagm KERN-1" 392 -68 "Nagm KERN-1" 408 -41 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Acurl
@@ -64559,6 +64577,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 364 -58 "Nagm KERN-1" 376 -58 "Nagm KERN-1" 382 -44 "Nagm KERN-1" 385 -43 "Nagm KERN-1" 387 -85 "Nagm KERN-1" 388 -49 "Nagm KERN-1" 406 -58 "Nagm KERN-1" 408 -44 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.8belt
@@ -64740,6 +64759,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 363 -37 "Nagm KERN-1" 369 -35 "Nagm KERN-1" 370 -44 "Nagm KERN-1" 372 -42 "Nagm KERN-1" 374 -33 "Nagm KERN-1" 378 -69 "Nagm KERN-1" 379 -81 "Nagm KERN-1" 381 -36 "Nagm KERN-1" 387 -116 "Nagm KERN-1" 388 -30 "Nagm KERN-1" 389 -50 "Nagm KERN-1" 392 -137 "Nagm KERN-1" 405 -81 "Nagm KERN-1" 407 -36 "Nagm KERN-1" 410 -69 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E4
@@ -64907,6 +64927,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 364 -53 "Nagm KERN-1" 376 -70 "Nagm KERN-1" 382 -54 "Nagm KERN-1" 385 -45 "Nagm KERN-1" 392 -46 "Nagm KERN-1" 406 -70 "Nagm KERN-1" 408 -54 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E5
@@ -65062,6 +65083,7 @@ SplineSet
  160 146 l 2,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Wloop
@@ -65251,6 +65273,7 @@ SplineSet
  733 589 733 589 733 437 c 2,11,12
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E7
@@ -65427,6 +65450,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 387 -66 "Nagm KERN-1" 392 -70 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E8
@@ -65583,6 +65607,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 363 -36 "Nagm KERN-1" 364 -89 "Nagm KERN-1" 365 -31 "Nagm KERN-1" 367 -75 "Nagm KERN-1" 368 -43 "Nagm KERN-1" 370 -39 "Nagm KERN-1" 372 -131 "Nagm KERN-1" 376 -105 "Nagm KERN-1" 380 -89 "Nagm KERN-1" 381 -128 "Nagm KERN-1" 382 -111 "Nagm KERN-1" 383 -39 "Nagm KERN-1" 385 -149 "Nagm KERN-1" 389 -84 "Nagm KERN-1" 390 -94 "Nagm KERN-1" 406 -105 "Nagm KERN-1" 407 -128 "Nagm KERN-1" 408 -111 "Nagm KERN-1" 409 -43 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4E9
@@ -65722,6 +65747,7 @@ SplineSet
  552 0 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: u1E4EA
@@ -65928,6 +65954,7 @@ SplineSet
  548 71 548 71 423 115 c 1,9,10
 EndSplineSet
 Validated: 19489
+Colour: ff9103
 EndChar
 
 StartChar: u1E4EB
@@ -66111,6 +66138,7 @@ SplineSet
 EndSplineSet
 Validated: 19489
 Kerns2: 364 -44 "Nagm KERN-1" 376 -56 "Nagm KERN-1" 382 -53 "Nagm KERN-1" 385 -53 "Nagm KERN-1" 387 -84 "Nagm KERN-1" 392 -80 "Nagm KERN-1" 406 -56 "Nagm KERN-1" 408 -53 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4EC
@@ -66163,6 +66191,7 @@ SplineSet
  -205 811 -205 811 -205 836 c 128,-1,1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Prime
@@ -66209,6 +66238,7 @@ SplineSet
 EndSplineSet
 Validated: 19457
 Kerns2: 381 -40 "Nagm KERN-1" 385 -40 "Nagm KERN-1" 407 -40 "Nagm KERN-1"
+Colour: ff9103
 EndChar
 
 StartChar: u1E4EE
@@ -66223,6 +66253,7 @@ LayerCount: 2
 Fore
 Refer: 391 124140 N 1 0 0 1 -150 -950 2
 Validated: 32769
+Colour: ff9103
 EndChar
 
 StartChar: u1E4EF
@@ -66311,6 +66342,7 @@ SplineSet
  -480 801 l 1,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig0
@@ -66412,6 +66444,7 @@ SplineSet
  217 715 217 715 325 715 c 128,-1,9
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig1
@@ -66458,6 +66491,7 @@ SplineSet
  365 715 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig2
@@ -66523,6 +66557,7 @@ SplineSet
  85 715 l 5,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig3
@@ -66588,6 +66623,7 @@ SplineSet
  85 700 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig4
@@ -66661,6 +66697,7 @@ SplineSet
  85 0 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig5
@@ -66744,6 +66781,7 @@ SplineSet
  85 700 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig6
@@ -66813,6 +66851,7 @@ SplineSet
  85 700 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig7
@@ -66887,6 +66926,7 @@ SplineSet
  85 390 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig8
@@ -66961,6 +67001,7 @@ SplineSet
  565 390 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig9
@@ -67009,6 +67050,7 @@ SplineSet
  85 700 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.curvN.Prime
@@ -67024,6 +67066,7 @@ Refer: 379 124128 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "Nagm CCMP-1" Nagm.curvN Nagm.Prime
 LCarets2: 1 0
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Theta.Prime
@@ -67038,6 +67081,7 @@ Refer: 392 124141 N 1 0 0 1 536 0 2
 Refer: 376 124125 S 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "Nagm CCMP-1" Nagm.Theta Nagm.Prime
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Acurl.Prime
@@ -67053,6 +67097,7 @@ Refer: 381 124130 N 1 0 0 1 0 0 2
 Validated: 32769
 LCarets2: 1 0
 Ligature2: "Nagm CCMP-1" Nagm.Acurl Nagm.Prime
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.8belt.Prime
@@ -67067,6 +67112,7 @@ Refer: 392 124141 N 1 0 0 1 566 0 2
 Refer: 382 124131 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "Nagm CCMP-1" Nagm.8belt Nagm.Prime
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.3curl.Prime
@@ -67082,6 +67128,7 @@ Refer: 368 124117 N 1 0 0 1 0 0 2
 Validated: 32769
 LCarets2: 1 0
 Ligature2: "Nagm CCMP-1" Nagm.3curl Nagm.Prime
+Colour: ff9103
 EndChar
 
 StartChar: Nagm.Crev.Prime
@@ -67096,6 +67143,7 @@ Refer: 392 124141 S 1 0 0 1 522 0 2
 Refer: 378 124127 N 1 0 0 1 0 0 2
 Validated: 32777
 Ligature2: "Nagm CCMP-1" Nagm.Crev Nagm.Prime
+Colour: ff9103
 EndChar
 
 StartChar: uniE00F
