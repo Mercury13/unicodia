@@ -41,6 +41,8 @@ namespace cp {
     constexpr char32_t MATH_GREEK_LAST = 0x1D7CB;
 
     // Dingbats
+    constexpr char32_t DING_BLACK_HEART = 0x2764;
+    constexpr char32_t EMOJI_RED_HEART = DING_BLACK_HEART;
     constexpr char32_t DING_RIGHT_ARROW = 0x27A1;
     constexpr char32_t EMOJI_RIGHT_ARROW = DING_RIGHT_ARROW;
 
@@ -60,10 +62,10 @@ namespace cp {
     constexpr char32_t SKIN5 = 0x1F3FF;
 
     // Misc emoji
-    constexpr char32_t RIGHT_ARROW = 0x27A1;
     constexpr char32_t MALE = 0x2642;
     constexpr char32_t FEMALE = 0x2640;
-    constexpr char32_t MAN = 0x1F468;
+    constexpr char32_t SANTA_CLAUS = 0x1F385;
+    constexpr char32_t MAN  = 0x1F468;
     constexpr char32_t WOMAN = 0x1F469;
     constexpr char32_t BOY = 0x1F466;
     constexpr char32_t GIRL = 0x1F467;
@@ -72,7 +74,7 @@ namespace cp {
     constexpr char32_t MAN_AND_WOMAN = 0x1F46B;
     constexpr char32_t TWO_MEN = 0x1F46C;
     constexpr char32_t TWO_WOMEN = 0x1F46D;
-    constexpr char32_t SANTA_CLAUS = 0x1F385;
+    constexpr char32_t KISS_MARK = 0x1F48B;
     constexpr char32_t MRS_CLAUS = 0x1F936;
 
     // Regional
