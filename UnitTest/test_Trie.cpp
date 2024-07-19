@@ -86,6 +86,33 @@ TEST (DecodeTrie, InterracialKiss)
 
 
 ///
+///  Prerequisite: decode interracial kiss, then man
+///
+TEST (DecodeTrie, InterracialKissMan)
+{
+    Trie1 tr;
+    const char32_t data[] { 'A',
+                cp::WOMAN, cp::SKIN1, cp::ZWJ,
+                cp::EMOJI_RED_HEART, cp::VS16, cp::ZWJ,
+                cp::KISS_MARK, cp::ZWJ,
+                cp::MAN, cp::SKIN5,
+                'B',
+                cp::MAN, cp::SKIN5, 0 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(2u, res.size());
+
+    auto& r0 = res[0];
+    EXPECT_EQ(1u, r0.index);
+    EXPECT_EQ(Emoji::KISS_INTERRACIAL, r0.result);
+
+    auto& r1 = res[1];
+    EXPECT_EQ(12u, r1.index);
+    EXPECT_EQ(Emoji::MAN_BLACK, r1.result);
+}
+
+
+///
 ///  Incomplete interracial kiss with some bad char
 ///
 TEST (DecodeTrie, KissBadChar)
