@@ -468,43 +468,52 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
     SafeVector<uc::DecodedEmoji> r;
     const TrieNode* p = &trieRoot;
 
-#define REGISTER_RESULT \
-    r.emplace_back( \
-            lastKnown.iLastPos + 1 - lastKnown.result->value.length(), \
-            lastKnown.result);
-    // Why +1? We do not search for single-char emoji, but if…
-    //   iLastPos == 0, length == 1 → how to make 0 out of them?
+    size_t index = 0;
 
-    for (size_t index = 0; index < s.length(); ++index) {
-        char32_t c = s[index];
-        if (auto child = p->find(c)) {
-            p = child;
-            if (p->result && p->isDecodeable) {
-                lastKnown.result = p->result;
-                lastKnown.iLastPos = index;
-            }
-        } else if (p != &trieRoot) {
-            // p==&trieRoot → we already tried and no need 2nd time
-            // We are at dead end!
-            // Anyway move to root
-            p = &trieRoot;
-            // Found smth? (never in root)
-            if (lastKnown.result) {
-                REGISTER_RESULT
-                // I do not want to make true Aho-Corasick here, so back down
-                lastKnown.result = nullptr;
-                index = lastKnown.iLastPos;
-            } else {
+    auto registerResult = [&]() {
+        // Why +1? We do not search for single-char emoji, but if…
+        //   iLastPos == 0, length == 1 → how to make 0 out of them?
+        r.emplace_back(
+            lastKnown.iLastPos + 1 - lastKnown.result->value.length(),
+            lastKnown.result);
+        // I do not want to make true Aho-Corasick here, so back down
+        // Need backing down, counter-example: incomplete multi-racial kiss + A
+        // (and other 3+ ZWJs)
+        lastKnown.result = nullptr;
+        index = lastKnown.iLastPos;
+    };
+
+    for (; ; ++index) {
+        for (; index < s.length(); ++index) {
+            char32_t c = s[index];
+            if (auto child = p->find(c)) {
+                p = child;
+                if (p->result && p->isDecodeable) {
+                    lastKnown.result = p->result;
+                    lastKnown.iLastPos = index;
+                }
+            } else if (p != &trieRoot) {
+                // p==&trieRoot → we already tried and no need 2nd time
+                // We are at dead end!
+                // Anyway move to root
+                p = &trieRoot;
+                // Found smth? (never in root)
+                if (lastKnown.result) {
+                    registerResult();
                 // Run through last character again, root’s children are always present
-                if (auto child = p->unsafeFind(c)) {
+                } else if (auto child = p->unsafeFind(c)) {
                     p = child;
                     // 1st is never decodeable
                 }
             }
         }
-    }
-    if (lastKnown.result) {
-        REGISTER_RESULT
+        // Went out of loop — what have?
+        if (lastKnown.result) {
+            registerResult();
+            // Back down even here! (incomplete multi-pacial kiss, but no A afterwards)
+        } else {
+            break;  // The only exit from loop
+        }
     }
     return r;
 
