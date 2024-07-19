@@ -133,3 +133,33 @@ TEST (DecodeTrie, KissAbrupt)
     EXPECT_EQ(3u, r1.index);
     EXPECT_EQ(Emoji::HEART_RED, r1.result);
 }
+
+
+///
+///  Incomplete interracial kiss followed with more emoji
+///
+TEST (DecodeTrie, KissMoreEmoji)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                cp::WOMAN, cp::SKIN1, cp::ZWJ,
+                cp::EMOJI_RED_HEART, cp::VS16, cp::ZWJ,
+                cp::KISS_MARK, cp::ZWJ,
+                cp::MAN,
+                cp::FLAG_E, cp::FLAG_S, 0 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(3u, res.size());
+
+    auto& r0 = res[0];
+    EXPECT_EQ(0u, r0.index);
+    EXPECT_EQ(Emoji::WOMAN_WHITE, r0.result);
+
+    auto& r1 = res[1];
+    EXPECT_EQ(3u, r1.index);
+    EXPECT_EQ(Emoji::HEART_RED, r1.result);
+
+    auto& r2 = res[2];
+    EXPECT_EQ(9u, r2.index);
+    EXPECT_EQ(Emoji::SPAIN, r2.result);
+}
