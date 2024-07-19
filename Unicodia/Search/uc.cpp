@@ -248,7 +248,25 @@ namespace {
 
         constexpr TrieNode() = default;
         TrieNode(Prealloc) : children(new M) {}
+
+        inline const TrieNode* unsafeFind(char32_t c) const;
+        const TrieNode* find(char32_t c) const;
     };
+
+    inline const TrieNode* TrieNode::unsafeFind(char32_t c) const
+    {
+        if (auto x = children->find(c); x != children->end())
+            return &x->second;
+        return nullptr;
+    }
+
+    const TrieNode* TrieNode::find(char32_t c) const
+    {
+        if (!children)
+            return nullptr;
+        return unsafeFind(c);
+    }
+
 
     struct TriePath : public std::unordered_map<char32_t, TrieNode> {};
 
@@ -459,20 +477,14 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
 
     for (size_t index = 0; index < s.length(); ++index) {
         char32_t c = s[index];
-        if (p->children) {
-            auto itChild = p->children->find(c);
-            if (itChild != p->children->end()) {
-                p = &itChild->second;
-                if (p->result && p->isDecodeable) {
-                    lastKnown.result = p->result;
-                    lastKnown.iLastPos = index;
-                }
-                // Jump over dead-end branch
-                goto jumpOver;
+        if (auto child = p->find(c)) {
+            p = child;
+            if (p->result && p->isDecodeable) {
+                lastKnown.result = p->result;
+                lastKnown.iLastPos = index;
             }
-        }
-        // We are at dead end!
-        if (p != &trieRoot) {
+        } else if (p != &trieRoot) {
+            // We are at dead end!
             // Anyway move to root
             p = &trieRoot;
             // Found smth? (never in root)
@@ -496,13 +508,11 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
             }
             // Run through D again, root’s children are always present
             // (in root we already tried and no need 2nd time)
-            auto itChild = p->children->find(c);
-            if (itChild != p->children->end()) {
-                p = &itChild->second;
+            if (auto child = p->unsafeFind(c)) {
+                p = child;
                 // 1st is never decodeable
             }
         }
-    jumpOver:;
     }
     if (lastKnown.result) {
         REGISTER_RESULT
