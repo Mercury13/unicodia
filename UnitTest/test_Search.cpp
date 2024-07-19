@@ -1,5 +1,5 @@
 // What we are testing
-#include "u_SearchEngine.h"
+#include "Search/engine.h"
 
 // Google test
 #include "gtest/gtest.h"

@@ -35,14 +35,14 @@ TEST (DumbSp, ConstructByPtr)
 {
     Counter ctr;
     {
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         dumb::Sp<Target> p(new Target(41, ctr));
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(41, p->tag);
 
         EXPECT_EQ(1, ctr.nCtors);

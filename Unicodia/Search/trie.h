@@ -21,10 +21,11 @@ namespace srh {
     template <class R> requires IsResult<R>
     struct TrieNode {
     public:
-        constexpr TrieNode() {}
+        constexpr TrieNode(unsigned aDepth) : fDepth(aDepth) {}
 
         const R& result() const { return fResult; }
         bool isFinal() const { return fIsFinal; }
+        unsigned depth() const { return fDepth; }
 
         inline TrieNode* add(char32_t c);
         inline void setFinal(R res)
@@ -39,9 +40,10 @@ namespace srh {
         R fResult {};
         using M = std::unordered_map<char32_t, TrieNode>;
         std::unique_ptr<M> children;
+        const unsigned fDepth;
         bool fIsFinal = false;
 
-        TrieNode(M* init) : children(init) {}
+        TrieNode(M* init) : children(init), fDepth(0) {}
     };
 
     template <class R> requires IsResult<R>
@@ -61,7 +63,7 @@ namespace srh {
                 std::u32string_view sv { v, std::size(v) };
                 add(sv, res);
             }
-        SafeVector<Decoded<R>> decode(std::u32string_view s);
+        SafeVector<Decoded<R>> decode(std::u32string_view s) const;
     };
 
 
@@ -88,7 +90,8 @@ inline srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
 {
     if (!children)
         children = std::make_unique<M>();
-    return &children->operator[](c);
+    auto [it, _] = children->try_emplace(c, fDepth + 1);
+    return &it->second;
 }
 
 template <class R> requires srh::IsResult<R>
@@ -102,12 +105,12 @@ void srh::TrieRoot<R>::add(std::u32string_view s, const R& res)
 }
 
 template <class R> requires srh::IsResult<R>
-SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
+SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) const
 {
     static constexpr size_t NO_RESULT = -1;
     struct Last {
-        R result {};
-        ssize_t iLastPos = NO_RESULT;
+        const Node* node = nullptr;
+        size_t iLastPos = NO_RESULT;
     } lastKnown;
 
     SafeVector<srh::Decoded<R>> r;
@@ -119,14 +122,14 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
         //   iLastPos == 0, length == 1 → how to make 0 out of them?
         /// @todo [urgent] what to do? — we use value here
         r.emplace_back(
-            lastKnown.iLastPos + 1 - lastKnown.result->value.length(),
-            lastKnown.result);
+            lastKnown.iLastPos + 1 - lastKnown.node->depth(),
+            lastKnown.node->result());
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
         //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
         // After A we have WOMAN RACE1, but still want to identify HEART VS16
         index = lastKnown.iLastPos;
-        lastKnown.iLastPos = NO_RESULT;
+        lastKnown.node = nullptr;
     };
 
     for (; ; ++index) {
@@ -136,7 +139,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
             if (auto child = p->find(c)) {
                 p = child;
                 if (p->isFinal()) {
-                    lastKnown.result = p->result();
+                    lastKnown.node = p;
                     lastKnown.iLastPos = index;
                 }
             } else if (p != this) {
@@ -145,7 +148,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
                 // Anyway move to root
                 p = this;
                 // Found smth? (never in root)
-                if (lastKnown.iLastPos >= 0) {
+                if (lastKnown.node) {
                     registerResult();
                 // Run through last character again, root’s children are always present
                 } else if (auto child = p->unsafeFind(c)) {
@@ -155,7 +158,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
             }
         }
         // Went out of loop — what have?
-        if (lastKnown.iLastPos >= 0) {
+        if (lastKnown.node) {
             registerResult();
             // Back down even here! (incomplete multi-pacial kiss, but no A afterwards)
         } else {

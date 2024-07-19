@@ -9,27 +9,27 @@ using namespace std::string_view_literals;
 TEST (Version, Ctor0)
 {
     Version v;
-    EXPECT_EQ(0, v.part1);
-    EXPECT_EQ(0, v.part2);
-    EXPECT_EQ(0, v.part3);
+    EXPECT_EQ(0u, v.part1);
+    EXPECT_EQ(0u, v.part2);
+    EXPECT_EQ(0u, v.part3);
 }
 
 
 TEST (Version, Ctor1)
 {
     Version v{ 5 };
-    EXPECT_EQ(5, v.part1);
-    EXPECT_EQ(0, v.part2);
-    EXPECT_EQ(0, v.part3);
+    EXPECT_EQ(5u, v.part1);
+    EXPECT_EQ(0u, v.part2);
+    EXPECT_EQ(0u, v.part3);
 }
 
 
 TEST (Version, Ctor2)
 {
     Version v{ 2, 3 };
-    EXPECT_EQ(2, v.part1);
-    EXPECT_EQ(3, v.part2);
-    EXPECT_EQ(0, v.part3);
+    EXPECT_EQ(2u, v.part1);
+    EXPECT_EQ(3u, v.part2);
+    EXPECT_EQ(0u, v.part3);
 }
 
 
@@ -37,9 +37,9 @@ TEST (Version, Ctor2)
 TEST (Version, Ctor3)
 {
     Version v{ 1, 3, 5 };
-    EXPECT_EQ(1, v.part1);
-    EXPECT_EQ(3, v.part2);
-    EXPECT_EQ(5, v.part3);
+    EXPECT_EQ(1u, v.part1);
+    EXPECT_EQ(3u, v.part2);
+    EXPECT_EQ(5u, v.part3);
 }
 
 
@@ -151,7 +151,7 @@ TEST (Version, Sprintf5)
     Version v { 12, 34, 56 };
     auto n = v.sprintf(c);
     EXPECT_STREQ("12.34.", c);
-    EXPECT_EQ(8, n);
+    EXPECT_EQ(8u, n);
 }
 
 
