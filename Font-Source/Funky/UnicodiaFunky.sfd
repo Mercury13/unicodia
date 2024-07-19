@@ -123638,6 +123638,7 @@ Refer: 789 73459 N 1 0 0 1 -120 0 2
 Validated: 32773
 LCarets2: 1 0
 Ligature2: "Maka CCMP-1" Maka.I Maka.I
+Colour: ff00
 EndChar
 
 StartChar: Maka.UU
@@ -123651,6 +123652,7 @@ Refer: 790 73460 N 1 0 0 1 120 0 2
 Refer: 790 73460 N 1 0 0 1 -120 0 2
 Validated: 32773
 Ligature2: "Maka CCMP-1" Maka.U Maka.U
+Colour: ff00
 EndChar
 
 StartChar: Maka.R.part
@@ -123728,6 +123730,7 @@ SplineSet
  437.193127911 129.35069223 437.193127911 129.35069223 484.94921875 162.95703125 c 0,0,1
 EndSplineSet
 Validated: 19457
+Colour: ff00
 EndChar
 
 StartChar: u1F741
@@ -126139,6 +126142,7 @@ SplineSet
  423.375976562 446.35546875 l 1,0,1
 EndSplineSet
 Validated: 19457
+Colour: ffff
 EndChar
 
 StartChar: Todr.N
@@ -126242,6 +126246,7 @@ SplineSet
  535.26953125 162.999023438 l 1,0,1
 EndSplineSet
 Validated: 19457
+Colour: ffff
 EndChar
 
 StartChar: Todr.B
@@ -126502,6 +126507,7 @@ SplineSet
  365.615234375 714 l 1,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ffff
 EndChar
 
 StartChar: Todr.Ng
@@ -127284,6 +127290,7 @@ SplineSet
  569 381 569 381 569 471 c 0,0,1
 EndSplineSet
 Validated: 19457
+Colour: ffff
 EndChar
 
 StartChar: Todr.Nxh
@@ -129389,6 +129396,7 @@ SplineSet
  336.794921875 712.2890625 l 1,0,1
 EndSplineSet
 Validated: 3073
+Colour: ffff
 EndChar
 
 StartChar: Todr.T
@@ -129546,6 +129554,7 @@ SplineSet
  395 50 l 5,0,-1
 EndSplineSet
 Validated: 19457
+Colour: ffff
 EndChar
 
 StartChar: Todr.Th
