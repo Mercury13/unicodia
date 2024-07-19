@@ -825,7 +825,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 675 25 12
+WinInfo: 700 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -43744,6 +43744,7 @@ SplineSet
  28.349609375 -213.299804688 28.349609375 -213.299804688 -28.349609375 -213.299804688 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10331
@@ -43981,6 +43982,7 @@ SplineSet
  263.25 33.75 263.25 33.75 301.049804688 33.75 c 256,72,73
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10332
@@ -44143,6 +44145,7 @@ SplineSet
  117.450195312 0 117.450195312 0 76.9501953125 -4.0498046875 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10333
@@ -44358,6 +44361,7 @@ SplineSet
  307.799804688 -12.150390625 307.799804688 -12.150390625 245.700195312 -12.150390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10334
@@ -44564,6 +44568,7 @@ SplineSet
  392.849609375 -12.150390625 392.849609375 -12.150390625 345.599609375 -12.150390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10335
@@ -44747,6 +44752,7 @@ SplineSet
  494.099609375 -17.5498046875 494.099609375 -17.5498046875 477.900390625 -22.9501953125 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: u10336
@@ -45075,6 +45081,7 @@ SplineSet
  611.549804688 -167.400390625 611.549804688 -167.400390625 579.150390625 -167.400390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10337
@@ -45333,6 +45340,7 @@ SplineSet
  103.950195312 0 103.950195312 0 48.599609375 -4.0498046875 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10338
@@ -45586,6 +45594,7 @@ SplineSet
  372.599609375 -176.849609375 372.599609375 -176.849609375 359.099609375 -176.849609375 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: GothI
@@ -45731,6 +45740,7 @@ SplineSet
  83 616 83 616 92 616 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1033A
@@ -46006,6 +46016,7 @@ SplineSet
  731.700195312 -27 731.700195312 -27 653.400390625 -27 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1033B
@@ -46145,6 +46156,7 @@ SplineSet
  174.150390625 -39.150390625 174.150390625 -39.150390625 99.900390625 -39.150390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1033C
@@ -46480,6 +46492,7 @@ SplineSet
  90.4501953125 -1.349609375 90.4501953125 -1.349609375 75.599609375 -4.0498046875 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1033D
@@ -46760,6 +46773,7 @@ SplineSet
  662.849609375 -10.7998046875 662.849609375 -10.7998046875 641.25 -10.7998046875 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: u1033E
@@ -46940,6 +46954,7 @@ SplineSet
  303.75 -315.900390625 303.75 -315.900390625 276.75 -315.900390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1033F
@@ -47188,6 +47203,7 @@ SplineSet
  529.200195312 -41.849609375 529.200195312 -41.849609375 522.450195312 -41.849609375 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10340
@@ -47435,6 +47451,7 @@ SplineSet
  93.150390625 -1.349609375 93.150390625 -1.349609375 74.25 -4.0498046875 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: u10341
@@ -47605,6 +47622,7 @@ SplineSet
  494.099609375 -172.799804688 494.099609375 -172.799804688 477.900390625 -178.200195312 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10342
@@ -47868,6 +47886,7 @@ SplineSet
  117.450195312 -207.900390625 117.450195312 -207.900390625 105.299804688 -207.900390625 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: u10343
@@ -48053,6 +48072,7 @@ SplineSet
  361.799804688 -12.150390625 361.799804688 -12.150390625 257.849609375 -12.150390625 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10344
@@ -48255,6 +48275,7 @@ SplineSet
  297 -1.349609375 297 -1.349609375 278.099609375 -4.0498046875 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: u10345
@@ -48375,6 +48396,7 @@ SplineSet
  311.849609375 -236.25 311.849609375 -236.25 280.799804688 -236.25 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10346
@@ -48617,6 +48639,7 @@ SplineSet
  122.849609375 -238.950195312 122.849609375 -238.950195312 99.900390625 -238.950195312 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10347
@@ -48789,6 +48812,7 @@ SplineSet
  136.349609375 -97.2001953125 136.349609375 -97.2001953125 118.799804688 -97.2001953125 c 256,0,1
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10348
@@ -48930,6 +48954,7 @@ SplineSet
  383.400390625 214.650390625 383.400390625 214.650390625 351 214.650390625 c 256,36,37
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u10349
@@ -49115,6 +49140,7 @@ SplineSet
  284.849609375 241.650390625 284.849609375 241.650390625 305.099609375 241.650390625 c 256,57,58
 EndSplineSet
 Validated: 19457
+Colour: 87cfff
 EndChar
 
 StartChar: u1034A
@@ -49221,6 +49247,7 @@ SplineSet
  282.150390625 -160.650390625 282.150390625 -160.650390625 249.75 -160.650390625 c 256,0,1
 EndSplineSet
 Validated: 19489
+Colour: 87cfff
 EndChar
 
 StartChar: Uml.Diaeresis
@@ -49312,6 +49339,7 @@ Refer: 267 66361 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "GothRLIG" GothI Uml.Diaeresis
 LCarets2: 1 0
+Colour: 87cfff
 EndChar
 
 StartChar: Goth.Yi.Part
@@ -49362,6 +49390,7 @@ SplineSet
  24 621 24 621 -1 621 c 256,0,1
 EndSplineSet
 Validated: 3073
+Colour: 87cfff
 EndChar
 
 StartChar: Punc.Space
