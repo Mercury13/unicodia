@@ -466,7 +466,6 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
     } lastKnown;
 
     SafeVector<uc::DecodedEmoji> r;
-    const TrieNode* p = &trieRoot;
 
     size_t index = 0;
 
@@ -478,12 +477,14 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
             lastKnown.result);
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
-        // (and other 3+ ZWJs)
+        //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
+        // After A we have WOMAN RACE1, but still want to identify HEART VS16
         lastKnown.result = nullptr;
         index = lastKnown.iLastPos;
     };
 
     for (; ; ++index) {
+        const TrieNode* p = &trieRoot;
         for (; index < s.length(); ++index) {
             char32_t c = s[index];
             if (auto child = p->find(c)) {
