@@ -15,9 +15,9 @@ SOURCES += \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
     ../Libs/L10n/LocFmt.cpp \
-    ../Libs/SelfMade/u_SearchEngine.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/u_Version.cpp \
+    ../Unicodia/Search/engine.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
     test_DumbSp.cpp \
@@ -26,6 +26,7 @@ SOURCES += \
     test_Iterator.cpp \
     test_Search.cpp \
     test_Strings.cpp \
+    test_Trie.cpp \
     test_Version.cpp \
     test_Wiki.cpp
 
@@ -34,9 +35,10 @@ HEADERS += \
     ../AutoBuilder/forget.h \
     ../Libs/L10n/LocFmt.h \
     ../Libs/SelfMade/u_Iterator.h \
-    ../Libs/SelfMade/u_SearchEngine.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
+    ../Unicodia/Search/engine.h \
+    ../Unicodia/Search/trie.h \
     ../Unicodia/Wiki.h
 
 INCLUDEPATH += \

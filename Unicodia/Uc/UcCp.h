@@ -74,7 +74,36 @@ namespace cp {
     constexpr char32_t TWO_WOMEN = 0x1F46D;
     constexpr char32_t SANTA_CLAUS = 0x1F385;
     constexpr char32_t MRS_CLAUS = 0x1F936;
+
+    // Regional
     constexpr char32_t FLAG_A = 0x1F1E6;
+    constexpr char32_t FLAG_B = 0x1F1E7;
+    // E8
+    constexpr char32_t FLAG_C = 0x1F1E8;
+    constexpr char32_t FLAG_D = 0x1F1E9;
+    constexpr char32_t FLAG_E = 0x1F1EA;
+    constexpr char32_t FLAG_F = 0x1F1EB;
+    constexpr char32_t FLAG_G = 0x1F1EC;
+    constexpr char32_t FLAG_H = 0x1F1ED;
+    constexpr char32_t FLAG_I = 0x1F1EE;
+    constexpr char32_t FLAG_J = 0x1F1EF;
+    // F0
+    constexpr char32_t FLAG_K = 0x1F1F0;
+    constexpr char32_t FLAG_L = 0x1F1F1;
+    constexpr char32_t FLAG_M = 0x1F1F2;
+    constexpr char32_t FLAG_N = 0x1F1F3;
+    constexpr char32_t FLAG_O = 0x1F1F4;
+    constexpr char32_t FLAG_P = 0x1F1F5;
+    constexpr char32_t FLAG_Q = 0x1F1F6;
+    constexpr char32_t FLAG_R = 0x1F1F7;
+    // F8
+    constexpr char32_t FLAG_S = 0x1F1F8;
+    constexpr char32_t FLAG_T = 0x1F1F9;
+    constexpr char32_t FLAG_U = 0x1F1FA;
+    constexpr char32_t FLAG_V = 0x1F1FB;
+    constexpr char32_t FLAG_W = 0x1F1FC;
+    constexpr char32_t FLAG_X = 0x1F1FD;
+    constexpr char32_t FLAG_Y = 0x1F1FE;
     constexpr char32_t FLAG_Z = 0x1F1FF;
 
     // Tags

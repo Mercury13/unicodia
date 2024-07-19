@@ -57,8 +57,9 @@ namespace srh {
         template <class... Args>
             void addMulti(const R& res, Args&&... args)
             {
-                char32_t v[] { std::forward<Args...>(args)... };
-                add({ v, std::size(v), res });
+                char32_t v[] { std::forward<Args>(args)... };
+                std::u32string_view sv { v, std::size(v) };
+                add(sv, res);
             }
         SafeVector<Decoded<R>> decode(std::u32string_view s);
     };
@@ -116,6 +117,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s)
     auto registerResult = [&]() {
         // Why +1? We do not search for single-char emoji, but if…
         //   iLastPos == 0, length == 1 → how to make 0 out of them?
+        /// @todo [urgent] what to do? — we use value here
         r.emplace_back(
             lastKnown.iLastPos + 1 - lastKnown.result->value.length(),
             lastKnown.result);

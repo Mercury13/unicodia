@@ -219,7 +219,7 @@ namespace {
         void appendLink(const SafeVector<std::string_view>& x, bool) override;
         void appendTemplate(const SafeVector<std::string_view>& x, bool) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
-        void appendBreak(wiki::Strength strength, wiki::Feature feature) override;
+        void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -265,7 +265,8 @@ namespace {
         s.append("\n");
     }
 
-    void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature)
+    void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature,
+                          unsigned)
     {
         switch (strength) {
         case wiki::Strength::BREAK:
