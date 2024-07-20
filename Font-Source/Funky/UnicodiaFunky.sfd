@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721474254
+ModificationTime: 1721486502
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -141644,7 +141644,7 @@ EndChar
 StartChar: Onao.1
 Encoding: 124402 124402 984
 Width: 559
-Flags: WO
+Flags: W
 HStem: -10 99.9241<300.16 440.224> 544 100<322.453 426.761> 694 20G<65 135>
 VStem: 65 70<294.546 714> 205 60<132.839 210.843 329.374 473.143> 444 60<406.834 526.463>
 TtInstrs:
@@ -141868,7 +141868,129 @@ StartChar: Onao.2
 Encoding: 124403 124403 985
 Width: 559
 Flags: W
+HStem: 0 90<148 436.947> 644 80<187.2 393.322>
+VStem: 65 70<511.537 591.674> 449 60<443.291 595.989> 467 42<123.613 172>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_3
+ 25
+ 1
+ 0
+CALL
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+PUSHB_1
+ 2
+MDAP[rnd]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 30
+MDAP[rnd]
+PUSHB_1
+ 8
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 25
+SHP[rp2]
+PUSHB_1
+ 5
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+SRP0
+PUSHB_2
+ 0
+ 1
+CALL
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+PUSHB_1
+ 23
+SHP[rp2]
+PUSHB_1
+ 13
+SRP0
+PUSHB_1
+ 22
+MDRP[min,rnd,black]
+PUSHB_1
+ 22
+MDAP[rnd]
+PUSHB_2
+ 31
+ 1
+CALL
+PUSHB_2
+ 0
+ 5
+SRP1
+SRP2
+PUSHB_3
+ 10
+ 11
+ 18
+IP
+IP
+IP
+PUSHB_2
+ 13
+ 22
+SRP1
+SRP2
+PUSHB_1
+ 24
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 2
+ 18
+SRP1
+SRP2
+PUSHB_6
+ 5
+ 8
+ 13
+ 22
+ 23
+ 26
+DEPTH
+SLOOP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 LayerCount: 2
+Fore
+SplineSet
+449 527 m 0,0,1
+ 449 644 449 644 292 644 c 0,2,3
+ 206 644 206 644 170.5 610 c 128,-1,4
+ 135 576 135 576 135 494 c 1,5,6
+ 105 494 105 494 85 511 c 128,-1,7
+ 65 528 65 528 65 567 c 0,8,9
+ 65 635 65 635 126.5 679.5 c 128,-1,10
+ 188 724 188 724 286.5 724 c 128,-1,11
+ 385 724 385 724 447 667 c 128,-1,12
+ 509 610 509 610 509 516 c 0,13,14
+ 509 442 509 442 471 380 c 0,15,16
+ 420 294 420 294 292 199 c 1,17,-1
+ 148 90 l 1,18,-1
+ 379 90 l 2,19,20
+ 420 90 420 90 437.5 110.5 c 128,-1,21
+ 455 131 455 131 467 183 c 1,22,-1
+ 509 172 l 1,23,-1
+ 504 0 l 1,24,-1
+ 65 0 l 1,25,-1
+ 65 133 l 1,26,-1
+ 243 267 l 2,27,28
+ 367 361 367 361 408 413.5 c 128,-1,29
+ 449 466 449 466 449 527 c 0,0,1
+EndSplineSet
 Colour: ffff00
 EndChar
 
