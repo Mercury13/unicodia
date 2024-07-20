@@ -13,12 +13,12 @@
 namespace srh {
 
     template <class T>
-    concept IsResult = std::is_default_constructible_v<T>;
+    concept Result = std::is_default_constructible_v<T>;
 
     ///
     ///  @tparam  R result
     ///
-    template <class R> requires IsResult<R>
+    template <Result R>
     struct TrieNode {
     public:
         constexpr TrieNode(unsigned aDepth) : fDepth(aDepth) {}
@@ -46,7 +46,7 @@ namespace srh {
         TrieNode(M* init) : children(init), fDepth(0) {}
     };
 
-    template <class R> requires IsResult<R>
+    template <Result R>
     struct TrieRoot : public TrieNode<R> {
     private:
         using Super = TrieNode<R>;
@@ -69,7 +69,7 @@ namespace srh {
 
 }
 
-template <class R> requires srh::IsResult<R>
+template <srh::Result R>
 inline const srh::TrieNode<R>* srh::TrieNode<R>::unsafeFind(char32_t c) const
 {
     if (auto x = children->find(c); x != children->end())
@@ -77,7 +77,7 @@ inline const srh::TrieNode<R>* srh::TrieNode<R>::unsafeFind(char32_t c) const
     return nullptr;
 }
 
-template <class R> requires srh::IsResult<R>
+template <srh::Result R>
 const srh::TrieNode<R>* srh::TrieNode<R>::find(char32_t c) const
 {
     if (!children)
@@ -85,7 +85,7 @@ const srh::TrieNode<R>* srh::TrieNode<R>::find(char32_t c) const
     return unsafeFind(c);
 }
 
-template <class R> requires srh::IsResult<R>
+template <srh::Result R>
 inline srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
 {
     if (!children)
@@ -94,7 +94,7 @@ inline srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
     return &it->second;
 }
 
-template <class R> requires srh::IsResult<R>
+template <srh::Result R>
 void srh::TrieRoot<R>::add(std::u32string_view s, const R& res)
 {
     Node* p = this;
@@ -104,7 +104,7 @@ void srh::TrieRoot<R>::add(std::u32string_view s, const R& res)
     p->setFinal(res);
 }
 
-template <class R> requires srh::IsResult<R>
+template <srh::Result R>
 SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) const
 {
     static constexpr size_t NO_RESULT = -1;
@@ -160,7 +160,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
         // Went out of loop — what have?
         if (lastKnown.node) {
             registerResult();
-            // Back down even here! (incomplete multi-pacial kiss, but no A afterwards)
+            // Back down even here! (incomplete multi-racial kiss, but no A afterwards)
         } else {
             break;  // The only exit from loop
         }
