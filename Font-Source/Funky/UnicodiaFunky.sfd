@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721464021
+ModificationTime: 1721464329
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -819,12 +819,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 124350 25 12
+WinInfo: 700 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -141520,6 +141521,19 @@ Encoding: 124401 124401 984
 Width: 559
 Flags: W
 LayerCount: 2
+Fore
+SplineSet
+503 0 m 1,0,-1
+ 503 64 l 1,1,-1
+ 559 64 l 1,2,-1
+ 559 0 l 1,3,-1
+ 503 0 l 1,0,-1
+0 0 m 1,4,-1
+ 0 64 l 1,5,-1
+ 56 64 l 1,6,-1
+ 56 0 l 1,7,-1
+ 0 0 l 1,4,-1
+EndSplineSet
 Colour: ffff00
 EndChar
 
