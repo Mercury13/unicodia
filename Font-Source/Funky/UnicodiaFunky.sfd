@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721467310
+ModificationTime: 1721467317
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -837,7 +837,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114177 994
+BeginChars: 1114173 993
 
 StartChar: uni25CC
 Encoding: 9676 9676 0
@@ -5156,7 +5156,7 @@ Validated: 19457
 EndChar
 
 StartChar: CircleAnnuity
-Encoding: 1114114 -1 40
+Encoding: 1114112 -1 40
 Width: 936
 Flags: W
 HStem: 760 60<39 835>
@@ -7796,7 +7796,7 @@ Colour: 8000
 EndChar
 
 StartChar: BiggerPlus
-Encoding: 1114116 -1 56
+Encoding: 1114113 -1 56
 Width: 0
 Flags: W
 HStem: 749 53<-429 -330 -276 -177>
@@ -7956,7 +7956,7 @@ Colour: 8000
 EndChar
 
 StartChar: MiaoToneUml
-Encoding: 1114117 -1 61
+Encoding: 1114114 -1 61
 Width: 0
 Flags: W
 HStem: 749 53<-122.5 -17.5 35.5 140.5>
@@ -49325,7 +49325,7 @@ Validated: 19457
 EndChar
 
 StartChar: Goth.Lig.Yi
-Encoding: 1114118 -1 286
+Encoding: 1114115 -1 286
 Width: 417
 VWidth: 1300
 Flags: W
@@ -49343,7 +49343,7 @@ Colour: 87cfff
 EndChar
 
 StartChar: Goth.Yi.Part
-Encoding: 1114119 -1 287
+Encoding: 1114116 -1 287
 Width: 0
 Flags: W
 HStem: 621 134<-44.4663 41.4358>
@@ -67083,7 +67083,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.curvN.Prime
-Encoding: 1114120 -1 405
+Encoding: 1114117 -1 405
 Width: 821
 Flags: W
 HStem: -16 80<510.768 638.72> 518 80<135.513 199 279 415 509.239 574> 665 80<133.703 187.659> 675 180
@@ -67099,7 +67099,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Theta.Prime
-Encoding: 1114121 -1 406
+Encoding: 1114118 -1 406
 Width: 662
 Flags: W
 HStem: -15 80<287.041 365.959> 310 80<25 132 212 441 521 628> 635 80<287.041 365.959> 705 180
@@ -67114,7 +67114,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Acurl.Prime
-Encoding: 1114122 -1 407
+Encoding: 1114119 -1 407
 Width: 662
 Flags: W
 HStem: 0 21G<35 126.996 468 602> 705 180
@@ -67130,7 +67130,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.8belt.Prime
-Encoding: 1114123 -1 408
+Encoding: 1114120 -1 408
 Width: 690
 Flags: W
 HStem: -15 80<237.69 441.211> 635 80<265.542 411.639> 705 180
@@ -67145,7 +67145,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.3curl.Prime
-Encoding: 1114124 -1 409
+Encoding: 1114121 -1 409
 Width: 707
 Flags: W
 HStem: -15 80<163.855 361.916> 0 21G<546.763 626.763> 213.616 80<185.815 407.765 499.078 546.763> 366.849 80<250.988 373.092> 635.385 79.6192<205.514 414.241> 705 180
@@ -67161,7 +67161,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Crev.Prime
-Encoding: 1114125 -1 410
+Encoding: 1114122 -1 410
 Width: 642
 Flags: W
 HStem: -15 80<178.718 349.28> 635 80<177.561 350.24> 705 180
@@ -67681,7 +67681,7 @@ Validated: 19457
 EndChar
 
 StartChar: Lig.Dotc.Horn
-Encoding: 1114126 -1 420
+Encoding: 1114123 -1 420
 Width: 608
 Flags: W
 HStem: 472 39<389 456.78>
@@ -73668,7 +73668,7 @@ Validated: 19457
 EndChar
 
 StartChar: IdeoDotc
-Encoding: 1114127 -1 447
+Encoding: 1114124 -1 447
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<462.95 521.571> -32.4004 72.8008<345.35 403.97 580.55 639.171> 33.4004 72.7998<241.75 300.371 684.15 742.77> 137 72.7998<175.949 234.571 749.95 808.571> 254.6 72.8008<150.75 209.371 775.15 833.77> 372.2 72.7998<175.949 234.571 749.95 808.571> 475.8 72.7998<241.75 300.371 684.15 742.77> 541.6 72.8008<345.35 403.97 580.55 639.171> 566.8 72.7998<462.95 521.571>
@@ -74221,7 +74221,7 @@ Validated: 19457
 EndChar
 
 StartChar: Hang.Lig.Dotc.Double
-Encoding: 1114128 -1 448
+Encoding: 1114125 -1 448
 Width: 1000
 GlyphClass: 1
 Flags: W
@@ -74238,7 +74238,7 @@ LCarets2: 2 0 231
 EndChar
 
 StartChar: Hang.Lig.Dotc.Single
-Encoding: 1114129 -1 449
+Encoding: 1114126 -1 449
 Width: 1000
 GlyphClass: 1
 Flags: W
@@ -74255,7 +74255,7 @@ LCarets2: 1 221
 EndChar
 
 StartChar: Kana.Lig.Dotc.Quote
-Encoding: 1114130 -1 450
+Encoding: 1114127 -1 450
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<368.95 427.571> -32.4004 72.8008<251.35 309.97 486.55 545.171> 33.4004 72.7998<147.75 206.371 590.15 648.77> 137 72.7998<81.9493 140.571 655.95 714.571> 254.6 72.8008<56.7498 115.371 681.15 739.77> 372.2 72.7998<81.9493 140.571 655.95 714.571> 475.8 72.7998<147.75 206.371 590.15 648.77> 541.6 72.8008<251.35 309.97 486.55 545.171> 566.8 72.7998<368.95 427.571> 588 203
@@ -74435,7 +74435,7 @@ Validated: 19457
 EndChar
 
 StartChar: Kana.Lig.Dotc.Degree
-Encoding: 1114131 -1 453
+Encoding: 1114128 -1 453
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<368.95 427.571> -32.4004 72.8008<251.35 309.97 486.55 545.171> 33.4004 72.7998<147.75 206.371 590.15 648.77> 137 72.7998<81.9493 140.571 655.95 714.571> 254.6 72.8008<56.7498 115.371 681.15 739.77> 372.2 72.7998<81.9493 140.571 655.95 714.571> 475.8 72.7998<147.75 206.371 590.15 648.77> 541.6 72.8008<251.35 309.97 486.55 545.171> 562 46<818.654 912.842> 566.8 72.7998<368.95 427.571> 742 46<818.654 912.842>
@@ -76470,7 +76470,7 @@ Validated: 32773
 EndChar
 
 StartChar: Latn.Lambdastr.Part
-Encoding: 1114132 -1 469
+Encoding: 1114129 -1 469
 Width: 0
 Flags: W
 HStem: 150.778 153.978
@@ -76549,7 +76549,7 @@ Validated: 19457
 EndChar
 
 StartChar: NameMe.484
-Encoding: 1114133 -1 470
+Encoding: 1114130 -1 470
 Width: 544
 Flags: W
 HStem: -10 49<180.192 344.959> 674 50<195.486 343.751>
@@ -77297,7 +77297,7 @@ Validated: 19457
 EndChar
 
 StartChar: NameMe.490
-Encoding: 1114134 -1 476
+Encoding: 1114131 -1 476
 Width: 334
 Flags: W
 HStem: 457 87<80 195.967>
@@ -102844,7 +102844,7 @@ Substitution2: "Copt LOCL-1" Copt.Macron
 EndChar
 
 StartChar: Copt.cap.I.macron
-Encoding: 1114135 -1 640
+Encoding: 1114132 -1 640
 Width: 338
 Flags: W
 HStem: 780 70<31 308>
@@ -102862,7 +102862,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Copt.small.I.macron
-Encoding: 1114136 -1 641
+Encoding: 1114133 -1 641
 Width: 304
 Flags: W
 HStem: 0 21G<163 178> 630 70<13 290>
@@ -102919,7 +102919,7 @@ Substitution2: "Copt LOCL-1" Copt.Overline
 EndChar
 
 StartChar: Copt.Macron
-Encoding: 1114137 -1 643
+Encoding: 1114134 -1 643
 Width: 0
 Flags: W
 HStem: 616 70<-197 197>
@@ -102958,7 +102958,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Overline
-Encoding: 1114138 -1 644
+Encoding: 1114135 -1 644
 Width: 0
 Flags: W
 HStem: 616 70<-236 238>
@@ -102997,7 +102997,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.small.J.macron
-Encoding: 1114139 -1 645
+Encoding: 1114136 -1 645
 Width: 323
 Flags: W
 HStem: 616 70<33 310>
@@ -103015,7 +103015,7 @@ Ligature2: "Copt CCMP-1" Copt.small.J Uml.Macron
 EndChar
 
 StartChar: Copt.Macron.Left
-Encoding: 1114140 -1 646
+Encoding: 1114137 -1 646
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103053,7 +103053,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Right
-Encoding: 1114141 -1 647
+Encoding: 1114138 -1 647
 Width: 3
 GlyphClass: 4
 Flags: W
@@ -103095,7 +103095,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Long
-Encoding: 1114142 -1 648
+Encoding: 1114139 -1 648
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103134,7 +103134,7 @@ Substitution2: "Copt macron-1" Copt.Macron.Longest
 EndChar
 
 StartChar: Copt.Part.Smacron
-Encoding: 1114143 -1 649
+Encoding: 1114140 -1 649
 Width: 4
 Flags: W
 HStem: 616 70<-131 146>
@@ -103181,7 +103181,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Longest
-Encoding: 1114144 -1 650
+Encoding: 1114141 -1 650
 Width: 0
 Flags: W
 HStem: 710 70<-917 150>
@@ -103218,7 +103218,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.BigMacron.1
-Encoding: 1114145 -1 651
+Encoding: 1114142 -1 651
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103256,7 +103256,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.BigMacron.2
-Encoding: 1114146 -1 652
+Encoding: 1114143 -1 652
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -123510,7 +123510,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.II
-Encoding: 1114147 -1 792
+Encoding: 1114144 -1 792
 Width: 0
 Flags: W
 AnchorPoint: "Maka uml right dot" 110 543 mark 0
@@ -123526,7 +123526,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.UU
-Encoding: 1114148 -1 793
+Encoding: 1114145 -1 793
 Width: 0
 Flags: W
 AnchorPoint: "Dot below" 0 0 mark 0
@@ -123540,7 +123540,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.R.part
-Encoding: 1114149 -1 794
+Encoding: 1114146 -1 794
 Width: 616
 Flags: W
 HStem: 14.9709 114.38<329.22 464.744>
@@ -125965,7 +125965,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.As.part
-Encoding: 1114150 -1 807
+Encoding: 1114147 -1 807
 Width: 1000
 HStem: 290.799 70.8521<485.167 601.677>
 VStem: 397.073 266.524
@@ -126070,7 +126070,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Njan.Part
-Encoding: 1114151 -1 810
+Encoding: 1114148 -1 810
 Width: 1000
 HStem: 162.999 296.303
 VStem: 537.426 62.6672<195.199 290.959>
@@ -126349,7 +126349,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Ng.Part
-Encoding: 1114152 -1 814
+Encoding: 1114149 -1 814
 Width: 1000
 HStem: 425.768 288.232
 VStem: 112.736 323.59
@@ -127118,7 +127118,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Nxh.part
-Encoding: 1114153 -1 824
+Encoding: 1114150 -1 824
 Width: 1000
 HStem: 518 74<510.649 560.044>
 VStem: 569 50<358.616 511.773>
@@ -129262,7 +129262,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Sht.part
-Encoding: 1114154 -1 847
+Encoding: 1114151 -1 847
 Width: 1000
 HStem: 0 21G<480.518 530.518>
 VStem: 480.518 50<0 512.694>
@@ -129385,7 +129385,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Ca.part
-Encoding: 1114155 -1 849
+Encoding: 1114152 -1 849
 Width: 1000
 HStem: 0 50<395 573>
 VStem: 395 178<0 50>
@@ -129915,7 +129915,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Jy.part
-Encoding: 1114156 -1 856
+Encoding: 1114153 -1 856
 Width: 1000
 HStem: 694 20G<172.01 272.01>
 VStem: 172.01 100<239.35 714>
@@ -131458,7 +131458,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Contour.Part
-Encoding: 1114157 -1 881
+Encoding: 1114154 -1 881
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<176.731 359.269> 550.5 55<176.731 359.269>
@@ -131559,7 +131559,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Surface.Part
-Encoding: 1114158 -1 882
+Encoding: 1114155 -1 882
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<239.047 636.944> 550.5 55<240.274 635.736>
@@ -131670,7 +131670,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Volume.Part
-Encoding: 1114159 -1 884
+Encoding: 1114156 -1 884
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<388.335 827.665> 550.5 55<388.887 827.113>
@@ -131784,7 +131784,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Cw.Part
-Encoding: 1114160 -1 886
+Encoding: 1114157 -1 886
 Width: 1000
 VWidth: 1030
 HStem: 550.505 55<176.934 358.981>
@@ -131851,7 +131851,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.RoundCw.Part
-Encoding: 1114161 -1 888
+Encoding: 1114158 -1 888
 Width: 1000
 VWidth: 1030
 Flags: W
@@ -131996,7 +131996,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.RoundCcw.Part
-Encoding: 1114162 -1 891
+Encoding: 1114159 -1 891
 Width: 1000
 VWidth: 1030
 HStem: 98.9219 55.1494<176.627 358.774> 550.502 55.0195<178.826 359.044>
@@ -132115,7 +132115,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Midstroke.Part
-Encoding: 1114163 -1 892
+Encoding: 1114160 -1 892
 Width: 1000
 VWidth: 1030
 HStem: 325 55<56.7617 479.232>
@@ -132211,7 +132211,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Square.Part
-Encoding: 1114164 -1 898
+Encoding: 1114161 -1 898
 Width: 1000
 VWidth: 1030
 HStem: 141.265 55<111.762 424.232> 508.735 55<111.762 424.232>
@@ -132298,7 +132298,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Slash.Part
-Encoding: 1114165 -1 901
+Encoding: 1114162 -1 901
 Width: 1000
 VWidth: 1030
 LayerCount: 2
@@ -132314,7 +132314,7 @@ Validated: 3073
 EndChar
 
 StartChar: Math.Integral.Times.Part
-Encoding: 1114166 -1 902
+Encoding: 1114163 -1 902
 Width: 1000
 VWidth: 1030
 LayerCount: 2
@@ -132360,7 +132360,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Cap.Part
-Encoding: 1114167 -1 905
+Encoding: 1114164 -1 905
 Width: 1000
 VWidth: 1030
 HStem: 523.914 45<184.571 351.43>
@@ -132438,7 +132438,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Cup.Part
-Encoding: 1114168 -1 906
+Encoding: 1114165 -1 906
 Width: 1000
 VWidth: 1030
 HStem: 146.515 45<184.571 351.43>
@@ -132515,7 +132515,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Circ.Part
-Encoding: 1114169 -1 907
+Encoding: 1114166 -1 907
 Width: 1000
 VWidth: 1030
 HStem: 99.6436 55<176.723 358.686> 550.437 55<176.784 359.311>
@@ -132606,7 +132606,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Ccw.Part
-Encoding: 1114170 -1 909
+Encoding: 1114167 -1 909
 Width: 1000
 VWidth: 1030
 HStem: 99 55<177.994 357.546>
@@ -133474,7 +133474,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Back.Part
-Encoding: 1114171 -1 916
+Encoding: 1114168 -1 916
 Width: 1000
 VWidth: 1030
 HStem: 113 55<403 465> 388 55<67 465>
@@ -133712,7 +133712,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Tall.Part
-Encoding: 1114172 -1 919
+Encoding: 1114169 -1 919
 Width: 1000
 HStem: -300 70<92.4193 171.948> 875 70<364.052 444.098>
 VStem: 214 108.51<60.9998 584>
@@ -133819,7 +133819,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Sum.Circle.Part
-Encoding: 1114173 -1 921
+Encoding: 1114170 -1 921
 Width: 1000
 HStem: 88.5273 50<249.421 416.323> 476.033 50<249.421 416.323>
 VStem: 114.119 50<223.829 390.732> 501.624 50<223.829 390.732>
@@ -135666,7 +135666,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Circled.Part
-Encoding: 1114174 -1 948
+Encoding: 1114171 -1 948
 Width: 1000
 HStem: 93 60<187.315 371.685> 562 60<187.315 371.685>
 VStem: 15 60<265.315 449.685> 484 60<265.315 449.685>
@@ -137326,57 +137326,8 @@ EndSplineSet
 Colour: ffff00
 EndChar
 
-StartChar: Onao.Part.Stick
-Encoding: 1114175 -1 958
-Width: 1000
-HStem: 0 21G<693 763> 694 20G<693 763>
-VStem: 693 70<0 714>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_3
- 0
- 2
- 0
-CALL
-PUSHB_1
- 3
-MDAP[rnd]
-SVTCA[x-axis]
-PUSHB_1
- 4
-MDAP[rnd]
-PUSHB_1
- 3
-MDRP[rp0,rnd,white]
-PUSHB_1
- 2
-MDRP[min,rnd,black]
-PUSHB_1
- 2
-MDRP[min,rnd,black]
-PUSHB_2
- 5
- 1
-CALL
-SVTCA[y-axis]
-IUP[y]
-IUP[x]
-EndTTInstrs
-LayerCount: 2
-Fore
-SplineSet
-693 714 m 1,0,-1
- 763 714 l 1,1,-1
- 763 0 l 1,2,-1
- 693 0 l 1,3,-1
- 693 714 l 1,0,-1
-EndSplineSet
-Validated: 19457
-Colour: ffff00
-EndChar
-
 StartChar: Onao.Ah
-Encoding: 124377 124377 959
+Encoding: 124377 124377 958
 Width: 678
 Flags: W
 HStem: -10 100<233.359 438.667> 224.492 99.5078<456.919 541.171> 624 100<250.824 443.205>
@@ -137586,7 +137537,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Al
-Encoding: 124378 124378 960
+Encoding: 124378 124378 959
 Width: 644
 Flags: W
 HStem: -10 100<229.875 450.053> 399 100<231.149 315 385 464.297> 614 100<82 315>
@@ -137775,7 +137726,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Aw
-Encoding: 124379 124379 961
+Encoding: 124379 124379 960
 Width: 695
 Flags: W
 HStem: -10 100<200.664 348.675> 257 100<434 446 525 565> 400 81<210.097 381.741> 624 100<227.193 379.58>
@@ -138026,7 +137977,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.I
-Encoding: 124380 124380 962
+Encoding: 124380 124380 961
 Width: 678
 Flags: W
 HStem: -10 100<219.909 415.583> 352 80<135.189 237.111> 624 100<251.749 444.677>
@@ -138235,7 +138186,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.It
-Encoding: 124381 124381 963
+Encoding: 124381 124381 962
 Width: 678
 Flags: W
 HStem: -10 99<231.959 424.896> 624 100<252.15 445.666>
@@ -138348,7 +138299,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ip
-Encoding: 124382 124382 964
+Encoding: 124382 124382 963
 Width: 678
 Flags: W
 HStem: -10 100<232.975 438.26> 624 100<251.286 442.576>
@@ -138471,7 +138422,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Itt
-Encoding: 124383 124383 965
+Encoding: 124383 124383 964
 Width: 668
 Flags: W
 HStem: -10 100<244.193 470.884> 262 58<455.169 546.235> 411 60<384.762 470.472> 624 100<251.071 445.225>
@@ -138691,7 +138642,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Id
-Encoding: 124384 124384 966
+Encoding: 124384 124384 965
 Width: 796
 Flags: W
 HStem: -10 100<267.46 357.563 515.009 604.016> 312 90<49 122.877> 624 90<436.538 527.109>
@@ -138914,7 +138865,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.In
-Encoding: 124385 124385 967
+Encoding: 124385 124385 966
 Width: 735
 Flags: W
 HStem: 0 21G<30 145.497 321.503 416 600 670> 381 80<198.478 392.225> 624 100<173.908 340.244> 694 20G<588.5 670>
@@ -139106,7 +139057,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.U
-Encoding: 124386 124386 968
+Encoding: 124386 124386 967
 Width: 668
 Flags: W
 HStem: -10 100<223.19 416.919> 277 80<126.866 212.969> 624 100<230.298 430.92>
@@ -139374,7 +139325,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uk
-Encoding: 124387 124387 969
+Encoding: 124387 124387 968
 Width: 700
 Flags: W
 HStem: -10 100<167.869 265.132 417.073 511.616> 388 100<182.407 341.155> 388 52<349.08 374.161> 614 100<180 376>
@@ -139618,7 +139569,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Udd
-Encoding: 124388 124388 970
+Encoding: 124388 124388 969
 Width: 689
 Flags: W
 HStem: -10 100<337.147 472.805> 269 100<136 251> 624 100<261.253 452.727>
@@ -139802,7 +139753,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uj
-Encoding: 124389 124389 971
+Encoding: 124389 124389 970
 Width: 790
 Flags: W
 HStem: -10 100<175.129 267.451 521.999 612.065> 271 100<355 435> 694 20G<169.5 300 490 620.5>
@@ -140007,7 +139958,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uny
-Encoding: 124390 124390 972
+Encoding: 124390 124390 971
 Width: 699
 Flags: W
 HStem: -10 100<337.147 472.805> 269 100<136 251> 435 80<244.084 467.246> 624 100<248.005 453.037>
@@ -140234,7 +140185,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ur
-Encoding: 124391 124391 973
+Encoding: 124391 124391 972
 Width: 603
 Flags: W
 HStem: -10 100<241.011 438.751>
@@ -140299,7 +140250,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.E
-Encoding: 124392 124392 974
+Encoding: 124392 124392 973
 Width: 678
 Flags: W
 HStem: -10 80<237.656 348.625> 163 59<408.713 464.02> 254 95<468.316 547.353> 624 100<252.109 447.07>
@@ -140571,22 +140522,22 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Es
-Encoding: 124393 124393 975
+Encoding: 124393 124393 974
 Width: 658
-Flags: WO
+Flags: W
 HStem: -10 100<229.266 471.933> 351 100<202.82 427.188> 624 100<275.843 458.603>
 VStem: 55 60<154.96 279.104> 175 70<553.566 594.254> 545 50<337.201 532.686>
 AnchorPoint: "Dot below" 358 0 basechar 0
 AnchorPoint: "Umlaut" 355 714 basechar 0
 LayerCount: 2
 Fore
-Refer: 980 -1 S 1 0 0 1 -12 18 2
+Refer: 979 -1 S 1 0 0 1 -12 18 2
 Refer: 954 124373 N 1 0 0 1 0 0 2
 Colour: ffff00
 EndChar
 
 StartChar: Onao.Eh
-Encoding: 124394 124394 976
+Encoding: 124394 124394 975
 Width: 678
 Flags: W
 HStem: -10 100<218.716 415.363> 229 80<294 411> 229 64<196 249.535> 392 80<164.906 263.799> 624 100<250.984 442.825>
@@ -140792,7 +140743,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ec
-Encoding: 124395 124395 977
+Encoding: 124395 124395 976
 Width: 700
 Flags: W
 HStem: -10 100<165.498 264.116 418.535 518.686> 382 90<184.661 356.035> 634 91<257.612 357.154>
@@ -141041,7 +140992,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Enn
-Encoding: 124396 124396 978
+Encoding: 124396 124396 977
 Width: 799
 Flags: W
 HStem: -10 100<208.428 375.346> 0 21G<664 734> 396 80<153.488 253.762> 624 100<246.588 400.166> 694 20G<663.474 734>
@@ -141245,7 +141196,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Eg
-Encoding: 124397 124397 979
+Encoding: 124397 124397 978
 Width: 678
 Flags: W
 HStem: -10 100<223.925 416.194> 624 100<252.108 444.296>
@@ -141375,7 +141326,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Slash
-Encoding: 1114176 -1 980
+Encoding: 1114172 -1 979
 Width: 1000
 LayerCount: 2
 Fore
@@ -141390,7 +141341,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uml.DotAbove
-Encoding: 124398 124398 981
+Encoding: 124398 124398 980
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -141404,7 +141355,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uml.DotBelow
-Encoding: 124399 124399 982
+Encoding: 124399 124399 981
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -141458,7 +141409,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Hodd
-Encoding: 124400 124400 983
+Encoding: 124400 124400 982
 Width: 360
 Flags: W
 HStem: 40 100<133.789 226.211> 574 100<133.789 226.211>
@@ -141588,7 +141539,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.0
-Encoding: 124401 124401 984
+Encoding: 124401 124401 983
 Width: 559
 Flags: W
 HStem: -10 100<194.784 337.477> 624 100<221.523 364.216>
@@ -141691,7 +141642,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.1
-Encoding: 124402 124402 985
+Encoding: 124402 124402 984
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141699,7 +141650,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.2
-Encoding: 124403 124403 986
+Encoding: 124403 124403 985
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141707,7 +141658,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.3
-Encoding: 124404 124404 987
+Encoding: 124404 124404 986
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141715,7 +141666,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.4
-Encoding: 124405 124405 988
+Encoding: 124405 124405 987
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141723,7 +141674,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.5
-Encoding: 124406 124406 989
+Encoding: 124406 124406 988
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141731,7 +141682,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.6
-Encoding: 124407 124407 990
+Encoding: 124407 124407 989
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141739,7 +141690,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.7
-Encoding: 124408 124408 991
+Encoding: 124408 124408 990
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141747,7 +141698,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.8
-Encoding: 124409 124409 992
+Encoding: 124409 124409 991
 Width: 559
 Flags: W
 LayerCount: 2
@@ -141755,7 +141706,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.9
-Encoding: 124410 124410 993
+Encoding: 124410 124410 992
 Width: 559
 Flags: W
 LayerCount: 2
