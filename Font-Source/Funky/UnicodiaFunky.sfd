@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721486502
+ModificationTime: 1721507528
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -141614,10 +141614,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 281 714 basechar 0
+AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-279.5 724 m 128,-1,1
+279.5 724 m 132,-1,1
  382 724 382 724 445.5 618.5 c 128,-1,2
  509 513 509 513 509 357 c 128,-1,3
  509 201 509 201 445.5 95.5 c 128,-1,4
@@ -141625,7 +141627,7 @@ SplineSet
  177 -10 177 -10 113.5 95.5 c 128,-1,6
  50 201 50 201 50 357 c 128,-1,7
  50 513 50 513 113.5 618.5 c 128,-1,0
- 177 724 177 724 279.5 724 c 128,-1,1
+ 177 724 177 724 279.5 724 c 132,-1,1
 294 624 m 0,8,9
  241 624 241 624 199.5 585.5 c 128,-1,10
  158 547 158 547 134 482.5 c 128,-1,11
@@ -141826,6 +141828,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 361 0 basechar 0
+AnchorPoint: "Umlaut" 281 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -141868,128 +141872,129 @@ StartChar: Onao.2
 Encoding: 124403 124403 985
 Width: 559
 Flags: W
-HStem: 0 90<148 436.947> 644 80<187.2 393.322>
-VStem: 65 70<511.537 591.674> 449 60<443.291 595.989> 467 42<123.613 172>
+HStem: 0 90<170 433.401> 624 100<166.518 382.903>
+VStem: 55 60<503.505 574.279> 444 60<428.115 569.166> 462 42<122.719 172>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
- 25
+ 0
  1
  0
 CALL
 PUSHB_1
- 18
+ 31
 MDRP[min,rnd,black]
 PUSHB_1
- 2
+ 10
 MDAP[rnd]
 PUSHB_1
- 11
+ 22
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 30
+ 39
 MDAP[rnd]
 PUSHB_1
- 8
+ 18
 MDRP[rp0,rnd,white]
 PUSHB_1
- 25
+ 0
 SHP[rp2]
 PUSHB_1
- 5
+ 14
 MDRP[min,rnd,black]
 PUSHB_1
- 5
+ 14
 SRP0
 PUSHB_2
- 0
+ 6
  1
 CALL
 PUSHB_1
- 13
+ 26
 MDRP[min,rnd,black]
 PUSHB_1
- 23
+ 37
 SHP[rp2]
 PUSHB_1
- 13
+ 26
 SRP0
 PUSHB_1
- 22
+ 36
 MDRP[min,rnd,black]
 PUSHB_1
- 22
+ 36
 MDAP[rnd]
 PUSHB_2
- 31
+ 40
  1
 CALL
 PUSHB_2
- 0
- 5
+ 6
+ 14
 SRP1
 SRP2
-PUSHB_3
- 10
- 11
- 18
-IP
+PUSHB_2
+ 22
+ 31
 IP
 IP
 PUSHB_2
- 13
- 22
+ 26
+ 36
 SRP1
 SRP2
 PUSHB_1
- 24
+ 38
 IP
 SVTCA[y-axis]
 PUSHB_2
- 2
- 18
+ 10
+ 31
 SRP1
 SRP2
 PUSHB_6
- 5
- 8
- 13
- 22
- 23
+ 1
+ 14
+ 18
  26
+ 36
+ 37
 DEPTH
 SLOOP
 IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 279 0 basechar 0
+AnchorPoint: "Umlaut" 278 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-449 527 m 0,0,1
- 449 644 449 644 292 644 c 0,2,3
- 206 644 206 644 170.5 610 c 128,-1,4
- 135 576 135 576 135 494 c 1,5,6
- 105 494 105 494 85 511 c 128,-1,7
- 65 528 65 528 65 567 c 0,8,9
- 65 635 65 635 126.5 679.5 c 128,-1,10
- 188 724 188 724 286.5 724 c 128,-1,11
- 385 724 385 724 447 667 c 128,-1,12
- 509 610 509 610 509 516 c 0,13,14
- 509 442 509 442 471 380 c 0,15,16
- 420 294 420 294 292 199 c 1,17,-1
- 148 90 l 1,18,-1
- 379 90 l 2,19,20
- 420 90 420 90 437.5 110.5 c 128,-1,21
- 455 131 455 131 467 183 c 1,22,-1
- 509 172 l 1,23,-1
- 504 0 l 1,24,-1
- 65 0 l 1,25,-1
- 65 133 l 1,26,-1
- 243 267 l 2,27,28
- 367 361 367 361 408 413.5 c 128,-1,29
- 449 466 449 466 449 527 c 0,0,1
+55 0 m 1,0,-1
+ 55 109 l 1,1,-1
+ 238 247 l 2,2,3
+ 338 323 338 323 386 378 c 0,4,5
+ 444 443 444 443 444 504 c 0,6,7
+ 444 556 444 556 404 589 c 0,8,9
+ 361 624 361 624 274 624 c 0,10,11
+ 194 624 194 624 157 596 c 0,12,13
+ 115 564 115 564 115 486 c 1,14,15
+ 85 486 85 486 70 503 c 0,16,17
+ 55 519 55 519 55 554 c 0,18,19
+ 55 628 55 628 118 675 c 0,20,21
+ 183 724 183 724 277 724 c 0,22,23
+ 380 724 380 724 443 666 c 0,24,25
+ 504 610 504 610 504 510 c 0,26,27
+ 504 455 504 455 487 409 c 0,28,29
+ 448 300 448 300 272 167 c 2,30,-1
+ 170 90 l 1,31,-1
+ 374 90 l 2,32,33
+ 415 90 415 90 434 112 c 0,34,35
+ 450 131 450 131 462 183 c 1,36,-1
+ 504 172 l 1,37,-1
+ 499 0 l 1,38,-1
+ 55 0 l 1,0,-1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -141997,8 +142002,162 @@ EndChar
 StartChar: Onao.3
 Encoding: 124404 124404 986
 Width: 559
-Flags: W
+Flags: WO
+HStem: -10 100<192.474 395.838> 349 80<197.217 295> 624 90<184 423.718>
+VStem: 55 60<156.237 280.506> 437 37<553 605.103>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_3
+ 7
+ 0
+ 0
+CALL
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_3
+ 15
+ 2
+ 0
+CALL
+PUSHB_1
+ 23
+MDRP[min,rnd,black]
+PUSHB_3
+ 23
+ 15
+ 10
+CALL
+PUSHB_4
+ 64
+ 23
+ 18
+ 9
+CALL
+PUSHB_5
+ 13
+ 26
+ 7
+ 15
+ 13
+CALL
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 31
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 29
+MDRP[min,rnd,black]
+PUSHB_1
+ 29
+SRP0
+PUSHB_2
+ 18
+ 1
+CALL
+PUSHB_1
+ 17
+MDRP[min,rnd,black]
+PUSHB_2
+ 32
+ 1
+CALL
+PUSHB_2
+ 29
+ 10
+SRP1
+SRP2
+PUSHB_2
+ 14
+ 15
+IP
+IP
+PUSHB_1
+ 18
+SRP1
+PUSHB_4
+ 6
+ 7
+ 0
+ 13
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 17
+SRP2
+PUSHB_1
+ 16
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 26
+ 0
+SRP1
+SRP2
+PUSHB_3
+ 2
+ 4
+ 10
+IP
+IP
+IP
+PUSHB_1
+ 13
+SRP1
+PUSHB_1
+ 24
+IP
+PUSHB_2
+ 15
+ 23
+SRP1
+SRP2
+PUSHB_1
+ 14
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 279 714 basechar 0
+AnchorPoint: "Dot below" 296 0 basechar 0
 LayerCount: 2
+Fore
+SplineSet
+302 90 m 0,0,1
+ 425 90 425 90 492 175 c 1,2,3
+ 509 161 509 161 509 135.5 c 128,-1,4
+ 509 110 509 110 480.5 75.5 c 128,-1,5
+ 452 41 452 41 403.5 15.5 c 128,-1,6
+ 355 -10 355 -10 296.5 -10 c 128,-1,7
+ 238 -10 238 -10 182 13 c 128,-1,8
+ 126 36 126 36 90.5 85.5 c 128,-1,9
+ 55 135 55 135 55 208 c 0,10,11
+ 55 308 55 308 125 368.5 c 128,-1,12
+ 195 429 195 429 295 429 c 1,13,-1
+ 82 655 l 1,14,-1
+ 82 714 l 1,15,-1
+ 470 714 l 1,16,-1
+ 474 553 l 1,17,-1
+ 437 553 l 1,18,19
+ 433 593 433 593 424 605.5 c 128,-1,20
+ 415 618 415 618 401.5 621 c 128,-1,21
+ 388 624 388 624 363 624 c 2,22,-1
+ 184 624 l 1,23,-1
+ 383 413 l 1,24,-1
+ 383 349 l 1,25,-1
+ 309 349 l 2,26,27
+ 224 349 224 349 169.5 311.5 c 128,-1,28
+ 115 274 115 274 115 219 c 128,-1,29
+ 115 164 115 164 166.5 127 c 128,-1,30
+ 218 90 218 90 302 90 c 0,0,1
+EndSplineSet
 Colour: ffff00
 EndChar
 

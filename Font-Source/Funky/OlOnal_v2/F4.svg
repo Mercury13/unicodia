@@ -3,7 +3,7 @@
    version="1.1"
    viewBox="-10 0 579 1000"
    id="svg1"
-   sodipodi:docname="F3.svg"
+   sodipodi:docname="F4.svg"
    inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="1.562"
-     inkscape:cx="155.24968"
-     inkscape:cy="381.24199"
+     inkscape:zoom="0.5522504"
+     inkscape:cx="484.38172"
+     inkscape:cy="478.9494"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -41,10 +41,12 @@
        id="guide2"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="569,200"
-       orientation="0,-1"
+       position="569,290"
+       orientation="0,1"
        id="guide3"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="569,190"
        orientation="0,1"
@@ -67,37 +69,23 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="514,715.10884"
+       position="519,200"
        orientation="-1,0"
        id="guide8"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="569,290"
+       position="0,844"
        orientation="0,1"
-       id="guide9"
+       id="guide10"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="454,696.11454"
+       position="459,200"
        orientation="-1,0"
        id="guide12"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="65,364.41875"
-       orientation="-1,0"
-       id="guide14"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="125,200"
-       orientation="-1,0"
-       id="guide15"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
@@ -123,47 +111,93 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="70,313.14981"
+       position="75,313.14981"
        orientation="-0.60297551,0.79775969"
        id="guide21"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="145,709.04681"
-       orientation="-0.5,-0.8660254"
-       id="guide22"
-       inkscape:locked="false" />
-    <sodipodi:guide
        position="477,383"
        orientation="0.25881905,0.96592583"
        id="guide23"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="166.46077,280"
+       position="145,270"
        orientation="-0.60297551,0.79775969"
        id="guide24"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="145,694.02307"
+       position="65,200"
        orientation="-1,0"
-       id="guide25"
+       id="guide7"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="0,824"
        orientation="0,1"
-       id="guide7"
+       id="guide11"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="193.93839,824"
+       orientation="0.72736533,0.68625044"
+       id="guide13"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="318.30885,628.9869"
+       orientation="0,1"
+       id="guide19"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="318.30885,548.9869"
+       orientation="0,1"
+       id="guide20"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="92.30952,870.8329"
+       orientation="-1,0"
+       id="guide26"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="125,200"
+       orientation="-1,0"
+       id="guide27"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="255.76184,681.49808"
+       orientation="0.72736533,0.68625044"
+       id="guide28"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="92.30952,868.52639"
+       orientation="0,-1"
+       id="guide29"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="79.30545,868.52639"
+       orientation="1,0"
+       id="guide30"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      fill="currentColor"
-     d="M 55,800 V 690.62937 L 237.52887,552.66748 C 357.6859,461.84847 444,379.31139 444,305.12037 444,223.98027 384.71822,176 288.00435,176 165.23893,176 115,208.7884 115,314.12541 74.613335,313.69425 55,289.81586 55,252.59578 55,144.0853 148.94376,76 286.64313,76 411.19269,76 504,161.23242 504,277.33787 504,405.68562 460.81388,489.95897 271.74689,632.8626 L 169.69115,710 H 374 c 57.80288,0 73.38233,-27.22046 88,-93 L 504,628.25387 499,800 Z"
-     id="path1"
-     sodipodi:nodetypes="ccssscsssscscccc" />
+     d="M 306.27265,810 C 172.9407,810 55,739.26695 55,596 55,451.87774 167.7189,371.0131 295.30478,371.0131 L 82.30952,145.25678 82.30952,86 h 387.29196 l 4.40476,161 h -37 c -5.13109,-52.42049 -8.12094,-71 -74,-71 H 183.93839 l 199.08542,211.0131 v 64 H 308.71429 C 194.04068,451.0131 115,509.28522 115,581.49711 115,653.70901 190.47307,710 297.4947,710 391.81511,710 449.12945,679.83379 492.2619,625 499.31989,630.95481 509,643.97945 509,662.74214 509,717.03193 409.46086,810 306.27265,810 Z"
+     id="path1-9"
+     style="stroke-width:1"
+     sodipodi:nodetypes="ssccccccscccszscss" />
 </svg>
