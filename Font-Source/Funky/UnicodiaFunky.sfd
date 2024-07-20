@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721464329
+ModificationTime: 1721465276
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -141478,6 +141478,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 180 714 basechar 0
+AnchorPoint: "Dot below" 181 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -141520,19 +141522,101 @@ StartChar: Onao.0
 Encoding: 124401 124401 984
 Width: 559
 Flags: W
+HStem: -10 100<194.784 337.477> 624 100<221.523 364.216>
+VStem: 50 60<199.971 475.9> 449 60<238.1 514.029>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_3
+ 5
+ 0
+ 0
+CALL
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 20
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 12
+MDRP[min,rnd,black]
+PUSHB_1
+ 12
+SRP0
+PUSHB_2
+ 18
+ 1
+CALL
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_2
+ 21
+ 1
+CALL
+PUSHB_2
+ 18
+ 12
+SRP1
+SRP2
+PUSHB_4
+ 1
+ 4
+ 5
+ 0
+DEPTH
+SLOOP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 8
+ 14
+SRP1
+SRP2
+PUSHB_4
+ 3
+ 6
+ 7
+ 2
+DEPTH
+SLOOP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
-503 0 m 1,0,-1
- 503 64 l 1,1,-1
- 559 64 l 1,2,-1
- 559 0 l 1,3,-1
- 503 0 l 1,0,-1
-0 0 m 1,4,-1
- 0 64 l 1,5,-1
- 56 64 l 1,6,-1
- 56 0 l 1,7,-1
- 0 0 l 1,4,-1
+279.5 724 m 128,-1,1
+ 382 724 382 724 445.5 618.5 c 128,-1,2
+ 509 513 509 513 509 357 c 128,-1,3
+ 509 201 509 201 445.5 95.5 c 128,-1,4
+ 382 -10 382 -10 279.5 -10 c 128,-1,5
+ 177 -10 177 -10 113.5 95.5 c 128,-1,6
+ 50 201 50 201 50 357 c 128,-1,7
+ 50 513 50 513 113.5 618.5 c 128,-1,0
+ 177 724 177 724 279.5 724 c 128,-1,1
+294 624 m 0,8,9
+ 241 624 241 624 199.5 585.5 c 128,-1,10
+ 158 547 158 547 134 482.5 c 128,-1,11
+ 110 418 110 418 110 322 c 128,-1,12
+ 110 226 110 226 152.5 158 c 128,-1,13
+ 195 90 195 90 265 90 c 0,14,15
+ 318 90 318 90 359.5 128.5 c 128,-1,16
+ 401 167 401 167 425 231.5 c 128,-1,17
+ 449 296 449 296 449 392 c 128,-1,18
+ 449 488 449 488 406.5 556 c 128,-1,19
+ 364 624 364 624 294 624 c 0,8,9
 EndSplineSet
 Colour: ffff00
 EndChar

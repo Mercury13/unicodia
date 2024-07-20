@@ -3,10 +3,11 @@
    version="1.1"
    viewBox="-10 0 579 1000"
    id="svg1"
-   sodipodi:docname="Onao.0base.svg"
+   sodipodi:docname="F1.svg"
    inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
@@ -22,8 +23,8 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
      inkscape:zoom="0.781"
-     inkscape:cx="62.099872"
-     inkscape:cy="483.35467"
+     inkscape:cx="-18.565941"
+     inkscape:cy="587.06786"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -108,9 +109,26 @@
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="289.5,924"
+       orientation="1,0"
+       id="guide13"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="149.80794,914"
+       orientation="1,0"
+       id="guide14"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
-     fill="currentColor"
-     d="M503 800v-64h56v64h-56zM0 800v-64h56v64h-56z"
-     id="path1" />
+     id="path13"
+     style="fill:#4e9a06;fill-rule:evenodd;stroke-width:60;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5"
+     d="M 279.5,76 C 139.80794,76 50,240.3115 50,443 50,645.79757 139.80794,810 279.5,810 L 269.54075,710 C 169.59078,710 110,614.00008 110,454.77002 110,307.30999 191.32005,176 289.45925,176 Z"
+     sodipodi:nodetypes="csccscc" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path13"
+     id="use13"
+     transform="rotate(180,279.5,443)" />
 </svg>
