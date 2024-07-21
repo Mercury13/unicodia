@@ -958,7 +958,7 @@
      <orig>
       <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in USA in 1963. Width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
       <p />
-      <p>First 32 characters, 00…1f, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back and type backquote. Last character, 7F=DEL, goes back to punched tapes{{-}}holes puched in all tracks tell that character is punched by mistake and should{{_}}not be read.</p>
+      <p>First 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes puched in all tracks tell that character is punched by mistake and should{{_}}not be read.</p>
       <p />
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
