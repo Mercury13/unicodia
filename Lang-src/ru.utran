@@ -9016,14 +9016,14 @@
       <p />
       <p>Modern Tulu uses [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]].</p>
       <p />
-      <p>Ancient digits are very rarely attested and not encoded, modern ones are [[pt:unification|unified]] with Kannada. Tulu manuscripts contain editorial marks looking like +, so picture for virtual [[pt:virama|virama]] has plus inside rather than below.</p>
+      <p>Ancient digits are very rarely attested and not encoded, modern ones are [[pt:unification|unified]] with Kannada. Tulu manuscripts contain editorial marks looking like + (will probably be encoded later as a pan-Indic punctuation), so picture for virtual [[pt:virama|virama]] has plus inside rather than below. ''Danda'' bar is ordinary, and was encoded to prevent problems in multilingual text.</p>
      </orig>
      <transl>
       <p>Письмо близко к [[ps:Gran|грантхе]], и изредка используется сейчас в индуизме.</p>
       <p />
       <p>Современный тулу использует [[ps:Knda|каннаду]] и [[ps:Mlym|малаялам]].</p>
       <p />
-      <p>Древние цифры встречаются очень редко и не закодированы, современные [[pt:unification|унифицированы]] с каннадой. Рукописи на тулу содержат редакторские пометы, похожие на +, так что на изображении виртуальной [[pt:virama|вирамы]] плюс внутри, а не снизу.</p>
+      <p>Древние цифры встречаются очень редко и не закодированы, современные [[pt:unification|унифицированы]] с каннадой. Рукописи на тулу содержат редакторские пометы, похожие на + (скорее всего, будет закодировано позже как общеиндийский знак препинания), так что на изображении виртуальной [[pt:virama|вирамы]] плюс внутри, а не снизу. Палка ''данда'' обычная, и закодирована, чтобы избежать проблем в многоязычном тексте.</p>
      </transl>
     </text>
    </group>
