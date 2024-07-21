@@ -1373,7 +1373,7 @@ constinit const uc::Block uc::blocks[] {
             "Nag Mundari",
             { EcScript::Nagm, 0}, MapType::AS_OTHER, EcScript::Nagm },
     // Ol Onal OK, done in UnicodiaFunky
-    { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, Ifg::MISSING  },
+    { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, {}, 14_hx  },
             "Ol Onal",
             { EcScript::Onao, 0 }, MapType::AS_OTHER, EcScript::Onao },
     // Ethiopic ex B OK, Noto quickly arrived

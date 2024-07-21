@@ -453,7 +453,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1925), EcFont::OLCHIKI },
-    /// @todo [U16, big tofu] Still working on Ol Onal
+    // Ol Onal OK, made in Funky
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1980), EcFont::FUNKY },
