@@ -664,7 +664,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(9), EcFont::NORMAL },
+        Dating::century(9), EcFont::FUNKY },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

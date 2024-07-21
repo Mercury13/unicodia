@@ -1027,7 +1027,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [U16, big tofu] Tulu Tigalari
     { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA, Ifg::MISSING  },
             "Tulu-Tigalari",
-            { EcScript::Tutg, 0}, MapType::AS_BRAH, EcScript::Tutg },
+            { EcScript::Tutg, 0}, MapType::AS_BRAH,
+            EcScript::Tutg, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Newa OK
     { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, {}, 2_hy },
             "Newa",
