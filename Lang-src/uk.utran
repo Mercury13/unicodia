@@ -9013,16 +9013,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>This block [[pt:unification|unifies]] several close scripts: ''Tulu'', ''Tigalari'', ''Grantha-Malayalam'' and others. They are related to [[ps:Gran|Grantha]], and are rarely used nowadays in Hinduism.</p>
+      <p>This block [[pt:unification|unifies]] two close scripts, ''Tulu'' and ''Tigalari''. Maybe characters of sister-script ''Grantha-Malayalam'' will be added soon. They all are related to [[ps:Gran|Grantha]], and are rarely used nowadays in Hinduism. The script is under revival, there are some requests to disunify modern Tulu.</p>
       <p />
-      <p>Modern Tulu uses [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]].</p>
+      <p>Modern Tulu is mostly written in [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]].</p>
       <p />
       <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks looking like + (will probably be encoded later as a pan-Indic punctuation), so picture for virtual [[pt:virama|virama]] has plus inside rather than below. ''Danda'' bar is ordinary, and was encoded to prevent problems in multilingual text.</p>
      </orig>
      <transl>
-      <p>Блок [[pt:unification|уніфікує]] кілька близьких писемностей: ''тулу'', ''тиґаларі'', ''грантху-малаялам'' та інші. Вони споріднені з [[ps:Gran|грантхою]], і зараз зрідка використовуються у індуїзмі.</p>
+      <p>Блок [[pt:unification|уніфікує]] дві близьких писемності: ''тулу'' та ''тиґаларі''. Можливо, скоро додадуть символи сестринської писемності ''грантха-малаялам''. Усі вони споріднені з [[ps:Gran|грантхою]], і зараз зрідка використовуються у індуїзмі. Писемність відроджується, є пропозиції розуніфікувати сучасний тулу.</p>
       <p />
-      <p>Сучасний тулу використовує [[ps:Knda|каннаду]] та [[ps:Mlym|малаялам]].</p>
+      <p>Сучасний тулу пишеться здебільшого [[ps:Knda|каннадою]] та [[ps:Mlym|малаяламом]].</p>
       <p />
       <p>Давні цифри дуже рідко зустрічаються та не закодовані, сучасні уніфіковані з каннадою. Рукописи на тулу містять редакторські помітки, схожі на + (скоріше за все, буде закодовано пізніше як загальноіндійський розділовий знак), так що на зображенні віртуальної [[pt:virama|вірами]] плюс всередині, а не знизу. Палиця ''данда'' звичайна, і закодована, щоб уникнути проблем у багатомовному тексті.</p>
      </transl>
