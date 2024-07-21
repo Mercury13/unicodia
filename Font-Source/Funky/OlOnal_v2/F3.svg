@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="1.562"
-     inkscape:cx="155.24968"
-     inkscape:cy="381.24199"
+     inkscape:zoom="0.781"
+     inkscape:cx="112.03585"
+     inkscape:cy="561.45967"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -81,30 +81,9 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="454,696.11454"
-       orientation="-1,0"
-       id="guide12"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
        position="65,364.41875"
        orientation="-1,0"
        id="guide14"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="125,200"
-       orientation="-1,0"
-       id="guide15"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="215,200"
-       orientation="-1,0"
-       id="guide16"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
@@ -123,36 +102,17 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="70,313.14981"
-       orientation="-0.60297551,0.79775969"
+       position="65,273"
+       orientation="0.62113247,-0.78370559"
        id="guide21"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="145,709.04681"
-       orientation="-0.5,-0.8660254"
-       id="guide22"
-       inkscape:locked="false" />
-    <sodipodi:guide
        position="477,383"
        orientation="0.25881905,0.96592583"
        id="guide23"
        inkscape:locked="false" />
-    <sodipodi:guide
-       position="166.46077,280"
-       orientation="-0.60297551,0.79775969"
-       id="guide24"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="145,694.02307"
-       orientation="-1,0"
-       id="guide25"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="0,824"
        orientation="0,1"
@@ -160,10 +120,44 @@
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="75,364.41875"
+       orientation="-1,0"
+       id="guide12"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="135,364.41875"
+       orientation="-1,0"
+       id="guide13"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="504,715.10884"
+       orientation="-1,0"
+       id="guide15"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="434,715.10884"
+       orientation="-1,0"
+       id="guide16"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <path
      fill="currentColor"
-     d="M 55,800 V 690.62937 L 237.52887,552.66748 C 357.6859,461.84847 444,379.31139 444,305.12037 444,223.98027 384.71822,176 288.00435,176 165.23893,176 115,208.7884 115,314.12541 74.613335,313.69425 55,289.81586 55,252.59578 55,144.0853 148.94376,76 286.64313,76 411.19269,76 504,161.23242 504,277.33787 504,405.68562 460.81388,489.95897 271.74689,632.8626 L 169.69115,710 H 374 c 57.80288,0 73.38233,-27.22046 88,-93 L 504,628.25387 499,800 Z"
+     d="M 55,800 V 750.80863 L 135,710 h 239 c 57.80288,0 73.38233,-27.22046 88,-93 L 504,628.25387 499,800 Z"
      id="path1"
-     sodipodi:nodetypes="ccssscsssscscccc" />
+     sodipodi:nodetypes="cccscccc"
+     style="fill:#5c3566" />
+  <path
+     fill="currentColor"
+     d="M 55,727 207.18927,606.38111 C 335.90139,504.36923 424,388.40944 424,297.0799 424,213.48583 365.43792,176 277.83055,176 190.22319,176 125,210.90309 125,312.59919 94.681755,312.59919 65,288.9921 65,260 65,134.39056 163.75871,76 286.56594,76 421.46839,76 494,167.27875 494,284.89116 494,391.74226 434,501.33381 287.51699,612.89608 L 135,729.05386 55,775.40431 Z"
+     id="path1-9"
+     sodipodi:nodetypes="csszcssssccc" />
 </svg>
