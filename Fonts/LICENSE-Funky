@@ -59,6 +59,20 @@ Rationale:
 Source of inspiration: educational Nag specimen
 Status: working
 
+=== Ol Onal ===
+
+Source of inspiration: alphabet written with marker + multilingual writings on idol
+Status: working, minor glyph problems, no danda
+
+Rationale:
+1. Backslash quill is common in all Indic scripts, Brahmic and alphabetical. I played with it in e.g. Q-like letter (DB Aw).
+2. Inverse contrast is also common. As Ol Onal is a really small script, it’s routinely repeated in e.g. Devanagari that’s more compact (IDK whether Devanagari is Bhumij or other local language). They mechanically compress fonts and get… you get point.
+3. I draw Noto’s drop everywhere curved thick line starts rather than ends. Just draw the letter with quill dipped into ink, or a really poor ballpoint — there were in 90s, I did not see such very-very long, and ≈2000 I wrote lectures with a rather good pen. (There were LOTS of bad copybooks, but that’s another thing.)
+4. As Ol Onal is a script w/o printed tradition, I was inspired with handwritten specimen. This approach proved good in Todhri, and I was probably right, SIL did the same with Kirat.
+5. I wanted to make glottal-8 smaller than normal letter, and I checked whether it’s possible.
+6. Position of umlauts in printed text is strange because of poor fontmaker’s skills and ASCII mapping. Handwritten text often draws them in more natural places.
+
+
 === Todhri ===
 
 Source of inspiration: Michael Everson’s font, Johann von Hahn’s description, handwritten notes from Unicode request
