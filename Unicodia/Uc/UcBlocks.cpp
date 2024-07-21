@@ -1368,11 +1368,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho",
             { EcScript::Wcho, 0}, MapType::AS_OTHER, EcScript::Wcho },
-    // Nag OK, done in FunkySample
+    // Nag OK, done in UnicodiaFunky
     { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari",
             { EcScript::Nagm, 0}, MapType::AS_OTHER, EcScript::Nagm },
-    /// @todo [U16, big tofu] Ol Onal
+    // Ol Onal OK, done in UnicodiaFunky
     { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, Ifg::MISSING  },
             "Ol Onal",
             { EcScript::Onao, 0 }, MapType::AS_OTHER, EcScript::Onao },
