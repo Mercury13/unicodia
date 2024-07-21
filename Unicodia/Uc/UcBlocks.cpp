@@ -1028,7 +1028,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA, Ifg::MISSING  },
             "Tulu-Tigalari",
             { EcScript::Tutg, 0}, MapType::AS_BRAH,
-            EcScript::Tutg, EcFont::NORMAL, Bfg::VIRAMA_UP },
+            EcScript::Tutg, EcFont::NORMAL, Bfg::VIRAMA_INSIDE },
     // Newa OK
     { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, {}, 2_hy },
             "Newa",

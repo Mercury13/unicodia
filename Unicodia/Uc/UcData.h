@@ -792,7 +792,8 @@ namespace uc {
         BIG_CONTROLS    = 1<<11,    ///< [+] Control chars use same size as normal
         VIRAMA_UP       = 1<<12,    ///< [+] Move dotted circle ¼r upwards in virtual virama
         VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
-        EMOJI_BY_CASE   = 1<<14,    ///< [+] Text/graphic VS16 emoji is case-by-case
+        VIRAMA_INSIDE   = 1<<14,    ///< [+] Plus inside virtual virama (Tutg)
+        EMOJI_BY_CASE   = 1<<15,    ///< [+] Text/graphic VS16 emoji is case-by-case
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent

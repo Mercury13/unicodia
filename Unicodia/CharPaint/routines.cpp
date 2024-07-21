@@ -760,8 +760,13 @@ void drawVirtualVirama(
     auto loY = baseY + tightRect.bottom();
     auto hiY = rcFrame.bottom();
     // Plus
-    cen.setY(cen.y() + width * 0.5f);
-    rcFrame.moveCenter(cen);
+    if (blk.flags.have(uc::Bfg::VIRAMA_INSIDE)) {
+        loY = baseY + tightRect.top() - tightRect.height();
+        hiY = baseY + tightRect.bottom() + tightRect.height();
+    } else {
+        cen.setY(cen.y() + width * 0.5f);
+        rcFrame.moveCenter(cen);
+    }
 
     auto& font1 = uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
     auto plusSize = absSize;
