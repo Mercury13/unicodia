@@ -123,7 +123,7 @@ namespace {
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
-        cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5, cp::RIGHT_ARROW, 0 };
+        cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5, cp::EMOJI_RIGHT_ARROW, 0 };
     constexpr const std::u32string_view UNSEARCHABLE_EMOJI (UNSEARCHABLE_EMOJI_C);
 
     enum class SearchLevel {
@@ -204,7 +204,7 @@ namespace {
             // Allowed when used alone
             cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5,   // 5
             cp::MALE, cp::FEMALE, cp::MAN, cp::WOMAN,            // 9
-            cp::RIGHT_ARROW,                         // 10
+            cp::EMOJI_RIGHT_ARROW,                         // 10
             // The rest
             cp::MAN_AND_WOMAN, cp::TWO_MEN, cp::TWO_WOMEN, cp::SANTA_CLAUS, cp::MRS_CLAUS };
         constexpr size_t OFS_1 = 10;
