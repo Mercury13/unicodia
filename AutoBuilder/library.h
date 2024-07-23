@@ -31,6 +31,8 @@ namespace lib {
         } cache;
         unsigned maxValueLength() const;
         [[nodiscard]] Node& newChild();
+        Node* findChild(std::u8string_view name);
+        Node& rqChild(std::u8string_view name);
     };
 
     struct Hash32 : public std::hash<std::u32string_view> {
@@ -56,7 +58,6 @@ namespace lib {
         /// Root of emoji branch
         Node root;
     };
-
 
     EmojiData loadEmoji(const char* fname);
 

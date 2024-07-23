@@ -1090,6 +1090,9 @@ namespace {
     void completeEmojiData(size_t index)
     {
         auto& node = uc::libNodes[index];
+        if (node.flags.have(uc::Lfg::NO_COUNTING))
+            return;
+
         auto& version = node.emojiVersion();
         // Emoji type
         auto clazz = classifyEmoji(node.value);

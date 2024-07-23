@@ -7667,12 +7667,24 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij ''(India, 27k as of 2011)''</orig>
-     <transl>бхумідж ''(Індія, 27 тис. на 2011)''</transl>
+     <orig>Bhumij ''(Eastern India, 27k as of 2011)''</orig>
+     <transl>бхумідж ''(Східна Індія, 27 тис. на 2011)''</transl>
     </text>
     <text id="Text">
-     <orig>Invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
-     <transl>Винахідник{{-}}Махендра Натх Сардар. У 1992 спільнота бхумідж провела конкурс на нове письмо, і воно було вже готове, і перемогло з трьох заявок. Великі літери звалися ''ол-онал'', малі ''ґаланг-онал'', але малі швидко відпали.</transl>
+     <orig>
+      <p>Small Austroasiatic language from Munda group, relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
+      <p />
+      <p>The script was invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
+      <p />
+      <p>Punctuation marks are [[pt:ascii|ASCII]], plus ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
+     </orig>
+     <transl>
+      <p>Маленька австроазійська мова з групи мунда, родичка [[ps:Nagm|мундарі]] та [[ps:Olck|сантальської]].</p>
+      <p />
+      <p>Винахідник письма{{-}}Махендра Натх Сардар. У 1992 спільнота бхумідж провела конкурс на нове письмо, і воно було вже готове, і перемогло з трьох заявок. Великі літери звалися ''ол-онал'', малі ''ґаланг-онал'', але малі швидко відпали.</p>
+      <p />
+      <p>Розділові знаки{{-}}[[pt:ascii|ASCII]], плюс палиця ''данда'' з [[ps:Deva|деванáґарі]]. Подвійної данди не помічено.</p>
+     </transl>
     </text>
    </group>
    <group id="Orkh">
@@ -13007,6 +13019,10 @@
     <text id="ConOut">
      <orig>Console outlined</orig>
      <transl>Консольні обведені</transl>
+    </text>
+    <text id="Regional">
+     <orig>Country letters</orig>
+     <transl>Літери країн</transl>
     </text>
    </group>
    <group id="Text">

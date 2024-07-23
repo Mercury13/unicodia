@@ -7666,12 +7666,24 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij ''(India, 27k as of 2011)''</orig>
-     <transl>бхумидж ''(Индия, 27 тыс. на 2011)''</transl>
+     <orig>Bhumij ''(Eastern India, 27k as of 2011)''</orig>
+     <transl>бхумидж ''(Восточная Индия, 27 тыс. на 2011)''</transl>
     </text>
     <text id="Text">
-     <orig>Invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
-     <transl>Изобретатель{{-}}Махендра Натх Сардар. В 1992 сообщество бхумидж провело конкурс на новое письмо, и оно было уже готово, и победило из трёх заявок. Заглавные буквы назывались ''ол-онал'', строчные ''галанг-онал'', но строчные быстро отпали.</transl>
+     <orig>
+      <p>Small Austroasiatic language from Munda group, relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
+      <p />
+      <p>The script was invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
+      <p />
+      <p>Punctuation marks are [[pt:ascii|ASCII]], plus ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
+     </orig>
+     <transl>
+      <p>Маленький встроазиатский язык из группы мунда, родственник [[ps:Nagm|мундари]] и [[ps:Olck|сантальского]].</p>
+      <p />
+      <p>Изобретатель письма{{-}}Махендра Натх Сардар. В 1992 сообщество бхумидж провело конкурс на новое письмо, и оно было уже готово, и победило из трёх заявок. Заглавные буквы назывались ''ол-онал'', строчные ''галанг-онал'', но строчные быстро отпали.</p>
+      <p />
+      <p>Знаки препинания{{-}}[[pt:ascii|ASCII]], плюс палка ''данда'' из [[ps:Deva|деванáгари]]. Двойной данды не замечено.</p>
+     </transl>
     </text>
    </group>
    <group id="Orkh">
@@ -13006,6 +13018,10 @@
     <text id="ConOut">
      <orig>Console outlined</orig>
      <transl>Консольные обведённые</transl>
+    </text>
+    <text id="Regional">
+     <orig>Country letters</orig>
+     <transl>Буквы стран</transl>
     </text>
    </group>
    <group id="Text">

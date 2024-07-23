@@ -22,6 +22,26 @@
 using namespace std::string_view_literals;
 
 
+lib::Node* lib::Node::findChild(std::u8string_view name)
+{
+    for (auto& v : children) {
+        if (v->name == name) {
+            return std::to_address(v);
+        }
+    }
+    return nullptr;
+}
+
+
+lib::Node& lib::Node::rqChild(std::u8string_view name)
+{
+    auto q = findChild(name);
+    if (!q) [[unlikely]]
+        throw std::logic_error("Cannot find child");
+    return *q;
+}
+
+
 unsigned lib::Node::maxValueLength() const
 {
     unsigned r = value.length();
@@ -328,8 +348,18 @@ lib::EmojiData lib::loadEmoji(const char* fname)
         }
     }
     // Flags A…Z are also single-characters
-    for (char32_t i = cp::FLAG_A; i <= cp::FLAG_Z; ++i)
+    auto& nodeComponents = r.root.rqChild(u8"Component");
+        nodeComponents.flags |= uc::Lfg::NO_COUNTING;
+    auto& nodeRegional = nodeComponents.newChild();
+        nodeRegional.flags |= uc::Lfg::TRANSLATE;
+        nodeRegional.name = u8"Regional";
+
+    for (char32_t i = cp::FLAG_A; i <= cp::FLAG_Z; ++i) {
         r.allSingleChar.emplace(i, nullptr);
+        auto& thatNode = nodeRegional.newChild();
+        thatNode.value = std::u32string(1, i);
+        thatNode.flags |= uc::Lfg::GRAPHIC_EMOJI | uc::Lfg::NO_COUNTING;
+    }
     return r;
 }
 
