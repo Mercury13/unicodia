@@ -32,8 +32,9 @@
 	<!-- Alphabetical sort does not count spaces: Ol Chiki < Old Klingon,
 		 and Old Klingon < Ol Onal, and that’s OK. But what to do if you’ve got both
 		 Ol Chiki and Ol Onal?
-		 Some of these fixups (Greek → Ancient Greek) are built into data
-		 and are locale-independent, but these ARE locale-dependent. -->
+		 Some fixups (Greek → Ancient Greek) are built into data
+		 and are locale-independent (see “ellipsis” below),
+		 but Ol Onal IS locale-dependent. -->
 	<alpha-fixup>
 		<blk start="1E5D0" target="Ol Chiki X" /><!-- Ol Onal after Ol Chiki -->
 	</alpha-fixup>
