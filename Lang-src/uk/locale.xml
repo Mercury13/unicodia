@@ -9,6 +9,7 @@
 		<alp>á__ґ_é____í______ó________________________________________</alp>
 		<alp>___Ґ______________________________________________________</alp>
 	</alpha-sort>
+	<alpha-fixup />
 	<ellipsis text="…">
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->

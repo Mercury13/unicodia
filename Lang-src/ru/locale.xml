@@ -20,6 +20,7 @@
 		<alp>_абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
 		<alp>_á____é_________ó___________________________________________</alp>
 	</alpha-sort>
+	<alpha-fixup />
 	<ellipsis text="…">
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->

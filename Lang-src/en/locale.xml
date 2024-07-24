@@ -28,6 +28,15 @@
 		<alp>____________________Ü_____</alp>
 		<alp>____________________ü_____</alp>
 	</alpha-sort>
+	<!-- Alphabetical sort does not count spaces: Ol Chiki < Old Klingon,
+		 and Old Klingon < Ol Onal, and that’s OK. But what to do if you’ve got both
+		 Ol Chiki and Ol Onal?
+		 Some of these fixups (Greek → Ancient Greek) are built into data
+		 and are locale-independent, but these ARE locale-dependent. -->
+	<alpha-fixup>
+		<blk start="1E5D0" target="Ol Chiki Y" /><!-- Ol Onal after Ol Chiki -->
+		<!-- :) Nice letter became a symbol, no matter whose — why? -->
+	</alpha-fixup>
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.
 		 These blocks are marked with ellipsis. -->
