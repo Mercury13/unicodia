@@ -59,7 +59,7 @@ These fonts are taken to Unicodia without author’s consent:
 * ASCII mapping is NOT a reason.
 
 ## Language
-**Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. Apostrophe is U+2019.
+**Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
