@@ -2060,13 +2060,10 @@ namespace {
 
     constexpr std::u32string_view STOP_CHARS = U"(—";
 
-    void buildSortKey(std::u8string_view x, SpecialSort specialSort,
+    void buildSortKey(std::u32string_view name32, SpecialSort specialSort,
                       const std::unordered_map<char32_t, int>& sortOrder,
                       uc::LocSortKey& r)
     {
-        // Get name
-        auto name32 = mojibake::toS<std::u32string>(x);
-
         // Trim by special shars — only if subkey is set (manual sorting)
         if (specialSort != SpecialSort::NO) {
             auto index = name32.find_first_of(STOP_CHARS);
@@ -2086,12 +2083,21 @@ namespace {
         }
     }
 
+    void buildSortKey(std::u8string_view x, SpecialSort specialSort,
+                      const std::unordered_map<char32_t, int>& sortOrder,
+                      uc::LocSortKey& r)
+    {
+        auto name32 = mojibake::toS<std::u32string>(x);
+        return buildSortKey(name32, specialSort, sortOrder, r);
+    }
+
 }   // anon namespace
 
 
 void uc::finishTranslation(
         const std::unordered_map<char32_t, int>& sortOrder,
-        std::u32string_view ellipsisBlocks)
+        std::u32string_view ellipsisBlocks,
+        const std::unordered_map<char32_t, std::u32string>& alphaFixup)
 {
     char c[40];
 
@@ -2136,14 +2142,18 @@ void uc::finishTranslation(
     for (auto& blk : allBlocks()) {
         auto& script = scriptInfo[static_cast<int>(blk.alphaKey.ecScript)];
 
-        // Sorting key
-        std::u8string_view keyName = blk.loc.name;
-        if (blk.alphaKey.ecScript != EcScript::NONE) {
-            keyName = script.loc.name;
-            if (script.mainBlock)
-                keyName = script.mainBlock->loc.name;
+        // Sorting key        
+        if (auto q = alphaFixup.find(blk.startingCp); q != alphaFixup.end()) {
+            buildSortKey(q->second, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+        } else {
+            std::u8string_view keyName = blk.loc.name;
+            if (blk.alphaKey.ecScript != EcScript::NONE) {
+                keyName = script.loc.name;
+                if (script.mainBlock)
+                    keyName = script.mainBlock->loc.name;
+            }
+            buildSortKey(keyName, SpecialSort::NO, sortOrder, blk.loc.sortKey);
         }
-        buildSortKey(keyName, SpecialSort::NO, sortOrder, blk.loc.sortKey);
     }
 
     for (auto& bidi : bidiClassInfo) {

@@ -42,7 +42,7 @@ namespace loc
         } numfmt;
         struct Ellipsis {
             std::u8string text;
-            std::u32string blocks;  // just string, sorted asc
+            std::u32string blocks;  ///< just initial codes, sorted asc
         } ellipsis;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
@@ -51,7 +51,8 @@ namespace loc
         std::unique_ptr<QTranslator> translator;
         std::map<std::string, std::string, std::less<>> wikiTemplates;
         std::unordered_map<char32_t, int> sortOrder;
-        CustomRule cardRule;
+        CustomRule cardRule;  ///< rule for cardinal forms: 1 crow, 2 crows
+        std::unordered_map<char32_t, std::u32string> alphaFixup;
 
         void load();
         void forceLoad();

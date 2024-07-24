@@ -188,6 +188,21 @@ namespace {
             }
         }
 
+        r.alphaFixup.clear();
+        auto hAlphaFixup = hLocale.child("alpha-fixup");
+        for (auto& v : hAlphaFixup.children("blk")) {
+            std::string_view hex = v.attribute("start").as_string(0);
+            uint32_t code;
+            auto [ptr, ec] = std::from_chars(
+                        std::to_address(hex.begin()),
+                        std::to_address(hex.end()),
+                        code, 16);
+            if (ec == std::errc()) {
+                auto target = mojibake::toS<std::u32string>(v.attribute("target").as_string());
+                r.alphaFixup[code] = std::move(target);
+            }
+        }
+
         r.ellipsis.blocks.clear();
         auto hEllipsis = hLocale.child("ellipsis");
         r.ellipsis.text = str::toU8(hEllipsis.attribute("text").as_string("..."));

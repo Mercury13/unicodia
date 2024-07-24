@@ -1223,7 +1223,8 @@ namespace uc {
 
     void finishTranslation(
             const std::unordered_map<char32_t, int>& sortOrder,
-            std::u32string_view ellipsisBlocks);
+            std::u32string_view ellipsisBlocks,
+            const std::unordered_map<char32_t, std::u32string>& alphaFixup);
 
 
     inline std::strong_ordering operator <=> (char32_t x, const Cp& y)
