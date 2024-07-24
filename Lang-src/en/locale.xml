@@ -35,8 +35,7 @@
 		 Some of these fixups (Greek → Ancient Greek) are built into data
 		 and are locale-independent, but these ARE locale-dependent. -->
 	<alpha-fixup>
-		<blk start="1E5D0" target="Ol Chiki Y" /><!-- Ol Onal after Ol Chiki -->
-		<!-- :) Nice letter became a symbol, no matter whose — why? -->
+		<blk start="1E5D0" target="Ol Chiki X" /><!-- Ol Onal after Ol Chiki -->
 	</alpha-fixup>
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.
