@@ -1727,6 +1727,8 @@ namespace {
         case 0x23F9:  // VCR stop
         case 0x23FA:  // VCR record
         // Misc symbols
+        case 0x260E:  // telephone
+        case 0x2618:  // shamrock
         case 0x2611:  // ballot with check
         case 0x2622:  // radioactive
         case 0x2623:  // biohazard
@@ -1748,6 +1750,7 @@ namespace {
         case 0x2668:  // hot springs
         case 0x267B:  // recycle
         case 0x267E:  // non-acid (permanent) paper
+        case 0x26A0:  // warning
         case 0x26A7:  // transgender
             return false;
         default:
