@@ -5,7 +5,7 @@ FamilyName: UnicodiaFunky
 Weight: Regular
 Copyright: (c) 2021 -2024 Mikhail Merkuryev\nSIL Open Font License 1.1
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
-Version: 2.7.7
+Version: 2.7.8
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1721557805
+ModificationTime: 1722031700
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -819,12 +819,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 124375 25 12
+WinInfo: 275 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -836,9 +837,9 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114173 994
+BeginChars: 1114173 997
 
-StartChar: uni25CC
+StartChar: Shape.Dotc
 Encoding: 9676 9676 0
 Width: 594
 Flags: MW
@@ -5165,7 +5166,7 @@ Fore
 Refer: 39 8423 N 1 0 0 1 712 0 2
 Refer: 0 9676 N 1 0 0 1 141 0 2
 Validated: 32769
-Ligature2: "Umlaut RLIG-1" uni25CC uni20E7
+Ligature2: "Umlaut RLIG-1" Shape.Dotc uni20E7
 EndChar
 
 StartChar: uni1AC6
@@ -67690,7 +67691,7 @@ Fore
 Refer: 419 795 N 1 0 0 1 588 0 2
 Refer: 0 9676 N 1 0 0 1 0 0 2
 Validated: 32773
-Ligature2: "Umlaut RLIG-1" uni25CC uni031B
+Ligature2: "Umlaut RLIG-1" Shape.Dotc uni031B
 LCarets2: 1 0
 EndChar
 
@@ -74231,8 +74232,8 @@ Fore
 Refer: 446 12335 N 1 0 0 1 -11 0 2
 Refer: 447 -1 N 1 0 0 1 106 0 2
 Validated: 32769
-Ligature2: "Hang RLIG-1" uni25CC HangDouble uni25CC
-Ligature2: "Hang RLIG-1" uni25CC HangDouble
+Ligature2: "Hang RLIG-1" Shape.Dotc HangDouble Shape.Dotc
+Ligature2: "Hang RLIG-1" Shape.Dotc HangDouble
 LCarets2: 2 0 231
 EndChar
 
@@ -74248,8 +74249,8 @@ Fore
 Refer: 445 12334 N 1 0 0 1 -12 0 2
 Refer: 447 -1 N 1 0 0 1 106 0 2
 Validated: 32769
-Ligature2: "Hang RLIG-1" uni25CC HangSingle uni25CC
-Ligature2: "Hang RLIG-1" uni25CC HangSingle
+Ligature2: "Hang RLIG-1" Shape.Dotc HangSingle Shape.Dotc
+Ligature2: "Hang RLIG-1" Shape.Dotc HangSingle
 LCarets2: 1 221
 EndChar
 
@@ -74264,7 +74265,7 @@ Fore
 Refer: 451 12441 N 1 0 0 1 712 0 2
 Refer: 447 -1 N 1 0 0 1 -94 0 2
 Validated: 32769
-Ligature2: "Kana RLIG-1" uni25CC KanaQuote
+Ligature2: "Kana RLIG-1" Shape.Dotc KanaQuote
 LCarets2: 1 741
 EndChar
 
@@ -74444,7 +74445,7 @@ Fore
 Refer: 452 12442 N 1 0 0 1 742 0 2
 Refer: 447 -1 N 1 0 0 1 -94 0 2
 Validated: 32769
-Ligature2: "Kana RLIG-1" uni25CC KanaDegree
+Ligature2: "Kana RLIG-1" Shape.Dotc KanaDegree
 LCarets2: 1 742
 EndChar
 
@@ -143245,7 +143246,7 @@ EndChar
 StartChar: u1E5FF
 Encoding: 124415 124415 993
 Width: 360
-Flags: WO
+Flags: W
 HStem: 227 65<133.019 226.981> 422 65<133.019 226.981>
 VStem: 50 65<310.019 403.981> 245 65<310.019 403.981>
 TtInstrs:
@@ -143339,6 +143340,289 @@ SplineSet
  50 411 50 411 50 357 c 128,-1,9
 EndSplineSet
 Colour: ffff00
+EndChar
+
+StartChar: Mus.Flat
+Encoding: 9837 9837 994
+Width: 299
+Flags: W
+HStem: 223 39<102.553 165.997>
+VStem: 50 31<12 206.062 225 615> 175 74<115.254 213.559>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 24
+MDAP[rnd]
+PUSHB_1
+ 4
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 28
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 15
+MDRP[min,rnd,black]
+PUSHB_1
+ 1
+SHP[rp2]
+PUSHB_1
+ 15
+SRP0
+PUSHB_2
+ 21
+ 1
+CALL
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_2
+ 29
+ 1
+CALL
+PUSHB_2
+ 21
+ 15
+SRP1
+SRP2
+PUSHB_3
+ 4
+ 11
+ 12
+IP
+IP
+IP
+PUSHB_1
+ 7
+SRP1
+PUSHB_1
+ 10
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 4
+ 24
+SRP1
+SRP2
+PUSHB_1
+ 2
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+50 615 m 1,0,-1
+ 81 615 l 1,1,-1
+ 81 225 l 1,2,3
+ 118 262 118 262 165 262 c 0,4,5
+ 197 262 197 262 223 240.5 c 128,-1,6
+ 249 219 249 219 249 178 c 0,7,8
+ 249 146 249 146 230 119 c 128,-1,9
+ 211 92 211 92 179 65 c 2,10,-1
+ 110 6 l 2,11,12
+ 91 -10 91 -10 76 -25.5 c 128,-1,13
+ 61 -41 61 -41 50 -55 c 1,14,-1
+ 50 615 l 1,0,-1
+81 12 m 1,15,16
+ 107 40 107 40 125 63.5 c 128,-1,17
+ 143 87 143 87 153 105 c 0,18,19
+ 164 124 164 124 169.5 140 c 128,-1,20
+ 175 156 175 156 175 170 c 0,21,22
+ 175 198 175 198 162 210.5 c 128,-1,23
+ 149 223 149 223 134 223 c 0,24,25
+ 118 223 118 223 102.5 211.5 c 128,-1,26
+ 87 200 87 200 81 180 c 1,27,-1
+ 81 12 l 1,15,16
+EndSplineSet
+EndChar
+
+StartChar: Mus.Natural
+Encoding: 9838 9838 995
+Width: 276
+Flags: W
+VStem: 50 33<56 183 279 486> 195 31<-221 -9 84 212>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 12
+MDAP[rnd]
+PUSHB_1
+ 5
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_1
+ 10
+SHP[rp2]
+PUSHB_1
+ 7
+SRP0
+PUSHB_2
+ 2
+ 1
+CALL
+PUSHB_1
+ 8
+SHP[rp2]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_2
+ 13
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+226 316 m 1,0,-1
+ 226 -221 l 1,1,-1
+ 195 -221 l 1,2,-1
+ 195 -9 l 1,3,-1
+ 50 -46 l 1,4,-1
+ 50 486 l 1,5,-1
+ 83 486 l 1,6,-1
+ 83 279 l 1,7,-1
+ 226 316 l 1,0,-1
+197 84 m 1,8,-1
+ 197 212 l 1,9,-1
+ 81 183 l 1,10,-1
+ 81 56 l 1,11,-1
+ 197 84 l 1,8,-1
+EndSplineSet
+EndChar
+
+StartChar: Mus.Sharp
+Encoding: 9839 9839 996
+Width: 324
+Flags: W
+VStem: 97 31<-247 -59 54 189 298 486> 195 31<-214 -34 77 214 322 509>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 32
+MDAP[rnd]
+PUSHB_1
+ 24
+MDRP[rp0,rnd,white]
+PUSHB_2
+ 0
+ 4
+SHP[rp2]
+SHP[rp2]
+PUSHB_1
+ 23
+MDRP[min,rnd,black]
+PUSHB_2
+ 6
+ 30
+SHP[rp2]
+SHP[rp2]
+PUSHB_3
+ 24
+ 23
+ 10
+CALL
+PUSHB_4
+ 64
+ 24
+ 27
+ 9
+CALL
+PUSHB_1
+ 2
+SHP[rp2]
+PUSHB_1
+ 23
+SRP0
+PUSHB_2
+ 20
+ 1
+CALL
+PUSHB_2
+ 8
+ 28
+SHP[rp2]
+SHP[rp2]
+PUSHB_1
+ 19
+MDRP[min,rnd,black]
+PUSHB_2
+ 10
+ 14
+SHP[rp2]
+SHP[rp2]
+PUSHB_3
+ 19
+ 20
+ 10
+CALL
+PUSHB_4
+ 64
+ 19
+ 16
+ 9
+CALL
+PUSHB_1
+ 12
+SHP[rp2]
+PUSHB_2
+ 33
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+97 46 m 1,0,-1
+ 97 189 l 1,1,-1
+ 50 177 l 1,2,-1
+ 50 277 l 1,3,-1
+ 97 290 l 1,4,-1
+ 97 486 l 1,5,-1
+ 128 486 l 1,6,-1
+ 128 298 l 1,7,-1
+ 195 314 l 1,8,-1
+ 195 509 l 1,9,-1
+ 226 509 l 1,10,-1
+ 226 322 l 1,11,-1
+ 275 333 l 1,12,-1
+ 275 234 l 1,13,-1
+ 226 220 l 1,14,-1
+ 226 77 l 1,15,-1
+ 275 89 l 1,16,-1
+ 275 -14 l 1,17,-1
+ 226 -26 l 1,18,-1
+ 226 -214 l 1,19,-1
+ 195 -214 l 1,20,-1
+ 195 -34 l 1,21,-1
+ 128 -52 l 1,22,-1
+ 128 -247 l 1,23,-1
+ 97 -247 l 1,24,-1
+ 97 -59 l 1,25,-1
+ 50 -71 l 1,26,-1
+ 50 32 l 1,27,-1
+ 97 46 l 1,0,-1
+195 70 m 1,28,-1
+ 195 214 l 1,29,-1
+ 128 197 l 1,30,-1
+ 128 54 l 1,31,-1
+ 195 70 l 1,28,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
