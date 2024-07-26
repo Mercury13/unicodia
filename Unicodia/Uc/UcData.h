@@ -276,7 +276,6 @@ namespace uc {
           Z_DIN_1,
           Z_DIN_2,
           Z_DIN_3,
-          Z_DIN_4,
         DINGBAT2,       ///< Dingbats of BMP — need main font Cambria
           Z_DI2_1,
           Z_DI2_2,

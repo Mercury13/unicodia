@@ -1970,6 +1970,7 @@ struct RangeByEnd {
 
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
+///  BUG_AVOID / BUG_FIXUP are used
 const std::set<RangeByEnd> alternateRanges {
     { 0x0126 },             // H bar: Strange bar in Cambria
     { 0x1D66, 0x1D6A },     // Clipped below in Cambria
@@ -1982,6 +1983,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x203D, 0x203E },     // …Skip emoji and go on
     { 0x23B4, 0x23B6 },     // Technical — horz brackets, misrender in Cambria
     { 0x23DC, 0x23E0 },     // Same
+    { 0x266D, 0x266F },     // Misc — use Funky font on musical symbols
     { 0x2C7C },             // Clipped below in Cambria
     // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
     { 0x3C43  },   // CJK A: a single char redrawn in U15 and already present in BS
