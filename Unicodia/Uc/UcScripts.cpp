@@ -217,7 +217,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, big tofu] Gurung Khema
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1977), EcFont::NORMAL },
+        Dating::year(1977), EcFont::FUNKY },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
