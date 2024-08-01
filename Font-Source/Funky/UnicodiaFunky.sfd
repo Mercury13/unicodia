@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722175100
+ModificationTime: 1722175109
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -145735,7 +145735,7 @@ EndChar
 StartChar: Gukh.Uml.Oo
 Encoding: 90407 90407 1007
 Width: 0
-Flags: WO
+Flags: W
 HStem: 670 50<-625 -79> 765 50<-625 -79> 856 40<-579.011 -526.989 -180.417 -124.974> 960 40<-579.011 -526.989 -180.417 -124.974>
 VStem: -625 40<901.989 954.011> -521 40<901.989 954.011> -223 40<898.458 957.542> -119 40<901.989 954.011>
 TtInstrs:
