@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722714795
+ModificationTime: 1722716384
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -824,7 +824,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 90325 25 12
+WinInfo: 90350 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -836,7 +836,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1114174 1014
+BeginChars: 1114174 1055
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -143474,7 +143474,7 @@ EndChar
 StartChar: Gukh.A
 Encoding: 90368 90368 997
 Width: 749
-Flags: WO
+Flags: W
 HStem: 0 21G<624 689> 28 70<257.841 403.88> 419 65<256.426 412.091> 560 65<-10 624 689 759>
 VStem: 480 56<177.215 338.459> 624 65<0 185.227 268 560>
 TtInstrs:
@@ -147244,6 +147244,612 @@ SplineSet
  292 502 292 502 259 502 c 0,55,56
  172 501 172 501 136 458 c 1,46,47
 EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: Gukh.T
+Encoding: 90384 90384 1014
+Width: 597
+Flags: W
+HStem: 0 21G<35 122.357 466.857 562> 560 65<-10 356 431 607>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 5
+SHP[rp1]
+PUSHB_1
+ 11
+MDAP[rnd]
+PUSHB_1
+ 2
+SHP[rp1]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 12
+MDAP[rnd]
+PUSHB_2
+ 13
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 11
+ 9
+SRP1
+SRP2
+PUSHB_1
+ 7
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Matra 625" 304 625 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+-10 625 m 1,0,-1
+ 607 625 l 1,1,-1
+ 607 560 l 1,2,-1
+ 431 560 l 1,3,-1
+ 306 341 l 1,4,-1
+ 562 0 l 1,5,-1
+ 482 0 l 1,6,-1
+ 270 280 l 1,7,-1
+ 111 0 l 1,8,-1
+ 35 0 l 1,9,-1
+ 356 560 l 1,10,-1
+ -10 560 l 1,11,-1
+ -10 625 l 1,0,-1
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: Gukh.Th
+Encoding: 90385 90385 1015
+Width: 752
+Flags: W
+HStem: 0 21G<35 122.357 466.857 562 627 692> 560 65<-10 356 431 627 692 762>
+VStem: 627 65<0 560>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 14
+MDAP[rnd]
+PUSHB_2
+ 5
+ 10
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_2
+ 3
+ 7
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 16
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 5
+MDRP[min,rnd,black]
+PUSHB_3
+ 5
+ 6
+ 10
+CALL
+PUSHB_4
+ 64
+ 5
+ 3
+ 9
+CALL
+PUSHB_2
+ 17
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 0
+ 14
+SRP1
+SRP2
+PUSHB_1
+ 12
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Matra 625" 363 625 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+-10 560 m 1,0,-1
+ -10 625 l 1,1,-1
+ 762 625 l 1,2,-1
+ 762 560 l 1,3,-1
+ 692 560 l 1,4,-1
+ 692 0 l 1,5,-1
+ 627 0 l 1,6,-1
+ 627 560 l 1,7,-1
+ 431 560 l 1,8,-1
+ 306 341 l 1,9,-1
+ 562 0 l 1,10,-1
+ 482 0 l 1,11,-1
+ 270 280 l 1,12,-1
+ 111 0 l 1,13,-1
+ 35 0 l 1,14,-1
+ 356 560 l 1,15,-1
+ -10 560 l 1,0,-1
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: u16117
+Encoding: 90391 90391 1016
+Width: 637
+Flags: W
+HStem: 337 58<178.578 337.561> 502 123<192.637 306.395> 560 65<-10 192 307 512 577 647>
+VStem: 50 65<326.512 404.324> 362 65<418.81 477.406> 512 65<98 560>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 39
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_1
+ 29
+MDAP[rnd]
+PUSHB_2
+ 13
+ 30
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
+PUSHB_1
+ 11
+SRP0
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_3
+ 9
+ 11
+ 10
+CALL
+PUSHB_4
+ 64
+ 9
+ 15
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 49
+MDAP[rnd]
+PUSHB_1
+ 24
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 44
+MDRP[min,rnd,black]
+PUSHB_3
+ 24
+ 44
+ 10
+CALL
+PUSHB_4
+ 64
+ 24
+ 29
+ 9
+CALL
+PUSHB_1
+ 44
+SRP0
+PUSHB_2
+ 6
+ 1
+CALL
+PUSHB_1
+ 35
+MDRP[min,rnd,black]
+PUSHB_1
+ 35
+SRP0
+PUSHB_2
+ 48
+ 1
+CALL
+PUSHB_1
+ 16
+SHP[rp2]
+PUSHB_1
+ 15
+MDRP[min,rnd,black]
+PUSHB_3
+ 15
+ 48
+ 10
+CALL
+PUSHB_4
+ 64
+ 15
+ 13
+ 9
+CALL
+PUSHB_2
+ 50
+ 1
+CALL
+PUSHB_2
+ 6
+ 44
+SRP1
+SRP2
+PUSHB_7
+ 0
+ 19
+ 20
+ 28
+ 31
+ 38
+ 46
+DEPTH
+SLOOP
+IP
+PUSHB_2
+ 48
+ 35
+SRP1
+SRP2
+PUSHB_1
+ 47
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 3
+ 39
+SRP1
+SRP2
+PUSHB_1
+ 44
+IP
+PUSHB_1
+ 9
+SRP1
+PUSHB_2
+ 35
+ 42
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Matra 625" 318 625 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+136 458 m 1,0,1
+ 159 422 159 422 196 408.5 c 128,-1,2
+ 233 395 233 395 270 395 c 128,-1,3
+ 307 395 307 395 344 421 c 0,4,5
+ 362 433 362 433 362 446 c 0,6,7
+ 362 468 362 468 327 485 c 128,-1,8
+ 292 502 292 502 259 502 c 0,9,10
+ 172 501 172 501 136 458 c 1,0,1
+-10 625 m 1,11,-1
+ 647 625 l 1,12,-1
+ 647 560 l 1,13,-1
+ 577 560 l 1,14,-1
+ 577 -42 l 1,15,-1
+ 511 -42 l 1,16,-1
+ 503 -20 l 2,17,18
+ 451 122 451 122 271 176 c 0,19,20
+ 179 204 179 204 134.5 238 c 128,-1,21
+ 90 272 90 272 76 299 c 0,22,23
+ 51 346 51 346 50 393 c 0,24,25
+ 50 485 50 485 122 532 c 0,26,27
+ 152 551 152 551 192 560 c 1,28,-1
+ -10 560 l 1,29,-1
+ -10 625 l 1,11,-1
+512 560 m 1,30,-1
+ 307 560 l 1,31,32
+ 398 539 398 539 421 479 c 0,33,34
+ 427 463 427 463 427 442 c 0,35,36
+ 427 394 427 394 374 362 c 0,37,38
+ 332 337 332 337 279 337 c 128,-1,39
+ 226 337 226 337 190 353 c 0,40,41
+ 144 374 144 374 116 405 c 1,42,43
+ 116 400 116 400 115 388 c 0,44,45
+ 115 291 115 291 292 238 c 0,46,47
+ 437 194 437 194 512 98 c 1,48,-1
+ 512 560 l 1,30,-1
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: u16112
+Encoding: 90386 90386 1017
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16113
+Encoding: 90387 90387 1018
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16114
+Encoding: 90388 90388 1019
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16115
+Encoding: 90389 90389 1020
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16116
+Encoding: 90390 90390 1021
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16118
+Encoding: 90392 90392 1022
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16119
+Encoding: 90393 90393 1023
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611A
+Encoding: 90394 90394 1024
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611B
+Encoding: 90395 90395 1025
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611C
+Encoding: 90396 90396 1026
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611D
+Encoding: 90397 90397 1027
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611E
+Encoding: 90398 90398 1028
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1611F
+Encoding: 90399 90399 1029
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16120
+Encoding: 90400 90400 1030
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16121
+Encoding: 90401 90401 1031
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16122
+Encoding: 90402 90402 1032
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16123
+Encoding: 90403 90403 1033
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16124
+Encoding: 90404 90404 1034
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16125
+Encoding: 90405 90405 1035
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16126
+Encoding: 90406 90406 1036
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16128
+Encoding: 90408 90408 1037
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16129
+Encoding: 90409 90409 1038
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612A
+Encoding: 90410 90410 1039
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612B
+Encoding: 90411 90411 1040
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612C
+Encoding: 90412 90412 1041
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612D
+Encoding: 90413 90413 1042
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612E
+Encoding: 90414 90414 1043
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u1612F
+Encoding: 90415 90415 1044
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16130
+Encoding: 90416 90416 1045
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16131
+Encoding: 90417 90417 1046
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16132
+Encoding: 90418 90418 1047
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16133
+Encoding: 90419 90419 1048
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16134
+Encoding: 90420 90420 1049
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16135
+Encoding: 90421 90421 1050
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16136
+Encoding: 90422 90422 1051
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16137
+Encoding: 90423 90423 1052
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16138
+Encoding: 90424 90424 1053
+Width: 1000
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: u16139
+Encoding: 90425 90425 1054
+Width: 1000
+LayerCount: 2
 Colour: ffff00
 EndChar
 EndChars
