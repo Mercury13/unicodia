@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722714500
+ModificationTime: 1722714795
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -143474,7 +143474,7 @@ EndChar
 StartChar: Gukh.A
 Encoding: 90368 90368 997
 Width: 749
-Flags: W
+Flags: WO
 HStem: 0 21G<624 689> 28 70<257.841 403.88> 419 65<256.426 412.091> 560 65<-10 624 689 759>
 VStem: 480 56<177.215 338.459> 624 65<0 185.227 268 560>
 TtInstrs:
@@ -143585,7 +143585,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Matra 625" 351 625 basechar 0
+AnchorPoint: "Matra 625" 377 625 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -145762,7 +145762,7 @@ EndChar
 StartChar: Gukh.Uml.Oo
 Encoding: 90407 90407 1007
 Width: 0
-Flags: WO
+Flags: W
 HStem: 670 50<-546 0> 770 50<-546 -419 -127 0> 915 40<-423.48 -364.52 -177.769 -125.974> 1019 40<-423.48 -364.52 -177.769 -125.974>
 VStem: -466 40<957.52 1016.48> -362 40<957.52 1016.48> -224 40<961.231 1012.77> -120 40<961.231 1012.77>
 TtInstrs:
