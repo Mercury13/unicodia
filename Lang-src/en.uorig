@@ -3098,6 +3098,8 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extends the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
+      <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}17 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p />
       <p>Also this block has several characters from obsolete musical notations.</p>
      </orig>
     </text>

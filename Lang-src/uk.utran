@@ -4106,6 +4106,8 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extends the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
+      <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}17 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p />
       <p>Also this block has several characters from obsolete musical notations.</p>
      </orig>
      <transl>
@@ -4114,6 +4116,8 @@
       <p>До сучасного вигляду ноти дійшли у XVII{{_}}столітті з появою рівнотемперованого строю, що дозволив переносити музику на інші інструменти, грати оркестрами.</p>
       <p />
       <p>Музика{{-}}[[pt:universality|нетекстова]] інформація і тому поза увагою Юнікоду. Однак привабливо використовувати наявні типографські движки для зберігання нот та їх частин у шрифтах, щоб спрощувати нотне ПЗ, скорочувати нотні PDF. У цьому світлі незрозуміле призначення восьми [[pt:format|форматуючих]] символів (ребро, зв’язка, ліга, фраза). У 2013 вийшов відкритий стандарт ''Standard Music Font Layout'' (SMuFL), що розширює блок до більш ніж 2600 символів з використанням позицій для [[pt:private|приватного користування]].</p>
+      <p />
+      <p>Мікротонова нотація, початково прийнята Юникодом (1D132 та 33), широко не вживалась, небагато хто бачив ці знаки «вживу». Юнікод{{_}}17 додасть іншу нотацію (напівдієз, напівбемоль), широко вживану музичним ПЗ.</p>
       <p />
       <p>Також в цьому блоці є кілька символів з застарілих музичних нотацій.</p>
      </transl>
