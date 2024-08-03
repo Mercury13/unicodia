@@ -106,9 +106,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="1.1045008"
-     inkscape:cx="419.6466"
-     inkscape:cy="866.90748"
+     inkscape:zoom="0.78100001"
+     inkscape:cx="392.44558"
+     inkscape:cy="383.48271"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -190,7 +190,11 @@
        id="guide5"
        inkscape:label=""
        inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" /></sodipodi:namedview><image
+       inkscape:color="rgb(0,134,229)" /><sodipodi:guide
+       position="-18.138259,792.5"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" /></sodipodi:namedview><image
      width="780.25879"
      height="780.25879"
      preserveAspectRatio="none"
@@ -201,7 +205,7 @@
      style="opacity:0.456026;stroke-width:0.120473"
      sodipodi:insensitive="true" /><path
      style="fill:none;stroke:#000000;stroke-width:64.9999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m -28.138259,207.5 711.855569,0.90539"
+     d="M -28.138259,207.5 H 683.71731"
      id="path4"
      sodipodi:nodetypes="cc" /><path
      style="fill:none;stroke:#000000;stroke-width:65;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
