@@ -404,7 +404,7 @@ int main()
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
-    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << '\n';
+    std::cout << "OK, " << emoji.count.withComponents << " emoji, " << emoji.vs16.size() << " are VS16." << '\n';
 
     lib::StrangeCjk strangeCjk;
 
@@ -767,7 +767,7 @@ int main()
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << supportData.nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
-    os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
+    os << "constexpr int N_EMOJI = " << std::dec << emoji.count.woComponents << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
     os << "constexpr unsigned N_OLDCOMP_SPANS = " << std::dec << oldr.nSpans << ";\n";
     os << "}\n";

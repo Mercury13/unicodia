@@ -33,6 +33,7 @@ namespace lib {
         [[nodiscard]] Node& newChild();
         Node* findChild(std::u8string_view name);
         Node& rqChild(std::u8string_view name);
+        size_t countLeaves() const;
     };
 
     struct Hash32 : public std::hash<std::u32string_view> {
@@ -47,7 +48,10 @@ namespace lib {
 
     struct EmojiData {
         /// Total # of emoji
-        size_t count = 0;
+        struct {
+            size_t withComponents = 0;  /// with components (for output)
+            size_t woComponents = 0;    /// w/o components
+        } count;
         std::unordered_map<char32_t, const Node*> allSingleChar;
         /// List of single-char emoji that use VS16
         std::unordered_set<char32_t> vs16;

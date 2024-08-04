@@ -56,6 +56,19 @@ lib::Node& lib::Node::newChild()
     return *children.emplace_back(new Node);
 }
 
+
+size_t lib::Node::countLeaves() const
+{
+    size_t r = 0;
+    for (auto& ch : children) {
+        r += ch->countLeaves();
+    }
+    if (!value.empty())
+        ++r;
+    return r;
+}
+
+
 namespace {
 
     template <char32_t... Cps>
@@ -343,13 +356,16 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 auto& v = itData->second;
                 v.emojiVersion = emVersion;
 
-                ++r.count;
+                ++r.count.withComponents;
+                ++r.count.woComponents;
             }
         }
     }
     // Flags A…Z are also single-characters
     auto& nodeComponents = r.root.rqChild(u8"Component");
         nodeComponents.flags |= uc::Lfg::NO_COUNTING;
+    auto num = nodeComponents.countLeaves();
+    r.count.woComponents -= num;
     auto& nodeRegional = nodeComponents.newChild();
         nodeRegional.flags |= uc::Lfg::TRANSLATE;
         nodeRegional.name = u8"Regional";
