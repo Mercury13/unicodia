@@ -3,7 +3,7 @@
    version="1.1"
    viewBox="-556 0 566 1000"
    id="svg1"
-   sodipodi:docname="22.svg"
+   sodipodi:docname="24.svg"
    inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.562"
-     inkscape:cx="244.23816"
-     inkscape:cy="-3.5211268"
+     inkscape:zoom="1.1045008"
+     inkscape:cx="450.42974"
+     inkscape:cy="128.11218"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -42,16 +42,28 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="10,970"
+       orientation="0,1"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <path
-     fill="currentColor"
-     d="M0 125h-546v-50h546v50zM-546 25v-50h546v50h-546z"
+     d="M 0,125 H -546 V 75 H 0 Z"
      id="path1" />
+  <circle
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:45;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:5;stroke-dasharray:none"
+     id="path24"
+     cx="-273"
+     cy="-60"
+     r="67.5" />
   <rect
-     style="opacity:1;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:45;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:5"
-     id="rect1"
+     style="fill:#000000;fill-rule:evenodd;stroke-width:45;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:5"
+     id="rect3"
      width="50"
      height="140"
      x="-50"
-     y="-165" />
+     y="-65" />
 </svg>
