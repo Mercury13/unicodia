@@ -40,10 +40,12 @@ Status: at least as functional as Noto and NewAthena combined!
 Source of inspiration: Michael Everson’s Unicode tracings
 Status: should work
 
+
 === Garay ===
 
 Source of glyphs: some poor Latin-mapped font
 Status: barely working, either improve or hand to other font
+
 
 === Gurung Khema ===
 
@@ -52,6 +54,7 @@ Status: working somehow, lots of workarounds. Actual pull of U16 by Universal Sh
 
 Rationale:
 * All anusvaras housing a circle are smiles, and empty ones are ticks, like in handwritten specimen
+
 
 === Makasar ===
 
@@ -62,10 +65,12 @@ Rationale:
 * Drawn like in Pandey’s font, sometimes more streamlined.
 * As this font is not of print quality, I decided to use rounded ends everywhere
 
+
 === Nag Mundari ===
 
 Source of inspiration: educational Nag specimen
 Status: working
+
 
 === Ol Onal ===
 
@@ -96,7 +101,7 @@ Rationale:
 == Stability policy ==
 
 WILL STAY:
-* Working scripts of decent quality made by me: Makasar, Cypro-Minoan, Nag, Todhri
+* Working scripts of decent quality made by me: Cypro-Minoan, Gurung Khema, Makasar, Nag, Ol Onal, Todhri
 * ASCII and other auxiliary characters
 * All of them MAY change style/metrics
 
