@@ -48,7 +48,7 @@ Status: barely working, either improve or hand to other font
 === Gurung Khema ===
 
 Source of inspiration: existing Gukh fonts
-Status: working somehow, lots of workarounds. Actual pull of U16 by Universal Scripting Engine may probably destroy everything but permit more precise typesetting
+Status: working somehow, lots of workarounds. Actual pull of U16 by Universal Shaping Engine may probably destroy everything but permit more precise typesetting
 
 Rationale:
 * All anusvaras housing a circle are smiles, and empty ones are ticks, like in handwritten specimen
