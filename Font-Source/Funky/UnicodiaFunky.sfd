@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722791033
+ModificationTime: 1722799112
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -58,6 +58,12 @@ Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 4 256 0 "Gukh CCMP above" { "Gukh CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Gukh med.H normal" { "Gukh med.H normal-1"  } []
+Lookup: 1 0 0 "Gukh med.H b" { "Gukh med.H b-1"  } []
+Lookup: 1 0 0 "Gukh med.H invT" { "Gukh med.H invT-1"  } []
+Lookup: 1 0 0 "Gukh med.H wider" { "Gukh med.H wider-1"  } []
+Lookup: 1 0 0 "Gukh med.H aspir" { "Gukh med.H aspir-1"  } []
+Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] "Maka KERN-2" [190,30,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -100,6 +106,41 @@ KernClass2: 14 16 "Maka KERN-2"
  6 Maka.S
  6 Maka.A
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -93 {} -39 {} 0 {} -65 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -35 {} 0 {} 0 {} 0 {} -83 {} 0 {} -92 {} -117 {} 0 {} -111 {} 0 {} -72 {} -56 {} 0 {} 0 {} -80 {} -15 {} 0 {} -40 {} 0 {} 0 {} -82 {} 0 {} -30 {} -48 {} -33 {} 0 {} -49 {} 0 {} 0 {} 0 {} -48 {} 0 {} 0 {} -37 {} 0 {} -46 {} -56 {} -82 {} -88 {} -31 {} -70 {} -60 {} -100 {} -87 {} 0 {} -40 {} -77 {} -61 {} -30 {} -57 {} 0 {} -65 {} 0 {} -40 {} -131 {} -20 {} -110 {} 0 {} -122 {} -100 {} 0 {} 0 {} -146 {} 0 {} -32 {} -71 {} 0 {} -85 {} 0 {} -60 {} -187 {} 0 {} -152 {} 0 {} -143 {} -110 {} 0 {} 0 {} -178 {} -25 {} 0 {} -80 {} 0 {} 0 {} -42 {} 0 {} 0 {} -35 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -34 {} 0 {} 0 {} -92 {} 0 {} -87 {} 0 {} -72 {} -78 {} -34 {} 0 {} -137 {} 0 {} -33 {} -70 {} 0 {} 0 {} -103 {} -109 {} 0 {} -132 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} -94 {} 0 {} 0 {} 0 {} -74 {} -40 {} -35 {} -147 {} 0 {} -100 {} 0 {} -110 {} -74 {} -7 {} 0 {} -207 {} 0 {} -47 {} -71 {} 0 {} 0 {} 0 {} -25 {} -30 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -21 {} 0 {} 0 {} -92 {} 0 {} -56 {} 0 {} -93 {} -47 {} 0 {} 0 {} -160 {} 0 {} -45 {} -85 {} 0 {} -41 {} -84 {} 0 {} -96 {} -25 {} -96 {} 0 {} -100 {} -63 {} -36 {} 0 {} -127 {} -20 {} -51 {} -90 {}
+ContextSub2: coverage "b" 0 0 0 1
+ 2 0 0
+  Coverage: 34 Gukh.P Gukh.Ligm.P.Y Gukh.Ligm.P.V
+  Coverage: 10 Gukh.Med.H
+ 1
+  SeqLookup: 1 "Gukh med.H b"
+EndFPST
+ContextSub2: coverage "InvT" 0 0 0 1
+ 2 0 0
+  Coverage: 34 Gukh.N Gukh.Ligm.N.Y Gukh.Ligm.N.V
+  Coverage: 10 Gukh.Med.H
+ 1
+  SeqLookup: 1 "Gukh med.H invT"
+EndFPST
+ContextSub2: coverage "Aspir" 0 0 0 1
+ 2 0 0
+  Coverage: 222 Gukh.Gh Gukh.Ch Gukh.Jh Gukh.Ddh Gukh.Dh Gukh.Ligm.Gh.Y Gukh.Ligm.Ch.Y Gukh.Ligm.Jh.Y Gukh.Ligm.Ddh.Y Gukh.Ligm.Bh.Y Gukh.Ligm.Dh.Y Gukh.Ligm.Gh.V Gukh.Ligm.Ch.V Gukh.Ligm.Jh.V Gukh.Ligm.Ddh.V Gukh.Ligm.Dh.V Gukh.Ligm.Bh.V
+  Coverage: 10 Gukh.Med.H
+ 1
+  SeqLookup: 1 "Gukh med.H aspir"
+EndFPST
+ContextSub2: coverage "Wider" 0 0 0 1
+ 2 0 0
+  Coverage: 439 Gukh.A Gukh.Kh Gukh.G Gukh.Ng Gukh.C Gukh.Tth Gukh.Dd Gukh.Th Gukh.D Gukh.Bh Gukh.L Gukh.S Gukh.Ligm.Kh.Y Gukh.Ligm.G.Y Gukh.Ligm.Ng.Y Gukh.Ligm.C.Y Gukh.Ligm.J.Y Gukh.Ligm.Tth.Y Gukh.Ligm.Dd.Y Gukh.Ligm.T.Y Gukh.Ligm.Th.Y Gukh.Ligm.D.Y Gukh.Ligm.Kh.V Gukh.Ligm.G.V Gukh.Ligm.Ng.V Gukh.Ligm.C.V Gukh.Ligm.J.V Gukh.Ligm.Tth.V Gukh.Ligm.Dd.V Gukh.Ligm.Th.V Gukh.Ligm.D.V Gukh.Ligm.Ph.V Gukh.Ligm.L.Y Gukh.Ligm.L.V Gukh.Ligm.S.Y Gukh.Ligm.S.V
+  Coverage: 10 Gukh.Med.H
+ 1
+  SeqLookup: 1 "Gukh med.H wider"
+EndFPST
+ContextSub2: coverage "Normal" 0 0 0 1
+ 2 0 0
+  Coverage: 347 Gukh.K Gukh.J Gukh.H Gukh.Tt Gukh.V Gukh.T Gukh.Ph Gukh.B Gukh.M Gukh.Y Gukh.R Gukh.Ligm.K.Y Gukh.Ligm.H.Y Gukh.Ligm.Tt.Y Gukh.Ligm.V.Y Gukh.Ligm.T.Y Gukh.Ligm.Ph.Y Gukh.Ligm.B.Y Gukh.Ligm.M.Y Gukh.Ligm.K.V Gukh.Ligm.H.V Gukh.Ligm.Tt.V Gukh.Ligm.V.V Gukh.Ligm.T.V Gukh.Ligm.B.V Gukh.Ligm.M.V Gukh.Ligm.Y.Y Gukh.Ligm.Y.V Gukh.Ligm.R.Y Gukh.Ligm.R.V
+  Coverage: 10 Gukh.Med.H
+ 1
+  SeqLookup: 1 "Gukh med.H normal"
+EndFPST
 ChainSub2: coverage "Copt ABVF-1" 0 0 0 1
  1 0 1
   Coverage: 33 Copt.Cap.Phi Copt.Small.Phi u2CEA
@@ -839,7 +880,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low""" 
-BeginChars: 1117 1140
+BeginChars: 1123 1145
 
 StartChar: Shape.Dotc
 Encoding: 212 9676 0
@@ -1001,7 +1042,7 @@ EndSplineSet
 EndChar
 
 StartChar: TotoPA
-Encoding: 854 123536 1
+Encoding: 855 123536 1
 Width: 618
 Flags: W
 HStem: 92 110<109.131 188.644> 468 105<217.378 409.593>
@@ -1118,7 +1159,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoBA
-Encoding: 855 123537 2
+Encoding: 856 123537 2
 Width: 588
 Flags: W
 HStem: 1 106<79 80 152 279.986> 475 105<247.883 413.054>
@@ -1269,7 +1310,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoTA
-Encoding: 856 123538 3
+Encoding: 857 123538 3
 Width: 504
 Flags: W
 HStem: 149 91<153.094 220 263 343.991> 477 97<176.164 358.715>
@@ -1385,7 +1426,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoDA
-Encoding: 857 123539 4
+Encoding: 858 123539 4
 Width: 546
 Flags: W
 HStem: -107 95<165.549 352.353> 224 95<184.248 228 304 370.906> 478 100<100 228 274 424>
@@ -1529,7 +1570,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoKA
-Encoding: 858 123540 5
+Encoding: 859 123540 5
 Width: 567
 Flags: W
 HStem: 471 105<226.477 395.988>
@@ -1626,7 +1667,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoGA
-Encoding: 859 123541 6
+Encoding: 860 123541 6
 Width: 453
 Flags: W
 HStem: -258 93<115.129 302.708> 15 89<146.614 192 260 341.231> 211 91<115.129 192 233 302.708> 482 92<147.65 340.672>
@@ -1799,7 +1840,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoMA
-Encoding: 860 123542 7
+Encoding: 861 123542 7
 Width: 528
 Flags: W
 HStem: -11 21G<151 159.5 468 476.5> 459 100<160 424.581>
@@ -1960,7 +2001,7 @@ Validated: 19457
 EndChar
 
 StartChar: TotoNA
-Encoding: 861 123543 8
+Encoding: 862 123543 8
 Width: 865
 Flags: W
 HStem: 1 96<149.728 298.234 549.622 698.546> 336 95<168.869 318 569.766 717.895>
@@ -2141,7 +2182,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoNGA
-Encoding: 862 123544 9
+Encoding: 863 123544 9
 Width: 495
 Flags: W
 HStem: 2 95<147.549 334.353> 333 98<165.73 350.496> 693 20G<336.5 369>
@@ -2256,7 +2297,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoSA
-Encoding: 863 123545 10
+Encoding: 864 123545 10
 Width: 659
 Flags: W
 HStem: 1 95<79.7896 177.646 444.221 546.753>
@@ -2376,7 +2417,7 @@ Validated: 3073
 EndChar
 
 StartChar: TotoCHA
-Encoding: 864 123546 11
+Encoding: 865 123546 11
 Width: 482
 Flags: W
 VStem: 357 76<129 436>
@@ -2452,7 +2493,7 @@ Validated: 19457
 EndChar
 
 StartChar: TotoYA
-Encoding: 865 123547 12
+Encoding: 866 123547 12
 Width: 589
 Flags: W
 HStem: 476 100<164 338 407 487>
@@ -2523,7 +2564,7 @@ Kerns2: 30 -164 "Toto KERN-1"
 EndChar
 
 StartChar: TotoWA
-Encoding: 866 123548 13
+Encoding: 867 123548 13
 Width: 612
 Flags: W
 HStem: 99 110<107.261 186.996> 474 105<213.21 409.643>
@@ -2666,7 +2707,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoJA
-Encoding: 867 123549 14
+Encoding: 868 123549 14
 Width: 574
 Flags: W
 HStem: -254 92<121.847 305.692> -234 95<488.027 594.879> 29 92<153.95 312.866> 198 93<124.705 309.47> 482 92<159.738 348.857>
@@ -2846,7 +2887,7 @@ Kerns2: 18 -41 "Toto KERN-1" 19 51 "Toto KERN-1"
 EndChar
 
 StartChar: TotoHA
-Encoding: 868 123550 15
+Encoding: 869 123550 15
 Width: 536
 Flags: W
 HStem: -12 110<111.913 191.833> 471 105<186.138 362.857>
@@ -2954,7 +2995,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoRA
-Encoding: 869 123551 16
+Encoding: 870 123551 16
 Width: 449
 Flags: W
 LayerCount: 2
@@ -2988,7 +3029,7 @@ Validated: 3073
 EndChar
 
 StartChar: TotoLA
-Encoding: 870 123552 17
+Encoding: 871 123552 17
 Width: 608
 Flags: W
 HStem: 96 110<110.469 189.704> 472 105<217.321 412.476>
@@ -3090,7 +3131,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoI
-Encoding: 871 123553 18
+Encoding: 872 123553 18
 Width: 406
 Flags: W
 HStem: 476 96<90.5957 237.51>
@@ -3202,7 +3243,7 @@ Kerns2: 31 41 "Toto KERN-1"
 EndChar
 
 StartChar: TotoIbr
-Encoding: 872 123554 19
+Encoding: 873 123554 19
 Width: 405
 Flags: W
 HStem: 477 96<91.989 237.206>
@@ -3328,7 +3369,7 @@ Kerns2: 31 41 "Toto KERN-1"
 EndChar
 
 StartChar: TotoIU
-Encoding: 873 123555 20
+Encoding: 874 123555 20
 Width: 573
 Flags: W
 HStem: 2 106<183.03 373.284> 481 106<194.105 387.214>
@@ -3439,7 +3480,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoIUbr
-Encoding: 874 123556 21
+Encoding: 875 123556 21
 Width: 574
 Flags: W
 HStem: 1 106<183.187 372.089> 480 106<193.789 390.487>
@@ -3571,7 +3612,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoU
-Encoding: 875 123557 22
+Encoding: 876 123557 22
 Width: 540
 Flags: W
 HStem: 1 105<178.681 354.038> 478 110<349.004 430.499>
@@ -3703,7 +3744,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoE
-Encoding: 876 123558 23
+Encoding: 877 123558 23
 Width: 531
 Flags: W
 HStem: 2 98<169.883 347.367> 335 97<173.562 329.852>
@@ -3812,7 +3853,7 @@ Kerns2: 31 41 "Toto KERN-1"
 EndChar
 
 StartChar: TotoEbr
-Encoding: 877 123559 24
+Encoding: 878 123559 24
 Width: 536
 Flags: W
 HStem: 2 97<165.008 343.594> 334 97<168.562 325.499>
@@ -3948,7 +3989,7 @@ Kerns2: 31 41 "Toto KERN-1"
 EndChar
 
 StartChar: TotoEO
-Encoding: 878 123560 25
+Encoding: 879 123560 25
 Width: 574
 Flags: W
 HStem: -11 105<185.188 377.738> 469 105<193.913 375.435>
@@ -4038,7 +4079,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoEObr
-Encoding: 879 123561 26
+Encoding: 880 123561 26
 Width: 574
 Flags: W
 HStem: -10 105<179.83 371.141> 470 105<187.913 373.177>
@@ -4145,7 +4186,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoO
-Encoding: 880 123562 27
+Encoding: 881 123562 27
 Width: 540
 Flags: W
 HStem: 144 97<149.286 333.116> 476 98<177.268 373.732>
@@ -4258,7 +4299,7 @@ Validated: 19489
 EndChar
 
 StartChar: TotoAE
-Encoding: 881 123563 28
+Encoding: 882 123563 28
 Width: 574
 Flags: W
 HStem: 223 100<159.723 406>
@@ -4372,7 +4413,7 @@ Validated: 19457
 EndChar
 
 StartChar: TotoAEbr
-Encoding: 882 123564 29
+Encoding: 883 123564 29
 Width: 574
 Flags: W
 HStem: 222 100<185 430.3>
@@ -4521,7 +4562,7 @@ Validated: 19457
 EndChar
 
 StartChar: TotoA
-Encoding: 883 123565 30
+Encoding: 884 123565 30
 Width: 610
 Flags: W
 HStem: 1 21G<67 106 506.5 530>
@@ -4579,7 +4620,7 @@ Kerns2: 30 -133 "Toto KERN-1"
 EndChar
 
 StartChar: TotoTONE
-Encoding: 884 123566 31
+Encoding: 885 123566 31
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -5158,7 +5199,7 @@ Validated: 19457
 EndChar
 
 StartChar: CircleAnnuity
-Encoding: 983 -1 40
+Encoding: 984 -1 40
 Width: 936
 Flags: W
 HStem: 760 60<39 835>
@@ -7796,7 +7837,7 @@ Colour: 8000
 EndChar
 
 StartChar: BiggerPlus
-Encoding: 984 -1 56
+Encoding: 985 -1 56
 Width: 0
 Flags: W
 HStem: 749 53<-429 -330 -276 -177>
@@ -7952,7 +7993,7 @@ Colour: 8000
 EndChar
 
 StartChar: MiaoToneUml
-Encoding: 985 -1 61
+Encoding: 986 -1 61
 Width: 0
 Flags: W
 HStem: 749 53<-122.5 -17.5 35.5 140.5>
@@ -49321,7 +49362,7 @@ Validated: 19457
 EndChar
 
 StartChar: Goth.Lig.Yi
-Encoding: 986 -1 286
+Encoding: 987 -1 286
 Width: 417
 VWidth: 1300
 Flags: W
@@ -49339,7 +49380,7 @@ Colour: 87cfff
 EndChar
 
 StartChar: Goth.Yi.Part
-Encoding: 987 -1 287
+Encoding: 988 -1 287
 Width: 0
 Flags: W
 HStem: 621 134<-44.4663 41.4358>
@@ -50932,7 +50973,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1DF25
-Encoding: 785 122661 294
+Encoding: 786 122661 294
 Width: 833
 Flags: W
 HStem: -10 64<418.927 556.052> 0 42<729.213 806> 480 66<126.015 209.811 416.611 557.156> 718 42<532 608.787>
@@ -51120,7 +51161,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1DF26
-Encoding: 786 122662 295
+Encoding: 787 122662 295
 Width: 475
 Flags: W
 HStem: 0 42<169 250.5 371.5 453> 480 66<125.015 206.976> 718 42<169 250.787>
@@ -51244,7 +51285,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1DF27
-Encoding: 787 122663 296
+Encoding: 788 122663 296
 Width: 802
 Flags: W
 HStem: 0 42<175 251.5 371.14 444 695.531 764> 480 66<126.015 207.976 421.265 555.423>
@@ -51446,7 +51487,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1DF28
-Encoding: 788 122664 297
+Encoding: 789 122664 297
 Width: 626
 Flags: W
 HStem: 0 42<179 250.5 370.657 468> 480 66<125.015 206.976 415.024 496.985>
@@ -51599,7 +51640,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1DF29
-Encoding: 789 122665 298
+Encoding: 790 122665 298
 Width: 683
 Flags: W
 HStem: -10 48<368.3 515.436> 480 66<131.222 213.834> 499 46<378.981 510.874>
@@ -51778,7 +51819,7 @@ Validated: 19489
 EndChar
 
 StartChar: u1DF2A
-Encoding: 790 122666 299
+Encoding: 791 122666 299
 Width: 543
 Flags: W
 HStem: -10 53<394.672 509.872> 479 57<371 502> 480 66<128.015 210.073>
@@ -51927,7 +51968,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E030
-Encoding: 791 122928 300
+Encoding: 792 122928 300
 Width: 372
 VWidth: 1120
 Flags: W
@@ -52115,7 +52156,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E031
-Encoding: 792 122929 301
+Encoding: 793 122929 301
 Width: 381
 VWidth: 1120
 Flags: W
@@ -52244,7 +52285,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E032
-Encoding: 793 122930 302
+Encoding: 794 122930 302
 Width: 391
 VWidth: 1120
 Flags: W
@@ -52401,7 +52442,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E033
-Encoding: 794 122931 303
+Encoding: 795 122931 303
 Width: 307
 VWidth: 1120
 Flags: W
@@ -52521,7 +52562,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E034
-Encoding: 795 122932 304
+Encoding: 796 122932 304
 Width: 385
 VWidth: 1120
 Flags: W
@@ -52670,7 +52711,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E035
-Encoding: 796 122933 305
+Encoding: 797 122933 305
 Width: 354
 VWidth: 1120
 Flags: W
@@ -52797,7 +52838,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E036
-Encoding: 797 122934 306
+Encoding: 798 122934 306
 Width: 580
 VWidth: 1120
 Flags: W
@@ -53040,7 +53081,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E037
-Encoding: 798 122935 307
+Encoding: 799 122935 307
 Width: 319
 VWidth: 1120
 Flags: W
@@ -53206,7 +53247,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E038
-Encoding: 799 122936 308
+Encoding: 800 122936 308
 Width: 449
 VWidth: 1120
 Flags: W
@@ -53397,7 +53438,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03A
-Encoding: 801 122938 309
+Encoding: 802 122938 309
 Width: 414
 VWidth: 1120
 Flags: W
@@ -53550,7 +53591,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E039
-Encoding: 800 122937 310
+Encoding: 801 122937 310
 Width: 404
 VWidth: 1120
 Flags: W
@@ -53730,7 +53771,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03B
-Encoding: 802 122939 311
+Encoding: 803 122939 311
 Width: 525
 VWidth: 1120
 Flags: W
@@ -53917,7 +53958,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03C
-Encoding: 803 122940 312
+Encoding: 804 122940 312
 Width: 382
 VWidth: 1120
 Flags: W
@@ -54009,7 +54050,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03D
-Encoding: 804 122941 313
+Encoding: 805 122941 313
 Width: 435
 VWidth: 1120
 Flags: W
@@ -54161,7 +54202,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03E
-Encoding: 805 122942 314
+Encoding: 806 122942 314
 Width: 404
 VWidth: 1006
 Flags: W
@@ -54337,7 +54378,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E03F
-Encoding: 806 122943 315
+Encoding: 807 122943 315
 Width: 326
 VWidth: 1006
 Flags: W
@@ -54418,7 +54459,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E040
-Encoding: 807 122944 316
+Encoding: 808 122944 316
 Width: 359
 VWidth: 1006
 Flags: W
@@ -54559,7 +54600,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E041
-Encoding: 808 122945 317
+Encoding: 809 122945 317
 Width: 369
 VWidth: 1006
 Flags: W
@@ -54649,7 +54690,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E042
-Encoding: 809 122946 318
+Encoding: 810 122946 318
 Width: 484
 VWidth: 1006
 Flags: W
@@ -54824,7 +54865,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E043
-Encoding: 810 122947 319
+Encoding: 811 122947 319
 Width: 388
 VWidth: 1006
 Flags: W
@@ -54936,7 +54977,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E044
-Encoding: 811 122948 320
+Encoding: 812 122948 320
 Width: 442
 VWidth: 1006
 Flags: W
@@ -55106,7 +55147,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E045
-Encoding: 812 122949 321
+Encoding: 813 122949 321
 Width: 423
 VWidth: 1006
 Flags: W
@@ -55304,7 +55345,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E046
-Encoding: 813 122950 322
+Encoding: 814 122950 322
 Width: 624
 VWidth: 1006
 Flags: W
@@ -55505,7 +55546,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E047
-Encoding: 814 122951 323
+Encoding: 815 122951 323
 Width: 551
 VWidth: 1006
 Flags: W
@@ -55712,7 +55753,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E048
-Encoding: 815 122952 324
+Encoding: 816 122952 324
 Width: 324
 VWidth: 1006
 Flags: W
@@ -55853,7 +55894,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E049
-Encoding: 816 122953 325
+Encoding: 817 122953 325
 Width: 570
 VWidth: 1006
 Flags: W
@@ -56047,7 +56088,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04A
-Encoding: 817 122954 326
+Encoding: 818 122954 326
 Width: 457
 VWidth: 1006
 Flags: W
@@ -56318,7 +56359,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04B
-Encoding: 818 122955 327
+Encoding: 819 122955 327
 Width: 354
 VWidth: 1006
 Flags: W
@@ -56445,7 +56486,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04C
-Encoding: 819 122956 328
+Encoding: 820 122956 328
 Width: 213
 VWidth: 1006
 Flags: W
@@ -56566,7 +56607,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04D
-Encoding: 820 122957 329
+Encoding: 821 122957 329
 Width: 216
 VWidth: 1006
 Flags: W
@@ -56679,7 +56720,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04E
-Encoding: 821 122958 330
+Encoding: 822 122958 330
 Width: 381
 VWidth: 1006
 Flags: W
@@ -56786,7 +56827,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E04F
-Encoding: 822 122959 331
+Encoding: 823 122959 331
 Width: 380
 VWidth: 1006
 Flags: W
@@ -56923,7 +56964,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E050
-Encoding: 823 122960 332
+Encoding: 824 122960 332
 Width: 244
 VWidth: 1006
 Flags: W
@@ -57024,7 +57065,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E051
-Encoding: 824 122961 333
+Encoding: 825 122961 333
 Width: 372
 VWidth: 503
 Flags: W
@@ -57210,7 +57251,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1E052
-Encoding: 825 122962 334
+Encoding: 826 122962 334
 Width: 380
 VWidth: 503
 Flags: W
@@ -57339,7 +57380,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E053
-Encoding: 826 122963 335
+Encoding: 827 122963 335
 Width: 391
 VWidth: 503
 Flags: W
@@ -57496,7 +57537,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E054
-Encoding: 827 122964 336
+Encoding: 828 122964 336
 Width: 306
 VWidth: 503
 Flags: W
@@ -57616,7 +57657,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E055
-Encoding: 828 122965 337
+Encoding: 829 122965 337
 Width: 385
 VWidth: 503
 Flags: W
@@ -57765,7 +57806,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E056
-Encoding: 829 122966 338
+Encoding: 830 122966 338
 Width: 354
 VWidth: 503
 Flags: W
@@ -57892,7 +57933,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E057
-Encoding: 830 122967 339
+Encoding: 831 122967 339
 Width: 579
 VWidth: 503
 Flags: W
@@ -58135,7 +58176,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E058
-Encoding: 831 122968 340
+Encoding: 832 122968 340
 Width: 318
 VWidth: 503
 Flags: W
@@ -58301,7 +58342,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E059
-Encoding: 832 122969 341
+Encoding: 833 122969 341
 Width: 447
 VWidth: 503
 Flags: W
@@ -58492,7 +58533,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E05A
-Encoding: 833 122970 342
+Encoding: 834 122970 342
 Width: 404
 VWidth: 503
 Flags: W
@@ -58672,7 +58713,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1E05B
-Encoding: 834 122971 343
+Encoding: 835 122971 343
 Width: 414
 VWidth: 503
 Flags: W
@@ -58827,7 +58868,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1E05C
-Encoding: 835 122972 344
+Encoding: 836 122972 344
 Width: 381
 VWidth: 503
 Flags: W
@@ -58919,7 +58960,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1E05D
-Encoding: 836 122973 345
+Encoding: 837 122973 345
 Width: 434
 VWidth: 503
 Flags: W
@@ -59071,7 +59112,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E05E
-Encoding: 837 122974 346
+Encoding: 838 122974 346
 Width: 326
 VWidth: 503
 Flags: W
@@ -59152,7 +59193,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1E05F
-Encoding: 838 122975 347
+Encoding: 839 122975 347
 Width: 369
 VWidth: 503
 Flags: W
@@ -59244,7 +59285,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E060
-Encoding: 839 122976 348
+Encoding: 840 122976 348
 Width: 484
 VWidth: 503
 Flags: W
@@ -59419,7 +59460,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E061
-Encoding: 840 122977 349
+Encoding: 841 122977 349
 Width: 388
 VWidth: 503
 Flags: W
@@ -59531,7 +59572,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E062
-Encoding: 841 122978 350
+Encoding: 842 122978 350
 Width: 442
 VWidth: 503
 Flags: W
@@ -59701,7 +59742,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E063
-Encoding: 842 122979 351
+Encoding: 843 122979 351
 Width: 423
 VWidth: 503
 Flags: W
@@ -59899,7 +59940,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E064
-Encoding: 843 122980 352
+Encoding: 844 122980 352
 Width: 624
 VWidth: 503
 Flags: W
@@ -60100,7 +60141,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E065
-Encoding: 844 122981 353
+Encoding: 845 122981 353
 Width: 458
 VWidth: 503
 Flags: W
@@ -60252,7 +60293,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E066
-Encoding: 845 122982 354
+Encoding: 846 122982 354
 Width: 551
 VWidth: 503
 Flags: W
@@ -60459,7 +60500,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E067
-Encoding: 846 122983 355
+Encoding: 847 122983 355
 Width: 291
 VWidth: 503
 Flags: W
@@ -60596,7 +60637,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E068
-Encoding: 847 122984 356
+Encoding: 848 122984 356
 Width: 213
 VWidth: 503
 Flags: W
@@ -60717,7 +60758,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E069
-Encoding: 848 122985 357
+Encoding: 849 122985 357
 Width: 299
 VWidth: 503
 Flags: W
@@ -60854,7 +60895,7 @@ Validated: 3105
 EndChar
 
 StartChar: u1E06A
-Encoding: 849 122986 358
+Encoding: 850 122986 358
 Width: 439
 VWidth: 503
 Flags: W
@@ -61036,7 +61077,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E06B
-Encoding: 850 122987 359
+Encoding: 851 122987 359
 Width: 326
 VWidth: 1006
 Flags: W
@@ -61184,7 +61225,7 @@ Validated: 19489
 EndChar
 
 StartChar: u1E06C
-Encoding: 851 122988 360
+Encoding: 852 122988 360
 Width: 640
 VWidth: 1006
 Flags: W
@@ -61416,7 +61457,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E06D
-Encoding: 852 122989 361
+Encoding: 853 122989 361
 Width: 382
 VWidth: 1006
 Flags: W
@@ -61591,7 +61632,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1E08F
-Encoding: 853 123023 362
+Encoding: 854 123023 362
 Width: 0
 Flags: W
 HStem: 620 18<-351 -317.035 -254.109 -219> 816 18<-348 -328.766> 873 52<-315.745 -258.255>
@@ -61603,7 +61644,7 @@ Validated: 32769
 EndChar
 
 StartChar: u1E4D0
-Encoding: 885 124112 363
+Encoding: 886 124112 363
 Width: 589
 Flags: W
 HStem: -15 80<182.3 398.921> 331 80<236 355.592> 635 80<195.269 392.114>
@@ -61763,7 +61804,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D1
-Encoding: 886 124113 364
+Encoding: 887 124113 364
 Width: 670
 Flags: W
 HStem: 0 21G<515 595> 310 80<139 173 253 515>
@@ -61901,7 +61942,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D2
-Encoding: 887 124114 365
+Encoding: 888 124114 365
 Width: 680
 Flags: W
 HStem: 0 21G<68 148 529 609> 635 80<249.641 427.359>
@@ -61995,7 +62036,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D3
-Encoding: 888 124115 366
+Encoding: 889 124115 366
 Width: 707
 Flags: W
 HStem: -20 80<237.349 456.011> 635 80<181.753 274.198 407.572 499.271>
@@ -62212,7 +62253,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D4
-Encoding: 889 124116 367
+Encoding: 890 124116 367
 Width: 689
 Flags: W
 HStem: -15 80<266.446 447.666> 368 80<154 531> 635 80<267.922 417.661>
@@ -62316,7 +62357,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.3curl
-Encoding: 890 124117 368
+Encoding: 891 124117 368
 Width: 707
 Flags: W
 HStem: -15 80<163.855 361.916> 0 21G<546.763 626.763> 213.616 80<185.815 407.765 499.078 546.763> 366.849 80<250.988 373.092> 635.385 79.6192<205.514 414.241>
@@ -62550,7 +62591,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D6
-Encoding: 891 124118 369
+Encoding: 892 124118 369
 Width: 700
 Flags: W
 HStem: 0 21G<532 612> 310 80<161.561 259.218 402.362 500.704>
@@ -62686,7 +62727,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D7
-Encoding: 892 124119 370
+Encoding: 893 124119 370
 Width: 704
 Flags: W
 HStem: -15 80<304.457 410.836> 635 80<226.171 452.926>
@@ -62858,7 +62899,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D8
-Encoding: 893 124120 371
+Encoding: 894 124120 371
 Width: 687
 Flags: W
 HStem: 199 79.5<201.164 340.501> 635 80<202.226 340.173>
@@ -63015,7 +63056,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4D9
-Encoding: 894 124121 372
+Encoding: 895 124121 372
 Width: 756
 Flags: W
 HStem: -15 80<317.934 472.767> 311 80<409.125 598> 635 80<285.695 472.781>
@@ -63169,7 +63210,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4DA
-Encoding: 895 124122 373
+Encoding: 896 124122 373
 Width: 691
 Flags: W
 HStem: -16 80<146.604 248.033> 21 80<505.514 535.682> 230 80<174.453 350.506> 394 80<219.132 387.031>
@@ -63414,7 +63455,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4DB
-Encoding: 896 124123 374
+Encoding: 897 124123 374
 Width: 660
 Flags: W
 HStem: 0 21G<502 582> 68 80<215.507 393.312> 310 80<212.264 344> 635 80<196.25 338>
@@ -63604,7 +63645,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4DC
-Encoding: 897 124124 375
+Encoding: 898 124124 375
 Width: 688
 Flags: W
 HStem: -15 80<255.759 430.5> 635 80<443.811 493.069>
@@ -63743,7 +63784,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Theta
-Encoding: 898 124125 376
+Encoding: 899 124125 376
 Width: 662
 Flags: W
 HStem: -15 80<287.041 365.959> 310 80<25 132 212 441 521 628> 635 80<287.041 365.959>
@@ -63920,7 +63961,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4DE
-Encoding: 899 124126 377
+Encoding: 900 124126 377
 Width: 550
 Flags: W
 HStem: -15 80<206.071 343.569>
@@ -64025,7 +64066,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Crev
-Encoding: 900 124127 378
+Encoding: 901 124127 378
 Width: 642
 Flags: W
 HStem: -15 80<178.718 349.28> 635 80<177.561 350.24>
@@ -64112,7 +64153,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.curvN
-Encoding: 901 124128 379
+Encoding: 902 124128 379
 Width: 818
 Flags: W
 HStem: -16 80<510.768 638.72> 518 80<135.513 199 279 415 509.239 574> 665 80<133.703 187.659>
@@ -64307,7 +64348,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E1
-Encoding: 902 124129 380
+Encoding: 903 124129 380
 Width: 554
 Flags: W
 HStem: -14 80<200.006 357.066> 388 80<108 192 385 469> 635 80<242.949 333.338>
@@ -64529,7 +64570,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Acurl
-Encoding: 903 124130 381
+Encoding: 904 124130 381
 Width: 662
 Flags: W
 HStem: 0 21G<35 126.996 468 602>
@@ -64606,7 +64647,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.8belt
-Encoding: 904 124131 382
+Encoding: 905 124131 382
 Width: 690
 Flags: W
 HStem: -15 80<237.69 441.211> 635 80<265.542 411.639>
@@ -64788,7 +64829,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E4
-Encoding: 905 124132 383
+Encoding: 906 124132 383
 Width: 629
 Flags: W
 HStem: -15 80<200.028 418.884> 331.21 80<242.866 363.345> 635.004 80<207.31 404.192>
@@ -64956,7 +64997,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E5
-Encoding: 906 124133 384
+Encoding: 907 124133 384
 Width: 751
 Flags: W
 HStem: -15 80<187.597 306.78> 0 21G<588 668> 635 80<440.948 560.425>
@@ -65112,7 +65153,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Wloop
-Encoding: 907 124134 385
+Encoding: 908 124134 385
 Width: 820
 Flags: W
 HStem: -15 80<238.154 327.654 500.075 593.991> 635 80<541.067 615.082>
@@ -65302,7 +65343,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E7
-Encoding: 908 124135 386
+Encoding: 909 124135 386
 Width: 766
 Flags: W
 HStem: -15 80<181.642 230.313> 0 21G<597 677> 635 80<319.119 508.582>
@@ -65479,7 +65520,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E8
-Encoding: 909 124136 387
+Encoding: 910 124136 387
 Width: 694
 Flags: W
 HStem: -10 21G<299.664 464.5> 635 80<37 137.319 551.23 651>
@@ -65636,7 +65677,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4E9
-Encoding: 910 124137 388
+Encoding: 911 124137 388
 Width: 710
 Flags: W
 HStem: 0 21G<552 632> 187 80<249.883 433.584> 620 80<37 185>
@@ -65776,7 +65817,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4EA
-Encoding: 911 124138 389
+Encoding: 912 124138 389
 Width: 818
 Flags: W
 HStem: -15 80<147.672 272.438> 0 21G<648 728> 153.5 80.5<156.421 337.192> 635 80<238.572 401.428>
@@ -65983,7 +66024,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4EB
-Encoding: 912 124139 390
+Encoding: 913 124139 390
 Width: 587
 Flags: W
 HStem: -16 80<215.934 375.901> 428 80<309.947 344.811 425 518> 635 80<249.195 343.872>
@@ -66167,7 +66208,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4EC
-Encoding: 913 124140 391
+Encoding: 914 124140 391
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -66220,7 +66261,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Prime
-Encoding: 914 124141 392
+Encoding: 915 124141 392
 Width: 124
 GlyphClass: 2
 Flags: W
@@ -66267,7 +66308,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4EE
-Encoding: 915 124142 393
+Encoding: 916 124142 393
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -66282,7 +66323,7 @@ Colour: ff9103
 EndChar
 
 StartChar: u1E4EF
-Encoding: 916 124143 394
+Encoding: 917 124143 394
 Width: 0
 Flags: W
 HStem: 802 70<-276.596 -180.159> 859 70<-412.169 -315.142>
@@ -66371,7 +66412,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig0
-Encoding: 917 124144 395
+Encoding: 918 124144 395
 Width: 650
 Flags: W
 HStem: -15 80<256.91 393.09> 635 80<256.91 393.09>
@@ -66473,7 +66514,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig1
-Encoding: 918 124145 396
+Encoding: 919 124145 396
 Width: 650
 Flags: W
 HStem: 695 20G<285 365>
@@ -66520,7 +66561,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig2
-Encoding: 919 124146 397
+Encoding: 920 124146 397
 Width: 650
 Flags: W
 HStem: 0 80<165 565> 695 20G<85 165>
@@ -66586,7 +66627,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig3
-Encoding: 920 124147 398
+Encoding: 921 124147 398
 Width: 650
 Flags: W
 HStem: -0 80<183 565> 620 80<85 467>
@@ -66652,7 +66693,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig4
-Encoding: 921 124148 399
+Encoding: 922 124148 399
 Width: 650
 Flags: W
 HStem: 0 21G<85 165 485 565>
@@ -66726,7 +66767,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig5
-Encoding: 922 124149 400
+Encoding: 923 124149 400
 Width: 650
 Flags: W
 HStem: -0 80<165 565> 310 80<165 485> 620 80<85 485>
@@ -66810,7 +66851,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig6
-Encoding: 923 124150 401
+Encoding: 924 124150 401
 Width: 650
 Flags: W
 HStem: 620 80<165 565>
@@ -66880,7 +66921,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig7
-Encoding: 924 124151 402
+Encoding: 925 124151 402
 Width: 650
 Flags: W
 HStem: 310 80<165 485> 695 20G<485 565>
@@ -66955,7 +66996,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig8
-Encoding: 925 124152 403
+Encoding: 926 124152 403
 Width: 650
 Flags: W
 HStem: 310 80<165 485> 695 20G<85 165>
@@ -67030,7 +67071,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Dig9
-Encoding: 926 124153 404
+Encoding: 927 124153 404
 Width: 650
 Flags: W
 HStem: 620 80<85 478>
@@ -67079,7 +67120,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.curvN.Prime
-Encoding: 988 -1 405
+Encoding: 989 -1 405
 Width: 821
 Flags: W
 HStem: -16 80<510.768 638.72> 518 80<135.513 199 279 415 509.239 574> 665 80<133.703 187.659> 675 180
@@ -67095,7 +67136,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Theta.Prime
-Encoding: 989 -1 406
+Encoding: 990 -1 406
 Width: 662
 Flags: W
 HStem: -15 80<287.041 365.959> 310 80<25 132 212 441 521 628> 635 80<287.041 365.959> 705 180
@@ -67110,7 +67151,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Acurl.Prime
-Encoding: 990 -1 407
+Encoding: 991 -1 407
 Width: 662
 Flags: W
 HStem: 0 21G<35 126.996 468 602> 705 180
@@ -67126,7 +67167,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.8belt.Prime
-Encoding: 991 -1 408
+Encoding: 992 -1 408
 Width: 690
 Flags: W
 HStem: -15 80<237.69 441.211> 635 80<265.542 411.639> 705 180
@@ -67141,7 +67182,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.3curl.Prime
-Encoding: 992 -1 409
+Encoding: 993 -1 409
 Width: 707
 Flags: W
 HStem: -15 80<163.855 361.916> 0 21G<546.763 626.763> 213.616 80<185.815 407.765 499.078 546.763> 366.849 80<250.988 373.092> 635.385 79.6192<205.514 414.241> 705 180
@@ -67157,7 +67198,7 @@ Colour: ff9103
 EndChar
 
 StartChar: Nagm.Crev.Prime
-Encoding: 993 -1 410
+Encoding: 994 -1 410
 Width: 642
 Flags: W
 HStem: -15 80<178.718 349.28> 635 80<177.561 350.24> 705 180
@@ -67677,7 +67718,7 @@ Validated: 19457
 EndChar
 
 StartChar: Lig.Dotc.Horn
-Encoding: 994 -1 420
+Encoding: 995 -1 420
 Width: 608
 Flags: W
 HStem: 472 39<389 456.78>
@@ -73663,7 +73704,7 @@ Validated: 19457
 EndChar
 
 StartChar: IdeoDotc
-Encoding: 995 -1 447
+Encoding: 996 -1 447
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<462.95 521.571> -32.4004 72.8008<345.35 403.97 580.55 639.171> 33.4004 72.7998<241.75 300.371 684.15 742.77> 137 72.7998<175.949 234.571 749.95 808.571> 254.6 72.8008<150.75 209.371 775.15 833.77> 372.2 72.7998<175.949 234.571 749.95 808.571> 475.8 72.7998<241.75 300.371 684.15 742.77> 541.6 72.8008<345.35 403.97 580.55 639.171> 566.8 72.7998<462.95 521.571>
@@ -74216,7 +74257,7 @@ Validated: 19457
 EndChar
 
 StartChar: Hang.Lig.Dotc.Double
-Encoding: 996 -1 448
+Encoding: 997 -1 448
 Width: 1000
 GlyphClass: 1
 Flags: W
@@ -74233,7 +74274,7 @@ LCarets2: 2 0 231
 EndChar
 
 StartChar: Hang.Lig.Dotc.Single
-Encoding: 997 -1 449
+Encoding: 998 -1 449
 Width: 1000
 GlyphClass: 1
 Flags: W
@@ -74250,7 +74291,7 @@ LCarets2: 1 221
 EndChar
 
 StartChar: Kana.Lig.Dotc.Quote
-Encoding: 998 -1 450
+Encoding: 999 -1 450
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<368.95 427.571> -32.4004 72.8008<251.35 309.97 486.55 545.171> 33.4004 72.7998<147.75 206.371 590.15 648.77> 137 72.7998<81.9493 140.571 655.95 714.571> 254.6 72.8008<56.7498 115.371 681.15 739.77> 372.2 72.7998<81.9493 140.571 655.95 714.571> 475.8 72.7998<147.75 206.371 590.15 648.77> 541.6 72.8008<251.35 309.97 486.55 545.171> 566.8 72.7998<368.95 427.571> 588 203
@@ -74430,7 +74471,7 @@ Validated: 19457
 EndChar
 
 StartChar: Kana.Lig.Dotc.Degree
-Encoding: 999 -1 453
+Encoding: 1000 -1 453
 Width: 1000
 Flags: W
 HStem: -57.5996 72.7998<368.95 427.571> -32.4004 72.8008<251.35 309.97 486.55 545.171> 33.4004 72.7998<147.75 206.371 590.15 648.77> 137 72.7998<81.9493 140.571 655.95 714.571> 254.6 72.8008<56.7498 115.371 681.15 739.77> 372.2 72.7998<81.9493 140.571 655.95 714.571> 475.8 72.7998<147.75 206.371 590.15 648.77> 541.6 72.8008<251.35 309.97 486.55 545.171> 562 46<818.654 912.842> 566.8 72.7998<368.95 427.571> 742 46<818.654 912.842>
@@ -76465,7 +76506,7 @@ Validated: 32773
 EndChar
 
 StartChar: Latn.Lambdastr.Part
-Encoding: 1000 -1 469
+Encoding: 1001 -1 469
 Width: 0
 Flags: W
 HStem: 150.778 153.978
@@ -76544,7 +76585,7 @@ Validated: 19457
 EndChar
 
 StartChar: NameMe.484
-Encoding: 1001 -1 470
+Encoding: 1002 -1 470
 Width: 544
 Flags: W
 HStem: -10 49<180.192 344.959> 674 50<195.486 343.751>
@@ -77292,7 +77333,7 @@ Validated: 19457
 EndChar
 
 StartChar: NameMe.490
-Encoding: 1002 -1 476
+Encoding: 1003 -1 476
 Width: 334
 Flags: W
 HStem: 457 87<80 195.967>
@@ -78132,7 +78173,7 @@ Validated: 32769
 EndChar
 
 StartChar: Kits.Tofu
-Encoding: 784 101631 488
+Encoding: 785 101631 488
 Width: 1033
 Flags: W
 HStem: -75.2158 60<123.65 926.39> 792.256 60<123.65 926.39>
@@ -78727,7 +78768,7 @@ Colour: 8000
 EndChar
 
 StartChar: u1F8C0
-Encoding: 981 129216 494
+Encoding: 982 129216 494
 Width: 830
 Flags: W
 HStem: 273.6 64.8008<236.601 571.4>
@@ -78821,7 +78862,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F8C1
-Encoding: 982 129217 495
+Encoding: 983 129217 495
 Width: 830
 Flags: W
 HStem: 273.6 64.8008<281 615.8>
@@ -102839,7 +102880,7 @@ Substitution2: "Copt LOCL-1" Copt.Macron
 EndChar
 
 StartChar: Copt.cap.I.macron
-Encoding: 1003 -1 640
+Encoding: 1004 -1 640
 Width: 338
 Flags: W
 HStem: 780 70<31 308>
@@ -102857,7 +102898,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Copt.small.I.macron
-Encoding: 1004 -1 641
+Encoding: 1005 -1 641
 Width: 304
 Flags: W
 HStem: 0 21G<163 178> 630 70<13 290>
@@ -102914,7 +102955,7 @@ Substitution2: "Copt LOCL-1" Copt.Overline
 EndChar
 
 StartChar: Copt.Macron
-Encoding: 1005 -1 643
+Encoding: 1006 -1 643
 Width: 0
 Flags: W
 HStem: 616 70<-197 197>
@@ -102953,7 +102994,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Overline
-Encoding: 1006 -1 644
+Encoding: 1007 -1 644
 Width: 0
 Flags: W
 HStem: 616 70<-236 238>
@@ -102992,7 +103033,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.small.J.macron
-Encoding: 1007 -1 645
+Encoding: 1008 -1 645
 Width: 323
 Flags: W
 HStem: 616 70<33 310>
@@ -103010,7 +103051,7 @@ Ligature2: "Copt CCMP-1" Copt.small.J Uml.Macron
 EndChar
 
 StartChar: Copt.Macron.Left
-Encoding: 1008 -1 646
+Encoding: 1009 -1 646
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103048,7 +103089,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Right
-Encoding: 1009 -1 647
+Encoding: 1010 -1 647
 Width: 3
 GlyphClass: 4
 Flags: W
@@ -103090,7 +103131,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Long
-Encoding: 1010 -1 648
+Encoding: 1011 -1 648
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103129,7 +103170,7 @@ Substitution2: "Copt macron-1" Copt.Macron.Longest
 EndChar
 
 StartChar: Copt.Part.Smacron
-Encoding: 1011 -1 649
+Encoding: 1012 -1 649
 Width: 4
 Flags: W
 HStem: 616 70<-131 146>
@@ -103176,7 +103217,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.Macron.Longest
-Encoding: 1012 -1 650
+Encoding: 1013 -1 650
 Width: 0
 Flags: W
 HStem: 710 70<-917 150>
@@ -103213,7 +103254,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.BigMacron.1
-Encoding: 1013 -1 651
+Encoding: 1014 -1 651
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -103251,7 +103292,7 @@ Validated: 19457
 EndChar
 
 StartChar: Copt.BigMacron.2
-Encoding: 1014 -1 652
+Encoding: 1015 -1 652
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -123505,7 +123546,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.II
-Encoding: 1015 -1 792
+Encoding: 1016 -1 792
 Width: 0
 Flags: W
 AnchorPoint: "Maka uml right dot" 110 543 mark 0
@@ -123521,7 +123562,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.UU
-Encoding: 1016 -1 793
+Encoding: 1017 -1 793
 Width: 0
 Flags: W
 AnchorPoint: "Dot below" 0 0 mark 0
@@ -123535,7 +123576,7 @@ Colour: ff00
 EndChar
 
 StartChar: Maka.R.part
-Encoding: 1017 -1 794
+Encoding: 1018 -1 794
 Width: 616
 Flags: W
 HStem: 14.9709 114.38<329.22 464.744>
@@ -123613,7 +123654,7 @@ Colour: ff00
 EndChar
 
 StartChar: u1F741
-Encoding: 971 128833 795
+Encoding: 972 128833 795
 Width: 676
 Flags: W
 HStem: -10 21G<293 383> 164 90<186 293 383 490> 392 73.0392<234.872 293 383 440.635> 694 20G<50 132 293 383 544 626>
@@ -123763,7 +123804,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F747
-Encoding: 972 128839 796
+Encoding: 973 128839 796
 Width: 1010
 Flags: W
 HStem: -0.605469 21G<52.75 125.587 859.825 932.443> 63.75 69.6299<148.755 294.349 724.781 872.485> 233.605 69.6299<425.729 592.873>
@@ -123976,7 +124017,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F74C
-Encoding: 973 128844 797
+Encoding: 974 128844 797
 Width: 572
 Flags: W
 HStem: -10 76<230.266 427.365> 216.704 68<210.23 288.906 356.906 435.583> 469 77<228.415 400.116>
@@ -124174,7 +124215,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F74F
-Encoding: 974 128847 798
+Encoding: 975 128847 798
 Width: 557
 Flags: W
 HStem: -10 21G<70.5 99.5 458.25 474.75> 323 68<212.007 249.5 305.5 342.992>
@@ -124697,7 +124738,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F756
-Encoding: 975 128854 799
+Encoding: 976 128854 799
 Width: 936
 Flags: W
 HStem: -59 59<422.798 512.702> 455.035 59<126.279 216.593 719.407 809.721> 466.854 59<422.442 513.114> 638.374 59<126.218 216.121 719.879 809.782>
@@ -125039,7 +125080,7 @@ Validated: 19465
 EndChar
 
 StartChar: u1F758
-Encoding: 976 128856 800
+Encoding: 977 128856 800
 Width: 540
 Flags: W
 HStem: 0 21G<229 311> 131.923 82<97.0771 229 311 442.923> 345.845 80<132 229 311 408> 694 20G<50 132 408 490>
@@ -125174,7 +125215,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F763
-Encoding: 977 128867 801
+Encoding: 978 128867 801
 Width: 897
 Flags: W
 HStem: 40.2891 68<366.911 530.026> 204.115 68<153.326 230.034 666.97 743.674> 465.046 68<153.326 275.604 621.396 743.674>
@@ -125394,7 +125435,7 @@ Validated: 19465
 EndChar
 
 StartChar: u1F768
-Encoding: 978 128872 802
+Encoding: 979 128872 802
 Width: 698
 Flags: W
 LayerCount: 2
@@ -125422,7 +125463,7 @@ Validated: 3073
 EndChar
 
 StartChar: u1F76D
-Encoding: 979 128877 803
+Encoding: 980 128877 803
 Width: 949
 Flags: W
 HStem: 0 72<192.891 347.498> 368.39 72<270.194 347.356> 498.349 72<338.318 587.473>
@@ -125558,7 +125599,7 @@ Validated: 19457
 EndChar
 
 StartChar: u1F76E
-Encoding: 980 128878 804
+Encoding: 981 128878 804
 Width: 638
 Flags: W
 HStem: -135 66<151.24 275.948 370.875 486.425> 597 66<151.281 275.846 361.72 486.482>
@@ -125960,7 +126001,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.As.part
-Encoding: 1018 -1 807
+Encoding: 1019 -1 807
 Width: 1000
 HStem: 290.799 70.8521<485.167 601.677>
 VStem: 397.073 266.524
@@ -126065,7 +126106,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Njan.Part
-Encoding: 1019 -1 810
+Encoding: 1020 -1 810
 Width: 1000
 HStem: 162.999 296.303
 VStem: 537.426 62.6672<195.199 290.959>
@@ -126344,7 +126385,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Ng.Part
-Encoding: 1020 -1 814
+Encoding: 1021 -1 814
 Width: 1000
 HStem: 425.768 288.232
 VStem: 112.736 323.59
@@ -127113,7 +127154,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Nxh.part
-Encoding: 1021 -1 824
+Encoding: 1022 -1 824
 Width: 1000
 HStem: 518 74<510.649 560.044>
 VStem: 569 50<358.616 511.773>
@@ -129257,7 +129298,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Sht.part
-Encoding: 1022 -1 847
+Encoding: 1023 -1 847
 Width: 1000
 HStem: 0 21G<480.518 530.518>
 VStem: 480.518 50<0 512.694>
@@ -129380,7 +129421,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Ca.part
-Encoding: 1023 -1 849
+Encoding: 1024 -1 849
 Width: 1000
 HStem: 0 50<395 573>
 VStem: 395 178<0 50>
@@ -129910,7 +129951,7 @@ Colour: ffff
 EndChar
 
 StartChar: Todr.Jy.part
-Encoding: 1024 -1 856
+Encoding: 1025 -1 856
 Width: 1000
 HStem: 694 20G<172.01 272.01>
 VStem: 172.01 100<239.35 714>
@@ -131453,7 +131494,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Contour.Part
-Encoding: 1025 -1 881
+Encoding: 1026 -1 881
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<176.731 359.269> 550.5 55<176.731 359.269>
@@ -131554,7 +131595,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Surface.Part
-Encoding: 1026 -1 882
+Encoding: 1027 -1 882
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<239.047 636.944> 550.5 55<240.274 635.736>
@@ -131665,7 +131706,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Volume.Part
-Encoding: 1027 -1 884
+Encoding: 1028 -1 884
 Width: 1000
 VWidth: 1030
 HStem: 99.5 55<388.335 827.665> 550.5 55<388.887 827.113>
@@ -131779,7 +131820,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Cw.Part
-Encoding: 1028 -1 886
+Encoding: 1029 -1 886
 Width: 1000
 VWidth: 1030
 HStem: 550.505 55<176.934 358.981>
@@ -131846,7 +131887,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.RoundCw.Part
-Encoding: 1029 -1 888
+Encoding: 1030 -1 888
 Width: 1000
 VWidth: 1030
 Flags: W
@@ -131991,7 +132032,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.RoundCcw.Part
-Encoding: 1030 -1 891
+Encoding: 1031 -1 891
 Width: 1000
 VWidth: 1030
 HStem: 98.9219 55.1494<176.627 358.774> 550.502 55.0195<178.826 359.044>
@@ -132110,7 +132151,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Midstroke.Part
-Encoding: 1031 -1 892
+Encoding: 1032 -1 892
 Width: 1000
 VWidth: 1030
 HStem: 325 55<56.7617 479.232>
@@ -132206,7 +132247,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Square.Part
-Encoding: 1032 -1 898
+Encoding: 1033 -1 898
 Width: 1000
 VWidth: 1030
 HStem: 141.265 55<111.762 424.232> 508.735 55<111.762 424.232>
@@ -132293,7 +132334,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Slash.Part
-Encoding: 1033 -1 901
+Encoding: 1034 -1 901
 Width: 1000
 VWidth: 1030
 LayerCount: 2
@@ -132309,7 +132350,7 @@ Validated: 3073
 EndChar
 
 StartChar: Math.Integral.Times.Part
-Encoding: 1034 -1 902
+Encoding: 1035 -1 902
 Width: 1000
 VWidth: 1030
 LayerCount: 2
@@ -132355,7 +132396,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Cap.Part
-Encoding: 1035 -1 905
+Encoding: 1036 -1 905
 Width: 1000
 VWidth: 1030
 HStem: 523.914 45<184.571 351.43>
@@ -132433,7 +132474,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Cup.Part
-Encoding: 1036 -1 906
+Encoding: 1037 -1 906
 Width: 1000
 VWidth: 1030
 HStem: 146.515 45<184.571 351.43>
@@ -132510,7 +132551,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Circ.Part
-Encoding: 1037 -1 907
+Encoding: 1038 -1 907
 Width: 1000
 VWidth: 1030
 HStem: 99.6436 55<176.723 358.686> 550.437 55<176.784 359.311>
@@ -132601,7 +132642,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Ccw.Part
-Encoding: 1038 -1 909
+Encoding: 1039 -1 909
 Width: 1000
 VWidth: 1030
 HStem: 99 55<177.994 357.546>
@@ -133469,7 +133510,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Back.Part
-Encoding: 1039 -1 916
+Encoding: 1040 -1 916
 Width: 1000
 VWidth: 1030
 HStem: 113 55<403 465> 388 55<67 465>
@@ -133707,7 +133748,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Integral.Tall.Part
-Encoding: 1040 -1 919
+Encoding: 1041 -1 919
 Width: 1000
 HStem: -300 70<92.4193 171.948> 875 70<364.052 444.098>
 VStem: 214 108.51<60.9998 584>
@@ -133814,7 +133855,7 @@ Validated: 32773
 EndChar
 
 StartChar: Math.Sum.Circle.Part
-Encoding: 1041 -1 921
+Encoding: 1042 -1 921
 Width: 1000
 HStem: 88.5273 50<249.421 416.323> 476.033 50<249.421 416.323>
 VStem: 114.119 50<223.829 390.732> 501.624 50<223.829 390.732>
@@ -135661,7 +135702,7 @@ Validated: 19457
 EndChar
 
 StartChar: Math.Circled.Part
-Encoding: 1042 -1 948
+Encoding: 1043 -1 948
 Width: 1000
 HStem: 93 60<187.315 371.685> 562 60<187.315 371.685>
 VStem: 15 60<265.315 449.685> 484 60<265.315 449.685>
@@ -135759,7 +135800,7 @@ Validated: 19457
 EndChar
 
 StartChar: Onao.O
-Encoding: 927 124368 949
+Encoding: 928 124368 949
 Width: 760
 Flags: W
 HStem: -10 100<200.664 348.685> 0 21G<625 695> 411 70<257.628 444.877> 624 100<231.951 379.556> 694 20G<616.5 695>
@@ -135958,7 +135999,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Om
-Encoding: 928 124369 950
+Encoding: 929 124369 950
 Width: 683
 Flags: W
 HStem: -10 100<219.832 415.473> 396 80<145.348 266.688> 624 100<251.142 445.203>
@@ -136117,7 +136158,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ong
-Encoding: 929 124370 951
+Encoding: 930 124370 951
 Width: 678
 Flags: W
 HStem: -10 100<228.198 326> 287 80<175.638 317.294> 624 100<251.052 446.109>
@@ -136174,7 +136215,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Orr
-Encoding: 930 124371 952
+Encoding: 931 124371 952
 Width: 678
 Flags: W
 HStem: -10 100<219.909 415.263> 352 80<136.677 224.982> 624 100<252.519 446.12>
@@ -136440,7 +136481,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.OO
-Encoding: 931 124372 953
+Encoding: 932 124372 953
 Width: 678
 Flags: W
 HStem: -10 100<219.832 415.473> 406 90<146.497 223.661 309.803 383.242> 624 100<252.519 446.12>
@@ -136647,7 +136688,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Oy
-Encoding: 932 124373 954
+Encoding: 933 124373 954
 Width: 650
 Flags: W
 HStem: -10 100<224.266 466.933> 351 100<197.82 422.188> 624 100<270.843 453.603>
@@ -136805,7 +136846,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.A
-Encoding: 933 124374 955
+Encoding: 934 124374 955
 Width: 920
 UnlinkRmOvrlpSave: 1
 Flags: W
@@ -136861,7 +136902,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ad
-Encoding: 934 124375 956
+Encoding: 935 124375 956
 Width: 860
 Flags: W
 HStem: -10 100<175.02 258.625 412.934 499.56> 0 21G<725 795> 428.089 70<404.609 541.916> 623.635 80.3652<395.002 494.392> 694 20G<153.988 313.446 708.625 795>
@@ -137132,7 +137173,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ab
-Encoding: 935 124376 957
+Encoding: 936 124376 957
 Width: 678
 Flags: W
 HStem: -10 100<232.276 436.999> 216.51 80<467.337 543.15> 416.604 90<292.084 390.916> 624 100<251.704 442.511>
@@ -137318,7 +137359,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ah
-Encoding: 936 124377 958
+Encoding: 937 124377 958
 Width: 678
 Flags: W
 HStem: -10 100<233.359 438.667> 224.492 99.5078<456.919 541.171> 624 100<250.824 443.205>
@@ -137528,7 +137569,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Al
-Encoding: 937 124378 959
+Encoding: 938 124378 959
 Width: 644
 Flags: W
 HStem: -10 100<229.875 450.053> 399 100<231.149 315 385 464.297> 614 100<82 315>
@@ -137573,7 +137614,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Aw
-Encoding: 938 124379 960
+Encoding: 939 124379 960
 Width: 695
 Flags: W
 HStem: -10 100<200.664 348.675> 257 100<434 446 525 565> 400 81<210.097 381.741> 624 100<227.193 379.58>
@@ -137824,7 +137865,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.I
-Encoding: 939 124380 961
+Encoding: 940 124380 961
 Width: 678
 Flags: W
 HStem: -10 100<219.909 415.583> 352 80<135.189 237.111> 624 100<251.749 444.677>
@@ -138033,7 +138074,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.It
-Encoding: 940 124381 962
+Encoding: 941 124381 962
 Width: 678
 Flags: W
 HStem: -10 99<231.959 424.896> 624 100<252.15 445.666>
@@ -138146,7 +138187,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ip
-Encoding: 941 124382 963
+Encoding: 942 124382 963
 Width: 678
 Flags: W
 HStem: -10 100<232.975 438.26> 624 100<251.286 442.576>
@@ -138269,7 +138310,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Itt
-Encoding: 942 124383 964
+Encoding: 943 124383 964
 Width: 668
 Flags: W
 HStem: -10 100<244.193 470.884> 262 58<455.169 546.235> 411 60<384.762 470.472> 624 100<251.071 445.225>
@@ -138489,7 +138530,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Id
-Encoding: 943 124384 965
+Encoding: 944 124384 965
 Width: 796
 Flags: W
 HStem: -10 100<267.46 357.563 515.009 604.016> 312 90<49 122.877> 624 90<436.538 527.109>
@@ -138712,7 +138753,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.In
-Encoding: 944 124385 966
+Encoding: 945 124385 966
 Width: 735
 Flags: W
 HStem: 0 21G<30 145.497 321.503 416 600 670> 391 70<194.703 391.94> 624 100<174.318 339.911> 694 20G<588.5 670>
@@ -138906,7 +138947,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.U
-Encoding: 945 124386 967
+Encoding: 946 124386 967
 Width: 668
 Flags: W
 HStem: -10 100<223.19 416.919> 277 80<126.866 212.969> 624 100<230.298 430.92>
@@ -139174,7 +139215,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uk
-Encoding: 946 124387 968
+Encoding: 947 124387 968
 Width: 700
 Flags: W
 HStem: -10 100<167.869 265.132 417.073 511.616> 388 100<182.407 341.155> 388 52<349.08 374.161> 614 100<180 376>
@@ -139418,7 +139459,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Udd
-Encoding: 947 124388 969
+Encoding: 948 124388 969
 Width: 684
 Flags: W
 HStem: -10 100<332.147 467.805> 269 100<131 246> 624 100<256.253 447.727>
@@ -139602,7 +139643,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uj
-Encoding: 948 124389 970
+Encoding: 949 124389 970
 Width: 790
 Flags: W
 HStem: -10 100<175.129 267.451 521.999 612.065> 271 100<355 435> 694 20G<169.5 300 490 620.5>
@@ -139807,7 +139848,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uny
-Encoding: 949 124390 971
+Encoding: 950 124390 971
 Width: 699
 Flags: W
 HStem: -10 100<337.147 472.805> 269 100<136 251> 435 80<244.084 467.246> 624 100<248.005 453.037>
@@ -140034,7 +140075,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ur
-Encoding: 950 124391 972
+Encoding: 951 124391 972
 Width: 603
 Flags: W
 HStem: -10 100<241.011 438.751>
@@ -140099,7 +140140,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.E
-Encoding: 951 124392 973
+Encoding: 952 124392 973
 Width: 678
 Flags: W
 HStem: -10 80<237.656 348.625> 163 59<408.713 464.02> 254 95<468.316 547.353> 624 100<252.109 447.07>
@@ -140371,7 +140412,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Es
-Encoding: 952 124393 974
+Encoding: 953 124393 974
 Width: 658
 Flags: W
 HStem: -10 100<229.266 471.933> 351 100<202.82 427.188> 624 100<275.843 458.603>
@@ -140386,7 +140427,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Eh
-Encoding: 953 124394 975
+Encoding: 954 124394 975
 Width: 678
 Flags: W
 HStem: -10 100<218.716 415.363> 229 80<294 411> 229 64<196 249.535> 392 80<164.906 263.799> 624 100<250.984 442.825>
@@ -140592,7 +140633,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Ec
-Encoding: 954 124395 976
+Encoding: 955 124395 976
 Width: 700
 Flags: W
 HStem: -10 100<165.498 264.116 418.535 518.686> 382 90<184.661 356.035> 634 91<257.612 357.154>
@@ -140841,7 +140882,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Enn
-Encoding: 955 124396 977
+Encoding: 956 124396 977
 Width: 799
 Flags: W
 HStem: -10 100<208.428 375.346> 0 21G<664 734> 396 80<153.488 253.762> 624 100<246.588 400.166> 694 20G<663.474 734>
@@ -141045,7 +141086,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Eg
-Encoding: 956 124397 978
+Encoding: 957 124397 978
 Width: 678
 Flags: W
 HStem: -10 100<223.925 416.194> 624 100<252.108 444.296>
@@ -141175,7 +141216,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Slash
-Encoding: 1043 -1 979
+Encoding: 1044 -1 979
 Width: 1000
 LayerCount: 2
 Fore
@@ -141190,7 +141231,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uml.DotAbove
-Encoding: 957 124398 980
+Encoding: 958 124398 980
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -141204,7 +141245,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Uml.DotBelow
-Encoding: 958 124399 981
+Encoding: 959 124399 981
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -141258,7 +141299,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.Hodd
-Encoding: 959 124400 982
+Encoding: 960 124400 982
 Width: 360
 Flags: W
 HStem: 40 100<133.789 226.211> 574 100<133.789 226.211>
@@ -141388,7 +141429,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.0
-Encoding: 960 124401 983
+Encoding: 961 124401 983
 Width: 559
 Flags: W
 HStem: -10 100<194.784 337.477> 624 100<221.523 364.216>
@@ -141493,7 +141534,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.1
-Encoding: 961 124402 984
+Encoding: 962 124402 984
 Width: 559
 Flags: W
 HStem: -10 99.9241<300.16 440.224> 544 100<322.453 426.761> 694 20G<65 135>
@@ -141718,7 +141759,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.2
-Encoding: 962 124403 985
+Encoding: 963 124403 985
 Width: 559
 Flags: W
 HStem: 0 90<160 433.401> 624 100<180.62 373.09>
@@ -141866,7 +141907,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.3
-Encoding: 963 124404 986
+Encoding: 964 124404 986
 Width: 559
 Flags: W
 HStem: -10 100<192.474 395.838> 349 80<197.217 295> 624 90<184 423.718>
@@ -142028,7 +142069,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.4
-Encoding: 964 124405 987
+Encoding: 965 124405 987
 Width: 559
 Flags: W
 HStem: -10 100<250.535 330.938> 410 80<128.105 195.298> 624 100<138.102 270.328>
@@ -142224,7 +142265,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.5
-Encoding: 965 124406 988
+Encoding: 966 124406 988
 Width: 559
 Flags: W
 HStem: -10 100<189.14 357.207> 624 100<190.792 382.315>
@@ -142380,7 +142421,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.6
-Encoding: 966 124407 989
+Encoding: 967 124407 989
 Width: 559
 Flags: W
 HStem: 0 90<160 433.401> 344 80<145.855 242.426> 624 100<183.119 370.687>
@@ -142567,7 +142608,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.7
-Encoding: 967 124408 990
+Encoding: 968 124408 990
 Width: 559
 Flags: W
 HStem: 0 90<156 431.947> 317 70<172.403 312.681> 624 100<179.922 343.304>
@@ -142741,7 +142782,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.8
-Encoding: 968 124409 991
+Encoding: 969 124409 991
 Width: 559
 Flags: W
 HStem: -10 100<183.972 372.899> 135 46<149.532 226.959> 290 80<147.022 227.152> 624 90<160 433.462>
@@ -142973,7 +143014,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Onao.9
-Encoding: 969 124410 992
+Encoding: 970 124410 992
 Width: 559
 Flags: W
 HStem: -11 81<171.52 285.865> 254 100<179.061 351.027> 624 100<180.952 353.727>
@@ -143093,7 +143134,7 @@ Colour: ffff00
 EndChar
 
 StartChar: u1E5FF
-Encoding: 970 124415 993
+Encoding: 971 124415 993
 Width: 360
 Flags: W
 HStem: 227 65<133.019 226.981> 422 65<133.019 226.981>
@@ -148185,7 +148226,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Virama" 478 12 basechar 0
+AnchorPoint: "Virama" 478 27 basechar 0
 AnchorPoint: "Dot below" 327 0 basechar 0
 AnchorPoint: "Matra 625" 327 625 basechar 0
 LayerCount: 2
@@ -150967,23 +151008,179 @@ EndChar
 
 StartChar: Gukh.Med.H
 Encoding: 781 90412 1041
-Width: 0
-GlyphClass: 4
+Width: 250
+GlyphClass: 2
 Flags: W
-HStem: 675 165
-AnchorPoint: "Dot below" -273 -27 mark 0
+HStem: 11 50<71.7751 148.225> 161 50<72.3189 147.681> 285 50<71.7751 148.225> 435 50<72.3189 147.681> 560 65<-10 260>
+VStem: 10 50<72.9443 148.916 346.944 422.916> 160 50<72.9443 148.916 346.944 422.916>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 35
+MDAP[rnd]
+PUSHB_1
+ 23
+MDRP[min,rnd,black]
+PUSHB_1
+ 27
+MDAP[rnd]
+PUSHB_1
+ 31
+MDRP[min,rnd,black]
+PUSHB_1
+ 19
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_1
+ 11
+MDAP[rnd]
+PUSHB_1
+ 15
+MDRP[min,rnd,black]
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 36
+MDAP[rnd]
+PUSHB_1
+ 29
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 12
+SHP[rp2]
+PUSHB_1
+ 21
+MDRP[min,rnd,black]
+PUSHB_1
+ 4
+SHP[rp2]
+PUSHB_1
+ 21
+SRP0
+PUSHB_2
+ 25
+ 1
+CALL
+PUSHB_1
+ 8
+SHP[rp2]
+PUSHB_1
+ 33
+MDRP[min,rnd,black]
+PUSHB_1
+ 16
+SHP[rp2]
+PUSHB_2
+ 37
+ 1
+CALL
+PUSHB_2
+ 25
+ 21
+SRP1
+SRP2
+PUSHB_8
+ 14
+ 15
+ 18
+ 19
+ 30
+ 31
+ 34
+ 35
+DEPTH
+SLOOP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 27
+ 23
+SRP1
+SRP2
+PUSHB_4
+ 28
+ 29
+ 32
+ 33
+DEPTH
+SLOOP
+IP
+PUSHB_2
+ 11
+ 7
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 13
+ 16
+ 17
+DEPTH
+SLOOP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Matra 625" 110 625 basechar 0
+AnchorPoint: "Dot below" 110 0 basechar 0
+AnchorPoint: "Virama" 114 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
--384.8984375 -257 m 1,0,-1
- -455.611328125 -257 l 1,1,-1
- -290.611328125 -92 l 1,2,-1
- -255 -92 l 1,3,-1
- -90.255859375 -257 l 1,4,-1
- -160.966796875 -257 l 1,5,-1
- -272.931640625 -145.033203125 l 1,6,-1
- -384.8984375 -257 l 1,0,-1
+-10 625 m 1,0,-1
+ 260 625 l 1,1,-1
+ 260 560 l 1,2,-1
+ -10 560 l 1,3,-1
+ -10 625 l 1,0,-1
+60 384.5 m 128,-1,5
+ 60 364 60 364 74.5 349.5 c 128,-1,6
+ 89 335 89 335 110 335 c 128,-1,7
+ 131 335 131 335 145.5 349.5 c 128,-1,8
+ 160 364 160 364 160 384.5 c 128,-1,9
+ 160 405 160 405 145.5 420 c 128,-1,10
+ 131 435 131 435 110 435 c 128,-1,11
+ 89 435 89 435 74.5 420 c 128,-1,4
+ 60 405 60 405 60 384.5 c 128,-1,5
+10 384.5 m 128,-1,13
+ 10 426 10 426 39.5 455.5 c 128,-1,14
+ 69 485 69 485 110 485 c 128,-1,15
+ 151 485 151 485 180.5 455.5 c 128,-1,16
+ 210 426 210 426 210 384.5 c 128,-1,17
+ 210 343 210 343 180.5 314 c 128,-1,18
+ 151 285 151 285 110 285 c 128,-1,19
+ 69 285 69 285 39.5 314 c 128,-1,12
+ 10 343 10 343 10 384.5 c 128,-1,13
+60 110.5 m 128,-1,21
+ 60 90 60 90 74.5 75.5 c 128,-1,22
+ 89 61 89 61 110 61 c 128,-1,23
+ 131 61 131 61 145.5 75.5 c 128,-1,24
+ 160 90 160 90 160 110.5 c 128,-1,25
+ 160 131 160 131 145.5 146 c 128,-1,26
+ 131 161 131 161 110 161 c 128,-1,27
+ 89 161 89 161 74.5 146 c 128,-1,20
+ 60 131 60 131 60 110.5 c 128,-1,21
+10 110.5 m 128,-1,29
+ 10 152 10 152 39.5 181.5 c 128,-1,30
+ 69 211 69 211 110 211 c 128,-1,31
+ 151 211 151 211 180.5 181.5 c 128,-1,32
+ 210 152 210 152 210 110.5 c 128,-1,33
+ 210 69 210 69 180.5 40 c 128,-1,34
+ 151 11 151 11 110 11 c 128,-1,35
+ 69 11 69 11 39.5 40 c 128,-1,28
+ 10 69 10 69 10 110.5 c 128,-1,29
 EndSplineSet
+Substitution2: "Gukh med.H b-1" Gukh.Med.H.b
+Substitution2: "Gukh med.H invT-1" Gukh.Med.H.InvT
+Substitution2: "Gukh med.H aspir-1" Gukh.Med.H.Aspir
+Substitution2: "Gukh med.H wider-1" Gukh.Med.H.Wider
+Substitution2: "Gukh med.H normal-1" Gukh.Med.H.Norm
 Colour: ffe600
 EndChar
 
@@ -151040,15 +151237,57 @@ EndSplineSet
 Colour: ffe600
 EndChar
 
-StartChar: u1612E
-Encoding: -1 90414 1043
-Width: 1000
+StartChar: Gukh.Med.R
+Encoding: 783 90414 1043
+Width: 0
+GlyphClass: 4
+Flags: W
+HStem: -257 165
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 1
+MDAP[rnd]
+PUSHB_1
+ 4
+SHP[rp1]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 7
+MDAP[rnd]
+SVTCA[y-axis]
+PUSHB_2
+ 2
+ 1
+SRP1
+SRP2
+PUSHB_1
+ 6
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Dot below" -273 -27 mark 0
 LayerCount: 2
+Fore
+SplineSet
+-384.8984375 -257 m 5,0,-1
+ -455.611328125 -257 l 5,1,-1
+ -290.611328125 -92 l 5,2,-1
+ -255 -92 l 5,3,-1
+ -90.255859375 -257 l 5,4,-1
+ -160.966796875 -257 l 5,5,-1
+ -272.931640625 -145.033203125 l 5,6,-1
+ -384.8984375 -257 l 5,0,-1
+EndSplineSet
 Colour: ffe600
 EndChar
 
 StartChar: u1612F
-Encoding: 783 90415 1044
+Encoding: 784 90415 1044
 Width: 0
 Flags: W
 HStem: -261.104 169.117
@@ -151253,7 +151492,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Aa.Anu
-Encoding: 1044 -1 1067
+Encoding: 1045 -1 1067
 Width: 0
 Flags: W
 HStem: 675 50<-546 0>
@@ -151298,7 +151537,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.I.Anu
-Encoding: 1045 -1 1068
+Encoding: 1046 -1 1068
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -151439,7 +151678,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Ii.Anu
-Encoding: 1046 -1 1069
+Encoding: 1047 -1 1069
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -151643,7 +151882,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.U.Anu
-Encoding: 1047 -1 1070
+Encoding: 1048 -1 1070
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -151700,7 +151939,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Uu.Anu
-Encoding: 1048 -1 1071
+Encoding: 1049 -1 1071
 Width: 0
 Flags: W
 HStem: 675 50<-546 0> 775 50<-546 -50>
@@ -151793,7 +152032,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Oo.Anu
-Encoding: 1049 -1 1072
+Encoding: 1050 -1 1072
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -152009,7 +152248,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Au.Anu
-Encoding: 1050 -1 1073
+Encoding: 1051 -1 1073
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -152239,7 +152478,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.E.Anu
-Encoding: 1051 -1 1074
+Encoding: 1052 -1 1074
 Width: 0
 Flags: W
 HStem: 675 90<-336.624 -209.376> 675 50<-546 -337.059 -208.655 0> 835 45<-307.948 -238.052> 970 45<-307.948 -238.052>
@@ -152390,7 +152629,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Ee.Anu
-Encoding: 1052 -1 1075
+Encoding: 1053 -1 1075
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -152587,7 +152826,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.Ai.Anu
-Encoding: 1053 -1 1076
+Encoding: 1054 -1 1076
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -152802,7 +153041,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Lig.O.Anu
-Encoding: 1054 -1 1077
+Encoding: 1055 -1 1077
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -152980,7 +153219,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.K.Y
-Encoding: 1055 -1 1078
+Encoding: 1056 -1 1078
 Width: 762
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -152995,7 +153234,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Kh.Y
-Encoding: 1056 -1 1079
+Encoding: 1057 -1 1079
 Width: 907
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153009,9 +153248,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.G.Y
-Encoding: 1057 -1 1080
+Encoding: 1058 -1 1080
 Width: 813
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 468 625 basechar 0
 LayerCount: 2
@@ -153023,9 +153262,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Gh.Y
-Encoding: 1058 -1 1081
+Encoding: 1059 -1 1081
 Width: 958
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 506 625 basechar 0
 LayerCount: 2
@@ -153037,9 +153276,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ng.Y
-Encoding: 1059 -1 1082
+Encoding: 1060 -1 1082
 Width: 797
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 451 625 basechar 0
 LayerCount: 2
@@ -153051,23 +153290,24 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.C.Y
-Encoding: 1060 -1 1083
+Encoding: 1061 -1 1083
 Width: 803
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 447 625 basechar 0
 LayerCount: 2
 Fore
 Refer: 1003 90374 N 1 0 0 1 145 0 2
 Refer: 1138 -1 N 1 0 0 1 0 0 2
+LCarets2: 1 0
 Ligature2: "Gukh LIGM-1" Gukh.C Gukh.Med.Y
 Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ch.Y
-Encoding: 1061 -1 1084
+Encoding: 1062 -1 1084
 Width: 948
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 505 625 basechar 0
 LayerCount: 2
@@ -153079,7 +153319,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.J.Y
-Encoding: 1062 -1 1085
+Encoding: 1063 -1 1085
 Width: 744
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153093,7 +153333,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Jh.Y
-Encoding: 1063 -1 1086
+Encoding: 1064 -1 1086
 Width: 889
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153107,9 +153347,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.H.Y
-Encoding: 1064 -1 1087
+Encoding: 1065 -1 1087
 Width: 853
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 496 625 basechar 0
 LayerCount: 2
@@ -153121,9 +153361,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Tt.Y
-Encoding: 1065 -1 1088
+Encoding: 1066 -1 1088
 Width: 754
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 458 625 basechar 0
 LayerCount: 2
@@ -153135,9 +153375,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Tth.Y
-Encoding: 1066 -1 1089
+Encoding: 1067 -1 1089
 Width: 903
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 517 625 basechar 0
 LayerCount: 2
@@ -153149,9 +153389,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dd.Y
-Encoding: 1067 -1 1090
+Encoding: 1068 -1 1090
 Width: 837
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 483 625 basechar 0
 LayerCount: 2
@@ -153163,9 +153403,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ddh.Y
-Encoding: 1068 -1 1091
+Encoding: 1069 -1 1091
 Width: 983
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 517 625 basechar 0
 LayerCount: 2
@@ -153178,9 +153418,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.V.Y
-Encoding: 1069 -1 1092
+Encoding: 1070 -1 1092
 Width: 782
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 463 625 basechar 0
 LayerCount: 2
@@ -153192,7 +153432,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.T.Y
-Encoding: 1070 -1 1093
+Encoding: 1071 -1 1093
 Width: 742
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153206,7 +153446,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Th.Y
-Encoding: 1071 -1 1094
+Encoding: 1072 -1 1094
 Width: 897
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153220,7 +153460,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.N.Y
-Encoding: 1072 -1 1095
+Encoding: 1073 -1 1095
 Width: 798
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153234,7 +153474,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.P.Y
-Encoding: 1073 -1 1096
+Encoding: 1074 -1 1096
 Width: 685
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153248,7 +153488,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ph.Y
-Encoding: 1074 -1 1097
+Encoding: 1075 -1 1097
 Width: 830
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153262,9 +153502,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.B.Y
-Encoding: 1075 -1 1098
+Encoding: 1076 -1 1098
 Width: 782
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 463 625 basechar 0
 LayerCount: 2
@@ -153276,9 +153516,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Bh.Y
-Encoding: 1076 -1 1099
+Encoding: 1077 -1 1099
 Width: 927
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 521 625 basechar 0
 LayerCount: 2
@@ -153290,7 +153530,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.M.Y
-Encoding: 1077 -1 1100
+Encoding: 1078 -1 1100
 Width: 739
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153300,10 +153540,11 @@ Fore
 Refer: 1023 90393 N 1 0 0 1 145 0 2
 Refer: 1039 90410 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.M Gukh.Med.Y
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.D.Y
-Encoding: 1078 -1 1101
+Encoding: 1079 -1 1101
 Width: 764
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153313,10 +153554,11 @@ Fore
 Refer: 1017 90386 N 1 0 0 1 145 0 2
 Refer: 1039 90410 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.D Gukh.Med.Y
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dh.Y
-Encoding: 1079 -1 1102
+Encoding: 1080 -1 1102
 Width: 909
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153326,10 +153568,11 @@ Fore
 Refer: 1018 90387 N 1 0 0 1 145 0 2
 Refer: 1039 90410 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.Dh Gukh.Med.Y
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.K.V
-Encoding: 1080 -1 1103
+Encoding: 1081 -1 1103
 Width: 762
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153339,10 +153582,11 @@ Fore
 Refer: 998 90369 N 1 0 0 1 145 0 2
 Refer: 1040 90411 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.K Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Kh.V
-Encoding: 1081 -1 1104
+Encoding: 1082 -1 1104
 Width: 907
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153352,12 +153596,13 @@ Fore
 Refer: 999 90370 N 1 0 0 1 145 0 2
 Refer: 1040 90411 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.Kh Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.G.V
-Encoding: 1082 -1 1105
+Encoding: 1083 -1 1105
 Width: 813
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 468 625 basechar 0
 LayerCount: 2
@@ -153365,12 +153610,13 @@ Fore
 Refer: 1000 90371 N 1 0 0 1 145 0 2
 Refer: 1139 -1 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.G Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Gh.V
-Encoding: 1083 -1 1106
+Encoding: 1084 -1 1106
 Width: 958
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 506 625 basechar 0
 LayerCount: 2
@@ -153378,12 +153624,13 @@ Fore
 Refer: 1001 90372 N 1 0 0 1 145 0 2
 Refer: 1139 -1 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.Gh Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ng.V
-Encoding: 1084 -1 1107
+Encoding: 1085 -1 1107
 Width: 797
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 451 625 basechar 0
 LayerCount: 2
@@ -153391,12 +153638,13 @@ Fore
 Refer: 1002 90373 N 1 0 0 1 145 0 2
 Refer: 1139 -1 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.Ng Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.C.V
-Encoding: 1085 -1 1108
+Encoding: 1086 -1 1108
 Width: 803
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 447 625 basechar 0
 LayerCount: 2
@@ -153404,12 +153652,13 @@ Fore
 Refer: 1003 90374 N 1 0 0 1 145 0 2
 Refer: 1139 -1 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.C Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ch.V
-Encoding: 1086 -1 1109
+Encoding: 1087 -1 1109
 Width: 948
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 505 625 basechar 0
 LayerCount: 2
@@ -153418,10 +153667,11 @@ Refer: 1004 90375 N 1 0 0 1 145 0 2
 Refer: 1139 -1 N 1 0 0 1 0 0 2
 LCarets2: 1 0
 Ligature2: "Gukh LIGM-1" Gukh.Ch Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.J.V
-Encoding: 1087 -1 1110
+Encoding: 1088 -1 1110
 Width: 744
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153431,10 +153681,11 @@ Fore
 Refer: 1005 90376 N 1 0 0 1 145 0 2
 Refer: 1040 90411 N 1 0 0 1 0 0 2
 Ligature2: "Gukh LIGM-1" Gukh.J Gukh.Med.V
+Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Jh.V
-Encoding: 1088 -1 1111
+Encoding: 1089 -1 1111
 Width: 889
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153449,9 +153700,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.H.V
-Encoding: 1089 -1 1112
+Encoding: 1090 -1 1112
 Width: 853
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 496 625 basechar 0
 LayerCount: 2
@@ -153464,9 +153715,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Tt.V
-Encoding: 1090 -1 1113
+Encoding: 1091 -1 1113
 Width: 754
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 458 625 basechar 0
 LayerCount: 2
@@ -153478,9 +153729,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Tth.V
-Encoding: 1091 -1 1114
+Encoding: 1092 -1 1114
 Width: 903
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 517 625 basechar 0
 LayerCount: 2
@@ -153492,9 +153743,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dd.V
-Encoding: 1092 -1 1115
+Encoding: 1093 -1 1115
 Width: 837
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 483 625 basechar 0
 LayerCount: 2
@@ -153506,9 +153757,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ddh.V
-Encoding: 1093 -1 1116
+Encoding: 1094 -1 1116
 Width: 983
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 517 625 basechar 0
 LayerCount: 2
@@ -153520,9 +153771,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.V.V
-Encoding: 1094 -1 1117
+Encoding: 1095 -1 1117
 Width: 782
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 463 625 basechar 0
 LayerCount: 2
@@ -153534,7 +153785,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.T.V
-Encoding: 1095 -1 1118
+Encoding: 1096 -1 1118
 Width: 742
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153548,7 +153799,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Th.V
-Encoding: 1096 -1 1119
+Encoding: 1097 -1 1119
 Width: 897
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153562,7 +153813,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.D.V
-Encoding: 1097 -1 1120
+Encoding: 1098 -1 1120
 Width: 764
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153576,7 +153827,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dh.V
-Encoding: 1098 -1 1121
+Encoding: 1099 -1 1121
 Width: 909
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153590,7 +153841,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.N.V
-Encoding: 1099 -1 1122
+Encoding: 1100 -1 1122
 Width: 798
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153604,7 +153855,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.P.V
-Encoding: 1100 -1 1123
+Encoding: 1101 -1 1123
 Width: 685
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153618,7 +153869,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Ph.V
-Encoding: 1101 -1 1124
+Encoding: 1102 -1 1124
 Width: 830
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153632,9 +153883,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.B.V
-Encoding: 1102 -1 1125
+Encoding: 1103 -1 1125
 Width: 782
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 463 625 basechar 0
 LayerCount: 2
@@ -153646,9 +153897,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Bh.V
-Encoding: 1103 -1 1126
+Encoding: 1104 -1 1126
 Width: 927
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 521 625 basechar 0
 LayerCount: 2
@@ -153660,7 +153911,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.M.V
-Encoding: 1104 -1 1127
+Encoding: 1105 -1 1127
 Width: 739
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153674,9 +153925,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Y.Y
-Encoding: 1105 -1 1128
+Encoding: 1106 -1 1128
 Width: 728
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 446 625 basechar 0
 LayerCount: 2
@@ -153688,9 +153939,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Y.V
-Encoding: 1106 -1 1129
+Encoding: 1107 -1 1129
 Width: 728
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 446 625 basechar 0
 LayerCount: 2
@@ -153702,9 +153953,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.R.Y
-Encoding: 1107 -1 1130
+Encoding: 1108 -1 1130
 Width: 757
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 450 625 basechar 0
 LayerCount: 2
@@ -153716,9 +153967,9 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.R.V
-Encoding: 1108 -1 1131
+Encoding: 1109 -1 1131
 Width: 757
-Flags: HW
+Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 450 625 basechar 0
 LayerCount: 2
@@ -153730,7 +153981,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.L.Y
-Encoding: 1109 -1 1132
+Encoding: 1110 -1 1132
 Width: 858
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153744,7 +153995,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.L.V
-Encoding: 1110 -1 1133
+Encoding: 1111 -1 1133
 Width: 858
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153758,7 +154009,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.S.Y
-Encoding: 1111 -1 1134
+Encoding: 1112 -1 1134
 Width: 738
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153773,7 +154024,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.S.V
-Encoding: 1112 -1 1135
+Encoding: 1113 -1 1135
 Width: 738
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153788,7 +154039,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dotc.Y
-Encoding: 1113 -1 1136
+Encoding: 1114 -1 1136
 Width: 739
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153802,7 +154053,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Ligm.Dotc.V
-Encoding: 1114 -1 1137
+Encoding: 1115 -1 1137
 Width: 739
 Flags: W
 AnchorPoint: "Virama" 631 -40 basechar 0
@@ -153816,7 +154067,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Med.Y.Low
-Encoding: 1115 -1 1138
+Encoding: 1116 -1 1138
 Width: 145
 Flags: W
 HStem: -125 61<484.391 532.41> -63 65<125 289.426> 560 65<-10 60 125 155>
@@ -153906,7 +154157,7 @@ Colour: ffe600
 EndChar
 
 StartChar: Gukh.Med.V.Low
-Encoding: 1116 -1 1139
+Encoding: 1117 -1 1139
 Width: 145
 Flags: W
 HStem: -194 65<435.125 491.64> -58 65<125 318.95> 560 65<-10 60 125 155>
@@ -154043,6 +154294,73 @@ SplineSet
  500 -194 500 -194 474 -194 c 132,-1,23
  448 -194 448 -194 422 -187 c 5,0,-1
 EndSplineSet
+Colour: ffe600
+EndChar
+
+StartChar: Gukh.Med.H.Norm
+Encoding: 1118 -1 1140
+Width: 250
+Flags: W
+AnchorPoint: "Dot below" -300 0 basechar 0
+AnchorPoint: "Virama" -230 0 basechar 0
+AnchorPoint: "Matra 625" -300 625 basechar 0
+LayerCount: 2
+Fore
+Refer: 1041 90412 N 1 0 0 1 0 0 2
+Colour: ffe600
+EndChar
+
+StartChar: Gukh.Med.H.Wider
+Encoding: 1119 -1 1141
+Width: 250
+Flags: W
+AnchorPoint: "Dot below" -400 0 basechar 0
+AnchorPoint: "Virama" -320 0 basechar 0
+AnchorPoint: "Matra 625" -400 625 basechar 0
+LayerCount: 2
+Fore
+Refer: 1041 90412 N 1 0 0 1 0 0 2
+Colour: ffe600
+EndChar
+
+StartChar: Gukh.Med.H.Aspir
+Encoding: 1120 -1 1142
+Width: 250
+Flags: W
+HStem: 11 50<71.7751 148.225> 161 50<72.3189 147.681> 285 50<71.7751 148.225> 435 50<72.3189 147.681> 560 65<-10 260>
+VStem: 10 50<72.9443 148.916 346.944 422.916> 160 50<72.9443 148.916 346.944 422.916>
+AnchorPoint: "Dot below" -490 0 basechar 0
+AnchorPoint: "Virama" -410 0 basechar 0
+AnchorPoint: "Matra 625" -490 625 basechar 0
+LayerCount: 2
+Fore
+Refer: 1041 90412 N 1 0 0 1 0 0 2
+Colour: ffe600
+EndChar
+
+StartChar: Gukh.Med.H.InvT
+Encoding: 1121 -1 1143
+Width: 250
+Flags: W
+AnchorPoint: "Matra 625" -334 625 basechar 0
+AnchorPoint: "Dot below" -334 0 basechar 0
+AnchorPoint: "Virama" -183 27 basechar 0
+LayerCount: 2
+Fore
+Refer: 1041 90412 N 1 0 0 1 0 0 2
+Colour: ffe600
+EndChar
+
+StartChar: Gukh.Med.H.b
+Encoding: 1122 -1 1144
+Width: 250
+Flags: W
+AnchorPoint: "Dot below" -275 0 basechar 0
+AnchorPoint: "Virama" -193 10 basechar 0
+AnchorPoint: "Matra 625" -275 625 basechar 0
+LayerCount: 2
+Fore
+Refer: 1041 90412 N 1 0 0 1 0 0 2
 Colour: ffe600
 EndChar
 EndChars
