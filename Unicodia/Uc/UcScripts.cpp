@@ -214,7 +214,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI },
-    /// @todo [U16, big tofu] Gurung Khema
+    // Gurung Khema now in Funky
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1977), EcFont::FUNKY },

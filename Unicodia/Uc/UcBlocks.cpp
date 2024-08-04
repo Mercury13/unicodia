@@ -1184,8 +1184,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hluw },
-    /// @todo [U16, big tofu] Gurung Khema
-    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, Ifg::MISSING  },
+    // Gurung Khema now in Funky
+    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, {}, SvgHint{ 9, 1 } },
             "Gurung Khema",
             { EcScript::Gukh, 0 }, MapType::AS_BRAH, EcScript::Gukh },
     // Bamum supplement OK
