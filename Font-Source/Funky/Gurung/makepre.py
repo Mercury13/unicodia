@@ -1,30 +1,32 @@
 # Make pre-forms ligatures
 
 CH_NORM = ""
-CH_SLOP = ".Slop"
+CH_LOW = ".Low"
+# CH_SLOP = ".Slop"
 NORMAL_CHAR = { "Type": CH_NORM }
+LOW_CHAR = { "Type": CH_LOW }
 
 SCRIPT = "Gukh"
 
 BASE_PREFIX = SCRIPT + "."
 BASE_CHARS = {
     "K" : NORMAL_CHAR,
-    "G" : NORMAL_CHAR,
-    "Ng" : NORMAL_CHAR,
-    "C" : NORMAL_CHAR,
+    "G" : LOW_CHAR,
+    "Ng" : LOW_CHAR,
+    "C" : LOW_CHAR,
     "J" : NORMAL_CHAR,
-    "H" : NORMAL_CHAR,
-    "Tt" : NORMAL_CHAR,
-    "Dd" : NORMAL_CHAR,
-    "V" : NORMAL_CHAR,
+    "H" : LOW_CHAR,
+    "Tt" : LOW_CHAR,
+    "Dd" : LOW_CHAR,
+    "V" : LOW_CHAR,
     "T" : NORMAL_CHAR,
     "D" : NORMAL_CHAR,
     "N" : NORMAL_CHAR,
     "P" : NORMAL_CHAR,
-    "B" : NORMAL_CHAR,
+    "B" : LOW_CHAR,
     "M" : NORMAL_CHAR,
-    "Y" : NORMAL_CHAR,
-    "R" : NORMAL_CHAR,
+    "Y" : LOW_CHAR,
+    "R" : LOW_CHAR,
     "L" : NORMAL_CHAR,
     "S" : NORMAL_CHAR,
 };
@@ -92,7 +94,7 @@ def addAnchor(baseGlyph, newGlyph, name, offset, minX):
 #
 def addLig(font, basePrefix, baseCode, baseProp, medCode, medProp, shouldExist):
     baseName = basePrefix + baseCode
-    medName = MEDIAL_PREFIX + medCode
+    medName = MEDIAL_PREFIX + medCode + baseProp["Type"];
     ligName = LIGATURE_PREFIX + baseCode + "." + medCode
     baseGlyph = findGlyph(font, baseName, shouldExist)
     if baseGlyph == None:
