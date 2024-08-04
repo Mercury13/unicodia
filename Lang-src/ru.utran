@@ -6137,11 +6137,15 @@
       <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
       <p />
       <p>No ligatures for consonant conjuncts, [[pt:virama|virama]] (''tholhoma'') is always visible. Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+      <p />
+      <p>At the moment of writing Khema has no Unicode fonts, but in handwriting anusvara (nasalization mark) is tick when empty, and smile when houses a circle inside (e.g. in E+anusvara).</p>
      </orig>
      <transl>
       <p>Изобрёл Бал Нарсингх Гурунг. В 1997 индийский штат Сикким признал гурунг и сделал кхему официальным письмом.</p>
       <p />
       <p>Нет лигатур для стечений согласных, [[pt:virama|вирама]] (''tholhoma'') всегда видимая. Знак длины гласной только для [[pt:normalization|декомпозиции]]. Знаки препинания [[pt:ascii|ASCII]], плюс палка ''данда'' из [[ps:Deva|деванагари]].</p>
+      <p />
+      <p>На момент написания у кхемы нет юникодных шрифтов, но в рукописях анусвара (знак носовой гласной){{-}}галочка, если пустая, и улыбка, если содержит кружок (например, E+анусвара).</p>
      </transl>
     </text>
    </group>

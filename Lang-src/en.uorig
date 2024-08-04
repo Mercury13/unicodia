@@ -4449,6 +4449,8 @@
       <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
       <p />
       <p>No ligatures for consonant conjuncts, [[pt:virama|virama]] (''tholhoma'') is always visible. Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+      <p />
+      <p>At the moment of writing Khema has no Unicode fonts, but in handwriting anusvara (nasalization mark) is tick when empty, and smile when houses a circle inside (e.g. in E+anusvara).</p>
      </orig>
     </text>
    </group>
