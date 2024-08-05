@@ -757,7 +757,8 @@ namespace {
         } else if (name == "nchars"sv) {
             s += QString::number(uc::N_CPS);
         } else if (name == "nemoji"sv) {
-            s += QString::number(uc::N_EMOJI);
+            auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
+            s += QString::number(nEmoji);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
         } else if (name == "funky"sv) {

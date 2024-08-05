@@ -667,6 +667,7 @@ namespace uc {
             } chars;
             struct Emoji {
                 unsigned nTotal = 0;
+                /// New emoji
                 struct Nw {
                     struct SingleChar {
                         unsigned nThisUnicode = 0;
