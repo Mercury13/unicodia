@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722886416
+ModificationTime: 1722886542
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -868,7 +868,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 25 12
+WinInfo: 500 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -21251,6 +21251,73 @@ Encoding: 77730 77730 139
 Width: 1000
 Flags: W
 VStem: 464 70<-59.6853 156.686 282.829 488.202> 830 70.087<-90.202 69.3672>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 70
+MDAP[rnd]
+PUSHB_1
+ 38
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 56
+SHP[rp2]
+PUSHB_1
+ 44
+MDRP[min,rnd,black]
+PUSHB_2
+ 52
+ 65
+SHP[rp2]
+SHP[rp2]
+PUSHB_1
+ 44
+SRP0
+PUSHB_2
+ 20
+ 1
+CALL
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_2
+ 71
+ 1
+CALL
+PUSHB_2
+ 44
+ 38
+SRP1
+SRP2
+PUSHB_6
+ 5
+ 6
+ 25
+ 47
+ 54
+ 62
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 20
+SRP1
+PUSHB_1
+ 21
+IP
+PUSHB_1
+ 14
+SRP2
+PUSHB_2
+ 11
+ 12
+IP
+IP
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "Dot below" 500 -85 basechar 0
 LayerCount: 2
 Fore
@@ -22455,6 +22522,91 @@ Encoding: 77738 77738 147
 Width: 1000
 Flags: W
 VStem: 171.504 70.3809<162.313 440.164> 659.545 69.4717<-97.2739 -26.8282> 770.858 69.6621<155.48 443.761>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 60
+MDAP[rnd]
+PUSHB_1
+ 35
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 23
+MDRP[min,rnd,black]
+PUSHB_1
+ 23
+SRP0
+PUSHB_2
+ 11
+ 1
+CALL
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_3
+ 11
+ 7
+ 10
+CALL
+PUSHB_4
+ 0
+ 11
+ 19
+ 9
+CALL
+PUSHB_1
+ 7
+SRP0
+PUSHB_2
+ 44
+ 1
+CALL
+PUSHB_1
+ 47
+SHP[rp2]
+PUSHB_1
+ 53
+MDRP[min,rnd,black]
+PUSHB_1
+ 50
+SHP[rp2]
+PUSHB_2
+ 61
+ 1
+CALL
+PUSHB_2
+ 23
+ 35
+SRP1
+SRP2
+PUSHB_2
+ 39
+ 40
+IP
+IP
+PUSHB_1
+ 11
+SRP1
+PUSHB_2
+ 41
+ 42
+IP
+IP
+PUSHB_2
+ 53
+ 44
+SRP1
+SRP2
+PUSHB_2
+ 48
+ 55
+IP
+IP
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
 AnchorPoint: "Dot below" 604 -69 basechar 0
 LayerCount: 2
 Fore
