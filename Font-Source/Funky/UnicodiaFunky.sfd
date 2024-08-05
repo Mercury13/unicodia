@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1722888881
+ModificationTime: 1722890927
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -868,7 +868,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 25 12
+WinInfo: 675 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -7744,6 +7744,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 197 746 basechar 0
 AnchorPoint: "Dot below" 197 -116 basechar 0
 LayerCount: 2
 Fore
@@ -7816,6 +7817,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 163 746 basechar 0
 AnchorPoint: "Dot below" 163 -116 basechar 0
 LayerCount: 2
 Fore
@@ -43339,6 +43341,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 278 670 basechar 0
 AnchorPoint: "Dot below" 259 0 basechar 0
 LayerCount: 2
 Fore
@@ -51014,6 +51017,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 523 760 basechar 0
 AnchorPoint: "Dot below" 469 0 basechar 0
 LayerCount: 2
 Fore
@@ -51151,6 +51155,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 262 760 basechar 0
 AnchorPoint: "Dot below" 310 0 basechar 0
 LayerCount: 2
 Fore
@@ -51338,6 +51343,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 473 536 basechar 0
 AnchorPoint: "Dot below" 479 0 basechar 0
 LayerCount: 2
 Fore
@@ -51496,6 +51502,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 328 536.4 basechar 0
 AnchorPoint: "Dot below" 312 0 basechar 0
 LayerCount: 2
 Fore
@@ -51677,6 +51684,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 436 536.4 basechar 0
 AnchorPoint: "Dot below" 440 0 basechar 0
 LayerCount: 2
 Fore
@@ -51723,7 +51731,7 @@ EndChar
 StartChar: u1DF2A
 Encoding: 122666 122666 299
 Width: 543
-Flags: W
+Flags: WO
 HStem: -10 53<394.672 509.872> 479 57<371 502> 480 66<128.015 210.073>
 VStem: 277 94<67.7566 398.382 437 479 536 549> 325 46<585.353 659>
 TtInstrs:
@@ -51833,6 +51841,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 337 659 basechar 0
 AnchorPoint: "Dot below" 412 0 basechar 0
 LayerCount: 2
 Fore
@@ -75719,6 +75728,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 305 0 basechar 0
+AnchorPoint: "Umlaut" 306 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -75756,7 +75767,6 @@ SplineSet
  351 381 l 1,41,-1
  351 54 l 1,34,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: Cyrl.small.Tj
@@ -75904,6 +75914,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 267 0 basechar 0
+AnchorPoint: "Umlaut" 261 536 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -75940,7 +75952,6 @@ SplineSet
  312 268 l 1,36,-1
  312 50 l 1,31,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: Latn.Cap.Lambda
@@ -76041,6 +76052,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 320 714 basechar 0
 AnchorPoint: "Dot below" 325 0 basechar 0
 LayerCount: 2
 Fore
@@ -76217,6 +76229,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 203 760 basechar 0
 AnchorPoint: "Dot below" 303 0 basechar 0
 LayerCount: 2
 Fore
@@ -76253,6 +76266,7 @@ Width: 625
 Flags: W
 HStem: 0 42<-5 58.2679 190.815 270 384 467.141 572.967 628> 373.778 153.978 672 42<159 251.343 378.5 470>
 VStem: 264 101<416 658.058>
+AnchorPoint: "Umlaut" 320 714 basechar 0
 AnchorPoint: "Dot below" 325 0 basechar 0
 LayerCount: 2
 Fore
@@ -76494,6 +76508,7 @@ Width: 544
 Flags: W
 HStem: -10 49<180.192 344.959> 674 50<195.486 343.751>
 VStem: 48 72<106.396 178.919> 59 93<481.124 629.952> 386 79<564.019 629.291> 398 95<96.6553 238.041>
+AnchorPoint: "Umlaut" 276 714 basechar 0
 AnchorPoint: "Dot below" 264 0 basechar 0
 LayerCount: 2
 Fore
@@ -76634,6 +76649,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 228 537 basechar 0
 AnchorPoint: "Dot below" 217 0 basechar 0
 LayerCount: 2
 Fore
@@ -76817,6 +76833,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 399 714 basechar 0
 AnchorPoint: "Dot below" 391 0 basechar 0
 LayerCount: 2
 Fore
@@ -77159,7 +77176,7 @@ StartChar: uni0897
 Encoding: 2199 2199 478
 Width: 0
 GlyphClass: 4
-Flags: WO
+Flags: W
 HStem: 678 167.088
 TtInstrs:
 SVTCA[y-axis]
@@ -103172,6 +103189,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 166 713 basechar 0
 AnchorPoint: "Dot below" 166 0 basechar 0
 LayerCount: 2
 Fore
@@ -103193,12 +103211,13 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u22
+StartChar: Punc.Quot
 Encoding: 34 34 654
 Width: 408
 Flags: W
 HStem: 479 235<87 133 275 321>
 VStem: 87 46<479 533.833> 275 46<479 533.833>
+AnchorPoint: "Umlaut" 195 713 basechar 0
 AnchorPoint: "Dot below" 195 0 basechar 0
 LayerCount: 2
 Fore
@@ -103206,7 +103225,7 @@ Refer: 659 39 N 1 0 0 1 188 0 2
 Refer: 659 39 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: u23
+StartChar: Punc.Hash
 Encoding: 35 35 655
 Width: 559
 Flags: W
@@ -103520,6 +103539,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 310 714 basechar 0
 AnchorPoint: "Dot below" 238 0 basechar 0
 LayerCount: 2
 Fore
@@ -103561,7 +103581,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u24
+StartChar: Curr.Dollar
 Encoding: 36 36 656
 Width: 559
 Flags: W
@@ -103665,6 +103685,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 278 750 basechar 0
 AnchorPoint: "Dot below" 278 -70 basechar 0
 LayerCount: 2
 Fore
@@ -103717,7 +103738,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u25
+StartChar: Punc.Percent
 Encoding: 37 37 657
 Width: 896
 Flags: W
@@ -103882,6 +103903,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 469 714 basechar 0
 AnchorPoint: "Dot below" 451 0 basechar 0
 LayerCount: 2
 Fore
@@ -103930,7 +103952,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u26
+StartChar: Punc.Amp
 Encoding: 38 38 658
 Width: 742
 Flags: W
@@ -104061,6 +104083,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 307 716 basechar 0
 AnchorPoint: "Dot below" 309 0 basechar 0
 LayerCount: 2
 Fore
@@ -104155,6 +104178,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 110 714 basechar 0
 AnchorPoint: "Dot below" 111 0 basechar 0
 LayerCount: 2
 Fore
@@ -104206,6 +104230,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 193 739 basechar 0
 AnchorPoint: "Dot below" 193 -112 basechar 0
 LayerCount: 2
 Fore
@@ -104267,6 +104292,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 168 739 basechar 0
 AnchorPoint: "Dot below" 168 -112 basechar 0
 LayerCount: 2
 Fore
@@ -104289,10 +104315,11 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2A
+StartChar: Punc.Star
 Encoding: 42 42 662
 Width: 500
 Flags: W
+AnchorPoint: "Umlaut" 250 759 basechar 0
 AnchorPoint: "Dot below" 254 0 basechar 0
 LayerCount: 2
 Fore
@@ -104407,6 +104434,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -104427,7 +104455,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2C
+StartChar: Punc.Comma
 Encoding: 44 44 664
 Width: 250
 Flags: W
@@ -104476,6 +104504,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 125 560 basechar 0
 AnchorPoint: "Dot below" 133 -142 basechar 0
 LayerCount: 2
 Fore
@@ -104534,7 +104563,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 152 0 basechar 0
+AnchorPoint: "Umlaut" 155 560 basechar 0
+AnchorPoint: "Dot below" 155 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -104546,7 +104576,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2E
+StartChar: Punc.Point
 Encoding: 46 46 666
 Width: 250
 Flags: W
@@ -104584,6 +104614,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 125 560 basechar 0
 AnchorPoint: "Dot below" 125 0 basechar 0
 LayerCount: 2
 Fore
@@ -104600,7 +104631,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2F
+StartChar: Punc.Slash
 Encoding: 47 47 667
 Width: 288
 Flags: W
@@ -104670,6 +104701,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 207 749 basechar 0
 AnchorPoint: "Dot below" 81 -111 basechar 0
 LayerCount: 2
 Fore
@@ -104755,6 +104787,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -104868,6 +104901,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 301 714 basechar 0
 AnchorPoint: "Dot below" 294 0 basechar 0
 LayerCount: 2
 Fore
@@ -105017,6 +105051,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 269 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -105175,6 +105210,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 266 714 basechar 0
 AnchorPoint: "Dot below" 272 0 basechar 0
 LayerCount: 2
 Fore
@@ -105344,6 +105380,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 331 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -105548,6 +105585,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -105688,6 +105726,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 309 714 basechar 0
 AnchorPoint: "Dot below" 292 0 basechar 0
 LayerCount: 2
 Fore
@@ -105790,6 +105829,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 281 714 basechar 0
 AnchorPoint: "Dot below" 259 0 basechar 0
 LayerCount: 2
 Fore
@@ -105913,6 +105953,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 282 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -106062,6 +106103,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 265 714 basechar 0
 AnchorPoint: "Dot below" 260 0 basechar 0
 LayerCount: 2
 Fore
@@ -106102,7 +106144,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u3A
+StartChar: Punc.Colon
 Encoding: 58 58 678
 Width: 286
 Flags: W
@@ -106149,6 +106191,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 144 580 basechar 0
 AnchorPoint: "Dot below" 144 0 basechar 0
 LayerCount: 2
 Fore
@@ -106174,7 +106217,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u3B
+StartChar: Punc.Semicolon
 Encoding: 59 59 679
 Width: 286
 Flags: W
@@ -106269,6 +106312,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 144 580 basechar 0
 AnchorPoint: "Dot below" 143 -140 basechar 0
 LayerCount: 2
 Fore
@@ -106302,6 +106346,7 @@ StartChar: u3C
 Encoding: 60 60 680
 Width: 559
 Flags: W
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -106348,6 +106393,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -106369,6 +106415,7 @@ StartChar: u3E
 Encoding: 62 62 682
 Width: 559
 Flags: W
+AnchorPoint: "Umlaut" 280 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -106493,6 +106540,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 222 714 basechar 0
 AnchorPoint: "Dot below" 213 0 basechar 0
 LayerCount: 2
 Fore
@@ -106708,6 +106756,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 530 705 basechar 0
 AnchorPoint: "Dot below" 437 -122 basechar 0
 LayerCount: 2
 Fore
@@ -106852,7 +106901,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 245 -120 basechar 0
+AnchorPoint: "Umlaut" 73 752 basechar 0
+AnchorPoint: "Dot below" 214 -115 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -106888,6 +106938,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 278 714 basechar 0
 AnchorPoint: "Dot below" 278 0 basechar 0
 LayerCount: 2
 Fore
@@ -106931,6 +106982,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 242 714 basechar 0
 AnchorPoint: "Dot below" 242 -142 basechar 0
 LayerCount: 2
 Fore
@@ -106983,6 +107035,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 118 766 basechar 0
 AnchorPoint: "Dot below" 137 0 basechar 0
 LayerCount: 2
 Fore
@@ -107101,6 +107154,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 269 736 basechar 0
 AnchorPoint: "Dot below" 269 -112 basechar 0
 LayerCount: 2
 Fore
@@ -107167,7 +107221,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 277 -240 basechar 0
+AnchorPoint: "Umlaut" 279 760 basechar 0
+AnchorPoint: "Dot below" 279 -240 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -107280,6 +107335,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 163 736 basechar 0
 AnchorPoint: "Dot below" 163 -112 basechar 0
 LayerCount: 2
 Fore
@@ -107392,6 +107448,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 279 714 basechar 0
 AnchorPoint: "Dot below" 279 0 basechar 0
 LayerCount: 2
 Fore
@@ -107540,6 +107597,7 @@ Width: 286
 Flags: W
 HStem: -154 42<48 93.9888> 405 136<100.08 187.92>
 VStem: 81 126<420.474 526.041> 143 69<-48.8351 63>
+AnchorPoint: "Umlaut" 144 580 basechar 0
 AnchorPoint: "Dot below" 143 -140 basechar 0
 LayerCount: 2
 Fore
@@ -130644,6 +130702,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 155 764 basechar 0
 AnchorPoint: "Dot below" 137 0 basechar 0
 LayerCount: 2
 Fore
@@ -130713,6 +130772,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 97 754 basechar 0
 AnchorPoint: "Dot below" 97 0 basechar 0
 LayerCount: 2
 Fore
@@ -130779,6 +130839,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 185 714 basechar 0
 AnchorPoint: "Dot below" 185 0 basechar 0
 LayerCount: 2
 Fore
@@ -155182,6 +155243,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 188 766 basechar 0
 AnchorPoint: "Dot below" 187 0 basechar 0
 LayerCount: 2
 Fore
@@ -155197,7 +155259,7 @@ SplineSet
  335 606 l 1,10,-1
  296 606 l 1,11,12
  268 623 268 623 239 647.5 c 128,-1,13
- 210 672 210 672 187 696 c 5,14,15
+ 210 672 210 672 187 696 c 1,14,15
  165 672 165 672 136.5 647.5 c 128,-1,16
  108 623 108 623 79 606 c 1,17,-1
  40 606 l 1,18,-1
@@ -155300,6 +155362,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 218 737 basechar 0
 AnchorPoint: "Dot below" 218 0 basechar 0
 LayerCount: 2
 Fore
@@ -155392,6 +155455,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 182 742 basechar 0
 AnchorPoint: "Dot below" 180 0 basechar 0
 LayerCount: 2
 Fore
