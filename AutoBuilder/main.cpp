@@ -767,7 +767,6 @@ int main()
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << supportData.nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
-    os << "constexpr int N_EMOJI = " << std::dec << emoji.count.woComponents << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
     os << "constexpr unsigned N_OLDCOMP_SPANS = " << std::dec << oldr.nSpans << ";\n";
     os << "}\n";

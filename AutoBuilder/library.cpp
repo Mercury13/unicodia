@@ -357,15 +357,12 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 v.emojiVersion = emVersion;
 
                 ++r.count.withComponents;
-                ++r.count.woComponents;
             }
         }
     }
     // Flags A…Z are also single-characters
     auto& nodeComponents = r.root.rqChild(u8"Component");
         nodeComponents.flags |= uc::Lfg::NO_COUNTING;
-    auto num = nodeComponents.countLeaves();
-    r.count.woComponents -= num;
     auto& nodeRegional = nodeComponents.newChild();
         nodeRegional.flags |= uc::Lfg::TRANSLATE;
         nodeRegional.name = u8"Regional";

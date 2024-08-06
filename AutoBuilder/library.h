@@ -50,7 +50,6 @@ namespace lib {
         /// Total # of emoji
         struct {
             size_t withComponents = 0;  /// with components (for output)
-            size_t woComponents = 0;    /// w/o components
         } count;
         std::unordered_map<char32_t, const Node*> allSingleChar;
         /// List of single-char emoji that use VS16
