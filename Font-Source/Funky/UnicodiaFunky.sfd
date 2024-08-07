@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723055092
+ModificationTime: 1723055265
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -48,7 +48,7 @@ OS2UnicodeRanges: a82003c1.9205a186.01000008.00000000
 Lookup: 1 0 0 "Copt LOCL" { "Copt LOCL-1"  } ['locl' ('copt' <'dflt' > ) ]
 Lookup: 2 0 0 "Copt Multi" { "Copt Multi-1"  } ['ccmp' ('copt' <'dflt' > ) ]
 Lookup: 4 0 1 "Nagm CCMP" { "Nagm CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
-Lookup: 1 0 0 "Punc in cap-only scripts" { "Punc in cap-only scripts-1"  } ['locl' ('nagm' <'dflt' > 'onao' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 1 0 0 "Punc in cap-only scripts" { "Punc in cap-only scripts-1"  } ['locl' ('nagm' <'dflt' > 'onao' <'dflt' > ) ]
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  "GothRLIG"  } ['ccmp' ('DFLT' <'dflt' > 'goth' <'dflt' > ) ]
 Lookup: 4 0 1 "Hang RLIG" { "Hang RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'hang' <'dflt' > 'hani' <'dflt' > 'jamo' <'dflt' > ) ]
 Lookup: 4 0 1 "Egyp RLIG" { "Egyp RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'egyp' <'dflt' > ) ]
@@ -869,7 +869,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 25 12
+WinInfo: 750 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
