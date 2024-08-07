@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723037126
+ModificationTime: 1723055092
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -48,6 +48,7 @@ OS2UnicodeRanges: a82003c1.9205a186.01000008.00000000
 Lookup: 1 0 0 "Copt LOCL" { "Copt LOCL-1"  } ['locl' ('copt' <'dflt' > ) ]
 Lookup: 2 0 0 "Copt Multi" { "Copt Multi-1"  } ['ccmp' ('copt' <'dflt' > ) ]
 Lookup: 4 0 1 "Nagm CCMP" { "Nagm CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
+Lookup: 1 0 0 "Punc in cap-only scripts" { "Punc in cap-only scripts-1"  } ['locl' ('nagm' <'dflt' > 'onao' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  "GothRLIG"  } ['ccmp' ('DFLT' <'dflt' > 'goth' <'dflt' > ) ]
 Lookup: 4 0 1 "Hang RLIG" { "Hang RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'hang' <'dflt' > 'hani' <'dflt' > 'jamo' <'dflt' > ) ]
 Lookup: 4 0 1 "Egyp RLIG" { "Egyp RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'egyp' <'dflt' > ) ]
@@ -868,7 +869,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 675 25 12
+WinInfo: 0 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -880,7 +881,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114263 1167
+BeginChars: 1114264 1168
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -104699,7 +104700,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u2D
+StartChar: Punc.HyMin
 Encoding: 45 45 665
 Width: 310
 Flags: W
@@ -104742,12 +104743,13 @@ AnchorPoint: "Dot below" 155 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-25 235 m 1,0,-1
+25 235 m 5,0,-1
  25 310 l 1,1,-1
  285 310 l 1,2,-1
  285 235 l 1,3,-1
- 25 235 l 1,0,-1
+ 25 235 l 5,0,-1
 EndSplineSet
+Substitution2: "Punc in cap-only scripts-1" Punc.HyMin.CapOnly
 EndChar
 
 StartChar: Punc.Point
@@ -147452,7 +147454,7 @@ StartChar: Gukh.B
 Encoding: 90391 90391 1016
 Width: 637
 GlyphClass: 2
-Flags: WO
+Flags: W
 HStem: 337 58<178.555 337.561> 502 123<192.637 306.395> 560 65<-10 192 307 512 577 647>
 VStem: 50 65<325.588 404.324> 362 65<418.81 477.406> 512 65<86 560>
 TtInstrs:
@@ -156564,6 +156566,15 @@ AnchorPoint: "Dot below mark" 0 -230 basemark 0
 LayerCount: 2
 Fore
 Refer: 865 180 N 1 0 0 1 -137 -836 2
+EndChar
+
+StartChar: Punc.HyMin.CapOnly
+Encoding: 1114263 -1 1167
+Width: 310
+Flags: W
+LayerCount: 2
+Fore
+Refer: 665 45 S 1 0 0 1 0 78 2
 EndChar
 EndChars
 EndSplineFont
