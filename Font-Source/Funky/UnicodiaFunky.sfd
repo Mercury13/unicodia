@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723063735
+ModificationTime: 1723064077
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -50100,7 +50100,7 @@ EndChar
 StartChar: uniA66E
 Encoding: 42606 42606 293
 Width: 1257
-Flags: WO
+Flags: W
 HStem: -120.895 31.8252<286.138 394.039 542.835 650.839 795.722 903.162> 12.5244 75.8896<316.754 362.593 573.553 619.394 825.553 871.394> 168.304 31.8271<163.583 217.302 462.119 474.108 720.169 726.108 972.169 1030.36> 186.947 32.4375<339.023 350.659 595.103 602.913 847.103 854.913> 301.725 75.8896<193.154 238.994 448.754 494.593 700.754 746.593 952.754 998.593> 455.107 31.8232<340.494 347.049 596.097 599.215 848.097 851.215> 476.147 32.4375<161.715 217.181 465.703 473.446 722.304 725.446 974.304 1031.42> 588.524 75.8896<316.754 362.593 573.553 619.394 825.553 871.394> 762.947 32.4385<284.598 395.308 541.397 652.15 793.397 904.045>
 VStem: 61.4873 59.3643<238.779 440.295> 185.087 59.3652<-50.3361 150.666 309.462 370.148 525.053 727.088> 305.041 69.7686<20.2623 80.9491 596.262 656.949> 312.411 64.041<237.85 440.531> 436.011 65.2412<-51.3506 151.332 309.462 370.148 524.649 727.332> 561.841 69.7695<20.2623 80.9491 233.413 444.85 596.262 656.949> 692.812 60.4404<-51.3506 151.332 309.462 370.148 524.649 727.332> 813.841 69.7695<20.2623 80.9491 233.413 444.85 596.262 656.949> 944.812 59.3652<-52.0144 150.677 309.462 370.148 523.891 726.058> 1072.01 59.3662<237.178 439.327>
 TtInstrs:
@@ -70323,6 +70323,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 507 -74 basechar 0
+AnchorPoint: "Umlaut" 507 850 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -70532,7 +70534,6 @@ SplineSet
  719.942382812 544.67578125 l 1,163,-1
  719.942382812 473.696289062 l 1,160,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: uni2FFD
@@ -71003,6 +71004,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 507 850 basechar 0
+AnchorPoint: "Dot below" 507 -74 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -71192,7 +71195,6 @@ SplineSet
  735.59375 790.740234375 l 1,147,-1
  735.59375 715.02734375 l 1,144,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: uni2FFE
@@ -71674,6 +71676,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 531 850 basechar 0
+AnchorPoint: "Dot below" 531 -74 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -71854,7 +71858,6 @@ SplineSet
  63.650390625 823.864257812 l 1,153,-1
  63.650390625 852.255859375 l 1,150,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: uni2FFF
@@ -72507,6 +72510,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 531 850 basechar 0
+AnchorPoint: "Dot below" 531 -74 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -72715,7 +72720,6 @@ SplineSet
  63.650390625 823.864257812 l 1,189,-1
  63.650390625 852.255859375 l 1,186,-1
 EndSplineSet
-Validated: 19489
 EndChar
 
 StartChar: uni31EF
@@ -74224,7 +74228,7 @@ Refer: 447 -1 N 1 0 0 1 106 0 2
 Validated: 32769
 Ligature2: "Hang RLIG-1" Shape.Dotc HangSingle
 Ligature2: "Hang RLIG-1" Shape.Dotc HangSingle Shape.Dotc
-LCarets2: 2 221 0
+LCarets2: 2 0 221
 EndChar
 
 StartChar: Kana.Lig.Dotc.Quote
@@ -102051,6 +102055,8 @@ StartChar: u2CF9
 Encoding: 11513 11513 631
 Width: 712
 Flags: W
+AnchorPoint: "Umlaut" 342 560 basechar 0
+AnchorPoint: "Dot below" 404 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102109,7 +102115,6 @@ SplineSet
  636 99 l 1,64,-1
  635 99 l 1,31,32
 EndSplineSet
-Validated: 3077
 EndChar
 
 StartChar: u2CFA
@@ -102171,6 +102176,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 334 560 basechar 0
+AnchorPoint: "Dot below" 98 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102208,7 +102215,6 @@ SplineSet
  296 145 296 145 315.5 125 c 128,-1,31
  335 105 335 105 335 76 c 128,-1,32
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u2CFB
@@ -102262,6 +102268,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 140 560 basechar 0
+AnchorPoint: "Dot below" 412 -1 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102302,7 +102310,6 @@ SplineSet
  243 145 243 145 262.5 125 c 128,-1,32
  282 105 282 105 282 76 c 128,-1,33
 EndSplineSet
-Validated: 19461
 EndChar
 
 StartChar: u2CFC
@@ -102348,6 +102355,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 364 560 basechar 0
+AnchorPoint: "Dot below" 276 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102401,7 +102410,6 @@ SplineSet
  32 37 32 37 32 52 c 2,61,-1
  32 56 l 2,30,31
 EndSplineSet
-Validated: 19461
 EndChar
 
 StartChar: u2CFD
@@ -102500,6 +102508,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 238 486 basechar 0
+AnchorPoint: "Dot below" 142 1 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102542,7 +102552,6 @@ SplineSet
  328 150 328 150 308 121 c 1,42,-1
  207 36 l 1,0,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u2CFE
@@ -102651,6 +102660,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 222 502 basechar 0
+AnchorPoint: "Dot below" 202 160 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -102691,7 +102702,6 @@ SplineSet
  97 277 97 277 76.5 277 c 128,-1,30
  56 277 56 277 42 291 c 128,-1,31
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u2CFF
