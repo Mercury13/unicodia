@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723029456
+ModificationTime: 1723031197
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -57,13 +57,13 @@ Lookup: 1 0 0 "Copt macron" { "Copt macron-1"  } []
 Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'dflt' > ) ]
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 4 256 0 "Gukh CCMP above" { "Gukh CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "Gukh med.H normal" { "Gukh med.H normal-1"  } []
 Lookup: 1 0 0 "Gukh med.H b" { "Gukh med.H b-1"  } []
 Lookup: 1 0 0 "Gukh med.H invT" { "Gukh med.H invT-1"  } []
 Lookup: 1 0 0 "Gukh med.H wider" { "Gukh med.H wider-1"  } []
 Lookup: 1 0 0 "Gukh med.H aspir" { "Gukh med.H aspir-1"  } []
-Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] "Maka KERN-2" [190,30,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -868,7 +868,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 875 25 12
+WinInfo: 775 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -7858,6 +7858,7 @@ EndChar
 StartChar: BiggerPlus
 Encoding: 1114113 -1 56
 Width: 0
+GlyphClass: 5
 Flags: W
 HStem: 749 53<-429 -330 -276 -177>
 VStem: -330 53<649 749 802 902>
@@ -8014,6 +8015,7 @@ EndChar
 StartChar: MiaoToneUml
 Encoding: 1114114 -1 61
 Width: 0
+GlyphClass: 5
 Flags: W
 HStem: 749 53<-122.5 -17.5 35.5 140.5>
 VStem: -17.5 53<533 749>
@@ -49421,23 +49423,25 @@ StartChar: Goth.Lig.Yi
 Encoding: 1114115 -1 286
 Width: 417
 VWidth: 1300
+GlyphClass: 2
 Flags: W
 HStem: -4 49<66.0312 128.086 284.083 350.945> 567 49<84.125 142.678 273.385 334.961> 655 134<43.5337 129.436 282.534 368.436>
 VStem: 26 122<670.474 774.556> 165 91<135.722 544.713> 265 122<670.474 774.556>
 AnchorPoint: "Dot below" 216 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 287 -1 S 1 0 0 1 327 34 2
+Refer: 287 -1 N 1 0 0 1 327 34 2
 Refer: 287 -1 N 1 0 0 1 88 34 2
 Refer: 267 66361 N 1 0 0 1 0 0 2
 Ligature2: "GothRLIG" GothI Uml.Diaeresis
-LCarets2: 1 0
+LCarets2: 1 370
 Colour: 87cfff
 EndChar
 
 StartChar: Goth.Yi.Part
 Encoding: 1114116 -1 287
 Width: 0
+GlyphClass: 5
 Flags: W
 HStem: 621 134<-44.4663 41.4358>
 VStem: -62 122<636.474 740.556>
@@ -61709,42 +61713,42 @@ StartChar: u1E4D0
 Encoding: 124112 124112 363
 Width: 589
 Flags: W
-HStem: -15 80<182.3 398.921> 331 80<236 355.592> 635 80<195.269 392.114>
-VStem: 33 78<122.849 149.615> 50 79<529.025 574.363> 446 80<478.804 588.583> 465 80<124.515 259.967>
+HStem: -15 80<182.3 399.533> 331 80<236 355.592> 635 80<195.269 391.933>
+VStem: 33 78<122.849 149.615> 50 79<529.025 574.363> 446 80<478.804 588.742> 465 80<124.375 259.967>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
- 38
+ 32
  2
  0
 CALL
 PUSHB_1
- 28
+ 23
 MDRP[min,rnd,black]
 PUSHB_1
- 60
+ 53
 MDAP[rnd]
 PUSHB_1
  3
 MDRP[min,rnd,black]
 PUSHB_1
- 15
+ 13
 MDAP[rnd]
 PUSHB_1
- 17
+ 14
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 66
+ 58
 MDAP[rnd]
 PUSHB_1
- 34
+ 28
 MDRP[rp0,rnd,white]
 PUSHB_1
- 32
+ 27
 MDRP[min,rnd,black]
 PUSHB_1
- 64
+ 57
 DUP
 MDRP[rp0,rnd,white]
 SRP1
@@ -61752,67 +61756,71 @@ PUSHB_1
  0
 MDRP[min,rnd,black]
 PUSHB_1
- 32
+ 27
 SRP0
 PUSHB_2
- 9
+ 7
  1
 CALL
 PUSHB_1
- 54
+ 47
 MDRP[min,rnd,black]
 PUSHB_1
- 22
+ 19
 DUP
 MDRP[rp0,rnd,white]
 SRP1
 PUSHB_1
- 44
+ 38
 MDRP[min,rnd,black]
 PUSHB_2
- 67
+ 59
  1
 CALL
 PUSHB_2
- 22
- 32
+ 19
+ 27
 SRP1
 SRP2
 PUSHB_6
  3
- 15
- 38
- 48
- 50
- 60
+ 13
+ 32
+ 42
+ 43
+ 53
 DEPTH
 SLOOP
 IP
 SVTCA[y-axis]
 PUSHB_2
- 15
+ 13
  3
 SRP1
 SRP2
 PUSHB_3
  0
- 54
- 64
+ 47
+ 57
 IP
 IP
 IP
 PUSHB_1
- 17
+ 14
 SRP1
-PUSHB_1
- 48
+PUSHB_2
+ 42
+ 43
+IP
 IP
 PUSHB_1
- 28
+ 23
 SRP2
-PUSHB_2
- 32
- 44
+PUSHB_3
+ 27
+ 28
+ 38
+IP
 IP
 IP
 IUP[y]
@@ -61826,39 +61834,37 @@ SplineSet
 111 166 m 1,0,1
  122 119 122 119 171 92 c 128,-1,2
  220 65 220 65 300 65 c 0,3,4
- 366 65 366 65 410 93 c 0,5,6
- 439 112 439 112 453 141 c 0,7,8
- 465 166 465 166 465 197 c 0,9,10
- 465 223 465 223 453 246 c 0,11,12
- 434 280 434 280 387 302 c 0,13,14
- 325 331 325 331 236 331 c 1,15,16
- 236 331 236 331 236 411 c 1,17,18
- 300 411 300 411 349.5 430 c 128,-1,19
- 399 449 399 449 424 478 c 0,20,21
- 446 504 446 504 446 532 c 0,22,23
- 446 564 446 564 425 588 c 0,24,25
- 407 608 407 608 377 620 c 0,26,27
- 340 635 340 635 291 635 c 0,28,29
- 228 635 228 635 186 608 c 0,30,31
- 138 577 138 577 129 519 c 1,32,33
- 129 519 129 519 50 530 c 0,34,35
- 64 625 64 625 143 676 c 0,36,37
- 205 715 205 715 291 715 c 0,38,39
- 355 715 355 715 407 694 c 0,40,41
- 455 675 455 675 485 641 c 0,42,43
- 526 594 526 594 526 532 c 0,44,45
- 526 474 526 474 484 425 c 0,46,47
- 458 396 458 396 421 375 c 1,48,49
- 422 375 422 375 422 374 c 0,50,51
- 492 341 492 341 523 284 c 0,52,53
- 545 244 545 244 545 197 c 0,54,55
- 545 147 545 147 525 106 c 0,56,57
- 501 57 501 57 453 26 c 0,58,59
- 389 -15 389 -15 300 -15 c 0,60,61
- 236 -15 236 -15 182.5 0.5 c 128,-1,62
- 129 16 129 16 87 54 c 128,-1,63
- 45 92 45 92 33 148 c 1,64,65
- 33 148 33 148 111 166 c 1,0,1
+ 387.265625 65 387.265625 65 431.983398438 111 c 0,5,6
+ 465 145 465 145 465 197 c 0,7,8
+ 465 223 465 223 453 246 c 0,9,10
+ 434 280 434 280 387 302 c 0,11,12
+ 325 331 325 331 236 331 c 1,13,-1
+ 236 411 l 1,14,15
+ 300 411 300 411 349.5 430 c 128,-1,16
+ 399 449 399 449 424 478 c 0,17,18
+ 446 504 446 504 446 532 c 0,19,20
+ 446 580.299804688 446 580.299804688 400 608.559570312 c 0,21,22
+ 356.962890625 635 356.962890625 635 291 635 c 0,23,24
+ 228 635 228 635 186 608 c 0,25,26
+ 138 577 138 577 129 519 c 1,27,-1
+ 50 530 l 1,28,29
+ 64 625 64 625 143 676 c 0,30,31
+ 205 715 205 715 291 715 c 0,32,33
+ 355 715 355 715 407 694 c 0,34,35
+ 455 675 455 675 485 641 c 0,36,37
+ 526 594 526 594 526 532 c 0,38,39
+ 526 474 526 474 484 425 c 0,40,41
+ 458 396 458 396 421 375 c 1,42,-1
+ 422 374 l 1,43,44
+ 492 341 492 341 523 284 c 0,45,46
+ 545 244 545 244 545 197 c 0,47,48
+ 545 147 545 147 525 106 c 0,49,50
+ 501 57 501 57 453 26 c 0,51,52
+ 389 -15 389 -15 300 -15 c 0,53,54
+ 236 -15 236 -15 182.5 0.5 c 128,-1,55
+ 129 16 129 16 87 54 c 128,-1,56
+ 45 92 45 92 33 148 c 1,57,-1
+ 111 166 l 1,0,1
 EndSplineSet
 Kerns2: 392 -34 "Nagm KERN-1"
 Colour: ff9103
@@ -62417,99 +62423,109 @@ StartChar: Nagm.3curl
 Encoding: 124117 124117 368
 Width: 707
 Flags: W
-HStem: -15 80<163.855 361.916> 0 21G<546.763 626.763> 213.616 80<185.815 407.765 499.078 546.763> 366.849 80<250.988 373.092> 635.385 79.6192<205.514 414.241>
-VStem: 51.8013 80.4287<91.9122 174.331> 64.7285 79.2002<535.719 578.522> 419.07 80.0078<123.795 213.616> 461.232 80<500.873 595.596> 546.763 80<0 213.616>
+HStem: -15 80<164.086 362.341> 0 21G<547 627> 214 80<185.419 408 499 547> 367 80<251 373.314> 635 80<204.815 414.114>
+VStem: 52 80<92.1238 174.658> 65 79<535.937 578.895> 419 80<124.042 214> 461 80<500.985 596.144> 547 80<0 214>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
- 10
+ 9
  1
  0
 CALL
 PUSHB_1
- 31
+ 28
 MDRP[min,rnd,black]
 PUSHB_3
- 23
+ 21
  0
  0
 CALL
+PUSHB_3
+ 59
+ 2
+ 0
+CALL
+PUSHB_1
+ 50
+MDRP[min,rnd,black]
 PUSHB_4
- 24
- 31
- 10
+ 22
+ 28
+ 9
  8
 CALL
 PUSHB_1
- 31
+ 28
 DUP
 MDRP[rp0,rnd,white]
 SRP1
+PUSHB_5
+ 1
+ 37
+ 28
+ 59
+ 13
+CALL
 PUSHB_1
- 2
-MDAP[rnd]
-PUSHB_1
- 25
+ 19
 SHP[rp1]
 PUSHB_1
- 40
+ 1
 MDRP[min,rnd,black]
 PUSHB_1
- 20
+ 23
 SHP[rp2]
+PUSHB_5
+ 42
+ 41
+ 28
+ 59
+ 13
+CALL
 PUSHB_1
- 45
-MDAP[rnd]
-PUSHB_1
- 47
-MDRP[min,rnd,black]
-PUSHB_1
- 54
-MDAP[rnd]
-PUSHB_1
- 64
+ 42
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 66
+ 61
 MDAP[rnd]
 PUSHB_1
- 36
+ 33
 MDRP[rp0,rnd,white]
 PUSHB_1
- 6
+ 5
 MDRP[min,rnd,black]
 PUSHB_1
- 6
+ 5
 SRP0
 PUSHB_1
- 58
+ 54
 DUP
 MDRP[rp0,rnd,white]
 SRP1
 PUSHB_1
- 60
+ 55
 MDRP[min,rnd,black]
 PUSHB_1
- 60
+ 55
 MDAP[rnd]
 PUSHB_1
- 58
+ 54
 MDRP[min,rnd,black]
 PUSHB_1
- 6
+ 5
 SRP0
 PUSHB_2
- 50
+ 46
  1
 CALL
 PUSHB_1
- 14
+ 13
 MDRP[min,rnd,black]
 PUSHB_4
- 26
- 14
- 50
+ 24
+ 13
+ 46
  8
 CALL
 PUSHB_1
@@ -62519,76 +62535,73 @@ PUSHB_1
  0
 MDAP[rnd]
 PUSHB_1
- 26
+ 24
 MDRP[min,rnd,black]
 PUSHB_1
- 14
+ 13
 SRP0
 PUSHB_2
- 24
+ 22
  1
 CALL
 PUSHB_1
- 23
+ 21
 MDRP[min,rnd,black]
 PUSHB_2
- 67
+ 62
  1
 CALL
 PUSHB_2
  0
- 58
+ 54
 SRP1
 SRP2
 NPUSHB
- 10
- 2
- 10
- 30
- 31
- 40
+ 9
+ 9
+ 27
+ 28
+ 38
+ 41
  42
- 45
- 47
- 63
- 64
+ 50
+ 58
+ 59
 DEPTH
 SLOOP
 IP
 PUSHB_1
- 26
+ 24
 SRP1
 PUSHB_2
- 20
- 18
+ 17
+ 19
 IP
 IP
 SVTCA[y-axis]
 PUSHB_2
- 2
- 24
-SRP1
-SRP2
-PUSHB_2
- 6
- 36
-IP
-IP
-PUSHB_2
- 47
- 45
+ 1
+ 22
 SRP1
 SRP2
 PUSHB_1
- 18
+ 33
+IP
+PUSHB_2
+ 42
+ 41
+SRP1
+SRP2
+PUSHB_1
+ 17
 IP
 PUSHB_1
- 54
+ 50
 SRP1
 PUSHB_3
- 14
- 58
- 60
+ 13
+ 54
+ 55
 IP
 IP
 IP
@@ -62601,46 +62614,46 @@ AnchorPoint: "Dot below" 283 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-419.0703125 213.616210938 m 1,0,1
- 419.0703125 213.616210938 419.0703125 213.616210938 312.455078125 213.616210938 c 2,2,3
- 231.932617188 213.616210938 231.932617188 213.616210938 183.37022162 192.294627899 c 0,4,5
- 132.22999694 169.841235013 132.22999694 169.841235013 132.22999694 132.48652066 c 0,6,7
- 132.22999694 101.653670611 132.22999694 101.653670611 163 86.7959243235 c 0,8,9
- 208.138787887 65 208.138787887 65 280.327778088 65 c 0,10,11
- 335.907226562 65 335.907226562 65 371.438476562 93.1015625 c 0,12,13
- 419 132 419 132 419.0703125 213.616210938 c 1,0,1
-541.232421875 545.708007812 m 0,14,15
- 541.232421875 485.367810001 541.232421875 485.367810001 491.599525707 440.137864711 c 0,16,17
- 465.385574852 416.249362234 465.385574852 416.249362234 430.924804688 400.696289062 c 1,18,19
- 475.3203125 362.205078125 475.3203125 362.205078125 490.659179688 293.616210938 c 1,20,21
- 490.659179688 293.616210938 490.659179688 293.616210938 626.762695312 293.616210938 c 1,22,-1
- 626.762695312 0 l 1,23,-1
- 546.762695312 0 l 1,24,-1
- 546.762695312 213.616210938 l 1,25,-1
- 499.078125 213.616210938 l 1,26,27
- 499 140 499 140 468.33984375 86.5434570312 c 0,28,29
- 437.77734375 33.4111328125 437.77734375 33.4111328125 389.5546875 9.205078125 c 128,-1,30
- 341.333007812 -15 341.333007812 -15 282.493652344 -15 c 128,-1,31
- 223.654296875 -15 223.654296875 -15 179.307617188 -3.7705078125 c 0,32,33
- 103.583647379 15.4039379028 103.583647379 15.4039379028 73.755859375 60.779296875 c 0,34,35
- 51.8012962294 94.1775556953 51.8012962294 94.1775556953 51.8012962294 132.197951506 c 0,36,37
- 51.8012962294 166.371215376 51.8012962294 166.371215376 69.1474609375 196.762695312 c 0,38,39
- 124.429645164 293.616210938 124.429645164 293.616210938 312.455078125 293.616210938 c 2,40,41
- 312.455078125 293.616210938 312.455078125 293.616210938 407.764648438 293.616210938 c 1,42,43
- 392.438476562 340.250976562 392.438476562 340.250976562 357.998046875 353.55078125 c 128,-1,44
- 323.556640625 366.850585938 323.556640625 366.850585938 251.014648438 366.848632812 c 0,45,46
- 250.959960938 366.848632812 250.959960938 366.848632812 250.959960938 446.848632812 c 1,47,48
- 341.21875 446.856445312 341.21875 446.856445312 401.225585938 475.061523438 c 128,-1,49
- 461.232421875 503.266601562 461.232421875 503.266601562 461.232421875 545.708007812 c 0,50,51
- 462 574 462 574 442 594 c 0,52,53
- 401 635 401 635 304.385570686 635.384718782 c 0,54,55
- 241.945579727 635.384718782 241.945579727 635.384718782 200.783203125 610.981445312 c 0,56,57
- 152.051757812 582.090820312 152.051757812 582.090820312 143.928710938 525.376953125 c 1,58,59
- 143.928710938 525.376953125 143.928710938 525.376953125 64.728515625 536.721679688 c 1,60,61
- 78.287109375 631.3828125 78.287109375 631.3828125 159.049804688 679.213867188 c 0,62,63
- 219.479492188 715.00390625 219.479492188 715.00390625 317.332519531 715.00390625 c 128,-1,64
- 415.185546875 715.00390625 415.185546875 715.00390625 478.208984375 667.454101562 c 128,-1,65
- 541.232421875 619.905273438 541.232421875 619.905273438 541.232421875 545.708007812 c 0,14,15
+419 214 m 1,0,-1
+ 312 214 l 2,1,2
+ 231 214 231 214 183 192 c 0,3,4
+ 132 170 132 170 132 132 c 0,5,6
+ 132 101 132 101 163 87 c 0,7,8
+ 208 65 208 65 280 65 c 0,9,10
+ 336 65 336 65 371 93 c 0,11,12
+ 419 132 419 132 419 214 c 1,0,-1
+541 546 m 0,13,14
+ 541 486 541 486 492 440 c 0,15,16
+ 466 416 466 416 431 401 c 1,17,18
+ 475 363 475 363 491 294 c 1,19,-1
+ 627 294 l 1,20,-1
+ 627 0 l 1,21,-1
+ 547 0 l 1,22,-1
+ 547 214 l 1,23,-1
+ 499 214 l 1,24,25
+ 499 140 499 140 468 87 c 128,-1,26
+ 437 34 437 34 389 9.5 c 128,-1,27
+ 341 -15 341 -15 282.5 -15 c 128,-1,28
+ 224 -15 224 -15 179 -4 c 0,29,30
+ 103 15 103 15 74 61 c 0,31,32
+ 52 94 52 94 52 132 c 0,33,34
+ 52 166 52 166 69 197 c 0,35,36
+ 124 294 124 294 312 294 c 2,37,-1
+ 408 294 l 1,38,39
+ 393 341 393 341 358.5 354 c 128,-1,40
+ 324 367 324 367 251 367 c 1,41,-1
+ 251 447 l 1,42,43
+ 341 447 341 447 401 475 c 0,44,45
+ 461 504 461 504 461 546 c 0,46,47
+ 461 574 461 574 442 594 c 0,48,49
+ 401 635 401 635 304 635 c 0,50,51
+ 242 635 242 635 201 611 c 0,52,53
+ 152 582 152 582 144 525 c 1,54,-1
+ 65 537 l 1,55,56
+ 79 632 79 632 159 679 c 0,57,58
+ 219 715 219 715 317 715 c 128,-1,59
+ 415 715 415 715 478 667.5 c 128,-1,60
+ 541 620 541 620 541 546 c 0,13,14
 EndSplineSet
 Kerns2: 369 -56 "Nagm KERN-1" 371 -41 "Nagm KERN-1" 376 -60 "Nagm KERN-1" 379 -110 "Nagm KERN-1" 387 -119 "Nagm KERN-1" 388 -79 "Nagm KERN-1" 392 -84 "Nagm KERN-1" 405 -110 "Nagm KERN-1" 406 -60 "Nagm KERN-1"
 Colour: ff9103
@@ -64692,9 +64705,10 @@ EndChar
 StartChar: Nagm.8belt
 Encoding: 124131 124131 382
 Width: 690
-Flags: W
+Flags: WO
 HStem: -15 80<237.269 441.429> 635 80<265.542 411.639>
 VStem: 111 80<104.965 224.442> 159 80<515.895 609.329> 440 80<517.799 608.327> 487 80<103.253 224.442>
+AnchorPoint: "Nagm TR dot" 471 700 basechar 0
 AnchorPoint: "Umlaut" 340 700 basechar 0
 AnchorPoint: "Dot below" 339 0 basechar 0
 LayerCount: 2
@@ -67047,7 +67061,7 @@ Fore
 Refer: 392 124141 N 1 0 0 1 586 -30 2
 Refer: 379 124128 N 1 0 0 1 0 0 2
 Ligature2: "Nagm CCMP-1" Nagm.curvN Nagm.Prime
-LCarets2: 1 0
+LCarets2: 1 636
 Colour: ff9103
 EndChar
 
@@ -67064,7 +67078,7 @@ LayerCount: 2
 Fore
 Refer: 392 124141 N 1 0 0 1 536 0 2
 Refer: 376 124125 N 1 0 0 1 0 0 2
-LCarets2: 1 0
+LCarets2: 1 531
 Ligature2: "Nagm CCMP-1" Nagm.Theta Nagm.Prime
 Colour: ff9103
 EndChar
@@ -67082,7 +67096,7 @@ LayerCount: 2
 Fore
 Refer: 392 124141 N 1 0 0 1 496 -1.13687e-13 2
 Refer: 381 124130 N 1 0 0 1 0 0 2
-LCarets2: 1 0
+LCarets2: 1 526
 Ligature2: "Nagm CCMP-1" Nagm.Acurl Nagm.Prime
 Colour: ff9103
 EndChar
@@ -67100,7 +67114,7 @@ LayerCount: 2
 Fore
 Refer: 392 124141 N 1 0 0 1 566 0 2
 Refer: 382 124131 N 1 0 0 1 0 0 2
-LCarets2: 1 0
+LCarets2: 1 576
 Ligature2: "Nagm CCMP-1" Nagm.8belt Nagm.Prime
 Colour: ff9103
 EndChar
@@ -67108,14 +67122,17 @@ EndChar
 StartChar: Nagm.3curl.Prime
 Encoding: 1114121 -1 409
 Width: 707
-Flags: W
+Flags: HW
 HStem: -15 80<163.855 361.916> 0 21G<546.763 626.763> 213.616 80<185.815 407.765 499.078 546.763> 366.849 80<250.988 373.092> 635.385 79.6192<205.514 414.241> 705 180
 VStem: 51.8013 80.4287<91.9122 174.331> 64.7285 79.2002<535.719 578.522> 419.07 80.0078<123.795 213.616> 461.232 80<500.873 595.596> 505 230 546.763 80<0 213.616>
+AnchorPoint: "Umlaut" 312 700 basechar 0
+AnchorPoint: "Dot below" 282 0 basechar 0
+AnchorPoint: "Nagm TR dot" 506 841 basechar 0
 LayerCount: 2
 Fore
-Refer: 392 124141 S 1 0 0 1 578 0 2
+Refer: 392 124141 N 1 0 0 1 578 0 2
 Refer: 368 124117 N 1 0 0 1 0 0 2
-LCarets2: 1 0
+LCarets2: 1 582
 Ligature2: "Nagm CCMP-1" Nagm.3curl Nagm.Prime
 Colour: ff9103
 EndChar
@@ -67133,7 +67150,7 @@ LayerCount: 2
 Fore
 Refer: 392 124141 N 1 0 0 1 522 0 2
 Refer: 378 124127 N 1 0 0 1 0 0 2
-LCarets2: 1 0
+LCarets2: 1 560
 Ligature2: "Nagm CCMP-1" Nagm.Crev Nagm.Prime
 Colour: ff9103
 EndChar
@@ -102811,6 +102828,7 @@ Width: 338
 Flags: W
 HStem: 780 70<31 308>
 VStem: 17 306 123 114<104.258 646.904>
+AnchorPoint: "Umlaut" 174 850 basechar 0
 AnchorPoint: "Dot below" 193 0 basechar 0
 LayerCount: 2
 Fore
@@ -102820,7 +102838,7 @@ Ligature2: "Copt CCMP-1" Copt.cap.I Uml.Overline
 Ligature2: "Copt CCMP-1" Copt.cap.I Uml.Macron
 Ligature2: "Copt CCMP-1" Copt.cap.I Copt.Macron
 Ligature2: "Copt CCMP-1" Copt.cap.I Copt.Overline
-LCarets2: 1 0
+LCarets2: 1 268
 EndChar
 
 StartChar: Copt.small.I.macron
@@ -102829,12 +102847,13 @@ Width: 304
 Flags: W
 HStem: 0 21G<163 178> 630 70<13 290>
 VStem: -1 306 114 95<81.8569 501.936>
+AnchorPoint: "Umlaut" 155 700 basechar 0
 AnchorPoint: "Dot below" 172 0 basechar 0
 LayerCount: 2
 Fore
 Refer: 649 -1 N 1 0 0 1 144 14 2
 Refer: 529 11411 N 1 0 0 1 60 0 2
-LCarets2: 1 0
+LCarets2: 1 253
 Ligature2: "Copt CCMP-1" Copt.small.I Uml.Macron
 Ligature2: "Copt CCMP-1" Copt.small.I Uml.Overline
 Ligature2: "Copt CCMP-1" Copt.small.I Copt.Overline
@@ -102964,6 +102983,7 @@ Width: 323
 Flags: W
 HStem: 616 70<33 310>
 VStem: 19 306 24 263
+AnchorPoint: "Umlaut" 175 686 basechar 0
 AnchorPoint: "Dot below" 137 -146 basechar 0
 LayerCount: 2
 Fore
@@ -123544,6 +123564,7 @@ EndChar
 StartChar: Maka.R.part
 Encoding: 1114146 -1 794
 Width: 616
+GlyphClass: 5
 Flags: W
 HStem: 14.9709 114.38<329.22 464.744>
 VStem: 238.289 325.6
@@ -125969,6 +125990,7 @@ EndChar
 StartChar: Todr.As.part
 Encoding: 1114147 -1 807
 Width: 1000
+GlyphClass: 5
 HStem: 290.799 70.8521<485.167 601.677>
 VStem: 397.073 266.524
 TtInstrs:
@@ -126074,6 +126096,7 @@ EndChar
 StartChar: Todr.Njan.Part
 Encoding: 1114148 -1 810
 Width: 1000
+GlyphClass: 5
 HStem: 162.999 296.303
 VStem: 537.426 62.6672<195.199 290.959>
 TtInstrs:
@@ -126353,6 +126376,7 @@ EndChar
 StartChar: Todr.Ng.Part
 Encoding: 1114149 -1 814
 Width: 1000
+GlyphClass: 5
 HStem: 425.768 288.232
 VStem: 112.736 323.59
 TtInstrs:
@@ -127120,6 +127144,7 @@ EndChar
 StartChar: Todr.Nxh.part
 Encoding: 1114150 -1 824
 Width: 1000
+GlyphClass: 5
 HStem: 518 74<510.649 560.044>
 VStem: 569 50<358.616 511.773>
 TtInstrs:
@@ -129264,6 +129289,7 @@ EndChar
 StartChar: Todr.Sht.part
 Encoding: 1114151 -1 847
 Width: 1000
+GlyphClass: 5
 HStem: 0 21G<480.518 530.518>
 VStem: 480.518 50<0 512.694>
 LayerCount: 2
@@ -129387,6 +129413,7 @@ EndChar
 StartChar: Todr.Ca.part
 Encoding: 1114152 -1 849
 Width: 1000
+GlyphClass: 5
 HStem: 0 50<395 573>
 VStem: 395 178<0 50>
 TtInstrs:
@@ -129917,6 +129944,7 @@ EndChar
 StartChar: Todr.Jy.part
 Encoding: 1114153 -1 856
 Width: 1000
+GlyphClass: 5
 HStem: 694 20G<172.01 272.01>
 VStem: 172.01 100<239.35 714>
 TtInstrs:
@@ -131466,6 +131494,7 @@ StartChar: Math.Integral.Contour.Part
 Encoding: 1114154 -1 881
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 99.5 55<176.731 359.269> 550.5 55<176.731 359.269>
 VStem: 15 55<261.231 443.769> 466 55<261.231 443.769>
 TtInstrs:
@@ -131567,6 +131596,7 @@ StartChar: Math.Integral.Surface.Part
 Encoding: 1114155 -1 882
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 99.5 55<239.047 636.944> 550.5 55<240.274 635.736>
 VStem: 15 55<273.892 431.317> 806 55<273.889 431.314>
 TtInstrs:
@@ -131679,6 +131709,7 @@ StartChar: Math.Integral.Volume.Part
 Encoding: 1114156 -1 884
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 99.5 55<388.335 827.665> 550.5 55<388.887 827.113>
 VStem: 15 55<286.185 418.778> 1146 55<286.185 418.778>
 TtInstrs:
@@ -131794,6 +131825,7 @@ StartChar: Math.Integral.Cw.Part
 Encoding: 1114157 -1 886
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 550.505 55<176.934 358.981>
 VStem: 17.6846 54.4141<388.243 445.597>
 TtInstrs:
@@ -131862,6 +131894,7 @@ StartChar: Math.Integral.RoundCw.Part
 Encoding: 1114158 -1 888
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 Flags: W
 HStem: 99.5703 55<177.933 357.608> 550.509 55<178.035 357.788>
 VStem: 15 55<262.641 442.359> 459.25 53.1328<250.252 288.888>
@@ -132009,6 +132042,7 @@ StartChar: Math.Integral.RoundCcw.Part
 Encoding: 1114159 -1 891
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 98.9219 55.1494<176.627 358.774> 550.502 55.0195<178.826 359.044>
 VStem: 14.7852 55.0625<262.261 445.071> 466.206 55.0586<260.373 380.191>
 TtInstrs:
@@ -132128,6 +132162,7 @@ StartChar: Math.Integral.Midstroke.Part
 Encoding: 1114160 -1 892
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 325 55<56.7617 479.232>
 TtInstrs:
 SVTCA[y-axis]
@@ -132229,6 +132264,7 @@ StartChar: Math.Integral.Square.Part
 Encoding: 1114161 -1 898
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 141.265 55<111.762 424.232> 508.735 55<111.762 424.232>
 VStem: 56.7617 55<196.265 508.735> 424.232 55<196.265 508.735>
 TtInstrs:
@@ -132318,6 +132354,7 @@ StartChar: Math.Integral.Slash.Part
 Encoding: 1114162 -1 901
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 LayerCount: 2
 Fore
 SplineSet
@@ -132334,6 +132371,7 @@ StartChar: Math.Integral.Times.Part
 Encoding: 1114163 -1 902
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 LayerCount: 2
 Fore
 SplineSet
@@ -132369,7 +132407,7 @@ EndChar
 StartChar: Math.Integral.Cup
 Encoding: 10778 10778 904
 Width: 524
-Flags: W
+Flags: HW
 AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
@@ -132382,6 +132420,7 @@ StartChar: Math.Integral.Cap.Part
 Encoding: 1114164 -1 905
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 523.914 45<184.571 351.43>
 VStem: 67.6562 55<157.061 454.162> 413.758 55<157.002 454.171>
 TtInstrs:
@@ -132460,6 +132499,7 @@ StartChar: Math.Integral.Cup.Part
 Encoding: 1114165 -1 906
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 146.515 45<184.571 351.43>
 VStem: 67.2383 55<261.261 558.368> 413.758 55<261.258 558.427>
 TtInstrs:
@@ -132523,20 +132563,20 @@ SplineSet
  122.239257812 296.709960938 122.239257812 296.709960938 150.7578125 247.9453125 c 0,8,9
  183.760742188 191.514648438 183.760742188 191.514648438 267.998046875 191.514648438 c 128,-1,10
  352.251953125 191.514648438 352.251953125 191.514648438 385.249023438 247.962890625 c 0,11,12
- 413.7578125 296.733398438 413.7578125 296.733398438 413.7578125 362.928710938 c 6,13,-1
+ 413.7578125 296.733398438 413.7578125 296.733398438 413.7578125 362.928710938 c 2,13,-1
  413.7578125 558.426757812 l 1,14,-1
  468.7578125 558.426757812 l 1,15,-1
  468.7578125 362.928710938 l 2,16,17
  468.7578125 259.247070312 468.7578125 259.247070312 414.872070312 202.880859375 c 128,-1,0
  360.987304688 146.514648438 360.987304688 146.514648438 267.998046875 146.514648438 c 128,-1,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: Math.Integral.Circ.Part
 Encoding: 1114166 -1 907
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 99.6436 55<176.723 358.686> 550.437 55<176.784 359.311>
 VStem: 15.125 55<261.226 443.877>
 TtInstrs:
@@ -132629,6 +132669,7 @@ StartChar: Math.Integral.Ccw.Part
 Encoding: 1114167 -1 909
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 99 55<177.994 357.546>
 VStem: 18 54<260.285 317.037>
 TtInstrs:
@@ -133503,6 +133544,7 @@ StartChar: Math.Integral.Back.Part
 Encoding: 1114168 -1 916
 Width: 1000
 VWidth: 1030
+GlyphClass: 5
 HStem: 113 55<403 465> 388 55<67 465>
 VStem: 508 55<211.263 344.596>
 TtInstrs:
@@ -133742,6 +133784,7 @@ EndChar
 StartChar: Math.Integral.Tall.Part
 Encoding: 1114169 -1 919
 Width: 1000
+GlyphClass: 5
 HStem: -300 70<92.4193 171.948> 875 70<364.052 444.098>
 VStem: 214 108.51<60.9998 584>
 TtInstrs:
@@ -133850,6 +133893,7 @@ EndChar
 StartChar: Math.Sum.Circle.Part
 Encoding: 1114170 -1 921
 Width: 1000
+GlyphClass: 5
 HStem: 88.5273 50<249.421 416.323> 476.033 50<249.421 416.323>
 VStem: 114.119 50<223.829 390.732> 501.624 50<223.829 390.732>
 TtInstrs:
@@ -135701,6 +135745,7 @@ EndChar
 StartChar: Math.Circled.Part
 Encoding: 1114171 -1 948
 Width: 1000
+GlyphClass: 5
 HStem: 93 60<187.315 371.685> 562 60<187.315 371.685>
 VStem: 15 60<265.315 449.685> 484 60<265.315 449.685>
 TtInstrs:
@@ -141215,6 +141260,7 @@ EndChar
 StartChar: Onao.Slash
 Encoding: 1114172 -1 979
 Width: 1000
+GlyphClass: 5
 LayerCount: 2
 Fore
 SplineSet
@@ -152488,6 +152534,7 @@ EndChar
 StartChar: Gukh.Lig.Aa.Anu
 Encoding: 1114185 -1 1067
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 675 50<-546 0>
 TtInstrs:
@@ -152524,8 +152571,8 @@ SplineSet
  -456 940 l 1,10,-1
  -385 940 l 1,4,-1
 EndSplineSet
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Aa Gukh.Uml.Anu
 Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Aa
+Ligature2: "Gukh CCMP-1" Gukh.Uml.Aa Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -152665,9 +152712,9 @@ SplineSet
  -310 790 -310 790 -336.5 816.5 c 128,-1,28
  -363 843 -363 843 -363 880 c 128,-1,29
 EndSplineSet
-LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.I
 Ligature2: "Gukh CCMP-1" Gukh.Uml.I Gukh.Uml.Anu
+Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.I
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
@@ -152869,9 +152916,9 @@ SplineSet
  -430 781 l 2,43,32
  -359 720 -359 720 -273 720 c 128,-1,33
 EndSplineSet
-LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Ii Gukh.Uml.Anu
 Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Ii
+Ligature2: "Gukh CCMP-1" Gukh.Uml.Ii Gukh.Uml.Anu
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
