@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723028577
+ModificationTime: 1723029306
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -868,7 +868,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 625 25 12
+WinInfo: 875 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -38846,7 +38846,7 @@ EndChar
 StartChar: u12FEC
 Encoding: 77804 77804 213
 Width: 1000
-Flags: WO
+Flags: W
 HStem: 259 70<345.597 635.816> 271 70<341.044 469.193 475.84 645.141>
 VStem: 109 69<607.821 681.656>
 TtInstrs:
@@ -131371,6 +131371,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 404 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131412,6 +131413,7 @@ StartChar: Math.Integral.2
 Encoding: 8748 8748 877
 Width: 864
 Flags: MW
+AnchorPoint: "Umlaut" 522 904 basechar 0
 AnchorPoint: "Dot below" 339 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131423,7 +131425,8 @@ StartChar: Math.Integral.3
 Encoding: 8749 8749 878
 Width: 1204
 Flags: MW
-AnchorPoint: "Dot below" 447 -200 basechar 0
+AnchorPoint: "Umlaut" 744 904 basechar 0
+AnchorPoint: "Dot below" 461 -200 basechar 0
 LayerCount: 2
 Fore
 Refer: 876 8747 N 1 0 0 1 680 0 2
@@ -131435,6 +131438,7 @@ StartChar: Math.Integral.4
 Encoding: 10764 10764 879
 Width: 1544
 Flags: MW
+AnchorPoint: "Umlaut" 906 906 basechar 0
 AnchorPoint: "Dot below" 641 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131448,6 +131452,7 @@ StartChar: Math.Integral.Contour
 Encoding: 8750 8750 880
 Width: 606
 Flags: MW
+AnchorPoint: "Umlaut" 442 904 basechar 0
 AnchorPoint: "Dot below" 160 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131659,6 +131664,7 @@ StartChar: Math.Integral.Surface
 Encoding: 8751 8751 883
 Width: 945
 Flags: MW
+AnchorPoint: "Umlaut" 612 904 basechar 0
 AnchorPoint: "Dot below" 355 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131772,7 +131778,8 @@ StartChar: Math.Integral.Volume
 Encoding: 8752 8752 885
 Width: 1285
 Flags: MW
-AnchorPoint: "Dot below" 491 -200 basechar 0
+AnchorPoint: "Umlaut" 788 904 basechar 0
+AnchorPoint: "Dot below" 495 -200 basechar 0
 LayerCount: 2
 Fore
 Refer: 884 -1 N 1 0 0 1 35 0 2
@@ -131841,6 +131848,7 @@ StartChar: uni2231
 Encoding: 8753 8753 887
 Width: 649
 Flags: W
+AnchorPoint: "Umlaut" 442 904 basechar 0
 AnchorPoint: "Dot below" 151 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131975,6 +131983,7 @@ StartChar: uni2232
 Encoding: 8754 8754 889
 Width: 650
 Flags: W
+AnchorPoint: "Umlaut" 442 904 basechar 0
 AnchorPoint: "Dot below" 151 -200 basechar 0
 LayerCount: 2
 Fore
@@ -131986,6 +131995,7 @@ StartChar: uni2233
 Encoding: 8755 8755 890
 Width: 667
 Flags: W
+AnchorPoint: "Umlaut" 442 904 basechar 0
 AnchorPoint: "Dot below" 151 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132156,6 +132166,7 @@ StartChar: Math.Integral.Bar
 Encoding: 10765 10765 893
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132167,6 +132178,7 @@ StartChar: Math.Integral.2bar
 Encoding: 10766 10766 894
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132179,6 +132191,7 @@ StartChar: Math.Integral.Lo
 Encoding: 10780 10780 895
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 233 -326 basechar 0
 LayerCount: 2
 Fore
@@ -132190,6 +132203,7 @@ StartChar: Math.Integral.Hi
 Encoding: 10779 10779 896
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 301 1030 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132201,6 +132215,7 @@ StartChar: Math.Integral.Square
 Encoding: 10774 10774 897
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132277,6 +132292,7 @@ StartChar: Math.Integral.Slash
 Encoding: 10767 10767 899
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132288,6 +132304,7 @@ StartChar: Math.Integral.Times
 Encoding: 10776 10776 900
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132339,6 +132356,7 @@ StartChar: Math.Integral.Cap
 Encoding: 10777 10777 903
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132350,6 +132368,7 @@ StartChar: Math.Integral.Cup
 Encoding: 10778 10778 904
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132596,6 +132615,7 @@ StartChar: Math.Integral.Circ
 Encoding: 10768 10768 908
 Width: 524
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132663,6 +132683,7 @@ StartChar: Math.Integral.Ccw
 Encoding: 10769 10769 910
 Width: 581
 Flags: W
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132807,6 +132828,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -132981,6 +133003,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -133193,6 +133216,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -133409,6 +133433,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 403 904 basechar 0
 AnchorPoint: "Dot below" 125 -200 basechar 0
 LayerCount: 2
 Fore
@@ -133464,6 +133489,7 @@ StartChar: Math.Integral.Back
 Encoding: 10775 10775 915
 Width: 707
 Flags: W
+AnchorPoint: "Umlaut" 499 904 basechar 0
 AnchorPoint: "Dot below" 216 -200 basechar 0
 LayerCount: 2
 Fore
@@ -133670,6 +133696,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 380 714 basechar 0
 AnchorPoint: "Dot below" 380 -180 basechar 0
 LayerCount: 2
 Fore
@@ -133702,6 +133729,7 @@ StartChar: Math.SumIntegral
 Encoding: 10763 10763 918
 Width: 730
 Flags: W
+AnchorPoint: "Umlaut" 506 874 basechar 0
 AnchorPoint: "Dot below" 229 -348 basechar 0
 LayerCount: 2
 Fore
@@ -133809,6 +133837,7 @@ StartChar: Math.Sum.Circle
 Encoding: 10762 10762 920
 Width: 730
 Flags: W
+AnchorPoint: "Umlaut" 380 714 basechar 0
 AnchorPoint: "Dot below" 380 -180 basechar 0
 LayerCount: 2
 Fore
@@ -134038,6 +134067,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 422 714 basechar 0
 AnchorPoint: "Dot below" 422 -180 basechar 0
 LayerCount: 2
 Fore
@@ -134204,6 +134234,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 422 714 basechar 0
 AnchorPoint: "Dot below" 422 -180 basechar 0
 LayerCount: 2
 Fore
@@ -135462,6 +135493,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 216 747 basechar 0
 AnchorPoint: "Dot below" 214 -26 basechar 0
 LayerCount: 2
 Fore
@@ -135627,6 +135659,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 341 714 basechar 0
 AnchorPoint: "Dot below" 341 -1 basechar 0
 LayerCount: 2
 Fore
@@ -143169,6 +143202,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 180 710 basechar 0
+AnchorPoint: "Dot below" 180 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -143265,6 +143300,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 76 610 basechar 0
 AnchorPoint: "Dot below" 80 -47 basechar 0
 LayerCount: 2
 Fore
@@ -143335,6 +143371,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 89 483 basechar 0
 AnchorPoint: "Dot below" 187 -220 basechar 0
 LayerCount: 2
 Fore
@@ -143439,6 +143476,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" 160 497 basechar 0
 AnchorPoint: "Dot below" 163 -235 basechar 0
 LayerCount: 2
 Fore
