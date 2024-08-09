@@ -5475,14 +5475,14 @@
       <p />
       <p>The word “Copt” is “Egypt” shorteded under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script is still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
+      <p>{{GrekCoptUni}}</p>
      </orig>
      <transl>
       <p>Мова походить з [[ps:Egyp|давньоєгипетської]] і є важливим джерелом по ній, писемність{{-}}з [[ps:Grek|грецької]]. Демотичне письмо було консонантно-ієрогліфічним, і єгипетською грецькими літерами (так звана старокоптська) регулярно писали з VI{{_}}століття{{bc}}, задовго до завоювання Єгипту Олександром. Остаточно від демотичного до грецького перейшли християни біля III{{_}}століття. Власне коптський алфавіт з’явився, коли 6 чи 7 літер (залежно від діалекту) запозичили з демотичного письма. Саїдський діалект коптської (Верхній Єгипет) став літературним у IV{{_}}столітті, в XI{{_}}столітті його замінив бохайрський (Нижній Єгипет).</p>
       <p />
       <p>Слово «копт»{{-}}це «Єгипет», що скоротився під [[ps:Arab|арабським]] впливом. Його значення зсунулось від усього народу Єгипту до єгипетських християн. Мова та писемність і понині використовуються коптами як богослужебні. Спілкуються копти арабською, як розмовна коптська померла від XVII до XIX{{_}}століття.</p>
       <p />
-      <p>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. З Юнікоду{{_}}4.1 (2005) мови розуніфіковані: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</p>
+      <p>{{GrekCoptUni}}</p>
      </transl>
     </text>
    </group>
@@ -6073,7 +6073,7 @@
       <p />
       <p>Greek script became the ancestor for [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
       <p />
-      <p>Initially Greek and Coptic were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
+      <p>{{GrekCoptUni}}</p>
      </orig>
      <transl>
       <p>Грецьке письмо зроблене з [[ps:Phnx|фінікійського]] без огляду на ранньогрецькі системи{{-}}[[ps:Linb|лінійне письмо Б]] та [[ps:Cprt|кіпрське]]. Фінікійський алфавіт був [[pt:abjad|консонантним]] (задає приголосні звуки), і семітським мовам це підходить, адже корінь слова{{-}}кістяк приголосних, а голосні грають роль закінчень: так, в [[ps:Arab|арабській]] (також семітська) ''джихадом'' займається ''моджахед'' (або, точніше, ''муджахід'').</p>
@@ -6082,7 +6082,7 @@
       <p />
       <p>З грецького письма пішли [[ps:Latn|латинка]], [[ps:Cyrl|кирилиця]], [[ps:Copt|коптське]] і, можливо, [[ps:Armn|вірменське]] та [[ps:Runr|руни]].</p>
       <p />
-      <p>Початково грецька та коптська були закодовані в [[pt:unification|уніфікації]]. З Юнікоду 4.1 (2005) розуніфіковані.</p>
+      <p>{{GrekCoptUni}}</p>
      </transl>
     </text>
    </group>
@@ -9282,6 +9282,12 @@
      <transl>Комбінуюча мітка використовується в декількох різних писемностях.</transl>
     </text>
    </group>
+  </group>
+  <group id="Snip">
+   <text id="GrekCoptUni">
+    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <transl>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. З Юнікоду{{_}}4.1 (2005) мови розуніфіковані: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</transl>
+   </text>
   </group>
   <group id="CharCat">
    <group id="Cc">

@@ -4024,7 +4024,7 @@
       <p />
       <p>The word “Copt” is “Egypt” shorteded under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script is still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{sm|Ϧϧ}}.</p>
+      <p>{{GrekCoptUni}}</p>
      </orig>
     </text>
    </group>
@@ -4409,7 +4409,7 @@
       <p />
       <p>Greek script became the ancestor for [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
       <p />
-      <p>Initially Greek and Coptic were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
+      <p>{{GrekCoptUni}}</p>
      </orig>
     </text>
    </group>
@@ -6526,6 +6526,11 @@
      <orig>Combining mark is used in several scripts.</orig>
     </text>
    </group>
+  </group>
+  <group id="Snip">
+   <text id="GrekCoptUni">
+    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+   </text>
   </group>
   <group id="CharCat">
    <group id="Cc">
