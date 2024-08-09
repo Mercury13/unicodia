@@ -1045,15 +1045,6 @@
     <text id="Name">
      <orig>Greek and Coptic</orig>
     </text>
-    <text id="Text">
-     <orig>
-      <p>[[ps:Grek|Greek]] is the first real alphabet, ancestor of all European alphabets.</p>
-      <p />
-      <p>[[ps:Copt|Coptic]] is a language of Egyptian Christians. Its alphabet is based on Greek.</p>
-      <p />
-      <p>Initially they were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
-     </orig>
-    </text>
    </group>
    <group id="0400">
     <text id="Name">
@@ -4405,7 +4396,7 @@
      <orig>Greek</orig>
     </text>
     <text id="Lang">
-     <orig>Greek (13.5M as of 2012)</orig>
+     <orig>Greek ''(13.5M as of 2012)''</orig>
     </text>
     <text id="Note">
      <orig>main hypothesis</orig>
@@ -4417,6 +4408,8 @@
       <p>Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much, but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
       <p />
       <p>Greek script became the ancestor for [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
+      <p />
+      <p>Initially Greek and Coptic were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
      </orig>
     </text>
    </group>

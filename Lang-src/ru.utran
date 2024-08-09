@@ -1345,22 +1345,6 @@
      <orig>Greek and Coptic</orig>
      <transl>Греческий и коптский</transl>
     </text>
-    <text id="Text">
-     <orig>
-      <p>[[ps:Grek|Greek]] is the first real alphabet, ancestor of all European alphabets.</p>
-      <p />
-      <p>[[ps:Copt|Coptic]] is a language of Egyptian Christians. Its alphabet is based on Greek.</p>
-      <p />
-      <p>Initially they were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
-     </orig>
-     <transl>
-      <p>[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.</p>
-      <p />
-      <p>[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.</p>
-      <p />
-      <p>Изначально были закодированы в [[pt:unification|унификации]]. С Юникода 4.1 (2005) разунифицированы.</p>
-     </transl>
-    </text>
    </group>
    <group id="0400">
     <text id="Name">
@@ -6073,8 +6057,8 @@
      <transl>Греческая</transl>
     </text>
     <text id="Lang">
-     <orig>Greek (13.5M as of 2012)</orig>
-     <transl>греческий (13,5 млн на 2012)</transl>
+     <orig>Greek ''(13.5M as of 2012)''</orig>
+     <transl>греческий ''(13,5 млн на 2012)''</transl>
     </text>
     <text id="Note">
      <orig>main hypothesis</orig>
@@ -6087,6 +6071,8 @@
       <p>Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much, but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
       <p />
       <p>Greek script became the ancestor for [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
+      <p />
+      <p>Initially Greek and Coptic were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</p>
      </orig>
      <transl>
       <p>Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский) ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
@@ -6094,6 +6080,8 @@
       <p>Греки добавили гласные звуки, и греческий{{-}}первый известный истинный алфавит, кодирующий как согласные, так и гласные. Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''.</p>
       <p />
       <p>Из греческого письма пошли [[ps:Latn|латиница]], [[ps:Cyrl|кириллица]], [[ps:Copt|коптский]] и, возможно, [[ps:Armn|армянский]] и [[ps:Runr|руны]].</p>
+      <p />
+      <p>Изначально греческий и коптский были закодированы в [[pt:unification|унификации]]. С Юникода 4.1 (2005) разунифицированы.</p>
      </transl>
     </text>
    </group>
