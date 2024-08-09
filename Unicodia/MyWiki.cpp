@@ -772,8 +772,10 @@ namespace {
         } else if (name == "DuplCats") {
             uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
             appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
-        } else if (name == "GrekCoptUni") {
-            mywiki::append(s, loc::get("Snip.GrekCoptUni"), font);
+        } else if (name == "GrekCoptUni"
+                || name == "ArabPres1"
+                || name == "ArabPres2") {
+            mywiki::append(s, loc::get(str::cat("Snip.", name)), font);
         } else {
             wiki::appendHtml(s, x[0]);
         }

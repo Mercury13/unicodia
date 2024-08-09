@@ -2928,22 +2928,22 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</p>
+      <p>{{ArabPres1}}</p>
       <p />
       <p>32 positions FDDx and DFEx are [[pt:noncharacter|non-characters]].</p>
       <p />
       <p>Also contains [[pt:spacing|spacing]] vowel marks.</p>
       <p />
-      <p>It’s better to avoid these characters in normal text. The only legitimate use is in textbooks, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</p>
+      <p>{{ArabPres2}}</p>
      </orig>
      <transl>
-      <p>Блок створений для [[pt:convertibility|сумісності]] зі старими кодуваннями на кшталт CP864 (DOS), де через [[pt:dynamic|обмеженість]] типографських движків доводилося використовувати різні коди для відокремлених, початкових, середніх та кінцевих літер.</p>
+      <p>{{ArabPres1}}</p>
       <p />
       <p>32 позиції FDDx та FEEx [[pt:noncharacter|викинуті]].</p>
       <p />
       <p>Також містить [[pt:spacing|протяжні]] оголоси.</p>
       <p />
-      <p>У звичайному письмі ці символи краще не{{_}}використовувати. Єдине законне застосування{{-}}навчальні матеріали, тому символам даний клас «арабська літера» (у багатьох тодішніх кодуваннях текст записувався зліва направо).</p>
+      <p>{{ArabPres2}}</p>
      </transl>
     </text>
    </group>
@@ -3020,18 +3020,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The block is intended for [[pt:convertibility|compatibility]] with old encodings. Because of [[pt:dynamic|limited]] typography engines they had different codes for isolated, initial, medial and final letters.</p>
+      <p>{{ArabPres1}}</p>
       <p />
       <p>Contains character FEFF [[pt:bom|Byte Order Mark]].</p>
       <p />
-      <p>These characters are{{_}}not{{_}}recommended in ordinary text. The only legitimate use is educational materials, thus these characters got Arabic Letter class (many of old encodings wrote text left-to-right).</p>
+      <p>{{ArabPres2}}</p>
      </orig>
      <transl>
-      <p>Блок створений для [[pt:convertibility|сумісності]] зі старими кодуваннями на кшталт CP864 (DOS), де через [[pt:dynamic|обмеженість]] типографських движків доводилося використовувати різні коди для відокремлених, початкових, середніх та кінцевих літер.</p>
+      <p>{{ArabPres1}}</p>
       <p />
       <p>Містить символ FEFF «[[pt:bom|мітка порядку байтів]]».</p>
       <p />
-      <p>У звичайному письмі ці символи краще не{{_}}використовувати. Єдине законне застосування{{-}}навчальні матеріали, тому символам даний клас «арабська літера» (у багатьох тодішніх кодуваннях текст записувався зліва направо).</p>
+      <p>{{ArabPres2}}</p>
      </transl>
     </text>
    </group>
@@ -9284,6 +9284,14 @@
    </group>
   </group>
   <group id="Snip">
+   <text id="ArabPres1">
+    <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <transl>Блок створений для [[pt:convertibility|сумісності]] зі старими кодуваннями на кшталт CP864 (DOS), де через [[pt:dynamic|обмеженість]] типографських движків доводилося використовувати різні коди для відокремлених, початкових, середніх та кінцевих літер.</transl>
+   </text>
+   <text id="ArabPres2">
+    <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <transl>У звичайному письмі ці символи краще не{{_}}використовувати. Єдине законне застосування{{-}}навчальні матеріали, тому символам даний клас «арабська літера» (у багатьох тодішніх кодуваннях текст записувався зліва направо).</transl>
+   </text>
    <text id="GrekCoptUni">
     <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
     <transl>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. З Юнікоду{{_}}4.1 (2005) мови розуніфіковані: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</transl>
