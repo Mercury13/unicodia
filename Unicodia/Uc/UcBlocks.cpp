@@ -739,7 +739,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK, Bfg::CJK | Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::CJK_SYMBOLS, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
     { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
             "Arabic Presentation Forms-B",
@@ -749,7 +749,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Halfwidth and Fullwidth Forms",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK,
+            EcScript::NONE, EcFont::CJK_SYMBOLS,
             Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },
