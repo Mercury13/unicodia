@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723298359
+ModificationTime: 1723302263
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -57,6 +57,8 @@ Lookup: 4 0 0 "Copt CCMP" { "Copt CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'copt' <'
 Lookup: 1 0 0 "Copt macron" { "Copt macron-1"  } []
 Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'dflt' > ) ]
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
+Lookup: 1 0 0 "Gukh virama repl" { "Gukh virama repl-1"  } []
+Lookup: 5 0 0 "Gukh virama compat" { "Gukh virama-1"  } [' RQD' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 256 0 "Gukh CCMP above" { "Gukh CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "Gukh med.H normal" { "Gukh med.H normal-1"  } []
@@ -106,6 +108,14 @@ KernClass2: 14 16 "Maka KERN-2"
  6 Maka.S
  6 Maka.A
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -93 {} -39 {} 0 {} -65 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -35 {} 0 {} 0 {} 0 {} -83 {} 0 {} -92 {} -117 {} 0 {} -111 {} 0 {} -72 {} -56 {} 0 {} 0 {} -80 {} -15 {} 0 {} -40 {} 0 {} 0 {} -82 {} 0 {} -30 {} -48 {} -33 {} 0 {} -49 {} 0 {} 0 {} 0 {} -48 {} 0 {} 0 {} -37 {} 0 {} -46 {} -56 {} -82 {} -88 {} -31 {} -70 {} -60 {} -100 {} -87 {} 0 {} -40 {} -77 {} -61 {} -30 {} -57 {} 0 {} -65 {} 0 {} -40 {} -131 {} -20 {} -110 {} 0 {} -122 {} -100 {} 0 {} 0 {} -146 {} 0 {} -32 {} -71 {} 0 {} -85 {} 0 {} -60 {} -187 {} 0 {} -152 {} 0 {} -143 {} -110 {} 0 {} 0 {} -178 {} -25 {} 0 {} -80 {} 0 {} 0 {} -42 {} 0 {} 0 {} -35 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -34 {} 0 {} 0 {} -92 {} 0 {} -87 {} 0 {} -72 {} -78 {} -34 {} 0 {} -137 {} 0 {} -33 {} -70 {} 0 {} 0 {} -103 {} -109 {} 0 {} -132 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} -94 {} 0 {} 0 {} 0 {} -74 {} -40 {} -35 {} -147 {} 0 {} -100 {} 0 {} -110 {} -74 {} -7 {} 0 {} -207 {} 0 {} -47 {} -71 {} 0 {} 0 {} 0 {} -25 {} -30 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -21 {} 0 {} 0 {} -92 {} 0 {} -56 {} 0 {} -93 {} -47 {} 0 {} 0 {} -160 {} 0 {} -45 {} -85 {} 0 {} -41 {} -84 {} 0 {} -96 {} -25 {} -96 {} 0 {} -100 {} -63 {} -36 {} 0 {} -127 {} -20 {} -51 {} -90 {}
+ContextSub2: coverage "Gukh virama-1" 0 0 0 1
+ 3 0 0
+  Coverage: 51 Gukh.Med.Y Gukh.Med.V Gukh.Med.Y.Low Gukh.Med.V.Low
+  Coverage: 89 Gukh.Med.H Gukh.Med.H.Norm Gukh.Med.H.Wider Gukh.Med.H.Aspir Gukh.Med.H.InvT Gukh.Med.H.b
+  Coverage: 11 Gukh.Virama
+ 1
+  SeqLookup: 2 "Gukh virama repl"
+EndFPST
 ContextSub2: coverage "b" 0 0 0 1
  2 0 0
   Coverage: 34 Gukh.P Gukh.Ligm.P.Y Gukh.Ligm.P.V
@@ -869,7 +879,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 675 25 12
+WinInfo: 875 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -881,7 +891,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114263 1167
+BeginChars: 1114264 1168
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -151414,6 +151424,7 @@ SplineSet
  -305.709960938 -136.151367188 l 1,3,-1
  -272.942382812 -91.9873046875 l 1,0,-1
 EndSplineSet
+Substitution2: "Gukh virama repl-1" Gukh.Virama.DoubleMed
 Colour: ffe600
 EndChar
 
@@ -156600,6 +156611,17 @@ Flags: W
 LayerCount: 2
 Fore
 Refer: 664 45 S 1 0 0 1 0 78 2
+EndChar
+
+StartChar: Gukh.Virama.DoubleMed
+Encoding: 1114263 -1 1167
+Width: 0
+Flags: WO
+AnchorPoint: "Virama" -408 -27 mark 0
+LayerCount: 2
+Fore
+Refer: 1043 90415 N 1 0 0 1 0 0 2
+Colour: ffe600
 EndChar
 EndChars
 EndSplineFont
