@@ -34,10 +34,10 @@
 		 Ol Chiki and Ol Onal?
 		 Some fixups (Greek → Ancient Greek) are built into data
 		 and are locale-independent (see “ellipsis” below),
-		 but Ol Onal IS locale-dependent. -->
-	<alpha-fixup>
-		<blk start="1E5D0" target="Ol Chiki X" /><!-- Ol Onal after Ol Chiki -->
-	</alpha-fixup>
+		 but Ol Onal IS locale-dependent. 
+			<blk start="1E5D0" target="Ol Chiki X" />Used to be
+		 -->
+	<alpha-fixup />
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.
 		 These blocks are marked with ellipsis. -->
