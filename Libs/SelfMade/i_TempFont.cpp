@@ -19,9 +19,31 @@ std::string tempPrefix;
 
 constexpr bool debugTempFont = false;
 
-#define MSG0(x) if constexpr (debugTempFont) { std::cout << x; }
-#define MSG(x)  if constexpr (debugTempFont) { std::cout << x << '\n'; }
-#define MSGLN   if constexpr (debugTempFont) { std::cout << '\n'; }
+template <class... Args>
+inline void msg0([[maybe_unused]] Args&&... x)
+{
+    if constexpr (debugTempFont) {
+        ((std::cout << x), ...);
+    }
+}
+
+template <class... Args>
+inline void msg([[maybe_unused]] Args&&... x)
+{
+    if constexpr (debugTempFont) {
+        ((std::cout << x), ...);
+        // OK, this is debug and flushing is really needed
+        std::cout << std::endl;
+    }
+}
+
+inline void msgln()
+{
+    if constexpr (debugTempFont) {
+        // OK, this is debug and flushing is really needed
+        std::cout << std::endl;
+    }
+}
 
 namespace {
 
@@ -139,11 +161,11 @@ namespace {
         }
 
         if constexpr (debugTempFont) {
-            MSG0("Read blocks:");
+            msg0("Read blocks:");
             for (auto& v : blocks) {
-                MSG0(' ' << v.name.toSv());
+                msg0(' ', v.name.toSv());
             }
-            MSGLN;
+            msgln();
         }
 
         return true;
@@ -182,14 +204,14 @@ namespace {
         blk.skipW();    // should be 0
         unsigned nRecs = blk.readMW();
         unsigned stringOffset = blk.readMW();
-        MSG(nRecs << " records found");
-        MSG0("Records found:");
+        msg(nRecs, " records found");
+        msg0("Records found:");
         for (unsigned i = 0; i < nRecs; ++i) {
             blk.skip(6);    // platform, platformSpecific, language
             unsigned nameId = blk.readMW();
             unsigned length = blk.readMW();
             unsigned offset = blk.readMW();
-            MSG0(' ' << nameId);
+            msg0(' ', nameId);
             if (nameId == 1 || nameId == 4 || nameId == 6) {
                 if (length < bytes.length()) {
                     throw std::logic_error("Font name is too short");
@@ -201,7 +223,7 @@ namespace {
                 blk.seek(oldPos);
             }
         }
-        MSGLN
+        msgln();
         recomputeChecksum(*v.b);
     }
 
@@ -224,10 +246,10 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
     int id = -1;
     if (!tempPrefix.empty() &&
             (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
-        MSG("Loading TTF/OTF "
-            << QFileInfo(fname).fileName().toStdString()
-            << " for the sake of " << std::hex << static_cast<int32_t>(trigger)
-            << std::dec);
+        msg("Loading TTF/OTF ",
+            QFileInfo(fname).fileName().toStdString(),
+            " for the sake of ", std::hex,
+            static_cast<int32_t>(trigger), std::dec);
         // TTF, load + rename
         try {
             mf.load(fname);
@@ -247,8 +269,8 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
     auto families = QFontDatabase::applicationFontFamilies(id);
     if constexpr (debugTempFont) {
         for (auto& v : families) {
-            MSG("Installed " << v.toStdString() << ", id=" << id << " for the sake of "
-                << std::hex << static_cast<uint32_t>(trigger) << std::dec);
+            msg("Installed ", v.toStdString(), ", id=", id, " for the sake of ",
+                std::hex, static_cast<uint32_t>(trigger), std::dec);
         }
     }
     return { id, std::move(families), std::make_unique<Mems>(std::move(mf)) };
