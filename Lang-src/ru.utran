@@ -3202,7 +3202,7 @@
    </group>
    <group id="10300">
     <text id="Name">
-     <orig>Old Italic (Etruscan)</orig>
+     <orig>Italic old (Etruscan)</orig>
      <transl>Этрусский</transl>
     </text>
    </group>
@@ -3214,8 +3214,8 @@
    </group>
    <group id="10350">
     <text id="Name">
-     <orig>Old Permic (Anbur)</orig>
-     <transl>Древнепермский (анбур)</transl>
+     <orig>Permic old (Anbur)</orig>
+     <transl>Пермский древний (анбур)</transl>
     </text>
    </group>
    <group id="10380">
@@ -3226,8 +3226,8 @@
    </group>
    <group id="103A0">
     <text id="Name">
-     <orig>Old Persian</orig>
-     <transl>Древнеперсидский</transl>
+     <orig>Persian old</orig>
+     <transl>Персидский древний</transl>
     </text>
    </group>
    <group id="10400">
@@ -3356,14 +3356,14 @@
    </group>
    <group id="10A60">
     <text id="Name">
-     <orig>Old South Arabian</orig>
-     <transl>Древняя южноаравийская</transl>
+     <orig>Arabian old south</orig>
+     <transl>Аравийская древняя южная</transl>
     </text>
    </group>
    <group id="10A80">
     <text id="Name">
-     <orig>Old North Arabian</orig>
-     <transl>Древняя североаравийская</transl>
+     <orig>Arabian old north</orig>
+     <transl>Аравийская древняя северная</transl>
     </text>
    </group>
    <group id="10AC0">
@@ -3398,13 +3398,13 @@
    </group>
    <group id="10C00">
     <text id="Name">
-     <orig>Old Turkic (Orkhon-Yenisei) runes</orig>
+     <orig>Turkic old (Orkhon-Yenisei) runes</orig>
      <transl>Тюркские (орхоно-енисейские) руны</transl>
     </text>
    </group>
    <group id="10C80">
     <text id="Name">
-     <orig>Old Hungarian (Székely) runes</orig>
+     <orig>Hungarian old (Székely) runes</orig>
      <transl>Венгерские (секейские) руны</transl>
     </text>
    </group>
@@ -3448,8 +3448,8 @@
    </group>
    <group id="10F00">
     <text id="Name">
-     <orig>Old Sogdian</orig>
-     <transl>Старосогдийский</transl>
+     <orig>Sogdian old</orig>
+     <transl>Согдийский старый</transl>
     </text>
    </group>
    <group id="10F30">
@@ -3460,8 +3460,8 @@
    </group>
    <group id="10F70">
     <text id="Name">
-     <orig>Old Uyghur</orig>
-     <transl>Староуйгурский</transl>
+     <orig>Uyghur old</orig>
+     <transl>Уйгурский старый</transl>
     </text>
    </group>
    <group id="10FB0">
@@ -6429,14 +6429,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>It’s unknown how Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
+      <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
       <p />
       <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but use of runes continued, gradually declining. Last inscrtiptions are dated ≈1800.</p>
       <p />
       <p>Studying started since 18th century, main work was conducted about 1900, and even new runes were made for remaining phonemes of Hungarian. Hungarians are proud of runes and even duplicate signs sometimes, but few are able to read them: in 2017 some pranksters replaced sign of Érd town with “Szia” (“hi”, both words are 3 runes long), and that was noticed in a month.</p>
      </orig>
      <transl>
-      <p>Неизвестно, как венгерские руны связаны с [[ps:Orkh|тюркскими]]: то ли произошли от них, то ли сестринские письменности.</p>
+      <p>Неизвестно, как старовенгерские руны связаны с [[ps:Orkh|тюркскими]]: то ли произошли от них, то ли сестринские письменности.</p>
       <p />
       <p>Иштван{{_}}I, первый король Венгрии, объединил венгерские племена, обратил в христианство и около 1000 перешёл на [[ps:Latn|латиницу]], но руны продолжают использоваться, постепенно угасая. Последние надписи датируются ≈1800.</p>
       <p />
@@ -6455,14 +6455,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
+      <p>Old Italic alphabets were made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
       <p />
-      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}Old Italic.</p>
+      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}both left-to-right and right-to-left.</p>
      </orig>
      <transl>
-      <p>Алфавит создали из [[ps:Phnx|финикийского]] и раннего [[ps:Grek|греческого]]. В дальнейшем развился в [[ps:Latn|латинский]].</p>
+      <p>Староиталийские алфавиты создали из [[ps:Phnx|финикийского]] и раннего [[ps:Grek|греческого]]. В дальнейшем развились в [[ps:Latn|латинский]].</p>
       <p />
-      <p>Юникод не{{_}}различает языков Италии, [[pt:unification|объединяя]] все в один блок{{-}}этрусский.</p>
+      <p>Юникод не{{_}}различает языков Италии, [[pt:unification|объединяя]] все в один блок{{-}}и слева направо, и справа налево.</p>
      </transl>
     </text>
    </group>
@@ -7496,8 +7496,8 @@
      <transl>североаравийский оазисов, сафаитский, хисмайский и другие</transl>
     </text>
     <text id="Text">
-     <orig>The term refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
-     <transl>Понятие относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. Происходят из протосинайской письменности. Известны по кратким надписям III{{_}}века{{bc}}{{_}}— IV{{_}}века, но письмо значительно более древнее; вероятно, VIII{{_}}века{{bc}}</transl>
+     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
+     <transl>Понятие «древняя североаравийская» относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. Происходят из протосинайской письменности. Известны по кратким надписям III{{_}}века{{bc}}{{_}}— IV{{_}}века, но письмо значительно более древнее; вероятно, VIII{{_}}века{{bc}}</transl>
     </text>
    </group>
    <group id="Nbat">
@@ -7801,12 +7801,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
+      <p>Old Uyghur script is an intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
       <p />
       <p>Modern scholars alro write Uyghur right to left, hence encoding model.</p>
      </orig>
      <transl>
-      <p>Промежуточная стадия между [[ps:Sogd|согдийским]] и [[ps:Mong|монгольским]] письмом. Согдийцы писали справа налево, сильно заваливая текст влево{{-}}отсюда письмо слева направо по столбцам. Промежуточным оказалось и по типу{{-}}часть гласных получили свои буквы. Письмо использовалось в современном Синьцзян-Уйгурском округе до XVIII{{_}}века.</p>
+      <p>Староуйгурское письмо{{-}}промежуточная стадия между [[ps:Sogd|согдийским]] и [[ps:Mong|монгольским]] письмом. Согдийцы писали справа налево, сильно заваливая текст влево{{-}}отсюда письмо слева направо по столбцам. Промежуточным оказалось и по типу{{-}}часть гласных получили свои буквы. Письмо использовалось в современном Синьцзян-Уйгурском округе до XVIII{{_}}века.</p>
       <p />
       <p>Современные исследователи также часто пишут по-уйгурски справа налево{{-}}отсюда принцип кодирования Юникодом.</p>
      </transl>
@@ -7871,12 +7871,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
+      <p>Old Permic script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
       <p />
       <p>Anbur is an important source for Finno-Ugric languages. Only [[ps:Hung|Hungarian runes]] are more ancient.</p>
      </orig>
      <transl>
-      <p>Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] с вкраплением [[ps:Grek|греческого]] и местных рун. Названа по первым двум буквам, «ан» и «бур». Иногда использовалась как тайнопись для тогдашнего русского. В XVII{{_}}веке окончательно вытеснена кириллицей.</p>
+      <p>Древнепермская письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] с вкраплением [[ps:Grek|греческого]] и местных рун. Названа по первым двум буквам, «ан» и «бур». Иногда использовалась как тайнопись для тогдашнего русского. В XVII{{_}}веке окончательно вытеснена кириллицей.</p>
       <p />
       <p>Анбур{{-}}важный источник по финно-угорским языкам. Древнее только [[ps:Hung|венгерские руны]].</p>
      </transl>
@@ -8163,8 +8163,8 @@
      <transl>южноаравийские ''(сабейский, катабанский и прочие)'', гéэз</transl>
     </text>
     <text id="Text">
-     <orig>Ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
-     <transl>Предок [[ps:Ethi|эфиопского]] письма, происходит из малоизученной протосинайской письменности. В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].</transl>
+     <orig>Old South Arabian is an ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
+     <transl>Древнее южноаравийское{{-}}предок [[ps:Ethi|эфиопского]] письма, происходит из малоизученной протосинайской письменности. В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].</transl>
     </text>
    </group>
    <group id="Saur">

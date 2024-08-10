@@ -2388,7 +2388,7 @@
    </group>
    <group id="10300">
     <text id="Name">
-     <orig>Old Italic (Etruscan)</orig>
+     <orig>Italic old (Etruscan)</orig>
     </text>
    </group>
    <group id="10330">
@@ -2398,7 +2398,7 @@
    </group>
    <group id="10350">
     <text id="Name">
-     <orig>Old Permic (Anbur)</orig>
+     <orig>Permic old (Anbur)</orig>
     </text>
    </group>
    <group id="10380">
@@ -2408,7 +2408,7 @@
    </group>
    <group id="103A0">
     <text id="Name">
-     <orig>Old Persian</orig>
+     <orig>Persian old</orig>
     </text>
    </group>
    <group id="10400">
@@ -2516,12 +2516,12 @@
    </group>
    <group id="10A60">
     <text id="Name">
-     <orig>Old South Arabian</orig>
+     <orig>Arabian old south</orig>
     </text>
    </group>
    <group id="10A80">
     <text id="Name">
-     <orig>Old North Arabian</orig>
+     <orig>Arabian old north</orig>
     </text>
    </group>
    <group id="10AC0">
@@ -2551,12 +2551,12 @@
    </group>
    <group id="10C00">
     <text id="Name">
-     <orig>Old Turkic (Orkhon-Yenisei) runes</orig>
+     <orig>Turkic old (Orkhon-Yenisei) runes</orig>
     </text>
    </group>
    <group id="10C80">
     <text id="Name">
-     <orig>Old Hungarian (Székely) runes</orig>
+     <orig>Hungarian old (Székely) runes</orig>
     </text>
    </group>
    <group id="10D00">
@@ -2592,7 +2592,7 @@
    </group>
    <group id="10F00">
     <text id="Name">
-     <orig>Old Sogdian</orig>
+     <orig>Sogdian old</orig>
     </text>
    </group>
    <group id="10F30">
@@ -2602,7 +2602,7 @@
    </group>
    <group id="10F70">
     <text id="Name">
-     <orig>Old Uyghur</orig>
+     <orig>Uyghur old</orig>
     </text>
    </group>
    <group id="10FB0">
@@ -4643,7 +4643,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>It’s unknown how Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
+      <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
       <p />
       <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but use of runes continued, gradually declining. Last inscrtiptions are dated ≈1800.</p>
       <p />
@@ -4660,9 +4660,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
+      <p>Old Italic alphabets were made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
       <p />
-      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}Old Italic.</p>
+      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}both left-to-right and right-to-left.</p>
      </orig>
     </text>
    </group>
@@ -5347,7 +5347,7 @@
      <orig>Old Arabic of oases, Safaitic, Hismaitic and others</orig>
     </text>
     <text id="Text">
-     <orig>The term refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
+     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
     </text>
    </group>
    <group id="Nbat">
@@ -5551,7 +5551,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
+      <p>Old Uyghur script is an intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
       <p />
       <p>Modern scholars alro write Uyghur right to left, hence encoding model.</p>
      </orig>
@@ -5599,7 +5599,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
+      <p>Old Permic script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
       <p />
       <p>Anbur is an important source for Finno-Ugric languages. Only [[ps:Hung|Hungarian runes]] are more ancient.</p>
      </orig>
@@ -5789,7 +5789,7 @@
      <orig>South Arabian lanuages ''(Sabaean, Qatabanic etc)'', Ge’ez</orig>
     </text>
     <text id="Text">
-     <orig>Ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
+     <orig>Old South Arabian is an ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
     </text>
    </group>
    <group id="Saur">
