@@ -21,26 +21,10 @@ std::string tempPrefix;
 constexpr bool debugTempFont = false;
 
 template <class... Args>
-inline void msg0([[maybe_unused]] Args&&... x)
-{
-    if constexpr (debugTempFont) {
-        ((std::cout << x), ...);
-    }
-}
-
-template <class... Args>
 inline void msg([[maybe_unused]] Args&&... x)
 {
     if constexpr (debugTempFont) {
         ((std::cout << x), ...);
-        // OK, this is debug and flushing is really needed
-        std::cout << std::endl;
-    }
-}
-
-inline void msgln()
-{
-    if constexpr (debugTempFont) {
         // OK, this is debug and flushing is really needed
         std::cout << std::endl;
     }
