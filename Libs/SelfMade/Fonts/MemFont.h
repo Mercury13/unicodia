@@ -88,6 +88,7 @@ public:
     Mems&& stream() && { return std::move(slave); }
     Mems&& giveStream() { return std::move(slave); }
 
+    // Obj
     mf::Type type() const noexcept override { return mf::Type::FONT; }
     size_t nChildren() const noexcept override { return blocks.size(); }
     virtual const mf::Block& childAt(size_t i) const override;
