@@ -24,8 +24,20 @@ namespace mf {
         virtual size_t nChildren() const noexcept = 0;
         virtual const Obj& childAt(size_t i) const = 0;
         virtual std::string text() const noexcept = 0;
+
+        virtual bool hasData() const noexcept = 0;
+        /// @warning   body, no headers
+        virtual size_t bodyOffset() const noexcept = 0;
+        virtual size_t bodySize() const noexcept = 0;
+
         // Need virtual dtor
         virtual ~Obj() = default;
+
+        // Utils
+        Buf1d<char> body(Buf1d<char> entireFile) const
+            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
+        Buf1d<const char> body(Buf1d<const char> entireFile) const
+            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
     };
 
     struct Char4
@@ -52,11 +64,15 @@ namespace mf {
 
         Buf1d<char> toBuf(Buf1d<char> data);
 
+        // Obj
         Type type() const noexcept override { return Type::BLOCK; }
         size_t nChildren() const noexcept override { return 0; }
         const Obj& childAt(size_t i) const override;
         std::string text() const noexcept override
             { return std::string { name.toSv() }; };
+        bool hasData() const noexcept override { return true; }
+        size_t bodyOffset() const noexcept override { return posInFile; }
+        size_t bodySize() const noexcept override { return length; }
     };
 
     struct Block2
@@ -85,16 +101,21 @@ public:
     // Misc info
     /// prefer over nChildren
     size_t nBlocks() const { return blocks.size(); }
+    Buf1d<const char> data() const noexcept { return slave.data(); }
     auto qdata() const { return slave.qdata(); }
-    Mems& stream() & { return slave; }
-    Mems&& stream() && { return std::move(slave); }
-    Mems&& giveStream() { return std::move(slave); }
+    Mems& stream() & noexcept { return slave; }
+    Mems&& stream() && noexcept { return std::move(slave); }
+    Mems&& giveStream() noexcept { return std::move(slave); }
+    size_t dataSize() const noexcept { return slave.size(); }
 
     // Obj
     mf::Type type() const noexcept override { return mf::Type::FONT; }
     size_t nChildren() const noexcept override { return blocks.size(); }
-    virtual const mf::Block& childAt(size_t i) const override;
+    const mf::Block& childAt(size_t i) const override;
     std::string text() const noexcept override { return "Font"; }
+    bool hasData() const noexcept override { return true; }
+    size_t bodyOffset() const noexcept override { return 0; }
+    size_t bodySize() const noexcept override { return dataSize(); }
 private:
     Mems slave;
     SafeVector<mf::Block> blocks;

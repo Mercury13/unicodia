@@ -11,41 +11,41 @@
 class Mems
 {
 public:
-    Mems() = default;
+    Mems() noexcept = default;
     // Ctor; by-val+move idiom
-    Mems(Buf1d<char> dd) { d.borrow(dd); p = dd.begin(); }
+    Mems(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); }
     // Move only, do not copy
     Mems(const Mems&) = delete;
-    Mems(Mems&&) = default;
+    Mems(Mems&&) noexcept = default;
     Mems& operator = (const Mems&) = delete;
     Mems& operator = (Mems&&) = default;
 
     void alloc(size_t n) { d.alloc(n); p = d.begin(); }
-    Buf1d<char> data() { return d; }
-    Buf1d<const char> data() const { return d; }
+    Buf1d<char> data() noexcept { return d; }
+    Buf1d<const char> data() const noexcept { return d; }
 
     QByteArray qdata() const { return QByteArray::fromRawData(d.buffer(), d.size()); }
 
     /// @return  ptr to beginning
-    char* beg() { return d.begin(); }
-    const char* beg() const { return d.begin(); }
+    char* beg() noexcept { return d.begin(); }
+    const char* beg() const noexcept { return d.begin(); }
 
     /// @return  ptr to end
     char* end() { return d.end(); }
     const char* end() const { return d.end(); }
 
     /// @return  ptr to carriage
-    char* ptr() { return p; }
-    const char* ptr() const { return p; }
+    char* ptr() noexcept { return p; }
+    const char* ptr() const noexcept { return p; }
 
     /// @return  data size
-    size_t size() const { return d.size(); }
+    size_t size() const noexcept { return d.size(); }
 
     /// @return  carriage position
-    size_t pos() const { return p - beg(); }
+    size_t pos() const noexcept { return p - beg(); }
 
     /// @return  how many bytes remains
-    size_t remainder() const { return end() - p; }
+    size_t remainder() const noexcept { return end() - p; }
 
     /// Seeks carriage to position x
     /// @post  pos() == x
