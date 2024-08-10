@@ -2,7 +2,6 @@
 
 // STL
 #include <iostream>
-#include <bit>
 
 // Qt
 #include <QApplication>
@@ -21,8 +20,8 @@ std::string tempPrefix;
 constexpr bool debugTempFont = false;
 
 #define MSG0(x) if constexpr (debugTempFont) { std::cout << x; }
-#define MSG(x)  if constexpr (debugTempFont) { std::cout << x << std::endl; }
-#define MSGLN   if constexpr (debugTempFont) { std::cout << std::endl; }
+#define MSG(x)  if constexpr (debugTempFont) { std::cout << x << '\n'; }
+#define MSGLN   if constexpr (debugTempFont) { std::cout << '\n'; }
 
 namespace {
 
@@ -235,14 +234,14 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
             mf.mangle(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
-            std::cout << "ERROR: " << e.what() << std::endl;
+            std::cout << "ERROR: " << e.what() << '\n';
         }
     } else {
         // Load exactly
         id = QFontDatabase::addApplicationFont(fname);
     }
     if (id < 0) {
-        std::cout << "Cannot install " << fname.toStdString() << std::endl;
+        std::cout << "Cannot install " << fname.toStdString() << '\n';
         return { FONT_BADLY_INSTALLED, {}, {} };
     }
     auto families = QFontDatabase::applicationFontFamilies(id);
