@@ -81,6 +81,8 @@ public:
     mf::Block2 rqBlock(mf::Char4 name, uint32_t len = 0);
     /// @param bytes  ASCII only!!
     void mangle(std::string_view bytes);
+
+    // Misc info
     /// prefer over nChildren
     size_t nBlocks() const { return blocks.size(); }
     auto qdata() const { return slave.qdata(); }
