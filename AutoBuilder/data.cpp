@@ -1991,6 +1991,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x22ACF },   // A single char redrawn in U15 and already present in BS
     { 0x23F4E },   // 23F4E is G U3, SimSun shows T, BS OK
     { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
+    { 0x2B92C },   // CJK E: redrawn in U16, BS OK (parallel lines)
 
     // Mathematical: Cambria → Funky
     { 0x220F, 0x2211 },     // Big sums and products
