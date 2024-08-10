@@ -7,16 +7,20 @@ CONFIG += c++2a
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/SelfMade/Fonts/MemFont.cpp \
     ../Libs/SelfMade/Qt/i_OpenSave.cpp \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
+    ../Libs/SelfMade/i_MemStream.cpp \
     main.cpp \
     FmMain.cpp
 
 HEADERS += \
+    ../Libs/SelfMade/Fonts/MemFont.h \
     ../Libs/SelfMade/Qt/i_OpenSave.h \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
+    ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h
 
