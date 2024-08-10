@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723154329
+ModificationTime: 1723298359
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -869,7 +869,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 25 12
+WinInfo: 675 25 12
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -146222,7 +146222,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Virama" 484 -10 basechar 0
-AnchorPoint: "Dot below" 359 122 basechar 0
+AnchorPoint: "Dot below" 329 122 basechar 0
 AnchorPoint: "Matra 625" 351 625 basechar 0
 LayerCount: 2
 Fore
