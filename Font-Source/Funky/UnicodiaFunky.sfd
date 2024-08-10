@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723302263
+ModificationTime: 1723302266
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -156616,7 +156616,7 @@ EndChar
 StartChar: Gukh.Virama.DoubleMed
 Encoding: 1114263 -1 1167
 Width: 0
-Flags: WO
+Flags: W
 AnchorPoint: "Virama" -408 -27 mark 0
 LayerCount: 2
 Fore
