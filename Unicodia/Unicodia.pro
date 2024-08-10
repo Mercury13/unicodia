@@ -31,6 +31,7 @@ SOURCES += \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
     ../Libs/PugiXml/pugixml.cpp \
+    ../Libs/SelfMade/Fonts/MemFont.cpp \
     ../Libs/SelfMade/GitHub/parsers.cpp \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
@@ -86,6 +87,7 @@ HEADERS += \
     ../Libs/L10n/LocQt.h \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/Fonts/MemFont.h \
     ../Libs/SelfMade/Fonts/TempFont.h \
     ../Libs/SelfMade/GitHub/parsers.h \
     ../Libs/SelfMade/Mojibake/mojibake.h \

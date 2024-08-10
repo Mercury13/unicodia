@@ -20,6 +20,7 @@ public:
     Mems& operator = (const Mems&) = delete;
     Mems& operator = (Mems&&) = default;
 
+    void alloc(size_t n) { d.alloc(n); p = d.begin(); }
     Buf1d<char> data() { return d; }
     Buf1d<const char> data() const { return d; }
 
