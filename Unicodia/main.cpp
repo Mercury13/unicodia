@@ -4,7 +4,7 @@
 #include <QTranslator>
 
 // Libs
-#include <i_TempFont.h>
+#include <Fonts/TempFont.h>
 
 // Project-local
 #include "d_Config.h"

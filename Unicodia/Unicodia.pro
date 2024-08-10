@@ -51,8 +51,8 @@ SOURCES += \
     MainGui.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
+    ../Libs/SelfMade/Fonts/TempFont.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
-    ../Libs/SelfMade/i_TempFont.cpp \
     ../Libs/SelfMade/Strings/u_Decoders.cpp \
     ../Libs/SelfMade/Strings/u_Qstrings.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
@@ -86,6 +86,7 @@ HEADERS += \
     ../Libs/L10n/LocQt.h \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/Fonts/TempFont.h \
     ../Libs/SelfMade/GitHub/parsers.h \
     ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/Qt/QtMultiRadio.h \
@@ -94,7 +95,6 @@ HEADERS += \
     ../Libs/SelfMade/i_ByteSwap.h \
     ../Libs/SelfMade/i_DarkMode.h \
     ../Libs/SelfMade/i_MemStream.h \
-    ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Cmap.h \
     ../Libs/SelfMade/u_DumbSp.h \
     ../Libs/SelfMade/u_EcArray.h \

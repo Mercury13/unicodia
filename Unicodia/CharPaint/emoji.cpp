@@ -5,7 +5,7 @@
 #include <QPainter>
 
 // Libs
-#include "i_TempFont.h"
+#include "Fonts/TempFont.h"
 #include "i_ByteSwap.h"
 #include "u_Strings.h"
 #include "Zippy/ZipArchive.hpp"

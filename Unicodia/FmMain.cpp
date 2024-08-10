@@ -37,7 +37,7 @@
 // Misc
 #include "u_Strings.h"
 #include "u_Qstrings.h"
-#include "i_TempFont.h"
+#include "Fonts/TempFont.h"
 
 // Unicode
 #include "UcCp.h"

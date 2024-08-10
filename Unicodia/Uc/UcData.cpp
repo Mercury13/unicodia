@@ -6,7 +6,7 @@
 #include <QRawFont>
 
 // Libs
-#include "i_TempFont.h"
+#include "Fonts/TempFont.h"
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 #include "u_Cmap.h"
