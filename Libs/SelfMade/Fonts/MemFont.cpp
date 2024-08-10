@@ -38,7 +38,9 @@ inline void msgln()
 ///// Block ////////////////////////////////////////////////////////////////////
 
 namespace HEADER {
+    /// Offset: # of tables
     constexpr auto OFS_NTABLES = 4;
+    /// Size of one table
     constexpr auto SIZE = 12;
 }
 
