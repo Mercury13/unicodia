@@ -88,7 +88,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QTreeView" name="treeStructure"/>
+         <widget class="QTreeView" name="treeStructure">
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
         </item>
        </layout>
       </widget>

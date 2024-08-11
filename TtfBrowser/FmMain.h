@@ -23,12 +23,16 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+
+    using QAbstractItemModel::beginResetModel;
+    using QAbstractItemModel::endResetModel;
 };
 
 class FmMain : public QMainWindow
 {
     Q_OBJECT
-
+    using Super = QMainWindow;
+    using This = FmMain;
 public:
     FmMain(QWidget *parent = nullptr);
     ~FmMain() override;
@@ -36,6 +40,9 @@ public:
 private:
     Ui::FmMain *ui;
 
-    TreeModel model;
+    TreeModel treeModel;
+private slots:
+    void doOpen();
 };
+
 #endif // FMMAIN_H

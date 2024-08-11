@@ -1,6 +1,8 @@
 #include "FmMain.h"
 #include "ui_FmMain.h"
 
+#include "i_OpenSave.h"
+
 
 ///// TreeModel ////////////////////////////////////////////////////////////////
 
@@ -66,10 +68,15 @@ QVariant TreeModel::data(const QModelIndex &index, int role) const
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 FmMain::FmMain(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::FmMain)
+    : Super(parent), ui(new Ui::FmMain)
 {
     ui->setupUi(this);
+
+    // Models
+    ui->treeStructure->setModel(&treeModel);
+
+    // Connect events
+    connect(ui->btOpen, &QPushButton::clicked, this, &This::doOpen);
 }
 
 FmMain::~FmMain()
@@ -77,3 +84,22 @@ FmMain::~FmMain()
     delete ui;
 }
 
+void FmMain::doOpen()
+{
+    filedlg::Filters filters {
+        { L"Font files", L"*.ttf *.otf" },
+        { L"All files", L"*" }
+    };
+    auto fname = filedlg::open(
+            this, L"Open font", filters, L"", filedlg::AddToRecent::NO,
+            filedlg::CheckForAccess::YES);
+    if (fname.empty())
+        return;
+    /// @todo [urgent] reset
+    MemFont tmpFont;
+    tmpFont.load(QString::fromStdWString(fname));
+
+    treeModel.beginResetModel();
+    treeModel.font = std::move(tmpFont);
+    treeModel.endResetModel();
+}
