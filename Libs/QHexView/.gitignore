@@ -1,0 +1,5 @@
+build
+moc_*
+*.o
+example/qhexview
+Makefile
