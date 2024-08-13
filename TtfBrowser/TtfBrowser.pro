@@ -7,6 +7,7 @@ CONFIG += c++2a
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/QHexView/src/QHexView.cpp \
     ../Libs/SelfMade/Fonts/MemFont.cpp \
     ../Libs/SelfMade/Qt/i_OpenSave.cpp \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
@@ -16,6 +17,8 @@ SOURCES += \
     FmMain.cpp
 
 HEADERS += \
+    ../Libs/QHexView/include/QHexView.h \
+    ../Libs/QHexView/include/charset.h \
     ../Libs/SelfMade/Fonts/MemFont.h \
     ../Libs/SelfMade/Qt/i_OpenSave.h \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
@@ -28,7 +31,8 @@ FORMS += \
     FmMain.ui
 
 INCLUDEPATH += \
-    ../Libs/SelfMade/  \
+    ../Libs/QHexView/include  \
+    ../Libs/SelfMade  \
     ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings
 

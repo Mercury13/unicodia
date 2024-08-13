@@ -5,6 +5,7 @@
 #include <QAbstractItemModel>
 
 #include "Fonts/MemFont.h"
+#include "QHexView.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
@@ -39,10 +40,12 @@ public:
 
 private:
     Ui::FmMain *ui;
-
     TreeModel treeModel;
+
+    void selCurrentUpdate();
 private slots:
     void doOpen();
+    void selCurrentChanged(const QModelIndex& nw);
 };
 
 #endif // FMMAIN_H

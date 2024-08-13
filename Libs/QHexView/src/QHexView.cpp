@@ -1,4 +1,7 @@
 #include "../include/QHexView.h"
+
+#include "../include/charset.h"
+
 #include <QScrollBar>
 #include <QPainter>
 #include <QSize>
@@ -128,14 +131,37 @@ namespace {
     #define CYRILLIC_SMALL_ROW_1     STRAIGHT_ROW(0x0430)
     #define CYRILLIC_SMALL_ROW_2     STRAIGHT_ROW(0x0440)
 
-    uint16_t CP_866[256] = {
-        IBM_TABLE_ASCII,
-        CYRILLIC_CAPITAL_ROW_1,
-        CYRILLIC_CAPITAL_ROW_2,
-        CYRILLIC_SMALL_ROW_1,
-        IBM_TABLE_PSEUDOGRAPHICS,
-        CYRILLIC_SMALL_ROW_2,
-        0x0401, 0x0451, 0x0404, 0x0454,   0x0407, 0x0457, 0x040E, 0x045E,   IBM_TABLE_F8_FF };
+    // uint16_t CP_866[256] = {
+    //     IBM_TABLE_ASCII,
+    //     CYRILLIC_CAPITAL_ROW_1,
+    //     CYRILLIC_CAPITAL_ROW_2,
+    //     CYRILLIC_SMALL_ROW_1,
+    //     IBM_TABLE_PSEUDOGRAPHICS,
+    //     CYRILLIC_SMALL_ROW_2,
+    //     0x0401, 0x0451, 0x0404, 0x0454,   0x0407, 0x0457, 0x040E, 0x045E,   IBM_TABLE_F8_FF };
+
+    constexpr ch::IbmAsciiPatch ibmAsciiPatch;
+    constexpr ch::SpanPatch isoControls2 { 0x80, {
+        0x20AC, // 80
+        0x2591, // 81 missing → light shade
+        0x201A, 0x0192, 0x201E, 0x2026, 0x2020, 0x2021, // 82…87
+        0x02C6, 0x2030, 0x0160, 0x2039, 0x0152,  // 88…8C
+        0x039E, // 8D missing → Grek Xi
+        0x017D, // 8E
+        0x2592, // 8F missing → med shade
+        0x2593, // 90 missing → dark shade
+        0x2018, 0x2019, 0x201C, 0x201D, 0x2022, 0x2013, 0x2014, // 91..97
+        0x02DC, 0x2122, 0x0161, 0x203A, 0x0153, // 98..9C
+        0x03BE, // 9D missing → Grek xi
+        0x017E, 0x0178
+    }};
+
+    // IBM ASCII with printables and house
+    constinit const ch::Set MIXED_1252 {
+        ibmAsciiPatch,
+        isoControls2,
+        ch::SinglePatch { 0xAD, 0x2215 }  // SHY → division slash
+    };
 
 }   // anon namespace
 
@@ -221,7 +247,7 @@ void QHexView::paintEvent(QPaintEvent *event)
             //if (ch < 0x20)
             //ch = '.';
 
-            painter.drawText(xPosAscii, yPos, QChar(CP_866[ch]));
+            painter.drawText(xPosAscii, yPos, QChar(MIXED_1252[ch]));
         }
 
     }

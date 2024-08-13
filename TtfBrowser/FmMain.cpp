@@ -52,12 +52,45 @@ int TreeModel::columnCount(const QModelIndex &) const
     { return 1; }
 
 
+namespace {
+
+    void transformConstantLength(QString& text)
+    {
+        if (text.startsWith(' ')) {
+            for (auto &q : text) {
+                if (q == ' ') {
+                    q = L'␣';
+                } else {
+                    break;
+                }
+            }
+        }
+        if (text.endsWith(' ')) {
+            for (auto it = text.rbegin(); it != text.rend(); ++it) {
+                auto& q = *it;
+                if (q == ' ') {
+                    q = L'␣';
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+}   // anon namespace
+
+
 QVariant TreeModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
     case Qt::DisplayRole: {
             auto& obj = objOf(index);
-            return QString::fromStdString(obj.text());
+            auto text = obj.text();
+            auto shownText = QString::fromStdString(text.value);
+            if (text.isConstantLength) {
+                transformConstantLength(shownText);
+            }
+            return shownText;
         }
     default:
         return {};
@@ -72,17 +105,43 @@ FmMain::FmMain(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // UI
+    ui->splitMain->setStretchFactor(0, 4);
+    ui->splitMain->setStretchFactor(1, 7);
+
     // Models
     ui->treeStructure->setModel(&treeModel);
 
     // Connect events
     connect(ui->btOpen, &QPushButton::clicked, this, &This::doOpen);
+    connect(ui->treeStructure->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &This::selCurrentChanged);
+
+    selCurrentUpdate();
 }
 
 FmMain::~FmMain()
 {
     delete ui;
 }
+
+
+namespace {
+
+    void selectAny(QTreeView* view)
+    {
+        auto* model = view->model();
+        QModelIndex idxRoot {};
+        auto nRows = model->rowCount();
+        if (nRows == 0) {
+            view->setCurrentIndex(idxRoot);
+        } else {
+            auto firstIndex = model->index(0, 0, idxRoot);
+            view->setCurrentIndex(firstIndex);
+        }
+    }
+
+}   // anon namespace
 
 void FmMain::doOpen()
 {
@@ -95,11 +154,59 @@ void FmMain::doOpen()
             filedlg::CheckForAccess::YES);
     if (fname.empty())
         return;
-    /// @todo [urgent] reset
+
     MemFont tmpFont;
     tmpFont.load(QString::fromStdWString(fname));
 
     treeModel.beginResetModel();
+    ui->hxView->clear();
     treeModel.font = std::move(tmpFont);
     treeModel.endResetModel();
+    selectAny(ui->treeStructure);
+    ui->treeStructure->setFocus();
+}
+
+
+namespace {
+
+    QString toReadableHex(size_t x)
+    {
+        char s[60];
+        unsigned long long ull = x;
+        snprintf(s, std::size(s), "%lld = $%llX", ull, ull);
+        return s;
+    }
+
+}
+
+
+///
+/// \param [in] nw   new index
+///
+void FmMain::selCurrentChanged(const QModelIndex& nw)
+{
+    if (nw.isValid()) {
+        auto& obj = treeModel.objOf(nw);
+        auto ofs = obj.bodyOffset();
+        auto sz = obj.bodySize();
+        ui->lbStartValue->setText(toReadableHex(ofs));
+        ui->lbLenValue->setText(toReadableHex(sz));
+        ui->lbEndValue->setText(toReadableHex(ofs + sz));
+        auto entireFile = treeModel.font.data();
+        auto data = obj.body(entireFile);
+        auto dataArray = new QHexView::DataStorageArray(
+                    QByteArray::fromRawData(data.buffer(), data.size()));
+        ui->hxView->setData(dataArray);
+    } else {
+        ui->lbStartValue->setText("-");
+        ui->lbEndValue->setText("-");
+        ui->lbLenValue->setText("-");
+        ui->hxView->clear();
+    }
+}
+
+
+void FmMain::selCurrentUpdate()
+{
+    selCurrentChanged(ui->treeStructure->selectionModel()->currentIndex());
 }

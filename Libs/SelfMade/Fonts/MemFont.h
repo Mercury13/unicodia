@@ -18,12 +18,17 @@ namespace mf {
 
     enum class Type { FONT, BLOCK };
 
+    struct Text {
+        std::string value;
+        bool isConstantLength;
+    };
+
     class Obj { // interface
     public:
         virtual Type type() const noexcept = 0;
         virtual size_t nChildren() const noexcept = 0;
         virtual const Obj& childAt(size_t i) const = 0;
-        virtual std::string text() const noexcept = 0;
+        virtual Text text() const noexcept = 0;
 
         virtual bool hasData() const noexcept = 0;
         /// @warning   body, no headers
@@ -68,8 +73,8 @@ namespace mf {
         Type type() const noexcept override { return Type::BLOCK; }
         size_t nChildren() const noexcept override { return 0; }
         const Obj& childAt(size_t i) const override;
-        std::string text() const noexcept override
-            { return std::string { name.toSv() }; };
+        Text text() const noexcept override
+            { return { std::string { name.toSv() }, true }; };
         bool hasData() const noexcept override { return true; }
         size_t bodyOffset() const noexcept override { return posInFile; }
         size_t bodySize() const noexcept override { return length; }
@@ -112,7 +117,7 @@ public:
     mf::Type type() const noexcept override { return mf::Type::FONT; }
     size_t nChildren() const noexcept override { return blocks.size(); }
     const mf::Block& childAt(size_t i) const override;
-    std::string text() const noexcept override { return "Font"; }
+    mf::Text text() const noexcept override { return { "Font", false }; }
     bool hasData() const noexcept override { return true; }
     size_t bodyOffset() const noexcept override { return 0; }
     size_t bodySize() const noexcept override { return dataSize(); }
