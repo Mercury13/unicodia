@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1720610378
+ModificationTime: 1723636154
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -788,7 +788,7 @@ BeginChars: 1114175 75
 StartChar: uni25CC
 Encoding: 9676 9676 0
 Width: 594
-Flags: MWO
+Flags: MW
 AnchorPoint: "TopRight" 594 560 basechar 0
 AnchorPoint: "Dot below" 298 0 basechar 0
 AnchorPoint: "Umlaut" 297 560 basechar 0
@@ -1015,6 +1015,7 @@ EndChar
 StartChar: Todr.As
 Encoding: 67009 67009 9
 Width: 661
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: 0 21G<179.59 293.41> 290.799 70.8521<468.167 584.381>
 VStem: 380.073 266.524<350.204 375.622>
@@ -1072,6 +1073,7 @@ EndChar
 StartChar: Todr.Njan
 Encoding: 67033 67033 12
 Width: 626
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: 0 21G<179.59 293.41> 159.95 299.352
 VStem: 513.426 62.6672<195.199 289.794>
@@ -1450,6 +1452,7 @@ EndChar
 StartChar: Todr.Nxh
 Encoding: 67049 67049 28
 Width: 682
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: -240 50<217.512 315.297> 101.963 50.037<197.909 293.104> 496 50<182.831 305.846> 518 74<523.848 573.094>
 VStem: 55 89<223.837 429.489> 157 50<-180.683 -60.9761> 304 100<136.441 437.576> 339 100<-141.899 87.0041> 582 50<358.832 511.477>
@@ -2070,6 +2073,7 @@ EndChar
 StartChar: Todr.Sht
 Encoding: 67041 67041 49
 Width: 581
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: 0 21G<30 101.583 379.667 506 455.518 505.518> 674 50<230.359 321.673>
 VStem: 125 84<486.967 652.759> 352 50<477.598 643.202> 455.518 50<0 512.881>
@@ -2308,6 +2312,7 @@ EndChar
 StartChar: Todr.Jy
 Encoding: 67051 67051 58
 Width: 583
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: -10 50<134.773 241.631> 246 100<167.514 288>
 VStem: 50 50<75.2174 191.392> 83.0098 100<239.35 714> 288 100<91.052 229 343 714> 483 50<13.342 170.277>
