@@ -11,39 +11,9 @@
 #include "i_MemStream.h"
 #include "u_Vector.h"
 
-// Qt
-#include <QIODevice>
+class QIODevice;
 
 namespace mf {
-
-    enum class Type { FONT, BLOCK };
-
-    struct Text {
-        std::string value;
-        bool isConstantLength;
-    };
-
-    class Obj { // interface
-    public:
-        virtual Type type() const noexcept = 0;
-        virtual size_t nChildren() const noexcept = 0;
-        virtual const Obj& childAt(size_t i) const = 0;
-        virtual Text text() const noexcept = 0;
-
-        virtual bool hasData() const noexcept = 0;
-        /// @warning   body, no headers
-        virtual size_t bodyOffset() const noexcept = 0;
-        virtual size_t bodySize() const noexcept = 0;
-
-        // Need virtual dtor
-        virtual ~Obj() = default;
-
-        // Utils
-        Buf1d<char> body(Buf1d<char> entireFile) const
-            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
-        Buf1d<const char> body(Buf1d<const char> entireFile) const
-            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
-    };
 
     struct Char4
     {
@@ -61,23 +31,13 @@ namespace mf {
     constexpr bool operator == (Char4 x, Char4 y) { return x.d.asInt == y.d.asInt; }
     constexpr bool operator != (Char4 x, Char4 y) { return x.d.asInt != y.d.asInt; }
 
-    class Block : public mf::Obj
+    class Block
     {
     public:
         Char4 name;
         uint32_t posInDir = 0, posInFile = 0, length = 0;
 
         Buf1d<char> toBuf(Buf1d<char> data);
-
-        // Obj
-        Type type() const noexcept override { return Type::BLOCK; }
-        size_t nChildren() const noexcept override { return 0; }
-        const Obj& childAt(size_t i) const override;
-        Text text() const noexcept override
-            { return { std::string { name.toSv() }, true }; };
-        bool hasData() const noexcept override { return true; }
-        size_t bodyOffset() const noexcept override { return posInFile; }
-        size_t bodySize() const noexcept override { return length; }
     };
 
     struct Block2
@@ -91,36 +51,27 @@ namespace mf {
 }   // namespace mf
 
 
-class MemFont : public mf::Obj
+class MemFont
 {
 public:
     bool load(const QString& fname);
     bool load(QIODevice& f);
 
     // High-level bhv
-    mf::Block2 findBlock(mf::Char4 name);
+    mf::Block2 findBlock(mf::Char4 name) noexcept;
     mf::Block2 rqBlock(mf::Char4 name, uint32_t len = 0);
     /// @param bytes  ASCII only!!
     void mangle(std::string_view bytes);
 
     // Misc info
     /// prefer over nChildren
-    size_t nBlocks() const { return blocks.size(); }
+    size_t nBlocks() const noexcept { return blocks.size(); }
     Buf1d<const char> data() const noexcept { return slave.data(); }
     auto qdata() const { return slave.qdata(); }
     Mems& stream() & noexcept { return slave; }
     Mems&& stream() && noexcept { return std::move(slave); }
     Mems&& giveStream() noexcept { return std::move(slave); }
     size_t dataSize() const noexcept { return slave.size(); }
-
-    // Obj
-    mf::Type type() const noexcept override { return mf::Type::FONT; }
-    size_t nChildren() const noexcept override { return blocks.size(); }
-    const mf::Block& childAt(size_t i) const override;
-    mf::Text text() const noexcept override { return { "Font", false }; }
-    bool hasData() const noexcept override { return true; }
-    size_t bodyOffset() const noexcept override { return 0; }
-    size_t bodySize() const noexcept override { return dataSize(); }
 private:
     Mems slave;
     SafeVector<mf::Block> blocks;

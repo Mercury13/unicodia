@@ -4,8 +4,7 @@
 #include <QMainWindow>
 #include <QAbstractItemModel>
 
-#include "Fonts/MemFont.h"
-#include "QHexView.h"
+#include "MemStructure.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
@@ -15,8 +14,9 @@ class TreeModel : public QAbstractItemModel
 {
 public:
     MemFont font;
+    mfs::Font structure;
 
-    const mf::Obj& objOf(const QModelIndex& index) const;
+    const mfs::Obj& objOf(const QModelIndex& index) const;
 
     // QAbstractItemModel
     QModelIndex index(int row, int column, const QModelIndex &parent = {}) const override;

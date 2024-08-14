@@ -44,12 +44,6 @@ namespace HEADER {
     constexpr auto SIZE = 12;
 }
 
-const mf::Obj& mf::Block::childAt(size_t) const
-{
-    throw std::out_of_range("[Block.childAt] Block has no children");
-}
-
-
 Buf1d<char> mf::Block::toBuf(Buf1d<char> data)
 {
     auto end = posInFile + length;
@@ -117,20 +111,12 @@ bool MemFont::readDir()
     return true;
 }
 
-mf::Block2 MemFont::findBlock(mf::Char4 name)
+mf::Block2 MemFont::findBlock(mf::Char4 name) noexcept
 {
     for (auto& v : blocks)
         if (v.name == name)
             return { &v, v.toBuf(slave.data()) };
     return {};
-}
-
-
-const mf::Block& MemFont::childAt(size_t i) const
-{
-    if (i >= nBlocks())
-        throw std::logic_error("[MemFont.childAt] Index out of range");
-    return blocks[i];
 }
 
 

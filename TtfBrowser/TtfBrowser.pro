@@ -13,6 +13,7 @@ SOURCES += \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
+    MemStructure.cpp \
     main.cpp \
     FmMain.cpp
 
@@ -25,7 +26,8 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/u_Vector.h \
-    FmMain.h
+    FmMain.h \
+    MemStructure.h
 
 FORMS += \
     FmMain.ui

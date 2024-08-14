@@ -7,12 +7,12 @@
 ///// TreeModel ////////////////////////////////////////////////////////////////
 
 
-const mf::Obj& TreeModel::objOf(const QModelIndex& index) const
+const mfs::Obj& TreeModel::objOf(const QModelIndex& index) const
 {
     if (auto ptr = index.constInternalPointer()) {
-        return *static_cast<const mf::Obj*>(ptr);
+        return *static_cast<const mfs::Obj*>(ptr);
     } else {
-        return font;
+        return structure;
     }
 }
 
@@ -33,8 +33,8 @@ QModelIndex TreeModel::parent(const QModelIndex &child) const
 {
     auto& obj = objOf(child);
     switch (obj.type()) {
-    case mf::Type::FONT:    // Has no father, return anything
-    case mf::Type::BLOCK:   // Has a father of font (root)
+    case mfs::Type::FONT:    // Has no father, return anything
+    case mfs::Type::BLOCK:   // Has a father of font (root)
         return {};
     }
     __builtin_unreachable();
@@ -159,9 +159,11 @@ void FmMain::doOpen()
     tmpFont.load(QString::fromStdWString(fname));
 
     treeModel.beginResetModel();
-    ui->hxView->clear();
-    treeModel.font = std::move(tmpFont);
+        ui->hxView->clear();
+        treeModel.font = std::move(tmpFont);
+        treeModel.structure.loadFrom(treeModel.font);
     treeModel.endResetModel();
+
     selectAny(ui->treeStructure);
     ui->treeStructure->setFocus();
 }
