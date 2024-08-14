@@ -5,7 +5,7 @@
 
 namespace mfs {
 
-enum class Type { FONT, BLOCK };
+    enum class Type { FONT, BLOCK, CMAP };
 
     struct Text {
         std::string value;
@@ -52,6 +52,26 @@ enum class Type { FONT, BLOCK };
         size_t bodySize() const noexcept override { return slave.length; }
     };
 
+    template <class Child>
+    class BlockEx : public Block
+    {
+    public:
+        size_t nChildren() const noexcept override { return 0; }
+        const Obj& childAt(size_t i) const override;
+    private:
+        SafeVector<std::shared_ptr<Child>> fChildren;
+    };
+
+    class Cmap : public Obj
+    {
+
+    };
+
+    class CmapBlock : public BlockEx<Cmap>
+    {
+
+    };
+
     class Font final : public Obj
     {
     public:
@@ -69,7 +89,8 @@ enum class Type { FONT, BLOCK };
     private:
         const MemFont* slave = nullptr;
         size_t fileSize = 0;
-        SafeVector<std::unique_ptr<Block>> blocks;
+        std::shared_ptr<CmapBlock> cmapBlock;
+        SafeVector<std::shared_ptr<Block>> blocks;
     };
 
 }   // namespace mf

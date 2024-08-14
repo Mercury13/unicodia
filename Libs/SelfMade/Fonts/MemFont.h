@@ -37,6 +37,13 @@ namespace mf {
         Char4 name;
         uint32_t posInDir = 0, posInFile = 0, length = 0;
 
+        Buf1d<char> toBuf(Buf1d<char> data) const;
+    };
+
+    struct Cmap
+    {
+    public:
+        uint32_t posInBlock = 0, posInFile = 0, length = 0;
         Buf1d<char> toBuf(Buf1d<char> data);
     };
 
@@ -54,6 +61,7 @@ namespace mf {
 class MemFont
 {
 public:
+    void clear();
     bool load(const QString& fname);
     bool load(QIODevice& f);
 
@@ -73,12 +81,16 @@ public:
     Mems&& giveStream() noexcept { return std::move(slave); }
     size_t dataSize() const noexcept { return slave.size(); }
     Buf1d<const mf::Block> blocks() const noexcept
-            { return { fBlocks.size(), fBlocks.data() }; }
+        { return { fBlocks.size(), fBlocks.data() }; }
+    Buf1d<const mf::Cmap> cmaps() const noexcept
+        { return { fCmaps.size(), fCmaps.data() }; }
 private:
     Mems slave;
     SafeVector<mf::Block> fBlocks;
+    SafeVector<mf::Cmap> fCmaps;
 
     bool readDir();
     mf::Block readBlockEntry();
     void recomputeChecksum(const mf::Block& b);
+    void loadCmaps();
 };

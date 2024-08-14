@@ -44,7 +44,7 @@ namespace HEADER {
     constexpr auto SIZE = 12;
 }
 
-Buf1d<char> mf::Block::toBuf(Buf1d<char> data)
+Buf1d<char> mf::Block::toBuf(Buf1d<char> data) const
 {
     auto end = posInFile + length;
     if (end > data.size() || end < posInFile) {
@@ -68,12 +68,24 @@ bool MemFont::load(const QString& fname)
     return load(f);
 }
 
+
+void MemFont::clear()
+{
+    fBlocks.clear();
+    fCmaps.clear();
+}
+
 bool MemFont::load(QIODevice& f)
 {
+    clear();
     auto sz = f.size();
     slave.alloc(sz);
     f.read(slave.beg(), sz);
-    return readDir();
+    bool b = readDir();
+    if (b) {
+        loadCmaps();
+    }
+    return b;
 }
 
 mf::Block MemFont::readBlockEntry()
@@ -110,6 +122,13 @@ bool MemFont::readDir()
 
     return true;
 }
+
+
+void MemFont::loadCmaps()
+{
+    /// @todo [urgent] Load CMAPs
+}
+
 
 mf::Block2 MemFont::findBlock(mf::Char4 name) noexcept
 {
