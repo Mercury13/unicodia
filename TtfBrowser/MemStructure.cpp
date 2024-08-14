@@ -14,9 +14,7 @@ const mfs::Obj& mfs::Block::childAt(size_t) const
 
 size_t mfs::Font::nChildren() const noexcept
 {
-    if (!slave)
-        return 0;
-    return slave->nBlocks();
+    return blocks.size();
 }
 
 const mfs::Block& mfs::Font::childAt(size_t i) const
@@ -39,4 +37,9 @@ void mfs::Font::loadFrom(const MemFont& font)
 {
     slave = &font;
     fileSize = font.dataSize();
+    blocks.clear();
+    blocks.reserve(slave->nBlocks());
+    for (auto& blk : slave->blocks()) {
+        blocks.push_back(std::make_unique<Block>(blk));
+    }
 }

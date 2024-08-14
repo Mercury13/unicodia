@@ -65,16 +65,18 @@ public:
 
     // Misc info
     /// prefer over nChildren
-    size_t nBlocks() const noexcept { return blocks.size(); }
+    size_t nBlocks() const noexcept { return fBlocks.size(); }
     Buf1d<const char> data() const noexcept { return slave.data(); }
     auto qdata() const { return slave.qdata(); }
     Mems& stream() & noexcept { return slave; }
     Mems&& stream() && noexcept { return std::move(slave); }
     Mems&& giveStream() noexcept { return std::move(slave); }
     size_t dataSize() const noexcept { return slave.size(); }
+    Buf1d<const mf::Block> blocks() const noexcept
+            { return { fBlocks.size(), fBlocks.data() }; }
 private:
     Mems slave;
-    SafeVector<mf::Block> blocks;
+    SafeVector<mf::Block> fBlocks;
 
     bool readDir();
     mf::Block readBlockEntry();

@@ -92,17 +92,17 @@ bool MemFont::readDir()
     // All data is Motorola here
     slave.seek(HEADER::OFS_NTABLES);
     unsigned nTables = slave.readMW();
-    blocks.reserve(nTables);
+    fBlocks.reserve(nTables);
 
     slave.seek(HEADER::SIZE);
     for (unsigned iTable = 0; iTable < nTables; ++iTable) {
         mf::Block table = readBlockEntry();
-        blocks.push_back(table);
+        fBlocks.push_back(table);
     }
 
     if constexpr (debugMemFont) {
         msg0("Read blocks:");
-        for (auto& v : blocks) {
+        for (auto& v : fBlocks) {
             msg0(' ', v.name.toSv());
         }
         msgln();
@@ -113,7 +113,7 @@ bool MemFont::readDir()
 
 mf::Block2 MemFont::findBlock(mf::Char4 name) noexcept
 {
-    for (auto& v : blocks)
+    for (auto& v : fBlocks)
         if (v.name == name)
             return { &v, v.toBuf(slave.data()) };
     return {};
