@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1723636154
+ModificationTime: 1723636452
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -1657,6 +1657,7 @@ EndChar
 StartChar: Todr.Ngj
 Encoding: 67023 67023 35
 Width: 578
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: -240 50<222.359 376.047> 0 21G<75 177> 128 10<270 279.84> 351 50<202.686 320.871> 425.768 288.232
 VStem: 75 102<0 326.192 364 714> 100 87<-154.236 -108.063> 140.736 323.59 345 100<193.629 328.767> 428 100<-124.336 35.0266>
