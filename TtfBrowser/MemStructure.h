@@ -13,7 +13,11 @@ namespace mfs {
     };
 
     struct DataSpan {
-        uint32_t fileOffset = 0, size = 0;
+        uint32_t fileOffset, size;
+    };
+
+    struct CmapInfo {
+        uint16_t platformId, encodingId, formatId;
     };
 
     class Obj { // interface
@@ -24,6 +28,8 @@ namespace mfs {
         virtual Text text() const noexcept = 0;
 
         virtual std::optional<DataSpan> dataSpan() const noexcept = 0;
+        virtual std::optional<CmapInfo> cmapInfo() const noexcept
+            { return std::nullopt; }
 
         // Need virtual dtor
         virtual ~Obj() = default;
@@ -71,9 +77,10 @@ namespace mfs {
         Type type() const noexcept override { return Type::CMAP; }
         size_t nChildren() const noexcept override { return 0; }
         const Obj& childAt(size_t i) const override;
-        Text text() const noexcept override { return { "Cmap", false }; }
+        Text text() const noexcept override;
         std::optional<DataSpan> dataSpan() const noexcept override
             { return DataSpan { .fileOffset = slave.posInFile, .size = slave.length }; }
+        std::optional<CmapInfo> cmapInfo() const noexcept override;
     };
 
     class CmapBlock : public BlockEx<Cmap>
@@ -111,4 +118,22 @@ namespace mfs {
         SafeVector<std::shared_ptr<Block>> blocks;
     };
 
-}   // namespace mf
+    using Cbuf = char[64];
+
+    struct MiniString {
+        const char* value;
+        bool isStandard;
+    };
+
+    MiniString toPlatformMiniString(uint16_t plat) noexcept;
+    const char* toPlatformShortString(uint16_t plat, mfs::Cbuf& buf) noexcept;
+    const char* toPlatformLongString(uint16_t plat, mfs::Cbuf& buf) noexcept;
+
+    MiniString toEncodingMiniString(uint16_t plat, uint16_t enc) noexcept;
+    const char* toEncodingShortString(uint16_t plat, uint16_t enc, mfs::Cbuf& buf) noexcept;
+    const char* toEncodingLongString(uint16_t plat, uint16_t enc, Cbuf& buf) noexcept;
+
+    MiniString toTableFormatMiniString(uint16_t fm) noexcept;
+    const char* toTableFormatLongString(uint16_t fm, mfs::Cbuf& buf) noexcept;
+
+}   // namespace mfs

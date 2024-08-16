@@ -150,8 +150,9 @@ void MemFont::loadCmaps()
         fCmaps.reserve(nMaps);
         for (unsigned i = 0; i < nMaps; ++i) {
             mf::Cmap newCmap;
+            newCmap.platformId = ms.readMW();
             newCmap.encodingId = ms.readMW();
-            newCmap.encodingId = ms.readMW();
+            newCmap.formatId = mf::BAD_FORMAT;
             newCmap.posInBlock = ms.readMD();
             if (newCmap.posInBlock > blockSize)
                 continue;
@@ -163,7 +164,31 @@ void MemFont::loadCmaps()
         // Leave as is!
     }
 
-    /// @todo [urgent] read deeper, adjust length
+    for (auto& cm : fCmaps) {
+        if (cm.length >= 8) {
+            ms.seek(cm.posInBlock);
+            cm.formatId = ms.readMW();
+            switch (static_cast<mf::TableFormat>(cm.formatId)) {
+            case mf::TableFormat::SINGLE_BYTE:
+            case mf::TableFormat::HIGH_BYTE:
+            case mf::TableFormat::SEGMENT_TO_DELTA:
+            case mf::TableFormat::TRIMMED_TABLE:
+                // Length mword, right after
+                cm.length = ms.readMW();
+                break;
+            case mf::TableFormat::MIXED:
+            case mf::TableFormat::TRIMMED_ARRAY:
+            case mf::TableFormat::SEGMENT_COVERAGE:
+            case mf::TableFormat::MANY_TO_ONE_RANGE:
+                ms.skip(2);
+                cm.length = ms.readMD();
+                break;
+            case mf::TableFormat::UNICODE_VARIATION:
+                cm.length = ms.readMD();
+                break;
+            }
+        }
+    }
 }
 
 

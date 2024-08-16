@@ -197,6 +197,7 @@ void FmMain::selCurrentChanged(const QModelIndex& nw)
 {
     if (nw.isValid()) {
         auto& obj = treeModel.objOf(nw);
+        // Data span
         if (auto dspan = obj.dataSpan()) {
             ui->lbStartValue->setText(toReadableHex(dspan->fileOffset));
             ui->lbLenValue->setText(toReadableHex(dspan->size));
@@ -209,8 +210,22 @@ void FmMain::selCurrentChanged(const QModelIndex& nw)
         } else {
             removeDataSpan();
         }
+        // Cmap info
+        if (auto cm = obj.cmapInfo()) {
+            ui->wiCmap->show();
+            mfs::Cbuf buf;
+            ui->lbPlatformValue->setText(mfs::toPlatformLongString(
+                            cm->platformId, buf));
+            ui->lbEncodingValue->setText(mfs::toEncodingLongString(
+                            cm->platformId, cm->encodingId, buf));
+            ui->lbFormatValue->setText(mfs::toTableFormatLongString(
+                            cm->formatId, buf));
+        } else {
+            ui->wiCmap->hide();
+        }
     } else {
         removeDataSpan();
+        ui->wiCmap->hide();
     }
 }
 
