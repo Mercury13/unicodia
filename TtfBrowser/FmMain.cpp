@@ -187,7 +187,7 @@ namespace {
         return s;
     }
 
-}
+}   // anon namespace
 
 
 ///
@@ -197,22 +197,30 @@ void FmMain::selCurrentChanged(const QModelIndex& nw)
 {
     if (nw.isValid()) {
         auto& obj = treeModel.objOf(nw);
-        auto ofs = obj.bodyOffset();
-        auto sz = obj.bodySize();
-        ui->lbStartValue->setText(toReadableHex(ofs));
-        ui->lbLenValue->setText(toReadableHex(sz));
-        ui->lbEndValue->setText(toReadableHex(ofs + sz));
-        auto entireFile = treeModel.font.data();
-        auto data = obj.body(entireFile);
-        auto dataArray = new QHexView::DataStorageArray(
-                    QByteArray::fromRawData(data.buffer(), data.size()));
-        ui->hxView->setData(dataArray);
+        if (auto dspan = obj.dataSpan()) {
+            ui->lbStartValue->setText(toReadableHex(dspan->fileOffset));
+            ui->lbLenValue->setText(toReadableHex(dspan->size));
+            ui->lbEndValue->setText(toReadableHex(dspan->fileOffset + dspan->size));
+            auto entireFile = treeModel.font.data();
+            auto data = obj.body(entireFile);
+            auto dataArray = new QHexView::DataStorageArray(
+                        QByteArray::fromRawData(data.buffer(), data.size()));
+            ui->hxView->setData(dataArray);
+        } else {
+            removeDataSpan();
+        }
     } else {
-        ui->lbStartValue->setText("-");
-        ui->lbEndValue->setText("-");
-        ui->lbLenValue->setText("-");
-        ui->hxView->clear();
+        removeDataSpan();
     }
+}
+
+
+void FmMain::removeDataSpan()
+{
+    ui->lbStartValue->setText("-");
+    ui->lbEndValue->setText("-");
+    ui->lbLenValue->setText("-");
+    ui->hxView->clear();
 }
 
 

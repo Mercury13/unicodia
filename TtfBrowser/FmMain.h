@@ -47,6 +47,7 @@ private:
     TreeModel treeModel;
 
     void selCurrentUpdate();
+    void removeDataSpan();
 private slots:
     void doOpen();
     void selCurrentChanged(const QModelIndex& nw);

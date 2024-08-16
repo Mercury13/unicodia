@@ -1,6 +1,18 @@
 #include "MemStructure.h"
 
 
+///// Obj //////////////////////////////////////////////////////////////////////
+
+
+Buf1d<const char> mfs::Obj::body(Buf1d<const char> entireFile) const noexcept
+{
+    auto ds = dataSpan();
+    if (!ds)
+        return {};
+    return entireFile.sliceMid(ds->fileOffset, ds->size);
+}
+
+
 ///// Block ////////////////////////////////////////////////////////////////////
 
 const mfs::Obj& mfs::Block::childAt(size_t) const

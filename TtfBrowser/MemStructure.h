@@ -12,6 +12,10 @@ namespace mfs {
         bool isConstantLength;
     };
 
+    struct DataSpan {
+        uint32_t fileOffset = 0, size = 0;
+    };
+
     class Obj { // interface
     public:
         virtual Type type() const noexcept = 0;
@@ -19,19 +23,13 @@ namespace mfs {
         virtual const Obj& childAt(size_t i) const = 0;
         virtual Text text() const noexcept = 0;
 
-        virtual bool hasData() const noexcept = 0;
-        /// @warning   body, no headers
-        virtual size_t bodyOffset() const noexcept = 0;
-        virtual size_t bodySize() const noexcept = 0;
+        virtual std::optional<DataSpan> dataSpan() const noexcept = 0;
 
         // Need virtual dtor
         virtual ~Obj() = default;
 
         // Utils
-        Buf1d<char> body(Buf1d<char> entireFile) const
-            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
-        Buf1d<const char> body(Buf1d<const char> entireFile) const
-            { return entireFile.sliceMid(bodyOffset(), bodySize()); }
+        Buf1d<const char> body(Buf1d<const char> entireFile) const noexcept;
     };
 
     class Block : public Obj
@@ -47,9 +45,8 @@ namespace mfs {
         const Obj& childAt(size_t i) const override;
         Text text() const noexcept override
             { return { std::string { slave.name.toSv() }, true }; };
-        bool hasData() const noexcept override { return true; }
-        size_t bodyOffset() const noexcept override { return slave.posInFile; }
-        size_t bodySize() const noexcept override { return slave.length; }
+        std::optional<DataSpan> dataSpan() const noexcept override
+            { return DataSpan { .fileOffset = slave.posInFile, .size = slave.length }; }
     };
 
     template <class Child>
@@ -75,9 +72,8 @@ namespace mfs {
         size_t nChildren() const noexcept override { return 0; }
         const Obj& childAt(size_t i) const override;
         Text text() const noexcept override { return { "Cmap", false }; }
-        bool hasData() const noexcept override { return true; }
-        size_t bodyOffset() const noexcept override { return slave.posInFile; }
-        size_t bodySize() const noexcept override { return slave.length; }
+        std::optional<DataSpan> dataSpan() const noexcept override
+            { return DataSpan { .fileOffset = slave.posInFile, .size = slave.length }; }
     };
 
     class CmapBlock : public BlockEx<Cmap>
@@ -102,12 +98,11 @@ namespace mfs {
         size_t nChildren() const noexcept override;
         const Block& childAt(size_t i) const override;
         Text text() const noexcept override { return { "Font", false }; }
-        bool hasData() const noexcept override { return true; }
-        size_t bodyOffset() const noexcept override { return 0; }
-        size_t bodySize() const noexcept override { return fileSize; }
+        std::optional<DataSpan> dataSpan() const noexcept override
+            { return DataSpan { .fileOffset = 0, .size = fileSize }; }
     private:
         const MemFont* slave = nullptr;
-        size_t fileSize = 0;
+        uint32_t fileSize = 0;
         struct Cmap {
             std::shared_ptr<Block> block {};
             unsigned index = 0;
