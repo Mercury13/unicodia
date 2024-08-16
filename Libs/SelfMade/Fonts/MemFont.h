@@ -43,6 +43,7 @@ namespace mf {
     struct Cmap
     {
     public:
+        unsigned short platformId = 0, encodingId = 0;
         uint32_t posInBlock = 0, posInFile = 0, length = 0;
         Buf1d<char> toBuf(Buf1d<char> data);
     };

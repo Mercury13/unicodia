@@ -126,7 +126,44 @@ bool MemFont::readDir()
 
 void MemFont::loadCmaps()
 {
-    /// @todo [urgent] Load CMAPs
+    Mems ms;
+    int blockOffset;
+    uint32_t blockSize;
+    try {
+        auto blk = findBlock("cmap");
+        if (!blk)
+            return;
+        blockOffset = blk.b->posInFile;
+        blockSize = blk.b->length;
+        ms.borrow(blk.d);
+    } catch (...) {
+        // Really bad, clear CMAPs
+        fCmaps.clear();
+        return;
+    }
+
+    try {
+        auto version = ms.readMW();
+        if (version != 0)
+            return;
+        unsigned nMaps = ms.readMW();
+        fCmaps.reserve(nMaps);
+        for (unsigned i = 0; i < nMaps; ++i) {
+            mf::Cmap newCmap;
+            newCmap.encodingId = ms.readMW();
+            newCmap.encodingId = ms.readMW();
+            newCmap.posInBlock = ms.readMD();
+            if (newCmap.posInBlock > blockSize)
+                continue;
+            newCmap.posInFile = newCmap.posInBlock + blockOffset;
+            newCmap.length = blockSize - newCmap.posInBlock;
+            fCmaps.push_back(newCmap);
+        }
+    } catch (...) {
+        // Leave as is!
+    }
+
+    /// @todo [urgent] read deeper, adjust length
 }
 
 

@@ -27,6 +27,10 @@ public:
 
     using QAbstractItemModel::beginResetModel;
     using QAbstractItemModel::endResetModel;
+protected:
+    QModelIndex indexOf(int row, const mfs::Obj& obj) const noexcept
+        { return indexOf(row, &obj); }
+    QModelIndex indexOf(int row, const mfs::Obj* obj) const noexcept;
 };
 
 class FmMain : public QMainWindow

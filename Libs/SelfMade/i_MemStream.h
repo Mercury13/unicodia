@@ -12,9 +12,9 @@ class Mems
 {
 public:
     Mems() noexcept = default;
-    // Ctor; by-val+move idiom
+    /// Ctor; by-val+move idiom
     Mems(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); }
-    // Move only, do not copy
+    /// Move only, do not copy
     Mems(const Mems&) = delete;
     Mems(Mems&&) noexcept = default;
     Mems& operator = (const Mems&) = delete;
@@ -23,6 +23,7 @@ public:
     void alloc(size_t n) { d.alloc(n); p = d.begin(); }
     Buf1d<char> data() noexcept { return d; }
     Buf1d<const char> data() const noexcept { return d; }
+    void borrow(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); }
 
     QByteArray qdata() const { return QByteArray::fromRawData(d.buffer(), d.size()); }
 

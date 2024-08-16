@@ -17,12 +17,18 @@ const mfs::Obj& TreeModel::objOf(const QModelIndex& index) const
 }
 
 
+QModelIndex TreeModel::indexOf(int row, const mfs::Obj* obj) const noexcept
+{
+    return createIndex(row, 0, obj);
+}
+
+
 QModelIndex TreeModel::index(int row, int, const QModelIndex &parent) const
 {
     auto& obj = objOf(parent);
     if (static_cast<size_t>(row) < obj.nChildren()) {
         auto& obj2 = obj.childAt(row);
-        return createIndex(row, 0, &obj2);
+        return indexOf(row, obj2);
     } else {
         return {};
     }
@@ -36,6 +42,8 @@ QModelIndex TreeModel::parent(const QModelIndex &child) const
     case mfs::Type::FONT:    // Has no father, return anything
     case mfs::Type::BLOCK:   // Has a father of font (root)
         return {};
+    case mfs::Type::CMAP:
+        return indexOf(structure.cmapIndex(), structure.cmapBlock());
     }
     __builtin_unreachable();
 }

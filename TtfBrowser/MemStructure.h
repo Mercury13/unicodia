@@ -56,20 +56,36 @@ namespace mfs {
     class BlockEx : public Block
     {
     public:
-        size_t nChildren() const noexcept override { return 0; }
-        const Obj& childAt(size_t i) const override;
-    private:
+        using Block::Block;
+        size_t nChildren() const noexcept override { return fChildren.size(); }
+        const Obj& childAt(size_t i) const override { return *fChildren.at(i); }
+    protected:
         SafeVector<std::shared_ptr<Child>> fChildren;
     };
 
-    class Cmap : public Obj
+    class Cmap final : public Obj
     {
+    public:
+        const mf::Cmap& slave;
 
+        Cmap(const mf::Cmap& aSlave) : slave(aSlave) {}
+
+        // Obj
+        Type type() const noexcept override { return Type::CMAP; }
+        size_t nChildren() const noexcept override { return 0; }
+        const Obj& childAt(size_t i) const override;
+        Text text() const noexcept override { return { "Cmap", false }; }
+        bool hasData() const noexcept override { return true; }
+        size_t bodyOffset() const noexcept override { return slave.posInFile; }
+        size_t bodySize() const noexcept override { return slave.length; }
     };
 
     class CmapBlock : public BlockEx<Cmap>
     {
-
+    private:
+        using Super = BlockEx<Cmap>;
+    public:
+        CmapBlock(const mf::Block& aBlock, Buf1d<const mf::Cmap> aCmaps);
     };
 
     class Font final : public Obj
@@ -77,6 +93,9 @@ namespace mfs {
     public:
         void clear();
         void loadFrom(const MemFont& font);
+
+        const Block* cmapBlock() const { return cmap.block.get(); }
+        unsigned cmapIndex() const { return cmap.index; }
 
         // Obj
         Type type() const noexcept override { return Type::FONT; }
@@ -89,7 +108,11 @@ namespace mfs {
     private:
         const MemFont* slave = nullptr;
         size_t fileSize = 0;
-        std::shared_ptr<CmapBlock> cmapBlock;
+        struct Cmap {
+            std::shared_ptr<Block> block {};
+            unsigned index = 0;
+        } cmap;
+
         SafeVector<std::shared_ptr<Block>> blocks;
     };
 
