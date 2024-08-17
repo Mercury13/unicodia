@@ -31,7 +31,7 @@ constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
 constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
 
-constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
+constexpr uc::Family FNAME_DEVA { "NotoSerifDevanagari-Regular.ttf", uc::Fafg::DEHINT_DOTC };
 constexpr std::string_view FNAME_DEVAFIX = "UnicodiaDevaFixup-Regular.ttf";
 constexpr uc::StyleSheet STYLE_NONE {};
 constexpr auto STYLE_DEVA = STYLE_NONE;

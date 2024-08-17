@@ -596,7 +596,20 @@ namespace uc {
             : family(aFamily), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
         consteval Font(
+                const Family& aFamily,
+                StyleSheet aStylesheet,
+                Percent aSizeAdjust = Percent())
+            : family(aFamily), styleSheet(aStylesheet),
+              sizeAdjust(aSizeAdjust) {}
+        consteval Font(
                 std::string_view aFamily,
+                Flags<Ffg> aFlags,
+                Percent aSizeAdjust,
+                StyleChange aVariation)
+            : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust),
+              styleChange(aVariation) {}
+        consteval Font(
+                const Family& aFamily,
                 Flags<Ffg> aFlags,
                 Percent aSizeAdjust,
                 StyleChange aVariation)

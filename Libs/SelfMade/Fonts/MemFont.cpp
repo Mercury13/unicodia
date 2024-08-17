@@ -348,7 +348,7 @@ bool MemFont::dehintGlyph(unsigned iGlyph)
     //
     // NOW READ glyf
     //
-    auto vGlyf = rqBlock("glyf");
+    auto vGlyf = rqBlock("glyf", nextOffset);
     auto data = vGlyf.toWriteable();
     blk.borrowRW(data);
     blk.seek(glyfOffset);
@@ -357,23 +357,24 @@ bool MemFont::dehintGlyph(unsigned iGlyph)
     if (nContours < 0)  // composite glyph
         return false;
     blk.skip(8 + (nContours << 1));    // xmin, ymin, xmax, ymax, endPts
-    //auto posInstrLength = blk.pos();
+    auto posInstrLength = blk.pos();
     auto instrLength = blk.readMW();
     if (instrLength == 0)
         return false;
 
-    // Now rewrite! (does not work for some reason)
-    //blk.seek(posInstrLength);
-    //blk.writeMW(0);
-    //auto pDest = blk.ptr();
-    //auto pSrc = pDest + instrLength;
-    //std::copy(pSrc, data.end(), pDest);
+    // Now rewrite!
+    blk.seek(posInstrLength);
+    blk.writeMW(0);
+    auto pDest = blk.ptr();
+    auto pSrc = pDest + instrLength;
+    auto pEnd = data.begin() + nextOffset;
+    std::copy(pSrc, pEnd, pDest);
 
     // Version 2: fill with NOP-like instructions
     // The only instruction that does nothing (turn off rounding)
-    for (unsigned i = 0; i < instrLength; ++i) {
-        blk.writeB(0x7A);
-    }
+    // for (unsigned i = 0; i < instrLength; ++i) {
+    //     blk.writeB(0x7A);
+    // }
 
     recomputeChecksum(*vGlyf.b);
     return true;
