@@ -261,7 +261,73 @@ void MemFont::recomputeChecksum(const mf::Block& b)
 }
 
 
+bool MemFont::traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb)
+{
+    return true;
+}
+
+
+bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb)
+{
+    return true;
+}
+
+
+
+bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb)
+{
+    switch (cmap.formatId) {
+    case mf::TableFormat::SEGMENT_TO_DELTA:
+        return traverseSegmentToDelta(cmap, cb);
+    case mf::TableFormat::SEGMENT_COVERAGE:
+        return traverseSegmentCoverage(cmap, cb);
+    default:
+        return false;
+    }
+}
+
+
+inline void MemFont::traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb)
+{
+    if (!flag) {
+        flag = traverseCmap(cmap, cb);
+    }
+}
+
+
 void MemFont::traverseCps(mf::CbCpGlyph cb) const
 {
+    bool hasBmp = false;
+    bool hasFull = false;
+    for (auto& cmap : fCmaps) {
+        switch (cmap.platformId) {
+        // We traverse whatever first, UCODE or WIN
+        case mf::Plat::UCODE:
+            switch (cmap.encodingId) {
+            case mf::Enc::UCODE_BMP:
+                traverseCmapIf(hasBmp, cmap, cb);
+                break;
+            case mf::Enc::UCODE_FULL:
+                traverseCmapIf(hasFull, cmap, cb);
+                break;
+            default: ;
+            }
+            break;
+        case mf::Plat::WIN:
+            switch (cmap.encodingId) {
+            case mf::Enc::WIN_UNICODE_BMP:
+                traverseCmapIf(hasBmp, cmap, cb);
+                break;
+            case mf::Enc::WIN_UNICODE_FULL:
+                traverseCmapIf(hasFull, cmap, cb);
+                break;
+            default: ;
+            }
+            break;
+        default:
+            break;
+        }
+
+    }
     /// @todo [urgent] traverseCps
 }

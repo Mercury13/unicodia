@@ -105,4 +105,9 @@ private:
     mf::Block readBlockEntry();
     void recomputeChecksum(const mf::Block& b);
     void loadCmaps();
+    /// @return [+] cmap is good
+    static bool traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb);
+    static inline void traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb);
+    static bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb);
+    static bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb);
 };
