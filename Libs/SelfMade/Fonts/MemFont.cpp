@@ -71,9 +71,21 @@ Buf1d<char> mf::Block::toBuf(Buf1d<char> data) const
 ///// Cmap /////////////////////////////////////////////////////////////////////
 
 
-Buf1d<const char> mf::Cmap::toBuf(Buf1d<const char> data) const
+Buf1d<const char> mf::Cmap::toBuf(Buf1d<const char> data) const noexcept
 {
     return data.sliceMid(posInFile, length);
+}
+
+
+bool mf::Cmap::isSupported() const noexcept
+{
+    switch (formatId) {
+    case mf::TableFormat::SEGMENT_TO_DELTA:
+    case mf::TableFormat::SEGMENT_COVERAGE:
+        return true;
+    default:
+        return false;
+    }
 }
 
 
@@ -348,19 +360,6 @@ bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) co
 
 
 
-bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
-{
-    switch (cmap.formatId) {
-    case mf::TableFormat::SEGMENT_TO_DELTA:
-        return traverseSegmentToDelta(cmap, cb);
-    case mf::TableFormat::SEGMENT_COVERAGE:
-        return traverseSegmentCoverage(cmap, cb);
-    default:
-        return false;
-    }
-}
-
-
 namespace {
 
     enum class Prio { NONE, BMP };
@@ -382,10 +381,12 @@ namespace {
 }   // anon namespace
 
 
-void MemFont::traverseCps(mf::CbCpGlyph cb) const
+const mf::Cmap* MemFont::getBestCmap() const
 {
     Best best;
     for (auto& cmap : fCmaps) {
+        if (!cmap.isSupported())
+            continue;
         switch (cmap.platformId) {
         // We traverse whatever first, UCODE or WIN
         case mf::Plat::UCODE:
@@ -395,8 +396,7 @@ void MemFont::traverseCps(mf::CbCpGlyph cb) const
                 break;
             case mf::Enc::UCODE_FULL:
                 // Full Unicode is automatically the best cmap
-                traverseCmap(cmap, cb);
-                return;
+                return &cmap;
             default: ;
             }
             break;
@@ -407,8 +407,7 @@ void MemFont::traverseCps(mf::CbCpGlyph cb) const
                 break;
             case mf::Enc::WIN_UNICODE_FULL:
                 // Full Unicode is automatically the best cmap
-                traverseCmap(cmap, cb);
-                return;
+                return &cmap;
             default: ;
             }
             break;
@@ -417,6 +416,30 @@ void MemFont::traverseCps(mf::CbCpGlyph cb) const
             break;
         }
     }
-    if (best.cmap)
-        traverseCmap(*best.cmap, cb);
+    return best.cmap;
+}
+
+
+bool MemFont::traverseCps(const mf::Cmap* cmap, mf::CbCpGlyph cb) const
+{
+    return cmap && traverseCps(*cmap, cb);
+}
+
+bool MemFont::traverseCps(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
+{
+    switch (cmap.formatId) {
+    case mf::TableFormat::SEGMENT_TO_DELTA:
+        return traverseSegmentToDelta(cmap, cb);
+    case mf::TableFormat::SEGMENT_COVERAGE:
+        return traverseSegmentCoverage(cmap, cb);
+    // ISO could be a fallback platform, but neither of Unicodia’s fonts needs it
+    default:
+        return false;
+    }
+}
+
+
+bool MemFont::traverseCps(mf::CbCpGlyph cb) const
+{
+    return traverseCps(getBestCmap(), cb);
 }

@@ -53,7 +53,9 @@ namespace mf {
         TableFormat formatId = TableFormat::REALLY_BAD;
         uint32_t posInBlock = 0, posInFile = 0, length = 0;
 
-        Buf1d<const char> toBuf(Buf1d<const char> data) const;
+        Buf1d<const char> toBuf(Buf1d<const char> data) const noexcept;
+        /// @return [+] My library supports this CMAP
+        bool isSupported() const noexcept;
     };
 
     struct Block2
@@ -99,7 +101,16 @@ public:
         { return { fBlocks.size(), fBlocks.data() }; }
     Buf1d<const mf::Cmap> cmaps() const noexcept
         { return { fCmaps.size(), fCmaps.data() }; }
-    void traverseCps(mf::CbCpGlyph cb) const;
+    /// @return [+] OK
+    bool traverseCps(mf::CbCpGlyph cb) const;
+    bool traverseCps(const mf::Cmap* cmap, mf::CbCpGlyph cb) const;
+    bool traverseCps(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
+    /// @return  [+] The best CMAP possible, always isSupported()
+    ///          [0] none found
+    /// @warning  Priority is Unicode BMP < Unicode full
+    ///           regardless of format (of course, if supported)
+    ///           The first if several found
+    const mf::Cmap* getBestCmap() const;
 private:
     Mems slave;
     SafeVector<mf::Block> fBlocks;
@@ -110,7 +121,6 @@ private:
     void recomputeChecksum(const mf::Block& b);
     void loadCmaps();
     /// @return [+] cmap is good
-    bool traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
     bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
     bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
 };
