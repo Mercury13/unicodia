@@ -72,7 +72,7 @@ struct TempFont {
 
 ///
 /// @param fname        file name
-/// @param dehintDotc   [+] dehint dotted circle
+/// @param dehintDotc   [+] remove hinting instructions from dotted circle
 /// @param trigger      CP that triggered installation
 /// @return  font info
 ///
