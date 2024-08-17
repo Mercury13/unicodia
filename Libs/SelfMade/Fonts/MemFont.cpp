@@ -283,6 +283,73 @@ void MemFont::mangle(std::string_view bytes)
     recomputeChecksum(*v.b);
 }
 
+void MemFont::dehintGlyph(unsigned iGlyph)
+{
+    auto vHead = rqBlock("head", 0x34);
+
+    // Head
+    // 0:w = major version = 1
+    // 2:w = minor version = 0
+    // 4:fix4 = fontRevision
+    // 8:d = checksumAdjustment for TTC
+    // 0C:d = 0x5F0F3CF5
+    // 10:w = flags
+    // 12:w = unitsPerEm
+    // 14:date8 = dateCreated
+    // 1C:date8 = dateModified
+    // 24:w = xMin
+    // 26:w = yMin
+    // 28:w = xMax
+    // 2A:w = yMax
+    // 2C:w = macStyle
+    // 2E:w = lowestReadablePpem
+    // 30:w = directionHint
+    // 32:w = indexToLocFormat
+    // 34:w = glyphDataFormat(0)
+    // ===== size = $36
+    Mems blk(vHead.d);
+    auto majorVersion = blk.readMW();
+    if (majorVersion != 1)
+        throw std::logic_error("[dehintGlyph] Major version should be 1");
+    auto minorVersion = blk.readMW();
+    if (minorVersion != 0)
+        throw std::logic_error("[dehintGlyph] Minor version should be 0");
+    blk.seek(0x0C);
+    auto magic = blk.readMD();
+    if (magic != 0x5F0F3CF5)
+        throw std::logic_error("[dehintGlyph] Magic should be 5F0F3CF5");
+    blk.seek(0x32);
+    auto locaFormat = blk.readMW();
+    bool unitSize = 2;
+    switch (locaFormat) {
+    case 0: break;
+    case 1: unitSize = 4; break;
+    default:
+        throw std::logic_error("[dehintGlyph] Loca format should be 0 or 1");
+    }
+
+    // Now read loca
+    auto position = iGlyph * unitSize;
+    auto vLoca = rqBlock("loca", position + (unitSize << 1));
+    blk.borrowR(vLoca.d);
+    blk.seek(position);
+    unsigned glyfOffset, nextOffset;
+    if (locaFormat == 0) {
+        glyfOffset = (unsigned)blk.readMW() << 1;
+        nextOffset = (unsigned)blk.readMW() << 1;
+    } else {
+        glyfOffset = blk.readMD();
+        nextOffset = blk.readMD();
+    }
+    // Really have data for that glyph?
+    if (glyfOffset >= nextOffset)
+        return;
+
+    auto vGlyf = rqBlock("glyf");
+    blk.borrowRW(vGlyf.toWriteable());
+    blk.seek(glyfOffset);
+}
+
 void MemFont::recomputeChecksum(const mf::Block& b)
 {
     slave.seek(b.posInFile);

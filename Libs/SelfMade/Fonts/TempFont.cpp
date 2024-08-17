@@ -99,15 +99,15 @@ TempFont installTempFontFull(
         try {
             mf.load(fname);
             mf.mangle(tempPrefix);
-            unsigned giDotc = 0;    // glyph index of dotted circle
+            int giDotc = -1;    // glyph index of dotted circle;
             mf.traverseCps([&r, &giDotc]
                     (uint32_t cp, unsigned glyph) {
                         r.cps.add(cp);
                         if (cp == 0x25CC)
                             giDotc = glyph;
                     });
-            if (dehintDotc && giDotc != 0) {
-                /// @todo [future] dehint dotted circle
+            if (dehintDotc && giDotc >= 0) {
+                mf.dehintGlyph(giDotc);
             }
             r.id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {

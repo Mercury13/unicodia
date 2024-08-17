@@ -88,6 +88,9 @@ public:
     /// @param  bytes   ASCII only!!
     /// @warning  Does nothing if bytes are empty
     void mangle(std::string_view bytes);
+    /// @param  iGlyph   index of glyph
+    /// @warning   NOT CODE POINT
+    void dehintGlyph(unsigned iGlyph);
 
     // Misc info
     /// prefer over nChildren
