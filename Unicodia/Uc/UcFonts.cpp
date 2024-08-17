@@ -15,16 +15,16 @@ consteval uc::StyleSheet operator + (
 
 // File names
 constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
-constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf" };
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
-constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_NOTOMUSIC { "NotoMusic-Regular.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_MUSIC_FIXUP { "UnicodiaMusicFixup.ttf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf" };
+constexpr uc::Family FNAME_NOTOMUSIC { "NotoMusic-Regular.ttf" };
+constexpr uc::Family FNAME_MUSIC_FIXUP { "UnicodiaMusicFixup.ttf" };
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
-constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf" };
+constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf" };
+constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf" };
+constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf" };
 constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
 
 constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
@@ -273,8 +273,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
     { "Nirmala UI,Latha" },                                                     // Tamil
-            // Somehow font does not respond to char support
-    { Family{ "NotoSansTamilSupplement-Regular.ttf", Fafg::RAW_FONT } },        // Tamil supplement
+    { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical

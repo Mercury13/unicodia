@@ -61,7 +61,9 @@ namespace mf {
         const Block* b = nullptr;
         Buf1d<const char> d;
 
-        operator bool() const { return b; }
+        operator bool() const noexcept { return b; }
+        Buf1d<char> toWriteable() const noexcept
+            { return { d.size(), const_cast<char*>(d.buffer()) }; }
     };
 
     /// Char32_t = CP

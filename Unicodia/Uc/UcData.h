@@ -487,7 +487,8 @@ namespace uc {
     enum class FontPlace { CELL, SAMPLE, PROBE };
 
     enum class Fafg {
-        RAW_FONT      = 1<<0, ///< [+] use RawFont structure, not QFont for checking coverage
+        // Now all fonts
+        DUMMY = 1<<0,       // Someday we’ll need it
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);

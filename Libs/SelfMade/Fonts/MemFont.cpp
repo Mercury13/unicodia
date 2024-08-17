@@ -241,7 +241,7 @@ mf::Block2 MemFont::rqBlock(mf::Char4 name, uint32_t len)
 void MemFont::mangle(std::string_view bytes)
 {
     auto v = rqBlock("name", 32);
-    Mems blk(v.d);
+    Mems blk(v.toWriteable());
 
     blk.skipW();    // should be 0
     unsigned nRecs = blk.readMW();

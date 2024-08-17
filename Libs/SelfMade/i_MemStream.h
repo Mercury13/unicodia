@@ -19,9 +19,9 @@ public:
     Mems(const Mems&) = delete;
     Mems(Mems&&) noexcept = default;
     Mems& operator = (const Mems&) = delete;
-    Mems& operator = (Mems&&) = default;
+    Mems& operator = (Mems&&) noexcept = default;
 
-    void alloc(size_t n) { d.alloc(n); p = d.begin(); }
+    void alloc(size_t n) { d.alloc(n); p = d.begin(); canWrite = true; }
     Buf1d<char> data() noexcept { return d; }
     Buf1d<const char> data() const noexcept { return d; }
     /// Borrow readable/writeable

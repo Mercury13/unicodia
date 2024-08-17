@@ -1294,7 +1294,7 @@ struct uc::LoadedFont : public dumb::SpTarget
     intptr_t tempId = FONT_NOT_INSTALLED;
     std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
-    std::unique_ptr<QRawFont> rawFont;
+    CompressedBits cps;
     bool isRejected = false;
 
     const QString& onlyFamily() const;
@@ -1427,9 +1427,7 @@ onceAgain:
             return;
         }
 
-        if (family.flags.have(Fafg::RAW_FONT) && tempFont.mems) {
-            q.loaded->rawFont = std::make_unique<QRawFont>(tempFont.mems->qdata(), 50);
-        }
+        q.loaded->cps = std::move(tempFont.cps);
     } else {
         // FAMILY
         newLoadedStruc();
@@ -1437,8 +1435,8 @@ onceAgain:
         q.loaded->families = toQList(family.text);
     }
 
-    // Make probe font, force EXACT match
-    if (!q.loaded->rawFont) {
+    // Does not support → make probe font, force EXACT match
+    if (q.loaded->cps.isEmpty()) {
         q.loaded->get(q.loaded->probe,  fst::TOFU,   flags);
         q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
         doesSupportChar(trigger);
@@ -1512,8 +1510,8 @@ bool uc::Font::doesSupportChar(char32_t subj) const
         q.isRejected = true;
         return false;
     }
-    if (q.loaded->rawFont) {
-        return q.loaded->rawFont->supportsCharacter(subj);
+    if (q.loaded->cps.hasSmth()) {
+        return q.loaded->cps.have(subj);
     } else if (q.loaded->probeMetrics) {
         return q.loaded->probeMetrics->inFontUcs4(subj);
     } else {

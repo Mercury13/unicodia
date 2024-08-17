@@ -31,7 +31,59 @@ inline void msg([[maybe_unused]] Args&&... x)
 }
 
 
-TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
+//// CompressedBits ////////////////////////////////////////////////////////////
+
+
+void CompressedBits::Block::set(unsigned n)
+{
+    if (n >= BITS_PER_BLOCK)
+        return;
+    auto hi = n >> ITEM_HI_SHIFT;
+    auto lo = n & ITEM_LO_MASK;
+    items[hi] |= (ONE << lo);
+}
+
+
+bool CompressedBits::Block::have(unsigned n)
+{
+    if (n >= BITS_PER_BLOCK)
+        return false;
+    auto hi = n >> ITEM_HI_SHIFT;
+    auto lo = n & ITEM_LO_MASK;
+    return items[hi] & (ONE << lo);
+}
+
+
+void CompressedBits::add(unsigned x)
+{
+    auto hi = x >> BLOCK_HI_SHIFT;
+    if (hi >= blocks.size()) {
+        blocks.resize(hi + PREALLOC1);
+    }
+    auto& blk = blocks[hi];
+    if (!blk)
+        blk = std::make_unique<Block>();
+    blk->set(x & BLOCK_LO_MASK);
+}
+
+
+bool CompressedBits::have(unsigned x) const noexcept
+{
+    auto hi = x >> BLOCK_HI_SHIFT;
+    if (hi >= blocks.size())
+        return false;
+    auto& blk = blocks[hi];
+    if (!blk)
+        return false;
+    return blk->have(x & BLOCK_LO_MASK);
+}
+
+
+
+//// TempFont //////////////////////////////////////////////////////////////////
+
+
+TempFont installTempFontFull(const QString& fname, char32_t trigger)
 {
     MemFont mf;
     int id = -1;
@@ -64,7 +116,11 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
                 std::hex, static_cast<uint32_t>(trigger), std::dec);
         }
     }
-    return { id, std::move(families), std::make_unique<Mems>(mf.giveStream()) };
+    TempFont r { .id = id, .families = std::move(families), .cps{} };
+    mf.traverseCps([&r](uint32_t cp, int) {
+        r.cps.add(cp);
+    });
+    return r;
 }
 
 
