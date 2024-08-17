@@ -259,3 +259,9 @@ void MemFont::recomputeChecksum(const mf::Block& b)
     slave.seek(b.posInDir + 4);
     slave.writeMD(sum);
 }
+
+
+void MemFont::traverseCps(mf::CbCpGlyph cb) const
+{
+    /// @todo [urgent] traverseCps
+}
