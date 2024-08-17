@@ -1,5 +1,5 @@
 # PropertyValueAliases-16.0.0.txt
-# Date: 2024-04-30, 21:48:30 GMT
+# Date: 2024-07-30, 19:59:00 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -1020,6 +1020,7 @@ jg ; Heh_Goal                         ; Heh_Goal
 jg ; Heth                             ; Heth
 jg ; Kaf                              ; Kaf
 jg ; Kaph                             ; Kaph
+jg ; Kashmiri_Yeh                     ; Kashmiri_Yeh
 jg ; Khaph                            ; Khaph
 jg ; Knotted_Heh                      ; Knotted_Heh
 jg ; Lam                              ; Lam
@@ -1673,5 +1674,35 @@ XIDS; Y                               ; Yes                              ; T    
 # cjkRSUnicode (cjkRSUnicode)
 
 # @missing: 0000..10FFFF; cjkRSUnicode; <none>
+
+# kEH_Cat (kEH_Cat)
+
+# @missing: 0000..10FFFF; kEH_Cat; <none>
+
+# kEH_Desc (kEH_Desc)
+
+# @missing: 0000..10FFFF; kEH_Desc; <none>
+
+# kEH_HG (kEH_HG)
+
+# @missing: 0000..10FFFF; kEH_HG; <none>
+
+# kEH_IFAO (kEH_IFAO)
+
+# @missing: 0000..10FFFF; kEH_IFAO; <none>
+
+# kEH_JSesh (kEH_JSesh)
+
+# @missing: 0000..10FFFF; kEH_JSesh; <none>
+
+# kEH_NoMirror (kEH_NoMirror)
+
+kEH_NoMirror; N                       ; No                               ; F                                ; False
+kEH_NoMirror; Y                       ; Yes                              ; T                                ; True
+
+# kEH_NoRotate (kEH_NoRotate)
+
+kEH_NoRotate; N                       ; No                               ; F                                ; False
+kEH_NoRotate; Y                       ; Yes                              ; T                                ; True
 
 # EOF

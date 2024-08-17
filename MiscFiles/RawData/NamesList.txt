@@ -1,11 +1,16 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 16.0.0
 @@@+	NamesList-16.0.0.txt
-@+	Generation Date: 2024-06-03, 12:53:56 GMT
+@+	Generation Date: 2024-07-31, 08:02:34 GMT
 	Unicode 16.0.0 names list.
 	Repertoire synched with UnicodeData-16.0.0d16.txt.
 	Post-beta rollup of various fixes.
 	Add subheads and annotations for 1FB81, 1FB98, 1FB99.
+	Fixes for subheads G08 - G17, S21, U22 in Egyptian Hieroglyphs Extended-A block.
+	Add xref between 2BFA and 1CC88.
+	Move subhead at 10D6E in Garay block.
+	Add annotation to 2217.
+	Add pointer for UTN #57 for Mongolian block.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -9879,6 +9884,7 @@
 @@	1800	Mongolian	18AF
 @@+
 @+		A copy of the Mongolian code chart showing glyphs for all Mongolian positional variants and variation sequences can be found in UTR #54, Unicode Mongolian 12.1 Snapshot.
+@+		For detailed information about implementation of Mongolian shaping, see UTN #57, Encoding and Shaping of the Mongolian Script.
 @		Punctuation
 @+		Additional birgas are encoded in the Mongolian Supplement block at 11660-1167F.
 1800	MONGOLIAN BIRGA
@@ -14326,6 +14332,7 @@
 	x (mathematical falling diagonal - 27CD)
 	x (reverse solidus operator - 29F5)
 2217	ASTERISK OPERATOR
+	* may be used to represent the telephony asterisk seen on keypads
 	x (asterisk - 002A)
 2218	RING OPERATOR
 	= composite function
@@ -18839,6 +18846,7 @@
 2BFA	UNITED SYMBOL
 	= united pawns
 	x (divorce symbol - 26AE)
+	x (two rings aligned horizontally - 1CC88)
 2BFB	SEPARATED SYMBOL
 	= separated pawns
 	x (unmarried partnership symbol - 26AF)
@@ -33453,8 +33461,8 @@ FFFF	<not a character>
 10D6A	GARAY CONSONANT GEMINATION MARK
 10D6B	GARAY COMBINING DOT ABOVE
 10D6C	GARAY COMBINING DOUBLE DOT ABOVE
-@		Punctuation and reduplication mark
 10D6D	GARAY CONSONANT NASALIZATION MARK
+@		Punctuation and reduplication mark
 10D6E	GARAY HYPHEN
 10D6F	GARAY REDUPLICATION MARK
 @		Lowercase consonant letters
@@ -38686,6 +38694,7 @@ FFFF	<not a character>
 	* phonemogram : m
 13132	EGYPTIAN HIEROGLYPH F046
 	* logogram (to go round, to turn round) : pẖr
+	~ 13132 FE01 rotated 180 degrees
 13133	EGYPTIAN HIEROGLYPH F046A
 	* rotated version of 13132
 	* logogram (to go round, to turn round) : pẖr
@@ -38705,6 +38714,7 @@ FFFF	<not a character>
 13139	EGYPTIAN HIEROGLYPH F051
 	* phonemogram : f
 	~ 13139 FE00 rotated 90 degrees
+	~ 13139 FE01 rotated 180 degrees
 	~ 13139 FE02 rotated 270 degrees
 1313A	EGYPTIAN HIEROGLYPH F051A
 	* classifier part of a body : ḥꜥ.w
@@ -39071,6 +39081,7 @@ FFFF	<not a character>
 	* classifier growing : rd
 131E0	EGYPTIAN HIEROGLYPH M033
 	* logogram (grain, barley, corn) : ꞽt
+	~ 131E0 FE00 rotated 90 degrees [= 270 degrees]
 131E1	EGYPTIAN HIEROGLYPH M033A
 	* variant of 131E0
 	* classifier grain, barley, corn : ꞽt
@@ -39416,6 +39427,7 @@ FFFF	<not a character>
 	* phonemogram : ꞽwn
 1327B	EGYPTIAN HIEROGLYPH O029
 	* phonemogram : ꜥꜣ
+	~ 1327B FE00 rotated 90 degrees
 	~ 1327B FE02 rotated 270 degrees
 1327C	EGYPTIAN HIEROGLYPH O029A
 	* rotated variant of 1327B
@@ -39849,6 +39861,8 @@ FFFF	<not a character>
 	* phonemogram : mꜣꜥ
 13338	EGYPTIAN HIEROGLYPH U006
 	* phonemogram : mr
+	~ 13338 FE03 rotated approximately 30 degrees
+	~ 13338 FE06 rotated approximately 320 degrees [horizontal]
 13339	EGYPTIAN HIEROGLYPH U006A
 	* stylistic variant of 13338
 1333A	EGYPTIAN HIEROGLYPH U006B
@@ -39856,7 +39870,6 @@ FFFF	<not a character>
 1333B	EGYPTIAN HIEROGLYPH U007
 	* variant of 13338
 	* phonemogram : mr
-	~ 1333B FE00 rotated 90 degrees
 1333C	EGYPTIAN HIEROGLYPH U008
 	* variant of 1333B
 	* phonemogram : ḥn
@@ -40238,6 +40251,7 @@ FFFF	<not a character>
 @		Y. Writings, games, music
 133DB	EGYPTIAN HIEROGLYPH Y001
 	* classifier abstract words : sspd.w
+	~ 133DB FE02 rotated 270 degrees
 133DC	EGYPTIAN HIEROGLYPH Y001A
 	* rotated variant of 133DB
 	* logogram (papyrus scroll, book) : mḏꜣ.t
@@ -40265,13 +40279,16 @@ FFFF	<not a character>
 133E5	EGYPTIAN HIEROGLYPH Z002
 	* not to be confused with 133FC
 	* classifier plural
+	~ 133E5 FE00 rotated 90 degrees [= 270 degrees]
 133E6	EGYPTIAN HIEROGLYPH Z002A
 	* stylistic variant of 133E5
 133E7	EGYPTIAN HIEROGLYPH Z002B
 	* not to be confused with 13213
+	~ 133E7 FE00 rotated 90 degrees [= 270 degrees]
 133E8	EGYPTIAN HIEROGLYPH Z002C
 	* variant of 133E6
 	* classifier plural
+	~ 133E8 FE01 rotated 180 degrees
 133E9	EGYPTIAN HIEROGLYPH Z002D
 	* variant of 133E8
 	* classifier plural
@@ -41146,7 +41163,7 @@ FFFF	<not a character>
 	* classifier army (semitic loanword) : ḏbꞽ
 135A3	EGYPTIAN HIEROGLYPH-135A3
 135A4	EGYPTIAN HIEROGLYPH-135A4
-	* classifer to trample : tꞽtꞽ
+	* classifier to trample : tꞽtꞽ
 @		A17. Soldier, seated
 135A5	EGYPTIAN HIEROGLYPH-135A5
 	* logogram (army) : mšꜥ
@@ -41211,7 +41228,7 @@ FFFF	<not a character>
 135C4	EGYPTIAN HIEROGLYPH-135C4
 	* classifier enemy : bdš
 135C5	EGYPTIAN HIEROGLYPH-135C5
-	* classifer rebel : bṯn
+	* classifier rebel : bṯn
 135C6	EGYPTIAN HIEROGLYPH-135C6
 	* classifier rebel : sbꞽ
 135C7	EGYPTIAN HIEROGLYPH-135C7
@@ -41221,7 +41238,7 @@ FFFF	<not a character>
 135C9	EGYPTIAN HIEROGLYPH-135C9
 	* classifier enemy : šnṯ
 135CA	EGYPTIAN HIEROGLYPH-135CA
-	* classifer foreigners (as enemies) : ḫꜣs.t
+	* classifier foreigners (as enemies) : ḫꜣs.t
 135CB	EGYPTIAN HIEROGLYPH-135CB
 	* classifier rebel : sbꞽ
 135CC	EGYPTIAN HIEROGLYPH-135CC
@@ -42015,7 +42032,7 @@ FFFF	<not a character>
 13763	EGYPTIAN HIEROGLYPH-13763
 	* logogram (Amon) : ꞽmn
 13764	EGYPTIAN HIEROGLYPH-13764
-	* classifier divinitiy : ꞽn-ḥr-šw
+	* classifier divinity : ꞽn-ḥr-šw
 13765	EGYPTIAN HIEROGLYPH-13765
 	* logogram (Maat and Amon) : mꜣꜥ.t & ꞽmn 
 13766	EGYPTIAN HIEROGLYPH-13766
@@ -42568,7 +42585,7 @@ FFFF	<not a character>
 1387E	EGYPTIAN HIEROGLYPH-1387E
 	* logogram (Isis) : ꜣs.t
 1387F	EGYPTIAN HIEROGLYPH-1387F
-	* classifier female divinitiy (Usually associated with Hathor)
+	* classifier female divinity (Usually associated with Hathor)
 13880	EGYPTIAN HIEROGLYPH-13880
 	* logogram : nb
 13881	EGYPTIAN HIEROGLYPH-13881
@@ -42775,7 +42792,7 @@ FFFF	<not a character>
 138E9	EGYPTIAN HIEROGLYPH-138E9
 	* logogram (Neith) : n.t
 138EA	EGYPTIAN HIEROGLYPH-138EA
-	* (cryptography) phonemogram : wn
+	* (cryptography) Phonemogram : wn
 138EB	EGYPTIAN HIEROGLYPH-138EB
 	* phonemogram : n(.t)
 138EC	EGYPTIAN HIEROGLYPH-138EC
@@ -44131,7 +44148,7 @@ FFFF	<not a character>
 13B94	EGYPTIAN HIEROGLYPH-13B94
 	* logogram (Khonsu) : ḫnsw
 13B95	EGYPTIAN HIEROGLYPH-13B95
-	* classifer strength : ꜣ.t
+	* classifier strength : ꜣ.t
 13B96	EGYPTIAN HIEROGLYPH-13B96
 @		F09. Donkey and horse protome
 13B97	EGYPTIAN HIEROGLYPH-13B97
@@ -44422,7 +44439,7 @@ FFFF	<not a character>
 13C23	EGYPTIAN HIEROGLYPH-13C23
 	* phonemogram : ḳmꜣ
 13C24	EGYPTIAN HIEROGLYPH-13C24
-@		G17. Goose
+@		G08. Goose
 13C25	EGYPTIAN HIEROGLYPH-13C25
 	* phonemogram : ḏfꜣ
 13C26	EGYPTIAN HIEROGLYPH-13C26
@@ -44436,7 +44453,7 @@ FFFF	<not a character>
 	* classifier lying, sleeping, spending the night : sḏr
 13C2B	EGYPTIAN HIEROGLYPH-13C2B
 	* phonemogram : gm
-@		G08. Owl
+@		G09. Owl
 13C2C	EGYPTIAN HIEROGLYPH-13C2C
 13C2D	EGYPTIAN HIEROGLYPH-13C2D
 	* phonemogram : m
@@ -44446,10 +44463,10 @@ FFFF	<not a character>
 	* phonemogram : mr (ꞽm.y-r)
 13C30	EGYPTIAN HIEROGLYPH-13C30
 	* phonemogram/phono-repeater : ꞽb
-@		G09. Cormorant
+@		G10. Cormorant
 13C31	EGYPTIAN HIEROGLYPH-13C31
 	* phonemogram : ꜥḳ
-@		G10. Wader: ibis, flamingo, stork, heron, egret
+@		G11. Wader: ibis, flamingo, stork, heron, egret
 13C32	EGYPTIAN HIEROGLYPH-13C32
 13C33	EGYPTIAN HIEROGLYPH-13C33
 	* phonemogram : gm
@@ -44552,7 +44569,7 @@ FFFF	<not a character>
 	* classifier Thot : nb ḫmnw
 13C6A	EGYPTIAN HIEROGLYPH-13C6A
 	* logogram (god) : nṯr
-@		G11. Falcon
+@		G12. Falcon
 13C6B	EGYPTIAN HIEROGLYPH-13C6B
 13C6C	EGYPTIAN HIEROGLYPH-13C6C
 	* logogram (Horus) : ḥr
@@ -44679,7 +44696,7 @@ FFFF	<not a character>
 	* logogram (high quality (red) linen) : ꞽdmꞽ
 13CAC	EGYPTIAN HIEROGLYPH-13CAC
 	* logogram (high quality (red) linen) : ꞽdmꞽ
-@		G12. Falcon opening his wings
+@		G13. Falcon opening his wings
 13CAD	EGYPTIAN HIEROGLYPH-13CAD
 	* logogram (the one who spreads out his wings ((Dewen-anwy) divinity)) : dwn-ꜥn.wy
 13CAE	EGYPTIAN HIEROGLYPH-13CAE
@@ -44711,7 +44728,7 @@ FFFF	<not a character>
 13CBD	EGYPTIAN HIEROGLYPH-13CBD
 13CBE	EGYPTIAN HIEROGLYPH-13CBE
 	* logogram (to protect) : mkꞽ/ḫwꞽ
-@		G13. Falcon legs bent
+@		G14. Falcon legs bent
 13CBF	EGYPTIAN HIEROGLYPH-13CBF
 	* classifier falcon : b(ꞽ)k.t
 13CC0	EGYPTIAN HIEROGLYPH-13CC0
@@ -44720,7 +44737,7 @@ FFFF	<not a character>
 	* logogram (god) : nṯr
 13CC2	EGYPTIAN HIEROGLYPH-13CC2
 	* logogram (god) : nṯr
-@		G14. Falcon mummified or emblem of falcon
+@		G15. Falcon mummified or emblem of falcon
 13CC3	EGYPTIAN HIEROGLYPH-13CC3
 	* logogram (Horus) : ḥr
 13CC4	EGYPTIAN HIEROGLYPH-13CC4
@@ -44742,14 +44759,14 @@ FFFF	<not a character>
 	* logogram : sḏr
 13CCD	EGYPTIAN HIEROGLYPH-13CCD
 13CCE	EGYPTIAN HIEROGLYPH-13CCE
-@		G15. Swallow, sparrow
+@		G16. Swallow, sparrow
 13CCF	EGYPTIAN HIEROGLYPH-13CCF
 	* classifier (some type of bird) or (Dedwen, divinity) : bn | ddwn
 13CD0	EGYPTIAN HIEROGLYPH-13CD0
 	* phonemogram : wr
 13CD1	EGYPTIAN HIEROGLYPH-13CD1
 	* classifier negative, bad : ꞽw.ty
-@		G16. Hoopoe
+@		G17. Hoopoe
 13CD2	EGYPTIAN HIEROGLYPH-13CD2
 13CD3	EGYPTIAN HIEROGLYPH-13CD3
 	* phonemogram : ḏb
@@ -47246,7 +47263,7 @@ FFFF	<not a character>
 	* phono-repeater/classifier (in ḥp.ty (extreme limits)) : ḥp
 141CE	EGYPTIAN HIEROGLYPH-141CE
 	* phonemogram : ḥb
-@		S21. Sunshade type 2 (S37D)
+@		S21. Sunshade type 3 (S37D)
 141CF	EGYPTIAN HIEROGLYPH-141CF
 	* phonemogram : ḫw
 141D0	EGYPTIAN HIEROGLYPH-141D0
@@ -47393,7 +47410,7 @@ FFFF	<not a character>
 14213	EGYPTIAN HIEROGLYPH-14213
 	* logogram (Neith) : n.t
 14214	EGYPTIAN HIEROGLYPH-14214
-	* logogram (Neith 4-5th nome of LE) : n.t
+	* logogram (Neith, 4-5th nome of LE) : n.t
 14215	EGYPTIAN HIEROGLYPH-14215
 	* logogram (Neith, 4-5th nome of LE) : n.t
 14216	EGYPTIAN HIEROGLYPH-14216
@@ -47896,7 +47913,7 @@ FFFF	<not a character>
 	* phonemogram : nd
 14318	EGYPTIAN HIEROGLYPH-14318
 	* phonemogram : nḏ
-@		U21. U category, varia
+@		U22. U category, varia
 14319	EGYPTIAN HIEROGLYPH-14319
 	* classifier flame
 1431A	EGYPTIAN HIEROGLYPH-1431A
@@ -53855,6 +53872,7 @@ FFFF	<not a character>
 1CC86	WHITE LOWER LEFT POINTER
 1CC87	WHITE LOWER RIGHT POINTER
 1CC88	TWO RINGS ALIGNED HORIZONTALLY
+	x (united symbol - 2BFA)
 1CC89	SQUARE FOUR CORNER SALTIRES
 1CC8A	SQUARE FOUR CORNER DIAGONALS
 1CC8B	SQUARE FOUR CORNER BLACK TRIANGLES

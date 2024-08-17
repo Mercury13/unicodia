@@ -1,5 +1,5 @@
 # DerivedCoreProperties-16.0.0.txt
-# Date: 2024-05-02, 15:02:37 GMT
+# Date: 2024-05-31, 18:09:32 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -10699,8 +10699,11 @@ E01F0..E0FFF  ; Default_Ignorable_Code_Point # Cn [3600] <reserved-E01F0>..<rese
 0C81          ; Grapheme_Extend # Mn       KANNADA SIGN CANDRABINDU
 0CBC          ; Grapheme_Extend # Mn       KANNADA SIGN NUKTA
 0CBF          ; Grapheme_Extend # Mn       KANNADA VOWEL SIGN I
+0CC0          ; Grapheme_Extend # Mc       KANNADA VOWEL SIGN II
 0CC2          ; Grapheme_Extend # Mc       KANNADA VOWEL SIGN UU
 0CC6          ; Grapheme_Extend # Mn       KANNADA VOWEL SIGN E
+0CC7..0CC8    ; Grapheme_Extend # Mc   [2] KANNADA VOWEL SIGN EE..KANNADA VOWEL SIGN AI
+0CCA..0CCB    ; Grapheme_Extend # Mc   [2] KANNADA VOWEL SIGN O..KANNADA VOWEL SIGN OO
 0CCC..0CCD    ; Grapheme_Extend # Mn   [2] KANNADA VOWEL SIGN AU..KANNADA SIGN VIRAMA
 0CD5..0CD6    ; Grapheme_Extend # Mc   [2] KANNADA LENGTH MARK..KANNADA AI LENGTH MARK
 0CE2..0CE3    ; Grapheme_Extend # Mn   [2] KANNADA VOWEL SIGN VOCALIC L..KANNADA VOWEL SIGN VOCALIC LL
@@ -10780,9 +10783,11 @@ E01F0..E0FFF  ; Default_Ignorable_Code_Point # Cn [3600] <reserved-E01F0>..<rese
 1B34          ; Grapheme_Extend # Mn       BALINESE SIGN REREKAN
 1B35          ; Grapheme_Extend # Mc       BALINESE VOWEL SIGN TEDUNG
 1B36..1B3A    ; Grapheme_Extend # Mn   [5] BALINESE VOWEL SIGN ULU..BALINESE VOWEL SIGN RA REPA
+1B3B          ; Grapheme_Extend # Mc       BALINESE VOWEL SIGN RA REPA TEDUNG
 1B3C          ; Grapheme_Extend # Mn       BALINESE VOWEL SIGN LA LENGA
+1B3D          ; Grapheme_Extend # Mc       BALINESE VOWEL SIGN LA LENGA TEDUNG
 1B42          ; Grapheme_Extend # Mn       BALINESE VOWEL SIGN PEPET
-1B44          ; Grapheme_Extend # Mc       BALINESE ADEG ADEG
+1B43..1B44    ; Grapheme_Extend # Mc   [2] BALINESE VOWEL SIGN PEPET TEDUNG..BALINESE ADEG ADEG
 1B6B..1B73    ; Grapheme_Extend # Mn   [9] BALINESE MUSICAL SYMBOL COMBINING TEGEH..BALINESE MUSICAL SYMBOL COMBINING GONG
 1B80..1B81    ; Grapheme_Extend # Mn   [2] SUNDANESE SIGN PANYECEK..SUNDANESE SIGN PANGLAYAR
 1BA2..1BA5    ; Grapheme_Extend # Mn   [4] SUNDANESE CONSONANT SIGN PANYAKRA..SUNDANESE VOWEL SIGN PANYUKU
@@ -11024,7 +11029,7 @@ FF9E..FF9F    ; Grapheme_Extend # Lm   [2] HALFWIDTH KATAKANA VOICED SOUND MARK.
 E0020..E007F  ; Grapheme_Extend # Cf  [96] TAG SPACE..CANCEL TAG
 E0100..E01EF  ; Grapheme_Extend # Mn [240] VARIATION SELECTOR-17..VARIATION SELECTOR-256
 
-# Total code points: 2185
+# Total code points: 2193
 
 # ================================================
 
@@ -11316,10 +11321,8 @@ E0100..E01EF  ; Grapheme_Extend # Mn [240] VARIATION SELECTOR-17..VARIATION SELE
 0CB5..0CB9    ; Grapheme_Base # Lo   [5] KANNADA LETTER VA..KANNADA LETTER HA
 0CBD          ; Grapheme_Base # Lo       KANNADA SIGN AVAGRAHA
 0CBE          ; Grapheme_Base # Mc       KANNADA VOWEL SIGN AA
-0CC0..0CC1    ; Grapheme_Base # Mc   [2] KANNADA VOWEL SIGN II..KANNADA VOWEL SIGN U
+0CC1          ; Grapheme_Base # Mc       KANNADA VOWEL SIGN U
 0CC3..0CC4    ; Grapheme_Base # Mc   [2] KANNADA VOWEL SIGN VOCALIC R..KANNADA VOWEL SIGN VOCALIC RR
-0CC7..0CC8    ; Grapheme_Base # Mc   [2] KANNADA VOWEL SIGN EE..KANNADA VOWEL SIGN AI
-0CCA..0CCB    ; Grapheme_Base # Mc   [2] KANNADA VOWEL SIGN O..KANNADA VOWEL SIGN OO
 0CDD..0CDE    ; Grapheme_Base # Lo   [2] KANNADA LETTER NAKAARA POLLU..KANNADA LETTER FA
 0CE0..0CE1    ; Grapheme_Base # Lo   [2] KANNADA LETTER VOCALIC RR..KANNADA LETTER VOCALIC LL
 0CE6..0CEF    ; Grapheme_Base # Nd  [10] KANNADA DIGIT ZERO..KANNADA DIGIT NINE
@@ -11526,9 +11529,7 @@ E0100..E01EF  ; Grapheme_Extend # Mn [240] VARIATION SELECTOR-17..VARIATION SELE
 1AA8..1AAD    ; Grapheme_Base # Po   [6] TAI THAM SIGN KAAN..TAI THAM SIGN CAANG
 1B04          ; Grapheme_Base # Mc       BALINESE SIGN BISAH
 1B05..1B33    ; Grapheme_Base # Lo  [47] BALINESE LETTER AKARA..BALINESE LETTER HA
-1B3B          ; Grapheme_Base # Mc       BALINESE VOWEL SIGN RA REPA TEDUNG
-1B3D..1B41    ; Grapheme_Base # Mc   [5] BALINESE VOWEL SIGN LA LENGA TEDUNG..BALINESE VOWEL SIGN TALING REPA TEDUNG
-1B43          ; Grapheme_Base # Mc       BALINESE VOWEL SIGN PEPET TEDUNG
+1B3E..1B41    ; Grapheme_Base # Mc   [4] BALINESE VOWEL SIGN TALING..BALINESE VOWEL SIGN TALING REPA TEDUNG
 1B45..1B4C    ; Grapheme_Base # Lo   [8] BALINESE LETTER KAF SASAK..BALINESE LETTER ARCHAIC JNYA
 1B4E..1B4F    ; Grapheme_Base # Po   [2] BALINESE INVERTED CARIK SIKI..BALINESE INVERTED CARIK PAREREN
 1B50..1B59    ; Grapheme_Base # Nd  [10] BALINESE DIGIT ZERO..BALINESE DIGIT NINE
@@ -12811,7 +12812,7 @@ FFFC..FFFD    ; Grapheme_Base # So   [2] OBJECT REPLACEMENT CHARACTER..REPLACEME
 30000..3134A  ; Grapheme_Base # Lo [4939] CJK UNIFIED IDEOGRAPH-30000..CJK UNIFIED IDEOGRAPH-3134A
 31350..323AF  ; Grapheme_Base # Lo [4192] CJK UNIFIED IDEOGRAPH-31350..CJK UNIFIED IDEOGRAPH-323AF
 
-# Total code points: 152738
+# Total code points: 152730
 
 # ================================================
 
@@ -13026,8 +13027,11 @@ ABED          ; Grapheme_Link # Mn       MEETEI MAYEK APUN IYEK
 0C81          ; InCB; Extend # Mn       KANNADA SIGN CANDRABINDU
 0CBC          ; InCB; Extend # Mn       KANNADA SIGN NUKTA
 0CBF          ; InCB; Extend # Mn       KANNADA VOWEL SIGN I
+0CC0          ; InCB; Extend # Mc       KANNADA VOWEL SIGN II
 0CC2          ; InCB; Extend # Mc       KANNADA VOWEL SIGN UU
 0CC6          ; InCB; Extend # Mn       KANNADA VOWEL SIGN E
+0CC7..0CC8    ; InCB; Extend # Mc   [2] KANNADA VOWEL SIGN EE..KANNADA VOWEL SIGN AI
+0CCA..0CCB    ; InCB; Extend # Mc   [2] KANNADA VOWEL SIGN O..KANNADA VOWEL SIGN OO
 0CCC..0CCD    ; InCB; Extend # Mn   [2] KANNADA VOWEL SIGN AU..KANNADA SIGN VIRAMA
 0CD5..0CD6    ; InCB; Extend # Mc   [2] KANNADA LENGTH MARK..KANNADA AI LENGTH MARK
 0CE2..0CE3    ; InCB; Extend # Mn   [2] KANNADA VOWEL SIGN VOCALIC L..KANNADA VOWEL SIGN VOCALIC LL
@@ -13106,9 +13110,11 @@ ABED          ; Grapheme_Link # Mn       MEETEI MAYEK APUN IYEK
 1B34          ; InCB; Extend # Mn       BALINESE SIGN REREKAN
 1B35          ; InCB; Extend # Mc       BALINESE VOWEL SIGN TEDUNG
 1B36..1B3A    ; InCB; Extend # Mn   [5] BALINESE VOWEL SIGN ULU..BALINESE VOWEL SIGN RA REPA
+1B3B          ; InCB; Extend # Mc       BALINESE VOWEL SIGN RA REPA TEDUNG
 1B3C          ; InCB; Extend # Mn       BALINESE VOWEL SIGN LA LENGA
+1B3D          ; InCB; Extend # Mc       BALINESE VOWEL SIGN LA LENGA TEDUNG
 1B42          ; InCB; Extend # Mn       BALINESE VOWEL SIGN PEPET
-1B44          ; InCB; Extend # Mc       BALINESE ADEG ADEG
+1B43..1B44    ; InCB; Extend # Mc   [2] BALINESE VOWEL SIGN PEPET TEDUNG..BALINESE ADEG ADEG
 1B6B..1B73    ; InCB; Extend # Mn   [9] BALINESE MUSICAL SYMBOL COMBINING TEGEH..BALINESE MUSICAL SYMBOL COMBINING GONG
 1B80..1B81    ; InCB; Extend # Mn   [2] SUNDANESE SIGN PANYECEK..SUNDANESE SIGN PANGLAYAR
 1BA2..1BA5    ; InCB; Extend # Mn   [4] SUNDANESE CONSONANT SIGN PANYAKRA..SUNDANESE VOWEL SIGN PANYUKU
@@ -13351,6 +13357,6 @@ FF9E..FF9F    ; InCB; Extend # Lm   [2] HALFWIDTH KATAKANA VOICED SOUND MARK..HA
 E0020..E007F  ; InCB; Extend # Cf  [96] TAG SPACE..CANCEL TAG
 E0100..E01EF  ; InCB; Extend # Mn [240] VARIATION SELECTOR-17..VARIATION SELECTOR-256
 
-# Total code points: 2184
+# Total code points: 2192
 
 # EOF

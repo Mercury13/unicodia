@@ -1,5 +1,5 @@
 # PropList-16.0.0.txt
-# Date: 2024-05-08, 03:40:06 GMT
+# Date: 2024-05-31, 18:09:48 GMT
 # © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -1273,7 +1273,10 @@ FFFFE..FFFFF  ; Noncharacter_Code_Point # Cn   [2] <noncharacter-FFFFE>..<noncha
 0B57          ; Other_Grapheme_Extend # Mc       ORIYA AU LENGTH MARK
 0BBE          ; Other_Grapheme_Extend # Mc       TAMIL VOWEL SIGN AA
 0BD7          ; Other_Grapheme_Extend # Mc       TAMIL AU LENGTH MARK
+0CC0          ; Other_Grapheme_Extend # Mc       KANNADA VOWEL SIGN II
 0CC2          ; Other_Grapheme_Extend # Mc       KANNADA VOWEL SIGN UU
+0CC7..0CC8    ; Other_Grapheme_Extend # Mc   [2] KANNADA VOWEL SIGN EE..KANNADA VOWEL SIGN AI
+0CCA..0CCB    ; Other_Grapheme_Extend # Mc   [2] KANNADA VOWEL SIGN O..KANNADA VOWEL SIGN OO
 0CD5..0CD6    ; Other_Grapheme_Extend # Mc   [2] KANNADA LENGTH MARK..KANNADA AI LENGTH MARK
 0D3E          ; Other_Grapheme_Extend # Mc       MALAYALAM VOWEL SIGN AA
 0D57          ; Other_Grapheme_Extend # Mc       MALAYALAM AU LENGTH MARK
@@ -1282,7 +1285,9 @@ FFFFE..FFFFF  ; Noncharacter_Code_Point # Cn   [2] <noncharacter-FFFFE>..<noncha
 1715          ; Other_Grapheme_Extend # Mc       TAGALOG SIGN PAMUDPOD
 1734          ; Other_Grapheme_Extend # Mc       HANUNOO SIGN PAMUDPOD
 1B35          ; Other_Grapheme_Extend # Mc       BALINESE VOWEL SIGN TEDUNG
-1B44          ; Other_Grapheme_Extend # Mc       BALINESE ADEG ADEG
+1B3B          ; Other_Grapheme_Extend # Mc       BALINESE VOWEL SIGN RA REPA TEDUNG
+1B3D          ; Other_Grapheme_Extend # Mc       BALINESE VOWEL SIGN LA LENGA TEDUNG
+1B43..1B44    ; Other_Grapheme_Extend # Mc   [2] BALINESE VOWEL SIGN PEPET TEDUNG..BALINESE ADEG ADEG
 1BAA          ; Other_Grapheme_Extend # Mc       SUNDANESE SIGN PAMAAEH
 1BF2..1BF3    ; Other_Grapheme_Extend # Mc   [2] BATAK PANGOLAT..BATAK PANONGONAN
 200C          ; Other_Grapheme_Extend # Cf       ZERO WIDTH NON-JOINER
@@ -1312,7 +1317,7 @@ FF9E..FF9F    ; Other_Grapheme_Extend # Lm   [2] HALFWIDTH KATAKANA VOICED SOUND
 1D16D..1D172  ; Other_Grapheme_Extend # Mc   [6] MUSICAL SYMBOL COMBINING AUGMENTATION DOT..MUSICAL SYMBOL COMBINING FLAG-5
 E0020..E007F  ; Other_Grapheme_Extend # Cf  [96] TAG SPACE..CANCEL TAG
 
-# Total code points: 152
+# Total code points: 160
 
 # ================================================
 
