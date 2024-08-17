@@ -117,6 +117,8 @@ namespace {
 
 void Mems::write(const char* data, size_t dsize)
 {
+    if (!canWrite)
+        throw std::logic_error("[Mems.write] Stream cannot write");
     auto rem = remainder();
     if (dsize > rem)
         throwWrite(dsize, pos(), size(), rem);

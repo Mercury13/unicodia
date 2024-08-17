@@ -13,7 +13,8 @@ class Mems
 public:
     Mems() noexcept = default;
     /// Ctor; by-val+move idiom
-    Mems(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); }
+    Mems(Buf1d<char> dd) noexcept { borrowRW(dd); }
+    Mems(Buf1d<const char> dd) noexcept { borrowR(dd); }
     /// Move only, do not copy
     Mems(const Mems&) = delete;
     Mems(Mems&&) noexcept = default;
@@ -23,7 +24,12 @@ public:
     void alloc(size_t n) { d.alloc(n); p = d.begin(); }
     Buf1d<char> data() noexcept { return d; }
     Buf1d<const char> data() const noexcept { return d; }
-    void borrow(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); }
+    /// Borrow readable/writeable
+    void borrowRW(Buf1d<char> dd) noexcept { d.borrow(dd); p = dd.begin(); canWrite = true; }
+    /// Borrow readable
+    void borrowR(Buf1d<const char> dd) noexcept
+        { Buf1d<char>d1{ dd.size(), const_cast<char*>(dd.buffer()) };
+          d.borrow(d1); p = d1.begin(); canWrite = false; }
 
     QByteArray qdata() const { return QByteArray::fromRawData(d.buffer(), d.size()); }
 
@@ -116,4 +122,5 @@ public:
 protected:
     Array1d<char> d;
     char* p = nullptr;
+    bool canWrite = false;
 };

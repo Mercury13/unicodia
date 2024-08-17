@@ -41,6 +41,7 @@ namespace mf {
         Char4 name;
         uint32_t posInDir = 0, posInFile = 0, length = 0;
 
+        Buf1d<const char> toBuf(Buf1d<const char> data) const;
         Buf1d<char> toBuf(Buf1d<char> data) const;
     };
 
@@ -51,13 +52,14 @@ namespace mf {
         Enc encodingId = Enc::REALLY_BAD;
         TableFormat formatId = TableFormat::REALLY_BAD;
         uint32_t posInBlock = 0, posInFile = 0, length = 0;
-        Buf1d<char> toBuf(Buf1d<char> data);
+
+        Buf1d<const char> toBuf(Buf1d<const char> data) const;
     };
 
     struct Block2
     {
         const Block* b = nullptr;
-        Buf1d<char> d;
+        Buf1d<const char> d;
 
         operator bool() const { return b; }
     };
@@ -106,8 +108,8 @@ private:
     void recomputeChecksum(const mf::Block& b);
     void loadCmaps();
     /// @return [+] cmap is good
-    static bool traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb);
-    static inline void traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb);
-    static bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb);
-    static bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb);
+    bool traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
+    inline void traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
+    bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
+    bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
 };

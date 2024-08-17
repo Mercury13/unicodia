@@ -69,3 +69,38 @@ inline void swapID(Dword1& x) {
         doSwapD(x);
     }
 }
+
+
+[[nodiscard]] inline unsigned short swappedW(unsigned short x)
+{
+    Word1 w(x);
+    doSwapW(w);
+    return w.asWord;
+}
+
+
+[[nodiscard]] inline unsigned short swappedMW(unsigned short x)
+{
+    if constexpr(std::endian::native == std::endian::little) {
+        return swappedW(x);
+    } else {
+        return x;
+    }
+}
+
+
+[[nodiscard]] inline unsigned short swappedIW(unsigned short x)
+{
+    if constexpr(std::endian::native == std::endian::big) {
+        return swappedW(x);
+    } else {
+        return x;
+    }
+}
+
+struct MotorolaWord
+{
+    uint16_t rawValue;
+    unsigned short value() const { return swappedMW(rawValue); }
+    operator unsigned short() const { return value(); }
+};

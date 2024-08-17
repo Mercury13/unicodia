@@ -44,7 +44,7 @@ namespace HEADER {
     constexpr auto SIZE = 12;
 }
 
-Buf1d<char> mf::Block::toBuf(Buf1d<char> data) const
+Buf1d<const char> mf::Block::toBuf(Buf1d<const char> data) const
 {
     auto end = posInFile + length;
     if (end > data.size() || end < posInFile) {
@@ -58,6 +58,26 @@ Buf1d<char> mf::Block::toBuf(Buf1d<char> data) const
     }
     return { length, data.buffer() + posInFile };
 }
+
+
+Buf1d<char> mf::Block::toBuf(Buf1d<char> data) const
+{
+    Buf1d<const char> d1(data);
+    auto r = toBuf(d1);
+    return { r.size(), const_cast<char*>(r.buffer()) };
+}
+
+
+///// Cmap /////////////////////////////////////////////////////////////////////
+
+
+Buf1d<const char> mf::Cmap::toBuf(Buf1d<const char> data) const
+{
+    return data.sliceMid(posInFile, length);
+}
+
+
+///// MemFont //////////////////////////////////////////////////////////////////
 
 
 bool MemFont::load(const QString& fname)
@@ -135,7 +155,7 @@ void MemFont::loadCmaps()
             return;
         blockOffset = blk.b->posInFile;
         blockSize = blk.b->length;
-        ms.borrow(blk.d);
+        ms.borrowR(blk.d);
     } catch (...) {
         // Really bad, clear CMAPs
         fCmaps.clear();
@@ -261,20 +281,62 @@ void MemFont::recomputeChecksum(const mf::Block& b)
 }
 
 
-bool MemFont::traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb)
+bool MemFont::traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
+{
+    Mems ms(cmap.toBuf(slave.data()));
+    ms.seek(6);  // 0:w = format  2:w = length   4:w = lang   6:w = segCount
+    unsigned short segCount2 = ms.readMW();
+    if ((segCount2 & 1) != 0)
+        throw std::logic_error("[MemFont.traverseSegmentToDelta] Segment to delta block has odd segCountX2");
+    ms.skip(6);      // 8:w = searchRange 0A:w = entrySelector 0C:w = rangeShift
+    auto pEndCode = ms.pos();
+    ms.skip(segCount2);
+    ms.skip(2);      // +0:w = reservedPad
+    auto pStartCode = ms.pos();
+    ms.skip(segCount2);
+    auto pDelta = ms.pos();
+    ms.skip(segCount2);
+    auto pRangeOffset = ms.pos();
+    for (unsigned offset = 0; offset < segCount2; offset += 2) {
+        ms.seek(pStartCode + offset);
+        auto startCode = ms.readMW();
+        ms.seek(pEndCode  + offset);
+        auto endCode = ms.readMW();
+        ms.seek(pDelta + offset);
+        int16_t delta = ms.readMW();
+        auto ro = pRangeOffset + offset;
+        ms.seek(ro);
+        auto rangeOffset = ms.readMW();
+        if (rangeOffset == 0) {
+            // Code-based mapping
+            for (char32_t c = startCode; c <= endCode; ++c) {
+                uint16_t glyph = c + delta;
+                if (glyph != 0)
+                    cb(c, glyph);
+            }
+        } else {
+            // Array-based mapping
+            ms.seek(ro + rangeOffset);
+            for (char32_t c = startCode; c <= endCode; ++c) {
+                auto glyph = ms.readMW();
+                if (glyph != 0) {
+                    cb(c, static_cast<uint16_t>(glyph + delta));
+                }
+            }
+        }
+    }
+    return true;
+}
+
+
+bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
 {
     return true;
 }
 
 
-bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb)
-{
-    return true;
-}
 
-
-
-bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb)
+bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
 {
     switch (cmap.formatId) {
     case mf::TableFormat::SEGMENT_TO_DELTA:
@@ -287,7 +349,7 @@ bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb)
 }
 
 
-inline void MemFont::traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb)
+inline void MemFont::traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb) const
 {
     if (!flag) {
         flag = traverseCmap(cmap, cb);

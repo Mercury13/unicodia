@@ -115,7 +115,7 @@ FmMain::FmMain(QWidget *parent)
 
     // UI
     ui->splitMain->setStretchFactor(0, 4);
-    ui->splitMain->setStretchFactor(1, 7);
+    ui->splitMain->setStretchFactor(1, 8);
 
     // Models
     ui->treeStructure->setModel(&treeModel);
@@ -170,10 +170,19 @@ void FmMain::doOpen()
         ui->hxView->clear();
         treeModel.font = std::move(tmpFont);
         treeModel.structure.loadFrom(treeModel.font);
+
     treeModel.endResetModel();
 
     selectAny(ui->treeStructure);
     ui->treeStructure->setFocus();
+
+    QString text;
+    treeModel.font.traverseCps([&text](char32_t cp, unsigned glyph) {
+        char buf[40];
+        snprintf(buf, std::size(buf), "%04X→%u\n", (unsigned)cp, glyph);
+        text += buf;
+    });
+    ui->memoMapping->setPlainText(text);
 }
 
 
