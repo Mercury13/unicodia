@@ -83,10 +83,12 @@ bool CompressedBits::have(unsigned x) const noexcept
 //// TempFont //////////////////////////////////////////////////////////////////
 
 
-TempFont installTempFontFull(const QString& fname, char32_t trigger)
+TempFont installTempFontFull(
+        const QString& fname, bool dehintDotc, char32_t trigger)
 {
     MemFont mf;
     int id = -1;
+    CompressedBits cps;
     if (!tempPrefix.empty() &&
             (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
         msg("Loading TTF/OTF ",
@@ -97,6 +99,16 @@ TempFont installTempFontFull(const QString& fname, char32_t trigger)
         try {
             mf.load(fname);
             mf.mangle(tempPrefix);
+            unsigned giDotc = 0;    // glyph index of dotted circle
+            mf.traverseCps([&cps, &giDotc]
+                    (uint32_t cp, unsigned glyph) {
+                        cps.add(cp);
+                        if (cp == 0x25CC)
+                            giDotc = glyph;
+                    });
+            if (dehintDotc && giDotc != 0) {
+                /// @todo [future] dehint dotted circle
+            }
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << '\n';
@@ -116,10 +128,7 @@ TempFont installTempFontFull(const QString& fname, char32_t trigger)
                 std::hex, static_cast<uint32_t>(trigger), std::dec);
         }
     }
-    TempFont r { .id = id, .families = std::move(families), .cps{} };
-    mf.traverseCps([&r](uint32_t cp, int) {
-        r.cps.add(cp);
-    });
+    TempFont r { .id = id, .families = std::move(families), .cps = std::move(cps) };
     return r;
 }
 
@@ -136,8 +145,9 @@ QString expandTempFontName(std::string_view fname)
 }
 
 
-TempFont installTempFontRel(std::string_view fname, char32_t trigger)
+TempFont installTempFontRel(
+        std::string_view fname, bool dehintDotc, char32_t trigger)
 {
     QString absPath = expandTempFontName(fname);
-    return installTempFontFull(absPath, trigger);
+    return installTempFontFull(absPath, dehintDotc, trigger);
 }

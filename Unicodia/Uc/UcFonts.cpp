@@ -14,7 +14,7 @@ consteval uc::StyleSheet operator + (
 
 
 // File names
-constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
+constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC };
 constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf" };
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf" };

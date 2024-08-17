@@ -70,6 +70,14 @@ struct TempFont {
     CompressedBits cps;
 };
 
-TempFont installTempFontFull(const QString& fname, char32_t trigger);
+///
+/// @param fname        file name
+/// @param dehintDotc   [+] dehint dotted circle
+/// @param trigger      CP that triggered installation
+/// @return  font info
+///
+TempFont installTempFontFull(
+        const QString& fname, bool dehintDotc, char32_t trigger);
 QString expandTempFontName(std::string_view fname);
-TempFont installTempFontRel(std::string_view fname, char32_t trigger);
+TempFont installTempFontRel(
+        std::string_view fname, bool dehintDotc, char32_t trigger);

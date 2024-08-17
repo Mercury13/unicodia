@@ -1417,7 +1417,8 @@ onceAgain:
             goto onceAgain;
         newLoadedStruc();
 
-        auto tempFont = installTempFontRel(family.text, trigger);
+        auto tempFont = installTempFontRel(
+                family.text, family.flags.have(uc::Fafg::DEHINT_DOTC), trigger);
         q.loaded->tempId = tempFont.id;
         q.loaded->familiesComma = tempFont.families.join(',');
         q.loaded->families = std::move(tempFont.families);

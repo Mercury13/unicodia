@@ -486,9 +486,9 @@ namespace uc {
 
     enum class FontPlace { CELL, SAMPLE, PROBE };
 
-    enum class Fafg {
-        // Now all fonts
-        DUMMY = 1<<0,       // Someday we’ll need it
+    enum class Fafg : unsigned char {
+        // Now all fonts use
+        DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);
