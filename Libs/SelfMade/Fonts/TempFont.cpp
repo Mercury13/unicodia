@@ -87,8 +87,7 @@ TempFont installTempFontFull(
         const QString& fname, bool dehintDotc, char32_t trigger)
 {
     MemFont mf;
-    int id = -1;
-    CompressedBits cps;
+    TempFont r { .id = -1, .families{}, .cps{} };
     if (!tempPrefix.empty() &&
             (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
         msg("Loading TTF/OTF ",
@@ -100,35 +99,35 @@ TempFont installTempFontFull(
             mf.load(fname);
             mf.mangle(tempPrefix);
             unsigned giDotc = 0;    // glyph index of dotted circle
-            mf.traverseCps([&cps, &giDotc]
+            mf.traverseCps([&r, &giDotc]
                     (uint32_t cp, unsigned glyph) {
-                        cps.add(cp);
+                        r.cps.add(cp);
                         if (cp == 0x25CC)
                             giDotc = glyph;
                     });
             if (dehintDotc && giDotc != 0) {
                 /// @todo [future] dehint dotted circle
             }
-            id = QFontDatabase::addApplicationFontFromData(mf.qdata());
+            r.id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << '\n';
         }
     } else {
         // Load exactly
-        id = QFontDatabase::addApplicationFont(fname);
+        r.id = QFontDatabase::addApplicationFont(fname);
     }
-    if (id < 0) {
+    if (r.id < 0) {
         std::cout << "Cannot install " << fname.toStdString() << '\n';
         return { FONT_BADLY_INSTALLED, {}, {} };
     }
-    auto families = QFontDatabase::applicationFontFamilies(id);
+    r.families = QFontDatabase::applicationFontFamilies(r.id);
     if constexpr (debugTempFont) {
-        for (auto& v : families) {
-            msg("Installed ", v.toStdString(), ", id=", id, " for the sake of ",
+        for (auto& v : r.families) {
+            msg("Installed ", v.toStdString(), ", id=", r.id, " for the sake of ",
                 std::hex, static_cast<uint32_t>(trigger), std::dec);
         }
     }
-    return { .id = id, .families = std::move(families), .cps = std::move(cps) };
+    return r;
 }
 
 
