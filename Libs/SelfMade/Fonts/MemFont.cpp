@@ -331,6 +331,18 @@ bool MemFont::traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) con
 
 bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
 {
+    Mems ms(cmap.toBuf(slave.data()));
+    ms.seek(12);  // 0:w = format  2:w = reserved   4:d = len   8:d = lang
+    auto nGroups = ms.readMD();
+    for (unsigned i = 0; i < nGroups; ++i) {
+        auto startCode = ms.readMD();
+        auto endCode = ms.readMD();
+        auto glyphId = ms.readMD();
+        for (char32_t c = startCode; c <= endCode; ++c) {
+            cb(c, glyphId);
+            ++glyphId;
+        }
+    }
     return true;
 }
 
@@ -349,47 +361,62 @@ bool MemFont::traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const
 }
 
 
-inline void MemFont::traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb) const
-{
-    if (!flag) {
-        flag = traverseCmap(cmap, cb);
+namespace {
+
+    enum class Prio { NONE, BMP };
+    struct Best {
+        const mf::Cmap* cmap  = nullptr;
+        Prio prio = Prio::NONE;
+
+        void bump(Prio pr, const mf::Cmap& cm);
+    };
+
+    void Best::bump(Prio pr, const mf::Cmap& cm)
+    {
+        if (prio < pr) {
+            cmap = &cm;
+            prio = pr;
+        }
     }
-}
+
+}   // anon namespace
 
 
 void MemFont::traverseCps(mf::CbCpGlyph cb) const
 {
-    bool hasBmp = false;
-    bool hasFull = false;
+    Best best;
     for (auto& cmap : fCmaps) {
         switch (cmap.platformId) {
         // We traverse whatever first, UCODE or WIN
         case mf::Plat::UCODE:
             switch (cmap.encodingId) {
             case mf::Enc::UCODE_BMP:
-                traverseCmapIf(hasBmp, cmap, cb);
+                best.bump(Prio::BMP, cmap);
                 break;
             case mf::Enc::UCODE_FULL:
-                traverseCmapIf(hasFull, cmap, cb);
-                break;
+                // Full Unicode is automatically the best cmap
+                traverseCmap(cmap, cb);
+                return;
             default: ;
             }
             break;
         case mf::Plat::WIN:
             switch (cmap.encodingId) {
             case mf::Enc::WIN_UNICODE_BMP:
-                traverseCmapIf(hasBmp, cmap, cb);
+                best.bump(Prio::BMP, cmap);
                 break;
             case mf::Enc::WIN_UNICODE_FULL:
-                traverseCmapIf(hasFull, cmap, cb);
-                break;
+                // Full Unicode is automatically the best cmap
+                traverseCmap(cmap, cb);
+                return;
             default: ;
             }
             break;
+        // ISO could be a fallback platform, but neither of Unicodia’s fonts needs it
         default:
             break;
         }
-
     }
-    /// @todo [urgent] traverseCps
+    if (best.cmap)
+        traverseCmap(*best.cmap, cb);
 }

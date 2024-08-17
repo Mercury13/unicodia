@@ -109,7 +109,6 @@ private:
     void loadCmaps();
     /// @return [+] cmap is good
     bool traverseCmap(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
-    inline void traverseCmapIf(bool& flag, const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
     bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
     bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
 };

@@ -21,6 +21,7 @@ HEADERS += \
     ../Libs/QHexView/include/QHexView.h \
     ../Libs/QHexView/include/charset.h \
     ../Libs/SelfMade/Fonts/MemFont.h \
+    ../Libs/SelfMade/Fonts/MemFontDefs.h \
     ../Libs/SelfMade/Qt/i_OpenSave.h \
     ../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
