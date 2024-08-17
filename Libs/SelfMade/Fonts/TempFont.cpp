@@ -128,8 +128,7 @@ TempFont installTempFontFull(
                 std::hex, static_cast<uint32_t>(trigger), std::dec);
         }
     }
-    TempFont r { .id = id, .families = std::move(families), .cps = std::move(cps) };
-    return r;
+    return { .id = id, .families = std::move(families), .cps = std::move(cps) };
 }
 
 
