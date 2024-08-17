@@ -88,7 +88,8 @@ TempFont installTempFontFull(
 {
     MemFont mf;
     TempFont r { .id = -1, .families{}, .cps{} };
-    if (!tempPrefix.empty() &&
+    bool wantChanges = !tempPrefix.empty() || dehintDotc;
+    if (wantChanges &&
             (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
         msg("Loading TTF/OTF ",
             QFileInfo(fname).fileName().toStdString(),

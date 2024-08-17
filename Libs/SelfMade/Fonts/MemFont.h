@@ -85,7 +85,8 @@ public:
     // High-level bhv
     mf::Block2 findBlock(mf::Char4 name);
     mf::Block2 rqBlock(mf::Char4 name, uint32_t len = 0);
-    /// @param bytes  ASCII only!!
+    /// @param  bytes   ASCII only!!
+    /// @warning  Does nothing if bytes are empty
     void mangle(std::string_view bytes);
 
     // Misc info

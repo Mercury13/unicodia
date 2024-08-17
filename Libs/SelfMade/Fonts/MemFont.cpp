@@ -252,6 +252,8 @@ mf::Block2 MemFont::rqBlock(mf::Char4 name, uint32_t len)
 
 void MemFont::mangle(std::string_view bytes)
 {
+    if (bytes.empty())
+        return;
     auto v = rqBlock("name", 32);
     Mems blk(v.toWriteable());
 
