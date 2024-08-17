@@ -17,7 +17,9 @@ namespace mfs {
     };
 
     struct CmapInfo {
-        uint16_t platformId, encodingId, formatId;
+        mf::Plat platformId;
+        mf::Enc encodingId;
+        mf::TableFormat formatId;
     };
 
     class Obj { // interface
@@ -125,15 +127,15 @@ namespace mfs {
         bool isStandard;
     };
 
-    MiniString toPlatformMiniString(uint16_t plat) noexcept;
-    const char* toPlatformShortString(uint16_t plat, mfs::Cbuf& buf) noexcept;
-    const char* toPlatformLongString(uint16_t plat, mfs::Cbuf& buf) noexcept;
+    MiniString toPlatformMiniString(mf::Plat plat) noexcept;
+    const char* toPlatformShortString(mf::Plat plat, mfs::Cbuf& buf) noexcept;
+    const char* toPlatformLongString(mf::Plat plat, mfs::Cbuf& buf) noexcept;
 
-    MiniString toEncodingMiniString(uint16_t plat, uint16_t enc) noexcept;
-    const char* toEncodingShortString(uint16_t plat, uint16_t enc, mfs::Cbuf& buf) noexcept;
-    const char* toEncodingLongString(uint16_t plat, uint16_t enc, Cbuf& buf) noexcept;
+    MiniString toEncodingMiniString(mf::Plat plat, mf::Enc enc) noexcept;
+    const char* toEncodingShortString(mf::Plat plat, mf::Enc enc, mfs::Cbuf& buf) noexcept;
+    const char* toEncodingLongString(mf::Plat plat, mf::Enc enc, Cbuf& buf) noexcept;
 
-    MiniString toTableFormatMiniString(uint16_t fm) noexcept;
-    const char* toTableFormatLongString(uint16_t fm, mfs::Cbuf& buf) noexcept;
+    MiniString toTableFormatMiniString(mf::TableFormat fm) noexcept;
+    const char* toTableFormatLongString(mf::TableFormat fm, mfs::Cbuf& buf) noexcept;
 
 }   // namespace mfs

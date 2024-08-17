@@ -150,9 +150,9 @@ void MemFont::loadCmaps()
         fCmaps.reserve(nMaps);
         for (unsigned i = 0; i < nMaps; ++i) {
             mf::Cmap newCmap;
-            newCmap.platformId = ms.readMW();
-            newCmap.encodingId = ms.readMW();
-            newCmap.formatId = mf::BAD_FORMAT;
+            newCmap.platformId = (mf::Plat)ms.readMW();
+            newCmap.encodingId = (mf::Enc)ms.readMW();
+            newCmap.formatId = mf::TableFormat::REALLY_BAD;
             newCmap.posInBlock = ms.readMD();
             if (newCmap.posInBlock > blockSize)
                 continue;
@@ -167,7 +167,7 @@ void MemFont::loadCmaps()
     for (auto& cm : fCmaps) {
         if (cm.length >= 8) {
             ms.seek(cm.posInBlock);
-            cm.formatId = ms.readMW();
+            cm.formatId = (mf::TableFormat)ms.readMW();
             switch (static_cast<mf::TableFormat>(cm.formatId)) {
             case mf::TableFormat::SINGLE_BYTE:
             case mf::TableFormat::HIGH_BYTE:
@@ -186,13 +186,14 @@ void MemFont::loadCmaps()
             case mf::TableFormat::UNICODE_VARIATION:
                 cm.length = ms.readMD();
                 break;
+            default: ;
             }
         }
     }
 }
 
 
-mf::Block2 MemFont::findBlock(mf::Char4 name) noexcept
+mf::Block2 MemFont::findBlock(mf::Char4 name)
 {
     for (auto& v : fBlocks)
         if (v.name == name)

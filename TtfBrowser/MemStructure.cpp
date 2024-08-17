@@ -56,26 +56,26 @@ namespace {
 
 }   // anon namespace
 
-mfs::MiniString mfs::toPlatformMiniString(uint16_t plat) noexcept
+mfs::MiniString mfs::toPlatformMiniString(mf::Plat plat) noexcept
 {
-    if (plat < mf::PLAT_N) {
-        return { .value = platNames[plat], .isStandard = false };
+    if (plat < mf::Plat::N) {
+        return { .value = platNames[(unsigned)plat], .isStandard = false };
     }
     return { .value = "Unknown", .isStandard = true };
 }
 
-const char* mfs::toPlatformShortString(uint16_t plat, mfs::Cbuf& buf) noexcept
+const char* mfs::toPlatformShortString(mf::Plat plat, mfs::Cbuf& buf) noexcept
 {
     auto q = toPlatformMiniString(plat);
     if (q.isStandard) {
-        snprintf(buf, std::size(buf), "%u", (int)plat);
+        snprintf(buf, std::size(buf), "%u", (unsigned)plat);
         return buf;
     } else {
         return q.value;
     }
 }
 
-const char* mfs::toPlatformLongString(uint16_t plat, mfs::Cbuf& buf) noexcept
+const char* mfs::toPlatformLongString(mf::Plat plat, mfs::Cbuf& buf) noexcept
 {
     auto q = toPlatformMiniString(plat);
     snprintf(buf, std::size(buf), "%s (%u)",
@@ -83,12 +83,12 @@ const char* mfs::toPlatformLongString(uint16_t plat, mfs::Cbuf& buf) noexcept
     return buf;
 }
 
-mfs::MiniString mfs::toEncodingMiniString(uint16_t plat, uint16_t enc) noexcept
+mfs::MiniString mfs::toEncodingMiniString(mf::Plat plat, mf::Enc enc) noexcept
 {
-    if (plat < mf::PLAT_N) {
-        auto arr = encNames2d[plat];
-        if (enc < arr.size()) {
-            if (const char* z = arr[enc]) {
+    if (plat < mf::Plat::N) {
+        auto arr = encNames2d[(unsigned)plat];
+        if ((size_t)enc < arr.size()) {
+            if (const char* z = arr[(size_t)enc]) {
                 return { .value = z, .isStandard = false };
             } else {
                 return { .value = "Reserved", .isStandard = true };
@@ -98,7 +98,7 @@ mfs::MiniString mfs::toEncodingMiniString(uint16_t plat, uint16_t enc) noexcept
     return { .value = "Unknown", .isStandard = true };
 }
 
-const char* mfs::toEncodingShortString(uint16_t plat, uint16_t enc, Cbuf& buf) noexcept
+const char* mfs::toEncodingShortString(mf::Plat plat, mf::Enc enc, Cbuf& buf) noexcept
 {
     auto q = toEncodingMiniString(plat, enc);
     if (q.isStandard) {
@@ -109,7 +109,7 @@ const char* mfs::toEncodingShortString(uint16_t plat, uint16_t enc, Cbuf& buf) n
     }
 }
 
-const char* mfs::toEncodingLongString(uint16_t plat, uint16_t enc, Cbuf& buf) noexcept
+const char* mfs::toEncodingLongString(mf::Plat plat, mf::Enc enc, Cbuf& buf) noexcept
 {
     auto q = toEncodingMiniString(plat, enc);
     snprintf(buf, std::size(buf), "%s (%u)",
@@ -118,10 +118,10 @@ const char* mfs::toEncodingLongString(uint16_t plat, uint16_t enc, Cbuf& buf) no
 }
 
 
-mfs::MiniString mfs::toTableFormatMiniString(uint16_t fm) noexcept
+mfs::MiniString mfs::toTableFormatMiniString(mf::TableFormat fm) noexcept
 {
-    if (fm < mf::TABLE_FORMAT_N) {
-        if (auto q = tableFormatNames[fm]) {
+    if (fm < mf::TableFormat::N) {
+        if (auto q = tableFormatNames[(unsigned)fm]) {
             return { .value = q, .isStandard = false };
         }
     }
@@ -129,7 +129,7 @@ mfs::MiniString mfs::toTableFormatMiniString(uint16_t fm) noexcept
 }
 
 
-const char* mfs::toTableFormatLongString(uint16_t fm, mfs::Cbuf& buf) noexcept
+const char* mfs::toTableFormatLongString(mf::TableFormat fm, mfs::Cbuf& buf) noexcept
 {
     auto q = toTableFormatMiniString(fm);
     snprintf(buf, std::size(buf), "%s (%u)",

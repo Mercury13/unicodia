@@ -33,6 +33,7 @@ FORMS += \
     FmMain.ui
 
 INCLUDEPATH += \
+    ../Libs  \
     ../Libs/QHexView/include  \
     ../Libs/SelfMade  \
     ../Libs/SelfMade/Qt \
