@@ -283,7 +283,7 @@ void MemFont::mangle(std::string_view bytes)
     recomputeChecksum(*v.b);
 }
 
-void MemFont::dehintGlyph(unsigned iGlyph)
+bool MemFont::dehintGlyph(unsigned iGlyph)
 {
     auto vHead = rqBlock("head", 0x34);
 
@@ -320,7 +320,7 @@ void MemFont::dehintGlyph(unsigned iGlyph)
         throw std::logic_error("[dehintGlyph] Magic should be 5F0F3CF5");
     blk.seek(0x32);
     auto locaFormat = blk.readMW();
-    bool unitSize = 2;
+    unsigned unitSize = 2;
     switch (locaFormat) {
     case 0: break;
     case 1: unitSize = 4; break;
@@ -343,11 +343,40 @@ void MemFont::dehintGlyph(unsigned iGlyph)
     }
     // Really have data for that glyph?
     if (glyfOffset >= nextOffset)
-        return;
+        return false;
 
+    //
+    // NOW READ glyf
+    //
     auto vGlyf = rqBlock("glyf");
-    blk.borrowRW(vGlyf.toWriteable());
+    auto data = vGlyf.toWriteable();
+    blk.borrowRW(data);
     blk.seek(glyfOffset);
+
+    int16_t nContours = blk.readMW();
+    if (nContours < 0)  // composite glyph
+        return false;
+    blk.skip(8 + (nContours << 1));    // xmin, ymin, xmax, ymax, endPts
+    //auto posInstrLength = blk.pos();
+    auto instrLength = blk.readMW();
+    if (instrLength == 0)
+        return false;
+
+    // Now rewrite! (does not work for some reason)
+    //blk.seek(posInstrLength);
+    //blk.writeMW(0);
+    //auto pDest = blk.ptr();
+    //auto pSrc = pDest + instrLength;
+    //std::copy(pSrc, data.end(), pDest);
+
+    // Version 2: fill with NOP-like instructions
+    // The only instruction that does nothing (turn off rounding)
+    for (unsigned i = 0; i < instrLength; ++i) {
+        blk.writeB(0x7A);
+    }
+
+    recomputeChecksum(*vGlyf.b);
+    return true;
 }
 
 void MemFont::recomputeChecksum(const mf::Block& b)

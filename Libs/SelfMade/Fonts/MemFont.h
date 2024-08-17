@@ -90,7 +90,9 @@ public:
     void mangle(std::string_view bytes);
     /// @param  iGlyph   index of glyph
     /// @warning   NOT CODE POINT
-    void dehintGlyph(unsigned iGlyph);
+    /// @return  [+] dehinting actually happened
+    ///          (errors are indicated with exceptions)
+    bool dehintGlyph(unsigned iGlyph);
 
     // Misc info
     /// prefer over nChildren

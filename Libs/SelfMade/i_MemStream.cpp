@@ -45,6 +45,12 @@ void Mems::writeMW(uint16_t x)
     writeStruc<2>(d);
 }
 
+void Mems::writeW0()
+{
+    uint16_t w = 0;
+    writeStruc<2>(w);
+}
+
 void Mems::writeMD(uint32_t x)
 {
     Dword1 d;

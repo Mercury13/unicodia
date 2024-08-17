@@ -105,8 +105,14 @@ public:
     /// read Motorola dword (4 bytes)
     uint32_t readMD();
 
+    /// write byte
+    void writeB(uint8_t x) { writeStruc<1>(x); }
+
     /// write Motorola word (2 bytes)
     void writeMW(uint16_t x);
+
+    /// write word (2 bytes) equal to 0 (Motorola=Intel here)
+    void writeW0();
 
     /// write Motorola dword (4 bytes)
     void writeMD(uint32_t x);
