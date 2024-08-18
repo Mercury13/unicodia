@@ -4,7 +4,7 @@
    viewBox="-10 0 530 1000"
    id="svg1"
    sodipodi:docname="36a.svg"
-   inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
+   inkscape:version="1.4-beta2 (9aaf4f3498, 2024-07-30)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +12,8 @@
   <path
      id="use12"
      style="fill:none;stroke:#000000;stroke-width:65;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 81.71629,681.25585 C 129.43835,749.48288 181.89447,777.5 255,777.5 328.10553,777.5 422.86571,744.80136 422.86571,653.10579 422.86571,561.41022 363.6276,531.68734 255,475 146.3724,418.31266 87.134288,388.58978 87.134288,296.89421 87.134288,205.19864 181.89447,172.5 255,172.5 c 73.10553,0 125.56165,28.01712 173.28371,96.24415"
-     sodipodi:nodetypes="csszssc" />
+     d="m 80.89041,681.15469 c 53.45747,68.22703 112.21796,96.24415 194.10958,96.24415 81.89162,0 188.04044,-32.69864 188.04044,-124.39421 0,-91.69557 -66.35757,-121.41845 -187.93185,-178.05521 C 153.5343,418.31266 87.176735,388.58978 87.176735,296.89421 87.176735,205.19864 193.32555,172.5 275.21717,172.5 c 81.89162,0 140.65211,28.01712 194.10958,96.24415"
+     sodipodi:nodetypes="csssssc" />
   <defs
      id="defs1" />
   <sodipodi:namedview
@@ -71,7 +71,7 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="465,1000"
+       position="505,1000"
        orientation="-1,0"
        id="guide6"
        inkscape:label=""
@@ -97,10 +97,12 @@
        id="guide9"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="265,525"
-       orientation="1,0"
+       position="285,525"
+       orientation="-1,0"
        id="guide10"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="97.134288,689.66149"
        orientation="1,0"

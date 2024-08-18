@@ -4,7 +4,7 @@
    viewBox="-10 0 530 1000"
    id="svg1"
    sodipodi:docname="30.svg"
-   inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
+   inkscape:version="1.4-beta2 (9aaf4f3498, 2024-07-30)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="525,1000"
+       position="575,1000"
        orientation="-1,0"
        id="guide2"
        inkscape:label=""
@@ -66,7 +66,7 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="465,1000"
+       position="515,1000"
        orientation="-1,0"
        id="guide6"
        inkscape:label=""
@@ -92,8 +92,8 @@
   <ellipse
      style="fill:none;fill-rule:evenodd;stroke:#cc0000;stroke-width:65;stroke-linejoin:bevel;stroke-miterlimit:5;stroke-dasharray:none"
      id="path6"
-     cx="255"
+     cx="280"
      cy="475"
-     rx="167.5"
+     rx="192.5"
      ry="302.5" />
 </svg>
