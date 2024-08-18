@@ -164,7 +164,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
-    { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
+    { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
       { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
@@ -177,7 +177,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc }, // Khitan small
-      /// @todo [U16, gag] Someday Kawi will handle new char
+      /// @todo [U16, gag] Someday Khitan will handle new char
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
