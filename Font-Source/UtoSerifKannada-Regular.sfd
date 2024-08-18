@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 1
 CreationTime: 1506051623
-ModificationTime: 1695807003
+ModificationTime: 1723938949
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -527,242 +527,242 @@ ChainSub2: coverage "'blws' Below Base Substitutions lookup 62 contextual 0" 0 0
 EndFPST
 ContextSub2: glyph "'blws' Below Base Substitutions lookup 60 subtable" 0 0 0 10
  String: 34 length_kannada candrabindu_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 22"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 26 length_kannada udatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 28 length_kannada anudatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 22 length_kannada uni1CD0
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 25"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 22 length_kannada uni1CD2
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 34 length_kannada doubleSvarita_vedic
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 27"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 22 length_kannada uni1CF4
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 28"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 38 length_kannada candrabindu_udatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 29"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 40 length_kannada candrabindu_anudatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 30"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
  String: 36 length_kannada candrabindu_1CDA_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 31"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
 EndFPST
 ContextSub2: glyph "'blws' Below Base Substitutions lookup 59 subtable" 0 0 0 10
  String: 32 reph_kannada candrabindu_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 22"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 24 reph_kannada udatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 26 reph_kannada anudatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 20 reph_kannada uni1CD0
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 25"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 20 reph_kannada uni1CD2
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 32 reph_kannada doubleSvarita_vedic
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 27"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 20 reph_kannada uni1CF4
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 28"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 36 reph_kannada candrabindu_udatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 29"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 38 reph_kannada candrabindu_anudatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 30"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
  String: 34 reph_kannada candrabindu_1CDA_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 31"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
 EndFPST
 ContextSub2: glyph "'blws' Below Base Substitutions lookup 58 subtable" 0 0 0 10
  String: 36 anusvara_kannada candrabindu_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 22"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 28 anusvara_kannada udatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 30 anusvara_kannada anudatta_deva
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 24 anusvara_kannada uni1CD0
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 25"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 24 anusvara_kannada uni1CD2
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 36 anusvara_kannada doubleSvarita_vedic
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 27"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 24 anusvara_kannada uni1CF4
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 28"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 40 anusvara_kannada candrabindu_udatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 29"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 42 anusvara_kannada candrabindu_anudatta_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 30"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
  String: 38 anusvara_kannada candrabindu_1CDA_knda
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 31"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
 EndFPST
 ContextSub2: glyph "'blws' Below Base Substitutions lookup 57 subtable" 0 0 0 9
  String: 32 ra_kannada rVocalicMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6"
  String: 38 ja_nukta_kannada.below aaMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 13"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17"
  String: 38 ja_nukta_kannada.below auMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17"
  String: 37 ja_nukta_kannada.below uMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17"
  String: 38 ja_nukta_kannada.below uuMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17"
  String: 39 pha_nukta_kannada.below aaMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 13"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18"
  String: 39 pha_nukta_kannada.below auMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18"
  String: 38 pha_nukta_kannada.below uMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18"
  String: 39 pha_nukta_kannada.below uuMatra_kannada
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  2
   SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16"
   SeqLookup: 1 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18"
@@ -87055,252 +87055,6 @@ Encoding: 9676 9676 415
 Width: 594
 GlyphClass: 2
 Flags: WO
-TtInstrs:
-NPUSHB
- 241
- 0
- 1
- 32
- 1
- 0
- 7
- 1
- 0
- 105
- 5
- 1
- 3
- 34
- 4
- 33
- 3
- 2
- 6
- 3
- 2
- 105
- 9
- 1
- 7
- 36
- 8
- 35
- 3
- 6
- 11
- 7
- 6
- 105
- 13
- 1
- 11
- 38
- 12
- 37
- 3
- 10
- 15
- 11
- 10
- 105
- 17
- 1
- 15
- 40
- 16
- 39
- 3
- 14
- 19
- 15
- 14
- 105
- 21
- 1
- 19
- 42
- 20
- 41
- 3
- 18
- 23
- 19
- 18
- 105
- 25
- 1
- 23
- 44
- 24
- 43
- 3
- 22
- 31
- 23
- 22
- 105
- 0
- 31
- 26
- 30
- 31
- 89
- 29
- 1
- 27
- 46
- 28
- 45
- 3
- 26
- 30
- 27
- 26
- 105
- 0
- 31
- 31
- 30
- 97
- 47
- 1
- 30
- 31
- 30
- 81
- 181
- 180
- 169
- 168
- 157
- 156
- 145
- 144
- 133
- 132
- 121
- 120
- 109
- 108
- 97
- 96
- 85
- 84
- 73
- 72
- 61
- 60
- 49
- 48
- 37
- 36
- 25
- 24
- 13
- 12
- 1
- 0
- 187
- 185
- 180
- 191
- 181
- 191
- 175
- 173
- 168
- 179
- 169
- 179
- 163
- 161
- 156
- 167
- 157
- 167
- 151
- 149
- 144
- 155
- 145
- 155
- 139
- 137
- 132
- 143
- 133
- 143
- 127
- 125
- 120
- 131
- 121
- 131
- 115
- 113
- 108
- 119
- 109
- 119
- 103
- 101
- 96
- 107
- 97
- 107
- 91
- 89
- 84
- 95
- 85
- 95
- 79
- 77
- 72
- 83
- 73
- 83
- 67
- 65
- 60
- 71
- 61
- 71
- 55
- 53
- 48
- 59
- 49
- 59
- 43
- 41
- 36
- 47
- 37
- 47
- 31
- 29
- 24
- 35
- 25
- 35
- 19
- 17
- 12
- 23
- 13
- 23
- 7
- 5
- 0
- 11
- 1
- 11
- 48
- 6
- 22
-CALL
-EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 424 461 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 289 -5 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 299 303 basechar 0

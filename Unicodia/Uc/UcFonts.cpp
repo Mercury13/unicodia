@@ -94,7 +94,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
       { FNAME_NAND, Ffg::FALL_TO_NEXT },                                        // …2, fall to Bengali
-    { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
+    { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC }, 120_pc },          // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
       { "NotoSansBrahmi-Regular.ttf", Ffg::DESC_BIGGER },                       // …1
@@ -161,7 +161,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER, 10_top + 12_bot },      // Grantha
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
-    { "NotoSerifGurmukhi-Regular.ttf" },                                        // Gurmukhi
+    { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
@@ -287,7 +287,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", 10_bot, 110_pc },                             // Thai
     { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
-    { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
+    { { "NotoSansTifinagh-Regular.ttf", Fafg::DEHINT_DOTC } },                  // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Ugaritic
       { "NotoSansUgaritic-Regular.ttf" },                                       // …1
