@@ -120,7 +120,6 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
     auto registerResult = [&]() {
         // Why +1? We do not search for single-char emoji, but if…
         //   iLastPos == 0, length == 1 → how to make 0 out of them?
-        /// @todo [urgent] what to do? — we use value here
         r.emplace_back(
             lastKnown.iLastPos + 1 - lastKnown.node->depth(),
             lastKnown.node->result());
