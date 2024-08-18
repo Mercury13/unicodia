@@ -851,6 +851,7 @@ namespace uc {
     /// @todo [future] Plane map
     enum class MapType : unsigned char {
         UNALLOCATED,    ///< unused in data, IDK what I do                      As white as possible
+        PRIVATE,        ///< private-use, unused in data                        Light grey
         TECHNICAL,      ///< technical: VS, tags, specials, surrogate only      Green/acid
         EU_LATIN,       ///< Europe/Latin: Latn only                            Blue/deep
         EU_OTHER,       ///< Europe/other: Cyrl, Grek                           Blue
