@@ -53,10 +53,10 @@ Fonts are always updated to release versions. Font is updated to alpha/beta if f
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 These fonts are taken to Unicodia without author’s consent:
-* Craggy font with missing/trivial tables.
-* Font without license belonging to author of Unicode request and released by him/her.
-* Author is surely SIL, even if found elsewhere.
-* ASCII mapping is NOT a reason.
+* Craggy font with missing/trivial tables. Examples: Sunuwar, Garay
+* Font without license belonging to author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
+* Author is surely SIL, even if found elsewhere. Example: Toto
+* ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
 ## Language
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
