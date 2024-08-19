@@ -865,7 +865,7 @@ namespace uc {
         CJ_OTHER_DEAD,  ///< CJK/other/dead: Nshu, Kits                         Pink
         CJ_SYMBOL,      ///< CJK/symbols: punctuation, Tai Xuan                 Fuchsia
         OC,             ///< Ocean: Thaa, Sinh                                  Green
-        OC_DEAD,        ///< Ocean/dead:                                        Green/pale
+        OC_DEAD,        ///< Ocean/dead: Tglg, Kawi                             Green/pale
         AF,             ///< Africa: Tfng, Bamu                                 Chocolate
         AF_DEAD,        ///< Africa/dead: Copt, Mero                            Beige
         AM,             ///< America: Cans, Cher, Hmnp                          Red
