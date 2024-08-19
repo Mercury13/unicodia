@@ -6871,14 +6871,14 @@
       <p />
       <p>Inherent vowel is {{t|ɔ}}.</p>
       <p />
-      <p>Initial vowels do{{_}}not{{_}}have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}}=pɔtlo.</p>
+      <p>Initial vowels do{{_}}not{{_}}have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. To get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. Underscore-like [[pt:virama|virama]] is used in loadwords for letters that do not have final form, and sometimes in syllables with long vowel {{sm|ᤁᤁ᤻}} {{t|kɔ:k}}.</p>
      </orig>
      <transl>
       <p>Традиционно считается, что письменность была создана в IX веке королём Сириджонгой и возрождена восемью веками спустя одноимённым философом, ставшим его реинкарнацией. По более приземлённой версии, происходит из [[ps:Lepc|лепчи]] и не{{_}}может быть столь древним.</p>
       <p />
       <p>Гласная по умолчанию {{t|ɔ}}, среднее между {{t|а}} и {{t|о}}.</p>
       <p />
-      <p>Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. [[pt:virama|Вирамы]] нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный: {{sm|ᤐᤳᤗᤥ}}=pɔtlo.</p>
+      <p>Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. Чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. [[pt:virama|Вирама]]-подчёркивание используется в заимствованиях для букв, не имеющих конечной формы, и иногда в слогах с длинной гласной {{sm|ᤁᤁ᤻}} {{t|kɔ:k}}.</p>
      </transl>
     </text>
    </group>
