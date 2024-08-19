@@ -4,7 +4,7 @@
    viewBox="-10 0 579 1000"
    id="svg1"
    sodipodi:docname="F2.svg"
-   inkscape:version="1.4-beta (62f545ba5e, 2024-04-22)"
+   inkscape:version="1.4-beta2 (9aaf4f3498, 2024-07-30)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="2.2090016"
-     inkscape:cx="501.81041"
-     inkscape:cy="343.82049"
+     inkscape:zoom="1.562"
+     inkscape:cx="183.41869"
+     inkscape:cy="390.84507"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -137,7 +137,7 @@
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="145,494.54546"
+       position="145,483.54546"
        orientation="-0.25881905,0.96592583"
        id="guide20"
        inkscape:label=""
@@ -151,7 +151,7 @@
   </sodipodi:namedview>
   <path
      style="fill:#4e9a06;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 135,505.45454 283.2474,465.73177 C 394.40827,435.94631 444,396.94331 444,325.90977 444,282.55187 417.23955,256 377.92188,256 322.22406,256 265,310.6547 265,460.37164 265,619.14245 252.00515,709.0392 375.19063,710 c 40.99186,0.31972 76.89131,-7.47733 112.74278,-31.48501 L 504,738.47631 C 504,738.47631 434.76819,810 363.06525,810 270.89995,810 205,701.06247 205,474.3918 205,278.56082 260.93535,156 373.19869,156 431.38894,156 504,193.69804 504,314.05656 504,462.60657 432.30736,529.95417 300.83158,565.183 L 65,628.37388 94.877751,490.40031 Z"
+     d="M 135,516.45454 283.2474,476.73177 C 394.40827,446.94631 444,402.18147 444,331.14793 444,287.79003 417.23955,256 377.92188,256 322.22406,256 265,310.6547 265,460.37164 265,619.14245 252.00515,709.0392 375.19063,710 c 40.99186,0.31972 76.89131,-7.47733 112.74278,-31.48501 L 504,738.47631 C 504,738.47631 434.76819,810 363.06525,810 270.89995,810 205,701.06247 205,474.3918 205,278.56082 267.3374,156 380.24094,156 433.30955,156 504,193.69804 504,314.05656 504,462.60657 432.30736,529.95417 300.83158,565.183 L 65,628.37388 94.877751,490.40031 Z"
      id="path18"
      sodipodi:nodetypes="csssssccsssssccc" />
   <path
