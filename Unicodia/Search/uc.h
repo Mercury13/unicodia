@@ -16,7 +16,7 @@ namespace uc {
 
     struct Cp;
 
-    DEFINE_ENUM_IN_NS(uc, CpType,
+    DEFINE_ENUM_TYPE_IN_NS(uc, CpType, unsigned char,
         EXISTING,
         NONCHARACTER,
         PRIVATE_USE,
@@ -116,18 +116,26 @@ namespace uc {
         bool isEmpty() const { return lines.empty(); }
     };
 
-    enum class ReplyStyle {
+    enum class ReplyStyle : unsigned char {
         FLAT,       ///< few results, have some sort of priority between
         GROUPED     ///< many results, all are equal
+    };
+
+    /// Primary object drawn in the 1st line of reply
+    enum class PrimaryObj : unsigned char {
+        DFLT,       ///< default (text and so on)
+        NUMERIC     ///< char’s numeric meaning
     };
 
     struct MultiResult {
         SearchError err = SearchError::OK;
         ReplyStyle style = ReplyStyle::FLAT;
         uc::EcVersion version = uc::EcVersion::NO_VALUE;
+        PrimaryObj primaryObj = PrimaryObj::DFLT;
         SafeVector<SearchGroup> groups {};
 
-        MultiResult(ReplyStyle x, EcVersion v) : style(x), version(v) {}
+        MultiResult(ReplyStyle x, EcVersion v, PrimaryObj obj)
+            : style(x), version(v), primaryObj(obj) {}
         MultiResult(const SingleResult& x);
         MultiResult(SafeVector<SearchLine>&& aV);
         const uc::Cp* one() const;

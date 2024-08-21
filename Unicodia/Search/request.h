@@ -18,6 +18,8 @@ namespace uc {
         /// @return   version is persent in query
         virtual EcVersion ecVersion() const { return EcVersion::NO_VALUE; }
 
+        virtual PrimaryObj primaryObj() const { return PrimaryObj::DFLT; }
+
         virtual bool isOk(const Cp& cp) const = 0;
         ~Request() = default;
     };
@@ -42,6 +44,7 @@ namespace uc {
         bool hasChars() const override { return true; }
         EcVersion ecVersion() const override { return fields.ecVersion; }
         bool isOk(const Cp& cp) const override;
+        PrimaryObj primaryObj() const override;
     private:
         Fields fields;
     };

@@ -998,6 +998,7 @@ namespace uc {
     struct NumType
     {
         std::string_view locKey;
+        std::string_view searchLocKey;
     };
     extern const ec::Array<NumType, EcNumType> numTypeInfo;
 

@@ -11790,32 +11790,32 @@
    <group id="Num">
     <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
     <text id="Digit">
-     <orig>digit {1}</orig>
-     <transl>цифра {1}</transl>
+     <orig>digit</orig>
+     <transl>цифра</transl>
     </text>
     <text id="SpecDigit">
-     <orig>special digit {1}</orig>
-     <transl>специальная цифра {1}</transl>
+     <orig>special digit</orig>
+     <transl>специальная цифра</transl>
     </text>
     <text id="Number">
-     <orig>number {1}</orig>
-     <transl>число {1}</transl>
+     <orig>number</orig>
+     <transl>число</transl>
     </text>
     <text id="CjkRare">
-     <orig>rarely {1}</orig>
-     <transl>редко {1}</transl>
+     <orig>rarely</orig>
+     <transl>редко</transl>
     </text>
     <text id="CjkAccount">
-     <orig>anti-forgery {1}</orig>
-     <transl>антиподделка {1}</transl>
+     <orig>anti-forgery</orig>
+     <transl>антиподделка</transl>
     </text>
     <text id="CjkZhuang">
-     <orig>Zhuang {1}</orig>
-     <transl>чжуанское {1}</transl>
+     <orig>Zhuang</orig>
+     <transl>чжуанское</transl>
     </text>
     <text id="CjkVietnamese">
-     <orig>Vietnamese {1}</orig>
-     <transl>вьетнамское {1}</transl>
+     <orig>Vietnamese</orig>
+     <transl>вьетнамское</transl>
     </text>
    </group>
    <text id="NonChar">

@@ -1389,6 +1389,31 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 }
 
 
+QString mywiki::toString(const uc::Numeric& numc)
+{
+    QString buf;
+    switch (numc.fracType()) {
+    case uc::FracType::NONE:        // should not happen
+    case uc::FracType::INTEGER:
+        str::append(buf, numc.num);
+        break;
+    case uc::FracType::VULGAR:
+        str::append(buf, numc.num);
+        str::append(buf, "/");
+        str::append(buf, numc.denom);
+        break;
+    case uc::FracType::DECIMAL: {
+            auto val = static_cast<double>(numc.num) / numc.denom;
+            buf = QString::number(val);
+            buf.replace('.', QChar{loc::active::numfmt.decimalPoint});
+        } break;
+    }
+    if (numc.altInt != 0) {
+        buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), numc.altInt));
+    }
+    return buf;
+}
+
 namespace {
 
     void appendSubhead(QString& text, std::string_view key)
@@ -1616,33 +1641,12 @@ namespace {
         sp.sep();
         appendValuePopup(text, cp.category(), "Prop.Bullet.Type", "pc");
 
-        // Numeric value
-        auto& numc = cp.numeric();
-        if (numc.isPresent()) {
+        // Numeric value        
+        if (auto& numc = cp.numeric(); numc.isPresent()) {
             sp.sep();
             appendNonBullet(text, numc.type().locKey,
                     "<a href='pt:number' class='popup'>", "</a>");
-            QString buf;
-            switch (numc.fracType()) {
-            case uc::FracType::NONE:        // should not happen
-            case uc::FracType::INTEGER:
-                str::append(buf, numc.num);
-                break;
-            case uc::FracType::VULGAR:
-                str::append(buf, numc.num);
-                str::append(buf, "/");
-                str::append(buf, numc.denom);
-                break;
-            case uc::FracType::DECIMAL: {
-                    auto val = static_cast<double>(numc.num) / numc.denom;
-                    buf = QString::number(val);
-                    buf.replace('.', QChar{loc::active::numfmt.decimalPoint});
-                } break;
-            }
-            if (numc.altInt != 0) {
-                buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), numc.altInt));
-            }
-            text += buf;
+            text += mywiki::toString(numc);
         }
 
         // Bidi writing

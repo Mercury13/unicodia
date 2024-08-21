@@ -3,7 +3,7 @@
 
 uc::MultiResult uc::doRequest(const Request& rq)
 {
-    uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.ecVersion());
+    uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.ecVersion(), rq.primaryObj());
 
     const uc::Block* oldBlock = nullptr;
     uc::SearchGroup* lastGroup = nullptr;
@@ -67,4 +67,14 @@ bool uc::FieldRequest::isOk(const Cp& cp) const
     if (fields.isNumber && !cp.numeric().isPresent())
         return false;
     return true;
+}
+
+
+uc::PrimaryObj uc::FieldRequest::primaryObj() const
+{
+    // Checks for future remakes
+    static_assert((int)uc::PrimaryObj::DFLT == (int)false);
+    static_assert((int)uc::PrimaryObj::NUMERIC == (int)true);
+    // The most optimized version for this checks
+    return static_cast<uc::PrimaryObj>(fields.isNumber);
 }

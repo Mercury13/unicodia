@@ -673,11 +673,14 @@ size_t SearchModel::groupSizeAt(size_t iGroup) const
 }
 
 
-void SearchModel::set(uc::ReplyStyle st, uc::EcVersion ver, SafeVector<uc::SearchGroup>&& x)
+void SearchModel::set(
+        uc::ReplyStyle st, uc::EcVersion ver, uc::PrimaryObj obj,
+        SafeVector<uc::SearchGroup>&& x)
 {
     beginResetModel();
     style = st;
     version = ver;
+    primaryObj = obj;
     groups = std::move(x);
     endResetModel();
 }
@@ -775,6 +778,26 @@ QVariant SearchModel::groupData(size_t index, int role) const
 }
 
 
+namespace {
+
+    QString toNumeric(const uc::SearchLine& line)
+    {
+        if (line.code < uc::CAPACITY) {
+            if (auto& cp = uc::cpsByCode[line.code]) {
+                if (auto& num = cp->numeric(); num.isPresent()) {
+                    QString r = loc::get(uc::numTypeInfo[num.ecType].searchLocKey);
+                    r += ' ';
+                    r += mywiki::toString(num);
+                    return r;
+                }
+            }
+        }
+        return {};
+    }
+
+}   // anon namespace
+
+
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
     if (index.internalId() == GROUP) {
@@ -815,11 +838,21 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     s += buf;
                 }
             }
-            if (!line.triggerName.empty()) {
-                // Triggered alt. name
-                s += ": ";
-                s += str::toQ(line.triggerName);
-            };
+            switch (primaryObj) {
+            case uc::PrimaryObj::NUMERIC:
+                if (auto sNum = toNumeric(line); !sNum.isEmpty()) {
+                    s += ": ";
+                    s += sNum;
+                }
+                break;
+            case uc::PrimaryObj::DFLT:
+                if (!line.triggerName.empty()) {
+                    // Triggered alt. name
+                    s += ": ";
+                    s += str::toQ(line.triggerName);
+                };
+                break;
+            }
             s += '\n';
             switch (line.type) {
             case uc::CpType::EXISTING:
@@ -2004,7 +2037,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     case uc::SearchError::OK: {            
             bool hasSmth = x.hasSmth();
             ui->treeSearch->setFlat(x.style == uc::ReplyStyle::FLAT);
-            searchModel.set(x.style, x.version, std::move(x.groups));
+            searchModel.set(x.style, x.version, x.primaryObj, std::move(x.groups));
             openSearch();
             ui->treeSearch->setFocus();
             if (hasSmth) {

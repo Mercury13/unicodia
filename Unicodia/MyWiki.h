@@ -20,6 +20,7 @@ namespace str {
 }
 
 namespace uc {
+    class Numeric;
     class BidiClass;
     class Category;
     class Font;
@@ -142,5 +143,6 @@ namespace mywiki {
     bool isEngTermShown(const uc::Term& term);
 
     void hackDocument(QTextDocument* doc);
+    QString toString(const uc::Numeric& numc);
 
 }   // namespace mywiki

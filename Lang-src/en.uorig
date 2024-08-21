@@ -8122,25 +8122,25 @@
    <group id="Num">
     <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
     <text id="Digit">
-     <orig>digit {1}</orig>
+     <orig>digit</orig>
     </text>
     <text id="SpecDigit">
-     <orig>special digit {1}</orig>
+     <orig>special digit</orig>
     </text>
     <text id="Number">
-     <orig>number {1}</orig>
+     <orig>number</orig>
     </text>
     <text id="CjkRare">
-     <orig>rarely {1}</orig>
+     <orig>rarely</orig>
     </text>
     <text id="CjkAccount">
-     <orig>anti-forgery {1}</orig>
+     <orig>anti-forgery</orig>
     </text>
     <text id="CjkZhuang">
-     <orig>Zhuang {1}</orig>
+     <orig>Zhuang</orig>
     </text>
     <text id="CjkVietnamese">
-     <orig>Vietnamese {1}</orig>
+     <orig>Vietnamese</orig>
     </text>
    </group>
    <text id="NonChar">

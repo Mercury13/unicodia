@@ -178,16 +178,19 @@ static_assert(std::size(uc::categoryInfo) == static_cast<int>(uc::EcCategory::NN
 const uc::Category* uc::findCategory(std::string_view x)
     { return findInArray(x, categoryInfo); }
 
+#define NUM_RAW(x) { .locKey = "Prop.Num." x, .searchLocKey = "Search.Num." x }
+
 constexpr uc::NumType numTypeRawInfo[] {
-    { {} },
-    { "Prop.Num.Digit" },
-    { "Prop.Num.SpecDigit" },
-    { "Prop.Num.Number" },
-    { "Prop.Num.CjkRare" },
-    { "Prop.Num.CjkAccount" },
-    { "Prop.Num.CjkZhuang" },
-    { "Prop.Num.CjkVietnamese" },
+    { .locKey = {}, .searchLocKey = {} },
+    NUM_RAW("Digit"),
+    NUM_RAW("SpecDigit"),
+    NUM_RAW("Number"),
+    NUM_RAW("CjkRare"),
+    NUM_RAW("CjkAccount"),
+    NUM_RAW("CjkZhuang"),
+    NUM_RAW("CjkVietnamese"),
 };
+#undef NUM_RAW
 
 constinit const ec::Array<uc::NumType, uc::EcNumType> uc::numTypeInfo {
     ec::ARRAY_INIT, numTypeRawInfo
