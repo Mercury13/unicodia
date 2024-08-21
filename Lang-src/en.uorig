@@ -8119,6 +8119,30 @@
      <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
     </text>
    </group>
+   <group id="Num">
+    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
+    <text id="Digit">
+     <orig>digit {1}</orig>
+    </text>
+    <text id="SpecDigit">
+     <orig>special digit {1}</orig>
+    </text>
+    <text id="Number">
+     <orig>number {1}</orig>
+    </text>
+    <text id="CjkRare">
+     <orig>rarely {1}</orig>
+    </text>
+    <text id="CjkAccount">
+     <orig>anti-forgery {1}</orig>
+    </text>
+    <text id="CjkZhuang">
+     <orig>Zhuang {1}</orig>
+    </text>
+    <text id="CjkVietnamese">
+     <orig>Vietnamese {1}</orig>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
    </text>

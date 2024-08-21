@@ -11790,6 +11790,37 @@
      <transl>{1}, розуніфікована писемність</transl>
     </text>
    </group>
+   <group id="Num">
+    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
+    <text id="Digit">
+     <orig>digit {1}</orig>
+     <transl>цифра {1}</transl>
+    </text>
+    <text id="SpecDigit">
+     <orig>special digit {1}</orig>
+     <transl>спеціальна цифра {1}</transl>
+    </text>
+    <text id="Number">
+     <orig>number {1}</orig>
+     <transl>число {1}</transl>
+    </text>
+    <text id="CjkRare">
+     <orig>rarely {1}</orig>
+     <transl>рідко {1}</transl>
+    </text>
+    <text id="CjkAccount">
+     <orig>anti-forgery {1}</orig>
+     <transl>антипідробка {1}</transl>
+    </text>
+    <text id="CjkZhuang">
+     <orig>Zhuang {1}</orig>
+     <transl>чжуанське {1}</transl>
+    </text>
+    <text id="CjkVietnamese">
+     <orig>Vietnamese {1}</orig>
+     <transl>в’єтнамське {1}</transl>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
     <transl>Викинута позиція</transl>
