@@ -58,6 +58,8 @@ These fonts are taken to Unicodia without author’s consent:
 * Author is surely SIL, even if found elsewhere. Example: Toto
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
+There’s no special policy for CJK Han ideographs, but mainland Chinese is preferred. The font I use sometimes recreates mainland ideographs even if unseen in Chinese bases: 25581, 2561E
+
 ## Language
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
 
