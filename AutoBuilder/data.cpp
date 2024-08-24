@@ -1986,12 +1986,9 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x266D, 0x266F },     // Misc — use Funky font on musical symbols
     { 0x2C7C },             // Clipped below in Cambria
     // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
-    { 0x3C43  },   // CJK A: a single char redrawn in U15 and already present in BS
-    { 0x20048 },   // CJK B, some diffs between versons, want G (BS)
-    { 0x22ACF },   // A single char redrawn in U15 and already present in BS
-    { 0x23F4E },   // 23F4E is G U3, SimSun shows T, BS OK
-    { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
-    { 0x2B92C },   // CJK E: redrawn in U16, BS OK (parallel lines)
+    // As BS is now primary font, destroying everything
+    { 0x2561E },    // CJK B: BS drew a hypotethical Chinese version
+    { 0x256A1 },    // CJK B: SimSun-B drew more canonical glyph
 
     // Mathematical: Cambria → Funky
     { 0x220F, 0x2211 },     // Big sums and products
