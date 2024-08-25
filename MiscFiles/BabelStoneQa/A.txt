@@ -1,0 +1,399 @@
+C = mainland China
+T = traditional/Taiwan
+K = South Korea
+Kp = North Korea
+
+3402: J, OK
+3403: K, OK
+3407: K, OK
+3408: K, contains that strange radical 5165, hypothetical C version, SimSun same
+3409: K, OK
+340A: K, OK
+340B: K, OK
+340D: K, OK
+340E: K, contains 6587, hypothetical C version, SimSun same
+340F: K, OK
+3410: K, OK
+3411: K, OK
+3412: K, OK
+3413: K, OK
+3414: K, OK
+3415: K, OK
+3417: K, OK
+3418: K, OK
+3419: K, OK
+341A: K, OK
+341B: K, OK
+341D: K, OK
+341E: K, OK
+341F: K, contains 975E, hypothetical C version, SimSun same
+3420: K, contains 4E73, hypothetical C version, SimSun same
+3422: K, contains 4E73, hypothetical C version, SimSun same
+3423: K, contains 5EAB, hypothetical C version, SimSun same
+3425: K, OK
+3426: K, OK
+3427: J, OK
+342A: K, contains 4EA0, hypothetical C version, SimSun same
+3436: TJ, OK
+343F: K, OK
+3440: KH, OK
+3451: T, OK
+3452: J, OK
+3453: TJ, OK
+3456: K, OK
+3461: K, OK
+3468: J, OK
+346A: J, OK
+346C: K, OK
+346D: K, OK
+3479: TJKp, OK
+348F: K, contains 5BD2, hypothetical C version, SimSun same
+3490: K, OK
+3497: T, OK
+34A2: K, OK
+34A3: K, contains 61C9, hypothetical C version, SimSun same
+34AF: TKH, purportedly contains 5149 (but strange right foot), looks like K, SimSun same, OK
+34B1: K, contains that strange radical 5165, hypothetical C version, SimSun same
+34BA: T, contains 4EBE, hypothetical C version, SimSun same
+34C0: K, OK
+34C1: JKH, OK
+34C7: TJ, contains 51AB, looks like J and hypothetical C, SimSun same, OK
+34D2: K, OK
+34D5: T, contains 51AB, hypothetical C version, SimSun same
+34D9: K, contains 6587, hypothetical C version, SimSun same
+34DB: TJ, OK
+34F0: K, contains 753B, hypothetical C version, SimSun K → TO SIMSUN
+34FF: K, contains 9ECD (but bottom-left differs), probably hypothetical C version, SimSun same → ???
+3514: K, OK
+3516: K, OK
+3518: T, strange slant but probably not a mistake, SimSun same
+351B: K, OK
+351F: J, OK
+352B: J, OK
+3532: T, contains 98E0 (unseen in T), hypothetical C version, SimSun same
+3540: TK, OK
+3553: JKpH, looks like J/H, SimSun same, OK
+3554: TKp, OK
+355D: J, OK
+357E: K, contains 53F1, hypothetical C version, SimSun same
+357F: K, OK
+3588: TK, looks like K, SimSun same, OK
+358B: K, contains 53F1, hypothetical C version, SimSun same
+358C: K, contains 53F1, hypothetical C version, SimSun same
+358D: K, contains 53F1, hypothetical C version, SimSun same
+358E: K, contains 53F1, hypothetical C version, SimSun same
+3599: K, contains 53F1, hypothetical C version, SimSun same
+359A: K, contains 53F1, hypothetical C version, SimSun same
+359B: K, contains 53F1, hypothetical C version, SimSun same
+359C: K, contains 53F1, hypothetical C version, SimSun same
+359D: K, contains 53F1, hypothetical C version, SimSun same
+35AF: K, contains 53F1, hypothetical C version, SimSun same
+35B0: K, contains 53F1, hypothetical C version, SimSun same
+35B1: K, contains 591C, hypothetical C version, SimSun same
+35B2: K, contains 53F1, hypothetical C version, SimSun same
+35B3: K, contains 53F1, hypothetical C version, SimSun same
+35B4: T, contains 82B4, hypothetical C version, SimSun same
+35D0: T, OK
+35DF: K, contains 53F1 + 6CE8, hypothetical C version, SimSun same
+35E0: K, contains 53F1, hypothetical C version, SimSun same
+35E1: K, contains 8279 + 2A741 (which, in turn, contains 53F1), hypothetical C version, SimSun same
+35EE: K, lazy to find part but surely hypothetical C version, SimSun same
+35EF
+35F8
+35F9
+360F
+3612
+3618
+361F
+362F
+363E
+3646
+3656
+366D
+367D
+367F
+3684
+3688
+368E
+3691
+36CB
+36CC
+36E1
+372D
+3736
+3746
+374D
+3773
+3777
+378D
+379D
+37AE
+37AF
+37D5
+37E1
+37E3
+37E5
+3803
+3818
+381E
+382B
+382C
+3830
+3833
+384E
+3864
+386C
+3887
+388C
+3890
+38A2
+38A4
+38B1
+38B9
+38BF
+38CA
+38D5
+38D6
+38D7
+38E1
+38E8
+38E9
+38EE
+38F3
+38F4
+38F8
+38F9
+38FA
+3900
+393C
+3958
+3959
+396B
+39AE
+39B3
+39DE
+39E0
+3A08
+3A3E
+3A40
+3A41
+3A42
+3A98
+3AB2
+3AB3
+3ABF
+3AC6
+3AC7
+3AC8
+3AC9
+3ACC
+3AD6
+3AEA
+3AED
+3AEE
+3AFE
+3AFF
+3B00
+3B16
+3B27
+3B28
+3B3A
+3B45
+3B46
+3B50
+3B57
+3B66
+3B74
+3B88
+3B8A
+3BBD
+3BD1
+3BD2
+3BF5
+3BFD
+3C13
+3C1C
+3C38
+3C50
+3C51
+3C53
+3C5D
+3C77
+3CA9
+3CAE
+3CD3
+3CDF
+3CE3
+3CF2
+3CF3
+3D0C
+3D0D
+3D20
+3D22
+3D23
+3D24
+3D39
+3D3A
+3D3B
+3D48
+3D49
+3D5B
+3D5C
+3D7C
+3D82
+3D83
+3D8A
+3D8B
+3D90
+3D99
+3D9A
+3D9D
+3DA2
+3DAA
+3DB1
+3DB7
+3DC1
+3DDC
+3DDD
+3DDE
+3DE9
+3DF1
+3DF2
+3DFC
+3DFD
+3E03
+3E14
+3E34
+3E3F
+3E70
+3E93
+3EAF
+3EB6
+3EB8
+3EBD
+3EBE
+3EC6
+3EC7
+3EC8
+3ED0
+3EDA
+3EDB
+3EDC
+3EE3
+3EE4
+3EE5
+3EE6
+3EE8
+3EE9
+3EF4
+3EFB
+3F00
+3F01
+3F03
+3F05
+3F54
+3F57
+3F5E
+3F76
+3FB1
+3FB3
+3FD0
+400B
+400C
+4040
+4061
+40C3
+40C6
+40D0
+40E8
+40EF
+40FC
+4117
+411E
+4123
+4135
+416B
+4186
+4187
+418B
+41B4
+41CA
+41F3
+41FF
+4264
+42A2
+42C5
+42C6
+42C7
+42DD
+42DE
+434F
+435E
+439B
+439E
+43ED
+43EE
+4452
+4491
+44C0
+44C1
+44D3
+4529
+452B
+4543
+4576
+458D
+45F3
+4616
+464D
+465D
+46A4
+4733
+473F
+4749
+4772
+4787
+478A
+47F3
+4844
+488F
+4898
+48B7
+48C9
+48ED
+495C
+4965
+4966
+4974
+4979
+49B0
+49CF
+4A03
+4A36
+4A9F
+4AA3
+4AAA
+4B4F
+4B5C
+4B8D
+4BE9
+4BFB
+4C2E
+4C33
+4C36
+4C68
+4C6A
+4C87
+4C88
+4CB6
+4CB7
+4D28
+4DB7
+4DB8
+4DB9
+4DBA
+4DBB
+4DBC
+4DBD
+4DBE
+4DBF

@@ -86,6 +86,29 @@ struct BsResult {
     unsigned nNonChinese = 0;
 };
 
+class CpTrigger {
+public:
+    CpTrigger(std::ostream& o, char32_t st, char32_t en, std::string_view na)
+        : os(o), start(st), end(en), name(na) {}
+    CpTrigger(CpTrigger&&) noexcept = default;
+    CpTrigger(const CpTrigger&) = delete;
+    void operator () (char32_t x);
+private:
+    std::ostream& os;
+    char32_t start, end;
+    std::string_view name;
+    bool isCocked = true;
+};
+
+void CpTrigger::operator () (char32_t x)
+{
+    if (isCocked && x >= start && x <= end) {
+        os << name << '\n';
+        isCocked = false;
+    }
+}
+
+
 BsResult readBabelStoneFont(const std::unordered_set<char32_t>& nonChinese)
 {
     MemFont font;
@@ -94,10 +117,25 @@ BsResult readBabelStoneFont(const std::unordered_set<char32_t>& nonChinese)
 
     BsResult r;
     std::ofstream os("nonChinese.txt");
+    std::vector<CpTrigger> trigs;
+    trigs.emplace_back(os, 0x4E00,  0x9FFF,  "CJK main ideographs");
+    trigs.emplace_back(os, 0xF900,  0xFAFF,  "CJK compat ideographs");
+    trigs.emplace_back(os, 0x3400,  0x4DBF,  "CJK ideographs A");
+    trigs.emplace_back(os, 0x20000, 0x2A6DF, "CJK ideographs B");
+    trigs.emplace_back(os, 0x2A700, 0x2B73F, "CJK ideographs C");
+    trigs.emplace_back(os, 0x2B740, 0x2B81F, "CJK ideographs D");
+    trigs.emplace_back(os, 0x2B820, 0x2CEAF, "CJK ideographs E");
+    trigs.emplace_back(os, 0x2CEB0, 0x2EBEF, "CJK ideographs F");
+    trigs.emplace_back(os, 0x2F800, 0x2FA1F, "CJK compat supp");
+    trigs.emplace_back(os, 0x30000, 0x3134A, "CJK ideographs G");
+    trigs.emplace_back(os, 0x31350, 0x323AF, "CJK ideographs H");
+    trigs.emplace_back(os, 0x2EBF0, 0x2EE5F, "CJK ideographs I");
     font.traverseCps([&](char32_t cp, unsigned) {
         ++r.nGlyphs;
         if (nonChinese.contains(cp)) {
             ++r.nNonChinese;
+            for (auto& tr : trigs)
+                tr(cp);
             char buf[40];
             snprintf(buf, std::size(buf), "%X" "\n", int(cp));
             os << buf;
