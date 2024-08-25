@@ -118,7 +118,7 @@ bool load(QIODevice& f);
 
 bool MemFont::load(const std::filesystem::path& fname)
 {
-    std::ifstream is(fname);
+    std::ifstream is(fname, std::ios::binary);
     if (!is.is_open())
         return false;
     return load(is);
