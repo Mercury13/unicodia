@@ -1987,6 +1987,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2C7C },             // Clipped below in Cambria
     // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
     // As BS is now primary font, destroying everything
+    { 0x34F0  },    // CJK A: BS drew a hypotethical Chinese version
     { 0x2561E },    // CJK B: BS drew a hypotethical Chinese version
     { 0x256A1 },    // CJK B: SimSun-B drew more canonical glyph
 
