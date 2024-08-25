@@ -134,6 +134,7 @@ private:
     mf::Block readBlockEntry();
     void recomputeChecksum(const mf::Block& b);
     void loadCmaps();
+    /// Function common for Qt and Filesystem
     bool finishLoading();
     /// @return [+] cmap is good
     bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
