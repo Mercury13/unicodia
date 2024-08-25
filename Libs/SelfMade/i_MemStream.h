@@ -6,6 +6,8 @@
 
 #include "u_Array.h"
 
+#include <cstdint>
+
 ///
 /// \brief The Mems class
 ///   Simple memory stream; need stream-like bhv because of Motorola data

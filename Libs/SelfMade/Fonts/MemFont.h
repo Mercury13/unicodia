@@ -5,6 +5,7 @@
 
 // C++
 #include <cstdint>
+#include <filesystem>
 
 // STL
 #include <string_view>
@@ -16,6 +17,7 @@
 #include "function_ref.hpp"
 
 class QIODevice;
+class QString;
 
 namespace mf {
 
@@ -79,8 +81,12 @@ class MemFont
 {
 public:
     void clear();
+    bool load(const std::filesystem::path& fname);
+    bool load(std::istream& f);
+#ifdef QT_CORE_LIB
     bool load(const QString& fname);
     bool load(QIODevice& f);
+#endif
 
     // High-level bhv
     mf::Block2 findBlock(mf::Char4 name);
@@ -98,7 +104,9 @@ public:
     /// prefer over nChildren
     size_t nBlocks() const noexcept { return fBlocks.size(); }
     Buf1d<const char> data() const noexcept { return slave.data(); }
+#ifdef QT_CORE_LIB
     auto qdata() const { return slave.qdata(); }
+#endif
     Mems& stream() & noexcept { return slave; }
     Mems&& stream() && noexcept { return std::move(slave); }
     Mems&& giveStream() noexcept { return std::move(slave); }
@@ -126,6 +134,7 @@ private:
     mf::Block readBlockEntry();
     void recomputeChecksum(const mf::Block& b);
     void loadCmaps();
+    bool finishLoading();
     /// @return [+] cmap is good
     bool traverseSegmentToDelta(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;
     bool traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) const;

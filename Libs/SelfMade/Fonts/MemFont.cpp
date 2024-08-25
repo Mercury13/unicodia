@@ -3,9 +3,11 @@
 
 // STL
 #include <iostream>
+#include <fstream>
 
-// Qt
-#include <QFile>
+#ifdef QT_CORE_LIB
+    #include <QFile>
+#endif
 
 constexpr bool debugMemFont = false;
 
@@ -92,12 +94,34 @@ bool mf::Cmap::isSupported() const noexcept
 ///// MemFont //////////////////////////////////////////////////////////////////
 
 
-bool MemFont::load(const QString& fname)
+#ifdef QT_CORE_LIB
+    bool MemFont::load(const QString& fname)
+    {
+        QFile f(fname);
+        if (!f.open(QIODevice::ReadOnly))
+            return false;
+        return load(f);
+    }
+
+    bool MemFont::load(QIODevice& f)
+    {
+        clear();
+        auto sz = f.size();
+        slave.alloc(sz);
+        f.read(slave.beg(), sz);
+        return finishLoading();
+    }
+#endif
+
+bool load(QIODevice& f);
+
+
+bool MemFont::load(const std::filesystem::path& fname)
 {
-    QFile f(fname);
-    if (!f.open(QIODevice::ReadOnly))
+    std::ifstream is(fname);
+    if (!is.is_open())
         return false;
-    return load(f);
+    return load(is);
 }
 
 
@@ -107,18 +131,28 @@ void MemFont::clear()
     fCmaps.clear();
 }
 
-bool MemFont::load(QIODevice& f)
+
+bool MemFont::finishLoading()
 {
-    clear();
-    auto sz = f.size();
-    slave.alloc(sz);
-    f.read(slave.beg(), sz);
     bool b = readDir();
     if (b) {
         loadCmaps();
     }
     return b;
 }
+
+
+bool MemFont::load(std::istream& f)
+{
+    clear();
+    f.seekg(0, std::ios_base::end);
+    auto sz = f.tellg();
+    f.seekg(0);
+    slave.alloc(sz);
+    f.read(slave.beg(), sz);
+    return finishLoading();
+}
+
 
 mf::Block MemFont::readBlockEntry()
 {
