@@ -1,6 +1,8 @@
 #pragma once
 
-#include <QByteArray>
+#ifdef QT_CORE_LIB
+    #include <QByteArray>
+#endif
 
 #include "u_Array.h"
 
@@ -31,7 +33,9 @@ public:
         { Buf1d<char>d1{ dd.size(), const_cast<char*>(dd.buffer()) };
           d.borrow(d1); p = d1.begin(); canWrite = false; }
 
+#ifdef QT_CORE_LIB
     QByteArray qdata() const { return QByteArray::fromRawData(d.buffer(), d.size()); }
+#endif
 
     /// @return  ptr to beginning
     char* beg() noexcept { return d.begin(); }
