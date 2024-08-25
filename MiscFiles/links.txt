@@ -56,10 +56,14 @@ https://www.endangeredalphabets.net/alphabets/vai/ — info on rare scripts
 Лоукотка Ч., Развитие письма, М., 1950
 
 
+DATA BEYOND UNICODE
+https://github.com/cjkvi/cjkvi-ids — CJK bases
+https://html.spec.whatwg.org/multipage/named-characters.html — named chars in HTML
+
+
 OTHERS
 
 https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — basic innards of TTF file
-https://dev.w3.org/html5/html-author/charref — names chars in HTML
 https://docs.microsoft.com/en-us/typography/fonts/windows_7_font_list — lists of fonts W7/10
 http://www.kreativekorp.com/ucsur/ — Unicode ConScript Registry
 
