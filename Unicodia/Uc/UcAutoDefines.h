@@ -461,6 +461,8 @@ namespace uc {
 
     extern const uc::OldCompSpan oldCompSpans[];
 
+    /// We sync interface and implementation here, but let it be.
+    /// If becomes complex → decouple
     using SetOfChar = std::unordered_set<char32_t>;
 
 }   // namespace uc
