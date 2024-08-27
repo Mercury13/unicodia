@@ -317,7 +317,7 @@ void MemFont::mangle(std::string_view bytes)
     recomputeChecksum(*v.b);
 }
 
-bool MemFont::dehintGlyph(unsigned iGlyph)
+mf::GlyphData MemFont::glyphData(unsigned iGlyph)
 {
     auto vHead = rqBlock("head", 0x34);
 
@@ -377,31 +377,41 @@ bool MemFont::dehintGlyph(unsigned iGlyph)
     }
     // Really have data for that glyph?
     if (glyfOffset >= nextOffset)
-        return false;
+        return {};
 
     //
     // NOW READ glyf
     //
     auto vGlyf = rqBlock("glyf", nextOffset);
     auto data = vGlyf.toWriteable();
-    blk.borrowRW(data);
-    blk.seek(glyfOffset);
 
-    int16_t nContours = blk.readMW();
+    return {
+        .glyph = data.sliceMid(glyfOffset, nextOffset),
+        .entireBlock = vGlyf.b };
+}
+
+bool MemFont::dehintGlyph(unsigned iGlyph)
+{
+    auto glydata = glyphData(iGlyph);
+    if (!glydata)
+        return false;
+
+    Mems gly(glydata.glyph);
+    int16_t nContours = gly.readMW();
     if (nContours < 0)  // composite glyph
         return false;
-    blk.skip(8 + (nContours << 1));    // xmin, ymin, xmax, ymax, endPts
-    auto posInstrLength = blk.pos();
-    auto instrLength = blk.readMW();
+    gly.skip(8 + (nContours << 1));    // xmin, ymin, xmax, ymax, endPts
+    auto posInstrLength = gly.pos();
+    auto instrLength = gly.readMW();
     if (instrLength == 0)
         return false;
 
     // Now rewrite!
-    blk.seek(posInstrLength);
-    blk.writeMW(0);
-    auto pDest = blk.ptr();
+    gly.seek(posInstrLength);
+    gly.writeMW(0);
+    auto pDest = gly.ptr();
     auto pSrc = pDest + instrLength;
-    auto pEnd = data.begin() + nextOffset;
+    auto pEnd = gly.end();
     std::copy(pSrc, pEnd, pDest);
 
     // Version 2: fill with NOP-like instructions
@@ -410,7 +420,42 @@ bool MemFont::dehintGlyph(unsigned iGlyph)
     //     blk.writeB(0x7A);
     // }
 
-    recomputeChecksum(*vGlyf.b);
+    recomputeChecksum(*glydata.entireBlock);
+    return true;
+}
+
+namespace {
+
+    void movePoints(Mems& st, unsigned nPoints, int dx, int dy)
+    {
+        auto nBytes = size_t(nPoints) << 2;
+        if (st.remainder() < nBytes)
+            throw std::logic_error("[movePoints] Not enough bytes");
+        for (unsigned i = 0; i < nPoints; ++i) {
+            auto x = st.readMW();
+            auto y = st.readMW();
+            st.seekBy(-4);
+            st.writeMW(x + dx);
+            st.writeMW(y + dy);
+        }
+    }
+
+}   // anon namespace
+
+bool MemFont::moveGlyphBy(unsigned iGlyph, int dx, int dy)
+{
+    auto glydata = glyphData(iGlyph);
+    if (!glydata)
+        return false;
+
+    Mems gly(glydata.glyph);
+    /// @todo [future] Do smth with composite glyphs
+    int16_t nContours = gly.readMW();
+    if (nContours < 0)  // composite glyph
+        return false;
+
+    // Min/max
+    movePoints(gly, 2, dx, dy);
     return true;
 }
 

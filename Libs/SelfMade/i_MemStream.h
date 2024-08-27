@@ -65,6 +65,10 @@ public:
     /// @throw  too big x
     void seek(size_t x);
 
+    /// Seeks carriage to position pos() + x
+    /// @throw  x does not fit
+    void seekBy(ptrdiff_t x);
+
     /// Reads dsize bytes, native byte order
     /// @throw too big dsize
     void read(char* data, size_t dsize);

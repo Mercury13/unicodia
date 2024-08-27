@@ -74,6 +74,13 @@ namespace mf {
     /// unsigned = glyph
     using CbCpGlyph = tl::function_ref<void(char32_t, unsigned)>;
 
+    struct GlyphData {
+        Buf1d<char> glyph;
+        const Block* entireBlock = nullptr;
+
+        operator bool() const noexcept { return entireBlock; }
+    };
+
 }   // namespace mf
 
 
@@ -97,8 +104,9 @@ public:
     /// @param  iGlyph   index of glyph
     /// @warning   NOT CODE POINT
     /// @return  [+] dehinting actually happened
-    ///          (errors are indicated with exceptions)
+    ///          (errors are indicated with exceptions)    
     bool dehintGlyph(unsigned iGlyph);
+    bool moveGlyphBy(unsigned iGlyph, int dx, int dy);
 
     // Misc info
     /// prefer over nChildren
@@ -125,6 +133,7 @@ public:
     ///           regardless of format (of course, if supported)
     ///           The first if several found
     const mf::Cmap* getBestCmap() const;
+    mf::GlyphData glyphData(unsigned iGlyph);
 private:
     Mems slave;
     SafeVector<mf::Block> fBlocks;

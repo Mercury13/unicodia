@@ -82,6 +82,11 @@ void Mems::seek(size_t x)
     p = beg() + x;
 }
 
+void Mems::seekBy(ptrdiff_t x)
+{
+    seek(pos() + x);
+}
+
 namespace {
 
     void throwRead(unsigned long long dsize, unsigned long long pos,
