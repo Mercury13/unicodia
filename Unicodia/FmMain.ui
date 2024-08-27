@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -562,7 +562,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_8">
+         <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,0,1,0,0,0">
           <item>
            <widget class="QSvgWidget" name="wiLogo" native="true">
             <property name="sizePolicy">

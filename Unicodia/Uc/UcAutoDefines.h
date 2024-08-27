@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <string_view>
 #include <span>
+#include <unordered_set>
 
 // Qt
 #include <QString>
@@ -459,6 +460,8 @@ namespace uc {
     inline bool operator < (char32_t x, const OldCompSpan& y) { return (x < y.firstCp); }
 
     extern const uc::OldCompSpan oldCompSpans[];
+
+    using SetOfChar = std::unordered_set<char32_t>;
 
 }   // namespace uc
 

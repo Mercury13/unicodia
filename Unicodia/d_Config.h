@@ -9,6 +9,9 @@
 // Qt
 #include "QRect"
 
+// Unicode
+#include "UcAutoDefines.h"
+
 // Libs
 #include "u_Version.h"
 #include "u_EnumSize.h"
@@ -67,9 +70,10 @@ namespace config {
         bool contains(char32_t code) const { return ndx.contains(code); }
         [[nodiscard]] bool empty() const { return fCodes.empty(); }
         bool isEmpty() const { return fCodes.empty(); }
+        const uc::SetOfChar& index() const { return ndx; }
     private:
         std::vector<char32_t> fCodes;
-        std::unordered_set<char32_t> ndx;
+        uc::SetOfChar ndx;
     };
 
     namespace window {

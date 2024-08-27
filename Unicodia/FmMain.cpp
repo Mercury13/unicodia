@@ -1294,7 +1294,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     sortBar->addWidget(btSort);
 
     // Create toolbar
-    btAddCpToFavs = ui->wiCharShowcase->addToolButton(ui->acAddCpToFavs);
+    btAddCpToFavs = ui->wiCharShowcase->addFavsButton(ui->acAddCpToFavs, config::favs.index());
     connect(ui->acAddCpToFavs, &QAction::triggered, this, &This::acAddCpToFavsTriggered);
 
     // Select index
@@ -1343,7 +1343,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // Create toolbar
     /// @todo [urgent] add to library
-    btAddLibToFavs = ui->wiLibShowcase->addToolButton(ui->acAddLibToFavs);
+    btAddLibToFavs = ui->wiLibShowcase->addFavsButton(ui->acAddLibToFavs, config::favs.index());
     connect(ui->acAddLibToFavs, &QAction::triggered, this, &This::acAddLibToFavsTriggered);
 
     // Select index
@@ -1445,7 +1445,7 @@ void FmMain::translateMe()
 {
     Form::translateMe();
 
-    // Actions taken from siblings
+    // Actions taken from likes
     ui->acAddLibToFavs->setText(ui->acAddCpToFavs->text());
 
     // Misc. widgets loaded from UI files
@@ -1730,10 +1730,6 @@ void FmMain::forceShowCp(MaybeChar ch)
 {
     ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, glyphSets);
 
-    // Add to favs
-    ui->acAddCpToFavs->setEnabled(ch.hasCp());
-    ui->acAddCpToFavs->setChecked(ch.hasCp() && config::favs.contains(ch.code));
-
     // Block
     int iBlock = ui->comboBlock->currentIndex();
     auto block = uc::blockOf(ch.code);
@@ -1766,6 +1762,7 @@ void FmMain::libChanged(const QModelIndex& current)
 {
     auto& node = libModel.nodeAt(current);
     ui->wiLibShowcase->set(node, ui->vwLibInfo, model.match);
+
     if (node.value.empty()) {
         // Cps
         libCpWidgets[0]->removeCp();
@@ -2341,6 +2338,7 @@ void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool dire
                 blinkAtFavs(initiator, loc::get("Common.Favs.Rem"));
             }
         }
+        widget->reenableFavs();
     }
 }
 

@@ -270,6 +270,7 @@ void WiShowcase::set(
         fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     }
 
+    reenableFavs();
     redrawSampleChar(glyphSets);
     redrawViewerCp(code, viewer);
 }
@@ -283,6 +284,16 @@ void WiShowcase::reset()
     ui->wiOsStyle->setNothing();
     ui->wiGlyphStyle->hide();
     fCurrChannel = uc::EcGlyphStyleChannel::NONE;
+}
+
+
+void WiShowcase::reenableFavs()
+{
+    if (!acFavs)
+        return;
+    auto dug = fShownObj.digCp();
+    acFavs->setEnabled(dug.has_value());
+    acFavs->setChecked(dug.has_value() && setFavs->contains(*dug));
 }
 
 
@@ -341,6 +352,7 @@ void WiShowcase::set(
         ui->lbCharCode->setText(ucText);
         ui->btCopy->setEnabled(true);
     }
+    reenableFavs();
     redrawViewerNode(node, viewer);
 }
 
@@ -403,4 +415,12 @@ QToolButton* WiShowcase::addToolButton(QAction* action)
     button->setDefaultAction(action);
     tb->addWidget(button);
     return button;
+}
+
+
+QToolButton* WiShowcase::addFavsButton(QAction* action, const uc::SetOfChar& favs)
+{
+    acFavs = action;
+    setFavs = &favs;
+    return addToolButton(action);
 }

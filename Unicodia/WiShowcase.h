@@ -3,6 +3,7 @@
 
 // C++
 #include <variant>
+#include <unordered_set>
 
 // Qt
 #include <QWidget>
@@ -118,10 +119,14 @@ public:
     QToolBar* toolbar();
     QHBoxLayout* toolbarLayout();
     QToolButton* addToolButton(QAction* action);
+    QToolButton* addFavsButton(QAction* action, const uc::SetOfChar& favs);
     void switchToLib();
+    void reenableFavs();
 private:
     Ui::WiShowcase *ui;
     QToolBar* fToolbar = nullptr;
+    QAction* acFavs = nullptr;
+    const uc::SetOfChar* setFavs = nullptr;
 
     ShownObj fShownObj;
     uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;
