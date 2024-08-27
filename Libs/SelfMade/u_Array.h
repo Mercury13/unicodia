@@ -557,10 +557,10 @@ void Buf1d<Elem>::borrowSpan(
 template <class Elem>
 Buf1d<Elem> Buf1d<Elem>::sliceBegEnd(size_t beg, size_t end) noexcept
 {
-    beg = std::min(beg, _size);
     end = std::min(end, _size);
     if (beg >= end)
         return {};
+    beg = std::min(beg, _size);
     return Buf1d<Elem>(end - beg, _ptr + beg);
 }
 
@@ -570,10 +570,10 @@ Buf1d<Elem> Buf1d<Elem>::sliceBegEnd(size_t beg, size_t end) noexcept
 template <class Elem>
 Buf1d<const Elem> Buf1d<Elem>::sliceBegEnd(size_t beg, size_t end) const noexcept
 {
-    beg = std::min(beg, _size);
     end = std::min(end, _size);
     if (beg >= end)
         return {};
+    beg = std::min(beg, _size);
     return Buf1d<const Elem>(end - beg, _ptr + beg);
 }
 
