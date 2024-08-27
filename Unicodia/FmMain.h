@@ -355,6 +355,7 @@ private:
     QFont fontBig, fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
+                *btAddLibToFavs = nullptr,
                 *btRemoveFromFavs = nullptr;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
@@ -467,7 +468,8 @@ private slots:
     void goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
-    void acAddToFavsTriggered(bool isChecked);
+    void acAddCpToFavsTriggered(bool isChecked);
+    void acAddLibToFavsTriggered(bool isChecked);
     void acRemoveFromFavsTriggered();
     void slotSkinToneQa();
 };

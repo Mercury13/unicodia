@@ -1294,13 +1294,8 @@ FmMain::InitBlocks FmMain::initBlocks()
     sortBar->addWidget(btSort);
 
     // Create toolbar
-    auto lay = ui->wiCharShowcase->toolbarLayout();
-    auto toolbar = new QToolBar(lay->parentWidget());
-    btAddCpToFavs = new QToolButton(toolbar);
-    btAddCpToFavs->setDefaultAction(ui->acAddCpToFavs);
-    toolbar->addWidget(btAddCpToFavs);
-    lay->addWidget(toolbar);
-    connect(ui->acAddCpToFavs, &QAction::triggered, this, &This::acAddToFavsTriggered);
+    btAddCpToFavs = ui->wiCharShowcase->addToolButton(ui->acAddCpToFavs);
+    connect(ui->acAddCpToFavs, &QAction::triggered, this, &This::acAddCpToFavsTriggered);
 
     // Select index
     ui->tableChars->setFocus();
@@ -1346,6 +1341,11 @@ void FmMain::initLibrary(const InitBlocks& ib)
             ui->treeLibrary, &This::copyCurrentLib, nullptr,
             ui->wiLibShowcase, ui->vwLibInfo);
 
+    // Create toolbar
+    /// @todo [urgent] add to library
+    btAddLibToFavs = ui->wiLibShowcase->addToolButton(ui->acAddLibToFavs);
+    connect(ui->acAddLibToFavs, &QAction::triggered, this, &This::acAddLibToFavsTriggered);
+
     // Select index
     auto index = libModel.index(0, 0);
     ui->treeLibrary->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
@@ -1378,12 +1378,7 @@ void FmMain::initFavs(const InitBlocks& ib)
             ui->wiFavsShowcase, ui->vwFavs);
 
     // Create toolbar
-    auto lay = ui->wiFavsShowcase->toolbarLayout();
-    auto tbFavs = new QToolBar(lay->parentWidget());
-    btRemoveFromFavs = new QToolButton(tbFavs);
-    btRemoveFromFavs->setDefaultAction(ui->acRemoveFromFavs);
-    tbFavs->addWidget(btRemoveFromFavs);
-    lay->addWidget(tbFavs);
+    btRemoveFromFavs = ui->wiFavsShowcase->addToolButton(ui->acRemoveFromFavs);
     connect(ui->acRemoveFromFavs, &QAction::triggered, this, &This::acRemoveFromFavsTriggered);
 }
 
@@ -1449,6 +1444,9 @@ namespace {
 void FmMain::translateMe()
 {
     Form::translateMe();
+
+    // Actions taken from siblings
+    ui->acAddLibToFavs->setText(ui->acAddCpToFavs->text());
 
     // Misc. widgets loaded from UI files
     ui->wiCharShowcase->translateMe();
@@ -2314,7 +2312,7 @@ void FmMain::blinkAtFavs(QWidget* initiator, const QString& text)
 
 void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool direction)
 {
-    if (auto cp = widget->shownObj().maybeCp()) {
+    if (auto cp = widget->shownObj().digCp()) {
         auto nOldRows = favsModel.rowCount();
         if (direction) {
             if (auto where = config::favs.add(*cp)) {
@@ -2347,9 +2345,15 @@ void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool dire
 }
 
 
-void FmMain::acAddToFavsTriggered(bool isChecked)
+void FmMain::acAddCpToFavsTriggered(bool isChecked)
 {
     addRemoveFromFavs(ui->wiCharShowcase, nullptr, isChecked);
+}
+
+
+void FmMain::acAddLibToFavsTriggered(bool isChecked)
+{
+    addRemoveFromFavs(ui->wiLibShowcase, nullptr, isChecked);
 }
 
 

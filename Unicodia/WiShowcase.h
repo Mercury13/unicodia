@@ -22,6 +22,8 @@ class QPushButton;
 class QLabel;
 class QTextBrowser;
 class QHBoxLayout;
+class QToolBar;
+class QToolButton;
 class WiOsStyle;
 class WiSample;
 class FontMatch;
@@ -52,11 +54,14 @@ public:
     /// Inherit all ctors
     using detail::ShownObjFather::ShownObjFather;
 
-    /// @return  code point, or null
+    /// @return  code point (if chose, or null
     [[nodiscard]] TinyOpt<char32_t> maybeCp() const;
     /// @return  code point
     /// @throw   what std::get throws if no code point
     [[nodiscard]] char32_t forceCp() const;
+
+    /// @return code point forcefully dug from shown object
+    [[nodiscard]] std::optional<char32_t> digCp() const;
 
     /// @return  node, or null
     [[nodiscard]] TinyOpt<const uc::LibNode*> maybeNode() const;
@@ -105,13 +110,18 @@ public:
              QTextBrowser* viewer,
              FontMatch& fonts);
     void reset();
+    /// Silently set shown object, w/o triggering anything
+    /// (we’ll trigger later when load L10n)
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
     void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
+    QToolBar* toolbar();
     QHBoxLayout* toolbarLayout();
+    QToolButton* addToolButton(QAction* action);
     void switchToLib();
 private:
     Ui::WiShowcase *ui;
+    QToolBar* fToolbar = nullptr;
 
     ShownObj fShownObj;
     uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;

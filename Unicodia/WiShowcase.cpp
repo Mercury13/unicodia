@@ -3,6 +3,8 @@
 
 // Qt
 #include <QTextBrowser>
+#include <QToolBar>
+#include <QToolButton>
 
 // Libs
 #include "u_Strings.h"
@@ -17,6 +19,9 @@
 
 // Wiki
 #include "MyWiki.h"
+
+// Painters
+#include "CharPaint/emoji.h"
 
 // Project-local
 #include "Skin.h"
@@ -41,6 +46,27 @@ char32_t ShownObj::forceCp() const
 
 const uc::LibNode* ShownObj::forceNode() const
     { return std::get<const uc::LibNode*>(*this); }
+
+std::optional<char32_t> ShownObj::digCp() const
+{
+    switch (clazz()) {
+    case ShownClass::NONE:
+        return std::nullopt;
+    case ShownClass::CP:
+        return forceCp();
+    case ShownClass::LIB: {
+            auto node = forceNode();
+            if (!node)
+                return std::nullopt;
+            auto q = EmojiPainter::getCp(node->value);
+            if (!q)
+                return std::nullopt;
+            return q.cp;
+        }
+    }
+    __builtin_unreachable();
+}
+
 
 
 ///// WiShowcase ///////////////////////////////////////////////////////////////
@@ -358,3 +384,23 @@ void WiShowcase::syncGlyphStyle(
 
 QHBoxLayout* WiShowcase::toolbarLayout()
     { return ui->layToolbar; }
+
+
+QToolBar* WiShowcase::toolbar()
+{
+    if (!fToolbar) {
+        auto lay = toolbarLayout();
+        fToolbar = new QToolBar(lay->parentWidget());
+        lay->addWidget(fToolbar);
+    }
+    return fToolbar;
+}
+
+QToolButton* WiShowcase::addToolButton(QAction* action)
+{
+    auto tb = toolbar();
+    auto button = new QToolButton(tb);
+    button->setDefaultAction(action);
+    tb->addWidget(button);
+    return button;
+}
