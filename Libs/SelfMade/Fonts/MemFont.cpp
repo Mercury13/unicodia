@@ -386,7 +386,7 @@ mf::GlyphData MemFont::glyphData(unsigned iGlyph)
     auto data = vGlyf.toWriteable();
 
     return {
-        .glyph = data.sliceMid(glyfOffset, nextOffset),
+        .glyph = data.sliceBegEnd(glyfOffset, nextOffset),
         .entireBlock = vGlyf.b };
 }
 

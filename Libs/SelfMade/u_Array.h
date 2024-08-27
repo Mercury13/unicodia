@@ -484,6 +484,15 @@ struct Buf1d
 
     Buf1d<const Elem> sliceMidC(size_t start, size_t subsize) const noexcept
         { return sliceMid(start, subsize); }
+
+    //------------------------------------------------------------------------//
+    ///  @return  Buf1d of [beg .. end)
+    ///  @warning  Never throws!
+    Buf1d<Elem> sliceBegEnd(size_t beg, size_t end) noexcept;
+    Buf1d<const Elem> sliceBegEnd(size_t beg, size_t end) const noexcept;
+    Buf1d<const Elem> sliceBegEndC(size_t beg, size_t end) const noexcept
+        { return sliceBegEnd(beg, end); }
+
 };  // template Buf1d
 
 
@@ -539,6 +548,33 @@ void Buf1d<Elem>::borrowSpan(
             + ".." + _i2a(aEnd) + ", allowed=0.." + _i2a(aSrc.size()));
 #endif
     borrow(aEnd - aStart, aSrc.buffer() + aStart);
+}
+
+
+//------------------------------------------------------------------------//
+///  @return  Buf1d of [start .. start+subsize)
+///  @warning  Never throws!
+template <class Elem>
+Buf1d<Elem> Buf1d<Elem>::sliceBegEnd(size_t beg, size_t end) noexcept
+{
+    beg = std::min(beg, _size);
+    end = std::min(end, _size);
+    if (beg >= end)
+        return {};
+    return Buf1d<Elem>(end - beg, _ptr + beg);
+}
+
+//------------------------------------------------------------------------//
+///  @return  Buf1d of [start .. start+subsize)
+///  @warning  Never throws!
+template <class Elem>
+Buf1d<const Elem> Buf1d<Elem>::sliceBegEnd(size_t beg, size_t end) const noexcept
+{
+    beg = std::min(beg, _size);
+    end = std::min(end, _size);
+    if (beg >= end)
+        return {};
+    return Buf1d<const Elem>(end - beg, _ptr + beg);
 }
 
 
