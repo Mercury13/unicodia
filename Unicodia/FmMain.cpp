@@ -1342,7 +1342,6 @@ void FmMain::initLibrary(const InitBlocks& ib)
             ui->wiLibShowcase, ui->vwLibInfo);
 
     // Create toolbar
-    /// @todo [urgent] add to library
     btAddLibToFavs = ui->wiLibShowcase->addFavsButton(ui->acAddLibToFavs, config::favs.index());
     connect(ui->acAddLibToFavs, &QAction::triggered, this, &This::acAddLibToFavsTriggered);
 

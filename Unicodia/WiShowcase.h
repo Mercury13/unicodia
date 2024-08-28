@@ -3,11 +3,11 @@
 
 // C++
 #include <variant>
-#include <unordered_set>
 
 // Qt
 #include <QWidget>
 #include <QRadioButton>
+#include <QToolBar>
 
 // Qt misc
 #include "LocQt.h"
@@ -23,7 +23,6 @@ class QPushButton;
 class QLabel;
 class QTextBrowser;
 class QHBoxLayout;
-class QToolBar;
 class QToolButton;
 class WiOsStyle;
 class WiSample;
@@ -118,8 +117,10 @@ public:
     void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
     QToolBar* toolbar();
     QHBoxLayout* toolbarLayout();
-    QToolButton* addToolButton(QAction* action);
-    QToolButton* addFavsButton(QAction* action, const uc::SetOfChar& favs);
+    template <class Button = QToolButton> requires std::is_base_of_v<QToolButton, Button>
+        Button* addToolButton(QAction* action);
+    template <class Button = QToolButton> requires std::is_base_of_v<QToolButton, Button>
+        Button* addFavsButton(QAction* action, const uc::SetOfChar& favs);
     void switchToLib();
     void reenableFavs();
 private:
@@ -148,5 +149,23 @@ private slots:
     void lbStyleHelpLinkActivated(const QString& link);
     void glyphStyleClicked();
 };
+
+template <class Button> requires std::is_base_of_v<QToolButton, Button>
+Button* WiShowcase::addToolButton(QAction* action)
+{
+    auto tb = toolbar();
+    auto button = new Button(tb);
+    button->setDefaultAction(action);
+    tb->addWidget(button);
+    return button;
+}
+
+template <class Button> requires std::is_base_of_v<QToolButton, Button>
+Button* WiShowcase::addFavsButton(QAction* action, const uc::SetOfChar& favs)
+{
+    acFavs = action;
+    setFavs = &favs;
+    return addToolButton<Button>(action);
+}
 
 #endif // WISHOWCASE_H

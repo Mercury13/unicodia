@@ -1,10 +1,10 @@
+// My header
 #include "WiShowcase.h"
 #include "ui_WiShowcase.h"
 
 // Qt
 #include <QTextBrowser>
 #include <QToolBar>
-#include <QToolButton>
 
 // Libs
 #include "u_Strings.h"
@@ -406,21 +406,4 @@ QToolBar* WiShowcase::toolbar()
         lay->addWidget(fToolbar);
     }
     return fToolbar;
-}
-
-QToolButton* WiShowcase::addToolButton(QAction* action)
-{
-    auto tb = toolbar();
-    auto button = new QToolButton(tb);
-    button->setDefaultAction(action);
-    tb->addWidget(button);
-    return button;
-}
-
-
-QToolButton* WiShowcase::addFavsButton(QAction* action, const uc::SetOfChar& favs)
-{
-    acFavs = action;
-    setFavs = &favs;
-    return addToolButton(action);
 }
