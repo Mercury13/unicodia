@@ -68,6 +68,25 @@ std::optional<char32_t> ShownObj::digCp() const
 }
 
 
+///// BangButton ///////////////////////////////////////////////////////////////
+
+
+BangButton::BangButton(QWidget* parent) : Super(parent)
+{
+    installEventFilter(this);
+}
+
+
+bool BangButton::eventFilter(QObject *object, QEvent *event)
+{
+    if (object == this && event->type() == QEvent::MouseButtonPress) {
+        if (!isEnabled()) {
+            emit banged();
+        }
+    }
+    return false;
+}
+
 
 ///// WiShowcase ///////////////////////////////////////////////////////////////
 

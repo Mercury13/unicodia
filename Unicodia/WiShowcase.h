@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QRadioButton>
 #include <QToolBar>
+#include <QToolButton>
 
 // Qt misc
 #include "LocQt.h"
@@ -23,7 +24,6 @@ class QPushButton;
 class QLabel;
 class QTextBrowser;
 class QHBoxLayout;
-class QToolButton;
 class WiOsStyle;
 class WiSample;
 class FontMatch;
@@ -150,6 +150,20 @@ private slots:
     void lbStyleHelpLinkActivated(const QString& link);
     void glyphStyleClicked();
 };
+
+
+class BangButton : public QToolButton
+{
+    Q_OBJECT
+    using Super = QToolButton;
+public:
+    BangButton(QWidget* parent);
+    bool eventFilter(QObject *object, QEvent *event) override;
+signals:
+    /// when “banged into closed door”
+    void banged();
+};
+
 
 template <class Button> requires std::is_base_of_v<QToolButton, Button>
 Button* WiShowcase::addToolButton(QAction* action)

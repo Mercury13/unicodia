@@ -1187,34 +1187,6 @@ void FmMain::installCopyEvents(FmMain* that,
 }
 
 
-namespace {
-
-    class TestButton : public QToolButton
-    {
-    private:
-        using Super = QToolButton;
-    public:
-        TestButton(QWidget* parent);
-        bool eventFilter(QObject *object, QEvent *event) override;
-    };
-
-    TestButton::TestButton(QWidget* parent) : Super(parent)
-    {
-        installEventFilter(this);
-    }
-
-    bool TestButton::eventFilter(QObject *object, QEvent *event)
-    {
-        if (object == this && event->type() == QEvent::MouseButtonPress) {
-            if (!isEnabled())
-                QApplication::beep();
-        }
-        return false;
-    }
-
-}
-
-
 void FmMain::setCollapseColor(const QColor& x)
 {
     if (clCollapse != x) {
@@ -1370,8 +1342,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
             ui->wiLibShowcase, ui->vwLibInfo);
 
     // Create toolbar
-    btAddLibToFavs = ui->wiLibShowcase->addFavsButton<TestButton>(ui->acAddLibToFavs, config::favs.index());
+    btAddLibToFavs = ui->wiLibShowcase->addFavsButton<BangButton>(ui->acAddLibToFavs, config::favs.index());
     connect(ui->acAddLibToFavs, &QAction::triggered, this, &This::acAddLibToFavsTriggered);
+    connect(btAddLibToFavs, &BangButton::banged, this, &This::addLibToFavsBanged);
 
     // Select index
     auto index = libModel.index(0, 0);
@@ -2379,6 +2352,12 @@ void FmMain::acAddCpToFavsTriggered(bool isChecked)
 void FmMain::acAddLibToFavsTriggered(bool isChecked)
 {
     addRemoveFromFavs(ui->wiLibShowcase, nullptr, isChecked);
+}
+
+
+void FmMain::addLibToFavsBanged()
+{
+    mainGui.blinkAtWidget("Banged", btAddLibToFavs);
 }
 
 

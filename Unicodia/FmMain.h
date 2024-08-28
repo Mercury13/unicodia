@@ -49,6 +49,7 @@ class QNetworkReply;
 class FmTofuStats;
 class WiLibCp;
 class WiShowcase;
+class BangButton;
 
 
 namespace uc {
@@ -355,8 +356,8 @@ private:
     QFont fontBig, fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
-                *btAddLibToFavs = nullptr,
                 *btRemoveFromFavs = nullptr;
+    BangButton*  btAddLibToFavs = nullptr;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
@@ -470,6 +471,7 @@ private slots:
     void updateFinished(QNetworkReply* reply);
     void acAddCpToFavsTriggered(bool isChecked);
     void acAddLibToFavsTriggered(bool isChecked);
+    void addLibToFavsBanged();
     void acRemoveFromFavsTriggered();
     void slotSkinToneQa();
 };
