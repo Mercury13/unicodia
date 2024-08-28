@@ -2357,7 +2357,7 @@ void FmMain::acAddLibToFavsTriggered(bool isChecked)
 
 void FmMain::addLibToFavsBanged()
 {
-    mainGui.blinkAtWidget("Banged", btAddLibToFavs);
+    mainGui.blinkAtWidget(loc::get("Lib.Favs"), btAddLibToFavs);
 }
 
 

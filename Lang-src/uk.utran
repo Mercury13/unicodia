@@ -13441,6 +13441,10 @@
      <transl>Кинуті з занепадом здобичі китів, здебільшого науковці та туристи</transl>
     </text>
    </group>
+   <text id="Favs">
+    <orig>Favourites work with single characters only</orig>
+    <transl>Улюблені працюють тільки з поодинокими символами</transl>
+   </text>
   </group>
   <group id="Version">
    <group id="1.1">

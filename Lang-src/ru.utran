@@ -13438,6 +13438,10 @@
      <transl>Брошены с упадком китового промысла, в основном учёные и туристы</transl>
     </text>
    </group>
+   <text id="Favs">
+    <orig>Favourites work with single characters only</orig>
+    <transl>Любимые работают только с одинокими символами</transl>
+   </text>
   </group>
   <group id="Version">
    <group id="1.1">

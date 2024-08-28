@@ -9380,6 +9380,9 @@
      <orig>Abandoned with decline of whaling, mainly scientists and tourists</orig>
     </text>
    </group>
+   <text id="Favs">
+    <orig>Favourites work with single characters only</orig>
+   </text>
   </group>
   <group id="Version">
    <group id="1.1">
