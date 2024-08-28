@@ -44,6 +44,12 @@ namespace ec {
         static constexpr unsigned size() { return detail::countValues(#__VA_ARGS__); } \
     };
 
+#define DEFINE_ENUM_TYPE(Name, Type, ...) \
+    enum class Name : Type { __VA_ARGS__ }; \
+    template <> struct detail::EnumSize<Name> {  \
+        static constexpr unsigned size() { return detail::countValues(#__VA_ARGS__); } \
+    };
+
 #define DEFINE_ENUM_IN_NS(Ns, Name, ...) \
     enum class Name { __VA_ARGS__ };  } \
     template <> struct detail::EnumSize<:: Ns :: Name > {  \

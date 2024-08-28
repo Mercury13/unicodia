@@ -29,7 +29,7 @@ class WiSample;
 class FontMatch;
 
 namespace Ui {
-class WiShowcase;
+    class WiShowcase;
 }
 
 namespace uc {
@@ -38,7 +38,7 @@ namespace uc {
 
 extern template struct TinyOpt<char32_t>;
 
-DEFINE_ENUM (ShownClass,
+DEFINE_ENUM_TYPE(ShownClass, unsigned char,
              NONE, CP, LIB )
 
 namespace detail {
@@ -46,6 +46,7 @@ namespace detail {
                     std::monostate, // NONE — no object held
                     char32_t,       // CP — any codepoint of Unicode, incl. surrogate
                     const uc::LibNode*>; // Lib — Library node
+    static_assert(std::variant_size_v<ShownObjFather> == ec::size<ShownClass>());
 }   // namespace detail
 
 class ShownObj : public detail::ShownObjFather
