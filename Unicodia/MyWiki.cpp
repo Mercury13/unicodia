@@ -1970,14 +1970,14 @@ QString mywiki::buildHtml(const uc::Block& x)
 
     sp.sep();
     appendBullet(text, "Prop.Bullet.EngTech");
-    str::append(text, x.name);
+    appendCopyable(text, str::toQ(x.name));
 
     sp.sep();
     appendBullet(text, "Prop.Bullet.Range");
     char buf[30];
     snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RANGE),
                 int(x.startingCp), int(x.endingCp));
-    str::append(text, buf);
+    appendCopyable(text, buf);
 
     sp.sep();
     appendBullet(text, "Prop.Bullet.VerAppear");
