@@ -20,6 +20,8 @@
 		 non-meaning stub of alphabet = underscore _
 		 Limitations:
 		 • Difference within first 40 MEANING chars of term/block, otherwise they are deemed equal
+		 • Strings that differ with “equal” character only are forbidden:
+		    äbb < abc < äbd is supported, but abc < äbc isn’t.
 		 • 32-bit chars ALLOWED
 		 • Max alphabet 32K
 		 • # if alphabets unlimited -->
@@ -34,7 +36,7 @@
 		 Ol Chiki and Ol Onal?
 		 Some fixups (Greek → Ancient Greek) are built into data
 		 and are locale-independent (see “ellipsis” below),
-		 but Ol Onal IS locale-dependent. 
+		 but Ol Onal IS locale-dependent.
 			<blk start="1E5D0" target="Ol Chiki X" />Used to be
 		 -->
 	<alpha-fixup />
