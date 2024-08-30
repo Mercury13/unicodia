@@ -4802,7 +4802,7 @@
       <p />
       <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
       <p />
-      <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left from fixing characters (August 2023) to next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
+      <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
      </orig>
      <transl>
       <p>У кінці 2022 континентальний Китай спробував відгалузитися від Юнікоду, розмістивши 897 ієрогліфів з китайських імен на нерозподіленій площині 0A. Щоб цього не{{_}}сталось, ієрогліфи швидко перевірили фахівці, 622 з них були опізнані як придатні до кодування.</p>
