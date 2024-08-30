@@ -1,16 +1,7 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 16.0.0
 @@@+	NamesList-16.0.0.txt
-@+	Generation Date: 2024-07-31, 08:02:34 GMT
-	Unicode 16.0.0 names list.
-	Repertoire synched with UnicodeData-16.0.0d16.txt.
-	Post-beta rollup of various fixes.
-	Add subheads and annotations for 1FB81, 1FB98, 1FB99.
-	Fixes for subheads G08 - G17, S21, U22 in Egyptian Hieroglyphs Extended-A block.
-	Add xref between 2BFA and 1CC88.
-	Move subhead at 10D6E in Garay block.
-	Add annotation to 2217.
-	Add pointer for UTN #57 for Mongolian block.
+	Unicode 16.0.0 final names list.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
