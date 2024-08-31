@@ -11226,7 +11226,7 @@
      <orig>
       <p>'''Unicode tranformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
-      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows NT quickly accepted two-byte character, that simplified text processing. But soon it became clear that two bytes are{{_}}not{{_}}enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
+      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows NT quickly adopted two-byte character, that simplified text processing. But soon it became clear that two bytes are{{_}}not{{_}}enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
       <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
       <p>* Characters D800…DFFF are forbidden;</p>
       <p>* Characters 10000 and greater are written as '''surrogate pair''':</p>
