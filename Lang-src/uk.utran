@@ -11242,7 +11242,7 @@
       <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
-      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, Qt.</p>
+      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 16-bit'''{{-}}формат [[pt:serialization|серіалізації]] Юнікоду у ланцюжок двобайтових машинних слів.</p>
@@ -11260,7 +11260,7 @@
       <p>* Ненадійне впізнання: без [[pt:bom|мітки порядку байтів]] формат UTF-16 та порядок байтів визначається за непрямими ознаками{{-}}за статистикою або сурогатними парами. Відомий [[pt:ascii|ASCII]]-рядок «Bush hid the facts» (''Буш приховав факти'') ламає статистичне впізнання UCS-2 у Windows.</p>
       <p>* Немонотонний: програма, що розуміє UCS-2, відсортує тексти не{{_}}у порядку кодів.</p>
       <p />
-      <p>Як формат міжпрограмного обміну використовується здебільшого у двійкових файлах родом з Windows та Mac/Motorola (наприклад, шрифтах TrueType). Таким файлам мітка порядку байтів не{{_}}потрібна; у текстових файлах вона FE{{_}}FF для UTF-16BE та FF{{_}}FE для UTF-16LE. Як формат програмного інтерфейсу використовується у Windows, Java, Qt.</p>
+      <p>Як формат міжпрограмного обміну використовується здебільшого у двійкових файлах родом з Windows та Mac/Motorola (наприклад, шрифтах TrueType). Таким файлам мітка порядку байтів не{{_}}потрібна; у текстових файлах вона FE{{_}}FF для UTF-16BE та FF{{_}}FE для UTF-16LE. Як формат програмного інтерфейсу використовується у Windows, Java, JavaScript, Qt.</p>
      </transl>
     </text>
    </group>
