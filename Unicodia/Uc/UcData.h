@@ -153,7 +153,7 @@ namespace uc {
         LTR_BU,
         LTR_COL,
         TD,
-        BOTH,
+        BOTH_LTR,   ///< Both, encoded as →
         TANGUT,
         RTL_COL,
         RTL_MOSTLY,

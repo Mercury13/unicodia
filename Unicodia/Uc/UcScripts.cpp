@@ -113,7 +113,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
     // Carian OK, W10 P1
     { "Cari", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH_LTR, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
@@ -268,7 +268,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(10, StdNote::MAYBE_EARLIER), EcFont::OLD_HUNGARIAN },
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::BOTH, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::BOTH_LTR, EcContinent::EUROPE,
         Dating::yapprox(-700), EcFont::OLD_ITALIC },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java", QFontDatabase::Any,
