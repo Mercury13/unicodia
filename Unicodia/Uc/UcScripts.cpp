@@ -85,7 +85,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(11), EcFont::BHAIKSUKI },
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
-        EcScriptType::ALPHASYLLABLE, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::CJK,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::COMPETING, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::year(1913), EcFont::CJK },
     // Brahmi OK, because of sheer importance installed Google Noto
     { "Brah", QFontDatabase::Any,
@@ -224,7 +224,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(16), EcFont::GURMUKHI },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
-        EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
+        EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::year(1443), EcFont::KOREAN },
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
