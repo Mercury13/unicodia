@@ -615,7 +615,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(6, 9), EcFont::TAMIL },
     // Tangut OK, installed Google Noto
     { "Tang", QFontDatabase::Any,
-        EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::TANGUT, EcContinent::CJK,
+        EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::RTL_COL, EcContinent::CJK,
         Dating::year(1036), EcFont::TANGUT },
     // Tai Viet OK, installed Google Noto font
     { "Tavt", QFontDatabase::Any,

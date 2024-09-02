@@ -873,10 +873,6 @@
      <orig>wrote both ← and →</orig>
      <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
     </text>
-    <text id="Tang">
-     <orig>wrote ←↓↓ in columns and →</orig>
-     <au-cmt>test: Tang</au-cmt>
-    </text>
     <text id="R_col">
      <orig>←↓↓ in columns</orig>
      <au-cmt>Test: Kits, Mero</au-cmt>

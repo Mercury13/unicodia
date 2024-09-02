@@ -78,7 +78,6 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { "Prop.Dir.L_col" },
     { "Prop.Dir.TD" },
     { "Prop.Dir.Both" },
-    { "Prop.Dir.Tang" },
     { "Prop.Dir.R_col" },
     { "Prop.Dir.R_most" },
     { "Prop.Dir.Sogd" },

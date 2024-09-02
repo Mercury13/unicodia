@@ -1104,11 +1104,6 @@
      <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
      <transl>писали и ←, и →</transl>
     </text>
-    <text id="Tang">
-     <orig>wrote ←↓↓ in columns and →</orig>
-     <au-cmt>test: Tang</au-cmt>
-     <transl>писали ←↓↓ по столбцам и →</transl>
-    </text>
     <text id="R_col">
      <orig>←↓↓ in columns</orig>
      <au-cmt>Test: Kits, Mero</au-cmt>

@@ -154,7 +154,6 @@ namespace uc {
         LTR_COL,
         TD,
         BOTH_LTR,   ///< Both, encoded as →
-        TANGUT,
         RTL_COL,
         RTL_MOSTLY,
         SOGDIAN,
