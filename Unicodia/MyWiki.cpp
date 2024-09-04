@@ -442,25 +442,26 @@ void mywiki::go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view
 }
 
 
+const uc::Font& mywiki::DescFont::getDescFont(const uc::Font& font)
+{
+    auto that = &font;
+    while (that->flags.have(uc::Ffg::DESC_AVOID))
+        ++that;
+    return *that;
+}
+
+
 namespace {
 
     constexpr std::u8string_view BULLET = u8"•\u00A0";
-
-    const uc::Font& getDescFont(const uc::Font& font)
-    {
-        auto that = &font;
-        while (that->flags.have(uc::Ffg::DESC_AVOID))
-            ++that;
-        return *that;
-    }
 
     class Eng : public wiki::Engine
     {
     public:
         QString& s;
-        const uc::Font& font;
+        mywiki::Context context;
 
-        Eng(QString& aS, const uc::Font& aFont) : s(aS), font(getDescFont(aFont)) {}
+        Eng(QString& aS, const mywiki::Context& aContext) : s(aS), context(aContext) {}
         void appendPlain(std::string_view x) override;
         void appendLink(
                 const SafeVector<std::string_view>& x,
@@ -620,30 +621,21 @@ namespace {
 
     void appendFont(QString& s, const uc::Font& font, std::string_view x, int size)
     {
-        bool hasFace = !font.flags.have(uc::Ffg::DESC_STD);
-        bool hasSize = (size != 0);
-        if (hasFace || hasSize) {
-            s += "<font";
-            if (hasFace) {
-                s += " face='";
-                s += font.familiesComma();
-                s += '\'';
+        s += "<font face='";
+        s += font.familiesComma();
+        s += '\'';
+        if (size != 0) {
+            if (size < 0) {
+                size =  font.flags.have(uc::Ffg::DESC_BIGGER) ? 3
+                      : font.flags.have(uc::Ffg::DESC_SMALLER) ? 1 : 2;
             }
-            if (hasSize) {
-                if (size < 0) {
-                    size =  font.flags.have(uc::Ffg::DESC_BIGGER) ? 3
-                          : font.flags.have(uc::Ffg::DESC_SMALLER) ? 1 : 2;
-                }
-                s += " size='+";
-                s += QChar(size + '0');
-                s += '\'';
-            }
-            s += ">";
-            str::append(s, x);
-            str::append(s, "</font>");
-        } else {
-            str::append(s, x);
+            s += " size='+";
+            s += QChar(size + '0');
+            s += '\'';
         }
+        s += ">";
+        str::append(s, x);
+        str::append(s, "</font>");
     }
 
     void appendFont(QString& s, uc::EcFont fontId, std::string_view x, int size)
@@ -661,8 +653,8 @@ namespace {
 
     void appendSmTable(
             QString& s,
-            const uc::Font& font,
-            const SafeVector<std::string_view>& x)
+            const SafeVector<std::string_view>& x,
+            const mywiki::Context& context)
     {
         // How smtable works:
         // • ∞ params
@@ -680,17 +672,17 @@ namespace {
                 if (v.starts_with("**")) {  // Glitching sample
                     s += "<td>";
                     auto w = v.substr(2);
-                    appendFont(s, font, w, SIZE_SAMPLE);
+                    appendFont(s, *context.font, w, SIZE_SAMPLE);
                 } else {    // Normal sample
                     auto w = v.substr(1);
-                    appendFont(s, font, w, SIZE_SAMPLE);
+                    appendFont(s, *context.font, w, SIZE_SAMPLE);
                 }
             } else {
                 if (i > 1)
                     s += "&nbsp;";
                 auto u8 = str::toU8(v);
                 str::replace(u8, u8' ', u8"&nbsp;");
-                mywiki::append(s, u8, font);
+                mywiki::append(s, u8, context);
                 if (i + 1 < n)
                     s += "&nbsp;";
             }
@@ -714,13 +706,13 @@ namespace {
             }
         }
         if (name == "sm"sv) {
-            appendFont(s, font, x, SIZE_SAMPLE);
+            appendFont(s, context.font, x, SIZE_SAMPLE);
         } else if (name == "smb"sv) {
             appendFont(s, uc::EcFont::CJK_NEWHAN, x, 3);
         } else if (name == "smfunky"sv) {
             appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
         } else if (name == "smtable"sv) {
-            appendSmTable(s, font, x);
+            appendSmTable(s, x, context);
         } else if (name == "_"sv) {
             s.append(QChar(0x00A0));
         } else if (name == "%"sv) {
@@ -731,7 +723,7 @@ namespace {
                 if (i != 1)
                     s += '+';
                 str::append(s, KEY_START);
-                mywiki::append(s, str::toU8sv(x[i]), font);
+                mywiki::append(s, str::toU8sv(x[i]), context);
                 str::append(s, KEY_END);
             }
         } else if (name == "kb"sv) {
@@ -740,7 +732,7 @@ namespace {
                     s += '+';
                 str::append(s, KEY_START);
                 s += "<b>";
-                mywiki::append(s, str::toU8sv(x[i]), font);
+                mywiki::append(s, str::toU8sv(x[i]), context);
                 s += "</b>";
                 str::append(s, KEY_END);
             }
@@ -753,7 +745,7 @@ namespace {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else if (name == "fontface"sv) {
-            s += font.familiesComma();
+            s += context.font->familiesComma();
         } else if (name == "nchars"sv) {
             s += QString::number(uc::N_CPS);
         } else if (name == "nemoji"sv) {
@@ -775,7 +767,7 @@ namespace {
         } else if (name == "GrekCoptUni"
                 || name == "ArabPres1"
                 || name == "ArabPres2") {
-            mywiki::append(s, loc::get(str::cat("Snip.", name)), font);
+            mywiki::append(s, loc::get(str::cat("Snip.", name)), context);
         } else {
             wiki::appendHtml(s, x[0]);
         }
@@ -843,7 +835,10 @@ namespace {
     template <class X>
     void appendWiki(QString& text, const X& obj, std::u8string_view x)
     {
-        Eng eng(text, getFont(obj));
+        mywiki::Context context {
+            .font { getFont(obj) },
+        };
+        Eng eng(text, context);
         wiki::run(eng, x);
     }
 
@@ -852,14 +847,17 @@ namespace {
 
 void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
 {
-    Eng eng(text, uc::fontInfo[0]);
+    mywiki::Context context {
+        .font { uc::fontInfo[0] },
+    };
+    Eng eng(text, context);
     wiki::run(eng, wiki);
 }
 
 
-void mywiki::append(QString& text, std::u8string_view wiki, const uc::Font& font)
+void mywiki::append(QString& text, std::u8string_view wiki, const Context& context)
 {
-    Eng eng(text, font);
+    Eng eng(text, context);
     wiki::run(eng, wiki);
 }
 
@@ -1060,6 +1058,9 @@ void mywiki::translateDatingLoc()
 
 void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 {
+    mywiki::Context context {
+        .font = x.font()
+    };
     if (x.ecType != uc::EcScriptType::NONE) {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
@@ -1068,7 +1069,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (x.ecDir != uc::EcWritingDir::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Dir");
-            append(text, loc::get(x.dir().locKey), x.font());
+            append(text, loc::get(x.dir().locKey), context);
         }
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
@@ -1084,7 +1085,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Condition", "<a href='pt:status' class='popup'>", "</a>");
-            append(text, loc::get(x.life().locKey), x.font());
+            append(text, loc::get(x.life().locKey), context);
         }
         if (isScript) {
             if (x.ecVersion != uc::EcVersion::TOO_HIGH) {
@@ -1105,7 +1106,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
     }
 
     str::append(text, "<p>");
-    appendWiki(text, x, x.loc.description);
+    mywiki::append(text, x.loc.description, context);
     str::append(text, "</p>");
 }
 

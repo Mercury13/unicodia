@@ -91,6 +91,21 @@ namespace mywiki {
         virtual ~Link() = default;
     };
 
+    class DescFont {
+    public:
+        const uc::Font& v;
+        DescFont(const uc::Font& font) noexcept : v(getDescFont(font)) {}
+        operator const uc::Font& () noexcept { return v; }
+        const uc::Font& operator *  () const noexcept { return v;  }
+        const uc::Font* operator -> () const noexcept { return &v; }
+    private:
+        static const uc::Font& getDescFont(const uc::Font& font);
+    };
+
+    struct Context {
+        DescFont font;
+    };
+
     void translateDatingLoc();
 
     std::unique_ptr<Link> parseLink(std::string_view link);
@@ -130,7 +145,7 @@ namespace mywiki {
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void appendNoFont(QString& x, std::u8string_view wiki);
-    void append(QString& x, std::u8string_view wiki, const uc::Font& font);
+    void append(QString& x, std::u8string_view wiki, const Context& context);
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersionValue(QString& text, uc::EcVersion version);
     void appendEmojiValue(QString& text, const uc::Version& version, const uc::Version& prevVersion);
