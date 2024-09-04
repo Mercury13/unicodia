@@ -749,7 +749,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Halfwidth and Fullwidth Forms",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_SYMBOLS,
+            EcScript::NONE, EcFont::CJK_SIMSUN,
             Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },

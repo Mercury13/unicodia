@@ -260,7 +260,7 @@ namespace uc {
          CJK_NEWHAN,
            CJK_UHAN,    ///< Unicodia Han
          CJK_SYMBOLS,
-           Z_CJY_1,
+           CJK_SIMSUN,
            Z_CJY_2,
            Z_CJY_3,
         CUNEIFORM,
@@ -440,22 +440,21 @@ namespace uc {
         SEMIBOLD          = 1<<1,   ///< Weight: semibold
         LIGHT             = 1<<2,   ///< Weight: light
         STUB_OFF          = 1<<3,   ///< Disable circle stub
-        DESC_STD          = 1<<4,   ///< Use standard font in descriptions, not this
-        DESC_BIGGER       = 1<<5,   ///< Use bigger font in descriptions
-        DESC_SMALLER      = 1<<6,   ///< Use smaller font in descriptions
-        FALL_TO_NEXT      = 1<<7,   ///< Also use the next font if failed to find
-        BUG_FIXUP         = 1<<8,   ///< Use only for chars flagged as “render bug”
-        BUG_AVOID         = 1<<9,   ///< Avoid for chars flagged as “render bug”
-        CELL_SMALLER      = 1<<10,  ///< Make cell text a bit smaller
-        CELL_BIGGER       = 1<<11,  ///< Make cell text a bit smaller
-        STUB_FINEGRAINED  = 1<<12,  ///< Stub on/off is controlled on finer level
-        STUB_INTERCHAR    = 1<<13,  ///< Debug: test inter-character interval
-        NOHINT_TINY       = 1<<14,  ///< Unglitch: no anti-aliasing in tiny sizes
-        FALL2_IF_ACCEPTED = 1<<15,  ///< Fall over one font if not rejected;
+        DESC_BIGGER       = 1<<4,   ///< Use bigger font in descriptions
+        DESC_SMALLER      = 1<<5,   ///< Use smaller font in descriptions
+        FALL_TO_NEXT      = 1<<6,   ///< Also use the next font if failed to find
+        BUG_FIXUP         = 1<<7,   ///< Use only for chars flagged as “render bug”
+        BUG_AVOID         = 1<<8,   ///< Avoid for chars flagged as “render bug”
+        CELL_SMALLER      = 1<<9,   ///< Make cell text a bit smaller
+        CELL_BIGGER       = 1<<10,  ///< Make cell text a bit smaller
+        STUB_FINEGRAINED  = 1<<11,  ///< Stub on/off is controlled on finer level
+        STUB_INTERCHAR    = 1<<12,  ///< Debug: test inter-character interval
+        NOHINT_TINY       = 1<<13,  ///< Unglitch: no anti-aliasing in tiny sizes
+        FALL2_IF_ACCEPTED = 1<<14,  ///< Fall over one font if not rejected;
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
-        MARK_AVOID        = 1<<16,  ///< If char’s type is mark → avoid!
-        DESC_AVOID        = 1<<17,  ///< Avoid in description, use next instead
-        GRAPHIC_SAMPLE    = 1<<18,  ///< Draw characters graphically, killing font’s dimensions
+        MARK_AVOID        = 1<<15,  ///< If char’s type is mark → avoid!
+        DESC_AVOID        = 1<<16,  ///< Avoid in description, use next instead
+        GRAPHIC_SAMPLE    = 1<<17,  ///< Draw characters graphically, killing font’s dimensions
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
