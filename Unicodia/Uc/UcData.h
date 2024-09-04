@@ -646,7 +646,7 @@ namespace uc {
         explicit operator bool() const { return (year != 0); }
     };
 
-    enum class Vfg {
+    enum class Vfg : unsigned char {
         TEXT = 1,
         BETA = 2,
     };
