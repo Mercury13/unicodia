@@ -6232,8 +6232,16 @@
      <transl>филиппинские горные народы</transl>
     </text>
     <text id="Text">
-     <orig>Hanunó’o derives from [[ps:Brah|Brahmi]] and is related to [[ps:Tglg|Tagalog]].</orig>
-     <transl>Хануноо восходит к [[ps:Brah|брахми]] и похож на [[ps:Tglg|тагальский]].</transl>
+     <orig>
+      <p>Hanunó’o derives from [[ps:Brah|Brahmi]] and is related to [[ps:Tglg|Tagalog]].</p>
+      <p />
+      <p>Mark {{t|i}} is always above the letter, and {{t|u}} is attached where convenient: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Historically {{t|r}} looked like horizontal or slanted dash, but in 2010s it changed shape.</p>
+     </orig>
+     <transl>
+      <p>Хануноо восходит к [[ps:Brah|брахми]] и похож на [[ps:Tglg|тагальский]].</p>
+      <p />
+      <p>Метка {{t|и}} всегда над буквой, а {{t|у}} прикрепляется где удобно: {{sm|ᜪᜳ}} бу, {{sm|ᜱᜳ}} ху. Исторически {{t|r}} выглядела как горизонтальное или наклонное тире, но в 2010-х она сменила форму.</p>
+     </transl>
     </text>
    </group>
    <group id="Hatr">

@@ -4508,7 +4508,11 @@
      <orig>highland peoples of Philippines</orig>
     </text>
     <text id="Text">
-     <orig>Hanunó’o derives from [[ps:Brah|Brahmi]] and is related to [[ps:Tglg|Tagalog]].</orig>
+     <orig>
+      <p>Hanunó’o derives from [[ps:Brah|Brahmi]] and is related to [[ps:Tglg|Tagalog]].</p>
+      <p />
+      <p>Mark {{t|i}} is always above the letter, and {{t|u}} is attached where convenient: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Historically {{t|r}} looked like horizontal or slanted dash, but in 2010s it changed shape.</p>
+     </orig>
     </text>
    </group>
    <group id="Hatr">

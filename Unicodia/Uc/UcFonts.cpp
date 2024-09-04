@@ -163,7 +163,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
-    { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
+    { "NotoSansHanunoo-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
