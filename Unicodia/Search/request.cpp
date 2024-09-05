@@ -112,3 +112,15 @@ uc::PrimaryObj uc::CharFieldRequest::primaryObj() const
     // The most optimized version for this checks
     return static_cast<uc::PrimaryObj>(fields.isNumber);
 }
+
+
+///// EmojiFieldRequest ////////////////////////////////////////////////////////
+
+
+bool uc::EmojiFieldRequest::isOk(const uc::LibNode& node) const
+{
+    // Version
+    if (isIneq(fields.ecVersion, node.ecEmojiVersion))
+        return false;
+    return true;
+}

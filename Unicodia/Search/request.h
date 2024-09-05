@@ -25,7 +25,7 @@ namespace uc {
         /// @return [+] character is within request
         virtual bool isOk(const Cp& cp) const = 0;
         /// @return [+] emoji is within request
-        virtual bool isOk(const uc::LibNode& node) const = 0;
+        virtual bool isOk(const uc::LibNode&) const { return false; }
         ~Request() = default;
     };
 
@@ -49,10 +49,29 @@ namespace uc {
         bool hasChars() const override { return true; }
         EcVersion ecVersion() const override { return fields.ecVersion; }
         bool isOk(const Cp& cp) const override;
-        bool isOk(const uc::LibNode&) const override { return false; }
         PrimaryObj primaryObj() const override;
     private:
         CharFields fields;
+    };
+
+    struct EmojiFields {
+        uc::EcVersion ecVersion = uc::EcVersion::NO_VALUE;
+    };
+
+    class EmojiFieldRequest : public Request
+    {
+    public:
+        static_assert(std::is_trivially_copy_constructible_v<CharFields>, "Something went wrong");
+        EmojiFieldRequest(const EmojiFields& x) : fields(x) {}
+        // Do not search for chars…
+        bool hasChars() const override { return false; }
+        bool isOk(const Cp&) const override { return false; }
+        // …but search for emoji
+        EcVersion ecVersion() const override { return fields.ecVersion; }
+        bool hasEmoji() const override { return true; }
+        bool isOk(const uc::LibNode&) const override;
+    private:
+        EmojiFields fields;
     };
 
 }   // namespace uc
