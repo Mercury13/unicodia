@@ -193,19 +193,19 @@ namespace {
     void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.internalWalker().blinkAddCpToFavs(); }
 
-    class SearchForRequestLink : public mywiki::Link
+    class CharRequestLink : public mywiki::Link
     {
     public:
-        SearchForRequestLink(const uc::Fields& x) : fields(x) {}
+        CharRequestLink(const uc::CharFields& x) : fields(x) {}
         mywiki::LinkClass clazz() const override { return mywiki::LinkClass::SEARCH; }
         void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
     private:
-        const uc::Fields fields;
+        const uc::CharFields fields;
     };
 
-    void SearchForRequestLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    void CharRequestLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
     {
-        uc::FieldRequest rq(fields);
+        uc::CharFieldRequest rq(fields);
         gui.internalWalker().searchForRequest(rq);
     }
 
@@ -311,20 +311,35 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoInterfaceLink(std::string_view ta
 }
 
 
-std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view target)
+namespace {
+
+    struct Kv {
+        std::string_view key, value;
+        operator bool() const noexcept { return !value.empty(); }
+    };
+
+    Kv splitIntoKv(std::string_view part)
+    {
+        auto posEqual = part.find('=');
+        if (posEqual == 0 || posEqual == std::string_view::npos)
+            return {};
+        // Split into code and value
+        return { .key = part.substr(0, posEqual),
+                 .value = part.substr(posEqual + 1) };
+    }
+
+}   // anon namespace
+
+
+std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view target)
 {
-    uc::Fields fields;
+    uc::CharFields fields;
     auto parts = str::splitSv(target, '|');
     if (parts.empty())  // Won’t search for empty thing
         return {};
     unsigned uTmp;
     for (auto part : parts) {
-        auto posEqual = part.find('=');
-        if (posEqual == std::string_view::npos)
-            return {};
-        // Split into code and value
-        auto code = part.substr(0, posEqual);
-        auto value = part.substr(posEqual + 1);
+        auto [code, value] = splitIntoKv(part);
         if (value.empty())
             return nullptr;
         // Check misc codes
@@ -379,7 +394,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view
             return nullptr;
         }
     }
-    return std::make_unique<SearchForRequestLink>(fields);
+    return std::make_unique<CharRequestLink>(fields);
 }
 
 
@@ -409,7 +424,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
     } else if (scheme == "glc"sv) {
         return parseGotoLibCpLink(target);
     } else if (scheme == "srq"sv) {
-        return parseSearchForRequestLink(target);
+        return parseCharRequestLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {

@@ -29,7 +29,7 @@ uc::MultiResult uc::doRequest(const Request& rq)
 }
 
 
-///// FieldRequest /////////////////////////////////////////////////////////////
+///// CharFieldRequest /////////////////////////////////////////////////////////
 
 
 namespace {
@@ -41,7 +41,7 @@ namespace {
 }   // anon namespace
 
 
-bool uc::FieldRequest::isOk(const Cp& cp) const
+bool uc::CharFieldRequest::isOk(const Cp& cp) const
 {
     // Version
     if (isIneq(fields.ecVersion, cp.ecVersion))
@@ -70,7 +70,7 @@ bool uc::FieldRequest::isOk(const Cp& cp) const
 }
 
 
-uc::PrimaryObj uc::FieldRequest::primaryObj() const
+uc::PrimaryObj uc::CharFieldRequest::primaryObj() const
 {
     // Checks for future remakes
     static_assert((int)uc::PrimaryObj::DFLT == (int)false);
