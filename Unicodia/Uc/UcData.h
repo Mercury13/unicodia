@@ -257,10 +257,11 @@ namespace uc {
          CJK_STRUCTURE,
            CJK_STROKES,  ///< also dubbed as CJK strokes
            Z_CJS_2,
+         CJK_SIMSUN,
          CJK_NEWHAN,
            CJK_UHAN,    ///< Unicodia Han
          CJK_SYMBOLS,
-           CJK_SIMSUN,
+           Z_CJY_1,
            Z_CJY_2,
            Z_CJY_3,
         CUNEIFORM,

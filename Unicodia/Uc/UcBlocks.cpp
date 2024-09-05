@@ -734,12 +734,12 @@ constinit const uc::Block uc::blocks[] {
     { 0xFE30, 0xFE4F, { 0xFE3D, EcContinent::CJK },
             "CJK Compatibility Forms",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_SIMSUN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small variants OK
     { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_SYMBOLS, Bfg::CJK | Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::CJK_SIMSUN, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
     { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
             "Arabic Presentation Forms-B",
