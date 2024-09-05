@@ -1,19 +1,52 @@
 // My header
 #include "request.h"
 
+namespace {
+
+    struct EmojiState {
+        uc::MultiResult& r;
+        const uc::Request& rq;
+        const uc::LibNode* oldCat = nullptr;
+        uc::SearchGroup* lastGroup = nullptr;
+    };
+
+    void recurseEmoji(EmojiState& state, const uc::LibNode* category, unsigned index)
+    {
+        auto& node = uc::libNodes[index];
+        if (node.flags.have(uc::Lfg::NO_COUNTING))
+            return;
+        if (!category)
+            category = &node;
+        if (!node.value.empty() && state.rq.isOk(node)) {
+            // Found!
+            if (category != state.oldCat) {
+                state.lastGroup = &state.r.groups.emplace_back();
+                state.lastGroup->obj = category;
+                state.oldCat = category;
+            }
+            state.lastGroup->lines.emplace_back(&node);
+        }
+        const auto a = node.iFirstChild;
+        const auto b = a + node.nChildren;
+        for (short i = a; i < b; ++i)
+            recurseEmoji(state, category, i);
+    }
+
+}   // anon namespace
+
 uc::MultiResult uc::doRequest(const Request& rq)
 {
     uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.ecVersion(), rq.primaryObj());
 
-    const uc::Block* oldBlock = nullptr;
-    uc::SearchGroup* lastGroup = nullptr;
     if (rq.hasChars()) {
+        const uc::Block* oldBlock = nullptr;
+        uc::SearchGroup* lastGroup = nullptr;
         for (const auto& cp : uc::cpInfo) {
             if (rq.isOk(cp)) {
                 auto* newBlock = &cp.block();
                 if (newBlock != oldBlock) {
                     lastGroup = &r.groups.emplace_back();
-                    lastGroup->block = newBlock;
+                    lastGroup->obj = newBlock;
                     oldBlock = newBlock;
                 }
                 lastGroup->lines.emplace_back(cp);
@@ -22,7 +55,8 @@ uc::MultiResult uc::doRequest(const Request& rq)
     }
 
     if (rq.hasEmoji()) {
-        /// @todo [future] search for emoji
+        EmojiState state { .r = r, .rq = rq };
+        recurseEmoji(state, nullptr, 1);
     }
 
     return r;

@@ -415,7 +415,7 @@ namespace uc {
     extern const char8_t allStrings[];
     extern const Numeric allNumerics[N_NUMERICS];
 
-    enum class TitleMode { SHORT, LONG };
+    enum class TitleMode : unsigned char { SHORT, LONG };
 
     struct LibNode {
         std::u32string_view value;

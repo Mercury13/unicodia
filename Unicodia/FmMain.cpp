@@ -736,45 +736,63 @@ QVariant SearchModel::groupData(size_t index, int role) const
 
     auto& group = groups.at(index);
 
-    if (auto blk = group.block) {  // BLOCK
-        switch (role) {
-        case Qt::DisplayRole: {
-                auto charsLine = loc::get("Prop.Head.NChars").arg(group.size());
-                if (version != uc::EcVersion::NO_VALUE) {
-                    if (blk->ecVersion == version && version != uc::EcVersion::FIRST_MEANING) {
-                        // CREATED IN THIS VERSION
-                        const char* key = "Search.Blk.New";
-                        auto& sc = blk->script();
-                        // New version here
-                        if (!sc.flags.haveAny(uc::Sfg::NONSCRIPT | uc::Sfg::NO_STATS)
-                                && sc.ecVersion == version) {
-                            if (sc.flags.have(uc::Sfg::DISUNIFIED)) {
-                                key = "Search.Blk.NewDis";
+    switch (group.obj.type()) {
+    case uc::SearchGroupObjType::NONE:
+        return {};
+    case uc::SearchGroupObjType::BLOCK: {
+            auto blk = std::get<const uc::Block*>(group.obj);
+            if (!blk)
+                return {};
+            switch (role) {
+            case Qt::DisplayRole: {
+                    auto charsLine = loc::get("Prop.Head.NChars").arg(group.size());
+                    if (version != uc::EcVersion::NO_VALUE) {
+                        if (blk->ecVersion == version && version != uc::EcVersion::FIRST_MEANING) {
+                            // CREATED IN THIS VERSION
+                            const char* key = "Search.Blk.New";
+                            auto& sc = blk->script();
+                            // New version here
+                            if (!sc.flags.haveAny(uc::Sfg::NONSCRIPT | uc::Sfg::NO_STATS)
+                                    && sc.ecVersion == version) {
+                                if (sc.flags.have(uc::Sfg::DISUNIFIED)) {
+                                    key = "Search.Blk.NewDis";
+                                } else if (blk->wasFilledIn(version)) {
+                                    key = "Search.Blk.NewScFull";
+                                } else {
+                                    key = "Search.Blk.NewSc";
+                                }
                             } else if (blk->wasFilledIn(version)) {
-                                key = "Search.Blk.NewScFull";
-                            } else {
-                                key = "Search.Blk.NewSc";
+                                key = "Search.Blk.NewFull";
                             }
+                            charsLine = loc::get(key).arg(charsLine);
+                        } else if (blk->wasExtendedIn(version)) {
+                            charsLine = loc::get("Search.Blk.Ext").arg(charsLine);
                         } else if (blk->wasFilledIn(version)) {
-                            key = "Search.Blk.NewFull";
+                            charsLine = loc::get("Search.Blk.Full").arg(charsLine);
                         }
-                        charsLine = loc::get(key).arg(charsLine);
-                    } else if (blk->wasExtendedIn(version)) {
-                        charsLine = loc::get("Search.Blk.Ext").arg(charsLine);
-                    } else if (blk->wasFilledIn(version)) {
-                        charsLine = loc::get("Search.Blk.Full").arg(charsLine);
                     }
+                    return str::toQ(blk->loc.name) + '\n' + str::toQ(charsLine);
                 }
-                return str::toQ(blk->loc.name) + '\n' + str::toQ(charsLine);
+            case Qt::DecorationRole:
+                return QIcon{new ie::Synth(*sample, blk->synthIcon, blk->startingCp)};
             }
-        case Qt::DecorationRole:
-            return QIcon{new ie::Synth(*sample, group.block->synthIcon, group.block->startingCp)};
-        default:
             return {};
         }
-    } else {
-        return {};
+    case uc::SearchGroupObjType::LIBNODE: {
+            auto node = std::get<const uc::LibNode*>(group.obj);
+            if (!node)
+                return {};
+            switch (role) {
+            case Qt::DisplayRole:
+                return node->viewableTitle(uc::TitleMode::SHORT);
+            case Qt::DecorationRole: {
+                    QIconEngine* ie = new ie::Node(*sample, *node);
+                    return QIcon(ie);
+                }
+            }
+        }  // fall out here
     }
+    return {};
 }
 
 
