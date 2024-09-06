@@ -15,7 +15,7 @@ namespace {
         auto& node = uc::libNodes[index];
         if (node.flags.have(uc::Lfg::NO_COUNTING))
             return;
-        if (!category)
+        if (!category && index != 1)
             category = &node;
         if (!node.value.empty() && state.rq.isOk(node)) {
             // Found!

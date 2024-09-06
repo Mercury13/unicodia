@@ -264,6 +264,8 @@ namespace uc {
            Z_CJY_1,
            Z_CJY_2,
            Z_CJY_3,
+         CJK_FULLHALF,
+           Z_CJF_1,
         CUNEIFORM,
         DEVANAGARI,
           DEVANAGARI_SYSTEM,

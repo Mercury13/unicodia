@@ -193,21 +193,26 @@ namespace {
     void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.internalWalker().blinkAddCpToFavs(); }
 
-    class CharRequestLink : public mywiki::Link
+    template <class Fields, class Request>
+    class RequestLink : public mywiki::Link
     {
     public:
-        CharRequestLink(const uc::CharFields& x) : fields(x) {}
+        RequestLink(const Fields& x) : fields(x) {}
         mywiki::LinkClass clazz() const override { return mywiki::LinkClass::SEARCH; }
         void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
     private:
-        const uc::CharFields fields;
+        const Fields fields;
     };
 
-    void CharRequestLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    template <class Fields, class Request>
+    void RequestLink<Fields, Request>::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
     {
-        uc::CharFieldRequest rq(fields);
+        Request rq(fields);
         gui.internalWalker().searchForRequest(rq);
     }
+
+    using CharRequestLink = RequestLink<uc::CharFields, uc::CharFieldRequest>;
+    using EmojiRequestLink = RequestLink<uc::EmojiFields, uc::EmojiFieldRequest>;
 
 }   // anon namespace
 
@@ -340,10 +345,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
     unsigned uTmp;
     for (auto part : parts) {
         auto [code, value] = splitIntoKv(part);
-        if (value.empty())
-            return nullptr;
-        // Check misc codes
-        if (code.length() != 1)
+        if (value.empty() || code.length() != 1)
             return nullptr;
         switch (code[0]) {
         case 'v':   // version
@@ -398,6 +400,33 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
 }
 
 
+std::unique_ptr<mywiki::Link> mywiki::parseEmojiRequestLink(std::string_view target)
+{
+    uc::EmojiFields fields;
+    auto parts = str::splitSv(target, '|');
+    if (parts.empty())  // Won’t search for empty thing
+        return {};
+    for (auto part : parts) {
+        auto [code, value] = splitIntoKv(part);
+        if (value.empty() || code.length() != 1)
+            return nullptr;
+        switch (code[0]) {
+        case 'v':   // version
+            if (auto version = uc::findVersion(value)) {
+                fields.ecVersion = version->stats.thisEcVersion;
+                break;
+            }
+            return nullptr;
+        }
+    }
+    return std::make_unique<EmojiRequestLink>(fields);
+}
+
+
+constexpr std::string_view SCH_QRY_CHARS = "srq";
+constexpr std::string_view SCH_QRY_EMOJI = "sre";
+
+
 std::unique_ptr<mywiki::Link> mywiki::parseLink(
         std::string_view scheme, std::string_view target)
 {
@@ -423,8 +452,10 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parseGotoInterfaceLink(target);
     } else if (scheme == "glc"sv) {
         return parseGotoLibCpLink(target);
-    } else if (scheme == "srq"sv) {
+    } else if (scheme == SCH_QRY_CHARS) {
         return parseCharRequestLink(target);
+    } else if (scheme == SCH_QRY_EMOJI) {
+        return parseEmojiRequestLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {
@@ -812,14 +843,13 @@ namespace {
         return x.loc.name;
     }
 
-    void appendQuery(QString& text, std::string_view params)
+    void appendQuery(QString& text, std::string_view schema, std::string_view params)
     {
         auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
         auto names = font.familiesComma().toStdString();
         text += loc::Fmt(
-                " &nbsp;&nbsp;<a href='srq:{1}' class='query' style='font-family: {2};'>&#{3};</a>")
-                       (params)
-                       (names)
+                " &nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
+                       (schema)(params)(names)
                        ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
 
@@ -838,7 +868,7 @@ namespace {
         }
         text += ')';
         if (!qry.empty()) {
-            appendQuery(text, qry);
+            appendQuery(text, SCH_QRY_CHARS, qry);
         }
         str::append(text, "</nobr></p>"sv);
     }
@@ -1953,15 +1983,15 @@ QString mywiki::buildHtml(const uc::Term& x)
 
     // We always search by 1 object
     if (x.search.ecCategory != uc::EcCategory::NO_VALUE) {
-        appendQuery(text, catQuery(x.search.ecCategory));
+        appendQuery(text, SCH_QRY_CHARS, catQuery(x.search.ecCategory));
     } else if (x.search.ecUpCat != uc::EcUpCategory::NO_VALUE) {
-        appendQuery(text, str::cat("u=", upCatNames[x.search.ecUpCat]));
+        appendQuery(text, SCH_QRY_CHARS, str::cat("u=", upCatNames[x.search.ecUpCat]));
     } else if (x.search.fgs) {
         char s[20];
         snprintf(s, std::size(s), "f=%u", static_cast<unsigned>(x.search.fgs.numeric()));
-        appendQuery(text, s);
+        appendQuery(text, SCH_QRY_CHARS, s);
     } else if (x.search.isNumber) {
-        appendQuery(text, "N=1");
+        appendQuery(text, SCH_QRY_CHARS, "N=1");
     }
 
     str::append(text, "<p>");
@@ -2282,16 +2312,16 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 namespace {
 
     void appendValue(str::QSep& sp, const char* locKey, unsigned value,
-                     std::u8string_view unicodeLink)
+                     std::string_view schema, std::u8string_view unicodeLink)
     {
         sp.sep();
         mywiki::appendNoFont(sp.target(), loc::get(locKey));
         str::append(sp.target(), ": ");
         mywiki::appendCopyable(sp.target(), value);
         // Query
-        if (value != 0 && !unicodeLink.empty()) {
+        if (value != 0 && !schema.empty() && !unicodeLink.empty()) {
             auto params = str::cat("v=", str::toSv(unicodeLink));
-            appendQuery(sp.target(), params);
+            appendQuery(sp.target(), schema, params);
         }
     }
 
@@ -2299,7 +2329,7 @@ namespace {
     {
         bool r = value != 0;
         if (r) {
-            appendValue(sp, locKey, value, {});
+            appendValue(sp, locKey, value, {}, {});
         }
         return r;
     }
@@ -2392,10 +2422,11 @@ QString mywiki::buildHtml(const uc::Version& version)
         str::QSep sp(text, "<br>");
         appendValueIf(sp, "Prop.Bullet.Transient", version.stats.chars.nTransient);
         auto link = version.link();
+        static constexpr std::string_view NO_SCHEMA {};
         static constexpr std::u8string_view NO_LINK {};
         // New
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal(), link);
+            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal(), SCH_QRY_CHARS, link);
             appendValueIf(sp, "Prop.Bullet.NewCjk", version.stats.chars.nw.nHani);
             appendValueIf(sp, "Prop.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
             appendValueIf(sp, "Prop.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
@@ -2404,12 +2435,13 @@ QString mywiki::buildHtml(const uc::Version& version)
         }
         // Total
         appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal,
+                    SCH_QRY_CHARS,
                     version.isFirst() ? static_cast<std::u8string_view>(link) : NO_LINK);
 
         if (version.stats.emoji.nTotal != 0) {
             // New emoji
             auto tot = version.stats.emoji.nw.nTotal();
-            appendValue(sp, "Prop.Bullet.NewEm", tot, {});
+            appendValue(sp, "Prop.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
             if (tot != 0) {
                 // Single-char
                 if (appendValueIf(sp, "Prop.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
@@ -2425,12 +2457,12 @@ QString mywiki::buildHtml(const uc::Version& version)
                 appendValueIf(sp, "Prop.Bullet.NewEmOtherNonZwj", version.stats.emoji.nw.seq.nOtherNonZwj);
             }
             // Total emoji
-            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal, NO_LINK);
+            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal, NO_SCHEMA, NO_LINK);
         }
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew, NO_LINK);
+            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);
         }
-        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal, NO_LINK);
+        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, NO_LINK);
     }
 
     // Text

@@ -123,6 +123,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
     std::unique_ptr<Link> parseCharRequestLink(std::string_view target);
+    std::unique_ptr<Link> parseEmojiRequestLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
