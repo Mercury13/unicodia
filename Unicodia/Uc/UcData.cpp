@@ -1250,7 +1250,7 @@ void uc::completeData()
         v.stats.thisEcVersion = i;
     }
 
-    completeEmojiData(1);
+    completeEmojiData(uc::ILIB_EMOJI_ROOT);
 
     // Scripts
     for (unsigned i = 0; i < uc::N_SCRIPTS; ++i) {

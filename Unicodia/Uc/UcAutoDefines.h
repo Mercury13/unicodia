@@ -448,6 +448,7 @@ namespace uc {
         size_t sprintPlus(char (&data)[N]) const { return sprintPlus(data, N); }
     };
 
+    constexpr auto ILIB_EMOJI_ROOT = 1;   ///< index of Emoji node
     extern const LibNode libNodes[];
     size_t nLibNodes();
     std::span<const LibNode> allLibNodes();

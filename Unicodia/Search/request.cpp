@@ -15,7 +15,7 @@ namespace {
         auto& node = uc::libNodes[index];
         if (node.flags.have(uc::Lfg::NO_COUNTING))
             return;
-        if (!category && index != 1)
+        if (!category && index != uc::ILIB_EMOJI_ROOT)
             category = &node;
         if (!node.value.empty() && state.rq.isOk(node)) {
             // Found!
@@ -56,7 +56,7 @@ uc::MultiResult uc::doRequest(const Request& rq)
 
     if (rq.hasEmoji()) {
         EmojiState state { .r = r, .rq = rq };
-        recurseEmoji(state, nullptr, 1);
+        recurseEmoji(state, nullptr, ILIB_EMOJI_ROOT);
     }
 
     return r;
