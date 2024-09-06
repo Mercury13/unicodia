@@ -443,7 +443,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1949), EcFont::NKO },
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::CJK,
+        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::CJK,
         Dating::special(), EcFont::NUSHU },
     // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam", QFontDatabase::Ogham,
