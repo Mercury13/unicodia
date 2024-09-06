@@ -24,7 +24,9 @@ namespace {
                 state.lastGroup->obj = category;
                 state.oldCat = category;
             }
-            state.lastGroup->lines.emplace_back(&node);
+            if (state.lastGroup) {  // -warn, should always be true
+                state.lastGroup->lines.emplace_back(&node);
+            }
         }
         const auto a = node.iFirstChild;
         const auto b = a + node.nChildren;
