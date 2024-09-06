@@ -68,7 +68,7 @@ constinit const uc::LangLife uc::langLifeInfo[] {
 static_assert (std::size(uc::langLifeInfo) == static_cast<size_t>(uc::EcLangLife::NN), "langLifeInfo size?");
 
 
-constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir::NN)] {
+constexpr uc::WritingDir writingDirProto[] {
     { {} },
     { "Prop.Dir.L" },
     { "Prop.Dir.R" },
@@ -81,8 +81,10 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { "Prop.Dir.R_col" },
     { "Prop.Dir.R_most" },
     { "Prop.Dir.Sogd" },
-    //{ "Error" },
 };
+
+constinit const ec::Array<uc::WritingDir, uc::EcWritingDir> uc::writingDirInfo (
+    ec::ARRAY_INIT, writingDirProto );
 
 
 constinit const uc::ScriptType uc::scriptTypeInfo[] {

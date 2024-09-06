@@ -144,7 +144,7 @@ namespace uc {
         NO_VALUE = NN
     };
 
-    enum class EcWritingDir : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, EcWritingDir, unsigned char,
         NOMATTER,
         LTR,
         RTL,
@@ -156,9 +156,8 @@ namespace uc {
         BOTH_LTR,   ///< Both, encoded as →
         RTL_COL,
         RTL_MOSTLY,
-        SOGDIAN,
-        NN,
-    };
+        SOGDIAN
+    )
 
     struct GlyphStyleChannel {
         unsigned count;
@@ -640,7 +639,7 @@ namespace uc {
     {
         std::string_view locKey;
     };
-    extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
+    extern const ec::Array<WritingDir, EcWritingDir> writingDirInfo;
 
     struct CoarseDate {
         short year;
@@ -768,7 +767,7 @@ namespace uc {
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
         inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
-        inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
+        inline const WritingDir& dir() const { return writingDirInfo[ecDir]; }
         inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         void printfLocKey(char* buf, size_t n, const char* suffix) const
