@@ -783,8 +783,11 @@ QVariant SearchModel::groupData(size_t index, int role) const
             if (!node)
                 return {};
             switch (role) {
-            case Qt::DisplayRole:
-                return node->viewableTitle(uc::TitleMode::SHORT);
+            case Qt::DisplayRole: {
+                    return node->viewableTitle(uc::TitleMode::SHORT)
+                            + '\n'
+                            + loc::get("Search.NEmoji").argQ(group.size());
+                }
             case Qt::DecorationRole: {
                     QIconEngine* ie = new ie::Node(*sample, *node);
                     return QIcon(ie);

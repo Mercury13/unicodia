@@ -11857,6 +11857,11 @@
     <orig>No such character</orig>
     <transl>Такого символа нет</transl>
    </text>
+   <text id="NEmoji">
+    <orig>{1} emoji</orig>
+    <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <transl>{1} эмодзи</transl>
+   </text>
   </group>
   <group id="Expand">
    <au-cmt>Test: expand/collapse CJK</au-cmt>

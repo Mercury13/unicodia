@@ -8840,15 +8840,6 @@
       <p />
       <p>In 2021 a new phoneme {{t|r}} was encoded{{-}}both versions are from 19th century, and the one that survived until today unofficially (before Unicode 14) was put into position 170D. Also a second virama appeared: the cross is invented by Spanish and reminds of colonial past, and is just badly legible in small pitch.</p>
      </orig>
-     <known-orig>
-      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
-      <p />
-      <p>Spanish missionaires (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did{{_}}not{{_}}understand direction of writing: the text was carved on bamboo planks, the knife wad directed out from body, so they could write in one direction and read in another.</p>
-      <p />
-      <p>There are several causes of fall of Baybayin: Spanish imported paper, pen and printing, Tagalog started to distinguish {{t|r/d}}, {{t|u/o}}, {{t|i/e}} under their influence. The last but not{{_}}the least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office job. By 19th century Baybayin had been almost dead, and the only thing remaining is to order Latin alphabet. There are modern attempts to revive Baybayin.</p>
-      <p />
-      <p>In 2021 a new phoneme {{t|r}} was encoded{{-}}both versions are from 19th century, and the one that survived until today unofficially (before Unicode 14) was put into position 170D. Also a second virama appeared: the cross is invented by Spanish and reminds of colonial past, and is just badly legible in small pitch.</p>
-     </known-orig>
      <transl>
       <p>Брахмійська абуґіда з голосною по замовчанню {{t|а}} та [[pt:virama|вірамою]]. Обійдуся самоназвою писемності: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} «ба-й-ба-ї-н».</p>
       <p />
@@ -11868,6 +11859,11 @@
    <text id="NoSuch">
     <orig>No such character</orig>
     <transl>Такого символа немає</transl>
+   </text>
+   <text id="NEmoji">
+    <orig>{1} emoji</orig>
+    <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <transl>{1} емодзі</transl>
    </text>
   </group>
   <group id="Expand">
