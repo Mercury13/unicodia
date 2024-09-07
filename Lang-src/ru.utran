@@ -9041,8 +9041,8 @@
      <transl>Тото</transl>
     </text>
     <text id="Lang">
-     <orig>Toto ''(Eastern India, 1400 people as of 2014)''</orig>
-     <transl>тото ''(Восточная Индия, 1400 чел. на 2014)''</transl>
+     <orig>Toto {{nspk||Eastern India}}</orig>
+     <transl>тото {{nspk||Восточная Индия}}</transl>
     </text>
     <text id="Text">
      <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>

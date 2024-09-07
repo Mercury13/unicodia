@@ -666,7 +666,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(2015), EcFont::FUNKY },
+        Dating::year(2015), EcFont::FUNKY, NO_FLAGS,
+        { .mantissa = 1400, .numOrder = NumOrder::UNIT, .year = 2014 } },
     /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
