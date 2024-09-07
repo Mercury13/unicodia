@@ -79,8 +79,8 @@ There’s no special policy for CJK Han ideographs, but mainland Chinese is pref
 
 ## Data
 Data is as neutral as possible. Examples.
-* Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So add just # of L1 speakers
-* Number of people speaking Ukrainian. Under this war people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so add total number
+* Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So just # of L1 speakers
+* Number of people speaking Ukrainian. Under this war people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so total number
 * Disputable territory. Disputable, who currently controls, and maybe who is disputing
 
 ## Future functionality
