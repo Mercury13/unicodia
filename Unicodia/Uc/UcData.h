@@ -734,7 +734,7 @@ namespace uc {
         UNIT, THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
 
     enum class Langfg : unsigned char {
-        AS_NATIVE = 1<<0,   ///< [+] # of L1 (native) speakers
+        AS_NATIVE = 1<<0,   ///< [+] # of L1 (native) speakers [-] all speakers
     };
 
     struct Lang {
