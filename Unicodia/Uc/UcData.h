@@ -741,6 +741,8 @@ namespace uc {
 
     struct Lang {
         unsigned short mantissa;
+        NumOrder numOrder;
+        Langfg flags;
         unsigned short year;
     };
 
