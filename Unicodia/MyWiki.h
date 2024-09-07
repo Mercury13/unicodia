@@ -33,6 +33,7 @@ namespace uc {
     class GlyphStyleChannel;
     class Request;
     enum class EcVersion : unsigned char;
+    struct Lang;
 }
 
 enum class Want32 { NO, YES };
@@ -104,6 +105,7 @@ namespace mywiki {
 
     struct Context {
         DescFont font;
+        const uc::Lang* lang;
     };
 
     void translateDatingLoc();

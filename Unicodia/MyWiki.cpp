@@ -527,6 +527,7 @@ namespace {
         void runRecursive(std::string_view text);
         void finishRecursion(bool hasRemainder, bool prepareResult);
         void finishDiv();
+        void appendNSpeakers(const SafeVector<std::string_view>& x);
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -736,6 +737,73 @@ namespace {
         s += "</table>";
     }
 
+    void Eng::appendNSpeakers(const SafeVector<std::string_view>& x)
+    {
+        // x: 0 = template name
+        //    1 = secry language
+        //    2 = initial comment
+        // Start
+        s += "<i>(";
+        auto lang = context.lang;   // primary language
+        /// @todo [future] extract secondary language
+        if (lang) {
+            bool wasWritten = false;
+            // Comment
+            auto comment = x.safeGetV(2, {});
+            if (!comment.empty()) {
+                mywiki::append(s, str::toU8sv(comment), context);
+                wasWritten = true;
+            }
+            // # of speakers
+            if (lang->hasValue()) {
+                if (wasWritten) {
+                    s += ", ";
+                }
+                QString sNum;
+                switch (lang->numOrder) {
+                case uc::NumOrder::NONE:
+                    sNum = "???";
+                    break;
+                case uc::NumOrder::UNIT:
+                    sNum = QString::number(lang->mantissa);
+                    break;
+                case uc::NumOrder::THOUSAND:
+                    sNum = loc::get("Prop.Lang.Num.Tho").argQ(lang->mantissa);
+                    break;
+                case uc::NumOrder::HUN_THOUSAND:
+                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
+                                lang->mantissa / 10, lang->mantissa % 10);
+                    break;
+                case uc::NumOrder::MILLION:
+                    sNum = loc::get("Prop.Lang.Num.Mil").argQ(lang->mantissa);
+                    break;
+                case uc::NumOrder::HUN_MILLION:
+                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
+                                lang->mantissa / 10, lang->mantissa % 10);
+                    break;
+                }
+                if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
+                    sNum = "&gt;" + sNum;
+                }
+                if (lang->year != 0) {
+                    std::u8string sYear = str::toU8(std::to_string(lang->year));
+                    if (lang->flags.have(uc::Langfg::DECADE))
+                        sYear = loc::get("Prop.Lang.Decade").arg(sYear);
+                    const char* key = "Prop.Lang.Qty";
+                    if (lang->flags.have(uc::Langfg::AS_NATIVE)) {
+                        key = "Prop.Lang.QtyNative";
+                    }
+                    sNum = loc::get(key).argQ(str::toU8sv(sNum.toStdString()), sYear);
+                }
+                s += sNum;
+            }
+        } else {
+            s += "[NO LANGUAGE!!!]";
+        }
+        // End
+        s += ")</i>";
+    }
+
     // Key: start/end
     constinit const std::u8string_view KEY_START =
             u8"<span style='background-color:palette(midlight);'>\u00A0";
@@ -814,6 +882,8 @@ namespace {
                 || name == "ArabPres1"
                 || name == "ArabPres2") {
             mywiki::append(s, loc::get(str::cat("Snip.", name)), context);
+        } else if (name == "nspk") {
+            appendNSpeakers(x);
         } else {
             wiki::appendHtml(s, x[0]);
         }
@@ -882,6 +952,7 @@ namespace {
     {
         mywiki::Context context {
             .font { getFont(obj) },
+            .lang = nullptr,
         };
         Eng eng(text, context);
         wiki::run(eng, x);
@@ -894,6 +965,7 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
 {
     mywiki::Context context {
         .font { uc::fontInfo[0] },
+        .lang = nullptr,
     };
     Eng eng(text, context);
     wiki::run(eng, wiki);
@@ -1104,7 +1176,8 @@ void mywiki::translateDatingLoc()
 void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 {
     mywiki::Context context {
-        .font = x.font()
+        .font = x.font(),
+        .lang = x.mainLang ? &x.mainLang : nullptr,
     };
     if (x.ecType != uc::EcScriptType::NONE) {
         str::append(text, "<p>");
@@ -1119,13 +1192,13 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Langs");
-            appendWiki(text, x, x.loc.langs);
+            append(text, x.loc.langs, context);
         }
         if (x.time) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Appear");
             auto wikiTime = x.time.wikiText(myDatingLoc, x.loc.timeComment);
-            appendWiki(text, x, wikiTime);
+            append(text, wikiTime, context);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
@@ -1151,7 +1224,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
     }
 
     str::append(text, "<p>");
-    mywiki::append(text, x.loc.description, context);
+    append(text, x.loc.description, context);
     str::append(text, "</p>");
 }
 

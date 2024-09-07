@@ -45,7 +45,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Arabic OK, three fonts: SIL Scheherazade main, Google Noto Math + Google Noto Arabic for special ranges
     { "Arab", QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC, Sfg::STUB_ALM },
+        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC, Sfg::STUB_ALM,
+        { .mantissa = 380, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::DECADE, .year = 2020 } },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -53,7 +54,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Armenian OK, Cambria+Noto is more than nice!
     { "Armn", QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(405), EcFont::ARMENIAN },
+        Dating::year(405), EcFont::ARMENIAN, NO_FLAGS,
+        { .mantissa = 38, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2022 } },
     // Avestan OK, installed Google Noto
     /// @todo [future, link] wait for book Pahlavi (sorry, cannot put todo at lockit)
     { "Avst", QFontDatabase::Any,
@@ -193,11 +195,13 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gondi/Gunjala OK, W10 none, installed Google Noto
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1750, StdNote::FIRST_KNOWN), EcFont::GUNJALA_GONDI },
+        Dating::year(1750, StdNote::FIRST_KNOWN), EcFont::GUNJALA_GONDI, NO_FLAGS,
+        { .mantissa = 100, .numOrder = NumOrder::THOUSAND, .flags = Langfg::DECADE, .year = 2010 } },
     // Gondi/Masaram OK, W10 none, installed Google Noto
     { "Gonm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1918), EcFont::MASARAM_GONDI },
+        Dating::year(1918), EcFont::MASARAM_GONDI, NO_FLAGS,
+        { .mantissa = 3, .numOrder = NumOrder::MILLION, .year = 2011 } },
     // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -209,7 +213,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, Noto does the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::crange_ins(-9, -8), EcFont::GREEK_COPTIC },
+        Dating::crange_ins(-9, -8), EcFont::GREEK_COPTIC, NO_FLAGS,
+        { .mantissa = 135, .numOrder = NumOrder::HUN_THOUSAND, .year = 2012 } },  // 13.5M as of 2012
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -680,11 +685,13 @@ constinit const uc::Script uc::scriptInfo[] {
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1950), EcFont::WARANG_CITI },
+        Dating::decade(1950), EcFont::WARANG_CITI, NO_FLAGS,
+        { .mantissa = 14, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011 } },
     // Wancho OK, W10 none, installed Google Noto
     { "Wcho", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yrange(2001, 2012), EcFont::WANCHO },
+        Dating::yrange(2001, 2012), EcFont::WANCHO, NO_FLAGS,
+        { .mantissa = 59, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

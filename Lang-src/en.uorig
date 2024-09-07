@@ -950,20 +950,23 @@
       <orig>{1}k</orig>
      </text>
      <text id="HunTho">
-      <orig>{1}.{2}k</orig>
+      <orig>{1}.{2}M</orig>
      </text>
      <text id="Mil">
       <orig>{1}M</orig>
      </text>
      <text id="HunMil">
-      <orig>{1}.{2}M</orig>
+      <orig>{1}.{2}bn</orig>
      </text>
     </group>
     <text id="Qty">
      <orig>{1} as of {2}</orig>
     </text>
     <text id="QtyNative">
-     <orig>{1} as of {2} as native</orig>
+     <orig>{1} as native as of {2}</orig>
+    </text>
+    <text id="Decade">
+     <orig>{1}s</orig>
     </text>
    </group>
   </group>
@@ -3694,7 +3697,7 @@
      <orig>Arabic</orig>
     </text>
     <text id="Lang">
-     <orig>Arabic ''(310M as of 2018 as native)'', Persian, Urdu, Uighur, Pashto…</orig>
+     <orig>Arabic {{nspk}}, Persian, Urdu, Uighur, Pashto…</orig>
     </text>
     <text id="Text">
      <orig>
@@ -3724,7 +3727,7 @@
      <orig>Armenian</orig>
     </text>
     <text id="Lang">
-     <orig>Armenian ''(6M as of 2019)''</orig>
+     <orig>Armenian {{nspk}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4337,7 +4340,7 @@
      <orig>Gunjala script (Gondi)</orig>
     </text>
     <text id="Lang">
-     <orig>Southern Gondi ''(Central India, 100k as of 2010s)''</orig>
+     <orig>Southern Gondi {{nspk||Central India}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4355,7 +4358,7 @@
      <orig>Masaram script (Gondi)</orig>
     </text>
     <text id="Lang">
-     <orig>Gondi ''(Central India, 3M as of 2011)'', Marathi</orig>
+     <orig>Gondi {{nspk||Central India}}, Marathi</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4414,7 +4417,7 @@
      <orig>Greek</orig>
     </text>
     <text id="Lang">
-     <orig>Greek ''(13.5M as of 2012)''</orig>
+     <orig>Greek {{nspk}}</orig>
     </text>
     <text id="Note">
      <orig>main hypothesis</orig>
@@ -6437,7 +6440,7 @@
      <orig>Wancho</orig>
     </text>
     <text id="Lang">
-     <orig>Wancho ''(India, 59k as of 2011)''</orig>
+     <orig>Wancho {{nspk||North-Eastern India}}</orig>
     </text>
     <text id="Text">
      <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
@@ -6448,7 +6451,7 @@
      <orig>Warang Citi</orig>
     </text>
     <text id="Lang">
-     <orig>Ho ''(East India, &gt;1M)''</orig>
+     <orig>Ho {{nspk||East India}}</orig>
     </text>
     <text id="Text">
      <orig>

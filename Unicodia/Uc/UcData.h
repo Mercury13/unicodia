@@ -731,17 +731,28 @@ namespace uc {
     constexpr int PLANE_UNKNOWN = -1;
 
     DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
-        UNIT, THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
+        NONE, UNIT, THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
 
     enum class Langfg : unsigned char {
-        AS_NATIVE = 1<<0,   ///< [+] # of L1 (native) speakers [-] all speakers
+        AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
+        GREATER_THAN = 1<<1,    ///< [+] greater than (# is lower limit)
+        //LESS_THAN = 1<<2,
+        DECADE = 1<<3,          ///< Decade
     };
+    DEFINE_ENUM_OPS(Langfg)
 
     struct Lang {
         unsigned short mantissa;
         NumOrder numOrder;
-        Langfg flags;
+        Flags<Langfg> flags {};
         unsigned short year;
+
+        constexpr bool hasValue() const noexcept { return (numOrder != NumOrder::NONE); }
+        explicit constexpr operator bool() const noexcept { return hasValue(); }
+    };
+
+    constexpr Lang NO_LANG = {
+        .mantissa = 0, .numOrder = NumOrder::NONE, .flags {}, .year = 0
     };
 
     /// Script’s flags
@@ -770,6 +781,7 @@ namespace uc {
         Dating time;
         EcFont ecFont;
         Flags<Sfg> flags {};
+        Lang mainLang = NO_LANG;
 
         mutable unsigned nChars = 0;
         mutable int plane = -1;

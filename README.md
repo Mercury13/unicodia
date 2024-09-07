@@ -17,6 +17,7 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 * Press F12 in Unicodia to reload translation without reopening the entire program.
   * Warning, it reloads strings only; all locales are loaded on startup.
 * When new original arrived: File → Update data, Go → Find warnings → All.
+* nspk template parameters: 1=language name (non-localizable), 2=location (localizable)
 
 ## Language policy
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
