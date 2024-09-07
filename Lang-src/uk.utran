@@ -1195,6 +1195,34 @@
      <transl>Стиснено</transl>
     </text>
    </group>
+   <group id="Lang">
+    <group id="Num">
+     <text id="Tho">
+      <orig>{1}k</orig>
+      <transl>{1}&amp;#160;тис.</transl>
+     </text>
+     <text id="HunTho">
+      <orig>{1}.{2}k</orig>
+      <transl>{1},{2}&amp;#160;тис.</transl>
+     </text>
+     <text id="Mil">
+      <orig>{1}M</orig>
+      <transl>{1}&amp;#160;млн</transl>
+     </text>
+     <text id="HunMil">
+      <orig>{1}.{2}M</orig>
+      <transl>{1},{2}&amp;#160;млн</transl>
+     </text>
+    </group>
+    <text id="Qty">
+     <orig>{1} as of {2}</orig>
+     <transl>{1} на {2}</transl>
+    </text>
+    <text id="QtyNative">
+     <orig>{1} as of {2} as native</orig>
+     <transl>{1} на {2} як рідна</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
