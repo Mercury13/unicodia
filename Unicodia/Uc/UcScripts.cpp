@@ -246,7 +246,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr", QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(-2, StdNote::MODERN_FORM), EcFont::HEBREW },
+        Dating::century(-2, StdNote::MODERN_FORM), EcFont::HEBREW, NO_FLAGS,
+        { .mantissa = 9, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN, .year = 2018 } },
     // Hentaigana currently OK
     { "Hent", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::CONSERVED, EcWritingDir::LTR_CJK, EcContinent::CJK,
