@@ -18,6 +18,23 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
   * Warning, it reloads strings only; all locales are loaded on startup.
 * When new original arrived: File → Update data, Go → Find warnings → All.
 
+## Language policy
+**Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
+
+**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
+
+**Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
+
+_(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree to _script_ (_письменность_, female in Russian), or to _language_ (_язык_, male). The rules are…
+* BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise to script _(батакская=Batak [script])_.
+* SCRIPTS: of course agree to script _(грузинская=Georgian [script])_.
+
+**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
+
+**New languages.**
+* As English uses lots of capital letters, translations to other languages may use small where English is capital. Refer to Russian/Ukrainian for letter case.
+* See Russian script/language rule.
+
 # How to build?
 * Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
 * Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
@@ -60,22 +77,11 @@ These fonts are taken to Unicodia without author’s consent:
 
 There’s no special policy for CJK Han ideographs, but mainland Chinese is preferred. All such fonts tend to recreate hypothetical mainland ideographs even if unseen in Chinese bases: SimSun does it for 25 of 100 ideographs from CJK A block.
 
-## Language
-**Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
-
-**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
-
-**Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
-
-_(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree to _script_ (_письменность_, female in Russian), or to _language_ (_язык_, male). The rules are…
-* BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise to script _(батакская=Batak [script])_.
-* SCRIPTS: of course agree to script _(грузинская=Georgian [script])_.
-
-**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. Describe topics sensitive to nationalists as delicately as possible.
-
-**New languages.**
-* As English uses lots of capital letters, translations to other languages may use small where English is capital. Refer to Russian/Ukrainian for letter case.
-* See Russian script/language rule.
+## Data
+Data is as neutral as possible. Examples.
+* # of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So add just # of L1 speakers
+* # of people speaking Ukrainian. Under this war people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is >> L2 → so add total number
+* Disputable territory. Disputable, who currently controls, and maybe who is disputing
 
 ## Future functionality
 * Finish GlyphWiki loader.
