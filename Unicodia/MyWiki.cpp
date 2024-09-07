@@ -765,7 +765,7 @@ namespace {
                     sNum = "???";
                     break;
                 case uc::NumOrder::UNIT:
-                    sNum = QString::number(lang->mantissa);
+                    sNum = loc::get("Prop.Lang.Num.Unit").argQ(lang->mantissa);
                     break;
                 case uc::NumOrder::THOUSAND:
                     sNum = loc::get("Prop.Lang.Num.Tho").argQ(lang->mantissa);

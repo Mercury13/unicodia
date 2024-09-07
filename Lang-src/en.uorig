@@ -946,6 +946,10 @@
    </group>
    <group id="Lang">
     <group id="Num">
+     <text id="Unit">
+      <orig>{1} people</orig>
+      <au-cmt>Specially for Toto</au-cmt>
+     </text>
      <text id="Tho">
       <orig>{1}k</orig>
      </text>

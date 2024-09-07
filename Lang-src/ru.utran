@@ -1196,6 +1196,11 @@
    </group>
    <group id="Lang">
     <group id="Num">
+     <text id="Unit">
+      <orig>{1} people</orig>
+      <au-cmt>Specially for Toto</au-cmt>
+      <transl>{1} человек</transl>
+     </text>
      <text id="Tho">
       <orig>{1}k</orig>
       <transl>{1}&amp;#160;тыс.</transl>
