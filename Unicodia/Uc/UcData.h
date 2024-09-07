@@ -730,8 +730,22 @@ namespace uc {
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;
 
+    DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
+        UNIT, THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
+
+    enum class Langfg : unsigned char {
+        COUNTRY = 1<<0,     ///< [+] Some country is shown
+        AS_NATIVE = 1<<1,   ///< [+] # of L1 (native) speakers
+        CUSTOM_NOTE = 1<<2, ///< [+] instead of “as native”, custom note is shown
+    };
+
+    struct Lang {
+        unsigned short mantissa;
+        unsigned short year;
+    };
+
     /// Script’s flags
-    enum class Sfg {
+    enum class Sfg : unsigned char {
         NONSCRIPT      = 1<<0,  ///< [+] Non-script for search
         NO_LANGS       = 1<<1,  ///< [+] No “Languages” line
         DESC_FROM_PREV = 1<<2,  ///< [+] Description is taken from previous script (Meroitic, Sogdian)
