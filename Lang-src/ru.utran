@@ -7376,8 +7376,8 @@
      <transl>Мру</transl>
     </text>
     <text id="Lang">
-     <orig>Mro ''(=Mru; Bangladesh, India, Myanmar, 20…100k according to different sources)''</orig>
-     <transl>мру ''(Бангладеш, Индия, Мьянма, 20…100{{_}}тыс. по разным подсчётам)''</transl>
+     <orig>Mro {{nspk||=Mru; Bangladesh, Myanmar}}</orig>
+     <transl>мру {{nspk||Бангладеш, Мьянма}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7385,14 +7385,14 @@
       <p />
       <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Crama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
       <p />
-      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard.</p>
+      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard. Punctuation is European, with addition of local version of ''danda'' bar.</p>
      </orig>
      <transl>
       <p>Большинство мру{{-}}буддисты, и власти исламской Бангладеш не{{_}}желают поддерживать их.</p>
       <p />
       <p>Письмо мру придумал в 1980-е основатель религии ''крама'' Менлай Муранг. В 2000-е алфавит Муранга стал популярным и обошёл прошлую письменность{{-}}[[ps:Latn|латиницу]]: более {{%|80}} мру грамотны в нём. К тому же имевшаяся латиница плохо передавала фонетику мру.</p>
       <p />
-      <p>Никаких технических сложностей нет: письмо слева направо, без [[pt:format|форматирующих]] символов и [[pt:combining|комбинирующих]] меток, [[pt:abc|алфавитный порядок]] соответствует кодировке, правила переноса строк стандартные.</p>
+      <p>Никаких технических сложностей нет: письмо слева направо, без [[pt:format|форматирующих]] символов и [[pt:combining|комбинирующих]] меток, [[pt:abc|алфавитный порядок]] соответствует кодировке, правила переноса строк стандартные. Знаки препинания европейские, с добавлением местной версии палки ''данды''.</p>
      </transl>
     </text>
    </group>

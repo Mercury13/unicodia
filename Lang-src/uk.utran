@@ -7377,8 +7377,8 @@
      <transl>Мру</transl>
     </text>
     <text id="Lang">
-     <orig>Mro ''(=Mru; Bangladesh, India, Myanmar, 20…100k according to different sources)''</orig>
-     <transl>мру ''(Бангладеш, Індія, М’янма, 20…100{{_}}тис. за разними підрахунками)''</transl>
+     <orig>Mro {{nspk||=Mru; Bangladesh, Myanmar}}</orig>
+     <transl>мру {{nspk||Бангладеш, М’янма}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7386,14 +7386,14 @@
       <p />
       <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Crama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
       <p />
-      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard.</p>
+      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard. Punctuation is European, with addition of local version of ''danda'' bar.</p>
      </orig>
      <transl>
       <p>Більшість мру{{-}}буддисти, і влада ісламської Бангладеш не{{_}}бажає підтримувати іх.</p>
       <p />
       <p>Письмо мру придумав у 1980-і засновник релігії ''крама'' Менлай Муранг. У 2000-і алфавіт Муранга став популярним і обійшов стару писемність{{-}}[[ps:Latn|латинку]]: більше {{%|80}} мру письменні у ньому. До того ж наявна латинка погано передавала фонетику мру.</p>
       <p />
-      <p>Ніяких технічних складнощів нема: письмо зліва направо, без [[pt:format|форматуючих]] символів та [[pt:combining|комбінуючих]] міток, [[pt:abc|алфавітний порядок]] відповідає кодуванню, правила переносу рядків стандартні.</p>
+      <p>Ніяких технічних складнощів нема: письмо зліва направо, без [[pt:format|форматуючих]] символів та [[pt:combining|комбінуючих]] міток, [[pt:abc|алфавітний порядок]] відповідає кодуванню, правила переносу рядків стандартні. Розділові знаки європейські, з доданням місцевої версії палиці ''данди''.</p>
      </transl>
     </text>
    </group>

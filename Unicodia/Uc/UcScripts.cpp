@@ -410,7 +410,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mro OK, installed Google Noto font
     { "Mroo", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1980), EcFont::MRO },
+        Dating::decade(1980), EcFont::MRO, NO_FLAGS,
+        { .mantissa = 70, .numOrder = NumOrder::THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2022 } },
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
