@@ -1137,7 +1137,6 @@ namespace uc {
 
         enum class Sales : unsigned char {
             NOMATTER,
-            UNKNOWN,
             OVER_3K,
             OVER_10K,
             OVER_30K,
