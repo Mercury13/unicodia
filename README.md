@@ -76,7 +76,7 @@ These fonts are taken to Unicodia without author’s consent:
 * Author is surely SIL, even if found elsewhere. Example: Toto
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
-There’s no special policy for CJK Han ideographs, but mainland Chinese is preferred. All such fonts tend to recreate hypothetical mainland ideographs even if unseen in Chinese bases: SimSun does it for 25 of 100 ideographs from CJK A block.
+There’s no special policy for CJK Han ideographs, but mainland Chinese is preferred. All such fonts tend to recreate hypothetical mainland ideographs even if unseen in Chinese bases: SimSun does it for 25 of 100 ideographs from CJK A block. Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
 ## Data
 Data is as neutral as possible. Examples.
