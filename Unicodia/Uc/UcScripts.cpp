@@ -314,7 +314,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kirat OK, excellent font from SIL
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1920), EcFont::KIRAT },
+        Dating::year(1920), EcFont::KIRAT, NO_FLAGS,
+        { .mantissa = 170, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -463,7 +464,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ol Onal OK, made in Funky
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1980), EcFont::FUNKY },
+        Dating::decade(1980), EcFont::FUNKY, NO_FLAGS,
+        { .mantissa = 27, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
     // Orkhon runes OK, took Noto
     { "Orkh", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,

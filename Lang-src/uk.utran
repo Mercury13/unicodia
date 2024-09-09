@@ -6745,8 +6745,8 @@
      <transl>Кірат (раї)</transl>
     </text>
     <text id="Lang">
-     <orig>Bantawa ''(India, Nepal, 170k as of 2011)''</orig>
-     <transl>бантава ''(Індія, Непал, 170 тис. на 2011)''</transl>
+     <orig>Bantawa {{nspk||North-Eastern India, Nepal}}</orig>
+     <transl>бантава {{nspk||Південно-Східна Індія, Непал}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7703,8 +7703,8 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij ''(Eastern India, 27k as of 2011)''</orig>
-     <transl>бхумідж ''(Східна Індія, 27 тис. на 2011)''</transl>
+     <orig>Bhumij {{nspk||Eastern India}}</orig>
+     <transl>бхумідж {{nspk||Східна Індія}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9258,7 +9258,7 @@
       <p>Yezidis were constantly oppressed by Muslims, so their religion is mostly oral, few witnessed books in written form. Islamic State made a genocide of Yezidis in 2014–2017: about 5000 are killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became UN Goodwill Ambassador, and was awarded Nobel Peace Prize in 2018.</p>
      </orig>
      <transl>
-      <p>Єзиди{{-}}частина курдського народу, сповідують релігію єзидизм, що вийшла з [[ps:Avst|зороастризму]]. Священні єзидські книги, ''Книга откровення'' та ''Чорна книга'', написані особливим письмом (відомі і більш ранні версії [[ps:Arab|арабицею]]. Консенсусу щодо датування цих книг нема.</p>
+      <p>Єзиди{{-}}частина курдського народу, сповідують релігію єзидизм, що вийшла з [[ps:Avst|зороастризму]]. Священні єзидські книги, ''Книга откровення'' та ''Чорна книга'', написані особливим письмом (відомі і більш ранні версії [[ps:Arab|арабицею]]). Консенсусу щодо датування цих книг нема.</p>
       <p />
       <p>Єзиди постійно зазнавали гонінь від мусульман, і тому їх релігія багато в чому усна, мало хто бачив книги у письмовому вигляді. Заборонена держава влаштувала геноцид 2014–2017: біля 5000 вбиті, не{{_}}менше 5000 пропали, біля 500{{_}}тис. втекли з Іраку. Єзидка Надія Мурад потрапила у полон, зуміла втекти, стала послом доброї волі ООН і у 2018 отримала Нобелівську премію миру.</p>
      </transl>

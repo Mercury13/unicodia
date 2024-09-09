@@ -6744,8 +6744,8 @@
      <transl>Кират (раи)</transl>
     </text>
     <text id="Lang">
-     <orig>Bantawa ''(India, Nepal, 170k as of 2011)''</orig>
-     <transl>бантава ''(Индия, Непал, 170 тыс. на 2011)''</transl>
+     <orig>Bantawa {{nspk||North-Eastern India, Nepal}}</orig>
+     <transl>бантава {{nspk||Северо-Восточная Индия, Непал}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7702,8 +7702,8 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij ''(Eastern India, 27k as of 2011)''</orig>
-     <transl>бхумидж ''(Восточная Индия, 27 тыс. на 2011)''</transl>
+     <orig>Bhumij {{nspk||Eastern India}}</orig>
+     <transl>бхумидж {{nspk||Восточная Индия}}</transl>
     </text>
     <text id="Text">
      <orig>
