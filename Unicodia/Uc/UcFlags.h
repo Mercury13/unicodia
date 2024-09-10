@@ -76,9 +76,8 @@ namespace uc {
     using Lfgs = Flags<Lfg>;
     DEFINE_ENUM_OPS(Lfg)
     constexpr Lfgs MISRENDER_MASK = Lfg::MISRENDER_0 | Lfg::MISRENDER_1 | Lfg::MISRENDER_2;
-    constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };             // 01
-    constexpr Lfgs MISRENDER_GENDERED_FAMILY { Lfg::MISRENDER_1 };    // 10
-    constexpr Lfgs MISRENDER_GENDERLESS_FAMILY = Lfg::MISRENDER_1 | Lfg::MISRENDER_0;  // 11
+    constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };       // 01
+    constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 10
 
     enum class TextRole : unsigned char {
         CMD_END = 0,    // Command: text end
