@@ -39,6 +39,16 @@ constexpr auto SIZE_DEVA = 110_pc;
 
 constexpr std::string_view FNAME_NAND = "NotoSansNandinagari-Regular.ttf";
 
+char32_t recodeCuneiform(char32_t x)
+{
+    /// @todo [U16, gag] Recode cuneiform
+    switch (x) {
+    case 0x12326: return 0x12327;
+    case 0x12327: return 0x12326;
+    default: return x;
+    }
+}
+
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …1
@@ -130,7 +140,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
       { FNAME_KOREAN, 110_pc},                                                  // …1
-    { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
+    { { "NotoSansCuneiform-Regular.ttf", recodeCuneiform } },                   // Cuneiform
     { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …1 for descriptions
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, 10_top, SIZE_DEVA },                    // Devanagari bigger
