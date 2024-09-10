@@ -1690,11 +1690,8 @@ namespace {
 
         // Get L10n key
         switch (mask.numeric()) {
-        case uc::MISRENDER_GENDERED_FAMILY.numeric():
-            key = "Lib.Misr.Family1";
-            break;
-        case uc::MISRENDER_GENDERLESS_FAMILY.numeric():
-            key = "Lib.Misr.Family2";
+        case uc::MISRENDER_FAMILY.numeric():
+            key = "Lib.Misr.Family";
             break;
         default: {
                 auto end = buf + std::size(buf);
