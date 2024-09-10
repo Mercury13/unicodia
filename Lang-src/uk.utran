@@ -13160,13 +13160,9 @@
      <orig>As of 2023, sample Unicode image depicts spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
      <transl>На 2023 зразкове зображення Юнікоду{{-}}пружинна мишоловка. Але оскільки цей емодзі значить «безплатний сир» та «пастка», більшість виробників малюють саморобну пастку, що ловить мишу живою, з сиром всередині.</transl>
     </text>
-    <text id="Family1">
-     <orig>In 2023 Google turned all gendered families to silhouettes. Samsung and Microsoft left them coloured.</orig>
-     <transl>У 2023 Google перетворив усі сім’ї зі стáттю на силуети. Samsung та Microsoft залишили їх кольоровими.</transl>
-    </text>
-    <text id="Family2">
-     <orig>As of 2023, Microsoft draws coloured genderless families rather than silhouettes.</orig>
-     <transl>На 2023 Microsoft малює кольорові безстатеві сім’ї, а не{{_}}силуети.</transl>
+    <text id="Family">
+     <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film), and recommended to do the same with gendered ones, to prevent combinatorial explosion. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same.</orig>
+     <transl>Консорціум Юнікоду у 2023 вимагав малювати безстатеві сім’ї як силуети (скажімо, «сімейний фільм»), та порекомендував зробити те ж з сім’ями зі статтю, щоб уникнути комбінаторного вибуху. Восени 2023 Google випустив свої емодзі з силуетами, навесні 2024 Apple зробив те ж.</transl>
     </text>
    </group>
    <group id="Cinfo">
