@@ -6472,7 +6472,7 @@
      <orig>
       <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
       <p />
-      <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but use of runes continued, gradually declining. Last inscrtiptions are dated ≈1800.</p>
+      <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but use of runes continued, gradually declining. Last inscriptions are dated ≈1800.</p>
       <p />
       <p>Studying started since 18th century, main work was conducted about 1900, and even new runes were made for remaining phonemes of Hungarian. Hungarians are proud of runes and even duplicate signs sometimes, but few are able to read them: in 2017 some pranksters replaced sign of Érd town with “Szia” (“hi”, both words are 3 runes long), and that was noticed in a month.</p>
      </orig>
@@ -7230,7 +7230,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Meroitic script was used in Nubia and Sudan for writing local languages until 7th century. Has two forms, hieroglyphic and cursive. Hieroglyphic form comes from [[ps:Egyp|Egyptian hieroglyphs]] and was written right-to-left in columns; only inscrtiptions carved on monuments are known. Cursive is derived from Demotic script and was written right-to-left, {{%|90}} of all inscriptions.</p>
+      <p>Meroitic script was used in Nubia and Sudan for writing local languages until 7th century. Has two forms, hieroglyphic and cursive. Hieroglyphic form comes from [[ps:Egyp|Egyptian hieroglyphs]] and was written right-to-left in columns; only inscriptions carved on monuments are known. Cursive is derived from Demotic script and was written right-to-left, {{%|90}} of all inscriptions.</p>
       <p />
       <p>More than 2000 inscripitons exist. The alphabet was deciphered in early 20th century via Meroitic pronunciation of Egyptian names. But the language is still unclear.</p>
      </orig>
@@ -13161,8 +13161,8 @@
      <transl>На 2023 зразкове зображення Юнікоду{{-}}пружинна мишоловка. Але оскільки цей емодзі значить «безплатний сир» та «пастка», більшість виробників малюють саморобну пастку, що ловить мишу живою, з сиром всередині.</transl>
     </text>
     <text id="Family">
-     <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film), and recommended to do the same with gendered ones, to prevent combinatorial explosion. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same.</orig>
-     <transl>Консорціум Юнікоду на початку 2023 вимагав малювати безстатеві сім’ї як силуети (скажімо, «сімейний фільм»), та порекомендував зробити те ж з сім’ями зі статтю, щоб уникнути комбінаторного вибуху. Восени 2023 Google випустив свої емодзі з силуетами, навесні 2024 Apple зробив те ж.</transl>
+     <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>
+     <transl>Консорціум Юнікоду на початку 2023 вимагав малювати безстатеві сім’ї як силуети (скажімо, «сімейний фільм») те перенести на «клавіатурах» з Людей до Символів, та порекомендував прибрати сім’ї зі статтю з «клавіатур», забивши тими ж силуетами, щоб уникнути комбінаторного вибуху. Восени 2023 Google випустив свої емодзі з силуетами, навесні 2024 Apple зробив те ж. У силуетів Google є звабинка: вони показують жіночі зачіски.</transl>
     </text>
    </group>
    <group id="Cinfo">
