@@ -3852,12 +3852,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from various sources.</p>
+      <p>3995 more hieroglyphs from various sources. The first proposals were so bad that a man with laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs.</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
      </orig>
+     <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
      <transl>
-      <p>Ще 3995 ієрогліфів з різних джерел.</p>
+      <p>Ще 3995 ієрогліфів з різних джерел. Перші заявки були такі погані, що туди якось потрапила людина з ноутбуком, але вчені усе перевірили, і це призвело до ''Unikemet'', бази єгипетських ієрогліфів Юнікоду.</p>
       <p />
       <p>Єгиптологи розробили спеціальні стрілки для напрямку читання{{-}}U+1F8C0 та C1.</p>
      </transl>
@@ -4058,12 +4059,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The final bit of symbols from old computers. There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
       <p />
       <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
      <transl>
-      <p>Останній набір символів зі старих комп’ютерів. Скоріше за все, більше не буде великих додавань таких символів, адже мікрокомп’ютери 2010-х зазвичай дотримуються стандартних кодувань.</p>
+      <p>Останній набір символів зі старих комп’ютерів. Рідка [[pt:pseudographics|псевдографіка]], ігрові спрайти (деякі з тих комп’ютерів не{{_}}мали графики), великі літери на кілька [[pt:mono|знакомісць]]… Скоріше за все, більше не буде великих додавань таких символів, адже мікрокомп’ютери 2010-х зазвичай дотримуються стандартних кодувань.</p>
       <p />
       <p>Юнікод{{_}}17 [[pt:unification|розуніфікує]] консольні символи від [[pt:emoji|емодзі]].</p>
      </transl>
@@ -10411,11 +10412,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ligature is several characters fused in one:</p>
+      <p>Ligature is several characters fused into one:</p>
       <p />
       <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. Fir example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
+      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />

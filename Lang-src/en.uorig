@@ -2911,10 +2911,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from various sources.</p>
+      <p>3995 more hieroglyphs from various sources. The first proposals were so bad that a man with laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs.</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
      </orig>
+     <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
     </text>
    </group>
    <group id="14400">
@@ -3070,7 +3071,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The final bit of symbols from old computers. There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
       <p />
       <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
@@ -7262,11 +7263,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ligature is several characters fused in one:</p>
+      <p>Ligature is several characters fused into one:</p>
       <p />
       <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. Fir example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
+      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
