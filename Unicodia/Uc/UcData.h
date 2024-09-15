@@ -737,7 +737,7 @@ namespace uc {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
         GREATER_THAN = 1<<1,    ///< [+] greater than (# is lower limit)
         //LESS_THAN = 1<<2,
-        DECADE = 1<<3,          ///< Decade
+        DECADE = 1<<3,          ///< Year = decade rather than exact year of census
     };
     DEFINE_ENUM_OPS(Langfg)
 
