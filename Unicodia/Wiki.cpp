@@ -228,7 +228,7 @@ void wiki::run(Engine& engine, const char* start, const char* end)
             engine.appendLink(x.params, (x.posNext != end));
             break;
         case Type::TEMPLATE:
-            engine.appendTemplate(x.params, (x.posNext != end));
+            engine.appendTemplate(toBuf(x.params), (x.posNext != end));
             break;
         case Type::PARAGRAPH:
             engine.appendBreak(Strength::PARAGRAPH, x.feature, x.indentSize);

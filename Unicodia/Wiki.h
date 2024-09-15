@@ -80,7 +80,7 @@ namespace wiki {
                     const SafeVector<std::string_view>& x,
                     bool hasRemainder) = 0;
         virtual void appendTemplate(
-                    const SafeVector<std::string_view>& x,
+                    Buf1d<const std::string_view> x,
                     bool hasRemainder) = 0;
         virtual void appendBreak(Strength strength, Feature feature, unsigned indentSize) = 0;
 

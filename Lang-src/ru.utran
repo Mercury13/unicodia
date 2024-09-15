@@ -5035,8 +5035,8 @@
      <transl>Армянская</transl>
     </text>
     <text id="Lang">
-     <orig>Armenian {{nspk}}</orig>
-     <transl>армянский {{nspk}}</transl>
+     <orig>Armenian</orig>
+     <transl>армянский</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6090,8 +6090,8 @@
      <transl>Греческая</transl>
     </text>
     <text id="Lang">
-     <orig>Greek {{nspk}}</orig>
-     <transl>греческий {{nspk}}</transl>
+     <orig>Greek</orig>
+     <transl>греческий</transl>
     </text>
     <text id="Note">
      <orig>main hypothesis</orig>

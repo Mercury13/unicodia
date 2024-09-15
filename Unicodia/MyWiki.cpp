@@ -506,6 +506,7 @@ namespace {
     public:
         QString& s;
         mywiki::Context context;
+        bool hasNSpeakers = false;
 
         Eng(QString& aS, const mywiki::Context& aContext) : s(aS), context(aContext) {}
         void appendPlain(std::string_view x) override;
@@ -513,11 +514,12 @@ namespace {
                 const SafeVector<std::string_view>& x,
                 bool hasRemainder) override;
         void appendTemplate(
-                const SafeVector<std::string_view>& x,
+                Buf1d<const std::string_view> x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
         void finish() override;
+        void appendNSpeakers(Buf1d<const std::string_view> x);
     protected:
         wiki::HtWeight weight;
         bool isSuppressed = false;
@@ -527,7 +529,6 @@ namespace {
         void runRecursive(std::string_view text);
         void finishRecursion(bool hasRemainder, bool prepareResult);
         void finishDiv();
-        void appendNSpeakers(const SafeVector<std::string_view>& x);
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -693,14 +694,14 @@ namespace {
 
     template <class Font>
     inline void appendFont(QString& s, Font&& fontId,
-                    const SafeVector<std::string_view>& x, int size)
+                    Buf1d<const std::string_view> x, int size)
     {
         appendFont(s, std::forward<Font>(fontId), x.safeGetV(1, {}), size);
     }
 
     void appendSmTable(
             QString& s,
-            const SafeVector<std::string_view>& x,
+            Buf1d<const std::string_view> x,
             const mywiki::Context& context)
     {
         // How smtable works:
@@ -737,12 +738,14 @@ namespace {
         s += "</table>";
     }
 
-    void Eng::appendNSpeakers(const SafeVector<std::string_view>& x)
+    void Eng::appendNSpeakers(Buf1d<const std::string_view> x)
     {
         // x: 0 = template name
         //    1 = secry language
         //    2 = initial comment
         // Start
+        /// @todo [urgent] Don’t do this with side-languages
+        hasNSpeakers = true;
         s += "<i>(";
         auto lang = context.lang;   // primary language
         /// @todo [future] extract secondary language
@@ -809,7 +812,7 @@ namespace {
             u8"<span style='background-color:palette(midlight);'>\u00A0";
     constinit const std::u8string_view KEY_END = u8"\u00A0</span>";
 
-    void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
+    void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         auto name = x[0];
         if (loc::currLang) {
@@ -972,10 +975,14 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
 }
 
 
-void mywiki::append(QString& text, std::u8string_view wiki, const Context& context)
+mywiki::AppendWiki mywiki::append(
+        QString& text, std::u8string_view wiki, const Context& context)
 {
     Eng eng(text, context);
     wiki::run(eng, wiki);
+    return {
+        .hasNSpeakers = eng.hasNSpeakers,
+    };
 }
 
 void mywiki::appendVersionValue(QString& text, const uc::Version& version)
@@ -1192,7 +1199,12 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Langs");
-            append(text, x.loc.langs, context);
+            auto info = append(text, x.loc.langs, context);
+            if (!info.hasNSpeakers && context.lang) {
+                text += ' ';
+                Eng eng(text, context);
+                eng.appendNSpeakers({});
+            }
         }
         if (x.time) {
             sp.sep();

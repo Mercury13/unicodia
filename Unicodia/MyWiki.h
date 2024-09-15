@@ -108,6 +108,10 @@ namespace mywiki {
         const uc::Lang* lang;
     };
 
+    struct AppendWiki {
+        bool hasNSpeakers;
+    };
+
     void translateDatingLoc();
 
     std::unique_ptr<Link> parseLink(std::string_view link);
@@ -148,7 +152,7 @@ namespace mywiki {
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void appendNoFont(QString& x, std::u8string_view wiki);
-    void append(QString& x, std::u8string_view wiki, const Context& context);
+    mywiki::AppendWiki append(QString& x, std::u8string_view wiki, const Context& context);
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersionValue(QString& text, uc::EcVersion version);
     void appendEmojiValue(QString& text, const uc::Version& version, const uc::Version& prevVersion);
