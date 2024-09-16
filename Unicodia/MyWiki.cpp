@@ -1274,7 +1274,8 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             sp.sep();
             appendBullet(text, "Prop.Bullet.Langs");
             auto info = append(text, x.loc.langs, context);
-            if (!info.hasNSpeakers && context.lang) {
+            if (!info.hasNSpeakers && context.lang
+                    && !context.lang->flags.have(uc::Langfg::NO_AUTO)) {
                 text += ' ';
                 Eng eng(text, context);
                 eng.appendNSpeakers(TextLang::DFLT);

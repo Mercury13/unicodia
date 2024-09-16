@@ -742,6 +742,7 @@ namespace uc {
         BURMESE = 1<<4,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<5,  ///< Custom (rather than stock) pre-note
         IN_INDIA = 1<<6,        ///< Special string “{1} in India as of {2}”
+        NO_AUTO = 1<<7,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
     };
     DEFINE_ENUM_OPS(Langfg)
 

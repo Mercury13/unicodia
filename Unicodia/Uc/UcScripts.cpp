@@ -585,7 +585,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pau Cin Hau OK, W10 none, installed Google Noto
     { "Pauc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::special(), EcFont::PAU_CIN_HAU},
+        Dating::special(), EcFont::PAU_CIN_HAU, NO_FLAGS,
+        { .mantissa = 340, .numOrder = NumOrder::THOUSAND, .flags = Langfg::NO_AUTO, .year = 1990 } },
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
