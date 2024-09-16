@@ -1279,6 +1279,11 @@
      <orig>Nepal</orig>
      <transl>Непал</transl>
     </text>
+    <text id="Pakistan">
+     <orig>Pakistan</orig>
+     <au-cmt>Gurmukhi</au-cmt>
+     <transl>Пакистан</transl>
+    </text>
     <text id="Usa">
      <orig>USA</orig>
      <transl>США</transl>
@@ -2976,7 +2981,7 @@
      <transl>
       <p>[[pt:precomposed|Монолитные]] слоги хангыля, большей частью для совместимости со старыми кодировками.</p>
       <p />
-      <p>Добавление корейского в Юникод сопровождалось большими трудностями. В Юникоде 1.0 блок был на месте 3400…3D2D (сейчас там [[ps:Hani|китайские иероглифы]]). В Юникоде 2.0 (1996) блок поставили на окончательное место, полагая, что корейского юникодного текста ещё мало. Этот случай даже обозвали «корейский бардак». В ответ Юникод выпустил главную гарантию [[pt:stability|стабильности]]: больше ни один символ не{{_}}сдвинется и не{{_}}исчезнет.</p>
+      <p>Добавление корейского в Юникод сопровождалось большими трудностями. В Юникоде 1.0 блок был на месте 3400…3D2D (сейчас там [[ps:Hani|китайские иероглифы]]). В Юникоде 2.0 (1996) блок поставили на окончательное место, полагая, что корейского юникодного текста ещё мало. Этот случай даже обозвали «великий корейский бардак». В ответ Юникод выпустил главную гарантию [[pt:stability|стабильности]]: больше ни один символ не{{_}}сдвинется и не{{_}}исчезнет.</p>
      </transl>
     </text>
    </group>
@@ -6242,8 +6247,8 @@
      <transl>Гурмукхи</transl>
     </text>
     <text id="Lang">
-     <orig>Punjabi ''(110M as of 2010s)''</orig>
-     <transl>пенджабский ''(110{{_}}млн на 2010-е)''</transl>
+     <orig>Punjabi</orig>
+     <transl>пенджабский</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6268,8 +6273,8 @@
      <transl>Хангыль</transl>
     </text>
     <text id="Lang">
-     <orig>Korean ''(80M as of 2020)''</orig>
-     <transl>корейский ''(80{{_}}млн на 2020)''</transl>
+     <orig>Korean</orig>
+     <transl>корейский</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6290,8 +6295,12 @@
      <transl>Китайские иероглифы</transl>
     </text>
     <text id="Lang">
-     <orig>Chinese ''(language branch consisting of Northern Chinese=Mandarin and several sister languages, 1.35bn as of 2022)'', Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
-     <transl>китайский ''(языковая ветвь, состоящая из северокитайского=мандарин и нескольких близких, 1,35{{_}}млрд на 2022)'', японский ''(128{{_}}млн на 2020)'', ранее вьетнамский и корейский</transl>
+     <orig>Chinese {{nspk}}, Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
+     <transl>китайский {{nspk}}, японский ''(128{{_}}млн на 2020)'', ранее вьетнамский и корейский</transl>
+    </text>
+    <text id="LangNote">
+     <orig>language branch consisting of Northern Chinese=Mandarin and several sister languages</orig>
+     <transl>языковая ветвь, состоящая из северокитайского=мандарин и нескольких близких</transl>
     </text>
     <text id="Text">
      <orig>

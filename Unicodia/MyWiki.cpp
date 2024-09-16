@@ -806,6 +806,7 @@ namespace {
                 }
                 // # of speakers
                 QString sNum;
+                char buf[4];
                 switch (lang->numOrder) {
                 case uc::NumOrder::NONE:
                     sNum = "???";
@@ -815,6 +816,11 @@ namespace {
                     break;
                 case uc::NumOrder::THOUSAND:
                     sNum = loc::get("Prop.Lang.Num.Tho").argQ(lang->mantissa);
+                    break;
+                case uc::NumOrder::DEC_THOUSAND:
+                    snprintf(buf, std::size(buf), "%02d", lang->mantissa % 100);
+                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
+                                lang->mantissa / 100, str::toU8sv(buf));
                     break;
                 case uc::NumOrder::HUN_THOUSAND:
                     sNum = loc::get("Prop.Lang.Num.HunTho").argQ(

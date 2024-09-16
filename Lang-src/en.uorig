@@ -1010,6 +1010,10 @@
     <text id="Nepal">
      <orig>Nepal</orig>
     </text>
+    <text id="Pakistan">
+     <orig>Pakistan</orig>
+     <au-cmt>Gurmukhi</au-cmt>
+    </text>
     <text id="Usa">
      <orig>USA</orig>
     </text>
@@ -4529,7 +4533,7 @@
      <orig>Gurmukhi</orig>
     </text>
     <text id="Lang">
-     <orig>Punjabi ''(110M as of 2010s)''</orig>
+     <orig>Punjabi</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4546,7 +4550,7 @@
      <orig>Hangul</orig>
     </text>
     <text id="Lang">
-     <orig>Korean ''(80M as of 2020)''</orig>
+     <orig>Korean</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4561,7 +4565,10 @@
      <orig>CJK ideographs</orig>
     </text>
     <text id="Lang">
-     <orig>Chinese ''(language branch consisting of Northern Chinese=Mandarin and several sister languages, 1.35bn as of 2022)'', Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
+     <orig>Chinese {{nspk}}, Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
+    </text>
+    <text id="LangNote">
+     <orig>language branch consisting of Northern Chinese=Mandarin and several sister languages</orig>
     </text>
     <text id="Text">
      <orig>

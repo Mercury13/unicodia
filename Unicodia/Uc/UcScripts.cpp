@@ -11,6 +11,7 @@ constexpr uc::LangLoc LOC_INDIA_W    { .locSubKey = "IndiaW" };
 constexpr uc::LangLoc LOC_LIBERIA    { .locSubKey = "Liberia" };
 constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
 constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
+constexpr uc::LangLoc LOC_PAKISTAN   { .locSubKey = "Pakistan" };
 constexpr uc::LangLoc LOC_USA        { .locSubKey = "Usa" };
 constexpr uc::LangLoc LOC_VIETNAM    { .locSubKey = "Vietnam" };
 
@@ -268,15 +269,21 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(16), EcFont::GURMUKHI },
+        Dating::century(16), EcFont::GURMUKHI, NO_FLAGS,
+        // Punjabi here as the main Gurmikhi language
+        { .mantissa = 150, .numOrder = NumOrder::MILLION, .flags = Langfg::DECADE, .year = 2010,
+          .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::year(1443), EcFont::KOREAN },
+        Dating::year(1443), EcFont::KOREAN, NO_FLAGS,
+        { .mantissa = 80, .numOrder = NumOrder::MILLION, .year = 2020 } },
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::yapprox(-2000), EcFont::CJK },
+        Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS,
+        // Chinese here as the main Han language
+        { .mantissa = 135, .numOrder = NumOrder::DEC_THOUSAND, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},
     // Hanunoo OK, installed Google Noto font
     { "Hano", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,

@@ -732,7 +732,7 @@ namespace uc {
     constexpr int PLANE_UNKNOWN = -1;
 
     DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
-        NONE, UNIT, THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
+        NONE, UNIT, THOUSAND, DEC_THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
 
     enum class Langfg : unsigned char {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
