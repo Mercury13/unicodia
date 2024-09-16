@@ -533,7 +533,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo", QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::year(1949), EcFont::NKO },
+        Dating::year(1949), EcFont::NKO, NO_FLAGS,
+        { .mantissa = 9, .numOrder = NumOrder::MILLION, .year = 2021,
+          .locations { LOC_AFRICA_W } } },
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::CJK,
@@ -545,7 +547,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ol Chiki OK, W10 “Nirmala UI”, W7 none → installed Google Noto
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1925), EcFont::OLCHIKI },
+        Dating::year(1925), EcFont::OLCHIKI, NO_FLAGS,
+        { .mantissa = 73, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2011,
+          .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
     // Ol Onal OK, made in Funky
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
