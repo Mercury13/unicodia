@@ -123,7 +123,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chakma OK, added Noto font, mostly because of missing glyphs
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::unknown(), EcFont::CHAKMA },
+        Dating::unknown(), EcFont::CHAKMA, NO_FLAGS,
+        { .mantissa = 700, .numOrder = NumOrder::THOUSAND, .flags = Langfg::DECADE | Langfg::GREATER_THAN,
+          .year = 2010, .locations { LOC_BANGLADESH, LOC_INDIA_E, LOC_MYANMAR } } },
     // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
     { "Cans", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
