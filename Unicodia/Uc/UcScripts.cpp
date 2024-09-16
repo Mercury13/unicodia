@@ -493,7 +493,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yapprox(1500, StdNote::FIRST_KNOWN), EcFont::MEETEI },
+        Dating::yapprox(1500, StdNote::FIRST_KNOWN), EcFont::MEETEI, NO_FLAGS,
+        { .mantissa = 17, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2011,
+          .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_MYANMAR } }},
     // Multani OK, W10 none → installed Google Noto
     { "Mult", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
