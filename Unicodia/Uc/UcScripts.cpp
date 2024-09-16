@@ -1,5 +1,12 @@
 #include "UcData.h"
 
+constexpr uc::LangLoc LOC_BANGLADESH { .locSubKey = "Bangladesh" };
+constexpr uc::LangLoc LOC_INDIA_CEN  { .locSubKey = "IndiaCen" };
+constexpr uc::LangLoc LOC_INDIA_E    { .locSubKey = "IndiaE" };
+constexpr uc::LangLoc LOC_INDIA_NE   { .locSubKey = "IndiaNe" };
+constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
+constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
+
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
@@ -196,12 +203,13 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1750, StdNote::FIRST_KNOWN), EcFont::GUNJALA_GONDI, NO_FLAGS,
-        { .mantissa = 100, .numOrder = NumOrder::THOUSAND, .flags = Langfg::DECADE, .year = 2010 } },
+        { .mantissa = 100, .numOrder = NumOrder::THOUSAND, .flags = Langfg::DECADE, .year = 2010,
+          .locations { LOC_INDIA_CEN } } },
     // Gondi/Masaram OK, W10 none, installed Google Noto
     { "Gonm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1918), EcFont::MASARAM_GONDI, NO_FLAGS,
-        { .mantissa = 3, .numOrder = NumOrder::MILLION, .year = 2011 } },
+        { .mantissa = 3, .numOrder = NumOrder::MILLION, .year = 2011, .locations { LOC_INDIA_CEN } } },
     // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -315,7 +323,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1920), EcFont::KIRAT, NO_FLAGS,
-        { .mantissa = 170, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
+        { .mantissa = 170, .numOrder = NumOrder::THOUSAND, .year = 2011,
+          .locations { LOC_INDIA_NE, LOC_NEPAL } } },
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -412,7 +421,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mroo", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1980), EcFont::MRO, NO_FLAGS,
-        { .mantissa = 70, .numOrder = NumOrder::THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2022 } },
+        { .mantissa = 70, .numOrder = NumOrder::THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2022,
+          .locations { LOC_BANGLADESH, LOC_MYANMAR } } },
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -424,7 +434,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1035, StdNote::FIRST_KNOWN), EcFont::MYANMAR },
+        Dating::year(1035, StdNote::FIRST_KNOWN), EcFont::MYANMAR, NO_FLAGS,
+        { .mantissa = 33, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::BURMESE,
+          .year = 2007, .locations { LOC_MYANMAR } } },
     // Nag OK, done in FunkySample
     { "Nagm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -465,7 +477,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1980), EcFont::FUNKY, NO_FLAGS,
-        { .mantissa = 27, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
+        { .mantissa = 27, .numOrder = NumOrder::THOUSAND, .year = 2011,
+          .locations { LOC_INDIA_E } } },
     // Orkhon runes OK, took Noto
     { "Orkh", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -670,7 +683,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(2015), EcFont::FUNKY, NO_FLAGS,
-        { .mantissa = 1400, .numOrder = NumOrder::UNIT, .year = 2014 } },
+        { .mantissa = 1400, .numOrder = NumOrder::UNIT, .year = 2014, .locations { LOC_INDIA_E } } },
     /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -691,12 +704,13 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1950), EcFont::WARANG_CITI, NO_FLAGS,
-        { .mantissa = 14, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011 } },
+        { .mantissa = 14, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,
+          .locations = { LOC_INDIA_E } } },
     // Wancho OK, W10 none, installed Google Noto
     { "Wcho", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yrange(2001, 2012), EcFont::WANCHO, NO_FLAGS,
-        { .mantissa = 59, .numOrder = NumOrder::THOUSAND, .year = 2011 } },
+        { .mantissa = 59, .numOrder = NumOrder::THOUSAND, .year = 2011, .locations { LOC_INDIA_NE } } },
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

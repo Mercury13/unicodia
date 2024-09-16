@@ -973,6 +973,26 @@
      <orig>{1}s</orig>
     </text>
    </group>
+   <group id="LangLoc">
+    <text id="Bangladesh">
+     <orig>Bangladesh</orig>
+    </text>
+    <text id="IndiaCen">
+     <orig>Central India</orig>
+    </text>
+    <text id="IndiaE">
+     <orig>Eastern India</orig>
+    </text>
+    <text id="IndiaNe">
+     <orig>North-Eastern India</orig>
+    </text>
+    <text id="Nepal">
+     <orig>Nepal</orig>
+    </text>
+    <text id="Myanmar">
+     <orig>Myanmar</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
@@ -4345,7 +4365,7 @@
      <orig>Gunjala script (Gondi)</orig>
     </text>
     <text id="Lang">
-     <orig>Southern Gondi {{nspk||Central India}}</orig>
+     <orig>Southern Gondi</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4363,7 +4383,7 @@
      <orig>Masaram script (Gondi)</orig>
     </text>
     <text id="Lang">
-     <orig>Gondi {{nspk||Central India}}, Marathi</orig>
+     <orig>Gondi {{nspk}}, Marathi</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4854,7 +4874,7 @@
      <orig>Kirat Rai</orig>
     </text>
     <text id="Lang">
-     <orig>Bantawa {{nspk||North-Eastern India, Nepal}}</orig>
+     <orig>Bantawa</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5272,7 +5292,7 @@
      <orig>Mro</orig>
     </text>
     <text id="Lang">
-     <orig>Mro {{nspk||=Mru; Bangladesh, Myanmar}}</orig>
+     <orig>Mro {{nspk||=Mru}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5323,7 +5343,7 @@
      <orig>Myanmar</orig>
     </text>
     <text id="Lang">
-     <orig>Myanmar ''(33M as native as of 2007)'', Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
+     <orig>Myanmar {{nspk}}, Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5490,7 +5510,7 @@
      <orig>Ol Onal</orig>
     </text>
     <text id="Lang">
-     <orig>Bhumij {{nspk||Eastern India}}</orig>
+     <orig>Bhumij</orig>
     </text>
     <text id="Text">
      <orig>
@@ -6366,7 +6386,7 @@
      <orig>Toto</orig>
     </text>
     <text id="Lang">
-     <orig>Toto {{nspk||Eastern India}}</orig>
+     <orig>Toto</orig>
     </text>
     <text id="Text">
      <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
@@ -6445,7 +6465,7 @@
      <orig>Wancho</orig>
     </text>
     <text id="Lang">
-     <orig>Wancho {{nspk||North-Eastern India}}</orig>
+     <orig>Wancho</orig>
     </text>
     <text id="Text">
      <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
@@ -6456,7 +6476,7 @@
      <orig>Warang Citi</orig>
     </text>
     <text id="Lang">
-     <orig>Ho {{nspk||East India}}</orig>
+     <orig>Ho</orig>
     </text>
     <text id="Text">
      <orig>

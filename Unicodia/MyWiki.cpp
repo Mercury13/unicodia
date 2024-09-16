@@ -738,6 +738,15 @@ namespace {
         s += "</table>";
     }
 
+    bool shouldWriteLocations(const uc::Lang& lang)
+    {
+        if (lang.locations.areEmpty())
+            return false;
+        if (lang.flags.have(uc::Langfg::BURMESE))
+            return loc::currLang->peculiarities.stillUsesBurmese;
+        return true;
+    }
+
     void Eng::appendNSpeakers(Buf1d<const std::string_view> x)
     {
         // x: 0 = template name
@@ -757,11 +766,24 @@ namespace {
                 mywiki::append(s, str::toU8sv(comment), context);
                 wasWritten = true;
             }
-            // # of speakers
+            // Language info
             if (lang->hasValue()) {
-                if (wasWritten) {
-                    s += ", ";
+                // Locations
+                if (shouldWriteLocations(*lang)) {
+                    if (wasWritten) {
+                        s += "; ";
+                    }
+                    for (auto& v : lang->locations) {
+                        auto locKey = str::cat("Prop.LangLoc.", v.locSubKey);
+                        s += loc::get(locKey);
+                        s += ", ";
+                    }
+                } else {
+                    if (wasWritten) {
+                        s += ", ";
+                    }
                 }
+                // # of speakers
                 QString sNum;
                 switch (lang->numOrder) {
                 case uc::NumOrder::NONE:

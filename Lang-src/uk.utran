@@ -1232,6 +1232,32 @@
      <transl>{1}-і</transl>
     </text>
    </group>
+   <group id="LangLoc">
+    <text id="Bangladesh">
+     <orig>Bangladesh</orig>
+     <transl>Бангладеш</transl>
+    </text>
+    <text id="IndiaCen">
+     <orig>Central India</orig>
+     <transl>Центральна Індія</transl>
+    </text>
+    <text id="IndiaE">
+     <orig>Eastern India</orig>
+     <transl>Східна Індія</transl>
+    </text>
+    <text id="IndiaNe">
+     <orig>North-Eastern India</orig>
+     <transl>Північно-Східна Індія</transl>
+    </text>
+    <text id="Nepal">
+     <orig>Nepal</orig>
+     <transl>Непал</transl>
+    </text>
+    <text id="Myanmar">
+     <orig>Myanmar</orig>
+     <transl>М’янма</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
@@ -5971,8 +5997,8 @@
      <transl>Ґунджала</transl>
     </text>
     <text id="Lang">
-     <orig>Southern Gondi {{nspk||Central India}}</orig>
-     <transl>південний ґонді {{nspk||Центральна Індія}}</transl>
+     <orig>Southern Gondi</orig>
+     <transl>південний ґонді</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5999,8 +6025,8 @@
      <transl>Письмо Масарама</transl>
     </text>
     <text id="Lang">
-     <orig>Gondi {{nspk||Central India}}, Marathi</orig>
-     <transl>ґонді {{nspk||Центральна Індія}}, маратхі</transl>
+     <orig>Gondi {{nspk}}, Marathi</orig>
+     <transl>ґонді {{nspk}}, маратхі</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6746,8 +6772,8 @@
      <transl>Кірат (раї)</transl>
     </text>
     <text id="Lang">
-     <orig>Bantawa {{nspk||North-Eastern India, Nepal}}</orig>
-     <transl>бантава {{nspk||Південно-Східна Індія, Непал}}</transl>
+     <orig>Bantawa</orig>
+     <transl>бантава</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7378,8 +7404,8 @@
      <transl>Мру</transl>
     </text>
     <text id="Lang">
-     <orig>Mro {{nspk||=Mru; Bangladesh, Myanmar}}</orig>
-     <transl>мру {{nspk||Бангладеш, М’янма}}</transl>
+     <orig>Mro {{nspk||=Mru}}</orig>
+     <transl>мру</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7704,8 +7730,8 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij {{nspk||Eastern India}}</orig>
-     <transl>бхумідж {{nspk||Східна Індія}}</transl>
+     <orig>Bhumij</orig>
+     <transl>бхумідж</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9043,8 +9069,8 @@
      <transl>Тото</transl>
     </text>
     <text id="Lang">
-     <orig>Toto {{nspk||Eastern India}}</orig>
-     <transl>тото {{nspk||Східна Індія}}</transl>
+     <orig>Toto</orig>
+     <transl>тото</transl>
     </text>
     <text id="Text">
      <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
@@ -9161,8 +9187,8 @@
      <transl>Ванчо</transl>
     </text>
     <text id="Lang">
-     <orig>Wancho {{nspk||North-Eastern India}}</orig>
-     <transl>ванчо {{nspk||Північно-Східна Індія}}</transl>
+     <orig>Wancho</orig>
+     <transl>ванчо</transl>
     </text>
     <text id="Text">
      <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
@@ -9175,8 +9201,8 @@
      <transl>Варанг-кшиті</transl>
     </text>
     <text id="Lang">
-     <orig>Ho {{nspk||East India}}</orig>
-     <transl>хо {{nspk||Східна Індія}}</transl>
+     <orig>Ho</orig>
+     <transl>хо</transl>
     </text>
     <text id="Text">
      <orig>

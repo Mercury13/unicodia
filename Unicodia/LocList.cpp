@@ -242,6 +242,9 @@ namespace {
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);
 
+        auto hPeculiarities = hLocale.child("peculiarities");
+        r.peculiarities.stillUsesBurmese = hPeculiarities.attribute("still-uses-burmese").as_bool(false);
+
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
         for (auto& v : di) {

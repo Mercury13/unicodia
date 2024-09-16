@@ -1231,6 +1231,32 @@
      <transl>{1}-е</transl>
     </text>
    </group>
+   <group id="LangLoc">
+    <text id="Bangladesh">
+     <orig>Bangladesh</orig>
+     <transl>Бангладеш</transl>
+    </text>
+    <text id="IndiaCen">
+     <orig>Central India</orig>
+     <transl>Центральная Индия</transl>
+    </text>
+    <text id="IndiaE">
+     <orig>Eastern India</orig>
+     <transl>Восточная Индия</transl>
+    </text>
+    <text id="IndiaNe">
+     <orig>North-Eastern India</orig>
+     <transl>Северо-Восточная Индия</transl>
+    </text>
+    <text id="Nepal">
+     <orig>Nepal</orig>
+     <transl>Непал</transl>
+    </text>
+    <text id="Myanmar">
+     <orig>Myanmar</orig>
+     <transl>Мьянма</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
@@ -5970,8 +5996,8 @@
      <transl>Гунджала</transl>
     </text>
     <text id="Lang">
-     <orig>Southern Gondi {{nspk||Central India}}</orig>
-     <transl>южный гонди {{nspk||Центральная Индия}}</transl>
+     <orig>Southern Gondi</orig>
+     <transl>южный гонди</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5998,8 +6024,8 @@
      <transl>Письмо Масарама</transl>
     </text>
     <text id="Lang">
-     <orig>Gondi {{nspk||Central India}}, Marathi</orig>
-     <transl>гонди {{nspk||Центральная Индия}}, маратхи</transl>
+     <orig>Gondi {{nspk}}, Marathi</orig>
+     <transl>гонди {{nspk}}, маратхи</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6745,8 +6771,8 @@
      <transl>Кират (раи)</transl>
     </text>
     <text id="Lang">
-     <orig>Bantawa {{nspk||North-Eastern India, Nepal}}</orig>
-     <transl>бантава {{nspk||Северо-Восточная Индия, Непал}}</transl>
+     <orig>Bantawa</orig>
+     <transl>бантава</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7377,8 +7403,8 @@
      <transl>Мру</transl>
     </text>
     <text id="Lang">
-     <orig>Mro {{nspk||=Mru; Bangladesh, Myanmar}}</orig>
-     <transl>мру {{nspk||Бангладеш, Мьянма}}</transl>
+     <orig>Mro {{nspk||=Mru}}</orig>
+     <transl>мру</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7455,8 +7481,8 @@
      <transl>Бирманская</transl>
     </text>
     <text id="Lang">
-     <orig>Myanmar ''(33M as native as of 2007)'', Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
-     <transl>бирманский ''(Мьянма, 33{{_}}млн на 2007 как родной)'', монский ''(Мьянма, &amp;lt;1{{_}}млн на 2007)'', пали ''(мёртвый, культовый в буддизме)''…</transl>
+     <orig>Myanmar {{nspk}}, Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
+     <transl>бирманский {{nspk}}, монский ''(Мьянма, &amp;lt;1{{_}}млн на 2007)'', пали ''(мёртвый, культовый в буддизме)''…</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7703,8 +7729,8 @@
      <transl>Ол-онал</transl>
     </text>
     <text id="Lang">
-     <orig>Bhumij {{nspk||Eastern India}}</orig>
-     <transl>бхумидж {{nspk||Восточная Индия}}</transl>
+     <orig>Bhumij</orig>
+     <transl>бхумидж</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9042,8 +9068,8 @@
      <transl>Тото</transl>
     </text>
     <text id="Lang">
-     <orig>Toto {{nspk||Eastern India}}</orig>
-     <transl>тото {{nspk||Восточная Индия}}</transl>
+     <orig>Toto</orig>
+     <transl>тото</transl>
     </text>
     <text id="Text">
      <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
@@ -9160,8 +9186,8 @@
      <transl>Ванчо</transl>
     </text>
     <text id="Lang">
-     <orig>Wancho {{nspk||North-Eastern India}}</orig>
-     <transl>ванчо {{nspk||Северо-Восточная Индия}}</transl>
+     <orig>Wancho</orig>
+     <transl>ванчо</transl>
     </text>
     <text id="Text">
      <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
@@ -9174,8 +9200,8 @@
      <transl>Варанг-кшити</transl>
     </text>
     <text id="Lang">
-     <orig>Ho {{nspk||East India}}</orig>
-     <transl>хо {{nspk||Восточная Индия}}</transl>
+     <orig>Ho</orig>
+     <transl>хо</transl>
     </text>
     <text id="Text">
      <orig>

@@ -44,6 +44,9 @@ namespace loc
             std::u8string text;
             std::u32string blocks;  ///< just initial codes, sorted asc
         } ellipsis;
+        struct Peculiarities {
+            bool stillUsesBurmese = false;  ///< uses Myanmar/Burmese
+        } peculiarities;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini

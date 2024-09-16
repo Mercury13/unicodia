@@ -14,6 +14,7 @@
 #include "u_Array.h"
 #include "u_EnumSize.h"
 #include "u_EcArray.h"
+#include "u_MicroList.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
@@ -738,14 +739,20 @@ namespace uc {
         GREATER_THAN = 1<<1,    ///< [+] greater than (# is lower limit)
         //LESS_THAN = 1<<2,
         DECADE = 1<<3,          ///< Year = decade rather than exact year of census
+        BURMESE = 1<<4,         ///< Special action for Burmese
     };
     DEFINE_ENUM_OPS(Langfg)
+
+    struct LangLoc {
+        std::string_view locSubKey;
+    };
 
     struct Lang {
         unsigned short mantissa;
         NumOrder numOrder;
         Flags<Langfg> flags {};
         unsigned short year;
+        MicroList<LangLoc, 3> locations {};
 
         constexpr bool hasValue() const noexcept { return (numOrder != NumOrder::NONE); }
         explicit constexpr operator bool() const noexcept { return hasValue(); }
