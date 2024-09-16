@@ -5369,8 +5369,12 @@
      <transl>Бухід</transl>
     </text>
     <text id="Lang">
-     <orig>Buhid ''(Mindoro Island, Philippines, 12,000 as of 2010)''</orig>
-     <transl>бухідська ''(о. Міндоро, Філіпіни, 12 тис. на 2010)''</transl>
+     <orig>Buhid</orig>
+     <transl>бухідська</transl>
+    </text>
+    <text id="LangNote">
+     <orig>Mindoro Island, Philippines</orig>
+     <transl>о. Міндоро, Філіпіни</transl>
     </text>
     <text id="Text">
      <orig>

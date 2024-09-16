@@ -118,7 +118,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buhid OK, installed Google Noto font
     { "Buhd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::yapprox(1300), EcFont::BUHID },
+        Dating::yapprox(1300), EcFont::BUHID, NO_FLAGS,
+        { .mantissa = 12, .numOrder = NumOrder::THOUSAND, .flags = Langfg::CUSTOM_PRENOTE, .year = 2010 }},
     // Chakma OK, added Noto font, mostly because of missing glyphs
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
