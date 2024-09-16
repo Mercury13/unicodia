@@ -473,7 +473,10 @@ constinit const uc::Script uc::scriptInfo[] {
     // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yrange(1200, 1600), EcFont::MODI },
+        Dating::yrange(1200, 1600), EcFont::MODI, NO_FLAGS,
+        // Marathi here as the main Modi script
+        { .mantissa = 83, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011,
+          .locations { LOC_INDIA_W } } },
     // Mongol OK, dislike standard font of W10 → installed Google Noto
     { "Mong", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA,

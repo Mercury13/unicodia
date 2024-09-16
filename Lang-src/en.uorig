@@ -4180,7 +4180,7 @@
      <orig>Devanagari</orig>
     </text>
     <text id="Lang">
-     <orig>Hindi {{nspk}}, Marathi, Sanskrit and other languages of India</orig>
+     <orig>Hindi {{nspk}}, Marathi {{nspk|Modi}}, Sanskrit and other languages of India</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5297,7 +5297,7 @@
      <orig>Modi</orig>
     </text>
     <text id="Lang">
-     <orig>Marathi ''(West India, 83M as of 2011)''</orig>
+     <orig>Marathi</orig>
     </text>
     <text id="Text">
      <orig>

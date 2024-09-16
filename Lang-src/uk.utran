@@ -5694,8 +5694,8 @@
      <transl>Деванáґарі</transl>
     </text>
     <text id="Lang">
-     <orig>Hindi {{nspk}}, Marathi, Sanskrit and other languages of India</orig>
-     <transl>хінді {{nspk}}, маратхі, санскрит та інші мови Індії</transl>
+     <orig>Hindi {{nspk}}, Marathi {{nspk|Modi}}, Sanskrit and other languages of India</orig>
+     <transl>хінді {{nspk}}, маратхі {{nspk|Modi}}, санскрит та інші мови Індії</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7399,8 +7399,8 @@
      <transl>Моді</transl>
     </text>
     <text id="Lang">
-     <orig>Marathi ''(West India, 83M as of 2011)''</orig>
-     <transl>маратхі ''(Західна Індія, 83{{_}}млн на 2011)''</transl>
+     <orig>Marathi</orig>
+     <transl>маратхі</transl>
     </text>
     <text id="Text">
      <orig>
