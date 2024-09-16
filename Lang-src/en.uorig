@@ -4565,7 +4565,7 @@
      <orig>CJK ideographs</orig>
     </text>
     <text id="Lang">
-     <orig>Chinese {{nspk}}, Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
+     <orig>Chinese {{nspk}}, Japanese {{nspk|Hira}}, historically Vietnamese and Korean</orig>
     </text>
     <text id="LangNote">
      <orig>language branch consisting of Northern Chinese=Mandarin and several sister languages</orig>
@@ -4656,7 +4656,7 @@
      <orig>Hiragana</orig>
     </text>
     <text id="Lang">
-     <orig>Japanese ''(128M as of 2020)''</orig>
+     <orig>Japanese {{nspk}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4785,7 +4785,7 @@
      <orig>Katakana</orig>
     </text>
     <text id="Lang">
-     <orig>Japanese ''(128M as of 2020)''</orig>
+     <orig>Japanese {{nspk|Hira}}</orig>
     </text>
     <text id="Text">
      <orig>

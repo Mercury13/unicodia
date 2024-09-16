@@ -304,7 +304,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::crange(8, 9), EcFont::KOREAN },
+        Dating::crange(8, 9), EcFont::KOREAN, NO_FLAGS,
+        // Japanese here
+        { .mantissa = 120, .numOrder = NumOrder::MILLION, .year = 2020 } },
     // Anatolian hiero OK, installed Google Noto
     { "Hluw", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

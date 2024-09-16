@@ -6296,8 +6296,8 @@
      <transl>Китайські ієрогліфи</transl>
     </text>
     <text id="Lang">
-     <orig>Chinese {{nspk}}, Japanese ''(128M as of 2020)'', historically Vietnamese and Korean</orig>
-     <transl>китайська {{nspk}}, японська ''(128{{_}}млн на 2020)'', раніше в’єтнамська та корейська</transl>
+     <orig>Chinese {{nspk}}, Japanese {{nspk|Hira}}, historically Vietnamese and Korean</orig>
+     <transl>китайська {{nspk}}, японська {{nspk|Hira}}, раніше в’єтнамська та корейська</transl>
     </text>
     <text id="LangNote">
      <orig>language branch consisting of Northern Chinese=Mandarin and several sister languages</orig>
@@ -6435,8 +6435,8 @@
      <transl>Хірáґана</transl>
     </text>
     <text id="Lang">
-     <orig>Japanese ''(128M as of 2020)''</orig>
-     <transl>японська ''(128{{_}}млн на 2020)''</transl>
+     <orig>Japanese {{nspk}}</orig>
+     <transl>японська {{nspk}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6625,8 +6625,8 @@
      <transl>Катáкана</transl>
     </text>
     <text id="Lang">
-     <orig>Japanese ''(128M as of 2020)''</orig>
-     <transl>японська ''(128{{_}}млн на 2020)''</transl>
+     <orig>Japanese {{nspk|Hira}}</orig>
+     <transl>японська {{nspk|Hira}}</transl>
     </text>
     <text id="Text">
      <orig>
