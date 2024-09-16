@@ -974,6 +974,10 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaW">
+     <orig>Western Africa</orig>
+     <au-cmt>Garay</au-cmt>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
     </text>
@@ -992,6 +996,9 @@
     </text>
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
+    </text>
+    <text id="IndiaW">
+     <orig>Western India</orig>
     </text>
     <text id="Liberia">
      <orig>Liberia</orig>
@@ -4313,7 +4320,7 @@
      <orig>Ethiopic (Ge’ez)</orig>
     </text>
     <text id="Lang">
-     <orig>Amharic ''(&gt;32M as of 2022)'', Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
+     <orig>Amharic {{nspk}}, Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
     </text>
     <text id="Note">
      <orig>as abugida</orig>
@@ -4333,7 +4340,7 @@
      <orig>Garay</orig>
     </text>
     <text id="Lang">
-     <orig>Wolof ''(Western Africa, 7M as of 2021)'', Mandinka ''(2.1M as of 2017)''</orig>
+     <orig>Wolof {{nspk}}, Mandinka ''(2.1M as of 2017)''</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4353,7 +4360,7 @@
      <orig>Georgian</orig>
     </text>
     <text id="Lang">
-     <orig>Geogian ''(3.7M as of 2014)'', Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
+     <orig>Geogian {{nspk}}, Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4488,7 +4495,7 @@
      <orig>Gujarati</orig>
     </text>
     <text id="Lang">
-     <orig>Gujarati ''(Western India, 56M as of 2011)'', Avestan</orig>
+     <orig>Gujarati {{nspk}}, Avestan</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4505,7 +4512,7 @@
      <orig>Gurung Khema</orig>
     </text>
     <text id="Lang">
-     <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
+     <orig>Gurung</orig>
     </text>
     <text id="Text">
      <orig>

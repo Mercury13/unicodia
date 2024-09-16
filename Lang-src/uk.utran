@@ -1233,6 +1233,11 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaW">
+     <orig>Western Africa</orig>
+     <au-cmt>Garay</au-cmt>
+     <transl>Західна Африка</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>Бангладеш</transl>
@@ -1257,6 +1262,10 @@
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
      <transl>Північно-Східна Індія</transl>
+    </text>
+    <text id="IndiaW">
+     <orig>Western India</orig>
+     <transl>Західна Індія</transl>
     </text>
     <text id="Liberia">
      <orig>Liberia</orig>
@@ -3922,7 +3931,7 @@
    <group id="16100">
     <text id="Name">
      <orig>Gurung Khema</orig>
-     <transl>Ґурунг (кхема)</transl>
+     <transl>Ґурунґ (кхема)</transl>
     </text>
    </group>
    <group id="16D40">
@@ -5911,8 +5920,8 @@
      <transl>Ефіопська (ґéез)</transl>
     </text>
     <text id="Lang">
-     <orig>Amharic ''(&gt;32M as of 2022)'', Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
-     <transl>амхарська ''(&gt;32{{_}}млн на 2022)'', тиґринья ''(10{{_}}млн на 2020)'' та інші ефіосемітські</transl>
+     <orig>Amharic {{nspk}}, Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
+     <transl>амхарська {{nspk}}, тиґринья ''(10{{_}}млн на 2020)'' та інші ефіосемітські</transl>
     </text>
     <text id="Note">
      <orig>as abugida</orig>
@@ -5941,8 +5950,8 @@
      <transl>Ґарай</transl>
     </text>
     <text id="Lang">
-     <orig>Wolof ''(Western Africa, 7M as of 2021)'', Mandinka ''(2.1M as of 2017)''</orig>
-     <transl>волоф ''(Західна Африка, 7 млн на 2021)'', мандинка ''(2,1 млн на 2017)''</transl>
+     <orig>Wolof {{nspk}}, Mandinka ''(2.1M as of 2017)''</orig>
+     <transl>волоф {{nspk}}, мандинка ''(2,1 млн на 2017)''</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5972,8 +5981,8 @@
      <transl>Грузинська</transl>
     </text>
     <text id="Lang">
-     <orig>Geogian ''(3.7M as of 2014)'', Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
-     <transl>грузинська ''(3,7{{_}}млн на 2014)'', мегрельська ''(344{{_}}тис. на 2015)'' та інші картвельські</transl>
+     <orig>Geogian {{nspk}}, Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
+     <transl>грузинська {{nspk}}, мегрельська ''(344{{_}}тис. на 2015)'' та інші картвельські</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6182,8 +6191,8 @@
      <transl>Гуджараті</transl>
     </text>
     <text id="Lang">
-     <orig>Gujarati ''(Western India, 56M as of 2011)'', Avestan</orig>
-     <transl>гуджаратська ''(захід Індії, 56{{_}}млн на 2011)'', авестійська</transl>
+     <orig>Gujarati {{nspk}}, Avestan</orig>
+     <transl>гуджаратська {{nspk}}, авестійська</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6205,11 +6214,11 @@
    <group id="Gukh">
     <text id="Name">
      <orig>Gurung Khema</orig>
-     <transl>Ґурунг (кхема)</transl>
+     <transl>Ґурунґ (кхема)</transl>
     </text>
     <text id="Lang">
-     <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
-     <transl>ґурунг ''(Індія, Непал, 320 тис. на 2011)''</transl>
+     <orig>Gurung</orig>
+     <transl>ґурунґ</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6220,7 +6229,7 @@
       <p>At the moment of writing Khema has no Unicode fonts, but in handwriting anusvara (nasalization mark) is tick when empty, and smile when houses a circle inside (e.g. in E+anusvara).</p>
      </orig>
      <transl>
-      <p>Винайшов Бал Нарсінґх Ґурунг. У 1997 індійський штат Сіккім визнав ґурунг та зробив кхему офіційним письмом.</p>
+      <p>Винайшов Бал Нарсінґх Ґурунґ. У 1997 індійський штат Сіккім визнав ґурунґ та зробив кхему офіційним письмом.</p>
       <p />
       <p>Нема лігатур для стиків приголосних, [[pt:virama|вірама]] (''tholhoma'') завжди видима. Знак довжини голосної тільки для [[pt:normalization|декомпозиції]]. Розділові знаки [[pt:ascii|ASCII]], плюс палиця ''данда'' з [[ps:Deva|деванаґарі]].</p>
       <p />

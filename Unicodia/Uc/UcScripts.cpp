@@ -1,11 +1,13 @@
 #include "UcData.h"
 
+constexpr uc::LangLoc LOC_AFRICA_W   { .locSubKey = "AfricaW" };
 constexpr uc::LangLoc LOC_BANGLADESH { .locSubKey = "Bangladesh" };
 constexpr uc::LangLoc LOC_CAMBODIA   { .locSubKey = "Cambodia" };
 constexpr uc::LangLoc LOC_INDIA_CEN  { .locSubKey = "IndiaCen" };
 constexpr uc::LangLoc LOC_INDIA_E    { .locSubKey = "IndiaE" };
 constexpr uc::LangLoc LOC_INDIA_N    { .locSubKey = "IndiaN" };
 constexpr uc::LangLoc LOC_INDIA_NE   { .locSubKey = "IndiaNe" };
+constexpr uc::LangLoc LOC_INDIA_W    { .locSubKey = "IndiaW" };
 constexpr uc::LangLoc LOC_LIBERIA    { .locSubKey = "Liberia" };
 constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
 constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
@@ -210,15 +212,20 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC },
+        Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC, NO_FLAGS,
+        // Amharic here as main Ethiopic language
+        { .mantissa = 33, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2020 } },
     // Garay OK somehow, though hangs
     { "Gara", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::year(1961), EcFont::FUNKY_BIGGER, Sfg::STUB_RTL },
+        Dating::year(1961), EcFont::FUNKY_BIGGER, Sfg::STUB_RTL,
+        // Wolof here as main Garay language
+        { .mantissa = 22, .numOrder = NumOrder::MILLION, .year = 2021, .locations = { LOC_AFRICA_W} } },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::year(430, StdNote::FIRST_KNOWN), EcFont::GEORGIAN },
+        Dating::year(430, StdNote::FIRST_KNOWN), EcFont::GEORGIAN, NO_FLAGS,
+        { .mantissa = 37, .numOrder = NumOrder::HUN_THOUSAND, .year = 2020 } },
     // Glagolitic OK, installed Google Noto font
     { "Glag", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -250,11 +257,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI },
+        Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI, NO_FLAGS,
+        { .mantissa = 57, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011,
+          .locations { LOC_INDIA_W } } },
     // Gurung Khema now in Funky
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1977), EcFont::FUNKY },
+        Dating::year(1977), EcFont::FUNKY, NO_FLAGS,
+        { .mantissa = 380, .numOrder = NumOrder::THOUSAND, .year = 2021, .locations { LOC_NEPAL } } },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,

@@ -1232,6 +1232,11 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaW">
+     <orig>Western Africa</orig>
+     <au-cmt>Garay</au-cmt>
+     <transl>Западная Африка</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>Бангладеш</transl>
@@ -1256,6 +1261,10 @@
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
      <transl>Северо-Восточная Индия</transl>
+    </text>
+    <text id="IndiaW">
+     <orig>Western India</orig>
+     <transl>Западная Индия</transl>
     </text>
     <text id="Liberia">
      <orig>Liberia</orig>
@@ -5910,8 +5919,8 @@
      <transl>Эфиопская (гéэз)</transl>
     </text>
     <text id="Lang">
-     <orig>Amharic ''(&gt;32M as of 2022)'', Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
-     <transl>амхарский ''(&gt;32{{_}}млн на 2022)'', тигринья ''(10{{_}}млн на 2020)'' и другие эфиосемитские</transl>
+     <orig>Amharic {{nspk}}, Tigrinya ''(10M as of 2020)'' and other Ethiosemitic</orig>
+     <transl>амхарский {{nspk}}, тигринья ''(10{{_}}млн на 2020)'' и другие эфиосемитские</transl>
     </text>
     <text id="Note">
      <orig>as abugida</orig>
@@ -5940,8 +5949,8 @@
      <transl>Гарай</transl>
     </text>
     <text id="Lang">
-     <orig>Wolof ''(Western Africa, 7M as of 2021)'', Mandinka ''(2.1M as of 2017)''</orig>
-     <transl>волоф ''(Западная Африка, 7 млн на 2021)'', мандинка ''(2,1 млн на 2017)''</transl>
+     <orig>Wolof {{nspk}}, Mandinka ''(2.1M as of 2017)''</orig>
+     <transl>волоф {{nspk}}, мандинка ''(2,1 млн на 2017)''</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5971,8 +5980,8 @@
      <transl>Грузинская</transl>
     </text>
     <text id="Lang">
-     <orig>Geogian ''(3.7M as of 2014)'', Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
-     <transl>грузинский ''(3,7{{_}}млн на 2014)'', мегрельский ''(344{{_}}тыс. на 2015)'' и другие картвельские</transl>
+     <orig>Geogian {{nspk}}, Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
+     <transl>грузинский {{nspk}}, мегрельский ''(344{{_}}тыс. на 2015)'' и другие картвельские</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6181,8 +6190,8 @@
      <transl>Гуджарати</transl>
     </text>
     <text id="Lang">
-     <orig>Gujarati ''(Western India, 56M as of 2011)'', Avestan</orig>
-     <transl>гуджаратский ''(запад Индии, 56{{_}}млн на 2011)'', авестийский</transl>
+     <orig>Gujarati {{nspk}}, Avestan</orig>
+     <transl>гуджаратский {{nspk}}, авестийский</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6207,8 +6216,8 @@
      <transl>Гурунг (кхема)</transl>
     </text>
     <text id="Lang">
-     <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
-     <transl>гурунг ''(Индия, Непал, 320 тыс. на 2011)''</transl>
+     <orig>Gurung</orig>
+     <transl>гурунг</transl>
     </text>
     <text id="Text">
      <orig>
