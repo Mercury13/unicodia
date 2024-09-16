@@ -1227,6 +1227,11 @@
      <orig>{1} as native as of {2}</orig>
      <transl>{1} як рідна на {2}</transl>
     </text>
+    <text id="QtyIndia">
+     <orig>{1} in India as of {2}</orig>
+     <au-cmt>Test: Nag</au-cmt>
+     <transl>{1} у Індії на {2}</transl>
+    </text>
     <text id="Decade">
      <orig>{1}s</orig>
      <transl>{1}-і</transl>
@@ -7577,8 +7582,8 @@
      <transl>Мундарі (алфавіт Наґа)</transl>
     </text>
     <text id="Lang">
-     <orig>Mundari ''(India, Bangladesh, Nepal, &amp;lt;1.1M in India as of 2011)''</orig>
-     <transl>мундарі ''(Індія, Бангладеш, Непал, &amp;gt;1,1{{_}}млн в Індії на 2011)''</transl>
+     <orig>Mundari</orig>
+     <transl>мундарі</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7661,8 +7666,8 @@
      <transl>Неварська (прахаліт)</transl>
     </text>
     <text id="Lang">
-     <orig>Bhasa ''(=Newa, Nepal, 800k as of 2010s)'', Sanskrit, Pali</orig>
-     <transl>бхаса ''(=неварська, Непал, 800{{_}}тис. на 2010-і)'', санскрит, палі</transl>
+     <orig>Bhasa {{nspk||=Newa}}, Sanskrit, Pali</orig>
+     <transl>бхаса {{nspk||=неварська}}, санскрит, палі</transl>
     </text>
     <text id="Note">
      <orig>first evidence</orig>
@@ -7859,8 +7864,8 @@
      <transl>Орíя (одíя)</transl>
     </text>
     <text id="Lang">
-     <orig>Odia ''(=Oriya, Eastern India, 35M as of 2019)''</orig>
-     <transl>орíя ''(=одíя, Східна Індія, 35{{_}}млн на 2019)''</transl>
+     <orig>Odia {{nspk||=Oriya}}</orig>
+     <transl>орíя {{nspk||=одíя}}</transl>
     </text>
     <text id="Text">
      <orig>

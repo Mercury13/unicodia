@@ -741,6 +741,7 @@ namespace uc {
         DECADE = 1<<3,          ///< Year = decade rather than exact year of census
         BURMESE = 1<<4,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<5,  ///< Custom (rather than stock) pre-note
+        IN_INDIA = 1<<6,        ///< Special string “{1} in India as of {2}”
     };
     DEFINE_ENUM_OPS(Langfg)
 

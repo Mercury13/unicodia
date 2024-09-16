@@ -495,7 +495,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(1500, StdNote::FIRST_KNOWN), EcFont::MEETEI, NO_FLAGS,
         { .mantissa = 17, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2011,
-          .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_MYANMAR } }},
+          .locations { LOC_INDIA_E } }},
     // Multani OK, W10 none → installed Google Noto
     { "Mult", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -509,7 +509,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nag OK, done in FunkySample
     { "Nagm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yrange(1949, 1982), EcFont::FUNKY },
+        Dating::yrange(1949, 1982), EcFont::FUNKY, NO_FLAGS,
+        { .mantissa = 11, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::IN_INDIA | Langfg::GREATER_THAN,
+          .year = 2011, .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_MYANMAR } } },
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -525,7 +527,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Newa OK, W10 none → installed Google Noto
     { "Newa", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1654, StdNote::CUSTOM), EcFont::NEWA },
+        Dating::year(1654, StdNote::CUSTOM), EcFont::NEWA, NO_FLAGS,
+        { .mantissa = 880, .numOrder = NumOrder::THOUSAND, .year = 2021,
+          .locations { LOC_NEPAL } } },
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo", QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -555,7 +559,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Oriya OK, took Noto + everything bad manually fixed
     { "Orya", QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(14, StdNote::MODERN_FORM), EcFont::ORIYA },
+        Dating::century(14, StdNote::MODERN_FORM), EcFont::ORIYA, NO_FLAGS,
+        { .mantissa = 34, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011,
+          .locations { LOC_INDIA_E } } },
     // Osage OK, W10 Gadugi
     { "Osge", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,

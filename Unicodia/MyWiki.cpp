@@ -857,6 +857,8 @@ namespace {
                     const char* key = "Prop.Lang.Qty";
                     if (lang->flags.have(uc::Langfg::AS_NATIVE)) {
                         key = "Prop.Lang.QtyNative";
+                    } else if (lang->flags.have(uc::Langfg::IN_INDIA)) {
+                        key = "Prop.Lang.QtyIndia";
                     }
                     sNum = loc::get(key).argQ(str::toU8sv(sNum.toStdString()), sYear);
                 }

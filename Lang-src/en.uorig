@@ -969,6 +969,10 @@
     <text id="QtyNative">
      <orig>{1} as native as of {2}</orig>
     </text>
+    <text id="QtyIndia">
+     <orig>{1} in India as of {2}</orig>
+     <au-cmt>Test: Nag</au-cmt>
+    </text>
     <text id="Decade">
      <orig>{1}s</orig>
     </text>
@@ -5414,7 +5418,7 @@
      <orig>Nag alphabet (Mundari)</orig>
     </text>
     <text id="Lang">
-     <orig>Mundari ''(India, Bangladesh, Nepal, &amp;lt;1.1M in India as of 2011)''</orig>
+     <orig>Mundari</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5472,7 +5476,7 @@
      <orig>Newa (Prachalit)</orig>
     </text>
     <text id="Lang">
-     <orig>Bhasa ''(=Newa, Nepal, 800k as of 2010s)'', Sanskrit, Pali</orig>
+     <orig>Bhasa {{nspk||=Newa}}, Sanskrit, Pali</orig>
     </text>
     <text id="Note">
      <orig>first evidence</orig>
@@ -5602,7 +5606,7 @@
      <orig>Odia (Oriya)</orig>
     </text>
     <text id="Lang">
-     <orig>Odia ''(=Oriya, Eastern India, 35M as of 2019)''</orig>
+     <orig>Odia {{nspk||=Oriya}}</orig>
     </text>
     <text id="Text">
      <orig>
