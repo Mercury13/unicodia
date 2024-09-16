@@ -1271,6 +1271,10 @@
      <orig>North-Eastern India</orig>
      <transl>Північно-Східна Індія</transl>
     </text>
+    <text id="IndiaS">
+     <orig>South India</orig>
+     <transl>Південна Індія</transl>
+    </text>
     <text id="IndiaSw">
      <orig>South-Western India</orig>
      <transl>Південно-Західна Індія</transl>
@@ -7353,8 +7357,8 @@
      <transl>Малаялам</transl>
     </text>
     <text id="Lang">
-     <orig>Malayalam ''(South India, 35M as of 2019 in India as native)''</orig>
-     <transl>малая́лам ''(Південна Індія, 35{{_}}млн на 2019 в Індії як рідна)''</transl>
+     <orig>Malayalam {{nspk}}, [[ps:Tutg|Tulu]] {{nspk|Tutg}}, Sanskrit</orig>
+     <transl>малая́лам {{nspk}}, [[ps:Tutg|тулу]] {{nspk|Tutg}}, санскрит</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9152,8 +9156,8 @@
      <transl>Тулу-тиґаларі</transl>
     </text>
     <text id="Lang">
-     <orig>Tulu ''(Western India, 1.8M as of 2011)'', Kannada, Sanskrit</orig>
-     <transl>тулу ''(Західна Індія, 1,8 млн на 2011)'', кáннада, санскрит</transl>
+     <orig>Tulu {{nspk}}, Kannada, Sanskrit</orig>
+     <transl>тулу {{nspk}}, кáннада, санскрит</transl>
     </text>
     <text id="Text">
      <orig>

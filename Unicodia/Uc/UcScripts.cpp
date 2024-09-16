@@ -1,24 +1,25 @@
 #include "UcData.h"
 
-constexpr uc::LangLoc LOC_AFRICA_W      { .locSubKey = "AfricaW" };
-constexpr uc::LangLoc LOC_BANGLADESH    { .locSubKey = "Bangladesh" };
-constexpr uc::LangLoc LOC_BHUTAN        { .locSubKey = "Bhutan" };
-constexpr uc::LangLoc LOC_CAMBODIA      { .locSubKey = "Cambodia" };
-constexpr uc::LangLoc LOC_CHINA         { .locSubKey = "China" };
-constexpr uc::LangLoc LOC_INDIA_CEN     { .locSubKey = "IndiaCen" };
-constexpr uc::LangLoc LOC_INDIA_E       { .locSubKey = "IndiaE" };
-constexpr uc::LangLoc LOC_INDIA_N       { .locSubKey = "IndiaN" };
-constexpr uc::LangLoc LOC_INDIA_NE      { .locSubKey = "IndiaNe" };
-constexpr uc::LangLoc LOC_INDIA_SW      { .locSubKey = "IndiaSw" };
-constexpr uc::LangLoc LOC_INDIA_W       { .locSubKey = "IndiaW" };
-constexpr uc::LangLoc LOC_LIBERIA       { .locSubKey = "Liberia" };
-constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar" };
-constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal" };
-constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan" };
+constexpr uc::LangLoc LOC_AFRICA_W      { .locSubKey = "AfricaW"     };
+constexpr uc::LangLoc LOC_BANGLADESH    { .locSubKey = "Bangladesh"  };
+constexpr uc::LangLoc LOC_BHUTAN        { .locSubKey = "Bhutan"      };
+constexpr uc::LangLoc LOC_CAMBODIA      { .locSubKey = "Cambodia"    };
+constexpr uc::LangLoc LOC_CHINA         { .locSubKey = "China"       };
+constexpr uc::LangLoc LOC_INDIA_CEN     { .locSubKey = "IndiaCen"    };
+constexpr uc::LangLoc LOC_INDIA_E       { .locSubKey = "IndiaE"      };
+constexpr uc::LangLoc LOC_INDIA_N       { .locSubKey = "IndiaN"      };
+constexpr uc::LangLoc LOC_INDIA_NE      { .locSubKey = "IndiaNe"     };
+constexpr uc::LangLoc LOC_INDIA_S       { .locSubKey = "IndiaS"      };
+constexpr uc::LangLoc LOC_INDIA_SW      { .locSubKey = "IndiaSw"     };
+constexpr uc::LangLoc LOC_INDIA_W       { .locSubKey = "IndiaW"      };
+constexpr uc::LangLoc LOC_LIBERIA       { .locSubKey = "Liberia"     };
+constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar"     };
+constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal"       };
+constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan"    };
 constexpr uc::LangLoc LOC_SIERRA_LEONE  { .locSubKey = "SierraLeone" };
-constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand" };
-constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa" };
-constexpr uc::LangLoc LOC_VIETNAM       { .locSubKey = "Vietnam" };
+constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand"    };
+constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa"         };
+constexpr uc::LangLoc LOC_VIETNAM       { .locSubKey = "Vietnam"     };
 
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
@@ -469,7 +470,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym", QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(830, StdNote::FIRST_KNOWN), EcFont::MALAYALAM },
+        Dating::year(830, StdNote::FIRST_KNOWN), EcFont::MALAYALAM, NO_FLAGS,
+        { .mantissa = 37, .numOrder = NumOrder::MILLION, .year = 2011,
+          .locations { LOC_INDIA_S } } },
     // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -751,7 +754,8 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(9), EcFont::FUNKY },
+        Dating::century(9), EcFont::FUNKY, NO_FLAGS,
+        { .mantissa = 18, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011, .locations { LOC_INDIA_SW } } },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

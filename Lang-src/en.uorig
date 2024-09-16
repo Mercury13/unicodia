@@ -1003,6 +1003,9 @@
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
     </text>
+    <text id="IndiaS">
+     <orig>South India</orig>
+    </text>
     <text id="IndiaSw">
      <orig>South-Western India</orig>
     </text>
@@ -5267,7 +5270,7 @@
      <orig>Malayalam</orig>
     </text>
     <text id="Lang">
-     <orig>Malayalam ''(South India, 35M as of 2019 in India as native)''</orig>
+     <orig>Malayalam {{nspk}}, [[ps:Tutg|Tulu]] {{nspk|Tutg}}, Sanskrit</orig>
     </text>
     <text id="Text">
      <orig>
@@ -6450,7 +6453,7 @@
      <orig>Tulu-Tigalari</orig>
     </text>
     <text id="Lang">
-     <orig>Tulu ''(Western India, 1.8M as of 2011)'', Kannada, Sanskrit</orig>
+     <orig>Tulu {{nspk}}, Kannada, Sanskrit</orig>
     </text>
     <text id="Text">
      <orig>
