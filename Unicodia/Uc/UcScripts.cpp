@@ -1,19 +1,24 @@
 #include "UcData.h"
 
-constexpr uc::LangLoc LOC_AFRICA_W   { .locSubKey = "AfricaW" };
-constexpr uc::LangLoc LOC_BANGLADESH { .locSubKey = "Bangladesh" };
-constexpr uc::LangLoc LOC_CAMBODIA   { .locSubKey = "Cambodia" };
-constexpr uc::LangLoc LOC_INDIA_CEN  { .locSubKey = "IndiaCen" };
-constexpr uc::LangLoc LOC_INDIA_E    { .locSubKey = "IndiaE" };
-constexpr uc::LangLoc LOC_INDIA_N    { .locSubKey = "IndiaN" };
-constexpr uc::LangLoc LOC_INDIA_NE   { .locSubKey = "IndiaNe" };
-constexpr uc::LangLoc LOC_INDIA_W    { .locSubKey = "IndiaW" };
-constexpr uc::LangLoc LOC_LIBERIA    { .locSubKey = "Liberia" };
-constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
-constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
-constexpr uc::LangLoc LOC_PAKISTAN   { .locSubKey = "Pakistan" };
-constexpr uc::LangLoc LOC_USA        { .locSubKey = "Usa" };
-constexpr uc::LangLoc LOC_VIETNAM    { .locSubKey = "Vietnam" };
+constexpr uc::LangLoc LOC_AFRICA_W      { .locSubKey = "AfricaW" };
+constexpr uc::LangLoc LOC_BANGLADESH    { .locSubKey = "Bangladesh" };
+constexpr uc::LangLoc LOC_BHUTAN        { .locSubKey = "Bhutan" };
+constexpr uc::LangLoc LOC_CAMBODIA      { .locSubKey = "Cambodia" };
+constexpr uc::LangLoc LOC_CHINA         { .locSubKey = "China" };
+constexpr uc::LangLoc LOC_INDIA_CEN     { .locSubKey = "IndiaCen" };
+constexpr uc::LangLoc LOC_INDIA_E       { .locSubKey = "IndiaE" };
+constexpr uc::LangLoc LOC_INDIA_N       { .locSubKey = "IndiaN" };
+constexpr uc::LangLoc LOC_INDIA_NE      { .locSubKey = "IndiaNe" };
+constexpr uc::LangLoc LOC_INDIA_SW      { .locSubKey = "IndiaSw" };
+constexpr uc::LangLoc LOC_INDIA_W       { .locSubKey = "IndiaW" };
+constexpr uc::LangLoc LOC_LIBERIA       { .locSubKey = "Liberia" };
+constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar" };
+constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal" };
+constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan" };
+constexpr uc::LangLoc LOC_SIERRA_LEONE  { .locSubKey = "SierraLeone" };
+constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand" };
+constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa" };
+constexpr uc::LangLoc LOC_VIETNAM       { .locSubKey = "Vietnam" };
 
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
@@ -287,7 +292,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hanunoo OK, installed Google Noto font
     { "Hano", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::yapprox(1300), EcFont::HANUNOO },
+        Dating::yapprox(1300), EcFont::HANUNOO, NO_FLAGS,
+        { .mantissa = 13, .numOrder = NumOrder::THOUSAND, .year = 2000 } },
     // Hatran OK, W10 none, installed Google Noto
     { "Hatr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -361,7 +367,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(14, StdNote::CUSTOM), EcFont::KANNADA },
+        Dating::century(14, StdNote::CUSTOM), EcFont::KANNADA, NO_FLAGS,
+        { .mantissa = 44, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011,
+          .locations { LOC_INDIA_SW } } },
     // Kirat OK, excellent font from SIL
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -383,15 +391,21 @@ constinit const uc::Script uc::scriptInfo[] {
     // Latin OK, managed to modify
     { "Latn", QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::yapprox(-700), EcFont::NORMAL },
+        Dating::yapprox(-700), EcFont::NORMAL, NO_FLAGS,
+        // English here as the main Latin script
+        { .mantissa = 380, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2021 } },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yapprox(1700), EcFont::LEPCHA },
+        Dating::yapprox(1700), EcFont::LEPCHA, NO_FLAGS,
+        { .mantissa = 65, .numOrder = NumOrder::THOUSAND, .year = 2011,
+          .locations { LOC_INDIA_E, LOC_BHUTAN, LOC_NEPAL } } },
     // Limbu OK, W10 none, installed Google Noto font
     { "Limb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(18), EcFont::LIMBU },
+        Dating::century(18), EcFont::LIMBU, NO_FLAGS,
+        { .mantissa = 410, .numOrder = NumOrder::THOUSAND, .flags = Langfg::DECADE, .year = 2010,
+          .locations { LOC_NEPAL } } },
     // Linear A OK, W10 none, installed Google Noto font
     { "Lina", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::UNDECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -403,7 +417,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1915), EcFont::LISU },
+        Dating::year(1915), EcFont::LISU, NO_FLAGS,
+        { .mantissa = 940, .numOrder = NumOrder::THOUSAND, .year = 2007,
+          .locations { LOC_CHINA, LOC_MYANMAR, LOC_THAILAND } } },
     // Lycian OK, W10 P1 Segoe Historic
     { "Lyci", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -439,7 +455,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mende Kikakui OK, W10 none → installed Google Noto
     { "Mend", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::yapprox(1920), EcFont::MENDE_KIKAKUI },
+        Dating::yapprox(1920), EcFont::MENDE_KIKAKUI, NO_FLAGS,
+        { .mantissa = 25, .numOrder = NumOrder::HUN_THOUSAND, .year = 2021,
+          .locations { LOC_SIERRA_LEONE } } },
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::AFRICA,

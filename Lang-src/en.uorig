@@ -981,9 +981,15 @@
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
     </text>
+    <text id="Bhutan">
+     <orig>Bhutan</orig>
+    </text>
     <text id="Cambodia">
      <orig>Cambodia</orig>
      <au-cmt>Cham</au-cmt>
+    </text>
+    <text id="China">
+     <orig>China</orig>
     </text>
     <text id="IndiaCen">
      <orig>Central India</orig>
@@ -996,6 +1002,9 @@
     </text>
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
+    </text>
+    <text id="IndiaSw">
+     <orig>South-Western India</orig>
     </text>
     <text id="IndiaW">
      <orig>Western India</orig>
@@ -1013,6 +1022,12 @@
     <text id="Pakistan">
      <orig>Pakistan</orig>
      <au-cmt>Gurmukhi</au-cmt>
+    </text>
+    <text id="SierraLeone">
+     <orig>Sierra Leone</orig>
+    </text>
+    <text id="Thailand">
+     <orig>Thailand</orig>
     </text>
     <text id="Usa">
      <orig>USA</orig>
@@ -4593,7 +4608,7 @@
      <orig>Hanunó’o</orig>
     </text>
     <text id="Lang">
-     <orig>Hanunó’o ''(13,000 as of 2000)'' and other peoples of Mindoro Island, Philippines</orig>
+     <orig>Hanunó’o {{nspk}} and other peoples of Mindoro Island, Philippines</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4892,7 +4907,7 @@
      <orig>Kannada</orig>
     </text>
     <text id="Lang">
-     <orig>Kannada ''(South-West India, 38M as of 2011)''</orig>
+     <orig>Kannada</orig>
     </text>
     <text id="Note">
      <orig>separated from sister script [[ps:Telu|Telugu]]</orig>
@@ -4962,7 +4977,7 @@
      <orig>Lao</orig>
     </text>
     <text id="Lang">
-     <orig>Lao ''(native for 3M and second for 4M in Laos, 23M more in Thailand use [[ps:Thai|Thai script]])''</orig>
+     <orig>Lao ''(native for 3M and second for 4M in Laos, &gt;20M more in Thailand use [[ps:Thai|Thai script]])''</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4981,7 +4996,7 @@
      <orig>Latin</orig>
     </text>
     <text id="Lang">
-     <orig>Spanish ''(500M as of 2021 as native)'', English ''(&gt;350M as of 2011 as native)''; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
+     <orig>Spanish ''(500M as of 2021 as native)'', English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5000,7 +5015,7 @@
      <orig>Lepcha (Róng)</orig>
     </text>
     <text id="Lang">
-     <orig>Lepcha ''(India, Bhutan, Nepal, 65k as of 2011)''</orig>
+     <orig>Lepcha</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5015,7 +5030,7 @@
      <orig>Limbu</orig>
     </text>
     <text id="Lang">
-     <orig>Limbu ''(Nepal, 380k as of 2011)'', Sanskrit, Pali</orig>
+     <orig>Limbu {{nspk}}, Sanskrit, Pali</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5064,7 +5079,7 @@
      <orig>Lisu (Fraser alphabet)</orig>
     </text>
     <text id="Lang">
-     <orig>Lisu ''(China, 940k as of 2007)''</orig>
+     <orig>Lisu</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5116,7 +5131,7 @@
      <orig>Mahajani</orig>
     </text>
     <text id="Lang">
-     <orig>Hindi, Punjabi, Marwari ''(North-West India, 7.8M as of 2011)''</orig>
+     <orig>Hindi, Punjabi, Marwari ''(North India)''</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5214,7 +5229,7 @@
      <orig>Mende Kikakui</orig>
     </text>
     <text id="Lang">
-     <orig>Mende ''(Sierra Leone, 1.5M as of 2006)''</orig>
+     <orig>Mende</orig>
     </text>
     <text id="Text">
      <orig>

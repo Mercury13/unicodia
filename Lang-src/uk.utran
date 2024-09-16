@@ -1242,10 +1242,18 @@
      <orig>Bangladesh</orig>
      <transl>Бангладеш</transl>
     </text>
+    <text id="Bhutan">
+     <orig>Bhutan</orig>
+     <transl>Бутан</transl>
+    </text>
     <text id="Cambodia">
      <orig>Cambodia</orig>
      <au-cmt>Cham</au-cmt>
      <transl>Камбоджа</transl>
+    </text>
+    <text id="China">
+     <orig>China</orig>
+     <transl>Китай</transl>
     </text>
     <text id="IndiaCen">
      <orig>Central India</orig>
@@ -1262,6 +1270,10 @@
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
      <transl>Північно-Східна Індія</transl>
+    </text>
+    <text id="IndiaSw">
+     <orig>South-Western India</orig>
+     <transl>Південно-Західна Індія</transl>
     </text>
     <text id="IndiaW">
      <orig>Western India</orig>
@@ -1284,6 +1296,14 @@
      <orig>Pakistan</orig>
      <au-cmt>Gurmukhi</au-cmt>
      <transl>Пакістан</transl>
+    </text>
+    <text id="SierraLeone">
+     <orig>Sierra Leone</orig>
+     <transl>Сьєрра-Леоне</transl>
+    </text>
+    <text id="Thailand">
+     <orig>Thailand</orig>
+     <transl>Таїланд</transl>
     </text>
     <text id="Usa">
      <orig>USA</orig>
@@ -6342,8 +6362,8 @@
      <transl>Хануноо</transl>
     </text>
     <text id="Lang">
-     <orig>Hanunó’o ''(13,000 as of 2000)'' and other peoples of Mindoro Island, Philippines</orig>
-     <transl>хануноо ''(13{{_}}тис. на 2000)'' та інші народи о. Міндоро ''(Філіпіни)''</transl>
+     <orig>Hanunó’o {{nspk}} and other peoples of Mindoro Island, Philippines</orig>
+     <transl>хануноо {{nspk}} та інші народи о. Міндоро ''(Філіпіни)''</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6791,8 +6811,8 @@
      <transl>Кáннада</transl>
     </text>
     <text id="Lang">
-     <orig>Kannada ''(South-West India, 38M as of 2011)''</orig>
-     <transl>кáннада ''(Південно-Західна Індія, 38{{_}}млн на 2001)''</transl>
+     <orig>Kannada</orig>
+     <transl>кáннада</transl>
     </text>
     <text id="Note">
      <orig>separated from sister script [[ps:Telu|Telugu]]</orig>
@@ -6897,8 +6917,8 @@
      <transl>Лаоська</transl>
     </text>
     <text id="Lang">
-     <orig>Lao ''(native for 3M and second for 4M in Laos, 23M more in Thailand use [[ps:Thai|Thai script]])''</orig>
-     <transl>лаоська ''(в Лаосі рідна для 3{{_}}млн та друга{{-}}для 4{{_}}млн, ще 23{{_}}млн в Таїланді користуються [[ps:Thai|тайським письмом]])''</transl>
+     <orig>Lao ''(native for 3M and second for 4M in Laos, &gt;20M more in Thailand use [[ps:Thai|Thai script]])''</orig>
+     <transl>лаоська ''(в Лаосі рідна для 3{{_}}млн та друга{{-}}для 4{{_}}млн, ще &gt;20{{_}}млн в Таїланді користуються [[ps:Thai|тайським письмом]])''</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6927,8 +6947,8 @@
      <transl>Латинка</transl>
     </text>
     <text id="Lang">
-     <orig>Spanish ''(500M as of 2021 as native)'', English ''(&gt;350M as of 2011 as native)''; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
-     <transl>іспанська ''(500{{_}}млн на 2021 як рідна)'', англійська ''(&gt;350{{_}}млн на 2011 як рідна)''; більшість мов західного та тюркского світу (включаючи Східну Європу, Прибалтику, Молдову), Чорної Африки, Океанії; в’єтнамська, карельська, курдська, есперанто</transl>
+     <orig>Spanish ''(500M as of 2021 as native)'', English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
+     <transl>іспанська ''(500{{_}}млн на 2021 як рідна)'', англійська {{nspk}}; більшість мов західного та тюркского світу (включаючи Східну Європу, Прибалтику, Молдову), Чорної Африки, Океанії; в’єтнамська, карельська, курдська, есперанто</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6957,8 +6977,8 @@
      <transl>Лепча (ронг)</transl>
     </text>
     <text id="Lang">
-     <orig>Lepcha ''(India, Bhutan, Nepal, 65k as of 2011)''</orig>
-     <transl>лепча ''(Індія, Бутан, Непал, 65{{_}}тис. на 2011)''</transl>
+     <orig>Lepcha</orig>
+     <transl>лепча</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6979,8 +6999,8 @@
      <transl>Лімбу</transl>
     </text>
     <text id="Lang">
-     <orig>Limbu ''(Nepal, 380k as of 2011)'', Sanskrit, Pali</orig>
-     <transl>лімбу ''(Непал, 380{{_}}тис. на 2011)'', санскрит, палі</transl>
+     <orig>Limbu {{nspk}}, Sanskrit, Pali</orig>
+     <transl>лімбу {{nspk}}, санскрит, палі</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7053,8 +7073,8 @@
      <transl>Лісу (алфавіт Фрейзера)</transl>
     </text>
     <text id="Lang">
-     <orig>Lisu ''(China, 940k as of 2007)''</orig>
-     <transl>лісу ''(Китай, 940{{_}}тис. на 2007)''</transl>
+     <orig>Lisu</orig>
+     <transl>лісу</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7132,8 +7152,8 @@
      <transl>Махаджані</transl>
     </text>
     <text id="Lang">
-     <orig>Hindi, Punjabi, Marwari ''(North-West India, 7.8M as of 2011)''</orig>
-     <transl>хінді, пенджабська, марварі ''(Північно-Західна Індія, 7,8{{_}}млн на 2011)''</transl>
+     <orig>Hindi, Punjabi, Marwari ''(North India)''</orig>
+     <transl>хінді, пенджабська, марварі ''(Північна Індія)''</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7279,8 +7299,8 @@
      <transl>Кікакуї (менде)</transl>
     </text>
     <text id="Lang">
-     <orig>Mende ''(Sierra Leone, 1.5M as of 2006)''</orig>
-     <transl>менде ''(Сьєрра-Леоне, 1,5{{_}}млн на 2006)''</transl>
+     <orig>Mende</orig>
+     <transl>менде</transl>
     </text>
     <text id="Text">
      <orig>
