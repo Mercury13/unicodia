@@ -740,6 +740,7 @@ namespace uc {
         //LESS_THAN = 1<<2,
         DECADE = 1<<3,          ///< Year = decade rather than exact year of census
         BURMESE = 1<<4,         ///< Special action for Burmese
+        CUSTOM_PRENOTE = 1<<5,  ///< Custom (rather than stock) pre-note
     };
     DEFINE_ENUM_OPS(Langfg)
 

@@ -1248,6 +1248,11 @@
      <orig>North-Eastern India</orig>
      <transl>Северо-Восточная Индия</transl>
     </text>
+    <text id="Liberia">
+     <orig>Liberia</orig>
+     <au-cmt>for Bassa</au-cmt>
+     <transl>Либерия</transl>
+    </text>
     <text id="Nepal">
      <orig>Nepal</orig>
      <transl>Непал</transl>
@@ -4947,8 +4952,12 @@
      <transl>Адлам</transl>
     </text>
     <text id="Lang">
-     <orig>Fula ''(family of West African languages, 10M)''</orig>
-     <transl>фулá ''(семейство языков Западной Африки, 10{{_}}млн)''</transl>
+     <orig>Fula</orig>
+     <transl>фулá</transl>
+    </text>
+    <text id="LangNote">
+     <orig>family of West African languages</orig>
+     <transl>семейство языков Западной Африки</transl>
     </text>
     <text id="Note">
      <orig>late 1980s</orig>
@@ -5145,8 +5154,8 @@
      <transl>Басса (вах)</transl>
     </text>
     <text id="Lang">
-     <orig>Bassa ''(Liberia, 400k as of 2006)''</orig>
-     <transl>басса ''(Либерия, 400{{_}}тыс. на 2006)''</transl>
+     <orig>Bassa</orig>
+     <transl>басса</transl>
     </text>
     <text id="Text">
      <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. Authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
@@ -5185,8 +5194,8 @@
      <transl>Бенгальская</transl>
     </text>
     <text id="Lang">
-     <orig>Bengali ''(300M as of 2011)'', Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
-     <transl>бенгальский ''(300{{_}}млн на 2011)'', ассамский ''(15{{_}}млн на 2011)'', санскрит ''(Бангладеш, Индия)''</transl>
+     <orig>Bengali {{nspk}}, Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
+     <transl>бенгальский {{nspk}}, ассамский ''(15{{_}}млн на 2011)'', санскрит ''(Бангладеш, Индия)''</transl>
     </text>
     <text id="Note">
      <orig>11th century (separated from Gaudi), 15th century (in modern form)</orig>
@@ -5337,8 +5346,8 @@
      <transl>Бугийская (лонтара)</transl>
     </text>
     <text id="Lang">
-     <orig>Buginese ''(4M)'' and other languages of Sulavesi island</orig>
-     <transl>бугийский ''(4{{_}}млн)'' и другие языки о. Сулавеси</transl>
+     <orig>Buginese {{nspk}} and other languages of Sulavesi island</orig>
+     <transl>бугийский {{nspk}} и другие языки о. Сулавеси</transl>
     </text>
     <text id="Text">
      <orig>

@@ -986,6 +986,10 @@
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
     </text>
+    <text id="Liberia">
+     <orig>Liberia</orig>
+     <au-cmt>for Bassa</au-cmt>
+    </text>
     <text id="Nepal">
      <orig>Nepal</orig>
     </text>
@@ -3674,7 +3678,10 @@
      <orig>Adlam</orig>
     </text>
     <text id="Lang">
-     <orig>Fula ''(family of West African languages, 10M)''</orig>
+     <orig>Fula</orig>
+    </text>
+    <text id="LangNote">
+     <orig>family of West African languages</orig>
     </text>
     <text id="Note">
      <orig>late 1980s</orig>
@@ -3810,7 +3817,7 @@
      <orig>Bassa Vah</orig>
     </text>
     <text id="Lang">
-     <orig>Bassa ''(Liberia, 400k as of 2006)''</orig>
+     <orig>Bassa</orig>
     </text>
     <text id="Text">
      <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. Authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
@@ -3838,7 +3845,7 @@
      <orig>Bengali</orig>
     </text>
     <text id="Lang">
-     <orig>Bengali ''(300M as of 2011)'', Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
+     <orig>Bengali {{nspk}}, Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
     </text>
     <text id="Note">
      <orig>11th century (separated from Gaudi), 15th century (in modern form)</orig>
@@ -3936,7 +3943,7 @@
      <orig>Buginese (Lontara)</orig>
     </text>
     <text id="Lang">
-     <orig>Buginese ''(4M)'' and other languages of Sulavesi island</orig>
+     <orig>Buginese {{nspk}} and other languages of Sulavesi island</orig>
     </text>
     <text id="Text">
      <orig>

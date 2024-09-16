@@ -501,6 +501,14 @@ namespace {
 
     constexpr std::u8string_view BULLET = u8"•\u00A0";
 
+    struct TextLang {
+        std::string_view key {};
+        std::string_view preComment {};
+
+        static const TextLang DFLT;
+    };
+    const TextLang TextLang::DFLT;
+
     class Eng : public wiki::Engine
     {
     public:
@@ -519,7 +527,7 @@ namespace {
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
         void finish() override;
-        void appendNSpeakers(Buf1d<const std::string_view> x);
+        void appendNSpeakers(const TextLang& x);
     protected:
         wiki::HtWeight weight;
         bool isSuppressed = false;
@@ -747,23 +755,36 @@ namespace {
         return true;
     }
 
-    void Eng::appendNSpeakers(Buf1d<const std::string_view> x)
+    void Eng::appendNSpeakers(const TextLang& x)
     {
-        // x: 0 = template name
-        //    1 = secry language
-        //    2 = initial comment
-        // Start
         /// @todo [urgent] Don’t do this with side-languages
-        hasNSpeakers = true;
+        std::string_view locPrefixDot = context.locPrefixDot;
+        if (x.key.empty()) {
+            hasNSpeakers = true;
+        } else {
+            // No place for L10n kinks for side-languages
+            locPrefixDot = {};
+        }
         s += "<i>(";
         auto lang = context.lang;   // primary language
         /// @todo [future] extract secondary language
         if (lang) {
             bool wasWritten = false;
-            // Comment
-            auto comment = x.safeGetV(2, {});
-            if (!comment.empty()) {
-                mywiki::append(s, str::toU8sv(comment), context);
+            // Pre-comment from L10n
+            if (!x.preComment.empty()) {
+                mywiki::append(s, str::toU8sv(x.preComment), context);
+                wasWritten = true;
+            }
+            // Pre-comment from data
+            if (lang->flags.have(uc::Langfg::CUSTOM_PRENOTE)) {
+                if (wasWritten)
+                    s += ", ";
+                if (locPrefixDot.empty()) {
+                    s += "[NO L10N PREFIX]";
+                } else {
+                    auto locKey = str::cat(locPrefixDot, "LangNote");
+                    s += loc::get(locKey);
+                }
                 wasWritten = true;
             }
             // Language info
@@ -908,7 +929,12 @@ namespace {
                 || name == "ArabPres2") {
             mywiki::append(s, loc::get(str::cat("Snip.", name)), context);
         } else if (name == "nspk") {
-            appendNSpeakers(x);
+            TextLang textLang {
+                // 0 = template name
+                .key        = x.safeGetV(1, {}),
+                .preComment = x.safeGetV(2, {}),
+            };
+            appendNSpeakers(textLang);
         } else {
             wiki::appendHtml(s, x[0]);
         }
@@ -978,6 +1004,7 @@ namespace {
         mywiki::Context context {
             .font { getFont(obj) },
             .lang = nullptr,
+            .locPrefixDot {},
         };
         Eng eng(text, context);
         wiki::run(eng, x);
@@ -991,6 +1018,7 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
     mywiki::Context context {
         .font { uc::fontInfo[0] },
         .lang = nullptr,
+        .locPrefixDot {},
     };
     Eng eng(text, context);
     wiki::run(eng, wiki);
@@ -1204,9 +1232,12 @@ void mywiki::translateDatingLoc()
 
 void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 {
+    char buf[40];
+    x.printfLocKey(buf, "");
     mywiki::Context context {
         .font = x.font(),
         .lang = x.mainLang ? &x.mainLang : nullptr,
+        .locPrefixDot = buf,
     };
     if (x.ecType != uc::EcScriptType::NONE) {
         str::append(text, "<p>");
@@ -1225,7 +1256,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             if (!info.hasNSpeakers && context.lang) {
                 text += ' ';
                 Eng eng(text, context);
-                eng.appendNSpeakers({});
+                eng.appendNSpeakers(TextLang::DFLT);
             }
         }
         if (x.time) {

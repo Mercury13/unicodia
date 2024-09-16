@@ -4,6 +4,7 @@ constexpr uc::LangLoc LOC_BANGLADESH { .locSubKey = "Bangladesh" };
 constexpr uc::LangLoc LOC_INDIA_CEN  { .locSubKey = "IndiaCen" };
 constexpr uc::LangLoc LOC_INDIA_E    { .locSubKey = "IndiaE" };
 constexpr uc::LangLoc LOC_INDIA_NE   { .locSubKey = "IndiaNe" };
+constexpr uc::LangLoc LOC_LIBERIA    { .locSubKey = "Liberia" };
 constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
 constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
 
@@ -40,7 +41,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::special(), EcFont::ADLAM },
+        Dating::special(), EcFont::ADLAM, NO_FLAGS,
+        { .mantissa = 10, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN | Langfg::CUSTOM_PRENOTE,
+          .year = 0 } },
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -79,7 +82,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bassa Vah OK, none in W10, installed Google Noto
     { "Bass", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::yapprox(1900), EcFont::BASSA_VAH },
+        Dating::yapprox(1900), EcFont::BASSA_VAH, NO_FLAGS,
+        { .mantissa = 400, .numOrder = NumOrder::THOUSAND, .year = 2006, .locations { LOC_LIBERIA } } },
     // Batak OK, installed Google Noto font
     { "Batk", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -87,7 +91,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::special(), EcFont::BENGALI },
+        Dating::special(), EcFont::BENGALI, NO_FLAGS,
+        { .mantissa = 230, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2021,
+          .locations { LOC_BANGLADESH, LOC_INDIA_E } } },
     // Bhaiksuki OK, installed Google Noto
     { "Bhks", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -107,7 +113,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buginese OK, W10 only → made LelawadeeUI → Google Noto chain
     { "Bugi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::crange(15, 17), EcFont::BUGINESE },
+        Dating::crange(15, 17), EcFont::BUGINESE, NO_FLAGS,
+        { .mantissa = 4, .numOrder = NumOrder::MILLION, .year = 2015 } },
     // Buhid OK, installed Google Noto font
     { "Buhd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,

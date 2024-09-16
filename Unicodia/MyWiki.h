@@ -81,8 +81,9 @@ namespace mywiki {
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
-    enum class LinkClass { POPUP, COPY, INTERNAL, INET,
-                           SEARCH = INTERNAL };
+    enum class LinkClass : unsigned char
+                { POPUP, COPY, INTERNAL, INET,
+                  SEARCH = INTERNAL };
 
     class Link    // interface
     {
@@ -106,6 +107,7 @@ namespace mywiki {
     struct Context {
         DescFont font;
         const uc::Lang* lang;
+        std::string_view locPrefixDot;
     };
 
     struct AppendWiki {
