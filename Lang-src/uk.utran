@@ -1200,7 +1200,7 @@
      <text id="Unit">
       <orig>{1} people</orig>
       <au-cmt>Specially for Toto</au-cmt>
-      <transl>{1} чоловік</transl>
+      <transl>{1} людей</transl>
      </text>
      <text id="Tho">
       <orig>{1}k</orig>
@@ -1237,6 +1237,11 @@
      <orig>Bangladesh</orig>
      <transl>Бангладеш</transl>
     </text>
+    <text id="Cambodia">
+     <orig>Cambodia</orig>
+     <au-cmt>Cham</au-cmt>
+     <transl>Камбоджа</transl>
+    </text>
     <text id="IndiaCen">
      <orig>Central India</orig>
      <transl>Центральна Індія</transl>
@@ -1244,6 +1249,10 @@
     <text id="IndiaE">
      <orig>Eastern India</orig>
      <transl>Східна Індія</transl>
+    </text>
+    <text id="IndiaN">
+     <orig>Northern India</orig>
+     <transl>Північна Індія</transl>
     </text>
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
@@ -1254,13 +1263,22 @@
      <au-cmt>for Bassa</au-cmt>
      <transl>Ліберія</transl>
     </text>
+    <text id="Myanmar">
+     <orig>Myanmar</orig>
+     <transl>М’янма</transl>
+    </text>
     <text id="Nepal">
      <orig>Nepal</orig>
      <transl>Непал</transl>
     </text>
-    <text id="Myanmar">
-     <orig>Myanmar</orig>
-     <transl>М’янма</transl>
+    <text id="Usa">
+     <orig>USA</orig>
+     <transl>США</transl>
+    </text>
+    <text id="Vietnam">
+     <orig>Vietnam</orig>
+     <au-cmt>Cham</au-cmt>
+     <transl>В’єтнам</transl>
     </text>
    </group>
   </group>
@@ -5468,8 +5486,8 @@
      <transl>Чамська</transl>
     </text>
     <text id="Lang">
-     <orig>Cham ''(Vietnam, Cambodia, 320k as of 2008)''</orig>
-     <transl>чамська ''(В’єтнам, Камбоджа, 320{{_}}тис. на 2008)''</transl>
+     <orig>Cham</orig>
+     <transl>чамська</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5490,8 +5508,8 @@
      <transl>Черокі</transl>
     </text>
     <text id="Lang">
-     <orig>Cherokee ''(less than 2100 people as of 2019)''</orig>
-     <transl>черокі ''(менше 2100 чоловік на 2019)''</transl>
+     <orig>Cherokee</orig>
+     <transl>черокі</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5612,8 +5630,8 @@
      <transl>Кирилиця</transl>
     </text>
     <text id="Lang">
-     <orig>Russian ''(150M as of 2020 as native)'', Ukrainian ''(39M as of 2024)'', Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
-     <transl>російська ''(150{{_}}млн на 2020 як рідна)'', українська ''(39{{_}}млн на 2024)'', білоруська, русинська, болгарська, македонська, сербохорватська ''(Сербія)'', казахська, киргизька, таджицька, мови народів Росії</transl>
+     <orig>Russian {{nspk}}, Ukrainian ''(39M as of 2024)'', Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
+     <transl>російська {{nspk}}, українська ''(39{{_}}млн на 2024)'', білоруська, русинська, болгарська, македонська, сербохорватська ''(Сербія)'', казахська, киргизька, таджицька, мови народів Росії</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5642,8 +5660,8 @@
      <transl>Деванáґарі</transl>
     </text>
     <text id="Lang">
-     <orig>Hindi ''(&gt;300M as native)'', Sanskrit and other languages of India</orig>
-     <transl>хінді ''(&gt;300{{_}}млн як рідна)'', санскрит та інші мови Індії</transl>
+     <orig>Hindi {{nspk}}, Marathi, Sanskrit and other languages of India</orig>
+     <transl>хінді {{nspk}}, маратхі, санскрит та інші мови Індії</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5710,8 +5728,8 @@
      <transl>Доґра</transl>
     </text>
     <text id="Lang">
-     <orig>Dogri ''(Cashmere, 2.6M as of 2011)''</orig>
-     <transl>доґрі ''(Кашмір, 2,6{{_}}млн на 2011)''</transl>
+     <orig>Dogri</orig>
+     <transl>доґрі</transl>
     </text>
     <text id="Text">
      <orig>

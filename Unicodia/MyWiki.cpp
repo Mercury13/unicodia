@@ -830,6 +830,8 @@ namespace {
                 }
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
                     sNum = "&gt;" + sNum;
+                } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {
+                    sNum = "&lt;" + sNum;
                 }
                 if (lang->year != 0) {
                     std::u8string sYear = str::toU8(std::to_string(lang->year));

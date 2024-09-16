@@ -737,7 +737,7 @@ namespace uc {
     enum class Langfg : unsigned char {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
         GREATER_THAN = 1<<1,    ///< [+] greater than (# is lower limit)
-        //LESS_THAN = 1<<2,
+        LESS_THAN = 1<<2,       ///< [+] less than (# is upper limit)
         DECADE = 1<<3,          ///< Year = decade rather than exact year of census
         BURMESE = 1<<4,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<5,  ///< Custom (rather than stock) pre-note

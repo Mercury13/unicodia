@@ -1,12 +1,16 @@
 #include "UcData.h"
 
 constexpr uc::LangLoc LOC_BANGLADESH { .locSubKey = "Bangladesh" };
+constexpr uc::LangLoc LOC_CAMBODIA   { .locSubKey = "Cambodia" };
 constexpr uc::LangLoc LOC_INDIA_CEN  { .locSubKey = "IndiaCen" };
 constexpr uc::LangLoc LOC_INDIA_E    { .locSubKey = "IndiaE" };
+constexpr uc::LangLoc LOC_INDIA_N    { .locSubKey = "IndiaN" };
 constexpr uc::LangLoc LOC_INDIA_NE   { .locSubKey = "IndiaNe" };
 constexpr uc::LangLoc LOC_LIBERIA    { .locSubKey = "Liberia" };
 constexpr uc::LangLoc LOC_MYANMAR    { .locSubKey = "Myanmar" };
 constexpr uc::LangLoc LOC_NEPAL      { .locSubKey = "Nepal" };
+constexpr uc::LangLoc LOC_USA        { .locSubKey = "Usa" };
+constexpr uc::LangLoc LOC_VIETNAM    { .locSubKey = "Vietnam" };
 
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
@@ -136,11 +140,15 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(-7), EcFont::HISTORIC },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(4), EcFont::CHAM },
+        Dating::century(4), EcFont::CHAM, NO_FLAGS,
+        { .mantissa = 490, .numOrder = NumOrder::THOUSAND, .year = 2019,
+          .locations { LOC_CAMBODIA, LOC_VIETNAM } } },
     // Cherokee OK, installed Google Noto font. Need it, W7 has no 2014 extensions.
     { "Cher", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
-        Dating::year(1821), EcFont::CHEROKEE },
+        Dating::year(1821), EcFont::CHEROKEE, NO_FLAGS,
+        { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
+          .locations { LOC_USA } } },
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA,
@@ -160,11 +168,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::ybefore(900), EcFont::NORMAL },
+        Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS,
+        // Russian here as main Cyrillic language
+        { .mantissa = 150, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2020 } },
     // Devanagari OK, added 8 characters to Noto Serif
     { "Deva", QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::crange(1, 7), EcFont::DEVANAGARI },
+        Dating::crange(1, 7), EcFont::DEVANAGARI, NO_FLAGS,
+        // Hindi here as main Devanagari language
+        { .mantissa = 350, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011 } },
     // Diak OK, W10 off, Noto is really cool
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -172,7 +184,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(19), EcFont::DOGRA },
+        Dating::century(19), EcFont::DOGRA, NO_FLAGS,
+        { .mantissa = 26, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,
+          .locations = { LOC_INDIA_N } } },
     // Deseret OK, W10 Segoe UI Symbol, plane 1
     { "Dsrt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AMERICA,
