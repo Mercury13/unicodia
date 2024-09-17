@@ -199,13 +199,13 @@ constinit const ec::Array<uc::NumType, uc::EcNumType> uc::numTypeInfo {
 
 
 constexpr uc::NumOrderInfo numOrderRawInfo[] {
-    { .nDigs = 0, .unit = 1,   .locKey = "Prop.Lang.Num.Unit" }, // NONE
-    { .nDigs = 0, .unit = 1,   .locKey = "Prop.Lang.Num.Unit" }, // UNIT
-    { .nDigs = 0, .unit = 1,   .locKey = "Prop.Lang.Num.Tho"  }, // THOUSAND
-    { .nDigs = 1, .unit = 10,  .locKey = "Prop.Lang.Num.Mil"  }, // HUN_THOUSAND
-    { .nDigs = 0, .unit = 1,   .locKey = "Prop.Lang.Num.Mil"  }, // MILLION
-    { .nDigs = 2, .unit = 100, .locKey = "Prop.Lang.Num.Bil"  }, // DEC_MILLION
-    { .nDigs = 1, .unit = 10,  .locKey = "Prop.Lang.Num.Bil"  }, // HUN_MILLION
+    { .nDigs = 0, .locKey = "Prop.Lang.Num.Unit" }, // NONE
+    { .nDigs = 0, .locKey = "Prop.Lang.Num.Unit" }, // UNIT
+    { .nDigs = 0, .locKey = "Prop.Lang.Num.Tho"  }, // THOUSAND
+    { .nDigs = 1, .locKey = "Prop.Lang.Num.Mil"  }, // HUN_THOUSAND
+    { .nDigs = 0, .locKey = "Prop.Lang.Num.Mil"  }, // MILLION
+    { .nDigs = 2, .locKey = "Prop.Lang.Num.Bil"  }, // DEC_MILLION
+    { .nDigs = 1, .locKey = "Prop.Lang.Num.Bil"  }, // HUN_MILLION
 };
 
 constinit const ec::Array<uc::NumOrderInfo, uc::NumOrder> uc::numOrderInfo (

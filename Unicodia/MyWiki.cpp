@@ -757,16 +757,15 @@ namespace {
 
     QString formatNumOnly(unsigned mantissa, const uc::NumOrderInfo& nii)
     {
-        if (nii.nDigs == 0) {
-            return QString::number(mantissa);
-        } else {
-            wchar_t buf[10];
-            swprintf(buf, std::size(buf), L"%u" "%c" "%0*u",
-                     mantissa / nii.unit,
-                     static_cast<wchar_t>(loc::currLang->numfmt.decimalPoint),
-                     (int)nii.nDigs, mantissa % nii.unit);
-            return QString::fromWCharArray(buf);
+        static constexpr bool NO_TRUNCATE = false;
+
+        QString s = QString::number(mantissa);
+        if (nii.nDigs > 0) {
+            s = s.rightJustified(nii.nDigs + 1, '0', NO_TRUNCATE);
+            int whereIns = s.length() - nii.nDigs;
+            s.insert(whereIns, loc::currLang->numfmt.decimalPoint);
         }
+        return s;
     }
 
     template <class... Args>

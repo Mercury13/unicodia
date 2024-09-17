@@ -736,7 +736,6 @@ namespace uc {
 
     struct NumOrderInfo {
         unsigned char nDigs;
-        unsigned char unit;     // = 10^nDigs
         std::string_view locKey;
     };
 
