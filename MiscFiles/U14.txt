@@ -5,19 +5,6 @@ Balinese
 * Noto NOT ready
 * Drew in FunkySample
 
-Brahmi
-* New chars 11070…75
-* Noto NOT ready
-* Drew in FunkySample
-
-CJK
-* 9FFD…FF (ideographs) SUPPORTED by Babelstone.
-* 1AFF0+ (kana supp) NOT supported by Babelstone. Though it more than supports hentaigana.
-* 1B11F…22 (archaic katakana) NOT supported by Babelstone.
-* 2A6DE,DF (ideographs B) SUPPORTED by Babelstone.
-* 2B735…38 (ideographs C) SUPPORTED by babelStone.
-* Found some combination of other’s fonts, but current chain is not sustainable, need new.
-
 Combining diacritical marks ex
 * Added chars 1AC1…CE (IPA)
 * Noto Serif is NOT ready
@@ -27,20 +14,6 @@ Combining diacritical marks supplement
 * Added 1DFA (Syriac)
 * Both Noto fonts NOT ready
 * Drew in FunkySample
-
-Egyptian Hieroglyphs
-* Lots of redraws. Simplest: 13032 removed woman’s beard
-* Noto is not ready
-* Gagged with NewGardiner
-
-Kaithi
-* New char 110C2
-* Noto NOT ready
-* Drew in FunkySample
-
-Kannada
-* +1 char 0CDD
-* Drew in Kannada
 
 Latin
 * Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4, Noto CAME
@@ -59,11 +32,6 @@ Tagalog
 * Noto READY
 * Use own remake due to larger virama
 
-Telugu
-* +2 chars 0C3C, 0C5D
-* Noto UI NOT ready
-* Drew in FunkySample
-
 ===== READY =====
 
 Ahom OK
@@ -79,9 +47,23 @@ Arabic OK
 * Scheherazade READY, but FBC2 is absent
 * Use combination of and Sheherazade
 
+Brahmi
+* New chars 11070…75
+* Noto CAME
+* Drew in FunkySample
+
 Canadian aboriginal OK
 * New characters 11AB0…BF
 * Noto READY
+
+CJK
+* 9FFD…FF (ideographs) SUPPORTED by Babelstone.
+* 1AFF0+ (kana supp) NOT supported by Babelstone. Though it more than supports hentaigana.
+* 1B11F…22 (archaic katakana) NOT supported by Babelstone.
+* 2A6DE,DF (ideographs B) SUPPORTED by Babelstone.
+* 2B735…38 (ideographs C) SUPPORTED by babelStone.
+* Found some combination of other’s fonts, but current chain is not sustainable, need new.
+* So let it be…
 
 Currency chars OK
 * Added 20C0 Kyrghyz Som
@@ -90,6 +72,10 @@ Currency chars OK
 Cypro-Minoan OK
 * New script
 * Noto CAME, but my version is more stylish :)
+
+Egyptian Hieroglyphs
+* Lots of redraws. Simplest: 13032 removed woman’s beard
+* Noto CAME at last
 
 Emoji OK
 * Noto graphic emoji CAME
@@ -102,6 +88,14 @@ Ethiopic OK
 Glagolitic OK
 * Added 2C2F, 2C5F
 * Switched to Shafarik
+
+Kaithi
+* New char 110C2
+* Noto CAME
+
+Kannada
+* +1 char 0CDD
+* Noto CAME
 
 Mongol OK
 * Added character 180F, no changes in fonts
@@ -125,6 +119,11 @@ Takri OK
 Tangsa OK
 * Contacted author, no license by now
 * Strange misrenders in Noto
+
+Telugu
+* +2 chars 0C3C, 0C5D
+* Noto UI NOT ready
+* Drew in FunkySample
 
 Toto OK
 * Font of unknown authorship (SIL) comes across Internet
