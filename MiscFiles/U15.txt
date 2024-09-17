@@ -10,6 +10,7 @@ Kannada
 
 Latin G
 * New chars 1DF25…1DF2A
+* Drew in Funky
 
 Sundanese — BETA
 * Changed glyph 1BBF
