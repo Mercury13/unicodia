@@ -643,7 +643,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(19, StdNote::MAYBE_EARLIER), EcFont::SAURASHTRA },
+        Dating::century(19, StdNote::MAYBE_EARLIER), EcFont::SAURASHTRA, NO_FLAGS,
+        { .mantissa = 250, .numOrder = NumOrder::THOUSAND, .flags = Langfg::CUSTOM_POSTNOTE, .year = 2011,
+          .locations { LOC_INDIA_S } } },
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,

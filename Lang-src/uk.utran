@@ -8320,8 +8320,8 @@
      <transl>Саураштра</transl>
     </text>
     <text id="Lang">
-     <orig>Saurashtra ''(India, 247k as of 2007, script is used in Tamil Nadu only)''</orig>
-     <transl>саураштра ''(Індія, 247{{_}}тис. на 2007, письмо використовується тільки у штаті Тамілнад)''</transl>
+     <orig>Saurashtra</orig>
+     <transl>саураштра</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8334,6 +8334,10 @@
       <p />
       <p>Брахмійська абуґіда з голосною по замовчанню {{t|ə}} та вірамою: {{sm|ꢒ}}=кə, {{sm|ꢒꢶ}}=кі, {{sm|ꢒ꣄}}=к. [[pt:virama|Вірама]] вживається часто. Початкова голосна{{-}}окремий символ: {{sm|ꢄ}}=і.</p>
      </transl>
+    </text>
+    <text id="LangNote2">
+     <orig>script is used in Tamil Nadu only</orig>
+     <transl>письмо використовується тільки у штаті Тамілнад</transl>
     </text>
    </group>
    <group id="Sgnw">

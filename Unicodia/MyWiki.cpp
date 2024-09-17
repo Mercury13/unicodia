@@ -864,6 +864,15 @@ namespace {
                     wrapWith(sNum, key, sYear);
                 }
                 s += sNum;
+                if (lang->flags.have(uc::Langfg::CUSTOM_POSTNOTE)) {
+                    s += ", ";
+                    if (locPrefixDot.empty()) {
+                        s += "[NO L10N PREFIX]";
+                    } else {
+                        auto locKey = str::cat(locPrefixDot, "LangNote2");
+                        s += loc::get(locKey);
+                    }
+                }
             }
         } else {
             s += "[NO LANGUAGE!!!]";

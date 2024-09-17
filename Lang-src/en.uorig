@@ -5908,7 +5908,7 @@
      <orig>Saurashtra</orig>
     </text>
     <text id="Lang">
-     <orig>Saurashtra ''(India, 247k as of 2007, script is used in Tamil Nadu only)''</orig>
+     <orig>Saurashtra</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5916,6 +5916,9 @@
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. Initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
      </orig>
+    </text>
+    <text id="LangNote2">
+     <orig>script is used in Tamil Nadu only</orig>
     </text>
    </group>
    <group id="Sgnw">
