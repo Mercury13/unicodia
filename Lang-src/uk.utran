@@ -1306,6 +1306,10 @@
      <orig>Sierra Leone</orig>
      <transl>Сьєрра-Леоне</transl>
     </text>
+    <text id="SriLanka">
+     <orig>Sri Lanka</orig>
+     <transl>Шрі-Ланка</transl>
+    </text>
     <text id="Sumatra">
      <orig>Sumatra</orig>
      <transl>Суматра</transl>
@@ -8472,8 +8476,8 @@
      <transl>Кхудабаді (синдхі)</transl>
     </text>
     <text id="Lang">
-     <orig>Sindhi ''(Pakistan, India, 32M as of 2010s)''</orig>
-     <transl>синдхі ''(Пакістан, Індія, 32{{_}}млн на 2010-і)''</transl>
+     <orig>Sindhi</orig>
+     <transl>синдхі</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8502,8 +8506,8 @@
      <transl>Сингальська</transl>
     </text>
     <text id="Lang">
-     <orig>Sinhala ''(Sri Lanka, 17M as of 2012)''</orig>
-     <transl>сингальська ''(Шрі-Ланка, 17{{_}}млн на 2012)''</transl>
+     <orig>Sinhala</orig>
+     <transl>сингальська</transl>
     </text>
     <text id="Text">
      <orig>

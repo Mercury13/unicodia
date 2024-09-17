@@ -17,6 +17,7 @@ constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar"     };
 constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal"       };
 constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan"    };
 constexpr uc::LangLoc LOC_SIERRA_LEONE  { .locSubKey = "SierraLeone" };
+constexpr uc::LangLoc LOC_SRI_LANKA     { .locSubKey = "SriLanka"     };
 constexpr uc::LangLoc LOC_SUMATRA       { .locSubKey = "Sumatra"     };
 constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand"    };
 constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa"         };
@@ -665,11 +666,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(16), EcFont::KHUDAWADI },
+        Dating::century(16), EcFont::KHUDAWADI, NO_FLAGS,
+        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::DECADE, .year = 2010,
+          .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::century(13, StdNote::MODERN_FORM), EcFont::SINHALA },
+        Dating::century(13, StdNote::MODERN_FORM), EcFont::SINHALA, NO_FLAGS,
+        { .mantissa = 18, .numOrder = NumOrder::MILLION, .year = 2021, .locations { LOC_SRI_LANKA } } },
     // Sogdian OK, W10 None → installed Google Noto
     { "Sogd", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA,
