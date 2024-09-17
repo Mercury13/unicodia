@@ -625,7 +625,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Rohingya, installed Google Noto font
     { "Rohg", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::decade(1980), EcFont::ROHINGYA },
+        Dating::decade(1980), EcFont::ROHINGYA, NO_FLAGS,
+        { .mantissa = 2, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN, .year = 2017,
+          .locations { LOC_BANGLADESH, LOC_MYANMAR } } },
     // Runes OK, several tofu → installed Google Noto font
     { "Runr", QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,

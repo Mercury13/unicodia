@@ -3899,7 +3899,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Belongs to eastern branch of Indic script. Originates from [[ps:Sidd:Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese script differ insignificantly and [[pt:unification|unified]]. Inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
+      <p>Belongs to eastern branch of Indic script. Originates from [[ps:Sidd|Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese script differ insignificantly and [[pt:unification|unified]]. Inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
       <p />
       <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] made of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts of the world. Ligature input is standard: first letter, virama, second letter.</p>
       <p />
@@ -5841,7 +5841,7 @@
      <orig>Hanifi Rohingya</orig>
     </text>
     <text id="Lang">
-     <orig>Rohingya ''(Bangladesh, Myanmar, &amp;lt;2M as of 2012)''</orig>
+     <orig>Rohingya</orig>
     </text>
     <text id="Text">
      <orig>
