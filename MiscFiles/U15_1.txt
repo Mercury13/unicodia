@@ -1,0 +1,29 @@
+== GAGGED ==
+
+CJK ideographic description chars
+* 4 chars, +1 in CJK strokes
+* Drew in Funky
+
+== DONE ==
+
+CJK ex I
+* New block, totally G-source
+* BabelStone CAME
+
+CJK remakes
+* Checked long ago
+
+Latin D/E
+* 2 glyphs
+* Now in Noto
+
+Tangut
+* 7 glyphs
+* Noto CAME
+
+Alchemical
+* 10 glyphs
+* Drew in Funky
+
+Special/emoji
+* Noto CAME
