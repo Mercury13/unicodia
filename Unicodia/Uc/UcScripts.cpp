@@ -17,6 +17,7 @@ constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar"     };
 constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal"       };
 constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan"    };
 constexpr uc::LangLoc LOC_SIERRA_LEONE  { .locSubKey = "SierraLeone" };
+constexpr uc::LangLoc LOC_SUMATRA       { .locSubKey = "Sumatra"     };
 constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand"    };
 constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa"         };
 constexpr uc::LangLoc LOC_VIETNAM       { .locSubKey = "Vietnam"     };
@@ -289,7 +290,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS,
         // Chinese here as the main Han language
-        { .mantissa = 135, .numOrder = NumOrder::DEC_THOUSAND, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},
+        { .mantissa = 135, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},
     // Hanunoo OK, installed Google Noto font
     { "Hano", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -618,7 +619,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Rejang OK, installed Google Noto font
     { "Rjng", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::yapprox(1750, StdNote::FIRST_KNOWN), EcFont::REJANG },
+        Dating::yapprox(1750, StdNote::FIRST_KNOWN), EcFont::REJANG, NO_FLAGS,
+        { .mantissa = 200, .hiMantissa = 350, .numOrder = NumOrder::THOUSAND, .year = 0,
+          .locations { LOC_SUMATRA } } },
     // Rohingya, installed Google Noto font
     { "Rohg", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::ASIA,

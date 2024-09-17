@@ -1206,17 +1206,13 @@
       <orig>{1}k</orig>
       <transl>{1}&amp;#160;тис.</transl>
      </text>
-     <text id="HunTho">
-      <orig>{1}.{2}M</orig>
-      <transl>{1},{2}&amp;#160;млн</transl>
-     </text>
      <text id="Mil">
       <orig>{1}M</orig>
       <transl>{1}&amp;#160;млн</transl>
      </text>
-     <text id="HunMil">
-      <orig>{1}.{2}bn</orig>
-      <transl>{1},{2}&amp;#160;млрд</transl>
+     <text id="Bil">
+      <orig>{1}bn</orig>
+      <transl>{1}&amp;#160;млрд</transl>
      </text>
     </group>
     <text id="Qty">
@@ -1309,6 +1305,10 @@
     <text id="SierraLeone">
      <orig>Sierra Leone</orig>
      <transl>Сьєрра-Леоне</transl>
+    </text>
+    <text id="Sumatra">
+     <orig>Sumatra</orig>
+     <transl>Суматра</transl>
     </text>
     <text id="Thailand">
      <orig>Thailand</orig>
@@ -8196,17 +8196,18 @@
      <transl>Реджанг</transl>
     </text>
     <text id="Lang">
-     <orig>Rejang ''(Sumatra, 200–350k)''</orig>
-     <transl>реджанг ''(Суматра, 200–350{{_}}тис.)''</transl>
+     <orig>Rejang</orig>
+     <au-cmt>200k Pandey, 350k 2000 census</au-cmt>
+     <transl>реджанг</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Most of 200 thousand speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
+      <p>Most of speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: there are signs for few final consonants existing in language.</p>
      </orig>
      <transl>
-      <p>Більшість з 200 тисяч носіїв неписьменні. Повністю замінена [[ps:Latn|латинкою]].</p>
+      <p>Більшість носіїв неписьменні. Повністю замінена [[ps:Latn|латинкою]].</p>
       <p />
       <p>Брахмійська абуґіда з голосною по замовчанню {{t|а}} та [[pt:virama|вірамою]]: {{sm|ꤰ}}=ка, {{sm|ꤰꥉ}}=ке, {{sm|ꤰ꥓}}=к. Писемність деградувала з тієї ж причини, що й [[ps:Runr|руни]]: простіше видряпувати на дереві. Але в цілому реджанг більш розвинений, ніж схожі [[ps:Bugi|лонтара]] або [[ps:Batk|батакська]]: є знаки для тих небагатьох кінцевих приголосних, що існують у мові.</p>
      </transl>

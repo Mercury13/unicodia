@@ -732,7 +732,15 @@ namespace uc {
     constexpr int PLANE_UNKNOWN = -1;
 
     DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
-        NONE, UNIT, THOUSAND, DEC_THOUSAND, HUN_THOUSAND, MILLION, HUN_MILLION)
+        NONE, UNIT, THOUSAND, HUN_THOUSAND, MILLION, DEC_MILLION, HUN_MILLION)
+
+    struct NumOrderInfo {
+        unsigned char nDigs;
+        unsigned char unit;     // = 10^nDigs
+        std::string_view locKey;
+    };
+
+    extern const ec::Array<NumOrderInfo, NumOrder> numOrderInfo;
 
     enum class Langfg : unsigned char {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
@@ -752,6 +760,7 @@ namespace uc {
 
     struct Lang {
         unsigned short mantissa;
+        unsigned short hiMantissa = 0;
         NumOrder numOrder;
         Flags<Langfg> flags {};
         unsigned short year;

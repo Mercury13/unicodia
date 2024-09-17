@@ -755,6 +755,28 @@ namespace {
         return true;
     }
 
+    QString formatNumOnly(unsigned mantissa, const uc::NumOrderInfo& nii)
+    {
+        if (nii.nDigs == 0) {
+            return QString::number(mantissa);
+        } else {
+            wchar_t buf[10];
+            swprintf(buf, std::size(buf), L"%u" "%c" "%0*u",
+                     mantissa / nii.unit,
+                     static_cast<wchar_t>(loc::currLang->numfmt.decimalPoint),
+                     (int)nii.nDigs, mantissa % nii.unit);
+            return QString::fromWCharArray(buf);
+        }
+    }
+
+    template <class... Args>
+    void wrapWith(QString& s, std::string_view locKey, Args&&... args)
+    {
+        s = loc::get(locKey).argQ(
+                str::toU8sv(s.toStdString()),
+                std::forward<Args>(args)...);
+    }
+
     void Eng::appendNSpeakers(const TextLang& x)
     {
         char locBuf[40];
@@ -817,34 +839,13 @@ namespace {
                 }
                 // # of speakers
                 QString sNum;
-                char buf[4];
-                switch (lang->numOrder) {
-                case uc::NumOrder::NONE:
-                    sNum = "???";
-                    break;
-                case uc::NumOrder::UNIT:
-                    sNum = loc::get("Prop.Lang.Num.Unit").argQ(lang->mantissa);
-                    break;
-                case uc::NumOrder::THOUSAND:
-                    sNum = loc::get("Prop.Lang.Num.Tho").argQ(lang->mantissa);
-                    break;
-                case uc::NumOrder::DEC_THOUSAND:
-                    snprintf(buf, std::size(buf), "%02d", lang->mantissa % 100);
-                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
-                                lang->mantissa / 100, str::toU8sv(buf));
-                    break;
-                case uc::NumOrder::HUN_THOUSAND:
-                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
-                                lang->mantissa / 10, lang->mantissa % 10);
-                    break;
-                case uc::NumOrder::MILLION:
-                    sNum = loc::get("Prop.Lang.Num.Mil").argQ(lang->mantissa);
-                    break;
-                case uc::NumOrder::HUN_MILLION:
-                    sNum = loc::get("Prop.Lang.Num.HunTho").argQ(
-                                lang->mantissa / 10, lang->mantissa % 10);
-                    break;
+                auto& nii = uc::numOrderInfo[lang->numOrder];
+                sNum = formatNumOnly(lang->mantissa, nii);
+                if (lang->hiMantissa) {
+                    sNum += "–";  // en dash
+                    sNum += formatNumOnly(lang->hiMantissa, nii);
                 }
+                wrapWith(sNum, nii.locKey);
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
                     sNum = "&gt;" + sNum;
                 } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {
@@ -860,7 +861,7 @@ namespace {
                     } else if (lang->flags.have(uc::Langfg::IN_INDIA)) {
                         key = "Prop.Lang.QtyIndia";
                     }
-                    sNum = loc::get(key).argQ(str::toU8sv(sNum.toStdString()), sYear);
+                    wrapWith(sNum, key, sYear);
                 }
                 s += sNum;
             }

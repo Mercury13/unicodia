@@ -953,14 +953,11 @@
      <text id="Tho">
       <orig>{1}k</orig>
      </text>
-     <text id="HunTho">
-      <orig>{1}.{2}M</orig>
-     </text>
      <text id="Mil">
       <orig>{1}M</orig>
      </text>
-     <text id="HunMil">
-      <orig>{1}.{2}bn</orig>
+     <text id="Bil">
+      <orig>{1}bn</orig>
      </text>
     </group>
     <text id="Qty">
@@ -1032,6 +1029,9 @@
     </text>
     <text id="SierraLeone">
      <orig>Sierra Leone</orig>
+    </text>
+    <text id="Sumatra">
+     <orig>Sumatra</orig>
     </text>
     <text id="Thailand">
      <orig>Thailand</orig>
@@ -5825,11 +5825,12 @@
      <orig>Rejang</orig>
     </text>
     <text id="Lang">
-     <orig>Rejang ''(Sumatra, 200–350k)''</orig>
+     <orig>Rejang</orig>
+     <au-cmt>200k Pandey, 350k 2000 census</au-cmt>
     </text>
     <text id="Text">
      <orig>
-      <p>Most of 200 thousand speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
+      <p>Most of speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: there are signs for few final consonants existing in language.</p>
      </orig>
