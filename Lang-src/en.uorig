@@ -1007,6 +1007,9 @@
     <text id="IndiaS">
      <orig>South India</orig>
     </text>
+    <text id="IndiaSe">
+     <orig>South-Eastern India</orig>
+    </text>
     <text id="IndiaSw">
      <orig>South-Western India</orig>
     </text>
@@ -6072,11 +6075,11 @@
      <orig>Sora Sompeng</orig>
     </text>
     <text id="Lang">
-     <orig>Sora ''(India, 400k as of 2011)''</orig>
+     <orig>Sora</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of East India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
+      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
       <p />
       <p>Most sources consider Sora an alphabet, but it has inherent vowel {{t|a}}, as in [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
      </orig>
@@ -6115,7 +6118,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language of Sunda (42M as of 2016), widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
+      <p>Language of Sunda {{nspk}}, widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
       <p />
       <p>The script was used until 18th century, after that [[ps:Java|Javanese]] and Pegon (local variant of [[ps:Arab|Arabic]]) were used, in 20th century [[ps:Latn|Latin]] was introduced. In 1997 authorities of Indonesia decide to give Sunda their own script, making it from Old Sundanese.</p>
       <p />

@@ -10,6 +10,7 @@ constexpr uc::LangLoc LOC_INDIA_E       { .locSubKey = "IndiaE"      };
 constexpr uc::LangLoc LOC_INDIA_N       { .locSubKey = "IndiaN"      };
 constexpr uc::LangLoc LOC_INDIA_NE      { .locSubKey = "IndiaNe"     };
 constexpr uc::LangLoc LOC_INDIA_S       { .locSubKey = "IndiaS"      };
+constexpr uc::LangLoc LOC_INDIA_SE      { .locSubKey = "IndiaSe"     };
 constexpr uc::LangLoc LOC_INDIA_SW      { .locSubKey = "IndiaSw"     };
 constexpr uc::LangLoc LOC_INDIA_W       { .locSubKey = "IndiaW"      };
 constexpr uc::LangLoc LOC_LIBERIA       { .locSubKey = "Liberia"     };
@@ -685,7 +686,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sora Sompeng OK, W10 Nirmala UI
     { "Sora", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1936), EcFont::TAMIL },
+        Dating::year(1936), EcFont::TAMIL, NO_FLAGS,
+        { .mantissa = 400, .numOrder = NumOrder::THOUSAND, .year = 2011,
+          .locations { LOC_INDIA_SE } } },
     // Soyombo OK, W10 none → installed Google Noto
     { "Soyo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -693,7 +696,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sundanese OK, even W10 off → installed Google Noto
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::century(14), EcFont::SUNDANESE },
+        Dating::century(14), EcFont::SUNDANESE, NO_FLAGS,
+        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::NO_AUTO, .year = 2015 } },
     // Sunuwar OK, though font is REALLY bad
     { "Sunu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,

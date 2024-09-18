@@ -1276,6 +1276,10 @@
      <orig>South India</orig>
      <transl>Південна Індія</transl>
     </text>
+    <text id="IndiaSe">
+     <orig>South-Eastern India</orig>
+     <transl>Південно-Східна Індія</transl>
+    </text>
     <text id="IndiaSw">
      <orig>South-Western India</orig>
      <transl>Південно-Західна Індія</transl>
@@ -8574,17 +8578,17 @@
      <transl>Соранг-сомпенг</transl>
     </text>
     <text id="Lang">
-     <orig>Sora ''(India, 400k as of 2011)''</orig>
-     <transl>сора ''(Індія, 400{{_}}тис. на 2011)''</transl>
+     <orig>Sora</orig>
+     <transl>сора</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of East India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
+      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
       <p />
       <p>Most sources consider Sora an alphabet, but it has inherent vowel {{t|a}}, as in [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
      </orig>
      <transl>
-      <p>Сора або савара{{-}}невелика вразлива австроазійська (не індоєвропейська) мова Східної Індії. Писемність придумав у 1936 Мангей Гоманго, до цього писали [[ps:Latn|латинкою]]. Писемність дещо невдала{{-}}нема звуків, запозичених із сусідніх мов. Також на сора пишуть [[ps:Orya|орією]] та [[ps:Telu|тéлугу]].</p>
+      <p>Сора або савара{{-}}невелика вразлива австроазійська (не індоєвропейська) мова Індії. Писемність придумав у 1936 Мангей Гоманго, до цього писали [[ps:Latn|латинкою]]. Писемність дещо невдала{{-}}нема звуків, запозичених із сусідніх мов. Також на сора пишуть [[ps:Orya|орією]] та [[ps:Telu|тéлугу]].</p>
       <p />
       <p>Більшість джерел вважають сору алфавітом, але є голосна по замовчанню {{t|а}}, як у [[pt:brahmic|брахмійській абуґіді]]. Прочитайте самоназву {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
      </transl>
@@ -8641,7 +8645,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language of Sunda (42M as of 2016), widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
+      <p>Language of Sunda {{nspk}}, widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
       <p />
       <p>The script was used until 18th century, after that [[ps:Java|Javanese]] and Pegon (local variant of [[ps:Arab|Arabic]]) were used, in 20th century [[ps:Latn|Latin]] was introduced. In 1997 authorities of Indonesia decide to give Sunda their own script, making it from Old Sundanese.</p>
       <p />
@@ -8649,7 +8653,7 @@
       <p>: ka {{sm|ᮊ}} + virama {{sm|◌᮫}} + ta {{sm|ᮒ}} = kta {{sm|&amp;#xE000;}}</p>
      </orig>
      <transl>
-      <p>Мова сундів (42{{_}}млн на 2016), поширена на заході Яви. Писемність походить з [[ps:Kawi|каві]], голосна по замовчанню {{t|a}}. Для інших голосних використовуються оголоси, для «голої» приголосної{{-}}знак «[[pt:virama|вірама]]» ''(pamaaeh)'': {{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Початкові голосні{{-}}окремі літери.</p>
+      <p>Мова сундів {{nspk}}, поширена на заході Яви. Писемність походить з [[ps:Kawi|каві]], голосна по замовчанню {{t|a}}. Для інших голосних використовуються оголоси, для «голої» приголосної{{-}}знак «[[pt:virama|вірама]]» ''(pamaaeh)'': {{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Початкові голосні{{-}}окремі літери.</p>
       <p />
       <p>Писемність використовувалася до XVIII{{_}}століття, після чого стали вживати [[ps:Java|яванську]] і пегон (місцевий варіант [[ps:Arab|арабської]]); с XX{{_}}століття{{-}}[[ps:Latn|латинку]]. У 1997 влада Індонезії вирішила дати сундам власну писемність, зробивши її зі старосунданської.</p>
       <p />
