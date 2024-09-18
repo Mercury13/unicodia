@@ -779,7 +779,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tangsa OK, U14, called author and he gave font
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1990), EcFont::TANGSA },
+        Dating::year(1990), EcFont::TANGSA, NO_FLAGS,
+        { .mantissa = 100, .numOrder = NumOrder::THOUSAND, .year = 2010,
+          .locations { LOC_MYANMAR, LOC_INDIA_NE } } }, // Ethnologue
     // Todhri OK, drew in Funky
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -832,7 +834,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1974, StdNote::CUSTOM), EcFont::YI },
+        Dating::year(1974, StdNote::CUSTOM), EcFont::YI, NO_FLAGS,
+        { .mantissa = 2, .numOrder = NumOrder::MILLION, .year = 2000,
+          .locations = { LOC_CHINA } } }, // Census
     // Zanabazar square OK, installed Google Noto
     { "Zanb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,

@@ -5468,7 +5468,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. Author of ''Unicodia'' was unable to find the precise dating, but if it’s a descendant of [[ps:Mymr|Myanmar]] then for sure after 11th century.</p>
+      <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. The script comes from [[ps:Mymr|Myanmar]] and is very old, probably older than known Myanmar specimen (11th century).</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is used for construction of ligatures, most of them are abolished with reform of 2001.</p>
       <p>: kā {{sm|𑄇}} + i {{sm|◌𑄨}} = ki {{sm|𑄇𑄨}}</p>
@@ -5476,7 +5476,7 @@
       <p>: kā {{sm|𑄇}} + virama {{sm|◌𑄳}} + tā {{sm|𑄖}} = ktā {{sm|𑄇𑄳𑄖}}</p>
      </orig>
      <transl>
-      <p>Говорящих на языке чакма немало и язык в списках исчезающих не{{_}}числится, но письменность вытесняется [[ps:Beng|бенгальской]]. Точную датировку автору «Юникодии» найти не{{_}}удалось, но если это потомок [[ps:Mymr|бирманского]]{{-}}то точно после XI{{_}}века.</p>
+      <p>Говорящих на языке чакма немало и язык в списках исчезающих не{{_}}числится, но письменность вытесняется [[ps:Beng|бенгальской]]. Письмо пошло из [[ps:Mymr|бирманского]] и очень старое, возможно, старее известных образцов бирманского (XI{{_}}век).</p>
       <p />
       <p>Брахмийская абугида с гласной по умолчанию {{t|а:}} (длинное «а») и часто употребляемой [[pt:virama|вирамой]] ''(maayaa)''. Вторая вирама служит для сборки [[pt:ligature|лигатур]], многие из них упразднены реформой 2001.</p>
       <p>: ка: {{sm|𑄇}} + и {{sm|◌𑄨}} = ки {{sm|𑄇𑄨}}</p>
@@ -9111,8 +9111,8 @@
      <transl>Тангса</transl>
     </text>
     <text id="Lang">
-     <orig>Tangsa languages ''(=Tase-Naga, North-East India, Myanmar, 100k as of 2010)''</orig>
-     <transl>языки тангса ''(=тасе-нага, Северо-Восточная Индия, Мьянма, 100{{_}}тыс. на 2010)''</transl>
+     <orig>Tangsa languages {{nspk||=Tase-Naga}}</orig>
+     <transl>языки тангса {{nspk||=тасе-нага}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9387,8 +9387,8 @@
      <transl>И (носу)</transl>
     </text>
     <text id="Lang">
-     <orig>Yi ''(China, 2M as of 2000)''</orig>
-     <transl>и ''(Китай, 2{{_}}млн на 2000)''</transl>
+     <orig>Nuosu {{nspk}} and other Yi languages</orig>
+     <transl>носу {{nspk}} и другие языки '''и'''</transl>
     </text>
     <text id="Note">
      <orig>syllabic</orig>
