@@ -5914,7 +5914,7 @@
      <orig>Saurashtra</orig>
     </text>
     <text id="Lang">
-     <orig>Saurashtra</orig>
+     <orig>Saurashtra {{nspk}}, script is used in Tamil Nadu only</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5922,9 +5922,6 @@
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. Initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
      </orig>
-    </text>
-    <text id="LangNote2">
-     <orig>script is used in Tamil Nadu only</orig>
     </text>
    </group>
    <group id="Sgnw">
@@ -6132,13 +6129,15 @@
      <orig>Sunuwar</orig>
     </text>
     <text id="Lang">
-     <orig>Sunuwar ''(Nepal, 38k as of 2011)''</orig>
+     <orig>Sunuwar {{nspk||=Koinch}}</orig>
     </text>
     <text id="Text">
      <orig>
       <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</p>
       <p />
       <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
+      <p />
+      <p>The main script is [[ps:Deva|Devanagari]], poorly conveys Sunuwar phonetics. Also there’s Tikamuli, unencoded Brahmic abugida promoted since 2005 by influential funds.</p>
      </orig>
     </text>
    </group>
@@ -6147,7 +6146,7 @@
      <orig>Syloti Nagri</orig>
     </text>
     <text id="Lang">
-     <orig>Syloti ''(Bangladesh, India, 10M as of 2017)''</orig>
+     <orig>Syloti</orig>
     </text>
     <text id="Text">
      <orig>
@@ -6247,7 +6246,7 @@
      <orig>Tamil</orig>
     </text>
     <text id="Lang">
-     <orig>Tamil ''(India, Sri Lanka, Singapore, &gt;70M)''</orig>
+     <orig>Tamil {{nspk}}, [[ps:Saur|Saurashtra]] {{nspk|Saur}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -6300,7 +6299,7 @@
      <orig>Telugu</orig>
     </text>
     <text id="Lang">
-     <orig>Telugu ''(South-East India, 83M as of 2011)''</orig>
+     <orig>Telugu</orig>
     </text>
     <text id="Note">
      <orig>separated from [[ps:Knda|Kannada]]</orig>
@@ -6357,7 +6356,7 @@
      <orig>Thaana</orig>
     </text>
     <text id="Lang">
-     <orig>Dhivehi ''(Maldivian, 340k as of 2012)''</orig>
+     <orig>Dhivehi {{nspk||=Maldivian}}</orig>
     </text>
     <text id="Text">
      <orig>
@@ -6374,7 +6373,7 @@
      <orig>Thai</orig>
     </text>
     <text id="Lang">
-     <orig>Thai ''(20 to 36M as of 2000 as native)''</orig>
+     <orig>Thai</orig>
     </text>
     <text id="Text">
      <orig>

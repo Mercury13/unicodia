@@ -8327,8 +8327,8 @@
      <transl>Саураштра</transl>
     </text>
     <text id="Lang">
-     <orig>Saurashtra</orig>
-     <transl>саураштра</transl>
+     <orig>Saurashtra {{nspk}}, script is used in Tamil Nadu only</orig>
+     <transl>саураштра {{nspk}}, письменность используется только в штате Тамилнад</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8341,10 +8341,6 @@
       <p />
       <p>Брахмийская абугида с гласной по умолчанию {{t|ə}} и вирамой: {{sm|ꢒ}}=кə, {{sm|ꢒꢶ}}=ки, {{sm|ꢒ꣄}}=к. [[pt:virama|Вирама]] употребляется часто. Начальная гласная{{-}}отдельный символ: {{sm|ꢄ}}=и.</p>
      </transl>
-    </text>
-    <text id="LangNote2">
-     <orig>script is used in Tamil Nadu only</orig>
-     <transl>письменность используется только в штате Тамилнад</transl>
     </text>
    </group>
    <group id="Sgnw">
@@ -8667,19 +8663,23 @@
      <transl>Сунвар</transl>
     </text>
     <text id="Lang">
-     <orig>Sunuwar ''(Nepal, 38k as of 2011)''</orig>
-     <transl>сунвар ''(Непал, 38 тыс. на 2011)''</transl>
+     <orig>Sunuwar {{nspk||=Koinch}}</orig>
+     <transl>сунвар {{nspk||=коинч}}</transl>
     </text>
     <text id="Text">
      <orig>
       <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</p>
       <p />
       <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
+      <p />
+      <p>The main script is [[ps:Deva|Devanagari]], poorly conveys Sunuwar phonetics. Also there’s Tikamuli, unencoded Brahmic abugida promoted since 2005 by influential funds.</p>
      </orig>
      <transl>
       <p>Изобрёл Кришна Бахадур Джентич (1926–1991). Изначально чистый алфавит, из-за взаимодействия с брахмийским письмом он начал использовать гласную по умолчанию {{t|а}} и [[pt:virama|вираму]]. Официальная орфография не{{_}}признаёт этих изменений.</p>
       <p />
       <p>Письмо не{{_}}отмечало тонов до недавнего времени, и тоновые знаки обычные 0300, 0301 и 030D.</p>
+      <p />
+      <p>Главное письмо{{-}}[[ps:Deva|деванагари]], плохо передаёт звуки сунвара. Также есть тикамули, незакодированная брахмийская абугида, продвигаемая с 2005 влиятельными фондами.</p>
      </transl>
     </text>
    </group>
@@ -8689,8 +8689,8 @@
      <transl>Силхети-нагари</transl>
     </text>
     <text id="Lang">
-     <orig>Syloti ''(Bangladesh, India, 10M as of 2017)''</orig>
-     <transl>силхетский ''(Бангладеш, Индия, 10{{_}}млн на 2017)''</transl>
+     <orig>Syloti</orig>
+     <transl>силхетский</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8841,8 +8841,8 @@
      <transl>Тамильская</transl>
     </text>
     <text id="Lang">
-     <orig>Tamil ''(India, Sri Lanka, Singapore, &gt;70M)''</orig>
-     <transl>тамильский ''(Индия, Шри-Ланка, Сингапур, &gt;70{{_}}млн)''</transl>
+     <orig>Tamil {{nspk}}, [[ps:Saur|Saurashtra]] {{nspk|Saur}}</orig>
+     <transl>тамильский {{nspk}}, [[ps:Saur|саураштра]] {{nspk|Saur}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8925,8 +8925,8 @@
      <transl>Тéлугу</transl>
     </text>
     <text id="Lang">
-     <orig>Telugu ''(South-East India, 83M as of 2011)''</orig>
-     <transl>тéлугу ''(Юго-Восточная Индия, 83{{_}}млн на 2011)''</transl>
+     <orig>Telugu</orig>
+     <transl>тéлугу</transl>
     </text>
     <text id="Note">
      <orig>separated from [[ps:Knda|Kannada]]</orig>
@@ -9011,8 +9011,8 @@
      <transl>Тана</transl>
     </text>
     <text id="Lang">
-     <orig>Dhivehi ''(Maldivian, 340k as of 2012)''</orig>
-     <transl>дивехи ''(мальдивский, 340{{_}}тыс. на 2012)''</transl>
+     <orig>Dhivehi {{nspk||=Maldivian}}</orig>
+     <transl>дивехи {{nspk||=мальдивский}}</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9037,8 +9037,8 @@
      <transl>Тайская</transl>
     </text>
     <text id="Lang">
-     <orig>Thai ''(20 to 36M as of 2000 as native)''</orig>
-     <transl>тайский ''(20…36{{_}}млн на 2000 как родной)''</transl>
+     <orig>Thai</orig>
+     <transl>тайский</transl>
     </text>
     <text id="Text">
      <orig>

@@ -741,16 +741,15 @@ namespace uc {
 
     extern const ec::Array<NumOrderInfo, NumOrder> numOrderInfo;
 
-    enum class Langfg : unsigned short {
+    enum class Langfg : unsigned char {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
         GREATER_THAN = 1<<1,    ///< [+] greater than (# is lower limit)
         LESS_THAN = 1<<2,       ///< [+] less than (# is upper limit)
         DECADE = 1<<3,          ///< Year = decade rather than exact year of census
         BURMESE = 1<<4,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<5,  ///< Custom (rather than stock) pre-note
-        CUSTOM_POSTNOTE = 1<<6, ///< Custom post-note
-        IN_INDIA = 1<<7,        ///< Special string “{1} in India as of {2}”
-        NO_AUTO = 1<<8,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
+        IN_INDIA = 1<<6,        ///< Special string “{1} in India as of {2}”
+        NO_AUTO = 1<<7,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
     };
     DEFINE_ENUM_OPS(Langfg)
 

@@ -646,7 +646,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(19, StdNote::MAYBE_EARLIER), EcFont::SAURASHTRA, NO_FLAGS,
-        { .mantissa = 250, .numOrder = NumOrder::THOUSAND, .flags = Langfg::CUSTOM_POSTNOTE, .year = 2011,
+        { .mantissa = 250, .numOrder = NumOrder::THOUSAND, .year = 2011,
           .locations { LOC_INDIA_S } } },
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
@@ -697,15 +697,18 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(14), EcFont::SUNDANESE, NO_FLAGS,
-        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::NO_AUTO, .year = 2015 } },
+        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::NO_AUTO, .year = 2015 } }, // UNSD
     // Sunuwar OK, though font is REALLY bad
     { "Sunu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1942), EcFont::SUNUWAR },
+        Dating::year(1942), EcFont::SUNUWAR, NO_FLAGS,
+        { .mantissa = 38, .numOrder = NumOrder::THOUSAND, .year = 2011, .locations { LOC_NEPAL } } }, // Census
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(15), EcFont::SYLOTI_NAGRI },
+        Dating::century(15), EcFont::SYLOTI_NAGRI, NO_FLAGS,
+        { .mantissa = 11, .numOrder = NumOrder::MILLION, .year = 2017,
+          .locations { LOC_BANGLADESH, LOC_INDIA_E } }},  // Ethnologue
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc", QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -729,7 +732,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tamil BMP OK, different fonts in W10 and W7
     { "Taml", QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::crange(6, 9), EcFont::TAMIL },
+        Dating::crange(6, 9), EcFont::TAMIL, NO_FLAGS,
+        { .mantissa = 75, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN, .year = 2011,
+          .locations { LOC_INDIA_S, LOC_SRI_LANKA } } },  // Census
     // Tangut OK, installed Google Noto
     { "Tang", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::RTL_COL, EcContinent::CJK,
@@ -741,7 +746,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(14, StdNote::CUSTOM), EcFont::TELUGU },
+        Dating::century(14, StdNote::CUSTOM), EcFont::TELUGU, NO_FLAGS,
+        { .mantissa = 90, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN, .year = 2011,
+          .locations { LOC_INDIA_SE } } }, // Census
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -753,11 +760,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa", QFontDatabase::Thaana,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::OCEAN,
-        Dating::century(18), EcFont::THAANA },
+        Dating::century(18), EcFont::THAANA, NO_FLAGS,
+        { .mantissa = 490, .numOrder = NumOrder::THOUSAND, .year = 2022 } }, // Census
     // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai", QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1283), EcFont::THAI },
+        Dating::year(1283), EcFont::THAI, NO_FLAGS,
+        { .mantissa = 60, .numOrder = NumOrder::MILLION,
+          .flags = Langfg::GREATER_THAN | Langfg::DECADE, .year = 2020 } }, // No reliable source
     // Tibetan OK, W10 did not have swastika, installed Google Noto
     { "Tibt", QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
