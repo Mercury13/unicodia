@@ -5264,8 +5264,8 @@
      <transl>Бенгальська</transl>
     </text>
     <text id="Lang">
-     <orig>Bengali {{nspk}}, Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
-     <transl>бенгальська {{nspk}}, ассамська ''(15{{_}}млн на 2011)'', санскрит ''(Бангладеш, Індія)''</transl>
+     <orig>Bengali {{nspk}}, Assamese {{nspk|as}}, Sanskrit ''(Bangladesh, India)''</orig>
+     <transl>бенгальська {{nspk}}, ассамська {{nspk|as}}, санскрит ''(Бангладеш, Індія)''</transl>
     </text>
     <text id="Note">
      <orig>11th century (separated from Gaudi), 15th century (in modern form)</orig>
@@ -5681,8 +5681,8 @@
      <transl>Кирилиця</transl>
     </text>
     <text id="Lang">
-     <orig>Russian {{nspk}}, Ukrainian ''(39M as of 2024)'', Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
-     <transl>російська {{nspk}}, українська ''(39{{_}}млн на 2024)'', білоруська, русинська, болгарська, македонська, сербохорватська ''(Сербія)'', казахська, киргизька, таджицька, мови народів Росії</transl>
+     <orig>Russian {{nspk}}, Ukrainian {{nspk|uk}}, Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
+     <transl>російська {{nspk}}, українська {{nspk|uk}}, білоруська, русинська, болгарська, македонська, сербохорватська ''(Сербія)'', казахська, киргизька, таджицька, мови народів Росії</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5992,12 +5992,14 @@
      <transl>Ґарай</transl>
     </text>
     <text id="Lang">
-     <orig>Wolof {{nspk}}, Mandinka ''(2.1M as of 2017)''</orig>
-     <transl>волоф {{nspk}}, мандинка ''(2,1 млн на 2017)''</transl>
+     <orig>Wolof {{nspk}}, Mandinka {{nspk|mnk}}</orig>
+     <transl>волоф {{nspk}}, мандинка {{nspk|mnk}}</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of local cave. Current community is small, about 200 people.</p>
+      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of local cave.</p>
+      <p />
+      <p>Current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
       <p>Capital letter has a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
       <p />
@@ -6007,7 +6009,9 @@
      </orig>
      <au-cmt>Cave: https://www.endangeredalphabets.net/alphabets/garay/</au-cmt>
      <transl>
-      <p>Зі звільненням Африки з’явилося багато нових писемностей. Цю створив Ассане Файє з Сенегалу. Ґарай{{-}}назва місцевої печери. Теперішня спільнота невелика, біля 200 людей.</p>
+      <p>Зі звільненням Африки з’явилося багато нових писемностей. Цю створив Ассане Файє з Сенегалу. Ґарай{{-}}назва місцевої печери.</p>
+      <p />
+      <p>Теперішня спільнота невелика, біля 200 людей. Волоф та мандинка пишуться [[ps:Latn|латинкою]], [[ps:Arab|арабицею]] та [[ps:Nkoo|нко]].</p>
       <p />
       <p>Велика літера не більша за малу, але має гак зверху. Усе слово інколи підкреслюється великим хвостом, що виходить з останньої літери.</p>
       <p />
@@ -6023,8 +6027,8 @@
      <transl>Грузинська</transl>
     </text>
     <text id="Lang">
-     <orig>Geogian {{nspk}}, Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
-     <transl>грузинська {{nspk}}, мегрельська ''(344{{_}}тис. на 2015)'' та інші картвельські</transl>
+     <orig>Geogian {{nspk}}, Megrelian {{nspk|xmf}} and other Kartvelian languages</orig>
+     <transl>грузинська {{nspk}}, мегрельська {{nspk|xmf}} та інші картвельські</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6964,8 +6968,8 @@
      <transl>Латинка</transl>
     </text>
     <text id="Lang">
-     <orig>Spanish ''(500M as of 2021 as native)'', English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
-     <transl>іспанська ''(500{{_}}млн на 2021 як рідна)'', англійська {{nspk}}; більшість мов західного та тюркского світу (включаючи Східну Європу, Прибалтику, Молдову), Чорної Африки, Океанії; в’єтнамська, карельська, курдська, есперанто</transl>
+     <orig>Spanish {{nspk|es}}, English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
+     <transl>іспанська {{nspk|es}}, англійська {{nspk}}; більшість мов західного та тюркского світу (включаючи Східну Європу, Прибалтику, Молдову), Чорної Африки, Океанії; в’єтнамська, карельська, курдська, есперанто</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7568,8 +7572,8 @@
      <transl>Бірманська</transl>
     </text>
     <text id="Lang">
-     <orig>Myanmar {{nspk}}, Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
-     <transl>бірманська {{nspk}}, монська ''(М’янма, &amp;lt;1{{_}}млн на 2007)'', палі ''(мертва, культова у буддизмі)''…</transl>
+     <orig>Myanmar {{nspk}}, Mon {{nspk|mnw}}, Pali ''(dead, liturgical in Buddhism)''…</orig>
+     <transl>бірманська {{nspk}}, монська {{nspk|mnw}}, палі ''(мертва, культова у буддизмі)''…</transl>
     </text>
     <text id="Text">
      <orig>

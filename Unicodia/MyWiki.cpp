@@ -779,13 +779,11 @@ namespace {
     void Eng::appendNSpeakers(const TextLang& x)
     {
         char locBuf[40];
-        /// @todo [urgent] Side-languages
         auto lang = context.lang;   // primary language
         std::string_view locPrefixDot = context.locPrefixDot;
         if (x.key.empty()) {
             hasNSpeakers = true;
         } else {
-            // No place for L10n kinks for side-languages
             lang = nullptr;
             locPrefixDot = {};
             // Key points to script?
@@ -797,6 +795,9 @@ namespace {
                         locPrefixDot = locBuf;
                     }
                 }
+            } else {
+                // No place for L10n kinks for side-languages
+                lang = uc::findSideLang(x.key);
             }
         }
         s += "<i>(";

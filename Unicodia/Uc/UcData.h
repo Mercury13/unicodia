@@ -826,6 +826,13 @@ namespace uc {
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);
 
+    struct SideLang {
+        std::string_view id;
+        Lang lang;
+    };
+    extern const SideLang sideLangInfo[];
+    const Lang* findSideLang(std::string_view x);
+
     struct Cp;
 
     ///  Flags of Unicode block

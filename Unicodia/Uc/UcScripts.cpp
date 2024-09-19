@@ -846,7 +846,38 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::none(), EcFont::NORMAL, Sfg::NO_LANGS | Sfg::NO_STATS },
 };
 
-
 static_assert(std::size(uc::scriptInfo) == static_cast<size_t>(uc::EcScript::NN));
 
 const uc::Script* uc::findScript(std::string_view x) { return findInArray(x, scriptInfo); }
+
+
+extern const uc::SideLang uc::sideLangInfo[] {
+    { .id = "as",   // Assamese ← Beng
+      .lang { .mantissa = 15, .numOrder = NumOrder::MILLION, .year = 2011 } },
+                    // 2011 census in India
+    { .id = "es",   // Spanish ← Latn
+      .lang { .mantissa = 600, .numOrder = NumOrder::MILLION, .year = 2023 } },
+                    // Estimate by Cervantes institute
+    { .id = "mnk",  // Mandinka ← Gara
+      .lang { .mantissa = 21, .numOrder = NumOrder::HUN_THOUSAND, .year = 2017 } },
+                    // Ethnologue
+    { .id = "mnw",  // Mon ← Mymr
+      .lang { .mantissa = 1, .numOrder = NumOrder::MILLION, .flags = Langfg::LESS_THAN, .year = 2012,
+              .locations { LOC_MYANMAR } } },
+                    // The greatest of known estimates (UNSD 2012)
+    { .id = "uk",   // Ukrainian ← Cyrl
+      .lang { .mantissa = 39, .numOrder = NumOrder::MILLION, .year = 2024 } },
+                    // Ethnologue, counted diasporas (millions of L1 Ukrainians),
+                    //    refugees (number really reliable but who knows L1 or L2)
+                    //    and switchers (switcher is L2 by definition but…)
+                    // 25M L1 + 5M L2 in Ukraine as of 2016 is believable
+    { .id = "xmf",  // Megrelian ← Geor
+      .lang { .mantissa = 290, .numOrder = NumOrder::THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2020 } },
+                    // Ethnologue + lack of reliable info
+};
+const uc::Lang* uc::findSideLang(std::string_view x) {
+    if (auto q = findInArray(x, sideLangInfo)) {
+        return &q->lang;
+    }
+    return nullptr;
+}

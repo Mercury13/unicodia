@@ -3898,7 +3898,7 @@
      <orig>Bengali</orig>
     </text>
     <text id="Lang">
-     <orig>Bengali {{nspk}}, Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</orig>
+     <orig>Bengali {{nspk}}, Assamese {{nspk|as}}, Sanskrit ''(Bangladesh, India)''</orig>
     </text>
     <text id="Note">
      <orig>11th century (separated from Gaudi), 15th century (in modern form)</orig>
@@ -4174,7 +4174,7 @@
      <orig>Cyrillic</orig>
     </text>
     <text id="Lang">
-     <orig>Russian {{nspk}}, Ukrainian ''(39M as of 2024)'', Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
+     <orig>Russian {{nspk}}, Ukrainian {{nspk|uk}}, Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
     </text>
     <text id="Text">
      <orig>
@@ -4372,11 +4372,13 @@
      <orig>Garay</orig>
     </text>
     <text id="Lang">
-     <orig>Wolof {{nspk}}, Mandinka ''(2.1M as of 2017)''</orig>
+     <orig>Wolof {{nspk}}, Mandinka {{nspk|mnk}}</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of local cave. Current community is small, about 200 people.</p>
+      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of local cave.</p>
+      <p />
+      <p>Current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
       <p>Capital letter has a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
       <p />
@@ -4392,7 +4394,7 @@
      <orig>Georgian</orig>
     </text>
     <text id="Lang">
-     <orig>Geogian {{nspk}}, Megrelian ''(344k as of 2015)'' and other Kartvelian languages</orig>
+     <orig>Geogian {{nspk}}, Megrelian {{nspk|xmf}} and other Kartvelian languages</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5009,7 +5011,7 @@
      <orig>Latin</orig>
     </text>
     <text id="Lang">
-     <orig>Spanish ''(500M as of 2021 as native)'', English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
+     <orig>Spanish {{nspk|es}}, English {{nspk}}; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</orig>
     </text>
     <text id="Text">
      <orig>
@@ -5409,7 +5411,7 @@
      <orig>Myanmar</orig>
     </text>
     <text id="Lang">
-     <orig>Myanmar {{nspk}}, Mon ''(Myanmar, &amp;lt;1M as of 2007)'', Pali ''(dead, liturgical in Buddhism)''…</orig>
+     <orig>Myanmar {{nspk}}, Mon {{nspk|mnw}}, Pali ''(dead, liturgical in Buddhism)''…</orig>
     </text>
     <text id="Text">
      <orig>
