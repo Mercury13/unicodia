@@ -10,6 +10,7 @@ curl %UCD%/PropList.txt -L --output PropList.txt
 curl %UCD%/Blocks.txt -L --output Blocks.txt
 curl %UCD%/extracted/DerivedName.txt -L --output DerivedName.txt
 curl %UCD%/UnicodeData.txt -L --output UnicodeData.txt
+curl %UCD%/Unikemet.txt -L --output Unikemet.txt
 curl %UCD%/Unihan.zip -L --output Unihan.zip
 curl https://www.unicode.org/Public/emoji/16.0/emoji-test.txt -L --output emoji-test.txt
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml -L --output signunicode.xml
