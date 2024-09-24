@@ -13838,8 +13838,8 @@
       <transl>домашній/навчальний ПК ''(клавіатурний форм-фактор, Бейсік у ПЗП, підтримує ТБ та магнітофон)''</transl>
      </text>
      <text id="Desk">
-      <orig>desktop PC with monitor</orig>
-      <transl>настільний ПК з монітором</transl>
+      <orig>early hobby PC with monitor</orig>
+      <transl>ранній хобі-ПК з монітором</transl>
      </text>
      <text id="Adv">
       <orig>advanced PC ''(monitor, disks, OS)''</orig>
@@ -13863,10 +13863,6 @@
      </text>
     </group>
     <group id="Sales">
-     <text id="3k">
-      <orig>over 3k</orig>
-      <transl>понад 3 тис.</transl>
-     </text>
      <text id="10k">
       <orig>over 10k</orig>
       <transl>понад 10 тис.</transl>
@@ -13991,6 +13987,30 @@
      </text>
     </group>
    </group>
+   <group id="AmstradCpc">
+    <text id="Text">
+     <orig>Designed to be as luxury as possible for home computer, it was the second British home computer after ZX Spectrum. It was not plugged to TV, instead it came with a monitor.</orig>
+     <transl>Зроблений максимально розкішним для домашнього комп’ютера, він був другим британським домашнім комп’ютером після ZX Spectrum. Він не підключався до телевізора, а ішов з монітором.</transl>
+    </text>
+   </group>
+   <group id="Apple2">
+    <text id="Text">
+     <orig>Despite advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
+     <transl>Незважаючи на появу Macintosh (1984), скромний Apple{{_}}II робив більшість прибутку компанії. Він ішов з монітором (можливо, через вимоги, що недовго існували{{-}}приставки робили багато перешкод на сусідні телевізори), але монітор підключався композитним проводом, як телевізор (композитний вхід був рідким).</transl>
+    </text>
+   </group>
+   <group id="Aquarius">
+    <text id="Text">
+     <orig>The computer was obsolete from the beginning, and was produced for a few months only.</orig>
+     <transl>Комп’ютер був застарілий з початку, та вироблявся усього кілька місяців.</transl>
+    </text>
+   </group>
+   <group id="Atari400">
+    <text id="Text">
+     <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware. To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Despite limited graphics, computer’s video architecture resembled console, and was praised for ease of programming.</orig>
+     <transl>ТБ-приставки робили багато завад на сусідні телевізори, і це призвело до нових вимог на радіочастотне устаткування. Щоб зробити комп’ютер, що підключається до антенного гнізда, Atari зробила литий алюмінієвий корпус та картридж ПЗП всередині. Незважаючи на обмежену графіку, архітектура відео нагадувала приставку, її хвалили за простоту програмування.</transl>
+    </text>
+   </group>
    <group id="Hp">
     <text id="Name">
      <orig>HP terminals</orig>
@@ -14001,6 +14021,12 @@
     <text id="Name">
      <orig>Korvet</orig>
      <transl>Корвет</transl>
+    </text>
+   </group>
+   <group id="Minitel">
+    <text id="Text">
+     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”! In 2009 it numbered 10M connections per month, and closed in 2012.</orig>
+     <transl>Термінали ставили безплатно, гроші збирали за хвилини користування (еквівалент 30{{_}}€¢ за хвилину). Система давала повідомлення, знайомства, телефонний довідник, ігри, замовлення квитків та інше. У Франції був навіть свій маленький «пузир доткомів»! У 2009 було 10{{_}}млн під’єднань за місяць, і закрили у 2012.</transl>
     </text>
    </group>
    <group id="Teletext">

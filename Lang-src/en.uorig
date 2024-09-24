@@ -9677,7 +9677,7 @@
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
      </text>
      <text id="Desk">
-      <orig>desktop PC with monitor</orig>
+      <orig>early hobby PC with monitor</orig>
      </text>
      <text id="Adv">
       <orig>advanced PC ''(monitor, disks, OS)''</orig>
@@ -9696,9 +9696,6 @@
      </text>
     </group>
     <group id="Sales">
-     <text id="3k">
-      <orig>over 3k</orig>
-     </text>
      <text id="10k">
       <orig>over 10k</orig>
      </text>
@@ -9794,6 +9791,26 @@
      </text>
     </group>
    </group>
+   <group id="AmstradCpc">
+    <text id="Text">
+     <orig>Designed to be as luxury as possible for home computer, it was the second British home computer after ZX Spectrum. It was not plugged to TV, instead it came with a monitor.</orig>
+    </text>
+   </group>
+   <group id="Apple2">
+    <text id="Text">
+     <orig>Despite advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
+    </text>
+   </group>
+   <group id="Aquarius">
+    <text id="Text">
+     <orig>The computer was obsolete from the beginning, and was produced for a few months only.</orig>
+    </text>
+   </group>
+   <group id="Atari400">
+    <text id="Text">
+     <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware. To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Despite limited graphics, computer’s video architecture resembled console, and was praised for ease of programming.</orig>
+    </text>
+   </group>
    <group id="Hp">
     <text id="Name">
      <orig>HP terminals</orig>
@@ -9802,6 +9819,11 @@
    <group id="Korvet">
     <text id="Name">
      <orig>Korvet</orig>
+    </text>
+   </group>
+   <group id="Minitel">
+    <text id="Text">
+     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”! In 2009 it numbered 10M connections per month, and closed in 2012.</orig>
     </text>
    </group>
    <group id="Teletext">

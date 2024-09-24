@@ -1153,7 +1153,7 @@ namespace uc {
 
         DEFINE_ENUM_TYPE_IN_NS2(uc, old, Type, unsigned char,
             HOME_EDUC_PC,
-            DESKTOP_PC,
+            HOBBY_PC,
             ADVANCED_PC,
             TERMINAL,
             TERMINAL_SERVICE,
@@ -1162,7 +1162,6 @@ namespace uc {
 
         DEFINE_ENUM_TYPE_IN_NS2(uc, old, Sales, unsigned char,
             NOMATTER,
-            OVER_3K,
             OVER_10K,
             OVER_30K,
             OVER_100K,

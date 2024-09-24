@@ -2842,5 +2842,9 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         text += loc::get(buf);
     }
 
+    str::append(text, "<p>");
+    snprintf(buf, std::size(buf), "OldComp.%s.Text", info.key.data());
+    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+
     return text;
 }
