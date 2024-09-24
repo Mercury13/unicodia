@@ -13781,8 +13781,8 @@
     </group>
     <group id="Graphics">
      <text id="No">
-      <orig>no</orig>
-      <transl>нет</transl>
+      <orig>text only</orig>
+      <transl>только текст</transl>
      </text>
      <text id="Lim">
       <orig>limited</orig>
