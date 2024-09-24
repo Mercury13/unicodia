@@ -43,7 +43,7 @@ namespace uc {
 
     constexpr auto N_SCRIPTS = static_cast<unsigned>(EcScript::NN);
 
-    enum class Month : unsigned short {
+    enum class Month : unsigned char {
         NUL = 0,
         JAN = 1,  FEB = 2,  MAR = 3,  APR = 4,  MAY = 5,  JUN = 6,
         JUL = 7,  AUG = 8,  SEP = 9,  OCT = 10, NOV = 11, DEC = 12
@@ -111,8 +111,7 @@ namespace uc {
         return x;
     }
 
-    enum class EcBidiStrength
-    {
+    enum class EcBidiStrength : unsigned char {
         NEUTRAL, WEAK, STRONG, EXPLICIT, NN
     };
 
@@ -194,7 +193,7 @@ namespace uc {
 
     struct NumType;
 
-    enum class FracType {
+    enum class FracType : unsigned char {
         NONE,       ///< Not a number
         INTEGER,    ///< Integer
         VULGAR,     ///< Vulgar fraction
@@ -277,12 +276,12 @@ namespace uc {
 
     enum class DrawMethod;
 
-    enum class TofuState {
+    enum class TofuState : unsigned char {
         PRESENT,    ///< Not a tofu, have char
         TOFU,       ///< Tofu, have no char
         NO_FONT };  ///< Have so custom method of drawing that no font needed
 
-    enum class TofuPlace {
+    enum class TofuPlace : unsigned char {
         CJK,        ///< In CJK chars
         REST        ///< In rest of chars
     };
@@ -293,7 +292,7 @@ namespace uc {
         const uc::Block* block = nullptr;
     };
 
-    enum class Action { CONTINUE = 0, STOP = 1 };
+    enum class Action : unsigned char { CONTINUE = 0, STOP = 1 };
 
     class TextSink {
     public:
@@ -310,7 +309,7 @@ namespace uc {
         const uc::Font* lastHopeMatch(char32_t cp, const uc::Font& font) const;
     };
 
-    enum class EcGlyphStyleChannel {
+    enum class EcGlyphStyleChannel : unsigned char {
         NONE,
         GLAGOLITIC,
         VERTICAL,
@@ -321,7 +320,7 @@ namespace uc {
     struct GlyphStyleChannel;
     struct GlyphStyleSets;
 
-    enum class ProxyType {
+    enum class ProxyType : unsigned char {
         TABLE_DEFAULT,  ///< What we write in table with default method
         EXTENDED        ///< What we draw with other font-related methods
     };

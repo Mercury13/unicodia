@@ -20,20 +20,23 @@ namespace str {
 }
 
 namespace uc {
-    class Numeric;
-    class BidiClass;
-    class Category;
-    class Font;
-    class Script;
-    class Version;
-    class Cp;
-    class Block;
-    class Term;
-    class LibNode;
-    class GlyphStyleChannel;
+    struct Numeric;
+    struct BidiClass;
+    struct Category;
+    struct Font;
+    struct Script;
+    struct Version;
+    struct Cp;
+    struct Block;
+    struct Term;
+    struct LibNode;
+    struct GlyphStyleChannel;
     class Request;
     enum class EcVersion : unsigned char;
     struct Lang;
+    namespace old {
+        struct Info;
+    }
 }
 
 enum class Want32 { NO, YES };
@@ -126,6 +129,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopTermLink(std::string_view target);
     std::unique_ptr<Link> parsePopIBlockLink(std::string_view target);
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
+    std::unique_ptr<Link> parsePopOldCompLink(std::string_view target);
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
@@ -143,6 +147,7 @@ namespace mywiki {
     QString buildHtml(const uc::LibNode& node, const uc::LibNode& parent);
     QString buildHtml(const uc::Version& version);
     QString buildHtml(const uc::GlyphStyleChannel& channel);
+    QString buildHtml(const uc::old::Info& info);
     QString buildEmptyFavsHtml();
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);

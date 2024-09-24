@@ -34,6 +34,11 @@ using namespace std::string_view_literals;
 
 #define NBSP "\u00A0"
 
+const mywiki::Context DEFAULT_CONTEXT {
+    .font { uc::fontInfo[0] },
+    .lang = nullptr,
+    .locPrefixDot {},
+};
 
 ///// Gui //////////////////////////////////////////////////////////////////////
 
@@ -255,6 +260,12 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopVersionLink(std::string_view targe
     return {};
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parsePopOldCompLink(std::string_view target)
+{
+    if (auto* oldComp = uc::old::findComp(target))
+        return mu(*oldComp);
+    return {};
+}
 
 std::unique_ptr<mywiki::Link> mywiki::parsePopIBlockLink(std::string_view target)
 {
@@ -392,6 +403,13 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
                 fields.isNumber = 1;
             }
             break;
+        case 'C':   // old computers
+            if (auto comp = uc::old::findComp(value)) {
+                auto index = comp - uc::old::info;
+                fields.oldComp = static_cast<uc::OldComp>(1 << index);
+                break;
+            }
+            break;
         default:
             return nullptr;
         }
@@ -444,6 +462,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopTermLink(target);
     } else if (scheme == "pv"sv) {
         return parsePopVersionLink(target);
+    } else if (scheme == "po"sv) {
+        return parsePopOldCompLink(target);
     } else if (scheme == "pgs"sv) {
         return parsePopGlyphStyleLink(target);
     } else if (scheme == "gc"sv) {
@@ -1879,7 +1899,12 @@ namespace {
                 auto iBit = std::countr_zero(Flags<uc::OldComp>::toUnsignedStorage(bit));
                 // Write what we got
                 spC.sep();
-                str::append(text, uc::old::info[iBit].locName());
+                auto& oci = uc::old::info[iBit];
+                text += "<a class='popup' href='po:";
+                    str::append(text, oci.key);
+                    text += "'>";
+                str::append(text, oci.locName());
+                text += "</a>";
             }
         }
 
@@ -2726,5 +2751,94 @@ QString mywiki::buildEmptyFavsHtml()
     text += "<h3>";
     mywiki::appendNoFont(text, loc::get("Main.NoFavs"));
     text += "</h3>";
+    return text;
+}
+
+
+QString mywiki::buildHtml(const uc::old::Info& info)
+{
+    QString text;
+    appendStylesheet(text);
+    char buf[40];
+
+    // Name
+    str::append(text, "<p><b>");
+    str::append(text, info.locLongName());
+    str::append(text, "</b>"sv);
+    appendQuery(text, SCH_QRY_CHARS, str::cat("C=", info.key));
+
+    // Year
+    text += "<p>";
+    str::QSep sp(text, "<br>");
+    if (info.year != 0) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Year");
+        text += QString::number(info.year);
+        if (info.flags.have(uc::old::Ocfg::YEAR_NOTE)) {
+            text += " <i>";
+            snprintf(buf, std::size(buf), "OldComp.%s.YearNote", info.key.data());
+            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+            text += "</i>";
+        }
+    }
+
+    // Country
+    sp.sep();
+    appendNonBullet(text, "OldComp.PropName.Country");
+    snprintf(buf, std::size(buf), "OldComp.Prop.Country.%s",
+             uc::old::countryInfo[info.country].key);
+    text += loc::get(buf);
+
+    // Type
+    sp.sep();
+    appendNonBullet(text, "OldComp.PropName.Type");
+    snprintf(buf, std::size(buf), "OldComp.Prop.Type.%s",
+             uc::old::typeInfo[info.type].key);
+    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+
+    // CPU
+    if (info.cpuDataWidth > 0) {
+        sp.sep();
+        text += loc::get("OldComp.PropName.Cpu").argQ(info.cpuDataWidth);
+    }
+
+    // Memory
+    if (info.mem.lo > 0) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Memory");
+        if (info.mem.hi == 0) {
+            text += loc::get("OldComp.Prop.Mem.1").argQ(info.mem.lo);
+        } else {
+            text += loc::get("OldComp.Prop.Mem.2").argQ(info.mem.lo, info.mem.hi);
+        }
+    }
+
+    // Colour
+    if (info.color != uc::old::Color::NOMATTER) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Color");
+        snprintf(buf, std::size(buf), "OldComp.Prop.Color.%s",
+                 uc::old::colorInfo[info.color].key);
+        text += loc::get(buf);
+    }
+
+    // Graphics
+    if (info.graphics != uc::old::Graphics::NOMATTER) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Graphics");
+        snprintf(buf, std::size(buf), "OldComp.Prop.Graphics.%s",
+                 uc::old::graphicsInfo[info.graphics].key);
+        text += loc::get(buf);
+    }
+
+    // Sales
+    if (info.sales != uc::old::Sales::NOMATTER) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Sales");
+        snprintf(buf, std::size(buf), "OldComp.Prop.Sales.%s",
+                 uc::old::salesInfo[info.sales].key);
+        text += loc::get(buf);
+    }
+
     return text;
 }

@@ -514,18 +514,6 @@
      </text>
     </group>
    </group>
-   <group id="OldComp">
-    <au-cmt>Test in Symbols for legacy computing</au-cmt>
-    <text id="Teletext">
-     <orig>teletext</orig>
-    </text>
-    <text id="Korvet">
-     <orig>Korvet</orig>
-    </text>
-    <text id="Hp">
-     <orig>HP terminals</orig>
-    </text>
-   </group>
    <group id="Num">
     <text id="Digit">
      <orig>Digit</orig>
@@ -9612,6 +9600,218 @@
     <orig>Your platform “{1}” seems to be abandoned. You’ll have to go to home page for yourself and find a suitable platform.</orig>
     <au-cmt>Test: in Unicodia.xml add parameter debug-update/version=[smth small like "1.0"], platforms=[smth odd like "xxx"]</au-cmt>
    </text>
+  </group>
+  <group id="OldComp">
+   <group id="PropName">
+    <text id="Memory">
+     <orig>Memory</orig>
+    </text>
+    <text id="Sales">
+     <orig>Sales</orig>
+    </text>
+    <text id="Year">
+     <orig>Year</orig>
+    </text>
+    <text id="Type">
+     <orig>Type</orig>
+    </text>
+    <text id="Country">
+     <orig>Country</orig>
+    </text>
+    <text id="Chars">
+     <orig>Characters</orig>
+    </text>
+    <text id="Graphics">
+     <orig>Graphics</orig>
+    </text>
+    <text id="Cpu">
+     <orig>CPU: {1}-bit (by data bus)</orig>
+    </text>
+    <text id="Color">
+     <orig>Colour</orig>
+    </text>
+   </group>
+   <group id="Prop">
+    <group id="Country">
+     <text id="DD">
+      <orig>East Germany</orig>
+     </text>
+     <text id="EU">
+      <orig>Europe</orig>
+     </text>
+     <text id="FR">
+      <orig>France</orig>
+     </text>
+     <text id="GB">
+      <orig>United Kingdom</orig>
+     </text>
+     <text id="JP">
+      <orig>Japan</orig>
+     </text>
+     <text id="SU">
+      <orig>Soviet Union</orig>
+     </text>
+     <text id="US">
+      <orig>United States</orig>
+     </text>
+     <text id="USHK">
+      <orig>United States / Hong Kong</orig>
+     </text>
+    </group>
+    <group id="Graphics">
+     <text id="No">
+      <orig>no</orig>
+     </text>
+     <text id="Lim">
+      <orig>limited</orig>
+     </text>
+     <text id="Later">
+      <orig>in later models</orig>
+     </text>
+     <text id="Yes">
+      <orig>yes</orig>
+     </text>
+    </group>
+    <group id="Type">
+     <text id="Home">
+      <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
+     </text>
+     <text id="Desk">
+      <orig>early desktop PC with monitor ''(TV support would come later)''</orig>
+     </text>
+     <text id="Adv">
+      <orig>advanced PC ''(monitor, disks, OS)''</orig>
+     </text>
+     <text id="Term">
+      <orig>terminal</orig>
+     </text>
+     <text id="TermSvc">
+      <orig>terminal service</orig>
+     </text>
+     <text id="Info">
+      <orig>information service</orig>
+     </text>
+     <text id="Prog">
+      <orig>programming language</orig>
+     </text>
+    </group>
+    <group id="Sales">
+     <text id="3k">
+      <orig>over 3k</orig>
+     </text>
+     <text id="10k">
+      <orig>over 10k</orig>
+     </text>
+     <text id="30k">
+      <orig>over 30k</orig>
+     </text>
+     <text id="100k">
+      <orig>over 100k</orig>
+     </text>
+     <text id="300k">
+      <orig>over 300k</orig>
+     </text>
+     <text id="1M">
+      <orig>over 1M</orig>
+     </text>
+     <text id="3M">
+      <orig>over 3M</orig>
+     </text>
+     <text id="10M">
+      <orig>over 10M</orig>
+     </text>
+    </group>
+    <group id="Chars">
+     <text id="Typ">
+      <orig>typographic</orig>
+     </text>
+     <text id="Arr">
+      <orig>arrows</orig>
+     </text>
+     <text id="Mat">
+      <orig>mathematical</orig>
+     </text>
+     <text id="Alp">
+      <orig>alternate Latin alphabet</orig>
+     </text>
+     <text id="Dig">
+      <orig>alternate set of digits</orig>
+     </text>
+     <text id="Lin">
+      <orig>lines</orig>
+     </text>
+     <text id="Blk">
+      <orig>blocks</orig>
+     </text>
+     <text id="Dli">
+      <orig>diagonal lines</orig>
+     </text>
+     <text id="Dbl">
+      <orig>diagonal blocks</orig>
+     </text>
+     <text id="Sha">
+      <orig>shapes</orig>
+     </text>
+     <text id="Con">
+      <orig>control pictures</orig>
+     </text>
+     <text id="Gam">
+      <orig>game sprites</orig>
+     </text>
+     <text id="Mul">
+      <orig>multi-cell graphics</orig>
+     </text>
+     <text id="Eng">
+      <orig>engineer graphics</orig>
+     </text>
+     <text id="Img">
+      <orig>misc. images</orig>
+     </text>
+     <text id="Ip">
+      <orig>unencoded because of IP</orig>
+     </text>
+    </group>
+    <group id="Mem">
+     <text id="1">
+      <orig>{1} kbytes</orig>
+     </text>
+     <text id="2">
+      <orig>{1}–{2} kbytes</orig>
+     </text>
+    </group>
+    <group id="Color">
+     <text id="Bw">
+      <orig>black and white</orig>
+     </text>
+     <text id="Dis">
+      <orig>black-and-white models are more common</orig>
+     </text>
+     <text id="Yes">
+      <orig>yes</orig>
+     </text>
+     <text id="Later">
+      <orig>in later models</orig>
+     </text>
+    </group>
+   </group>
+   <group id="Hp">
+    <text id="Name">
+     <orig>HP terminals</orig>
+    </text>
+   </group>
+   <group id="Korvet">
+    <text id="Name">
+     <orig>Korvet</orig>
+    </text>
+   </group>
+   <group id="Teletext">
+    <text id="Name">
+     <orig>teletext</orig>
+    </text>
+    <text id="YearNote">
+     <orig>(first TV sets)</orig>
+    </text>
+   </group>
   </group>
  </file>
 </ut>

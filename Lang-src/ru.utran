@@ -649,21 +649,6 @@
      </text>
     </group>
    </group>
-   <group id="OldComp">
-    <au-cmt>Test in Symbols for legacy computing</au-cmt>
-    <text id="Teletext">
-     <orig>teletext</orig>
-     <transl>телетекст</transl>
-    </text>
-    <text id="Korvet">
-     <orig>Korvet</orig>
-     <transl>Корвет</transl>
-    </text>
-    <text id="Hp">
-     <orig>HP terminals</orig>
-     <transl>терминалы HP</transl>
-    </text>
-   </group>
    <group id="Num">
     <text id="Digit">
      <orig>Digit</orig>
@@ -13751,6 +13736,280 @@
     <au-cmt>Test: in Unicodia.xml add parameter debug-update/version=[smth small like "1.0"], platforms=[smth odd like "xxx"]</au-cmt>
     <transl>Ваша платформа «{1}», по-видимому, брошена. Вам придётся самим пройти на домашнюю страницу и найти подходящую платформу.</transl>
    </text>
+  </group>
+  <group id="OldComp">
+   <group id="PropName">
+    <text id="Memory">
+     <orig>Memory</orig>
+     <transl>Память</transl>
+    </text>
+    <text id="Sales">
+     <orig>Sales</orig>
+     <transl>Продажи</transl>
+    </text>
+    <text id="Year">
+     <orig>Year</orig>
+     <transl>Год</transl>
+    </text>
+    <text id="Type">
+     <orig>Type</orig>
+     <transl>Тип</transl>
+    </text>
+    <text id="Country">
+     <orig>Country</orig>
+     <transl>Страна</transl>
+    </text>
+    <text id="Chars">
+     <orig>Characters</orig>
+     <transl>Символы</transl>
+    </text>
+    <text id="Graphics">
+     <orig>Graphics</orig>
+     <transl>Графика</transl>
+    </text>
+    <text id="Cpu">
+     <orig>CPU: {1}-bit (by data bus)</orig>
+     <transl>Процессор: {1}-битный (по шине данных)</transl>
+    </text>
+    <text id="Color">
+     <orig>Colour</orig>
+     <transl>Цвет</transl>
+    </text>
+   </group>
+   <group id="Prop">
+    <group id="Country">
+     <text id="DD">
+      <orig>East Germany</orig>
+      <transl>ГДР</transl>
+     </text>
+     <text id="EU">
+      <orig>Europe</orig>
+      <transl>Европа</transl>
+     </text>
+     <text id="FR">
+      <orig>France</orig>
+      <transl>Франция</transl>
+     </text>
+     <text id="GB">
+      <orig>United Kingdom</orig>
+      <transl>Великобритания</transl>
+     </text>
+     <text id="JP">
+      <orig>Japan</orig>
+      <transl>Япония</transl>
+     </text>
+     <text id="SU">
+      <orig>Soviet Union</orig>
+      <transl>СССР</transl>
+     </text>
+     <text id="US">
+      <orig>United States</orig>
+      <transl>США</transl>
+     </text>
+     <text id="USHK">
+      <orig>United States / Hong Kong</orig>
+      <transl>США / Гонконг</transl>
+     </text>
+    </group>
+    <group id="Graphics">
+     <text id="No">
+      <orig>no</orig>
+      <transl>нет</transl>
+     </text>
+     <text id="Lim">
+      <orig>limited</orig>
+      <transl>ограниченная</transl>
+     </text>
+     <text id="Later">
+      <orig>in later models</orig>
+      <transl>в поздних моделях</transl>
+     </text>
+     <text id="Yes">
+      <orig>yes</orig>
+      <transl>есть</transl>
+     </text>
+    </group>
+    <group id="Type">
+     <text id="Home">
+      <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
+      <transl>домашний/учебный ПК ''(клавиатурный форм-фактор, Бейсик в ПЗУ, поддерживает ТВ и магнитофон)''</transl>
+     </text>
+     <text id="Desk">
+      <orig>early desktop PC with monitor ''(TV support would come later)''</orig>
+      <transl>ранний настольный ПК с монитором ''(поддержка ТВ будет позже)''</transl>
+     </text>
+     <text id="Adv">
+      <orig>advanced PC ''(monitor, disks, OS)''</orig>
+      <transl>развитый ПК ''(монитор, диски, ОС)''</transl>
+     </text>
+     <text id="Term">
+      <orig>terminal</orig>
+      <transl>терминал</transl>
+     </text>
+     <text id="TermSvc">
+      <orig>terminal service</orig>
+      <transl>терминальная служба</transl>
+     </text>
+     <text id="Info">
+      <orig>information service</orig>
+      <transl>информационная служба</transl>
+     </text>
+     <text id="Prog">
+      <orig>programming language</orig>
+      <transl>язык программирования</transl>
+     </text>
+    </group>
+    <group id="Sales">
+     <text id="3k">
+      <orig>over 3k</orig>
+      <transl>свыше 3 тыс.</transl>
+     </text>
+     <text id="10k">
+      <orig>over 10k</orig>
+      <transl>свыше 10 тыс.</transl>
+     </text>
+     <text id="30k">
+      <orig>over 30k</orig>
+      <transl>свыше 30 тыс.</transl>
+     </text>
+     <text id="100k">
+      <orig>over 100k</orig>
+      <transl>свыше 100 тыс.</transl>
+     </text>
+     <text id="300k">
+      <orig>over 300k</orig>
+      <transl>свыше 300 тыс.</transl>
+     </text>
+     <text id="1M">
+      <orig>over 1M</orig>
+      <transl>свыше 1 млн</transl>
+     </text>
+     <text id="3M">
+      <orig>over 3M</orig>
+      <transl>свыше 3 млн</transl>
+     </text>
+     <text id="10M">
+      <orig>over 10M</orig>
+      <transl>свыше 10 млн</transl>
+     </text>
+    </group>
+    <group id="Chars">
+     <text id="Typ">
+      <orig>typographic</orig>
+      <transl>типографские</transl>
+     </text>
+     <text id="Arr">
+      <orig>arrows</orig>
+      <transl>стрелки</transl>
+     </text>
+     <text id="Mat">
+      <orig>mathematical</orig>
+      <transl>математические</transl>
+     </text>
+     <text id="Alp">
+      <orig>alternate Latin alphabet</orig>
+      <transl>второй латинский алфавит</transl>
+     </text>
+     <text id="Dig">
+      <orig>alternate set of digits</orig>
+      <transl>второй набор цифр</transl>
+     </text>
+     <text id="Lin">
+      <orig>lines</orig>
+      <transl>линии</transl>
+     </text>
+     <text id="Blk">
+      <orig>blocks</orig>
+      <transl>блоки</transl>
+     </text>
+     <text id="Dli">
+      <orig>diagonal lines</orig>
+      <transl>диагональные линии</transl>
+     </text>
+     <text id="Dbl">
+      <orig>diagonal blocks</orig>
+      <transl>диагональные блоки</transl>
+     </text>
+     <text id="Sha">
+      <orig>shapes</orig>
+      <transl>фигуры</transl>
+     </text>
+     <text id="Con">
+      <orig>control pictures</orig>
+      <transl>изображения управляющих</transl>
+     </text>
+     <text id="Gam">
+      <orig>game sprites</orig>
+      <transl>игровые спрайты</transl>
+     </text>
+     <text id="Mul">
+      <orig>multi-cell graphics</orig>
+      <transl>многознакоместная графика</transl>
+     </text>
+     <text id="Eng">
+      <orig>engineer graphics</orig>
+      <transl>инженерная графика</transl>
+     </text>
+     <text id="Img">
+      <orig>misc. images</orig>
+      <transl>разные картинки</transl>
+     </text>
+     <text id="Ip">
+      <orig>unencoded because of IP</orig>
+      <transl>не закодированные из-за интеллектуальной собственности</transl>
+     </text>
+    </group>
+    <group id="Mem">
+     <text id="1">
+      <orig>{1} kbytes</orig>
+      <transl>{1} кбайт</transl>
+     </text>
+     <text id="2">
+      <orig>{1}–{2} kbytes</orig>
+      <transl>{1}–{2} кбайт</transl>
+     </text>
+    </group>
+    <group id="Color">
+     <text id="Bw">
+      <orig>black and white</orig>
+      <transl>чёрно-белый</transl>
+     </text>
+     <text id="Dis">
+      <orig>black-and-white models are more common</orig>
+      <transl>чёрно-белые модели более распространены</transl>
+     </text>
+     <text id="Yes">
+      <orig>yes</orig>
+      <transl>есть</transl>
+     </text>
+     <text id="Later">
+      <orig>in later models</orig>
+      <transl>в поздних моделях</transl>
+     </text>
+    </group>
+   </group>
+   <group id="Hp">
+    <text id="Name">
+     <orig>HP terminals</orig>
+     <transl>терминалы HP</transl>
+    </text>
+   </group>
+   <group id="Korvet">
+    <text id="Name">
+     <orig>Korvet</orig>
+     <transl>Корвет</transl>
+    </text>
+   </group>
+   <group id="Teletext">
+    <text id="Name">
+     <orig>teletext</orig>
+     <transl>телетекст</transl>
+    </text>
+    <text id="YearNote">
+     <orig>(first TV sets)</orig>
+     <transl>(первые телевизоры)</transl>
+    </text>
+   </group>
   </group>
  </file>
 </ut>

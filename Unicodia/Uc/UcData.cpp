@@ -378,179 +378,351 @@ constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 102
 
 constinit const uc::old::Info uc::old::info[] {
     // Amstrad CPC
-    { .fixedName = u8"Amstrad" NBSP "CPC",
+    { .key = "AmstradCpc",
+      .fixedName = u8"Amstrad" NBSP "CPC",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_3M,
+      .cpuDataWidth = 8,
       .year = 1984,
-      .mem { 64, 128 }  },
+      .charTypes = CharType::ARROWS         // At least all 4
+                 | CharType::MISC_IMAGES    // Watches, faces, card suits
+                 | CharType::MATH           // At least circled dot/X
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::GAME_SPRITES   // Men, bomb, explosion
+                 | CharType::SHAPES         // Triangles, circles
+                 | CharType::TYPOGRAPHIC_CHARS // 2 quotes
+                 | CharType::CONTROL_PICTURES, // Substitute, delete, bell
+      .mem { 64, 128 } },
     // Apple II
-    { .fixedName = u8"Apple" NBSP "II+",
+    { .key = "Apple2",
+      .fixedName = u8"Apple" NBSP "II+",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_3M,
+      .cpuDataWidth = 8,
       .year = 1977,
+      .charTypes = CharType::MISC_IMAGES    // Hourglass
+                 | CharType::ARROWS         // At least Enter
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::CONTROL_PICTURES
+                 | CharType::MULTICELL     // Running man
+                 | CharType::IP,
+            // Typographic chars: only …
       .mem { 4, 128 } },
     // Mattel Aquarius
-    { .fixedName = u8"Mattel" NBSP "Aquaruis",
+    { .key = "Aquarius",
+      .fixedName = u8"Mattel" NBSP "Aquarius",
       .country = Country::US_HK,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
+      .color = Color::YES,
       .sales = Sales::OVER_10K,
-      .year = 1983,
+      .cpuDataWidth = 8,
+      .year = 1983,                
+      .charTypes = CharType::ARROWS         // At least 4 normal
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES         // At least 25AA
+                 | CharType::GAME_SPRITES | CharType::MULTICELL
+                 | CharType::MISC_IMAGES,
       .mem { 4 } },
+    // Atari 400 / 800
+    { .key = "Atari400",
+      .fixedName = u8"Atari" NBSP "400/800",
+      .country = Country::US,
+      .type = Type::HOME_EDUC_PC,
+      .graphics = Graphics::LIMITED,
+      .color = Color::YES,
+      .sales = Sales::OVER_3M,
+      .cpuDataWidth = 8,
+      .year = 1979,
+      .charTypes = CharType::ARROWS         // At least 4 normal
+                 | CharType::CONTROL_PICTURES  // At least ESC
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::MISC_IMAGES,   // Card suits
+      .mem { 4, 64 } },
     // Atari ST
-    { .fixedName = u8"Atari" NBSP "ST",
+    { .key = "AtariSt",
+      .fixedName = u8"Atari" NBSP "ST",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_1M,
+      .cpuDataWidth = 16,
       .year = 1985,
+      .charTypes = CharType::ARROWS         // 4 white
+                 | CharType::CONTROL_PICTURES  // FF, CR, ESC, house
+                 | CharType::IP             // Logo, face
+                 | CharType::ALTERNATE_DIGITS  // LCD
+                 | CharType::MATH           // At least integral
+                 | CharType::TYPOGRAPHIC_CHARS
+                 | CharType::MISC_IMAGES,   // How to call those crosses? + eighth note
       .mem { 512, 4_mb } },
-    // Atari 400 / 800
-    { .fixedName = u8"Atari" NBSP "400/800",
-      .country = Country::US,
-      .type = Type::HOME_EDUC_PC,
-      .graphics = Graphics::YES,
-      .sales = Sales::OVER_3M,
-      .year = 1979,
-      .mem { 4, 64 } },
     // Minitel
-    { .fixedName = u8"Minitel",
+    { .key = "Minitel",
+      .fixedName = u8"Minitel",
       .country = Country::FR,
       .type = Type::TERMINAL_SERVICE,
       .graphics = Graphics::NO,
+      .color = Color::LATER_MODELS,
       .sales = Sales::NOMATTER,
+      .cpuDataWidth = 0,
       .year = 1982,
+      .charTypes = CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS
+                 | CharType::ARROWS,
       .mem {} },
     // MSX
-    { .fixedName = u8"MSX",
+    { .key = "Msx",
+      .fixedName = u8"MSX",
       .country = Country::JP,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_3M,
+      .cpuDataWidth = 0,
       .year = 1983,
+      .charTypes = CharType::TYPOGRAPHIC_CHARS | CharType::MATH
+                 | CharType::CONTROL_PICTURES
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS
+                 | CharType::SHAPES,
       .mem { 8, 64 } },
     // Oric
-    { .fixedName = u8"Oric",
+    { .key = "Oric",
+      .fixedName = u8"Oric",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_100K,
+      .cpuDataWidth = 8,
       .year = 1982,
+      .charTypes = CharType::ARROWS | CharType::PSEUDO_BLOCKS,
       .mem { 16, 48 } },
     // Commodore
-    { .fixedName = u8"Commodore" NBSP "PET/64",
-      .altName = u8"Commodore 64",
+    { .key = "C64",
+      .fixedName = u8"Commodore" NBSP "PET/64",
+      .altName = u8"Commodore" NBSP "64",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_10M,
+      .cpuDataWidth = 8,
       .year = 1982,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::MISC_IMAGES,
       .mem { 64 } },
     // RISC OS
-    { .fixedName = u8"RISC OS",
-      .altName = u8"Acorn Archimedes (RISC OS)",
+    { .key = "RiscOs",
+      .fixedName = u8"RISC" NBSP "OS",
+      .altName = u8"Acorn" NBSP "Archimedes" NBSP "(RISC" NBSP "OS)",
       .country = Country::GB,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_100K,
+      .cpuDataWidth = 32,
       .year = 1987,
+      .charTypes = CharType::TYPOGRAPHIC_CHARS
+                 | CharType::ARROWS
+                 | CharType::MATH
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::MISC_IMAGES,
       .mem { 512, 16_mb } },
     // Sinclair ZX80/81
-    { .fixedName = u8"Sinclair" NBSP "ZX80/81",
+    { .key = "Zx80",
+      .fixedName = u8"Sinclair" NBSP "ZX80/81",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
+      .color = Color::BW,
       .sales = Sales::OVER_1M,
+      .cpuDataWidth = 8,
       .year = 1980,
+      .charTypes = CharType::PSEUDO_BLOCKS,
       .mem { 1, 16 } },
     // Teletext
-    { .fixedName = {},                
-      .locKey = "Prop.OldComp.Teletext",
+    { .key = "Teletext",
+      .fixedName = {},
       .country = Country::EU,
       .type = Type::INFO_SERVICE,
       .graphics = Graphics::NO,
+      .color = Color::LATER_MODELS,
       .sales = Sales::NOMATTER,
+      .cpuDataWidth = 0,
+      .flags = Ocfg::YEAR_NOTE,
       .year = 1977,
+      .charTypes = CharType::TYPOGRAPHIC_CHARS // lots of quotes etc
+                 | CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::MISC_IMAGES,  // musical note
       .mem {} },
     // TRS-80
-    { .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
-      .altName = u8"Tandy/RadioShack TRS-80 Model I/III/4",
+    { .key = "Trs80",
+      .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
+      .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
       .country = Country::US,
-      .type = Type::HOME_EDUC_PC,
+      .type = Type::DESKTOP_PC,
       .graphics = Graphics::LATER_MODELS,
-      .sales = Sales::OVER_100K,
-      .year = 1980,
+      .color = Color::BW,
+      .sales = Sales::OVER_300K,
+      .cpuDataWidth = 8,
+      .year = 1977,
+      .charTypes = CharType::TYPOGRAPHIC_CHARS
+                 | CharType::ARROWS
+                 | CharType::MATH
+                 | CharType::CONTROL_PICTURES
+                 | CharType::PSEUDO_BLOCKS
+                 | CharType::MISC_IMAGES
+                 | CharType::MULTICELL,
       .mem { 4, 128 } },
     // Tandy CoCo
-    { .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Color",
-      .altName = u8"Tandy/RadioShack TRS-80 Color Computer",
+    { .key = "CoCo",
+      .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Color",
+      .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Color" NBSP "Computer",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::LATER_MODELS,
+      .color = Color::YES,
       .sales = Sales::OVER_100K,
+      .cpuDataWidth = 8,
       .year = 1980,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BLOCKS,
       .mem { 4, 512 } },
     // Korvet
-    { .fixedName {},
-      .locKey = "Prop.OldComp.Korvet",
+    { .key = "Korvet",
+      .fixedName {},
       .country = Country::SU,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
+      .color = Color::YES,
       .sales = Sales::OVER_100K,
+      .cpuDataWidth = 8,
       .year = 1987,
+      .charTypes = CharType::ARROWS
+                 | CharType::CONTROL_PICTURES
+                 | CharType::SHAPES
+                 | CharType::PSEUDO_BLOCKS
+                 | CharType::MISC_IMAGES,
       .mem { 64 } },
     // Smalltalk
-    { .fixedName = u8"Smalltalk",
+    { .key = "Smalltalk",
+      .fixedName = u8"Smalltalk",
       .country = Country::US,
       .type = Type::PROGRAMMING_LANGUAGE,
       .graphics = Graphics::NOMATTER,
+      .color = Color::NOMATTER,
       .sales = Sales::NOMATTER,
+      .cpuDataWidth = 0,
       .year = 1972,
+      .charTypes = CharType::ARROWS
+                 | CharType::MISC_IMAGES,
       .mem {} },
     // Sharp MZ
-    { .fixedName = u8"Sharp" NBSP "MZ",
+    { .key = "SharpMz",
+      .fixedName = u8"Sharp" NBSP "MZ",
       .country = Country::JP,
-      .type = Type::HOME_EDUC_PC,
+      .type = Type::DESKTOP_PC,
       .graphics = Graphics::LATER_MODELS,
+      .color = Color::LATER_MODELS,
       .sales = Sales::OVER_100K,
-      .year = 1983,
+      .cpuDataWidth = 8,
+      .year = 1978,
+      .charTypes = CharType::TYPOGRAPHIC_CHARS
+                 | CharType::ARROWS
+                 | CharType::CONTROL_PICTURES
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::MISC_IMAGES
+                 | CharType::ENGINEER_GRAPHICS
+                 | CharType::GAME_SPRITES
+                 | CharType::MULTICELL
+                 | CharType::ALTERNATE_ALPHABET
+                 | CharType::ALTERNATE_DIGITS
+                 | CharType::IP,
       .mem { 48 } },
     // Ohio Scientific
-    { .fixedName = u8"Ohio" NBSP "Scientific",
+    { .key = "Ohio",
+      .fixedName = u8"Ohio" NBSP "Scientific",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::LATER_MODELS,
+      .color = Color::LATER_MODELS,
       .sales = Sales::OVER_10K,
+      .cpuDataWidth = 8,
       .year = 1977,
+      .charTypes = CharType::ARROWS
+                 | CharType::MATH
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::MISC_IMAGES
+                 | CharType::GAME_SPRITES,
       .mem { 4, 8 } },
     // Robotron
-    { .fixedName = u8"Robotron" NBSP "Z9001",
+    { .key = "Robotron",
+      .fixedName = u8"Robotron" NBSP "Z9001",
       .country = Country::DD,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
+      .color = Color::YES,
       .sales = Sales::OVER_30K,
+      .cpuDataWidth = 8,
       .year = 1984,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
+                 | CharType::SHAPES
+                 | CharType::MULTICELL
+                 | CharType::GAME_SPRITES,
       .mem { 17 } },
     // HP terminal
-    { .fixedName {},
-      .locKey = "Prop.OldComp.Hp",
+    { .key = "Hp",
+      .fixedName {},
       .country = Country::US,
       .type = Type::TERMINAL,
       .graphics = Graphics::LATER_MODELS,
+      .color = Color::UNSUCCESSFUL,
       .sales = Sales::OVER_30K,
+      .cpuDataWidth = 8,
       .year = 1974,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::MATH
+                 | CharType::ENGINEER_GRAPHICS
+                 | CharType::MULTICELL,
       .mem { 1, 8 } },
     // Kaypro
-    { .fixedName = u8"Kaypro",
+    { .key = "Kaypro",
+      .fixedName = u8"Kaypro",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::LATER_MODELS,
+      .color = Color::BW,
       .sales = Sales::OVER_100K,
+      .cpuDataWidth = 8,
       .year = 1982,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS,
       .mem { 64 } },
 };
 
@@ -559,14 +731,100 @@ static_assert((1 << I_LAST_OLD_COMP) == static_cast<int>(uc::OldComp::LAST));
 
 std::u8string uc::old::Info::locName() const
 {
-    if (locKey.empty()) {
+    if (!fixedName.empty()) {
         return std::u8string{fixedName};
     } else {
-        std::u8string r = loc::get(locKey);
+        char buf[40];
+        snprintf(buf, std::size(buf), "OldComp.%s.Name", key.data());
+        std::u8string r = loc::get(buf);
         str::replace(r, u8" ", u8"" NBSP);
         return r;
     }
 }
+
+std::u8string uc::old::Info::locLongName() const
+{
+    if (!altName.empty()) {
+        return std::u8string{altName};
+    } else {
+        return locName();
+    }
+}
+
+const uc::old::Info* uc::old::findComp(std::string_view target)
+{
+    for (auto& v : info) {
+        if (v.key == target) {
+            return &v;
+        }
+    }
+    return nullptr;
+}
+
+
+constexpr const uc::old::CountryInfo countryInfoArray[] {
+    { .key = "DD" },
+    { .key = "EU" },
+    { .key = "FR" },
+    { .key = "GB" },
+    { .key = "JP" },
+    { .key = "SU" },
+    { .key = "US" },
+    { .key = "USHK" },
+};
+constinit const ec::Array<uc::old::CountryInfo, uc::old::Country> uc::old::countryInfo(
+        ec::ARRAY_INIT, countryInfoArray);
+
+
+constexpr const uc::old::TypeInfo typeInfoArray[] {
+    { .key = "Home" },
+    { .key = "Desk" },
+    { .key = "Adv" },
+    { .key = "Term" },
+    { .key = "TermSvc" },
+    { .key = "Info" },
+    { .key = "Prog" },
+};
+constinit const ec::Array<uc::old::TypeInfo, uc::old::Type> uc::old::typeInfo(
+        ec::ARRAY_INIT, typeInfoArray);
+
+
+constexpr const uc::old::GraphicsInfo graphicsInfoArray[] {
+    { .key = "" },
+    { .key = "No" },
+    { .key = "Lim" },
+    { .key = "Later" },
+    { .key = "Yes" },
+};
+constinit const ec::Array<uc::old::GraphicsInfo, uc::old::Graphics> uc::old::graphicsInfo(
+        ec::ARRAY_INIT, graphicsInfoArray);
+
+
+constexpr const uc::old::SalesInfo salesInfoArray[] {
+    { .key = "" },
+    { .key = "3k" },
+    { .key = "10k" },
+    { .key = "30k" },
+    { .key = "100k" },
+    { .key = "300k" },
+    { .key = "1M" },
+    { .key = "3M" },
+    { .key = "10M" },
+};
+constinit const ec::Array<uc::old::SalesInfo, uc::old::Sales> uc::old::salesInfo(
+        ec::ARRAY_INIT, salesInfoArray);
+
+
+constexpr const uc::old::ColorInfo colorInfoArray[] {
+    { .key = "" },
+    { .key = "Bw" },
+    { .key = "Later" },
+    { .key = "Dis" },
+    { .key = "Yes" },
+};
+constinit const ec::Array<uc::old::ColorInfo, uc::old::Color> uc::old::colorInfo(
+        ec::ARRAY_INIT, colorInfoArray);
+
 
 namespace {
 

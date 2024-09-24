@@ -1151,16 +1151,16 @@ namespace uc {
 
     namespace old {
 
-        enum class Type : unsigned char {
+        DEFINE_ENUM_TYPE_IN_NS2(uc, old, Type, unsigned char,
             HOME_EDUC_PC,
+            DESKTOP_PC,
             ADVANCED_PC,
             TERMINAL,
             TERMINAL_SERVICE,
             INFO_SERVICE,
-            PROGRAMMING_LANGUAGE
-        };
+            PROGRAMMING_LANGUAGE)
 
-        enum class Sales : unsigned char {
+        DEFINE_ENUM_TYPE_IN_NS2(uc, old, Sales, unsigned char,
             NOMATTER,
             OVER_3K,
             OVER_10K,
@@ -1169,10 +1169,9 @@ namespace uc {
             OVER_300K,
             OVER_1M,
             OVER_3M,
-            OVER_10M
-        };
+            OVER_10M)
 
-        enum class Country : unsigned char {
+        DEFINE_ENUM_TYPE_IN_NS2(uc, old, Country, unsigned char,
             DD, ///< West Germany
             EU, ///< All Europe
             FR, ///< France
@@ -1180,36 +1179,98 @@ namespace uc {
             JP, ///< Japan
             SU, ///< Soviet Union
             US, ///< United States
-            US_HK, ///< United States / Hong Kong
-            NN
-        };
+            US_HK ///< United States / Hong Kong
+        )
 
-        enum class Graphics : unsigned char {
+        DEFINE_ENUM_TYPE_IN_NS2(uc, old, Graphics, unsigned char,
             NOMATTER,
             NO,
+            LIMITED,
             LATER_MODELS,
-            YES,
-            NN
+            YES)
+
+        DEFINE_ENUM_TYPE_IN_NS2(uc, old, Color, unsigned char,
+            NOMATTER,
+            BW,
+            LATER_MODELS,
+            UNSUCCESSFUL,
+            YES)    ///< Actually all colour computers can display 16 colours somehow
+
+        enum class CharType : unsigned short {
+            TYPOGRAPHIC_CHARS = 1<<0,
+            ARROWS = 1<<1,
+            MATH = 1<<2,
+            ALTERNATE_ALPHABET = 1<<3,
+            ALTERNATE_DIGITS = 1<<4,
+            PSEUDO_BORDERS = 1<<5,
+            PSEUDO_BLOCKS = 1<<6,
+            PSEUDO_DIAGONAL_BORDERS = 1<<7,
+            PSEUDO_DIAGONAL_BLOCKS = 1<<8,
+            SHAPES = 1<<9,
+            CONTROL_PICTURES = 1<<10,
+            GAME_SPRITES = 1<<11,
+            MULTICELL = 1<<12,
+            ENGINEER_GRAPHICS = 1<<13,
+            MISC_IMAGES = 1<<14,        ///< including UI
+            IP = 1<<15,                 ///< unencoded due to IP
         };
+        DEFINE_ENUM_OPS(CharType)
+
+        enum class Ocfg : unsigned char {
+            YEAR_NOTE = 1<<0,
+        };
+        DEFINE_ENUM_OPS(Ocfg)
 
         struct Info {
+            std::string_view key;
             // Name
             std::u8string_view fixedName;
-            std::string_view locKey {};
             std::u8string_view altName {};
             // Other data
             Country country;
             Type type;
             Graphics graphics;
+            Color color;
             Sales sales;
+            unsigned char cpuDataWidth;
+            Flags<Ocfg> flags = NO_FLAGS;
             unsigned short year;
+            Flags<CharType> charTypes;
             struct Mem {
                 unsigned short lo = 0, hi = 0;
             } mem;  /// Memory, in Kbytes
 
             std::u8string locName() const;
+            std::u8string locLongName() const;
         };
         extern const Info info[];
+
+        const Info* findComp(std::string_view target);
+
+        struct CountryInfo {
+            const char* key;
+        };
+        extern const ec::Array<CountryInfo, Country> countryInfo;
+
+        struct TypeInfo {
+            const char* key;
+        };
+        extern const ec::Array<TypeInfo, Type> typeInfo;
+
+        struct GraphicsInfo {
+            const char* key;
+        };
+        extern const ec::Array<GraphicsInfo, Graphics> graphicsInfo;
+
+        struct SalesInfo {
+            const char* key;
+        };
+        extern const ec::Array<SalesInfo, Sales> salesInfo;
+
+        struct ColorInfo {
+            const char* key;
+        };
+        extern const ec::Array<ColorInfo, Color> colorInfo;
     }
 
     Flags<OldComp> cpOldComps(char32_t cp);

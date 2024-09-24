@@ -38,6 +38,7 @@ namespace uc {
         uc::EcUpCategory ecUpCat = uc::EcUpCategory::NO_VALUE;
         uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
         uc::Cfgs fgs {};
+        uc::OldComp oldComp = uc::OldComp::NONE;
         bool isNumber = false;
     };
 

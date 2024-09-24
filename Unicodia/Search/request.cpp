@@ -102,6 +102,9 @@ bool uc::CharFieldRequest::isOk(const Cp& cp) const
     // Number
     if (fields.isNumber && !cp.numeric().isPresent())
         return false;
+    // Old computers
+    if (fields.oldComp != uc::OldComp::NONE && !uc::cpOldComps(cp.subj).have(fields.oldComp))
+        return false;
     return true;
 }
 
