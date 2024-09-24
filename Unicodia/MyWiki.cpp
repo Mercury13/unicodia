@@ -2799,7 +2799,9 @@ QString mywiki::buildHtml(const uc::old::Info& info)
     // CPU
     if (info.cpuDataWidth > 0) {
         sp.sep();
-        text += loc::get("OldComp.PropName.Cpu").argQ(info.cpuDataWidth);
+        mywiki::append(text,
+                loc::get("OldComp.PropName.Cpu").arg(info.cpuDataWidth),
+                DEFAULT_CONTEXT);
     }
 
     // Memory

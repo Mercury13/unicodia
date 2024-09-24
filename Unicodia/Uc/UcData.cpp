@@ -381,7 +381,7 @@ constinit const uc::old::Info uc::old::info[] {
     { .key = "AmstradCpc",
       .fixedName = u8"Amstrad" NBSP "CPC",
       .country = Country::GB,
-      .type = Type::HOME_EDUC_PC,
+      .type = Type::DESKTOP_PC,
       .graphics = Graphics::YES,
       .color = Color::YES,
       .sales = Sales::OVER_3M,

@@ -9625,7 +9625,7 @@
      <orig>Graphics</orig>
     </text>
     <text id="Cpu">
-     <orig>CPU: {1}-bit (by data bus)</orig>
+     <orig>CPU: {1}-bit ''(by data bus)''</orig>
     </text>
     <text id="Color">
      <orig>Colour</orig>
@@ -9677,7 +9677,7 @@
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
      </text>
      <text id="Desk">
-      <orig>early desktop PC with monitor ''(TV support would come later)''</orig>
+      <orig>desktop PC with monitor</orig>
      </text>
      <text id="Adv">
       <orig>advanced PC ''(monitor, disks, OS)''</orig>

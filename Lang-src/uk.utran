@@ -13771,8 +13771,8 @@
      <transl>Графіка</transl>
     </text>
     <text id="Cpu">
-     <orig>CPU: {1}-bit (by data bus)</orig>
-     <transl>Процесор: {1}-бітний (за шиною даних)</transl>
+     <orig>CPU: {1}-bit ''(by data bus)''</orig>
+     <transl>Процесор: {1}-бітний ''(за шиною даних)''</transl>
     </text>
     <text id="Color">
      <orig>Colour</orig>
@@ -13838,8 +13838,8 @@
       <transl>домашній/навчальний ПК ''(клавіатурний форм-фактор, Бейсік у ПЗП, підтримує ТБ та магнітофон)''</transl>
      </text>
      <text id="Desk">
-      <orig>early desktop PC with monitor ''(TV support would come later)''</orig>
-      <transl>ранній настільний ПК з монітором ''(підтримка ТБ буде пізніше)''</transl>
+      <orig>desktop PC with monitor</orig>
+      <transl>настільний ПК з монітором</transl>
      </text>
      <text id="Adv">
       <orig>advanced PC ''(monitor, disks, OS)''</orig>
