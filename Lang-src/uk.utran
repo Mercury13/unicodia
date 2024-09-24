@@ -13991,8 +13991,8 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It had drab colours, and put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells.</orig>
-     <transl>Commodore 64 узяв кодування з більш раннього Commodore PET, і був головним домашнім комп’ютером у США. У нього були бляклі кольори, і він довів формулу домашніх комп’ютерів «багато кольорів, низька роздільна здатність» до максимуму: головний режим для ігор був 160×200, 16 кольорів усього, 4 кольори на комірку 4×8. Для порівняння: у IBM CGA було 320×200, 4 кольори без конфліктних комірок.</transl>
+     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Drab colours, artifact of video subsystem that makes TV signal directly without intermediate RGB, actually made games more realistic.</orig>
+     <transl>Commodore 64 узяв кодування з більш раннього Commodore PET, і був головним домашнім комп’ютером у США. Він довів формулу домашніх комп’ютерів «багато кольорів, низька роздільна здатність» до максимуму: головний режим для ігор був 160×200, 16 кольорів усього, 4 кольори на комірку 4×8. Для порівняння: у IBM CGA було 320×200, 4 кольори без конфліктних комірок. Бляклі кольори, артефакт відеопідсистеми, що формує ТБ-сигнал напряму без проміжного RGB, робили ігри реалістичніше.</transl>
     </text>
    </group>
    <group id="CoCo">
