@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 
 #include "u_Strings.h"
 
@@ -40,6 +41,7 @@ int main()
         char32_t lastCp = 0;
         bool hasFileLine = true;
         int nHierosWoSesh = 0;
+        int nHierosWoFile = 0;
         while (std::getline(is, s)) {
             auto s1 = str::trimSv(s);
             // Empty/comment?
@@ -58,7 +60,7 @@ int main()
             char32_t cp = fromHex(sCp);
             if (cp != lastCp) {
                 if (!hasFileLine) {
-                    std::cout << "CP " << std::hex << (unsigned)lastCp << " nas no file specified" "\n";
+                    std::cout << "CP " << std::hex << (unsigned)lastCp << " has no file specified" "\n";
                     ++nHierosWoSesh;
                 }
                 hasFileLine = false;
@@ -67,10 +69,22 @@ int main()
             // Parse command
             if (cells[1] == "kEH_JSesh") {
                 hasFileLine = true;
+                auto seshCodeList = cells[2];
+                auto codes = str::splitSv(seshCodeList, ' ', true);
+                if (codes.empty())
+                    throw std::logic_error("No codes");
+                auto fname = str::cat(codes[0], ".svg");
+                auto path = std::filesystem::path("svg") / fname;
+                if (!std::filesystem::exists(path)) {
+                    // All these files are from old part, OK?
+                    std::cout << "CP " << std::hex << (unsigned)lastCp << " has missing Sesh file" "\n";
+                    ++nHierosWoFile;
+                }
             }
         }
 
         std::cout << std::dec << nHierosWoSesh << " hieros w/o JSesh source found." "\n";
+        std::cout << std::dec << nHierosWoFile << " hieros whose source is present and file isn't." "\n";
     } catch (const std::exception& e) {
         std::cout << "ERROR: " << e.what() << '\n';
     }
