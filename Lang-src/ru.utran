@@ -4803,57 +4803,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters from different computers and systems of 1970s and 80s:</p>
-      <p>* Amstrad CPC{{-}}successful British PC;</p>
-      <p>* Mattel Aquarius{{-}}Hong Kong/American PC that was obsolete before it hit shelves;</p>
-      <p>* Atari 400, 800 and ST{{-}}a line of successful American PCs;</p>
-      <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 and Color){{-}}successful American PCs;</p>
-      <p>* Oric{{-}}British PC that gained some popularity in France; also known by Bulgarian clone Pravets-8D;</p>
-      <p>* Apple II and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
-      <p>* Commodore PET and 64{{-}}super-successful American PCs;</p>
-      <p>* Sinclair ZX80 and ZX81{{-}}successful British PCs;</p>
-      <p>* MSX known in xUSSR as KUVT Yamaha{{-}}Japanese open standard of PCs;</p>
-      <p>* Acorn Archimedes ''(RISC OS)''{{-}}advanced British PC destroyed by IBM compatibles;</p>
-      <p>* teletext{{-}}transmission of text in blanking fields of TV signal;</p>
-      <p>* Minitel{{-}}French terminal service;</p>
-      <p>* and, by coincidence, Korvet{{-}}Soviet technological/educational PC.</p>
+      <p>Characters from different computers and systems of 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
       <p />
-      <p>Unicode{{_}}16 added more systems:</p>
-      <p>* Smalltalk{{-}}programming language that initially used special characters;</p>
-      <p>* Sharp MZ and X1{{-}}Japanese PCs exported to Britain;</p>
-      <p>* Kaypro and Ohio Scientific{{-}}rare American PCs;</p>
-      <p>* Robotron KC{{-}}rare East German PC;</p>
-      <p>* HP terminals, also rare.</p>
+      <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
       <p />
       <p>'''Did not''' advance to standard:</p>
-      <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
+      <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
      </orig>
      <transl>
-      <p>Символы с разных компьютеров и систем 1970‑х и 80‑х:</p>
-      <p>* Amstrad CPC{{-}}успешный британский ПК;</p>
-      <p>* Mattel Aquarius{{-}}гонконго-американский ПК, устаревший ещё при появлении;</p>
-      <p>* Atari 400, 800 и ST{{-}}серия успешных американских ПК;</p>
-      <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 и Color){{-}}успешные американские ПК;</p>
-      <p>* Oric{{-}}британский ПК, получивший определённую популярность во Франции и известный по болгарскому клону «Правец-8D»;</p>
-      <p>* Apple II и более поздние (кодировка ''MouseText''){{-}}сверхуспешные американские ПК;</p>
-      <p>* Commodore PET и 64{{-}}сверхуспешные американские ПК;</p>
-      <p>* Sinclair ZX80 и ZX81{{-}}успешные британские ПК;</p>
-      <p>* MSX, он же КУВТ Ямаха (комплекс учебной вычислительной техники){{-}}японский открытый стандарт ПК;</p>
-      <p>* Acorn Archimedes ''(RISC OS)''{{-}}прогрессивный британский ПК, сметённый IBM-совместимыми;</p>
-      <p>* телетекст{{-}}система передачи текста в полях гашения телевизионного сигнала;</p>
-      <p>* Minitel{{-}}французская терминальная служба;</p>
-      <p>* и, по случайному совпадению, «Корвет»{{-}}советский технологический/учебный ПК.</p>
+      <p>Символы с разных компьютеров и систем 1970‑х и 80‑х: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}и, по совпадению, [[po:Korvet]], советский ПК.</p>
       <p />
-      <p>Юникод{{_}}16 добавил больше систем:</p>
-      <p>* Smalltalk{{-}}язык программирования, изначально использовавший спецсимволы;</p>
-      <p>* Sharp MZ и X1{{-}}японские ПК, экспортировавшиеся в Британию;</p>
-      <p>* Kaypro и Ohio Scientific{{-}}редкие американские ПК;</p>
-      <p>* Robotron KC{{-}}редкий ПК из ГДР;</p>
-      <p>* терминалы HP, тоже редкие.</p>
+      <p>Юникод{{_}}16 добавил больше систем: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
       <p />
       <p>В стандарт '''не вошли''':</p>
-      <p>* инверсная псевдографика: например, у Apple [[pt:mono|знакоместо]] 7×8, и чтобы заливка не{{_}}была клетчатой, прямой символ заливки чередуют с инверсным;</p>
+      <p>* символы в интеллектуальной собственности, как эмблема Apple;</p>
       <p>* знаки, [[pt:unification|уже имеющиеся]] в разделе [[pt:pseudographics|псевдографики]]. В правильном шрифте старая псевдографика должна полностью стыковаться с новыми символами: {{sm|█🬗}}</p>
      </transl>
     </text>
@@ -13775,6 +13739,10 @@
      <orig>Colour</orig>
      <transl>Цвет</transl>
     </text>
+    <text id="Unenc">
+     <orig>Unencoded</orig>
+     <transl>Не закодированы</transl>
+    </text>
    </group>
    <group id="Prop">
     <group id="Country">
@@ -13950,10 +13918,6 @@
       <orig>misc. images</orig>
       <transl>разные картинки</transl>
      </text>
-     <text id="Ip">
-      <orig>unencoded because of IP</orig>
-      <transl>не закодированные из-за интеллектуальной собственности</transl>
-     </text>
     </group>
     <group id="Mem">
      <text id="1">
@@ -13995,6 +13959,10 @@
      <orig>Despite advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
      <transl>Несмотря на появление Macintosh (1984), скромный Apple{{_}}II делал большинство дохода компании. Он шёл с монитором (видимо, из-за недолго существовавших требований{{-}}приставки делали много помех на соседние телевизоры), но монитор подключался композитным проводом, как телевизор (композитный вход был редок в те годы).</transl>
     </text>
+    <text id="Unenc">
+     <orig>Apple logo</orig>
+     <transl>эмблема Apple</transl>
+    </text>
    </group>
    <group id="Aquarius">
     <text id="Text">
@@ -14006,6 +13974,16 @@
     <text id="Text">
      <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware. To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Despite limited graphics, computer’s video architecture resembled console, and was praised for ease of programming.</orig>
      <transl>ТВ-приставки делали много помех на соседние телевизоры, и это привело к новым требованиям на радиочастотное ообрудование. Чтобы сделать компьютер, подключаемый к антенному гнезду, Atari сделала литой алюминиевый корпус и картридж ПЗУ внутри. Несмотря на ограниченную графику, архитектура видео напоминала приставку, и её хвалили за простоту программирования.</transl>
+    </text>
+   </group>
+   <group id="AtariSt">
+    <text id="Text">
+     <orig>Atari did not survive 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, music editors ''Cubase'' and ''Logic Pro'' originate from ST.</orig>
+     <transl>Atari не пережила кризис 1983 и была продана Джеку Трэмиелу, бывшему основателю Commodore. Они сделали второй развитый домашний компьютер после Commodore Amiga. Он был любим музыкантами, музыкальные редакторы ''Cubase'' и ''Logic Pro'' родом с ST.</transl>
+    </text>
+    <text id="Unenc">
+     <orig>Atari logo, 2×2 portrait</orig>
+     <transl>эмблема Atari, портрет 2×2</transl>
     </text>
    </group>
    <group id="C64">
@@ -14026,8 +14004,14 @@
      <transl>терминалы HP</transl>
     </text>
     <text id="Text">
-     <orig>Not so famous as DEC terminals.</orig>
-     <transl>Не так знамениты, как терминалы DEC.</transl>
+     <orig>Rather rare and not so famous as DEC terminals.</orig>
+     <transl>Довольно редки и не так знамениты, как терминалы DEC.</transl>
+    </text>
+   </group>
+   <group id="Kaypro">
+    <text id="Text">
+     <orig>The company found an interesting niche: they made very advanced 8-bit computers. In 1984 they switched to IBM compatibles, but the time had gone, and by 1990 they filed bankruptcy.</orig>
+     <transl>Компания нашла интересную нишу: она делала очень развитые 8-битные компьютеры. В 1984 она переключилась на IBM-совместимые, но время упущено, и в 1990 они объявили банкротство.</transl>
     </text>
    </group>
    <group id="Korvet">
@@ -14046,16 +14030,50 @@
      <transl>Терминалы устанавливали бесплатно, деньги собирали за минуты пользования (эквивалент 30{{_}}€¢ в минуту). Система давала сообщения, знакомства, телефонный справочник, игры, заказ билетов и прочее. Во Франции был даже свой маленький «пузырь доткомов», задолго до американского в 2000! Систему закрыли только в 2012.</transl>
     </text>
    </group>
+   <group id="Msx">
+    <text id="Text">
+     <orig>Japanese open standard of home computers, made by Sony, Philips and others. Well-known games ''Bomberman'' and ''Metal Gear'' were initially made for these computers. USSR attempted to use them as educational computers, dubbed KUVT Yamaha.</orig>
+     <transl>Японский открытый стандарт домашних компьютеров, производились Sony, Philips и другими. Известные игры ''Bomberman'' и ''Metal Gear'' изначально делали под эти компьютеры. СССР попытался использовать их как учебные, под названием КУВТ Ямаха ''(комплекс учебной вычислительной техники)''.</transl>
+    </text>
+   </group>
+   <group id="Ohio">
+    <text id="Text">
+     <orig>The compaby sold early hobbyist computers, and was acquired in 1980 by telecommunication company M/A-COM that experienced financial troubles themselves.</orig>
+     <transl>Компания продавала ранние хобби-компьютеры, и была приобретена в 1980 телекоммуникационной компанией M/A-COM, которая сама страдала от финансовых проблем.</transl>
+    </text>
+   </group>
+   <group id="Oric">
+    <text id="Text">
+     <orig>Not a successful computer, it was cloned in Yugoslavia (Nova 64) and Bulgaria (Pravetz 8D).</orig>
+     <transl>Не очень успешный компьютер, он был склонирован в Югославии (Нова-64) и в Болгарии (Правец-8D).</transl>
+    </text>
+   </group>
    <group id="RiscOs">
     <text id="Text">
      <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
      <transl>Acorn Archimedes, RISC PC и другие ограниченно использовались профессионалами (телевидением, музыкантами), пока IBM-совместимые с Windows{{_}}NT и Unix не выгнали их оттуда.</transl>
     </text>
    </group>
+   <group id="Robotron">
+    <text id="Text">
+     <orig>Almost never sold to customers, it was used as an educational computer.</orig>
+     <transl>Почти не продавался потребителям и использовался как учебный.</transl>
+    </text>
+   </group>
+   <group id="Smalltalk">
+    <text id="Text">
+     <orig>Early editions of language had their own special characters.</orig>
+     <transl>Ранние версии языка имели собственные спецсимволы.</transl>
+    </text>
+   </group>
    <group id="SharpMz">
     <text id="Text">
      <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
-     <transl>У него не было языка программирования в ПЗУ, и хвастался несколькими языками, разработанными конкурирующими фирмами. Но пользователь должен загружать их с кассеты или диска.</transl>
+     <transl>У него не было языка программирования в ПЗУ, и он хвастался несколькими языками, разработанными конкурирующими фирмами. Но пользователь должен загружать их с кассеты или диска.</transl>
+    </text>
+    <text id="Unenc">
+     <orig>Pac-Man</orig>
+     <transl>Pac-Man</transl>
     </text>
    </group>
    <group id="Teletext">

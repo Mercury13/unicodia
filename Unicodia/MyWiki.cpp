@@ -540,15 +540,17 @@ namespace {
         void appendPlain(std::string_view x) override;
         void appendLink(
                 const SafeVector<std::string_view>& x,
-                bool hasRemainder) override;
+                bool hasRemainder, bool needRecurse) override;
         void appendTemplate(
                 Buf1d<const std::string_view> x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
+        std::string_view defaultLinkTextSv(std::string_view target) override;
         void finish() override;
         void appendNSpeakers(const TextLang& x);
     protected:
+        std::u8string linkText;
         wiki::HtWeight weight;
         bool isSuppressed = false;
         bool isDiv = false;
@@ -657,7 +659,35 @@ namespace {
         isSuppressed = prepareResult;
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view>& x, bool hasRemainder)
+    std::string_view Eng::defaultLinkTextSv(std::string_view target)
+    {
+        if (target.starts_with("po:")) {
+            auto key = target.substr(3);
+            if (auto info = uc::old::findComp(key)) {
+                linkText = info->locName();
+                return str::toSv(linkText);
+            }
+        }
+        return {};
+    }
+
+    void startLink(QString& s, std::string_view style, std::string_view target)
+    {
+        s.append("<a ");
+        str::append(s, style);
+        s.append(" href='");
+        str::append(s, target);
+        s.append("'>");
+    }
+
+    void finishLink(QString& s)
+    {
+        s.append("</a>");
+    }
+
+    void Eng::appendLink(const SafeVector<std::string_view>& x,
+                         bool hasRemainder,
+                         bool needRecurse)
     {
         auto target = x[0];
         auto text = x[1];
@@ -678,19 +708,17 @@ namespace {
             break;
         }
 
-        auto q = prepareRecursion(text);
-
-        s.append("<a ");
-        str::append(s, style);
-        s.append(" href='");
-        str::append(s, target);
-        s.append("'>");
-
-        runRecursive(text);
-
-        s.append("</a>");
-
-        finishRecursion(hasRemainder, q);
+        if (needRecurse) {
+            auto q = prepareRecursion(text);
+            startLink(s, style, target);
+            runRecursive(text);
+            finishLink(s);
+            finishRecursion(hasRemainder, q);
+        } else {
+            startLink(s, style, target);
+            str::append(s, text);
+            finishLink(s);
+        }
     }
 
     constexpr int SIZE_SAMPLE = -1;
@@ -1011,7 +1039,7 @@ namespace {
         auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
         auto names = font.familiesComma().toStdString();
         text += loc::Fmt(
-                " &nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
+                "&nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
                        (schema)(params)(names)
                        ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
@@ -2765,7 +2793,6 @@ QString mywiki::buildHtml(const uc::old::Info& info)
     str::append(text, "<p><b>");
     str::append(text, info.locLongName());
     str::append(text, "</b>"sv);
-    appendQuery(text, SCH_QRY_CHARS, str::cat("C=", info.key));
 
     // Year
     text += "<p>";
@@ -2831,6 +2858,32 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         snprintf(buf, std::size(buf), "OldComp.Prop.Graphics.%s",
                  uc::old::graphicsInfo[info.graphics].key);
         text += loc::get(buf);
+    }
+
+    // Chars
+    { sp.sep();
+        auto chars = info.charTypes;
+        appendNonBullet(text, "OldComp.PropName.Chars");
+        str::QSep spC(text, ", ");
+        while (chars) {
+            auto bit = chars.smallest();
+            chars.remove(bit);
+            // Turn bit to index
+            auto iBit = std::countr_zero(Flags<uc::old::CharType>::toUnsignedStorage(bit));
+            // Write what we got
+            spC.sep();
+            auto& tyi = uc::old::charTypeInfo[iBit];
+            snprintf(buf, std::size(buf), "OldComp.Prop.Chars.%s", tyi.key);
+            str::append(text, loc::get(buf));
+        }
+        appendQuery(text, SCH_QRY_CHARS, str::cat("C=", info.key));
+    }
+
+    if (info.flags.have(uc::old::Ocfg::UNENCODED)) {
+        sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Unenc");
+        snprintf(buf, std::size(buf), "OldComp.%s.Unenc", info.key.data());
+        mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
     }
 
     // Sales

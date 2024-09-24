@@ -43,7 +43,9 @@ wiki::Param wiki::skipParam(const char* pos, const char* end, char cEnd)
 }
 
 
-wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeature)
+wiki::Thing wiki::findThing(
+        const char* pos, const char* end, Feature currFeature,
+        wiki::MiniEngine& engine)
 {
     auto minus1 = end - 1;
 
@@ -84,18 +86,26 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                                 params.emplace_back( start, end );
                                 auto type = (c == '[') ? Type::LINK : Type::TEMPLATE;
                                 // >=2 params in link!
+                                bool needRecurse = true;
                                 if (type == Type::LINK && params.size() == 1) {
-                                    std::string_view sMain{ p, param.posEnd };
-                                    if (sMain.empty())
-                                        sMain = "???";
-                                    params.emplace_back(sMain);
+                                    needRecurse = false;
+                                    std::string_view target = params[0];
+                                    if (target.empty()) {
+                                        params.emplace_back("???");
+                                    } else if (auto defaultText = engine.defaultLinkTextSv(target);
+                                               !defaultText.empty()) {
+                                        params.emplace_back(defaultText);
+                                    } else {
+                                        params.emplace_back(target);
+                                    }
                                 }
                                 return { .type = type,
                                          .feature = Feature::NONE,
                                          .posStart = pos,
                                          .posNext = param.posNext,
                                          .params = std::move(params),
-                                         .indentSize = 0 };
+                                         .indentSize = 0,
+                                         .needRecurse = needRecurse};
                             } break;
                         }
                     }   // loop
@@ -116,7 +126,8 @@ wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeatur
                          .posStart = pos,
                          .posNext = q,
                          .params = {},
-                         .indentSize = 0 };
+                         .indentSize = 0,
+                         .needRecurse = false};
             }
             break;
         case '\n': {
@@ -207,7 +218,7 @@ void wiki::run(Engine& engine, const char* start, const char* end)
 {
     auto paraFeature = Feature::NONE;
     while (true) {
-        auto x = findThing(start, end, paraFeature);
+        auto x = findThing(start, end, paraFeature, engine);
         if (x.posStart != start)
             engine.appendPlain({ start, x.posStart });
         switch (x.type) {
@@ -225,7 +236,7 @@ void wiki::run(Engine& engine, const char* start, const char* end)
         case Type::STRING_END:
             goto brk;
         case Type::LINK:
-            engine.appendLink(x.params, (x.posNext != end));
+            engine.appendLink(x.params, (x.posNext != end), x.needRecurse);
             break;
         case Type::TEMPLATE:
             engine.appendTemplate(toBuf(x.params), (x.posNext != end));

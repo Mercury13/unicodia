@@ -399,21 +399,21 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 64, 128 } },
     // Apple II
     { .key = "Apple2",
-      .fixedName = u8"Apple" NBSP "II+",
+      .fixedName = u8"Apple" NBSP "II",
       .country = Country::US,
       .type = Type::HOBBY_PC,
       .graphics = Graphics::YES,
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
+      .flags = Ocfg::UNENCODED,
       .year = 1977,
       .charTypes = CharType::MISC_IMAGES    // Hourglass
                  | CharType::ARROWS         // At least Enter
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::SHAPES
                  | CharType::CONTROL_PICTURES
-                 | CharType::MULTICELL     // Running man
-                 | CharType::IP,
+                 | CharType::MULTICELL,     // Running man
             // Typographic chars: only …
       .mem { 4, 128 } },
     // Mattel Aquarius
@@ -458,10 +458,10 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_1M,
       .cpuDataWidth = 16,
+      .flags = Ocfg::UNENCODED,
       .year = 1985,
       .charTypes = CharType::ARROWS         // 4 white
                  | CharType::CONTROL_PICTURES  // FF, CR, ESC, house
-                 | CharType::IP             // Logo, face
                  | CharType::ALTERNATE_DIGITS  // LCD
                  | CharType::MATH           // At least integral
                  | CharType::TYPOGRAPHIC_CHARS
@@ -575,7 +575,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem {} },
     // TRS-80
     { .key = "Trs80",
-      .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
+      .fixedName = u8"TRS-80",
       .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
       .country = Country::US,
       .type = Type::HOBBY_PC,
@@ -594,7 +594,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4, 128 } },
     // Tandy CoCo
     { .key = "CoCo",
-      .fixedName = u8"Tandy" NBSP "TRS-80" NBSP "Color",
+      .fixedName = u8"TRS-80" NBSP "Color",
       .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Color" NBSP "Computer",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
@@ -644,6 +644,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .flags = Ocfg::UNENCODED,
       .year = 1978,
       .charTypes = CharType::TYPOGRAPHIC_CHARS
                  | CharType::ARROWS
@@ -656,8 +657,7 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::GAME_SPRITES
                  | CharType::MULTICELL
                  | CharType::ALTERNATE_ALPHABET
-                 | CharType::ALTERNATE_DIGITS
-                 | CharType::IP,
+                 | CharType::ALTERNATE_DIGITS,
       .mem { 48 } },
     // Ohio Scientific
     { .key = "Ohio",
@@ -823,6 +823,25 @@ constexpr const uc::old::ColorInfo colorInfoArray[] {
 };
 constinit const ec::Array<uc::old::ColorInfo, uc::old::Color> uc::old::colorInfo(
         ec::ARRAY_INIT, colorInfoArray);
+
+
+constinit const uc::old::CharTypeInfo uc::old::charTypeInfo[] {
+    { .key = "Typ" },    // Typographic
+    { .key = "Arr" },    // Arrows
+    { .key = "Mat" },    // Mathematics
+    { .key = "Alp" },    // Latin alphabet
+    { .key = "Dig" },    // Digits
+    { .key = "Lin" },    // Lines
+    { .key = "Blk" },    // Blocks
+    { .key = "Dli" },    // Diag lines
+    { .key = "Dbl" },    // Diag blocks
+    { .key = "Sha" },    // Shapes
+    { .key = "Con" },    // Control pictures
+    { .key = "Gam" },    // Game sprites
+    { .key = "Mul" },    // Multi-cell graphics
+    { .key = "Eng" },    // MultiEngineer graphics
+    { .key = "Img" },    // Misc images
+};
 
 
 namespace {

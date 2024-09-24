@@ -46,13 +46,23 @@ namespace wiki {
         const char* posNext;
         SafeVector<std::string_view> params;
         unsigned indentSize;
+        bool needRecurse;
     };
 
-    Thing findThing(const char* pos, const char* end, Feature currFeature);
+    class MiniEngine {  // interface
+    public:
+        virtual std::string_view defaultLinkTextSv([[maybe_unused]] std::string_view target)
+            { return {}; }
+        virtual ~MiniEngine() = default;
+    };
+
+    Thing findThing(
+            const char* pos, const char* end, Feature currFeature,
+            MiniEngine& engine);
 
     /// @warning DO NOT USE in production code, just for unit-testing
-    inline Thing findThing(std::string_view x)
-        { return findThing(x.data(), x.data() + x.size(), Feature::NONE); }
+    inline Thing findThing(std::string_view x, MiniEngine& engine)
+        { return findThing(x.data(), x.data() + x.size(), Feature::NONE, engine); }
 
     enum class Weight { ITALIC = 1, BOLD = 2 };
     DEFINE_ENUM_OPS(wiki::Weight)
@@ -63,7 +73,8 @@ namespace wiki {
     ///            of course, 1) the engine initiates recursion itself;
     ///            2) it should be ready for that)
     ///
-    class Engine {  // interface
+    class Engine : public MiniEngine    // interface
+    {
     public:
         /// @param [in] changed   Flags that changed,
         ///                       state ← state ^ changed
@@ -78,7 +89,8 @@ namespace wiki {
         virtual void appendPlain(std::string_view x) = 0;
         virtual void appendLink(
                     const SafeVector<std::string_view>& x,
-                    bool hasRemainder) = 0;
+                    bool hasRemainder,
+                    bool needRecurse) = 0;
         virtual void appendTemplate(
                     Buf1d<const std::string_view> x,
                     bool hasRemainder) = 0;
@@ -87,7 +99,6 @@ namespace wiki {
         /// Called after wiki parsing.
         /// Closes weight tags that are not open.
         virtual void finish() {}
-        virtual ~Engine() = default;
     };
 
 

@@ -3578,30 +3578,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters from different computers and systems of 1970s and 80s:</p>
-      <p>* Amstrad CPC{{-}}successful British PC;</p>
-      <p>* Mattel Aquarius{{-}}Hong Kong/American PC that was obsolete before it hit shelves;</p>
-      <p>* Atari 400, 800 and ST{{-}}a line of successful American PCs;</p>
-      <p>* Tandy/RadioShack TRS-80 (Model I, III, 4 and Color){{-}}successful American PCs;</p>
-      <p>* Oric{{-}}British PC that gained some popularity in France; also known by Bulgarian clone Pravets-8D;</p>
-      <p>* Apple II and later (''MouseText'' encoding){{-}}super-successful American PCs;</p>
-      <p>* Commodore PET and 64{{-}}super-successful American PCs;</p>
-      <p>* Sinclair ZX80 and ZX81{{-}}successful British PCs;</p>
-      <p>* MSX known in xUSSR as KUVT Yamaha{{-}}Japanese open standard of PCs;</p>
-      <p>* Acorn Archimedes ''(RISC OS)''{{-}}advanced British PC destroyed by IBM compatibles;</p>
-      <p>* teletext{{-}}transmission of text in blanking fields of TV signal;</p>
-      <p>* Minitel{{-}}French terminal service;</p>
-      <p>* and, by coincidence, Korvet{{-}}Soviet technological/educational PC.</p>
+      <p>Characters from different computers and systems of 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
       <p />
-      <p>Unicode{{_}}16 added more systems:</p>
-      <p>* Smalltalk{{-}}programming language that initially used special characters;</p>
-      <p>* Sharp MZ and X1{{-}}Japanese PCs exported to Britain;</p>
-      <p>* Kaypro and Ohio Scientific{{-}}rare American PCs;</p>
-      <p>* Robotron KC{{-}}rare East German PC;</p>
-      <p>* HP terminals, also rare.</p>
+      <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
       <p />
       <p>'''Did not''' advance to standard:</p>
-      <p>* inverse pseudographics: for example, Apple has [[pt:mono|character cell]] 7×8, and to prevent the hatch from being checkered, straight hatch is interleaved with inverse.</p>
+      <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
      </orig>
     </text>
@@ -9630,6 +9612,9 @@
     <text id="Color">
      <orig>Colour</orig>
     </text>
+    <text id="Unenc">
+     <orig>Unencoded</orig>
+    </text>
    </group>
    <group id="Prop">
     <group id="Country">
@@ -9764,9 +9749,6 @@
      <text id="Img">
       <orig>misc. images</orig>
      </text>
-     <text id="Ip">
-      <orig>unencoded because of IP</orig>
-     </text>
     </group>
     <group id="Mem">
      <text id="1">
@@ -9800,6 +9782,9 @@
     <text id="Text">
      <orig>Despite advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
     </text>
+    <text id="Unenc">
+     <orig>Apple logo</orig>
+    </text>
    </group>
    <group id="Aquarius">
     <text id="Text">
@@ -9809,6 +9794,14 @@
    <group id="Atari400">
     <text id="Text">
      <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware. To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Despite limited graphics, computer’s video architecture resembled console, and was praised for ease of programming.</orig>
+    </text>
+   </group>
+   <group id="AtariSt">
+    <text id="Text">
+     <orig>Atari did not survive 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, music editors ''Cubase'' and ''Logic Pro'' originate from ST.</orig>
+    </text>
+    <text id="Unenc">
+     <orig>Atari logo, 2×2 portrait</orig>
     </text>
    </group>
    <group id="C64">
@@ -9826,7 +9819,12 @@
      <orig>HP terminals</orig>
     </text>
     <text id="Text">
-     <orig>Not so famous as DEC terminals.</orig>
+     <orig>Rather rare and not so famous as DEC terminals.</orig>
+    </text>
+   </group>
+   <group id="Kaypro">
+    <text id="Text">
+     <orig>The company found an interesting niche: they made very advanced 8-bit computers. In 1984 they switched to IBM compatibles, but the time had gone, and by 1990 they filed bankruptcy.</orig>
     </text>
    </group>
    <group id="Korvet">
@@ -9842,14 +9840,42 @@
      <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
     </text>
    </group>
+   <group id="Msx">
+    <text id="Text">
+     <orig>Japanese open standard of home computers, made by Sony, Philips and others. Well-known games ''Bomberman'' and ''Metal Gear'' were initially made for these computers. USSR attempted to use them as educational computers, dubbed KUVT Yamaha.</orig>
+    </text>
+   </group>
+   <group id="Ohio">
+    <text id="Text">
+     <orig>The compaby sold early hobbyist computers, and was acquired in 1980 by telecommunication company M/A-COM that experienced financial troubles themselves.</orig>
+    </text>
+   </group>
+   <group id="Oric">
+    <text id="Text">
+     <orig>Not a successful computer, it was cloned in Yugoslavia (Nova 64) and Bulgaria (Pravetz 8D).</orig>
+    </text>
+   </group>
    <group id="RiscOs">
     <text id="Text">
      <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
     </text>
    </group>
+   <group id="Robotron">
+    <text id="Text">
+     <orig>Almost never sold to customers, it was used as an educational computer.</orig>
+    </text>
+   </group>
+   <group id="Smalltalk">
+    <text id="Text">
+     <orig>Early editions of language had their own special characters.</orig>
+    </text>
+   </group>
    <group id="SharpMz">
     <text id="Text">
      <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+    </text>
+    <text id="Unenc">
+     <orig>Pac-Man</orig>
     </text>
    </group>
    <group id="Teletext">

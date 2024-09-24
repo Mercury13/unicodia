@@ -1211,12 +1211,12 @@ namespace uc {
             MULTICELL = 1<<12,
             ENGINEER_GRAPHICS = 1<<13,
             MISC_IMAGES = 1<<14,        ///< including UI
-            IP = 1<<15,                 ///< unencoded due to IP
         };
         DEFINE_ENUM_OPS(CharType)
 
         enum class Ocfg : unsigned char {
             YEAR_NOTE = 1<<0,
+            UNENCODED = 1<<1,
         };
         DEFINE_ENUM_OPS(Ocfg)
 
@@ -1270,6 +1270,11 @@ namespace uc {
             const char* key;
         };
         extern const ec::Array<ColorInfo, Color> colorInfo;
+
+        struct CharTypeInfo {
+            const char* key;
+        };
+        extern const CharTypeInfo charTypeInfo[];
     }
 
     Flags<OldComp> cpOldComps(char32_t cp);
