@@ -1203,14 +1203,12 @@ namespace uc {
             ALTERNATE_DIGITS = 1<<4,
             PSEUDO_BORDERS = 1<<5,
             PSEUDO_BLOCKS = 1<<6,
-            PSEUDO_DIAGONAL_BORDERS = 1<<7,
-            PSEUDO_DIAGONAL_BLOCKS = 1<<8,
-            SHAPES = 1<<9,
-            CONTROL_PICTURES = 1<<10,
-            GAME_SPRITES = 1<<11,
-            MULTICELL = 1<<12,
-            ENGINEER_GRAPHICS = 1<<13,
-            MISC_IMAGES = 1<<14,        ///< including UI
+            SHAPES = 1<<7,
+            CONTROL_PICTURES = 1<<8,
+            GAME_SPRITES = 1<<9,
+            MULTICELL = 1<<10,
+            ENGINEER_GRAPHICS = 1<<11,
+            MISC_IMAGES = 1<<12,        ///< including UI
         };
         DEFINE_ENUM_OPS(CharType)
 

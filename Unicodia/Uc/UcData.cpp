@@ -391,7 +391,6 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::MISC_IMAGES    // Watches, faces, card suits
                  | CharType::MATH           // At least circled dot/X
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::GAME_SPRITES   // Men, bomb, explosion
                  | CharType::SHAPES         // Triangles, circles
                  | CharType::TYPOGRAPHIC_CHARS // 2 quotes
@@ -428,7 +427,6 @@ constinit const uc::old::Info uc::old::info[] {
       .year = 1983,                
       .charTypes = CharType::ARROWS         // At least 4 normal
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES         // At least 25AA
                  | CharType::GAME_SPRITES | CharType::MULTICELL
                  | CharType::MISC_IMAGES,
@@ -446,7 +444,6 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::ARROWS         // At least 4 normal
                  | CharType::CONTROL_PICTURES  // At least ESC
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::MISC_IMAGES,   // Card suits
       .mem { 4, 64 } },
     // Atari ST
@@ -478,7 +475,6 @@ constinit const uc::old::Info uc::old::info[] {
       .cpuDataWidth = 0,
       .year = 1982,
       .charTypes = CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS
                  | CharType::ARROWS,
       .mem {} },
     // MSX
@@ -494,7 +490,6 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::TYPOGRAPHIC_CHARS | CharType::MATH
                  | CharType::CONTROL_PICTURES
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS
                  | CharType::SHAPES,
       .mem { 8, 64 } },
     // Oric
@@ -522,7 +517,6 @@ constinit const uc::old::Info uc::old::info[] {
       .year = 1982,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES
                  | CharType::MISC_IMAGES,
       .mem { 64 } },
@@ -569,7 +563,6 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::TYPOGRAPHIC_CHARS // lots of quotes etc
                  | CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES
                  | CharType::MISC_IMAGES,  // musical note
       .mem {} },
@@ -650,7 +643,6 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::ARROWS
                  | CharType::CONTROL_PICTURES
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES
                  | CharType::MISC_IMAGES
                  | CharType::ENGINEER_GRAPHICS
@@ -672,7 +664,6 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::ARROWS
                  | CharType::MATH
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES
                  | CharType::MISC_IMAGES
                  | CharType::GAME_SPRITES,
@@ -689,7 +680,6 @@ constinit const uc::old::Info uc::old::info[] {
       .year = 1984,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS
                  | CharType::SHAPES
                  | CharType::MULTICELL
                  | CharType::GAME_SPRITES,
@@ -721,8 +711,7 @@ constinit const uc::old::Info uc::old::info[] {
       .cpuDataWidth = 8,
       .year = 1982,
       .charTypes = CharType::ARROWS
-                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::PSEUDO_DIAGONAL_BORDERS | CharType::PSEUDO_DIAGONAL_BLOCKS,
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS,
       .mem { 64 } },
 };
 
@@ -833,8 +822,6 @@ constinit const uc::old::CharTypeInfo uc::old::charTypeInfo[] {
     { .key = "Dig" },    // Digits
     { .key = "Lin" },    // Lines
     { .key = "Blk" },    // Blocks
-    { .key = "Dli" },    // Diag lines
-    { .key = "Dbl" },    // Diag blocks
     { .key = "Sha" },    // Shapes
     { .key = "Con" },    // Control pictures
     { .key = "Gam" },    // Game sprites
