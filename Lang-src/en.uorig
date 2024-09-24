@@ -9811,19 +9811,45 @@
      <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware. To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Despite limited graphics, computer’s video architecture resembled console, and was praised for ease of programming.</orig>
     </text>
    </group>
+   <group id="C64">
+    <text id="Text">
+     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It had drab colours, and put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells.</orig>
+    </text>
+   </group>
+   <group id="CoCo">
+    <text id="Text">
+     <orig>Completely incompatible with old TRS-80, it was a low-cost home computer.</orig>
+    </text>
+   </group>
    <group id="Hp">
     <text id="Name">
      <orig>HP terminals</orig>
+    </text>
+    <text id="Text">
+     <orig>Not so famous as DEC terminals.</orig>
     </text>
    </group>
    <group id="Korvet">
     <text id="Name">
      <orig>Korvet</orig>
     </text>
+    <text id="Text">
+     <orig>The computer was interesting and had good graphics, but quality was poor, and 8-bit CPU was too weak for it. After fall of the USSR, cases made for Korvet were reused for smaller computers.</orig>
+    </text>
    </group>
    <group id="Minitel">
     <text id="Text">
-     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”! In 2009 it numbered 10M connections per month, and closed in 2012.</orig>
+     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
+    </text>
+   </group>
+   <group id="RiscOs">
+    <text id="Text">
+     <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
+    </text>
+   </group>
+   <group id="SharpMz">
+    <text id="Text">
+     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
     </text>
    </group>
    <group id="Teletext">
@@ -9832,6 +9858,14 @@
     </text>
     <text id="YearNote">
      <orig>(first TV sets)</orig>
+    </text>
+    <text id="Text">
+     <orig>Teletext transmitted text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays mostly subtitles are transmitted.</orig>
+    </text>
+   </group>
+   <group id="Trs80">
+    <text id="Text">
+     <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
     </text>
    </group>
   </group>

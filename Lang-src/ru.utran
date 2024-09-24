@@ -13993,7 +13993,7 @@
    <group id="Apple2">
     <text id="Text">
      <orig>Despite advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
-     <transl>Несмотря на появление Macintosh (1984), скромный Apple{{_}}II делал большинство дохода компании. Он шёл с монитором (видимо, из-за недолго существовавших требований{{-}}приставки делали много помех на соседние телевизоры), но монитор подключался композитным проводом, как телевизор (композитный вход был редок).</transl>
+     <transl>Несмотря на появление Macintosh (1984), скромный Apple{{_}}II делал большинство дохода компании. Он шёл с монитором (видимо, из-за недолго существовавших требований{{-}}приставки делали много помех на соседние телевизоры), но монитор подключался композитным проводом, как телевизор (композитный вход был редок в те годы).</transl>
     </text>
    </group>
    <group id="Aquarius">
@@ -14008,10 +14008,26 @@
      <transl>ТВ-приставки делали много помех на соседние телевизоры, и это привело к новым требованиям на радиочастотное ообрудование. Чтобы сделать компьютер, подключаемый к антенному гнезду, Atari сделала литой алюминиевый корпус и картридж ПЗУ внутри. Несмотря на ограниченную графику, архитектура видео напоминала приставку, и её хвалили за простоту программирования.</transl>
     </text>
    </group>
+   <group id="C64">
+    <text id="Text">
+     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It had drab colours, and put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells.</orig>
+     <transl>Commodore 64 взял кодировку из более раннего Commodore PET, и был главным домашним компьютером в США. У него были блёклые цвета, и он довёл формулу домашних компьютеров «много цветов, низкое разрешение» до предела: главный режим для игр был 160×200, 16 цветов всего, 4 цвета на ячейку 4×8. Для сравнения: у IBM CGA было 320×200, 4 цвета без конфликтных ячеек.</transl>
+    </text>
+   </group>
+   <group id="CoCo">
+    <text id="Text">
+     <orig>Completely incompatible with old TRS-80, it was a low-cost home computer.</orig>
+     <transl>Совсем несовместимый со старым TRS-80, это был недорогой домашний компьютер.</transl>
+    </text>
+   </group>
    <group id="Hp">
     <text id="Name">
      <orig>HP terminals</orig>
      <transl>терминалы HP</transl>
+    </text>
+    <text id="Text">
+     <orig>Not so famous as DEC terminals.</orig>
+     <transl>Не так знамениты, как терминалы DEC.</transl>
     </text>
    </group>
    <group id="Korvet">
@@ -14019,11 +14035,27 @@
      <orig>Korvet</orig>
      <transl>Корвет</transl>
     </text>
+    <text id="Text">
+     <orig>The computer was interesting and had good graphics, but quality was poor, and 8-bit CPU was too weak for it. After fall of the USSR, cases made for Korvet were reused for smaller computers.</orig>
+     <transl>Компьютер был интересным и имел хорошую графику, но качество было плохим, и 8-битный процессор был слаб для него. После развала СССР корпуса для «Корвета» пускали на меньшие компьютеры.</transl>
+    </text>
    </group>
    <group id="Minitel">
     <text id="Text">
-     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”! In 2009 it numbered 10M connections per month, and closed in 2012.</orig>
-     <transl>Терминалы устанавливали бесплатно, деньги собирали за минуты пользования (эквивалент 30{{_}}€¢ в минуту). Система давала сообщения, знакомства, телефонный справочник, игры, заказ билетов и прочее. Во Франции был даже свой маленький «пузырь доткомов»! В 2009 было 10{{_}}млн подключений в месяц, и закрыли в 2012.</transl>
+     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking and more. France even had its small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
+     <transl>Терминалы устанавливали бесплатно, деньги собирали за минуты пользования (эквивалент 30{{_}}€¢ в минуту). Система давала сообщения, знакомства, телефонный справочник, игры, заказ билетов и прочее. Во Франции был даже свой маленький «пузырь доткомов», задолго до американского в 2000! Систему закрыли только в 2012.</transl>
+    </text>
+   </group>
+   <group id="RiscOs">
+    <text id="Text">
+     <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
+     <transl>Acorn Archimedes, RISC PC и другие ограниченно использовались профессионалами (телевидением, музыкантами), пока IBM-совместимые с Windows{{_}}NT и Unix не выгнали их оттуда.</transl>
+    </text>
+   </group>
+   <group id="SharpMz">
+    <text id="Text">
+     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+     <transl>У него не было языка программирования в ПЗУ, и хвастался несколькими языками, разработанными конкурирующими фирмами. Но пользователь должен загружать их с кассеты или диска.</transl>
     </text>
    </group>
    <group id="Teletext">
@@ -14034,6 +14066,16 @@
     <text id="YearNote">
      <orig>(first TV sets)</orig>
      <transl>(первые телевизоры)</transl>
+    </text>
+    <text id="Text">
+     <orig>Teletext transmitted text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays mostly subtitles are transmitted.</orig>
+     <transl>Телетекст передавал текст и [[pt:pseudographics|псевдографику]] в полях гашения телевизионного сигнала. Сейчас передаются в основном субтитры.</transl>
+    </text>
+   </group>
+   <group id="Trs80">
+    <text id="Text">
+     <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
+     <transl>Компьютер продавался в RadioShack, сети магазинов электроники Tandy. У него было много врождённых проблем, от радиопомех до плохо работающего кассетного интерфейса. В поздних моделях были дискеты.</transl>
     </text>
    </group>
   </group>
