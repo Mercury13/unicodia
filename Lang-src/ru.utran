@@ -13988,8 +13988,8 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Drab colours, artifact of video subsystem that makes TV signal directly without intermediate RGB, actually made games more realistic.</orig>
-     <transl>Commodore 64 взял кодировку из более раннего Commodore PET, и был главным домашним компьютером в США. Он довёл формулу домашних компьютеров «много цветов, низкое разрешение» до предела: главный режим для игр был 160×200, 16 цветов всего, 4 цвета на ячейку 4×8. Для сравнения: у IBM CGA было 320×200, 4 цвета без конфликтных ячеек. Блёклые цвета, артефакт видеоподсистемы, формировавшей ТВ-сигнал напрямую без промежуточного RGB, делали игры реалистичнее.</transl>
+     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
+     <transl>Commodore 64 взял кодировку из более раннего Commodore PET, и был главным домашним компьютером в США. Он довёл формулу домашних компьютеров «много цветов, низкое разрешение» до предела: главный режим для игр был 160×200, 16 цветов всего, 4 цвета на ячейку 4×8. Для сравнения: у IBM CGA было 320×200, 4 цвета без конфликтных ячеек. 16 цветов были очень блёклыми, это делало игры реалистичнее.</transl>
     </text>
    </group>
    <group id="CoCo">
@@ -14094,6 +14094,12 @@
     <text id="Text">
      <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
      <transl>Компьютер продавался в RadioShack, сети магазинов электроники Tandy. У него было много врождённых проблем, от радиопомех до плохо работающего кассетного интерфейса. В поздних моделях были дискеты.</transl>
+    </text>
+   </group>
+   <group id="Zx80">
+    <text id="Text">
+     <orig>Sinclair ZX80 and ZX81 were the cheapest working computers. Version with 2 kilobytes was sold for 70 pounds.</orig>
+     <transl>Sinclair ZX80 и ZX81 были самыми дешёвыми работающими компьютерами. Версия с 2 килобайтами продавалась за 70 фунтов.</transl>
     </text>
    </group>
   </group>

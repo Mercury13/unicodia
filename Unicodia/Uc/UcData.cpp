@@ -554,7 +554,7 @@ constinit const uc::old::Info uc::old::info[] {
       .cpuDataWidth = 8,
       .year = 1980,
       .charTypes = CharType::PSEUDO_BLOCKS,
-      .mem { 1, 16 } },
+      .mem { 1, 32 } },
     // Teletext
     { .key = "Teletext",
       .fixedName = {},
