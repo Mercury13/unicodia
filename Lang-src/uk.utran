@@ -13983,8 +13983,8 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
-     <transl>Commodore 64 узяв кодування з більш раннього Commodore PET, і був головним домашнім комп’ютером у США. Він довів формулу домашніх комп’ютерів «багато кольорів, низька роздільна здатність» до максимуму: головний режим для ігор був 160×200, 16 кольорів усього, 4 кольори на комірку 4×8. Для порівняння: у IBM CGA було 320×200, 4 кольори без конфліктних комірок. 16 кольорів були дуже бляклими, це робило ігри реалістичніше.</transl>
+     <orig>Commodore 64, the main American home computer, took encoding from earlier Commodore PET. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
+     <transl>Commodore 64, головний домашній комп’ютер США, узяв кодування з більш раннього Commodore PET. Він довів формулу домашніх комп’ютерів «багато кольорів, низька роздільна здатність» до максимуму: головний режим для ігор був 160×200, 16 кольорів усього, 4 кольори на комірку 4×8. Для порівняння: у IBM CGA було 320×200, 4 кольори без конфліктних комірок. 16 кольорів були дуже бляклими, це робило ігри реалістичніше.</transl>
     </text>
    </group>
    <group id="CoCo">

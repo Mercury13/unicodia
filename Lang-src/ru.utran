@@ -13980,8 +13980,8 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64 took encoding from earlier Commodore PET, and was the main home computer of the USA. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
-     <transl>Commodore 64 взял кодировку из более раннего Commodore PET, и был главным домашним компьютером в США. Он довёл формулу домашних компьютеров «много цветов, низкое разрешение» до предела: главный режим для игр был 160×200, 16 цветов всего, 4 цвета на ячейку 4×8. Для сравнения: у IBM CGA было 320×200, 4 цвета без конфликтных ячеек. 16 цветов были очень блёклыми, это делало игры реалистичнее.</transl>
+     <orig>Commodore 64, the main American home computer, took encoding from earlier Commodore PET. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
+     <transl>Commodore 64, главный домашний компьютер США, взял кодировку из более раннего Commodore PET. Он довёл формулу домашних компьютеров «много цветов, низкое разрешение» до предела: главный режим для игр был 160×200, 16 цветов всего, 4 цвета на ячейку 4×8. Для сравнения: у IBM CGA было 320×200, 4 цвета без конфликтных ячеек. 16 цветов были очень блёклыми, это делало игры реалистичнее.</transl>
     </text>
    </group>
    <group id="CoCo">
