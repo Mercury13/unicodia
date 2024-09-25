@@ -13967,7 +13967,7 @@
    </group>
    <group id="Atari400">
     <text id="Text">
-     <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware (later they were lowered). To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Computer’s video architecture resembled console (scrolling text and hardware sprites), and was praised for ease of programming.</orig>
+     <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware (later they were weakened). To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Computer’s video architecture resembled console (scrolling text and hardware sprites), and was praised for ease of programming.</orig>
      <transl>Телевізійні приставки робили багато завад на сусідні телевізори, і це призвело до нових вимог на радіочастотне устаткування (пізніше їх ослаблять). Щоб зробити комп’ютер, що підключається до антенного гнізда, Atari зробила литий алюмінієвий корпус та картридж ПЗП всередині. Архітектура відео нагадувала приставку (текст з прокруткою та апаратні спрайти), її хвалили за простоту програмування.</transl>
     </text>
    </group>
