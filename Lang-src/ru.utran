@@ -14078,8 +14078,8 @@
      <transl>(первые телевизоры)</transl>
     </text>
     <text id="Text">
-     <orig>Teletext transmitted text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays mostly subtitles are transmitted.</orig>
-     <transl>Телетекст передавал текст и [[pt:pseudographics|псевдографику]] в полях гашения телевизионного сигнала. Сейчас передаются в основном субтитры.</transl>
+     <orig>Teletext transmits text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays most channels transmit only subtitles.</orig>
+     <transl>Телетекст передаёт текст и [[pt:pseudographics|псевдографику]] в полях гашения телевизионного сигнала. Сейчас большинство каналов транслируют только субтитры.</transl>
     </text>
    </group>
    <group id="Trs80">
