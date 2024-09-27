@@ -1213,8 +1213,9 @@ namespace uc {
         DEFINE_ENUM_OPS(CharType)
 
         enum class Ocfg : unsigned char {
-            YEAR_NOTE = 1<<0,
-            UNENCODED = 1<<1,
+            UNENCODED  = 1<<0,  ///< Some unencoded chars remain
+            NOTE_YEAR  = 1<<1,  ///< Note near year (teletext)
+            NOTE_SALES = 1<<2,  ///< Note near sales (IBM PC)
         };
         DEFINE_ENUM_OPS(Ocfg)
 
@@ -1230,6 +1231,7 @@ namespace uc {
             Color color;
             Sales sales;
             unsigned char cpuDataWidth;
+            EcVersion supportedSince;
             Flags<Ocfg> flags = NO_FLAGS;
             unsigned short year;
             Flags<CharType> charTypes;
@@ -1239,6 +1241,8 @@ namespace uc {
 
             std::u8string locName() const;
             std::u8string locLongName() const;
+            const uc::Version& versionSupportedSince() const
+                { return versionInfo[static_cast<int>(supportedSince)]; }
         };
         extern const Info info[];
 

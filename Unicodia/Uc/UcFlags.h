@@ -133,6 +133,7 @@ namespace uc {
         ROBOTRON    = 1 << 18,
         HP_TERMINAL = 1 << 19,
         KAYPRO      = 1 << 20,
+        IBM         = 1 << 21,
         // Technical
         DUMMY,
         LAST = DUMMY - 1,

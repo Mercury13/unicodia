@@ -386,6 +386,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1984,
       .charTypes = CharType::ARROWS         // At least all 4
                  | CharType::MISC_IMAGES    // Watches, faces, card suits
@@ -405,6 +406,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .flags = Ocfg::UNENCODED,
       .year = 1977,
       .charTypes = CharType::MISC_IMAGES    // Hourglass
@@ -424,7 +426,8 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_10K,
       .cpuDataWidth = 8,
-      .year = 1983,                
+      .supportedSince = uc::EcVersion::V_16_0,
+      .year = 1983,
       .charTypes = CharType::ARROWS         // At least 4 normal
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::SHAPES         // At least 25AA
@@ -440,6 +443,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1979,
       .charTypes = CharType::ARROWS         // At least 4 normal
                  | CharType::CONTROL_PICTURES  // At least ESC
@@ -455,6 +459,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_1M,
       .cpuDataWidth = 16,
+      .supportedSince = uc::EcVersion::V_13_0,
       .flags = Ocfg::UNENCODED,
       .year = 1985,
       .charTypes = CharType::ARROWS         // 4 white
@@ -473,6 +478,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 0,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1982,
       .charTypes = CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::ARROWS,
@@ -486,6 +492,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 0,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1983,
       .charTypes = CharType::TYPOGRAPHIC_CHARS | CharType::MATH
                  | CharType::CONTROL_PICTURES
@@ -501,6 +508,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1982,
       .charTypes = CharType::ARROWS | CharType::PSEUDO_BLOCKS,
       .mem { 16, 48 } },
@@ -514,6 +522,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_10M,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1982,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
@@ -530,6 +539,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 32,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1987,
       .charTypes = CharType::TYPOGRAPHIC_CHARS
                  | CharType::ARROWS
@@ -546,6 +556,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::BW,
       .sales = Sales::OVER_1M,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1980,
       .charTypes = CharType::PSEUDO_BLOCKS,
       .mem { 1, 32 } },
@@ -558,7 +569,8 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::LATER_MODELS,
       .sales = Sales::NOMATTER,
       .cpuDataWidth = 0,
-      .flags = Ocfg::YEAR_NOTE,
+      .supportedSince = uc::EcVersion::V_16_0,
+      .flags = Ocfg::NOTE_YEAR,
       .year = 1977,
       .charTypes = CharType::TYPOGRAPHIC_CHARS // lots of quotes etc
                  | CharType::ARROWS
@@ -576,6 +588,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::BW,
       .sales = Sales::OVER_300K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1977,
       .charTypes = CharType::TYPOGRAPHIC_CHARS
                  | CharType::ARROWS
@@ -595,6 +608,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1980,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BLOCKS,
@@ -608,6 +622,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_13_0,
       .year = 1987,
       .charTypes = CharType::ARROWS
                  | CharType::CONTROL_PICTURES
@@ -624,6 +639,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::NOMATTER,
       .sales = Sales::NOMATTER,
       .cpuDataWidth = 0,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1972,
       .charTypes = CharType::ARROWS
                  | CharType::MISC_IMAGES,
@@ -637,6 +653,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .flags = Ocfg::UNENCODED,
       .year = 1978,
       .charTypes = CharType::TYPOGRAPHIC_CHARS
@@ -660,6 +677,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_10K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1977,
       .charTypes = CharType::ARROWS
                  | CharType::MATH
@@ -677,6 +695,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::YES,
       .sales = Sales::OVER_30K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1984,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
@@ -693,6 +712,7 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::UNSUCCESSFUL,
       .sales = Sales::OVER_30K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1974,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
@@ -709,10 +729,29 @@ constinit const uc::old::Info uc::old::info[] {
       .color = Color::BW,
       .sales = Sales::OVER_100K,
       .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_16_0,
       .year = 1982,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS,
       .mem { 64 } },
+    // IBM
+    { .key = "Ibm",
+      .fixedName = u8"IBM" NBSP "PC",
+      .country = Country::US,
+      .type = Type::ADVANCED_PC,
+      .graphics = Graphics::LATER_MODELS,
+      .color = Color::LATER_MODELS,
+      .sales = Sales::OVER_3M,
+      .cpuDataWidth = 16,
+      .supportedSince = uc::EcVersion::V_1_1,
+      .flags = Ocfg::NOTE_SALES,
+      .year = 1981,
+      .charTypes = CharType::ARROWS
+                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
+                 | CharType::MATH | CharType::CONTROL_PICTURES
+                 | CharType::MISC_IMAGES | CharType::SHAPES
+                 | CharType::TYPOGRAPHIC_CHARS,
+      .mem { 16, 640 } },
 };
 
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;

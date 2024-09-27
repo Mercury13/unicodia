@@ -2801,7 +2801,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         sp.sep();
         appendNonBullet(text, "OldComp.PropName.Year");
         text += QString::number(info.year);
-        if (info.flags.have(uc::old::Ocfg::YEAR_NOTE)) {
+        if (info.flags.have(uc::old::Ocfg::NOTE_YEAR)) {
             text += " <i>";
             snprintf(buf, std::size(buf), "OldComp.%s.YearNote", info.key.data());
             mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
@@ -2893,6 +2893,12 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         snprintf(buf, std::size(buf), "OldComp.Prop.Sales.%s",
                  uc::old::salesInfo[info.sales].key);
         text += loc::get(buf);
+    }
+
+    // Supported since
+    { sp.sep();
+        appendNonBullet(text, "OldComp.PropName.Supp");
+        appendVersionValue(text, info.versionSupportedSince());
     }
 
     str::append(text, "<p>");

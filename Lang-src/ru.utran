@@ -13743,6 +13743,10 @@
      <orig>Unencoded</orig>
      <transl>Не закодированы</transl>
     </text>
+    <text id="Supp">
+     <orig>Supported in Unicode</orig>
+     <transl>Поддерживается в Юникоде</transl>
+    </text>
    </group>
    <group id="Prop">
     <group id="Country">
@@ -13998,6 +14002,28 @@
     <text id="Text">
      <orig>Rather rare and not so famous as DEC terminals.</orig>
      <transl>Довольно редки и не так знамениты, как терминалы DEC.</transl>
+    </text>
+   </group>
+   <group id="Ibm">
+    <text id="Text">
+     <orig>
+      <p>The computer became ''de facto'' standard in late 1980s: new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, various, not restricted with low memory or graphic capabilities.</p>
+      <p />
+      <p>For many years it ran obsolete DOS, until Microsoft presented Windows{{_}}95.</p>
+      <p />
+      <p>Most modern general-purpose computers are IBM compatible. Only portable and special-purpose systems use other architectures.</p>
+     </orig>
+     <transl>
+      <p>Компьютер стал стандартом де-факто в конце 1980-х: новые модели становились мощнее и мощнее, сохраняя совместимость со старым ПО. Игры изначально были плохи, но VGA (320×200, 256 цветов, 1987) и грубая процессорная мощь позволили довольно красивые игры{{-}}и, что важнее, разнообразные, не ограниченные нехваткой памяти или возможностями графики.</p>
+      <p />
+      <p>Много лет он работал на устаревшей DOS, пока Microsoft не представил Windows{{_}}95.</p>
+      <p />
+      <p>Большинство компьютеров общего назначения IBM-совместимые. Только портативные и специализированные системы используют другие архитектуры.</p>
+     </transl>
+    </text>
+    <text id="SalesNote">
+     <orig>(IBM only, ≈60M with clones by 1989)</orig>
+     <transl>(только IBM, ≈60 млн с клонами к 1989)</transl>
     </text>
    </group>
    <group id="Kaypro">
