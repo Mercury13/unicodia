@@ -315,7 +315,7 @@ static_assert(std::size(oldCompRange_12) == 15, "Autotool failed");
 
 constinit const Flags<uc::OldComp> oldCompRange_13[] {
 OC::AMSTRAD_CPC | OC::TANDY_TRS80,  // 2301
-OC::ATARI_ST | OC::MSX | OC::KORVET,  // 2302
+OC::ATARI_ST | OC::MSX | OC::KORVET | OC::IBM,  // 2302
 OC::NONE,  // 2303
 OC::NONE,  // 2304
 OC::NONE,  // 2305

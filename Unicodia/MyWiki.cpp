@@ -2893,6 +2893,12 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         snprintf(buf, std::size(buf), "OldComp.Prop.Sales.%s",
                  uc::old::salesInfo[info.sales].key);
         text += loc::get(buf);
+        if (info.flags.have(uc::old::Ocfg::NOTE_SALES)) {
+            text += " <i>";
+            snprintf(buf, std::size(buf), "OldComp.%s.SalesNote", info.key.data());
+            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+            text += "</i>";
+        }
     }
 
     // Supported since

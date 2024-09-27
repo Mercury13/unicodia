@@ -376,6 +376,10 @@ static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::
 
 constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 1024; }
 
+///
+/// @warning
+///   Policy around House: skip it completely because of strange purpose!
+///
 constinit const uc::old::Info uc::old::info[] {
     // Amstrad CPC
     { .key = "AmstradCpc",
@@ -495,9 +499,8 @@ constinit const uc::old::Info uc::old::info[] {
       .supportedSince = uc::EcVersion::V_13_0,
       .year = 1983,
       .charTypes = CharType::TYPOGRAPHIC_CHARS | CharType::MATH
-                 | CharType::CONTROL_PICTURES
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::SHAPES,
+                 | CharType::SHAPES,   // house only among control pics
       .mem { 8, 64 } },
     // Oric
     { .key = "Oric",
@@ -741,15 +744,14 @@ constinit const uc::old::Info uc::old::info[] {
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::LATER_MODELS,
       .color = Color::LATER_MODELS,
-      .sales = Sales::OVER_3M,
+      .sales = Sales::OVER_10M,
       .cpuDataWidth = 16,
       .supportedSince = uc::EcVersion::V_1_1,
       .flags = Ocfg::NOTE_SALES,
       .year = 1981,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
-                 | CharType::MATH | CharType::CONTROL_PICTURES
-                 | CharType::MISC_IMAGES | CharType::SHAPES
+                 | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
                  | CharType::TYPOGRAPHIC_CHARS,
       .mem { 16, 640 } },
 };
