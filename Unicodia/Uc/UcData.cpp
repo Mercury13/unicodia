@@ -1536,7 +1536,7 @@ void uc::completeData()
         if (!v.synthIcon.flags.have(Ifg::CONTINENT_OK)) {
             auto& script = v.script();
             if (script.ecContinent != v.synthIcon.ecContinent) {
-                std::cout << "Continent mismatch: " << v.name << std::endl;
+                std::cout << "Continent mismatch: " << v.name << '\n';
             }
         }
 
