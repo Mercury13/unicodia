@@ -149,8 +149,8 @@ namespace {
         "AMSTRAD_CPC",
         "APPLE",
         "AQUARIUS",
-        "ATARI_ST",
         "ATARI_8BIT",
+        "ATARI_ST",
         "MINITEL",
         "MSX",
         "ORIC",
@@ -167,6 +167,7 @@ namespace {
         "ROBOTRON",
         "HP_TERMINAL",
         "KAYPRO",
+        "IBM",
     };
 
     constexpr auto I_LAST_OLD_COMP = std::size(oldCompNames) - 1;

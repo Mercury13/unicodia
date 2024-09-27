@@ -3585,6 +3585,8 @@
       <p>'''Did not''' advance to standard:</p>
       <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p />
+      <p>Initially (since version 1.0) supported: [[po:Ibm]].</p>
      </orig>
     </text>
    </group>
@@ -9822,7 +9824,7 @@
    <group id="Ibm">
     <text id="Text">
      <orig>
-      <p>The computer became ''de facto'' standard in late 1980s: new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, various, not restricted with low memory or graphic capabilities.</p>
+      <p>The computer became ''de facto'' standard in late 1980s: it had been cloned in 1982, and new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, various, not restricted with low memory or graphic capabilities.</p>
       <p />
       <p>For many years it ran obsolete DOS, until Microsoft presented Windows{{_}}95.</p>
       <p />

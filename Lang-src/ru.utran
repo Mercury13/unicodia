@@ -4810,6 +4810,8 @@
       <p>'''Did not''' advance to standard:</p>
       <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p />
+      <p>Initially (since version 1.0) supported: [[po:Ibm]].</p>
      </orig>
      <transl>
       <p>Символы с разных компьютеров и систем 1970‑х и 80‑х: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}и, по совпадению, [[po:Korvet]], советский ПК.</p>
@@ -4819,6 +4821,8 @@
       <p>В стандарт '''не вошли''':</p>
       <p>* символы в интеллектуальной собственности, как эмблема Apple;</p>
       <p>* знаки, [[pt:unification|уже имеющиеся]] в разделе [[pt:pseudographics|псевдографики]]. В правильном шрифте старая псевдографика должна полностью стыковаться с новыми символами: {{sm|█🬗}}</p>
+      <p />
+      <p>Изначально (с версии 1.0) поддерживаются: [[po:Ibm]].</p>
      </transl>
     </text>
    </group>
@@ -14007,14 +14011,14 @@
    <group id="Ibm">
     <text id="Text">
      <orig>
-      <p>The computer became ''de facto'' standard in late 1980s: new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, various, not restricted with low memory or graphic capabilities.</p>
+      <p>The computer became ''de facto'' standard in late 1980s: it had been cloned in 1982, and new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, various, not restricted with low memory or graphic capabilities.</p>
       <p />
       <p>For many years it ran obsolete DOS, until Microsoft presented Windows{{_}}95.</p>
       <p />
       <p>Most modern general-purpose computers are IBM compatible. Only portable and special-purpose systems use other architectures.</p>
      </orig>
      <transl>
-      <p>Компьютер стал стандартом де-факто в конце 1980-х: новые модели становились мощнее и мощнее, сохраняя совместимость со старым ПО. Игры изначально были плохи, но VGA (320×200, 256 цветов, 1987) и грубая процессорная мощь позволили довольно красивые игры{{-}}и, что важнее, разнообразные, не ограниченные нехваткой памяти или возможностями графики.</p>
+      <p>Компьютер стал стандартом де-факто в конце 1980-х: клоны появились в 1982, и новые модели становились мощнее и мощнее, сохраняя совместимость со старым ПО. Игры изначально были плохи, но VGA (320×200, 256 цветов, 1987) и грубая процессорная мощь позволили довольно красивые игры{{-}}и, что важнее, разнообразные, не ограниченные нехваткой памяти или возможностями графики.</p>
       <p />
       <p>Много лет он работал на устаревшей DOS, пока Microsoft не представил Windows{{_}}95.</p>
       <p />
