@@ -391,13 +391,13 @@ constinit const uc::old::Info uc::old::info[] {
       .sales = Sales::OVER_10M,
       .cpuDataWidth = 16,
       .supportedSince = uc::EcVersion::V_1_1,
-      .flags = Ocfg::NOTE_SALES,
+      .flags = Ocfg::NOTE_SALES | Ocfg::NOTE_MEMORY,
       .year = 1981,
       .charTypes = CharType::ARROWS
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
                  | CharType::TYPOGRAPHIC_CHARS,
-      .mem { 16, 640 } },
+      .mem { 16, 4_mb } },
     // Old Motorola Macintosh
     { .key = "Mac",
       .fixedName = u8"Apple" NBSP "Macintosh",
@@ -408,7 +408,7 @@ constinit const uc::old::Info uc::old::info[] {
       .sales = Sales::OVER_1M,
       .cpuDataWidth = 16,
       .supportedSince = uc::EcVersion::V_1_1,
-      .flags = Ocfg::NOTE_SALES | Ocfg::UNENCODED,
+      .flags = Ocfg::NOTE_SALES | Ocfg::NOTE_MEMORY | Ocfg::UNENCODED,
       .year = 1984,
       .charTypes = CharType::ARROWS
                  | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
@@ -424,9 +424,10 @@ constinit const uc::old::Info uc::old::info[] {
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
       .supportedSince = uc::EcVersion::V_1_1,
+      .flags = Ocfg::NOTE_MEMORY,
       .year = 1982,
       .charTypes = CharType::PSEUDO_BLOCKS | CharType::ARROWS,
-      .mem { 16, 128 } },
+      .mem { 48, 128 } },
 };
 
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;

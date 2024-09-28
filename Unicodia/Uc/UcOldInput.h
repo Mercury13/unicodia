@@ -80,9 +80,10 @@ namespace uc {
         DEFINE_ENUM_OPS(CharType)
 
         enum class Ocfg : unsigned char {
-            UNENCODED  = 1<<0,  ///< Some unencoded chars remain
-            NOTE_YEAR  = 1<<1,  ///< Note near year (teletext)
-            NOTE_SALES = 1<<2,  ///< Note near sales (IBM PC)
+            UNENCODED   = 1<<0,  ///< Some unencoded chars remain
+            NOTE_YEAR   = 1<<1,  ///< Note near year (teletext)
+            NOTE_SALES  = 1<<2,  ///< Note near sales (IBM PC)
+            NOTE_MEMORY = 1<<3,  ///< Note near memory (IBM PC, Mac)
         };
         DEFINE_ENUM_OPS(Ocfg)
 

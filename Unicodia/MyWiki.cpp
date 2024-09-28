@@ -2784,11 +2784,27 @@ QString mywiki::buildEmptyFavsHtml()
 }
 
 
+namespace {
+
+    void addNoteIf(QString& text, const uc::old::Info& info,
+                   uc::old::Ocfg trigger, const char* subKey)
+    {
+        if (info.flags.have(trigger)) {
+            char buf[40];
+            text += " <i>";
+            snprintf(buf, std::size(buf), "OldComp.%s.%s", info.key.data(), subKey);
+            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+            text += "</i>";
+        }
+    }
+
+}
+
+
 QString mywiki::buildHtml(const uc::old::Info& info)
 {
     QString text;
     appendStylesheet(text);
-    char buf[40];
 
     // Name
     str::append(text, "<p><b>");
@@ -2802,13 +2818,10 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         sp.sep();
         appendNonBullet(text, "OldComp.PropName.Year");
         text += QString::number(info.year);
-        if (info.flags.have(uc::old::Ocfg::NOTE_YEAR)) {
-            text += " <i>";
-            snprintf(buf, std::size(buf), "OldComp.%s.YearNote", info.key.data());
-            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
-            text += "</i>";
-        }
+        addNoteIf(text, info, uc::old::Ocfg::NOTE_YEAR, "YearNote");
     }
+
+    char buf[40];
 
     // Country
     sp.sep();
@@ -2841,6 +2854,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         } else {
             text += loc::get("OldComp.Prop.Mem.2").argQ(info.mem.lo, info.mem.hi);
         }
+        addNoteIf(text, info, uc::old::Ocfg::NOTE_MEMORY, "MemNote");
     }
 
     // Colour
@@ -2894,12 +2908,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         snprintf(buf, std::size(buf), "OldComp.Prop.Sales.%s",
                  uc::old::salesInfo[info.sales].key);
         text += loc::get(buf);
-        if (info.flags.have(uc::old::Ocfg::NOTE_SALES)) {
-            text += " <i>";
-            snprintf(buf, std::size(buf), "OldComp.%s.SalesNote", info.key.data());
-            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
-            text += "</i>";
-        }
+        addNoteIf(text, info, uc::old::Ocfg::NOTE_SALES, "SalesNote");
     }
 
     // Supported since

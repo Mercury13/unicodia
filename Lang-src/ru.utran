@@ -14033,6 +14033,10 @@
      <orig>(IBM only, ≈60M with clones by 1989)</orig>
      <transl>(только IBM, ≈60 млн с клонами к 1989)</transl>
     </text>
+    <text id="MemNote">
+     <orig>(until 1990)</orig>
+     <transl>(до 1990)</transl>
+    </text>
    </group>
    <group id="Kaypro">
     <text id="Text">
@@ -14070,6 +14074,10 @@
     <text id="Unenc">
      <orig>Apple logo</orig>
      <transl>эмблема Apple</transl>
+    </text>
+    <text id="MemNote">
+     <orig>(until 1990)</orig>
+     <transl>(до 1990)</transl>
     </text>
    </group>
    <group id="Minitel">
@@ -14119,13 +14127,17 @@
      <orig>
       <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
       <p />
-      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
      <transl>
       <p>ZX Spectrum был главным британским домашним ПК: он был дёшев (&amp;lt;200 фунтов), и имел разнообразные игры. Графического ускорения не было, и все игры, кроме простейших, были очень медленны.</p>
       <p />
       <p>Самая интересная история началась в конце 80-х: самодельщики из соцстран воспроизвели графический чип из дискретной логики, и клоны Спектрума ненадолго стали главными компьютерами СССР, пока Windows и поднявшийся доход не сделали [[po:Ibm|IBM-совместимые]] более распространёнными.</p>
      </transl>
+    </text>
+    <text id="MemNote">
+     <orig>(early 16K version was rare)</orig>
+     <transl>(ранняя версия 16K была редкой)</transl>
     </text>
    </group>
    <group id="SharpMz">

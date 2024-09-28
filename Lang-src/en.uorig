@@ -9837,6 +9837,9 @@
     <text id="SalesNote">
      <orig>(IBM only, ≈60M with clones by 1989)</orig>
     </text>
+    <text id="MemNote">
+     <orig>(until 1990)</orig>
+    </text>
    </group>
    <group id="Kaypro">
     <text id="Text">
@@ -9864,6 +9867,9 @@
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
+    </text>
+    <text id="MemNote">
+     <orig>(until 1990)</orig>
     </text>
    </group>
    <group id="Minitel">
@@ -9906,8 +9912,11 @@
      <orig>
       <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
       <p />
-      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
+    </text>
+    <text id="MemNote">
+     <orig>(early 16K version was rare)</orig>
     </text>
    </group>
    <group id="SharpMz">
