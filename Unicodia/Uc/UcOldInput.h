@@ -71,7 +71,11 @@ namespace uc {
             GAME_SPRITES = 1<<9,
             MULTICELL = 1<<10,
             ENGINEER_GRAPHICS = 1<<11,
-            MISC_IMAGES = 1<<12,        ///< including UI
+            MISC_IMAGES = 1<<12,
+            UI = 1<<13,
+            // Technical
+            DUMMY,
+            LAST = DUMMY - 1,
         };
         DEFINE_ENUM_OPS(CharType)
 

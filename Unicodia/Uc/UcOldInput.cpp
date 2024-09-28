@@ -19,7 +19,8 @@ constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 102
 
 ///
 /// @warning
-///   Policy around House: skip it completely because of strange purpose!
+///   skip completely because of strange purpose those characters:
+///      House, Open box
 ///
 constinit const uc::old::Info uc::old::info[] {
     // Amstrad CPC
@@ -59,7 +60,8 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::SHAPES
                  | CharType::CONTROL_PICTURES
-                 | CharType::MULTICELL,     // Running man
+                 | CharType::MULTICELL      // Running man
+                 | CharType::UI,
             // Typographic chars: only …
       .mem { 4, 128 } },
     // Mattel Aquarius
@@ -345,7 +347,8 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::SHAPES
                  | CharType::MULTICELL
-                 | CharType::GAME_SPRITES,
+                 | CharType::GAME_SPRITES
+                 | CharType::UI,
       .mem { 17 } },
     // HP terminal
     { .key = "Hp",
@@ -395,6 +398,35 @@ constinit const uc::old::Info uc::old::info[] {
                  | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
                  | CharType::TYPOGRAPHIC_CHARS,
       .mem { 16, 640 } },
+    // Old Motorola Macintosh
+    { .key = "Mac",
+      .fixedName = u8"Apple" NBSP "Macintosh",
+      .country = Country::US,
+      .type = Type::ADVANCED_PC,
+      .graphics = Graphics::LATER_MODELS,
+      .color = Color::LATER_MODELS,
+      .sales = Sales::OVER_1M,
+      .cpuDataWidth = 16,
+      .supportedSince = uc::EcVersion::V_1_1,
+      .flags = Ocfg::NOTE_SALES | Ocfg::UNENCODED,
+      .year = 1984,
+      .charTypes = CharType::ARROWS
+                 | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
+                 | CharType::TYPOGRAPHIC_CHARS | CharType::UI,
+      .mem { 128, 4_mb } },
+    // ZX Spectrum
+    { .key = "Spectrum",
+      .fixedName = u8"ZX" NBSP "Spectrum",
+      .country = Country::GB,
+      .type = Type::HOME_EDUC_PC,
+      .graphics = Graphics::YES,
+      .color = Color::YES,
+      .sales = Sales::OVER_3M,
+      .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_1_1,
+      .year = 1982,
+      .charTypes = CharType::PSEUDO_BLOCKS | CharType::ARROWS,
+      .mem { 16, 128 } },
 };
 
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;
@@ -510,7 +542,10 @@ constinit const uc::old::CharTypeInfo uc::old::charTypeInfo[] {
     { .key = "Mul" },    // Multi-cell graphics
     { .key = "Eng" },    // MultiEngineer graphics
     { .key = "Img" },    // Misc images
+    { .key = "UI" },     // UI
 };
+constexpr auto I_LAST_CHAR_TYPE = std::size(uc::old::charTypeInfo) - 1;
+static_assert((1 << I_LAST_CHAR_TYPE) == static_cast<int>(uc::old::CharType::LAST));
 
 
 namespace {

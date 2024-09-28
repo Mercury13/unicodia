@@ -4812,7 +4812,7 @@
       <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
      </orig>
      <transl>
       <p>Символи з різних комп’ютерів та систем 1970-х та 1980-х: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}і, за співпадінням, [[po:Korvet]], радянський ПК.</p>
@@ -4823,7 +4823,7 @@
       <p>* символи в інтелектуальній власності, як емблема Apple;</p>
       <p>* знаки, [[pt:unification|вже наявні]] у розділі [[pt:pseudographics|псевдографіки]]. У правильному шрифті стара псевдографіка повинна повністю стикуватися з новими символами: {{sm|█🬗}}</p>
       <p />
-      <p>Початково (з версії 1.0) підтримуються: [[po:Ibm]].</p>
+      <p>Початково (з версії 1.0) підтримуються: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
      </transl>
     </text>
    </group>
@@ -13921,6 +13921,10 @@
       <orig>misc. images</orig>
       <transl>різні картинки</transl>
      </text>
+     <text id="UI">
+      <orig>user interface</orig>
+      <transl>інтерфейсні</transl>
+     </text>
     </group>
     <group id="Mem">
      <text id="1">
@@ -14049,6 +14053,28 @@
      <transl>Комп’ютер був цікавим і мав гарну графіку, але якість виробництва була поганою, і 8-бітний процесор був слабким для нього, було мало ігор з прокруткою. Після розвалу СРСР корпуси для «Корвета» використовували під менші комп’ютери.</transl>
     </text>
    </group>
+   <group id="Mac">
+    <text id="Text">
+     <orig>
+      <p>Mac had mouse and excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came only in 1987.</p>
+      <p />
+      <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
+     </orig>
+     <transl>
+      <p>Мак мав мишу та відмінну ОС, і його кодування не було обтяжене [[pt:pseudographics|псевдографікою]], так що він був улюбленим серед типографів. Більшість дизайнерського ПЗ, включаючи ''Adobe Photoshop'', родом з Мака. Але перший кольоровий Мак з’явився тільки у 1987.</p>
+      <p />
+      <p>Системні шрифти мали у нестандартних позиціях інтерфейсні символи, автор ''Юнікодії'' спробував знайти усі.</p>
+     </transl>
+    </text>
+    <text id="SalesNote">
+     <orig>(until 1990)</orig>
+     <transl>(до 1990)</transl>
+    </text>
+    <text id="Unenc">
+     <orig>Apple logo</orig>
+     <transl>емблема Apple</transl>
+    </text>
+   </group>
    <group id="Minitel">
     <text id="Text">
      <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking, and more. France even had a small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
@@ -14089,6 +14115,20 @@
     <text id="Text">
      <orig>Early editions of language had their own special characters.</orig>
      <transl>Ранні версії мови мали власні спецсимволи.</transl>
+    </text>
+   </group>
+   <group id="Spectrum">
+    <text id="Text">
+     <orig>
+      <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
+      <p />
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+     </orig>
+     <transl>
+      <p>ZX Spectrum був головним британським домашнім ПК: він був дешевий (&amp;lt;200 фунтів), та мав різноманітні ігри. Графічного прискорення не було, і усі ігри, окрім найпростіших, були дуже повільні.</p>
+      <p />
+      <p>Найцікавіша історія почалась у кінці 1980-х: саморобники з соцкраїн відтворили графічний чіп з дискретної логіки, і клони Спектрума ненадовго стали головними комп’ютерами СРСР, поки Windows та підвищення достатку не зробили [[po:Ibm|IBM-сумісні]] більш поширеними.</p>
+     </transl>
     </text>
    </group>
    <group id="SharpMz">

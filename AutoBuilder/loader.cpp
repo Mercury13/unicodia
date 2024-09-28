@@ -265,6 +265,8 @@ namespace {
     constexpr std::string_view OLD_KAYPRO_1 = "KAYPRONV.TXT";
     constexpr std::string_view OLD_KAYPRO_2 = "KAYPRORV.TXT";
     constexpr std::string_view OLD_IBM = "CP437vis.TXT";
+    constexpr std::string_view OLD_MAC = "MacRoman.TXT";
+    constexpr std::string_view OLD_SPECTRUM = "ZXSPCTRM.TXT";
 
     constinit const OldCompInfo allOldCompsFiles[] {
         // Old computers
@@ -367,6 +369,8 @@ namespace {
         OldCompInfo::mk<OLD_KAYPRO_1>(uc::OldComp::KAYPRO),
         OldCompInfo::mk<OLD_KAYPRO_2>(uc::OldComp::KAYPRO),
         OldCompInfo::mk<OLD_IBM>(uc::OldComp::IBM),
+        OldCompInfo::mk<OLD_MAC>(uc::OldComp::MAC),
+        OldCompInfo::mk<OLD_SPECTRUM>(uc::OldComp::SPECTRUM),
     };
 
 }

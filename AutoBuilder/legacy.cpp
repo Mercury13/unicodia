@@ -24,7 +24,8 @@ namespace {
 
     bool isCpGood(char32_t x)
     {
-        return (x >= 0x02B0 && x <= 0x02FF)  // Spacing modifiers, all
+        return (x >= 0x00A0 && x <= 0x00BF)  // Chars of Latin-1
+            || (x >= 0x02B0 && x <= 0x02FF)  // Spacing modifiers, all
             || (x >= 0x2010 && x <= 0x2027)  // Some punctuation, no spaces and marks
             || (x >= 0x2030 && x <= 0x205E)  // More punctuation, no spaces
             || (x >= 0x2070 && x <= 0x20CF)  // Super/sub, currencies
@@ -33,6 +34,7 @@ namespace {
             || (x >= 0x2E00 && x <= 0x2E7F)  // Supp punctuation
             || (x >= 0x1CC00 && x <= 0x1CEBF)  // Legacy supp
             || (x >= 0x1F100 && x <= 0x1F2FF)  // Enclosed things
+            || (x >= 0x1F300 && x <= 0x1F5FF)  // Misc chars, incl. UI
             || (x >= 0x1F780 && x <= 0x1F8FF)  // Shapes ex, arrows C
             || (x >= 0x1FB00 && x <= 0x1FBFF); // Legacy
     }
@@ -168,6 +170,8 @@ namespace {
         "HP_TERMINAL",
         "KAYPRO",
         "IBM",
+        "MAC",
+        "SPECTRUM",
     };
 
     constexpr auto I_LAST_OLD_COMP = std::size(oldCompNames) - 1;

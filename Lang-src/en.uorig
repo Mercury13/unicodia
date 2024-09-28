@@ -3586,7 +3586,7 @@
       <p>* characters in intellectual property, like Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
      </orig>
     </text>
    </group>
@@ -9748,6 +9748,9 @@
      <text id="Img">
       <orig>misc. images</orig>
      </text>
+     <text id="UI">
+      <orig>user interface</orig>
+     </text>
     </group>
     <group id="Mem">
      <text id="1">
@@ -9848,6 +9851,21 @@
      <orig>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</orig>
     </text>
    </group>
+   <group id="Mac">
+    <text id="Text">
+     <orig>
+      <p>Mac had mouse and excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came only in 1987.</p>
+      <p />
+      <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
+     </orig>
+    </text>
+    <text id="SalesNote">
+     <orig>(until 1990)</orig>
+    </text>
+    <text id="Unenc">
+     <orig>Apple logo</orig>
+    </text>
+   </group>
    <group id="Minitel">
     <text id="Text">
      <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking, and more. France even had a small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
@@ -9881,6 +9899,15 @@
    <group id="Smalltalk">
     <text id="Text">
      <orig>Early editions of language had their own special characters.</orig>
+    </text>
+   </group>
+   <group id="Spectrum">
+    <text id="Text">
+     <orig>
+      <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
+      <p />
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+     </orig>
     </text>
    </group>
    <group id="SharpMz">

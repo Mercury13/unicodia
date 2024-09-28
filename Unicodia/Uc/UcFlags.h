@@ -134,6 +134,8 @@ namespace uc {
         HP_TERMINAL = 1 << 19,
         KAYPRO      = 1 << 20,
         IBM         = 1 << 21,
+        MAC         = 1 << 22,
+        SPECTRUM    = 1 << 23,
         // Technical
         DUMMY,
         LAST = DUMMY - 1,
