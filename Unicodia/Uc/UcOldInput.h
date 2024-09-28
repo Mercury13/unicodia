@@ -34,7 +34,7 @@ namespace uc {
             OVER_10M)
 
         DEFINE_ENUM_TYPE_IN_NS2(uc, old, Country, unsigned char,
-            DD, ///< West Germany
+            DD, ///< East Germany
             EU, ///< All Europe
             FR, ///< France
             GB, ///< Great Britain
