@@ -11,6 +11,7 @@
 
 // Unicode
 #include "UcData.h"
+#include "UcOldInput.h"
 #include "UcCp.h"
 
 // Search

@@ -1,6 +1,8 @@
 // My header
 #include "request.h"
 
+#include "UcOldInput.h"
+
 namespace {
 
     struct EmojiState {

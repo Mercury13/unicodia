@@ -69,6 +69,7 @@ SOURCES += \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
+    Uc/UcOldInput.cpp \
     Uc/UcScripts.cpp \
     WiLibCp.cpp \
     WiOsStyle.cpp \
@@ -137,11 +138,13 @@ HEADERS += \
     Uc/UcAutoDefines.h \
     Uc/UcAutoScripts.h \
     Uc/UcClipboard.h \
+    Uc/UcCommon.h \
     Uc/UcContinents.h \
     Uc/UcCp.h \
     Uc/UcData.h \
     Uc/UcDating.h \
     Uc/UcFlags.h \
+    Uc/UcOldInput.h \
     Uc/UcSkin.h \
     WiLibCp.h \
     WiOsStyle.h \
