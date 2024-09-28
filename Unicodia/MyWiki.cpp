@@ -2798,7 +2798,7 @@ namespace {
         }
     }
 
-}
+}   // anon namespace
 
 
 QString mywiki::buildHtml(const uc::old::Info& info)
