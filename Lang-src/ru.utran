@@ -14057,16 +14057,12 @@
    <group id="Mac">
     <text id="Text">
      <orig>
-      <p>Mac had mouse and excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came only in 1987.</p>
-      <p />
-      <p>Mac was so loved by users that Apple changed architecture three times without any harm (1994 to PowerPC, 2006 to x86, 2020 to ARM), providing compatibility for several years only.</p>
+      <p>Mac had mouse and excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came only in 1987. The same Mac became 32-bit.</p>
       <p />
       <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
      </orig>
      <transl>
-      <p>Мак имел мышь и отличную ОС, и его кодировка не была отягощена [[pt:pseudographics|псевдографикой]], так что он был любим типографами. Большинство дизайнерского ПО, включая ''Adobe Photoshop'', родом с Мака. Но первый цветной Мак появился только в 1987.</p>
-      <p />
-      <p>Пользователи так любили Мак, что Apple меняла архитектуру трижды без всякого вреда (1994 на PowerPC, 2006 на x86, 2020 на ARM), давая совместимость всего на несколько лет.</p>
+      <p>Мак имел мышь и отличную ОС, и его кодировка не была отягощена [[pt:pseudographics|псевдографикой]], так что он был любим типографами. Большинство дизайнерского ПО, включая ''Adobe Photoshop'', родом с Мака. Но первый цветной Мак появился только в 1987. Тот же Мак стал 32-битным.</p>
       <p />
       <p>Системные шрифты имели в нестандартных позициях интерфейсные символы, автор ''Юникодии'' попытался отыскать все.</p>
      </transl>
@@ -14080,8 +14076,8 @@
      <transl>эмблема Apple</transl>
     </text>
     <text id="MemNote">
-     <orig>(until 1990)</orig>
-     <transl>(до 1990)</transl>
+     <orig>(classic Motorola 68000, until 1994)</orig>
+     <transl>(классические Motorola 68000, до 1994)</transl>
     </text>
    </group>
    <group id="Minitel">

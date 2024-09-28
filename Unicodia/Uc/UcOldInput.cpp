@@ -413,7 +413,7 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::ARROWS
                  | CharType::MATH | CharType::MISC_IMAGES | CharType::SHAPES
                  | CharType::TYPOGRAPHIC_CHARS | CharType::UI,
-      .mem { 128, 4_mb } },
+      .mem { 128, 8_mb } },
     // ZX Spectrum
     { .key = "Spectrum",
       .fixedName = u8"ZX" NBSP "Spectrum",
