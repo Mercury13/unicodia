@@ -403,7 +403,7 @@ constinit const uc::old::Info uc::old::info[] {
       .fixedName = u8"Apple" NBSP "Macintosh",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
-      .graphics = Graphics::LATER_MODELS,
+      .graphics = Graphics::YES,
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_1M,
       .cpuDataWidth = 16,
