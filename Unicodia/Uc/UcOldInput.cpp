@@ -417,6 +417,7 @@ constinit const uc::old::Info uc::old::info[] {
     // ZX Spectrum
     { .key = "Spectrum",
       .fixedName = u8"ZX" NBSP "Spectrum",
+      .altName = u8"Sinclair" NBSP "ZX" NBSP "Spectrum",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
