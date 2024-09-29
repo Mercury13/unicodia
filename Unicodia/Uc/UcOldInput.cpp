@@ -424,7 +424,7 @@ constinit const uc::old::Info uc::old::info[] {
       .sales = Sales::OVER_3M,
       .cpuDataWidth = 8,
       .supportedSince = uc::EcVersion::V_1_1,
-      .flags = Ocfg::NOTE_MEMORY,
+      .flags = Ocfg::NOTE_MEMORY | Ocfg::NOTE_SALES,
       .year = 1982,
       .charTypes = CharType::PSEUDO_BLOCKS | CharType::ARROWS,
       .mem { 48, 128 } },

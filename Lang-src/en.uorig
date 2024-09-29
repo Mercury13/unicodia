@@ -9912,11 +9912,14 @@
      <orig>
       <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
       <p />
-      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
     </text>
     <text id="MemNote">
-     <orig>(early 16K version was rare)</orig>
+     <orig>(early 16K version was rare, and conversion kit to 48K existed)</orig>
+    </text>
+    <text id="SalesNote">
+     <orig>(Sinclair’s original)</orig>
     </text>
    </group>
    <group id="SharpMz">

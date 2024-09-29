@@ -14130,17 +14130,21 @@
      <orig>
       <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
       <p />
-      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the USSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
+      <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
      <transl>
       <p>ZX Spectrum був головним британським домашнім ПК: він був дешевий (&amp;lt;200 фунтів), та мав різноманітні ігри. Графічного прискорення не було, і усі ігри, окрім найпростіших, були дуже повільні.</p>
       <p />
-      <p>Найцікавіша історія почалась у кінці 1980-х: саморобники з соцкраїн відтворили графічний чіп з дискретної логіки, і клони Спектрума ненадовго стали головними комп’ютерами СРСР, поки Windows та підвищення достатку не зробили [[po:Ibm|IBM-сумісні]] більш поширеними.</p>
+      <p>Найцікавіша історія почалась у кінці 1980-х: саморобники з соцкраїн відтворили графічний чіп з дискретної логіки, і клони Спектрума ненадовго стали головними комп’ютерами колишнього СРСР, поки Windows та підвищення достатку не зробили [[po:Ibm|IBM-сумісні]] більш поширеними.</p>
      </transl>
     </text>
     <text id="MemNote">
-     <orig>(early 16K version was rare)</orig>
-     <transl>(рання версія 16K була рідкісна)</transl>
+     <orig>(early 16K version was rare, and conversion kit to 48K existed)</orig>
+     <transl>(рання версія 16K була рідкісна, і був комплект для переробки у 48K)</transl>
+    </text>
+    <text id="SalesNote">
+     <orig>(Sinclair’s original)</orig>
+     <transl>(оригінальних Sinclair)</transl>
     </text>
    </group>
    <group id="SharpMz">
