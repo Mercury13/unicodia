@@ -45,12 +45,13 @@ OS2UnicodeRanges: 00000000.02000000.00000000.00000000
 MarkAttachClasses: 1
 DEI: 91125
 Encoding: UnicodeBmp
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 33 33 14
+WinInfo: 0 33 14
 OnlyBitmaps: 1
 BeginPrivate: 0
 EndPrivate

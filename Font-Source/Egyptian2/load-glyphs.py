@@ -2,9 +2,8 @@ import fontforge
 import psMat
 import os
 
-TEMPFILENAME = 'UnicodiaHan1.ttf'
-OUTFILENAME = 'UnicodiaHan.ttf'
-HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
+OUTFILENAME = 'UnicodiaSesh.otf'
+#HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
 
 # get transformation matrix
 mat1 = psMat.translate(0, -600)
@@ -17,18 +16,30 @@ fontforge.runInitScripts()
 font = fontforge.activeFont()
 nHandGlyphs = sum(1 for _ in font.glyphs())
 
+def isCpGood(code):
+    return (code >= 0x13460) and (code <= 0x143FF);    
+
 # import hieroglyphs
-file = open('hani-tofu.txt', 'r')
+file = open('Unikemet.txt', 'r')
 for line0 in file:
     line = line0.strip()
     if (line != '') and (not line.startswith('#')):
-        code = int(line, base=16)
-        svgName = "AutoRemade/{}.svg".format(line)
-        glyph = font.createChar(code)
-        glyph.glyphname = "u" + line.upper()
-        glyph.importOutlines(svgName, scale=False)
-        glyph.transform(mat)
-        glyph.width = 1000
+        cols = line.split('\t')
+        if (len(cols) >= 3):
+            sCp = cols[0]
+            sCommand = cols[1]
+            sValue = cols[2]
+            if (sCp.startswith('U+') and (sCommand == 'kEH_JSesh')):
+                sHex = sCp[2:]
+                code = int(sHex, base=16)
+                if (isCpGood(code)):
+                    svgName = "svg/{}.svg".format(sValue)
+                    glyph = font.createChar(code)
+                    glyph.glyphname = "u" + line.upper()
+                    glyph.importOutlines(svgName, scale=False)
+                    #glyph.transform(mat)
+                    # @todo [urgent] what width?
+                    glyph.width = 1000
 
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
@@ -50,8 +61,8 @@ for glyph in font.glyphs():
             glyph.correctDirection()
     ++index;
 
-font.generate(TEMPFILENAME)
+font.generate(OUTFILENAME)
 
 # Run external hinter
-CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
-os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
+#CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
+#os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
