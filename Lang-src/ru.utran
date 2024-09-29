@@ -14021,7 +14021,7 @@
       <p />
       <p>For many years it ran obsolete DOS, until Microsoft presented Windows{{_}}95. Earlier OS like Unix or Windows{{_}}NT were rare.</p>
       <p />
-      <p>Most modern general-purpose computers are IBM compatible. Only portable and special-purpose systems use other architectures.</p>
+      <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in 2010s). Only portable and special-purpose systems use other architectures.</p>
      </orig>
      <transl>
       <p>Компьютер стал стандартом де-факто в конце 1980-х: клоны появились в 1982, и новые модели становились мощнее и мощнее, сохраняя совместимость со старым ПО. Игры изначально были плохи, но VGA (320×200, 256 цветов, 1987) и грубая процессорная мощь позволили довольно красивые игры{{-}}и, что важнее, разнообразные, не ограниченные нехваткой памяти или возможностями графики.</p>
@@ -14030,7 +14030,7 @@
       <p />
       <p>Много лет он работал на устаревшей DOS, пока Microsoft не представил Windows{{_}}95. Более ранние ОС, как Unix и Windows{{_}}NT, были редки.</p>
       <p />
-      <p>Большинство компьютеров общего назначения IBM-совместимые. Только портативные и специализированные системы используют другие архитектуры.</p>
+      <p>Большинство компьютеров общего назначения{{-}}потомки IBM-совместимых (совместимость с DOS окончательно нарушена в 2010-е). Только портативные и специализированные системы используют другие архитектуры.</p>
      </transl>
     </text>
     <text id="SalesNote">
