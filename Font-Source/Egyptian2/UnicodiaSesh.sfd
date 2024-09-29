@@ -16,16 +16,22 @@ LayerCount: 2
 Layer: 0 0 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 0 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
 XUID: [1021 59 1751208496 7093]
+FSType: 0
 OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1727638123
-ModificationTime: 1727638251
+ModificationTime: 1727638525
+PfmFamily: 17
+TTFWeight: 400
+TTFWidth: 5
+LineGap: 90
+VLineGap: 0
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
 OS2TypoDOffset: 1
-OS2TypoLinegap: 0
+OS2TypoLinegap: 90
 OS2WinAscent: 0
 OS2WinAOffset: 1
 OS2WinDescent: 0
@@ -35,6 +41,7 @@ HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
+OS2UnicodeRanges: 00000000.02000000.00000000.00000000
 MarkAttachClasses: 1
 DEI: 91125
 Encoding: UnicodeBmp
