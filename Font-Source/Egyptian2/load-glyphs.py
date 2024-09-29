@@ -48,12 +48,12 @@ for glyph in font.glyphs():
     if (index >= nHandGlyphs):    
         # Round and add extrema
         fg = glyph.layers[1]
-        fg.round()
+        #fg.round()
         fg.addExtrema("all")
-        fg.round()
+        #fg.round()
         # Simplify to get rid of poor extrema
         fg.simplify(0.1)
-        fg.round()
+        #fg.round()
         # Hint
         glyph.foreground = fg
         # Correct direction
