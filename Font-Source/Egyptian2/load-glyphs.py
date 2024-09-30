@@ -47,6 +47,8 @@ def getSvgHeight(fname):
         sNumber = sNumber[:-2]
     return float(sNumber)
 
+CELLSIZE = 1000
+
 # import hieroglyphs
 file = open('Unikemet.txt', 'r')
 for line0 in file:
@@ -65,35 +67,36 @@ for line0 in file:
                     svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                     # Load SVG
                     glyph = font.createChar(code)
+                          # both Unicode and fname, for troubleshooting
                     glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
-                    glyph.importOutlines(svgName, scale=False)
+                    glyph.importOutlines(svgName, scale=False, correctdir=True)
                     # Get transformation matrix
-                    mat1 = psMat.translate(0, -800)  # move under baseline
-                    mat1a = psMat.translate(0, svgHeight)  # move under baseline
-                    mat2 = psMat.scale(1000.0 / svgHeight)
-                    mat3 = psMat.translate(0, -100)
-                    mat = psMat.compose(mat1, mat1a)
-                    mat = psMat.compose(mat, mat2)
+                    mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
+                    mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
+                    mat3 = psMat.translate(0, -125) 
+                    mat = psMat.compose(mat1, mat2)
                     mat = psMat.compose(mat, mat3)
                     glyph.transform(mat)
+                    # Check width by ACTUAL (not requested) width
                     # @todo [urgent] what width?
-                    glyph.width = 1000
+                    glyph.width = CELLSIZE
 
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
 index = 0
 for glyph in font.glyphs():
-    if (index >= nHandGlyphs):    
+    if (index >= nHandGlyphs):
         # Round and add extrema
         fg = glyph.layers[1]
         #fg.round()
         fg.addExtrema("all")
         #fg.round()
         # Simplify to get rid of poor extrema
-        fg.simplify(1.0)
+        fg.simplify(0.6, ['removesingletonpoints', 'mergelines'])
         #fg.round()
-        # Hint
+        # Hint        
         glyph.foreground = fg
+        #glyph.removeOverlap('contour')
         # Correct direction
         if not glyph.selfIntersects():
             glyph.correctDirection()
