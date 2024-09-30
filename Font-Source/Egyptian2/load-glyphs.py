@@ -90,7 +90,7 @@ for glyph in font.glyphs():
         fg.addExtrema("all")
         #fg.round()
         # Simplify to get rid of poor extrema
-        fg.simplify(0.1)
+        fg.simplify(1.0)
         #fg.round()
         # Hint
         glyph.foreground = fg
