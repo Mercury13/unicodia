@@ -16,8 +16,22 @@ fontforge.runInitScripts()
 font = fontforge.activeFont()
 nHandGlyphs = sum(1 for _ in font.glyphs())
 
+# checks whether codepoint is good
 def isCpGood(code):
-    return (code >= 0x13460) and (code <= 0x143FF);    
+    return (code >= 0x13460) and (code <= 0x143FF);
+
+# Gets SVG’s height in units
+# No error checking
+def getSvgHeight(fname):
+    # Read data
+    f = open(fname, 'r')
+    data = f.read()
+    f.close()
+    # Try to get data
+    pos1 = data.find('width="')
+    pos2 = data.find('"', pos1 + 1)
+    sNumber = data[pos1:pos2]
+    return float(sNumber)
 
 # import hieroglyphs
 file = open('Unikemet.txt', 'r')
