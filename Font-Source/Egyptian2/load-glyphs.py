@@ -21,16 +21,29 @@ def isCpGood(code):
     return (code >= 0x13460) and (code <= 0x143FF);
 
 # Gets SVG’s height in units
-# No error checking
+# No complete XML parsing
+# Very basic error checking
 def getSvgHeight(fname):
     # Read data
     f = open(fname, 'r')
     data = f.read()
     f.close()
     # Try to get data
-    pos1 = data.find('width="')
-    pos2 = data.find('"', pos1 + 1)
+    trigger1a = 'height="'
+    trigger2 =  '"'
+    trigger1b = "height='"   # same length!
+    pos1 = data.find(trigger1a)
+    if (pos1 < 0):
+        pos1 = data.find(trigger1b)
+        trigger2 = "'"
+        if (pos1 < 0):
+            raise Exception('Cannot find trigger1: {}'.format(fname))
+    pos1 += len(trigger1a)
+    # debug: raise Exception("{}:{}".format(fname, pos1))
+    pos2 = data.find(trigger2, pos1)
     sNumber = data[pos1:pos2]
+    if (sNumber.endswith('px') or sNumber.endswith('pt')):
+        sNumber = sNumber[:-2]
     return float(sNumber)
 
 # import hieroglyphs
@@ -48,10 +61,20 @@ for line0 in file:
                 code = int(sHex, base=16)
                 if (isCpGood(code)):
                     svgName = "svg/{}.svg".format(sValue)
+                    svgHeight = getSvgHeight(svgName)  # requested rather than actual size
+                    # Load SVG
                     glyph = font.createChar(code)
-                    glyph.glyphname = "u" + line.upper()
+                    glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
                     glyph.importOutlines(svgName, scale=False)
-                    #glyph.transform(mat)
+                    # Get transformation matrix
+                    mat1 = psMat.translate(0, -800)  # move under baseline
+                    mat1a = psMat.translate(0, svgHeight)  # move under baseline
+                    mat2 = psMat.scale(1000.0 / svgHeight)
+                    mat3 = psMat.translate(0, -100)
+                    mat = psMat.compose(mat1, mat1a)
+                    mat = psMat.compose(mat, mat2)
+                    mat = psMat.compose(mat, mat3)
+                    glyph.transform(mat)
                     # @todo [urgent] what width?
                     glyph.width = 1000
 
