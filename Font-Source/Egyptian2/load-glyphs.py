@@ -42,6 +42,7 @@ def getSvgHeight(fname):
     # debug: raise Exception("{}:{}".format(fname, pos1))
     pos2 = data.find(trigger2, pos1)
     sNumber = data[pos1:pos2]
+    # Some SVGs have measurement unit under 'height'
     if (sNumber.endswith('px') or sNumber.endswith('pt')):
         sNumber = sNumber[:-2]
     return float(sNumber)
