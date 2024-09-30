@@ -3937,13 +3937,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from various sources. The first proposals were so bad that a man with laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs.</p>
+      <p>3995 more hieroglyphs from sources other that Alan Gardiner. The first proposals were so bad that a man with laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
      </orig>
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
      <transl>
-      <p>Ще 3995 ієрогліфів з різних джерел. Перші заявки були такі погані, що туди якось потрапила людина з ноутбуком, але вчені усе перевірили, і це призвело до ''Unikemet'', бази єгипетських ієрогліфів Юнікоду.</p>
+      <p>Ще 3995 ієрогліфів з інших джерел, окрім Алана Ґардінера. Перші заявки були такі погані, що туди якось потрапила людина з ноутбуком, але вчені усе перевірили, і це призвело до ''Unikemet'', бази єгипетських ієрогліфів Юнікоду. (''Кемет''{{-}}самоназва давнього Єгипту.)</p>
       <p />
       <p>Єгиптологи розробили спеціальні стрілки для напрямку читання{{-}}U+1F8C0 та C1.</p>
      </transl>
