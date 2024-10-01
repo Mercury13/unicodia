@@ -70,7 +70,7 @@ for line0 in file:
                     # Get transformation matrix
                     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
                     mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
-                    mat3 = psMat.translate(0, -125) 
+                    mat3 = psMat.translate(0, -125)
                     mat = psMat.compose(mat1, mat2)
                     mat = psMat.compose(mat, mat3)
                     glyph.transform(mat)
@@ -80,30 +80,64 @@ for line0 in file:
 
 log.write("Improving quality\n");
 
+def removeOpenPaths(layer):
+    nPaths = len(layer)
+    for i in reversed(range(nPaths)):
+        contour = layer[i]
+        if not contour.closed:
+            del layer[i]
+
+SIMPVALUE = 0.6
+
+def removeMicroIntersections(layer):
+    nContours = len(layer)
+    for i in reversed(range(nContours)):
+        contour = layer[i]
+        selfInter = contour.selfIntersects()
+        if selfInter:
+            # just do whatever possible
+            tempLayer = fontforge.layer()
+            tempLayer += contour.dup()
+            if len(tempLayer) != 1:
+                raise Exception('Temp layer has !=1 contours')
+            tempLayer.removeOverlap()
+            # Managed to get empty layer?
+            if len(tempLayer) == 0:
+                del layer[i]
+                continue
+            # Got exactly one, replace
+            if (len(tempLayer) == 1) and not tempLayer.selfIntersects():
+                contour = tempLayer[0]
+
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
 index = 0
 nSelfIntersecting = 0
 for glyph in font.glyphs():
     if (index >= nHandGlyphs):  # No hand-drawn glyphs here
-        # Round and add extrema
         fg = glyph.layers[1]
+        # Remove open paths
+        removeOpenPaths(fg)
+        # Round and add extrema
         #fg.round()
         fg.addExtrema("all")
         #fg.round()
         # Simplify to get rid of poor extrema
-        fg.simplify(0.6, ['removesingletonpoints', 'mergelines'])
+        removeMicroIntersections(fg)
+        fg.simplify(SIMPVALUE, ['mergelines'])
+
         #fg.round()
-        # Hint        
-        glyph.foreground = fg
-        #glyph.removeOverlap('contour')
-        # Correct direction
-        if not glyph.selfIntersects():
+        # Hint
+        selfInter = fg.selfIntersects()
+        if not selfInter:
             glyph.correctDirection()
         else:
             nSelfIntersecting += 1
             log.write("{} self-intersects, {} so far\n".format(
                     glyph.glyphname, nSelfIntersecting))
+        glyph.foreground = fg
+        #glyph.removeOverlap()
+        # Correct direction
     index += 1
 
 log.write("Generating font\n")
