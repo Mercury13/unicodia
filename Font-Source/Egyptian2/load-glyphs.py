@@ -5,20 +5,17 @@ import os
 OUTFILENAME = 'UnicodiaSesh.otf'
 #HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
 
-# get transformation matrix
-mat1 = psMat.translate(0, -600)
-mat2 = psMat.scale(5.3, 5.4)
-mat3 = psMat.translate(-30, -150)
-mat = psMat.compose(mat1, mat2)
-mat = psMat.compose(mat, mat3)
-
 fontforge.runInitScripts()
 font = fontforge.activeFont()
 nHandGlyphs = sum(1 for _ in font.glyphs())
 
+log = open('sesh.log', 'w')
+
 # checks whether codepoint is good
 def isCpGood(code):
     return (code >= 0x13460) and (code <= 0x143FF);
+
+log.write("Loading SVG\n");
 
 # Gets SVG’s height in units
 # No complete XML parsing
@@ -81,11 +78,14 @@ for line0 in file:
                     # @todo [urgent] what width?
                     glyph.width = CELLSIZE
 
+log.write("Improving quality\n");
+
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
 index = 0
+nSelfIntersecting = 0
 for glyph in font.glyphs():
-    if (index >= nHandGlyphs):
+    if (index >= nHandGlyphs):  # No hand-drawn glyphs here
         # Round and add extrema
         fg = glyph.layers[1]
         #fg.round()
@@ -100,10 +100,18 @@ for glyph in font.glyphs():
         # Correct direction
         if not glyph.selfIntersects():
             glyph.correctDirection()
-    ++index;
+        else:
+            nSelfIntersecting += 1
+            log.write("{} self-intersects, {} so far\n".format(
+                    glyph.glyphname, nSelfIntersecting))
+    index += 1
 
+log.write("Generating font\n")
 font.generate(OUTFILENAME)
 
 # Run external hinter
 #CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
 #os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
+
+log.write("OK\n")
+log.close()
