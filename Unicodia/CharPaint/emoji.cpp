@@ -32,6 +32,7 @@ struct RecolorLib {
     std::string_view handDark;  ///< used in new U16 hand emoji
 
     void runOn(QByteArray& bytes) const;
+    void runBiracialOn(char race, QByteArray& bytes) const;
 };
 
 namespace {
@@ -67,10 +68,30 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#B55E19", handDark);
 }
 
+void RecolorLib::runBiracialOn(char race, QByteArray& bytes) const
+{
+    // Biracial colours are 1) limited; 2) unreal
+    char buf[] = "#000000";
+    static_assert(std::size(buf) == 8);
+    buf[1] = race;
+    buf[6] = '2';
+    repl(bytes, buf, fill2);
+    buf[6] = 'A';
+    repl(bytes, buf, handLight);
+    buf[6] = 'B';
+    repl(bytes, buf, handDark);
+}
+
 void RecolorInfo::runOn(QByteArray& bytes) const
 {
-    if (recolor)
-        recolor->runOn(bytes);
+    if (recolor1) {
+        if (recolor2) {
+            recolor1->runBiracialOn('1', bytes);
+            recolor2->runBiracialOn('2', bytes);
+        } else {
+            recolor1->runOn(bytes);
+        }
+    }
 }
 
 
@@ -499,14 +520,23 @@ RecolorInfo EmojiPainter::checkForRecolor(std::u32string_view text)
     auto firstPos = firstIt - text.begin();
 
     // Has no more skin tones
-    if (auto nextIt = std::find_if(firstIt + 1, text.end(), isSkin);
-            nextIt != text.end())
-        return {};
+    decltype(firstPos) secondPos = 0;
+    auto secondIt = std::find_if(firstIt + 1, text.end(), isSkin);
+    if (secondIt != text.end()) {
+        secondPos = secondIt - text.begin();
+        auto thirdIt = std::find_if(secondIt + 1, text.end(), isSkin);
+        if (thirdIt != text.end())
+            return {};
+    }
 
     RecolorInfo ri {
         .baseText = std::u32string{ text },
-        .recolor = &allRecolors[*firstIt - cp::SKIN1],
+        .recolor1 = &allRecolors[*firstIt - cp::SKIN1],
     };
+    if (secondPos != 0) {
+        ri.recolor2 = &allRecolors[*secondIt - cp::SKIN1];
+        ri.baseText.erase(secondPos, 1);
+    }
     ri.baseText.erase(firstPos, 1);
     return ri;
 }

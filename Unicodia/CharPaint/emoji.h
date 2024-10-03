@@ -24,9 +24,10 @@ struct RecolorLib;  // forward
 
 struct RecolorInfo {
     std::u32string baseText;
-    const RecolorLib* recolor = nullptr;
+    const RecolorLib* recolor1 = nullptr;
+    const RecolorLib* recolor2 = nullptr;
 
-    operator bool() const { return recolor; }
+    operator bool() const { return recolor1; }
     void runOn(QByteArray& bytes) const;
 };
 
