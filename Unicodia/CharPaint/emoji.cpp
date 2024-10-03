@@ -20,7 +20,6 @@ struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
     std::string_view outline1;
-    std::string_view earLines;  ///< U15: in lines of ear; same everywhere except main and white
     std::string_view hair1;
     std::string_view hairHighlight;  ///< Highlighs on the top of hair made by radial gradient
     std::string_view eyebrows;  ///< Eyebrows, same colour as hair highlight!!
@@ -55,7 +54,6 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
-    repl(bytes, "#F09300", earLines);   // used in ear, naked and w/hearing aid
     // U15 replaced lots of hands and other body parts → some colours now unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
     repl(bytes, "#543930", hair1);
@@ -84,7 +82,6 @@ namespace {
             .fill1 = "#FFD29C",
             .fill2 = "#F9DDBD",            
             .outline1 = "#E6B77E",
-            .earLines = "#EDBD82",
             .hair1 = "#312D2D",
             .hairHighlight = STOP_COLOR "#454140",
             .eyebrows = "#454140",
@@ -99,7 +96,6 @@ namespace {
             .fill1 = "#CCA47A",
             .fill2 = "#E0BB95",
             .outline1 = "#BA8F63",
-            .earLines = "#BA8F63",
             .hair1 = "#AB872F",
             .hairHighlight = STOP_COLOR "#BFA055",
             .eyebrows = "#AB872F",
@@ -114,7 +110,6 @@ namespace {
             .fill1 = "#A47B62",
             .fill2 = "#BA8D68",
             .outline1 = "#91674D",
-            .earLines = "#91674D",
             .hair1 = "#543930",
             .hairHighlight = STOP_COLOR "#6D4C41",
             .eyebrows = "#613E31",
@@ -129,7 +124,6 @@ namespace {
             .fill1 = "#8D5738",
             .fill2 = "#A56C43",
             .outline1 = "#875334",
-            .earLines = "#875334",
             .hair1 = "#3C2C23",
             .hairHighlight = STOP_COLOR "#554138",
             .eyebrows = "#42312C",
@@ -144,7 +138,6 @@ namespace {
             .fill1 = "#5C4037",
             .fill2 = "#70534A",
             .outline1 = "#4A2F27",
-            .earLines = "#4A2F27",
             .hair1 = "#232020",
             .hairHighlight = STOP_COLOR "#444140",
             .eyebrows = "#1A1717",
