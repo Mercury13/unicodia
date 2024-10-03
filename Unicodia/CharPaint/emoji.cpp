@@ -71,6 +71,10 @@ void RecolorLib::runOn(QByteArray& bytes) const
 void RecolorLib::runBiracialOn(char race, QByteArray& bytes) const
 {
     // Biracial colours are 1) limited; 2) unreal
+    // They are #p0000c for now;
+    //   p = person (1/2),  c = colour (2/A/B)
+    // Biracial recolouring is not covered with regression tests
+    //   and just works somehow
     char buf[] = "#000000";
     static_assert(std::size(buf) == 8);
     buf[1] = race;
