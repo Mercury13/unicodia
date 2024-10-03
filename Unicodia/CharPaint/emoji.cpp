@@ -29,6 +29,8 @@ struct RecolorLib {
     std::string_view nose1;     ///< used at least in swimmer emoji
     std::string_view mouth1;    ///< used at least in firefighter emoji
     std::string_view eyes1;     ///< used at least in firefighter emoji
+    std::string_view handLight; ///< used in new U16 hand emoji
+    std::string_view handDark;  ///< used in new U16 hand emoji
 
     void runOn(QByteArray& bytes) const;
 };
@@ -63,6 +65,8 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#E49600", nose1);      // artificially made (missing in actual Noto): e.g. swimmer
     repl(bytes, "#795548", mouth1);
     repl(bytes, "#404040", eyes1);
+    repl(bytes, "#FAA700", handLight);
+    repl(bytes, "#B55E19", handDark);
 }
 
 void RecolorInfo::runOn(QByteArray& bytes) const
@@ -88,6 +92,8 @@ namespace {
             .nose1 = "#DBA689",
             .mouth1 = "#444444",
             .eyes1 = "#312D2D",
+            .handLight = "#EFB682",
+            .handDark = "#B26830",
         },
         { // Light
             .fill1 = "#CCA47A",
@@ -101,6 +107,8 @@ namespace {
             .nose1 = "#C48E6A",
             .mouth1 = "#6D4C41",
             .eyes1 = "#5D4037",
+            .handLight = "#D19661",
+            .handDark = "#8D542E",
         },
         { // Medium
             .fill1 = "#A47B62",
@@ -114,6 +122,8 @@ namespace {
             .nose1 = "#99674F",
             .mouth1 = "#5D4037",
             .eyes1 = "#49362E",
+            .handLight = "#9A6648",
+            .handDark = "#62392B",
         },
         { // Dark
             .fill1 = "#8D5738",
@@ -127,6 +137,8 @@ namespace {
             .nose1 = "#875334",
             .mouth1 = "#473530",
             .eyes1 = "#42312C",
+            .handLight = "#824624",
+            .handDark = "#422319",
         },
         { // Ebony
             .fill1 = "#5C4037",
@@ -140,6 +152,8 @@ namespace {
             .nose1 = "#33251F",
             .mouth1 = "#1A1717",
             .eyes1 = "#1A1717",
+            .handLight = "#58382B",
+            .handDark = "#000000",  // really black
         },
     };
 
