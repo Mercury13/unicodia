@@ -2,9 +2,10 @@
 
 CH_NORM = ""
 CH_LOW = ".Low"
-# CH_SLOP = ".Slop"
+CH_SLANT = ".Slant"
 NORMAL_CHAR = { "Type": CH_NORM }
 LOW_CHAR = { "Type": CH_LOW }
+SLANT_CHAR = { "Type": CH_SLANT }
 
 SCRIPT = "Gukh"
 
@@ -15,18 +16,18 @@ BASE_CHARS = {
     "Ng" : LOW_CHAR,
     "C" : LOW_CHAR,
     "J" : NORMAL_CHAR,
-    "H" : LOW_CHAR,
+    "H" : SLANT_CHAR,
     "Tt" : LOW_CHAR,
     "Dd" : LOW_CHAR,
-    "V" : LOW_CHAR,
+    "V" : SLANT_CHAR,
     "T" : NORMAL_CHAR,
     "D" : NORMAL_CHAR,
     "N" : NORMAL_CHAR,
     "P" : NORMAL_CHAR,
-    "B" : LOW_CHAR,
+    "B" : SLANT_CHAR,
     "M" : NORMAL_CHAR,
-    "Y" : LOW_CHAR,
-    "R" : LOW_CHAR,
+    "Y" : SLANT_CHAR,
+    "R" : SLANT_CHAR,
     "L" : NORMAL_CHAR,
     "S" : NORMAL_CHAR,
 };
