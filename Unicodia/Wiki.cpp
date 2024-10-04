@@ -172,7 +172,8 @@ wiki::Thing wiki::findThing(
                              .posStart = pos,
                              .posNext = q,
                              .params = {},
-                             .indentSize = indentSize };
+                             .indentSize = indentSize,
+                             .needRecurse = false };
                 }
             } break;
         default: ;
@@ -184,7 +185,8 @@ wiki::Thing wiki::findThing(
         .posStart = end,
         .posNext = end,
         .params = {},
-        .indentSize = 0 };
+        .indentSize = 0,
+        .needRecurse = false };
 }
 
 
