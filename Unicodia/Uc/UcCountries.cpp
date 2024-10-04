@@ -16,17 +16,18 @@ constinit const ec::Array<const char*, cou::Type> cou::typeKeys {
     TX_STA "FiSpec",
     TX_STA "FrOv",
     TX_STA "FrUn",
-    TX_STA "NlDep",
-    TX_STA "NlOv", // 15
+    TX_STA "MuGb",
+    TX_STA "NlDep", // 15
+    TX_STA "NlOv",
     TX_STA "NzAssoc",
     TX_STA "NoUn",
     TX_STA "NoDep",
-    TX_STA "EsAuto",
-    TX_STA "UsDep", // 20
+    TX_STA "EsAuto", // 20
+    TX_STA "UsDep",
     TX_STA "PartPs",
     TX_STA "PartEh",
     TX_STA "PartTw",
-    TX_STA "PartXk", // 24
+    TX_STA "PartXk", // 25
 };
 
 
@@ -207,7 +208,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "DE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Germany
             cou::Popul::DFLT },
-    { "DG", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::INDIAN_OCEAN, // Diego Garcia
+    { "DG", cou::Type::MAURITIUS_GB, cou::Location::INDIAN_OCEAN, // Diego Garcia
             cou::Popul::MAINLY_MILITARY },
     { "DJ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Djibouti
             cou::Popul::DFLT },

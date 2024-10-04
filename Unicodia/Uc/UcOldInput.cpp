@@ -271,7 +271,6 @@ constinit const uc::old::Info uc::old::info[] {
       .supportedSince = uc::EcVersion::V_13_0,
       .year = 1987,
       .charTypes = CharType::ARROWS
-                 | CharType::CONTROL_PICTURES
                  | CharType::SHAPES
                  | CharType::PSEUDO_BLOCKS
                  | CharType::MISC_IMAGES,
