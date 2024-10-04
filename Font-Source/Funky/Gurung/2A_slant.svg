@@ -122,8 +122,8 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
      inkscape:zoom="0.5522504"
-     inkscape:cx="636.48664"
-     inkscape:cy="607.51427"
+     inkscape:cx="698.05291"
+     inkscape:cy="625.622"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -257,7 +257,7 @@
      id="path15"
      sodipodi:nodetypes="cc" /><path
      style="fill:none;stroke:#cc0000;stroke-width:65;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 938.03261,207.5 V 735.29182 C 1121.0725,800.5589 1221.1134,844.11291 1386.7486,959.30791"
+     d="m 938.03261,207.5 v 527.79182 c 197.52609,56.21322 283.08079,108.82109 448.71599,224.01609"
      id="path16"
      sodipodi:nodetypes="ccc" /><use
      x="0"

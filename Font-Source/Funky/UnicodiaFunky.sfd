@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1728004179
+ModificationTime: 1728004781
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -153863,6 +153863,7 @@ LayerCount: 2
 Fore
 Refer: 1000 90372 N 1 0 0 1 145 0 2
 Refer: 1137 -1 N 1 0 0 1 0 0 2
+LCarets2: 1 0
 Ligature2: "Gukh LIGM-1" Gukh.Gh Gukh.Med.Y
 Colour: ffe600
 EndChar
@@ -154245,6 +154246,7 @@ LayerCount: 2
 Fore
 Refer: 1002 90374 N 1 0 0 1 145 0 2
 Refer: 1138 -1 N 1 0 0 1 0 0 2
+LCarets2: 1 0
 Ligature2: "Gukh LIGM-1" Gukh.C Gukh.Med.V
 Colour: ffe600
 EndChar
@@ -154480,7 +154482,7 @@ EndChar
 StartChar: Gukh.Ligm.B.V
 Encoding: 1134 -1 1124
 Width: 782
-Flags: HWO
+Flags: HW
 AnchorPoint: "Virama" 631 -40 basechar 0
 AnchorPoint: "Matra 625" 463 625 basechar 0
 LayerCount: 2
@@ -154502,6 +154504,7 @@ LayerCount: 2
 Fore
 Refer: 1021 90392 N 1 0 0 1 145 0 2
 Refer: 1169 -1 N 1 0 0 1 0 0 2
+LCarets2: 1 0
 Ligature2: "Gukh LIGM-1" Gukh.Bh Gukh.Med.V
 Colour: ffe600
 EndChar
@@ -156154,52 +156157,52 @@ Encoding: 1156 -1 1168
 Width: 145
 Flags: W
 HStem: 560 65<-10 60 125 155>
-VStem: 60 65<139.867 560>
+VStem: 60 65<143.105 560>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
- 12
+ 13
 MDAP[rnd]
 PUSHB_1
  0
 SHP[rp1]
 PUSHB_1
- 13
+ 14
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 16
+ 17
 MDAP[rnd]
 PUSHB_1
- 10
+ 11
 MDRP[rp0,rnd,white]
 PUSHB_1
  1
 MDRP[min,rnd,black]
 PUSHB_3
  1
- 10
+ 11
  10
 CALL
 PUSHB_4
  64
  1
- 15
+ 16
  9
 CALL
 PUSHB_3
- 10
+ 11
  1
  10
 CALL
 PUSHB_4
  64
- 10
- 12
+ 11
+ 13
  9
 CALL
 PUSHB_2
- 17
+ 18
  1
 CALL
 SVTCA[y-axis]
@@ -156211,17 +156214,18 @@ LayerCount: 2
 Fore
 SplineSet
 125 560 m 1,0,-1
- 125 147.586914062 l 1,1,2
- 261 98 261 98 352.909179688 52.943359375 c 0,3,4
- 445 7 445 7 559.7421875 -72.607421875 c 1,5,-1
+ 125 149.110351562 l 1,1,2
+ 254.467773438 111 254.467773438 111 341.48046875 64.6767578125 c 0,3,4
+ 428.467773438 19 428.467773438 19 559.7421875 -72.607421875 c 1,5,-1
  522.69140625 -126.0078125 l 1,6,7
- 400 -40 400 -40 309.78515625 2.1875 c 0,8,9
- 220 45 220 45 60 101.786132812 c 1,10,-1
- 60 560 l 1,11,-1
- -10 560 l 1,12,-1
- -10 625 l 1,13,-1
- 155 625 l 1,14,-1
- 155 560 l 1,15,-1
+ 387.467773438 -32 387.467773438 -32 304.079101562 11.283203125 c 0,8,9
+ 218.287109375 55.1142578125 218.287109375 55.1142578125 83.5986328125 93.4443359375 c 2,10,-1
+ 60 100.16015625 l 1,11,-1
+ 60 560 l 1,12,-1
+ -10 560 l 1,13,-1
+ -10 625 l 1,14,-1
+ 155 625 l 1,15,-1
+ 155 560 l 1,16,-1
  125 560 l 1,0,-1
 EndSplineSet
 Colour: ffe600
@@ -156230,103 +156234,97 @@ EndChar
 StartChar: Gukh.Med.V.Slant
 Encoding: 1157 -1 1169
 Width: 145
-Flags: W
-HStem: -204 64<435.869 492.77> 560 65<-10 60 125 155>
-VStem: 60 65<139.646 560> 493 65<-139.916 -98.7802>
+Flags: WO
+HStem: -204 64<435.645 491.542> 560 65<-10 60 125 155>
+VStem: 60 65<140.473 560> 492 67<-139.963 -98.006>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
- 10
+ 11
 MDAP[rnd]
 PUSHB_1
- 14
+ 16
 MDRP[min,rnd,black]
 PUSHB_1
- 22
+ 27
 MDAP[rnd]
 PUSHB_1
  0
 SHP[rp1]
 PUSHB_1
- 23
+ 28
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 26
+ 31
 MDAP[rnd]
 PUSHB_1
- 20
+ 25
 MDRP[rp0,rnd,white]
 PUSHB_1
  1
 MDRP[min,rnd,black]
 PUSHB_3
  1
- 20
+ 25
  10
 CALL
 PUSHB_4
  64
  1
- 25
+ 30
  9
 CALL
 PUSHB_3
- 20
+ 25
  1
  10
 CALL
 PUSHB_4
  64
- 20
- 22
+ 25
+ 27
  9
 CALL
 PUSHB_1
  1
 SRP0
 PUSHB_2
- 16
+ 18
  1
 CALL
 PUSHB_1
  7
 MDRP[min,rnd,black]
 PUSHB_2
- 27
+ 32
  1
 CALL
 PUSHB_2
- 16
+ 18
  1
 SRP1
 SRP2
 PUSHB_2
- 10
  11
+ 13
 IP
-IP
-PUSHB_1
- 7
-SRP1
-PUSHB_1
- 9
 IP
 SVTCA[y-axis]
 PUSHB_2
- 14
- 10
+ 16
+ 11
 SRP1
 SRP2
 PUSHB_1
- 11
+ 13
 IP
 PUSHB_1
- 22
+ 27
 SRP1
 PUSHB_2
- 7
- 12
+ 1
+ 14
 IP
 IP
 IUP[y]
@@ -156337,24 +156335,25 @@ LayerCount: 2
 Fore
 SplineSet
 125 560 m 1,0,-1
- 125 146 l 1,1,2
- 368 44 368 44 496 -37 c 0,3,4
- 532 -60 532 -60 541 -74 c 0,5,6
- 558 -102 558 -102 558 -119.5 c 128,-1,7
- 558 -137 558 -137 549.5 -158.5 c 128,-1,8
- 541 -180 541 -180 518 -192 c 128,-1,9
- 495 -204 495 -204 471 -204 c 128,-1,10
- 447 -204 447 -204 422 -197 c 1,11,-1
- 439 -134 l 1,12,13
- 459 -140 459 -140 473 -140 c 0,14,15
- 493 -140 493 -140 493 -122 c 0,16,17
- 493 -101 493 -101 329 -18 c 0,18,19
- 230 32 230 32 60 103 c 1,20,-1
- 60 560 l 1,21,-1
- -10 560 l 1,22,-1
- -10 625 l 1,23,-1
- 155 625 l 1,24,-1
- 155 560 l 1,25,-1
+ 125 148 l 5,1,2
+ 297 89 297 89 452 -9 c 4,3,4
+ 513 -48 513 -48 528 -61 c 4,5,6
+ 558 -87 558 -87 559 -122 c 4,7,8
+ 559 -155 559 -155 535 -180 c 4,9,10
+ 512 -204 512 -204 468 -204 c 4,11,12
+ 446 -204 446 -204 422 -197 c 5,13,-1
+ 439 -134 l 5,14,15
+ 459 -139 459 -139 471 -140 c 4,16,17
+ 492 -140 492 -140 492 -122 c 4,18,19
+ 492 -112 492 -112 462 -92 c 4,20,21
+ 360 -27 360 -27 277.5 15 c 4,22,23
+ 191.854304636 59.0463576159 191.854304636 59.0463576159 82 94 c 6,24,-1
+ 60 101 l 5,25,-1
+ 60 560 l 1,26,-1
+ -10 560 l 1,27,-1
+ -10 625 l 1,28,-1
+ 155 625 l 1,29,-1
+ 155 560 l 1,30,-1
  125 560 l 1,0,-1
 EndSplineSet
 Colour: ffe600
