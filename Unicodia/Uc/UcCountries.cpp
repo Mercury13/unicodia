@@ -500,7 +500,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "SH", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // St. Helena
             cou::Popul::SETTLERS },
-    { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE_ASIA, // Slovenia
+    { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovenia
             cou::Popul::DFLT },
     { "SJ", cou::Type::NORWAY_DEPENDENT, cou::Location::ARCTIC_OCEAN, // Svalbard & Jan Mayen
             cou::Popul::SETTLERS_SVALBARD },
