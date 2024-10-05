@@ -125,7 +125,9 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "BA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Bosnia & Herzegovina
             cou::Popul::DFLT },
     { "BB", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Barbados
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS },
+                // ↑ WP: The Kalinago (called "Caribs" by the Spanish) visited the island regularly,
+                // although there is no evidence of permanent settlement.
     { "BD", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Bangladesh
             cou::Popul::DFLT },
     { "BE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Belgium
@@ -144,6 +146,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "BM", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // Bermuda
             cou::Popul::SETTLERS },
+                // ↑ WP: Bermuda had no Indigenous population when it was discovered,
+                // nor during initial British settlement a century later.
     { "BN", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Brunei
             cou::Popul::DFLT },
     { "BO", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Bolivia
@@ -167,7 +171,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "CA", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Canada
             cou::Popul::DFLT },
     { "CC", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::INDIAN_OCEAN, // Cocos (Keeling) Islands
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS },  // WP: no settlement occurred until the early 19th century
     { "CD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Congo - Kinshasa
             cou::Popul::DFLT },
     { "CF", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Central African Republic
@@ -197,11 +201,11 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "CU", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Cuba
             cou::Popul::DFLT },
     { "CV", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_AFRICA, // Cape Verde
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS }, // WP: Before the arrival of Europeans, the Cape Verde Islands were uninhabited.
     { "CW", cou::Type::NETHERLANDS_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // Curaçao
             cou::Popul::DFLT },
     { "CX", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::MALAY_ARCHIPELAGO, // Christmas Island
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS }, // WP: In writing his account, he found the island uninhabited.
     { "CY", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA, // Cyprus
             cou::Popul::DFLT },
     { "CZ", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Czechia
@@ -243,7 +247,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "FJ", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // Fiji
             cou::Popul::DFLT },
     { "FK", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_SOUTH_AMERICA, // Falkland Islands
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS }, // WP: the islands were uninhabited when Europeans first explored them.
     { "FM", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Micronesia
             cou::Popul::DFLT },
     { "FO", cou::Type::DENMARK_AUTONOMY, cou::Location::ATLANTIC_EUROPE, // Faroe Islands
@@ -405,11 +409,13 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "MR", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mauritania
             cou::Popul::DFLT },
     { "MS", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Montserrat
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS }, // WP: after being told that the island was unoccupied because of raids by the Caribs.
     { "MT", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA, // Malta
             cou::Popul::DFLT },
     { "MU", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Mauritius
             cou::Popul::SETTLERS },
+                // ↑ WP: In 1507, Portuguese sailors came to the uninhabited island
+                // and established a visiting base.
     { "MV", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA, // Maldives
             cou::Popul::DFLT },
     { "MW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Malawi
@@ -428,6 +434,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "NF", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::PACIFIC_AUSTRALIA, // Norfolk Island
             cou::Popul::SETTLERS },
+                // ↑ WP: Norfolk Island was uninhabited when first settled by Europeans,
+                // but evidence of earlier habitation was obvious.
     { "NG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Nigeria
             cou::Popul::DFLT },
     { "NI", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Nicaragua
@@ -462,8 +470,10 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "PM", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // St. Pierre & Miquelon
             cou::Popul::SETTLERS },
+                // ↑ WP: However, it is not thought that they settled on the islands permanently.
     { "PN", cou::Type::BRITAIN_OVERSEAS, cou::Location::PACIFIC_POLYNESIA, // Pitcairn Islands
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS },
+                // WP: The islands were uninhabited when they were discovered by Europeans.
     { "PR", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // Puerto Rico
             cou::Popul::DFLT },
     { "PS", cou::Type::PARTLY_PALESTINE, cou::Location::ASIA, // Palestinian Territories
@@ -477,7 +487,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "QA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Qatar
             cou::Popul::DFLT },
     { "RE", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA, // Réunion
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS }, // WP: The island has been inhabited since the 17th century
     { "RO", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Romania
             cou::Popul::DFLT },
     { "RS", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Serbia
@@ -492,6 +502,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "SC", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Seychelles
             cou::Popul::SETTLERS },
+                // ↑ WP: Seychelles was uninhabited until the 18th century when
+                // Europeans arrived with Indians
     { "SD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Sudan
             cou::Popul::DFLT },
     { "SE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Sweden
@@ -499,11 +511,12 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "SG", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Singapore
             cou::Popul::DFLT },
     { "SH", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // St. Helena
-            cou::Popul::SETTLERS },
+            cou::Popul::SETTLERS }, // WP: The Portuguese found the island uninhabited
     { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovenia
             cou::Popul::DFLT },
     { "SJ", cou::Type::NORWAY_DEPENDENT, cou::Location::ARCTIC_OCEAN, // Svalbard & Jan Mayen
             cou::Popul::SETTLERS_SVALBARD },
+                // WP: was discovered multiple times → probably no men
     { "SK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovakia
             cou::Popul::DFLT },
     { "SL", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Sierra Leone
@@ -520,6 +533,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "ST", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_AFRICA, // São Tomé & Príncipe
             cou::Popul::SETTLERS },
+                // ↑ WP: The islands of São Tomé and Príncipe were uninhabited when
+                // the Portuguese arrived sometime around 1470
     { "SV", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // El Salvador
             cou::Popul::DFLT },
     { "SX", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Sint Maarten
@@ -530,6 +545,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "TA", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // Tristan da Cunha
             cou::Popul::SETTLERS },
+                // ↑ WP: The uninhabited islands were first recorded as sighted in 1506
     { "TC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // Turks & Caicos Islands
             cou::Popul::DFLT },
     { "TD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Chad
