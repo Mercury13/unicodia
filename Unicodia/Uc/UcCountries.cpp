@@ -623,34 +623,49 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Continent
     { "NC", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_AUSTRALIA, // New Caledonia
             cou::Popul::DFLT },
+                // ↑ WP: As trade in sandalwood declined, it was replaced by a new business
+                // enterprise, "blackbirding"
     { "NE", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Niger
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NF", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::PACIFIC_AUSTRALIA, // Norfolk Island
             cou::Popul::SETTLERS },
                 // ↑ WP: Norfolk Island was uninhabited when first settled by Europeans,
                 // but evidence of earlier habitation was obvious.
     { "NG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Nigeria
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NI", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Nicaragua
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Netherlands
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NO", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Norway
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NP", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Nepal
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NR", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Nauru
             cou::Popul::DFLT },
+                // ↑ WP: The islanders traded food for alcoholic palm wine and firearms.
     { "NU", cou::Type::NEWZEALAND_ASSOC, cou::Location::PACIFIC_POLYNESIA, // Niue
             cou::Popul::DFLT },
+                // ↑ WP: After many years of trying to land a European missionary,
+                // they abducted a Niuean named Nukai Peniamina and trained him as a pastor
     { "NZ", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // New Zealand
             cou::Popul::DFLT },
+                // ↑ Maori
     { "OM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Oman
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PA", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Panama
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Peru
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA, // French Polynesia
             cou::Popul::DFLT },
     { "PG", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Papua New Guinea
