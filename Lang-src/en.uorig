@@ -9200,9 +9200,6 @@
     <text id="U+1F1E6+1F1EB">
      <orig>Current (2024) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto. Meanwhile vendors use the old flag abandoned in 2021.</orig>
     </text>
-    <text id="U+1F1E9+1F1EC">
-     <orig>In 2024 Britain withdrew claims to Diego Garcia, giving it to Mauritius and leasing the entire island which is a joint British-US military base. Smaller islands are just returned to Mauritius. The flag is likely to change in near future.</orig>
-    </text>
     <text id="U+1F1F2+1F1F6">
      <orig>Red-green-black flag was adopted in 2023. Before that all vendors used blue French naval ensign with white snakes.</orig>
     </text>
@@ -9232,6 +9229,9 @@
     </text>
     <text id="Family">
      <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. And families often include grandparents and pets. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>
+    </text>
+    <text id="IO">
+     <orig>In 2024 Britain withdrew claims to uninhabited Chagos Archipelago, giving it to Mauritius but leasing the entire Diego Garcia island which is a joint British-US military base. The flag of British Indian Ocean Territory will likely stay for history, and the flag of Diego Garcia may change.</orig>
     </text>
    </group>
    <group id="Cinfo">
@@ -9274,6 +9274,9 @@
     </text>
     <text id="GbOv!">
      <orig>Disputed; de facto overseas territory of Great Britain</orig>
+    </text>
+    <text id="GbOvF">
+     <orig>Former overseas territory of Great Britain</orig>
     </text>
     <text id="GbDep">
      <orig>Dependent territory of Great Britain</orig>

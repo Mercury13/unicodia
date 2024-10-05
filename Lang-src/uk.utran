@@ -13203,10 +13203,6 @@
      <orig>Current (2024) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto. Meanwhile vendors use the old flag abandoned in 2021.</orig>
      <transl>Поточний (2024) уряд, Талібан, майже ніде не{{_}}визнаний. Його прапор білий з чорною ''шахáдою'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
     </text>
-    <text id="U+1F1E9+1F1EC">
-     <orig>In 2024 Britain withdrew claims to Diego Garcia, giving it to Mauritius and leasing the entire island which is a joint British-US military base. Smaller islands are just returned to Mauritius. The flag is likely to change in near future.</orig>
-     <transl>У 2024 Велика Британія відмовилась від претензій на Дієґо-Ґарсію, повернувши її Маврикію та орендувавши весь острів, що є спільною британо-американською військовою базою. Менші острови просто повернуті Маврикію. Можливо, прапор скоро зміниться.</transl>
-    </text>
     <text id="U+1F1F2+1F1F6">
      <orig>Red-green-black flag was adopted in 2023. Before that all vendors used blue French naval ensign with white snakes.</orig>
      <transl>Червоно-зелено-чорний прапор прийнятий у 2023. До цього усі виробники використовували синій французьский морський вимпел з білими зміями.</transl>
@@ -13246,6 +13242,10 @@
     <text id="Family">
      <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. And families often include grandparents and pets. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>
      <transl>Консорціум Юнікоду на початку 2023 вимагав малювати безстатеві сім’ї як силуети (скажімо, «сімейний фільм») та перенести на «клавіатурах» з Людей до Символів, та порекомендував прибрати сім’ї зі статтю з «клавіатур», забивши тими ж силуетами, щоб уникнути комбінаторного вибуху. А ще у сім’ях бувають дідусі та тварини. Восени 2023 Google випустив свої емодзі з силуетами, навесні 2024 Apple зробив те ж. У силуетів Google є звабинка: вони показують жіночі зачіски.</transl>
+    </text>
+    <text id="IO">
+     <orig>In 2024 Britain withdrew claims to uninhabited Chagos Archipelago, giving it to Mauritius but leasing the entire Diego Garcia island which is a joint British-US military base. The flag of British Indian Ocean Territory will likely stay for history, and the flag of Diego Garcia may change.</orig>
+     <transl>У 2024 Велика Британія відмовилась від претензій на ненаселений архіпелаг Чаґос, повернувши його Маврикію та орендувавши острів Дієґо-Ґарсія, що є спільною британо-американською військовою базою. Прапор Британської території у Індійському океані, скоріше за все, залишиться для історії, а прапор Дієґо-Ґарсії може змінитися.</transl>
     </text>
    </group>
    <group id="Cinfo">
@@ -13299,6 +13299,10 @@
     <text id="GbOv!">
      <orig>Disputed; de facto overseas territory of Great Britain</orig>
      <transl>Спірна; фактично заморська територія Великої Британії</transl>
+    </text>
+    <text id="GbOvF">
+     <orig>Former overseas territory of Great Britain</orig>
+     <transl>Колишня заморська територія Великої Британії</transl>
     </text>
     <text id="GbDep">
      <orig>Dependent territory of Great Britain</orig>

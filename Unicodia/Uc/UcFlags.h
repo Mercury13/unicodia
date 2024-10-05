@@ -78,6 +78,7 @@ namespace uc {
     constexpr Lfgs MISRENDER_MASK = Lfg::MISRENDER_0 | Lfg::MISRENDER_1 | Lfg::MISRENDER_2;
     constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };       // 01
     constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 10
+    constexpr Lfgs MISRENDER_IO     { Lfg::MISRENDER_1 | Lfg::MISRENDER_0 }; // 11
 
     enum class TextRole : unsigned char {
         CMD_END = 0,    // Command: text end

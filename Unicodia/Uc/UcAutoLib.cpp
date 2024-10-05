@@ -3739,7 +3739,7 @@ constinit const uc::LibNode uc::libNodes[9712] {
 { U"\U0001F1E8\U0001F1FE", u8"flag: Cyprus", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3733
 { U"\U0001F1E8\U0001F1FF", u8"flag: Czechia", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3734
 { U"\U0001F1E9\U0001F1EA", u8"flag: Germany", 3666, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3735
-{ U"\U0001F1E9\U0001F1EC", u8"flag: Diego Garcia", 3666, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3736
+{ U"\U0001F1E9\U0001F1EC", u8"flag: Diego Garcia", 3666, 0, -1, Lfg(865), EcVersion::E2_0 },   // 3736
 { U"\U0001F1E9\U0001F1EF", u8"flag: Djibouti", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3737
 { U"\U0001F1E9\U0001F1F0", u8"flag: Denmark", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3738
 { U"\U0001F1E9\U0001F1F2", u8"flag: Dominica", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3739
@@ -3791,7 +3791,7 @@ constinit const uc::LibNode uc::libNodes[9712] {
 { U"\U0001F1EE\U0001F1F1", u8"flag: Israel", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3785
 { U"\U0001F1EE\U0001F1F2", u8"flag: Isle of Man", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3786
 { U"\U0001F1EE\U0001F1F3", u8"flag: India", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3787
-{ U"\U0001F1EE\U0001F1F4", u8"flag: British Indian Ocean Territory", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3788
+{ U"\U0001F1EE\U0001F1F4", u8"flag: British Indian Ocean Territory", 3666, 0, -1, Lfg(865), EcVersion::E2_0 },   // 3788
 { U"\U0001F1EE\U0001F1F6", u8"flag: Iraq", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3789
 { U"\U0001F1EE\U0001F1F7", u8"flag: Iran", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3790
 { U"\U0001F1EE\U0001F1F8", u8"flag: Iceland", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3791

@@ -10,6 +10,7 @@ constinit const ec::Array<const char*, cou::Type> cou::typeKeys {
     TX_STA "AuExt",  // 5
     TX_STA "GbOv",
     TX_STA "GbOv!",
+    TX_STA "GbOvF",
     TX_STA "GbDep",
     TX_STA "CnSpec",
     TX_STA "DkAuto", // 10
@@ -90,202 +91,314 @@ constinit const ec::Array<const char*, cou::Popul> cou::popKeys {
 constinit const cou::Country ALL_COUNTRIES[] {
     { "AC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN,  // Ascension Island
             cou::Popul::MAINLY_MILITARY },
+                // ↑ WP: Dry and barren, the island had little appeal for passing ships
+                // except for collecting fresh meat
+                // WP: RAF Ascension Island
     { "AD", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Andorra
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AE", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // United Arab Emirates
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AF", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Afghanistan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AG", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Antigua & Barbuda
             cou::Popul::DFLT },
+                // ↑ WP: until after a combination of European and African diseases, malnutrition,
+                // and slavery eventually extirpated most of the native population
+                // So let it be permament population, though indigenous are probably exterminated
     { "AI", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Anguilla
             cou::Popul::DFLT },
+                // ↑ WP has no precise data, but Anguilla was probably settled by some Caribs
+                // later exterminated due to their fierce nature
     { "AL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Albania
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Armenia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AO", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Angola
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AQ", cou::Type::NO_MANS_LAND, cou::Location::SOUTH_POLE, // Antarctica
             cou::Popul::MAINLY_SCIENTISTS },
+                // ↑ Obvious
     { "AR", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Argentina
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AS", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_POLYNESIA, // American Samoa
             cou::Popul::DFLT },
+                // ↑ The 1789 visit by Lapérouse ended in an attack → HAVE indigenous
     { "AT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Austria
             cou::Popul::DFLT },
+                // ↑ Continent
     { "AU", cou::Type::RECOGNIZED_STATE, cou::Location::AUSTRALIA, // Australia
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "AW", cou::Type::NETHERLANDS_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // Aruba
             cou::Popul::DFLT },
+                // ↑ WP: Last indigenous Aruban (≈1840 killed in accident)
     { "AX", cou::Type::FINLAND_SPECIAL, cou::Location::BALTIC_SEA, // Åland Islands
             cou::Popul::DFLT },
+                // ↑ WP: Construction of the Kastelholm Castle began in the 1380s.
     { "AZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Azerbaijan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Bosnia & Herzegovina
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BB", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Barbados
             cou::Popul::SETTLERS },
                 // ↑ WP: The Kalinago (called "Caribs" by the Spanish) visited the island regularly,
                 // although there is no evidence of permanent settlement.
     { "BD", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Bangladesh
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Belgium
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BF", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Burkina Faso
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BG", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Bulgaria
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BH", cou::Type::RECOGNIZED_STATE, cou::Location::GULF_OF_PERSIA, // Bahrain
             cou::Popul::DFLT },
+                // ↑ WP: From the sixth to third century BC, Bahrain was part
+                // of the Achaemenid Empire.
     { "BI", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Burundi
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BJ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Benin
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BL", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // St. Barthélemy
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS },
+                // ↑ WP: it is believed that the island was not inhabited permanently
+                // due to its lack of fresh water sources
     { "BM", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // Bermuda
             cou::Popul::SETTLERS },
                 // ↑ WP: Bermuda had no Indigenous population when it was discovered,
                 // nor during initial British settlement a century later.
     { "BN", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Brunei
             cou::Popul::DFLT },
+                // ↑ Cannot quote WP but in 1400 there was smth
     { "BO", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Bolivia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BQ", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Caribbean Netherlands
             cou::Popul::DFLT },
+                // ↑ WP: Remnants of Bonaire's indigenous population can be seen in some of the
+                // island's current inhabitants.
     { "BR", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Brazil
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BS", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_NORTH_AMERICA, // Bahamas
             cou::Popul::DFLT },
+                // ↑ WP: The Spanish did however exploit the native Lucayan peoples
     { "BT", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Bhutan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BV", cou::Type::NORWAY_UNINHABITED, cou::Location::ATLANTIC_ANTARCTIC, // Bouvet Island
             cou::Popul::NATURE_RESERVE },
+                // ↑ Obvious: a small island in such an inhospitable place
+                // WP: It is a protected nature reserve.
     { "BW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Botswana
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BY", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Belarus
             cou::Popul::DFLT },
+                // ↑ Continent
     { "BZ", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Belize
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CA", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Canada
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CC", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::INDIAN_OCEAN, // Cocos (Keeling) Islands
-            cou::Popul::SETTLERS },  // WP: no settlement occurred until the early 19th century
+            cou::Popul::SETTLERS },
+                // ↑ WP: no settlement occurred until the early 19th century
     { "CD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Congo - Kinshasa
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CF", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Central African Republic
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Congo - Brazzaville
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CH", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Switzerland
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CI", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Côte d’Ivoire
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CK", cou::Type::NEWZEALAND_ASSOC, cou::Location::PACIFIC_POLYNESIA, // Cook Islands
             cou::Popul::DFLT },
+                // ↑ WP: trouble broke out between the sailors and the Islanders and many
+                // were killed on both sides
     { "CL", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Chile
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Cameroon
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // China
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CO", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Colombia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CP", cou::Type::FRANCE_UNINHABITED, cou::Location::PACIFIC_NORTH_AMERICA, // Clipperton Island
             cou::Popul::UNINHABITED },
+                // ↑ Just nothing in WP about the people
     { "CQ", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL, // Sark
             cou::Popul::DFLT },
+                // ↑ WP: In 933, Sark was included in the Duchy of Normandy
     { "CR", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Costa Rica
             cou::Popul::DFLT },
+                // ↑ Continent
     { "CU", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Cuba
             cou::Popul::DFLT },
+                // ↑ WP: The Indigenous Taíno were forced to work
     { "CV", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_AFRICA, // Cape Verde
-            cou::Popul::SETTLERS }, // WP: Before the arrival of Europeans, the Cape Verde Islands were uninhabited.
+            cou::Popul::SETTLERS },
+                // ↑ WP: Before the arrival of Europeans, the Cape Verde Islands were uninhabited.
     { "CW", cou::Type::NETHERLANDS_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // Curaçao
             cou::Popul::DFLT },
+                // ↑ WP: The Spaniards enslaved most of the Caquetios (Arawak)
     { "CX", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::MALAY_ARCHIPELAGO, // Christmas Island
-            cou::Popul::SETTLERS }, // WP: In writing his account, he found the island uninhabited.
+            cou::Popul::SETTLERS },
+                // ↑ WP: In writing his account, he found the island uninhabited.
     { "CY", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA, // Cyprus
             cou::Popul::DFLT },
+                // ↑ Obvious: cradle of Western civilization
     { "CZ", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Czechia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "DE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Germany
             cou::Popul::DFLT },
+                // ↑ Continent
     { "DG", cou::Type::MAURITIUS_GB, cou::Location::INDIAN_OCEAN, // Diego Garcia
             cou::Popul::MAINLY_MILITARY },
+                // ↑ WP: No tangible evidence exists of people … before the arrival of Europeans
     { "DJ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Djibouti
             cou::Popul::DFLT },
+                // ↑ Continent
     { "DK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Denmark
             cou::Popul::DFLT },
+                // ↑ Continent
     { "DM", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Dominica
             cou::Popul::DFLT },
+                // ↑ WP: But, as European explorers and settlers entered the region, indigenous
+                // refugees from surrounding islands settled Dominica and pushed out the
+                // Spanish settlers.
+                // So let it be
     { "DO", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Dominican Republic
             cou::Popul::DFLT },
+                // ↑ Another island though close!!!
+                // WP: Initially, after friendly relationships, the Taínos resisted the conquest
     { "DZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Algeria
             cou::Popul::DFLT },
+                // ↑ Continent
     { "EA", cou::Type::SPAIN_AUTONOMY, cou::Location::AFRICA, // Ceuta & Melilla
             cou::Popul::DFLT },
+                // ↑ Don’t want to quote but Ceuta is an ancient city
     { "EC", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Ecuador
             cou::Popul::DFLT },
+                // ↑ Continent
     { "EE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Estonia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "EG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Egypt
             cou::Popul::DFLT },
+                // ↑ Continent
     { "EH", cou::Type::PARTLY_WEST_SAHARA, cou::Location::AFRICA, // Western Sahara
             cou::Popul::MAINLY_NOMADS },
+                // ↑ Don’t want to write, it’s a sad story
     { "ER", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Eritrea
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ES", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Spain
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ET", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Ethiopia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "EU", cou::Type::SUPRANATIONAL_UNION, cou::Location::EUROPE, // European Union
             cou::Popul::DFLT },
+                // ↑ Continent
     { "FI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Finland
             cou::Popul::DFLT },
+                // ↑ Continent
     { "FJ", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // Fiji
             cou::Popul::DFLT },
+                // ↑ WP: Early interaction with Europeans
     { "FK", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_SOUTH_AMERICA, // Falkland Islands
-            cou::Popul::SETTLERS }, // WP: the islands were uninhabited when Europeans first explored them.
+            cou::Popul::SETTLERS },
+                // ↑ WP: the islands were uninhabited when Europeans first explored them.
     { "FM", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Micronesia
             cou::Popul::DFLT },
+                // ↑ WP: Yap is known for its stone money
     { "FO", cou::Type::DENMARK_AUTONOMY, cou::Location::ATLANTIC_EUROPE, // Faroe Islands
             cou::Popul::DFLT },
+                // ↑ WP: Christianity was introduced to the islands in the late 10th
+                // and early 11th centuries
     { "FR", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // France
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Gabon
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GB", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_EUROPE, // United Kingdom
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "GD", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Grenada
             cou::Popul::DFLT },
+                // ↑ WP: Grenada was inhabited by the indigenous peoples from South America
     { "GE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE_ASIA, // Georgia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GF", cou::Type::FRANCE_OVERSEAS, cou::Location::SOUTH_AMERICA, // French Guiana
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GG", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL, // Guernsey
             cou::Popul::DFLT },
+                // ↑ Don’t want to write but long history
     { "GH", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Ghana
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GI", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::EUROPE, // Gibraltar
             cou::Popul::DFLT },
+                // ↑ Barren cliff with very long history, everyone
+                // attempted to control it
     { "GL", cou::Type::DENMARK_AUTONOMY, cou::Location::ARCTIC_OCEAN, // Greenland
             cou::Popul::DFLT },
+                // ↑ AFAIK, long history of colonization
     { "GM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Gambia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Guinea
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GP", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Guadeloupe
             cou::Popul::DFLT },
+                // ↑ WP: Several attempts at colonisation by the Spanish in the 16th
+                // century failed due to attacks from the native people
     { "GQ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Equatorial Guinea
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GR", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Greece
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GS", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_ANTARCTIC, // South Georgia & South Sandwich Islands
             cou::Popul::ABANDONED_GS },
+                // ↑ Don’t want to write but checed long ago, special strings!
     { "GT", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Guatemala
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GU", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA, // Guam
             cou::Popul::DFLT },
     { "GW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Guinea-Bissau
@@ -302,22 +415,31 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "HT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Haiti
             cou::Popul::DFLT },
+                // ↑ WP: Relations with the native peoples, initially good, broke down
+                // and the settlers were later killed by the Taíno.
     { "HU", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Hungary
             cou::Popul::DFLT },
     { "IC", cou::Type::SPAIN_AUTONOMY, cou::Location::ATLANTIC_AFRICA, // Canary Islands
             cou::Popul::DFLT },
+                // ↑ WP: These invasions were "brutal cultural and military clashes between the
+                // indigenous population and the Castilians" lasting over a century
     { "ID", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Indonesia
             cou::Popul::DFLT },
     { "IE", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_BRITISH, // Ireland
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "IL", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Israel
             cou::Popul::DFLT },
+                // ↑ Continent
     { "IM", cou::Type::BRITAIN_DEPENDENT, cou::Location::ATLANTIC_BRITISH, // Isle of Man
             cou::Popul::DFLT },
+                // ↑ Long history, believe me
     { "IN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // India
             cou::Popul::DFLT },
-    { "IO", cou::Type::BRITAIN_OVERSEAS, cou::Location::INDIAN_OCEAN, // British Indian Ocean Territory
+                // ↑ Continent
+    { "IO", cou::Type::BRITAIN_OVERSEAS_FORMER, cou::Location::INDIAN_OCEAN, // British Indian Ocean Territory
             cou::Popul::MAINLY_MILITARY },
+                // ↑ Long story ended in 2024
     { "IQ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Iraq
             cou::Popul::DFLT },
     { "IR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Iran

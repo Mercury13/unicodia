@@ -1830,6 +1830,9 @@ namespace {
         case uc::MISRENDER_FAMILY.numeric():
             key = "Lib.Misr.Family";
             break;
+        case uc::MISRENDER_IO.numeric():
+            key = "Lib.Misr.IO";
+            break;
         default: {
                 auto end = buf + std::size(buf);
                 static constinit const std::string_view HEAD = "Lib.Misr.U";
