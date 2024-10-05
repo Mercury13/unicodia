@@ -401,30 +401,39 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Continent
     { "GU", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA, // Guam
             cou::Popul::DFLT },
+                // ↑ WP: The Spanish-Chamorro Wars on Guam began in 1670
     { "GW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Guinea-Bissau
             cou::Popul::DFLT },
+                // ↑ Continent
     { "GY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Guyana
             cou::Popul::DFLT },
+                // ↑ Continent
     { "HK", cou::Type::CHINA_SPECIAL, cou::Location::ASIA, // Hong Kong SAR China
             cou::Popul::DFLT },
+                // ↑ Continent
     { "HM", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::INDIAN_ANTARCTIC, // Heard & McDonald Islands
             cou::Popul::UNINHABITED },
+                // ↑ Antarctic
     { "HN", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Honduras
             cou::Popul::DFLT },
+                // ↑ Continent
     { "HR", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Croatia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "HT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Haiti
             cou::Popul::DFLT },
                 // ↑ WP: Relations with the native peoples, initially good, broke down
                 // and the settlers were later killed by the Taíno.
     { "HU", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Hungary
             cou::Popul::DFLT },
+                // ↑ Continent
     { "IC", cou::Type::SPAIN_AUTONOMY, cou::Location::ATLANTIC_AFRICA, // Canary Islands
             cou::Popul::DFLT },
                 // ↑ WP: These invasions were "brutal cultural and military clashes between the
                 // indigenous population and the Castilians" lasting over a century
     { "ID", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Indonesia
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "IE", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_BRITISH, // Ireland
             cou::Popul::DFLT },
                 // ↑ Obvious
@@ -442,14 +451,19 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Long story ended in 2024
     { "IQ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Iraq
             cou::Popul::DFLT },
+                // ↑ Continent
     { "IR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Iran
             cou::Popul::DFLT },
+                // ↑ Continent
     { "IS", cou::Type::RECOGNIZED_STATE, cou::Location::ARCTIC_OCEAN, // Iceland
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "IT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Italy
             cou::Popul::DFLT },
+                // ↑ Continent
     { "JE", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL, // Jersey
             cou::Popul::DFLT },
+                // ↑ Some medieval history
     { "JM", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Jamaica
             cou::Popul::DFLT },
                 // ↑ WP: Many slaves managed to escape, forming autonomous communities
@@ -457,28 +471,39 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // mixing with the remaining Taino;
     { "JO", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Jordan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "JP", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA, // Japan
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "KE", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Kenya
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KG", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Kyrgyzstan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KH", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Cambodia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KI", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Kiribati
             cou::Popul::DFLT },
+                // ↑ labour ships associated with the coercive labour recruitment practices,
+                // known as blackbirding.
     { "KM", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Comoros
             cou::Popul::DFLT },
+                // ↑ They also brought Islam to the people of the Zanj including the Comoros.
     { "KN", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // St. Kitts & Nevis
             cou::Popul::DFLT },
                 // ↑ WP: The French and English, intent on exploitation of the island's resources,
                 // encountered resistance from the native Caribs (Kalinago),
     { "KP", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // North Korea
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // South Korea
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KW", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Kuwait
             cou::Popul::DFLT },
+                // ↑ Continent
     { "KY", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Cayman Islands
             cou::Popul::SETTLERS },
                 // ↑ WP: As of 2017, no evidence has been found that the islands
@@ -499,74 +524,103 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // after initially being welcomed by the Carib chief Anthonie.
     { "LI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Liechtenstein
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LK", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA, // Sri Lanka
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "LR", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Liberia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LS", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Lesotho
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Lithuania
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LU", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Luxembourg
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LV", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Latvia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LY", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Libya
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Morocco
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MC", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Monaco
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MD", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Moldova
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ME", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Montenegro
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MF", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // St. Martin
             cou::Popul::DFLT },
                 // ↑ WP: When Europeans began to explore the Caribbean, Carib society
                 // had almost completely displaced the Arawaks.
     { "MG", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Madagascar
             cou::Popul::DFLT },
+                // ↑ WP: The written history of Madagascar began with the Arabs
     { "MH", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Marshall Islands
             cou::Popul::DFLT },
+                // ↑ Micronesian made stick charts, that’s enough
     { "MK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // North Macedonia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ML", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mali
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Myanmar (Burma)
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Mongolia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MO", cou::Type::CHINA_SPECIAL, cou::Location::ASIA, // Macao SAR China
             cou::Popul::DFLT },
+                // ↑ The region is first known to have been settled during the Han dynasty.
     { "MP", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA, // Northern Mariana Islands
             cou::Popul::DFLT },
+                // ↑ In the 18th century the people of the northern Marianas
+                // were forced by Spain to relocate
     { "MQ", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Martinique
             cou::Popul::DFLT },
                 // ↑ WP: The Indigenous people Columbus encountered called Martinique "Matinino".
     { "MR", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mauritania
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MS", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Montserrat
             cou::Popul::SETTLERS },
                 // ↑ WP: after being told that the island was unoccupied because of raids by the Caribs.
     { "MT", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA, // Malta
             cou::Popul::DFLT },
+                // ↑ Maltese order etc → let it be
     { "MU", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Mauritius
             cou::Popul::SETTLERS },
                 // ↑ WP: In 1507, Portuguese sailors came to the uninhabited island
                 // and established a visiting base.
     { "MV", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA, // Maldives
             cou::Popul::DFLT },
+                // ↑ Dives Akuru
     { "MW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Malawi
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MX", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Mexico
             cou::Popul::DFLT },
+                // ↑ Continent
     { "MY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA_MALAY_ARCHIPELAGO, // Malaysia
             cou::Popul::DFLT },
+                // ↑ Partly continent
     { "MZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mozambique
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Namibia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "NC", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_AUSTRALIA, // New Caledonia
             cou::Popul::DFLT },
     { "NE", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Niger
