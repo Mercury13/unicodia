@@ -757,6 +757,35 @@
 			<f loc="ChInvert"><d>🨞 🨟 🨠 🨡 🨢 🨣 🨤 🨥 🨦 🨧 🨨 🨩</d></f>
 			<f loc="ChFairy"><d>🩎 🩏 🩐 🩈 🩋 🩑 🩒 🩓 🩉 🩌</d></f>
 			<f loc="ChNeutral"><d>🨀 🨁 🨂 🨃 🨄 🨅 🩊 🩍</d></f>
+			<f loc="ChComment">				
+				<sq v="…" name="Black’s move" />
+				<sq v="⩲" name="slight plus for White" />
+				<sq v="⩱" name="slight plus for Black" />
+				<sq v="±" name="plus for White" />
+				<sq v="∓" name="plus for Black" />
+				<sq v="∞" name="unclear advantage" />
+				<sq v="⯹" name="low material with compensation" />
+				<sq v="⌓" name="better move would be…" />
+				<sq v="□" name="the only move" />
+				<sq v="Δ" name="with the idea" />
+				<sq v="∇" name="countering" />
+				<sq v="⇄" name="counterplay" />
+				<sq v="↻" name="advantage in development" />
+				<sq v="○" name="advantage in space" />
+				<sq v="⊕" name="zeitnot (time trouble)" />
+				<sq v="⊙" name="zugzwang (no good move)" />
+				<sq v="⨉" name="checkmate (sometimes)" />
+				<sq v="½" name="draw" />
+				<sq v="⮺" name="bishop vs bishop" />
+				<sq v="⮻" name="bishop vs different-colour bishop" />
+				<sq v="⮼" name="bishop vs same-colour bishop" />
+				<sq v="⯺" name="connected pawns" />
+				<sq v="⯻" name="isolated pawns" />
+				<sq v="⯼" name="doubled pawns" />
+				<sq v="⯽" name="passed pawn" />
+				<sq v="≪" name="queen’s/long side" />
+				<sq v="≫" name="king’s/short side" />
+			</f>
 			<d>♟️</d>
 		</f>
 		<f loc="Checkers"><d>⛀ ⛁ ⛂ ⛃</d></f>

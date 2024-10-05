@@ -13156,6 +13156,10 @@
      <orig>Inverted pieces</orig>
      <transl>Перевёрнутые фигуры</transl>
     </text>
+    <text id="ChComment">
+     <orig>Comments</orig>
+     <transl>Комментарии</transl>
+    </text>
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
      <transl>Шашки</transl>

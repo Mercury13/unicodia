@@ -9166,6 +9166,9 @@
     <text id="ChInvert">
      <orig>Inverted pieces</orig>
     </text>
+    <text id="ChComment">
+     <orig>Comments</orig>
+    </text>
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
     </text>

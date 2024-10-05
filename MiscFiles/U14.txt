@@ -18,7 +18,7 @@ Combining diacritical marks supplement
 Latin
 * Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4, Noto CAME
 * Block F: 57 chars, Noto CAME, but I use Funky fix (bolder)
-* Block G: 31 chars, Noto PARTLY CAME, use own due to visible differences
+* Block G: 31 chars, Noto PARTLY CAME except 6 characters (r-like left hooks)
 
 Oriya
 * Noto UI NOT ready even to U13, find Combining overline 0B55
@@ -45,7 +45,7 @@ Arabic OK
 * Pres-A: added FBC2, FD40…4F, FDCF, FDFE, FDFF
 * Noto Naskh NOT ready
 * Scheherazade READY, but FBC2 is absent
-* Use combination of and Sheherazade
+* Use combination of Noto and Sheherazade
 
 Brahmi
 * New chars 11070…75
