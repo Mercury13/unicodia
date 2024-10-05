@@ -395,7 +395,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Continent
     { "GS", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_ANTARCTIC, // South Georgia & South Sandwich Islands
             cou::Popul::ABANDONED_GS },
-                // ↑ Don’t want to write but checed long ago, special strings!
+                // ↑ Don’t want to write but checked long ago, special strings!
     { "GT", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Guatemala
             cou::Popul::DFLT },
                 // ↑ Continent
@@ -452,6 +452,9 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "JM", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Jamaica
             cou::Popul::DFLT },
+                // ↑ WP: Many slaves managed to escape, forming autonomous communities
+                // in remote and easily defended areas in the interior of Jamaica,
+                // mixing with the remaining Taino;
     { "JO", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Jordan
             cou::Popul::DFLT },
     { "JP", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA, // Japan
@@ -468,6 +471,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "KN", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // St. Kitts & Nevis
             cou::Popul::DFLT },
+                // ↑ WP: The French and English, intent on exploitation of the island's resources,
+                // encountered resistance from the native Caribs (Kalinago),
     { "KP", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // North Korea
             cou::Popul::DFLT },
     { "KR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // South Korea
@@ -475,15 +480,23 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "KW", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Kuwait
             cou::Popul::DFLT },
     { "KY", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Cayman Islands
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS },
+                // ↑ WP: As of 2017, no evidence has been found that the islands
+                // had been occupied before their discovery by Europeans
     { "KZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Kazakhstan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Laos
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LB", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Lebanon
             cou::Popul::DFLT },
+                // ↑ Continent
     { "LC", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // St. Lucia
             cou::Popul::DFLT },
+                // ↑ WP: In 1605, an English vessel called the Oliphe Blossome was blown off-course
+                // on its way to Guyana, and the 67 colonists started a settlement on Saint Lucia,
+                // after initially being welcomed by the Carib chief Anthonie.
     { "LI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Liechtenstein
             cou::Popul::DFLT },
     { "LK", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA, // Sri Lanka
@@ -510,6 +523,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "MF", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // St. Martin
             cou::Popul::DFLT },
+                // ↑ WP: When Europeans began to explore the Caribbean, Carib society
+                // had almost completely displaced the Arawaks.
     { "MG", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Madagascar
             cou::Popul::DFLT },
     { "MH", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Marshall Islands
@@ -528,10 +543,12 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "MQ", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Martinique
             cou::Popul::DFLT },
+                // ↑ WP: The Indigenous people Columbus encountered called Martinique "Matinino".
     { "MR", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mauritania
             cou::Popul::DFLT },
     { "MS", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Montserrat
-            cou::Popul::SETTLERS }, // WP: after being told that the island was unoccupied because of raids by the Caribs.
+            cou::Popul::SETTLERS },
+                // ↑ WP: after being told that the island was unoccupied because of raids by the Caribs.
     { "MT", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA, // Malta
             cou::Popul::DFLT },
     { "MU", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Mauritius
@@ -595,9 +612,11 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ WP: However, it is not thought that they settled on the islands permanently.
     { "PN", cou::Type::BRITAIN_OVERSEAS, cou::Location::PACIFIC_POLYNESIA, // Pitcairn Islands
             cou::Popul::SETTLERS },
-                // WP: The islands were uninhabited when they were discovered by Europeans.
+                // ↑ WP: The islands were uninhabited when they were discovered by Europeans.
     { "PR", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // Puerto Rico
             cou::Popul::DFLT },
+                // ↑ WP: At the time of Christopher Columbus's arrival in the New World in 1493,
+                // the dominant indigenous culture was that of the Taínos.
     { "PS", cou::Type::PARTLY_PALESTINE, cou::Location::ASIA, // Palestinian Territories
             cou::Popul::DFLT },
     { "PT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Portugal
@@ -633,7 +652,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "SG", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Singapore
             cou::Popul::DFLT },
     { "SH", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // St. Helena
-            cou::Popul::SETTLERS }, // WP: The Portuguese found the island uninhabited
+            cou::Popul::SETTLERS },
+                // ↑ WP: The Portuguese found the island uninhabited
     { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovenia
             cou::Popul::DFLT },
     { "SJ", cou::Type::NORWAY_DEPENDENT, cou::Location::ARCTIC_OCEAN, // Svalbard & Jan Mayen
@@ -660,6 +680,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "SV", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // El Salvador
             cou::Popul::DFLT },
     { "SX", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Sint Maarten
+                // ↑ See French part
             cou::Popul::DFLT },
     { "SY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Syria
             cou::Popul::DFLT },
@@ -670,10 +691,12 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ WP: The uninhabited islands were first recorded as sighted in 1506
     { "TC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // Turks & Caicos Islands
             cou::Popul::DFLT },
+                // ↑ WP: In either case, by 1512 the Spanish had begun capturing the Taíno and Lucayans
     { "TD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Chad
             cou::Popul::DFLT },
     { "TF", cou::Type::FRANCE_UNINHABITED, cou::Location::INDIAN_ANTARCTIC, // French Southern Territories
             cou::Popul::MAINLY_SCIENTISTS },
+                // ↑ Antarctic :)
     { "TG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Togo
             cou::Popul::DFLT },
     { "TH", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Thailand
@@ -694,6 +717,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "TT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Trinidad & Tobago
             cou::Popul::DFLT },
+                // ↑ WP: …intending to subdue the Indigenous population of the island.
     { "TV", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Tuvalu
             cou::Popul::DFLT },
     { "TW", cou::Type::PARTLY_TAIWAN, cou::Location::PACIFIC_ASIA, // Taiwan
@@ -718,12 +742,19 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::MAINLY_PRIESTS },
     { "VC", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // St. Vincent & Grenadines
             cou::Popul::DFLT },
+                // ↑ WP: The Kalinago people aggressively opposed European settlement on Saint Vincent.
     { "VE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Venezuela
             cou::Popul::DFLT },
     { "VG", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // British Virgin Islands
             cou::Popul::DFLT },
+                // ↑ WP: There is no record of any native Amerindian population in the British Virgin
+                // Islands during this period; it is thought that they either fled to safer islands
+                // or were killed.
+                // So let it be
     { "VI", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN, // U.S. Virgin Islands
             cou::Popul::DFLT },
+                // ↑ WP: The Kalinago (Island Caribs) arrived around the mid-15th century AD.
+                // and some more Amerindians before
     { "VN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Vietnam
             cou::Popul::DFLT },
     { "VU", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // Vanuatu
