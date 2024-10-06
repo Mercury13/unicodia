@@ -668,14 +668,19 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Continent
     { "PF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA, // French Polynesia
             cou::Popul::DFLT },
+                // ↑ WP: sailed through Polynesia sighting an inhabited island on 10 February
     { "PG", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Papua New Guinea
             cou::Popul::DFLT },
+                // ↑ Miklukho-Maklay
     { "PH", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Philippines
             cou::Popul::DFLT },
+                // ↑ see Tglg
     { "PK", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Pakistan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Poland
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PM", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA, // St. Pierre & Miquelon
             cou::Popul::SETTLERS },
                 // ↑ WP: However, it is not thought that they settled on the islands permanently.
@@ -688,8 +693,10 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // the dominant indigenous culture was that of the Taínos.
     { "PS", cou::Type::PARTLY_PALESTINE, cou::Location::ASIA, // Palestinian Territories
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Portugal
             cou::Popul::DFLT },
+                // ↑ Continent
     { "PW", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Palau
             cou::Popul::DFLT },
     { "PY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Paraguay
