@@ -4757,11 +4757,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In movable-type printing turned normal pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces are:</p>
+      <p>In movable-type printing turned normal pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
       <p>* neutral piece: both players may move it;</p>
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, giraffe, dragon, terror;</p>
-      <p>* knight-bishop{{-}}also archbishop, cardinal, princess;</p>
+      <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
       <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
+      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, is not subject to check and mate), drawn as inverted king;</p>
+      <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as inverted or slanted pawn;</p>
+      <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
       <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
       <p>This block also contains pieces of chinese game of Xiangqi.</p>
@@ -4771,11 +4774,14 @@
       <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
      </orig>
      <transl>
-      <p>В сказочной композиции в эпоху наборного шрифта за неимением другого использовали обычные повёрнутые фигуры. Из нестандартных фигур устоялись:</p>
+      <p>В сказочной композиции в эпоху наборного шрифта за неимением другого использовали обычные повёрнутые фигуры. Из нестандартных фигур (кроме ослабленных и позаимствованных из других игр) устоялись:</p>
       <p>* чёрно-белая фигура, которой может ходить любая из сторон;</p>
       <p>* конеферзь{{-}}также суперферзь, ферзь всяческая, магараджа, амазонка, жираф, дракон, ужас;</p>
-      <p>* конеслон{{-}}также архиепископ, кардинал, принцесса;</p>
+      <p>* конеслон{{-}}также архиепископ, кардинал, принцесса, кентавр;</p>
       <p>* конеладья{{-}}также императрица, маршал, канцлер;</p>
+      <p>* манн, человек, принц{{-}}ходит как король, но не королевский (не подлежит рокировке, шаху и мату), рисуется как перевёрнутый король;</p>
+      <p>* беролина, берлинская пешка, антипешка{{-}}ходит на одно поле вперёд наискосок, берёт на одно поле вперёд, в отличие от обычной пешки, рисуется как перевёрнутая или наклонённая пешка;</p>
+      <p>* всадник, единорог{{-}}делает несколько прыжков коня в одном направлении, рисуется как перевёрнутый или видоизменённый конь;</p>
       <p>* эквихоппер{{-}}выбирает любую фигуру (свою или чужую), прыгает через неё и приземляется на таком же расстоянии с другой стороны. Если он прыгает в восьми основных направлениях, все поля от старта до финиша (кроме опорной фигуры) должны быть пусты. Очень манёвренный, но ограничен четвертью клеток.</p>
       <p />
       <p>Также в этом блоке есть фишки китайской игры сянци.</p>
