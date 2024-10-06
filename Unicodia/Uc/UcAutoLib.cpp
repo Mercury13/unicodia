@@ -8822,8 +8822,8 @@ constinit const uc::LibNode uc::libNodes[9712] {
 { U"\u2BFB", u8"isolated pawns", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8816
 { U"\u2BFC", u8"doubled pawns", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8817
 { U"\u2BFD", u8"passed pawn", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8818
-{ U"\u226A", u8"queen’s/long side", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8819
-{ U"\u226B", u8"king’s/short side", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8820
+{ U"\u226A", u8"queen’s side (a)", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8819
+{ U"\u226B", u8"king’s side (h)", 8750, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8820
 { U"\u26C0", {}, 8714, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8821
 { U"\u26C1", {}, 8714, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8822
 { U"\u26C2", {}, 8714, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8823

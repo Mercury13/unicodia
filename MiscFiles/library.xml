@@ -783,8 +783,8 @@
 				<sq v="⯻" name="isolated pawns" />
 				<sq v="⯼" name="doubled pawns" />
 				<sq v="⯽" name="passed pawn" />
-				<sq v="≪" name="queen’s/long side" />
-				<sq v="≫" name="king’s/short side" />
+				<sq v="≪" name="queen’s side (a)" />
+				<sq v="≫" name="king’s side (h)" />
 			</f>
 			<d>♟️</d>
 		</f>
