@@ -808,9 +808,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
                 // ↑ Continent
     { "TK", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Tokelau
-            cou::Popul::SETTLERS },
-                // ↑ WP: The residents appeared to be there only temporarily,
-                // because there was no chief among them
+            cou::Popul::DFLT },
+                // ↑ Was intermittently populated and has own language → let it be
     { "TL", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Timor-Leste
             cou::Popul::DFLT },
                 // ↑ WP: From perhaps the thirteenth century, the island exported sandalwood
