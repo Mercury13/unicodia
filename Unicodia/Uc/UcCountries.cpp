@@ -699,69 +699,93 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ Continent
     { "PW", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA, // Palau
             cou::Popul::DFLT },
+                // ↑ WP: 65.2% Palauan
     { "PY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Paraguay
             cou::Popul::DFLT },
+                // ↑ Continent
     { "QA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Qatar
             cou::Popul::DFLT },
+                // ↑ Continent
     { "RE", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA, // Réunion
-            cou::Popul::SETTLERS }, // WP: The island has been inhabited since the 17th century
+            cou::Popul::SETTLERS },
+                // ↑ WP: The island has been inhabited since the 17th century
     { "RO", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Romania
             cou::Popul::DFLT },
+                // ↑ Continent
     { "RS", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Serbia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "RU", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE_ASIA, // Russia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "RW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Rwanda
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Saudi Arabia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SB", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // Solomon Islands
             cou::Popul::DFLT },
+                // ↑ WP: 95.3% Melanesian
     { "SC", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA, // Seychelles
             cou::Popul::SETTLERS },
                 // ↑ WP: Seychelles was uninhabited until the 18th century when
                 // Europeans arrived with Indians
     { "SD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Sudan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Sweden
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SG", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Singapore
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SH", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // St. Helena
             cou::Popul::SETTLERS },
                 // ↑ WP: The Portuguese found the island uninhabited
     { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovenia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SJ", cou::Type::NORWAY_DEPENDENT, cou::Location::ARCTIC_OCEAN, // Svalbard & Jan Mayen
             cou::Popul::SETTLERS_SVALBARD },
                 // WP: was discovered multiple times → probably no men
     { "SK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Slovakia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SL", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Sierra Leone
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SM", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // San Marino
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Senegal
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SO", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Somalia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SR", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Suriname
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SS", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // South Sudan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ST", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_AFRICA, // São Tomé & Príncipe
             cou::Popul::SETTLERS },
                 // ↑ WP: The islands of São Tomé and Príncipe were uninhabited when
                 // the Portuguese arrived sometime around 1470
     { "SV", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // El Salvador
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SX", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // Sint Maarten
-                // ↑ See French part
             cou::Popul::DFLT },
+                // ↑ See French part
     { "SY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Syria
             cou::Popul::DFLT },
+                // ↑ Continent
     { "SZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Eswatini
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TA", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN, // Tristan da Cunha
             cou::Popul::SETTLERS },
                 // ↑ WP: The uninhabited islands were first recorded as sighted in 1506
@@ -770,57 +794,80 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ WP: In either case, by 1512 the Spanish had begun capturing the Taíno and Lucayans
     { "TD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Chad
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TF", cou::Type::FRANCE_UNINHABITED, cou::Location::INDIAN_ANTARCTIC, // French Southern Territories
             cou::Popul::MAINLY_SCIENTISTS },
                 // ↑ Antarctic :)
     { "TG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Togo
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TH", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Thailand
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TJ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Tajikistan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TK", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Tokelau
-            cou::Popul::DFLT },
+            cou::Popul::SETTLERS },
+                // ↑ WP: The residents appeared to be there only temporarily,
+                // because there was no chief among them
     { "TL", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO, // Timor-Leste
             cou::Popul::DFLT },
+                // ↑ WP: From perhaps the thirteenth century, the island exported sandalwood
     { "TM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Turkmenistan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Tunisia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TO", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Tonga
             cou::Popul::DFLT },
+                // ↑ According to Tongan mythology, the demigod Maui drew up
     { "TR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Türkiye
             cou::Popul::DFLT },
+                // ↑ Continent
     { "TT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Trinidad & Tobago
             cou::Popul::DFLT },
                 // ↑ WP: …intending to subdue the Indigenous population of the island.
     { "TV", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Tuvalu
             cou::Popul::DFLT },
+                // ↑ WP: Mendaña made contact with the islanders but was unable to land
     { "TW", cou::Type::PARTLY_TAIWAN, cou::Location::PACIFIC_ASIA, // Taiwan
             cou::Popul::DFLT },
+                // ↑ Obvious
     { "TZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Tanzania
             cou::Popul::DFLT },
+                // ↑ Continent
     { "UA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Ukraine
             cou::Popul::DFLT },
+                // ↑ Continent
     { "UG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Uganda
             cou::Popul::DFLT },
+                // ↑ Continent
     { "UM", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_POLYNESIA, // U.S. Outlying Islands
             cou::Popul::MAINLY_MILITARY },
+                // ↑ WP: Currently, none of the islands have any known permanent residents
     { "UN", cou::Type::INTERNATIONAL_ORGANIZATION, cou::Location::NEWYORK_HQ, // United Nations
             cou::Popul::NOT_APPLICABLE },
+                // ↑ Obvious
     { "US", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // United States
             cou::Popul::DFLT },
+                // ↑ Continent
     { "UY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Uruguay
             cou::Popul::DFLT },
+                // ↑ Continent
     { "UZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Uzbekistan
             cou::Popul::DFLT },
+                // ↑ Continent
     { "VA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Vatican City
             cou::Popul::MAINLY_PRIESTS },
+                // ↑ Obvious
     { "VC", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // St. Vincent & Grenadines
             cou::Popul::DFLT },
                 // ↑ WP: The Kalinago people aggressively opposed European settlement on Saint Vincent.
     { "VE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA, // Venezuela
             cou::Popul::DFLT },
+                // ↑ Continent
     { "VG", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN, // British Virgin Islands
             cou::Popul::DFLT },
                 // ↑ WP: There is no record of any native Amerindian population in the British Virgin
@@ -833,24 +880,36 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // and some more Amerindians before
     { "VN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Vietnam
             cou::Popul::DFLT },
+                // ↑ Continent
     { "VU", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA, // Vanuatu
             cou::Popul::DFLT },
+                // ↑ WP: Despite Queirós's intention, relations with the Ni-Vanuatu turned
+                // violent within days.
     { "WF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA, // Wallis & Futuna
             cou::Popul::DFLT },
+                // ↑ WP: with the arrival of French missionaries in 1837, who converted
+                // the population to Roman Catholicism
     { "WS", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Samoa
             cou::Popul::DFLT },
+                // ↑ WP: for recruiting local men to serve as crewmen on their ships
     { "XK", cou::Type::PARTLY_KOSOVO, cou::Location::EUROPE, // Kosovo
             cou::Popul::DFLT },
+                // ↑ Continent
     { "YE", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Yemen
             cou::Popul::DFLT },
+                // ↑ Continent
     { "YT", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA, // Mayotte
             cou::Popul::DFLT },
+                // ↑ WP: In 1500, the Maore sultanate was established
     { "ZA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // South Africa
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ZM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Zambia
             cou::Popul::DFLT },
+                // ↑ Continent
     { "ZW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Zimbabwe
             cou::Popul::DFLT },
+                // ↑ Continent
 };
 
 
