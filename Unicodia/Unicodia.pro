@@ -1,7 +1,7 @@
 QT += core gui widgets network svg svgwidgets
 CONFIG += c++2a c++20
 
-VERSION = 2.8.5
+VERSION = 2.8.6
 
 win32-g++ {
     # To simplify debugging, we statically link these libraries
