@@ -4763,7 +4763,7 @@
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, giraffe, dragon, terror;</p>
       <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
       <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
-      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, is not subject to check and mate), drawn as inverted king;</p>
+      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
       <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as inverted or slanted pawn;</p>
       <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
       <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
@@ -4780,7 +4780,7 @@
       <p>* конеферзь{{-}}також суперферзь, ферзь усіляка, магараджа, амазонка, жираф, дракон, жах;</p>
       <p>* конеслон{{-}}також архієпископ, кардинал, принцеса, кентавр;</p>
       <p>* конетура{{-}}також імператриця, маршал, канцлер;</p>
-      <p>* манн, чоловік, принц{{-}}ходить як король, але не королівський (не підлягає рокіровці, шаху та мату), малюється як перевернутий король;</p>
+      <p>* манн, чоловік, принц{{-}}ходить як король, але не королівський (не рокірується, не треба захищати), малюється як перевернутий король;</p>
       <p>* бероліна, берлінський пішак, антипішак{{-}}ходить на одну клітину вперед навскіс, бере на одну клітину вперед, навпаки до звичайного пішака, малюється як перевернутий або нахилений пішак;</p>
       <p>* вершник, єдиноріг{{-}}робить кілька стрибків коня в одному напрямку, малюється як перевернутий або видозмінений кінь;</p>
       <p>* еквіхопер{{-}}обирає будь-яку фігуру (свою або чужу), стрибає через неї та приземлюється на такій ж відстані. Якщо він стрибає у восьми основних напрямках, усі поля від старту до фінішу (окрім опорної фігури) повинні бути порожні. Дуже маневрений, але обмежений чвертю клітин.</p>
