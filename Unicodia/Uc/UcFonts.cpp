@@ -30,14 +30,13 @@ constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
 constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
 constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
+constexpr uc::Family FAM_NAND { "NotoSansNandinagari-Regular.ttf", uc::Fafg::DEHINT_DOTC };
 
 constexpr uc::Family FNAME_DEVA { "NotoSerifDevanagari-Regular.ttf", uc::Fafg::DEHINT_DOTC };
 constexpr std::string_view FNAME_DEVAFIX = "UnicodiaDevaFixup-Regular.ttf";
 constexpr uc::StyleSheet STYLE_NONE {};
 constexpr auto STYLE_DEVA = STYLE_NONE;
 constexpr auto SIZE_DEVA = 110_pc;
-
-constexpr std::string_view FNAME_NAND = "NotoSansNandinagari-Regular.ttf";
 
 char32_t recodeCuneiform(char32_t x)
 {
@@ -103,7 +102,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
-      { FNAME_NAND, Ffg::FALL_TO_NEXT },                                        // …2, fall to Bengali
+      { FAM_NAND, Ffg::FALL_TO_NEXT },                                          // …2, fall to Bengali
     { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC }, 120_pc },          // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
@@ -232,7 +231,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
-    { FNAME_NAND },                                                             // Nandinagari
+    { FAM_NAND },                                                               // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
@@ -274,7 +273,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansIndicSiyaqNumbers-Regular.ttf" },                                // Siyaq Indic
     { "NotoSerifOttomanSiyaq-Regular.ttf" },                                    // Siyaq Ottoman
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
-    { "NotoSansSoyombo-Regular.ttf", Ffg::DESC_BIGGER, 115_pc },                // Soyombo
+    { { "NotoSansSoyombo-Regular.ttf", Fafg::DEHINT_DOTC } , Ffg::DESC_BIGGER, 115_pc },                // Soyombo
     { "UtoSansSundanese-Regular.ttf" },                                         // Sundanese
     { "Mukdum-Final-Unicode.ttf", 140_pc },                                     // Sunuwar
     { "UtoSansSylotiNagri-Regular.ttf" },                                       // Syloti Nagri
@@ -315,7 +314,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
-    { "NotoSansZanabazarSquare-Regular.ttf" },                                  // Zanabazar square
+    { { "NotoSansZanabazarSquare-Regular.ttf", Fafg::DEHINT_DOTC } },           // Zanabazar square
     { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
 };
 
