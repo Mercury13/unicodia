@@ -858,6 +858,9 @@ extern const uc::SideLang uc::sideLangInfo[] {
     { .id = "es",   // Spanish ← Latn
       .lang { .mantissa = 600, .numOrder = NumOrder::MILLION, .year = 2023 } },
                     // Estimate by Cervantes institute
+    { .id = "kkh",  // Khün ← Lana
+      .lang { .mantissa = 100, .numOrder = NumOrder::THOUSAND, .year = 1990 } },
+                    // Ethnologue ← Diller and Juntanamalaga 1990
     { .id = "mnk",  // Mandinka ← Gara
       .lang { .mantissa = 21, .numOrder = NumOrder::HUN_THOUSAND, .year = 2017 } },
                     // Ethnologue
