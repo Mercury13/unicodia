@@ -18,7 +18,7 @@
 
 namespace loc {
 
-    enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
+    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
     extern const std::string_view pluralNames[Plural_N];
 
