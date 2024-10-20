@@ -32,7 +32,7 @@ namespace loc
                 tech,           ///< CHINESE
                 native,         ///< Chinese (simplified)
                 international;  ///< 简体中文
-            std::u32string sortKey;  /// CHINESE (SIMPLIFIED)
+            std::u32string sortKey;  ///< CHINESE (SIMPLIFIED)
         } name;
         struct Icons {
             std::string sortAZ;
