@@ -32,7 +32,7 @@ namespace loc {
     ///  1 lap (one), 2+ laps (many)
     ///  Dubbed as default rule for basic plural
     ///
-    class DefaultQtyRule : public PluralRule
+    class DefaultQtyRule final : public PluralRule
     {
     public:
         Plural ofUint(unsigned long long n) const override;
