@@ -571,7 +571,7 @@ constinit const uc::Script uc::scriptInfo[] {
           .locations { LOC_INDIA_E } } },
     // Osage OK, W10 Gadugi
     { "Osge", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
+        EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         Dating::year(2006), EcFont::GADUGI },
     // Osmanya OK, W10 Ebrima
     { "Osma", QFontDatabase::Any,
