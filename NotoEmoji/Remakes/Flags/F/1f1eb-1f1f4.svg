@@ -1,6 +1,73 @@
-<svg version="1.1" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-<rect x=".15" y="5.15" width="35.7" height="25.7" ry="3.85" fill="#fff" stroke="#9a9996" stroke-width=".3"/>
-<path d="M36 16v-1.5H16.5V5H15v11zM11 5H9.444v9.5H0V16h11z" fill="#0065BD"/>
-<path d="M15 16V5h-4v11H0v4h11v11h4V20h21v-4z" fill="#ED2939"/>
-<path d="M15 20v11h1.5v-9.5H36V20zm-4 0H0v1.5h9.444V31H11z" fill="#0065BD"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 36 36"
+   id="svg3"
+   sodipodi:docname="1f1eb-1f1f4.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="20.972222"
+     inkscape:cx="18"
+     inkscape:cy="18"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3"
+     showguides="true">
+    <sodipodi:guide
+       position="15,31"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="11,31"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="11,20"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="11,16"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <rect
+     x="0.1"
+     y="5.0999999"
+     width="35.799999"
+     height="25.799999"
+     ry="3.9000001"
+     fill="#ffffff"
+     stroke-width="0.2"
+     id="rect1-3"
+     style="stroke:#77767b" />
+  <path
+     id="path1"
+     d="m 9.4433594,5 v 9.5 H 0 V 16 l 3,2 -3,2 v 1.5 H 9.4433594 V 31 H 11 l 2,-4 2,4 h 1.5 V 21.5 H 36 V 20 l -3,-2 3,-2 V 14.5 H 16.5 V 5 H 15 L 13,8 11,5 Z"
+     fill="#0065bd"
+     sodipodi:nodetypes="ccccccccccccccccccccccccc" />
+  <path
+     d="M15 16V5h-4v11H0v4h11v11h4V20h21v-4z"
+     fill="#ED2939"
+     id="path2" />
 </svg>
