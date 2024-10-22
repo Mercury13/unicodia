@@ -1130,14 +1130,6 @@ namespace {
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
-        // Misc technical
-        case 0x23CF:  // VCR eject
-        case 0x23ED:  // VCR next
-        case 0x23EE:  // VCR prev
-        case 0x23EF:  // VCR play/pause
-        case 0x23F8:  // VCR pause
-        case 0x23F9:  // VCR stop
-        case 0x23FA:  // VCR record
         // Misc symbols
         case 0x260E:  // telephone
         case 0x2618:  // shamrock

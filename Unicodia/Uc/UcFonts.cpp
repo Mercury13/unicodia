@@ -291,8 +291,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                      // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …3
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …4
+      { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …3
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 40_bot },      // …4
       { FNAME_NOTOMATH },                                                       // …5
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Telugu
       { FNAME_FUNKY },                                                          // …1
