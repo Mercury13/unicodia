@@ -102,6 +102,7 @@ private:
     // Functions
     void ensureTape();
     const TapeEntry* lookupTape(std::u32string_view text);
+    static std::u32string_view followClone(std::u32string_view text);
     std::string_view getSubtape(unsigned index);    
     void draw1(QPainter* painter, QRect rect, const SvgThing& thing, int height);
     static RecolorInfo checkForRecolor(std::u32string_view text);

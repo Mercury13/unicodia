@@ -285,10 +285,74 @@ void EmojiPainter::getFileName(
 }
 
 
+namespace {
+
+    constexpr char32_t ARR_FR[] { cp::FLAG_F, cp::FLAG_R };
+    constexpr char32_t ARR_ES[] { cp::FLAG_E, cp::FLAG_S };
+    constexpr char32_t ARR_IO[] { cp::FLAG_I, cp::FLAG_O };
+    constexpr char32_t ARR_NO[] { cp::FLAG_N, cp::FLAG_O };
+    constexpr char32_t ARR_US[] { cp::FLAG_U, cp::FLAG_S };
+
+    consteval std::u32string_view toSv(const char32_t (&x)[2])
+        { return { x, 2 }; }
+
+}   // anon namespace
+
+
+std::u32string_view EmojiPainter::followClone(std::u32string_view text)
+{
+    if (text.length() == 2 && text[0] >= cp::FLAG_A && text[0] <= cp::FLAG_Z) {
+        switch (text[0]) {
+        case cp::FLAG_B:
+            // Bouvet ← Norway
+            if (text[1] == cp::FLAG_V) {
+                return toSv(ARR_NO);
+            }
+            break;
+        case cp::FLAG_C:
+            // Clipperton ← France
+            if (text[1] == cp::FLAG_P) {
+                return toSv(ARR_FR);
+            }
+            break;
+        case cp::FLAG_D:
+            // Giego Garcia ← British Indian Ocean
+            if (text[1] == cp::FLAG_G) {
+                return toSv(ARR_IO);
+            }
+            break;
+        case cp::FLAG_E:
+            // Ceuta & Melilla ← Spain
+            if (text[1] == cp::FLAG_A) {
+                return toSv(ARR_ES);
+            }
+            break;
+        case cp::FLAG_M:
+            // St.Martin ← France
+            if (text[1] == cp::FLAG_F) {
+                return toSv(ARR_FR);
+            }
+            break;
+        case cp::FLAG_U:
+            // US Outlying ← USA
+            if (text[1] == cp::FLAG_M) {
+                return toSv(ARR_US);
+            }
+            break;
+        // Similar but inequal:
+        // • Indonesia/Monaco: different red
+        }
+    }
+    return text;
+}
+
+
 const EmojiPainter::TapeEntry* EmojiPainter::lookupTape(std::u32string_view text)
 {
     // Load tape
     ensureTape();
+
+    text = followClone(text);
 
     // Get text
     char fname[80];
