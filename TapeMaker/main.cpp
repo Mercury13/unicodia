@@ -97,11 +97,11 @@ std::u32string parseSeq(std::string s)
 
 TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
 {
-    // Tape will not
+    // Tape will not add empty files
     if (fsize == 0)
         return nullptr;
 
-    // Create entry
+    // Get sequence
     auto fname = p.filename().generic_string();
     auto seq = parseSeq(fname);
     if (seq.empty())

@@ -11,13 +11,16 @@ win32-g++ {
 SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
-        main.cpp
+        main.cpp \
+        optstorage.cpp
 
 HEADERS += \
     ../Libs/PugiXml/pugixml.hpp \
-    ../Libs/SelfMade/i_ByteSwap.h
+    ../Libs/SelfMade/i_ByteSwap.h \
+    optstorage.h
 
 INCLUDEPATH += \
     ../Libs/PugiXml \
+    ../Libs/Sha256 \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings
