@@ -333,6 +333,12 @@ std::u32string_view EmojiPainter::followClone(std::u32string_view text)
                 return toSv(ARR_FR);
             }
             break;
+        case cp::FLAG_S:
+            // Svalbard ← Norway
+            if (text[1] == cp::FLAG_J) {
+                return toSv(ARR_NO);
+            }
+            break;
         case cp::FLAG_U:
             // US Outlying ← USA
             if (text[1] == cp::FLAG_M) {
