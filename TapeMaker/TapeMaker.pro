@@ -24,3 +24,7 @@ INCLUDEPATH += \
     ../Libs/Sha256 \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings
+
+win32 {
+    LIBS += -lshell32 -lole32
+}

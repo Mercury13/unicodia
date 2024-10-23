@@ -312,6 +312,9 @@ int main()
         auto prioMap = loadPrioMap("opt.xml");
 
         OptStorage storage;
+        if (!storage.findOptimizer()) {
+            std::cout << "WARNING: optimizer (svgcleaner-cli) was not found, not an error until actually need" "\n";
+        }
         storage.readXml("files.xml");
 
         deleteBinaries();
@@ -321,9 +324,12 @@ int main()
         std::filesystem::directory_iterator di(".");
         for (const auto& entry: di) {
             if (entry.is_regular_file() && entry.path().extension() == pExt) {
-                auto q = tw.addFile(entry.path(), entry.file_size());
-                if (!q) {
-                    std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << '\n';
+                auto result = storage.checkFile(entry.path().string().c_str());
+                if (result.fsize > 0) {
+                    auto q = tw.addFile(entry.path(), result.fsize);
+                    if (!q) {
+                        std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << '\n';
+                    }
                 }
             }
         }

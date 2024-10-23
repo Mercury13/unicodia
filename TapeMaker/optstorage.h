@@ -2,6 +2,7 @@
 
 #include <string>
 #include <map>
+#include <filesystem>
 
 struct OptInfo
 {
@@ -15,19 +16,30 @@ struct OptInfo
     }
 };
 
-enum class OptResult : unsigned char {
+enum class OptStatus : unsigned char {
     NOT_FOUND,              ///< No file, zero in length, cannot open
     ALREADY_OPTIMIZED,
     OPTIMIZER_RAN
 };
 
+struct OptResult {
+    OptStatus status;
+    long fsize;
+};
+
 struct OptStorage
 {
+    /// Need some order
     std::map<std::string, OptInfo> data;
+    std::filesystem::path pathToOptimizer;
     bool isModified = false;
+
+    /// @return [+] optimizer found
+    bool findOptimizer();
 
     void clear();
     bool isEmpty() const noexcept { return data.empty(); }
+    bool hasOptimizer() const noexcept { return !pathToOptimizer.empty(); }
     void readXml(const char* fname);
     void removeUntouched();
     void writeXml(const char* fname);

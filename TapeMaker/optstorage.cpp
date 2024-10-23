@@ -1,9 +1,17 @@
 #include "optstorage.h"
 
+// Libs
 #include "pugixml.hpp"
 #include "hash_sha256.h"
+#include "u_Strings.h"
 
-#include <filesystem>
+// C++
+#include <cstdlib>
+#include <stdexcept>
+
+#ifdef _WIN32
+    #include <shlobj.h>
+#endif
 
 
 std::string sha256Text(std::string_view data)
@@ -17,7 +25,7 @@ std::string sha256Text(std::string_view data)
     r.reserve(binaryHash.size() * 2);
     char buf[10];
     for (auto q : binaryHash) {
-        snprintf(buf, std::size(buf), "%02x", q);
+        snprintf(buf, std::size(buf), "%02x", (unsigned)q);
         r += q;
     }
     return r;
@@ -76,6 +84,49 @@ void OptStorage::writeXml(const char* fname)
 }
 
 
+bool OptStorage::findOptimizer()
+{
+    static constexpr std::string_view MYFNAME = "svgcleaner-cli.exe";
+    pathToOptimizer.clear();
+    std::filesystem::path newPath = MYFNAME;
+    for (int i = 0; ; ++i) {
+        if (std::filesystem::exists(newPath)) {
+            pathToOptimizer = std::move(newPath);
+            return true;
+        }
+        if (i >= 4)
+            break;
+        newPath = ".." / newPath;
+    }
+
+#ifdef _WIN32
+    {
+        // Copied from header
+        static constinit const GUID PROGRAM_FILES_X86 {
+            0x7c5a40ef, 0xa0fb, 0x4bfc, { 0x87, 0x4a, 0xc0, 0xf2, 0xe0, 0xb9, 0xfa, 0x8e } };
+        PWSTR folder = nullptr;
+        auto q = SHGetKnownFolderPath(
+                    PROGRAM_FILES_X86,
+                    KF_FLAG_DEFAULT,
+                    nullptr,
+                    &folder);
+        if (q == S_OK) {
+            newPath = folder;
+            newPath /= "SVG Cleaner";
+            newPath /= MYFNAME;
+            CoTaskMemFree(folder);
+            if (std::filesystem::exists(newPath)) {
+                pathToOptimizer = std::move(newPath);
+                return true;
+            }
+        }
+    }
+#endif
+
+    return false;
+}
+
+
 constexpr const char* COMMAND =
         "--coordinates-precision=2 --properties-precision=2 "
         "--transforms-precision=4 --paths-coordinates-precision=2 --multipass";
@@ -85,23 +136,23 @@ OptResult OptStorage::checkFile(const char* fname)
 {
     if (!std::filesystem::exists(fname)) {
         data.erase(fname);
-        return OptResult::NOT_FOUND;
+        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
     }
     auto fp = std::fopen(fname, "rb");
     if (!fp) {
         data.erase(fname);
-        return OptResult::NOT_FOUND;
+        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
     }
     std::fseek(fp, 0u, SEEK_END);
     auto size = std::ftell(fp);
     if (size == 0) {
         data.erase(fname);
         std::fclose(fp);
-        return OptResult::NOT_FOUND;
+        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
     }
     std::fseek(fp, 0u, SEEK_SET);
     std::string content(size, '\0');
-    std::fread(&content[0], 1u, size, fp);
+    std::fread(content.data(), 1u, size, fp);
     std::fclose(fp);
 
     auto computedSha256 = sha256Text(content);
@@ -109,11 +160,44 @@ OptResult OptStorage::checkFile(const char* fname)
     info.isTouched = true;
     if (info.is(size, computedSha256)) {
         info.content = content;
-        return OptResult::ALREADY_OPTIMIZED;
+        return { .status = OptStatus::ALREADY_OPTIMIZED, .fsize = size };
     }
 
     // Run optimizer
+    if (pathToOptimizer.empty()) {
+        throw std::logic_error(str::cat(
+            "File ", fname, " is not optimized, and optimizer was not found"));
+    }
+    std::cout << "NOTE: optimizing " << fname << '\n';
+    auto command = str::cat('"', str::toSv(pathToOptimizer.u8string()),
+                            "\" ", fname, ' ', fname, ' ', COMMAND);
+    std::system(command.c_str());
+
+    // Read file once again
+    fp = std::fopen(fname, "rb");
+    if (!fp) {
+        throw std::logic_error(str::cat("Cannot open <", fname, "> once again"));
+    }
+    std::fseek(fp, 0u, SEEK_END);
+    size = std::ftell(fp);
+    if (size == 0) {
+        std::fclose(fp);
+        throw std::logic_error(str::cat("File <", fname, "> is empty"));
+    }
+    std::fseek(fp, 0u, SEEK_SET);
+    std::string newContent(size, '\0');
+    std::fread(newContent.data(), 1u, size, fp);
+    std::fclose(fp);
+
+    // Fill new info
+    info.content = newContent;
+    info.length = size;
+    info.sha256text = sha256Text(newContent);
+
+    if (newContent == content) {
+        std::cout << "NOTE: " << fname << " was not touched by optimizer" "\n";
+    }
 
     isModified = true;
-    return OptResult::OPTIMIZER_RAN;
+    return { .status = OptStatus::OPTIMIZER_RAN, .fsize = size };
 }
