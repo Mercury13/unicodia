@@ -12,6 +12,9 @@
 #include "i_ByteSwap.h"
 #include "u_Strings.h"
 
+// Project-local
+#include "optstorage.h"
+
 using namespace std::string_view_literals;
 
 
@@ -305,20 +308,33 @@ PriorityMap loadPrioMap(const char* fname)
 
 int main()
 {
-    auto prioMap = loadPrioMap("opt.xml");
+    try {
+        auto prioMap = loadPrioMap("opt.xml");
 
-    deleteBinaries();
-    TapeWriter tw;
-    std::filesystem::path pExt(".svg");
-    std::filesystem::directory_iterator di(".");
-    for (const auto& entry: di) {
-        if (entry.is_regular_file() && entry.path().extension() == pExt) {
-            auto q = tw.addFile(entry.path(), entry.file_size());
-            if (!q) {
-                std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << std::endl;
+        OptStorage storage;
+        storage.readXml("files.xml");
+
+        deleteBinaries();
+        TapeWriter tw;
+        std::cout << "TRAVERSING DIRECTORY..." "\n";
+        std::filesystem::path pExt(".svg");
+        std::filesystem::directory_iterator di(".");
+        for (const auto& entry: di) {
+            if (entry.is_regular_file() && entry.path().extension() == pExt) {
+                auto q = tw.addFile(entry.path(), entry.file_size());
+                if (!q) {
+                    std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << '\n';
+                }
             }
         }
+        tw.sortBy(prioMap);
+        tw.write();
+
+        storage.removeUntouched();
+        if (!storage.isModified && !storage.isEmpty()) {
+            storage.writeXml("files.xml");
+        }
+    } catch (const std::exception& e) {
+        std::cout << "ERROR: " << e.what() << '\n';
     }
-    tw.sortBy(prioMap);
-    tw.write();
 }
