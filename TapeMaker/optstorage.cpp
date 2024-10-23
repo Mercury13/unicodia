@@ -26,7 +26,7 @@ std::string sha256Text(std::string_view data)
     char buf[10];
     for (auto q : binaryHash) {
         snprintf(buf, std::size(buf), "%02x", (unsigned)q);
-        r += q;
+        r += buf;
     }
     return r;
 }
@@ -156,7 +156,20 @@ OptResult OptStorage::checkFile(const char* fname)
     std::fclose(fp);
 
     auto computedSha256 = sha256Text(content);
-    auto& info = data[fname];
+
+    // Get naked name
+    auto nakedName = fname;
+    for (auto it = fname; *it != 0; ++it) {
+        switch (*it) {
+        case '/':
+        case '\\':
+            nakedName = it + 1;
+            break;
+        default: ;
+        }
+    }
+
+    auto& info = data[nakedName];
     info.isTouched = true;
     if (info.is(size, computedSha256)) {
         info.content = content;
