@@ -35,23 +35,24 @@ std::string seqStem(std::u32string_view seq)
 struct TapeEntry
 {
     unsigned iSubtape,
-             offset,
-             length;
+             offset;
     std::u32string seq;
-    std::filesystem::path fnIn;
     std::string stemOut;
+    std::string content;
     unsigned priority;
+    size_t length() const { return content.size(); }
 };
 
 
 using PriorityMap = std::unordered_map<std::string, int>;
+struct OptInfo;
 
 
 class TapeWriter
 {
 public:
     /// @return [0] not added [+] its filename
-    TapeEntry* addFile(const std::filesystem::path& p, unsigned fsize);
+    TapeEntry* addFile(const std::filesystem::path& p, OptInfo& info);
     void sortBy(const PriorityMap& prioMap);
     void write();
 private:
@@ -98,10 +99,10 @@ std::u32string parseSeq(std::string s)
     return r;
 }
 
-TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
+TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, OptInfo& info)
 {
     // Tape will not add empty files
-    if (fsize == 0)
+    if (info.length == 0)
         return nullptr;
 
     // Get sequence
@@ -115,10 +116,9 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
     auto& entry = allEntries.emplace_back(TapeEntry {
                     .iSubtape = 100000,
                     .offset = SUBTAPE_SIZE * 100,
-                    .length = fsize,
                     .seq = seq,
-                    .fnIn = p,
                     .stemOut = stemOut,
+                    .content = std::move(info.content),
                     .priority = prio
                 });
 
@@ -183,7 +183,7 @@ TapeWriter::DivideIntoSubtapes TapeWriter::divideIntoSubtapes()
         subtape->entries.push_back(&entry);
 
         // Add size
-        subtape->size += entry.length;
+        subtape->size += entry.length();
         r.biggestSubtape = std::max(r.biggestSubtape, subtape->size);
         if (subtape->size > SUBTAPE_SIZE) {
             wantNewSubtape = true;
@@ -218,7 +218,7 @@ void TapeWriter::writeDirectory() const
     for (auto& entry : allEntries) {
         writeIW(os, entry.iSubtape);
         writeID(os, entry.offset);
-        writeID(os, entry.length);
+        writeID(os, entry.length());
         auto fname = entry.stemOut + ".svg";
         writeIW(os, fname.length());
         os.write(fname.data(), fname.length());
@@ -241,8 +241,6 @@ void TapeWriter::sortBy(const PriorityMap& prioMap)
 
 void TapeWriter::write()
 {
-    /// @todo [urgent] reorder subtapes
-
     auto div = divideIntoSubtapes();
 
     std::string tapeBuf;
@@ -252,12 +250,7 @@ void TapeWriter::write()
         // Build contents
         tapeBuf.clear();
         for (auto& pEntry : subtape.entries) {
-            std::ifstream is(pEntry->fnIn, std::ios::binary);
-            if (!is.read(tapeBuf.data() + pEntry->offset, pEntry->length))
-                throw std::logic_error("Strange file size");
-            std::cout << pEntry->stemOut
-                      << "     prio=" << pEntry->priority
-                      << std::endl;
+            std::ranges::copy(pEntry->content, tapeBuf.data() + pEntry->offset);
         }
 
         // Generate subtape name
@@ -326,13 +319,14 @@ int main()
             if (entry.is_regular_file() && entry.path().extension() == pExt) {
                 auto result = storage.checkFile(entry.path().string().c_str());
                 if (result.info) {
-                    auto q = tw.addFile(entry.path(), result.info->length);
+                    auto q = tw.addFile(entry.path(), *result.info);
                     if (!q) {
                         std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << '\n';
                     }
                 }
             }
         }
+        std::cout << "BUILDING TAPE..." "\n";
         tw.sortBy(prioMap);
         tw.write();
 

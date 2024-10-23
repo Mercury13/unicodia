@@ -25,7 +25,7 @@ enum class OptStatus : unsigned char {
 
 struct OptResult {
     OptStatus status;
-    const OptInfo* info;
+    OptInfo* info;
 };
 
 struct OptStorage
