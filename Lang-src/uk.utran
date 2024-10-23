@@ -14042,7 +14042,7 @@
    <group id="Ibm">
     <text id="Text">
      <orig>
-      <p>The computer became ''de facto'' standard in late 1980s: it had been cloned in 1982, and new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, diverse, not restricted with low memory or graphic capabilities.</p>
+      <p>The computer became ''de facto'' standard in late 1980s: it had been cloned in 1982, and new models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more important, diverse, not restricted with low memory or capabilities of graphic accelerator.</p>
       <p />
       <p>Another IBM’s strengths were excellent text quality (80×25 cells 9×16 each in later adapters) and ease of localization (done completely in software).</p>
       <p />
@@ -14051,7 +14051,7 @@
       <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in 2010s). Only portable and special-purpose systems use other architectures.</p>
      </orig>
      <transl>
-      <p>Комп’ютер став стандартом де-факто у кінці 1980-х: клони з’явилися у 1982, і нові моделі ставали потужніше та потужніше, зберігаючи сумісність зі старим ПЗ. Ігри спочатку були погані, але VGA (320×200, 256 кольорів, 1987) та груба процесорна потужність дозволили доволі красиві ігри{{-}}і, що важливо, різноманітні, не обмежені браком пам’яті або можливостями графіки.</p>
+      <p>Комп’ютер став стандартом де-факто у кінці 1980-х: клони з’явилися у 1982, і нові моделі ставали потужніше та потужніше, зберігаючи сумісність зі старим ПЗ. Ігри спочатку були погані, але VGA (320×200, 256 кольорів, 1987) та груба процесорна потужність дозволили доволі красиві ігри{{-}}і, що важливо, різноманітні, не обмежені браком пам’яті або можливостями графічного прискорювача.</p>
       <p />
       <p>Інші сильні сторони IBM{{-}}відмінна якість тексту (80×25 знакомісць 9×16 кожне у пізніх адаптерах) та простота локалізації (робиться цілком програмно).</p>
       <p />
