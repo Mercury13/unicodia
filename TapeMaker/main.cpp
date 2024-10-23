@@ -331,7 +331,7 @@ int main()
         tw.write();
 
         storage.removeUntouched();
-        if (!storage.isModified && !storage.isEmpty()) {
+        if (storage.isModified && !storage.isEmpty()) {
             storage.writeXml("files.xml");
         }
     } catch (const std::exception& e) {
