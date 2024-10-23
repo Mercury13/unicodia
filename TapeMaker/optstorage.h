@@ -19,12 +19,13 @@ struct OptInfo
 enum class OptStatus : unsigned char {
     NOT_FOUND,              ///< No file, zero in length, cannot open
     ALREADY_OPTIMIZED,
-    OPTIMIZER_RAN
+    OPTIMIZER_IN_VAIN,
+    OPTIMIZER_SUCCESS
 };
 
 struct OptResult {
     OptStatus status;
-    long fsize;
+    const OptInfo* info;
 };
 
 struct OptStorage

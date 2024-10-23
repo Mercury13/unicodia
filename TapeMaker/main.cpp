@@ -325,8 +325,8 @@ int main()
         for (const auto& entry: di) {
             if (entry.is_regular_file() && entry.path().extension() == pExt) {
                 auto result = storage.checkFile(entry.path().string().c_str());
-                if (result.fsize > 0) {
-                    auto q = tw.addFile(entry.path(), result.fsize);
+                if (result.info) {
+                    auto q = tw.addFile(entry.path(), result.info->length);
                     if (!q) {
                         std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << '\n';
                     }

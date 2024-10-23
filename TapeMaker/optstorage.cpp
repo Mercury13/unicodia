@@ -136,19 +136,19 @@ OptResult OptStorage::checkFile(const char* fname)
 {
     if (!std::filesystem::exists(fname)) {
         data.erase(fname);
-        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
+        return { .status = OptStatus::NOT_FOUND, .info = nullptr };
     }
     auto fp = std::fopen(fname, "rb");
     if (!fp) {
         data.erase(fname);
-        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
+        return { .status = OptStatus::NOT_FOUND, .info = nullptr };
     }
     std::fseek(fp, 0u, SEEK_END);
     auto size = std::ftell(fp);
     if (size == 0) {
         data.erase(fname);
         std::fclose(fp);
-        return { .status = OptStatus::NOT_FOUND, .fsize = 0 };
+        return { .status = OptStatus::NOT_FOUND, .info = nullptr };
     }
     std::fseek(fp, 0u, SEEK_SET);
     std::string content(size, '\0');
@@ -173,7 +173,7 @@ OptResult OptStorage::checkFile(const char* fname)
     info.isTouched = true;
     if (info.is(size, computedSha256)) {
         info.content = content;
-        return { .status = OptStatus::ALREADY_OPTIMIZED, .fsize = size };
+        return { .status = OptStatus::ALREADY_OPTIMIZED, .info = &info };
     }
 
     // Run optimizer
@@ -181,13 +181,17 @@ OptResult OptStorage::checkFile(const char* fname)
         throw std::logic_error(str::cat(
             "File ", fname, " is not optimized, and optimizer was not found"));
     }
+    static constexpr const char* TEMPFNAME = "~temp.svg";
     std::cout << "NOTE: optimizing " << fname << '\n';
     auto command = str::cat('"', str::toSv(pathToOptimizer.u8string()),
-                            "\" ", fname, ' ', fname, ' ', COMMAND);
+                            "\" ", fname, ' ', TEMPFNAME, ' ', COMMAND);
     std::system(command.c_str());
+    if (!std::filesystem::exists(TEMPFNAME)) {
+        throw std::logic_error(str::cat("Optimizer did not create ", TEMPFNAME));
+    }
 
     // Read file once again
-    fp = std::fopen(fname, "rb");
+    fp = std::fopen(TEMPFNAME, "rb");
     if (!fp) {
         throw std::logic_error(str::cat("Cannot open <", fname, "> once again"));
     }
@@ -209,8 +213,13 @@ OptResult OptStorage::checkFile(const char* fname)
 
     if (newContent == content) {
         std::cout << "NOTE: " << fname << " was not touched by optimizer" "\n";
+        remove(TEMPFNAME);
+        return { .status = OptStatus::OPTIMIZER_IN_VAIN, .info = &info };
     }
 
+    remove(fname);
+    rename(TEMPFNAME, fname);
+
     isModified = true;
-    return { .status = OptStatus::OPTIMIZER_RAN, .fsize = size };
+    return { .status = OptStatus::OPTIMIZER_SUCCESS, .info = &info };
 }
