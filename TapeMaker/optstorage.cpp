@@ -129,7 +129,8 @@ bool OptStorage::findOptimizer()
 
 constexpr const char* COMMAND =
         "--coordinates-precision=2 --properties-precision=2 "
-        "--transforms-precision=4 --paths-coordinates-precision=2 --multipass";
+        "--transforms-precision=4 --paths-coordinates-precision=2 --multipass "
+        "--copy-on-error";
 
 
 OptResult OptStorage::checkFile(const char* fname)
