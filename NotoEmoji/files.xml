@@ -40,10 +40,10 @@
 	<file name="1f1e8-1f1e6.svg" size="699" sha256="94c5da72a41a8f94564ab634d98ac6d0beca7ac7181bc93ca05d21be101a407d" />
 	<file name="1f1e8-1f1e8.svg" size="1393" sha256="43628c4eb7593ee43c6808ade3caf526f00513f28096112ab651c9f2e6ef1d28" />
 	<file name="1f1e8-1f1e9.svg" size="704" sha256="75b5c9379f486e504c880e866b9d1d28eced06881b595a68be4e397a1eea32de" />
-	<file name="1f1e8-1f1eb.svg" size="628" sha256="53c54616690840970cb2817504c88e5b13028ca55a310c939ed51bd5b7e163e5" />
+	<file name="1f1e8-1f1eb.svg" size="482" sha256="a7be011524921805b4ff163ede5cdca8e812bc9c50bb3ea318fd3937548da89d" />
 	<file name="1f1e8-1f1ec.svg" size="357" sha256="e21d2f1b17370a21978745280327eaba68672da9455a62c93d9188f9fabed89c" />
 	<file name="1f1e8-1f1ed.svg" size="254" sha256="e6fa6297e3661a964c4e851b9eb71778c580433d6f5befb5a95013ef8ef9317e" />
-	<file name="1f1e8-1f1ee.svg" size="410" sha256="f1184ead9452f76c42eba2efe5e7e129cd317ba4502dbcef0e401743680d9e27" />
+	<file name="1f1e8-1f1ee.svg" size="389" sha256="f4651f5f6348827b45f4e3a70e36649405c2ea23c6789dbba1432b532c988db4" />
 	<file name="1f1e8-1f1f0.svg" size="1901" sha256="abaa87b5a2edb5b99e5d681f14dcc7ddc8d8496433f9f48fd6706f12ec3e916b" />
 	<file name="1f1e8-1f1f1.svg" size="430" sha256="7a47e193ffa9dc7a8115181cd41a917bf432bb1fcdbc662911e4974a4dd74740" />
 	<file name="1f1e8-1f1f2.svg" size="377" sha256="ecc8bf4fb6b4cc4fed73ed403edbef55132ca43dca7dd0a3f157f2a3560ee973" />
@@ -89,7 +89,7 @@
 	<file name="1f1ec-1f1f2.svg" size="322" sha256="b0af62090d56cfc075b4d21dc0dceef62ea4e93f6b4de4b3a5a42894c794a595" />
 	<file name="1f1ec-1f1f3.svg" size="268" sha256="bb189b81422a9c55cfcc7ba409b8882c0ca6196356ae75bfa31be4d7d384740a" />
 	<file name="1f1ec-1f1f5.svg" size="4423" sha256="f5c33168d4d9da252ecfa830ea184994fd664b0f86d4ddc493c510ef819c1863" />
-	<file name="1f1ec-1f1f6.svg" size="3281" sha256="16f74f7f7d2c97427f5bd2cdace82152451ef695d1da39db06f78b19bec5f3bc" />
+	<file name="1f1ec-1f1f6.svg" size="3294" sha256="995050559526fee1a52a56f437e3c9ba2ffaaae0063709ce93e7a0437c051654" />
 	<file name="1f1ec-1f1f7.svg" size="742" sha256="a9179b3c93a500da7b2d0dc19a0104facbb5f89686149bbd9936618c1cad008f" />
 	<file name="1f1ec-1f1f8.svg" size="6756" sha256="18e5d11eea0be7a1844c161132928a26d867d06e622f60cfeef0c6f171b6210d" />
 	<file name="1f1ec-1f1f9.svg" size="7043" sha256="ef77bf2848f4a386be91b45ee7db8a8ed3b26a32fe4a9fa547bdd10df853f255" />
@@ -99,20 +99,20 @@
 	<file name="1f1ed-1f1f0.svg" size="4313" sha256="cb470458d75498016ce48af73418ed9782d034a8f031551c59a829a69e1bcd28" />
 	<file name="1f1ed-1f1f2.svg" size="1468" sha256="586f5ad27c7441fcb408ff47109aa1c6bca579ef3a14338537993ecf6b5c94bd" />
 	<file name="1f1ed-1f1f3.svg" size="535" sha256="feb56986117cd9f579e8b8b0da7e592d9304cf66fcd3c21d89ef18cf82a6627a" />
-	<file name="1f1ed-1f1f7.svg" size="1413" sha256="696db0e798b919631401ff9ade350a41376b3d264d0bcd351718c50566e8df6e" />
+	<file name="1f1ed-1f1f7.svg" size="1413" sha256="4210db2e2f0bceddeab0afb66cb141fbe60055b4ad39099aa46dee6a5e961e55" />
 	<file name="1f1ed-1f1f9.svg" size="3383" sha256="86989bf5606c0e2e168bef0439b740b52a026fcfaad20c03418bd72590966a4b" />
-	<file name="1f1ed-1f1fa.svg" size="391" sha256="a357022cb4b1d8bb2117d1bcf5c6ad3fe53656c8256eba68dfc86bd41c5ec835" />
+	<file name="1f1ed-1f1fa.svg" size="391" sha256="c55c68ab4e38e4cd70b11b417df6810dd6ef2084c787bbefe493a03639a5da05" />
 	<file name="1f1ee-1f1e8.svg" size="4352" sha256="afe904ce16aef8c0301546d318902e62f7be6bfccd29006cdf836f080a8e5c98" />
 	<file name="1f1ee-1f1e9.svg" size="252" sha256="4b8853aed12e0d0e89771e76f2ce5cc1920480b1f4617b9f4bb7210ebc93663c" />
-	<file name="1f1ee-1f1ea.svg" size="389" sha256="187b9ffc3c483050af27084fd14216cf4fb73d61daed13c9cd937947cc26d088" />
+	<file name="1f1ee-1f1ea.svg" size="389" sha256="a33217c1484457527f5b495ba1385e11563950572b2a121c4eb4f96aeeac1151" />
 	<file name="1f1ee-1f1f1.svg" size="706" sha256="4121fcc600321db5cf1aa2f9761325bf45218f533f4eef0fd951fa8fcd18cf5d" />
 	<file name="1f1ee-1f1f2.svg" size="1409" sha256="ee4876f6d48fc9a30e038548b1cbe7d25b653c380b03da8b38add05060967b32" />
-	<file name="1f1ee-1f1f3.svg" size="2171" sha256="ea1f8ffcba3c66a42a952f6ae11a208e2c6895cc7e0a098a345dc1ce6b7d0827" />
+	<file name="1f1ee-1f1f3.svg" size="2171" sha256="819d2907e3b96b7c9727b1577674a72153b47e11a8ee574a9838dc22fd2ace3c" />
 	<file name="1f1ee-1f1f4.svg" size="6069" sha256="9b89eaa6f44ac19da9fac12d1764bdf4a775d8a7d98267a9bf3faaf5b3c5d733" />
-	<file name="1f1ee-1f1f6.svg" size="1274" sha256="a009d106feb298e8f08b37caf8daa4fe66f8e60363aa1cae8e3604c197c130ea" />
-	<file name="1f1ee-1f1f7.svg" size="1066" sha256="ecc1fe23c7160de9ba00285bd1b87ee499b39cc635817cbd504b3afb63ec9f55" />
+	<file name="1f1ee-1f1f6.svg" size="1298" sha256="1c59062bcae1955570e0f6b12cb4d1f62c1863c83a3f29fbf48d11bed51bd20f" />
+	<file name="1f1ee-1f1f7.svg" size="1066" sha256="16e83fbc5d4d46b2eaeb00b1043e7ab2a87bfd3d8c8c8e6d4a4e4417952a5971" />
 	<file name="1f1ee-1f1f8.svg" size="482" sha256="51dedb859e33530d458bbf2822ad38c61657d0e586d7dbe76a86ac776fd1823e" />
-	<file name="1f1ee-1f1f9.svg" size="387" sha256="441cf77e934ce436abf4d1a0fa58d78fd6612989fb119ec59175342fd600cda5" />
+	<file name="1f1ee-1f1f9.svg" size="387" sha256="98039fbc04f0a63d24d485f00b4b5604d5eb99942d8e7b5c71d41ff06ba626ee" />
 	<file name="1f1ef-1f1ea.svg" size="7753" sha256="1eefd0223eb0cc6992e343b51a5c6b8c222f591d11894dce8f9a45f637fc9712" />
 	<file name="1f1ef-1f1f2.svg" size="615" sha256="aa4eab9488470f90ea8fd79b1c76ed5021c6bdb5e70946690b41f78bd56782ac" />
 	<file name="1f1ef-1f1f4.svg" size="567" sha256="5f3ed751eb89f683ec673a64a8a31e3eb2351978497942529ae4868a86e50c92" />
@@ -167,7 +167,7 @@
 	<file name="1f1f3-1f1eb.svg" size="10296" sha256="edacb0e2fe5825fe2265fac74ba5fa4edc03103a9368718aa18ebc58d5649079" />
 	<file name="1f1f3-1f1ec.svg" size="168" sha256="137d3022b226802df0d4eb49750d0f31c052d768e7d4046589f3456ffa81c83c" />
 	<file name="1f1f3-1f1ee.svg" size="1801" sha256="e29143229991056adff24fcd468c4076df45f05848636f6e15b153d56cfe433f" />
-	<file name="1f1f3-1f1f1.svg" size="428" sha256="7ab65fa4fcfc9527ec0691ee457262bcc225389a55d0c481c0dd3fdf80080f34" />
+	<file name="1f1f3-1f1f1.svg" size="409" sha256="1c44769989873b082dfbff8c976ebb3e76f63cc7f401cc95a440ddd7bffb3254" />
 	<file name="1f1f3-1f1f4.svg" size="459" sha256="b757b0ce5e1342e346d6ace2e11ac38252f5dd1d20a62c3b2e608a8254ceb292" />
 	<file name="1f1f3-1f1f5.svg" size="606" sha256="101b39e1db3a2eeeb8edc5c145644db80bd7792da83c4701bf9792a9e82145e3" />
 	<file name="1f1f3-1f1f7.svg" size="470" sha256="5adb5be0cdaab6ffc3460d8e5a39183f94a1f2453083f357c7b0d5ab4a0a5e94" />
@@ -184,10 +184,10 @@
 	<file name="1f1f5-1f1f2.svg" size="10309" sha256="febf8c888899c17970dca910afef1e35e197dd8cdf62f40ccde16a99ba7f3b09" />
 	<file name="1f1f5-1f1f3.svg" size="4643" sha256="388d14c9fce1bb4525b261fad5fb473d20a56bbc1a62a0836e796314e8e07d9b" />
 	<file name="1f1f5-1f1f7.svg" size="668" sha256="af57ef0aa2b9e9f3c63007a80ac340c14f22a6f6befd135b74d2e3f40bbebf58" />
-	<file name="1f1f5-1f1f8.svg" size="408" sha256="66e8eecc87494e5a8fb5a425dbf2635bad5c4b430a886a0febd3fe7587dabba0" />
+	<file name="1f1f5-1f1f8.svg" size="408" sha256="8189ac13d5c9c4d33fde16d6cc4110ea94777ca5b451b7bc346c4d59defe2066" />
 	<file name="1f1f5-1f1f9.svg" size="1228" sha256="1da4f658cf8c90f3f63a7e03aaeb8146f0c9cd77368432cd92f49e6207e33ac0" />
 	<file name="1f1f5-1f1fc.svg" size="234" sha256="c1d057634b1e82b92b259454a28ac724387b2198846d20531bcc5f9ee6351c39" />
-	<file name="1f1f5-1f1fe.svg" size="1987" sha256="6bb64da628ea4d290ecb0dc9ebf9c15c92c280084daf72e7166e8c4180e67aa8" />
+	<file name="1f1f5-1f1fe.svg" size="2009" sha256="6394f02098668c9265a62082f49521e96ee689391ae63bf3f657433733754bee" />
 	<file name="1f1f6-1f1e6.svg" size="425" sha256="94d421ef0465ade52560eea9b307c33dc0e8c1b2d223ee86f89ec5d6976078c7" />
 	<file name="1f1f7-1f1ea.svg" size="490" sha256="48abb22e5ce26fbc084ff48649cc992da0b2689d93bd47a35410e23e1c08094a" />
 	<file name="1f1f7-1f1f4.svg" size="268" sha256="41efc4d9c93fb5161d8b6cba6e77e990103ad099b22b7acc548f031afcbc15cf" />
