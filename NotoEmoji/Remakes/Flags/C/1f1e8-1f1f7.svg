@@ -1,1 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#002B7F" d="M36 27c0 2.209-1.791 4-4 4H4c-2.209 0-4-1.791-4-4V9c0-2.209 1.791-4 4-4h28c2.209 0 4 1.791 4 4v18z"/><path fill="#FFF" d="M0 9h36v18H0z"/><path fill="#CE1225" d="M0 13h36v10H0z"/><ellipse fill="#FFF" cx="8.5" cy="18" rx="3.5" ry="4"/><path fill="#F4CB58" d="M10.269 19.5c0 .828-.792 2.079-1.769 2.079S6.731 20.328 6.731 19.5c0-.829.792-1.5 1.769-1.5s1.769.671 1.769 1.5z"/><ellipse fill="#DCA841" cx="8.5" cy="19.5" rx="2.5" ry="1.5"/><ellipse fill="#89C5E4" cx="8.5" cy="16" rx="1.5" ry="1"/><ellipse fill="#088930" cx="8.5" cy="18.5" rx="1.5" ry="2.5"/><ellipse fill="#DCA841" cx="8.5" cy="16.5" rx="1.5" ry=".5"/><path fill="#89C5E4" d="M10 18c0 1.104-.671 2-1.5 2S7 19.104 7 18s.671-1.498 1.5-1.498S10 16.896 10 18z"/><ellipse fill="#DCA841" cx="8.5" cy="18.5" rx="1.5" ry=".5"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="1f1e8-1f1f7.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="29.659201"
+     inkscape:cx="24.461212"
+     inkscape:cy="20.04437"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <path
+     fill="#002b7f"
+     d="m 36,27 c 0,2.209 -1.791,4 -4,4 H 4 C 1.791,31 0,29.209 0,27 L 10,18 0,9 C 0,6.791 1.791,5 4,5 h 28 c 2.209,0 4,1.791 4,4 l -10,9 z"
+     id="path1"
+     sodipodi:nodetypes="csscccssccc" />
+  <path
+     fill="#ffffff"
+     d="m 0,9 h 36 v 4 l -5,5 5,5 v 4 H 0 V 23 L 5,18 0,13 Z"
+     id="path2"
+     sodipodi:nodetypes="ccccccccccc" />
+  <path
+     fill="#ce1225"
+     d="M 0,13 H 36 V 23 H 0 Z"
+     id="path3"
+     sodipodi:nodetypes="ccccc" />
+  <ellipse
+     fill="#FFF"
+     cx="8.5"
+     cy="18"
+     rx="3.5"
+     ry="4"
+     id="ellipse3" />
+  <path
+     fill="#F4CB58"
+     d="M10.269 19.5c0 .828-.792 2.079-1.769 2.079S6.731 20.328 6.731 19.5c0-.829.792-1.5 1.769-1.5s1.769.671 1.769 1.5z"
+     id="path4" />
+  <ellipse
+     fill="#DCA841"
+     cx="8.5"
+     cy="19.5"
+     rx="2.5"
+     ry="1.5"
+     id="ellipse4" />
+  <ellipse
+     fill="#89C5E4"
+     cx="8.5"
+     cy="16"
+     rx="1.5"
+     ry="1"
+     id="ellipse5" />
+  <ellipse
+     fill="#088930"
+     cx="8.5"
+     cy="18.5"
+     rx="1.5"
+     ry="2.5"
+     id="ellipse6" />
+  <ellipse
+     fill="#DCA841"
+     cx="8.5"
+     cy="16.5"
+     rx="1.5"
+     ry=".5"
+     id="ellipse7" />
+  <path
+     fill="#89C5E4"
+     d="M10 18c0 1.104-.671 2-1.5 2S7 19.104 7 18s.671-1.498 1.5-1.498S10 16.896 10 18z"
+     id="path7" />
+  <ellipse
+     fill="#DCA841"
+     cx="8.5"
+     cy="18.5"
+     rx="1.5"
+     ry=".5"
+     id="ellipse8" />
+</svg>
