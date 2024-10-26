@@ -143,7 +143,7 @@
 	<file name="1f1f2-1f1e8.svg" size="252" sha256="05a987a175a755953ba6142ce574e05acada2d68defa2bd4821d36ff4ad5a2a3" />
 	<file name="1f1f2-1f1e9.svg" size="984" sha256="98e295c245bffcec908a135d0969f0c93734fe22922ac0be7b45756bdc6b245a" />
 	<file name="1f1f2-1f1ea.svg" size="2052" sha256="c028a38957e0086d36b447bed6bd48e77b1221697057e637bb8c011cbf9dc0ef" />
-	<file name="1f1f2-1f1ec.svg" size="308" sha256="45a31655107b72ea1b5f79319b054a396fdec12aa9429f0df2ef56366f375f33" />
+	<file name="1f1f2-1f1ec.svg" size="307" sha256="fc1f89db97942d227b552bd6ba70c02840cb2c615f720e714a4a9384f0a656b8" />
 	<file name="1f1f2-1f1ed.svg" size="786" sha256="9727b1d321c0dea3f257a9f6a4c365b7cdc94d8bb4ed6497ded3e02bd160b634" />
 	<file name="1f1f2-1f1f0.svg" size="1072" sha256="f8a8779de866ee6e565a62e5c80d7384e6642154a6f04bad9ae3e5f70445f0ce" />
 	<file name="1f1f2-1f1f1.svg" size="268" sha256="d3885c709837ddc925c9576ab52ed704ec09f7a2c96407547d4133c611317d69" />
@@ -154,7 +154,7 @@
 	<file name="1f1f2-1f1f6.svg" size="344" sha256="60883fc7c4398545b7da930d74605415b819bf03bdd57a171b9ee6afede4d0a9" />
 	<file name="1f1f2-1f1f7.svg" size="545" sha256="7d0385cbbdead04caff4463bdee63f6b8f2384bc9af3a35684e2e108b784d83d" />
 	<file name="1f1f2-1f1f8.svg" size="5341" sha256="5dffd70ea2aadd3e92882895b9d863a2e5d3cc9cd855f05808f66cd1b7d52442" />
-	<file name="1f1f2-1f1f9.svg" size="2508" sha256="55259c7a6d72632569de1dcf19a7505397c1b09d8b601d68df02692b7d504805" />
+	<file name="1f1f2-1f1f9.svg" size="2507" sha256="36f5fa3d72a934c95e0b13eb10c1a790ec86c18df025bbde8e01db572af0ce9f" />
 	<file name="1f1f2-1f1fa.svg" size="325" sha256="db9f087fadd48e8439a4c1abacd8caa00d82955561c46f856241b6f6f83d8107" />
 	<file name="1f1f2-1f1fb.svg" size="413" sha256="f82813522b9b356f99abf1eda12e5d78665d5f386199369ad7e1898b43d9a70c" />
 	<file name="1f1f2-1f1fc.svg" size="783" sha256="c7ad6a946fea41266be4a8c582c14289173647e24fdcba98aa852f970a4e9ba7" />
@@ -178,8 +178,8 @@
 	<file name="1f1f5-1f1ea.svg" size="168" sha256="628345db9ded6f67e9f2dd493e2b82b2fc0ecb9292585ab11296ebb3fbbbde51" />
 	<file name="1f1f5-1f1eb.svg" size="3996" sha256="de14fa73bbc4d0437a9bbe3ce8ee8ae2fb0396814f882a3e4dc81522e35fa64b" />
 	<file name="1f1f5-1f1ec.svg" size="2148" sha256="692c33280e6e4cece9ef68be74b4756280fef9eb92bed31322ddaaf1c72109a5" />
-	<file name="1f1f5-1f1ed.svg" size="1620" sha256="10daacb2adc2e40018fda9534eeb4caeaa162bbbe4cdf16e714314e9b36902f3" />
-	<file name="1f1f5-1f1f0.svg" size="819" sha256="ce0e543b68349cfbd4c9b46fc0c66935cd54538cd35d34179bfa77ad3554b418" />
+	<file name="1f1f5-1f1ed.svg" size="1638" sha256="007e6eee2e8b6f397e21b6a9335597c59b135b7261c60f115649179e0a82a24c" />
+	<file name="1f1f5-1f1f0.svg" size="816" sha256="c3e27c282fabbe6f3af1fe6cb7da29a80ca27cc08b6ad0828fb350fd79f67aff" />
 	<file name="1f1f5-1f1f1.svg" size="251" sha256="0c913817fa4ffbaffacda101eb21fe5dbaf539156458168636996cfb1a20499c" />
 	<file name="1f1f5-1f1f2.svg" size="10309" sha256="febf8c888899c17970dca910afef1e35e197dd8cdf62f40ccde16a99ba7f3b09" />
 	<file name="1f1f5-1f1f3.svg" size="4643" sha256="388d14c9fce1bb4525b261fad5fb473d20a56bbc1a62a0836e796314e8e07d9b" />
@@ -241,7 +241,7 @@
 	<file name="1f1fb-1f1e8.svg" size="417" sha256="1a0b71dbfab8b81f90c8c30db51f7bf552e97842c8e729469ee5d7d2ccc070f3" />
 	<file name="1f1fb-1f1ea.svg" size="1454" sha256="b3ca80dca6bda9d0f730eb1ae7c6fd3ddcf149958b8889a7cf7ce4d28576684f" />
 	<file name="1f1fb-1f1ec.svg" size="6070" sha256="b6116ad045190a2caf8aa395cc4fbb11df5f45491ca0f3faa1b5ebe92f8e5750" />
-	<file name="1f1fb-1f1ee.svg" size="4294" sha256="ff7a8d7774ad3208de191b4c2ea15f9df5d6d88053909128bfa85e0428b39575" />
+	<file name="1f1fb-1f1ee.svg" size="4294" sha256="ffcce6c7eef7076938fa5ffd3e37fb801a4cbe7fc3fdacb6387ef17ace4e2194" />
 	<file name="1f1fb-1f1f3.svg" size="305" sha256="5552fe78e62bbd38f43253b8f3e3ee7d322621aa9b2a9f1631fe49d261df3fb4" />
 	<file name="1f1fb-1f1fa.svg" size="1000" sha256="836619b710c79b0a92e8603b888ede32d587f9ac22e482bf87b1f91716df2709" />
 	<file name="1f1fc-1f1eb.svg" size="499" sha256="c952a448cc74baad80cd5216c84a1e153c7e43990d89bbcbcb1a8e321dadf985" />
