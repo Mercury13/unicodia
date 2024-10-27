@@ -29,6 +29,7 @@ namespace uc {
         ZSYM,   // Pseudo-script: Symbols and pictographs
         ZDIN,   // Pseudo-script: Dingbats
         ZDIA,   // Pseudo-script: Diacritical marks
+        ZKXI,   // Pseudo-script: Kangxi
 
 #ifndef Q_MOC_RUN
     // MOC creates CPPs rather than parses this enum, so probably OK

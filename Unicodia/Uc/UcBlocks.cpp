@@ -490,12 +490,12 @@ constinit const uc::Block uc::blocks[] {
     // CJK radicals supp OK
     { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK },
             "CJK Radicals Supplement",
-            MyName::INST, MapType::CJ_SYMBOL,
+            { EcScript::ZKXI, '1' }, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kangxi OK
     { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK },
             "Kangxi Radicals",
-            MyName::INST, MapType::CJ_SYMBOL,
+            { EcScript::ZKXI, 0 }, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ideographic desc OK, not collapsible: small block
     { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
