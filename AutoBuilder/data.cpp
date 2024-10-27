@@ -611,6 +611,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "BREATHY",        Dicf::PART_ADJECTIVE },
     { "BOOK",           Dicf::PART_ADJECTIVE },
     { "BOTTOM",         Dicf::PART_ADJECTIVE },
+    { "C-SIMPLIFIED",   Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "CAPITAL",        Dicf::PART_ADJECTIVE },
     { "CASKET",         Dicf::PART_ADJECTIVE }, // OK here, runes
     { "CHILLU",         Dicf::PART_ADJECTIVE }, // used for Malayalam
@@ -656,6 +657,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "INSCRIPTIONAL",  Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "INSULAR",        Dicf::PART_ADJECTIVE },
     { "INVERTED",       Dicf::PART_ADJECTIVE },
+    { "J-SIMPLIFIED",   Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "JONA",           Dicf::PART_ADJECTIVE },     // Nkoo, probably small
     { "KINNA",          Dicf::PART_ADJECTIVE },     // Rohg, kinna = small
     { "LARYNGEAL",      Dicf::PART_ADJECTIVE },
@@ -717,6 +719,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     /// @todo [decap] Arabic mark Sideways Noon gnunna — is it right?
     { "SIDEWAYS",       Dicf::PART_ADJECTIVE },
     { "SIGMOID",        Dicf::PART_ADJECTIVE },
+    { "SIMPLIFIED",     Dicf::PART_ADJECTIVE },
     { "SLOAN",          Dicf::PART_ADJECTIVE },
     { "SMALL",          Dicf::PART_ADJECTIVE },
     { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
@@ -1239,7 +1242,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Thaana Obofili")
     EX("Thaana Oaboafili")
 
-    // MODERN ASIAN SCRIPTS
+    // NEW ASIAN SCRIPTS
         // Hmnp
     EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
         // Mong
@@ -1254,6 +1257,14 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Miao tone below")
         // Hmng
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
+
+    // CJK
+        // Hani
+    EX("CJK radical Small one")     // Small is not adjective here
+    EX("CJK radical Small two")     // Same
+    EX("CJK radical Second one")    // Same, just reliability
+    EX("CJK radical Second two")    // Same
+    EX("CJK radical Second three")  // Same
 
     // AMERICAN SCRIPTS
     EX("Canadian syllabics hyphen")     // What to do?
