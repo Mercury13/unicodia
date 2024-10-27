@@ -5,6 +5,7 @@
 
 // Libs
 #include <Fonts/TempFont.h>
+#include "i_DarkMode.h"
 
 // Project-local
 #include "d_Config.h"
@@ -59,6 +60,9 @@ int main(int argc, char *argv[])
     //qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
     QApplication a(argc, argv);
     //a.setStyle("fusion");
+
+    dark::fileName = ":/darkstyle.qss";
+    //dark::turnOn();
 
     uc::completeData();  // …runs once and should not depend on L10n
     initTranslation();

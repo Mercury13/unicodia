@@ -38,6 +38,7 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 #include "Fonts/TempFont.h"
+#include "i_DarkMode.h"
 
 // Unicode
 #include "UcCp.h"
@@ -394,7 +395,7 @@ void VirtualCharsModel::paintItem1(
 void VirtualCharsModel::paintItem(
         QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if (option.state.testFlag(QStyle::State_HasFocus)) {
+    if (dark::isActuallyOn() && option.state.testFlag(QStyle::State_HasFocus)) {
         // It’d be nice to draw some nice focus using Windows skin, but cannot
         //Super::paint(painter, option, index);
         // Draw it as a button
