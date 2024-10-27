@@ -64,7 +64,7 @@ namespace wiki {
     inline Thing findThing(std::string_view x, MiniEngine& engine)
         { return findThing(x.data(), x.data() + x.size(), Feature::NONE, engine); }
 
-    enum class Weight { ITALIC = 1, BOLD = 2 };
+    enum class Weight : unsigned char { ITALIC = 1, BOLD = 2 };
     DEFINE_ENUM_OPS(wiki::Weight)
 
     ///
