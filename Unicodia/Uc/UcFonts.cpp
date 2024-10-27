@@ -134,7 +134,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
       { FNAME_UNIHAN, 120_pc },                                                 // …1
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK symbols
-      { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                  // …1
+      { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                 // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
