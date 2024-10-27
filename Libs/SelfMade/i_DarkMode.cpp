@@ -5,7 +5,7 @@
 #include <QApplication>
 #include <QPalette>
 
-QString dark::fileName = ":/dark.qss";
+QString dark::fileName;
 std::optional<QPalette> dark::palette;
 
 namespace {
@@ -104,16 +104,19 @@ void dark::forceOn()
 {
     if (palette) {
         QApplication::setPalette(*palette);
+        isDarkOn = true;
     }
-   //  QFile f(fileName);
-   //  if ( !f.exists() ) {
-   //      forceOff();
-   //      return;
-   //  }
-   // f.open( QFile::ReadOnly | QFile::Text );
-   // QTextStream ts( &f );
-   // getApp()->setStyleSheet( ts.readAll() );
-   isDarkOn = true;
+    if (!fileName.isEmpty()) {
+        QFile f(fileName);
+        if ( !f.exists() ) {
+            forceOff();
+            return;
+        }
+        f.open( QFile::ReadOnly | QFile::Text );
+        QTextStream ts( &f );
+        getApp()->setStyleSheet( ts.readAll() );
+        isDarkOn = true;
+    }
 }
 
 
