@@ -17,7 +17,7 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 * Press F12 in Unicodia to reload translation without reopening the entire program.
   * Warning, it reloads strings only; all locales are loaded on startup.
 * When new original arrived: File → Update data, Go → Find warnings → All.
-* nspk template parameters: 1=language name (other script for now, non-localizable), 2=pre-comment (e.g. synonym, localizable).
+* nspk template parameters: 1=language name (or script name, non-localizable), 2=pre-comment (e.g. synonym, localizable).
   * If there’s no {{nspk}} in languages and there’s language data, default {{nspk}} is added automatically. So: {{nspk}} at the end → delete, it’ll be added! Need e.g. synonym → add {{nspk||=Klingon}}. Synonym is the SECOND parameter. See _Script.Mroo_ in English/Russian.
 
 ## Language policy
