@@ -44,7 +44,7 @@ namespace fst {
     constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;
 }
 
-constinit const uc::LangLife uc::langLifeInfo[] {
+constexpr uc::LangLife langLifeInfoProto[] {
     { {} },
     { "Prop.Life.Alive" },
     { "Prop.Life.Danger" },
@@ -57,11 +57,12 @@ constinit const uc::LangLife uc::langLifeInfo[] {
     { "Prop.Life.Sacred" },
     { "Prop.Life.New"},
     { "Prop.Life.Reborn" },
+    { "Prop.Life.ForRev" },
     { "Prop.Life.Exp" },
     //{ "Error" },
 };
-static_assert (std::size(uc::langLifeInfo) == static_cast<size_t>(uc::EcLangLife::NN), "langLifeInfo size?");
-
+constinit const ec::Array<uc::LangLife, uc::EcLangLife> uc::langLifeInfo {
+    ec::ARRAY_INIT, langLifeInfoProto };
 
 constexpr uc::WritingDir writingDirProto[] {
     { {} },

@@ -827,6 +827,9 @@
     <text id="Deciphered">
      <orig>deciphered ''(like cuneiform)''</orig>
     </text>
+    <text id="ForRev">
+     <orig>made for revival of dead language ''(like Osage)''</orig>
+    </text>
    </group>
    <group id="Dir">
     <text id="L">
@@ -8048,6 +8051,8 @@
       <p>'''New'''{{-}}invented too recently to tell exactly about its status.</p>
       <p />
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
+      <p />
+      <p>'''Made for revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into four categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}attempt to replace a script of [[pt:brahmic|Indic]] origin; 4){{_}}related to liberation of Africa in 20th century.</p>
      </orig>

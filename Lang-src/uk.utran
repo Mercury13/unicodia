@@ -1048,6 +1048,10 @@
      <orig>deciphered ''(like cuneiform)''</orig>
      <transl>розшифрована ''(як клинопис)''</transl>
     </text>
+    <text id="ForRev">
+     <orig>made for revival of dead language ''(like Osage)''</orig>
+     <transl>зроблена для відродження мертвої мови ''(як осейдж)''</transl>
+    </text>
    </group>
    <group id="Dir">
     <text id="L">
@@ -11659,6 +11663,8 @@
       <p />
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
       <p />
+      <p>'''Made for revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
+      <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into four categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}attempt to replace a script of [[pt:brahmic|Indic]] origin; 4){{_}}related to liberation of Africa in 20th century.</p>
      </orig>
      <transl>
@@ -11668,7 +11674,7 @@
       <p />
       <p>'''В небезпеці через конкуренцію писемностей'''{{-}}в усіх мов є альтернативна писемність, більш успішна чи набираюча силу.</p>
       <p />
-      <p>'''Мертва'''{{-}}користування писемністю припинене або вкрай обмежене. Юнікод знає єдину писемність, що померла порівняно недавно через смерть мови{{-}}штучну мову [[ps:Medf|медефайдрин]].</p>
+      <p>'''Мертва'''{{-}}користування писемністю припинене або вкрай обмежене. Юнікод знає єдину писемність, що померла порівняно недавно через смерть мови{{,-}}штучну мову [[ps:Medf|медефайдрин]].</p>
       <p />
       <p>'''Релігійна'''{{-}}писемність мертва у світському вжитку, але використовується важливою релігією.</p>
       <p />
@@ -11679,6 +11685,8 @@
       <p>'''Нова'''{{-}}розроблена надто недавно, щоб достовірно сказати про її стан.</p>
       <p />
       <p>'''Відроджена'''{{-}}повернена у вжиток після періоду невикористання. При відродженні може змінитись тип та напрямок письма, як у [[ps:Tfng|тифінагу]].</p>
+      <p />
+      <p>'''Зроблена для відродження мертвої мови'''{{-}}тільки [[ps:Osge|осейдж]] (письмо латинкою виявилось невдалим).</p>
       <p />
       <p>'''Експериментальна'''{{-}}невдала спроба зробити орфографічну реформу. Усі наявні у Юнікоді приклади поділяються на чотири категорії: 1){{_}}англійська: складна історична орфографія; 2){{_}}албанська: біля 1800 співпали конспірація від турків та бажання культурної автономії; 3){{_}}спроба замінити письмо [[pt:brahmic|індійського]] похождення; 4){{_}}пов’язані зі звільненням Африки у XX{{_}}столітті.</p>
      </transl>

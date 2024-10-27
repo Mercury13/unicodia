@@ -89,7 +89,7 @@ namespace uc {
     constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
     constexpr QChar STUB_PUA_PLUS { 0xE011 };               // Plus for synthesized virtual virama
 
-    enum class EcLangLife : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, EcLangLife, unsigned char,
         NOMATTER,       ///< Symbols (language’s life does not matter)
         ALIVE,          ///< UNESCO safe (Ukrainian)
         ENDANGERED,     ///< UNESCO vulnerable (Belorussian)
@@ -105,11 +105,11 @@ namespace uc {
         SACRED,         ///< Used nowadays as sacred (Coptic, Avestan)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
+        FOR_REVIVAL,    ///< Made for revival (Osage)
         EXPERIMENTAL,   ///< Experimental script for existing languages (Deseret)
         //ARTIFICIAL,     ///< Artificial languages (Esperanto, Ithkuil); unencoded right now
         //FICTIONAL       ///< Fictional languages (Quenya, Klingon); unencoded right now
-        NN
-    };
+    )
 
     enum class EcScriptType : unsigned char {
         NONE,
@@ -626,7 +626,7 @@ namespace uc {
     {
         std::string_view locKey;
     };
-    extern const LangLife langLifeInfo[];
+    extern const ec::Array<LangLife, EcLangLife> langLifeInfo;
 
 
     struct ScriptType
@@ -724,7 +724,7 @@ namespace uc {
         } mutable loc {};
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
-        inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
+        inline const LangLife& life() const { return langLifeInfo[ecLife]; }
         inline const WritingDir& dir() const { return writingDirInfo[ecDir]; }
         inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
