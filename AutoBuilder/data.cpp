@@ -1265,6 +1265,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("CJK radical Second one")    // Same, just reliability
     EX("CJK radical Second two")    // Same
     EX("CJK radical Second three")  // Same
+    EX("CJK radical C-simplified Long") // Same
 
     // AMERICAN SCRIPTS
     EX("Canadian syllabics hyphen")     // What to do?
