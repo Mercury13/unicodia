@@ -395,25 +395,28 @@ void VirtualCharsModel::paintItem1(
 void VirtualCharsModel::paintItem(
         QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if (dark::isActuallyOn() && option.state.testFlag(QStyle::State_HasFocus)) {
-        // It’d be nice to draw some nice focus using Windows skin, but cannot
-        //Super::paint(painter, option, index);
-        // Draw it as a button
-        QStyleOptionButton sob;
-            sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
-                        | QStyle::State_Active | QStyle::State_Enabled;
-            sob.rect = option.rect;
-        owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
-        paintItem1(painter, option, index, owner->palette().buttonText().color());
-    } else if (option.state.testFlag(QStyle::State_Selected)) {
-        // Selected, not focused? Initial style is bad
-        auto opt2 = option;
-        opt2.state.setFlag(QStyle::State_Selected, false);
-        owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-        paintItem1(painter, option, index, owner->palette().windowText().color());
-    } else {
-        paintItem1(painter, option, index, owner->palette().windowText().color());
+    if (!dark::isActuallyOn()) {
+        if (option.state.testFlag(QStyle::State_HasFocus)) {
+            // It’d be nice to draw some nice focus using Windows skin, but cannot
+            //Super::paint(painter, option, index);
+            // Draw it as a button
+            QStyleOptionButton sob;
+                sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
+                            | QStyle::State_Active | QStyle::State_Enabled;
+                sob.rect = option.rect;
+            owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
+            paintItem1(painter, option, index, owner->palette().buttonText().color());
+            return;
+        } else if (option.state.testFlag(QStyle::State_Selected)) {
+            // Selected, not focused? Initial style is bad
+            auto opt2 = option;
+            opt2.state.setFlag(QStyle::State_Selected, false);
+            owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
+            paintItem1(painter, option, index, owner->palette().windowText().color());
+            return;
+        }
     }
+    paintItem1(painter, option, index, owner->palette().windowText().color());
 }
 
 

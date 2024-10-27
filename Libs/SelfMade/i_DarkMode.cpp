@@ -3,8 +3,10 @@
 #include <QString>
 #include <QFile>
 #include <QApplication>
+#include <QPalette>
 
 QString dark::fileName = ":/dark.qss";
+std::optional<QPalette> dark::palette;
 
 namespace {
     bool isDarkOn = false;
@@ -100,14 +102,17 @@ namespace {
 
 void dark::forceOn()
 {
-    QFile f(fileName);
-    if ( !f.exists() ) {
-        forceOff();
-        return;
+    if (palette) {
+        QApplication::setPalette(*palette);
     }
-   f.open( QFile::ReadOnly | QFile::Text );
-   QTextStream ts( &f );
-   getApp()->setStyleSheet( ts.readAll() );
+   //  QFile f(fileName);
+   //  if ( !f.exists() ) {
+   //      forceOff();
+   //      return;
+   //  }
+   // f.open( QFile::ReadOnly | QFile::Text );
+   // QTextStream ts( &f );
+   // getApp()->setStyleSheet( ts.readAll() );
    isDarkOn = true;
 }
 

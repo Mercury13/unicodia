@@ -1,10 +1,14 @@
 #pragma once
 
+#include <optional>
+
 class QString;
+class QPalette;
 
 namespace dark {
 
     extern QString fileName;
+    extern std::optional<QPalette> palette;
 
     enum class Mode : unsigned char {
         AUTO,
