@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16px"
+   height="16px"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="11380.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="48.1875"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="surface1"
+     inkscape:label="g">
+    <path
+       style="fill:none;stroke-width:3.96875;stroke-linecap:round;stroke-linejoin:round;stroke:#f57900;stroke-opacity:1;stroke-miterlimit:4;fill-opacity:1"
+       d="M 5.951471 47.294684 C 5.951471 47.294684 16.683633 38.538216 24.025407 43.660384 C 31.34279 48.758161 14.244505 58.758584 8.366208 58.978105 C 8.366208 58.978105 43.026211 57.758542 46.758076 57.831715 C 46.758076 57.831715 56.295065 57.124368 55.977979 65.832054 C 55.904805 68.588268 53.441286 73.417741 48.002031 73.173828 C 26.854795 72.100612 37.85526 27.70849 50.733854 26.610882 C 59.758626 25.732796 64.124665 29.464661 65.344229 48.416683 C 66.075967 33.318483 69.539528 26.366969 80.539993 26.537708 C 94.101543 26.806012 94.857673 47.075163 93.613717 55.904805 C 92.808805 60.97819 91.467285 73.173828 84.247467 73.490915 C 76.930085 73.832393 75.222695 68.685833 74.954391 65.807663 C 74.295827 58.88054 77.856953 52.611982 83.564512 52.733939 C 93.930804 52.95346 91.101416 67.076009 91.101416 67.076009 "
+       transform="matrix(0.160149,0,0,0.160149,0,0)"
+       id="path1" />
+  </g>
+</svg>
