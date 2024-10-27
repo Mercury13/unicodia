@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>Combinear.qss</file>
         <file>Buttons/globe.svg</file>
         <file>Buttons/heart.svg</file>
         <file>Buttons/heart_full.svg</file>
