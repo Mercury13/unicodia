@@ -111,10 +111,12 @@ TEST (SkipParam, WrongClosing1)
 ///// findThing ////////////////////////////////////////////////////////////////
 
 
+constinit wiki::MiniEngine NO_ENGINE;
+
 TEST (FindThing, Nothing)
 {
     std::string_view s = "alpha";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::STRING_END, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 5, x.posNext);
@@ -125,7 +127,7 @@ TEST (FindThing, Nothing)
 TEST (FindThing, EmptyLink)
 {
     std::string_view s = "alpha[[|bravo]]c";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::STRING_END, x.type);
     EXPECT_EQ(s.data() + 16, x.posStart);
     EXPECT_EQ(s.data() + 16, x.posNext);
@@ -133,23 +135,27 @@ TEST (FindThing, EmptyLink)
 }
 
 
+///
+///  What to do? Such link is perfectly possible, but it will be stripped!
+///  Changed in autumn 2024
+///
 TEST (FindThing, SimpleLink)
 {
     std::string_view s = "alpha[[ bravo  ]]c";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::LINK, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 17, x.posNext);
     EXPECT_EQ(2u, x.params.size());
     EXPECT_EQ("bravo", x.params[0]);
-    EXPECT_EQ(" bravo  ", x.params[1]);
+    EXPECT_EQ("bravo", x.params[1]);
 }
 
 
 TEST (FindThing, SimpleTemplate)
 {
     std::string_view s = "alpha{{ bravo  }}c";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::TEMPLATE, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 17, x.posNext);
@@ -161,7 +167,7 @@ TEST (FindThing, SimpleTemplate)
 TEST (FindThing, ComplexLink)
 {
     std::string_view s = "alpha[[ bravo  | charlie  | delta  ]]e";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::LINK, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 37, x.posNext);
@@ -175,7 +181,7 @@ TEST (FindThing, ComplexLink)
 TEST (FindThing, Quote)
 {
     std::string_view s = "alpha'bravo";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::STRING_END, x.type);
     EXPECT_EQ(s.data() + 11, x.posStart);
     EXPECT_EQ(s.data() + 11, x.posNext);
@@ -186,7 +192,7 @@ TEST (FindThing, Quote)
 TEST (FindThing, Italic)
 {
     std::string_view s = "alpha''bravo";
-    auto x = wiki::findThing(s);
+    auto x = wiki::findThing(s, NO_ENGINE);
     EXPECT_EQ(wiki::Type::ITALIC, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 7, x.posNext);
@@ -216,8 +222,8 @@ namespace {
         std::string s;
         Flags<wiki::Weight> weight;
         void appendPlain(std::string_view x) override;
-        void appendLink(const SafeVector<std::string_view>& x, bool) override;
-        void appendTemplate(const SafeVector<std::string_view>& x, bool) override;
+        void appendLink(const SafeVector<std::string_view>& x, bool, bool) override;
+        void appendTemplate(Buf1d<const std::string_view> x, bool) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
     };
@@ -243,7 +249,7 @@ namespace {
         s.push_back('\n');
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view>& x, bool)
+    void Eng::appendLink(const SafeVector<std::string_view>& x, bool, bool)
     {
         s.append("Link:");
         for (size_t i = 0; i < x.size(); ++i) {
@@ -254,7 +260,7 @@ namespace {
         s.append("\n");
     }
 
-    void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
+    void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         s.append("Template:");
         for (size_t i = 0; i < x.size(); ++i) {
