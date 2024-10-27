@@ -1258,15 +1258,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Hmng
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
 
-    // CJK
-        // Hani
-    EX("CJK radical Small one")     // Small is not adjective here
-    EX("CJK radical Small two")     // Same
-    EX("CJK radical Second one")    // Same, just reliability
-    EX("CJK radical Second two")    // Same
-    EX("CJK radical Second three")  // Same
-    EX("CJK radical C-simplified Long") // Same
-
     // AMERICAN SCRIPTS
     EX("Canadian syllabics hyphen")     // What to do?
 
@@ -1418,6 +1409,22 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Zu (not unique)")
 
     // CJK
+        // Hani
+    EX("CJK radical Small one")     // Small is not adjective here
+    EX("CJK radical Small two")     // Same
+    EX("CJK radical Second one")    // Second is not adjective, just reliability
+    EX("CJK radical Second two")    // Same
+    EX("CJK radical Second three")  // Same
+    EX("CJK radical C-simplified Long") // Should I add an exception: last word is NOT adjective?
+    EX("CJK radical Simplified Half tree trunk") // ???
+    EX("CJK radical Long one")      // Long is not adjective here
+    EX("CJK radical Long two")      // Same
+    EX("CJK radical C-simplified Bird") // Bird is not noun
+    EX("Kangxi radical Short thread") // Thread is noun here
+    EX("Kangxi radical Dotted Cliff") // Reliability, sic! → see 2F1A
+    EX("Kangxi radical Long stride") // Stride is noun here
+    EX("Kangxi radical Dotted tent") // Dotted tent is just a shape, it was
+
         // Hang
     EX("Hangul choseong filler")    // Simpler to add exception
     EX("Hangul jungseong filler")   // Same
