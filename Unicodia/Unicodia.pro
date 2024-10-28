@@ -193,4 +193,7 @@ win32|win64 {
 }
 
 VERSION_FILE = ../VERSION
+{ # To trigger QMAKE
+    include($${VERSION_FILE})
+}
 VERSION = $$cat($${VERSION_FILE})
