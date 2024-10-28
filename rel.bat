@@ -195,15 +195,18 @@
 @copy %QTDIR%\translations\qtbase_uk.qm %DIR_UK%
 
 @echo.
-@echo ===== Archiving =====
+@echo ===== Making simple archive =====
 @set ARCPATH=%DEPLOY1%\%ARCNAME%
 @set ARCPATH2=%DEPLOY2%\%ARCNAME%
 @if exist %ARCPATH% del %ARCPATH%
 @cd %DEPLOY%
 @%SEVENZIP% a ..\%ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
 @cd ..
+@copy %ARCPATH% %ARCPATH2%
 
-copy %ARCPATH% %ARCPATH2%
+@echo.
+@echo ===== Making installer =====
+@%INNO% /Qp /O%DEPLOY2% MiscFiles/Unicodia-w64.iss
 
 @goto end
 
