@@ -1,8 +1,6 @@
 QT += core gui widgets network svg svgwidgets
 CONFIG += c++2a c++20
 
-VERSION = 2.8.6
-
 win32-g++ {
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
@@ -193,3 +191,6 @@ win32|win64 {
     QMAKE_TARGET_DESCRIPTION = Unicodia: encyclopedia of characters
     QMAKE_TARGET_COPYRIGHT =  Mikhail Merkuryev
 }
+
+VERSION_FILE = ../VERSION
+VERSION = $$cat($${VERSION_FILE})
