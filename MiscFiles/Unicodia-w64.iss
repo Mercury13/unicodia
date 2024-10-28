@@ -2,10 +2,15 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Unicodia"
-#define MyAppVersion "2.9.0"
 #define MyAppPublisher "Mikhail Merkuryev"
 #define MyAppURL "https://mercury13.github.io/unicodia/"
 #define MyAppExeName "Unicodia.exe"
+
+; Get version
+#define VerFile FileOpen("../VERSION")
+#define MyAppVersion FileRead(VerFile)
+#expr FileClose(VerFile)
+#undef VerFile
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
