@@ -22,7 +22,7 @@ namespace {
 
     /// Result of checking of ONE version
     ///
-    enum class SmallRes {
+    enum class SmallRes : unsigned char {
         BAD_JSON,       ///< Bad JSON
         GO_NEXT,        ///< Go on, check next version
         STOP_EXACT,     ///< Stop, current/newer version found

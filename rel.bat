@@ -6,6 +6,7 @@
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
 @set UTRANSL=UTransCon.exe
+@set INNO="c:\Program Files (x86)\Inno Setup 6\ISCC.exe"
 
 @rem Rest things
 @set PRONAME=Unicodia\Unicodia.pro
@@ -18,6 +19,7 @@
 @set BUILD_SC=~Build-SC-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
+@set DEPLOY2=~Installer
 @set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
 @set UCLIB=UcAutoLib.cpp
@@ -64,11 +66,20 @@
 :utransl_ok
 @echo UTranslator OK
 
+@if exist %INNO% goto inno_ok
+@echo BAD: Inno Setup not found. It’s a well-known free program.
+@goto end
+:inno_ok
+@echo Inno Setup OK
+
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY% >nul
 @if exist %DEPLOY% rmdir /S /Q %DEPLOY% >nul
+@if exist %DEPLOY2% del /S /Q %DEPLOY2% >nul
+@if exist %DEPLOY2% rmdir /S /Q %DEPLOY2% >nul
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
+@if not exist %DEPLOY2% md %DEPLOY2%
 @if not exist %BUILD_AB% md %BUILD_AB%
 @if not exist %BUILD_SC% md %BUILD_SC%
 @if not exist %BUILD% md %BUILD%
@@ -185,11 +196,14 @@
 
 @echo.
 @echo ===== Archiving =====
-@cd %DEPLOY%
-@set ARCPATH=..\%DEPLOY1%\%ARCNAME%
+@set ARCPATH=%DEPLOY1%\%ARCNAME%
+@set ARCPATH2=%DEPLOY2%\%ARCNAME%
 @if exist %ARCPATH% del %ARCPATH%
-@%SEVENZIP% a %ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
+@cd %DEPLOY%
+@%SEVENZIP% a ..\%ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
 @cd ..
+
+copy %ARCPATH% %ARCPATH2%
 
 @goto end
 
