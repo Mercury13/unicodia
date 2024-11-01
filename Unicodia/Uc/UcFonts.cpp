@@ -207,7 +207,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID },                     // …1
       { FNAME_NOTO },                                                           // …2
-    { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
+         // The biggest font possible w/o changes in height
+    { "Mingzat-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 18_top, 80_pc },              // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B

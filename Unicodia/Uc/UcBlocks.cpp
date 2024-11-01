@@ -281,7 +281,7 @@ constinit const uc::Block uc::blocks[] {
             "Batak",
             { EcScript::Batk, 0 }, MapType::OC, EcScript::Batk },
     // Lepcha OK
-    { 0x1C00, 0x1C4F, { 0x1C1D, EcContinent::ASIA },
+    { 0x1C00, 0x1C4F, { 0x1C00, EcContinent::ASIA },
             "Lepcha",
             { EcScript::Lepc, 0 }, MapType::AS_BRAH, EcScript::Lepc },
     // Ol Chiki OK
