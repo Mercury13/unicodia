@@ -31,7 +31,7 @@ struct CharTile {
 };
 using CharTiles = std::array<CharTile, 4>;
 
-enum class BareFrame { NO, YES };
+enum class BareFrame : unsigned char { NO, YES };
 
 /// @param [in] loFrame      ½ of line width, device-independent pixels
 /// @param [in] isBareFrame  [+] Bare frame w/o fill, special workaround

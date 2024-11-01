@@ -18,7 +18,7 @@ namespace uc {
     ///   E.g. arrows, ‼
     ///   How to write them?
     ///
-    enum class EmojiDraw {
+    enum class EmojiDraw : unsigned char {
         FORCE_TEXT,     ///< Do not draw graphics AT ALL
         MOSTLY_TEXT,    ///< Mostly library: draw emoji as text
         CONSERVATIVE,   ///< Table: those chars are drawn as text

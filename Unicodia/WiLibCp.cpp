@@ -24,16 +24,15 @@ void WiCpImage::paintEvent(QPaintEvent *event)
         auto winColor = palette().text().color();
         QPainter painter(this);
         drawChar(&painter, rect(), 100, *cp, winColor,
-                 TableDraw::CUSTOM, emojiDraw, *glyphSets);
+                 TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE, *glyphSets);
     }
 }
 
-void WiCpImage::setCp(const uc::Cp* x, uc::EmojiDraw em, const uc::GlyphStyleSets& y)
+void WiCpImage::setCp(const uc::Cp* x, const uc::GlyphStyleSets& y)
 {
-    if (cp != x || glyphSets != &y || emojiDraw != em) {
+    if (cp != x || glyphSets != &y) {
         cp = x;
         glyphSets = &y;
-        emojiDraw = em;
         if (cp) {
             setCursor(Qt::WhatsThisCursor);
             setToolTip(cp->viewableName());
@@ -45,15 +44,15 @@ void WiCpImage::setCp(const uc::Cp* x, uc::EmojiDraw em, const uc::GlyphStyleSet
     }
 }
 
-void WiCpImage::setCp(char32_t x, uc::EmojiDraw em, const uc::GlyphStyleSets& y)
+void WiCpImage::setCp(char32_t x, const uc::GlyphStyleSets& y)
 {
     if (x < uc::CAPACITY) {
         if (auto q = uc::cpsByCode[x]) {
-            setCp(q, em, y);
+            setCp(q, y);
             return;
         }
     }
-    setCp(nullptr, uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
+    setCp(nullptr, uc::GlyphStyleSets::EMPTY);
 }
 
 
@@ -72,9 +71,9 @@ WiLibCp::~WiLibCp()
     delete ui;
 }
 
-void WiLibCp::setCp(char32_t cp, uc::EmojiDraw em, const uc::GlyphStyleSets& glyphSets)
+void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
 {
-    ui->wiImage->setCp(cp, em, glyphSets);
+    ui->wiImage->setCp(cp, glyphSets);
     char q[200];
     snprintf(q, std::size(q),
              "<a href='g' style='" STYLE_CODE "'>" "%04X" "</a>",
@@ -85,7 +84,7 @@ void WiLibCp::setCp(char32_t cp, uc::EmojiDraw em, const uc::GlyphStyleSets& gly
 
 void WiLibCp::removeCp()
 {
-    ui->wiImage->setCp(nullptr, uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
+    ui->wiImage->setCp(nullptr, uc::GlyphStyleSets::EMPTY);
     ui->lbCode->setText("---");
     currentCp = NO_CP;
 }

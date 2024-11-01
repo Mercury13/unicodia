@@ -8,7 +8,7 @@ namespace uc {
     struct Cp;
     struct GlyphStyleSets;
     class FontMatcher;
-    enum class EmojiDraw;
+    enum class EmojiDraw : unsigned char;
     struct Font;
 }
 
@@ -34,7 +34,7 @@ public:
     void translateMe();
     void switchToLib();
 private:
-    enum class HeadMode { NONE, SAMPLE, TOLIB };
+    enum class HeadMode : unsigned char { NONE, SAMPLE, TOLIB };
 
     Ui::WiSample *ui;
     /// Qt’s peculiarity: once the label was shown with non-empty text,
