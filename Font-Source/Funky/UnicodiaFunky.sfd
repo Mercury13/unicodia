@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1730644094
+ModificationTime: 1730644184
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -878,7 +878,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 70488 33 14
+WinInfo: 70455 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -156988,7 +156988,7 @@ EndChar
 StartChar: Tutg.Ch
 Encoding: 70552 70552 1171
 Width: 1272
-Flags: WO
+Flags: W
 HStem: -10 60<176.169 283.719 586.796 685.204 989.347 1096.7> 229 59<160.606 277.187 991.352 1113.17> 600 60<215.55 357.094 914.659 1056.63>
 VStem: 50 60<249.392 460.8> 304 60<69.9213 205.085> 458 60<167.293 457.719> 754 60<167.293 457.719> 908 60<71.4922 205.576> 1162 60<249.392 461.052>
 TtInstrs:
