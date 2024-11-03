@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1730596717
+ModificationTime: 1730596737
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -156564,7 +156564,7 @@ EndChar
 StartChar: Tutg.Ng
 Encoding: 70550 70550 1169
 Width: 1167
-Flags: WO
+Flags: W
 HStem: -10 60<184.278 293.294> 272 60<182.097 292.632> 295 60<876.745 996.541> 600 60<217.333 364.77 608.701 748.778>
 VStem: 50 60<268.994 470.355> 326 60<83.2773 237.351> 453 60<242 482.288> 798 61<351.58 545.243> 1047 60<-203 225.5>
 TtInstrs:
