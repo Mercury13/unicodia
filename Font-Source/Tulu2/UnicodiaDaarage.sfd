@@ -2007,8 +2007,8 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.Ny
 LCarets2: 2 714 1022
 EndChar
 
-StartChar: Tutg.Ng
-Encoding: 70550 70550 42
+StartChar: Lig.Nn_T
+Encoding: 70550 -1 42
 Width: 1202
 VWidth: 1000
 GlyphClass: 3
