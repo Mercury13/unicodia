@@ -799,7 +799,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(9), EcFont::FUNKY, NO_FLAGS,
+        Dating::century(9), EcFont::TULU, NO_FLAGS,
         { .mantissa = 18, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011, .locations { LOC_INDIA_SW } } },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,

@@ -302,6 +302,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
     { { "NotoSansTifinagh-Regular.ttf", Fafg::DEHINT_DOTC } },                  // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
+    { "UnicodiaDaarage.otf", 120_pc },                                          // Tulu
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Ugaritic
       { "NotoSansUgaritic-Regular.ttf" },                                       // …1
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts for symbols
