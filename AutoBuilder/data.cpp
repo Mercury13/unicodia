@@ -1892,6 +1892,7 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x111C3, uc::m::SAMPLED_CONTROL }, // Shrd upadh
     // Tutg
     { 0x113D0, uc::m::VIRTUAL_VIRAMA  }, // Tutg conjoiner
+    { 0x113D1, uc::m::SAMPLED_CONTROL }, // Tutg conjoiner
     // Diak
     { 0x1193E, uc::m::VIRTUAL_VIRAMA  }, // Diak virama
     { 0x1193F, uc::m::SAMPLED_CONTROL }, // Diak nasal sign
