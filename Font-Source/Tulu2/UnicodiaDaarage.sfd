@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1730685811
+ModificationTime: 1730686655
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -64,7 +64,8 @@ Lookup: 258 8 0 "'kern' Horizontal Kerning in Latin lookup 0" { "'kern' Horizont
 MarkAttachClasses: 1
 DEI: 91125
 LangName: 1033 "" "Xdareg(darage)v1" "" "" "Xdaregdaragev1-Regular" "Version 1.000" "" "" "" "" "" "" "" "" "" "" "Xdareg(darage)v1(RL)"
-Encoding: Custom
+Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
@@ -79,10 +80,10 @@ StemSnapH 7 [81 87]
 StemSnapV 7 [57 64]
 EndPrivate
 AnchorClass2: "Low uml" "Tutg BLWM-1"
-BeginChars: 390 390
+BeginChars: 1114415 391
 
 StartChar: .notdef
-Encoding: 87 -1 0
+Encoding: 1114112 -1 0
 Width: 552
 GlyphClass: 1
 Flags: W
@@ -113,7 +114,7 @@ LayerCount: 2
 EndChar
 
 StartChar: uni000D
-Encoding: 1 13 2
+Encoding: 13 13 2
 Width: 250
 GlyphClass: 2
 Flags: W
@@ -121,7 +122,7 @@ LayerCount: 2
 EndChar
 
 StartChar: space
-Encoding: 2 32 3
+Encoding: 32 32 3
 Width: 250
 GlyphClass: 2
 Flags: W
@@ -129,7 +130,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Tutg.Uml.Vir
-Encoding: 82 70606 4
+Encoding: 70606 70606 4
 Width: 0
 GlyphClass: 2
 Flags: MW
@@ -154,7 +155,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Bh
-Encoding: 55 70569 5
+Encoding: 70569 70569 5
 Width: 1061
 GlyphClass: 2
 Flags: W
@@ -205,7 +206,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Ch
-Encoding: 39 70552 6
+Encoding: 70552 70552 6
 Width: 939
 GlyphClass: 2
 Flags: W
@@ -265,7 +266,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Dh
-Encoding: 50 70564 7
+Encoding: 70564 70564 7
 Width: 768
 GlyphClass: 2
 Flags: W
@@ -301,7 +302,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: E
-Encoding: 13 69 8
+Encoding: 69 69 8
 Width: 316
 GlyphClass: 2
 Flags: W
@@ -338,7 +339,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: F
-Encoding: 14 70 9
+Encoding: 70 70 9
 Width: 504
 GlyphClass: 2
 Flags: W
@@ -372,7 +373,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Gh
-Encoding: 36 70549 10
+Encoding: 70549 70549 10
 Width: 1062
 GlyphClass: 2
 Flags: W
@@ -427,7 +428,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.Vis
-Encoding: 81 70605 11
+Encoding: 70605 70605 11
 Width: 259
 GlyphClass: 2
 Flags: W
@@ -463,7 +464,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.Ii
-Encoding: 70 70586 12
+Encoding: 70586 70586 12
 Width: 147
 GlyphClass: 2
 Flags: W
@@ -496,7 +497,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Jh
-Encoding: 15 70554 13
+Encoding: 70554 70554 13
 Width: 1036
 GlyphClass: 2
 Flags: W
@@ -558,7 +559,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Kh
-Encoding: 34 70547 14
+Encoding: 70547 70547 14
 Width: 809
 GlyphClass: 2
 Flags: W
@@ -606,7 +607,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Ll
-Encoding: 65 70579 15
+Encoding: 70579 70579 15
 Width: 513
 GlyphClass: 2
 Flags: W
@@ -658,7 +659,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: M
-Encoding: 16 77 16
+Encoding: 77 77 16
 Width: 406
 GlyphClass: 2
 Flags: W
@@ -684,7 +685,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Nn
-Encoding: 46 70560 17
+Encoding: 70560 70560 17
 Width: 1141
 GlyphClass: 2
 Flags: W
@@ -743,7 +744,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Ph
-Encoding: 53 70567 18
+Encoding: 70567 70567 18
 Width: 937
 GlyphClass: 2
 Flags: W
@@ -797,7 +798,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Tth
-Encoding: 43 70557 19
+Encoding: 70557 70557 19
 Width: 536
 GlyphClass: 2
 Flags: W
@@ -828,7 +829,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.VocR
-Encoding: 73 70589 20
+Encoding: 70589 70589 20
 Width: 185
 GlyphClass: 2
 Flags: W
@@ -862,7 +863,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Sh
-Encoding: 61 70575 21
+Encoding: 70575 70575 21
 Width: 857
 GlyphClass: 2
 Flags: W
@@ -903,7 +904,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Th
-Encoding: 48 70562 22
+Encoding: 70562 70562 22
 Width: 772
 GlyphClass: 2
 Flags: W
@@ -941,7 +942,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.Uu
-Encoding: 72 70588 23
+Encoding: 70588 70588 23
 Width: 0
 GlyphClass: 2
 Flags: W
@@ -976,7 +977,7 @@ EndSplineSet
 EndChar
 
 StartChar: V
-Encoding: 18 86 24
+Encoding: 86 86 24
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -984,7 +985,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Tutg.Ddh
-Encoding: 45 70559 25
+Encoding: 70559 70559 25
 Width: 784
 GlyphClass: 2
 Flags: W
@@ -1035,7 +1036,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.LoopVir
-Encoding: 83 70607 26
+Encoding: 70607 70607 26
 Width: 448
 GlyphClass: 2
 Flags: W
@@ -1079,7 +1080,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Length
-Encoding: 78 70601 27
+Encoding: 70601 70601 27
 Width: 450
 GlyphClass: 2
 Flags: W
@@ -1115,7 +1116,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Ny
-Encoding: 41 70555 28
+Encoding: 70555 70555 28
 Width: 783
 GlyphClass: 2
 Flags: W
@@ -1173,7 +1174,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.Aa
-Encoding: 68 70584 29
+Encoding: 70584 70584 29
 Width: 227
 GlyphClass: 2
 Flags: W
@@ -1200,7 +1201,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.B
-Encoding: 54 70568 30
+Encoding: 70568 70568 30
 Width: 861
 GlyphClass: 2
 Flags: W
@@ -1257,7 +1258,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.C
-Encoding: 38 70551 31
+Encoding: 70551 70551 31
 Width: 770
 GlyphClass: 2
 Flags: W
@@ -1299,7 +1300,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.D
-Encoding: 49 70563 32
+Encoding: 70563 70563 32
 Width: 493
 GlyphClass: 2
 Flags: W
@@ -1337,7 +1338,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.Ee
-Encoding: 74 70594 33
+Encoding: 70594 70594 33
 Width: 349
 GlyphClass: 2
 Flags: W
@@ -1368,7 +1369,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Reph
-Encoding: 84 70609 34
+Encoding: 70609 70609 34
 Width: 195
 GlyphClass: 2
 Flags: W
@@ -1389,7 +1390,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.G
-Encoding: 35 70548 35
+Encoding: 70548 70548 35
 Width: 784
 GlyphClass: 2
 Flags: W
@@ -1426,7 +1427,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Z_A_k
-Encoding: 88 -1 36
+Encoding: 1114113 -1 36
 Width: 1163
 GlyphClass: 3
 Flags: W
@@ -1498,7 +1499,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z_A_g
-Encoding: 89 -1 37
+Encoding: 1114114 -1 37
 Width: 783
 GlyphClass: 3
 Flags: W
@@ -1581,7 +1582,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_c
-Encoding: 90 -1 38
+Encoding: 1114115 -1 38
 Width: 1461
 GlyphClass: 3
 Flags: W
@@ -1666,7 +1667,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_C
-Encoding: 91 -1 39
+Encoding: 1114116 -1 39
 Width: 1388
 GlyphClass: 3
 Flags: W
@@ -1754,7 +1755,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_j
-Encoding: 92 -1 40
+Encoding: 1114117 -1 40
 Width: 1792
 GlyphClass: 3
 Flags: W
@@ -1851,7 +1852,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_z
-Encoding: 93 -1 41
+Encoding: 1114118 -1 41
 Width: 1773
 GlyphClass: 3
 Flags: W
@@ -1959,7 +1960,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Ng
-Encoding: 37 70550 42
+Encoding: 70550 70550 42
 Width: 1202
 GlyphClass: 3
 Flags: W
@@ -2040,7 +2041,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: N_A_Q
-Encoding: 94 -1 43
+Encoding: 1114119 -1 43
 Width: 1277
 GlyphClass: 3
 Flags: W
@@ -2116,7 +2117,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_w
-Encoding: 95 -1 44
+Encoding: 1114120 -1 44
 Width: 1567
 GlyphClass: 3
 Flags: W
@@ -2204,7 +2205,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_W
-Encoding: 96 -1 45
+Encoding: 1114121 -1 45
 Width: 1633
 GlyphClass: 3
 Flags: W
@@ -2291,7 +2292,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t
-Encoding: 97 -1 46
+Encoding: 1114122 -1 46
 Width: 1146
 GlyphClass: 3
 Flags: W
@@ -2352,7 +2353,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_d
-Encoding: 98 -1 47
+Encoding: 1114123 -1 47
 Width: 923
 GlyphClass: 3
 Flags: W
@@ -2414,7 +2415,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_D
-Encoding: 99 -1 48
+Encoding: 1114124 -1 48
 Width: 1261
 GlyphClass: 3
 Flags: W
@@ -2476,7 +2477,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_y
-Encoding: 100 -1 49
+Encoding: 1114125 -1 49
 Width: 328
 GlyphClass: 3
 Flags: W
@@ -2509,7 +2510,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.H
-Encoding: 64 70578 50
+Encoding: 70578 70578 50
 Width: 766
 GlyphClass: 2
 Flags: W
@@ -2557,7 +2558,7 @@ Kerns2: 265 -750 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.I
-Encoding: 69 70585 51
+Encoding: 70585 70585 51
 Width: 147
 GlyphClass: 2
 Flags: W
@@ -2586,7 +2587,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.J
-Encoding: 40 70553 52
+Encoding: 70553 70553 52
 Width: 1364
 GlyphClass: 2
 Flags: W
@@ -2656,7 +2657,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.K
-Encoding: 33 70546 53
+Encoding: 70546 70546 53
 Width: 768
 GlyphClass: 2
 Flags: W
@@ -2706,7 +2707,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.L
-Encoding: 59 70573 54
+Encoding: 70573 70573 54
 Width: 588
 GlyphClass: 2
 Flags: W
@@ -2743,7 +2744,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.M
-Encoding: 56 70570 55
+Encoding: 70570 70570 55
 Width: 585
 GlyphClass: 2
 Flags: W
@@ -2785,7 +2786,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.N
-Encoding: 51 70565 56
+Encoding: 70565 70565 56
 Width: 806
 GlyphClass: 2
 Flags: W
@@ -2827,7 +2828,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.P
-Encoding: 52 70566 57
+Encoding: 70566 70566 57
 Width: 937
 GlyphClass: 2
 Flags: W
@@ -2874,7 +2875,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Tt
-Encoding: 42 70556 58
+Encoding: 70556 70556 58
 Width: 511
 GlyphClass: 2
 Flags: W
@@ -2912,7 +2913,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.R
-Encoding: 58 70572 59
+Encoding: 70572 70572 59
 Width: 594
 GlyphClass: 2
 Flags: W
@@ -2951,7 +2952,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.S
-Encoding: 63 70577 60
+Encoding: 70577 70577 60
 Width: 753
 GlyphClass: 2
 Flags: W
@@ -2997,7 +2998,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.T
-Encoding: 47 70561 61
+Encoding: 70561 70561 61
 Width: 811
 GlyphClass: 2
 Flags: W
@@ -3044,7 +3045,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Uml.U
-Encoding: 71 70587 62
+Encoding: 70587 70587 62
 Width: 8
 GlyphClass: 2
 Flags: W
@@ -3066,7 +3067,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.V
-Encoding: 60 70574 63
+Encoding: 70574 70574 63
 Width: 711
 GlyphClass: 2
 Flags: W
@@ -3107,7 +3108,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Dd
-Encoding: 44 70558 64
+Encoding: 70558 70558 64
 Width: 709
 GlyphClass: 2
 Flags: W
@@ -3161,7 +3162,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Ss
-Encoding: 62 70576 65
+Encoding: 70576 70576 65
 Width: 912
 GlyphClass: 2
 Flags: W
@@ -3225,7 +3226,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.Y
-Encoding: 57 70571 66
+Encoding: 70571 70571 66
 Width: 843
 GlyphClass: 2
 Flags: W
@@ -3272,7 +3273,7 @@ Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: z
-Encoding: 20 122 67
+Encoding: 122 122 67
 Width: 1251
 GlyphClass: 2
 Flags: W
@@ -3352,7 +3353,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 
 EndChar
 
 StartChar: Tutg.A
-Encoding: 23 70528 68
+Encoding: 70528 70528 68
 Width: 1115
 GlyphClass: 3
 Flags: W
@@ -3417,7 +3418,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Tutg.Aa
-Encoding: 24 70529 69
+Encoding: 70529 70529 69
 Width: 1115
 GlyphClass: 3
 Flags: W
@@ -3489,11 +3490,12 @@ SplineSet
  497 157 473 159 455 162 c 0
 EndSplineSet
 Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 266 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 267 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 268 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 269 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 270 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 271 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 272 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 273 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 274 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 275 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 276 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 277 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 278 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 279 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 280 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 281 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 282 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 283 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 284 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 285 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 286 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 287 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 288 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 289 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 290 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 291 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 292 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 293 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 294 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 295 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 296 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 297 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 298 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 299 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 300 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 301 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 302 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 303 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 304 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 305 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 306 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 307 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 308 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 309 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 310 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 311 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 312 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 313 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 314 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 315 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 316 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 317 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 318 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 319 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 320 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 321 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 322 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 323 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 326 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 333 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 334 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 341 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 342 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 343 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 344 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 345 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 346 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 347 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 348 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 349 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 350 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 351 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 352 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 353 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 354 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 355 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 356 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 357 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 358 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 359 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 360 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 361 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 362 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 363 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 364 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 365 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 366 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 367 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 368 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 369 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 370 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 371 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 372 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA in Latin lookup 0 subtable" Tutg.Uml.Vir Tutg.Uml.Aa
 EndChar
 
 StartChar: Tutg.I
-Encoding: 25 70530 70
+Encoding: 70530 70530 70
 Width: 818
 GlyphClass: 3
 Flags: W
@@ -3543,11 +3545,12 @@ SplineSet
  103 301 96 297 90 295 c 1
 EndSplineSet
 Kerns2: 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 266 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 267 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 268 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 269 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 270 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 271 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 272 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 273 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 274 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 275 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 276 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 277 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 278 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 279 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 280 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 281 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 282 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 283 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 284 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 285 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 286 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 287 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 288 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 289 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 290 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 291 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 292 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 293 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 294 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 295 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 296 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 297 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 298 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 299 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 300 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 301 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 302 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 303 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 304 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 305 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 306 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 307 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 308 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 309 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 310 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 311 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 312 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 313 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 314 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 315 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 316 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 317 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 318 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 319 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 320 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 321 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 322 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 323 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 326 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 333 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 334 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 341 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 342 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 343 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 344 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 345 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 346 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 347 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 348 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 349 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 350 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 351 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 352 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 353 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 354 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 355 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 356 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 357 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 358 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 359 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 360 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 361 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 362 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 363 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 364 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 365 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 366 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 367 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 368 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 369 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 370 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 371 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 372 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA in Latin lookup 0 subtable" Tutg.Uml.Vir Tutg.Uml.I
 EndChar
 
 StartChar: Tutg.Ii
-Encoding: 26 70531 71
+Encoding: 70531 70531 71
 Width: 1068
 GlyphClass: 3
 Flags: W
@@ -3626,7 +3629,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.U
-Encoding: 27 70532 72
+Encoding: 70532 70532 72
 Width: 534
 GlyphClass: 3
 Flags: W
@@ -3669,7 +3672,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Uu
-Encoding: 28 70533 73
+Encoding: 70533 70533 73
 Width: 542
 GlyphClass: 3
 Flags: W
@@ -3729,7 +3732,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.VocR
-Encoding: 29 70534 74
+Encoding: 70534 70534 74
 Width: 575
 GlyphClass: 3
 Flags: W
@@ -3784,7 +3787,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.E
-Encoding: 101 -1 75
+Encoding: 1114126 -1 75
 Width: 788
 GlyphClass: 3
 Flags: W
@@ -3838,7 +3841,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Ee
-Encoding: 31 70539 76
+Encoding: 70539 70539 76
 Width: 799
 GlyphClass: 3
 Flags: W
@@ -3900,7 +3903,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Ai
-Encoding: 32 70542 77
+Encoding: 70542 70542 77
 Width: 1170
 GlyphClass: 3
 Flags: W
@@ -3979,7 +3982,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: e_A_a
-Encoding: 102 -1 78
+Encoding: 1114127 -1 78
 Width: 407
 GlyphClass: 3
 Flags: W
@@ -4027,7 +4030,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: E_A_a
-Encoding: 103 -1 79
+Encoding: 1114128 -1 79
 Width: 412
 GlyphClass: 3
 Flags: W
@@ -4084,7 +4087,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_Y
-Encoding: 104 -1 80
+Encoding: 1114129 -1 80
 Width: 861
 GlyphClass: 3
 Flags: W
@@ -4163,7 +4166,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_x
-Encoding: 105 -1 81
+Encoding: 1114130 -1 81
 Width: 1346
 GlyphClass: 3
 Flags: W
@@ -4252,7 +4255,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: B_u
-Encoding: 106 -1 82
+Encoding: 1114131 -1 82
 Width: 1185
 GlyphClass: 3
 Flags: W
@@ -4307,7 +4310,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: B_U
-Encoding: 107 -1 83
+Encoding: 1114132 -1 83
 Width: 1071
 GlyphClass: 3
 Flags: W
@@ -4376,7 +4379,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: C_u
-Encoding: 108 -1 84
+Encoding: 1114133 -1 84
 Width: 985
 GlyphClass: 3
 Flags: W
@@ -4453,7 +4456,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: C_U
-Encoding: 109 -1 85
+Encoding: 1114134 -1 85
 Width: 1050
 GlyphClass: 3
 Flags: W
@@ -4539,7 +4542,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_u
-Encoding: 110 -1 86
+Encoding: 1114135 -1 86
 Width: 1254
 GlyphClass: 3
 Flags: W
@@ -4605,7 +4608,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_U
-Encoding: 111 -1 87
+Encoding: 1114136 -1 87
 Width: 1185
 GlyphClass: 3
 Flags: W
@@ -4685,7 +4688,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_u
-Encoding: 112 -1 88
+Encoding: 1114137 -1 88
 Width: 1114
 GlyphClass: 3
 Flags: W
@@ -4742,7 +4745,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_U
-Encoding: 113 -1 89
+Encoding: 1114138 -1 89
 Width: 1006
 GlyphClass: 3
 Flags: W
@@ -4805,7 +4808,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_u
-Encoding: 114 -1 90
+Encoding: 1114139 -1 90
 Width: 941
 GlyphClass: 3
 Flags: W
@@ -4847,7 +4850,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_U
-Encoding: 115 -1 91
+Encoding: 1114140 -1 91
 Width: 807
 GlyphClass: 3
 Flags: W
@@ -4905,7 +4908,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_u
-Encoding: 116 -1 92
+Encoding: 1114141 -1 92
 Width: 930
 GlyphClass: 3
 Flags: W
@@ -4956,7 +4959,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_U
-Encoding: 117 -1 93
+Encoding: 1114142 -1 93
 Width: 796
 GlyphClass: 3
 Flags: W
@@ -5024,7 +5027,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_u
-Encoding: 118 -1 94
+Encoding: 1114143 -1 94
 Width: 1364
 GlyphClass: 3
 Flags: W
@@ -5111,7 +5114,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_U
-Encoding: 119 -1 95
+Encoding: 1114144 -1 95
 Width: 1530
 GlyphClass: 3
 Flags: W
@@ -5208,7 +5211,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_u
-Encoding: 120 -1 96
+Encoding: 1114145 -1 96
 Width: 924
 GlyphClass: 3
 Flags: W
@@ -5263,7 +5266,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_U
-Encoding: 121 -1 97
+Encoding: 1114146 -1 97
 Width: 892
 GlyphClass: 3
 Flags: W
@@ -5331,7 +5334,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_u
-Encoding: 122 -1 98
+Encoding: 1114147 -1 98
 Width: 937
 GlyphClass: 3
 Flags: W
@@ -5376,7 +5379,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_U
-Encoding: 123 -1 99
+Encoding: 1114148 -1 99
 Width: 823
 GlyphClass: 3
 Flags: W
@@ -5435,7 +5438,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: r_u
-Encoding: 124 -1 100
+Encoding: 1114149 -1 100
 Width: 613
 GlyphClass: 3
 Flags: W
@@ -5488,7 +5491,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: r_U
-Encoding: 125 -1 101
+Encoding: 1114150 -1 101
 Width: 756
 GlyphClass: 3
 Flags: W
@@ -5554,7 +5557,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_u
-Encoding: 126 -1 102
+Encoding: 1114151 -1 102
 Width: 976
 GlyphClass: 3
 Flags: W
@@ -5605,7 +5608,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_U
-Encoding: 127 -1 103
+Encoding: 1114152 -1 103
 Width: 842
 GlyphClass: 3
 Flags: W
@@ -5672,7 +5675,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_l
-Encoding: 128 -1 104
+Encoding: 1114153 -1 104
 Width: 0
 GlyphClass: 3
 Flags: W
@@ -5709,7 +5712,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_r
-Encoding: 129 -1 105
+Encoding: 1114154 -1 105
 Width: 159
 GlyphClass: 3
 Flags: W
@@ -5735,7 +5738,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_v
-Encoding: 130 -1 106
+Encoding: 1114155 -1 106
 Width: 122
 GlyphClass: 3
 Flags: W
@@ -5766,7 +5769,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_s
-Encoding: 131 -1 107
+Encoding: 1114156 -1 107
 Width: 172
 GlyphClass: 3
 Flags: W
@@ -5809,7 +5812,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_j
-Encoding: 132 -1 108
+Encoding: 1114157 -1 108
 Width: 2408
 GlyphClass: 3
 Flags: W
@@ -5916,7 +5919,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_k
-Encoding: 133 -1 109
+Encoding: 1114158 -1 109
 Width: 1329
 GlyphClass: 3
 Flags: W
@@ -5996,7 +5999,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_g
-Encoding: 134 -1 110
+Encoding: 1114159 -1 110
 Width: 1378
 GlyphClass: 3
 Flags: W
@@ -6051,7 +6054,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c_A_c
-Encoding: 135 -1 111
+Encoding: 1114160 -1 111
 Width: 765
 GlyphClass: 3
 Flags: W
@@ -6106,7 +6109,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: q_A_q
-Encoding: 136 -1 112
+Encoding: 1114161 -1 112
 Width: 550
 GlyphClass: 3
 Flags: W
@@ -6152,7 +6155,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_t
-Encoding: 137 -1 113
+Encoding: 1114162 -1 113
 Width: 1137
 GlyphClass: 3
 Flags: W
@@ -6217,7 +6220,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_n
-Encoding: 138 -1 114
+Encoding: 1114163 -1 114
 Width: 1229
 GlyphClass: 3
 Flags: W
@@ -6274,7 +6277,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: f_A
-Encoding: 139 -1 115
+Encoding: 1114164 -1 115
 Width: 0
 GlyphClass: 3
 Flags: W
@@ -6309,7 +6312,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: p_A_p
-Encoding: 140 -1 116
+Encoding: 1114165 -1 116
 Width: 945
 GlyphClass: 3
 Flags: W
@@ -6390,7 +6393,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: b_A_b
-Encoding: 141 -1 117
+Encoding: 1114166 -1 117
 Width: 861
 GlyphClass: 3
 Flags: W
@@ -6458,7 +6461,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: m_A_m
-Encoding: 142 -1 118
+Encoding: 1114167 -1 118
 Width: 1094
 GlyphClass: 3
 Flags: W
@@ -6523,7 +6526,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: L_A_L
-Encoding: 143 -1 119
+Encoding: 1114168 -1 119
 Width: 1098
 GlyphClass: 3
 Flags: W
@@ -6627,7 +6630,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c_A_C
-Encoding: 144 -1 120
+Encoding: 1114169 -1 120
 Width: 1293
 GlyphClass: 3
 Flags: W
@@ -6692,7 +6695,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z_A_k_u
-Encoding: 145 -1 121
+Encoding: 1114170 -1 121
 Width: 1319
 GlyphClass: 3
 Flags: W
@@ -6763,11 +6766,12 @@ SplineSet
  220 191 181 198 152 198 c 0
 EndSplineSet
 Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 372 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 371 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 370 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 369 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 368 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 367 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 366 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 365 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 364 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 363 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 362 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 361 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 360 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 359 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 358 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 357 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 356 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 355 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 354 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 353 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 352 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 351 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 350 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 349 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 348 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 347 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 346 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 345 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 344 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 343 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 342 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 341 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 334 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 333 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 326 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 323 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 322 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 321 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 320 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 319 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 318 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 317 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 316 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 315 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 314 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 313 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 312 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 311 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 310 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 309 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 308 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 307 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 306 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 305 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 304 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 303 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 302 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 301 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 300 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 299 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 298 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 297 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 296 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 295 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 294 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 293 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 292 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 291 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 290 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 289 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 288 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 287 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 286 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 285 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 284 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 283 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 282 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 281 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 280 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 279 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 278 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 277 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 276 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 275 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 274 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 273 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 272 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 271 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 270 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 269 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 268 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 267 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 266 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0" 265 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 0"
+LCarets2: 3 0 0 0
 Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA in Latin lookup 0 subtable" Tutg.Ny Tutg.Uml.Vir Tutg.K Tutg.Uml.U
 EndChar
 
 StartChar: Z_A_k_U
-Encoding: 146 -1 122
+Encoding: 1114171 -1 122
 Width: 1287
 GlyphClass: 3
 Flags: W
@@ -6858,7 +6862,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z_A_g_u
-Encoding: 147 -1 123
+Encoding: 1114172 -1 123
 Width: 789
 GlyphClass: 3
 Flags: W
@@ -6945,7 +6949,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z_A_g_U
-Encoding: 148 -1 124
+Encoding: 1114173 -1 124
 Width: 786
 GlyphClass: 3
 Flags: W
@@ -7047,7 +7051,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_C_u
-Encoding: 149 -1 125
+Encoding: 1114174 -1 125
 Width: 1444
 GlyphClass: 3
 Flags: W
@@ -7154,7 +7158,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_C_U
-Encoding: 150 -1 126
+Encoding: 1114175 -1 126
 Width: 1518
 GlyphClass: 3
 Flags: W
@@ -7268,7 +7272,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t_u
-Encoding: 151 -1 127
+Encoding: 1114176 -1 127
 Width: 1270
 GlyphClass: 3
 Flags: W
@@ -7331,7 +7335,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t_U
-Encoding: 152 -1 128
+Encoding: 1114177 -1 128
 Width: 1177
 GlyphClass: 3
 Flags: W
@@ -7410,7 +7414,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_n
-Encoding: 153 -1 129
+Encoding: 1114178 -1 129
 Width: 1210
 GlyphClass: 3
 Flags: W
@@ -7472,7 +7476,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_n_u
-Encoding: 154 -1 130
+Encoding: 1114179 -1 130
 Width: 1395
 GlyphClass: 3
 Flags: W
@@ -7536,7 +7540,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_n_U
-Encoding: 155 -1 131
+Encoding: 1114180 -1 131
 Width: 1227
 GlyphClass: 3
 Flags: W
@@ -7618,7 +7622,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_q
-Encoding: 156 -1 132
+Encoding: 1114181 -1 132
 Width: 912
 GlyphClass: 3
 Flags: W
@@ -7692,7 +7696,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_Q
-Encoding: 157 -1 133
+Encoding: 1114182 -1 133
 Width: 912
 GlyphClass: 3
 Flags: W
@@ -7768,7 +7772,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t_A_n
-Encoding: 158 -1 134
+Encoding: 1114183 -1 134
 Width: 1545
 GlyphClass: 3
 Flags: W
@@ -7841,7 +7845,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t_A_n_u
-Encoding: 159 -1 135
+Encoding: 1114184 -1 135
 Width: 1781
 GlyphClass: 3
 Flags: W
@@ -7918,7 +7922,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_t_A_n_U
-Encoding: 160 -1 136
+Encoding: 1114185 -1 136
 Width: 1562
 GlyphClass: 3
 Flags: W
@@ -8012,7 +8016,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_q_u
-Encoding: 161 -1 137
+Encoding: 1114186 -1 137
 Width: 935
 GlyphClass: 3
 Flags: W
@@ -8092,7 +8096,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_q_U
-Encoding: 162 -1 138
+Encoding: 1114187 -1 138
 Width: 1003
 GlyphClass: 3
 Flags: W
@@ -8187,7 +8191,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_x_A_m
-Encoding: 163 -1 139
+Encoding: 1114188 -1 139
 Width: 1346
 GlyphClass: 3
 Flags: W
@@ -8289,7 +8293,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_j_u
-Encoding: 164 -1 140
+Encoding: 1114189 -1 140
 Width: 2408
 GlyphClass: 3
 Flags: W
@@ -8413,7 +8417,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_j_U
-Encoding: 165 -1 141
+Encoding: 1114190 -1 141
 Width: 2574
 GlyphClass: 3
 Flags: W
@@ -8544,7 +8548,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_Q_u
-Encoding: 166 -1 142
+Encoding: 1114191 -1 142
 Width: 958
 GlyphClass: 3
 Flags: W
@@ -8627,7 +8631,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_Q_U
-Encoding: 167 -1 143
+Encoding: 1114192 -1 143
 Width: 1000
 GlyphClass: 3
 Flags: W
@@ -8719,7 +8723,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_y_u
-Encoding: 168 -1 144
+Encoding: 1114193 -1 144
 Width: 368
 GlyphClass: 3
 Flags: W
@@ -8760,7 +8764,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_y_U
-Encoding: 169 -1 145
+Encoding: 1114194 -1 145
 Width: 374
 GlyphClass: 3
 Flags: W
@@ -8812,7 +8816,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_r_u
-Encoding: 170 -1 146
+Encoding: 1114195 -1 146
 Width: 165
 GlyphClass: 3
 Flags: W
@@ -8845,7 +8849,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_r_U
-Encoding: 171 -1 147
+Encoding: 1114196 -1 147
 Width: 187
 GlyphClass: 3
 Flags: W
@@ -8887,7 +8891,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_v_u
-Encoding: 172 -1 148
+Encoding: 1114197 -1 148
 Width: 114
 GlyphClass: 3
 Flags: W
@@ -8925,7 +8929,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_v_U
-Encoding: 173 -1 149
+Encoding: 1114198 -1 149
 Width: 126
 GlyphClass: 3
 Flags: W
@@ -8971,7 +8975,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_s_u
-Encoding: 174 -1 150
+Encoding: 1114199 -1 150
 Width: 176
 GlyphClass: 3
 Flags: W
@@ -9024,7 +9028,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_s_U
-Encoding: 175 -1 151
+Encoding: 1114200 -1 151
 Width: 208
 GlyphClass: 3
 Flags: W
@@ -9082,7 +9086,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_u
-Encoding: 176 -1 152
+Encoding: 1114201 -1 152
 Width: 494
 GlyphClass: 3
 Flags: W
@@ -9126,7 +9130,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_U
-Encoding: 177 -1 153
+Encoding: 1114202 -1 153
 Width: 494
 GlyphClass: 3
 Flags: W
@@ -9183,7 +9187,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_d
-Encoding: 178 -1 154
+Encoding: 1114203 -1 154
 Width: 405
 GlyphClass: 3
 Flags: W
@@ -9241,7 +9245,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: w_A_w
-Encoding: 179 -1 155
+Encoding: 1114204 -1 155
 Width: 543
 GlyphClass: 3
 Flags: W
@@ -9325,7 +9329,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: w_A_w_u
-Encoding: 180 -1 156
+Encoding: 1114205 -1 156
 Width: 547
 GlyphClass: 3
 Flags: W
@@ -9419,7 +9423,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: w_A_w_U
-Encoding: 181 -1 157
+Encoding: 1114206 -1 157
 Width: 565
 GlyphClass: 3
 Flags: W
@@ -9525,7 +9529,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: c_A_C_u
-Encoding: 182 -1 158
+Encoding: 1114207 -1 158
 Width: 1309
 GlyphClass: 3
 Flags: W
@@ -9607,7 +9611,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c_A_C_U
-Encoding: 183 -1 159
+Encoding: 1114208 -1 159
 Width: 1398
 GlyphClass: 3
 Flags: W
@@ -9697,7 +9701,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c_A_c_u
-Encoding: 184 -1 160
+Encoding: 1114209 -1 160
 Width: 765
 GlyphClass: 3
 Flags: W
@@ -9760,7 +9764,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c_A_c_U
-Encoding: 185 -1 161
+Encoding: 1114210 -1 161
 Width: 765
 GlyphClass: 3
 Flags: W
@@ -9831,7 +9835,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: b_A_b_u
-Encoding: 186 -1 162
+Encoding: 1114211 -1 162
 Width: 861
 GlyphClass: 3
 Flags: W
@@ -9907,7 +9911,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: b_A_b_U
-Encoding: 187 -1 163
+Encoding: 1114212 -1 163
 Width: 861
 GlyphClass: 3
 Flags: W
@@ -9991,7 +9995,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: o
-Encoding: 19 111 164
+Encoding: 111 111 164
 Width: 310
 GlyphClass: 2
 Flags: W
@@ -10023,7 +10027,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: O
-Encoding: 17 79 165
+Encoding: 79 79 165
 Width: 328
 GlyphClass: 2
 Flags: W
@@ -10058,7 +10062,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: o_A
-Encoding: 188 -1 166
+Encoding: 1114213 -1 166
 Width: 1102
 GlyphClass: 3
 Flags: W
@@ -10132,7 +10136,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: O_A
-Encoding: 189 -1 167
+Encoding: 1114214 -1 167
 Width: 1132
 GlyphClass: 3
 Flags: W
@@ -10216,7 +10220,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Shrii
-Encoding: 86 70616 168
+Encoding: 70616 70616 168
 Width: 1116
 GlyphClass: 3
 Flags: W
@@ -10289,7 +10293,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: E_A_a_m_A
-Encoding: 190 -1 169
+Encoding: 1114215 -1 169
 Width: 882
 GlyphClass: 3
 Flags: W
@@ -10383,7 +10387,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: one
-Encoding: 4 49 170
+Encoding: 49 49 170
 Width: 484
 GlyphClass: 2
 Flags: W
@@ -10419,7 +10423,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: two
-Encoding: 5 50 171
+Encoding: 50 50 171
 Width: 642
 GlyphClass: 2
 Flags: W
@@ -10460,7 +10464,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: three
-Encoding: 6 51 172
+Encoding: 51 51 172
 Width: 751
 GlyphClass: 2
 Flags: W
@@ -10510,7 +10514,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: four
-Encoding: 7 52 173
+Encoding: 52 52 173
 Width: 1025
 GlyphClass: 2
 Flags: W
@@ -10569,7 +10573,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: five
-Encoding: 8 53 174
+Encoding: 53 53 174
 Width: 620
 GlyphClass: 2
 Flags: W
@@ -10618,7 +10622,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: six
-Encoding: 9 54 175
+Encoding: 54 54 175
 Width: 578
 GlyphClass: 2
 Flags: W
@@ -10661,7 +10665,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: seven
-Encoding: 10 55 176
+Encoding: 55 55 176
 Width: 393
 GlyphClass: 2
 Flags: W
@@ -10696,7 +10700,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: eight
-Encoding: 11 56 177
+Encoding: 56 56 177
 Width: 942
 GlyphClass: 2
 Flags: W
@@ -10742,7 +10746,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: nine
-Encoding: 12 57 178
+Encoding: 57 57 178
 Width: 554
 GlyphClass: 2
 Flags: W
@@ -10786,7 +10790,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: zero
-Encoding: 3 48 179
+Encoding: 48 48 179
 Width: 417
 GlyphClass: 2
 Flags: W
@@ -10814,7 +10818,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: xxtenxx
-Encoding: 191 -1 180
+Encoding: 1114216 -1 180
 Width: 609
 GlyphClass: 1
 Flags: W
@@ -10859,7 +10863,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: xxhundred
-Encoding: 192 -1 181
+Encoding: 1114217 -1 181
 Width: 749
 GlyphClass: 1
 Flags: W
@@ -10920,7 +10924,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.RR
-Encoding: 66 70580 182
+Encoding: 70580 70580 182
 Width: 738
 GlyphClass: 1
 Flags: W
@@ -10985,7 +10989,7 @@ LCarets2: 6 0 0 0 0 0 0
 EndChar
 
 StartChar: Tutg.Lll
-Encoding: 67 70581 183
+Encoding: 70581 70581 183
 Width: 644
 GlyphClass: 1
 Flags: W
@@ -11029,7 +11033,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Tutg.Uml.Anun
-Encoding: 79 70602 184
+Encoding: 70602 70602 184
 Width: 512
 GlyphClass: 3
 Flags: W
@@ -11062,7 +11066,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_u
-Encoding: 193 -1 185
+Encoding: 1114218 -1 185
 Width: 1253
 GlyphClass: 3
 Flags: W
@@ -11151,7 +11155,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_U
-Encoding: 194 -1 186
+Encoding: 1114219 -1 186
 Width: 1251
 GlyphClass: 3
 Flags: W
@@ -11249,7 +11253,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_z_u
-Encoding: 195 -1 187
+Encoding: 1114220 -1 187
 Width: 1773
 GlyphClass: 3
 Flags: W
@@ -11364,7 +11368,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_z_U
-Encoding: 196 -1 188
+Encoding: 1114221 -1 188
 Width: 1773
 GlyphClass: 3
 Flags: W
@@ -11487,7 +11491,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_z
-Encoding: 197 -1 189
+Encoding: 1114222 -1 189
 Width: 2345
 GlyphClass: 3
 Flags: W
@@ -11607,7 +11611,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_D
-Encoding: 198 -1 190
+Encoding: 1114223 -1 190
 Width: 864
 GlyphClass: 3
 Flags: W
@@ -11663,7 +11667,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_X
-Encoding: 199 -1 191
+Encoding: 1114224 -1 191
 Width: 996
 GlyphClass: 3
 Flags: W
@@ -11730,7 +11734,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: q_A_X
-Encoding: 200 -1 192
+Encoding: 1114225 -1 192
 Width: 591
 GlyphClass: 3
 Flags: W
@@ -11782,7 +11786,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_X
-Encoding: 201 -1 193
+Encoding: 1114226 -1 193
 Width: 1188
 GlyphClass: 3
 Flags: W
@@ -11858,7 +11862,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_X
-Encoding: 202 -1 194
+Encoding: 1114227 -1 194
 Width: 890
 GlyphClass: 3
 Flags: W
@@ -11919,7 +11923,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: m_A_X
-Encoding: 203 -1 195
+Encoding: 1114228 -1 195
 Width: 611
 GlyphClass: 3
 Flags: W
@@ -11974,7 +11978,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_X
-Encoding: 204 -1 196
+Encoding: 1114229 -1 196
 Width: 815
 GlyphClass: 3
 Flags: W
@@ -12023,7 +12027,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: s_A_T
-Encoding: 205 -1 197
+Encoding: 1114230 -1 197
 Width: 1296
 GlyphClass: 3
 Flags: W
@@ -12088,7 +12092,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_T
-Encoding: 206 -1 198
+Encoding: 1114231 -1 198
 Width: 1372
 GlyphClass: 3
 Flags: W
@@ -12153,7 +12157,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: s_A_v
-Encoding: 207 -1 199
+Encoding: 1114232 -1 199
 Width: 968
 GlyphClass: 3
 Flags: W
@@ -12210,7 +12214,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_v
-Encoding: 208 -1 200
+Encoding: 1114233 -1 200
 Width: 1128
 GlyphClass: 3
 Flags: W
@@ -12265,7 +12269,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_A_X
-Encoding: 209 -1 201
+Encoding: 1114234 -1 201
 Width: 801
 GlyphClass: 3
 Flags: W
@@ -12328,7 +12332,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_m
-Encoding: 210 -1 202
+Encoding: 1114235 -1 202
 Width: 1133
 GlyphClass: 3
 Flags: W
@@ -12392,7 +12396,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_A_m
-Encoding: 211 -1 203
+Encoding: 1114236 -1 203
 Width: 1092
 GlyphClass: 3
 Flags: W
@@ -12456,7 +12460,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_m
-Encoding: 212 -1 204
+Encoding: 1114237 -1 204
 Width: 1039
 GlyphClass: 3
 Flags: W
@@ -12516,7 +12520,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_m
-Encoding: 213 -1 205
+Encoding: 1114238 -1 205
 Width: 1414
 GlyphClass: 3
 Flags: W
@@ -12589,7 +12593,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_z_u
-Encoding: 214 -1 206
+Encoding: 1114239 -1 206
 Width: 2345
 GlyphClass: 3
 Flags: W
@@ -12718,7 +12722,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_A_z_U
-Encoding: 215 -1 207
+Encoding: 1114240 -1 207
 Width: 2345
 GlyphClass: 3
 Flags: W
@@ -12860,7 +12864,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_d_u
-Encoding: 216 -1 208
+Encoding: 1114241 -1 208
 Width: 924
 GlyphClass: 3
 Flags: W
@@ -12925,7 +12929,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_d_U
-Encoding: 217 -1 209
+Encoding: 1114242 -1 209
 Width: 923
 GlyphClass: 3
 Flags: W
@@ -13002,7 +13006,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_X
-Encoding: 218 -1 210
+Encoding: 1114243 -1 210
 Width: 830
 GlyphClass: 3
 Flags: W
@@ -13059,7 +13063,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: fi
-Encoding: 22 64257 211
+Encoding: 64257 64257 211
 Width: 149
 GlyphClass: 3
 Flags: W
@@ -13098,7 +13102,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: f_I
-Encoding: 219 -1 212
+Encoding: 1114244 -1 212
 Width: 149
 GlyphClass: 3
 Flags: W
@@ -13141,7 +13145,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_X
-Encoding: 220 -1 213
+Encoding: 1114245 -1 213
 Width: 697
 GlyphClass: 3
 Flags: W
@@ -13199,7 +13203,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_D1
-Encoding: 221 -1 214
+Encoding: 1114246 -1 214
 Width: 865
 GlyphClass: 3
 Flags: W
@@ -13254,7 +13258,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: t_A_t_u
-Encoding: 222 -1 215
+Encoding: 1114247 -1 215
 Width: 1299
 GlyphClass: 3
 Flags: W
@@ -13323,7 +13327,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_t_U
-Encoding: 223 -1 216
+Encoding: 1114248 -1 216
 Width: 1153
 GlyphClass: 3
 Flags: W
@@ -13410,7 +13414,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_k_u
-Encoding: 224 -1 217
+Encoding: 1114249 -1 217
 Width: 1485
 GlyphClass: 3
 Flags: W
@@ -13494,7 +13498,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_k_U
-Encoding: 225 -1 218
+Encoding: 1114250 -1 218
 Width: 1453
 GlyphClass: 3
 Flags: W
@@ -13594,7 +13598,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_g_u
-Encoding: 226 -1 219
+Encoding: 1114251 -1 219
 Width: 1420
 GlyphClass: 3
 Flags: W
@@ -13653,7 +13657,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_g_U
-Encoding: 227 -1 220
+Encoding: 1114252 -1 220
 Width: 1397
 GlyphClass: 3
 Flags: W
@@ -13725,7 +13729,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_n_u
-Encoding: 228 -1 221
+Encoding: 1114253 -1 221
 Width: 1335
 GlyphClass: 3
 Flags: W
@@ -13784,7 +13788,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_n_U
-Encoding: 229 -1 222
+Encoding: 1114254 -1 222
 Width: 1246
 GlyphClass: 3
 Flags: W
@@ -13858,7 +13862,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_j_u
-Encoding: 230 -1 223
+Encoding: 1114255 -1 223
 Width: 1792
 GlyphClass: 3
 Flags: W
@@ -13970,7 +13974,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: z_A_j_U
-Encoding: 231 -1 224
+Encoding: 1114256 -1 224
 Width: 1958
 GlyphClass: 3
 Flags: W
@@ -14090,7 +14094,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: l_A_p
-Encoding: 232 -1 225
+Encoding: 1114257 -1 225
 Width: 962
 GlyphClass: 3
 Flags: W
@@ -14156,7 +14160,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: L_A_p
-Encoding: 233 -1 226
+Encoding: 1114258 -1 226
 Width: 1175
 GlyphClass: 3
 Flags: W
@@ -14250,7 +14254,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: L_A_p_u
-Encoding: 234 -1 227
+Encoding: 1114259 -1 227
 Width: 1177
 GlyphClass: 3
 Flags: W
@@ -14352,7 +14356,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: L_A_p_U
-Encoding: 235 -1 228
+Encoding: 1114260 -1 228
 Width: 1174
 GlyphClass: 3
 Flags: W
@@ -14464,7 +14468,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_k
-Encoding: 236 -1 229
+Encoding: 1114261 -1 229
 Width: 1201
 GlyphClass: 3
 Flags: W
@@ -14535,7 +14539,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_k_u
-Encoding: 237 -1 230
+Encoding: 1114262 -1 230
 Width: 1366
 GlyphClass: 3
 Flags: W
@@ -14610,7 +14614,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_k_U
-Encoding: 238 -1 231
+Encoding: 1114263 -1 231
 Width: 1351
 GlyphClass: 3
 Flags: W
@@ -14701,7 +14705,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_t
-Encoding: 239 -1 232
+Encoding: 1114264 -1 232
 Width: 1227
 GlyphClass: 3
 Flags: W
@@ -14776,7 +14780,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_t_u
-Encoding: 240 -1 233
+Encoding: 1114265 -1 233
 Width: 1375
 GlyphClass: 3
 Flags: W
@@ -14855,7 +14859,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_t_U
-Encoding: 241 -1 234
+Encoding: 1114266 -1 234
 Width: 1241
 GlyphClass: 3
 Flags: W
@@ -14947,7 +14951,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_N
-Encoding: 242 -1 235
+Encoding: 1114267 -1 235
 Width: 1009
 GlyphClass: 3
 Flags: W
@@ -15050,7 +15054,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: x_A_N_u
-Encoding: 243 -1 236
+Encoding: 1114268 -1 236
 Width: 1098
 GlyphClass: 3
 Flags: W
@@ -15157,7 +15161,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: x_A_N_U
-Encoding: 244 -1 237
+Encoding: 1114269 -1 237
 Width: 1031
 GlyphClass: 3
 Flags: W
@@ -15276,7 +15280,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: n_A_t_A_r
-Encoding: 245 -1 238
+Encoding: 1114270 -1 238
 Width: 1139
 GlyphClass: 3
 Flags: W
@@ -15346,7 +15350,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_r
-Encoding: 246 -1 239
+Encoding: 1114271 -1 239
 Width: 806
 GlyphClass: 3
 Flags: W
@@ -15400,7 +15404,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_r
-Encoding: 247 -1 240
+Encoding: 1114272 -1 240
 Width: 803
 GlyphClass: 3
 Flags: W
@@ -15461,7 +15465,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_r
-Encoding: 248 -1 241
+Encoding: 1114273 -1 241
 Width: 797
 GlyphClass: 3
 Flags: W
@@ -15507,7 +15511,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_r
-Encoding: 249 -1 242
+Encoding: 1114274 -1 242
 Width: 498
 GlyphClass: 3
 Flags: W
@@ -15553,7 +15557,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_y
-Encoding: 250 -1 243
+Encoding: 1114275 -1 243
 Width: 926
 GlyphClass: 3
 Flags: W
@@ -15614,7 +15618,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_A_y
-Encoding: 251 -1 244
+Encoding: 1114276 -1 244
 Width: 908
 GlyphClass: 3
 Flags: W
@@ -15662,7 +15666,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: q_A_y
-Encoding: 252 -1 245
+Encoding: 1114277 -1 245
 Width: 636
 GlyphClass: 3
 Flags: W
@@ -15714,7 +15718,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: w_A_y
-Encoding: 253 -1 246
+Encoding: 1114278 -1 246
 Width: 846
 GlyphClass: 3
 Flags: W
@@ -15783,7 +15787,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_y
-Encoding: 254 -1 247
+Encoding: 1114279 -1 247
 Width: 1268
 GlyphClass: 3
 Flags: W
@@ -15854,7 +15858,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_A_y
-Encoding: 255 -1 248
+Encoding: 1114280 -1 248
 Width: 920
 GlyphClass: 3
 Flags: W
@@ -15912,7 +15916,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_y
-Encoding: 256 -1 249
+Encoding: 1114281 -1 249
 Width: 515
 GlyphClass: 3
 Flags: W
@@ -15960,7 +15964,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_A_y
-Encoding: 257 -1 250
+Encoding: 1114282 -1 250
 Width: 928
 GlyphClass: 3
 Flags: W
@@ -16013,7 +16017,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: p_A_y
-Encoding: 258 -1 251
+Encoding: 1114283 -1 251
 Width: 1081
 GlyphClass: 3
 Flags: W
@@ -16076,7 +16080,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: b_A_y
-Encoding: 259 -1 252
+Encoding: 1114284 -1 252
 Width: 1002
 GlyphClass: 3
 Flags: W
@@ -16151,7 +16155,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: m_A_y
-Encoding: 260 -1 253
+Encoding: 1114285 -1 253
 Width: 730
 GlyphClass: 3
 Flags: W
@@ -16206,7 +16210,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: l_A_y
-Encoding: 261 -1 254
+Encoding: 1114286 -1 254
 Width: 719
 GlyphClass: 3
 Flags: W
@@ -16258,7 +16262,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: v_A_y
-Encoding: 262 -1 255
+Encoding: 1114287 -1 255
 Width: 836
 GlyphClass: 3
 Flags: W
@@ -16313,7 +16317,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_A_y
-Encoding: 263 -1 256
+Encoding: 1114288 -1 256
 Width: 1020
 GlyphClass: 3
 Flags: W
@@ -16372,7 +16376,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: s_A_y
-Encoding: 264 -1 257
+Encoding: 1114289 -1 257
 Width: 885
 GlyphClass: 3
 Flags: W
@@ -16434,7 +16438,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_A_y
-Encoding: 265 -1 258
+Encoding: 1114290 -1 258
 Width: 872
 GlyphClass: 3
 Flags: W
@@ -16493,7 +16497,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: p_A_r
-Encoding: 266 -1 259
+Encoding: 1114291 -1 259
 Width: 937
 GlyphClass: 3
 Flags: W
@@ -16552,7 +16556,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_A_r
-Encoding: 267 -1 260
+Encoding: 1114292 -1 260
 Width: 875
 GlyphClass: 3
 Flags: W
@@ -16604,7 +16608,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_m
-Encoding: 268 -1 261
+Encoding: 1114293 -1 261
 Width: 2
 GlyphClass: 3
 Flags: W
@@ -16633,7 +16637,7 @@ EndSplineSet
 EndChar
 
 StartChar: S_A_v
-Encoding: 269 -1 262
+Encoding: 1114294 -1 262
 Width: 1125
 GlyphClass: 3
 Flags: W
@@ -16688,7 +16692,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_A_c
-Encoding: 270 -1 263
+Encoding: 1114295 -1 263
 Width: 1123
 GlyphClass: 3
 Flags: W
@@ -16745,7 +16749,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: m_A_p
-Encoding: 271 -1 264
+Encoding: 1114296 -1 264
 Width: 586
 GlyphClass: 3
 Flags: W
@@ -16809,7 +16813,7 @@ Kerns2: 373 -679 "'kern' Horizontal Kerning in Latin lookup 0 per glyph data 1" 
 EndChar
 
 StartChar: B.pnum
-Encoding: 272 -1 265
+Encoding: 1114297 -1 265
 Width: 1047
 GlyphClass: 2
 Flags: W
@@ -16861,7 +16865,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: C.pnum
-Encoding: 273 -1 266
+Encoding: 1114298 -1 266
 Width: 902
 GlyphClass: 2
 Flags: W
@@ -16922,7 +16926,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: D.pnum
-Encoding: 274 -1 267
+Encoding: 1114299 -1 267
 Width: 754
 GlyphClass: 2
 Flags: W
@@ -16959,7 +16963,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: G.pnum
-Encoding: 275 -1 268
+Encoding: 1114300 -1 268
 Width: 1048
 GlyphClass: 2
 Flags: W
@@ -17015,7 +17019,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: J.pnum
-Encoding: 276 -1 269
+Encoding: 1114301 -1 269
 Width: 1022
 GlyphClass: 2
 Flags: W
@@ -17078,7 +17082,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: K.pnum
-Encoding: 277 -1 270
+Encoding: 1114302 -1 270
 Width: 791
 GlyphClass: 2
 Flags: W
@@ -17127,7 +17131,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: L.pnum
-Encoding: 278 -1 271
+Encoding: 1114303 -1 271
 Width: 508
 GlyphClass: 2
 Flags: W
@@ -17179,7 +17183,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N.pnum
-Encoding: 279 -1 272
+Encoding: 1114304 -1 272
 Width: 1127
 GlyphClass: 2
 Flags: W
@@ -17238,7 +17242,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: P.pnum
-Encoding: 280 -1 273
+Encoding: 1114305 -1 273
 Width: 923
 GlyphClass: 2
 Flags: W
@@ -17292,7 +17296,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Q.pnum
-Encoding: 281 -1 274
+Encoding: 1114306 -1 274
 Width: 528
 GlyphClass: 2
 Flags: W
@@ -17323,7 +17327,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S.pnum
-Encoding: 282 -1 275
+Encoding: 1114307 -1 275
 Width: 843
 GlyphClass: 2
 Flags: W
@@ -17364,7 +17368,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: T.pnum
-Encoding: 283 -1 276
+Encoding: 1114308 -1 276
 Width: 758
 GlyphClass: 2
 Flags: W
@@ -17403,7 +17407,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: W.pnum
-Encoding: 284 -1 277
+Encoding: 1114309 -1 277
 Width: 770
 GlyphClass: 2
 Flags: W
@@ -17455,7 +17459,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z.pnum
-Encoding: 285 -1 278
+Encoding: 1114310 -1 278
 Width: 698
 GlyphClass: 2
 Flags: W
@@ -17511,7 +17515,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: a.pnum
-Encoding: 286 -1 279
+Encoding: 1114311 -1 279
 Width: 213
 GlyphClass: 2
 Flags: W
@@ -17537,7 +17541,7 @@ EndSplineSet
 EndChar
 
 StartChar: b.pnum
-Encoding: 287 -1 280
+Encoding: 1114312 -1 280
 Width: 847
 GlyphClass: 2
 Flags: W
@@ -17595,7 +17599,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: c.pnum
-Encoding: 288 -1 281
+Encoding: 1114313 -1 281
 Width: 756
 GlyphClass: 2
 Flags: W
@@ -17638,7 +17642,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d.pnum
-Encoding: 289 -1 282
+Encoding: 1114314 -1 282
 Width: 479
 GlyphClass: 2
 Flags: W
@@ -17677,7 +17681,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g.pnum
-Encoding: 290 -1 283
+Encoding: 1114315 -1 283
 Width: 757
 GlyphClass: 2
 Flags: W
@@ -17715,7 +17719,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h.pnum
-Encoding: 291 -1 284
+Encoding: 1114316 -1 284
 Width: 740
 GlyphClass: 2
 Flags: W
@@ -17763,7 +17767,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j.pnum
-Encoding: 292 -1 285
+Encoding: 1114317 -1 285
 Width: 1350
 GlyphClass: 2
 Flags: W
@@ -17833,7 +17837,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k.pnum
-Encoding: 293 -1 286
+Encoding: 1114318 -1 286
 Width: 754
 GlyphClass: 2
 Flags: W
@@ -17884,7 +17888,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: l.pnum
-Encoding: 294 -1 287
+Encoding: 1114319 -1 287
 Width: 574
 GlyphClass: 2
 Flags: W
@@ -17920,7 +17924,7 @@ EndSplineSet
 EndChar
 
 StartChar: m.pnum
-Encoding: 295 -1 288
+Encoding: 1114320 -1 288
 Width: 578
 GlyphClass: 2
 Flags: W
@@ -17963,7 +17967,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n.pnum
-Encoding: 296 -1 289
+Encoding: 1114321 -1 289
 Width: 792
 GlyphClass: 2
 Flags: W
@@ -18006,7 +18010,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: p.pnum
-Encoding: 297 -1 290
+Encoding: 1114322 -1 290
 Width: 923
 GlyphClass: 2
 Flags: W
@@ -18054,7 +18058,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: q.pnum
-Encoding: 298 -1 291
+Encoding: 1114323 -1 291
 Width: 497
 GlyphClass: 2
 Flags: W
@@ -18092,7 +18096,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: r.pnum
-Encoding: 299 -1 292
+Encoding: 1114324 -1 292
 Width: 580
 GlyphClass: 2
 Flags: W
@@ -18130,7 +18134,7 @@ EndSplineSet
 EndChar
 
 StartChar: s.pnum
-Encoding: 300 -1 293
+Encoding: 1114325 -1 293
 Width: 739
 GlyphClass: 2
 Flags: W
@@ -18175,7 +18179,7 @@ EndSplineSet
 EndChar
 
 StartChar: t.pnum
-Encoding: 301 -1 294
+Encoding: 1114326 -1 294
 Width: 797
 GlyphClass: 2
 Flags: W
@@ -18223,7 +18227,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: v.pnum
-Encoding: 302 -1 295
+Encoding: 1114327 -1 295
 Width: 697
 GlyphClass: 2
 Flags: W
@@ -18263,7 +18267,7 @@ EndSplineSet
 EndChar
 
 StartChar: w.pnum
-Encoding: 303 -1 296
+Encoding: 1114328 -1 296
 Width: 695
 GlyphClass: 2
 Flags: W
@@ -18318,7 +18322,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x.pnum
-Encoding: 304 -1 297
+Encoding: 1114329 -1 297
 Width: 898
 GlyphClass: 2
 Flags: W
@@ -18381,7 +18385,7 @@ EndSplineSet
 EndChar
 
 StartChar: y.pnum
-Encoding: 305 -1 298
+Encoding: 1114330 -1 298
 Width: 829
 GlyphClass: 2
 Flags: W
@@ -18427,7 +18431,7 @@ EndSplineSet
 EndChar
 
 StartChar: z.pnum
-Encoding: 306 -1 299
+Encoding: 1114331 -1 299
 Width: 1263
 GlyphClass: 2
 Flags: W
@@ -18508,7 +18512,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: B_u.pnum
-Encoding: 307 -1 300
+Encoding: 1114332 -1 300
 Width: 1101
 GlyphClass: 3
 Flags: W
@@ -18562,7 +18566,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: B_U.pnum
-Encoding: 308 -1 301
+Encoding: 1114333 -1 301
 Width: 1087
 GlyphClass: 3
 Flags: W
@@ -18630,7 +18634,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: C_u.pnum
-Encoding: 309 -1 302
+Encoding: 1114334 -1 302
 Width: 997
 GlyphClass: 3
 Flags: W
@@ -18706,7 +18710,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: C_U.pnum
-Encoding: 310 -1 303
+Encoding: 1114335 -1 303
 Width: 1086
 GlyphClass: 3
 Flags: W
@@ -18791,7 +18795,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_u.pnum
-Encoding: 311 -1 304
+Encoding: 1114336 -1 304
 Width: 1170
 GlyphClass: 3
 Flags: W
@@ -18856,7 +18860,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_U.pnum
-Encoding: 312 -1 305
+Encoding: 1114337 -1 305
 Width: 1201
 GlyphClass: 3
 Flags: W
@@ -18935,7 +18939,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_u.pnum
-Encoding: 313 -1 306
+Encoding: 1114338 -1 306
 Width: 1030
 GlyphClass: 3
 Flags: W
@@ -18991,7 +18995,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: S_U.pnum
-Encoding: 314 -1 307
+Encoding: 1114339 -1 307
 Width: 1039
 GlyphClass: 3
 Flags: W
@@ -19054,7 +19058,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_u.pnum
-Encoding: 315 -1 308
+Encoding: 1114340 -1 308
 Width: 857
 GlyphClass: 3
 Flags: W
@@ -19096,7 +19100,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_U.pnum
-Encoding: 316 -1 309
+Encoding: 1114341 -1 309
 Width: 806
 GlyphClass: 3
 Flags: W
@@ -19153,7 +19157,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_u.pnum
-Encoding: 317 -1 310
+Encoding: 1114342 -1 310
 Width: 855
 GlyphClass: 3
 Flags: W
@@ -19203,7 +19207,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_U.pnum
-Encoding: 318 -1 311
+Encoding: 1114343 -1 311
 Width: 812
 GlyphClass: 3
 Flags: W
@@ -19271,7 +19275,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_u.pnum
-Encoding: 319 -1 312
+Encoding: 1114344 -1 312
 Width: 1380
 GlyphClass: 3
 Flags: W
@@ -19357,7 +19361,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: j_U.pnum
-Encoding: 320 -1 313
+Encoding: 1114345 -1 313
 Width: 1546
 GlyphClass: 3
 Flags: W
@@ -19453,7 +19457,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_u.pnum
-Encoding: 321 -1 314
+Encoding: 1114346 -1 314
 Width: 840
 GlyphClass: 3
 Flags: W
@@ -19507,7 +19511,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_U.pnum
-Encoding: 322 -1 315
+Encoding: 1114347 -1 315
 Width: 908
 GlyphClass: 3
 Flags: W
@@ -19574,7 +19578,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_u.pnum
-Encoding: 323 -1 316
+Encoding: 1114348 -1 316
 Width: 853
 GlyphClass: 3
 Flags: W
@@ -19618,7 +19622,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: n_U.pnum
-Encoding: 324 -1 317
+Encoding: 1114349 -1 317
 Width: 839
 GlyphClass: 3
 Flags: W
@@ -19676,7 +19680,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: r_u.pnum
-Encoding: 325 -1 318
+Encoding: 1114350 -1 318
 Width: 646
 GlyphClass: 3
 Flags: W
@@ -19727,7 +19731,7 @@ EndSplineSet
 EndChar
 
 StartChar: r_U.pnum
-Encoding: 326 -1 319
+Encoding: 1114351 -1 319
 Width: 789
 GlyphClass: 3
 Flags: W
@@ -19791,7 +19795,7 @@ EndSplineSet
 EndChar
 
 StartChar: t_u.pnum
-Encoding: 327 -1 320
+Encoding: 1114352 -1 320
 Width: 892
 GlyphClass: 3
 Flags: W
@@ -19842,7 +19846,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_U.pnum
-Encoding: 328 -1 321
+Encoding: 1114353 -1 321
 Width: 858
 GlyphClass: 3
 Flags: W
@@ -19909,7 +19913,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_u.pnum
-Encoding: 329 -1 322
+Encoding: 1114354 -1 322
 Width: 510
 GlyphClass: 3
 Flags: W
@@ -19953,7 +19957,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_U.pnum
-Encoding: 330 -1 323
+Encoding: 1114355 -1 323
 Width: 510
 GlyphClass: 3
 Flags: W
@@ -20009,7 +20013,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_R
-Encoding: 331 -1 324
+Encoding: 1114356 -1 324
 Width: 805
 GlyphClass: 3
 Flags: W
@@ -20073,7 +20077,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: g_R
-Encoding: 332 -1 325
+Encoding: 1114357 -1 325
 Width: 785
 GlyphClass: 3
 Flags: W
@@ -20123,7 +20127,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_R.pnum
-Encoding: 333 -1 326
+Encoding: 1114358 -1 326
 Width: 814
 GlyphClass: 3
 Flags: W
@@ -20185,7 +20189,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: B_A_y
-Encoding: 334 -1 327
+Encoding: 1114359 -1 327
 Width: 1270
 GlyphClass: 3
 Flags: W
@@ -20246,7 +20250,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: s_A_r
-Encoding: 335 -1 328
+Encoding: 1114360 -1 328
 Width: 753
 GlyphClass: 3
 Flags: W
@@ -20303,7 +20307,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: d_A_m
-Encoding: 336 -1 329
+Encoding: 1114361 -1 329
 Width: 381
 GlyphClass: 3
 Flags: W
@@ -20348,7 +20352,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: k_A_x_A_m_A_y
-Encoding: 337 -1 330
+Encoding: 1114362 -1 330
 Width: 1482
 GlyphClass: 3
 Flags: W
@@ -20470,7 +20474,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: x_A_q_A_r
-Encoding: 338 -1 331
+Encoding: 1114363 -1 331
 Width: 913
 GlyphClass: 3
 Flags: W
@@ -20554,7 +20558,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Z_A_k_A_X
-Encoding: 339 -1 332
+Encoding: 1114364 -1 332
 Width: 1389
 GlyphClass: 3
 Flags: W
@@ -20644,7 +20648,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: w_u.pnum
-Encoding: 340 -1 333
+Encoding: 1114365 -1 333
 Width: 683
 GlyphClass: 3
 Flags: W
@@ -20704,7 +20708,7 @@ EndSplineSet
 EndChar
 
 StartChar: w_U.pnum
-Encoding: 341 -1 334
+Encoding: 1114366 -1 334
 Width: 690
 GlyphClass: 3
 Flags: W
@@ -20773,7 +20777,7 @@ EndSplineSet
 EndChar
 
 StartChar: N_A_t_A_n
-Encoding: 342 -1 335
+Encoding: 1114367 -1 335
 Width: 1893
 GlyphClass: 3
 Flags: W
@@ -20863,7 +20867,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_t_A_n_u
-Encoding: 343 -1 336
+Encoding: 1114368 -1 336
 Width: 1893
 GlyphClass: 3
 Flags: W
@@ -20955,7 +20959,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: N_A_t_A_n_U
-Encoding: 344 -1 337
+Encoding: 1114369 -1 337
 Width: 1878
 GlyphClass: 3
 Flags: W
@@ -21065,7 +21069,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: t_R
-Encoding: 345 -1 338
+Encoding: 1114370 -1 338
 Width: 811
 GlyphClass: 3
 Flags: W
@@ -21123,7 +21127,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: h_R
-Encoding: 346 -1 339
+Encoding: 1114371 -1 339
 Width: 767
 GlyphClass: 3
 Flags: W
@@ -21183,7 +21187,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: b_A_r
-Encoding: 347 -1 340
+Encoding: 1114372 -1 340
 Width: 864
 GlyphClass: 3
 Flags: W
@@ -21250,7 +21254,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_K_u
-Encoding: 348 -1 341
+Encoding: 1114373 -1 341
 Width: 801
 GlyphClass: 3
 Flags: W
@@ -21306,7 +21310,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_K_U
-Encoding: 349 -1 342
+Encoding: 1114374 -1 342
 Width: 804
 GlyphClass: 3
 Flags: W
@@ -21371,7 +21375,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_G_u
-Encoding: 350 -1 343
+Encoding: 1114375 -1 343
 Width: 1056
 GlyphClass: 3
 Flags: W
@@ -21433,7 +21437,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_G_U
-Encoding: 351 -1 344
+Encoding: 1114376 -1 344
 Width: 1057
 GlyphClass: 3
 Flags: W
@@ -21506,7 +21510,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_Z_u
-Encoding: 352 -1 345
+Encoding: 1114377 -1 345
 Width: 714
 GlyphClass: 3
 Flags: W
@@ -21567,7 +21571,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_Z_U
-Encoding: 353 -1 346
+Encoding: 1114378 -1 346
 Width: 708
 GlyphClass: 3
 Flags: W
@@ -21640,7 +21644,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_c_u
-Encoding: 354 -1 347
+Encoding: 1114379 -1 347
 Width: 766
 GlyphClass: 3
 Flags: W
@@ -21689,7 +21693,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_c_U
-Encoding: 355 -1 348
+Encoding: 1114380 -1 348
 Width: 768
 GlyphClass: 3
 Flags: W
@@ -21747,7 +21751,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_J_u
-Encoding: 356 -1 349
+Encoding: 1114381 -1 349
 Width: 1028
 GlyphClass: 3
 Flags: W
@@ -21817,7 +21821,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_J_U
-Encoding: 357 -1 350
+Encoding: 1114382 -1 350
 Width: 1023
 GlyphClass: 3
 Flags: W
@@ -21895,7 +21899,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_z_u
-Encoding: 358 -1 351
+Encoding: 1114383 -1 351
 Width: 1262
 GlyphClass: 3
 Flags: W
@@ -21982,7 +21986,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_z_U
-Encoding: 359 -1 352
+Encoding: 1114384 -1 352
 Width: 1256
 GlyphClass: 3
 Flags: W
@@ -22078,7 +22082,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_q_u
-Encoding: 360 -1 353
+Encoding: 1114385 -1 353
 Width: 502
 GlyphClass: 3
 Flags: W
@@ -22124,7 +22128,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_q_U
-Encoding: 361 -1 354
+Encoding: 1114386 -1 354
 Width: 500
 GlyphClass: 3
 Flags: W
@@ -22179,7 +22183,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_Q_u
-Encoding: 362 -1 355
+Encoding: 1114387 -1 355
 Width: 540
 GlyphClass: 3
 Flags: W
@@ -22218,7 +22222,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_Q_U
-Encoding: 363 -1 356
+Encoding: 1114388 -1 356
 Width: 538
 GlyphClass: 3
 Flags: W
@@ -22266,7 +22270,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_w_u
-Encoding: 364 -1 357
+Encoding: 1114389 -1 357
 Width: 700
 GlyphClass: 3
 Flags: W
@@ -22327,7 +22331,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_w_U
-Encoding: 365 -1 358
+Encoding: 1114390 -1 358
 Width: 704
 GlyphClass: 3
 Flags: W
@@ -22397,7 +22401,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_W_u
-Encoding: 366 -1 359
+Encoding: 1114391 -1 359
 Width: 776
 GlyphClass: 3
 Flags: W
@@ -22457,7 +22461,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_T_u
-Encoding: 367 -1 360
+Encoding: 1114392 -1 360
 Width: 764
 GlyphClass: 3
 Flags: W
@@ -22502,7 +22506,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_T_U
-Encoding: 368 -1 361
+Encoding: 1114393 -1 361
 Width: 769
 GlyphClass: 3
 Flags: W
@@ -22557,7 +22561,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_D_u
-Encoding: 369 -1 362
+Encoding: 1114394 -1 362
 Width: 766
 GlyphClass: 3
 Flags: W
@@ -22602,7 +22606,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_D_U
-Encoding: 370 -1 363
+Encoding: 1114395 -1 363
 Width: 757
 GlyphClass: 3
 Flags: W
@@ -22655,7 +22659,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_p_u
-Encoding: 371 -1 364
+Encoding: 1114396 -1 364
 Width: 928
 GlyphClass: 3
 Flags: W
@@ -22710,7 +22714,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_p_U
-Encoding: 372 -1 365
+Encoding: 1114397 -1 365
 Width: 928
 GlyphClass: 3
 Flags: W
@@ -22774,7 +22778,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_P_u
-Encoding: 373 -1 366
+Encoding: 1114398 -1 366
 Width: 930
 GlyphClass: 3
 Flags: W
@@ -22836,7 +22840,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_P_U
-Encoding: 374 -1 367
+Encoding: 1114399 -1 367
 Width: 928
 GlyphClass: 3
 Flags: W
@@ -22907,7 +22911,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_b_u
-Encoding: 375 -1 368
+Encoding: 1114400 -1 368
 Width: 851
 GlyphClass: 3
 Flags: W
@@ -22973,7 +22977,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_b_U
-Encoding: 376 -1 369
+Encoding: 1114401 -1 369
 Width: 859
 GlyphClass: 3
 Flags: W
@@ -23048,7 +23052,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_m_u
-Encoding: 377 -1 370
+Encoding: 1114402 -1 370
 Width: 581
 GlyphClass: 3
 Flags: W
@@ -23098,7 +23102,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_m_U
-Encoding: 378 -1 371
+Encoding: 1114403 -1 371
 Width: 580
 GlyphClass: 3
 Flags: W
@@ -23158,7 +23162,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_L_u
-Encoding: 379 -1 372
+Encoding: 1114404 -1 372
 Width: 510
 GlyphClass: 3
 Flags: W
@@ -23219,7 +23223,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_L_U
-Encoding: 380 -1 373
+Encoding: 1114405 -1 373
 Width: 563
 GlyphClass: 3
 Flags: W
@@ -23289,7 +23293,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_l_u
-Encoding: 381 -1 374
+Encoding: 1114406 -1 374
 Width: 0
 GlyphClass: 3
 Flags: W
@@ -23332,7 +23336,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_l_U
-Encoding: 382 -1 375
+Encoding: 1114407 -1 375
 Width: 0
 GlyphClass: 3
 Flags: W
@@ -23384,7 +23388,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: A_W_U
-Encoding: 383 -1 376
+Encoding: 1114408 -1 376
 Width: 782
 GlyphClass: 3
 Flags: W
@@ -23455,7 +23459,7 @@ Ligature2: "'liga' +BCEEQgQwBD0ENAQwBEAEQgQ9BEsENQAA +BDsEOAQzBDAEQgRDBEAESwAA i
 EndChar
 
 StartChar: Shape.Dotc
-Encoding: 21 9676 377
+Encoding: 9676 9676 377
 Width: 500
 Flags: MW
 AnchorPoint: "Low uml" 254 0 basechar 0
@@ -23546,7 +23550,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Lig.Dotc.Ee
-Encoding: 384 -1 378
+Encoding: 1114409 -1 378
 Width: 851
 LigCaretCntFixed: 1
 Flags: HMW
@@ -23561,7 +23565,7 @@ LCarets2: 1 353
 EndChar
 
 StartChar: Tutg.Uml.Ai
-Encoding: 75 70597 379
+Encoding: 70597 70597 379
 Width: 711
 Flags: W
 HStem: 252 81<92.5158 210.292 432.516 550.292> 417 81<119.843 219.505 459.843 559.505>
@@ -23573,7 +23577,7 @@ Refer: 33 70594 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Tutg.Lig.Dotc.Ai
-Encoding: 385 -1 380
+Encoding: 1114410 -1 380
 Width: 1168
 Flags: HMW
 HStem: 252 81<92.5158 210.292 432.516 550.292> 417 81<119.843 219.505 459.843 559.505>
@@ -23587,7 +23591,7 @@ LCarets2: 1 695
 EndChar
 
 StartChar: Tutg.Uml.Anu
-Encoding: 80 70604 381
+Encoding: 70604 70604 381
 Width: 259
 Flags: W
 HStem: 125 79<91.9465 161.537> 272 79<100.9 178.446>
@@ -23610,7 +23614,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Oo
-Encoding: 76 70599 382
+Encoding: 70599 70599 382
 Width: 607
 Flags: W
 HStem: -5 21G<537.5 550> 252 81<92.5158 210.292> 417 81<119.843 219.505> 417 82<449.068 495.967>
@@ -23622,7 +23626,7 @@ Refer: 33 70594 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Tutg.Uml.Au
-Encoding: 77 70600 383
+Encoding: 70600 70600 383
 Width: 813
 Flags: W
 HStem: 0 21G<408.5 425> 252 81<92.5158 210.292> 417 81<119.843 219.505> 419 81<408 492.88 624.084 686.882>
@@ -23634,7 +23638,7 @@ Refer: 33 70594 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Tutg.Uml.Dotc.Oo
-Encoding: 386 -1 384
+Encoding: 1114411 -1 384
 Width: 1069
 Flags: HMW
 HStem: -5 21G<1015.5 1028> 252 81<92.5158 210.292> 417 81<119.843 219.505> 417 82<927.068 973.967>
@@ -23649,7 +23653,7 @@ Ligature2: "Tutg CCMP-1" Shape.Dotc Tutg.Uml.Oo
 EndChar
 
 StartChar: Tutg.Uml.Dotc.Au
-Encoding: 387 -1 385
+Encoding: 1114412 -1 385
 Width: 1275
 GlyphClass: 3
 Flags: HMW
@@ -23664,7 +23668,7 @@ Ligature2: "Tutg CCMP-1" Shape.Dotc Tutg.Uml.Au
 EndChar
 
 StartChar: Tutg.Uml.Gem
-Encoding: 85 70610 386
+Encoding: 70610 70610 386
 Width: 0
 GlyphClass: 4
 Flags: MW
@@ -23690,7 +23694,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocLl
-Encoding: 30 70536 387
+Encoding: 70536 70536 387
 Width: 738
 Flags: MW
 HStem: -4 80<572.227 631.942> 17 79<125.632 194.101> 208 82<85.2428 142.656> 243 79<554.589 634.305> 422 80<150.06 253.701 467.866 577.778>
@@ -23743,7 +23747,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Lig.Dotc.VocR
-Encoding: 388 -1 388
+Encoding: 1114413 -1 388
 Width: 593
 Flags: W
 HStem: -92 81<122.093 214.369>
@@ -23756,7 +23760,7 @@ Ligature2: "Tutg CCMP-1" Shape.Dotc Tutg.Uml.VocR
 EndChar
 
 StartChar: Titg.Lig.Dotc.LoopVir
-Encoding: 389 -1 389
+Encoding: 1114414 -1 389
 Width: 817
 Flags: W
 HStem: 5 80<567.292 649.266> 427.896 80.6621<296.435 432.748> 438.936 90.0723<288.266 582.504> 605 81.001<474.243 623.005>
@@ -23767,6 +23771,64 @@ Refer: 26 70607 N 1 0 0 1 399 0 2
 Refer: 377 9676 N 1 0 0 1 0 0 2
 Ligature2: "Tutg CCMP-1" Shape.Dotc Tutg.Uml.LoopVir
 LCarets2: 1 476
+EndChar
+
+StartChar: Tutg.VocL
+Encoding: 70537 70537 390
+Width: 799
+Flags: W
+HStem: -166 81<172.554 575.09> 0 81<104.72 168.467 513.356 632.241> 195 81<540.612 609.882> 421 81<175.443 277.738 471.424 609.412>
+VStem: 17 64<117.725 165 242.053 300.551> 181 63<51 145.801> 312 68<220.856 278.543> 442 63<84.4402 156.141> 719 63<174.689 319.608>
+LayerCount: 2
+Fore
+SplineSet
+17 231 m 0
+ 17 259 22 502 203 502 c 0
+ 272 502 330 450 353 387 c 1
+ 383 467 420 500 508 500 c 0
+ 692 500 782 330 782 213 c 0
+ 782 161 767 111 740 73 c 1
+ 751 41 758 12 758 -12 c 0
+ 758 -159 529 -166 421 -166 c 0
+ 410 -166 401 -166 393 -166 c 0
+ 369 -166 347 -166 327 -166 c 0
+ 235 -166 154 -179 127 -220 c 0
+ 122 -228 121 -243 109 -243 c 0
+ 88 -243 56 -195 56 -175 c 0
+ 56 -165 64 -151 70 -143 c 0
+ 111 -89 211 -85 285 -85 c 0
+ 297 -85 308 -85 318 -85 c 2
+ 353 -85 l 2
+ 437 -85 673 -85 694 28 c 1
+ 666 10 633 -1 594 -1 c 0
+ 484 -1 442 100 442 154 c 0
+ 442 210 485 276 546 276 c 0
+ 599 276 653 227 693 166 c 1
+ 710 197 719 233 719 270 c 0
+ 719 378 650 419 549 419 c 0
+ 417 419 420 310 380 216 c 0
+ 377 208 376 199 365 199 c 0
+ 342 199 312 248 312 271 c 0
+ 312 275 312 280 312 285 c 0
+ 312 323 311 382 298 409 c 1
+ 280 418 266 421 245 421 c 0
+ 149 421 103 331 87 244 c 1
+ 105 242 124 239 135 234 c 0
+ 186 213 244 132 244 76 c 0
+ 244 26 205 0 158 0 c 0
+ 105 0 17 85 17 231 c 0
+505 92 m 0
+ 505 90 506 89 506 87 c 0
+ 520 82 536 80 551 80 c 0
+ 599 80 639 100 667 131 c 1
+ 651 163 629 195 589 195 c 0
+ 540 195 505 136 505 92 c 0
+181 133 m 0
+ 181 157 157 165 81 165 c 1
+ 82 138 84 109 96 85 c 1
+ 102 82 109 81 116 81 c 0
+ 145 81 181 100 181 133 c 0
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont

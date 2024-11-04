@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 1125 1000"
+   id="svg1"
+   sodipodi:docname="InitVocL.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.53386562"
+     inkscape:cx="841.97218"
+     inkscape:cy="815.74835"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     fill="currentColor"
+     d="m 333,555 c 4.42909,-115.98441 50,-257 186,-257 69,0 127,52 150,115 30,-80 67,-113 155,-113 42,0 85,9 122,29 90,48 152,156 152,258 0,52 -15,102 -42,140 11,32 18,61 18,85 0,162 -277,154 -365.5,154 -88.5,0 -148.46337,-4 -211.46337,18 -19,7 -43,19 -54,36 -5,8 -6,23 -18,23 -21,0 -53,-48 -53,-68 0,-10 8,-24 14,-32 C 434.03663,880 560,885 634,885 h 35 c 84,0 320,0 341,-113 -28,18 -61,29 -100,29 -19,0 -39,-3 -57,-10 -55,-23 -95,-86 -95,-145 0,-56 43,-122 104,-122 53,0 107,49 147,110 17,-31 26,-67 26,-104 0,-108 -69,-149 -170,-149 -132,0 -129,109 -169,203 -3,8 -4,17 -15,17 -23,0 -53,-49 -53,-72 0,-35 1,-107 -14,-138 -18,-9 -32,-12 -53,-12 -96,0 -142,90 -158,177 18,2 37,5 48,10 51,21 109,102 109,158 0,50 -39,76 -86,76 -54.41906,0 -146.90426,-90.38554 -141,-245 z m 488,153 c 0,2 1,3 1,5 14,5 30,7 45,7 48,0 88,-20 116,-51 -16,-32 -38,-64 -78,-64 -49,0 -84,59 -84,103 z M 455,638 c -19,-3 -38,-3 -58,-3 1,27 3,56 15,80 6,3 13,4 20,4 29,0 65,-19 65,-52 0,-24 -24,-26 -42,-29 z"
+     id="path1"
+     sodipodi:nodetypes="sscscscscccsscsscscsscsscsscsccsssscscsscccssc" />
+</svg>
