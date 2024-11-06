@@ -9875,7 +9875,11 @@
      <orig>Korvet</orig>
     </text>
     <text id="Text">
-     <orig>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</orig>
+     <orig>
+      <p>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
+      <p />
+      <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
+     </orig>
     </text>
    </group>
    <group id="Mac">

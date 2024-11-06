@@ -9153,6 +9153,7 @@
       <p />
       <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks looking like subscript + (will probably be encoded later as a pan-Indic punctuation), so picture for virtual [[pt:virama|virama]] has plus inside rather than below. ''Danda'' bar is ordinary, and was encoded to prevent problems in multilingual text.</p>
      </orig>
+     <au-cmt>1159 is actually inscription on stone rather than palm leaf</au-cmt>
      <transl>
       <p>Очень близкие древние письменности ''тулу'' и ''тигалари'', некоторые их считают одной. Возможно, вскоре добавят символы сестринской письменности ''грантха-малаялам''. Все они родственны с [[ps:Gran|грантхой]], и изредка используются сейчас в индуизме. Первая известная надпись{{-}}1159, но письмо много старее. Как язык меньшинства, тулу игнорировался британской властью, и письмо почти умерло.</p>
       <p />
@@ -14086,8 +14087,16 @@
      <transl>Корвет</transl>
     </text>
     <text id="Text">
-     <orig>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</orig>
-     <transl>Компьютер был интересным и имел хорошую графику, но качество производства было плохим, и 8-битный процессор был слаб для него, было мало игр с прокруткой. После развала СССР корпуса для «Корвета» пускали на меньшие компьютеры.</transl>
+     <orig>
+      <p>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
+      <p />
+      <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
+     </orig>
+     <transl>
+      <p>Компьютер был интересным и имел хорошую графику, но качество производства было плохим, и 8-битный процессор был слаб для него, было мало игр с прокруткой. После развала СССР корпуса для «Корвета» пускали на меньшие компьютеры.</p>
+      <p />
+      <p>В одной из самых плавных игр для «Корвета», «Гонки», только машинки были графическими, дорога была сделана из [[pt:pseudographics|пседографики]].</p>
+     </transl>
     </text>
    </group>
    <group id="Mac">
