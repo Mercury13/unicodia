@@ -145,6 +145,10 @@ Some types of dictionary entries:
   * If chain of capitalization occurred, e.g. “letter Breathy long Foobar”, only the first adjective is capitalized
 * Nouns (PART_NOUN, e.g. COMMA): if capitalization pushed, stop and do not capitalize: “letter Breathy long Foobar”, but “letter Breathy long comma”
 
+## Idioms
+
+Idioms are less powerful, work after dictionary, but trigger to several words at once, to correct capitalization at some phrase. Example: “Klingon vowel A”, but “Klingon vowel length mark”, just because “vowel length mark” cancels special meaning of “vowel” keyword.
+
 ## Script-specific
 
 Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM times KUR plus RU”. See line ``if (words[0].original == "CUNEIFORM"sv) {``
