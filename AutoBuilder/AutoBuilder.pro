@@ -15,6 +15,7 @@ SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         decap/decap.cpp \
+        decap/dic.cpp \
         egyptian.cpp \
         entities.cpp \
         forget.cpp \

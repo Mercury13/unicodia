@@ -71,7 +71,7 @@ struct DicEntry
 };
 
 
-enum class IdiomAction {
+enum class IdiomAction : unsigned char {
     // Work AFTER idiom
     REST_CAPSMALL,       ///< Rest words → Sentence case
     NEXT_CAP,            ///< Next word → Capital
@@ -97,7 +97,7 @@ private:
     using This = IdiomEntry;
 public:
     size_t nTriggers;
-    enum { SZ = 10 };
+    static constexpr int SZ = 10;
     std::string_view triggers[SZ];
     const IsPrefix ecIsPrefix;
     const IdiomAction action;
@@ -148,9 +148,9 @@ extern const std::unordered_set<std::string_view> cuneiformSymbols;
 extern const std::unordered_map<char32_t, uc::Cfgs> drawMethods;
 extern const std::unordered_map<char32_t, DepInfo> deprecatedInfo;
 
-enum class DecapDebug { NO, YES };
+enum class DecapDebug : unsigned char { NO, YES };
 
-enum class Dcfg {
+enum class Dcfg : unsigned char {
     SHORTCUT = 1,   ///< Force shortcut decapitalization (by dictionary unless special keywords)
     LOCASE = 2,     ///< Letter is lowercase
     UPCASE = 0,     ///< Letter is uppercase, Right now does nothing
