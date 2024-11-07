@@ -14,7 +14,7 @@ DEFINES += AT_RANGE_CHECK
 SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
-        data.cpp \
+        decap/decap.cpp \
         egyptian.cpp \
         entities.cpp \
         forget.cpp \
@@ -37,7 +37,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Vector.h \
     ../Unicodia/Uc/UcCp.h \
     ../Unicodia/Uc/UcFlags.h \
-    data.h \
+    decap/decap.h \
     egyptian.h \
     entities.h \
     forget.h \
