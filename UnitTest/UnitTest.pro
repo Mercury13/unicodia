@@ -10,7 +10,8 @@ win32-g++: {
 }
 
 SOURCES += \
-    ../AutoBuilder/data.cpp \
+    ../AutoBuilder/decap/decap.cpp \
+    ../AutoBuilder/decap/dic.cpp \
     ../AutoBuilder/forget.cpp \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \

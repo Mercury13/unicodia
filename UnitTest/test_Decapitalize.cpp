@@ -1,5 +1,5 @@
 // What we are testing
-#include "data.h"
+#include "decap/decap.h"
 
 // Google test
 #include "gtest/gtest.h"
