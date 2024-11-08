@@ -8,11 +8,11 @@
 namespace str {
     static_assert(sizeof(char) == sizeof(char8_t), "Strange machine with char != char8");
 
-    inline bool isBlank(char c) { return static_cast<unsigned char>(c) <= 32; }
-    inline bool isBlank(wchar_t c) { return (c <= 32); }
-    inline bool isBlank(char8_t c) { return (c <= 32); }
-    inline bool isBlank(char16_t c) { return (c <= 32); }
-    inline bool isBlank(char32_t c) { return (c <= 32); }
+    constexpr inline bool isBlank(char c) { return static_cast<unsigned char>(c) <= 32; }
+    constexpr inline bool isBlank(wchar_t c) { return (c <= 32); }
+    constexpr inline bool isBlank(char8_t c) { return (c <= 32); }
+    constexpr inline bool isBlank(char16_t c) { return (c <= 32); }
+    constexpr inline bool isBlank(char32_t c) { return (c <= 32); }
 
     template <class Ch> void trim(const Ch* &start, const Ch* &end);
     template <class Ch> void trimLeft(const Ch* &start, const Ch* &end);

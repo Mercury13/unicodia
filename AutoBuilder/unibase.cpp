@@ -6,7 +6,7 @@
 // Unicode bases
 #include "ucdcom.h"
 #include "loader.h"
-#include "data.h"
+#include "decap/decap.h"
 
 // Unicode
 #include "UcCp.h"

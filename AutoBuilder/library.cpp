@@ -13,7 +13,7 @@
 #include "mojibake.h"
 
 // Project-local
-#include "data.h"
+#include "decap/decap.h"
 #include "ucdcom.h"
 
 // Unicode

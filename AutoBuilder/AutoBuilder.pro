@@ -16,6 +16,7 @@ SOURCES += \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         decap/decap.cpp \
         decap/dic.cpp \
+        decap/exceptions.cpp \
         egyptian.cpp \
         entities.cpp \
         forget.cpp \
