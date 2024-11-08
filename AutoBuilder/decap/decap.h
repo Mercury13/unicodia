@@ -139,7 +139,21 @@ struct DepInfo
     std::u8string_view whatsInstead {}, whatsInstead2 {};
 };
 
+namespace decap {
+    enum class Exf : unsigned char {
+        CPONLY = 1,     ///< Works if codepoint is present (Sun=star, sun=weather)
+        MIXCASE = 2,    ///< Mixed case: for lowercase letter convert to small
+        LEAVE_BY_CONDITION = 4,  ///< Leave as is special condition (see charsConditionalLeave)
+    };
+
+    struct Exception {
+        std::string_view r;
+        Flags<Exf> flags;
+    };
+}
+
 extern const std::unordered_map<std::string_view, DicEntry> dictionary;
+extern const std::unordered_map<std::string_view, decap::Exception> exceptions;
 extern const std::multiset<IdiomEntry> idioms;
 extern const std::set<std::string_view> langNames;
 extern const std::unordered_map<char32_t, std::string_view> abbrevs;

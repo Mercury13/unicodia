@@ -10,21 +10,10 @@
 
 using namespace std::string_view_literals;
 
-enum class Exf {
-    CPONLY = 1,     ///< Works if codepoint is present (Sun=star, sun=weather)
-    MIXCASE = 2,    ///< Mixed case: for lowercase letter convert to small
-    LEAVE_BY_CONDITION = 4,  ///< Leave as is special condition (see charsConditionalLeave)
-};
+#define EX(x) { TOUPPER_SV(x), decap::Exception{ .r{x}, .flags {} } },
+#define EX2(x, fgs) { TOUPPER_SV(x), decap::Exception{ .r{x}, .flags{fgs} } },
 
-struct Exception {
-    std::string_view r;
-    Flags<Exf> flags;
-};
-
-#define EX(x) { TOUPPER_SV(x), Exception{ .r{x}, .flags {} } },
-#define EX2(x, fgs) { TOUPPER_SV(x), Exception{ .r{x}, .flags{fgs} } },
-
-const std::unordered_map<std::string_view, Exception> exceptions{
+const std::unordered_map<std::string_view, decap::Exception> exceptions{
     // EUROPEAN SCRIPTS
         // Cyrl
     EX("Cyrillic capital ligature En Ghe")   // All “ligature” are hand-checked
@@ -61,7 +50,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("iota subscript")                // This letter is SMALL
     EX("gamma function")                // Letter is big, function is small
     EX("Iota adscript")                 // Letter is BIG
-    EX2("Lambda", Exf::MIXCASE)
+    EX2("Lambda", decap::Exf::MIXCASE)
     EX("curled beta")                   // Letter is SMALL
     EX("script theta")                  // Letter is SMALL
     EX("omega pi")                      // Letter is SMALL
@@ -75,22 +64,22 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Epidaurean acrophonic symbol Three")    // Vertical ellipsis
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Latn
-    EX2("I dot", Exf::MIXCASE)
-    EX2("I bar", Exf::MIXCASE)
-    EX2("O bar", Exf::MIXCASE)
-    EX2("Lambda bar", Exf::MIXCASE)
-    EX2("barred Lambda", Exf::MIXCASE)
-    EX2("Z bar", Exf::MIXCASE)
-    EX2("barred Z", Exf::MIXCASE)
+    EX2("I dot", decap::Exf::MIXCASE)
+    EX2("I bar", decap::Exf::MIXCASE)
+    EX2("O bar", decap::Exf::MIXCASE)
+    EX2("Lambda bar", decap::Exf::MIXCASE)
+    EX2("barred Lambda", decap::Exf::MIXCASE)
+    EX2("Z bar", decap::Exf::MIXCASE)
+    EX2("barred Z", decap::Exf::MIXCASE)
     EX("script f")              // This letter is SMALL
     EX("reversed Polish-hook o")    // This letter is SMALL
-    EX2("O slash", Exf::MIXCASE)
-    EX2("barred L", Exf::MIXCASE)
-    EX2("D retroflex hook", Exf::MIXCASE)
-    EX2("Epsilon", Exf::MIXCASE)
-    EX2("closed reversed Epsilon", Exf::MIXCASE)
-    EX2("closed Epsilon", Exf::MIXCASE)
-    EX2("reversed Epsilon", Exf::MIXCASE)
+    EX2("O slash", decap::Exf::MIXCASE)
+    EX2("barred L", decap::Exf::MIXCASE)
+    EX2("D retroflex hook", decap::Exf::MIXCASE)
+    EX2("Epsilon", decap::Exf::MIXCASE)
+    EX2("closed reversed Epsilon", decap::Exf::MIXCASE)
+    EX2("closed Epsilon", decap::Exf::MIXCASE)
+    EX2("reversed Epsilon", decap::Exf::MIXCASE)
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
@@ -285,44 +274,44 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Tuareg Yaw")            
 
     // Misc letters
-    EX2("A", Exf::MIXCASE)
-    EX2("B", Exf::MIXCASE)
+    EX2("A", decap::Exf::MIXCASE)
+    EX2("B", decap::Exf::MIXCASE)
     EX("Ai")
     EX("Bb")
     EX("Bha")
     EX("Bs")
-    EX2("C", Exf::MIXCASE)
+    EX2("C", decap::Exf::MIXCASE)
     EX("Ca")
     EX("Cha")
-    EX2("Chi", Exf::LEAVE_BY_CONDITION)
+    EX2("Chi", decap::Exf::LEAVE_BY_CONDITION)
     EX("Chha")
     EX("soft Da")
     EX("soft Dda")
     EX("hard Da")
     EX("hard Dda")
-    EX2("D", Exf::MIXCASE)
+    EX2("D", decap::Exf::MIXCASE)
     EX("Dd")
     EX("Dda")
     EX("Ddha")
     EX("Dha")
-    { "ĕ", Exception{ "Ĕ", {} } },  // A9BC
+    { "ĕ", decap::Exception{ "Ĕ", {} } },  // A9BC
     EX("Ei")
-    EX2("F", Exf::MIXCASE)
+    EX2("F", decap::Exf::MIXCASE)
     EX("Fu")
-    EX2("G", Exf::MIXCASE)
+    EX2("G", decap::Exf::MIXCASE)
     EX("Gg")
     EX("Gha")
     EX("Gs")
-    EX2("H", Exf::MIXCASE)
+    EX2("H", decap::Exf::MIXCASE)
     EX("Ha")
     EX("Ii")
-    EX2("J", Exf::MIXCASE)
+    EX2("J", decap::Exf::MIXCASE)
     EX("Ja")
     EX("Jha")
     EX("Ji (not unique)")
     EX("Jj")
     EX("Jnya")
-    EX2("K", Exf::MIXCASE)
+    EX2("K", decap::Exf::MIXCASE)
     EX("Ka")
     EX("Kaam")
     EX("Kai")
@@ -344,7 +333,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Kuam")
     EX("Kum")
     EX("Kwm")
-    EX2("L", Exf::MIXCASE)
+    EX2("L", decap::Exf::MIXCASE)
     EX("La")
     EX("Lb")
     EX("Lg")
@@ -356,12 +345,12 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Lh")
     EX("vocalic L")
     EX("vocalic Ll")
-    EX2("M", Exf::MIXCASE)
+    EX2("M", decap::Exf::MIXCASE)
     EX("Ma")
     EX("subjoined Ma")
-    EX2("Maa", Exf::LEAVE_BY_CONDITION)
+    EX2("Maa", decap::Exf::LEAVE_BY_CONDITION)
     EX("logosyllabic Muwa")
-    EX2("N", Exf::MIXCASE)
+    EX2("N", decap::Exf::MIXCASE)
     EX("hard Na")
     EX("Ng")
     EX("Nga")
@@ -369,17 +358,17 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Nha")
     EX("Nj")
     EX("Nna")
-    EX2("P", Exf::MIXCASE)
+    EX2("P", decap::Exf::MIXCASE)
     EX("Pha")
-    EX2("Pi", Exf::LEAVE_BY_CONDITION)
-    EX2("Q", Exf::MIXCASE)
+    EX2("Pi", decap::Exf::LEAVE_BY_CONDITION)
+    EX2("Q", decap::Exf::MIXCASE)
     EX("Qa")
-    EX2("R", Exf::MIXCASE)
+    EX2("R", decap::Exf::MIXCASE)
     EX("vocalic R")
     EX("Ra")
     EX("medial Ra")
     EX("vocalic Rr")
-    EX2("S", Exf::MIXCASE)
+    EX2("S", decap::Exf::MIXCASE)
     EX("Sad")
     EX("Sha")
     EX("Sheen")
@@ -387,7 +376,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Ssa")
     EX("Ss")
     EX("soft Sha")
-    EX2("T", Exf::MIXCASE)
+    EX2("T", decap::Exf::MIXCASE)
     EX("Ta")
     EX("Tha")
     EX("syllabic Ti")
@@ -397,14 +386,14 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Tsu")
     EX("small Tsu")
     EX("syllabic Tu")
-    EX2("V", Exf::MIXCASE)
+    EX2("V", decap::Exf::MIXCASE)
     EX("Uu")
     EX("Wa")
     EX("subjoined Wa")
     EX("syllabic Wi(ya)")
     EX("Ya")
     EX("medial Ya")
-    EX2("Z", Exf::MIXCASE)
+    EX2("Z", decap::Exf::MIXCASE)
     EX("Zha")
     EX("Zu (not unique)")
 
@@ -500,7 +489,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("nabla")                         // Other nablas are capital
         // Astronomy
     EX("Earth")                         // Planet, not element
-    EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
+    EX2("Sun", decap::Exf::CPONLY)      // CP: star; Emoji: weather
     EX("Mercury")                       // Planet, not metal
     EX("Cancer")                        // Constellation, not disease
         // Emoji
@@ -1498,12 +1487,12 @@ std::string decapitalize(
     std::string upper = str::toUpper(x);
     auto itEx = exceptions.find(upper);
     if (itEx != exceptions.end()) {
-        if (cp || !itEx->second.flags.have(Exf::CPONLY) ) {
+        if (cp || !itEx->second.flags.have(decap::Exf::CPONLY) ) {
             // Mixcase flag: in upcase mode leave, in locase mode to lower
-            if (itEx->second.flags.have(Exf::MIXCASE) && flags.have(Dcfg::LOCASE)) {
+            if (itEx->second.flags.have(decap::Exf::MIXCASE) && flags.have(Dcfg::LOCASE)) {
                 return str::toLower(itEx->second.r);
             }
-            if (itEx->second.flags.have(Exf::LEAVE_BY_CONDITION)
+            if (itEx->second.flags.have(decap::Exf::LEAVE_BY_CONDITION)
                     && charsConditionalLeave.contains(cp)) {
                 return std::string{x};
             }

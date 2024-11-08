@@ -17,7 +17,7 @@
 
 // Project-local
 #include "ucdcom.h"
-#include "data.h"
+#include "decap/decap.h"
 #include "egyptian.h"
 #include "entities.h"
 #include "legacy.h"
