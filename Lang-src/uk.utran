@@ -1791,7 +1791,7 @@
    <group id="1950">
     <text id="Name">
      <orig>Tai Le</orig>
-     <transl>Ли (тайле)</transl>
+     <transl>Тай-ниа (тай-ле)</transl>
     </text>
    </group>
    <group id="1980">
@@ -8756,30 +8756,30 @@
    <group id="Tale">
     <text id="Name">
      <orig>Tai Le</orig>
-     <transl>Ли</transl>
+     <transl>Тай-ниа (тай-ле)</transl>
     </text>
     <text id="Lang">
-     <orig>Languages of Tai (=Dai, =Lua; ''China, Vietnam, Myanmar, Thailand'')</orig>
-     <transl>дайські (=ли; ''Китай, В’єтнам, Лаос, М’янма, Таїланд'')</transl>
+     <orig>Tai Nüa and other languages of Tai (=Dai, =Lua; ''China, Vietnam, Myanmar, Thailand'')</orig>
+     <transl>тай-ниа та інші дайські (''Китай, В’єтнам, Лаос, М’янма, Таїланд'')</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>As most scripts of South-East Asia, comes from [[ps:Brah|Brahmi]]. Tones weren’t written initially. After several reforms of 20th century (last in 1988), including failed attempt to create [[ps:Talu|New Tai Lue]] script, the script almost turned to alphabet, and it remains an abugida because of empty consonant {{sm|ᥟ}} if the word starts with vowel, and tone letters after final consonant of syllable (if it’s present).</p>
+      <p>Script of [[ps:Mymr|Burmese]] origin. Tones weren’t written initially. After several reforms of 20th century (last in 1988) the script almost turned to alphabet, and it remains an abugida because of empty consonant {{sm|ᥟ}} if the word starts with vowel, and tone letters after final consonant of syllable (if it’s present).</p>
       <p />
       <p>Spaces are written between sentences rather that words.</p>
       <p />
       <p>In Tai Le of 3rd reform (1963–1988) usual European umlauts were used for tones: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
       <p />
-      <p>There are about 500,000 Tai in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. About 500,000 more are scattered across other countries, and mainly use [[ps:Lana|Lanna]].</p>
+      <p>There are about 500,000 Tai Nüa in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. Less than 500,000 more are scattered across other countries.</p>
      </orig>
      <transl>
-      <p>Як і більшість інших писемностей Південно-Східної Азії, пішла від [[ps:Brah|брахмі]]. Тони початково не{{_}}записувалися. Після кількох реформ XX{{_}}століття (остання{{-}}1988), у тому числі невдалої спроби китайської влади створити [[ps:Talu|нове письмо ли]], писемність майже перетворилася на алфавітну, і абуґідою її залишає «порожня» приголосна {{sm|ᥟ}} на початку слова, якщо воно починається з голосної, та тонові букви після концевої приголосної слога (якщо така є).</p>
+      <p>Писемність [[ps:Mymr|бірманського]] похождення. Тони початково не{{_}}записувалися. Після кількох реформ XX{{_}}століття (остання{{-}}1988) писемність майже перетворилася на алфавітну, і абуґідою її залишає «порожня» приголосна {{sm|ᥟ}} на початку слова, якщо воно починається з голосної, та тонові букви після концевої приголосної слога (якщо така є).</p>
       <p />
       <p>Пропуски пишуться між реченнями, але не{{_}}між словами.</p>
       <p />
       <p>У ли третьої реформи (1963–1988) для запису тонів використовувалися звичайні європейські умляути: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
       <p />
-      <p>Дайців у Китаї ≈500{{_}}тис. (2001), але мова швидко замінюється китайською і тому віднесена до вразливих. Ще не{{_}}більше 500{{_}}тис. розкидано по інших країнах, вони користуються в основному [[ps:Lana|ланною]].</p>
+      <p>Тай-ниа у Китаї ≈500{{_}}тис. (2001), але мова швидко замінюється китайською і тому віднесена до вразливих. Ще не{{_}}більше 500{{_}}тис. розкидано по інших країнах.</p>
      </transl>
     </text>
    </group>
@@ -8789,17 +8789,17 @@
      <transl>Нове письмо ли</transl>
     </text>
     <text id="Lang">
-     <orig>Languages of Tai (=Dai, =Lua; ''China; Tai comunities in other countries use old script or [[ps:Lana|Lanna]]'')</orig>
-     <transl>дайські (=ли; ''Китай; громади ли в інших країнах користуються старим письмом або [[ps:Lana|ланною]]'')</transl>
+     <orig>Lü and other languages of Tai (=Dai, =Lua; ''China; Tai communities in other countries use [[ps:Lana|Lanna]]'')</orig>
+     <transl>ли та інші дайські (''Китай; громади ли в інших країнах користуються старим письмом або [[ps:Lana|ланною]]'')</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Alphabet created in 1950s with Chinese authorities met people’s resistance, and China started to simplify [[ps:Tale|the old script]] gradually. </p>
+      <p>The script is not related to [[ps:Tale|Tai Le]], though languages are close relatives. Created in 1950s by Chinese authorities to replace [[ps:Lana|Lanna]].</p>
       <p />
       <p>Inherent vowel is {{t|a}}. Virama looks like a looped hook and is written together with consonant in Unicode: {{sm|ᧇ}}. Writing of tones is unusual: consonants are in two cases, and the syllable may be followed with two signs {{sm|ᧈᧉ}}, total 2×3=6 tones.</p>
      </orig>
      <transl>
-      <p>Створений у 1950-і китайською владою алфавіт зустрів опір народу, і Китай пішов шляхом поступового спрощення [[ps:Tale|старого письма ли]].</p>
+      <p>Письмо не пов’язане з [[ps:Tale|тай-ниа]], хоча мови{{-}}близькі родичі. Створене у 1950-і китайською владою для заміни [[ps:Lana|ланни]].</p>
       <p />
       <p>Голосна по замовчанню {{t|а}}. Вірама має вигляд гачка з петлею і в Юнікоді записується як єдине ціле з приголосною: {{sm|ᧇ}}. Незвичайно влаштований запис тонів: приголосні бувають двох регістрів, ще два знаки {{sm|ᧈᧉ}} можуть приписуватися до складу у кінці, у сумі  2·3=6 тонів.</p>
      </transl>

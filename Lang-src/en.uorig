@@ -6193,17 +6193,17 @@
      <orig>Tai Le</orig>
     </text>
     <text id="Lang">
-     <orig>Languages of Tai (=Dai, =Lua; ''China, Vietnam, Myanmar, Thailand'')</orig>
+     <orig>Tai Nüa and other languages of Tai (=Dai, =Lua; ''China, Vietnam, Myanmar, Thailand'')</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>As most scripts of South-East Asia, comes from [[ps:Brah|Brahmi]]. Tones weren’t written initially. After several reforms of 20th century (last in 1988), including failed attempt to create [[ps:Talu|New Tai Lue]] script, the script almost turned to alphabet, and it remains an abugida because of empty consonant {{sm|ᥟ}} if the word starts with vowel, and tone letters after final consonant of syllable (if it’s present).</p>
+      <p>Script of [[ps:Mymr|Burmese]] origin. Tones weren’t written initially. After several reforms of 20th century (last in 1988) the script almost turned to alphabet, and it remains an abugida because of empty consonant {{sm|ᥟ}} if the word starts with vowel, and tone letters after final consonant of syllable (if it’s present).</p>
       <p />
       <p>Spaces are written between sentences rather that words.</p>
       <p />
       <p>In Tai Le of 3rd reform (1963–1988) usual European umlauts were used for tones: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
       <p />
-      <p>There are about 500,000 Tai in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. About 500,000 more are scattered across other countries, and mainly use [[ps:Lana|Lanna]].</p>
+      <p>There are about 500,000 Tai Nüa in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. Less than 500,000 more are scattered across other countries.</p>
      </orig>
     </text>
    </group>
@@ -6212,11 +6212,11 @@
      <orig>New Tai Lue</orig>
     </text>
     <text id="Lang">
-     <orig>Languages of Tai (=Dai, =Lua; ''China; Tai comunities in other countries use old script or [[ps:Lana|Lanna]]'')</orig>
+     <orig>Lü and other languages of Tai (=Dai, =Lua; ''China; Tai communities in other countries use [[ps:Lana|Lanna]]'')</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>Alphabet created in 1950s with Chinese authorities met people’s resistance, and China started to simplify [[ps:Tale|the old script]] gradually. </p>
+      <p>The script is not related to [[ps:Tale|Tai Le]], though languages are close relatives. Created in 1950s by Chinese authorities to replace [[ps:Lana|Lanna]].</p>
       <p />
       <p>Inherent vowel is {{t|a}}. Virama looks like a looped hook and is written together with consonant in Unicode: {{sm|ᧇ}}. Writing of tones is unusual: consonants are in two cases, and the syllable may be followed with two signs {{sm|ᧈᧉ}}, total 2×3=6 tones.</p>
      </orig>
