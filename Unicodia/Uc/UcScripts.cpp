@@ -732,7 +732,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yapprox(1200), EcFont::TAILE },
     // New Tai Lue OK, M$ has a good font
     { "Talu", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1950), EcFont::TAILUE },
     // Tamil BMP OK, different fonts in W10 and W7
     { "Taml", QFontDatabase::Tamil,
