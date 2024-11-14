@@ -128,6 +128,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("Sinhala vowel sign Kombuva haa Aela-pilla")     // Haa is also a letter
     EX("Sinhala vowel sign Kombuva haa diga Aela-pilla")
     EX("Sinhala vowel sign Kombuva haa gayanukitta")
+        // Talu
+    EX("New Tai Lue vowel sign Vowel shortener")
         // Tglg
     EX("Zambales Ra")
         // Thai
