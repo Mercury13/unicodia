@@ -78,6 +78,7 @@
 		<rule mod="0" min="1" max="1" outcome="one" /><!-- 1 lap -->
 	</cardinal-rules>
 	<!-- Misc. language peculiarities
-			still-uses-burmese: uses pair Myanmar/Burmese -->
+			still-uses-burmese: uses pair Myanmar/Burmese
+				(writes location of Myanmar for Burmese script) -->
 	<peculiarities still-uses-burmese="0" />
 </locale>
