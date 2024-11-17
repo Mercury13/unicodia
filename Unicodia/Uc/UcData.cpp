@@ -1155,8 +1155,28 @@ namespace {
         case 0x2668:  // hot springs
         case 0x267B:  // recycle
         case 0x267E:  // non-acid (permanent) paper
+        case 0x2692:  // hammer and pick
+        case 0x2694:  // crossed swords
+        case 0x2695:  // staff of Aesculapius
+        case 0x2696:  // scales
+        case 0x2697:  // alembic
+        case 0x2699:  // gear
+        case 0x269B:  // atom symbol
+        case 0x269C:  // fleur-de-lis
         case 0x26A0:  // warning
         case 0x26A7:  // transgender
+        case 0x26B0:  // coffin
+        case 0x26B1:  // funeral urn
+        case 0x26CF:  // pick
+        case 0x26D1:  // helmet with white cross
+        case 0x26D3:  // chains
+        case 0x26E9:  // Shinto shrine
+        case 0x26F0:  // mountain
+        case 0x26F1:  // umbrella on ground
+        case 0x26F4:  // ferry
+        case 0x26F7:  // skier
+        case 0x26F8:  // ice skate
+        case 0x26F9:  // person with ball
             return false;
         default:
             return true;
