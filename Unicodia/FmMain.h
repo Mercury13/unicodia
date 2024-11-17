@@ -474,6 +474,7 @@ private slots:
     void addLibToFavsBanged();
     void acRemoveFromFavsTriggered();
     void slotSkinToneQa();
+    void searchForVs16();
 };
 
 

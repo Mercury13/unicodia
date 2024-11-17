@@ -1430,7 +1430,7 @@ constinit const uc::Block uc::blocks[] {
             { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Enclosed Ideographic Supplement",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::DINGBAT, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
     // Misc OK
     { 0x1F300, 0x1F5FF, { 0x1F52B, EcContinent::NONE },
             "Miscellaneous Symbols and Pictographs",

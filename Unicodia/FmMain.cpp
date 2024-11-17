@@ -1165,6 +1165,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
     connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
 
+    // VS16
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_V), this);
+    connect(shcut, &QShortcut::activated, this, &This::searchForVs16);
+
     // Debug painter
     //shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F11), this);
     //connect(shcut, &QShortcut::activated, []{ TableCache::wantDebug = true; });
@@ -2419,4 +2423,13 @@ void FmMain::searchForRequest(const uc::Request& request)
     mainGui.closePopup();
     auto result = uc::doRequest(request);
     showSearchResult(std::move(result));
+}
+
+
+void FmMain::searchForVs16()
+{
+    uc::CharFields fields;
+    fields.fgs |= uc::Cfg::U_VS16_EMOJI;
+    uc::CharFieldRequest rq(fields);
+    searchForRequest(rq);
 }

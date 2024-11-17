@@ -770,6 +770,7 @@ namespace uc {
         VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
         VIRAMA_INSIDE   = 1<<14,    ///< [+] Plus inside virtual virama (Tutg)
         EMOJI_BY_CASE   = 1<<15,    ///< [+] Text/graphic VS16 emoji is case-by-case
+        EMOJI_OVER_CHAR = 1<<16,    ///< [+] In VS16 blocks draw emoji over characters
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent

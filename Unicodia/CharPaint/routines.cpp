@@ -218,7 +218,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             emp.draw(&painter, r, subj, emojiHeight(r),
                      palette().windowText().color());
         } break;
-    case Mode::EMOJI_TEXT: {
+    case Mode::EMOJI_TEXT: {  // These are not equal: subj vs text
             QPainter painter(this);
             auto r = geometry();
             emp.draw(&painter, r, text, emojiHeight(r),
@@ -777,10 +777,41 @@ void drawVirtualVirama(
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
 
+
+namespace {
+
+    void drawChar1(QPainter* painter, const QRect& rect, int absSize,
+                   const QColor& color, const uc::Cp* cp, bool isUpperLayer)
+    {
+        if (!cp) {
+            // Draw on upper layer only
+            if (isUpperLayer)
+                emp.drawEmojiTofu(painter, rect, color);
+            return;
+        }
+        auto& block = cp->block();
+        bool wantDraw = isUpperLayer ^ block.flags.have(uc::Bfg::EMOJI_OVER_CHAR);
+        if (!wantDraw)
+            return;
+
+        auto font = cp->font(match::Normal::INST);
+        auto qfont = font->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, cp);
+        auto rect2 = font->styleSheet.applyToGraphicSample(rect, qfont.pointSizeF());
+        painter->setFont(qfont);
+        painter->setPen(color);
+        painter->drawText(rect2, Qt::AlignCenter, str::toQ(cp->subj.ch32()));
+    }
+
+}   // anon namespace
+
 void drawCharOverEmoji(
         QPainter* painter, const QRect& rect, int absSize,
         const QColor& color, char32_t subj)
 {
+    // Character
+    auto cp = uc::cpsByCode[subj];
+    drawChar1(painter, rect, absSize, color, cp, false);
+
     // Emoji
     auto loSize = std::min(rect.width(), rect.height());
     if (loSize <= 0)  // Maybe this’ll trigger nicer division, [[assume]] is C++23
@@ -790,15 +821,7 @@ void drawCharOverEmoji(
     rect1.setBottomLeft({rect.right() - emojiSize, rect.top() + emojiSize});
     emp.draw(painter, rect1, subj, emojiSize, color);
 
-    auto cp = uc::cpsByCode[subj];
-    auto font = cp->font(match::Normal::INST);
-    auto qfont = font->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, cp);
-
-    // Character
-    painter->setFont(qfont);
-    painter->setPen(color);
-    auto rect2 = font->styleSheet.applyToGraphicSample(rect, qfont.pointSizeF());
-    painter->drawText(rect2, Qt::AlignCenter, str::toQ(subj));
+    drawChar1(painter, rect, absSize, color, cp, true);
 }
 
 
