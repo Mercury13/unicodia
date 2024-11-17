@@ -76,8 +76,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …2
     { FNAME_MUSIC_FIXUP, Ffg::FALL_TO_NEXT, 110_pc },                           // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
-    { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 8_top, 155_pc },                   // Music bigger
-    { FNAME_NOTOMUSIC },                                                        // Music normal
+    { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 8_top, 155_pc },                    // Music bigger
+    { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 20_top },                           // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
