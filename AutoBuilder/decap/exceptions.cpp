@@ -503,6 +503,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("I love you hand sign")          // same + I
     EX("letter box")                    // Letter is a paper
     EX("ID")                            // Just two letters
+        // Maps
+    EX("Japanese Self-Defence Force site")  // Badly decapped
         // Formatting
     EX("national digit shapes")   // Digit is not special here
     EX("nominal digit shapes")    // Same
