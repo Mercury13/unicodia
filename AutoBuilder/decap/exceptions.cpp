@@ -407,7 +407,6 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("Kangxi radical Dotted Cliff") // Reliability, sic! → see 2F1A
     EX("Kangxi radical Long stride") // Stride is noun here
     EX("Kangxi radical Dotted tent") // Dotted tent is just a shape, it was
-
         // Hang
     EX("Hangul choseong filler")    // Simpler to add exception
     EX("Hangul jungseong filler")   // Same
@@ -419,6 +418,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("rounded symbol for Shuangxi")
     EX("rounded symbol for Cai")
     EX("square Hiragana Hoka")  // Better exception?
+    EX("squared Katakana De")
     EX("squared Katakana Koko")
     EX("squared Katakana Sa")
     EX("kaeriten Re")

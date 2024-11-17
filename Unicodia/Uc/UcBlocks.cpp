@@ -551,7 +551,7 @@ constinit const uc::Block uc::blocks[] {
         { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Enclosed CJK Letters and Months",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_COMPAT,
+            EcScript::NONE, EcFont::KOREAN,
             Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
@@ -1424,7 +1424,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumeric Supplement",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::ENCLOSED_ALNUM, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },

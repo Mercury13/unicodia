@@ -163,7 +163,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UnicodiaEgypFixupRegular.otf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
       { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
-    { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic
+    { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic    
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT },                                        // Enclosed alnum
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot, 130_pc },                  // …1
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
