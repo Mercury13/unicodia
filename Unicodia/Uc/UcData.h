@@ -177,7 +177,7 @@ namespace uc {
         static const GlyphStyleSets EMPTY;
     };
 
-    enum class EcFont
+    enum class EcFont : unsigned char
     {
         NORMAL,
           Z_NOR_1,
@@ -265,6 +265,8 @@ namespace uc {
            Z_CJY_3,
          CJK_FULLHALF,
            Z_CJF_1,
+         CJK_ENCLOSED,
+           Z_CJE_1,
         CUNEIFORM,
         DEVANAGARI,
           DEVANAGARI_SYSTEM,

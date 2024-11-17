@@ -139,6 +139,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
       { FNAME_KOREAN, 110_pc},                                                  // …1
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 125_pc},           // CJK enclosed
+      { FNAME_BABEL, 120_pc },                                                  // …1
     { { "NotoSansCuneiform-Regular.ttf", recodeCuneiform } },                   // Cuneiform
     { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …1 for descriptions
