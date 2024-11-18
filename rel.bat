@@ -1,5 +1,4 @@
 @rem Settings
-@set /p VERSION=<VERSION.
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
@@ -9,6 +8,7 @@
 @set INNO="c:\Program Files (x86)\Inno Setup 6\ISCC.exe"
 
 @rem Rest things
+@set /p VERSION=<VERSION.
 @set PRONAME=Unicodia\Unicodia.pro
 @set PRONAME_AB=AutoBuilder\AutoBuilder.pro
 @set PRONAME_SC=SmartCopy\SmartCopy.pro
