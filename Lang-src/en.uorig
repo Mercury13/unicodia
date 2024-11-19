@@ -4205,7 +4205,7 @@
       <p>: ka {{sm|𑤌}} + halanta {{sm|◌𑤽}} = k {{sm|𑤌𑤽}}</p>
       <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
       <p>: sa {{sm|𑤬}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = sta {{sm|𑤬𑤾𑤛}}</p>
-      <p>: sa + halanta + tta + halanta + na = súttúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
+      <p>: sa + halanta + ṭa + halanta + na = súṭúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
      </orig>
     </text>
    </group>
@@ -5199,7 +5199,7 @@
       <p />
       <p>In syllables several letters are stacked together, and vowel marks relate to lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
       <p />
-      <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bon''.</p>
+      <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bön''.</p>
      </orig>
     </text>
    </group>
@@ -5426,11 +5426,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken top line, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
+      <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
       <p />
       <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves only to transfer Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
       <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
-      <p>: tta {{sm|𑦸}} + u {{sm|◌𑧔}} = ttu {{sm|𑦸𑧔}}</p>
+      <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
       <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and [[pt:unification|unified]] with it.</p>
      </orig>
@@ -6184,7 +6184,7 @@
      <orig>
       <p>Comes from [[ps:Shrd|Sharada]]. Takri was used in business documentation, but post-war liberation of India quickly replaced it with [[ps:Deva|Devanagari]].</p>
       <p />
-      <p>Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|tta:‑kᵊ‑ri:}}. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
+      <p>Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|ṭa:‑kᵊ‑ri:}}. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
      </orig>
     </text>
    </group>
@@ -6231,7 +6231,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script came from [[ps:Brah|Brahmi]] via Pallava (old [[ps:Gran|Grantha]]). Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is very frequent and turned to a dot. Methods of affixing vowel marks to consonants are bizarre: ka={{sm|க}}, ki={{sm|கி}}, tta={{sm|ட}}, tti={{sm|டி}}. Most consonant conjunct [[pt:ligature|ligatures]] consist of full initial letter and smaller subjoined.</p>
+      <p>The script came from [[ps:Brah|Brahmi]] via Pallava (old [[ps:Gran|Grantha]]). Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is very frequent and turned to a dot. Methods of affixing vowel marks to consonants are bizarre: ka={{sm|க}}, ki={{sm|கி}}, ṭa={{sm|ட}}, ṭi={{sm|டி}}. Most consonant conjunct [[pt:ligature|ligatures]] consist of full initial letter and smaller subjoined.</p>
       <p />
       <p>Local digits are mostly used in Grantha texts, Tamils prefer ordinary 0…9. Unlike other Indic counting systems, there are special characters for 10, 100 and 1000. Before government of India adopted rupee sing ₹, Tamils had {{sm|௹}}.</p>
       <p />

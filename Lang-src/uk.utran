@@ -5722,7 +5722,7 @@
       <p>: ka {{sm|𑤌}} + halanta {{sm|◌𑤽}} = k {{sm|𑤌𑤽}}</p>
       <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
       <p>: sa {{sm|𑤬}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = sta {{sm|𑤬𑤾𑤛}}</p>
-      <p>: sa + halanta + tta + halanta + na = súttúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
+      <p>: sa + halanta + ṭa + halanta + na = súṭúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
      </orig>
      <transl>
       <p>Писемність розвинулась на Мальдивських островах з [[ps:Gran|грантхи]] та існувала до XVIII{{_}}століття, а на деяких островах і до XX. Ранню форму (до XII{{_}}століття) дослідники зовуть ''евела-акуру'' (ретронім, а не{{_}}самоназва!) З переходом до ісламу (1153) ''евела'' трансформувалась у ''дивес'', залишившись зліва направо. На початку XVIII{{_}}століття за наказом султана була замінена [[ps:Thaa|таною]]{{-}}вже справа наліво.</p>
@@ -5734,7 +5734,7 @@
       <p>: ка {{sm|𑤌}} + halanta {{sm|◌𑤽}} = к {{sm|𑤌𑤽}}</p>
       <p>: ка {{sm|𑤌}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = кта {{sm|𑤌𑤾𑤛}}</p>
       <p>: са {{sm|𑤬}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = ста {{sm|𑤬𑤾𑤛}}</p>
-      <p>: са + halanta + тта + halanta + на = сÿттÿна {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
+      <p>: са + halanta + тˎа + halanta + на = сÿтˎÿна {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
      </transl>
     </text>
    </group>
@@ -7246,7 +7246,7 @@
       <p />
       <p>In syllables several letters are stacked together, and vowel marks relate to lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
       <p />
-      <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bon''.</p>
+      <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bön''.</p>
      </orig>
      <transl>
       <p>Шангшунгська{{-}}вимерла у X{{_}}столітті сино-тибетська мова, якою писали мінімум п’ятьма різними писемностями. З них у Юнікоді є тільки марчхен, а інші навіть не{{_}}[[pt:unification|уніфіковані]]. З великою ймовірністю, усіма цими писемностями користувались тільки у релігійних цілях. Як писали у побуті{{-}}невідомо.</p>
@@ -7590,11 +7590,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken top line, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
+      <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
       <p />
       <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves only to transfer Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
       <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
-      <p>: tta {{sm|𑦸}} + u {{sm|◌𑧔}} = ttu {{sm|𑦸𑧔}}</p>
+      <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
       <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and [[pt:unification|unified]] with it.</p>
      </orig>
@@ -7603,7 +7603,7 @@
       <p />
       <p>Голосна по замовчанню {{t|a}}, замінюється на іншу [[pt:combining|мітками]]-оголосами. Усі мітки, включаючи [[pt:virama|віраму]], не{{_}}відриваються від літер. Вірама слугує лише для передачі санскриту: кáннада тяжіє до відкритих складів, а рідкі стики приголосних передаються лігатурами.</p>
       <p>: ка {{sm|𑦮}} + у {{sm|◌𑧔}} = ку {{sm|𑦮𑧔}}</p>
-      <p>: тта {{sm|𑦸}} + у {{sm|◌𑧔}} = тту {{sm|𑦸𑧔}}</p>
+      <p>: тˎа {{sm|𑦸}} + у {{sm|◌𑧔}} = тˎу {{sm|𑦸𑧔}}</p>
       <p>: ка {{sm|𑦮}} + вірама {{sm|◌𑧠}} + та {{sm|𑦽}} = кта {{sm|𑦮𑧠𑦽}}</p>
       <p>Цифри схожі на [[ps:Knda|кáннаду]] (є різниця у 2 та 6) та [[pt:unification|уніфіковані]] з нею.</p>
      </transl>
@@ -8744,12 +8744,12 @@
      <orig>
       <p>Comes from [[ps:Shrd|Sharada]]. Takri was used in business documentation, but post-war liberation of India quickly replaced it with [[ps:Deva|Devanagari]].</p>
       <p />
-      <p>Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|tta:‑kᵊ‑ri:}}. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
+      <p>Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|ṭa:‑kᵊ‑ri:}}. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
      </orig>
      <transl>
       <p>Походить від [[ps:Shrd|шаради]]. Раніше такрі широко застосовувався у діловодстві, але з післявоєнним визволенням Індії став швидко замінюватися [[ps:Deva|деванáґарі]]. Є спроби відродити писемність.</p>
       <p />
-      <p>У кожного штата є свій стиль такрі. Іноді [[ps:Dogr|доґра]] вважається одним з таких стилів, але [[pt:unification|розуніфікована]] з такрі як з політичних, так і з технічних причин. [[pt:virama|Вірами]] нема у жодній з місцевих мов, це видно по самоназві {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|тта:‑кᵊ‑рі:}}. Але вона вживається для давніх мов{{-}}палі та санскриту. Тільки три літери можуть входити до [[pt:ligature|лігатур]] другим знаком, «йа», «ра» та «ха»: {{sm|𑚞𑚶𑚤}} {{t|прᵊ}}.</p>
+      <p>У кожного штата є свій стиль такрі. Іноді [[ps:Dogr|доґра]] вважається одним з таких стилів, але [[pt:unification|розуніфікована]] з такрі як з політичних, так і з технічних причин. [[pt:virama|Вірами]] нема у жодній з місцевих мов, це видно по самоназві {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|тˎа:‑кᵊ‑рі:}}. Але вона вживається для давніх мов{{-}}палі та санскриту. Тільки три літери можуть входити до [[pt:ligature|лігатур]] другим знаком, «йа», «ра» та «ха»: {{sm|𑚞𑚶𑚤}} {{t|прᵊ}}.</p>
      </transl>
     </text>
    </group>
@@ -8816,14 +8816,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script came from [[ps:Brah|Brahmi]] via Pallava (old [[ps:Gran|Grantha]]). Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is very frequent and turned to a dot. Methods of affixing vowel marks to consonants are bizarre: ka={{sm|க}}, ki={{sm|கி}}, tta={{sm|ட}}, tti={{sm|டி}}. Most consonant conjunct [[pt:ligature|ligatures]] consist of full initial letter and smaller subjoined.</p>
+      <p>The script came from [[ps:Brah|Brahmi]] via Pallava (old [[ps:Gran|Grantha]]). Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is very frequent and turned to a dot. Methods of affixing vowel marks to consonants are bizarre: ka={{sm|க}}, ki={{sm|கி}}, ṭa={{sm|ட}}, ṭi={{sm|டி}}. Most consonant conjunct [[pt:ligature|ligatures]] consist of full initial letter and smaller subjoined.</p>
       <p />
       <p>Local digits are mostly used in Grantha texts, Tamils prefer ordinary 0…9. Unlike other Indic counting systems, there are special characters for 10, 100 and 1000. Before government of India adopted rupee sing ₹, Tamils had {{sm|௹}}.</p>
       <p />
       <p>Dravidic South never submitted to Muslims and even created Shivaism, especially orthodox branch of Hinduism. English has several loanwords from Tamil: ''catamaran'', ''cash'', ''ginger'', ''coolie'' and others.</p>
      </orig>
      <transl>
-      <p>Писемність пішла з [[ps:Brah|брахмі]] через паллаву (стару [[ps:Gran|грантху]]). Голосна по замовчанню {{t|а}}. [[pt:virama|Вірама]] використовується часто і перетворилася на крапку. Методи прикріплення оголосів до приголосних доволі химерні: ка={{sm|க}}, кі={{sm|கி}}, тта={{sm|ட}}, тті={{sm|டி}}. Початкова голосна записується окремим знаком: і={{sm|இ}}. Більшість [[pt:ligature|лігатур]] «приголосний-приголосний» являють собою повну букву, а за нею скорочена.</p>
+      <p>Писемність пішла з [[ps:Brah|брахмі]] через паллаву (стару [[ps:Gran|грантху]]). Голосна по замовчанню {{t|а}}. [[pt:virama|Вірама]] використовується часто і перетворилася на крапку. Методи прикріплення оголосів до приголосних доволі химерні: ка={{sm|க}}, кі={{sm|கி}}, тˎа={{sm|ட}}, тˎі={{sm|டி}}. Початкова голосна записується окремим знаком: і={{sm|இ}}. Більшість [[pt:ligature|лігатур]] «приголосний-приголосний» являють собою повну букву, а за нею скорочена.</p>
       <p />
       <p>Місцеві цифри частіше зустрічаються у текстах грантхою{{-}}а таміли віддають перевагу звичайним 0…9. На відміну від інших індійських систем рахунку, є спеціальні символи для 10, 100 та 1000. До того, як уряд Індії затвердив знак рупії ₹, у тамілів він існував: {{sm|௹}}.</p>
       <p />

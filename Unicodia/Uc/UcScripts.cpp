@@ -524,6 +524,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(8, StdNote::FIRST_KNOWN), EcFont::NANDINAGARI },
+        // EWP: Some of the earliest inscriptions in Nandināgarī have been found in Tamil Nadu.
+        // The 8th century Narasimha Pallava's stone inscriptions in Mamallapuram on Tamil Nadu's coast…
     // North Arabian OK, W10 none → installed Google Noto
     { "Narb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
