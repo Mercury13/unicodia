@@ -341,6 +341,7 @@ namespace uc {
         MYANMAR,
         NANDINAGARI,
         NEWA,
+        NKO,
         NP_HMONG,
         NUSHU,
         OCR,

@@ -86,7 +86,6 @@ files = [
     [ "NotoSansMendeKikakui-Regular.ttf",       "mend" ],
     [ "NotoSansMro-Regular.ttf",                "mroo" ],
     [ "NotoSansNabataean-Regular.ttf",          "nbat" ],
-    [ "NotoSansNKo-Regular.ttf",                "nkoo" ],
     [ "NotoSansOgham-Regular.ttf",              "ogam" ],
     [ "NotoSansOldItalic-Regular.ttf",          "ital" ],
     [ "NotoSansOldNorthArabian-Regular.ttf",    "narb" ],

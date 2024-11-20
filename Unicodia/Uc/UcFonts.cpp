@@ -228,6 +228,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
     { FAM_NAND },                                                               // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
+    { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSerifNPHmong-Regular.ttf" },                                         // NP Hmong
     { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 20_bot, 150_pc },                    // OCR
