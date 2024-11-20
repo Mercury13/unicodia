@@ -600,7 +600,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::year(1372), EcFont::FRANKEN_SANS },
+        Dating::year(1372), EcFont::PERMIC_OLD },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::SACRED, EcWritingDir::LTR_COL, EcContinent::ASIA,

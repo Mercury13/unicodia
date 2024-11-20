@@ -351,9 +351,10 @@ namespace uc {
         OLD_UYGHUR,
         ORIYA,
         PAHAWH_HMONG,
+        PERMIC_OLD,
         PHAGS_PA,
         MAHJONG_TILES,      // Fall down to Phaistos Disc
-         PHAISTOS_DISC,
+         PHAISTOS_DISC,        
         POLLARD,
         PSEUDOGRAPHICS,
         REJANG,
