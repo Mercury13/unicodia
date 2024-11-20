@@ -365,7 +365,6 @@ namespace uc {
         PSEUDOGRAPHICS,
         REJANG,
         ROHINGYA,
-        RUNIC,
         SAMARITAN,
         SAURASHTRA,
         SHARADA,

@@ -640,7 +640,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Runes OK, several tofu → installed Google Noto font
     { "Runr", QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::century(2, StdNote::FIRST_KNOWN), EcFont::RUNIC },
+        Dating::century(2, StdNote::FIRST_KNOWN), EcFont::FRANKEN_SANS },
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
