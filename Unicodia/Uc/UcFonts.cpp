@@ -285,11 +285,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", 10_bot, 110_pc },                             // Thai
     { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
-    { { "NotoSansTifinagh-Regular.ttf", Fafg::DEHINT_DOTC } },                  // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { "UnicodiaDaarage.otf", 120_pc },                                          // Tulu
-    { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Ugaritic
-      { "NotoSansUgaritic-Regular.ttf" },                                       // …1
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts for symbols
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2

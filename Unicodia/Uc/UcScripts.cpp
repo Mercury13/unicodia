@@ -759,7 +759,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::special(), EcFont::TIFINAGH },
+        Dating::special(), EcFont::FRANKEN_SANS },
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -806,7 +806,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yapprox(-1400), EcFont::HISTORIC },
+        Dating::yapprox(-1400), EcFont::FRANKEN_SANS },
     // Vai OK, have good M$ font Ebrima
     { "Vaii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
