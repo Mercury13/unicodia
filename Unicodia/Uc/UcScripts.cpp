@@ -644,7 +644,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::yrange(-600, -200), EcFont::FRANKEN_SANS },
+        Dating::yrange(-600, -200), EcFont::SAMARITAN },
     // South Arabian OK, W10 Segoe UI Historic
     { "Sarb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
