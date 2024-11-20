@@ -69,7 +69,9 @@ def set_line_metrics(font, metrics):
     font["OS/2"].sCapHeight = metrics["sCapHeight"]
     font["OS/2"].sTypoLineGap = metrics["sTypoLineGap"]
 
-
+# WARNING!
+# RtL scripts with marks SHOULD NOT frankenfont.
+# LtR with marks → with extreme caution.
 files = [
     [ "NotoSansAvestan-Regular.ttf",            "avst" ],
     [ "NotoSansBassaVah-Regular.ttf",           "bass" ],
