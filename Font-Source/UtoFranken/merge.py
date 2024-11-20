@@ -85,24 +85,26 @@ files = [
     [ "NotoSansLinearB-Regular.ttf",            "linb" ],
     [ "NotoSansLisu-Regular.ttf",               "lisu" ],
     [ "NotoSansMedefaidrin-Regular.ttf",        "medf" ],
-    [ "NotoSansMendeKikakui-Regular.ttf",       "mend" ],
+    [ "NotoSansMendeKikakui-Regular.ttf",       "mend" ],  # ← marks somehow OK
     [ "NotoSansMro-Regular.ttf",                "mroo" ],
     [ "NotoSansNabataean-Regular.ttf",          "nbat" ],
     [ "NotoSansOgham-Regular.ttf",              "ogam" ],
     [ "NotoSansOldItalic-Regular.ttf",          "ital" ],
-    [ "NotoSansOldNorthArabian-Regular.ttf",    "narb" ],
+    [ "NotoSansOldNorthArabian-Regular.ttf",    "narb" ],  # ← no marks
     [ "NotoSansOldPersian-Regular.ttf",         "xpeo" ],
-    [ "NotoSansOldTurkic-Regular.ttf",          "orkh" ],
-    [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],
+    [ "NotoSansOldTurkic-Regular.ttf",          "orkh" ],  # ← no marks
+    [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],  # ← no marks
     [ "NotoSansPauCinHau-Regular.ttf",          "pauc" ],        
-    [ "NotoSansPhoenician-Regular.ttf",         "phnx" ],
-    [ "NotoSansPsalterPahlavi-Regular.ttf",     "phlp" ],
+    [ "NotoSansPhoenician-Regular.ttf",         "phnx" ],  # ← no marks
+    [ "NotoSansPsalterPahlavi-Regular.ttf",     "phlp" ],  # ← no marks
     [ "NotoSansRunic-Regular.ttf",              "runr" ],
     [ "NotoSansTifinagh-Regular.ttf",           "tfng" ],
     [ "NotoSansUgaritic-Regular.ttf",           "ugar" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
     [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
 ]
+
+# Glitchy: Hmng Nkoo Perm Samr
 
 # Get new fonts
 newFiles = []
