@@ -96,7 +96,6 @@ files = [
     [ "NotoSansPhoenician-Regular.ttf",         "phnx" ],
     [ "NotoSansPsalterPahlavi-Regular.ttf",     "phlp" ],
     [ "NotoSansRunic-Regular.ttf",              "runr" ],
-    [ "NotoSansSamaritan-Regular.ttf",          "samr" ],
     [ "NotoSansTifinagh-Regular.ttf",           "tfng" ],
     [ "NotoSansUgaritic-Regular.ttf",           "ugar" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
