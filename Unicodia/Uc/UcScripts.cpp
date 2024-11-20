@@ -103,7 +103,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bassa Vah OK, none in W10, installed Google Noto
     { "Bass", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::yapprox(1900), EcFont::BASSA_VAH, NO_FLAGS,
+        Dating::yapprox(1900), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 400, .numOrder = NumOrder::THOUSAND, .year = 2006, .locations { LOC_LIBERIA } } },
     // Batak OK, installed Google Noto font
     { "Batk", QFontDatabase::Any,

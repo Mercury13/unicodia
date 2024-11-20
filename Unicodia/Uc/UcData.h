@@ -226,7 +226,6 @@ namespace uc {
         BALINESE,
           Z_BAL_1,
         BAMUM,
-        BASSA_VAH,
         BATAK,
         VEDIC,      ///< Devanagari fixup → Devanagari → Nadinagari → Bengali
           Z_VED_2,

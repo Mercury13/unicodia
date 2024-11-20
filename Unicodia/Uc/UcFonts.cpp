@@ -100,7 +100,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF | Ffg::FALL_TO_NEXT },     // Balinese
       { FNAME_FUNKY },                                                          // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
-    { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
