@@ -31,6 +31,7 @@ constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
 constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
 constexpr uc::Family FAM_NAND { "NotoSansNandinagari-Regular.ttf", uc::Fafg::DEHINT_DOTC };
+constexpr uc::Family FAM_SANS_FRANKEN { "UtoSansFranken.ttf", uc::Fafg::DEHINT_DOTC };
 
 constexpr uc::Family FNAME_DEVA { "NotoSerifDevanagari-Regular.ttf", uc::Fafg::DEHINT_DOTC };
 constexpr std::string_view FNAME_DEVAFIX = "UnicodiaDevaFixup-Regular.ttf";
@@ -83,6 +84,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
       { FNAME_NOTO },                                                           // …1
     { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky bigger
+    { FAM_SANS_FRANKEN },                                                       // Sans franken
+    { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
+    { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
@@ -90,7 +94,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
       { FNAME_FUNKY },                                                          // …2, new additions
-    { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
@@ -114,7 +117,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
     { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, 12_bot },                 // Chakma
     { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, 12_bot },             // Cham
-    { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK
@@ -214,9 +216,6 @@ constinit const uc::Font uc::fontInfo[] = {
          // The biggest font possible w/o changes in height
     { "Mingzat-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 18_top, 80_pc },              // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
-    { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
-    { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
-    { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
@@ -225,38 +224,25 @@ constinit const uc::Font uc::fontInfo[] = {
                         20_bot, 110_pc },
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
-    { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
     { "NotoSansMendeKikakui-Regular.ttf" },                                     // Mende Kikakui
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
     { "UnicodiaMongolFixup.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },         // Mongol
       { "NotoSansMongolian-Regular.ttf" },                                      // …1
-    { "NotoSansMro-Regular.ttf" },                                              // Mro
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
-    { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
     { FAM_NAND },                                                               // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
-    { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
-    { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifNPHmong-Regular.ttf" },                                         // NP Hmong
     { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 20_bot, 150_pc },                    // OCR
-    { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki
     { "OldHungarian.ttf" },                                                     // Old Hungarian runes
-    { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
-    { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
-    { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Old Persian cuneiform
-      { "NotoSansOldPersian-Regular.ttf" },                                     // …1
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSerifOldUyghur-Regular.ttf" },                                       // Old Uyghur
     { "UtoSerifOriya-Regular.ttf", 120_pc },                                    // Oriya
-    { "NotoSansOldTurkic-Regular.ttf" },                                        // Orkhon
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
-    { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
-    { "NotoSansInscriptionalParthian-Regular.ttf", Ffg::DESC_BIGGER },          // Parthian
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
@@ -264,7 +250,6 @@ constinit const uc::Font uc::fontInfo[] = {
     /// @todo [misrender] Want negative padding, but how??
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
-    { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "BabelStonePseudographica.ttf" },                                         // Pseudographics
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
@@ -315,7 +300,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …3 — use it as default
     { "Ebrima" },                                                               // Vai
     { "NotoSerifVithkuqi-Regular.ttf" },                                        // Vithkuqi
-    { "NotoSansWancho-Regular.ttf", Ffg::DESC_BIGGER },                         // Wancho
     { "NotoSansWarangCiti-Regular.ttf", Ffg::DESC_BIGGER },                     // Warang Citi
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
