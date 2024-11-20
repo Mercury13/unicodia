@@ -236,10 +236,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSerifOldUyghur-Regular.ttf" },                                       // Old Uyghur
     { "UtoSerifOriya-Regular.ttf", 120_pc },                                    // Oriya
-    { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
-    { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
-    { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { FAM_SEMOJI, Ffg::FALL_TO_NEXT },                                          // Mahjong tiles
     /// @todo [misrender] Want negative padding, but how??
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc

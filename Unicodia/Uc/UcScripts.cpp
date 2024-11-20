@@ -329,7 +329,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1959, StdNote::CUSTOM), EcFont::PAHAWH_HMONG },
+        Dating::year(1959, StdNote::CUSTOM), EcFont::FRANKEN_SANS },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -595,7 +595,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pau Cin Hau OK, W10 none, installed Google Noto
     { "Pauc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::special(), EcFont::PAU_CIN_HAU, NO_FLAGS,
+        Dating::special(), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 340, .numOrder = NumOrder::THOUSAND, .flags = Langfg::NO_AUTO, .year = 1990 } },
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
@@ -616,7 +616,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Phoenician OK, because of importance installed Google Noto
     { "Phnx", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(-11), EcFont::PHOENICIAN },
+        Dating::century(-11), EcFont::FRANKEN_SANS },
     // Miao/Pollard OK, W10 none, installed Google Noto
     { "Plrd", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
