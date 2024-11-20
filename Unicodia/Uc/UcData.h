@@ -213,7 +213,7 @@ namespace uc {
           Z_FUN_1,
          FUNKY_BIGGER,
          FRANKEN_SANS,
-         FRANKEN_SANS_BIGGER,  // Parthian, Wancho
+         FRANKEN_SANS_BIGGER,  // Parthian, Wancho, Warang
          FRANKEN_SANS_110,     // Ogham
         ADLAM,
         AHOM,
@@ -402,7 +402,6 @@ namespace uc {
           Z_USY_3,
         VAI,
         VITHKUQI,
-        WARANG_CITI,
         YEZIDI,
         YI,
         ZANABAZAR,

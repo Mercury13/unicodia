@@ -91,7 +91,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [future, link] wait for book Pahlavi (sorry, cannot put todo at lockit)
     { "Avst", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::yapprox(400), EcFont::AVESTAN },
+        Dating::yapprox(400), EcFont::FRANKEN_SANS },
     // Balinese OK, none even in W10, installed Google Noto font
     { "Bali", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -818,7 +818,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1950), EcFont::WARANG_CITI, NO_FLAGS,
+        Dating::decade(1950), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 14, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,
           .locations = { LOC_INDIA_E } } },
     // Wancho OK, W10 none, installed Google Noto

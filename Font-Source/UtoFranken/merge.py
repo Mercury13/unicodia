@@ -99,6 +99,7 @@ files = [
     [ "NotoSansTifinagh-Regular.ttf",           "tfng" ],
     [ "NotoSansUgaritic-Regular.ttf",           "ugar" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
+    [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
 ]
 
 # Get new fonts
