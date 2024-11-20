@@ -97,7 +97,6 @@ constinit const uc::Font uc::fontInfo[] = {
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
-    { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF | Ffg::FALL_TO_NEXT },     // Balinese
       { FNAME_FUNKY },                                                          // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
