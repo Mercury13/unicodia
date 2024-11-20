@@ -88,7 +88,7 @@ files = [
     [ "NotoSansMedefaidrin-Regular.ttf",        "medf" ],
     [ "NotoSansMendeKikakui-Regular.ttf",       "mend" ],  # ← marks somehow OK
     [ "NotoSansMro-Regular.ttf",                "mroo" ],
-    [ "NotoSansNabataean-Regular.ttf",          "nbat" ],
+    [ "NotoSansNabataean-Regular.ttf",          "nbat" ],  # ← no marks
     [ "NotoSansOgham-Regular.ttf",              "ogam" ],
     [ "NotoSansOldItalic-Regular.ttf",          "ital" ],
     [ "NotoSansOldNorthArabian-Regular.ttf",    "narb" ],  # ← no marks
