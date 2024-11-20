@@ -78,7 +78,7 @@ files = [
     [ "NotoSansBassaVah-Regular.ttf",           "bass" ],
     [ "NotoSansCaucasianAlbanian-Regular.ttf",  "aghb" ],
     [ "NotoSansCherokee-Regular.ttf",           "cher" ],
-    [ "NotoSansChorasmian-Regular.ttf",         "chrs" ],
+    [ "NotoSansChorasmian-Regular.ttf",         "chrs" ], # ← no marks
     [ "NotoSansHatran-Regular.ttf",             "hatr" ],
     [ "NotoSansImperialAramaic-Regular.ttf",    "armi" ],
     [ "NotoSansInscriptionalParthian-Regular.ttf", "prti" ], # ← no marks, even ligatures OK
