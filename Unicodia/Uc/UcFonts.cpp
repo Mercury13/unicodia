@@ -114,10 +114,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { "NotoSansBuginese-Regular.ttf" },                                       // …1
     { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
-    { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
     { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, 12_bot },                 // Chakma
     { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, 12_bot },             // Cham
-    { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },          // …1

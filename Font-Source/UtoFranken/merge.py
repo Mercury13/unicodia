@@ -71,7 +71,9 @@ def set_line_metrics(font, metrics):
 
 
 files = [
+    [ "NotoSansCaucasianAlbanian-Regular.ttf",  "aghb" ],
     [ "NotoSansCherokee-Regular.ttf",           "cher" ],
+    [ "NotoSansChorasmian-Regular.ttf",         "chrs" ],
     [ "NotoSansImperialAramaic-Regular.ttf",    "armi" ],
     [ "NotoSansInscriptionalParthian-Regular.ttf", "prti" ],
     [ "NotoSansLinearA-Regular.ttf",            "lina" ],

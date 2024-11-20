@@ -68,7 +68,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::yapprox(400), EcFont::CAUCASIAN_ALBANIAN },
+        Dating::yapprox(400), EcFont::FRANKEN_SANS },
     // Ahom OK, installed Google Noto font
     { "Ahom", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -169,7 +169,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA,
-        Dating::century(2, StdNote::FIRST_KNOWN), EcFont::CHORASMIAN },
+        Dating::century(2, StdNote::FIRST_KNOWN), EcFont::FRANKEN_SANS },
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::AFRICA,
