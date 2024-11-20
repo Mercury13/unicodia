@@ -363,7 +363,6 @@ namespace uc {
         PSEUDOGRAPHICS,
         REJANG,
         ROHINGYA,
-        SAMARITAN,
         SAURASHTRA,
         SHARADA,
         SIDDHAM,

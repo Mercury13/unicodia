@@ -251,7 +251,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "BabelStonePseudographica.ttf" },                                         // Pseudographics
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
-    { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf" },                                       // Saurashtra
     { "NotoSansSharada-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Sharada
     { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER },                        // Siddham

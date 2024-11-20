@@ -92,6 +92,7 @@ files = [
     [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],
     [ "NotoSansPsalterPahlavi-Regular.ttf",     "phlp" ],
     [ "NotoSansRunic-Regular.ttf",              "runr" ],
+    [ "NotoSansSamaritan-Regular.ttf",          "samr" ],
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
 ]
 
