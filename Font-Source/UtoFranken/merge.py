@@ -44,9 +44,34 @@ def has_gsub_table(fontfile):
     font = ttLib.TTFont(fontfile)
     return "GSUB" in font
 
+def read_line_metrics(font):
+    metrics = {
+        "ascent": font["hhea"].ascent,
+        "descent": font["hhea"].descent,
+        "usWinAscent": font["OS/2"].usWinAscent,
+        "usWinDescent": font["OS/2"].usWinDescent,
+        "sTypoAscender": font["OS/2"].sTypoAscender,
+        "sTypoDescender": font["OS/2"].sTypoDescender,
+        "sxHeight": font["OS/2"].sxHeight,
+        "sCapHeight": font["OS/2"].sCapHeight,
+        "sTypoLineGap": font["OS/2"].sTypoLineGap,
+    }
+    return metrics
+
+def set_line_metrics(font, metrics):
+    font["hhea"].ascent = metrics["ascent"]
+    font["hhea"].descent = metrics["descent"]
+    font["OS/2"].usWinAscent = metrics["usWinAscent"]
+    font["OS/2"].usWinDescent = metrics["usWinDescent"]
+    font["OS/2"].sTypoAscender = metrics["sTypoAscender"]
+    font["OS/2"].sTypoDescender = metrics["sTypoDescender"]
+    font["OS/2"].sxHeight = metrics["sxHeight"]
+    font["OS/2"].sCapHeight = metrics["sCapHeight"]
+    font["OS/2"].sTypoLineGap = metrics["sTypoLineGap"]
+
+
 files = [
-    # It's recommended to put NotoSans-Regular.ttf as the first element in the
-    # list to maximize the amount of meta data retained in the final merged font.
+    [ "NotoSansCherokee-Regular.ttf",           "cher" ],
     [ "NotoSansImperialAramaic-Regular.ttf",    "armi" ],
     [ "NotoSansLinearA-Regular.ttf",            "lina" ],
     [ "NotoSansLinearB-Regular.ttf",            "linb" ],
@@ -54,7 +79,15 @@ files = [
     [ "NotoSansMedefaidrin-Regular.ttf",        "medf" ],
     [ "NotoSansMro-Regular.ttf",                "mroo" ],
     [ "NotoSansNabataean-Regular.ttf",          "nbat" ],
+    [ "NotoSansNKo-Regular.ttf",                "nkoo" ],
+    [ "NotoSansOgham-Regular.ttf",              "ogam" ],
+    [ "NotoSansOldItalic-Regular.ttf",          "ital" ],
+    [ "NotoSansOldNorthArabian-Regular.ttf",    "narb" ],
+    [ "NotoSansOldPermic-Regular.ttf",          "perm" ],
+    [ "NotoSansOldPersian-Regular.ttf",         "xpeo" ],
+    [ "NotoSansOldTurkic-Regular.ttf",          "orkh" ],
     [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],
+    [ "NotoSansWancho-Regular.ttf",             "wcho" ],
 ]
 
 # Get new fonts
@@ -74,5 +107,8 @@ print(newFiles)
 merger = Merger()
 new_font = merger.merge(newFiles)
 
+metrics = read_line_metrics(ttLib.TTFont("../../Fonts/NotoSerif-Regular.ttf"))
+set_line_metrics(new_font, metrics)
+
 # Save the merged font
-new_font.save("UtoFranken.ttf")
+new_font.save("UtoSansFranken.ttf")
