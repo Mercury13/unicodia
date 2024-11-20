@@ -52,7 +52,7 @@ See [develop.md](develop.md).
 **Win7/10/11 x64 only.** Rationale:
 * WXP, WVista and W8 are completely abandoned by all imaginable software. Though I did some improvements specially for W8.
 * No obstacles for x86, just untested because no one compiled Qt for x86.
-* Recently checked Windows 11, and it works.
+* Recently checked Windows 11 and not works.
 
 ## Tofu/misrenderings
 * **W10/11 should support everything possible, W7 just runs somehow.** At the time of testing still no BMP tofu, per old policy.
