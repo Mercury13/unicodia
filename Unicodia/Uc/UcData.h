@@ -349,6 +349,7 @@ namespace uc {
         OLD_SOGDIAN,
         OLD_UYGHUR,
         ORIYA,
+        PAHAWH_HMONG,
         PHAGS_PA,
         MAHJONG_TILES,      // Fall down to Phaistos Disc
          PHAISTOS_DISC,

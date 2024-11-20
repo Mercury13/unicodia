@@ -93,7 +93,6 @@ files = [
     [ "NotoSansOldPermic-Regular.ttf",          "perm" ],
     [ "NotoSansOldPersian-Regular.ttf",         "xpeo" ],
     [ "NotoSansOldTurkic-Regular.ttf",          "orkh" ],
-    [ "NotoSansPahawhHmong-Regular.ttf",        "hmng" ],
     [ "NotoSansPalmyrene-Regular.ttf",          "palm" ],
     [ "NotoSansPauCinHau-Regular.ttf",          "pauc" ],        
     [ "NotoSansPhoenician-Regular.ttf",         "phnx" ],

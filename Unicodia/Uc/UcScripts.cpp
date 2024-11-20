@@ -329,7 +329,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1959, StdNote::CUSTOM), EcFont::FRANKEN_SANS },
+        Dating::year(1959, StdNote::CUSTOM), EcFont::PAHAWH_HMONG },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
