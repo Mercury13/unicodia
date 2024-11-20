@@ -62,11 +62,14 @@ for line0 in file:
                 if (isCpGood(code)):
                     svgName = "svg/{}.svg".format(sValue)
                     svgHeight = getSvgHeight(svgName)  # requested rather than actual size
+                    # Run Inkscape
+                    cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename=~ex.svg {}'
+                    os.system(cmdline.format(svgName))
                     # Load SVG
                     glyph = font.createChar(code)
                           # both Unicode and fname, for troubleshooting
                     glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
-                    glyph.importOutlines(svgName, scale=False, correctdir=True)
+                    glyph.importOutlines('~ex.svg', scale=False, correctdir=True)
                     # Get transformation matrix
                     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
                     mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
@@ -125,7 +128,6 @@ for glyph in font.glyphs():
         # Simplify to get rid of poor extrema
         removeMicroIntersections(fg)
         fg.simplify(SIMPVALUE, ['mergelines'])
-
         #fg.round()
         # Hint
         selfInter = fg.selfIntersects()
