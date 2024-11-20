@@ -179,7 +179,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Hanunoo
-    { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
       { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …1
@@ -223,7 +222,6 @@ constinit const uc::Font uc::fontInfo[] = {
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
-    { "NotoSansMendeKikakui-Regular.ttf" },                                     // Mende Kikakui
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
     { "UnicodiaMongolFixup.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },         // Mongol

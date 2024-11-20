@@ -306,7 +306,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hatran OK, W10 none, installed Google Noto
     { "Hatr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::yapprox(-100), EcFont::HATRAN },
+        Dating::yapprox(-100), EcFont::FRANKEN_SANS },
     // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr", QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
@@ -464,7 +464,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mende Kikakui OK, W10 none → installed Google Noto
     { "Mend", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::yapprox(1920), EcFont::MENDE_KIKAKUI, NO_FLAGS,
+        Dating::yapprox(1920), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 25, .numOrder = NumOrder::HUN_THOUSAND, .year = 2021,
           .locations { LOC_SIERRA_LEONE } } },
     // Meroitic cursive OK, W10 has small part
