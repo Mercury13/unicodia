@@ -1,0 +1,1 @@
+"c:\Program Files\Inkscape\bin\inkscape.exe" --without-gui --actions="select-all;path-union" --export-filename=~ex.svg A72A.svg
