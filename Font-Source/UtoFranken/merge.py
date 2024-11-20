@@ -72,6 +72,7 @@ def set_line_metrics(font, metrics):
 # WARNING!
 # RtL scripts with marks SHOULD NOT frankenfont.
 # LtR with marks → with extreme caution.
+# Glitchy: Hmng Nkoo Perm Samr
 files = [
     [ "NotoSansAvestan-Regular.ttf",            "avst" ],
     [ "NotoSansBassaVah-Regular.ttf",           "bass" ],
@@ -103,8 +104,6 @@ files = [
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
     [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
 ]
-
-# Glitchy: Hmng Nkoo Perm Samr
 
 # Get new fonts
 newFiles = []
