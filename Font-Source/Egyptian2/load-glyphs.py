@@ -45,6 +45,15 @@ def getSvgHeight(fname):
     if (sNumber.endswith('px') or sNumber.endswith('pt')):
         sNumber = sNumber[:-2]
     return float(sNumber)
+    
+def removeSmallPaths(layer, maxSize):
+    nPaths = len(layer)
+    for i in reversed(range(nPaths)):
+        contour = layer[i]
+        # Small, probably traces of intersections?
+        [x1,y1,x2,y2] = contour.boundingBox()
+        if (x2 - x1 <= maxSize) and (y2 - y1 <= maxSize):
+            del layer[i]
 
 def removeObviousPaths(layer):
     nPaths = len(layer)
@@ -53,12 +62,7 @@ def removeObviousPaths(layer):
         # Closed?
         if not contour.closed:
             del layer[i]
-            continue
-        # Small, probably traces of intersections?
-        [x1,y1,x2,y2] = contour.boundingBox()
-        if x2 - x1 <= 2 and y2 - y1 <= 2:
-            del layer[i]
-            continue
+    removeSmallPaths(layer, 2)
 
 SIMPVALUE = 0.6
 
@@ -74,15 +78,14 @@ def removeMicroIntersections(layer):
             if len(tempLayer) != 1:
                 raise Exception('Temp layer has !=1 contours')
             tempLayer.removeOverlap()
+            removeSmallPaths(tempLayer, 3)
             # Managed to get empty layer? Probably just reverse contour?
-            if len(tempLayer) == 0:
-                tempLayer += contour.dup()
+            if len(tempLayer) == 1:
                 tempLayer[0].reverseDirection()
                 tempLayer.removeOverlap()
-                # Still empty layer?
-                if len(tempLayer) == 0:
-                    del layer[i]
-                    continue
+                removeSmallPaths(tempLayer, 3)
+                if len(tempLayer) == 1:
+                    tempLayer[0].reverseDirection()
             # Got exactly one, replace
             if (len(tempLayer) == 1) and not tempLayer.selfIntersects():
                 contour = tempLayer[0]
@@ -160,7 +163,7 @@ def loadUnikemet():
                             # Manual glyph
                             loadGlyph(glyph, manualName, svgHeight)
                         elif os.path.exists(cacheName):
-                            # Cached glyph: ran software
+                            # Cached glyph: already ran software
                             loadGlyph(glyph, cacheName, svgHeight)
                         else:
                             # Unknown glyph
