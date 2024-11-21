@@ -85,7 +85,7 @@ def removeMicroIntersections(layer):
             tempLayer.removeOverlap()
             removeSmallPaths(tempLayer, BIGSMALLVALUE)
             # Managed to get empty layer? Probably just reverse contour?
-            if len(tempLayer) != 1:
+            if (len(tempLayer) != 1) or tempLayer.selfIntersects():
                 tempLayer = fontforge.layer()
                 tempLayer += contour.dup()
                 tempLayer[0].reverseDirection()
