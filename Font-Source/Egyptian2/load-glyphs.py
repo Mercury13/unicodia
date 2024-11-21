@@ -181,7 +181,7 @@ def loadUnikemet():
                                 glyph.clear()
                                 loadGlyph(glyph, cacheName, svgHeight)
                         nCps += 1
-                        if nCps >= 100:
+                        if nCps >= 5000:
                             return
 
 loadUnikemet()
