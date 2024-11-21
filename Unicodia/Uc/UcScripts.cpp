@@ -775,7 +775,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1283), EcFont::THAI, NO_FLAGS,
         { .mantissa = 60, .numOrder = NumOrder::MILLION,
           .flags = Langfg::GREATER_THAN | Langfg::DECADE, .year = 2020 } }, // No reliable source
-    // Tibetan OK, W10 did not have swastika, installed Google Noto
+    // Tibetan OK, W10 did not have swastika, installed BabelStone
     { "Tibt", QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(650), EcFont::TIBETAN },
