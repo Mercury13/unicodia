@@ -148,14 +148,12 @@ def loadUnikemet():
                             # Manual glyph
                             loadGlyph(glyph, manualName, svgHeight)
                         elif os.path.exists(cacheName):
-                            # Cached glyph
+                            # Cached glyph: ran software
                             loadGlyph(glyph, cacheName, svgHeight)
                         else:
                             # Unknown glyph
                             isGood = loadGlyph(glyph, svgName, svgHeight)
-                            if isGood:
-                                shutil.copyfile(svgName, cacheName)
-                            else:
+                            if not isGood:
                                 # Run Inkscape
                                 log.write("Forced to run Inkscape!\n")
                                 cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename={} {}'
@@ -163,7 +161,7 @@ def loadUnikemet():
                                 glyph.clear()
                                 loadGlyph(glyph, cacheName, svgHeight)
                         nCps += 1
-                        if nCps >= 20:
+                        if nCps >= 100:
                             return
 
 loadUnikemet()
