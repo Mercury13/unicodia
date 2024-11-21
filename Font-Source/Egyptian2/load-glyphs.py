@@ -47,40 +47,46 @@ def getSvgHeight(fname):
 CELLSIZE = 1000
 
 # import hieroglyphs
-file = open('Unikemet.txt', 'r')
-for line0 in file:
-    line = line0.strip()
-    if (line != '') and (not line.startswith('#')):
-        cols = line.split('\t')
-        if (len(cols) >= 3):
-            sCp = cols[0]
-            sCommand = cols[1]
-            sValue = cols[2]
-            if (sCp.startswith('U+') and (sCommand == 'kEH_JSesh')):
-                sHex = sCp[2:]
-                code = int(sHex, base=16)
-                if (isCpGood(code)):
-                    svgName = "svg/{}.svg".format(sValue)
-                    svgHeight = getSvgHeight(svgName)  # requested rather than actual size
-                    # Run Inkscape
-                    cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename=~ex.svg {}'
-                    os.system(cmdline.format(svgName))
-                    # Load SVG
-                    glyph = font.createChar(code)
-                          # both Unicode and fname, for troubleshooting
-                    glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
-                    glyph.importOutlines('~ex.svg', scale=False, correctdir=True)
-                    # Get transformation matrix
-                    mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
-                    mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
-                    mat3 = psMat.translate(0, -125)
-                    mat = psMat.compose(mat1, mat2)
-                    mat = psMat.compose(mat, mat3)
-                    glyph.transform(mat)
-                    # Check width by ACTUAL (not requested) width
-                    # @todo [urgent] what width?
-                    glyph.width = CELLSIZE
+def loadUnikemet():
+    file = open('Unikemet.txt', 'r')
+    nCps = 0
+    for line0 in file:
+        line = line0.strip()
+        if (line != '') and (not line.startswith('#')):
+            cols = line.split('\t')
+            if (len(cols) >= 3):
+                sCp = cols[0]
+                sCommand = cols[1]
+                sValue = cols[2]
+                if (sCp.startswith('U+') and (sCommand == 'kEH_JSesh')):
+                    sHex = sCp[2:]
+                    code = int(sHex, base=16)
+                    if (isCpGood(code)):
+                        svgName = "svg/{}.svg".format(sValue)
+                        svgHeight = getSvgHeight(svgName)  # requested rather than actual size
+                        # Run Inkscape
+                        cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename=~ex.svg {}'
+                        os.system(cmdline.format(svgName))
+                        # Load SVG
+                        glyph = font.createChar(code)
+                              # both Unicode and fname, for troubleshooting
+                        glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
+                        glyph.importOutlines('~ex.svg', scale=False, correctdir=True)
+                        # Get transformation matrix
+                        mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
+                        mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
+                        mat3 = psMat.translate(0, -125)
+                        mat = psMat.compose(mat1, mat2)
+                        mat = psMat.compose(mat, mat3)
+                        glyph.transform(mat)
+                        # Check width by ACTUAL (not requested) width
+                        # @todo [urgent] what width?
+                        glyph.width = CELLSIZE
+                        nCps += 1
+                        if nCps >= 5:
+                            return
 
+loadUnikemet()
 log.write("Improving quality\n");
 
 def removeOpenPaths(layer):
