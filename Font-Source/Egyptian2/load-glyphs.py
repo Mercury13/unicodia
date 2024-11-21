@@ -95,7 +95,7 @@ def removeMicroIntersections(layer):
             if (len(tempLayer) == 1) and not tempLayer.selfIntersects():
                 layer[i] = tempLayer[0]
 
-def improveGlyph(glyph):
+def improveGlyph(glyph, logBad):
     global nSelfIntersecting
     fg = glyph.layers[1]
     # Remove open paths
@@ -115,7 +115,7 @@ def improveGlyph(glyph):
     if not selfInter:
         glyph.correctDirection()
         isOk = True
-    else:
+    elif logBad:
         nSelfIntersecting += 1
         log.write("{} self-intersects, {} so far\n".format(
                 glyph.glyphname, nSelfIntersecting))
@@ -123,7 +123,7 @@ def improveGlyph(glyph):
     # Correct direction
     return isOk
 
-def loadGlyph(glyph, fname, svgHeight):
+def loadGlyph(glyph, fname, svgHeight, logBad):
     glyph.importOutlines(fname, scale=False, correctdir=True)
     # Get transformation matrix
     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
@@ -135,7 +135,7 @@ def loadGlyph(glyph, fname, svgHeight):
     # Check width by ACTUAL (not requested) width
     # @todo [urgent] what width?
     glyph.width = CELLSIZE
-    return improveGlyph(glyph)
+    return improveGlyph(glyph, logBad)
 
 CELLSIZE = 1000
 
@@ -166,20 +166,20 @@ def loadUnikemet():
                         # Load?
                         if os.path.exists(manualName):
                             # Manual glyph
-                            loadGlyph(glyph, manualName, svgHeight)
+                            loadGlyph(glyph, manualName, svgHeight, False)
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
-                            loadGlyph(glyph, cacheName, svgHeight)
+                            loadGlyph(glyph, cacheName, svgHeight, True)
                         else:
                             # Unknown glyph
-                            isGood = loadGlyph(glyph, svgName, svgHeight)
+                            isGood = loadGlyph(glyph, svgName, svgHeight, False)
                             if not isGood:
                                 # Run Inkscape
                                 log.write("Forced to run Inkscape!\n")
                                 cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename={} {}'
                                 os.system(cmdline.format(cacheName, svgName))
                                 glyph.clear()
-                                loadGlyph(glyph, cacheName, svgHeight)
+                                loadGlyph(glyph, cacheName, svgHeight, True)
                         nCps += 1
                         if nCps >= 5000:
                             return
