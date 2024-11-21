@@ -46,14 +46,18 @@ def getSvgHeight(fname):
         sNumber = sNumber[:-2]
     return float(sNumber)
     
+# @return  [+] smth was deleted
 def removeSmallPaths(layer, maxSize):
     nPaths = len(layer)
+    wasDel = False
     for i in reversed(range(nPaths)):
         contour = layer[i]
         # Small, probably traces of intersections?
         [x1,y1,x2,y2] = contour.boundingBox()
         if (x2 - x1 <= maxSize) and (y2 - y1 <= maxSize):
             del layer[i]
+            wasDel = True
+    return wasDel
 
 def removeObviousPaths(layer):
     nPaths = len(layer)
@@ -65,6 +69,7 @@ def removeObviousPaths(layer):
     removeSmallPaths(layer, 2)
 
 SIMPVALUE = 0.6
+BIGSMALLVALUE = 5
 
 def removeMicroIntersections(layer):
     nContours = len(layer)
@@ -78,17 +83,17 @@ def removeMicroIntersections(layer):
             if len(tempLayer) != 1:
                 raise Exception('Temp layer has !=1 contours')
             tempLayer.removeOverlap()
-            removeSmallPaths(tempLayer, 3)
+            removeSmallPaths(tempLayer, BIGSMALLVALUE)
             # Managed to get empty layer? Probably just reverse contour?
-            if len(tempLayer) == 1:
+            if len(tempLayer) != 1:
+                tempLayer = fontforge.layer()
+                tempLayer += contour.dup()
                 tempLayer[0].reverseDirection()
                 tempLayer.removeOverlap()
-                removeSmallPaths(tempLayer, 3)
-                if len(tempLayer) == 1:
-                    tempLayer[0].reverseDirection()
+                removeSmallPaths(tempLayer, BIGSMALLVALUE)
             # Got exactly one, replace
             if (len(tempLayer) == 1) and not tempLayer.selfIntersects():
-                contour = tempLayer[0]
+                layer[i] = tempLayer[0]
 
 def improveGlyph(glyph):
     global nSelfIntersecting
