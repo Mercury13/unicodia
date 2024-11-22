@@ -159,7 +159,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                    // Dominoes
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { "UnicodiaEgypFixupRegular.otf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
-      { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
+      { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT }, // …1
+      { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER, 110_pc },                         // …2
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic    
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum

@@ -798,7 +798,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(2015), EcFont::FUNKY, NO_FLAGS,
         { .mantissa = 1400, .numOrder = NumOrder::UNIT, .year = 2014, .locations { LOC_INDIA_E } } },
-    /// @todo [U16, big tofu] Tulu Tigalari
+    // Tulu partly OK, font is just a gag
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(9), EcFont::TULU, NO_FLAGS,

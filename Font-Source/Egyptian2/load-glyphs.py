@@ -3,8 +3,10 @@ import psMat
 import os
 import shutil
 
-OUTFILENAME = 'UnicodiaSesh.otf'
-#HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
+TEMPFILENAME = '~UnicodiaSesh.ttf'
+OUTFILENAME = 'UnicodiaSesh.ttf'
+HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
+INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 fontforge.runInitScripts()
 font = fontforge.activeFont()
@@ -204,8 +206,8 @@ def loadUnikemet():
                             if not isGood:
                                 # Run Inkscape
                                 log.write("Forced to run Inkscape!\n")
-                                cmdline = '"c:/Program Files/Inkscape/bin/inkscape.com" --actions=select-all;path-union --export-filename={} {}'
-                                os.system(cmdline.format(cacheName, svgName))
+                                cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
+                                os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                 glyph.clear()
                                 loadGlyph(glyph, cacheName, svgHeight, True)
                         nCps += 1
@@ -215,11 +217,11 @@ def loadUnikemet():
 loadUnikemet()
 
 log.write("Generating font\n")
-font.generate(OUTFILENAME)
+font.generate(TEMPFILENAME)
 
 # Run external hinter
-#CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
-#os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
+CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
+os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
 
 log.write("OK\n")
 log.close()
