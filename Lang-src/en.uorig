@@ -1049,13 +1049,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in USA in 1963. Width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
+      <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
       <p />
-      <p>First 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes puched in all tracks tell that character is punched by mistake and should{{_}}not be read.</p>
+      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character is punched by mistake and should{{_}}not be read.</p>
       <p />
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
-      <p>The rest 128 characters could be filled with everything. One of such 8-bit encodings, [[pt:latin1|Latin-1]], also came to Unicode.</p>
+      <p>The rest 128 characters could be filled with everything. One such 8-bit encoding, [[pt:latin1|Latin-1]], also came to Unicode.</p>
      </orig>
     </text>
    </group>
@@ -1067,9 +1067,9 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>First 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
-      <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but French delegate insisted that OE is enough.</p>
+      <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but the French delegate insisted that OE was enough.</p>
      </orig>
      <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
     </text>
@@ -1096,13 +1096,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>International Phonetic Alphabet based on Latin is used with linguists, speech therapists, singers and actors to convey transcription of languages. To convey additional speech disorders such as tooth gnashing and lisping, IPA extensions are used.</p>
+      <p>The International Phonetic Alphabet based on Latin is used by linguists, speech therapists, singers and actors to convey transcription of languages. To convey additional speech disorders such as tooth gnashing and lisping, IPA extensions are used.</p>
       <p />
-      <p>In reality most characters of this block is not{{_}}extension but ordinary IPA: for example, {{sm|ɦ}} is present in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'' and Czech “hrad”.</p>
+      <p>In reality, most characters of this block are not{{_}}extensions but ordinary IPA: for example, {{sm|ɦ}} is present in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'' and Czech “hrad”.</p>
       <p />
-      <p>Opera singers often sing in unknown languages, and their ability to read transcription sings is often used by dictionary authors. Particularly, well-known sound “Yanny or Laurel” was recorded by opera singer Jay Aubrey Jones{{-}}low male voice that came though low-quality speaker and microphone of the same quality turned to Yanny.</p>
+      <p>Opera singers often sing in unknown languages, and their ability to read transcription signs is often used by dictionary authors. Particularly, the well-known sound “Yanny or Laurel” was recorded by opera singer Jay Aubrey Jones{{-}}low male voice that came through low-quality speaker and microphone of the same quality turned to Yanny.</p>
       <p />
-      <p>Also using IPA characters you can turn a text upside-down for joke.</p>
+      <p>Also using IPA characters you can turn a text upside-down for a joke.</p>
      </orig>
     </text>
    </group>
@@ -1126,7 +1126,7 @@
      <orig>
       <p>Diacritical marks are above-line, below-line and inline characters affixed to letters, and modifying or clarifying their meanings. For example, accent like in ''résumé''.</p>
       <p />
-      <p>Unicode provides two ways of conveying diacritics, [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify search in such a mess, Unicode has algorithm of [[pt:normalization|normalization]].</p>
+      <p>Unicode provides two ways of conveying diacritics, [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify search in such a mess, Unicode has an algorithm of [[pt:normalization|normalization]].</p>
       <p />
       <p>Characters 034F CGJ is not{{_}}a{{_}}joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
       <p />
@@ -1152,7 +1152,7 @@
      <orig>
       <p>Letters of small Cyrillic languages: Abkhaz, Kurdish ''(as minority of USSR)'', Komi, Mordovian, Aleut, Azeri ''(now [[ps:Latn|Latin]])'' and Chuvash in Yakovlev alphabet ''(used 1873–1938)''.</p>
       <p />
-      <p>Contains funny letter {{sm|Ԥ}} (looks like word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
+      <p>Contains a funny letter {{sm|Ԥ}} (looks like a word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him, Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
      </orig>
     </text>
    </group>
@@ -1218,9 +1218,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</p>
+      <p>Characters for comments to Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
       <p />
-      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks beforehands, and range 0590…08FF was already right-to-left.</p>
+      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks beforehand, and range 0590…08FF was already right-to-left.</p>
      </orig>
     </text>
    </group>
@@ -1313,9 +1313,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Hangul (Korean alphabet) consists of 51 letter ''(jamo)''. The block is much larger: the same letter in the beginning and end of syllable is encoded with different characters, and the block has many obsolete jamo.</p>
+      <p>Hangul (Korean alphabet) comprises 51 letters ''(jamo)''. The block is much larger: the same letter at the beginning and end of a syllable is encoded with different characters, and the block has many obsolete jamo.</p>
       <p />
-      <p>Choseong are initial letters, jungseong are medial, jongseong are final. The block’s design is very simple: distance between original and medial letter, and between medial and final is negative, and two or three letters written together automatically form a syllable.</p>
+      <p>Choseong are initial letters, jungseong are medial, and jongseong are final. The block’s design is simple: the distance between the original and medial letter, and between the medial and final is negative, and two or three letters written together automatically form a syllable.</p>
      </orig>
     </text>
    </group>
@@ -1411,9 +1411,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}16 is still not{{_}}recommended.</p>
+      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}16 is still not{{_}}recommended.</p>
       <p />
-      <p>The rest are names of days in lunar calendar from new moon to full and back.</p>
+      <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
     </text>
    </group>
@@ -1468,7 +1468,7 @@
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
       <p />
-      <p>Ligature ТЬ is from new Khanty ''(Russia, 9500 as of 2010)'' alphabet of 2013.</p>
+      <p>Ligature ТЬ is from the new Khanty ''(Russia, 9500 as of 2010)'' alphabet of 2013.</p>
      </orig>
     </text>
    </group>
@@ -1478,11 +1478,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>''Mtavruli'' is a capital form of standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.</p>
+      <p>''Mtavruli'' is a capital form of the standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.</p>
       <p />
-      <p>Mtavruli is used in highlights and captions, and for a long time was considered as a variant of font. But scholars found documents from 19th and early 20th century where Mkhedruli and Mtavruli were mixed. Also Georgian fonts come in pairs, Mkhedruli and Mtavruli, that complicates daily work and makes Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.</p>
+      <p>Mtavruli is used in highlights and captions, and for a long time was considered a variant of font. However, scholars found documents from the 19th and early 20th centuries where Mkhedruli and Mtavruli were mixed. Also, Georgian fonts come in pairs, Mkhedruli and Mtavruli, complicating daily work and making Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received a translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.</p>
       <p />
-      <p>Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. Double line below that’s barely visible on icon is an editorial mark meaning capital letter.</p>
+      <p>Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. The double line below barely visible on the icon is an editorial mark meaning capital letter.</p>
      </orig>
     </text>
    </group>
@@ -1500,9 +1500,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters from Vedas used in [[ps:Deva|Devanagari]] and other Indic scripts. Pronunciation if those times greatly differed from modern, and they are mainly phonetical signs.</p>
+      <p>Characters from Vedas used in [[ps:Deva|Devanagari]] and other Indic scripts. Pronunciation of those times greatly differed from modern, and they are mainly phonetical signs.</p>
       <p />
-      <p>Part of symbols vary from language to language. 1CF5 in Devanagari looks like hourglass, in Bengali like cross. 1CF6 in Devanagari looks like breve ˘, in Bengali{{-}}like upright or inverted small omega ω. Glyph looking like upright omega over inverted one existed in Unicode for some time, and is more often found in researches than in original sources.</p>
+      <p>Part of symbols vary from language to language. 1CF5 in Devanagari looks like an hourglass, in Bengali like a cross. 1CF6 in Devanagari looks like breve ˘, in Bengali{{-}}like upright or inverted small omega ω. Glyph looking like an upright omega over inverted one existed in Unicode for some time, and is more often found in research than in original sources.</p>
      </orig>
     </text>
    </group>
@@ -1579,9 +1579,9 @@
      <orig>
       <p>The block contains superscript and subscript letters, signs and digits used in mathematics and phonetics.</p>
       <p />
-      <p>Long before advent of Internet it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. System (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense to force people to move to other systems, or simulate like “6.022e23” or “6.022·10^23”.</p>
+      <p>Long before the advent of the Internet, it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. System (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense in forcing people to move to other systems, or simulate like “6.022e23” or “6.022·10^23”.</p>
       <p />
-      <p>Also superscripts drawn by typographer are often better that synthesized by word processor.</p>
+      <p>Also, superscripts drawn by typographers are often better than synthesized by word processors.</p>
       <p />
       <p>Many of important superscripts and subscripts are in other places: transposition of matrix Aᵀ{{-}}in the block of [[pk:1D40|phonetic extenstios]].</p>
      </orig>
