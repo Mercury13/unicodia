@@ -69,6 +69,7 @@ def removeObviousPaths(layer):
     removeSmallPaths(layer, 2)
 
 SIMPVALUE = 0.6
+SMALLSIMPVALUE = 0.6
 BIGSMALLVALUE = 5
 
 def removeMicroIntersections(layer):
@@ -177,19 +178,23 @@ def loadUnikemet():
                     sHex = sCp[2:]
                     code = int(sHex, base=16)
                     if (isCpGood(code)):
+                        glyphName = "u{}_{}".format(sHex.upper(), sValue)
                         svgName = "svg/{}.svg".format(sValue)
-                        cacheName = "cache/{}.svg".format(sValue)
-                        manualName = "manual/{}.svg".format(sValue)
+                        cacheName = "cache/{}.svg".format(sValue)                        
+                        manualName = "manual/{}_UnicodiaSesh.svg".format(glyphName)
                         svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                         # Load SVG
                         glyph = font.createChar(code)
                               # both Unicode and fname, for troubleshooting
-                        glyph.glyphname = "u{}_{}".format(sHex.upper(), sValue)
+                        glyph.glyphname = glyphName
                         # Load?
                         if os.path.exists(manualName):
                             # Manual glyph
                             glyph.importOutlines(manualName, scale=False, correctdir=True)
+                            glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
                             fixBearings(glyph)
+                            if glyph.selfIntersects():
+                                log.write("{} manual, and still self-intersects!\n".format(glyphName))
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
                             loadGlyph(glyph, cacheName, svgHeight, True)
