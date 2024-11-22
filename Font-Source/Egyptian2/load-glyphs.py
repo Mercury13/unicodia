@@ -123,21 +123,43 @@ def improveGlyph(glyph, logBad):
     # Correct direction
     return isOk
 
+CELLHEIGHT = 1000
+CELLWIDTH = 1100
+BOTTOMHANG = 125
+BEARING = 40
+
+def fixBearings(glyph):
+    glyph.left_side_bearing = BEARING
+    glyph.right_side_bearing = BEARING
+
 def loadGlyph(glyph, fname, svgHeight, logBad):
     glyph.importOutlines(fname, scale=False, correctdir=True)
     # Get transformation matrix
     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
-    mat2 = psMat.scale(CELLSIZE / svgHeight) # And now to CELLSIZE
-    mat3 = psMat.translate(0, -125)
+    mat2 = psMat.scale(CELLHEIGHT / svgHeight) # And now to CELLSIZE
+    mat3 = psMat.translate(0, -BOTTOMHANG)
     mat = psMat.compose(mat1, mat2)
     mat = psMat.compose(mat, mat3)
     glyph.transform(mat)
     # Check width by ACTUAL (not requested) width
-    # @todo [urgent] what width?
-    glyph.width = CELLSIZE
+    [x1,y1,x2,y2] = glyph.boundingBox()
+    actualWidth = x2 - x1
+    actualHeight = y2 - y1
+    if (actualWidth < 300) and (actualHeight < 300):
+        log.write("{} is really small\n".format(
+                glyph.glyphname))
+    if actualWidth > CELLWIDTH:
+        newHeight = CELLHEIGHT * CELLWIDTH / actualWidth
+        remHeight = CELLHEIGHT - newHeight
+        halfRem = remHeight / 2
+        mat1 = psMat.translate(0, BOTTOMHANG)
+        mat2 = psMat.scale(CELLWIDTH / actualWidth)
+        mat3 = psMat.translate(0, halfRem - BOTTOMHANG)
+        mat = psMat.compose(mat1, mat2)
+        mat = psMat.compose(mat, mat3)
+        glyph.transform(mat)
+    fixBearings(glyph)
     return improveGlyph(glyph, logBad)
-
-CELLSIZE = 1000
 
 # import hieroglyphs
 def loadUnikemet():
@@ -166,7 +188,8 @@ def loadUnikemet():
                         # Load?
                         if os.path.exists(manualName):
                             # Manual glyph
-                            loadGlyph(glyph, manualName, svgHeight, False)
+                            glyph.importOutlines(manualName, scale=False, correctdir=True)
+                            fixBearings(glyph)
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
                             loadGlyph(glyph, cacheName, svgHeight, True)
