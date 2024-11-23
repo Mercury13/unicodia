@@ -1284,7 +1284,7 @@ constinit const uc::Block uc::blocks[] {
             { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::FORMAT, SvgHint{ 7, ImbaX::LEFT_4 } },
             "Shorthand Format Controls",
             { EcScript::Dupl, 1}, MapType::SYM_CODE,
-            EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
+            EcScript::NONE, EcFont::FRANKEN_SANS_FINEGRAINED, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
     // Legacy ex OK
     { 0x1CC00, 0x1CEBF, { U"\U0001CCA4\U0001CCA5", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER  },
             "Symbols for Legacy Computing Supplement",

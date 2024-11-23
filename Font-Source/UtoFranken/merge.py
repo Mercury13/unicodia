@@ -79,6 +79,7 @@ files = [
     [ "NotoSansCaucasianAlbanian-Regular.ttf",  "aghb" ],
     [ "NotoSansCherokee-Regular.ttf",           "cher" ],
     [ "NotoSansChorasmian-Regular.ttf",         "chrs" ], # ← no marks
+    [ "NotoSansDuployan-Regular.ttf",           "dupl" ],
     [ "NotoSansElymaic-Regular.ttf",            "elym" ], # ← no marks
     [ "NotoSansHatran-Regular.ttf",             "hatr" ],
     [ "NotoSansImperialAramaic-Regular.ttf",    "armi" ],

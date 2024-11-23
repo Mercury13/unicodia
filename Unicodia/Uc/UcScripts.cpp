@@ -211,7 +211,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Duployan OK, W10 none → installed Google Noto
     { "Dupl", QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::year(1860), EcFont::DUPLOYAN },
+        Dating::year(1860), EcFont::FRANKEN_SANS_FINEGRAINED },
     // Egyptian hiero OK, W7 none, W10 troubles → better Noto + temporary fallbacks
     { "Egyp", QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::AFRICA,

@@ -215,6 +215,7 @@ namespace uc {
          FRANKEN_SANS,
          FRANKEN_SANS_BIGGER,  // Parthian, Wancho, Warang
          FRANKEN_SANS_110,     // Ogham
+         FRANKEN_SANS_FINEGRAINED, // Duployan
         ADLAM,
         AHOM,
         ANATOLIAN,
@@ -280,7 +281,6 @@ namespace uc {
         DIVES_AKURU,
         DOGRA,
         DOMINOES,
-        DUPLOYAN,
         EGYPTIAN,
           Z_EGY_1,
           Z_EGY_2,

@@ -87,6 +87,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_SANS_FRANKEN },                                                       // Sans franken
     { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
     { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)
+    { FAM_SANS_FRANKEN, Ffg::STUB_FINEGRAINED },                                // Sans franken finegrained (Dupl)
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
@@ -157,7 +158,6 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                    // Dominoes
-    { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { "UnicodiaEgypFixupRegular.otf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
       { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT }, // …1
       { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER, 110_pc },                         // …2
