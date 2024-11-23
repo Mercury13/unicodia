@@ -2066,7 +2066,7 @@
      <orig>
       <p>Currency characters fall into two clear categories. One group emerged in 17–19th century with evolution of business language: dollar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupee sign {{sm|௹}}. Others are introduced by state since late 20th century: euro {{sm|€}}, hryvnia {{sm|₴}}, ruble {{sm|₽}}, rupee {{sm|₹}}.</p>
       <p />
-      <p>Expecting that the symbol of Russian ruble will be accepted someday, Paratype company in 2009 filled the remainder of the block with it. The fonts of PT family proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with ₽ sign.</p>
+      <p>Expecting that the Russian ruble symbol would be accepted someday, Paratype company in 2009 filled the remainder of the block with it. The fonts of PT family proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with ₽ sign.</p>
      </orig>
      <transl>
       <p>Символы валют делятся на две чёткие категории. Одна группа возникла в XVII–XIX{{_}}веке с развитием делового языка: доллар {{sm|$}}, фунт {{sm|£}}, [[ps:Taml|тамильский]] знак рупии {{sm|௹}}. Другая{{-}}принята государством с конца XX{{_}}века: евро {{sm|€}}, гривна {{sm|₴}}, рубль {{sm|₽}}, рупия {{sm|₹}}.</p>
@@ -2096,7 +2096,7 @@
       <p />
       <p>Blackboard bold {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. Spread with prominent textbook on complex analysis of 1965 by Gunning and Rossi.</p>
       <p />
-      <p>Character {{sm|ℵ}} for cardinality of set is introduced by Georg Cantor.</p>
+      <p>Character {{sm|ℵ}} for cardinality of a set is introduced by Georg Cantor.</p>
      </orig>
      <transl>
       <p>Математические, технические и деловые символы буквенного происхождения.</p>
@@ -2182,7 +2182,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:control|Control]] characters by themselves have no graphic representation. This block gathers notations used to display contro characters. The most important to us is character {{sm|␣}} meaning [[pt:space|space]].</p>
+      <p>[[pt:control|Control]] characters by themselves have no graphic representation. This block gathers notations used to display control characters. The most important to us is character {{sm|␣}} meaning [[pt:space|space]].</p>
       <p />
       <p>Several images of control characters are present in other blocks: {{sm|↵←⌫}}.</p>
      </orig>
@@ -2200,13 +2200,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Optical and magnetic ink character recognition is used for automatic entry of documents, mostly passports, bank cheques, transport tickets. Unlike barcodes, the same characters are recognized by both people and machines to diminish fraud. Both technologies use special monospace fonts. These fonts (sometimes in distorted form) are widely used in films and video games of cyberpunk genre.</p>
+      <p>Optical and magnetic ink character recognition is used for automatic document entry, mostly passports, bank cheques, and transport tickets. Unlike barcodes, the same characters are recognized by both people and machines to diminish fraud. Both technologies use special monospace fonts. These fonts (sometimes in distorted form) are widely used in films and video games of the cyberpunk genre.</p>
       <p />
-      <p>In 1956 USA demonstrated magnetic ink character recognition (MICR). System understands ten digits and four special characters identifying fied meaning. Magnetic recognition is significantly more reliable than optical. If you see a square font where part of vertical strokes is thick (for example, on the box of ''Magnavox Odyssey'' console){{-}}this is stylized MICR.</p>
+      <p>In 1956 the USA demonstrated magnetic ink character recognition (MICR). The system understands ten digits and four special characters identifying the field’s meaning. Magnetic recognition is significantly more reliable than optical. If you see a square font where part of the vertical strokes is thick (for example, on the box of ''Magnavox Odyssey'' console){{-}}this is stylized MICR.</p>
       <p />
-      <p>In 1968 in USA the first working technology of optical recognition, OCR-A, was made. Understands the entire [[ps:Latn|Latin]] alphabet with small letters. To separate fields, special characters are used: hook, chair, fork, buckle and bowtie. The font is found in films ''13 Hours: The Secret Soldiers of Benghazi'', ''The Blacklist'', ''The Pretender'', ''Bugs'' and others.</p>
+      <p>In 1968 the USA made the first working technology of optical recognition, OCR-A. Understands the entire [[ps:Latn|Latin]] alphabet with small letters. To separate fields, special characters are used: hook, chair, fork, buckle and bowtie. The font is found in films ''13 Hours: The Secret Soldiers of Benghazi'', ''The Blacklist'', ''The Pretender'', ''Bugs'' and others.</p>
       <p />
-      <p>Only in 1990s font-intependent optical recognition was developed. It is used for digitization of books, processing of questionnaires and is much less reliable. So foreign passport with machine-readable page written in OCR-B font is not{{_}}an{{_}}anachronism.</p>
+      <p>Only in the 1990s font-independent optical recognition was developed. It is used for digitization of books and processing of questionnaires, and is much less reliable. So foreign passport with a machine-readable page written in OCR-B font is not{{_}}an{{_}}anachronism.</p>
      </orig>
      <transl>
       <p>Оптическое и магнитное распознавание символов служит для автоматического ввода документов, в первую очередь паспортов, банковских чеков, транспортных билетов. В отличие от штрих-кодов, одни и те же символы распознаются людьми и машинами, что исключает подлог. Обе технологии используют специальные моноширинные шрифты. Эти шрифты (иногда в несколько искажённом виде) широко встречаются в фильмах и играх жанра «киберпанк».</p>
@@ -2289,7 +2289,7 @@
      <transl>Символы разные</transl>
     </text>
     <text id="Text">
-     <orig>This block contains [[pt:emoji|emoji]], sharacters from astronomy, astrology, tabletop games, Eastern esoteric, religion, politics and just for adorning printed text. Many characters are taken from Japanese encoding ARIB STD B24 used for broadcasting news, weather, traffic jams through digital television.</orig>
+     <orig>This block contains [[pt:emoji|emoji]], characters from astronomy, astrology, tabletop games, Eastern esoteric, religion, politics, and just for adorning printed text. Many characters are taken from Japanese encoding ARIB STD B24 used for broadcasting news, weather, traffic jams over digital television.</orig>
      <transl>В этом разделе есть [[pt:emoji|эмодзи]], знаки из астрономии, астрологии, настольных игр, восточной эзотерики, религии, политики и просто для украшения печатного текста. Многие символы взяты из японской кодировки ARIB STD B24, используемой для передачи новостей, погоды, информации о дорожных заторах через цифровое телевидение.</transl>
     </text>
    </group>
@@ -2300,7 +2300,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several VS16 [[pt:emoji|emoji]].</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several VS16 [[pt:emoji|emoji]].</p>
       <p />
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
@@ -2317,7 +2317,7 @@
      <transl>Математические символы разные A</transl>
     </text>
     <text id="Text">
-     <orig>Several characters used in geometry, formal logic, program verification, database theory and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
+     <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
      <transl>Несколько символов, используемых в геометрии, формальной логике, верификации программ, теории баз данных и других разделах математики. Также западный символ деления столбиком.</transl>
     </text>
    </group>
@@ -2343,7 +2343,7 @@
      <transl>Стрелки дополнительные B</transl>
     </text>
     <text id="Text">
-     <orig>Intersecting arrows from theory of knots, harpoons, curved arrows and other symbols.</orig>
+     <orig>Intersecting arrows from theory of knots, harpoons, curved arrows, and other symbols.</orig>
      <transl>Скрещённые стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы.</transl>
     </text>
    </group>
@@ -2397,7 +2397,7 @@
      <transl>Латиница расширенная C</transl>
     </text>
     <text id="Text">
-     <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of Uralic Phonetic Alphabet and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
+     <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of the Uralic Phonetic Alphabet, and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
      <transl>Символы разных малых языков: мелпа и нии ''(Папуа{{-}}Новая Гвинея)'', шона ''(Зимбабве)'', уйгурского и других. Также семь букв уральского фонетического алфавита, и клавдиева буква Ⱶ, означавшая то же, что современный Y, но рассчитанная на печать существующими трафаретами.</transl>
     </text>
    </group>
@@ -2414,9 +2414,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Obsolete [[pt:minuscule|minuscule]] Georgian type ''Nuskhuri''. Letters are slanted to the right and very boxy. Initials were typed in ''Asomtavruli'' from main block.</p>
+      <p>Obsolete [[pt:minuscule|minuscule]] Georgian type ''Nuskhuri''. Letters are slanted to the right and very boxy. Initials were typed in ''Asomtavruli'' from the main block.</p>
       <p />
-      <p>Back in 2000 Georgian State Department of Information Technology and Catholicos Patriarch (head of Georgian church) asked to encode Nushkhuri, and Consortium came forward.</p>
+      <p>Back in 2000 Georgian State Department of Information Technology and Catholicos Patriarch (head of the Georgian church) asked to encode Nushkhuri, and the Consortium came forward.</p>
      </orig>
      <transl>
       <p>Устаревший [[pt:minuscule|минускульный]] грузинский шрифт ''нусхури''. Буквы наклонены вправо и очень угловатые. Буквицы при этом оформляли шрифтом ''асомтаврули'' из основного блока.</p>
@@ -2490,11 +2490,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>You will ask: how to find a CJK ideograph in the dictionary if pronunciation is unknown? To do this, you find a ''radical'' in an ideograph{{-}}a stroke or combination of strokes.</p>
+      <p>You will ask: how to find a CJK ideograph in the dictionary if the pronunciation is unknown? To do this, you find a ''radical'' in an ideograph{{-}}a stroke or combination of strokes.</p>
       <p />
-      <p>Kangxi dictionary of Chinese language is written 1710–1716 after order of Kangxi Emperor of China, and contains 49,030 entries. It was considered standard until late 19th century. In 1831 about 2500 mistakes were fixed, caused by hurry of initial authors.</p>
+      <p>Kangxi dictionary of Chinese language is written 1710–1716 after the order of Kangxi Emperor of China, and contains 49,030 entries. It was considered standard until late 19th century. In 1831 about 2500 mistakes were fixed, caused by the hurry of initial authors.</p>
       <p />
-      <p>The system of “alphabetical” sorting of ideograph made from 214 radicals was devised back in 1615, but Kangxi dictionary was the one who made it standard.</p>
+      <p>The system of “alphabetical” sorting of ideographs made from 214 radicals was devised back in 1615, but the Kangxi dictionary was the one that made it standard.</p>
      </orig>
      <transl>
       <p>Вы спросите: а как найти нужный иероглиф в словаре, если нет произношения? Для этого находят в иероглифе ''ключ''{{-}}черту или их комбинацию.</p>
@@ -2722,11 +2722,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Book of Changes (Yi Jing or I Ching) is a Chinese esoterical text written with several generations of people. The oldest part is written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must random a hexagram and read its meaning.</p>
+      <p>Book of Changes (Yi Jing or I Ching) is a Chinese esoterical text written by several generations. The oldest part was written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must random a hexagram and read its meaning.</p>
       <p />
-      <p>It is known that a bundle of 50 sticks was used for divinations, traditionally stalks of yarrow, but it’s unknown how exactly. Methods with coin flipping appeared later, and modern divination using sticks is a reconstruction.</p>
+      <p>It is known that divination used a bundle of 50 sticks, traditionally stalks of yarrow, but it’s unknown how exactly. Methods with coin flipping appeared later, and modern divination using sticks is a reconstruction.</p>
       <p />
-      <p>Hexagrams are encoded in the same order as in the book: you take its number 1…64, add offset 4DBF₁₆=19903₁₀ and get its Unicode point.</p>
+      <p>Hexagrams are encoded in the same order as in the book: you take its number 1…64, add offset 4DBF₁₆=19903₁₀, and get a Unicode point.</p>
       <p />
       <p>There was also a philosopher named Yijing in China, unrelated to the book.</p>
      </orig>
@@ -2784,7 +2784,7 @@
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
       <p />
-      <p>Rare [[pt:ligature|ligature]] “multiocular O” is used only in church epithet “many-eyed” (мног{{funky|ꙮ}}кий). In Unicode{{_}}15 seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</p>
+      <p>Rare [[pt:ligature|ligature]] “multiocular O” is used only in the church epithet “many-eyed” (мног{{funky|ꙮ}}кий). In Unicode{{_}}15 seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</p>
      </orig>
      <transl>
       <p>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.</p>
@@ -2895,7 +2895,7 @@
      <transl>Хангыль — расширенные чамо А</transl>
     </text>
     <text id="Text">
-     <orig>Initial ''(choseong)'' old consonants of Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <orig>Initial ''(choseong)'' old consonants of the Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
      <transl>Начальные ''(чхосон)'' старые согласные буквы корейского языка. С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}а значит, нет в [[pt:precomposed|монолитном виде]].</transl>
     </text>
    </group>
@@ -3002,7 +3002,7 @@
      <orig>
       <p>[[pt:precomposed|Precomposed]] Hangul syllables, mainly for compatibility with other encodings.</p>
       <p />
-      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to final place in hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
+      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to the final place in the hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “the great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
      </orig>
      <transl>
       <p>[[pt:precomposed|Монолитные]] слоги хангыля, большей частью для совместимости со старыми кодировками.</p>
@@ -3109,7 +3109,7 @@
      <transl>Комбинирующие полузнаки</transl>
     </text>
     <text id="Text">
-     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s badly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks badly.</orig>
+     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
      <transl>Части диакритических знаков, охватывающих несколько символов. Например, можно накрыть три буквы {{sm|a︤c︦e︥}} одной чертой. В большинстве шрифтов реализованы плохо, и автор «Юникодии» специально подобрал три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо.</transl>
     </text>
    </group>
@@ -3162,9 +3162,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In CJK an ideograph traditionally takes the entire cell of grid, and a European letter takes a half of cell. Hence funny style of text on cheap Chinese goods with badly picked fonts: in Russian internet “Athletism” insoles became famous.</p>
+      <p>In CJK an ideograph traditionally takes the entire cell of the grid, and a European letter takes half of the cell. Hence the funny style of text on cheap Chinese goods with badly picked fonts: on the Russian internet “Athletism” insoles became famous.</p>
       <p />
-      <p>This block contains “wrong” characters that take half of cell instead of full one, and vice-versa.</p>
+      <p>This block contains “wrong” characters that take half of a cell instead of the full one, and vice-versa.</p>
      </orig>
      <transl>
       <p>В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}половину клетки. Отсюда необычное начертание текста на китайских товарах с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм».</p>
@@ -3180,9 +3180,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A short block in the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in composite document (“picture here”) and sign of failed reading.</p>
+      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
       <p />
-      <p>The latter, {{sm|�}}, we see most of all, it means that “mojibake” appeared not{{_}}because of missing glyph in font, but because of failed decoding. Usually{{-}}someone attempted to read text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
+      <p>The latter, {{sm|�}}, we see most of all. It means that “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually{{-}}someone attempted to read the text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
      </orig>
      <transl>
       <p>Короткий блок в конце [[pt:bmp|базовой плоскости]]. Из 14 символов (два [[pt:noncharacter|выброшены]]) назначены только пять: три символа межстрочных помет, символ подстановки в составном документе («здесь должна быть картинка») и знак неудачного считывания.</p>
