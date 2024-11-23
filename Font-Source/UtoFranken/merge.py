@@ -79,6 +79,7 @@ files = [
     [ "NotoSansCaucasianAlbanian-Regular.ttf",  "aghb" ],
     [ "NotoSansCherokee-Regular.ttf",           "cher" ],
     [ "NotoSansChorasmian-Regular.ttf",         "chrs" ], # ← no marks
+    [ "NotoSansElymaic-Regular.ttf",            "elym" ], # ← no marks
     [ "NotoSansHatran-Regular.ttf",             "hatr" ],
     [ "NotoSansImperialAramaic-Regular.ttf",    "armi" ],
     [ "NotoSansInscriptionalParthian-Regular.ttf", "prti" ], # ← no marks, even ligatures OK
@@ -88,6 +89,7 @@ files = [
     [ "NotoSansMedefaidrin-Regular.ttf",        "medf" ],
     [ "NotoSansMendeKikakui-Regular.ttf",       "mend" ],  # ← marks somehow OK
     [ "NotoSansMro-Regular.ttf",                "mroo" ],
+    [ "NotoSansMultani-Regular.ttf",            "mult" ],
     [ "NotoSansNabataean-Regular.ttf",          "nbat" ],  # ← no marks
     [ "NotoSansOgham-Regular.ttf",              "ogam" ],
     [ "NotoSansOldItalic-Regular.ttf",          "ital" ],

@@ -285,7 +285,6 @@ namespace uc {
           Z_EGY_1,
           Z_EGY_2,
         ELBASAN,
-        ELYMAIC,
         ENCLOSED_ALNUM, // Korean
           Z_EAN_1,      // Backed up by Symbol2
         ETHIOPIC,
@@ -338,7 +337,6 @@ namespace uc {
         MODI,
         MONGOLIAN,
           Z_MNG_1,
-        MULTANI,
         MYANMAR,
         NANDINAGARI,
         NEWA,

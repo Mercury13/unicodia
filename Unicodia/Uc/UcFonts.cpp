@@ -162,7 +162,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT }, // …1
       { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER, 110_pc },                         // …2
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
-    { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic    
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot, 130_pc },                  // …1
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
@@ -225,7 +224,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
     { "UnicodiaMongolFixup.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },         // Mongol
       { "NotoSansMongolian-Regular.ttf" },                                      // …1
-    { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
     { FAM_NAND },                                                               // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa

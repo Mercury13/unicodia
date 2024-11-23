@@ -223,7 +223,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Elymaic OK, W10 none → installed Google Noto
     { "Elym", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(-2), EcFont::ELYMAIC },
+        Dating::century(-2), EcFont::FRANKEN_SANS },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -507,7 +507,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Multani OK, W10 none → installed Google Noto
     { "Mult", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(18), EcFont::MULTANI },
+        Dating::century(18), EcFont::FRANKEN_SANS },
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
