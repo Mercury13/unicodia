@@ -365,7 +365,6 @@ namespace uc {
         SIGNWRITING,
         SINHALA,
         SIYAQ_INDIC,
-        SIYAQ_OTTOMAN,
         SOGDIAN,
         SOYOMBO,
         SUNDANESE,

@@ -253,9 +253,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UnicodiaSutton-Regular.ttf", Ffg::DESC_BIGGER, 145_pc },                 // SignWriting
     { "NotoSansSinhala-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Sinhala
     { "NotoSansIndicSiyaqNumbers-Regular.ttf" },                                // Siyaq Indic
-    { "NotoSerifOttomanSiyaq-Regular.ttf" },                                    // Siyaq Ottoman
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
-    { { "NotoSansSoyombo-Regular.ttf", Fafg::DEHINT_DOTC } , Ffg::DESC_BIGGER, 115_pc },                // Soyombo
+    { { "NotoSansSoyombo-Regular.ttf", Fafg::DEHINT_DOTC } , Ffg::DESC_BIGGER, 115_pc }, // Soyombo
     { "UtoSansSundanese-Regular.ttf" },                                         // Sundanese
     { "Mukdum-Final-Unicode.ttf", 140_pc },                                     // Sunuwar
     { "UtoSansSylotiNagri-Regular.ttf" },                                       // Syloti Nagri

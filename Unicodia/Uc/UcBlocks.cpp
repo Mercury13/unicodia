@@ -1394,11 +1394,11 @@ constinit const uc::Block uc::blocks[] {
             "Indic Siyaq Numbers",
             MyName::INST, MapType::AS_OTHER,
             EcScript::NONE, EcFont::SIYAQ_INDIC },
-    // Ottoman Siyaq OK, Noto drew though it’s beta
+    // Ottoman Siyaq OK, use Noto
     { 0x1ED00, 0x1ED4F, { 0x1ED0A, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Ottoman Siyaq Numbers",
             MyName::INST, MapType::AS_OTHER,
-            EcScript::NONE, EcFont::SIYAQ_OTTOMAN },
+            EcScript::NONE, EcFont::FRANKEN_SANS },
     // Arab mathematical OK, currently we use Noto Math
     { 0x1EE00, 0x1EEFF, { 0x1EEA2, EcContinent::ASIA },
             "Arabic Mathematical Alphabetic Symbols",
