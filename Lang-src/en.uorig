@@ -2406,7 +2406,7 @@
      <orig>Aegean numbers</orig>
     </text>
     <text id="Text">
-     <orig>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with 100 number was found.</orig>
+     <orig>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with number 100 was found.</orig>
     </text>
    </group>
    <group id="10140">
@@ -2429,7 +2429,7 @@
       <p />
       <p>This block also contains symbols of Ancient Greek measuring units.</p>
       <p />
-      <p>Funny word ''Litra'' (used by Russian alcoholics for one-litre bottle) is actually related to litre. In Ancient Greece ''litra'' was a coin and unit of weight. In France ''litron'' was a measure of dry volume, hence ''litre''.</p>
+      <p>The funny word ''Litra'' (used by Russian alcoholics for one-litre bottle) is actually related to litre. In Ancient Greece ''litra'' was a coin and unit of weight. In France ''litron'' was a measure of dry volume, hence ''litre''.</p>
      </orig>
     </text>
    </group>
@@ -2447,11 +2447,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Phaistos Disc is an artifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
+      <p>Phaistos Disc is an artifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without a pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in a spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
       <p />
-      <p>Hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, originally PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by artist that worked at excavations, list of Cretan king’s territories and race game.</p>
+      <p>The hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, originally PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by the artist who worked at excavations, a list of the Cretan king’s territories, and a race game.</p>
       <p />
-      <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did{{_}}not{{_}}come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
+      <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; the character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did{{_}}not{{_}}come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
      </orig>
     </text>
    </group>
@@ -2471,9 +2471,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from solar calendar to lunar or for determining date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
+      <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from the solar calendar to lunar or for determining the date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in the Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
       <p />
-      <p>Because of such non-standard use, these numbers are encoded as separate block, not{{_}}as a{{_}}variant of Coptic.</p>
+      <p>Because of such non-standard use, these numbers are encoded as a separate block, not{{_}}as a{{_}}variant of Coptic.</p>
       <p />
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
      </orig>
@@ -2667,7 +2667,7 @@
      <orig>Rumi numeral symbols</orig>
     </text>
     <text id="Text">
-     <orig>Numbers that were used in Arabic Africa from 10th to 17th century, especially in Fez ''(Morocco)''.</orig>
+     <orig>Numbers that were used in Arabic Africa from the 10th to 17th century, especially in Fez ''(Morocco)''.</orig>
     </text>
    </group>
    <group id="10E80">
@@ -2743,7 +2743,7 @@
      <orig>Sinhala archaic numbers</orig>
     </text>
     <text id="Text">
-     <orig>Old non-positional number system used in Sri Lanka up to early 19th century.</orig>
+     <orig>The old non-positional number system used in Sri Lanka up to the early 19th century.</orig>
     </text>
    </group>
    <group id="11200">
@@ -2936,9 +2936,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Babylonians about 2000{{_}}BC devised the first positional number system, it was 60-based. {{sm|𒐕}} is a unit from 0 to 9, {{sm|𒌋}} is ten from 0 to 5. Zero {{sm|𒑊}} was written only between positions, not{{_}}in the end of number, number’s order is deducible only from context.</p>
+      <p>Babylonians about 2000{{_}}BC devised the first positional number system, it was 60-based. {{sm|𒐕}} is a unit from 0 to 9, {{sm|𒌋}} is ten from 0 to 5. Zero {{sm|𒑊}} was written only between positions, not{{_}}at the end of the number, number’s order is deducible only from context.</p>
       <p />
-      <p>Before that a non-positional system was used, when different objects and different positions were written with different signs.</p>
+      <p>Before that, a non-positional system was used, when different objects and different positions were written with different signs.</p>
      </orig>
     </text>
    </group>
@@ -2965,7 +2965,7 @@
      <orig>
       <p>Sixteen characters provide complete formatting of Egyptian hieroglyphs. They need a special layout engine.</p>
       <p />
-      <p>Horizontal mirroring mark may be implemented either in an engine, or in a font.</p>
+      <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
       <p />
       <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
       <p />
@@ -2979,7 +2979,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from sources other that Alan Gardiner. The first proposals were so bad that a man with laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
+      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
      </orig>
@@ -3049,9 +3049,9 @@
       <p />
       <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} U+3005.</p>
       <p />
-      <p>Hook means end of sentence or section in old manuscripts.</p>
+      <p>Hook means the end of a sentence or section in old manuscripts.</p>
       <p />
-      <p>If a block of Khitan Small starts with a single ideograph instead of two, filler is put to the vacant place.</p>
+      <p>If a block of Khitan Small starts with a single ideograph instead of two, a filler is put in the vacant place.</p>
       <p />
       <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and thus [[pt:unification|unified]]. The second form looks like arrow &lt;big&gt;↑&lt;/big&gt; and lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
      </orig>
@@ -3112,7 +3112,7 @@
      <orig>Kana — small extension</orig>
     </text>
     <text id="Text">
-     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also corresponding characters of [[ps:Hira|Hiragana]] are added.</orig>
+     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding characters of [[ps:Hira|Hiragana]] are added.</orig>
     </text>
    </group>
    <group id="1B170">
@@ -3139,7 +3139,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of 2010s tend to stick to standard encodings.</p>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
       <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
@@ -3151,15 +3151,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially marks were written in red; Alexander Mezenets (17th century) invented mark system that does{{_}}not{{_}}need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
+      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially, marks were written in red; Alexander Mezenets (17th century) invented a system of marks that does{{_}}not{{_}}need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
       <p />
-      <p>Banners convey figure that is sung (up to 10 notes), and pitch is specified with marks.</p>
+      <p>Banners convey a figure that is sung (up to 10 notes), and the pitch is specified with marks.</p>
       <p />
-      <p>Earliest Znamenny scores are dated with 11th century. During church reform (“schism”) of 17th century banners were replaced with Kievan notation (“axes”). Until 19th century it was gradually supplanted with polyphonic chant that’s present in churches nowadays. And Znamenny chant and monophony became a feature of Old Believers.</p>
+      <p>The earliest Znamenny scores are dated to 11th century. During the church reform (“schism”) of 17th century banners were replaced with Kievan notation (“axes”). Until 19th century it was gradually supplanted with polyphonic chant that’s present in churches nowadays. And Znamenny chant and monophony became a feature of Old Believers.</p>
       <p />
-      <p>There are several types of chant: Kondak (type of church song), Stolp (pole), Put (way), Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
+      <p>There are several types of chant: Kondak (type of church song), Stolp (pole), Put (way), and Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
       <p />
-      <p>There are modern attempts to revive Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave key to understanding Znamenny notation. It was brought to Unicode by Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, digitizes books.</p>
+      <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
      </orig>
     </text>
    </group>
@@ -3168,7 +3168,7 @@
      <orig> Byzantine musical symbols</orig>
     </text>
     <text id="Text">
-     <orig>Little is known about Byzantine church music, and nothing at all about secular. Nevertheless, symbols of Byzantine origin were used by Orthodox at least until 19th century, even under the rule of Turkey, and were reformed about 1800.</orig>
+     <orig>Little is known about Byzantine church music, and nothing at all about secular. Nevertheless, symbols of Byzantine origin were used by the Orthodox at least until the 19th century, even under the rule of Turkey, and were reformed about 1800.</orig>
     </text>
    </group>
    <group id="1D100">
@@ -3177,15 +3177,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Notes looking like modern appeared in 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain-pens for musicians are produced.</p>
+      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
       <p />
-      <p>Notes evolved to current form in 17th century with equal temperament which made possible porting music to other instruments, play in orchestras.</p>
+      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
       <p />
-      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extends the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
       <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}17 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
       <p />
-      <p>Also this block has several characters from obsolete musical notations.</p>
+      <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
     </text>
    </group>
@@ -3207,9 +3207,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Positional base-20 numerals invented in 1980s by Inuit (Eskimo) schoolchildren from town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before introduction of this system they were among the worst in mathematics across all USA, after{{-}}a little above average, like bilingual people are often better in linguistics.</p>
+      <p>Positional base-20 numerals invented in 1980s by Inuit (Eskimo) schoolchildren from town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before the introduction of this system, they were among the worst in mathematics across all USA, after{{-}}a little above average, like bilingual people are often better in linguistics.</p>
       <p />
-      <p>Base-20 abacus was designed. It looks like Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
+      <p>A base-20 abacus was designed. It looks like Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
       <p />
       <p>There is no special character for fractional part (“vigesimal point”). Sometimes middle dot is used.</p>
      </orig>
@@ -3221,7 +3221,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Maya used base-20 positional numeral system. Digits were written top-down. Sometimes face of corresponding god was drawn instead of digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
+      <p>Maya used a base-20 positional numeral system. Digits were written top-down. Sometimes face of the corresponding god was drawn instead of a digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before the common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
       <p />
       <p>Some sources state that in everyday life Maya used simpler non-positional numerals.</p>
      </orig>
@@ -3247,21 +3247,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Counting rods is an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on counting board, starting from Warring States (5th century{{_}}BC) until 16th century. There was a notation for fractions and even for negative numbers (with rods of other colour).</p>
+      <p>Counting rods is an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
       <p />
       <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are written on paper sometimes.</p>
       <p />
-      <p>If you need to count something and memorize its number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
+      <p>If you need to count something and memorize the number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
      </orig>
     </text>
    </group>
    <group id="1D400">
     <text id="Name">
-     <orig> Mathematical alphanumeric symbols</orig>
+     <orig>Mathematical alphanumeric symbols</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>Mathematicians mark varoius objects with different fonts:</p>
+      <p>Mathematicians mark various objects with different fonts:</p>
       <p>* vectors in bold, scalars in italic: {{sm|𝐅=𝑚𝐚}};</p>
       <p>* special sets{{-}}in bold or double-struck: {{sm|ℕ}} for the set of natural numbers 1, 2, 3…;</p>
       <p>* spaces{{-}}in handwritten: {{sm|𝒰}} for universal set;</p>
@@ -3270,9 +3270,9 @@
       <p>* functions{{-}}in different fonts: expected value {{sm|𝖤ξ}} is often sans-serif;</p>
       <p>* constants{{-}}in bold or double-struck: limits of lattice {{sm|𝟘}} and {{sm|𝟙}}, imaginary units {{sm|𝕚𝕛𝕜}}…</p>
       <p />
-      <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with textbook on complex analysis by Gunning and Rossi (1965).</p>
+      <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with the textbook on complex analysis by Gunning and Rossi (1965).</p>
       <p />
-      <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With extension of Unicode beyond Base Plane, complete Latin alphabet and digits written with various fonts were added.</p>
+      <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With the extension of Unicode beyond Base Plane, the complete Latin alphabet and digits written with various fonts were added.</p>
       <p />
       <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
      </orig>
@@ -3297,7 +3297,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Superscript Glagolitic letters found in some sources.</p>
+      <p>Superscript Glagolitic letters attested in some sources.</p>
       <p />
       <p>These letters are rarely attested in round Bulgarian-style Glagolitsa (more seldom than in [[ps:Cyrl|Cyrillic]]), and almost never in square Croatian-style.</p>
      </orig>
@@ -3360,7 +3360,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arabic non-positional numbers used in India since 17th century (back under Mogul rule) up to mid 20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
+      <p>Arabic non-positional numbers used in India since the 17th century (back under Mogul rule) up to mid 20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
       <p />
       <p>Numbers up to 90 thousand are [[pt:acrophonic|acrophonic]], from Arabic, starting from 100 thousand are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
      </orig>
@@ -3374,7 +3374,7 @@
      <orig>
       <p>Arabic non-positional [[pt:acrophonic|acrophonic]] numerals used in late-medieval Turkey, also “rakkamları” (Arabic ''raqm'' “account”). Arabic ''siyaq'' means “order”.</p>
       <p />
-      <p>Written right-to-left, order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
+      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
      </orig>
     </text>
    </group>
@@ -3396,11 +3396,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Gambling game májiàng (often named ''mahjong'' through Romanization) is invented in late 19th century, the first surviving set dates to 1870. The game itself is little-known to Western world, but a solitaire is widespread: remove identical tiles from sides of figure.</p>
+      <p>The gambling game májiàng (often named ''mahjong'' through Romanization) was invented late 19th century, the first surviving set dates to 1870. The game itself is little known to the Western world, but solitaire is widespread: remove identical tiles from the sides of the figure.</p>
       <p />
-      <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from trampoline, was completely paralyzed and for the time of rehab he convinced CDC company to install a terminal, and he programmed on it holding a stick with teeth. The solitaire was a mixture of two Chinese games, mahjong and “demolish the turtle” played with dominoes. Terminal of PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
+      <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed on it holding a stick with teeth. The solitaire was a mixture of two Chinese games, mahjong and “demolish the turtle” played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
       <p />
-      <p>Mahjong suits come from one coin (rings), bundle of 100 coins (bamboos) and 10,000 coins (ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
+      <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and 10,000 coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
       <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of 2023.</p>
      </orig>
@@ -3412,7 +3412,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Dominoes were invented by Chinese about 13th century. In 18th century the game got to Italy.</p>
+      <p>Dominoes were invented by the Chinese about 13th century. In 18th century the game got to Italy.</p>
       <p />
       <p>There are three versions of name etymology. By the first one, the winner became the lord, ''domino''. By the second one, the game was permitted in monasteries, and monks started every job from prayer to Lord, italian ''Domino''. By the third version, in the honour of black-and-white carnival suit ''domino'' portraying monk.</p>
       <p />
@@ -3428,11 +3428,11 @@
      <orig>
       <p>The block unites standard cards and Tarot deck.</p>
       <p />
-      <p>Game of cards was invented about 12th century in East Asia. In Europe cards are first mentioned in 14th century. Though Muslims deny that they transfered cards to the West, it turned out that Mamluks had their own deck looking like Tarot.</p>
+      <p>The game of cards was invented about 12th century in East Asia. In Europe, cards were first mentioned in 14th century. Though Muslims deny that they transferred cards to the West, it turned out that Mamluks had their own deck looking like Tarot.</p>
       <p />
       <p>Joker has no relation to Tarot trumps, it was added in 19th century.</p>
       <p />
-      <p>Unicode names of trumps correspond to French Tarot deck (divination is usually done with Italian deck). Exactly: 0){{_}}fool, 1){{_}}individual, 2){{_}}childhood, 3){{_}}youth, 4){{_}}maturity, 5){{_}}old age, 6){{_}}morning, 7){{_}}afternoon, 8){{_}}evening, 9){{_}}night, 10){{_}}earth and air, 11){{_}}water and fire, 12){{_}}dance, 13){{_}}shopping, 14){{_}}open air leisure, 15){{_}}arts, 16){{_}}spring, 17){{_}}summer, 18){{_}}autumn, 19){{_}}winter, 20){{_}}game, 21){{_}}collective.</p>
+      <p>Unicode names of trumps correspond to the French Tarot deck (divination is usually done with an Italian deck). Exactly: 0){{_}}fool, 1){{_}}individual, 2){{_}}childhood, 3){{_}}youth, 4){{_}}maturity, 5){{_}}old age, 6){{_}}morning, 7){{_}}afternoon, 8){{_}}evening, 9){{_}}night, 10){{_}}earth and air, 11){{_}}water and fire, 12){{_}}dance, 13){{_}}shopping, 14){{_}}open air leisure, 15){{_}}arts, 16){{_}}spring, 17){{_}}summer, 18){{_}}autumn, 19){{_}}winter, 20){{_}}game, 21){{_}}collective.</p>
       <p />
       <p>The block has one [[pt:emoji|emoji]], black joker.</p>
      </orig>
@@ -3483,7 +3483,7 @@
      <orig>Emoticons</orig>
     </text>
     <text id="Text">
-     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. By Consortium’s study (2019), six of ten most used [[pt:emoji|emoji]] are smilies.</orig>
+     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. According to Consortium’s study (2019), six of the ten most used [[pt:emoji|emoji]] are smilies.</orig>
     </text>
    </group>
    <group id="1F650">
@@ -3508,7 +3508,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Antoine Lavoisier (end of 18th century) is often considered as a founder of chemistry. He closed down, for example, phlogiston theory. And before him different theories why substances react existed, sometimes weird. Some alchemists even speculated that science can make gold or create artificial life. Their signs for different substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
+      <p>Antoine Lavoisier (end of 18th century) is often considered the founder of chemistry. He closed down, for example, the phlogiston theory. And before him, different theories of why substances react existed, sometimes weird. Some alchemists even speculated that science could make gold or create artificial life. Their signs for various substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
       <p />
       <p>In Unicode{{_}}15.0 eight characters from astronomy and astrology are added.</p>
      </orig>
@@ -3520,7 +3520,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>This block was introduced as an attempt to encode dingbat fonts ''Widgdings'' and ''Webdings''. It also allowed to put an arrow or cross exactly as thick as needed.</p>
+      <p>This block was introduced in an attempt to encode dingbat fonts ''Wingdings'' and ''Webdings''. It also allowed putting an arrow or cross exactly as thick as needed.</p>
       <p />
       <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
      </orig>
@@ -3552,18 +3552,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In movable-type printing turned normal pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
+      <p>In movable-type printing turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
       <p>* neutral piece: both players may move it;</p>
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, dragon, terror;</p>
       <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
       <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
       <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
-      <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as inverted or slanted pawn;</p>
+      <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as an inverted or slanted pawn;</p>
       <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
       <p>* other knights (3-2, 4-1, combined with pawn…) are rare but exist;</p>
-      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
+      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
-      <p>This block also contains pieces of chinese game of Xiangqi.</p>
+      <p>This block also contains pieces of the Chinese game of Xiangqi.</p>
       <p />
       <p>Unicode{{_}}17 is going to accept two pieces from proto-chess:</p>
       <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
@@ -3590,7 +3590,7 @@
       <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
       <p />
       <p>'''Did not''' advance to standard:</p>
-      <p>* characters in intellectual property, like Apple logo;</p>
+      <p>* characters in intellectual property, like the Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
@@ -3602,7 +3602,7 @@
      <orig>CJK unified ideographs extension B</orig>
     </text>
     <text id="Text">
-     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
+     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
     </text>
    </group>
    <group id="2A700">
@@ -3645,9 +3645,9 @@
      <orig>
       <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
       <p />
-      <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
+      <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to the next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
      </orig>
     </text>
    </group>
@@ -3656,7 +3656,7 @@
      <orig>CJK compatibility ideographs supplement</orig>
     </text>
     <text id="Text">
-     <orig>Introduced in 2001. [[pt:unification|Deunification]] of 542 ideographs for [[pt:convertibility|round-trip compatibility]] with Taiwanese encoding CNS{{_}}11643-1992. Of course, all ideographs in this block are traditional.</orig>
+     <orig>Introduced in 2001. [[pt:unification|Disunification]] of 542 ideographs for [[pt:convertibility|round-trip compatibility]] with Taiwanese encoding CNS{{_}}11643-1992. Of course, all ideographs in this block are traditional.</orig>
     </text>
    </group>
    <group id="30000">
@@ -3684,7 +3684,7 @@
      <orig>Tags</orig>
     </text>
     <text id="Text">
-     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, Scotland.</orig>
+     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags were used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</orig>
     </text>
    </group>
    <group id="E0100">
