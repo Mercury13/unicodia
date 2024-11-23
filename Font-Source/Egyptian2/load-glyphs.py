@@ -128,21 +128,38 @@ def improveGlyph(glyph, logBad):
 
 CELLHEIGHT = 1000
 CELLWIDTH = 1100
+WIDE = 1400
 BOTTOMHANG = 125
 BEARING = 40
+V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
+
+GLYPH_SIZES = {
+    0x13605: WIDE,
+    0x13606: WIDE,
+    0x13609: WIDE,
+    0x13615: WIDE,
+    0x13617: WIDE,
+}
+
+def glyphSize(cp):
+    if not (cp in GLYPH_SIZES):
+        return CELLHEIGHT
+    return GLYPH_SIZES[cp]
 
 def fixBearings(glyph):
     glyph.left_side_bearing = BEARING
     glyph.right_side_bearing = BEARING
-
-def loadGlyph(glyph, fname, svgHeight, logBad):
-    glyph.importOutlines(fname, scale=False, correctdir=True)
+    
+def fixSize(cp, glyph, svgHeight):
+    mySize = glyphSize(cp)
+    if (mySize > CELLHEIGHT):
+        [myWidth, myHeight] = [mySize, CELLHEIGHT]
+    else:
+        [myWidth, myHeight] = [CELLWIDTH, mySize]
     # Get transformation matrix
     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
-    mat2 = psMat.scale(CELLHEIGHT / svgHeight) # And now to CELLSIZE
-    mat3 = psMat.translate(0, -BOTTOMHANG)
+    mat2 = psMat.scale(myHeight / svgHeight) # And now to myHeight
     mat = psMat.compose(mat1, mat2)
-    mat = psMat.compose(mat, mat3)
     glyph.transform(mat)
     # Check width by ACTUAL (not requested) width
     [x1,y1,x2,y2] = glyph.boundingBox()
@@ -151,16 +168,19 @@ def loadGlyph(glyph, fname, svgHeight, logBad):
     if (actualWidth < 300) and (actualHeight < 300):
         log.write("{} is really small\n".format(
                 glyph.glyphname))
-    if actualWidth > CELLWIDTH:
-        newHeight = CELLHEIGHT * CELLWIDTH / actualWidth
-        remHeight = CELLHEIGHT - newHeight
-        halfRem = remHeight / 2
-        mat1 = psMat.translate(0, BOTTOMHANG)
-        mat2 = psMat.scale(CELLWIDTH / actualWidth)
-        mat3 = psMat.translate(0, halfRem - BOTTOMHANG)
-        mat = psMat.compose(mat1, mat2)
-        mat = psMat.compose(mat, mat3)
+    if actualWidth > myWidth:
+        newHeight = myHeight * myWidth / actualWidth
+        mat = psMat.scale(myWidth / actualWidth)
         glyph.transform(mat)
+    # Hang properly
+    [x1,y1,x2,y2] = glyph.boundingBox()
+    if y2 > V_THRESHOLD:
+        mat = psMat.translate(0, (V_THRESHOLD - y2)  / 2)
+        glyph.transform(mat)
+
+def loadGlyph(cp, glyph, fname, svgHeight, logBad):
+    glyph.importOutlines(fname, scale=False, correctdir=True)
+    fixSize(cp, glyph, svgHeight)
     fixBearings(glyph)
     return improveGlyph(glyph, logBad)
 
@@ -199,17 +219,17 @@ def loadUnikemet():
                                 log.write("{} manual, and still self-intersects!\n".format(glyphName))
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
-                            loadGlyph(glyph, cacheName, svgHeight, True)
+                            loadGlyph(code, glyph, cacheName, svgHeight, True)
                         else:
                             # Unknown glyph
-                            isGood = loadGlyph(glyph, svgName, svgHeight, False)
+                            isGood = loadGlyph(code, glyph, svgName, svgHeight, False)
                             if not isGood:
                                 # Run Inkscape
                                 log.write("Forced to run Inkscape!\n")
                                 cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
                                 os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                 glyph.clear()
-                                loadGlyph(glyph, cacheName, svgHeight, True)
+                                loadGlyph(code, glyph, cacheName, svgHeight, True)
                         nCps += 1
                         if nCps >= 5000:
                             return
