@@ -176,10 +176,12 @@ GLYPH_SIZES = {
     0x13BC3: TINY,
     0x13BD4: SMALL,
     0x13BF8: SMALL,
+    0x13BFA: MEDIUM,
     0x13C08: SMALL,
     0x13C27: CELLHEIGHT, 0x13C28: CELLHEIGHT,
     0x13C2E: MEDIUM, 0x13C2F: MEDIUM,
     0x13D2B: MEDIUM, 0x13D2C: MEDIUM, 0x13D2D: MEDIUM,
+    0x13D2F: MEDWIDE, 0x13D30: WIDE,    
     0x13D4D: SMALL, 0x13D4E: SMALL, 0x13D4F: TINY,
     0x13DC9: MEDIUM,
     0x13E0C: MEDIUM,
@@ -190,11 +192,31 @@ GLYPH_SIZES = {
     0x13E46: SMALL,
     0x13E64: TINY,
     0x13EA3: MEDIUM, 0x13EA4: MEDIUM, 0x13EA5: TINY,
+    0x13EAB: SMALL,
     0x13ED3: MEDIUM,
     0x13EF5: TINY,
     0x13F44: TINY, 0x13F46: SMALL, 0x13F47: MEDIUM,
     0x13F4B: MEDIUM,
+    0x13FDB: MEDIUM,
+    0x140CA: MEDIUM,
+    0x140F5: WIDE, 0x140F6:WIDE, 0x140F7: WIDE, 0x140F8: WIDE,
+    0x140FA: MEDIUM,
     0x14015: SMALL,
+    0x141F1: SMALL,
+    0x14202: SMALL,
+    0x14226: MEDIUM, 0x14227: MEDIUM,
+    0x14295: SMALL,
+    0x142D8: MEDIUM,
+    0x1431B: MEDIUM,
+    0x1431E: MEDIUM,
+    0x14321: MEDIUM,
+    0x14326: MEDIUM, 0x14327: MEDIUM, 0x14328: SMALL,
+    0x14356: SMALL,
+    0x1437C: MEDIUM, 0x1437D: MEDIUM, 0x1437E: MEDIUM,
+    0x1438E: SMALL, 0x1438F: MEDIUM,
+    0x143CA: SMALL, 0x143CB: SMALL, 0x143CC: SMALL,
+    0x143E0: SMALL,
+    0x143EE: MEDIUM,
 }
 
 def glyphSize(cp):
@@ -210,6 +232,8 @@ def glyphSize(cp):
         return WIDE     # birds
     if (cp >= 0x13D17) and (cp <= 0x13D1F):
         return MEDIUM   # birds’ heads
+    if (cp >= 0x13D32) and (cp <= 0x13D48):
+        return WIDE     # crocodiles
     if (cp >= 0x13DB0) and (cp <= 0x13E01):
         return WIDE     # snakes, fish, beetles
     if (cp >= 0x1401A) and (cp <= 0x1407A):
