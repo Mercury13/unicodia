@@ -337,7 +337,7 @@ constinit const uc::old::Info uc::old::info[] {
       .country = Country::DD,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
-      .color = Color::YES,
+      .color = Color::LATER_MODELS,
       .sales = Sales::OVER_30K,
       .cpuDataWidth = 8,
       .supportedSince = uc::EcVersion::V_16_0,
