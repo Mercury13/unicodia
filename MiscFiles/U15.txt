@@ -16,6 +16,9 @@ Sundanese — BETA
 * Changed glyph 1BBF
 * Drew in Noto
 
+
+===== NO WORK =====
+
 Special/OCR
 * Enlarged middle stem in 2447
 * Work is optional

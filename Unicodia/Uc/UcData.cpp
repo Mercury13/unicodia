@@ -966,8 +966,15 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         case TextRole::DEP_INSTEAD:
         case TextRole::DEP_INSTEAD2:
         case TextRole::ABBREV:
-        case TextRole::EMOJI_NAME: {
-                auto length = static_cast<unsigned char>(*(p++));
+        case TextRole::EMOJI_NAME:
+        case TextRole::EGYP_EWP:
+        case TextRole::EGYP_UC: {
+                unsigned length = *(p++);
+                // 2-byte string?
+                if (length >= uc::detail::MIN_2BYTE_STRING) {
+                    length = ((length - uc::detail::MIN_2BYTE_STRING) << 8)
+                             | static_cast<unsigned>(*(p++));
+                }
                 std::u8string_view text {p, length};
                 auto action = sink.onText(role, text);
                 if (action == Action::STOP)

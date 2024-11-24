@@ -154,6 +154,7 @@ namespace {
         { RAWDATA UCD_PROP },
         { RAWDATA UCD_BLOCKS },
         { RAWDATA UCD_MAIN },
+        { RAWDATA UCD_UNIKEMET },
         { RAWDATA DER_AGE },
         { RAWDATA DER_CORE },
         { RAWDATA DER_NAME },

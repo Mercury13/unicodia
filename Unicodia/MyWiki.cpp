@@ -1796,6 +1796,8 @@ namespace {
             case uc::TextRole::ALT_NAME:
             case uc::TextRole::ABBREV:
             case uc::TextRole::EMOJI_NAME:
+            case uc::TextRole::EGYP_EWP:
+            case uc::TextRole::EGYP_UC:
                 if (isInitial) {
                     isInitial = false;
                     text += "<p style='" CNAME_ALTNAME "'>";
@@ -2434,6 +2436,8 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                 case uc::TextRole::DEP_INSTEAD:
                 case uc::TextRole::DEP_INSTEAD2:
                 case uc::TextRole::CMD_END:
+                case uc::TextRole::EGYP_EWP:
+                case uc::TextRole::EGYP_UC:
                 case uc::TextRole::EMOJI_NAME:  // Equal to mine
                     break;
 

@@ -80,6 +80,11 @@ namespace uc {
     constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 10
     constexpr Lfgs MISRENDER_IO     { Lfg::MISRENDER_1 | Lfg::MISRENDER_0 }; // 11
 
+    namespace detail {
+        // it’ll leave >25k bytes of string
+        constexpr unsigned MIN_2BYTE_STRING = 160;
+    }
+
     enum class TextRole : unsigned char {
         CMD_END = 0,    // Command: text end
         MAIN_NAME = 1,  // Character’s name, should exist
@@ -89,9 +94,11 @@ namespace uc {
         DEP_INSTEAD = 5, // For deprecated chars: what’s instead
         DEP_INSTEAD2 = 6, // For deprecated chars: alternative instead
         EMOJI_NAME = 7, // Emoji name from Library, if inequal
+        EGYP_EWP = 8,   // Egyptian description from English Wikipedia
+        EGYP_UC = 9,    // Egyptian description from Unicode
     };
 
-    enum {
+    enum : unsigned char {
         INSTEAD_REVERT = '1',
         INSTEAD_MIN = INSTEAD_REVERT,
         INSTEAD_BIDI = '2',

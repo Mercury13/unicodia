@@ -240,6 +240,9 @@ RememberResult StringLib::forceRemember(
                     .role = role,
                     .isLast = false });
     fLength += (aS.length() + 2);
+    // One byte or two?
+    if (aS.length() >= uc::detail::MIN_2BYTE_STRING)
+        ++fLength;
     return { .data =&v, .wasIns = true };
 }
 
@@ -528,8 +531,13 @@ int main()
             strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
         }
 
-        if (auto v = egypBase.find(cp); v != egypBase.end()) {
-            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v->second);
+        if (auto kv = egypBase.find(cp); kv != egypBase.end()) {
+            auto& v = kv->second;
+            if (!v.descEwp.empty()) {
+                strings.forceRemember(cp, uc::TextRole::EGYP_EWP, v.descEwp);
+            } else if (!v.descUnicode.empty()) {
+                strings.forceRemember(cp, uc::TextRole::EGYP_UC, v.descUnicode);
+            }
         }
 
         for (auto& v : textCp->names) {
@@ -676,9 +684,18 @@ int main()
     os << "const char8_t uc::allStrings[] = \n";
     char text[40];
     for (auto& v : strings.inOrder()) {
-        snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
-                 static_cast<unsigned>(v.role),
-                 static_cast<unsigned>(v.s.length()));
+        if (v.s.length() < uc::detail::MIN_2BYTE_STRING) {
+            // 1-byte string
+            snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
+                     static_cast<unsigned>(v.role),
+                     static_cast<unsigned>(v.s.length()));
+        } else {
+            // 2-byte string
+            snprintf(text, std::size(text), R"(u8"\x%02X\x%02X\x%02X" ")",
+                     static_cast<unsigned>(v.role),
+                     static_cast<unsigned>(v.s.length() >> 8) + uc::detail::MIN_2BYTE_STRING,
+                     static_cast<unsigned char>(v.s.length()));
+        }
         os << text << encodeC(v.s) << R"("  )";
         if (v.isLast)
             os << R"("\0")";

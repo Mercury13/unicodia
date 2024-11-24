@@ -258,6 +258,8 @@ namespace {
                 break;
             case uc::TextRole::ALT_NAME:
             case uc::TextRole::EMOJI_NAME:
+            case uc::TextRole::EGYP_EWP:
+            case uc::TextRole::EGYP_UC:
                 r.emplace_back(text, srh::NonAsciiComparator::INST);
                 break;
             case uc::TextRole::MAIN_NAME:
@@ -284,6 +286,8 @@ namespace {
             case uc::TextRole::DEP_INSTEAD2:
             case uc::TextRole::CMD_END:
             case uc::TextRole::EMOJI_NAME:
+            case uc::TextRole::EGYP_EWP:
+            case uc::TextRole::EGYP_UC:
                 break;
             }
         });
