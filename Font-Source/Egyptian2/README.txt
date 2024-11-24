@@ -9,6 +9,7 @@ How to build UnicodiaSesh font
 Meaning of directories:
 * InkTest: just a test for Inkscape
 * svg: raw JSesh SVGs
+* svg-remade: JSesh SVGs remade somehow, currently subtracted white things
 * cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
 * manual: everything is done manually except bearings
 * manual-wide: same, but accent that the image is wide

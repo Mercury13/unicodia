@@ -208,12 +208,16 @@ GLYPH_SIZES = {
     0x14295: SMALL,
     0x142D8: MEDIUM,
     0x1431B: MEDIUM,
-    0x1431E: MEDIUM,
+    0x1431E: SMALL,
     0x14321: MEDIUM,
     0x14326: MEDIUM, 0x14327: MEDIUM, 0x14328: SMALL,
     0x14356: SMALL,
+    0x14369: MEDIUM, 0x1436A: MEDIUM,
+    0x1436D: MEDIUM,
     0x1437C: MEDIUM, 0x1437D: MEDIUM, 0x1437E: MEDIUM,
     0x1438E: SMALL, 0x1438F: MEDIUM,
+    0x14394: MEDIUM,
+    0x143BC: MEDIUM, 0x143BE: MEDIUM,
     0x143CA: SMALL, 0x143CB: SMALL, 0x143CC: SMALL,
     0x143E0: SMALL,
     0x143EE: MEDIUM,
@@ -306,6 +310,7 @@ def loadUnikemet():
                     if (isCpGood(code)):
                         glyphName = "u{}_{}".format(sHex.upper(), sValue)
                         svgName = "svg/{}.svg".format(sValue)
+                        svgRemadeName = "svg-remade/{}.svg".format(sValue)
                         cacheName = "cache/{}.svg".format(sValue)                        
                         manualName = getManualName('manual', glyphName)
                         manualWideName = getManualName('manual-wide', glyphName)
@@ -321,6 +326,8 @@ def loadUnikemet():
                         elif os.path.exists(manualName):
                             # Manual glyph
                             loadManual(glyph, manualName, 'manual')
+                        elif os.path.exists(svgRemadeName):
+                            loadGlyph(code, glyph, svgRemadeName, svgHeight, True)
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
                             loadGlyph(code, glyph, cacheName, svgHeight, True)
