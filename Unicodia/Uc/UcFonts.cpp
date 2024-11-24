@@ -287,7 +287,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
       { FNAME_FUNKY },                                                          // …3 — use it as default
     { "Ebrima" },                                                               // Vai
-    { "NotoSerifVithkuqi-Regular.ttf" },                                        // Vithkuqi
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi

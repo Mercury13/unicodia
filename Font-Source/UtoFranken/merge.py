@@ -107,6 +107,7 @@ files = [
     [ "NotoSansWancho-Regular.ttf",             "wcho" ],
     [ "NotoSansWarangCiti-Regular.ttf",         "wara" ],
     [ "NotoSerifOttomanSiyaq-Regular.ttf",      "arab" ],  # ← no marks, let it be ARAB
+    [ "NotoSerifVithkuqi-Regular.ttf",          "vith" ],
 ]
 
 # Get new fonts

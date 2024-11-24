@@ -814,7 +814,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::year(1844, StdNote::FIRST_KNOWN), EcFont::VITHKUQI },
+        Dating::year(1844, StdNote::FIRST_KNOWN), EcFont::FRANKEN_SANS },
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
