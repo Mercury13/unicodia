@@ -158,9 +158,11 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                    // Dominoes
-    { "UnicodiaEgypFixupRegular.otf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
-      { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT }, // …1
-      { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER, 110_pc },                         // …2
+    { "UnicodiaEgypFixupRegular.otf",                                           // Egyptian
+            Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },
+      { "NotoSansEgyptianHieroglyphs-Regular.otf",                              // …1
+            Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 105_pc },
+      { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER, 115_pc },                         // …2
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot, 130_pc },                  // …1

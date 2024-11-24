@@ -123,8 +123,12 @@ QFont WiSample::showCpBriefly(const uc::Cp& ch)
 {
     auto font = ch.font(match::Normal::INST);
     auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, &ch);
-    ui->lbSample->setFont(qfont);
-    showBriefly(font);
+    if (!font->flags.have(uc::Ffg::GRAPHIC_SAMPLE)) {
+        ui->lbSample->setFont(qfont);
+        showBriefly(font);
+    } else {
+        clearSample();
+    }
     return qfont;
 }
 
