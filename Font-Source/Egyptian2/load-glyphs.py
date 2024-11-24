@@ -128,17 +128,43 @@ def improveGlyph(glyph, logBad):
 
 CELLHEIGHT = 1000
 CELLWIDTH = 1100
+SMALL = 650
+MEDIUM = 800
+MEDWIDE = 1250
 WIDE = 1400
 BOTTOMHANG = 125
 BEARING = 40
 V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
 
 GLYPH_SIZES = {
+    0x134C1: MEDWIDE,  0x134C2: WIDE,  0x134C3: WIDE,  0x134C5: WIDE,
+    0x1351D: WIDE, 0x1351E: WIDE,
+    0x135FB: WIDE,
     0x13605: WIDE,
     0x13606: WIDE,
-    0x13609: WIDE,
+    0x13609: WIDE, 0x1360A: WIDE, 0x1360C: WIDE,
     0x13615: WIDE,
-    0x13617: WIDE,
+    0x13617: WIDE, 0x13618: WIDE, 0x1361A: WIDE,
+    0x1361C: WIDE,
+    0x13625: WIDE,
+    0x136A4: WIDE,
+    0x136CE: WIDE,
+    0x1378C: WIDE,
+    0x137E3: WIDE, 0x137E4: WIDE, 0x137E5: WIDE, 0x137E6: WIDE,
+    0x137F1: WIDE, 0x137F2: WIDE,
+    0x137F9: WIDE,
+    0x13856: WIDE,
+    0x13872: WIDE,
+    0x138BE: WIDE,
+    0x13923: WIDE, 0x13924: WIDE, 
+    0x1392F: SMALL,
+    0x1395F: MEDIUM,
+    0x139F8: WIDE,
+    0x13A05: SMALL,
+    0x13A0A: SMALL, 0x13A0B: MEDIUM, 0x13A0C: MEDIUM, 0x13A0F: MEDIUM,
+    0x13A31: MEDIUM,
+    0x13A85: WIDE,
+    0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
 }
 
 def glyphSize(cp):
@@ -184,6 +210,16 @@ def loadGlyph(cp, glyph, fname, svgHeight, logBad):
     fixBearings(glyph)
     return improveGlyph(glyph, logBad)
 
+def loadManual(glyph, fname, logName):
+    glyph.importOutlines(fname, scale=False, correctdir=True)
+    glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
+    fixBearings(glyph)
+    if glyph.selfIntersects():
+        log.write("{} is {}, and still self-intersects!\n".format(glyphName, logName))
+
+def getManualName(dirName, glyphName):
+    return "{}/{}_UnicodiaSesh.svg".format(dirName, glyphName)
+
 # import hieroglyphs
 def loadUnikemet():
     file = open('Unikemet.txt', 'r')
@@ -203,20 +239,20 @@ def loadUnikemet():
                         glyphName = "u{}_{}".format(sHex.upper(), sValue)
                         svgName = "svg/{}.svg".format(sValue)
                         cacheName = "cache/{}.svg".format(sValue)                        
-                        manualName = "manual/{}_UnicodiaSesh.svg".format(glyphName)
+                        manualName = getManualName('manual', glyphName)
+                        manualWideName = getManualName('manual-wide', glyphName)
                         svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                         # Load SVG
                         glyph = font.createChar(code)
                               # both Unicode and fname, for troubleshooting
                         glyph.glyphname = glyphName
                         # Load?
-                        if os.path.exists(manualName):
+                        if os.path.exists(manualWideName):
                             # Manual glyph
-                            glyph.importOutlines(manualName, scale=False, correctdir=True)
-                            glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
-                            fixBearings(glyph)
-                            if glyph.selfIntersects():
-                                log.write("{} manual, and still self-intersects!\n".format(glyphName))
+                            loadManual(glyph, manualWideName, 'manual-wide')
+                        elif os.path.exists(manualName):
+                            # Manual glyph
+                            loadManual(glyph, manualName, 'manual')
                         elif os.path.exists(cacheName):
                             # Cached glyph: already ran software
                             loadGlyph(code, glyph, cacheName, svgHeight, True)

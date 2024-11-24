@@ -10,4 +10,5 @@ Meaning of directories:
 * InkTest: just a test for Inkscape
 * svg: raw JSesh SVGs
 * cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
-* manual: everything except bearings is done manually
+* manual: everything is done manually except bearings
+* manual-wide: same, but accent that the image is wide
