@@ -1176,7 +1176,7 @@ constinit const uc::Block uc::blocks[] {
                 Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE,
             EcGlyphStyleChannel::NONE, { 0x1343F, EcVersion::V_15_0 } },
     /// @todo [U16, huge tofu] Egyp A
-    { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING | Ifg::APPROX_PART  },
+    { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::APPROX_PART  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
