@@ -128,6 +128,7 @@ def improveGlyph(glyph, logBad):
 
 CELLHEIGHT = 1000
 CELLWIDTH = 1100
+TINY = 500
 SMALL = 650
 MEDIUM = 800
 MEDWIDE = 1250
@@ -172,25 +173,47 @@ GLYPH_SIZES = {
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13B5B: WIDE,
     0x13B60: MEDIUM,
+    0x13BC3: TINY,
+    0x13BD4: SMALL,
     0x13BF8: SMALL,
+    0x13C08: SMALL,
+    0x13C27: CELLHEIGHT, 0x13C28: CELLHEIGHT,
+    0x13C2E: MEDIUM, 0x13C2F: MEDIUM,
+    0x13D2B: MEDIUM, 0x13D2C: MEDIUM, 0x13D2D: MEDIUM,
+    0x13D4D: SMALL, 0x13D4E: SMALL, 0x13D4F: TINY,
+    0x13DC9: MEDIUM,
+    0x13E0C: MEDIUM,
     0x13E2D: MEDIUM,
     0x13E30: WIDE,
     0x13E35: WIDE,
     0x13E37: WIDE,
     0x13E46: SMALL,
-    0x13E64: SMALL,
-    0x13EA5: SMALL,
+    0x13E64: TINY,
+    0x13EA3: MEDIUM, 0x13EA4: MEDIUM, 0x13EA5: TINY,
+    0x13ED3: MEDIUM,
+    0x13EF5: TINY,
+    0x13F44: TINY, 0x13F46: SMALL, 0x13F47: MEDIUM,
+    0x13F4B: MEDIUM,
+    0x14015: SMALL,
 }
 
 def glyphSize(cp):
     if cp in GLYPH_SIZES:
         return GLYPH_SIZES[cp]
     if (cp >= 0x13A36) and (cp <= 0x13B59):
-        return WIDE;    # donkeys, goats, lions, mice, sphinxes, cows, crocodiles
+        return WIDE     # donkeys, goats, lions, mice, sphinxes, cows, crocodiles
+    if (cp >= 0x13B97) and (cp <= 0x13BA0):
+        return MEDWIDE  # architectural (?) donkeys
     if (cp >= 0x13B91) and (cp <= 0x13BA1):
-        return WIDE;    # horses, lions, elephants
+        return WIDE     # horses, lions, elephants
+    if (cp >= 0x13C0B) and (cp <= 0x13D0E):
+        return WIDE     # birds
+    if (cp >= 0x13D17) and (cp <= 0x13D1F):
+        return MEDIUM   # birds’ heads
     if (cp >= 0x13DB0) and (cp <= 0x13E01):
-        return WIDE;    # snakes, fish, beetles
+        return WIDE     # snakes, fish, beetles
+    if (cp >= 0x1401A) and (cp <= 0x1407A):
+        return WIDE     # boats
     return CELLHEIGHT
 
 def fixBearings(glyph):
