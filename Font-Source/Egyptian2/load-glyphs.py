@@ -158,19 +158,40 @@ GLYPH_SIZES = {
     0x138BE: WIDE,
     0x13923: WIDE, 0x13924: WIDE, 
     0x1392F: SMALL,
+    0x13948: WIDE, 0x13949: WIDE, 0x1394A: WIDE,
     0x1395F: MEDIUM,
+    0x1396A: MEDIUM, 0x1396B: MEDIUM, 0x1396C: MEDIUM, 0x1396D: MEDIUM, 0x1396E: MEDWIDE,
     0x139F8: WIDE,
+    0x139FC: SMALL,
     0x13A05: SMALL,
-    0x13A0A: SMALL, 0x13A0B: MEDIUM, 0x13A0C: MEDIUM, 0x13A0F: MEDIUM,
-    0x13A31: MEDIUM,
+    0x13A0A: SMALL, 0x13A0B: SMALL, 0x13A0C: MEDIUM, 0x13A0F: MEDIUM,
+    0x13A17: MEDIUM, 0x13A18: MEDIUM,
+    0x13A31: SMALL,
+    0x13A34: SMALL,
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
+    0x13B5B: WIDE,
+    0x13B60: MEDIUM,
+    0x13BF8: SMALL,
+    0x13E2D: MEDIUM,
+    0x13E30: WIDE,
+    0x13E35: WIDE,
+    0x13E37: WIDE,
+    0x13E46: SMALL,
+    0x13E64: SMALL,
+    0x13EA5: SMALL,
 }
 
 def glyphSize(cp):
-    if not (cp in GLYPH_SIZES):
-        return CELLHEIGHT
-    return GLYPH_SIZES[cp]
+    if cp in GLYPH_SIZES:
+        return GLYPH_SIZES[cp]
+    if (cp >= 0x13A36) and (cp <= 0x13B59):
+        return WIDE;    # donkeys, goats, lions, mice, sphinxes, cows, crocodiles
+    if (cp >= 0x13B91) and (cp <= 0x13BA1):
+        return WIDE;    # horses, lions, elephants
+    if (cp >= 0x13DB0) and (cp <= 0x13E01):
+        return WIDE;    # snakes, fish, beetles
+    return CELLHEIGHT
 
 def fixBearings(glyph):
     glyph.left_side_bearing = BEARING
@@ -215,7 +236,7 @@ def loadManual(glyph, fname, logName):
     glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
     fixBearings(glyph)
     if glyph.selfIntersects():
-        log.write("{} is {}, and still self-intersects!\n".format(glyphName, logName))
+        log.write("{} is {}, and still self-intersects!\n".format(glyph.glyphname, logName))
 
 def getManualName(dirName, glyphName):
     return "{}/{}_UnicodiaSesh.svg".format(dirName, glyphName)
