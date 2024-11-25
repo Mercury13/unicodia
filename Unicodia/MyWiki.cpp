@@ -1797,6 +1797,7 @@ namespace {
                 case uc::TextRole::ALT_NAME:
                 case uc::TextRole::ABBREV:
                 case uc::TextRole::EMOJI_NAME:
+                /// @todo [future] Need “description in Wikipedia”, “description in Unicode”…
                 case uc::TextRole::EGYP_EWP:
                 case uc::TextRole::EGYP_UC:
                     if (isInitial) {

@@ -1001,9 +1001,6 @@ std::u8string_view uc::Cp::traverseTexts(
     //     repeatedText =
 
 
-    if (subj.ch32() > 65536) {
-        printf("Nice!\n");
-    }
     auto p = allStrings + name.iTech.val();
     while (true) {
         auto role = static_cast<TextRole>(*(p++));
