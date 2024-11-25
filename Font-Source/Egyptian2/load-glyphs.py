@@ -230,7 +230,7 @@ GLYPH_SIZES = {
     0x143BC: MEDIUM, 0x143BE: MEDIUM,
     0x143C0: MEDIUM,
     0x143CA: SMALL, 0x143CB: SMALL, 0x143CC: SMALL,
-    0x143D5: MEDIUM,
+    0x143D4: MEDWIDE, 0x143D5: MEDIUM,
     0x143E0: SMALL,
     0x143EE: MEDIUM,
 }
@@ -308,6 +308,8 @@ def getManualName(dirName, glyphName):
 def loadUnikemet():
     file = open('Unikemet.txt', 'r')
     nCps = 0
+    sOldCp = ''
+    hasSeshGlyph = True
     for line0 in file:
         line = line0.strip()
         if (line != '') and (not line.startswith('#')):
@@ -316,46 +318,63 @@ def loadUnikemet():
                 sCp = cols[0]
                 sCommand = cols[1]
                 sValue = cols[2]
-                if (sCp.startswith('U+') and (sCommand == 'kEH_JSesh')):
-                    sHex = sCp[2:]
-                    code = int(sHex, base=16)
-                    if (isCpGood(code)):
-                        glyphName = "u{}_{}".format(sHex.upper(), sValue)
-                        svgName = "svg/{}.svg".format(sValue)
-                        svgRemadeName = "svg-remade/{}.svg".format(sValue)
-                        cacheName = "cache/{}.svg".format(sValue)                        
-                        manualName = getManualName('manual', glyphName)
-                        manualWideName = getManualName('manual-wide', glyphName)
-                        svgHeight = getSvgHeight(svgName)  # requested rather than actual size
-                        # Load SVG
-                        glyph = font.createChar(code)
-                              # both Unicode and fname, for troubleshooting
-                        glyph.glyphname = glyphName
-                        # Load?
-                        if os.path.exists(manualWideName):
-                            # Manual glyph
-                            loadManual(glyph, manualWideName, 'manual-wide')
-                        elif os.path.exists(manualName):
-                            # Manual glyph
-                            loadManual(glyph, manualName, 'manual')
-                        elif os.path.exists(svgRemadeName):
-                            loadGlyph(code, glyph, svgRemadeName, svgHeight, True)
-                        elif os.path.exists(cacheName):
-                            # Cached glyph: already ran software
-                            loadGlyph(code, glyph, cacheName, svgHeight, True)
-                        else:
-                            # Unknown glyph
-                            isGood = loadGlyph(code, glyph, svgName, svgHeight, False)
-                            if not isGood:
-                                # Run Inkscape
-                                log.write("Forced to run Inkscape!\n")
-                                cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
-                                os.system(cmdline.format(INKSCAPE, cacheName, svgName))
-                                glyph.clear()
+                if sCp.startswith('U+'):
+                    if sCp != sOldCp:
+                        if (sOldCp != '') and not hasSeshGlyph:
+                            sHex = sOldCp[2:]
+                            code = int(sHex, base=16)
+                            if (isCpGood(code)):
+                                glyphName = "u{}".format(sHex.upper())
+                                svgName = "svg-my/{}.svg".format(sHex)
+                                if os.path.exists(svgName):
+                                    # Do the same but do not run Inkscape
+                                    svgHeight = getSvgHeight(svgName)
+                                    glyph = font.createChar(code)
+                                    glyph.glyphname = glyphName
+                                    loadGlyph(code, glyph, svgName, svgHeight, True)                            
+                        hasSeshGlyph = False
+                    sOldCp = sCp
+                    if sCommand == 'kEH_JSesh':
+                        sHex = sCp[2:]
+                        code = int(sHex, base=16)
+                        if (isCpGood(code)):
+                            hasSeshGlyph = True
+                            glyphName = "u{}_{}".format(sHex.upper(), sValue)
+                            svgName = "svg/{}.svg".format(sValue)
+                            svgRemadeName = "svg-remade/{}.svg".format(sValue)
+                            cacheName = "cache/{}.svg".format(sValue)                        
+                            manualName = getManualName('manual', glyphName)
+                            manualWideName = getManualName('manual-wide', glyphName)
+                            svgHeight = getSvgHeight(svgName)  # requested rather than actual size
+                            # Load SVG
+                            glyph = font.createChar(code)
+                                  # both Unicode and fname, for troubleshooting
+                            glyph.glyphname = glyphName
+                            # Load?
+                            if os.path.exists(manualWideName):
+                                # Manual glyph
+                                loadManual(glyph, manualWideName, 'manual-wide')
+                            elif os.path.exists(manualName):
+                                # Manual glyph
+                                loadManual(glyph, manualName, 'manual')
+                            elif os.path.exists(svgRemadeName):
+                                loadGlyph(code, glyph, svgRemadeName, svgHeight, True)
+                            elif os.path.exists(cacheName):
+                                # Cached glyph: already ran software
                                 loadGlyph(code, glyph, cacheName, svgHeight, True)
-                        nCps += 1
-                        if nCps >= 5000:
-                            return
+                            else:
+                                # Unknown glyph
+                                isGood = loadGlyph(code, glyph, svgName, svgHeight, False)
+                                if not isGood:
+                                    # Run Inkscape
+                                    log.write("Forced to run Inkscape!\n")
+                                    cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
+                                    os.system(cmdline.format(INKSCAPE, cacheName, svgName))
+                                    glyph.clear()
+                                    loadGlyph(code, glyph, cacheName, svgHeight, True)
+                            nCps += 1
+                            if nCps >= 5000:
+                                return
 
 loadUnikemet()
 
