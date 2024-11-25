@@ -241,9 +241,9 @@ namespace {
     MyRoot trieRoot;
 
     struct SearchableName {
-        std::u8string_view value;
+        const std::u8string_view value;
         const srh::Comparator& comparator;
-        bool isMain;
+        const uc::TextRole role;
     };
 
     void allSearchableNamesTo(const uc::Cp& cp, SafeVector<SearchableName>& r)
@@ -253,17 +253,15 @@ namespace {
             [&r](uc::TextRole role, std::u8string_view text) {
                 switch (role) {
                 case uc::TextRole::MAIN_NAME:
-                    r.emplace_back(text, srh::DefaultComparator::INST, true);
-                    break;
                 case uc::TextRole::HTML:
                 case uc::TextRole::ABBREV:
-                    r.emplace_back(text, srh::DefaultComparator::INST, false);
+                    r.emplace_back(text, srh::DefaultComparator::INST, role);
                     break;
                 case uc::TextRole::ALT_NAME:
                 case uc::TextRole::EMOJI_NAME:
                 case uc::TextRole::EGYP_EWP:
                 case uc::TextRole::EGYP_UC:
-                    r.emplace_back(text, srh::NonAsciiComparator::INST, false);
+                    r.emplace_back(text, srh::NonAsciiComparator::INST, role);
                     break;
                 case uc::TextRole::DEP_INSTEAD:
                 case uc::TextRole::DEP_INSTEAD2:
@@ -618,7 +616,7 @@ uc::MultiResult uc::doSearch(QString what)
                     struct {
                         srh::Prio prio {};
                         std::u8string_view name {};
-                        bool isMain = false;
+                        uc::TextRole role = uc::TextRole::CMD_END;
                     } best;
                     auto& cat = cp.category();
                     auto block = blockOf(cp.subj);
@@ -630,8 +628,8 @@ uc::MultiResult uc::doSearch(QString what)
                             || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
                     auto hclass = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;
                     for (auto& nm : names) {
-                        if (nm.value.starts_with('&')) {
-                            // Search by HTML mnemonic
+                        switch (nm.role) {
+                        case uc::TextRole::HTML:
                             if (nm.value.size() == sv.size() + 2) {
                                 auto mnemo = nm.value.substr(1, sv.size());
                                 if (sv == mnemo) {
@@ -644,20 +642,20 @@ uc::MultiResult uc::doSearch(QString what)
                                     goto brk;
                                 }
                             }
-                        } else {
-                            // Search by keyword
+                            break;
+                        default:
                             if (auto pr = srh::findNeedle(
                                         nm.value, needle, hclass, cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;
-                                best.isMain = false;
+                                best.role = nm.role;
                             }
                         }
                     }
                     if (best.prio > srh::Prio::EMPTY) {
-                        // Main string → clear name
-                        if (best.isMain)
+                        // Main name → do not show it
+                        if (best.role == uc::TextRole::MAIN_NAME)
                             best.name = u8""sv;
                         r.emplace_back(cp, best.name, best.prio);
                     }
