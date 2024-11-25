@@ -105,7 +105,7 @@ namespace uc {
         SingleResult(SearchError aErr) : err(aErr) {}
     };
 
-    DEFINE_ENUM_TYPE_IN_NS (uc, SearchGroupObjType, unsigned short,
+    DEFINE_ENUM_TYPE_IN_NS (uc, SearchGroupObjType, unsigned char,
             NONE, BLOCK, LIBNODE)
     using SearchGroupObjFather = std::variant<std::monostate, const uc::Block*, const uc::LibNode*>;
     static_assert(std::variant_size_v<SearchGroupObjFather> == ec::size<SearchGroupObjType>());
