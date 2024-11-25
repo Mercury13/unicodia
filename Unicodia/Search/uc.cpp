@@ -243,6 +243,7 @@ namespace {
     struct SearchableName {
         std::u8string_view value;
         const srh::Comparator& comparator;
+        bool isMain;
     };
 
     void allSearchableNamesTo(const uc::Cp& cp, SafeVector<SearchableName>& r)
@@ -251,16 +252,18 @@ namespace {
         cp.traverseTextsT(uc::AutoName::NO,  // Auto names are NOT searchable
             [&r](uc::TextRole role, std::u8string_view text) {
                 switch (role) {
+                case uc::TextRole::MAIN_NAME:
+                    r.emplace_back(text, srh::DefaultComparator::INST, true);
+                    break;
                 case uc::TextRole::HTML:
                 case uc::TextRole::ABBREV:
-                case uc::TextRole::MAIN_NAME:
-                    r.emplace_back(text, srh::DefaultComparator::INST);
+                    r.emplace_back(text, srh::DefaultComparator::INST, false);
                     break;
                 case uc::TextRole::ALT_NAME:
                 case uc::TextRole::EMOJI_NAME:
                 case uc::TextRole::EGYP_EWP:
                 case uc::TextRole::EGYP_UC:
-                    r.emplace_back(text, srh::NonAsciiComparator::INST);
+                    r.emplace_back(text, srh::NonAsciiComparator::INST, false);
                     break;
                 case uc::TextRole::DEP_INSTEAD:
                 case uc::TextRole::DEP_INSTEAD2:
@@ -613,8 +616,9 @@ uc::MultiResult uc::doSearch(QString what)
                     // Textual search
                     allSearchableNamesTo(cp, names);
                     struct {
-                        srh::Prio prio;
-                        std::u8string_view name;
+                        srh::Prio prio {};
+                        std::u8string_view name {};
+                        bool isMain = false;
                     } best;
                     auto& cat = cp.category();
                     auto block = blockOf(cp.subj);
@@ -640,18 +644,20 @@ uc::MultiResult uc::doSearch(QString what)
                                     goto brk;
                                 }
                             }
-                        } if (nm.value.find('#') == std::u8string_view::npos) {
+                        } else {
                             // Search by keyword
                             if (auto pr = srh::findNeedle(
                                         nm.value, needle, hclass, cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;
+                                best.isMain = false;
                             }
                         }
                     }
                     if (best.prio > srh::Prio::EMPTY) {
-                        if (best.name == names[0].value)
+                        // Main string → clear name
+                        if (best.isMain)
                             best.name = u8""sv;
                         r.emplace_back(cp, best.name, best.prio);
                     }
