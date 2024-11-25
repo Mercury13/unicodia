@@ -340,13 +340,15 @@ namespace uc {
         EcScript ecScript;              // +1 = 11
         uint8_t iNumeric;               // +1 = 12
         mutable Cfgs flags;             // +2 = 14
-        struct Cjk {
-            struct Kx {
-                unsigned char radical;
-                signed char plusStrokes;
-                constexpr operator bool() const noexcept { return radical; }
-            } kx;                       // +2 = 16
-        } cjk;
+        struct ScriptSpecific {
+            unsigned char v1;
+            signed char v2;             // +2 = 16
+
+            // For Hani
+            unsigned char haniRadical() const { return v1; }
+            signed char haniPlusStrokes () const { return v2; }
+            constexpr operator bool() const noexcept { return v1; }
+        } scriptSpecific;
 
         const Version& version() const;
         const Category& category() const;

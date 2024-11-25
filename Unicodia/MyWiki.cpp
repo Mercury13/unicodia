@@ -1859,6 +1859,25 @@ namespace {
 
     enum class CpPlace : unsigned char { CP, LIB  };
 
+    void appendHaniRadical(QString& text, const uc::Cp::ScriptSpecific& sspec)
+    {
+        text += "<a href='pk:2F00' class='popup'>";
+        text += loc::get("Prop.Kx.Bullet");
+        text += "</a>";
+        text += PROP_COLON;
+        char16_t sRad[] = u"?";
+        sRad[0] = cp::KANGXI_DELTA + sspec.haniRadical();
+        auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_UHAN)];
+        auto fontFace = font.familiesComma();
+        auto sFullRad = loc::Fmt(u8"<font size='+2' face='{2}'><b>{1}</b></font>")
+                       (mojibake::toQ<std::u8string>(sRad))
+                       (str::toU8sv(fontFace.toStdString())).str();
+        text += loc::get("Prop.Kx.Data").argQ(
+                    sFullRad,
+                    (sspec.haniPlusStrokes() >= 0) ? u8"+" : u8"−",
+                    std::abs(sspec.haniPlusStrokes()));
+    }
+
     /// @param [in] serializations  [+] write UTF-8, HTML etc
     ///
     void appendCpBullets(QString& text, const uc::Cp& cp,
@@ -1873,23 +1892,14 @@ namespace {
         appendValuePopup(text, scr, "Prop.Bullet.Script", "ps");
 
         // Kangxi
-        if (cp.cjk.kx) {
-            sp.sep();
-            text += "<a href='pk:2F00' class='popup'>";
-            text += loc::get("Prop.Kx.Bullet");
-            text += "</a>";
-            text += PROP_COLON;
-            char16_t sRad[] = u"?";
-            sRad[0] = cp::KANGXI_DELTA + cp.cjk.kx.radical;
-            auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_UHAN)];
-            auto fontFace = font.familiesComma();
-            auto sFullRad = loc::Fmt(u8"<font size='+2' face='{2}'><b>{1}</b></font>")
-                           (mojibake::toQ<std::u8string>(sRad))
-                           (str::toU8sv(fontFace.toStdString())).str();
-            text += loc::get("Prop.Kx.Data").argQ(
-                        sFullRad,
-                        (cp.cjk.kx.plusStrokes >= 0) ? u8"+" : u8"−",
-                        std::abs(cp.cjk.kx.plusStrokes));
+        if (cp.scriptSpecific) {
+            switch (cp.ecScript) {
+            case uc::EcScript::Hani:
+                sp.sep();
+                appendHaniRadical(text, cp.scriptSpecific);
+                break;
+            default: ;
+            }
         }
 
         // Unicode version
