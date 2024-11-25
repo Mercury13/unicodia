@@ -116,7 +116,11 @@ namespace {
             if (sField == "kEH_Desc") {
                 auto& du = r[cp].descUnicode;
                 du = sValue;
+                // Known typo
                 str::replace(du, " syrian ", " Syrian ");
+                // No need period at end
+                if (du.ends_with('.'))
+                    du.pop_back();
             }
         }
     }
