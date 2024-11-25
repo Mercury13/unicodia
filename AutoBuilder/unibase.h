@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <set>
 #include <unordered_map>
 
 namespace ucd {    
@@ -76,13 +77,17 @@ namespace ucd {
     };
 
     SupportData loadSupportData();
-    void processMainBase(const SupportData& supportData, const BaseSink& sink);
+    struct MainProc {
+        std::set<std::string> autoNames;
+    };
+
+    [[nodiscard]] MainProc processMainBase(const SupportData& supportData, const BaseSink& sink);
 
     template <class Body>
-    inline void processMainBaseT(const SupportData& supportData, const Body& body)
+    [[nodiscard]] inline MainProc processMainBaseT(const SupportData& supportData, const Body& body)
     {
         BaseSinkT<Body> sink(body);
-        processMainBase(supportData, sink);
+        return processMainBase(supportData, sink);
     }
 
 }   // namespace ucd

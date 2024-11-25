@@ -248,49 +248,49 @@ namespace {
     void allSearchableNamesTo(const uc::Cp& cp, SafeVector<SearchableName>& r)
     {
         r.clear();
-        std::u8string_view it = cp.name.tech();
-        r.emplace_back(it, srh::DefaultComparator::INST);
-        cp.name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
-            switch (role) {
-            case uc::TextRole::HTML:
-            case uc::TextRole::ABBREV:
-                r.emplace_back(text, srh::DefaultComparator::INST);
-                break;
-            case uc::TextRole::ALT_NAME:
-            case uc::TextRole::EMOJI_NAME:
-            case uc::TextRole::EGYP_EWP:
-            case uc::TextRole::EGYP_UC:
-                r.emplace_back(text, srh::NonAsciiComparator::INST);
-                break;
-            case uc::TextRole::MAIN_NAME:
-            case uc::TextRole::DEP_INSTEAD:
-            case uc::TextRole::DEP_INSTEAD2:
-            case uc::TextRole::CMD_END:
-                break;
-            }
-        });
+        cp.traverseTextsT(uc::AutoName::NO,  // Auto names are NOT searchable
+            [&r](uc::TextRole role, std::u8string_view text) {
+                switch (role) {
+                case uc::TextRole::HTML:
+                case uc::TextRole::ABBREV:
+                case uc::TextRole::MAIN_NAME:
+                    r.emplace_back(text, srh::DefaultComparator::INST);
+                    break;
+                case uc::TextRole::ALT_NAME:
+                case uc::TextRole::EMOJI_NAME:
+                case uc::TextRole::EGYP_EWP:
+                case uc::TextRole::EGYP_UC:
+                    r.emplace_back(text, srh::NonAsciiComparator::INST);
+                    break;
+                case uc::TextRole::DEP_INSTEAD:
+                case uc::TextRole::DEP_INSTEAD2:
+                case uc::TextRole::CMD_END:
+                    break;
+                }
+            });
     }
 
     SafeVector<std::u8string_view> allHtmlNames(const uc::Cp& cp)
     {
         SafeVector<std::u8string_view> r;
-        cp.name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
-            switch (role) {
-            case uc::TextRole::HTML:
-                r.push_back(text);
-                break;
-            case uc::TextRole::ALT_NAME:
-            case uc::TextRole::ABBREV:
-            case uc::TextRole::MAIN_NAME:
-            case uc::TextRole::DEP_INSTEAD:
-            case uc::TextRole::DEP_INSTEAD2:
-            case uc::TextRole::CMD_END:
-            case uc::TextRole::EMOJI_NAME:
-            case uc::TextRole::EGYP_EWP:
-            case uc::TextRole::EGYP_UC:
-                break;
-            }
-        });
+        cp.traverseTextsT(uc::AutoName::NO,  // Main name is not here
+            [&r](uc::TextRole role, std::u8string_view text) {
+                switch (role) {
+                case uc::TextRole::HTML:
+                    r.push_back(text);
+                    break;
+                case uc::TextRole::ALT_NAME:
+                case uc::TextRole::ABBREV:
+                case uc::TextRole::MAIN_NAME:
+                case uc::TextRole::DEP_INSTEAD:
+                case uc::TextRole::DEP_INSTEAD2:
+                case uc::TextRole::CMD_END:
+                case uc::TextRole::EMOJI_NAME:
+                case uc::TextRole::EGYP_EWP:
+                case uc::TextRole::EGYP_UC:
+                    break;
+                }
+            });
         return r;
     }
 
@@ -320,7 +320,7 @@ namespace {
     bool isHiprioNumber(const uc::Cp& cp)
     {
         if (cp.block().flags.have(uc::Bfg::HIPRIO_NUMBERS)) {
-            std::basic_string_view name { cp.name.tech() };
+            std::basic_string_view name { cp.techName() };
             return (!has(name, u8"ideograph"));
         } else {
             return false;

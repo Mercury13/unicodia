@@ -16,6 +16,27 @@
 using namespace std::string_view_literals;
 
 
+std::string encodeC(std::string_view x)
+{
+    std::string r;
+    r.reserve(x.size());
+    for (auto c : x) {
+        switch (c) {
+        case '"':
+            r += R"(\")";
+            break;
+        case '\\':
+            r += R"(\\)";
+            break;
+        default:
+            r += c;
+            break;
+        }
+    }
+    return r;
+}
+
+
 unsigned fromHex(std::string_view x)
 {
     unsigned r;

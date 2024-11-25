@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <charconv>
-#include <deque>
 #include <unordered_set>
 
 // PugiXML
@@ -10,7 +9,6 @@
 
 // My libs
 #include "u_Strings.h"
-#include "mojibake.h"
 
 // Unicode
 #include "UcCp.h"
@@ -26,6 +24,7 @@
 #include "sutton.h"
 #include "textbase.h"
 #include "unibase.h"
+#include "stringlib.h"
 
 using namespace std::string_view_literals;
 
@@ -187,97 +186,6 @@ StrMap smCharCat[] {
 enum class AbbrevState { NORMAL, ALIAS, DISABLE };
 
 
-struct StringData
-{
-    std::string s;
-    char32_t subj;
-    int offset;
-    uc::TextRole role;
-    bool isLast;
-};
-
-struct RememberResult
-{
-    StringData* data;
-    bool wasIns;    
-};
-
-class StringLib
-{
-public:
-    RememberResult remember(
-            char32_t subj,
-            uc::TextRole role,
-            std::string_view s);
-    RememberResult forceRemember(
-            char32_t subj,
-            uc::TextRole role,
-            std::string_view s);
-    void finishCp();
-    auto& inOrder() const { return fInOrder; }
-    auto& nonAscii() const { return fNonAscii; }
-private:
-    using M = std::unordered_map<std::string_view, StringData*>;
-    M fNdx;
-    std::deque<StringData> fInOrder;
-    size_t fLength = 0;
-    std::set<char32_t> fNonAscii;
-};
-
-RememberResult StringLib::forceRemember(
-        char32_t subj, uc::TextRole role, std::string_view aS)
-{
-    auto func = [this](char32_t c) {
-        if (c >= 128)
-            fNonAscii.insert(c);
-    };
-    mojibake::copyS(aS.begin(), aS.end(),
-            mojibake::Utf32CallIterator(func));
-    auto& v = fInOrder.emplace_back(StringData{
-                    .s = std::string { aS },
-                    .subj = subj,
-                    .offset = static_cast<int>(fLength),
-                    .role = role,
-                    .isLast = false });
-    fLength += (aS.length() + 2);
-    // One byte or two?
-    if (aS.length() >= uc::detail::MIN_2BYTE_STRING)
-        ++fLength;
-    return { .data =&v, .wasIns = true };
-}
-
-RememberResult StringLib::remember(
-        char32_t subj, uc::TextRole role, std::string_view s)
-{
-    if (role != uc::TextRole::MAIN_NAME)
-        return forceRemember(subj, role, s);
-    auto it = fNdx.find(s);
-    if (it == fNdx.end()) {   // Was inserted
-        auto r = forceRemember(subj, role, s);
-        fNdx[r.data->s] = r.data;
-        return r;
-    } else {
-        return {
-            .data = it->second,
-            .wasIns = false
-        };
-    }
-}
-
-
-void StringLib::finishCp()
-{
-    if (!fInOrder.empty()) {
-        auto& bk = fInOrder.back();
-        if (!bk.isLast) {
-            bk.isLast = true;
-            // +1: command CMD_END
-            ++fLength;
-        }
-    }
-}
-
-
 class NewLine
 {
 public:
@@ -330,27 +238,6 @@ namespace {
     }
 
 }   // anon namespace
-
-
-std::string encodeC(std::string_view x)
-{
-    std::string r;
-    r.reserve(x.size());
-    for (auto c : x) {
-        switch (c) {
-        case '"':
-            r += R"(\")";
-            break;
-        case '\\':
-            r += R"(\\)";
-            break;
-        default:
-            r += c;
-            break;
-        }
-    }
-    return r;
-}
 
 
 int main()
@@ -456,7 +343,7 @@ int main()
     os << '\n';
     os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
 
-    ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
+    auto proc = ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
         auto cp = cpInfo.cp;
         std::string_view sName = cpInfo.name;
 
@@ -518,30 +405,30 @@ int main()
         auto abbrevRole = (abbrevState == AbbrevState::NORMAL)
                           ? uc::TextRole::ABBREV : uc::TextRole::ALT_NAME;
         if (!defaultAbbrev.empty()) {
-            strings.forceRemember(cp, abbrevRole, defaultAbbrev);
+            strings.forceRemember(pTech, cp, abbrevRole, defaultAbbrev);
         }
 
         for (auto& v : textCp->abbrs) {
-            strings.forceRemember(cp, abbrevRole, std::string{v});
+            strings.forceRemember(pTech, cp, abbrevRole, std::string{v});
         }
 
         for (auto& v : textCp->controls) {
             if (v == sLowerName)
                 continue;
-            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
+            strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
         if (auto kv = egypBase.find(cp); kv != egypBase.end()) {
             auto& v = kv->second;
             if (!v.descEwp.empty()) {
-                strings.forceRemember(cp, uc::TextRole::EGYP_EWP, v.descEwp);
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EWP, v.descEwp);
             } else if (!v.descUnicode.empty()) {
-                strings.forceRemember(cp, uc::TextRole::EGYP_UC, v.descUnicode);
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_UC, v.descUnicode);
             }
         }
 
         for (auto& v : textCp->names) {
-            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
+            strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
         // HTML
@@ -552,7 +439,7 @@ int main()
                 std::cout << "WARNING: char " << std::hex << int(cp) << " has HTML and a repeating name." << '\n';
             }
             for (auto &w : v->second)
-                strings.forceRemember(cp, uc::TextRole::HTML, w);
+                strings.forceRemember(pTech, cp, uc::TextRole::HTML, w);
         }
 
         // Deprecated
@@ -562,9 +449,9 @@ int main()
             if (itDep != deprecatedInfo.end()) {
                 auto& q = itDep->second;
                 if (!q.whatsInstead.empty()) {
-                    strings.forceRemember(cp, uc::TextRole::DEP_INSTEAD, str::toSv(q.whatsInstead));
+                    strings.forceRemember(pTech, cp, uc::TextRole::DEP_INSTEAD, str::toSv(q.whatsInstead));
                     if (!q.whatsInstead2.empty()) {
-                        strings.forceRemember(cp, uc::TextRole::DEP_INSTEAD2, str::toSv(q.whatsInstead2));
+                        strings.forceRemember(pTech, cp, uc::TextRole::DEP_INSTEAD2, str::toSv(q.whatsInstead2));
                     }
                 }
             }
@@ -604,7 +491,7 @@ int main()
             if (auto p = q->second) {    // May have NULL here
                 auto name1 = str::toSv(p->name);
                 if (!containsWordSeq(sLowerName, name1) && !textCp->contains(name1)) {
-                    strings.forceRemember(cp, uc::TextRole::EMOJI_NAME, name1);
+                    strings.forceRemember(pTech, cp, uc::TextRole::EMOJI_NAME, name1);
                 }
             }
         }
@@ -617,7 +504,7 @@ int main()
         os << "{ "
            << "0x" << std::hex << int(cp) << ", "    // subj
            << "{ "                              // name
-                << std::dec << pTech->offset    // name.tech,
+                << std::dec << (pTech ? pTech->offset : 0)  // name.tech,
            << " }, ";                           // /name
 
         // Char’s type
@@ -682,25 +569,7 @@ int main()
               << nDeprecated << " deprecated." << '\n';
 
     os << "const char8_t uc::allStrings[] = \n";
-    char text[40];
-    for (auto& v : strings.inOrder()) {
-        if (v.s.length() < uc::detail::MIN_2BYTE_STRING) {
-            // 1-byte string
-            snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
-                     static_cast<unsigned>(v.role),
-                     static_cast<unsigned>(v.s.length()));
-        } else {
-            // 2-byte string
-            snprintf(text, std::size(text), R"(u8"\x%02X\x%02X\x%02X" ")",
-                     static_cast<unsigned>(v.role),
-                     static_cast<unsigned>(v.s.length() >> 8) + uc::detail::MIN_2BYTE_STRING,
-                     static_cast<unsigned char>(v.s.length()));
-        }
-        os << text << encodeC(v.s) << R"("  )";
-        if (v.isLast)
-            os << R"("\0")";
-        os << "  // " << std::hex << static_cast<int>(v.subj) << '\n';
-    }
+    strings.write(os);
     os << ";\n";
 
     ///// Numerics /////////////////////////////////////////////////////////////
@@ -722,6 +591,14 @@ int main()
 
     ///// Close main file //////////////////////////////////////////////////////
 
+    os.close();
+
+    ///// Processed data ///////////////////////////////////////////////////////
+
+    os.open("auto-names.log");
+    for (auto& q : proc.autoNames) {
+        os << q << std::endl;
+    }
     os.close();
 
     ///// Han dictionary ///////////////////////////////////////////////////////
@@ -786,6 +663,7 @@ int main()
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
     os << "constexpr unsigned N_OLDCOMP_SPANS = " << std::dec << oldr.nSpans << ";\n";
+    os << "constexpr unsigned N_AUTO_NAMES = " << std::dec << proc.autoNames.size() << "; // only converted from normal names!"  "\n";
     os << "}\n";
     os.close();
 

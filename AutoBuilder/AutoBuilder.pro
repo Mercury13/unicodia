@@ -24,6 +24,7 @@ SOURCES += \
         library.cpp \
         loader.cpp \
         main.cpp \
+        stringlib.cpp \
         sutton.cpp \
         textbase.cpp \
         ucdcom.cpp \
@@ -46,6 +47,7 @@ HEADERS += \
     legacy.h \
     library.h \
     loader.h \
+    stringlib.h \
     sutton.h \
     textbase.h \
     ucdcom.h \

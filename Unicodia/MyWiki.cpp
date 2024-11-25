@@ -1716,12 +1716,13 @@ namespace {
     void appendSingleCpHtml(QString& text, const uc::Cp& cp)
     {
         appendDumbSingleCpHtml(text, cp.subj);
-        cp.name.traverseAllT([&text](uc::TextRole role, std::u8string_view s) {
-            if (role == uc::TextRole::HTML) {
-                text += ' ';
-                mywiki::appendCopyable(text, str::toQ(s));
-            }
-        });
+        cp.traverseTextsT(uc::AutoName::NO,     // Need HTML only
+            [&text](uc::TextRole role, std::u8string_view s) {
+                if (role == uc::TextRole::HTML) {
+                    text += ' ';
+                    mywiki::appendCopyable(text, str::toQ(s));
+                }
+            });
     }
 
     struct HtInfo {
@@ -1756,7 +1757,7 @@ namespace {
             auto nWritten = snprintf(p, end - p, "&#%d;", c);
             p += nWritten;
             if (auto cp = uc::cpsByCode[c]) {
-                auto mnemonic = cp->name.getText(uc::TextRole::HTML);
+                auto mnemonic = cp->getText(uc::TextRole::HTML);
                 if (!mnemonic.empty()) {
                     haveMnemonic = true;
                     htData[i].mnemonic = mnemonic;
@@ -1790,30 +1791,30 @@ namespace {
     {
         // Alt. names
         bool isInitial = true;
-        cp.name.traverseAllT([&text,&isInitial]
-                             (uc::TextRole role, std::u8string_view s) {
-            switch (role) {
-            case uc::TextRole::ALT_NAME:
-            case uc::TextRole::ABBREV:
-            case uc::TextRole::EMOJI_NAME:
-            case uc::TextRole::EGYP_EWP:
-            case uc::TextRole::EGYP_UC:
-                if (isInitial) {
-                    isInitial = false;
-                    text += "<p style='" CNAME_ALTNAME "'>";
-                } else {
-                    text += "; ";
+        cp.traverseTextsT(uc::AutoName::NO,
+            [&text,&isInitial](uc::TextRole role, std::u8string_view s) {
+                switch (role) {
+                case uc::TextRole::ALT_NAME:
+                case uc::TextRole::ABBREV:
+                case uc::TextRole::EMOJI_NAME:
+                case uc::TextRole::EGYP_EWP:
+                case uc::TextRole::EGYP_UC:
+                    if (isInitial) {
+                        isInitial = false;
+                        text += "<p style='" CNAME_ALTNAME "'>";
+                    } else {
+                        text += "; ";
+                    }
+                    mywiki::appendCopyable(text, str::toQ(s), "altname");
+                    break;
+                case uc::TextRole::MAIN_NAME:
+                case uc::TextRole::HTML:
+                case uc::TextRole::DEP_INSTEAD:
+                case uc::TextRole::DEP_INSTEAD2:
+                case uc::TextRole::CMD_END:
+                    break;
                 }
-                mywiki::appendCopyable(text, str::toQ(s), "altname");
-                break;
-            case uc::TextRole::MAIN_NAME:
-            case uc::TextRole::HTML:
-            case uc::TextRole::DEP_INSTEAD:
-            case uc::TextRole::DEP_INSTEAD2:
-            case uc::TextRole::CMD_END:
-                break;
-            }
-        });
+            });
         if (!isInitial) {
             text += "</b>";
         }
@@ -2058,7 +2059,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         std::string_view key = "0";
         char cbuf = '0';
 
-        std::u8string_view instead = cp.name.getText(uc::TextRole::DEP_INSTEAD);
+        std::u8string_view instead = cp.getText(uc::TextRole::DEP_INSTEAD);
         if (!instead.empty()) {
             auto q = instead[0];
             if (q >= uc::INSTEAD_MIN && q <= uc::INSTEAD_MAX) {
@@ -2069,7 +2070,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
                 // Characters by code
                 key = "Ins";
                 buf.build(instead);
-                std::u8string_view instead2 = cp.name.getText(uc::TextRole::DEP_INSTEAD2);
+                std::u8string_view instead2 = cp.getText(uc::TextRole::DEP_INSTEAD2);
                 if (!instead2.empty()) {
                     key = "Ins2";
                     buf2.build(instead2);
@@ -2413,36 +2414,31 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         if (auto pCp = uc::cpsByCode[getcp.cp]) {
             auto title1 = str::toU8(title);
             bool isInitial = true;
-            pCp->name.traverseAllT([&text, &isInitial, &title1]
-                                   (uc::TextRole role, std::u8string_view s) {
-                switch (role) {
-                case uc::TextRole::MAIN_NAME:
-                    // Name should not be template
-                    if (s.find('#') != std::u8string_view::npos)
+            pCp->traverseTextsT(uc::AutoName::NO,  // Main name should not be template
+                [&text, &isInitial, &title1](uc::TextRole role, std::u8string_view s) {
+                    switch (role) {
+                    case uc::TextRole::MAIN_NAME:
+                    case uc::TextRole::ALT_NAME:
+                    case uc::TextRole::ABBREV:
+                        if (s != title1) {
+                            if (isInitial) {
+                                isInitial = false;
+                                text += "<p style='" CNAME_ALTNAME "'>";
+                            } else {
+                                text += "; ";
+                            }
+                            mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        } break;
+                    case uc::TextRole::HTML:
+                    case uc::TextRole::DEP_INSTEAD:
+                    case uc::TextRole::DEP_INSTEAD2:
+                    case uc::TextRole::CMD_END:
+                    case uc::TextRole::EGYP_EWP:
+                    case uc::TextRole::EGYP_UC:
+                    case uc::TextRole::EMOJI_NAME:  // Equal to mine
                         break;
-                    [[fallthrough]];
-                case uc::TextRole::ALT_NAME:
-                case uc::TextRole::ABBREV:
-                    if (s != title1) {
-                        if (isInitial) {
-                            isInitial = false;
-                            text += "<p style='" CNAME_ALTNAME "'>";
-                        } else {
-                            text += "; ";
-                        }
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
-                    } break;
-                case uc::TextRole::HTML:
-                case uc::TextRole::DEP_INSTEAD:
-                case uc::TextRole::DEP_INSTEAD2:
-                case uc::TextRole::CMD_END:
-                case uc::TextRole::EGYP_EWP:
-                case uc::TextRole::EGYP_UC:
-                case uc::TextRole::EMOJI_NAME:  // Equal to mine
-                    break;
-
-                }
-            });
+                    }
+                });
         }
     }
 

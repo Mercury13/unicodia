@@ -326,23 +326,13 @@ namespace uc {
         EXTENDED        ///< What we draw with other font-related methods
     };
 
+    enum class AutoName : unsigned char { NO, YES };
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
-
-            /// @warning  This s_v is NOT null-terminated!
-            const std::u8string_view tech() const;
-
-            /// @return  [+] the very text we called STOP on
-            ///          [0] we traversed everything and did not stop
-            std::u8string_view traverseAll(const TextSink& sink) const;
-            template <class Body> inline std::u8string_view traverseAllT(const Body& body) const;
-
-            /// @return  [+] the 1st text if that role
-            ///          [0] no text of that role
-            std::u8string_view getText(TextRole role) const;
         } name;
         EcCategory ecCategory;          // +1 = 8
         EcVersion ecVersion;            // +1 = 9
@@ -398,8 +388,26 @@ namespace uc {
         constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
         EcGlyphStyleChannel ecStyleChannel() const;
         inline const GlyphStyleChannel styleChannel() const;
+
+        /// @return  [+] the very text we called STOP on
+        ///          [0] we traversed everything and did not stop
+        std::u8string_view traverseTexts(
+                AutoName autoName, const TextSink& sink) const;
+        template <class Body> inline std::u8string_view traverseTextsT(
+                AutoName autoName, const Body& body) const;
+
+        /// @warning  This s_v is NOT null-terminated!
+        std::u8string_view techName() const;
+
+        /// @warning  This s_v is NOT null-terminated!
+        std::u8string_view explicitMainName() const;
+
+        /// @return  [+] the 1st text if that role
+        ///          [0] no text of that role
+        std::u8string_view getText(TextRole role) const;
     private:
         QString markProxy() const;
+        std::u8string_view autoName() const;
     };
 
     size_t sprintPlus(char* buf, size_t n, std::u32string_view text);

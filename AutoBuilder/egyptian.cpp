@@ -113,8 +113,11 @@ namespace {
             auto cp = fromHex(sUnicode);
             auto sField = d[1];
             auto sValue = d[2];
-            if (sField == "kEH_Desc")
-                r[cp].descUnicode = sValue;
+            if (sField == "kEH_Desc") {
+                auto& du = r[cp].descUnicode;
+                du = sValue;
+                str::replace(du, " syrian ", " Syrian ");
+            }
         }
     }
 }

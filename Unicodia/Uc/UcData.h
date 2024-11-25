@@ -1313,9 +1313,10 @@ inline const uc::GlyphStyleChannel uc::Cp::styleChannel() const
 
 // Name
 template <class Body>
-inline std::u8string_view uc::Cp::Name::traverseAllT(const Body& body) const {
+inline std::u8string_view uc::Cp::traverseTextsT(
+        AutoName autoName, const Body& body) const {
     TextSinkT sink(body);
-    return traverseAll(sink);
+    return traverseTexts(autoName, sink);
 }
 
 // LibNode

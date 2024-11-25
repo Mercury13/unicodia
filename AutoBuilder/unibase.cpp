@@ -234,8 +234,11 @@ ucd::SupportData ucd::loadSupportData()
 }
 
 
-void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
+ucd::MainProc ucd::processMainBase(
+        const SupportData& supportData, const BaseSink& sink)
 {
+    ucd::MainProc r;
+
     std::ifstream is(UCD_MAIN);
     std::string line;
     CpInfo info;
@@ -380,10 +383,14 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
             if (firstCp != 0)
                 throw std::logic_error("Unfinished special range");
             std::string decapped { info.name };
-            str::replace(decapped, sCp, "#"sv);
+            auto nRepl = str::replace(decapped, sCp, "#"sv);
+            if (nRepl != 0) {
+                r.autoNames.emplace(decapped);
+            }
             decapped = decapitalize(decapped, info.cp);
             info.name = decapped;
             sink.act(info);
         }
     }
+    return r;
 }

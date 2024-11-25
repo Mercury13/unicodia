@@ -15,6 +15,11 @@ int fromDec(std::string_view x);
 
 bool fromHexIf(std::string_view x, unsigned& y);
 
+///
+/// Encodes a string to C string format
+///
+std::string encodeC(std::string_view x);
+
 
 namespace ucd {
 

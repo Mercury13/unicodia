@@ -951,16 +951,69 @@ int uc::Font::computeSize(FontPlace place, int size) const
 }
 
 
-std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
+std::u8string_view uc::Cp::autoName() const
 {
-    auto p = allStrings + iTech.val();
+    switch (ecScript) {
+    case uc::EcScript::Egyp:
+        return u8"Egyptian hieroglyph-#"sv;         // ONE
+    case uc::EcScript::Hani: {
+            char32_t cp = subj;
+            if ((cp >= 0xF900 && cp <= 0xFAFF)
+                || (cp >= 0x2F800 && cp <= 0x2FA1F))
+                return u8"CJK compatibility ideograph-#"sv;  // TWO
+            return u8"CJK unified ideograph-#"sv;   // Does not count (real auto, special DB)
+        }
+    case uc::EcScript::Kits:
+        return u8"Khitan small script character-#"sv;   // THREE
+    case uc::EcScript::Nshu:
+        return u8"Nushu character-#";   // FOUR
+    case uc::EcScript::Tang:
+        return u8"Tangut ideograph-#"sv;    // Does not count (real auto, AFAIK no data at all)
+    default: throw std::logic_error("No auto name!");
+    }
+    static_assert(uc::N_AUTO_NAMES == 4, "Check auto-names.log");
+}
+
+
+std::u8string_view uc::Cp::traverseTexts(
+        AutoName aut, const TextSink& sink) const
+{
+    auto checkAutoName =
+            [this, &sink, needMain = static_cast<bool>(aut)]
+            () mutable -> std::u8string_view {
+        if (needMain) {
+            needMain = false;
+            auto name = autoName();
+            if (sink.onText(TextRole::MAIN_NAME, name) == Action::STOP)
+                return name;
+        }
+        return {};
+    };
+    // }
+    //                      || info.name == "<CJK Ideograph Extension J, First>"sv) {
+    //     firstCp = info.cp;
+    //     needNumeric = true;
+    //     repeatedText = "CJK unified ideograph-#"sv;  // Let it be for Hangul
+    // } else if (info.name == "<Tangut Ideograph, First>"sv
+    //         || info.name == "<Tangut Ideograph Supplement, First>"sv) {
+    //     firstCp = info.cp;
+    //     needNumeric = false;
+    //     repeatedText =
+
+
+    if (subj.ch32() > 65536) {
+        printf("Nice!\n");
+    }
+    auto p = allStrings + name.iTech.val();
     while (true) {
         auto role = static_cast<TextRole>(*(p++));
         switch (role) {
         // Commands
-        case TextRole::CMD_END: goto brk;
-        // Actual texts
-        case TextRole::MAIN_NAME:
+        case TextRole::CMD_END:
+            if (auto q = checkAutoName(); !q.empty())
+                return q;
+            return {};
+        // Actual texts        
         case TextRole::ALT_NAME:
         case TextRole::HTML:
         case TextRole::DEP_INSTEAD:
@@ -968,7 +1021,11 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         case TextRole::ABBREV:
         case TextRole::EMOJI_NAME:
         case TextRole::EGYP_EWP:
-        case TextRole::EGYP_UC: {
+        case TextRole::EGYP_UC:
+            if (auto q = checkAutoName(); !q.empty())
+                return q;
+            [[fallthrough]];
+        case TextRole::MAIN_NAME: {
                 unsigned length = *(p++);
                 // 2-byte string?
                 if (length >= uc::detail::MIN_2BYTE_STRING) {
@@ -989,29 +1046,28 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         sink.onText(TextRole::MAIN_NAME, sv);
         return sv;
     }
-brk:
-    return {};
 }
 
 
-std::u8string_view uc::Cp::Name::getText(TextRole role) const
+std::u8string_view uc::Cp::getText(TextRole role) const
 {
-    return traverseAllT([role](TextRole aRole, std::u8string_view) {
-        return static_cast<Action>(role == aRole);
-    });
+    auto autoName = (role == TextRole::MAIN_NAME) ? AutoName::YES : AutoName::NO;
+    return traverseTextsT(autoName,
+        [role](TextRole aRole, std::u8string_view) {
+            return static_cast<Action>(role == aRole);
+        });
 }
 
 
-const std::u8string_view uc::Cp::Name::tech() const
+std::u8string_view uc::Cp::techName() const
 {
-    return traverseAllT([](TextRole role, std::u8string_view)
-                          { return stopIf(role == TextRole::MAIN_NAME); } );
+    return getText(TextRole::MAIN_NAME);
 }
 
 
 QString uc::Cp::viewableName() const
 {
-    QString r = str::toQ(name.tech());
+    QString r = str::toQ(techName());
     if (auto pos = r.indexOf('#'); pos >= 0) {
         char buf[30];
         snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(subj.uval()));
@@ -1025,8 +1081,7 @@ std::u8string_view uc::Cp::abbrev() const
 {
     if (!isAbbreviated())
         return {};
-    return name.traverseAllT([](TextRole role, std::u8string_view)
-                               { return stopIf(role == TextRole::ABBREV); } );
+    return getText(TextRole::ABBREV);
 }
 
 
@@ -1127,7 +1182,7 @@ bool uc::Cp::hasGlyph() const
     case EcCategory::SEPARATOR_PARAGRAPH:
         return false;   // Surely no glyph (they all have abbreviation)
     case EcCategory::FORMAT: // check for abbreviation
-        return name.getText(TextRole::ABBREV).empty();
+        return getText(TextRole::ABBREV).empty();
     default:
         return true;
     }
