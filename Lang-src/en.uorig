@@ -3795,9 +3795,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by scholar and priest Mesrop Mashtots (362–440). No one knows whether he took any alphabet as a base (maybe non-survived ancient Armenian letters). Alphabet is closely related to spread of Chritianity in Armenia. In 12th century letters {{sm|Օ}} and {{sm|Ֆ}} were added.</p>
+      <p>The script was invented by scholar and priest Mesrop Mashtots (362–440). No one knows whether he took any alphabet as a base (maybe non-survived ancient Armenian letters). Alphabet is closely related to the spread of Christianity in Armenia. In 12th century letters {{sm|Օ}} and {{sm|Ֆ}} were added.</p>
       <p />
-      <p>It it believed that Armenian literature was richer that middle Persian (pre-Islamic), because Armenian alphabet was simpler than [[ps:Mani|Manichaean]].</p>
+      <p>It is believed that Armenian literature was richer than Middle Persian (pre-Islamic) because Armenian alphabet was simpler than [[ps:Mani|Manichaean]].</p>
      </orig>
     </text>
    </group>
@@ -3810,11 +3810,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Aplhabet is related to Zoroastrianism and its holy text Avesta. About 400 special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created in Sasanid Persia for codifying of Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
+      <p>The alphabet is related to Zoroastrianism and its holy text Avesta. About 400 a special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created in Sasanid Persia to codify Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
       <p />
       <p>Under Arabs Zoroastrians started to move to India, and since 12th century wrote in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar).</p>
       <p />
-      <p>In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for place in [[pt:bmp|Basic Plane]]. But other opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in supplementary plane. A hole was left for unencoded Book Pahlavi.</p>
+      <p>In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for a place in [[pt:bmp|Basic Plane]]. But another opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in the supplementary plane. A hole was left for the unencoded Book Pahlavi.</p>
      </orig>
     </text>
    </group>
@@ -3838,9 +3838,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did{{_}}not{{_}}convey all tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but script continued to work in limited volume up to Njoya’s death in 1930s. In 2007 revival project started, the progress in insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
+      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did{{_}}not{{_}}convey all tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but the script continued to work in limited volume until Njoya’s death in the 1930s. In 2007 a revival project started, but the progress is insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
       <p />
-      <p>Consonants are initially voiceless, addind the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… Top line works as [[pt:virama|virama]] removing vowel from syllable, and is attested above just 13 signs.</p>
+      <p>Consonants are initially voiceless, adding the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… The top line works as [[pt:virama|virama]] removing a vowel from syllable, and is attested above just 13 signs.</p>
      </orig>
     </text>
    </group>
@@ -3852,7 +3852,7 @@
      <orig>Bassa</orig>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. Authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
+     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
     </text>
    </group>
    <group id="Batk">
@@ -3864,9 +3864,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Batak, like other scripts of Indonesia, comes from [[ps:Kawi|Kawi]]. Germans, then Dutch started to teach both Batak script and [[ps:Latn|Latin]] to islanders. Short before World War{{_}}I Batak alphabet was dropped and finally supplanted with Latin, main script of Indonesian language.</p>
+      <p>Batak, like other Indonesian scripts, comes from [[ps:Kawi|Kawi]]. Germans, then Dutch started to teach both Batak script and [[ps:Latn|Latin]] to islanders. Short before World War{{_}}I Batak alphabet was dropped and finally supplanted with Latin, the main script of the Indonesian language.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. In different languages (Karo, Mandailing, Pakpak, Toba, Simalungun) letters are a bit different. There are two [[pt:virama|viramas]]: horizontal one is used in Karo and Simalungun, slanted in the rest languages.</p>
+      <p>Inherent vowel is {{t|a}}. In different languages (Karo, Mandailing, Pakpak, Toba, Simalungun) letters are a bit different. There are two [[pt:virama|viramas]]: horizontal one is used in Karo and Simalungun, slanted in the rest of the languages.</p>
       <p>: ba {{sm|ᯅ}} + virama {{sm|◌᯳}} = b {{sm|ᯅ᯳}}</p>
       <p>: ba {{sm|ᯅ}} + i {{sm|◌ᯪ}} + ng {{sm|◌ᯰ}} = bing {{sm|ᯅᯪᯰ}}</p>
      </orig>
@@ -3884,9 +3884,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Belongs to eastern branch of Indic script. Originates from [[ps:Sidd|Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese script differ insignificantly and [[pt:unification|unified]]. Inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
+      <p>Belongs to the eastern branch of Indic script. Originates from [[ps:Sidd|Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese script differ insignificantly and [[pt:unification|unified]]. The inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
       <p />
-      <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] made of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts of the world. Ligature input is standard: first letter, virama, second letter.</p>
+      <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] made of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts in the world. Ligature input is standard: first letter, virama, second letter.</p>
       <p />
       <p>Bangladesh is one of two Islamic states with own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not{{_}}[[ps:Cyrl|Cyrillic]]). The other is [[ps:Thaa|Maldives]].</p>
      </orig>
@@ -3901,9 +3901,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Was used in East India in 11–12th century, it was mentioned by Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized that it’s Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. Initial letter for long vocalic L is also unknown.</p>
+      <p>It was used in East India in 11–12th centuries, and was mentioned by Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized that it’s Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. The initial letter for long vocalic L is also unknown.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}, the rest are added with vowel marks, turned to plain consonant with [[pt:virama|virama]]. Because of extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only in the end of words.</p>
+      <p>The inherent vowel is {{t|a}}, the rest are added with vowel marks, turned to plain consonants with [[pt:virama|virama]]. Because of an extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only at the end of words.</p>
       <p>: ka {{sm|𑰎}} + i {{sm|◌𑰰}} = ki {{sm|𑰎𑰰}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} = k {{sm|𑰎𑰿}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} + ta {{sm|𑰝}} = kta {{sm|𑰎𑰿𑰝}}</p>
@@ -3921,9 +3921,9 @@
      <orig>
       <p>Bopomofo (by first four letters), or Zhuyin Fuhao is a Chinese phonetic system invented by Wu Zhihui in 1912–13 and adopted in 1918.</p>
       <p />
-      <p>The author achieved a high position in Kuomintang, and that predestined the fate of system: after Mao Zedong gained power (1949) it was used only in Taiwan. There Bopomofo is also steadily supplanted with usual pinyin (Romanization of Chinese syllables), and used mainly for initial teaching of children, input into cellphone, search in dictionaries by pronunciation.</p>
+      <p>The author achieved a high position in Kuomintang, and that predestined the fate of the system: after Mao Zedong gained power (1949) it was used only in Taiwan. There Bopomofo is also steadily supplanted with usual pinyin (Romanization of Chinese syllables), and used mainly for initial teaching of children, input into cellphones, and search in dictionaries by pronunciation.</p>
       <p />
-      <p>In 2007 in Taiwan Bleckberry smartphone hit shelves, it supported entry only via Pinyin and suffered from low demand. In next versions Research In Motion promised Zhuyin too.</p>
+      <p>In 2007 in Taiwan Blackberry smartphone hit shelves, it supported entry only via Pinyin and suffered from low demand. In the next versions, Research In Motion promised Zhuyin too.</p>
      </orig>
     </text>
    </group>
@@ -3941,15 +3941,15 @@
      <orig>
       <p>No one knows when Brahmi emerged and what was the ancestor{{-}}it’s usually thought that from [[ps:Armi|Aramaic]] in 8–7th century{{_}}BC. Other scholars connect Brahmi to more ancient and yet undeciphered Indus script. The most ancient from reliable sources are pillars of King Ashoka (3rd century{{_}}BC). Earlier sources are poorly dated.</p>
       <p />
-      <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest vowels are added with diacritic marks, inherent {{t|a}} is removed with sign of [[pt:virama|virama]].</p>
+      <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest of vowels are added with diacritic marks, inherent {{t|a}} is removed with the sign of [[pt:virama|virama]].</p>
       <p />
-      <p>Scripts of Brahmic origin greaty change graphics of characters and inherent phoneme, but conserve these features and are named “Brahmic abugidas”.</p>
+      <p>Scripts of Brahmic origin greatly change the graphics of characters and the inherent phoneme, but conserve these features and are named “Brahmic abugidas”.</p>
       <p />
       <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (not rendered properly in Windows{{_}}7/8).</p>
       <p />
       <p>Unicode does{{_}}not{{_}}distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
       <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
-      <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into separate south-eastern branch.</p>
+      <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
      </orig>
     </text>
    </group>
@@ -3964,9 +3964,9 @@
      <orig>
       <p>Braille is a dot writing system for blind people. It uses groups 2×3{{_}}dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
       <p />
-      <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing”. Barbier used 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code. Braille invented his code in age of 15, worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
+      <p>Louis Braille, son of a leatherer, at the age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for the blind and used line-embossed type there. The other prototype for Braille is Charles Barbier’s “night writing”. Barbier used a 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officers sometimes reading by touch, but bad for blind person who reads long texts. Braille reduced the matrix by using binary code. Braille invented his code at the age of 15, and worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
       <p />
-      <p>Braille industrialized assistive technologies for blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to normal text for sighted people or even over it.</p>
+      <p>Braille industrialized assistive technologies for the blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to the normal text for sighted people or even over it.</p>
      </orig>
     </text>
    </group>
@@ -3979,9 +3979,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Buginese script, or Lontara is a descendant of [[ps:Brah|Brahmi]] via [[ps:Kawi|Kawi]], and works similarly. Since Dutch colonization is being supplanted with [[ps:Latn|Latin]]. “Lontara” name means local palm tree whose leaves Buginese used for writing.</p>
+      <p>Buginese script, or Lontara is a descendant of [[ps:Brah|Brahmi]] via [[ps:Kawi|Kawi]], and works similarly. Since Dutch colonization is being supplanted with [[ps:Latn|Latin]]. “Lontara” name means a local palm tree whose leaves Buginese used for writing.</p>
       <p />
-      <p>Inherend vowel is {{t|a}}: {{sm|ᨀ}}=kа, {{sm|ᨀᨚ}}=kо. Initial vowels are appended to letter {{sm|ᨕ}}: {{sm|ᨕᨚ}}=o. [[pt:virama|Virama]] is absent: the most used consonant conjuncts are separate letters, the rest are not{{_}}written. This deficiency of Lontara is even used as conundrum: read the pun correctly and find hidden meaning. Some specialists on old writing use virama.</p>
+      <p>Inherend vowel is {{t|a}}: {{sm|ᨀ}}=kа, {{sm|ᨀᨚ}}=kо. Initial vowels are appended to letter {{sm|ᨕ}}: {{sm|ᨕᨚ}}=o. [[pt:virama|Virama]] is absent: the most used consonant conjuncts are separate letters, the rest are not{{_}}written. This deficiency of Lontara is even used as a conundrum: read the pun correctly and find hidden meaning. Some specialists in old writing use virama.</p>
      </orig>
     </text>
    </group>
@@ -3997,7 +3997,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Used by Mangyan, a small ethnic group of Philippines. Script goes back to [[ps:Brah|Brahmi]] and is sister script of [[ps:Tglg|Tagalog]].</p>
+      <p>Used by Mangyan, a small ethnic group of the Philippines. The script goes back to [[ps:Brah|Brahmi]] and is a sister script of [[ps:Tglg|Tagalog]].</p>
       <p />
       <p>The language has just 15 consonants and three vowels: {{t|a}} is inherent, {{t|i}} and {{t|u}} are vowel marks. Initial vowels are separate letters. Other consonants may appear between syllables, they are just omitted: {{sm|ᝐᝒᝑᝋᝓ}} means ''sihamu'', but is pronounced ''singhanmu''.</p>
      </orig>
@@ -4012,9 +4012,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. The script comes from [[ps:Mymr|Myanmar]] and is very old, probably older than known Myanmar specimen (11th century).</p>
+      <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. The script comes from [[ps:Mymr|Myanmar]] and is very old, probably older than the known Myanmar specimen (11th century).</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is used for construction of ligatures, most of them are abolished with reform of 2001.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is used for the construction of ligatures, most of them were abolished with the reform of 2001.</p>
       <p>: kā {{sm|𑄇}} + i {{sm|◌𑄨}} = ki {{sm|𑄇𑄨}}</p>
       <p>: kā {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = k {{sm|𑄇𑄴}}</p>
       <p>: kā {{sm|𑄇}} + virama {{sm|◌𑄳}} + tā {{sm|𑄖}} = ktā {{sm|𑄇𑄳𑄖}}</p>
@@ -4030,9 +4030,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Was used from 7th to 1st century{{_}}BC. Many variants of alphabet existed. In Anatolia left-to-right writing prevailed, mercenaries in Egypt wrote right-to-left.</p>
+      <p>Was used from 7th to 1st century{{_}}BC. Many variants of the alphabet existed. In Anatolia left-to-right writing prevailed, and mercenaries in Egypt wrote right-to-left.</p>
       <p />
-      <p>Then-Soviet scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. Key book on deciphering (Ignasi-Xavier Adiego) came in 1993. Bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
+      <p>Then-Soviet scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
      </orig>
     </text>
    </group>
@@ -4045,9 +4045,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by missionaire James Evans in 1833. While working on Ojibwe languages, he experienced two troubles: lots of repeating syllables made writing very long, and students often confused rules for English and native. That’s why he decided to make a brand new script for Cree (later adopted by some Ojibwe tribes).</p>
+      <p>Invented by missionary James Evans in 1833. While working on Ojibwe languages, he experienced two troubles: lots of repeating syllables made writing very long, and students often confused rules for English and native. That’s why he made a brand new script for Cree (later adopted by some Ojibwe tribes).</p>
       <p />
-      <p>Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</p>
+      <p>Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. A plain consonant is a small letter: k={{sm|ᒃ}}.</p>
      </orig>
      <au-cmt>Evans: https://elementy.ru/problems/3036/Moroz_Krasnyy_nos</au-cmt>
     </text>
@@ -4061,7 +4061,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Cham script came from Pallava (early [[ps:Gran|Grantha]]), and inherent vowel is {{t|a}}. To add another vowel, vowel marks are added. No [[pt:virama|virama]] (“remove vowel” sign), final consonants are written instead: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
+      <p>Cham script came from Pallava (early [[ps:Gran|Grantha]]), and the inherent vowel is {{t|a}}. No [[pt:virama|virama]] (“remove vowel” sign), final consonants are written instead: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
       <p />
       <p>Most Chams practice Islam and write with [[ps:Arab|Arabic]] script, just some Chams of Vietnam use Cham script.</p>
      </orig>
@@ -4076,11 +4076,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Future chief Sequoia, inventor of Cherokee script, was illiterate but took characters from existing books{{-}}so letters have different meaning than in prototype languages. For example, vowel {{t|i}} is written with letter {{sm|Ꭲ}}.</p>
+      <p>Future chief Sequoia, inventor of Cherokee script, was illiterate but took characters from existing books{{-}}so letters have different meanings than in prototype languages. For example, vowel {{t|i}} is written with the letter {{sm|Ꭲ}}.</p>
       <p />
-      <p>His first pupil was Ayoka, six-year-old daughter. Invention of script was received with mistrust, he was taken for possessed, but Sequoia and Ayoka brilliantly passed a test, reading each other’s notes. The script quickly spread among Native American tribe, and {{%|90}} of Cherokee were literate by 1830.</p>
+      <p>The first pupil was Ayoka, his six-year-old daughter. The invention of script was received with mistrust, he was taken for possessed, but Sequoia and Ayoka brilliantly passed a test, reading each other’s notes. The script quickly spread among the tribe, and {{%|90}} of Cherokee were literate by 1830.</p>
       <p />
-      <p>Since 1828 Sequoia took part in negotiations with USA for Cherokee lands.</p>
+      <p>Since 1828, Sequoia took part in negotiations with the USA for Cherokee lands.</p>
      </orig>
     </text>
    </group>
@@ -4093,9 +4093,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language was used in Chorasm near the Amu Darya river until 13th century, gradually losing to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but script of [[ps:Armi|Aramaic]] origin back in 8th century was replaced with [[ps:Arab|Arabic]].</p>
+      <p>The language was used in Chorasm near the river of Amu Darya until 13th century, gradually losing to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but the script of [[ps:Armi|Aramaic]] origin back in 8th century was replaced with [[ps:Arab|Arabic]].</p>
       <p />
-      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, total 21 letter. In most inscriptions letters are not{{_}}joined, less frequently joined if shape permits.</p>
+      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, less frequently joined if shape permits.</p>
      </orig>
     </text>
    </group>
@@ -4108,9 +4108,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. Final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. Sahidic dialect of Coptic (Upper Egypt) became literary in 4th century, in 11th it was replaced with Bohairic (Lower Egypt).</p>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source of it, the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. The final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in 4th century, in 11th it was replaced with Bohairic (Lower Egypt).</p>
       <p />
-      <p>The word “Copt” is “Egypt” shorteded under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
+      <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>{{GrekCoptUni}}</p>
      </orig>
@@ -4125,11 +4125,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes supposedly from [[ps:Lina|Linear A]]. About 11th century{{_}}BC transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
+      <p>Came supposedly from [[ps:Lina|Linear A]]. About 11th century{{_}}BC transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
       <p />
-      <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with total of 2,500 characters. For comparison: in undeciphered Linear A{{-}}7,000, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}30,000.</p>
+      <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with a total of 2,500 characters. For comparison: in undeciphered Linear A{{-}}7,000, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}30,000.</p>
       <p />
-      <p>Image on icon is authentic, font is based on Michael Everson’s tracings (2020).</p>
+      <p>The image on the icon is authentic, font is based on Michael Everson’s tracings (2020).</p>
      </orig>
     </text>
    </group>
@@ -4142,7 +4142,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not{{_}}found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
+      <p>Came from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not{{_}}found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
       <p />
       <p>Partly deciphered in 1871 through newly-found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
      </orig>
@@ -4157,13 +4157,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>About 863 Byzantine monks Cyril and Methodius invented [[ps:Glag|Glagolitic]] script while working in Moravia. Soon Cyril died, and Byzantines were driven away to Bulgaria. People there were literate in [[ps:Grek|Greek]], and one of pupils, presumably Climent of Ohrid, invented Cyrillic based on Byzantine uncial script for [[ps:Grek|Greek]] language, with addition of phonemes absent in Greek. Greek letters like Ѯ and Ѳ were added for familiar spelling of Greek loanwords and numbers.</p>
+      <p>About 863 Byzantine monks Cyril and Methodius invented [[ps:Glag|Glagolitic]] script while working in Moravia. Soon Cyril died, and the Byzantines were driven away to Bulgaria. People there were literate in [[ps:Grek|Greek]], and one of the pupils, presumably Clement of Ohrid, invented Cyrillic based on Byzantine uncial script for [[ps:Grek|Greek]] language, with the addition of phonemes absent in Greek. Greek letters like Ѯ and Ѳ were added for familiar spelling of Greek loanwords and numbers.</p>
       <p />
-      <p>Cyrillic spread among South Slavs, and came to Rus with christianization. Cyrillic was explicitly forbidden in countries that fell under influence of Rome.</p>
+      <p>Cyrillic spread among South Slavs, and came to Rus with the christianization. Cyrillic was explicitly forbidden in countries that fell under the influence of Rome.</p>
       <p />
-      <p>Modern Cyrillic comes back to civil script introduced by Peter the Great. That script became a compromise between supporters of West and traditionalists.</p>
+      <p>Modern Cyrillic comes back to the civil script introduced by Peter the Great. That script became a compromise between supporters of the West and traditionalists.</p>
       <p />
-      <p>USSR made Cyrillic scripts for most languages of its republics. With fall of USSR Azerbaijan, Moldova, Turkmenia and Uzbekistan switched to [[ps:Latn|Latin]].</p>
+      <p>The USSR made Cyrillic scripts for most languages of its republics. With the fall of the USSR Azerbaijan, Moldova, Turkmenia and Uzbekistan switched to [[ps:Latn|Latin]].</p>
      </orig>
     </text>
    </group>
@@ -4176,11 +4176,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Devanagari (literally ''from the city of the gods'') emerged from Brahmi script, and became alphabet for most Indian languages. A distinctive feature of Devanagari: letters hang from horizontal line.</p>
+      <p>Devanagari (literally ''from the city of the gods'') emerged from Brahmi script and became the alphabet for most Indian languages. A distinctive feature of Devanagari: letters hang from a horizontal line.</p>
       <p />
-      <p>Consonant letters mean syllable with vowel {{t|a}} (in some languages and dialects {{t|ə}}). To display other syllables, vowel mark is needed: &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;. To get a single consonant, [[pt:virama|virama]] (''stop'' or ''killer'') mark is added: k{{_}}{{sm|क्}}.</p>
+      <p>Consonant letters mean syllables with vowel {{t|a}} (in some languages and dialects {{t|ə}}). To display other syllables, vowel mark is needed: &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;. To get a single consonant, [[pt:virama|virama]] (''stop'' or ''killer'') mark is added: k{{_}}{{sm|क्}}.</p>
       <p />
-      <p>Viramas in Devanagari are rare, and mostly occur in the end of words because of [[pt:ligature|ligatures]]:</p>
+      <p>Viramas in Devanagari are rare, and mostly occur at the end of words because of [[pt:ligature|ligatures]]:</p>
       <p>: ka {{sm|क}} + virama {{sm|◌्}} + ša {{sm|ष}} = kša {{sm|क्ष}}</p>
       <p />
       <p>''Unicodia'' uses ''Noto Serif Devanagari'' font due to wide coverage. In real-life text it’s better to use other fonts: for example, [[http://www.sanskritweb.net/itrans/index.html#SIDDHANTA|Siddhanta]] or [[https://software.sil.org/annapurna/|Annapurna SIL]].</p>
@@ -4196,11 +4196,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Developed in Maldives from [[ps:Gran|Grantha]] and existed until 18th century, and in some islands until 20th. Early form (before 12th century) scolars call ''Evela Akuru'' (retronym, not{{_}}autonym!). With adoption of Islam ''Evela'' transformed to ''Dives'', remaining left-to-right. In early 18th century was replaced with [[ps:Thaa|Thaana]], now right-to-left, by Sultan’s decree.</p>
+      <p>Developed in Maldives from [[ps:Gran|Grantha]] and existed until 18th century, and in some islands until 20th. Early form (before 12th century) scolars call ''Evela Akuru'' (retronym, not{{_}}autonym!). With the adoption of Islam ''Evela'' transformed to ''Dives'', remaining left-to-right. In the early 18th century was replaced with [[ps:Thaa|Thaana]], now right-to-left, by the Sultan’s decree.</p>
       <p />
       <p>Ancient Maldivian had plenty of both phonemes and letter variants: the same document contained initial vowels both as separate letters and as marks upon U+11925. ''Dives'' script retained the latter form, dropped palatal and aspirated consonants.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}, replaced by other with vowel [[pt:combining|marks]], removed in the end of words with [[pt:virama|virama]] sign ''(halanta)''. In the middle of the words that virama means alternare pronunciation of “u” vowel. Another virama is purely virtual and serves for consonant conjuncts{{-}}two letters are just stuck together (also 13 [[pt:ligature|ligatures]] such as “sta” exist).</p>
+      <p>Inherent vowel is {{t|a}}, replaced by other with vowel [[pt:combining|marks]], removed in the end of words with [[pt:virama|virama]] sign ''(halanta)''. In the middle of words, virama means the alternate pronunciation of “u” vowel. Another virama is purely virtual and serves for consonant conjuncts{{-}}two letters are just stuck together (also 13 [[pt:ligature|ligatures]] such as “sta” exist).</p>
       <p>: ka {{sm|𑤌}} + i {{sm|◌𑤱}} = ki {{sm|𑤌𑤱}}</p>
       <p>: ka {{sm|𑤌}} + halanta {{sm|◌𑤽}} = k {{sm|𑤌𑤽}}</p>
       <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
@@ -4218,9 +4218,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]], standardized in middle of 19th century under Maharaja Ranbir Singh. After Ranbir’s death in 1885 under British pressure [[ps:Arab|Urdu]] was chosen the official language. In 20th century writing in [[ps:Deva|Devanagari]] prevailed, since 21st century people started to interest with native script.</p>
+      <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]], standardized in the middle of 19th century under Maharaja Ranbir Singh. After Ranbir died in 1885, under British pressure [[ps:Arab|Urdu]] was chosen as the official language. In 20th century writing in [[ps:Deva|Devanagari]] prevailed, and since 21st century people started to be interested in native script.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also [[pt:ligature|ligatures]] exist in Dogri, unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s clearly seen in autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also [[pt:ligature|ligatures]] exist in Dogri, unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s seen in autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
       <p />
       <p>Digits are taken from Takri.</p>
      </orig>
@@ -4235,13 +4235,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In 19th centuries there were many attempts to make a phonetical script for English, and Brigham Young, the second leader of Mormon church, was neither the first nor the last. Supposedly it would offer immigrants an opportunity to learn English more easily. Main job was done by Parley Pratt and George Watt.</p>
+      <p>In 19th century there were many attempts to make a phonetical script for English, and Brigham Young, the second leader of the Mormon church, was neither the first nor the last. Supposedly it would offer immigrants an opportunity to learn English more easily. The main job was done by Parley Pratt and George Watt.</p>
       <p />
-      <p>''Deseret'' (“honeybee” in one of languages of the Book of Mormon) is a project of Mormon state implemented to lesser extent as ''Utah'' and having symbolic meaning among Mormons (for example, ''University of Deseret'', now ''University of Utah'').</p>
+      <p>''Deseret'' (“honeybee” in one of the languages of the Book of Mormon) is a project of the Mormon state implemented to a lesser extent as ''Utah'' and has symbolic meaning among Mormons (for example, ''University of Deseret'', now ''University of Utah'').</p>
       <p />
-      <p>The alphabet intentionally has no ascenders and descenders, it would reduce wear of metal type. Ascenders and descenders are sometimes added in modern fonts.</p>
+      <p>The alphabet intentionally has no ascenders and descenders, it would reduce the wear of metal type. Ascenders and descenders are sometimes added in modern fonts.</p>
       <p />
-      <p>Four books were published in new alphabet. When Young realized how much publishing of entire library costs, experiments stopped.</p>
+      <p>Four books were published in the new alphabet. When Young realized how much publishing of the entire library costs, experiments stopped.</p>
       <p />
       <p>In 1997 the alphabet was encoded in [[pt:private|ConScript Unicode Registry]]. Removed in 2001, when Deseret appeared in real Unicode.</p>
      </orig>
@@ -4280,13 +4280,13 @@
       <p>* hieratic (''sacred'') script{{-}}greatly reduced hieroglyphs; used in books and business documents;</p>
       <p>* demotic (''people’s'') script{{-}}appeared in 7th century{{_}}BC, more alphabetical characters; first letters and business documents, then books.</p>
       <p />
-      <p>But we know hieroglyphs best of all, besause they preserved well carved in stone. Despite expansion of demotic, hieroglyphs were still in use, though number of people who understand complex script constantly reduced. With advent of Christianity hieroglyphs were finally abandoned, the last inscription is dated 394{{_}}CE.</p>
+      <p>But we know hieroglyphs best of all, because they are preserved well carved in stone. Despite the expansion of demotic, hieroglyphs were still in use, though the number of people who understood complex script constantly reduced. With the advent of Christianity hieroglyphs were finally abandoned, the last inscription is dated 394{{_}}CE.</p>
       <p />
       <p>Using a bilingual with [[ps:Grek|Greek]] and knowledge of [[ps:Copt|Coptic]], in 1820s Jean-François Champollion managed to read first names, then text, and soon died. His works were validated in 1860s, long after his death.</p>
       <p />
       <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
       <p />
-      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by professional designer, deviating from truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1309A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
+      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by a professional designer, deviating from the truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1309A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
      </orig>
     </text>
    </group>
@@ -4299,9 +4299,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The only source is 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
+      <p>The only source is the 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
-      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso-Bey, Vellara) were used as a cipher against Turks. By other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets. </p>
+      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso-Bey, Vellara) were used as a cipher against Turks. According to other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
      </orig>
@@ -4320,7 +4320,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Persia ceased existence after military defeats from Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown Elymais appeared among other nations.</p>
+      <p>Persia ceased existence after military defeats by Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
       <p />
       <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
      </orig>
@@ -4338,11 +4338,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ethiopic script was used for Ge’ez language that fell out of use since 13th century. Script of [[ps:Sarb|South Arabian]] origin, with advent of Christianity in 4th century vowel marks appeared. Ge’ez is still used by Ethiopian Christians as liturgical{{-}}and script spread to other languages of Ethiopia.</p>
+      <p>Ethiopic script was used for the Ge’ez language that fell out of use in 13th century. Script of [[ps:Sarb|South Arabian]] origin, with the advent of Christianity in 4th century vowel marks appeared. Ge’ez is still used by Ethiopian Christians as liturgical{{-}}and the script spread to other languages of Ethiopia.</p>
       <p />
-      <p>Has own numeral system of [[ps:Grek|Greek]] type, only 1 to 9 and 10 to 90 are writable with 26 consonants. 83692={{sm|፰፼፴፮፻፺፪}}, i.e. 8-10000-30-6-100-90-2.</p>
+      <p>It has a numeral system of [[ps:Grek|Greek]] type, only 1 to 9 and 10 to 90 are writable with 26 consonants. 83692={{sm|፰፼፴፮፻፺፪}}, i.e. 8-10000-30-6-100-90-2.</p>
       <p />
-      <p>Loses influence since late 20th century. For all languages except Ethiosemitic (Blin{{-}}Kushitic family, Mekan{{-}}Nilo-Saharan) [[ps:Latn|Latin]] script is introduced.</p>
+      <p>Loses influence since the late 20th century. For all languages except Ethiosemitic (Blin{{-}}Kushitic family, Mekan{{-}}Nilo-Saharan) [[ps:Latn|Latin]] script is introduced.</p>
      </orig>
     </text>
    </group>
@@ -4355,13 +4355,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of local cave.</p>
+      <p>Lots of new scripts appeared during the liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of a local cave.</p>
       <p />
-      <p>Current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
+      <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
-      <p>Capital letter has a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p>Capital letters have a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
       <p />
-      <p>Vowels are actually marks attached to consonants. Initial vowels hang on vowel carrier letter (A).</p>
+      <p>Vowels are actually marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
       <p />
       <p>Read the autonym: {{sm|&amp;rlm;&amp;#68953;&amp;#68938;&amp;#68990;&amp;#68938;&amp;#68988;}}</p>
      </orig>
@@ -4377,7 +4377,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>No one knows when Georgian script was created and what was a prototype. Widespread opinion that Georgian alphabet was made by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet, is rejected by scientists. Aphabetical order is [[ps:Grek|Greek]].</p>
+      <p>No one knows when the Georgian script was created and what was the prototype. The widespread opinion that the Georgian alphabet was made by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet, is rejected by scientists. Alphabetical order is [[ps:Grek|Greek]].</p>
       <p />
       <p>Georgian language is unicameral, but historically Unicode has four styles of writing, in order of codes:</p>
       <p>* Asomtavruli{{-}}obsolete capital letters. Because of poor sample [[pt:character|glyphs]], this range affixed to Asomtavruli style;</p>
@@ -4396,11 +4396,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Glagolitic was invented about 863 by Byzantians Cyril and Methodius for a political mission{{-}}drive away Western priests from Moravia and establish an autonomous church to prevent from being conquered by Franks. Mission failed, Cyril died soon, Byzantians were driven away by Western church, and fugitives from Moravia christianized Bulgaria and invented [[ps:Cyrl|Cyrillic]].</p>
+      <p>Glagolitic was invented about 863 by Byzantians Cyril and Methodius for a political mission{{-}}drive away Western priests from Moravia and establish an autonomous church to prevent from being conquered by Franks. Mission failed, Cyril died soon, Byzantians were driven away by the Western church, and fugitives from Moravia christianized Bulgaria and invented [[ps:Cyrl|Cyrillic]].</p>
       <p />
-      <p>In 20th century it was finally proved that Glagolitic is older than Cyrillic: expensive parchment was often reused, and palimpsests (parchments with one text erased and other written) survived where Glagolitic was rewritten with Cyrillic. Linguistic arguments also exist. Nevertheless, Glagolitic co-existed with Cyrillic until 19th century and took letter forms from it, and that caused controversy. Possibly, name ''Cyrillic'' initially meant Glagolitic script.</p>
+      <p>In 20th century it was finally proved that Glagolitic is older than Cyrillic: expensive parchment was often reused, and palimpsests (parchments with one text erased and other written) survived where Glagolitic was rewritten with Cyrillic. Linguistic arguments also exist. Nevertheless, Glagolitic co-existed with Cyrillic until 19th century and took letter forms from it, and that caused controversy. Possibly, the name ''Cyrillic'' initially meant Glagolitic script.</p>
       <p />
-      <p>Glagolitic seldom appeared in Rus, more often it was used in Bulgaria and Croatia. Bulgarian style is round, Croatian is square, both are [[pt:unification|unified]].</p>
+      <p>Glagolitic seldom appeared in Rus, more often it was used in Bulgaria and Croatia. Bulgarian style is round, Croatian is square, and both are [[pt:unification|unified]].</p>
      </orig>
     </text>
    </group>
@@ -4565,7 +4565,7 @@
      <orig>
       <p>Hangul is a Korean alphasyllabic script. 51 jamo (letters) are united into groups approximately by syllables.</p>
       <p />
-      <p>Invented by a group of scientists led by King Sejong the Great, he thought that [[ps:Hani|Chinese ideographs]] badly convey Korean and are difficult for people. Educated people looked superciliiosly at Hangul, considering it women’s, children’s or vernacular script, hence name ''eonmun{{-}}vernacular script''. Later kings even banned Hangul. Growth of poetry and work of Western missionaires somewhat spread use of Hangul. Pro-Japanese government of late 19th century started to ban everything Chinese and introduce Hangul. After annexation of Korea by Japan (1910), Japanese was enforced, in those times “Hangul” name was coined, literally “great script”. In 1946, after liberation from Japan, new orthography was published. The only script of North Korea and the main in South.</p>
+      <p>Invented by a group of scientists led by King Sejong the Great, he thought that [[ps:Hani|Chinese ideographs]] badly convey Korean and are difficult for people. Educated people looked superciliiosly at Hangul, considering it women’s, children’s or vernacular script, hence name ''eonmun{{-}}vernacular script''. Later kings even banned Hangul. Growth of poetry and work of Western missionaries somewhat spread use of Hangul. Pro-Japanese government of late 19th century started to ban everything Chinese and introduce Hangul. After annexation of Korea by Japan (1910), Japanese was enforced, in those times “Hangul” name was coined, literally “great script”. In 1946, after liberation from Japan, new orthography was published. The only script of North Korea and the main in South.</p>
      </orig>
     </text>
    </group>
@@ -4998,7 +4998,7 @@
       <p />
       <p>In Middle Ages letters J, V and W were added to Latin. [[pt:minuscule|Minuscule]] writing invented for economy of expensive parchment turned to small letters.</p>
       <p />
-      <p>Latin language is dead long ago, but wide territory of Roman Empire, missionaire work of Vatican and Age of Discovery mostly done by Western world turned Latin to world’s alphabet #1. Latin is used in mathematics, medicine, phonetics, programming.</p>
+      <p>Latin language is dead long ago, but wide territory of Roman Empire, missionary work of Vatican and Age of Discovery mostly done by Western world turned Latin to world’s alphabet #1. Latin is used in mathematics, medicine, phonetics, programming.</p>
       <p />
       <p>Azerbaijan, Moldova, Turkmenistan and Uzbekistan adopted Latin with fall of the USSR.</p>
      </orig>
@@ -5013,7 +5013,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaires, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
+      <p>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
       <p />
       <p>Inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</p>
      </orig>
@@ -5077,7 +5077,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Alphabet was invented by Myanmar preacher Sara Ba Thaw and British missionaire James Fraser. Consists of capital [[ps:Latn|Latin]] letters, both upright and turned. There are no small letters. Due to missionaires’ efforts {{%|40}} of Lisu are protestants. China recognized the script in 1992.</p>
+      <p>The alphabet was invented by Myanmar preacher Sara Ba Thaw and British missionary James Fraser. Consists of capital [[ps:Latn|Latin]] letters, both upright and turned. There are no small letters. Due to missionaries’ efforts {{%|40}} of Lisu are protestants. China recognized the script in 1992.</p>
       <p />
       <p>There were other attempts to teach Lisu write: syllabic script resembling [[ps:Hani|Chinese ideographs]] (≈1925), Pinyin-based (Latin transliteration of Chinese) Latin (1957), [[ps:Plrd|Pollard alphabet]] (Miao) and [[ps:Mymr|Myanmar]]-based script.</p>
      </orig>
@@ -5696,7 +5696,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Old Permic script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
+      <p>The Old Permic script was proposed in 1372 by missionary Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
       <p />
       <p>Anbur is an important source for Finno-Ugric languages. Only [[ps:Hung|Hungarian runes]] are more ancient.</p>
      </orig>
@@ -6324,7 +6324,7 @@
      <orig>
       <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
       <p />
-      <p>Spanish missionaires (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did{{_}}not{{_}}understand direction of writing: the text was carved on bamboo planks, the knife was directed out from body, so they could write in one direction and read in another.</p>
+      <p>Spanish missionaries (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did{{_}}not{{_}}understand direction of writing: the text was carved on bamboo planks, the knife was directed out from body, so they could write in one direction and read in another.</p>
       <p />
       <p>There are several causes of fall of Baybayin: Spanish imported paper, pen and printing, Tagalog started to distinguish {{t|r/d}}, {{t|u/o}}, {{t|i/e}} under their influence. The last but not{{_}}the least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office job. By 19th century Baybayin had been almost dead, and the only thing remaining is to order Latin alphabet. There are modern attempts to revive Baybayin.</p>
       <p />
