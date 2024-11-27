@@ -4,7 +4,7 @@
    version="1.1"
    id="svg4"
    sodipodi:docname="1f1e8-1f1fa.svg"
-   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,18 +29,33 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4">
+     inkscape:current-layer="svg4"
+     showgrid="true">
     <sodipodi:guide
        position="6.923,26"
        orientation="1,0"
        id="guide4"
        inkscape:locked="false" />
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
   </sodipodi:namedview>
   <path
      fill="#002a8f"
-     d="M 32,5 H 4 C 2.9937952,5 2.0743181,5.371601 1.3713291,5.9850426 l -2e-7,24.0299144 C 2.0743179,30.628399 2.9937951,31 4,31 h 28 c 2.209,0 4,-1.791 4,-4 V 9 C 36,6.791 34.209,5 32,5 Z"
+     d="M 32,5 H 4 C 2.9937952,5 2.0743181,5.371601 1.3713291,5.9850426 l -2e-7,24.0299144 C 2.0743179,30.628399 2.9937951,31 4,31 h 28 c 2.209,0 4,-1.791 4,-4 v -1 l -3,-3 3,-2 v -6 l -3,-3 3,-2 V 9 C 36,6.791 34.209,5 32,5 Z"
      id="path1"
-     sodipodi:nodetypes="ssccsssss" />
+     sodipodi:nodetypes="ssccsssccccccss" />
   <path
      fill="#ffffff"
      d="M 6.923,15 36,15 V 10 H 6.923 Z m 0,11 H 36 V 21 H 6.923 Z"
