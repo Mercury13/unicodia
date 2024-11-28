@@ -301,6 +301,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2320, 0x2321 },     // Multi-storey integrals part 1
     { 0x239B, 0x23AE },     // Multi-storey ()[]{}, integral part 2
     { 0x23B0, 0x23B1 },     // Two-storey {}
+    { 0x298B, 0x2990 },     // Square brackets
     { 0x2A0A, 0x2A1C },     // Integrals bunch 2
 
     // Mathematical: Cambria → Noto
@@ -308,7 +309,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2205 },         // empty set
     { 0x22DA, 0x22DB },
     { 0x27EC, 0x27ED },
-    { 0x298B, 0x298C },
     { 0x2997, 0x2998 },
     { 0x2A79, 0x2AAD },  // greater-less
 };

@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1732749341
+ModificationTime: 1732754050
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -879,7 +879,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -891,7 +891,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1165
+BeginChars: 1114266 1173
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -40262,7 +40262,7 @@ StartChar: uniE008
 Encoding: 57352 57352 220
 Width: 800
 VWidth: 1105
-Flags: WO
+Flags: W
 HStem: 370 70<49.625 339 461 750.375> 695 20G<235.5 252.5 547.5 564.5>
 TtInstrs:
 SVTCA[y-axis]
@@ -155877,6 +155877,506 @@ SplineSet
  125 560 l 1,0,-1
 EndSplineSet
 Colour: ffe600
+EndChar
+
+StartChar: Math.LBracket.Under
+Encoding: 10635 10635 1165
+Width: 360
+Flags: W
+HStem: -230 42<100 323> -128 42<211.5 323> 718 42<211.5 323>
+VStem: 100 98<-72.2523 704.252>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_1
+ 17
+MDAP[rnd]
+PUSHB_1
+ 15
+MDRP[min,rnd,black]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 4
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 0
+SHP[rp2]
+PUSHB_1
+ 12
+MDRP[min,rnd,black]
+PUSHB_3
+ 12
+ 4
+ 10
+CALL
+PUSHB_4
+ 64
+ 12
+ 2
+ 9
+CALL
+PUSHB_2
+ 6
+ 16
+SHP[rp2]
+SHP[rp2]
+PUSHB_2
+ 19
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 197 746 basechar 0
+AnchorPoint: "Dot below" 197 -220 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 -188 m 29,0,-1
+ 323 -188 l 5,1,-1
+ 323 -230 l 5,2,-1
+ 100 -230 l 5,3,-1
+ 100 -188 l 29,0,-1
+100 -128 m 1,4,-1
+ 100 760 l 1,5,-1
+ 323 760 l 1,6,-1
+ 323 718 l 1,7,-1
+ 280 718 l 2,8,9
+ 246 718 246 718 222 705.5 c 128,-1,10
+ 198 693 198 693 198 646 c 2,11,-1
+ 198 -14 l 2,12,13
+ 198 -61 198 -61 222 -73.5 c 128,-1,14
+ 246 -86 246 -86 280 -86 c 2,15,-1
+ 323 -86 l 1,16,-1
+ 323 -128 l 1,17,-1
+ 100 -128 l 1,4,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.RBracket.Under
+Encoding: 10636 10636 1166
+Width: 360
+Flags: W
+HStem: -230 42<37 260> -128 42<37 148.5> 718 42<37 148.5>
+VStem: 162 98<-72.2523 704.252>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 17
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_1
+ 10
+MDAP[rnd]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 5
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+PUSHB_1
+ 15
+SHP[rp2]
+PUSHB_3
+ 5
+ 13
+ 10
+CALL
+PUSHB_4
+ 64
+ 5
+ 17
+ 9
+CALL
+PUSHB_2
+ 0
+ 10
+SHP[rp2]
+SHP[rp2]
+PUSHB_2
+ 19
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 163 746 basechar 0
+AnchorPoint: "Dot below" 163 -220 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+37 -128 m 1,0,-1
+ 37 -86 l 1,1,-1
+ 80 -86 l 2,2,3
+ 114 -86 114 -86 138 -73.5 c 128,-1,4
+ 162 -61 162 -61 162 -14 c 2,5,-1
+ 162 646 l 2,6,7
+ 162 693 162 693 138 705.5 c 128,-1,8
+ 114 718 114 718 80 718 c 2,9,-1
+ 37 718 l 1,10,-1
+ 37 760 l 1,11,-1
+ 260 760 l 1,12,-1
+ 260 -128 l 1,13,-1
+ 37 -128 l 1,0,-1
+37 -188 m 25,14,-1
+ 260 -188 l 25,15,-1
+ 260 -230 l 25,16,-1
+ 37 -230 l 25,17,-1
+ 37 -188 l 25,14,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.LBracket.TTick
+Encoding: 10637 10637 1167
+Width: 360
+Flags: W
+HStem: -128 42<211.5 323> 718 42<224.858 323>
+VStem: 100 98<-72.2523 670.656>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 17
+MDAP[rnd]
+PUSHB_1
+ 15
+MDRP[min,rnd,black]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 12
+MDRP[min,rnd,black]
+PUSHB_3
+ 12
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 12
+ 17
+ 9
+CALL
+PUSHB_1
+ 2
+SHP[rp2]
+PUSHB_2
+ 19
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 197 746 basechar 0
+AnchorPoint: "Dot below" 197 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 -128 m 1,0,-1
+ 100 760 l 1,1,-1
+ 323 760 l 1,2,-1
+ 323 718 l 1,3,-1
+ 280 718 l 2,4,5
+ 247.491833961 718 247.491833961 718 224.125370856 706.572871332 c 1,6,-1
+ 333 597.698242188 l 1,7,-1
+ 303.301757812 568 l 1,8,-1
+ 200 671 l 1,9,10
+ 198 660 198 660 198 646 c 2,11,-1
+ 198 -14 l 2,12,13
+ 198 -61 198 -61 222 -73.5 c 128,-1,14
+ 246 -86 246 -86 280 -86 c 2,15,-1
+ 323 -86 l 1,16,-1
+ 323 -128 l 1,17,-1
+ 100 -128 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.LBracket.BTick
+Encoding: 10639 10639 1168
+Width: 360
+Flags: W
+HStem: -128 42<224.721 323> 718 42<211.5 323>
+VStem: 100 98<-38.6555 704.252>
+AnchorPoint: "Umlaut" 197 746 basechar 0
+AnchorPoint: "Dot below" 197 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+100 -128 m 1,0,-1
+ 100 760 l 1,1,-1
+ 323 760 l 1,2,-1
+ 323 718 l 1,3,-1
+ 280 718 l 2,4,5
+ 246 718 246 718 222 705.5 c 128,-1,6
+ 198 693 198 693 198 646 c 2,7,-1
+ 198 -14 l 2,8,9
+ 198 -28 198 -28 200 -39 c 1,10,-1
+ 303 64 l 1,11,-1
+ 333 34 l 1,12,-1
+ 224 -75 l 1,13,14
+ 247 -86 247 -86 280 -86 c 2,15,-1
+ 323 -86 l 1,16,-1
+ 323 -128 l 1,17,-1
+ 100 -128 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.RBracket.BTick
+Encoding: 10638 10638 1169
+Width: 360
+Flags: W
+HStem: -128 42<37 135.279> 718 42<37 148.5>
+VStem: 162 98<-38.6555 704.252>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 13
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 4
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 12
+MDRP[min,rnd,black]
+PUSHB_3
+ 4
+ 12
+ 10
+CALL
+PUSHB_4
+ 64
+ 4
+ 13
+ 9
+CALL
+PUSHB_1
+ 9
+SHP[rp2]
+PUSHB_2
+ 19
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 163 746 basechar 0
+AnchorPoint: "Dot below" 163 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+27 34 m 1,0,-1
+ 57 64 l 1,1,-1
+ 160 -39 l 1,2,3
+ 162 -28 162 -28 162 -14 c 2,4,-1
+ 162 646 l 2,5,6
+ 162 693 162 693 138 705.5 c 128,-1,7
+ 114 718 114 718 80 718 c 2,8,-1
+ 37 718 l 1,9,-1
+ 37 760 l 1,10,-1
+ 260 760 l 1,11,-1
+ 260 -128 l 1,12,-1
+ 37 -128 l 1,13,-1
+ 37 -86 l 1,14,-1
+ 80 -86 l 2,15,16
+ 113 -86 113 -86 136 -75 c 1,17,-1
+ 27 34 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.RBracket.TTick
+Encoding: 10640 10640 1170
+Width: 360
+Flags: W
+HStem: -128 42<37 148.5> 718 42<37 135.279>
+VStem: 162 98<-72.2523 670.656>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 8
+MDRP[min,rnd,black]
+PUSHB_3
+ 14
+ 8
+ 10
+CALL
+PUSHB_4
+ 64
+ 14
+ 9
+ 9
+CALL
+PUSHB_1
+ 5
+SHP[rp2]
+PUSHB_2
+ 19
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 163 746 basechar 0
+AnchorPoint: "Dot below" 163 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+57 568 m 1,0,-1
+ 27 598 l 1,1,-1
+ 136 707 l 1,2,3
+ 113 718 113 718 80 718 c 2,4,-1
+ 37 718 l 1,5,-1
+ 37 760 l 1,6,-1
+ 260 760 l 1,7,-1
+ 260 -128 l 1,8,-1
+ 37 -128 l 1,9,-1
+ 37 -86 l 1,10,-1
+ 80 -86 l 2,11,12
+ 114 -86 114 -86 138 -73.5 c 128,-1,13
+ 162 -61 162 -61 162 -14 c 2,14,-1
+ 162 646 l 2,15,16
+ 162 660 162 660 160 671 c 1,17,-1
+ 57 568 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.LSBracket
+Encoding: 10647 10647 1171
+Width: 360
+Flags: W
+VStem: 84 147<3 629>
+AnchorPoint: "Umlaut" 197 746 basechar 0
+AnchorPoint: "Dot below" 197 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+323 -134 m 1,0,-1
+ 84 3 l 1,1,-1
+ 84 629 l 1,2,-1
+ 323 766 l 1,3,-1
+ 323 718 l 1,4,-1
+ 231 665 l 1,5,-1
+ 231 -33 l 1,6,-1
+ 323 -86 l 1,7,-1
+ 323 -134 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: Math.RSBracket
+Encoding: 10648 10648 1172
+Width: 360
+Flags: W
+VStem: 129 147<3 629>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_2
+ 9
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 163 746 basechar 0
+AnchorPoint: "Dot below" 163 -116 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+37 -134 m 1,0,-1
+ 37 -86 l 1,1,-1
+ 129 -33 l 1,2,-1
+ 129 665 l 1,3,-1
+ 37 718 l 1,4,-1
+ 37 766 l 1,5,-1
+ 276 629 l 1,6,-1
+ 276 3 l 1,7,-1
+ 37 -134 l 1,0,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
