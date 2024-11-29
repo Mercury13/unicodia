@@ -8,7 +8,6 @@
 #include <QAbstractTableModel>
 #include <QStyledItemDelegate>
 #include <QElapsedTimer>
-#include <QListView>
 
 // My libs
 #include "u_Vector.h"
@@ -51,6 +50,7 @@ class FmTofuStats;
 class WiLibCp;
 class WiShowcase;
 class BangButton;
+class QListView;
 
 
 namespace uc {
@@ -146,7 +146,7 @@ public:
 protected:
     uc::GlyphStyleSets& glyphSets;
     mutable TableCache tcache;
-    QListView* dummyLv = new QListView;
+    std::unique_ptr<QListView> dummyLv;
 
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,

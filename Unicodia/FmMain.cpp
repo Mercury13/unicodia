@@ -319,7 +319,8 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 
 VirtualCharsModel::VirtualCharsModel(
         QWidget* aOwner, uc::GlyphStyleSets& aGlyphSets)
-    : owner(aOwner), glyphSets(aGlyphSets)
+    : owner(aOwner), glyphSets(aGlyphSets),
+      dummyLv(new QListView)
 {
     tcache.connectSignals(this);
 }
@@ -401,7 +402,7 @@ void VirtualCharsModel::paintItem(
             vi.state = QStyle::State_Selected | QStyle::State_MouseOver
                         | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
                         | QStyle::State_On | QStyle::State_KeyboardFocusChange;
-            QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &vi, painter, dummyLv);
+            QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &vi, painter, dummyLv.get());
             paintItem1(painter, option, index, owner->palette().windowText().color());
             return;
         } else if (option.state.testFlag(QStyle::State_Selected)) {
