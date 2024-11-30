@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<locale native="日本語" international="Japanese" eng-terms="1" trigger-stamp="2024110">
+	<trigger-langs>
+		<lang iso="ja" />
+	</trigger-langs>
+	<!-- Alphabetical sorting, right now very simple and locale-independent
+		 non-meaning stub of alphabet = underscore _
+		 Limitations:
+		 • Difference within first 40 MEANING chars of term/block, otherwise they are deemed equal
+		 • Strings that differ with “equal” character only are forbidden:
+		    äbb < abc < äbd is supported, but abc < äbc isn’t.
+		 • 32-bit chars ALLOWED
+		 • Max alphabet 32K
+		 • # if alphabets unlimited -->
+	<alpha-sort>
+		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>abcdefghijklmnopqrstuvwxyz</alp>
+		<alp>____________________Ü_____</alp>
+		<alp>____________________ü_____</alp>
+	</alpha-sort>
+	<alpha-fixup />
+	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
+		 breaking alphabet order and referenceability.
+		 These blocks are marked with ellipsis. -->
+	<ellipsis text="…">
+		<blk start="2E80"  /><!-- CJK radicals supplement -->
+		<blk start="10100" /><!-- Aegean numbers -->
+		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="10F00" /><!-- Old Sogdian -->
+		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="1AFF0" /><!-- Kana extended-B -->
+		<blk start="1B000" /><!-- Kana supplement -->
+		<blk start="1B100" /><!-- Kana extended-A -->
+		<blk start="1B130" /><!-- Small kana extension -->
+		<blk start="1BCA0" /><!-- Shorthand format controls -->
+		<blk start="1D200" /><!-- Ancient Greek music notation -->
+		<blk start="1F650" /><!-- Ornamental dingbats -->
+	</ellipsis>
+	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
+	<wiki-templates>
+		<!-- first{{-}}second  →  typographic dash -->
+		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
+		<!-- first{{,-}}second  →  typographic comma-dash -->
+		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
+	</wiki-templates>
+	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
+	<icons sort-az="sort_AZ" />
+	<num-format dec-point="." />
+	<cardinal-rules default-outcome="other" />
+	<!-- Misc. language peculiarities
+			still-uses-burmese: uses pair Myanmar/Burmese
+				(writes location of Myanmar for Burmese script) -->
+	<peculiarities still-uses-burmese="0" />
+</locale>
