@@ -14,7 +14,7 @@ namespace ec {
     constexpr bool AT_NOEXCEPT = !RANGE_CHECK;
 
     namespace detail {
-        enum class ArrayInit { INST };
+        enum class ArrayInit : unsigned char { INST };
     }
     constexpr detail::ArrayInit ARRAY_INIT = detail::ArrayInit::INST;
 
