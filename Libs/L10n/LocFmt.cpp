@@ -13,7 +13,7 @@ const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
 
 const std::string_view loc::pluralNames[loc::Plural_N] =
-    { "zero", "one", "two", "few", "many", "other" };
+    { key::ZERO, key::ONE, key::TWO, key::FEW, key::MANY, key::OTHER };
 
 ///// DefaultQtyRule ///////////////////////////////////////////////////////////
 

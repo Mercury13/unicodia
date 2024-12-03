@@ -18,9 +18,32 @@
 
 namespace loc {
 
-    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER };
+    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER, BAD = 9 };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
     extern const std::string_view pluralNames[Plural_N];
+    inline Plural& operator ++ (Plural& x) {
+        x = static_cast<Plural>(static_cast<unsigned char>(x) + 1);
+        return x;
+    }
+    inline Plural& operator -- (Plural& x) {
+        x = static_cast<Plural>(static_cast<unsigned char>(x) - 1);
+        return x;
+    }
+
+    namespace key {
+        constexpr std::string_view ZERO = "zero";
+        constexpr std::string_view ONE = "one";
+        constexpr std::string_view TWO = "two";
+        constexpr std::string_view FEW = "few";
+        constexpr std::string_view MANY = "many";
+        constexpr std::string_view OTHER = "other";
+        constexpr char ST_ZERO = ZERO[0];
+        constexpr char ST_ONE_OTHER = ONE[0];
+        static_assert(ST_ONE_OTHER == OTHER[0]);
+        constexpr char ST_FEW = FEW[0];
+        constexpr char ST_TWO = TWO[0];
+        constexpr char ST_MANY = MANY[0];
+    }
 
     class PluralRule {   // interface
     public:
@@ -231,6 +254,9 @@ namespace loc {
                 std::string_view value);
 
         const Kv* findVal(std::string_view key) const noexcept;
+        const Kv* findExactPluralVal(Plural num) const noexcept;
+        static Plural parsePluralKey(const Kv& kv);
+        const Kv* findPluralVal(Plural num) const noexcept;
     };
 
     extern const loc::Locale* activeFmtLocale;
@@ -485,8 +511,7 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
                 ///    ordinal (5th lap completed), simple plural (laps completed)
                 /// @todo [future] short cardinal: {1|q=lap:s} completed
                 auto plural = chk.check(loc.cardinalRule());
-                auto kk = pluralNames[static_cast<int>(plural)];
-                const Kv* tmpl = findVal(kk);
+                const Kv* tmpl = findPluralVal(plural);
                 if (tmpl) {
                     newAdvance = replaceQuestion(currSub, currPos, *tmpl, x);
                 } else {
@@ -637,6 +662,73 @@ auto loc::Fmt<Ch>::findVal(std::string_view key) const noexcept -> const Kv*
         if (v.isKey(key)) {
             return &v;
         }
+    }
+    return nullptr;
+}
+
+
+template <class Ch>
+auto loc::Fmt<Ch>::findExactPluralVal(loc::Plural plural) const noexcept -> const Kv*
+{
+    return findVal(pluralNames[static_cast<unsigned char>(plural)]);
+}
+
+
+template <class Ch>
+loc::Plural loc::Fmt<Ch>::parsePluralKey(const Kv& kv)
+{
+    if (kv.key.empty())
+        return Plural::BAD;
+    switch (kv.key[0]) {
+    case key::ST_ZERO:
+        if (kv.isKey(key::ZERO))
+            return Plural::ZERO;
+        break;
+    case key::ST_ONE_OTHER:
+        if (kv.isKey(key::ONE))
+            return Plural::ONE;
+        if (kv.isKey(key::OTHER))
+            return Plural::OTHER;
+        break;
+    case key::ST_TWO:
+        if (kv.isKey(key::TWO))
+            return Plural::TWO;
+        break;
+    case key::ST_FEW:
+        if (kv.isKey(key::FEW))
+            return Plural::FEW;
+        break;
+    case key::ST_MANY:
+        if (kv.isKey(key::MANY))
+            return Plural::MANY;
+        break;
+    }
+    return Plural::BAD;
+}
+
+
+template <class Ch>
+auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
+{
+    auto mainKey = pluralNames[static_cast<unsigned char>(plural)];
+    const Kv* fallbacks[Plural_N] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+    for (const Kv& v : values) {
+        if (v.isKey(mainKey)) {
+            return &v;
+        }
+        // Otherwise parse
+        if (auto newKey = parsePluralKey(v); newKey != Plural::BAD)
+            fallbacks[static_cast<unsigned char>(newKey)] = &v;
+    }
+    // Go forward
+    for (loc::Plural p = plural; p < Plural::OTHER;) { ++p;
+        if (auto q = fallbacks[static_cast<unsigned char>(p)])
+            return q;
+    }
+    // Go back
+    for (loc::Plural p = plural; p > Plural::ONE;) { --p;
+        if (auto q = fallbacks[static_cast<unsigned char>(p)])
+            return q;
     }
     return nullptr;
 }
