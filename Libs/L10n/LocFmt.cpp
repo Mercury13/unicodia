@@ -7,7 +7,6 @@ template class loc::FmtL<char>;
 template class loc::FmtL<wchar_t>;
 template class loc::FmtL<char8_t>;
 
-
 const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
 const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
@@ -34,3 +33,8 @@ loc::Plural loc::ZsgnChecker::check(const PluralRule& plu) const
 
 loc::Plural loc::ZunsChecker::check(const PluralRule& plu) const
     { return plu.ofUint(v); }
+
+///// Checks, unit tests, etc //////////////////////////////////////////////////
+
+static_assert(loc::Plural::OTHER < loc::Plural::BAD);
+static_assert(loc::key::ST_ONE_OTHER == loc::key::OTHER[0]);

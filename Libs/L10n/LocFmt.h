@@ -39,7 +39,6 @@ namespace loc {
         constexpr std::string_view OTHER = "other";
         constexpr char ST_ZERO = ZERO[0];
         constexpr char ST_ONE_OTHER = ONE[0];
-        static_assert(ST_ONE_OTHER == OTHER[0]);
         constexpr char ST_FEW = FEW[0];
         constexpr char ST_TWO = TWO[0];
         constexpr char ST_MANY = MANY[0];
