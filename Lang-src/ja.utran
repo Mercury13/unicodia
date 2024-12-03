@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ut type="full-transl">
  <info>
-  <orig lang="en" fname="en.uorig" />
-  <transl lang="ja" pseudoloc="true" />
+  <orig lang="en" fname="..\Japanese_Resources\uorig\en.uorig" />
+  <transl lang="ja" pseudoloc="false" />
  </info>
  <file name="lang.ini" idless="false">
   <format name="ini">
@@ -73,6 +73,7 @@
    </group>
    <text id="Copied">
     <orig>Copied</orig>
+    <transl>コピー済み</transl>
    </text>
   </group>
   <group id="Dating">
@@ -81,63 +82,82 @@
     <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
     <text id="1">
      <orig>1st</orig>
+     <transl>1st</transl>
     </text>
     <text id="2">
      <orig>2nd</orig>
+     <transl>2nd</transl>
     </text>
     <text id="3">
      <orig>3rd</orig>
+     <transl>3rd</transl>
     </text>
     <text id="4">
      <orig>4th</orig>
+     <transl>4th</transl>
     </text>
     <text id="5">
      <orig>5th</orig>
+     <transl>5th</transl>
     </text>
     <text id="6">
      <orig>6th</orig>
+     <transl>6th</transl>
     </text>
     <text id="7">
      <orig>7th</orig>
+     <transl>7th</transl>
     </text>
     <text id="8">
      <orig>8th</orig>
+     <transl>8th</transl>
     </text>
     <text id="9">
      <orig>9th</orig>
     </text>
     <text id="10">
      <orig>10th</orig>
+     <transl>9th</transl>
     </text>
     <text id="11">
      <orig>11th</orig>
+     <transl>11th</transl>
     </text>
     <text id="12">
      <orig>12th</orig>
+     <transl>12th</transl>
     </text>
     <text id="13">
      <orig>13th</orig>
+     <transl>13th</transl>
     </text>
     <text id="14">
      <orig>14th</orig>
+     <transl>14th</transl>
     </text>
     <text id="15">
      <orig>15th</orig>
+     <transl>15th</transl>
     </text>
     <text id="16">
      <orig>16th</orig>
+     <transl>16th</transl>
     </text>
     <text id="17">
      <orig>17th</orig>
+     <transl>17th</transl>
     </text>
     <text id="18">
      <orig>18th</orig>
+     <transl>18th</transl>
     </text>
     <text id="19">
      <orig>19th</orig>
+     <transl>19th</transl>
     </text>
     <text id="20">
      <orig>20th</orig>
+     <transl>20th</transl>
     </text>
    </group>
    <group id="Name">
@@ -157,6 +177,7 @@
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
+     <transl>≈$</transl>
     </text>
     <text id="YApproxBc">
      <orig>≈$ BC</orig>
@@ -164,6 +185,7 @@
     </text>
     <text id="Decade">
      <orig>$s</orig>
+     <transl>$s</transl>
     </text>
     <text id="Century">
      <orig>$ century</orig>
@@ -202,7 +224,7 @@
     <text id="NonChar">
      <orig>Non-character</orig>
      <au-cmt>Test: FFFF (go to FFFD, then manually)</au-cmt>
-     <transl>Non-character文字以外</transl>
+     <transl>非文字</transl>
     </text>
     <text id="Empty">
      <orig>Vacant position</orig>
@@ -260,6 +282,7 @@
     </text>
     <text id="Uc">
      <orig>Unicode {1}</orig>
+     <transl>Unicode {1}</transl>
     </text>
     <text id="Em">
      <orig>Emoji {1}</orig>
@@ -588,18 +611,22 @@
     <text id="Digit">
      <orig>Digit</orig>
      <au-cmt>Test: 0…9</au-cmt>
+     <transl>数字</transl>
     </text>
     <text id="SpecDigit">
      <orig>Special digit</orig>
      <au-cmt>Test: ¹²³</au-cmt>
+     <transl>特殊数字</transl>
     </text>
     <text id="Number">
      <orig>Number</orig>
      <au-cmt>Test: ½⅓¼</au-cmt>
+     <transl>番号</transl>
     </text>
     <text id="Or">
      <orig>{1} or {2}</orig>
      <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
+     <transl>{1} または {2}</transl>
     </text>
     <text id="CjkRare">
      <orig>CJK number (rarely)</orig>
@@ -738,31 +765,39 @@
     <text id="Plane">
      <orig>Plane</orig>
      <au-cmt>Test: any script</au-cmt>
+     <transl>Plane</transl>
     </text>
     <text id="base">
      <orig>Base</orig>
      <au-cmt>Test: props of any base plane script</au-cmt>
+     <transl>Base</transl>
     </text>
     <text id="Utf8">
      <orig>UTF-8</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-8</transl>
     </text>
     <text id="Utf16">
      <orig>UTF-16</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-16</transl>
     </text>
     <text id="Utf32">
      <orig>UTF-32</orig>
+     <transl>UTF-32</transl>
     </text>
     <text id="Html">
      <orig>HTML</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>HTML</transl>
     </text>
     <text id="AllVer">
      <orig>All characters are in Unicode version</orig>
+     <transl>すべての文字はUnicodeバージョンです</transl>
     </text>
     <text id="EmojiVer">
      <orig>Approved in emoji version</orig>
+     <transl>絵文字バージョンで承認</transl>
     </text>
     <text id="EmojiV">
      <orig>Emoji {1}</orig>
@@ -8415,6 +8450,7 @@
    <text id="MyName">
     <orig>Mikhail Merkuryev</orig>
     <au-cmt>Mikhail Merkuryev, Михаил Меркурьев, Михайло Меркур’єв</au-cmt>
+    <transl>Mikhail Merkuryev</transl>
    </text>
    <text id="HomePage">
     <orig>Home page</orig>
@@ -8430,6 +8466,7 @@
    </text>
    <text id="NonComm">
     <orig>(CC&amp;nbsp;BY-NC-SA, talk to them about commercial distribution!)</orig>
+    <transl>(CC&amp;nbsp;BY-NC-SA, talk to them about commercial distribution!)</transl>
    </text>
    <text id="License">
     <orig>Licensed under &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</orig>
