@@ -719,7 +719,7 @@ template <class Ch>
 auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 {
     auto mainKey = pluralNames[static_cast<unsigned char>(plural)];
-    const Kv* fallbacks[Plural_N] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+    const Kv* fallbacks[Plural_N] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
     bool hasFallback = false;
     for (const Kv& v : values) {
         if (v.isKey(mainKey)) {
