@@ -18,8 +18,10 @@
 
 namespace loc {
 
-    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER, BAD = 9 };
-    constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
+    /// @warning  Locales should NEVER return REST and BAD
+    ///           REST may be used in strings, but not BAD
+    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER, REST, BAD = 9 };
+    constexpr unsigned Plural_N = static_cast<unsigned>(Plural::REST) + 1;
     extern const std::string_view pluralNames[Plural_N];
     inline Plural& operator ++ (Plural& x) {
         x = static_cast<Plural>(static_cast<unsigned char>(x) + 1);
@@ -37,11 +39,13 @@ namespace loc {
         constexpr std::string_view FEW = "few";
         constexpr std::string_view MANY = "many";
         constexpr std::string_view OTHER = "other";
+        constexpr std::string_view REST = "rest";
         constexpr char ST_ZERO = ZERO[0];
         constexpr char ST_ONE_OTHER = ONE[0];
         constexpr char ST_FEW = FEW[0];
         constexpr char ST_TWO = TWO[0];
         constexpr char ST_MANY = MANY[0];
+        constexpr char ST_REST = REST[0];
     }
 
     class PluralRule {   // interface
@@ -701,6 +705,11 @@ loc::Plural loc::Fmt<Ch>::parsePluralKey(const Kv& kv)
         if (kv.isKey(key::MANY))
             return Plural::MANY;
         break;
+    case key::ST_REST:
+        if (kv.isKey(key::REST))
+            return Plural::REST;
+        break;
+    default: ;
     }
     return Plural::BAD;
 }
@@ -711,21 +720,30 @@ auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 {
     auto mainKey = pluralNames[static_cast<unsigned char>(plural)];
     const Kv* fallbacks[Plural_N] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+    bool hasFallback = false;
     for (const Kv& v : values) {
         if (v.isKey(mainKey)) {
             return &v;
         }
         // Otherwise parse
-        if (auto newKey = parsePluralKey(v); newKey != Plural::BAD)
+        if (auto newKey = parsePluralKey(v); newKey != Plural::BAD) {
             fallbacks[static_cast<unsigned char>(newKey)] = &v;
+            hasFallback = true;
+        }
     }
+    // Most substitutions have no fallbacks
+    if (!hasFallback)
+        return nullptr;
+    // Check Rest
+    if (auto q = fallbacks[static_cast<unsigned char>(Plural::REST)])
+        return q;
     // Go forward
     for (loc::Plural p = plural; p < Plural::OTHER;) { ++p;
         if (auto q = fallbacks[static_cast<unsigned char>(p)])
             return q;
     }
     // Go back
-    for (loc::Plural p = plural; p > Plural::ONE;) { --p;
+    for (loc::Plural p = plural; p > Plural::ZERO;) { --p;
         if (auto q = fallbacks[static_cast<unsigned char>(p)])
             return q;
     }

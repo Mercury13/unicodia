@@ -12,7 +12,7 @@ const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
 
 const std::string_view loc::pluralNames[loc::Plural_N] =
-    { key::ZERO, key::ONE, key::TWO, key::FEW, key::MANY, key::OTHER };
+    { key::ZERO, key::ONE, key::TWO, key::FEW, key::MANY, key::OTHER, key::REST };
 
 ///// DefaultQtyRule ///////////////////////////////////////////////////////////
 
@@ -36,5 +36,5 @@ loc::Plural loc::ZunsChecker::check(const PluralRule& plu) const
 
 ///// Checks, unit tests, etc //////////////////////////////////////////////////
 
-static_assert(loc::Plural::OTHER < loc::Plural::BAD);
+static_assert(loc::Plural::REST < loc::Plural::BAD);
 static_assert(loc::key::ST_ONE_OTHER == loc::key::OTHER[0]);

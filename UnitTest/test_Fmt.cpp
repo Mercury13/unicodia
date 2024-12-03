@@ -488,17 +488,6 @@ TEST (FmtAdvNum, RepeatingQun)
 }
 
 
-///
-///  Plural form missing → do dumb replace
-///
-TEST (FmtAdvNum, Missing)
-{
-    loc::Fmt fmt("{1|one=? lap|few=? laps} completed{2}");
-    fmt(6, "!");
-    EXPECT_EQ("6 completed!", fmt.str());
-}
-
-
 TEST (FmtAdvNum, NoQun)
 {
     loc::Fmt fmt("{1|one=One lap|many=? laps} completed{2}");
@@ -518,7 +507,66 @@ TEST (FmtAdvNum, Escape)
 }
 
 
-/////  Give string /////////////////////////////////////////////////////////////
+///// Fallback numbers /////////////////////////////////////////////////////////
+
+
+TEST (FallbackNum, ToOther)
+{
+    loc::Fmt fmt("{1|one=One lap|other=? laps} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("3 laps completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToMany)
+{
+    loc::Fmt fmt("{1|many=? laps} completed{2}");
+    fmt(1)("!");
+    EXPECT_EQ("1 laps completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToFew)
+{
+    loc::Fmt fmt("{1|one=One lap|few=? laps} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("3 laps completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToTwo)
+{
+    loc::Fmt fmt("{1|one=One lap|two=? laps} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("3 laps completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToOne)
+{
+    loc::Fmt fmt("{1|one=One lap} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("One lap completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToZero)
+{
+    loc::Fmt fmt("{1|zero=No laps} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("No laps completed!", fmt.str());
+}
+
+
+TEST (FallbackNum, ToRest)
+{
+    loc::Fmt fmt("{1|zero=No laps|one=One lap|two=Two laps|few=Few laps|Other=Other laps|rest=Something} completed{2}");
+    fmt(3)("!");
+    EXPECT_EQ("Something completed!", fmt.str());
+}
+
+
+///// Give string //////////////////////////////////////////////////////////////
 
 
 ///
