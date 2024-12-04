@@ -37,6 +37,8 @@ _(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree to 
 * As English uses lots of capital letters, translations to other languages may use small where English is capital. Refer to Russian/Ukrainian for letter case.
 * See Russian script/language rule.
 
+_About war jargon._ Open-source software with neutral license and without special purpose (e.g. censorship circumvention) should be neutral. Period.
+
 # How to build?
 * Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
 * Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
