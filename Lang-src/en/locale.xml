@@ -67,8 +67,11 @@
 	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
 	<icons sort-az="sort_AZ" />
 	<!-- Numeric format. Decimal point → only BMP char, test in Tibetan fractions
-		 thou-min-length — minimum length to get thousand separator -->
-	<num-format dec-point="." thou-min-length="4" />
+		 thou-min-length — minimum length to get thousand separator
+			Test in numeric values
+		 thou-min-length-dense — same in dense text
+			Test with Latin (N characters) and CJK ideographs (N characters) -->
+	<num-format dec-point="." thou-min-length="4" thou-min-length-dense="5" />
 	<!-- Rules for building cardinal plural forms: 1 lap, 2 laps
 			All lines are sequentially checked: take remainder by MOD,
 			and if it’s in MIN..MAX, take OUTCOME and stop.

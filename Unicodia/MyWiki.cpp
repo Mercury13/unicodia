@@ -825,6 +825,53 @@ namespace {
                 std::forward<Args>(args)...);
     }
 
+    using Buf = char[300];     // should be enough
+
+    constinit const std::u8string_view NNBSP_RAW = u8"\u202F";  // HTML view is still funky
+    constinit const std::u8string_view NNBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
+
+    template <std::integral T>
+    std::string_view formatNum(Buf& r, T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
+    {
+        Buf tmp;
+        auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
+        const char* end = q.ptr;
+        const char* src = tmp;
+        char* dest = r;
+        // Minus
+        if constexpr (std::is_signed_v<T>) {
+            if (src != end && !std::isdigit(*src)) {
+                *(dest++) = *(src++);
+            }
+        }
+        constexpr auto PERIOD = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
+        // The rest
+        auto length = end - src;
+        if (length < fmt.minLength || length <= PERIOD) {
+            // No formatting
+            dest = std::copy(src, end, dest);
+            return { r, dest };
+        }
+        // Formatting
+        while (src != end) {
+            *(dest++) = *(src++);
+            --length;
+            if (length != 0 && length % PERIOD == 0) {
+                dest = std::copy(space.begin(), space.end(), dest);
+            }
+        }
+        return { r, dest };
+    }
+
+    template <std::integral T>
+    void appendNum(QString& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
+    {
+        Buf tmp;
+        auto q = formatNum(tmp, x, fmt, NNBSP_HT);
+        const auto bytes = QByteArray::fromRawData(tmp, q.length());
+        r.append(bytes);
+    }
+
     void Eng::appendNSpeakers(const TextLang& x)
     {
         char locBuf[40];
@@ -978,10 +1025,10 @@ namespace {
         } else if (name == "fontface"sv) {
             s += context.font->familiesComma();
         } else if (name == "nchars"sv) {
-            s += QString::number(uc::N_CPS);
+            appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand);
         } else if (name == "nemoji"sv) {
             auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
-            s += QString::number(nEmoji);
+            appendNum(s, nEmoji, loc::active::numfmt.denseThousand);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
         } else if (name == "funky"sv) {
@@ -1045,52 +1092,6 @@ namespace {
                        ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
 
-    using Buf = char[60];     // should be enough
-
-    constinit const std::u8string_view nnbsp = u8"\u202F";  // HTML view is still funky
-
-    template <std::integral T>
-    std::string_view formatNum(Buf& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
-    {
-        Buf tmp;
-        auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
-        const char* end = q.ptr;
-        const char* src = tmp;
-        char* dest = r;
-        // Minus
-        if constexpr (std::is_signed_v<T>) {
-            if (src != end && !std::isdigit(*src)) {
-                *(dest++) = *(src++);
-            }
-        }
-        constexpr auto PERIOD = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
-        // The rest
-        auto length = end - src;
-        if (length < fmt.minLength || length <= PERIOD) {
-            // No formatting
-            dest = std::copy(src, end, dest);
-            return { r, dest };
-        }
-        // Formatting
-        while (src != end) {
-            *(dest++) = *(src++);
-            --length;
-            if (length != 0 && length % PERIOD == 0) {
-                dest = std::copy(nnbsp.begin(), nnbsp.end(), dest);
-            }
-        }
-        return { r, dest };
-    }
-
-    template <std::integral T>
-    void appendNum(QString& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
-    {
-        Buf tmp;
-        auto q = formatNum(tmp, x, fmt);
-        const auto bytes = QByteArray::fromRawData(tmp, q.length());
-        r.append(bytes);
-    }
-
     template <class T>
     inline void appendHeader(QString& text, const T& x,
                              std::u8string_view addText = {},
@@ -1100,7 +1101,7 @@ namespace {
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
         Buf buf;
-        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.thousand);
+        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.denseThousand, NNBSP_HT);
         str::append(text, loc::get("Prop.Head.NChars").preformNum(sv, x.nChars));
         if (!addText.empty()) {
             text += " ";
@@ -1714,7 +1715,7 @@ QString mywiki::toString(const uc::Numeric& numc)
     }
     if (numc.altInt != 0) {
         Buf tmp;
-        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand);
+        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand, NNBSP_HT);
         buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), str::toU8sv(q)));
     }
     return buf;

@@ -45,6 +45,7 @@ namespace loc
                 unsigned minLength = DEFAULT_MIN_LENGTH;
                 // There’ll be other problems
             } thousand;
+            Thousand denseThousand;  ///< thousand format in dense text
         } numfmt;
         struct Ellipsis {
             std::u8string text;

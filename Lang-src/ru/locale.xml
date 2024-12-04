@@ -51,7 +51,7 @@
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
 	<icons sort-az="sort_AYa" />
-	<num-format dec-point="," thou-min-length="5" />
+	<num-format dec-point="," thou-min-length="5" thou-min-length-dense="5" />
 	<cardinal-rules default-outcome="many">
 		<rule mod="100" min="5" max="20" outcome="many" /><!-- 5 кругов … 20 кругов, 105 кругов … 120 кругов -->
 		<rule mod="10" min="1" max="1" outcome="one" /><!-- 1 круг, 21 круг, 101 круг -->

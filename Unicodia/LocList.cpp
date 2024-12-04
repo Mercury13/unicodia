@@ -241,6 +241,10 @@ namespace {
         r.numfmt.thousand.minLength =
                 hNumFormat.attribute("thou-min-length").as_uint(
                             loc::Lang::Numfmt::Thousand::DEFAULT_MIN_LENGTH);
+        r.numfmt.denseThousand = r.numfmt.thousand;
+        r.numfmt.denseThousand.minLength =
+                hNumFormat.attribute("thou-min-length-dense").as_uint(
+                            r.numfmt.thousand.minLength);
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);
