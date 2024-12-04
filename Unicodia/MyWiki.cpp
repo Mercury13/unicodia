@@ -827,7 +827,9 @@ namespace {
 
     using Buf = char[300];     // should be enough
 
-    constinit const std::u8string_view NNBSP_RAW = u8"\u202F";  // HTML view is still funky
+    // In Tahoma: 1px normal inter-char, 2px too bad, 3px some-what-OK, 4px normal space
+    constinit const std::u8string_view NNBSP_RAW = u8"\u202F";
+    // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
     constinit const std::u8string_view NNBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
 
     template <std::integral T>
@@ -867,7 +869,7 @@ namespace {
     void appendNum(QString& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
     {
         Buf tmp;
-        auto q = formatNum(tmp, x, fmt, NNBSP_HT);
+        auto q = formatNum(tmp, x, fmt, NNBSP_RAW);
         const auto bytes = QByteArray::fromRawData(tmp, q.length());
         r.append(bytes);
     }
