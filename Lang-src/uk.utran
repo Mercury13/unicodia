@@ -8273,8 +8273,8 @@
      <transl>іврит, самаритянська арамейська</transl>
     </text>
     <text id="Text">
-     <orig>Comes from Paleo-Hebrew script. According to Bible, Samaritans came to Palestina from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
-     <transl>Походить з палеоєврейського письма. За Біблією, самаритяни прийшли у палестину з Міжріччя, і прийняли єврейську релігію та культуру. На 2021 існує не{{_}}більше 700 самаритян.</transl>
+     <orig>Comes from Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to Bible, Samaritans came to Palestine from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
+     <transl>Походить з палеоєврейського ([[ps:Phnx|фінікійського]]) письма. За Біблією, самаритяни прийшли у Палестину з Міжріччя, і прийняли єврейську релігію та культуру. На 2021 існує не{{_}}більше 700 самаритян.</transl>
     </text>
    </group>
    <group id="Sarb">
@@ -13628,6 +13628,12 @@
     <text id="Text">
      <orig>Added euro '''€''' and object replacement character FFFC.</orig>
      <transl>Додані євро '''€''' та символ-замінник для об’єкта FFFC.</transl>
+    </text>
+   </group>
+   <group id="3.1">
+    <text id="Text">
+     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <transl>Перше використання [[pt:plane|площин]] 1 та 2. [[pt:utf16|UTF-16]] та шістнадцять додаткових площин запропоновані п’ятьма роками раніше.</transl>
     </text>
    </group>
    <group id="6.2">

@@ -8272,8 +8272,8 @@
      <transl>иврит, самаритянский арамейский</transl>
     </text>
     <text id="Text">
-     <orig>Comes from Paleo-Hebrew script. According to Bible, Samaritans came to Palestina from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
-     <transl>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую религию и культуру. На 2021 существует не{{_}}более 700 самаритян.</transl>
+     <orig>Comes from Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to Bible, Samaritans came to Palestine from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
+     <transl>Происходит из палеоеврейского ([[ps:Phnx|финикийского]]) письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую религию и культуру. На 2021 существует не{{_}}более 700 самаритян.</transl>
     </text>
    </group>
    <group id="Sarb">
@@ -13625,6 +13625,12 @@
     <text id="Text">
      <orig>Added euro '''€''' and object replacement character FFFC.</orig>
      <transl>Добавлены евро '''€''' и символ-заменитель объекта FFFC.</transl>
+    </text>
+   </group>
+   <group id="3.1">
+    <text id="Text">
+     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <transl>Первое использование [[pt:plane|плоскостей]] 1 и 2. [[pt:utf16|UTF-16]] и шестнадцать дополнительных плоскостей предложены пятью годами ранее.</transl>
     </text>
    </group>
    <group id="6.2">

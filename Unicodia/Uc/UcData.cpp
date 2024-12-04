@@ -109,7 +109,7 @@ constinit const uc::Version uc::versionInfo[] {
     { u8"2.0",  { 1996, Month::JUL }, Vfg::TEXT },
     { u8"2.1",  { 1998, Month::MAY }, Vfg::TEXT },
     { u8"3.0",  { 1999, Month::SEP }, NO_FLAGS },
-    { u8"3.1",  { 2001, Month::MAR }, NO_FLAGS },
+    { u8"3.1",  { 2001, Month::MAR }, Vfg::TEXT },
     { u8"3.2",  { 2002, Month::MAR }, NO_FLAGS },
     { u8"4.0",  { 2003, Month::APR }, NO_FLAGS },
     { u8"4.1",  { 2005, Month::MAR }, NO_FLAGS },
