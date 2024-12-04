@@ -810,7 +810,7 @@ namespace {
                 if (auto& num = cp->numeric(); num.isPresent()) {
                     QString r = loc::get(uc::numTypeInfo[num.ecType].searchLocKey);
                     r += ' ';
-                    r += mywiki::toString(num);
+                    r += mywiki::toString(num, mywiki::NumPlace::RAW);
                     return r;
                 }
             }

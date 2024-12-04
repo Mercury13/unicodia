@@ -172,6 +172,7 @@ namespace mywiki {
     bool isEngTermShown(const uc::Term& term);
 
     void hackDocument(QTextDocument* doc);
-    QString toString(const uc::Numeric& numc);
+    enum class NumPlace : unsigned char { RAW, HTML };
+    QString toString(const uc::Numeric& numc, NumPlace place);
 
 }   // namespace mywiki

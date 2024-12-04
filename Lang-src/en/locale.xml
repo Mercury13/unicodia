@@ -68,9 +68,10 @@
 	<icons sort-az="sort_AZ" />
 	<!-- Numeric format. Decimal point → only BMP char, test in Tibetan fractions
 		 thou-min-length — minimum length to get thousand separator
-			Test in numeric values
+			Test in numeric values: click e.g. 1, “Digit” link, search icon
 		 thou-min-length-dense — same in dense text
-			Test with Latin (N characters) and CJK ideographs (N characters) -->
+			Test with Latin (N characters) and CJK ideographs (N characters):
+			click Latin/CJK char, “Latin/CJK ideo” link -->
 	<num-format dec-point="." thou-min-length="4" thou-min-length-dense="5" />
 	<!-- Rules for building cardinal plural forms: 1 lap, 2 laps
 			All lines are sequentially checked: take remainder by MOD,

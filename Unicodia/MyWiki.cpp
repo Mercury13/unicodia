@@ -825,12 +825,12 @@ namespace {
                 std::forward<Args>(args)...);
     }
 
-    using Buf = char[300];     // should be enough
+    using Buf = char[150];     // should be enough
 
     // In Tahoma: 1px normal inter-char, 2px too bad, 3px some-what-OK, 4px normal space
     constinit const std::u8string_view NNBSP_RAW = u8"\u202F";
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
-    constinit const std::u8string_view NNBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
+    constinit const std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
 
     template <std::integral T>
     std::string_view formatNum(Buf& r, T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
@@ -866,10 +866,12 @@ namespace {
     }
 
     template <std::integral T>
-    void appendNum(QString& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
+    void appendNum(QString& r, T x,
+                   const loc::Lang::Numfmt::Thousand& fmt,
+                   std::u8string_view space)
     {
         Buf tmp;
-        auto q = formatNum(tmp, x, fmt, NNBSP_RAW);
+        auto q = formatNum(tmp, x, fmt, space);
         const auto bytes = QByteArray::fromRawData(tmp, q.length());
         r.append(bytes);
     }
@@ -1027,10 +1029,10 @@ namespace {
         } else if (name == "fontface"sv) {
             s += context.font->familiesComma();
         } else if (name == "nchars"sv) {
-            appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand);
+            appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
         } else if (name == "nemoji"sv) {
             auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
-            appendNum(s, nEmoji, loc::active::numfmt.denseThousand);
+            appendNum(s, nEmoji, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
         } else if (name == "funky"sv) {
@@ -1103,7 +1105,7 @@ namespace {
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
         Buf buf;
-        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.denseThousand, NNBSP_HT);
+        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
         str::append(text, loc::get("Prop.Head.NChars").preformNum(sv, x.nChars));
         if (!addText.empty()) {
             text += " ";
@@ -1696,18 +1698,19 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 }
 
 
-QString mywiki::toString(const uc::Numeric& numc)
+QString mywiki::toString(const uc::Numeric& numc, mywiki::NumPlace place)
 {
+    auto space = (place == NumPlace::RAW) ? NNBSP_RAW : SMALL_NBSP_HT;
     QString buf;
     switch (numc.fracType()) {
     case uc::FracType::NONE:        // should not happen
     case uc::FracType::INTEGER:
-        appendNum(buf, numc.num, loc::active::numfmt.thousand);
+        appendNum(buf, numc.num, loc::active::numfmt.thousand, space);
         break;
     case uc::FracType::VULGAR:
-        appendNum(buf, numc.num, loc::active::numfmt.thousand);
+        appendNum(buf, numc.num, loc::active::numfmt.thousand, space);
         str::append(buf, '/');
-        appendNum(buf, numc.denom, loc::active::numfmt.thousand);
+        appendNum(buf, numc.denom, loc::active::numfmt.thousand, space);
         break;
     case uc::FracType::DECIMAL: {
             auto val = static_cast<double>(numc.num) / numc.denom;
@@ -1717,7 +1720,7 @@ QString mywiki::toString(const uc::Numeric& numc)
     }
     if (numc.altInt != 0) {
         Buf tmp;
-        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand, NNBSP_HT);
+        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand, space);
         buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), str::toU8sv(q)));
     }
     return buf;
@@ -1969,7 +1972,7 @@ namespace {
             sp.sep();
             appendNonBullet(text, numc.type().locKey,
                     "<a href='pt:number' class='popup'>", "</a>");
-            text += mywiki::toString(numc);
+            text += mywiki::toString(numc, mywiki::NumPlace::HTML);
         }
 
         // Bidi writing
