@@ -153,9 +153,9 @@ namespace mywiki {
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
     void appendCopyable(QString& text, unsigned x, std::string_view clazz="copy");
-    void appendCopyable2(QString& text,
-                         const QString& full,
-                         const QString& shrt,
+    void appendCopyableHt(QString& text,
+                         const char* toCopy,
+                         const char* toView,
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void appendNoFont(QString& x, std::u8string_view wiki);

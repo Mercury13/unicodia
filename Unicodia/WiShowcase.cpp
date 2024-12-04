@@ -366,7 +366,7 @@ void WiShowcase::set(
         QString ucText;
         if (shortBuf[0] != '\0') {
             ucText = "U+";
-            mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
+            mywiki::appendCopyableHt(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
         }
         ui->lbCharCode->setText(ucText);
         ui->btCopy->setEnabled(true);

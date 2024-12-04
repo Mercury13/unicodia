@@ -852,6 +852,7 @@ namespace {
         if (length < fmt.minLength || length <= PERIOD) {
             // No formatting
             dest = std::copy(src, end, dest);
+            *dest = 0;
             return { r, dest };
         }
         // Formatting
@@ -862,6 +863,7 @@ namespace {
                 dest = std::copy(space.begin(), space.end(), dest);
             }
         }
+        *dest = 0;
         return { r, dest };
     }
 
@@ -1499,21 +1501,23 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
 void mywiki::appendCopyable(QString& text, unsigned x, std::string_view clazz)
 {
     char c[40];
+    Buf buf;
     snprintf(c, std::size(c), "%u", x);
-    appendCopyable(text, c, clazz);
+    formatNum(buf, x, loc::active::numfmt.thousand, SMALL_NBSP_HT);
+    appendCopyableHt(text, c, buf, clazz);
 }
 
 
-void mywiki::appendCopyable2(
-        QString& text, const QString& full,
-        const QString& shrt, std::string_view clazz)
+void mywiki::appendCopyableHt(
+        QString& text, const char* toCopy,
+        const char* toView, std::string_view clazz)
 {
     str::append(text, "<a href='c:"sv);
-        text += full;
+        text += toCopy;
         str::append(text, "' class='"sv);
         str::append(text, clazz);
         str::append(text, "' >"sv);
-    text += shrt.toHtmlEscaped();
+    text += toView;
     str::append(text, "</a>"sv);
 }
 
