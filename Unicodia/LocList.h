@@ -39,6 +39,12 @@ namespace loc
         } icons;
         struct Numfmt {
             char16_t decimalPoint = '.';
+            struct Thousand {
+                static constexpr unsigned DEFAULT_MIN_LENGTH = 1;
+                static constexpr unsigned DEFAULT_PERIOD = 3;
+                unsigned minLength = DEFAULT_MIN_LENGTH;
+                // There’ll be other problems
+            } thousand;
         } numfmt;
         struct Ellipsis {
             std::u8string text;

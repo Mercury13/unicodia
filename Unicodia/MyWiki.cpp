@@ -1045,6 +1045,52 @@ namespace {
                        ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
 
+    using Buf = char[60];     // should be enough
+
+    constinit const std::u8string_view nnbsp = u8"\u202F";  // HTML view is still funky
+
+    template <std::integral T>
+    std::string_view formatNum(Buf& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
+    {
+        Buf tmp;
+        auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
+        const char* end = q.ptr;
+        const char* src = tmp;
+        char* dest = r;
+        // Minus
+        if constexpr (std::is_signed_v<T>) {
+            if (src != end && !std::isdigit(*src)) {
+                *(dest++) = *(src++);
+            }
+        }
+        constexpr auto PERIOD = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
+        // The rest
+        auto length = end - src;
+        if (length < fmt.minLength || length <= PERIOD) {
+            // No formatting
+            dest = std::copy(src, end, dest);
+            return { r, dest };
+        }
+        // Formatting
+        while (src != end) {
+            *(dest++) = *(src++);
+            --length;
+            if (length != 0 && length % PERIOD == 0) {
+                dest = std::copy(nnbsp.begin(), nnbsp.end(), dest);
+            }
+        }
+        return { r, dest };
+    }
+
+    template <std::integral T>
+    void appendNum(QString& r, T x, const loc::Lang::Numfmt::Thousand& fmt)
+    {
+        Buf tmp;
+        auto q = formatNum(tmp, x, fmt);
+        const auto bytes = QByteArray::fromRawData(tmp, q.length());
+        r.append(bytes);
+    }
+
     template <class T>
     inline void appendHeader(QString& text, const T& x,
                              std::u8string_view addText = {},
@@ -1053,7 +1099,9 @@ namespace {
         str::append(text, "<p><nobr><b>");
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
-        str::append(text, loc::get("Prop.Head.NChars").arg(x.nChars));
+        Buf buf;
+        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.thousand);
+        str::append(text, loc::get("Prop.Head.NChars").preformNum(sv, x.nChars));
         if (!addText.empty()) {
             text += " ";
             str::append(text, addText);
@@ -1651,12 +1699,12 @@ QString mywiki::toString(const uc::Numeric& numc)
     switch (numc.fracType()) {
     case uc::FracType::NONE:        // should not happen
     case uc::FracType::INTEGER:
-        str::append(buf, numc.num);
+        appendNum(buf, numc.num, loc::active::numfmt.thousand);
         break;
     case uc::FracType::VULGAR:
-        str::append(buf, numc.num);
-        str::append(buf, "/");
-        str::append(buf, numc.denom);
+        appendNum(buf, numc.num, loc::active::numfmt.thousand);
+        str::append(buf, '/');
+        appendNum(buf, numc.denom, loc::active::numfmt.thousand);
         break;
     case uc::FracType::DECIMAL: {
             auto val = static_cast<double>(numc.num) / numc.denom;
@@ -1665,7 +1713,9 @@ QString mywiki::toString(const uc::Numeric& numc)
         } break;
     }
     if (numc.altInt != 0) {
-        buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), numc.altInt));
+        Buf tmp;
+        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand);
+        buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), str::toU8sv(q)));
     }
     return buf;
 }

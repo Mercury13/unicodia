@@ -45,7 +45,7 @@
 	</wiki-templates>
 	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
 	<icons sort-az="sort_AZ" />
-	<num-format dec-point="." />
+	<num-format dec-point="." thou-min-length="4" />
 	<cardinal-rules default-outcome="other" />
 	<!-- Misc. language peculiarities
 			still-uses-burmese: uses pair Myanmar/Burmese

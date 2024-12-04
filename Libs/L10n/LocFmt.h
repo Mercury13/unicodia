@@ -195,16 +195,24 @@ namespace loc {
         void eat(Sv x) { ss(x); }
         void eat() {}
 
+        /// Preformatted number: both preformatted string and numeric value
+        void preformN(Sv preform, unsigned char x) { prefN(preform, static_cast<unsigned>(x)); }
+        void preformN(Sv preform, signed char x) { prefN(preform, static_cast<int>(x)); }
+        void preformN(Sv preform, unsigned short x) { prefN(preform, static_cast<unsigned>(x)); }
+        void preformN(Sv preform, signed short x) { prefN(preform, static_cast<int>(x)); }
+        void preformN(Sv preform, unsigned int x) { prefN(preform, x); }
+        void preformN(Sv preform, signed int x) { prefN(preform, x); }
+        void preformN(Sv preform, unsigned long x) { prefN(preform, x); }
+        void preformN(Sv preform, signed long x) { prefN(preform, x); }
+        void preformN(Sv preform, unsigned long long x) { prefN(preform, x); }
+        void preformN(Sv preform, signed long long x) { prefN(preform, x); }
+
         /// 1. Stops substituting.
         /// 2. Returns temporary link to data.
         Str&& giveStr() { lnkFirst = NO_LINK; return std::move(d); }
     protected:
-        void nn(int x);
-        void nn(unsigned int x);
-        void nn(long x);
-        void nn(unsigned long x);
-        void nn(long long x);
-        void nn(unsigned long long x);
+        template <std::integral T>
+            void nn(T x);
         ///  Why such an architecture?
         ///  There will be three modes:
         ///  • cardinal (5 laps)
@@ -213,7 +221,10 @@ namespace loc {
         ///  Currently cardinal only. All modes are stored in substitutions.
         ///  Everything is parsed on substituting, just for simplicity.
         ///  We see ordinal substitution → ask ordinal plural rule
-        void nnn(std::string_view x, const Zchecker& chk);
+        template <class Sv1>
+            void nnnSv(Sv1 x, const Zchecker& chk);
+        template <std::integral T>
+            void prefN(Sv sv, T x);
         void ss(Sv x);
     private:
         struct Kv {
@@ -250,11 +261,12 @@ namespace loc {
         /// Smartly replaces substitution with byWhat,
         ///   unescaping data and replacing ? with value
         /// @return addition to “advance” variable
+        template <class Sv1>
         size_t replaceQuestion(
                 const Zsubst& sub,
                 size_t pos,
                 const Kv& byWhat,
-                std::string_view value);
+                Sv1 value);
 
         const Kv* findVal(std::string_view key) const noexcept;
         const Kv* findExactPluralVal(Plural num) const noexcept;
@@ -419,80 +431,37 @@ void loc::Fmt<Ch>::init()
 }   // init()
 
 
-template <class Ch>
-void loc::Fmt<Ch>::nn(int x)
+template <class Ch> template <std::integral T>
+void loc::Fmt<Ch>::nn(T x)
 {
     if (lnkFirst == NO_LINK)
         return;
     char buf[std::numeric_limits<int>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
-    nnn(sv, ZsgnChecker(x));
+    if constexpr (std::is_signed_v<T>) {
+        nnnSv(sv, ZsgnChecker(x));
+    } else {
+        nnnSv(sv, ZunsChecker(x));
+    }
 }
 
 
-template <class Ch>
-void loc::Fmt<Ch>::nn(unsigned int x)
+template <class Ch> template <std::integral T>
+void loc::Fmt<Ch>::prefN(Sv sv, T x)
 {
     if (lnkFirst == NO_LINK)
         return;
-    char buf[std::numeric_limits<unsigned>::digits10 + 4];
-    auto q = std::to_chars(buf, buf + std::size(buf), x);
-    std::string_view sv(buf, q.ptr);
-    nnn(sv, ZunsChecker(x));
+    if constexpr (std::is_signed_v<T>) {
+        nnnSv(sv, ZsgnChecker(x));
+    } else {
+        nnnSv(sv, ZunsChecker(x));
+    }
 }
 
 
-template <class Ch>
-void loc::Fmt<Ch>::nn(long x)
-{
-    if (lnkFirst == NO_LINK)
-        return;
-    char buf[std::numeric_limits<long>::digits10 + 4];
-    auto q = std::to_chars(buf, buf + std::size(buf), x);
-    std::string_view sv(buf, q.ptr);
-    nnn(sv, ZsgnChecker(x));
-}
-
-
-template <class Ch>
-void loc::Fmt<Ch>::nn(unsigned long x)
-{
-    if (lnkFirst == NO_LINK)
-        return;
-    char buf[std::numeric_limits<unsigned long>::digits10 + 4];
-    auto q = std::to_chars(buf, buf + std::size(buf), x);
-    std::string_view sv(buf, q.ptr);
-    nnn(sv, ZunsChecker(x));
-}
-
-
-template <class Ch>
-void loc::Fmt<Ch>::nn(long long x)
-{
-    if (lnkFirst == NO_LINK)
-        return;
-    char buf[std::numeric_limits<long long>::digits10 + 4];
-    auto q = std::to_chars(buf, buf + std::size(buf), x);
-    std::string_view sv(buf, q.ptr);
-    nnn(sv, ZsgnChecker(x));
-}
-
-
-template <class Ch>
-void loc::Fmt<Ch>::nn(unsigned long long x)
-{
-    if (lnkFirst == NO_LINK)
-        return;
-    char buf[std::numeric_limits<unsigned long long>::digits10 + 4];
-    auto q = std::to_chars(buf, buf + std::size(buf), x);
-    std::string_view sv(buf, q.ptr);
-    nnn(sv, ZunsChecker(x));
-}
-
-
-template <class Ch>
-void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
+template <class Ch> template <class Sv1>
+void loc::Fmt<Ch>::nnnSv(Sv1 x, const Zchecker& chk)
 {
     size_t lnkPrev = NO_LINK;
     size_t lnkCurr = lnkFirst;
@@ -751,9 +720,9 @@ auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 }
 
 
-template <class Ch>
+template <class Ch> template <class Sv1>
 size_t loc::Fmt<Ch>::replaceQuestion(
-        const Zsubst& sub, size_t pos, const Kv& byWhat, std::string_view value)
+        const Zsubst& sub, size_t pos, const Kv& byWhat, Sv1 value)
 {
     // byWhat is empty?
     if (byWhat.isValEmpty()) {

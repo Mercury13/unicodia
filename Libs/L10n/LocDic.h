@@ -43,6 +43,8 @@ namespace loc {
         bool isFull() const { return fIsFull; }
         template <class... T>
             std::u8string arg(const T&... x) const;
+        template <std::integral T>
+            std::u8string preformNum(std::string_view preform, T val) const;
 
     #ifdef QT_STRINGS
         // QString functions
@@ -82,6 +84,15 @@ std::u8string loc::Text::arg(const T&... x) const
 {
     loc::FmtL<char8_t> fmt(fSrc);
     (fmt.eat(x), ...);
+    return fmt.giveStr();
+}
+
+
+template <std::integral T>
+std::u8string loc::Text::preformNum(std::string_view preform, T val) const
+{
+    loc::FmtL<char8_t> fmt(fSrc);
+    fmt.preformN(str::toU8sv(preform), val);
     return fmt.giveStr();
 }
 

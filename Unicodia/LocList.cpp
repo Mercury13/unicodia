@@ -238,6 +238,9 @@ namespace {
         if (!dp.empty() && dp[0] < 65536) {
             r.numfmt.decimalPoint = dp[0];
         }
+        r.numfmt.thousand.minLength =
+                hNumFormat.attribute("thou-min-length").as_uint(
+                            loc::Lang::Numfmt::Thousand::DEFAULT_MIN_LENGTH);
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);

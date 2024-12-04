@@ -4,6 +4,10 @@
 
 namespace cp {
 
+    // Spaces
+    constexpr char32_t NBSP = 0xA0;
+    constexpr char32_t NNBSP = 0x202F;  // narrow no-break space
+
     // Specials
     constexpr char32_t ZWJ = 0x200D;
 
