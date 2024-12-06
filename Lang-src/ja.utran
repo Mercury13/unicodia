@@ -114,6 +114,7 @@
     </text>
     <text id="9">
      <orig>9th</orig>
+     <transl>9th</transl>
     </text>
     <text id="10">
      <orig>10th</orig>
@@ -426,9 +427,11 @@
      </au-cmt>
      <text id="Name">
       <orig>Boundary neutral</orig>
+      <transl>境界ニュートラル</transl>
      </text>
      <text id="Short">
       <orig>Boundary neutral</orig>
+      <transl>境界ニュートラル</transl>
      </text>
      <text id="Text">
       <orig>
@@ -436,6 +439,11 @@
        <p />
        <p>See [[pt:graphic|graphic character]].</p>
       </orig>
+      <transl>
+       <p>[[pt:control|制御文字]]、結合子、およびグラフィック表現のない [[pk:E0000|タグ]]。</p>
+       <p />
+       <p>[[pt:graphic|グラフィック文字]] を参照してください。</p>
+      </transl>
      </text>
     </group>
     <group id="CS">
@@ -445,12 +453,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Common separator</orig>
+      <transl>共通セパレーター</transl>
      </text>
      <text id="Short">
       <orig>Common separator</orig>
+      <transl>共通セパレーター</transl>
      </text>
      <text id="Text">
       <orig>When appear in European or Arabic number, these characters become its part.</orig>
+      <transl>ヨーロッパ数字やアラビア数字に表示される場合、これらの文字はその一部になります。</transl>
      </text>
     </group>
     <group id="EN">
@@ -460,12 +471,15 @@
      </au-cmt>
      <text id="Name">
       <orig>European number</orig>
+      <transl>ヨーロッパ数字</transl>
      </text>
      <text id="Short">
       <orig>European number</orig>
+      <transl>ヨーロッパ数字</transl>
      </text>
      <text id="Text">
       <orig>Written left to right. There are subtle rules related to Arabic text.</orig>
+      <transl>左から右に書きます。アラビア語のテキストには微妙なルールがあります。</transl>
      </text>
     </group>
     <group id="ES">
@@ -475,12 +489,15 @@
      </au-cmt>
      <text id="Name">
       <orig>European separator</orig>
+      <transl>ヨーロッパ セパレーター</transl>
      </text>
      <text id="Short">
       <orig>European separator</orig>
+      <transl>ヨーロッパ セパレーター</transl>
      </text>
      <text id="Text">
       <orig>+ and − characters inside a European number become its part. ± character is outside of this class.</orig>
+      <transl>ヨーロッパの数字の中の + と - の文字は、その一部になります。± 文字はこのクラスの外にあります。</transl>
      </text>
     </group>
     <group id="ET">
@@ -490,24 +507,30 @@
      </au-cmt>
      <text id="Name">
       <orig>European terminator</orig>
+      <transl>ヨーロッパ ターミネーター</transl>
      </text>
      <text id="Short">
       <orig>European terminator</orig>
+      <transl>ヨーロッパ ターミネーター</transl>
      </text>
      <text id="Text">
       <orig>Currency and other characters that commonly appear near numbers. When near a European number, these characters become its part.</orig>
+      <transl>数字の近くによく表示される通貨やその他の文字。ヨーロッパの数字の近くにある場合、これらの文字は数字の一部になります。</transl>
      </text>
     </group>
     <group id="L">
      <au-cmt>Test: ABC…</au-cmt>
      <text id="Name">
       <orig>Left-to-right</orig>
+      <transl>左から右へ</transl>
      </text>
      <text id="Short">
       <orig>→</orig>
+      <transl>→</transl>
      </text>
      <text id="Text">
       <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
+      <transl>左から右に書かれたラテン文字、キリル文字、その他の文字。[[ps:ハニ|CJK表意文字]]はUnicodeの中で最も数の多い部分であるため、最も重要なクラスです。</transl>
      </text>
     </group>
     <group id="NSM">
@@ -517,45 +540,56 @@
      </au-cmt>
      <text id="Name">
       <orig>Non-spacing mark</orig>
+      <transl>スペースなしマーク</transl>
      </text>
      <text id="Short">
       <orig>Non-spacing mark</orig>
+      <transl>スペースなしマーク</transl>
      </text>
      <text id="Text">
       <orig>Non-spacing and enclosing combining marks. Writing direction is borrowed from base character.</orig>
+      <transl>スペースなしの結合記号と囲み記号。筆記方向は基本文字から借用されます。</transl>
      </text>
     </group>
     <group id="ON">
      <au-cmt>Test: !"…</au-cmt>
      <text id="Name">
       <orig>Other neutral</orig>
+      <transl>その他のニュートラル</transl>
      </text>
      <text id="Short">
       <orig>Other neutral</orig>
+      <transl>その他のニュートラル</transl>
      </text>
      <text id="Text">
       <orig>Adapts to direction of surrounding text.</orig>
+      <transl>周囲のテキストの方向に合わせて調整します。</transl>
      </text>
     </group>
     <group id="NM">
      <au-cmt>Test: most braces, e.g. ()</au-cmt>
      <text id="Name">
       <orig>Mirroring neutral</orig>
+      <transl>ミラーリング ニュートラル</transl>
      </text>
      <text id="Short">
       <orig>Mirroring neutral</orig>
+      <transl>ミラーリング ニュートラル</transl>
      </text>
      <text id="Text">
       <orig>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to direction of surrounding text.</orig>
+      <transl>括弧やその他の類似の文字は反転されます。これらの文字はすべて中立で、周囲のテキストの方向に適応します。</transl>
      </text>
     </group>
     <group id="R">
      <au-cmt>Test: Hebrew</au-cmt>
      <text id="Name">
       <orig>Right-to-left</orig>
+      <transl>右から左へ</transl>
      </text>
      <text id="Short">
       <orig>←</orig>
+      <transl>右から左へ</transl>
      </text>
      <text id="Text">
       <orig>
@@ -563,6 +597,11 @@
        <p />
        <p>[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</p>
       </orig>
+      <transl>
+       <p>[[ps:Hebr|Hebrew]] および中東の歴史文字。</p>
+       <p />
+       <p>[[pb:AL|アラビア文字]] はヨーロッパの数字とは動作が異なり、別のカテゴリを構成します。</p>
+      </transl>
      </text>
     </group>
     <group id="S">
@@ -572,12 +611,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Segment separator</orig>
+      <transl>セグメント セパレーター</transl>
      </text>
      <text id="Short">
       <orig>Segment separator</orig>
+      <transl>セグメント セパレーター</transl>
      </text>
      <text id="Text">
       <orig>Three control characters: 09 (tabulation), 0B (vertical tabulation), 1F (separator 1).</orig>
+      <transl>3 つの制御文字: 09 (タブ)、0B (垂直タブ)、1F (区切り文字 1)。</transl>
      </text>
     </group>
     <group id="WS">
@@ -630,21 +672,26 @@
     </text>
     <text id="CjkRare">
      <orig>CJK number (rarely)</orig>
+     <transl>CJK番号 （まれ）</transl>
     </text>
     <text id="CjkAccount">
      <orig>CJK number (anti-forgery)</orig>
+     <transl>CJK番号 （偽造防止）</transl>
     </text>
     <text id="CjkZhuang">
      <orig>Zhuang number</orig>
+     <transl>荘番号</transl>
     </text>
     <text id="CjkVietnamese">
      <orig>Vietnamese number</orig>
+     <transl>ベトナム語の番号</transl>
     </text>
    </group>
    <group id="Input">
     <text id="Bullet">
      <orig>Input</orig>
      <au-cmt>Test: any char with alt input</au-cmt>
+     <transl>入力</transl>
     </text>
     <text id="Birman">
      <orig>Birman</orig>
@@ -652,22 +699,27 @@
       <p>Means Ilya Birman’s typography layout</p>
       <p>Test: U+011B both Alt code and Birman</p>
      </au-cmt>
+     <transl>バーマン</transl>
     </text>
     <text id="AltCode">
      <orig>Alt code</orig>
      <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+     <transl>Alt コード</transl>
     </text>
     <text id="Sometimes">
      <orig>sometimes {1}</orig>
      <au-cmt>Test: Tab U+09</au-cmt>
+     <transl>時々 {1}</transl>
     </text>
     <text id="Twice">
      <orig>twice {1}</orig>
      <au-cmt>Test: combining acute</au-cmt>
+     <transl>2回</transl>
     </text>
     <text id="Space">
      <orig>Space</orig>
      <au-cmt>Test: NBSP U+00A0</au-cmt>
+     <transl>空白</transl>
     </text>
    </group>
    <group id="Bullet">
@@ -688,6 +740,7 @@
     <text id="VerAppear">
      <orig>Appeared in version</orig>
      <au-cmt>Test: block info</au-cmt>
+     <transl>登場バージョン</transl>
     </text>
     <text id="NonChars">
      <orig>Non-characters</orig>
@@ -765,12 +818,12 @@
     <text id="Plane">
      <orig>Plane</orig>
      <au-cmt>Test: any script</au-cmt>
-     <transl>Plane</transl>
+     <transl>プレーン</transl>
     </text>
     <text id="base">
      <orig>Base</orig>
      <au-cmt>Test: props of any base plane script</au-cmt>
-     <transl>Base</transl>
+     <transl>ベース</transl>
     </text>
     <text id="Utf8">
      <orig>UTF-8</orig>
@@ -807,87 +860,114 @@
     <text id="EmojiV2">
      <orig>=Unicode {1}, </orig>
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>=Unicode {1}, </transl>
     </text>
     <text id="EmojiVA">
      <orig>≈Unicode {1}, </orig>
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>≈Unicode {1}, </transl>
     </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
+     <transl>, Unicode {1} に準じる</transl>
     </text>
     <text id="NewChar">
      <orig>New characters</orig>
+     <transl>新しい文字</transl>
     </text>
     <text id="NewCjk">
      <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <transl>…[[ps:Hani|CJK表意文字]]</transl>
     </text>
     <text id="NewNew">
      <orig>…from new scripts</orig>
+     <transl>...新しいスクリプトから</transl>
     </text>
     <text id="NewEx">
      <orig>…from existing scripts</orig>
+     <transl>…既存のスクリプトから</transl>
     </text>
     <text id="NewFmt">
      <orig>…[[pt:format|format]] characters without script</orig>
+     <transl>…[[pt:format|format]] 文字（スクリプトなし）</transl>
     </text>
     <text id="NewSym">
      <orig>…misc. symbols</orig>
+     <transl>…その他の記号</transl>
     </text>
     <text id="Transient">
      <orig>Characters that would be deleted later</orig>
+     <transl>後で削除される文字</transl>
     </text>
     <text id="TotalChar">
      <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>合計文字数（[[pt:control|control]]を含む）</transl>
     </text>
     <text id="NewEm">
      <orig>New emoji</orig>
+     <transl>新しい絵文字</transl>
     </text>
     <text id="NewEm1">
      <orig>…Single-character and VS-16</orig>
+     <transl>…シングル文字とVS-16</transl>
     </text>
     <text id="NewEm1This">
      <orig>……from this Unicode</orig>
+     <transl>……このUnicodeから</transl>
     </text>
     <text id="NewEm1Prev">
      <orig>……from previous versions</orig>
+     <transl>……以前のバージョンより</transl>
     </text>
     <text id="NewEmSkin">
      <orig>…Skintone sequences</orig>
+     <transl>…スキントーン シーケンス</transl>
     </text>
     <text id="NewEmMulti">
      <orig>…Multiracial sequences</orig>
+     <transl>…多民族シーケンス</transl>
     </text>
     <text id="NewEmRight">
      <orig>…Right-facing sequences</orig>
+     <transl>…右向きシーケンス</transl>
     </text>
     <text id="NewEmRightSkin">
      <orig>…Right-facing skintone sequences</orig>
+     <transl>…右向きのスキントーン シーケンス</transl>
     </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
+     <transl>…その他の [[pt:zwj|ZWJ]] シーケンス</transl>
     </text>
     <text id="NewEmFlag">
      <orig>…National flags</orig>
+     <transl>…国旗</transl>
     </text>
     <text id="NewEmOtherNonZwj">
      <orig>…Other non-[[pt:zwj|ZWJ]] sequences</orig>
+     <transl>…その他の非[[pt:zwj|ZWJ]]シーケンス</transl>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
+     <transl>絵文字の合計</transl>
     </text>
     <text id="NewSc">
      <orig>New scripts</orig>
+     <transl>新しいスクリプト</transl>
     </text>
     <text id="TotalSc">
      <orig>Total scripts</orig>
+     <transl>スクリプトの合計</transl>
     </text>
     <text id="Extend">
      <orig>Extended</orig>
      <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
+     <transl>拡張</transl>
     </text>
     <text id="Shrunk">
      <orig>Shrunk</orig>
      <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
+     <transl>縮小</transl>
     </text>
    </group>
    <group id="Os">
@@ -911,135 +991,173 @@
     <text id="FontsFor">
      <orig>Fonts for U+%04X</orig>
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
+     <transl>U+%04X のフォント</transl>
     </text>
     <text id="Style">
      <orig>(OS style)</orig>
+     <transl>（OSスタイル）</transl>
     </text>
    </group>
    <group id="Life">
     <text id="Alive">
      <orig>alive ''(no threats for main language, like Cyrillic)''</orig>
+     <transl>有効 ''(キリル文字のような主要言語に対する脅威はありません)''</transl>
     </text>
     <text id="Danger">
      <orig>endangered due to language ''(like Cherokee)''</orig>
+     <transl>言語 ''(チェロキー語など)''のせいで絶滅の危機に瀕している</transl>
     </text>
     <text id="Competing">
      <orig>endangered due to script competition ''(like Tai Tham)''</orig>
+     <transl>脚本の競争により絶滅の危機に瀕している ''(タイ・タムなど)''</transl>
     </text>
     <text id="Dead">
      <orig>dead ''(will lose soon/recently lost users, like Nüshu)''</orig>
+     <transl>死語 ''(Nüshu のように、もうすぐ失う/最近失ったユーザー)''</transl>
     </text>
     <text id="Sacred">
      <orig>religious ''(dead in secular use, like Coptic)''</orig>
+     <transl>宗教的な ''(コプト語のように世俗的な用法では使われていない)''</transl>
     </text>
     <text id="New">
      <orig>new ''(appeared recently, like N’Ko)''</orig>
+     <transl>新しい ''(N'Ko のように最近登場)''</transl>
     </text>
     <text id="Reborn">
      <orig>revived ''(like Tifinagh)''</orig>
+     <transl>復活 ''(ティフィナのように)''</transl>
     </text>
     <text id="Exp">
      <orig>experimental ''(attempt to make a new script for existing language, like Deseret)''</orig>
+     <transl>実験的 ''(デゼレトのような既存の言語に新しい文字を作ろうとする試み)''</transl>
     </text>
     <text id="Conserved">
      <orig>historical, no decipherment needed ''(like Glagolitic)''</orig>
+     <transl>歴史的なもので、解読の必要はありません ''(グラゴル文字のように)''</transl>
     </text>
     <text id="Undeciphered">
      <orig>undecipered ''(like Linear A)''</orig>
+     <transl>解読不能 ''(線文字Aのように)''</transl>
     </text>
     <text id="Partly">
      <orig>partly deciphered ''(like Carian)''</orig>
+     <transl>部分的に解読された ''(カリアンのように)''</transl>
     </text>
     <text id="Deciphered">
      <orig>deciphered ''(like cuneiform)''</orig>
+     <transl>解読された ''(楔形文字のように)''</transl>
     </text>
     <text id="ForRev">
      <orig>made for revival of dead language ''(like Osage)''</orig>
+     <transl>死語 ''(オセージ語など)' 'の復活のために作られた</transl>
     </text>
    </group>
    <group id="Dir">
     <text id="L">
      <orig>→</orig>
      <au-cmt>Test: any LTR script, e.g. Latin</au-cmt>
+     <transl>→</transl>
     </text>
     <text id="R">
      <orig>←</orig>
      <au-cmt>Test: any RTL script, eg Arabic, Hebrew</au-cmt>
+     <transl>←</transl>
     </text>
     <text id="L_cjk">
      <orig>→ ''(historically ←↓↓ in columns)''</orig>
      <au-cmt>Test: any CJK script: Hani, Nshu</au-cmt>
+     <transl>→ ''(列内の履歴←↓↓)''</transl>
     </text>
     <text id="L_cunei">
      <orig>←↓↓ in columns, then →</orig>
      <au-cmt>Test: cuneiform</au-cmt>
+     <transl>列の ←↓↓ なら、→。</transl>
     </text>
     <text id="L_ogam">
      <orig>→, ↑</orig>
      <au-cmt>Test: Ogam</au-cmt>
+     <transl>→, ↑</transl>
     </text>
     <text id="L_col">
      <orig>↓↓→ in columns</orig>
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
+     <transl>↓↓→ 列内</transl>
     </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>↓</transl>
     </text>
     <text id="Both">
      <orig>wrote both ← and →</orig>
      <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
+     <transl>← と → の両方を列記</transl>
     </text>
     <text id="R_col">
      <orig>←↓↓ in columns</orig>
      <au-cmt>Test: Kits, Mero</au-cmt>
+     <transl>←↓↓ 列内</transl>
     </text>
     <text id="R_most">
      <orig>mostly ←</orig>
      <au-cmt>Test: Cprt, Lydi, Sarb</au-cmt>
+     <transl>大部分 ←</transl>
     </text>
     <text id="Sogd">
      <orig>↓↓→ in columns; ←</orig>
      <au-cmt>Test: Sogd (new!), Chrs</au-cmt>
+     <transl>↓↓→ 列内; ←</transl>
     </text>
    </group>
    <group id="Type">
     <text id="Alph">
      <orig>[[pt:alphabet|alphabetic]]{{-}}''like Cyrillic''</orig>
+     <transl>[[pt:alphabet|アルファベット]]{{-}}''キリル文字のような''</transl>
     </text>
     <text id="Argu">
      <orig>[[pt:arguable|arguable]]{{-}}''like Thaana''</orig>
+     <transl>[[pt:arguable|arguable]]{{-}}''Thaana のような''</transl>
     </text>
     <text id="Cons">
      <orig>[[pt:abjad|consonant]]{{-}}''like Hebrew''</orig>
+     <transl>[[pt:abjad|consonant]]{{-}}''ヘブライ語のような''</transl>
     </text>
     <text id="Syll">
      <orig>[[pt:syllabic|syllabic]]{{-}}''like Japanese Katakana/Hiragana''</orig>
+     <transl>[[pt:syllabic|syllabic]]{{-}}'日本のカタカナ/ひらがなのような''</transl>
     </text>
     <text id="Asyl">
      <orig>alphasyllabic{{-}}''like Old Persian cuneiform''</orig>
+     <transl>alphasyllabic{{-}}''古代ペルシア楔形文字のような''</transl>
     </text>
     <text id="Abug">
      <orig>[[pt:abugida|abugida]]{{-}}''like Ethiopic''</orig>
+     <transl>[[pt:abugida|abugida]]{{-}}''エチオピアのような''</transl>
     </text>
     <text id="Brah">
      <orig>[[pt:brahmic|Brahmic abugida]]{{-}}''like Devanagari''</orig>
+     <transl>[[pt:brahmic|Brahmic abugida]]{{-}}'デヴァナーガリーのような''</transl>
     </text>
     <text id="Hier">
      <orig>[[pt:hiero|ideographic]]{{-}}''like CJK ideographs''</orig>
+     <transl>[[pt:hiero|ideographic]]{{-}}''CJK 表意文字のような''</transl>
     </text>
     <text id="Syhi">
      <orig>ideosyllabic{{-}}''like Linear B''</orig>
+     <transl>ideosyllabic{{-}}''線文字Bのような''</transl>
     </text>
     <text id="Cohi">
      <orig>ideoconsonant{{-}}''like Egyptian hieroglyphs''</orig>
+     <transl>ideoconsonant{{-}}''エジプトの象形文字のような''</transl>
     </text>
     <text id="Code">
      <orig>[[pt:code|codes and shorthand]]{{-}}''like Braille embossings''</orig>
+     <transl>[[pt:code|codes and shorthand]]{{-}}''点字のような'''</transl>
     </text>
     <text id="Nota">
      <orig>[[pt:nontext|non-text]]{{-}}''like musical notes''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>[[pt:nontext|non-text]]{{-}}''音符のような''</transl>
     </text>
    </group>
    <group id="Kx">
@@ -1047,18 +1165,22 @@
     <text id="Bullet">
      <orig>Radical</orig>
      <au-cmt>Link will be auto-added</au-cmt>
+     <transl>ラジカル</transl>
     </text>
     <text id="Data">
      <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
+     <transl>{1} {2} {3|単数=? ストローク|複数=? ストローク}</transl>
     </text>
    </group>
    <group id="Ver">
     <text id="Ext">
      <orig>Extended</orig>
+     <transl>拡張</transl>
     </text>
     <text id="Shr">
      <orig>Shrunk</orig>
+     <transl>縮小</transl>
     </text>
    </group>
    <group id="Lang">
@@ -1066,105 +1188,136 @@
      <text id="Unit">
       <orig>{1} people</orig>
       <au-cmt>Specially for Toto</au-cmt>
+      <transl>{1} 人</transl>
      </text>
      <text id="Tho">
       <orig>{1}k</orig>
+      <transl>{1}k</transl>
      </text>
      <text id="Mil">
       <orig>{1}M</orig>
+      <transl>{1}M</transl>
      </text>
      <text id="Bil">
       <orig>{1}bn</orig>
+      <transl>{1}bn</transl>
      </text>
     </group>
     <text id="Qty">
      <orig>{1} as of {2}</orig>
+     <transl>{2} 時点の {1}</transl>
     </text>
     <text id="QtyNative">
      <orig>{1} as native as of {2}</orig>
+     <transl>{1} は {2} と同様にネイティブ</transl>
     </text>
     <text id="QtyIndia">
      <orig>{1} in India as of {2}</orig>
      <au-cmt>Test: Nag</au-cmt>
+     <transl>{2} 時点のインドにおける {1}</transl>
     </text>
     <text id="Decade">
      <orig>{1}s</orig>
+     <transl>{1}s</transl>
     </text>
    </group>
    <group id="LangLoc">
     <text id="AfricaW">
      <orig>Western Africa</orig>
      <au-cmt>Garay</au-cmt>
+     <transl>西アフリカ</transl>
     </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
+     <transl>バングラデシュ</transl>
     </text>
     <text id="Bhutan">
      <orig>Bhutan</orig>
+     <transl>ブータン</transl>
     </text>
     <text id="Cambodia">
      <orig>Cambodia</orig>
      <au-cmt>Cham</au-cmt>
+     <transl>カンボジア</transl>
     </text>
     <text id="China">
      <orig>China</orig>
+     <transl>中国</transl>
     </text>
     <text id="IndiaCen">
      <orig>Central India</orig>
+     <transl>インド中部</transl>
     </text>
     <text id="IndiaE">
      <orig>Eastern India</orig>
+     <transl>インド東部</transl>
     </text>
     <text id="IndiaN">
      <orig>Northern India</orig>
+     <transl>インド北部</transl>
     </text>
     <text id="IndiaNe">
      <orig>North-Eastern India</orig>
+     <transl>インド北東部</transl>
     </text>
     <text id="IndiaS">
      <orig>South India</orig>
+     <transl>インド南部</transl>
     </text>
     <text id="IndiaSe">
      <orig>South-Eastern India</orig>
+     <transl>インド南東部</transl>
     </text>
     <text id="IndiaSw">
      <orig>South-Western India</orig>
+     <transl>インド南西部</transl>
     </text>
     <text id="IndiaW">
      <orig>Western India</orig>
+     <transl>インド西部</transl>
     </text>
     <text id="Liberia">
      <orig>Liberia</orig>
      <au-cmt>for Bassa</au-cmt>
+     <transl>リベリア</transl>
     </text>
     <text id="Myanmar">
      <orig>Myanmar</orig>
+     <transl>ミャンマー</transl>
     </text>
     <text id="Nepal">
      <orig>Nepal</orig>
+     <transl>ネパール</transl>
     </text>
     <text id="Pakistan">
      <orig>Pakistan</orig>
      <au-cmt>Gurmukhi</au-cmt>
+     <transl>パキスタン</transl>
     </text>
     <text id="SierraLeone">
      <orig>Sierra Leone</orig>
+     <transl>シエラレオネ</transl>
     </text>
     <text id="SriLanka">
      <orig>Sri Lanka</orig>
+     <transl>スリランカ</transl>
     </text>
     <text id="Sumatra">
      <orig>Sumatra</orig>
+     <transl>スマトラ</transl>
     </text>
     <text id="Thailand">
      <orig>Thailand</orig>
+     <transl>タイ</transl>
     </text>
     <text id="Usa">
      <orig>USA</orig>
+     <transl>USA</transl>
     </text>
     <text id="Vietnam">
      <orig>Vietnam</orig>
      <au-cmt>Cham</au-cmt>
+     <transl>ベトナム</transl>
     </text>
    </group>
   </group>
@@ -6002,7 +6155,7 @@
      <orig>Hebrew, Samaritan Aramaic</orig>
     </text>
     <text id="Text">
-     <orig>Comes from Paleo-Hebrew script. According to Bible, Samaritans came to Palestina from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
+     <orig>Comes from Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to Bible, Samaritans came to Palestine from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
     </text>
    </group>
    <group id="Sarb">
@@ -6757,12 +6910,15 @@
   <group id="Snip">
    <text id="ArabPres1">
     <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <transl>このブロックは、[[pt:convertibility|互換性]]のために作成されており、CP864 (DOS) などの古いエンコーディングでは、[[pt:dynamic|制限された]] タイポグラフィ エンジンにより、孤立文字、先頭文字、中間文字、末尾文字に異なるコードが使用されていました。</transl>
    </text>
    <text id="ArabPres2">
     <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <transl>通常のテキストではこれらの文字は避けた方がよいでしょう。正当な使用法は教育用資料のみであるため、これらの文字は「アラビア文字」クラスになります (多くの古いエンコーディングでは、テキストは左から右に書かれていました)。</transl>
    </text>
    <text id="GrekCoptUni">
     <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <transl>Unicode{{_}}1.0 では、コプト語はギリシャ語と [[pt:unification|統合]] され、純粋なコプト語の文字はすべてギリシャ語とみなされました。Unicode{{_}}4.1 (2005) 以降、これらの言語は統合されなくなりました。コプト語の研究にはギリシャ語のテキストが含まれることが多かったのです。さらに、コプト語の文字のうち、大文字と小文字で大きく異なるグリフを持つのは、{{smfunky|Ϧϧ}} という 1 つの文字だけです。</transl>
    </text>
   </group>
   <group id="CharCat">
@@ -6770,6 +6926,7 @@
     <au-cmt>Test: any control char</au-cmt>
     <text id="Name">
      <orig>Control</orig>
+     <transl>コントロール</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6794,12 +6951,35 @@
       <p />
       <p>All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>
+     <transl>
+      <p>最初の数年間、交換セッションを手動で繰り返す必要があったため (パンチ テープまたはコンソールを使用)、データ形式やネットワーク プロトコルの代わりに制御文字が使用されました。{{k|Ctrl}} キーは、当初は制御文字の入力に使用されていました。現在使用されている制御文字は、次のとおりです :</p>
+      <p />
+      <p>* ヌル文字 00{{-}}メモリ内の文字列の終わり;</p>
+      <p>* ファイルの終わり 04 (Unix) および 1A (DOS/Windows){{-}} コンソールから {{k|Ctrl|D}}/{{k|Ctrl|Z}} と入力してテキスト入力を終了します;</p>
+      <p>* ベル07{{-}}端末またはプリンタがオペレータの注意を引きます。現在は通常サウンドカード経由で印刷を一時停止せずに行われます;</p>
+      <p>* backspace 08{{-}} キャリッジを1ステップ後ろに移動;</p>
+      <p>* 表の書式設定では、タブ09{{-}}は位置9、17、25、33…に移動します;</p>
+      <p>* 改行 0A{{-}}テキストファイルの行末（Unix）、ドラムを1行進めます;</p>
+      <p>* フォームフィード0C{{-}}プリンタがシートを排出します;</p>
+      <p>* キャリッジリターン0D。したがって、DOS/Windowsの行末は0D+0A{{-}}プリンタがキャリッジを戻し、ドラムを回転させる;</p>
+      <p>* escape 1B{{-}}プリンタ（フォント、グラフィック）またはコンソール（カーソル移動、色）のコマンドを実行します。.</p>
+      <p />
+      <p>その他の興味深いコマンド:</p>
+      <p />
+      <p>* 垂直タブ0B{{-}}ドラムをあらかじめプログラムされた位置に回します。既存のフォームへの印刷がより速く静かになります;</p>
+      <p>* シフトアウト/シフトイン 0E/0F{{-}}他のリボンの色、他の文字セット;</p>
+      <p>* データリンクエスケープ 10{{-}}次の文字は[[pt:graphic|グラフィック]]であり、{{_}}制御文字ではありません;</p>
+      <p>* delete 7F{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
+      <p />
+      <p>制御カテゴリの 65 文字はすべて歴史的なものです。実際にテキストの表示に影響する文字は [[pt:format|format]] と呼ばれます。</p>
+     </transl>
     </text>
    </group>
    <group id="Cf">
     <au-cmt>Test: any invisible format char</au-cmt>
     <text id="Name">
      <orig>Format</orig>
+     <transl>形式</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6815,183 +6995,235 @@
       <p />
       <p>* Does script-specific tasks that are impossible to implement using font: 1D173{{-}}start a group of musical notes connected with beam.</p>
      </orig>
+     <transl>
+      <p>さまざまなテキスト処理アルゴリズムを制御する目に見えない文字:</p>
+      <p />
+      <p>* テキストを行に折り返します: 00AD{{-}} ソフトハイフン。</p>
+      <p />
+      <p>* テキストにセマンティクスを追加します: 2062{{-}} 式内の非表示の乗算記号。非表示の関数適用 2061 とは異なり、行を a{{_}}//{{_}}×b (ロシア語では a×{{_}}//{{_}}×b) に分割できます。</p>
+      <p />
+      <p>* [[pt:ligature|合字]]を構築/解除します: 200D{{-}}ゼロ幅ジョイナー。</p>
+      <p />
+      <p>* 書き込み方向を指定します: 2066{{-}} 左から右に続くテキストの範囲を分離します。</p>
+      <p />
+      <p>* フォントを使用して実装することが不可能なスクリプト固有のタスクを実行します: 1D173{{-}} は、ビームで接続された音符のグループを開始します。</p>
+     </transl>
     </text>
    </group>
    <group id="Ll">
     <au-cmt>Test: abc</au-cmt>
     <text id="Name">
      <orig>Letter/lowercase</orig>
+     <transl>文字/小文字</transl>
     </text>
     <text id="Text">
      <orig>[[pt:minuscule|Minuscule]] writing appeared in early Middle Ages for economy of expensive parchment, turned to small letters, and made Latin a very expressive alphabet.</orig>
+     <transl>[[pt:minuscule|小文字]] は中世初期に高価な羊皮紙を節約するために登場し、小さな文字に変わり、ラテン語を非常に表現力豊かなアルファベットにしました。</transl>
     </text>
    </group>
    <group id="Lm">
     <au-cmt>Test: such phonetical letters</au-cmt>
     <text id="Name">
      <orig>Letter/modifier</orig>
+     <transl>文字/修飾語</transl>
     </text>
     <text id="Text">
      <orig>Such “unter-letters” are commonly used in phonetics, and add additional meaning to letters. For example, modifier letter is prime xʹ sometimes used for palatal consonants, unlike mathematical prime x′.</orig>
+     <transl>このような「付加文字」は音声学でよく使用され、文字に追加の意味を付加します。たとえば、修飾文字はプライム xʹ であり、数学のプライム x′ とは異なり、口蓋子音に使用されることがあります。</transl>
     </text>
    </group>
    <group id="Lo">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Letter/other</orig>
+     <transl>文字/その他</transl>
     </text>
     <text id="Text">
      <orig>Characters of unicameral scripts{{-}}without capital and small letters. For example, [[ps:Hebr|Hebrew]], [[ps:Arab|Arabic]], and [[ps:Hani|CJK ideographs]]. Also special characters like masculine/feminine ordinal indicator in Romance languages (1º{{-}}first masculine, 1ª{{-}}first feminine).</orig>
+     <transl>大文字と小文字のない一文字系の文字。たとえば、[[ps:Hebr|ヘブライ語]]、[[ps:Arab|アラビア語]]、[[ps:Hani|CJK 表意文字]] など。また、ロマンス諸語の男性/女性序数表示のような特殊文字 (1º{{-}}男性名詞が最初、1ª{{-}}女性名詞が最初)。</transl>
     </text>
    </group>
    <group id="Lt">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Letter/mixed case</orig>
+     <transl>文字/大文字と小文字の混在</transl>
     </text>
     <text id="Text">
      <orig>Digraph characters consisting of capital and small letter. For example, Croatian Latin has digraph ǈ. Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
+     <transl>大文字と小文字で構成される二重字。たとえば、クロアチア語のラテン語には二重字 ǈ があります。セルビア語の対応する Љ は二重字ではないため、大文字と小文字が混在することはありません。</transl>
     </text>
    </group>
    <group id="Lu">
     <au-cmt>Test: ABC…</au-cmt>
     <text id="Name">
      <orig>Letter/uppercase</orig>
+     <transl>文字/大文字</transl>
     </text>
     <text id="Text">
      <orig>Scripts that adopted small (lowercase, minuscule) letters, started to call old-shaped letters capital, uppercase or majuscule.</orig>
+     <transl>小さい文字（小文字、小文字）を採用した文字では、古い形の文字を大文字、大文字、または大文字と呼ぶようになりました。</transl>
     </text>
    </group>
    <group id="Mc">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Mark/spacing</orig>
+     <transl>マーク/間隔</transl>
     </text>
     <text id="Text">
      <orig>Spacing (having their own width) combining marks are present in some scripts of South-East Asia: Devanagari, Bengali, Kannada, Hangul…</orig>
+     <transl>間隔（独自の幅を持つ）結合記号は、東南アジアのいくつかの文字（デーヴァナーガリー文字、ベンガル文字、カンナダ文字、ハングル文字など）に存在します。</transl>
     </text>
    </group>
    <group id="Me">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Mark/enclosing</orig>
+     <transl>マーク/囲み</transl>
     </text>
     <text id="Text">
      <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <transl>囲み記号は、古いキリル文字の数字 (А҈) で使用されます。囲み記号には、四角形、円、その他の図形も存在します。Windows10 20H2 でテストされたタイポグラフィ エンジン (GDI、Cairo、Skia) はいずれもこれらの文字を完全にはサポートしていませんが、DejaVu などの優れたフォントでは、結果はそれほど悪くありません。</transl>
     </text>
    </group>
    <group id="Mn">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Mark/nonspacing</orig>
+     <transl>マーク/非スペース</transl>
     </text>
     <text id="Text">
      <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
+     <transl>非スペーシング マーク (たとえば、アクセント á) は、ゼロ幅文字として設計されているため、この名前が付けられています。優れたフォントでは、デザイナーが最も一般的な文字に手動でマークを配置します。ただし、このような組み合わせが予測されていない場合 (8́)、マークはランダムに配置され、結果は決して見栄えの良いものではありません。</transl>
     </text>
    </group>
    <group id="Nd">
     <au-cmt>Test: 123…</au-cmt>
     <text id="Name">
      <orig>Number/decimal</orig>
+     <transl>数値/小数</transl>
     </text>
     <text id="Text">
      <orig>People count in tens, because they have ten fingers. Words “digit” and “finger” are related in many languages. Positional numeral system invented in India is used by all the world, but in languages of Middle East and South-East Asia digits are weird.</orig>
+     <transl>人間は 10 本の指を持っているので、10 進法で数えます。「数字」と「指」という言葉は多くの言語で関連しています。インドで発明された位置記数は世界中で使用されていますが、中東や東南アジアの言語では数字は奇妙です。</transl>
     </text>
    </group>
    <group id="Nl">
     <au-cmt>Test: precomposed Roman numerals</au-cmt>
     <text id="Name">
      <orig>Number/letter</orig>
+     <transl>数字/文字</transl>
     </text>
     <text id="Text">
      <orig>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses for them ordinary А, В, Г… with combining marks.</orig>
+     <transl>ローマ数字、中国語数字、その他の文字に基づく数字。古代スラブ数字も文字に基づいていますが、Unicode では結合記号付きの通常の А、В、Г などが使用されています。</transl>
     </text>
    </group>
    <group id="No">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Number/other</orig>
+     <transl>数字/その他</transl>
     </text>
     <text id="Text">
      <orig>Archaic numeral systems, [[pt:precomposed|precomposed]] fractions, superscripts, subscripts, circled numbers, abbreviations for big numbers and more.</orig>
+     <transl>古風な数字体系、[[pt:precomposed|precomposed]] 分数、上付き文字、下付き文字、丸で囲まれた数字、大きな数字の略語など。</transl>
     </text>
    </group>
    <group id="Pc">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Punctuation/connector</orig>
+     <transl>句読点/接続詞</transl>
     </text>
     <text id="Text">
      <orig>A small group of characters. The most well-known of them is underscore.</orig>
+     <transl>小さな文字のグループ。最もよく知られているのはアンダースコアです。</transl>
     </text>
    </group>
    <group id="Pd">
     <au-cmt>Test: - —</au-cmt>
     <text id="Name">
      <orig>Punctuation/dash</orig>
+     <transl>句読点/ダッシュ</transl>
     </text>
     <text id="Text">
      <orig>Hyphens and dashes. Minus is also a dash, but it is classified as mathematical sign.</orig>
+     <transl>ハイフンとダッシュ。マイナスもダッシュですが、数学記号として分類されます。</transl>
     </text>
    </group>
    <group id="Pe">
     <au-cmt>Test: )</au-cmt>
     <text id="Name">
      <orig>Punctuation/closing bracket</orig>
+     <transl>句読点/閉じ括弧</transl>
     </text>
     <text id="Text">
      <orig>Brackets are allocated to a separate category because they play an important role in bidirectional writing.</orig>
+     <transl>括弧は双方向の書き方で重要な役割を果たすため、別のカテゴリに割り当てられています。</transl>
     </text>
    </group>
    <group id="Pf">
     <au-cmt>Test: »</au-cmt>
     <text id="Name">
      <orig>Punctuation/final</orig>
+     <transl>句読点/末尾</transl>
     </text>
     <text id="Text">
      <orig>Mainly quotes.</orig>
+     <transl>主に引用です。</transl>
     </text>
    </group>
    <group id="Pi">
     <au-cmt>Test: «</au-cmt>
     <text id="Name">
      <orig>Punctuation/initial</orig>
+     <transl>句読点/頭文字</transl>
     </text>
     <text id="Text">
      <orig>Mainly quotes.</orig>
+     <transl>主に引用です。</transl>
     </text>
    </group>
    <group id="Po">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Punctuation/other</orig>
+     <transl>句読点/その他</transl>
     </text>
     <text id="Text">
      <orig>Period, comma, percent, list bullet and many other characters.</orig>
+     <transl>ピリオド、カンマ、パーセント、箇条書き、その他多くの文字。</transl>
     </text>
    </group>
    <group id="Ps">
     <au-cmt>Test: )</au-cmt>
     <text id="Name">
      <orig>Punctuation/opening bracket</orig>
+     <transl>句読点/開き括弧</transl>
     </text>
     <text id="Text">
      <orig>Brackets are allocated to a separate category because they play an important role in bidirectional writing.</orig>
+     <transl>括弧は双方向の書き方で重要な役割を果たすため、別のカテゴリに割り当てられています。</transl>
     </text>
    </group>
    <group id="Sc">
     <au-cmt>Test: $??</au-cmt>
     <text id="Name">
      <orig>Symbol/currency</orig>
+     <transl>シンボル/通貨</transl>
     </text>
     <text id="Text">
      <orig>Currency character is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does{{_}}not{{_}}need a{{_}}special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
+     <transl>通貨の文字は国のイメージの重要な部分であり、モンゴルのトゥグルグにも墓石のような&lt;font size='+1'&gt;₮&lt;/font&gt;の記号がある。アルテミー・レベデフは1990年代末に、ロシアのルーブルには特別な文字は必要ないと述べたが、その後、彼の広報担当者は&lt;font size='+1'&gt;₽&lt;/font&gt;の記号を公式のステータスに昇格させた。</transl>
     </text>
    </group>
    <group id="Sk">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Symbol/modifier</orig>
+     <transl>シンボル/修飾語</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6999,48 +7231,62 @@
       <p />
       <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type accent in the same [[pt:mono|character cell]]. The glyph was drawn in such a fashion that the same character is suitable for both apostrophe and accent.</p>
      </orig>
+     <transl>
+      <p>circumfex ^ のような文字は [[pt:combining|結合]] マークのように見えますが、特別なプロパティはありません。その他の文字もあります。</p>
+      <p />
+      <p>これらの文字の多くはタイプライターに由来しています。Á を入力するには、キャリッジを 1 ステップ後ろに移動して、同じ [[pt:mono|文字セル]] にアクセントを入力します。グリフは、同じ文字がアポストロフィとアクセントの両方に適しているように描画されています。</p>
+     </transl>
     </text>
    </group>
    <group id="Sm">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Symbol/mathematical</orig>
+     <transl>記号/数学</transl>
     </text>
     <text id="Text">
      <orig>Initially several systems were used for computer mathematics, the most well-known of them are TᴇX (pronounced “tech”) and MathType (aka ''Microsoft Equation''). Unicode gives hope that computer mathematics will receive some standard{{-}}and limited ability to write equations in general-purpose systems like Internet forums.</orig>
+     <transl>当初、コンピュータ数学にはいくつかのシステムが使用されていましたが、その中で最もよく知られているのは TᴇX (「テック」と発音) と MathType (別名「Microsoft Equation」) です。Unicode により、コンピュータ数学がインターネット フォーラムなどの汎用システムで方程式を記述するための標準的かつ限定的な機能を獲得することを期待できます。</transl>
     </text>
    </group>
    <group id="So">
     <au-cmt>Test: emoji etc</au-cmt>
     <text id="Name">
      <orig>Symbol/other</orig>
+     <transl>シンボル/その他</transl>
     </text>
     <text id="Text">
      <orig>Unicode contains plenty of different characters, including commercial, technical and [[pt:emoji|emoji]].</orig>
+     <transl>Unicode には、商業用、技術用、[[pt:emoji|絵文字]] など、さまざまな文字が含まれています。</transl>
     </text>
    </group>
    <group id="Zl">
     <au-cmt>Test: 2028</au-cmt>
     <text id="Name">
      <orig>Separator/line</orig>
+     <transl>区切り文字/行</transl>
     </text>
     <text id="Text">
      <orig>One character 2028.</orig>
+     <transl>1文字2028。</transl>
     </text>
    </group>
    <group id="Zp">
     <au-cmt>Test: 2029</au-cmt>
     <text id="Name">
      <orig>Separator/paragraph</orig>
+     <transl>区切り文字/段落</transl>
     </text>
     <text id="Text">
      <orig>One character 2029.</orig>
+     <transl>一文字2029。</transl>
     </text>
    </group>
    <group id="Zs">
     <au-cmt>Test: any space</au-cmt>
     <text id="Name">
      <orig>Separator/whitespace</orig>
+     <transl>区切り文字/空白</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7052,6 +7298,7 @@
       <p />
       <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
      </orig>
+     <transl>空白を残すための文字です。適切にタイプセットされたテキストには、必要なだけのスペースがあります。146%{{-}} は少なすぎ、146{{_}}%{{-}} は多すぎ、{{%|146}}{{-}} はちょうどよいです。スペースも異なるのはこのためです。スペースの一部は改行不可です。両端揃えのテキストでは引き伸ばされず、次の行に折り返されません。</transl>
     </text>
    </group>
   </group>
@@ -7059,6 +7306,7 @@
    <group id="winemoji">
     <text id="Name">
      <orig>Windows 10/11 emoji panel</orig>
+     <transl>Windows 10/11 絵文字 パネル</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7072,11 +7320,23 @@
       <p>* arrows;</p>
       <p>* superscripts, fractions, mathematical operators.</p>
      </orig>
+     <transl>
+      <p>Windows{{_}}10/11では、{{kb|Win|;}}または{{kb|Win|.}}を押して絵文字パネルを開きます。:</p>
+      <p>* [[pt:emoji|絵文字]] は標準フォントで存在します。フォントが拡張されると、パネルも拡張されます;</p>
+      <p>* テキストスマイル;</p>
+      <p>* タイポグラフィ文字;</p>
+      <p>* 発音区別符号付きラテン語;</p>
+      <p>* 通貨記号;</p>
+      <p>* [[ps:ギリシャ語|ギリシャ語]];</p>
+      <p>* 矢印;</p>
+      <p>* 上付き文字、分数、数学演算子.</p>
+     </transl>
     </text>
    </group>
    <group id="altcode">
     <text id="Name">
      <orig>Alt codes</orig>
+     <transl>Alt コード</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7102,11 +7362,35 @@
       <p />
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
+     <transl>
+      <p>IBM PC の BIOS (ファームウェア) で導入されたコードによる文字入力方式。Windows の NT ファミリには 3 種類のコードがあります。</p>
+      <p />
+      <p>'''DOS コード'''</p>
+      <p />
+      <p>{{kb|Alt}} キーを押しながら (左{{-}}どこでも、右{{-}}はキーボード レイアウトによって異なります)、 '''数字''' キーパッドで 1 から 255 までの '''10 進''' 文字コードを入力します。たとえば、{{k|Alt|51}} は数字 3 になります。</p>
+      <p />
+      <p>エンコーディングはすべてのユーザーに共通で、DOS エンコーディング (437、866 など) の 1 つであり、非 Unicode アプリケーションの場合は選択した言語によって異なります。コード 1 から 31 および 127 は、それらの文字の印刷可能なバージョンを作成します: 1={{em|☺}}。</p>
+      <p />
+      <p>'''Windows コード'''</p>
+      <p />
+      <p>{{kb|Alt}} を押しながら、テンキーの {{k|'''0'''}} を入力してから、'''10 進''' 文字コード 32 から 255 を入力します。{{k|Alt|0240}} は文字 ð になります。</p>
+      <p />
+      <p>エンコードは、Windows の設定に関係なく Windows-1252 です。コード 127 は機能しません。コード 128 から 159 は、その他のタイポグラフィ文字です。残りは [[pt:latin1|Latin-1]] と同じです。</p>
+      <p />
+      <p>'''Unicode コード'''</p>
+      <p />
+      <p>実験的なため、すべてのアプリケーションで機能するわけではありません。機能させるには、レジストリ キー</p>
+      <p>: HKEY_CURRENT_USER\Control Panel\Input Method</p>
+      <p>に '''文字列''' パラメータ EnableHexNumpad=1 を追加し、コンピューターを再起動します。</p>
+      <p />
+      <p>{{kb|Alt}} を押したまま、{{kb|Num+}} と '''16 進数''' 文字コードを入力します。文字 A…F はメインキーボードから入力します。[[pt:bmp|Basic Plane]] のみが機能します。{{k|Alt|+262F}} は陰陽 {{em|☯}} を作成します。</p>
+     </transl>
     </text>
    </group>
    <group id="appentry">
     <text id="Name">
      <orig>application-specific input methods</orig>
+     <transl>アプリケーション固有の入力方法</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7120,11 +7404,23 @@
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
      </orig>
+     <transl>
+      <p>'''Libre と Microsoft Office'''</p>
+      <p />
+      <p>16進文字コード（たとえば、262F）を入力し、{{kb|Alt|X}}を押します。コードは文字{{-}}（この場合は{{em|☯}} U+262F 陰陽）に変換されます。</p>
+      <p />
+      <p>'''Unicode入力'''</p>
+      <p />
+      <p>[[pt:altcode|Alt コード]] の欠点を解決する Windows 常駐プログラム。通知領域に常駐し、{{kb|Alt|Num+}} キーで起動し、任意のプログラムに任意の Unicode 文字を入力します。</p>
+      <p />
+      <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
+     </transl>
     </text>
    </group>
    <group id="birman">
     <text id="Name">
      <orig>Ilya Birman’s typography layout</orig>
+     <transl>Ilya Birman’s のタイポグラフィ レイアウト</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7146,11 +7442,31 @@
       <p />
       <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
      </orig>
+     <transl>
+      <p>英語（米国）とロシア語の2つの言語があり、特殊キーは同じです。Windowsでは{{k|AltGr}}、MacOSではAltを使用して次の文字を入力します。:</p>
+      <p />
+      <p>* ヨーロッパ文字と句読点 ó ò ö ŏ ǒ ő õ ç ß ¡ ¿</p>
+      <p>* 1918年以前のキリル文字 ѣ і ѵ ѳ</p>
+      <p>* 数学 − ± ≠ ≈ ′ ″ × · ∞</p>
+      <p>* いくつかの上付き文字と分数 ¹²³ ½⅓¼</p>
+      <p>* タイポグラフィ句読点 «» “” „“ ‹› ‘’ • — –</p>
+      <p>* 通貨 € £ ₽ ¢</p>
+      <p>* 矢印 ← → ↓ ↑</p>
+      <p>* MacOS インタフェース ⌘ ⌥ ⌃ ⇧</p>
+      <p>* ロシア語レイアウトからのASCII文字の入力 [ { $</p>
+      <p>* 測定単位 ⌀ ° ‰</p>
+      <p>* 知的財産標識 ™ ©</p>
+      <p />
+      <p>2022 年 1 月現在の最新バージョンであるバージョン 3.7 では、{{k|AltGr|G}}、Apple ロゴに [[pt:private|private-use]] 文字が表示されます。</p>
+      <p />
+      <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
+     </transl>
     </text>
    </group>
    <group id="hiero">
     <text id="Name">
      <orig>ideographic script</orig>
+     <transl>象形文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7162,11 +7478,21 @@
       <p />
       <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
      </orig>
+     <transl>
+      <p>アルテミー・レベデフが言ったように、コップの絵文字はコップを意味します。表意文字はコップ、素材としてのガラス、壊れやすいもの、酔いなどを意味します。どちらも「象形文字」と呼ばれることもあります。中国語の表意文字「人＋木」は「休息」を意味します。</p>
+      <p />
+      <p>絵文字や表意文字で短い考えを書くことは、道路標識、機器やソフトウェアのインターフェースなど、私たちの周りでどこでも行われています。しかし、一般的に、この書き方は絵文字から大きく進歩していません。表意文字で会話を書くことは、2歩前進です。絵は概念を意味する可能性があり、それらは言語内の位置によって順序付けられ、相互関係によって順序付けられるわけではありません。「ハンターが槍で鹿を殺した」場合、殺すためのサインが作成され、槍はハンターと鹿の間にではなく最後に引かれます。</p>
+      <p />
+      <p>中国人がどのようにして表意文字の欠点を利点に変えたかについて、'''[[ps:Hani|CJK 表意文字]]''' を読んでください。</p>
+      <p />
+      <p>表意文字から[[pt:syllabic|音節文字]]への移行は簡単です。未知の単語を適切な1音節の表意文字で書くだけで十分です。中国を除くユーラシアのすべての主要文明は、西暦の初めまでに表意文字を放棄しました。</p>
+     </transl>
     </text>
    </group>
    <group id="abjad">
     <text id="Name">
      <orig>consonant script, abjad</orig>
+     <transl>子音文字、abjad(アブジャド)</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7180,11 +7506,23 @@
       <p />
       <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
+     <transl>
+      <p>子音素のみが書かれる文字。母音は完全に省略されるか、オプションの母音記号で書かれます。''Abjad'' という名前は、[[ps:Arab|アラビア語]] アルファベットの自称 {{-}}أبجد ''abjadiya'' に由来します。</p>
+      <p />
+      <p>明らかな欠点があるにもかかわらず、子音文字にはいくつかの利点があります。</p>
+      <p>* セム語族の言語{{-}}[[ps:Phnx|フェニキア語]]、[[ps:Hebr|ヘブライ語]]、アラビア語{{-}}では、語根は子音の骨組みであり、母音は接尾辞として機能します。たとえば、アラビア語では「ジハード」は「ムジャヒド」によって行われます。</p>
+      <p>* 大きな帝国を築きやすくなり、方言の違いも緩和されました。</p>
+      <p>* 違いは空間だけでなく時間においても平滑化され、{{-}}世紀にわたる碑文は現代の言語によりよく対応します。</p>
+      <p>* このスクリプトは短く、これは「紙」と「ペン」が貧弱な場合に重要です。</p>
+      <p />
+      <p>多くのアブジャドには、文字「matres lectionis（読みの母）」{{-}}子音文字があり、母音音素を意味します。ヘブライ語に記録されているバリエーションの 1 つは、「bayt」→「bet」（家）、およびヨッド文字は二重母音が存在しない単語に再解釈されました。他のバリエーションは調音によるもので、[[ps:Grek|ギリシャ語]] 文字のイオタは、「i」を意味するフェニキア文字のヨッド サムティネスに遡ります。母音記号が登場したとき、「matres lectionis」は消えず、母音記号を補完し始めました。</p>
+     </transl>
     </text>
    </group>
    <group id="syllabic">
     <text id="Name">
      <orig>syllabic script</orig>
+     <transl>音節文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7201,11 +7539,26 @@
       <p>* Make [[pt:ligature|ligatures]]:  sᵀo-p? (major Brahmic abugidas like [[ps:Deva|Devanagari]]) or s?-toᴾ ([[ps:Limb|Limbu]]).</p>
       <p>* Drop final consonant: s?-to ([[ps:Linb|Mycenaean]], [[ps:Buhd|Buhid]]).</p>
      </orig>
+     <transl>
+      <p>文字が子音と母音からなる音節を表す文字。通常、80 から 120 文字で構成されます。[[pt:abugida|アブギダ]] は、類似の音節には類似の文字が使用される音節文字の一種です。</p>
+      <p />
+      <p>音節文字は[[pt:hiero|表意文字]]から簡単に発明できます。人々は音素ではなく音節で話し、未知の単語を適切な1音節の象形文字で書くだけで十分です。このようなプロセスは[[ps:Xsux|楔形文字]]と[[ps:Hira|日本語]]に記録されています。</p>
+      <p />
+      <p>子音接続詞と子音単独の書き方はいくつかあります（「stop」という単語の例）:</p>
+      <p>* 単独子音を表す文字を作成します: s-to-p ([[ps:Cans|カナダの音節文字]])。</p>
+      <p>* この文字は、音節に分音記号 ([[pt:virama|virama]]) を追加して作成します: sⱥ-to-pⱥ (多くの [[pt:brahmic|Brahmic]] abugidas、特に未発達)。</p>
+      <p>* 20世紀にブラーフミー語派のいくつかのアブギダ（[[ps:Laoo|ラオ語]]、[[ps:Tavt|タイ・ヴィエット語]]）が文字を改革し、ヴィラマを廃止しました。主文字は子音を意味するようになりました。</p>
+      <p>* B接続詞と語尾、借用語として母音を付加する：su-to-pu（日本語）。「日本語はsu-to-ppuを借用語として使っていたはずだが、それは音声学の問題だ。」</p>
+      <p>* 状況によっては、その母音は実際には無音になります: sᵊ-to-pᵊ ([[ps:Guru|グルムキー語]]、一部日本語)。</p>
+      <p>* [[pt:ligature|合字]]を作成します: sᵀo-p? ([[ps:Deva|デーバナーガリー文字]]のような主要なブラーフミー文字の合字) または s?-toᴾ ([[ps:Limb|リンブー文字]])。</p>
+      <p>* 最後の子音を落とす: s?-to ([[ps:Linb|ミケーネ語]]、[[ps:Buhd|Buhid]])。</p>
+     </transl>
     </text>
    </group>
    <group id="abugida">
     <text id="Name">
      <orig>abugida</orig>
+     <transl>abugida(アブギダ)</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7221,11 +7574,25 @@
       <p />
       <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
      </orig>
+     <transl>
+      <p>学者たちはアブギダの定義に同意していませんが、その最も広い定義は、[[pt:syllabic|音節文字]]であり、類似の音節は類似の文字で書かれています。</p>
+      <p />
+      <p>[[pt:brahmic|ブラーフミー文字]] は確かにアブギダスです。</p>
+      <p />
+      <p>[[ps:Ethi|エチオピア語]] と [[ps:Cans|カナダ音節文字]] は、ほとんどの分類では '''abugidas''' です。</p>
+      <p />
+      <p>[[ps:Thaa|Thaana]]、[[ps:Wara|Warang Citi]]、および [[ps:Sora|Sora Sompeng]] は、「一部の情報源では」アブギダです。</p>
+      <p />
+      <p>[[ps:Hang|ハングル]] と [[ps:Yiii|Yi]] は '''絶対に{{_}}abugidas ではありません'''。</p>
+      <p />
+      <p>興味深い事実: 「abugida」という単語は、ゲエズ語 (古代エチオピア語) {{sm|አቡጊዳ}} (a-bu-gi-da) {{-}} に由来しているため、一部の言語学者は、「abugida」という名前がこの名前の由来となった文字にふさわしいものであることを否定しています。</p>
+     </transl>
     </text>
    </group>
    <group id="brahmic">
     <text id="Name">
      <orig>Brahmic abugida, Indic script</orig>
+     <transl>Brahmic abugida(ブラーフミー・アブギダ)、インド文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7249,11 +7616,32 @@
       <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case it may not{{_}}always distinguish {{t|na}} and {{t|n}} and use virama in dictionaries.</p>
      </orig>
      <au-cmt>Russian: kssa = кша</au-cmt>
+     <transl>
+      <p>学者たちは [[pt:abugida|アブギダ]] の定義について意見が分かれています。しかし、ある点については一致しています。それは、'''[[ps:Brah|ブラーフミー]] から来た一連の文字''' は間違いなくアブギダであるということです。</p>
+      <p />
+      <p>セム語族の語源は子音で、母音は接尾辞として使われる。例えば、[[ps:Arab|アラビア語]]では「イスラム教」は「ムスリム」によって実践されている。彼らが[[pt:abjad|子音]]文字を導入するのは自然なことだった。[[ps:Armi|アラム語]]文字が東に伝わり、インド・ヨーロッパ語族と衝突したとき、音節文字が出現し、それが何らかの形で[[pt:cjk|中国、韓国、日本]]を除く東南アジア全域に広がった。</p>
+      <p />
+      <p>ブラーフミー アブギダの特徴:</p>
+      <p>* 子音文字は、いくつかの固有の母音を含む音節を意味し、残りは母音記号で追加されます: [[ps:Deva|デーバナーガリ文字]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;。</p>
+      <p>* 単独の子音を得るには、[[pt:virama|virama]] 記号を使用します: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;。</p>
+      <p>* その他の発音区別符号: anusvara (子音の後の鼻音)、candrabindu (母音が鼻音化)、nukta (借用語の音素。この単語の文字「k」は借用語で、nukta で表記されます)、visarga (サンスクリット語の音素 {{t|h}})。</p>
+      <p>* セム語族の言語とは異なり、左から右に書きます。</p>
+      <p>* アルファベット順は音韻順です。最初に母音、次に喉 {{t|k}} から歯 {{t|s}} までの子音、最後に無気音 {{t|h}} です。</p>
+      <p>* 独自の [[pt:number|数字]] は、実際に使用されているものと [[pt:obsolete|廃止された]] の両方で頻繁に使用されます。</p>
+      <p />
+      <p>複雑な音節を伝えるにはいくつかの方法があります。:</p>
+      <p>* virama の使用 (pa-n_-da のようなもの): 単独の子音は別の音節です ([[ps:Tglg|Baybayin]])。</p>
+      <p>*子音接続詞 (pa-nda) の使用: デーヴァナーガリー語 {{sm|क्ष}} kša。これは合字がないので ka+virama+ša{{-}} と入力されますが、明示的な形式では virama は単語の末尾にのみ存在します。単語の末尾では virama も存在しないことがよくあります (固有の母音が黙字になります)。これらの接続詞では、文字 R が小さくなることがよくあります。小さな最初の R ({{sm|र्क}} rka) は ''repha''、小さな下付き R ({{sm|क्र}} kra) は ''rakar'' と呼ばれます。</p>
+      <p>* 末子音 (pan-da){{-}}[[ps:Phag|Phags-Pa]] を使用します。ヴィラマはありません。仮想ヴィラマまたは頭子音接続詞を作成する他の手段が存在する可能性があります。</p>
+      <p>* 不完全で、複雑な音節（pa-da）をうまく伝えられない{{-}}[[ps:Bugi|ブギ語]]。一部の標本は子音文字に退化している。</p>
+      <p>* 固有の母音 (pa-nᵊ-da) は、改革 ([[ps:Laoo|ラオ語]]) または自然な進化 ([[ps:Guru|グルムキー語]]) によって失われました。後者の場合、{{_}}常に {{t|na}} と {{t|n}} を区別せず、辞書では virama を使用する場合があります。</p>
+     </transl>
     </text>
    </group>
    <group id="alphabet">
     <text id="Name">
      <orig>alphabetical script</orig>
+     <transl>アルファベット文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7263,11 +7651,19 @@
       <p />
       <p>With all adantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
+     <transl>
+      <p>子音と母音の両方を書く線文字。最初に発見されたアルファベットは [[ps:Grek|ギリシャ語]] です。</p>
+      <p />
+      <p>子音と母音が音節に結合された非線形文字は、一部の情報源ではアルファベットと見なされ（[[ps:Thaa|ターナ文字]]、[[ps:Hang|ハングル文字]]）、またはまったく考慮されていない情報源もあります（[[ps:Laoo|ラオ語]]）。</p>
+      <p />
+      <p>あらゆる利点があるにもかかわらず、アルファベットには重大な欠点があります。発音の変化により、複雑な歴史的綴りが現れ、時には改訂が必要になります。さて、[[ps:Cyrl|ロシア語]] Yat '''ѣ''' は独立した音素でしたが、18 世紀に完全に姿を消し、1 世紀以上後の 1918 年に表記から削除されました。[[ps:Latn|英語]] とフランス語の綴りは、ほとんどが歴史的なものです。</p>
+     </transl>
     </text>
    </group>
    <group id="arguable">
     <text id="Name">
      <orig>script of arguable type</orig>
+     <transl>引数型のスクリプト</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7281,11 +7677,23 @@
       <p />
       <p>[[ps:Phag|Phags-Pa]] (Mongolian square){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</p>
      </orig>
+     <transl>
+      <p>5 つのスクリプトについては、ソースが何であるかに関して一致していません。</p>
+      <p />
+      <p>[[ps:Hang|ハングル]] ''(韓国語)''{{-}}[[pt:syllabic|音節文字]] ''(Unicode)'' または [[pt:alphabet|アルファベット順]] ''(Omniglot、英語版Wikipedia)''。</p>
+      <p />
+      <p>[[bus:ta|thana]] ''(モルディブ)''{{-}}[[bit:abijat|consonant]] ''(omniclode)'', [[bit:abagida|abagida]] ''(英語版 Wikipedia)」、アルファベット「(Unicode)」。</p>
+      <p />
+      <p>[[ps:Wara|Warang Citi]] および [[ps:Sora|Sora Sompeng]] {{-}} アルファベット ''(英語 Wikipedia、Unicode)'' または ''(Omniglot)''どちらもインド語で、[[pt:brahmic|ブラーフミック・アブギダス]] の特徴のほとんどが削除されましたが、固有の母音 {{t|a}} は残されました。</p>
+      <p />
+      <p>[[ps:Phag|Phags-Pa]] (モンゴル方形){{-}}abugida ''(Unicode、Omniglot)'' またはアルファベット ''(英語版 Wikipedia)''。abugida に残っている記号は、固有の母音と文字を音節に結合することだけです。</p>
+     </transl>
     </text>
    </group>
    <group id="cjk">
     <text id="Name">
      <orig>CJK = Chinese, Japanese, Korean</orig>
+     <transl>CJK = 中国語、日本語、韓国語</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7298,11 +7706,22 @@
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
+     <transl>
+      <p>[[ps:Hani|中国語の表意文字]] に近い文字のグループ。これには、音節 [[ps:Kana|Katakana]]、[[ps:Hira|Hiragana]]、および [[pt:arguable|arguable]] タイプの [[ps:Hang|Hangul]] が含まれます。歴史上の{{-}}[[ps:Tang|Tangut]]、[[ps:Kits|Khitan]]、[[ps:Nshu|Nüshu]]の中で。</p>
+      <p />
+      <p>CJKの特徴 :</p>
+      <p>* 毛筆と墨で文字を書く（女書を除く）。;</p>
+      <p>* 文字は、画数に関係なく、等幅{{-}}で非表示のグリッドに揃えられます。借用文字は、多くの場合、半角{{-}}で、このセルの半分を占めます。;</p>
+      <p>* 最初は右から左に列に書かれていたが、現在では「通常」左から右に行に書かれている。今日でも日本の漫画「マンガ」は右から左に読まれる。;</p>
+      <p>* 文字は国によって異なる。Unicodeではこれらの特殊性をフォントに任せている。;</p>
+      <p>* 文字は 256 個の [[pt:codepoint|位置]] に収まらないため、表意文字用の特定のエンコードが存在しました。</p>
+     </transl>
     </text>
    </group>
    <group id="code">
     <text id="Name">
      <orig>codes and shorthand</orig>
+     <transl>コードと速記</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7313,11 +7732,20 @@
       <p />
       <p>Such systems often span many languages, and different languages have different code tables. For example, even British Braille differs from American.</p>
      </orig>
+     <transl>
+      <p>コードは、通常の文章の別の形式です。言い換えれば、話し言葉を通常の綴りのルールに従って文字に変換し、エンコードします。このようなエンコードの目的は異なります。:</p>
+      <p>* 通信と信号（旗信号、モールス信号）;</p>
+      <p>* 障害者用補助具([[ps:Brai|点字]] エンボス、ジェスチャーアルファベット);</p>
+      <p>* 特別に訓練された筆記者が話し言葉に合わせて書く速記法（[[ps:Dupl|デュプロイアン方式]]）。</p>
+      <p />
+      <p>このようなシステムは多くの言語にまたがることが多く、言語が異なればコード表も異なります。たとえば、イギリスの点字もアメリカの点字とは異なります。</p>
+     </transl>
     </text>
    </group>
    <group id="nontext">
     <text id="Name">
      <orig>non-text notation</orig>
+     <transl>非テキスト表記</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7325,11 +7753,17 @@
       <p />
       <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
+     <transl>
+      <p>テキスト以外の情報の書き込み: 音楽 ([[pk:1D100|音符]])、技術図面 ([[pk:2300|技術記号]])、ジェスチャー ([[ps:Sgnw|SingWriting]])。</p>
+      <p />
+      <p>Unicode はプレーンテキストで動作し、そのような情報のエンコード用に設計されていません。ただし、そのような文字をエンコードすると、PDF ファイルが短縮され、フォーラム、インスタント メッセンジャー、ベクター エディターなどの汎用システムの機能が拡張されます。</p>
+     </transl>
     </text>
    </group>
    <group id="acrophonic">
     <text id="Name">
      <orig>acrophonic character</orig>
+     <transl>頭音文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7337,11 +7771,17 @@
       <p />
       <p>For numbers and other things: the character comes from the first letter of term: For example, '''№''' sign comes from Latin ''numero''.</p>
      </orig>
+     <transl>
+      <p>文字の場合: その名前は、[[ps:Thai|タイ語]]、古い[[ps:Cyrl|キリル文字]]/[[ps:Glag|グラゴル文字]]、[[ps:Phnx|フェニキア語]]のように、文字自体で始まる単語です。</p>
+      <p />
+      <p>数字やその他の場合: 文字は用語の最初の文字から来ます。たとえば、 '''№''' 記号はラテン語の ''numero'' から来ています。</p>
+     </transl>
     </text>
    </group>
    <group id="virama">
     <text id="Name">
      <orig>virama</orig>
+     <transl>ヴィラマ</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7361,11 +7801,29 @@
       <p />
       <p>Some scripts ([[ps:Khar|Kharoshthi]], [[ps:Mtei|Meitei Mayek]]) feature “virtual virama” for assembling ligatures. Sometimes even ([[ps:Sund|Sundanese]], [[ps:Cakm|Chakma]]) together with visible virama. Virtual virama looks like a cross, but leaving it visible in ordinary text is a mistake.</p>
      </orig>
+     <transl>
+      <p>ヴィラマ（サンスクリット語で「止まる」）は、[[pt:brahmic|ブラフミー文字]]のabugidasで「固有の母音を消す」という意味の記号です。たとえば、[[ps:Deva|デーバナーガリー文字]]では、&lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;となります。</p>
+      <p />
+      <p>実際には、インドの言語ではその名前は「ハラント（ヒンディー語で「殺人者」）、ハランタ、ホソント、チャンドラッカラ（マラヤーラム語で「月」）」です。</p>
+      <p />
+      <p>いくつかの言語では、viramaはあまり使用されません。例えば:</p>
+      <p>* [[pt:ligature|合字]] 子音接続詞{{-}}デーバナーガリー{{sm|क्ष}} кša の合字。合字がないかのように書かれ、エンコードされ、ka+virama+ša と表示されます。合字を解除して 2 つの文字と virama を入力するには、ka+virama+ZWNJ+ša と入力します。;</p>
+      <p>* 最後の子音{{-}}[[ps:Cham|Cham]]、[[ps:Limb|Limbu]]を表す;</p>
+      <p>* 固有の母音が省略される{{-}}[[ps:Guru|パンジャブ語]]。ヒンディー語を含むインドの多くの言語では、単語の末尾のviramaが省略される。;</p>
+      <p>* 綴り改革により固有母音が削除された{{-}}[[ps:Laoo|ラオ語]];</p>
+      <p>* virama は文字 {{-}} [[ps:Talu|New Tai Lue]] を持つ単一の実体である可能性がある。;</p>
+      <p>* 「余分な」子音を書くことができない{{-}}[[ps:Bugi|ブギ語]].</p>
+      <p />
+      <p>ほとんどのヴィラマは[[pt:combining|結合記号]]です。しかし、いくつかは[[pt:spacing|間隔]]です（[[ps:Java|ジャワ語]]）。</p>
+      <p />
+      <p>いくつかの文字 ([[ps:Khar|カロシュティー文字]]、[[ps:Mtei|メイテイ・マエク文字]]) には、合字を組み立てるための「仮想ヴィラマ」があります。時には ([[ps:Sund|スンダ文字]]、[[ps:Cakm|チャクマ文字]])、可視のヴィラマと組み合わせることもあります。仮想ヴィラマは十字架のように見えますが、通常のテキストで可視のままにしておくのは間違いです。</p>
+     </transl>
     </text>
    </group>
    <group id="graphic">
     <text id="Name">
      <orig>graphic character, printable character</orig>
+     <transl>グラフィック文字、印刷可能な文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7377,11 +7835,21 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:pseudographics|pseudographics]].</p>
      </orig>
+     <transl>
+      <p>画面や紙に書き込まれる文字。[[pt:control|コントロール]]、[[pt:format|フォーマット]]、行と段落の区切り{{-}}偶数スペース、および目に見えない[[pt:combining|マーク]]を除く任意の文字。</p>
+      <p />
+      <p>ゼロ幅のスペースはスペースではなくフォーマットとみなされるため、グラフィックではありません。</p>
+      <p />
+      <p>逆説: 目に見えないマークは、グラフィックであると同時に [[pt:ignorable|デフォルトで無視可能]] でもあります。</p>
+      <p />
+      <p>[[pt:pseudographics|疑似グラフィックス]]と混同しないでください。</p>
+     </transl>
     </text>
    </group>
    <group id="deprecated">
     <text id="Name">
      <orig>deprecated character</orig>
+     <transl>非推奨の文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7400,11 +7868,28 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
+     <transl>
+      <p>使用を強くお勧めしない文字。</p>
+      <p />
+      <p>Unicode の [[pt:stability|安定性]] の保証の 1 つは、文字が割り当てられると、移動したり消えたりしないことです。文字が不適切な場合は、非推奨になります。非推奨の理由はさまざまです。</p>
+      <p />
+      <p>Unicode コンソーシアムは西洋文化の人々で構成されており、希少言語の専門家の研究を参照することしかできません。{{-}}これは、[[ps:Arab|アラビア語]]、[[ps:Tibt|チベット語]]、[[ps:Khmr|クメール語]] の 5 つの文字で発生しました。</p>
+      <p />
+      <p>数学的な山括弧との混同を避けるため、技術的な山括弧 2 つが禁止されています。また、言語の [[pk:E0000|タグ]] (解決する問題よりも混乱を招く)、[[pt:bidi|双方向表記]] の一部の文字 (別のアルゴリズムが提案されています)、ラテン語の [[pt:ligature|合字]] '''ŉ''' (オランダ語とアフリカーンス語には、エンコードされていない類似の略語が多数あり、[[pt:normalization|正規化]] に問題があり、文字タイプ「句読点付き文字」が削除されました) も非推奨です。{{-}}Unicode の時点で合計 15 個{{_}}16。</p>
+      <p />
+      <p>使用する文字を返すいくつかの例が知られている:</p>
+      <p>* 「タグ」ブロック{{-}}は言語を指定するために使用されていました。地域の旗（スコットランドなど）の[[pt:emoji|絵文字]]に対して返され、1文字が禁止されました。</p>
+      <p>* 0340、0341 (下降/上昇音調の記号)。通常の発音区別記号 à と á に置き換えられました。Unicode{{_}}5.2 以降は推奨されません。{{_}}</p>
+      <p>* 17D3 (クメール文字 ''bathamasat'')。[[pk:19E0|太陰暦]]の[[pt:precomposed|precomposed]]文字の出現により、Unicode{{_}}4.0 で非推奨になりました。Unicode{{_}}5.2 以降は、おそらくカレンダーの合字がかさばるため、推奨されません{{_}}。''Unicodia'' の作者は、合字がセルに収まるフォントを見つけるのに苦労しました。</p>
+      <p />
+      <p>[[pt:obsolete|obsolete]] と混同しないでください。</p>
+     </transl>
     </text>
    </group>
    <group id="ignorable">
     <text id="Name">
      <orig>default-ignorable character</orig>
+     <transl>デフォルトで無視できる文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7426,11 +7911,31 @@
       <p>* Characters that work in font mechanisms that are impossible to skip silently{{-}}for example, virtual [[pt:virama|viramas]]. If the virama disappears, “kta” turns to “kata”.</p>
       <p>* Characters for complex formatting of [[ps:Egyp|Egyptian hieroglyphs]].</p>
      </orig>
+     <transl>
+      <p>Unicode は大きく、常に拡張されています。バージョン {{version}} には {{chars}} 文字があります。そのため、大規模なフォント コレクションであっても、Unicode 全体をサポートしているわけではありません。</p>
+      <p />
+      <p>フォント内にグリフが見つからない場合、文字は通常 [[pt:tofu|tofu]]{{-}} 白いボックスとして表示されます。 '''ただし、一部の文字は省略されます。'''</p>
+      <p />
+      <p>デフォルトで無視できる文字のほとんどは [[pt:format|format]] ですが、スペースを含まない [[pt:combining|marks]] も存在します。デフォルトで無視できる文字は、次のカテゴリに分類されます。;</p>
+      <p />
+      <p>* 補助的な意味を伝える文字: ソフトハイフン 00AD、書記素結合子 034F、[[pk:E0000|タグ]]…</p>
+      <p>* [[pt:bidi|direction]] タグの記述: LRM と RLM をマークします。</p>
+      <p>* 何も言わずにスキップしても安全なフォントメカニズム: ゼロ幅ジョイナー ([[pt:zwj|ZWJ]])、異体字セレクター (VS)、[[ps:Hang|Korean]] 字母フィラー。フォントに ZWJ が存在するかどうかに関係なく、合字がない場合、Pilot (person+ZWJ+plane) は person+plane {{em|🧑✈️}} として表示されます。</p>
+      <p>* ゼロ幅スペース ZWSP、[[pt:bom|バイトオーダーマーク]] BOM （これもゼロ幅スペース）、ゼロ幅非結合子 ZWNJ。</p>
+      <p>* 複雑な [[pk:1BCA0|省略形]] と [[pk:1D100|音楽]] の書式設定に使用する文字。</p>
+      <p />
+      <p>これらの文字はデフォルトで無視できません:</p>
+      <p>* すべてグラフィック形式であり、すべて [[pt:spacing|間隔]] です。</p>
+      <p>* [[pt:control|コントロール]]、行区切り。</p>
+      <p>* 黙ってスキップすることが不可能なフォント メカニズムで機能する文字{{-}}たとえば、仮想 [[pt:virama|viramas]]。virama が消えると、「kta」は「kata」に変わります。</p>
+      <p>* [[ps:Egyp|エジプトの象形文字]]の複雑な書式設定用の文字。</p>
+     </transl>
     </text>
    </group>
    <group id="combining">
     <text id="Name">
      <orig>combining mark</orig>
+     <transl>結合マーク</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7452,11 +7957,31 @@
       <p>* Some marks are placed halfway above character, and the other half hangs out, so they cover two characters: {{sm|a͡b}}.</p>
       <p>* The first character is covered with initial fragment, the second one etc with repeating one, and the last one with final fragment. This method is implemented badly in most fonts.</p>
      </orig>
+     <transl>
+      <p>基本文字に付加される従属文字。マーク:</p>
+      <p />
+      <p>* 基本文字に付加された分音記号{{-}};</p>
+      <p>* [[pt:abjad|子音]] 文字と [[pt:abugida|アブギダス]] 文字の母音記号;</p>
+      <p>* フォント内の [[pt:ligature|合字]] を使用したさまざまな「ハック」: たとえば、文字 + 異体字セレクタ = 他の形状の文字。</p>
+      <p />
+      <p>Unicode では、マークを [[pt:spacing|スペース]]、非スペース、囲みに分類します。</p>
+      <p />
+      <p>結合記号は、最も美しいものから順に、フォントにいくつかの方法で配置されます。:</p>
+      <p>* 合字: マークされた文字用の特別な [[pt:character|グリフ]]。</p>
+      <p>* グリフの置換: グリフ A に適用すると、マーク B は形状 C になります。これは、大文字の「押しつぶされた」発音区別符号に使用され、インド語の母音記号のサイズを調整します。</p>
+      <p>* アンカー: 手動で配置するバインディング ポイント。</p>
+      <p>* デフォルトのアンカー: マークは正または負の座標に配置されます。キャレットを基準にして描画すると、正しい位置に配置されます。</p>
+      <p />
+      <p>Unicodeでは1つのマークで複数の文字をカバーすることはできないが、そのためにいくつかのフォントメカニズムを利用している。:</p>
+      <p>* いくつかのマークは文字の半分上に配置され、もう半分ははみ出して 2 つの文字を覆います: {{sm|a͡b}}。</p>
+      <p>* 最初の文字は最初のフラグメントで覆われ、2 番目以降は繰り返しのフラグメントで覆われ、最後の文字は最後のフラグメントで覆われます。この方法は、ほとんどのフォントで適切に実装されていません。</p>
+     </transl>
     </text>
    </group>
    <group id="ligature">
     <text id="Name">
      <orig>ligature</orig>
+     <transl>合字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7470,11 +7995,23 @@
       <p />
       <p>[[pt:casefolding|Case folding]] ''can'' break ligatures.</p>
      </orig>
+     <transl>
+      <p>合字は複数の文字を1つにまとめたものである:</p>
+      <p />
+      <p>1. タイポグラフィでは、複数の文字で構成される{{-}}文字。たとえば、アンパサンド '''&amp;''' はラテン語の ''et'' “and” の合字です。</p>
+      <p />
+      <p>2. フォント{{-}}[[pt:character|グリフ]]は、複数の[[pt:codepoint|コードポイント]]のシーケンスを意味します。たとえば、一部のフォントでは、「fi」と入力すると、合字は'''ﬁ'''になります。[[pt:brahmic|ブラーフミー文字]]には、このような合字が多数あります。</p>
+      <p />
+      <p>すべての合字は [[pt:spacing|spacing]] 文字です。</p>
+      <p />
+      <p>[[pt:casefolding|大文字小文字の変換]] は合字を分割する可能性があります。</p>
+     </transl>
     </text>
    </group>
    <group id="precomposed">
     <text id="Name">
      <orig>precomposed character</orig>
+     <transl>合成文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7492,16 +8029,33 @@
       <p />
       <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
      </orig>
+     <transl>
+      <p>文字と [[pt:combining|結合マーク]] を 1 つにまとめたもの。たとえば、 '''á''' は文字とマークから組み立てられ、 '''á''' は 1 つの合成済み文字です。</p>
+      <p />
+      <p>事前に構成された文字を作成する主な理由は 3 つあります。他のエンティティ、互換性、美しさです。</p>
+      <p />
+      <p>'''その他のエンティティ:''' キリル文字の Ё (''yo'') はウムラウト付きの Е (''ye'') ではないため、合成済み形式が存在します。また、Ю́ はアクセント記号がオプションの Ю (''yu'') にすぎず、そのような合成済み文字は存在しません。</p>
+      <p />
+      <p>'''互換性:''' 制限されたタイポグラフィ エンジンでマークを配置できない場合、または制限されたキーボード ドライバーで文字を 1 つずつ入力する場合、事前合成文字が唯一のオプションになります。事前合成文字は、多くの場合、既存のエンコードから取得されます。</p>
+      <p />
+      <p>'''美しさ:''' マークを配置するメカニズムは、デザイナーが文字 B にマーク A を配置することを{{_}}予見しなかった場合、特に不完全であることがよくあります。また、事前に作成された文字は、デザイナーにとって「このようなことが起こる」という警告になる可能性があります。</p>
+      <p />
+      <p>広い意味では、事前構成された文字は、スタイルを使用して表示できる文字のシーケンスですが、単一の文字としてエンコードされます{{-}}、たとえば、分数 &lt;big&gt;½&lt;/big&gt;。</p>
+      <p />
+      <p>すべての合成文字は [[pt:spacing|spacing]] です。[[pt:normalization|正規化]] も参照してください。</p>
+     </transl>
     </text>
    </group>
    <group id="space">
     <text id="Name">
      <orig>whitespace</orig>
+     <transl>空白</transl>
     </text>
    </group>
    <group id="spacing">
     <text id="Name">
      <orig>spacing character</orig>
+     <transl>空白文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7511,11 +8065,19 @@
       <p />
       <p>Non-spacing are [[pt:control|control characters]], [[pt:format|format characters]] and other types of marks.</p>
      </orig>
+     <transl>
+      <p>行内のスペースを占める文字。</p>
+      <p />
+      <p>スペースには、文字、[[pt:number|数字]]、句読点、[[pt:space|空白]]、その他の記号、スペース[[pt:combining|結合記号]]が含まれます。</p>
+      <p />
+      <p>非スペース文字は、[[pt:control|制御文字]]、[[pt:format|書式文字]]、およびその他の種類のマークです。</p>
+     </transl>
     </text>
    </group>
    <group id="pseudographics">
     <text id="Name">
      <orig>pseudographics, box drawing</orig>
+     <transl>擬似グラフィックス、ボックス描画</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7525,16 +8087,25 @@
       <p />
       <p>All pseudographic characters are [[pt:spacing|spacing]].</p>
      </orig>
+     <transl>
+      <p>テキスト モードで幾何学的図形、線、ボックス、フレームを描画するための文字。テキスト ユーザー インターフェイスを活気づけるために広く使用されていました。</p>
+      <p />
+      <p>現代のグラフィック オペレーティング システムでは、これらの文字は意味を持ちません。実際のグラフィックが使用可能で、ほとんどのフォントは比例しており、線は正確にリンクしていません。しかし、今日でもテキスト コンソールは存在し、その内部には疑似グラフィックが含まれています。</p>
+      <p />
+      <p>すべての疑似グラフィック文字は [[pt:spacing|間隔]] です。</p>
+     </transl>
     </text>
    </group>
    <group id="control">
     <text id="Name">
      <orig>control character</orig>
+     <transl>制御文字</transl>
     </text>
    </group>
    <group id="obsolete">
     <text id="Name">
      <orig>obsolete character</orig>
+     <transl>廃字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7544,16 +8115,25 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:deprecated|deprecated character]].</p>
      </orig>
+     <transl>
+      <p>使われなくなった文字。たとえば、[[ps:Cyrl|キリル文字]] Yat &lt;big&gt;'''ѣ'''&lt;/big&gt; は、すべての言語で他の文字に置き換えられました。ロシア語では '''е'''、ウクライナ語では '''і'''。</p>
+      <p />
+      <p>適切な文脈で使用するのは正当です。「бѣлый、блѣдный、бѣдный бѣсъ…」</p>
+      <p />
+      <p>[[pt:deprecated|非推奨の文字]] と混同しないでください。{{_}}</p>
+     </transl>
     </text>
    </group>
    <group id="format">
     <text id="Name">
      <orig>format character</orig>
+     <transl>書式文字</transl>
     </text>
    </group>
    <group id="number">
     <text id="Name">
      <orig>number character</orig>
+     <transl>数字文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7567,11 +8147,25 @@
       <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
+     <transl>
+      <p>Unicode は数字を 3 つのクラスに分類します。</p>
+      <p />
+      <p>* 10 進位置数字{{-}}標準の [[pt:ascii|ASCII]] 数字 0…9 と他の文字 ([[ps:Deva|デーバナーガリー]] ०…९) の両方。</p>
+      <p />
+      <p>* 上付き文字や下付き文字など、特殊なコンテキストで使用される同じ数字{{-}}。</p>
+      <p />
+      <p>* その他の数字と数字: 10 進数、位置なし、および部分的に位置のある数字システム (ローマ数字、エーゲ数字、数え棒) の文字、[[pt:precomposed|precomposed]] 数字 (&lt;big&gt;½&lt;/big&gt;… など)</p>
+      <p />
+      <p>[[pt:cjk|CJK]] 数字には、通常 (主に数字を意味する)、まれ (数字を意味する場合もある)、偽造防止 (会計文書で数字の変更を防ぐために使用)、チワン語、ベトナム語の数字があります。</p>
+      <p />
+      <p>主な用途が数値以外の文字（たとえば、А̄ のようなスラブ数字）は、Unicode では数値と​​して扱われません。</p>
+     </transl>
     </text>
    </group>
    <group id="emoji">
     <text id="Name">
      <orig>emoji</orig>
+     <transl>絵文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7583,11 +8177,21 @@
       <p />
       <p>All emoji are [[pt:spacing|spacing]] characters.</p>
      </orig>
+     <transl>
+      <p>日本語の {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol'' から。</p>
+      <p />
+      <p>携帯電話事業者 NTT DoCoMo が 1999 年頃に SMS の文字数を節約するために考案。欧米の事業者は 2004 年に独自のセットの開発を開始し、2010 年に DoCoMo のエンコードは Unicode{{_}}6.0 に導入されました。多くの絵文字は日本固有のものです。お辞儀をするビジネスマン {{em|😅}}、初心者ドライバーのサイン {{em|🔰}}… 日本国外で意味が変わったものもいくつかあります。最高学年の {{em|💯}} は「完全に同意」に変わりました。</p>
+      <p />
+      <p>2010 年以前の古い絵文字のいくつかは、U+FE0F 文字 (別名 ''variation selector 16) でのみ絵文字として表示されることが保証されています。</p>
+      <p />
+      <p>すべての絵文字は [[pt:spacing|spacing]] 文字です。</p>
+     </transl>
     </text>
    </group>
    <group id="stability">
     <text id="Name">
      <orig>stability guarantees</orig>
+     <transl>安定性の保証</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7607,11 +8211,29 @@
       <p />
       <p>'''If two characters were (or were{{_}}not) in case pair, they will remain there''' (5.0+). Small letter may get capital counterpart (or vice-versa, like in Cherokee), and this is the only way for a letter to enter a case pair.</p>
      </orig>
+     <transl>
+      <p>Unicode コンソーシアムは、文字の一部のプロパティを変更しないことを保証します。</p>
+      <p />
+      <p>'''文字は移動したり消えたりしません''' (2.0 以降)。新しい Unicode はすべて、以前の Unicode のスーパーセットになります。テキストは国別ソート順でソートされます。</p>
+      <p />
+      <p>'''文字の名前は変更されません''' (2.0 以降)。ただし、修正名は存在し、'''それらは'''Unicodia'' で表示されます。修正を含め、同義語も変更されません (5.0 以降)。</p>
+      <p />
+      <p>'''文字列の [[pt:normalization|正規化]] は変更されません''' (4.1 以降)。バージョン 3.1 では保証が弱くなりました。Unicode は [[ps:Latn|ラテン文字]] や、正規化が重要となるその他の頻繁なスクリプトをますます採用するようになりました。</p>
+      <p />
+      <p>'''文字のプロパティは変更される可能性がありますが、その性質が変わるほどではありません''' (1.1+)。たとえば、大文字は小文字にはなりませんし、[[pt:noncharacter|非文字]] は再び使用されることはありません。Unicode の以降のバージョンでは、このルールは明確化されました。</p>
+      <p />
+      <p>'''文字の規範的および情報的プロパティは、Unicode ベースから消えることはありません''' (5.2+)。残りのプロパティは名前が変更されたり削除されたりする可能性がありますが、名前変更時に他のプロパティの代わりになることはありません。</p>
+      <p />
+      <p>'''[[pt:casefolding|大文字/小文字の折りたたみ]] は変更されません''' (5.0+)。大文字と小文字の変換は、ロケールに依存しない文字列の比較を目的としており、通常は小文字に変換されます (ただし、必ずしもそうとは限りません)。[[ps:Cher|チェロキー語]] では、大文字への変換が行われます。これは、大文字が以前に導入されたためです。</p>
+      <p />
+      <p>'''2 つの文字が大文字と小文字のペアにあった場合 (または大文字と小文字のペアになかった場合)、それらはそのまま残ります''' (5.0 以降)。小文字は大文字の対応する文字になる場合があり (または、チェロキー語のようにその逆)、これが文字が大文字と小文字のペアに入る唯一の方法です。</p>
+     </transl>
     </text>
    </group>
    <group id="dynamic">
     <text id="Name">
      <orig>dynamic composition</orig>
+     <transl>動的構成</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7619,11 +8241,17 @@
       <p />
       <p>To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</p>
      </orig>
+     <transl>
+      <p>Unicode は、動的合成を使用することで [[pt:universality|普遍性]] という野心的な目標を達成しています。{{-}} 文字のイメージは、部分からオンザフライで構築されます。便宜上 [[pt:precomposed|precomposed]] 文字が作成される場合もありますが、一般的には &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt; です。</p>
+      <p />
+      <p>異なるエンコード バリアントでのテキストの等価性をチェックするには、[[pt:normalization|正規化]] アルゴリズムが使用されます。</p>
+     </transl>
     </text>
    </group>
    <group id="logical">
     <text id="Name">
      <orig>logical order</orig>
+     <transl>論理的な順序</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7633,11 +8261,19 @@
       <p />
       <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before consonant, even if read after.</p>
      </orig>
+     <transl>
+      <p>Unicode は、発音やキーボードで入力した順序にほぼ対応する論理順序で文字を保存します。この順序は画面上の進行順序とは一致せず、[[pt:bidi|双方向テキスト]] のアルゴリズムは文字を視覚的な順序に配置するように設計されています。</p>
+      <p />
+      <p>[[pt:combining|結合記号]] は文字の後に保存されます。</p>
+      <p />
+      <p>例外: 一部の [[pt:brahmic|ブラーフミー]] アブギダ ([[ps:Thai|タイ語]]、[[ps:Laoo|ラオ語]]) は伝統的にテキストを視覚的な順序で保存します。一部の母音は子音の後に読み取られる場合でも、子音の前に配置されます。</p>
+     </transl>
     </text>
    </group>
    <group id="convertibility">
     <text id="Name">
      <orig>convertibility</orig>
+     <transl>変換性</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7645,11 +8281,17 @@
       <p />
       <p>However, sometimes a single code point of other encoding converts to several characters of Unicode, or vice-versa.</p>
      </orig>
+     <transl>
+      <p>Unicode は、国内、国際、ベンダー固有の他のテキスト標準との交換に使用されます。1 つの文字のバリエーションがそのような標準で異なるコードを取得した場合、Unicode ではそれらは統一されません。これにより、Unicode を介したエンコード間の変換、ロスレス ラウンドトリップ変換 (エンコードから Unicode へ、およびその逆) が可能になります。</p>
+      <p />
+      <p>ただし、他のエンコードの 1 つのコード ポイントが Unicode の複数の文字に変換されるか、またはその逆になる場合があります。</p>
+     </transl>
     </text>
    </group>
    <group id="plaintext">
     <text id="Name">
      <orig>plain text</orig>
+     <transl>プレーンテキスト</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7663,19 +8305,33 @@
       <p />
       <p>2. Plain text must contain enough information to permit the text to be rendered legibly, and nothing more.</p>
      </orig>
+     <transl>
+      <p>プレーン テキストは文字コードのシーケンスであり、色、フォント、ハイパーリンクなどの視覚要素を含む可能性のある「リッチ/フォーマット テキスト」とは異なります。これらの要素がリッチ テキストから削除されると、残ったものはすべてプレーン テキストになります。</p>
+      <p />
+      <p>プレーン テキスト データを 1 行の可視テキストに変換するには、「レンダリング」というプロセスが必要です。プレーン テキストを別のレンダラー実装に渡すと、テキストの外観が変わる可能性があります。</p>
+      <p />
+      <p>Unicode 標準には 2 つの短いフレーズが含まれています。</p>
+      <p />
+      <p>1. Unicode 標準はプレーン テキストをエンコードします。</p>
+      <p />
+      <p>2. プレーン テキストには、テキストを判読可能にレンダリングできるだけの情報が含まれている必要があり、それ以上の情報は含まれません。</p>
+     </transl>
     </text>
    </group>
    <group id="semantics">
     <text id="Name">
      <orig>semantics</orig>
+     <transl>セマンティクス</transl>
     </text>
     <text id="Text">
      <orig>Character’s behaviour is mainly specified with complex tables rather than with its name or position in code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</orig>
+     <transl>文字の動作は、主に、文字の名前やコード表内の位置ではなく、複雑な表で指定されます。これらの表からの抜粋は、''Unicodia'' に掲載されています: [[pt:number|数値]]、大文字と小文字、書き方 [[pt:bidi|方向]]…</transl>
     </text>
    </group>
    <group id="character">
     <text id="Name">
      <orig>characters, not glyphs</orig>
+     <transl>文字、非グリフ</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7683,11 +8339,17 @@
       <p />
       <p>Characters and glyphs do{{_}}not{{_}}relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
      </orig>
+     <transl>
+      <p>文字は意味の単位です。グリフはフォントに含まれ、画面/紙に描画される特定の画像です。</p>
+      <p />
+      <p>文字とグリフは 1 対 1 で関連しているわけではありません。[[ps:Arab|アラビア語]] テキストのスタイルである「Nastaliq」では、フォントに何千ものグリフが必要です。しかし、エンコーディングには意味を伝える文字が 200 文字しかありません。また、逆に、[[pt:unification|統一]] にもかかわらず、異なる文字がグリフを共有する場合があります。</p>
+     </transl>
     </text>
    </group>
    <group id="universality">
     <text id="Name">
      <orig>universality</orig>
+     <transl>普遍性</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7698,11 +8360,20 @@
       <p>* scripts whose users did{{_}}not{{_}}make a ''de facto'' standard;</p>
       <p>* non-textual (for example, pictographic) scripts.</p>
      </orig>
+     <transl>
+      <p>Unicode は、ビジネス、教育、宗教、科学の分野で働く人々や、現代および歴史のテキストなど、さまざまな言語や職業の人々を対象に設計されています。</p>
+      <p />
+      <p>Unicode の範囲外には、次のものがあります:</p>
+      <p>* 文字を確実にエンコードするための情報が少なすぎる書記体系。;</p>
+      <p>* ユーザーが「事実上の」標準を作らなかったスクリプト。;</p>
+      <p>* 非テキスト (たとえば、絵文字) スクリプト。</p>
+     </transl>
     </text>
    </group>
    <group id="unification">
     <text id="Name">
      <orig>unification</orig>
+     <transl>統一</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7719,11 +8390,26 @@
       <p />
       <p>If the characters were unified, but then Unicode started to distinguish them, it’s disunification. For example, in 2005 [[ps:Grek|Greek]] and [[ps:Copt|Coptic]] were disunified.</p>
      </orig>
+     <transl>
+      <p>統一とは、異なる文字を同じ [[pt:codepoint|コード ポイント]] で書くことです。重複とは、1 つの文字を異なるコード ポイントで書くことです。</p>
+      <p />
+      <p>Unicode は重複を回避します。句読点は一度エンコードされ、すべての西洋言語とそれらが浸透した東洋言語で共有されます。 Unicode は、英語 (“wye”)、フランス語 (“i grec”)、ドイツ語 (“ypsilon”) の文字 Y を区別しません。さらに、中国語と日本語の類似の [[ps:Hani|表意文字]] も統一されています。</p>
+      <p />
+      <p>重要な例外がいくつかあります:</p>
+      <p>* 完全に異なるエンティティ: [[ps:Latn|ラテン語]]、[[ps:Grek|ギリシャ語]]、[[ps:Cyrl|キリル文字]]、[[ps:Cher|チェロキー語]] の文字 A は同じ文字ではありません。</p>
+      <p>* 処理の容易さ: シンプルで改行なしのハイフンが存在します。 Unicode には、異なる小文字の Ð が 3 つもあります。</p>
+      <p>* フォント作成の容易さ: すべての南アジア言語には、独自の仮想 [[pt:virama|virama]] (子音接続詞を構成するための特殊文字) があります。デザイナーは標準を読んで、virama の機能を理解する必要があります。</p>
+      <p>* [[pt:convertibility|往復変換可能性]] の歴史的な理由: 古いエンコードの中国語の表意文字は常に中国語であり、日本語の対応する文字はありません。</p>
+      <p>* 通常の見落としも発生する可能性があります: 角括弧 ⟨ は数学的であり、&lt; は技術的であり、後者は [[pt:deprecated|非推奨]] です。</p>
+      <p />
+      <p>文字が統合されていたが、その後 Unicode がそれらを区別し始めた場合、それは非統合です。たとえば、2005 年には [[ps:Grek|ギリシャ語]] と [[ps:Copt|コプト語]] が非統合されました。</p>
+     </transl>
     </text>
    </group>
    <group id="efficiency">
     <text id="Name">
      <orig>efficiency</orig>
+     <transl>効率</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7738,16 +8424,30 @@
       <p>* Format characters are described as much as possible.</p>
       <p>* [[pt:format|Format]] characters that change inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
      </orig>
+     <transl>
+      <p>Unicode は、効率的な実装を可能にするよう努めています。特に、次の点に留意してください。:</p>
+      <p />
+      <p>* Unicode にはシフト可能な状態がありません。これにより、アクセスと検索が簡単になります。これとは対照的に、電信コードでは、1 は文字ページでは E、数字ページでは 3 を意味します。</p>
+      <p>* [[pt:serialization|シリアル化]] の主な形式である [[pt:utf8|UTF-8]] と [[pt:utf16|UTF-16]] は、自己同期型です。これにより、アクセスと検索が簡単になります。</p>
+      <p>* 文字コードは 0 から 10FFFF₁₆ までの数字です。UTF-8/16 で正しく動作しない場合でも、ルックアップ テーブルは機能します。</p>
+      <p>* ASCII の処理は、デコードなしで UTF-8 で可能です。[[pt:bmp|ほとんどの言語]] の処理は、デコードなしで UTF-16 で可能です。</p>
+      <p>* 1 つのスクリプトの文字は、可能な限りグループ化されます。</p>
+      <p>* 句読点はすべてのスクリプトで共通です。</p>
+      <p>* 書式文字は可能な限り記述します。</p>
+      <p>* 内部状態を変更する [[pt:format|書式]] 文字は避けます。これは常に可能であるとは限りません。[[pt:bidi|双方向の記述]] は本質的に複雑です。</p>
+     </transl>
     </text>
    </group>
    <group id="ascii">
     <text id="Name">
      <orig>ASCII</orig>
+     <transl>ASCII</transl>
     </text>
    </group>
    <group id="bmp">
     <text id="Name">
      <orig>BMP = Basic Multilingual Plane</orig>
+     <transl>BMP = 基本多言語面</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7759,11 +8459,21 @@
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and 6400 [[pt:private|private-use]] characters.</p>
      </orig>
+     <transl>
+      <p>Unicode [[pt:plane|plane]] #0 には 0000…FFFD の文字が含まれています。現在使用されている言語で最も頻繁に使用される文字は基本プレーンでエンコードされており、これらの言語を [[pt:utf16|UTF-16]] で処理できます。</p>
+      <p />
+      <p>Unicode は 1996 年まで 2 バイト エンコードで、65,536 文字の容量がありました。拡張の問題が遅れたとき、いくつかの進歩的な言語とライブラリ (Java、Windows{{_}}NT) はすでに Unicode を採用しており、それが基本プレーンと UTF-16 の形で妥協につながりました。</p>
+      <p />
+      <p>Unicode{{_}}16 の時点では、割り当てられていない位置は 2FE0…2FEF の 16 位置のみです。</p>
+      <p />
+      <p>基本プレーンには [[pt:ascii|ASCII]]、[[pt:latin1|Latin-1]]、および 6400 個の [[pt:private|private-use]] 文字が含まれています。</p>
+     </transl>
     </text>
    </group>
    <group id="noncharacter">
     <text id="Name">
      <orig>non-character</orig>
+     <transl>非文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7773,11 +8483,19 @@
       <p />
       <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
      </orig>
+     <transl>
+      <p>66 個のコード ポイントは「非文字」です: 17 個のプレーンすべてにおける *FFFE と *FFFF、および FDD0…FDEF。これらは Unicode で再び現れることはありません。</p>
+      <p />
+      <p>プログラマーはこれらをエラー コード、置換マーク、ソートに影響する「重み」、またはプログラム内部のその他のものとして '''使用''' し、[[pt:utf8|UTF-8]] または [[pt:utf16|UTF-16]] に再コードできます。プログラムがこのコードを使用しない場合、通常の不明な文字として扱うことができます。</p>
+      <p />
+      <p>これらの文字をキーボードで入力することは '''禁止''' されており、ソフトウェア間の交換に使用してください。[[pt:bom|バイト オーダー マーク]] は、文字 FFFE が Unicode に存在しないため機能します。</p>
+     </transl>
     </text>
    </group>
    <group id="codepoint">
     <text id="Name">
      <orig>code point</orig>
+     <transl>コード ポイント</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7792,16 +8510,30 @@
       <p />
       <p>See also [[pt:unification|unification]] (writing different characters with one code point) and duplication (writing a single character with different code points).</p>
      </orig>
+     <transl>
+      <p>「文字」という用語は曖昧なので、Unicode では独自のコード (0 から 1,114,111₁₀=10,FFFF₁₆ までの数字) を '''コード ポイント''' と呼びます。コード ポイントは次のようになります。</p>
+      <p>* [[pt:graphic|グラフィック]] (印刷可能) 文字。</p>
+      <p>* [[pt:control|コントロール]] コマンド。</p>
+      <p>* [[pt:format|書式設定]] コマンド。</p>
+      <p>* [[pt:private|プライベート]] 用に残されています。</p>
+      <p>* [[pt:utf16|UTF-16]] サロゲート ペア用に残されています。</p>
+      <p>* [[pt:noncharacter|非文字]] (エンコードから削除)。</p>
+      <p>* 空 (予約済み)。</p>
+      <p />
+      <p>[[pt:unification|統合]] (1 つのコード ポイントで異なる文字を書く) および複製 (1 つの文字を異なるコード ポイントで書く) も参照してください。</p>
+     </transl>
     </text>
    </group>
    <group id="latin1">
     <text id="Name">
      <orig>Latin-1</orig>
+     <transl>Latin-1</transl>
     </text>
    </group>
    <group id="plane">
     <text id="Name">
      <orig>plane</orig>
+     <transl>プレーン</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7815,11 +8547,25 @@
       <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
       <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
      </orig>
+     <transl>
+      <p>文字の範囲は *0000 から *FFFD です。各プレーンの最後の 2 つの [[pt:codepoint|コード ポイント]]、*FFFE と *FFFF は [[pt:noncharacter|非文字]] です。[[pt:utf16|UTF-16]] の制限により、Unicode には 17 のプレーンがあります。</p>
+      <p />
+      <p>* プレーン #0 は '''[[pt:bmp|基本多言語プレーン]]''' で、ほとんどの現存する言語の文字が含まれています。Unicode{{_}}16 には 16 個の未割り当ての位置があります。</p>
+      <p />
+      <p>* プレーン #1 は '''補足多言語プレーン''' で、珍しい言語や死語、および技術言語の文字が含まれています。{{%|50}} 未満がいっぱいです。</p>
+      <p />
+      <p>* プレーン #2 は '''補足表意文字プレーン''' で、[[ps:Hani|CJK 表意文字]] のみが含まれており、{{%|93}} いっぱいです。</p>
+      <p>* プレーン #3 は '''第 3 次表意文字プレーン''' で、CJK 表意文字のみが含まれており、{{%|14}} がいっぱいです。</p>
+      <p>* プレーン 4 から 0D は未使用です。</p>
+      <p>* プレーン 0E は '''補助特殊用途プレーン''' で、500 個未満の特殊文字が含まれています。</p>
+      <p>* プレーン 0E と 10 は [[pt:private|私的使用]] 用に残されています。</p>
+     </transl>
     </text>
    </group>
    <group id="private">
     <text id="Name">
      <orig>private-use character</orig>
+     <transl>私用文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7834,11 +8580,24 @@
       <p />
       <p>Unofficially [[pt:control|control]] characters are taken for custom control and format characters: in most cases they cannot appear in text.</p>
      </orig>
+     <transl>
+      <p>[[pt:bmp|基本プレーン]]の E000…F8FF の 6400 文字と、2 つの [[pt:plane|プレーン]] 0F と 10 の 131068 文字 ([[pt:noncharacter|非文字]] である *FFFE と *FFFF を除く) が、各自のニーズに合わせて提供されます。</p>
+      <p />
+      <p>相互交渉により、商標、架空のアルファベット、珍しい文字とスクリプト、スタイル タグ、置換マークなど、Unicode に適さない文字を含め、必要なものすべてをこれらの範囲でエンコードできます。Unicode コンソーシアムは、これについて一切責任を負いません。プライベート文字の一般的な使用法を 4 つ挙げてみましょう。</p>
+      <p />
+      <p>* OS ベンダーは、ここで独自のロゴをエンコードすることがよくあります。エンド ユーザーは E000 から始まるコードを取得し、ソフトウェア ベンダーは F8FF から始まるコードを取得します。</p>
+      <p>* ConScript Unicode Registry とその祖先である Under-ConScript Unicode Registry{{-}} には、60 を超える人工言語、映画、文学、ゲームのスクリプトが含まれています。そのうちの 3 つ、[[pk:101D0|Phaistos Disc]]、[[ps:Shaw|Shavian alphabet]]、[[ps:Dsrt|Deseret alphabet]] は、実際の Unicode に受け入れられました。</p>
+      <p>* Standard Music Font Layout (SMuFL){{-}}[[pk:1D100|楽譜]] PDF を省略するための音楽フォントのオープン スタンダード。</p>
+      <p>* Unicode ブロックへの提案はまだ割り当てられておらず、実装フォントを作成する必要があります。</p>
+      <p />
+      <p>非公式に [[pt:control|control]] 文字はカスタム制御文字と書式文字として使用されます。ほとんどの場合、テキストには表示できません。</p>
+     </transl>
     </text>
    </group>
    <group id="bidi">
     <text id="Name">
      <orig>bidirectional text</orig>
+     <transl>双方向テキスト</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7862,11 +8621,33 @@
       <p>* You can use LRM, RLM and ALM for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
       <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with LRO/RLO, and finish with PDF. Avoid this notation, it’s a security issue.</p>
      </orig>
+     <transl>
+      <p>右から左に書かれた文字が少なくとも 1 つ含まれるテキスト。このようなテキストを処理するアルゴリズムは複雑なので、一般的な説明をします。</p>
+      <p />
+      <p>1. テキストを独立した行に分割します。</p>
+      <p />
+      <p>2. 各行をネストされたセグメントに分割します。行全体が左から右で、その中に右から左のセグメントがあり、それらに左から右のセグメントが含まれる、などです。iOS にはバグがありました。セグメントのネストが深いと電話が再起動します。</p>
+      <p />
+      <p>3. ヨーロッパの数字を分離し、左から右の方向を指定します。</p>
+      <p />
+      <p>4. 残りの文字に方向を指定します。右から左に進み、ミラーリングされている場合は反映します。</p>
+      <p />
+      <p>5. テーブルの方向を定義するなど、高レベルのプロトコルを実行します。</p>
+      <p />
+      <p>たとえば、「XX,YY 1,00&amp;lt;2,00 XX」 = 「ثث,حح 1,00&amp;lt;2,00 ثث」</p>
+      <p />
+      <p>'''単純なユーザーの場合の対処法は?'''</p>
+      <p />
+      <p>* ヘブライ語の引用を英語のテキストに書き、システムがそれを正しくフォーマットしない場合は、引用を LRE/RLE で開始し、PDF で終了します。</p>
+      <p>* 小さなテキストには LRM、RLM、ALM を使用できます。これらは、方向が厳密に指定された空の文字であり、システムが方向がわかっている文字を見つけるまでこの方向が維持されます。</p>
+      <p>* 左から右の言語で右から左に書きたい場合、またはその逆の場合は、テキストを LRO/RLO で開始し、PDF で終了します。この表記はセキュリティ上の問題なので避けてください。</p>
+     </transl>
     </text>
    </group>
    <group id="normalization">
     <text id="Name">
      <orig>normalization</orig>
+     <transl>正規化</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7882,11 +8663,25 @@
       <p />
       <p>All four normalizations are idempotent: NFD(NFD(s))=NFD(s) and so on. In ither words, the second normalization will do nothing.</p>
      </orig>
+     <transl>
+      <p>あいまい比較のための文字列変換。Unicode には 4 種類の正規化があります。</p>
+      <p />
+      <p>1. NFD = 標準分解: [[pt:precomposed|precomposed]] 文字の分解、[[ps:Hang|ハングル音節のジャモ (文字) への変換、オームやオングストロームなどの記号の置き換え、[[pt:combining|マーク]] の標準順序への並べ替え。</p>
+      <p />
+      <p>2. NFC = 標準構成。NFD、次に、事前構成文字とハングル音節の組み立て。</p>
+      <p />
+      <p>3. NFKD = 互換分解。NFD + [[pt:ligature|合字]] の分解、文字のような文字の文字への置き換え、下付き文字の数字への置き換え、半角から標準への置き換えなど。</p>
+      <p />
+      <p>4. NFKC = 互換構成。NFKD、次に、NFC のように '''標準''' 文字の合成。</p>
+      <p />
+      <p>4 つの正規化はすべてべき等です: NFD(NFD(s))=NFD(s) など。言い換えると、2 番目の正規化は何も行いません。</p>
+     </transl>
     </text>
    </group>
    <group id="casefolding">
     <text id="Name">
      <orig>case folding</orig>
+     <transl>ケース折り畳み</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7899,11 +8694,22 @@
       <p />
       <p>Case folding is idempotent: CF(CF(s))=CF(s), i.e. the second folding does nothing.</p>
      </orig>
+     <transl>
+      <p>文字列変換は、(ほとんど) ロケールに依存しない大文字と小文字を区別しない文字列比較に使用されます。2 つの主なタイプと 1 つの補助タイプがあります:</p>
+      <p>* 単純 (長さを変更しません): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
+      <p>* 完全 ([[pt:ligature|合字]] を展開): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
+      <p>* トルコ語 (トルコ語とアゼルバイジャン語の特別なルール): &lt;big&gt;I → ı&lt;/big&gt;</p>
+      <p />
+      <p>通常、大文字と小文字の変換は小文字への変換です。ただし、[[ps:Cher|チェロキー語]] の場合は大文字への変換です。大文字が最初に表示されます。</p>
+      <p />
+      <p>大文字と小文字の変換はべき等です: CF(CF(s))=CF(s)、つまり 2 回目の変換は何も行いません。</p>
+     </transl>
     </text>
    </group>
    <group id="serialization">
     <text id="Name">
      <orig>serialization</orig>
+     <transl>シリアル化</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7913,11 +8719,19 @@
       <p />
       <p>[[pt:bom|Byte order mark]] lets software distinguish between these formats.</p>
      </orig>
+     <transl>
+      <p>データ (たとえば、Unicode テキスト) を一連の ''コード単位''{{-}} バイト ([[pt:utf8|UTF-8]] の場合)、[[pt:utf16|UTF-16]] の場合は 2 バイト ワード、[[pt:utf32|UTF-32]] の場合は 4 バイト ワード、[[pt:utf7|UTF-7]] および [[pt:punycode|Punycode]] の場合は印刷可能な ASCII 文字に変換する方法。</p>
+      <p />
+      <p>ディスクとデータ チャネルはバイトで動作します。したがって、UTF-16/32 を送信する場合、ワード内のバイトの順序が意味を持ち始め、UTF-16BE、UTF-32BE (ビッグ エンディアン、最上位バイトが先頭) と UTF-16LE、UTF-32LE (リトルエンディアン、最下位バイトが先頭) に分割されます。</p>
+      <p />
+      <p>[[pt:bom|バイト オーダー マーク]] により、ソフトウェアはこれらの形式を区別できます。</p>
+     </transl>
     </text>
    </group>
    <group id="punycode">
     <text id="Name">
      <orig>Punycode</orig>
+     <transl>ピュニコード</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7935,11 +8749,27 @@
       <p>Used only in Internet domain name system, where byte economy and readability are more important than efficiency. Prefix “xn--” is prepended to international names:</p>
       <p>: münchen.example.com = xn--mnchen-3ya.example.com</p>
      </orig>
+     <transl>
+      <p>短い Unicode 文字列を印刷可能な ASCII 文字のチェーンに [[pt:serialization|シリアル化]] する形式。</p>
+      <p />
+      <p>最初にすべての ASCII 文字が書き込まれ、ダッシュの後に残りの文字が複雑な手順を使用してエンコードされます。</p>
+      <p>: München = Mnchen-3ya</p>
+      <p />
+      <p>文字列が純粋な ASCII の場合は、ダッシュのみが追加されます:</p>
+      <p>: test{{_}}={{_}}test-</p>
+      <p />
+      <p>ASCII 文字がない場合は、最初のダッシュは省略されます:</p>
+      <p>: правда{{_}}={{_}}80aafi6cg</p>
+      <p />
+      <p>インターネット ドメイン ネーム システムでのみ使用されます。このシステムでは、バイトの節約と読みやすさが効率よりも重要です。国際名の先頭にはプレフィックス「xn--」が付加されます:</p>
+      <p>: münchen.example.com = xn--mnchen-3ya.example.com</p>
+     </transl>
     </text>
    </group>
    <group id="utf7">
     <text id="Name">
      <orig>UTF-7</orig>
+     <transl>UTF-7</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7953,11 +8783,23 @@
       <p />
       <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that’s important for search. In World Wide Web UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
      </orig>
+     <transl>
+      <p>'''Unicode 変換形式、7 ビット''' は、Unicode [[pt:serialization|シリアル化]] を印刷可能な [[pt:ascii|ASCII]] 文字のチェーンにシリアル化する形式です。</p>
+      <p />
+      <p>52 文字、10 桁の数字、および '(),-./:? がそのまま記述されます。 ~\+ 以外の他の ASCII 文字がそのまま記述される場合もあります。プラス + は +- (プラスハイフン) でエンコードされる場合があります。残りの文字は [[pt:utf16|UTF-16BE]] にエンコードされ、次に Base64 (62='''+'''、63='''/''') にエンコードされ、+…- 文字で囲まれます (たとえば、&lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;)。</p>
+      <p />
+      <p>コードの後に​​ Base64 文字とハイフン以外の文字が続く場合、最後のハイフンは省略できます。2 つのエンコード可能な文字の間にエンコードできない文字が 1 つある場合は、バイトを節約するためにエンコードされることがあります。</p>
+      <p />
+      <p>UTF-7 形式は [[pt:utf8|UTF-8]] の優れた特性を{{_}}備えておらず{{_}}、あいまいです。同じテキストが複数の方法でエンコードされる可能性があります。</p>
+      <p />
+      <p>よりかさばる ''quoted-printable'' の代替として、電子メールでのみ使用されます。IMAP プロトコルでは、メールボックス名に UTF-7 の特別バージョンが使用されます。アンパサンド '''&amp;''' はプラス '''+''' の代わりに使用され、63 はカンマで、最後のハイフンは常に記述され、ASCII 文字では &amp; のみがエンコードされます。このような UTF-7 はあいまいではありません。これは検索にとって重要です。World Wide Web では UTF-7 は明示的に禁止されています。ブラウザにページが UTF-7 であると思わせると、XSS 攻撃を行うことができます。</p>
+     </transl>
     </text>
    </group>
    <group id="utf8">
     <text id="Name">
      <orig>UTF-8</orig>
+     <transl>UTF-8</transl>
     </text>
     <text id="Text">
      <orig>
@@ -7977,11 +8819,29 @@
       <p />
       <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. [[pt:bom|Byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
      </orig>
+     <transl>
+      <p>'''Unicode 変換形式、8 ビット''' は、Unicode [[pt:serialization|シリアル化]] をバイト チェーンにまとめる形式です。既存のインターネット ソフトウェアとの互換性のために、1992 年に Plan{{_}}9 オペレーティング システムで発明されました。すべての [[pt:codepoint|コード ポイント]] は、次のいずれかのシーケンスで書き込まれます:</p>
+      <p>* 0xxx.xxxx</p>
+      <p>* 110x.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p />
+      <p>UTF-8 のプロパティ:</p>
+      <p>* 理論上は、最大 6 バイトのシーケンスで 20 億のコード ポイントを書き込むことができます。 [[pt:utf16|UTF-16]] で Unicode に制限が適用されているため、4 より長いシーケンスはありません。</p>
+      <p>* 下位互換性: ラテン テキストは ASCII テキストと区別できません。バイト 00 と 7F は [[pt:control|control]] で、バイト FF は不可能であるため、プログラム インターフェイス、端末プロトコルとの互換性があります。</p>
+      <p>* UTF-8 の非標準形式が存在し、ヌル文字は C0{{_}}80 としてエンコードされ、文字列の末尾 00 と区別されます。</p>
+      <p>* 自己同期: 誤ったバイトを追加しても、残りのテキストは読み取り可能なままです。レガシー プログラムで正しい UTF-8 で検索しても、誤検出は発生しません。</p>
+      <p>* 信頼性の高い検出: 意味のあるテキストを 1 バイト エンコード (純粋な ASCII でない限り) または UTF-16 で UTF-8 と混同することは不可能です。</p>
+      <p>* 単調: UTF-8 バイトによる並べ替えは、文字コードによる並べ替えと同じです。</p>
+      <p />
+      <p>UTF-8 は、ほとんどのインターネット形式やプロトコルを含む、ソフトウェア間の交換形式として広く使用されています。[[pt:bom|バイト オーダー マーク]] は EF{{_}}BB{{_}}BF です。プログラム インターフェイスの形式として、UTF-8 は Linux や SSL などのクロスプラットフォーム ライブラリで使用されています。</p>
+     </transl>
     </text>
    </group>
    <group id="utf16">
     <text id="Name">
      <orig>UTF-16, surrogate pair</orig>
+     <transl>UTF-16、サロゲートペア</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8002,11 +8862,30 @@
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
+     <transl>
+      <p>'''Unicode 変換形式、16 ビット''' は、Unicode [[pt:serialization|シリアル化]] を 2 バイトのマシン ワードのチェーンにシリアル化する形式です。</p>
+      <p />
+      <p>Unicode は当初 2 バイトのエンコードと考えられており、2 バイト文字でテキストを書き込むことは UCS-2 と呼ばれていました。当時の Java や Windows{{_}}NT などの進歩的な言語やライブラリは、すぐに 2 バイト文字を採用し、テキスト処理を簡素化しました。しかし、すぐに 2 バイトでは十分ではないことが明らかになり、1996 年に 2 バイト ワードの可変数によるエンコードが妥協策として作成され、UTF-16 と名付けられました。</p>
+      <p>* 文字 0…D7FF および E000…FFFF はそのまま書き込まれます。</p>
+      <p>* 文字 D800…DFFF は禁止されています。</p>
+      <p>* 10000 以上の文字は、'''サロゲート ペア''' として書き込まれます:</p>
+      <p>: 1101.10yy.yyyy.yyyy{{_}}1101.11yy.yyyy.yyyy、y=x−10000₁₆。</p>
+      <p />
+      <p>UTF-16 のプロパティ:</p>
+      <p>* Unicode の容量に制限が課せられます: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 文字。</p>
+      <p>* 下位互換性: [[pt:bmp|基本プレーン]] のテキストは UCS-2 と区別できません。作業言語が基本プレーンにあり、他のプレーンの文字が処理されない (そのまま残されるか削除される) 場合、2 バイト文字はテキスト処理に適しています。</p>
+      <p>* 自己同期: 誤った '''単語''' (バイトではない) を追加しても、残りのテキストは読み取り可能なままです。UTF-16 で検索すると、1 文字であっても誤検出は発生しません。</p>
+      <p>* 信頼性の低い検出: [[pt:bom|バイト オーダー マーク]] がない場合、UTF-16 形式とバイト オーダーは、統計またはサロゲート ペア (存在する場合) による間接的な証拠に基づいてのみ検出できます。よく知られている [[pt:ascii|ASCII]] 文字列「Bush hid the facts」は、Windows の UCS-2 の統計的検出を破ります。</p>
+      <p>* 単調ではない: UTF-16 単語による並べ替えは、文字コードによる並べ替えとは異なります。</p>
+      <p />
+      <p>ソフトウェア間の交換形式として、UTF-16 は主に Windows および Mac/Motorola 由来のバイナリ ファイルで使用されます (たとえば、TrueType フォント)。これらのファイルにはバイト オーダー マークは必要ありません。テキスト ファイルでは、UTF-16BE の場合は FE{{_}}FF、UTF-16LE の場合は FF{{_}}FE です。プログラム インターフェイスの形式としては、Windows、Java、JavaScript、Qt で使用されます。</p>
+     </transl>
     </text>
    </group>
    <group id="utf32">
     <text id="Name">
      <orig>UTF-32</orig>
+     <transl>UTF-32</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8019,11 +8898,22 @@
       <p />
       <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
      </orig>
+     <transl>
+      <p>'''Unicode 変換形式、32 ビット'''、別名 '''UCS-4''' は、Unicode [[pt:serialization|シリアル化]] を 4 バイトのマシン ワードのチェーンにまとめた形式です。文字コードは次々に書き込まれます。</p>
+      <p />
+      <p>UTF-32 の特性:</p>
+      <p>* 固定長エンコード。複雑なテキスト処理に最適なのはそのためです。</p>
+      <p>* 非常にかさばります。[[pt:utf8|UTF-8]] と [[pt:utf16|UTF-16]] では最大文字サイズが 4 バイトで、UTF-32 ではすべての文字が 4 バイトです。</p>
+      <p>* 上位 11 ビットによって確実に検出され、常に 0 になります。</p>
+      <p />
+      <p>UTF-32 はかさばるため、ソフトウェア間の交換形式としてはほとんど使用されません。必要な場合は{{-}}[[pt:bom|バイトオーダーマーク]]は、UTF-32BEの場合は00{{_}}00{{_}}FE{{_}}FF、UTF-32LEの場合はFF{{_}}FE{{_}}00{{_}}00です。プログラムインターフェースのフォーマットとして、UTF-32はMacOSを含むUnix系OSの新しいバージョンで使用されています。</p>
+     </transl>
     </text>
    </group>
    <group id="bom">
     <text id="Name">
      <orig>BOM = byte order mark</orig>
+     <transl>BOM = バイトオーダーマーク</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8038,11 +8928,24 @@
       <p />
       <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need byte order mark.</p>
      </orig>
+     <transl>
+      <p>文字 U+FEFF。[[pt:serialization|シリアル化]] 形式を示すために、Unicode テキスト ファイルの先頭に置くことができます (置かなければならないわけではありません)。エンコードされたバイト オーダー マークは次のようになります:</p>
+      <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
+      <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (最上位バイトが先頭);</p>
+      <p>* FF{{_}}FE、その後 00{{_}}00{{-}}UTF-16LE (最下位バイトが先頭);</p>
+      <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
+      <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE。</p>
+      <p />
+      <p>[[pt:utf7|UTF-7]] と [[pt:punycode|Punycode]] は、テキスト ファイルの形式としては{{_}}使用されません{{_}}。UTF-32 は非常にまれです。</p>
+      <p />
+      <p>バイナリ ファイルはシリアル化形式を厳密に指定し、バイト オーダー マークは必要ありません{{_}}。</p>
+     </transl>
     </text>
    </group>
    <group id="cursive">
     <text id="Name">
      <orig>cursive</orig>
+     <transl>筆記体</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8056,11 +8959,23 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with ''shorthand'' where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
      </orig>
+     <transl>
+      <p>筆記者が何かを素早く書き留める書体。特に壊れやすいガチョウの羽ペンで。特徴は言語によって異なりますが、一般的には次のような特徴があります。</p>
+      <p>* 文字の形がシンプル。</p>
+      <p>* 角は鋭いものを除いて丸みを帯びている。</p>
+      <p>* 筆記者が羽ペンを持ち上げることはめったにないため、文字が連結され、1 本のストロークが前後に続き、アセンダとディセンダがループする。</p>
+      <p>* 文字が [[pt:ligature|合字]] に連結される。</p>
+      <p />
+      <p>「イタリック」タイプは筆記体から来ており、一部の言語では筆記体と同じ単語で呼ばれています。</p>
+      <p />
+      <p>「速記」と混同しないでください。速記では筆記者は会話に遅れずについていくものの、厳しい訓練、罫線入りの紙、穏やかな状況での解読などの犠牲を払います。</p>
+     </transl>
     </text>
    </group>
    <group id="minuscule">
     <text id="Name">
      <orig>minuscule writing</orig>
+     <transl>細書き</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8068,11 +8983,17 @@
       <p />
       <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is{{_}}not{{_}}considered minuscule.</p>
      </orig>
+     <transl>
+      <p>線が細く、アセンダとディセンダを多用する書体。中世には羊皮紙を節約するために使われ、[[ps:ラテン語|ラテン語]]、[[ps:ゲオルギウス|ゲオルギウス]]、[[ps:グレク語|グレク語]]で広まった。ラテン語では小さな文字になった。これに対して、グルジア語は技術的には二文字である。</p>
+      <p />
+      <p>一般にアセンダーが大きい文字（[[ps:Lana|Tai Tham]]）では、これは{{_}}細書きとはみなされません。</p>
+     </transl>
     </text>
    </group>
    <group id="abc">
     <text id="Name">
      <orig>collation</orig>
+     <transl>照合</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8086,11 +9007,23 @@
       <p />
       <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If an alphabetical order changes, the country itself changes it without consulting Unicode Consortium.</p>
      </orig>
+     <transl>
+      <p>テキスト文字列を並べる標準的な順序。最も古いものは [[ps:Ugar|ウガリット語]] です。</p>
+      <p />
+      <p>順序の起源:</p>
+      <p>* [[ps:Latn|ラテン語]]、[[ps:Grek|ギリシャ語]]、[[ps:Cyrl|キリル語]]、[[ps:Arab|アラビア語]]、[[ps:Geor|グルジア語]]、[[ps:Armn|アルメニア語]]、[[ps:Hebr|ヘブライ語]]、[[ps:Ethi|エチオピア語]]{{-}}[[ps:Phnx|フェニキア語]] から。フェニキア語の順序は、おそらく以前のセム語族の言語から来ています。</p>
+      <p>* [[ps:Runr|ルーン文字]] (''フサルク''){{-}}不明;</p>
+      <p>* すべての [[pt:brahmic|ブラーフミー文字]]、[[pt:cjk|CJK]] は、発音{{-}}音韻順序で、喉 {{t|k}} から歯 {{t|s}} まで。</p>
+      <p>* CJK は、いわゆる部首を使用して [[ps:Hani|書き方]]{{-}}します。</p>
+      <p />
+      <p>Unicode はアルファベット順に近い順序で文字を記述しますが、アルファベット順の並べ替えのルールは成文化していません。アルファベット順が変更される場合は、Unicode コンソーシアムに相談することなく、国自体が変更します。</p>
+     </transl>
     </text>
    </group>
    <group id="mono">
     <text id="Name">
      <orig>character cell</orig>
+     <transl>文字セル</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8098,11 +9031,17 @@
       <p />
       <p>[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, alphanumeric printers.</p>
      </orig>
+     <transl>
+      <p>想像できるセルの等幅テキストは分割されます。</p>
+      <p />
+      <p>[[pt:cjk|CJK]] もテキストを「文字セル」に分割しますが、この用語は主にタイプライター、コンピューターのテキスト モード、英数字プリンターに使用されます。</p>
+     </transl>
     </text>
    </group>
    <group id="inclusion">
     <text id="Name">
      <orig>inclusion and diversity</orig>
+     <transl>包括性と多様性</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8120,11 +9059,27 @@
       <p />
       <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
      </orig>
+     <transl>
+      <p>[[pt:emoji|絵文字]] の原則の 1 つですが、これは最初から存在していたわけではありません。つまり、絵文字は、組み合わせ爆発を起こさずに可能な限り人種、性別、その他の少数派をサポートする必要があります。さまざまな人種構成の家族は 4,225 個のグリフになります。''(Unicode{{_}}{{version}} には {{nemoji}} 絵文字が含まれています。)''</p>
+      <p />
+      <p>最初は、人々は非現実的な肌の色 (通常は黄色) で表示されます。5 つの肌の色のうち 1 つが、特別な修飾子で指定されます: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}。</p>
+      <p />
+      <p>ほとんどの絵文字は性別がありません。必要に応じて、{{em|🧙}}+ZWJ+{{em|♂}}+VS16 で性別を追加できます。純粋に女性の絵文字は2つだけです: {{em|🤱}}{{_}}授乳中と{{em|🧕}}{{_}}スカーフを巻いた女性。Unicode{{_}}13 (2020) では、性別のない {{em|👰}}{{_}}花嫁、{{em|🤵}}{{_}}タキシードを着た人などが作られました。Unicode 14 (2021) では、性別のない絵文字がさらに追加されました。</p>
+      <p />
+      <p>肌の見えない人{{-}}{{em|🏂}}スノーボーダー{{-}}も、グリフは変更されないとしても、性別と肌色の修飾子をサポートする必要があります。</p>
+      <p />
+      <p>絵文字に複数の人物が含まれている場合、性別と肌色はケースバイケースで実装されます。授乳中 {{em|🤱}} の赤ちゃんの肌は覆われているため、キス {{em|💏}} は {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}} として最初から組み立てられます。</p>
+      <p />
+      <p>ZWJ シーケンスの修飾子の順序: 基本文字、肌の色 (ZWJ なし)、髪、その他の色 {{em|⬛}}、性別、動きの方向 {{em|⬅}}+VS16。 Unicode{{_}}16 の時点では、4 つの色の絵文字が標準化されています (例: 黒猫 {{em|🐈}}+ZWJ+{{em|⬛}})。</p>
+      <p />
+      <p>顔 {{em|😂}} は{{_}}包括的ではなく{{_}}常に黄色です。</p>
+     </transl>
     </text>
    </group>
    <group id="tofu">
     <text id="Name">
      <orig>tofu</orig>
+     <transl>tofu (豆腐)</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8136,11 +9091,21 @@
       <p />
       <p>''Noto'' set of fonts used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
      </orig>
+     <transl>
+      <p>[[pt:character|グリフ]] は、フォントに文字がない場合に表示されます。通常、豆腐は白いボックスで、さいの目に切った日本の大豆チーズにちなんで名付けられました。</p>
+      <p />
+      <p>一部のフォントには、疑問符、十字、または手書きのスケッチマークが付いた長方形など、独創的な豆腐があります。</p>
+      <p />
+      <p>Unicode の一部の文字は、豆腐として表示されません。</p>
+      <p />
+      <p>「Unicodia」や他のソフトウェアで使用される「Noto」フォント セットは、「豆腐なし」を意味します。</p>
+     </transl>
     </text>
    </group>
    <group id="reject">
     <text id="Name">
      <orig>rejected proposals</orig>
+     <transl>却下された提案</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8152,12 +9117,22 @@
       <p />
       <p>''Jindai'' was also rejected. Supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of 17th century.</p>
      </orig>
+     <transl>
+      <p>Unicode コンソーシアムは [[pt:emoji|絵文字]] のエンコードを定期的に拒否しており、実際にリリースされているのは 4 分の 1 未満で、人々は驚くほど独創的に絵文字を組み合わせています ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = 公共料金の請求書)。国旗とテキストはエンコードされなくなりました。</p>
+      <p />
+      <p>架空の 2 つのスクリプト、アーシュラ ル グウィンの Aiha と「スタートレック」シリーズのクリンゴンが拒否されました。ただし、ジョン トールキンが考案した Tengwar と Cirth はエンコード中です。</p>
+      <p />
+      <p>[[pk:101D0|Phaistos Disc]] は何らかの理由でエンコードされましたが、他の 3 つの未調査のスクリプトは拒否されました。解読されていないが十分に調査されている [[ps:Cpmn|キプロ ミノア語]] やインダス語などのスクリプトは、最終的にエンコードされる可能性があります。</p>
+      <p />
+      <p>「Jindai」も拒否されました。日本の漢字以前の文字とされるものは17世紀の偽造品であると考えられています。</p>
+     </transl>
     </text>
    </group>
    <group id="status">
     <au-cmt>hidden term, click any script</au-cmt>
     <text id="Name">
      <orig>script status</orig>
+     <transl>スクリプト ステータス</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8183,11 +9158,35 @@
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to liberation of Africa in 20th century.</p>
      </orig>
+     <transl>
+      <p>'''生存'''{{-}}少なくとも 1 つの言語が「安全」ステータスにあり、その文字は唯一のものであるか、重要性を失っていません。</p>
+      <p />
+      <p>'''言語が原因で絶滅の危機に瀕している'''{{-}}すべての言語の使用および/または移転が中断されています (ステータスは「危急」から「深刻な絶滅の危機」まで)</p>
+      <p />
+      <p>'''文字の競合が原因で絶滅の危機に瀕している'''{{-}}すべての言語に代替文字があり、すでに強力になっているか、勢いを増しています。</p>
+      <p />
+      <p>'''死んでいる'''{{-}}文字は使用されなくなったか、使用が非常に制限されています。Unicode では、比較的最近言語の死によって消滅した文字が 1 つだけ認識されています{{-}}人工言語 [[ps:Medf|Medefaidrin]]。</p>
+      <p />
+      <p>'''宗教的'''{{-}}文字は重要な宗教で使用されています。</p>
+      <p />
+      <p>'''歴史的、解読不要'''{{-}}継続的伝統 ([[ps:Glag|グラゴル文字]])、生涯にわたる記述 ([[ps:Runr|ルーン文字]])、または他の文字 ([[ps:Bhks|Bhaiksuki]]) との近さのため。</p>
+      <p />
+      <p>'''(未)解読'''{{-}}歴史的文字は{{_}}まだ{{_}}解読されていません (部分的に解読、解読済み)。</p>
+      <p />
+      <p>'''新しい'''{{-}}発明されたのが最近なので、正確な状態はわかりません。</p>
+      <p />
+      <p>'''復活'''{{-}}沈黙期間の後、再び使用されるようになりました。復活により、[[ps:Tfng|Tifinagh]] のように、文字の種類や書き方が変わる場合があります。</p>
+      <p />
+      <p>'''死語の復活のために作られた'''{{-}}[[ps:Osge|オセージ語]]のみ（ラテン語で書くのは良くないことが判明）。</p>
+      <p />
+      <p>'''実験的'''{{-}}正書法改革の試みは失敗に終わった。Unicode に存在するすべての例は、次の 3 つのカテゴリに分類されます。1){{_}}英語: 複雑な歴史的正書法。2){{_}}アルバニア語: トルコ人に対する秘密主義と文化的自治への欲求の両方が 1800 年頃に存在していた。3){{_}}20 世紀のアフリカ解放に関連している。</p>
+     </transl>
     </text>
    </group>
    <group id="zwj">
     <text id="Name">
      <orig>ZWJ = zero width joiner</orig>
+     <transl>ZWJ = ゼロ幅ジョイナー</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8204,11 +9203,26 @@
       <p />
       <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
      </orig>
+     <transl>
+      <p>[[pt:format|Format]] 文字 U+200D は、文字を [[pt:ligature|合字]] に結合することを目的としています。これは [[pt:ignorable|デフォルトで無視可能]] であるため、何も言わずに無視してもまったく問題ありません。</p>
+      <p />
+      <p>'''[[pt:brahmic|インド系]] 文字'''、例: [[ps:Deva|Devanagari]]:</p>
+      <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|*ष|ša =|*क्ष|kša}}</p>
+      <p>{{smtable|*क|ka +|**◌्|virama + ZWJ +|*ष|ša =|*क्‍ष|alternate kša}}</p>
+      <p />
+      <p>'''[[pt:emoji|Emoji]]'''</p>
+      <p>: {{em|👩}} 女性 + ZWJ + {{em|✈️}} 飛行機 + VS16 = {{em|👩‍✈️}} 女性パイロット</p>
+      <p />
+      <p>色、性別、移動方向なども。この方法により、絵文字シーケンスを構築する別の方法が生まれました。ベンダーが誰の許可も得ずにシーケンスを作成し、それが成功した場合はコンソーシアムがそれをエンコードします。</p>
+      <p />
+      <p>'''ZWJ を使用しないでください''': 肌の色、キーキャップ、国旗、地域の旗</p>
+     </transl>
     </text>
    </group>
    <group id="zwnj">
     <text id="Name">
      <orig>ZWNJ = zero width non-joiner</orig>
+     <transl>ZWNJ = ゼロ幅非結合子</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8223,6 +9237,18 @@
       <p>{{smtable|*क|ka +|**◌्|virama + ZWNJ +|*ष|ša =|*क्‌ष|alternate kša}}</p>
       <p>::: (usually in compound words)</p>
      </orig>
+     <transl>
+      <p>[[pt:format|Format]] 文字 U+200C は [[pt:ligature|合字]] を分割するために使用されます。これは [[pt:ignorable|default-ignorable]] であるため、フォント内に存在する必要はありません。</p>
+      <p />
+      <p>'''[[ps:Latn|ラテン語]]'''</p>
+      <p>: 一部のフォントでは '''stop''' → '''ﬆop'''</p>
+      <p>: '''dys''' + ZWNJ + '''topia''' = '''dys&amp;zwnj;topia''' (接頭辞と語幹の間に合字はありません)</p>
+      <p />
+      <p>'''[[pt:brahmic|インド語]] スクリプト'''、例: [[ps:Deva|デーヴァナーガリー]]</p>
+      <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|**ष|ša =|*क्ष|kša}}</p>
+      <p>{{smtable|*क|ka +|**◌्|virama + ZWNJ +|*ष|ša =|*क्‌ष|代替クシャ}}</p>
+      <p>::: (通常は複合語)</p>
+     </transl>
     </text>
    </group>
   </group>
@@ -8270,32 +9296,40 @@
    <text id="Ev">
     <orig>e{1}</orig>
     <au-cmt>Emoji version</au-cmt>
+    <transl>e{1}</transl>
    </text>
   </group>
   <group id="GlyphVar">
    <group id="Glag">
     <text id="0">
      <orig>Bulgaria</orig>
+     <transl>ブルガリア</transl>
     </text>
     <text id="1">
      <orig>Croatia</orig>
+     <transl>クロアチア</transl>
     </text>
     <text id="Name">
      <orig>Style of Glagolitic</orig>
+     <transl>グラゴル文字のスタイル</transl>
     </text>
     <text id="Text">
      <orig>[[ps:Glag|Glagolitic]] has two styles, Bulgarian (round) and Croatian (square). Both are [[pt:unification|unified]].</orig>
+     <transl>[[ps:Glag|グラゴル文字]]にはブルガリア文字（丸）とクロアチア文字（四角）の2つのスタイルがあります。どちらも[[pt:unification|統一文字]]です。</transl>
     </text>
    </group>
    <group id="Vert">
     <text id="0">
      <orig>Horizontal</orig>
+     <transl>水平方向</transl>
     </text>
     <text id="1">
      <orig>Vertical</orig>
+     <transl>垂直方向</transl>
     </text>
     <text id="Name">
      <orig>Direction of Sogdian and derivatives</orig>
+     <transl>ソグド語とその派生語の方向</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8305,26 +9339,33 @@
       <p />
       <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
      </orig>
+     <transl>[[ps:Sogd|ソグド文字]] とその派生文字は、連続した行で列に左から右に書きます。ほとんどのコンピュータ プログラムは水平方向にしか書きません。そのため、最も簡単な解決策は、文字を回転させることです。</transl>
     </text>
    </group>
    <group id="Arab">
     <text id="0">
      <orig>Isolated</orig>
+     <transl>独立</transl>
     </text>
     <text id="1">
      <orig>Initial</orig>
+     <transl>頭文字</transl>
     </text>
     <text id="2">
      <orig>Medial</orig>
+     <transl>中間文字</transl>
     </text>
     <text id="3">
      <orig>Final</orig>
+     <transl>末尾文字</transl>
     </text>
     <text id="Name">
      <orig>Position of Arabic letters</orig>
+     <transl>アラビア文字の位置</transl>
     </text>
     <text id="Text">
      <orig>Arabic letters are written in a continuous line, so they can be isolated, initial, medial and final.</orig>
+     <transl>アラビア文字は連続した線で書かれるため、独立文字、頭文字、中間文字、末尾文字として使用できます。</transl>
     </text>
    </group>
   </group>
@@ -8336,82 +9377,106 @@
    <group id="Blk">
     <text id="New">
      <orig>{1}, new block</orig>
+     <transl>{1}, 新しいブロック</transl>
     </text>
     <text id="Full">
      <orig>{1}, block is full</orig>
+     <transl>{1}, ブロックがいっぱいです</transl>
     </text>
     <text id="NewFull">
      <orig>{1}, new block is full</orig>
+     <transl>{1}, 新しいブロックがいっぱいです</transl>
     </text>
     <text id="Ext">
      <orig>{1}, block is extended</orig>
+     <transl>{1}, ブロックが拡張されました</transl>
     </text>
     <text id="NewSc">
      <orig>{1}, new script</orig>
+     <transl>{1}, 新しいスクリプト</transl>
     </text>
     <text id="NewScFull">
      <orig>{1}, new script, full</orig>
      <au-cmt>e.g. Palmyrene in U7</au-cmt>
+     <transl>{1}, 新しいスクリプト、完全</transl>
     </text>
     <text id="NewDis">
      <orig>{1}, disunified script</orig>
      <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
+     <transl>{1}, 不統一スクリプト</transl>
     </text>
    </group>
    <group id="Num">
     <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
     <text id="Digit">
      <orig>digit</orig>
+     <transl>数字</transl>
     </text>
     <text id="SpecDigit">
      <orig>special digit</orig>
+     <transl>特殊数字</transl>
     </text>
     <text id="Number">
      <orig>number</orig>
+     <transl>件数</transl>
     </text>
     <text id="CjkRare">
      <orig>rarely</orig>
+     <transl>稀</transl>
     </text>
     <text id="CjkAccount">
      <orig>anti-forgery</orig>
+     <transl>偽造防止</transl>
     </text>
     <text id="CjkZhuang">
      <orig>Zhuang</orig>
+     <transl>チワン族</transl>
     </text>
     <text id="CjkVietnamese">
      <orig>Vietnamese</orig>
+     <transl>ベトナム語</transl>
     </text>
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>
+    <transl>非文字</transl>
    </text>
    <text id="Private">
     <orig>Private-use character</orig>
+    <transl>私用文字</transl>
    </text>
    <text id="Surrogate">
     <orig>Code from surrogate pair</orig>
+    <transl>サロゲートペアからのコード</transl>
    </text>
    <text id="Unassigned">
     <orig>Unassigned code</orig>
+    <transl>未割り当てコード</transl>
    </text>
    <text id="Empty">
     <orig>Vacant position</orig>
+    <transl>空席</transl>
    </text>
    <text id="NotFound">
     <orig>Not found</orig>
+    <transl>見つかりません</transl>
    </text>
    <text id="BadCode">
     <orig>Cannot parse character code</orig>
+    <transl>文字コードを解析できません</transl>
    </text>
    <text id="BigCode">
     <orig>Characher code is too great</orig>
+    <transl>文字コードが大きすぎる</transl>
    </text>
    <text id="NoSuch">
     <orig>No such character</orig>
+    <transl>そのような文字はありません</transl>
    </text>
    <text id="NEmoji">
     <orig>{1} emoji</orig>
     <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <transl>{1} 絵文字</transl>
    </text>
   </group>
   <group id="Expand">
@@ -8441,7 +9506,7 @@
    <au-cmt>About tab</au-cmt>
    <text id="TofuStats">
     <orig>Tofu statistics</orig>
-    <transl>表示不能文字統計</transl>
+    <transl>Tofu (豆腐) 統計</transl>
    </text>
    <text id="Version">
     <orig>Version &lt;b&gt;{1}&lt;/b&gt; ({2})</orig>
@@ -8503,67 +9568,83 @@
   </group>
   <group id="Main">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\FmMain.ui">
+    <sync text-owner="me" fname="..\Japanese_Resources\Unicodia\FmMain.ui">
      <format name="ui" />
     </sync>
     <text id=":windowTitle">
      <orig>Unicodia — encyclopedia of characters</orig>
      <im-cmt>is a main window</im-cmt>
+     <transl>Unicodia — Unicode 文字の百科事典</transl>
     </text>
     <text id="tabBlocks:at">
      <orig>Blocks</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>ブロック</transl>
     </text>
     <text id="btCloseSearch">
      <orig>Close</orig>
      <im-cmt>is a button</im-cmt>
+     <transl>閉じる</transl>
     </text>
     <text id="tabLibrary:at">
      <orig>Library</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>ライブラリ</transl>
     </text>
     <text id="tabTerms:at">
      <orig>Terms</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>用語</transl>
     </text>
     <text id="tabAbout:at">
      <orig>About</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Unicodia について</transl>
     </text>
     <text id="lbAboutTitle">
      <orig>Unicodia</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>Unicodia</transl>
     </text>
     <text id="lbAboutSubtitle">
      <orig>Encyclopedia of Unicode characters</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>Unicode文字百科事典</transl>
     </text>
     <text id="btCheckForUpdate">
      <orig>Check for update</orig>
      <im-cmt>is a button</im-cmt>
+     <transl>更新の確認</transl>
     </text>
     <text id="lbChecking">
      <orig>Checking…</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>確認中…</transl>
     </text>
     <group id="actions">
      <text id="acSortByAlpha">
       <orig>Alphabetically: A → Z</orig>
+      <transl>アルファベット順 : A → Z</transl>
      </text>
      <text id="acSortByCode">
       <orig>By code: 00 → FF</orig>
+      <transl>コード順 : 00 → FF</transl>
      </text>
      <text id="acSortByContinent">
       <orig>By continent: international → America</orig>
+      <transl>大陸別 : 国際 → アメリカ</transl>
      </text>
      <text id="acSortByTech">
       <orig>By technical name: A → Z</orig>
+      <transl>技術名順 : A → Z</transl>
      </text>
      <text id="acAddCpToFavs">
       <orig>Add to favourites</orig>
+      <transl>お気に入りへ追加</transl>
      </text>
      <text id="acRemoveFromFavs">
       <orig>Remove from favourites</orig>
+      <transl>お気に入りから削除</transl>
      </text>
     </group>
    </group>
@@ -8586,7 +9667,7 @@
   </group>
   <group id="Showcase">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiShowcase.ui">
+    <sync text-owner="me" fname="..\Japanese_Resources\Unicodia\WiShowcase.ui">
      <format name="ui" />
     </sync>
     <text id="btCopy">
@@ -8603,7 +9684,7 @@
   </group>
   <group id="Sample">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiSample.ui">
+    <sync text-owner="me" fname="..\Japanese_Resources\Unicodia\WiSample.ui">
      <format name="ui" />
     </sync>
    </group>
@@ -8624,39 +9705,51 @@
     </text>
     <text id="A">
      <orig>A: asymmetric</orig>
+     <transl>A : 非対称</transl>
     </text>
     <text id="B">
      <orig>B: Bopomofo-like</orig>
+     <transl>B ：ボポモフォのような</transl>
     </text>
     <text id="C">
      <orig>C: cursive</orig>
+     <transl>C : 筆記体</transl>
     </text>
     <text id="F">
      <orig>F: fully-reflective</orig>
+     <transl>F : 完全反射</transl>
     </text>
     <text id="H">
      <orig>H: contain Hangul</orig>
+     <transl>H : ハングルを含む</transl>
     </text>
     <text id="I">
      <orig>I: incomplete look</orig>
+     <transl>I : 不完全な外観</transl>
     </text>
     <text id="K">
      <orig>K: Katakana-like</orig>
+     <transl>K : カタカナのような</transl>
     </text>
     <text id="M">
      <orig>M: mirrored</orig>
+     <transl>M : ミラーリング</transl>
     </text>
     <text id="O">
      <orig>O: odd component</orig>
+     <transl>O : 奇数成分</transl>
     </text>
     <text id="R">
      <orig>R: rotated</orig>
+     <transl>R : 回転</transl>
     </text>
     <text id="S">
      <orig>S: stroke-heavy</orig>
+     <transl>S : ストローク重視</transl>
     </text>
     <text id="U">
      <orig>U: unusual structure</orig>
+     <transl>U : 珍しい構造</transl>
     </text>
     <text id="Emoji">
      <orig>Emoji</orig>
@@ -9176,15 +10269,19 @@
     </text>
     <text id="SolMain">
      <orig>Sol / main</orig>
+     <transl>太陽 / メイン</transl>
     </text>
     <text id="SolAster">
      <orig>Sol / asteroid belt</orig>
+     <transl>太陽 / 小惑星帯</transl>
     </text>
     <text id="SolCent">
      <orig>Sol / centaurs</orig>
+     <transl>太陽 / ケンタウロス</transl>
     </text>
     <text id="SolPlut">
      <orig>Sol / plutoids</orig>
+     <transl>太陽 / 冥王星</transl>
     </text>
     <text id="AstroQuasi">
      <orig>Astrological quasi-planets</orig>
@@ -9216,48 +10313,63 @@
     </text>
     <text id="Electro">
      <orig>Electricity</orig>
+     <transl>電気</transl>
     </text>
     <text id="Math">
      <orig>Mathematics</orig>
+     <transl>数学</transl>
     </text>
     <text id="Equality">
      <orig>Equality</orig>
+     <transl>平等</transl>
     </text>
     <text id="Inequality">
      <orig>Inequality</orig>
+     <transl>不平等</transl>
     </text>
     <text id="GreaterLess">
      <orig>Greater-less</orig>
+     <transl>大きい-小さい</transl>
     </text>
     <text id="GreaterLessBidi">
      <orig>Greater and less</orig>
+     <transl>大きいと小さい</transl>
     </text>
     <text id="SetTheory">
      <orig>Set theory</orig>
+     <transl>集合論</transl>
     </text>
     <text id="MultiStorey">
      <orig>Multi-storey equations</orig>
+     <transl>多層階方程式</transl>
     </text>
     <text id="Plus">
      <orig>Plus</orig>
+     <transl>プラス</transl>
     </text>
     <text id="Minus">
      <orig>Minus</orig>
+     <transl>マイナス</transl>
     </text>
     <text id="Mul">
      <orig>Multiplication</orig>
+     <transl>乗算</transl>
     </text>
     <text id="Div">
      <orig>Division</orig>
+     <transl>除算</transl>
     </text>
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
+     <transl>その他の不等号文字</transl>
     </text>
     <text id="Boolean">
      <orig>Boolean algebra</orig>
+     <transl>ブール代数</transl>
     </text>
     <text id="Braces">
      <orig>Braces</orig>
+     <transl>中括弧</transl>
     </text>
     <text id="Latin">
      <orig>Latin / by letter</orig>
@@ -9265,9 +10377,11 @@
     </text>
     <text id="OldForms">
      <orig>Old forms</orig>
+     <transl>古い形式</transl>
     </text>
     <text id="MiscForms">
      <orig>Misc. forms</orig>
+     <transl>その他の形式</transl>
     </text>
     <text id="Latin2">
      <orig>Latin / by language</orig>
@@ -9275,13 +10389,16 @@
     </text>
     <text id="EnTran">
      <orig>English transcription</orig>
+     <transl>英語転写</transl>
     </text>
     <text id="NotRec">
      <orig>Not recommended</orig>
      <au-cmt>Test: Latin by country → Romanian</au-cmt>
+     <transl>非推奨</transl>
     </text>
     <text id="TwoDiac">
      <orig>Two diacritical marks</orig>
+     <transl>2つの発音区別符号</transl>
     </text>
     <text id="DoubleStruck">
      <orig>Double-struck</orig>
@@ -9289,6 +10406,7 @@
     </text>
     <text id="SansSerif">
      <orig>Sans-serif</orig>
+     <transl>Sans-serif</transl>
     </text>
     <text id="SsBold">
      <orig>Sans-serif bold</orig>
@@ -9308,156 +10426,207 @@
     </text>
     <text id="ParenCap">
      <orig>Parenthesized / capital</orig>
+     <transl>括弧付き / 大文字</transl>
     </text>
     <text id="ParenSmall">
      <orig>Parenthesized / small</orig>
+     <transl>括弧付き / 小文字</transl>
     </text>
     <text id="CircCap">
      <orig>Circled / capital</orig>
+     <transl>丸付き / 大文字</transl>
     </text>
     <text id="CircSmall">
      <orig>Circled / small</orig>
+     <transl>丸付き / 小文字</transl>
     </text>
     <text id="NegCircCap">
      <orig>Negative circled / capital</orig>
+     <transl>マイナス丸付き / 大文字</transl>
     </text>
     <text id="SquareCap">
      <orig>Squared / capital</orig>
+     <transl>平方 / 大文字</transl>
     </text>
     <text id="NegSquareCap">
      <orig>Negative squared / capital</orig>
+     <transl>負の二乗 / 大文字</transl>
     </text>
     <text id="BoldCap">
      <orig>Bold / capital</orig>
+     <transl>太字 / 大文字</transl>
     </text>
     <text id="BoldSmall">
      <orig>Bold / small</orig>
+     <transl>太字 / 小文字</transl>
     </text>
     <text id="ItalCap">
      <orig>Italic / capital</orig>
+     <transl>斜体 / 大文字</transl>
     </text>
     <text id="ItalSmall">
      <orig>Italic / small</orig>
+     <transl>斜体 / 小文字</transl>
     </text>
     <text id="BiCap">
      <orig>Bold+italic / capital</orig>
+     <transl>太字+斜体 / 大文字</transl>
     </text>
     <text id="BiSmall">
      <orig>Bold+italic / small</orig>
+     <transl>太字+斜体 / 小文字</transl>
     </text>
     <text id="ScrCap">
      <orig>Script / capital</orig>
+     <transl>スクリプト / 大文字</transl>
     </text>
     <text id="ScrSmall">
      <orig>Script / small</orig>
+     <transl>スクリプト / 小文字</transl>
     </text>
     <text id="ScrBoldCap">
      <orig>Script bold / capital</orig>
+     <transl>スクリプト太字 / 大文字</transl>
     </text>
     <text id="ScrBoldSmall">
      <orig>Script bold / small</orig>
+     <transl>スクリプト太字 / 小文字</transl>
     </text>
     <text id="DoubleCap">
      <orig>Double-struck / capital</orig>
+     <transl>二重打消し / 大文字</transl>
     </text>
     <text id="DoubleSmall">
      <orig>Double-struck / small</orig>
+     <transl>二重打消し / 小文字</transl>
     </text>
     <text id="DoubleMisc">
      <orig>Double-struck / misc</orig>
+     <transl>二重打消し / その他</transl>
     </text>
     <text id="FrakCap">
      <orig>Fraktur / capital</orig>
+     <transl>フラクトゥール / 大文字</transl>
     </text>
     <text id="FrakSmall">
      <orig>Fraktur / small</orig>
+     <transl>フラクトゥール / 小文字</transl>
     </text>
     <text id="FrakBoldCap">
      <orig>Fraktur bold / capital</orig>
+     <transl>フラクトゥール太字 / 大文字</transl>
     </text>
     <text id="FrakBoldSmall">
      <orig>Fraktur bold / small</orig>
+     <transl>フラクトゥール太字 / 小文字</transl>
     </text>
     <text id="SansCap">
      <orig>Sans-serif / capital</orig>
+     <transl>Sans-serif / 大文字</transl>
     </text>
     <text id="SansSmall">
      <orig>Sans-serif / small</orig>
+     <transl>Sans-serif / 小文字</transl>
     </text>
     <text id="SansBoldCap">
      <orig>Sans-serif bold / capital</orig>
+     <transl>Sans-serif 太字 / 大文字</transl>
     </text>
     <text id="SansBoldSmall">
      <orig>Sans-serif bold / small</orig>
+     <transl>Sans-serif 太字 / 小文字</transl>
     </text>
     <text id="SansItalCap">
      <orig>Sans-serif italic / capital</orig>
+     <transl>Sans-serif 斜体 / 大文字</transl>
     </text>
     <text id="SansItalSmall">
      <orig>Sans-serif italic / small</orig>
+     <transl>Sans-serif 斜体 / 小文字</transl>
     </text>
     <text id="SansBiCap">
      <orig>Sans-serif bold+italic / capital</orig>
+     <transl>Sans-serif 太字+斜体 / 大文字</transl>
     </text>
     <text id="SansBiSmall">
      <orig>Sans-serif bold+italic / small</orig>
+     <transl>Sans-serif 太字+斜体 / 小文字</transl>
     </text>
     <text id="SmallCap">
      <orig>Small capitals</orig>
+     <transl>小文字</transl>
     </text>
     <text id="MonoCap">
      <orig>Monospace / capital</orig>
+     <transl>等幅フォント / 大文字</transl>
     </text>
     <text id="MonoSmall">
      <orig>Monospace / small</orig>
+     <transl>等幅フォント / 小文字</transl>
     </text>
     <text id="CjkCap">
      <orig>CJK fullwidth / capital</orig>
+     <transl>CJK 全角 / 大文字</transl>
     </text>
     <text id="CjkSmall">
      <orig>CJK fullwidth / small</orig>
+     <transl>CJK 全角 / 小文字</transl>
     </text>
     <text id="CjkSimIdeo">
      <orig>CJK similar ideographs</orig>
+     <transl>CJK 類似表意文字</transl>
     </text>
     <text id="CherCap">
      <orig>Cherokee / capital</orig>
+     <transl>チェロキー / 大文字</transl>
     </text>
     <text id="CherSmall">
      <orig>Cherokee / small</orig>
+     <transl>チェロキー / 小文字</transl>
     </text>
     <text id="Bamu">
      <orig>Bamum</orig>
+     <transl>Bamum</transl>
     </text>
     <text id="Vaii">
      <orig>Vai</orig>
+     <transl>Vai</transl>
     </text>
     <text id="Cans">
      <orig>Canadian syllabics</orig>
+     <transl>カナダの音節文字</transl>
     </text>
     <text id="MiscLat">
      <orig>Latin letter of different origin</orig>
+     <transl>起源の異なるラテン文字</transl>
     </text>
     <text id="Clicks">
      <orig>Clicks</orig>
+     <transl>クリック</transl>
     </text>
     <text id="SuperCap">
      <orig>Superscript / capital</orig>
+     <transl>上付き文字 / 大文字</transl>
     </text>
     <text id="SuperSmall">
      <orig>Superscript / small</orig>
+     <transl>上付き文字 / 小文字</transl>
     </text>
     <text id="InvCap">
      <orig>Turned-over / capital</orig>
+     <transl>反転 / 大文字</transl>
     </text>
     <text id="InvSmall">
      <orig>Turned-over / small</orig>
+     <transl>反転 / 小文字</transl>
     </text>
     <text id="RevCap">
      <orig>Reversed / capital</orig>
+     <transl>逆転 / 大文字</transl>
     </text>
     <text id="RevSmall">
      <orig>Reversed / small</orig>
+     <transl>逆転 / 小文字</transl>
     </text>
     <text id="Game">
      <orig>Games</orig>
@@ -9477,32 +10646,39 @@
     </text>
     <text id="ChPieses">
      <orig>Standard pieces</orig>
+     <transl>標準ピース</transl>
     </text>
     <text id="ChFairy">
      <orig>Fairy pieces</orig>
+     <transl>妖精のピース</transl>
     </text>
     <text id="ChNeutral">
      <orig>Neutral pieces</orig>
+     <transl>ニュートラルなピース</transl>
     </text>
     <text id="ChInvert">
      <orig>Inverted pieces</orig>
+     <transl>反転したピース</transl>
     </text>
     <text id="ChComment">
      <orig>Comments</orig>
+     <transl>コメント</transl>
     </text>
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
-     <transl>チェッカー/ドラフト</transl>
+     <transl>チェッカー / ドラフト</transl>
     </text>
     <text id="Cyrl1">
      <orig>Cyrillic / by letter</orig>
-     <transl>リル文字 / 文字</transl>
+     <transl>キリル文字 / 文字</transl>
     </text>
     <text id="CyrlGrek">
      <orig>Transliteration of Greek</orig>
+     <transl>ギリシャ語の音訳</transl>
     </text>
     <text id="CyrlMisc">
      <orig>Other origin</orig>
+     <transl>その他の起源</transl>
     </text>
     <text id="ConOut">
      <orig>Console outlined</orig>
@@ -9510,6 +10686,7 @@
     </text>
     <text id="Regional">
      <orig>Country letters</orig>
+     <transl>国別文字</transl>
     </text>
    </group>
    <group id="Text">
@@ -9521,42 +10698,55 @@
    <group id="Misr">
     <text id="Head">
      <orig>{{{{warn|Other images are possible!}} {1}</orig>
+     <transl>{{{{warn|Other images are possible!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
      <orig>The current (2024) government, the Taliban, is recognized almost nowhere. Their flag is white with black shahada, the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021.</orig>
+     <transl>現政権（2024年）であるタリバンは、ほとんどどこでも認知されていない。彼らの旗は白地に黒のシャハーダ（イスラム教のモットー）が描かれている。一方、商人たちは2021年に放棄された古い旗を使用している。</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
      <orig>The red-green-black flag was adopted in 2023. Before that, all vendors used blue French naval ensign with white snakes.</orig>
+     <transl>赤・緑・黒の旗は2023年に採用されました。それ以前は、すべてのベンダーが白い蛇が描かれた青いフランス海軍旗を使用していました。</transl>
     </text>
     <text id="U+1F1ED+1F1F3">
      <orig>In 2022 Honduras made the flag light blue instead of blue.</orig>
+     <transl>2022年、ホンジュラスは国旗を青ではなく水色にしました。</transl>
     </text>
     <text id="U+1F46A">
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette.</orig>
+     <transl>2019年までは、売り手は男性、女性、子供としてそれを描いていました。その後、性別がなくなりました。2023年にはシルエットに変わりました。</transl>
     </text>
     <text id="U+1F68F">
      <orig>Vendors may draw a variety of local bus stops.</orig>
+     <transl>ベンダーはさまざまな地元のバス停を描くことができます。</transl>
     </text>
     <text id="U+1F6DE">
      <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
+     <transl>ベンダーは馬車、自転車、自動車の車輪を引くことができます。</transl>
     </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
+     <transl>Google Noto は星型のピニャータを描き、Microsoft は動物型のピニャータを描きます。</transl>
     </text>
     <text id="U+1FA92">
      <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts a straight razor.</orig>
+     <transl>すべてのベンダーが安全カミソリに落ち着いたのは比較的最近の 2019 ～ 2021 年です。Windows {{_}}10 の絵文字はカミソリを表しています。</transl>
     </text>
     <text id="U+1F9A0">
      <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
+     <transl>アメーバ、細菌、COVID-19、その他のウイルスなど、あらゆる微小な生物が考えられます。</transl>
     </text>
     <text id="U+1FAA4">
      <orig>As of 2023, the sample Unicode image depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <transl>2023 年現在、サンプルの Unicode 画像はバネ仕掛けの罠を描いています。しかし、この絵文字は主に「無料のチーズ」や「罠」を意味するため、ほとんどの売り手は、ネズミを生きたまま捕まえるための間に合わせの罠を描き、その中にチーズを入れています。</transl>
     </text>
     <text id="Family">
      <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. And families often include grandparents and pets. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>
+     <transl>ユニコードコンソーシアムは2023年初頭、性別のない家族をシルエットで描き（家族フィルムなど）、それを「キーボード」上で人物からシンボルに移動することを要求し、性別のあるものを「キーボード」から削除して同じシルエットで埋めて、組み合わせ爆発を防ぐことを推奨しました。そして、家族には祖父母やペットが含まれることがよくあります。2023年秋にGoogleはシルエット付きの絵文字をリリースし、2024年春にはAppleも同じことをしました。Googleのシルエットにはちょっとしたひねりがあり、女性のヘアカットを示しています。</transl>
     </text>
     <text id="IO">
      <orig>In 2024, Britain withdrew claims to the uninhabited Chagos Archipelago, giving it to Mauritius but leasing the entire Diego Garcia island, a joint British-US military base. The flag of the British Indian Ocean Territory will likely stay for history, and the flag of Diego Garcia may change.</orig>
+     <transl>2024年、英国は無人島であるチャゴス諸島の領有権を撤回し、同島をモーリシャスに譲渡したが、米英共同軍事基地となっているディエゴガルシア島全体を租借した。英国領インド洋地域の旗は歴史上残る可能性が高く、ディエゴガルシア島の旗は変更される可能性がある。</transl>
     </text>
    </group>
    <group id="Cinfo">
@@ -9580,243 +10770,313 @@
    <group id="Sta">
     <text id="Rec">
      <orig>Recognized state</orig>
+     <transl>認定州</transl>
     </text>
     <text id="NoMan">
      <orig>Uninhabited land, no one’s by international treaty</orig>
      <au-cmt>Antarctica</au-cmt>
+     <transl>国際条約により誰も所有していない無人の土地</transl>
     </text>
     <text id="Union">
      <orig>Supranational union</orig>
      <au-cmt>EU</au-cmt>
+     <transl>超国家連合</transl>
     </text>
     <text id="Org">
      <orig>International organization</orig>
      <au-cmt>United Nations</au-cmt>
+     <transl>国際機関</transl>
     </text>
     <text id="AuExt">
      <orig>External territory of Australia</orig>
      <au-cmt>e.g. Cocos Islands</au-cmt>
+     <transl>オーストラリアの外部領土</transl>
     </text>
     <text id="GbOv">
      <orig>Overseas territory of Great Britain</orig>
      <au-cmt>e.g. Ascension Island, Cayman Islands, St. Helena</au-cmt>
+     <transl>イギリスの海外領土</transl>
     </text>
     <text id="GbOv!">
      <orig>Disputed; de facto overseas territory of Great Britain</orig>
+     <transl>紛争中。事実上のイギリスの海外領土</transl>
     </text>
     <text id="GbOvF">
      <orig>Former overseas territory of Great Britain</orig>
+     <transl>かつてのイギリスの海外領土</transl>
     </text>
     <text id="GbDep">
      <orig>Dependent territory of Great Britain</orig>
      <au-cmt>Guernsey, Man</au-cmt>
+     <transl>イギリスの従属領</transl>
     </text>
     <text id="CnSpec">
      <orig>Special region of China</orig>
      <au-cmt>Hong Kong, Macao</au-cmt>
+     <transl>中国の特別地域</transl>
     </text>
     <text id="DkAuto">
      <orig>Autonomous region of Denmark</orig>
      <au-cmt>Faroe, Greenland</au-cmt>
+     <transl>デンマークの自治州</transl>
     </text>
     <text id="FiSpec">
      <orig>Special territory of Finland</orig>
      <au-cmt>Åland Islands</au-cmt>
+     <transl>フィンランドの特別地域</transl>
     </text>
     <text id="FrOv">
      <orig>Overseas territory of France</orig>
      <au-cmt>e.g. French Guiana</au-cmt>
+     <transl>フランスの海外領土</transl>
     </text>
     <text id="FrUn">
      <orig>Uninhabited land controlled by France</orig>
+     <transl>フランスが管理する無人地帯</transl>
     </text>
     <text id="NlDep">
      <orig>Territory of Netherlands</orig>
      <au-cmt>Aruba</au-cmt>
+     <transl>オランダ領</transl>
     </text>
     <text id="NlOv">
      <orig>Overseas territory of Netherlands</orig>
+     <transl>オランダの海外領土</transl>
     </text>
     <text id="NzAssoc">
      <orig>Associated territory of New Zealand</orig>
      <au-cmt>Cook Islands, Niue</au-cmt>
+     <transl>ニュージーランドの準州</transl>
     </text>
     <text id="NoUn">
      <orig>Uninhabited land controlled by Norway</orig>
      <au-cmt>Bouvet Island</au-cmt>
+     <transl>ノルウェーが管理する無人島</transl>
     </text>
     <text id="NoDep">
      <orig>Dependent territory of Norway</orig>
      <au-cmt>Svalbard</au-cmt>
+     <transl>ノルウェーの属領</transl>
     </text>
     <text id="EsAuto">
      <orig>Autonomous region of Spain</orig>
      <au-cmt>e.g. Canary Islands</au-cmt>
+     <transl>スペインの自治州</transl>
     </text>
     <text id="UsDep">
      <orig>Dependent territory of the USA</orig>
      <au-cmt>e.g. Puerto Rico</au-cmt>
+     <transl>アメリカ合衆国の属領</transl>
     </text>
     <text id="PartEh">
      <orig>Partly recognized state, controls part of claimed territory, dispute with Morocco</orig>
      <au-cmt>Western Sahara</au-cmt>
+     <transl>部分的に国家として承認され、領有権を主張する領土の一部を支配、モロッコと紛争</transl>
     </text>
     <text id="PartPs">
      <orig>Partly recognized state, controls part of claimed territory, dispute with Israel</orig>
+     <transl>部分的に国家として承認され、領有権を主張する領土の一部を支配、イスラエルと紛争中</transl>
     </text>
     <text id="PartTw">
      <orig>Partly recognized state, controls part of claimed territory, dispute with China</orig>
+     <transl>部分的に国家として承認され、領有権を主張する領土の一部を支配、中国と紛争</transl>
     </text>
     <text id="PartXk">
      <orig>Partly recognized state, controls part of claimed territory, dispute with Serbia</orig>
+     <transl>部分的に国家として承認され、領有権を主張する領土の一部を支配、セルビアと紛争</transl>
     </text>
     <text id="MuGb">
      <orig>Leased from Mauritius by Great Britain</orig>
+     <transl>イギリスがモーリシャスから租借</transl>
     </text>
    </group>
    <group id="Loc">
     <text id="Eu">
      <orig>Europe</orig>
+     <transl>ヨーロッパ</transl>
     </text>
     <text id="As">
      <orig>Asia</orig>
+     <transl>アジア</transl>
     </text>
     <text id="Af">
      <orig>Africa</orig>
+     <transl>アフリカ</transl>
     </text>
     <text id="Na">
      <orig>North America</orig>
+     <transl>北アメリカ</transl>
     </text>
     <text id="Sa">
      <orig>South America</orig>
+     <transl>南アメリカ</transl>
     </text>
     <text id="Au">
      <orig>Australia</orig>
+     <transl>オーストラリア</transl>
     </text>
     <text id="Sp">
      <orig>South Pole</orig>
      <au-cmt>Antarctica</au-cmt>
+     <transl>南極</transl>
     </text>
     <text id="EuAs">
      <orig>Europe and Asia</orig>
      <au-cmt>Russia, Georgia</au-cmt>
+     <transl>ヨーロッパとアジア</transl>
     </text>
     <text id="Oa">
      <orig>Atlantic Ocean</orig>
+     <transl>大西洋</transl>
     </text>
     <text id="OaEu">
      <orig>Atlantic Ocean, near Europe</orig>
+     <transl>大西洋、ヨーロッパ付近</transl>
     </text>
     <text id="OaGb">
      <orig>Atlantic Ocean, British Islands</orig>
      <au-cmt>e.g. Britain, Ireland, Man</au-cmt>
+     <transl>大西洋、イギリス諸島</transl>
     </text>
     <text id="OaAf">
      <orig>Atlantic Ocean, near Africa</orig>
+     <transl>大西洋、アフリカ付近</transl>
     </text>
     <text id="OaNa">
      <orig>Atlantic Ocean, near North America</orig>
      <au-cmt>e.g. Bahamas, Greenland</au-cmt>
+     <transl>大西洋、北アメリカ付近</transl>
     </text>
     <text id="OaSa">
      <orig>Atlantic Ocean, near South America</orig>
      <au-cmt>Falkland Islands</au-cmt>
+     <transl>大西洋、南アメリカ付近</transl>
     </text>
     <text id="OaCs">
      <orig>Atlantic Ocean, Caribbean Sea</orig>
+     <transl>大西洋、カリブ海</transl>
     </text>
     <text id="OaAq">
      <orig>Atlantic Ocean, Antarctic region</orig>
+     <transl>大西洋、南極地域</transl>
     </text>
     <text id="OaEc">
      <orig>English Channel</orig>
+     <transl>イギリス海峡</transl>
     </text>
     <text id="OaBs">
      <orig>Baltic Sea</orig>
+     <transl>バルト海</transl>
     </text>
     <text id="OaMs">
      <orig>Mediterranean Sea</orig>
+     <transl>地中海</transl>
     </text>
     <text id="OpPo">
      <orig>Pacific Ocean, Polynesia</orig>
+     <transl>太平洋、ポリネシア</transl>
     </text>
     <text id="OpMi">
      <orig>Pacific Ocean, Micronesia</orig>
+     <transl>太平洋、ミクロネシア</transl>
     </text>
     <text id="OpAs">
      <orig>Pacific Ocean, near Asia</orig>
+     <transl>太平洋、アジア付近</transl>
     </text>
     <text id="OpAu">
      <orig>Pacific Ocean, near Australia</orig>
+     <transl>太平洋、オーストラリア付近</transl>
     </text>
     <text id="OpNa">
      <orig>Pacific Ocean, near North America</orig>
+     <transl>太平洋、北アメリカ付近</transl>
     </text>
     <text id="Ma">
      <orig>Malay Archipelago</orig>
+     <transl>マレー諸島</transl>
     </text>
     <text id="AsMa">
      <orig>Asia and Malay Archipelago</orig>
      <au-cmt>Malaysia</au-cmt>
+     <transl>アジアとマレー諸島</transl>
     </text>
     <text id="Oi">
      <orig>Indian Ocean</orig>
+     <transl>インド洋</transl>
     </text>
     <text id="OiAf">
      <orig>Indian Ocean, near Africa</orig>
+     <transl>インド洋、アフリカ付近</transl>
     </text>
     <text id="OiAs">
      <orig>Indian Ocean, near Asia</orig>
+     <transl>インド洋、アジア近海</transl>
     </text>
     <text id="OiAq">
      <orig>Indian Ocean, Antarctic region</orig>
+     <transl>インド洋、南極地域</transl>
     </text>
     <text id="OiGp">
      <orig>Gulf of Persia</orig>
      <au-cmt>Bahrain</au-cmt>
+     <transl>ペルシャ湾</transl>
     </text>
     <text id="On">
      <orig>Arctic Ocean</orig>
+     <transl>北極海</transl>
     </text>
     <text id="NyHq">
      <orig>New York (headquarters)</orig>
      <au-cmt>United Nations</au-cmt>
+     <transl>ニューヨーク（本社）</transl>
     </text>
    </group>
    <group id="Pop">
     <text id="Dfl">
      <orig>Permanent</orig>
+     <transl>永続</transl>
     </text>
     <text id="Set">
      <orig>Settlers of recent centuries (no indigenous people)</orig>
+     <transl>数世紀の入植者（先住民はいない）</transl>
     </text>
     <text id="SetSv">
      <orig>Settlers of recent centuries, Svalbard only</orig>
+     <transl>数世紀の移住者、スヴァールバル諸島のみ</transl>
     </text>
     <text id="Mil">
      <orig>Mainly military</orig>
+     <transl>主に軍事</transl>
     </text>
     <text id="Sci">
      <orig>Mainly scientists</orig>
+     <transl>主に科学者</transl>
     </text>
     <text id="Nom">
      <orig>Settlers of late 20th century and military personnel (Moroccan part), mainly nomads (independent part)</orig>
+     <transl>20 世紀後半の入植者と軍人 (モロッコ側)、主に遊牧民 (独立側)</transl>
     </text>
     <text id="Pri">
      <orig>Mainly clergy</orig>
+     <transl>主に聖職者</transl>
     </text>
     <text id="Uni">
      <orig>Uninhabited</orig>
+     <transl>無人</transl>
     </text>
     <text id="Nat">
      <orig>Nature reserve</orig>
+     <transl>自然保護区</transl>
     </text>
     <text id="GS">
      <orig>Abandoned with decline of whaling, mainly scientists and tourists</orig>
+     <transl>捕鯨の衰退に伴い、主に科学者と観光客が放棄された</transl>
     </text>
    </group>
    <text id="Favs">
     <orig>Favourites work with single characters only</orig>
+    <transl>お気に入りは単一の文字のみで機能します</transl>
    </text>
   </group>
   <group id="Version">
@@ -9831,31 +11091,51 @@
       <p />
       <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
      </orig>
+     <transl>
+      <p>ISO 標準となった最初のバージョンであり、Unicode ベースに存在する最初のバージョンです。1.0 と 1.0.1 のベースが再構築されています。</p>
+      <p />
+      <p>バージョン 1.0 (1991 年 10 月、約 7200 文字) では、1.1 で削除された [[ps:Tibt|チベット語]] や、[[pv:2.0|2.0]] で削除される 2350 の [[ps:Hang|ハングル]] 音節など、バージョン 1.1 のほとんどのスクリプトが追加されました。</p>
+      <p />
+      <p>バージョン 1.0.1 (1992 年 6 月、約 28,300 文字) では、20,902 個の [[ps:Hani|CJK 表意文字]] が追加され、6 個の文字が削除されました。</p>
+      <p />
+      <p>バージョン 1.1 では、ハングル文字が 4306 個追加され、チベット語が削除されました。</p>
+     </transl>
     </text>
    </group>
    <group id="2.0">
     <text id="Text">
      <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted main [[pt:stability|stability]] guarantee: the character will not move or disappear.</orig>
+     <transl>バージョン 2.0 では、[[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] 音節が現在の位置に移動されました。大きな抗議を受けて、Unicode は主要な [[pt:stability|安定性]] 保証を採用しました。つまり、文字は移動したり消えたりしません。</transl>
     </text>
    </group>
    <group id="2.1">
     <text id="Text">
      <orig>Added euro '''€''' and object replacement character FFFC.</orig>
+     <transl>ユーロ '''€''' とオブジェクト置換文字 FFFC を追加しました。</transl>
+    </text>
+   </group>
+   <group id="3.1">
+    <text id="Text">
+     <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+     <transl>[[pt:plane|プレーン]] 1 と 2 の最初の使用。[[pt:utf16|UTF-16]] と 16 個の補助プレーンは 5 年前に提案されました。</transl>
     </text>
    </group>
    <group id="6.2">
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
+     <transl>2012 年 3 月に発表されたトルコ リラ記号 20BA を追加しました。</transl>
     </text>
    </group>
    <group id="6.3">
     <text id="Text">
      <orig>Five [[pt:format|format]] characters for [[pt:bidi|bidirectional]] text.</orig>
+     <transl>[[pt:bidi|双方向]] テキスト用の 5 つの [[pt:format|フォーマット]] 文字。</transl>
     </text>
    </group>
    <group id="12.1">
     <text id="Text">
      <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>日本の伝統的な暦である令和の元号を表す 32FF という 1 つの文字を含む Unicode の緊急リリース。2016 年に明仁天皇が退位を決意されたとき、新しいコード ポイントが後継者のために確保されました。2019 年 4 月 30 日に天皇が退位されたとき、この文字はすぐにエンコードされました。</transl>
     </text>
    </group>
    <group id="15.1">
@@ -9867,6 +11147,13 @@
       <p />
       <p>A very big release 16.0 is expected in 2024.</p>
      </orig>
+     <transl>
+      <p>Unicode コンソーシアムはスタッフの問題を抱え、リリース マネージャーは去り、Sinologist は亡くなりました。そこで、彼らはマイナー リリースを行うことを決定しました。5 つの表意文字説明文字、18 個の右向き絵文字、ライム、フェニックス、家族のシルエットを含む 10 個の絵文字シーケンスです。</p>
+      <p />
+      <p>中国政府も緊急の仕事を強いられている。[[pk:2EBF0|CJK 表意文字拡張 I]] を参照。</p>
+      <p />
+      <p>非常に大きなリリース 16.0 は 2024 年に予定されています。</p>
+     </transl>
     </text>
    </group>
    <group id="16.0">
@@ -9878,6 +11165,13 @@
       <p>* Added base of Egyptian hieroglyphs.</p>
       <p>* Turned PDF specification to HTML site.</p>
      </orig>
+     <transl>
+      <p>文字の追加以外にも、Unicode には多くの内部的な変更がありました。</p>
+      <p>* アラビア語テキストのレンダリングアルゴリズムを書き直しました。</p>
+      <p>* Unicode テキストに存在してはならない文字シーケンスを記述しました。</p>
+      <p>* エジプトの象形文字のベースを追加しました。</p>
+      <p>* PDF仕様をHTMLサイトに変換しました。</p>
+     </transl>
     </text>
    </group>
   </group>
@@ -9969,6 +11263,7 @@
     </text>
     <text id="Cpu">
      <orig>CPU: {1}-bit ''(by data bus)''</orig>
+     <transl>CPU: {1}-bit ''(by data bus)''</transl>
     </text>
     <text id="Color">
      <orig>Colour</orig>
@@ -10025,9 +11320,11 @@
      </text>
      <text id="Lim">
       <orig>limited</orig>
+      <transl>限定</transl>
      </text>
      <text id="Later">
       <orig>in later models</orig>
+      <transl>後期モデル</transl>
      </text>
      <text id="Yes">
       <orig>yes</orig>
@@ -10037,47 +11334,61 @@
     <group id="Type">
      <text id="Home">
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
+      <transl>家庭用/教育用 PC (キーボード フォーム ファクタ、ROM に BASIC、テレビとテープ レコーダをサポート)</transl>
      </text>
      <text id="Desk">
       <orig>early hobby PC with monitor</orig>
+      <transl>初期の趣味用PCとモニター</transl>
      </text>
      <text id="Adv">
       <orig>advanced PC ''(monitor, disks, OS)''</orig>
+      <transl>高度な PC ''(モニター、ディスク、OS)''</transl>
      </text>
      <text id="Term">
       <orig>terminal</orig>
+      <transl>ターミナル</transl>
      </text>
      <text id="TermSvc">
       <orig>terminal service</orig>
+      <transl>ターミナルサービス</transl>
      </text>
      <text id="Info">
       <orig>information service</orig>
+      <transl>情報サービス</transl>
      </text>
      <text id="Prog">
       <orig>programming language</orig>
+      <transl>プログラミング言語</transl>
      </text>
     </group>
     <group id="Sales">
      <text id="10k">
       <orig>over 10k</orig>
+      <transl>10k 以上</transl>
      </text>
      <text id="30k">
       <orig>over 30k</orig>
+      <transl>30k 以上</transl>
      </text>
      <text id="100k">
       <orig>over 100k</orig>
+      <transl>100k 以上</transl>
      </text>
      <text id="300k">
       <orig>over 300k</orig>
+      <transl>300k 以上</transl>
      </text>
      <text id="1M">
       <orig>over 1M</orig>
+      <transl>1M 以上</transl>
      </text>
      <text id="3M">
       <orig>over 3M</orig>
+      <transl>3M 以上</transl>
      </text>
      <text id="10M">
       <orig>over 10M</orig>
+      <transl>10M 以上</transl>
      </text>
     </group>
     <group id="Chars">
@@ -10141,73 +11452,90 @@
     <group id="Mem">
      <text id="1">
       <orig>{1} kbytes</orig>
+      <transl>{1} kバイト</transl>
      </text>
      <text id="2">
       <orig>{1}–{2} kbytes</orig>
+      <transl>{1}–{2} kバイト</transl>
      </text>
     </group>
     <group id="Color">
      <text id="Bw">
       <orig>black and white</orig>
+      <transl>白と黒</transl>
      </text>
      <text id="Dis">
       <orig>black-and-white models are more common</orig>
+      <transl>白と黒モデルの方が一般的です</transl>
      </text>
      <text id="Yes">
       <orig>yes</orig>
+      <transl>はい</transl>
      </text>
      <text id="Later">
       <orig>in later models</orig>
+      <transl>後期モデル</transl>
      </text>
     </group>
    </group>
    <group id="AmstradCpc">
     <text id="Text">
      <orig>Designed to be as luxurious as possible for a home computer, it was the second British home computer after ZX Spectrum. It was not plugged into a TV, instead it came with a monitor.</orig>
+     <transl>家庭用コンピュータとして可能な限り贅沢になるように設計されたこのコンピュータは、ZX Spectrum に続く 2 番目の英国製家庭用コンピュータでした。テレビに接続するのではなく、モニターが付属していました。</transl>
     </text>
    </group>
    <group id="Apple2">
     <text id="Text">
      <orig>Despite the advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but the monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
+     <transl>Macintosh (1984) の登場にもかかわらず、控えめな Apple{{_}}II が会社の収入のほとんどを生み出しました。これにはモニターが付属していましたが (おそらく、コンソールが近くのテレビに多くの干渉を与えるという短命な規制のため)、モニターはテレビのように複合線で接続されていました (複合入力は当時は珍しかった)。</transl>
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
+     <transl>Apple ロゴ</transl>
     </text>
    </group>
    <group id="Aquarius">
     <text id="Text">
      <orig>The computer was obsolete from the beginning, and was produced for a few months only.</orig>
+     <transl>このコンピューターは最初から時代遅れで、数か月しか生産されませんでした。</transl>
     </text>
    </group>
    <group id="Atari400">
     <text id="Text">
      <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware (later they were weakened). To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. Computer’s video architecture resembled console (scrolling text and hardware sprites), and was praised for ease of programming.</orig>
+     <transl>テレビコンソールは近くのテレビに多大な干渉を与えたため、無線周波数ハードウェアに関する新しい規制が制定されました (後に緩和されました)。テレビのアンテナソケットに差し込めるコンピューターを作るために、Atari は鋳造アルミニウムのケースと内部の ROM カートリッジを採用しました。コンピューターのビデオ アーキテクチャはコンソールに似ており (スクロールするテキストとハードウェア スプライト)、プログラミングのしやすさで高く評価されました。</transl>
     </text>
    </group>
    <group id="AtariSt">
     <text id="Text">
      <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <transl>Atari は 1983 年のビデオゲーム危機を乗り越えられず、コモドールの元創設者である Jack Tramiel に売却されました。彼らは、コモドール Amiga に次ぐ 2 番目の先進的な家庭用コンピュータを製造しました。これはミュージシャンに賞賛され、音楽エディタの「Cubase」と「Logic Pro」は ST から生まれました。</transl>
     </text>
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
+     <transl>Atari ロゴ、2×2 縦</transl>
     </text>
    </group>
    <group id="C64">
     <text id="Text">
      <orig>Commodore 64, the main American home computer, took encoding from earlier Commodore PET. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
+     <transl>アメリカの家庭用コンピュータの主流であった Commodore 64 は、以前の Commodore PET からエンコードを採用しました。これにより、家庭用コンピュータの「多色、低解像度」という方式が限界に達しました。ゲームのメイン モードは 160×200、合計 16 色、4×8 セルあたり 4 色でした。比較すると、IBM CGA は 320×200、衝突セルなしの 4 色でした。これらの 16 色は非常に単調で、ゲームをよりリアルにしていました。</transl>
     </text>
    </group>
    <group id="CoCo">
     <text id="Text">
      <orig>Completely incompatible with old TRS-80, it was a low-cost home computer.</orig>
+     <transl>旧型の TRS-80 とは全く互換性がなく、低価格の家庭用コンピュータでした。</transl>
     </text>
    </group>
    <group id="Hp">
     <text id="Name">
      <orig>HP terminals</orig>
+     <transl>HP端末</transl>
     </text>
     <text id="Text">
      <orig>Rather rare and not so famous as DEC terminals.</orig>
+     <transl>かなり珍しく、DEC 端末ほど有名ではありません。</transl>
     </text>
    </group>
    <group id="Ibm">
@@ -10221,22 +11549,35 @@
       <p />
       <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in 2010s). Only portable and special-purpose systems use other architectures.</p>
      </orig>
+     <transl>
+      <p>1980 年代後半には、コンピューターが「事実上の」標準になりました。1982 年にクローン化され、新しいモデルはますます強力になり、古いソフトウェアとの互換性が維持されました。ゲームは当初は貧弱でしたが、VGA (320×200、256 色、1987 年) と CPU パワーのおかげで、かなり優れたゲームが可能になりました。さらに重要なことに、メモリ不足やグラフィック アクセラレータの能力に制限されない多様性が実現しました。</p>
+      <p />
+      <p>IBM のもう 1 つの強みは、優れたテキスト品質 (後のアダプタでは 80×25 セル、各 9×16) とローカライズの容易さ (完全にソフトウェアで実行) でした。</p>
+      <p />
+      <p>Microsoft が Windows{{_}}95 を発表するまで、長年、時代遅れの DOS を実行していました。Unix や Windows{{_}}NT などの以前の OS はほとんどありませんでした。</p>
+      <p />
+      <p>現代の汎用コンピューターのほとんどは、IBM 互換機の後継機です (DOS 互換性は 2010 年代にようやく失われました)。他のアーキテクチャを使用するのは、ポータブル システムと特殊用途のシステムだけです。</p>
+     </transl>
     </text>
     <text id="SalesNote">
      <orig>(IBM only, ≈60M with clones by 1989)</orig>
+     <transl>(IBM のみ、1989 年までにクローンを含めて 6000 万台)</transl>
     </text>
     <text id="MemNote">
      <orig>(until 1990)</orig>
+     <transl>(1990年まで)</transl>
     </text>
    </group>
    <group id="Kaypro">
     <text id="Text">
      <orig>The company found an interesting niche: they made very advanced 8-bit computers. In 1984 they switched to IBM compatibles, but the time had gone, and by 1990 they filed bankruptcy.</orig>
+     <transl>同社は興味深いニッチ市場を見出し、非常に高度な 8 ビット コンピューターを製造しました。1984 年に IBM 互換機に切り替えましたが、時が経ち、1990 年に倒産しました。</transl>
     </text>
    </group>
    <group id="Korvet">
     <text id="Name">
      <orig>Korvet</orig>
+     <transl>コルベット</transl>
     </text>
     <text id="Text">
      <orig>
@@ -10244,6 +11585,7 @@
       <p />
       <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
      </orig>
+     <transl>このコンピューターは面白く、グラフィックも良かったのですが、製造品質が低く、8 ビット CPU は弱すぎたため、スクロールするゲームはほとんどありませんでした。ソ連崩壊後、Korvet 用に作られたケースは、より小型のコンピューターに再利用されました。</transl>
     </text>
    </group>
    <group id="Mac">
@@ -10253,50 +11595,61 @@
       <p />
       <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
      </orig>
+     <transl>Mac にはマウスと優れた OS があり、そのエンコーディングは [[pt:pseudographics|pseudographics]] に煩わされることがなかったため、植字工から高く評価されました。Adobe Photoshop を含むほとんどのデザイン ソフトウェアは Mac から生まれました。しかし、最初のカラー Mac が登場したのは 1987 年になってからでした。同じ Mac が 32 ビットになりました。</transl>
     </text>
     <text id="SalesNote">
      <orig>(until 1990)</orig>
+     <transl>(1990年まで)</transl>
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
+     <transl>Apple ロゴ</transl>
     </text>
     <text id="MemNote">
      <orig>(classic Motorola 68000, until 1994)</orig>
+     <transl>(クラシック モトローラ 68000、1994 年まで)</transl>
     </text>
    </group>
    <group id="Minitel">
     <text id="Text">
      <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking, and more. France even had a small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
+     <transl>端末は無料で設置され、使用時間に応じて料金が徴収されました (1 分あたり 30 ユーロ相当)。このシステムでは、メッセージ、デート、電話帳、ゲーム、チケット予約などが提供されました。フランスでは、2000 年にアメリカよりずっと前に、小規模な「ドットコム バブル」が起こりました。このシステムは 2012 年にようやく閉鎖されました。</transl>
     </text>
    </group>
    <group id="Msx">
     <text id="Text">
      <orig>Japanese open standard of home computers, made by Sony, Philips and others. Well-known games ''Bomberman'' and ''Metal Gear'' were initially made for these computers. USSR attempted to use them as educational computers, dubbed KUVT Yamaha.</orig>
+     <transl>ソニー、フィリップスなどが製造した家庭用コンピュータの日本のオープン スタンダード。有名なゲーム「ボンバーマン」や「メタルギア」は、当初これらのコンピュータ用に作られました。ソ連は、KUVT ヤマハと名付けた教育用コンピュータとして使用しようとしました。</transl>
     </text>
    </group>
    <group id="Ohio">
     <text id="Text">
      <orig>The compaby sold early hobbyist computers, and was acquired in 1980 by telecommunication company M/A-COM that experienced financial troubles themselves.</orig>
+     <transl>同社は初期の趣味用コンピュータを販売しており、1980年に財政難に陥っていた通信会社M/A-COMに買収された。</transl>
     </text>
    </group>
    <group id="Oric">
     <text id="Text">
      <orig>Not a successful computer, it was cloned in Yugoslavia (Nova 64) and Bulgaria (Pravetz 8D).</orig>
+     <transl>成功したコンピュータではなかったが、ユーゴスラビア (Nova 64) とブルガリア (Pravetz 8D) でクローンが作られた。</transl>
     </text>
    </group>
    <group id="RiscOs">
     <text id="Text">
      <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
+     <transl>Acorn Archimedes、RISC PC などは、Windows {{_}}NT および Unix を実行する IBM 互換機に駆逐されるまで、専門家 (テレビ、ミュージシャン) によって限定的に使用されていました。</transl>
     </text>
    </group>
    <group id="Robotron">
     <text id="Text">
      <orig>Almost never sold to customers, it was used as an educational computer.</orig>
+     <transl>顧客に販売されることはほとんどなく、教育用コンピュータとして使用されていました。</transl>
     </text>
    </group>
    <group id="Smalltalk">
     <text id="Text">
      <orig>Early editions of language had their own special characters.</orig>
+     <transl>言語の初期のバージョンには独自の特殊文字がありました。</transl>
     </text>
    </group>
    <group id="Spectrum">
@@ -10306,41 +11659,55 @@
       <p />
       <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
+     <transl>
+      <p>ZX Spectrum はイギリスの家庭用 PC の主流でした。安価 (200 ポンド未満) で、さまざまなゲームがありました。グラフィック アクセラレーションはなく、最もシンプルなゲームを除いて、すべてのゲームが非常に遅かったです。</p>
+      <p />
+      <p>最も興味深い話は 80 年代後半に始まりました。東側諸国の DIY 愛好家が個別のロジック ゲートからグラフィック チップを再構築し、Spectrum クローンが短期間、旧ソ連の主要コンピューターになりましたが、Windows と収入の増加により [[po:Ibm|IBM 互換機]] が普及しました。</p>
+     </transl>
     </text>
     <text id="MemNote">
      <orig>(early 16K version was rare, and conversion kit to 48K existed)</orig>
+     <transl>(初期の16K版は珍しく、48Kへの変換キットが存在した)</transl>
     </text>
     <text id="SalesNote">
      <orig>(Sinclair’s original)</orig>
+     <transl>(シンクレアの原文)</transl>
     </text>
    </group>
    <group id="SharpMz">
     <text id="Text">
      <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+     <transl>ROM にはプログラミング言語がなかったので、競合会社が開発した複数の言語を搭載していました。しかし、ユーザーはカセットやディスクからそれらをロードする必要がありました。</transl>
     </text>
     <text id="Unenc">
      <orig>Pac-Man</orig>
+     <transl>パックマン</transl>
     </text>
    </group>
    <group id="Teletext">
     <text id="Name">
      <orig>teletext</orig>
+     <transl>文字多重放送</transl>
     </text>
     <text id="YearNote">
      <orig>(first TV sets)</orig>
+     <transl>(最初のテレビ)</transl>
     </text>
     <text id="Text">
      <orig>Teletext transmits text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays most channels transmit only subtitles.</orig>
+     <transl>テレテキストは、テレビ信号の空白部分にテキストと疑似グラフィックスを送信します。現在、ほとんどのチャンネルは字幕のみを送信しています。</transl>
     </text>
    </group>
    <group id="Trs80">
     <text id="Text">
      <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
+     <transl>このコンピュータは、タンディの電気店チェーンであるラジオシャックで販売されました。このコンピュータには、無線干渉からカセット インターフェースの不具合まで、多くの固有の問題がありました。後期モデルにはディスケットが搭載されました。</transl>
     </text>
    </group>
    <group id="Zx80">
     <text id="Text">
      <orig>Sinclair ZX80 and ZX81 were the cheapest working computers. Version with 2 kilobytes was sold for 70 pounds.</orig>
+     <transl>Sinclair ZX80 と ZX81 は最も安価な実用コンピュータでした。2 キロバイトのバージョンは 70 ポンドで販売されました。</transl>
     </text>
    </group>
   </group>
