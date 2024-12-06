@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733457732
+ModificationTime: 1733460572
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -57,9 +57,9 @@ OS2XHeight: 500
 OS2Vendor: '    '
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000001.40000000.00000000.00000000
-Lookup: 4 0 1 "Orig CCMP" { "Orig CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 4 0 0 "Tutg CCMP" { "Tutg CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 4 8 0 "Tutg workar" { "Tutg workar-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 1 "Orig CCMP" { "Orig CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 1 0 0 "Link Rr -reph" { "Tutg -reph-1"  } []
 Lookup: 5 8 0 "RrI -reph" { "Tutg -reph 2-1"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 1 0 0 "Link cons+-Ee" { "Link cons+-Ee-1"  } []
@@ -106,7 +106,7 @@ Grid
  -662.00378418 -925 l 1024
 EndSplineSet
 AnchorClass2: "U" "Tutg BLWM-1" "Uml above" "Tutg ABVM-1" "Low uml" "Tutg BLWM-1"
-BeginChars: 1114491 480
+BeginChars: 1114494 483
 
 StartChar: .notdef
 Encoding: 1114112 -1 0
@@ -6043,8 +6043,10 @@ SplineSet
  1125 318 1062 369 996 391 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ee-1" Wa.K_KEe
 Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K
 LCarets2: 2 0 0
+Colour: c2ffc2
 EndChar
 
 StartChar: Syl.G_G
@@ -13617,6 +13619,7 @@ EndSplineSet
 Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
 Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K Uml.U
 LCarets2: 3 0 0 0
+Colour: ff00
 EndChar
 
 StartChar: Syl.K_KUu
@@ -13718,6 +13721,7 @@ SplineSet
 EndSplineSet
 Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
 Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K Uml.Uu
+Colour: ff00
 EndChar
 
 StartChar: Syl.G_GU
@@ -24730,8 +24734,21 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: Wa.KEe
+StartChar: Lig.Vir.Reph
 Encoding: 1114419 -1 408
+Width: 0
+VWidth: 1000
+Flags: W
+HStem: 521 86<-253.435 -173.71> 631 192<-239.371 -213.012>
+VStem: -259 66<650.323 804.94>
+LayerCount: 2
+Fore
+Refer: 34 70609 S 1 0 0 1 -326 134 2
+Refer: 4 70606 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: Wa.KEe
+Encoding: 1114420 -1 409
 Width: 1159
 VWidth: 0
 Flags: W
@@ -24746,7 +24763,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KAi
-Encoding: 1114420 -1 409
+Encoding: 1114421 -1 410
 Width: 1499
 VWidth: 0
 Flags: W
@@ -24761,7 +24778,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhEe
-Encoding: 1114421 -1 410
+Encoding: 1114422 -1 411
 Width: 1196
 VWidth: 0
 Flags: W
@@ -24776,7 +24793,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhAi
-Encoding: 1114422 -1 411
+Encoding: 1114423 -1 412
 Width: 1536
 VWidth: 0
 Flags: W
@@ -24791,7 +24808,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GEe
-Encoding: 1114423 -1 412
+Encoding: 1114424 -1 413
 Width: 1162
 VWidth: 0
 Flags: W
@@ -24806,7 +24823,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GAi
-Encoding: 1114424 -1 413
+Encoding: 1114425 -1 414
 Width: 1502
 VWidth: 0
 Flags: W
@@ -24821,7 +24838,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhEe
-Encoding: 1114425 -1 414
+Encoding: 1114426 -1 415
 Width: 1453
 VWidth: 0
 Flags: W
@@ -24836,7 +24853,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhAi
-Encoding: 1114426 -1 415
+Encoding: 1114427 -1 416
 Width: 1793
 VWidth: 0
 Flags: W
@@ -24851,7 +24868,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgEe
-Encoding: 1114427 -1 416
+Encoding: 1114428 -1 417
 Width: 1172
 VWidth: 0
 Flags: W
@@ -24866,7 +24883,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgAi
-Encoding: 1114428 -1 417
+Encoding: 1114429 -1 418
 Width: 1512
 VWidth: 0
 Flags: W
@@ -24881,7 +24898,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CEe
-Encoding: 1114429 -1 418
+Encoding: 1114430 -1 419
 Width: 1146
 VWidth: 0
 Flags: W
@@ -24896,7 +24913,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CAi
-Encoding: 1114430 -1 419
+Encoding: 1114431 -1 420
 Width: 1486
 VWidth: 0
 Flags: W
@@ -24911,7 +24928,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChEe
-Encoding: 1114431 -1 420
+Encoding: 1114432 -1 421
 Width: 1307
 VWidth: 0
 Flags: W
@@ -24926,7 +24943,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChAi
-Encoding: 1114432 -1 421
+Encoding: 1114433 -1 422
 Width: 1647
 VWidth: 0
 Flags: W
@@ -24941,7 +24958,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JEe
-Encoding: 1114433 -1 422
+Encoding: 1114434 -1 423
 Width: 1755
 VWidth: 0
 Flags: W
@@ -24956,7 +24973,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JAi
-Encoding: 1114434 -1 423
+Encoding: 1114435 -1 424
 Width: 2095
 VWidth: 0
 Flags: W
@@ -24971,7 +24988,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhEe
-Encoding: 1114435 -1 424
+Encoding: 1114436 -1 425
 Width: 1427
 VWidth: 0
 Flags: W
@@ -24986,7 +25003,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhAi
-Encoding: 1114436 -1 425
+Encoding: 1114437 -1 426
 Width: 1767
 VWidth: 0
 Flags: W
@@ -25001,7 +25018,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyEe
-Encoding: 1114437 -1 426
+Encoding: 1114438 -1 427
 Width: 1642
 VWidth: 0
 Flags: W
@@ -25016,7 +25033,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyAi
-Encoding: 1114438 -1 427
+Encoding: 1114439 -1 428
 Width: 1982
 VWidth: 0
 Flags: W
@@ -25031,7 +25048,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtEe
-Encoding: 1114439 -1 428
+Encoding: 1114440 -1 429
 Width: 901
 VWidth: 0
 Flags: W
@@ -25046,7 +25063,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtAi
-Encoding: 1114440 -1 429
+Encoding: 1114441 -1 430
 Width: 1241
 VWidth: 0
 Flags: W
@@ -25061,7 +25078,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthEe
-Encoding: 1114441 -1 430
+Encoding: 1114442 -1 431
 Width: 933
 VWidth: 0
 Flags: W
@@ -25076,7 +25093,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthAi
-Encoding: 1114442 -1 431
+Encoding: 1114443 -1 432
 Width: 1273
 VWidth: 0
 Flags: W
@@ -25091,7 +25108,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdEe
-Encoding: 1114443 -1 432
+Encoding: 1114444 -1 433
 Width: 1100
 VWidth: 0
 Flags: W
@@ -25106,7 +25123,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdAi
-Encoding: 1114444 -1 433
+Encoding: 1114445 -1 434
 Width: 1440
 VWidth: 0
 Flags: W
@@ -25121,7 +25138,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhEe
-Encoding: 1114445 -1 434
+Encoding: 1114446 -1 435
 Width: 1175
 VWidth: 0
 Flags: W
@@ -25136,7 +25153,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhAi
-Encoding: 1114446 -1 435
+Encoding: 1114447 -1 436
 Width: 1515
 VWidth: 0
 Flags: W
@@ -25151,7 +25168,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnEe
-Encoding: 1114447 -1 436
+Encoding: 1114448 -1 437
 Width: 1532
 VWidth: 0
 Flags: W
@@ -25166,7 +25183,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnAi
-Encoding: 1114448 -1 437
+Encoding: 1114449 -1 438
 Width: 1872
 VWidth: 0
 Flags: W
@@ -25181,7 +25198,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TEe
-Encoding: 1114449 -1 438
+Encoding: 1114450 -1 439
 Width: 1202
 VWidth: 0
 Flags: W
@@ -25196,7 +25213,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TAi
-Encoding: 1114450 -1 439
+Encoding: 1114451 -1 440
 Width: 1542
 VWidth: 0
 Flags: W
@@ -25211,7 +25228,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThEe
-Encoding: 1114451 -1 440
+Encoding: 1114452 -1 441
 Width: 1163
 VWidth: 0
 Flags: W
@@ -25226,7 +25243,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThAi
-Encoding: 1114452 -1 441
+Encoding: 1114453 -1 442
 Width: 1503
 VWidth: 0
 Flags: W
@@ -25241,7 +25258,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DEe
-Encoding: 1114453 -1 442
+Encoding: 1114454 -1 443
 Width: 879
 VWidth: 0
 Flags: W
@@ -25256,7 +25273,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DAi
-Encoding: 1114454 -1 443
+Encoding: 1114455 -1 444
 Width: 1219
 VWidth: 0
 Flags: W
@@ -25271,7 +25288,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhEe
-Encoding: 1114455 -1 444
+Encoding: 1114456 -1 445
 Width: 1159
 VWidth: 0
 Flags: W
@@ -25286,7 +25303,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhAi
-Encoding: 1114456 -1 445
+Encoding: 1114457 -1 446
 Width: 1499
 VWidth: 0
 Flags: W
@@ -25301,7 +25318,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NEe
-Encoding: 1114457 -1 446
+Encoding: 1114458 -1 447
 Width: 1197
 VWidth: 0
 Flags: W
@@ -25316,7 +25333,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NAi
-Encoding: 1114458 -1 447
+Encoding: 1114459 -1 448
 Width: 1537
 VWidth: 0
 Flags: W
@@ -25331,7 +25348,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PEe
-Encoding: 1114459 -1 448
+Encoding: 1114460 -1 449
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25346,7 +25363,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PAi
-Encoding: 1114460 -1 449
+Encoding: 1114461 -1 450
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25361,7 +25378,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhEe
-Encoding: 1114461 -1 450
+Encoding: 1114462 -1 451
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25376,7 +25393,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhAi
-Encoding: 1114462 -1 451
+Encoding: 1114463 -1 452
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25391,7 +25408,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BEe
-Encoding: 1114463 -1 452
+Encoding: 1114464 -1 453
 Width: 1252
 VWidth: 0
 Flags: W
@@ -25406,7 +25423,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BAi
-Encoding: 1114464 -1 453
+Encoding: 1114465 -1 454
 Width: 1592
 VWidth: 0
 Flags: W
@@ -25421,7 +25438,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhEe
-Encoding: 1114465 -1 454
+Encoding: 1114466 -1 455
 Width: 1452
 VWidth: 0
 Flags: W
@@ -25436,7 +25453,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhAi
-Encoding: 1114466 -1 455
+Encoding: 1114467 -1 456
 Width: 1792
 VWidth: 0
 Flags: W
@@ -25451,7 +25468,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MEe
-Encoding: 1114467 -1 456
+Encoding: 1114468 -1 457
 Width: 961
 VWidth: 0
 Flags: W
@@ -25466,7 +25483,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MAi
-Encoding: 1114468 -1 457
+Encoding: 1114469 -1 458
 Width: 1301
 VWidth: 0
 Flags: W
@@ -25481,7 +25498,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YEe
-Encoding: 1114469 -1 458
+Encoding: 1114470 -1 459
 Width: 1229
 VWidth: 0
 Flags: W
@@ -25496,7 +25513,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YAi
-Encoding: 1114470 -1 459
+Encoding: 1114471 -1 460
 Width: 1569
 VWidth: 0
 Flags: W
@@ -25511,7 +25528,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.REe
-Encoding: 1114471 -1 460
+Encoding: 1114472 -1 461
 Width: 985
 VWidth: 0
 Flags: W
@@ -25526,7 +25543,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RAi
-Encoding: 1114472 -1 461
+Encoding: 1114473 -1 462
 Width: 1325
 VWidth: 0
 Flags: W
@@ -25541,7 +25558,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LEe
-Encoding: 1114473 -1 462
+Encoding: 1114474 -1 463
 Width: 979
 VWidth: 0
 Flags: W
@@ -25556,7 +25573,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LAi
-Encoding: 1114474 -1 463
+Encoding: 1114475 -1 464
 Width: 1319
 VWidth: 0
 Flags: W
@@ -25571,7 +25588,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VEe
-Encoding: 1114475 -1 464
+Encoding: 1114476 -1 465
 Width: 1102
 VWidth: 0
 Flags: W
@@ -25586,7 +25603,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VAi
-Encoding: 1114476 -1 465
+Encoding: 1114477 -1 466
 Width: 1442
 VWidth: 0
 Flags: W
@@ -25601,7 +25618,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShEe
-Encoding: 1114477 -1 466
+Encoding: 1114478 -1 467
 Width: 1248
 VWidth: 0
 Flags: W
@@ -25616,7 +25633,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShAi
-Encoding: 1114478 -1 467
+Encoding: 1114479 -1 468
 Width: 1588
 VWidth: 0
 Flags: W
@@ -25631,7 +25648,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsEe
-Encoding: 1114479 -1 468
+Encoding: 1114480 -1 469
 Width: 1303
 VWidth: 0
 Flags: W
@@ -25646,7 +25663,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsAi
-Encoding: 1114480 -1 469
+Encoding: 1114481 -1 470
 Width: 1643
 VWidth: 0
 Flags: W
@@ -25661,7 +25678,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SEe
-Encoding: 1114481 -1 470
+Encoding: 1114482 -1 471
 Width: 1139
 VWidth: 0
 Flags: W
@@ -25676,7 +25693,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SAi
-Encoding: 1114482 -1 471
+Encoding: 1114483 -1 472
 Width: 1479
 VWidth: 0
 Flags: W
@@ -25691,7 +25708,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HEe
-Encoding: 1114483 -1 472
+Encoding: 1114484 -1 473
 Width: 1145
 VWidth: 0
 Flags: W
@@ -25706,7 +25723,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HAi
-Encoding: 1114484 -1 473
+Encoding: 1114485 -1 474
 Width: 1485
 VWidth: 0
 Flags: W
@@ -25721,7 +25738,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlEe
-Encoding: 1114485 -1 474
+Encoding: 1114486 -1 475
 Width: 913
 VWidth: 0
 Flags: W
@@ -25736,7 +25753,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlAi
-Encoding: 1114486 -1 475
+Encoding: 1114487 -1 476
 Width: 1253
 VWidth: 0
 Flags: W
@@ -25751,7 +25768,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrEe
-Encoding: 1114487 -1 476
+Encoding: 1114488 -1 477
 Width: 1129
 VWidth: 0
 Flags: W
@@ -25766,7 +25783,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrAi
-Encoding: 1114488 -1 477
+Encoding: 1114489 -1 478
 Width: 1469
 VWidth: 0
 Flags: W
@@ -25781,7 +25798,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllEe
-Encoding: 1114489 -1 478
+Encoding: 1114490 -1 479
 Width: 1035
 VWidth: 0
 Flags: W
@@ -25796,7 +25813,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllAi
-Encoding: 1114490 -1 479
+Encoding: 1114491 -1 480
 Width: 1375
 VWidth: 0
 Flags: W
@@ -25807,6 +25824,36 @@ Fore
 Refer: 183 70581 N 1 0 0 1 705 0 2
 Refer: 379 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_KEe
+Encoding: 1114492 -1 481
+Width: 1694
+VWidth: 0
+Flags: W
+HStem: 2 81<555.782 611.141 823.281 901.672 1116.09 1172.14 1384.49 1472.07> 252 81<99.72 224.326> 417 81<127.004 238.637> 425 81<541.581 682.436 878.411 1225.85> 427 81<546.113 682.436 980.421 1225.85 1424.33 1540.8>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 382 62<263.496 332.801> 492 63<83.329 171.29> 929 63<158.708 282.228> 1053 63<83.4646 175.819> 1490 64<158.817 282.624>
+LayerCount: 2
+Fore
+Refer: 109 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_KAi
+Encoding: 1114493 -1 482
+Width: 2034
+VWidth: 0
+Flags: W
+HStem: 2 81<895.782 951.141 1163.28 1241.67 1456.09 1512.14 1724.49 1812.07> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 425 81<881.581 1022.44 1218.41 1565.85> 427 81<886.113 1022.44 1320.42 1565.85 1764.33 1880.8>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 722 62<263.496 332.801> 832 63<83.329 171.29> 1269 63<158.708 282.228> 1393 63<83.4646 175.819> 1830 64<158.817 282.624>
+LayerCount: 2
+Fore
+Refer: 109 -1 N 1 0 0 1 705 0 2
+Refer: 379 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ai
 Colour: 4fd5ff
 EndChar
 EndChars

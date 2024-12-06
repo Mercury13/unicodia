@@ -1,7 +1,8 @@
 # Make pre-forms ligatures
 
 CH_NORM = ''
-NORMAL_CHAR = {}
+NORMAL_CHAR = { 'Prefix': 'Tutg.', 'AutoComp': False }
+SYLLABLE = { 'Prefix': 'Syl.', 'AutoComp': True }
 
 BASE_CHARS = {
     'K'   : NORMAL_CHAR,
@@ -40,6 +41,7 @@ BASE_CHARS = {
     'Ll'  : NORMAL_CHAR,
     'Rr'  : NORMAL_CHAR,
     'Lll' : NORMAL_CHAR,
+    'K_K' : SYLLABLE,
 };
 
 
@@ -101,8 +103,8 @@ def addAnchor(baseGlyph, newGlyph, name, offset, minX):
 #               [-] skip it silently
 #               (medial should exist, ligature is created if missing)
 #
-def addLig(font, baseCode, vowCode, vowProp):
-    baseName = 'Tutg.' + baseCode
+def addLig(font, baseCode, baseProp, vowCode, vowProp):
+    baseName = baseProp['Prefix'] + baseCode
     vowName = 'Uml.' + vowCode
     ligName = 'Wa.' + baseCode + vowCode
     baseGlyph = findGlyph(font, baseName, True)
@@ -110,8 +112,18 @@ def addLig(font, baseCode, vowCode, vowProp):
     ligGlyph = ensureGlyph(font, ligName)
     if ligGlyph.glyphname == NEWGLYPH_NAME:
         ligGlyph.glyphname = ligName
+        if baseProp['AutoComp']:
+            things = baseCode.split('_')
+            baseComp = ''
+            for x in things:
+                if baseComp != '':
+                    baseComp = baseComp + ' Uml.Conj '
+                baseComp = baseComp + 'Tutg.' + x
+        else:
+            # Simple ligature
+            baseComp = baseName
         # Ligature: ligature ← components
-        ligGlyph.addPosSub("Tutg workar-1", baseName + " " + vowName)
+        ligGlyph.addPosSub("Tutg workar-1", baseComp + " " + vowName)            
         if vowProp["OoLink"]:
             # Single sub: source → dest
             baseGlyph.addPosSub("Link cons+Ee-1", ligName)
@@ -129,4 +141,4 @@ fontforge.runInitScripts()
 font = fontforge.activeFont()
 for baseCode, baseProp in BASE_CHARS.items():
     for vowCode, vowProp in VOWELS.items():
-        addLig(font, baseCode, vowCode, vowProp)
+        addLig(font, baseCode, baseProp, vowCode, vowProp)
