@@ -44,10 +44,12 @@ BASE_CHARS = {
     'K_K' : SYLLABLE,
 };
 
+ST_EE = 'Link cons+Ee-1'      # Ee subtable
+ST_AI = 'Link cons+Ai-1'      # Ai subtable
 
 VOWELS = {
-    'Ee'  : { "OoLink" : True,  },
-    'Ai'  : { "OoLink" : False, },
+    'Ee'  : { 'Subt' : ST_EE },
+    'Ai'  : { 'Subt' : ST_AI },
 }
 
 
@@ -92,6 +94,8 @@ def addAnchor(baseGlyph, newGlyph, name, offset, minX):
         newGlyph.addAnchorPoint(name, type, x, y)
 
 
+ST_WORKAR = 'Tutg workar-1'   # workaround subtable
+
 #
 #  Adds ligature:
 #  basePrefix: smth like "Gukh." or "Shape."
@@ -113,20 +117,28 @@ def addLig(font, baseCode, baseProp, vowCode, vowProp):
     if ligGlyph.glyphname == NEWGLYPH_NAME:
         ligGlyph.glyphname = ligName
         if baseProp['AutoComp']:
+            # Prebuilt ligature
+            # 1. Add ligature itself
+            # Ligature: ligature ← components
+            ligGlyph.addPosSub(ST_WORKAR, baseName + " " + vowName)
+            # 2. Add by parts
             things = baseCode.split('_')
             baseComp = ''
             for x in things:
                 if baseComp != '':
                     baseComp = baseComp + ' Uml.Conj '
                 baseComp = baseComp + 'Tutg.' + x
+            # Ligature: ligature ← components
+            ligGlyph.addPosSub(ST_WORKAR, baseComp + " " + vowName)            
         else:
-            # Simple ligature
-            baseComp = baseName
-        # Ligature: ligature ← components
-        ligGlyph.addPosSub("Tutg workar-1", baseComp + " " + vowName)            
-        if vowProp["OoLink"]:
+            # Simple ligature, just add
+            # Ligature: ligature ← components
+            ligGlyph.addPosSub(ST_WORKAR, baseName + " " + vowName)
+        # Add 
+        subt = vowProp['Subt']
+        if subt != '':
             # Single sub: source → dest
-            baseGlyph.addPosSub("Link cons+Ee-1", ligName)
+            baseGlyph.addPosSub(subt, ligName)
     # Ligate vowel, then base
     ligGlyph.clear()
     ligGlyph.addReference(vowName)

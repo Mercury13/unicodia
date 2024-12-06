@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733485990
+ModificationTime: 1733520654
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -57,22 +57,47 @@ OS2XHeight: 500
 OS2Vendor: '    '
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000001.40000000.00000000.00000000
-Lookup: 4 0 0 "Tutg CCMP" { "Tutg CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 4 0 0 "Tutg my ligs" { "Tutg my ligs-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 4 0 0 "Subj ligs" { "Subj ligs-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 5 8 0 "Oo Au" { "Ee Oo Au 2cons"  "Ai 2cons"  "Oo Au 1cons"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 8 0 "Tutg workar" { "Tutg workar-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 1 "Orig CCMP" { "Orig CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 4 0 0 "Subjoin" { "Subjoin-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 4 0 0 "Subj vowel" { "Subj vowel-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 1 0 0 "Link Rr -reph" { "Tutg -reph-1"  } []
 Lookup: 5 8 0 "RrI -reph" { "Tutg -reph 2-1"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 1 0 0 "Link cons+-Ee" { "Link cons+-Ee-1"  } []
+Lookup: 1 0 0 "Link cons+-Ai" { "Link cons+-Ai-1"  } []
 Lookup: 1 0 0 "Link Oo Au 2nd" { "Link Oo Au 2nd-1"  } []
-Lookup: 5 8 0 "Oo Au" { "Oo Au-1"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "Link to dummy" { "Link to dummy-1"  } []
 Lookup: 260 0 0 "Tutg ABVM" { "Tutg ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 260 0 0 "Tutg BLWM" { "Tutg BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 258 8 0 "Tutg KERN" { "Kern-1" [150,15,0] "Kern-2"  } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-ContextSub2: coverage "Oo Au-1" 0 0 0 1
+ContextSub2: coverage "Ai 2cons" 0 0 0 1
+ 4 0 0
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 6 Uml.Ai
+ 2
+  SeqLookup: 0 "Link cons+-Ai"
+  SeqLookup: 3 "Link to dummy"
+EndFPST
+ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
+ 4 0 0
+  Coverage: 386 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 20 Uml.Ee Uml.Oo Uml.Au
+ 2
+  SeqLookup: 0 "Link cons+-Ee"
+  SeqLookup: 3 "Link Oo Au 2nd"
+EndFPST
+ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 282 Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_K
+  Coverage: 401 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_K
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -106,7 +131,7 @@ Grid
  -662.00378418 -925 l 1024
 EndSplineSet
 AnchorClass2: "Rakar" "Tutg BLWM-1" "U" "Tutg BLWM-1" "Uml above" "Tutg ABVM-1" "Low uml" "Tutg BLWM-1"
-BeginChars: 1114495 484
+BeginChars: 1114496 485
 
 StartChar: .notdef
 Encoding: 1114112 -1 0
@@ -232,6 +257,7 @@ SplineSet
  163 4 160 0 152 0 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.BhAi
 Substitution2: "Link cons+-Ee-1" Wa.BhEe
 EndChar
 
@@ -290,6 +316,7 @@ SplineSet
  245 169 241 169 237 169 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.ChAi
 Substitution2: "Link cons+-Ee-1" Wa.ChEe
 EndChar
 
@@ -328,6 +355,7 @@ SplineSet
  570 496 573 500 581 500 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.DhAi
 Substitution2: "Link cons+-Ee-1" Wa.DhEe
 EndChar
 
@@ -455,6 +483,7 @@ SplineSet
  542 270 567 194 610 146 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.GhAi
 Substitution2: "Link cons+-Ee-1" Wa.GhEe
 EndChar
 
@@ -585,6 +614,7 @@ SplineSet
  968 360 970 420 916 420 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.JhAi
 Substitution2: "Link cons+-Ee-1" Wa.JhEe
 EndChar
 
@@ -635,6 +665,7 @@ SplineSet
  216 207 201 210 189 210 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.KhAi
 Substitution2: "Link cons+-Ee-1" Wa.KhEe
 EndChar
 
@@ -688,6 +719,7 @@ SplineSet
  95 353 86 335 86 316 c 2
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.LlAi
 Substitution2: "Link cons+-Ee-1" Wa.LlEe
 EndChar
 
@@ -772,6 +804,7 @@ SplineSet
  122 119 119 111 112 105 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.NnAi
 Substitution2: "Link cons+-Ee-1" Wa.NnEe
 EndChar
 
@@ -824,6 +857,7 @@ SplineSet
  704 418 674 392 674 352 c 0
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.PhAi
 Substitution2: "Link cons+-Ee-1" Wa.PhEe
 EndChar
 
@@ -857,6 +891,7 @@ SplineSet
  347 214 326 196 300 196 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.TthAi
 Substitution2: "Link cons+-Ee-1" Wa.TthEe
 EndChar
 
@@ -931,6 +966,7 @@ SplineSet
  620 220 574 201 574 148 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.ShAi
 Substitution2: "Link cons+-Ee-1" Wa.ShEe
 EndChar
 
@@ -968,6 +1004,7 @@ SplineSet
  449 200 568 164 609 164 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.ThAi
 Substitution2: "Link cons+-Ee-1" Wa.ThEe
 EndChar
 
@@ -1062,6 +1099,7 @@ SplineSet
  624 417 593 348 593 306 c 2
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.DdhAi
 Substitution2: "Link cons+-Ee-1" Wa.DdhEe
 EndChar
 
@@ -1110,7 +1148,7 @@ Encoding: 70601 70601 27
 Width: 466
 VWidth: 1000
 GlyphClass: 2
-Flags: WO
+Flags: W
 HStem: 0 21G<63.5 80> 419 81<63 147.88 276.919 345.633>
 VStem: 20 64<19.9225 36.5611 347.589 459.5> 372 64<243.503 390.28>
 LayerCount: 2
@@ -1197,6 +1235,7 @@ SplineSet
  155 257 111 226 100 225 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.NgAi
 Substitution2: "Link cons+-Ee-1" Wa.NgEe
 EndChar
 
@@ -1275,6 +1314,7 @@ SplineSet
  185 144 160 147 136 147 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.BAi
 Substitution2: "Link cons+-Ee-1" Wa.BEe
 EndChar
 
@@ -1319,6 +1359,7 @@ SplineSet
  574 482 577 486 585 486 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.CAi
 Substitution2: "Link cons+-Ee-1" Wa.CEe
 EndChar
 
@@ -1355,6 +1396,7 @@ SplineSet
  484 73 426 -2 325 -2 c 0xd0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.DAi
 Substitution2: "Link cons+-Ee-1" Wa.DEe
 EndChar
 
@@ -1387,6 +1429,8 @@ SplineSet
  255 261 199 252 182 252 c 0
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link Oo Au 2nd-1" Dummy
+Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Tutg.Reph
@@ -1442,6 +1486,7 @@ SplineSet
  307.365234375 417 532.357421875 -5 237 -5 c 0xb8
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.GAi
 Substitution2: "Link cons+-Ee-1" Wa.GEe
 EndChar
 
@@ -2587,6 +2632,7 @@ SplineSet
  123 414 94 311 94 218 c 0
 EndSplineSet
 Kerns2: 265 -750 "Kern-1" 266 -750 "Kern-1" 267 -750 "Kern-1" 268 -750 "Kern-1" 269 -750 "Kern-1" 270 -750 "Kern-1" 271 -750 "Kern-1" 272 -750 "Kern-1" 273 -750 "Kern-1" 274 -750 "Kern-1" 275 -750 "Kern-1" 276 -750 "Kern-1" 277 -750 "Kern-1" 278 -750 "Kern-1" 279 -750 "Kern-1" 280 -750 "Kern-1" 281 -750 "Kern-1" 282 -750 "Kern-1" 283 -750 "Kern-1" 284 -750 "Kern-1" 285 -750 "Kern-1" 286 -750 "Kern-1" 287 -750 "Kern-1" 288 -750 "Kern-1" 289 -750 "Kern-1" 290 -750 "Kern-1" 291 -750 "Kern-1" 292 -750 "Kern-1" 293 -750 "Kern-1" 294 -750 "Kern-1" 295 -750 "Kern-1" 296 -750 "Kern-1" 297 -750 "Kern-1" 298 -750 "Kern-1" 299 -750 "Kern-1" 300 -750 "Kern-1" 301 -750 "Kern-1" 302 -750 "Kern-1" 303 -750 "Kern-1" 304 -750 "Kern-1" 305 -750 "Kern-1" 306 -750 "Kern-1" 307 -750 "Kern-1" 308 -750 "Kern-1" 309 -750 "Kern-1" 310 -750 "Kern-1" 311 -750 "Kern-1" 312 -750 "Kern-1" 313 -750 "Kern-1" 314 -750 "Kern-1" 315 -750 "Kern-1" 316 -750 "Kern-1" 317 -750 "Kern-1" 318 -750 "Kern-1" 319 -750 "Kern-1" 320 -750 "Kern-1" 321 -750 "Kern-1" 322 -750 "Kern-1" 323 -750 "Kern-1" 326 -750 "Kern-1" 333 -750 "Kern-1" 334 -750 "Kern-1" 341 -750 "Kern-1" 342 -750 "Kern-1" 343 -750 "Kern-1" 344 -750 "Kern-1" 345 -750 "Kern-1" 346 -750 "Kern-1" 347 -750 "Kern-1" 348 -750 "Kern-1" 349 -750 "Kern-1" 350 -750 "Kern-1" 351 -750 "Kern-1" 352 -750 "Kern-1" 353 -750 "Kern-1" 354 -750 "Kern-1" 355 -750 "Kern-1" 356 -750 "Kern-1" 357 -750 "Kern-1" 358 -750 "Kern-1" 359 -750 "Kern-1" 360 -750 "Kern-1" 361 -750 "Kern-1" 362 -750 "Kern-1" 363 -750 "Kern-1" 364 -750 "Kern-1" 365 -750 "Kern-1" 366 -750 "Kern-1" 367 -750 "Kern-1" 368 -750 "Kern-1" 369 -750 "Kern-1" 370 -750 "Kern-1" 371 -750 "Kern-1" 372 -750 "Kern-1" 373 -750 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.HAi
 Substitution2: "Link cons+-Ee-1" Wa.HEe
 EndChar
 
@@ -2682,6 +2728,7 @@ SplineSet
  1114 97 l 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.JAi
 Substitution2: "Link cons+-Ee-1" Wa.JEe
 EndChar
 
@@ -2728,7 +2775,8 @@ SplineSet
  362 205 365 204 367 204 c 0
  406.95703125 204 440.903320312 82 479 82 c 0
 EndSplineSet
-Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.KAi
 Substitution2: "Link cons+-Ee-1" Wa.KEe
 EndChar
 
@@ -2767,6 +2815,7 @@ SplineSet
  201 300 223 364 223 404 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.LAi
 Substitution2: "Link cons+-Ee-1" Wa.LEe
 EndChar
 
@@ -2810,6 +2859,7 @@ SplineSet
  412 303 415 307 423 307 c 0xbc
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.MAi
 Substitution2: "Link cons+-Ee-1" Wa.MEe
 EndChar
 
@@ -2849,6 +2899,7 @@ SplineSet
  174 5 171 1 163 1 c 0
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.NAi
 Substitution2: "Link cons+-Ee-1" Wa.NEe
 EndChar
 
@@ -2894,6 +2945,7 @@ SplineSet
  168 4 165 0 157 0 c 0
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.PAi
 Substitution2: "Link cons+-Ee-1" Wa.PEe
 EndChar
 
@@ -2932,6 +2984,7 @@ SplineSet
  464 314 506 249 506 195 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.TtAi
 Substitution2: "Link cons+-Ee-1" Wa.TtEe
 EndChar
 
@@ -2969,6 +3022,7 @@ SplineSet
  190 9 187 5 179 5 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.RAi
 Substitution2: "Link cons+-Ee-1" Wa.REe
 EndChar
 
@@ -3013,6 +3067,7 @@ SplineSet
  127 238 124 234 116 234 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.SAi
 Substitution2: "Link cons+-Ee-1" Wa.SEe
 EndChar
 
@@ -3058,6 +3113,7 @@ SplineSet
  456 82 472 147 472 205 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.TAi
 Substitution2: "Link cons+-Ee-1" Wa.TEe
 EndChar
 
@@ -3121,6 +3177,7 @@ SplineSet
  158 4 155 0 147 0 c 0xbc
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.VAi
 Substitution2: "Link cons+-Ee-1" Wa.VEe
 EndChar
 
@@ -3172,6 +3229,7 @@ SplineSet
  110 311 107 307 99 307 c 0xe9
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.DdAi
 Substitution2: "Link cons+-Ee-1" Wa.DdEe
 EndChar
 
@@ -3231,6 +3289,7 @@ SplineSet
  765 407 754 408 744 408 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.SsAi
 Substitution2: "Link cons+-Ee-1" Wa.SsEe
 EndChar
 
@@ -3279,6 +3338,7 @@ SplineSet
  283 160 217 211 168 211 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.YAi
 Substitution2: "Link cons+-Ee-1" Wa.YEe
 EndChar
 
@@ -3353,6 +3413,7 @@ SplineSet
  125 215 108 190 101 170 c 0
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.NyAi
 Substitution2: "Link cons+-Ee-1" Wa.NyEe
 EndChar
 
@@ -3883,8 +3944,8 @@ SplineSet
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
 LCarets2: 1 0
-Ligature2: "Orig CCMP-1" E Uml.Conj
 Ligature2: "Orig CCMP-1" F Uml.Conj
+Ligature2: "Orig CCMP-1" E Uml.Conj
 EndChar
 
 StartChar: Tutg.Ai
@@ -4065,8 +4126,8 @@ SplineSet
 EndSplineSet
 Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
 LCarets2: 2 0 225
-Ligature2: "Orig CCMP-1" F Uml.Conj Uml.Aa
 Ligature2: "Orig CCMP-1" E Uml.Conj Uml.Aa
+Ligature2: "Orig CCMP-1" F Uml.Conj Uml.Aa
 EndChar
 
 StartChar: A_Y
@@ -4145,8 +4206,8 @@ SplineSet
  125 408 78 385 78 350 c 0
 EndSplineSet
 Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
-Ligature2: "Orig CCMP-1" Uml.Ee Uml.Conj Uml.Length
 Ligature2: "Orig CCMP-1" Uml.Conj Uml.Length
+Ligature2: "Orig CCMP-1" Uml.Ee Uml.Conj Uml.Length
 LCarets2: 2 0 405
 EndChar
 
@@ -6056,9 +6117,10 @@ SplineSet
  1096 82 1138 198 1138 244 c 0
  1138 318 1075 369 1009 391 c 1
 EndSplineSet
-Kerns2: 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 316 -679 "Kern-1" 317 -679 "Kern-1" 318 -679 "Kern-1" 319 -679 "Kern-1" 320 -679 "Kern-1" 321 -679 "Kern-1" 322 -679 "Kern-1" 323 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1" 366 -679 "Kern-1" 367 -679 "Kern-1" 368 -679 "Kern-1" 369 -679 "Kern-1" 370 -679 "Kern-1" 371 -679 "Kern-1" 372 -679 "Kern-1" 373 -679 "Kern-1"
+Kerns2: 373 -679 "Kern-1" 372 -679 "Kern-1" 371 -679 "Kern-1" 370 -679 "Kern-1" 369 -679 "Kern-1" 368 -679 "Kern-1" 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 323 -679 "Kern-1" 322 -679 "Kern-1" 321 -679 "Kern-1" 320 -679 "Kern-1" 319 -679 "Kern-1" 318 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1"
+Substitution2: "Link cons+-Ai-1" Wa.K_KAi
+Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.K
 Substitution2: "Link cons+-Ee-1" Wa.K_KEe
-Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K
 LCarets2: 2 0 0
 Colour: c2ffc2
 EndChar
@@ -9654,7 +9716,7 @@ SplineSet
  896 -101 l 1x1e43
 EndSplineSet
 Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
-Ligature2: "Tutg CCMP-1" Tutg.Dd Uml.Conj Tutg.Dd Uml.Uu
+Ligature2: "Tutg my ligs-1" Tutg.Dd Uml.Conj Tutg.Dd Uml.Uu
 EndChar
 
 StartChar: Syl.C_ChU
@@ -10519,8 +10581,8 @@ SplineSet
 EndSplineSet
 Kerns2: 373 -679 "Kern-2" 372 -679 "Kern-2" 371 -679 "Kern-2" 370 -679 "Kern-2" 369 -679 "Kern-2" 368 -679 "Kern-2" 367 -679 "Kern-2" 366 -679 "Kern-2" 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 323 -679 "Kern-2" 322 -679 "Kern-2" 321 -679 "Kern-2" 320 -679 "Kern-2" 319 -679 "Kern-2" 318 -679 "Kern-2" 317 -679 "Kern-2" 316 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2"
 Ligature2: "Orig CCMP-1" F Uml.Conj Uml.Aa Tutg.M Uml.Vir
-Ligature2: "Orig CCMP-1" E Uml.Conj Uml.Aa Tutg.M Uml.Vir
 Ligature2: "Orig CCMP-1" Uml.Ee Uml.Conj Uml.Aa Tutg.M Uml.Vir
+Ligature2: "Orig CCMP-1" E Uml.Conj Uml.Aa Tutg.M Uml.Vir
 EndChar
 
 StartChar: one
@@ -11086,6 +11148,7 @@ Fore
 Refer: 34 70609 S 1 0 0 1 259 -85 2
 Refer: 407 -1 N 1 0 0 1 0 0 2
 Kerns2: 373 -679 "Kern-2" 372 -679 "Kern-2" 371 -679 "Kern-2" 370 -679 "Kern-2" 369 -679 "Kern-2" 368 -679 "Kern-2" 367 -679 "Kern-2" 366 -679 "Kern-2" 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 323 -679 "Kern-2" 322 -679 "Kern-2" 321 -679 "Kern-2" 320 -679 "Kern-2" 319 -679 "Kern-2" 318 -679 "Kern-2" 317 -679 "Kern-2" 316 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2"
+Substitution2: "Link cons+-Ai-1" Wa.RrAi
 Substitution2: "Link cons+-Ee-1" Wa.RrEe
 Substitution2: "Tutg -reph-1" Tutg.Rr.Naked
 LCarets2: 6 0 0 0 0 0 0
@@ -11132,6 +11195,7 @@ SplineSet
  163 435 122 380 104 321 c 1
 EndSplineSet
 Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
+Substitution2: "Link cons+-Ai-1" Wa.LllAi
 Substitution2: "Link cons+-Ee-1" Wa.LllEe
 EndChar
 
@@ -13234,8 +13298,8 @@ SplineSet
  107 552 105 553 101 553 c 0
  81 553 50 599 50 619 c 0xe0
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.I Tutg.Reph
 Ligature2: "Orig CCMP-1" Tutg.Reph Uml.I
+Ligature2: "Orig CCMP-1" Uml.I Tutg.Reph
 EndChar
 
 StartChar: Lig.Reph.I
@@ -13639,8 +13703,8 @@ SplineSet
  564 313 514 358 453 386 c 1
  340 339 214 230 191 111 c 0
 EndSplineSet
-Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
-Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K Uml.U
+Kerns2: 373 -679 "Kern-2" 372 -679 "Kern-2" 371 -679 "Kern-2" 370 -679 "Kern-2" 369 -679 "Kern-2" 368 -679 "Kern-2" 367 -679 "Kern-2" 366 -679 "Kern-2" 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 323 -679 "Kern-2" 322 -679 "Kern-2" 321 -679 "Kern-2" 320 -679 "Kern-2" 319 -679 "Kern-2" 318 -679 "Kern-2" 317 -679 "Kern-2" 316 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2"
+Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.K Uml.U
 LCarets2: 3 0 0 0
 Colour: ff00
 EndChar
@@ -13742,8 +13806,8 @@ SplineSet
  1125 322 1069 356 1007 387 c 1
  983 379 961 370 942 359 c 0
 EndSplineSet
-Kerns2: 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 316 -679 "Kern-2" 317 -679 "Kern-2" 318 -679 "Kern-2" 319 -679 "Kern-2" 320 -679 "Kern-2" 321 -679 "Kern-2" 322 -679 "Kern-2" 323 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2" 366 -679 "Kern-2" 367 -679 "Kern-2" 368 -679 "Kern-2" 369 -679 "Kern-2" 370 -679 "Kern-2" 371 -679 "Kern-2" 372 -679 "Kern-2" 373 -679 "Kern-2"
-Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.K Uml.Uu
+Kerns2: 373 -679 "Kern-2" 372 -679 "Kern-2" 371 -679 "Kern-2" 370 -679 "Kern-2" 369 -679 "Kern-2" 368 -679 "Kern-2" 367 -679 "Kern-2" 366 -679 "Kern-2" 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 323 -679 "Kern-2" 322 -679 "Kern-2" 321 -679 "Kern-2" 320 -679 "Kern-2" 319 -679 "Kern-2" 318 -679 "Kern-2" 317 -679 "Kern-2" 316 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2"
+Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.K Uml.Uu
 Colour: ff00
 EndChar
 
@@ -17300,51 +17364,50 @@ EndChar
 
 StartChar: Subj.Kh
 Encoding: 1114303 -1 270
-Width: 791
+Width: 0
 VWidth: 1000
-GlyphClass: 2
+GlyphClass: 4
 Flags: W
-HStem: -504 81<91.8252 196.812 463.24 670.164> -290 81<105.391 190.585> -78 81<184.205 296.994> -21 20G<690 697.5>
-VStem: 10 64<-415.785 -324.614> 217 63<-418.5 -318.396> 426 63<-343.194 -204.659> 717 64<-366.496 -101.292>
+HStem: -568 81<-695.251 -580.569 -317.76 -107.266> -354 81<-678.34 -584.895> -142 81<-602.903 -476.7>
+VStem: -771 64<-479.785 -388.614> -564 63<-482.5 -374.394> -355 63<-414.909 -261.225> -64 64<-438.702 -152.338>
 LayerCount: 2
 Fore
 SplineSet
-168 -504 m 0xef
- 80 -504 10 -425 10 -339 c 0
- 10 -216 48 3 208 3 c 0xef
- 355 3 489 -167 489 -307 c 0
- 489 -345 482 -386 463 -420 c 1
- 493 -420 630 -419 656 -410 c 0
- 712 -392 717 -274 717 -225 c 0
- 717 -166 713 -102 694 -46 c 0
- 690 -35 683 -25 683 -13 c 0
- 683 -5 686 -1 694 -1 c 0xdf
- 701 -1 712 -10 717 -14 c 0
- 769 -63 781 -213 781 -282 c 0
- 781 -340 775 -453 717 -485 c 0
- 689 -500 542 -501 502 -501 c 0
- 478 -501 416 -499 397 -488 c 0
- 379 -478 354 -445 354 -423 c 0
- 354 -420 355 -416 356 -414 c 0
- 363 -404 372 -396 379 -386 c 0
- 408 -347 426 -300 426 -251 c 0
- 426 -154 348 -78 251 -78 c 0
- 175 -78 126 -147 102 -212 c 1
- 110 -210 118 -209 126 -209 c 0
- 219 -209 280 -330 280 -411 c 0
- 280 -426 278 -444 271 -457 c 0
- 253 -490 203 -504 168 -504 c 0xef
-169 -290 m 0
- 132 -290 92 -322 77 -327 c 1
- 75 -351 74 -374 74 -395 c 0
- 74 -401 74 -407 75 -413 c 1
- 91 -421 109 -423 126 -423 c 0
- 153 -423 200 -410 212 -384 c 0
- 216 -375 217 -365 217 -355 c 0
- 217 -345 213 -305 206 -300 c 0
- 196 -293 181 -290 169 -290 c 0
+-64 -289 m 0
+ -64 -125.518610343 -98 -99.0941347554 -98 -77 c 0
+ -98 -69 -95 -65 -87 -65 c 0
+ -80 -65 -69 -74 -64 -78 c 0
+ -12 -127 0 -277 0 -346 c 0
+ 0 -404 -6 -517 -64 -549 c 0
+ -92 -564 -239 -565 -279 -565 c 0
+ -303 -565 -365 -563 -384 -552 c 0
+ -402 -542 -427 -509 -427 -487 c 0
+ -427 -484 -426 -480 -425 -478 c 0
+ -418 -468 -409 -460 -402 -450 c 0
+ -373 -411 -355 -364 -355 -315 c 0
+ -355 -218 -433 -142 -530 -142 c 0
+ -606 -142 -655 -211 -679 -276 c 1
+ -671 -274 -663 -273 -655 -273 c 0
+ -562 -273 -501 -394 -501 -475 c 0
+ -501 -490 -503 -508 -510 -521 c 0
+ -528 -554 -578 -568 -613 -568 c 0
+ -701 -568 -771 -489 -771 -403 c 0
+ -771 -280 -733 -61 -573 -61 c 0
+ -426 -61 -292 -231 -292 -371 c 0
+ -292 -409 -299 -450 -318 -484 c 1
+ -288 -484 -151 -483 -125 -474 c 0
+ -69 -456 -64 -338 -64 -289 c 0
+-612 -354 m 0
+ -649 -354 -689 -386 -704 -391 c 1
+ -706 -415 -707 -438 -707 -459 c 0
+ -707 -465 -707 -471 -706 -477 c 1
+ -690 -485 -672 -487 -655 -487 c 0
+ -628 -487 -581 -474 -569 -448 c 0
+ -565 -439 -564 -429 -564 -419 c 0
+ -564 -409 -568 -369 -575 -364 c 0
+ -585 -357 -600 -354 -612 -354 c 0
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Kh
+Ligature2: "Subjoin-1" Uml.Conj Tutg.Kh
 LCarets2: 1 0
 Colour: ff9e05
 EndChar
@@ -18135,7 +18198,7 @@ SplineSet
  555 -296 557 -279 557 -262 c 0
  557 -192 499 -145 431 -117 c 1
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.K
+Ligature2: "Subjoin-1" Uml.Conj Tutg.K
 LCarets2: 1 0
 Colour: ff9e05
 EndChar
@@ -18843,6 +18906,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Bh Uml.U
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.BhUu
@@ -18913,6 +18977,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Bh Uml.Uu
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.ChU
@@ -18991,6 +19056,7 @@ SplineSet
 EndSplineSet
 LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ch Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.ChUu
@@ -19077,6 +19143,7 @@ SplineSet
  130 -359 111 -369 103 -369 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ch Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Subj.NnU
@@ -19143,6 +19210,7 @@ SplineSet
  102 -381 99 -389 92 -395 c 1
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Nn Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.NnUu
@@ -19224,6 +19292,7 @@ SplineSet
 EndSplineSet
 LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Nn Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Subj.ShU
@@ -19281,6 +19350,7 @@ SplineSet
  561 -341 556 -354 556 -367 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Sh Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.ShUu
@@ -19345,6 +19415,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Sh Uml.Uu
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.GU
@@ -19388,6 +19459,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.G Uml.U
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.GUu
@@ -19446,6 +19518,7 @@ SplineSet
  29 -294 25 -263 25 -232 c 0xed
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.G Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Subj.HU
@@ -19497,6 +19570,7 @@ SplineSet
  21 -456 10 -285 10 -225 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.H Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.HUu
@@ -19566,6 +19640,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.H Uml.Uu
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.JU
@@ -19653,6 +19728,7 @@ SplineSet
  1164 -316 1117 -355 1107 -402 c 1
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.J Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.JUu
@@ -19749,8 +19825,9 @@ SplineSet
  1164 -322 1129 -364 1129 -401 c 2
  1129 -405 l 1
 EndSplineSet
+Ligature2: "Subjoin-1" Uml.Conj Tutg.J Uml.Uu
 LCarets2: 2 0 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.J Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Subj.KU
@@ -19805,8 +19882,9 @@ SplineSet
  555 -286 557 -269 557 -252 c 0
  557 -183 500 -136 433 -108 c 1
 EndSplineSet
+Ligature2: "Subjoin-1" Uml.Conj Tutg.K Uml.U
 LCarets2: 2 0 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.K Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.KUu
@@ -19874,7 +19952,8 @@ SplineSet
  572 -186 520 -141 457 -112 c 1
  432 -120 409 -130 389 -141 c 0
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.K Uml.Uu
+Ligature2: "Subjoin-1" Uml.Conj Tutg.K Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Subj.NU
@@ -19920,6 +19999,7 @@ SplineSet
  133 -499 118 -484 111 -477 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.N Uml.U
+Colour: 995c03
 EndChar
 
 StartChar: Subj.NUu
@@ -19979,6 +20059,7 @@ SplineSet
  59 -410 25 -301 25 -207 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.N Uml.Uu
+Colour: 995c03
 EndChar
 
 StartChar: Unu.Subj.RU
@@ -20150,6 +20231,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.T Uml.U
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.TUu
@@ -20218,6 +20300,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.T Uml.Uu
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.DU
@@ -20263,6 +20346,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.D Uml.U
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Subj.DUu
@@ -20320,6 +20404,7 @@ SplineSet
 EndSplineSet
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.D Uml.Uu
 LCarets2: 2 0 0
+Colour: 995c03
 EndChar
 
 StartChar: Syl.KR
@@ -20501,8 +20586,9 @@ SplineSet
  449 -600 446 -596 426 -596 c 0
  402 -596 337 -620 326 -642 c 1
 EndSplineSet
+Ligature2: "Subjoin-1" Uml.Conj Tutg.K Uml.VocR
 LCarets2: 2 0 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.K Uml.VocR
+Colour: 995c03
 EndChar
 
 StartChar: Syl.Bh_Ya
@@ -21593,127 +21679,128 @@ EndChar
 
 StartChar: Subj.KhU
 Encoding: 1114374 -1 341
-Width: 801
+Width: 0
 VWidth: 1000
-GlyphClass: 3
+GlyphClass: 4
 Flags: W
-HStem: -662 81<620.825 695.12> -504 81<91.8252 196.812 463.24 560 654.072 670.443> -290 81<105.391 190.585> -78 81<184.205 296.994> -21 20G<690 697.5>
-VStem: 10 64<-415.785 -324.614> 217 63<-418.5 -318.396> 426 63<-343.194 -204.659> 556 64<-578.778 -536.878> 717 64<-559.207 -500.384 -366.413 -101.292>
+HStem: -662 81<-160.175 -83.1968> -504 81<-695.251 -580.569 -317.76 -221 -132.168 -106.301> -290 81<-678.34 -584.895> -78 81<-602.903 -476.7> -21 20G<-91 -83.5>
+VStem: -771 64<-415.785 -324.614> -564 63<-418.5 -310.394> -355 63<-350.909 -197.225> -225 64<-578.778 -533.751> -64 64<-562.255 -500.384 -375.272 -88.3382>
 LayerCount: 2
 Fore
 SplineSet
-10 -339 m 0xf7c0
- 10 -216 48 3 208 3 c 0xf7c0
- 355 3 489 -167 489 -307 c 0
- 489 -345 482 -386 463 -420 c 1
- 493 -420 630 -419 656 -410 c 0
- 712 -392 717 -274 717 -225 c 0
- 717 -166 713 -102 694 -46 c 0
- 690 -35 683 -25 683 -13 c 0
- 683 -5 686 -1 694 -1 c 0xefc0
- 701 -1 712 -10 717 -14 c 0
- 769 -63 781 -213 781 -282 c 0
- 781 -327 777 -406 748 -454 c 1
- 770 -482 782 -521 782 -553 c 0
- 782 -620 748 -662 682 -662 c 0
- 617 -662 556 -590 556 -530 c 0
- 556 -520 558 -510 560 -500 c 1
- 535 -501 514 -501 502 -501 c 0
- 478 -501 416 -499 397 -488 c 0
- 379 -478 354 -445 354 -423 c 0
- 354 -420 355 -416 356 -414 c 0
- 363 -404 372 -396 379 -386 c 0
- 408 -347 426 -300 426 -251 c 0
- 426 -154 348 -78 251 -78 c 0
- 175 -78 126 -147 102 -212 c 1
- 110 -210 118 -209 126 -209 c 0
- 219 -209 280 -330 280 -411 c 0
- 280 -426 278 -444 271 -457 c 0
- 253 -490 203 -504 168 -504 c 0
- 80 -504 10 -425 10 -339 c 0xf7c0
-77 -327 m 1
- 75 -351 74 -374 74 -395 c 0
- 74 -401 74 -407 75 -413 c 1
- 91 -421 109 -423 126 -423 c 0
- 153 -423 200 -410 212 -384 c 0
- 216 -375 217 -365 217 -355 c 0
- 217 -345 213 -305 206 -300 c 0
- 196 -293 181 -290 169 -290 c 0
- 132 -290 92 -322 77 -327 c 1
-718 -500 m 1
- 680 -500 623 -537 620 -578 c 1
- 627 -580 634 -581 641 -581 c 0
- 689 -581 718 -547 718 -500 c 1
+-64 -225 m 0xf7c0
+ -64 -61.5186103427 -98 -35.0941347554 -98 -13 c 0
+ -98 -5 -95 -1 -87 -1 c 0xefc0
+ -80 -1 -69 -10 -64 -14 c 0
+ -12 -63 0 -213 0 -282 c 0
+ 0 -327 -4 -406 -33 -454 c 1
+ -11 -482 1 -521 1 -553 c 0
+ 1 -620 -33 -662 -99 -662 c 0
+ -164 -662 -225 -590 -225 -530 c 0
+ -225 -520 -223 -510 -221 -500 c 1
+ -246 -501 -267 -501 -279 -501 c 0
+ -303 -501 -365 -499 -384 -488 c 0
+ -402 -478 -427 -445 -427 -423 c 0
+ -427 -420 -426 -416 -425 -414 c 0
+ -418 -404 -409 -396 -402 -386 c 0
+ -373 -347 -355 -300 -355 -251 c 0
+ -355 -154 -433 -78 -530 -78 c 0
+ -606 -78 -655 -147 -679 -212 c 1
+ -671 -210 -663 -209 -655 -209 c 0
+ -562 -209 -501 -330 -501 -411 c 0
+ -501 -426 -503 -444 -510 -457 c 0
+ -528 -490 -578 -504 -613 -504 c 0
+ -701 -504 -771 -425 -771 -339 c 0
+ -771 -216 -733 3 -573 3 c 0
+ -426 3 -292 -167 -292 -307 c 0
+ -292 -345 -299 -386 -318 -420 c 1
+ -288 -420 -151 -419 -125 -410 c 0
+ -69 -392 -64 -274 -64 -225 c 0xf7c0
+-704 -327 m 1
+ -706 -351 -707 -374 -707 -395 c 0
+ -707 -401 -707 -407 -706 -413 c 1
+ -690 -421 -672 -423 -655 -423 c 0
+ -628 -423 -581 -410 -569 -384 c 0
+ -565 -375 -564 -365 -564 -355 c 0
+ -564 -345 -568 -305 -575 -300 c 0
+ -585 -293 -600 -290 -612 -290 c 0
+ -649 -290 -689 -322 -704 -327 c 1
+-63 -500 m 1
+ -101 -500 -158 -537 -161 -578 c 1
+ -154 -580 -147 -581 -140 -581 c 0
+ -92 -581 -63 -547 -63 -500 c 1
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Kh Uml.U
+Ligature2: "Subj vowel-1" Subj.Kh Uml.U
+Ligature2: "Subjoin-1" Uml.Conj Tutg.Kh Uml.U
+LCarets2: 2 0 0
 Colour: 9c5e03
 EndChar
 
 StartChar: Subj.KhUu
 Encoding: 1114375 -1 342
-Width: 804
+Width: 0
 VWidth: 1000
-GlyphClass: 3
+GlyphClass: 4
 Flags: W
-HStem: -760 81<687.576 775.893> -660 81<660.438 739> -504 81<91.8252 196.812 463.24 591.418> -290 81<105.391 190.585> -78 81<184.205 296.994> -21 20G<690 697.5>
-VStem: 10 64<-415.785 -324.614> 217 63<-418.5 -318.396> 426 63<-343.194 -204.659> 580 80<-579 -531.572> 717 64<-567.246 -509.656 -367.351 -101.292> 807 64<-649.286 -548.825>
+HStem: -760 81<-98.2402 -1.25423> -660 81<-120.562 -42> -504 81<-695.251 -580.569 -317.76 -189.582> -290 81<-678.34 -584.895> -78 81<-602.903 -476.7> -21 20G<-91 -83.5>
+VStem: -771 64<-415.785 -324.614> -564 63<-418.5 -310.394> -355 63<-350.909 -197.225> -201 80<-579 -528.131> -64 64<-571.5 -509.656 -374.374 -88.3382> 26 64<-652.407 -541.848>
 LayerCount: 2
 Fore
 SplineSet
-10 -339 m 0xfbf0
- 10 -216 48 3 208 3 c 0xfbf0
- 355 3 489 -167 489 -307 c 0
- 489 -345 482 -386 463 -420 c 1
- 493 -420 630 -419 656 -410 c 0
- 712 -392 717 -274 717 -225 c 0
- 717 -166 713 -102 694 -46 c 0
- 690 -35 683 -25 683 -13 c 0
- 683 -5 686 -1 694 -1 c 0xf7f0
- 701 -1 712 -10 717 -14 c 0
- 769 -63 781 -213 781 -282 c 0
- 781 -322 778 -388 758 -435 c 1
- 823 -479 871 -567 871 -646 c 0
- 871 -714 825 -760 757 -760 c 0
- 668 -760 580 -648 580 -563 c 0
- 580 -539 584 -518 593 -499 c 1
- 555 -501 519 -501 502 -501 c 0
- 478 -501 416 -499 397 -488 c 0
- 379 -478 354 -445 354 -423 c 0
- 354 -420 355 -416 356 -414 c 0
- 363 -404 372 -396 379 -386 c 0
- 408 -347 426 -300 426 -251 c 0
- 426 -154 348 -78 251 -78 c 0
- 175 -78 126 -147 102 -212 c 1
- 110 -210 118 -209 126 -209 c 0
- 219 -209 280 -330 280 -411 c 0
- 280 -426 278 -444 271 -457 c 0
- 253 -490 203 -504 168 -504 c 0
- 80 -504 10 -425 10 -339 c 0xfbf0
-74 -395 m 0
- 74 -401 74 -407 75 -413 c 1
- 91 -421 109 -423 126 -423 c 0
- 153 -423 200 -410 212 -384 c 0
- 216 -375 217 -365 217 -355 c 0
- 217 -345 213 -305 206 -300 c 0
- 196 -293 181 -290 169 -290 c 0
- 132 -290 92 -322 77 -327 c 1
- 75 -351 74 -374 74 -395 c 0
-711 -660 m 0
- 687 -660 663 -645 643 -624 c 1
- 644 -633 648 -644 651 -652 c 1
- 672 -670 687 -679 716 -679 c 0
- 768 -679 807 -642 807 -590 c 0
- 807 -562 800 -528 779 -509 c 1
- 782 -523 782 -537 782 -554 c 0
- 782 -600 767 -660 711 -660 c 0
-660 -577 m 2
- 660 -578 l 2
- 663 -579 666 -579 669 -579 c 0
- 706 -579 718 -534 719 -504 c 1
- 689 -517 660 -550 660 -577 c 2
+-64 -225 m 0xfbf0
+ -64 -61.5186103427 -98 -35.0941347554 -98 -13 c 0
+ -98 -5 -95 -1 -87 -1 c 0xf7f0
+ -80 -1 -69 -10 -64 -14 c 0
+ -12 -63 0 -213 0 -282 c 0
+ 0 -322 -3 -388 -23 -435 c 1
+ 42 -479 90 -567 90 -646 c 0
+ 90 -714 44 -760 -24 -760 c 0
+ -113 -760 -201 -648 -201 -563 c 0
+ -201 -539 -197 -518 -188 -499 c 1
+ -226 -501 -262 -501 -279 -501 c 0
+ -303 -501 -365 -499 -384 -488 c 0
+ -402 -478 -427 -445 -427 -423 c 0
+ -427 -420 -426 -416 -425 -414 c 0
+ -418 -404 -409 -396 -402 -386 c 0
+ -373 -347 -355 -300 -355 -251 c 0
+ -355 -154 -433 -78 -530 -78 c 0
+ -606 -78 -655 -147 -679 -212 c 1
+ -671 -210 -663 -209 -655 -209 c 0
+ -562 -209 -501 -330 -501 -411 c 0
+ -501 -426 -503 -444 -510 -457 c 0
+ -528 -490 -578 -504 -613 -504 c 0
+ -701 -504 -771 -425 -771 -339 c 0
+ -771 -216 -733 3 -573 3 c 0
+ -426 3 -292 -167 -292 -307 c 0
+ -292 -345 -299 -386 -318 -420 c 1
+ -288 -420 -151 -419 -125 -410 c 0
+ -69 -392 -64 -274 -64 -225 c 0xfbf0
+-707 -395 m 0
+ -707 -401 -707 -407 -706 -413 c 1
+ -690 -421 -672 -423 -655 -423 c 0
+ -628 -423 -581 -410 -569 -384 c 0
+ -565 -375 -564 -365 -564 -355 c 0
+ -564 -345 -568 -305 -575 -300 c 0
+ -585 -293 -600 -290 -612 -290 c 0
+ -649 -290 -689 -322 -704 -327 c 1
+ -706 -351 -707 -374 -707 -395 c 0
+-70 -660 m 0
+ -94 -660 -118 -645 -138 -624 c 1
+ -137 -633 -133 -644 -130 -652 c 1
+ -109 -670 -94 -679 -65 -679 c 0
+ -13 -679 26 -642 26 -590 c 0
+ 26 -562 19 -528 -2 -509 c 1
+ 1 -523 1 -537 1 -554 c 0
+ 1 -600 -14 -660 -70 -660 c 0
+-121 -577 m 2
+ -121 -578 l 1
+ -118 -579 -115 -579 -112 -579 c 0
+ -75 -579 -63 -534 -62 -504 c 1
+ -92 -517 -121 -550 -121 -577 c 2
 EndSplineSet
+Ligature2: "Subj vowel-1" Subj.Kh Uml.Uu
+Ligature2: "Subjoin-1" Uml.Conj Tutg.Kh Uml.Uu
 LCarets2: 2 0 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Kh Uml.Uu
 Colour: 9c5e03
 EndChar
 
@@ -22042,6 +22129,7 @@ SplineSet
  591 -600 598 -601 605 -601 c 0
  653 -601 682 -567 682 -520 c 1
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Uml.Conj Tutg.C Uml.U
 Colour: 9c5e03
 EndChar
@@ -23974,7 +24062,7 @@ LayerCount: 2
 Fore
 Refer: 377 9676 S 1 0 0 1 342 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.Ee
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Ee
 LCarets2: 1 353
 EndChar
 
@@ -23989,6 +24077,8 @@ LayerCount: 2
 Fore
 Refer: 33 70594 N 1 0 0 1 340 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
+Substitution2: "Link Oo Au 2nd-1" Dummy
+Substitution2: "Link to dummy-1" Dummy
 Decomposition: "+E8ITwgAA"
 EndChar
 
@@ -24003,7 +24093,7 @@ LayerCount: 2
 Fore
 Refer: 377 9676 N 1 0 0 1 672 0 2
 Refer: 379 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.Ai
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Ai
 LCarets2: 1 695
 EndChar
 
@@ -24071,7 +24161,7 @@ Fore
 Refer: 29 70584 S 1 0 0 1 818 0 2
 Refer: 377 9676 N 1 0 0 1 342 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.Oo
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Oo
 LCarets2: 1 826
 EndChar
 
@@ -24088,7 +24178,7 @@ Fore
 Refer: 27 70601 N 1 0 0 1 814 0 2
 Refer: 377 9676 N 1 0 0 1 342 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.Au
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Au
 LCarets2: 1 817
 EndChar
 
@@ -24178,7 +24268,7 @@ Fore
 Refer: 20 70589 S 1 0 0 1 502 0 2
 Refer: 377 9676 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.VocR
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.VocR
 EndChar
 
 StartChar: Lig.Dotc.LoopVir
@@ -24192,7 +24282,7 @@ LayerCount: 2
 Fore
 Refer: 26 70607 N 1 0 0 1 399 0 2
 Refer: 377 9676 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Tutg.Uml.LoopVir
+Ligature2: "Tutg my ligs-1" Shape.Dotc Tutg.Uml.LoopVir
 LCarets2: 1 476
 EndChar
 
@@ -24306,7 +24396,7 @@ LayerCount: 2
 Fore
 Refer: 391 70590 S 1 0 0 1 491 45 2
 Refer: 377 9676 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.VocRR
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.VocRR
 LCarets2: 1 474
 EndChar
 
@@ -24756,6 +24846,7 @@ SplineSet
  162 84.25 l 1
  117 84.25 l 1
 EndSplineSet
+Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Lig.Dotc.Conj
@@ -24769,7 +24860,7 @@ LayerCount: 2
 Fore
 Refer: 405 70608 N 1 0 0 1 113 0 2
 Refer: 377 9676 N 1 0 0 1 0 0 2
-Ligature2: "Tutg CCMP-1" Shape.Dotc Uml.Conj
+Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Conj
 LCarets2: 1 285
 EndChar
 
@@ -24907,12 +24998,20 @@ SplineSet
  911 67 855 2 797 2 c 0
 EndSplineSet
 LCarets2: 4 0 0 0 0
-Ligature2: "Tutg CCMP-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R
+Ligature2: "Tutg my ligs-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R
 Colour: c2ffc2
 EndChar
 
-StartChar: Wa.KEe
+StartChar: Dummy
 Encoding: 1114421 -1 410
+Width: 0
+GlyphClass: 4
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: Wa.KEe
+Encoding: 1114422 -1 411
 Width: 1159
 VWidth: 0
 Flags: W
@@ -24927,7 +25026,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KAi
-Encoding: 1114422 -1 411
+Encoding: 1114423 -1 412
 Width: 1499
 VWidth: 0
 Flags: W
@@ -24942,7 +25041,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhEe
-Encoding: 1114423 -1 412
+Encoding: 1114424 -1 413
 Width: 1196
 VWidth: 0
 Flags: W
@@ -24957,7 +25056,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhAi
-Encoding: 1114424 -1 413
+Encoding: 1114425 -1 414
 Width: 1536
 VWidth: 0
 Flags: W
@@ -24972,7 +25071,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GEe
-Encoding: 1114425 -1 414
+Encoding: 1114426 -1 415
 Width: 1162
 VWidth: 0
 Flags: W
@@ -24987,7 +25086,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GAi
-Encoding: 1114426 -1 415
+Encoding: 1114427 -1 416
 Width: 1502
 VWidth: 0
 Flags: W
@@ -25002,7 +25101,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhEe
-Encoding: 1114427 -1 416
+Encoding: 1114428 -1 417
 Width: 1453
 VWidth: 0
 Flags: W
@@ -25017,7 +25116,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhAi
-Encoding: 1114428 -1 417
+Encoding: 1114429 -1 418
 Width: 1793
 VWidth: 0
 Flags: W
@@ -25032,7 +25131,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgEe
-Encoding: 1114429 -1 418
+Encoding: 1114430 -1 419
 Width: 1172
 VWidth: 0
 Flags: W
@@ -25047,7 +25146,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgAi
-Encoding: 1114430 -1 419
+Encoding: 1114431 -1 420
 Width: 1512
 VWidth: 0
 Flags: W
@@ -25062,7 +25161,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CEe
-Encoding: 1114431 -1 420
+Encoding: 1114432 -1 421
 Width: 1146
 VWidth: 0
 Flags: W
@@ -25077,7 +25176,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CAi
-Encoding: 1114432 -1 421
+Encoding: 1114433 -1 422
 Width: 1486
 VWidth: 0
 Flags: W
@@ -25092,7 +25191,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChEe
-Encoding: 1114433 -1 422
+Encoding: 1114434 -1 423
 Width: 1307
 VWidth: 0
 Flags: W
@@ -25107,7 +25206,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChAi
-Encoding: 1114434 -1 423
+Encoding: 1114435 -1 424
 Width: 1647
 VWidth: 0
 Flags: W
@@ -25122,7 +25221,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JEe
-Encoding: 1114435 -1 424
+Encoding: 1114436 -1 425
 Width: 1755
 VWidth: 0
 Flags: W
@@ -25137,7 +25236,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JAi
-Encoding: 1114436 -1 425
+Encoding: 1114437 -1 426
 Width: 2095
 VWidth: 0
 Flags: W
@@ -25152,7 +25251,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhEe
-Encoding: 1114437 -1 426
+Encoding: 1114438 -1 427
 Width: 1427
 VWidth: 0
 Flags: W
@@ -25167,7 +25266,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhAi
-Encoding: 1114438 -1 427
+Encoding: 1114439 -1 428
 Width: 1767
 VWidth: 0
 Flags: W
@@ -25182,7 +25281,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyEe
-Encoding: 1114439 -1 428
+Encoding: 1114440 -1 429
 Width: 1642
 VWidth: 0
 Flags: W
@@ -25197,7 +25296,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyAi
-Encoding: 1114440 -1 429
+Encoding: 1114441 -1 430
 Width: 1982
 VWidth: 0
 Flags: W
@@ -25212,7 +25311,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtEe
-Encoding: 1114441 -1 430
+Encoding: 1114442 -1 431
 Width: 901
 VWidth: 0
 Flags: W
@@ -25227,7 +25326,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtAi
-Encoding: 1114442 -1 431
+Encoding: 1114443 -1 432
 Width: 1241
 VWidth: 0
 Flags: W
@@ -25242,7 +25341,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthEe
-Encoding: 1114443 -1 432
+Encoding: 1114444 -1 433
 Width: 933
 VWidth: 0
 Flags: W
@@ -25257,7 +25356,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthAi
-Encoding: 1114444 -1 433
+Encoding: 1114445 -1 434
 Width: 1273
 VWidth: 0
 Flags: W
@@ -25272,7 +25371,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdEe
-Encoding: 1114445 -1 434
+Encoding: 1114446 -1 435
 Width: 1100
 VWidth: 0
 Flags: W
@@ -25287,7 +25386,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdAi
-Encoding: 1114446 -1 435
+Encoding: 1114447 -1 436
 Width: 1440
 VWidth: 0
 Flags: W
@@ -25302,7 +25401,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhEe
-Encoding: 1114447 -1 436
+Encoding: 1114448 -1 437
 Width: 1175
 VWidth: 0
 Flags: W
@@ -25317,7 +25416,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhAi
-Encoding: 1114448 -1 437
+Encoding: 1114449 -1 438
 Width: 1515
 VWidth: 0
 Flags: W
@@ -25332,7 +25431,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnEe
-Encoding: 1114449 -1 438
+Encoding: 1114450 -1 439
 Width: 1532
 VWidth: 0
 Flags: W
@@ -25347,7 +25446,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnAi
-Encoding: 1114450 -1 439
+Encoding: 1114451 -1 440
 Width: 1872
 VWidth: 0
 Flags: W
@@ -25362,7 +25461,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TEe
-Encoding: 1114451 -1 440
+Encoding: 1114452 -1 441
 Width: 1202
 VWidth: 0
 Flags: W
@@ -25377,7 +25476,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TAi
-Encoding: 1114452 -1 441
+Encoding: 1114453 -1 442
 Width: 1542
 VWidth: 0
 Flags: W
@@ -25392,7 +25491,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThEe
-Encoding: 1114453 -1 442
+Encoding: 1114454 -1 443
 Width: 1163
 VWidth: 0
 Flags: W
@@ -25407,7 +25506,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThAi
-Encoding: 1114454 -1 443
+Encoding: 1114455 -1 444
 Width: 1503
 VWidth: 0
 Flags: W
@@ -25422,7 +25521,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DEe
-Encoding: 1114455 -1 444
+Encoding: 1114456 -1 445
 Width: 879
 VWidth: 0
 Flags: W
@@ -25437,7 +25536,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DAi
-Encoding: 1114456 -1 445
+Encoding: 1114457 -1 446
 Width: 1219
 VWidth: 0
 Flags: W
@@ -25452,7 +25551,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhEe
-Encoding: 1114457 -1 446
+Encoding: 1114458 -1 447
 Width: 1159
 VWidth: 0
 Flags: W
@@ -25467,7 +25566,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhAi
-Encoding: 1114458 -1 447
+Encoding: 1114459 -1 448
 Width: 1499
 VWidth: 0
 Flags: W
@@ -25482,7 +25581,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NEe
-Encoding: 1114459 -1 448
+Encoding: 1114460 -1 449
 Width: 1197
 VWidth: 0
 Flags: W
@@ -25497,7 +25596,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NAi
-Encoding: 1114460 -1 449
+Encoding: 1114461 -1 450
 Width: 1537
 VWidth: 0
 Flags: W
@@ -25512,7 +25611,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PEe
-Encoding: 1114461 -1 450
+Encoding: 1114462 -1 451
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25527,7 +25626,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PAi
-Encoding: 1114462 -1 451
+Encoding: 1114463 -1 452
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25542,7 +25641,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhEe
-Encoding: 1114463 -1 452
+Encoding: 1114464 -1 453
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25557,7 +25656,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhAi
-Encoding: 1114464 -1 453
+Encoding: 1114465 -1 454
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25572,7 +25671,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BEe
-Encoding: 1114465 -1 454
+Encoding: 1114466 -1 455
 Width: 1252
 VWidth: 0
 Flags: W
@@ -25587,7 +25686,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BAi
-Encoding: 1114466 -1 455
+Encoding: 1114467 -1 456
 Width: 1592
 VWidth: 0
 Flags: W
@@ -25602,7 +25701,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhEe
-Encoding: 1114467 -1 456
+Encoding: 1114468 -1 457
 Width: 1452
 VWidth: 0
 Flags: W
@@ -25617,7 +25716,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhAi
-Encoding: 1114468 -1 457
+Encoding: 1114469 -1 458
 Width: 1792
 VWidth: 0
 Flags: W
@@ -25632,7 +25731,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MEe
-Encoding: 1114469 -1 458
+Encoding: 1114470 -1 459
 Width: 961
 VWidth: 0
 Flags: W
@@ -25647,7 +25746,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MAi
-Encoding: 1114470 -1 459
+Encoding: 1114471 -1 460
 Width: 1301
 VWidth: 0
 Flags: W
@@ -25662,7 +25761,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YEe
-Encoding: 1114471 -1 460
+Encoding: 1114472 -1 461
 Width: 1229
 VWidth: 0
 Flags: W
@@ -25677,7 +25776,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YAi
-Encoding: 1114472 -1 461
+Encoding: 1114473 -1 462
 Width: 1569
 VWidth: 0
 Flags: W
@@ -25692,7 +25791,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.REe
-Encoding: 1114473 -1 462
+Encoding: 1114474 -1 463
 Width: 985
 VWidth: 0
 Flags: W
@@ -25707,7 +25806,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RAi
-Encoding: 1114474 -1 463
+Encoding: 1114475 -1 464
 Width: 1325
 VWidth: 0
 Flags: W
@@ -25722,7 +25821,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LEe
-Encoding: 1114475 -1 464
+Encoding: 1114476 -1 465
 Width: 979
 VWidth: 0
 Flags: W
@@ -25737,7 +25836,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LAi
-Encoding: 1114476 -1 465
+Encoding: 1114477 -1 466
 Width: 1319
 VWidth: 0
 Flags: W
@@ -25752,7 +25851,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VEe
-Encoding: 1114477 -1 466
+Encoding: 1114478 -1 467
 Width: 1102
 VWidth: 0
 Flags: W
@@ -25767,7 +25866,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VAi
-Encoding: 1114478 -1 467
+Encoding: 1114479 -1 468
 Width: 1442
 VWidth: 0
 Flags: W
@@ -25782,7 +25881,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShEe
-Encoding: 1114479 -1 468
+Encoding: 1114480 -1 469
 Width: 1248
 VWidth: 0
 Flags: W
@@ -25797,7 +25896,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShAi
-Encoding: 1114480 -1 469
+Encoding: 1114481 -1 470
 Width: 1588
 VWidth: 0
 Flags: W
@@ -25812,7 +25911,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsEe
-Encoding: 1114481 -1 470
+Encoding: 1114482 -1 471
 Width: 1303
 VWidth: 0
 Flags: W
@@ -25827,7 +25926,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsAi
-Encoding: 1114482 -1 471
+Encoding: 1114483 -1 472
 Width: 1643
 VWidth: 0
 Flags: W
@@ -25842,7 +25941,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SEe
-Encoding: 1114483 -1 472
+Encoding: 1114484 -1 473
 Width: 1139
 VWidth: 0
 Flags: W
@@ -25857,7 +25956,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SAi
-Encoding: 1114484 -1 473
+Encoding: 1114485 -1 474
 Width: 1479
 VWidth: 0
 Flags: W
@@ -25872,7 +25971,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HEe
-Encoding: 1114485 -1 474
+Encoding: 1114486 -1 475
 Width: 1145
 VWidth: 0
 Flags: W
@@ -25887,7 +25986,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HAi
-Encoding: 1114486 -1 475
+Encoding: 1114487 -1 476
 Width: 1485
 VWidth: 0
 Flags: W
@@ -25902,7 +26001,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlEe
-Encoding: 1114487 -1 476
+Encoding: 1114488 -1 477
 Width: 913
 VWidth: 0
 Flags: W
@@ -25917,7 +26016,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlAi
-Encoding: 1114488 -1 477
+Encoding: 1114489 -1 478
 Width: 1253
 VWidth: 0
 Flags: W
@@ -25932,7 +26031,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrEe
-Encoding: 1114489 -1 478
+Encoding: 1114490 -1 479
 Width: 1129
 VWidth: 0
 Flags: W
@@ -25947,7 +26046,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrAi
-Encoding: 1114490 -1 479
+Encoding: 1114491 -1 480
 Width: 1469
 VWidth: 0
 Flags: W
@@ -25962,7 +26061,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllEe
-Encoding: 1114491 -1 480
+Encoding: 1114492 -1 481
 Width: 1035
 VWidth: 0
 Flags: W
@@ -25977,7 +26076,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllAi
-Encoding: 1114492 -1 481
+Encoding: 1114493 -1 482
 Width: 1375
 VWidth: 0
 Flags: W
@@ -25992,7 +26091,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KEe
-Encoding: 1114493 -1 482
+Encoding: 1114494 -1 483
 Width: 1720
 VWidth: 0
 Flags: W
@@ -26003,11 +26102,12 @@ Fore
 Refer: 109 -1 N 1 0 0 1 365 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_K Uml.Ee
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KAi
-Encoding: 1114494 -1 483
+Encoding: 1114495 -1 484
 Width: 2060
 VWidth: 0
 Flags: W
@@ -26018,6 +26118,7 @@ Fore
 Refer: 109 -1 N 1 0 0 1 705 0 2
 Refer: 379 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_K Uml.Ai
 Colour: 4fd5ff
 EndChar
 EndChars
