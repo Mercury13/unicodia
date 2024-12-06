@@ -43,7 +43,7 @@ BASE_CHARS = {
     'Lll' : NORMAL_CHAR,
     # K
     'K_K' : SYLLABLE, 'K_K_R' : SYLLABLE,
-    'K_T' : SYLLABLE,
+    'K_T' : SYLLABLE, 'K_T_Y' : SYLLABLE,
 };
 
 ST_EE = 'Link cons+Ee-1'      # Ee subtable
