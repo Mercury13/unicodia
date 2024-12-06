@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733528113
+ModificationTime: 1733528632
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -77,7 +77,7 @@ MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 420 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_T Syl.K_Ra Syl.K_K_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
