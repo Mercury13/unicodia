@@ -15,4 +15,12 @@ If you did everything that requires rebuilding blue ligatures:
 
 # Colours in HTML
 * RED: really need redoing
-* ORANGE: synthesized rakar instead of true, bad but infeasible syllable
+* ORANGE: synthesized rakar (hook-shaped final R) instead of true, bad but infeasible syllable
+* ↓ bad composition of main ligature
+
+Some chosen bad things:
+* KTTh: need true ligature
+* KTR: need true rakar instead of synthesized, both as a base for bigger ligatures and for beauty
+* KTRY: same, but not just rakar
+* Most VocRR: need small version of umlaut
+* KTV: beautiful!, but there’s a special ligature
