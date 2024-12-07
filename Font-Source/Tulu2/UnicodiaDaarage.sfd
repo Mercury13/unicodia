@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733567980
+ModificationTime: 1733568791
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -136,7 +136,8 @@ ContextSub2: coverage "Tutg -reph 2-1" 0 0 0 1
   SeqLookup: 0 "Link Rr -reph"
 EndFPST
 LangName: 1033 "" "Xdareg(darage)v1" "" "" "Xdaregdaragev1-Regular" "Version 1.000" "" "" "" "" "" "" "" "" "" "" "Xdareg(darage)v1(RL)"
-Encoding: Custom
+Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
@@ -155,10 +156,10 @@ Grid
  -662.00378418 -925 l 1024
 EndSplineSet
 AnchorClass2: "VocR mark" "Tutg MKMK-1" "VocR" "Tutg BLWM-1" "U mark" "Tutg MKMK-1" "Big subj" "Tutg BLWM-1" "Rakar" "Tutg BLWM-1" "U" "Tutg BLWM-1" "Uml above" "Tutg ABVM-1" "Low uml" "Tutg BLWM-1"
-BeginChars: 491 491
+BeginChars: 1114502 491
 
 StartChar: .notdef
-Encoding: 101 -1 0
+Encoding: 1114112 -1 0
 Width: 552
 VWidth: 1000
 GlyphClass: 1
@@ -191,7 +192,7 @@ LayerCount: 2
 EndChar
 
 StartChar: uni000D
-Encoding: 1 13 2
+Encoding: 13 13 2
 Width: 250
 VWidth: 1000
 GlyphClass: 2
@@ -200,7 +201,7 @@ LayerCount: 2
 EndChar
 
 StartChar: space
-Encoding: 2 32 3
+Encoding: 32 32 3
 Width: 250
 VWidth: 1000
 GlyphClass: 2
@@ -209,7 +210,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Uml.Vir
-Encoding: 89 70606 4
+Encoding: 70606 70606 4
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -234,7 +235,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Bh
-Encoding: 58 70569 5
+Encoding: 70569 70569 5
 Width: 1087
 VWidth: 1000
 GlyphClass: 2
@@ -287,7 +288,7 @@ Substitution2: "Link cons+-Ee-1" Wa.BhEe
 EndChar
 
 StartChar: Tutg.Ch
-Encoding: 41 70552 6
+Encoding: 70552 70552 6
 Width: 942
 VWidth: 1000
 GlyphClass: 2
@@ -347,7 +348,7 @@ Substitution2: "Link cons+-Ee-1" Wa.ChEe
 EndChar
 
 StartChar: Tutg.Dh
-Encoding: 53 70564 7
+Encoding: 70564 70564 7
 Width: 794
 VWidth: 1000
 GlyphClass: 2
@@ -387,7 +388,7 @@ Substitution2: "Link cons+-Ee-1" Wa.DhEe
 EndChar
 
 StartChar: E
-Encoding: 13 69 8
+Encoding: 69 69 8
 Width: 316
 VWidth: 1000
 GlyphClass: 2
@@ -425,7 +426,7 @@ Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 
 EndChar
 
 StartChar: F
-Encoding: 14 70 9
+Encoding: 70 70 9
 Width: 504
 VWidth: 1000
 GlyphClass: 2
@@ -460,7 +461,7 @@ Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 
 EndChar
 
 StartChar: Tutg.Gh
-Encoding: 38 70549 10
+Encoding: 70549 70549 10
 Width: 1088
 VWidth: 1000
 GlyphClass: 2
@@ -516,7 +517,7 @@ Substitution2: "Link cons+-Ee-1" Wa.GhEe
 EndChar
 
 StartChar: Tutg.Uml.Vis
-Encoding: 88 70605 11
+Encoding: 70605 70605 11
 Width: 280
 VWidth: 1000
 GlyphClass: 2
@@ -553,7 +554,7 @@ Kerns2: 257 -679 "Kern-1" 258 -679 "Kern-1" 259 -679 "Kern-1" 260 -679 "Kern-1" 
 EndChar
 
 StartChar: Uml.Ii
-Encoding: 74 70586 12
+Encoding: 70586 70586 12
 Width: 123
 VWidth: 1000
 GlyphClass: 2
@@ -584,7 +585,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Jh
-Encoding: 43 70554 13
+Encoding: 70554 70554 13
 Width: 1062
 VWidth: 1000
 GlyphClass: 2
@@ -648,7 +649,7 @@ Substitution2: "Link cons+-Ee-1" Wa.JhEe
 EndChar
 
 StartChar: Tutg.Kh
-Encoding: 36 70547 14
+Encoding: 70547 70547 14
 Width: 831
 VWidth: 1000
 GlyphClass: 2
@@ -699,7 +700,7 @@ Substitution2: "Link cons+-Ee-1" Wa.KhEe
 EndChar
 
 StartChar: Tutg.Ll
-Encoding: 68 70579 15
+Encoding: 70579 70579 15
 Width: 548
 VWidth: 1000
 GlyphClass: 2
@@ -753,7 +754,7 @@ Substitution2: "Link cons+-Ee-1" Wa.LlEe
 EndChar
 
 StartChar: M
-Encoding: 15 77 16
+Encoding: 77 77 16
 Width: 406
 VWidth: 1000
 GlyphClass: 2
@@ -780,7 +781,7 @@ Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 
 EndChar
 
 StartChar: Tutg.Nn
-Encoding: 49 70560 17
+Encoding: 70560 70560 17
 Width: 1167
 VWidth: 1000
 GlyphClass: 2
@@ -839,7 +840,7 @@ Substitution2: "Link cons+-Ee-1" Wa.NnEe
 EndChar
 
 StartChar: Tutg.Ph
-Encoding: 56 70567 18
+Encoding: 70567 70567 18
 Width: 963
 VWidth: 1000
 GlyphClass: 2
@@ -892,7 +893,7 @@ Substitution2: "Link cons+-Ee-1" Wa.PhEe
 EndChar
 
 StartChar: Tutg.Tth
-Encoding: 46 70557 19
+Encoding: 70557 70557 19
 Width: 568
 VWidth: 1000
 GlyphClass: 2
@@ -927,7 +928,7 @@ Substitution2: "Link cons+-Ee-1" Wa.TthEe
 EndChar
 
 StartChar: Uml.VocR
-Encoding: 77 70589 20
+Encoding: 70589 70589 20
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -958,7 +959,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Sh
-Encoding: 64 70575 21
+Encoding: 70575 70575 21
 Width: 883
 VWidth: 1000
 GlyphClass: 2
@@ -1001,7 +1002,7 @@ Substitution2: "Link cons+-Ee-1" Wa.ShEe
 EndChar
 
 StartChar: Tutg.Th
-Encoding: 51 70562 22
+Encoding: 70562 70562 22
 Width: 798
 VWidth: 1000
 GlyphClass: 2
@@ -1040,7 +1041,7 @@ Substitution2: "Link cons+-Ee-1" Wa.ThEe
 EndChar
 
 StartChar: Uml.Uu
-Encoding: 76 70588 23
+Encoding: 70588 70588 23
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -1074,7 +1075,7 @@ EndSplineSet
 EndChar
 
 StartChar: V
-Encoding: 17 86 24
+Encoding: 86 86 24
 Width: 600
 VWidth: 1000
 GlyphClass: 2
@@ -1083,7 +1084,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Tutg.Ddh
-Encoding: 48 70559 25
+Encoding: 70559 70559 25
 Width: 810
 VWidth: 1000
 GlyphClass: 2
@@ -1137,7 +1138,7 @@ Substitution2: "Link cons+-Ee-1" Wa.DdhEe
 EndChar
 
 StartChar: Tutg.Uml.LoopVir
-Encoding: 90 70607 26
+Encoding: 70607 70607 26
 Width: 448
 VWidth: 1000
 GlyphClass: 2
@@ -1177,7 +1178,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Length
-Encoding: 85 70601 27
+Encoding: 70601 70601 27
 Width: 466
 VWidth: 1000
 GlyphClass: 2
@@ -1213,7 +1214,7 @@ Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 
 EndChar
 
 StartChar: Tutg.Ng
-Encoding: 39 70550 28
+Encoding: 70550 70550 28
 Width: 807
 VWidth: 1000
 GlyphClass: 2
@@ -1274,7 +1275,7 @@ Substitution2: "Link cons+-Ee-1" Wa.NgEe
 EndChar
 
 StartChar: Uml.Aa
-Encoding: 72 70584 29
+Encoding: 70584 70584 29
 Width: 233
 VWidth: 1000
 GlyphClass: 2
@@ -1302,7 +1303,7 @@ Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 
 EndChar
 
 StartChar: Tutg.B
-Encoding: 57 70568 30
+Encoding: 70568 70568 30
 Width: 887
 VWidth: 1000
 GlyphClass: 2
@@ -1353,7 +1354,7 @@ Substitution2: "Link cons+-Ee-1" Wa.BEe
 EndChar
 
 StartChar: Tutg.C
-Encoding: 40 70551 31
+Encoding: 70551 70551 31
 Width: 781
 VWidth: 1000
 GlyphClass: 2
@@ -1398,7 +1399,7 @@ Substitution2: "Link cons+-Ee-1" Wa.CEe
 EndChar
 
 StartChar: Tutg.D
-Encoding: 52 70563 32
+Encoding: 70563 70563 32
 Width: 514
 VWidth: 1000
 GlyphClass: 2
@@ -1436,7 +1437,7 @@ Substitution2: "Link cons+-Ee-1" Wa.DEe
 EndChar
 
 StartChar: Uml.Ee
-Encoding: 81 70594 33
+Encoding: 70594 70594 33
 Width: 365
 VWidth: 1000
 GlyphClass: 2
@@ -1469,7 +1470,7 @@ Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Tutg.Reph
-Encoding: 92 70609 34
+Encoding: 70609 70609 34
 Width: 195
 VWidth: 1000
 GlyphClass: 2
@@ -1489,7 +1490,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.G
-Encoding: 37 70548 35
+Encoding: 70548 70548 35
 Width: 797
 VWidth: 1000
 GlyphClass: 2
@@ -1527,7 +1528,7 @@ Substitution2: "Link cons+-Ee-1" Wa.GEe
 EndChar
 
 StartChar: Syl.Nn_K
-Encoding: 102 -1 36
+Encoding: 1114113 -1 36
 Width: 1163
 VWidth: 1000
 GlyphClass: 3
@@ -1600,7 +1601,7 @@ LCarets2: 2 498 686
 EndChar
 
 StartChar: Syl.Ny_G
-Encoding: 103 -1 37
+Encoding: 1114114 -1 37
 Width: 783
 VWidth: 1000
 GlyphClass: 3
@@ -1684,7 +1685,7 @@ LCarets2: 2 294 584
 EndChar
 
 StartChar: z_A_c
-Encoding: 104 -1 38
+Encoding: 1114115 -1 38
 Width: 1461
 VWidth: 1000
 GlyphClass: 3
@@ -1770,7 +1771,7 @@ LCarets2: 2 710 934
 EndChar
 
 StartChar: z_A_C
-Encoding: 105 -1 39
+Encoding: 1114116 -1 39
 Width: 1388
 VWidth: 1000
 GlyphClass: 3
@@ -1860,7 +1861,7 @@ LCarets2: 2 624 878
 EndChar
 
 StartChar: z_A_j
-Encoding: 106 -1 40
+Encoding: 1114117 -1 40
 Width: 1792
 VWidth: 1000
 GlyphClass: 3
@@ -1958,7 +1959,7 @@ LCarets2: 2 754 1086
 EndChar
 
 StartChar: z_A_z
-Encoding: 107 -1 41
+Encoding: 1114118 -1 41
 Width: 1773
 VWidth: 1000
 GlyphClass: 3
@@ -2067,7 +2068,7 @@ LCarets2: 2 714 1022
 EndChar
 
 StartChar: Lig.Nn_T
-Encoding: 108 -1 42
+Encoding: 1114119 -1 42
 Width: 1202
 VWidth: 1000
 GlyphClass: 3
@@ -2149,7 +2150,7 @@ LCarets2: 2 671 880
 EndChar
 
 StartChar: Syl.Nn_Tth
-Encoding: 109 -1 43
+Encoding: 1114120 -1 43
 Width: 1277
 VWidth: 1000
 GlyphClass: 3
@@ -2226,7 +2227,7 @@ LCarets2: 2 526 746
 EndChar
 
 StartChar: Syl.Nn_Dd
-Encoding: 110 -1 44
+Encoding: 1114121 -1 44
 Width: 1567
 VWidth: 1000
 GlyphClass: 3
@@ -2315,7 +2316,7 @@ LCarets2: 2 644 918
 EndChar
 
 StartChar: Syl.Nn_Ddh
-Encoding: 111 -1 45
+Encoding: 1114122 -1 45
 Width: 1633
 VWidth: 1000
 GlyphClass: 3
@@ -2404,7 +2405,7 @@ LCarets2: 2 746 968
 EndChar
 
 StartChar: Syl.N_T
-Encoding: 112 -1 46
+Encoding: 1114123 -1 46
 Width: 1146
 VWidth: 1000
 GlyphClass: 3
@@ -2466,7 +2467,7 @@ LCarets2: 2 480 643
 EndChar
 
 StartChar: Syl.N_D
-Encoding: 113 -1 47
+Encoding: 1114124 -1 47
 Width: 923
 VWidth: 1000
 GlyphClass: 3
@@ -2529,7 +2530,7 @@ LCarets2: 2 428 572
 EndChar
 
 StartChar: Syl.N_Dh
-Encoding: 114 -1 48
+Encoding: 1114125 -1 48
 Width: 1261
 VWidth: 1000
 GlyphClass: 3
@@ -2593,7 +2594,7 @@ LCarets2: 2 552 770
 EndChar
 
 StartChar: Subj.Y
-Encoding: 115 -1 49
+Encoding: 1114126 -1 49
 Width: 197
 VWidth: 1000
 GlyphClass: 3
@@ -2626,7 +2627,7 @@ LCarets2: 1 54
 EndChar
 
 StartChar: Tutg.H
-Encoding: 67 70578 50
+Encoding: 70578 70578 50
 Width: 780
 VWidth: 1000
 GlyphClass: 2
@@ -2671,7 +2672,7 @@ Substitution2: "Link cons+-Ee-1" Wa.HEe
 EndChar
 
 StartChar: Uml.I
-Encoding: 73 70585 51
+Encoding: 70585 70585 51
 Width: 125
 VWidth: 1000
 GlyphClass: 2
@@ -2700,7 +2701,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.J
-Encoding: 42 70553 52
+Encoding: 70553 70553 52
 Width: 1390
 VWidth: 1000
 GlyphClass: 2
@@ -2767,7 +2768,7 @@ Substitution2: "Link cons+-Ee-1" Wa.JEe
 EndChar
 
 StartChar: Tutg.K
-Encoding: 35 70546 53
+Encoding: 70546 70546 53
 Width: 794
 VWidth: 1000
 GlyphClass: 2
@@ -2816,7 +2817,7 @@ Substitution2: "Link cons+-Ee-1" Wa.KEe
 EndChar
 
 StartChar: Tutg.L
-Encoding: 62 70573 54
+Encoding: 70573 70573 54
 Width: 614
 VWidth: 1000
 GlyphClass: 2
@@ -2856,7 +2857,7 @@ Substitution2: "Link cons+-Ee-1" Wa.LEe
 EndChar
 
 StartChar: Tutg.M
-Encoding: 59 70570 55
+Encoding: 70570 70570 55
 Width: 596
 VWidth: 1000
 GlyphClass: 2
@@ -2900,7 +2901,7 @@ Substitution2: "Link cons+-Ee-1" Wa.MEe
 EndChar
 
 StartChar: Tutg.N
-Encoding: 54 70565 56
+Encoding: 70565 70565 56
 Width: 832
 VWidth: 1000
 GlyphClass: 2
@@ -2941,7 +2942,7 @@ Substitution2: "Link cons+-Ee-1" Wa.NEe
 EndChar
 
 StartChar: Tutg.P
-Encoding: 55 70566 57
+Encoding: 70566 70566 57
 Width: 963
 VWidth: 1000
 GlyphClass: 2
@@ -2987,7 +2988,7 @@ Substitution2: "Link cons+-Ee-1" Wa.PEe
 EndChar
 
 StartChar: Tutg.Tt
-Encoding: 45 70556 58
+Encoding: 70556 70556 58
 Width: 536
 VWidth: 1000
 GlyphClass: 2
@@ -3027,7 +3028,7 @@ Substitution2: "Link cons+-Ee-1" Wa.TtEe
 EndChar
 
 StartChar: Tutg.R
-Encoding: 61 70572 59
+Encoding: 70572 70572 59
 Width: 620
 VWidth: 1000
 GlyphClass: 2
@@ -3065,7 +3066,7 @@ Substitution2: "Link cons+-Ee-1" Wa.REe
 EndChar
 
 StartChar: Tutg.S
-Encoding: 66 70577 60
+Encoding: 70577 70577 60
 Width: 774
 VWidth: 1000
 GlyphClass: 2
@@ -3110,7 +3111,7 @@ Substitution2: "Link cons+-Ee-1" Wa.SEe
 EndChar
 
 StartChar: Tutg.T
-Encoding: 50 70561 61
+Encoding: 70561 70561 61
 Width: 837
 VWidth: 1000
 GlyphClass: 2
@@ -3156,7 +3157,7 @@ Substitution2: "Link cons+-Ee-1" Wa.TEe
 EndChar
 
 StartChar: Uml.U
-Encoding: 75 70587 62
+Encoding: 70587 70587 62
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -3181,7 +3182,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.V
-Encoding: 63 70574 63
+Encoding: 70574 70574 63
 Width: 737
 VWidth: 1000
 GlyphClass: 2
@@ -3221,7 +3222,7 @@ Substitution2: "Link cons+-Ee-1" Wa.VEe
 EndChar
 
 StartChar: Tutg.Dd
-Encoding: 47 70558 64
+Encoding: 70558 70558 64
 Width: 735
 VWidth: 1000
 GlyphClass: 2
@@ -3274,7 +3275,7 @@ Substitution2: "Link cons+-Ee-1" Wa.DdEe
 EndChar
 
 StartChar: Tutg.Ss
-Encoding: 65 70576 65
+Encoding: 70576 70576 65
 Width: 938
 VWidth: 1000
 GlyphClass: 2
@@ -3334,7 +3335,7 @@ Substitution2: "Link cons+-Ee-1" Wa.SsEe
 EndChar
 
 StartChar: Tutg.Y
-Encoding: 60 70571 66
+Encoding: 70571 70571 66
 Width: 864
 VWidth: 1000
 GlyphClass: 2
@@ -3383,7 +3384,7 @@ Substitution2: "Link cons+-Ee-1" Wa.YEe
 EndChar
 
 StartChar: Tutg.Ny
-Encoding: 44 70555 67
+Encoding: 70555 70555 67
 Width: 1277
 VWidth: 1000
 GlyphClass: 2
@@ -3459,7 +3460,7 @@ Substitution2: "Link cons+-Ee-1" Wa.NyEe
 EndChar
 
 StartChar: Tutg.A
-Encoding: 21 70528 68
+Encoding: 70528 70528 68
 Width: 1141
 VWidth: 1000
 GlyphClass: 3
@@ -3519,7 +3520,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Tutg.Aa
-Encoding: 22 70529 69
+Encoding: 70529 70529 69
 Width: 1141
 VWidth: 1000
 GlyphClass: 3
@@ -3591,7 +3592,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.Aa
 EndChar
 
 StartChar: Tutg.I
-Encoding: 23 70530 70
+Encoding: 70530 70530 70
 Width: 819
 VWidth: 1000
 GlyphClass: 3
@@ -3645,7 +3646,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.I
 EndChar
 
 StartChar: Tutg.Ii
-Encoding: 24 70531 71
+Encoding: 70531 70531 71
 Width: 1094
 VWidth: 1000
 GlyphClass: 3
@@ -3722,7 +3723,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.Ii
 EndChar
 
 StartChar: Tutg.U
-Encoding: 25 70532 72
+Encoding: 70532 70532 72
 Width: 535
 VWidth: 1000
 GlyphClass: 3
@@ -3765,7 +3766,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.U
 EndChar
 
 StartChar: Tutg.Uu
-Encoding: 26 70533 73
+Encoding: 70533 70533 73
 Width: 547
 VWidth: 1000
 GlyphClass: 3
@@ -3823,7 +3824,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.Uu
 EndChar
 
 StartChar: Tutg.VocR
-Encoding: 27 70534 74
+Encoding: 70534 70534 74
 Width: 591
 VWidth: 1000
 GlyphClass: 3
@@ -3876,7 +3877,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Uml.VocR
 EndChar
 
 StartChar: Tutg.E
-Encoding: 116 -1 75
+Encoding: 1114127 -1 75
 Width: 788
 VWidth: 1000
 GlyphClass: 3
@@ -3932,7 +3933,7 @@ Ligature2: "Orig CCMP-1" Uml.Ee Uml.Conj
 EndChar
 
 StartChar: Tutg.Ee
-Encoding: 31 70539 76
+Encoding: 70539 70539 76
 Width: 822
 VWidth: 1000
 GlyphClass: 3
@@ -3990,7 +3991,7 @@ Ligature2: "Orig CCMP-1" E Uml.Conj
 EndChar
 
 StartChar: Tutg.Ai
-Encoding: 32 70542 77
+Encoding: 70542 70542 77
 Width: 1200
 VWidth: 1000
 GlyphClass: 3
@@ -4063,7 +4064,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: e_A_a
-Encoding: 117 -1 78
+Encoding: 1114128 -1 78
 Width: 407
 VWidth: 1000
 GlyphClass: 3
@@ -4113,7 +4114,7 @@ LCarets2: 2 0 204
 EndChar
 
 StartChar: E_A_a
-Encoding: 118 -1 79
+Encoding: 1114129 -1 79
 Width: 412
 VWidth: 1000
 GlyphClass: 3
@@ -4172,7 +4173,7 @@ Ligature2: "Orig CCMP-1" F Uml.Conj Uml.Aa
 EndChar
 
 StartChar: A_Y
-Encoding: 119 -1 80
+Encoding: 1114130 -1 80
 Width: 861
 VWidth: 1000
 GlyphClass: 3
@@ -4253,7 +4254,7 @@ LCarets2: 2 0 405
 EndChar
 
 StartChar: Syl.K_Ss
-Encoding: 120 -1 81
+Encoding: 1114131 -1 81
 Width: 1372
 VWidth: 1000
 GlyphClass: 3
@@ -4336,7 +4337,7 @@ Colour: 91ff91
 EndChar
 
 StartChar: Syl.BU
-Encoding: 121 -1 82
+Encoding: 1114132 -1 82
 Width: 1185
 VWidth: 1000
 GlyphClass: 3
@@ -4394,7 +4395,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.BUu
-Encoding: 122 -1 83
+Encoding: 1114133 -1 83
 Width: 1071
 VWidth: 1000
 GlyphClass: 3
@@ -4466,7 +4467,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.ChU
-Encoding: 123 -1 84
+Encoding: 1114134 -1 84
 Width: 985
 VWidth: 1000
 GlyphClass: 3
@@ -4546,7 +4547,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.ChUu
-Encoding: 124 -1 85
+Encoding: 1114135 -1 85
 Width: 1050
 VWidth: 1000
 GlyphClass: 3
@@ -4635,7 +4636,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.NnU
-Encoding: 125 -1 86
+Encoding: 1114136 -1 86
 Width: 1254
 VWidth: 1000
 GlyphClass: 3
@@ -4704,7 +4705,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.NnUu
-Encoding: 126 -1 87
+Encoding: 1114137 -1 87
 Width: 1185
 VWidth: 1000
 GlyphClass: 3
@@ -4787,7 +4788,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.ShU
-Encoding: 127 -1 88
+Encoding: 1114138 -1 88
 Width: 1114
 VWidth: 1000
 GlyphClass: 3
@@ -4847,7 +4848,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.ShUu
-Encoding: 128 -1 89
+Encoding: 1114139 -1 89
 Width: 1006
 VWidth: 1000
 GlyphClass: 3
@@ -4913,7 +4914,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.GU
-Encoding: 129 -1 90
+Encoding: 1114140 -1 90
 Width: 941
 VWidth: 1000
 GlyphClass: 3
@@ -4958,7 +4959,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.GUu
-Encoding: 130 -1 91
+Encoding: 1114141 -1 91
 Width: 807
 VWidth: 1000
 GlyphClass: 3
@@ -5019,7 +5020,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.HU
-Encoding: 131 -1 92
+Encoding: 1114142 -1 92
 Width: 930
 VWidth: 1000
 GlyphClass: 3
@@ -5073,7 +5074,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.HUu
-Encoding: 132 -1 93
+Encoding: 1114143 -1 93
 Width: 796
 VWidth: 1000
 GlyphClass: 3
@@ -5144,7 +5145,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.JU
-Encoding: 133 -1 94
+Encoding: 1114144 -1 94
 Width: 1364
 VWidth: 1000
 GlyphClass: 3
@@ -5234,7 +5235,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.JUu
-Encoding: 134 -1 95
+Encoding: 1114145 -1 95
 Width: 1530
 VWidth: 1000
 GlyphClass: 3
@@ -5334,7 +5335,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.KU
-Encoding: 135 -1 96
+Encoding: 1114146 -1 96
 Width: 924
 VWidth: 1000
 GlyphClass: 3
@@ -5392,7 +5393,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.KUu
-Encoding: 136 -1 97
+Encoding: 1114147 -1 97
 Width: 892
 VWidth: 1000
 GlyphClass: 3
@@ -5463,7 +5464,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.NU
-Encoding: 137 -1 98
+Encoding: 1114148 -1 98
 Width: 937
 VWidth: 1000
 GlyphClass: 3
@@ -5511,7 +5512,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.NUu
-Encoding: 138 -1 99
+Encoding: 1114149 -1 99
 Width: 823
 VWidth: 1000
 GlyphClass: 3
@@ -5573,7 +5574,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.RU
-Encoding: 139 -1 100
+Encoding: 1114150 -1 100
 Width: 613
 VWidth: 1000
 GlyphClass: 3
@@ -5629,7 +5630,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.RUu
-Encoding: 140 -1 101
+Encoding: 1114151 -1 101
 Width: 756
 VWidth: 1000
 GlyphClass: 3
@@ -5698,7 +5699,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.TU
-Encoding: 141 -1 102
+Encoding: 1114152 -1 102
 Width: 976
 VWidth: 1000
 GlyphClass: 3
@@ -5752,7 +5753,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.TUu
-Encoding: 142 -1 103
+Encoding: 1114153 -1 103
 Width: 842
 VWidth: 1000
 GlyphClass: 3
@@ -5821,7 +5822,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Subj.L
-Encoding: 143 -1 104
+Encoding: 1114154 -1 104
 Width: 0
 VWidth: 1000
 GlyphClass: 3
@@ -5860,7 +5861,7 @@ Colour: ff9c05
 EndChar
 
 StartChar: Subj.R
-Encoding: 144 -1 105
+Encoding: 1114155 -1 105
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -5892,7 +5893,7 @@ Colour: ff9c05
 EndChar
 
 StartChar: Subj.V
-Encoding: 145 -1 106
+Encoding: 1114156 -1 106
 Width: 122
 VWidth: 1000
 GlyphClass: 3
@@ -5927,7 +5928,7 @@ Colour: ff9c05
 EndChar
 
 StartChar: Subj.S
-Encoding: 146 -1 107
+Encoding: 1114157 -1 107
 Width: 172
 VWidth: 1000
 GlyphClass: 3
@@ -5972,7 +5973,7 @@ Colour: ff9c05
 EndChar
 
 StartChar: Syl.J_J
-Encoding: 147 -1 108
+Encoding: 1114158 -1 108
 Width: 2408
 VWidth: 1000
 GlyphClass: 3
@@ -6080,7 +6081,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.K_K
-Encoding: 148 -1 109
+Encoding: 1114159 -1 109
 Width: 1355
 VWidth: 1000
 GlyphClass: 3
@@ -6165,7 +6166,7 @@ Colour: c2ffc2
 EndChar
 
 StartChar: Syl.G_G
-Encoding: 149 -1 110
+Encoding: 1114160 -1 110
 Width: 1378
 VWidth: 1000
 GlyphClass: 3
@@ -6221,7 +6222,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.C_C
-Encoding: 150 -1 111
+Encoding: 1114161 -1 111
 Width: 792
 VWidth: 1000
 GlyphClass: 3
@@ -6275,7 +6276,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.Tt_Tt
-Encoding: 151 -1 112
+Encoding: 1114162 -1 112
 Width: 550
 VWidth: 1000
 GlyphClass: 3
@@ -6322,7 +6323,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.T_T
-Encoding: 152 -1 113
+Encoding: 1114163 -1 113
 Width: 1137
 VWidth: 1000
 GlyphClass: 3
@@ -6388,7 +6389,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.T
 EndChar
 
 StartChar: Syl.N_N
-Encoding: 153 -1 114
+Encoding: 1114164 -1 114
 Width: 1229
 VWidth: 1000
 GlyphClass: 3
@@ -6446,7 +6447,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.N
 EndChar
 
 StartChar: f_A
-Encoding: 154 -1 115
+Encoding: 1114165 -1 115
 Width: 0
 VWidth: 1000
 GlyphClass: 3
@@ -6482,7 +6483,7 @@ Ligature2: "Orig CCMP-1" Tutg.Reph Uml.Conj
 EndChar
 
 StartChar: Syl.P_P
-Encoding: 155 -1 116
+Encoding: 1114166 -1 116
 Width: 945
 VWidth: 1000
 GlyphClass: 3
@@ -6564,7 +6565,7 @@ Ligature2: "Orig CCMP-1" Tutg.P Uml.Conj Tutg.P
 EndChar
 
 StartChar: Syl.B_B
-Encoding: 156 -1 117
+Encoding: 1114167 -1 117
 Width: 861
 VWidth: 1000
 GlyphClass: 3
@@ -6633,7 +6634,7 @@ Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.B
 EndChar
 
 StartChar: Syl.M_M
-Encoding: 157 -1 118
+Encoding: 1114168 -1 118
 Width: 1094
 VWidth: 1000
 GlyphClass: 3
@@ -6699,7 +6700,7 @@ Ligature2: "Orig CCMP-1" Tutg.M Uml.Conj Tutg.M
 EndChar
 
 StartChar: Syl.L_L
-Encoding: 158 -1 119
+Encoding: 1114169 -1 119
 Width: 1098
 VWidth: 1000
 GlyphClass: 3
@@ -6804,7 +6805,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ll Uml.Conj Tutg.Ll
 EndChar
 
 StartChar: Syl.C_Ch
-Encoding: 159 -1 120
+Encoding: 1114170 -1 120
 Width: 1293
 VWidth: 1000
 GlyphClass: 3
@@ -6871,7 +6872,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.Ny_KU
-Encoding: 160 -1 121
+Encoding: 1114171 -1 121
 Width: 1319
 VWidth: 1000
 GlyphClass: 3
@@ -6948,7 +6949,7 @@ LCarets2: 3 344 516 1042
 EndChar
 
 StartChar: Syl.Ny_KUu
-Encoding: 161 -1 122
+Encoding: 1114172 -1 122
 Width: 1287
 VWidth: 1000
 GlyphClass: 3
@@ -7041,7 +7042,7 @@ LCarets2: 3 368 576 1030
 EndChar
 
 StartChar: Syl.Ny_GU
-Encoding: 162 -1 123
+Encoding: 1114173 -1 123
 Width: 789
 VWidth: 1000
 GlyphClass: 3
@@ -7129,7 +7130,7 @@ LCarets2: 3 352 524 706
 EndChar
 
 StartChar: Syl.Ny_GUu
-Encoding: 163 -1 124
+Encoding: 1114174 -1 124
 Width: 786
 VWidth: 1000
 GlyphClass: 3
@@ -7233,7 +7234,7 @@ LCarets2: 3 290 466 662
 EndChar
 
 StartChar: Lig.Ny_ChU
-Encoding: 164 -1 125
+Encoding: 1114175 -1 125
 Width: 1444
 VWidth: 1000
 GlyphClass: 3
@@ -7342,7 +7343,7 @@ LCarets2: 3 676 848 1224
 EndChar
 
 StartChar: Lig.Ny_ChUu
-Encoding: 165 -1 126
+Encoding: 1114176 -1 126
 Width: 1518
 VWidth: 1000
 GlyphClass: 3
@@ -7457,7 +7458,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.Ch Uml.Uu
 EndChar
 
 StartChar: Syl.N_TU
-Encoding: 166 -1 127
+Encoding: 1114177 -1 127
 Width: 1270
 VWidth: 1000
 GlyphClass: 3
@@ -7521,7 +7522,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.U
 EndChar
 
 StartChar: Syl.NTUu
-Encoding: 167 -1 128
+Encoding: 1114178 -1 128
 Width: 1177
 VWidth: 1000
 GlyphClass: 3
@@ -7601,7 +7602,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.Uu
 EndChar
 
 StartChar: Syl.T_N
-Encoding: 168 -1 129
+Encoding: 1114179 -1 129
 Width: 1210
 VWidth: 1000
 GlyphClass: 3
@@ -7665,7 +7666,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.N
 EndChar
 
 StartChar: Syl.T_NU
-Encoding: 169 -1 130
+Encoding: 1114180 -1 130
 Width: 1395
 VWidth: 1000
 GlyphClass: 3
@@ -7731,7 +7732,7 @@ LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Syl.TNUu
-Encoding: 170 -1 131
+Encoding: 1114181 -1 131
 Width: 1227
 VWidth: 1000
 GlyphClass: 3
@@ -7814,7 +7815,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.N Uml.Uu
 EndChar
 
 StartChar: Syl.Ss_Tt
-Encoding: 171 -1 132
+Encoding: 1114182 -1 132
 Width: 912
 VWidth: 1000
 GlyphClass: 3
@@ -7889,7 +7890,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl.Ss_Tth
-Encoding: 172 -1 133
+Encoding: 1114183 -1 133
 Width: 912
 VWidth: 1000
 GlyphClass: 3
@@ -7966,7 +7967,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tth
 EndChar
 
 StartChar: Syl.N_T_N
-Encoding: 173 -1 134
+Encoding: 1114184 -1 134
 Width: 1545
 VWidth: 1000
 GlyphClass: 3
@@ -8040,7 +8041,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.Conj Tutg.N
 EndChar
 
 StartChar: Syl.N_T_NU
-Encoding: 174 -1 135
+Encoding: 1114185 -1 135
 Width: 1781
 VWidth: 1000
 GlyphClass: 3
@@ -8118,7 +8119,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.Conj Tutg.N Uml.U
 EndChar
 
 StartChar: Syl.N_T_NUu
-Encoding: 175 -1 136
+Encoding: 1114186 -1 136
 Width: 1562
 VWidth: 1000
 GlyphClass: 3
@@ -8213,7 +8214,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.Conj Tutg.N Uml.Uu
 EndChar
 
 StartChar: Syl.Ss_TtU
-Encoding: 176 -1 137
+Encoding: 1114187 -1 137
 Width: 935
 VWidth: 1000
 GlyphClass: 3
@@ -8294,7 +8295,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tt Uml.U
 EndChar
 
 StartChar: Syl.Ss_TtUu
-Encoding: 177 -1 138
+Encoding: 1114188 -1 138
 Width: 1003
 VWidth: 1000
 GlyphClass: 3
@@ -8391,7 +8392,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tt Uml.Uu
 EndChar
 
 StartChar: Syl.K_S_M
-Encoding: 178 -1 139
+Encoding: 1114189 -1 139
 Width: 1346
 VWidth: 1000
 GlyphClass: 3
@@ -8495,7 +8496,7 @@ LCarets2: 4 0 0 0 0
 EndChar
 
 StartChar: Syl.J_JU
-Encoding: 179 -1 140
+Encoding: 1114190 -1 140
 Width: 2408
 VWidth: 1000
 GlyphClass: 3
@@ -8621,7 +8622,7 @@ Ligature2: "Orig CCMP-1" Tutg.J Uml.Conj Tutg.J Uml.U
 EndChar
 
 StartChar: Syl.J_JUu
-Encoding: 180 -1 141
+Encoding: 1114191 -1 141
 Width: 2574
 VWidth: 1000
 GlyphClass: 3
@@ -8753,7 +8754,7 @@ Ligature2: "Orig CCMP-1" Tutg.J Uml.Conj Tutg.J Uml.Uu
 EndChar
 
 StartChar: Syl.S_TthU
-Encoding: 181 -1 142
+Encoding: 1114192 -1 142
 Width: 958
 VWidth: 1000
 GlyphClass: 3
@@ -8837,7 +8838,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tth Uml.U
 EndChar
 
 StartChar: Syl.S_TthUu
-Encoding: 182 -1 143
+Encoding: 1114193 -1 143
 Width: 1000
 VWidth: 1000
 GlyphClass: 3
@@ -8930,7 +8931,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tth Uml.Uu
 EndChar
 
 StartChar: Subj.YU
-Encoding: 183 -1 144
+Encoding: 1114194 -1 144
 Width: 294
 VWidth: 1000
 GlyphClass: 3
@@ -8971,7 +8972,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Y Uml.U
 EndChar
 
 StartChar: Subj.YUu
-Encoding: 184 -1 145
+Encoding: 1114195 -1 145
 Width: 354
 VWidth: 1000
 GlyphClass: 3
@@ -9021,7 +9022,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Y Uml.Uu
 EndChar
 
 StartChar: Subj.SU
-Encoding: 185 -1 146
+Encoding: 1114196 -1 146
 Width: 176
 VWidth: 1000
 GlyphClass: 3
@@ -9075,7 +9076,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.S Uml.U
 EndChar
 
 StartChar: Subj.SUu
-Encoding: 186 -1 147
+Encoding: 1114197 -1 147
 Width: 208
 VWidth: 1000
 GlyphClass: 3
@@ -9134,7 +9135,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.S Uml.Uu
 EndChar
 
 StartChar: Syl.DU
-Encoding: 187 -1 148
+Encoding: 1114198 -1 148
 Width: 494
 VWidth: 1000
 GlyphClass: 3
@@ -9181,7 +9182,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.DUu
-Encoding: 188 -1 149
+Encoding: 1114199 -1 149
 Width: 494
 VWidth: 1000
 GlyphClass: 3
@@ -9240,7 +9241,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.D_D
-Encoding: 189 -1 150
+Encoding: 1114200 -1 150
 Width: 405
 VWidth: 1000
 GlyphClass: 3
@@ -9299,7 +9300,7 @@ Ligature2: "Orig CCMP-1" Tutg.D Uml.Conj Tutg.D
 EndChar
 
 StartChar: Syl.Dd_Dd
-Encoding: 190 -1 151
+Encoding: 1114201 -1 151
 Width: 543
 VWidth: 1000
 GlyphClass: 3
@@ -9385,7 +9386,7 @@ Ligature2: "Orig CCMP-1" Tutg.Dd Uml.Conj Tutg.Dd
 EndChar
 
 StartChar: Syl.Dd_DdU
-Encoding: 191 -1 152
+Encoding: 1114202 -1 152
 Width: 547
 VWidth: 1000
 GlyphClass: 3
@@ -9481,7 +9482,7 @@ Ligature2: "Orig CCMP-1" Tutg.Dd Uml.Conj Tutg.Dd Uml.U
 EndChar
 
 StartChar: Syl.Dd_DdUu
-Encoding: 192 -1 153
+Encoding: 1114203 -1 153
 Width: 565
 VWidth: 1000
 GlyphClass: 3
@@ -9589,7 +9590,7 @@ Ligature2: "Tutg my ligs-1" Tutg.Dd Uml.Conj Tutg.Dd Uml.Uu
 EndChar
 
 StartChar: Syl.C_ChU
-Encoding: 193 -1 154
+Encoding: 1114204 -1 154
 Width: 1309
 VWidth: 1000
 GlyphClass: 3
@@ -9672,7 +9673,7 @@ LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Syl.C_ChUu
-Encoding: 194 -1 155
+Encoding: 1114205 -1 155
 Width: 1398
 VWidth: 1000
 GlyphClass: 3
@@ -9763,7 +9764,7 @@ LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Syl.C_CU
-Encoding: 195 -1 156
+Encoding: 1114206 -1 156
 Width: 765
 VWidth: 1000
 GlyphClass: 3
@@ -9827,7 +9828,7 @@ Ligature2: "Orig CCMP-1" Tutg.C Uml.Conj Tutg.C Uml.U
 EndChar
 
 StartChar: Syl.C_CUu
-Encoding: 196 -1 157
+Encoding: 1114207 -1 157
 Width: 765
 VWidth: 1000
 GlyphClass: 3
@@ -9900,7 +9901,7 @@ Ligature2: "Orig CCMP-1" Tutg.C Uml.Conj Tutg.C Uml.Uu
 EndChar
 
 StartChar: Syl.B_BU
-Encoding: 197 -1 158
+Encoding: 1114208 -1 158
 Width: 861
 VWidth: 1000
 GlyphClass: 3
@@ -9978,7 +9979,7 @@ Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.B Uml.U
 EndChar
 
 StartChar: Syl.B_BUu
-Encoding: 198 -1 159
+Encoding: 1114209 -1 159
 Width: 861
 VWidth: 1000
 GlyphClass: 3
@@ -10063,7 +10064,7 @@ Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.B Uml.Uu
 EndChar
 
 StartChar: o
-Encoding: 18 111 160
+Encoding: 111 111 160
 Width: 310
 VWidth: 1000
 GlyphClass: 2
@@ -10096,7 +10097,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: O
-Encoding: 16 79 161
+Encoding: 79 79 161
 Width: 328
 VWidth: 1000
 GlyphClass: 2
@@ -10132,7 +10133,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: o_A
-Encoding: 199 -1 162
+Encoding: 1114210 -1 162
 Width: 1102
 VWidth: 1000
 GlyphClass: 3
@@ -10207,7 +10208,7 @@ Ligature2: "Orig CCMP-1" o Uml.Conj
 EndChar
 
 StartChar: O_A
-Encoding: 200 -1 163
+Encoding: 1114211 -1 163
 Width: 1132
 VWidth: 1000
 GlyphClass: 3
@@ -10292,7 +10293,7 @@ Ligature2: "Orig CCMP-1" O Uml.Conj
 EndChar
 
 StartChar: Tutg.Shrii
-Encoding: 98 70616 164
+Encoding: 70616 70616 164
 Width: 1142
 VWidth: 1000
 GlyphClass: 3
@@ -10361,7 +10362,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: E_A_a_m_A
-Encoding: 201 -1 165
+Encoding: 1114212 -1 165
 Width: 882
 VWidth: 1000
 GlyphClass: 3
@@ -10456,7 +10457,7 @@ Ligature2: "Orig CCMP-1" E Uml.Conj Uml.Aa Tutg.M Uml.Vir
 EndChar
 
 StartChar: one
-Encoding: 4 49 166
+Encoding: 49 49 166
 Width: 484
 VWidth: 1000
 GlyphClass: 2
@@ -10493,7 +10494,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: two
-Encoding: 5 50 167
+Encoding: 50 50 167
 Width: 642
 VWidth: 1000
 GlyphClass: 2
@@ -10535,7 +10536,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: three
-Encoding: 6 51 168
+Encoding: 51 51 168
 Width: 751
 VWidth: 1000
 GlyphClass: 2
@@ -10586,7 +10587,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: four
-Encoding: 7 52 169
+Encoding: 52 52 169
 Width: 1025
 VWidth: 1000
 GlyphClass: 2
@@ -10646,7 +10647,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: five
-Encoding: 8 53 170
+Encoding: 53 53 170
 Width: 620
 VWidth: 1000
 GlyphClass: 2
@@ -10696,7 +10697,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: six
-Encoding: 9 54 171
+Encoding: 54 54 171
 Width: 578
 VWidth: 1000
 GlyphClass: 2
@@ -10740,7 +10741,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: seven
-Encoding: 10 55 172
+Encoding: 55 55 172
 Width: 393
 VWidth: 1000
 GlyphClass: 2
@@ -10776,7 +10777,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: eight
-Encoding: 11 56 173
+Encoding: 56 56 173
 Width: 942
 VWidth: 1000
 GlyphClass: 2
@@ -10823,7 +10824,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: nine
-Encoding: 12 57 174
+Encoding: 57 57 174
 Width: 554
 VWidth: 1000
 GlyphClass: 2
@@ -10868,7 +10869,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: zero
-Encoding: 3 48 175
+Encoding: 48 48 175
 Width: 417
 VWidth: 1000
 GlyphClass: 2
@@ -10897,7 +10898,7 @@ Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 
 EndChar
 
 StartChar: xxtenxx
-Encoding: 202 -1 176
+Encoding: 1114213 -1 176
 Width: 609
 VWidth: 1000
 GlyphClass: 1
@@ -10944,7 +10945,7 @@ LCarets2: 6 0 0 0 0 0 0
 EndChar
 
 StartChar: xxhundred
-Encoding: 203 -1 177
+Encoding: 1114214 -1 177
 Width: 749
 VWidth: 1000
 GlyphClass: 1
@@ -11006,7 +11007,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Tutg.Ss Tutg.H Uml.U Tutg.N Tutg.D Tutg.R Uml.E
 EndChar
 
 StartChar: Tutg.Rr
-Encoding: 69 70580 178
+Encoding: 70580 70580 178
 Width: 764
 VWidth: 1000
 GlyphClass: 1
@@ -11026,7 +11027,7 @@ LCarets2: 6 0 0 0 0 0 0
 EndChar
 
 StartChar: Tutg.Lll
-Encoding: 70 70581 179
+Encoding: 70581 70581 179
 Width: 670
 VWidth: 1000
 GlyphClass: 1
@@ -11072,7 +11073,7 @@ Substitution2: "Link cons+-Ee-1" Wa.LllEe
 EndChar
 
 StartChar: Tutg.Uml.Anun
-Encoding: 86 70602 180
+Encoding: 70602 70602 180
 Width: 528
 VWidth: 1000
 GlyphClass: 3
@@ -11103,7 +11104,7 @@ Ligature2: "Orig CCMP-1" M M
 EndChar
 
 StartChar: z_A_z_u
-Encoding: 204 -1 181
+Encoding: 1114215 -1 181
 Width: 1773
 VWidth: 1000
 GlyphClass: 3
@@ -11219,7 +11220,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.Ny Uml.U
 EndChar
 
 StartChar: z_A_z_U
-Encoding: 205 -1 182
+Encoding: 1114216 -1 182
 Width: 1773
 VWidth: 1000
 GlyphClass: 3
@@ -11344,7 +11345,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.Ny Uml.Uu
 EndChar
 
 StartChar: j_A_z
-Encoding: 206 -1 183
+Encoding: 1114217 -1 183
 Width: 2345
 VWidth: 1000
 GlyphClass: 3
@@ -11465,7 +11466,7 @@ Ligature2: "Orig CCMP-1" Tutg.J Uml.Conj Tutg.Ny
 EndChar
 
 StartChar: Syl.D_Dh
-Encoding: 207 -1 184
+Encoding: 1114218 -1 184
 Width: 864
 VWidth: 1000
 GlyphClass: 3
@@ -11522,7 +11523,7 @@ Ligature2: "Orig CCMP-1" Tutg.D Uml.Conj Tutg.Dh
 EndChar
 
 StartChar: Loop.K
-Encoding: 208 -1 185
+Encoding: 1114219 -1 185
 Width: 996
 VWidth: 1000
 GlyphClass: 3
@@ -11591,7 +11592,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Loop.Tt
-Encoding: 209 -1 186
+Encoding: 1114220 -1 186
 Width: 591
 VWidth: 1000
 GlyphClass: 3
@@ -11646,7 +11647,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Loop.Nn
-Encoding: 210 -1 187
+Encoding: 1114221 -1 187
 Width: 1188
 VWidth: 1000
 GlyphClass: 3
@@ -11724,7 +11725,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Loop.T
-Encoding: 211 -1 188
+Encoding: 1114222 -1 188
 Width: 890
 VWidth: 1000
 GlyphClass: 3
@@ -11787,7 +11788,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Loop.M
-Encoding: 212 -1 189
+Encoding: 1114223 -1 189
 Width: 611
 VWidth: 1000
 GlyphClass: 3
@@ -11844,7 +11845,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Loop.G
-Encoding: 213 -1 190
+Encoding: 1114224 -1 190
 Width: 815
 VWidth: 1000
 GlyphClass: 3
@@ -11895,7 +11896,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.S_Tha
-Encoding: 214 -1 191
+Encoding: 1114225 -1 191
 Width: 1296
 VWidth: 1000
 GlyphClass: 3
@@ -11961,7 +11962,7 @@ Ligature2: "Orig CCMP-1" Tutg.S Uml.Conj Tutg.Th
 EndChar
 
 StartChar: Syl.T_Tha
-Encoding: 215 -1 192
+Encoding: 1114226 -1 192
 Width: 1372
 VWidth: 1000
 GlyphClass: 3
@@ -12027,7 +12028,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.Th
 EndChar
 
 StartChar: Syl.S_Va
-Encoding: 216 -1 193
+Encoding: 1114227 -1 193
 Width: 968
 VWidth: 1000
 GlyphClass: 3
@@ -12085,7 +12086,7 @@ Ligature2: "Orig CCMP-1" Tutg.S Uml.Conj Tutg.V
 EndChar
 
 StartChar: Syl.T_Va
-Encoding: 217 -1 194
+Encoding: 1114228 -1 194
 Width: 1128
 VWidth: 1000
 GlyphClass: 3
@@ -12141,7 +12142,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Loop.H
-Encoding: 218 -1 195
+Encoding: 1114229 -1 195
 Width: 801
 VWidth: 1000
 GlyphClass: 3
@@ -12206,7 +12207,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.T_Ma
-Encoding: 219 -1 196
+Encoding: 1114230 -1 196
 Width: 1133
 VWidth: 1000
 GlyphClass: 3
@@ -12271,7 +12272,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.M
 EndChar
 
 StartChar: Syl.H_Ma
-Encoding: 220 -1 197
+Encoding: 1114231 -1 197
 Width: 1092
 VWidth: 1000
 GlyphClass: 3
@@ -12336,7 +12337,7 @@ Ligature2: "Orig CCMP-1" Tutg.H Uml.Conj Tutg.M
 EndChar
 
 StartChar: Syl_N_Ma
-Encoding: 221 -1 198
+Encoding: 1114232 -1 198
 Width: 1039
 VWidth: 1000
 GlyphClass: 3
@@ -12397,7 +12398,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.M
 EndChar
 
 StartChar: Syl.Nn_Ma
-Encoding: 222 -1 199
+Encoding: 1114233 -1 199
 Width: 1414
 VWidth: 1000
 GlyphClass: 3
@@ -12471,7 +12472,7 @@ Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.M
 EndChar
 
 StartChar: j_A_z_u
-Encoding: 223 -1 200
+Encoding: 1114234 -1 200
 Width: 2345
 VWidth: 1000
 GlyphClass: 3
@@ -12601,7 +12602,7 @@ Ligature2: "Orig CCMP-1" Tutg.J Uml.Conj Tutg.Ny Uml.U
 EndChar
 
 StartChar: j_A_z_U
-Encoding: 224 -1 201
+Encoding: 1114235 -1 201
 Width: 2345
 VWidth: 1000
 GlyphClass: 3
@@ -12744,7 +12745,7 @@ Ligature2: "Orig CCMP-1" Tutg.J Uml.Conj Tutg.Ny Uml.Uu
 EndChar
 
 StartChar: Syl.N_DU
-Encoding: 225 -1 202
+Encoding: 1114236 -1 202
 Width: 924
 VWidth: 1000
 GlyphClass: 3
@@ -12810,7 +12811,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.D Uml.U
 EndChar
 
 StartChar: Syl.N_DUu
-Encoding: 226 -1 203
+Encoding: 1114237 -1 203
 Width: 923
 VWidth: 1000
 GlyphClass: 3
@@ -12889,7 +12890,7 @@ Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.D Uml.Uu
 EndChar
 
 StartChar: Loop.N
-Encoding: 227 -1 204
+Encoding: 1114238 -1 204
 Width: 830
 VWidth: 1000
 GlyphClass: 3
@@ -12948,7 +12949,7 @@ Colour: ffff00
 EndChar
 
 StartChar: fi
-Encoding: 20 64257 205
+Encoding: 64257 64257 205
 Width: 149
 VWidth: 1000
 GlyphClass: 3
@@ -12988,7 +12989,7 @@ Ligature2: "Orig CCMP-1" Uml.I Tutg.Reph
 EndChar
 
 StartChar: Lig.Reph.I
-Encoding: 228 -1 206
+Encoding: 1114239 -1 206
 Width: 149
 VWidth: 1000
 GlyphClass: 3
@@ -13033,7 +13034,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Loop.D
-Encoding: 229 -1 207
+Encoding: 1114240 -1 207
 Width: 697
 VWidth: 1000
 GlyphClass: 3
@@ -13094,7 +13095,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Unu.d_A_D1
-Encoding: 230 -1 208
+Encoding: 1114241 -1 208
 Width: 865
 VWidth: 1000
 GlyphClass: 3
@@ -13151,7 +13152,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Syl.T_TU
-Encoding: 231 -1 209
+Encoding: 1114242 -1 209
 Width: 1299
 VWidth: 1000
 GlyphClass: 3
@@ -13222,7 +13223,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.T_TUu
-Encoding: 232 -1 210
+Encoding: 1114243 -1 210
 Width: 1153
 VWidth: 1000
 GlyphClass: 3
@@ -13311,7 +13312,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_KU
-Encoding: 233 -1 211
+Encoding: 1114244 -1 211
 Width: 1485
 VWidth: 1000
 GlyphClass: 3
@@ -13398,7 +13399,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_KUu
-Encoding: 234 -1 212
+Encoding: 1114245 -1 212
 Width: 1453
 VWidth: 1000
 GlyphClass: 3
@@ -13500,7 +13501,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.G_GU
-Encoding: 235 -1 213
+Encoding: 1114246 -1 213
 Width: 1420
 VWidth: 1000
 GlyphClass: 3
@@ -13561,7 +13562,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.G_GUu
-Encoding: 236 -1 214
+Encoding: 1114247 -1 214
 Width: 1397
 VWidth: 1000
 GlyphClass: 3
@@ -13635,7 +13636,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.N_NU
-Encoding: 237 -1 215
+Encoding: 1114248 -1 215
 Width: 1335
 VWidth: 1000
 GlyphClass: 3
@@ -13696,7 +13697,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.N_NUu
-Encoding: 238 -1 216
+Encoding: 1114249 -1 216
 Width: 1246
 VWidth: 1000
 GlyphClass: 3
@@ -13773,7 +13774,7 @@ Colour: ff00
 EndChar
 
 StartChar: z_A_j_u
-Encoding: 239 -1 217
+Encoding: 1114250 -1 217
 Width: 1792
 VWidth: 1000
 GlyphClass: 3
@@ -13887,7 +13888,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.J Uml.U
 EndChar
 
 StartChar: z_A_j_U
-Encoding: 240 -1 218
+Encoding: 1114251 -1 218
 Width: 1958
 VWidth: 1000
 GlyphClass: 3
@@ -14008,7 +14009,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.J Uml.Uu
 EndChar
 
 StartChar: Syl.L_Pa
-Encoding: 241 -1 219
+Encoding: 1114252 -1 219
 Width: 962
 VWidth: 1000
 GlyphClass: 3
@@ -14076,7 +14077,7 @@ Ligature2: "Orig CCMP-1" Tutg.L Uml.Conj Tutg.P
 EndChar
 
 StartChar: Syl.Ll_Pa
-Encoding: 242 -1 220
+Encoding: 1114253 -1 220
 Width: 1201
 VWidth: 1000
 GlyphClass: 3
@@ -14175,7 +14176,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.T_K
-Encoding: 243 -1 221
+Encoding: 1114254 -1 221
 Width: 1201
 VWidth: 1000
 GlyphClass: 3
@@ -14249,7 +14250,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.T_Ku
-Encoding: 244 -1 222
+Encoding: 1114255 -1 222
 Width: 1366
 VWidth: 1000
 GlyphClass: 3
@@ -14326,7 +14327,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.T_KUu
-Encoding: 245 -1 223
+Encoding: 1114256 -1 223
 Width: 1351
 VWidth: 1000
 GlyphClass: 3
@@ -14419,7 +14420,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_T
-Encoding: 246 -1 224
+Encoding: 1114257 -1 224
 Width: 1253
 VWidth: 1000
 GlyphClass: 3
@@ -14501,7 +14502,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.KTu
-Encoding: 247 -1 225
+Encoding: 1114258 -1 225
 Width: 1375
 VWidth: 1000
 GlyphClass: 3
@@ -14582,7 +14583,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_TUu
-Encoding: 248 -1 226
+Encoding: 1114259 -1 226
 Width: 1241
 VWidth: 1000
 GlyphClass: 3
@@ -14676,7 +14677,7 @@ Colour: ff00
 EndChar
 
 StartChar: Unu.x_A_N
-Encoding: 249 -1 227
+Encoding: 1114260 -1 227
 Width: 1009
 VWidth: 1000
 GlyphClass: 3
@@ -14781,7 +14782,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.x_A_N_u
-Encoding: 250 -1 228
+Encoding: 1114261 -1 228
 Width: 1098
 VWidth: 1000
 GlyphClass: 3
@@ -14890,7 +14891,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.x_A_N_U
-Encoding: 251 -1 229
+Encoding: 1114262 -1 229
 Width: 1031
 VWidth: 1000
 GlyphClass: 3
@@ -15011,7 +15012,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Syl.N_T_Ra
-Encoding: 252 -1 230
+Encoding: 1114263 -1 230
 Width: 1165
 VWidth: 1000
 GlyphClass: 3
@@ -15070,7 +15071,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.T_Ra
-Encoding: 253 -1 231
+Encoding: 1114264 -1 231
 Width: 832
 VWidth: 1000
 GlyphClass: 3
@@ -15121,7 +15122,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.K_Ra
-Encoding: 254 -1 232
+Encoding: 1114265 -1 232
 Width: 829
 VWidth: 1000
 GlyphClass: 3
@@ -15176,7 +15177,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.GRa
-Encoding: 255 -1 233
+Encoding: 1114266 -1 233
 Width: 797
 VWidth: 1000
 GlyphClass: 3
@@ -15224,7 +15225,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.D_Ra
-Encoding: 256 -1 234
+Encoding: 1114267 -1 234
 Width: 498
 VWidth: 1000
 GlyphClass: 3
@@ -15273,7 +15274,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.K_Ya
-Encoding: 257 -1 235
+Encoding: 1114268 -1 235
 Width: 926
 VWidth: 1000
 GlyphClass: 3
@@ -15336,7 +15337,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.G_Ya
-Encoding: 258 -1 236
+Encoding: 1114269 -1 236
 Width: 908
 VWidth: 1000
 GlyphClass: 3
@@ -15386,7 +15387,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Tt_Ya
-Encoding: 259 -1 237
+Encoding: 1114270 -1 237
 Width: 636
 VWidth: 1000
 GlyphClass: 3
@@ -15440,7 +15441,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Dd_Ya
-Encoding: 260 -1 238
+Encoding: 1114271 -1 238
 Width: 846
 VWidth: 1000
 GlyphClass: 3
@@ -15512,7 +15513,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Nn_Ya
-Encoding: 261 -1 239
+Encoding: 1114272 -1 239
 Width: 1268
 VWidth: 1000
 GlyphClass: 3
@@ -15585,7 +15586,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.T_Ya
-Encoding: 262 -1 240
+Encoding: 1114273 -1 240
 Width: 920
 VWidth: 1000
 GlyphClass: 3
@@ -15646,7 +15647,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.D_Ya
-Encoding: 263 -1 241
+Encoding: 1114274 -1 241
 Width: 515
 VWidth: 1000
 GlyphClass: 3
@@ -15696,7 +15697,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.N_Ya
-Encoding: 264 -1 242
+Encoding: 1114275 -1 242
 Width: 928
 VWidth: 1000
 GlyphClass: 3
@@ -15751,7 +15752,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.P_Ya
-Encoding: 265 -1 243
+Encoding: 1114276 -1 243
 Width: 1081
 VWidth: 1000
 GlyphClass: 3
@@ -15816,7 +15817,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.B_Ya
-Encoding: 266 -1 244
+Encoding: 1114277 -1 244
 Width: 1002
 VWidth: 1000
 GlyphClass: 3
@@ -15893,7 +15894,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.M_Ya
-Encoding: 267 -1 245
+Encoding: 1114278 -1 245
 Width: 730
 VWidth: 1000
 GlyphClass: 3
@@ -15950,7 +15951,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.L_Ya
-Encoding: 268 -1 246
+Encoding: 1114279 -1 246
 Width: 719
 VWidth: 1000
 GlyphClass: 3
@@ -16005,7 +16006,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.V_Ya
-Encoding: 269 -1 247
+Encoding: 1114280 -1 247
 Width: 836
 VWidth: 1000
 GlyphClass: 3
@@ -16062,7 +16063,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Sh_Ya
-Encoding: 270 -1 248
+Encoding: 1114281 -1 248
 Width: 1020
 VWidth: 1000
 GlyphClass: 3
@@ -16123,7 +16124,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.S_Ya
-Encoding: 271 -1 249
+Encoding: 1114282 -1 249
 Width: 885
 VWidth: 1000
 GlyphClass: 3
@@ -16187,7 +16188,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.H_Ya
-Encoding: 272 -1 250
+Encoding: 1114283 -1 250
 Width: 872
 VWidth: 1000
 GlyphClass: 3
@@ -16248,7 +16249,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.P_Ra
-Encoding: 273 -1 251
+Encoding: 1114284 -1 251
 Width: 937
 VWidth: 1000
 GlyphClass: 3
@@ -16309,7 +16310,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Sh_Ra
-Encoding: 274 -1 252
+Encoding: 1114285 -1 252
 Width: 875
 VWidth: 1000
 GlyphClass: 3
@@ -16363,7 +16364,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Unu.Subj.M
-Encoding: 275 -1 253
+Encoding: 1114286 -1 253
 Width: 2
 VWidth: 1000
 GlyphClass: 3
@@ -16394,7 +16395,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Syl.Sh_Va
-Encoding: 276 -1 254
+Encoding: 1114287 -1 254
 Width: 1151
 VWidth: 1000
 GlyphClass: 3
@@ -16452,7 +16453,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.Sh_Ca
-Encoding: 277 -1 255
+Encoding: 1114288 -1 255
 Width: 1149
 VWidth: 1000
 GlyphClass: 3
@@ -16512,7 +16513,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Syl.M_Pa
-Encoding: 278 -1 256
+Encoding: 1114289 -1 256
 Width: 586
 VWidth: 1000
 GlyphClass: 3
@@ -16579,7 +16580,7 @@ Colour: 9effad
 EndChar
 
 StartChar: Subj.Bh
-Encoding: 279 -1 257
+Encoding: 1114290 -1 257
 Width: 1047
 VWidth: 1000
 GlyphClass: 2
@@ -16632,7 +16633,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: Subj.Ch
-Encoding: 280 -1 258
+Encoding: 1114291 -1 258
 Width: 902
 VWidth: 1000
 GlyphClass: 2
@@ -16695,7 +16696,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Dh
-Encoding: 281 -1 259
+Encoding: 1114292 -1 259
 Width: 754
 VWidth: 1000
 GlyphClass: 2
@@ -16734,7 +16735,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Gh
-Encoding: 282 -1 260
+Encoding: 1114293 -1 260
 Width: 1048
 VWidth: 1000
 GlyphClass: 2
@@ -16792,7 +16793,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Jh
-Encoding: 283 -1 261
+Encoding: 1114294 -1 261
 Width: 1022
 VWidth: 1000
 GlyphClass: 2
@@ -16857,7 +16858,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Kh
-Encoding: 284 -1 262
+Encoding: 1114295 -1 262
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16908,7 +16909,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Ll
-Encoding: 285 -1 263
+Encoding: 1114296 -1 263
 Width: 508
 VWidth: 1000
 GlyphClass: 2
@@ -16963,7 +16964,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Nn
-Encoding: 286 -1 264
+Encoding: 1114297 -1 264
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17020,7 +17021,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Ph
-Encoding: 287 -1 265
+Encoding: 1114298 -1 265
 Width: 923
 VWidth: 1000
 GlyphClass: 2
@@ -17076,7 +17077,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Tth
-Encoding: 288 -1 266
+Encoding: 1114299 -1 266
 Width: 528
 VWidth: 1000
 GlyphClass: 2
@@ -17109,7 +17110,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Sh
-Encoding: 289 -1 267
+Encoding: 1114300 -1 267
 Width: 843
 VWidth: 1000
 GlyphClass: 2
@@ -17152,7 +17153,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Th
-Encoding: 290 -1 268
+Encoding: 1114301 -1 268
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17190,7 +17191,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Ddh
-Encoding: 291 -1 269
+Encoding: 1114302 -1 269
 Width: 770
 VWidth: 1000
 GlyphClass: 2
@@ -17244,7 +17245,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Ny
-Encoding: 292 -1 270
+Encoding: 1114303 -1 270
 Width: 698
 VWidth: 1000
 GlyphClass: 2
@@ -17302,7 +17303,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: a.pnum
-Encoding: 293 -1 271
+Encoding: 1114304 -1 271
 Width: 213
 VWidth: 1000
 GlyphClass: 2
@@ -17329,7 +17330,7 @@ EndSplineSet
 EndChar
 
 StartChar: Subj.B
-Encoding: 294 -1 272
+Encoding: 1114305 -1 272
 Width: 847
 VWidth: 1000
 GlyphClass: 2
@@ -17389,7 +17390,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.C
-Encoding: 295 -1 273
+Encoding: 1114306 -1 273
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17434,7 +17435,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.D
-Encoding: 296 -1 274
+Encoding: 1114307 -1 274
 Width: 479
 VWidth: 1000
 GlyphClass: 2
@@ -17475,7 +17476,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.G
-Encoding: 297 -1 275
+Encoding: 1114308 -1 275
 Width: 757
 VWidth: 1000
 GlyphClass: 2
@@ -17515,7 +17516,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.H
-Encoding: 298 -1 276
+Encoding: 1114309 -1 276
 Width: 740
 VWidth: 1000
 GlyphClass: 2
@@ -17566,7 +17567,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.J
-Encoding: 299 -1 277
+Encoding: 1114310 -1 277
 Width: 1350
 VWidth: 1000
 GlyphClass: 2
@@ -17639,7 +17640,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.K
-Encoding: 300 -1 278
+Encoding: 1114311 -1 278
 Width: 754
 VWidth: 1000
 GlyphClass: 2
@@ -17692,7 +17693,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Unu.Subj.L
-Encoding: 301 -1 279
+Encoding: 1114312 -1 279
 Width: 574
 VWidth: 1000
 GlyphClass: 2
@@ -17730,7 +17731,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Subj.M
-Encoding: 302 -1 280
+Encoding: 1114313 -1 280
 Width: 578
 VWidth: 1000
 GlyphClass: 2
@@ -17775,7 +17776,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.N
-Encoding: 303 -1 281
+Encoding: 1114314 -1 281
 Width: 792
 VWidth: 1000
 GlyphClass: 2
@@ -17820,7 +17821,7 @@ Colour: ff9c05
 EndChar
 
 StartChar: Subj.P
-Encoding: 304 -1 282
+Encoding: 1114315 -1 282
 Width: 923
 VWidth: 1000
 GlyphClass: 2
@@ -17870,7 +17871,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Subj.Tt
-Encoding: 305 -1 283
+Encoding: 1114316 -1 283
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17911,7 +17912,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Unu.Subj.R
-Encoding: 306 -1 284
+Encoding: 1114317 -1 284
 Width: 580
 VWidth: 1000
 GlyphClass: 2
@@ -17951,7 +17952,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.Subj.S
-Encoding: 307 -1 285
+Encoding: 1114318 -1 285
 Width: 739
 VWidth: 1000
 GlyphClass: 2
@@ -17998,7 +17999,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Subj.T
-Encoding: 308 -1 286
+Encoding: 1114319 -1 286
 Width: 797
 VWidth: 1000
 GlyphClass: 2
@@ -18048,7 +18049,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Unu.Subj.V
-Encoding: 309 -1 287
+Encoding: 1114320 -1 287
 Width: 697
 VWidth: 1000
 GlyphClass: 2
@@ -18090,7 +18091,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Subj.Dd
-Encoding: 310 -1 288
+Encoding: 1114321 -1 288
 Width: 695
 VWidth: 1000
 GlyphClass: 2
@@ -18147,7 +18148,7 @@ Colour: ff9e05
 EndChar
 
 StartChar: Unu.Subj.Ss
-Encoding: 311 -1 289
+Encoding: 1114322 -1 289
 Width: 898
 VWidth: 1000
 GlyphClass: 2
@@ -18212,7 +18213,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.Subj.Y
-Encoding: 312 -1 290
+Encoding: 1114323 -1 290
 Width: 829
 VWidth: 1000
 GlyphClass: 2
@@ -18260,7 +18261,7 @@ Colour: ff0000
 EndChar
 
 StartChar: z.pnum
-Encoding: 313 -1 291
+Encoding: 1114324 -1 291
 Width: 1263
 VWidth: 1000
 GlyphClass: 2
@@ -18342,7 +18343,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ny
 EndChar
 
 StartChar: Subj.BhU
-Encoding: 314 -1 292
+Encoding: 1114325 -1 292
 Width: 1101
 VWidth: 1000
 GlyphClass: 3
@@ -18399,7 +18400,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.BhUu
-Encoding: 315 -1 293
+Encoding: 1114326 -1 293
 Width: 1087
 VWidth: 1000
 GlyphClass: 3
@@ -18470,7 +18471,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.ChU
-Encoding: 316 -1 294
+Encoding: 1114327 -1 294
 Width: 997
 VWidth: 1000
 GlyphClass: 3
@@ -18549,7 +18550,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.ChUu
-Encoding: 317 -1 295
+Encoding: 1114328 -1 295
 Width: 1086
 VWidth: 1000
 GlyphClass: 3
@@ -18636,7 +18637,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.NnU
-Encoding: 318 -1 296
+Encoding: 1114329 -1 296
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18697,7 +18698,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.NnUu
-Encoding: 319 -1 297
+Encoding: 1114330 -1 297
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18771,7 +18772,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.ShU
-Encoding: 320 -1 298
+Encoding: 1114331 -1 298
 Width: 1030
 VWidth: 1000
 GlyphClass: 3
@@ -18829,7 +18830,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.ShUu
-Encoding: 321 -1 299
+Encoding: 1114332 -1 299
 Width: 1039
 VWidth: 1000
 GlyphClass: 3
@@ -18894,7 +18895,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.GU
-Encoding: 322 -1 300
+Encoding: 1114333 -1 300
 Width: 857
 VWidth: 1000
 GlyphClass: 3
@@ -18938,7 +18939,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.GUu
-Encoding: 323 -1 301
+Encoding: 1114334 -1 301
 Width: 806
 VWidth: 1000
 GlyphClass: 3
@@ -18997,7 +18998,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.HU
-Encoding: 324 -1 302
+Encoding: 1114335 -1 302
 Width: 855
 VWidth: 1000
 GlyphClass: 3
@@ -19049,7 +19050,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.HUu
-Encoding: 325 -1 303
+Encoding: 1114336 -1 303
 Width: 812
 VWidth: 1000
 GlyphClass: 3
@@ -19119,7 +19120,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.JU
-Encoding: 326 -1 304
+Encoding: 1114337 -1 304
 Width: 1380
 VWidth: 1000
 GlyphClass: 3
@@ -19207,7 +19208,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.JUu
-Encoding: 327 -1 305
+Encoding: 1114338 -1 305
 Width: 1546
 VWidth: 1000
 GlyphClass: 3
@@ -19306,7 +19307,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.KU
-Encoding: 328 -1 306
+Encoding: 1114339 -1 306
 Width: 840
 VWidth: 1000
 GlyphClass: 3
@@ -19363,7 +19364,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.KUu
-Encoding: 329 -1 307
+Encoding: 1114340 -1 307
 Width: 908
 VWidth: 1000
 GlyphClass: 3
@@ -19432,7 +19433,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.NU
-Encoding: 330 -1 308
+Encoding: 1114341 -1 308
 Width: 853
 VWidth: 1000
 GlyphClass: 3
@@ -19478,7 +19479,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.NUu
-Encoding: 331 -1 309
+Encoding: 1114342 -1 309
 Width: 839
 VWidth: 1000
 GlyphClass: 3
@@ -19538,7 +19539,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Unu.Subj.RU
-Encoding: 332 -1 310
+Encoding: 1114343 -1 310
 Width: 646
 VWidth: 1000
 GlyphClass: 3
@@ -19591,7 +19592,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.Subj.RUu
-Encoding: 333 -1 311
+Encoding: 1114344 -1 311
 Width: 789
 VWidth: 1000
 GlyphClass: 3
@@ -19657,7 +19658,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Subj.TU
-Encoding: 334 -1 312
+Encoding: 1114345 -1 312
 Width: 892
 VWidth: 1000
 GlyphClass: 3
@@ -19710,7 +19711,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.TUu
-Encoding: 335 -1 313
+Encoding: 1114346 -1 313
 Width: 858
 VWidth: 1000
 GlyphClass: 3
@@ -19779,7 +19780,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.DU
-Encoding: 336 -1 314
+Encoding: 1114347 -1 314
 Width: 510
 VWidth: 1000
 GlyphClass: 3
@@ -19825,7 +19826,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Subj.DUu
-Encoding: 337 -1 315
+Encoding: 1114348 -1 315
 Width: 510
 VWidth: 1000
 GlyphClass: 3
@@ -19883,7 +19884,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Syl.KR
-Encoding: 338 -1 316
+Encoding: 1114349 -1 316
 Width: 824
 VWidth: 1000
 GlyphClass: 3
@@ -19940,7 +19941,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.GR
-Encoding: 339 -1 317
+Encoding: 1114350 -1 317
 Width: 785
 VWidth: 1000
 GlyphClass: 3
@@ -19993,7 +19994,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Subj.KR
-Encoding: 340 -1 318
+Encoding: 1114351 -1 318
 Width: 814
 VWidth: 1000
 GlyphClass: 3
@@ -20058,7 +20059,7 @@ Colour: 995c03
 EndChar
 
 StartChar: Syl.Bh_Ya
-Encoding: 341 -1 319
+Encoding: 1114352 -1 319
 Width: 1270
 VWidth: 1000
 GlyphClass: 3
@@ -20121,7 +20122,7 @@ Ligature2: "Orig CCMP-1" Tutg.Bh Uml.Conj Tutg.Y
 EndChar
 
 StartChar: Syl.S_R
-Encoding: 342 -1 320
+Encoding: 1114353 -1 320
 Width: 753
 VWidth: 1000
 GlyphClass: 3
@@ -20179,7 +20180,7 @@ Ligature2: "Orig CCMP-1" Tutg.S Uml.Conj Tutg.R
 EndChar
 
 StartChar: Syl.D_M
-Encoding: 343 -1 321
+Encoding: 1114354 -1 321
 Width: 381
 VWidth: 1000
 GlyphClass: 3
@@ -20225,7 +20226,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: Syl_K_Ss_M_Ya
-Encoding: 344 -1 322
+Encoding: 1114355 -1 322
 Width: 1482
 VWidth: 1000
 GlyphClass: 3
@@ -20348,7 +20349,7 @@ LCarets2: 6 0 0 0 0 0 0
 EndChar
 
 StartChar: Syl.Ss_Tt_Ra
-Encoding: 345 -1 323
+Encoding: 1114356 -1 323
 Width: 913
 VWidth: 1000
 GlyphClass: 3
@@ -20434,7 +20435,7 @@ Ligature2: "Orig CCMP-1" Tutg.Ss Uml.Conj Tutg.Tt Uml.Conj Tutg.R
 EndChar
 
 StartChar: Syl.Ny_K_Loop
-Encoding: 346 -1 324
+Encoding: 1114357 -1 324
 Width: 1410
 VWidth: 1000
 GlyphClass: 3
@@ -20514,7 +20515,7 @@ LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Unu.Subj.DdU
-Encoding: 347 -1 325
+Encoding: 1114358 -1 325
 Width: 683
 VWidth: 1000
 GlyphClass: 3
@@ -20576,7 +20577,7 @@ Colour: ff0000
 EndChar
 
 StartChar: Unu.Subj.DdUu
-Encoding: 348 -1 326
+Encoding: 1114359 -1 326
 Width: 690
 VWidth: 1000
 GlyphClass: 3
@@ -20647,100 +20648,90 @@ Colour: ff0000
 EndChar
 
 StartChar: Syl.Nn_T_N
-Encoding: 349 -1 327
-Width: 1893
+Encoding: 1114360 -1 327
+Width: 1909
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: 0 80<135.2 227.622 1000.1 1090.53> 181 81<145.156 219.643> 416 81<1194.1 1318.07> 422 80<184.115 337.021 552.324 666.944 889.319 987.611 1634.48 1770.18>
-VStem: 249 64<55 160.391> 408 66<58.0856 322.185> 742 63<36.7837 309.625> 931 63<82.7804 183.873> 1118 63<107.905 243.084> 1410 60<22.9947 218.395> 1804 63<213.729 393.407>
+HStem: 2 81<138.516 246.533 1006.95 1108.53> 181 81<153.438 235.988> 422 80<192.508 356.368 559.207 684.708 896.705 1004.77 1212.21 1326.84 1639.95 1788.86>
+VStem: 261 64<55 166.992> 420 66<22.9069 331.194> 754 63<30.3181 317.444> 943 63<82.7804 191.381> 1130 63<103.287 251.507> 1816 63<204.647 401.255>
 LayerCount: 2
 Fore
 SplineSet
-18 244 m 0xdfe0
- 18 365 82 502 220 502 c 0
- 314 502 384 475 433 389 c 1
- 459 463 503 502 583 502 c 0xdfe0
- 672 502 728 442 761 365 c 1
- 776 415 800 461 841 484 c 1
- 857 498 896 505 909 505 c 0
- 970 505 1025 458 1063 414 c 1
- 1097 447 1149 487 1199 492 c 0
- 1214 495 1234 497 1242 497 c 0xefe0
- 1343 497 1407 394 1436 309 c 1
- 1445 335 1455 361 1469 384 c 0
- 1518 465 1600 502 1693 502 c 0xdfe0
- 1800 502 1867 395 1867 297 c 0
- 1867 207 1841 119 1804 38 c 0
- 1801 31 1791 8 1786 3 c 0
- 1785 2 1781 2 1779 2 c 0
- 1758 2 1726 50 1726 70 c 0
- 1726 78 1741 104 1745 113 c 0
- 1778 184 1804 273 1804 351 c 0
- 1804 361 1801 398 1795 406 c 0
- 1787 417 1747 421 1734 421 c 0
- 1705 421 1675 415 1647 406 c 0
- 1518 362 1487 239 1475 117 c 0
- 1474 103 1472 8 1470 5 c 0
- 1468 2 1465 2 1461 2 c 0
- 1442 2 1415 42 1410 59 c 0
- 1405 76 1408 123 1407 143 c 0
- 1405 212 1394 320 1360 380 c 0
- 1344 408 1313 416 1283 416 c 0xefe0
- 1266 416 1249 409 1232 408 c 0
- 1193 402 1146 365 1117 336 c 1
- 1156 268 1181 191 1181 124 c 0
- 1181 58 1154 0 1080 0 c 0
- 1060 0 1040 1 1022 9 c 0
- 970 31 931 96 931 152 c 0
- 931 226 976 316 1035 384 c 1
- 1011 408 983 424 951 424 c 0
- 947 424 944 424 939 422 c 0
- 934 416 891 417 854 366 c 0
- 816 313 805 225 805 160 c 1
- 812 113 816 59 816 12 c 0
- 816 4 813 0 805 0 c 0
- 798 0 787 9 782 13 c 0
- 769 25 759 41 754 57 c 0
- 745 86 742 179 742 214 c 0
- 735 280 725 347 708 382 c 0
- 691 417 662 422 625 422 c 0
- 509 422 480 306 474 206 c 0
- 474 193 474 179 474 166 c 0
- 474 127 473 89 474 50 c 0
- 475 37 476 25 476 12 c 0
- 476 4 473 0 465 0 c 0
- 458 0 447 9 442 13 c 0
- 430 24 419 41 414 57 c 0
- 408 79 408 176 408 203 c 0
- 408 222 409 244 410 268 c 0
- 408 322 401 376 382 393 c 0
- 355 416 297 422 262 422 c 0
- 158 422 100 326 85 233 c 1
- 105 250 128 262 155 262 c 0
- 233 262 313 160 313 86 c 0
- 313 24 261 2 207 2 c 0
- 89 2 18 140 18 244 c 0xdfe0
-1118 180 m 0
- 1118 215 1108 261 1088 304 c 1
- 1038 243 994 160 994 95 c 0
- 994 92 995 89 995 86 c 0
- 1008 81 1022 80 1036 80 c 0
- 1095 80 1118 128 1118 180 c 0
-100 105 m 1
- 117 88 143 83 165 83 c 0
- 202 83 249 99 249 143 c 0
- 249 172 223 181 198 181 c 0
- 164 181 133 152 115 126 c 0
- 110 119 107 111 100 105 c 1
+754 214 m 0
+ 733 409 708 422 637 422 c 0
+ 521 422 492 306 486 206 c 1
+ 486 166 l 2
+ 486 127 485 89 486 50 c 0
+ 487 37 488 25 488 12 c 0
+ 488 4 485 0 477 0 c 0
+ 466 0 437 23 426 57 c 0
+ 420 79 420 176 420 203 c 0
+ 420 222 421 244 422 268 c 0
+ 420 322 413 376 394 393 c 0
+ 367 416 309 422 274 422 c 0
+ 170 422 112 326 97 233 c 1
+ 117 250 140 262 167 262 c 0
+ 245 262 325 160 325 86 c 0
+ 325 24 273 2 219 2 c 0
+ 101 2 30 140 30 244 c 0
+ 30 365 94 502 232 502 c 0
+ 326 502 396 475 445 389 c 1
+ 471 463 515 502 595 502 c 0
+ 684 502 740 442 773 365 c 1
+ 788 415 812 461 853 484 c 1
+ 869 498 908 505 921 505 c 0
+ 982 505 1037 458 1075 414 c 1
+ 1099 437 1161 497 1254 497 c 0
+ 1355 497 1419 394 1448 309 c 1
+ 1465 359 1515 502 1705 502 c 0
+ 1812 502 1879 395 1879 297 c 0
+ 1879 144 1800 5 1798 3 c 0
+ 1797 2 1793 2 1791 2 c 0
+ 1770 2 1738 50 1738 70 c 0
+ 1738 80 1816 210 1816 351 c 0
+ 1816 361 1813 398 1807 406 c 0
+ 1799 417 1759 421 1746 421 c 0
+ 1717 421 1687 415 1659 406 c 0
+ 1446 333 1495 25 1482 5 c 0
+ 1480 2 1477 2 1473 2 c 0
+ 1454 2 1427 42 1422 59 c 0
+ 1416 80 1429 280 1372 380 c 0
+ 1356 408 1325 416 1295 416 c 0
+ 1278 416 1261 409 1244 408 c 0
+ 1205 402 1158 365 1129 336 c 1
+ 1168 268 1193 191 1193 124 c 0
+ 1193 58 1166 0 1092 0 c 0
+ 1072 0 1052 1 1034 9 c 0
+ 982 31 943 96 943 152 c 0
+ 943 226 988 316 1047 384 c 1
+ 1023 408 995 424 963 424 c 0
+ 962 424 903 418 866 366 c 0
+ 828 313 817 225 817 160 c 1
+ 824 113 828 59 828 12 c 0
+ 828 4 825 0 817 0 c 0
+ 807 0 777 21 766 57 c 0
+ 757 86 754 179 754 214 c 0
+1130 180 m 0
+ 1130 215 1120 261 1100 304 c 1
+ 1050 243 1006 160 1006 95 c 0
+ 1006 92 1007 89 1007 86 c 0
+ 1020 81 1034 80 1048 80 c 0
+ 1107 80 1130 128 1130 180 c 0
+112 105 m 1
+ 129 88 155 83 177 83 c 0
+ 214 83 261 99 261 143 c 0
+ 261 172 235 181 210 181 c 0
+ 176 181 145 152 127 126 c 0
+ 122 119 119 111 112 105 c 1
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.T Uml.Conj Tutg.N
-LCarets2: 2 0 0
+LCarets2: 4 0 0 0 0
 Colour: 91ff91
 EndChar
 
 StartChar: Syl.Nn_T_Nu
-Encoding: 350 -1 328
+Encoding: 1114361 -1 328
 Width: 1893
 VWidth: 1000
 GlyphClass: 3
@@ -20834,7 +20825,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.Nn_T_NUu
-Encoding: 351 -1 329
+Encoding: 1114362 -1 329
 Width: 1878
 VWidth: 1000
 GlyphClass: 3
@@ -20946,7 +20937,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.TR
-Encoding: 352 -1 330
+Encoding: 1114363 -1 330
 Width: 811
 VWidth: 1000
 GlyphClass: 3
@@ -21006,7 +20997,7 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.HR
-Encoding: 353 -1 331
+Encoding: 1114364 -1 331
 Width: 767
 VWidth: 1000
 GlyphClass: 3
@@ -21068,76 +21059,66 @@ Colour: ffff00
 EndChar
 
 StartChar: Syl.B_R
-Encoding: 354 -1 332
-Width: 864
+Encoding: 1114365 -1 332
+Width: 887
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -150 81<256.391 517.221> 1 81<578.394 624.459> 8 81<123.099 177.135> 147 81<90.5149 182.883> 415 80<150.719 252.366 394.966 514.224>
-VStem: 17 64<228.036 327.913> 564 64<202.907 363.898> 780 64<156.16 405.13>
+HStem: -150 81<258.101 540.234> 8 81<132.59 192.627 591.394 636.171> 147 81<103.515 203.665> 415 80<158.351 271.205 404.607 531.314>
+VStem: 30 64<229.517 336.452> 314 62<149.627 269.653> 577 64<194.998 371.053> 793 64<147.314 411.356>
 LayerCount: 2
 Fore
 SplineSet
-112 39 m 0xbf
- 44 99 17 189 17 278 c 0
- 17 371 59 495 171 495 c 0
- 231 495 272 469 306 421 c 1
- 325 480 370 498 428 498 c 0
- 520 498 588 423 615 341 c 0
- 625 312 628 281 628 250 c 0
- 628 191 607 132 577 82 c 1
- 616 82 674 83 709 101 c 0
- 722 108 733 116 742 127 c 0
- 744 130 745 133 747 136 c 0
- 749 139 750 140 751 140 c 0
- 780 190 780 282 780 337 c 0
- 780 367 779 398 767 426 c 0
- 760 443 741 468 741 486 c 0
- 741 494 744 498 752 498 c 0
- 761 498 775 486 780 480 c 0
- 824 432 844 343 844 281 c 0
- 844 219 843 116 807 62 c 0
- 801 46 787 24 781 15 c 0
- 701 -98 550 -150 415 -150 c 0
- 359 -150 257 -136 206 -110 c 0
- 188 -100 163 -66 163 -45 c 0
- 163 -37 166 -33 174 -33 c 0
- 178 -33 222 -48 231 -50 c 0
- 277 -63 326 -69 374 -69 c 0
- 460 -69 552 -45 626 1 c 1
- 624 1 623 1 621 1 c 0xdf
- 602 1 497 1 490 4 c 0
- 469 13 442 48 442 71 c 0
- 442 74 442 78 444 80 c 0
- 446 83 449 84 452 86 c 0
- 520 131 564 228 564 307 c 0
- 564 378 553 417 470 417 c 0
- 377 417 357 353 357 273 c 0
- 357 245 358 217 360 189 c 0
- 361 174 363 160 363 145 c 0
- 363 137 360 133 352 133 c 0
- 333 133 306 173 301 190 c 0
- 296 207 296 224 294 241 c 0
- 289 294 291 349 274 400 c 1
- 275 400 l 1
- 255 411 235 415 213 415 c 0
- 121 415 82 306 81 228 c 1
- 147 228 206 210 242 152 c 0
- 252 136 261 116 261 96 c 0
- 261 51 220 8 175 8 c 0
- 151 8 129 24 112 39 c 0xbf
-123 147 m 0
- 111 147 101 142 90 139 c 1
- 97 112 110 89 132 89 c 0xbf
- 157 89 187 114 195 137 c 1
- 172 144 147 147 123 147 c 0
+188 8 m 0
+ 140 8 30 97 30 278 c 0
+ 30 371 72 495 184 495 c 0
+ 244 495 285 469 319 421 c 1
+ 338 480 383 498 441 498 c 0
+ 537 498 641 406 641 250 c 0
+ 641 191 620 132 590 82 c 1
+ 664 82 722 87 755 127 c 0
+ 764 140 764 140 764 140 c 0
+ 793 190 793 282 793 337 c 0
+ 793 367 792 398 780 426 c 0
+ 773 443 754 468 754 486 c 0
+ 754 494 757 498 765 498 c 0
+ 797 498 857 399 857 281 c 0
+ 857 219 849 119 820 62 c 0
+ 774 -27 640 -150 428 -150 c 0
+ 372 -150 270 -136 219 -110 c 0
+ 201 -100 176 -66 176 -45 c 0
+ 176 -37 179 -33 187 -33 c 0
+ 200 -33 269 -69 387 -69 c 0
+ 473 -69 565 -45 639 1 c 1
+ 634 1 l 2
+ 615 1 510 1 503 4 c 0
+ 482 13 455 48 455 71 c 0
+ 455 79 455 79 465 86 c 0
+ 533 131 577 228 577 307 c 0
+ 577 378 566 417 483 417 c 0
+ 390 417 370 353 370 273 c 0
+ 370 201 376 167 376 145 c 0
+ 376 137 373 133 365 133 c 0
+ 346 133 319 173 314 190 c 0
+ 301 233 309 333 287 400 c 1
+ 288 400 l 1
+ 268 411 248 415 226 415 c 0
+ 134 415 95 306 94 228 c 1
+ 266 228 274 98 274 96 c 0
+ 274 51 233 8 188 8 c 0
+136 147 m 0
+ 124 147 114 142 103 139 c 1
+ 110 112 123 89 145 89 c 0
+ 170 89 200 114 208 137 c 1
+ 185 144 160 147 136 147 c 0
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.R
 Colour: 91ff91
 EndChar
 
 StartChar: Subj.KhU
-Encoding: 355 -1 333
+Encoding: 1114366 -1 333
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21196,7 +21177,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.KhUu
-Encoding: 356 -1 334
+Encoding: 1114367 -1 334
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21264,7 +21245,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.GhU
-Encoding: 357 -1 335
+Encoding: 1114368 -1 335
 Width: 1056
 VWidth: 1000
 GlyphClass: 3
@@ -21328,7 +21309,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.GhUu
-Encoding: 358 -1 336
+Encoding: 1114369 -1 336
 Width: 1057
 VWidth: 1000
 GlyphClass: 3
@@ -21404,7 +21385,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.NgU
-Encoding: 359 -1 337
+Encoding: 1114370 -1 337
 Width: 714
 VWidth: 1000
 GlyphClass: 3
@@ -21468,7 +21449,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.NgUu
-Encoding: 360 -1 338
+Encoding: 1114371 -1 338
 Width: 708
 VWidth: 1000
 GlyphClass: 3
@@ -21543,7 +21524,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.CU
-Encoding: 361 -1 339
+Encoding: 1114372 -1 339
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21594,7 +21575,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.CUu
-Encoding: 362 -1 340
+Encoding: 1114373 -1 340
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21654,7 +21635,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.JhU
-Encoding: 363 -1 341
+Encoding: 1114374 -1 341
 Width: 1028
 VWidth: 1000
 GlyphClass: 3
@@ -21726,7 +21707,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.JhUu
-Encoding: 364 -1 342
+Encoding: 1114375 -1 342
 Width: 1023
 VWidth: 1000
 GlyphClass: 3
@@ -21807,7 +21788,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.NyU
-Encoding: 365 -1 343
+Encoding: 1114376 -1 343
 Width: 1262
 VWidth: 1000
 GlyphClass: 3
@@ -21896,7 +21877,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.NyUu
-Encoding: 366 -1 344
+Encoding: 1114377 -1 344
 Width: 1256
 VWidth: 1000
 GlyphClass: 3
@@ -21994,7 +21975,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.Ttu
-Encoding: 367 -1 345
+Encoding: 1114378 -1 345
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -22042,7 +22023,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TtUu
-Encoding: 368 -1 346
+Encoding: 1114379 -1 346
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -22100,7 +22081,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TthU
-Encoding: 369 -1 347
+Encoding: 1114380 -1 347
 Width: 540
 VWidth: 1000
 GlyphClass: 3
@@ -22141,7 +22122,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TthUu
-Encoding: 370 -1 348
+Encoding: 1114381 -1 348
 Width: 538
 VWidth: 1000
 GlyphClass: 3
@@ -22191,7 +22172,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DdU
-Encoding: 371 -1 349
+Encoding: 1114382 -1 349
 Width: 700
 VWidth: 1000
 GlyphClass: 3
@@ -22254,7 +22235,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DdUu
-Encoding: 372 -1 350
+Encoding: 1114383 -1 350
 Width: 704
 VWidth: 1000
 GlyphClass: 3
@@ -22326,7 +22307,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DdhU
-Encoding: 373 -1 351
+Encoding: 1114384 -1 351
 Width: 776
 VWidth: 1000
 GlyphClass: 3
@@ -22388,7 +22369,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.ThU
-Encoding: 374 -1 352
+Encoding: 1114385 -1 352
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -22433,7 +22414,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.ThUu
-Encoding: 375 -1 353
+Encoding: 1114386 -1 353
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -22488,7 +22469,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DhU
-Encoding: 376 -1 354
+Encoding: 1114387 -1 354
 Width: 766
 VWidth: 1000
 GlyphClass: 3
@@ -22535,7 +22516,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DhUu
-Encoding: 377 -1 355
+Encoding: 1114388 -1 355
 Width: 757
 VWidth: 1000
 GlyphClass: 3
@@ -22590,7 +22571,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.PU
-Encoding: 378 -1 356
+Encoding: 1114389 -1 356
 Width: 928
 VWidth: 1000
 GlyphClass: 3
@@ -22647,7 +22628,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.PUu
-Encoding: 379 -1 357
+Encoding: 1114390 -1 357
 Width: 928
 VWidth: 1000
 GlyphClass: 3
@@ -22713,7 +22694,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.PhU
-Encoding: 380 -1 358
+Encoding: 1114391 -1 358
 Width: 930
 VWidth: 1000
 GlyphClass: 3
@@ -22778,7 +22759,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.PhUu
-Encoding: 381 -1 359
+Encoding: 1114392 -1 359
 Width: 928
 VWidth: 1000
 GlyphClass: 3
@@ -22851,7 +22832,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.BU
-Encoding: 382 -1 360
+Encoding: 1114393 -1 360
 Width: 851
 VWidth: 1000
 GlyphClass: 3
@@ -22919,7 +22900,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.BUu
-Encoding: 383 -1 361
+Encoding: 1114394 -1 361
 Width: 859
 VWidth: 1000
 GlyphClass: 3
@@ -22996,7 +22977,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: A_m_u
-Encoding: 384 -1 362
+Encoding: 1114395 -1 362
 Width: 581
 VWidth: 1000
 GlyphClass: 3
@@ -23047,7 +23028,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.M Uml.U
 EndChar
 
 StartChar: A_m_U
-Encoding: 385 -1 363
+Encoding: 1114396 -1 363
 Width: 580
 VWidth: 1000
 GlyphClass: 3
@@ -23108,7 +23089,7 @@ Ligature2: "Orig CCMP-1" Uml.Conj Tutg.M Uml.Uu
 EndChar
 
 StartChar: Subj.LlU
-Encoding: 386 -1 364
+Encoding: 1114397 -1 364
 Width: 510
 VWidth: 1000
 GlyphClass: 3
@@ -23171,7 +23152,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.LlUu
-Encoding: 387 -1 365
+Encoding: 1114398 -1 365
 Width: 563
 VWidth: 1000
 GlyphClass: 3
@@ -23244,7 +23225,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.LU
-Encoding: 388 -1 366
+Encoding: 1114399 -1 366
 Width: 0
 VWidth: 1000
 GlyphClass: 3
@@ -23289,7 +23270,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.LUu
-Encoding: 389 -1 367
+Encoding: 1114400 -1 367
 Width: 0
 VWidth: 1000
 GlyphClass: 3
@@ -23343,7 +23324,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.DdhUu
-Encoding: 390 -1 368
+Encoding: 1114401 -1 368
 Width: 782
 VWidth: 1000
 GlyphClass: 3
@@ -23416,7 +23397,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Shape.Dotc
-Encoding: 19 9676 369
+Encoding: 9676 9676 369
 Width: 500
 VWidth: 1000
 Flags: MW
@@ -23510,7 +23491,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Dotc.Ee
-Encoding: 391 -1 370
+Encoding: 1114402 -1 370
 Width: 851
 VWidth: 1000
 Flags: W
@@ -23525,7 +23506,7 @@ LCarets2: 1 353
 EndChar
 
 StartChar: Uml.Ai
-Encoding: 82 70597 371
+Encoding: 70597 70597 371
 Width: 705
 VWidth: 1000
 Flags: W
@@ -23541,7 +23522,7 @@ Decomposition: "+E8ITwgAA"
 EndChar
 
 StartChar: Lig.Dotc.Ai
-Encoding: 392 -1 372
+Encoding: 1114403 -1 372
 Width: 1168
 VWidth: 1000
 Flags: W
@@ -23556,7 +23537,7 @@ LCarets2: 1 695
 EndChar
 
 StartChar: Tutg.Uml.Anu
-Encoding: 87 70604 373
+Encoding: 70604 70604 373
 Width: 275
 VWidth: 1000
 Flags: W
@@ -23580,7 +23561,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Oo
-Encoding: 83 70599 374
+Encoding: 70599 70599 374
 Width: 588
 VWidth: 1000
 Flags: W
@@ -23594,7 +23575,7 @@ Substitution2: "Link Oo Au 2nd-1" Uml.Aa
 EndChar
 
 StartChar: Uml.Au
-Encoding: 84 70600 375
+Encoding: 70600 70600 375
 Width: 810
 VWidth: 1000
 Flags: W
@@ -23608,7 +23589,7 @@ Substitution2: "Link Oo Au 2nd-1" Uml.Length
 EndChar
 
 StartChar: Lig.Dotc.Oo
-Encoding: 393 -1 376
+Encoding: 1114404 -1 376
 Width: 1056
 VWidth: 1000
 Flags: W
@@ -23624,7 +23605,7 @@ LCarets2: 1 826
 EndChar
 
 StartChar: Lig.Dotc.Au
-Encoding: 394 -1 377
+Encoding: 1114405 -1 377
 Width: 1275
 VWidth: 1000
 GlyphClass: 3
@@ -23641,7 +23622,7 @@ LCarets2: 1 817
 EndChar
 
 StartChar: Tutg.Uml.Gem
-Encoding: 93 70610 378
+Encoding: 70610 70610 378
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -23667,7 +23648,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocLl
-Encoding: 29 70536 379
+Encoding: 70536 70536 379
 Width: 754
 VWidth: 1000
 Flags: HMW
@@ -23715,7 +23696,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Dotc.LoopVir
-Encoding: 395 -1 380
+Encoding: 1114406 -1 380
 Width: 817
 VWidth: 1000
 Flags: W
@@ -23730,7 +23711,7 @@ LCarets2: 1 476
 EndChar
 
 StartChar: Tutg.VocL
-Encoding: 30 70537 381
+Encoding: 70537 70537 381
 Width: 825
 VWidth: 1000
 Flags: W
@@ -23787,7 +23768,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.VocRR
-Encoding: 78 70590 382
+Encoding: 70590 70590 382
 Width: 93
 VWidth: 1000
 Flags: W
@@ -23829,7 +23810,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Dotc.VocRR
-Encoding: 396 -1 383
+Encoding: 1114407 -1 383
 Width: 584
 VWidth: 1000
 Flags: W
@@ -23844,7 +23825,7 @@ LCarets2: 1 474
 EndChar
 
 StartChar: Tutg.Om
-Encoding: 97 70615 384
+Encoding: 70615 70615 384
 Width: 510
 VWidth: 1100
 Flags: W
@@ -23889,7 +23870,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocRr
-Encoding: 28 70535 385
+Encoding: 70535 70535 385
 Width: 720
 VWidth: 1100
 Flags: W
@@ -23951,7 +23932,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Oo
-Encoding: 33 70544 386
+Encoding: 70544 70544 386
 Width: 887
 VWidth: 1100
 Flags: W
@@ -24010,7 +23991,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Au
-Encoding: 34 70545 387
+Encoding: 70545 70545 387
 Width: 1336
 VWidth: 1100
 Flags: W
@@ -24023,7 +24004,7 @@ Refer: 386 70544 N 1 0 0 1 13 0 2
 EndChar
 
 StartChar: Tutg.Avag
-Encoding: 71 70583 388
+Encoding: 70583 70583 388
 Width: 443
 VWidth: 1100
 Flags: W
@@ -24053,7 +24034,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.L
-Encoding: 79 70591 389
+Encoding: 70591 70591 389
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24102,7 +24083,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Ll
-Encoding: 80 70592 390
+Encoding: 70592 70592 390
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24157,7 +24138,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Svar
-Encoding: 99 70625 391
+Encoding: 70625 70625 391
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24179,7 +24160,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Anud
-Encoding: 100 70626 392
+Encoding: 70626 70626 392
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24206,7 +24187,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Pluta
-Encoding: 94 70611 393
+Encoding: 70611 70611 393
 Width: 340
 VWidth: 1000
 Flags: W
@@ -24235,7 +24216,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda
-Encoding: 95 70612 394
+Encoding: 70612 70612 394
 Width: 154
 VWidth: 1000
 Flags: W
@@ -24254,7 +24235,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda2
-Encoding: 96 70613 395
+Encoding: 70613 70613 395
 Width: 326
 VWidth: 1000
 Flags: W
@@ -24266,7 +24247,7 @@ Refer: 394 70612 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Uml.Conj
-Encoding: 91 70608 396
+Encoding: 70608 70608 396
 Width: 281
 VWidth: 1000
 Flags: W
@@ -24293,7 +24274,7 @@ Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Lig.Dotc.Conj
-Encoding: 397 -1 397
+Encoding: 1114408 -1 397
 Width: 500
 VWidth: 1000
 Flags: W
@@ -24308,7 +24289,7 @@ LCarets2: 1 285
 EndChar
 
 StartChar: Tutg.Rr.Naked
-Encoding: 398 -1 398
+Encoding: 1114409 -1 398
 Width: 764
 VWidth: 1000
 Flags: W
@@ -24357,7 +24338,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Vir.Reph
-Encoding: 399 -1 399
+Encoding: 1114410 -1 399
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24370,7 +24351,7 @@ Refer: 4 70606 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Syl.K_K_R
-Encoding: 400 -1 400
+Encoding: 1114411 -1 400
 Width: 1375
 VWidth: 1000
 Flags: W
@@ -24449,7 +24430,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Dummy
-Encoding: 401 -1 401
+Encoding: 1114412 -1 401
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -24457,7 +24438,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Syl.K_T_Y
-Encoding: 402 -1 402
+Encoding: 1114413 -1 402
 Width: 1375
 VWidth: 1000
 GlyphClass: 3
@@ -24536,7 +24517,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Syl.K_T_R
-Encoding: 403 -1 403
+Encoding: 1114414 -1 403
 Width: 1253
 VWidth: 1000
 Flags: W
@@ -24605,7 +24586,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Uml.VocR.Big
-Encoding: 404 -1 404
+Encoding: 1114415 -1 404
 Width: 93
 VWidth: 1000
 Flags: W
@@ -24635,1281 +24616,8 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: Wa.KEe
-Encoding: 405 -1 405
-Width: 1159
-VWidth: 0
-Flags: W
-HStem: 1 81<569.686 626.847 832.714 914.397> 252 81<99.72 224.326> 417 81<127.004 238.637> 425 81<548.247 682.75 877.085 999.743>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.4614 181.301> 942 63<151.358 291.103>
-LayerCount: 2
-Fore
-Refer: 53 70546 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.KAi
-Encoding: 406 -1 406
-Width: 1499
-VWidth: 0
-Flags: W
-HStem: 1 81<909.686 966.847 1172.71 1254.4> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 425 81<888.247 1022.75 1217.09 1339.74>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.4614 181.301> 1282 63<151.358 291.103>
-LayerCount: 2
-Fore
-Refer: 53 70546 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.KhEe
-Encoding: 407 -1 407
-Width: 1196
-VWidth: 0
-Flags: W
-HStem: -4 81<470.749 585.431 848.24 1058.73> 210 81<487.66 581.105> 252 81<99.72 224.326> 417 81<127.004 238.637> 422 81<563.097 689.3>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<84.2148 175.386> 602 63<81.5 189.606> 811 63<149.091 302.775> 1102 64<125.298 411.662>
-LayerCount: 2
-Fore
-Refer: 14 70547 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Kh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.KhAi
-Encoding: 408 -1 408
-Width: 1536
-VWidth: 0
-Flags: W
-HStem: -4 81<810.749 925.431 1188.24 1398.73> 210 81<827.66 921.105> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 422 81<903.097 1029.3>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<84.2148 175.386> 942 63<81.5 189.606> 1151 63<149.091 302.775> 1442 64<125.298 411.662>
-LayerCount: 2
-Fore
-Refer: 14 70547 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Kh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.GEe
-Encoding: 409 -1 409
-Width: 1162
-VWidth: 0
-Flags: W
-HStem: -5 80<519.44 643.734 894.887 990.872> 252 81<99.72 224.326> 411 81<544.073 656.618> 417 80<873.268 1000.31> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<144.946 317.957> 1069 63<150.413 321.076>
-LayerCount: 2
-Fore
-Refer: 35 70548 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.G Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.GAi
-Encoding: 410 -1 410
-Width: 1502
-VWidth: 0
-Flags: W
-HStem: -5 80<859.44 983.734 1234.89 1330.87> 252 81<99.72 224.326 439.72 564.326> 411 81<884.073 996.618> 417 80<1213.27 1340.31> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<144.946 317.957> 1409 63<150.413 321.076>
-LayerCount: 2
-Fore
-Refer: 35 70548 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.G Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.GhEe
-Encoding: 411 -1 411
-Width: 1453
-VWidth: 0
-Flags: W
-HStem: 0 81<720.197 919.767 1058.76 1254.59> 252 81<99.72 224.326> 417 81<127.004 238.637 513.301 607.565 921.949 1011.3 1240.61 1314.16>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<129.16 346.396> 612 63<107.159 310.243> 638 63<223.199 406.66> 844 63<260.236 404.347> 1053 64<219.88 381.2> 1359 64<186.525 355.953>
-LayerCount: 2
-Fore
-Refer: 10 70549 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Gh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.GhAi
-Encoding: 412 -1 412
-Width: 1793
-VWidth: 0
-Flags: W
-HStem: 0 81<1060.2 1259.77 1398.76 1594.59> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 853.301 947.565 1261.95 1351.3 1580.61 1654.16>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<129.16 346.396> 952 63<107.159 310.243> 978 63<223.199 406.66> 1184 63<260.236 404.347> 1393 64<219.88 381.2> 1699 64<186.525 355.953>
-LayerCount: 2
-Fore
-Refer: 10 70549 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Gh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NgEe
-Encoding: 413 -1 413
-Width: 1172
-VWidth: 0
-Flags: W
-HStem: -2 21G<1027.5 1035> 113 81<492.221 576.002> 243 81<887.771 973.117> 252 81<99.72 224.326> 257 78<482.449 584.368> 416 81<534.006 656.567 865.192 1046.77> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 587 64<205.613 254.92> 975 67<20.0055 106> 1078 64<299.584 397.28>
-LayerCount: 2
-Fore
-Refer: 28 70550 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ng Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NgAi
-Encoding: 414 -1 414
-Width: 1512
-VWidth: 0
-Flags: W
-HStem: -2 21G<1367.5 1375> 113 81<832.221 916.002> 243 81<1227.77 1313.12> 252 81<99.72 224.326 439.72 564.326> 257 78<822.449 924.368> 416 81<874.006 996.567 1205.19 1386.77> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 927 64<205.613 254.92> 1315 67<20.0055 106> 1418 64<299.584 397.28>
-LayerCount: 2
-Fore
-Refer: 28 70550 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ng Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.CEe
-Encoding: 415 -1 415
-Width: 1146
-VWidth: 0
-Flags: W
-HStem: 0 81<680 1023.73> 252 81<99.72 224.326> 416 81<563.721 704.181> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 442 62<299.67 355.671> 758 63<256.859 380.879> 1052 64<110.561 314.567>
-LayerCount: 2
-Fore
-Refer: 31 70551 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.C Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.CAi
-Encoding: 416 -1 416
-Width: 1486
-VWidth: 0
-Flags: W
-HStem: 0 81<1020 1363.73> 252 81<99.72 224.326 439.72 564.326> 416 81<903.721 1044.18> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 782 62<299.67 355.671> 1098 63<256.859 380.879> 1392 64<110.561 314.567>
-LayerCount: 2
-Fore
-Refer: 31 70551 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.C Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ChEe
-Encoding: 417 -1 417
-Width: 1307
-VWidth: 0
-Flags: W
-HStem: -4 81<506.154 581.156 811.788 849.649 1081.12 1153.34> 169 81<505.99 613.903 1063.15 1175.67> 252 81<99.72 224.326> 414 81<565.864 710.208 967.191 1115.16> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 614 64<112.635 166.778> 747 63<78.0176 390.819> 860 64<83.5134 367.864> 994 63<94.3255 199> 1213 64<170.069 312.299>
-LayerCount: 2
-Fore
-Refer: 6 70552 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ch Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ChAi
-Encoding: 418 -1 418
-Width: 1647
-VWidth: 0
-Flags: W
-HStem: -4 81<846.154 921.156 1151.79 1189.65 1421.12 1493.34> 169 81<845.99 953.903 1403.15 1515.67> 252 81<99.72 224.326 439.72 564.326> 414 81<905.864 1050.21 1307.19 1455.16> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 954 64<112.635 166.778> 1087 63<78.0176 390.819> 1200 64<83.5134 367.864> 1334 63<94.3255 199> 1553 64<170.069 312.299>
-LayerCount: 2
-Fore
-Refer: 6 70552 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ch Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.JEe
-Encoding: 419 -1 419
-Width: 1755
-VWidth: 0
-Flags: W
-HStem: 3 81<492.033 581.933 1061.64 1200.1 1493.63 1625.9> 185 81<1519.93 1610.71> 209 81<486.539 575.871> 252 81<99.72 224.326> 409 81<589.658 710.378> 417 81<127.004 238.637> 418 81<930.043 1006.06 1429.38 1551.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 622 64<79.5 179.624> 794 62<67.0068 318.473> 997 64<83.1461 180.576> 1050 64<249.885 381.24> 1415 64<89.0236 144.871> 1661 64<138.58 279.84>
-LayerCount: 2
-Fore
-Refer: 52 70553 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.J Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.JAi
-Encoding: 420 -1 420
-Width: 2095
-VWidth: 0
-Flags: W
-HStem: 3 81<832.033 921.933 1401.64 1540.1 1833.63 1965.9> 185 81<1859.93 1950.71> 209 81<826.539 915.871> 252 81<99.72 224.326 439.72 564.326> 409 81<929.658 1050.38> 417 81<127.004 238.637 467.004 578.637> 418 81<1270.04 1346.06 1769.38 1891.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 962 64<79.5 179.624> 1134 62<67.0068 318.473> 1337 64<83.1461 180.576> 1390 64<249.885 381.24> 1755 64<89.0236 144.871> 2001 64<138.58 279.84>
-LayerCount: 2
-Fore
-Refer: 52 70553 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.J Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.JhEe
-Encoding: 421 -1 421
-Width: 1427
-VWidth: 0
-Flags: W
-HStem: 0 81<855.107 983.061 1102.53 1251.28> 17 81<647.952 741.864> 222 81<1246.81 1323.79> 241 81<585 686.961> 252 81<99.72 224.326> 417 81<127.004 238.637> 424 81<547.672 713.376 1220.35 1297.8>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<129.558 336.576> 545 63<141.583 258.589> 796 63<187.075 330.026> 1006 62<216.828 327.373> 1132 64<340.67 441.5> 1333 64<307.485 386.857>
-LayerCount: 2
-Fore
-Refer: 13 70554 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Jh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.JhAi
-Encoding: 422 -1 422
-Width: 1767
-VWidth: 0
-Flags: W
-HStem: 0 81<1195.11 1323.06 1442.53 1591.28> 17 81<987.952 1081.86> 222 81<1586.81 1663.79> 241 81<925 1026.96> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 424 81<887.672 1053.38 1560.35 1637.8>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<129.558 336.576> 885 63<141.583 258.589> 1136 63<187.075 330.026> 1346 62<216.828 327.373> 1472 64<340.67 441.5> 1673 64<307.485 386.857>
-LayerCount: 2
-Fore
-Refer: 13 70554 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Jh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NyEe
-Encoding: 423 -1 423
-Width: 1642
-VWidth: 0
-Flags: W
-HStem: -179 81<707.703 1244.94> -162 81<332.644 739.297> 8 81<473.315 564.476 924.95 1006.97> 252 81<99.72 224.326> 417 81<127.004 238.637 543.561 661.153 820.055 954.133 1083.02 1186.23 1366.98 1475.61>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 574 64<58 172.58> 849 63<99.0102 233.381> 1016 63<154.935 336.359> 1201 62<185.67 289.437> 1549 63<96.8663 312.108>
-LayerCount: 2
-Fore
-Refer: 67 70555 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ny Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NyAi
-Encoding: 424 -1 424
-Width: 1982
-VWidth: 0
-Flags: W
-HStem: -179 81<1047.7 1584.94> -162 81<672.644 1079.3> 8 81<813.315 904.476 1264.95 1346.97> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 883.561 1001.15 1160.06 1294.13 1423.02 1526.23 1706.98 1815.61>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 914 64<58 172.58> 1189 63<99.0102 233.381> 1356 63<154.935 336.359> 1541 62<185.67 289.437> 1889 63<96.8663 312.108>
-LayerCount: 2
-Fore
-Refer: 67 70555 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ny Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TtEe
-Encoding: 425 -1 425
-Width: 901
-VWidth: 0
-Flags: W
-HStem: 1 81<511.678 664.987> 252 81<99.72 224.326> 263 81<652.392 806.069> 417 81<127.004 238.637> 419 81<629.695 758.829>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 65<137.555 288.715> 808 63<193.1 262.571>
-LayerCount: 2
-Fore
-Refer: 58 70556 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Tt Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TtAi
-Encoding: 426 -1 426
-Width: 1241
-VWidth: 0
-Flags: W
-HStem: 1 81<851.678 1004.99> 252 81<99.72 224.326 439.72 564.326> 263 81<992.392 1146.07> 417 81<127.004 238.637 467.004 578.637> 419 81<969.695 1098.83>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 65<137.555 288.715> 1148 63<193.1 262.571>
-LayerCount: 2
-Fore
-Refer: 58 70556 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Tt Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TthEe
-Encoding: 427 -1 427
-Width: 933
-VWidth: 0
-Flags: W
-HStem: 0 81<574.41 741.987> 196 78<621.828 708.312> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<589.79 728.457>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<172.391 291.491> 618 94<200.785 269.154> 840 63<173.566 311.032>
-LayerCount: 2
-Fore
-Refer: 19 70557 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Tth Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TthAi
-Encoding: 428 -1 428
-Width: 1273
-VWidth: 0
-Flags: W
-HStem: 0 81<914.41 1081.99> 196 78<961.828 1048.31> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<929.79 1068.46>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<172.391 291.491> 958 94<200.785 269.154> 1180 63<173.566 311.032>
-LayerCount: 2
-Fore
-Refer: 19 70557 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Tth Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DdEe
-Encoding: 429 -1 429
-Width: 1100
-VWidth: 0
-Flags: W
-HStem: 0 80<522.161 657.498 832.215 937.594> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 81<469.379 541.746>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<340.394 410.011> 395 80<340.394 417.74> 555 63<315.227 408> 723 62<316.916 460.373> 745 63<181.758 422.107> 1006 64<155.451 358.55>
-LayerCount: 2
-Fore
-Refer: 64 70558 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Dd Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DdAi
-Encoding: 430 -1 430
-Width: 1440
-VWidth: 0
-Flags: W
-HStem: 0 80<862.161 997.498 1172.21 1277.59> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 81<809.379 881.746>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<340.394 410.011> 735 80<340.394 417.74> 895 63<315.227 408> 1063 62<316.916 460.373> 1085 63<181.758 422.107> 1346 64<155.451 358.55>
-LayerCount: 2
-Fore
-Refer: 64 70558 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Dd Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DdhEe
-Encoding: 431 -1 431
-Width: 1175
-VWidth: 0
-Flags: W
-HStem: 1 81<567.716 688.922 860.871 966.464> 210 81<974.184 1051.12> 252 81<99.72 224.326> 416 81<499.134 585.64 989.747 1053.91> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<274.525 372.325> 476 64<97.834 188.423> 754 64<143.243 355.775> 894 64<298.334 381.361> 1081 64<299.974 380.569>
-LayerCount: 2
-Fore
-Refer: 25 70559 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ddh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DdhAi
-Encoding: 432 -1 432
-Width: 1515
-VWidth: 0
-Flags: W
-HStem: 1 81<907.716 1028.92 1200.87 1306.46> 210 81<1314.18 1391.12> 252 81<99.72 224.326 439.72 564.326> 416 81<839.134 925.64 1329.75 1393.91> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<274.525 372.325> 816 64<97.834 188.423> 1094 64<143.243 355.775> 1234 64<298.334 381.361> 1421 64<299.974 380.569>
-LayerCount: 2
-Fore
-Refer: 25 70559 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ddh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NnEe
-Encoding: 433 -1 433
-Width: 1532
-VWidth: 0
-Flags: W
-HStem: 2 81<503.516 611.533> 181 81<518.438 600.988> 252 81<99.72 224.326> 417 81<127.004 238.637> 422 80<557.508 721.368 924.207 1052.07 1259.97 1364.59>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 626 64<55 166.992> 785 66<23.0174 331.122> 1130 63<16.9908 315.984> 1438 64<136.042 348.449>
-LayerCount: 2
-Fore
-Refer: 17 70560 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Nn Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NnAi
-Encoding: 434 -1 434
-Width: 1872
-VWidth: 0
-Flags: W
-HStem: 2 81<843.516 951.533> 181 81<858.438 940.988> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 422 80<897.508 1061.37 1264.21 1392.07 1599.97 1704.59>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 966 64<55 166.992> 1125 66<23.0174 331.122> 1470 63<16.9908 315.984> 1778 64<136.042 348.449>
-LayerCount: 2
-Fore
-Refer: 17 70560 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Nn Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TEe
-Encoding: 435 -1 435
-Width: 1202
-VWidth: 0
-Flags: W
-HStem: 1 81<718.389 807.727> 252 81<99.72 224.326> 417 81<127.004 238.637> 423 81<573.867 721.964 904.831 1038.91>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<142.657 313.269> 649 63<87.553 208.133> 837 63<110.287 273.473> 1108 64<162.868 364.984>
-LayerCount: 2
-Fore
-Refer: 61 70561 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.T Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.TAi
-Encoding: 436 -1 436
-Width: 1542
-VWidth: 0
-Flags: W
-HStem: 1 81<1058.39 1147.73> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 423 81<913.867 1061.96 1244.83 1378.91>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<142.657 313.269> 989 63<87.553 208.133> 1177 63<110.287 273.473> 1448 64<162.868 364.984>
-LayerCount: 2
-Fore
-Refer: 61 70561 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.T Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ThEe
-Encoding: 437 -1 437
-Width: 1163
-VWidth: 0
-Flags: W
-HStem: 2 81<617.656 868.547> 252 81<99.72 224.326> 417 81<127.004 238.637 860.647 995.304> 481 20G<472 487.5>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<207.501 354.189> 719 63<238.694 345.396> 1069 64<240.604 360.014>
-LayerCount: 2
-Fore
-Refer: 22 70562 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Th Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ThAi
-Encoding: 438 -1 438
-Width: 1503
-VWidth: 0
-Flags: W
-HStem: 2 81<957.656 1208.55> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 1200.65 1335.3> 481 20G<812 827.5>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<207.501 354.189> 1059 63<238.694 345.396> 1409 64<240.604 360.014>
-LayerCount: 2
-Fore
-Refer: 22 70562 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Th Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DEe
-Encoding: 439 -1 439
-Width: 879
-VWidth: 0
-Flags: W
-HStem: -2 81<568.64 727.042> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<616.529 739.254>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 651 161<259 365> 783 66<136.251 202.641>
-LayerCount: 2
-Fore
-Refer: 32 70563 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.D Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DAi
-Encoding: 440 -1 440
-Width: 1219
-VWidth: 0
-Flags: W
-HStem: -2 81<908.64 1067.04> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<956.529 1079.25>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 991 161<259 365> 1123 66<136.251 202.641>
-LayerCount: 2
-Fore
-Refer: 32 70563 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.D Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DhEe
-Encoding: 441 -1 441
-Width: 1159
-VWidth: 0
-Flags: W
-HStem: 0 81<531.139 644.161 870.149 982.299> 252 81<99.72 224.326> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<153.087 300.174> 728 61<186.125 272.358> 1066 63<168.618 314.266>
-LayerCount: 2
-Fore
-Refer: 7 70564 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Dh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.DhAi
-Encoding: 442 -1 442
-Width: 1499
-VWidth: 0
-Flags: W
-HStem: 0 81<871.139 984.161 1210.15 1322.3> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<153.087 300.174> 1068 61<186.125 272.358> 1406 63<168.618 314.266>
-LayerCount: 2
-Fore
-Refer: 7 70564 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Dh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NEe
-Encoding: 443 -1 443
-Width: 1197
-VWidth: 0
-Flags: W
-HStem: 1 21G<514.758 532 751.5 763 1068.5 1080> 252 81<99.72 224.326> 416 81<509.487 625.198 919.02 1081.51> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<152.443 358.401> 1104 63<203.831 400.04>
-LayerCount: 2
-Fore
-Refer: 56 70565 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.N Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.NAi
-Encoding: 444 -1 444
-Width: 1537
-VWidth: 0
-Flags: W
-HStem: 1 21G<854.758 872 1091.5 1103 1408.5 1420> 252 81<99.72 224.326 439.72 564.326> 416 81<849.487 965.198 1259.02 1421.51> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<152.443 358.401> 1444 63<203.831 400.04>
-LayerCount: 2
-Fore
-Refer: 56 70565 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.N Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.PEe
-Encoding: 445 -1 445
-Width: 1328
-VWidth: 0
-Flags: W
-HStem: -4 81<832 1159.06> 252 81<99.72 224.326> 326 81<584.4 744.706> 417 81<127.004 238.637> 418 81<1042.79 1139.48>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.676> 819 63<182.165 277.825> 1234 64<145.734 302.691>
-LayerCount: 2
-Fore
-Refer: 57 70566 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.P Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.PAi
-Encoding: 446 -1 446
-Width: 1668
-VWidth: 0
-Flags: W
-HStem: -4 81<1172 1499.06> 252 81<99.72 224.326 439.72 564.326> 326 81<924.4 1084.71> 417 81<127.004 238.637 467.004 578.637> 418 81<1382.79 1479.48>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.676> 1159 63<182.165 277.825> 1574 64<145.734 302.691>
-LayerCount: 2
-Fore
-Refer: 57 70566 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.P Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.PhEe
-Encoding: 447 -1 447
-Width: 1328
-VWidth: 0
-Flags: W
-HStem: -4 81<832 1159.06> 223 81<1058.1 1169.67> 252 81<99.72 224.326> 326 81<584.632 744.672> 417 81<127.004 238.637> 418 81<1052.96 1141.94>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.691> 819 63<182.165 277.825> 976 63<318.845 436.5> 1234 64<145.734 256.804>
-LayerCount: 2
-Fore
-Refer: 18 70567 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ph Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.PhAi
-Encoding: 448 -1 448
-Width: 1668
-VWidth: 0
-Flags: W
-HStem: -4 81<1172 1499.06> 223 81<1398.1 1509.67> 252 81<99.72 224.326 439.72 564.326> 326 81<924.632 1084.67> 417 81<127.004 238.637 467.004 578.637> 418 81<1392.96 1481.94>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.691> 1159 63<182.165 277.825> 1316 63<318.845 436.5> 1574 64<145.734 256.804>
-LayerCount: 2
-Fore
-Refer: 18 70567 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ph Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.BEe
-Encoding: 449 -1 449
-Width: 1252
-VWidth: 0
-Flags: W
-HStem: 8 81<497.664 557.627 956.394 1103.31> 147 81<468.515 568.498> 252 81<99.72 224.326> 415 80<523.351 636.205 769.607 896.345> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<229.525 336.452> 679 62<149.627 269.645> 942 64<194.998 371.002> 1158 64<150.434 411.325>
-LayerCount: 2
-Fore
-Refer: 30 70568 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.B Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.BAi
-Encoding: 450 -1 450
-Width: 1592
-VWidth: 0
-Flags: W
-HStem: 8 81<837.664 897.627 1296.39 1443.31> 147 81<808.515 908.498> 252 81<99.72 224.326 439.72 564.326> 415 80<863.351 976.205 1109.61 1236.35> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<229.525 336.452> 1019 62<149.627 269.645> 1282 64<194.998 371.002> 1498 64<150.434 411.325>
-LayerCount: 2
-Fore
-Refer: 30 70568 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.B Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.BhEe
-Encoding: 451 -1 451
-Width: 1452
-VWidth: 0
-Flags: W
-HStem: 2 79<803 1048> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<573.892 759.112 1070.3 1250>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<142.956 315.211> 802 63<216.689 383.687> 952 63<204.879 364.829> 1358 64<150.83 330.092>
-LayerCount: 2
-Fore
-Refer: 5 70569 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Bh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.BhAi
-Encoding: 452 -1 452
-Width: 1792
-VWidth: 0
-Flags: W
-HStem: 2 79<1143 1388> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<913.892 1099.11 1410.3 1590>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<142.956 315.211> 1142 63<216.689 383.687> 1292 63<204.879 364.829> 1698 64<150.83 330.092>
-LayerCount: 2
-Fore
-Refer: 5 70569 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Bh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.MEe
-Encoding: 453 -1 453
-Width: 961
-VWidth: 0
-Flags: W
-HStem: -7 81<600.804 846.803> 3 73<599 703.314> 252 81<99.72 224.326> 417 81<127.004 238.637 550.022 664.317>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 453 64<308.878 384.373> 701 64<281.28 396.557> 867 64<78.5 181.301>
-LayerCount: 2
-Fore
-Refer: 55 70570 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.M Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.MAi
-Encoding: 454 -1 454
-Width: 1301
-VWidth: 0
-Flags: W
-HStem: -7 81<940.804 1186.8> 3 73<939 1043.31> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 890.022 1004.32>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 793 64<308.878 384.373> 1041 64<281.28 396.557> 1207 64<78.5 181.301>
-LayerCount: 2
-Fore
-Refer: 55 70570 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.M Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.YEe
-Encoding: 455 -1 455
-Width: 1229
-VWidth: 0
-Flags: W
-HStem: -4 81<502.543 710.039 888.106 1042.35> 211 81<484.571 571.356> 252 81<99.72 224.326> 417 81<127.004 238.637> 421 81<627.849 781.501>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 390 63<108 176.01> 529 63<314.587 388.655> 874 64<220.349 352.486> 1136 63<167.905 329.641>
-LayerCount: 2
-Fore
-Refer: 66 70571 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Y Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.YAi
-Encoding: 456 -1 456
-Width: 1569
-VWidth: 0
-Flags: W
-HStem: -4 81<842.543 1050.04 1228.11 1382.35> 211 81<824.571 911.356> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 421 81<967.849 1121.5>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 730 63<108 176.01> 869 63<314.587 388.655> 1214 64<220.349 352.486> 1476 63<167.905 329.641>
-LayerCount: 2
-Fore
-Refer: 66 70571 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Y Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.REe
-Encoding: 457 -1 457
-Width: 985
-VWidth: 0
-Flags: W
-HStem: -6 81<700.013 820.902> 219 81<711.074 812.105> 252 81<99.72 224.326> 417 81<127.004 238.637> 419 81<602.191 782.39>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<130.643 272.529> 610 64<91.3442 220> 892 63<145.926 307.683>
-LayerCount: 2
-Fore
-Refer: 59 70572 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.R Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.RAi
-Encoding: 458 -1 458
-Width: 1325
-VWidth: 0
-Flags: W
-HStem: -6 81<1040.01 1160.9> 219 81<1051.07 1152.11> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 419 81<942.191 1122.39>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<130.643 272.529> 950 64<91.3442 220> 1232 63<145.926 307.683>
-LayerCount: 2
-Fore
-Refer: 59 70572 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.R Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LEe
-Encoding: 459 -1 459
-Width: 979
-VWidth: 0
-Flags: W
-HStem: -1 81<597.586 774.64> 219 81<493.056 593.793> 252 81<99.72 224.326> 417 81<127.004 238.637> 419 81<508.779 587.535>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<204.117 271> 588 64<325.014 418.944> 886 63<191.82 335.844>
-LayerCount: 2
-Fore
-Refer: 54 70573 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.L Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LAi
-Encoding: 460 -1 460
-Width: 1319
-VWidth: 0
-Flags: W
-HStem: -1 81<937.586 1114.64> 219 81<833.056 933.793> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 419 81<848.779 927.535>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<204.117 271> 928 64<325.014 418.944> 1226 63<191.82 335.844>
-LayerCount: 2
-Fore
-Refer: 54 70573 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.L Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.VEe
-Encoding: 461 -1 461
-Width: 1102
-VWidth: 0
-Flags: W
-HStem: 0 21G<494.501 516> 2 81<759.069 881.865> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<573.212 700.219>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<137.374 299.511> 738 63<198.161 387.642> 1009 63<199.305 353.652>
-LayerCount: 2
-Fore
-Refer: 63 70574 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.V Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.VAi
-Encoding: 462 -1 462
-Width: 1442
-VWidth: 0
-Flags: W
-HStem: 0 21G<834.501 856> 2 81<1099.07 1221.87> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<913.212 1040.22>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<137.374 299.511> 1078 63<198.161 387.642> 1349 63<199.305 353.652>
-LayerCount: 2
-Fore
-Refer: 63 70574 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.V Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ShEe
-Encoding: 463 -1 463
-Width: 1248
-VWidth: 0
-Flags: W
-HStem: -1 81<524.544 644.114 970.085 1092.95> 220 81<957.83 1096.99> 252 81<99.72 224.326> 413 81<524.484 642.819> 417 81<127.004 238.637> 420 80<875.346 1046.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<171.551 343.363> 875 64<107.044 200.5> 1155 63<240 304.129>
-LayerCount: 2
-Fore
-Refer: 21 70575 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Sh Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.ShAi
-Encoding: 464 -1 464
-Width: 1588
-VWidth: 0
-Flags: W
-HStem: -1 81<864.544 984.114 1310.09 1432.95> 220 81<1297.83 1436.99> 252 81<99.72 224.326 439.72 564.326> 413 81<864.484 982.819> 417 81<127.004 238.637 467.004 578.637> 420 80<1215.35 1386.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<171.551 343.363> 1215 64<107.044 200.5> 1495 63<240 304.129>
-LayerCount: 2
-Fore
-Refer: 21 70575 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Sh Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.SsEe
-Encoding: 465 -1 465
-Width: 1303
-VWidth: 0
-Flags: W
-HStem: 0 21G<514.445 526 721.5 734> 252 81<99.72 224.326> 326 81<584.632 744.672> 408 81<1041.38 1138.49> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.691> 819 63<182.165 277.825> 968 64<326.426 443.5>
-LayerCount: 2
-Fore
-Refer: 65 70576 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ss Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.SsAi
-Encoding: 466 -1 466
-Width: 1643
-VWidth: 0
-Flags: W
-HStem: 0 21G<854.445 866 1061.5 1074> 252 81<99.72 224.326 439.72 564.326> 326 81<924.632 1084.67> 408 81<1381.38 1478.49> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.691> 1159 63<182.165 277.825> 1308 64<326.426 443.5>
-LayerCount: 2
-Fore
-Refer: 65 70576 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ss Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.SEe
-Encoding: 467 -1 467
-Width: 1139
-VWidth: 0
-Flags: W
-HStem: -1 81<803.741 944.1> 252 81<99.72 224.326> 417 81<127.004 238.637 490.987 575.041 744.147 831.191>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 390 63<302.993 409.575> 867 64<290.459 391.827> 1046 63<191.837 381.124>
-LayerCount: 2
-Fore
-Refer: 60 70577 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.S Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.SAi
-Encoding: 468 -1 468
-Width: 1479
-VWidth: 0
-Flags: W
-HStem: -1 81<1143.74 1284.1> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 830.987 915.041 1084.15 1171.19>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 730 63<302.993 409.575> 1207 64<290.459 391.827> 1386 63<191.837 381.124>
-LayerCount: 2
-Fore
-Refer: 60 70577 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.S Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.HEe
-Encoding: 469 -1 469
-Width: 1145
-VWidth: 0
-Flags: W
-HStem: -5 80<705.009 791.075> 252 81<99.72 224.326> 414 80<522.363 629.351 894.017 998.926> 417 81<127.004 238.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<75.6995 342.368> 639 63<75.2871 410.524> 814 63<98.9746 396.496> 1051 64<91.8354 357.783>
-LayerCount: 2
-Fore
-Refer: 50 70578 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.H Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.HAi
-Encoding: 470 -1 470
-Width: 1485
-VWidth: 0
-Flags: W
-HStem: -5 80<1045.01 1131.08> 252 81<99.72 224.326 439.72 564.326> 414 80<862.363 969.351 1234.02 1338.93> 417 81<127.004 238.637 467.004 578.637>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<75.6995 342.368> 979 63<75.2871 410.524> 1154 63<98.9746 396.496> 1391 64<91.8354 357.783>
-LayerCount: 2
-Fore
-Refer: 50 70578 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.H Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LlEe
-Encoding: 471 -1 471
-Width: 913
-VWidth: 0
-Flags: W
-HStem: -1 72<474.118 867.978> 113 72<596.5 822.338> 126 72<492.463 782> 228 72<451.999 530.191> 248 72<677.875 742.438> 252 81<99.72 224.326> 417 81<127.004 238.637> 427 72<550.204 754.466>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 56<302.293 366.341> 539 57<280.5 379.699> 826 57<191.34 239.762>
-LayerCount: 2
-Fore
-Refer: 15 70579 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ll Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LlAi
-Encoding: 472 -1 472
-Width: 1253
-VWidth: 0
-Flags: W
-HStem: -1 72<814.118 1207.98> 113 72<936.5 1162.34> 126 72<832.463 1122> 228 72<791.999 870.191> 248 72<1017.88 1082.44> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 427 72<890.204 1094.47>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 56<302.293 366.341> 879 57<280.5 379.699> 1166 57<191.34 239.762>
-LayerCount: 2
-Fore
-Refer: 15 70579 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Ll Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.RrEe
-Encoding: 473 -1 473
-Width: 1129
-VWidth: 0
-Flags: W
-HStem: -3 80<522.981 636.47 840.362 960.741> 177 79<928.694 1012.3> 209 82<463.243 522.717> 252 81<99.72 224.326> 403 79<499.952 571.753> 412 192<710.629 736.988> 417 81<127.004 238.637> 423 80<946.423 1012.87>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<144.325 222 291 352.852> 573 63<339.375 401.843> 691 66<431.323 585.94> 709 63<166.121 287.278> 845 62<274.193 383.546> 1036 63<285 388.797>
-LayerCount: 2
-Fore
-Refer: 178 70580 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Rr Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.RrAi
-Encoding: 474 -1 474
-Width: 1469
-VWidth: 0
-Flags: W
-HStem: -3 80<862.981 976.47 1180.36 1300.74> 177 79<1268.69 1352.3> 209 82<803.243 862.717> 252 81<99.72 224.326 439.72 564.326> 403 79<839.952 911.753> 412 192<1050.63 1076.99> 417 81<127.004 238.637 467.004 578.637> 423 80<1286.42 1352.87>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<144.325 222 291 352.852> 913 63<339.375 401.843> 1031 66<431.323 585.94> 1049 63<166.121 287.278> 1185 62<274.193 383.546> 1376 63<285 388.797>
-LayerCount: 2
-Fore
-Refer: 178 70580 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Rr Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LllEe
-Encoding: 475 -1 475
-Width: 1035
-VWidth: 0
-Flags: W
-HStem: 6 80<578.794 765.874> 234 80<469.464 564.918> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<826.179 934.358> 435 80<526.388 620.534>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<195.562 332.211> 621 62<374.071 434.33> 725 62<283.809 382.738> 943 62<281.732 412.484>
-LayerCount: 2
-Fore
-Refer: 179 70581 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.LllAi
-Encoding: 476 -1 476
-Width: 1375
-VWidth: 0
-Flags: W
-HStem: 6 80<918.794 1105.87> 234 80<809.464 904.918> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1166.18 1274.36> 435 80<866.388 960.534>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<195.562 332.211> 961 62<374.071 434.33> 1065 62<283.809 382.738> 1283 62<281.732 412.484>
-LayerCount: 2
-Fore
-Refer: 179 70581 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_KEe
-Encoding: 477 -1 477
-Width: 1720
-VWidth: 0
-Flags: W
-HStem: 2 81<568.782 629.255 831.483 916.399 1129.09 1190.26 1392.66 1450.51> 252 81<99.72 224.326> 417 81<127.004 238.637> 427 81<552.703 695.436 891.411 1238.85 1437.33 1558.96>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<83.329 176.355> 942 63<151.984 289.137> 1066 63<83.4646 180.928> 1503 64<151.865 289.524> 1606 84<333.728 363.005>
-LayerCount: 2
-Fore
-Refer: 109 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_K Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_KAi
-Encoding: 478 -1 478
-Width: 2060
-VWidth: 0
-Flags: W
-HStem: 2 81<908.782 969.255 1171.48 1256.4 1469.09 1530.26 1732.66 1790.51> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 427 81<892.703 1035.44 1231.41 1578.85 1777.33 1898.96>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<83.329 176.355> 1282 63<151.984 289.137> 1406 63<83.4646 180.928> 1843 64<151.865 289.524> 1946 84<333.728 363.005>
-LayerCount: 2
-Fore
-Refer: 109 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_K Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_K_REe
-Encoding: 479 -1 479
-Width: 1740
-VWidth: 0
-Flags: W
-HStem: -178 81<1125.22 1399.92> 2 81<569.545 629.255 831.839 915.762 1117.05 1174.83 1377.84 1461.76> 252 81<99.72 224.326> 417 81<127.004 238.637> 425 81<548.247 695.436 892.009 1233.94 1424.96 1567.6>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2221 175.934> 942 63<151.382 289.791> 1052 63<83.3123 177.226> 1488 63<151.382 290.185> 1647 63<110.621 322.285>
-LayerCount: 2
-Fore
-Refer: 400 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_K_RAi
-Encoding: 480 -1 480
-Width: 2080
-VWidth: 0
-Flags: W
-HStem: -178 81<1465.22 1739.92> 2 81<909.545 969.255 1171.84 1255.76 1457.05 1514.83 1717.84 1801.76> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 425 81<888.247 1035.44 1232.01 1573.94 1764.96 1907.6>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2221 175.934> 1282 63<151.382 289.791> 1392 63<83.3123 177.226> 1828 63<151.382 290.185> 1987 63<110.621 322.285>
-LayerCount: 2
-Fore
-Refer: 400 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_TEe
-Encoding: 481 -1 481
-Width: 1618
-VWidth: 0
-Flags: W
-HStem: 1 81<568.782 626.847 832.133 916.37 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<877 878 1315.25 1461.58>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<83.3521 180.39> 942 63<151.23 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<161.985 364.777>
-LayerCount: 2
-Fore
-Refer: 224 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_T Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_TAi
-Encoding: 482 -1 482
-Width: 1958
-VWidth: 0
-Flags: W
-HStem: 1 81<908.782 966.847 1172.13 1256.37 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1217 1218 1655.25 1801.58>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<83.3521 180.39> 1282 63<151.23 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<161.985 364.777>
-LayerCount: 2
-Fore
-Refer: 224 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_T Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_T_YEe
-Encoding: 483 -1 483
-Width: 1740
-VWidth: 0
-Flags: W
-HStem: -237 81<1430.21 1562.46> 1 81<569.545 626.847 832.714 915.564 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<877.377 899.955 921 961.588 1315.25 1460.44>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1347 63<-149.92 -73.1522> 1524 64<165.713 365.295> 1646 64<-60.7345 483.33>
-LayerCount: 2
-Fore
-Refer: 402 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_T_YAi
-Encoding: 484 -1 484
-Width: 2080
-VWidth: 0
-Flags: W
-HStem: -237 81<1770.21 1902.46> 1 81<909.545 966.847 1172.71 1255.56 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1217.38 1239.95 1261 1301.59 1655.25 1800.44>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1687 63<-149.92 -73.1522> 1864 64<165.713 365.295> 1986 64<-60.7345 483.33>
-LayerCount: 2
-Fore
-Refer: 402 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_T_REe
-Encoding: 485 -1 485
-Width: 1618
-VWidth: 0
-Flags: W
-HStem: -167 81<977.221 1254.52> 1 81<569.545 626.847 832.714 915.564 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<1315.25 1461.58> 425 81<548.247 683.691 877.775 1054.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<173.823 364.899>
-LayerCount: 2
-Fore
-Refer: 403 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_T_RAi
-Encoding: 486 -1 486
-Width: 1958
-VWidth: 0
-Flags: W
-HStem: -167 81<1317.22 1594.52> 1 81<909.545 966.847 1172.71 1255.56 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1655.25 1801.58> 425 81<888.247 1023.69 1217.78 1394.7>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<173.823 364.899>
-LayerCount: 2
-Fore
-Refer: 403 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ai
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_SsEe
-Encoding: 487 -1 487
-Width: 1737
-VWidth: 0
-Flags: W
-HStem: 0 81<569 626.847 833.178 886.912 1137 1198 1390 1613.29> 252 81<99.72 224.326> 407 81<1421.54 1519.7> 417 81<127.004 238.637> 423 81<548.247 684.536 877.067 1003.12>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<258.67 337.495> 505 64<85.3108 181.573> 942 63<150.766 289.812> 1081 64<81.0282 324.953> 1348 64<329.796 442.5>
-LayerCount: 2
-Fore
-Refer: 81 -1 N 1 0 0 1 365 0 2
-Refer: 33 70594 N 1 0 0 1 0 0 2
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ee
-Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ee
-Colour: 4fd5ff
-EndChar
-
-StartChar: Wa.K_SsAi
-Encoding: 488 -1 488
-Width: 2077
-VWidth: 0
-Flags: W
-HStem: 0 81<909 966.847 1173.18 1226.91 1477 1538 1730 1953.29> 252 81<99.72 224.326 439.72 564.326> 407 81<1761.54 1859.7> 417 81<127.004 238.637 467.004 578.637> 423 81<888.247 1024.54 1217.07 1343.12>
-VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<258.67 337.495> 845 64<85.3108 181.573> 1282 63<150.766 289.812> 1421 64<81.0282 324.953> 1688 64<329.796 442.5>
-LayerCount: 2
-Fore
-Refer: 81 -1 N 1 0 0 1 705 0 2
-Refer: 371 70597 N 1 0 0 1 0 0 2
-LCarets2: 3 0 0 0
-Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ai
-Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ai
-Colour: 4fd5ff
-EndChar
-
 StartChar: Syl.K_KR
-Encoding: 489 -1 489
+Encoding: 1114416 -1 405
 Width: 1384
 VWidth: 1000
 Flags: W
@@ -25991,7 +24699,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_TR
-Encoding: 490 -1 490
+Encoding: 1114417 -1 406
 Width: 1285
 VWidth: 1000
 Flags: W
@@ -26058,6 +24766,1278 @@ SplineSet
 EndSplineSet
 Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.T Uml.VocR
 Colour: ff00
+EndChar
+
+StartChar: Wa.KEe
+Encoding: 1114418 -1 407
+Width: 1159
+VWidth: 0
+Flags: W
+HStem: 1 81<569.686 626.847 832.714 914.397> 252 81<99.72 224.326> 417 81<127.004 238.637> 425 81<548.247 682.75 877.085 999.743>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.4614 181.301> 942 63<151.358 291.103>
+LayerCount: 2
+Fore
+Refer: 53 70546 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.KAi
+Encoding: 1114419 -1 408
+Width: 1499
+VWidth: 0
+Flags: W
+HStem: 1 81<909.686 966.847 1172.71 1254.4> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 425 81<888.247 1022.75 1217.09 1339.74>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.4614 181.301> 1282 63<151.358 291.103>
+LayerCount: 2
+Fore
+Refer: 53 70546 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.KhEe
+Encoding: 1114420 -1 409
+Width: 1196
+VWidth: 0
+Flags: W
+HStem: -4 81<470.749 585.431 848.24 1058.73> 210 81<487.66 581.105> 252 81<99.72 224.326> 417 81<127.004 238.637> 422 81<563.097 689.3>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<84.2148 175.386> 602 63<81.5 189.606> 811 63<149.091 302.775> 1102 64<125.298 411.662>
+LayerCount: 2
+Fore
+Refer: 14 70547 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Kh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.KhAi
+Encoding: 1114421 -1 410
+Width: 1536
+VWidth: 0
+Flags: W
+HStem: -4 81<810.749 925.431 1188.24 1398.73> 210 81<827.66 921.105> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 422 81<903.097 1029.3>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<84.2148 175.386> 942 63<81.5 189.606> 1151 63<149.091 302.775> 1442 64<125.298 411.662>
+LayerCount: 2
+Fore
+Refer: 14 70547 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Kh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.GEe
+Encoding: 1114422 -1 411
+Width: 1162
+VWidth: 0
+Flags: W
+HStem: -5 80<519.44 643.734 894.887 990.872> 252 81<99.72 224.326> 411 81<544.073 656.618> 417 80<873.268 1000.31> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<144.946 317.957> 1069 63<150.413 321.076>
+LayerCount: 2
+Fore
+Refer: 35 70548 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.G Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.GAi
+Encoding: 1114423 -1 412
+Width: 1502
+VWidth: 0
+Flags: W
+HStem: -5 80<859.44 983.734 1234.89 1330.87> 252 81<99.72 224.326 439.72 564.326> 411 81<884.073 996.618> 417 80<1213.27 1340.31> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<144.946 317.957> 1409 63<150.413 321.076>
+LayerCount: 2
+Fore
+Refer: 35 70548 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.G Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.GhEe
+Encoding: 1114424 -1 413
+Width: 1453
+VWidth: 0
+Flags: W
+HStem: 0 81<720.197 919.767 1058.76 1254.59> 252 81<99.72 224.326> 417 81<127.004 238.637 513.301 607.565 921.949 1011.3 1240.61 1314.16>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<129.16 346.396> 612 63<107.159 310.243> 638 63<223.199 406.66> 844 63<260.236 404.347> 1053 64<219.88 381.2> 1359 64<186.525 355.953>
+LayerCount: 2
+Fore
+Refer: 10 70549 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Gh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.GhAi
+Encoding: 1114425 -1 414
+Width: 1793
+VWidth: 0
+Flags: W
+HStem: 0 81<1060.2 1259.77 1398.76 1594.59> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 853.301 947.565 1261.95 1351.3 1580.61 1654.16>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<129.16 346.396> 952 63<107.159 310.243> 978 63<223.199 406.66> 1184 63<260.236 404.347> 1393 64<219.88 381.2> 1699 64<186.525 355.953>
+LayerCount: 2
+Fore
+Refer: 10 70549 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Gh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NgEe
+Encoding: 1114426 -1 415
+Width: 1172
+VWidth: 0
+Flags: W
+HStem: -2 21G<1027.5 1035> 113 81<492.221 576.002> 243 81<887.771 973.117> 252 81<99.72 224.326> 257 78<482.449 584.368> 416 81<534.006 656.567 865.192 1046.77> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 587 64<205.613 254.92> 975 67<20.0055 106> 1078 64<299.584 397.28>
+LayerCount: 2
+Fore
+Refer: 28 70550 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ng Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NgAi
+Encoding: 1114427 -1 416
+Width: 1512
+VWidth: 0
+Flags: W
+HStem: -2 21G<1367.5 1375> 113 81<832.221 916.002> 243 81<1227.77 1313.12> 252 81<99.72 224.326 439.72 564.326> 257 78<822.449 924.368> 416 81<874.006 996.567 1205.19 1386.77> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 927 64<205.613 254.92> 1315 67<20.0055 106> 1418 64<299.584 397.28>
+LayerCount: 2
+Fore
+Refer: 28 70550 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ng Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.CEe
+Encoding: 1114428 -1 417
+Width: 1146
+VWidth: 0
+Flags: W
+HStem: 0 81<680 1023.73> 252 81<99.72 224.326> 416 81<563.721 704.181> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 442 62<299.67 355.671> 758 63<256.859 380.879> 1052 64<110.561 314.567>
+LayerCount: 2
+Fore
+Refer: 31 70551 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.C Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.CAi
+Encoding: 1114429 -1 418
+Width: 1486
+VWidth: 0
+Flags: W
+HStem: 0 81<1020 1363.73> 252 81<99.72 224.326 439.72 564.326> 416 81<903.721 1044.18> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 782 62<299.67 355.671> 1098 63<256.859 380.879> 1392 64<110.561 314.567>
+LayerCount: 2
+Fore
+Refer: 31 70551 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.C Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ChEe
+Encoding: 1114430 -1 419
+Width: 1307
+VWidth: 0
+Flags: W
+HStem: -4 81<506.154 581.156 811.788 849.649 1081.12 1153.34> 169 81<505.99 613.903 1063.15 1175.67> 252 81<99.72 224.326> 414 81<565.864 710.208 967.191 1115.16> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 614 64<112.635 166.778> 747 63<78.0176 390.819> 860 64<83.5134 367.864> 994 63<94.3255 199> 1213 64<170.069 312.299>
+LayerCount: 2
+Fore
+Refer: 6 70552 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ch Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ChAi
+Encoding: 1114431 -1 420
+Width: 1647
+VWidth: 0
+Flags: W
+HStem: -4 81<846.154 921.156 1151.79 1189.65 1421.12 1493.34> 169 81<845.99 953.903 1403.15 1515.67> 252 81<99.72 224.326 439.72 564.326> 414 81<905.864 1050.21 1307.19 1455.16> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 954 64<112.635 166.778> 1087 63<78.0176 390.819> 1200 64<83.5134 367.864> 1334 63<94.3255 199> 1553 64<170.069 312.299>
+LayerCount: 2
+Fore
+Refer: 6 70552 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ch Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.JEe
+Encoding: 1114432 -1 421
+Width: 1755
+VWidth: 0
+Flags: W
+HStem: 3 81<492.033 581.933 1061.64 1200.1 1493.63 1625.9> 185 81<1519.93 1610.71> 209 81<486.539 575.871> 252 81<99.72 224.326> 409 81<589.658 710.378> 417 81<127.004 238.637> 418 81<930.043 1006.06 1429.38 1551.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 622 64<79.5 179.624> 794 62<67.0068 318.473> 997 64<83.1461 180.576> 1050 64<249.885 381.24> 1415 64<89.0236 144.871> 1661 64<138.58 279.84>
+LayerCount: 2
+Fore
+Refer: 52 70553 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.J Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.JAi
+Encoding: 1114433 -1 422
+Width: 2095
+VWidth: 0
+Flags: W
+HStem: 3 81<832.033 921.933 1401.64 1540.1 1833.63 1965.9> 185 81<1859.93 1950.71> 209 81<826.539 915.871> 252 81<99.72 224.326 439.72 564.326> 409 81<929.658 1050.38> 417 81<127.004 238.637 467.004 578.637> 418 81<1270.04 1346.06 1769.38 1891.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 962 64<79.5 179.624> 1134 62<67.0068 318.473> 1337 64<83.1461 180.576> 1390 64<249.885 381.24> 1755 64<89.0236 144.871> 2001 64<138.58 279.84>
+LayerCount: 2
+Fore
+Refer: 52 70553 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.J Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.JhEe
+Encoding: 1114434 -1 423
+Width: 1427
+VWidth: 0
+Flags: W
+HStem: 0 81<855.107 983.061 1102.53 1251.28> 17 81<647.952 741.864> 222 81<1246.81 1323.79> 241 81<585 686.961> 252 81<99.72 224.326> 417 81<127.004 238.637> 424 81<547.672 713.376 1220.35 1297.8>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<129.558 336.576> 545 63<141.583 258.589> 796 63<187.075 330.026> 1006 62<216.828 327.373> 1132 64<340.67 441.5> 1333 64<307.485 386.857>
+LayerCount: 2
+Fore
+Refer: 13 70554 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Jh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.JhAi
+Encoding: 1114435 -1 424
+Width: 1767
+VWidth: 0
+Flags: W
+HStem: 0 81<1195.11 1323.06 1442.53 1591.28> 17 81<987.952 1081.86> 222 81<1586.81 1663.79> 241 81<925 1026.96> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 424 81<887.672 1053.38 1560.35 1637.8>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<129.558 336.576> 885 63<141.583 258.589> 1136 63<187.075 330.026> 1346 62<216.828 327.373> 1472 64<340.67 441.5> 1673 64<307.485 386.857>
+LayerCount: 2
+Fore
+Refer: 13 70554 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Jh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NyEe
+Encoding: 1114436 -1 425
+Width: 1642
+VWidth: 0
+Flags: W
+HStem: -179 81<707.703 1244.94> -162 81<332.644 739.297> 8 81<473.315 564.476 924.95 1006.97> 252 81<99.72 224.326> 417 81<127.004 238.637 543.561 661.153 820.055 954.133 1083.02 1186.23 1366.98 1475.61>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 574 64<58 172.58> 849 63<99.0102 233.381> 1016 63<154.935 336.359> 1201 62<185.67 289.437> 1549 63<96.8663 312.108>
+LayerCount: 2
+Fore
+Refer: 67 70555 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ny Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NyAi
+Encoding: 1114437 -1 426
+Width: 1982
+VWidth: 0
+Flags: W
+HStem: -179 81<1047.7 1584.94> -162 81<672.644 1079.3> 8 81<813.315 904.476 1264.95 1346.97> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 883.561 1001.15 1160.06 1294.13 1423.02 1526.23 1706.98 1815.61>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 914 64<58 172.58> 1189 63<99.0102 233.381> 1356 63<154.935 336.359> 1541 62<185.67 289.437> 1889 63<96.8663 312.108>
+LayerCount: 2
+Fore
+Refer: 67 70555 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ny Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TtEe
+Encoding: 1114438 -1 427
+Width: 901
+VWidth: 0
+Flags: W
+HStem: 1 81<511.678 664.987> 252 81<99.72 224.326> 263 81<652.392 806.069> 417 81<127.004 238.637> 419 81<629.695 758.829>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 65<137.555 288.715> 808 63<193.1 262.571>
+LayerCount: 2
+Fore
+Refer: 58 70556 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Tt Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TtAi
+Encoding: 1114439 -1 428
+Width: 1241
+VWidth: 0
+Flags: W
+HStem: 1 81<851.678 1004.99> 252 81<99.72 224.326 439.72 564.326> 263 81<992.392 1146.07> 417 81<127.004 238.637 467.004 578.637> 419 81<969.695 1098.83>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 65<137.555 288.715> 1148 63<193.1 262.571>
+LayerCount: 2
+Fore
+Refer: 58 70556 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Tt Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TthEe
+Encoding: 1114440 -1 429
+Width: 933
+VWidth: 0
+Flags: W
+HStem: 0 81<574.41 741.987> 196 78<621.828 708.312> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<589.79 728.457>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<172.391 291.491> 618 94<200.785 269.154> 840 63<173.566 311.032>
+LayerCount: 2
+Fore
+Refer: 19 70557 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Tth Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TthAi
+Encoding: 1114441 -1 430
+Width: 1273
+VWidth: 0
+Flags: W
+HStem: 0 81<914.41 1081.99> 196 78<961.828 1048.31> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<929.79 1068.46>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<172.391 291.491> 958 94<200.785 269.154> 1180 63<173.566 311.032>
+LayerCount: 2
+Fore
+Refer: 19 70557 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Tth Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DdEe
+Encoding: 1114442 -1 431
+Width: 1100
+VWidth: 0
+Flags: W
+HStem: 0 80<522.161 657.498 832.215 937.594> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 81<469.379 541.746>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<340.394 410.011> 395 80<340.394 417.74> 555 63<315.227 408> 723 62<316.916 460.373> 745 63<181.758 422.107> 1006 64<155.451 358.55>
+LayerCount: 2
+Fore
+Refer: 64 70558 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Dd Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DdAi
+Encoding: 1114443 -1 432
+Width: 1440
+VWidth: 0
+Flags: W
+HStem: 0 80<862.161 997.498 1172.21 1277.59> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 81<809.379 881.746>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<340.394 410.011> 735 80<340.394 417.74> 895 63<315.227 408> 1063 62<316.916 460.373> 1085 63<181.758 422.107> 1346 64<155.451 358.55>
+LayerCount: 2
+Fore
+Refer: 64 70558 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Dd Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DdhEe
+Encoding: 1114444 -1 433
+Width: 1175
+VWidth: 0
+Flags: W
+HStem: 1 81<567.716 688.922 860.871 966.464> 210 81<974.184 1051.12> 252 81<99.72 224.326> 416 81<499.134 585.64 989.747 1053.91> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<274.525 372.325> 476 64<97.834 188.423> 754 64<143.243 355.775> 894 64<298.334 381.361> 1081 64<299.974 380.569>
+LayerCount: 2
+Fore
+Refer: 25 70559 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ddh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DdhAi
+Encoding: 1114445 -1 434
+Width: 1515
+VWidth: 0
+Flags: W
+HStem: 1 81<907.716 1028.92 1200.87 1306.46> 210 81<1314.18 1391.12> 252 81<99.72 224.326 439.72 564.326> 416 81<839.134 925.64 1329.75 1393.91> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<274.525 372.325> 816 64<97.834 188.423> 1094 64<143.243 355.775> 1234 64<298.334 381.361> 1421 64<299.974 380.569>
+LayerCount: 2
+Fore
+Refer: 25 70559 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ddh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NnEe
+Encoding: 1114446 -1 435
+Width: 1532
+VWidth: 0
+Flags: W
+HStem: 2 81<503.516 611.533> 181 81<518.438 600.988> 252 81<99.72 224.326> 417 81<127.004 238.637> 422 80<557.508 721.368 924.207 1052.07 1259.97 1364.59>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 626 64<55 166.992> 785 66<23.0174 331.122> 1130 63<16.9908 315.984> 1438 64<136.042 348.449>
+LayerCount: 2
+Fore
+Refer: 17 70560 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Nn Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NnAi
+Encoding: 1114447 -1 436
+Width: 1872
+VWidth: 0
+Flags: W
+HStem: 2 81<843.516 951.533> 181 81<858.438 940.988> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 422 80<897.508 1061.37 1264.21 1392.07 1599.97 1704.59>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 966 64<55 166.992> 1125 66<23.0174 331.122> 1470 63<16.9908 315.984> 1778 64<136.042 348.449>
+LayerCount: 2
+Fore
+Refer: 17 70560 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Nn Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TEe
+Encoding: 1114448 -1 437
+Width: 1202
+VWidth: 0
+Flags: W
+HStem: 1 81<718.389 807.727> 252 81<99.72 224.326> 417 81<127.004 238.637> 423 81<573.867 721.964 904.831 1038.91>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<142.657 313.269> 649 63<87.553 208.133> 837 63<110.287 273.473> 1108 64<162.868 364.984>
+LayerCount: 2
+Fore
+Refer: 61 70561 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.T Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.TAi
+Encoding: 1114449 -1 438
+Width: 1542
+VWidth: 0
+Flags: W
+HStem: 1 81<1058.39 1147.73> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 423 81<913.867 1061.96 1244.83 1378.91>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<142.657 313.269> 989 63<87.553 208.133> 1177 63<110.287 273.473> 1448 64<162.868 364.984>
+LayerCount: 2
+Fore
+Refer: 61 70561 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.T Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ThEe
+Encoding: 1114450 -1 439
+Width: 1163
+VWidth: 0
+Flags: W
+HStem: 2 81<617.656 868.547> 252 81<99.72 224.326> 417 81<127.004 238.637 860.647 995.304> 481 20G<472 487.5>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<207.501 354.189> 719 63<238.694 345.396> 1069 64<240.604 360.014>
+LayerCount: 2
+Fore
+Refer: 22 70562 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Th Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ThAi
+Encoding: 1114451 -1 440
+Width: 1503
+VWidth: 0
+Flags: W
+HStem: 2 81<957.656 1208.55> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 1200.65 1335.3> 481 20G<812 827.5>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<207.501 354.189> 1059 63<238.694 345.396> 1409 64<240.604 360.014>
+LayerCount: 2
+Fore
+Refer: 22 70562 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Th Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DEe
+Encoding: 1114452 -1 441
+Width: 879
+VWidth: 0
+Flags: W
+HStem: -2 81<568.64 727.042> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<616.529 739.254>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 651 161<259 365> 783 66<136.251 202.641>
+LayerCount: 2
+Fore
+Refer: 32 70563 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.D Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DAi
+Encoding: 1114453 -1 442
+Width: 1219
+VWidth: 0
+Flags: W
+HStem: -2 81<908.64 1067.04> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<956.529 1079.25>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 991 161<259 365> 1123 66<136.251 202.641>
+LayerCount: 2
+Fore
+Refer: 32 70563 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.D Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DhEe
+Encoding: 1114454 -1 443
+Width: 1159
+VWidth: 0
+Flags: W
+HStem: 0 81<531.139 644.161 870.149 982.299> 252 81<99.72 224.326> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<153.087 300.174> 728 61<186.125 272.358> 1066 63<168.618 314.266>
+LayerCount: 2
+Fore
+Refer: 7 70564 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Dh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.DhAi
+Encoding: 1114455 -1 444
+Width: 1499
+VWidth: 0
+Flags: W
+HStem: 0 81<871.139 984.161 1210.15 1322.3> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<153.087 300.174> 1068 61<186.125 272.358> 1406 63<168.618 314.266>
+LayerCount: 2
+Fore
+Refer: 7 70564 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Dh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NEe
+Encoding: 1114456 -1 445
+Width: 1197
+VWidth: 0
+Flags: W
+HStem: 1 21G<514.758 532 751.5 763 1068.5 1080> 252 81<99.72 224.326> 416 81<509.487 625.198 919.02 1081.51> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<152.443 358.401> 1104 63<203.831 400.04>
+LayerCount: 2
+Fore
+Refer: 56 70565 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.N Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.NAi
+Encoding: 1114457 -1 446
+Width: 1537
+VWidth: 0
+Flags: W
+HStem: 1 21G<854.758 872 1091.5 1103 1408.5 1420> 252 81<99.72 224.326 439.72 564.326> 416 81<849.487 965.198 1259.02 1421.51> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<152.443 358.401> 1444 63<203.831 400.04>
+LayerCount: 2
+Fore
+Refer: 56 70565 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.N Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.PEe
+Encoding: 1114458 -1 447
+Width: 1328
+VWidth: 0
+Flags: W
+HStem: -4 81<832 1159.06> 252 81<99.72 224.326> 326 81<584.4 744.706> 417 81<127.004 238.637> 418 81<1042.79 1139.48>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.676> 819 63<182.165 277.825> 1234 64<145.734 302.691>
+LayerCount: 2
+Fore
+Refer: 57 70566 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.P Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.PAi
+Encoding: 1114459 -1 448
+Width: 1668
+VWidth: 0
+Flags: W
+HStem: -4 81<1172 1499.06> 252 81<99.72 224.326 439.72 564.326> 326 81<924.4 1084.71> 417 81<127.004 238.637 467.004 578.637> 418 81<1382.79 1479.48>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.676> 1159 63<182.165 277.825> 1574 64<145.734 302.691>
+LayerCount: 2
+Fore
+Refer: 57 70566 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.P Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.PhEe
+Encoding: 1114460 -1 449
+Width: 1328
+VWidth: 0
+Flags: W
+HStem: -4 81<832 1159.06> 223 81<1058.1 1169.67> 252 81<99.72 224.326> 326 81<584.632 744.672> 417 81<127.004 238.637> 418 81<1052.96 1141.94>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.691> 819 63<182.165 277.825> 976 63<318.845 436.5> 1234 64<145.734 256.804>
+LayerCount: 2
+Fore
+Refer: 18 70567 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ph Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.PhAi
+Encoding: 1114461 -1 450
+Width: 1668
+VWidth: 0
+Flags: W
+HStem: -4 81<1172 1499.06> 223 81<1398.1 1509.67> 252 81<99.72 224.326 439.72 564.326> 326 81<924.632 1084.67> 417 81<127.004 238.637 467.004 578.637> 418 81<1392.96 1481.94>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.691> 1159 63<182.165 277.825> 1316 63<318.845 436.5> 1574 64<145.734 256.804>
+LayerCount: 2
+Fore
+Refer: 18 70567 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ph Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.BEe
+Encoding: 1114462 -1 451
+Width: 1252
+VWidth: 0
+Flags: W
+HStem: 8 81<497.664 557.627 956.394 1103.31> 147 81<468.515 568.498> 252 81<99.72 224.326> 415 80<523.351 636.205 769.607 896.345> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<229.525 336.452> 679 62<149.627 269.645> 942 64<194.998 371.002> 1158 64<150.434 411.325>
+LayerCount: 2
+Fore
+Refer: 30 70568 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.B Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.BAi
+Encoding: 1114463 -1 452
+Width: 1592
+VWidth: 0
+Flags: W
+HStem: 8 81<837.664 897.627 1296.39 1443.31> 147 81<808.515 908.498> 252 81<99.72 224.326 439.72 564.326> 415 80<863.351 976.205 1109.61 1236.35> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<229.525 336.452> 1019 62<149.627 269.645> 1282 64<194.998 371.002> 1498 64<150.434 411.325>
+LayerCount: 2
+Fore
+Refer: 30 70568 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.B Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.BhEe
+Encoding: 1114464 -1 453
+Width: 1452
+VWidth: 0
+Flags: W
+HStem: 2 79<803 1048> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<573.892 759.112 1070.3 1250>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<142.956 315.211> 802 63<216.689 383.687> 952 63<204.879 364.829> 1358 64<150.83 330.092>
+LayerCount: 2
+Fore
+Refer: 5 70569 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Bh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.BhAi
+Encoding: 1114465 -1 454
+Width: 1792
+VWidth: 0
+Flags: W
+HStem: 2 79<1143 1388> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<913.892 1099.11 1410.3 1590>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<142.956 315.211> 1142 63<216.689 383.687> 1292 63<204.879 364.829> 1698 64<150.83 330.092>
+LayerCount: 2
+Fore
+Refer: 5 70569 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Bh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.MEe
+Encoding: 1114466 -1 455
+Width: 961
+VWidth: 0
+Flags: W
+HStem: -7 81<600.804 846.803> 3 73<599 703.314> 252 81<99.72 224.326> 417 81<127.004 238.637 550.022 664.317>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 453 64<308.878 384.373> 701 64<281.28 396.557> 867 64<78.5 181.301>
+LayerCount: 2
+Fore
+Refer: 55 70570 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.M Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.MAi
+Encoding: 1114467 -1 456
+Width: 1301
+VWidth: 0
+Flags: W
+HStem: -7 81<940.804 1186.8> 3 73<939 1043.31> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 890.022 1004.32>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 793 64<308.878 384.373> 1041 64<281.28 396.557> 1207 64<78.5 181.301>
+LayerCount: 2
+Fore
+Refer: 55 70570 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.M Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.YEe
+Encoding: 1114468 -1 457
+Width: 1229
+VWidth: 0
+Flags: W
+HStem: -4 81<502.543 710.039 888.106 1042.35> 211 81<484.571 571.356> 252 81<99.72 224.326> 417 81<127.004 238.637> 421 81<627.849 781.501>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 390 63<108 176.01> 529 63<314.587 388.655> 874 64<220.349 352.486> 1136 63<167.905 329.641>
+LayerCount: 2
+Fore
+Refer: 66 70571 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Y Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.YAi
+Encoding: 1114469 -1 458
+Width: 1569
+VWidth: 0
+Flags: W
+HStem: -4 81<842.543 1050.04 1228.11 1382.35> 211 81<824.571 911.356> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 421 81<967.849 1121.5>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 730 63<108 176.01> 869 63<314.587 388.655> 1214 64<220.349 352.486> 1476 63<167.905 329.641>
+LayerCount: 2
+Fore
+Refer: 66 70571 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Y Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.REe
+Encoding: 1114470 -1 459
+Width: 985
+VWidth: 0
+Flags: W
+HStem: -6 81<700.013 820.902> 219 81<711.074 812.105> 252 81<99.72 224.326> 417 81<127.004 238.637> 419 81<602.191 782.39>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<130.643 272.529> 610 64<91.3442 220> 892 63<145.926 307.683>
+LayerCount: 2
+Fore
+Refer: 59 70572 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.R Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.RAi
+Encoding: 1114471 -1 460
+Width: 1325
+VWidth: 0
+Flags: W
+HStem: -6 81<1040.01 1160.9> 219 81<1051.07 1152.11> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 419 81<942.191 1122.39>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<130.643 272.529> 950 64<91.3442 220> 1232 63<145.926 307.683>
+LayerCount: 2
+Fore
+Refer: 59 70572 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.R Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LEe
+Encoding: 1114472 -1 461
+Width: 979
+VWidth: 0
+Flags: W
+HStem: -1 81<597.586 774.64> 219 81<493.056 593.793> 252 81<99.72 224.326> 417 81<127.004 238.637> 419 81<508.779 587.535>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<204.117 271> 588 64<325.014 418.944> 886 63<191.82 335.844>
+LayerCount: 2
+Fore
+Refer: 54 70573 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.L Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LAi
+Encoding: 1114473 -1 462
+Width: 1319
+VWidth: 0
+Flags: W
+HStem: -1 81<937.586 1114.64> 219 81<833.056 933.793> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 419 81<848.779 927.535>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<204.117 271> 928 64<325.014 418.944> 1226 63<191.82 335.844>
+LayerCount: 2
+Fore
+Refer: 54 70573 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.L Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.VEe
+Encoding: 1114474 -1 463
+Width: 1102
+VWidth: 0
+Flags: W
+HStem: 0 21G<494.501 516> 2 81<759.069 881.865> 252 81<99.72 224.326> 417 81<127.004 238.637> 418 81<573.212 700.219>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<137.374 299.511> 738 63<198.161 387.642> 1009 63<199.305 353.652>
+LayerCount: 2
+Fore
+Refer: 63 70574 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.V Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.VAi
+Encoding: 1114475 -1 464
+Width: 1442
+VWidth: 0
+Flags: W
+HStem: 0 21G<834.501 856> 2 81<1099.07 1221.87> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<913.212 1040.22>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<137.374 299.511> 1078 63<198.161 387.642> 1349 63<199.305 353.652>
+LayerCount: 2
+Fore
+Refer: 63 70574 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.V Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ShEe
+Encoding: 1114476 -1 465
+Width: 1248
+VWidth: 0
+Flags: W
+HStem: -1 81<524.544 644.114 970.085 1092.95> 220 81<957.83 1096.99> 252 81<99.72 224.326> 413 81<524.484 642.819> 417 81<127.004 238.637> 420 80<875.346 1046.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<171.551 343.363> 875 64<107.044 200.5> 1155 63<240 304.129>
+LayerCount: 2
+Fore
+Refer: 21 70575 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Sh Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.ShAi
+Encoding: 1114477 -1 466
+Width: 1588
+VWidth: 0
+Flags: W
+HStem: -1 81<864.544 984.114 1310.09 1432.95> 220 81<1297.83 1436.99> 252 81<99.72 224.326 439.72 564.326> 413 81<864.484 982.819> 417 81<127.004 238.637 467.004 578.637> 420 80<1215.35 1386.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<171.551 343.363> 1215 64<107.044 200.5> 1495 63<240 304.129>
+LayerCount: 2
+Fore
+Refer: 21 70575 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Sh Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.SsEe
+Encoding: 1114478 -1 467
+Width: 1303
+VWidth: 0
+Flags: W
+HStem: 0 21G<514.445 526 721.5 734> 252 81<99.72 224.326> 326 81<584.632 744.672> 408 81<1041.38 1138.49> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<104.84 213.691> 819 63<182.165 277.825> 968 64<326.426 443.5>
+LayerCount: 2
+Fore
+Refer: 65 70576 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ss Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.SsAi
+Encoding: 1114479 -1 468
+Width: 1643
+VWidth: 0
+Flags: W
+HStem: 0 21G<854.445 866 1061.5 1074> 252 81<99.72 224.326 439.72 564.326> 326 81<924.632 1084.67> 408 81<1381.38 1478.49> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<104.84 213.691> 1159 63<182.165 277.825> 1308 64<326.426 443.5>
+LayerCount: 2
+Fore
+Refer: 65 70576 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ss Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.SEe
+Encoding: 1114480 -1 469
+Width: 1139
+VWidth: 0
+Flags: W
+HStem: -1 81<803.741 944.1> 252 81<99.72 224.326> 417 81<127.004 238.637 490.987 575.041 744.147 831.191>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 390 63<302.993 409.575> 867 64<290.459 391.827> 1046 63<191.837 381.124>
+LayerCount: 2
+Fore
+Refer: 60 70577 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.S Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.SAi
+Encoding: 1114481 -1 470
+Width: 1479
+VWidth: 0
+Flags: W
+HStem: -1 81<1143.74 1284.1> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 830.987 915.041 1084.15 1171.19>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 730 63<302.993 409.575> 1207 64<290.459 391.827> 1386 63<191.837 381.124>
+LayerCount: 2
+Fore
+Refer: 60 70577 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.S Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.HEe
+Encoding: 1114482 -1 471
+Width: 1145
+VWidth: 0
+Flags: W
+HStem: -5 80<705.009 791.075> 252 81<99.72 224.326> 414 80<522.363 629.351 894.017 998.926> 417 81<127.004 238.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 64<75.6995 342.368> 639 63<75.2871 410.524> 814 63<98.9746 396.496> 1051 64<91.8354 357.783>
+LayerCount: 2
+Fore
+Refer: 50 70578 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.H Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.HAi
+Encoding: 1114483 -1 472
+Width: 1485
+VWidth: 0
+Flags: W
+HStem: -5 80<1045.01 1131.08> 252 81<99.72 224.326 439.72 564.326> 414 80<862.363 969.351 1234.02 1338.93> 417 81<127.004 238.637 467.004 578.637>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 64<75.6995 342.368> 979 63<75.2871 410.524> 1154 63<98.9746 396.496> 1391 64<91.8354 357.783>
+LayerCount: 2
+Fore
+Refer: 50 70578 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.H Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LlEe
+Encoding: 1114484 -1 473
+Width: 913
+VWidth: 0
+Flags: W
+HStem: -1 72<474.118 867.978> 113 72<596.5 822.338> 126 72<492.463 782> 228 72<451.999 530.191> 248 72<677.875 742.438> 252 81<99.72 224.326> 417 81<127.004 238.637> 427 72<550.204 754.466>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 56<302.293 366.341> 539 57<280.5 379.699> 826 57<191.34 239.762>
+LayerCount: 2
+Fore
+Refer: 15 70579 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ll Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LlAi
+Encoding: 1114485 -1 474
+Width: 1253
+VWidth: 0
+Flags: W
+HStem: -1 72<814.118 1207.98> 113 72<936.5 1162.34> 126 72<832.463 1122> 228 72<791.999 870.191> 248 72<1017.88 1082.44> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 427 72<890.204 1094.47>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 56<302.293 366.341> 879 57<280.5 379.699> 1166 57<191.34 239.762>
+LayerCount: 2
+Fore
+Refer: 15 70579 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ll Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.RrEe
+Encoding: 1114486 -1 475
+Width: 1129
+VWidth: 0
+Flags: W
+HStem: -3 80<522.981 636.47 840.362 960.741> 177 79<928.694 1012.3> 209 82<463.243 522.717> 252 81<99.72 224.326> 403 79<499.952 571.753> 412 192<710.629 736.988> 417 81<127.004 238.637> 423 80<946.423 1012.87>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<144.325 222 291 352.852> 573 63<339.375 401.843> 691 66<431.323 585.94> 709 63<166.121 287.278> 845 62<274.193 383.546> 1036 63<285 388.797>
+LayerCount: 2
+Fore
+Refer: 178 70580 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Rr Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.RrAi
+Encoding: 1114487 -1 476
+Width: 1469
+VWidth: 0
+Flags: W
+HStem: -3 80<862.981 976.47 1180.36 1300.74> 177 79<1268.69 1352.3> 209 82<803.243 862.717> 252 81<99.72 224.326 439.72 564.326> 403 79<839.952 911.753> 412 192<1050.63 1076.99> 417 81<127.004 238.637 467.004 578.637> 423 80<1286.42 1352.87>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<144.325 222 291 352.852> 913 63<339.375 401.843> 1031 66<431.323 585.94> 1049 63<166.121 287.278> 1185 62<274.193 383.546> 1376 63<285 388.797>
+LayerCount: 2
+Fore
+Refer: 178 70580 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Rr Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LllEe
+Encoding: 1114488 -1 477
+Width: 1035
+VWidth: 0
+Flags: W
+HStem: 6 80<578.794 765.874> 234 80<469.464 564.918> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<826.179 934.358> 435 80<526.388 620.534>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 63<195.562 332.211> 621 62<374.071 434.33> 725 62<283.809 382.738> 943 62<281.732 412.484>
+LayerCount: 2
+Fore
+Refer: 179 70581 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.LllAi
+Encoding: 1114489 -1 478
+Width: 1375
+VWidth: 0
+Flags: W
+HStem: 6 80<918.794 1105.87> 234 80<809.464 904.918> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1166.18 1274.36> 435 80<866.388 960.534>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 63<195.562 332.211> 961 62<374.071 434.33> 1065 62<283.809 382.738> 1283 62<281.732 412.484>
+LayerCount: 2
+Fore
+Refer: 179 70581 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_KEe
+Encoding: 1114490 -1 479
+Width: 1720
+VWidth: 0
+Flags: W
+HStem: 2 81<568.782 629.255 831.483 916.399 1129.09 1190.26 1392.66 1450.51> 252 81<99.72 224.326> 417 81<127.004 238.637> 427 81<552.703 695.436 891.411 1238.85 1437.33 1558.96>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<83.329 176.355> 942 63<151.984 289.137> 1066 63<83.4646 180.928> 1503 64<151.865 289.524> 1606 84<333.728 363.005>
+LayerCount: 2
+Fore
+Refer: 109 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_K Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_KAi
+Encoding: 1114491 -1 480
+Width: 2060
+VWidth: 0
+Flags: W
+HStem: 2 81<908.782 969.255 1171.48 1256.4 1469.09 1530.26 1732.66 1790.51> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 427 81<892.703 1035.44 1231.41 1578.85 1777.33 1898.96>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<83.329 176.355> 1282 63<151.984 289.137> 1406 63<83.4646 180.928> 1843 64<151.865 289.524> 1946 84<333.728 363.005>
+LayerCount: 2
+Fore
+Refer: 109 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_K Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_K_REe
+Encoding: 1114492 -1 481
+Width: 1740
+VWidth: 0
+Flags: W
+HStem: -178 81<1125.22 1399.92> 2 81<569.545 629.255 831.839 915.762 1117.05 1174.83 1377.84 1461.76> 252 81<99.72 224.326> 417 81<127.004 238.637> 425 81<548.247 695.436 892.009 1233.94 1424.96 1567.6>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2221 175.934> 942 63<151.382 289.791> 1052 63<83.3123 177.226> 1488 63<151.382 290.185> 1647 63<110.621 322.285>
+LayerCount: 2
+Fore
+Refer: 400 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_K_RAi
+Encoding: 1114493 -1 482
+Width: 2080
+VWidth: 0
+Flags: W
+HStem: -178 81<1465.22 1739.92> 2 81<909.545 969.255 1171.84 1255.76 1457.05 1514.83 1717.84 1801.76> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 425 81<888.247 1035.44 1232.01 1573.94 1764.96 1907.6>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2221 175.934> 1282 63<151.382 289.791> 1392 63<83.3123 177.226> 1828 63<151.382 290.185> 1987 63<110.621 322.285>
+LayerCount: 2
+Fore
+Refer: 400 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_TEe
+Encoding: 1114494 -1 483
+Width: 1618
+VWidth: 0
+Flags: W
+HStem: 1 81<568.782 626.847 832.133 916.37 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<877 878 1315.25 1461.58>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<83.3521 180.39> 942 63<151.23 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<161.985 364.777>
+LayerCount: 2
+Fore
+Refer: 224 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_T Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_TAi
+Encoding: 1114495 -1 484
+Width: 1958
+VWidth: 0
+Flags: W
+HStem: 1 81<908.782 966.847 1172.13 1256.37 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1217 1218 1655.25 1801.58>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<83.3521 180.39> 1282 63<151.23 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<161.985 364.777>
+LayerCount: 2
+Fore
+Refer: 224 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_T Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_T_YEe
+Encoding: 1114496 -1 485
+Width: 1740
+VWidth: 0
+Flags: W
+HStem: -237 81<1430.21 1562.46> 1 81<569.545 626.847 832.714 915.564 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<877.377 899.955 921 961.588 1315.25 1460.44>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1347 63<-149.92 -73.1522> 1524 64<165.713 365.295> 1646 64<-60.7345 483.33>
+LayerCount: 2
+Fore
+Refer: 402 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_T_YAi
+Encoding: 1114497 -1 486
+Width: 2080
+VWidth: 0
+Flags: W
+HStem: -237 81<1770.21 1902.46> 1 81<909.545 966.847 1172.71 1255.56 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1217.38 1239.95 1261 1301.59 1655.25 1800.44>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1687 63<-149.92 -73.1522> 1864 64<165.713 365.295> 1986 64<-60.7345 483.33>
+LayerCount: 2
+Fore
+Refer: 402 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_T_REe
+Encoding: 1114498 -1 487
+Width: 1618
+VWidth: 0
+Flags: W
+HStem: -167 81<977.221 1254.52> 1 81<569.545 626.847 832.714 915.564 1135.82 1235.75> 252 81<99.72 224.326> 417 81<127.004 238.637> 420 80<1315.25 1461.58> 425 81<548.247 683.691 877.775 1054.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<173.823 364.899>
+LayerCount: 2
+Fore
+Refer: 403 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_T_RAi
+Encoding: 1114499 -1 488
+Width: 1958
+VWidth: 0
+Flags: W
+HStem: -167 81<1317.22 1594.52> 1 81<909.545 966.847 1172.71 1255.56 1475.82 1575.75> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637> 420 80<1655.25 1801.58> 425 81<888.247 1023.69 1217.78 1394.7>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<173.823 364.899>
+LayerCount: 2
+Fore
+Refer: 403 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_SsEe
+Encoding: 1114500 -1 489
+Width: 1737
+VWidth: 0
+Flags: W
+HStem: 0 81<569 626.847 833.178 886.912 1137 1198 1390 1613.29> 252 81<99.72 224.326> 407 81<1421.54 1519.7> 417 81<127.004 238.637> 423 81<548.247 684.536 877.067 1003.12>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<258.67 337.495> 505 64<85.3108 181.573> 942 63<150.766 289.812> 1081 64<81.0282 324.953> 1348 64<329.796 442.5>
+LayerCount: 2
+Fore
+Refer: 81 -1 N 1 0 0 1 365 0 2
+Refer: 33 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ee
+Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.K_SsAi
+Encoding: 1114501 -1 490
+Width: 2077
+VWidth: 0
+Flags: W
+HStem: 0 81<909 966.847 1173.18 1226.91 1477 1538 1730 1953.29> 252 81<99.72 224.326 439.72 564.326> 407 81<1761.54 1859.7> 417 81<127.004 238.637 467.004 578.637> 423 81<888.247 1024.54 1217.07 1343.12>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<258.67 337.495> 845 64<85.3108 181.573> 1282 63<150.766 289.812> 1421 64<81.0282 324.953> 1688 64<329.796 442.5>
+LayerCount: 2
+Fore
+Refer: 81 -1 N 1 0 0 1 705 0 2
+Refer: 371 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ai
+Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ai
+Colour: 4fd5ff
 EndChar
 EndChars
 EndSplineFont

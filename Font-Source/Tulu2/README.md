@@ -16,11 +16,11 @@ If you did everything that requires rebuilding blue ligatures:
 # Colours in HTML
 * RED: really need redoing
 * ORANGE: synthesized rakar (hook-shaped final R) instead of true, bad but infeasible syllable
-* ↓ bad composition of main ligature
 
-Some chosen bad things:
-* KKvR: probably need ligature
-* KTT: need true ligature
+## Some chosen bad things
+* KTt: need true ligature
 * KTTh: need true ligature
-* KTRY: need true ligature
+* KTRY: need true ligature, or at least nicer subjoined Y
 * KTV: beautiful!, but there’s a special ligature
+* KSsNnY: need special subjoined NnY
+  * KSsNnYvR: unfeasible but overlaps
