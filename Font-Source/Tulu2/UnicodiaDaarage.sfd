@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733569736
+ModificationTime: 1733575970
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -143,7 +143,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 33 33 14
+WinInfo: 0 33 14
 BeginPrivate: 5
 BlueValues 22 [-5 0 502 502 744 744]
 StdHW 4 [81]
@@ -3169,15 +3169,15 @@ AnchorPoint: "U" -138 45 mark 0
 LayerCount: 2
 Fore
 SplineSet
--261 -66 m 0
- -261 0 -198 45 -136 45 c 0
- -71 45 -35 -33 -35 -89 c 0
- -35 -156 -69 -198 -135 -198 c 0
- -200 -198 -261 -126 -261 -66 c 0
--197 -114 m 1
- -190 -116 -183 -117 -176 -117 c 0
- -128 -117 -99 -83 -99 -36 c 1
- -137 -36 -194 -73 -197 -114 c 1
+-261 -66 m 4
+ -261 0 -198 45 -136 45 c 4
+ -71 45 -35 -33 -35 -89 c 4
+ -35 -156 -69 -198 -135 -198 c 4
+ -200 -198 -261 -126 -261 -66 c 4
+-197 -114 m 5
+ -190 -116 -183 -117 -176 -117 c 4
+ -128 -117 -99 -83 -99 -36 c 5
+ -137 -36 -194 -73 -197 -114 c 5
 EndSplineSet
 EndChar
 
@@ -11018,7 +11018,7 @@ AnchorPoint: "VocR" 666 119 basechar 0
 LayerCount: 2
 Fore
 Refer: 34 70609 S 1 0 0 1 259 -85 2
-Refer: 398 -1 N 1 0 0 1 0 0 2
+Refer: 397 -1 N 1 0 0 1 0 0 2
 Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2"
 Substitution2: "Link cons+-Ai-1" Wa.RrAi
 Substitution2: "Link cons+-Ee-1" Wa.RrEe
@@ -23665,63 +23665,42 @@ EndChar
 
 StartChar: Uml.VocRR
 Encoding: 70590 70590 382
-Width: 93
+Width: 0
 VWidth: 1000
-Flags: W
-HStem: -200 81<-530.567 -428.471> -92 81<-314.156 -212.06>
-VStem: 0 63<-62.6998 131.164>
+Flags: WO
+HStem: -299 56<-21.796 71.9569> -272 79<-222.257 -102.893> -118 67<-211.839 -101.399>
+VStem: -94 64<-182.385 -172 -81 123.742> 73 51<-241.331 -193.851>
+AnchorPoint: "VocR mark" -60 112 mark 0
+AnchorPoint: "VocR" -60 112 mark 0
 LayerCount: 2
 Fore
 SplineSet
--555.649414062 -247 m 1
- -532.649414062 -258 -500.649414062 -265 -472.649414062 -268 c 1
- -462.649414062 -261 -444.649414062 -260 -435.649414062 -254 c 0
- -407.649414062 -234 -418.649414062 -216 -414.649414062 -210 c 1
- -415.649414062 -210 l 1
- -432.649414062 -204 -436.649414062 -200 -455.649414062 -200 c 0
- -479.649414062 -200 -544.649414062 -224 -555.649414062 -247 c 1
--409.649414062 -350 m 0
- -547.522460938 -350 -623.649414062 -256.517578125 -623.649414062 -201 c 0
- -623.649414062 -152 -539.649414062 -119 -498.649414062 -119 c 0
- -432.649414062 -119 -364.649414062 -189 -352.649414062 -255 c 1
- -325.622070312 -249.424804688 -307.05859375 -238.693359375 -292.759765625 -223.504882812 c 1
- -371.139648438 -192.362304688 -407.23828125 -129.40234375 -407.23828125 -93 c 0
- -407.23828125 -44 -323.23828125 -11 -282.23828125 -11 c 0
- -216.23828125 -11 -148.23828125 -81 -136.23828125 -147 c 1
- -30.1611328125 -117.13671875 -1.9677734375 -43.7392578125 0 58.9931640625 c 0
- 0 191.1796875 -85 253.514648438 -85 289.993164062 c 0
- -85 297.993164062 -82 301.993164062 -74 301.993164062 c 0
- -59 301.993164062 -38 273.993164062 -30 261.993164062 c 0
- 22 185.993164062 63 96.9931640625 63 2.9931640625 c 0
- 63 -92.466796875 28.455078125 -231.774414062 -170.764648438 -241.46484375 c 1
- -226.8828125 -328.765625 -332.58203125 -350 -409.649414062 -350 c 0
--256.23828125 -160 m 1
- -246.23828125 -153 -228.23828125 -152 -219.23828125 -146 c 0
- -191.23828125 -126 -202.23828125 -108 -198.23828125 -102 c 1
- -199.23828125 -102 l 1
- -216.23828125 -96 -220.23828125 -92 -239.23828125 -92 c 0
- -263.23828125 -92 -328.23828125 -116 -339.23828125 -139 c 1
- -316.23828125 -150 -284.23828125 -157 -256.23828125 -160 c 1
+-36 -172 m 5xb8
+ -36 -217.951171875 -7.3984375 -243 36 -243 c 0
+ 47.37890625 -243 62 -240 73 -236 c 1
+ 73 -200 29 -172 -36 -172 c 5xb8
+-235 -172 m 1
+ -212 -183 -181 -193 -152 -193 c 0x78
+ -138 -193 -94 -185 -94 -135 c 1
+ -99 -130 -114 -118 -150 -118 c 0
+ -174 -118 -220 -138 -235 -172 c 1
+-135 -272 m 0
+ -228 -272 -298 -194 -298 -138 c 0
+ -298 -89 -219 -51 -178 -51 c 0
+ -150 -51 -120 -63 -94 -81 c 1
+ -94 28 l 2
+ -94 143 -94 143 -83 143 c 0
+ -62 143 -30 93 -30 75 c 2
+ -30 -102 l 1
+ 72 -124 124 -161 124 -224 c 0
+ 124 -281 68 -299 26 -299 c 0xb8
+ -12 -299 -54 -286 -68 -232 c 1
+ -79 -261 -118 -272 -135 -272 c 0
 EndSplineSet
 EndChar
 
-StartChar: Lig.Dotc.VocRR
-Encoding: 1114407 -1 383
-Width: 584
-VWidth: 1000
-Flags: W
-HStem: -155 81<-39.5673 62.5293> -47 81<176.844 278.94>
-VStem: 491 63<-17.6998 176.164>
-LayerCount: 2
-Fore
-Refer: 382 70590 S 1 0 0 1 491 45 2
-Refer: 369 9676 N 1 0 0 1 0 0 2
-Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.VocRR
-LCarets2: 1 474
-EndChar
-
 StartChar: Tutg.Om
-Encoding: 70615 70615 384
+Encoding: 70615 70615 383
 Width: 510
 VWidth: 1100
 Flags: W
@@ -23766,7 +23745,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocRr
-Encoding: 70535 70535 385
+Encoding: 70535 70535 384
 Width: 720
 VWidth: 1100
 Flags: W
@@ -23828,7 +23807,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Oo
-Encoding: 70544 70544 386
+Encoding: 70544 70544 385
 Width: 887
 VWidth: 1100
 Flags: W
@@ -23887,7 +23866,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Au
-Encoding: 70545 70545 387
+Encoding: 70545 70545 386
 Width: 1336
 VWidth: 1100
 Flags: W
@@ -23896,11 +23875,11 @@ VStem: 274 64<55 166.992> 437 63<16.8181 314.484> 601 65<206.103 234.448> 771 64
 LayerCount: 2
 Fore
 Refer: 27 70601 S 1 0 0 1 873 0 2
-Refer: 386 70544 N 1 0 0 1 13 0 2
+Refer: 385 70544 N 1 0 0 1 13 0 2
 EndChar
 
 StartChar: Tutg.Avag
-Encoding: 70583 70583 388
+Encoding: 70583 70583 387
 Width: 443
 VWidth: 1100
 Flags: W
@@ -23930,7 +23909,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.L
-Encoding: 70591 70591 389
+Encoding: 70591 70591 388
 Width: 0
 VWidth: 1000
 Flags: W
@@ -23979,7 +23958,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Ll
-Encoding: 70592 70592 390
+Encoding: 70592 70592 389
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24034,7 +24013,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Svar
-Encoding: 70625 70625 391
+Encoding: 70625 70625 390
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24056,7 +24035,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Anud
-Encoding: 70626 70626 392
+Encoding: 70626 70626 391
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24083,7 +24062,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Pluta
-Encoding: 70611 70611 393
+Encoding: 70611 70611 392
 Width: 340
 VWidth: 1000
 Flags: W
@@ -24112,7 +24091,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda
-Encoding: 70612 70612 394
+Encoding: 70612 70612 393
 Width: 154
 VWidth: 1000
 Flags: W
@@ -24131,19 +24110,19 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda2
-Encoding: 70613 70613 395
+Encoding: 70613 70613 394
 Width: 326
 VWidth: 1000
 Flags: W
 VStem: 40 74<-39.25 539.25> 212 74<-39.25 539.25>
 LayerCount: 2
 Fore
-Refer: 394 70612 S 1 0 0 1 172 0 2
-Refer: 394 70612 N 1 0 0 1 0 0 2
+Refer: 393 70612 S 1 0 0 1 172 0 2
+Refer: 393 70612 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Uml.Conj
-Encoding: 70608 70608 396
+Encoding: 70608 70608 395
 Width: 281
 VWidth: 1000
 Flags: W
@@ -24170,7 +24149,7 @@ Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Lig.Dotc.Conj
-Encoding: 1114408 -1 397
+Encoding: 1114407 -1 396
 Width: 500
 VWidth: 1000
 Flags: W
@@ -24178,14 +24157,14 @@ HStem: 223 44.25<92 230 275 413.75>
 VStem: 230 45<84.25 223 267.25 406>
 LayerCount: 2
 Fore
-Refer: 396 70608 N 1 0 0 1 113 0 2
+Refer: 395 70608 N 1 0 0 1 113 0 2
 Refer: 369 9676 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Conj
 LCarets2: 1 285
 EndChar
 
 StartChar: Tutg.Rr.Naked
-Encoding: 1114409 -1 398
+Encoding: 1114408 -1 397
 Width: 764
 VWidth: 1000
 Flags: W
@@ -24234,7 +24213,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Vir.Reph
-Encoding: 1114410 -1 399
+Encoding: 1114409 -1 398
 Width: 0
 VWidth: 1000
 Flags: W
@@ -24247,7 +24226,7 @@ Refer: 4 70606 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Syl.K_K_R
-Encoding: 1114411 -1 400
+Encoding: 1114410 -1 399
 Width: 1375
 VWidth: 1000
 Flags: W
@@ -24326,7 +24305,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Dummy
-Encoding: 1114412 -1 401
+Encoding: 1114411 -1 400
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -24334,7 +24313,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Syl.K_T_Y
-Encoding: 1114413 -1 402
+Encoding: 1114412 -1 401
 Width: 1375
 VWidth: 1000
 GlyphClass: 3
@@ -24413,7 +24392,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Syl.K_T_R
-Encoding: 1114414 -1 403
+Encoding: 1114413 -1 402
 Width: 1253
 VWidth: 1000
 Flags: W
@@ -24482,7 +24461,7 @@ Colour: 94ffad
 EndChar
 
 StartChar: Uml.VocR.Big
-Encoding: 1114415 -1 404
+Encoding: 1114414 -1 403
 Width: 93
 VWidth: 1000
 Flags: W
@@ -24513,7 +24492,7 @@ EndSplineSet
 EndChar
 
 StartChar: Syl.K_KR
-Encoding: 1114416 -1 405
+Encoding: 1114415 -1 404
 Width: 1384
 VWidth: 1000
 Flags: W
@@ -24595,7 +24574,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_TR
-Encoding: 1114417 -1 406
+Encoding: 1114416 -1 405
 Width: 1285
 VWidth: 1000
 Flags: W
@@ -24665,7 +24644,7 @@ Colour: ff00
 EndChar
 
 StartChar: Wa.KEe
-Encoding: 1114418 -1 407
+Encoding: 1114417 -1 406
 Width: 1159
 VWidth: 0
 Flags: W
@@ -24680,7 +24659,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KAi
-Encoding: 1114419 -1 408
+Encoding: 1114418 -1 407
 Width: 1499
 VWidth: 0
 Flags: W
@@ -24695,7 +24674,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhEe
-Encoding: 1114420 -1 409
+Encoding: 1114419 -1 408
 Width: 1196
 VWidth: 0
 Flags: W
@@ -24710,7 +24689,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhAi
-Encoding: 1114421 -1 410
+Encoding: 1114420 -1 409
 Width: 1536
 VWidth: 0
 Flags: W
@@ -24725,7 +24704,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GEe
-Encoding: 1114422 -1 411
+Encoding: 1114421 -1 410
 Width: 1162
 VWidth: 0
 Flags: W
@@ -24740,7 +24719,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GAi
-Encoding: 1114423 -1 412
+Encoding: 1114422 -1 411
 Width: 1502
 VWidth: 0
 Flags: W
@@ -24755,7 +24734,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhEe
-Encoding: 1114424 -1 413
+Encoding: 1114423 -1 412
 Width: 1453
 VWidth: 0
 Flags: W
@@ -24770,7 +24749,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhAi
-Encoding: 1114425 -1 414
+Encoding: 1114424 -1 413
 Width: 1793
 VWidth: 0
 Flags: W
@@ -24785,7 +24764,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgEe
-Encoding: 1114426 -1 415
+Encoding: 1114425 -1 414
 Width: 1172
 VWidth: 0
 Flags: W
@@ -24800,7 +24779,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgAi
-Encoding: 1114427 -1 416
+Encoding: 1114426 -1 415
 Width: 1512
 VWidth: 0
 Flags: W
@@ -24815,7 +24794,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CEe
-Encoding: 1114428 -1 417
+Encoding: 1114427 -1 416
 Width: 1146
 VWidth: 0
 Flags: W
@@ -24830,7 +24809,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CAi
-Encoding: 1114429 -1 418
+Encoding: 1114428 -1 417
 Width: 1486
 VWidth: 0
 Flags: W
@@ -24845,7 +24824,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChEe
-Encoding: 1114430 -1 419
+Encoding: 1114429 -1 418
 Width: 1307
 VWidth: 0
 Flags: W
@@ -24860,7 +24839,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChAi
-Encoding: 1114431 -1 420
+Encoding: 1114430 -1 419
 Width: 1647
 VWidth: 0
 Flags: W
@@ -24875,7 +24854,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JEe
-Encoding: 1114432 -1 421
+Encoding: 1114431 -1 420
 Width: 1755
 VWidth: 0
 Flags: W
@@ -24890,7 +24869,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JAi
-Encoding: 1114433 -1 422
+Encoding: 1114432 -1 421
 Width: 2095
 VWidth: 0
 Flags: W
@@ -24905,7 +24884,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhEe
-Encoding: 1114434 -1 423
+Encoding: 1114433 -1 422
 Width: 1427
 VWidth: 0
 Flags: W
@@ -24920,7 +24899,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhAi
-Encoding: 1114435 -1 424
+Encoding: 1114434 -1 423
 Width: 1767
 VWidth: 0
 Flags: W
@@ -24935,7 +24914,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyEe
-Encoding: 1114436 -1 425
+Encoding: 1114435 -1 424
 Width: 1642
 VWidth: 0
 Flags: W
@@ -24950,7 +24929,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyAi
-Encoding: 1114437 -1 426
+Encoding: 1114436 -1 425
 Width: 1982
 VWidth: 0
 Flags: W
@@ -24965,7 +24944,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtEe
-Encoding: 1114438 -1 427
+Encoding: 1114437 -1 426
 Width: 901
 VWidth: 0
 Flags: W
@@ -24980,7 +24959,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtAi
-Encoding: 1114439 -1 428
+Encoding: 1114438 -1 427
 Width: 1241
 VWidth: 0
 Flags: W
@@ -24995,7 +24974,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthEe
-Encoding: 1114440 -1 429
+Encoding: 1114439 -1 428
 Width: 933
 VWidth: 0
 Flags: W
@@ -25010,7 +24989,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthAi
-Encoding: 1114441 -1 430
+Encoding: 1114440 -1 429
 Width: 1273
 VWidth: 0
 Flags: W
@@ -25025,7 +25004,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdEe
-Encoding: 1114442 -1 431
+Encoding: 1114441 -1 430
 Width: 1100
 VWidth: 0
 Flags: W
@@ -25040,7 +25019,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdAi
-Encoding: 1114443 -1 432
+Encoding: 1114442 -1 431
 Width: 1440
 VWidth: 0
 Flags: W
@@ -25055,7 +25034,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhEe
-Encoding: 1114444 -1 433
+Encoding: 1114443 -1 432
 Width: 1175
 VWidth: 0
 Flags: W
@@ -25070,7 +25049,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhAi
-Encoding: 1114445 -1 434
+Encoding: 1114444 -1 433
 Width: 1515
 VWidth: 0
 Flags: W
@@ -25085,7 +25064,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnEe
-Encoding: 1114446 -1 435
+Encoding: 1114445 -1 434
 Width: 1532
 VWidth: 0
 Flags: W
@@ -25100,7 +25079,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnAi
-Encoding: 1114447 -1 436
+Encoding: 1114446 -1 435
 Width: 1872
 VWidth: 0
 Flags: W
@@ -25115,7 +25094,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TEe
-Encoding: 1114448 -1 437
+Encoding: 1114447 -1 436
 Width: 1202
 VWidth: 0
 Flags: W
@@ -25130,7 +25109,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TAi
-Encoding: 1114449 -1 438
+Encoding: 1114448 -1 437
 Width: 1542
 VWidth: 0
 Flags: W
@@ -25145,7 +25124,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThEe
-Encoding: 1114450 -1 439
+Encoding: 1114449 -1 438
 Width: 1163
 VWidth: 0
 Flags: W
@@ -25160,7 +25139,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThAi
-Encoding: 1114451 -1 440
+Encoding: 1114450 -1 439
 Width: 1503
 VWidth: 0
 Flags: W
@@ -25175,7 +25154,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DEe
-Encoding: 1114452 -1 441
+Encoding: 1114451 -1 440
 Width: 879
 VWidth: 0
 Flags: W
@@ -25190,7 +25169,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DAi
-Encoding: 1114453 -1 442
+Encoding: 1114452 -1 441
 Width: 1219
 VWidth: 0
 Flags: W
@@ -25205,7 +25184,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhEe
-Encoding: 1114454 -1 443
+Encoding: 1114453 -1 442
 Width: 1159
 VWidth: 0
 Flags: W
@@ -25220,7 +25199,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhAi
-Encoding: 1114455 -1 444
+Encoding: 1114454 -1 443
 Width: 1499
 VWidth: 0
 Flags: W
@@ -25235,7 +25214,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NEe
-Encoding: 1114456 -1 445
+Encoding: 1114455 -1 444
 Width: 1197
 VWidth: 0
 Flags: W
@@ -25250,7 +25229,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NAi
-Encoding: 1114457 -1 446
+Encoding: 1114456 -1 445
 Width: 1537
 VWidth: 0
 Flags: W
@@ -25265,7 +25244,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PEe
-Encoding: 1114458 -1 447
+Encoding: 1114457 -1 446
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25280,7 +25259,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PAi
-Encoding: 1114459 -1 448
+Encoding: 1114458 -1 447
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25295,7 +25274,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhEe
-Encoding: 1114460 -1 449
+Encoding: 1114459 -1 448
 Width: 1328
 VWidth: 0
 Flags: W
@@ -25310,7 +25289,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhAi
-Encoding: 1114461 -1 450
+Encoding: 1114460 -1 449
 Width: 1668
 VWidth: 0
 Flags: W
@@ -25325,7 +25304,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BEe
-Encoding: 1114462 -1 451
+Encoding: 1114461 -1 450
 Width: 1252
 VWidth: 0
 Flags: W
@@ -25340,7 +25319,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BAi
-Encoding: 1114463 -1 452
+Encoding: 1114462 -1 451
 Width: 1592
 VWidth: 0
 Flags: W
@@ -25355,7 +25334,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhEe
-Encoding: 1114464 -1 453
+Encoding: 1114463 -1 452
 Width: 1452
 VWidth: 0
 Flags: W
@@ -25370,7 +25349,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhAi
-Encoding: 1114465 -1 454
+Encoding: 1114464 -1 453
 Width: 1792
 VWidth: 0
 Flags: W
@@ -25385,7 +25364,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MEe
-Encoding: 1114466 -1 455
+Encoding: 1114465 -1 454
 Width: 961
 VWidth: 0
 Flags: W
@@ -25400,7 +25379,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MAi
-Encoding: 1114467 -1 456
+Encoding: 1114466 -1 455
 Width: 1301
 VWidth: 0
 Flags: W
@@ -25415,7 +25394,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YEe
-Encoding: 1114468 -1 457
+Encoding: 1114467 -1 456
 Width: 1229
 VWidth: 0
 Flags: W
@@ -25430,7 +25409,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YAi
-Encoding: 1114469 -1 458
+Encoding: 1114468 -1 457
 Width: 1569
 VWidth: 0
 Flags: W
@@ -25445,7 +25424,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.REe
-Encoding: 1114470 -1 459
+Encoding: 1114469 -1 458
 Width: 985
 VWidth: 0
 Flags: W
@@ -25460,7 +25439,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RAi
-Encoding: 1114471 -1 460
+Encoding: 1114470 -1 459
 Width: 1325
 VWidth: 0
 Flags: W
@@ -25475,7 +25454,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LEe
-Encoding: 1114472 -1 461
+Encoding: 1114471 -1 460
 Width: 979
 VWidth: 0
 Flags: W
@@ -25490,7 +25469,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LAi
-Encoding: 1114473 -1 462
+Encoding: 1114472 -1 461
 Width: 1319
 VWidth: 0
 Flags: W
@@ -25505,7 +25484,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VEe
-Encoding: 1114474 -1 463
+Encoding: 1114473 -1 462
 Width: 1102
 VWidth: 0
 Flags: W
@@ -25520,7 +25499,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VAi
-Encoding: 1114475 -1 464
+Encoding: 1114474 -1 463
 Width: 1442
 VWidth: 0
 Flags: W
@@ -25535,7 +25514,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShEe
-Encoding: 1114476 -1 465
+Encoding: 1114475 -1 464
 Width: 1248
 VWidth: 0
 Flags: W
@@ -25550,7 +25529,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShAi
-Encoding: 1114477 -1 466
+Encoding: 1114476 -1 465
 Width: 1588
 VWidth: 0
 Flags: W
@@ -25565,7 +25544,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsEe
-Encoding: 1114478 -1 467
+Encoding: 1114477 -1 466
 Width: 1303
 VWidth: 0
 Flags: W
@@ -25580,7 +25559,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsAi
-Encoding: 1114479 -1 468
+Encoding: 1114478 -1 467
 Width: 1643
 VWidth: 0
 Flags: W
@@ -25595,7 +25574,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SEe
-Encoding: 1114480 -1 469
+Encoding: 1114479 -1 468
 Width: 1139
 VWidth: 0
 Flags: W
@@ -25610,7 +25589,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SAi
-Encoding: 1114481 -1 470
+Encoding: 1114480 -1 469
 Width: 1479
 VWidth: 0
 Flags: W
@@ -25625,7 +25604,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HEe
-Encoding: 1114482 -1 471
+Encoding: 1114481 -1 470
 Width: 1145
 VWidth: 0
 Flags: W
@@ -25640,7 +25619,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HAi
-Encoding: 1114483 -1 472
+Encoding: 1114482 -1 471
 Width: 1485
 VWidth: 0
 Flags: W
@@ -25655,7 +25634,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlEe
-Encoding: 1114484 -1 473
+Encoding: 1114483 -1 472
 Width: 913
 VWidth: 0
 Flags: W
@@ -25670,7 +25649,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlAi
-Encoding: 1114485 -1 474
+Encoding: 1114484 -1 473
 Width: 1253
 VWidth: 0
 Flags: W
@@ -25685,7 +25664,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrEe
-Encoding: 1114486 -1 475
+Encoding: 1114485 -1 474
 Width: 1129
 VWidth: 0
 Flags: W
@@ -25700,7 +25679,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrAi
-Encoding: 1114487 -1 476
+Encoding: 1114486 -1 475
 Width: 1469
 VWidth: 0
 Flags: W
@@ -25715,7 +25694,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllEe
-Encoding: 1114488 -1 477
+Encoding: 1114487 -1 476
 Width: 1035
 VWidth: 0
 Flags: W
@@ -25730,7 +25709,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllAi
-Encoding: 1114489 -1 478
+Encoding: 1114488 -1 477
 Width: 1375
 VWidth: 0
 Flags: W
@@ -25745,7 +25724,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KEe
-Encoding: 1114490 -1 479
+Encoding: 1114489 -1 478
 Width: 1720
 VWidth: 0
 Flags: W
@@ -25761,7 +25740,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KAi
-Encoding: 1114491 -1 480
+Encoding: 1114490 -1 479
 Width: 2060
 VWidth: 0
 Flags: W
@@ -25777,7 +25756,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_K_REe
-Encoding: 1114492 -1 481
+Encoding: 1114491 -1 480
 Width: 1740
 VWidth: 0
 Flags: W
@@ -25785,7 +25764,7 @@ HStem: -178 81<1125.22 1399.92> 2 81<569.545 629.255 831.839 915.762 1117.05 117
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2221 175.934> 942 63<151.382 289.791> 1052 63<83.3123 177.226> 1488 63<151.382 290.185> 1647 63<110.621 322.285>
 LayerCount: 2
 Fore
-Refer: 400 -1 N 1 0 0 1 365 0 2
+Refer: 399 -1 N 1 0 0 1 365 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ee
@@ -25793,7 +25772,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_K_RAi
-Encoding: 1114493 -1 482
+Encoding: 1114492 -1 481
 Width: 2080
 VWidth: 0
 Flags: W
@@ -25801,7 +25780,7 @@ HStem: -178 81<1465.22 1739.92> 2 81<909.545 969.255 1171.84 1255.76 1457.05 151
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2221 175.934> 1282 63<151.382 289.791> 1392 63<83.3123 177.226> 1828 63<151.382 290.185> 1987 63<110.621 322.285>
 LayerCount: 2
 Fore
-Refer: 400 -1 N 1 0 0 1 705 0 2
+Refer: 399 -1 N 1 0 0 1 705 0 2
 Refer: 371 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ai
@@ -25809,7 +25788,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_TEe
-Encoding: 1114494 -1 483
+Encoding: 1114493 -1 482
 Width: 1618
 VWidth: 0
 Flags: W
@@ -25825,7 +25804,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_TAi
-Encoding: 1114495 -1 484
+Encoding: 1114494 -1 483
 Width: 1958
 VWidth: 0
 Flags: W
@@ -25841,7 +25820,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_YEe
-Encoding: 1114496 -1 485
+Encoding: 1114495 -1 484
 Width: 1740
 VWidth: 0
 Flags: W
@@ -25849,7 +25828,7 @@ HStem: -237 81<1430.21 1562.46> 1 81<569.545 626.847 832.714 915.564 1135.82 123
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1347 63<-149.92 -73.1522> 1524 64<165.713 365.295> 1646 64<-60.7345 483.33>
 LayerCount: 2
 Fore
-Refer: 402 -1 N 1 0 0 1 365 0 2
+Refer: 401 -1 N 1 0 0 1 365 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ee
@@ -25857,7 +25836,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_YAi
-Encoding: 1114497 -1 486
+Encoding: 1114496 -1 485
 Width: 2080
 VWidth: 0
 Flags: W
@@ -25865,7 +25844,7 @@ HStem: -237 81<1770.21 1902.46> 1 81<909.545 966.847 1172.71 1255.56 1475.82 157
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1687 63<-149.92 -73.1522> 1864 64<165.713 365.295> 1986 64<-60.7345 483.33>
 LayerCount: 2
 Fore
-Refer: 402 -1 N 1 0 0 1 705 0 2
+Refer: 401 -1 N 1 0 0 1 705 0 2
 Refer: 371 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ai
@@ -25873,7 +25852,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_REe
-Encoding: 1114498 -1 487
+Encoding: 1114497 -1 486
 Width: 1618
 VWidth: 0
 Flags: W
@@ -25881,7 +25860,7 @@ HStem: -167 81<977.221 1254.52> 1 81<569.545 626.847 832.714 915.564 1135.82 123
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<173.823 364.899>
 LayerCount: 2
 Fore
-Refer: 403 -1 N 1 0 0 1 365 0 2
+Refer: 402 -1 N 1 0 0 1 365 0 2
 Refer: 33 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ee
@@ -25889,7 +25868,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_RAi
-Encoding: 1114499 -1 488
+Encoding: 1114498 -1 487
 Width: 1958
 VWidth: 0
 Flags: W
@@ -25897,7 +25876,7 @@ HStem: -167 81<1317.22 1594.52> 1 81<909.545 966.847 1172.71 1255.56 1475.82 157
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<173.823 364.899>
 LayerCount: 2
 Fore
-Refer: 403 -1 N 1 0 0 1 705 0 2
+Refer: 402 -1 N 1 0 0 1 705 0 2
 Refer: 371 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ai
@@ -25905,7 +25884,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_SsEe
-Encoding: 1114500 -1 489
+Encoding: 1114499 -1 488
 Width: 1737
 VWidth: 0
 Flags: W
@@ -25921,7 +25900,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_SsAi
-Encoding: 1114501 -1 490
+Encoding: 1114500 -1 489
 Width: 2077
 VWidth: 0
 Flags: W
@@ -25934,6 +25913,48 @@ Refer: 371 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ai
 Colour: 4fd5ff
+EndChar
+
+StartChar: Uml.VocRr.Big
+Encoding: 1114501 -1 490
+Width: 93
+VWidth: 1000
+Flags: W
+HStem: -200 81<-530.567 -428.471> -92 81<-314.156 -212.06>
+VStem: 0 63<-62.6998 131.164>
+LayerCount: 2
+Fore
+SplineSet
+-555.649414062 -247 m 1
+ -532.649414062 -258 -500.649414062 -265 -472.649414062 -268 c 1
+ -462.649414062 -261 -444.649414062 -260 -435.649414062 -254 c 0
+ -407.649414062 -234 -418.649414062 -216 -414.649414062 -210 c 1
+ -415.649414062 -210 l 1
+ -432.649414062 -204 -436.649414062 -200 -455.649414062 -200 c 0
+ -479.649414062 -200 -544.649414062 -224 -555.649414062 -247 c 1
+-409.649414062 -350 m 0
+ -547.522460938 -350 -623.649414062 -256.517578125 -623.649414062 -201 c 0
+ -623.649414062 -152 -539.649414062 -119 -498.649414062 -119 c 0
+ -432.649414062 -119 -364.649414062 -189 -352.649414062 -255 c 1
+ -325.622070312 -249.424804688 -307.05859375 -238.693359375 -292.759765625 -223.504882812 c 1
+ -371.139648438 -192.362304688 -407.23828125 -129.40234375 -407.23828125 -93 c 0
+ -407.23828125 -44 -323.23828125 -11 -282.23828125 -11 c 0
+ -216.23828125 -11 -148.23828125 -81 -136.23828125 -147 c 1
+ -30.1611328125 -117.13671875 -1.9677734375 -43.7392578125 0 58.9931640625 c 0
+ 0 191.1796875 -85 253.514648438 -85 289.993164062 c 0
+ -85 297.993164062 -82 301.993164062 -74 301.993164062 c 0
+ -59 301.993164062 -38 273.993164062 -30 261.993164062 c 0
+ 22 185.993164062 63 96.9931640625 63 2.9931640625 c 0
+ 63 -92.466796875 28.455078125 -231.774414062 -170.764648438 -241.46484375 c 1
+ -226.8828125 -328.765625 -332.58203125 -350 -409.649414062 -350 c 0
+-256.23828125 -160 m 1
+ -246.23828125 -153 -228.23828125 -152 -219.23828125 -146 c 0
+ -191.23828125 -126 -202.23828125 -108 -198.23828125 -102 c 1
+ -199.23828125 -102 l 1
+ -216.23828125 -96 -220.23828125 -92 -239.23828125 -92 c 0
+ -263.23828125 -92 -328.23828125 -116 -339.23828125 -139 c 1
+ -316.23828125 -150 -284.23828125 -157 -256.23828125 -160 c 1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
