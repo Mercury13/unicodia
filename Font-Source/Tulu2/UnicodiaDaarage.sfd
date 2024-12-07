@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733535580
+ModificationTime: 1733536996
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -6207,54 +6207,52 @@ EndChar
 
 StartChar: Syl.C_C
 Encoding: 1114161 -1 111
-Width: 765
+Width: 792
 VWidth: 1000
 GlyphClass: 3
-Flags: W
-HStem: -247 80<33.7219 67.28 270 661> 0 81<317 435> 416 81<207.074 335.992>
-VStem: 79 62<303.496 353.15> 395 63<261.849 375.549> 661 64<-167 -11> 689 64<114.185 305.471>
+Flags: WO
+HStem: -247 80<39.6286 82.3067 279 670> 0 81<326 444> 416 81<209.721 350.181>
+VStem: 88 62<299.67 355.671> 404 63<256.859 380.879> 670 64<-167 -11> 698 64<110.214 314.585>
 LayerCount: 2
 Fore
 SplineSet
-11 -179 m 0xfc
- 11 -175 12 -171 15 -168 c 0
- 20 -163 142 -117 161 -110 c 0
- 190 -98 315 -48 435 0 c 1
- 423 0 412 0 400 0 c 0
- 359 0 79 0 65 6 c 0
- 44 15 17 50 17 73 c 0
- 17 76 18 82 21 84 c 0
- 25 86 38 86 43 87 c 0
- 173 101 395 191 395 339 c 0
- 395 374 392 386 360 402 c 0
- 337 413 311 416 286 416 c 0
- 218 416 155 373 144 304 c 0
- 143 298 144 289 141 284 c 0
- 139 281 135 281 132 281 c 0
- 111 281 79 329 79 349 c 0
- 79 438 159 497 243 497 c 0
- 360 497 458 400 458 283 c 0
- 458 190 392 125 317 81 c 1
- 359 81 l 2
- 420 81 482 82 543 83 c 0
- 571 84 601 80 629 86 c 0
- 682 99 689 169 689 215 c 0
- 689 266 678 356 646 396 c 0
- 640 404 627 405 619 409 c 0
- 601 419 576 453 576 474 c 0
- 576 482 579 486 587 486 c 0
- 602 486 631 467 642 457 c 0
- 721 386 753 261 753 158 c 0xfa
- 753 122 746 68 723 35 c 0
- 724 31 725 27 725 24 c 2
- 725 -235 l 2
- 725 -243 722 -247 714 -247 c 2
- 64 -247 l 2
- 43 -247 11 -199 11 -179 c 0xfc
-661 -11 m 1xfc
- 270 -167 l 1
- 661 -167 l 1
- 661 -11 l 1xfc
+596 486 m 0xfa
+ 644 486 762 369 762 158 c 0xfa
+ 762 122 755 68 732 35 c 0
+ 733 31 734 27 734 24 c 2
+ 734 -235 l 2xfc
+ 734 -243 731 -247 723 -247 c 2
+ 73 -247 l 2
+ 52 -247 20 -199 20 -179 c 0
+ 20 -175 21 -171 24 -168 c 0
+ 25 -167 440 -2 444 0 c 1
+ 409 0 l 2
+ 368 0 88 0 74 6 c 0
+ 53 15 26 50 26 73 c 0
+ 26 76 27 82 30 84 c 0
+ 34 86 47 86 52 87 c 0
+ 182 101 404 191 404 339 c 0
+ 404 374 401 386 369 402 c 0
+ 346 413 320 416 295 416 c 0
+ 227 416 164 373 153 304 c 0
+ 152 298 153 289 150 284 c 0
+ 148 281 144 281 141 281 c 0
+ 120 281 88 329 88 349 c 0
+ 88 438 168 497 252 497 c 0
+ 369 497 467 400 467 283 c 0
+ 467 190 401 125 326 81 c 1
+ 368 81 l 2
+ 429 81 491 82 552 83 c 0
+ 580 84 610 80 638 86 c 0
+ 691 99 698 169 698 215 c 0
+ 698 266 687 356 655 396 c 0
+ 649 404 636 405 628 409 c 0
+ 610 419 585 453 585 474 c 0
+ 585 482 588 486 596 486 c 0xfa
+670 -11 m 1xfc
+ 279 -167 l 1
+ 670 -167 l 1
+ 670 -11 l 1xfc
 EndSplineSet
 Kerns2: 367 -679 "Kern-1" 366 -679 "Kern-1" 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 340 -679 "Kern-1" 339 -679 "Kern-1" 338 -679 "Kern-1" 337 -679 "Kern-1" 336 -679 "Kern-1" 335 -679 "Kern-1" 328 -679 "Kern-1" 327 -679 "Kern-1" 320 -679 "Kern-1" 317 -679 "Kern-1" 316 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1" 264 -679 "Kern-1" 263 -679 "Kern-1" 262 -679 "Kern-1" 261 -679 "Kern-1" 260 -679 "Kern-1" 259 -679 "Kern-1"
 Ligature2: "Orig CCMP-1" Tutg.C Uml.Conj Tutg.C
@@ -20729,7 +20727,7 @@ SplineSet
  220 191 181 198 152 198 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.Ng Uml.Conj Tutg.K Tutg.Uml.LoopVir
-LCarets2: 4 0 0 0 0
+LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Unu.Subj.DdU
@@ -20865,7 +20863,7 @@ EndSplineSet
 Colour: ff0000
 EndChar
 
-StartChar: Syl.Nn_T_Na
+StartChar: Syl.Nn_T_N
 Encoding: 1114362 -1 329
 Width: 1893
 VWidth: 1000
@@ -20953,8 +20951,9 @@ SplineSet
  164 181 133 152 115 126 c 0
  110 119 107 111 100 105 c 1
 EndSplineSet
-LCarets2: 4 0 0 0 0
-Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.N
+Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.T Uml.Conj Tutg.N
+LCarets2: 2 0 0
+Colour: 91ff91
 EndChar
 
 StartChar: Syl.Nn_T_Nu
@@ -21048,6 +21047,7 @@ SplineSet
  110 119 107 111 100 105 c 1
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.T Uml.Conj Tutg.N Uml.U
+Colour: ff00
 EndChar
 
 StartChar: Syl.Nn_T_NUu
@@ -21159,6 +21159,7 @@ SplineSet
  110 119 107 111 100 105 c 1
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.T Uml.Conj Tutg.N Uml.Uu
+Colour: ff00
 EndChar
 
 StartChar: Syl.TR
@@ -21349,6 +21350,7 @@ SplineSet
  172 144 147 147 123 147 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.R
+Colour: 91ff91
 EndChar
 
 StartChar: Subj.KhU
