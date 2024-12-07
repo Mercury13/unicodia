@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733575970
+ModificationTime: 1733576134
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -23667,7 +23667,7 @@ StartChar: Uml.VocRR
 Encoding: 70590 70590 382
 Width: 0
 VWidth: 1000
-Flags: WO
+Flags: W
 HStem: -299 56<-21.796 71.9569> -272 79<-222.257 -102.893> -118 67<-211.839 -101.399>
 VStem: -94 64<-182.385 -172 -81 123.742> 73 51<-241.331 -193.851>
 AnchorPoint: "VocR mark" -60 112 mark 0
@@ -23880,7 +23880,7 @@ EndChar
 
 StartChar: Tutg.Avag
 Encoding: 70583 70583 387
-Width: 443
+Width: 438
 VWidth: 1100
 Flags: W
 HStem: 1 81<75.1709 219.304> 231 82<96.1105 334.824> 419 81<154.695 283.829>
