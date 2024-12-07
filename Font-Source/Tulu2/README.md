@@ -8,9 +8,10 @@ If you did everything that requires rebuilding blue ligatures:
 # Colours in FontForge
 * RED: probably unused
 * YELLOW: prebuilt syllable CV, CLoopvir: KU
-* PALE GREEN: prebuilt syllable C_C (underscore = virama): K_K
+* PALE GREEN (123, 0.2, 1): prebuilt syllable C_C (underscore = virama): K_K
 * ACID GREEN: prebuilt syllable C_CV: K_KU
 * ORANGE: subjoined consonant _C: subjoined K
+* BROWN: everything else subjoined: _CV, _C_C…
 * PALE BLUE: workaround consonant VC, VC_C
 
 # Colours in HTML

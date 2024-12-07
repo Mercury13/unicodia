@@ -44,7 +44,7 @@ BASE_CHARS = {
     # K
     'K_K' : SYLLABLE, 'K_K_R' : SYLLABLE,
     'K_T' : SYLLABLE, 'K_T_Y' : SYLLABLE, 'K_T_R' : SYLLABLE,    
-    'K_Ss' : SYLLABLE,
+    'K_Ss' : SYLLABLE, 'K_Ss_R' : SYLLABLE,
     'K_Y' : SYLLABLE,
     'K_R' : SYLLABLE,
     'K_V' : SYLLABLE,
