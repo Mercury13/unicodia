@@ -19,8 +19,8 @@ If you did everything that requires rebuilding blue ligatures:
 * ↓ bad composition of main ligature
 
 Some chosen bad things:
+* KKvR: probably need ligature
+* KTT: need true ligature
 * KTTh: need true ligature
-* KTR: need true rakar instead of synthesized, both as a base for bigger ligatures and for beauty
-* KTRY: same, but not just rakar
-* Most VocRR: need small version of umlaut
+* KTRY: need true ligature
 * KTV: beautiful!, but there’s a special ligature
