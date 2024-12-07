@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733568791
+ModificationTime: 1733569736
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -78,7 +78,7 @@ MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: coverage "Ai 3cons" 0 0 0 1
  6 0 0
-  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 725 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -90,7 +90,7 @@ ContextSub2: coverage "Ai 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
  6 0 0
-  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 725 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -102,7 +102,7 @@ ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 725 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
@@ -112,7 +112,7 @@ ContextSub2: coverage "Ai 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
  4 0 0
-  Coverage: 720 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 718 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 20 Uml.Ee Uml.Oo Uml.Au
@@ -122,7 +122,7 @@ ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 725 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -2595,7 +2595,7 @@ EndChar
 
 StartChar: Subj.Y
 Encoding: 1114126 -1 49
-Width: 197
+Width: 202
 VWidth: 1000
 GlyphClass: 3
 Flags: W
@@ -15017,41 +15017,41 @@ Width: 1165
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -180 81<527.577 799.213> -1 81<687.453 779.526> 416 81<144.487 259.709 528.429 696.527 866.17 1018.15>
-VStem: 30 63<152.065 358.401> 345 62<17.6271 254.109> 619 63<84.2691 205.957> 807 63<108.586 268.854> 1072 63<171.33 367.877>
+HStem: -180 81<527.634 799.142> -1 81<687.453 779.526> 416 81<144.487 259.709 528.598 696.527 866.17 1018.15>
+VStem: 30 63<151.968 358.401> 345 62<17.6271 254.1> 619 63<84.2691 205.957> 807 63<108.586 268.854> 1072 63<171.381 367.915>
 LayerCount: 2
 Fore
 SplineSet
 163 1 m 0
- 137.192478697 1 30 117.441876277 30 293 c 0
+ 137 1 30 117 30 293 c 0
  30 352 43 442 97 477 c 0
  118 491 153 497 178 497 c 0
  274 497 342 404 368 321 c 1
- 405.62275015 462.638588801 525.748165379 502 592 502 c 0
+ 406 463 526 502 592 502 c 0
  655 502 709 472 752 428 c 1
  799 470 856 498 918 498 c 0
  1053 498 1135 380 1135 254 c 0
- 1135 172.610901334 1105.35572209 73.328048395 1075 24 c 0
- 1074.84245636 23.6849127105 1061.45654971 1.45654971426 1055 -5 c 0
+ 1135 173 1105 73 1075 24 c 0
+ 1075 24 1061 1 1055 -5 c 0
  965 -125 835 -180 687 -180 c 0
- 572.574237328 -180 460.975817851 -133.234886157 459 -132 c 0
+ 573 -180 461 -133 459 -132 c 0
  441 -122 416 -89 416 -67 c 0
  416 -59 419 -55 427 -55 c 0
- 439.332499961 -55 528.91371216 -99 645 -99 c 0
- 741.247996935 -99 916.120632984 -71.5074863133 1022 110 c 0
+ 439 -55 529 -99 645 -99 c 0
+ 741 -99 916 -72 1022 110 c 0
  1051 167 1072 247 1072 311 c 0
- 1072 351.818452381 1062 418 960 418 c 0
+ 1072 352 1062 418 960 418 c 0
  907 418 855 391 809 350 c 1
  848 281 870 200 870 133 c 0
  870 68 841 -1 766 -1 c 0
  674 -1 619 84 619 169 c 0
  619 246 672 341 721 397 c 1
  696 413 667 421 633 421 c 0
- 604 421 534.644874465 418.937791988 474.95786844 342.000002732 c 0
- 415.869484514 265.833849784 407 151.330069249 407 59 c 0
+ 604 421 535 419 475 342 c 0
+ 416 266 407 151 407 59 c 0
  407 1 407 1 396 1 c 0
  377 1 350 41 345 58 c 0
- 338.6835923 79.4757861814 351.662681074 282.771739281 296 381 c 0
+ 339 79 352 283 296 381 c 0
  280 409 251 416 221 416 c 0
  116 416 93 323 93 237 c 0
  93 186 105 123 133 80 c 0
@@ -15076,8 +15076,8 @@ Width: 832
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -178 81<189.933 469.148> 1 81<353.389 442.727> 423 81<208.867 356.964 539.831 673.004>
-VStem: 30 64<139.779 313.269> 284 63<87.5531 208.133> 472 63<110.287 273.473> 738 64<163.578 363.995>
+HStem: -178 81<189.932 469.047> 1 81<353.396 442.727> 423 81<208.867 356.964 539.831 673.004>
+VStem: 30 64<139.779 313.269> 284 63<87.6532 208.133> 472 63<110.287 273.473> 738 64<163.56 363.995>
 LayerCount: 2
 Fore
 SplineSet
@@ -15087,19 +15087,19 @@ SplineSet
  326 504 376 474 418 430 c 1
  464 472 521 500 583 500 c 0
  726 500 802 369 802 241 c 0
- 802 25.9286090493 643.146197198 -178 355 -178 c 0
- 245.783838723 -178 139.172503055 -137.54863803 129 -132 c 0
+ 802 26 643 -178 355 -178 c 0
+ 246 -178 139 -138 129 -132 c 0
  110 -122 86 -89 86 -67 c 0
  86 -59 89 -55 97 -55 c 0
  99 -55 156 -74 165 -76 c 0
  213 -89 264 -97 314 -97 c 0
- 572.38807846 -97 738 89.1449658359 738 298 c 0
+ 572 -97 738 89 738 298 c 0
  738 323 735 368 721 388 c 0
  705 411 652 420 625 420 c 0
  572 420 519 393 474 352 c 1
  512 285 535 208 535 149 c 0
  535 75 514 1 426 1 c 0
- 363.969432246 1 284 59.5449824632 284 171 c 0
+ 364 1 284 60 284 171 c 0
  284 248 337 343 386 399 c 1
  365 414 341 423 312 423 c 0
  192 423 94 336 94 215 c 0
@@ -15127,13 +15127,13 @@ Width: 829
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -178 81<214.221 490.099> 1 81<206.046 261.847 467.714 549.735> 425 81<183.247 326.638 513.96 656.596>
-VStem: 30 62<259.67 338.512> 141 63<83.3123 177.226> 577 63<151.382 290.185> 736 63<112.156 322.285>
+HStem: -178 81<212.019 493.757> 1 81<205.912 261.847 467.726 549.613> 425 81<183.247 326.638 513.96 656.596>
+VStem: 30 62<259.67 338.512> 141 63<83.3342 177.226> 577 63<151.416 290.185> 736 63<110.546 322.285>
 LayerCount: 2
 Fore
 SplineSet
 251 2 m 0
- 212.300067643 2 141 63.9002680308 141 158 c 0
+ 212 2 141 64 141 158 c 0
  141 258 253 369 327 423 c 1
  314 424 302 425 291 425 c 0
  197 425 107 377 95 278 c 0
@@ -15144,23 +15144,23 @@ SplineSet
  305 506 360 495 412 474 c 1
  458 496 507 510 553 510 c 0
  721 510 799 323 799 179 c 0
- 799 66.4090999291 760.701206632 1.70120663249 715 -44 c 0
+ 799 66 761 2 715 -44 c 0
  624 -137 507 -178 378 -178 c 0
- 268.783838723 -178 162.172503055 -137.54863803 152 -132 c 0
+ 269 -178 162 -138 152 -132 c 0
  133 -122 109 -89 109 -67 c 0
  109 -59 112 -55 120 -55 c 0
- 128.436571971 -55 221.372951838 -97 337 -97 c 0
- 473 -97 608.256101905 -47.2398301586 685 66 c 0
- 724.173556052 123.802730173 736 151 736 235 c 0
+ 128 -55 221 -97 337 -97 c 0
+ 473 -97 608 -47 685 66 c 0
+ 724 124 736 151 736 235 c 0
  736 265 731 296 724 325 c 0
  706 402 675 429 595 429 c 0
  568 429 541 424 513 415 c 1
  578 363 640 279 640 192 c 0
- 640 91.4574978182 578.388070823 1 523 1 c 0
+ 640 91 578 1 523 1 c 0
  476 1 422 69 400 107 c 1
  365 67 309 2 251 2 c 0
 479 82 m 0
- 522.671474884 82 577 172.500437483 577 248 c 0
+ 523 82 577 173 577 248 c 0
  577 316 522 362 456 391 c 1
  365 344 204 211 204 94 c 0
  204 90 204 86 205 83 c 1
@@ -15168,7 +15168,7 @@ SplineSet
  248 83 304 140 329 168 c 0
  339 179 349 194 360 203 c 0
  362 205 365 204 367 204 c 0
- 406.957285282 204 440.903370455 82 479 82 c 0
+ 407 204 441 82 479 82 c 0
 EndSplineSet
 Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2" 62 104 "Kern-2" 23 104 "Kern-2"
 LCarets2: 2 0 0
@@ -15178,94 +15178,79 @@ EndChar
 
 StartChar: Syl.GRa
 Encoding: 1114266 -1 233
-Width: 797
+Width: 823
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -178 81<198.508 453.998> 0 81<125.008 251.309> 421 81<541.473 660.537>
-VStem: 17 63<112.96 259.082> 717 63<144.394 355.33>
+HStem: -178 81<199.019 477.274> 0 81<133.431 264.309> 421 81<551.858 678.768>
+VStem: 30 63<105.28 266.72> 730 63<133.929 363.415>
 LayerCount: 2
 Fore
 SplineSet
-212 0 m 0
- 100 0 17 97 17 206 c 0
- 17 311 63 405 142 474 c 0
- 152 482 179 504 191 504 c 0
- 212 504 244 456 244 436 c 0
- 244 429 242 426 236 423 c 0
- 221 414 207 406 193 394 c 0
- 124 336 80 239 80 149 c 0
- 80 138 83 114 89 104 c 0
- 97 89 157 81 171 81 c 0
- 381 81 316 403 503 486 c 0
- 528 497 558 502 585 502 c 0
- 678 502 743 413 766 332 c 0
- 776 298 780 262 780 227 c 0
- 780 150 764 73 727 6 c 0
- 725 2 722 -4 718 -9 c 0
- 710 -22 695 -38 689 -44 c 0
- 598 -137 481 -178 352 -178 c 0
- 288 -178 225 -165 164 -146 c 0
- 151 -142 137 -138 126 -132 c 0
- 107 -122 83 -89 83 -67 c 0
- 83 -59 86 -55 94 -55 c 0
- 96 -55 153 -74 162 -76 c 0
- 210 -89 261 -97 311 -97 c 0
- 445 -97 569 -46 654 59 c 0
- 656 64 660 68 663 73 c 0
- 701 133 717 214 717 284 c 0
- 717 309 714 334 708 358 c 0
- 695 407 676 421 625 421 c 0
- 599 421 564 412 541 399 c 0
- 378 305 439 0 212 0 c 0
+107 -55 m 0
+ 115 -55 208 -97 324 -97 c 0
+ 547 -97 657 41 676 73 c 0
+ 714 133 730 214 730 284 c 0
+ 730 309 727 334 721 358 c 0
+ 708 407 689 421 638 421 c 0
+ 612 421 577 412 554 399 c 0
+ 391 305 452 0 225 0 c 0
+ 113 0 30 97 30 206 c 0
+ 30 399 184 504 204 504 c 0
+ 225 504 257 456 257 436 c 0
+ 257 420 239 422 206 394 c 0
+ 137 336 93 239 93 149 c 0
+ 93 138 96 114 102 104 c 0
+ 110 89 170 81 184 81 c 0
+ 394 81 329 403 516 486 c 0
+ 541 497 571 502 598 502 c 0
+ 697 502 793 393 793 227 c 0
+ 793 163 779 33 702 -44 c 0
+ 611 -137 494 -178 365 -178 c 0
+ 256 -178 149 -138 139 -132 c 0
+ 120 -122 96 -89 96 -67 c 0
+ 96 -59 99 -55 107 -55 c 0
 EndSplineSet
 Kerns2: 23 104 "Kern-2" 62 104 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.G Uml.Conj Tutg.R
 Colour: 9effad
 EndChar
 
 StartChar: Syl.D_Ra
 Encoding: 1114267 -1 234
-Width: 498
+Width: 524
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -8 81<189.859 331.578> 418 81<263.207 376.776>
-VStem: 17 64<196.281 426.984> 173 62<351.496 391.012>
+HStem: -8 81<196.604 348.375> 418 81<272.529 395.186>
+VStem: 30 64<184.972 438.898> 307 161<259 365>
 LayerCount: 2
 Fore
 SplineSet
-17 324 m 0
- 17 389 29 453 46 516 c 0
- 48 522 54 546 56 549 c 0
- 58 552 61 552 65 552 c 0
- 86 552 118 504 118 484 c 0
- 118 476 102 426 99 413 c 0
- 88 365 81 316 81 267 c 0
- 81 221 89 162 118 124 c 0
- 143 90 197 73 238 73 c 0
- 297 73 352 96 390 141 c 0
- 401 154 412 170 416 186 c 1
- 406 190 387 192 377 192 c 0
- 367 192 357 190 347 190 c 0
- 325 190 294 239 294 259 c 0
- 294 262 294 266 296 269 c 0
- 302 281 313 290 321 300 c 0
- 342 325 383 376 389 408 c 1
- 371 415 353 418 334 418 c 0
- 305 418 266 408 249 382 c 0
- 235 361 239 338 235 332 c 0
- 233 329 230 329 226 329 c 0
- 205 329 173 377 173 397 c 0
- 173 469 228 499 293 499 c 0
- 352 499 408 469 438 418 c 0
- 447 402 455 384 455 365 c 0
- 455 326 427 286 404 256 c 1
- 444 235 481 186 481 139 c 0
- 481 117 470 95 457 77 c 0
- 415 19 351 -8 280 -8 c 0
- 249 -8 216 1 189 14 c 0
- 75 70 17 201 17 324 c 0
+293 -8 m 0
+ 160 -8 30 134 30 324 c 0
+ 30 433 68 547 69 549 c 0
+ 71 552 74 552 78 552 c 0
+ 99 552 131 504 131 484 c 0
+ 131 470 94 383 94 267 c 0
+ 94 221 102 162 131 124 c 0
+ 156 90 210 73 251 73 c 0
+ 362 73 421 152 429 186 c 1
+ 419 190 400 192 390 192 c 0
+ 380 192 370 190 360 190 c 0
+ 338 190 307 239 307 259 c 0
+ 307 262 307 266 309 269 c 0
+ 316 283 393 361 402 408 c 1
+ 384 415 366 418 347 418 c 0
+ 318 418 279 408 262 382 c 0
+ 242 353 259 329 239 329 c 0
+ 218 329 186 377 186 397 c 0
+ 186 469 241 499 306 499 c 0
+ 407 499 468 415 468 365 c 0
+ 468 326 440 286 417 256 c 1
+ 457 235 494 186 494 139 c 0
+ 494 91 429 -8 293 -8 c 0
 EndSplineSet
 Kerns2: 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
 LCarets2: 2 0 0
@@ -15273,238 +15258,222 @@ Ligature2: "Orig CCMP-1" Tutg.D Uml.Conj Tutg.R
 Colour: 9effad
 EndChar
 
-StartChar: Syl.K_Ya
+StartChar: Syl.K_Y
 Encoding: 1114268 -1 235
-Width: 926
+Width: 962
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -237 81<635.477 756.565> 1 81<192.449 246.141 458.935 536.895> 425 81<179.783 313.638 500.96 640.175> 482 20G<851 866.5>
-VStem: 17 62<263.496 332.801> 128 63<83.4181 172.069> 564 63<158.708 283.626> 725 64<133.08 302.69> 845 64<-55.1497 479.504>
+HStem: -237 81<642.212 774.459> 1 81<205.912 261.847 467.726 549.835> 425 81<183.733 326.638 513.96 659.641>
+VStem: 30 62<259.67 338.512> 141 63<83.3342 177.226> 577 63<151.628 291.551> 738 64<125.146 312.509> 858 64<-60.7345 483.33>
 LayerCount: 2
 Fore
 SplineSet
-17 309 m 0xef80
- 17 440 113 506 236 506 c 0xef80
- 292 506 347 495 399 474 c 1
- 445 496 494 510 540 510 c 0
- 677 510 747 393 775 274 c 0
- 783 241 789 207 789 173 c 0
- 789 51 726 0 648 -81 c 0
- 636 -93 607 -122 609 -141 c 1
- 628 -150 649 -156 670 -156 c 0
- 806 -156 846 -43 846 71 c 0
- 846 150 845 230 845 309 c 2
- 845 489 l 2
- 845 497 846 502 856 502 c 0xdf80
- 877 502 909 454 909 434 c 2
- 909 -3 l 2
- 909 -130 851 -237 711 -237 c 0
- 636 -237 546 -165 546 -87 c 0
- 546 7 725 53 725 230 c 0
- 725 273 709 360 683 394 c 0
- 662 421 614 429 582 429 c 0
- 555 429 528 424 500 415 c 1
- 566 363 627 279 627 192 c 0
- 627 171 625 151 620 131 c 0
- 607 83 567 1 510 1 c 0
- 463 1 409 69 387 107 c 1
- 352 67 296 2 238 2 c 0
- 192 2 148 66 135 106 c 0
- 130 123 128 140 128 158 c 0
- 128 258 240 369 314 423 c 1
- 301 424 289 425 278 425 c 0
- 189 425 90 375 82 278 c 0
- 81 268 82 253 79 244 c 0
- 78 241 73 241 70 241 c 0
- 49 241 17 289 17 309 c 0xef80
-443 391 m 1
- 352 344 191 211 191 94 c 0
- 191 90 191 86 192 83 c 2
- 196 83 l 2
- 235 83 291 140 316 168 c 0
- 326 179 336 194 347 203 c 0
- 349 205 352 204 354 204 c 0
- 368 204 388 180 395 170 c 0
- 410 149 438 82 466 82 c 0
- 511 82 547 161 557 197 c 0
- 562 214 564 231 564 248 c 0
- 564 316 509 362 443 391 c 1
+251 2 m 0
+ 212 2 141 64 141 158 c 0
+ 141 258 253 369 327 423 c 1
+ 314 424 302 425 291 425 c 0
+ 202 425 103 375 95 278 c 0
+ 94 268 95 253 92 244 c 0
+ 91 241 86 241 83 241 c 0
+ 62 241 30 289 30 309 c 0
+ 30 440 126 506 249 506 c 0
+ 305 506 360 495 412 474 c 1
+ 458 496 507 510 553 510 c 0
+ 759 510 802 248 802 173 c 0
+ 802 51 739 0 661 -81 c 0
+ 649 -93 620 -122 622 -141 c 1
+ 641 -150 662 -156 683 -156 c 0
+ 819 -156 859 -43 859 71 c 0
+ 859 150 858 230 858 309 c 2
+ 858 489 l 2
+ 858 497 859 502 869 502 c 0
+ 890 502 922 454 922 434 c 2
+ 922 -3 l 2
+ 922 -130 864 -237 724 -237 c 0
+ 649 -237 559 -165 559 -87 c 0
+ 559 7 738 53 738 230 c 0
+ 738 273 722 360 696 394 c 0
+ 675 421 627 429 595 429 c 0
+ 568 429 541 424 513 415 c 1
+ 579 363 640 279 640 192 c 0
+ 640 91 578 1 523 1 c 0
+ 476 1 422 69 400 107 c 1
+ 365 67 309 2 251 2 c 0
+479 82 m 0
+ 524 82 577 174 577 248 c 0
+ 577 316 522 362 456 391 c 1
+ 365 344 204 211 204 94 c 0
+ 204 90 204 86 205 83 c 1
+ 209 83 l 2
+ 248 83 304 140 329 168 c 0
+ 339 179 349 194 360 203 c 0
+ 362 205 365 204 367 204 c 0
+ 407 204 441 82 479 82 c 0
 EndSplineSet
-Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2" 62 194 "Kern-2" 23 194 "Kern-2"
 Ligature2: "Orig CCMP-1" Tutg.K Uml.Conj Tutg.Y
+LCarets2: 2 0 0
 Colour: 9effad
 EndChar
 
-StartChar: Syl.G_Ya
+StartChar: Syl.G_Y
 Encoding: 1114269 -1 236
-Width: 908
+Width: 944
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -220 81<598.675 742.673> 0 81<125.055 245.619> 420 81<538.759 676.746>
-VStem: 17 63<112.809 259.119> 490 63<-121.994 -74.7387> 712 64<232.333 389.321> 827 64<-54.625 472.504>
+HStem: -220 81<606.588 759.919> 0 81<132.764 262.289> 420 81<547.397 695.592>
+VStem: 30 63<105.307 266.72> 503 63<-123.363 -70.9201> 725 64<223.828 396.178> 840 64<-57.9692 476.33>
 LayerCount: 2
 Fore
 SplineSet
-212 0 m 0
- 100 0 17 97 17 206 c 0
- 17 311 63 406 142 474 c 0
- 152 482 179 504 191 504 c 0
- 212 504 244 456 244 436 c 0
- 244 429 242 426 236 423 c 0
- 221 414 207 406 193 394 c 0
- 124 336 80 239 80 149 c 0
- 80 137 82 113 89 103 c 0
- 99 88 155 81 171 81 c 0
- 409 81 289 501 587 501 c 0
- 609 501 632 499 653 491 c 0
- 727 463 776 374 776 297 c 0
- 776 184 713 28 618 -41 c 0
- 589 -64 565 -72 553 -111 c 1
- 553 -112 l 1
- 582 -131 619 -139 653 -139 c 0
- 746 -139 811 -85 825 7 c 0
- 828 26 828 46 828 65 c 0
- 828 145 827 226 827 306 c 2
- 827 482 l 2
- 827 490 828 495 838 495 c 0
- 859 495 891 447 891 427 c 2
- 891 -10 l 2
- 891 -135 825 -220 695 -220 c 0
- 623 -220 549 -184 511 -122 c 0
- 499 -102 490 -80 490 -56 c 0
- 490 -36 500 -18 513 -3 c 0
- 527 13 546 24 563 37 c 0
- 651 101 712 248 712 353 c 0
- 712 369 709 387 703 402 c 1
- 677 417 659 420 629 420 c 0
- 350 420 473 0 212 0 c 0
+708 -220 m 0
+ 591 -220 503 -130 503 -56 c 0
+ 503 -36 513 -18 526 -3 c 0
+ 540 13 559 24 576 37 c 0
+ 664 101 725 248 725 353 c 0
+ 725 369 722 387 716 402 c 1
+ 690 417 672 420 642 420 c 0
+ 363 420 486 0 225 0 c 0
+ 113 0 30 97 30 206 c 0
+ 30 399 184 504 204 504 c 0
+ 225 504 257 456 257 436 c 0
+ 257 420 239 422 206 394 c 0
+ 137 336 93 239 93 149 c 0
+ 93 137 95 113 102 103 c 0
+ 112 88 168 81 184 81 c 0
+ 422 81 302 501 600 501 c 0
+ 622 501 645 499 666 491 c 4
+ 740 463 789 374 789 297 c 0
+ 789 184 726 28 631 -41 c 0
+ 602 -64 578 -72 566 -111 c 1
+ 566 -112 l 1
+ 595 -131 632 -139 666 -139 c 0
+ 759 -139 824 -85 838 7 c 0
+ 841 26 841 46 841 65 c 0
+ 841 145 840 226 840 306 c 2
+ 840 482 l 2
+ 840 490 841 495 851 495 c 0
+ 872 495 904 447 904 427 c 2
+ 904 -10 l 2
+ 904 -135 838 -220 708 -220 c 0
 EndSplineSet
-Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2" 62 194 "Kern-2" 23 194 "Kern-2"
+Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.G Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.Tt_Ya
 Encoding: 1114270 -1 237
-Width: 636
+Width: 661
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<343.05 469.954> 1 81<140.038 281.079> 231 82<194.11 281.434> 263 81<288.349 424.682> 419 81<257.847 378.954> 482 20G<564 576.5>
-VStem: 18 65<147.967 281.504> 431 63<197.089 257> 556 63<-53.5395 479.504>
+HStem: -233 80<349.773 486.775> 1 81<146.678 300.243> 263 81<287.392 441.069> 419 81<264.695 393.829> 482 20G<572.5 588.5>
+VStem: 30 65<137.555 285.25> 443 63<193.1 262.571> 568 63<-60.4721 483.33>
 LayerCount: 2
 Fore
 SplineSet
-18 261 m 0xd780
- 18 273 13 304 30 304 c 0
- 51 304 83 256 83 236 c 0
- 83 224 82 212 82 200 c 0
- 82 176 87 127 102 108 c 0
- 116 90 161 82 183 82 c 0
- 274 82 431 161 431 257 c 1
- 430 258 l 1
- 419 263 405 263 393 263 c 0xd780
- 335 263 282 231 225 231 c 0
- 172 231 128 314 128 361 c 0
- 128 470 242 500 330 500 c 0
- 338 500 346 500 354 498 c 0
- 374 492 402 452 402 431 c 0
- 402 423 399 419 391 419 c 0
- 326 419 248 415 208 356 c 0
- 199 343 193 329 192 313 c 1xeb80
- 206 314 219 319 232 322 c 0
- 271 332 310 344 350 344 c 0
- 368 344 386 342 402 335 c 0
- 452 314 494 249 494 195 c 0
- 494 171 485 148 471 127 c 1
- 479 100 480 71 480 46 c 0
- 480 -84 355 -95 335 -144 c 1
- 349 -149 365 -153 380 -153 c 0
- 517 -153 556 -43 556 75 c 0
- 556 198 555 322 555 445 c 0
- 555 451 555 495 557 499 c 0
- 559 502 562 502 566 502 c 0
- 587 502 619 454 619 434 c 2
- 619 -3 l 2
- 619 -130 561 -233 422 -233 c 0
- 364 -233 310 -199 282 -149 c 0
- 274 -136 267 -119 267 -103 c 0
- 267 -27 385 -19 412 67 c 1
- 357 27 293 1 225 1 c 0
- 90 1 18 142 18 261 c 0xd780
+434 -233 m 0xef
+ 340 -233 279 -148 279 -103 c 0
+ 279 -27 397 -19 424 67 c 1
+ 369 27 305 1 237 1 c 0
+ 102 1 30 142 30 261 c 0
+ 30 273 30 304 42 304 c 0
+ 63 304 95 256 95 236 c 0
+ 95 224 94 212 94 200 c 0
+ 94 176 99 127 114 108 c 0
+ 128 90 173 82 195 82 c 0
+ 286 82 443 161 443 257 c 1
+ 439 261 426 263 405 263 c 0
+ 347 263 294 231 237 231 c 0
+ 184 231 140 314 140 361 c 0
+ 140 470 254 500 342 500 c 0
+ 350 500 358 500 366 498 c 0
+ 386 492 414 452 414 431 c 0
+ 414 423 411 419 403 419 c 0xf7
+ 338 419 260 415 220 356 c 0
+ 211 343 205 329 204 313 c 1
+ 232 315 303 344 362 344 c 0
+ 380 344 398 342 414 335 c 0
+ 464 314 506 249 506 195 c 0
+ 506 171 497 148 483 127 c 1
+ 491 100 492 71 492 46 c 0
+ 492 -84 367 -95 347 -144 c 1
+ 361 -149 377 -153 392 -153 c 0
+ 529 -153 568 -43 568 75 c 0
+ 568 198 567 322 567 445 c 0
+ 567 502 567 502 578 502 c 0
+ 599 502 631 454 631 434 c 2
+ 631 -3 l 2
+ 631 -130 573 -233 434 -233 c 0xef
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.Tt Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.Dd_Ya
 Encoding: 1114271 -1 238
-Width: 846
+Width: 882
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -249 81<567.923 670.132> 0 80<144.161 274.097 458.418 555.586> 420 81<93.2512 157.708>
-VStem: 17 80<319 430> 17 63<357.1 407.125> 177 63<323.428 408> 367 63<190.375 415.295> 493 200<-130 32> 628 64<162.913 349.556> 765 64<-58.2512 479.504>
+HStem: -249 81<580.923 688.388> 0 80<157.161 292.498 467.215 572.727> 420 81<104.379 176.746>
+VStem: 30 80<340.523 417.74> 30 63<340.523 410.011> 190 63<315.227 408> 358 62<316.907 460.373> 380 63<181.758 422.112> 506 200<-130 32> 641 64<155.34 357.517> 778 64<-63.9222 483.33>
 LayerCount: 2
 Fore
 SplineSet
-17 430 m 0xf640
- 17 473 57 501 97 501 c 0
- 166 501 240 410 240 344 c 0
- 240 256 161 171 143 85 c 1
- 159 82 176 80 192 80 c 0
- 323 80 367 203 367 314 c 0
- 367 349 360 384 353 418 c 0
- 350 434 345 449 345 465 c 0
- 345 473 348 477 356 477 c 0
- 375 477 402 437 407 420 c 0
- 411 405 412 390 415 375 c 0
- 422 336 430 298 430 258 c 0
- 430 249 430 240 429 230 c 0
- 431 223 430 215 430 208 c 0
- 430 184 433 106 446 90 c 0
- 450 85 472 81 479 81 c 0
- 595 81 628 184 628 281 c 0
- 628 319 621 374 599 406 c 0
- 592 417 582 424 573 432 c 0
- 559 444 541 470 541 489 c 0
- 541 497 544 501 552 501 c 0
- 561 501 582 483 589 477 c 0
- 658 411 692 319 692 224 c 0xf6c0
- 692 196 689 163 680 131 c 1
- 687 103 693 53 693 32 c 0
- 693 -35 672 -83 618 -125 c 0
- 601 -138 580 -149 567 -166 c 1
- 573 -167 578 -168 584 -168 c 0
- 685 -168 746 -94 761 0 c 0
- 765 24 766 48 766 72 c 0
- 766 150 765 228 765 306 c 2
- 765 489 l 2
- 765 497 766 502 776 502 c 0
- 797 502 829 454 829 434 c 2
- 829 -3 l 2
- 829 -131 769 -249 626 -249 c 0
- 566 -249 493 -191 493 -130 c 0
- 493 -67 588 -60 619 27 c 1
- 591 6 555 0 521 0 c 0
- 465 0 419 51 397 98 c 1
- 367 40 316 0 234 0 c 0
- 175 0 132 13 99 64 c 0
- 86 85 78 106 78 131 c 0
- 78 211 177 319 177 401 c 0
- 177 403 176 406 176 408 c 2
- 168 415 l 2
- 164 415 152 420 139 420 c 0
- 110 420 87 401 80 374 c 1
- 80 373 l 2xef40
- 80 370 80 359 81 357 c 0
- 86 343 97 335 97 319 c 0
- 97 311 94 307 86 307 c 0
- 78 307 68 313 62 318 c 0
- 29 345 17 389 17 430 c 0xf640
+99 307 m 0xf420
+ 80 307 30 345 30 430 c 0xec20
+ 30 473 70 501 110 501 c 0
+ 179 501 253 410 253 344 c 0
+ 253 256 174 171 156 85 c 1
+ 172 82 189 80 205 80 c 0
+ 336 80 380 203 380 314 c 0xf520
+ 380 376 358 439 358 465 c 0
+ 358 473 361 477 369 477 c 0
+ 388 477 415 437 420 420 c 0xe620
+ 420 418 443 308 443 258 c 0
+ 443 249 443 240 442 230 c 0
+ 444 223 443 215 443 208 c 0
+ 443 184 446 106 459 90 c 0
+ 463 85 485 81 492 81 c 0
+ 608 81 641 184 641 281 c 0
+ 641 319 634 374 612 406 c 0
+ 602 422 554 452 554 489 c 0
+ 554 497 557 501 565 501 c 0
+ 583 501 705 406 705 224 c 0xe560
+ 705 196 702 163 693 131 c 1
+ 700 103 706 53 706 32 c 0
+ 706 -35 685 -83 631 -125 c 0
+ 614 -138 593 -149 580 -166 c 1
+ 586 -167 591 -168 597 -168 c 0
+ 647 -168 779 -147 779 72 c 0
+ 779 150 778 228 778 306 c 2
+ 778 489 l 2
+ 778 497 779 502 789 502 c 0
+ 810 502 842 454 842 434 c 2
+ 842 -3 l 2
+ 842 -131 782 -249 639 -249 c 0
+ 579 -249 506 -191 506 -130 c 0
+ 506 -67 601 -60 632 27 c 1
+ 604 6 568 0 534 0 c 0
+ 478 0 432 51 410 98 c 1
+ 380 40 329 0 247 0 c 0
+ 188 0 145 13 112 64 c 0
+ 99 85 91 106 91 131 c 0
+ 91 211 190 319 190 401 c 0
+ 190 403 189 406 189 408 c 1
+ 181 415 l 1
+ 177 415 165 420 152 420 c 0
+ 123 420 100 401 93 374 c 1
+ 93 373 l 2xeca0
+ 93 336 110 344 110 319 c 0
+ 110 311 107 307 99 307 c 0xf420
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
 LCarets2: 2 0 0
@@ -15514,131 +15483,124 @@ EndChar
 
 StartChar: Syl.Nn_Ya
 Encoding: 1114272 -1 239
-Width: 1268
+Width: 1304
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<950.006 1091.44> 2 81<130.355 231.077> 181 81<144.156 218.643> 422 80<183.115 335.874 551.324 669.594 884.702 977.375>
-VStem: 248 64<55 160.391> 407 66<58.0856 322.644> 752 63<20.922 306.371> 1063 64<150.78 332.689> 1187 64<-52.5039 479.504>
+HStem: -233 80<957.17 1112.16> 2 81<138.516 246.533> 181 81<153.438 235.988> 422 80<192.508 356.251 559.207 687.073 894.479 996.71>
+VStem: 261 64<55 166.992> 420 66<22.9069 331.122> 765 63<17.5836 320.45> 1076 64<140.226 340.668> 1200 64<-58.3618 483.33>
 LayerCount: 2
 Fore
 SplineSet
-17 244 m 0
- 17 365 81 502 219 502 c 0
- 313 502 383 475 432 389 c 1
- 458 463 502 502 582 502 c 0
- 674 502 735 441 772 362 c 1
- 786 424 814 500 889 500 c 0
- 1037 500 1127 354 1127 219 c 0
- 1127 97 1074 -22 980 -100 c 0
- 965 -112 943 -124 934 -141 c 1
- 949 -148 977 -153 994 -153 c 0
- 1101 -153 1171 -93 1185 13 c 0
- 1188 32 1188 51 1188 70 c 0
- 1188 147 1187 222 1187 299 c 2
- 1187 489 l 2
- 1187 497 1188 502 1198 502 c 0
- 1219 502 1251 454 1251 434 c 2
- 1251 -3 l 2
- 1251 -141 1180 -233 1036 -233 c 0
- 973 -233 910 -199 880 -144 c 0
- 872 -130 866 -114 866 -98 c 0
- 866 -84 870 -70 879 -59 c 0
- 891 -44 910 -34 925 -22 c 0
- 1012 51 1063 162 1063 275 c 0
- 1063 368 1031 419 932 419 c 0
- 839 419 819 253 815 143 c 0
- 816 125 816 108 816 91 c 0
- 816 78 817 10 813 3 c 0
- 811 0 807 0 804 0 c 0
- 797 0 786 9 781 13 c 0
- 761 32 754 49 751 73 c 0
- 751 75 751 77 751 79 c 0
- 751 115 751 150 752 186 c 0
- 750 259 739 378 697 404 c 0
- 675 417 649 422 624 422 c 0
- 508 422 479 306 473 206 c 0
- 473 193 473 179 473 166 c 0
- 473 127 472 89 473 50 c 0
- 474 37 475 25 475 12 c 0
- 475 4 472 0 464 0 c 0
- 457 0 446 9 441 13 c 0
- 429 24 418 41 413 57 c 0
- 407 79 407 176 407 203 c 0
- 407 222 408 244 409 267 c 0
- 407 322 401 376 381 393 c 0
- 354 416 295 422 261 422 c 0
- 157 422 99 326 84 233 c 1
- 104 250 127 262 154 262 c 0
- 232 262 312 160 312 86 c 0
- 312 24 260 2 206 2 c 0
- 88 2 17 140 17 244 c 0
-99 105 m 1
- 116 88 142 83 164 83 c 0
- 201 83 248 99 248 143 c 0
- 248 172 222 181 197 181 c 0
- 163 181 132 152 114 126 c 0
- 109 119 106 111 99 105 c 1
+817 0 m 0
+ 816 0 772 12 764 73 c 1
+ 764 79 l 2
+ 764 115 764 150 765 186 c 0
+ 763 259 752 378 710 404 c 0
+ 688 417 662 422 637 422 c 0
+ 521 422 492 306 486 206 c 1
+ 486 166 l 2
+ 486 127 485 89 486 50 c 0
+ 487 37 488 25 488 12 c 0
+ 488 4 485 0 477 0 c 0
+ 466 0 437 23 426 57 c 0
+ 420 79 420 176 420 203 c 0
+ 420 222 421 244 422 267 c 0
+ 420 322 414 376 394 393 c 0
+ 367 416 308 422 274 422 c 0
+ 170 422 112 326 97 233 c 1
+ 117 250 140 262 167 262 c 0
+ 245 262 325 160 325 86 c 0
+ 325 24 273 2 219 2 c 0
+ 101 2 30 140 30 244 c 0
+ 30 365 94 502 232 502 c 0
+ 326 502 396 475 445 389 c 1
+ 471 463 515 502 595 502 c 0
+ 687 502 748 441 785 362 c 1
+ 799 424 827 500 902 500 c 0
+ 1050 500 1140 354 1140 219 c 0
+ 1140 97 1087 -22 993 -100 c 0
+ 978 -112 956 -124 947 -141 c 1
+ 962 -148 990 -153 1007 -153 c 0
+ 1100 -153 1201 -111 1201 70 c 0
+ 1201 147 1200 222 1200 299 c 2
+ 1200 489 l 2
+ 1200 497 1201 502 1211 502 c 0
+ 1232 502 1264 454 1264 434 c 2
+ 1264 -3 l 2
+ 1264 -141 1193 -233 1049 -233 c 0
+ 948 -233 879 -151 879 -98 c 0
+ 879 -84 883 -70 892 -59 c 0
+ 904 -44 923 -34 938 -22 c 0
+ 1025 51 1076 162 1076 275 c 0
+ 1076 368 1044 419 945 419 c 0
+ 852 419 832 253 828 143 c 0
+ 829 125 829 108 829 91 c 0
+ 829 0 829 0 817 0 c 0
+112 105 m 1
+ 129 88 155 83 177 83 c 0
+ 214 83 261 99 261 143 c 0
+ 261 172 235 181 210 181 c 0
+ 176 181 145 152 127 126 c 0
+ 122 119 119 111 112 105 c 1
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.Nn Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.T_Ya
 Encoding: 1114273 -1 240
-Width: 920
+Width: 956
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -239 81<629.042 756.902> 1 81<345.382 428.887> 423 81<201.144 338.839 533.194 651.596>
-VStem: 17 64<149.863 308.01> 271 63<87.2126 200.744> 459 63<114.967 263.796> 723 64<182.076 357.411> 840 63<-63.8232 479.504>
+HStem: -239 81<637.43 774.414> 1 81<353.396 442.727> 423 81<208.867 356.964 539.831 670.596>
+VStem: 30 64<142.715 313.269> 284 63<87.6532 208.133> 472 63<110.287 273.473> 736 64<173.48 367.039> 853 63<-69.7112 483.33>
 LayerCount: 2
 Fore
 SplineSet
-17 271 m 0
- 17 407 121 504 258 504 c 0
- 313 504 363 474 405 430 c 1
- 451 472 508 500 570 500 c 0
- 706 500 787 373 787 248 c 0
- 787 139 726 -25 633 -90 c 0
- 617 -102 595 -112 589 -133 c 1
- 607 -148 652 -158 676 -158 c 0
- 781 -158 832 -76 838 20 c 0
- 839 42 840 65 840 87 c 0
- 840 188 839 289 839 390 c 0
- 839 406 837 492 841 499 c 0
- 843 502 847 502 850 502 c 0
- 871 502 903 454 903 434 c 2
- 903 -3 l 2
- 903 -124 858 -239 718 -239 c 0
- 648 -239 579 -198 543 -139 c 0
- 533 -123 525 -103 525 -83 c 0
- 525 -68 529 -55 538 -43 c 0
- 549 -29 564 -22 578 -12 c 0
- 664 48 723 205 723 305 c 0
- 723 328 720 372 706 390 c 0
- 689 412 638 420 612 420 c 0
- 559 420 506 393 461 352 c 1
- 499 285 522 208 522 149 c 0
- 522 75 501 1 413 1 c 0
- 348 1 296 56 278 115 c 0
- 273 133 271 152 271 171 c 0
- 271 248 324 343 373 399 c 1
- 352 414 328 423 299 423 c 0
- 179 423 81 336 81 215 c 0
- 81 179 87 124 110 95 c 0
- 119 84 131 76 141 67 c 0
- 155 55 173 29 173 10 c 0
- 173 2 170 -2 162 -2 c 0
- 153 -2 131 17 124 23 c 0
- 53 86 17 177 17 271 c 0
-459 205 m 0
- 459 242 450 285 432 323 c 1
- 374 259 334 173 334 103 c 0
- 334 98 335 94 336 89 c 1
- 346 85 361 82 372 82 c 0
- 443 82 459 147 459 205 c 0
+175 -2 m 0
+ 160 -2 30 89 30 271 c 0
+ 30 407 134 504 271 504 c 0
+ 326 504 376 474 418 430 c 1
+ 464 472 521 500 583 500 c 0
+ 719 500 800 373 800 248 c 0
+ 800 139 739 -25 646 -90 c 0
+ 630 -102 608 -112 602 -133 c 1
+ 620 -148 665 -158 689 -158 c 0
+ 794 -158 845 -76 851 20 c 0
+ 852 42 853 65 853 87 c 0
+ 853 188 852 289 852 390 c 0
+ 852 406 850 492 854 499 c 0
+ 856 502 860 502 863 502 c 0
+ 884 502 916 454 916 434 c 2
+ 916 -3 l 2
+ 916 -124 871 -239 731 -239 c 0
+ 625 -239 538 -147 538 -83 c 0
+ 538 -68 542 -55 551 -43 c 0
+ 562 -29 577 -22 591 -12 c 0
+ 677 48 736 205 736 305 c 0
+ 736 328 733 372 719 390 c 0
+ 702 412 651 420 625 420 c 0
+ 572 420 519 393 474 352 c 1
+ 512 285 535 208 535 149 c 0
+ 535 75 514 1 426 1 c 0
+ 364 1 284 60 284 171 c 0
+ 284 248 337 343 386 399 c 1
+ 365 414 341 423 312 423 c 0
+ 192 423 94 336 94 215 c 0
+ 94 179 100 124 123 95 c 0
+ 132 84 144 76 154 67 c 0
+ 168 55 186 29 186 10 c 0
+ 186 2 183 -2 175 -2 c 0
+472 205 m 0
+ 472 242 463 285 445 323 c 1
+ 387 259 347 173 347 103 c 0
+ 347 98 348 94 349 89 c 1
+ 359 85 374 82 385 82 c 0
+ 456 82 472 147 472 205 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
 LCarets2: 2 0 0
@@ -15648,356 +15610,322 @@ EndChar
 
 StartChar: Syl.D_Ya
 Encoding: 1114274 -1 241
-Width: 515
+Width: 551
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -209 81<190.031 347.644> 418 81<107.207 220.776> 482 20G<440 455.5>
-VStem: 17 62<351.496 391.012> 434 64<-39.8614 479.504>
+HStem: -209 81<196.091 366.471> 418 81<116.529 239.186> 482 20G<453 468.5>
+VStem: 151 161<258 365> 447 64<-46.5781 483.33>
 LayerCount: 2
 Fore
 SplineSet
-17 397 m 0xd8
- 17 469 72 499 137 499 c 0
- 196 499 252 469 282 418 c 0xd8
- 291 402 299 384 299 365 c 0
- 299 331 275 288 254 262 c 1
- 303 239 354 183 354 126 c 0
- 354 58 281 5 228 -26 c 0
- 205 -40 179 -52 159 -71 c 0
- 152 -78 144 -90 142 -100 c 1
- 170 -120 221 -128 256 -128 c 0
- 346 -128 416 -77 431 14 c 0
- 434 33 435 53 435 73 c 0
- 435 152 434 232 434 311 c 2
- 434 489 l 2
- 434 497 435 502 445 502 c 0xb8
- 466 502 498 454 498 434 c 2
- 498 -3 l 2
- 498 -128 425 -209 298 -209 c 0
- 219 -209 137 -177 96 -106 c 0
- 86 -88 78 -69 78 -48 c 0
- 78 12 152 39 194 66 c 0
- 230 89 287 133 290 180 c 1
- 275 189 252 195 234 195 c 0
- 219 195 205 190 190 190 c 0
- 169 190 138 238 138 258 c 0
- 138 261 138 265 140 268 c 0
- 147 278 156 288 164 298 c 0
- 188 327 225 370 233 408 c 1
- 215 415 197 418 178 418 c 0
- 149 418 110 408 93 382 c 0
- 79 361 83 338 79 332 c 0
- 77 329 74 329 70 329 c 0
- 49 329 17 377 17 397 c 0xd8
+311 -209 m 0xb8
+ 167 -209 91 -110 91 -48 c 0
+ 91 12 165 39 207 66 c 0
+ 243 89 300 133 303 180 c 1
+ 288 189 265 195 247 195 c 0
+ 232 195 218 190 203 190 c 0
+ 182 190 151 238 151 258 c 0
+ 151 280 233 347 246 408 c 1
+ 228 415 210 418 191 418 c 0
+ 162 418 123 408 106 382 c 0
+ 86 353 103 329 83 329 c 0
+ 62 329 30 377 30 397 c 0
+ 30 469 85 499 150 499 c 0xd8
+ 251 499 312 415 312 365 c 0
+ 312 331 288 288 267 262 c 1
+ 316 239 367 183 367 126 c 0
+ 367 58 294 5 241 -26 c 0
+ 218 -40 192 -52 172 -71 c 0
+ 165 -78 157 -90 155 -100 c 1
+ 183 -120 234 -128 269 -128 c 0
+ 359 -128 429 -77 444 14 c 0
+ 447 33 448 53 448 73 c 0
+ 448 152 447 232 447 311 c 2
+ 447 489 l 2
+ 447 497 448 502 458 502 c 0
+ 479 502 511 454 511 434 c 2
+ 511 -3 l 2
+ 511 -128 438 -209 311 -209 c 0xb8
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.D Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.N_Ya
 Encoding: 1114275 -1 242
-Width: 928
+Width: 964
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -228 81<632.886 762.351> 1 21G<145 154 373.5 385> 416 81<134.954 242.809 545.269 687.053>
-VStem: 17 63<161.178 351.873> 332 60<21.9947 215.68> 728 63<176.154 371.659> 847 64<-55.7722 479.504>
+HStem: -228 81<640.249 779.862> 1 21G<150 167 386.5 398> 416 81<144.487 260.198 553.213 703.14>
+VStem: 30 63<152.408 358.401> 741 63<164.828 378.206> 860 64<-62.0516 483.33>
 LayerCount: 2
 Fore
 SplineSet
-118 23 m 0
- 51 90 17 200 17 293 c 0
- 17 352 30 442 84 477 c 0
- 105 491 140 497 165 497 c 0
- 268 497 330 398 359 311 c 1
- 399 429 480 500 605 500 c 0
- 694 500 758 421 780 341 c 0
- 788 310 791 277 791 245 c 0
- 791 142 738 -22 655 -91 c 0
- 639 -104 619 -113 611 -133 c 1
- 628 -143 661 -147 680 -147 c 0
- 710 -147 740 -138 766 -123 c 0
- 840 -78 848 4 848 82 c 0
- 848 160 847 236 847 314 c 2
- 847 489 l 2
- 847 497 848 502 858 502 c 0
- 879 502 911 454 911 434 c 2
- 911 -3 l 2
- 911 -122 853 -228 722 -228 c 0
- 657 -228 598 -198 564 -142 c 0
- 554 -125 545 -106 545 -86 c 0
- 545 -49 575 -34 600 -13 c 0
- 676 50 728 205 728 302 c 0
- 728 329 727 377 711 400 c 0
- 702 413 661 419 646 419 c 0
- 620 419 593 413 569 405 c 0
- 441 361 409 237 397 116 c 0
- 396 101 394 8 392 4 c 0
- 390 1 387 1 383 1 c 0
- 364 1 337 41 332 58 c 0
- 327 75 330 122 329 142 c 0
- 327 210 317 322 283 381 c 0
- 267 409 238 416 208 416 c 0
- 103 416 80 323 80 237 c 0
- 80 186 91 123 120 80 c 0
- 135 58 161 44 161 13 c 0
- 161 5 158 1 150 1 c 0
- 140 1 125 16 118 23 c 0
+163 1 m 0
+ 137 1 30 119 30 293 c 0
+ 30 352 43 442 97 477 c 0
+ 118 491 153 497 178 497 c 0
+ 281 497 343 398 372 311 c 1
+ 412 429 493 500 618 500 c 0
+ 692 500 804 433 804 245 c 0
+ 804 142 751 -22 668 -91 c 0
+ 652 -104 632 -113 624 -133 c 1
+ 641 -143 674 -147 693 -147 c 0
+ 723 -147 753 -138 779 -123 c 0
+ 853 -78 861 4 861 82 c 0
+ 861 160 860 236 860 314 c 2
+ 860 489 l 2
+ 860 497 861 502 871 502 c 0
+ 892 502 924 454 924 434 c 2
+ 924 -3 l 2
+ 924 -122 866 -228 735 -228 c 0
+ 616 -228 558 -132 558 -86 c 0
+ 558 -49 588 -34 613 -13 c 0
+ 689 50 741 205 741 302 c 0
+ 741 329 740 377 724 400 c 0
+ 715 413 674 419 659 419 c 0
+ 633 419 606 413 582 405 c 0
+ 372 333 417 28 405 4 c 0
+ 403 1 400 1 396 1 c 0
+ 377 1 350 41 345 58 c 0
+ 339 79 351 285 296 381 c 0
+ 280 409 251 416 221 416 c 0
+ 116 416 93 323 93 237 c 0
+ 93 186 104 123 133 80 c 0
+ 148 58 174 44 174 13 c 0
+ 174 5 171 1 163 1 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.P_Ya
 Encoding: 1114276 -1 243
-Width: 1081
+Width: 1117
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -240 81<792.398 916.576> -4 81<454 772.325> 326 81<212.876 358.917> 418 81<667.629 756.673>
-VStem: 17 64<110.152 208.359> 441 63<185.523 269.41> 856 64<150.83 294.596> 1000 64<-61.623 472.504>
+HStem: -240 81<801.902 934.34> -4 81<467 796.51> 326 81<219.439 379.706> 418 81<677.789 774.404>
+VStem: 30 64<104.78 213.582> 454 63<182.165 277.813> 869 64<145.203 302.728> 1013 64<-69.3798 476.33>
 LayerCount: 2
 Fore
 SplineSet
-111 20 m 0
- 59 65 17 127 17 198 c 0
- 17 293 109 371 193 396 c 0
- 218 404 244 407 270 407 c 0
- 378 407 504 303 504 191 c 0
- 504 152 482 112 454 79 c 1
- 482 78 510 77 538 77 c 0
- 600 77 747 77 797 109 c 0
- 836 134 856 189 856 233 c 0
- 856 308 821 418 730 418 c 0
- 720 418 711 414 701 414 c 0
- 680 414 648 462 648 482 c 0
- 648 498 673 499 684 499 c 0
- 794 499 878 367 906 273 c 0
- 915 242 920 209 920 176 c 0
- 920 161 918 144 914 128 c 1
- 927 92 930 48 930 17 c 0
- 930 -59 888 -85 829 -120 c 0
- 814 -129 798 -137 788 -152 c 1
- 797 -156 818 -159 828 -159 c 0
- 963 -159 1001 -49 1001 64 c 0
- 1001 144 1000 224 1000 304 c 2
- 1000 482 l 2
- 1000 490 1001 495 1011 495 c 0
- 1032 495 1064 447 1064 427 c 2
- 1064 -10 l 2
- 1064 -136 1007 -240 869 -240 c 0
- 813 -240 760 -206 733 -157 c 0
- 725 -143 719 -127 719 -111 c 0
- 719 -39 834 -39 861 37 c 1
- 858 35 855 33 852 31 c 0
- 798 -3 658 -4 592 -4 c 0
- 520 -4 449 1 377 1 c 2
- 361 1 l 2
- 359 0 357 0 355 0 c 0
- 332 0 301 48 301 69 c 0
- 301 77 306 80 312 81 c 1
- 311 82 l 1
- 361 108 441 189 441 248 c 0
- 441 256 441 264 438 272 c 0
- 436 276 429 283 425 286 c 0
- 394 313 352 326 311 326 c 0
- 227 326 139 277 99 203 c 0
- 89 184 81 164 81 142 c 0
- 81 75 123 86 148 35 c 0
- 151 28 155 20 155 12 c 0
- 155 4 152 0 144 0 c 0
- 136 0 117 15 111 20 c 0
+157 0 m 0
+ 142 0 30 83 30 198 c 0
+ 30 299 144 407 283 407 c 0
+ 391 407 517 303 517 191 c 0
+ 517 152 495 112 467 79 c 1
+ 495 78 523 77 551 77 c 0
+ 613 77 760 77 810 109 c 0
+ 849 134 869 189 869 233 c 0
+ 869 308 834 418 743 418 c 0
+ 733 418 724 414 714 414 c 0
+ 693 414 661 462 661 482 c 0
+ 661 498 686 499 697 499 c 0
+ 818 499 933 327 933 176 c 0
+ 933 161 931 144 927 128 c 1
+ 940 92 943 48 943 17 c 0
+ 943 -101 831 -107 801 -152 c 1
+ 810 -156 831 -159 841 -159 c 0
+ 976 -159 1014 -49 1014 64 c 0
+ 1014 144 1013 224 1013 304 c 2
+ 1013 482 l 2
+ 1013 490 1014 495 1024 495 c 0
+ 1045 495 1077 447 1077 427 c 2
+ 1077 -10 l 2
+ 1077 -136 1020 -240 882 -240 c 0
+ 795 -240 732 -161 732 -111 c 0
+ 732 -39 847 -39 874 37 c 1
+ 843 16 798 -4 605 -4 c 0
+ 533 -4 462 1 390 1 c 2
+ 374 1 l 1
+ 372 0 370 0 368 0 c 0
+ 345 0 314 48 314 69 c 0
+ 314 77 319 80 325 81 c 1
+ 324 82 l 1
+ 374 108 454 189 454 248 c 0
+ 454 264 454 274 438 286 c 0
+ 407 313 365 326 324 326 c 0
+ 196 326 94 219 94 142 c 0
+ 94 75 136 86 161 35 c 0
+ 164 28 168 20 168 12 c 0
+ 168 4 165 0 157 0 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.P Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.B_Ya
 Encoding: 1114277 -1 244
-Width: 1002
+Width: 1038
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -243 81<703.669 825.632> 1 81<578.394 714.037> 8 81<123.099 177.135> 147 81<90.5149 182.883> 415 80<150.719 252.366 394.966 514.224> 482 20G<930 942.5>
-VStem: 17 64<228.036 327.913> 564 64<202.907 363.898> 780 64<155.533 405.13> 922 63<-54.3149 479.504>
+HStem: -243 81<717.645 842.749> 8 81<132.59 192.627 591.394 739.816> 147 81<103.515 203.665> 417 81<162.216 265.841 406.876 526.728>
+VStem: 30 64<229.517 336.452> 314 62<149.627 269.653> 577 64<194.998 371.053> 793 64<148.422 411.356> 935 63<-59.6563 483.33>
 LayerCount: 2
 Fore
 SplineSet
-112 39 m 0xbbc0
- 44 99 17 189 17 278 c 0
- 17 371 59 495 171 495 c 0xbbc0
- 231 495 272 469 306 421 c 1
- 325 480 370 498 428 498 c 0
- 520 498 588 423 615 341 c 0
- 625 312 628 281 628 250 c 0
- 628 191 607 132 577 82 c 1
- 616 82 674 83 709 101 c 0
- 725 109 738 120 748 135 c 0
- 780 183 780 280 780 337 c 0
- 780 367 779 398 767 426 c 0
- 760 443 741 468 741 486 c 0
- 741 494 744 498 752 498 c 0
- 761 498 775 486 780 480 c 0
- 824 432 844 343 844 281 c 0
- 844 242 844 187 835 137 c 1
- 841 118 841 59 841 37 c 0
- 841 -63 811 -79 734 -130 c 0
- 724 -136 709 -147 703 -157 c 1
- 716 -162 730 -162 744 -162 c 0
- 763 -162 782 -158 799 -152 c 0
- 900 -118 922 -19 922 76 c 0
- 922 199 921 322 921 445 c 0
- 921 451 921 496 923 499 c 0
- 925 502 928 502 932 502 c 0
- 953 502 985 454 985 434 c 2
- 985 -3 l 2
- 985 -95 955 -186 865 -226 c 0
- 841 -237 814 -243 787 -243 c 0
- 728 -243 681 -219 650 -169 c 0
- 641 -155 632 -137 632 -120 c 0
- 632 -53 733 -37 763 17 c 0
- 764 20 766 22 767 25 c 1
- 724 2 667 1 621 1 c 0xd7c0
- 602 1 497 1 490 4 c 0
- 469 13 442 48 442 71 c 0
- 442 74 442 78 444 80 c 0
- 446 83 449 84 452 86 c 0
- 520 131 564 228 564 307 c 0
- 564 378 553 417 470 417 c 0
- 377 417 357 353 357 273 c 0
- 357 245 358 217 360 189 c 0
- 361 174 363 160 363 145 c 0
- 363 137 360 133 352 133 c 0
- 333 133 306 173 301 190 c 0
- 296 207 296 224 294 241 c 0
- 289 294 291 349 274 400 c 1
- 275 400 l 1
- 255 411 235 415 213 415 c 0
- 121 415 82 306 81 228 c 1
- 147 228 206 210 242 152 c 0
- 252 136 261 116 261 96 c 0
- 261 51 220 8 175 8 c 0
- 151 8 129 24 112 39 c 0xbbc0
-123 147 m 0
- 111 147 101 142 90 139 c 1
- 97 112 110 89 132 89 c 0
- 157 89 187 114 195 137 c 1
- 172 144 147 147 123 147 c 0
+188 8 m 0
+ 140 8 30 97 30 278 c 0
+ 30 371 72 495 184 495 c 0
+ 244 495 285 469 319 421 c 1
+ 338 480 383 498 441 498 c 0
+ 537 498 641 406 641 250 c 0
+ 641 191 620 132 590 82 c 1
+ 760 82 793 117 793 337 c 0
+ 793 367 792 398 780 426 c 0
+ 773 443 754 468 754 486 c 0
+ 754 494 757 498 765 498 c 0
+ 797 498 857 399 857 281 c 0
+ 857 242 857 187 848 137 c 1
+ 854 118 854 59 854 37 c 0
+ 854 -63 824 -79 747 -130 c 0
+ 737 -136 722 -147 716 -157 c 1
+ 729 -162 743 -162 757 -162 c 0
+ 776 -162 795 -158 812 -152 c 0
+ 913 -118 935 -19 935 76 c 0
+ 935 199 934 322 934 445 c 0
+ 934 502 934 502 945 502 c 0
+ 966 502 998 454 998 434 c 2
+ 998 -3 l 2
+ 998 -190 878 -243 800 -243 c 0
+ 682 -243 645 -145 645 -120 c 0
+ 645 -50 762 -30 780 25 c 1
+ 737 2 680 1 634 1 c 0
+ 615 1 510 1 503 4 c 0
+ 482 13 455 48 455 71 c 0
+ 455 79 455 79 465 86 c 0
+ 533 131 577 228 577 307 c 0
+ 577 378 566 417 483 417 c 0
+ 390 417 370 353 370 273 c 0
+ 370 201 376 167 376 145 c 0
+ 376 137 373 133 365 133 c 0
+ 346 133 319 173 314 190 c 0
+ 301 233 309 333 287 400 c 1
+ 288 400 l 1
+ 268 411 248 415 226 415 c 0
+ 134 415 95 306 94 228 c 1
+ 266 228 274 98 274 96 c 0
+ 274 51 233 8 188 8 c 0
+136 147 m 0
+ 124 147 114 142 103 139 c 1
+ 110 112 123 89 145 89 c 0
+ 170 89 200 114 208 137 c 1
+ 185 144 160 147 136 147 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.B Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.M_Ya
 Encoding: 1114278 -1 245
-Width: 730
+Width: 766
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<437.05 563.954> -7 81<237.804 446.995> 3 73<236 340.314> 6 95<38.0332 108.564> 417 81<190.479 294.401> 482 20G<658 670.5>
-VStem: 90 64<313.421 380.757> 338 64<287.138 391.6> 504 70<-19 162.6> 650 63<-53.5395 479.504>
+HStem: -233 80<444.827 581.775> -7 81<250.804 459.995> 3 73<249 353.314> 417 81<200.022 314.317> 482 20G<667.631 683.5>
+VStem: 103 64<308.878 384.373> 351 64<281.28 396.557> 517 70<-19 168.827> 663 63<-60.4721 483.33>
 LayerCount: 2
 Fore
 SplineSet
-65 6 m 0x93c0
- 44 13 17 51 17 73 c 0
- 17 77 19 82 22 85 c 0
- 26 88 58 98 65 101 c 0x93c0
- 163 136 271 193 319 290 c 0
- 330 312 338 341 338 365 c 0
- 338 378 339 390 327 398 c 0
- 309 411 279 417 257 417 c 0
- 198 417 154 377 154 317 c 0
- 154 311 155 307 155 301 c 0
- 155 293 152 289 144 289 c 0
- 125 289 98 329 93 346 c 0
- 90 355 90 365 90 374 c 0
- 90 449 139 498 214 498 c 0
- 312 498 402 406 402 308 c 0
- 402 204 320 125 236 76 c 1xabc0
- 272 75 306 74 342 74 c 0
- 370 74 454 76 475 91 c 0
- 491 102 504 128 504 148 c 0
- 504 194 476 211 446 238 c 0
- 432 250 414 276 414 295 c 0
- 414 303 417 307 425 307 c 0
- 433 307 452 292 459 286 c 0
- 498 253 539 202 558 148 c 0
- 572 117 574 78 574 46 c 0
- 574 -84 449 -95 429 -144 c 1
- 443 -149 459 -153 474 -153 c 0
- 611 -153 650 -43 650 75 c 0
- 650 198 649 322 649 445 c 0
- 649 451 649 495 651 499 c 0
- 653 502 656 502 660 502 c 0
- 681 502 713 454 713 434 c 2
- 713 -3 l 2
- 713 -130 655 -233 516 -233 c 0
- 458 -233 404 -199 376 -149 c 0
- 368 -136 361 -119 361 -103 c 0
- 361 -56 407 -35 448 -5 c 1
- 423 -7 399 -7 384 -7 c 0xc7c0
- 292 -7 201 -1 109 3 c 0xa3c0
- 100 3 72 4 65 6 c 0x93c0
+529 -233 m 0xcf80
+ 435.243164062 -233 374 -147.985351562 374 -103 c 0
+ 374 -56 420 -35 461 -5 c 1
+ 436 -7 412 -7 397 -7 c 0xcf80
+ 305 -7 214 -1 122 3 c 0
+ 113 3 85 4 78 6 c 0
+ 57 13 30 51 30 73 c 0
+ 30 77 32 82 35 85 c 0
+ 48.81640625 95.3623046875 258.869140625 142.21484375 332 290 c 0
+ 343 312 351 341 351 365 c 0
+ 351 378 352 390 340 398 c 0
+ 322 411 292 417 270 417 c 0
+ 211 417 167 377 167 317 c 0
+ 167 311 168 307 168 301 c 0
+ 168 293 165 289 157 289 c 0
+ 138 289 111 329 106 346 c 0
+ 103 355 103 365 103 374 c 0
+ 103 449 152 498 227 498 c 0
+ 325 498 415 406 415 308 c 0
+ 415 204 333 125 249 76 c 1xb780
+ 285 75 319 74 355 74 c 0
+ 383 74 467 76 488 91 c 0
+ 504 102 517 128 517 148 c 0
+ 517 194 489 211 459 238 c 0
+ 445 250 427 276 427 295 c 0
+ 427 303 430 307 438 307 c 0
+ 454.2421875 307 540.002929688 236.09765625 571 148 c 0
+ 585 117 587 78 587 46 c 0
+ 587 -84 462 -95 442 -144 c 1
+ 456 -149 472 -153 487 -153 c 0
+ 624 -153 663 -43 663 75 c 0
+ 663 198 662 322 662 445 c 0
+ 662 502 662.262695312 502 673 502 c 0
+ 694 502 726 454 726 434 c 2
+ 726 -3 l 2
+ 726 -130 668 -233 529 -233 c 0xcf80
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.M Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.L_Ya
 Encoding: 1114279 -1 246
-Width: 719
+Width: 755
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<426.05 552.954> -1 81<226.377 387.705> 219 81<119.678 215> 419 81<135.296 208.965>
-VStem: 17 64<210.88 271> 210 64<329.517 418.327> 508 63<195.864 329.427> 639 63<-53.5395 479.504>
+HStem: -233 80<433.827 570.775> -1 81<232.586 409.004> 219 81<128.056 228.793> 419 81<143.779 222.535>
+VStem: 30 64<204.117 271> 223 64<325.014 418.944> 521 63<190.647 335.844> 652 63<-60.4721 483.33>
 LayerCount: 2
 Fore
 SplineSet
-111 94 m 0
- 52 154 17 246 17 330 c 0
- 17 397 33 456 98 486 c 0
- 119 496 136 500 159 500 c 0
- 223 500 274 407 274 348 c 0
- 274 294 247 219 183 219 c 0
- 146 219 107 247 81 271 c 1
- 81 231 92 170 122 141 c 0
- 161 102 244 80 297 80 c 0
- 410 80 508 171 508 285 c 0
- 508 398 410 438 410 487 c 0
- 410 495 413 499 421 499 c 0
- 433 499 453 477 461 468 c 0
- 519 403 571 318 571 228 c 0
- 571 195 564 163 552 135 c 1
- 561 107 563 74 563 46 c 0
- 563 -84 438 -95 418 -144 c 1
- 432 -149 448 -153 463 -153 c 0
- 600 -153 639 -43 639 75 c 0
- 639 198 638 322 638 445 c 0
- 638 451 638 495 640 499 c 0
- 642 502 645 502 649 502 c 0
- 670 502 702 454 702 434 c 2
- 702 -3 l 2
- 702 -130 644 -233 505 -233 c 0
- 447 -233 393 -199 365 -149 c 0
- 357 -136 350 -119 350 -103 c 0
- 350 -32 454 -20 489 52 c 1
- 449 19 396 -1 339 -1 c 0
- 257 -1 169 36 111 94 c 0
-86 324 m 1
- 100 312 118 300 140 300 c 0
- 188 300 210 364 210 404 c 0
- 210 409 210 413 209 418 c 0
- 206 419 204 419 201 419 c 0
- 182 419 163 412 147 404 c 0
- 109 383 98 368 86 324 c 1
+518 -233 m 0
+ 424.243164062 -233 363 -147.985351562 363 -103 c 0
+ 363 -32 467 -20 502 52 c 1
+ 462 19 409 -1 352 -1 c 0
+ 270 -1 182 36 124 94 c 0
+ 65 154 30 246 30 330 c 0
+ 30 397 46 456 111 486 c 0
+ 132 496 149 500 172 500 c 0
+ 236 500 287 407 287 348 c 0
+ 287 294 260 219 196 219 c 0
+ 159 219 120 247 94 271 c 1
+ 94 231 105 170 135 141 c 0
+ 174 102 257 80 310 80 c 0
+ 423 80 521 171 521 285 c 0
+ 521 398 423 438 423 487 c 0
+ 423 495 426 499 434 499 c 0
+ 454.38671875 499 584 365.91796875 584 228 c 0
+ 584 195 577 163 565 135 c 1
+ 574 107 576 74 576 46 c 0
+ 576 -84 451 -95 431 -144 c 1
+ 445 -149 461 -153 476 -153 c 0
+ 613 -153 652 -43 652 75 c 0
+ 652 198 651 322 651 445 c 0
+ 651 502 651.262695312 502 662 502 c 0
+ 683 502 715 454 715 434 c 2
+ 715 -3 l 2
+ 715 -130 657 -233 518 -233 c 0
+223 404 m 0
+ 223 419 223 419 214 419 c 0
+ 195 419 176 412 160 404 c 0
+ 122 383 111 368 99 324 c 1
+ 113 312 131 300 153 300 c 0
+ 201 300 223 364 223 404 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
 Ligature2: "Orig CCMP-1" Tutg.L Uml.Conj Tutg.Y
@@ -16007,358 +15935,329 @@ EndChar
 
 StartChar: Syl.V_Ya
 Encoding: 1114280 -1 247
-Width: 836
+Width: 872
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<543.05 669.954> 0 21G<114.5 138> 2 81<381.069 496.028> 418 81<201.587 317.321>
-VStem: 17 64<145.158 295.047> 360 63<208.619 379.744> 631 63<206.889 347.632> 756 63<-53.5395 479.504>
+HStem: -233 80<550.827 687.775> 0 21G<129.501 151> 2 81<394.069 518.13> 418 81<208.212 335.219>
+VStem: 30 64<137.374 299.511> 373 63<198.161 387.642> 644 63<199.392 353.652> 769 63<-60.4721 483.33>
 LayerCount: 2
 Fore
 SplineSet
-29 174 m 0xdf
- 22 201 17 228 17 256 c 0
- 17 351 68 438 155 479 c 0
- 181 491 209 499 238 499 c 0
- 349 499 423 385 423 283 c 0
- 423 213 406 148 381 83 c 1
- 448 87 537 105 582 159 c 0
- 613 197 631 263 631 311 c 0
- 631 336 625 363 608 382 c 0
- 575 420 532 407 503 458 c 0
- 498 467 493 478 493 488 c 0
- 493 496 496 500 504 500 c 0
- 511 500 540 487 547 483 c 0
- 627 441 694 346 694 254 c 0
- 694 217 686 171 670 133 c 1
- 679 105 680 73 680 46 c 0
- 680 -84 555 -95 535 -144 c 1
- 549 -149 565 -153 580 -153 c 0
- 717 -153 756 -43 756 75 c 0
- 756 198 755 322 755 445 c 0
- 755 451 755 495 757 499 c 0
- 759 502 762 502 766 502 c 0
- 787 502 819 454 819 434 c 2
- 819 -3 l 2
- 819 -130 761 -233 622 -233 c 0
- 564 -233 510 -199 482 -149 c 0
- 474 -136 467 -119 467 -103 c 0
- 467 -31 574 -20 607 55 c 1
- 555 19 481 2 423 2 c 0xbf
- 402 2 349 3 332 13 c 0
- 314 24 289 56 289 78 c 0
- 289 84 321 155 326 169 c 0
- 345 224 360 281 360 340 c 0
- 360 400 341 418 281 418 c 0
- 253 418 223 408 199 395 c 0
- 126 356 81 283 81 200 c 0
- 81 164 90 125 106 93 c 0
- 115 74 145 30 145 12 c 0
- 145 4 142 0 134 0 c 0
- 95 0 38 140 29 174 c 0xdf
+147 0 m 0xdf
+ 112.002929688 0 30 150.21484375 30 256 c 0
+ 30 406.541992188 152.143554688 499 251 499 c 0
+ 362 499 436 385 436 283 c 0
+ 436 213 419 148 394 83 c 1
+ 461 87 550 105 595 159 c 0
+ 626 197 644 263 644 311 c 0
+ 644 336 638 363 621 382 c 0
+ 588 420 545 407 516 458 c 0
+ 511 467 506 478 506 488 c 0
+ 506 496 509 500 517 500 c 0
+ 524 500 553 487 560 483 c 0
+ 640 441 707 346 707 254 c 0
+ 707 217 699 171 683 133 c 1
+ 692 105 693 73 693 46 c 0
+ 693 -84 568 -95 548 -144 c 1
+ 562 -149 578 -153 593 -153 c 0
+ 730 -153 769 -43 769 75 c 0
+ 769 198 768 322 768 445 c 0
+ 768 502 768.262695312 502 779 502 c 0
+ 800 502 832 454 832 434 c 2
+ 832 -3 l 2
+ 832 -130 774 -233 635 -233 c 0
+ 541.243164062 -233 480 -147.985351562 480 -103 c 0
+ 480 -31 587 -20 620 55 c 1
+ 568 19 494 2 436 2 c 0xbf
+ 415 2 362 3 345 13 c 0
+ 327 24 302 56 302 78 c 0
+ 302 92.2373046875 373 212.1171875 373 340 c 0
+ 373 400 354 418 294 418 c 0
+ 214.276367188 418 94 338.1328125 94 200 c 0
+ 94 97.49609375 158 44.26953125 158 12 c 0
+ 158 4 155 0 147 0 c 0xdf
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.V Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.Sh_Ya
 Encoding: 1114281 -1 248
-Width: 1020
+Width: 1056
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -251 80<727.587 853.954> -1 81<151.806 262.502 597.684 711.349> 231 81<587.03 708.557> 413 81<151.751 262.79> 420 80<508.918 662.967>
-VStem: 17 64<182.996 337.449> 497 63<110.496 243.5> 651 68<-166.996 -138.166> 777 63<244 292.859> 940 63<-71.5395 461.504>
+HStem: -251 80<735.442 871.775> -1 81<159.862 279.114 604.867 729.236> 231 81<596.938 728.363> 413 81<158.86 278.1 505.827 693.499>
+VStem: 30 64<171.72 343.363> 510 63<107.044 208.074> 664 68<-168.627 -136.828> 790 63<244 306.517> 953 63<-78.4721 465.33>
 LayerCount: 2
 Fore
 SplineSet
-17 295 m 0xefc0
- 17 412 70 494 195 494 c 0
- 234 494 253 490 275 456 c 0
- 281 447 288 433 288 422 c 0
- 288 414 285 410 277 410 c 0
- 263 410 250 413 236 413 c 0xf7c0
- 127 413 81 339 81 238 c 0
- 81 200 96 124 126 98 c 0
- 144 82 159 80 182 80 c 0
- 456 80 202 500 571 500 c 0
- 730 500 840 327 840 182 c 0
- 840 168 839 155 837 142 c 1
- 848 102 855 54 855 25 c 0
- 855 -51 823 -80 764 -121 c 0
- 746 -133 732 -143 719 -161 c 1
- 719 -162 l 1
- 733 -167 749 -171 764 -171 c 0
- 901 -171 940 -61 940 57 c 0
- 940 180 939 304 939 427 c 0
- 939 434 939 475 941 481 c 0
- 943 485 947 484 950 484 c 0
- 971 484 1003 436 1003 416 c 2
- 1003 -21 l 2
- 1003 -148 945 -251 806 -251 c 0
- 749 -251 694 -217 666 -167 c 0
- 658 -153 651 -137 651 -121 c 0
- 651 -47 755 -44 784 36 c 1
- 759 14 727 1 686 1 c 0
- 663 1 639 3 618 11 c 0
- 544 39 497 129 497 205 c 0
- 497 282 548 312 619 312 c 0
- 674 312 734 285 777 244 c 1
- 775 348 723 420 613 420 c 0
- 266 420 525 -1 224 -1 c 0
- 96 -1 17 187 17 295 c 0xefc0
-560 148 m 0
- 560 136 563 124 565 112 c 0
- 566 109 567 106 567 103 c 1
- 566 103 l 1
- 581 84 620 82 643 82 c 0
- 714 82 757 131 772 192 c 1
- 765 196 760 201 753 205 c 0
- 727 220 690 231 660 231 c 0
- 607 231 560 208 560 148 c 0
+819 -251 m 0
+ 726.505859375 -251 664 -166.553710938 664 -121 c 0
+ 664 -47 768 -44 797 36 c 1
+ 772 14 740 1 699 1 c 0
+ 676 1 652 3 631 11 c 0
+ 557 39 510 129 510 205 c 0
+ 510 282 561 312 632 312 c 0
+ 687 312 747 285 790 244 c 1
+ 788 348 736 420 626 420 c 0
+ 279 420 538 -1 237 -1 c 0
+ 109 -1 30 187 30 295 c 0
+ 30 412 83 494 208 494 c 0
+ 247 494 266 490 288 456 c 0
+ 294 447 301 433 301 422 c 0
+ 301 414 298 410 290 410 c 0
+ 276 410 263 413 249 413 c 0
+ 140 413 94 339 94 238 c 0
+ 94 200 109 124 139 98 c 0
+ 157 82 172 80 195 80 c 0
+ 469 80 215 500 584 500 c 0
+ 743 500 853 327 853 182 c 0
+ 853 168 852 155 850 142 c 1
+ 861 102 868 54 868 25 c 0
+ 868 -98.26953125 774.387695312 -102.309570312 732 -161 c 1
+ 732 -162 l 1
+ 746 -167 762 -171 777 -171 c 0
+ 914 -171 953 -61 953 57 c 0
+ 953 180 952 304 952 427 c 0
+ 952 484 952.158203125 484 963 484 c 0
+ 984 484 1016 436 1016 416 c 2
+ 1016 -21 l 2
+ 1016 -148 958 -251 819 -251 c 0
+573 148 m 0
+ 573 133.616210938 580 103.455078125 580 103 c 1
+ 579 103 l 1
+ 594 84 633 82 656 82 c 0
+ 727 82 770 131 785 192 c 1
+ 778 196 773 201 766 205 c 0
+ 740 220 703 231 673 231 c 0
+ 620 231 573 208 573 148 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.Sh Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.S_Ya
 Encoding: 1114282 -1 249
-Width: 885
+Width: 921
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -233 80<592.05 718.954> -1 81<430.741 567.172> 417 81<122.755 197.521 375.732 453.779>
-VStem: 17 63<305.147 409> 494 64<294.66 385.035> 673 63<195.823 371.206> 805 63<-53.5395 479.504>
+HStem: -233 80<599.827 736.775> -1 81<443.741 584.356> 417 81<130.987 215.041 384.147 471.191>
+VStem: 30 63<302.993 409.575> 507 64<290.459 391.827> 686 63<190.412 381.124> 818 63<-60.4721 483.33>
 LayerCount: 2
 Fore
 SplineSet
-83 248 m 0
- 46 280 17 328 17 378 c 0
- 17 440 72 498 135 498 c 0
- 190 498 238 446 263 402 c 1
- 286 451 333 498 390 498 c 0
- 469 498 558 387 558 311 c 0
- 558 223 477 152 430 84 c 1
- 444 81 459 80 473 80 c 0
- 572 80 640 139 664 233 c 0
- 669 254 673 274 673 296 c 0
- 673 328 669 388 649 414 c 0
- 644 420 639 421 633 425 c 0
- 617 436 595 467 595 487 c 0
- 595 495 598 499 606 499 c 0
- 614 499 634 485 641 479 c 0
- 711 422 736 327 736 240 c 0
- 736 209 731 177 721 148 c 0
- 720 144 718 141 717 137 c 0
- 727 108 729 75 729 46 c 0
- 729 -84 604 -95 584 -144 c 1
- 598 -149 614 -153 629 -153 c 0
- 766 -153 805 -43 805 75 c 0
- 805 198 804 322 804 445 c 0
- 804 451 804 495 806 499 c 0
- 808 502 811 502 815 502 c 0
- 836 502 868 454 868 434 c 2
- 868 -3 l 2
- 868 -130 810 -233 671 -233 c 0
- 613 -233 559 -199 531 -149 c 0
- 523 -136 516 -119 516 -103 c 0
- 516 -36 609 -22 649 40 c 1
- 613 13 569 -1 515 -1 c 0
- 456 -1 404 10 370 63 c 0
- 362 76 354 93 354 109 c 0
- 354 178 494 268 494 367 c 0
- 494 399 461 417 433 417 c 0
- 382 417 335 365 319 320 c 0
- 313 302 311 285 309 266 c 0
- 308 258 307 254 298 254 c 0
- 292 254 283 260 279 263 c 0
- 250 287 249 310 240 344 c 0
- 231 381 223 417 177 417 c 0
- 131 417 80 367 80 321 c 0
- 80 317 80 312 81 308 c 0
- 97 294 119 269 119 246 c 0
- 119 238 116 234 108 234 c 0
- 100 234 88 243 83 248 c 0
+121 234 m 0
+ 102.609375 234 30 299.173828125 30 378 c 0
+ 30 440 85 498 148 498 c 0
+ 203 498 251 446 276 402 c 1
+ 299 451 346 498 403 498 c 0
+ 482 498 571 387 571 311 c 0
+ 571 223 490 152 443 84 c 1
+ 457 81 472 80 486 80 c 0
+ 644.401367188 80 686 224.887695312 686 296 c 0
+ 686 328 682 388 662 414 c 0
+ 657 420 652 421 646 425 c 0
+ 630 436 608 467 608 487 c 0
+ 608 495 611 499 619 499 c 0
+ 621.897460938 499 749 448.208984375 749 240 c 0
+ 749 209 744 177 734 148 c 0
+ 733 144 731 141 730 137 c 0
+ 740 108 742 75 742 46 c 0
+ 742 -84 617 -95 597 -144 c 1
+ 611 -149 627 -153 642 -153 c 0
+ 779 -153 818 -43 818 75 c 0
+ 818 198 817 322 817 445 c 0
+ 817 502 817.262695312 502 828 502 c 0
+ 849 502 881 454 881 434 c 2
+ 881 -3 l 2
+ 881 -130 823 -233 684 -233 c 0
+ 590.243164062 -233 529 -147.985351562 529 -103 c 0
+ 529 -36 622 -22 662 40 c 1
+ 626 13 582 -1 528 -1 c 0
+ 469 -1 417 10 383 63 c 0
+ 375 76 367 93 367 109 c 0
+ 367 178 507 268 507 367 c 0
+ 507 399 474 417 446 417 c 0
+ 395 417 348 365 332 320 c 0
+ 317.353515625 276.061523438 329.053710938 254 311 254 c 0
+ 305 254 296 260 292 263 c 0
+ 231.927734375 312.71484375 271.275390625 417 190 417 c 0
+ 144 417 93 367 93 321 c 0
+ 93 317 93 312 94 308 c 0
+ 110 294 132 269 132 246 c 0
+ 132 238 129 234 121 234 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.S Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.H_Ya
 Encoding: 1114283 -1 250
-Width: 872
+Width: 908
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -236 81<579.245 706.331> -5 80<331.453 410.436> 414 80<145.969 246.938 519.796 614.503>
-VStem: 17 64<89.5708 336.2> 255 63<83.0896 407.334> 436 63<102.241 393.266> 684 63<128.139 331.61> 792 63<-59.5304 473.468>
+HStem: -236 81<586.585 725.18> -5 80<340.009 426.075> 414 80<157.363 264.351 529.395 632.822>
+VStem: 30 64<77.8677 342.368> 274 63<75.2871 410.524> 449 63<98.9746 396.496> 697 63<117.913 341.801> 805 63<-64.6541 477.33>
 LayerCount: 2
 Fore
 SplineSet
-52 45 m 0
- 30 100 17 217 17 275 c 0
- 17 385 50 494 180 494 c 0
- 249 494 298 434 315 372 c 0
- 322 346 324 319 324 293 c 0
- 324 242 318 190 318 139 c 0
- 318 123 319 95 324 81 c 1
- 334 77 345 75 356 75 c 0
- 427 75 436 140 436 196 c 0
- 436 247 430 299 430 350 c 0
- 430 422 444 494 532 494 c 0
- 670 494 747 339 747 218 c 0
- 747 112 719 0 647 -81 c 0
- 638 -92 627 -102 616 -110 c 0
- 600 -122 581 -129 570 -146 c 1
- 588 -153 608 -155 628 -155 c 0
- 658 -155 687 -146 712 -130 c 0
- 784 -84 792 -2 792 76 c 0
- 792 208 790 338 790 470 c 0
- 790 480 788 496 802 496 c 0
- 823 496 855 448 855 428 c 2
- 855 -9 l 2
- 855 -92 830 -178 750 -217 c 0
- 726 -229 698 -236 671 -236 c 0
- 607 -236 550 -211 517 -154 c 0
- 509 -139 501 -122 501 -105 c 0
- 501 -87 508 -73 520 -61 c 0
- 532 -49 548 -42 561 -32 c 0
- 644 26 684 169 684 265 c 0
- 684 276 683 286 682 297 c 0
- 674 374 657 414 571 414 c 0
- 503 414 493 346 493 293 c 0
- 493 242 499 190 499 139 c 0
- 499 67 486 -5 398 -5 c 0
- 329 -5 281 56 264 117 c 0
- 257 143 255 170 255 196 c 0
- 255 247 261 299 261 350 c 0
- 261 366 259 394 254 408 c 1
- 244 412 233 414 222 414 c 0
- 110 414 81 311 81 218 c 0
- 81 169 87 118 97 70 c 0
- 101 50 111 28 111 7 c 0
- 111 -1 108 -5 100 -5 c 0
- 81 -5 58 30 52 45 c 0
+94 218 m 0
+ 94 99.814453125 124 31.8408203125 124 7 c 0
+ 124 -1 121 -5 113 -5 c 0
+ 94 -5 71 30 65 45 c 0
+ 43 100 30 217 30 275 c 0
+ 30 385 63 494 193 494 c 0
+ 242.092773438 494 337 453.015625 337 293 c 0
+ 337 242 331 190 331 139 c 0
+ 331 123 332 95 337 81 c 1
+ 347 77 358 75 369 75 c 0
+ 440 75 449 140 449 196 c 0
+ 449 247 443 299 443 350 c 0
+ 443 422 457 494 545 494 c 0
+ 683 494 760 339 760 218 c 0
+ 760 112 732 0 660 -81 c 0
+ 629.053710938 -118.823242188 598.328125 -122.311523438 583 -146 c 1
+ 601 -153 621 -155 641 -155 c 0
+ 671 -155 700 -146 725 -130 c 0
+ 797 -84 805 -2 805 76 c 0
+ 805 208 803 338 803 470 c 0
+ 803 480 801 496 815 496 c 0
+ 836 496 868 448 868 428 c 2
+ 868 -9 l 2
+ 868 -193.811523438 749.673828125 -236 684 -236 c 0
+ 555.486328125 -236 514 -137.217773438 514 -105 c 0
+ 514 -87 521 -73 533 -61 c 0
+ 545 -49 561 -42 574 -32 c 0
+ 657 26 697 169 697 265 c 0
+ 697 276 696 286 695 297 c 0
+ 687 374 670 414 584 414 c 0
+ 516 414 506 346 506 293 c 0
+ 506 242 512 190 512 139 c 0
+ 512 67 499 -5 411 -5 c 0
+ 360.60546875 -5 268 38.4521484375 268 196 c 0
+ 268 247 274 299 274 350 c 0
+ 274 366 272 394 267 408 c 1
+ 257 412 246 414 235 414 c 0
+ 123 414 94 311 94 218 c 0
 EndSplineSet
 Kerns2: 23 194 "Kern-2" 62 194 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.H Uml.Conj Tutg.Y
 Colour: 9effad
 EndChar
 
 StartChar: Syl.P_Ra
 Encoding: 1114284 -1 251
-Width: 937
+Width: 963
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -180 81<357.981 620.1> -4 81<454 752.168> 326 81<212.876 358.917> 418 81<667.629 756.673>
-VStem: 17 64<110.152 208.359> 441 63<185.523 269.41> 856 64<149.385 294.596>
+HStem: -180 81<356.696 643.05> -4 81<467 766.229> 326 81<219.439 379.706> 418 81<677.789 774.404>
+VStem: 30 64<104.78 213.582> 454 63<182.165 277.813> 869 64<148.88 302.728>
 LayerCount: 2
 Fore
 SplineSet
-17 198 m 0
- 17 293 109 371 193 396 c 0
- 218 404 244 407 270 407 c 0
- 378 407 504 303 504 191 c 0
- 504 152 482 112 454 79 c 1
- 482 78 510 77 538 77 c 0
- 600 77 747 77 797 109 c 0
- 813 119 825 134 835 151 c 0
- 837 158 840 165 844 170 c 0
- 852 191 856 213 856 233 c 0
- 856 308 821 418 730 418 c 0
- 720 418 711 414 701 414 c 0
- 680 414 648 462 648 482 c 0
- 648 498 673 499 684 499 c 0
- 794 499 878 367 906 273 c 0
- 915 242 920 209 920 176 c 0
- 920 151 915 123 904 97 c 0
- 891 60 859 -11 838 -42 c 0
- 769 -139 641 -180 526 -180 c 0
- 454 -180 384 -168 316 -147 c 0
- 302 -143 288 -139 275 -132 c 0
- 256 -122 232 -89 232 -67 c 0
- 232 -59 235 -55 243 -55 c 0
- 246 -55 265 -62 269 -63 c 0
- 339 -86 410 -99 484 -99 c 0
- 579 -99 688 -67 756 4 c 1
- 697 -4 631 -4 592 -4 c 0
- 520 -4 449 1 377 1 c 2
- 361 1 l 2
- 359 0 357 0 355 0 c 0
- 332 0 301 48 301 69 c 0
- 301 77 306 80 312 81 c 1
- 311 82 l 1
- 361 108 441 189 441 248 c 0
- 441 256 441 264 438 272 c 0
- 436 276 429 283 425 286 c 0
- 394 313 352 326 311 326 c 0
- 227 326 139 277 99 203 c 0
- 89 184 81 164 81 142 c 0
- 81 75 123 86 148 35 c 0
- 151 28 155 20 155 12 c 0
- 155 4 152 0 144 0 c 0
- 136 0 117 15 111 20 c 0
- 59 65 17 127 17 198 c 0
+157 0 m 0
+ 142 0 30 83 30 198 c 0
+ 30 299 144 407 283 407 c 0
+ 391 407 517 303 517 191 c 0
+ 517 152 495 112 467 79 c 1
+ 495 78 523 77 551 77 c 0
+ 785 77 818 101 848 151 c 0
+ 848 152 869 188 869 233 c 0
+ 869 308 834 418 743 418 c 0
+ 733 418 724 414 714 414 c 0
+ 693 414 661 462 661 482 c 0
+ 661 498 686 499 697 499 c 0
+ 818 499 933 327 933 176 c 0
+ 933 91 852 -40 851 -42 c 0
+ 782 -139 654 -180 539 -180 c 0
+ 467 -180 397 -168 329 -147 c 0
+ 315 -143 301 -139 288 -132 c 0
+ 269 -122 245 -89 245 -67 c 0
+ 245 -59 248 -55 256 -55 c 0
+ 258 -55 369 -99 497 -99 c 0
+ 592 -99 701 -67 769 4 c 1
+ 710 -4 644 -4 605 -4 c 0
+ 533 -4 462 1 390 1 c 2
+ 374 1 l 1
+ 372 0 370 0 368 0 c 0
+ 345 0 314 48 314 69 c 0
+ 314 77 319 80 325 81 c 1
+ 324 82 l 1
+ 374 108 454 189 454 248 c 0
+ 454 264 454 274 438 286 c 0
+ 407 313 365 326 324 326 c 0
+ 196 326 94 219 94 142 c 0
+ 94 75 136 86 161 35 c 0
+ 164 28 168 20 168 12 c 0
+ 168 4 165 0 157 0 c 0
 EndSplineSet
 Kerns2: 23 104 "Kern-2" 62 104 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.P Uml.Conj Tutg.R
 Colour: 9effad
 EndChar
 
 StartChar: Syl.Sh_Ra
 Encoding: 1114285 -1 252
-Width: 875
+Width: 901
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -189 81<308.728 611.242> -1 81<151.817 262.502 597.887 711.632> 220 81<582.602 710.913> 413 81<151.751 262.79> 420 80<508.918 663.394>
-VStem: 17 64<182.856 337.449> 497 64<110.539 237.025> 777 63<240 292.859>
+HStem: -189 81<308.878 634.055> -1 81<159.544 279.114 605.085 729.252> 220 81<592.83 731.992> 413 81<158.86 278.1 505.827 694.037>
+VStem: 30 64<171.551 343.363> 510 64<107.044 200.5> 790 63<240 304.129>
 LayerCount: 2
 Fore
 SplineSet
-17 295 m 0xef
- 17 412 70 494 195 494 c 0
- 234 494 253 490 275 456 c 0
- 281 447 288 433 288 422 c 0
- 288 414 285 410 277 410 c 0
- 263 410 250 413 236 413 c 0xf7
- 127 413 81 339 81 238 c 0
- 81 200 96 123 126 98 c 0
- 145 82 158 80 182 80 c 0
- 456 80 202 500 571 500 c 0
- 730 500 840 327 840 182 c 0
- 840 172 839 162 838 153 c 1
- 852 118 858 77 858 48 c 0
- 858 -141 640 -189 490 -189 c 0
- 405 -189 321 -175 240 -148 c 0
- 226 -143 211 -139 198 -132 c 0
- 179 -121 155 -89 155 -67 c 0
- 155 -59 158 -55 166 -55 c 0
- 170 -55 191 -63 196 -65 c 0
- 273 -97 367 -108 449 -108 c 0
- 559 -108 726 -77 778 32 c 1
- 754 12 724 1 686 1 c 0
- 663 1 639 3 618 11 c 0
- 544 39 497 129 497 205 c 0
- 497 276 548 301 612 301 c 0
- 666 301 731 278 777 240 c 1
- 777 345 725 420 613 420 c 0
- 266 420 525 -1 224 -1 c 0
- 96 -1 17 187 17 295 c 0xef
-561 148 m 0
- 561 136 563 124 565 112 c 0
- 566 109 567 106 567 103 c 1
- 566 103 l 1
- 582 84 620 82 643 82 c 0
- 712 82 755 129 770 188 c 1
- 743 207 684 220 653 220 c 0
- 607 220 561 201 561 148 c 0
+179 -55 m 0
+ 194 -55 276 -108 462 -108 c 0
+ 572 -108 739 -77 791 32 c 1
+ 767 12 737 1 699 1 c 0
+ 676 1 652 3 631 11 c 0
+ 557 39 510 129 510 205 c 0
+ 510 276 561 301 625 301 c 0
+ 679 301 744 278 790 240 c 1
+ 790 345 738 420 626 420 c 0
+ 279 420 538 -1 237 -1 c 0
+ 109 -1 30 187 30 295 c 0
+ 30 412 83 494 208 494 c 0
+ 247 494 266 490 288 456 c 0
+ 294 447 301 433 301 422 c 0
+ 301 414 298 410 290 410 c 0
+ 276 410 263 413 249 413 c 0
+ 140 413 94 339 94 238 c 0
+ 94 200 109 123 139 98 c 0
+ 158 82 171 80 195 80 c 0
+ 469 80 215 500 584 500 c 0
+ 743 500 853 327 853 182 c 0
+ 853 172 852 162 851 153 c 1
+ 865 118 871 77 871 48 c 0
+ 871 -141 653 -189 503 -189 c 0
+ 418 -189 334 -175 253 -148 c 0
+ 239 -143 224 -139 211 -132 c 0
+ 192 -121 168 -89 168 -67 c 0
+ 168 -59 171 -55 179 -55 c 0
+574 148 m 0
+ 574 127 580 105 580 103 c 1
+ 579 103 l 1
+ 595 84 633 82 656 82 c 0
+ 725 82 768 129 783 188 c 1
+ 756 207 697 220 666 220 c 0
+ 620 220 574 201 574 148 c 0
 EndSplineSet
 Kerns2: 23 104 "Kern-2" 62 104 "Kern-2" 257 -679 "Kern-2" 258 -679 "Kern-2" 259 -679 "Kern-2" 260 -679 "Kern-2" 261 -679 "Kern-2" 262 -679 "Kern-2" 263 -679 "Kern-2" 264 -679 "Kern-2" 265 -679 "Kern-2" 266 -679 "Kern-2" 267 -679 "Kern-2" 268 -679 "Kern-2" 269 -679 "Kern-2" 270 -679 "Kern-2" 271 -679 "Kern-2" 272 -679 "Kern-2" 273 -679 "Kern-2" 274 -679 "Kern-2" 275 -679 "Kern-2" 276 -679 "Kern-2" 277 -679 "Kern-2" 278 -679 "Kern-2" 279 -679 "Kern-2" 280 -679 "Kern-2" 281 -679 "Kern-2" 282 -679 "Kern-2" 283 -679 "Kern-2" 284 -679 "Kern-2" 285 -679 "Kern-2" 286 -679 "Kern-2" 287 -679 "Kern-2" 288 -679 "Kern-2" 289 -679 "Kern-2" 290 -679 "Kern-2" 291 -679 "Kern-2" 292 -679 "Kern-2" 293 -679 "Kern-2" 294 -679 "Kern-2" 295 -679 "Kern-2" 296 -679 "Kern-2" 297 -679 "Kern-2" 298 -679 "Kern-2" 299 -679 "Kern-2" 300 -679 "Kern-2" 301 -679 "Kern-2" 302 -679 "Kern-2" 303 -679 "Kern-2" 304 -679 "Kern-2" 305 -679 "Kern-2" 306 -679 "Kern-2" 307 -679 "Kern-2" 308 -679 "Kern-2" 309 -679 "Kern-2" 310 -679 "Kern-2" 311 -679 "Kern-2" 312 -679 "Kern-2" 313 -679 "Kern-2" 314 -679 "Kern-2" 315 -679 "Kern-2" 318 -679 "Kern-2" 325 -679 "Kern-2" 326 -679 "Kern-2" 333 -679 "Kern-2" 334 -679 "Kern-2" 335 -679 "Kern-2" 336 -679 "Kern-2" 337 -679 "Kern-2" 338 -679 "Kern-2" 339 -679 "Kern-2" 340 -679 "Kern-2" 341 -679 "Kern-2" 342 -679 "Kern-2" 343 -679 "Kern-2" 344 -679 "Kern-2" 345 -679 "Kern-2" 346 -679 "Kern-2" 347 -679 "Kern-2" 348 -679 "Kern-2" 349 -679 "Kern-2" 350 -679 "Kern-2" 351 -679 "Kern-2" 352 -679 "Kern-2" 353 -679 "Kern-2" 354 -679 "Kern-2" 355 -679 "Kern-2" 356 -679 "Kern-2" 357 -679 "Kern-2" 358 -679 "Kern-2" 359 -679 "Kern-2" 360 -679 "Kern-2" 361 -679 "Kern-2" 362 -679 "Kern-2" 363 -679 "Kern-2" 364 -679 "Kern-2" 365 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.Sh Uml.Conj Tutg.R
 Colour: 9effad
 EndChar
@@ -16396,7 +16295,7 @@ EndChar
 
 StartChar: Syl.Sh_Va
 Encoding: 1114287 -1 254
-Width: 1151
+Width: 1161
 VWidth: 1000
 GlyphClass: 3
 Flags: W
@@ -16454,7 +16353,7 @@ EndChar
 
 StartChar: Syl.Sh_Ca
 Encoding: 1114288 -1 255
-Width: 1149
+Width: 1159
 VWidth: 1000
 GlyphClass: 3
 Flags: W
@@ -16514,67 +16413,64 @@ EndChar
 
 StartChar: Syl.M_Pa
 Encoding: 1114289 -1 256
-Width: 586
+Width: 571
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -198 81<318 472.886> -33 81<155.257 244.127> 65 81<273.953 452.754> 77 94<78.6481 152.817> 425 81<208.462 301.824>
-VStem: 48 63<-131.375 -74.2773> 118 64<341.421 398.579> 329 63<316.447 412.652> 470 64<139.5 229.919> 506 63<-126.5 -19.7112>
+HStem: -198 81<300 454.886> -33 81<132.328 231.81> 65 81<255.953 437.019> 77 94<57.9004 139.46> 425 81<186.878 287.919>
+VStem: 30 63<-136.502 -70.7546> 100 64<336.454 402.03> 311 63<312.271 414.388> 452 64<139.5 234.718> 488 63<-126.5 -11.7007>
 LayerCount: 2
 Fore
 SplineSet
-57 145 m 0xdf80
- 57 162 88 166 101 171 c 0xdf80
- 199 207 329 277 329 397 c 0
- 329 401 328 405 327 409 c 0
- 312 421 288 425 269 425 c 0
- 220 425 182 393 182 343 c 0
- 182 338 183 334 183 329 c 0
- 183 321 180 317 172 317 c 0
- 153 317 126 357 121 374 c 0
- 119 382 118 390 118 399 c 0
- 118 464 161 506 226 506 c 0
- 309 506 392 425 392 341 c 0
- 392 252 339 194 269 147 c 1
- 284 146 300 146 315 146 c 0
- 343 146 425 147 446 161 c 0
- 459 170 470 192 470 208 c 0
- 470 243 449 254 426 275 c 0
- 412 287 394 313 394 332 c 0
- 394 340 397 344 405 344 c 0
- 413 344 430 330 436 325 c 0
- 483 285 534 215 534 151 c 0
- 534 128 522 96 502 83 c 0
- 478 67 406 65 376 65 c 0xef80
- 344 65 118 72 105 77 c 0
- 84 85 57 122 57 145 c 0xdf80
-48 -67 m 0
- 48 -2 112 48 174 48 c 0
- 245 48 322 -22 322 -94 c 0
- 322 -101 321 -111 318 -117 c 1
- 352 -117 l 2
- 379 -117 451 -115 474 -104 c 0
- 490 -96 506 -76 506 -57 c 0
- 506 -21 477 18 477 47 c 0
- 477 55 480 59 488 59 c 0
- 505 59 527 29 533 16 c 0
- 547 -12 569 -82 569 -113 c 0xcf40
- 569 -140 553 -170 528 -182 c 0
- 499 -197 427 -198 393 -198 c 0
- 374 -198 244 -197 237 -194 c 0
- 216 -186 189 -150 189 -127 c 0
- 189 -123 190 -119 193 -116 c 0
- 198 -112 206 -109 211 -105 c 0
- 229 -92 255 -63 258 -41 c 1
- 249 -35 228 -33 217 -33 c 0
- 174 -33 111 -74 111 -121 c 2
- 111 -122 l 1
- 127 -134 148 -163 148 -183 c 0
- 148 -191 145 -195 137 -195 c 0
- 130 -195 120 -187 115 -183 c 0
- 83 -157 48 -110 48 -67 c 0
+387 344 m 0xef80
+ 406.874023438 344 516 245.48828125 516 151 c 0
+ 516 128 504 96 484 83 c 0
+ 460 67 388 65 358 65 c 0xef80
+ 326 65 100 72 87 77 c 0
+ 66 85 39 122 39 145 c 0
+ 39 162 70 166 83 171 c 0xdf80
+ 181 207 311 277 311 397 c 0
+ 311 401 310 405 309 409 c 0
+ 294 421 270 425 251 425 c 0
+ 202 425 164 393 164 343 c 0
+ 164 338 165 334 165 329 c 0
+ 165 321 162 317 154 317 c 0
+ 142.415039062 317 100 348.436523438 100 399 c 0
+ 100 464 143 506 208 506 c 0
+ 291 506 374 425 374 341 c 0
+ 374 252 321 194 251 147 c 1
+ 266 146 282 146 297 146 c 0
+ 325 146 407 147 428 161 c 0
+ 441 170 452 192 452 208 c 0
+ 452 243 431 254 408 275 c 0
+ 394 287 376 313 376 332 c 0
+ 376 340 379 344 387 344 c 0xef80
+119 -195 m 0
+ 101.598632812 -195 30 -128.606445312 30 -67 c 0
+ 30 -2 94 48 156 48 c 0
+ 227 48 304 -22 304 -94 c 0
+ 304 -101 303 -111 300 -117 c 1
+ 334 -117 l 2
+ 361 -117 433 -115 456 -104 c 0
+ 472 -96 488 -76 488 -57 c 0
+ 488 -21 459 18 459 47 c 0
+ 459 55 462 59 470 59 c 0
+ 513.373046875 59 551 -74.572265625 551 -113 c 0xcf40
+ 551 -140 535 -170 510 -182 c 0
+ 481 -197 409 -198 375 -198 c 0
+ 356 -198 226 -197 219 -194 c 0
+ 198 -186 171 -150 171 -127 c 0
+ 171 -123 172 -119 175 -116 c 0
+ 180 -112 188 -109 193 -105 c 0
+ 211 -92 237 -63 240 -41 c 1
+ 231 -35 210 -33 199 -33 c 0
+ 156 -33 93 -74 93 -121 c 2
+ 93 -122 l 1
+ 109 -134 130 -163 130 -183 c 0
+ 130 -191 127 -195 119 -195 c 0
 EndSplineSet
 Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.M Uml.Conj Tutg.P
 Colour: 9effad
 EndChar
