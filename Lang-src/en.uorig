@@ -7435,7 +7435,7 @@
       <p />
       <p>* Decimal positional digits{{-}}both standard [[pt:ascii|ASCII]] digits 0…9 and digits of other scripts ([[ps:Deva|Devanagari]] ०…९).</p>
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
-      <p>* Other digits and number: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
+      <p>* Other digits and numbers: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
       <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang and Vietnamese.</p>
       <p />
