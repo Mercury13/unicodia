@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733565248
+ModificationTime: 1733567292
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -59,7 +59,7 @@ OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000001.40000000.00000000.00000000
 Lookup: 4 0 0 "Tutg my ligs" { "Tutg my ligs-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 4 0 0 "Subj ligs" { "Subj ligs-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
-Lookup: 5 8 0 "Oo Au" { "Ee Oo Au 2cons"  "Ai 2cons"  "Oo Au 1cons"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Oo Au" { "Ee Oo Au 3cons"  "Ai 3cons"  "Ee Oo Au 2cons"  "Ai 2cons"  "Oo Au 1cons"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 8 0 "Tutg workar" { "Tutg workar-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 1 "Orig CCMP" { "Orig CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 4 0 0 "Subjoin" { "Subjoin-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
@@ -76,9 +76,33 @@ Lookup: 262 0 0 "Tutg MKMK" { "Tutg MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'latn' 
 Lookup: 258 8 0 "Tutg KERN" { "Kern-1" [150,15,0] "Kern-2"  } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
+ContextSub2: coverage "Ai 3cons" 0 0 0 1
+ 6 0 0
+  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 6 Uml.Ai
+ 2
+  SeqLookup: 0 "Link cons+-Ai"
+  SeqLookup: 5 "Link to dummy"
+EndFPST
+ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
+ 6 0 0
+  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 8 Uml.Conj
+  Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
+  Coverage: 20 Uml.Ee Uml.Oo Uml.Au
+ 2
+  SeqLookup: 0 "Link cons+-Ee"
+  SeqLookup: 5 "Link Oo Au 2nd"
+EndFPST
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 440 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_T Syl.K_Ra Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
@@ -88,7 +112,7 @@ ContextSub2: coverage "Ai 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
  4 0 0
-  Coverage: 433 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_T Syl.K_Ra Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 720 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 20 Uml.Ee Uml.Oo Uml.Au
@@ -98,7 +122,7 @@ ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 448 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.K_T Syl.K_K_R Syl.K_T_Y Syl.K_T_R
+  Coverage: 727 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_Ra Syl.K_Ra Syl.GRa Syl.D_Ra Syl.K_Ya Syl.G_Ya Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Ya Syl.T_Ya Syl.D_Ya Syl.N_Ya Syl.P_Ya Syl.B_Ya Syl.M_Ya Syl.L_Ya Syl.V_Ya Syl.Sh_Ya Syl.S_Ya Syl.H_Ya Syl.P_Ra Syl.Sh_Ra Syl.Sh_Va Syl.Sh_Ca Syl.M_Pa Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -4303,10 +4327,10 @@ SplineSet
  1134.35142776 348.020356234 1145.2962963 360.333333333 1155 404 c 1
  1145 406 1134 407 1124 407 c 0xdf
 EndSplineSet
-Kerns2: 365 -679 "Kern-1" 364 -679 "Kern-1" 363 -679 "Kern-1" 362 -679 "Kern-1" 361 -679 "Kern-1" 360 -679 "Kern-1" 359 -679 "Kern-1" 358 -679 "Kern-1" 357 -679 "Kern-1" 356 -679 "Kern-1" 355 -679 "Kern-1" 354 -679 "Kern-1" 353 -679 "Kern-1" 352 -679 "Kern-1" 351 -679 "Kern-1" 350 -679 "Kern-1" 349 -679 "Kern-1" 348 -679 "Kern-1" 347 -679 "Kern-1" 346 -679 "Kern-1" 345 -679 "Kern-1" 344 -679 "Kern-1" 343 -679 "Kern-1" 342 -679 "Kern-1" 341 -679 "Kern-1" 340 -679 "Kern-1" 339 -679 "Kern-1" 338 -679 "Kern-1" 337 -679 "Kern-1" 336 -679 "Kern-1" 335 -679 "Kern-1" 334 -679 "Kern-1" 333 -679 "Kern-1" 326 -679 "Kern-1" 325 -679 "Kern-1" 318 -679 "Kern-1" 315 -679 "Kern-1" 314 -679 "Kern-1" 313 -679 "Kern-1" 312 -679 "Kern-1" 311 -679 "Kern-1" 310 -679 "Kern-1" 309 -679 "Kern-1" 308 -679 "Kern-1" 307 -679 "Kern-1" 306 -679 "Kern-1" 305 -679 "Kern-1" 304 -679 "Kern-1" 303 -679 "Kern-1" 302 -679 "Kern-1" 301 -679 "Kern-1" 300 -679 "Kern-1" 299 -679 "Kern-1" 298 -679 "Kern-1" 297 -679 "Kern-1" 296 -679 "Kern-1" 295 -679 "Kern-1" 294 -679 "Kern-1" 293 -679 "Kern-1" 292 -679 "Kern-1" 291 -679 "Kern-1" 290 -679 "Kern-1" 289 -679 "Kern-1" 288 -679 "Kern-1" 287 -679 "Kern-1" 286 -679 "Kern-1" 285 -679 "Kern-1" 284 -679 "Kern-1" 283 -679 "Kern-1" 282 -679 "Kern-1" 281 -679 "Kern-1" 280 -679 "Kern-1" 279 -679 "Kern-1" 278 -679 "Kern-1" 277 -679 "Kern-1" 276 -679 "Kern-1" 275 -679 "Kern-1" 274 -679 "Kern-1" 273 -679 "Kern-1" 272 -679 "Kern-1" 271 -679 "Kern-1" 270 -679 "Kern-1" 269 -679 "Kern-1" 268 -679 "Kern-1" 267 -679 "Kern-1" 266 -679 "Kern-1" 265 -679 "Kern-1" 264 -679 "Kern-1" 263 -679 "Kern-1" 262 -679 "Kern-1" 261 -679 "Kern-1" 260 -679 "Kern-1" 259 -679 "Kern-1" 258 -679 "Kern-1" 257 -679 "Kern-1"
+Kerns2: 257 -679 "Kern-1" 258 -679 "Kern-1" 259 -679 "Kern-1" 260 -679 "Kern-1" 261 -679 "Kern-1" 262 -679 "Kern-1" 263 -679 "Kern-1" 264 -679 "Kern-1" 265 -679 "Kern-1" 266 -679 "Kern-1" 267 -679 "Kern-1" 268 -679 "Kern-1" 269 -679 "Kern-1" 270 -679 "Kern-1" 271 -679 "Kern-1" 272 -679 "Kern-1" 273 -679 "Kern-1" 274 -679 "Kern-1" 275 -679 "Kern-1" 276 -679 "Kern-1" 277 -679 "Kern-1" 278 -679 "Kern-1" 279 -679 "Kern-1" 280 -679 "Kern-1" 281 -679 "Kern-1" 282 -679 "Kern-1" 283 -679 "Kern-1" 284 -679 "Kern-1" 285 -679 "Kern-1" 286 -679 "Kern-1" 287 -679 "Kern-1" 288 -679 "Kern-1" 289 -679 "Kern-1" 290 -679 "Kern-1" 291 -679 "Kern-1" 292 -679 "Kern-1" 293 -679 "Kern-1" 294 -679 "Kern-1" 295 -679 "Kern-1" 296 -679 "Kern-1" 297 -679 "Kern-1" 298 -679 "Kern-1" 299 -679 "Kern-1" 300 -679 "Kern-1" 301 -679 "Kern-1" 302 -679 "Kern-1" 303 -679 "Kern-1" 304 -679 "Kern-1" 305 -679 "Kern-1" 306 -679 "Kern-1" 307 -679 "Kern-1" 308 -679 "Kern-1" 309 -679 "Kern-1" 310 -679 "Kern-1" 311 -679 "Kern-1" 312 -679 "Kern-1" 313 -679 "Kern-1" 314 -679 "Kern-1" 315 -679 "Kern-1" 318 -679 "Kern-1" 325 -679 "Kern-1" 326 -679 "Kern-1" 333 -679 "Kern-1" 334 -679 "Kern-1" 335 -679 "Kern-1" 336 -679 "Kern-1" 337 -679 "Kern-1" 338 -679 "Kern-1" 339 -679 "Kern-1" 340 -679 "Kern-1" 341 -679 "Kern-1" 342 -679 "Kern-1" 343 -679 "Kern-1" 344 -679 "Kern-1" 345 -679 "Kern-1" 346 -679 "Kern-1" 347 -679 "Kern-1" 348 -679 "Kern-1" 349 -679 "Kern-1" 350 -679 "Kern-1" 351 -679 "Kern-1" 352 -679 "Kern-1" 353 -679 "Kern-1" 354 -679 "Kern-1" 355 -679 "Kern-1" 356 -679 "Kern-1" 357 -679 "Kern-1" 358 -679 "Kern-1" 359 -679 "Kern-1" 360 -679 "Kern-1" 361 -679 "Kern-1" 362 -679 "Kern-1" 363 -679 "Kern-1" 364 -679 "Kern-1" 365 -679 "Kern-1"
 Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.Ss
-Substitution2: "Link cons+-Ee-1" Wa.K_SsEe
 Substitution2: "Link cons+-Ai-1" Wa.K_SsAi
+Substitution2: "Link cons+-Ee-1" Wa.K_SsEe
 LCarets2: 2 0 745
 Colour: 91ff91
 EndChar
@@ -13858,6 +13882,7 @@ SplineSet
  198 175 174 215 138 215 c 0
 EndSplineSet
 Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2"
+LCarets2: 3 0 0 0
 Ligature2: "Orig CCMP-1" Tutg.Ny Uml.Conj Tutg.J Uml.U
 EndChar
 
@@ -14046,6 +14071,7 @@ SplineSet
  399 447 380 428 371 401 c 1
 EndSplineSet
 Kerns2: 365 -679 "Kern-2" 364 -679 "Kern-2" 363 -679 "Kern-2" 362 -679 "Kern-2" 361 -679 "Kern-2" 360 -679 "Kern-2" 359 -679 "Kern-2" 358 -679 "Kern-2" 357 -679 "Kern-2" 356 -679 "Kern-2" 355 -679 "Kern-2" 354 -679 "Kern-2" 353 -679 "Kern-2" 352 -679 "Kern-2" 351 -679 "Kern-2" 350 -679 "Kern-2" 349 -679 "Kern-2" 348 -679 "Kern-2" 347 -679 "Kern-2" 346 -679 "Kern-2" 345 -679 "Kern-2" 344 -679 "Kern-2" 343 -679 "Kern-2" 342 -679 "Kern-2" 341 -679 "Kern-2" 340 -679 "Kern-2" 339 -679 "Kern-2" 338 -679 "Kern-2" 337 -679 "Kern-2" 336 -679 "Kern-2" 335 -679 "Kern-2" 334 -679 "Kern-2" 333 -679 "Kern-2" 326 -679 "Kern-2" 325 -679 "Kern-2" 318 -679 "Kern-2" 315 -679 "Kern-2" 314 -679 "Kern-2" 313 -679 "Kern-2" 312 -679 "Kern-2" 311 -679 "Kern-2" 310 -679 "Kern-2" 309 -679 "Kern-2" 308 -679 "Kern-2" 307 -679 "Kern-2" 306 -679 "Kern-2" 305 -679 "Kern-2" 304 -679 "Kern-2" 303 -679 "Kern-2" 302 -679 "Kern-2" 301 -679 "Kern-2" 300 -679 "Kern-2" 299 -679 "Kern-2" 298 -679 "Kern-2" 297 -679 "Kern-2" 296 -679 "Kern-2" 295 -679 "Kern-2" 294 -679 "Kern-2" 293 -679 "Kern-2" 292 -679 "Kern-2" 291 -679 "Kern-2" 290 -679 "Kern-2" 289 -679 "Kern-2" 288 -679 "Kern-2" 287 -679 "Kern-2" 286 -679 "Kern-2" 285 -679 "Kern-2" 284 -679 "Kern-2" 283 -679 "Kern-2" 282 -679 "Kern-2" 281 -679 "Kern-2" 280 -679 "Kern-2" 279 -679 "Kern-2" 278 -679 "Kern-2" 277 -679 "Kern-2" 276 -679 "Kern-2" 275 -679 "Kern-2" 274 -679 "Kern-2" 273 -679 "Kern-2" 272 -679 "Kern-2" 271 -679 "Kern-2" 270 -679 "Kern-2" 269 -679 "Kern-2" 268 -679 "Kern-2" 267 -679 "Kern-2" 266 -679 "Kern-2" 265 -679 "Kern-2" 264 -679 "Kern-2" 263 -679 "Kern-2" 262 -679 "Kern-2" 261 -679 "Kern-2" 260 -679 "Kern-2" 259 -679 "Kern-2" 258 -679 "Kern-2" 257 -679 "Kern-2"
+LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.L Uml.Conj Tutg.P
 EndChar
 
@@ -16941,10 +16967,10 @@ Encoding: 286 -1 264
 Width: 0
 VWidth: 1000
 GlyphClass: 4
-Flags: W
+Flags: WO
 HStem: -508 81<-799.484 -691.702> -329 81<-784.562 -703.691> -88 80<-755.952 -619.093 -486.616 -376.724 -236.383 -111.085>
 VStem: -677 58<-455 -341.596> -579 66<-486.983 -121.662> -331 65<-491.848 -173.482> -70 70<-373.958 -138.555>
-AnchorPoint: "VocR mark" -72 -384 basemark 0
+AnchorPoint: "VocR mark" -66 -385 basemark 0
 AnchorPoint: "Big subj" -454 0 mark 0
 LayerCount: 2
 Fore
@@ -18120,7 +18146,7 @@ LCarets2: 1 0
 Colour: ff9e05
 EndChar
 
-StartChar: Unu.Subj.LoopVir
+StartChar: Unu.Subj.Ss
 Encoding: 311 -1 289
 Width: 898
 VWidth: 1000
@@ -25876,6 +25902,7 @@ LayerCount: 2
 Fore
 Refer: 81 -1 N 1 0 0 1 705 0 2
 Refer: 371 70597 N 1 0 0 1 0 0 2
+LCarets2: 3 0 0 0
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ai
 Colour: 4fd5ff
@@ -25885,7 +25912,7 @@ StartChar: Syl.K_KR
 Encoding: 489 -1 489
 Width: 1384
 VWidth: 1000
-Flags: WO
+Flags: W
 HStem: -81 81<916.082 1017.77> 2 81<203.782 264.255 466.483 551.399 764.085 825.255 1027.66 1085.51> 425 81<183.247 330.436 1072.33 1195.51> 434.098 75.9023<539.268 872.757>
 VStem: 30 62<259.67 338.512> 140 63<83.329 176.355> 577 63<151.825 289.791> 701 63<83.6949 180.335> 1138 64<151.865 289.524> 1290 64<62.9043 294.925>
 LayerCount: 2
@@ -25960,6 +25987,7 @@ SplineSet
  62 241 30 289 30 309 c 0
 EndSplineSet
 Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.K Uml.VocR
+Colour: ff00
 EndChar
 EndChars
 EndSplineFont
