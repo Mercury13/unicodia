@@ -23,5 +23,4 @@ If you did everything that requires rebuilding blue ligatures:
 * KTTh: need true ligature
 * KTRY: need true ligature, or at least nicer subjoined Y
 * KTV: beautiful!, but there’s a special ligature
-* KSsNnY: need special subjoined NnY
-  * KSsNnYvR: unfeasible but overlaps
+* KSsNnYvR: unfeasible but overlaps
