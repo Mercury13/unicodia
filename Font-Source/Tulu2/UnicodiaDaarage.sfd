@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733710102
+ModificationTime: 1733756046
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -79,7 +79,7 @@ MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: coverage "Ai 3cons" 0 0 0 1
  6 0 0
-  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 749 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -91,7 +91,7 @@ ContextSub2: coverage "Ai 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
  6 0 0
-  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 749 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -103,7 +103,7 @@ ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 749 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
@@ -113,7 +113,7 @@ ContextSub2: coverage "Ai 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
  4 0 0
-  Coverage: 724 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 742 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 20 Uml.Ee Uml.Oo Uml.Au
@@ -123,7 +123,7 @@ ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 749 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -157,7 +157,7 @@ Grid
  -662.00378418 -925 l 1024
 EndSplineSet
 AnchorClass2: "VocR mark" "Tutg MKMK-1" "VocR" "Tutg BLWM-1" "U mark" "Tutg MKMK-1" "Big subj" "Tutg BLWM-1" "Rakar" "Tutg BLWM-1" "U" "Tutg BLWM-1" "Uml above" "Tutg ABVM-1" "Low uml" "Tutg BLWM-1"
-BeginChars: 1114497 485
+BeginChars: 1114595 487
 
 StartChar: .notdef
 Encoding: 1114112 -1 0
@@ -10667,7 +10667,7 @@ AnchorPoint: "VocR" 666 119 basechar 0
 LayerCount: 2
 Fore
 Refer: 33 70609 S 1 0 0 1 259 -85 2
-Refer: 372 -1 N 1 0 0 1 0 0 2
+Refer: 370 -1 N 1 0 0 1 0 0 2
 Substitution2: "Tutg -reph-1" Tutg.Rr.Naked
 Substitution2: "Link cons+-Ee-1" Wa.RrEe
 Substitution2: "Link cons+-Ai-1" Wa.RrAi
@@ -14277,14 +14277,15 @@ Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.T Uml.Uu
 Colour: ff00
 EndChar
 
-StartChar: Unu.x_A_N
+StartChar: Syl.Ss_Nn
 Encoding: 1114258 -1 224
-Width: 1009
+Width: 931
 VWidth: 1000
 GlyphClass: 3
 Flags: W
 HStem: -250 81<271.193 348.48> -21 81<335.433 394.911> 10 81<592.215 691.548 794.5 894.105> 102 83<422 424 578 706.849> 398 81<193.088 329.466> 471 81<601.14 682.711>
 VStem: 17 63<206.362 295.069> 207 63<-166.735 -88.1195> 396 64<-102.973 -26.5625 262.483 353.835> 487 68<-215.557 -31.1369> 530 64<405.608 511.5> 722 65<-223.509 -30.4176> 928 64<-147.802 -11.4927>
+AnchorPoint: "VocR" 944 -148 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14378,12 +14379,16 @@ SplineSet
  646 406 677 438 683 470 c 1
  677 471 669 471 663 471 c 0x97b8
 EndSplineSet
-Colour: ff0000
+Substitution2: "Link cons+-Ai-1" Wa.Ss_NnAi
+Substitution2: "Link cons+-Ee-1" Wa.Ss_NnEe
+LCarets2: 2 0 0
+Ligature2: "Subj ligs-1" Tutg.Ss Uml.Conj Tutg.Nn
+Colour: ccffcf
 EndChar
 
-StartChar: Unu.x_A_N_u
+StartChar: Syl.Ss_NnU
 Encoding: 1114259 -1 225
-Width: 1098
+Width: 926
 VWidth: 1000
 GlyphClass: 3
 Flags: W
@@ -14486,12 +14491,14 @@ SplineSet
  646 406 677 438 683 470 c 1
  677 471 669 471 663 471 c 0x97b8
 EndSplineSet
-Colour: ff0000
+LCarets2: 3 0 0 0
+Ligature2: "Subj ligs-1" Tutg.Ss Uml.Conj Tutg.Nn Uml.U
+Colour: ff00
 EndChar
 
-StartChar: Unu.x_A_N_U
+StartChar: Syl.Ss_NnUu
 Encoding: 1114260 -1 226
-Width: 1031
+Width: 951
 VWidth: 1000
 GlyphClass: 3
 Flags: W
@@ -14606,7 +14613,9 @@ SplineSet
  677 471 669 471 663 471 c 0
  638 471 594 462 594 430 c 0xe5ec
 EndSplineSet
-Colour: ff0000
+LCarets2: 3 0 0 0
+Ligature2: "Subj ligs-1" Tutg.Ss Uml.Conj Tutg.Nn Uml.Uu
+Colour: ff00
 EndChar
 
 StartChar: Syl.N_T_R
@@ -16265,63 +16274,60 @@ EndChar
 
 StartChar: Subj.Jh
 Encoding: 1114292 -1 258
-Width: 1022
+Width: 0
 VWidth: 1000
-GlyphClass: 2
+GlyphClass: 4
 Flags: W
-HStem: -510 81<476.325 594.117 723.154 860.762> -493 81<269.446 353.42> -288 81<865.222 938.793> -269 81<200 296.057> -86 81<169.645 321.993 840.173 909.028>
-VStem: 10 63<-367.69 -180.558> 160 63<-362.604 -251.5> 411 63<-322.925 -186.704> 621 62<-293.172 -186.995> 747 64<-163.658 -68.5> 948 64<-201.492 -131.954>
+HStem: -510 81<-474.026 -376.144 -269.474 -132.394> -493 81<-674.111 -579.675> -288 81<-150.194 -73.2072> -269 81<-720 -629.647> -86 81<-763.228 -611.701 -176.649 -99.199>
+VStem: -883 63<-380.442 -146.214> -760 63<-381.673 -251.411> -529 63<-322.925 -179.974> -366 62<-293.172 -182.627> -265 64<-169.33 -68.5> -64 64<-202.515 -123.143>
+AnchorPoint: "VocR mark" -77 -390 basemark 0
+AnchorPoint: "U mark" -118 -416 basemark 0
 LayerCount: 2
 Fore
 SplineSet
-88 -482 m 0x5fe0
- 34 -422 10 -299 10 -220 c 0
- 10 -76 95 -5 235 -5 c 0
- 380 -5 474 -170 474 -302 c 0
- 474 -339 467 -379 451 -413 c 1
- 476 -426 503 -429 531 -429 c 0
- 613 -429 629 -363 629 -295 c 0
- 629 -256 621 -217 621 -178 c 0
- 621 -170 624 -166 632 -166 c 0
- 651 -166 678 -206 683 -223 c 0
- 688 -240 688 -258 689 -276 c 0
- 692 -321 691 -376 707 -418 c 1
- 725 -427 747 -429 767 -429 c 0
- 790 -429 814 -424 836 -417 c 0
- 907 -394 930 -349 939 -288 c 1
- 862 -288 786 -211 759 -144 c 0
- 753 -129 747 -113 747 -97 c 0
- 747 -40 802 -9 855 -9 c 0
- 940 -9 1012 -141 1012 -221 c 0
- 1012 -288 1011 -388 969 -443 c 0
- 934 -489 865 -509 809 -509 c 0
- 754 -509 711 -492 678 -447 c 1
- 665 -490 616 -510 574 -510 c 0xafe0
- 509 -510 463 -489 427 -450 c 1
- 405 -476 374 -493 333 -493 c 0
- 239 -493 160 -358 160 -274 c 0
- 160 -229 174 -188 226 -188 c 0
- 245 -188 264 -195 281 -202 c 0
- 335 -226 371 -273 397 -324 c 1
- 407 -298 411 -270 411 -245 c 0
- 411 -156 375 -86 276 -86 c 0
- 156 -86 73 -148 73 -277 c 0
- 73 -329 82 -384 102 -432 c 0
- 111 -453 132 -469 132 -493 c 0
- 132 -501 129 -505 121 -505 c 0
- 111 -505 94 -489 88 -482 c 0x5fe0
-223 -330 m 0
- 223 -374 243 -412 291 -412 c 0
- 327 -412 355 -394 374 -369 c 1
- 362 -344 352 -314 335 -295 c 0
- 323 -281 286 -269 268 -269 c 0x5fe0
- 233 -269 223 -301 223 -330 c 0
-896 -90 m 0
- 865 -90 811 -113 811 -150 c 0
- 811 -186 869 -207 898 -207 c 0x2fe0
- 917 -207 935 -197 948 -195 c 0
- 948 -193 948 -190 948 -188 c 0
- 948 -150 950 -90 896 -90 c 0
+-694 -188 m 0x5fe0
+ -679.306640625 -188 -609.524414062 -193.509765625 -543 -324 c 1
+ -533 -298 -529 -270 -529 -245 c 0
+ -529 -156 -574 -86 -664 -86 c 0
+ -784 -86 -820 -148 -820 -277 c 0
+ -820 -329 -811 -384 -791 -432 c 0
+ -782 -453 -761 -469 -761 -493 c 0x5fe0
+ -761 -501 -764 -505 -772 -505 c 0
+ -782 -505 -799 -489 -805 -482 c 0
+ -859 -422 -883 -299 -883 -220 c 0
+ -883 -76 -845 -5 -705 -5 c 0
+ -560 -5 -466 -170 -466 -302 c 0
+ -466 -339 -473 -379 -489 -413 c 1
+ -464 -426 -452 -429 -424 -429 c 0
+ -362 -429 -358 -363 -358 -295 c 0
+ -358 -256 -366 -217 -366 -178 c 0
+ -366 -170 -363 -166 -355 -166 c 0
+ -336 -166 -309 -206 -304 -223 c 0
+ -292.375976562 -262.522460938 -302.822265625 -358.092773438 -280 -418 c 1
+ -262 -427 -240 -429 -220 -429 c 0
+ -164.006835938 -429 -91.13671875 -410.92578125 -73 -288 c 1
+ -174.80078125 -288 -265 -158.676757812 -265 -97 c 0
+ -265 -40 -210 -9 -157 -9 c 0
+ -72 -9 0 -141 0 -221 c 0
+ 0 -318.71875 0 -509 -178 -509 c 0
+ -233 -509 -276 -492 -309 -447 c 1
+ -322 -490 -352 -510 -388 -510 c 0xafe0
+ -443 -510 -477 -489 -513 -450 c 1
+ -535 -476 -566 -493 -607 -493 c 0
+ -701 -493 -760 -358 -760 -274 c 0
+ -760 -229 -746 -188 -694 -188 c 0x5fe0
+-697 -330 m 0
+ -697 -374 -677 -412 -629 -412 c 0
+ -593 -412 -585 -394 -566 -369 c 1
+ -578 -344 -588.408203125 -314.357421875 -605 -295 c 0
+ -617 -281 -634 -269 -652 -269 c 0
+ -687 -269 -697 -301 -697 -330 c 0
+-116 -90 m 0
+ -147 -90 -201 -113 -201 -150 c 0
+ -201 -186 -143 -207 -114 -207 c 0x2fe0
+ -95 -207 -77 -197 -64 -195 c 1
+ -64 -188 l 2
+ -64 -150 -62 -90 -116 -90 c 0
 EndSplineSet
 Ligature2: "Subjoin-1" Uml.Conj Tutg.Jh
 LCarets2: 1 0
@@ -19167,8 +19173,10 @@ Width: 753
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -175 81<260.686 473.806> -1 81<430.741 567.138> 417 81<122.755 197.521 375.732 453.779>
-VStem: 17 63<305.147 409> 494 64<294.66 385.035> 673 63<195.351 371.206>
+HStem: -175 81<248.03 480.805> -1 81<430.741 572.059> 417 81<117.987 201.984 371.147 458.191>
+VStem: 17 63<302.09 409.575> 494 64<290.459 391.827> 673 63<187.783 379.074>
+AnchorPoint: "VocR" 578 -62 basechar 0
+AnchorPoint: "U" 545 -76 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19215,7 +19223,11 @@ SplineSet
  119 238 116 234 108 234 c 0
  100 234 88 243 83 248 c 0
 EndSplineSet
-Ligature2: "Orig CCMP-1" Tutg.S Uml.Conj Tutg.R
+Ligature2: "Subj ligs-1" Tutg.S Uml.Conj Tutg.R
+Substitution2: "Link cons+-Ee-1" Wa.S_REe
+Substitution2: "Link cons+-Ai-1" Wa.S_RAi
+LCarets2: 2 541 625
+Colour: ccffcf
 EndChar
 
 StartChar: Syl.D_M
@@ -20526,161 +20538,8 @@ LCarets2: 2 0 0
 Colour: 9c5e03
 EndChar
 
-StartChar: Subj.JhU
-Encoding: 1114366 -1 332
-Width: 1028
-VWidth: 1000
-GlyphClass: 3
-Flags: W
-HStem: -659 81<833.825 908.12> -510 81<476.325 594.117> -493 81<269.446 353.42> -288 81<865.222 938.793> -269 81<200 296.057> -86 81<169.645 321.993 840.173 909.028>
-VStem: 10 63<-367.69 -180.558> 160 63<-362.604 -251.5> 411 63<-322.925 -186.704> 621 62<-293.172 -186.995> 747 64<-163.658 -68.5> 769 64<-575.778 -533.878> 931 64<-556.207 -497.521> 948 64<-201.492 -131.954>
-LayerCount: 2
-Fore
-SplineSet
-10 -220 m 0xafd8
- 10 -76 95 -5 235 -5 c 0
- 380 -5 474 -170 474 -302 c 0
- 474 -339 467 -379 451 -413 c 1
- 476 -426 503 -429 531 -429 c 0
- 613 -429 629 -363 629 -295 c 0
- 629 -256 621 -217 621 -178 c 0
- 621 -170 624 -166 632 -166 c 0
- 651 -166 678 -206 683 -223 c 0
- 688 -240 688 -258 689 -276 c 0
- 692 -321 691 -376 707 -418 c 1
- 725 -427 747 -429 767 -429 c 0
- 790 -429 814 -424 836 -417 c 0
- 907 -394 930 -349 939 -288 c 1
- 862 -288 786 -211 759 -144 c 0
- 753 -129 747 -113 747 -97 c 0
- 747 -40 802 -9 855 -9 c 0
- 940 -9 1012 -141 1012 -221 c 0xd7e4
- 1012 -290 1011 -398 962 -452 c 1
- 983 -479 995 -518 995 -550 c 0
- 995 -617 961 -659 895 -659 c 0
- 830 -659 769 -587 769 -527 c 0
- 769 -520 770 -513 771 -506 c 1
- 734 -499 703 -481 678 -447 c 1
- 665 -490 616 -510 574 -510 c 0xd7d8
- 509 -510 463 -489 427 -450 c 1
- 405 -476 374 -493 333 -493 c 0
- 239 -493 160 -358 160 -274 c 0
- 160 -229 174 -188 226 -188 c 0
- 245 -188 264 -195 281 -202 c 0
- 335 -226 371 -273 397 -324 c 1
- 407 -298 411 -270 411 -245 c 0
- 411 -156 375 -86 276 -86 c 0
- 156 -86 73 -148 73 -277 c 0
- 73 -329 82 -384 102 -432 c 0
- 111 -453 132 -469 132 -493 c 0
- 132 -501 129 -505 121 -505 c 0
- 111 -505 94 -489 88 -482 c 0
- 34 -422 10 -299 10 -220 c 0xafd8
-268 -269 m 0xafc0
- 233 -269 223 -301 223 -330 c 0
- 223 -374 243 -412 291 -412 c 0
- 327 -412 355 -394 374 -369 c 1
- 362 -344 352 -314 335 -295 c 0
- 323 -281 286 -269 268 -269 c 0xafc0
-811 -150 m 0x8fe4
- 811 -186 869 -207 898 -207 c 0x97e4
- 917 -207 935 -197 948 -195 c 0
- 948 -193 948 -190 948 -188 c 0
- 948 -150 950 -90 896 -90 c 0
- 865 -90 811 -113 811 -150 c 0x8fe4
-931 -497 m 1x87d8
- 893 -497 836 -534 833 -575 c 1
- 840 -577 847 -578 854 -578 c 0
- 902 -578 931 -544 931 -497 c 1x87d8
-EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Jh Uml.U
-LCarets2: 2 0 0
-Colour: 9c5e03
-EndChar
-
-StartChar: Subj.JhUu
-Encoding: 1114367 -1 333
-Width: 1023
-VWidth: 1000
-GlyphClass: 3
-Flags: W
-HStem: -747 81<911.576 999.893> -647 81<884.438 963> -510 81<476.325 594.117 723.304 808.398> -493 81<269.446 353.42> -288 81<865.222 938.793> -269 81<200 296.057> -86 81<169.645 321.993 840.173 909.028>
-VStem: 10 63<-367.69 -180.558> 160 63<-362.604 -251.5> 411 63<-322.925 -186.704> 621 62<-293.172 -186.995> 747 64<-163.658 -68.5> 804 80<-566 -518.572> 948 64<-547.553 -496.656 -201.492 -131.954> 1031 64<-636.286 -535.858>
-LayerCount: 2
-Fore
-SplineSet
-88 -482 m 0xd7ee
- 34 -422 10 -299 10 -220 c 0
- 10 -76 95 -5 235 -5 c 0
- 380 -5 474 -170 474 -302 c 0
- 474 -339 467 -379 451 -413 c 1
- 476 -426 503 -429 531 -429 c 0
- 613 -429 629 -363 629 -295 c 0
- 629 -256 621 -217 621 -178 c 0
- 621 -170 624 -166 632 -166 c 0
- 651 -166 678 -206 683 -223 c 0
- 688 -240 688 -258 689 -276 c 0
- 692 -321 691 -376 707 -418 c 1
- 725 -427 747 -429 767 -429 c 0
- 790 -429 814 -424 836 -417 c 0
- 907 -394 930 -349 939 -288 c 1
- 862 -288 786 -211 759 -144 c 0
- 753 -129 747 -113 747 -97 c 0xebf6
- 747 -40 802 -9 855 -9 c 0
- 940 -9 1012 -141 1012 -221 c 0
- 1012 -280 1011 -366 982 -423 c 1
- 1047 -466 1095 -554 1095 -633 c 0
- 1095 -701 1049 -747 981 -747 c 0
- 892 -747 804 -635 804 -550 c 0
- 804 -535 806 -522 809 -509 c 1
- 754 -509 711 -492 678 -447 c 1
- 665 -490 616 -510 574 -510 c 0xebee
- 509 -510 463 -489 427 -450 c 1
- 405 -476 374 -493 333 -493 c 0
- 239 -493 160 -358 160 -274 c 0
- 160 -229 174 -188 226 -188 c 0
- 245 -188 264 -195 281 -202 c 0
- 335 -226 371 -273 397 -324 c 1
- 407 -298 411 -270 411 -245 c 0
- 411 -156 375 -86 276 -86 c 0
- 156 -86 73 -148 73 -277 c 0
- 73 -329 82 -384 102 -432 c 0
- 111 -453 132 -469 132 -493 c 0
- 132 -501 129 -505 121 -505 c 0
- 111 -505 94 -489 88 -482 c 0xd7ee
-268 -269 m 0xd7e6
- 233 -269 223 -301 223 -330 c 0
- 223 -374 243 -412 291 -412 c 0
- 327 -412 355 -394 374 -369 c 1
- 362 -344 352 -314 335 -295 c 0
- 323 -281 286 -269 268 -269 c 0xd7e6
-811 -150 m 0xc7f6
- 811 -186 869 -207 898 -207 c 0xcbf6
- 917 -207 935 -197 948 -195 c 0
- 948 -193 948 -190 948 -188 c 0
- 948 -150 950 -90 896 -90 c 0
- 865 -90 811 -113 811 -150 c 0xc7f6
-935 -647 m 0
- 911 -647 887 -632 867 -611 c 1
- 868 -620 872 -631 875 -639 c 1
- 896 -657 911 -666 940 -666 c 0
- 992 -666 1031 -629 1031 -577 c 0
- 1031 -549 1024 -515 1003 -496 c 1
- 1006 -510 1006 -524 1006 -541 c 0
- 1006 -587 991 -647 935 -647 c 0
-884 -565 m 2xc3ee
- 887 -566 890 -566 893 -566 c 0
- 930 -566 942 -521 943 -491 c 1
- 913 -504 884 -537 884 -564 c 2
- 884 -565 l 2xc3ee
-EndSplineSet
-LCarets2: 2 0 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Jh Uml.Uu
-Colour: 9c5e03
-EndChar
-
 StartChar: Subj.NyU
-Encoding: 1114368 -1 334
+Encoding: 1114366 -1 332
 Width: 1262
 VWidth: 1000
 GlyphClass: 3
@@ -20769,7 +20628,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.NyUu
-Encoding: 1114369 -1 335
+Encoding: 1114367 -1 333
 Width: 1256
 VWidth: 1000
 GlyphClass: 3
@@ -20867,7 +20726,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.Ttu
-Encoding: 1114370 -1 336
+Encoding: 1114368 -1 334
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -20915,7 +20774,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TtUu
-Encoding: 1114371 -1 337
+Encoding: 1114369 -1 335
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -20973,7 +20832,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TthU
-Encoding: 1114372 -1 338
+Encoding: 1114370 -1 336
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21015,7 +20874,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.TthUu
-Encoding: 1114373 -1 339
+Encoding: 1114371 -1 337
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21066,7 +20925,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.ThU
-Encoding: 1114374 -1 340
+Encoding: 1114372 -1 338
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21111,7 +20970,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.ThUu
-Encoding: 1114375 -1 341
+Encoding: 1114373 -1 339
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21166,7 +21025,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.LlU
-Encoding: 1114376 -1 342
+Encoding: 1114374 -1 340
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21227,7 +21086,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Subj.LlUu
-Encoding: 1114377 -1 343
+Encoding: 1114375 -1 341
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21298,7 +21157,7 @@ Colour: 9c5e03
 EndChar
 
 StartChar: Shape.Dotc
-Encoding: 9676 9676 344
+Encoding: 9676 9676 342
 Width: 500
 VWidth: 1000
 Flags: MW
@@ -21392,7 +21251,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Dotc.Ee
-Encoding: 1114378 -1 345
+Encoding: 1114376 -1 343
 Width: 851
 VWidth: 1000
 Flags: W
@@ -21400,14 +21259,14 @@ HStem: 252 81<99.72 224.326> 417 81<127.004 238.637>
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041>
 LayerCount: 2
 Fore
-Refer: 344 9676 S 1 0 0 1 342 0 2
+Refer: 342 9676 S 1 0 0 1 342 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Ee
 LCarets2: 1 353
 EndChar
 
 StartChar: Uml.Ai
-Encoding: 70597 70597 346
+Encoding: 70597 70597 344
 Width: 705
 VWidth: 1000
 Flags: W
@@ -21423,7 +21282,7 @@ Decomposition: "+E8ITwgAA"
 EndChar
 
 StartChar: Lig.Dotc.Ai
-Encoding: 1114379 -1 347
+Encoding: 1114377 -1 345
 Width: 1168
 VWidth: 1000
 Flags: W
@@ -21431,14 +21290,14 @@ HStem: 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.6
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041>
 LayerCount: 2
 Fore
-Refer: 344 9676 N 1 0 0 1 672 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 342 9676 N 1 0 0 1 672 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Ai
 LCarets2: 1 695
 EndChar
 
 StartChar: Tutg.Uml.Anu
-Encoding: 70604 70604 348
+Encoding: 70604 70604 346
 Width: 275
 VWidth: 1000
 Flags: W
@@ -21462,7 +21321,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Oo
-Encoding: 70599 70599 349
+Encoding: 70599 70599 347
 Width: 588
 VWidth: 1000
 Flags: W
@@ -21476,7 +21335,7 @@ Substitution2: "Link Oo Au 2nd-1" Uml.Aa
 EndChar
 
 StartChar: Uml.Au
-Encoding: 70600 70600 350
+Encoding: 70600 70600 348
 Width: 810
 VWidth: 1000
 Flags: W
@@ -21490,7 +21349,7 @@ Substitution2: "Link Oo Au 2nd-1" Uml.Length
 EndChar
 
 StartChar: Lig.Dotc.Oo
-Encoding: 1114380 -1 351
+Encoding: 1114378 -1 349
 Width: 1056
 VWidth: 1000
 Flags: W
@@ -21499,14 +21358,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 818 62<364.67 400.27> 946 
 LayerCount: 2
 Fore
 Refer: 28 70584 S 1 0 0 1 818 0 2
-Refer: 344 9676 N 1 0 0 1 342 0 2
+Refer: 342 9676 N 1 0 0 1 342 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Oo
 LCarets2: 1 826
 EndChar
 
 StartChar: Lig.Dotc.Au
-Encoding: 1114381 -1 352
+Encoding: 1114379 -1 350
 Width: 1275
 VWidth: 1000
 GlyphClass: 3
@@ -21516,14 +21375,14 @@ VStem: 17 64<335.52 382.197> 268 64<207.905 364.08> 831 64<23.8129 34.5583 354.9
 LayerCount: 2
 Fore
 Refer: 26 70601 N 1 0 0 1 814 0 2
-Refer: 344 9676 N 1 0 0 1 342 0 2
+Refer: 342 9676 N 1 0 0 1 342 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Au
 LCarets2: 1 817
 EndChar
 
 StartChar: Tutg.Uml.Gem
-Encoding: 70610 70610 353
+Encoding: 70610 70610 351
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -21549,7 +21408,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocLl
-Encoding: 70536 70536 354
+Encoding: 70536 70536 352
 Width: 754
 VWidth: 1000
 Flags: HMW
@@ -21597,7 +21456,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Dotc.LoopVir
-Encoding: 1114382 -1 355
+Encoding: 1114380 -1 353
 Width: 817
 VWidth: 1000
 Flags: W
@@ -21606,13 +21465,13 @@ VStem: 486 63<100.453 229.005> 664 63<508.647 592.318> 730 63<169.586 333.903>
 LayerCount: 2
 Fore
 Refer: 25 70607 N 1 0 0 1 399 0 2
-Refer: 344 9676 N 1 0 0 1 0 0 2
+Refer: 342 9676 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.LoopVir
 LCarets2: 1 476
 EndChar
 
 StartChar: Tutg.VocL
-Encoding: 70537 70537 356
+Encoding: 70537 70537 354
 Width: 825
 VWidth: 1000
 Flags: W
@@ -21669,7 +21528,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.VocRR
-Encoding: 70590 70590 357
+Encoding: 70590 70590 355
 Width: 0
 VWidth: 1000
 Flags: W
@@ -21709,7 +21568,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Om
-Encoding: 70615 70615 358
+Encoding: 70615 70615 356
 Width: 510
 VWidth: 1100
 Flags: W
@@ -21754,7 +21613,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.VocRr
-Encoding: 70535 70535 359
+Encoding: 70535 70535 357
 Width: 720
 VWidth: 1100
 Flags: W
@@ -21816,7 +21675,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Oo
-Encoding: 70544 70544 360
+Encoding: 70544 70544 358
 Width: 887
 VWidth: 1100
 Flags: W
@@ -21875,7 +21734,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Au
-Encoding: 70545 70545 361
+Encoding: 70545 70545 359
 Width: 1336
 VWidth: 1100
 Flags: W
@@ -21884,11 +21743,11 @@ VStem: 274 64<55 166.992> 437 63<16.8181 314.484> 601 65<206.103 234.448> 771 64
 LayerCount: 2
 Fore
 Refer: 26 70601 S 1 0 0 1 873 0 2
-Refer: 360 70544 N 1 0 0 1 13 0 2
+Refer: 358 70544 N 1 0 0 1 13 0 2
 EndChar
 
 StartChar: Tutg.Avag
-Encoding: 70583 70583 362
+Encoding: 70583 70583 360
 Width: 438
 VWidth: 1100
 Flags: W
@@ -21918,7 +21777,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.L
-Encoding: 70591 70591 363
+Encoding: 70591 70591 361
 Width: 0
 VWidth: 1000
 Flags: W
@@ -21967,7 +21826,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Ll
-Encoding: 70592 70592 364
+Encoding: 70592 70592 362
 Width: 0
 VWidth: 1000
 Flags: W
@@ -22022,7 +21881,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Uml.Svar
-Encoding: 70625 70625 365
+Encoding: 70625 70625 363
 Width: 0
 VWidth: 1000
 Flags: W
@@ -22044,7 +21903,7 @@ EndSplineSet
 EndChar
 
 StartChar: Uml.Anud
-Encoding: 70626 70626 366
+Encoding: 70626 70626 364
 Width: 0
 VWidth: 1000
 Flags: W
@@ -22071,7 +21930,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Pluta
-Encoding: 70611 70611 367
+Encoding: 70611 70611 365
 Width: 340
 VWidth: 1000
 Flags: W
@@ -22100,7 +21959,7 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda
-Encoding: 70612 70612 368
+Encoding: 70612 70612 366
 Width: 154
 VWidth: 1000
 Flags: W
@@ -22119,19 +21978,19 @@ EndSplineSet
 EndChar
 
 StartChar: Tutg.Danda2
-Encoding: 70613 70613 369
+Encoding: 70613 70613 367
 Width: 326
 VWidth: 1000
 Flags: W
 VStem: 40 74<-39.25 539.25> 212 74<-39.25 539.25>
 LayerCount: 2
 Fore
-Refer: 368 70612 S 1 0 0 1 172 0 2
-Refer: 368 70612 N 1 0 0 1 0 0 2
+Refer: 366 70612 S 1 0 0 1 172 0 2
+Refer: 366 70612 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Uml.Conj
-Encoding: 70608 70608 370
+Encoding: 70608 70608 368
 Width: 281
 VWidth: 1000
 Flags: W
@@ -22158,7 +22017,7 @@ Substitution2: "Link to dummy-1" Dummy
 EndChar
 
 StartChar: Lig.Dotc.Conj
-Encoding: 1114383 -1 371
+Encoding: 1114381 -1 369
 Width: 500
 VWidth: 1000
 Flags: W
@@ -22166,14 +22025,14 @@ HStem: 223 44.25<92 230 275 413.75>
 VStem: 230 45<84.25 223 267.25 406>
 LayerCount: 2
 Fore
-Refer: 370 70608 N 1 0 0 1 113 0 2
-Refer: 344 9676 N 1 0 0 1 0 0 2
+Refer: 368 70608 N 1 0 0 1 113 0 2
+Refer: 342 9676 N 1 0 0 1 0 0 2
 Ligature2: "Tutg my ligs-1" Shape.Dotc Uml.Conj
 LCarets2: 1 285
 EndChar
 
 StartChar: Tutg.Rr.Naked
-Encoding: 1114384 -1 372
+Encoding: 1114382 -1 370
 Width: 764
 VWidth: 1000
 Flags: W
@@ -22222,7 +22081,7 @@ EndSplineSet
 EndChar
 
 StartChar: Lig.Vir.Reph
-Encoding: 1114385 -1 373
+Encoding: 1114383 -1 371
 Width: 0
 VWidth: 1000
 Flags: W
@@ -22235,7 +22094,7 @@ Refer: 4 70606 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Syl.K_K_R
-Encoding: 1114386 -1 374
+Encoding: 1114384 -1 372
 Width: 1375
 VWidth: 1000
 Flags: W
@@ -22314,7 +22173,7 @@ Colour: ccffcf
 EndChar
 
 StartChar: Dummy
-Encoding: 1114387 -1 375
+Encoding: 1114385 -1 373
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -22322,7 +22181,7 @@ LayerCount: 2
 EndChar
 
 StartChar: Syl.K_T_Y
-Encoding: 1114388 -1 376
+Encoding: 1114386 -1 374
 Width: 1375
 VWidth: 1000
 GlyphClass: 3
@@ -22401,7 +22260,7 @@ Colour: ccffcf
 EndChar
 
 StartChar: Syl.K_T_R
-Encoding: 1114389 -1 377
+Encoding: 1114387 -1 375
 Width: 1253
 VWidth: 1000
 Flags: W
@@ -22470,7 +22329,7 @@ Colour: ccffcf
 EndChar
 
 StartChar: Uml.VocR.Big
-Encoding: 1114390 -1 378
+Encoding: 1114388 -1 376
 Width: 93
 VWidth: 1000
 Flags: W
@@ -22501,7 +22360,7 @@ EndSplineSet
 EndChar
 
 StartChar: Syl.K_KR
-Encoding: 1114391 -1 379
+Encoding: 1114389 -1 377
 Width: 1384
 VWidth: 1000
 Flags: W
@@ -22583,7 +22442,7 @@ Colour: ff00
 EndChar
 
 StartChar: Syl.K_TR
-Encoding: 1114392 -1 380
+Encoding: 1114390 -1 378
 Width: 1285
 VWidth: 1000
 Flags: W
@@ -22653,7 +22512,7 @@ Colour: ff00
 EndChar
 
 StartChar: Uml.VocRr.Big
-Encoding: 1114393 -1 381
+Encoding: 1114391 -1 379
 Width: 93
 VWidth: 1000
 Flags: W
@@ -22695,7 +22554,7 @@ EndSplineSet
 EndChar
 
 StartChar: Subj.S_S
-Encoding: 1114394 -1 382
+Encoding: 1114392 -1 380
 Width: 218
 VWidth: 1000
 GlyphClass: 3
@@ -22716,7 +22575,7 @@ Colour: ffa303
 EndChar
 
 StartChar: Subj.N_Y
-Encoding: 1114395 -1 383
+Encoding: 1114393 -1 381
 Width: 160
 VWidth: 1000
 GlyphClass: 3
@@ -22768,7 +22627,7 @@ Colour: 945705
 EndChar
 
 StartChar: Subj.N_YU
-Encoding: 1114396 -1 384
+Encoding: 1114394 -1 382
 Width: 248
 VWidth: 1000
 UnlinkRmOvrlpSave: 1
@@ -22778,13 +22637,13 @@ VStem: -757 63<-341.706 -145.632> -63 63<-264.341 -108.273> 56 64<-430.944 435.3
 LayerCount: 2
 Fore
 Refer: 61 70587 N 1 0 0 1 320 -249 2
-Refer: 383 -1 N 1 0 0 1 0 0 2
+Refer: 381 -1 N 1 0 0 1 0 0 2
 Ligature2: "Subj vowel-1" Subj.N_Y Uml.U
 Colour: 945705
 EndChar
 
 StartChar: Subj.N_YUu
-Encoding: 1114397 -1 385
+Encoding: 1114395 -1 383
 Width: 318
 VWidth: 1000
 UnlinkRmOvrlpSave: 1
@@ -22794,13 +22653,13 @@ VStem: -757 63<-341.706 -145.632> -63 63<-264.341 -108.273> 56 64<-430.944 435.3
 LayerCount: 2
 Fore
 Refer: 23 70588 N 1 0 0 1 334 -176 2
-Refer: 383 -1 N 1 0 0 1 0 0 2
+Refer: 381 -1 N 1 0 0 1 0 0 2
 Ligature2: "Subj vowel-1" Subj.N_Y Uml.Uu
 Colour: 945705
 EndChar
 
 StartChar: Syl.K_V
-Encoding: 1114398 -1 386
+Encoding: 1114396 -1 384
 Width: 1097
 VWidth: 1000
 Flags: W
@@ -22865,7 +22724,7 @@ Colour: ccffcf
 EndChar
 
 StartChar: Syl.K_Ss_R
-Encoding: 1114399 -1 387
+Encoding: 1114397 -1 385
 Width: 1362
 VWidth: 1000
 GlyphClass: 3
@@ -22944,7 +22803,7 @@ Colour: ccffcf
 EndChar
 
 StartChar: Subj.Nn_Y
-Encoding: 1114400 -1 388
+Encoding: 1114398 -1 386
 Width: 150
 VWidth: 1000
 GlyphClass: 3
@@ -23010,7 +22869,7 @@ Colour: 854f03
 EndChar
 
 StartChar: Subj.Nn_YU
-Encoding: 1114401 -1 389
+Encoding: 1114399 -1 387
 Width: 214
 VWidth: 1000
 UnlinkRmOvrlpSave: 1
@@ -23020,14 +22879,14 @@ VStem: -702 58<-455 -341.596> -604 66<-486.983 -121.662> -356 65<-491.848 -199.3
 LayerCount: 2
 Fore
 Refer: 61 70587 N 1 0 0 1 310 -244 2
-Refer: 388 -1 N 1 0 0 1 0 0 2
+Refer: 386 -1 N 1 0 0 1 0 0 2
 Ligature2: "Subj vowel-1" Subj.Nn_Y Uml.U
 LCarets2: 1 0
 Colour: 854f03
 EndChar
 
 StartChar: Subj.Nn_YUu
-Encoding: 1114402 -1 390
+Encoding: 1114400 -1 388
 Width: 214
 VWidth: 1000
 UnlinkRmOvrlpSave: 1
@@ -23037,14 +22896,14 @@ VStem: -702 58<-455 -341.596> -604 66<-486.983 -121.662> -356 65<-491.848 -199.3
 LayerCount: 2
 Fore
 Refer: 23 70588 N 1 0 0 1 321 -208 2
-Refer: 388 -1 N 1 0 0 1 0 0 2
+Refer: 386 -1 N 1 0 0 1 0 0 2
 Ligature2: "Subj vowel-1" Subj.Nn_Y Uml.Uu
 LCarets2: 1 0
 Colour: 854f03
 EndChar
 
 StartChar: Wa.KEe
-Encoding: 1114403 -1 391
+Encoding: 1114497 -1 389
 Width: 1159
 VWidth: 0
 Flags: W
@@ -23059,7 +22918,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KAi
-Encoding: 1114404 -1 392
+Encoding: 1114498 -1 390
 Width: 1499
 VWidth: 0
 Flags: W
@@ -23068,13 +22927,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 52 70546 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhEe
-Encoding: 1114405 -1 393
+Encoding: 1114499 -1 391
 Width: 1196
 VWidth: 0
 Flags: W
@@ -23089,7 +22948,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.KhAi
-Encoding: 1114406 -1 394
+Encoding: 1114500 -1 392
 Width: 1536
 VWidth: 0
 Flags: W
@@ -23098,13 +22957,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 14 70547 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Kh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GEe
-Encoding: 1114407 -1 395
+Encoding: 1114501 -1 393
 Width: 1162
 VWidth: 0
 Flags: W
@@ -23119,7 +22978,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GAi
-Encoding: 1114408 -1 396
+Encoding: 1114502 -1 394
 Width: 1502
 VWidth: 0
 Flags: W
@@ -23128,13 +22987,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 34 70548 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.G Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhEe
-Encoding: 1114409 -1 397
+Encoding: 1114503 -1 395
 Width: 1453
 VWidth: 0
 Flags: W
@@ -23149,7 +23008,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.GhAi
-Encoding: 1114410 -1 398
+Encoding: 1114504 -1 396
 Width: 1793
 VWidth: 0
 Flags: W
@@ -23158,13 +23017,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 10 70549 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Gh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgEe
-Encoding: 1114411 -1 399
+Encoding: 1114505 -1 397
 Width: 1172
 VWidth: 0
 Flags: W
@@ -23179,7 +23038,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NgAi
-Encoding: 1114412 -1 400
+Encoding: 1114506 -1 398
 Width: 1512
 VWidth: 0
 Flags: W
@@ -23188,13 +23047,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 27 70550 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ng Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CEe
-Encoding: 1114413 -1 401
+Encoding: 1114507 -1 399
 Width: 1146
 VWidth: 0
 Flags: W
@@ -23209,7 +23068,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.CAi
-Encoding: 1114414 -1 402
+Encoding: 1114508 -1 400
 Width: 1486
 VWidth: 0
 Flags: W
@@ -23218,13 +23077,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 30 70551 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.C Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChEe
-Encoding: 1114415 -1 403
+Encoding: 1114509 -1 401
 Width: 1307
 VWidth: 0
 Flags: W
@@ -23239,7 +23098,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ChAi
-Encoding: 1114416 -1 404
+Encoding: 1114510 -1 402
 Width: 1647
 VWidth: 0
 Flags: W
@@ -23248,13 +23107,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 6 70552 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ch Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JEe
-Encoding: 1114417 -1 405
+Encoding: 1114511 -1 403
 Width: 1755
 VWidth: 0
 Flags: W
@@ -23269,7 +23128,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JAi
-Encoding: 1114418 -1 406
+Encoding: 1114512 -1 404
 Width: 2095
 VWidth: 0
 Flags: W
@@ -23278,13 +23137,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 51 70553 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.J Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhEe
-Encoding: 1114419 -1 407
+Encoding: 1114513 -1 405
 Width: 1427
 VWidth: 0
 Flags: W
@@ -23299,7 +23158,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.JhAi
-Encoding: 1114420 -1 408
+Encoding: 1114514 -1 406
 Width: 1767
 VWidth: 0
 Flags: W
@@ -23308,13 +23167,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 13 70554 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Jh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyEe
-Encoding: 1114421 -1 409
+Encoding: 1114515 -1 407
 Width: 1642
 VWidth: 0
 Flags: W
@@ -23329,7 +23188,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NyAi
-Encoding: 1114422 -1 410
+Encoding: 1114516 -1 408
 Width: 1982
 VWidth: 0
 Flags: W
@@ -23338,13 +23197,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 66 70555 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ny Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtEe
-Encoding: 1114423 -1 411
+Encoding: 1114517 -1 409
 Width: 901
 VWidth: 0
 Flags: W
@@ -23359,7 +23218,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TtAi
-Encoding: 1114424 -1 412
+Encoding: 1114518 -1 410
 Width: 1241
 VWidth: 0
 Flags: W
@@ -23368,13 +23227,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 57 70556 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Tt Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthEe
-Encoding: 1114425 -1 413
+Encoding: 1114519 -1 411
 Width: 933
 VWidth: 0
 Flags: W
@@ -23389,7 +23248,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TthAi
-Encoding: 1114426 -1 414
+Encoding: 1114520 -1 412
 Width: 1273
 VWidth: 0
 Flags: W
@@ -23398,13 +23257,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 19 70557 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Tth Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdEe
-Encoding: 1114427 -1 415
+Encoding: 1114521 -1 413
 Width: 1100
 VWidth: 0
 Flags: W
@@ -23419,7 +23278,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdAi
-Encoding: 1114428 -1 416
+Encoding: 1114522 -1 414
 Width: 1440
 VWidth: 0
 Flags: W
@@ -23428,13 +23287,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 63 70558 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Dd Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhEe
-Encoding: 1114429 -1 417
+Encoding: 1114523 -1 415
 Width: 1175
 VWidth: 0
 Flags: W
@@ -23449,7 +23308,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DdhAi
-Encoding: 1114430 -1 418
+Encoding: 1114524 -1 416
 Width: 1515
 VWidth: 0
 Flags: W
@@ -23458,13 +23317,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 24 70559 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ddh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnEe
-Encoding: 1114431 -1 419
+Encoding: 1114525 -1 417
 Width: 1532
 VWidth: 0
 Flags: W
@@ -23479,7 +23338,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NnAi
-Encoding: 1114432 -1 420
+Encoding: 1114526 -1 418
 Width: 1872
 VWidth: 0
 Flags: W
@@ -23488,13 +23347,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 17 70560 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Nn Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TEe
-Encoding: 1114433 -1 421
+Encoding: 1114527 -1 419
 Width: 1202
 VWidth: 0
 Flags: W
@@ -23509,7 +23368,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.TAi
-Encoding: 1114434 -1 422
+Encoding: 1114528 -1 420
 Width: 1542
 VWidth: 0
 Flags: W
@@ -23518,13 +23377,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 60 70561 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.T Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThEe
-Encoding: 1114435 -1 423
+Encoding: 1114529 -1 421
 Width: 1163
 VWidth: 0
 Flags: W
@@ -23539,7 +23398,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ThAi
-Encoding: 1114436 -1 424
+Encoding: 1114530 -1 422
 Width: 1503
 VWidth: 0
 Flags: W
@@ -23548,13 +23407,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 22 70562 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Th Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DEe
-Encoding: 1114437 -1 425
+Encoding: 1114531 -1 423
 Width: 879
 VWidth: 0
 Flags: W
@@ -23569,7 +23428,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DAi
-Encoding: 1114438 -1 426
+Encoding: 1114532 -1 424
 Width: 1219
 VWidth: 0
 Flags: W
@@ -23578,13 +23437,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 31 70563 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.D Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhEe
-Encoding: 1114439 -1 427
+Encoding: 1114533 -1 425
 Width: 1159
 VWidth: 0
 Flags: W
@@ -23599,7 +23458,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.DhAi
-Encoding: 1114440 -1 428
+Encoding: 1114534 -1 426
 Width: 1499
 VWidth: 0
 Flags: W
@@ -23608,13 +23467,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 7 70564 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Dh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NEe
-Encoding: 1114441 -1 429
+Encoding: 1114535 -1 427
 Width: 1197
 VWidth: 0
 Flags: W
@@ -23629,7 +23488,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.NAi
-Encoding: 1114442 -1 430
+Encoding: 1114536 -1 428
 Width: 1537
 VWidth: 0
 Flags: W
@@ -23638,13 +23497,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 55 70565 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.N Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PEe
-Encoding: 1114443 -1 431
+Encoding: 1114537 -1 429
 Width: 1328
 VWidth: 0
 Flags: W
@@ -23659,7 +23518,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PAi
-Encoding: 1114444 -1 432
+Encoding: 1114538 -1 430
 Width: 1668
 VWidth: 0
 Flags: W
@@ -23668,13 +23527,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 56 70566 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.P Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhEe
-Encoding: 1114445 -1 433
+Encoding: 1114539 -1 431
 Width: 1328
 VWidth: 0
 Flags: W
@@ -23689,7 +23548,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.PhAi
-Encoding: 1114446 -1 434
+Encoding: 1114540 -1 432
 Width: 1668
 VWidth: 0
 Flags: W
@@ -23698,13 +23557,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 18 70567 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ph Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BEe
-Encoding: 1114447 -1 435
+Encoding: 1114541 -1 433
 Width: 1252
 VWidth: 0
 Flags: W
@@ -23719,7 +23578,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BAi
-Encoding: 1114448 -1 436
+Encoding: 1114542 -1 434
 Width: 1592
 VWidth: 0
 Flags: W
@@ -23728,13 +23587,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 29 70568 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.B Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhEe
-Encoding: 1114449 -1 437
+Encoding: 1114543 -1 435
 Width: 1452
 VWidth: 0
 Flags: W
@@ -23749,7 +23608,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.BhAi
-Encoding: 1114450 -1 438
+Encoding: 1114544 -1 436
 Width: 1792
 VWidth: 0
 Flags: W
@@ -23758,13 +23617,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 5 70569 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Bh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MEe
-Encoding: 1114451 -1 439
+Encoding: 1114545 -1 437
 Width: 961
 VWidth: 0
 Flags: W
@@ -23779,7 +23638,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.MAi
-Encoding: 1114452 -1 440
+Encoding: 1114546 -1 438
 Width: 1301
 VWidth: 0
 Flags: W
@@ -23788,13 +23647,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 54 70570 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.M Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YEe
-Encoding: 1114453 -1 441
+Encoding: 1114547 -1 439
 Width: 1229
 VWidth: 0
 Flags: W
@@ -23809,7 +23668,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.YAi
-Encoding: 1114454 -1 442
+Encoding: 1114548 -1 440
 Width: 1569
 VWidth: 0
 Flags: W
@@ -23818,13 +23677,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 65 70571 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Y Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.REe
-Encoding: 1114455 -1 443
+Encoding: 1114549 -1 441
 Width: 985
 VWidth: 0
 Flags: W
@@ -23839,7 +23698,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RAi
-Encoding: 1114456 -1 444
+Encoding: 1114550 -1 442
 Width: 1325
 VWidth: 0
 Flags: W
@@ -23848,13 +23707,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 58 70572 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.R Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LEe
-Encoding: 1114457 -1 445
+Encoding: 1114551 -1 443
 Width: 979
 VWidth: 0
 Flags: W
@@ -23869,7 +23728,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LAi
-Encoding: 1114458 -1 446
+Encoding: 1114552 -1 444
 Width: 1319
 VWidth: 0
 Flags: W
@@ -23878,13 +23737,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 53 70573 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.L Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VEe
-Encoding: 1114459 -1 447
+Encoding: 1114553 -1 445
 Width: 1102
 VWidth: 0
 Flags: W
@@ -23899,7 +23758,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.VAi
-Encoding: 1114460 -1 448
+Encoding: 1114554 -1 446
 Width: 1442
 VWidth: 0
 Flags: W
@@ -23908,13 +23767,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 62 70574 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.V Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShEe
-Encoding: 1114461 -1 449
+Encoding: 1114555 -1 447
 Width: 1248
 VWidth: 0
 Flags: W
@@ -23929,7 +23788,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.ShAi
-Encoding: 1114462 -1 450
+Encoding: 1114556 -1 448
 Width: 1588
 VWidth: 0
 Flags: W
@@ -23938,13 +23797,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 21 70575 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Sh Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsEe
-Encoding: 1114463 -1 451
+Encoding: 1114557 -1 449
 Width: 1303
 VWidth: 0
 Flags: W
@@ -23959,7 +23818,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SsAi
-Encoding: 1114464 -1 452
+Encoding: 1114558 -1 450
 Width: 1643
 VWidth: 0
 Flags: W
@@ -23968,13 +23827,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 64 70576 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ss Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SEe
-Encoding: 1114465 -1 453
+Encoding: 1114559 -1 451
 Width: 1139
 VWidth: 0
 Flags: W
@@ -23989,7 +23848,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.SAi
-Encoding: 1114466 -1 454
+Encoding: 1114560 -1 452
 Width: 1479
 VWidth: 0
 Flags: W
@@ -23998,13 +23857,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 59 70577 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.S Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HEe
-Encoding: 1114467 -1 455
+Encoding: 1114561 -1 453
 Width: 1145
 VWidth: 0
 Flags: W
@@ -24019,7 +23878,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.HAi
-Encoding: 1114468 -1 456
+Encoding: 1114562 -1 454
 Width: 1485
 VWidth: 0
 Flags: W
@@ -24028,13 +23887,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 49 70578 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.H Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlEe
-Encoding: 1114469 -1 457
+Encoding: 1114563 -1 455
 Width: 913
 VWidth: 0
 Flags: W
@@ -24049,7 +23908,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LlAi
-Encoding: 1114470 -1 458
+Encoding: 1114564 -1 456
 Width: 1253
 VWidth: 0
 Flags: W
@@ -24058,13 +23917,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 15 70579 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Ll Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrEe
-Encoding: 1114471 -1 459
+Encoding: 1114565 -1 457
 Width: 1129
 VWidth: 0
 Flags: W
@@ -24079,7 +23938,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.RrAi
-Encoding: 1114472 -1 460
+Encoding: 1114566 -1 458
 Width: 1469
 VWidth: 0
 Flags: W
@@ -24088,13 +23947,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 175 70580 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Rr Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllEe
-Encoding: 1114473 -1 461
+Encoding: 1114567 -1 459
 Width: 1035
 VWidth: 0
 Flags: W
@@ -24109,7 +23968,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.LllAi
-Encoding: 1114474 -1 462
+Encoding: 1114568 -1 460
 Width: 1375
 VWidth: 0
 Flags: W
@@ -24118,13 +23977,13 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 176 70581 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.Lll Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KEe
-Encoding: 1114475 -1 463
+Encoding: 1114569 -1 461
 Width: 1720
 VWidth: 0
 Flags: W
@@ -24140,7 +23999,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_KAi
-Encoding: 1114476 -1 464
+Encoding: 1114570 -1 462
 Width: 2060
 VWidth: 0
 Flags: W
@@ -24149,14 +24008,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 108 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_K Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_K_REe
-Encoding: 1114477 -1 465
+Encoding: 1114571 -1 463
 Width: 1740
 VWidth: 0
 Flags: W
@@ -24164,7 +24023,7 @@ HStem: -178 81<1125.22 1399.92> 2 81<569.545 629.255 831.839 915.762 1117.05 117
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2221 175.934> 942 63<151.382 289.791> 1052 63<83.3123 177.226> 1488 63<151.382 290.185> 1647 63<110.621 322.285>
 LayerCount: 2
 Fore
-Refer: 374 -1 N 1 0 0 1 365 0 2
+Refer: 372 -1 N 1 0 0 1 365 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ee
@@ -24172,7 +24031,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_K_RAi
-Encoding: 1114478 -1 466
+Encoding: 1114572 -1 464
 Width: 2080
 VWidth: 0
 Flags: W
@@ -24180,15 +24039,15 @@ HStem: -178 81<1465.22 1739.92> 2 81<909.545 969.255 1171.84 1255.76 1457.05 151
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2221 175.934> 1282 63<151.382 289.791> 1392 63<83.3123 177.226> 1828 63<151.382 290.185> 1987 63<110.621 322.285>
 LayerCount: 2
 Fore
-Refer: 374 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 372 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.K Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_K_R Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_TEe
-Encoding: 1114479 -1 467
+Encoding: 1114573 -1 465
 Width: 1618
 VWidth: 0
 Flags: W
@@ -24204,7 +24063,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_TAi
-Encoding: 1114480 -1 468
+Encoding: 1114574 -1 466
 Width: 1958
 VWidth: 0
 Flags: W
@@ -24213,14 +24072,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 221 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_T Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_YEe
-Encoding: 1114481 -1 469
+Encoding: 1114575 -1 467
 Width: 1740
 VWidth: 0
 Flags: W
@@ -24228,7 +24087,7 @@ HStem: -237 81<1430.21 1562.46> 1 81<569.545 626.847 832.714 915.564 1135.82 123
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1347 63<-149.92 -73.1522> 1524 64<165.713 365.295> 1646 64<-60.7345 483.33>
 LayerCount: 2
 Fore
-Refer: 376 -1 N 1 0 0 1 365 0 2
+Refer: 374 -1 N 1 0 0 1 365 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ee
@@ -24236,7 +24095,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_YAi
-Encoding: 1114482 -1 470
+Encoding: 1114576 -1 468
 Width: 2080
 VWidth: 0
 Flags: W
@@ -24244,15 +24103,15 @@ HStem: -237 81<1770.21 1902.46> 1 81<909.545 966.847 1172.71 1255.56 1475.82 157
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1687 63<-149.92 -73.1522> 1864 64<165.713 365.295> 1986 64<-60.7345 483.33>
 LayerCount: 2
 Fore
-Refer: 376 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 374 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.Y Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_T_Y Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_REe
-Encoding: 1114483 -1 471
+Encoding: 1114577 -1 469
 Width: 1618
 VWidth: 0
 Flags: W
@@ -24260,7 +24119,7 @@ HStem: -167 81<977.221 1254.52> 1 81<569.545 626.847 832.714 915.564 1135.82 123
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2452 181.368> 942 63<151.071 290.672> 1065 63<86.2439 209.955> 1253 63<97.794 223.955> 1524 64<173.823 364.899>
 LayerCount: 2
 Fore
-Refer: 377 -1 N 1 0 0 1 365 0 2
+Refer: 375 -1 N 1 0 0 1 365 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ee
@@ -24268,7 +24127,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_T_RAi
-Encoding: 1114484 -1 472
+Encoding: 1114578 -1 470
 Width: 1958
 VWidth: 0
 Flags: W
@@ -24276,15 +24135,15 @@ HStem: -167 81<1317.22 1594.52> 1 81<909.545 966.847 1172.71 1255.56 1475.82 157
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2452 181.368> 1282 63<151.071 290.672> 1405 63<86.2439 209.955> 1593 63<97.794 223.955> 1864 64<173.823 364.899>
 LayerCount: 2
 Fore
-Refer: 377 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 375 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.T Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_T_R Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_SsEe
-Encoding: 1114485 -1 473
+Encoding: 1114579 -1 471
 Width: 1727
 VWidth: 0
 Flags: W
@@ -24300,7 +24159,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_SsAi
-Encoding: 1114486 -1 474
+Encoding: 1114580 -1 472
 Width: 2067
 VWidth: 0
 Flags: W
@@ -24309,14 +24168,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 80 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_Ss Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_Ss_REe
-Encoding: 1114487 -1 475
+Encoding: 1114581 -1 473
 Width: 1727
 VWidth: 0
 Flags: W
@@ -24324,7 +24183,7 @@ HStem: -283 81<894.03 1126.67> 0 81<569 626.847 833.178 886.912 1137 1294.17 139
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<258.67 337.495> 505 64<85.3108 181.573> 942 63<150.766 289.812> 1081 64<81.0282 324.953> 1305 67<-13.2533 103.33> 1348 64<329.796 442.5>
 LayerCount: 2
 Fore
-Refer: 387 -1 N 1 0 0 1 365 0 2
+Refer: 385 -1 N 1 0 0 1 365 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Conj Tutg.R Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_Ss_R Uml.Ee
@@ -24332,7 +24191,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_Ss_RAi
-Encoding: 1114488 -1 476
+Encoding: 1114582 -1 474
 Width: 2067
 VWidth: 0
 Flags: W
@@ -24340,15 +24199,15 @@ HStem: -283 81<1234.03 1466.67> 0 81<909 966.847 1173.18 1226.91 1477 1634.17 17
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<258.67 337.495> 845 64<85.3108 181.573> 1282 63<150.766 289.812> 1421 64<81.0282 324.953> 1645 67<-13.2533 103.33> 1688 64<329.796 442.5>
 LayerCount: 2
 Fore
-Refer: 387 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 385 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Ss Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_Ss_R Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_YEe
-Encoding: 1114489 -1 477
+Encoding: 1114583 -1 475
 Width: 1327
 VWidth: 0
 Flags: W
@@ -24364,7 +24223,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_YAi
-Encoding: 1114490 -1 478
+Encoding: 1114584 -1 476
 Width: 1667
 VWidth: 0
 Flags: W
@@ -24373,14 +24232,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 232 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.Y Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_Y Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_REe
-Encoding: 1114491 -1 479
+Encoding: 1114585 -1 477
 Width: 1194
 VWidth: 0
 Flags: W
@@ -24396,7 +24255,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_RAi
-Encoding: 1114492 -1 480
+Encoding: 1114586 -1 478
 Width: 1534
 VWidth: 0
 Flags: W
@@ -24405,14 +24264,14 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 229 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.R Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_R Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_VEe
-Encoding: 1114493 -1 481
+Encoding: 1114587 -1 479
 Width: 1462
 VWidth: 0
 Flags: W
@@ -24420,7 +24279,7 @@ HStem: 3 80<568.009 628.832 829.748 916.399 1131 1358> 252 81<99.72 224.326> 417
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 395 62<259.67 338.512> 505 63<84.2748 184.1> 942 63<151.984 290.154> 1079 63<111.664 320.412> 1358 64<83 485.33>
 LayerCount: 2
 Fore
-Refer: 386 -1 N 1 0 0 1 365 0 2
+Refer: 384 -1 N 1 0 0 1 365 0 2
 Refer: 32 70594 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.V Uml.Ee
 Ligature2: "Tutg workar-1" Syl.K_V Uml.Ee
@@ -24428,7 +24287,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.K_VAi
-Encoding: 1114494 -1 482
+Encoding: 1114588 -1 480
 Width: 1802
 VWidth: 0
 Flags: W
@@ -24436,15 +24295,15 @@ HStem: 3 80<908.009 968.832 1169.75 1256.4 1471 1698> 252 81<99.72 224.326 439.7
 VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 735 62<259.67 338.512> 845 63<84.2748 184.1> 1282 63<151.984 290.154> 1419 63<111.664 320.412> 1698 64<83 485.33>
 LayerCount: 2
 Fore
-Refer: 386 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 384 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.K Uml.Conj Tutg.V Uml.Ai
 Ligature2: "Tutg workar-1" Syl.K_V Uml.Ai
 Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.G_GEe
-Encoding: 1114495 -1 483
+Encoding: 1114589 -1 481
 Width: 1743
 VWidth: 0
 Flags: W
@@ -24460,7 +24319,7 @@ Colour: 4fd5ff
 EndChar
 
 StartChar: Wa.G_GAi
-Encoding: 1114496 -1 484
+Encoding: 1114590 -1 482
 Width: 2083
 VWidth: 0
 Flags: W
@@ -24469,9 +24328,74 @@ VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 62
 LayerCount: 2
 Fore
 Refer: 109 -1 N 1 0 0 1 705 0 2
-Refer: 346 70597 N 1 0 0 1 0 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
 Ligature2: "Tutg workar-1" Tutg.G Uml.Conj Tutg.G Uml.Ai
 Ligature2: "Tutg workar-1" Syl.G_G Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.S_REe
+Encoding: 1114591 -1 483
+Width: 1118
+VWidth: 0
+Flags: W
+HStem: -175 81<613.03 845.805> -1 81<795.741 937.059> 252 81<99.72 224.326> 417 81<127.004 238.637 482.987 566.984 736.147 823.191>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 382 63<302.09 409.575> 859 64<290.459 391.827> 1038 63<187.783 379.074>
+LayerCount: 2
+Fore
+Refer: 313 -1 N 1 0 0 1 365 0 2
+Refer: 32 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.S Uml.Conj Tutg.R Uml.Ee
+Ligature2: "Tutg workar-1" Syl.S_R Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.S_RAi
+Encoding: 1114592 -1 484
+Width: 1458
+VWidth: 0
+Flags: W
+HStem: -175 81<953.03 1185.81> -1 81<1135.74 1277.06> 252 81<99.72 224.326 439.72 564.326> 417 81<127.004 238.637 467.004 578.637 822.987 906.984 1076.15 1163.19>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 722 63<302.09 409.575> 1199 64<290.459 391.827> 1378 63<187.783 379.074>
+LayerCount: 2
+Fore
+Refer: 313 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.S Uml.Conj Tutg.R Uml.Ai
+Ligature2: "Tutg workar-1" Syl.S_R Uml.Ai
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.Ss_NnEe
+Encoding: 1114593 -1 485
+Width: 1296
+VWidth: 0
+Flags: W
+HStem: -250 81<636.193 713.48> -21 81<700.433 759.911> 10 81<957.215 1056.55 1159.5 1259.11> 102 83<787 789 943 1071.85> 252 81<99.72 224.326> 398 81<558.088 694.466> 417 81<127.004 238.637> 471 81<966.14 1047.71>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 382 63<206.362 295.069> 572 63<-166.735 -88.1195> 761 64<-102.973 -26.5625 262.483 353.835> 852 68<-215.557 -31.1369> 895 64<405.608 511.5> 1087 65<-223.509 -30.4176> 1293 64<-147.802 -11.4927>
+LayerCount: 2
+Fore
+Refer: 224 -1 N 1 0 0 1 365 0 2
+Refer: 32 70594 N 1 0 0 1 0 0 2
+Ligature2: "Tutg workar-1" Tutg.Ss Uml.Conj Tutg.Nn Uml.Ee
+Ligature2: "Tutg workar-1" Syl.Ss_Nn Uml.Ee
+Colour: 4fd5ff
+EndChar
+
+StartChar: Wa.Ss_NnAi
+Encoding: 1114594 -1 486
+Width: 1636
+VWidth: 0
+Flags: W
+HStem: -250 81<976.193 1053.48> -21 81<1040.43 1099.91> 10 81<1297.22 1396.55 1499.5 1599.11> 102 83<1127 1129 1283 1411.85> 252 81<99.72 224.326 439.72 564.326> 398 81<898.088 1034.47> 417 81<127.004 238.637 467.004 578.637> 471 81<1306.14 1387.71>
+VStem: 30 64<335.417 385.262> 281 64<200.147 372.041> 370 64<335.417 385.262> 621 64<200.147 372.041> 722 63<206.362 295.069> 912 63<-166.735 -88.1195> 1101 64<-102.973 -26.5625 262.483 353.835> 1192 68<-215.557 -31.1369> 1235 64<405.608 511.5> 1427 65<-223.509 -30.4176> 1633 64<-147.802 -11.4927>
+LayerCount: 2
+Fore
+Refer: 224 -1 N 1 0 0 1 705 0 2
+Refer: 344 70597 N 1 0 0 1 0 0 2
+LCarets2: 3 0 0 0
+Ligature2: "Tutg workar-1" Tutg.Ss Uml.Conj Tutg.Nn Uml.Ai
+Ligature2: "Tutg workar-1" Syl.Ss_Nn Uml.Ai
 Colour: 4fd5ff
 EndChar
 EndChars

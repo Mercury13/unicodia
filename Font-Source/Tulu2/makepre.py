@@ -49,6 +49,8 @@ BASE_CHARS = {
     'K_R' : SYLLABLE,
     'K_V' : SYLLABLE,
     'G_G' : SYLLABLE,
+    'S_R' : SYLLABLE,
+    'Ss_Nn' : SYLLABLE,
 };
 
 ST_EE = 'Link cons+Ee-1'      # Ee subtable
