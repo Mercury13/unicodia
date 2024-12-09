@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733709909
+ModificationTime: 1733710102
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -7329,7 +7329,7 @@ EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.N Uml.Conj Tutg.T Uml.U
 EndChar
 
-StartChar: Syl.NTUu
+StartChar: Syl.N_TUu
 Encoding: 1114178 -1 127
 Width: 1177
 VWidth: 1000
@@ -7536,7 +7536,7 @@ Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.N Uml.U
 LCarets2: 3 0 0 0
 EndChar
 
-StartChar: Syl.TNUu
+StartChar: Syl.T_NUu
 Encoding: 1114181 -1 130
 Width: 1227
 VWidth: 1000
@@ -7616,6 +7616,7 @@ SplineSet
  443 82 459 147 459 205 c 0
 EndSplineSet
 Ligature2: "Orig CCMP-1" Tutg.T Uml.Conj Tutg.N Uml.Uu
+LCarets2: 3 0 0 0
 EndChar
 
 StartChar: Syl.Ss_Tt
