@@ -6,12 +6,14 @@
 
 #include "u_Strings.h"
 
+enum class RMode { NONE, REPH, OTHER };
+
 // Tulu consonant
 struct Cons {
     char32_t code;
     std::string_view ascName;
     std::u8string_view niceName;
-    bool isReph = false;
+    RMode rMode = RMode::NONE;
     /// KK, KKh, KN, KNn etc are always written.
     /// If you need to write e.g. KKhV and KTV:
     ///   "KhV,TV"
@@ -62,7 +64,7 @@ constinit const Cons allCons[] {
     { .code = 0x113A9, .ascName = "Bh",  .niceName = u8"Bʰ" },
     { .code = 0x113AA, .ascName = "M",   .niceName = u8"M"  },
     { .code = 0x113AB, .ascName = "Y",   .niceName = u8"Y"  },
-    { .code = 0x113AC, .ascName = "R",   .niceName = u8"R", .isReph = true },
+    { .code = 0x113AC, .ascName = "R",   .niceName = u8"R", .rMode = RMode::REPH },
     { .code = 0x113AD, .ascName = "L",   .niceName = u8"L"  },
     { .code = 0x113AE, .ascName = "V",   .niceName = u8"V"  },
     { .code = 0x113AF, .ascName = "Sh",  .niceName = u8"Sʰ" },
@@ -70,7 +72,7 @@ constinit const Cons allCons[] {
     { .code = 0x113B1, .ascName = "S",   .niceName = u8"S"  },
     { .code = 0x113B2, .ascName = "H",   .niceName = u8"H"  },
     { .code = 0x113B3, .ascName = "Ll",  .niceName = u8"Ḻ"  },
-    { .code = 0x113B4, .ascName = "Rr",  .niceName = u8"Ṟ"  },
+    { .code = 0x113B4, .ascName = "Rr",  .niceName = u8"Ṟ", .rMode = RMode::OTHER },
     { .code = 0x113B5, .ascName = "Lll", .niceName = u8"Ł"  },
 };
 
@@ -108,10 +110,9 @@ void writeSyllable(std::ostream& os,
                    std::span<const Cons*> consonants,
                    const Vowel& vowel)
 {
-    bool isFirst = true;
     unsigned index = 0;
     for (auto& c : consonants) {
-        if (isFirst && c->isReph) {
+        if (index == 0 && c->rMode == RMode::REPH) {
             writeCode(os, REPH);
         } else {
             writeCode(os, c->code);
@@ -223,6 +224,9 @@ int main()
 
         for (auto& c1 : allCons) {
             for (auto& c2 : allCons) {
+                // Pair impossible
+                if (c1.rMode == RMode::REPH && c2.rMode == RMode::OTHER)
+                    continue;
                 const Cons* simpleSyl[] = { &c1, &c2 };
                 writeRow(os, nSpaces, simpleSyl, ExtendedSet::YES);
             }
