@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733709757
+ModificationTime: 1733709909
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -79,7 +79,7 @@ MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: coverage "Ai 3cons" 0 0 0 1
  6 0 0
-  Coverage: 733 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_R Syl.K_R Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -91,7 +91,7 @@ ContextSub2: coverage "Ai 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
  6 0 0
-  Coverage: 733 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_R Syl.K_R Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -103,7 +103,7 @@ ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 733 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_R Syl.K_R Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
@@ -113,7 +113,7 @@ ContextSub2: coverage "Ai 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
  4 0 0
-  Coverage: 726 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_R Syl.K_R Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 724 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 20 Uml.Ee Uml.Oo Uml.Au
@@ -123,7 +123,7 @@ ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 733 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_Ra Syl.T_R Syl.K_R Syl.GRa Syl.D_Ra Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 731 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Ya Syl.Dd_Ya Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -14608,7 +14608,7 @@ EndSplineSet
 Colour: ff0000
 EndChar
 
-StartChar: Syl.N_T_Ra
+StartChar: Syl.N_T_R
 Encoding: 1114261 -1 227
 Width: 1165
 VWidth: 1000
@@ -14774,7 +14774,7 @@ LCarets2: 2 0 0
 Colour: ccffcf
 EndChar
 
-StartChar: Syl.GRa
+StartChar: Syl.G_R
 Encoding: 1114264 -1 230
 Width: 823
 VWidth: 1000
@@ -14809,12 +14809,12 @@ SplineSet
  120 -122 96 -89 96 -67 c 0
  96 -59 99 -55 107 -55 c 0
 EndSplineSet
-LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.G Uml.Conj Tutg.R
+LCarets2: 2 0 0
 Colour: ccffcf
 EndChar
 
-StartChar: Syl.D_Ra
+StartChar: Syl.D_R
 Encoding: 1114265 -1 231
 Width: 524
 VWidth: 1000
@@ -14849,8 +14849,8 @@ SplineSet
  457 235 494 186 494 139 c 0
  494 91 429 -8 293 -8 c 0
 EndSplineSet
-LCarets2: 2 0 0
 Ligature2: "Orig CCMP-1" Tutg.D Uml.Conj Tutg.R
+LCarets2: 2 0 0
 Colour: ccffcf
 EndChar
 
