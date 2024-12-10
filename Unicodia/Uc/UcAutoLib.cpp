@@ -3120,7 +3120,7 @@ constinit const uc::LibNode uc::libNodes[9724] {
 { U"\U0001F3AF", u8"bullseye", 3058, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3114
 { U"\U0001FA80", u8"yo-yo", 3058, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3115
 { U"\U0001FA81", u8"kite", 3058, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3116
-{ U"\U0001F52B", u8"water pistol", 3058, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3117
+{ U"\U0001F52B", u8"water pistol", 3058, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3117
 { U"\U0001F3B1", u8"pool 8 ball", 3058, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3118
 { U"\U0001F52E", u8"crystal ball", 3058, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3119
 { U"\U0001FA84", u8"magic wand", 3058, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3120
@@ -3897,7 +3897,7 @@ constinit const uc::LibNode uc::libNodes[9724] {
 { U"\U0001F1F8\U0001F1F9", u8"flag: São Tomé & Príncipe", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3891
 { U"\U0001F1F8\U0001F1FB", u8"flag: El Salvador", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3892
 { U"\U0001F1F8\U0001F1FD", u8"flag: Sint Maarten", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3893
-{ U"\U0001F1F8\U0001F1FE", u8"flag: Syria", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3894
+{ U"\U0001F1F8\U0001F1FE", u8"flag: Syria", 3666, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3894
 { U"\U0001F1F8\U0001F1FF", u8"flag: Eswatini", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3895
 { U"\U0001F1F9\U0001F1E6", u8"flag: Tristan da Cunha", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3896
 { U"\U0001F1F9\U0001F1E8", u8"flag: Turks & Caicos Islands", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3897
