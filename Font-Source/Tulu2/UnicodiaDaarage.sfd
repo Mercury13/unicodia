@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733798464
+ModificationTime: 1733821032
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -88,7 +88,7 @@ ContextSub2: coverage "YU spacing-1" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ai 3cons" 0 0 0 1
  6 0 0
-  Coverage: 747 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 1144 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.Ng_K Syl.Ng_G Syl.Ny_C Syl.Ny_Ch Syl.Ny_J Syl.Ny_Ny Syl.Nn_T Syl.Nn_Tth Syl.Nn_Dd Syl.Nn_Ddh Syl.N_T Syl.N_D Syl.N_Dh Syl.K_Ss Syl.J_J Syl.K_K Syl.G_G Syl.C_C Syl.Tt_Tt Syl.T_T Syl.N_N Syl.P_P Syl.B_B Syl.M_M Syl.L_L Syl.C_Ch Syl.T_N Syl.Ss_Tt Syl.Ss_Tth Syl.N_T_N Syl.D_D Syl.Dd_Dd Syl.J_Ny Syl.D_Dh Syl.S_Th Syl.T_Th Syl.S_V Syl.T_V Syl.T_M Syl.H_M Syl.N_M Syl.Nn_M Syl.L_P Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Bh_Y Syl.S_R Syl.D_M Syl.K_Ss_M_Y Syl.Ss_Tt_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -100,7 +100,7 @@ ContextSub2: coverage "Ai 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
  6 0 0
-  Coverage: 747 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 1155 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.Ng_K Syl.Ng_G Syl.Ny_C Syl.Ny_Ch Syl.Ny_J Syl.Ny_Ny Syl.Nn_T Syl.Nn_Tth Syl.Nn_Dd Syl.Nn_Ddh Syl.N_T Syl.N_D Syl.N_Dh Syl.K_Ss Syl.J_J Syl.K_K Syl.G_G Syl.C_C Syl.Tt_Tt Syl.T_T Syl.N_N Syl.P_P Syl.B_B Syl.M_M Syl.L_L Syl.C_Ch Syl.T_N Syl.Ss_Tt Syl.Ss_Tth Syl.N_T_N Syl.K_Ss_M Syl.D_D Syl.Dd_Dd Syl.J_Ny Syl.D_Dh Syl.S_Th Syl.T_Th Syl.S_V Syl.T_V Syl.T_M Syl.H_M Syl.N_M Syl.Nn_M Syl.L_P Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Bh_Y Syl.S_R Syl.D_M Syl.K_Ss_M_Y Syl.Ss_Tt_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 8 Uml.Conj
@@ -112,7 +112,7 @@ ContextSub2: coverage "Ee Oo Au 3cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ai 2cons" 0 0 0 1
  4 0 0
-  Coverage: 747 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 1155 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.Ng_K Syl.Ng_G Syl.Ny_C Syl.Ny_Ch Syl.Ny_J Syl.Ny_Ny Syl.Nn_T Syl.Nn_Tth Syl.Nn_Dd Syl.Nn_Ddh Syl.N_T Syl.N_D Syl.N_Dh Syl.K_Ss Syl.J_J Syl.K_K Syl.G_G Syl.C_C Syl.Tt_Tt Syl.T_T Syl.N_N Syl.P_P Syl.B_B Syl.M_M Syl.L_L Syl.C_Ch Syl.T_N Syl.Ss_Tt Syl.Ss_Tth Syl.N_T_N Syl.K_Ss_M Syl.D_D Syl.Dd_Dd Syl.J_Ny Syl.D_Dh Syl.S_Th Syl.T_Th Syl.S_V Syl.T_V Syl.T_M Syl.H_M Syl.N_M Syl.Nn_M Syl.L_P Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Bh_Y Syl.S_R Syl.D_M Syl.K_Ss_M_Y Syl.Ss_Tt_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 6 Uml.Ai
@@ -122,7 +122,7 @@ ContextSub2: coverage "Ai 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
  4 0 0
-  Coverage: 740 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 1148 Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.Ng_K Syl.Ng_G Syl.Ny_C Syl.Ny_Ch Syl.Ny_J Syl.Ny_Ny Syl.Nn_T Syl.Nn_Tth Syl.Nn_Dd Syl.Nn_Ddh Syl.N_T Syl.N_D Syl.N_Dh Syl.K_Ss Syl.J_J Syl.K_K Syl.G_G Syl.C_C Syl.Tt_Tt Syl.T_T Syl.N_N Syl.P_P Syl.B_B Syl.M_M Syl.L_L Syl.C_Ch Syl.T_N Syl.Ss_Tt Syl.Ss_Tth Syl.N_T_N Syl.K_Ss_M Syl.D_D Syl.Dd_Dd Syl.J_Ny Syl.D_Dh Syl.S_Th Syl.T_Th Syl.S_V Syl.T_V Syl.T_M Syl.H_M Syl.N_M Syl.Nn_M Syl.L_P Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Bh_Y Syl.S_R Syl.D_M Syl.K_Ss_M_Y Syl.Ss_Tt_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 8 Uml.Conj
   Coverage: 393 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll
   Coverage: 20 Uml.Ee Uml.Oo Uml.Au
@@ -132,7 +132,7 @@ ContextSub2: coverage "Ee Oo Au 2cons" 0 0 0 1
 EndFPST
 ContextSub2: coverage "Oo Au 1cons" 0 0 0 1
  2 0 0
-  Coverage: 747 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.K_Ss Syl.K_K Syl.G_G Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.S_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
+  Coverage: 1136 Tutg.A Tutg.Aa Tutg.I Tutg.Ii Tutg.U Tutg.Uu Tutg.VocR Tutg.VocRr Tutg.VocLl Tutg.VocL Tutg.Ee Tutg.Ai Tutg.Oo Tutg.Au Tutg.K Tutg.Kh Tutg.G Tutg.Gh Tutg.Ng Tutg.C Tutg.Ch Tutg.J Tutg.Jh Tutg.Ny Tutg.Tt Tutg.Tth Tutg.Dd Tutg.Ddh Tutg.Nn Tutg.T Tutg.Th Tutg.D Tutg.Dh Tutg.N Tutg.P Tutg.Ph Tutg.B Tutg.Bh Tutg.M Tutg.Y Tutg.R Tutg.L Tutg.V Tutg.Sh Tutg.Ss Tutg.S Tutg.H Tutg.Ll Tutg.Rr Tutg.Lll Syl.Ng_K Syl.Ng_G Syl.Ny_C Syl.Ny_Ch Syl.Ny_J Syl.Ny_Ny Syl.Nn_T Syl.Nn_Tth Syl.Nn_Dd Syl.Nn_Ddh Syl.N_T Syl.N_D Syl.N_Dh Syl.K_Ss Syl.J_J Syl.K_K Syl.G_G Syl.C_C Syl.Tt_Tt Syl.T_T Syl.N_N Syl.P_P Syl.B_B Syl.M_M Syl.L_L Syl.C_Ch Syl.Ss_Tt Syl.Ss_Tth Syl.N_T_N Syl.D_D Syl.Dd_Dd Syl.J_Ny Syl.D_Dh Syl.S_Th Syl.T_Th Syl.S_V Syl.T_V Syl.T_M Syl.H_M Syl.N_M Syl.Nn_M Syl.L_P Syl.Ll_Pa Syl.T_K Syl.K_T Syl.Ss_Nn Syl.N_T_R Syl.T_R Syl.K_R Syl.G_R Syl.D_R Syl.K_Y Syl.G_Y Syl.Tt_Y Syl.Dd_Y Syl.Nn_Y Syl.T_Y Syl.D_Y Syl.N_Y Syl.P_Y Syl.B_Y Syl.M_Y Syl.L_Y Syl.V_Y Syl.Sh_Y Syl.S_Y Syl.H_Y Syl.P_R Syl.Sh_R Syl.Sh_V Syl.Sh_C Syl.M_P Syl.Bh_Y Syl.S_R Syl.D_M Syl.K_Ss_M_Y Syl.Ss_Tt_R Syl.Nn_T_N Syl.B_R Syl.K_K_R Syl.K_T_Y Syl.K_T_R Syl.K_V Syl.K_Ss_R
   Coverage: 13 Uml.Oo Uml.Au
  2
   SeqLookup: 0 "Link cons+-Ee"
@@ -153,7 +153,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 165 33 14
+WinInfo: 0 33 14
 BeginPrivate: 5
 BlueValues 22 [-5 0 502 502 744 744]
 StdHW 4 [81]
@@ -2412,9 +2412,11 @@ Encoding: 1114123 -1 45
 Width: 1146
 VWidth: 1000
 GlyphClass: 3
-Flags: W
+Flags: WO
 HStem: -1 81<674.545 766.526> 416 81<131.487 246.709 517.571 683.527 853.17 1003.27>
 VStem: 17 63<151.341 358.401> 329 65<58.8186 255.517> 606 63<84.2691 205.957> 794 63<108.586 268.854> 1065 64<160.063 362.823>
+AnchorPoint: "Rakar" 1022 67 basechar 0
+AnchorPoint: "VocR" 1031 76 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8983,19 +8985,31 @@ Width: 405
 VWidth: 1000
 GlyphClass: 3
 Flags: W
-HStem: -378 81<149.321 286.948> -7 84<193.387 274.625> 418 81<145.411 285.455>
-VStem: 21 64<-239.835 -137.114> 56 62<347.67 391.638> 311 63<-270.718 -220 -111.771 -14.1711>
+HStem: -378 81<149.321 286.948> -7 84<193.387 274.625> 418 81<145.411 284.912>
+VStem: 21 64<-239.835 -137.114> 311 63<-270.716 -220 -111.771 -14.1711>
+AnchorPoint: "Rakar" 321 -298 basechar 0
+AnchorPoint: "VocR" 317 -260 basechar 0
+AnchorPoint: "VocL B" 403 -378 basechar 0
+AnchorPoint: "U" 305 -292 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-21 -130 m 0xf4
+188 499 m 0
+ 306.517594106 499 358 411.482504872 358 371 c 0
+ 358 329 324 288 299 257 c 1
+ 343 244 378 185 378 141 c 0
+ 378 100 362 45 329 18 c 1
+ 356 -16 374 -61 374 -100 c 0
+ 374 -140 357 -157 321 -170 c 1
+ 348 -197 374 -238 374 -277 c 0
+ 374 -346 312 -378 249 -378 c 0
+ 113 -378 21 -260 21 -130 c 0
  21 -122 24 -118 32 -118 c 0
  51 -118 79 -159 83 -175 c 0
- 85 -183 85 -192 85 -201 c 0xf4
+ 85 -183 85 -192 85 -201 c 0
  85 -277 138 -297 206 -297 c 0
  231 -297 270 -289 288 -271 c 0
- 294 -265 297 -258 301 -251 c 0
- 306 -241 311 -231 311 -220 c 1
+ 293.726997408 -265.273002592 311 -237.85202904 311 -220 c 1
  310 -218 l 1
  286 -198 250 -193 228 -172 c 0
  214 -159 196 -134 196 -114 c 0
@@ -9012,26 +9026,14 @@ SplineSet
  310 180 l 2
  278 180 249 164 217 164 c 0
  191 164 159 210 159 234 c 0
- 159 237 160 241 162 244 c 0
- 171 258 184 269 195 281 c 0
- 226 314 275 366 290 408 c 1
+ 159 256.876375704 264.737150751 337.264022103 290 408 c 1
  270 414 251 418 230 418 c 0
  200 418 155 409 136 384 c 0
- 116 359 123 339 118 332 c 0
- 116 329 113 329 109 329 c 0
- 88 329 56 377 56 397 c 0xec
+ 109.616642509 351.020803136 130.53045185 329 109 329 c 0
+ 88 329 56 377 56 397 c 0
  56 473 122 499 188 499 c 0
- 250 499 312 473 343 417 c 0
- 351 403 358 387 358 371 c 0
- 358 329 324 288 299 257 c 1
- 343 244 378 185 378 141 c 0
- 378 100 362 45 329 18 c 1
- 356 -16 374 -61 374 -100 c 0
- 374 -140 357 -157 321 -170 c 1
- 348 -197 374 -238 374 -277 c 0
- 374 -346 312 -378 249 -378 c 0
- 113 -378 21 -260 21 -130 c 0xf4
 EndSplineSet
+LCarets2: 2 0 0
 Substitution2: "Link cons+-Ai-1" Wa.D_DAi
 Substitution2: "Link cons+-Ee-1" Wa.D_DEe
 Ligature2: "Subj ligs-1" Tutg.D Uml.Conj Tutg.D
@@ -10631,13 +10633,16 @@ GlyphClass: 3
 Flags: W
 HStem: 0 81<203.466 373.42 602.149 714.299> 134 81<165.626 276.844> 424 81<173.602 269.652>
 VStem: 30 64<168.75 209> 798 63<168.618 313.988>
+AnchorPoint: "VocR" 768 79 basechar 0
+AnchorPoint: "U" 742 85 basechar 0
+AnchorPoint: "Rakar" 720 72 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 505 138 m 1
  452 0 375 0 319 0 c 0
  167 0 30 122 30 278 c 0
- 30 316 30 321 42 321 c 4
+ 30 316 30 321 42 321 c 0
  57 321 75 300 86 280 c 0
  111 240 174 215 219 215 c 0
  257 215 284 237 298 272 c 1
@@ -16862,44 +16867,45 @@ EndSplineSet
 Colour: ff0000
 EndChar
 
-StartChar: z.pnum
+StartChar: Subj.Ny
 Encoding: 1114310 -1 276
 Width: 1263
 VWidth: 1000
 GlyphClass: 2
 Flags: W
-HStem: -689 81<333.703 866.75> -672 81<-39.7626 365.297> -502 81<99.4123 190.476 550.579 613.5> -93 81<169.561 287.153 446.582 580.133 709.023 812.234 992.984 1101.92>
-VStem: 200 64<-452 -337.42> 307 62<-330.33 -197.359> 475 63<-411.928 -276.619> 642 63<-356.177 -173.641> 827 62<-324.33 -220.563> 1175 63<-418.342 -198.574>
+HStem: -689 81<333.703 870.941> -672 81<-41.3564 365.297> -502 81<99.3147 190.476 550.95 632.971> -93 81<169.561 287.153 446.055 580.133 709.023 812.234 992.984 1101.61>
+VStem: 200 64<-452 -337.42> 475 63<-410.99 -276.619> 642 63<-355.065 -173.641> 827 62<-324.33 -220.563> 1175 63<-413.134 -197.892>
 LayerCount: 2
 Fore
 SplineSet
--72 -727 m 0x7fc0
+1025 -12 m 0xbf80
+ 1137.86918064 -12 1238 -169.916265867 1238 -350 c 0
+ 1238 -403 1229 -461 1200 -507 c 0
+ 1092 -681 806 -689 623 -689 c 0xbf80
+ 454 -689 286 -672 117 -672 c 0
+ 78.9223878094 -672 -26.6427745192 -673.971329423 -55 -708 c 0
+ -60 -715 -61 -727 -72 -727 c 0
  -93 -727 -125 -679 -125 -659 c 0
  -125 -652 -121 -644 -117 -638 c 0
- -85 -592 25 -591 76 -591 c 0x7fc0
+ -85 -592 25 -591 76 -591 c 0x7f80
  245 -591 413 -608 582 -608 c 0
- 755 -608 1059 -599 1149 -420 c 0
- 1169 -382 1175 -336 1175 -294 c 0
+ 912.712233317 -608 1175 -553.321356839 1175 -294 c 0
  1175 -251 1163 -164 1139 -129 c 0
  1122 -103 1097 -93 1067 -93 c 0
  977 -93 911 -196 896 -274 c 0
  895 -300 892 -334 889 -340 c 0
  887 -343 884 -343 880 -343 c 0
  859 -343 827 -295 827 -275 c 0
- 827 -252 829 -229 833 -207 c 0
- 834 -200 834 -193 834 -186 c 0
+ 827 -225.272964363 834 -218.893702304 834 -186 c 0
  834 -172 830 -108 821 -101 c 0
  813 -95 796 -93 787 -93 c 0
  748 -93 708 -116 677 -139 c 1
  696 -184 705 -234 705 -279 c 0
- 705 -340 690 -428 650 -476 c 0
- 638 -490 623 -502 604 -502 c 0
- 555 -502 507 -432 490 -391 c 0
- 480 -367 475 -342 475 -316 c 0
+ 705 -388.219463559 661.941793689 -502 604 -502 c 0
+ 553.313525465 -502 475 -411.689036344 475 -316 c 0
  475 -232 524 -153 581 -96 c 1
  563 -92 544 -92 529 -92 c 0
- 424 -92 386 -180 375 -272 c 0
- 374 -301 372 -342 369 -346 c 0
+ 353.434260209 -92 377.869825623 -334.173565837 369 -346 c 0
  367 -349 364 -349 360 -349 c 0
  339 -349 307 -301 307 -281 c 0
  307 -254 309 -225 313 -196 c 0
@@ -16909,29 +16915,19 @@ SplineSet
  171 -89 127 -160 106 -214 c 1
  184 -225 264 -352 264 -424 c 0
  264 -480 223 -504 171 -504 c 0
- 99 -504 48 -432 30 -370 c 0
- 22 -344 19 -316 19 -289 c 0
+ 95.9554691901 -504 19 -417.765294503 19 -289 c 0
  19 -190 70 -8 194 -8 c 0
  261 -8 312 -45 342 -98 c 1
  368 -47 413 -11 485 -11 c 0
  541 -11 582 -20 623 -59 c 1
  661 -31 703 -12 745 -12 c 0
  801 -12 846 -60 871 -111 c 1
- 905 -56 959 -12 1025 -12 c 0
- 1059 -12 1091 -27 1117 -48 c 0
- 1201 -116 1238 -245 1238 -350 c 0
- 1238 -403 1229 -461 1200 -507 c 0
- 1092 -681 806 -689 623 -689 c 0xbfc0
- 454 -689 286 -672 117 -672 c 0
- 76 -672 2 -675 -34 -693 c 0
- -41 -697 -50 -702 -55 -708 c 0
- -60 -715 -61 -727 -72 -727 c 0x7fc0
-538 -372 m 0
- 538 -387 539 -421 559 -421 c 0
- 569 -421 577 -415 584 -409 c 0
- 625 -372 642 -275 642 -222 c 0
+ 905 -56 959 -12 1025 -12 c 0xbf80
+559 -421 m 0
+ 603.475319685 -421 642 -311.620940129 642 -222 c 0
  642 -207 641 -189 638 -173 c 1
  583 -227 538 -302 538 -372 c 0
+ 538 -387 539 -421 559 -421 c 0
 92 -340 m 0
  90 -347 87 -362 83 -371 c 1
  86 -391 90 -414 99 -419 c 0
@@ -16940,8 +16936,8 @@ SplineSet
  200 -335 176 -295 140 -295 c 0
  116 -295 99 -320 92 -340 c 0
 EndSplineSet
+Ligature2: "Subj ligs-1" Uml.Conj Tutg.Ny
 LCarets2: 1 0
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ny
 EndChar
 
 StartChar: Subj.BhU
@@ -18598,6 +18594,10 @@ GlyphClass: 3
 Flags: W
 HStem: -272 81<76 284> 418 81<121.529 244.068>
 VStem: 35 62<347.67 394.019> 284 64<-190 -13>
+AnchorPoint: "Rakar" 305 -204 basechar 0
+AnchorPoint: "U" 274 -194 basechar 0
+AnchorPoint: "VocL B" 381 -274 basechar 0
+AnchorPoint: "VocR" 313 -182 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -23536,8 +23536,8 @@ Encoding: 1114477 -1 465
 Width: 770
 VWidth: 0
 Flags: W
-HStem: -378 81<514.321 651.948> -7 84<558.387 639.625> 252 81<99.2728 224.326> 417 81<127.004 238.637> 418 81<510.411 650.455>
-VStem: 30 64<335.322 385.262> 281 64<200.147 372.041> 386 64<-239.835 -137.114> 421 62<347.67 391.638> 676 63<-270.718 -220 -111.771 -14.1711>
+HStem: -378 81<514.321 651.948> -7 84<558.387 639.625> 252 81<99.2728 224.326> 417 81<127.004 238.637> 418 81<510.411 649.912>
+VStem: 30 64<335.322 385.262> 281 64<200.147 372.041> 386 64<-239.835 -137.114> 676 63<-270.716 -220 -111.771 -14.1711>
 LayerCount: 2
 Fore
 Refer: 147 -1 N 1 0 0 1 365 0 2
@@ -23552,8 +23552,8 @@ Encoding: 1114478 -1 466
 Width: 1110
 VWidth: 0
 Flags: W
-HStem: -378 81<854.321 991.948> -7 84<898.387 979.625> 252 81<99.2728 224.326 439.273 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<850.411 990.455>
-VStem: 30 64<335.322 385.262> 281 64<200.147 372.041> 370 64<335.322 385.262> 621 64<200.147 372.041> 726 64<-239.835 -137.114> 761 62<347.67 391.638> 1016 63<-270.718 -220 -111.771 -14.1711>
+HStem: -378 81<854.321 991.948> -7 84<898.387 979.625> 252 81<99.2728 224.326 439.273 564.326> 417 81<127.004 238.637 467.004 578.637> 418 81<850.411 989.912>
+VStem: 30 64<335.322 385.262> 281 64<200.147 372.041> 370 64<335.322 385.262> 621 64<200.147 372.041> 726 64<-239.835 -137.114> 1016 63<-270.716 -220 -111.771 -14.1711>
 LayerCount: 2
 Fore
 Refer: 147 -1 N 1 0 0 1 705 0 2
