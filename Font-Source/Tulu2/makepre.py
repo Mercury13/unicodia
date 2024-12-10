@@ -41,16 +41,99 @@ BASE_CHARS = {
     'Ll'  : NORMAL_CHAR,
     'Rr'  : NORMAL_CHAR,
     'Lll' : NORMAL_CHAR,
+    # B
+    'B_B' : SYLLABLE,
+    'B_Y' : SYLLABLE,
+    # Bh
+    'Bh_Y' : SYLLABLE,
+    # C
+    'C_C' : SYLLABLE,
+    'C_Ch' : SYLLABLE,
+    # D
+    'D_D' : SYLLABLE,
+    'D_Dh' : SYLLABLE,
+    'D_M' : SYLLABLE,
+    'D_R' : SYLLABLE,
+    'D_Y' : SYLLABLE,
+    # Dd
+    'Dd_Dd' : SYLLABLE,
+    'Dd_Y' : SYLLABLE,
+    # G
+    'G_G' : SYLLABLE,
+    'G_R' : SYLLABLE,
+    'G_Y' : SYLLABLE,
+    # H
+    'H_M' : SYLLABLE,
+    'H_Y' : SYLLABLE,
+    # J
+    'J_J' : SYLLABLE,
+    'J_Ny' : SYLLABLE,
     # K
     'K_K' : SYLLABLE, 'K_K_R' : SYLLABLE,
-    'K_T' : SYLLABLE, 'K_T_Y' : SYLLABLE, 'K_T_R' : SYLLABLE,    
-    'K_Ss' : SYLLABLE, 'K_Ss_R' : SYLLABLE,
-    'K_Y' : SYLLABLE,
+    'K_T' : SYLLABLE, 'K_T_Y' : SYLLABLE, 'K_T_R' : SYLLABLE,        
+    'K_Ss' : SYLLABLE, 'K_Ss_M' : SYLLABLE, 'K_Ss_M_Y' : SYLLABLE, 'K_Ss_R' : SYLLABLE,
     'K_R' : SYLLABLE,
     'K_V' : SYLLABLE,
-    'G_G' : SYLLABLE,
+    'K_Y' : SYLLABLE,
+    # L
+    'L_L' : SYLLABLE,
+    'L_P' : SYLLABLE,
+    'L_Y' : SYLLABLE,
+    # M
+    'M_M' : SYLLABLE,
+    'M_P' : SYLLABLE,
+    'M_Y' : SYLLABLE,
+    # N
+    'N_D' : SYLLABLE,
+    'N_Dh' : SYLLABLE,
+    'N_M' : SYLLABLE,
+    'N_N' : SYLLABLE,
+    'N_T' : SYLLABLE, 'N_T_N' : SYLLABLE, 'N_T_R' : SYLLABLE,
+    'N_Y' : SYLLABLE,
+    # Ng
+    'Ng_G' : SYLLABLE,
+    'Ng_K' : SYLLABLE,
+    # Nn
+    'Nn_Dd' : SYLLABLE,
+    'Nn_Ddh' : SYLLABLE,
+    'Nn_M' : SYLLABLE,
+    'Nn_T' : SYLLABLE,
+    'Nn_Tth' : SYLLABLE,
+    'Nn_Y' : SYLLABLE,
+    # Ny
+    'Ny_C' : SYLLABLE,
+    'Ny_Ch' : SYLLABLE,
+    'Ny_J' : SYLLABLE,
+    'Ny_Ny' : SYLLABLE,
+    # P
+    'P_P' : SYLLABLE,
+    'P_R' : SYLLABLE,
+    'P_Y' : SYLLABLE,
+    # T
+    'T_M' : SYLLABLE,
+    'T_N' : SYLLABLE,
+    'T_R' : SYLLABLE,
+    'T_Th' : SYLLABLE,
+    'T_V' : SYLLABLE,
+    'T_Y' : SYLLABLE,
+    # Tt
+    'Tt_Y' : SYLLABLE,
+    # V
+    'V_Y' : SYLLABLE,
+    # S
     'S_R' : SYLLABLE,
+    'S_Th' : SYLLABLE,
+    'S_V' : SYLLABLE,
+    'S_Y' : SYLLABLE,
+    # Sh
+    'Sh_C' : SYLLABLE,
+    'Sh_R' : SYLLABLE,
+    'Sh_V' : SYLLABLE,
+    'Sh_Y' : SYLLABLE,
+    # Ss
     'Ss_Nn' : SYLLABLE,
+    'Ss_Tt' : SYLLABLE, 'Ss_Tt_R' : SYLLABLE,
+    'Ss_Tth' : SYLLABLE,
 };
 
 ST_EE = 'Link cons+Ee-1'      # Ee subtable
