@@ -5,7 +5,7 @@ FamilyName: UnicodiaFunky
 Weight: Regular
 Copyright: (c) 2021 -2024 Mikhail Merkuryev\nSIL Open Font License 1.1
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
-Version: 2.9.0
+Version: 2.9.3
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1732754050
+ModificationTime: 1733887659
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
