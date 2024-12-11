@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733877684
+ModificationTime: 1733880043
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -152,7 +152,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 132 33 14
+WinInfo: 0 33 14
 BeginPrivate: 5
 BlueValues 22 [-5 0 502 502 744 744]
 StdHW 4 [81]
@@ -251,6 +251,7 @@ GlyphClass: 2
 Flags: W
 HStem: 2 79<438 683> 420 80<208.892 394.047 705.298 885.001>
 VStem: 30 64<143.045 315.211> 437 63<216.689 383.766> 587 63<204.879 364.829> 993 64<150.83 330.092>
+AnchorPoint: "Rakar" 968 72 basechar 0
 AnchorPoint: "VocR" 1017 54 basechar 0
 LayerCount: 2
 Fore
@@ -291,7 +292,7 @@ SplineSet
  137 63 163 36 163 12 c 0
  163 4 160 0 152 0 c 0
 EndSplineSet
-Kerns2: 289 -368 "Big subj kern" 290 -368 "Big subj kern"
+Kerns2: 246 -1055 "Big subj kern" 266 -1104 "Big subj kern" 276 -1043 "Big subj kern" 277 -1055 "Big subj kern" 278 -1055 "Big subj kern" 289 -1104 "Big subj kern" 290 -1104 "Big subj kern" 324 -1043 "Big subj kern" 325 -1043 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.BhEe
 Substitution2: "Link cons+-Ai-1" Wa.BhAi
 EndChar
@@ -351,7 +352,7 @@ SplineSet
  249 168 l 1
  245 169 241 169 237 169 c 0
 EndSplineSet
-Kerns2: 289 -404 "Big subj kern" 290 -404 "Big subj kern"
+Kerns2: 246 -941 "Big subj kern" 266 -956 "Big subj kern" 276 -914 "Big subj kern" 277 -941 "Big subj kern" 278 -941 "Big subj kern" 289 -956 "Big subj kern" 290 -956 "Big subj kern" 324 -914 "Big subj kern" 325 -914 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.ChEe
 Substitution2: "Link cons+-Ai-1" Wa.ChAi
 EndChar
@@ -517,7 +518,7 @@ SplineSet
  558 419 542 373 542 334 c 0
  542 270 567 194 610 146 c 1
 EndSplineSet
-Kerns2: 289 -523 "Big subj kern" 290 -523 "Big subj kern"
+Kerns2: 246 -1033 "Big subj kern" 266 -1098 "Big subj kern" 277 -1042 "Big subj kern" 278 -1059 "Big subj kern" 289 -1098 "Big subj kern" 290 -1098 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.GhEe
 Substitution2: "Link cons+-Ai-1" Wa.GhAi
 EndChar
@@ -1428,7 +1429,7 @@ SplineSet
  452 261 484 213 484 170 c 0
  484 73 426 -2 325 -2 c 0xd0
 EndSplineSet
-Kerns2: 289 -424 "Big subj kern" 290 -424 "Big subj kern"
+Kerns2: 246 -512 "Big subj kern" 266 -531 "Big subj kern" 276 -507 "Big subj kern" 277 -512 "Big subj kern" 278 -527 "Big subj kern" 289 -531 "Big subj kern" 290 -531 "Big subj kern" 324 -507 "Big subj kern" 325 -507 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.DEe
 Substitution2: "Link cons+-Ai-1" Wa.DAi
 EndChar
@@ -1518,7 +1519,7 @@ SplineSet
  704 300 685 417 609 417 c 0
  307 417 532 -5 237 -5 c 0xb8
 EndSplineSet
-Kerns2: 289 -772 "Big subj kern" 290 -772 "Big subj kern"
+Kerns2: 246 -780 "Big subj kern" 266 -772 "Big subj kern" 276 -806 "Big subj kern" 277 -780 "Big subj kern" 278 -780 "Big subj kern" 289 -772 "Big subj kern" 290 -772 "Big subj kern" 324 -806 "Big subj kern" 325 -806 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.GEe
 Substitution2: "Link cons+-Ai-1" Wa.GAi
 EndChar
@@ -6237,7 +6238,7 @@ SplineSet
  351 421 262 412 244 342 c 1
  286 351 328 367 372 367 c 0xfe
 EndSplineSet
-Kerns2: 246 -51 "Big subj kern" 266 -26 "Big subj kern" 276 -41 "Big subj kern" 289 -27 "Big subj kern" 290 -27 "Big subj kern" 324 -47 "Big subj kern" 325 -44 "Big subj kern"
+Kerns2: 246 -549 "Big subj kern" 266 -549 "Big subj kern" 276 -549 "Big subj kern" 277 -549 "Big subj kern" 278 -549 "Big subj kern" 289 -549 "Big subj kern" 290 -549 "Big subj kern" 324 -549 "Big subj kern" 325 -549 "Big subj kern"
 Ligature2: "Subj ligs-1" Tutg.Tt Uml.Conj Tutg.Tt
 LCarets2: 2 0 0
 Colour: ccffcf
@@ -6306,7 +6307,7 @@ SplineSet
  672 85 687 82 698 82 c 0
  757 82 782 132 782 184 c 0
 EndSplineSet
-Kerns2: 276 -106 "Big subj kern" 324 -112 "Big subj kern" 325 -109 "Big subj kern"
+Kerns2: 246 -1036 "Big subj kern" 266 -1133 "Big subj kern" 276 -1126 "Big subj kern" 277 -1093 "Big subj kern" 278 -1041 "Big subj kern" 289 -1133 "Big subj kern" 290 -1133 "Big subj kern" 324 -1126 "Big subj kern" 325 -1126 "Big subj kern"
 LCarets2: 2 0 0
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.T
 Colour: ccffcf
@@ -7570,7 +7571,7 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 266 -1226 "Big subj kern" 289 -1226 "Big subj kern" 290 -1226 "Big subj kern"
+Kerns2: 246 -1028 "Big subj kern" 266 -1226 "Big subj kern" 276 -1192 "Big subj kern" 277 -1078 "Big subj kern" 278 -1043 "Big subj kern" 289 -1226 "Big subj kern" 290 -1226 "Big subj kern" 324 -1192 "Big subj kern" 325 -1192 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_NAi
 Substitution2: "Link cons+-Ee-1" Wa.T_NEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.N
@@ -11167,7 +11168,7 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 276 -667 "Big subj kern" 289 -657 "Big subj kern" 290 -657 "Big subj kern" 324 -673 "Big subj kern" 325 -670 "Big subj kern"
+Kerns2: 246 -1042 "Big subj kern" 266 -1327 "Big subj kern" 276 -1234 "Big subj kern" 277 -1125 "Big subj kern" 278 -1073 "Big subj kern" 289 -1324 "Big subj kern" 290 -1385 "Big subj kern" 324 -1234 "Big subj kern" 325 -1234 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_ThAi
 Substitution2: "Link cons+-Ee-1" Wa.T_ThEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.Th
@@ -11286,7 +11287,7 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 289 -290 "Big subj kern" 290 -290 "Big subj kern"
+Kerns2: 246 -1028 "Big subj kern" 266 -1149 "Big subj kern" 276 -1092 "Big subj kern" 277 -1115 "Big subj kern" 278 -1039 "Big subj kern" 289 -1149 "Big subj kern" 290 -1149 "Big subj kern" 324 -1092 "Big subj kern" 325 -1092 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_VAi
 Substitution2: "Link cons+-Ee-1" Wa.T_VEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.V
@@ -15418,6 +15419,8 @@ GlyphClass: 2
 Flags: W
 HStem: -508 79<418 663> -90 80<188.892 374.141 685.298 865.001>
 VStem: 10 64<-367.296 -194.789> 417 63<-293.311 -127.338> 567 63<-305.121 -145.171> 973 64<-359.17 -179.908>
+AnchorPoint: "VocR" 983 -482 basechar 0
+AnchorPoint: "VocL B" 1047 -509 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -17773,7 +17776,7 @@ SplineSet
  1262 -336 1252 -316 1212 -316 c 0xf190
  1164 -316 1117 -355 1107 -402 c 1
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.J Uml.U
+Ligature2: "Subj vowel-1" Subj.J Uml.U
 Colour: 995c03
 EndChar
 
@@ -17871,7 +17874,7 @@ SplineSet
  1164 -322 1129 -364 1129 -401 c 2
  1129 -405 l 1
 EndSplineSet
-Ligature2: "Subjoin-1" Uml.Conj Tutg.J Uml.Uu
+Ligature2: "Subj vowel-1" Subj.J Uml.Uu
 LCarets2: 2 0 0
 Colour: 995c03
 EndChar
@@ -19985,7 +19988,7 @@ SplineSet
  1156 -625 1163 -626 1170 -626 c 0x9ff0
  1218 -626 1247 -592 1247 -545 c 1
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ny Uml.U
+Ligature2: "Subj vowel-1" Subj.Ny Uml.U
 Colour: 9c5e03
 EndChar
 
@@ -20083,7 +20086,7 @@ SplineSet
  1130 -624 1133 -624 1136 -624 c 0
  1173 -624 1185 -579 1186 -549 c 1
 EndSplineSet
-Ligature2: "Orig CCMP-1" Uml.Conj Tutg.Ny Uml.Uu
+Ligature2: "Subjoin-1" Subj.Ny Uml.Uu
 Colour: 9c5e03
 EndChar
 
@@ -20522,8 +20525,8 @@ StartChar: Shape.Dotc
 Encoding: 18 9676 334
 Width: 500
 VWidth: 1000
-Flags: HMW
-AnchorPoint: "VocR" 423 132 basechar 0
+Flags: HMWO
+AnchorPoint: "VocR" 472 116 basechar 0
 AnchorPoint: "Uml above" 252 466 basechar 0
 AnchorPoint: "Low uml" 254 0 basechar 0
 LayerCount: 2
