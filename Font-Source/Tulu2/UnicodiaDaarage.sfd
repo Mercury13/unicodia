@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733880043
+ModificationTime: 1733882505
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -76,7 +76,7 @@ Lookup: 5 0 0 "YU spacing" { "YU spacing-1"  } ['rclt' ('DFLT' <'dflt' > 'latn' 
 Lookup: 260 0 0 "Tutg ABVM" { "Tutg ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 260 0 0 "Tutg BLWM" { "Tutg BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 Lookup: 262 0 0 "Tutg MKMK" { "Tutg MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
-Lookup: 258 8 0 "Tutg KERN" { "Kern-1" [150,15,0] "Big subj kern" [172,17,2] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
+Lookup: 258 8 0 "Tutg KERN" { "Kern-1" [150,15,0] "Autokern" [172,17,2] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > 'tutg' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 ContextSub2: coverage "YU spacing-1" 0 0 0 1
@@ -292,7 +292,6 @@ SplineSet
  137 63 163 36 163 12 c 0
  163 4 160 0 152 0 c 0
 EndSplineSet
-Kerns2: 246 -1055 "Big subj kern" 266 -1104 "Big subj kern" 276 -1043 "Big subj kern" 277 -1055 "Big subj kern" 278 -1055 "Big subj kern" 289 -1104 "Big subj kern" 290 -1104 "Big subj kern" 324 -1043 "Big subj kern" 325 -1043 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.BhEe
 Substitution2: "Link cons+-Ai-1" Wa.BhAi
 EndChar
@@ -352,7 +351,6 @@ SplineSet
  249 168 l 1
  245 169 241 169 237 169 c 0
 EndSplineSet
-Kerns2: 246 -941 "Big subj kern" 266 -956 "Big subj kern" 276 -914 "Big subj kern" 277 -941 "Big subj kern" 278 -941 "Big subj kern" 289 -956 "Big subj kern" 290 -956 "Big subj kern" 324 -914 "Big subj kern" 325 -914 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.ChEe
 Substitution2: "Link cons+-Ai-1" Wa.ChAi
 EndChar
@@ -518,7 +516,6 @@ SplineSet
  558 419 542 373 542 334 c 0
  542 270 567 194 610 146 c 1
 EndSplineSet
-Kerns2: 246 -1033 "Big subj kern" 266 -1098 "Big subj kern" 277 -1042 "Big subj kern" 278 -1059 "Big subj kern" 289 -1098 "Big subj kern" 290 -1098 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.GhEe
 Substitution2: "Link cons+-Ai-1" Wa.GhAi
 EndChar
@@ -701,7 +698,6 @@ SplineSet
  237 155 233 195 226 200 c 0
  216 207 201 210 189 210 c 0
 EndSplineSet
-Kerns2: 289 -497 "Big subj kern" 290 -497 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.KhEe
 Substitution2: "Link cons+-Ai-1" Wa.KhAi
 EndChar
@@ -756,7 +752,6 @@ SplineSet
  125 383 115 370 107 367 c 1
  95 353 86 335 86 316 c 2
 EndSplineSet
-Kerns2: 289 -462 "Big subj kern" 290 -462 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.LlEe
 Substitution2: "Link cons+-Ai-1" Wa.LlAi
 EndChar
@@ -841,7 +836,6 @@ SplineSet
  176 181 145 152 127 126 c 0
  122 119 119 111 112 105 c 1
 EndSplineSet
-Kerns2: 289 -351 "Big subj kern" 290 -351 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.NnEe
 Substitution2: "Link cons+-Ai-1" Wa.NnAi
 EndChar
@@ -895,7 +889,6 @@ SplineSet
  813 396 783 418 743 418 c 0
  704 418 674 392 674 352 c 0
 EndSplineSet
-Kerns2: 289 -495 "Big subj kern" 290 -495 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.PhEe
 Substitution2: "Link cons+-Ai-1" Wa.PhAi
 EndChar
@@ -1005,7 +998,6 @@ SplineSet
  756 207 697 220 666 220 c 0
  620 220 574 201 574 148 c 0
 EndSplineSet
-Kerns2: 289 -884 "Big subj kern" 290 -884 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.ShEe
 Substitution2: "Link cons+-Ai-1" Wa.ShAi
 EndChar
@@ -1268,7 +1260,6 @@ SplineSet
  212 256 202 257 191 257 c 0xdf
  155 257 111 226 100 225 c 1
 EndSplineSet
-Kerns2: 289 -396 "Big subj kern" 290 -396 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.NgEe
 Substitution2: "Link cons+-Ai-1" Wa.NgAi
 EndChar
@@ -1429,7 +1420,6 @@ SplineSet
  452 261 484 213 484 170 c 0
  484 73 426 -2 325 -2 c 0xd0
 EndSplineSet
-Kerns2: 246 -512 "Big subj kern" 266 -531 "Big subj kern" 276 -507 "Big subj kern" 277 -512 "Big subj kern" 278 -527 "Big subj kern" 289 -531 "Big subj kern" 290 -531 "Big subj kern" 324 -507 "Big subj kern" 325 -507 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.DEe
 Substitution2: "Link cons+-Ai-1" Wa.DAi
 EndChar
@@ -1519,7 +1509,6 @@ SplineSet
  704 300 685 417 609 417 c 0
  307 417 532 -5 237 -5 c 0xb8
 EndSplineSet
-Kerns2: 246 -780 "Big subj kern" 266 -772 "Big subj kern" 276 -806 "Big subj kern" 277 -780 "Big subj kern" 278 -780 "Big subj kern" 289 -772 "Big subj kern" 290 -772 "Big subj kern" 324 -806 "Big subj kern" 325 -806 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.GEe
 Substitution2: "Link cons+-Ai-1" Wa.GAi
 EndChar
@@ -1593,7 +1582,6 @@ SplineSet
  245 176 l 1
  220 191 181 198 152 198 c 0
 EndSplineSet
-Kerns2: 246 -1020 "Big subj kern" 266 -1170 "Big subj kern" 276 -1123 "Big subj kern" 277 -1104 "Big subj kern" 278 -1039 "Big subj kern" 289 -1170 "Big subj kern" 290 -1170 "Big subj kern" 324 -1123 "Big subj kern" 325 -1123 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Ng_KAi
 Substitution2: "Link cons+-Ee-1" Wa.Ng_KEe
 Ligature2: "Subj ligs-1" Tutg.Ng Uml.Conj Tutg.K
@@ -1863,7 +1851,6 @@ SplineSet
  1244 139 1202 124 1202 80 c 2
  1202 78 l 1
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1327 "Big subj kern" 276 -1238 "Big subj kern" 277 -1117 "Big subj kern" 278 -1036 "Big subj kern" 289 -1342 "Big subj kern" 290 -1403 "Big subj kern" 324 -1238 "Big subj kern" 325 -1238 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Ny_ChAi
 Substitution2: "Link cons+-Ee-1" Wa.Ny_ChEe
 Ligature2: "Subj ligs-1" Tutg.Ny Uml.Conj Tutg.Ch
@@ -2079,7 +2066,6 @@ SplineSet
  173 86 211 103 211 143 c 0
  211 175 187 215 151 215 c 0
 EndSplineSet
-Kerns2: 246 -1045 "Big subj kern" 266 -1341 "Big subj kern" 277 -1076 "Big subj kern" 278 -1039 "Big subj kern" 289 -1335 "Big subj kern" 290 -1450 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Ny_NyAi
 Substitution2: "Link cons+-Ee-1" Wa.Ny_NyEe
 Ligature2: "Subj ligs-1" Tutg.Ny Uml.Conj Tutg.Ny
@@ -2165,7 +2151,6 @@ SplineSet
  163 181 132 152 114 126 c 0
  109 119 106 111 99 105 c 1
 EndSplineSet
-Kerns2: 246 -1020 "Big subj kern" 266 -1212 "Big subj kern" 276 -1168 "Big subj kern" 277 -1129 "Big subj kern" 278 -1054 "Big subj kern" 289 -1212 "Big subj kern" 290 -1212 "Big subj kern" 324 -1168 "Big subj kern" 325 -1168 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Nn_TAi
 Substitution2: "Link cons+-Ee-1" Wa.Nn_TEe
 Ligature2: "Subj ligs-1" Tutg.Nn Uml.Conj Tutg.Tt
@@ -2331,7 +2316,6 @@ SplineSet
  163 181 132 152 114 126 c 0
  109 119 106 111 99 105 c 1
 EndSplineSet
-Kerns2: 266 -1323 "Big subj kern" 276 -1215 "Big subj kern" 289 -1323 "Big subj kern" 290 -1476 "Big subj kern" 324 -1215 "Big subj kern" 325 -1215 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Nn_DdAi
 Substitution2: "Link cons+-Ee-1" Wa.Nn_DdEe
 Ligature2: "Subj ligs-1" Tutg.Nn Uml.Conj Tutg.Dd
@@ -2424,7 +2408,6 @@ SplineSet
  163 181 132 152 114 126 c 0
  109 119 106 111 99 105 c 1
 EndSplineSet
-Kerns2: 246 -1027 "Big subj kern" 266 -1312 "Big subj kern" 277 -1100 "Big subj kern" 278 -1026 "Big subj kern" 289 -1312 "Big subj kern" 290 -1469 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Nn_DdhAi
 Substitution2: "Link cons+-Ee-1" Wa.Nn_DdhEe
 Ligature2: "Subj ligs-1" Tutg.Nn Uml.Conj Tutg.Ddh
@@ -2488,7 +2471,6 @@ SplineSet
  770 80 794 140 794 190 c 0
  794 234 786 280 767 321 c 1
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1151 "Big subj kern" 276 -1007 "Big subj kern" 277 -1089 "Big subj kern" 278 -1048 "Big subj kern" 289 -1151 "Big subj kern" 290 -1151 "Big subj kern" 324 -1007 "Big subj kern" 325 -1007 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.N_TAi
 Substitution2: "Link cons+-Ee-1" Wa.N_TEe
 Ligature2: "Subj ligs-1" Tutg.N Uml.Conj Tutg.T
@@ -2610,7 +2592,6 @@ SplineSet
  135 58 161 44 161 13 c 0
  161 5 158 1 150 1 c 0xf7
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1278 "Big subj kern" 276 -1177 "Big subj kern" 277 -1130 "Big subj kern" 278 -1049 "Big subj kern" 289 -1278 "Big subj kern" 290 -1278 "Big subj kern" 324 -1177 "Big subj kern" 325 -1177 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.N_DhAi
 Substitution2: "Link cons+-Ee-1" Wa.N_DhEe
 Ligature2: "Subj ligs-1" Tutg.N Uml.Conj Tutg.Dh
@@ -2693,7 +2674,6 @@ SplineSet
  257 412 246 414 235 414 c 0
  123 414 94 311 94 218 c 0
 EndSplineSet
-Kerns2: 289 -324 "Big subj kern" 290 -324 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.HEe
 Substitution2: "Link cons+-Ai-1" Wa.HAi
 EndChar
@@ -2877,7 +2857,6 @@ SplineSet
  113 312 131 300 153 300 c 0
  201 300 223 364 223 404 c 0
 EndSplineSet
-Kerns2: 289 -502 "Big subj kern" 290 -502 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.LEe
 Substitution2: "Link cons+-Ai-1" Wa.LAi
 EndChar
@@ -2922,7 +2901,6 @@ SplineSet
  430 250 412 276 412 295 c 0
  412 303 415 307 423 307 c 0xbc
 EndSplineSet
-Kerns2: 276 -153 "Big subj kern" 289 -65 "Big subj kern" 290 -65 "Big subj kern" 324 -159 "Big subj kern" 325 -156 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.MEe
 Substitution2: "Link cons+-Ai-1" Wa.MAi
 EndChar
@@ -3009,7 +2987,6 @@ SplineSet
  164 28 168 20 168 12 c 0
  168 4 165 0 157 0 c 0
 EndSplineSet
-Kerns2: 289 -495 "Big subj kern" 290 -495 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.PEe
 Substitution2: "Link cons+-Ai-1" Wa.PAi
 EndChar
@@ -3087,7 +3064,6 @@ SplineSet
  185 36 190 26 190 17 c 0
  190 9 187 5 179 5 c 0
 EndSplineSet
-Kerns2: 276 -186 "Big subj kern" 289 -106 "Big subj kern" 290 -106 "Big subj kern" 324 -192 "Big subj kern" 325 -189 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.REe
 Substitution2: "Link cons+-Ai-1" Wa.RAi
 EndChar
@@ -3133,7 +3109,6 @@ SplineSet
  105 294 127 269 127 246 c 0
  127 238 124 234 116 234 c 0
 EndSplineSet
-Kerns2: 289 -490 "Big subj kern" 290 -490 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.SEe
 Substitution2: "Link cons+-Ai-1" Wa.SAi
 EndChar
@@ -3180,7 +3155,6 @@ SplineSet
  359 85 374 82 385 82 c 0
  456 82 472 147 472 205 c 0
 EndSplineSet
-Kerns2: 276 -119 "Big subj kern" 289 -22 "Big subj kern" 290 -22 "Big subj kern" 324 -125 "Big subj kern" 325 -122 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.TEe
 Substitution2: "Link cons+-Ai-1" Wa.TAi
 EndChar
@@ -3359,7 +3333,6 @@ SplineSet
  757 352 766 362 775 405 c 1
  765 407 754 408 744 408 c 0
 EndSplineSet
-Kerns2: 246 -350 "Big subj kern" 266 -368 "Big subj kern" 276 -357 "Big subj kern" 289 -374 "Big subj kern" 290 -374 "Big subj kern" 324 -363 "Big subj kern" 325 -360 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.SsEe
 Substitution2: "Link cons+-Ai-1" Wa.SsAi
 EndChar
@@ -3409,7 +3382,6 @@ SplineSet
  261 77 314 87 360 108 c 1
  283 160 217 211 168 211 c 0
 EndSplineSet
-Kerns2: 266 -884 "Big subj kern" 289 -884 "Big subj kern" 290 -884 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.YEe
 Substitution2: "Link cons+-Ai-1" Wa.YAi
 EndChar
@@ -3485,7 +3457,6 @@ SplineSet
  209 175 185 215 149 215 c 0
  125 215 108 190 101 170 c 0
 EndSplineSet
-Kerns2: 246 -78 "Big subj kern" 266 -83 "Big subj kern" 276 -94 "Big subj kern" 289 -85 "Big subj kern" 290 -85 "Big subj kern" 324 -100 "Big subj kern" 325 -97 "Big subj kern"
 Substitution2: "Link cons+-Ee-1" Wa.NyEe
 Substitution2: "Link cons+-Ai-1" Wa.NyAi
 EndChar
@@ -4347,7 +4318,6 @@ SplineSet
  1134 348 1145 360 1155 404 c 1
  1145 406 1134 407 1124 407 c 0xdf
 EndSplineSet
-Kerns2: 246 -1045 "Big subj kern" 266 -1354 "Big subj kern" 276 -1199 "Big subj kern" 277 -1045 "Big subj kern" 278 -1045 "Big subj kern" 289 -1354 "Big subj kern" 290 -1354 "Big subj kern" 324 -1199 "Big subj kern" 325 -1199 "Big subj kern"
 Ligature2: "Subj ligs-1" Tutg.K Uml.Conj Tutg.Ss
 Substitution2: "Link cons+-Ee-1" Wa.K_SsEe
 Substitution2: "Link cons+-Ai-1" Wa.K_SsAi
@@ -6128,7 +6098,6 @@ SplineSet
  424 228 426 0 240 0 c 0
  102 0 22 154 22 276 c 0
 EndSplineSet
-Kerns2: 246 -1015 "Big subj kern" 266 -1353 "Big subj kern" 276 -1240 "Big subj kern" 277 -1122 "Big subj kern" 278 -1061 "Big subj kern" 289 -1353 "Big subj kern" 290 -1353 "Big subj kern" 324 -1240 "Big subj kern" 325 -1240 "Big subj kern"
 Ligature2: "Subj ligs-1" Tutg.G Uml.Conj Tutg.G
 Substitution2: "Link cons+-Ee-1" Wa.G_GEe
 Substitution2: "Link cons+-Ai-1" Wa.G_GAi
@@ -6238,7 +6207,6 @@ SplineSet
  351 421 262 412 244 342 c 1
  286 351 328 367 372 367 c 0xfe
 EndSplineSet
-Kerns2: 246 -549 "Big subj kern" 266 -549 "Big subj kern" 276 -549 "Big subj kern" 277 -549 "Big subj kern" 278 -549 "Big subj kern" 289 -549 "Big subj kern" 290 -549 "Big subj kern" 324 -549 "Big subj kern" 325 -549 "Big subj kern"
 Ligature2: "Subj ligs-1" Tutg.Tt Uml.Conj Tutg.Tt
 LCarets2: 2 0 0
 Colour: ccffcf
@@ -6307,7 +6275,6 @@ SplineSet
  672 85 687 82 698 82 c 0
  757 82 782 132 782 184 c 0
 EndSplineSet
-Kerns2: 246 -1036 "Big subj kern" 266 -1133 "Big subj kern" 276 -1126 "Big subj kern" 277 -1093 "Big subj kern" 278 -1041 "Big subj kern" 289 -1133 "Big subj kern" 290 -1133 "Big subj kern" 324 -1126 "Big subj kern" 325 -1126 "Big subj kern"
 LCarets2: 2 0 0
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.T
 Colour: ccffcf
@@ -6640,7 +6607,6 @@ SplineSet
  245 -7 174 0 104 3 c 0x5f
  95 3 72 4 65 6 c 0x3f
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1110 "Big subj kern" 276 -1014 "Big subj kern" 277 -1100 "Big subj kern" 278 -1058 "Big subj kern" 289 -1110 "Big subj kern" 290 -1110 "Big subj kern" 324 -1014 "Big subj kern" 325 -1014 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.M_MAi
 Substitution2: "Link cons+-Ee-1" Wa.M_MEe
 Ligature2: "Subj ligs-1" Tutg.M Uml.Conj Tutg.M
@@ -6737,8 +6703,6 @@ SplineSet
  684 299 712 319 712 353 c 0xcfb0
  712 372 704 382 685 382 c 0
 EndSplineSet
-Kerns2: 246 -1017 "Big subj kern" 266 -1099 "Big subj kern" 277 -1017 "Big subj kern" 278 -1017 "Big subj kern" 290 -1099 "Big subj kern"
-PairPos2: "Big subj kern" Subj.Ju dx=0 dy=0 dh=-1099 dv=0 dx=0 dy=0 dh=0 dv=0
 Substitution2: "Link cons+-Ai-1" Wa.L_LAi
 Substitution2: "Link cons+-Ee-1" Wa.L_LEe
 Ligature2: "Subj ligs-1" Tutg.Ll Uml.Conj Tutg.Ll
@@ -7571,7 +7535,6 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1226 "Big subj kern" 276 -1192 "Big subj kern" 277 -1078 "Big subj kern" 278 -1043 "Big subj kern" 289 -1226 "Big subj kern" 290 -1226 "Big subj kern" 324 -1192 "Big subj kern" 325 -1192 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_NAi
 Substitution2: "Link cons+-Ee-1" Wa.T_NEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.N
@@ -10422,7 +10385,6 @@ LayerCount: 2
 Fore
 Refer: 33 70609 N 1 0 0 1 259 -85 2
 Refer: 362 -1 N 1 0 0 1 0 0 2
-Kerns2: 289 -430 "Big subj kern" 290 -430 "Big subj kern"
 Substitution2: "Tutg -reph-1" Tutg.Rr.Naked
 Substitution2: "Link cons+-Ee-1" Wa.RrEe
 Substitution2: "Link cons+-Ai-1" Wa.RrAi
@@ -11168,7 +11130,6 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 246 -1042 "Big subj kern" 266 -1327 "Big subj kern" 276 -1234 "Big subj kern" 277 -1125 "Big subj kern" 278 -1073 "Big subj kern" 289 -1324 "Big subj kern" 290 -1385 "Big subj kern" 324 -1234 "Big subj kern" 325 -1234 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_ThAi
 Substitution2: "Link cons+-Ee-1" Wa.T_ThEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.Th
@@ -11229,7 +11190,6 @@ SplineSet
  100 234 88 243 83 248 c 0
  46 280 17 328 17 378 c 0
 EndSplineSet
-Kerns2: 246 -967 "Big subj kern" 266 -980 "Big subj kern" 276 -898 "Big subj kern" 277 -967 "Big subj kern" 278 -967 "Big subj kern" 289 -980 "Big subj kern" 290 -980 "Big subj kern" 324 -898 "Big subj kern" 325 -898 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.S_VAi
 Substitution2: "Link cons+-Ee-1" Wa.S_VEe
 Ligature2: "Subj ligs-1" Tutg.S Uml.Conj Tutg.V
@@ -11287,7 +11247,6 @@ SplineSet
  346 85 361 82 372 82 c 0
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1149 "Big subj kern" 276 -1092 "Big subj kern" 277 -1115 "Big subj kern" 278 -1039 "Big subj kern" 289 -1149 "Big subj kern" 290 -1149 "Big subj kern" 324 -1092 "Big subj kern" 325 -1092 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_VAi
 Substitution2: "Link cons+-Ee-1" Wa.T_VEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.V
@@ -11420,7 +11379,6 @@ SplineSet
  345 86 359 82 372 82 c 0x5f80
  443 82 459 147 459 205 c 0
 EndSplineSet
-Kerns2: 246 -1043 "Big subj kern" 266 -1148 "Big subj kern" 276 -1098 "Big subj kern" 277 -1131 "Big subj kern" 278 -1066 "Big subj kern" 289 -1148 "Big subj kern" 290 -1148 "Big subj kern" 324 -1098 "Big subj kern" 325 -1098 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.T_MAi
 Substitution2: "Link cons+-Ee-1" Wa.T_MEe
 Ligature2: "Subj ligs-1" Tutg.T Uml.Conj Tutg.M
@@ -11488,7 +11446,6 @@ SplineSet
  88 -5 65 30 59 45 c 0
  37 100 24 217 24 275 c 0
 EndSplineSet
-Kerns2: 246 -1035 "Big subj kern" 266 -1100 "Big subj kern" 276 -945 "Big subj kern" 277 -1048 "Big subj kern" 278 -1054 "Big subj kern" 289 -1100 "Big subj kern" 290 -1100 "Big subj kern" 324 -945 "Big subj kern" 325 -945 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.H_MAi
 Substitution2: "Link cons+-Ee-1" Wa.H_MEe
 Ligature2: "Subj ligs-1" Tutg.H Uml.Conj Tutg.M
@@ -11552,7 +11509,6 @@ SplineSet
  140 1 125 16 118 23 c 0
  51 90 17 200 17 293 c 0x0f80
 EndSplineSet
-Kerns2: 246 -1028 "Big subj kern" 266 -1056 "Big subj kern" 276 -1037 "Big subj kern" 277 -1046 "Big subj kern" 278 -1050 "Big subj kern" 289 -1056 "Big subj kern" 290 -1056 "Big subj kern" 324 -1037 "Big subj kern" 325 -1037 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.N_MAi
 Substitution2: "Link cons+-Ee-1" Wa.N_MEe
 Ligature2: "Subj ligs-1" Tutg.N Uml.Conj Tutg.M
@@ -11629,7 +11585,7 @@ SplineSet
  163 181 132 152 114 126 c 0
  109 119 106 111 99 105 c 1
 EndSplineSet
-Kerns2: 12 -83 "Kern-1" 50 -83 "Kern-1" 246 -1036 "Big subj kern" 266 -1335 "Big subj kern" 276 -1237 "Big subj kern" 277 -1087 "Big subj kern" 278 -1043 "Big subj kern" 289 -1340 "Big subj kern" 290 -1424 "Big subj kern" 324 -1237 "Big subj kern" 325 -1237 "Big subj kern"
+Kerns2: 12 -83 "Kern-1" 50 -83 "Kern-1"
 Substitution2: "Link cons+-Ai-1" Wa.Nn_MAi
 Substitution2: "Link cons+-Ee-1" Wa.Nn_MEe
 LCarets2: 2 0 0
@@ -15270,7 +15226,6 @@ SplineSet
  768 248 745 251 724 251 c 0
  655 251 575 211 575 133 c 0
 EndSplineSet
-Kerns2: 246 -1051 "Big subj kern" 266 -1162 "Big subj kern" 276 -1115 "Big subj kern" 277 -1113 "Big subj kern" 278 -1056 "Big subj kern" 289 -1162 "Big subj kern" 290 -1162 "Big subj kern" 324 -1115 "Big subj kern" 325 -1115 "Big subj kern"
 Substitution2: "Link cons+-Ai-1" Wa.Sh_VAi
 Substitution2: "Link cons+-Ee-1" Wa.Sh_VEe
 Ligature2: "Subj ligs-1" Tutg.Sh Uml.Conj Tutg.V
@@ -20525,7 +20480,7 @@ StartChar: Shape.Dotc
 Encoding: 18 9676 334
 Width: 500
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "VocR" 472 116 basechar 0
 AnchorPoint: "Uml above" 252 466 basechar 0
 AnchorPoint: "Low uml" 254 0 basechar 0
