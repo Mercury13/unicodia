@@ -134,7 +134,7 @@ BASE_CHARS = {
     'Ss_Nn' : SYLLABLE,
     'Ss_Tt' : SYLLABLE, 'Ss_Tt_R' : SYLLABLE,
     'Ss_Tth' : SYLLABLE,
-};
+}
 
 ST_EE = 'Link cons+Ee-1'      # Ee subtable
 ST_AI = 'Link cons+Ai-1'      # Ai subtable
@@ -142,6 +142,16 @@ ST_AI = 'Link cons+Ai-1'      # Ai subtable
 VOWELS = {
     'Ee'  : { 'Subt' : ST_EE },
     'Ai'  : { 'Subt' : ST_AI },
+}
+
+# Subjoined kern pairs, right glyphs
+# (left are our consonants and ligatures)
+KR_MAIN = { 'Main' : True }     # KR = kern right
+KR_VOWEL = { 'Main' : False }
+SUBJ_KERN_RIGHTS = {
+    'Subj.Bh' : KR_MAIN, 'Subj.BhU' : KR_VOWEL, 'Subj.BhUu' : KR_VOWEL,
+    'Subj.J' : KR_MAIN, 'Subj.JU' : KR_VOWEL, 'Subj.JUu' : KR_VOWEL,
+    'Subj.Ny' : KR_MAIN, 'Subj.NyU' : KR_VOWEL, 'Subj.NyUu' : KR_VOWEL,
 }
 
 
@@ -185,6 +195,12 @@ def addAnchor(baseGlyph, newGlyph, name, offset, minX):
         y = anchor[3]
         newGlyph.addAnchorPoint(name, type, x, y)
 
+def addKern(font, myGlyph, addAll):
+    for xcode, xprop in SUBJ_KERN_RIGHTS.items():
+        if addAll or (xprop['Main']):
+            rightGlyph = findGlyph(font, xcode, True)
+            mywidth = min(myGlyph.width, rightGlyph.width)
+            myGlyph.addPosSub('Autokern', rightGlyph.glyphname, -mywidth)
 
 ST_WORKAR = 'Tutg workar-1'   # workaround subtable
 
@@ -204,6 +220,7 @@ def addLig(font, baseCode, baseProp, vowCode, vowProp):
     vowName = 'Uml.' + vowCode
     ligName = 'Wa.' + baseCode + vowCode
     baseGlyph = findGlyph(font, baseName, True)
+    addKern(font, baseGlyph, True)
     vowGlyph = findGlyph(font, vowName, True)
     ligGlyph = ensureGlyph(font, ligName)
     if ligGlyph.glyphname == NEWGLYPH_NAME:
@@ -237,6 +254,7 @@ def addLig(font, baseCode, baseProp, vowCode, vowProp):
     baseOffset = vowGlyph.width
     matrix = (1, 0, 0, 1, baseOffset, 0)    
     ligGlyph.addReference(baseName, matrix)
+    addKern(font, ligGlyph, False)
     ligGlyph.width = baseOffset + baseGlyph.width
     ligGlyph.color = 0x4FD5FF
 
