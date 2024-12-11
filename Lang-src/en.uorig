@@ -8345,6 +8345,9 @@
    <text id="OldMaka">
     <orig>for old Makasar font</orig>
    </text>
+   <text id="ToJa">
+    <orig>for translation to Japanese</orig>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">

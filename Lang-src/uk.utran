@@ -12081,6 +12081,10 @@
     <orig>for old Makasar font</orig>
     <transl>за старий макасарський шрифт</transl>
    </text>
+   <text id="ToJa">
+    <orig>for translation to Japanese</orig>
+    <transl>за переклад на японську</transl>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">
