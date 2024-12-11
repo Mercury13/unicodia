@@ -9565,6 +9565,9 @@
     <orig>for old Makasar font</orig>
     <transl>古いマカッサルフォント</transl>
    </text>
+   <text id="ToJa">
+    <orig>for translation to Japanese</orig>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">
