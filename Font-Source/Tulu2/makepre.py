@@ -195,12 +195,26 @@ def addAnchor(baseGlyph, newGlyph, name, offset, minX):
         y = anchor[3]
         newGlyph.addAnchorPoint(name, type, x, y)
 
+KERN_SUBTABLE = 'Autokern'
+
 def addKern(font, myGlyph, addAll):
+    myGlyph.removePosSub(KERN_SUBTABLE)
     for xcode, xprop in SUBJ_KERN_RIGHTS.items():
         if addAll or (xprop['Main']):
             rightGlyph = findGlyph(font, xcode, True)
             mywidth = min(myGlyph.width, rightGlyph.width)
-            myGlyph.addPosSub('Autokern', rightGlyph.glyphname, -mywidth)
+            myGlyph.addPosSub(KERN_SUBTABLE, rightGlyph.glyphname, -mywidth)
+
+BAD_ANCHORS = [ 'U', 'U mark', 'VocR', 'VocR mark' ]
+
+def copyAnchors(destGlyph, srcGlyph, dx):
+    for anc in srcGlyph.anchorPoints:
+        clazz = anc[0]
+        type = anc[1]
+        x = anc[2]
+        y = anc[3]
+        if not (clazz in BAD_ANCHORS):
+            destGlyph.addAnchorPoint(clazz, type, x + dx, y)
 
 ST_WORKAR = 'Tutg workar-1'   # workaround subtable
 
@@ -254,6 +268,7 @@ def addLig(font, baseCode, baseProp, vowCode, vowProp):
     baseOffset = vowGlyph.width
     matrix = (1, 0, 0, 1, baseOffset, 0)    
     ligGlyph.addReference(baseName, matrix)
+    copyAnchors(ligGlyph, baseGlyph, baseOffset)
     addKern(font, ligGlyph, False)
     ligGlyph.width = baseOffset + baseGlyph.width
     ligGlyph.color = 0x4FD5FF
