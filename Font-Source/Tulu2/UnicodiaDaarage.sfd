@@ -4,7 +4,7 @@ FullName: UnicodiaDaarage
 FamilyName: UnicodiaDaarage
 Weight: Regular
 Copyright: 
-Version: 2.9.3
+Version: 2.9.4
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733962396
+ModificationTime: 1733962644
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
