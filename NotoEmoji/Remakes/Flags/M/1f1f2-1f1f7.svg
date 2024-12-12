@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   version="1.1"
    viewBox="0 0 36 36"
+   version="1.1"
    id="svg4"
-   sodipodi:docname="1f1f8-1f1e9.svg"
+   sodipodi:docname="1f1f2-1f1f7.svg"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="14.8296"
-     inkscape:cx="2.6635917"
-     inkscape:cy="28.490316"
+     inkscape:zoom="14.829601"
+     inkscape:cx="19.656632"
+     inkscape:cy="17.026757"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -30,29 +30,21 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     d="M 32,5 H 4 C 2.9840107,5 2.0567866,5.3783091 1.351438,6.0018171 L 5,16 h 28 l 3,-2.5 V 9 C 36,6.79 34.21,5 32,5 Z"
-     fill="#d21034"
+     fill="#ce2540"
+     d="M 32,5 H 4 C 1.791,5 0,6.791 0,9 l 6,9 -6,9 c 0,2.209 1.791,4 4,4 h 28 c 2.209,0 4,-1.791 4,-4 L 30,18 36,9 C 36,6.791 34.209,5 32,5 Z"
      id="path1"
-     sodipodi:nodetypes="ssccccss" />
+     sodipodi:nodetypes="sscccsscccs" />
   <path
-     d="M 1.349,30 C 2.0543487,30.623508 2.9840107,31 4,31 h 28 c 2.21,0 4,-1.79 4,-4 V 22.5 L 33,19 H 5 Z"
-     fill="#141414"
+     fill="#0f6433"
+     d="M 0,9 V 27 H 36 V 9 Z"
      id="path2"
-     sodipodi:nodetypes="cssscccc" />
-  <path
-     d="m 8,13.5 h 28 v 9 H 8 Z"
-     fill="#ffffff"
-     id="path3"
      sodipodi:nodetypes="ccccc" />
   <path
-     d="m1.35 6h-1e-3c-0.828 0.733-1.35 1.8-1.35 3v18c0 1.19 0.522 2.26 1.35 3l16.1-12-16.1-12z"
-     fill="#007229"
+     fill="#FFC514"
+     d="M14.936 12.664l1.894 1.375-.722 2.221-.002.005.007-.005L18 14.889l1.887 1.371.006.005-.001-.005-.722-2.221 1.894-1.375h-2.341L18 10.437l-.723 2.227z"
+     id="path3" />
+  <path
+     fill="#FFC514"
+     d="M26.1 13.641c-.019 4.458-3.638 8.067-8.1 8.067s-8.081-3.609-8.1-8.067c-.186.694-.294 1.42-.294 2.173 0 4.636 3.758 8.395 8.395 8.395s8.395-3.758 8.395-8.395c-.001-.753-.11-1.479-.296-2.173z"
      id="path4" />
-  <rect
-     x="35.8"
-     y="13.5"
-     width=".2"
-     height="9"
-     id="rect4"
-     style="fill:#77767b" />
 </svg>

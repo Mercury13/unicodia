@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="1f1ef-1f1f2.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="14.829601"
+     inkscape:cx="14.936343"
+     inkscape:cy="10.013756"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <path
+     fill="#009b3a"
+     d="M 32,5 H 4 C 3.8187858,5 3.6398302,5.0116524 3.465,5.035 L 3.466,30.964 C 3.6416756,30.98758 3.817872,31 4,31 h 28 c 0.18109,0 0.359371,-0.01204 0.534086,-0.03535 L 32.534938,5.0354662 C 32.35995,5.0120754 32.181384,5 32,5 Z"
+     id="path1"
+     sodipodi:nodetypes="ssccssccs" />
+  <path
+     fill="#ffd202"
+     d="M 32.535,5.035 18,15.533 3.465,5.035 H 3.464 C 1.969,5.235 0.736,6.261 0.237,7.638 L 6,18 0.238,28.361 0.239,28.364 c 0.499,1.375 1.731,2.4 3.223,2.6 H 3.466 L 18,20.467 32.534,30.964 c 1.494,-0.2 2.728,-1.224 3.227,-2.601 L 35.762,28.36 30,18 35.762,7.639 C 35.264,6.261 34.03,5.235 32.535,5.035 Z"
+     id="path3"
+     sodipodi:nodetypes="ccccccccccccccccc" />
+  <path
+     fill="#141414"
+     d="M 35.762,28.361 C 35.916,27.936 36,27.478 36,27 V 9 C 36,8.523 35.916,8.065 35.763,7.641 L 35.762,7.639 21.416,18 Z M 14.584,18 0.238,7.639 V 7.64 C 0.084,8.065 0,8.523 0,9 v 18 c 0,0.478 0.084,0.936 0.238,1.361 z"
+     id="path2"
+     sodipodi:nodetypes="csscccccccsscc" />
+</svg>

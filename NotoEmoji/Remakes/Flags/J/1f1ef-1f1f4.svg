@@ -4,7 +4,7 @@
    viewBox="0 0 36 36"
    id="svg5"
    sodipodi:docname="1f1ef-1f1f4.svg"
-   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="20.972222"
-     inkscape:cx="18"
-     inkscape:cy="18"
+     inkscape:zoom="14.8296"
+     inkscape:cx="17.161622"
+     inkscape:cy="15.61067"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -30,21 +30,34 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5" />
   <path
-     d="M32 5H4C1.791 5 0 6.791 0 9v4.5h36V9c0-2.209-1.791-4-4-4z"
+     d="M 32,5 H 4 C 2.9840107,5 2.0567866,5.3783091 1.351438,6.0018171 L 5,16 h 28 l 3,-2.5 V 9 C 36,6.79 34.21,5 32,5 Z"
+     fill="#d21034"
+     id="path1-5"
+     sodipodi:nodetypes="ssccccss"
+     style="fill:#000000;fill-opacity:1" />
+  <path
+     d="M 1.349,30 C 2.0543487,30.623508 2.9840107,31 4,31 h 28 c 2.21,0 4,-1.79 4,-4 V 22.5 L 33,19 H 5 Z"
      fill="#141414"
-     id="path1" />
+     id="path2-1"
+     sodipodi:nodetypes="cssscccc"
+     style="fill:#007a3d;fill-opacity:1" />
   <path
-     d="m0 27c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-4.5h-36v4.5z"
-     fill="#007A3D"
-     id="path2" />
+     d="m 8,13.5 h 28 v 9 H 8 Z"
+     fill="#ffffff"
+     id="path3-7"
+     sodipodi:nodetypes="ccccc" />
   <path
-     d="M0 13.5h36v9H0z"
-     fill="#FFF"
-     id="path3" />
-  <path
-     d="m1.35 6h-1e-3c-0.828 0.733-1.35 1.8-1.35 3v18c0 1.19 0.522 2.26 1.35 3l16.1-12-16.1-12z"
-     fill="#CE1126"
-     id="path4" />
+     d="M 1.35,6 H 1.349 c -0.828,0.733 -1.35,1.8 -1.35,3 v 18 c 0,1.19 0.522,2.26 1.35,3 L 17.449,18 1.349,6 Z"
+     fill="#007229"
+     id="path4-1"
+     style="fill:#ce1126;fill-opacity:1" />
+  <rect
+     x="35.799999"
+     y="13.5"
+     width="0.2"
+     height="9"
+     id="rect4-1"
+     style="fill:#77767b" />
   <path
      d="M6.627 19.338l1.056.976-.105-1.435L9 18.662l-1.187-.812.717-1.247-1.375.421-.528-1.338-.528 1.338-1.375-.421.716 1.247-1.186.812 1.421.217-.104 1.435z"
      fill="#FFF"

@@ -4,7 +4,7 @@
    viewBox="0 0 36 36"
    id="svg18"
    sodipodi:docname="1f1ec-1f1f6.svg"
-   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,15 +20,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="20.972222"
-     inkscape:cx="18"
-     inkscape:cy="18"
+     inkscape:zoom="29.659201"
+     inkscape:cx="9.7608834"
+     inkscape:cy="21.089577"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg18" />
+  <path
+     d="M 32,5 H 4 C 3.231636,5 2.5192495,5.224831 1.91,5.6 L 4,16 h 29 l 3,-3 V 9 C 36,6.79 34.21,5 32,5 Z"
+     fill="#3e9a00"
+     id="path2"
+     sodipodi:nodetypes="ssccccss" />
+  <path
+     d="M 4,20 1.91,30.4 C 2.5194236,30.777185 3.2338656,31 4,31 h 28 c 2.21,0 4,-1.79 4,-4 v -4 l -3,-3 z"
+     fill="#e32118"
+     id="path1"
+     sodipodi:nodetypes="ccsssccc" />
   <rect
      x="6"
      y="13"
@@ -36,14 +46,6 @@
      height="10"
      fill="#fff"
      id="rect1" />
-  <path
-     d="m7.33 23-6.74 6.08c0.702 1.15 1.97 1.92 3.41 1.92h28c2.21 0 4-1.79 4-4v-4z"
-     fill="#e32118"
-     id="path1" />
-  <path
-     d="m32 5h-28c-2.21 0-4 1.79-4 4v4h36v-4c0-2.21-1.79-4-4-4z"
-     fill="#3E9A00"
-     id="path2" />
   <path
      d="m7.33 13-5.42-7.4c-1.14 0.704-1.91 1.96-1.91 3.4v18c0 1.44 0.768 2.69 1.91 3.4l9.09-12.4-3.67-5z"
      fill="#0173CE"

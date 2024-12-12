@@ -4,7 +4,7 @@
    viewBox="0 0 36 36"
    id="svg4"
    sodipodi:docname="1f1f5-1f1f8.svg"
-   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="20.972222"
-     inkscape:cx="18"
-     inkscape:cy="18"
+     inkscape:zoom="10.486111"
+     inkscape:cx="31.517881"
+     inkscape:cy="28.466225"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -30,25 +30,32 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     d="m32 5h-28c-2.21 0-4 1.79-4 4l4 4.5h32v-4.5c0-2.21-1.79-4-4-4z"
-     id="path1" />
+     d="M 32,5 H 4 C 2.9840107,5 2.0567866,5.3783091 1.351438,6.0018171 L 5,16 h 28 l 3,-2.5 V 9 C 36,6.79 34.21,5 32,5 Z"
+     fill="#d21034"
+     id="path1-5"
+     sodipodi:nodetypes="ssccccss"
+     style="fill:#000000;fill-opacity:1" />
   <path
-     d="m0 27c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-4.5h-32z"
+     d="M 1.349,30 C 2.0543487,30.623508 2.9840107,31 4,31 h 28 c 2.21,0 4,-1.79 4,-4 V 22.5 L 33,19 H 5 Z"
+     fill="#141414"
+     id="path2-1"
+     sodipodi:nodetypes="cssscccc"
+     style="fill:#007229;fill-opacity:1" />
+  <path
+     d="m 8,13.5 h 28 v 9 H 8 Z"
+     fill="#ffffff"
+     id="path3-7"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     d="M 1.35,6 H 1.349 c -0.828,0.733 -1.35,1.8 -1.35,3 v 18 c 0,1.19 0.522,2.26 1.35,3 L 17.449,18 1.349,6 Z"
      fill="#007229"
-     id="path2" />
-  <path
-     d="m6 13.5h30v9h-30z"
-     fill="#eee"
-     id="path3" />
-  <path
-     d="m1.35 6h-1e-3c-0.828 0.733-1.35 1.8-1.35 3v18c0 1.19 0.522 2.26 1.35 3l16.1-12-16.1-12z"
-     fill="#D21034"
-     id="path4" />
+     id="path4-1"
+     style="fill:#d21034;fill-opacity:1" />
   <rect
-     x="35.8"
+     x="35.799999"
      y="13.5"
-     width=".2"
+     width="0.2"
      height="9"
-     id="rect4"
+     id="rect4-1"
      style="fill:#77767b" />
 </svg>
