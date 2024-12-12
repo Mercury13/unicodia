@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1604307526
-ModificationTime: 1733961909
+ModificationTime: 1733962396
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -20150,7 +20150,7 @@ SplineSet
  1130 -624 1133 -624 1136 -624 c 0
  1173 -624 1185 -579 1186 -549 c 1
 EndSplineSet
-Ligature2: "Subjoin-1" Subj.Ny Uml.Uu
+Ligature2: "Subj vowel-1" Subj.Ny Uml.Uu
 Colour: 9c5e03
 EndChar
 
@@ -26126,7 +26126,7 @@ StartChar: Uml.VirVir
 Encoding: 616 -1 616
 Width: 0
 VWidth: 1000
-Flags: WO
+Flags: W
 HStem: 521 86<-253.435 -173.71> 671 86<-297.435 -217.71>
 LayerCount: 2
 Fore
