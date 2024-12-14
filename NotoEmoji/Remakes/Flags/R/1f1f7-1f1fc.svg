@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="1f1f7-1f1fc.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="10.486111"
+     inkscape:cx="13.207947"
+     inkscape:cy="16.736424"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     fill="#20603d"
+     d="m 36,27 c 0,2.209 -1.791,4 -4,4 H 4 C 1.791,31 0,29.209 0,27 v -1 l 18,-6 18,6 z"
+     id="path1"
+     sodipodi:nodetypes="sssscccs" />
+  <path
+     fill="#fad201"
+     d="m 36,21 v 5 H 0 v -5 l 18,-6 z"
+     id="path2"
+     sodipodi:nodetypes="cccccc" />
+  <path
+     fill="#00A1DE"
+     d="M32 5H4C1.791 5 0 6.791 0 9v12h36V9c0-2.209-1.791-4-4-4z"
+     id="path3" />
+  <path
+     fill="#FAD201"
+     d="M26 5l.522 4.034 1.548-3.762-.539 4.032L30 6.072l-1.565 3.755 3.221-2.484-2.483 3.222L32.929 9l-3.234 2.469 4.033-.54-3.762 1.548L34 13l-4.034.523 3.762 1.547-4.033-.539L32.929 17l-3.756-1.565 2.483 3.222-3.221-2.484L30 19.929l-2.469-3.234.539 4.033-1.548-3.762L26 21l-.522-4.034-1.549 3.762.54-4.033L22 19.929l1.565-3.756-3.221 2.484 2.482-3.222L19.071 17l3.233-2.469-4.032.539 3.761-1.547L18 13l4.033-.523-3.761-1.548 4.032.54L19.071 9l3.755 1.565-2.482-3.222 3.221 2.484L22 6.072l2.469 3.232-.54-4.032 1.549 3.762z"
+     id="path4" />
+  <circle
+     fill="#00A1DE"
+     cx="26"
+     cy="13"
+     r="4"
+     id="circle4" />
+  <circle
+     fill="#FAD201"
+     cx="26"
+     cy="13"
+     r="3"
+     id="circle5" />
+</svg>
