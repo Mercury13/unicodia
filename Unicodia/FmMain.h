@@ -117,7 +117,7 @@ protected:
 };
 
 
-enum class TableColors { NO, YES };
+enum class TableColors : unsigned char { NO, YES };
 
 
 class VirtualCharsModel

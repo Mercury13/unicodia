@@ -399,9 +399,12 @@ void VirtualCharsModel::paintItem(
     if (!dark::isActuallyOn()) {
         if (option.state.testFlag(QStyle::State_HasFocus)) {
             QStyleOptionViewItem vi = option;
+            // Workaround: draw selected item from Windows’ skin
+            // 1. Set style
             vi.state = QStyle::State_Selected | QStyle::State_MouseOver
                         | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
                         | QStyle::State_On | QStyle::State_KeyboardFocusChange;
+            // 2. Use dummy list view as object instead of table view
             QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &vi, painter, dummyLv.get());
             paintItem1(painter, option, index, owner->palette().windowText().color());
             return;
