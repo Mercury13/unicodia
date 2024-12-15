@@ -40,7 +40,7 @@ namespace uc {
 }
 
 /// Whether we need UTF-32 in current state of wiki
-/// (do not need in a single char, and need in Library)
+/// (do not need in Blocks, and need in Library)
 enum class Want32 : unsigned char { NO, YES };
 
 namespace mywiki {
