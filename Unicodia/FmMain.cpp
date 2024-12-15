@@ -873,6 +873,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 }
                 break;
             case uc::PrimaryObj::DFLT:
+                // OK here, we concat “U+1234: Klingon X”
                 if (!line.triggerName.empty()) {
                     // Triggered alt. name
                     s += ": ";
@@ -885,6 +886,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::EXISTING:
                 return s + line.cp->viewableName();
             case uc::CpType::RESERVED:
+                // Sloppy here, but the colon is probably replaced with something else
+                // globally in lockit
                 return s + loc::get("Search.Empty") + ": "
                          + str::toQ(uc::blockOf(line.code)->loc.name);
             case uc::CpType::LIBNODE:
