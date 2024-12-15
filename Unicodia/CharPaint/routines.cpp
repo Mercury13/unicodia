@@ -1063,10 +1063,6 @@ void drawSearchChars(
         const QColor& color, uc::EmojiDraw emojiMode, TableDraw tableDraw,
         const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
-    if (emojiMode == uc::EmojiDraw::FORCE_TEXT) {
-        std::cout << "Force text" << std::endl;
-    }
-
     drawCharBorder(painter, rect, color);
     if (text.empty())
         return;
