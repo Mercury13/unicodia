@@ -70,6 +70,9 @@ namespace mywiki {
     };
 
     ///  User interface, general features
+    ///  A bit yo-yo’ish (Gui = some class, Walker = main window),
+    ///    but see PopupGui class; nicer architecture will require more code
+    ///    for nothing
     class Gui    // interface
     {
     public:
