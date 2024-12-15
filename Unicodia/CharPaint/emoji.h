@@ -37,7 +37,7 @@ struct GetCp {
     bool forceGraphic = false;
 
     explicit operator bool() const noexcept { return cp; }
-    /// @todo [+] may be text  [-] surely graphic
+    /// @return [+] may be text  [-] surely graphic
     [[nodiscard]] bool mayBeText() const noexcept { return cp && !forceGraphic; }
     [[nodiscard]] bool mayBeText(uc::EmojiDraw emojiDraw)
         { return (cp && ((emojiDraw == uc::EmojiDraw::FORCE_TEXT) || !forceGraphic)); }
