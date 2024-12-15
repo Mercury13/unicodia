@@ -146,7 +146,7 @@ public:
 protected:
     uc::GlyphStyleSets& glyphSets;
     mutable TableCache tcache;
-    std::unique_ptr<QListView> dummyLv;
+    std::unique_ptr<QListView> dummyLv;  ///< Windows’ workaround, see paintItem
 
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,
