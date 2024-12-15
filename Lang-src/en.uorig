@@ -8277,10 +8277,14 @@
    </text>
    <text id="NoSuch">
     <orig>No such character</orig>
+    <au-cmt>Test: find something other than character (e.g. U+FFFF), 2-click</au-cmt>
    </text>
    <text id="NEmoji">
     <orig>{1} emoji</orig>
-    <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <au-cmt>
+     <p>“Emoji” is unchangeable, but you may still use one/few/many</p>
+     <p>Test: version info → emoji search</p>
+    </au-cmt>
    </text>
   </group>
   <group id="Expand">
