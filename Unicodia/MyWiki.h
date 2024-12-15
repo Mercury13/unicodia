@@ -114,7 +114,7 @@ namespace mywiki {
         COPY,       ///< Copies text, pale
         INTERNAL,   ///< Goes somewhere within program, blue
         INET,       ///< Opens browser/mailer, also blue
-        SEARCH = INTERNAL   ///< Opens search, no dofferences from internal
+        SEARCH = INTERNAL   ///< Opens search; as we use enum for colour only, no difference
     };
 
     class Link    // interface
