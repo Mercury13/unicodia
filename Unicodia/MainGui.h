@@ -67,6 +67,11 @@ private slots:
 };
 
 
+///
+/// Special generic GUI for pop-up windows:
+/// when we click the link, we pop up around main window’s link
+///   rather than run far away from it
+///
 class PopupGui : public mywiki::Gui
 {
 public:
