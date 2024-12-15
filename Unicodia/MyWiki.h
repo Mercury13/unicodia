@@ -66,7 +66,8 @@ namespace mywiki {
         /// May fail but we do not check for errors, as we can read
         ///   Unicode data and can ensure that the link will surely work
         virtual void gotoLibCp(QWidget* initiator, char32_t cp) = 0;
-        /// Blink “Added to favourites, they are here”
+        /// Blink “Favs are empty, go here and add”
+        ///   (actual link is in lockit, Main.NoFavs)
         virtual void blinkAddCpToFavs() = 0;
         /// Searches for some request
         virtual void searchForRequest(const uc::Request& request) = 0;
