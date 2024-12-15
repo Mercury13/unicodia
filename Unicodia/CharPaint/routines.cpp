@@ -1072,7 +1072,7 @@ void drawSearchChars(
         return;
 
     auto c1 = EmojiPainter::getCp(text);
-    /// @todo [urgent] This is just check whether it’s a single character
+    /// @todo [future] This is just check whether it’s a single character
     ///    (all multi-chars are emoji)
     if (c1 && ((emojiMode == uc::EmojiDraw::FORCE_TEXT) || !c1.forceGraphic)) {
         if (auto cp = uc::cpsByCode[c1.cp])
@@ -1122,7 +1122,7 @@ void drawCharTiles(
         QRect r2 { r1.left() + iX * step,
                    r1.top() + iY * step,
                    sz, sz };
-        /// @todo [urgent] This is just check whether it’s a single character
+        /// @todo [future] This is just check whether it’s a single character
         ///    (all multi-chars are emoji)
         if (auto c1 = EmojiPainter::getCp(tile.text); c1 && !c1.forceGraphic) {
             // Single-char

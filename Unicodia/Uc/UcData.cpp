@@ -1767,6 +1767,7 @@ size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const
 QString uc::LibNode::viewableTitle(TitleMode mode) const
 {
     if (flags.have(uc::Lfg::TRANSLATE)) {
+        /// @todo [future] We do not translate characters
         auto key = str::cat("Lib.Group.", str::toSv(text));
         return loc::get(key).q();
     } else if (mode == TitleMode::SHORT && flags.have(uc::Lfg::CODE_AS_NAME)) {
