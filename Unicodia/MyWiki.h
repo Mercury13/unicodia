@@ -73,7 +73,6 @@ namespace mywiki {
     class Gui    // interface
     {
     public:
-        /// @warning   Widgets are NEVER nullptr
         /// @param [in] widget     Widget who initiated copying, NEVER null
         /// @param [in] absRect    Absolute (in desktop coords) rectangle
         ///                         that encloses link
