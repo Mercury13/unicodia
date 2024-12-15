@@ -109,9 +109,13 @@ namespace mywiki {
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
-    enum class LinkClass : unsigned char
-                { POPUP, COPY, INTERNAL, INET,
-                  SEARCH = INTERNAL };
+    enum class LinkClass : unsigned char {
+        POPUP,      ///< Opens a popup window, green
+        COPY,       ///< Copies text, pale
+        INTERNAL,   ///< Goes somewhere within program, blue
+        INET,       ///< Opens browser/mailer, also blue
+        SEARCH = INTERNAL   ///< Opens search, no dofferences from internal
+    };
 
     class Link    // interface
     {
