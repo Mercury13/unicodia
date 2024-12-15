@@ -90,7 +90,7 @@ namespace mywiki {
         virtual void copyTextAbs(
                 QWidget* widget, const QRect& absRect, const QString& text) = 0;
 
-        /// Follows standard internet link (HTTP(S), MailTo…)
+        /// Follows standard internet link: HTTP(S), MailTo…
         /// (Wiki itself parses links and decides what to do on click)
         virtual void followUrl(const QString& x) = 0;
 
