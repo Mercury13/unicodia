@@ -58,6 +58,8 @@ namespace mywiki {
         /// Goes to codepoint of Blocks tab
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
         /// Goes to codepoint of Library tab
+        /// May fail but we do not check for errors, as we can read
+        ///   Unicode data and can ensure that the link will surely work
         virtual void gotoLibCp(QWidget* initiator, char32_t cp) = 0;
         /// Blink “Added to favourites, they are here”
         virtual void blinkAddCpToFavs() = 0;
@@ -67,17 +69,31 @@ namespace mywiki {
         virtual ~InternalLinkWalker() = default;
     };
 
-    ///  Interface
+    ///  User interface, general features
     class Gui    // interface
     {
     public:
         /// @warning   Widgets are NEVER nullptr
+        /// @param [in] widget     Widget who initiated copying, NEVER null
+        /// @param [in] absRect    Absolute (in desktop coords) rectangle
+        ///                         that encloses link
+        ///                         Window will shun this rectangle if possible
+        /// @param [in] text       QHTML of popup window
         virtual void popupAtAbs(
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
+
+        /// Copies text to clipboard, writes “Copied”
+        /// @param [in] widget     Widget who initiated copying, NEVER null
+        /// @param [in] absRect    Absolute (in desktop coords) rectangle
+        ///                         that encloses link/cursor/widget
+        ///                         Window will shun this rectangle if possible
+        /// @param [in] text       Text to copy
         virtual void copyTextAbs(
                 QWidget* widget, const QRect& absRect, const QString& text) = 0;
         /// Follows standard internet link
+        /// (Wiki itself parses links and decides what to do on click)
         virtual void followUrl(const QString& x) = 0;
+
         virtual FontSource& fontSource() = 0;
         virtual InternalLinkWalker& linkWalker() = 0;
 
