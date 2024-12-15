@@ -1074,7 +1074,7 @@ void drawSearchChars(
     auto c1 = EmojiPainter::getCp(text);
     /// @todo [future] This is just check whether it’s a single character
     ///    (all multi-chars are emoji)
-    if (c1 && ((emojiMode == uc::EmojiDraw::FORCE_TEXT) || !c1.forceGraphic)) {
+    if (c1.mayBeText(emojiMode)) {
         if (auto cp = uc::cpsByCode[c1.cp])
             drawChar(painter, rect, lround(100 * scale), *cp, color, tableDraw, emojiMode, glyphSets);
     } else {
@@ -1124,7 +1124,7 @@ void drawCharTiles(
                    sz, sz };
         /// @todo [future] This is just check whether it’s a single character
         ///    (all multi-chars are emoji)
-        if (auto c1 = EmojiPainter::getCp(tile.text); c1 && !c1.forceGraphic) {
+        if (auto c1 = EmojiPainter::getCp(tile.text); c1.mayBeText()) {
             // Single-char
             if (auto cp = uc::cpsByCode[c1.cp])
                 drawChar(painter, r2, percent, *cp, color, TableDraw::LIBRARY,
