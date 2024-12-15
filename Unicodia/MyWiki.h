@@ -48,6 +48,11 @@ namespace mywiki {
     /// Interface that’s used to walk through internal links
     /// Every type of link has its own function
     ///
+    /// Internal link = significantly changes program’s state,
+    ///     or relies on main window’s layout
+    /// Examples: search, go to character, point to Favourites…
+    /// Popup, copy and internet do not change and are not internal!
+    ///
     /// Architectural justification: Gui is somehow detached class
     /// (relies on general features of OS and windowing framework),
     /// and InternalWalker is just a simplified model of main window
