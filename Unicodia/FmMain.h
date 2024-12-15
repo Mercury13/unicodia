@@ -325,7 +325,7 @@ enum class SelectMode : unsigned char { NONE, INSTANT };
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
                private PixSource,
-               private mywiki::InternalWalker
+               private mywiki::InternalLinkWalker
 {
     Q_OBJECT
     using Super = QMainWindow;

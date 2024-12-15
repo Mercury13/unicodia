@@ -175,7 +175,7 @@ namespace {
     };
 
     void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
-        { gui.internalWalker().gotoCp(wi, cp); }
+        { gui.linkWalker().gotoCp(wi, cp); }
 
     class GotoLibCpLink : public mywiki::Link
     {
@@ -187,7 +187,7 @@ namespace {
     };
 
     void GotoLibCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
-        { gui.internalWalker().gotoLibCp(wi, cp); }
+        { gui.linkWalker().gotoLibCp(wi, cp); }
 
     class BlinkAddCpToFavsLink : public mywiki::Link
     {
@@ -197,7 +197,7 @@ namespace {
     };
 
     void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
-        { gui.internalWalker().blinkAddCpToFavs(); }
+        { gui.linkWalker().blinkAddCpToFavs(); }
 
     template <class Fields, class Request>
     class RequestLink : public mywiki::Link
@@ -214,7 +214,7 @@ namespace {
     void RequestLink<Fields, Request>::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
     {
         Request rq(fields);
-        gui.internalWalker().searchForRequest(rq);
+        gui.linkWalker().searchForRequest(rq);
     }
 
     using CharRequestLink = RequestLink<uc::CharFields, uc::CharFieldRequest>;

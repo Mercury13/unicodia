@@ -35,7 +35,7 @@ class MyGui :
 {
     Q_OBJECT
 public:
-    MyGui(QWidget* aWiMain, FontSource& aFontSource, mywiki::InternalWalker& aWalker);
+    MyGui(QWidget* aWiMain, FontSource& aFontSource, mywiki::InternalLinkWalker& aWalker);
 
     void popupAtAbs(
             QWidget* widget, const QRect& absRect, const QString& html) override;
@@ -43,7 +43,7 @@ public:
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text) override;
     void followUrl(const QString& x) override;
-    mywiki::InternalWalker& internalWalker() override { return fInternalWalker; }
+    mywiki::InternalLinkWalker& linkWalker() override { return fInternalWalker; }
 
     // Several ways to blink fmMessage
     void blinkCopied(QWidget* widget, const QRect& absRect);
@@ -59,7 +59,7 @@ private:
     friend class PopupGui;
     QWidget* wiMain;
     FontSource& fFontSource;
-    mywiki::InternalWalker& fInternalWalker;
+    mywiki::InternalLinkWalker& fInternalWalker;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
 private slots:
@@ -77,7 +77,7 @@ public:
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text) override;
     void followUrl(const QString& x) override;
-    mywiki::InternalWalker& internalWalker() override;
+    mywiki::InternalLinkWalker& linkWalker() override;
 private:
     MyGui& owner;
 };

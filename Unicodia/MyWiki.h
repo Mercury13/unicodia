@@ -39,26 +39,35 @@ namespace uc {
     }
 }
 
-enum class Want32 { NO, YES };
+/// Whether we need UTF-32 in current state of wiki
+/// (do not need in a single char, and need in Library)
+enum class Want32 : unsigned char { NO, YES };
 
 namespace mywiki {
 
     /// Interface that’s used to walk through internal links
     /// Every type of link has its own function
     ///
-    /// Architectural justification: Gui is somehow detached class,
-    /// and InternalWalker is closely related to main window
+    /// Architectural justification: Gui is somehow detached class
+    /// (relies on general features of OS and windowing framework),
+    /// and InternalWalker is just a simplified model of main window
     ///
-    class InternalWalker    // interface
+    class InternalLinkWalker    // interface
     {
     public:
+        /// Goes to codepoint of Blocks tab
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
+        /// Goes to codepoint of Library tab
         virtual void gotoLibCp(QWidget* initiator, char32_t cp) = 0;
+        /// Blink “Added to favourites, they are here”
         virtual void blinkAddCpToFavs() = 0;
+        /// Searches for some request
         virtual void searchForRequest(const uc::Request& request) = 0;
-        virtual ~InternalWalker() = default;
+        /// Just a simple dtor
+        virtual ~InternalLinkWalker() = default;
     };
 
+    ///  Interface
     class Gui    // interface
     {
     public:
@@ -70,7 +79,7 @@ namespace mywiki {
         /// Follows standard internet link
         virtual void followUrl(const QString& x) = 0;
         virtual FontSource& fontSource() = 0;
-        virtual InternalWalker& internalWalker() = 0;
+        virtual InternalLinkWalker& linkWalker() = 0;
 
         virtual ~Gui() = default;
 

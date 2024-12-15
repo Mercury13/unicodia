@@ -41,7 +41,7 @@ FmPopup2::FmPopup2(MyGui& owner) : Super(owner.wiMain, CNAME_BG_POPUP)
 
 MyGui::MyGui(
         QWidget* aWiMain, FontSource& aFontSource,
-        mywiki::InternalWalker& aInternalWalker)
+        mywiki::InternalLinkWalker& aInternalWalker)
     : wiMain(aWiMain), fFontSource(aFontSource),
       fInternalWalker(aInternalWalker) {}
 
@@ -135,5 +135,5 @@ void PopupGui::copyTextAbs(
 void PopupGui::followUrl(const QString& x)
     { owner.followUrl(x); }
 
-mywiki::InternalWalker& PopupGui::internalWalker()
-    { return owner.internalWalker(); }
+mywiki::InternalLinkWalker& PopupGui::linkWalker()
+    { return owner.linkWalker(); }
