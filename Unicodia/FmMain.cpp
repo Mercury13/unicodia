@@ -798,6 +798,7 @@ QVariant SearchModel::groupData(size_t index, int role) const
                     QIconEngine* ie = new ie::Node(*sample, *node);
                     return QIcon(ie);
                 }
+            default: ;
             }
         }  // fall out here
     }
