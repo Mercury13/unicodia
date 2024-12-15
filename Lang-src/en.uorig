@@ -8248,18 +8248,23 @@
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>
+    <au-cmt>Test: search for FFFF</au-cmt>
    </text>
    <text id="Private">
     <orig>Private-use character</orig>
+    <au-cmt>Test: search for E000</au-cmt>
    </text>
    <text id="Surrogate">
     <orig>Code from surrogate pair</orig>
+    <au-cmt>Test: search for D800</au-cmt>
    </text>
    <text id="Unassigned">
     <orig>Unassigned code</orig>
+    <au-cmt>Test: search for A0000</au-cmt>
    </text>
    <text id="Empty">
     <orig>Vacant position</orig>
+    <au-cmt>Test: search for everything vacant, e.g. 03A2</au-cmt>
    </text>
    <text id="NotFound">
     <orig>Not found</orig>
