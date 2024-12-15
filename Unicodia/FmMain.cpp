@@ -400,6 +400,7 @@ void VirtualCharsModel::paintItem(
         if (option.state.testFlag(QStyle::State_HasFocus)) {
             QStyleOptionViewItem vi = option;
             // Workaround: draw selected item from Windows’ skin
+            //   (Vista’s skin explicitly bans it from table)
             // 1. Set style
             vi.state = QStyle::State_Selected | QStyle::State_MouseOver
                         | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
