@@ -220,6 +220,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_BIGGER,       // Marchen
                         20_bot, 110_pc },
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
+        /// @todo [ttf guts, future] Cannot dehint dotted circle for some reason
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
