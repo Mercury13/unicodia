@@ -11952,23 +11952,28 @@
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>
+    <au-cmt>Test: search for FFFF</au-cmt>
     <transl>Выброшенная позиция</transl>
    </text>
    <text id="Private">
     <orig>Private-use character</orig>
+    <au-cmt>Test: search for E000</au-cmt>
     <transl>Символ для личного пользования</transl>
    </text>
    <text id="Surrogate">
     <orig>Code from surrogate pair</orig>
+    <au-cmt>Test: search for D800</au-cmt>
     <transl>Код из суррогатной пары</transl>
    </text>
    <text id="Unassigned">
     <orig>Unassigned code</orig>
+    <au-cmt>Test: search for A0000</au-cmt>
     <transl>Нераспределённый код</transl>
    </text>
-   <text id="Empty">
-    <orig>Vacant position</orig>
-    <transl>Свободное место</transl>
+   <text id="Vacant">
+    <orig>Vacant position: {1}</orig>
+    <au-cmt>1 = block name</au-cmt>
+    <transl>Свободное место: {1}</transl>
    </text>
    <text id="NotFound">
     <orig>Not found</orig>
@@ -11984,11 +11989,15 @@
    </text>
    <text id="NoSuch">
     <orig>No such character</orig>
+    <au-cmt>Test: find something other than character (e.g. U+FFFF), 2-click</au-cmt>
     <transl>Такого символа нет</transl>
    </text>
    <text id="NEmoji">
     <orig>{1} emoji</orig>
-    <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <au-cmt>
+     <p>“Emoji” is unchangeable, but you may still use one/few/many</p>
+     <p>Test: version info → emoji search</p>
+    </au-cmt>
     <transl>{1} эмодзи</transl>
    </text>
   </group>

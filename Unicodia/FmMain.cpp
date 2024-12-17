@@ -839,8 +839,9 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
             QString s;
+            // LINE 1: What found
             if (line.code < uc::CAPACITY) {
-                // Character code
+                // …Character code
                 uc::sprintUPLUS(buf, line.code);
                 s += buf;
                 if (line.prio.high == uc::HIPRIO_DEC) {
@@ -850,7 +851,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     s += "₁₀";
                 }
             } else if (line.node) {
-                // Library node
+                // …Library object
                 std::u32string_view val = line.node->value;
                 static constexpr auto SHORTLEN = 2;
                 bool needShort = (val.length() > SHORTLEN && !line.triggerName.empty());
@@ -869,6 +870,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             switch (primaryObj) {
             case uc::PrimaryObj::NUMERIC:
                 if (auto sNum = toNumeric(line); !sNum.isEmpty()) {
+                    // Code on the left → probably common for all LtR typography
                     s += ": ";
                     s += sNum;
                 }
@@ -883,14 +885,12 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 break;
             }
             s += '\n';
+            // LINE 2: Description
             switch (line.type) {
             case uc::CpType::EXISTING:
                 return s + line.cp->viewableName();
             case uc::CpType::RESERVED:
-                // Sloppy here, but the colon is probably replaced with something else
-                // globally in lockit
-                return s + loc::get("Search.Empty") + ": "
-                         + str::toQ(uc::blockOf(line.code)->loc.name);
+                return s + loc::get("Search.Vacant").argQ(uc::blockOf(line.code)->loc.name);
             case uc::CpType::LIBNODE:
                 if (!line.node) // -warn, should not happen for now
                     return s;

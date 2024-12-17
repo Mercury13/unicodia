@@ -1429,9 +1429,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Letters of small Cyrillic languages: Abkhaz, Kurdish ''(as minority of USSR)'', Komi, Mordovian, Aleut, Azeri ''(now [[ps:Latn|Latin]])'' and Chuvash in Yakovlev alphabet ''(used 1873–1938)''.</p>
+      <p>Letters of small Cyrillic languages: Abkhaz, Kurdish ''(as minority of the USSR)'', Komi, Mordovian, Aleut, Azeri ''(now [[ps:Latn|Latin]])'' and Chuvash in Yakovlev alphabet ''(used 1873–1938)''.</p>
       <p />
-      <p>Contains a funny letter {{sm|Ԥ}} (looks like a word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him, Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
+      <p>Contains a funny letter {{sm|Ԥ}} (looks like the word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him, Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
      </orig>
     </text>
    </group>
@@ -2110,7 +2110,7 @@
    </group>
    <group id="2C80">
     <text id="Name">
-     <orig> Coptic</orig>
+     <orig>Coptic</orig>
     </text>
    </group>
    <group id="2D00">
@@ -6393,11 +6393,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</p>
+      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}}, [[pt:virama|virama]], a mark for final {{t|r}}, and even [[pt:ligature|ligatures]] for consonant conjuncts. The official orthography does not recognize these changes.</p>
       <p />
       <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
       <p />
-      <p>The main script is [[ps:Deva|Devanagari]], poorly conveys Sunuwar phonetics. Also there’s Tikamuli, unencoded Brahmic abugida promoted since 2005 by influential funds.</p>
+      <p>The main script is [[ps:Deva|Devanagari]], which poorly conveys Sunuwar phonetics. Also, there’s Tikamuli, an unencoded Brahmic abugida promoted by influential funds since 2005.</p>
      </orig>
     </text>
    </group>
@@ -9439,23 +9439,28 @@
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>
+    <au-cmt>Test: search for FFFF</au-cmt>
     <transl>非文字</transl>
    </text>
    <text id="Private">
     <orig>Private-use character</orig>
+    <au-cmt>Test: search for E000</au-cmt>
     <transl>私用文字</transl>
    </text>
    <text id="Surrogate">
     <orig>Code from surrogate pair</orig>
+    <au-cmt>Test: search for D800</au-cmt>
     <transl>サロゲートペアからのコード</transl>
    </text>
    <text id="Unassigned">
     <orig>Unassigned code</orig>
+    <au-cmt>Test: search for A0000</au-cmt>
     <transl>未割り当てコード</transl>
    </text>
-   <text id="Empty">
-    <orig>Vacant position</orig>
-    <transl>空席</transl>
+   <text id="Vacant" force-attention="true">
+    <orig>Vacant position: {1}</orig>
+    <au-cmt>1 = block name</au-cmt>
+    <transl>空席: {1}</transl>
    </text>
    <text id="NotFound">
     <orig>Not found</orig>
@@ -9471,11 +9476,15 @@
    </text>
    <text id="NoSuch">
     <orig>No such character</orig>
+    <au-cmt>Test: find something other than character (e.g. U+FFFF), 2-click</au-cmt>
     <transl>そのような文字はありません</transl>
    </text>
    <text id="NEmoji">
     <orig>{1} emoji</orig>
-    <au-cmt>“Emoji” is unchangeable, but you may still use one/few/many</au-cmt>
+    <au-cmt>
+     <p>“Emoji” is unchangeable, but you may still use one/few/many</p>
+     <p>Test: version info → emoji search</p>
+    </au-cmt>
     <transl>{1} 絵文字</transl>
    </text>
   </group>
