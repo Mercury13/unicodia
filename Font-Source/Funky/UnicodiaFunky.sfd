@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1734520322
+ModificationTime: 1734520340
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -137319,7 +137319,7 @@ EndChar
 StartChar: Onao.Id
 Encoding: 124384 124384 959
 Width: 796
-Flags: WO
+Flags: W
 HStem: -10 100<267.46 357.563 515.009 604.016> 312 90<49 122.877> 624 90<436.538 527.109>
 VStem: 146 60<163.766 356.743> 401 80<149.275 277> 676 60<198.448 471.396>
 CounterMasks: 1 1c
