@@ -766,10 +766,10 @@ namespace uc {
 
     DEFINE_ENUM_OPS(Bfg)
 
-    enum class MyName { INST };
+    enum class MyName : unsigned char { INST };
 
     ///
-    /// \brief The BlockAlpha struct
+    /// Use someone’s else name for sorting
     ///
     struct AlphaKey {
         EcScript ecScript = EcScript::NONE;

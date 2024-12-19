@@ -180,11 +180,18 @@ namespace {
 
         r.sortOrder.clear();
         auto hAlphaSort = hLocale.child("alpha-sort");
+        int base = 0, greatest = -1;
         for (auto& v : hAlphaSort.children("alp")) {
+            if (v.attribute("follow").as_bool(false)) {
+                base = greatest + 1;
+            }
             auto alph = mojibake::toS<std::u32string>(v.text().as_string());
             for (size_t i = 0; i < alph.length(); ++i) {
-                if (auto c = alph[i]; c != '_')
-                    r.sortOrder[c] = i;
+                if (auto c = alph[i]; c != '_') {
+                    int newCode = base + i;
+                    r.sortOrder[c] = newCode;
+                    greatest = std::max(greatest, newCode);
+                }
             }
         }
 

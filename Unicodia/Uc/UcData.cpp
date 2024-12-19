@@ -1636,10 +1636,16 @@ void uc::finishTranslation(
             std::u8string_view keyName = blk.loc.name;
             if (blk.alphaKey.ecScript != EcScript::NONE) {
                 keyName = script.loc.name;
-                if (script.mainBlock)
+                if (script.mainBlock) {
+                    if (auto q = alphaFixup.find(script.mainBlock->startingCp); q != alphaFixup.end()) {
+                        buildSortKey(q->second, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+                        goto alreadyBuilt;
+                    }
                     keyName = script.mainBlock->loc.name;
+                }
             }
             buildSortKey(keyName, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+        alreadyBuilt: ;
         }
     }
 

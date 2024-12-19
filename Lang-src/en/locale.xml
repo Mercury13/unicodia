@@ -18,12 +18,16 @@
 	</trigger-langs>
 	<!-- Alphabetical sorting, right now very simple and locale-independent
 		 non-meaning stub of alphabet = underscore _
+		 alp follow="1" (see Russian) — this alphabet is not parallel;
+		   instead it will be greater than everything we have defined
+		   (to split long strings, reduce # of underscores, better sync long alphabets)
 		 Limitations:
 		 • Difference within first 40 MEANING chars of term/block, otherwise they are deemed equal
 		 • Strings that differ with “equal” character only are forbidden:
 		    äbb < abc < äbd is supported, but abc < äbc isn’t.
 		 • 32-bit chars ALLOWED
-		 • Max alphabet 32K
+		 • Sum of all alphabets following each other 32K
+		 • Alphabet with follow=1 MAY contain text (though better not for beauty)
 		 • # if alphabets unlimited -->
 	<alpha-sort>
 		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>

@@ -3,22 +3,59 @@
 	<trigger-langs>
 		<lang iso="ja" />
 	</trigger-langs>
-	<!-- Alphabetical sorting, right now very simple and locale-independent
-		 non-meaning stub of alphabet = underscore _
-		 Limitations:
-		 • Difference within first 40 MEANING chars of term/block, otherwise they are deemed equal
-		 • Strings that differ with “equal” character only are forbidden:
-		    äbb < abc < äbd is supported, but abc < äbc isn’t.
-		 • 32-bit chars ALLOWED
-		 • Max alphabet 32K
-		 • # if alphabets unlimited -->
 	<alpha-sort>
+		<alp>あいうえぉお</alp><!-- Vowel -->
+		<alp>アイウエォオ</alp>
+		<alp follow="1" /><!-- K/G -->
+		<alp>かがきぎくぐけげこご</alp>
+		<alp>カガキギクグケゲコゴ</alp>
+		<alp follow="1" /><!-- S/Z -->
+		<alp>さざしじすずせぜそぞ</alp>
+		<alp>サザシジスズセゼソゾ</alp>
+		<alp follow="1" /><!-- T/D -->
+		<alp>っただちぢつづてでとど</alp>
+		<alp>ッタダチヂツヅテデトド</alp>
+		<alp follow="1" /><!-- N -->
+		<alp>なにぬねの</alp>
+		<alp>ナニヌネノ</alp>
+		<alp follow="1" /><!-- H/B/P -->
+		<alp>はばぱひびぴふぶぷへべぺほぼぽ</alp>
+		<alp>ハバパヒビピフブプヘベペホボポ</alp>
+		<alp follow="1" /><!-- M -->
+		<alp>まみむめも</alp>
+		<alp>マミムメモ</alp>
+		<alp follow="1" /><!-- Y -->
+		<alp>ゃやゆよ</alp>
+		<alp>ャヤユヨ</alp>
+		<alp follow="1" /><!-- R -->
+		<alp>らラりリるルれレろロ</alp>
+		<alp follow="1" /><!-- W -->
+		<alp>ゎわゐゑを</alp>
+		<alp>ヮワヰヱヲ</alp>
+		<alp follow="1" /><!-- Consonant/V -->
+		<alp>ん__ゔ</alp>
+		<alp>ンヷヸヴヹヺ</alp>
 		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>abcdefghijklmnopqrstuvwxyz</alp>
-		<alp>____________________Ü_____</alp>
-		<alp>____________________ü_____</alp>
 	</alpha-sort>
-	<alpha-fixup />
+	<alpha-fixup>
+		<!-- For Japanese: they are just conversions to kana -->
+		<blk start="1980" target="しん たい゠ ろ もじ (ふぃんらんどご)" /><!-- Talu -->
+		<blk start="1D00" target="おんせい きごう かくちょう" />
+		<blk start="1D80" target="おんせい きごう かくちょう ほそく" />
+		<blk start="20A0" target="つうか きごう" />
+		<blk start="2100" target="もじ さま きごう" />
+		<blk start="2150" target="すうじ けいしき" />
+		<blk start="2190" target="やじるし" /><!-- the rest arrows will automatically pull -->
+		<blk start="2200" target="すうがく きごう" /><!-- the rest math will automatically pull -->
+		<blk start="2F00" target="かん ぶしゅ" /><!-- Kangxi, the 2nd will automatically pull -->
+		<blk start="3100" target="ちゅう おと じぼ (たま かげ)" /><!-- Bopo -->
+		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
+		<blk start="10840" target="ていこく あらむ もじ" /><!-- Imperial Aramaic -->
+		<blk start="10C00" target="もじ (ほご-じぇねしす) (るーんご)" /><!-- Orkh -->
+		<blk start="10F70" target="こだい ういぐる もじ" /><!-- Ougr -->
+		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
+	</alpha-fixup>
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.
 		 These blocks are marked with ellipsis. -->

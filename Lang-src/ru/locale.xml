@@ -16,9 +16,12 @@
 	</trigger-langs>
 	<alpha-sort>
 		<!-- Dash is for Yi: «И — слоги» < «Иврит» -->
-		<alp>—АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
-		<alp>_абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
-		<alp>_á____é_________ó___________________________________________</alp>
+		<alp>—АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ</alp>
+		<alp>_абвгдеёжзийклмнопрстуфхцчшщъыьэюя</alp>
+		<alp>_á____é_________ó_________________</alp>
+		<alp follow="1" />
+		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>abcdefghijklmnopqrstuvwxyz</alp>
 	</alpha-sort>
 	<alpha-fixup />
 	<ellipsis text="…">
