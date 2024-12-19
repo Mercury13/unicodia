@@ -118012,6 +118012,7 @@ EndChar
 StartChar: u10D6A
 Encoding: 68970 68970 753
 Width: 0
+GlyphClass: 4
 Flags: W
 AnchorPoint: "Umlaut RtL" 321.3 597.1 mark 0
 AnchorPoint: "Umlaut" 321.3 597.1 mark 0
@@ -118032,6 +118033,7 @@ EndChar
 StartChar: u10D6D
 Encoding: 68973 68973 754
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 654 98<105 523> 661 91<105 523>
 TtInstrs:
