@@ -5961,13 +5961,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Lots of new scripts appeared during the liberation of Africa. This one was created by Assane Faye from Senegal. Garay is the name of a local cave.</p>
+      <p>After the liberation of Africa, many new scripts appeared. This one was created by Assane Faye from Senegal. Garay is the name of a local cave.</p>
       <p />
       <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
-      <p>Capital letters have a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay isn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
       <p />
-      <p>Vowels are actually marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
+      <p>Vowels are marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
       <p />
       <p>Read the autonym: {{sm|&amp;rlm;&amp;#68953;&amp;#68938;&amp;#68990;&amp;#68938;&amp;#68988;}}</p>
      </orig>
@@ -5977,7 +5977,7 @@
       <p />
       <p>Теперешнее сообщество небольшое, около 200 человек. Волоф и мандинка пишутся [[ps:Latn|латиницей]], [[ps:Arab|арабицей]] и [[ps:Nkoo|нко]].</p>
       <p />
-      <p>У заглавной буквы большой крюк. Всё слово иногда подчёркивается большим хвостом, выходящим из последней буквы.</p>
+      <p>У заглавной буквы большой крюк. У письменностей арабского происхождения часто буквы соединены, но у гарая{{-}}нет. Всё слово иногда подчёркивается большим хвостом, выходящим из последней буквы.</p>
       <p />
       <p>Гласные{{-}}это метки, прикреплённые к согласным. Начальные гласные висят на пустой букве (A).</p>
       <p />
@@ -11972,7 +11972,10 @@
    </text>
    <text id="Vacant">
     <orig>Vacant position: {1}</orig>
-    <au-cmt>1 = block name</au-cmt>
+    <au-cmt>
+     <p>1 = block name</p>
+     <p>Test: search for 03A2</p>
+    </au-cmt>
     <transl>Свободное место: {1}</transl>
    </text>
    <text id="NotFound">
