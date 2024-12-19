@@ -113,6 +113,7 @@ namespace {
 
     const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
         { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
+        { U"\U0001F1E6\U0001F1F6", uc::MISRENDER_SIMPLE }, // Antarctica
         { U"\U0001F1E9\U0001F1EC", uc::MISRENDER_IO     }, // Diego Garcia
         { U"\U0001F1ED\U0001F1F3", uc::MISRENDER_SIMPLE }, // Honduras
         { U"\U0001F1EE\U0001F1F4", uc::MISRENDER_IO     }, // British Indian Ocean Territory

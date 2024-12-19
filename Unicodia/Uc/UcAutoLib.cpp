@@ -3688,7 +3688,7 @@ constinit const uc::LibNode uc::libNodes[9724] {
 { U"\U0001F1E6\U0001F1F1", u8"flag: Albania", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3682
 { U"\U0001F1E6\U0001F1F2", u8"flag: Armenia", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3683
 { U"\U0001F1E6\U0001F1F4", u8"flag: Angola", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3684
-{ U"\U0001F1E6\U0001F1F6", u8"flag: Antarctica", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3685
+{ U"\U0001F1E6\U0001F1F6", u8"flag: Antarctica", 3666, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3685
 { U"\U0001F1E6\U0001F1F7", u8"flag: Argentina", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3686
 { U"\U0001F1E6\U0001F1F8", u8"flag: American Samoa", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3687
 { U"\U0001F1E6\U0001F1F9", u8"flag: Austria", 3666, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3688
