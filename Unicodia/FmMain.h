@@ -225,11 +225,17 @@ public:
 
     size_t build(BlockOrder aOrder, size_t iOld);
 
+    /// @return [+] are those telltales on AFTERWARDS
+    bool toggleSortingTelltales();
+
     using Super::beginResetModel;
     using Super::endResetModel;
 private:    
     Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };    
     BlockOrder order = BlockOrder::DEFAULT;
+    bool showSortingTelltales = false;
+
+    void prependTelltales(QString& s, const uc::Block* block) const;
 };
 
 
@@ -477,6 +483,7 @@ private slots:
     void acRemoveFromFavsTriggered();
     void slotSkinToneQa();
     void searchForVs16();
+    void toggleSortingTelltales();
 };
 
 

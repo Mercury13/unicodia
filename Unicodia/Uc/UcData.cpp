@@ -1549,7 +1549,8 @@ namespace {
 
     void buildSortKey(std::u32string_view name32, SpecialSort specialSort,
                       const std::unordered_map<char32_t, int>& sortOrder,
-                      uc::LocSortKey& r)
+                      uc::LocSortKey& r,
+                      uc::Block::Loc::Telltales& telltales)
     {
         // Trim by special shars — only if subkey is set (manual sorting)
         if (specialSort != SpecialSort::NO) {
@@ -1566,16 +1567,20 @@ namespace {
                 r[len] = it->second;
                 if ((++len) >= std::size(r))
                     break;
+            } else {
+                if (len == 0) {
+                    telltales.isFirstCharBad = true;
+                }
             }
         }
     }
 
     void buildSortKey(std::u8string_view x, SpecialSort specialSort,
                       const std::unordered_map<char32_t, int>& sortOrder,
-                      uc::LocSortKey& r)
+                      uc::LocSortKey& r, uc::Block::Loc::Telltales& telltales)
     {
         auto name32 = mojibake::toS<std::u32string>(x);
-        return buildSortKey(name32, specialSort, sortOrder, r);
+        return buildSortKey(name32, specialSort, sortOrder, r, telltales);
     }
 
 }   // anon namespace
@@ -1631,20 +1636,23 @@ void uc::finishTranslation(
 
         // Sorting key        
         if (auto q = alphaFixup.find(blk.startingCp); q != alphaFixup.end()) {
-            buildSortKey(q->second, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+            buildSortKey(q->second, SpecialSort::NO, sortOrder,
+                         blk.loc.sortKey, blk.loc.telltales);
         } else {
             std::u8string_view keyName = blk.loc.name;
             if (blk.alphaKey.ecScript != EcScript::NONE) {
                 keyName = script.loc.name;
                 if (script.mainBlock) {
                     if (auto q = alphaFixup.find(script.mainBlock->startingCp); q != alphaFixup.end()) {
-                        buildSortKey(q->second, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+                        buildSortKey(q->second, SpecialSort::NO, sortOrder,
+                                     blk.loc.sortKey, blk.loc.telltales);
                         goto alreadyBuilt;
                     }
                     keyName = script.mainBlock->loc.name;
                 }
             }
-            buildSortKey(keyName, SpecialSort::NO, sortOrder, blk.loc.sortKey);
+            buildSortKey(keyName, SpecialSort::NO, sortOrder,
+                         blk.loc.sortKey, blk.loc.telltales);
         alreadyBuilt: ;
         }
     }
@@ -1672,7 +1680,10 @@ void uc::finishTranslation(
         term.loc.name = loc::get(c);
 
         // Build sort key
-        buildSortKey(term.loc.name, SpecialSort::YES, sortOrder, term.loc.sortKey);
+        /// @todo [future] Terms have no telltales, and no sorting clues
+        Block::Loc::Telltales dummyTelltales;
+        buildSortKey(term.loc.name, SpecialSort::YES, sortOrder,
+                     term.loc.sortKey, dummyTelltales);
 
         // Get desc
         if (term.borrowedDesc.empty()) {

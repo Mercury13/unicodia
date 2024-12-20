@@ -80,7 +80,7 @@ namespace {
     constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=" N_CHECKED_VERSIONS;
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
 
-    enum {
+    enum : unsigned char {
         I_BLOCKS,
         I_LIBRARY,
         I_FAVS,
@@ -265,6 +265,25 @@ namespace {
 
 }   // anon namespace
 
+
+bool BlocksModel::toggleSortingTelltales()
+{
+    showSortingTelltales = !showSortingTelltales;
+    emit dataChanged({}, {}, { Qt::DisplayRole });
+    return showSortingTelltales;
+}
+
+
+void BlocksModel::prependTelltales(QString& s, const uc::Block* block) const
+{
+    if (!showSortingTelltales || !block)
+        return;
+    if (block->loc.telltales.isFirstCharBad) {
+        s = "[1] " + s;
+    }
+}
+
+
 QVariant BlocksModel::data(const QModelIndex& index, int role) const
 {
     #define GET_BLOCK \
@@ -282,12 +301,17 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             case BlockOrder::ALPHA:
             case BlockOrder::CONTINENT:
                 if (block->loc.hasEllipsis) {
-                    return str::toQ(str::cat(
+                    QString s = str::toQ(str::cat(
                             loc::currLang->ellipsis.text, block->loc.name));
+                    prependTelltales(s, block);
+                    return s;
                 }
                 [[fallthrough]];
-            case BlockOrder::CODE:
-                return str::toQ(block->loc.name);
+            case BlockOrder::CODE: {
+                    QString s = str::toQ(block->loc.name);
+                    prependTelltales(s, block);
+                    return s;
+                };
             case BlockOrder::TECH:
                 return str::toQ(block->name);
             }
@@ -1171,9 +1195,13 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
     connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
 
-    // VS16
+    // Search for all VS16 emoji
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_V), this);
     connect(shcut, &QShortcut::activated, this, &This::searchForVs16);
+
+    // Telltales on/off
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_W), this);
+    connect(shcut, &QShortcut::activated, this, &This::toggleSortingTelltales);
 
     // Debug painter
     //shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F11), this);
@@ -2438,4 +2466,12 @@ void FmMain::searchForVs16()
     fields.fgs |= uc::Cfg::U_VS16_EMOJI;
     uc::CharFieldRequest rq(fields);
     searchForRequest(rq);
+}
+
+
+void FmMain::toggleSortingTelltales()
+{
+    auto q = blocksModel.toggleSortingTelltales();
+    auto text = q ? "Sorting telltales ON" : "Sorting telltales OFF";
+    QMessageBox::information(this, "Debug", text);
 }

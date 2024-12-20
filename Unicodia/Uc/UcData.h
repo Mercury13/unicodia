@@ -862,6 +862,10 @@ namespace uc {
             std::u8string_view description {};
             LocSortKey sortKey {};
             bool hasEllipsis = false;
+            /// Telltales for debugging L10n
+            struct Telltales {
+                bool isFirstCharBad = false;    ///< [+] 1st char is not within alphabet
+            } telltales;
         } loc {};
 
         size_t permanentIndex() const;
