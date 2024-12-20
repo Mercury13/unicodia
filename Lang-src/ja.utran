@@ -267,7 +267,7 @@
     </text>
     <text id="NChars">
      <orig>{1|one=? character|many=? characters}</orig>
-     <transl>{1|one=? 文字|many=? 文字}</transl>
+     <transl>{1} 文字</transl>
     </text>
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
@@ -1170,7 +1170,7 @@
     <text id="Data">
      <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
-     <transl>{1} {2} {3|one=? 画|many=? 画}</transl>
+     <transl>{1} {2} {3} 画</transl>
     </text>
    </group>
    <group id="Ver">
