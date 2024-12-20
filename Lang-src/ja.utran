@@ -1170,7 +1170,7 @@
     <text id="Data">
      <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
-     <transl>{1} {2} {3|単数=? ストローク|複数=? ストローク}</transl>
+     <transl>{1} {2} {3} ストローク</transl>
     </text>
    </group>
    <group id="Ver">

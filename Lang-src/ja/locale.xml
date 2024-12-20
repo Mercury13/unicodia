@@ -49,13 +49,28 @@
 		<blk start="2150" target="すうじ けいしき" />
 		<blk start="2190" target="やじるし" /><!-- the rest arrows will automatically pull -->
 		<blk start="2200" target="すうがく きごう" /><!-- the rest math will automatically pull -->
+		<blk start="2440" target="こうがくてき もじ にんしき" /><!-- OCR -->
+		<blk start="2460" target="かこみ えいすうじ" /><!-- Enclosed alnum -->
 		<blk start="2F00" target="かん ぶしゅ" /><!-- Kangxi, the 2nd will automatically pull -->
+		<blk start="2FF0" target="かんじ こうせい きじゅつ もじ" /><!-- IDC -->
 		<blk start="3100" target="ちゅう おと じぼ (たま かげ)" /><!-- Bopo -->
+		<blk start="3200" target="かこみ CJK もじ・ つき" /><!-- CJK letters/months -->
+		<blk start="10000" target="せん もじ B おんせつ もじ" /><!-- Linb -->
+		<blk start="10350" target="こ ぺるむ もじ（ あんばーご）" /><!-- Perm -->
 		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
-		<blk start="10840" target="ていこく あらむ もじ" /><!-- Imperial Aramaic -->
+		<blk start="10600" target="せん もじ A" /><!-- Lina -->
+		<blk start="10840" target="ていこく あらむ もじ" /><!-- Armi -->
+		<blk start="10B40" target="ひぶん ぱるてぃあ もじ" /><!-- Prti -->
+		<blk start="10B60" target="ひぶん ぱふらヴぃ もじ" /><!-- Phli -->
+		<blk start="10B80" target="しへん ぱふらヴぃ もじ" /><!-- Phlp -->
 		<blk start="10C00" target="もじ (ほご-じぇねしす) (るーんご)" /><!-- Orkh -->
+		<blk start="10C80" target="こだい はんがりー もじ ( しぇけい ) ( るーんご )" /><!-- Hung -->
 		<blk start="10F70" target="こだい ういぐる もじ" /><!-- Ougr -->
 		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
+		<blk start="17000" target="にし なつ もじ" /><!-- Tang, the rest auto -->
+		<blk start="1F100" target="かこみ えいすうじ ほそく" /><!-- Enclosed alnum -->
+		<blk start="1F200" target="かこみ かんじ ほそく" /><!-- Enclosed ideo -->
+		<blk start="1F680" target="こうつう および ちず きごう" /><!-- Transport/map -->
 	</alpha-fixup>
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.

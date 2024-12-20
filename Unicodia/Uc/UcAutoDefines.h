@@ -30,6 +30,7 @@ namespace uc {
         ZDIN,   // Pseudo-script: Dingbats
         ZDIA,   // Pseudo-script: Diacritical marks
         ZKXI,   // Pseudo-script: Kangxi
+        ZOLD,   // Pseudo-script: legacy computing
 
 #ifndef Q_MOC_RUN
     // MOC creates CPPs rather than parses this enum, so probably OK
