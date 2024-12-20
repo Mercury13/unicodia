@@ -35,6 +35,7 @@
 		<alp follow="1" /><!-- Consonant/V -->
 		<alp>ん__ゔ</alp>
 		<alp>ンヷヸヴヹヺ</alp>
+		<alp follow="1" />
 		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>abcdefghijklmnopqrstuvwxyz</alp>
 	</alpha-sort>
