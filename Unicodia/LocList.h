@@ -25,6 +25,12 @@ namespace loc
         Plural ofUint(unsigned long long n) const override;
     };
 
+    enum class EngTerm : unsigned char {
+        OFF = 0,        ///< Mainly English
+        NORMAL = 1,     ///< Most other languages
+        SORT_KEY = 2,   ///< Special mode when do not want to sort by Kana
+    };
+
     struct Lang final : public loc::Locale
     {
         struct Name {
