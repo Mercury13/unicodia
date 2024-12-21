@@ -2283,7 +2283,7 @@
    </group>
    <group id="FB00">
     <text id="Name">
-     <orig> Alphabetic presentation forms</orig>
+     <orig>Alphabetic presentation forms</orig>
     </text>
     <text id="Text">
      <orig>Standard [[pt:ligature|ligatures]] for [[ps:Latn|Latin]], [[ps:Armn|Armenian]] and [[ps:Hebr|Hebrew]].</orig>
@@ -2319,7 +2319,7 @@
    </group>
    <group id="FE10">
     <text id="Name">
-     <orig> Vertical forms</orig>
+     <orig>Vertical forms</orig>
     </text>
     <text id="Text">
      <orig>
@@ -3031,7 +3031,7 @@
    </group>
    <group id="16E40">
     <text id="Name">
-     <orig> Medefaidrin (Obɛri Ɔkaimɛ)</orig>
+     <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
     </text>
    </group>
    <group id="16F00">
@@ -3165,7 +3165,7 @@
    </group>
    <group id="1D000">
     <text id="Name">
-     <orig> Byzantine musical symbols</orig>
+     <orig>Byzantine musical symbols</orig>
     </text>
     <text id="Text">
      <orig>Little is known about Byzantine church music, and nothing at all about secular. Nevertheless, symbols of Byzantine origin were used by the Orthodox at least until the 19th century, even under the rule of Turkey, and were reformed about 1800.</orig>
