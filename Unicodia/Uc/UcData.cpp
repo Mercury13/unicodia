@@ -1583,6 +1583,8 @@ namespace {
         return buildSortKey(name32, specialSort, sortOrder, r, telltales);
     }
 
+    constinit const uc::Block::Loc::Telltales NO_TELLTALES;
+
 }   // anon namespace
 
 
@@ -1632,6 +1634,7 @@ void uc::finishTranslation(
 
     // Blocks, pass 2 (build sort order)
     for (auto& blk : allBlocks()) {
+        blk.loc.telltales = NO_TELLTALES;
         auto& script = scriptInfo[static_cast<int>(blk.alphaKey.ecScript)];
 
         // Sorting key        
