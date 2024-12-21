@@ -1116,48 +1116,48 @@
     </text>
     <text id="Argu">
      <orig>[[pt:arguable|arguable]]{{-}}''like Thaana''</orig>
-     <transl>[[pt:arguable|arguable]]{{-}}''ターナ文字など''</transl>
+     <transl>[[pt:arguable|要議論]]{{-}}''ターナ文字など''</transl>
     </text>
     <text id="Cons">
      <orig>[[pt:abjad|consonant]]{{-}}''like Hebrew''</orig>
-     <transl>[[pt:abjad|consonant]]{{-}}''ヘブライ文字など''</transl>
+     <transl>[[pt:abjad|子音文字]]{{-}}''ヘブライ文字など''</transl>
     </text>
     <text id="Syll">
      <orig>[[pt:syllabic|syllabic]]{{-}}''like Japanese Katakana/Hiragana''</orig>
-     <transl>[[pt:syllabic|syllabic]]{{-}}'日本のカタカナ/ひらがななど''</transl>
+     <transl>[[pt:syllabic|音節文字]]{{-}}'日本のカタカナ/ひらがななど''</transl>
     </text>
     <text id="Asyl">
      <orig>alphasyllabic{{-}}''like Old Persian cuneiform''</orig>
-     <transl>alphasyllabic{{-}}''古代ペルシア楔形文字など''</transl>
+     <transl>アルファベット{{-}}''古代ペルシア楔形文字など''</transl>
     </text>
     <text id="Abug">
      <orig>[[pt:abugida|abugida]]{{-}}''like Ethiopic''</orig>
-     <transl>[[pt:abugida|abugida]]{{-}}''エチオピア文字など''</transl>
+     <transl>[[pt:abugida|アブギダ]]{{-}}''エチオピア文字など''</transl>
     </text>
     <text id="Brah">
      <orig>[[pt:brahmic|Brahmic abugida]]{{-}}''like Devanagari''</orig>
-     <transl>[[pt:brahmic|Brahmic abugida]]{{-}}''デヴァナーガリー文字など''</transl>
+     <transl>[[pt:brahmic|ブラーフミー・アブギダ]]{{-}}''デヴァナーガリー文字など''</transl>
     </text>
     <text id="Hier">
      <orig>[[pt:hiero|ideographic]]{{-}}''like CJK ideographs''</orig>
-     <transl>[[pt:hiero|ideographic]]{{-}}''CJK 表意文字など''</transl>
+     <transl>[[pt:hiero|表意文字]]{{-}}''CJK 表意文字など''</transl>
     </text>
     <text id="Syhi">
      <orig>ideosyllabic{{-}}''like Linear B''</orig>
-     <transl>ideosyllabic{{-}}''線文字Bなど''</transl>
+     <transl>表意音節文字{{-}}''線文字Bなど''</transl>
     </text>
     <text id="Cohi">
      <orig>ideoconsonant{{-}}''like Egyptian hieroglyphs''</orig>
-     <transl>ideoconsonant{{-}}''エジプトの象形文字など''</transl>
+     <transl>表音文字{{-}}''エジプトの象形文字など''</transl>
     </text>
     <text id="Code">
      <orig>[[pt:code|codes and shorthand]]{{-}}''like Braille embossings''</orig>
-     <transl>[[pt:code|codes and shorthand]]{{-}}''点字など'''</transl>
+     <transl>[[pt:code|コードと速記]]{{-}}''点字など'''</transl>
     </text>
     <text id="Nota">
      <orig>[[pt:nontext|non-text]]{{-}}''like musical notes''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
-     <transl>[[pt:nontext|non-text]]{{-}}''音符など''</transl>
+     <transl>[[pt:nontext|非文字]]{{-}}''音符など''</transl>
     </text>
    </group>
    <group id="Kx">
@@ -1411,7 +1411,7 @@
       <p />
       <p>実際には、このブロックのほとんどの文字は拡張ではなく、通常の IPA です。たとえば、{{sm|ɦ}} は、ロシア語の「ага」(あは)、ウクライナ語の「гривня」(グリブナ)、チェコ語の「hrad」に存在します。</p>
       <p />
-      <p>オペラ歌手は未知の言語で歌うことが多く、転写記号を読む能力は辞書作成者によく使用されます。特に、よく知られている音「Yanny or Laurel」は、オペラ歌手の Jay Aubrey Jones によって録音されました。{{-}} 低品質のスピーカーとマイクから聞こえた低い男性の声が、Yanny に変わりました。</p>
+      <p>オペラ歌手は、しばしば知らない言語で歌うことがあります。そして、彼らの発音記号を読む能力は、辞書の著者によってよく活用されています。特に有名な音声「Yanny or Laurel」は、オペラ歌手のジェイ・オーブリー・ジョーンズによって録音されました。{{-}} 低い男性の声が、低品質のスピーカーと同じ品質のマイクを通して録音されたため、低音域では「Laurel」に、高音域では「Yanny」に聞こえるようになりました。</p>
       <p />
       <p>また、IPA 文字を使用すると、ジョークのためにテキストを上下逆にすることもできます。</p>
      </transl>
@@ -1487,7 +1487,7 @@
      <transl>
       <p>キリル文字の小言語の文字: アブハズ語、クルド語 (ソ連の少数派)、コミ語、モルドヴィア語、アレウト語、アゼルバイジャン語 (現在は [[ps:Latn|ラテン文字]])、ヤコブレフ アルファベットのチュヴァシュ語 (1873 ～ 1938 年に使用)。</p>
       <p />
-      <p>面白い文字 {{sm|Ԥ}} が含まれています (ロシア語の mat の単語に似ており、「大失敗」を意味します)。これはレオニード カガノフによって「発明」されましたが、これが最初ではないことが判明しました。彼が投稿する 3 年前 (2008 年)、この文字の T シャツがロシアで販売されていました。また、彼とは無関係に、アブハズ人はフック {{sm|Ҧ}} の代わりにディセンダーを書き始め、これにより文字 {{sm|ڤ}} が Unicode に加わりました。</p>
+      <p>面白い文字 {{sm|Ԥ}} が含まれています (ロシア語の mat の単語に似ており、「大失敗」を意味します)。これはレオニード カガノフによって「発明」されましたが、これが最初ではないことが判明しました。彼が投稿する 3 年前 (2008 年)、この文字の T シャツがロシアで販売されていました。また、彼とは無関係に、アブハズ人はフック {{sm|Ҧ}} の代わりにディセンダーを書き始め、これにより文字 {{sm|Ԥ}} が Unicode に加わりました。</p>
      </transl>
     </text>
    </group>
@@ -1556,7 +1556,7 @@
     </text>
     <text id="Text">
      <orig>'''Suriyani''' or '''Karshoni''', unusual form of writing [[ps:Mlym|Malayalam]] with Syriac letters. Was used by Indian Christians until 19th century.</orig>
-     <transl>'''Suriyani''' または '''Karshoni'''、シリア文字で [[ps:Mlym|マラヤーラム文字]] を書く珍しい形式。19 世紀までインドのキリスト教徒によって使用されていました。</transl>
+     <transl>'''スリヤーニ文字''' または '''カルショニ文字'''、シリア文字で [[ps:Mlym|マラヤーラム文字]] を書く珍しい形式。19 世紀までインドのキリスト教徒によって使用されていました。</transl>
     </text>
    </group>
    <group id="0870">
@@ -1584,7 +1584,7 @@
     </text>
     <text id="Text">
      <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</orig>
-     <transl>[[ps:Rohg|ロヒンギャ]] ''(ミャンマー)''、ベラルーシ語、タタール語、バシキール語、Arvi ''(インド、スリランカ)''、Shahmukhi ''([[ps:Guru|Punjabi]) の追加アラビア文字]])」、ヒンドコ語「(パキスタン)」、およびアフリカ言語 (例: ベルベル語)。コーランへのコメントの兆候も。</transl>
+     <transl>[[ps:Rohg|ロヒンギャ]] ''(ミャンマー)''、ベラルーシ語、タタール語、バシキール語、アルウィー語 ''(インド、スリランカ)''シャームキー文字 ''([[ps:Guru|パンジャーブ語]) の追加アラビア文字]])」、ヒンドコ語「(パキスタン)」、およびアフリカ言語 (例: ベルベル語)。コーランへのコメントの兆候も。</transl>
     </text>
    </group>
    <group id="0900">
@@ -1811,7 +1811,7 @@
       <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
      <transl>
-      <p>{{sm|᧠}} ブロックの最初の文字は、仏教の太陽太陰暦の 8 番目の月の名前です (クメール語の ''Asat'' または ''Băthámsath''、サンスクリット語の ''Ashadha''、6 月 - 7 月に相当)。季節の変化に遅れないようにするため、この月は 2 ～ 3 年に 2 回繰り返されます。マーク 17D3 {{sm|◌៓}} は、この文字が優先されて [[pt:deprecated|非推奨]] になったこともあり、Unicode では {{_}}16 はまだ {{_}} 推奨されていません。</p>
+      <p>{{sm|᧠}} ブロックの最初の文字は、仏教の太陽太陰暦の 8 番目の月の名前です (クメール語の ''Asat'' または ''Băthámsath''、サンスクリット語の ''Ashadha''、6月～7月に相当)。季節の変化に遅れないようにするため、この月は 2 ～ 3年に 2 回繰り返されます。マーク 17D3 {{sm|◌៓}} は、この文字が優先されて [[pt:deprecated|非推奨]] になったこともあり、Unicode では {{_}}16 はまだ {{_}} 推奨されていません。</p>
       <p />
       <p>残りは、太陰暦の新月から満月まで、そして新月から新月までの日の名前です。</p>
      </transl>
@@ -1901,11 +1901,11 @@
       <p>Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. The double line below barely visible on the icon is an editorial mark meaning capital letter.</p>
      </orig>
      <transl>
-      <p>''Mtavruli'' は、標準的なジョージア文字 ''Mkhedruli'' の大文字です。[[pk:10A0|メイン ブロック]] の大文字は ''Asomtavruli'' と名付けられ、廃止されたと考えられています。</p>
+      <p>''Mtavruli'' は、標準的なジョージア文字である ''Mkhedruli'' の大文字形式です。[[pk:10A0|メイン ブロック]] の大文字は ''Asomtavruli'' と呼ばれ、現在では廃れたとみなされています。</p>
       <p />
-      <p>Mtavruli はハイライトやキャプションに使用され、長い間フォントの変種と考えられていました。しかし、学者たちは 19 世紀から 20 世紀初頭にかけての文書で Mkhedruli と Mtavruli が混在しているのを発見しました。また、ジョージアのフォントは Mkhedruli と Mtavruli のペアで提供されており、日常業務を複雑にし、フォントの変更が不可能な場合はジョージアのテキストの表現力が低下します。コンソーシアムのタイポグラファーである Michael Everson は、DRINK ME が Mtavruli で入力された 8 ビット エンコーディングの ''Alice in Wonderland'' の翻訳を受け取りました。</p>
+      <p>Mtavruliは見出しや説明文で使用され、長い間フォントの変種と考えられていました。しかし、研究者たちは19世紀から20世紀初頭の文書で、MkhedruliとMtavruliが混在して使用されていた例を発見しました。また、グルジア語のフォントはMkhedruliとMtavruliのペアで提供されることが多く、これが日常的な作業を複雑にし、フォントの変更が不可能な場合にはグルジア語テキストの表現力を低下させていました。コンソーシアムの活字デザイナー、マイケル・エバーソンは、8ビット符号化で書かれた「不思議の国のアリス」の翻訳を受け取りました。そこでは「DRINK ME」という部分がMtavruliで入力されていました。</p>
       <p />
-      <p>現在、Unicode では、Mkhedruli と Mtavruli を小文字と大文字と見なしていますが、他の使用規則と同様に、単語全体が大文字になります。アイコンにかろうじて見える下の二重線は、大文字を意味する編集上のマークです。</p>
+      <p>現在、UnicodeはMkhedruliとMtavruliを小文字と大文字として扱っています。ただし、使用規則が他の言語とは異なり、単語全体が大文字化されます。アイコンにかすかに見える下部の二重線は、大文字であることを示す編集上の印です。</p>
      </transl>
     </text>
    </group>
@@ -2003,8 +2003,8 @@
       <p>* psili{{-}}滑らかな呼吸 (その「h」がない)</p>
       <p>* iota 下付き{{-}}二重母音 (i を含む)</p>
       <p>* oxia{{-}}高音/上昇音</p>
-      <p>* varia{{-}}通常/低音音</p>
-      <p>* 曲折アクセント{{-}}1 音節の音調変化</p>
+      <p>* varia{{-}}通常/低音</p>
+      <p>* circumflex{{-}}1 音節の音調変化</p>
       <p>* breve{{-}}短母音 (ε/η や ο/ω とは異なり、アルファベットで伝えられない場合)</p>
       <p>* macron{{-}}長母音</p>
       <p>* diaeresis{{-}}母音の分離発音。</p>
@@ -2025,7 +2025,7 @@
       <p>Obviously, basic punctuation marks (period, comma, colon…) are encoded in [[pt:ascii|ASCII]] and [[pt:latin1|Latin-1]]. And punctuation blocks contain so-called ''typography marks'' for beautiful typesetting of text.</p>
      </orig>
      <transl>
-      <p>句読点（ラテン語の「punctum」は「点」）は、会話の構文とイントネーションを伝える記号のシステムであり、テキストにこれらの記号を配置する規則でもあります。</p>
+      <p>句読点は、会話の構文とイントネーションを伝える記号のシステムであり、テキストにこれらの記号を配置する規則でもあります。</p>
       <p />
       <p>言うまでもなく、基本的な句読点（ピリオド、カンマ、コロンなど）は [[pt:ascii|ASCII]] と [[pt:latin1|ラテン-1]] でエンコードされます。また、句読点ブロックには、テキストを美しく組版するためのいわゆる「タイポグラフィ記号」が含まれています。</p>
      </transl>
@@ -2305,7 +2305,7 @@
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
      <transl>
-      <p>コンピューター以前の有名なプリンター装飾ライブラリ「Hermann Zapf dingbats」(1977)。PostScript フォントとして広く配布され、すべての PDF ビューアーに必ず存在します。ブロックには、VS16 [[pt:emoji|絵文字]] がいくつか含まれています。</p>
+      <p>コンピューター以前の有名なプリンター装飾ライブラリ「ヘルマン・ツァップのディングバット」(1977)。PostScript フォントとして広く配布され、すべての PDF ビューアーに必ず存在します。ブロックには、VS16 [[pt:emoji|絵文字]] がいくつか含まれています。</p>
       <p />
       <p>新しい絵文字は、そのライブラリに含まれていないものがわずかにあります。これらはバージョン 6.0 以降で追加されたもので、VS16 ではありません。</p>
      </transl>
@@ -2381,7 +2381,7 @@
      <transl>
       <p>さまざまな用途の矢印、幾何学的形状、「Wingdings」および「Webdings」フォントの文字、日本のテレビ シンボル、占星術のシンボル、評価の星、チェスのコメント。</p>
       <p />
-      <p>「Hellschreiber 一時停止記号」はドイツの電信機で使用されていました。</p>
+      <p>「ヘルシュライバーの休止記号」 は、ドイツの電信機で使用されていました。</p>
      </transl>
     </text>
    </group>
@@ -5217,7 +5217,7 @@
       <p>バタク文字は、他のインドネシア文字と同様に、[[ps:Kawi|カウィ]] に由来します。ドイツ人、その後オランダ人が島民にバタク文字と [[ps:Latn|ラテン語]] の両方を教え始めました。第一次世界大戦の少し前にバタク文字は廃止され、最終的にインドネシア語の主要文字であるラテン語に取って代わられました。</p>
       <p />
       <p>固有の母音は {{t|a}} です。異なる言語 (カロ語、マンダイリン語、パクパク語、トバ語、シマルングン語) では文字が少し異なります。2 つの [[pt:virama|ヴィラマ]] があり、水平方向のものはカロ語とシマルングン語で使用され、他の言語では斜めになっています。</p>
-      <p>: バ {{sm|ᯅ}} + ヴィラマ {{sm|◌᯳}} = b {{sm|ᯅ᯳}}</p>
+      <p>: ba {{sm|ᯅ}} + virama {{sm|◌᯳}} = b {{sm|ᯅ᯳}}</p>
       <p>: ba {{sm|ᯅ}} + i {{sm|◌ᯪ}} + ng {{sm|◌ᯰ}} = bing {{sm|ᯅᯪᯰ}}</p>
      </transl>
     </text>
@@ -7443,7 +7443,7 @@
       <p>1587年、学者のAyuush Güüshが文字を改革し、仏教で重要なサンスクリット語、チベット語、中国語の転写を簡素化するためにいくつかの文字も追加した。新しい文字は「Ali-gali」または「Galik」と名付けられた。</p>
       <p />
       <p>ロシアでは、この文字はブリヤート人によって使用されていた。第二次世界大戦後、モンゴル人は [[ps:Cyrl|キリル文字]] を採用しましたが、ソ連の崩壊に伴い、古い文字の使用を拡大する計画があります。&lt;br&gt;</p>
-      <p>同形異義語 (たとえば、{{sm|ᠣ}}={{t|o/u}}) が含まれていますが、母音の調和{{-}}単語には男性母音または女性母音のいずれかのみが含まれる場合があります{{-}}多くの場合、これらの同形異義語は区別されます。Unicode では、これらの同形異義語に個別のコードポイントがあります: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} here、{{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} demon。文字 Q と G は、男性名詞と女性名詞で異なる形をとります。母音の直前だけでなく、語尾でも異なります。そのため、フォントには複数のルールがあります: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG 順、{{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} 兵士。</p>
+      <p>同形異義語 (たとえば、{{sm|ᠣ}}={{t|o/u}}) が含まれていますが、母音の調和{{-}}単語には男性母音または女性母音のいずれかのみが含まれる場合があります{{-}}多くの場合、これらの同形異義語は区別されます。Unicode では、これらの同形異義語に個別のコードポイントがあります: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} ここ、{{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} 悪魔。文字 Q と G は、男性名詞と女性名詞で異なる形をとります。母音の直前だけでなく、語尾でも異なります。そのため、フォントには複数のルールがあります: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG 順、{{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} 兵士。</p>
       <p />
       <p>このブロックには、1648 年に発明され、1924 年にキリル化されるまでカルムイク人を含む西洋の人々が使用した Todo Bichig (「明確な文字」) も含まれています。Todo は、新疆 (中国) で今でも使用されています。</p>
      </transl>
@@ -8699,7 +8699,7 @@
      <transl>
       <p>[[ps:Armi|アラム語]] アルファベットの子文字。後に [[ps:Arab|アラビア語]] に発展。この文字は少数のセム系民族によって使用されている。アラビア語の特徴のいくつかはシリア語にもすでに見られる。1 行で書かれた連結文字 (母音記号を除く)、孤立文字、頭文字、中文字、末文字のさまざまな形式。</p>
       <p />
-      <p>初期キリスト教写本 (50～400 年) の文字は、エストランジェロ (ギリシャ語 στρογγύλη{{-}}round) として知られている。西シリア (シリア、パレスチナ) はギリシャ人、東シリア (ペルシア、メソポタミア) はペルシア人に属していた。これにより、教会、言語、文字が 2 つの形式に分かれた。東シリア語 (ネストリウス派、カルデア派) と西シリア語 (ヤコブ派、マロン派)。これらは異なる書き方と母音記号を使用している。この文字はおよそ 14 世紀まで使用されていた。</p>
+      <p>初期キリスト教写本 (50～400 年) の文字は、エストランジェロ (ギリシャ語 στρογγύλη{{-}}円形) として知られている。西シリア (シリア、パレスチナ) はギリシャ人、東シリア (ペルシア、メソポタミア) はペルシア人に属していた。これにより、教会、言語、文字が 2 つの形式に分かれた。東シリア語 (ネストリウス派、カルデア派) と西シリア語 (ヤコブ派、マロン派)。これらは異なる書き方と母音記号を使用している。この文字はおよそ 14 世紀まで使用されていた。</p>
       <p />
       <p>おそらく、あなたのシステムには Estrangelo が見つかるでしょう{{-}}これは、西洋の歴史家によってシリア語の主なスタイルと考えられています。また、「Unicodia」は多様性を表す西洋の変種です{{-}}これは、外交官で印刷業者の Savary de Brèves (1560–1627) によって作成され、「Beth Mardutho」研究所によってアンティオキア聖書の出版のためにコンピューター フォントに変換されました。</p>
      </transl>
@@ -10677,7 +10677,7 @@
       <p>All emoji are [[pt:spacing|spacing]] characters.</p>
      </orig>
      <transl>
-      <p>日本語の {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol'' から。</p>
+      <p>日本語の {{sm|絵}} ''絵{{-}}絵画'' + {{sm|文字}} ''文字{{-}}キャラクター, 記号'' から。</p>
       <p />
       <p>携帯電話事業者 NTT DoCoMo が 1999 年頃に SMS の文字数を節約するために考案。欧米の事業者は 2004 年に独自のセットの開発を開始し、2010 年に DoCoMo のエンコードは Unicode{{_}}6.0 に導入されました。多くの絵文字は日本固有のものです。お辞儀をするビジネスマン {{em|😅}}、初心者ドライバーのサイン {{em|🔰}}… 日本国外で意味が変わったものもいくつかあります。最高学年の {{em|💯}} は「完全に同意」に変わりました。</p>
       <p />
