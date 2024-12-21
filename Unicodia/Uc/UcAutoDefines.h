@@ -100,7 +100,7 @@ namespace uc {
         E1_0 = V_8_0,
         E3_0 = V_9_0,
         E5_0 = V_10_0,
-        E11_0 = V_11_0,
+        E11_0 = V_11_0, ///< 11+: Unicode and emoji are released together
         E12_0 = V_12_0,
         E12_1 = V_12_1,
         E13_0 = V_13_0,
