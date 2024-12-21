@@ -114,7 +114,7 @@
 		<blk start="2E80"  /><!-- CJK radicals supplement -->
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
-		<blk start="10F00" /><!-- Old Sogdian -->
+		<!-- <blk start="10F00" />Old Sogdian — unneeded under this L10n -->
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
 		<blk start="1AFF0" /><!-- Kana extended-B -->
 		<blk start="1B000" /><!-- Kana supplement -->
