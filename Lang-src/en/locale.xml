@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- native: 简体中文
 	 international: Chinese (simplified)
-	 eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
+	 eng-terms: what to do with English terms hardcoded into program
+		0: use L10n only (for English)
+		1: show some
+		2: show ALL terms and use them as a sorting key
+			(as a workaround for complex languages like Japanese)
 	 trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
 		(may increase if someone checks blatant auto-translation)
 		For example, we are Spanish in US, and are forced to use English.
