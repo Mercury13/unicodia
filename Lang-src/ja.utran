@@ -3216,7 +3216,7 @@
    <group id="10140">
     <text id="Name">
      <orig>Ancient Greek numbers</orig>
-     <transl>古代ギリシア数字</transl>
+     <transl>古代ギリシャ数字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -3570,7 +3570,7 @@
    <group id="10F00">
     <text id="Name">
      <orig>Sogdian old</orig>
-     <transl>ソグド文字 (古代)</transl>
+     <transl>古代ソグド文字</transl>
     </text>
    </group>
    <group id="10F30">
@@ -3824,7 +3824,7 @@
    <group id="11D00">
     <text id="Name">
      <orig>Gondi — Masaram script</orig>
-     <transl>マサラム・ゴーンディー文字</transl>
+     <transl>ゴーンディー・マサラム文字</transl>
     </text>
    </group>
    <group id="11D60">
@@ -4231,7 +4231,7 @@
    <group id="1D200">
     <text id="Name">
      <orig>Ancient Greek musical notation</orig>
-     <transl>古代ギリシア音符記号</transl>
+     <transl>古代ギリシャ)音符記号</transl>
     </text>
     <text id="Text">
      <orig>
