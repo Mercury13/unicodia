@@ -3,6 +3,9 @@
 #include <algorithm>
 #include <charconv>
 
+// Reqments to machine
+static_assert(sizeof(char8_t) == sizeof(char), "Strange machine");
+
 namespace {
 
     bool isDigit(char c) { return (c >= '0' && c <= '9'); }
@@ -39,18 +42,28 @@ Version Version::parsePermissive(std::string_view text)
     p = q.ptr + 1;
     if (p == end || !isDigit(*p))
         return r;
-    std::from_chars(p, end, r.part3);
+    q = std::from_chars(p, end, r.part3);
+    if ((q.ptr == nullptr || q.ptr == end) || *q.ptr != '.')
+        return r;
+
+    // Read 4th data
+    p = q.ptr + 1;
+    if (p == end || !isDigit(*p))
+        return r;
+    std::from_chars(p, end, r.part4);
     return r;
 }
 
 
 size_t Version::sprintf(char* data, size_t size) const
 {
+    if (part4 != 0) {
+        return snprintf(data, size, "%u.%u.%u.%u", part1, part2, part3, part4);
+    }
     if (part3 != 0) {
         return snprintf(data, size, "%u.%u.%u", part1, part2, part3);
-    } else {
-        return snprintf(data, size, "%u.%u", part1, part2);
     }
+    return snprintf(data, size, "%u.%u", part1, part2);
 }
 
 
