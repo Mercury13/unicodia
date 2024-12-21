@@ -2016,7 +2016,7 @@
    </group>
    <group id="2000">
     <text id="Name">
-     <orig>General punctuation</orig>
+     <orig>Punctuation — general</orig>
      <transl>Розділові знаки</transl>
     </text>
     <text id="Text">
@@ -2466,7 +2466,7 @@
    </group>
    <group id="2E00">
     <text id="Name">
-     <orig>Supplemental punctuation</orig>
+     <orig>Punctuation — supplemental</orig>
      <transl>Розділові знаки додаткові</transl>
     </text>
     <text id="Text">

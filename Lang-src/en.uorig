@@ -1561,7 +1561,7 @@
    </group>
    <group id="2000">
     <text id="Name">
-     <orig>General punctuation</orig>
+     <orig>Punctuation — general</orig>
     </text>
     <text id="Text">
      <orig>
@@ -1875,7 +1875,7 @@
    </group>
    <group id="2E00">
     <text id="Name">
-     <orig>Supplemental punctuation</orig>
+     <orig>Punctuation — supplemental</orig>
     </text>
     <text id="Text">
      <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
