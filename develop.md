@@ -9,10 +9,11 @@
 * Congratulations! You can now run Unicodia directly from Qt Creator!
 
 # Hidden commands
-* Ctrl+Shift+T — tofu stats
 * F12 — reload translation from disk. Locale does NOT reload
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
 * Ctrl+Shift+Q — test emoji repainting engine
+* Ctrl+Shift+T — tofu stats
+* Ctrl+Shift+W — debug algorithms of sorting blocks
 
 # Update font: what to pay attention to?
 * First of all tofu stats (About → Tofu statistics / Ctrl+T): there should be no new tofu
