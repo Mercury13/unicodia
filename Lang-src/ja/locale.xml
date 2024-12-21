@@ -67,7 +67,7 @@
 		<blk start="2FF0" target="かんじ こうせい きじゅつ もじ" /><!-- IDC -->
 		<blk start="3000" target="CJK きごう と くとうてん" /><!-- CJK sym/punct -->
 		<blk start="3100" target="ちゅう おと じぼ (たま かげ)" /><!-- Bopo -->
-		<blk start="3190" target="かんぶんよう きごう (ちゅうせい にほんご の ひんと)" /><!-- Kanbun -->
+		<blk start="3190" target="かんぶんよう きごう" /><!-- Kanbun -->
 		<!-- 31C0 probably OK as it has ending in Hira -->
 		<blk start="3200" target="かこみ CJK もじ・ つき" /><!-- CJK letters/months -->
 		<blk start="3300" target="CJK ごかんよう もじ" /><!-- CJK Apaato etc -->
@@ -79,23 +79,16 @@
 		<blk start="FE20" target="はん きごう ( ごうせい かのう )" /><!-- half marks -->
 		<blk start="FE30" target="CJK ごかんがた" /><!-- CJK compat forms -->
 		<blk start="FE50" target="しょう じけい" /><!-- small variants -->
-		<blk start="FF00" target="はんかく・ ぜん かくがた" /><!-- half/fullwidth -->
+		<blk start="FF00" target="はんかく・ ぜん かくがた" /><!-- half/fullwidth, obsolete version but OK -->
 		<blk start="FFF0" target="とくしゅ ようと もじ" /><!-- Specials -->
 		<blk start="10000" target="せん もじ B おんせつ もじ" /><!-- Linb -->
 		<blk start="10190" target="こだい きごう" /><!-- Ancient symbols -->
-		<blk start="10300" target="こだい いたりあ もじ ( えとるりあご )" /><!-- Ital -->
-		<blk start="10350" target="こ ぺるむ もじ（ あんばーご）" /><!-- Perm -->
 		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
 		<blk start="10600" target="せん もじ A" /><!-- Lina -->
 		<blk start="10840" target="ていこく あらむ もじ" /><!-- Armi -->
-		<blk start="10A60" target="こだい みなみ あらびあ もじ" /><!-- Sarb -->
-		<blk start="10A80" target="こだい きた あらびあ もじ" /><!-- Narb -->
 		<blk start="10B40" target="ひぶん ぱるてぃあ もじ" /><!-- Prti -->
 		<blk start="10B60" target="ひぶん ぱふらヴぃ もじ" /><!-- Phli -->
 		<blk start="10B80" target="しへん ぱふらヴぃ もじ" /><!-- Phlp -->
-		<blk start="10C00" target="もじ (ほご-じぇねしす) (るーんご)" /><!-- Orkh -->
-		<blk start="10C80" target="こだい はんがりー もじ ( しぇけい ) ( るーんご )" /><!-- Hung -->
-		<blk start="10F70" target="こだい ういぐる もじ" /><!-- Ougr -->
 		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
 		<blk start="16FE0" target="かんじ の きごう および くとうてん" /><!-- Ideo symbols -->
 		<blk start="17000" target="にし なつ もじ" /><!-- Tang, the rest auto -->

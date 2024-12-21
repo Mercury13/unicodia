@@ -186,7 +186,7 @@
     </text>
     <text id="Decade">
      <orig>$s</orig>
-     <transl>$s</transl>
+     <transl>$ 年</transl>
     </text>
     <text id="Century">
      <orig>$ century</orig>
@@ -1790,13 +1790,13 @@
    <group id="1950">
     <text id="Name">
      <orig>Tai Le</orig>
-     <transl>タイ゠ロ文字 (サモア語)</transl>
+     <transl>タイ・ロ文字 (サモア語)</transl>
     </text>
    </group>
    <group id="1980">
     <text id="Name">
      <orig>New Tai Lue</orig>
-     <transl>新タイ゠ロ文字 (フィンランド語)</transl>
+     <transl>タイ・ロ文字(新) (フィンランド語)</transl>
     </text>
    </group>
    <group id="19E0">
@@ -1826,7 +1826,7 @@
    <group id="1A20">
     <text id="Name">
      <orig>Tai Tham (Lanna)</orig>
-     <transl>タイ゠タム文字 (Lanna) (ミゾ語)</transl>
+     <transl>タイ・タム文字 (Lanna) (ミゾ語)</transl>
     </text>
    </group>
    <group id="1AB0">
@@ -1866,7 +1866,7 @@
    <group id="1C50">
     <text id="Name">
      <orig>Ol Chiki</orig>
-     <transl>オル゠チキ文字 (ケクチ語)</transl>
+     <transl>オル・チキ文字 (ケクチ語)</transl>
     </text>
    </group>
    <group id="1C80">
@@ -2582,7 +2582,7 @@
    <group id="3190">
     <text id="Name">
      <orig>Kanbun (hints to medieval Japanese)</orig>
-     <transl>漢文用記号 (中世日本語のヒント)</transl>
+     <transl>漢文用記号 (返り点など)</transl>
     </text>
     <text id="Text">
      <orig>
@@ -2934,7 +2934,7 @@
    <group id="AA80">
     <text id="Name">
      <orig>Tai Viet</orig>
-     <transl>タイ゠ヴィエト文字</transl>
+     <transl>タイ・ヴィエト文字</transl>
     </text>
    </group>
    <group id="AAE0">
@@ -3034,7 +3034,7 @@
    <group id="FB00">
     <text id="Name">
      <orig>Alphabetic presentation forms</orig>
-     <transl>アルファベット表示形</transl>
+     <transl>アルファベット表示形式</transl>
     </text>
     <text id="Text">
      <orig>Standard [[pt:ligature|ligatures]] for [[ps:Latn|Latin]], [[ps:Armn|Armenian]] and [[ps:Hebr|Hebrew]].</orig>
@@ -3044,7 +3044,7 @@
    <group id="FB50">
     <text id="Name">
      <orig>Arabic presentation forms A</orig>
-     <transl>アラビア表示形A</transl>
+     <transl>アラビア表示形式 A</transl>
     </text>
     <text id="Text">
      <orig>
@@ -3106,7 +3106,7 @@
    <group id="FE20">
     <text id="Name">
      <orig>Combining half marks</orig>
-     <transl>半記号(合成可能)</transl>
+     <transl>半記号 (合成可能)</transl>
     </text>
     <text id="Text">
      <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
@@ -3116,7 +3116,7 @@
    <group id="FE30">
     <text id="Name">
      <orig>CJK compatibility forms</orig>
-     <transl>CJK互換形</transl>
+     <transl>CJK互換形式</transl>
     </text>
     <text id="Text">
      <orig>Characters for vertical [[pt:cjk|CJK]] writing, mostly for compatibility with existing encodings. Particularly with Chinese encoding CNS{{_}}11643{{-}}hence name in Unicode 1.0, ''CNS 11643 Compatibility''.</orig>
@@ -3136,7 +3136,7 @@
    <group id="FE70">
     <text id="Name">
      <orig>Arabic presentation forms B</orig>
-     <transl>アラビア表示形B</transl>
+     <transl>アラビア表示形式 B</transl>
     </text>
     <text id="Text">
      <orig>
@@ -3158,7 +3158,7 @@
    <group id="FF00">
     <text id="Name">
      <orig>Halfwidth and fullwidth forms</orig>
-     <transl>半角・全角形</transl>
+     <transl>半角・全角形式</transl>
     </text>
     <text id="Text">
      <orig>
@@ -3302,7 +3302,7 @@
    <group id="102E0">
     <text id="Name">
      <orig>Coptic epact numbers</orig>
-     <transl>コプト゠エパクト数字</transl>
+     <transl>コプト・エパクト数字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -3324,7 +3324,7 @@
    <group id="10300">
     <text id="Name">
      <orig>Italic old (Etruscan)</orig>
-     <transl>古代イタリア文字 (エトルリア語)</transl>
+     <transl>イタリア文字 (古代) (エトルリア語)</transl>
     </text>
    </group>
    <group id="10330">
@@ -3336,7 +3336,7 @@
    <group id="10350">
     <text id="Name">
      <orig>Permic old (Anbur)</orig>
-     <transl>古ペルム文字 （アンバー語）</transl>
+     <transl>ペルム文字 (古代) （アンバー語）</transl>
     </text>
    </group>
    <group id="10380">
@@ -3348,7 +3348,7 @@
    <group id="103A0">
     <text id="Name">
      <orig>Persian old</orig>
-     <transl>古代ペルシャ文字</transl>
+     <transl>ペルシャ文字 (古代)</transl>
     </text>
    </group>
    <group id="10400">
@@ -3478,13 +3478,13 @@
    <group id="10A60">
     <text id="Name">
      <orig>Arabian old south</orig>
-     <transl>古代南アラビア文字</transl>
+     <transl>アラビア南文字 (古代)</transl>
     </text>
    </group>
    <group id="10A80">
     <text id="Name">
      <orig>Arabian old north</orig>
-     <transl>古代北アラビア文字</transl>
+     <transl>アラビア北文字 (古代)</transl>
     </text>
    </group>
    <group id="10AC0">
@@ -3526,13 +3526,13 @@
    <group id="10C80">
     <text id="Name">
      <orig>Hungarian old (Székely) runes</orig>
-     <transl>古代ハンガリー文字(シェケイ) (ルーン語)</transl>
+     <transl>ハンガリー(シェケイ)文字 (古代) (ルーン語)</transl>
     </text>
    </group>
    <group id="10D00">
     <text id="Name">
      <orig>Hanifi Rohingya</orig>
-     <transl>ハニーフィー゠ロヒンギャ文字</transl>
+     <transl>ハニーフィー・ロヒンギャ文字</transl>
     </text>
    </group>
    <group id="10D40">
@@ -3570,7 +3570,7 @@
    <group id="10F00">
     <text id="Name">
      <orig>Sogdian old</orig>
-     <transl>古代ソグド文字</transl>
+     <transl>ソグド文字 (古代)</transl>
     </text>
    </group>
    <group id="10F30">
@@ -3582,7 +3582,7 @@
    <group id="10F70">
     <text id="Name">
      <orig>Uyghur old</orig>
-     <transl>古代ウイグル文字</transl>
+     <transl>ウイグル文字 (古代)</transl>
     </text>
    </group>
    <group id="10FB0">
@@ -3750,7 +3750,7 @@
    <group id="118A0">
     <text id="Name">
      <orig>Warang Citi</orig>
-     <transl>ワラング゠クシティ文字</transl>
+     <transl>ワラング・クシティ文字</transl>
     </text>
    </group>
    <group id="11900">
@@ -3790,7 +3790,7 @@
    <group id="11AC0">
     <text id="Name">
      <orig>Pau Cin Hau</orig>
-     <transl>パウ゠チン゠ハウ文字</transl>
+     <transl>パウ・チン・ハウ文字</transl>
     </text>
    </group>
    <group id="11B00">
@@ -3824,13 +3824,13 @@
    <group id="11D00">
     <text id="Name">
      <orig>Gondi — Masaram script</orig>
-     <transl>マサラム゠ゴーンディー文字</transl>
+     <transl>マサラム・ゴーンディー文字</transl>
     </text>
    </group>
    <group id="11D60">
     <text id="Name">
      <orig>Gondi — Gunjala</orig>
-     <transl>グンジャラ゠ゴーンディー文字</transl>
+     <transl>グンジャラ・ゴーンディー文字</transl>
     </text>
    </group>
    <group id="11EE0">
@@ -3973,7 +3973,7 @@
    <group id="16800">
     <text id="Name">
      <orig>Bamum supplement</orig>
-     <transl>バムン文字補助</transl>
+     <transl>バムン文字 補助</transl>
     </text>
     <text id="Text">
      <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</orig>
@@ -4001,7 +4001,7 @@
    <group id="16B00">
     <text id="Name">
      <orig>Pahawh Hmong</orig>
-     <transl>パハウ゠フモン文字</transl>
+     <transl>パハウ・フモン文字</transl>
     </text>
    </group>
    <group id="16E40">
@@ -4417,7 +4417,7 @@
    <group id="1E100">
     <text id="Name">
      <orig>Nyiakeng Puachue Hmong (Chervang alphabet)</orig>
-     <transl>ニヤケン゠プアチュ゠フモン文字</transl>
+     <transl>ニヤケン・プアチュ・フモン文字</transl>
     </text>
    </group>
    <group id="1E290">
@@ -6161,11 +6161,11 @@
    <group id="Grek">
     <text id="Name">
      <orig>Greek</orig>
-     <transl>ギリシア文字</transl>
+     <transl>ギリシャ文字</transl>
     </text>
     <text id="Lang">
      <orig>Greek</orig>
-     <transl>ギリシア語</transl>
+     <transl>ギリシャ語</transl>
     </text>
     <text id="Note">
      <orig>main hypothesis</orig>
@@ -7030,7 +7030,7 @@
     </text>
     <text id="Lang">
      <orig>Mycenaean ''(proto-Greek)''</orig>
-     <transl>ミケーネ語（ギリシア語祖語）</transl>
+     <transl>ミケーネ語（ギリシャ語祖語）</transl>
     </text>
     <text id="Text">
      <orig>
@@ -13221,7 +13221,7 @@
     </text>
     <text id="U+1F1E6+1F1F6">
      <orig>As of 2024, all vendors use the flag created in 1996 for "3D World Atlas" multimedia encyclopedia: UN blue with white continent. A competing flag, navy blue and white with a diamond, has existed since 2018.</orig>
-     <transl>2024年現在、すべてのベンダーは、マルチメディア百科事典「3Dワールドアトラス」用に1996年に作成された、国連の青と白の大陸の旗を使用しています。競合する紺と白にダイヤモンドが描かれた旗は、2018年から存在しています。</transl>
+     <transl>2024年現在、すべてのベンダーは、マルチメディア百科事典"3D World Atlas"用に1996年に作成された、国連の青と白の大陸の旗を使用しています。競合する紺と白にダイヤモンドが描かれた旗は、2018年から存在しています。</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
      <orig>The red-green-black flag was adopted in 2023. Before that, all vendors used blue French naval ensign with white snakes.</orig>
