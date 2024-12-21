@@ -405,7 +405,8 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::DEJAVU },
     // Geometric OK
     { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE },
-            "Geometric Shapes", MyName::INST, MapType::SYM_OTHER,
+            "Geometric Shapes",
+            { EcScript::ZSHP, 0 }, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Misc sym OK
     { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
@@ -719,7 +720,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFE00, 0xFE0F,
             { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
             "Variation Selectors",
-            MyName::INST, MapType::TECHNICAL },
+            { EcScript::ZVAR, 0 }, MapType::TECHNICAL },
     // Vertical forms OK, not collapsible: small
     { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Vertical Forms",
@@ -1457,7 +1458,7 @@ constinit const uc::Block uc::blocks[] {
     // Geo shapes ex OK
     { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE },
             "Geometric Shapes Extended",
-            MyName::INST, MapType::SYM_OTHER,
+            { EcScript::ZSHP, 1 }, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Arrows C OK
     { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE },
@@ -1540,7 +1541,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xE0100, 0xE01EF,
             { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
             "Variation Selectors Supplement",
-            MyName::INST, MapType::TECHNICAL },
+            { EcScript::ZVAR, 1 }, MapType::TECHNICAL },
 };
 static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
               "Sorry, need to set block data manually");

@@ -40,26 +40,47 @@
 		<alp>abcdefghijklmnopqrstuvwxyz</alp>
 	</alpha-sort>
 	<alpha-fixup>
-		<!-- For Japanese: they are just conversions to kana -->
+		<!-- For Japanese: conversions to kana, no matter Katakana or Hiragana
+			 Programmatically sticks to another block → no need
+			 Ideograph is so deep that sorts OK → no need
+			 Probably will need attention because of Old: Hung, Ital, Narb, Perm, Sarb, Orkh, Ougr -->
+		<blk start="02B0" target="しゅうしょく もじ の すぺーす" /><!-- spacing modifiers -->
+		<blk start="0300" target="はつおん くべつ ふごう の けつごう" /><!-- basic umlauts -->
 		<blk start="1980" target="しん たい゠ ろ もじ (ふぃんらんどご)" /><!-- Talu -->
 		<blk start="1D00" target="おんせい きごう かくちょう" />
 		<blk start="1D80" target="おんせい きごう かくちょう ほそく" />
+		<blk start="2000" target="いっぱんてき な くとうてん" /><!-- punctuation -->
+		<blk start="2070" target="うえつき もじ と したつき もじ" /><!-- num forms -->
 		<blk start="20A0" target="つうか きごう" />
 		<blk start="2100" target="もじ さま きごう" />
 		<blk start="2150" target="すうじ けいしき" />
 		<blk start="2190" target="やじるし" /><!-- the rest arrows will automatically pull -->
 		<blk start="2200" target="すうがく きごう" /><!-- the rest math will automatically pull -->
+		<blk start="2300" target="ぎじゅつよう きごう そのた" /><!-- misc tech -->
 		<blk start="2440" target="こうがくてき もじ にんしき" /><!-- OCR -->
-		<blk start="2460" target="かこみ えいすうじ" /><!-- Enclosed alnum -->
+		<blk start="2460" target="かこみ えいすうじ" /><!-- enclosed alnum -->
+		<blk start="25A0" target="きかがくてき けいじょう" /><!-- shapes, the other will automatically pull -->
+		<blk start="2700" target="そうしょく きごう" /><!-- dingbats; new dingbats will auto-pull and ellipsis unneeded -->
 		<blk start="2F00" target="かん ぶしゅ" /><!-- Kangxi, the 2nd will automatically pull -->
 		<blk start="2FF0" target="かんじ こうせい きじゅつ もじ" /><!-- IDC -->
+		<blk start="3000" target="CJK きごう と くとうてん" /><!-- CJK sym/punct -->
 		<blk start="3100" target="ちゅう おと じぼ (たま かげ)" /><!-- Bopo -->
+		<blk start="3190" target="かんぶんよう きごう (ちゅうせい にほんご の ひんと)" /><!-- Kanbun -->
+		<!-- 31C0 probably OK as it has ending in Hira -->
 		<blk start="3200" target="かこみ CJK もじ・ つき" /><!-- CJK letters/months -->
+		<blk start="3300" target="CJK ごかんよう もじ" /><!-- CJK Apaato etc -->
+		<blk start="4E00" target="CJK とうごう かんじ" /><!-- Hani main; the rest, even compatible, are auto -->
+		<blk start="FE00" target="じけい せんたくこ" /><!-- var selectors -->
+		<blk start="FE10" target="たてがきがた" /><!-- vertical forms -->
+		<blk start="FE30" target="CJK ごかんがた" /><!-- CJK compat forms -->
 		<blk start="10000" target="せん もじ B おんせつ もじ" /><!-- Linb -->
+		<blk start="10300" target="こだい いたりあ もじ ( えとるりあご )" /><!-- Ital -->
 		<blk start="10350" target="こ ぺるむ もじ（ あんばーご）" /><!-- Perm -->
 		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
 		<blk start="10600" target="せん もじ A" /><!-- Lina -->
 		<blk start="10840" target="ていこく あらむ もじ" /><!-- Armi -->
+		<blk start="10A60" target="こだい みなみ あらびあ もじ" /><!-- Sarb -->
+		<blk start="10A80" target="こだい きた あらびあ もじ" /><!-- Narb -->
 		<blk start="10B40" target="ひぶん ぱるてぃあ もじ" /><!-- Prti -->
 		<blk start="10B60" target="ひぶん ぱふらヴぃ もじ" /><!-- Phli -->
 		<blk start="10B80" target="しへん ぱふらヴぃ もじ" /><!-- Phlp -->
@@ -67,15 +88,21 @@
 		<blk start="10C80" target="こだい はんがりー もじ ( しぇけい ) ( るーんご )" /><!-- Hung -->
 		<blk start="10F70" target="こだい ういぐる もじ" /><!-- Ougr -->
 		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
+		<blk start="16FE0" target="かんじ の きごう および くとうてん" /><!-- Ideo symbols -->
 		<blk start="17000" target="にし なつ もじ" /><!-- Tang, the rest auto -->
-		<blk start="1F100" target="かこみ えいすうじ ほそく" /><!-- Enclosed alnum -->
-		<blk start="1F200" target="かこみ かんじ ほそく" /><!-- Enclosed ideo -->
-		<blk start="1F680" target="こうつう および ちず きごう" /><!-- Transport/map -->
+		<blk start="1D360" target="さんぎよう すうじ" /><!-- counting rods -->
+		<blk start="1F100" target="かこみ えいすうじ ほそく" /><!-- enclosed alnum -->
+		<blk start="1F200" target="かこみ かんじ ほそく" /><!-- enclosed ideo -->
+		<blk start="1F600" target="かお もじ" /><!-- smilies -->
+		<blk start="1F680" target="こうつう および ちず きごう" /><!-- transport/map -->
+		<blk start="1F700" target="れんきんじゅつ きごう" /><!-- alchemical -->
+		<blk start="1FB00" target="きゅうしき こんぴゅーたーよう きごう" /><!-- legacy comp -->
 	</alpha-fixup>
 	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
 		 breaking alphabet order and referenceability.
 		 These blocks are marked with ellipsis. -->
 	<ellipsis text="…">
+		<blk start="1AB0"  /><!-- umlauts supp. It’s the 3rd in cluster; 2 and 4 do not need -->
 		<blk start="2E80"  /><!-- CJK radicals supplement -->
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
@@ -87,7 +114,8 @@
 		<blk start="1B130" /><!-- Small kana extension -->
 		<blk start="1BCA0" /><!-- Shorthand format controls -->
 		<blk start="1D200" /><!-- Ancient Greek music notation -->
-		<blk start="1F650" /><!-- Ornamental dingbats -->
+		<blk start="1F900" /><!-- Sym ex -->
+		<blk start="1FA70" /><!-- Sym ex A -->
 	</ellipsis>
 	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
