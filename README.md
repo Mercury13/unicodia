@@ -24,6 +24,8 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 ## Language policy
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
 
+Is **Old** in the front or in the back? It depends. 1) In Scripts — as convenient. In Blocks… 2) Old is the main word (Ancient symbols) → better front. 3) Auxiliary block (Old Sogdian, Ancient Greek) → no matter, we’ll find it anyway by looking around Greek. 4) Old is an adjective to something more important (Italic old, Mongolian old, Permic old) → better back. It’s just ease of finding a block in the long list of 300 blocks.
+
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
