@@ -33,6 +33,7 @@ namespace uc {
         ZOLD,   // Pseudo-script: legacy computing
         ZVAR,   // Pseudo-script: variation selectors
         ZSHP,   // Pseudo-script: shapes
+        ZPUN,   // Pseudo-script: punctuation
 
 #ifndef Q_MOC_RUN
     // MOC creates CPPs rather than parses this enum, so probably OK

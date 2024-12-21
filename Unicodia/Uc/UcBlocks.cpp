@@ -335,7 +335,7 @@ constinit const uc::Block uc::blocks[] {
     // General punct OK, changed 2-dot leader to low one.
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation",
-            MyName::INST, MapType::SYM_PUNCT,
+            { EcScript::ZPUN, 0 }, MapType::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION, Bfg::NO_EMOJI },
     // Sup/sub OK
     { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE },
@@ -486,7 +486,7 @@ constinit const uc::Block uc::blocks[] {
     // Supp punct OK, drew U14 in FunkySample
     { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
             "Supplemental Punctuation",
-            MyName::INST, MapType::SYM_PUNCT,
+            { EcScript::ZPUN, 1 }, MapType::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION },
     // CJK radicals supp OK
     { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK },
