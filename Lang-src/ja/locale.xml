@@ -46,6 +46,7 @@
 			 Probably will need attention because of Old: Hung, Ital, Narb, Perm, Sarb, Orkh, Ougr -->
 		<blk start="02B0" target="しゅうしょく もじ の すぺーす" /><!-- spacing modifiers -->
 		<blk start="0300" target="はつおん くべつ ふごう の けつごう" /><!-- basic umlauts -->
+		<blk start="1800" target="こだい もんごる もじ" /><!-- Mongol -->
 		<blk start="1980" target="しん たい゠ ろ もじ (ふぃんらんどご)" /><!-- Talu -->
 		<blk start="1D00" target="おんせい きごう かくちょう" />
 		<blk start="1D80" target="おんせい きごう かくちょう ほそく" />
@@ -86,6 +87,8 @@
 		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
 		<blk start="10600" target="せん もじ A" /><!-- Lina -->
 		<blk start="10840" target="ていこく あらむ もじ" /><!-- Armi -->
+		<blk start="10A60" target="みなみ あらびあ もじ こだい" /><!-- Sarb -->
+		<blk start="10A80" target="きた あらびあ もじ こだい" /><!-- Narb -->
 		<blk start="10B40" target="ひぶん ぱるてぃあ もじ" /><!-- Prti -->
 		<blk start="10B60" target="ひぶん ぱふらヴぃ もじ" /><!-- Phli -->
 		<blk start="10B80" target="しへん ぱふらヴぃ もじ" /><!-- Phlp -->
