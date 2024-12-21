@@ -89,6 +89,7 @@
 		<blk start="10B40" target="ひぶん ぱるてぃあ もじ" /><!-- Prti -->
 		<blk start="10B60" target="ひぶん ぱふらヴぃ もじ" /><!-- Phli -->
 		<blk start="10B80" target="しへん ぱふらヴぃ もじ" /><!-- Phlp -->
+		<blk start="10C00" target="もじ ( ほご - じぇねしす ) ( るーんご )" /><!-- Orkh -->
 		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
 		<blk start="16FE0" target="かんじ の きごう および くとうてん" /><!-- Ideo symbols -->
 		<blk start="17000" target="にし なつ もじ" /><!-- Tang, the rest auto -->
