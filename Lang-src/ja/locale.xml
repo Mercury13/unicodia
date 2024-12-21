@@ -57,10 +57,12 @@
 		<blk start="2190" target="やじるし" /><!-- the rest arrows will automatically pull -->
 		<blk start="2200" target="すうがく きごう" /><!-- the rest math will automatically pull -->
 		<blk start="2300" target="ぎじゅつよう きごう そのた" /><!-- misc tech -->
+		<blk start="2400" target="せいぎょ きのうよう きごう" /><!-- control pics -->
 		<blk start="2440" target="こうがくてき もじ にんしき" /><!-- OCR -->
 		<blk start="2460" target="かこみ えいすうじ" /><!-- enclosed alnum -->
 		<blk start="25A0" target="きかがくてき けいじょう" /><!-- shapes, the other will automatically pull -->
 		<blk start="2700" target="そうしょく きごう" /><!-- dingbats; new dingbats will auto-pull and ellipsis unneeded -->
+		<blk start="2800" target="てんじ づけい" /><!-- Brai -->
 		<blk start="2F00" target="かん ぶしゅ" /><!-- Kangxi, the 2nd will automatically pull -->
 		<blk start="2FF0" target="かんじ こうせい きじゅつ もじ" /><!-- IDC -->
 		<blk start="3000" target="CJK きごう と くとうてん" /><!-- CJK sym/punct -->
@@ -69,11 +71,18 @@
 		<!-- 31C0 probably OK as it has ending in Hira -->
 		<blk start="3200" target="かこみ CJK もじ・ つき" /><!-- CJK letters/months -->
 		<blk start="3300" target="CJK ごかんよう もじ" /><!-- CJK Apaato etc -->
+		<blk start="4DC0" target="えき けい きごう" /><!-- Yijing -->
 		<blk start="4E00" target="CJK とうごう かんじ" /><!-- Hani main; the rest, even compatible, are auto -->
+		<blk start="A700" target="せいちょう しゅうしょく もじ" /><!-- Small tones -->
 		<blk start="FE00" target="じけい せんたくこ" /><!-- var selectors -->
 		<blk start="FE10" target="たてがきがた" /><!-- vertical forms -->
+		<blk start="FE20" target="はん きごう ( ごうせい かのう )" /><!-- half marks -->
 		<blk start="FE30" target="CJK ごかんがた" /><!-- CJK compat forms -->
+		<blk start="FE50" target="しょう じけい" /><!-- small variants -->
+		<blk start="FF00" target="はんかく・ ぜん かくがた" /><!-- half/fullwidth -->
+		<blk start="FFF0" target="とくしゅ ようと もじ" /><!-- Specials -->
 		<blk start="10000" target="せん もじ B おんせつ もじ" /><!-- Linb -->
+		<blk start="10190" target="こだい きごう" /><!-- Ancient symbols -->
 		<blk start="10300" target="こだい いたりあ もじ ( えとるりあご )" /><!-- Ital -->
 		<blk start="10350" target="こ ぺるむ もじ（ あんばーご）" /><!-- Perm -->
 		<blk start="103A0" target="こだい ぺるしゃ もじ" /><!-- Xpeo -->
@@ -90,6 +99,10 @@
 		<blk start="11580" target="しったん もじ (ぼんじ)" /><!-- Sidd -->
 		<blk start="16FE0" target="かんじ の きごう および くとうてん" /><!-- Ideo symbols -->
 		<blk start="17000" target="にし なつ もじ" /><!-- Tang, the rest auto -->
+		<blk start="18B00" target="ちぎり に こあざ" /><!-- Kits -->
+		<blk start="1B170" target="おんなしょ" /><!-- Nshu -->
+		<blk start="1D100" target="おんがく きごう" /><!-- music -->
+		<blk start="1D300" target="ふとし げん けい きごう" /><!-- Tai Xuan -->
 		<blk start="1D360" target="さんぎよう すうじ" /><!-- counting rods -->
 		<blk start="1F100" target="かこみ えいすうじ ほそく" /><!-- enclosed alnum -->
 		<blk start="1F200" target="かこみ かんじ ほそく" /><!-- enclosed ideo -->
@@ -103,6 +116,7 @@
 		 These blocks are marked with ellipsis. -->
 	<ellipsis text="…">
 		<blk start="1AB0"  /><!-- umlauts supp. It’s the 3rd in cluster; 2 and 4 do not need -->
+		<blk start="2E00"  /><!-- supp punctuation -->
 		<blk start="2E80"  /><!-- CJK radicals supplement -->
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
