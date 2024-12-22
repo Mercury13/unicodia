@@ -117,14 +117,17 @@ namespace loc {
         unsigned long long v;
     };
 
+    template <class T>
+    concept Char = std::integral<T>;
+
     /// Preformatted integer: both string and integral value
-    template <class Ch, std::integral Int>
+    template <Char Ch, std::integral Int>
     struct PreformN {
         std::basic_string_view<Ch> str;
         Int val;
     };
 
-    template <class Ch>
+    template <Char Ch>
     class Fmt
     {
     public:
@@ -337,25 +340,25 @@ extern template class loc::FmtL<char>;
 extern template class loc::FmtL<wchar_t>;
 extern template class loc::FmtL<char8_t>;
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(Str x) : loc(DefaultLocale::INST), d(std::move(x)) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(const Locale& lc, Str x) : loc(lc), d(std::move(x)) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(Sv x) : loc(DefaultLocale::INST), d(x) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(const Locale& lc, Sv x) : loc(lc), d(x) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(const Ch* x) : loc(DefaultLocale::INST), d(x) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Fmt<Ch>::Fmt(const Locale& lc, const Ch* x) : loc(lc), d(x) { init(); }
 
-template <class Ch>
+template <loc::Char Ch>
 void loc::Fmt<Ch>::init()
 {
     size_t lastSubstPos = 0;
@@ -456,7 +459,7 @@ void loc::Fmt<Ch>::init()
 }   // init()
 
 
-template <class Ch> template <std::integral T>
+template <loc::Char Ch> template <std::integral T>
 void loc::Fmt<Ch>::nn(T x)
 {
     if (lnkFirst == NO_LINK)
@@ -472,7 +475,7 @@ void loc::Fmt<Ch>::nn(T x)
 }
 
 
-template <class Ch> template <std::integral T>
+template <loc::Char Ch> template <std::integral T>
 void loc::Fmt<Ch>::prefN(Sv sv, T x)
 {
     if (lnkFirst == NO_LINK)
@@ -485,7 +488,7 @@ void loc::Fmt<Ch>::prefN(Sv sv, T x)
 }
 
 
-template <class Ch> template <class Sv1>
+template <loc::Char Ch> template <class Sv1>
 void loc::Fmt<Ch>::nnnSv(Sv1 x, const Zchecker& chk)
 {
     size_t lnkPrev = NO_LINK;
@@ -540,7 +543,7 @@ void loc::Fmt<Ch>::nnnSv(Sv1 x, const Zchecker& chk)
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 void loc::Fmt<Ch>::parseSubst(const Zsubst& sub, size_t pos)
 {
     values.clear();
@@ -593,7 +596,7 @@ brk1:
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 bool loc::Fmt<Ch>::Kv::isKey(std::string_view x) const noexcept
 {
     return (x.length() == key.length()
@@ -601,7 +604,7 @@ bool loc::Fmt<Ch>::Kv::isKey(std::string_view x) const noexcept
 }
 
 
-template <class Ch> template <class Ch2>
+template <loc::Char Ch> template <class Ch2>
 size_t loc::Fmt<Ch>::dumbReplace(
         const Zsubst& sub, size_t pos, std::basic_string_view<Ch2> byWhat)
 {
@@ -616,7 +619,7 @@ size_t loc::Fmt<Ch>::dumbReplace(
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 void loc::Fmt<Ch>::ss(Sv x)
 {
     size_t lnkPrev = NO_LINK;
@@ -652,7 +655,7 @@ void loc::Fmt<Ch>::ss(Sv x)
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 auto loc::Fmt<Ch>::findVal(std::string_view key) const noexcept -> const Kv*
 {
     for (const Kv& v : values) {
@@ -664,14 +667,14 @@ auto loc::Fmt<Ch>::findVal(std::string_view key) const noexcept -> const Kv*
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 auto loc::Fmt<Ch>::findExactPluralVal(loc::Plural plural) const noexcept -> const Kv*
 {
     return findVal(pluralNames[static_cast<unsigned char>(plural)]);
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 loc::Plural loc::Fmt<Ch>::parsePluralKey(const Kv& kv)
 {
     if (kv.key.empty())
@@ -709,7 +712,7 @@ loc::Plural loc::Fmt<Ch>::parsePluralKey(const Kv& kv)
 }
 
 
-template <class Ch>
+template <loc::Char Ch>
 auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 {
     auto mainKey = pluralNames[static_cast<unsigned char>(plural)];
@@ -745,7 +748,7 @@ auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 }
 
 
-template <class Ch> template <class Sv1>
+template <loc::Char Ch> template <class Sv1>
 size_t loc::Fmt<Ch>::replaceQuestion(
         const Zsubst& sub, size_t pos, const Kv& byWhat, Sv1 value)
 {
@@ -797,7 +800,7 @@ brk:
 }
 
 #ifdef QT_STRINGS
-template <class Ch>
+template <loc::Char Ch>
 QString loc::Fmt<Ch>::q() const
 {
     if constexpr (sizeof(Ch) == sizeof(char)) {
