@@ -272,10 +272,20 @@
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
      <au-cmt>
+      <p>UNUSED and kept for that Japanese translator</p>
       <p>{1} = additional technical tags (e.g. href, style)</p>
       <p>Test: Hiragana</p>
      </au-cmt>
      <transl>&lt;a {1} &gt;変体仮名&lt;/a&gt; なし</transl>
+    </text>
+    <text id="NoHent2">
+     <orig>{1|one=? character|many=? characters} without &lt;a {2} &gt;Hentaigana&lt;/a&gt;</orig>
+     <au-cmt>
+      <p>1=# of characters</p>
+      <p>2=technical tags</p>
+      <p>Test: Hiragana</p>
+     </au-cmt>
+     <transl>{1} 文字 &lt;a {2} &gt;変体仮名&lt;/a&gt; なし</transl>
     </text>
     <text id="Comp">
      <orig>String content</orig>
@@ -629,11 +639,11 @@
      </au-cmt>
      <text id="Name">
       <orig>Whitespace</orig>
-      <transl>空白</transl>
+      <transl>スペース</transl>
      </text>
      <text id="Short">
       <orig>Whitespace</orig>
-      <transl>空白</transl>
+      <transl>スペース</transl>
      </text>
      <text id="Text">
       <orig>
@@ -719,7 +729,7 @@
     <text id="Space">
      <orig>Space</orig>
      <au-cmt>Test: NBSP U+00A0</au-cmt>
-     <transl>空白</transl>
+     <transl>スペース</transl>
     </text>
    </group>
    <group id="Bullet">
@@ -2381,7 +2391,7 @@
      <transl>
       <p>さまざまな用途の矢印、幾何学的形状、「Wingdings」および「Webdings」フォントの文字、日本のテレビ シンボル、占星術のシンボル、評価の星、チェスのコメント。</p>
       <p />
-      <p>「ヘルシュライバーの休止記号」 は、ドイツの電信機で使用されていました。</p>
+      <p>「Hellschreiber の休止記号」 は、ドイツの電信機で使用されていました。</p>
      </transl>
     </text>
    </group>
@@ -2419,7 +2429,7 @@
       <p>Back in 2000 Georgian State Department of Information Technology and Catholicos Patriarch (head of the Georgian church) asked to encode Nushkhuri, and the Consortium came forward.</p>
      </orig>
      <transl>
-      <p>廃止された [[pt:minuscule|minuscule]] ジョージア文字 ''Nuskhuri''。文字は右に傾いており、非常に四角形です。頭文字はメインブロックから ''Asomtavruli'' で入力されました。</p>
+      <p>廃止された [[pt:minuscule|小文字]] ジョージア文字 ''Nuskhuri''。文字は右に傾いており、非常に四角形です。頭文字はメインブロックから ''Asomtavruli'' で入力されました。</p>
       <p />
       <p>2000 年にジョージア国情報技術局とカトリコス総主教 (ジョージア教会の長) が Nushkhuri のエンコードを依頼し、コンソーシアムが協力しました。</p>
      </transl>
@@ -2446,7 +2456,7 @@
      </orig>
      <transl>
       <p>エチオピア語の言語用文字 :</p>
-      <p>* Mekan: ナイル・サハラ語族、2007 年時点で 15 万語、2009 年からは [[ps:Latn|ラテン語] で表記。</p>
+      <p>* Mekan: ナイル・サハラ語族、2007 年時点で 15 万語、2009 年からは [[ps:Latn|ラテン語]] で表記。</p>
       <p>* Blin (=Bilen): クシ語族、2006 年時点で 91 万語、1990 年代からはラテン語で表記。</p>
       <p>* Bench: オモティック語族、2007 年時点で 35 万語、2008 年からはラテン語で表記。</p>
       <p>* Sebat Bet: エチオピアセム語派、2010 年時点で 150 万語。</p>
@@ -2466,7 +2476,7 @@
    <group id="2E00">
     <text id="Name">
      <orig>Punctuation — supplemental</orig>
-     <transl>補助句読点</transl>
+     <transl>句読点 補足</transl>
     </text>
     <text id="Text">
      <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
@@ -2519,7 +2529,7 @@
      <transl>
       <p>Unicode には、エンコードされていない [[ps:Hani|CJK 表意文字]] を記述するメカニズムがあります。これを行うには、どの部分に分割するか、各部分に何が含まれているかを指定します。このブロックは最初のものになります。</p>
       <p />
-      <p>すべての文字が表示され、レンダラーは通常、表意文字の外観を再現しません。Zhuang 文字 U+2DA21 {{smb|𭨡}} は {{sm|⿰書史}} と記述できます。Unicode{{_}}15.1 では、ブロックが完全に埋められ、1 つの文字が [[pk:31C0|CJK ストローク]] に割り当てられます。</p>
+      <p>すべての文字が表示され、レンダラーは通常、表意文字の外観を再現しません。古壮字 U+2DA21 {{smb|𭨡}} は {{sm|⿰書史}} と記述できます。Unicode{{_}}15.1 では、ブロックが完全に埋められ、1 つの文字が [[pk:31C0|CJK ストローク]] に割り当てられます。</p>
      </transl>
     </text>
    </group>
@@ -3088,7 +3098,7 @@
    <group id="FE10">
     <text id="Name">
      <orig>Vertical forms</orig>
-     <transl>縦書き形</transl>
+     <transl>縦書き形式</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6434,7 +6444,7 @@
    <group id="Hira">
     <text id="Name">
      <orig>Hiragana</orig>
-     <transl>平仮名</transl>
+     <transl>ひらがな</transl>
     </text>
     <text id="Lang">
      <orig>Japanese</orig>
@@ -6624,7 +6634,7 @@
    <group id="Kana">
     <text id="Name">
      <orig>Katakana</orig>
-     <transl>片仮名</transl>
+     <transl>カタカナ</transl>
     </text>
     <text id="Lang">
      <orig>Japanese {{nspk|Hira}}</orig>
@@ -9785,7 +9795,7 @@
     <au-cmt>Test: any space</au-cmt>
     <text id="Name">
      <orig>Separator/whitespace</orig>
-     <transl>区切り文字/空白</transl>
+     <transl>区切り文字/スペース</transl>
     </text>
     <text id="Text">
      <orig>
@@ -10206,7 +10216,7 @@
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
      <transl>
-      <p>[[ps:Hani|中国語の表意文字]] に近い文字のグループ。これには、音節 [[ps:Kana|片仮名]]、[[ps:Hira|平仮名]]、および [[pt:arguable|arguable]] タイプの [[ps:Hang|ハングル文字]] が含まれます。歴史上の{{-}}[[ps:Tang|西夏]]、[[ps:Kits|契丹]]、[[ps:Nshu|女書]]の中で。</p>
+      <p>[[ps:Hani|中国語の表意文字]] に近い文字のグループ。これには、音節 [[ps:Kana|カタカナ]]、[[ps:Hira|ひらがな]]、および [[pt:arguable|要議論]] タイプの [[ps:Hang|ハングル文字]] が含まれます。歴史上の{{-}}[[ps:Tang|西夏]]、[[ps:Kits|契丹]]、[[ps:Nshu|女書]]の中で。</p>
       <p />
       <p>CJKの特徴 :</p>
       <p>* 毛筆と墨で文字を書く（女書を除く）。;</p>
@@ -10548,13 +10558,13 @@
    <group id="space">
     <text id="Name">
      <orig>whitespace</orig>
-     <transl>空白</transl>
+     <transl>スペース</transl>
     </text>
    </group>
    <group id="spacing">
     <text id="Name">
      <orig>spacing character</orig>
-     <transl>空白文字</transl>
+     <transl>スペース文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -10677,7 +10687,7 @@
       <p>All emoji are [[pt:spacing|spacing]] characters.</p>
      </orig>
      <transl>
-      <p>日本語の {{sm|絵}} ''絵{{-}}絵画'' + {{sm|文字}} ''文字{{-}}キャラクター, 記号'' から。</p>
+      <p>日本語の {{sm|絵}} ''絵画'' + {{sm|文字}} ''キャラクター, 記号'' から。</p>
       <p />
       <p>携帯電話事業者 NTT DoCoMo が 1999 年頃に SMS の文字数を節約するために考案。欧米の事業者は 2004 年に独自のセットの開発を開始し、2010 年に DoCoMo のエンコードは Unicode{{_}}6.0 に導入されました。多くの絵文字は日本固有のものです。お辞儀をするビジネスマン {{em|😅}}、初心者ドライバーのサイン {{em|🔰}}… 日本国外で意味が変わったものもいくつかあります。最高学年の {{em|💯}} は「完全に同意」に変わりました。</p>
       <p />
@@ -11631,7 +11641,7 @@
     <au-cmt>hidden term, click any script</au-cmt>
     <text id="Name">
      <orig>script status</orig>
-     <transl>スクリプト ステータス</transl>
+     <transl>状態</transl>
     </text>
     <text id="Text">
      <orig>
