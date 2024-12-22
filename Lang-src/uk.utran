@@ -273,10 +273,20 @@
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
      <au-cmt>
+      <p>UNUSED and kept for that Japanese translator</p>
       <p>{1} = additional technical tags (e.g. href, style)</p>
       <p>Test: Hiragana</p>
      </au-cmt>
      <transl>без &lt;a {1} &gt;хентáйґани&lt;/a&gt;</transl>
+    </text>
+    <text id="NoHent2">
+     <orig>{1|one=? character|many=? characters} without &lt;a {2} &gt;Hentaigana&lt;/a&gt;</orig>
+     <au-cmt>
+      <p>1=# of characters</p>
+      <p>2=technical tags</p>
+      <p>Test: Hiragana</p>
+     </au-cmt>
+     <transl>{1|one=? символ|few=? символи|many=? символів} без &lt;a {1} &gt;хентáйґани&lt;/a&gt;</transl>
     </text>
     <text id="Comp">
      <orig>String content</orig>

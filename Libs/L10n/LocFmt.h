@@ -8,6 +8,7 @@
 // STL
 #include <string>
 #include <vector>
+#include <tuple>
 
 // Libs
 #include "u_Strings.h"
@@ -116,6 +117,13 @@ namespace loc {
         unsigned long long v;
     };
 
+    /// Preformatted integer: both string and integral value
+    template <class Ch, std::integral Int>
+    struct PreformN {
+        std::basic_string_view<Ch> str;
+        Int val;
+    };
+
     template <class Ch>
     class Fmt
     {
@@ -172,6 +180,9 @@ namespace loc {
         Fmt& operator() (Sv x)                 { ss(x); return *this; }
         Fmt& operator() ()                     { return *this; }
 
+        template <std::integral Int>
+        Fmt& operator() (const PreformN<Ch, Int>& x)  { preformN(x.str, x.val); }
+
         Fmt& emptyStr() { ss(Sv{}); return *this; }
 
         template <class First, class Second, class... Rest>
@@ -194,6 +205,12 @@ namespace loc {
         void eat(Ch x) { ss({&x, 1}); }
         void eat(Sv x) { ss(x); }
         void eat() {}
+        template <std::integral Int>
+        void eat(const PreformN<Ch, Int>& x)  { preformN(x.str, x.val); }
+
+        /// Can also eat tuples, dismantling them into separate params
+        template <class... T>
+        void eat(const std::tuple<T...>& x) { eatTup<0>(x); }
 
         /// Preformatted number: both preformatted string and numeric value
         void preformN(Sv preform, unsigned char x) { prefN(preform, static_cast<unsigned>(x)); }
@@ -226,6 +243,14 @@ namespace loc {
         template <std::integral T>
             void prefN(Sv sv, T x);
         void ss(Sv x);
+
+        template <size_t Index, class Tup>
+        inline void eatTup(const Tup& x) {
+            if constexpr (Index < std::tuple_size_v<Tup>) {
+                eat(std::get<Index>(x));
+                eatTup<Index + 1, Tup>(x);
+            }
+        }
     private:
         struct Kv {
             Sv key;

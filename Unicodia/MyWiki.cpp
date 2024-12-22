@@ -825,25 +825,26 @@ namespace {
                 std::forward<Args>(args)...);
     }
 
-    using Buf = char[150];     // should be enough
-
     // In Tahoma: 1px normal inter-char, 2px too bad, 3px some-what-OK, 4px normal space
     constinit const std::u8string_view NNBSP_RAW = u8"\u202F";
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
     constinit const std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
 
     template <std::integral T>
-    std::string_view formatNum(Buf& r, T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
+    std::u8string formatNum(T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
     {
-        Buf tmp;
+        char tmp[30];
         auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
         const char* end = q.ptr;
+        if (!end || end <= tmp)
+            throw std::logic_error("Strange end");
         const char* src = tmp;
-        char* dest = r;
+        std::u8string dest;
+        dest.reserve(end - src);
         // Minus
         if constexpr (std::is_signed_v<T>) {
             if (src != end && !std::isdigit(*src)) {
-                *(dest++) = *(src++);
+                dest += *(src++);
             }
         }
         constexpr auto PERIOD = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
@@ -851,20 +852,18 @@ namespace {
         auto length = end - src;
         if (length < fmt.minLength || length <= PERIOD) {
             // No formatting
-            dest = std::copy(src, end, dest);
-            *dest = 0;
-            return { r, dest };
+            dest.append(src, end);
+            return dest;
         }
         // Formatting
-        while (src != end) {
-            *(dest++) = *(src++);
+        while (src < end) {
+            dest += *(src++);
             --length;
             if (length != 0 && length % PERIOD == 0) {
-                dest = std::copy(space.begin(), space.end(), dest);
+                dest += space;
             }
         }
-        *dest = 0;
-        return { r, dest };
+        return dest;
     }
 
     template <std::integral T>
@@ -872,10 +871,8 @@ namespace {
                    const loc::Lang::Numfmt::Thousand& fmt,
                    std::u8string_view space)
     {
-        Buf tmp;
-        auto q = formatNum(tmp, x, fmt, space);
-        const auto bytes = QByteArray::fromRawData(tmp, q.length());
-        r.append(bytes);
+        auto q = formatNum(x, fmt, space);
+        r.append(str::toSv(q).data());
     }
 
     void Eng::appendNSpeakers(const TextLang& x)
@@ -1098,21 +1095,26 @@ namespace {
                        ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
 
-    template <class T>
+    template <class... T>
+    struct SpecText {
+        std::string_view id {};
+        std::tuple<T...> params;
+
+        std::string_view idOr(std::string_view x) const
+            { return id.empty() ? x : id; }
+    };
+
+    template <class T, class... U>
     inline void appendHeader(QString& text, const T& x,
-                             std::u8string_view addText = {},
-                             std::string_view qry = {})
+                             std::string_view qry = {},
+                             const SpecText<U...>& specText = {})
     {
         str::append(text, "<p><nobr><b>");
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
-        Buf buf;
-        auto sv = formatNum(buf, x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
-        str::append(text, loc::get("Prop.Head.NChars").preformNum(sv, x.nChars));
-        if (!addText.empty()) {
-            text += " ";
-            str::append(text, addText);
-        }
+        auto fmt = formatNum(x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+        loc::PreformN pref{ std::u8string_view{fmt}, x.nChars };
+        text += loc::get(specText.idOr("Prop.Head.NChars")).argQ(pref, specText.params);
         text += ')';
         if (!qry.empty()) {
             appendQuery(text, SCH_QRY_CHARS, qry);
@@ -1260,7 +1262,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, {}, str::cat("b=", x.id));
+    appendHeader(text, x, str::cat("b=", x.id));
 
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
@@ -1292,7 +1294,7 @@ QString mywiki::buildHtml(const uc::Category& x)
 {
     QString text;
     appendStylesheet(text);
-    appendHeader(text, x, {}, catQuery(x));
+    appendHeader(text, x, catQuery(x));
     str::append(text, "<p>");
     appendNoFont(text, x.loc.description);
     return text;
@@ -1424,12 +1426,13 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 QString mywiki::buildHtml(const uc::Script& x)
 {
     QString r;
-    std::u8string add;
+    SpecText<std::u8string_view> spec;
     if (x.id == "Hira"sv) {
-        add = loc::get("Prop.Head.NoHent").arg(u8"href='ps:Hent' class='popup'");
+        spec.id = "Prop.Head.NoHent2";
+        spec.params = std::make_tuple(u8"href='ps:Hent' class='popup'"sv);
     }
     appendStylesheet(r);
-    appendHeader(r, x, add, str::cat("s="sv, x.id));
+    appendHeader(r, x, str::cat("s="sv, x.id), spec);
     appendHtml(r, x, true);
     return r;
 }
@@ -1501,23 +1504,22 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
 void mywiki::appendCopyable(QString& text, unsigned x, std::string_view clazz)
 {
     char c[40];
-    Buf buf;
     snprintf(c, std::size(c), "%u", x);
-    formatNum(buf, x, loc::active::numfmt.thousand, SMALL_NBSP_HT);
-    appendCopyableHt(text, c, buf, clazz);
+    auto q = formatNum(x, loc::active::numfmt.thousand, SMALL_NBSP_HT);
+    appendCopyableHt(text, c, q.c_str(), clazz);
 }
 
 
 void mywiki::appendCopyableHt(
-        QString& text, const char* toCopy,
-        const char* toView, std::string_view clazz)
+        QString& text, std::string_view toCopy,
+        std::u8string_view toView, std::string_view clazz)
 {
     str::append(text, "<a href='c:"sv);
-        text += toCopy;
+        str::append(text, toCopy);
         str::append(text, "' class='"sv);
         str::append(text, clazz);
         str::append(text, "' >"sv);
-    text += toView;
+    str::append(text, toView);
     str::append(text, "</a>"sv);
 }
 
@@ -1723,9 +1725,8 @@ QString mywiki::toString(const uc::Numeric& numc, mywiki::NumPlace place)
         } break;
     }
     if (numc.altInt != 0) {
-        Buf tmp;
-        auto q = formatNum(tmp, numc.altInt, loc::active::numfmt.thousand, space);
-        buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), str::toU8sv(q)));
+        auto q = formatNum(numc.altInt, loc::active::numfmt.thousand, space);
+        buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), q));
     }
     return buf;
 }

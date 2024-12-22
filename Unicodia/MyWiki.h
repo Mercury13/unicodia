@@ -193,8 +193,8 @@ namespace mywiki {
     void appendCopyable(QString& text, unsigned x, std::string_view clazz="copy");
     /// @warning  Both toCopy and toView are raw HTML
     void appendCopyableHt(QString& text,
-                         const char* toCopy,
-                         const char* toView,
+                         std::string_view toCopy,
+                         std::u8string_view toView,
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void appendNoFont(QString& x, std::u8string_view wiki);
