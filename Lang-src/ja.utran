@@ -639,11 +639,11 @@
      </au-cmt>
      <text id="Name">
       <orig>Whitespace</orig>
-      <transl>スペース</transl>
+      <transl>空白</transl>
      </text>
      <text id="Short">
       <orig>Whitespace</orig>
-      <transl>スペース</transl>
+      <transl>空白</transl>
      </text>
      <text id="Text">
       <orig>
@@ -1430,7 +1430,7 @@
    <group id="02B0">
     <text id="Name">
      <orig>Spacing modifier letters</orig>
-     <transl>修飾文字のスペース</transl>
+     <transl>前進を伴う修飾文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -1441,7 +1441,7 @@
      <transl>
       <p>修飾文字は音声学や言語学で、音調、長さ、軟口蓋化、不完全発音、条件付き音素を伝えるために使用されます。英語の「car」は {{sm|[kɑːʳ]}} と表記され、最後の 2 文字は長さと条件付き {{t|r}} を意味する修飾文字です。</p>
       <p />
-      <p>このブロックには、発音区別符号の [[pt:spacing|スペース]] コピーもあります。</p>
+      <p>このブロックには、発音区別符号の [[pt:spacing|前進用]] コピーもあります。</p>
      </transl>
     </text>
    </group>
@@ -3071,7 +3071,7 @@
       <p />
       <p>32 個の位置 FDDx と DFEx は [[pt:noncharacter|非文字]] です。</p>
       <p />
-      <p>[[pt:spacing|スペース]] の母音記号も含まれています。</p>
+      <p>[[pt:spacing|前進用]] の母音記号も含まれています。</p>
       <p />
       <p>{{ArabPres2}}</p>
      </transl>
@@ -5972,7 +5972,7 @@
       <p />
       <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
-      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay isn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
       <p />
       <p>Vowels are marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
       <p />
@@ -6845,7 +6845,7 @@
      <transl>
       <p>マハグル・ティカ・ラム・ライが [[ps:Deva|デーヴァナーガリー]] に近い現地の文字から発明しました。1995 年にインドのシッキム州はバンタワ語 (「ライ」という名前ですが、より広い民族グループであり、「キラット」はさらに広い) を承認し、キラットを公式の文字にしました。</p>
       <p />
-      <p>ブラーフミー文字のアブギダですが、[[pt:ligature|合字]]、マーク上のマーク、その他の複雑なレンダリングはなく、すべての文字は通常の [[pt:spacing|スペース]] です。句読点記号「ダンダ」は {{t|ā}} と区別するために斜めになっているため、この文字はデーヴァナーガリーの一般的なインド語ではなく独自のダンダを使用しています。</p>
+      <p>ブラーフミー文字のアブギダですが、[[pt:ligature|合字]]、マーク上のマーク、その他の複雑なレンダリングはなく、すべての文字は通常の [[pt:spacing|前進用]] です。句読点記号「ダンダ」は {{t|ā}} と区別するために斜めになっているため、この文字はデーヴァナーガリーの一般的なインド語ではなく独自のダンダを使用しています。</p>
      </transl>
     </text>
    </group>
@@ -6923,7 +6923,7 @@
       <p>Unicode uses a dotted circle for empty place under mark. Laos traditionally use X mark that’s absent in Unicode. Sometimes [[ps:Latn|Latin]] “x” is used instead.</p>
      </orig>
      <transl>
-      <p>ラオス文字は14世紀に標準化されました。[[ps:Thai|タイ語]]と同様に、[[ps:Khmr|クメール語]]に由来しています。1960年に共産主義者によって行われた改革の後、固有の母音と[[pt:virama|ヴィラマ]]は消え、ラオスは最後のアブギダ記号を保持しました。母音の書き方の複雑な規則: {{sm|ເກົ້າ}} ''kao'' “9”。ラオス語は声調であり、ここでは3文字の母音記号と{{sm|ກ}}子音の上の音調の両方が見られます。多くの母音記号は、歴史的な理由により、通常の[[pt:spacing|スペース]]文字です。</p>
+      <p>ラオス文字は14世紀に標準化されました。[[ps:Thai|タイ語]]と同様に、[[ps:Khmr|クメール語]]に由来しています。1960年に共産主義者によって行われた改革の後、固有の母音と[[pt:virama|ヴィラマ]]は消え、ラオスは最後のアブギダ記号を保持しました。母音の書き方の複雑な規則: {{sm|ເກົ້າ}} ''kao'' “9”。ラオス語は声調であり、ここでは3文字の母音記号と{{sm|ກ}}子音の上の音調の両方が見られます。多くの母音記号は、歴史的な理由により、通常の[[pt:spacing|前進用]]文字です。</p>
       <p />
       <p>単語間にスペースはありません。タイ語と同様に、文字は [[pt:acrophonic|頭音記号]] で、適切な単語で名前が付けられます。{{sm|ບ}} は「bo-be」または単に「be」（ヤギ）です。文字 {{sm|ຣ}} (r) は黙字になったか「L」に変わり、正書法から消え、外国人名にのみ残りました。</p>
       <p />
@@ -7410,10 +7410,10 @@
       <p>この文字は [[ps:Deva|デーヴァナーガリー]] と関連があるが、はるかに [[pt:cursive|筆記体]] に近い。起源については 2 つの標準的な説がある。外交官兼大臣のヘマードリ・パンディット (約 1260 年) と外交官のカンデラオ・バラル (約 1700 年) である。1950 年代までデーヴァナーガリーと共に使用され、その後、少なくとも 1800 年以降存在していたデーヴァナーガリーの筆記体である「バルボド」(文字通り「子供にもわかる」) がマラーティー語の標準文字と宣言された。モディの復活は 21 世紀に始まった。</p>
       <p />
       <p>見出しは通常、書く前に罫線が引かれ、スペースはほとんど見られない。接続詞では、子音の 1 つ (通常は最初の子音) が単に短縮される。子音接続の[[pt:ligature|合字]]は{{t|ksə}}と{{t|trə}}の2つだけです。</p>
-      <p>: kə {{sm|𑘎}} + ヴィラマ {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
-      <p>: kə {{sm|𑘎}} + ヴィラマ {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
       <p>しかし、母音記号を付加する方法はかなり奇妙で、それ自体が合字を形成します。</p>
-      <p>: gə {{sm|𑘐}} + ウー {{sm|◌𑘴}} = グ {{sm|𑘐𑘴}}</p>
+      <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
       <p>[[pt:virama|ヴィラマ]] はマラーティー語では決して使用されません。ヴィラマのように見える下の記号は、実際には {{t|r}} との合字です:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </transl>
@@ -8037,7 +8037,7 @@
       <p>フォントでは、行に書くために通常90°左に回転して描かれます。通常のアルファベットの文字のように、文字は次々に書かれます。音節内の文字は結合され、音節間のスペースは狭くなります。母音 {{t|a}} は固有であり、最初の文字の場合にのみ書かれます。</p>
       <p>: {{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol</p>
       <p />
-      <p>3 つのスタイルが存在しました: 本 (メイン)、篆書 (印章に使用されていた古い中国の書道を模倣)、およびチベット語 ([[ps:Marc|Marchen]] に似ています)。</p>
+      <p>3 つのスタイルが存在しました: 本 (メイン)、篆書 (印章に使用されていた古い中国の書道を模倣)、およびチベット語 ([[ps:Marc|マーチェン文字]] に似ています)。</p>
       <p />
       <p>すべての標本で数字は綴られています。ほとんどの標本には句読点がありません。一部の標本では、モンゴル語の​​記号または U+3002 で統一された中丸の終止符が使用されていました。</p>
      </transl>
@@ -9604,7 +9604,7 @@
     </text>
     <text id="Text">
      <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
-     <transl>非スペーシング マーク (たとえば、アクセント á) は、ゼロ幅文字として設計されているため、この名前が付けられています。優れたフォントでは、デザイナーが最も一般的な文字に手動でマークを配置します。ただし、このような組み合わせが予測されていない場合 (8́)、マークはランダムに配置され、結果は決して見栄えの良いものではありません。</transl>
+     <transl>非前進用 マーク (たとえば、アクセント á) は、ゼロ幅文字として設計されているため、この名前が付けられています。優れたフォントでは、デザイナーが最も一般的な文字に手動でマークを配置します。ただし、このような組み合わせが予測されていない場合 (8́)、マークはランダムに配置され、結果は決して見栄えの良いものではありません。</transl>
     </text>
    </group>
    <group id="Nd">
@@ -9795,7 +9795,7 @@
     <au-cmt>Test: any space</au-cmt>
     <text id="Name">
      <orig>Separator/whitespace</orig>
-     <transl>区切り文字/スペース</transl>
+     <transl>区切り文字/空白</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9807,7 +9807,7 @@
       <p />
       <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
      </orig>
-     <transl>空白を残すための文字です。適切にタイプセットされたテキストには、必要なだけのスペースがあります。146%{{-}} は少なすぎ、146{{_}}%{{-}} は多すぎ、{{%|146}}{{-}} はちょうどよいです。スペースも異なるのはこのためです。スペースの一部は改行不可です。両端揃えのテキストでは引き伸ばされず、次の行に折り返されません。</transl>
+     <transl>スペースを残すための文字です。適切にタイプセットされたテキストには、必要なだけのスペースがあります。146%{{-}} は少なすぎ、146{{_}}%{{-}} は多すぎ、{{%|146}}{{-}} はちょうどよいです。スペースも異なるのはこのためです。スペースの一部は改行不可です。両端揃えのテキストでは引き伸ばされず、次の行に折り返されません。</transl>
     </text>
    </group>
   </group>
@@ -10323,7 +10323,7 @@
       <p>* virama は文字 {{-}} [[ps:Talu|新タイ゠ロ文字]] を持つ単一の実体である可能性がある。;</p>
       <p>* 「余分な」子音を書くことができない{{-}}[[ps:Bugi|ブギ文字]].</p>
       <p />
-      <p>ほとんどのヴィラマは[[pt:combining|結合記号]]です。しかし、いくつかは[[pt:spacing|スペース]]です（[[ps:Java|ジャワ文字]]）。</p>
+      <p>ほとんどのヴィラマは[[pt:combining|結合記号]]です。しかし、いくつかは[[pt:spacing|前進用]]です（[[ps:Java|ジャワ文字]]）。</p>
       <p />
       <p>いくつかの文字 ([[ps:Khar|カロシュティー文字]]、[[ps:Mtei|メイテイ・マエク文字]]) には、合字を組み立てるための「仮想ヴィラマ」があります。時には ([[ps:Sund|スンダ文字]]、[[ps:Cakm|チャクマ文字]])、可視のヴィラマと組み合わせることもあります。仮想ヴィラマは十字架のように見えますが、通常のテキストで可視のままにしておくのは間違いです。</p>
      </transl>
@@ -10434,7 +10434,7 @@
       <p>* 複雑な [[pk:1BCA0|省略形]] と [[pk:1D100|音楽]] の書式設定に使用する文字。</p>
       <p />
       <p>これらの文字はデフォルトで無視できません:</p>
-      <p>* すべてグラフィック形式であり、すべて [[pt:spacing|スペース]] です。</p>
+      <p>* すべてグラフィック形式であり、すべて [[pt:spacing|前進用]] です。</p>
       <p>* [[pt:control|制御文字]]、行区切り。</p>
       <p>* 黙ってスキップすることが不可能なフォント メカニズムで機能する文字{{-}}たとえば、仮想 [[pt:virama|ヴィラマ]]。ヴィラマ が消えると、「kta」は「kata」に変わります。</p>
       <p>* [[ps:Egyp|エジプトの象形文字]]の複雑な書式設定用の文字。</p>
@@ -10473,7 +10473,7 @@
       <p>* [[pt:abjad|子音]] 文字と [[pt:abugida|アブギダ]] 文字の母音記号;</p>
       <p>* フォント内の [[pt:ligature|合字]] を使用したさまざまな「ハック」: たとえば、文字 + 異体字セレクタ = 他の形状の文字。</p>
       <p />
-      <p>Unicode では、マークを [[pt:spacing|スペース]]、非スペース、囲みに分類します。</p>
+      <p>Unicode では、マークを [[pt:spacing|前進用]]、非スペース、囲みに分類します。</p>
       <p />
       <p>結合記号は、最も美しいものから順に、フォントにいくつかの方法で配置されます。:</p>
       <p>* 合字: マークされた文字用の特別な [[pt:character|グリフ]]。</p>
@@ -10511,7 +10511,7 @@
       <p />
       <p>2. フォント{{-}}[[pt:character|グリフ]]は、複数の[[pt:codepoint|コードポイント]]のシーケンスを意味します。たとえば、一部のフォントでは、「fi」と入力すると、合字は'''ﬁ'''になります。[[pt:brahmic|ブラーフミー文字]]には、このような合字が多数あります。</p>
       <p />
-      <p>すべての合字は [[pt:spacing|スペース]] 文字です。</p>
+      <p>すべての合字は [[pt:spacing|前進用]] 文字です。</p>
       <p />
       <p>[[pt:casefolding|大文字小文字の変換]] は合字を分割する可能性があります。</p>
      </transl>
@@ -10551,20 +10551,20 @@
       <p />
       <p>広い意味では、事前構成された文字は、スタイルを使用して表示できる文字のシーケンスですが、単一の文字としてエンコードされます{{-}}、たとえば、分数 &lt;big&gt;½&lt;/big&gt;。</p>
       <p />
-      <p>すべての合成文字は [[pt:spacing|スペース]] です。[[pt:normalization|正規化]] も参照してください。</p>
+      <p>すべての合成文字は [[pt:spacing|前進用]] です。[[pt:normalization|正規化]] も参照してください。</p>
      </transl>
     </text>
    </group>
    <group id="space">
     <text id="Name">
      <orig>whitespace</orig>
-     <transl>スペース</transl>
+     <transl>空白</transl>
     </text>
    </group>
    <group id="spacing">
     <text id="Name">
      <orig>spacing character</orig>
-     <transl>スペース文字</transl>
+     <transl>前進用文字</transl>
     </text>
     <text id="Text">
      <orig>
@@ -10575,11 +10575,11 @@
       <p>Non-spacing are [[pt:control|control characters]], [[pt:format|format characters]] and other types of marks.</p>
      </orig>
      <transl>
-      <p>行内のスペースを占める文字。</p>
+      <p>行内で一定の幅を占める文字。</p>
       <p />
-      <p>スペースには、文字、[[pt:number|数字]]、句読点、[[pt:space|空白]]、その他の記号、スペース[[pt:combining|結合記号]]が含まれます。</p>
+      <p>前進用文字には、文字、[[pt:number|数字]]、句読点、[[pt:space|空白]]、その他の記号、前進用[[pt:combining|結合記号]]が含まれます。</p>
       <p />
-      <p>非スペース文字は、[[pt:control|制御文字]]、[[pt:format|書式文字]]、およびその他の種類のマークです。</p>
+      <p>非前進用文字は、[[pt:control|制御文字]]、[[pt:format|書式文字]]、およびその他の種類のマークです。</p>
      </transl>
     </text>
    </group>
@@ -10601,7 +10601,7 @@
       <p />
       <p>現代のグラフィック オペレーティング システムでは、これらの文字は意味を持ちません。実際のグラフィックが使用可能で、ほとんどのフォントは比例しており、線は正確にリンクしていません。しかし、今日でもテキスト コンソールは存在し、その内部には疑似グラフィックが含まれています。</p>
       <p />
-      <p>すべての疑似グラフィック文字は [[pt:spacing|スペース]] です。</p>
+      <p>すべての疑似グラフィック文字は [[pt:spacing|前進用]] です。</p>
      </transl>
     </text>
    </group>
@@ -10693,7 +10693,7 @@
       <p />
       <p>2010 年以前の古い絵文字のいくつかは、U+FE0F 文字 (別名 ''variation selector 16) でのみ絵文字として表示されることが保証されています。</p>
       <p />
-      <p>すべての絵文字は [[pt:spacing|スペース]] 文字です。</p>
+      <p>すべての絵文字は [[pt:spacing|前進用]] 文字です。</p>
      </transl>
     </text>
    </group>
