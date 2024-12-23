@@ -116,6 +116,7 @@ HEADERS += \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
     CharPaint/emoji.h \
+    LocDefs.h \
     Search/defs.h \
     Search/engine.h \
     Search/nonAscii.h \

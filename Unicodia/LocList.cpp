@@ -35,7 +35,7 @@ loc::Lang* loc::currLang = nullptr;
 
 loc::Lang::Icons loc::active::icons;
 loc::Lang::Numfmt loc::active::numfmt;
-bool loc::active::showEnglishTerms = false;
+loc::EngTerms loc::active::engTerms = loc::EngTerms::OFF;
 
 
 ///// CustomRule ///////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ void loc::Lang::forceLoad()
     // Active
     active::icons = icons;
     active::numfmt = numfmt;
-    active::showEnglishTerms = showEnglishTerms;
+    active::engTerms = engTerms;
 
     // loc::FmtL locale
     loc::activeFmtLocale = currLang;
@@ -159,7 +159,11 @@ namespace {
         auto hLocale = doc.child("locale");
         r.name.native = str::toU8(hLocale.attribute("native").as_string());
         r.name.international = str::toU8(hLocale.attribute("international").as_string());
-        r.showEnglishTerms = hLocale.attribute("eng-terms").as_bool(true);
+
+        unsigned et = hLocale.attribute("eng-terms").as_uint(static_cast<int>(loc::EngTerms::NORMAL));
+        if (et > static_cast<unsigned>(loc::EngTerms::MAX))
+            et = static_cast<unsigned>(loc::EngTerms::NORMAL);
+        r.engTerms = static_cast<loc::EngTerms>(et);
 
         mojibake::simpleCaseFold(r.name.international, r.name.sortKey);
 

@@ -36,6 +36,7 @@ namespace {
         // OK: translateMe requires currLang
         uc::finishTranslation(
                     loc::currLang->sortOrder,
+                    loc::currLang->engTerms,
                     loc::currLang->ellipsis.blocks,
                     loc::currLang->alphaFixup);
         mywiki::translateDatingLoc();

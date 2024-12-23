@@ -2253,9 +2253,18 @@ QString mywiki::buildNonCharHtml(char32_t code)
 
 bool mywiki::isEngTermShown(const uc::Term& term)
 {
-    return loc::active::showEnglishTerms        // language explicitly permits
-        && !term.engName.empty()                // and English name present
-        && (term.engName != term.loc.name);     // and different from L10n name
+    switch (loc::active::engTerms) {
+    case loc::EngTerms::OFF:
+        return false;
+    case loc::EngTerms::NORMAL:
+        if (term.fgs.have(uc::Tfg::SORT_KEY))
+            return false;
+        [[fallthrough]];
+    case loc::EngTerms::SORT_KEY:
+        return !term.engName.empty()            // and English name present
+            && (term.engName != term.loc.name); // and different from L10n name
+    }
+    __builtin_unreachable();
 }
 
 

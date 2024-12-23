@@ -21,6 +21,9 @@
 #include "UcDating.h"
 #include "UcContinents.h"
 
+// L10n
+#include "LocDefs.h"
+
 class QIcon;
 
 constexpr char32_t NO_TRIGGER = 0xDEADBEEF;
@@ -984,13 +987,13 @@ namespace uc {
     const Block* blockOf(char32_t subj);
     inline const uc::Block& uc::Cp::block() const { return *blockOf(subj); }
 
-    enum class EcTermCat {
+    enum class EcTermCat : unsigned char {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM,
         PRINCIPLES, WRITING_STYLE, INPUT, OTHER, NN,
         HIDDEN = NN
     };
 
-    enum class SortTerms { NO, YES };
+    enum class SortTerms : unsigned char { NO, YES };
 
     struct TermCat
     {
@@ -1008,6 +1011,11 @@ namespace uc {
         bool isNumber = false;
     };
 
+    enum class Tfg : unsigned char {
+        SORT_KEY = 1,   ///< [+] show if it’s a sort key
+                        ///< @warning  The programmer should manually set it if the category sorts terms
+    };
+
     struct Term
     {
         std::string_view key;
@@ -1015,6 +1023,7 @@ namespace uc {
         std::u8string_view engName;
         std::string_view borrowedDesc {};
         EcFont ecFont = EcFont::NORMAL;
+        Flags<Tfg> fgs = NO_FLAGS;
         TermSearch search {};
         struct Loc {
             std::u8string_view name;
@@ -1086,6 +1095,7 @@ namespace uc {
 
     void finishTranslation(
             const std::unordered_map<char32_t, int>& sortOrder,
+            loc::EngTerms engTerms,
             std::u32string_view ellipsisBlocks,
             const std::unordered_map<char32_t, std::u32string>& alphaFixup);
 

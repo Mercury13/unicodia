@@ -9,6 +9,9 @@
 #include "u_Vector.h"
 #include "LocFmt.h"
 
+// L10n
+#include "LocDefs.h"
+
 class QTranslator;
 
 namespace loc
@@ -23,12 +26,6 @@ namespace loc
         loc::Plural defaultOutcome = loc::Plural::OTHER;
 
         Plural ofUint(unsigned long long n) const override;
-    };
-
-    enum class EngTerm : unsigned char {
-        OFF = 0,        ///< Mainly English
-        NORMAL = 1,     ///< Most other languages
-        SORT_KEY = 2,   ///< Special mode when do not want to sort by Kana
     };
 
     struct Lang final : public loc::Locale
@@ -63,7 +60,7 @@ namespace loc
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
-        bool showEnglishTerms = true;
+        EngTerms engTerms = EngTerms::NORMAL;
         std::unique_ptr<QTranslator> translator;
         std::map<std::string, std::string, std::less<>> wikiTemplates;
         std::unordered_map<char32_t, int> sortOrder;
@@ -84,7 +81,7 @@ namespace loc
     namespace active {
         extern Lang::Icons icons;
         extern Lang::Numfmt numfmt;
-        extern bool showEnglishTerms;
+        extern EngTerms engTerms;
     }
 
     using VLang = SafeVector<std::unique_ptr<Lang>>;

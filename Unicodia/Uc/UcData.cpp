@@ -251,18 +251,21 @@ constinit const uc::TermCat uc::termCats[] {
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 
 constinit const uc::Term uc::terms[] {
+    // Input — not sorted, OK
     { "winemoji", EcTermCat::INPUT, {} },
     { "altcode", EcTermCat::INPUT, u8"Alt codes" },
     { "appentry", EcTermCat::INPUT, {} },
     { "birman", EcTermCat::INPUT, {} },
 
+    // Script classes sorted
     { "hiero", EcTermCat::SCRIPT_CLASS, u8"ideographic script" },
     { "abjad", EcTermCat::SCRIPT_CLASS, u8"consonant script, abjad" },
     { "syllabic", EcTermCat::SCRIPT_CLASS, u8"syllabic script" },
     { "abugida", EcTermCat::SCRIPT_CLASS, u8"abugida", {}, EcFont::ETHIOPIC },
     { "brahmic", EcTermCat::SCRIPT_CLASS, u8"Brahmic abugida, Indic script", {}, EcFont::DEVANAGARI_SYSTEM },
     { "alphabet", EcTermCat::SCRIPT_CLASS, u8"alphabet script" },
-    { "arguable", EcTermCat::SCRIPT_CLASS, {} },
+    { .key = "arguable", .ecCat = EcTermCat::SCRIPT_CLASS,
+                .engName = u8"script of arguable type", .fgs = Tfg::SORT_KEY },
     { "cjk", EcTermCat::SCRIPT_CLASS, u8"CJK = Chinese, Japanese, Korean" },
     { "code", EcTermCat::SCRIPT_CLASS, u8"codes and shorthand" },
     { "nontext", EcTermCat::SCRIPT_CLASS, u8"non-text notation" },
@@ -270,25 +273,28 @@ constinit const uc::Term uc::terms[] {
     { "acrophonic", EcTermCat::CHAR_CLASS, u8"acrophonic character" },
     { "virama", EcTermCat::CHAR_CLASS, u8"virama", {}, EcFont::DEVANAGARI_SYSTEM },
     { "graphic", EcTermCat::CHAR_CLASS, u8"graphic character, printable character" },
-    { "deprecated", EcTermCat::CHAR_CLASS, u8"deprecated character", {}, {},
-            { .fgs = uc::Cfg::U_DEPRECATED } },
-    { "ignorable", EcTermCat::CHAR_CLASS, u8"default-ignorable character", {}, {},
-            { .fgs = uc::Cfg::U_DEF_IGNORABLE } },
-    { "combining", EcTermCat::CHAR_CLASS, u8"combining mark", {}, {},
-            { .ecUpCat = uc::EcUpCategory::MARK } },
+    { .key = "deprecated", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"deprecated character",
+            .search { .fgs = uc::Cfg::U_DEPRECATED } },
+    { .key = "ignorable", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"default-ignorable character",
+            .search { .fgs = uc::Cfg::U_DEF_IGNORABLE } },
+    { .key = "combining", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"combining mark",
+            .search { .ecUpCat = uc::EcUpCategory::MARK } },
     { "ligature", EcTermCat::CHAR_CLASS, u8"ligature" },
     { "precomposed", EcTermCat::CHAR_CLASS, u8"precomposed character" },
-    { "space", EcTermCat::CHAR_CLASS, u8"whitespace", { "CharCat.Zs.Text" }, {},
-            { .ecCategory = uc::EcCategory::SEPARATOR_SPACE } },
+    { .key = "space", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"whitespace",
+            .borrowedDesc = { "CharCat.Zs.Text" },
+            .search { .ecCategory = uc::EcCategory::SEPARATOR_SPACE } },
     { "spacing", EcTermCat::CHAR_CLASS, u8"spacing character" },
     { "pseudographics", EcTermCat::CHAR_CLASS, u8"pseudographics, semigraphics, box drawing" },
-    { "control", EcTermCat::CHAR_CLASS, u8"control character", { "CharCat.Cc.Text" }, {},
-            { .ecCategory = uc::EcCategory::CONTROL} },
+    { .key = "control", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"control character",
+            .borrowedDesc = { "CharCat.Cc.Text" },
+            .search { .ecCategory = uc::EcCategory::CONTROL} },
     { "obsolete", EcTermCat::CHAR_CLASS, u8"obsolete character" },
-    { "format", EcTermCat::CHAR_CLASS, u8"format character", { "CharCat.Cf.Text" }, {},
-            { .ecCategory = uc::EcCategory::FORMAT } },
-    { "number", EcTermCat::CHAR_CLASS, u8"number character", {}, {},
-            { .isNumber = true } },
+    { .key = "format", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"format character",
+            .borrowedDesc = { "CharCat.Cf.Text" },
+            .search { .ecCategory = uc::EcCategory::FORMAT } },
+    { .key = "number", .ecCat = EcTermCat::CHAR_CLASS, .engName = u8"number character",
+            .search { .isNumber = true } },
     { "emoji", EcTermCat::CHAR_CLASS, u8"emoji" },
 
     { "stability", EcTermCat::PRINCIPLES, u8"stability guarantees" },
@@ -302,21 +308,27 @@ constinit const uc::Term uc::terms[] {
     { "unification", EcTermCat::PRINCIPLES, u8"unification" },
     { "efficiency", EcTermCat::PRINCIPLES, u8"efficiency" },
 
-    { "ascii", EcTermCat::ENCODING, u8"ASCII", { "Block.0000.Text" } },
+    // Encoding sorted
+    { .key = "ascii", .ecCat = EcTermCat::ENCODING, .engName = u8"ASCII",
+            .borrowedDesc { "Block.0000.Text" } },
     { "bmp", EcTermCat::ENCODING, u8"BMP = Basic Multilingual Plane" },
     { "noncharacter", EcTermCat::ENCODING, u8"non-character" },
     { "codepoint", EcTermCat::ENCODING, u8"code point" },
     { "latin1", EcTermCat::ENCODING, u8"Latin-1", { "Block.0080.Text" } },
     { "plane", EcTermCat::ENCODING, u8"plane" },
     { "private", EcTermCat::ENCODING, u8"private-use character" },
-    { "reject", EcTermCat::ENCODING, {} },
-    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner", {}, EcFont::DEVANAGARI_SYSTEM },
-    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner", {}, EcFont::DEVANAGARI_SYSTEM },
+    { .key = "reject", .ecCat = EcTermCat::ENCODING, .engName = u8"rejected proposals",
+            .fgs = Tfg::SORT_KEY },
+    { .key = "zwj", .ecCat = EcTermCat::ENCODING, .engName = u8"ZWJ = zero width joiner",
+            .ecFont = EcFont::DEVANAGARI_SYSTEM },
+    { .key = "zwnj", .ecCat = EcTermCat::ENCODING, .engName = u8"ZWNJ = zero width non-joiner",
+            .ecFont = EcFont::DEVANAGARI_SYSTEM },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
     { "casefolding", EcTermCat::ALGORITHM, u8"case folding" },
 
+    // Serialization unsorted
     { "serialization", EcTermCat::SERIALIZATION, u8"serialization" },
     { "punycode", EcTermCat::SERIALIZATION, u8"Punycode", },
     { "utf7", EcTermCat::SERIALIZATION, u8"UTF-7" },
@@ -1590,6 +1602,7 @@ namespace {
 
 void uc::finishTranslation(
         const std::unordered_map<char32_t, int>& sortOrder,
+        loc::EngTerms engTerms,
         std::u32string_view ellipsisBlocks,
         const std::unordered_map<char32_t, std::u32string>& alphaFixup)
 {
@@ -1683,9 +1696,11 @@ void uc::finishTranslation(
         term.loc.name = loc::get(c);
 
         // Build sort key
-        /// @todo [future] Terms have no telltales, and no sorting clues
+        // Terms have no telltales, but for some languages we show English terms more aggressively
         Block::Loc::Telltales dummyTelltales;
-        buildSortKey(term.loc.name, SpecialSort::YES, sortOrder,
+        std::u8string_view sortName = (engTerms == loc::EngTerms::SORT_KEY)
+                ? term.engName : term.loc.name;
+        buildSortKey(sortName, SpecialSort::YES, sortOrder,
                      term.loc.sortKey, dummyTelltales);
 
         // Get desc
