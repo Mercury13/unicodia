@@ -3118,7 +3118,7 @@
    </group>
    <group id="1B130">
     <text id="Name">
-     <orig>Kana — small extension</orig>
+     <orig>Small kana extension</orig>
     </text>
     <text id="Text">
      <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding characters of [[ps:Hira|Hiragana]] are added.</orig>
