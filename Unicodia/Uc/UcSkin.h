@@ -9,6 +9,10 @@ constexpr QColor FG_CJK { 0x5c, 0x35, 0x66 };     // Icon FG: Tango dark violet
 constexpr QColor FRAME_CJK = TX_CJK;              // Format frame — same medium violet
 
 // Africa
+//constexpr QColor BG_ASIA_R { 0xFF, 0xF7, 0x1B };  // Nice colour: lemon
+//constexpr QColor BG_ASIA_R { 0xff, 0xff, 0x83 };  // Nice colour: used to be
+constexpr QColor BG_ASIA_R { 0xFF, 0xFF, 0xA0 };  // Icon Asia ←
+constexpr QColor BG_ASIA_L { 0xFF, 0xFE, 0xC0 };  // Icon Asia →
 constexpr QColor BG_AFRICA { 0xf5, 0xde, 0xb3 };  // Icon BG: wheat
 constexpr QColor FG_AFRICA { 0x77, 0x44, 0x21 };  // Icon FG: IDK where took, very chocolate-y
 constexpr QColor CO_AFRICA { 0xFF, 0xEE, 0xD1 };  // Cell BG: wheat but lighter

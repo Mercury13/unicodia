@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    sodipodi:docname="1ED00.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -29,8 +29,8 @@
      width="16mm"
      units="px"
      inkscape:zoom="22.627417"
-     inkscape:cx="-7.6013979"
-     inkscape:cy="8.0433396"
+     inkscape:cx="10.054175"
+     inkscape:cy="8.0654367"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -48,12 +48,15 @@
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" /></sodipodi:namedview><defs
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" /></sodipodi:namedview><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"><path
        d="M 12.062045,9.882777 C 12.899861,9.7000707 13.222935,9.5638581 14.605499,8.9665818 14.735173,9.1023138 14.8,9.3059137 14.8,9.5773784 c 0,0.7241286 -0.18908,0.7755916 -1.391419,1.1028276 -0.06136,0.01776 -3.9174886,1.119795 -6.2539058,1.119795 -0.9702186,0 -2.9515502,-0.366456 -2.9515502,-3.3084835 0,-0.4976813 0.029923,-0.9388125 0.089768,-1.3233935 C 4.0201833,7.2840901 1.2,8.0796639 1.2,6.3197948 1.8721722,6.2478854 3.4466417,6.0339637 4.7716616,5.6241646 L 5.2354682,5.9634964 C 5.113906,6.3495033 3.9552237,10.391774 7.3192517,10.391774 c 0.5226589,0 1.4795662,-0.07524 2.1843784,-0.220565 -0.117851,-0.08352 -0.8976898,-0.6742399 -0.8976898,-1.6796915 0,-1.4556635 1.0902456,-3.2915174 2.3938407,-3.2915174 0.572201,0 1.103906,0.2148987 2.094607,1.2046271 L 12.825082,6.9475585 C 12.062294,6.6231722 11.816027,6.5573266 11.373817,6.5573266 c -0.628384,0 -1.266745,0.2092485 -1.9150714,0.6277635 0,1.3721387 0.8591894,2.5877943 2.6032994,2.6976869 z"
        id="path305"
-       style="fill:#f57900;stroke:#f57900;stroke-width:0.399999;stroke-dasharray:none"
+       style="fill:#c09300;stroke:#c09300;stroke-width:0.399999;stroke-dasharray:none;fill-opacity:1;stroke-opacity:1"
        sodipodi:nodetypes="ccscssccccscssccscc" /></g></svg>

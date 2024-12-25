@@ -364,9 +364,9 @@ constinit const uc::Continent uc::continentInfo[] {
     // Europe
     { { BG_EUROPE,            FG_EUROPE,           }, { NO_COLOR, NO_COLOR }, false  },
     // Asia RtL
-    { { { 0xFF, 0xE9, 0x7F }, { 0xf5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_ASIA_R,            { 0xC0, 0x93, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
     // Asia
-    { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_ASIA_L,            { 0xf5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
     // CJK
     { { BG_CJK,               FG_CJK               }, { BG_CJK,  TX_CJK    }, false  },
     // Ocean
