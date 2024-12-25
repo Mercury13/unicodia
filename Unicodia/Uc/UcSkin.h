@@ -10,9 +10,9 @@ constexpr QColor FRAME_CJK = TX_CJK;              // Format frame — same mediu
 
 // Africa
 //constexpr QColor BG_ASIA_R { 0xFF, 0xF7, 0x1B };  // Nice colour: lemon
-//constexpr QColor BG_ASIA_R { 0xff, 0xff, 0x83 };  // Nice colour: used to be
-constexpr QColor BG_ASIA_R { 0xFF, 0xFF, 0xA5 };  // Icon Asia ←
-constexpr QColor BG_ASIA_L { 0xFF, 0xFE, 0xC0 };  // Icon Asia →
+constexpr QColor BG_ASIA_R { 0xFC, 0xE9, 0x4F };  // Icon Asia ←: Tango yellow
+constexpr QColor FG_ASIA_R { 0x9E, 0x6F, 0x00 };  // Same, FG: some golden-brown
+constexpr QColor BG_ASIA_L { 0xff, 0xff, 0x83 };  // Icon Asia →
 constexpr QColor BG_AFRICA { 0xf5, 0xde, 0xb3 };  // Icon BG: wheat
 constexpr QColor FG_AFRICA { 0x77, 0x44, 0x21 };  // Icon FG: IDK where took, very chocolate-y
 constexpr QColor CO_AFRICA { 0xFF, 0xEE, 0xD1 };  // Cell BG: wheat but lighter
