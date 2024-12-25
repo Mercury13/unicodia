@@ -511,7 +511,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Hani, EcFont::CJK_SYMBOLS,
                     Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::NO_EMOJI },
     // Hiragana OK, installed small version of Noto CJK Korean
-    { 0x3040, 0x309F, { L'ぢ', EcContinent::CJK },
+    { 0x3040, 0x309F, { L'あ', EcContinent::CJK },
             "Hiragana",
             { EcScript::Hira, 0 }, MapType::CJ_OTHER, EcScript::Hira },
     // Katakana OK, not collapsible: syllabary
