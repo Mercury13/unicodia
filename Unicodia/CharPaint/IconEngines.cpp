@@ -6,6 +6,7 @@
 #include <QStyle>
 #include <QStyleOption>
 #include <QSvgRenderer>
+#include <QFile>
 
 // Utils
 #include "u_Qstrings.h"
@@ -369,16 +370,48 @@ void ie::Murky::paint1(QPainter *painter, const QRect &rect, qreal)
 }
 
 
+///// IconPalette //////////////////////////////////////////////////////////////
+
+struct IconPalette {
+    QColor fg;
+
+    QByteArray repaintFile(const QString& fname);
+    static void replaceColor(
+            QByteArray& content, std::string_view what, const QColor& byWhat);
+};
+
+
+void IconPalette::replaceColor(
+        QByteArray& content, std::string_view what, const QColor& byWhat)
+{
+    char buf[20];
+    auto length = snprintf(buf, std::size(buf), "#%02x%02x%02x", byWhat.red(), byWhat.green(), byWhat.blue());
+    content.replace(what.data(), what.size(), buf, length);
+}
+
+
+QByteArray IconPalette::repaintFile(const QString& fname)
+{
+    QFile file(fname);
+    file.open(QIODeviceBase::ReadOnly);
+    QByteArray content = file.readAll();
+    replaceColor(content, "#c01c28", fg);     // GNOME HIG red 4
+    return content;
+}
+
+
 ///// LazySvg //////////////////////////////////////////////////////////////////
 
 class ie::LazySvg : public dumb::SpTarget
 {
 public:
     LazySvg(QString aFname) : fname(std::move(aFname)) {}
+    void setPalette(const IconPalette& x) { palette = x; }
     std::shared_ptr<QSvgRenderer> get();
 private:
     QString fname;
     std::shared_ptr<QSvgRenderer> x;
+    std::optional<IconPalette> palette = std::nullopt;
 };
 
 template class dumb::Sp<ie::LazySvg>;
@@ -389,7 +422,14 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
     if (auto r1 = x)
         return r1;
 
-    auto r2 = std::make_shared<QSvgRenderer>(fname);
+    std::shared_ptr<QSvgRenderer> r2;
+    if (palette) {
+        QByteArray ba = palette->repaintFile(fname);
+        r2 = std::make_shared<QSvgRenderer>(ba);
+    } else {
+        // Dumb load
+        r2 = std::make_shared<QSvgRenderer>(fname);
+    }
     r2->setAspectRatioMode(Qt::KeepAspectRatio);
     x = r2;
     //std::cout << "Loaded lazy SVG " << fname.toStdString() << std::endl;
@@ -740,6 +780,13 @@ ie::Hint::Hint(const uc::Block& blk)
     char buf[48];
     util::sprintfBlock(buf, blk);
     texture = dumb::makeSp<LazySvg>(buf);
+    if (blk.synthIcon.flags.have(uc::Ifg::PAINT_SVG)) {
+        auto& continent = blk.synthIcon.maybeMissingContinent();
+        IconPalette pal {
+            .fg = continent.icon.fgColor,
+        };
+        texture->setPalette(pal);
+    }
 }
 
 // -warn: complains about =default

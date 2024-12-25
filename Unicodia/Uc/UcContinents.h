@@ -59,6 +59,7 @@ namespace uc {
         BIGGER            = 1<<12,  ///< [+] Bigger (SMALL_SVG only for now)
         BIG_SVG           = 1<<13,  ///< [+] Do not synthesize an icon, use special big SVG
         BOTH_DOTTED       = 1<<14,  ///< [+] For Combining Half Marks: both characters are dotted
+        PAINT_SVG         = 1<<15,  ///< [+] SVG is not in true colours and has placeholders instead
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

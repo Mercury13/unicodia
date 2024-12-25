@@ -65,7 +65,7 @@ constinit const uc::Block uc::blocks[] {
             "Armenian",
             { EcScript::Armn, 0 }, MapType::EU_OTHER, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
-    { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA_RTL },
+    { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Hebrew",
             MyName::INST, MapType::AS_OTHER, EcScript::Hebr },
     // Arabic OK
@@ -511,11 +511,11 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Hani, EcFont::CJK_SYMBOLS,
                     Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::NO_EMOJI },
     // Hiragana OK, installed small version of Noto CJK Korean
-    { 0x3040, 0x309F, { L'あ', EcContinent::CJK },
+    { 0x3040, 0x309F, { L'あ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hiragana",
             { EcScript::Hira, 0 }, MapType::CJ_OTHER, EcScript::Hira },
     // Katakana OK, not collapsible: syllabary
-    { 0x30A0, 0x30FF, { L'カ', EcContinent::CJK },
+    { 0x30A0, 0x30FF, { L'カ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Katakana",
             { EcScript::Hira, 1 }, MapType::CJ_OTHER, EcScript::Kana },
     // Bopomofo OK
@@ -544,7 +544,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_STROKES, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Katakana phon OK, not collapsible: small block
-    { 0x31F0, 0x31FF, { L'ㇰ', EcContinent::CJK },
+    { 0x31F0, 0x31FF, { L'ㇰ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Katakana Phonetic Extensions",
             { EcScript::Hira, 2 }, MapType::CJ_OTHER,
             EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
