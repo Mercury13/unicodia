@@ -8,10 +8,11 @@
 
 namespace uc {
 
-    enum class EcContinent {
+    enum class EcContinent : unsigned char {
         NONE,
         TECH,       ///< For Unicode’s own needs
         EUROPE,     ///< Europe, incl. Georgia and Mediterranean
+        ASIA_RTL,   ///< Asian RtL scripts
         ASIA,       ///< Mainland Asia
         CJK,        ///< Hani and derived scripts
         OCEAN,      ///< Indian and Pacific Ocean

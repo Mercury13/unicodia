@@ -65,20 +65,20 @@ constinit const uc::Block uc::blocks[] {
             "Armenian",
             { EcScript::Armn, 0 }, MapType::EU_OTHER, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
-    { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA },
+    { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA_RTL },
             "Hebrew",
             MyName::INST, MapType::AS_OTHER, EcScript::Hebr },
     // Arabic OK
-    { 0x0600, 0x06FF, { 0x636, EcContinent::ASIA },
+    { 0x0600, 0x06FF, { 0x636, EcContinent::ASIA_RTL },
             "Arabic",
             { EcScript::Arab, 0 }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
-    { 0x0700, 0x074F, { 0x71B, EcContinent::ASIA },
+    { 0x0700, 0x074F, { 0x71B, EcContinent::ASIA_RTL },
             "Syriac",
             { EcScript::Syrc, 0 }, MapType::AS_OTHER_DEAD,  EcScript::Syrc },
     // Arabic supplement OK
-    { 0x0750, 0x077F, { 0x762, EcContinent::ASIA },
+    { 0x0750, 0x077F, { 0x762, EcContinent::ASIA_RTL },
             "Arabic Supplement",
             { EcScript::Arab, 1 }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -91,24 +91,24 @@ constinit const uc::Block uc::blocks[] {
             "NKo",
             { EcScript::Nkoo, 0 }, MapType::AF, EcScript::Nkoo },
     // Samaritan OK
-    { 0x0800, 0x083F, { 0x800, EcContinent::ASIA },
+    { 0x0800, 0x083F, { 0x800, EcContinent::ASIA_RTL },
             "Samaritan",
             { EcScript::Samr, 0 }, MapType::AS_OTHER, EcScript::Samr },
     // Mandaic OK
-    { 0x0840, 0x085F, { 0x84C, EcContinent::ASIA },
+    { 0x0840, 0x085F, { 0x84C, EcContinent::ASIA_RTL },
             "Mandaic", { EcScript::Mand, 0 }, MapType::AS_OTHER, EcScript::Mand },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
-    { 0x0860, 0x086F, { 0x862, EcContinent::ASIA },
+    { 0x0860, 0x086F, { 0x862, EcContinent::ASIA_RTL },
             "Syriac Supplement",
             { EcScript::Syrc, 1 }, MapType::AS_OTHER_DEAD,
             EcScript::Syrc, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Arabic ex B OK, Sceherazade updated in Nov 2021
-    { 0x0870, 0x089F, { 0x877, EcContinent::ASIA },
+    { 0x0870, 0x089F, { 0x877, EcContinent::ASIA_RTL },
             "Arabic Extended-B",
             { EcScript::Arab, 'B' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Arabic ex A OK
-    { 0x08A0, 0x08FF, { 0x8A4, EcContinent::ASIA },
+    { 0x08A0, 0x08FF, { 0x8A4, EcContinent::ASIA_RTL },
             "Arabic Extended-A",
             { EcScript::Arab, 'A' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -712,7 +712,7 @@ constinit const uc::Block uc::blocks[] {
             "Alphabetic Presentation Forms",
             MyName::INST, MapType::SYM_OTHER },
     // Arabic presentation forms A OK
-    { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA },
+    { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA_RTL },
             "Arabic Presentation Forms-A",
             { EcScript::Arab, 'a' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
@@ -742,7 +742,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_SIMSUN, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
-    { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
+    { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA_RTL },
             "Arabic Presentation Forms-B",
             { EcScript::Arab, 'b' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_DESCRIPTION },
@@ -863,27 +863,27 @@ constinit const uc::Block uc::blocks[] {
             "Cypriot Syllabary",
             { EcScript::Cprt, 0 }, MapType::EU_OTHER_DEAD, EcScript::Cprt },
     // Imperial Aramaic OK
-    { 0x10840, 0x1085F, { 0x10840, EcContinent::ASIA },
+    { 0x10840, 0x1085F, { 0x10840, EcContinent::ASIA_RTL },
             "Imperial Aramaic",
             { EcScript::Armi, 0 }, MapType::AS_OTHER_DEAD, EcScript::Armi },
     // Palmyrene OK
-    { 0x10860, 0x1087F, { 0x10860, EcContinent::ASIA },
+    { 0x10860, 0x1087F, { 0x10860, EcContinent::ASIA_RTL },
             "Palmyrene",
             { EcScript::Palm, 0 }, MapType::AS_OTHER_DEAD, EcScript::Palm },
     // Nabataean OK
-    { 0x10880, 0x108AF, { 0x10880, EcContinent::ASIA },
+    { 0x10880, 0x108AF, { 0x10880, EcContinent::ASIA_RTL },
             "Nabataean",
             { EcScript::Nbat, 0 }, MapType::AS_OTHER_DEAD, EcScript::Nbat },
     // Hatran OK
-    { 0x108E0, 0x108FF, { 0x108E0, EcContinent::ASIA },
+    { 0x108E0, 0x108FF, { 0x108E0, EcContinent::ASIA_RTL },
             "Hatran",
             { EcScript::Hatr, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hatr },
     // Phoenician OK
-    { 0x10900, 0x1091F, { 0x10900, EcContinent::ASIA },
+    { 0x10900, 0x1091F, { 0x10900, EcContinent::ASIA_RTL },
             "Phoenician",
             { EcScript::Phnx, 0 }, MapType::AS_OTHER_DEAD, EcScript::Phnx },
     // Lydian OK
-    { 0x10920, 0x1093F, { 0x10920, EcContinent::ASIA },
+    { 0x10920, 0x1093F, { 0x10920, EcContinent::ASIA_RTL },
             "Lydian",
             { EcScript::Lydi, 0 }, MapType::AS_OTHER_DEAD, EcScript::Lydi },
     // Meroitic hiero OK
@@ -895,40 +895,40 @@ constinit const uc::Block uc::blocks[] {
             "Meroitic Cursive",
             { EcScript::Mero, 1 }, MapType::AF_DEAD, EcScript::Mero },
     // Kharoshthi OK
-    { 0x10A00, 0x10A5F, { 0x10A10, EcContinent::ASIA },
+    { 0x10A00, 0x10A5F, { 0x10A10, EcContinent::ASIA_RTL },
             "Kharoshthi",
             { EcScript::Khar, 0 }, MapType::AS_OTHER_DEAD,
             EcScript::Khar, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Old South Arab OK
-    { 0x10A60, 0x10A7F, { 0x10A71, EcContinent::ASIA },
+    { 0x10A60, 0x10A7F, { 0x10A71, EcContinent::ASIA_RTL },
             "Old South Arabian",
             { EcScript::Sarb, 0 }, MapType::AS_OTHER_DEAD, EcScript::Sarb },
     // Old North Arab OK
-    { 0x10A80, 0x10A9F, { 0x10A91, EcContinent::ASIA, {}, 3_hy },
+    { 0x10A80, 0x10A9F, { 0x10A91, EcContinent::ASIA_RTL, {}, 3_hy },
             "Old North Arabian",
             { EcScript::Narb, 0 }, MapType::AS_OTHER_DEAD, EcScript::Narb },
     // Manichaean OK
-    { 0x10AC0, 0x10AFF, { 0x10AC0, EcContinent::ASIA },
+    { 0x10AC0, 0x10AFF, { 0x10AC0, EcContinent::ASIA_RTL },
             "Manichaean",
             { EcScript::Mani, 0 }, MapType::AS_OTHER_DEAD, EcScript::Mani },
     // Avestan OK
-    { 0x10B00, 0x10B3F, { 0x10B00, EcContinent::ASIA },
+    { 0x10B00, 0x10B3F, { 0x10B00, EcContinent::ASIA_RTL },
             "Avestan",
             { EcScript::Avst, 0 }, MapType::AS_OTHER_DEAD, EcScript::Avst },
     // Inscr Parthian OK
-    { 0x10B40, 0x10B5F, { 0x10B40, EcContinent::ASIA, {}, SvgHint{ 15, 13 } },
+    { 0x10B40, 0x10B5F, { 0x10B40, EcContinent::ASIA_RTL, {}, SvgHint{ 15, 13 } },
             "Inscriptional Parthian",
             { EcScript::Prti, 0 }, MapType::AS_OTHER_DEAD, EcScript::Prti },
     // Inscr Pahlavi OK
-    { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA },
+    { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA_RTL },
             "Inscriptional Pahlavi",
             { EcScript::Phli, 0 }, MapType::AS_OTHER_DEAD, EcScript::Phli },
     // Psalter Pahlavi OK
-    { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::SMALL_SVG },
+    { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA_RTL, Ifg::SMALL_SVG },
             "Psalter Pahlavi",
             { EcScript::Phli, 1 }, MapType::AS_OTHER_DEAD, EcScript::Phlp },
     // Turkic runes OK
-    { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA },
+    { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA_RTL },
             "Old Turkic",
             { EcScript::Orkh, 0 }, MapType::AS_OTHER_DEAD, EcScript::Orkh },
     // Hung runes OK
@@ -936,7 +936,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Hungarian",
             { EcScript::Hung, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hung },
     // Hanifi OK
-    { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA, {}, SvgHint{ 4, 15 } },
+    { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA_RTL, {}, SvgHint{ 4, 15 } },
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
     // Garay OK somehow, though hangs
@@ -949,34 +949,34 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::AS_OTHER_DEAD,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Yezidi OK
-    { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA, {}, 11_hy },
+    { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA_RTL, {}, 11_hy },
             "Yezidi",
             { EcScript::Yezi, 0 }, MapType::AS_OTHER_DEAD, EcScript::Yezi },
     // Arabic C OK
-    { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA },
+    { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA_RTL },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' }, MapType::AS_OTHER,
             EcScript::Arab, EcFont::ARABIC, Bfg::HAS_DESCRIPTION },
     // Old Sogdian OK
-    { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA, {}, 14_hy },
+    { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA_RTL, {}, 14_hy },
             "Old Sogdian",
             { EcScript::Sogd, 0 }, MapType::AS_OTHER_DEAD, EcScript::Sogo },
     // Sogdian OK
-    { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW },
+    { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA_RTL, Ifg::ROTATE_RTL_CCW },
             "Sogdian",
             { EcScript::Sogd, 1 }, MapType::AS_OTHER_DEAD,
             EcScript::Sogd, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Old Uyghur OK
-    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW | Ifg::SHIFT_LEFT },
+    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA_RTL, Ifg::ROTATE_RTL_CCW | Ifg::SHIFT_LEFT },
             "Old Uyghur",
             { EcScript::Ougr, 0 }, MapType::AS_OTHER_DEAD,
             EcScript::Ougr, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Chorasmian OK
-    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA, {}, SvgHint{ 15, 11 } },
+    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA_RTL, {}, SvgHint{ 15, 11 } },
             "Chorasmian",
             { EcScript::Chrs, 0 }, MapType::AS_OTHER_DEAD, EcScript::Chrs },
     // Elymaic OK
-    { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA, {}, 13_hy },
+    { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA_RTL, {}, 13_hy },
             "Elymaic",
             { EcScript::Elym, 0 }, MapType::AS_OTHER_DEAD, EcScript::Elym },
     // Brahmi OK
@@ -1391,17 +1391,17 @@ constinit const uc::Block uc::blocks[] {
             "Adlam",
             { EcScript::Adlm, 0}, MapType::AF, EcScript::Adlm },
     // Indic Siyaq OK
-    { 0x1EC70, 0x1ECBF, { 0x1EC77, EcContinent::ASIA, Ifg::CONTINENT_OK },
+    { 0x1EC70, 0x1ECBF, { 0x1EC77, EcContinent::ASIA_RTL, Ifg::CONTINENT_OK },
             "Indic Siyaq Numbers",
             MyName::INST, MapType::AS_OTHER,
             EcScript::NONE, EcFont::SIYAQ_INDIC },
     // Ottoman Siyaq OK, use Noto
-    { 0x1ED00, 0x1ED4F, { 0x1ED0A, EcContinent::ASIA, Ifg::CONTINENT_OK },
+    { 0x1ED00, 0x1ED4F, { 0x1ED0A, EcContinent::ASIA_RTL, Ifg::CONTINENT_OK },
             "Ottoman Siyaq Numbers",
             MyName::INST, MapType::AS_OTHER,
             EcScript::NONE, EcFont::FRANKEN_SANS },
     // Arab mathematical OK, currently we use Noto Math
-    { 0x1EE00, 0x1EEFF, { 0x1EEA2, EcContinent::ASIA },
+    { 0x1EE00, 0x1EEFF, { 0x1EEA2, EcContinent::ASIA_RTL },
             "Arabic Mathematical Alphabetic Symbols",
             { EcScript::Arab, 'z'}, MapType::AS_OTHER,
             EcScript::Arab, EcFont::MATH, Bfg::HAS_DESCRIPTION },
