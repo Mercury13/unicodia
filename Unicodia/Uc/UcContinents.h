@@ -43,7 +43,7 @@ namespace uc {
     };
     extern const Continent continentInfo[];
 
-    enum class Ifg {
+    enum class Ifg : unsigned short {
         CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
         MISSING           = 1<<1,   ///< [+] red icon, missing block
         CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
