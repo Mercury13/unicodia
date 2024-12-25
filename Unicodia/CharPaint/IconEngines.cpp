@@ -126,9 +126,6 @@ namespace util {
     inline void sprintfCp(char (&buf)[48], char32_t cp)
         { snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", int(cp)); }
 
-    inline void sprintfBlock(char (&buf)[48], const uc::Block& blk)
-        { sprintfCp(buf, blk.startingCp); }
-
     struct FormatInfo {
         QRect frameRect, contentRect;
         unsigned dashSize;
@@ -405,6 +402,9 @@ QByteArray IconPalette::repaintFile(const QString& fname)
 class ie::LazySvg : public dumb::SpTarget
 {
 public:
+    LazySvg(const uc::SynthIcon& icon, char32_t startingCp);
+    LazySvg(const uc::Block& block)
+        : LazySvg(block.synthIcon, block.startingCp) {}
     LazySvg(QString aFname) : fname(std::move(aFname)) {}
     void setPalette(const IconPalette& x) { palette = x; }
     std::shared_ptr<QSvgRenderer> get();
@@ -415,6 +415,22 @@ private:
 };
 
 template class dumb::Sp<ie::LazySvg>;
+
+
+ie::LazySvg::LazySvg(const uc::SynthIcon& icon, char32_t startingCp)
+{
+    char buf[48];
+    util::sprintfCp(buf, startingCp);
+    fname = buf;
+
+    if (icon.flags.have(uc::Ifg::PAINT_SVG)) {
+        auto& continent = icon.maybeMissingContinent();
+        IconPalette pal {
+            .fg = continent.icon.fgColor,
+        };
+        setPalette(pal);
+    }
+}
 
 
 std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
@@ -443,13 +459,13 @@ ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aP
     : source(aSource), si(aSi)
 {
     if (aPixStart && aSi.flags.haveAny(uc::Ifg::MISSING | uc::Ifg::SMALL_SVG | uc::Ifg::BIG_SVG)) {
-        char buf[48];
-        if (aSi.flags.have(uc::Ifg::BIG_SVG)) {
+        if (aSi.flags.have(uc::Ifg::BIG_SVG)) { // Big SVG
+            char buf[48];
             snprintf(buf, std::size(buf), ":/ScBig/%04X.svg", int(aPixStart));
-        } else {
-            util::sprintfCp(buf, aPixStart);
+            texture = dumb::makeSp<LazySvg>(buf);
+        } else {    // Small SVG
+            texture = dumb::makeSp<LazySvg>(si, aPixStart);
         }
-        texture = dumb::makeSp<LazySvg>(buf);
     }
 }
 
@@ -777,16 +793,7 @@ void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ie::Hint::Hint(const uc::Block& blk)
     : icon(blk.synthIcon)
 {
-    char buf[48];
-    util::sprintfBlock(buf, blk);
-    texture = dumb::makeSp<LazySvg>(buf);
-    if (blk.synthIcon.flags.have(uc::Ifg::PAINT_SVG)) {
-        auto& continent = blk.synthIcon.maybeMissingContinent();
-        IconPalette pal {
-            .fg = continent.icon.fgColor,
-        };
-        texture->setPalette(pal);
-    }
+    texture = dumb::makeSp<LazySvg>(blk);
 }
 
 // -warn: complains about =default
@@ -806,9 +813,7 @@ void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 ie::Format::Format(const uc::Block& blk)
     : icon(blk.synthIcon)
 {
-    char buf[48];
-    util::sprintfBlock(buf, blk);
-    texture = dumb::makeSp<LazySvg>(buf);
+    texture = dumb::makeSp<LazySvg>(blk);
 }
 
 ie::Format::~Format() = default;
