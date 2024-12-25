@@ -515,7 +515,7 @@ constinit const uc::Block uc::blocks[] {
             "Hiragana",
             { EcScript::Hira, 0 }, MapType::CJ_OTHER, EcScript::Hira },
     // Katakana OK, not collapsible: syllabary
-    { 0x30A0, 0x30FF, { L'ヂ', EcContinent::CJK },
+    { 0x30A0, 0x30FF, { L'カ', EcContinent::CJK },
             "Katakana",
             { EcScript::Hira, 1 }, MapType::CJ_OTHER, EcScript::Kana },
     // Bopomofo OK
