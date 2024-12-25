@@ -26,6 +26,8 @@
 	<alpha-fixup />
 	<ellipsis text="…">
 		<blk start="2E80"  /><!-- CJK radicals supplement -->
+		<blk start="30A0"  /><!-- Katakana -->
+		<blk start="31F0"  /><!-- Katakana phonetic -->
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
 		<blk start="10F00" /><!-- Old Sogdian -->

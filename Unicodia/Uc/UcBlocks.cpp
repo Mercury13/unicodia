@@ -517,7 +517,7 @@ constinit const uc::Block uc::blocks[] {
     // Katakana OK, not collapsible: syllabary
     { 0x30A0, 0x30FF, { L'ヂ', EcContinent::CJK },
             "Katakana",
-            { EcScript::Kana, 0 }, MapType::CJ_OTHER, EcScript::Kana },
+            { EcScript::Hira, 1 }, MapType::CJ_OTHER, EcScript::Kana },
     // Bopomofo OK
     { 0x3100, 0x312F, { L'ㄉ', EcContinent::CJK },
             "Bopomofo",
@@ -546,7 +546,7 @@ constinit const uc::Block uc::blocks[] {
     // Katakana phon OK, not collapsible: small block
     { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
             "Katakana Phonetic Extensions",
-            { EcScript::Kana, 1 }, MapType::CJ_OTHER,
+            { EcScript::Hira, 2 }, MapType::CJ_OTHER,
             EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Enclosed CJK letters and months OK
         { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK },
@@ -1254,22 +1254,22 @@ constinit const uc::Block uc::blocks[] {
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
-            { EcScript::Kana, 'B' }, MapType::CJ_OTHER_DEAD,
+            { EcScript::Hira, 'B' }, MapType::CJ_OTHER_DEAD,
             EcScript::Kana, EcFont::CJK_UHAN, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana supp OK
     { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
             "Kana Supplement",
-            { EcScript::Kana, '@' }, MapType::CJ_OTHER_DEAD,
+            { EcScript::Hira, '@' }, MapType::CJ_OTHER_DEAD,
             EcScript::Hent, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex A OK
     { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK },
             "Kana Extended-A",
-            { EcScript::Kana, 'A' }, MapType::CJ_OTHER_DEAD,
+            { EcScript::Hira, 'A' }, MapType::CJ_OTHER_DEAD,
             EcScript::Hent, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small kana ex OK
     { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension",
-            { EcScript::Kana, 'Z' }, MapType::CJ_OTHER_DEAD,
+            { EcScript::Hira, 'Z' }, MapType::CJ_OTHER_DEAD,
             EcScript::Kana, EcFont::CJK_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Nushu OK
     { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
