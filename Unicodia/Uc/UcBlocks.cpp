@@ -544,7 +544,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_STROKES, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Katakana phon OK, not collapsible: small block
-    { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
+    { 0x31F0, 0x31FF, { L'ㇰ', EcContinent::CJK },
             "Katakana Phonetic Extensions",
             { EcScript::Hira, 2 }, MapType::CJ_OTHER,
             EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
