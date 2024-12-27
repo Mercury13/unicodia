@@ -167,6 +167,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot, 130_pc },                  // …1
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
+    { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic smaller
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
