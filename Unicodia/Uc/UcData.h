@@ -792,28 +792,15 @@ namespace uc {
     using LocSortKey = signed short[40];
 
     /// Subdivision of blocks for (future) plane maps
-    /// @todo [future] Plane map
-    enum class MapType : unsigned char {
+    enum class MapSubtype : unsigned char {
         UNALLOCATED,    ///< unused in data, IDK what I do                      As white as possible
         PRIVATE,        ///< private-use, unused in data                        Light grey
         TECHNICAL,      ///< technical: VS, tags, specials, surrogate only      Green/acid
-        EU_LATIN,       ///< Europe/Latin: Latn only                            Blue/deep
-        EU_OTHER,       ///< Europe/other: Cyrl, Grek                           Blue
-        EU_OTHER_DEAD,  ///< Europe/other/dead: Runr, Ogam                      Blue/pale
-        AS_BRAH,        ///< Asia/Brahmic: Deva, Guru                           Orange
-        AS_BRAH_DEAD,   ///< Asia/Brahmic/dead: Gran, pan-Indic Vedic           Orange/pale
-        AS_OTHER,       ///< Asia/other: Arab, Armn                             Amber (like car blinkers)
-        AS_OTHER_DEAD,  ///< Asia/other/dead: Armi, Khar                        Yellow
-        CJ_HANI,        ///< CJK/Han: Hani only                                 Violet
-        CJ_OTHER,       ///< CJK/other: Kana, Hang                              Less violet
-        CJ_OTHER_DEAD,  ///< CJK/other/dead: Nshu, Kits                         Pink
-        CJ_SYMBOL,      ///< CJK/symbols: punctuation, Tai Xuan                 Fuchsia
-        OC,             ///< Ocean: Thaa, Sinh                                  Green
-        OC_DEAD,        ///< Ocean/dead: Tglg, Kawi                             Green/pale
-        AF,             ///< Africa: Tfng, Bamu                                 Chocolate
-        AF_DEAD,        ///< Africa/dead: Copt, Mero                            Beige
-        AM,             ///< America: Cans, Cher, Hmnp                          Red
-        AM_DEAD,        ///< America/dead: Dsrt and Maya only                   Red/pale
+        ALIVE,          ///< Alive script
+        DEAD,           ///< Dead script
+        LATIN,          ///< Latin (both international and Europe)
+        CJ_HANI,        ///< Han ideographs
+        CJ_SYMBOL,      ///< CJK symbols
         SYM_CODE,       ///< codes, shorthand, non-text, incl. notes            Aquamarine
         SYM_PUNCT,      ///< modifiers, punctuation, diacritics                 Black
         SYM_OTHER,      ///< maths, shapes, emoji                               Teal/steel
@@ -842,7 +829,7 @@ namespace uc {
         SynthIcon synthIcon;
         std::string_view name;
         AlphaKey alphaKey;
-        MapType mapType;
+        MapSubtype mapSubtype;
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
