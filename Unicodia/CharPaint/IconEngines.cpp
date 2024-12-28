@@ -399,6 +399,8 @@ QByteArray IconPalette::repaintFile(const QString& fname)
 
 ///// LazySvg //////////////////////////////////////////////////////////////////
 
+enum class PaletteMode : unsigned char { FG, BG };
+
 class ie::LazySvg : public dumb::SpTarget
 {
 public:
@@ -406,7 +408,14 @@ public:
     LazySvg(const uc::Block& block)
         : LazySvg(block.synthIcon, block.startingCp) {}
     LazySvg(QString aFname) : fname(std::move(aFname)) {}
+    LazySvg(const uc::SynthIcon& icon, QString aFname, PaletteMode mode)
+        : fname(std::move(aFname)) { loadPaletteIf(icon, mode); }
     void setPalette(const IconPalette& x) { palette = x; }
+
+    /// Loads palette if the icon states “repaint SVG”
+    void loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode);
+
+    /// Gets the SVG renderer, probably from cache
     std::shared_ptr<QSvgRenderer> get();
 private:
     QString fname;
@@ -422,11 +431,16 @@ ie::LazySvg::LazySvg(const uc::SynthIcon& icon, char32_t startingCp)
     char buf[48];
     util::sprintfCp(buf, startingCp);
     fname = buf;
+    loadPaletteIf(icon, PaletteMode::FG);
+}
 
+
+void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode)
+{
     if (icon.flags.have(uc::Ifg::PAINT_SVG)) {
         auto& continent = icon.maybeMissingContinent();
         IconPalette pal {
-            .fg = continent.icon.fgColor,
+            .fg = ((mode == PaletteMode::FG) ? continent.icon.fgColor : continent.icon.bgColor),
         };
         setPalette(pal);
     }
@@ -960,7 +974,7 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ie::Margin::Margin(const uc::SynthIcon& synthIcon,
                    std::string_view aName, int aValue,
                    HalfPixelDown aHalfPixelDown)
-    : texture(dumb::makeSp<LazySvg>(str::toQ(aName))),
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName), PaletteMode::FG)),
       color(synthIcon.maybeMissingContinent().icon.bgColor),
       value(aValue),
       halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}

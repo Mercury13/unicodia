@@ -1134,7 +1134,8 @@ constinit const uc::Block uc::blocks[] {
             "Makasar",
             { EcScript::Maka, 0 }, MapSubtype::DEAD, EcScript::Maka },
     // Kawi OK
-    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN },
+    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN,
+                          Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Kawi",
             { EcScript::Kawi, 0 }, MapSubtype::ALIVE,
             EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
