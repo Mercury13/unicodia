@@ -917,16 +917,16 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::ThreeD::ThreeD()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg", uc::EcContinent::NONE, PaletteMode::FG)) {}
 
 ie::ThreeD::~ThreeD() = default;
 
 void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     auto fi = util::getFormatInfo(rect, scale);
-    util::drawPixelBorder(painter, fi.frameRect, fi.dashSize, Qt::black);
+    util::drawPixelBorder(painter, fi.frameRect, fi.dashSize, FG_INTER);
 
     util::drawHintedSvg(painter, fi.contentRect, *texture->get(), {});
 }
