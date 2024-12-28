@@ -410,10 +410,16 @@ public:
     LazySvg(QString aFname) : fname(std::move(aFname)) {}
     LazySvg(const uc::SynthIcon& icon, QString aFname, PaletteMode mode)
         : fname(std::move(aFname)) { loadPaletteIf(icon, mode); }
+    LazySvg(QString aFname, const uc::EcContinent& continent, PaletteMode mode)
+        : fname(std::move(aFname)) { loadPalette(continent, mode); }
     void setPalette(const IconPalette& x) { palette = x; }
 
     /// Loads palette if the icon states “repaint SVG”
     void loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode);
+
+    void loadPalette(const uc::Continent& continent, PaletteMode mode);
+    void loadPalette(const uc::EcContinent& continent, PaletteMode mode)
+        { loadPalette(uc::continentInfo[static_cast<unsigned>(continent)], mode); }
 
     /// Gets the SVG renderer, probably from cache
     std::shared_ptr<QSvgRenderer> get();
@@ -435,14 +441,20 @@ ie::LazySvg::LazySvg(const uc::SynthIcon& icon, char32_t startingCp)
 }
 
 
+void ie::LazySvg::loadPalette(const uc::Continent& continent, PaletteMode mode)
+{
+    IconPalette pal {
+        .fg = ((mode == PaletteMode::FG) ? continent.icon.fgColor : continent.icon.bgColor),
+    };
+    setPalette(pal);
+}
+
+
 void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode)
 {
     if (icon.flags.have(uc::Ifg::PAINT_SVG)) {
         auto& continent = icon.maybeMissingContinent();
-        IconPalette pal {
-            .fg = ((mode == PaletteMode::FG) ? continent.icon.fgColor : continent.icon.bgColor),
-        };
-        setPalette(pal);
+        loadPalette(continent, mode);
     }
 }
 
@@ -864,7 +876,7 @@ void ie::CjkStructure::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     // Sticks
     static constexpr auto N_STICKS = 4;
@@ -895,7 +907,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
     auto slashY1 = stickY + stickHeight * SLASH_RELY;
     auto slashY2 = stickY + stickHeight * SLASH_RELY2;
     painter->setRenderHint(QPainter::Antialiasing);
-    QPen pen(Qt::black, stickThickness - MINUS_FOR_GAMMA);
+    QPen pen(FG_INTER, stickThickness - MINUS_FOR_GAMMA);
     painter->setPen(pen);
     painter->drawLine(QPointF{slashX1, slashY1}, QPointF{slashX2, slashY2});
 }
@@ -922,8 +934,8 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
-ie::SqIdeo::SqIdeo(const uc::SynthIcon& icon)
-    : texture(dumb::makeSp<LazySvg>(icon, ":ScCustom/sqideo.svg", PaletteMode::BG)) {}
+ie::SqIdeo::SqIdeo()
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/sqideo.svg", uc::EcContinent::CJK, PaletteMode::BG)) {}
 
 ie::SqIdeo::~SqIdeo() {}
 
@@ -940,8 +952,8 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// OneCircle ////////////////////////////////////////////////////////////////
 
-ie::OneCircle::OneCircle(const uc::SynthIcon& synthIcon)
-    : texture(dumb::makeSp<LazySvg>(synthIcon, ":ScCustom/1circ.svg", PaletteMode::FG)) {}
+ie::OneCircle::OneCircle()
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg", uc::EcContinent::NONE, PaletteMode::FG)) {}
 
 ie::OneCircle::~OneCircle() = default;
 

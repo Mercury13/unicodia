@@ -388,7 +388,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::OCR },
     // Enclosed alnum OK, need ordinary Cambria
-    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumerics",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL,
@@ -1431,7 +1431,7 @@ constinit const uc::Block uc::blocks[] {
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             { 0x1F202, EcContinent::CJK,
-              Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+              Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Enclosed Ideographic Supplement",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_ENCLOSED, Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },

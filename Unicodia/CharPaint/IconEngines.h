@@ -242,7 +242,7 @@ namespace ie {
     class SqIdeo : public Veng
     {
     public:
-        SqIdeo(const uc::SynthIcon& icon);
+        SqIdeo();
         ~SqIdeo();
         SqIdeo* clone() const override { return new SqIdeo(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
@@ -254,7 +254,7 @@ namespace ie {
     class OneCircle : public Veng
     {
     public:
-        OneCircle(const uc::SynthIcon& synthIcon);
+        OneCircle();
         ~OneCircle();
         OneCircle* clone() const override { return new OneCircle(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;

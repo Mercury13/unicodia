@@ -231,7 +231,7 @@ namespace {
     {
         switch (block.startingCp) {
         case 0x2460:    // Enclosed alnum
-            return new ie::OneCircle(block.synthIcon);
+            return new ie::OneCircle;
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x2FF0:    // Ideographic description
@@ -255,7 +255,7 @@ namespace {
         case 0x1F100:   // Enclosed alnum supp
             return new ie::ThreeD;
         case 0x1F200:   // Eclosed ideo supp
-            return new ie::SqIdeo(block.synthIcon);
+            return new ie::SqIdeo;
         case 0x1FB00:   // Legacy computing
             return new ie::Legacy(":ScCustom/legacy.png");
         default:
