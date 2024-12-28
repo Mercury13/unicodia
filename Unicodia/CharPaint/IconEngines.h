@@ -3,7 +3,7 @@
 // Qt
 #include <QIconEngine>
 
-// Ly lib
+// My lib
 #include "u_DumbSp.h"
 
 // Char paint
@@ -268,8 +268,8 @@ namespace ie {
     class Margin : public Veng
     {
     public:
-        Margin(const QColor& aColor, std::string_view aName, int aValue,
-               HalfPixelDown aHalfPixelDown);
+        Margin(const uc::SynthIcon& synthIcon, std::string_view aName,
+               int aValue, HalfPixelDown aHalfPixelDown);
         ~Margin();
         Margin* clone() const override { return new Margin(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;

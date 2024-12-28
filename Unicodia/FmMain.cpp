@@ -227,9 +227,9 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 namespace {
 
-    QIconEngine* getCustomEngine(char32_t startingCp)
+    QIconEngine* getCustomEngine(const uc::Block& block)
     {
-        switch (startingCp) {
+        switch (block.startingCp) {
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
         case 0x2580:    // Block elements
@@ -241,7 +241,7 @@ namespace {
         case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
         case 0x11F00:   // Kawi
-            return new ie::Margin(BG_OCEAN, ":ScCustom/kawi.svg", 2, ie::HalfPixelDown::YES);
+            return new ie::Margin(block.synthIcon, ":ScCustom/kawi.svg", 2, ie::HalfPixelDown::YES);
         case 0x1CC00:   // Legacy ex
             return new ie::Legacy(":ScCustom/legacy2.png");
         case 0x1D300:   // Tai Xuan
@@ -323,7 +323,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                 if (block->synthIcon.flags.have(uc::Ifg::FORMAT)) {
                     block->icon = new QIcon(new ie::Format(*block));
                 } else if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
-                    block->icon = new QIcon(getCustomEngine(block->startingCp));
+                    block->icon = new QIcon(getCustomEngine(*block));
                 } else {
                     block->icon = new QIcon(new ie::Hint(*block));
                 }

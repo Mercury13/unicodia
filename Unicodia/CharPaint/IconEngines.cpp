@@ -957,9 +957,12 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// Margin ///////////////////////////////////////////////////////////////////
 
 
-ie::Margin::Margin(const QColor& aColor, std::string_view aName, int aValue,
+ie::Margin::Margin(const uc::SynthIcon& synthIcon,
+                   std::string_view aName, int aValue,
                    HalfPixelDown aHalfPixelDown)
-    : texture(dumb::makeSp<LazySvg>(str::toQ(aName))), color(aColor), value(aValue),
+    : texture(dumb::makeSp<LazySvg>(str::toQ(aName))),
+      color(synthIcon.maybeMissingContinent().icon.bgColor),
+      value(aValue),
       halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}
 
 ie::Margin::~Margin() = default;
