@@ -370,7 +370,7 @@ void ie::Murky::paint1(QPainter *painter, const QRect &rect, qreal)
 ///// IconPalette //////////////////////////////////////////////////////////////
 
 struct IconPalette {
-    QColor fg;
+    QColor fg, bg;
 
     QByteArray repaintFile(const QString& fname);
     static void replaceColor(
@@ -392,14 +392,13 @@ QByteArray IconPalette::repaintFile(const QString& fname)
     QFile file(fname);
     file.open(QIODeviceBase::ReadOnly);
     QByteArray content = file.readAll();
-    replaceColor(content, "#c01c28", fg);     // GNOME HIG red 4
+    replaceColor(content, "#c01c28", fg);   // GNOME HIG red 4
+    replaceColor(content, "#f9f06b", bg);   // GNOME HIG yellow 1
     return content;
 }
 
 
 ///// LazySvg //////////////////////////////////////////////////////////////////
-
-enum class PaletteMode : unsigned char { FG, BG };
 
 class ie::LazySvg : public dumb::SpTarget
 {
@@ -408,18 +407,18 @@ public:
     LazySvg(const uc::Block& block)
         : LazySvg(block.synthIcon, block.startingCp) {}
     LazySvg(QString aFname) : fname(std::move(aFname)) {}
-    LazySvg(const uc::SynthIcon& icon, QString aFname, PaletteMode mode)
-        : fname(std::move(aFname)) { loadPaletteIf(icon, mode); }
-    LazySvg(QString aFname, const uc::EcContinent& continent, PaletteMode mode)
-        : fname(std::move(aFname)) { loadPalette(continent, mode); }
+    LazySvg(const uc::SynthIcon& icon, QString aFname)
+        : fname(std::move(aFname)) { loadPaletteIf(icon); }
+    LazySvg(QString aFname, const uc::EcContinent& continent)
+        : fname(std::move(aFname)) { loadPalette(continent); }
     void setPalette(const IconPalette& x) { palette = x; }
 
     /// Loads palette if the icon states “repaint SVG”
-    void loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode);
+    void loadPaletteIf(const uc::SynthIcon& icon);
 
-    void loadPalette(const uc::Continent& continent, PaletteMode mode);
-    void loadPalette(const uc::EcContinent& continent, PaletteMode mode)
-        { loadPalette(uc::continentInfo[static_cast<unsigned>(continent)], mode); }
+    void loadPalette(const uc::Continent& continent);
+    void loadPalette(const uc::EcContinent& continent)
+        { loadPalette(uc::continentInfo[static_cast<unsigned>(continent)]); }
 
     /// Gets the SVG renderer, probably from cache
     std::shared_ptr<QSvgRenderer> get();
@@ -437,24 +436,25 @@ ie::LazySvg::LazySvg(const uc::SynthIcon& icon, char32_t startingCp)
     char buf[48];
     util::sprintfCp(buf, startingCp);
     fname = buf;
-    loadPaletteIf(icon, PaletteMode::FG);
+    loadPaletteIf(icon);
 }
 
 
-void ie::LazySvg::loadPalette(const uc::Continent& continent, PaletteMode mode)
+void ie::LazySvg::loadPalette(const uc::Continent& continent)
 {
     IconPalette pal {
-        .fg = ((mode == PaletteMode::FG) ? continent.icon.fgColor : continent.icon.bgColor),
+        .fg = continent.icon.fgColor,
+        .bg = continent.icon.bgColor,
     };
     setPalette(pal);
 }
 
 
-void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon, PaletteMode mode)
+void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon)
 {
     if (icon.flags.have(uc::Ifg::PAINT_SVG)) {
         auto& continent = icon.maybeMissingContinent();
-        loadPalette(continent, mode);
+        loadPalette(continent);
     }
 }
 
@@ -917,7 +917,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::ThreeD::ThreeD()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg", uc::EcContinent::NONE, PaletteMode::FG)) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg", uc::EcContinent::NONE)) {}
 
 ie::ThreeD::~ThreeD() = default;
 
@@ -935,7 +935,7 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
 ie::SqIdeo::SqIdeo()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/sqideo.svg", uc::EcContinent::CJK, PaletteMode::BG)) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/sqideo.svg", uc::EcContinent::CJK)) {}
 
 ie::SqIdeo::~SqIdeo() {}
 
@@ -953,7 +953,7 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// OneCircle ////////////////////////////////////////////////////////////////
 
 ie::OneCircle::OneCircle()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg", uc::EcContinent::NONE, PaletteMode::FG)) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg", uc::EcContinent::NONE)) {}
 
 ie::OneCircle::~OneCircle() = default;
 
@@ -986,7 +986,7 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ie::Margin::Margin(const uc::SynthIcon& synthIcon,
                    std::string_view aName, int aValue,
                    HalfPixelDown aHalfPixelDown)
-    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName), PaletteMode::FG)),
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
       color(synthIcon.maybeMissingContinent().icon.bgColor),
       value(aValue),
       halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}
