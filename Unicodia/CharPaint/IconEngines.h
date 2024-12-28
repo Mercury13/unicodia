@@ -242,7 +242,7 @@ namespace ie {
     class SqIdeo : public Veng
     {
     public:
-        SqIdeo();
+        SqIdeo(const uc::SynthIcon& icon);
         ~SqIdeo();
         SqIdeo* clone() const override { return new SqIdeo(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;

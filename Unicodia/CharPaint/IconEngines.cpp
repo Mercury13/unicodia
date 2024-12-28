@@ -922,8 +922,8 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
-ie::SqIdeo::SqIdeo()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/sqideo.svg")) {}
+ie::SqIdeo::SqIdeo(const uc::SynthIcon& icon)
+    : texture(dumb::makeSp<LazySvg>(icon, ":ScCustom/sqideo.svg", PaletteMode::BG)) {}
 
 ie::SqIdeo::~SqIdeo() {}
 

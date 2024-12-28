@@ -255,7 +255,7 @@ namespace {
         case 0x1F100:   // Enclosed alnum supp
             return new ie::ThreeD;
         case 0x1F200:   // Eclosed ideo supp
-            return new ie::SqIdeo;
+            return new ie::SqIdeo(block.synthIcon);
         case 0x1FB00:   // Legacy computing
             return new ie::Legacy(":ScCustom/legacy.png");
         default:

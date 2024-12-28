@@ -1430,7 +1430,8 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::ENCLOSED_ALNUM, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
-            { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
+            { 0x1F202, EcContinent::CJK,
+              Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Enclosed Ideographic Supplement",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_ENCLOSED, Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
