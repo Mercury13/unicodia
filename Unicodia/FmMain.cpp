@@ -231,7 +231,7 @@ namespace {
     {
         switch (block.startingCp) {
         case 0x2460:    // Enclosed alnum
-            return new ie::OneCircle;
+            return new ie::OneCircle(block.synthIcon);
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x2FF0:    // Ideographic description

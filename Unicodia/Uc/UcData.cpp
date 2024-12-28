@@ -356,7 +356,7 @@ size_t uc::nTerms() { return std::size(terms); }
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { { 0xFF, 0xFF, 0xFF }, { 0x00, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }, true },
+    { { BG_INTER,             FG_INTER             }, { NO_COLOR, NO_COLOR }, true },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour

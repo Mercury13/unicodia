@@ -2,6 +2,10 @@
 
 #include <QColor>
 
+// International
+constexpr QColor BG_INTER { 0xFF, 0xFF, 0xFF};    // Icon BG: white
+constexpr QColor FG_INTER { 0, 0, 0 };            // Icon FG: black
+
 // CJK
 constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };     // Icon/cell BG: lavenderblush
 constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };     // Cell FG: Tango medium violet

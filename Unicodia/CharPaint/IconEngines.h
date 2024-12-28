@@ -254,7 +254,7 @@ namespace ie {
     class OneCircle : public Veng
     {
     public:
-        OneCircle();
+        OneCircle(const uc::SynthIcon& synthIcon);
         ~OneCircle();
         OneCircle* clone() const override { return new OneCircle(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;

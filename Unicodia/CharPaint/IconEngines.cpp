@@ -940,14 +940,14 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// OneCircle ////////////////////////////////////////////////////////////////
 
-ie::OneCircle::OneCircle()
-    : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg")) {}
+ie::OneCircle::OneCircle(const uc::SynthIcon& synthIcon)
+    : texture(dumb::makeSp<LazySvg>(synthIcon, ":ScCustom/1circ.svg", PaletteMode::FG)) {}
 
 ie::OneCircle::~OneCircle() = default;
 
 void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     // Frame rect
     unsigned margin = (rect.width() + 9) / 16;    // 2 at 1.5×
@@ -960,7 +960,7 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
     rcEllipse = rcEllipse.marginsRemoved({th2, th2, th2, th2});
 
     painter->setRenderHint(QPainter::Antialiasing);
-    painter->setPen(QPen(Qt::black, thick));
+    painter->setPen(QPen(FG_INTER, thick));
     painter->setBrush(Qt::NoBrush);
     painter->drawEllipse(rcEllipse);
 

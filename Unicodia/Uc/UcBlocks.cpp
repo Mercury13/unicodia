@@ -388,7 +388,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::OCR },
     // Enclosed alnum OK, need ordinary Cambria
-    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Enclosed Alphanumerics",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL,
