@@ -1110,7 +1110,7 @@ namespace {
                              const SpecText<U...>& specText = {})
     {
         str::append(text, "<p><nobr>"sv);
-        std::u8string boldHead = str::cat(u8"<b>", locName(x), u8"</b>");
+        std::u8string boldHead = str::cat(u8"<b>"sv, locName(x), u8"</b>"sv);
         auto fmt = formatNum(x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
         loc::PreformN pref{ std::u8string_view{fmt}, x.nChars };
         text += loc::get(specText.idOr("Prop.Head.NChars2")).argQ(
