@@ -1109,13 +1109,12 @@ namespace {
                              std::string_view qry = {},
                              const SpecText<U...>& specText = {})
     {
-        str::append(text, "<p><nobr><b>");
-        str::append(text, locName(x));
-        str::append(text, "</b> ("sv);
+        str::append(text, "<p><nobr>"sv);
+        std::u8string boldHead = str::cat(u8"<b>", locName(x), u8"</b>");
         auto fmt = formatNum(x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
         loc::PreformN pref{ std::u8string_view{fmt}, x.nChars };
-        text += loc::get(specText.idOr("Prop.Head.NChars")).argQ(pref, specText.params);
-        text += ')';
+        text += loc::get(specText.idOr("Prop.Head.NChars2")).argQ(
+                    boldHead, pref, specText.params);
         if (!qry.empty()) {
             appendQuery(text, SCH_QRY_CHARS, qry);
         }
@@ -1428,7 +1427,7 @@ QString mywiki::buildHtml(const uc::Script& x)
     QString r;
     SpecText<std::u8string_view> spec;
     if (x.id == "Hira"sv) {
-        spec.id = "Prop.Head.NoHent2";
+        spec.id = "Prop.Head.NoHent3";
         spec.params = std::make_tuple(u8"href='ps:Hent' class='popup'"sv);
     }
     appendStylesheet(r);

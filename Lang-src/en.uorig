@@ -212,6 +212,14 @@
     </text>
     <text id="NChars">
      <orig>{1|one=? character|many=? characters}</orig>
+     <au-cmt>UNUSED, NChars2 instead</au-cmt>
+    </text>
+    <text id="NChars2">
+     <orig>{1} ({2|one=? character|many=? characters})</orig>
+     <au-cmt>
+      <p>{1} = header</p>
+      <p>{2} = # of characters</p>
+     </au-cmt>
     </text>
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
@@ -221,11 +229,12 @@
       <p>Test: Hiragana</p>
      </au-cmt>
     </text>
-    <text id="NoHent2">
-     <orig>{1|one=? character|many=? characters} without &lt;a {2} &gt;Hentaigana&lt;/a&gt;</orig>
+    <text id="NoHent3">
+     <orig>{1} ({2|one=? character|many=? characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
      <au-cmt>
-      <p>1=# of characters</p>
-      <p>2=technical tags</p>
+      <p>{1} = header</p>
+      <p>{2} = # of characters</p>
+      <p>{3} = additional technical tags (e.g. href, style)</p>
       <p>Test: Hiragana</p>
      </au-cmt>
     </text>
