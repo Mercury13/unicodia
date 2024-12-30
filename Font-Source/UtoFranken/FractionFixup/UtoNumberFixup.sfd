@@ -1,0 +1,1289 @@
+SplineFontDB: 3.2
+FontName: UtoNumberFixup
+FullName: UtoNumberFixup
+FamilyName: UtoNumberFixup
+Weight: Regular
+Copyright: Copyright 2018 Google LLC. All Rights Reserved.
+Version: 1.000
+ItalicAngle: 0
+UnderlinePosition: -125
+UnderlineWidth: 50
+Ascent: 800
+Descent: 200
+InvalidEm: 0
+sfntRevision: 0x00020000
+LayerCount: 2
+Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
+Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
+XUID: [1021 59 1751208496 25196]
+StyleMap: 0x0040
+FSType: 0
+OS2Version: 4
+OS2_WeightWidthSlopeOnly: 1
+OS2_UseTypoMetrics: 0
+CreationTime: 1517339408
+ModificationTime: 1735559356
+PfmFamily: 17
+TTFWeight: 400
+TTFWidth: 5
+LineGap: 0
+VLineGap: 0
+Panose: 2 11 5 2 4 5 4 2 2 4
+OS2TypoAscent: 1069
+OS2TypoAOffset: 0
+OS2TypoDescent: -293
+OS2TypoDOffset: 0
+OS2TypoLinegap: 0
+OS2WinAscent: 1069
+OS2WinAOffset: 0
+OS2WinDescent: 293
+OS2WinDOffset: 0
+HheadAscent: 1069
+HheadAOffset: 0
+HheadDescent: -293
+HheadDOffset: 0
+OS2SubXSize: 650
+OS2SubYSize: 600
+OS2SubXOff: 0
+OS2SubYOff: 75
+OS2SupXSize: 650
+OS2SupYSize: 600
+OS2SupXOff: 0
+OS2SupYOff: 350
+OS2StrikeYSize: 50
+OS2StrikeYPos: 322
+OS2CapHeight: 714
+OS2XHeight: 536
+OS2Vendor: 'GOOG'
+OS2CodePages: 00000001.00000000
+OS2UnicodeRanges: 00000003.02000000.00000000.00000000
+MarkAttachClasses: 1
+DEI: 91125
+TtTable: prep
+PUSHW_1
+ 511
+SCANCTRL
+PUSHB_1
+ 1
+SCANTYPE
+SVTCA[y-axis]
+MPPEM
+PUSHB_1
+ 8
+LT
+IF
+PUSHB_2
+ 1
+ 1
+INSTCTRL
+EIF
+PUSHB_2
+ 70
+ 6
+CALL
+IF
+POP
+PUSHB_1
+ 16
+EIF
+MPPEM
+PUSHB_1
+ 20
+GT
+IF
+POP
+PUSHB_1
+ 128
+EIF
+SCVTCI
+PUSHB_1
+ 6
+CALL
+NOT
+IF
+EIF
+PUSHB_1
+ 20
+CALL
+EndTTInstrs
+TtTable: fpgm
+PUSHB_1
+ 0
+FDEF
+PUSHB_1
+ 0
+SZP0
+MPPEM
+PUSHB_1
+ 42
+LT
+IF
+PUSHB_1
+ 74
+SROUND
+EIF
+PUSHB_1
+ 0
+SWAP
+MIAP[rnd]
+RTG
+PUSHB_1
+ 6
+CALL
+IF
+RTDG
+EIF
+MPPEM
+PUSHB_1
+ 42
+LT
+IF
+RDTG
+EIF
+DUP
+MDRP[rp0,rnd,grey]
+PUSHB_1
+ 1
+SZP0
+MDAP[no-rnd]
+RTG
+ENDF
+PUSHB_1
+ 1
+FDEF
+DUP
+MDRP[rp0,min,white]
+PUSHB_1
+ 12
+CALL
+ENDF
+PUSHB_1
+ 2
+FDEF
+MPPEM
+GT
+IF
+RCVT
+SWAP
+EIF
+POP
+ENDF
+PUSHB_1
+ 3
+FDEF
+ROUND[Black]
+RTG
+DUP
+PUSHB_1
+ 64
+LT
+IF
+POP
+PUSHB_1
+ 64
+EIF
+ENDF
+PUSHB_1
+ 4
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+POP
+SWAP
+POP
+ROFF
+IF
+MDRP[rp0,min,rnd,black]
+ELSE
+MDRP[min,rnd,black]
+EIF
+ELSE
+MPPEM
+GT
+IF
+IF
+MIRP[rp0,min,rnd,black]
+ELSE
+MIRP[min,rnd,black]
+EIF
+ELSE
+SWAP
+POP
+PUSHB_1
+ 5
+CALL
+IF
+PUSHB_1
+ 70
+SROUND
+EIF
+IF
+MDRP[rp0,min,rnd,black]
+ELSE
+MDRP[min,rnd,black]
+EIF
+EIF
+EIF
+RTG
+ENDF
+PUSHB_1
+ 5
+FDEF
+GFV
+NOT
+AND
+ENDF
+PUSHB_1
+ 6
+FDEF
+PUSHB_2
+ 34
+ 1
+GETINFO
+LT
+IF
+PUSHB_1
+ 32
+GETINFO
+NOT
+NOT
+ELSE
+PUSHB_1
+ 0
+EIF
+ENDF
+PUSHB_1
+ 7
+FDEF
+PUSHB_2
+ 36
+ 1
+GETINFO
+LT
+IF
+PUSHB_1
+ 64
+GETINFO
+NOT
+NOT
+ELSE
+PUSHB_1
+ 0
+EIF
+ENDF
+PUSHB_1
+ 8
+FDEF
+SRP2
+SRP1
+DUP
+IP
+MDAP[rnd]
+ENDF
+PUSHB_1
+ 9
+FDEF
+DUP
+RDTG
+PUSHB_1
+ 6
+CALL
+IF
+MDRP[rnd,grey]
+ELSE
+MDRP[min,rnd,black]
+EIF
+DUP
+PUSHB_1
+ 3
+CINDEX
+MD[grid]
+SWAP
+DUP
+PUSHB_1
+ 4
+MINDEX
+MD[orig]
+PUSHB_1
+ 0
+LT
+IF
+ROLL
+NEG
+ROLL
+SUB
+DUP
+PUSHB_1
+ 0
+LT
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+ROLL
+ROLL
+SUB
+DUP
+PUSHB_1
+ 0
+GT
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+EIF
+RTG
+ENDF
+PUSHB_1
+ 10
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+POP
+SRP0
+ELSE
+SRP0
+POP
+EIF
+ENDF
+PUSHB_1
+ 11
+FDEF
+DUP
+MDRP[rp0,white]
+PUSHB_1
+ 12
+CALL
+ENDF
+PUSHB_1
+ 12
+FDEF
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+DUP
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SUB
+ROUND[White]
+DUP
+IF
+DUP
+ABS
+DIV
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+EIF
+ENDF
+PUSHB_1
+ 13
+FDEF
+SRP2
+SRP1
+DUP
+DUP
+IP
+MDAP[rnd]
+DUP
+ROLL
+DUP
+GC[orig]
+ROLL
+GC[cur]
+SUB
+SWAP
+ROLL
+DUP
+ROLL
+SWAP
+MD[orig]
+PUSHB_1
+ 0
+LT
+IF
+SWAP
+PUSHB_1
+ 0
+GT
+IF
+PUSHB_1
+ 64
+SHPIX
+ELSE
+POP
+EIF
+ELSE
+SWAP
+PUSHB_1
+ 0
+LT
+IF
+PUSHB_1
+ 64
+NEG
+SHPIX
+ELSE
+POP
+EIF
+EIF
+ENDF
+PUSHB_1
+ 14
+FDEF
+PUSHB_1
+ 6
+CALL
+IF
+RTDG
+MDRP[rp0,rnd,white]
+RTG
+POP
+POP
+ELSE
+DUP
+MDRP[rp0,rnd,white]
+ROLL
+MPPEM
+GT
+IF
+DUP
+ROLL
+SWAP
+MD[grid]
+DUP
+PUSHB_1
+ 0
+NEQ
+IF
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+EIF
+ENDF
+PUSHB_1
+ 15
+FDEF
+SWAP
+DUP
+MDRP[rp0,rnd,white]
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+SWAP
+DUP
+IF
+MPPEM
+GTEQ
+ELSE
+POP
+PUSHB_1
+ 1
+EIF
+IF
+ROLL
+PUSHB_1
+ 4
+MINDEX
+MD[grid]
+SWAP
+ROLL
+SWAP
+DUP
+ROLL
+MD[grid]
+ROLL
+SWAP
+SUB
+SHPIX
+ELSE
+POP
+POP
+POP
+POP
+EIF
+ELSE
+POP
+POP
+POP
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 16
+FDEF
+DUP
+MDRP[rp0,min,white]
+PUSHB_1
+ 18
+CALL
+ENDF
+PUSHB_1
+ 17
+FDEF
+DUP
+MDRP[rp0,white]
+PUSHB_1
+ 18
+CALL
+ENDF
+PUSHB_1
+ 18
+FDEF
+DUP
+MDAP[rnd]
+PUSHB_1
+ 7
+CALL
+NOT
+IF
+DUP
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SUB
+ROUND[White]
+ROLL
+DUP
+GC[orig]
+SWAP
+GC[cur]
+SWAP
+SUB
+ROUND[White]
+ADD
+DUP
+IF
+DUP
+ABS
+DIV
+SHPIX
+ELSE
+POP
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 19
+FDEF
+DUP
+ROLL
+DUP
+ROLL
+SDPVTL[orthog]
+DUP
+PUSHB_1
+ 3
+CINDEX
+MD[orig]
+ABS
+SWAP
+ROLL
+SPVTL[orthog]
+PUSHB_1
+ 32
+LT
+IF
+ALIGNRP
+ELSE
+MDRP[grey]
+EIF
+ENDF
+PUSHB_1
+ 20
+FDEF
+PUSHB_4
+ 0
+ 64
+ 1
+ 64
+WS
+WS
+SVTCA[x-axis]
+MPPEM
+PUSHW_1
+ 4096
+MUL
+SVTCA[y-axis]
+MPPEM
+PUSHW_1
+ 4096
+MUL
+DUP
+ROLL
+DUP
+ROLL
+NEQ
+IF
+DUP
+ROLL
+DUP
+ROLL
+GT
+IF
+SWAP
+DIV
+DUP
+PUSHB_1
+ 0
+SWAP
+WS
+ELSE
+DIV
+DUP
+PUSHB_1
+ 1
+SWAP
+WS
+EIF
+DUP
+PUSHB_1
+ 64
+GT
+IF
+PUSHB_3
+ 0
+ 32
+ 0
+RS
+MUL
+WS
+PUSHB_3
+ 1
+ 32
+ 1
+RS
+MUL
+WS
+PUSHB_1
+ 32
+MUL
+PUSHB_1
+ 25
+NEG
+JMPR
+POP
+EIF
+ELSE
+POP
+POP
+EIF
+ENDF
+PUSHB_1
+ 21
+FDEF
+PUSHB_1
+ 1
+RS
+MUL
+SWAP
+PUSHB_1
+ 0
+RS
+MUL
+SWAP
+ENDF
+EndTTInstrs
+ShortTable: cvt  1
+  0
+EndShort
+ShortTable: maxp 16
+  1
+  0
+  48
+  74
+  5
+  0
+  0
+  2
+  1
+  2
+  22
+  0
+  256
+  0
+  0
+  0
+EndShort
+LangName: 1033 "" "" "" "" "" "Version 2.000" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
+GaspTable: 1 65535 3 1
+Encoding: UnicodeFull
+Compacted: 1
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -48
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 0 33 13
+BeginPrivate: 0
+EndPrivate
+BeginChars: 1114113 4
+
+StartChar: .notdef
+Encoding: 1114112 -1 0
+Width: 600
+GlyphClass: 1
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+94 0 m 1,0,-1
+ 94 714 l 1,1,-1
+ 505 714 l 1,2,-1
+ 505 0 l 1,3,-1
+ 94 0 l 1,0,-1
+145 51 m 1,4,-1
+ 454 51 l 1,5,-1
+ 454 663 l 1,6,-1
+ 145 663 l 1,7,-1
+ 145 51 l 1,4,-1
+EndSplineSet
+EndChar
+
+StartChar: uni2189
+Encoding: 8585 8585 1
+Width: 868
+Flags: W
+HStem: -8 57<562.853 742.747> 0 21G<168 255.213> 194 55<600 729.759> 278 63<123.541 223.494> 380 57<601.485 736.507> 660 62<123.515 224.013>
+VStem: 19 73<376.854 623.971> 258 72<380.502 620.077> 754 72<270.352 365.394> 767 72<71.6553 172.261>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_3
+ 19
+ 0
+ 0
+CALL
+PUSHB_1
+ 13
+MDRP[min,rnd,black]
+PUSHB_1
+ 13
+SRP0
+PUSHB_1
+ 17
+MDRP[min,rnd,black]
+PUSHB_3
+ 42
+ 0
+ 0
+CALL
+PUSHB_1
+ 43
+MDAP[rnd]
+PUSHB_1
+ 13
+DUP
+MDRP[rp0,rnd,white]
+SRP1
+PUSHB_1
+ 26
+MDAP[rnd]
+PUSHB_1
+ 27
+MDRP[min,rnd,black]
+PUSHB_1
+ 45
+MDAP[rnd]
+PUSHB_1
+ 57
+MDRP[min,rnd,black]
+PUSHB_1
+ 34
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_1
+ 61
+MDAP[rnd]
+PUSHB_1
+ 51
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 67
+MDAP[rnd]
+PUSHB_1
+ 48
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 64
+MDRP[min,rnd,black]
+PUSHB_1
+ 64
+SRP0
+PUSHB_2
+ 59
+ 1
+CALL
+PUSHB_1
+ 54
+MDRP[min,rnd,black]
+PUSHB_1
+ 54
+SRP0
+PUSHB_2
+ 22
+ 1
+CALL
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+PUSHB_1
+ 31
+DUP
+MDRP[rp0,rnd,white]
+SRP1
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_2
+ 68
+ 1
+CALL
+PUSHB_2
+ 59
+ 64
+SRP1
+SRP2
+PUSHB_4
+ 42
+ 45
+ 51
+ 43
+DEPTH
+SLOOP
+IP
+PUSHB_2
+ 31
+ 54
+SRP1
+SRP2
+NPUSHB
+ 10
+ 0
+ 7
+ 13
+ 6
+ 19
+ 26
+ 16
+ 38
+ 41
+ 44
+DEPTH
+SLOOP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 19
+ 13
+SRP1
+SRP2
+PUSHB_1
+ 16
+IP
+PUSHB_2
+ 26
+ 43
+SRP1
+SRP2
+PUSHB_1
+ 10
+IP
+PUSHB_1
+ 27
+SRP1
+PUSHB_2
+ 6
+ 7
+IP
+IP
+PUSHB_2
+ 57
+ 45
+SRP1
+SRP2
+PUSHB_2
+ 3
+ 31
+IP
+IP
+PUSHB_1
+ 34
+SRP1
+PUSHB_1
+ 37
+IP
+PUSHB_1
+ 0
+SRP2
+PUSHB_1
+ 38
+IP
+PUSHB_1
+ 61
+SRP1
+PUSHB_4
+ 48
+ 54
+ 59
+ 64
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 51
+SRP2
+PUSHB_2
+ 44
+ 41
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+683 437 m 0,0,1
+ 754 437 754 437 790 406 c 128,-1,2
+ 826 375 826 375 826 327 c 0,3,4
+ 826 287 826 287 804.5 261 c 128,-1,5
+ 783 235 783 235 753 225 c 1,6,-1
+ 753 222 l 1,7,8
+ 792 215 792 215 815.5 189.5 c 128,-1,9
+ 839 164 839 164 839 123 c 0,10,11
+ 839 65 839 65 797 28.5 c 128,-1,12
+ 755 -8 755 -8 666 -8 c 0,13,14
+ 629 -8 629 -8 597 -1.5 c 128,-1,15
+ 565 5 565 5 535 20 c 1,16,-1
+ 535 83 l 1,17,18
+ 605 49 605 49 667 49 c 0,19,20
+ 719 49 719 49 743 69.5 c 128,-1,21
+ 767 90 767 90 767 125 c 0,22,23
+ 767 161 767 161 738 177.5 c 128,-1,24
+ 709 194 709 194 657 194 c 2,25,-1
+ 600 194 l 1,26,-1
+ 600 249 l 1,27,-1
+ 657 249 l 2,28,29
+ 707 249 707 249 730.5 268.5 c 128,-1,30
+ 754 288 754 288 754 319 c 0,31,32
+ 754 351 754 351 733.5 365.5 c 128,-1,33
+ 713 380 713 380 684 380 c 0,34,35
+ 653 380 653 380 626.5 369.5 c 128,-1,36
+ 600 359 600 359 573 342 c 1,37,-1
+ 537 388 l 1,38,39
+ 568 411 568 411 602.5 424 c 128,-1,40
+ 637 437 637 437 683 437 c 0,0,1
+679 714 m 1,41,-1
+ 243 0 l 1,42,-1
+ 168 0 l 1,43,-1
+ 604 714 l 1,44,-1
+ 679 714 l 1,41,-1
+174 278 m 0,45,46
+ 97 278 97 278 58 335.5 c 128,-1,47
+ 19 393 19 393 19 501 c 0,48,49
+ 19 607 19 607 56 664.5 c 128,-1,50
+ 93 722 93 722 174 722 c 0,51,52
+ 251 722 251 722 290.5 665 c 128,-1,53
+ 330 608 330 608 330 501 c 0,54,55
+ 330 395 330 395 293.5 336.5 c 128,-1,56
+ 257 278 257 278 174 278 c 0,45,46
+174 341 m 0,57,58
+ 258 341 258 341 258 501 c 0,59,60
+ 258 660 258 660 174 660 c 0,61,62
+ 131 660 131 660 111.5 620.5 c 128,-1,63
+ 92 581 92 581 92 500 c 0,64,65
+ 92 421 92 421 111.5 381 c 128,-1,66
+ 131 341 131 341 174 341 c 0,57,58
+EndSplineSet
+EndChar
+
+StartChar: uni218A
+Encoding: 8586 8586 2
+Width: 582
+Flags: W
+HStem: -30 85<226.754 406.506> 644 85<57 418>
+VStem: 79 100<101.073 275.898>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 20
+MDRP[min,rnd,black]
+PUSHB_1
+ 9
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 27
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 17
+MDRP[min,rnd,black]
+PUSHB_3
+ 17
+ 3
+ 10
+CALL
+PUSHB_4
+ 64
+ 17
+ 12
+ 9
+CALL
+PUSHB_3
+ 3
+ 17
+ 10
+CALL
+PUSHB_4
+ 64
+ 3
+ 9
+ 9
+CALL
+PUSHB_2
+ 28
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 20
+ 0
+SRP1
+SRP2
+PUSHB_1
+ 24
+IP
+PUSHB_1
+ 9
+SRP1
+PUSHB_3
+ 3
+ 17
+ 23
+IP
+IP
+IP
+PUSHB_1
+ 10
+SRP2
+PUSHB_1
+ 12
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+304 -30 m 0,0,1
+ 200 -30 200 -30 139.5 24.5 c 128,-1,2
+ 79 79 79 79 79 174 c 0,3,4
+ 79 233 79 233 102 284.5 c 128,-1,5
+ 125 336 125 336 167 386.5 c 128,-1,6
+ 209 437 209 437 266 493 c 2,7,-1
+ 418 644 l 1,8,-1
+ 57 644 l 1,9,-1
+ 57 729 l 1,10,-1
+ 540 729 l 1,11,-1
+ 540 655 l 1,12,-1
+ 348 462 l 2,13,14
+ 292 406 292 406 254.5 359.5 c 128,-1,15
+ 217 313 217 313 198 270 c 128,-1,16
+ 179 227 179 227 179 180 c 0,17,18
+ 179 117 179 117 214 86 c 128,-1,19
+ 249 55 249 55 311 55 c 0,20,21
+ 360 55 360 55 400.5 73.5 c 128,-1,22
+ 441 92 441 92 483 134 c 1,23,-1
+ 531 55 l 1,24,25
+ 488 19 488 19 433 -5.5 c 128,-1,26
+ 378 -30 378 -30 304 -30 c 0,0,1
+EndSplineSet
+EndChar
+
+StartChar: uni218B
+Encoding: 8587 8587 3
+Width: 639
+Flags: W
+HStem: -30 83<242.652 441.45> 304 86<269.206 448> 666 82<242.328 498.11>
+VStem: 72 101<450.359 601.25> 94 101<97.7928 238.074>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 36
+MDRP[min,rnd,black]
+PUSHB_1
+ 30
+MDAP[rnd]
+PUSHB_1
+ 27
+MDRP[min,rnd,black]
+PUSHB_1
+ 21
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 43
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 24
+MDRP[min,rnd,black]
+PUSHB_1
+ 3
+DUP
+MDRP[rp0,rnd,white]
+SRP1
+PUSHB_1
+ 33
+MDRP[min,rnd,black]
+PUSHB_3
+ 33
+ 3
+ 10
+CALL
+PUSHB_4
+ 64
+ 33
+ 28
+ 9
+CALL
+PUSHB_2
+ 44
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 36
+ 0
+SRP1
+SRP2
+PUSHB_1
+ 40
+IP
+PUSHB_1
+ 30
+SRP1
+PUSHB_2
+ 3
+ 39
+IP
+IP
+PUSHB_1
+ 27
+SRP2
+PUSHB_2
+ 6
+ 7
+IP
+IP
+PUSHB_1
+ 21
+SRP1
+PUSHB_2
+ 10
+ 18
+IP
+IP
+PUSHB_1
+ 14
+SRP2
+PUSHB_1
+ 17
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+321 -30 m 0,0,1
+ 207 -30 207 -30 150.5 21.5 c 128,-1,2
+ 94 73 94 73 94 151 c 0,3,4
+ 94 225 94 225 137.5 274.5 c 128,-1,5
+ 181 324 181 324 244 339 c 1,6,-1
+ 244 343 l 1,7,8
+ 158 354 158 354 115 405.5 c 128,-1,9
+ 72 457 72 457 72 528 c 0,10,11
+ 72 588 72 588 101.5 638 c 128,-1,12
+ 131 688 131 688 194.5 718 c 128,-1,13
+ 258 748 258 748 358 748 c 0,14,15
+ 410 748 410 748 463 739.5 c 128,-1,16
+ 516 731 516 731 562 708 c 1,17,-1
+ 561 619 l 1,18,19
+ 515 642 515 642 462 654 c 128,-1,20
+ 409 666 409 666 356 666 c 0,21,22
+ 261 666 261 666 217 627 c 128,-1,23
+ 173 588 173 588 173 525 c 0,24,25
+ 173 452 173 452 227 421 c 128,-1,26
+ 281 390 281 390 378 390 c 2,27,-1
+ 449 390 l 1,28,-1
+ 448 304 l 1,29,-1
+ 376 304 l 2,30,31
+ 288 304 288 304 241.5 265 c 128,-1,32
+ 195 226 195 226 195 166 c 0,33,34
+ 195 113 195 113 230 83 c 128,-1,35
+ 265 53 265 53 332 53 c 0,36,37
+ 385 53 385 53 427.5 69 c 128,-1,38
+ 470 85 470 85 510 112 c 1,39,-1
+ 554 50 l 1,40,41
+ 515 20 515 20 459 -5 c 128,-1,42
+ 403 -30 403 -30 321 -30 c 0,0,1
+EndSplineSet
+EndChar
+EndChars
+EndSplineFont
