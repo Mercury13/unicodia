@@ -517,7 +517,6 @@ const uc::Font& mywiki::DescFont::getDescFont(const uc::Font& font)
     return *that;
 }
 
-
 namespace {
 
     constexpr std::u8string_view BULLET = u8"•\u00A0";
@@ -1124,6 +1123,17 @@ namespace {
     template <class X>
     inline const uc::Font& getFont(const X& obj)
         { return obj.font(); }
+
+    template <>
+    inline const uc::Font& getFont<uc::Block>(const uc::Block& obj)
+    {
+        switch (obj.startingCp) {
+        case 0x2150:
+            return uc::fontInfo[static_cast<int>(uc::EcFont::NUMBER_FORMS)];
+        default:
+            return obj.font();
+        }
+    }
 
     template <class X>
     void appendWiki(QString& text, const X& obj, std::u8string_view x)

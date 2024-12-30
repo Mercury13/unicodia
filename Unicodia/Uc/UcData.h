@@ -346,6 +346,7 @@ namespace uc {
         NEWA,
         NKO,
         NP_HMONG,
+        NUMBER_FORMS,   ///< Number Forms block, description
         NUSHU,
         OCR,
         OLCHIKI,
@@ -356,7 +357,7 @@ namespace uc {
         PAHAWH_HMONG,
         PERMIC_OLD,
         PHAGS_PA,
-        MAHJONG_TILES,      // Fall down to Phaistos Disc
+        MAHJONG_TILES,      ///< Fall down to Phaistos Disc
          PHAISTOS_DISC,        
         POLLARD,
         PSEUDOGRAPHICS,
