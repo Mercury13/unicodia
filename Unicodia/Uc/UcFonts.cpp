@@ -233,6 +233,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSerifNPHmong-Regular.ttf" },                                         // NP Hmong
+        /// @todo [portability] I’m deviating from system fonts, but:
+        ///                 • Noto badly hinted
+        ///                 • Noto and DejaVu have no inverted 2/3
     { "Tahoma" },                                                               // Number forms
     { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 20_bot, 150_pc },                    // OCR
