@@ -1041,7 +1041,7 @@
     </text>
     <text id="New">
      <orig>new ''(appeared recently, like N’Ko)''</orig>
-     <transl>新しい ''(N'Ko など最近登場)''</transl>
+     <transl>新しい ''(N’Ko など最近登場)''</transl>
     </text>
     <text id="Reborn">
      <orig>revived ''(like Tifinagh)''</orig>
@@ -2021,7 +2021,7 @@
       <p>古代ギリシャ語のいくつかの方言に存在した多音的音声:</p>
       <p>* dasia{{-}}荒い呼吸 (「h」を追加)</p>
       <p>* psili{{-}}滑らかな呼吸 (その「h」がない)</p>
-      <p>* iota 下付き{{-}}二重母音 (i を含む)</p>
+      <p>* iota{{-}}下付き{{-}}二重母音 (i を含む)</p>
       <p>* oxia{{-}}高音/上昇音</p>
       <p>* varia{{-}}通常/低音</p>
       <p>* circumflex{{-}}1 音節の音調変化</p>
