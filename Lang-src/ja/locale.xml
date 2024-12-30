@@ -44,7 +44,7 @@
 			 Programmatically sticks to another block → no need
 			 Ideograph is so deep that sorts OK → no need
 			 Probably will need attention because of Old: Hung, Ital, Narb, Perm, Sarb, Orkh, Ougr -->
-		<blk start="02B0" target="しゅうしょく もじ の すぺーす" /><!-- spacing modifiers -->
+		<blk start="02B0" target="ぜんしん を ともなう しゅうしょく もじ" /><!-- spacing modifiers -->
 		<blk start="0300" target="はつおん くべつ ふごう の けつごう" /><!-- basic umlauts -->
 		<blk start="1800" target="こだい もんごる もじ" /><!-- Mongol -->
 		<blk start="1980" target="しん たい゠ ろ もじ (ふぃんらんどご)" /><!-- Talu -->
