@@ -38,6 +38,10 @@ What was done by authors of Unicodia:
 * Tagalog:
   - Enlarged virama
   - Rehinted with FontForge (except dotted circle)
+* Number forms:
+  - Three glyphs from different fonts
+  - Rehinted with TtfAutoHunt, symbol + strong/strong/strong
+  - Cannot put to Franken because of strange troubles
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
