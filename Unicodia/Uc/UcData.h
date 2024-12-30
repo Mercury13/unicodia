@@ -732,14 +732,16 @@ namespace uc {
     enum class Bfg {
         COLLAPSIBLE     = 1<<0,     ///< [+] collapsible CJK/Egyp
         HAS_32_NONCHARS = 1<<1,     ///< [+] block has 32 non-characters
-        FORCE_FONT      = 1<<2,     ///< [+] force NORMAL font
+        FORCE_FONT      = 1<<2,     ///< [+] force NORMAL font despite other written in script
         UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
         CJK             = 1<<5,     ///< [+] CJK for tofu counting (see remark below)
         NO_EMOJI        = 1<<6,     ///< [+] VS16 emoji are always text (Latin-1, arrows)
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
-        CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise rather than clockwise
+        CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise [-] clockwise
+                    ///< Why so? Vertical marks, vertical format chars etc →
+                    ///< we don’t know if the script is ↶ or ↷ until we actually find a normal letter
         HIDE_STYLE      = 1<<10,    ///< [+] Hide from list: which blocks use this style channel
                                     ///<     (Glag supp has Bulgarian style only, so write just Glag)
         BIG_CONTROLS    = 1<<11,    ///< [+] Control chars use same size as normal
