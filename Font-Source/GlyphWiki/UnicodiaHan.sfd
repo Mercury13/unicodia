@@ -3,9 +3,9 @@ FontName: UnicodiaHan
 FullName: UnicodiaHan
 FamilyName: UnicodiaHan
 Weight: Regular
-Copyright: Copyright (c) 2022, Mikhail Merkuryev
+Copyright: Copyright (c) 2022-2025, Mikhail Merkuryev
 UComments: "2022-9-30: Created with FontForge (http://fontforge.org)"
-Version: 001.000
+Version: 2.9.5
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1664568655
-ModificationTime: 1694897611
+ModificationTime: 1735765155
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
