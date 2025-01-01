@@ -37,7 +37,7 @@ void FmMain::clearConsole()
 void FmMain::prepareTasks()
 {
     auto text = ui->memoGlyphs->toPlainText();
-    auto lines = text.split(QRegularExpression("\\s"), Qt::SkipEmptyParts);
+    auto lines = text.split(QRegularExpression(R"([\r\n])"), Qt::SkipEmptyParts);
 
     tasks.clear();
     for (auto& p : lines) {
