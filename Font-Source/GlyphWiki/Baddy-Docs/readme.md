@@ -57,6 +57,6 @@ I’ve seen points 0.001 units apart.
 ## NON-ADJACENT back-forth lines
 * Sample: 2FC5
 * Frequency: single SVG
-* Cause: glitches of SVG renderer. They always occur on horizontal/vertical lines: in diagonal they are really unlikely because need coincidence of several factors
+* Cause: poor grafting of glyph parts. They always occur on horizontal/vertical lines: in diagonal they are really unlikely because need coincidence of several factors
 * Danger: may break algorithms, false self-intersection
 * Workaround: inkscape manually, Path→Union
