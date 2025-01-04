@@ -61,7 +61,9 @@ namespace loc
             std::u8string
                     keyValueColon, ///< Key: Value
                     uniformComma,  ///< first, second
-                    semicolon;     ///< first, second; third
+                    semicolon,     ///< first, second; third
+                    leftParen,     ///< left parenthesis
+                    rightParen;    ///< right parenthesis
         } punctuation;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh

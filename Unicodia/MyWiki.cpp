@@ -901,7 +901,8 @@ namespace {
                 lang = uc::findSideLang(x.key);
             }
         }
-        s += "<i>(";
+        s += "<i>";
+        str::append(s, loc::active::punctuation.leftParen);
         if (lang) {
             bool wasWritten = false;
             // Pre-comment from L10n
@@ -970,7 +971,8 @@ namespace {
             s += "[NO LANGUAGE!!!]";
         }
         // End
-        s += ")</i>";
+        str::append(s, loc::active::punctuation.rightParen);
+        s += "</i>";
     }
 
     // Key: start/end

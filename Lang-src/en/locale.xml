@@ -100,6 +100,8 @@
 			key-value-colon: in “UTF-8: 00”
 			uniform-comma: in uniform words “first, second”
 			semicolon: in “first, second; did the third”
-				(script’s languages only, in English see Sunuwar) -->
-	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; " />
+				(script’s languages only, in English see Sunuwar)
+			left-paren, right-paren: in script’s languages only -->
+	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
+			left-paren="(" right-paren=")" />
 </locale>

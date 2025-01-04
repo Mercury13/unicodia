@@ -267,11 +267,15 @@ namespace {
 
         auto hPunctuation = hLocale.child("punctuation");
         r.punctuation.keyValueColon = str::toU8sv(
-                        hPunctuation.attribute("key-value-colon").as_string("::::::"));
+                    hPunctuation.attribute("key-value-colon").as_string("::::::"));
         r.punctuation.uniformComma = str::toU8sv(
-                        hPunctuation.attribute("uniform-comma").as_string(",,,,,,"));
+                    hPunctuation.attribute("uniform-comma").as_string(",,,,,,"));
         r.punctuation.semicolon = str::toU8sv(
-                        hPunctuation.attribute("semicolon").as_string(";;;;;;"));
+                    hPunctuation.attribute("semicolon").as_string(";;;;;;"));
+        r.punctuation.leftParen = str::toU8sv(
+                    hPunctuation.attribute("left-paren").as_string("(((((("));
+        r.punctuation.rightParen = str::toU8sv(
+                    hPunctuation.attribute("right-paren").as_string("))))))"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
