@@ -550,7 +550,7 @@
      </text>
      <text id="Text">
       <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
-      <transl>左から右に書かれたラテン文字、キリル文字、その他の文字。[[ps:ハニ|CJK表意文字]]はUnicodeの中で最も数の多い部分であるため、最も重要なクラスです。</transl>
+      <transl>左から右に書かれたラテン文字、キリル文字、その他の文字。[[ps:Hani|CJK表意文字]]はUnicodeの中で最も数の多い部分であるため、最も重要なクラスです。</transl>
      </text>
     </group>
     <group id="NSM">
