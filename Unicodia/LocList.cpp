@@ -290,7 +290,7 @@ namespace {
             }
         }
 
-        std::cout << "Loaded lang " << str::toSv(r.name.tech) << std::endl;
+        std::cout << "Loaded lang " << str::toSv(r.name.tech) << '\n';
         return true;
     }
 
