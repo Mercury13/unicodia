@@ -2,7 +2,6 @@
 
 // C++
 #include <filesystem>
-#include <unordered_set>
 #include <vector>
 #include <span>
 
@@ -55,6 +54,10 @@ namespace path {
 
 namespace config {
 
+    namespace window {
+        struct State;
+    }
+
     class Favs
     {
     public:
@@ -76,9 +79,6 @@ namespace config {
         uc::SetOfChar ndx;
     };
 
-    namespace window {
-        extern bool isMaximized;
-    }
     namespace lang {
         extern std::string wanted;
         extern int savedStamp;
@@ -87,8 +87,7 @@ namespace config {
     extern Favs favs;
 
     /// All params should be initialized!
-    void init(QRect& winRect, BlockOrder& blockOrder);
+    void init(window::State& state, BlockOrder& blockOrder);
 
-    void save(const QRect& winRect, bool isMaximized,
-              BlockOrder blockOrder);
+    void save(const window::State& state, BlockOrder blockOrder);
 }

@@ -11,6 +11,7 @@
 // Misc
 #include "u_EcArray.h"
 #include "UcData.h"
+#include "RememberWindow.h"
 
 // L10n
 #include "LocList.h"
@@ -42,7 +43,6 @@ std::filesystem::path path::exeAdmined;
 std::filesystem::path path::config;
 
 // config
-bool config::window::isMaximized;
 std::string config::lang::wanted;
 int config::lang::savedStamp = 0;
 config::Favs config::favs;
@@ -133,7 +133,7 @@ namespace {
         }
     }
 
-    void loadConfig([[maybe_unused]] QRect& winRect, BlockOrder& blockOrder)
+    void loadConfig(config::window::State& state, BlockOrder& blockOrder)
     {
         if (fname::config.empty() || !std::filesystem::exists(fname::config))
             return;
@@ -142,15 +142,8 @@ namespace {
         if (auto res = doc.load_file(fname::config.c_str())) {
             auto root = doc.child("config");
 
-            // Do not save window position right now
-//            auto oldW = winRect.width();
-//            auto oldH = winRect.height();
-//            auto tagWin = root.child("window");
-//                winRect.setLeft(tagWin.attribute("x").as_int(winRect.left()));
-//                winRect.setTop(tagWin.attribute("y").as_int(winRect.top()));
-//                winRect.setWidth(tagWin.attribute("w").as_int(oldW));
-//                winRect.setHeight(tagWin.attribute("h").as_int(oldH));
-//                config::window::isMaximized = tagWin.attribute("max").as_bool();
+            // Window position
+            config::window::load(root, state);
 
             auto hLang = root.child("lang");
             config::lang::wanted = hLang.attribute("v").as_string();
@@ -176,7 +169,7 @@ namespace {
 
 }   // anon namespace
 
-void config::init(QRect& winRect, BlockOrder& blockOrder)
+void config::init(window::State& state, BlockOrder& blockOrder)
 {
     path::exeBundled = QCoreApplication::applicationFilePath().toStdWString();
 #ifdef _WIN32
@@ -200,13 +193,12 @@ void config::init(QRect& winRect, BlockOrder& blockOrder)
         break;
     }
     fname::config = path::config / CONFIG_NAME;
-    loadConfig(winRect, blockOrder);
+    loadConfig(state, blockOrder);
 }
 
 
 void config::save(
-        [[maybe_unused]] const QRect& winRect,
-        [[maybe_unused]] bool isMaximized,
+        const config::window::State& state,
         BlockOrder blockOrder)
 {
     std::filesystem::create_directories(path::config);
@@ -220,12 +212,8 @@ void config::save(
             hLang.append_attribute("stamp") = loc::allLangs.lastStamp();
         }
 
-//    auto hWin = root.append_child("window");
-//        hWin.append_attribute("x") = winRect.left();
-//        hWin.append_attribute("y") = winRect.top();
-//        hWin.append_attribute("w") = winRect.width();
-//        hWin.append_attribute("h") = winRect.height();
-//        hWin.append_attribute("max") = isMaximized;
+    config::window::save(root, state);
+
 
     auto hView = root.append_child("view");
     hView.append_attribute("sort") = orderNames[blockOrder].data();   // OK, const s_v have trailing 0

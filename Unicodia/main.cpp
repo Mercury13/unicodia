@@ -2,10 +2,12 @@
 #include <QApplication>
 #include <QWidget>
 #include <QTranslator>
+#include <QScreen>
 
 // Libs
 #include <Fonts/TempFont.h>
 #include "i_DarkMode.h"
+#include "RememberWindow.h"
 
 // Project-local
 #include "d_Config.h"
@@ -85,7 +87,7 @@ int main(int argc, char *argv[])
     //qputenv("QT_SCALE_FACTOR", "1.25");
     //qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
     QApplication a(argc, argv);
-    //a.setStyle("fusion");
+    //a.setStyle("fusion");  Try other styles
 
     dark::fileName = ":/Combinear.qss";
     dark::palette = darkPalette();
@@ -101,25 +103,22 @@ int main(int argc, char *argv[])
     // Load config
     {
         auto order = BlockOrder::DEFAULT;
-        auto rect = w.geometry();
+        config::window::State state(w);
 
-        config::init(rect, order);
+        config::init(state, order);
 
         w.chooseFirstLanguage();
         w.setBlockOrder(order);  // Strange interaction: first language, then order, not vice-versa
         w.configLoaded();
 
-        /// @todo [config] We’ve got a bad position for window divider
-        //setGeometry(w, rect);
-        //if (config::window::isMaximized)
-        //    w.setWindowState(w.windowState() | Qt::WindowMaximized);
+        config::window::setGeometry(w, state);
     }
 
     w.show();
 
     { loc::AutoStop autoStop;
         int r = a.exec();
-        config::save(w.normalGeometry(), w.isMaximized(), w.blockOrder());
+        config::save(config::window::State(w), w.blockOrder());
         return r;
     }   // manager will stop erasing here → speed up exit
 }
