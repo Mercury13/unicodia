@@ -57,6 +57,12 @@ namespace loc
         struct Peculiarities {
             bool stillUsesBurmese = false;  ///< uses Myanmar/Burmese
         } peculiarities;
+        struct Punctuation {
+            std::u8string
+                    keyValueColon, ///< Key: Value
+                    uniformComma,  ///< first, second
+                    semicolon;     ///< first, second; third
+        } punctuation;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
@@ -81,6 +87,7 @@ namespace loc
     namespace active {
         extern Lang::Icons icons;
         extern Lang::Numfmt numfmt;
+        extern Lang::Punctuation punctuation;
         extern EngTerms engTerms;
     }
 

@@ -96,4 +96,8 @@
 			still-uses-burmese: uses pair Myanmar/Burmese
 				(writes location of Myanmar for Burmese script) -->
 	<peculiarities still-uses-burmese="0" />
+	<!-- Punctuation
+			key-value-colon: in “UTF-8: 00”
+			uniform-comma: in uniform words “first, second” -->
+	<punctuation key-value-colon=": " uniform-comma=", " />
 </locale>

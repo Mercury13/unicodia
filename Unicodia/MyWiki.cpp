@@ -1233,8 +1233,6 @@ void mywiki::appendEmojiValue(QString& text,
 
 namespace {
 
-    constexpr const char* PROP_COLON = ": ";
-
     void appendSomeBullet(QString& text,
                     std::u8string_view bullet,
                     std::string_view locKey,
@@ -1244,7 +1242,7 @@ namespace {
         str::append(text, tag1);
         str::append(text, loc::get(locKey));
         str::append(text, tag2);
-        text += PROP_COLON;
+        str::append(text, loc::active::punctuation.keyValueColon);
     }
 
     void appendNonBullet(QString& text, std::string_view locKey,
@@ -1935,7 +1933,7 @@ namespace {
         text += "<a href='pk:2F00' class='popup'>";
         text += loc::get("Prop.Kx.Bullet");
         text += "</a>";
-        text += PROP_COLON;
+        str::append(text, loc::active::punctuation.keyValueColon);
         char16_t sRad[] = u"?";
         sRad[0] = cp::KANGXI_DELTA + sspec.haniRadical();
         auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_UHAN)];
@@ -2621,7 +2619,7 @@ namespace {
     {
         sp.sep();
         mywiki::appendNoFont(sp.target(), loc::get(locKey));
-        str::append(sp.target(), ": ");
+        str::append(sp.target(), loc::active::punctuation.keyValueColon);
         mywiki::appendCopyable(sp.target(), value);
         // Query
         if (value != 0 && !schema.empty() && !unicodeLink.empty()) {
@@ -2687,7 +2685,7 @@ namespace {
             text += "<br>";
         }
         text += loc::get(locKey);
-        text += ": ";
+        str::append(text, loc::active::punctuation.keyValueColon);
         str::QSep sp(text, ", ");
         for (auto& blk : uc::allBlocks()) {
             // Think that resize history is heavy (not really a problem now)

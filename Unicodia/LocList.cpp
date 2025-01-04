@@ -35,6 +35,7 @@ loc::Lang* loc::currLang = nullptr;
 
 loc::Lang::Icons loc::active::icons;
 loc::Lang::Numfmt loc::active::numfmt;
+loc::Lang::Punctuation loc::active::punctuation;
 loc::EngTerms loc::active::engTerms = loc::EngTerms::OFF;
 
 
@@ -82,6 +83,7 @@ void loc::Lang::forceLoad()
     active::icons = icons;
     active::numfmt = numfmt;
     active::engTerms = engTerms;
+    active::punctuation = punctuation;
 
     // loc::FmtL locale
     loc::activeFmtLocale = currLang;
@@ -262,6 +264,12 @@ namespace {
 
         auto hPeculiarities = hLocale.child("peculiarities");
         r.peculiarities.stillUsesBurmese = hPeculiarities.attribute("still-uses-burmese").as_bool(false);
+
+        auto hPunctuation = hLocale.child("punctuation");
+        r.punctuation.keyValueColon = str::toU8sv(
+                        hPunctuation.attribute("key-value-colon").as_string("::::::"));
+        r.punctuation.uniformComma = str::toU8sv(
+                        hPunctuation.attribute("uniform-comma").as_string(",,,,,,"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
