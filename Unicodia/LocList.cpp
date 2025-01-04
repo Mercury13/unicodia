@@ -270,6 +270,8 @@ namespace {
                         hPunctuation.attribute("key-value-colon").as_string("::::::"));
         r.punctuation.uniformComma = str::toU8sv(
                         hPunctuation.attribute("uniform-comma").as_string(",,,,,,"));
+        r.punctuation.semicolon = str::toU8sv(
+                        hPunctuation.attribute("semicolon").as_string(";;;;;;"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

@@ -52,4 +52,5 @@
 		<rule mod="10" min="2" max="4" outcome="few" /><!-- 2 кола … 4 кола, 22 кола … 24 кола, 102 кола … 124 кола -->
 	</cardinal-rules>
 	<peculiarities still-uses-burmese="1" />
+	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; " />
 </locale>

@@ -35,6 +35,9 @@ using namespace std::string_view_literals;
 
 #define NBSP "\u00A0"
 
+constexpr const char* EURO_COMMA = ", ";
+constexpr const char* EURO_SEMICOLON = "; ";
+
 const mywiki::Context DEFAULT_CONTEXT {
     .font { uc::fontInfo[0] },
     .lang = nullptr,
@@ -909,7 +912,7 @@ namespace {
             // Pre-comment from data
             if (lang->flags.have(uc::Langfg::CUSTOM_PRENOTE)) {
                 if (wasWritten)
-                    s += ", ";
+                    str::append(s, loc::active::punctuation.uniformComma);
                 if (locPrefixDot.empty()) {
                     s += "[NO L10N PREFIX]";
                 } else {
@@ -923,16 +926,16 @@ namespace {
                 // Locations
                 if (shouldWriteLocations(*lang)) {
                     if (wasWritten) {
-                        s += "; ";
+                        str::append(s, loc::active::punctuation.semicolon);
                     }
                     for (auto& v : lang->locations) {
                         auto locKey = str::cat("Prop.LangLoc.", v.locSubKey);
                         s += loc::get(locKey);
-                        s += ", ";
+                        str::append(s, loc::active::punctuation.uniformComma);
                     }
                 } else {
                     if (wasWritten) {
-                        s += ", ";
+                        str::append(s, loc::active::punctuation.uniformComma);
                     }
                 }
                 // # of speakers
@@ -1872,7 +1875,7 @@ namespace {
                         isInitial = false;
                         text += "<p style='" CNAME_ALTNAME "'>";
                     } else {
-                        text += "; ";
+                        text += EURO_SEMICOLON;
                     }
                     mywiki::appendCopyable(text, str::toQ(s), "altname");
                     break;
@@ -2004,7 +2007,7 @@ namespace {
             } else {
                 appendNonBullet(text, KEY, "<a href='pk:1FB00' class='popup'>", "</a>");
             }
-            str::QSep spC(text, ", ");
+            str::QSep spC(text, loc::active::punctuation.uniformComma);
             while (comps) {
                 // Extract and remove bit
                 auto bit = comps.smallest();
@@ -2040,7 +2043,7 @@ namespace {
                     text += "<a href='pt:altcode' class='popup'>";
                     str::append(text, loc::get("Prop.Input.AltCode"));
                     text += "</a> ";
-                    str::QSep sp2(text, ", ");
+                    str::QSep sp2(text, EURO_COMMA);    // alt codes
                     if (im.alt.dosCommon) {
                         sp2.sep();
                         str::append(text, static_cast<int>(im.alt.dosCommon));
@@ -2513,7 +2516,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                                 isInitial = false;
                                 text += "<p style='" CNAME_ALTNAME "'>";
                             } else {
-                                text += "; ";
+                                text += EURO_SEMICOLON;  // names/abbreviations are euro
                             }
                             mywiki::appendCopyable(text, str::toQ(s), "altname");
                         } break;
@@ -2686,7 +2689,7 @@ namespace {
         }
         text += loc::get(locKey);
         str::append(text, loc::active::punctuation.keyValueColon);
-        str::QSep sp(text, ", ");
+        str::QSep sp(text, loc::active::punctuation.uniformComma);
         for (auto& blk : uc::allBlocks()) {
             // Think that resize history is heavy (not really a problem now)
             if (version.stats.thisEcVersion > blk.ecVersion) {
@@ -2970,7 +2973,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
     { sp.sep();
         auto chars = info.charTypes;
         appendNonBullet(text, "OldComp.PropName.Chars");
-        str::QSep spC(text, ", ");
+        str::QSep spC(text, loc::active::punctuation.uniformComma);
         while (chars) {
             auto bit = chars.smallest();
             chars.remove(bit);

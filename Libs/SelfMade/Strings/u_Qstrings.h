@@ -70,6 +70,7 @@ namespace str {
     {
     public:
         QSep(QString& aS, const QString& aSep) : s(aS), len(aS.length()), fSep(aSep) {}
+        QSep(QString& aS, std::u8string_view aSep) : s(aS), len(aS.length()), fSep(str::toQ(aSep)) {}
         QSep(const QSep&) = delete;
         void sep();
         QString& target() { return s; }

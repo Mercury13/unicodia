@@ -108,9 +108,6 @@
 		<blk start="1F700" target="れんきんじゅつ きごう" /><!-- alchemical -->
 		<blk start="1FB00" target="きゅうしき こんぴゅーたーよう きごう" /><!-- legacy comp -->
 	</alpha-fixup>
-	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
-		 breaking alphabet order and referenceability.
-		 These blocks are marked with ellipsis. -->
 	<ellipsis text="…">
 		<blk start="1AB0"  /><!-- umlauts supp. It’s the 3rd in cluster; 2 and 4 do not need -->
 		<blk start="2E00"  /><!-- supp punctuation -->
@@ -145,4 +142,5 @@
 			still-uses-burmese: uses pair Myanmar/Burmese
 				(writes location of Myanmar for Burmese script) -->
 	<peculiarities still-uses-burmese="0" />
+	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; " />
 </locale>

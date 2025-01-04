@@ -63,4 +63,5 @@
 		<rule mod="10" min="2" max="4" outcome="few" /><!-- 2 круга … 4 круга, 22 круга … 24 круга, 102 круга … 124 круга -->
 	</cardinal-rules>
 	<peculiarities still-uses-burmese="1" />
+	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; " />
 </locale>
