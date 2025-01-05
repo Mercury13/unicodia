@@ -1003,7 +1003,7 @@ namespace uc {
     };
 
     enum class Tfg : unsigned char {
-        SORT_KEY = 1,   ///< [+] show if it’s a sort key
+        SORT_KEY = 1,   ///< [+] show only if it’s a sort key (e.g. in Japanese)
                         ///< @warning  The programmer should manually set it if the category sorts terms
     };
 

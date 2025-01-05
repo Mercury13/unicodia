@@ -276,6 +276,7 @@
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
+      <p>Test: almost every header of pop-up window: Control, Latin, blocks…</p>
      </au-cmt>
      <transl>{1} ({2|one=? символ|few=? символи|many=? символів})</transl>
     </text>
@@ -11778,6 +11779,38 @@
       <p>{{smtable|*क|ка +|**◌्|[[pt:virama|вірама]] +|*ष|шa =|*क्ष|кша}}</p>
       <p>{{smtable|*क|кa +|**◌्|вірама + ZWNJ +|*ष|шa =|*क्‌ष|інше кша}}</p>
       <p>::: (зазвичай у складених словах)</p>
+     </transl>
+    </text>
+   </group>
+   <group id="country">
+    <text id="Name">
+     <orig>country codes</orig>
+     <transl>коди країн</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Unicode Consortium does not define for themselves what is a country and how its flag should look. Instead they take two-letter country codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some territories of disputable status. Among unusual reasons:</p>
+      <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after gaining independence.</p>
+      <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and rename.</p>
+      <p>* PS (Palestine): way to recognition.</p>
+      <p>* DG (Diego Garcia) and others: telecommunication sites.</p>
+      <p>* EA (Ceuta and Melilla), IC (Canary Islands): special customs rules different from common-European.</p>
+      <p>* GG (Guernsey) and others: issue their own postal stamps.</p>
+      <p>* XK (Kosovo): temporary code used by Europe.</p>
+      <p />
+      <p>Image on country emoji (usually flag) is up to vendor.</p>
+     </orig>
+     <transl>
+      <p>Консорціум Юнікоду не визначає, що таке країна і як повинен виглядати її прапор. Натомість він бере дволітерні коди країн з ISO{{_}}3166. Він містить усі визнані країни, частину залежних територій, і частину територій спірного статусу. Серед незвичайних причин:</p>
+      <p>* UA (Україна), BY (Білорусь): члени ООН у складі СРСР, залишили коди після відокремлення.</p>
+      <p>* KI (Кірибаті, раніше GE=острови Ґілберта) та інші: отримали новий код зі звільненням та перейменуванням.</p>
+      <p>* PS (Палестина): шлях до визнання.</p>
+      <p>* DG (Дієґо-Ґарсія) та інші: пункти зв’язку.</p>
+      <p>* EA (Сеута та Мелілья), IC (Канарські острови): особливі митні правила, відмінні від загальноєвропейських.</p>
+      <p>* GG (Ґернсі) та інші: видають власні поштові марки.</p>
+      <p>* XK (Косово): тимчасовий код, що використовується Європою.</p>
+      <p />
+      <p>Зображення на емодзі (звичайно прапор) за виробником.</p>
      </transl>
     </text>
    </group>

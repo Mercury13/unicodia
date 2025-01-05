@@ -324,6 +324,8 @@ constinit const uc::Term uc::terms[] {
             .ecFont = EcFont::DEVANAGARI_SYSTEM },
     { .key = "zwnj", .ecCat = EcTermCat::ENCODING, .engName = u8"ZWNJ = zero width non-joiner",
             .ecFont = EcFont::DEVANAGARI_SYSTEM },
+    { .key = "country", .ecCat = EcTermCat::ENCODING, .engName = u8"country codes",
+            .fgs = Tfg::SORT_KEY },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
