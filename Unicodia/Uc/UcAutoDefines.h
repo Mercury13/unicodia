@@ -54,6 +54,9 @@ namespace uc {
         JUL = 7,  AUG = 8,  SEP = 9,  OCT = 10, NOV = 11, DEC = 12
     };
 
+/// @todo [U17] Remove this define when permanently add U17
+#define ENABLE_17 true
+
     enum class EcVersion : unsigned char
     {
         NOT_EMOJI,
@@ -89,6 +92,9 @@ namespace uc {
         V_15_0,
         V_15_1,
         V_16_0,
+#if ENABLE_17
+        V_17_0,
+#endif
         NN,
         TOO_HIGH = NN,
         FIRST = 0,

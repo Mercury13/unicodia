@@ -1,6 +1,7 @@
 #include "UcData.h"
 
 constexpr uc::LangLoc LOC_AFRICA_W      { .locSubKey = "AfricaW"     };
+constexpr uc::LangLoc LOC_AFRICA_C      { .locSubKey = "AfricaC"     };
 constexpr uc::LangLoc LOC_BANGLADESH    { .locSubKey = "Bangladesh"  };
 constexpr uc::LangLoc LOC_BHUTAN        { .locSubKey = "Bhutan"      };
 constexpr uc::LangLoc LOC_CAMBODIA      { .locSubKey = "Cambodia"    };
@@ -135,6 +136,14 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::BENGALI, NO_FLAGS,
         { .mantissa = 230, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2021,
           .locations { LOC_BANGLADESH, LOC_INDIA_E } } },
+    /// @todo [U17] Beria Erfe: add SIL’s font
+#if ENABLE_17
+    { "Berf", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
+        Dating::decade(1950), EcFont::NORMAL, NO_FLAGS,
+        { .mantissa = 440, .numOrder = NumOrder::THOUSAND, .year = 2022,
+          .locations { LOC_AFRICA_C } } },
+#endif
     // Bhaiksuki OK, installed Google Noto
     { "Bhks", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -186,6 +195,14 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1821), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
           .locations { LOC_USA } } },
+    /// @todo [U17] Beria Erfe: add SIL’s font
+#if ENABLE_17
+    { "Chis", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::decade(1950), EcFont::NORMAL, NO_FLAGS,
+        { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
+          .locations { LOC_INDIA_E } } },
+#endif
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA_RTL,
@@ -691,6 +708,12 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sidd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(6), EcFont::SIDDHAM },
+    /// @todo [U17, tofu] Sidetic
+#if ENABLE_17
+    { "Sidt", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
+        Dating::century(-5), EcFont::NORMAL, NO_FLAGS },
+#endif
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
@@ -770,6 +793,12 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Tavt", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::TAI_VIET },
+    /// @todo [U17, tofu] Tai Yo
+#if ENABLE_17
+    { "Tayo", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::ASIA,
+        Dating::century(16), EcFont::NORMAL, NO_FLAGS },
+#endif
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -813,6 +842,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(1780), EcFont::FUNKY },
+    /// @todo [U17, tofu] Tolong Siki
+#if ENABLE_17
+    { "Tols", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::year(1999), EcFont::NORMAL, NO_FLAGS,
+        { .mantissa = 22, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,  // Same 2011 census
+          .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
+#endif
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,

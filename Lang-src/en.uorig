@@ -985,6 +985,10 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaC">
+     <orig>Central Africa</orig>
+     <au-cmt>U17 Beria Erfe</au-cmt>
+    </text>
     <text id="AfricaW">
      <orig>Western Africa</orig>
      <au-cmt>Garay</au-cmt>
@@ -2611,6 +2615,12 @@
      <orig>Lydian (Sardian)</orig>
     </text>
    </group>
+   <group id="10940">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sidetic</orig>
+    </text>
+   </group>
    <group id="10980">
     <text id="Name">
      <orig>Meroitic hieroglyphs</orig>
@@ -2893,6 +2903,12 @@
      <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</orig>
     </text>
    </group>
+   <group id="11B60">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sharada supplement</orig>
+    </text>
+   </group>
    <group id="11BC0">
     <text id="Name">
      <orig>Sunuwar</orig>
@@ -2916,6 +2932,12 @@
    <group id="11D60">
     <text id="Name">
      <orig>Gondi — Gunjala</orig>
+    </text>
+   </group>
+   <group id="11DB0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tolong Siki</orig>
     </text>
    </group>
    <group id="11EE0">
@@ -3048,9 +3070,21 @@
      <orig>Pahawh Hmong</orig>
     </text>
    </group>
+   <group id="16D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Chisoi</orig>
+    </text>
+   </group>
    <group id="16E40">
     <text id="Name">
      <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
+    </text>
+   </group>
+   <group id="16EA0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Beria Erfe</orig>
     </text>
    </group>
    <group id="16F00">
@@ -3100,6 +3134,12 @@
     </text>
     <text id="Text">
      <orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</orig>
+    </text>
+   </group>
+   <group id="18D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tangut components supplement</orig>
     </text>
    </group>
    <group id="1AFF0">
@@ -3162,6 +3202,12 @@
       <p />
       <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
+    </text>
+   </group>
+   <group id="1CEC0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Symbols miscellaneous supplement</orig>
     </text>
    </group>
    <group id="1CF00">
@@ -3353,6 +3399,13 @@
    <group id="1E5D0">
     <text id="Name">
      <orig>Ol Onal</orig>
+    </text>
+   </group>
+   <group id="1E6C0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tai Yo</orig>
+     <au-cmt>U17</au-cmt>
     </text>
    </group>
    <group id="1E7E0">
@@ -3696,6 +3749,12 @@
     </text>
     <text id="Text">
      <orig>Rare ideographs, mainly from old Chinese newspapers.</orig>
+    </text>
+   </group>
+   <group id="323B0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>CJK unified ideographs extension J</orig>
     </text>
    </group>
    <group id="E0000">
