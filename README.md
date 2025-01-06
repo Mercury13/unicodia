@@ -34,7 +34,7 @@ _(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree to 
 * BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise to script _(батакская=Batak [script])_.
 * SCRIPTS: of course agree to script _(грузинская=Georgian [script])_.
 
-**Ukrainian.** See [Lang-Src/Ukrainian.md](Lang-Src/Ukrainian.md).
+**Ukrainian.** See [Lang-src/Ukrainian.md](Lang-src/Ukrainian.md).
 
 **New languages.**
 * As English uses lots of capital letters, translations to other languages may use small where English is capital. Refer to Russian/Ukrainian for letter case.
