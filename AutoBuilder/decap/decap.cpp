@@ -58,7 +58,8 @@ const std::multiset<IdiomEntry> idioms {
     { { "VEDIC"sv, "TONE"sv}, IsPrefix::NO, IdiomAction::NEXT_CAP },
     { { "AI"sv, "LENGTH"sv, "MARK"sv}, IsPrefix::NO, IdiomAction::FIRST_CAP },
     { { "SYLLABLE"sv, "LENGTHENER"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
-    { { "SYLLABLE"sv, "ITERATION"sv, "MARK"sv}, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
+    { { "SYLLABLE"sv, "ITERATION"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
+    { { "YANGQIN"sv, "SIGN"sv }, IsPrefix::NO, IdiomAction::NEXT_CAP },
 };
 
 
