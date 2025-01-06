@@ -486,6 +486,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX2("Sun", decap::Exf::CPONLY)      // CP: star; Emoji: weather
     EX("Mercury")                       // Planet, not metal
     EX("Cancer")                        // Constellation, not disease
+    EX("Iris")                          // Not always
+    EX("Flora")                         // Not always
         // Emoji
     EX("Earth globe Europe-Africa")     // Special proper name
     EX("Earth globe Americas")          // Special proper name

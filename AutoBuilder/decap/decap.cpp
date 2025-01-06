@@ -52,6 +52,7 @@ const std::multiset<IdiomEntry> idioms {
     { { "EMOJI"sv, "COMPONENT"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     { { "DUPLOYAN"sv, "LETTER"sv }, IsPrefix::YES, IdiomAction::REST_DETECT_LETTERS },
+    { { "GEOMANTIC"sv, "FIGURE"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     // Rest idioms
     { { "VOWEL"sv, "LENGTH"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
     { { "VEDIC"sv, "TONE"sv}, IsPrefix::NO, IdiomAction::NEXT_CAP },
