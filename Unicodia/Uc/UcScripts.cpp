@@ -712,7 +712,7 @@ constinit const uc::Script uc::scriptInfo[] {
 #if ENABLE_17
     { "Sidt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
-        Dating::century(-5), EcFont::NORMAL, NO_FLAGS },
+        Dating::century(-5, StdNote::FIRST_KNOWN), EcFont::NORMAL, NO_FLAGS },
 #endif
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,

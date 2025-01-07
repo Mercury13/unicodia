@@ -2908,6 +2908,9 @@
     <text id="Name">
      <orig>Sharada supplement</orig>
     </text>
+    <text id="Text">
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. The main script for Kashmiri is [[ps:Arab|Arabic]].</orig>
+    </text>
    </group>
    <group id="11BC0">
     <text id="Name">
@@ -3200,7 +3203,7 @@
      <orig>
       <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
-      <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
+      <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
     </text>
    </group>
@@ -3755,6 +3758,13 @@
     <au-cmt>U17</au-cmt>
     <text id="Name">
      <orig>CJK unified ideographs extension J</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
+      <p />
+      <p>[[pk:2EBF0|China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of 4000{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+     </orig>
     </text>
    </group>
    <group id="E0000">
@@ -6059,6 +6069,21 @@
       <p>{{smtable|ka|*𑖎|+ i|**◌𑖰|= ki|*𑖎𑖰}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
+     </orig>
+    </text>
+   </group>
+   <group id="Sidt">
+    <text id="Name">
+     <orig>Sidetic</orig>
+    </text>
+    <text id="Lang">
+     <orig>Sidetic ''(Anatolia)''</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Language and script used near Side, modern Turkey. The last evidence is the 2nd century BC. Only 13 inscriptions are known. The language is considered deciphered, except some rare letters. Letter meanings are:</p>
+      <p />
+      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
      </orig>
     </text>
    </group>
