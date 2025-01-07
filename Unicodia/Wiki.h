@@ -68,6 +68,9 @@ namespace wiki {
     DEFINE_ENUM_OPS(wiki::Weight)
 
     ///
+    /// @brief
+    ///    Engine is actually a callback that assembles a text from pieces
+    ///
     /// @warning  Engine class is usually stateful and thus non-reentrant
     ///           (except for recursive parsing of the same text, and,
     ///            of course, 1) the engine initiates recursion itself;
@@ -78,8 +81,6 @@ namespace wiki {
     public:
         /// @param [in] changed   Flags that changed,
         ///                       state ← state ^ changed
-        /// @param [in] remainder  Remainder of wiki text, to check
-        ///                        a bit forward
         /// @warning  The engine itself keeps track of weights, as it can run
         ///           recursively.
         virtual void toggleWeight(
@@ -97,7 +98,7 @@ namespace wiki {
         virtual void appendBreak(Strength strength, Feature feature, unsigned indentSize) = 0;
 
         /// Called after wiki parsing.
-        /// Closes weight tags that are not open.
+        /// Closes weight tags that are still open.
         virtual void finish() {}
     };
 
