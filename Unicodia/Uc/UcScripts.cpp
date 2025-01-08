@@ -195,7 +195,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1821), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
           .locations { LOC_USA } } },
-    /// @todo [U17] Beria Erfe: add SIL’s font
+    /// @todo [U17] Chisoi: cool font exists
 #if ENABLE_17
     { "Chis", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
