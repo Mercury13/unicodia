@@ -2909,7 +2909,7 @@
      <orig>Sharada supplement</orig>
     </text>
     <text id="Text">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. The main script for Kashmiri is [[ps:Arab|Arabic]].</orig>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic]].</orig>
     </text>
    </group>
    <group id="11BC0">
@@ -3211,6 +3211,15 @@
     <au-cmt>U17</au-cmt>
     <text id="Name">
      <orig>Symbols miscellaneous supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Asteroid signs are from astronomy of the 19th century, when people started to discover them. Modern astronomers do not use these signs.</p>
+      <p />
+      <p>Arabic geomancy (actually divination using random numbers, like [[pk:4DC0|Yijing]]) involved drawing random figures on the sand.</p>
+      <p />
+      <p>Circle with a bar in modern chemistry means “standard” (convenient for calculations) state of mixture when its composition depends on temperature and pressure.</p>
+     </orig>
     </text>
    </group>
    <group id="1CF00">
@@ -6046,7 +6055,7 @@
       <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
-      <p>Top line may be solid, broken or have arbitrary breaks.</p>
+      <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
      </orig>
     </text>
    </group>
@@ -6728,6 +6737,21 @@
     </text>
     <text id="Text">
      <orig>Combining mark is used in several scripts.</orig>
+    </text>
+   </group>
+   <group id="Chis">
+    <text id="Name">
+     <orig>Chisoi</orig>
+    </text>
+    <text id="Lang">
+     <orig>Kurmali</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Kurmali is usually written with [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengali]] or [[ps:Latn|Latin]]. This script was created by Jayanta Kumar Mahata. Letter shapes are loosely based on local scripts. The name “Chisoi” is from a children’s rhyme.</p>
+      <p />
+      <p>Despite resemblance to [[ps:Sora|Sora]] or [[ps:Wara|Warang Citi]] (inherent vowel {{t|ɔ}} is muted with [[pt:virama|virama]]), sources are unanimous: it’s an alphabet.</p>
+     </orig>
     </text>
    </group>
   </group>

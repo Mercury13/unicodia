@@ -199,7 +199,7 @@ constinit const uc::Script uc::scriptInfo[] {
 #if ENABLE_17
     { "Chis", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1950), EcFont::NORMAL, NO_FLAGS,
+        Dating::year(1994), EcFont::NORMAL, NO_FLAGS,
         { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E } } },
 #endif
