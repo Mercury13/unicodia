@@ -6776,6 +6776,17 @@
      <orig>Combining mark is used in several scripts.</orig>
     </text>
    </group>
+   <group id="Tols">
+    <text id="Name">
+     <orig></orig>
+    </text>
+    <text id="Lang">
+     <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
+    </text>
+    <text id="Text">
+     <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="ArabPres1">
