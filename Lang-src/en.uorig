@@ -2909,7 +2909,7 @@
      <orig>Sharada supplement</orig>
     </text>
     <text id="Text">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Urdu]].</orig>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
     </text>
    </group>
    <group id="11BC0">
@@ -3136,13 +3136,20 @@
      <orig>Tangut supplement</orig>
     </text>
     <text id="Text">
-     <orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</orig>
+     <orig>
+      <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words: all nine are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</p>
+      <p />
+      <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
+     </orig>
     </text>
    </group>
    <group id="18D80">
     <au-cmt>U17</au-cmt>
     <text id="Name">
      <orig>Tangut components supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Components and radicals from the new dictionary (2021).</orig>
     </text>
    </group>
    <group id="1AFF0">
@@ -3989,6 +3996,21 @@
      </orig>
     </text>
    </group>
+   <group id="Berf">
+    <text id="Name">
+     <orig>Beria Erfe</orig>
+    </text>
+    <text id="Lang">
+     <orig>Zaghawa</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>The script was made by schoolteacher Adam Tajir from clan brands for camels. The letter meanings were a crude copy of [[ps:Arab|Arabic]]. In 2000, veterinarian Siddick Adam Issa improved the script, and it has proven popular.</p>
+      <p />
+      <p>A peculiar feature of Beria: capital letters grow downwards. Tones are marked with ordinary [[pk:0300|diacritics]]: àáā. Numbers and punctuation are European.</p>
+     </orig>
+    </text>
+   </group>
    <group id="Bhks">
     <text id="Name">
      <orig>Bhaiksuki (arrowhead script)</orig>
@@ -4178,6 +4200,21 @@
       <p>The first pupil was Ayoka, his six-year-old daughter. The invention of script was received with mistrust, he was taken for possessed, but Sequoia and Ayoka brilliantly passed a test, reading each other’s notes. The script quickly spread among the tribe, and {{%|90}} of Cherokee were literate by 1830.</p>
       <p />
       <p>Since 1828, Sequoia took part in negotiations with the USA for Cherokee lands.</p>
+     </orig>
+    </text>
+   </group>
+   <group id="Chis">
+    <text id="Name">
+     <orig>Chisoi</orig>
+    </text>
+    <text id="Lang">
+     <orig>Kurmali</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Kurmali is usually written with [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengali]] or [[ps:Latn|Latin]]. This script was created by Jayanta Kumar Mahata. Letter shapes are loosely based on local scripts. The name “Chisoi” is from a children’s rhyme.</p>
+      <p />
+      <p>Despite resemblance to [[ps:Sora|Sora]] or [[ps:Wara|Warang Citi]] (inherent vowel {{t|ɔ}} is muted with [[pt:virama|virama]]), sources are unanimous: it’s an alphabet.</p>
      </orig>
     </text>
    </group>
@@ -6737,21 +6774,6 @@
     </text>
     <text id="Text">
      <orig>Combining mark is used in several scripts.</orig>
-    </text>
-   </group>
-   <group id="Chis">
-    <text id="Name">
-     <orig>Chisoi</orig>
-    </text>
-    <text id="Lang">
-     <orig>Kurmali</orig>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Kurmali is usually written with [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengali]] or [[ps:Latn|Latin]]. This script was created by Jayanta Kumar Mahata. Letter shapes are loosely based on local scripts. The name “Chisoi” is from a children’s rhyme.</p>
-      <p />
-      <p>Despite resemblance to [[ps:Sora|Sora]] or [[ps:Wara|Warang Citi]] (inherent vowel {{t|ɔ}} is muted with [[pt:virama|virama]]), sources are unanimous: it’s an alphabet.</p>
-     </orig>
     </text>
    </group>
   </group>
