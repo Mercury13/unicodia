@@ -6434,10 +6434,10 @@
     <text id="Text">
      <orig>
       <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
-      <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]].</p>
+      <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
       <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}. No punctuation marks, sometimes Chinese are used. Numbers are spelled out in all sources.</p>
+      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese U+3001 and 02 are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
       <p />
       <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
      </orig>
