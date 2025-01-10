@@ -797,7 +797,9 @@ constinit const uc::Script uc::scriptInfo[] {
 #if ENABLE_17
     { "Tayo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::ASIA,
-        Dating::century(16), EcFont::NORMAL, NO_FLAGS },
+        Dating::century(16), EcFont::NORMAL, NO_FLAGS,
+        { .mantissa = 290, .numOrder = NumOrder::THOUSAND, .year = 2019,
+          .locations { LOC_VIETNAM } } }, // Unicode request, Eth is murky and obsolete
 #endif
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
@@ -847,7 +849,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Tols", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1999), EcFont::NORMAL, NO_FLAGS,
-        { .mantissa = 22, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,  // Same 2011 census
+        { .mantissa = 21, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
 #endif
     // Toto OK, U14, moved that font to FunkySample

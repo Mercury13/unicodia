@@ -1242,7 +1242,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
     /// @todo [U17, tofu] Chisoi
 #if ENABLE_17
-    { 0x16D80, 0x16DAF, { 0x16DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x16D80, 0x16DAF, { 0x16DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING, 1_hy },
             "Chisoi",
             { EcScript::Chis, 0 }, MapSubtype::ALIVE,
             EcScript::Chis, EcFont::NORMAL },
@@ -1253,7 +1253,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Medf, 0 }, MapSubtype::DEAD, EcScript::Medf },
     /// @todo [U17] Beria Erfe: add SIL’s font
 #if ENABLE_17
-    { 0x16EA0, 0x16EDF, { 0x16EA0, EcContinent::AFRICA, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x16EA0, 0x16EDF, { 0x16EA1, EcContinent::AFRICA, Ifg::PAINT_SVG | Ifg::MISSING, SvgHint { 9, ImbaX::RIGHT_3 } },
             "Beria Erfe",
             { EcScript::Berf, 0 }, MapSubtype::ALIVE,
             EcScript::Berf, EcFont::NORMAL },

@@ -6424,6 +6424,25 @@
      </orig>
     </text>
    </group>
+   <group id="Tayo">
+    <text id="Name">
+     <orig>Tai Yo (Lai Tai)</orig>
+    </text>
+    <text id="Lang">
+     <orig>Tai Yo</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
+      <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]].</p>
+      <p>* All vowel marks are written below or on the right. There’s no preceding or enclosing vowel marks.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}. No punctuation marks, sometimes Chinese are used. Numbers are spelled out in all sources.</p>
+      <p />
+      <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
+     </orig>
+    </text>
+   </group>
    <group id="Telu">
     <text id="Name">
      <orig>Telugu</orig>
