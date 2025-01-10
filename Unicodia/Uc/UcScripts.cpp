@@ -799,7 +799,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::ASIA,
         Dating::century(16), EcFont::NORMAL, NO_FLAGS,
         { .mantissa = 290, .numOrder = NumOrder::THOUSAND, .year = 2019,
-          .locations { LOC_VIETNAM } } }, // Unicode request, Eth is murky and obsolete
+          .locations { LOC_VIETNAM } } }, // Unicode request, Ethnologue is murky and obsolete
 #endif
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
