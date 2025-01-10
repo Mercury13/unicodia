@@ -333,6 +333,7 @@ const std::map<RangeByEnd, uc::Cfgs> styleRanges {
     { { 0xA840,  0xA87F  }, TWO_STYLES },   // Phag
     { { 0x10F30, 0x10F6F }, TWO_STYLES },   // Sogd
     { { 0x10F70, 0x10FAF }, TWO_STYLES },   // Ougr
+    { { 0x1E6C0, 0x1E6FF }, TWO_STYLES },   // Tayo
 };
 
 /// One method of homonym disambig: these chars are left as-are

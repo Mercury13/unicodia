@@ -1433,11 +1433,14 @@ constinit const uc::Block uc::blocks[] {
             "Ol Onal",
             { EcScript::Onao, 0 }, MapSubtype::ALIVE, EcScript::Onao },
     /// @todo [U17, tofu] Tai Yo
+    /// @todo [U17, vertical]
 #if ENABLE_17
-    { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA,
+                          Ifg::PAINT_SVG | Ifg::MISSING | Ifg::ROTATE_LTR_CW },
             "Tai Yo",
             { EcScript::Tayo, 0 }, MapSubtype::DEAD,
-            EcScript::Tayo, EcFont::NORMAL },
+            EcScript::Tayo, EcFont::NORMAL, NO_FLAGS,
+            EcGlyphStyleChannel::VERTICAL },
 #endif
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA, {}, SvgHint{ 14, ImbaY::ABOVE_4 } },
