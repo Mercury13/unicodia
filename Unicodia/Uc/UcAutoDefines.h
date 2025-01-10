@@ -55,7 +55,7 @@ namespace uc {
     };
 
 /// @todo [U17] Remove this define when permanently add U17
-#define ENABLE_17 true
+#define ENABLE_17 false
 
     enum class EcVersion : unsigned char
     {
