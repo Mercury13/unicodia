@@ -89,7 +89,7 @@
 * Greek: JSI, lowercase is better
 * Greek ex: IDK
 * Greek num: JSI
-* Greek music: Warhammer 40k
+* Greek music: TMB + egg, Warhammer 40k
 * Hung: JSI
 * Ital: TMB
 * Latn: some letter distinct for Latn, word “Latin”
