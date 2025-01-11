@@ -104,3 +104,19 @@
 * Runes: TMB
 * Shavian: JSI (most letters are basic shapes)
 * Znamenny: TMB
+
+## Asia ←
+* Common: A. Simple line → smth else
+* Khar: TMB K
+* Orkh: JSI
+* Phlp: interesting punctuation
+
+## Asia →
+* Common Brahmic: K
+* Anatolian: JSI, lo-res
+* Armenian: JSI
+* Brah: JSI, K = simple cross
+* Cari: too close to Greek, what to take?
+* Cakm: K too basic
+* Cham: same
+* Common Indic: fill the entire cell
