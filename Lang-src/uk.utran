@@ -1244,6 +1244,11 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaC">
+     <orig>Central Africa</orig>
+     <au-cmt>U17 Beria Erfe</au-cmt>
+     <transl>Центральна Африка</transl>
+    </text>
     <text id="AfricaW">
      <orig>Western Africa</orig>
      <au-cmt>Garay</au-cmt>
@@ -3479,6 +3484,13 @@
      <transl>Лідійська (сардійська)</transl>
     </text>
    </group>
+   <group id="10940">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sidetic</orig>
+     <transl>Сидетська</transl>
+    </text>
+   </group>
    <group id="10980">
     <text id="Name">
      <orig>Meroitic hieroglyphs</orig>
@@ -3825,6 +3837,17 @@
      <transl>Джайнські розділові знаки і [[pt:ligature|лігатури]] для фраз на кшталт «нехай буде воно благословенно».</transl>
     </text>
    </group>
+   <group id="11B60">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sharada supplement</orig>
+     <transl>Шарада додаткова</transl>
+    </text>
+    <text id="Text">
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <transl>Оголоси сучасної шаради для кашмірської, запозичені з [[ps:Deva|деванáґарі]]. Щоб отримати початкові літери, ці мітки кріпляться до U+11183 або іншої початкової голосної. Кашмірська зазвичай пишеться [[ps:Arab|арабською-урду]].</transl>
+    </text>
+   </group>
    <group id="11BC0">
     <text id="Name">
      <orig>Sunuwar</orig>
@@ -3853,6 +3876,13 @@
     <text id="Name">
      <orig>Gondi — Gunjala</orig>
      <transl>Ґонді — ґунджала</transl>
+    </text>
+   </group>
+   <group id="11DB0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tolong Siki</orig>
+     <transl>Толонг-сікі</transl>
     </text>
    </group>
    <group id="11EE0">
@@ -4026,10 +4056,24 @@
      <transl>Пахау хмонг</transl>
     </text>
    </group>
+   <group id="16D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Chisoi</orig>
+     <transl>Чисой</transl>
+    </text>
+   </group>
    <group id="16E40">
     <text id="Name">
      <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
      <transl>Обері-окаїме (медефайдрин)</transl>
+    </text>
+   </group>
+   <group id="16EA0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Beria Erfe</orig>
+     <transl>Берія</transl>
     </text>
    </group>
    <group id="16F00">
@@ -4096,8 +4140,27 @@
      <transl>Тангутська додаткова</transl>
     </text>
     <text id="Text">
-     <orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</orig>
-     <transl>Блок містить дев’ять [[pt:unification|розуніфікацій]] тангутської мови. Іншими словами: усі дев’ять ієрогліфів{{-}}чиїсь омографи. Наприклад, «пара» залишилась на старому місці 17134, а омограф «дурний» одержав новий номер 18D00.</transl>
+     <orig>
+      <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words: all nine are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</p>
+      <p />
+      <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
+     </orig>
+     <transl>
+      <p>Дев’ять символів [[pt:unification|розуніфікували]] у 2020. Іншими словами: усі дев’ять{{-}}чиїсь омографи. Наприклад, «пара» залишилась на старому місці 17134, а омограф «дурний» одержав новий номер 18D00.</p>
+      <p />
+      <p>У 2021 у Китаї вийшов словник тангутської, викликавши кодування нових ієрогліфів.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="18D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tangut components supplement</orig>
+     <transl>Елементи тангутського письма додаткові</transl>
+    </text>
+    <text id="Text">
+     <orig>Components and radicals from the new dictionary (2021).</orig>
+     <transl>Компоненти та ключі з нового словника (2021).</transl>
     </text>
    </group>
    <group id="1AFF0">
@@ -4171,12 +4234,35 @@
      <orig>
       <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
-      <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
+      <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
      <transl>
       <p>Останній набір символів зі старих комп’ютерів. Рідка [[pt:pseudographics|псевдографіка]], ігрові спрайти (деякі з тих комп’ютерів не{{_}}мали графики), великі літери на кілька [[pt:mono|знакомісць]]… Скоріше за все, більше не буде великих додавань таких символів, адже мікрокомп’ютери 2010-х зазвичай дотримуються стандартних кодувань.</p>
       <p />
-      <p>Юнікод{{_}}17 [[pt:unification|розуніфікує]] консольні символи від [[pt:emoji|емодзі]].</p>
+      <p>Юнікод{{_}}17 [[pt:unification|розуніфікував]] консольні символи від [[pt:emoji|емодзі]].</p>
+     </transl>
+    </text>
+   </group>
+   <group id="1CEC0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Symbols miscellaneous supplement</orig>
+     <transl>Символи різні додаткові</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Asteroid signs are from astronomy of the 19th century, when people started to discover them. Modern astronomers do not use these signs.</p>
+      <p />
+      <p>Arabic geomancy (actually divination using random numbers, like [[pk:4DC0|Yijing]]) involved drawing random figures on the sand.</p>
+      <p />
+      <p>Circle with a bar in modern chemistry means “standard” (convenient for calculations) state of mixture when its composition depends on temperature and pressure.</p>
+     </orig>
+     <transl>
+      <p>Знаки астероїдів{{-}}з астрономії XIX{{_}}століття, коли стали відкривати їх. Сучасні астрономи не{{_}}користуються цими знаками.</p>
+      <p />
+      <p>Арабська геомантія (фактично гадання на випадкових числах, як [[pk:4DC0|Ї Цзін]]) включало малювання випадкових символів на піску.</p>
+      <p />
+      <p>Коло з рискою у сучасній хімії означає «стандартний» (зручний для розрахунків) стан суміші, коли її склад залежить від температури та тиску.</p>
      </transl>
     </text>
    </group>
@@ -4464,6 +4550,14 @@
     <text id="Name">
      <orig>Ol Onal</orig>
      <transl>Ол-онал</transl>
+    </text>
+   </group>
+   <group id="1E6C0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tai Yo</orig>
+     <au-cmt>U17</au-cmt>
+     <transl>Тай-йо</transl>
     </text>
    </group>
    <group id="1E7E0">
@@ -4970,6 +5064,25 @@
      <transl>Рідкі ієрогліфи, здебільшого зі старих китайських газет.</transl>
     </text>
    </group>
+   <group id="323B0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>CJK unified ideographs extension J</orig>
+     <transl>ККЯ ієрогліфи розширення J</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
+      <p />
+      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of 4000{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+     </orig>
+     <transl>
+      <p>Ієрогліфи з різних джерел: китайські імена, корейський сайт з історії, газетні архіви, тайванське кодування…</p>
+      <p />
+      <p>[[pk:2EBF0|Спроба Китаю 2022]] відгалузитися від Юнікоду відклала інше, і часу не{{_}}було до бета-версії Юнікоду{{_}}16. Так що пакет з 4000 ієрогліфів дійшов тільки до Юнікоду{{_}}17.</p>
+     </transl>
+    </text>
+   </group>
    <group id="E0000">
     <text id="Name">
      <orig>Tags</orig>
@@ -5274,6 +5387,28 @@
      </transl>
     </text>
    </group>
+   <group id="Berf">
+    <text id="Name">
+     <orig>Beria Erfe</orig>
+     <transl>Берія</transl>
+    </text>
+    <text id="Lang">
+     <orig>Zaghawa {{nspk||=Beria}}</orig>
+     <transl>загава {{nspk||=берія}}</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>The script was made by schoolteacher Adam Tajir from clan brands for camels. Apart from glyphs, the alphabet was a crude copy of [[ps:Arab|Arabic]]. In 2000, veterinarian Siddick Adam Issa improved the script, and it has proven popular.</p>
+      <p />
+      <p>A peculiar feature of Beria: capital letters grow downwards. Tones are marked with ordinary [[pk:0300|diacritics]]: àáā. Numbers and punctuation are European.</p>
+     </orig>
+     <transl>
+      <p>Письмо зробив вчитель Адам Таджир з кланових тавр для верблюдів. В іншому алфавіт був грубою калькою [[ps:Arab|арабського]]. У 2000 ветеринар Сіддік Адам Ісса покращив письмо, і воно стало популярним.</p>
+      <p />
+      <p>Незвичайна риса берії: великі літери ростуть донизу. Тони позначають звичайною [[pk:0300|діакритикою]]: àáā. Цифри та розділові знаки європейські.</p>
+     </transl>
+    </text>
+   </group>
    <group id="Bhks">
     <text id="Name">
      <orig>Bhaiksuki (arrowhead script)</orig>
@@ -5562,6 +5697,28 @@
       <p>Першою ученицею була шестирічна дочка Айока. Винахід абетки прийняли з недовірою (прийняли за одержимого), але Секвоя та Айока блискуче пройшли перевірку, прочитуючи записи один одного. Письмо швидко поширилося серед індіанців, на 1830 письменні були {{%|90}} черокі.</p>
       <p />
       <p>З 1828 року Секвоя брав участь у перемовинах з США за землю черокі.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="Chis">
+    <text id="Name">
+     <orig>Chisoi</orig>
+     <transl>Чисой</transl>
+    </text>
+    <text id="Lang">
+     <orig>Kurmali</orig>
+     <transl>курмальська</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Kurmali is usually written with [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengali]] or [[ps:Latn|Latin]]. This script was created by Jayanta Kumar Mahata. Letter shapes are loosely based on local scripts. The name “Chisoi” is from a children’s rhyme.</p>
+      <p />
+      <p>Despite resemblance to [[ps:Sora|Sora]] or [[ps:Wara|Warang Citi]] (inherent vowel {{t|ɔ}} is muted with [[pt:virama|virama]]), sources are unanimous: it’s an alphabet.</p>
+     </orig>
+     <transl>
+      <p>Курмальська зазвичай пишеться [[ps:Deva|деванáґарі]], [[ps:Orya|орíєю]], [[ps:Beng|бенгальською]] або латинкою. Це письмо винайшов Джаянта Кумар Махата. Форми літер віддалено нагадують місцеві писемності. Назва «чисой» з дитячого віршика.</p>
+      <p />
+      <p>Незважаючи на подібність до [[ps:Sora|сори]] та [[ps:Wara|варанг-кшиті]] (голосна по замовчанню {{t|ɔ}} глушиться [[pt:virama|вірамою]]), джерала одностайні: це алфавіт.</p>
      </transl>
     </text>
    </group>
@@ -8409,7 +8566,7 @@
       <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
-      <p>Top line may be solid, broken or have arbitrary breaks.</p>
+      <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
      </orig>
      <transl>
       <p>Шарада походить з гупти (північної гілки [[ps:Brah|брахмі]]), була поширена у VIII–XII{{_}}столітті у північно-західній Індії та Афганістані. Після цього шарада ставала все менш придатною для запису кашмірської та вийшла зі вжитку. Предок писемності [[ps:Guru|ґурмукхі]].</p>
@@ -8457,6 +8614,28 @@
       <p>{{smtable|ка|*𑖎|+ і|**◌𑖰|= кі|*𑖎𑖰}}</p>
       <p>{{smtable|ка|*𑖎|+ вірама|*◌𑖿|= к|*𑖎𑖿}}</p>
       <p>{{smtable|ка|*𑖎|+ вірама|*◌𑖿|+ та|*𑖝|= кта|*𑖎𑖿𑖝}}</p>
+     </transl>
+    </text>
+   </group>
+   <group id="Sidt">
+    <text id="Name">
+     <orig>Sidetic</orig>
+     <transl>Сидетська</transl>
+    </text>
+    <text id="Lang">
+     <orig>Sidetic ''(Anatolia)''</orig>
+     <transl>сидетська ''(Мала Азія)''</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Language and script used near Side, modern Turkey. The last evidence is the 2nd century BC. Only 13 inscriptions are known. The language is considered deciphered, except some rare letters. Letter meanings are:</p>
+      <p />
+      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
+     </orig>
+     <transl>
+      <p>Мова та письмо, що використовувалися біля Сіде (сучасна Туреччина). Останнє свідчення{{-}}II{{_}}століття{{bc}} Відомі тільки 13 написів. Мова вважається розшифрованою, крім кількох рідких літер. Значення літер:</p>
+      <p />
+      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
      </transl>
     </text>
    </group>
@@ -8910,6 +9089,34 @@
      </transl>
     </text>
    </group>
+   <group id="Tayo">
+    <text id="Name">
+     <orig>Tai Yo (Lai Tai)</orig>
+     <transl>Тай-йо (лай-тай)</transl>
+    </text>
+    <text id="Lang">
+     <orig>Tai Yo</orig>
+     <transl>тай-йо</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
+      <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
+      <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese U+3001 and 02 are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
+      <p />
+      <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
+     </orig>
+     <transl>
+      <p>Абуґіда [[ps:Khmr|кхмерського]] похождення, з двома унікальними рисами:</p>
+      <p>* Пишеться справа ліворуч стовпцями, явно під впливом [[ps:Hani|китайської]]. Якщо це неможливо, весь текст повертається, як у [[ps:Mong|монгольській]].</p>
+      <p>* Усі оголоси пишуться знизу або справа. Нема попередніх та охоплюючих оголосів.</p>
+      <p />
+      <p>Голосна по замовчанню {{t|ɔ}}. Тонових знаків нема. Розділових знаків нема, іноді зустрічаються китайські U+3001 та 02. Іноді склади розділяються невеликим пропуском. В усіх джерелах числа прописом. Сучасні тексті використовують [[pk:FF00|повноширинні]] західні пунктуацію та цифри, та два незакодованих тонових знаки зліва.</p>
+     </transl>
+    </text>
+   </group>
    <group id="Telu">
     <text id="Name">
      <orig>Telugu</orig>
@@ -9142,6 +9349,20 @@
       <p />
       <p>Не плутати з [[ps:Elba|алфавітом Ельбасанського Євангелія]]!</p>
      </transl>
+    </text>
+   </group>
+   <group id="Tols">
+    <text id="Name">
+     <orig>Tolong Siki</orig>
+     <transl>Толонг-сікі</transl>
+    </text>
+    <text id="Lang">
+     <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
+     <transl>курух {{nspk|=ораон}}</transl>
+    </text>
+    <text id="Text">
+     <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
+     <transl>Придумав Нараян Ораон. Це чистий алфавіт без голосної по замовчанню. Новий алфавіт краще передає мову, ніж [[ps:Deva|деванáґарі]], головне письмо для куруху.</transl>
     </text>
    </group>
    <group id="Toto">
