@@ -1243,6 +1243,10 @@
     </text>
    </group>
    <group id="LangLoc">
+    <text id="AfricaC">
+     <orig>Central Africa</orig>
+     <au-cmt>U17 Beria Erfe</au-cmt>
+    </text>
     <text id="AfricaW">
      <orig>Western Africa</orig>
      <au-cmt>Garay</au-cmt>
@@ -3478,6 +3482,12 @@
      <transl>リュディア文字 (サルディアン語)</transl>
     </text>
    </group>
+   <group id="10940">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sidetic</orig>
+    </text>
+   </group>
    <group id="10980">
     <text id="Name">
      <orig>Meroitic hieroglyphs</orig>
@@ -3824,6 +3834,15 @@
      <transl>「祝福されますように」のような表現には、ジャイナ教の句読点と[[pt:ligature|合字]]が使われます。</transl>
     </text>
    </group>
+   <group id="11B60">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Sharada supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+    </text>
+   </group>
    <group id="11BC0">
     <text id="Name">
      <orig>Sunuwar</orig>
@@ -3852,6 +3871,12 @@
     <text id="Name">
      <orig>Gondi — Gunjala</orig>
      <transl>グンジャラ・ゴーンディー文字</transl>
+    </text>
+   </group>
+   <group id="11DB0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tolong Siki</orig>
     </text>
    </group>
    <group id="11EE0">
@@ -4025,10 +4050,22 @@
      <transl>パハウ・フモン文字</transl>
     </text>
    </group>
+   <group id="16D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Chisoi</orig>
+    </text>
+   </group>
    <group id="16E40">
     <text id="Name">
      <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
      <transl>メデファイドリン文字 (オブリ・カイム語)</transl>
+    </text>
+   </group>
+   <group id="16EA0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Beria Erfe</orig>
     </text>
    </group>
    <group id="16F00">
@@ -4095,8 +4132,22 @@
      <transl>西夏文字 補足</transl>
     </text>
     <text id="Text">
-     <orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</orig>
+     <orig>
+      <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words: all nine are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</p>
+      <p />
+      <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
+     </orig>
+     <known-orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</known-orig>
      <transl>このブロックには、西夏語の 9 つの [[pt:unification|disunification]] が含まれています。言い換えると、9 つの文字はすべて誰かの同音異義語です。たとえば、「pair」は同じ場所 17134 に残され、同音異義語の「foolish」は新しい番号 18D00 を取得しました。</transl>
+    </text>
+   </group>
+   <group id="18D80">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tangut components supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Components and radicals from the new dictionary (2021).</orig>
     </text>
    </group>
    <group id="1AFF0">
@@ -4170,13 +4221,33 @@
      <orig>
       <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
-      <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
+      <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
+     <known-orig>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
+      <p />
+      <p>Unicode{{_}}17 will [[pt:unification|disunify]] console symbols from [[pt:emoji|emoji]].</p>
+     </known-orig>
      <transl>
       <p>旧式コンピューターの最後のシンボル。珍しい [[pt:pseudographics|疑似グラフィックス]]、ゲームのスプライト (これらのコンピューターの一部にはグラフィックスがありませんでした)、複数の [[pt:mono|文字セル]] にまたがる大きな文字... 2010 年代のマイクロコンピューターは標準のエンコードに固執する傾向があるため、このようなシンボルの大きな追加はおそらくもう行われないでしょう。</p>
       <p />
       <p>Unicode{{_}}17 では、コンソール シンボルが [[pt:emoji|絵文字]] から [[pt:unification|非統合]] されます。</p>
      </transl>
+    </text>
+   </group>
+   <group id="1CEC0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Symbols miscellaneous supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Asteroid signs are from astronomy of the 19th century, when people started to discover them. Modern astronomers do not use these signs.</p>
+      <p />
+      <p>Arabic geomancy (actually divination using random numbers, like [[pk:4DC0|Yijing]]) involved drawing random figures on the sand.</p>
+      <p />
+      <p>Circle with a bar in modern chemistry means “standard” (convenient for calculations) state of mixture when its composition depends on temperature and pressure.</p>
+     </orig>
     </text>
    </group>
    <group id="1CF00">
@@ -4463,6 +4534,13 @@
     <text id="Name">
      <orig>Ol Onal</orig>
      <transl>オル・オナル文字</transl>
+    </text>
+   </group>
+   <group id="1E6C0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>Tai Yo</orig>
+     <au-cmt>U17</au-cmt>
     </text>
    </group>
    <group id="1E7E0">
@@ -4976,6 +5054,19 @@
      <transl>主に古い中国の新聞からの珍しい表意文字。</transl>
     </text>
    </group>
+   <group id="323B0">
+    <au-cmt>U17</au-cmt>
+    <text id="Name">
+     <orig>CJK unified ideographs extension J</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
+      <p />
+      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of 4000{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+     </orig>
+    </text>
+   </group>
    <group id="E0000">
     <text id="Name">
      <orig>Tags</orig>
@@ -5280,6 +5371,21 @@
      </transl>
     </text>
    </group>
+   <group id="Berf">
+    <text id="Name">
+     <orig>Beria Erfe</orig>
+    </text>
+    <text id="Lang">
+     <orig>Zaghawa {{nspk||=Beria}}</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>The script was made by schoolteacher Adam Tajir from clan brands for camels. Apart from glyphs, the alphabet was a crude copy of [[ps:Arab|Arabic]]. In 2000, veterinarian Siddick Adam Issa improved the script, and it has proven popular.</p>
+      <p />
+      <p>A peculiar feature of Beria: capital letters grow downwards. Tones are marked with ordinary [[pk:0300|diacritics]]: àáā. Numbers and punctuation are European.</p>
+     </orig>
+    </text>
+   </group>
    <group id="Bhks">
     <text id="Name">
      <orig>Bhaiksuki (arrowhead script)</orig>
@@ -5568,6 +5674,21 @@
       <p />
       <p>1828 年以来、セコイアはチェロキーの土地をめぐる米国との交渉に参加した。</p>
      </transl>
+    </text>
+   </group>
+   <group id="Chis">
+    <text id="Name">
+     <orig>Chisoi</orig>
+    </text>
+    <text id="Lang">
+     <orig>Kurmali</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Kurmali is usually written with [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengali]] or [[ps:Latn|Latin]]. This script was created by Jayanta Kumar Mahata. Letter shapes are loosely based on local scripts. The name “Chisoi” is from a children’s rhyme.</p>
+      <p />
+      <p>Despite resemblance to [[ps:Sora|Sora]] or [[ps:Wara|Warang Citi]] (inherent vowel {{t|ɔ}} is muted with [[pt:virama|virama]]), sources are unanimous: it’s an alphabet.</p>
+     </orig>
     </text>
    </group>
    <group id="Chrs">
@@ -8412,8 +8533,19 @@
       <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
-      <p>Top line may be solid, broken or have arbitrary breaks.</p>
+      <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
      </orig>
+     <known-orig>
+      <p>Sharada comes from Gupta (northern branch of [[ps:Brah|Brahmi]]), was widespread in 8–12th centuries in North-West India and Afghanistan. Later Sharada became less and less suitable for Kashmiri and fell out of use. Ancestor of [[ps:Guru|Gurmukhi]] script.</p>
+      <p />
+      <p>Currently it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
+      <p />
+      <p>Bhahmic abugida with inherent vowel {{t|a}}. [[pt:virama|Virama]], unusual for Indic scripts, is situated on the right and used frequently. There are many [[pt:ligature|ligatures]] “consonant-virama-consonant”.</p>
+      <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
+      <p>Top line may be solid, broken or have arbitrary breaks.</p>
+     </known-orig>
      <transl>
       <p>シャラダはグプタ（ブラーフミーの北方支族）に由来し、8～12世紀に北西インドとアフガニスタンで広く使われていました。後にシャラダはカシミール語にますます適さなくなり、使われなくなりました。[[ps:Guru|グルムキー]] 文字の祖先です。</p>
       <p />
@@ -8461,6 +8593,21 @@
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
      </transl>
+    </text>
+   </group>
+   <group id="Sidt">
+    <text id="Name">
+     <orig>Sidetic</orig>
+    </text>
+    <text id="Lang">
+     <orig>Sidetic ''(Anatolia)''</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Language and script used near Side, modern Turkey. The last evidence is the 2nd century BC. Only 13 inscriptions are known. The language is considered deciphered, except some rare letters. Letter meanings are:</p>
+      <p />
+      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
+     </orig>
     </text>
    </group>
    <group id="Sind">
@@ -8690,9 +8837,9 @@
      <orig>
       <p>By one of theories, the script came from [[ps:Kthi|Kaithi]] and was invented by Muslims. It was favoured by poets of 19th century for simplicity, but it had been supplanted by [[ps:Beng|Bengali]] until mid 20th century. In 2000s learning of Syloti Nagri resumed in Bangladesh.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ɔ}} and [[pt:virama|virama]] ''(hasanta)'': {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Other variant of virama exists, {{sm|ꠇ꠬}}=k, like in other Brahmic scripts. Initial vowels are separate letters. Thext hangs from common line, but unlike [[ps:Deva|Devanagari]], “holds” it tightly.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ɔ}} and [[pt:virama|virama]] ''(hasanta)'': {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Other variant of virama exists, {{sm|ꠇ꠬}}=k, like in other Brahmic scripts. Initial vowels are separate letters. Text hangs from a headstroke, but unlike [[ps:Deva|Devanagari]], “holds” it tightly.</p>
       <p />
-      <p>Virama in Syloti is infrequent for two reasons. First, double consonants and some conjuncts form ligatures: {{sm|ꠇ꠆ꠇ}}=kkɔ, {{sm|ꠇ꠆ꠔ}}=ktɔ. Such ligatures are typed in standard way: first letter, virama, second letter. Second, somentmes final {{t|ɔ}} becomes silent.</p>
+      <p>Virama in Syloti is infrequent for two reasons. First, double consonants and some conjuncts form ligatures: {{sm|ꠇ꠆ꠇ}}=kkɔ, {{sm|ꠇ꠆ꠔ}}=ktɔ. Such ligatures are typed in standard way: first letter, virama, second letter. Second, sometimes final {{t|ɔ}} becomes silent.</p>
       <p />
       <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
      </orig>
@@ -8909,6 +9056,25 @@
       <p />
       <p>固有の母音はありませんが、左、上、右に奇妙な母音記号があるため、文字はアブギダのままです: {{sm|ꪶꪀ}}=ko、{{sm|ꪀꪱ}}=ka、{{sm|ꪀꪲ}}=ki。伝統的に読者は声調を推測する必要がありますが、最初の標準化では声調記号が追加されました。</p>
      </transl>
+    </text>
+   </group>
+   <group id="Tayo">
+    <text id="Name">
+     <orig>Tai Yo (Lai Tai)</orig>
+    </text>
+    <text id="Lang">
+     <orig>Tai Yo</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
+      <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
+      <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese U+3001 and 02 are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
+      <p />
+      <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
+     </orig>
     </text>
    </group>
    <group id="Telu">
@@ -9144,6 +9310,17 @@
       <p />
       <p>[[ps:Elba|エルバサン福音書のアルファベット]]と混同しないように！</p>
      </transl>
+    </text>
+   </group>
+   <group id="Tols">
+    <text id="Name">
+     <orig>Tolong Siki</orig>
+    </text>
+    <text id="Lang">
+     <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
+    </text>
+    <text id="Text">
+     <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
     </text>
    </group>
    <group id="Toto">
