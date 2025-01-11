@@ -51,7 +51,7 @@
 * Cards: TMB + lo-res, hearts are better than spades
 * Punctuation: TMB, but not some funky quote
 * Punc supp: same
-* Modifiers: TMB but hot superscript
+* Modifiers: TMB but not superscript
 * Super/subscripts: egg, The Answer
 * Sutton: lo-res + JSI + egg, rocker horns
 * Legacy: JSI; as resolution is 16×16, found Apple II’s 7×8 pair
