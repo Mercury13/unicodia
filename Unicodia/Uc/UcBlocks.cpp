@@ -1387,7 +1387,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     // Math alnum OK
-    { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE },
+    { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE, Ifg::PAINT_SVG },
             "Mathematical Alphanumeric Symbols",
             { EcScript::ZMAT, 'a' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::MATH,
