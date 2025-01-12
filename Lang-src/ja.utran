@@ -6456,6 +6456,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>First pictographs are dated with the 6th millennium BC, they were scratched or written with ink, later they were modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
+      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
+      <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
+      <p>* cult of tradition{{-}}even today Chinese are rather conservative;</p>
+      <p>* meritocracy that worked somehow{{-}}thousands of signs and ability to write them nicely detected trainable people.</p>
+      <p />
+      <p>In the 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).</p>
+      <p />
+      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
+      <p />
+      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses them very seldom.</p>
+      <p />
+      <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
+     </orig>
+     <known-orig>
       <p>First pictographs are dated with 6th millennium BC, they were scratched or written with ink, later they modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
       <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
       <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
@@ -6469,7 +6484,7 @@
       <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses very seldom.</p>
       <p />
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>最初の象形文字は紀元前6千年紀にさかのぼり、インクで削ったり書いたりしていましたが、後に筆で書くようになりました。紀元前1千年紀に人々は表意文字を放棄し始めましたが、中国は古風な文字を保存しました。理由はいくつかあります。</p>
       <p>* 多民族人口{{-}}漢民族の国家形成者のほかに、約10人がいて、少なくとも書き言葉ではお互いを理解していました。</p>
@@ -8007,7 +8022,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
+      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken headstroke, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
       <p />
       <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, headstroke became an arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
       <p />
