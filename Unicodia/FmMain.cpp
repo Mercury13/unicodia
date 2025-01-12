@@ -2202,7 +2202,8 @@ void FmMain::toggleSortingTelltales()
 
 void FmMain::libLocalMenuRequested(const QPoint& where)
 {
-    /// @todo [urgent] what?
-    libLocalMenu.acCopy->setEnabled(false);
+    auto index = ui->treeLibrary->currentIndex();
+    auto& node = libModel.nodeAt(index);
+    libLocalMenu.acCopy->setEnabled(!node.value.empty());
     TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), libLocalMenu.menu, where);
 }
