@@ -318,6 +318,8 @@ namespace ie {
     };
 
     /// Drawing small square SVG in the lower part of the cell (Control pictures)
+    ///    SVG is specified with gap from bottom and base size,
+    ///    both in 0.1dip increment
     /// Type: lo-res
     class SvgBelow : public Veng
     {
