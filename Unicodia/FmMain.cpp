@@ -2196,6 +2196,7 @@ void FmMain::searchForVs16()
 void FmMain::toggleSortingTelltales()
 {
     auto q = blocksModel.toggleSortingTelltales();
+    // OK here, debugging window
     auto text = q ? "Sorting telltales ON" : "Sorting telltales OFF";
     QMessageBox::information(this, "Debug", text);
 }
