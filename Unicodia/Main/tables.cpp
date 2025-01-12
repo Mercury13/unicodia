@@ -392,8 +392,8 @@ void TableLocalMenu::popup(QWidget* widget, QPoint where)
     // Check actions
     auto charIf = model->charAt(table->currentIndex());
     acCopy->setEnabled(charIf.hasCode());
-    acCopyVs16->setEnabled(charIf.hasCp() && charIf->isVs16Emoji());
-    acCopyDotc->setEnabled(charIf.hasCp() && charIf->isMark());
+    acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
+    acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
     // Get point
     if (widget) {
         // Move within rect
