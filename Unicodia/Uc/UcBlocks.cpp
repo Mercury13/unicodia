@@ -161,7 +161,7 @@ constinit const uc::Block uc::blocks[] {
             "Lao",
             { EcScript::Laoo, 0 }, MapSubtype::ALIVE, EcScript::Laoo },
     // Tibetan OK
-    { 0x0F00, 0x0FFF, { 0xF4F, EcContinent::ASIA },
+    { 0x0F00, 0x0FFF, { 0xF4F, EcContinent::ASIA, Ifg::SHIFT_UP },
             "Tibetan",
             { EcScript::Tibt, 0 }, MapSubtype::ALIVE,
             EcScript::Tibt, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
