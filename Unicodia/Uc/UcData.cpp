@@ -1415,6 +1415,12 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
 }
 
 
+bool uc::Cp::isMark() const noexcept
+{
+    return (category().upCat == uc::EcUpCategory::MARK);
+}
+
+
 uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
 {
     uc::TofuInfo r;

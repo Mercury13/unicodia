@@ -12453,6 +12453,21 @@
      </text>
     </group>
    </group>
+   <group id="Local">
+    <au-cmt>Local menu</au-cmt>
+    <text id="Copy">
+     <orig>Copy</orig>
+     <transl>Копировать</transl>
+    </text>
+    <text id="CopyVs16">
+     <orig>Copy + VS16</orig>
+     <transl>Копировать + VS16</transl>
+    </text>
+    <text id="CopyDotc">
+     <orig>Copy + dotted circle</orig>
+     <transl>Копировать + круг из точек</transl>
+    </text>
+   </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
     <transl>Порядок блоков</transl>

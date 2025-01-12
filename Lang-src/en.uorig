@@ -8625,6 +8625,18 @@
      </text>
     </group>
    </group>
+   <group id="Local">
+    <au-cmt>Local menu</au-cmt>
+    <text id="Copy">
+     <orig>Copy</orig>
+    </text>
+    <text id="CopyVs16">
+     <orig>Copy + VS16</orig>
+    </text>
+    <text id="CopyDotc">
+     <orig>Copy + dotted circle</orig>
+    </text>
+   </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
    </text>

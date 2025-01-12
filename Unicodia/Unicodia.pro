@@ -41,6 +41,7 @@ SOURCES += \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
+    Main/tables.cpp \
     Search/engine.cpp \
     Search/nonAscii.cpp \
     Search/request.cpp \
@@ -119,6 +120,7 @@ HEADERS += \
     CharPaint/global.h \
     CharPaint/emoji.h \
     LocDefs.h \
+    Main/tables.h \
     Search/defs.h \
     Search/engine.h \
     Search/nonAscii.h \

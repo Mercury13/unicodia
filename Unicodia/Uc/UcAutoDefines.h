@@ -388,15 +388,16 @@ namespace uc {
         QString viewableName() const;
         DrawMethod drawMethod(EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const;
         TofuInfo tofuInfo(SvgChecker& svgChecker) const;
-        constexpr bool isAbbreviated() const { return ((flags & uc::m::ALL) == uc::m::ABBREVIATION); }
-        constexpr bool isNoAa() const { return ((flags & uc::m::ALL) == uc::m::NO_AA); }
+        constexpr bool isAbbreviated() const noexcept { return ((flags & uc::m::ALL) == uc::m::ABBREVIATION); }
+        constexpr bool isNoAa() const noexcept { return ((flags & uc::m::ALL) == uc::m::NO_AA); }
         std::u8string_view abbrev() const;
-        constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
-        constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
-        constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
+        constexpr bool isDeprecated() const noexcept { return flags.have(Cfg::U_DEPRECATED); }
+        constexpr bool isDefaultIgnorable() const noexcept { return flags.have(Cfg::U_DEF_IGNORABLE); }
+        constexpr bool isVs16Emoji() const noexcept { return flags.have(Cfg::U_VS16_EMOJI); }
         /// @return [+] single-char or VS16 emoji
-        constexpr bool isEmoji() const
+        constexpr bool isEmoji() const noexcept
             { return isVs16Emoji() || ((flags & m::ALL) == m::SVG_EMOJI); }
+        bool isMark() const noexcept;
         constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
         EcGlyphStyleChannel ecStyleChannel() const;
         inline const GlyphStyleChannel styleChannel() const;
