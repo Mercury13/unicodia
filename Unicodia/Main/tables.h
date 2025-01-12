@@ -202,7 +202,8 @@ class TableLocalMenu : public QObject
     Q_OBJECT
 public:
     void init(QTableView* aTable, VirtualCharsModel* aModel);
-    void popup(QWidget* widget, QPoint where);
+    static void popupMenu(QWidget* widget, QMenu* menu, QPoint where);
+    void popup(QWidget* widget, const QPoint& where);
     void translate();
 private:
     QTableView* table = nullptr;

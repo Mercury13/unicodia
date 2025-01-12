@@ -200,6 +200,10 @@ private:
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
     TableLocalMenu localChars, localFavs;
+    struct LibLocalMenu {
+        QMenu* menu = nullptr;
+        QAction* acCopy = nullptr;
+    } libLocalMenu;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -277,6 +281,7 @@ private slots:
     void copyCurrentSampleNull();
     void copyCurrentLib();
     void copyCurrentFavs();
+    void libLocalMenuRequested(const QPoint& where);
     void copyFavsSample();
     void popupLinkActivated(QWidget* widget, const QString& link);
     void labelLinkActivated(const QString& link);

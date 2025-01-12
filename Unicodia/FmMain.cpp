@@ -1114,6 +1114,13 @@ void FmMain::initLibrary(const InitBlocks& ib)
             ui->treeLibrary, &This::copyCurrentLib, nullptr,
             ui->wiLibShowcase, ui->vwLibInfo);
 
+    // Local menu
+    libLocalMenu.menu = new QMenu(ui->treeLibrary);
+    libLocalMenu.acCopy = new QAction("[Copy]", libLocalMenu.menu);
+        libLocalMenu.menu->addAction(libLocalMenu.acCopy);
+        QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+    QWidget::connect(ui->treeLibrary, &QWidget::customContextMenuRequested, this, &This::libLocalMenuRequested);
+
     // Create toolbar
     btAddLibToFavs = ui->wiLibShowcase->addFavsButton<BangButton>(ui->acAddLibToFavs, config::favs.index());
     connect(ui->acAddLibToFavs, &QAction::triggered, this, &This::acAddLibToFavsTriggered);
@@ -2190,4 +2197,12 @@ void FmMain::toggleSortingTelltales()
     auto q = blocksModel.toggleSortingTelltales();
     auto text = q ? "Sorting telltales ON" : "Sorting telltales OFF";
     QMessageBox::information(this, "Debug", text);
+}
+
+
+void FmMain::libLocalMenuRequested(const QPoint& where)
+{
+    /// @todo [urgent] what?
+    libLocalMenu.acCopy->setEnabled(false);
+    TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), libLocalMenu.menu, where);
 }

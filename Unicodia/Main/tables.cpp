@@ -394,15 +394,8 @@ namespace {
 }   // anon namespace
 
 
-void TableLocalMenu::popup(QWidget* widget, QPoint where)
+void TableLocalMenu::popupMenu(QWidget* widget, QMenu* menu, QPoint where)
 {
-    // Check actions
-    auto charIf = model->charAt(table->currentIndex());
-    acCopy->setEnabled(charIf.hasCode());
-    acCopyVs15->setVisible(charIf.hasCp() && charIf->isVs15Emoji());
-    acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
-    acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
-    // Get point
     if (widget) {
         // Move within rect
         auto rect = widget->contentsRect();
@@ -411,4 +404,17 @@ void TableLocalMenu::popup(QWidget* widget, QPoint where)
         where = widget->mapToGlobal(where);
     }
     menu->popup(where);
+}
+
+
+void TableLocalMenu::popup(QWidget* widget, const QPoint& where)
+{
+    // Check actions
+    auto charIf = model->charAt(table->currentIndex());
+    acCopy->setEnabled(charIf.hasCode());
+    acCopyVs15->setVisible(charIf.hasCp() && charIf->isVs15Emoji());
+    acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
+    acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
+    // Get point
+    popupMenu(widget, menu, where);
 }
