@@ -129,7 +129,7 @@ constinit const uc::Block uc::blocks[] {
             "Gujarati",
             { EcScript::Gujr, 0 }, MapSubtype::ALIVE, EcScript::Gujr },
     // Oriya OK, Noto + everything bad manually fixed
-    { 0x0B00, 0x0B7F, { 0xB1C, EcContinent::ASIA },
+    { 0x0B00, 0x0B7F, { 0x0B15, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Oriya",
             { EcScript::Orya, 0 }, MapSubtype::ALIVE, EcScript::Orya },
     // Tamil OK, font pair is good
