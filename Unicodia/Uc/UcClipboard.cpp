@@ -15,13 +15,24 @@
 void uc::copyCp(char32_t cp, CopiedChannel channel)
 {
     QString q = str::toQ(cp);
-    if (channel == CopiedChannel::SAMPLE && cp < cp::MAX_NONPRIVATE) {
-        if (auto ch = uc::cpsByCode[cp]) {
-            if (ch->isMark()) {
-                q = uc::STUB_CIRCLE + q;
-            } else if (ch->isVs16Emoji()) {
-                q += QChar(cp::VS16);
-            }
+    if (cp < cp::MAX_NONPRIVATE) {
+        switch (channel) {
+        case CopiedChannel::CHAR:
+            break;
+        case CopiedChannel::SAMPLE:
+            if (auto ch = uc::cpsByCode[cp]) {
+                if (ch->isMark()) {
+                    q = uc::STUB_CIRCLE + q;
+                } else if (ch->isVs16Emoji()) {
+                    q += QChar(cp::VS16);
+                }
+            } break;
+        case CopiedChannel::VS15:
+            if (auto ch = uc::cpsByCode[cp]) {
+                if (ch->isVs15Emoji()) {
+                    q += QChar(cp::VS15);
+                }
+            } break;
         }
     }
     QApplication::clipboard()->setText(q);

@@ -397,6 +397,7 @@ namespace uc {
         /// @return [+] single-char or VS16 emoji
         constexpr bool isEmoji() const noexcept
             { return isVs16Emoji() || ((flags & m::ALL) == m::SVG_EMOJI); }
+        bool isVs15Emoji() const noexcept;
         bool isMark() const noexcept;
         constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
         EcGlyphStyleChannel ecStyleChannel() const;

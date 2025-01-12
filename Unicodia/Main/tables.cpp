@@ -339,6 +339,12 @@ void TableLocalMenu::init(QTableView* aTable, VirtualCharsModel* aModel)
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::CHAR, nullptr);
                 });
+    acCopyVs15 = new QAction("[CopyVs15]", menu);
+        menu->addAction(acCopyVs15);
+        QWidget::connect(acCopyVs15, &QAction::triggered, table,
+                [this]() {
+                    emit thingCopied(uc::CopiedChannel::VS15, nullptr);
+                });
     acCopyVs16 = new QAction("[CopyVs16]", menu);
         menu->addAction(acCopyVs16);
         QWidget::connect(acCopyVs16, &QAction::triggered, table,
@@ -361,6 +367,7 @@ void TableLocalMenu::init(QTableView* aTable, VirtualCharsModel* aModel)
 void TableLocalMenu::translate()
 {
     acCopy->setText(loc::get("Main.Local.Copy").q());
+    acCopyVs15->setText(loc::get("Main.Local.CopyVs15").q());
     acCopyVs16->setText(loc::get("Main.Local.CopyVs16").q());
     acCopyDotc->setText(loc::get("Main.Local.CopyDotc").q());
 }
@@ -392,6 +399,7 @@ void TableLocalMenu::popup(QWidget* widget, QPoint where)
     // Check actions
     auto charIf = model->charAt(table->currentIndex());
     acCopy->setEnabled(charIf.hasCode());
+    acCopyVs15->setVisible(charIf.hasCp() && charIf->isVs15Emoji());
     acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
     acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
     // Get point

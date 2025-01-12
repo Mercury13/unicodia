@@ -12459,9 +12459,13 @@
      <orig>Copy</orig>
      <transl>Копировать</transl>
     </text>
+    <text id="CopyVs15">
+     <orig>Copy + VS15 (text)</orig>
+     <transl>Копировать + VS15 (текстовый)</transl>
+    </text>
     <text id="CopyVs16">
-     <orig>Copy + VS16</orig>
-     <transl>Копировать + VS16</transl>
+     <orig>Copy + VS16 (graphic)</orig>
+     <transl>Копировать + VS16 (графический)</transl>
     </text>
     <text id="CopyDotc">
      <orig>Copy + dotted circle</orig>

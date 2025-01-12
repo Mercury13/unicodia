@@ -8630,8 +8630,11 @@
     <text id="Copy">
      <orig>Copy</orig>
     </text>
+    <text id="CopyVs15">
+     <orig>Copy + VS15 (text)</orig>
+    </text>
     <text id="CopyVs16">
-     <orig>Copy + VS16</orig>
+     <orig>Copy + VS16 (graphic)</orig>
     </text>
     <text id="CopyDotc">
      <orig>Copy + dotted circle</orig>

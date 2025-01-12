@@ -208,6 +208,7 @@ private:
     QTableView* table = nullptr;
     VirtualCharsModel* model = nullptr;
     QAction *acCopy = nullptr,
+            *acCopyVs15 = nullptr,
             *acCopyVs16 = nullptr,
             *acCopyDotc = nullptr;
     QMenu* menu;

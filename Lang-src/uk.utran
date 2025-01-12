@@ -12460,9 +12460,13 @@
      <orig>Copy</orig>
      <transl>Копіювати</transl>
     </text>
+    <text id="CopyVs15">
+     <orig>Copy + VS15 (text)</orig>
+     <transl>Копіювати + VS15 (текстовий)</transl>
+    </text>
     <text id="CopyVs16">
-     <orig>Copy + VS16</orig>
-     <transl>Копіювати + VS16</transl>
+     <orig>Copy + VS16 (graphic)</orig>
+     <transl>Копіювати + VS16 (графічний)</transl>
     </text>
     <text id="CopyDotc">
      <orig>Copy + dotted circle</orig>

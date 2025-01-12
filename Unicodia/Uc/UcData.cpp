@@ -1421,6 +1421,14 @@ bool uc::Cp::isMark() const noexcept
 }
 
 
+bool uc::Cp::isVs15Emoji() const noexcept
+{
+    return ((flags & m::ALL) == m::SVG_EMOJI)
+        && !isVs16Emoji()
+        && (ecCategory == uc::EcCategory::SYMBOL_OTHER);
+}
+
+
 uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
 {
     uc::TofuInfo r;
