@@ -1088,7 +1088,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Diak, 0 }, MapSubtype::DEAD,
             EcScript::Diak, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Nandi OK
-    { 0x119A0, 0x119FF, { 0x119B4, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
+    { 0x119A0, 0x119FF, { 0x119AE, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint{ 9, 2 } },
             "Nandinagari",
             { EcScript::Nand, 0 }, MapSubtype::DEAD, EcScript::Nand },
     // Zanabazar square OK
