@@ -7770,7 +7770,7 @@
      <orig>
       <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves only to transfer Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
+      <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves for Sanskrit only: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
       <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
       <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
@@ -7779,7 +7779,7 @@
      <transl>
       <p>Походить від наґарі, проміжної форми індійського письма. Сестра [[ps:Deva|деванáґарі]], «нандинáґарі» означає «письмо священного міста». Якщо б не{{_}}розбіжності{{-}}розірвана риска, інші [[pt:ligature|лігатури]] та цифри{{-}}нанді- можна було б вважати різновидом деванаґарі. Письмо вживалось до XIX{{_}}століття.</p>
       <p />
-      <p>Голосна по замовчанню {{t|a}}, замінюється на іншу [[pt:combining|мітками]]-оголосами. Усі мітки, включаючи [[pt:virama|віраму]], не{{_}}відриваються від літер. Вірама слугує лише для передачі санскриту: кáннада тяжіє до відкритих складів, а рідкі стики приголосних передаються лігатурами.</p>
+      <p>Голосна по замовчанню {{t|a}}, замінюється на іншу [[pt:combining|мітками]]-оголосами. Усі мітки, включаючи [[pt:virama|віраму]], не{{_}}відриваються від літер. Вірама слугує лише для санскриту: кáннада тяжіє до відкритих складів, а рідкі стики приголосних передаються лігатурами.</p>
       <p>: ка {{sm|𑦮}} + у {{sm|◌𑧔}} = ку {{sm|𑦮𑧔}}</p>
       <p>: ԏа {{sm|𑦸}} + у {{sm|◌𑧔}} = ԏу {{sm|𑦸𑧔}}</p>
       <p>: ка {{sm|𑦮}} + вірама {{sm|◌𑧠}} + та {{sm|𑦽}} = кта {{sm|𑦮𑧠𑦽}}</p>
