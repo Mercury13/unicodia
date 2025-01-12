@@ -366,10 +366,10 @@ void TableLocalMenu::init(QTableView* aTable, VirtualCharsModel* aModel)
 
 void TableLocalMenu::translate()
 {
-    acCopy->setText(loc::get("Main.Local.Copy").q());
-    acCopyVs15->setText(loc::get("Main.Local.CopyVs15").q());
-    acCopyVs16->setText(loc::get("Main.Local.CopyVs16").q());
-    acCopyDotc->setText(loc::get("Main.Local.CopyDotc").q());
+    acCopy->setText(loc::get("Main.Local.Copy"));
+    acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
+    acCopyVs16->setText(loc::get("Main.Local.CopyVs16"));
+    acCopyDotc->setText(loc::get("Main.Local.CopyDotc"));
 }
 
 

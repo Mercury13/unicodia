@@ -1260,6 +1260,7 @@ void FmMain::translateMe()
         forceShowCp(*p);    
 
     // Library tab
+    libLocalMenu.acCopy->setText(loc::get("Main.Local.Copy"));
     libChanged(ui->treeLibrary->currentIndex());
 
     // Favs tab
