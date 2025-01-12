@@ -7292,8 +7292,15 @@
       <p />
       <p>Script degraded almost to [[pt:abjad|consonant]]: consonant vowel means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On other hand, there are many abbreviations and fractions importand for accounting books. Many of them are badly explored and aren’t yet encoded.</p>
       <p />
-      <p>Top line is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with former.</p>
+      <p>Headstroke is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
      </orig>
+     <known-orig>
+      <p>One more remainder of Indian caste system, like [[ps:Kthi|Kaithi]]{{-}}this script was used by bankers and accountants until 20th century, and currently in extremely small use.</p>
+      <p />
+      <p>Script degraded almost to [[pt:abjad|consonant]]: consonant vowel means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On other hand, there are many abbreviations and fractions importand for accounting books. Many of them are badly explored and aren’t yet encoded.</p>
+      <p />
+      <p>Top line is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with former.</p>
+     </known-orig>
      <transl>
       <p>インドのカースト制度の名残がもう 1 つあります。[[ps:Kthi|カイティー文字]]{{-}} この文字は 20 世紀まで銀行家や会計士によって使用されていましたが、現在ではほとんど使用されていません。</p>
       <p />
@@ -7737,12 +7744,21 @@
      <orig>
       <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves only to transfer Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
+      <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves for Sanskrit only: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
       <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
       <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
       <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and [[pt:unification|unified]] with it.</p>
      </orig>
+     <known-orig>
+      <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
+      <p />
+      <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves only to transfer Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
+      <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
+      <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
+      <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
+      <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and [[pt:unification|unified]] with it.</p>
+     </known-orig>
      <transl>
       <p>インド文字の中間形態であるナガリ文字に由来。[[ps:Deva|デーバナーガリ文字]]の姉妹文字で、「ナンディナガリ文字」は「聖なる都市から」という意味。これらが{{-}}分断された頭字語、その他の[[pt:ligature|合字]]、数字{{-}}でなければ、ナンディはデーバナーガリ文字の変形であった可能性がある。この文字は19世紀まで使用されていた。</p>
       <p />
@@ -7993,12 +8009,21 @@
      <orig>
       <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
       <p />
-      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
+      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, headstroke became an arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
       <p />
       <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
       <p />
       <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
+     <known-orig>
+      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
+      <p />
+      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
+      <p />
+      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+     </known-orig>
      <transl>
       <p>オディア語またはオリヤー語（伝統的には「アーリア人」に関連すると考えられているが、不正確）は、上部の線が破線である [[ps:Sidd|悉曇文字]] から、ガウディ（「原始 [[ps:Beng|ベンガル語]]」、「原始オリヤー語」でもある）を経て発展した。</p>
       <p />
@@ -12386,6 +12411,21 @@
       <transl>お気に入りから削除</transl>
      </text>
     </group>
+   </group>
+   <group id="Local">
+    <au-cmt>Local menu</au-cmt>
+    <text id="Copy">
+     <orig>Copy</orig>
+    </text>
+    <text id="CopyVs15">
+     <orig>Copy + VS15 (text)</orig>
+    </text>
+    <text id="CopyVs16">
+     <orig>Copy + VS16 (graphic)</orig>
+    </text>
+    <text id="CopyDotc">
+     <orig>Copy + dotted circle</orig>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
