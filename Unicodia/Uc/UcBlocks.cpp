@@ -1092,7 +1092,7 @@ constinit const uc::Block uc::blocks[] {
             "Nandinagari",
             { EcScript::Nand, 0 }, MapSubtype::DEAD, EcScript::Nand },
     // Zanabazar square OK
-    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA },
+    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Zanabazar Square",
             { EcScript::Zanb, 0 }, MapSubtype::DEAD,
             EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS },

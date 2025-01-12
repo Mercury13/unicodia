@@ -268,6 +268,11 @@ namespace ie {
     class Margin : public Veng
     {
     public:
+        /// @param [in] synthIcon        destination palette (and whether to repaint at all)
+        /// @param [in] aName            file name
+        /// @param [in] aValue           in 10th of pixel
+        /// @param [in] aHalfPixelDown   [+] the image is balanced 0.5px upwards
+        ///                               (no balance like ±0.4px here)
         Margin(const uc::SynthIcon& synthIcon, std::string_view aName,
                int aValue, HalfPixelDown aHalfPixelDown);
         ~Margin();

@@ -1000,7 +1000,7 @@ void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
     painter->fillRect(rect, color);
 
     // SVG
-    unsigned margin = (rect.width() * value + 7) / 16;  // 7: 0.5 = down
+    unsigned margin = (rect.width() * value + 79) / 160;  // 7: 0.5 = down
     QRect rcContent = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
     if (halfPixelDown) {
         auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down

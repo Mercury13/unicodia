@@ -23,6 +23,7 @@
         <file>ScCustom/playcard.svg</file>
         <file>ScCustom/sqideo.svg</file>
         <file>ScCustom/yijing.png</file>
+        <file>ScCustom/zanb.svg</file>
         <file>Texts/about.htm</file>
     </qresource>
 </RCC>
