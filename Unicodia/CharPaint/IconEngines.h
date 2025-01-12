@@ -24,6 +24,9 @@ extern template class dumb::Sp<ie::LazySvg>;
 
 namespace ie {
 
+    /// All icons are 16×16 dip (device-independent pixels).
+    /// As we want to do something with device pixels rather than
+    ///    dumbly anti-alias, we’ve made some special engines
     constexpr int BASE_SIZE = 16;
 
     /// Virtual engine
