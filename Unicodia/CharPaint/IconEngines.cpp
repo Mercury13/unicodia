@@ -959,10 +959,13 @@ ie::OneCircle::~OneCircle() = default;
 
 void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
+    // Should be 2 at 1.5×
+    static constexpr int BASE_SIZE_HIHALF = (BASE_SIZE / 2) + 1;
+
     painter->fillRect(rect, BG_INTER);
 
     // Frame rect
-    unsigned margin = (rect.width() + 9) / 16;    // 2 at 1.5×
+    unsigned margin = (rect.width() + BASE_SIZE_HIHALF) / BASE_SIZE;
     QRect rcFrame = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
 
     // Thickness
@@ -993,14 +996,16 @@ ie::Margin::Margin(const uc::SynthIcon& synthIcon,
 
 ie::Margin::~Margin() = default;
 
-
 void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
 {
+    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
+    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
+
     // Background
     painter->fillRect(rect, color);
 
     // SVG
-    unsigned margin = (rect.width() * value + 79) / 160;  // 7: 0.5 = down
+    unsigned margin = (rect.width() * value + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
     QRect rcContent = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
     if (halfPixelDown) {
         auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down

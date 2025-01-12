@@ -24,6 +24,8 @@ extern template class dumb::Sp<ie::LazySvg>;
 
 namespace ie {
 
+    constexpr int BASE_SIZE = 16;
+
     /// Virtual engine
     class Veng : public QIconEngine
     {
@@ -270,7 +272,7 @@ namespace ie {
     public:
         /// @param [in] synthIcon        destination palette (and whether to repaint at all)
         /// @param [in] aName            file name
-        /// @param [in] aValue           in 10th of pixel
+        /// @param [in] aValue           1 = 0.1dip (device-independent pixel)
         /// @param [in] aHalfPixelDown   [+] the image is balanced 0.5px upwards
         ///                               (no balance like ±0.4px here)
         Margin(const uc::SynthIcon& synthIcon, std::string_view aName,

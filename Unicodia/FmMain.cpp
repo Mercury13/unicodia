@@ -238,9 +238,9 @@ namespace {
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
         case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
-        case 0x11A00:   // Zanb square
+        case 0x11A00:   // Zanb square: margin=2px even on 1.25
             return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", 13, ie::HalfPixelDown::NO);
-        case 0x11F00:   // Kawi
+        case 0x11F00:   // Kawi: margin=2dip
             return new ie::Margin(block.synthIcon, ":ScCustom/kawi.svg", 20, ie::HalfPixelDown::YES);
         case 0x1CC00:   // Legacy ex
             return new ie::Legacy(":ScCustom/legacy2.png");
