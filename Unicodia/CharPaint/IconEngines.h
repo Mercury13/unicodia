@@ -24,7 +24,7 @@ extern template class dumb::Sp<ie::LazySvg>;
 
 namespace ie {
 
-    /// All icons are 16×16 dip (dipels, device-independent pixels).
+    /// All low-res icons are 16×16 dip (dipels, device-independent pixels).
     /// As we want to do something with device pixels rather than
     ///    dumbly anti-alias, we’ve made some special engines
     /// (pixels do matter even on 1.5× = 24×24 px!)
@@ -48,6 +48,8 @@ namespace ie {
         virtual QPixmap* cache([[maybe_unused]] qreal scale) { return nullptr; }
     };
 
+    /// Drawing of code point
+    /// Type: hi-res
     class Cp : public Veng
     {
     public:
@@ -63,6 +65,8 @@ namespace ie {
         const uc::GlyphStyleSets& glyphSets;
     };
 
+    /// Drawing of non-character
+    /// Type: hi-res
     class Nonchar : public Veng
     {
     public:
@@ -74,6 +78,8 @@ namespace ie {
         const PixSource& source;
     };
 
+    /// Drawing of abbreviated char
+    /// Type: hi-res
     class CustomAbbr : public Veng
     {
     public:
@@ -86,6 +92,8 @@ namespace ie {
         const char8_t* const text;
     };
 
+    /// Drawing of empty murky cell
+    /// Type: hi-res
     class Murky : public Veng
     {
     public:
@@ -97,6 +105,8 @@ namespace ie {
         const PixSource& source;
     };
 
+    /// Drawing of synthesized icon
+    /// Type: hi-res
     class Synth : public Veng
     {
     public:
@@ -110,6 +120,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
+    /// Drawing of Library node
+    /// Type: hi-res
     class Node : public Veng
     {
     public:
@@ -122,7 +134,8 @@ namespace ie {
         const uc::LibNode& node;
     };
 
-    // Programmatic drawing of Block Elements icon
+    /// Programmatic drawing of Block Elements icon
+    /// Type: lo-res
     class BlockElem : public Veng
     {
     public:
@@ -133,7 +146,8 @@ namespace ie {
         QPixmap texture;
     };
 
-    // Programmatic drawing of Yijing icon
+    /// Programmatic drawing of Yijing icon
+    /// Type: lo-res
     class CoarseImage : public Veng
     {
     public:
@@ -146,7 +160,8 @@ namespace ie {
         QPixmap texture;
     };
 
-    // Programmatic drawing of Tai Xuan Jing icons
+    /// Programmatic drawing of Tai Xuan Jing icons
+    /// Type: lo-res
     class Taixu : public Veng
     {
     public:
@@ -155,7 +170,8 @@ namespace ie {
     private:
     };
 
-    // Programmatic drawing of Symbols for legacy computing
+    /// Programmatic drawing of Symbols for legacy computing
+    /// Type: lo-res
     class Legacy : public Veng
     {
     public:
@@ -166,7 +182,8 @@ namespace ie {
         QPixmap texture;
     };
 
-    // Programmatic drawing of Playing Cards
+    /// Programmatic drawing of Playing Cards
+    /// Type: lo-res
     class PlayingCard : public Veng
     {
     public:
@@ -178,7 +195,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
-    // Programmatic drawing of Mahjong Tiles
+    /// Programmatic drawing of Mahjong Tiles
+    /// Type: lo-res
     class Mahjong : public Veng
     {
     public:
@@ -190,7 +208,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
-    // Programmatic drawing of Arrows
+    /// Programmatic drawing of Arrows
+    /// Type: lo-res
     class Hint : public Veng
     {
     public:
@@ -203,7 +222,8 @@ namespace ie {
         const uc::SynthIcon& icon;
     };
 
-    // Programmatic drawing of format pictures
+    /// Programmatic drawing of format pictures
+    /// Type: lo-res
     class Format : public Veng
     {
     public:
@@ -216,7 +236,8 @@ namespace ie {
         const uc::SynthIcon& icon;
     };
 
-    // Programmatic drawing of Ideographic descriptions
+    /// Programmatic drawing of Ideographic descriptions
+    /// Type: lo-res
     class CjkStructure : public Veng
     {
     public:
@@ -224,7 +245,8 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
-    // Programmatic drawing of tally marks
+    /// Programmatic drawing of tally marks
+    /// Type: lo-res
     class TallyMark : public Veng
     {
     public:
@@ -232,7 +254,8 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
-    // Programmatic drawing of enclosed alnum supp
+    /// Programmatic drawing of enclosed alnum supp
+    /// Type: lo-res
     class ThreeD : public Veng
     {
     public:
@@ -244,7 +267,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
-    // Programmatic drawing of enclosed ideographic supp
+    /// Programmatic drawing of enclosed ideographic supp
+    /// Type: lo-res
     class SqIdeo : public Veng
     {
     public:
@@ -256,7 +280,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
-    // Programmatic drawing of enclosed alnum ①
+    /// Programmatic drawing of enclosed alnum ①
+    /// Type: lo-res
     class OneCircle : public Veng
     {
     public:
@@ -270,7 +295,8 @@ namespace ie {
 
     enum class HalfPixelDown : unsigned char { NO, YES };
 
-    // Drawing with constant margin around SVG (Kawi)
+    /// Drawing with constant margin around SVG (Kawi)
+    /// Type: lo-res
     class Margin : public Veng
     {
     public:
@@ -286,9 +312,29 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         dumb::Sp<LazySvg> texture;
-        QColor color;
+        QColor bgColor;
         int value;
         bool halfPixelDown;
+    };
+
+    /// Drawing small square SVG in the lower part of the cell (Control pictures)
+    /// Type: lo-res
+    class SvgBelow : public Veng
+    {
+    public:
+        /// @param [in] synthIcon   destination palette (and whether to repaint at all)
+        /// @param [in] aName       file name
+        /// @param [in] aBorder     border in 0.1 dip
+        /// @param [in] aSide       side in 0.1 dip
+        SvgBelow(const uc::SynthIcon& synthIcon, std::string_view aName,
+               int aBorder, int aSide);
+        ~SvgBelow();
+        SvgBelow* clone() const override { return new SvgBelow(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+        QColor bgColor;
+        int border, side;
     };
 
 }   // namespace ie

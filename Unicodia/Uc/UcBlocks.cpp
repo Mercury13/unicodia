@@ -377,7 +377,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::TECHNICAL, Bfg::NO_EMOJI },
     // Control pictures OK
-    { 0x2400, 0x243F, { L'␣', EcContinent::NONE },
+    { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Control Pictures",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },

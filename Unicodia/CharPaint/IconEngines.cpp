@@ -990,7 +990,7 @@ ie::Margin::Margin(const uc::SynthIcon& synthIcon,
                    std::string_view aName, int aValue,
                    HalfPixelDown aHalfPixelDown)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
-      color(synthIcon.maybeMissingContinent().icon.bgColor),
+      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
       value(aValue),
       halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}
 
@@ -1002,7 +1002,7 @@ void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
     static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
 
     // Background
-    painter->fillRect(rect, color);
+    painter->fillRect(rect, bgColor);
 
     // SVG
     unsigned margin = (rect.width() * value + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
@@ -1011,5 +1011,34 @@ void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
         auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down
         rcContent.moveTop(rcContent.top() + shift);
     }
+    texture->get()->render(painter, rcContent);
+}
+
+
+///// SvgBelow /////////////////////////////////////////////////////////////////
+
+
+ie::SvgBelow::SvgBelow(const uc::SynthIcon& synthIcon, std::string_view aName,
+                       int aBorder, int aSide)
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
+      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+      border(aBorder), side(aSide) {}
+
+ie::SvgBelow::~SvgBelow() = default;
+
+void ie::SvgBelow::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
+    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
+
+    // Background
+    painter->fillRect(rect, bgColor);
+
+    // Where should be the SVG?
+    unsigned scaledBorder = (rect.height() * border + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
+    unsigned scaledSide = (rect.width() * side + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
+    auto x = (rect.width() - scaledSide) / 2;
+    auto y = rect.height() - scaledBorder - scaledSide;
+    QRect rcContent(x, y, scaledSide, scaledSide);
     texture->get()->render(painter, rcContent);
 }
