@@ -27,6 +27,7 @@ namespace ie {
     /// All icons are 16×16 dip (device-independent pixels).
     /// As we want to do something with device pixels rather than
     ///    dumbly anti-alias, we’ve made some special engines
+    /// (pixels do matter even on 1.5× = 24×24 px!)
     constexpr int BASE_SIZE = 16;
 
     /// Virtual engine
