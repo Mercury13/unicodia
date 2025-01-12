@@ -167,7 +167,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Tibt, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
             { 0xFBF, uc::EcVersion::V_3_0 } },
     // Myanmar OK
-    { 0x1000, 0x109F, { 0x101E, EcContinent::ASIA },
+    { 0x1000, 0x109F, { 0x1000, EcContinent::ASIA, uc::Ifg::PAINT_SVG },
             "Myanmar",
             { EcScript::Mymr, 0 }, MapSubtype::ALIVE, EcScript::Mymr },
     // Georgian OK
