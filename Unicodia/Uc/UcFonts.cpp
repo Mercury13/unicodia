@@ -176,6 +176,8 @@ constinit const uc::Font uc::fontInfo[] = {
       /// @todo [U16, gag] For Cyr C; replace with Noto Serif when it appears
       { FNAME_FUNKY },                                                          // …1  for Cyr C Khanty
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER, 10_top + 12_bot },      // Grantha
+    { FNAME_NOTO, Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },                        // Greek/Coptic
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
