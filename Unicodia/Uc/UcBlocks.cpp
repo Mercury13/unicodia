@@ -237,7 +237,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 1 }, MapSubtype::ALIVE,
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Limbu OK
-    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, {}, 15_hx },
+    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
             "Limbu",
             { EcScript::Limb, 0 }, MapSubtype::ALIVE, EcScript::Limb },
     // Tai Le OK

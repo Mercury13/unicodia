@@ -228,6 +228,8 @@ namespace {
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
+        case 0x1900:    // Limbu: margin=2px even on 1.25×
+            return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", 13, ie::HalfPixelDown::NO);
         case 0x2400:    // Control pictures: margin=2px even on 1.25×
             return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", 13, 100);
         case 0x2460:    // Enclosed alnum
