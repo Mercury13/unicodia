@@ -116,7 +116,15 @@
 * Anatolian: JSI, lo-res
 * Armenian: JSI
 * Brah: JSI, K = simple cross
-* Cari: too close to Greek, what to take?
+* Cari, Lyci: too close to Greek, what to take?
 * Cakm: K too basic
-* Cham: same
+* Cham: same, conveys how most letters look
 * Common Indic: fill the entire cell
+* Cuneiform: JSI, star is from textbooks
+* Khmr: very simple font, on Leelawadee I’d take K.
+* Laoo: maybe K too basic?
+* Limb: Nepali flag :)
+* Mtei: P is more interesting
+* Plrd: JSI
+* Talu: better with that affixed virama
+* Thai: K too basic
