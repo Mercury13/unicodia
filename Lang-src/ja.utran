@@ -13970,7 +13970,16 @@
       <p>* Wrote character sequences that should not exist in Unicode text.</p>
       <p>* Added base of Egyptian hieroglyphs.</p>
       <p>* Turned PDF specification to HTML site.</p>
+      <p />
+      <p>Unicode{{_}}16 might have exactly 155 thousand characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
+     <known-orig>
+      <p>Besides character additions, there were many internal changes in Unicode.</p>
+      <p>* Rewrote algorithms of rendering Arabic text.</p>
+      <p>* Wrote character sequences that should not exist in Unicode text.</p>
+      <p>* Added base of Egyptian hieroglyphs.</p>
+      <p>* Turned PDF specification to HTML site.</p>
+     </known-orig>
      <transl>
       <p>文字の追加以外にも、Unicode には多くの内部的な変更がありました。</p>
       <p>* アラビア語テキストのレンダリングアルゴリズムを書き直しました。</p>

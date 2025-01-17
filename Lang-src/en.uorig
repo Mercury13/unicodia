@@ -9800,6 +9800,8 @@
       <p>* Wrote character sequences that should not exist in Unicode text.</p>
       <p>* Added base of Egyptian hieroglyphs.</p>
       <p>* Turned PDF specification to HTML site.</p>
+      <p />
+      <p>Unicode{{_}}16 might have exactly 155 thousand characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
     </text>
    </group>

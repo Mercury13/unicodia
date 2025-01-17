@@ -14000,6 +14000,8 @@
       <p>* Wrote character sequences that should not exist in Unicode text.</p>
       <p>* Added base of Egyptian hieroglyphs.</p>
       <p>* Turned PDF specification to HTML site.</p>
+      <p />
+      <p>Unicode{{_}}16 might have exactly 155 thousand characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
      <transl>
       <p>Кроме добавлений символов, было много внутренних изменений в Юникоде.</p>
@@ -14007,6 +14009,8 @@
       <p>* Написаны последовательности символов, которых не{{_}}должно быть в юникодном тексте.</p>
       <p>* Добавлена база египетских иероглифов.</p>
       <p>* PDF-спецификация превращена в HTML-сайт.</p>
+      <p />
+      <p>Юникод{{_}}16 мог бы иметь ровно 155 тысяч символов (исключая 65 [[pt:control|управляющих]]){{-}}но две индийских [[pt:ligature|лигатуры]] убрали.</p>
      </transl>
     </text>
    </group>
