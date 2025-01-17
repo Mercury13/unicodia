@@ -4,7 +4,7 @@
 # Maintained by: Andrew West (魏安) <babelstone@gmail.com>
 # Unicode Version: 16.0 (September 2024)
 # Total entries: 97,680
-# File Date: 2024-11-17
+# File Date: 2025-01-09
 #
 # Caveat Lector
 #	Please be aware that IDS sequences do not describe absolute glyph forms, but describe glyph forms in the context of
@@ -87123,7 +87123,7 @@ U+2E75B	𮝛	^⿰車𦙃$(S)
 U+2E75C	𮝜	^⿰車囷$(S)
 U+2E75D	𮝝	^⿰車匩$(J)
 U+2E75E	𮝞	^⿰車⿱口羽$(J)
-U+2E75F	𮝟	^⿰車𡿺$(S)
+U+2E75F	𮝟	^⿰車⿱巛㐫$(S)
 U+2E760	𮝠	^⿰車⿱𡗗田$(S)
 U+2E761	𮝡	^⿰車恥$(K)
 U+2E762	𮝢	^⿰車𧉎$(S)
