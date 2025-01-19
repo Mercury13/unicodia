@@ -65,7 +65,7 @@
 * Transport: TMB + lo-res
 * Specials: the only non-format
 * Tags: Tag+T
-* Variation selectors: just a genaral image
+* Variation selectors: just a general image
 
 ## Europe
 * Albanian all: TMB
