@@ -166,7 +166,7 @@
 * Buhd and others: the same letter for four scripts
 * Diak: K is too ornate
 * Kawi: TMB K
-* Maka: wanted bird’s theme
+* Maka: wanted bird theme
 * Rjng: anything taking the entire cell
 * Sinh: TMB K
 * Sinh numbers: TMB 1
