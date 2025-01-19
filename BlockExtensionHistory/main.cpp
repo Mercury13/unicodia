@@ -75,7 +75,7 @@ Version versions[] {
     { "16.0.0",      "",       FileVer::UCD  },
     /// Comment out beta line instead of deleting:
     /// in half a year a new beta will be out, right?
-    { "draft/UCD",   "",       FileVer::UCD, true },
+    { .name = "draft/UCD", .suffix = "", .version = FileVer::UCD, .isBeta = true },
 };
 
 
