@@ -112,19 +112,78 @@
 * Phlp: interesting punctuation
 
 ## Asia →
-* Common Brahmic: K
 * Anatolian: JSI, lo-res
 * Armenian: JSI
-* Brah: JSI, K = simple cross
-* Cari, Lyci: too close to Greek, what to take?
-* Cakm: K too basic
-* Cham: same, conveys how most letters look
+* Cari, Lyci: both are too close to Greek, what to take?
 * Common Indic: fill the entire cell
 * Cuneiform: JSI, star is from textbooks
+* Plrd: JSI
+
+## Brahmic
+* Common Brahmic: TMB K
+* Brah: JSI, K = simple cross
+* Cakm: K too basic
+* Cham: same, conveys how most letters look
 * Khmr: very simple font, on Leelawadee I’d take K.
 * Laoo: maybe K too basic?
 * Limb: Nepali flag :)
 * Mtei: P is more interesting
-* Plrd: JSI
+* Mymr A: nice cat-like ligature
+* Phag: K is too basic
 * Talu: better with that affixed virama
 * Thai: K too basic
+
+## CJK
+* Bopo: IDK
+* CJK compat: TMB
+* CJK compat forms: JSI
+* CJK strokes: JSI
+* CJK symbols: JSI
+* Hani all: JSI + lo-res
+* Enclosed CJK: January would be better than parenthesized Hang
+* Enclosed ideo: lo-res
+* Halfwidth: whatever fullwidth looks better
+* Hang jamo: the nicest jamo in sans-serif
+* Hang compat jamo: JSI on lo-res
+* Hang jamo ex A: to convey the meaning of “extended”
+* Hang jamo ex B: JSI, better among medial
+* Hang syllables: TMB with fewer hintable lines
+* Hira, Kana, Kana phon: requested by a real Japanese, I considered refuse but they sat well
+* kana supp, kana ex a: lo-res
+* kana ex B: JSI (all chars are very basic)
+* kana small: TMB as of 12.0 + small Ko (15.0) does not look so good
+* Nshu: JSI
+* Small forms vars: the 1st looking like a small form
+* Tai Xuan: all three types of lines + some meaning found before our war (strength)
+* Tangut all: JSI, historical
+* Vertical forms: distinct char
+* Yijing: some meaning related to our war (deliverance)
+
+## Ocean
+* Bali, Java: early icon + IDK if K would look OK
+* Batk: JSI, no letter K
+* Bugi: K is really basic, the next is G
+* Buhd and others: the same letter for four scripts
+* Diak: K is too ornate
+* Kawi: TMB K
+* Maka: wanted bird’s theme
+* Rjng: anything taking the entire cell
+* Sinh: TMB K
+* Sinh numbers: TMB 1
+* Sund: IDK
+* Sund supp: the only balanced sign among 8 (no letters, signs only)
+* Thaa: JSI
+
+## Africa
+* All are JSI, I just wanted to convey the spirit of script
+
+## America
+* Cans all: somehow decided with an umlaut
+* Cans ex A: TMB
+* Cher: looks like Latin, and I wanted a “Latin-but-not-really” letter
+* Cher supp: same but small
+* Dsrt: JSI
+* Kaktovik: egg 13
+* Mayan: egg 13
+* NP Hmong: JSI
+* Osge: JSI w/o ascenders/descenders, “Latin-but-not-really”
