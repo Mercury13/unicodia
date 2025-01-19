@@ -876,7 +876,7 @@ constinit const uc::Block uc::blocks[] {
             "Nabataean",
             { EcScript::Nbat, 0 }, MapSubtype::DEAD, EcScript::Nbat },
     // Hatran OK
-    { 0x108E0, 0x108FF, { 0x108E0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
+    { 0x108E0, 0x108FF, { 0x108E0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, SvgHint { 15, 14 } },
             "Hatran",
             { EcScript::Hatr, 0 }, MapSubtype::DEAD, EcScript::Hatr },
     // Phoenician OK
@@ -927,7 +927,7 @@ constinit const uc::Block uc::blocks[] {
             "Inscriptional Parthian",
             { EcScript::Prti, 0 }, MapSubtype::DEAD, EcScript::Prti },
     // Inscr Pahlavi OK
-    { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
+    { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, 13_hy },
             "Inscriptional Pahlavi",
             { EcScript::Phli, 0 }, MapSubtype::DEAD, EcScript::Phli },
     // Psalter Pahlavi OK
@@ -935,7 +935,7 @@ constinit const uc::Block uc::blocks[] {
             "Psalter Pahlavi",
             { EcScript::Phli, 1 }, MapSubtype::DEAD, EcScript::Phlp },
     // Turkic runes OK
-    { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
+    { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, SvgHint{ 7, 7 } },
             "Old Turkic",
             { EcScript::Orkh, 0 }, MapSubtype::DEAD, EcScript::Orkh },
     // Hung runes OK
