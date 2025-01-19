@@ -130,7 +130,7 @@
 * Mtei: P is more interesting
 * Mymr A: nice cat-like ligature
 * Phag: K is too basic
-* Talu: better with that affixed 
+* Talu: better with that affixed virama
 * Tibt: IDK, early icon, maybe K will look good
 * Thai: K too basic
 
