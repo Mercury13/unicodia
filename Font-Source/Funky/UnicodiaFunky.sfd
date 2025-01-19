@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1737295928
+ModificationTime: 1737296347
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -66,7 +66,7 @@ Lookup: 1 0 0 "Gukh med.H b" { "Gukh med.H b-1"  } []
 Lookup: 1 0 0 "Gukh med.H invT" { "Gukh med.H invT-1"  } []
 Lookup: 1 0 0 "Gukh med.H wider" { "Gukh med.H wider-1"  } []
 Lookup: 1 0 0 "Gukh med.H aspir" { "Gukh med.H aspir-1"  } []
-Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] "Maka KERN-2" [190,30,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -76,7 +76,7 @@ Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "C
 Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 2
-"Above" 140 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.Au Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Anu
+"Above" 312 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Au Gukh.Uml.Anu Gukh.Lig.Aa.Anu Gukh.Lig.I.Anu Gukh.Lig.Ii.Anu Gukh.Lig.U.Anu Gukh.Lig.Uu.Anu Gukh.Lig.Oo.Anu Gukh.Lig.Au.Anu Gukh.Lig.E.Anu Gukh.Lig.Ee.Anu Gukh.Lig.Ai.Anu Gukh.Lig.O.Anu
 DEI: 91125
 KernClass2: 14 16 "Maka KERN-2"
  20 Maka.K Maka.C Maka.Y
@@ -879,7 +879,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 660 33 14
+WinInfo: 627 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
