@@ -73,8 +73,8 @@ Version versions[] {
     { "15.0.0",      "",       FileVer::UCD  },
     { "15.1.0",      "",       FileVer::UCD  },
     { "16.0.0",      "",       FileVer::UCD  },
-    // Comment out beta line instead of deleting:
-    // in half a year a new beta will be out, right?
+    /// Comment out beta line instead of deleting:
+    /// in half a year a new beta will be out, right?
     { "draft/UCD",   "",       FileVer::UCD, true },
 };
 
