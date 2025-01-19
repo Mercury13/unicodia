@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1737296347
+ModificationTime: 1737304193
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -59,7 +59,6 @@ Lookup: 6 0 0 "Copt ABVF" { "Copt ABVF-1"  } ['abvf' ('DFLT' <'dflt' > 'copt' <'
 Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 1 0 0 "Gukh virama repl" { "Gukh virama repl-1"  } []
 Lookup: 5 0 0 "Gukh virama compat" { "Gukh virama-1"  } [' RQD' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 4 256 0 "Gukh CCMP above" { "Gukh CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "Gukh med.H normal" { "Gukh med.H normal-1"  } []
 Lookup: 1 0 0 "Gukh med.H b" { "Gukh med.H b-1"  } []
@@ -67,6 +66,9 @@ Lookup: 1 0 0 "Gukh med.H invT" { "Gukh med.H invT-1"  } []
 Lookup: 1 0 0 "Gukh med.H wider" { "Gukh med.H wider-1"  } []
 Lookup: 1 0 0 "Gukh med.H aspir" { "Gukh med.H aspir-1"  } []
 Lookup: 5 8 0 "Gukh med.H ctx versions" { "Normal"  "b"  "InvT"  "Wider"  "Aspir"  } ['rclt' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 256 0 "Gukh CCMP cmp again" { "Gukh CCMP cmp again-1"  "Gukh CCMP cmp again-2"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 256 0 "Gukh CCMP cmp again2" { "Gukh CCMP cmp again2-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 256 0 "Gukh CCMP anu" { "Gukh CCMP anu-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "Maka KERN" { "Maka KERN-1" [170,15,2] "Maka KERN-2" [190,30,2] } ['kern' ('DFLT' <'dflt' > 'maka' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -76,7 +78,7 @@ Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "C
 Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 2
-"Above" 312 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Au Gukh.Uml.Anu Gukh.Lig.Aa.Anu Gukh.Lig.I.Anu Gukh.Lig.Ii.Anu Gukh.Lig.U.Anu Gukh.Lig.Uu.Anu Gukh.Lig.Oo.Anu Gukh.Lig.Au.Anu Gukh.Lig.E.Anu Gukh.Lig.Ee.Anu Gukh.Lig.Ai.Anu Gukh.Lig.O.Anu
+"Above" 325 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Au Gukh.Uml.Len Gukh.Uml.Anu Gukh.Lig.Aa.Anu Gukh.Lig.I.Anu Gukh.Lig.Ii.Anu Gukh.Lig.U.Anu Gukh.Lig.Uu.Anu Gukh.Lig.Oo.Anu Gukh.Lig.Au.Anu Gukh.Lig.E.Anu Gukh.Lig.Ee.Anu Gukh.Lig.Ai.Anu Gukh.Lig.O.Anu
 DEI: 91125
 KernClass2: 14 16 "Maka KERN-2"
  20 Maka.K Maka.C Maka.Y
@@ -879,7 +881,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 627 33 14
+WinInfo: 726 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -144228,6 +144230,10 @@ SplineSet
  0 725 l 1,25,-1
  0 675 l 1,22,-1
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again2-1" Gukh.Uml.Uu Gukh.Uml.I
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Len Gukh.Uml.Ii
+Ligature2: "Gukh CCMP cmp again2-1" Gukh.Uml.Aa Gukh.Uml.Ee
+LCarets2: 2 0 0
 Colour: ffe600
 EndChar
 
@@ -148130,6 +148136,8 @@ SplineSet
  0 775 l 1,7,-1
  -546 775 l 1,4,-1
 EndSplineSet
+LCarets2: 1 0
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Aa
 Colour: ffe600
 EndChar
 
@@ -148213,6 +148221,9 @@ SplineSet
  0 725 l 1,9,-1
  0 675 l 1,6,-1
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Len Gukh.Uml.Aa
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Len
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
@@ -148321,6 +148332,8 @@ SplineSet
  -310 770 -310 770 -336.5 796.5 c 128,-1,12
  -363 823 -363 823 -363 860 c 128,-1,13
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.I
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
@@ -148463,6 +148476,9 @@ SplineSet
  0 865 l 1,21,-1
  0 675 l 1,16,-1
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.I Gukh.Uml.Len
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Len Gukh.Uml.I
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
@@ -148638,6 +148654,8 @@ SplineSet
  -169 771 -169 771 -195.5 797 c 128,-1,28
  -222 823 -222 823 -222 860.5 c 128,-1,29
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Ii
+LCarets2: 1 0
 Colour: ffe600
 EndChar
 
@@ -148757,6 +148775,9 @@ SplineSet
  0 725 l 1,23,-1
  0 675 l 1,20,-1
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again2-1" Gukh.Uml.U Gukh.Uml.I
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Aa Gukh.Uml.I
+LCarets2: 2 0 0
 Colour: ffe600
 EndChar
 
@@ -148943,10 +148964,13 @@ SplineSet
  -169 871 -169 871 -195.5 897 c 128,-1,32
  -222 923 -222 923 -222 960.5 c 128,-1,33
 EndSplineSet
+Ligature2: "Gukh CCMP cmp again2-1" Gukh.Uml.U Gukh.Uml.Ii
+Ligature2: "Gukh CCMP cmp again-1" Gukh.Uml.Aa Gukh.Uml.Aa Gukh.Uml.Ii
+LCarets2: 2 0 0
 Colour: ffe600
 EndChar
 
-StartChar: u16129
+StartChar: Gukh.Uml.Len
 Encoding: 90409 90409 1032
 Width: 0
 GlyphClass: 4
@@ -149415,11 +149439,11 @@ SplineSet
  69 11 69 11 39.5 40 c 128,-1,28
  10 69 10 69 10 110.5 c 128,-1,29
 EndSplineSet
-Substitution2: "Gukh med.H normal-1" Gukh.Med.H.Norm
-Substitution2: "Gukh med.H wider-1" Gukh.Med.H.Wider
-Substitution2: "Gukh med.H aspir-1" Gukh.Med.H.Aspir
-Substitution2: "Gukh med.H invT-1" Gukh.Med.H.InvT
 Substitution2: "Gukh med.H b-1" Gukh.Med.H.b
+Substitution2: "Gukh med.H invT-1" Gukh.Med.H.InvT
+Substitution2: "Gukh med.H aspir-1" Gukh.Med.H.Aspir
+Substitution2: "Gukh med.H wider-1" Gukh.Med.H.Wider
+Substitution2: "Gukh med.H normal-1" Gukh.Med.H.Norm
 Colour: ffe600
 EndChar
 
@@ -150674,8 +150698,8 @@ SplineSet
  -456 940 l 1,10,-1
  -385 940 l 1,4,-1
 EndSplineSet
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Aa
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Aa Gukh.Uml.Anu
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Aa
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Aa Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -150815,8 +150839,8 @@ SplineSet
  -310 790 -310 790 -336.5 816.5 c 128,-1,28
  -363 843 -363 843 -363 880 c 128,-1,29
 EndSplineSet
-Ligature2: "Gukh CCMP-1" Gukh.Uml.I Gukh.Uml.Anu
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.I
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.I
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.I Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -151019,8 +151043,8 @@ SplineSet
  -430 781 l 2,43,32
  -359 720 -359 720 -273 720 c 128,-1,33
 EndSplineSet
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Ii
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Ii Gukh.Uml.Anu
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ii Gukh.Uml.Anu
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ii
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -151076,8 +151100,8 @@ SplineSet
  -456 1040 l 5,14,-1
  -385 1040 l 5,8,-1
 EndSplineSet
-Ligature2: "Gukh CCMP-1" Gukh.Uml.U Gukh.Uml.Anu
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.U
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.U
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.U Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -151169,9 +151193,9 @@ SplineSet
  0 725 l 1,16,-1
  0 675 l 1,13,-1
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Uu
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Uu Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Uu
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Uu Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -151385,9 +151409,9 @@ SplineSet
  -320 879 -320 879 -346.5 905.5 c 128,-1,41
  -373 932 -373 932 -373 969 c 128,-1,42
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Oo
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Oo Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Oo
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Oo Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -151615,9 +151639,9 @@ SplineSet
  0 725 l 1,61,-1
  0 675 l 1,58,-1
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Au
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Au Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Au
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Au Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -151766,9 +151790,9 @@ SplineSet
  -292 970 -292 970 -305 957 c 128,-1,34
  -318 944 -318 944 -318 925 c 128,-1,35
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.E
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.E Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.E
-Ligature2: "Gukh CCMP-1" Gukh.Uml.E Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -151963,9 +151987,9 @@ SplineSet
  -302 970 -302 970 -315 957 c 128,-1,36
  -328 944 -328 944 -328 925 c 128,-1,37
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ee
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ee Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Ee Gukh.Uml.Anu
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Ee
 Colour: ffe600
 EndChar
 
@@ -152178,9 +152202,9 @@ SplineSet
  -199 865 -199 865 -225.5 891.5 c 128,-1,42
  -252 918 -252 918 -252 955 c 128,-1,43
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ai
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ai Gukh.Uml.Anu
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.Ai
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Ai Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -152356,9 +152380,9 @@ SplineSet
  0 725 l 1,45,-1
  0 675 l 1,42,-1
 EndSplineSet
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.O Gukh.Uml.Anu
+Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.O
 LCarets2: 1 0
-Ligature2: "Gukh CCMP-1" Gukh.Uml.Anu Gukh.Uml.O
-Ligature2: "Gukh CCMP-1" Gukh.Uml.O Gukh.Uml.Anu
 Colour: ffe600
 EndChar
 
@@ -153459,6 +153483,7 @@ EndChar
 StartChar: Gukh.Med.H.Norm
 Encoding: 1114257 -1 1134
 Width: 250
+GlyphClass: 2
 Flags: W
 AnchorPoint: "Dot below" -300 0 basechar 0
 AnchorPoint: "Virama" -230 0 basechar 0
@@ -153472,6 +153497,7 @@ EndChar
 StartChar: Gukh.Med.H.Wider
 Encoding: 1114258 -1 1135
 Width: 250
+GlyphClass: 2
 Flags: W
 AnchorPoint: "Dot below" -400 0 basechar 0
 AnchorPoint: "Virama" -320 0 basechar 0
@@ -153485,6 +153511,7 @@ EndChar
 StartChar: Gukh.Med.H.Aspir
 Encoding: 1114259 -1 1136
 Width: 250
+GlyphClass: 2
 Flags: W
 HStem: 11 50<71.7751 148.225> 161 50<72.3189 147.681> 285 50<71.7751 148.225> 435 50<72.3189 147.681> 560 65<-10 260>
 VStem: 10 50<72.9443 148.916 346.944 422.916> 160 50<72.9443 148.916 346.944 422.916>
@@ -153500,6 +153527,7 @@ EndChar
 StartChar: Gukh.Med.H.InvT
 Encoding: 1114260 -1 1137
 Width: 250
+GlyphClass: 2
 Flags: W
 AnchorPoint: "Matra 625" -334 625 basechar 0
 AnchorPoint: "Dot below" -334 0 basechar 0
@@ -153513,6 +153541,7 @@ EndChar
 StartChar: Gukh.Med.H.b
 Encoding: 1114261 -1 1138
 Width: 250
+GlyphClass: 2
 Flags: W
 AnchorPoint: "Dot below" -275 0 basechar 0
 AnchorPoint: "Virama" -193 10 basechar 0
@@ -154696,6 +154725,7 @@ EndChar
 StartChar: Gukh.Virama.DoubleMed
 Encoding: 1114263 -1 1162
 Width: 0
+GlyphClass: 4
 Flags: W
 AnchorPoint: "Virama" -408 -27 mark 0
 LayerCount: 2
