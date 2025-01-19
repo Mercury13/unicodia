@@ -1,4 +1,4 @@
-# How to develop?
+﻿# How to develop?
 * Toolkit can probably run on W7, but Qt Creator, main development environment, absolutely needs W10
 * Download/find all tools for building.
 * Ensure that your Qt has MinGW 11+. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.3, 6.7.0. I actually use 6.1.3 as the last supporting W7 and fast enough on W10.
@@ -98,6 +98,16 @@
     * Example 2: Basic Latin 0000 has vertical stem at 5px and horizontal line at 15px, but to make it aligned to pixels, I greatly shifted to the right — I think that imbalance is 0.3px to the right.
     * Example 3: Kawi 11F00 has almost square letter with 2px frame — decided to make a custom engine that deflates rectangle a bit, aligning all three sides to pixels
     * Example 4: Tangut 17000 has historical icon and modern font — thus use Ifg::HISTORICAL
+
+## Icon policy
+* Greek-type scripts: special letter specific for this script only.
+  * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
+* For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb.
+  * Aramaic-type scripts: Aleph.
+  * Brahmic scripts: K
+  * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script.
+* Icon MAY contain an Easter egg.
+* Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed.
 
 ## When Unicode transitions from beta to release:
 * Go to ``MiscFiles/RawData`` and change addresses to final ones
