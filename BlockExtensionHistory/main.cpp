@@ -10,12 +10,13 @@
 // Libs
 #include "u_Strings.h"
 
-enum class FileVer { COL3, COL2, UCD };
+enum class FileVer : unsigned char { COL3, COL2, UCD };
 
 struct Version {
     const char* name;
     const char* suffix;
     FileVer version;
+    bool isBeta = false;
 
     std::string remoteFileName() const;
     std::string localFileName() const;
@@ -24,8 +25,13 @@ struct Version {
 std::string Version::remoteFileName() const
 {
     std::string r = str::cat("https://unicode.org/Public/", name, "/");
-    if (version == FileVer::UCD) {
+    switch (version) {
+    case FileVer::UCD:
         r += "ucd/";
+        break;
+    case FileVer::COL3:
+    case FileVer::COL2:
+        break;
     }
     str::append(r, "Blocks", suffix, ".txt");
     return r;
@@ -33,7 +39,10 @@ std::string Version::remoteFileName() const
 
 std::string Version::localFileName() const
 {
-    return str::cat("Blocks-", name, ".txt");
+    return str::cat(
+            "Blocks-",
+            isBeta ? "beta" : name,
+            ".txt");
 }
 
 Version versions[] {
@@ -64,6 +73,8 @@ Version versions[] {
     { "15.0.0",      "",       FileVer::UCD  },
     { "15.1.0",      "",       FileVer::UCD  },
     { "16.0.0",      "",       FileVer::UCD  },
+    // Comment out beta line instead of changing to permanent position
+    { "draft/UCD",   "",       FileVer::UCD, true },
 };
 
 
@@ -72,7 +83,8 @@ void ensureLocalFiles()
     std::cout << "Checking for local files, downloading remote..." "\n";
     for (auto& v : versions) {
         auto localName = v.localFileName();
-        if (std::filesystem::exists(localName))
+        // Beta is always loaded!
+        if (!v.isBeta && std::filesystem::exists(localName))
             continue;
         // Load
         auto remoteName = v.remoteFileName();
