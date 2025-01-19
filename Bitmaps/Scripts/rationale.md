@@ -47,7 +47,7 @@
 * Number forms: TMB (the block was completed with ⅐ etc in 5.2)
 * OCR: TMB
 * Phonetic ex: JSI
-* Phonexic ex supp: JSI
+* Phonetic ex supp: JSI
 * Playing cards: TMB + lo-res, hearts are better than spades
 * Punctuation: TMB, but not some funky quote
 * Punc supp: same
