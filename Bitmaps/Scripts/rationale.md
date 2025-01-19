@@ -48,7 +48,7 @@
 * OCR: TMB
 * Phonetic ex: JSI
 * Phonexic ex supp: JSI
-* Cards: TMB + lo-res, hearts are better than spades
+* Playing cards: TMB + lo-res, hearts are better than spades
 * Punctuation: TMB, but not some funky quote
 * Punc supp: same
 * Modifiers: TMB but not superscript
