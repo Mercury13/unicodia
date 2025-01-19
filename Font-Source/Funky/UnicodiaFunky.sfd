@@ -3,9 +3,9 @@ FontName: UnicodiaFunky
 FullName: UnicodiaFunky
 FamilyName: UnicodiaFunky
 Weight: Regular
-Copyright: (c) 2021 -2024 Mikhail Merkuryev\nSIL Open Font License 1.1
+Copyright: (c) 2021 -2025 Mikhail Merkuryev\nSIL Open Font License 1.1
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
-Version: 2.9.3
+Version: 2.9.6
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1734575395
+ModificationTime: 1737295928
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ Lookup: 4 0 0 "Maka CCMP" { "Maka CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'maka' <'
 Lookup: 1 0 0 "Gukh virama repl" { "Gukh virama repl-1"  } []
 Lookup: 5 0 0 "Gukh virama compat" { "Gukh virama-1"  } [' RQD' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 256 0 "Gukh CCMP above" { "Gukh CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 8 0 "Gukh LIGM" { "Gukh LIGM-1"  } ['ccmp' ('DFLT' <'dflt' > 'gukh' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "Gukh med.H normal" { "Gukh med.H normal-1"  } []
 Lookup: 1 0 0 "Gukh med.H b" { "Gukh med.H b-1"  } []
 Lookup: 1 0 0 "Gukh med.H invT" { "Gukh med.H invT-1"  } []
@@ -879,7 +879,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 363 33 14
+WinInfo: 660 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -148949,6 +148949,7 @@ EndChar
 StartChar: u16129
 Encoding: 90409 90409 1032
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 675 50<-546 -50>
 VStem: -50 50<725 865>
@@ -149014,7 +149015,7 @@ EndChar
 StartChar: Gukh.Med.Y
 Encoding: 90410 90410 1033
 Width: 145
-GlyphClass: 5
+GlyphClass: 2
 Flags: W
 HStem: -195 61<484.391 532.41> -133 65<125 289.426> 560 65<-10 60 125 155>
 VStem: 60 65<-68 560>
@@ -149105,6 +149106,7 @@ EndChar
 StartChar: Gukh.Med.V
 Encoding: 90411 90411 1034
 Width: 145
+GlyphClass: 2
 Flags: W
 HStem: -264 65<435.125 491.64> -128 65<125 318.95> 560 65<-10 60 125 155>
 VStem: 60 65<-63 560> 492 65<-198.522 -164.122>
@@ -149413,11 +149415,11 @@ SplineSet
  69 11 69 11 39.5 40 c 128,-1,28
  10 69 10 69 10 110.5 c 128,-1,29
 EndSplineSet
-Substitution2: "Gukh med.H b-1" Gukh.Med.H.b
-Substitution2: "Gukh med.H invT-1" Gukh.Med.H.InvT
-Substitution2: "Gukh med.H aspir-1" Gukh.Med.H.Aspir
-Substitution2: "Gukh med.H wider-1" Gukh.Med.H.Wider
 Substitution2: "Gukh med.H normal-1" Gukh.Med.H.Norm
+Substitution2: "Gukh med.H wider-1" Gukh.Med.H.Wider
+Substitution2: "Gukh med.H aspir-1" Gukh.Med.H.Aspir
+Substitution2: "Gukh med.H invT-1" Gukh.Med.H.InvT
+Substitution2: "Gukh med.H b-1" Gukh.Med.H.b
 Colour: ffe600
 EndChar
 
