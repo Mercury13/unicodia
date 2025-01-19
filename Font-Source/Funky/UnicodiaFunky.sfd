@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1737304193
+ModificationTime: 1737306513
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -150698,7 +150698,6 @@ SplineSet
  -456 940 l 1,10,-1
  -385 940 l 1,4,-1
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Aa
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Aa Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -150839,7 +150838,6 @@ SplineSet
  -310 790 -310 790 -336.5 816.5 c 128,-1,28
  -363 843 -363 843 -363 880 c 128,-1,29
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.I
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.I Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151044,7 +151042,6 @@ SplineSet
  -359 720 -359 720 -273 720 c 128,-1,33
 EndSplineSet
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ii Gukh.Uml.Anu
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ii
 LCarets2: 1 0
 Colour: ffe600
 EndChar
@@ -151100,7 +151097,6 @@ SplineSet
  -456 1040 l 5,14,-1
  -385 1040 l 5,8,-1
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.U
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.U Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151193,7 +151189,6 @@ SplineSet
  0 725 l 1,16,-1
  0 675 l 1,13,-1
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Uu
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Uu Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151409,7 +151404,6 @@ SplineSet
  -320 879 -320 879 -346.5 905.5 c 128,-1,41
  -373 932 -373 932 -373 969 c 128,-1,42
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Oo
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Oo Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151639,7 +151633,6 @@ SplineSet
  0 725 l 1,61,-1
  0 675 l 1,58,-1
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Au
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Au Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151790,7 +151783,6 @@ SplineSet
  -292 970 -292 970 -305 957 c 128,-1,34
  -318 944 -318 944 -318 925 c 128,-1,35
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.E
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.E Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -151987,7 +151979,6 @@ SplineSet
  -302 970 -302 970 -315 957 c 128,-1,36
  -328 944 -328 944 -328 925 c 128,-1,37
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ee
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ee Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -152202,7 +152193,6 @@ SplineSet
  -199 865 -199 865 -225.5 891.5 c 128,-1,42
  -252 918 -252 918 -252 955 c 128,-1,43
 EndSplineSet
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.Ai
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Ai Gukh.Uml.Anu
 LCarets2: 1 0
 Colour: ffe600
@@ -152381,7 +152371,6 @@ SplineSet
  0 675 l 1,42,-1
 EndSplineSet
 Ligature2: "Gukh CCMP anu-1" Gukh.Uml.O Gukh.Uml.Anu
-Ligature2: "Gukh CCMP anu-1" Gukh.Uml.Anu Gukh.Uml.O
 LCarets2: 1 0
 Colour: ffe600
 EndChar
