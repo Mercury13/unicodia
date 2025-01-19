@@ -105,7 +105,7 @@
 * For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb.
   * Aramaic-type scripts: Aleph.
   * Brahmic scripts: K
-  * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script.
+  * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script. Examples: Arab — aleph is just a line. Maka — wanted a “bird”.
 * Icon MAY contain an Easter egg. Example: alchemical symbols — water-alcohol mixture, early vodka.
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed.
 
