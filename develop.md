@@ -106,7 +106,7 @@
   * Aramaic-type scripts: Aleph.
   * Brahmic scripts: K
   * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script.
-* Icon MAY contain an Easter egg.
+* Icon MAY contain an Easter egg. Example: alchemical symbols — water-alcohol mixture, early vodka.
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed.
 
 ## When Unicode transitions from beta to release:
