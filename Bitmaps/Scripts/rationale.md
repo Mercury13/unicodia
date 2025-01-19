@@ -24,7 +24,7 @@
 * Combining diacr for symbols: JSI
 * Combining half marks: a complex composition with the most basic pair
 * Control pictures: the most used control picture
-* Counting rods: Easter egg, prison counting
+* Counting rods: egg, prison counting
 * Currency: the most used currency ever (after ASCII $)
 * Dingbats: something nice, needed to simplify for 16×16
 * Orna dingbats: same, with something pointing right-up, purportedly the best for us writing →
