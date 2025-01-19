@@ -626,7 +626,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Phag, 0 }, MapSubtype::DEAD,
             EcScript::Phag, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
     // Saurashtra OK
-    { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA, {}, 10_hx },
+    { 0xA880, 0xA8DF, { 0xA892, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint { 7, ImbaX::RIGHT_2 } },
             "Saurashtra",
             { EcScript::Saur, 0 }, MapSubtype::ALIVE, EcScript::Saur },
     // Devanagari ex OK
