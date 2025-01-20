@@ -117,7 +117,9 @@
 * Cari, Lyci: both are too close to Greek, what to take?
 * Hluw: JSI, lo-res
 * Plrd: JSI
+* Xpeo: just some interesting wedge combination
 * Xsux: JSI, star is from textbooks, and should never be simpler than Ugar/Xpeo
+* Ugar: wedges form a nice shape
 
 ## Brahmic
 * Common Brahmic: TMB K
