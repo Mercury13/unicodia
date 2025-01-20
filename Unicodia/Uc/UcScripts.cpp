@@ -616,7 +616,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Osage OK, W10 Gadugi
     { "Osge", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::FOR_REVIVAL, EcWritingDir::LTR, EcContinent::AMERICA,
-        Dating::year(2006), EcFont::GADUGI },
+        Dating::year(2006), EcFont::FRANKEN_SANS },
     // Osmanya OK, W10 Ebrima
     { "Osma", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
