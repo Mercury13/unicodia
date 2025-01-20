@@ -5,6 +5,7 @@
 * JSI = just something interesting
 * lo-res = whatever I could draw in low resolution
 * TMB = the most basic
+* LR = LastResort
 
 ## International
 
@@ -74,7 +75,7 @@
 * Caucasian: TMB
 * Cprt: JSI
 * Cpmn: JSI
-* Cyrl: the main purely Curillic letter
+* Cyrl: the main purely Cyrillic letter
 * Cyrl supp: egg, letter for “peace death” piece of Russian mat
 * Cyrl ex A: JSI, not tall
 * Cyrl ex B: JSI
@@ -83,11 +84,11 @@
 * Dupl: JSI (most “letters” are just lines), did not want arrow
 * Shorthand format: lo-res
 * Geor: found a letter that’s somehow OK in all three scripts (Mkhedruli > Asomtavruli)
-* Glag: JSI, lo-res (I used sans-serif font for a long time)
+* Glag: LR+egg (Glagoli)
 * Glag supp: TMB, lo-res
 * Goth: TMB
-* Greek: JSI, lowercase is better
-* Greek ex: IDK
+* Greek: JSI, lowercase is better. I was trained as a mathematician and wrote that ξ multiple times
+* Greek ex: LR, and while working, decided to exaggerate apostrophe/iota
 * Greek num: JSI
 * Greek music: TMB + egg, Warhammer 40k
 * Hung: JSI
@@ -98,20 +99,20 @@
 * Latn ex all: JSI
 * LinA, LinB: JSI
 * Aegean: lo-res (drawn semi-programmatically)
-* Ogam: JSI, full cell
+* Ogam: JSI, full cell, coincided with LR
 * Perm: TMB
-* Phaistos disc: TMB + lo-res
-* Runr: TMB
+* Phaistos disc: TMB + lo-res (I’ll never draw LR’s pedestrian)
+* Runr: TMB, in harmony with LR
 * Shaw: JSI (most letters are basic shapes)
 * Znamenny: TMB
 
-## Asia ←
+## Asia RtL
 * Common: A. Simple line → smth else
 * Khar: TMB K
 * Orkh: JSI
 * Phlp: interesting punctuation
 
-## Asia →
+## Asia LtR
 * Common Indic: fill the entire cell
 * Armn: JSI
 * Cari, Lyci: both are too close to Greek, what to take?
@@ -122,9 +123,9 @@
 * Ugar: wedges form a nice shape, emphasizes simplicity
 
 ## Brahmic
-* Common Brahmic: TMB K
+* Common Brahmic: TMB K, in harmony with LR
 * Brah: JSI, K = simple cross
-* Cakm: K too basic
+* Cakm: K too basic (even LR averted!)
 * Cham: same, conveys how most letters look
 * Lana: K is too basic, and in some fonts confusion with Mymr
 * Laoo: maybe K too basic?
@@ -132,7 +133,7 @@
 * Mtei: P is more interesting
 * Mymr A: nice cat-like ligature
 * Phag: K is too basic
-* Talu: better with that affixed virama
+* Talu: K but better with that affixed virama
 * Tibt: IDK, early icon, maybe K will look good
 * Thai: K too basic
 
