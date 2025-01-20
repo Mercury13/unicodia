@@ -452,7 +452,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZSYM, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Glagolitic OK
-    { 0x2C00, 0x2C5F, { 0x2C19, EcContinent::EUROPE },
+    { 0x2C00, 0x2C5F, { 0x2C03, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Glagolitic",
             { EcScript::Glag, 0 }, MapSubtype::DEAD,
             EcScript::Glag, EcFont::NORMAL, {}, EcGlyphStyleChannel::GLAGOLITIC },
