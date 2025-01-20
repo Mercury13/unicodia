@@ -112,6 +112,7 @@
   * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys script’s spirit. Examples: Arab — aleph is just a line. Maka — wanted a “bird”
 * Icon MAY contain an Easter egg. Examples: alchemical symbols — water-alcohol mixture, early vodka. Cyrl ex — a letter looking like a word of Russian mat
 * CJK: Hira, Kana and Kana phonetic are confirmed by a Japanese, and will no longer change
+* For symbols: the most used, or the most iconic
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
 
 ## When Unicode transitions from beta to release:
