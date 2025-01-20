@@ -167,7 +167,7 @@
 * Bali, Java: want parallel, want descenders, and K is too dazzling
 * Batk: JSI, no letter K
 * Bugi: K is really basic, the next is G
-* Buhd and others: the same letter for four scripts
+* Tglg, Hano, Buhd, Tagb: the same letter for four scripts, dislike K as it’s two lines in Buhd and cross in Tagb
 * Diak: K is too ornate
 * Kawi: TMB K
 * Maka: wanted bird theme
