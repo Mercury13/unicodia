@@ -197,7 +197,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc }, // Khitan small
       /// @todo [U16, gag] Someday Khitan will handle new char
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
-    { "NotoSerifKhmer-Regular.ttf", Ffg::DESC_BIGGER, 95_pc },                  // Khmer
+    { "NotoSerifKhmer-Regular.ttf", Ffg::DESC_BIGGER },                         // Khmer
+    { "NotoSerifKhmer-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 90_pc }, // Khmer symbols
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf", Ffg::DESC_BADLY_HINTED },                // Khudawadi
     { "Kanchenjunga-Regular.ttf" },                                             // Kirat

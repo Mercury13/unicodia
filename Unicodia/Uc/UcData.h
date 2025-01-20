@@ -318,6 +318,8 @@ namespace uc {
         KHITAN_SMALL,
           Z_KHI_1,
         KHMER,
+        KHMER_SYMBOLS,
+          Z_KHS_1,
         KHOJKI,
         KHUDAWADI,
         KIRAT,
