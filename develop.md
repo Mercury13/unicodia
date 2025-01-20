@@ -98,6 +98,7 @@
     * Example 2: Basic Latin 0000 has vertical stem at 5px and horizontal line at 15px, but to make it aligned to pixels, I greatly shifted to the right — I think that imbalance is 0.3px to the right.
     * Example 3: Kawi 11F00 has almost square letter with 2px frame — decided to make a custom engine that deflates rectangle a bit, aligning all three sides to pixels
     * Example 4: Tangut 17000 has historical icon and modern font — thus use Ifg::HISTORICAL
+	* Do not forget Ifg::MISSING if the block is full of tofu.
 
 ## Icon policy
 * Greek-type scripts (Cher, Copt, Cyrl, Goth, Grek, Latn, Perm): special letter specific for this script only
