@@ -119,7 +119,7 @@
 * Plrd: JSI
 * Xpeo: just some interesting wedge combination
 * Xsux: JSI, star is from textbooks, and should never be simpler than Ugar/Xpeo
-* Ugar: wedges form a nice shape
+* Ugar: wedges form a nice shape, emphasizes simplicity
 
 ## Brahmic
 * Common Brahmic: TMB K
