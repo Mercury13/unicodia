@@ -104,7 +104,7 @@
 * There are several approaches to icons: spirit, evolution, peculiar character, Easter egg
 * Greek-type scripts (Cari, Cher, Copt, Cyrl, Goth, Grek, Latn, Lyci, Lydi, Perm): the main approach is peculiar character
   * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
-  * Specially-looking common letter is also OK (Coptic A)
+  * Evolutionary approach is sometimes OK (Coptic A)
 * For sister-scripts the best approach is evolution, e.g. find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb
   * Same for special cases of technically unicameral script: Cher, Geor
   * Aramaic-type scripts: Aleph
