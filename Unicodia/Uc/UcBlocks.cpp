@@ -258,7 +258,7 @@ constinit const uc::Block uc::blocks[] {
             "Buginese",
             { EcScript::Bugi, 0 }, MapSubtype::ALIVE, EcScript::Bugi },
     // Lanna OK
-    { 0x1A20, 0x1AAF, { 0x1A21, EcContinent::ASIA },
+    { 0x1A20, 0x1AAF, { 0x1A21, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Tai Tham",
             { EcScript::Lana, 0 }, MapSubtype::ALIVE,
             EcScript::Lana, EcFont::NORMAL, Bfg::BIG_CONTROLS },
