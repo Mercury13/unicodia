@@ -100,7 +100,7 @@
     * Example 4: Tangut 17000 has historical icon and modern font — thus use Ifg::HISTORICAL
 
 ## Icon policy
-* Greek-type scripts (Cher, Copt, Cyrl, Grek, Goth, Latn, Perm): special letter specific for this script only
+* Greek-type scripts (Cher, Copt, Cyrl, Goth, Grek, Latn, Perm): special letter specific for this script only
   * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
   * Specially-looking common letter is also OK (Coptic A)
 * For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb
