@@ -179,7 +179,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hang, 0 }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ethiopic OK
-    { 0x1200, 0x137F, { 0x12F1, EcContinent::AFRICA },
+    { 0x1200, 0x137F, { L'አ', EcContinent::AFRICA, uc::Ifg::PAINT_SVG },
             "Ethiopic",
             { EcScript::Ethi, 0 }, MapSubtype::ALIVE, EcScript::Ethi },
     // Ethiopic supplement OK
