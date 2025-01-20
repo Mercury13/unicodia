@@ -72,9 +72,9 @@
 * Ancient: TMB but not trivial
 * Byzantine music: JSI big but lo-res
 * Caucasian: TMB
-* Cypriot: JSI
-* Cypro-Minoan: JSI
-* Cyrillic: the main purely Curillic letter
+* Cprt: JSI
+* Cpmn: JSI
+* Cyrl: the main purely Curillic letter
 * Cyrl supp: egg, letter for “peace death” piece of Russian mat
 * Cyrl ex A: JSI, not tall
 * Cyrl ex B: JSI
@@ -82,7 +82,7 @@
 * Cyrl ex D: JSI, all are modifiers
 * Dupl: JSI (most “letters” are just lines), did not want arrow
 * Shorthand format: lo-res
-* Georgian: found a letter that’s somehow OK in all three scripts (Mkhedruli > Asomtavruli)
+* Geor: found a letter that’s somehow OK in all three scripts (Mkhedruli > Asomtavruli)
 * Glag: JSI, lo-res (I used sans-serif font for a long time)
 * Glag supp: TMB, lo-res
 * Goth: TMB
@@ -98,11 +98,11 @@
 * Latn ex all: JSI
 * LinA, LinB: JSI
 * Aegean: lo-res (drawn semi-programmatically)
-* Ogham: JSI, full cell
+* Ogam: JSI, full cell
 * Perm: TMB
 * Phaistos disc: TMB + lo-res
-* Runes: TMB
-* Shavian: JSI (most letters are basic shapes)
+* Runr: TMB
+* Shaw: JSI (most letters are basic shapes)
 * Znamenny: TMB
 
 ## Asia ←
@@ -112,18 +112,19 @@
 * Phlp: interesting punctuation
 
 ## Asia →
-* Anatolian: JSI, lo-res
-* Armenian: JSI
-* Cari, Lyci: both are too close to Greek, what to take?
 * Common Indic: fill the entire cell
-* Cuneiform: JSI, star is from textbooks
+* Armn: JSI
+* Cari, Lyci: both are too close to Greek, what to take?
+* Hluw: JSI, lo-res
 * Plrd: JSI
+* Xsux: JSI, star is from textbooks, and should never be simpler than Ugar/Xpeo
 
 ## Brahmic
 * Common Brahmic: TMB K
 * Brah: JSI, K = simple cross
 * Cakm: K too basic
 * Cham: same, conveys how most letters look
+* Lana: K is too basic, and in some fonts confusion with Mymr
 * Laoo: maybe K too basic?
 * Limb: Nepali flag :)
 * Mtei: P is more interesting
@@ -155,7 +156,7 @@
 * Nshu: JSI
 * Small forms vars: the 1st looking like a small form
 * Tai Xuan: all three types of lines + some meaning found before our war (strength)
-* Tangut all: JSI, historical
+* Tang all: JSI, historical
 * Vertical forms: distinct char
 * Yijing: some meaning related to our war (deliverance)
 
