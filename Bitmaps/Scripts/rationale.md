@@ -33,13 +33,13 @@
 * Emoticons: one of the most common emoji
 * Enclosing alnum: TMB ①
 * Enclosing alnum supp: the simplest broadcasting mark
-* Shapes: was hand-aligned to pixels in GIMP
+* Geom shapes: was hand-aligned to pixels in GIMP
 * Shapes ex: JSI
 * IPA: a known char from English transcription
 * Letterlike: something well-known (maybe ™ is better?)
 * Mahjong: lo-res
-* Math op: some well-known, even more than ∀
-* Math op supp: some strange integral
+* Math op: some well-known, even more than ∀ (by coincidence, LR too)
+* Math op supp: some strange integral (by coincidence, LR took other integral)
 * Math sym misc A: what to take?
 * Math sym misc B: IDK, box-and whiskers are the nicest?
 * Math alph: JSI, bold and handwritten
