@@ -167,7 +167,6 @@
 * Bali, Java: want parallel, want descenders, and K is too dazzling
 * Batk: JSI, no letter K
 * Bugi: K is really basic, the next is G
-* Tglg, Hano, Buhd, Tagb: the same letter for four scripts, dislike K as it’s two lines in Buhd and cross in Tagb
 * Diak: K is too ornate
 * Kawi: TMB K
 * Maka: wanted bird theme
@@ -176,6 +175,7 @@
 * Sinh numbers: TMB 1
 * Sund: IDK
 * Sund supp: the only balanced sign among 8 (no letters, signs only)
+* Tglg, Hano, Buhd, Tagb: the same letter for four scripts, dislike K as it’s two lines in Buhd and cross in Tagb
 * Thaa: JSI
 
 ## Africa
