@@ -125,7 +125,7 @@ constinit const uc::Block uc::blocks[] {
             "Gurmukhi",
             { EcScript::Guru, 0 }, MapSubtype::ALIVE, EcScript::Guru },
     // Gujarati OK, Google Noto + FORCE_TOFU show nothing
-    { 0x0A80, 0x0AFF, { 0xA9B, EcContinent::ASIA },
+    { 0x0A80, 0x0AFF, { L'ક', EcContinent::ASIA, Ifg::PAINT_SVG },
             "Gujarati",
             { EcScript::Gujr, 0 }, MapSubtype::ALIVE, EcScript::Gujr },
     // Oriya OK, Noto + everything bad manually fixed
