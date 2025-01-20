@@ -124,7 +124,6 @@
 * Brah: JSI, K = simple cross
 * Cakm: K too basic
 * Cham: same, conveys how most letters look
-* Khmr: very simple font, on Leelawadee I’d take K.
 * Laoo: maybe K too basic?
 * Limb: Nepali flag :)
 * Mtei: P is more interesting
