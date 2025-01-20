@@ -6385,7 +6385,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost distinctive top line. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entring a ligature, a consonant loses right stem if present.</p>
+      <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost distinctive headstroke. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in the title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entering a ligature, a consonant loses right stem if present.</p>
       <p>{{smtable|kə|*ક|+ i|**◌િ|= ki|*કિ}}</p>
       <p>{{smtable|dhə|*ધ|+ virama|**◌્|+ kə|*ક|= dhkə|*ધ્ક}}</p>
       <p />
