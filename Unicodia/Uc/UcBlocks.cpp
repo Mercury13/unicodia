@@ -220,7 +220,7 @@ constinit const uc::Block uc::blocks[] {
             "Tagbanwa",
             { EcScript::Tagb, 0 }, MapSubtype::ALIVE, EcScript::Tagb },
     // Khmer OK
-    { 0x1780, 0x17FF, { 0x178D, EcContinent::ASIA },
+    { 0x1780, 0x17FF, { 0x1780, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Khmer",
             { EcScript::Khmr, 0 }, MapSubtype::ALIVE,
             EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP },
