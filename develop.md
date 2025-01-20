@@ -104,6 +104,7 @@
   * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
   * Specially-looking common letter is also OK (Coptic A)
 * For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb
+  * Same for special cases of technically unicameral script: Cher, Geor
   * Aramaic-type scripts: Aleph
   * Brahmic scripts: K
   * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script. Examples: Arab — aleph is just a line. Maka — wanted a “bird”
