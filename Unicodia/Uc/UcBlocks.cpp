@@ -328,7 +328,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 2 }, MapSubtype::ALIVE,
             EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek ex OK
-    { 0x1F00, 0x1FFF, { 0x1F6B, EcContinent::EUROPE },
+    { 0x1F00, 0x1FFF, { L'ᾨ', EcContinent::EUROPE, Ifg::PAINT_SVG, 11_hy },
             "Greek Extended",
             { EcScript::Grek, 1 }, MapSubtype::DEAD,
             EcScript::Grek, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
