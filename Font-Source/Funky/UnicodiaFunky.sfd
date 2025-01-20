@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1737375181
+ModificationTime: 1737375417
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -881,7 +881,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -893,7 +893,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1178
+BeginChars: 1114266 1175
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -156292,27 +156292,6 @@ SplineSet
  -382 1000 -382 1000 -399 988 c 128,-1,17
  -416 976 -416 976 -416 951 c 0,8,9
 EndSplineSet
-EndChar
-
-StartChar: uni1780
-Encoding: 6016 6016 1175
-Width: 224
-Flags: W
-LayerCount: 2
-EndChar
-
-StartChar: uni1781
-Encoding: 6017 6017 1176
-Width: 210
-Flags: W
-LayerCount: 2
-EndChar
-
-StartChar: uni1782
-Encoding: 6018 6018 1177
-Width: 142
-Flags: W
-LayerCount: 2
 EndChar
 EndChars
 EndSplineFont
