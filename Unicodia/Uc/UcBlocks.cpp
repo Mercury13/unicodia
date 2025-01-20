@@ -87,7 +87,7 @@ constinit const uc::Block uc::blocks[] {
             "Thaana",
             { EcScript::Thaa, 0 }, MapSubtype::ALIVE, EcScript::Thaa },
     // N’ko OK
-    { 0x07C0, 0x07FF, { 0x7D0, EcContinent::AFRICA },
+    { 0x07C0, 0x07FF, { L'ߒ', EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint{ 13, 6, ImbaX::LEFT_4 } },
             "NKo",
             { EcScript::Nkoo, 0 }, MapSubtype::ALIVE, EcScript::Nkoo },
     // Samaritan OK
