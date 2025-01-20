@@ -648,7 +648,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hang, 'A' }, MapSubtype::DEAD,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Javanese OK
-    { 0xA980, 0xA9DF, { 0xA98F, EcContinent::OCEAN, Ifg::PAINT_SVG | Ifg::SHIFT_DOWN },
+    { 0xA980, 0xA9DF, { 0xA99B, EcContinent::OCEAN, Ifg::PAINT_SVG | Ifg::SHIFT_DOWN },
             "Javanese",
             { EcScript::Java, 0 }, MapSubtype::DEAD, EcScript::Java },
     // Myanmar ex B OK
