@@ -170,7 +170,7 @@
 * Diak: K is too ornate
 * Kawi: TMB K
 * Maka: wanted bird theme
-* Rjng: anything taking the entire cell
+* Rjng: TMB K, under the influence of LR
 * Sinh: TMB K
 * Sinh numbers: TMB 1
 * Sund: IDK
@@ -187,7 +187,7 @@
 * Cans ex A: TMB
 * Cher: looks like Latin, and I wanted a “Latin-but-not-really” letter
 * Cher supp: same but small
-* Dsrt: JSI
+* Dsrt: JSI (what a coincidence, LR took the same)
 * Kaktovik: egg 13
 * Mayan: egg 13
 * NP Hmong: JSI

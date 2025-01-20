@@ -639,7 +639,7 @@ constinit const uc::Block uc::blocks[] {
             "Kayah Li",
             { EcScript::Kali, 0 }, MapSubtype::ALIVE, EcScript::Kali },
     // Rejang OK
-    { 0xA930, 0xA95F, { 0xA93B, EcContinent::OCEAN },
+    { 0xA930, 0xA95F, { 0xA930, EcContinent::OCEAN, Ifg::PAINT_SVG },
             "Rejang",
             { EcScript::Rjng, 0 }, MapSubtype::DEAD, EcScript::Rjng },
     // Hangul jamo A OK
