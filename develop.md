@@ -100,16 +100,16 @@
     * Example 4: Tangut 17000 has historical icon and modern font — thus use Ifg::HISTORICAL
 
 ## Icon policy
-* Greek-type scripts (Cher, Copt, Cyrl, Grek, Goth, Latn, Perm): special letter specific for this script only.
+* Greek-type scripts (Cher, Copt, Cyrl, Grek, Goth, Latn, Perm): special letter specific for this script only
   * If it has some meaning → cool (Latin L for Latin, Cyrillic Я is the last letter)
   * Specially-looking common letter is also OK (Coptic A)
-* For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb.
-  * Aramaic-type scripts: Aleph.
+* For sister-scripts you may find some letter that looks really different in these scripts. See Tglg/Hano/Buhd/Tagb
+  * Aramaic-type scripts: Aleph
   * Brahmic scripts: K
-  * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script. Examples: Arab — aleph is just a line. Maka — wanted a “bird”.
-* Icon MAY contain an Easter egg. Example: alchemical symbols — water-alcohol mixture, early vodka.
-* CJK: Hira, Kana and Kana phonetic are confirmed by a Japanese, and will no longer change.
-* Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed.
+  * Take another letter if Aleph/K is too basic, or too ornate, or that letter just better conveys the character of the script. Examples: Arab — aleph is just a line. Maka — wanted a “bird”
+* Icon MAY contain an Easter egg. Example: alchemical symbols — water-alcohol mixture, early vodka
+* CJK: Hira, Kana and Kana phonetic are confirmed by a Japanese, and will no longer change
+* Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
 
 ## When Unicode transitions from beta to release:
 * Go to ``MiscFiles/RawData`` and change addresses to final ones
