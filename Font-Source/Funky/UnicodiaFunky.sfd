@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1737334251
+ModificationTime: 1737375181
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -44,7 +44,7 @@ OS2CapHeight: 714
 OS2XHeight: 536
 OS2Vendor: 'Merc'
 OS2CodePages: 00000007.00000000
-OS2UnicodeRanges: a82003c1.9205a186.01000008.00000000
+OS2UnicodeRanges: a82003c1.9205a186.01010008.00000000
 Lookup: 1 0 0 "Copt LOCL" { "Copt LOCL-1"  } ['locl' ('copt' <'dflt' > ) ]
 Lookup: 2 0 0 "Copt Multi" { "Copt Multi-1"  } ['ccmp' ('copt' <'dflt' > ) ]
 Lookup: 4 0 1 "Nagm CCMP" { "Nagm CCMP-1"  } ['ccmp' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -74,7 +74,7 @@ Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt'
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "RtL ABVM" { "RtL ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'khmr' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 2
@@ -881,7 +881,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 429 33 14
+WinInfo: 66 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -893,7 +893,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1173
+BeginChars: 1114266 1178
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -155900,6 +155900,419 @@ SplineSet
  276 3 l 1,7,-1
  37 -134 l 1,0,-1
 EndSplineSet
+EndChar
+
+StartChar: uni19E0
+Encoding: 6624 6624 1173
+Width: 508
+VWidth: 1050
+Flags: W
+HStem: -167.15 48.75<151.295 229.598 258.839 336.744> -47.5498 46.1494<326.699 345.6> 227.4 48.75<170.792 304.667> 365.85 45.5<181.414 300.302> 763.65 45.5<181.576 299.221>
+VStem: 71.9492 70.2002<-103.985 197.565 455.62 719.503> 272.8 44.8496<2.35833 56.3009> 345.6 68.9004<-104.656 -47.5498 -1.40039 57.75 143.06 185.762 235.2 307.432 469.542 704.744>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 38
+MDAP[rnd]
+PUSHB_1
+ 34
+SHP[rp1]
+PUSHB_1
+ 68
+MDRP[min,rnd,black]
+PUSHB_1
+ 18
+SHP[rp2]
+PUSHB_3
+ 68
+ 38
+ 10
+CALL
+PUSHB_4
+ 0
+ 68
+ 29
+ 9
+CALL
+PUSHB_1
+ 22
+MDAP[rnd]
+PUSHB_1
+ 70
+MDRP[min,rnd,black]
+PUSHB_1
+ 61
+MDAP[rnd]
+PUSHB_1
+ 46
+MDRP[min,rnd,black]
+PUSHB_3
+ 61
+ 46
+ 10
+CALL
+PUSHB_4
+ 64
+ 61
+ 58
+ 9
+CALL
+PUSHB_3
+ 46
+ 61
+ 10
+CALL
+PUSHB_4
+ 64
+ 46
+ 51
+ 9
+CALL
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+PUSHB_1
+ 14
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 76
+MDAP[rnd]
+PUSHB_1
+ 41
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 0
+SHP[rp2]
+PUSHB_1
+ 65
+MDRP[min,rnd,black]
+PUSHB_1
+ 7
+SHP[rp2]
+PUSHB_1
+ 65
+SRP0
+PUSHB_2
+ 26
+ 1
+CALL
+PUSHB_1
+ 74
+MDRP[min,rnd,black]
+PUSHB_1
+ 74
+SRP0
+PUSHB_2
+ 21
+ 1
+CALL
+PUSHB_4
+ 12
+ 47
+ 59
+ 70
+DEPTH
+SLOOP
+SHP[rp2]
+PUSHB_1
+ 31
+MDRP[min,rnd,black]
+PUSHB_2
+ 2
+ 55
+SHP[rp2]
+SHP[rp2]
+PUSHB_2
+ 77
+ 1
+CALL
+PUSHB_2
+ 65
+ 41
+SRP1
+SRP2
+PUSHB_1
+ 38
+IP
+PUSHB_1
+ 26
+SRP1
+PUSHB_8
+ 9
+ 14
+ 16
+ 36
+ 37
+ 45
+ 4
+ 61
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 74
+SRP2
+PUSHB_5
+ 10
+ 18
+ 28
+ 35
+ 46
+DEPTH
+SLOOP
+IP
+PUSHB_2
+ 31
+ 21
+SRP1
+SRP2
+PUSHB_3
+ 34
+ 50
+ 58
+IP
+IP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 68
+ 38
+SRP1
+SRP2
+PUSHB_1
+ 36
+IP
+PUSHB_1
+ 22
+SRP1
+PUSHB_1
+ 16
+IP
+PUSHB_2
+ 61
+ 70
+SRP1
+SRP2
+PUSHB_2
+ 56
+ 71
+IP
+IP
+PUSHB_1
+ 46
+SRP1
+PUSHB_1
+ 47
+IP
+PUSHB_1
+ 4
+SRP2
+PUSHB_1
+ 53
+IP
+PUSHB_2
+ 14
+ 10
+SRP1
+SRP2
+PUSHB_3
+ 7
+ 8
+ 12
+IP
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+70 587.5 m 0,0,1
+ 70 809.150390625 70 809.150390625 241.275390625 809.150390625 c 128,-1,2
+ 412.549804688 809.150390625 412.549804688 809.150390625 412.549804688 587.5 c 128,-1,3
+ 412.549804688 365.849609375 412.549804688 365.849609375 241.599609375 365.849609375 c 0,4,5
+ 153.19921875 365.849609375 153.19921875 365.849609375 111.599609375 422.075195312 c 128,-1,6
+ 70 478.299804688 70 478.299804688 70 587.5 c 0,0,1
+139.549804688 587.5 m 128,-1,8
+ 139.549804688 499.75 139.549804688 499.75 163.924804688 455.549804688 c 128,-1,9
+ 188.299804688 411.349609375 188.299804688 411.349609375 241.599609375 411.349609375 c 128,-1,10
+ 294.899414062 411.349609375 294.899414062 411.349609375 318.625 456.525390625 c 128,-1,11
+ 342.349609375 501.700195312 342.349609375 501.700195312 342.349609375 588.474609375 c 0,12,13
+ 342.349609375 763.650390625 342.349609375 763.650390625 241.599609375 763.650390625 c 0,14,15
+ 187 763.650390625 187 763.650390625 163.274414062 719.450195312 c 128,-1,7
+ 139.549804688 675.25 139.549804688 675.25 139.549804688 587.5 c 128,-1,8
+243.549804688 -80.0498046875 m 1,16,17
+ 273.239257812 -118.400390625 273.239257812 -118.400390625 306.599609375 -118.400390625 c 0,18,19
+ 323.5 -118.400390625 323.5 -118.400390625 334.549804688 -105.075195312 c 128,-1,20
+ 345.599609375 -91.75 345.599609375 -91.75 345.599609375 -66.400390625 c 2,21,-1
+ 345.599609375 -47.5498046875 l 1,22,23
+ 306.92578125 -47.5498046875 306.92578125 -47.5498046875 284.174804688 -17.650390625 c 0,24,25
+ 272.799804688 -2.7001953125 272.799804688 -2.7001953125 272.799804688 20.69921875 c 128,-1,26
+ 272.799804688 44.099609375 272.799804688 44.099609375 285.149414062 61.974609375 c 0,27,28
+ 311.872070312 100.650390625 311.872070312 100.650390625 363.186523438 100.650390625 c 128,-1,29
+ 414.5 100.650390625 414.5 100.650390625 414.5 61.650390625 c 2,30,-1
+ 414.5 -73.5498046875 l 2,31,32
+ 414.5 -126.525390625 414.5 -126.525390625 370.299804688 -154.150390625 c 0,33,34
+ 349.5 -167.150390625 349.5 -167.150390625 315.86328125 -167.150390625 c 128,-1,35
+ 282.2265625 -167.150390625 282.2265625 -167.150390625 243.549804688 -134 c 1,36,37
+ 211.541992188 -167.150390625 211.541992188 -167.150390625 157.31640625 -167.150390625 c 128,-1,38
+ 103.090820312 -167.150390625 103.090820312 -167.150390625 81.69921875 -119.375 c 0,39,40
+ 71.94921875 -97.599609375 71.94921875 -97.599609375 71.94921875 -72.25 c 2,41,-1
+ 71.94921875 117.549804688 l 2,42,43
+ 71.94921875 214.127929688 71.94921875 214.127929688 142.799804688 255.349609375 c 0,44,45
+ 178.549804688 276.150390625 178.549804688 276.150390625 240.948242188 276.150390625 c 128,-1,46
+ 303.34765625 276.150390625 303.34765625 276.150390625 344.299804688 235.200195312 c 1,47,-1
+ 344.299804688 276.150390625 l 2,48,49
+ 344.299804688 316.450195312 344.299804688 316.450195312 357.299804688 335.950195312 c 128,-1,50
+ 370.299804688 355.450195312 370.299804688 355.450195312 399.549804688 355.450195312 c 128,-1,51
+ 428.799804688 355.450195312 428.799804688 355.450195312 438.875 343.424804688 c 128,-1,52
+ 448.94921875 331.400390625 448.94921875 331.400390625 448.94921875 309.950195312 c 1,53,54
+ 413.19921875 309.950195312 413.19921875 309.950195312 413.19921875 266.400390625 c 2,55,-1
+ 413.19921875 146.799804688 l 1,56,57
+ 394.349609375 142.25 394.349609375 142.25 379.07421875 142.25 c 128,-1,58
+ 363.799804688 142.25 363.799804688 142.25 344.299804688 146.799804688 c 1,59,60
+ 315.333984375 227.400390625 315.333984375 227.400390625 238.349609375 227.400390625 c 0,61,62
+ 186.349609375 227.400390625 186.349609375 227.400390625 164.25 198.474609375 c 128,-1,63
+ 142.149414062 169.549804688 142.149414062 169.549804688 142.149414062 117.549804688 c 2,64,-1
+ 142.149414062 -63.7998046875 l 2,65,66
+ 142.149414062 -90.4501953125 142.149414062 -90.4501953125 153.19921875 -104.424804688 c 128,-1,67
+ 164.25 -118.400390625 164.25 -118.400390625 183.099609375 -118.400390625 c 0,68,69
+ 216.333984375 -118.400390625 216.333984375 -118.400390625 243.549804688 -80.0498046875 c 1,16,17
+345.599609375 -1.400390625 m 1,70,-1
+ 345.599609375 57.75 l 1,71,72
+ 335.19921875 56.4501953125 335.19921875 56.4501953125 326.424804688 48 c 128,-1,73
+ 317.649414062 39.5498046875 317.649414062 39.5498046875 317.649414062 25.57421875 c 128,-1,74
+ 317.649414062 11.599609375 317.649414062 11.599609375 326.424804688 5.099609375 c 128,-1,75
+ 335.19921875 -1.400390625 335.19921875 -1.400390625 345.599609375 -1.400390625 c 1,70,-1
+EndSplineSet
+EndChar
+
+StartChar: uni17D3
+Encoding: 6099 6099 1174
+Width: 0
+HStem: 854 48<-403.389 -302.611> 1000 49<-403.389 -302.611>
+VStem: -465 49<913.31 988.999> -290 49<913.31 988.999>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
+PUSHB_1
+ 16
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 18
+MDAP[rnd]
+PUSHB_1
+ 5
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 8
+MDRP[min,rnd,black]
+PUSHB_1
+ 8
+SRP0
+PUSHB_2
+ 13
+ 1
+CALL
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+PUSHB_2
+ 13
+ 8
+SRP1
+SRP2
+PUSHB_4
+ 3
+ 6
+ 7
+ 2
+DEPTH
+SLOOP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 11
+ 3
+SRP1
+SRP2
+PUSHB_2
+ 1
+ 4
+IP
+IP
+PUSHB_1
+ 16
+SRP1
+PUSHB_2
+ 0
+ 5
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" -352 796 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-241 951 m 128,-1,1
+ -241 902 -241 902 -270 878 c 128,-1,2
+ -299 854 -299 854 -353 854 c 128,-1,3
+ -407 854 -407 854 -436 878 c 128,-1,4
+ -465 902 -465 902 -465 951 c 128,-1,5
+ -465 1000 -465 1000 -436 1024.5 c 128,-1,6
+ -407 1049 -407 1049 -353 1049 c 128,-1,7
+ -299 1049 -299 1049 -270 1024.5 c 128,-1,0
+ -241 1000 -241 1000 -241 951 c 128,-1,1
+-416 951 m 0,8,9
+ -416 927 -416 927 -399 914.5 c 128,-1,10
+ -382 902 -382 902 -353 902 c 128,-1,11
+ -324 902 -324 902 -307 914.5 c 128,-1,12
+ -290 927 -290 927 -290 951 c 0,13,14
+ -290 976 -290 976 -307 988 c 128,-1,15
+ -324 1000 -324 1000 -353 1000 c 128,-1,16
+ -382 1000 -382 1000 -399 988 c 128,-1,17
+ -416 976 -416 976 -416 951 c 0,8,9
+EndSplineSet
+EndChar
+
+StartChar: uni1780
+Encoding: 6016 6016 1175
+Width: 224
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: uni1781
+Encoding: 6017 6017 1176
+Width: 210
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: uni1782
+Encoding: 6018 6018 1177
+Width: 142
+Flags: W
+LayerCount: 2
 EndChar
 EndChars
 EndSplineFont

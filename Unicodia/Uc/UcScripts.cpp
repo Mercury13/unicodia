@@ -399,8 +399,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::century(-4), EcFont::KHAROSHTHI, Sfg::STUB_RTL },
-    // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
-    { "Khmr", QFontDatabase::Khmer,
+    // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto, fixed all troubles
+    { "Khmr", QFontDatabase::Khmer,  // Need some workaround here
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(611, StdNote::FIRST_KNOWN), EcFont::KHMER },
     { "Khoj", QFontDatabase::Any,

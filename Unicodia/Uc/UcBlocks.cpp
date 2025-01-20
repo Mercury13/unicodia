@@ -252,7 +252,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x19E0, 0x19FF, { 0x19EF, EcContinent::ASIA },
             "Khmer Symbols",
             { EcScript::Khmr, 1 }, MapSubtype::ALIVE,
-            EcScript::Khmr, EcFont::KHMER_SYMBOLS, Bfg::HAS_DESCRIPTION },
+            EcScript::NONE, EcFont::KHMER_SYMBOLS, Bfg::HAS_DESCRIPTION },
     // Buginese OK
     { 0x1A00, 0x1A1F, { 0x1A01, EcContinent::OCEAN },
             "Buginese",
