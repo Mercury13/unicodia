@@ -129,7 +129,7 @@
 * Cham: same, conveys how most letters look
 * Lana: K is too basic, and in some fonts confusion with Mymr
 * Laoo: maybe K too basic?
-* Limb: Nepali flag :)
+* Limb: Nepali flag :) Most icons were made before the war (in PNG), so this character was just more interesting than Z-shaped K
 * Mtei: P is more interesting
 * Mymr A: nice cat-like ligature
 * Phag: K is too basic
