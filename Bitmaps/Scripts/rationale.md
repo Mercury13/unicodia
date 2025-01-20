@@ -150,7 +150,7 @@
 * Hang compat jamo: JSI on lo-res
 * Hang jamo ex A: to convey the meaning of “extended”
 * Hang jamo ex B: JSI, better among medial
-* Hang syllables: TMB with fewer hintable lines
+* Hang syllables: TMB with few hintable lines, but more complex than all jamo
 * Hira, Kana, Kana phon: requested by a real Japanese, I considered refuse but they sat well
 * kana supp, kana ex a: lo-res
 * kana ex B: JSI (all chars are very basic)
