@@ -179,6 +179,7 @@
 
 ## Africa
 * All are JSI, I just wanted to convey the spirit of script
+* Ethi: egg, the first letter in “abugida”
 
 ## America
 * Cans all: somehow decided with an umlaut
