@@ -161,7 +161,7 @@
 * Yijing: some meaning related to our war (deliverance)
 
 ## Ocean
-* Bali, Java: early icon + IDK if K would look OK
+* Bali, Java: want parallel, want descenders, and K is too dazzling
 * Batk: JSI, no letter K
 * Bugi: K is really basic, the next is G
 * Buhd and others: the same letter for four scripts
