@@ -1831,7 +1831,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}16 is still not{{_}}recommended.</p>
+      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this character, and in Unicode{{_}}16 is still not{{_}}recommended.</p>
       <p />
       <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
@@ -6470,21 +6470,6 @@
       <p />
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
-     <known-orig>
-      <p>First pictographs are dated with 6th millennium BC, they were scratched or written with ink, later they modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
-      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
-      <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
-      <p>* cult of tradition{{-}}even today Chinese are rather conservative;</p>
-      <p>* meritocracy that worked somehow{{-}}thousands of signs and ability to write them nicely detected trainable people.</p>
-      <p />
-      <p>In 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).</p>
-      <p />
-      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
-      <p />
-      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses very seldom.</p>
-      <p />
-      <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
-     </known-orig>
      <transl>
       <p>最初の象形文字は紀元前6千年紀にさかのぼり、インクで削ったり書いたりしていましたが、後に筆で書くようになりました。紀元前1千年紀に人々は表意文字を放棄し始めましたが、中国は古風な文字を保存しました。理由はいくつかあります。</p>
       <p>* 多民族人口{{-}}漢民族の国家形成者のほかに、約10人がいて、少なくとも書き言葉ではお互いを理解していました。</p>
@@ -7309,13 +7294,6 @@
       <p />
       <p>Headstroke is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
      </orig>
-     <known-orig>
-      <p>One more remainder of Indian caste system, like [[ps:Kthi|Kaithi]]{{-}}this script was used by bankers and accountants until 20th century, and currently in extremely small use.</p>
-      <p />
-      <p>Script degraded almost to [[pt:abjad|consonant]]: consonant vowel means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On other hand, there are many abbreviations and fractions importand for accounting books. Many of them are badly explored and aren’t yet encoded.</p>
-      <p />
-      <p>Top line is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with former.</p>
-     </known-orig>
      <transl>
       <p>インドのカースト制度の名残がもう 1 つあります。[[ps:Kthi|カイティー文字]]{{-}} この文字は 20 世紀まで銀行家や会計士によって使用されていましたが、現在ではほとんど使用されていません。</p>
       <p />
@@ -8030,15 +8008,6 @@
       <p />
       <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
-     <known-orig>
-      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
-      <p />
-      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
-      <p />
-      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
-      <p />
-      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
-     </known-orig>
      <transl>
       <p>オディア語またはオリヤー語（伝統的には「アーリア人」に関連すると考えられているが、不正確）は、上部の線が破線である [[ps:Sidd|悉曇文字]] から、ガウディ（「原始 [[ps:Beng|ベンガル語]]」、「原始オリヤー語」でもある）を経て発展した。</p>
       <p />
@@ -8575,17 +8544,6 @@
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
       <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
      </orig>
-     <known-orig>
-      <p>Sharada comes from Gupta (northern branch of [[ps:Brah|Brahmi]]), was widespread in 8–12th centuries in North-West India and Afghanistan. Later Sharada became less and less suitable for Kashmiri and fell out of use. Ancestor of [[ps:Guru|Gurmukhi]] script.</p>
-      <p />
-      <p>Currently it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
-      <p />
-      <p>Bhahmic abugida with inherent vowel {{t|a}}. [[pt:virama|Virama]], unusual for Indic scripts, is situated on the right and used frequently. There are many [[pt:ligature|ligatures]] “consonant-virama-consonant”.</p>
-      <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
-      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
-      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
-      <p>Top line may be solid, broken or have arbitrary breaks.</p>
-     </known-orig>
      <transl>
       <p>シャラダはグプタ（ブラーフミーの北方支族）に由来し、8～12世紀に北西インドとアフガニスタンで広く使われていました。後にシャラダはカシミール語にますます適さなくなり、使われなくなりました。[[ps:Guru|グルムキー]] 文字の祖先です。</p>
       <p />
