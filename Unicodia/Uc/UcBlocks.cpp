@@ -1005,7 +1005,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cakm, 0 }, MapSubtype::ALIVE,
             EcScript::Cakm, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Mahajani OK
-    { 0x11150, 0x1117F, { 0x11158, EcContinent::ASIA },
+    { 0x11150, 0x1117F, { 0x11155, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Mahajani",
             { EcScript::Mahj, 0 }, MapSubtype::DEAD, EcScript::Mahj },
     // Sharada OK
