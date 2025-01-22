@@ -190,10 +190,10 @@
 ## America
 * Cans all: somehow decided with an umlaut
 * Cans ex A: TMB
-* Cher: looks like Latin, and I wanted a “Latin-but-not-really” letter
+* Cher: looks like Latin, and I wanted a “Latin-but-not-really” letter. My version is more suitable for lo-res than LR
 * Cher supp: same but small
 * Dsrt: JSI (what a coincidence, LR took the same)
 * Kaktovik: egg 13
 * Mayan: egg 13
 * NP Hmong: JSI
-* Osge: JSI w/o ascenders/descenders, “Latin-but-not-really”
+* Osge: JSI w/o ascenders/descenders, “Latin-but-not-really”. LR made a real fluke: there’s Lisu ex with one character, and they decided to take it
