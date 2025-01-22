@@ -94,8 +94,20 @@ namespace uc {
 
     enum class ImbaY : signed char {
         PERFECT = 0,
-        ABOVE_1 = -1, ABOVE_2 = -2, ABOVE_3 = -3, ABOVE_4 = -4,
-        BELOW_1 =  1, BELOW_2 =  2, BELOW_3 =  3, BELOW_4 =  4,
+        HITS_TOP = -5,      ///< Image hits top, never ever move up to prevent clipping
+        ABOVE_1 = -1,       ///< When we hand-hinted to 16×16, we moved 0.1dip up
+        ABOVE_2 = -2, ABOVE_3 = -3, ABOVE_4 = -4,
+        BELOW_1 =  1,       ///< When we hand-hinted to 16×16, we moved 0.1dip down
+        BELOW_2 =  2, BELOW_3 =  3, BELOW_4 =  4,
+        HITS_BOTTOM = 5,    ///< Image hits bottom, never ever move down to prevent clipping
+    };
+
+    struct TmpHx {
+        unsigned char v;
+    };
+
+    struct TmpHy {
+        unsigned char v;
     };
 
     struct SvgHint {
@@ -104,7 +116,7 @@ namespace uc {
         ///    physical pixels.
         /// e.g. for Devanagari KA primary lines are top and left/right
         ///    side of vertical stem
-        struct Pos  { uint8_t x = 0, y = 0; } pos;
+        struct Pos  { unsigned char x = 0, y = 0; } pos;
 
         /// Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
         ///    e.g. BELOW_4 = first you move 0.4px up, then align to pixels
@@ -115,23 +127,28 @@ namespace uc {
         /// How big is Y — decide for yourself by subjective balance
         /// That’s why no ±0.5: the author preferred 2 to 3 (or vice-versa) for some reason
         /// Makes no sense when this coordinate does not have a primary line.
-        struct Imba {  int8_t x = 0, y = 0; } imba;
+        /// @warning Sometimes in rare cases you don’t really want to
+        ///   move up to prevent clipping. Use HITS_BOTTOM etc.
+        struct Imba { signed char x = 0, y = 0; } imba;
 
         using BiggerType = uint16_t;
         static_assert(sizeof(BiggerType) == sizeof(Pos), "BiggerType wrong");
 
         constexpr SvgHint() = default;
+        consteval SvgHint(TmpHx x) : pos{ .x = x.v } {}
+        consteval SvgHint(TmpHy y) : pos{ .y = y.v } {}
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY) : pos{.x = aX, .y = aY } {}
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaY imbaY)
-            : pos{.x = aX, .y = aY }, imba { .y = static_cast<int8_t>(imbaY) } {}
+            : pos{.x = aX, .y = aY }, imba { .y = static_cast<signed char>(imbaY) } {}
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaX imbaX)
-            : pos{.x = aX, .y = aY }, imba { .x = static_cast<int8_t>(imbaX) } {}
+            : pos{.x = aX, .y = aY }, imba { .x = static_cast<signed char>(imbaX) } {}
         explicit constexpr SvgHint(uint8_t aX, ImbaX imbaX)
-            : pos{.x = aX }, imba { .x = static_cast<int8_t>(imbaX) } {}
+            : pos{.x = aX }, imba { .x = static_cast<signed char>(imbaX) } {}
         explicit constexpr SvgHint(uint8_t aY, ImbaY imbaY)
-            : pos{.y = aY }, imba { .y = static_cast<int8_t>(imbaY) } {}
+            : pos{.y = aY }, imba { .y = static_cast<signed char>(imbaY) } {}
 
         operator bool() const { return std::bit_cast<BiggerType>(pos); }
+        constexpr operator uint8_t() const = delete;
 
         static constexpr int SIDE = 16;
         static constexpr double RECIPSIDE = 1.0 / SIDE;     // this is a precise float!
@@ -141,6 +158,9 @@ namespace uc {
         /// hint’s relative position (0..1) with balance fixup added
         constexpr double balancedQX() const noexcept { return (pos.x - 0.1 * imba.x) * RECIPSIDE; }
         constexpr double balancedQY() const noexcept { return (pos.y - 0.1 * imba.y) * RECIPSIDE; }
+
+        consteval SvgHint operator + (ImbaY y) const
+            { SvgHint r = *this; r.imba.y = static_cast<int8_t>(y); return r;}
     };
 
     ///

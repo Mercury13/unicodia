@@ -3,11 +3,21 @@
 
 // Long and glitchy, that’s why I moved out from UcData
 
-constexpr uc::SvgHint operator "" _hx (unsigned long long x)
-    { return uc::SvgHint { static_cast<uint8_t>(x), 0 }; }
+consteval uc::TmpHx operator "" _hx (unsigned long long x)
+    { return { .v = static_cast<unsigned char>(x) }; }
 
-constexpr uc::SvgHint operator "" _hy (unsigned long long y)
-    { return uc::SvgHint { 0, static_cast<uint8_t>(y) }; }
+consteval uc::TmpHy operator "" _hy (unsigned long long y)
+    { return { .v = static_cast<unsigned char>(y) }; }
+
+consteval uc::SvgHint operator + (uc::TmpHx x, uc::ImbaX ix)
+    { return uc::SvgHint{ x.v, ix }; }
+
+constexpr uc::SvgHint operator + (uc::TmpHx x, uc::ImbaY iy) = delete;
+
+consteval uc::SvgHint operator + (uc::TmpHy y, uc::ImbaY iy)
+    { return uc::SvgHint{ y.v, iy }; }
+
+constexpr uc::SvgHint operator + (uc::TmpHy y, uc::ImbaX ix) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
@@ -161,7 +171,8 @@ constinit const uc::Block uc::blocks[] {
             "Lao",
             { EcScript::Laoo, 0 }, MapSubtype::ALIVE, EcScript::Laoo },
     // Tibetan OK
-    { 0x0F00, 0x0FFF, { 0xF4F, EcContinent::ASIA, Ifg::SHIFT_UP },
+    { 0x0F00, 0x0FFF, { L'ཀ', EcContinent::ASIA, Ifg::SHIFT_UP | Ifg::PAINT_SVG,
+                    1_hy + ImbaY::HITS_BOTTOM },
             "Tibetan",
             { EcScript::Tibt, 0 }, MapSubtype::ALIVE,
             EcScript::Tibt, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
@@ -362,7 +373,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
-    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, SvgHint{ 7, ImbaX::LEFT_3 } },
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, 7_hx + ImbaX::LEFT_3 },
             "Arrows",
             { EcScript::ZARR, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
