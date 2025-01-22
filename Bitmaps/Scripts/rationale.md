@@ -138,6 +138,7 @@
 * Phag: K is too basic
 * Soyo, Zanb: LR somehow took vowel-carrier w/o point
 * Talu: K but better with that affixed virama
+* Tavt: LR is clever enough to refuse from K but ascenders are better
 * Tibt: IDK, early icon, maybe K will look good
 * Thai: K too basic
 
