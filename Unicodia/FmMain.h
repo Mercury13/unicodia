@@ -154,6 +154,9 @@ private:
 
 enum class SelectMode : unsigned char { NONE, INSTANT };
 
+constexpr bool DIR_ADD = true;
+constexpr bool DIR_REMOVE = false;
+
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
                private PixSource,
@@ -200,11 +203,11 @@ private:
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
     TableLocalMenu localChars, localFavs;
-    bool localCharsDirection = true;  // Favs’ direction is always removal
+    bool localCharsDirection = DIR_ADD;  // Favs’ direction is always removal
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
-        bool direction = true;
+        bool direction = DIR_ADD;
     } libLocalMenu;
 
     struct PullUpDetector {

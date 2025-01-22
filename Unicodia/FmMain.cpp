@@ -2147,7 +2147,7 @@ void FmMain::addLibToFavsBanged()
 
 void FmMain::acRemoveFromFavsTriggered()
 {
-    addRemoveFromFavs(ui->wiFavsShowcase, btRemoveFromFavs, false);
+    addRemoveFromFavs(ui->wiFavsShowcase, btRemoveFromFavs, DIR_REMOVE);
 }
 
 
@@ -2231,9 +2231,10 @@ void FmMain::charsFavsCalled()
 void FmMain::charsLocalMenuActivated()
 {
     auto charIf = model.charAt(ui->tableChars->currentIndex());
-    localCharsDirection = true;
+    localCharsDirection = DIR_ADD;
     if (auto ac = localChars.favsAction()) {
         if (charIf.hasCp()) {
+            // Contains → remove, hence NOT
             localCharsDirection = !config::favs.contains(charIf.code);
             ac->setEnabled(true);
         } else {
@@ -2256,5 +2257,5 @@ void FmMain::favsLocalMenuActivated()
 
 void FmMain::favsFavsCalled()
 {
-    addRemoveFromFavs(ui->wiFavsShowcase, nullptr, false);
+    addRemoveFromFavs(ui->wiFavsShowcase, nullptr, DIR_REMOVE);
 }
