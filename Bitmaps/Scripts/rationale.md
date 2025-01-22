@@ -200,4 +200,4 @@
 * Kaktovik: egg 13
 * Mayan: egg 13
 * NP Hmong: JSI
-* Osge: JSI w/o ascenders/descenders, “Latin-but-not-really”. LR made a real fluke: there’s Lisu ex with one character, and they decided to take it
+* Osge: JSI w/o ascenders/descenders, “Latin-but-not-really”. LR made a real fluke: made a coincidence with Lisu ex with one character
