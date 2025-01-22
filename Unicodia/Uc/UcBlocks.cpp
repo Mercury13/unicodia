@@ -1452,7 +1452,7 @@ constinit const uc::Block uc::blocks[] {
             "Mende Kikakui",
             { EcScript::Mend, 0}, MapSubtype::DEAD, EcScript::Mend },
     // Adlam OK
-    { 0x1E900, 0x1E95F, { 0x1E902, EcContinent::AFRICA },
+    { 0x1E900, 0x1E95F, { 0x1E900, EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint{ 3, 1, ImbaX::RIGHT_1 } },
             "Adlam",
             { EcScript::Adlm, 0}, MapSubtype::ALIVE, EcScript::Adlm },
     // Indic Siyaq OK
