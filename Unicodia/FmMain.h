@@ -200,10 +200,11 @@ private:
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
     TableLocalMenu localChars, localFavs;
-    bool localCharsDirection = false;
+    bool localCharsDirection = true;  // Favs’ direction is always removal
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
+        bool direction = true;
     } libLocalMenu;
 
     struct PullUpDetector {
