@@ -952,7 +952,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Turkic",
             { EcScript::Orkh, 0 }, MapSubtype::DEAD, EcScript::Orkh },
     // Hung runes OK
-    { 0x10C80, 0x10CFF, { 0x10CAF, EcContinent::EUROPE },
+    { 0x10C80, 0x10CFF, { 0x10C86, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Old Hungarian",
             { EcScript::Hung, 0 }, MapSubtype::DEAD, EcScript::Hung },
     // Hanifi OK
