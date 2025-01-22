@@ -12,12 +12,14 @@ consteval uc::TmpHy operator "" _hy (unsigned long long y)
 consteval uc::SvgHint operator + (uc::TmpHx x, uc::ImbaX ix)
     { return uc::SvgHint{ x.v, ix }; }
 
-constexpr uc::SvgHint operator + (uc::TmpHx x, uc::ImbaY iy) = delete;
+/// Hint X but balance Y — impossible
+constexpr uc::SvgHint operator + (uc::TmpHx, uc::ImbaY) = delete;
 
 consteval uc::SvgHint operator + (uc::TmpHy y, uc::ImbaY iy)
     { return uc::SvgHint{ y.v, iy }; }
 
-constexpr uc::SvgHint operator + (uc::TmpHy y, uc::ImbaX ix) = delete;
+/// Hint Y but balance X — impossible
+constexpr uc::SvgHint operator + (uc::TmpHy, uc::ImbaX) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
