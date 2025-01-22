@@ -5133,11 +5133,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Fula, Fulani or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa, and the most avid advocates of Islam in West Africa.</p>
+      <p>Fula, Fulani, or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
       <p />
       <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey Fula languages better than Latin or Arabic. The new script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
       <p />
-      <p>Alphabet is named for four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
+      <p>Alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
+      <p />
+      <p>Letters are joined, though many modern publications do not join.</p>
       <p />
       <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
      </orig>
@@ -5147,6 +5149,8 @@
       <p>Алфавит придуман братьями Ибрагима и Абдулайе Барри, тогда ещё подростками, чтобы лучше передавать языки фулá, чем латиница или арабский. Новая письменность прижилась, и её учат в школах Гвинеи, Либерии и других стран, локализован Android.</p>
       <p />
       <p>Алфавит назван по первым четырём буквам: A, D, L, M. Эти буквы означают «Alkule Dandayɗe Leñol Mulugol»{{-}}«алфавит, защищающий народы от исчезновения».</p>
+      <p />
+      <p>Буквы соединены, хотя много современных публикаций не соединяют.</p>
       <p />
       <p>До этого были ещё две неудачных попытки придумать письменность фулá, не{{_}}описанных в Юникоде: фула Дита (≈1958, вдохновлена доарабской культурой) и фула Ба (1963). Иногда использовался ''аджам'' или ''волофал''{{-}}сильно видоизменённый [[ps:Arab|арабский]] шрифт. Основная же письменность{{-}}[[ps:Latn|латиница]].</p>
      </transl>

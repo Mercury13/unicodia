@@ -5118,6 +5118,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Fula, Fulani, or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
+      <p />
+      <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey Fula languages better than Latin or Arabic. The new script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
+      <p />
+      <p>Alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
+      <p />
+      <p>Letters are joined, though many modern publications do not join.</p>
+      <p />
+      <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
+     </orig>
+     <known-orig>
       <p>Fula, Fulani or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa, and the most avid advocates of Islam in West Africa.</p>
       <p />
       <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey Fula languages better than Latin or Arabic. The new script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
@@ -5125,7 +5136,7 @@
       <p>Alphabet is named for four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
       <p />
       <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>フーラ人、フーラニ人、またはフルベ人は遊牧民で、人類学的にはサハラ以南のアフリカでヨーロッパ人に最も近く、西アフリカで最も熱心なイスラム教の支持者です。</p>
       <p />
