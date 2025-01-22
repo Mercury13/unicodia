@@ -136,7 +136,7 @@
 * Mtei: P is more interesting
 * Mymr A: nice cat-like ligature
 * Phag: K is too basic
-* Soyo, Zanb: LR is somehow took vowel-carrier w/o point
+* Soyo, Zanb: LR somehow took vowel-carrier w/o point
 * Talu: K but better with that affixed virama
 * Tibt: IDK, early icon, maybe K will look good
 * Thai: K too basic
