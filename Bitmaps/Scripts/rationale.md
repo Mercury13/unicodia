@@ -27,7 +27,7 @@
 * Control pictures: the most used control picture. LR drew a “general image” CTL, but it’s clearly worse
 * Counting rods: egg, prison counting. LR (horizontal 3) is clearly worse
 * Currency: the most used currency ever (after ASCII $)
-* Dingbats: something nice, needed to simplify for 16×16
+* Dingbats: something nice, needed to simplify for 16×16. LR took a plane but 1) Unicodia groups blocks, and leaves and flowers in both are better somehow 2) Fleuron is heither shape nor emoji
 * Orna dingbats: same, with something pointing right-up, purportedly the best for us writing →
 * Domino: lo-res
 * Emoticons: one of the most common emoji
