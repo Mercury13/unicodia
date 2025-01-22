@@ -184,9 +184,9 @@
 
 ## Africa
 * All are JSI, I just wanted to convey the spirit of script
-* Ethi: egg, the first letter in “abugida”
 * Egyp: real lo-res (need head only) + both LR’s blocks are just men, what’s the difference?
 * Egyp format: mine is better because I took an image specific for Egyp
+* Ethi: egg, the first letter in “abugida”
 * Gara: LR probably thought less than I and took a vowel-carrier w/o point. The ideal icon is G (H-like) with hook, and I’ll 
 
 ## America
