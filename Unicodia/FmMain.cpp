@@ -41,7 +41,6 @@
 #include "i_DarkMode.h"
 
 // Unicode
-#include "UcCp.h"
 #include "UcClipboard.h"
 #include "UcSkin.h"
 
@@ -1062,7 +1061,10 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Local menu
     localChars.init(ui->tableChars, &model);
+    localChars.addCustomFavsAction();
     connect(&localChars, &TableLocalMenu::thingCopied, this, &This::copyCurrentThing);
+    connect(&localChars, &TableLocalMenu::customFavsCalled, this, &This::charsFavsCalled);
+    connect(&localChars, &TableLocalMenu::menuActivated, this, &This::charsLocalMenuActivated);
 
     // ALPHA is localized!!
     sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.svg",     { 24, 24 });
@@ -2214,4 +2216,28 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
     auto& node = libModel.nodeAt(index);
     libLocalMenu.acCopy->setEnabled(!node.value.empty());
     TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), libLocalMenu.menu, where);
+}
+
+
+void FmMain::charsFavsCalled()
+{
+    acAddCpToFavsTriggered(localCharsDirection);
+}
+
+
+void FmMain::charsLocalMenuActivated()
+{
+    auto charIf = model.charAt(ui->tableChars->currentIndex());
+    localCharsDirection = true;
+    if (auto ac = localChars.favsAction()) {
+        if (charIf.hasCp()) {
+            localCharsDirection = !config::favs.contains(charIf.code);
+            ac->setEnabled(true);
+        } else {
+            ac->setEnabled(false);
+        }
+        ac->setText(localCharsDirection
+                    ? ui->acAddCpToFavs->text()
+                    : ui->acRemoveFromFavs->text());
+    }
 }

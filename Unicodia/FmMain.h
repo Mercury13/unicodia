@@ -200,6 +200,7 @@ private:
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
     TableLocalMenu localChars, localFavs;
+    bool localCharsDirection = false;
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
@@ -302,6 +303,8 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
+    void charsFavsCalled();
+    void charsLocalMenuActivated();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;

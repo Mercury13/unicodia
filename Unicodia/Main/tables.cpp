@@ -329,38 +329,49 @@ bool CharsModel::isCharCollapsed(char32_t code) const
 ///// TableLocalMenu ///////////////////////////////////////////////////////////
 
 
-void TableLocalMenu::init(QTableView* aTable, VirtualCharsModel* aModel)
+void TableLocalMenu::init(
+        QTableView* aTable, VirtualCharsModel* aModel)
 {
     table = aTable;  model = aModel;
     menu = new QMenu(table);
     acCopy = new QAction("[Copy]", menu);
         menu->addAction(acCopy);
-        QWidget::connect(acCopy, &QAction::triggered, table,
+        connect(acCopy, &QAction::triggered, table,
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::CHAR, nullptr);
                 });
     acCopyVs15 = new QAction("[CopyVs15]", menu);
         menu->addAction(acCopyVs15);
-        QWidget::connect(acCopyVs15, &QAction::triggered, table,
+        connect(acCopyVs15, &QAction::triggered, table,
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::VS15, nullptr);
                 });
     acCopyVs16 = new QAction("[CopyVs16]", menu);
         menu->addAction(acCopyVs16);
-        QWidget::connect(acCopyVs16, &QAction::triggered, table,
+        connect(acCopyVs16, &QAction::triggered, table,
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::SAMPLE, nullptr);
                 });
     acCopyDotc = new QAction("[CopyDotc]", menu);
         menu->addAction(acCopyDotc);
-        QWidget::connect(acCopyDotc, &QAction::triggered, table,
+        connect(acCopyDotc, &QAction::triggered, table,
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::SAMPLE, nullptr);
                 });
-    QWidget::connect(table, &QWidget::customContextMenuRequested, table,
+    menu->addSeparator();
+    connect(table, &QWidget::customContextMenuRequested, table,
             [this](const QPoint& pt) {
                 popup(table->viewport(), pt);
             });
+}
+
+
+QAction* TableLocalMenu::addCustomFavsAction()
+{
+    acFavs = new QAction("[Custom favs]", menu);
+    menu->addAction(acFavs);
+    connect(acFavs, &QAction::triggered, this, &This::customFavsCalled);
+    return acFavs;
 }
 
 
@@ -415,6 +426,7 @@ void TableLocalMenu::popup(QWidget* widget, const QPoint& where)
     acCopyVs15->setVisible(charIf.hasCp() && charIf->isVs15Emoji());
     acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
     acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
+    emit menuActivated();
     // Get point
     popupMenu(widget, menu, where);
 }

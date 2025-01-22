@@ -311,8 +311,9 @@ void WiShowcase::reenableFavs()
     if (!acFavs)
         return;
     auto dug = fShownObj.digCp();
-    acFavs->setEnabled(dug.has_value());
-    acFavs->setChecked(dug.has_value() && setFavs->contains(*dug));
+    const uc::Cp* cp = dug.has_value() ? uc::cpsByCode[*dug] : nullptr;
+    acFavs->setEnabled(cp);
+    acFavs->setChecked(cp && setFavs->contains(*dug));
 }
 
 
