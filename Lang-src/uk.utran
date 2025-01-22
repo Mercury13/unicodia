@@ -9288,9 +9288,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible because of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
+      <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible because of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, and the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent in the end of words.</p>
+      <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent at the end of words.</p>
       <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </orig>
