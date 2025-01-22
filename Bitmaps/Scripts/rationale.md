@@ -23,9 +23,9 @@
 * Combining diacr supp: JSI
 * Combining diacr ex: JSI
 * Combining diacr for symbols: JSI
-* Combining half marks: a complex composition with the most basic pair
-* Control pictures: the most used control picture
-* Counting rods: egg, prison counting
+* Combining half marks: a complex composition with the most basic pair. Drawing two characters is a cool winning
+* Control pictures: the most used control picture. LR drew a “general image” CTL, but it’s clearly worse
+* Counting rods: egg, prison counting. LR (horizontal 3) is clearly worse
 * Currency: the most used currency ever (after ASCII $)
 * Dingbats: something nice, needed to simplify for 16×16
 * Orna dingbats: same, with something pointing right-up, purportedly the best for us writing →
@@ -33,10 +33,10 @@
 * Emoticons: one of the most common emoji
 * Enclosing alnum: TMB ①
 * Enclosing alnum supp: the simplest broadcasting mark
-* Geom shapes: was hand-aligned to pixels in GIMP
+* Geom shapes: someday was hand-aligned to pixels in GIMP
 * Shapes ex: JSI
 * IPA: a known char from English transcription
-* Letterlike: something well-known (maybe ™ is better?)
+* Letterlike: something well-known. LR’s ™ is even better known but does not fit into square
 * Mahjong: lo-res
 * Math op: some well-known, even more than ∀ (by coincidence, LR too)
 * Math op supp: some strange integral (by coincidence, LR took other integral)
@@ -49,9 +49,9 @@
 * OCR: TMB
 * Phonetic ex: JSI
 * Phonetic ex supp: JSI
-* Playing cards: TMB + lo-res, hearts are better than spades
-* Punctuation: TMB, but not some funky quote
-* Punc supp: same
+* Playing cards: TMB + lo-res, hearts are better than spades. LR’s back is surely worse
+* Punctuation: TMB, but not some funky quote. There’s a real argument who’s better, LR or me
+* Punc supp: same, coincidence with LR
 * Spacing modifiers: TMB but not superscript. LR is surely worse
 * Super/subscripts: egg, The Answer
 * Sutton: lo-res + JSI + egg, rocker horns
@@ -64,9 +64,11 @@
 * Symbols and pictographs ex A: same
 * Tech misc: the most techy character
 * Transport: TMB + lo-res
-* Specials: the only non-format
-* Tags: Tag+T
-* Variation selectors: just a general image
+
+## Technical
+* Specials: the only non-format, LR took the same (not a coincidence)
+* Tags: what’s remaining? Tag T is used on higher resolution
+* Variation selectors: just a general image, what’s remaining?
 
 ## Europe
 * Albanian all: TMB
@@ -93,24 +95,25 @@
 * Greek music: TMB + egg, Warhammer 40k
 * Hung: JSI
 * Ital: TMB
-* Latn: some letter distinct for Latn, word “Latin”
+* Latn: some letter distinct for Latn, word “Latin”. LR’s A is surely a bad choice
 * Latin-1: wanted umlaut (two dots)
 * Latn ex add: JSI
 * Latn ex all: JSI
 * LinA, LinB: JSI
 * Aegean: lo-res (drawn semi-programmatically)
 * Ogam: JSI, full cell, coincided with LR
-* Perm: TMB
+* Perm: TMB, in harmony with LR
 * Phaistos disc: TMB + lo-res (I’ll never draw LR’s pedestrian)
 * Runr: TMB, in harmony with LR
 * Shaw: JSI (most letters are basic shapes)
-* Znamenny: TMB
+* Znamenny: TMB, in harmony with LR
 
 ## Asia RtL
 * Common: A. Simple line → smth else
 * Khar: TMB K
 * Orkh: JSI
 * Phlp: interesting punctuation
+* Syrc: this style of Syriac has a really bad aleph
 
 ## Asia LtR
 * Common Indic: fill the entire cell
