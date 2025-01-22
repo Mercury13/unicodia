@@ -203,7 +203,7 @@ class TableLocalMenu : public QObject
     using This = TableLocalMenu;
 public:
     void init(QTableView* aTable, VirtualCharsModel* aModel);
-    QAction* addCustomFavsAction();
+    QAction* addCustomFavsAction(std::string_view aLocKey);
     QAction* favsAction() { return acFavs; }
     static void popupMenu(QWidget* widget, QMenu* menu, QPoint where);
     void popup(QWidget* widget, const QPoint& where);
@@ -217,6 +217,7 @@ private:
             *acCopyDotc = nullptr,
             *acFavs = nullptr;
     QMenu* menu;
+    std::string_view favsLocKey;
 signals:
     void thingCopied(uc::CopiedChannel channel, QWidget* initiator);
     void menuActivated();

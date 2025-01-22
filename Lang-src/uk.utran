@@ -12472,6 +12472,14 @@
      <orig>Copy + dotted circle</orig>
      <transl>Копіювати + коло з крапок</transl>
     </text>
+    <text id="Remove">
+     <orig>Remove</orig>
+     <au-cmt>
+      <p>From favourites, should be in harmony with other Favourites-related actions</p>
+      <p>Seen in Favourites only</p>
+     </au-cmt>
+     <transl>Вилучити</transl>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

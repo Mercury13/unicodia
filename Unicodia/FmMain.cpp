@@ -1061,7 +1061,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Local menu
     localChars.init(ui->tableChars, &model);
-    localChars.addCustomFavsAction();
+    localChars.addCustomFavsAction({});
     connect(&localChars, &TableLocalMenu::thingCopied, this, &This::copyCurrentThing);
     connect(&localChars, &TableLocalMenu::customFavsCalled, this, &This::charsFavsCalled);
     connect(&localChars, &TableLocalMenu::menuActivated, this, &This::charsLocalMenuActivated);
@@ -1167,7 +1167,10 @@ void FmMain::initFavs(const InitBlocks& ib)
 
     // Local menu
     localFavs.init(ui->tableFavs, &favsModel);
+    localFavs.addCustomFavsAction("Main.Local.Remove");
     connect(&localFavs, &TableLocalMenu::thingCopied, this, &This::copyCurrentFavs);
+    connect(&localFavs, &TableLocalMenu::menuActivated, this, &This::favsLocalMenuActivated);
+    connect(&localFavs, &TableLocalMenu::customFavsCalled, this, &This::favsFavsCalled);
 
     // Create toolbar
     btRemoveFromFavs = ui->wiFavsShowcase->addToolButton(ui->acRemoveFromFavs);
@@ -2240,4 +2243,18 @@ void FmMain::charsLocalMenuActivated()
                     ? ui->acAddCpToFavs->text()
                     : ui->acRemoveFromFavs->text());
     }
+}
+
+
+void FmMain::favsLocalMenuActivated()
+{
+    auto charIf = favsModel.charAt(ui->tableFavs->currentIndex());
+    if (auto ac = localFavs.favsAction()) {
+        ac->setEnabled(charIf.hasCp());
+    }
+}
+
+void FmMain::favsFavsCalled()
+{
+    addRemoveFromFavs(ui->wiFavsShowcase, nullptr, false);
 }

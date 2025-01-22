@@ -303,8 +303,10 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
-    void charsFavsCalled();
     void charsLocalMenuActivated();
+    void charsFavsCalled();
+    void favsLocalMenuActivated();
+    void favsFavsCalled();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
