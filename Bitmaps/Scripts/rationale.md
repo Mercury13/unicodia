@@ -72,7 +72,7 @@
 
 ## Europe
 * Albanian all: TMB
-* Ancient: TMB but not trivial
+* Ancient: TMB but not trivial. LR’s is more trivial (some sort of star or barred X)
 * Byzantine music: JSI big but lo-res
 * Caucasian: TMB
 * Cprt: JSI
@@ -91,9 +91,9 @@
 * Goth: TMB
 * Greek: JSI, lowercase is better. I was trained as a mathematician and wrote that ξ multiple times
 * Greek ex: LR, and while working, decided to exaggerate apostrophe/iota
-* Greek num: JSI
+* Greek num: JSI, coincidence with LR
 * Greek music: TMB + egg, Warhammer 40k
-* Hung: JSI
+* Hung: JSI. And LR somehow drew a character absent in Unicode table
 * Ital: TMB
 * Latn: some letter distinct for Latn, word “Latin”. LR’s A is surely a bad choice
 * Latin-1: wanted umlaut (two dots)
@@ -136,6 +136,7 @@
 * Mtei: P is more interesting
 * Mymr A: nice cat-like ligature
 * Phag: K is too basic
+* Soyo, Zanb: LR is somehow took vowel-carrier w/o point
 * Talu: K but better with that affixed virama
 * Tibt: IDK, early icon, maybe K will look good
 * Thai: K too basic
@@ -184,6 +185,7 @@
 ## Africa
 * All are JSI, I just wanted to convey the spirit of script
 * Ethi: egg, the first letter in “abugida”
+* Gara: LR probably thought less than I and took a vowel-carrier w/o point. The ideal icon is G (H-like) with hook, and I’ll 
 
 ## America
 * Cans all: somehow decided with an umlaut
