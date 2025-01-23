@@ -3995,12 +3995,16 @@
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+      <p />
+      <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
      <transl>
       <p>Ще 3995 ієрогліфів з інших джерел, окрім Алана Ґардінера. Перші заявки були такі погані, що туди якось потрапила людина з ноутбуком, але вчені усе перевірили, і це призвело до ''Unikemet'', бази єгипетських ієрогліфів Юнікоду. (''Кемет''{{-}}самоназва давнього Єгипту.)</p>
       <p />
       <p>Єгиптологи розробили спеціальні стрілки для напрямку читання{{-}}U+1F8C0 та C1.</p>
+      <p />
+      <p>На початку 2025 написали [[pt:egyp|правила для кодування]] ієрогліфів.</p>
      </transl>
     </text>
    </group>
@@ -12036,6 +12040,45 @@
       <p>* XK (Косово): тимчасовий код, що використовується Європою.</p>
       <p />
       <p>Зображення на емодзі (звичайно прапор) за виробником.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="egyp">
+    <text id="Name">
+     <orig>Egyptian hieroglyphs</orig>
+     <transl>єгипетські ієрогліфи</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In the early 2025, principles of encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
+      <p />
+      <p>* A hieroglyph may have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 and more coils. These forms are encoded at the discretion of scholars.</p>
+      <p>* A hieroglyph is encoded in the most detailed form. Really fine details like armbands are omitted at the discretion of scholars.</p>
+      <p>* Size and colour are not encoded.</p>
+      <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
+      <p>* Similar signs with different meanings are encoded separately. A circle may mean tambourine, ring, pit…</p>
+      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it is not encoded.</p>
+      <p>* But if such form has a special meaning (leg+knife=injury), it is encoded.</p>
+      <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
+      <p>* A hieroglyph is extended if it’s attested at least three times, or is included into a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
+      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest Unicode{{_}}5.2 (based on Gardiner’s list) is autotomatically core.</p>
+     </orig>
+     <au-cmt>Thot, JSesh are always Latin</au-cmt>
+     <transl>
+      <p>На початку 2025 описали принципи кодування [[ps:Egyp|єгипетських ієрогліфів]].</p>
+      <p />
+      <p>* Ієрогліф може мати безліч форм: людина схиляється легко чи низько, змія з 2-ма, 3-ма кільцями та більше. Ці форми кодуються за рішенням дослідників.</p>
+      <p>* Ієрогліф кодується у найбільш детальній формі. Зовсім дрібні деталі на кшталт наручних пов’язок опускаются за рішенням дослідників.</p>
+      <p>* Розмір та колір не кодуються.</p>
+      <p>* Якщо ці дрібні деталі мають значення, Юнікод не{{_}}для вас. Додайте зображення.</p>
+      <p>* Схожі знаки з різними значеннями кодуються окремо. Коло може значити бубон, кільце, яму…</p>
+      <p>* Якщо ієрогліф можна отримати віддзеркаленням, поворотом або комбінуванням, він не{{_}}кодується.</p>
+      <p>* Але якщо така яорма має окреме значення (нога+ніж=рана), вона кодується.</p>
+      <p>* Ієрогліфи поділяються на три типи: базові, сумісні ра розширені.</p>
+      <p>* Ієрогліф стає рознишеним, фкщо він помічений тричі, або включений у великий список на кшталт ''Thot'' чи ''JSesh'', або широко використовується дослідниками. Тоді він отримує право на кодування.</p>
+      <p>* Ієрогліф стає базовим, якщо він підтверджений надійним зображенням (фото чи достовірним обведенням). Якщо він закодований у кількох формах, частину форм можуть викличити з базового списку.</p>
+      <p>* Тривіальні форми та комбінації з Юнікоду{{_}}5.2{{-}}сумісні. Решта Юнікоду{{_}}5.2 (заснована на списку Ґардінера) автоматично базова.</p>
      </transl>
     </text>
    </group>

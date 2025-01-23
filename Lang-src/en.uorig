@@ -3026,6 +3026,8 @@
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+      <p />
+      <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
     </text>
@@ -8297,6 +8299,29 @@
       <p />
       <p>Image on country emoji (usually flag) is up to vendor.</p>
      </orig>
+    </text>
+   </group>
+   <group id="egyp">
+    <text id="Name">
+     <orig>Egyptian hieroglyphs</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In the early 2025, principles of encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
+      <p />
+      <p>* A hieroglyph may have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 and more coils. These forms are encoded at the discretion of scholars.</p>
+      <p>* A hieroglyph is encoded in the most detailed form. Really fine details like armbands are omitted at the discretion of scholars.</p>
+      <p>* Size and colour are not encoded.</p>
+      <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
+      <p>* Similar signs with different meanings are encoded separately. A circle may mean tambourine, ring, pit…</p>
+      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it is not encoded.</p>
+      <p>* But if such form has a special meaning (leg+knife=injury), it is encoded.</p>
+      <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
+      <p>* A hieroglyph is extended if it’s attested at least three times, or is included into a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
+      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest Unicode{{_}}5.2 (based on Gardiner’s list) is autotomatically core.</p>
+     </orig>
+     <au-cmt>Thot, JSesh are always Latin</au-cmt>
     </text>
    </group>
   </group>
