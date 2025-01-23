@@ -23,7 +23,7 @@ constexpr uc::SvgHint operator + (uc::TmpHy, uc::ImbaX) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, {}, SvgHint { 5, 15, ImbaX::RIGHT_3 } },
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Basic Latin",
             { EcScript::Latn, 0 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
