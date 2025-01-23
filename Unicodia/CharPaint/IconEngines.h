@@ -11,6 +11,7 @@
 
 namespace uc {
     struct SynthIcon;
+    enum class ImbaX : signed char;
 }
 
 class QSvgRenderer;
@@ -332,7 +333,7 @@ namespace ie {
     class SvgBelow : public Veng
     {
     public:
-        /// @param [in] synthIcon   destination palette (and whether to repaint at all)
+        /// @param [in] synthIcon   destination palette (and whether to repaint SVG at all)
         /// @param [in] aName       file name
         /// @param [in] aBorder     border in 0.1 dip
         /// @param [in] aSide       side in 0.1 dip
@@ -345,6 +346,32 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
         QColor bgColor;
         int border, side;
+    };
+
+    /// A tall W×14 image pixel-hinted by three lines:
+    ///    top, bottom and some vertical line
+    /// Example: Latin L is hinted by top serif, bottom line and stem
+    /// Type: lo-res
+    class Tall : public Veng
+    {
+    public:
+        /// @param [in] synthIcon   destination palette (and whether to repaint SVG at all)
+        /// @param [in] aName       file name
+        /// @param [in] aWidth      file’s width in dip
+        /// @param [in] aHintX      hinted line, 0…aWidth
+        /// @param [in] aImbaX      imbalance of hand-hinting
+        /// @warning  No hint — just use Margin
+        Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
+             unsigned char aWidth, unsigned char aHintX, uc::ImbaX aImbaX);
+        ~Tall();
+        Tall* clone() const override { return new Tall(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+        QColor bgColor;
+        unsigned char width, hintX;
+        signed char imbaX;
+        Flags<Mfg> flags;
     };
 
 }   // namespace ie

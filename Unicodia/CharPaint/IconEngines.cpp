@@ -1041,3 +1041,45 @@ void ie::SvgBelow::paint1(QPainter *painter, const QRect &rect, qreal)
     QRect rcContent(x, y, scaledSide, scaledSide);
     texture->get()->render(painter, rcContent);
 }
+
+
+///// Tall /////////////////////////////////////////////////////////////////////
+
+
+ie::Tall::Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
+     unsigned char aWidth, unsigned char aHintX, uc::ImbaX aImbaX)
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
+      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+      width(aWidth), hintX(aHintX),
+      imbaX(static_cast<signed char>(aImbaX)) {}
+
+ie::Tall::~Tall() = default;
+
+void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
+    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
+    // Image height in device-independent pixels
+    static constexpr int HEIGHT_DIP = 14;
+
+    // Background
+    painter->fillRect(rect, bgColor);
+
+    // Get base sizeand position
+    unsigned scaledBorder = (rect.height() * MRG_SIMPLER + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
+    auto y = scaledBorder;
+    auto scaledH = rect.height() - (scaledBorder << 1);
+    if (scaledH <= 0)   // strange??
+        return;
+    auto realScale = static_cast<double>(scaledH) / HEIGHT_DIP;
+    auto scaledW = width * realScale;
+    auto x = (rect.width() - scaledW) / 2;
+
+    // Hint by moving left/right
+    auto hintActual = x + (hintX - imbaX * 0.1) * realScale;
+    auto hintWanted = std::lround(hintActual);
+    x = hintWanted - hintX * realScale;
+
+    QRectF r(x, y, scaledW, scaledH);
+    texture->get()->render(painter, r);
+}
