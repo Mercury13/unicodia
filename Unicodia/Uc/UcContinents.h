@@ -59,7 +59,7 @@ namespace uc {
         SMALL_SVG         = 1<<12,  ///< [+] Do not synthesize an icon, use small SVG from combobox
         BIGGER            = 1<<13,  ///< [+] Bigger (SMALL_SVG only for now)
         BIG_SVG           = 1<<14,  ///< [+] Do not synthesize an icon, use special big SVG
-        BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters are dotted
+        BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters sit on dotted circles
         PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
         ENG_HINT          = 0,                      /// Engine: default (hinted SVG)
