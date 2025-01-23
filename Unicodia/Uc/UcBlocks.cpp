@@ -213,7 +213,7 @@ constinit const uc::Block uc::blocks[] {
             "Ogham",
             { EcScript::Ogam, 0 }, MapSubtype::DEAD, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, {}, 3_hx },
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Runic",
             { EcScript::Runr, 0 }, MapSubtype::DEAD, EcScript::Runr },
     // Tagalog OK
