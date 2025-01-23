@@ -63,7 +63,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
     // Cyrillic OK
-    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, {}, 12_hx },
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Cyrillic",
             { EcScript::Cyrl, 0 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
@@ -775,7 +775,7 @@ constinit const uc::Block uc::blocks[] {
             "Linear B Syllabary",
             { EcScript::Linb, 0 }, MapSubtype::DEAD, EcScript::Linb },
     // Linear B hier OK
-    { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE },
+    { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE, {}, 4_hy },
             "Linear B Ideograms",
             { EcScript::Linb, 1 }, MapSubtype::DEAD, EcScript::Linb },
     // Aegean numbers OK
