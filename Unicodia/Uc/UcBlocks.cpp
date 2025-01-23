@@ -844,7 +844,7 @@ constinit const uc::Block uc::blocks[] {
             "Osmanya",
             { EcScript::Osma, 0 }, MapSubtype::ALIVE, EcScript::Osma },
     // Osage OK
-    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA },
+    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
             "Osage",
             { EcScript::Osge, 0 }, MapSubtype::ALIVE, EcScript::Osge },
     // Elbasan OK

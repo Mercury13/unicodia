@@ -293,6 +293,10 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
+    enum class Mfg : unsigned char {
+        IMBA_UP = 1,  /// [+] imbalance 0.5px−ε upwards (no fine-grained like ±0.4px here)
+    };
+
     enum class HalfPixelDown : unsigned char { NO, YES };
 
     /// Drawing with constant margin around SVG (Kawi)
@@ -303,10 +307,8 @@ namespace ie {
         /// @param [in] synthIcon        destination palette (and whether to repaint at all)
         /// @param [in] aName            file name
         /// @param [in] aValue           1 = 0.1dip (device-independent pixel)
-        /// @param [in] aHalfPixelDown   [+] the image is balanced 0.5px upwards
-        ///                               (no balance like ±0.4px here)
         Margin(const uc::SynthIcon& synthIcon, std::string_view aName,
-               int aValue, HalfPixelDown aHalfPixelDown);
+               int aValue, Flags<Mfg> aFlags);
         ~Margin();
         Margin* clone() const override { return new Margin(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
@@ -314,7 +316,7 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
         QColor bgColor;
         int value;
-        bool halfPixelDown;
+        Flags<Mfg> flags;
     };
 
     /// Drawing small square SVG in the lower part of the cell (Control pictures)

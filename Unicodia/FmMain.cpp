@@ -228,7 +228,7 @@ namespace {
     {
         switch (block.startingCp) {
         case 0x1900:    // Limbu: margin=2px even on 1.25×
-            return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", 13, ie::HalfPixelDown::NO);
+            return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", 13, NO_FLAGS);
         case 0x2400:    // Control pictures: margin=2px even on 1.25×
             return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", 13, 100);
         case 0x2460:    // Enclosed alnum
@@ -241,12 +241,14 @@ namespace {
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
         case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
+        case 0x104B0:   // Osage: margin=2px even on 1.25×
+            return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", 13, NO_FLAGS);
         case 0x10C80:
-            return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", 33, ie::HalfPixelDown::NO);
+            return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", 33, NO_FLAGS);
         case 0x11A00:   // Zanb square: margin=2px even on 1.25×
-            return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", 13, ie::HalfPixelDown::NO);
+            return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", 13, NO_FLAGS);
         case 0x11F00:   // Kawi: margin=2dip
-            return new ie::Margin(block.synthIcon, ":ScCustom/kawi.svg", 20, ie::HalfPixelDown::YES);
+            return new ie::Margin(block.synthIcon, ":ScCustom/kawi.svg", 20, ie::Mfg::IMBA_UP);
         case 0x1CC00:   // Legacy ex
             return new ie::Legacy(":ScCustom/legacy2.png");
         case 0x1D300:   // Tai Xuan

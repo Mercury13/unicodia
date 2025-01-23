@@ -988,11 +988,10 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ie::Margin::Margin(const uc::SynthIcon& synthIcon,
                    std::string_view aName, int aValue,
-                   HalfPixelDown aHalfPixelDown)
+                   Flags<Mfg> aFlags)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
       bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
-      value(aValue),
-      halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}
+      value(aValue), flags(aFlags) {}
 
 ie::Margin::~Margin() = default;
 
@@ -1007,7 +1006,7 @@ void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
     // SVG
     unsigned margin = (rect.width() * value + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
     QRect rcContent = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
-    if (halfPixelDown) {
+    if (flags.have(Mfg::IMBA_UP)) {
         auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down
         rcContent.moveTop(rcContent.top() + shift);
     }
