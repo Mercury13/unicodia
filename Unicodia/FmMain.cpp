@@ -337,11 +337,14 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole: {
             GET_BLOCK
             if (!block->icon) {
-                if (block->synthIcon.flags.have(uc::Ifg::FORMAT)) {
+                switch ((block->synthIcon.flags & uc::Ifg::ENG_MASK).numeric()) {
+                case static_cast<int>(uc::Ifg::ENG_FORMAT):
                     block->icon = new QIcon(new ie::Format(*block));
-                } else if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
+                    break;
+                case static_cast<int>(uc::Ifg::ENG_CUSTOM):
                     block->icon = new QIcon(getCustomEngine(*block));
-                } else {
+                    break;
+                default:
                     block->icon = new QIcon(new ie::Hint(*block));
                 }
             }

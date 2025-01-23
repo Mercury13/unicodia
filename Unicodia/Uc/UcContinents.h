@@ -43,23 +43,28 @@ namespace uc {
     };
     extern const Continent continentInfo[];
 
-    enum class Ifg : unsigned short {
+    enum class Ifg : unsigned {
         CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
         MISSING           = 1<<1,   ///< [+] red icon, missing block
-        CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
-        FORMAT            = 1<<3,   ///< [+] format char is on icon
-        SMALLER           = 1<<4,   ///< [+] draw synth. icon smaller (legacy)
-        ROTATE_LTR_CW     = 1<<5,   ///< [+] To display properly, 90°↷: Mong, Phag (→ in Unicode)
-        ROTATE_RTL_CCW    = 1<<6,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
-        SHIFT_LEFT        = 1<<7,   ///< [+] To display a synth. icon, shift it to the left
-        SHIFT_RIGHT       = 1<<8,   ///< [+] To display a synth. icon, shift it to the right
-        SHIFT_DOWN        = 1<<9,   ///< [+] To display a synth. icon, shift it down a bit
-        SHIFT_UP          = 1<<10,  ///< [+] To display a synth. icon, shift it up a bit
-        SMALL_SVG         = 1<<11,  ///< [+] Do not synthesize an icon, use small SVG from combobox
-        BIGGER            = 1<<12,  ///< [+] Bigger (SMALL_SVG only for now)
-        BIG_SVG           = 1<<13,  ///< [+] Do not synthesize an icon, use special big SVG
-        BOTH_DOTTED       = 1<<14,  ///< [+] For Combining Half Marks: both characters are dotted
-        PAINT_SVG         = 1<<15,  ///< [+] SVG is not in true colours and has placeholders instead
+        ENG_BIT_0         = 1<<2,   ///< [+] engine bit 0
+        ENG_BIT_1         = 1<<3,   ///< [+] engine bit 1
+        ENG_BIT_2         = 1<<4,   ///< [+] engine bit 2
+        SMALLER           = 1<<5,   ///< [+] draw synth. icon smaller (legacy)
+        ROTATE_LTR_CW     = 1<<6,   ///< [+] To display properly, 90°↷: Mong, Phag (→ in Unicode)
+        ROTATE_RTL_CCW    = 1<<7,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
+        SHIFT_LEFT        = 1<<8,   ///< [+] To display a synth. icon, shift it to the left
+        SHIFT_RIGHT       = 1<<9,   ///< [+] To display a synth. icon, shift it to the right
+        SHIFT_DOWN        = 1<<10,   ///< [+] To display a synth. icon, shift it down a bit
+        SHIFT_UP          = 1<<11,  ///< [+] To display a synth. icon, shift it up a bit
+        SMALL_SVG         = 1<<12,  ///< [+] Do not synthesize an icon, use small SVG from combobox
+        BIGGER            = 1<<13,  ///< [+] Bigger (SMALL_SVG only for now)
+        BIG_SVG           = 1<<14,  ///< [+] Do not synthesize an icon, use special big SVG
+        BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters are dotted
+        PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
+        ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
+        ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
+        ENG_FORMAT        = ENG_BIT_1,              /// Engine: format
+        ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine: tall letter
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

@@ -23,7 +23,7 @@ constexpr uc::SvgHint operator + (uc::TmpHy, uc::ImbaX) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Basic Latin",
             { EcScript::Latn, 0 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
@@ -63,7 +63,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
     // Cyrillic OK
-    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Cyrillic",
             { EcScript::Cyrl, 0 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
@@ -213,7 +213,7 @@ constinit const uc::Block uc::blocks[] {
             "Ogham",
             { EcScript::Ogam, 0 }, MapSubtype::DEAD, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Runic",
             { EcScript::Runr, 0 }, MapSubtype::DEAD, EcScript::Runr },
     // Tagalog OK
@@ -250,7 +250,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 1 }, MapSubtype::ALIVE,
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Limbu OK
-    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
+    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Limbu",
             { EcScript::Limb, 0 }, MapSubtype::ALIVE, EcScript::Limb },
     // Tai Le OK
@@ -390,18 +390,18 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::TECHNICAL, Bfg::NO_EMOJI },
     // Control pictures OK
-    { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Control Pictures",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     // OCR/MICR OK
-    { 0x2440, 0x245F, { L'⑀', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x2440, 0x245F, { L'⑀', EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Optical Character Recognition",
             // Fonts coincide
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::OCR },
     // Enclosed alnum OK, need ordinary Cambria
-    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Enclosed Alphanumerics",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL,
@@ -412,7 +412,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DEJAVU },
     // Block elements OK
-    { 0x2580, 0x259F, { L'░', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x2580, 0x259F, { L'░', EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Block Elements",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DEJAVU },
@@ -513,7 +513,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZKXI, 0 }, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ideographic desc OK, not collapsible: small block
-    { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
+    { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
             "Ideographic Description Characters",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
@@ -579,7 +579,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'A' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Yijing OK
-    { 0x4DC0, 0x4DFF, { L'䷧', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
+    { 0x4DC0, 0x4DFF, { L'䷧', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
             "Yijing Hexagram Symbols",
             MyName::INST, MapSubtype::CJ_SYMBOL },
     // CJK hieroglyphs OK
@@ -605,7 +605,7 @@ constinit const uc::Block uc::blocks[] {
             "Vai",
             { EcScript::Vaii, 0 }, MapSubtype::ALIVE, EcScript::Vaii },
     // Cyr ex B OK, modified font a bit
-    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
+    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::PAINT_SVG | Ifg::ENG_CUSTOM },
             "Cyrillic Extended-B",
             { EcScript::Cyrl, 'B' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::HAS_DESCRIPTION },
@@ -732,7 +732,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
-            { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
+            { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },
             "Variation Selectors",
             { EcScript::ZVAR, 0 }, MapSubtype::TECHNICAL },
     // Vertical forms OK, not collapsible: small
@@ -779,7 +779,7 @@ constinit const uc::Block uc::blocks[] {
             "Linear B Ideograms",
             { EcScript::Linb, 1 }, MapSubtype::DEAD, EcScript::Linb },
     // Aegean numbers OK
-    { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE },
+    { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE, Ifg::ENG_CUSTOM },
             "Aegean Numbers",
             { EcScript::Linb, 2 }, MapSubtype::DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -844,7 +844,7 @@ constinit const uc::Block uc::blocks[] {
             "Osmanya",
             { EcScript::Osma, 0 }, MapSubtype::ALIVE, EcScript::Osma },
     // Osage OK
-    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
+    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA, Ifg::PAINT_SVG | Ifg::ENG_CUSTOM },
             "Osage",
             { EcScript::Osge, 0 }, MapSubtype::ALIVE, EcScript::Osge },
     // Elbasan OK
@@ -952,7 +952,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Turkic",
             { EcScript::Orkh, 0 }, MapSubtype::DEAD, EcScript::Orkh },
     // Hung runes OK
-    { 0x10C80, 0x10CFF, { 0x10C86, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x10C80, 0x10CFF, { 0x10C86, EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Old Hungarian",
             { EcScript::Hung, 0 }, MapSubtype::DEAD, EcScript::Hung },
     // Hanifi OK
@@ -1105,7 +1105,7 @@ constinit const uc::Block uc::blocks[] {
             "Nandinagari",
             { EcScript::Nand, 0 }, MapSubtype::DEAD, EcScript::Nand },
     // Zanabazar square OK
-    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
+    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
             "Zanabazar Square",
             { EcScript::Zanb, 0 }, MapSubtype::DEAD,
             EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS },
@@ -1172,7 +1172,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Maka, 0 }, MapSubtype::DEAD, EcScript::Maka },
     // Kawi OK
     { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN,
-                          Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
+                          Ifg::ENG_CUSTOM | Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
             "Kawi",
             { EcScript::Kawi, 0 }, MapSubtype::ALIVE,
             EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
@@ -1209,7 +1209,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Egyp, 0 }, MapSubtype::DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Egyptian hiero format OK
-    { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::FORMAT },
+    { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::ENG_FORMAT },
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 'f' }, MapSubtype::DEAD,
             EcScript::Egyp, EcFont::NORMAL,
@@ -1343,12 +1343,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Dupl, 0}, MapSubtype::SYM_CODE, EcScript::Dupl },
     // Shorthand format controls OK
     { 0x1BCA0, 0x1BCAF,
-            { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::FORMAT, SvgHint{ 7, ImbaX::LEFT_4 } },
+            { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::ENG_FORMAT, SvgHint{ 7, ImbaX::LEFT_4 } },
             "Shorthand Format Controls",
             { EcScript::Dupl, 1}, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::FRANKEN_SANS_FINEGRAINED, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
     // Legacy ex OK
-    { 0x1CC00, 0x1CEBF, { U"\U0001CCA4\U0001CCA5", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER  },
+    { 0x1CC00, 0x1CEBF, { U"\U0001CCA4\U0001CCA5", EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::SMALLER  },
             "Symbols for Legacy Computing Supplement",
             { EcScript::ZOLD, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
@@ -1391,11 +1391,11 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::DEAD,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Tai Xuan Jing OK
-    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
+    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
             "Tai Xuan Jing Symbols",
             MyName::INST, MapSubtype::CJ_SYMBOL },
     // Counting rods OK
-    { 0x1D360, 0x1D37F, { 0x1D378, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x1D360, 0x1D37F, { 0x1D378, EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Counting Rod Numerals",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
@@ -1484,7 +1484,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'z'}, MapSubtype::ALIVE,
             EcScript::Arab, EcFont::MATH, Bfg::HAS_DESCRIPTION },
     // Mahjong tiles OK
-    { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
+    { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::ENG_CUSTOM },
             "Mahjong Tiles",
             // Use emoji, with fallback to Phaistos Disc
             MyName::INST, MapSubtype::SYM_OTHER,
@@ -1495,19 +1495,19 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
     // Cards OK
-    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::BIG_SVG },
+    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::BIG_SVG },
             "Playing Cards",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
     // Enclosed alnum OK, added a few symbols to FunkySample
-    { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Enclosed Alphanumeric Supplement",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::ENCLOSED_ALNUM, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             { 0x1F202, EcContinent::CJK,
-              Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
+              Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::ENG_CUSTOM },
             "Enclosed Ideographic Supplement",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_ENCLOSED, Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
@@ -1559,7 +1559,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZSYM, 'A' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
-    { 0x1FB00, 0x1FBFF, { U"\U0001FBB2\U0001FBB3", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER },
+    { 0x1FB00, 0x1FBFF, { U"\U0001FBB2\U0001FBB3", EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::SMALLER },
             "Symbols for Legacy Computing",
             { EcScript::ZOLD, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HIPRIO_NUMBERS },
@@ -1619,13 +1619,13 @@ constinit const uc::Block uc::blocks[] {
 #endif
     // Tags OK
     { 0xE0000, 0xE007F,
-            { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
+            { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },
             "Tags",
             MyName::INST, MapSubtype::TECHNICAL,
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
     { 0xE0100, 0xE01EF,
-            { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
+            { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },
             "Variation Selectors Supplement",
             { EcScript::ZVAR, 1 }, MapSubtype::TECHNICAL },
 };
