@@ -265,7 +265,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x19E0, 0x19FF, { 0x19EF, EcContinent::ASIA },
             "Khmer Symbols",
             { EcScript::Khmr, 1 }, MapSubtype::ALIVE,
-            EcScript::NONE, EcFont::KHMER_SYMBOLS, Bfg::HAS_DESCRIPTION },
+            EcScript::Khmr, EcFont::KHMER_SYMBOLS, Bfg::HAS_DESCRIPTION },
     // Buginese OK
     { 0x1A00, 0x1A1F, { 0x1A01, EcContinent::OCEAN },
             "Buginese",
@@ -605,7 +605,7 @@ constinit const uc::Block uc::blocks[] {
             "Vai",
             { EcScript::Vaii, 0 }, MapSubtype::ALIVE, EcScript::Vaii },
     // Cyr ex B OK, modified font a bit
-    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE },
+    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::PAINT_SVG | Ifg::CUSTOM_ENGINE },
             "Cyrillic Extended-B",
             { EcScript::Cyrl, 'B' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::HAS_DESCRIPTION },
