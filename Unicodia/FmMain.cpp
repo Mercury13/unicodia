@@ -224,19 +224,13 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 namespace {
 
-    /// For more detailed chars: 1px at 1.25×, 2px at 1.5×
-    constexpr int MRG_DETAILED = 12;
-
-    /// For simpler chars: 2px even at 1.25×
-    constexpr int MRG_SIMPLER = 13;
-
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
         case 0x1900:    // Limbu
-            return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", MRG_SIMPLER, NO_FLAGS);
+            return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
-            return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", MRG_SIMPLER, 100);
+            return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", ie::MRG_SIMPLER, 100);
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
         case 0x2580:    // Block elements
@@ -246,15 +240,15 @@ namespace {
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
         case 0xA640:    // Cyrl ex B
-            return new ie::Margin(block.synthIcon, ":ScCustom/cyrlB.svg", MRG_DETAILED, NO_FLAGS);
+            return new ie::Margin(block.synthIcon, ":ScCustom/cyrlB.svg", ie::MRG_DETAILED, NO_FLAGS);
         case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
         case 0x104B0:   // Osage
-            return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", MRG_SIMPLER, NO_FLAGS);
+            return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x10C80:   // Hungarian: specially-picked margin (top/bottom, of course, will wildly dance)
             return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", 33, NO_FLAGS);
         case 0x11A00:   // Zanb square: margin=2px even on 1.25×
-            return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", MRG_SIMPLER, NO_FLAGS);
+            return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x11F00:   // Kawi: margin=2dip
             return new ie::Margin(block.synthIcon, ":ScCustom/kawi.svg", 20, ie::Mfg::IMBA_UP);
         case 0x1CC00:   // Legacy ex

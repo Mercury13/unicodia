@@ -299,6 +299,12 @@ namespace ie {
 
     enum class HalfPixelDown : unsigned char { NO, YES };
 
+    /// For more detailed chars: 1px at 1.25×, 2px at 1.5×
+    constexpr int MRG_DETAILED = 12;
+
+    /// For simpler chars: 2px even at 1.25×
+    constexpr int MRG_SIMPLER = 13;
+
     /// Drawing with constant margin around SVG (Kawi)
     /// Type: lo-res
     class Margin : public Veng
