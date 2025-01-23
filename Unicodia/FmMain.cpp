@@ -231,6 +231,8 @@ namespace {
             return new ie::Tall(block.synthIcon, ":ScCustom/latn.svg", 9, 1, uc::ImbaX::RIGHT_1);
         case 0x0400:    // Cyrillic
             return new ie::Tall(block.synthIcon, ":ScCustom/cyrl.svg", 11, 10, uc::ImbaX::RIGHT_3);
+        case 0x16A0:    // Runic
+            return new ie::Tall(block.synthIcon, ":ScCustom/runr.svg", 11, 0, uc::ImbaX::LEFT_2);
         case 0x1900:    // Limbu
             return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
