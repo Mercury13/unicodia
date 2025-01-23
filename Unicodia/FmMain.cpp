@@ -228,17 +228,17 @@ namespace {
     {
         switch (block.startingCp) {
         case 0x0000:    // Basic Latin
-            return new ie::Tall(block.synthIcon, ":ScCustom/latn.svg", 9, 1, uc::ImbaX::RIGHT_1);
+            return new ie::Tall(block.synthIcon, ":ScCustom/latn.svg", 1, uc::ImbaX::RIGHT_1);
         case 0x0400:    // Cyrillic
-            return new ie::Tall(block.synthIcon, ":ScCustom/cyrl.svg", 11, 10, uc::ImbaX::RIGHT_3);
+            return new ie::Tall(block.synthIcon, ":ScCustom/cyrl.svg", 10, uc::ImbaX::RIGHT_3);
         case 0x16A0:    // Runic
-            return new ie::Tall(block.synthIcon, ":ScCustom/runr.svg", 11, 0, uc::ImbaX::LEFT_2);
+            return new ie::Tall(block.synthIcon, ":ScCustom/runr.svg", 0, uc::ImbaX::LEFT_2);
         case 0x1900:    // Limbu
             return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
             return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", ie::MRG_SIMPLER, 100);
         case 0x2440:
-            return new ie::Tall(block.synthIcon, ":ScCustom/ocr.svg", 12, 5, uc::ImbaX::PERFECT);
+            return new ie::Tall(block.synthIcon, ":ScCustom/ocr.svg", 5, uc::ImbaX::PERFECT);
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
         case 0x2580:    // Block elements

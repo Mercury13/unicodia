@@ -362,14 +362,14 @@ namespace ie {
         /// @param [in] aImbaX      imbalance of hand-hinting
         /// @warning  Got no X hint → just use Margin
         Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
-             unsigned char aWidth, unsigned char aHintX, uc::ImbaX aImbaX);
+             unsigned char aHintX, uc::ImbaX aImbaX);
         ~Tall();
         Tall* clone() const override { return new Tall(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         dumb::Sp<LazySvg> texture;
         QColor bgColor;
-        unsigned char width, hintX;
+        unsigned char hintX;
         signed char imbaX;
         Flags<Mfg> flags;
     };

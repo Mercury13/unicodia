@@ -1047,10 +1047,10 @@ void ie::SvgBelow::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::Tall::Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
-     unsigned char aWidth, unsigned char aHintX, uc::ImbaX aImbaX)
+     unsigned char aHintX, uc::ImbaX aImbaX)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
       bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
-      width(aWidth), hintX(aHintX),
+      hintX(aHintX),
       imbaX(static_cast<signed char>(aImbaX)) {}
 
 ie::Tall::~Tall() = default;
@@ -1064,6 +1064,10 @@ void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
 
     // Background
     painter->fillRect(rect, bgColor);
+
+    // Width?
+    auto rend = texture->get();
+    auto width = rend->defaultSize().width();
 
     // Get base sizeand position
     unsigned scaledBorder = (rect.height() * MRG_SIMPLER + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
