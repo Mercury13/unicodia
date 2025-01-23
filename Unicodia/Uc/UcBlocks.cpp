@@ -395,7 +395,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     // OCR/MICR OK
-    { 0x2440, 0x245F, { L'⑀', EcContinent::NONE },
+    { 0x2440, 0x245F, { L'⑀', EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::PAINT_SVG },
             "Optical Character Recognition",
             // Fonts coincide
             MyName::INST, MapSubtype::SYM_OTHER,
