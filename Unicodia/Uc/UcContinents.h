@@ -62,6 +62,7 @@ namespace uc {
         BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters are dotted
         PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
+        ENG_HINT          = 0,                      /// Engine: default (hinted SVG)
         ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
         ENG_FORMAT        = ENG_BIT_1,              /// Engine: format
         ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine: tall letter
