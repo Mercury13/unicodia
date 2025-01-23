@@ -360,7 +360,7 @@ namespace ie {
         /// @param [in] aWidth      file’s width in dip
         /// @param [in] aHintX      hinted line, 0…aWidth
         /// @param [in] aImbaX      imbalance of hand-hinting
-        /// @warning  No hint — just use Margin
+        /// @warning  Got no X hint → just use Margin
         Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
              unsigned char aWidth, unsigned char aHintX, uc::ImbaX aImbaX);
         ~Tall();
