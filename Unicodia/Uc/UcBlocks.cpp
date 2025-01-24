@@ -23,7 +23,7 @@ constexpr uc::SvgHint operator + (uc::TmpHy, uc::ImbaX) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::ENG_TALL_PAINT,
                              1_hx + uc::ImbaX::RIGHT_1 },
             "Basic Latin",
             { EcScript::Latn, 0 }, MapSubtype::LATIN,
@@ -64,7 +64,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
     // Cyrillic OK
-    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT,
                                10_hx + uc::ImbaX::RIGHT_3},
             "Cyrillic",
             { EcScript::Cyrl, 0 }, MapSubtype::ALIVE,
@@ -215,7 +215,7 @@ constinit const uc::Block uc::blocks[] {
             "Ogham",
             { EcScript::Ogam, 0 }, MapSubtype::DEAD, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT,
                                 0_hx + uc::ImbaX::LEFT_2},
             "Runic",
             { EcScript::Runr, 0 }, MapSubtype::DEAD, EcScript::Runr },
@@ -487,7 +487,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Geor, 1 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::GEORGIAN_NUSKHURI, Bfg::HAS_DESCRIPTION },
     // Tifinagh OK
-    { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA, Ifg::ENG_TALL | Ifg::PAINT_SVG, 6_hx },
+    { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA, Ifg::ENG_TALL_PAINT, 6_hx },
             "Tifinagh",
             { EcScript::Tfng, 0 }, MapSubtype::ALIVE, EcScript::Tfng },
     // Ethiopic ex OK
@@ -601,7 +601,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Yiii, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Lisu OK
     { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA,
-                        Ifg::ENG_TALL | Ifg::PAINT_SVG, 10_hx + uc::ImbaX::RIGHT_4 },
+                        Ifg::ENG_TALL_PAINT, 10_hx + uc::ImbaX::RIGHT_4 },
             "Lisu",
             { EcScript::Lisu, 0 }, MapSubtype::ALIVE, EcScript::Lisu },
     // Vai OK
@@ -1247,7 +1247,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tnsa, 0 }, MapSubtype::ALIVE, EcScript::Tnsa },
     // Bassa OK
     { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA,
-                          Ifg::ENG_TALL | Ifg::PAINT_SVG, 0_hx + ImbaX::LEFT_2 },
+                          Ifg::ENG_TALL_PAINT, 0_hx + ImbaX::LEFT_2 },
             "Bassa Vah",
             { EcScript::Bass, 0 }, MapSubtype::ALIVE, EcScript::Bass },
     // Pahawh OK

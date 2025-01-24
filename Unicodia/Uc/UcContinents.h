@@ -66,6 +66,7 @@ namespace uc {
         ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
         ENG_FORMAT        = ENG_BIT_1,              /// Engine: format
         ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine: tall letter
+        ENG_TALL_PAINT    = ENG_TALL | PAINT_SVG,   /// These flags commonly come together
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
