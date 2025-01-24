@@ -228,8 +228,9 @@ constinit const uc::Block uc::blocks[] {
     { 0x1720, 0x173F, { 0x1726, EcContinent::OCEAN },
             "Hanunoo",
             { EcScript::Hano, 0 }, MapSubtype::ALIVE, EcScript::Hano },
-    // Buhid OK
-    { 0x1740, 0x175F, { 0x1746, EcContinent::OCEAN },
+    // Buhid OK; hinted at y=8 and 12, but does not really matter
+    //           because these are magic on 1.25×, 1.5×…
+    { 0x1740, 0x175F, { 0x1746, EcContinent::OCEAN, Ifg::PAINT_SVG, 12_hy },
             "Buhid",
             { EcScript::Buhd, 0 }, MapSubtype::ALIVE, EcScript::Buhd },
     // Tagbanwa OK
