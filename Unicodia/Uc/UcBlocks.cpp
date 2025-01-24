@@ -487,7 +487,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Geor, 1 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::GEORGIAN_NUSKHURI, Bfg::HAS_DESCRIPTION },
     // Tifinagh OK
-    { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA },
+    { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+                              6_hx + uc::ImbaX::LEFT_1 },
             "Tifinagh",
             { EcScript::Tfng, 0 }, MapSubtype::ALIVE, EcScript::Tfng },
     // Ethiopic ex OK
