@@ -12049,9 +12049,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In the early 2025, principles of encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
+      <p>In early 2025, principles of encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
       <p />
-      <p>* A hieroglyph may have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 and more coils. These forms are encoded at the discretion of scholars.</p>
+      <p>* A hieroglyph may have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 or more coils. These forms are encoded at the discretion of scholars.</p>
       <p>* A hieroglyph is encoded in the most detailed form. Really fine details like armbands are omitted at the discretion of scholars.</p>
       <p>* Size and colour are not encoded.</p>
       <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
@@ -12059,9 +12059,9 @@
       <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it is not encoded.</p>
       <p>* But if such form has a special meaning (leg+knife=injury), it is encoded.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
-      <p>* A hieroglyph is extended if it’s attested at least three times, or is included into a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
+      <p>* A hieroglyph is extended if it’s attested at least three times, or is included in a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
-      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest Unicode{{_}}5.2 (based on Gardiner’s list) is autotomatically core.</p>
+      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
      </orig>
      <au-cmt>Thot, JSesh are always Latin</au-cmt>
      <transl>
