@@ -1182,7 +1182,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Kawi, 0 }, MapSubtype::ALIVE,
             EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
     // Lisu supplement OK, new font engine works
-    { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA, {}, SvgHint{ 7, ImbaX::LEFT_2 } },
+    { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA,
+                                   Ifg::ENG_TALL_PAINT, 5_hx + ImbaX::LEFT_2 },
             "Lisu Supplement",
             { EcScript::Lisu, 1 }, MapSubtype::ALIVE,
             EcScript::Lisu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1195,8 +1196,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
             "Cuneiform",
             { EcScript::Xsux, 0 }, MapSubtype::DEAD, EcScript::Xsux },
-    // Cuneiform nembers and punct OK
-    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA },
+    // Cuneiform numbers and punct OK
+    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA, {}, 1_hy },
             "Cuneiform Numbers and Punctuation",
             { EcScript::Xsux, 1 }, MapSubtype::DEAD,
             EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
