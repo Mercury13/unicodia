@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/Scripts">
-        <file>0080.svg</file>
         <file>0100.svg</file>
         <file>0180.svg</file>
         <file>0250.svg</file>

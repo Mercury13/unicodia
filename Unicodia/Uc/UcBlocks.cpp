@@ -30,7 +30,8 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Latn, EcFont::NORMAL,
             Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin-1 OK
-    { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
+    { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT,
+                              8_hx + ImbaX::RIGHT_1 },
             "Latin-1 Supplement",
             { EcScript::Latn, 1 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
