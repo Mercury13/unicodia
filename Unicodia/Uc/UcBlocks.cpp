@@ -1245,7 +1245,8 @@ constinit const uc::Block uc::blocks[] {
             "Tangsa",
             { EcScript::Tnsa, 0 }, MapSubtype::ALIVE, EcScript::Tnsa },
     // Bassa OK
-    { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA },
+    { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA,
+                          Ifg::ENG_TALL | Ifg::PAINT_SVG, 0_hx + ImbaX::LEFT_2 },
             "Bassa Vah",
             { EcScript::Bass, 0 }, MapSubtype::ALIVE, EcScript::Bass },
     // Pahawh OK
