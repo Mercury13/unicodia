@@ -227,12 +227,6 @@ namespace {
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
-        case 0x0000:    // Basic Latin
-            return new ie::Tall(block.synthIcon, ":ScCustom/latn.svg", 1, uc::ImbaX::RIGHT_1);
-        case 0x0400:    // Cyrillic
-            return new ie::Tall(block.synthIcon, ":ScCustom/cyrl.svg", 10, uc::ImbaX::RIGHT_3);
-        case 0x16A0:    // Runic
-            return new ie::Tall(block.synthIcon, ":ScCustom/runr.svg", 0, uc::ImbaX::LEFT_2);
         case 0x1900:    // Limbu
             return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
@@ -343,6 +337,9 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                     break;
                 case static_cast<int>(uc::Ifg::ENG_CUSTOM):
                     block->icon = new QIcon(getCustomEngine(*block));
+                    break;
+                case static_cast<int>(uc::Ifg::ENG_TALL):
+                    block->icon = new QIcon(new ie::Tall(*block));
                     break;
                 default:
                     block->icon = new QIcon(new ie::Hint(*block));

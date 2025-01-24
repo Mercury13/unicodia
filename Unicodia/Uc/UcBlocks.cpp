@@ -23,7 +23,8 @@ constexpr uc::SvgHint operator + (uc::TmpHy, uc::ImbaX) = delete;
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+                             1_hx + uc::ImbaX::RIGHT_1 },
             "Basic Latin",
             { EcScript::Latn, 0 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
@@ -63,7 +64,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
     // Cyrillic OK
-    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+                               10_hx + uc::ImbaX::RIGHT_3},
             "Cyrillic",
             { EcScript::Cyrl, 0 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
@@ -213,7 +215,8 @@ constinit const uc::Block uc::blocks[] {
             "Ogham",
             { EcScript::Ogam, 0 }, MapSubtype::DEAD, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, Ifg::ENG_TALL | Ifg::PAINT_SVG,
+                                0_hx + uc::ImbaX::LEFT_2},
             "Runic",
             { EcScript::Runr, 0 }, MapSubtype::DEAD, EcScript::Runr },
     // Tagalog OK

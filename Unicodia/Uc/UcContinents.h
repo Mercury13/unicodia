@@ -44,11 +44,11 @@ namespace uc {
     extern const Continent continentInfo[];
 
     enum class Ifg : unsigned {
-        CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
-        MISSING           = 1<<1,   ///< [+] red icon, missing block
-        ENG_BIT_0         = 1<<2,   ///< [+] engine bit 0
-        ENG_BIT_1         = 1<<3,   ///< [+] engine bit 1
-        ENG_BIT_2         = 1<<4,   ///< [+] engine bit 2
+        ENG_BIT_0         = 1<<0,   ///< [+] engine bit 0
+        ENG_BIT_1         = 1<<1,   ///< [+] engine bit 1
+        ENG_BIT_2         = 1<<2,   ///< [+] engine bit 2
+        CONTINENT_OK      = 1<<3,   ///< [+] disable auto-check, continent is really OK
+        MISSING           = 1<<4,   ///< [+] red icon, missing block
         SMALLER           = 1<<5,   ///< [+] draw synth. icon smaller (legacy)
         ROTATE_LTR_CW     = 1<<6,   ///< [+] To display properly, 90°↷: Mong, Phag (→ in Unicode)
         ROTATE_RTL_CCW    = 1<<7,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)

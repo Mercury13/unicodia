@@ -1053,6 +1053,16 @@ ie::Tall::Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
       hintX(aHintX),
       imbaX(static_cast<signed char>(aImbaX)) {}
 
+ie::Tall::Tall(const uc::Block& block)
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor),
+      hintX(block.synthIcon.svgHint.pos.x),
+      imbaX(block.synthIcon.svgHint.imba.x)
+{
+    char buf[48];
+    snprintf(buf, std::size(buf), ":/ScTall/%04X.svg", int(block.startingCp));
+    texture = dumb::makeSp<LazySvg>(block.synthIcon, buf);
+}
+
 ie::Tall::~Tall() = default;
 
 void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)

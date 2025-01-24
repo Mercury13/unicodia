@@ -16,11 +16,9 @@
         <file>ScCustom/3D.svg</file>
         <file>ScCustom/aegean.png</file>
         <file>ScCustom/blockelem.png</file>
-        <file>ScCustom/cyrl.svg</file>
         <file>ScCustom/cyrlB.svg</file>
         <file>ScCustom/hung.svg</file>
         <file>ScCustom/kawi.svg</file>
-        <file>ScCustom/latn.svg</file>
         <file>ScCustom/legacy.png</file>
         <file>ScCustom/legacy2.png</file>
         <file>ScCustom/limb.svg</file>
@@ -29,10 +27,12 @@
         <file>ScCustom/openbox.svg</file>
         <file>ScCustom/osge.svg</file>
         <file>ScCustom/playcard.svg</file>
-        <file>ScCustom/runr.svg</file>
         <file>ScCustom/sqideo.svg</file>
         <file>ScCustom/yijing.png</file>
         <file>ScCustom/zanb.svg</file>
+		<file>ScTall/0000.svg</file>
+		<file>ScTall/0400.svg</file>
+		<file>ScTall/16A0.svg</file>
         <file>Texts/about.htm</file>
     </qresource>
 </RCC>

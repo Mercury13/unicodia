@@ -363,6 +363,7 @@ namespace ie {
         /// @warning  Got no X hint → just use Margin
         Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
              unsigned char aHintX, uc::ImbaX aImbaX);
+        Tall(const uc::Block& block);
         ~Tall();
         Tall* clone() const override { return new Tall(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
