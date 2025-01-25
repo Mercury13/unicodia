@@ -846,7 +846,7 @@ constinit const uc::Block uc::blocks[] {
             "Shavian",
             { EcScript::Shaw, 0 }, MapSubtype::ALIVE, EcScript::Shaw },
     // Osmanya OK
-    { 0x10480, 0x104AF, { 0x10499, EcContinent::AFRICA },
+    { 0x10480, 0x104AF, { 0x10499, EcContinent::AFRICA, Ifg::ENG_TALL_PAINT, NO_HINT },
             "Osmanya",
             { EcScript::Osma, 0 }, MapSubtype::ALIVE, EcScript::Osma },
     // Osage OK
