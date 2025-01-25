@@ -1141,14 +1141,16 @@ void ie::ByLong::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (isWide)
         std::swap(dipLoSide, dipHiSide);
 
+    const auto dip2xMargin = BASE_SIZE - dipHiSide;
+
     // We think that the rectangle is square here
     const int pxSide = std::min(rect.width(), rect.height());
     // Let it le this way: 1× will surely yield 1px,
     // hypothetical 1.1× will probably shrink smaller side even more
     //   and will yield >1px,
     // and 1.25× is ju-ust < 1px  (1/1.25 = 0.8)
-    const double pxAllowedMargin = scale * 0.78;
-    const double pxAllowedHiSide = pxSide - pxAllowedMargin * 2;
+    const double pxAllowed2xMargin = scale * dip2xMargin * 0.78;
+    const double pxAllowedHiSide = pxSide - pxAllowed2xMargin;
     const double pxCorrespLoSide = pxAllowedHiSide * dipLoSide / dipHiSide;
     const int pxLoSide = pxCorrespLoSide;     // rounded down
     if (pxLoSide <= 0)  // strange values?

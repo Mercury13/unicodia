@@ -317,7 +317,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Geor, 2 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Sundanese supplement OK
-    { 0x1CC0, 0x1CCF, { 0x1CC6, EcContinent::OCEAN },
+    { 0x1CC0, 0x1CCF, { 0x1CC6, EcContinent::OCEAN, Ifg::ENG_LONG_PAINT },
             "Sundanese Supplement",
             { EcScript::Sund, 1 }, MapSubtype::DEAD,
             EcScript::Sund, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
