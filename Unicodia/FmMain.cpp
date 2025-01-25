@@ -224,6 +224,9 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 namespace {
 
+    /// Margin for tall/wide object hinted by both long sides
+    constexpr int MRG_3px = 33;
+
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
@@ -248,7 +251,7 @@ namespace {
         case 0x104B0:   // Osage
             return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x10C80:   // Hungarian: specially-picked margin (top/bottom, of course, will wildly dance)
-            return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", 33, NO_FLAGS);
+            return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", MRG_3px, NO_FLAGS);
         case 0x11A00:   // Zanb square: margin=2px even on 1.25×
             return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x11F00:   // Kawi: margin=2dip
@@ -340,6 +343,9 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                     break;
                 case static_cast<int>(uc::Ifg::ENG_TALL):
                     block->icon = new QIcon(new ie::Tall(*block));
+                    break;
+                case static_cast<int>(uc::Ifg::ENG_LONG):
+                    block->icon = new QIcon(new ie::ByLong(*block));
                     break;
                 default:
                     block->icon = new QIcon(new ie::Hint(*block));

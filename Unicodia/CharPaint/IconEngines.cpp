@@ -398,6 +398,15 @@ QByteArray IconPalette::repaintFile(const QString& fname)
 }
 
 
+///// MyRenderer ///////////////////////////////////////////////////////////////
+
+class MyRenderer : public QSvgRenderer, public dumb::SpTarget
+{
+public:
+    using QSvgRenderer::QSvgRenderer;
+};
+
+
 ///// LazySvg //////////////////////////////////////////////////////////////////
 
 class ie::LazySvg : public dumb::SpTarget
@@ -421,10 +430,10 @@ public:
         { loadPalette(uc::continentInfo[static_cast<unsigned>(continent)]); }
 
     /// Gets the SVG renderer, probably from cache
-    std::shared_ptr<QSvgRenderer> get();
+    dumb::Sp<MyRenderer> get();
 private:
     QString fname;
-    std::shared_ptr<QSvgRenderer> x;
+    dumb::Sp<MyRenderer> x;
     std::optional<IconPalette> palette = std::nullopt;
 };
 
@@ -459,18 +468,18 @@ void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon)
 }
 
 
-std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
+dumb::Sp<MyRenderer> ie::LazySvg::get()
 {
     if (auto r1 = x)
         return r1;
 
-    std::shared_ptr<QSvgRenderer> r2;
+    dumb::Sp<MyRenderer> r2;
     if (palette) {
         QByteArray ba = palette->repaintFile(fname);
-        r2 = std::make_shared<QSvgRenderer>(ba);
+        r2 = dumb::makeSp<MyRenderer>(ba);
     } else {
         // Dumb load
-        r2 = std::make_shared<QSvgRenderer>(fname);
+        r2 = dumb::makeSp<MyRenderer>(fname);
     }
     r2->setAspectRatioMode(Qt::KeepAspectRatio);
     x = r2;
@@ -1094,6 +1103,59 @@ void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
     auto hintWanted = std::lround(hintActual);
     x = hintWanted - hintX * realScale;
 
-    QRectF r(x, y, scaledW, scaledH);
-    texture->get()->render(painter, r);
+    QRectF r(rect.left() + x, rect.top() + y, scaledW, scaledH);
+    rend->render(painter, r);
+}
+
+
+///// ByLong ///////////////////////////////////////////////////////////////////
+
+
+ie::ByLong::ByLong(const uc::SynthIcon& synthIcon, std::string_view aName)
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
+      bgColor(synthIcon.maybeMissingContinent().icon.bgColor) {}
+
+ie::ByLong::ByLong(const uc::Block& block)
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor)
+{
+    char buf[48];
+    snprintf(buf, std::size(buf), ":/ScLong/%04X.svg", int(block.startingCp));
+    texture = dumb::makeSp<LazySvg>(block.synthIcon, buf);
+}
+
+ie::ByLong::~ByLong() = default;
+
+void ie::ByLong::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    // Background
+    painter->fillRect(rect, bgColor);
+
+    // Get principal values in devide-independent pixels
+    const auto rend = texture->get();
+    const auto dipWidth = rend->defaultSize().width();
+    const auto dipHeight = rend->defaultSize().height();
+    auto dipLoSide = dipWidth;
+    auto dipHiSide = dipHeight;
+    /// [+] wide  [-] tall
+    const bool isWide = (dipWidth > dipHeight);
+    if (isWide)
+        std::swap(dipLoSide, dipHiSide);
+
+    // We think that the rectangle is square here
+    const int pxSide = std::min(rect.width(), rect.height());
+    // Let it le this way: 1× will surely yield 1px,
+    // hypothetical 1.1× will probably shrink smaller side even more
+    //   and will yield >1px,
+    // and 1.25× is ju-ust < 1px  (1/1.25 = 0.8)
+    const double pxAllowedMargin = scale * 0.78;
+    const double pxAllowedHiSide = pxSide - pxAllowedMargin * 2;
+    const double pxCorrespLoSide = pxAllowedHiSide * dipLoSide / dipHiSide;
+    const int pxLoSide = pxCorrespLoSide;     // rounded down
+    const double pxHiSide = double(pxLoSide * dipHiSide) / dipLoSide;
+    const double pxHiMargin = (pxSide - pxHiSide) * 0.5;
+    const int pxLoMargin = (pxSide - pxLoSide) / 2;
+    const auto r = isWide   // Wide: hi = X, lo = Y.     Tall: lo = X, hi = Y
+        ? QRectF( rect.left() + pxHiMargin, rect.top() + pxLoMargin, pxHiSide, pxLoSide )
+        : QRectF( rect.left() + pxLoMargin, rect.top() + pxHiMargin, pxLoSide, pxHiSide );
+    rend->render(painter, r);
 }

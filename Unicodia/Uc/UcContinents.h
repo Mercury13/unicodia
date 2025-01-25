@@ -44,7 +44,7 @@ namespace uc {
     extern const Continent continentInfo[];
 
     enum class Ifg : unsigned {
-        ENG_BIT_0         = 1<<0,   ///< [+] engine bit 0
+        ENG_BIT_0         = 1<<0,   ///< [+] engine bit 0, 0 to make some optimization
         ENG_BIT_1         = 1<<1,   ///< [+] engine bit 1
         ENG_BIT_2         = 1<<2,   ///< [+] engine bit 2
         CONTINENT_OK      = 1<<3,   ///< [+] disable auto-check, continent is really OK
@@ -64,9 +64,11 @@ namespace uc {
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
         ENG_HINT          = 0,                      /// Engine: default (hinted SVG)
         ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
-        ENG_FORMAT        = ENG_BIT_1,              /// Engine: format
+        ENG_FORMAT        = ENG_BIT_1,              /// Engine: format character
         ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine: tall letter (only X hint means)
+        ENG_LONG          = ENG_BIT_2,              /// Engine: align by long side
         ENG_TALL_PAINT    = ENG_TALL | PAINT_SVG,   /// These flags commonly come together
+        ENG_LONG_PAINT    = ENG_LONG | PAINT_SVG,   /// These flags commonly come together
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

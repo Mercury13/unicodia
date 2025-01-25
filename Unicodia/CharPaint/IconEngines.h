@@ -372,7 +372,28 @@ namespace ie {
         QColor bgColor;
         unsigned char hintX;
         signed char imbaX;
-        Flags<Mfg> flags;
+    };
+
+    /// A tall or wide thing hinted by both long sides
+    /// Example: Hungarian rune looks like some sort of Cyrillic И,
+    ///   and you need to align it to both vertical stems, the rest does not matter
+    class ByLong : public Veng
+    {
+    public:
+        /// @param [in] synthIcon   destination palette (and whether to repaint SVG at all)
+        /// @param [in] aName       file name
+        /// @param [in] aWidth      file’s width in dip
+        /// @param [in] aHintX      hinted line, 0…aWidth
+        /// @param [in] aImbaX      imbalance of hand-hinting
+        /// @warning  Got no X hint → just use Margin
+        ByLong(const uc::SynthIcon& synthIcon, std::string_view aName);
+        ByLong(const uc::Block& block);
+        ~ByLong();
+        ByLong* clone() const override { return new ByLong(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+        QColor bgColor;
     };
 
 }   // namespace ie

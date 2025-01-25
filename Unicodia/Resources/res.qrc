@@ -17,7 +17,6 @@
         <file>ScCustom/aegean.png</file>
         <file>ScCustom/blockelem.png</file>
         <file>ScCustom/cyrlB.svg</file>
-        <file>ScCustom/hung.svg</file>
         <file>ScCustom/kawi.svg</file>
         <file>ScCustom/legacy.png</file>
         <file>ScCustom/legacy2.png</file>
@@ -30,6 +29,7 @@
         <file>ScCustom/sqideo.svg</file>
         <file>ScCustom/yijing.png</file>
         <file>ScCustom/zanb.svg</file>
+		<file>ScLong/10C80.svg</file>
 		<file>ScTall/0000.svg</file>
 		<file>ScTall/0080.svg</file>
 		<file>ScTall/0400.svg</file>
