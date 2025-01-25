@@ -1282,7 +1282,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Berf, EcFont::NORMAL },
 #endif
     // Miao OK
-    { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA, {}, SvgHint{ 12, 15, ImbaX::LEFT_4 } },
+    { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA, Ifg::ENG_TALL_PAINT, 9_hx + ImbaX::RIGHT_2 },
             "Miao",
             { EcScript::Plrd, 0 }, MapSubtype::ALIVE, EcScript::Plrd },
     // Ideographic sym/punct OK

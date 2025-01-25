@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="16"
-   height="16"
-   viewBox="0 0 16 16"
+   width="9"
+   height="14"
+   viewBox="0 0 9 14"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    sodipodi:docname="16F00.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -30,7 +30,7 @@
      units="px"
      inkscape:zoom="16"
      inkscape:cx="22.09375"
-     inkscape:cy="12.8125"
+     inkscape:cy="12.84375"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -48,12 +48,15 @@
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" /></sodipodi:namedview><defs
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" /></sodipodi:namedview><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"><path
-       d="m 6,9 c 1.7203273,0 3,1.228325 3,2.933058 0,0.588235 -0.2261,1.040804 -0.5163154,1.498315 H 10.29653 V 1 H 12 V 15 H 6.3974764 C 6.1523621,15 2.9905361,15.010663 2.9905361,11.933058 2.9905361,10.263558 4.2611885,9 6,9 Z m -1.4952682,2.933058 c 0,0.884688 0.6189312,1.498315 1.4952682,1.498315 0.816653,0 1.4858038,-0.576747 1.4858038,-1.498315 0,-0.871457 -0.6446228,-1.442861 -1.4858038,-1.442861 -0.8997749,0 -1.4952682,0.608973 -1.4952682,1.442861 z"
+       d="m 3,8 c 1.7203273,0 3,1.228325 3,2.933058 0,0.588235 -0.2261,1.040804 -0.5163154,1.498315 H 7.29653 V 0 H 9 V 14 H 3.3974764 C 3.1523621,14 -0.0094639,14.010663 -0.0094639,10.933058 -0.0094639,9.263558 1.2611885,8 3,8 Z m -1.4952682,2.933058 c 0,0.884688 0.6189312,1.498315 1.4952682,1.498315 0.816653,0 1.4858038,-0.576747 1.4858038,-1.498315 C 4.4858038,10.061601 3.841181,9.490197 3,9.490197 c -0.8997749,0 -1.4952682,0.608973 -1.4952682,1.442861 z"
        id="path1063"
-       style="fill:#f57900;stroke-width:0.999995"
+       style="fill:#c01c28;stroke-width:0.999995"
        sodipodi:nodetypes="sscccccssssssss" /></g></svg>
