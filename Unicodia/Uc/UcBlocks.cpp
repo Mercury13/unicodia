@@ -290,7 +290,7 @@ constinit const uc::Block uc::blocks[] {
             "Balinese",
             { EcScript::Bali, 0 }, MapSubtype::DEAD, EcScript::Bali },
     // Sundanese OK
-    { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN, {}, 3_hy },
+    { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN, Ifg::ENG_LONG_PAINT },
             "Sundanese",
             { EcScript::Sund, 0 }, MapSubtype::ALIVE,
             EcScript::Sund, EcFont::NORMAL, Bfg::VIRAMA_UP },
