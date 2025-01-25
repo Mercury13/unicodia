@@ -22,7 +22,6 @@
         <file>ScCustom/legacy2.png</file>
         <file>ScCustom/limb.svg</file>
         <file>ScCustom/mahjong.svg</file>
-        <file>ScCustom/ocr.svg</file>
         <file>ScCustom/openbox.svg</file>
         <file>ScCustom/osge.svg</file>
         <file>ScCustom/playcard.svg</file>
@@ -36,6 +35,7 @@
 		<file>ScTall/0080.svg</file>
 		<file>ScTall/0400.svg</file>
 		<file>ScTall/16A0.svg</file>
+        <file>ScTall/2440.svg</file>
 		<file>ScTall/2D30.svg</file>
 		<file>ScTall/A4D0.svg</file>
 		<file>ScTall/10140.svg</file>

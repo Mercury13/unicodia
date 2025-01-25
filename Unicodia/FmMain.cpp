@@ -234,8 +234,6 @@ namespace {
             return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
             return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", ie::MRG_SIMPLER, 100);
-        case 0x2440:
-            return new ie::Tall(block.synthIcon, ":ScCustom/ocr.svg", 5, uc::ImbaX::PERFECT, false);
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
         case 0x2580:    // Block elements
