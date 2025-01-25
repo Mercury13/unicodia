@@ -31,65 +31,25 @@
 
 /// Uncomment for simple range-check
 //#define AT_RANGE_CHECK
-//#define AT_VCL_EXCEPTIONS
-
-/// Uncomment for so-called “canary” that tracks for array end
-///   (need Embarcadero extensions)
-//#define AT_CANARY
-
-/// [+] Canary uses Win32 MessageBox()   [-] throws exceptions
-//#define AT_WIN32_CANARY
 
 // Include exceptions
 #ifdef AT_RANGE_CHECK
     #define AT_COND_NOEXCEPT
-    #ifdef AT_VCL_EXCEPTIONS
-        // VCL exception
-        #include <vcl.h>
-        #define EArrayAt ERangeError
-        #define ECanary EExternal
-        #define _i2a(s) IntToStr(s)
+    // STL exception
+    #include <stdexcept>
+    #define EArrayAt std::out_of_range
+    #define ECanary std::runtime_error
+    #if __cplusplus >= 201103L
+        #define _i2a(s) std::to_string(s)
     #else
-        // STL exception
-        #include <stdexcept>
-        #define EArrayAt std::out_of_range
-        #define ECanary std::runtime_error
-        #if __cplusplus >= 201103L
-            #define _i2a(s) std::to_string(s)
-        #else
-            #include "u_Strings.h"
-            #define _i2a(s) str::i2a(s)
-        #endif
+        #include "u_Strings.h"
+        #define _i2a(s) str::i2a(s)
     #endif
 #else
     #define AT_COND_NOEXCEPT noexcept
 #endif
 
-#ifdef AT_CANARY
-    // Some sort of CANA LIVE
-    #define AT_CANARY_DATA 0xCA2A718EUL
-    #ifdef AT_VCL_EXCEPTIONS
-        // VCL exception
-        #include <vcl.h>
-        #define ECanary EExternal
-    #else
-        // STL exception
-        #include <exception>
-        #include <stdexcept>
-        #define ECanary std::runtime_error
-    #endif
-
-    #ifdef AT_WIN32_CANARY
-        #include <windows.h>
-    #endif
-#endif
-
-
-#if __cplusplus >= 201103L
-    constexpr size_t NOT_FOUND = std::numeric_limits<size_t>::max();
-#else
-    #define NOT_FOUND (std::numeric_limits<size_t>::max())
-#endif
+constexpr size_t NOT_FOUND = std::numeric_limits<size_t>::max();
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -132,93 +92,31 @@ void dumpH(std::ostream& aOs, Elem* x, size_t N)
         if (i != 0) aOs << '\t';
         aOs << x[i];
     }
-    aOs << std::endl;
+    aOs << '\n';
 }
 
 template<class Elem>
 void dumpV(std::ostream& aOs, Elem* x, size_t N)
 {
     for (size_t i = 0; i < N; ++i)
-        aOs << x[i] << std::endl;
+        aOs << x[i] << '\n';
 }
 #endif
 
-#ifdef AT_CANARY
-    template <class Elem>
-    size_t canarySize()
-    {
-        return (__is_trivial(Elem))
-            ? ((sizeof(long) + sizeof(Elem) - 1) / sizeof(Elem))
-            : 0;
-    }
-#else
-    template <class Elem>
-    inline size_t canarySize() { return 0; }
-#endif
+template <class Elem>
+inline size_t canarySize() { return 0; }
 
+/// No canary here
+#define AT_RAW_DEALLOC delete[] buf._ptr;
+#define AT_CHECK_CANARY
 
-#ifdef AT_CANARY
-    template <class Elem>
-    void checkCanary(const Elem* ptr, size_t n)
-    {
-        if (__is_trivial(Elem)) {
-            if (*reinterpret_cast<const unsigned long*>(ptr + n) != AT_CANARY_DATA
-                || *reinterpret_cast<const unsigned long*>(ptr - canarySize<Elem>()) != AT_CANARY_DATA)
-            {
-            #ifdef AT_WIN32_CANARY
-                MessageBoxA(0, "Canary is dead, bad code!", "Error", MB_ICONERROR);
-            #endif
-                throw ECanary("Canary is dead, bad code!");
-            }
-        }
-    }
-
-    template <class Elem>
-    void rawDealloc(Elem* ptr, size_t n)
-    {
-        checkCanary<Elem>(ptr, n);
-        delete[] (ptr - canarySize<Elem>());
-    }
-
-    #define AT_RAW_DEALLOC arrutil::rawDealloc(buf._ptr, buf._size);
-    #define AT_CHECK_CANARY \
-        { if (fAutoDestroy) \
-           arrutil::checkCanary(buf._ptr, buf._size); }
-#else
-    #define AT_RAW_DEALLOC delete[] buf._ptr;
-    #define AT_CHECK_CANARY
-#endif
-
-
-#if !defined(AT_CANARY)
-    // -warn: new Elem[n] makes lots of warnings on GCC+LTO.
-    template <class Elem>
-    inline Elem* rawAlloc(size_t n) {
-        if (n < static_cast<size_t>(std::numeric_limits<ptrdiff_t>::max()))
-            return new Elem[n];
-        else throw std::bad_alloc();
-    }
-#else
-    template <class Elem>
-    Elem* rawAlloc(size_t n)
-    {
-    #ifdef AT_CANARY
-        size_t cs = canarySize<Elem>();
-        Elem* r = new Elem[n + 2*cs];
-        r += cs;
-
-        if (__is_trivial(Elem)) {
-            *reinterpret_cast<unsigned long*>(r + n) = AT_CANARY_DATA;
-            *reinterpret_cast<unsigned long*>(r - cs) = AT_CANARY_DATA;
-        }
-    #else
-        Elem* r = new Elem[n];
-    #endif
-
-        checkCanary(r, n);
-        return r;
-    }
-#endif
+// -warn: new Elem[n] makes lots of warnings on GCC+LTO.
+template <class Elem>
+inline Elem* rawAlloc(size_t n) {
+    if (n < static_cast<size_t>(std::numeric_limits<ptrdiff_t>::max()))
+        return new Elem[n];
+    else throw std::bad_alloc();
+}
 
 }   // namespace arrutil
 
