@@ -412,7 +412,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::NORMAL,
                     Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
     // Box drawing OK
-    { 0x2500, 0x257F, { L'╢', EcContinent::NONE },
+    { 0x2500, 0x257F, { L'╢', EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Box Drawing",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DEJAVU },

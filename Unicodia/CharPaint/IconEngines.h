@@ -147,6 +147,15 @@ namespace ie {
         QPixmap texture;
     };
 
+    /// Programmatic drawing of Box Drawings icon
+    /// Type: lo-res
+    class BoxDraw : public Veng
+    {
+    public:
+        BoxDraw* clone() const override { return new BoxDraw(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    };
+
     /// Programmatic drawing of Yijing icon
     /// Type: lo-res
     class CoarseImage : public Veng

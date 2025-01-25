@@ -617,7 +617,7 @@ ie::BlockElem::BlockElem()
 void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     // White BG
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     // Get width
     auto width = rect.height() * 3 / 5;
@@ -634,6 +634,38 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
     painter->fillRect(newRect, brush);
 }
 
+
+///// BoxDraw //////////////////////////////////////////////////////////////////
+
+
+namespace {
+
+    template <std::integral T>
+    constexpr inline T roundDiv(T x, T y) {
+        return (x + (y >> 1)) / y;
+    }
+
+}
+
+void ie::BoxDraw::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    painter->fillRect(rect, BG_INTER);
+
+    const int pxSide = std::min(rect.width(), rect.height());
+    auto thickness = roundDiv(pxSide, BASE_SIZE);
+    auto doubleStep = roundDiv(pxSide * 3, BASE_SIZE);
+    auto doubleWidth = doubleStep + thickness;
+    // Arm is 4px long; from centre was not fine :)
+    auto armLength = roundDiv(pxSide * 4, BASE_SIZE);
+
+    auto doubleX = (pxSide - doubleWidth + 1) / 2;
+    auto doubleLeft = rect.x() + doubleX;
+    painter->fillRect(doubleLeft,              rect.y(), thickness, pxSide, FG_INTER);
+    painter->fillRect(doubleLeft + doubleStep, rect.y(), thickness, pxSide, FG_INTER);
+
+    auto armY = (pxSide + 1 - thickness) / 2;
+    painter->fillRect(doubleLeft - armLength, rect.y() + armY, armLength, thickness, FG_INTER);
+}
 
 ///// CoarseImage //////////////////////////////////////////////////////////////
 
@@ -720,7 +752,7 @@ ie::Legacy::Legacy(const char* fname)
 void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     // Fill BG
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     static constexpr unsigned MIN_WIDTH = 11;
 
@@ -755,7 +787,7 @@ ie::PlayingCard::~PlayingCard() = default;
 
 void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     // Get dimensions
     // (point’s dimensions are baked into SVG)
@@ -800,7 +832,7 @@ ie::Mahjong::~Mahjong() = default;
 
 void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, Qt::white);
+    painter->fillRect(rect, BG_INTER);
 
     // Get dimensions
     auto dim = util::cardDimensions(rect, scale, 10, 0.25);
@@ -1197,15 +1229,6 @@ ie::Small::Small(const uc::Block& block)
 }
 
 ie::Small::~Small() = default;
-
-namespace {
-
-    template <std::integral T>
-    constexpr inline T roundDiv(T x, T y) {
-        return (x + (y >> 1)) / y;
-    }
-
-}
 
 void ie::Small::paint1(QPainter *painter, const QRect &rect, qreal)
 {

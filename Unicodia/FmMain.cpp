@@ -236,6 +236,8 @@ namespace {
             return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", ie::MRG_SIMPLER, 100);
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
+        case 0x2500:    // Box drawing
+            return new ie::BoxDraw;
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x2FF0:    // Ideographic description
