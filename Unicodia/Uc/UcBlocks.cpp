@@ -290,7 +290,7 @@ constinit const uc::Block uc::blocks[] {
             "Balinese",
             { EcScript::Bali, 0 }, MapSubtype::DEAD, EcScript::Bali },
     // Sundanese OK
-    { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN },
+    { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN, {}, 3_hy },
             "Sundanese",
             { EcScript::Sund, 0 }, MapSubtype::ALIVE,
             EcScript::Sund, EcFont::NORMAL, Bfg::VIRAMA_UP },
@@ -713,7 +713,7 @@ constinit const uc::Block uc::blocks[] {
             "Meetei Mayek",
             { EcScript::Mtei, 0 }, MapSubtype::ALIVE, EcScript::Mtei },
     // Hangul syllables OK
-    { 0xAC00, 0xD7AF, { 0xAC13, EcContinent::CJK },
+    { 0xAC00, 0xD7AF, { 0xAC13, EcContinent::CJK, Ifg::PAINT_SVG, SvgHint{ 11, 2 } },
             "Hangul Syllables",
             { EcScript::Hang, 'Z' }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
