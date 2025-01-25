@@ -63,13 +63,14 @@ namespace uc {
         PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
         HINT_PX_CENTER    = 1<<17,  ///< For TALL: [+] hint pixel centre to pixel centre
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
-        ENG_HINT          = 0,                      /// Engine: default (hinted SVG)
-        ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
-        ENG_FORMAT        = ENG_BIT_1,              /// Engine: format character
-        ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine: tall letter (only X hint means)
-        ENG_LONG          = ENG_BIT_2,              /// Engine: align by long side
-        ENG_TALL_PAINT    = ENG_TALL | PAINT_SVG,   /// These flags commonly come together
-        ENG_LONG_PAINT    = ENG_LONG | PAINT_SVG,   /// These flags commonly come together
+        ENG_HINT          = 0,                      /// Engine 0: default (hinted SVG)
+        ENG_CUSTOM        = ENG_BIT_0,              /// Engine 1: custom
+        ENG_FORMAT        = ENG_BIT_1,              /// Engine 2: format character
+        ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine 3: tall letter (only X hint means)
+        ENG_LONG          = ENG_BIT_2,              /// Engine 4: align by long side
+        ENG_CUSTOM_PAINT  = ENG_CUSTOM | PAINT_SVG, /// These flags commonly come together
+        ENG_TALL_PAINT    = ENG_TALL | PAINT_SVG,
+        ENG_LONG_PAINT    = ENG_LONG | PAINT_SVG,
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

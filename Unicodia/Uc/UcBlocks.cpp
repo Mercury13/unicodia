@@ -255,7 +255,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 1 }, MapSubtype::ALIVE,
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Limbu OK
-    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, Ifg::ENG_CUSTOM_PAINT },
             "Limbu",
             { EcScript::Limb, 0 }, MapSubtype::ALIVE, EcScript::Limb },
     // Tai Le OK
@@ -395,7 +395,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::TECHNICAL, Bfg::NO_EMOJI },
     // Control pictures OK
-    { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::ENG_CUSTOM_PAINT },
             "Control Pictures",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
@@ -611,7 +611,7 @@ constinit const uc::Block uc::blocks[] {
             "Vai",
             { EcScript::Vaii, 0 }, MapSubtype::ALIVE, EcScript::Vaii },
     // Cyr ex B OK, modified font a bit
-    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::PAINT_SVG | Ifg::ENG_CUSTOM },
+    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::ENG_CUSTOM_PAINT },
             "Cyrillic Extended-B",
             { EcScript::Cyrl, 'B' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::HAS_DESCRIPTION },
@@ -850,7 +850,7 @@ constinit const uc::Block uc::blocks[] {
             "Osmanya",
             { EcScript::Osma, 0 }, MapSubtype::ALIVE, EcScript::Osma },
     // Osage OK
-    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA, Ifg::PAINT_SVG | Ifg::ENG_CUSTOM },
+    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA, Ifg::ENG_CUSTOM_PAINT },
             "Osage",
             { EcScript::Osge, 0 }, MapSubtype::ALIVE, EcScript::Osge },
     // Elbasan OK
@@ -1111,7 +1111,7 @@ constinit const uc::Block uc::blocks[] {
             "Nandinagari",
             { EcScript::Nand, 0 }, MapSubtype::DEAD, EcScript::Nand },
     // Zanabazar square OK
-    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::ENG_CUSTOM | Ifg::PAINT_SVG },
+    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA, Ifg::ENG_CUSTOM_PAINT },
             "Zanabazar Square",
             { EcScript::Zanb, 0 }, MapSubtype::DEAD,
             EcScript::Zanb, EcFont::NORMAL, Bfg::BIG_CONTROLS },
@@ -1177,8 +1177,7 @@ constinit const uc::Block uc::blocks[] {
             "Makasar",
             { EcScript::Maka, 0 }, MapSubtype::DEAD, EcScript::Maka },
     // Kawi OK
-    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN,
-                          Ifg::ENG_CUSTOM | Ifg::SHIFT_DOWN | Ifg::PAINT_SVG },
+    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::ENG_CUSTOM_PAINT | Ifg::SHIFT_DOWN },
             "Kawi",
             { EcScript::Kawi, 0 }, MapSubtype::ALIVE,
             EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
