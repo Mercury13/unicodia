@@ -790,7 +790,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Linb, 2 }, MapSubtype::DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek numbers OK
-    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE, {}, SvgHint{ 3, 1, ImbaX::RIGHT_4 } },
+    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT, 0_hx + ImbaX::LEFT_3 },
         "Ancient Greek Numbers",
             { EcScript::Grek, 2 }, MapSubtype::DEAD,
             EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
