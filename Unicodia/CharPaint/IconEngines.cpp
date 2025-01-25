@@ -1102,16 +1102,18 @@ void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
     auto x = (rect.width() - scaledW) / 2;
 
     // Hint by moving left/right
-    auto hintActual = x + (hintX - imbaX * 0.1) * realScale;
-    double myHintX = hintX;
-    double hintWanted;
-    if (hintPixelCenter) {
-        hintWanted = std::round(hintActual - 0.5) + 0.5;
-        myHintX += 0.5;
-    } else {
-        hintWanted = std::round(hintActual);
+    if (hintX != uc::NO_HINT.v) {
+        auto hintActual = x + (hintX - imbaX * 0.1) * realScale;
+        double myHintX = hintX;
+        double hintWanted;
+        if (hintPixelCenter) {
+            hintWanted = std::round(hintActual - 0.5) + 0.5;
+            myHintX += 0.5;
+        } else {
+            hintWanted = std::round(hintActual);
+        }
+        x = hintWanted - myHintX * realScale;
     }
-    x = hintWanted - myHintX * realScale;
 
     QRectF r(rect.left() + x, rect.top() + y, scaledW, scaledH);
     rend->render(painter, r);

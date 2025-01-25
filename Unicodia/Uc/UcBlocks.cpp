@@ -805,7 +805,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::DEAD,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Lycian OK
-    { 0x10280, 0x1029F, { 0x10299, EcContinent::ASIA },
+    { 0x10280, 0x1029F, { 0x10299, EcContinent::ASIA, Ifg::ENG_TALL_PAINT, NO_HINT },
             "Lycian",
             { EcScript::Lyci, 0 }, MapSubtype::DEAD, EcScript::Lyci },
     // Carian OK

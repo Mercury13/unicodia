@@ -117,6 +117,8 @@ namespace uc {
         unsigned char v;
     };
 
+    constexpr TmpHx NO_HINT { .v = 16 };
+
     struct TmpHy {
         unsigned char v;
     };
