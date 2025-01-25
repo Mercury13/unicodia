@@ -1151,6 +1151,8 @@ void ie::ByLong::paint1(QPainter *painter, const QRect &rect, qreal scale)
     const double pxAllowedHiSide = pxSide - pxAllowedMargin * 2;
     const double pxCorrespLoSide = pxAllowedHiSide * dipLoSide / dipHiSide;
     const int pxLoSide = pxCorrespLoSide;     // rounded down
+    if (pxLoSide <= 0)  // strange values?
+       return;
     const double pxHiSide = double(pxLoSide * dipHiSide) / dipLoSide;
     const double pxHiMargin = (pxSide - pxHiSide) * 0.5;
     const int pxLoMargin = (pxSide - pxLoSide) / 2;
