@@ -384,10 +384,6 @@ namespace ie {
     public:
         /// @param [in] synthIcon   destination palette (and whether to repaint SVG at all)
         /// @param [in] aName       file name
-        /// @param [in] aWidth      file’s width in dip
-        /// @param [in] aHintX      hinted line, 0…aWidth
-        /// @param [in] aImbaX      imbalance of hand-hinting
-        /// @warning  Got no X hint → just use Margin
         ByLong(const uc::SynthIcon& synthIcon, std::string_view aName);
         ByLong(const uc::Block& block);
         ~ByLong();
@@ -396,6 +392,24 @@ namespace ie {
     private:
         dumb::Sp<LazySvg> texture;
         QColor bgColor;
+    };
+
+    /// Small letter (much shorter than 16×16 cell) hinted by top and bottom
+    ///
+    class Small : public Veng
+    {
+    public:
+        Small(const uc::SynthIcon& synthIcon, std::string_view name,
+             unsigned char aHintX, uc::ImbaX aImbaX);
+        Small(const uc::Block& block);
+        ~Small();
+        Small* clone() const override { return new Small(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+        const QColor bgColor;
+        const unsigned char hintX;
+        const signed char imbaX;
     };
 
 }   // namespace ie

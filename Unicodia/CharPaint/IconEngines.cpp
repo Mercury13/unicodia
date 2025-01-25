@@ -1173,3 +1173,69 @@ void ie::ByLong::paint1(QPainter *painter, const QRect &rect, qreal scale)
         : QRectF( rect.left() + pxLoMargin, rect.top() + pxHiMargin, pxLoSide, pxHiSide );
     rend->render(painter, r);
 }
+
+
+///// Small ////////////////////////////////////////////////////////////////////
+
+ie::Small::Small(const uc::SynthIcon& synthIcon, std::string_view name,
+                 unsigned char aHintX, uc::ImbaX aImbaX)
+    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(name))),
+      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+      hintX(aHintX),
+      imbaX(static_cast<unsigned char>(aImbaX)) {}
+
+ie::Small::Small(const uc::Block& block)
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor),
+      hintX(block.synthIcon.svgHint.pos.x),
+      imbaX(block.synthIcon.svgHint.imba.x)
+{
+    char buf[48];
+    snprintf(buf, std::size(buf), ":/ScSmall/%04X.svg", int(block.startingCp));
+    texture = dumb::makeSp<LazySvg>(block.synthIcon, buf);
+}
+
+ie::Small::~Small() = default;
+
+namespace {
+
+    template <std::integral T>
+    constexpr inline T roundDiv(T x, T y) {
+        return (x + (y >> 1)) / y;
+    }
+
+}
+
+void ie::Small::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
+    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
+    static constexpr int REMDER_TEN = 138;  // In 1× will round to exact dipHeight
+
+    // Background
+    painter->fillRect(rect, bgColor);
+
+    const auto rend = texture->get();
+    const auto dipWidth = rend->defaultSize().width();
+    const auto dipHeight = rend->defaultSize().height();
+    const int pxSide = std::min(rect.width(), rect.height());
+
+    // Get Y coords
+    int pxBorder = (rect.height() * MRG_SIMPLER + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
+    int pxRemder = pxSide - pxBorder * 2;
+    int pxHeight = roundDiv(dipHeight * 10 * pxRemder, REMDER_TEN);
+    int pxY = pxSide - pxBorder - pxHeight;
+    double realScale = double(pxHeight) / dipHeight;
+
+    // Get X coord somehow
+    double pxWidth = double(pxHeight * dipWidth) / dipHeight;
+    double pxX = (rect.width() - pxWidth) * 0.5;
+
+    // Hint X to pixels
+    auto hintActual = pxX + (hintX - imbaX * 0.1) * realScale;
+    double myHintX = hintX;
+    double hintWanted = std::round(hintActual);
+    pxX = hintWanted - myHintX * realScale;
+
+    QRectF r(rect.left() + pxX, rect.top() + pxY, pxWidth, pxHeight);
+    rend->render(painter, r);
+}

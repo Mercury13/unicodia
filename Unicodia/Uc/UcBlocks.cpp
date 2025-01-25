@@ -790,7 +790,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Linb, 2 }, MapSubtype::DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek numbers OK
-    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT, 0_hx + ImbaX::LEFT_3 },
+    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT, 0_hx + ImbaX::LEFT_2 },
         "Ancient Greek Numbers",
             { EcScript::Grek, 2 }, MapSubtype::DEAD,
             EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
@@ -1419,7 +1419,7 @@ constinit const uc::Block uc::blocks[] {
             "Sutton SignWriting",
             { EcScript::Sgnw, 0}, MapSubtype::SYM_CODE, EcScript::Sgnw },
     // Latin ex G OK, drew in FunkySample
-    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, {}, SvgHint{ 7, 15 } },
+    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_CUSTOM_PAINT },
             "Latin Extended-G",
             { EcScript::Latn, 'G'}, MapSubtype::LATIN,
             EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },

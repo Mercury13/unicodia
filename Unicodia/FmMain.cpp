@@ -260,6 +260,8 @@ namespace {
             return new ie::Taixu;
         case 0x1D360:   // Counting rods
             return new ie::TallyMark;
+        case 0x1DF00:   // Latin G
+            return new ie::Small(block.synthIcon, ":ScCustom/latnG.svg", 4, uc::ImbaX::RIGHT_3);
         case 0x1F000:   // Mahjong
             return new ie::Mahjong;
         case 0x1F0A0:   // Playing cards
