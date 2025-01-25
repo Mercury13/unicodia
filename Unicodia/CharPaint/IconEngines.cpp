@@ -796,7 +796,8 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     auto radius = dim.rcPixel.height() * 0.1;
 
     // Frame
-    painter->setBrush(Qt::NoBrush);
+    painter->setBrush(Qt::white);  // Card’s face is always white, regardless of colour
+    /// @todo [dark] Playing card: what is the pen? And what will be the dark BG?
     painter->setPen(QPen{Qt::black, dim.thickness});
     painter->setRenderHint(QPainter::Antialiasing, true);
     painter->drawRoundedRect(dim.rcFrame, radius, radius);
@@ -934,7 +935,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
     auto stickX0 = rect.left() + (rect.width() - stickTotalWidth) / 2;
     auto x = stickX0;
     for (int i = 0; i < N_STICKS; ++i) {
-        painter->fillRect(x, stickY, stickThickness, stickHeight, Qt::black);
+        painter->fillRect(x, stickY, stickThickness, stickHeight, FG_INTER);
         x += stickStep;
     }
 
