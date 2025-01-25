@@ -1198,7 +1198,9 @@ constinit const uc::Block uc::blocks[] {
             "Cuneiform",
             { EcScript::Xsux, 0 }, MapSubtype::DEAD, EcScript::Xsux },
     // Cuneiform numbers and punct OK
-    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA, {}, 1_hy },
+    // By some nice coincidence, better use default engine
+    // ABOVE_2 = first who makes 2px above at 1.25×
+    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA, {}, SvgHint{ 0, 1, ImbaX::LEFT_4, ImbaY::ABOVE_2 } },
             "Cuneiform Numbers and Punctuation",
             { EcScript::Xsux, 1 }, MapSubtype::DEAD,
             EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },

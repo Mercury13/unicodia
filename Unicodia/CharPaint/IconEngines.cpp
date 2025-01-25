@@ -1056,16 +1056,19 @@ void ie::SvgBelow::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::Tall::Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
-     unsigned char aHintX, uc::ImbaX aImbaX)
+               unsigned char aHintX, uc::ImbaX aImbaX,
+               bool aHintPixelCenter)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
       bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
       hintX(aHintX),
-      imbaX(static_cast<signed char>(aImbaX)) {}
+      imbaX(static_cast<signed char>(aImbaX)),
+      hintPixelCenter(aHintPixelCenter) {}
 
 ie::Tall::Tall(const uc::Block& block)
     : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor),
       hintX(block.synthIcon.svgHint.pos.x),
-      imbaX(block.synthIcon.svgHint.imba.x)
+      imbaX(block.synthIcon.svgHint.imba.x),
+      hintPixelCenter(block.synthIcon.flags.have(uc::Ifg::HINT_PX_CENTER))
 {
     char buf[48];
     snprintf(buf, std::size(buf), ":/ScTall/%04X.svg", int(block.startingCp));
@@ -1100,8 +1103,15 @@ void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
 
     // Hint by moving left/right
     auto hintActual = x + (hintX - imbaX * 0.1) * realScale;
-    auto hintWanted = std::lround(hintActual);
-    x = hintWanted - hintX * realScale;
+    double myHintX = hintX;
+    double hintWanted;
+    if (hintPixelCenter) {
+        hintWanted = std::round(hintActual - 0.5) + 0.5;
+        myHintX += 0.5;
+    } else {
+        hintWanted = std::round(hintActual);
+    }
+    x = hintWanted - myHintX * realScale;
 
     QRectF r(rect.left() + x, rect.top() + y, scaledW, scaledH);
     rend->render(painter, r);

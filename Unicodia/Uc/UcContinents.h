@@ -61,6 +61,7 @@ namespace uc {
         BIG_SVG           = 1<<14,  ///< [+] Do not synthesize an icon, use special big SVG
         BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters sit on dotted circles
         PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
+        HINT_PX_CENTER    = 1<<17,  ///< For TALL: [+] hint pixel centre to pixel centre
         ENG_MASK          = ENG_BIT_0 | ENG_BIT_1 | ENG_BIT_2,  ///< All engines
         ENG_HINT          = 0,                      /// Engine: default (hinted SVG)
         ENG_CUSTOM        = ENG_BIT_0,              /// Engine: custom
@@ -151,6 +152,9 @@ namespace uc {
             : pos{.x = aX, .y = aY }, imba { .y = static_cast<signed char>(imbaY) } {}
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaX imbaX)
             : pos{.x = aX, .y = aY }, imba { .x = static_cast<signed char>(imbaX) } {}
+        explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaX imbaX, ImbaY imbaY)
+            : pos{.x = aX, .y = aY },
+              imba { .x = static_cast<signed char>(imbaX), .y = static_cast<signed char>(imbaY) } {}
         explicit constexpr SvgHint(uint8_t aX, ImbaX imbaX)
             : pos{.x = aX }, imba { .x = static_cast<signed char>(imbaX) } {}
         explicit constexpr SvgHint(uint8_t aY, ImbaY imbaY)
