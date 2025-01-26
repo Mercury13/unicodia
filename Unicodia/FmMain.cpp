@@ -233,7 +233,7 @@ namespace {
         case 0x1900:    // Limbu
             return new ie::Margin(block.synthIcon, ":ScCustom/limb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x2400:    // Control pictures
-            return new ie::SvgBelow(block.synthIcon, ":ScCustom/openbox.svg", ie::MRG_SIMPLER, 100);
+            return new ie::ControlPic;
         case 0x2460:    // Enclosed alnum
             return new ie::OneCircle;
         case 0x2500:    // Box drawing

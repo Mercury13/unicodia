@@ -667,6 +667,32 @@ void ie::BoxDraw::paint1(QPainter *painter, const QRect &rect, qreal)
     painter->fillRect(doubleLeft - armLength, rect.y() + armY, armLength, thickness, FG_INTER);
 }
 
+
+///// ControlPic ////////////////////////////////////////////////////////////////
+
+
+void ie::ControlPic::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    painter->fillRect(rect, BG_INTER);
+    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
+    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
+
+    const int pxSide = std::min(rect.width(), rect.height());
+    const int pxBorder = (rect.height() * MRG_SIMPLER + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
+
+    auto pxThickness = roundDiv(pxSide, BASE_SIZE);
+    auto pxLoSide = roundDiv(pxSide * 9, BASE_SIZE);
+    auto pxTotalWidth = pxLoSide + pxThickness;
+    auto pxArmHeight = roundDiv(pxSide * 3, BASE_SIZE);
+    auto x = rect.x() + (pxSide - pxTotalWidth) / 2;
+    auto yLo = pxSide - pxBorder - pxThickness;
+    auto yArm = yLo - pxArmHeight;
+
+    painter->fillRect(x, yLo,  pxTotalWidth, pxThickness, FG_INTER);
+    painter->fillRect(x,            yArm, pxThickness, pxArmHeight, FG_INTER);
+    painter->fillRect(x + pxLoSide, yArm, pxThickness, pxArmHeight, FG_INTER);
+}
+
 ///// CoarseImage //////////////////////////////////////////////////////////////
 
 
@@ -1052,35 +1078,6 @@ void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
         auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down
         rcContent.moveTop(rcContent.top() + shift);
     }
-    texture->get()->render(painter, rcContent);
-}
-
-
-///// SvgBelow /////////////////////////////////////////////////////////////////
-
-
-ie::SvgBelow::SvgBelow(const uc::SynthIcon& synthIcon, std::string_view aName,
-                       int aBorder, int aSide)
-    : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
-      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
-      border(aBorder), side(aSide) {}
-
-ie::SvgBelow::~SvgBelow() = default;
-
-void ie::SvgBelow::paint1(QPainter *painter, const QRect &rect, qreal)
-{
-    static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
-    static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
-
-    // Background
-    painter->fillRect(rect, bgColor);
-
-    // Where should be the SVG?
-    unsigned scaledBorder = (rect.height() * border + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
-    unsigned scaledSide = (rect.width() * side + BASE_SIZE_TEN_LOHALF) / BASE_SIZE_TEN;
-    auto x = (rect.width() - scaledSide) / 2;
-    auto y = rect.height() - scaledBorder - scaledSide;
-    QRect rcContent(x, y, scaledSide, scaledSide);
     texture->get()->render(painter, rcContent);
 }
 

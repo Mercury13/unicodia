@@ -156,6 +156,15 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
+    /// Programmatic drawing of Control Pictures icon
+    /// Type: lo-res
+    class ControlPic : public Veng
+    {
+    public:
+        ControlPic* clone() const override { return new ControlPic(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    };
+
     /// Programmatic drawing of Yijing icon
     /// Type: lo-res
     class CoarseImage : public Veng
@@ -333,28 +342,6 @@ namespace ie {
         QColor bgColor;
         int value;
         Flags<Mfg> flags;
-    };
-
-    /// Drawing small square SVG in the lower part of the cell (Control pictures)
-    ///    SVG is specified with gap from bottom and base size,
-    ///    both in 0.1dip increment
-    /// Type: lo-res
-    class SvgBelow : public Veng
-    {
-    public:
-        /// @param [in] synthIcon   destination palette (and whether to repaint SVG at all)
-        /// @param [in] aName       file name
-        /// @param [in] aBorder     border in 0.1 dip
-        /// @param [in] aSide       side in 0.1 dip
-        SvgBelow(const uc::SynthIcon& synthIcon, std::string_view aName,
-               int aBorder, int aSide);
-        ~SvgBelow();
-        SvgBelow* clone() const override { return new SvgBelow(*this); }
-        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
-    private:
-        dumb::Sp<LazySvg> texture;
-        QColor bgColor;
-        int border, side;
     };
 
     /// A tall W×14 image pixel-hinted by three lines:
