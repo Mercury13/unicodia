@@ -676,7 +676,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Mymr, 'B' }, MapSubtype::ALIVE,
             EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cham OK
-    { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA },
+    { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Cham",
             { EcScript::Cham, 0 }, MapSubtype::ALIVE, EcScript::Cham },
     // Myanmar ex A OK
