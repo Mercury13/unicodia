@@ -172,6 +172,7 @@ namespace {
         "IBM",
         "MAC",
         "SPECTRUM",
+        "BBC_MASTER"
     };
 
     constexpr auto I_LAST_OLD_COMP = std::size(oldCompNames) - 1;

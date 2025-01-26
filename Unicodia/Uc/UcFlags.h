@@ -118,7 +118,7 @@ namespace uc {
     /// \brief The OldComp enum
     ///   Old computers, now controlled by AutoBuilder
     ///
-    enum class OldComp : uint32_t {
+    enum class OldComp : unsigned int {
         NONE        = 0,
         AMSTRAD_CPC = 1 << 0,
         APPLE       = 1 << 1,
@@ -144,6 +144,7 @@ namespace uc {
         IBM         = 1 << 21,
         MAC         = 1 << 22,
         SPECTRUM    = 1 << 23,
+        BBC_MASTER  = 1 << 24,
         // Technical
         DUMMY,
         LAST = DUMMY - 1,

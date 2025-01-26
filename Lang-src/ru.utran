@@ -4942,7 +4942,7 @@
       <p>* characters in intellectual property, like the Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
      <transl>
       <p>Символы с разных компьютеров и систем 1970‑х и 80‑х: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}и, по совпадению, [[po:Korvet]], советский ПК.</p>
@@ -4953,7 +4953,7 @@
       <p>* символы в интеллектуальной собственности, как эмблема Apple;</p>
       <p>* знаки, [[pt:unification|уже имеющиеся]] в разделе [[pt:pseudographics|псевдографики]]. В правильном шрифте старая псевдографика должна полностью стыковаться с новыми символами: {{sm|█🬗}}</p>
       <p />
-      <p>Изначально (с версии 1.0) поддерживаются: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Изначально (с версии 1.0) поддерживаются: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </transl>
     </text>
    </group>
@@ -14409,6 +14409,12 @@
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
      <transl>эмблема Atari, портрет 2×2</transl>
+    </text>
+   </group>
+   <group id="BbcMaster">
+    <text id="Text">
+     <orig>A strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory.</orig>
+     <transl>Странный компьютер, который целился в несколько ниш, и не попал ни в одну. Низкая цена и поддержка ТВ привели к 8-битному процессору и неквадратному пикселю, а учёные жаловались на нехватку памяти.</transl>
     </text>
    </group>
    <group id="C64">

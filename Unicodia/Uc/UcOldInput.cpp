@@ -190,7 +190,6 @@ constinit const uc::old::Info uc::old::info[] {
       .charTypes = CharType::TYPOGRAPHIC_CHARS
                  | CharType::ARROWS
                  | CharType::MATH
-                 | CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS
                  | CharType::MISC_IMAGES,
       .mem { 512, 16_mb } },
     // Sinclair ZX80/81
@@ -428,6 +427,21 @@ constinit const uc::old::Info uc::old::info[] {
       .year = 1982,
       .charTypes = CharType::PSEUDO_BLOCKS | CharType::ARROWS,
       .mem { 48, 128 } },
+    // BBC Master
+    { .key = "BbcMaster",
+      .fixedName = u8"BBC" NBSP "Master",
+      .country = Country::GB,
+      .type = Type::HOME_EDUC_PC,
+      .graphics = Graphics::YES,
+      .color = Color::LATER_MODELS,
+      .sales = Sales::OVER_300K,
+      .cpuDataWidth = 8,
+      .supportedSince = uc::EcVersion::V_1_1,
+      .flags = NO_FLAGS,
+      .year = 1986,
+      .charTypes = CharType::PSEUDO_BORDERS | CharType::PSEUDO_BLOCKS | CharType::ARROWS
+                   | CharType::MATH | CharType::TYPOGRAPHIC_CHARS,
+      .mem { 128, 512 } },
 };
 
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;

@@ -4943,7 +4943,7 @@
       <p>* characters in intellectual property, like the Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
      <transl>
       <p>Символи з різних комп’ютерів та систем 1970-х та 1980-х: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}і, за співпадінням, [[po:Korvet]], радянський ПК.</p>
@@ -4954,7 +4954,7 @@
       <p>* символи в інтелектуальній власності, як емблема Apple;</p>
       <p>* знаки, [[pt:unification|вже наявні]] у розділі [[pt:pseudographics|псевдографіки]]. У правильному шрифті стара псевдографіка повинна повністю стикуватися з новими символами: {{sm|█🬗}}</p>
       <p />
-      <p>Початково (з версії 1.0) підтримуються: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Початково (з версії 1.0) підтримуються: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </transl>
     </text>
    </group>
@@ -14410,6 +14410,12 @@
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
      <transl>емблема Atari, портрет 2×2</transl>
+    </text>
+   </group>
+   <group id="BbcMaster">
+    <text id="Text">
+     <orig>A strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory.</orig>
+     <transl>Дивний комп’ютер, що цілився у кілька ніш, і не влучив у жодну. Низька ціна та підтримка ТБ призвели до 8-бітного процесора та неквадратного пікселя, а науковці жалілись на брак пам’яті.</transl>
     </text>
    </group>
    <group id="C64">

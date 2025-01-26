@@ -3686,7 +3686,7 @@
       <p>* characters in intellectual property, like the Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
     </text>
    </group>
@@ -10104,6 +10104,11 @@
     </text>
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
+    </text>
+   </group>
+   <group id="BbcMaster">
+    <text id="Text">
+     <orig>A strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory.</orig>
     </text>
    </group>
    <group id="C64">

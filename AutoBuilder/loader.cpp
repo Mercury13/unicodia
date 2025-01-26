@@ -322,7 +322,7 @@ namespace {
         OldCompInfo::mk<OLD_VIC_4>(uc::OldComp::COMMODORE),
         OldCompInfo::mk<OLD_COMMOD_STUB>(uc::OldComp::COMMODORE),
         OldCompInfo::mk<OLD_RISC_1>(uc::OldComp::RISC_OS),
-        OldCompInfo::mk<OLD_RISC_2>(uc::OldComp::RISC_OS),
+        OldCompInfo::mk<OLD_RISC_2>(uc::OldComp::BBC_MASTER),
         OldCompInfo::mk<OLD_RISC_3>(uc::OldComp::RISC_OS),
         OldCompInfo::mk<OLD_RISC_4>(uc::OldComp::RISC_OS),
         OldCompInfo::mk<OLD_SINC_1>(uc::OldComp::SINCLAIR),

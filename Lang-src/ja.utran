@@ -4936,7 +4936,7 @@
       <p>* characters in intellectual property, like the Apple logo;</p>
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
-      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]].</p>
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
      <transl>
       <p>1970 年代と 80 年代のさまざまなコンピューターとシステムのキャラクター: [[po:AmstradCpc]]、[[po:Aquarius]]、[[po:Atari400]]、[[po:AtariSt]]、[[po:Trs80]]、[[po:CoCo]]、[[po:Oric]]、[[po:Apple2]]、[[po:C64]]、[[po:Zx80]]、[[po:Msx]]、[[po:RiscOs]]、[[po:Teletext]]、[[po:Minitel]]{{-}}そして偶然にも、ソビエト PC の [[po:Korvet]]。</p>
@@ -4947,7 +4947,7 @@
       <p>* Apple ロゴなどの知的財産内の文字。</p>
       <p>* 既存の [[pt:pseudographics|疑似グラフィックス]] ブロック内の [[pt:unification|既に存在する]] 記号。正しいフォントでは、古い疑似グラフィックスと新しい疑似グラフィックスが一緒に並べられる必要があります: {{sm|█🬗}}</p>
       <p />
-      <p>当初 (バージョン 1.0 以降) にサポートされていたもの: [[po:Ibm]]、[[po:Mac]]、[[po:Spectrum]]。</p>
+      <p>当初 (バージョン 1.0 以降) にサポートされていたもの: [[po:Ibm]]、[[po:Mac]]、[[po:Spectrum]]、[[po:BbcMaster]]。</p>
      </transl>
     </text>
    </group>
@@ -14357,6 +14357,11 @@
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
      <transl>Atari ロゴ、2×2 縦</transl>
+    </text>
+   </group>
+   <group id="BbcMaster">
+    <text id="Text">
+     <orig>A strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory.</orig>
     </text>
    </group>
    <group id="C64">
