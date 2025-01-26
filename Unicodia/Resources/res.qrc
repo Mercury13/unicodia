@@ -18,7 +18,6 @@
         <file>ScCustom/blockelem.png</file>
         <file>ScCustom/cyrlB.svg</file>
         <file>ScCustom/kawi.svg</file>
-        <file>ScCustom/latnG.svg</file>
         <file>ScCustom/legacy.png</file>
         <file>ScCustom/legacy2.png</file>
         <file>ScCustom/limb.svg</file>
@@ -44,6 +43,7 @@
 		<file>ScTall/11FB0.svg</file>
 		<file>ScTall/16AD0.svg</file>
 		<file>ScTall/16F00.svg</file>
+		<file>ScSmall/1DF00.svg</file>
         <file>Texts/about.htm</file>
     </qresource>
 </RCC>

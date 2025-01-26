@@ -68,9 +68,11 @@ namespace uc {
         ENG_FORMAT        = ENG_BIT_1,              /// Engine 2: format character
         ENG_TALL          = ENG_BIT_1 | ENG_BIT_0,  /// Engine 3: tall letter (only X hint means)
         ENG_LONG          = ENG_BIT_2,              /// Engine 4: align by long side
+        ENG_SMALL         = ENG_BIT_2 | ENG_BIT_0,  /// Engine 5: letter so small that letter’s size matters
         ENG_CUSTOM_PAINT  = ENG_CUSTOM | PAINT_SVG, /// These flags commonly come together
         ENG_TALL_PAINT    = ENG_TALL | PAINT_SVG,
         ENG_LONG_PAINT    = ENG_LONG | PAINT_SVG,
+        ENG_SMALL_PAINT   = ENG_SMALL | PAINT_SVG,
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

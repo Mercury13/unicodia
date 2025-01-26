@@ -262,8 +262,6 @@ namespace {
             return new ie::Taixu;
         case 0x1D360:   // Counting rods
             return new ie::TallyMark;
-        case 0x1DF00:   // Latin G
-            return new ie::Small(block.synthIcon, ":ScCustom/latnG.svg", 4, uc::ImbaX::RIGHT_3);
         case 0x1F000:   // Mahjong
             return new ie::Mahjong;
         case 0x1F0A0:   // Playing cards
@@ -348,6 +346,9 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                     break;
                 case static_cast<int>(uc::Ifg::ENG_LONG):
                     block->icon = new QIcon(new ie::ByLong(*block));
+                    break;
+                case static_cast<int>(uc::Ifg::ENG_SMALL):
+                    block->icon = new QIcon(new ie::Small(*block));
                     break;
                 default:
                     block->icon = new QIcon(new ie::Hint(*block));

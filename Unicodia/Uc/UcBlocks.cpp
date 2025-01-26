@@ -757,7 +757,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_SIMSUN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small variants OK
-    { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_SMALL_PAINT },
             "Small Form Variants",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_SIMSUN, Bfg::CJK | Bfg::COLLAPSIBLE },
@@ -1419,7 +1419,7 @@ constinit const uc::Block uc::blocks[] {
             "Sutton SignWriting",
             { EcScript::Sgnw, 0}, MapSubtype::SYM_CODE, EcScript::Sgnw },
     // Latin ex G OK, drew in FunkySample
-    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_CUSTOM_PAINT },
+    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_SMALL_PAINT, 4_hx + uc::ImbaX::RIGHT_3 },
             "Latin Extended-G",
             { EcScript::Latn, 'G'}, MapSubtype::LATIN,
             EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
