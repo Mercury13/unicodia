@@ -704,7 +704,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'E' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Cherokee supp OK
-    { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA },
+    { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA, Ifg::ENG_SMALL_PAINT, 5_hx + ImbaX::RIGHT_2 },
             "Cherokee Supplement",
             { EcScript::Cher, 1 }, MapSubtype::ALIVE,
             EcScript::Cher, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
