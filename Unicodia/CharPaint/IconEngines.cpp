@@ -499,6 +499,7 @@ ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aP
             snprintf(buf, std::size(buf), ":/ScBig/%04X.svg", int(aPixStart));
             texture = dumb::makeSp<LazySvg>(buf);
         } else {    // Small SVG
+            /// @todo [future] Only default engine is supported now, check!
             texture = dumb::makeSp<LazySvg>(si, aPixStart);
         }
     }
