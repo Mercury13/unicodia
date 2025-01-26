@@ -757,7 +757,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_SIMSUN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small variants OK
-    { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_SMALL_PAINT },
+    { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_SMALL_PAINT, 6_hx },
             "Small Form Variants",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_SIMSUN, Bfg::CJK | Bfg::COLLAPSIBLE },
