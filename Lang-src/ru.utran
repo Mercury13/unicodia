@@ -14413,8 +14413,8 @@
    </group>
    <group id="BbcMaster">
     <text id="Text">
-     <orig>A strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory.</orig>
-     <transl>Странный компьютер, который целился в несколько ниш, и не попал ни в одну. Низкая цена и поддержка ТВ привели к 8-битному процессору и неквадратному пикселю, а учёные жаловались на нехватку памяти.</transl>
+     <orig>It had a nice graphical OS, but it was a strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory. Later models had a second Intel CPU, but IBM compatibility was really basic.</orig>
+     <transl>Он имел красивую графическую ОС, но это был странный компьютер, который целился в несколько ниш, и не попал ни в одну. Низкая цена и поддержка ТВ привели к 8-битному процессору и неквадратному пикселю, а учёные жаловались на нехватку памяти. В поздних моделях был второй процессор Intel, но совместимость с IBM была минимальной.</transl>
     </text>
    </group>
    <group id="C64">
