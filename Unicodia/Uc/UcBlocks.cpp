@@ -838,7 +838,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Persian",
             { EcScript::Xpeo, 0 }, MapSubtype::DEAD, EcScript::Xpeo },
     // Deseret OK
-    { 0x10400, 0x1044F, { 0x10414, EcContinent::AMERICA, {}, 14_hx },
+    { 0x10400, 0x1044F, { 0x10414, EcContinent::AMERICA, Ifg::ENG_TALL_PAINT, 12_hx + ImbaX::RIGHT_1 },
             "Deseret",
             { EcScript::Dsrt, 0 }, MapSubtype::DEAD, EcScript::Dsrt },
     // Shavian OK
