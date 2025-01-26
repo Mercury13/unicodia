@@ -2265,16 +2265,16 @@
      <orig>
       <p>Elements of [[pt:pseudographics|pseudographics]] intended for box drawing. Like all pseudographics, they are mainly used with monospace fonts.</p>
       <p />
-      <p>IBM PC compatibles had two types of lines, single and double. Unicode adds heavy, dotted and heavy dotted lines.</p>
+      <p>[[po:Ibm]] compatibles had two types of lines, single and double. Unicode adds heavy, dotted and heavy dotted lines.</p>
       <p />
-      <p>''BBC{{_}}Master'' computer has rounded corners.</p>
+      <p>''[[po:BbcMaster]]'' computer has rounded corners.</p>
      </orig>
      <transl>
       <p>Елементи [[pt:pseudographics|псевдографіки]] для малювання рамок. Як і будь-яка псевдографіка, частіше за все використовується у моноширинних шрифтах.</p>
       <p />
-      <p>В IBM-сумісних ПК були два різновиди ліній{{-}}одиночна та подвійна. Юнікод додає до них товсту, пунктирну і товсту пунктирну.</p>
+      <p>В [[po:Ibm|IBM]]-сумісних ПК були два різновиди ліній{{-}}одиночна та подвійна. Юнікод додає до них товсту, пунктирну і товсту пунктирну.</p>
       <p />
-      <p>У комп’ютері ''BBC{{_}}Master'' є заокруглені кутки.</p>
+      <p>У комп’ютері ''[[po:BbcMaster]]'' є заокруглені кутки.</p>
      </transl>
     </text>
    </group>
