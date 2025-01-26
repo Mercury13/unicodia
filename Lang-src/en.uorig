@@ -10108,7 +10108,11 @@
    </group>
    <group id="BbcMaster">
     <text id="Text">
-     <orig>Was created by Acorn Computers as the second educational computer (after BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientific model was canceled because of low memory. Later model had a second Intel CPU, but IBM compatibility was really basic, though it could run several important programs like ''Turbo{{_}}C'', and with memory expansion module even ''WordPerfect''.</orig>
+     <orig>
+      <p>Was created by Acorn Computers as the second educational computer (after BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and the scientific model was cancelled because of low memory.</p>
+      <p />
+      <p>A later model had a second Intel CPU, but IBM compatibility was basic{{-}}though it could run several important programs like ''Turbo{{_}}C'', and with memory expansion module even ''WordPerfect''.</p>
+     </orig>
     </text>
    </group>
    <group id="C64">
