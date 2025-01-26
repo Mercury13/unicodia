@@ -14414,8 +14414,8 @@
    </group>
    <group id="BbcMaster">
     <text id="Text">
-     <orig>It had a nice graphical OS, but it was a strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientists complained of low memory. Later models had a second Intel CPU, but IBM compatibility was really basic.</orig>
-     <transl>Він мав красиву графічну ОС, але це був дивний комп’ютер, що цілився у кілька ніш, і не влучив у жодну. Низька ціна та підтримка ТБ призвели до 8-бітного процесора та неквадратного пікселя, а науковці жалілись на брак пам’яті. У пізніх моделях був другий процесор Intel, але сумісність з IBM була мінімальна.</transl>
+     <orig>Was created by Acorn Computers as the second educational computer (after BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches, and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and scientific model was canceled because of low memory. Later model had a second Intel CPU, but IBM compatibility was really basic, though it could run several important programs like ''Turbo{{_}}C'', and with memory expansion module even ''WordPerfect''.</orig>
+     <transl>Був створений Acorn Computers як другий навчальний комп’ютер (після BBC Micro). Він мав красиву графічну ОС, але це був дивний комп’ютер, що цілився у кілька ніш, і не влучив у жодну. Низька ціна та підтримка ТБ призвели до 8-бітного процесора та неквадратного пікселя, а наукову модель відмінили через брак пам’яті. У пізній моделі був другий процесор Intel, але сумісність з IBM була мінімальна, хоча він міг запускати кілька важливих програм на кшталт ''Turbo{{_}}C'', а з модулем розширення пам’яті навіть ''WordPerfect''.</transl>
     </text>
    </group>
    <group id="C64">
