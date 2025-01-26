@@ -1150,6 +1150,10 @@ void FmMain::initLibrary(const InitBlocks& ib)
     libLocalMenu.acCopy = new QAction("[Copy]", libLocalMenu.menu);
         libLocalMenu.menu->addAction(libLocalMenu.acCopy);
         QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+    libLocalMenu.menu->addSeparator();
+    libLocalMenu.acAddToFavs = new QAction("[Add to favs]", libLocalMenu.menu);
+        libLocalMenu.menu->addAction(libLocalMenu.acAddToFavs);
+        QWidget::connect(libLocalMenu.acAddToFavs, &QAction::triggered, this, &This::libFavsCalled);
     QWidget::connect(ui->treeLibrary, &QWidget::customContextMenuRequested, this, &This::libLocalMenuRequested);
 
     // Create toolbar
@@ -2240,7 +2244,23 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
 {
     auto index = ui->treeLibrary->currentIndex();
     auto& node = libModel.nodeAt(index);
+
+    // Copy
     libLocalMenu.acCopy->setEnabled(!node.value.empty());
+
+    // Favourites
+    libLocalMenu.direction = DIR_ADD;
+    auto dug = EmojiPainter::getCp(node.value);
+    if (dug.cp) {
+        libLocalMenu.direction = !config::favs.contains(dug.cp);
+        libLocalMenu.acAddToFavs->setEnabled(true);
+    } else {
+        libLocalMenu.acAddToFavs->setEnabled(false);
+    }
+    libLocalMenu.acAddToFavs->setText(libLocalMenu.direction
+                ? ui->acAddCpToFavs->text()
+                : ui->acRemoveFromFavs->text());
+
     TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), libLocalMenu.menu, where);
 }
 
@@ -2281,4 +2301,10 @@ void FmMain::favsLocalMenuActivated()
 void FmMain::favsFavsCalled()
 {
     addRemoveFromFavs(ui->wiFavsShowcase, nullptr, DIR_REMOVE);
+}
+
+
+void FmMain::libFavsCalled()
+{
+    addRemoveFromFavs(ui->wiLibShowcase, nullptr, libLocalMenu.direction);
 }

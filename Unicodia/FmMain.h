@@ -148,7 +148,6 @@ public:
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
-    mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
 };
 
 
@@ -207,6 +206,7 @@ private:
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
+        QAction* acAddToFavs = nullptr;
         bool direction = DIR_ADD;
     } libLocalMenu;
 
@@ -311,6 +311,7 @@ private slots:
     void charsFavsCalled();
     void favsLocalMenuActivated();
     void favsFavsCalled();
+    void libFavsCalled();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
