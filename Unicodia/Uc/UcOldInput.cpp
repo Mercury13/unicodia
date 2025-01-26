@@ -431,7 +431,7 @@ constinit const uc::old::Info uc::old::info[] {
     { .key = "BbcMaster",
       .fixedName = u8"BBC" NBSP "Master",
       .country = Country::GB,
-      .type = Type::HOME_EDUC_PC,
+      .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
       .color = Color::LATER_MODELS,
       .sales = Sales::OVER_300K,
