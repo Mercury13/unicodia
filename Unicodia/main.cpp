@@ -84,7 +84,7 @@ QPalette darkPalette()
 
 int main(int argc, char *argv[])
 {
-    qputenv("QT_SCALE_FACTOR", "1.25");
+    //qputenv("QT_SCALE_FACTOR", "1.25");
     //qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
     QApplication a(argc, argv);
     //a.setStyle("fusion");  Try other styles
