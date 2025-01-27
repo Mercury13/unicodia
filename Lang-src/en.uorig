@@ -3333,9 +3333,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Counting rods is an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
+      <p>Counting rods are an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until the 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
       <p />
-      <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are written on paper sometimes.</p>
+      <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are sometimes written on paper.</p>
       <p />
       <p>If you need to count something and memorize the number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
      </orig>
