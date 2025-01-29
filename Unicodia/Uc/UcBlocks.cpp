@@ -907,11 +907,9 @@ constinit const uc::Block uc::blocks[] {
             "Lydian",
             { EcScript::Lydi, 0 }, MapSubtype::DEAD, EcScript::Lydi },
     /// @todo [U17, tofu] Sidetic
-#if ENABLE_17
     { 0x10940, 0x1095F, { 0x10940, EcContinent::ASIA_RTL, Ifg::PAINT_SVG | Ifg::MISSING },
             "Sidetic",
             { EcScript::Sidt, 0 }, MapSubtype::DEAD, EcScript::Sidt },
-#endif
     // Meroitic hiero OK
     { 0x10980, 0x1099F, { 0x10980, EcContinent::AFRICA },
             "Meroitic Hieroglyphs",
@@ -1136,12 +1134,10 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     /// @todo [U17] Sharada supp
     /// @todo [U17, data] Is that Shrd supplement dead?
-#if ENABLE_17
     { 0x11B60, 0x11B7F, { 0x11B60, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
             "Sharada Supplement",
             { EcScript::Shrd, '1' }, MapSubtype::DEAD,
             EcScript::Shrd, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
-#endif
     // Sunuwar OK, though font is horrible
     { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, {}, 7_hx },
             "Sunuwar",
@@ -1161,12 +1157,10 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::DEAD,
             EcScript::Gonm, EcFont::NORMAL, Bfg::VIRAMA_UP },
     /// @todo [U17, tofu] Tolong Siki
-#if ENABLE_17
     { 0x11DB0, 0x11DEF, { 0x11DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
             "Tolong Siki",
             { EcScript::Tols, 0 }, MapSubtype::ALIVE,
             EcScript::Tols, EcFont::NORMAL },
-#endif
     // Gunjala Gondi OK
     { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_4 } },
             "Gunjala Gondi",
@@ -1263,23 +1257,19 @@ constinit const uc::Block uc::blocks[] {
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
     /// @todo [U17, tofu] Chisoi
-#if ENABLE_17
     { 0x16D80, 0x16DAF, { 0x16DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING, 1_hy },
             "Chisoi",
             { EcScript::Chis, 0 }, MapSubtype::ALIVE,
             EcScript::Chis, EcFont::NORMAL },
-#endif
     // Medefaidrin OK
     { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin",
             { EcScript::Medf, 0 }, MapSubtype::DEAD, EcScript::Medf },
-    /// @todo [U17] Beria Erfe: add SIL’s font
-#if ENABLE_17
+    // Beria Erfe OK, SIL’s font
     { 0x16EA0, 0x16EDF, { 0x16EA1, EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint { 9, ImbaX::RIGHT_3 } },
             "Beria Erfe",
             { EcScript::Berf, 0 }, MapSubtype::ALIVE,
             EcScript::Berf, EcFont::NORMAL },
-#endif
     // Miao OK
     { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA, Ifg::ENG_TALL_PAINT, 9_hx + ImbaX::RIGHT_2 },
             "Miao",
@@ -1315,12 +1305,10 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION,
             EcGlyphStyleChannel::NONE, { 0x18D8F, EcVersion::V_14_0 } },
     /// @todo [U17, tofu] Tangut Components Supplement
-#if ENABLE_17
     { 0x18D80, 0x18DFF, { 0x18D80, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Tangut Components Supplement",
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
-#endif
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
@@ -1362,12 +1350,10 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZOLD, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
     /// @todo [U17, tofu] Misc sym supp
-#if ENABLE_17
     { 0x1CEC0, 0x1CEFF, { 0x1CEC0, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Miscellaneous Symbols Supplement",
             { EcScript::ZSYM, 2 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
-#endif
     // Znamenny OK, found cool font on Ponomar
     { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation",
@@ -1455,15 +1441,12 @@ constinit const uc::Block uc::blocks[] {
             "Ol Onal",
             { EcScript::Onao, 0 }, MapSubtype::ALIVE, EcScript::Onao },
     /// @todo [U17, tofu] Tai Yo
-    /// @todo [U17, vertical]
-#if ENABLE_17
     { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA,
                           Ifg::PAINT_SVG | Ifg::MISSING | Ifg::ROTATE_LTR_CW },
             "Tai Yo",
             { EcScript::Tayo, 0 }, MapSubtype::DEAD,
             EcScript::Tayo, EcFont::NORMAL, NO_FLAGS,
             EcGlyphStyleChannel::VERTICAL },
-#endif
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA, {}, SvgHint{ 14, ImbaY::ABOVE_4 } },
             "Ethiopic Extended-B",
@@ -1620,12 +1603,10 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'H' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     /// @todo [U17, tofu] CJK J
-#if ENABLE_17
     { 0x323B0, 0x3347F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "CJK Unified Ideographs Extension J",
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
-#endif
     // Tags OK
     { 0xE0000, 0xE007F,
             { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },

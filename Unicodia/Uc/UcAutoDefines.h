@@ -58,13 +58,7 @@ namespace uc {
         ALPHA, BETA, RELEASE
     };
 
-/// @todo [U17] Remove this define when permanently add U17
-#define ENABLE_17 true
-#if ENABLE_17
     constexpr LatestState LATEST_STATE = LatestState::ALPHA;
-#else
-    constexpr LatestState LATEST_STATE = LatestState::RELEASE;
-#endif
 
     enum class EcVersion : unsigned char
     {
@@ -101,9 +95,7 @@ namespace uc {
         V_15_0,
         V_15_1,
         V_16_0,
-#if ENABLE_17
         V_17_0,
-#endif
         NN,
         TOO_HIGH = NN,
         FIRST = 0,
@@ -123,9 +115,7 @@ namespace uc {
         E15_0 = V_15_0,
         E15_1 = V_15_1,
         E16_0 = V_16_0,        
-#if ENABLE_17
         E17_0 = V_17_0,
-#endif
     };
     inline EcVersion& operator ++ (EcVersion& x) noexcept
     {
