@@ -9366,7 +9366,7 @@
     </text>
     <text id="Lang">
      <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
-     <transl>курух {{nspk|=ораон}}</transl>
+     <transl>курух {{nspk||=ораон}}</transl>
     </text>
     <text id="Text">
      <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
