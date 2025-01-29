@@ -2531,10 +2531,85 @@
 1F574 1F3FE                                            ; fully-qualified     # 🕴🏾 E4.0 person in suit levitating: medium-dark skin tone
 1F574 1F3FF                                            ; fully-qualified     # 🕴🏿 E4.0 person in suit levitating: dark skin tone
 1F46F                                                  ; fully-qualified     # 👯 E0.6 people with bunny ears
+1F46F 1F3FB                                            ; fully-qualified     # ? E17.0 people with bunny ears: light skin tone
+1F46F 1F3FC                                            ; fully-qualified     # ? E17.0 people with bunny ears: medium-light skin tone
+1F46F 1F3FD                                            ; fully-qualified     # ? E17.0 people with bunny ears: medium skin tone
+1F46F 1F3FE                                            ; fully-qualified     # ? E17.0 people with bunny ears: medium-dark skin tone
+1F46F 1F3FF                                            ; fully-qualified     # ? E17.0 people with bunny ears: dark skin tone
+1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people with bunny ears: light skin tone, medium-light skin tone
+1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people with bunny ears: light skin tone, medium skin tone
+1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people with bunny ears: light skin tone, medium-dark skin tone
+1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people with bunny ears: light skin tone, dark skin tone
+1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people with bunny ears: medium-light skin tone, light skin tone
+1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people with bunny ears: medium-light skin tone, medium skin tone
+1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people with bunny ears: medium-light skin tone, medium-dark skin tone
+1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people with bunny ears: medium-light skin tone, dark skin tone
+1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people with bunny ears: medium skin tone, light skin tone
+1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people with bunny ears: medium skin tone, medium-light skin tone
+1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people with bunny ears: medium skin tone, medium-dark skin tone
+1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people with bunny ears: medium skin tone, dark skin tone
+1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people with bunny ears: medium-dark skin tone, light skin tone
+1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people with bunny ears: medium-dark skin tone, medium-light skin tone
+1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people with bunny ears: medium-dark skin tone, medium skin tone
+1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people with bunny ears: medium-dark skin tone, dark skin tone
+1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people with bunny ears: dark skin tone, light skin tone
+1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people with bunny ears: dark skin tone, medium-light skin tone
+1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people with bunny ears: dark skin tone, medium skin tone
+1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people with bunny ears: dark skin tone, medium-dark skin tone
 1F46F 200D 2642 FE0F                                   ; fully-qualified     # 👯‍♂️ E4.0 men with bunny ears
 1F46F 200D 2642                                        ; minimally-qualified # 👯‍♂ E4.0 men with bunny ears
+1F46F 1F3FB 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone
+1F46F 1F3FC 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone
+1F46F 1F3FD 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone
+1F46F 1F3FE 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone
+1F46F 1F3FF 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone
+1F468 1F3FB 200D 1F430 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone, medium-light skin tone
+1F468 1F3FB 200D 1F430 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone, medium skin tone
+1F468 1F3FB 200D 1F430 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone, medium-dark skin tone
+1F468 1F3FB 200D 1F430 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone, dark skin tone
+1F468 1F3FC 200D 1F430 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone, light skin tone
+1F468 1F3FC 200D 1F430 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone, medium skin tone
+1F468 1F3FC 200D 1F430 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone, medium-dark skin tone
+1F468 1F3FC 200D 1F430 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone, dark skin tone
+1F468 1F3FD 200D 1F430 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone, light skin tone
+1F468 1F3FD 200D 1F430 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone, medium-light skin tone
+1F468 1F3FD 200D 1F430 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone, medium-dark skin tone
+1F468 1F3FD 200D 1F430 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone, dark skin tone
+1F468 1F3FE 200D 1F430 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone, light skin tone
+1F468 1F3FE 200D 1F430 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone, medium-light skin tone
+1F468 1F3FE 200D 1F430 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone, medium skin tone
+1F468 1F3FE 200D 1F430 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone, dark skin tone
+1F468 1F3FF 200D 1F430 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone, light skin tone
+1F468 1F3FF 200D 1F430 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone, medium-light skin tone
+1F468 1F3FF 200D 1F430 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone, medium skin tone
+1F468 1F3FF 200D 1F430 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone, medium-dark skin tone
 1F46F 200D 2640 FE0F                                   ; fully-qualified     # 👯‍♀️ E4.0 women with bunny ears
 1F46F 200D 2640                                        ; minimally-qualified # 👯‍♀ E4.0 women with bunny ears
+1F46F 1F3FB 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: light skin tone
+1F46F 1F3FC 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium-light skin tone
+1F46F 1F3FD 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium skin tone
+1F46F 1F3FE 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: medium-dark skin tone
+1F46F 1F3FF 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 men with bunny ears: dark skin tone
+1F469 1F3FB 200D 1F430 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women with bunny ears: light skin tone, medium-light skin tone
+1F469 1F3FB 200D 1F430 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women with bunny ears: light skin tone, medium skin tone
+1F469 1F3FB 200D 1F430 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women with bunny ears: light skin tone, medium-dark skin tone
+1F469 1F3FB 200D 1F430 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women with bunny ears: light skin tone, dark skin tone
+1F469 1F3FC 200D 1F430 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women with bunny ears: medium-light skin tone, light skin tone
+1F469 1F3FC 200D 1F430 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women with bunny ears: medium-light skin tone, medium skin tone
+1F469 1F3FC 200D 1F430 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women with bunny ears: medium-light skin tone, medium-dark skin tone
+1F469 1F3FC 200D 1F430 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women with bunny ears: medium-light skin tone, dark skin tone
+1F469 1F3FD 200D 1F430 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women with bunny ears: medium skin tone, light skin tone
+1F469 1F3FD 200D 1F430 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women with bunny ears: medium skin tone, medium-light skin tone
+1F469 1F3FD 200D 1F430 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women with bunny ears: medium skin tone, medium-dark skin tone
+1F469 1F3FD 200D 1F430 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women with bunny ears: medium skin tone, dark skin tone
+1F469 1F3FE 200D 1F430 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women with bunny ears: medium-dark skin tone, light skin tone
+1F469 1F3FE 200D 1F430 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women with bunny ears: medium-dark skin tone, medium-light skin tone
+1F469 1F3FE 200D 1F430 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women with bunny ears: medium-dark skin tone, medium skin tone
+1F469 1F3FE 200D 1F430 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women with bunny ears: medium-dark skin tone, dark skin tone
+1F469 1F3FF 200D 1F430 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women with bunny ears: dark skin tone, light skin tone
+1F469 1F3FF 200D 1F430 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women with bunny ears: dark skin tone, medium-light skin tone
+1F469 1F3FF 200D 1F430 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women with bunny ears: dark skin tone, medium skin tone
+1F469 1F3FF 200D 1F430 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women with bunny ears: dark skin tone, medium-dark skin tone
 1F9D6                                                  ; fully-qualified     # 🧖 E5.0 person in steamy room
 1F9D6 1F3FB                                            ; fully-qualified     # 🧖🏻 E5.0 person in steamy room: light skin tone
 1F9D6 1F3FC                                            ; fully-qualified     # 🧖🏼 E5.0 person in steamy room: medium-light skin tone
