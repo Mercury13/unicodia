@@ -2,6 +2,7 @@
 
 // Qt
 #include <QIconEngine>
+#include <QBitmap>
 
 // My lib
 #include "u_DumbSp.h"
@@ -144,7 +145,7 @@ namespace ie {
         BlockElem* clone() const override { return new BlockElem(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        QPixmap texture;
+        QBitmap texture;
     };
 
     /// Programmatic drawing of Box Drawings icon
