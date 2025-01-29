@@ -1275,7 +1275,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Medf, 0 }, MapSubtype::DEAD, EcScript::Medf },
     /// @todo [U17] Beria Erfe: add SIL’s font
 #if ENABLE_17
-    { 0x16EA0, 0x16EDF, { 0x16EA1, EcContinent::AFRICA, Ifg::PAINT_SVG | Ifg::MISSING, SvgHint { 9, ImbaX::RIGHT_3 } },
+    { 0x16EA0, 0x16EDF, { 0x16EA1, EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint { 9, ImbaX::RIGHT_3 } },
             "Beria Erfe",
             { EcScript::Berf, 0 }, MapSubtype::ALIVE,
             EcScript::Berf, EcFont::NORMAL },

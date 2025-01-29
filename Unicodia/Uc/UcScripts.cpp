@@ -140,7 +140,7 @@ constinit const uc::Script uc::scriptInfo[] {
 #if ENABLE_17
     { "Berf", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::decade(1950), EcFont::NORMAL, NO_FLAGS,
+        Dating::decade(1950), EcFont::BERIA, NO_FLAGS,
         { .mantissa = 440, .numOrder = NumOrder::THOUSAND, .year = 2022,
           .locations { LOC_AFRICA_C } } },
 #endif

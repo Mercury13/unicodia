@@ -235,6 +235,7 @@ namespace uc {
           Z_VED_2,
           Z_VED_1,
         BENGALI,
+        BERIA,
         BHAIKSUKI,
         BRAHMI,
           Z_BRA_1,

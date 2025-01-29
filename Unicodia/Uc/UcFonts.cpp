@@ -104,8 +104,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
-      { FAM_NAND, Ffg::FALL_TO_NEXT },                                          // …2, fall to Bengali
+      { FAM_NAND, Ffg::FALL_TO_NEXT },                                          // …2, fall to Bengali    
     { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC }, 120_pc },          // Bengali
+    { "Kedebideri-Regular.ttf" },                                               // Beria
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
       { "NotoSansBrahmi-Regular.ttf", Ffg::DESC_BIGGER },                       // …1
