@@ -497,8 +497,14 @@ namespace {
             case cp::SKIN5:
                 ++nSkin; break;
             case cp::SQUARE_BLACK:
-            case cp::SQUARE_BROWN:
+            case cp::SQUARE_WHITE:
+            case cp::SQUARE_RED:
+            case cp::SQUARE_ORANGE:
+            case cp::SQUARE_YELLOW:
             case cp::SQUARE_GREEN:
+            case cp::SQUARE_BLUE:
+            case cp::SQUARE_PURPLE:
+            case cp::SQUARE_BROWN:
                 ++nColor; break;
             default: ;
             }

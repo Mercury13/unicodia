@@ -15,9 +15,15 @@ namespace cp {
     constexpr char32_t DOTTED_CIRCLE = 0x25CC;
 
     // Coloured squares
-    constexpr char32_t SQUARE_BLACK = 0x2B1B;
-    constexpr char32_t SQUARE_BROWN = 0x1F7EB;
-    constexpr char32_t SQUARE_GREEN = 0x1F7E9;
+    constexpr char32_t SQUARE_BLACK  = 0x2B1B;
+    constexpr char32_t SQUARE_WHITE  = 0x2B1C;
+    constexpr char32_t SQUARE_RED    = 0x1F7E5;
+    constexpr char32_t SQUARE_ORANGE = 0x1F7E7;
+    constexpr char32_t SQUARE_YELLOW = 0x1F7E8;
+    constexpr char32_t SQUARE_GREEN  = 0x1F7E9;
+    constexpr char32_t SQUARE_BLUE   = 0x1F7E6;
+    constexpr char32_t SQUARE_PURPLE = 0x1F7EA;
+    constexpr char32_t SQUARE_BROWN  = 0x1F7EB;
 
     // Kangxi radicals
     constexpr int KANGXI_N = 214;
