@@ -55,7 +55,7 @@ namespace uc {
     };
 
 /// @todo [U17] Remove this define when permanently add U17
-#define ENABLE_17 false
+#define ENABLE_17 true
 
     enum class EcVersion : unsigned char
     {
@@ -114,6 +114,9 @@ namespace uc {
         E15_0 = V_15_0,
         E15_1 = V_15_1,
         E16_0 = V_16_0,        
+#if ENABLE_17
+        E17_0 = V_17_0,
+#endif
     };
     inline EcVersion& operator ++ (EcVersion& x) noexcept
     {

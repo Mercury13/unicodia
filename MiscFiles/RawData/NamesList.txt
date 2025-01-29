@@ -1,7 +1,10 @@
 ; charset=UTF-8
-@@@	The Unicode Standard 16.0.0
-@@@+	NamesList-16.0.0.txt
-	Unicode 16.0.0 final names list.
+@@@	The Unicode Standard 17.0.0
+@@@+	NamesList-17.0.0.txt
+@+	Generation Date: 2024-11-14, 11:05:33 GMT
+	Unicode 17.0.0 names list.
+	Repertoire synched with UnicodeData-17.0.0d1.txt.
+	Synch with 7th edition CD; post UTC181 annotation updates for 17.0.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -282,7 +285,7 @@
 	x (modifier letter colon - A789)
 	x (presentation form for vertical two dot leader - FE30)
 003B	SEMICOLON
-	* this, and not 037E, is the preferred character for 'Greek question mark'
+	* this, and not 037E, is the preferred character for "Greek question mark"
 	x (greek question mark - 037E)
 	x (arabic semicolon - 061B)
 	x (reversed semicolon - 204F)
@@ -600,6 +603,7 @@
 @+		Based on ISO/IEC 8859-1 (aka Latin-1) from here.
 00A0	NO-BREAK SPACE
 	* commonly abbreviated as NBSP
+	* should be the same width as the space 0020
 	x (space - 0020)
 	x (figure space - 2007)
 	x (narrow no-break space - 202F)
@@ -1143,6 +1147,7 @@
 	: 004B 0327
 0137	LATIN SMALL LETTER K WITH CEDILLA
 	* Latvian
+	* despite their names, this pair of characters should normally be displayed with a comma below
 	: 006B 0327
 0138	LATIN SMALL LETTER KRA
 	* Greenlandic (old orthography), Labrador Inuttut
@@ -1157,6 +1162,7 @@
 	: 004C 0327
 013C	LATIN SMALL LETTER L WITH CEDILLA
 	* Latvian
+	* despite their names, this pair of characters should normally be displayed with a comma below
 	: 006C 0327
 013D	LATIN CAPITAL LETTER L WITH CARON
 	* the form using apostrophe is preferred in typesetting
@@ -1191,6 +1197,7 @@
 	: 004E 0327
 0146	LATIN SMALL LETTER N WITH CEDILLA
 	* Latvian
+	* despite their names, this pair of characters should normally be displayed with a comma below
 	: 006E 0327
 0147	LATIN CAPITAL LETTER N WITH CARON
 	: 004E 030C
@@ -1251,6 +1258,7 @@
 	: 0052 0327
 0157	LATIN SMALL LETTER R WITH CEDILLA
 	* Livonian
+	* despite their names, this pair of characters should normally be displayed with a comma below
 	: 0072 0327
 0158	LATIN CAPITAL LETTER R WITH CARON
 	: 0052 030C
@@ -2190,12 +2198,16 @@
 027E	LATIN SMALL LETTER R WITH FISHHOOK
 	* voiced alveolar flap or tap
 	x (latin small letter long s - 017F)
+@		Sinological extension
+@+		Sinologists working on Chinese and other Sino-Tibetan languages often use some characters originally adapted by Karlgren from the Swedish Landsmålsalfabetet for the representation of apical vowels. 027F and 0285 are derived from straight and tailed versions of the italic (dotless) long i in that notation, but over time took on their own identity. The character names are misleading. 
 027F	LATIN SMALL LETTER REVERSED R WITH FISHHOOK
+	= long i with left hook
 	= long leg turned iota (a misnomer)
 	* apical dental vowel
-	* used by linguists working on Chinese and other Sino-Tibetan languages
 	* IPA spelling - 007A 0329
+	* this character is not actually a reversed 027E
 	* preferred presentation is with a descender
+@		IPA extensions
 0280	LATIN LETTER SMALL CAPITAL R
 	* voiced uvular trill
 	* Germanic, Old Norse
@@ -2214,12 +2226,15 @@
 0284	LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 	* implosive palatal stop
 	* typographically based on 025F, not on 0283
+@		Sinological extension
+@+		The tail on this character ultimately derived from the hooked terminal stroke of an italic (dotless) long i, but its use for an apical retroflex vowel has led to reanalysis as a retroflex hook.
 0285	LATIN SMALL LETTER SQUAT REVERSED ESH
+	= long i with left hook and tail
 	* apical retroflex vowel
-	* used by linguists working on Chinese and other Sino-Tibetan languages
 	* IPA spelling - 0290 0329
-	* in origin 027F plus the retroflex hook 0322, despite its name
+	* this character is not actually a reversed esh
 	* preferred presentation is with a descender
+@		IPA extensions
 0286	LATIN SMALL LETTER ESH WITH CURL
 	* palatalized voiceless postalveolar fricative
 	* suggested spelling - 0283 02B2
@@ -2290,6 +2305,7 @@
 	* ain
 	x (latin small letter ezh reversed - 01B9)
 	x (modifier letter reversed glottal stop - 02C1)
+	x (latin small letter pharyngeal voiced fricative - A7CF)
 0296	LATIN LETTER INVERTED GLOTTAL STOP
 	* lateral click
 	x (latin letter lateral click - 01C1)
@@ -2360,9 +2376,14 @@
 	* audible lip smack
 02AD	LATIN LETTER BIDENTAL PERCUSSIVE
 	* audible teeth gnashing
-@		Additions for Sinology
+@		Sinological extensions
+@+		These characters are derived from straight and tailed versions of the italic turned h in the Swedish Landsmålsalfabetet, but over time took on their own identity.
 02AE	LATIN SMALL LETTER TURNED H WITH FISHHOOK
+	= turned h with left hook
+	* labialized apical dental vowel
 02AF	LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL
+	= turned h with left hook and tail
+	* labialized apical retroflex vowel
 @@	02B0	Spacing Modifier Letters	02FF
 @		Latin superscript modifier letters
 @+		See also superscript Latin letters in the Phonetic Extensions block starting at 1D00.
@@ -2651,8 +2672,10 @@
 0303	COMBINING TILDE
 	* IPA: nasalization
 	* Vietnamese tone mark
+	* distinguished from the Middle Vietnamese "apex" diacritic
 	x (tilde - 007E)
 	x (small tilde - 02DC)
+	x (combining macron-acute - 1DC4)
 0304	COMBINING MACRON
 	= long
 	* Pinyin: marks Mandarin Chinese first tone
@@ -2728,8 +2751,10 @@
 0316	COMBINING GRAVE ACCENT BELOW
 0317	COMBINING ACUTE ACCENT BELOW
 0318	COMBINING LEFT TACK BELOW
+	x (combining left tack above - 1AE0)
 	x (modifier letter left tack - AB6A)
 0319	COMBINING RIGHT TACK BELOW
+	x (combining right tack above - 1AE1)
 	x (modifier letter right tack - AB6B)
 031A	COMBINING LEFT ANGLE ABOVE
 	* IPA: unreleased stop
@@ -2741,9 +2766,11 @@
 031D	COMBINING UP TACK BELOW
 	* IPA: vowel raising or closing
 	x (modifier letter up tack - 02D4)
+	x (combining up tack above - 1DF5)
 031E	COMBINING DOWN TACK BELOW
 	* IPA: vowel lowering or opening
 	x (modifier letter down tack - 02D5)
+	x (combining down tack above - 1ADB)
 031F	COMBINING PLUS SIGN BELOW
 	* IPA: advanced or fronted articulation
 	x (modifier letter plus sign - 02D6)
@@ -2752,6 +2779,7 @@
 	* IPA: retracted or backed articulation
 	* glyph may have small end-serifs
 	x (modifier letter minus sign - 02D7)
+	x (combining minus sign above - 1AE2)
 0321	COMBINING PALATALIZED HOOK BELOW
 	* IPA: palatalization
 	x (modifier letter small j - 02B2)
@@ -2792,6 +2820,7 @@
 032A	COMBINING BRIDGE BELOW
 	* IPA: dental
 032B	COMBINING INVERTED DOUBLE ARCH BELOW
+	= omega below
 	* IPA: labialization
 	x (modifier letter small w - 02B7)
 	x (combining inverted double arch above - 1AC7)
@@ -2833,12 +2862,15 @@
 0339	COMBINING RIGHT HALF RING BELOW
 033A	COMBINING INVERTED BRIDGE BELOW
 	* IPA: apical
+	x (combining inverted bridge above - 1AE3)
 	x (combining wide inverted bridge below - 1DF9)
 033B	COMBINING SQUARE BELOW
 	* IPA: laminal
 	* preferred glyph shape is a horizontal rectangle for IPA usage
+	x (combining square above - 1AE4)
 033C	COMBINING SEAGULL BELOW
 	* IPA: linguolabial
+	x (combining seagull above - 1AE5)
 033D	COMBINING X ABOVE
 033E	COMBINING VERTICAL TILDE
 	= yerik
@@ -2874,14 +2906,16 @@
 	x (greek capital letter iota - 0399)
 @		Additions for IPA
 0346	COMBINING BRIDGE ABOVE
-	* IPA: dentolabial
+	* ExtIPA: dentolabial
 	x (combining wide bridge above - 20E9)
 0347	COMBINING EQUALS SIGN BELOW
 	* IPA: alveolar
+	x (combining equals sign above - 1AE8)
 0348	COMBINING DOUBLE VERTICAL LINE BELOW
 	* IPA: strong articulation
 0349	COMBINING LEFT ANGLE BELOW
 	* IPA: weak articulation
+	x (combining left angle centred above - 1AE9)
 034A	COMBINING NOT TILDE ABOVE
 	* IPA: denasal
 @		IPA diacritics for disordered speech
@@ -2891,19 +2925,22 @@
 	* IPA: velopharyngeal friction
 034D	COMBINING LEFT RIGHT ARROW BELOW
 	* IPA: labial spreading
+	x (combining left right arrow above - 20E1)
 034E	COMBINING UPWARDS ARROW BELOW
 	* IPA: whistled articulation
-@		Grapheme joiner
+	x (combining upwards arrow above - 1AEA)
+@		Miscellaneous addition
+@+		The name of 034F is misleading; it does not actually join graphemes. It can be used to affect the collation of adjacent characters for purposes of language-sensitive searching and sorting. It can also be used to distinguish sequences that would otherwise be canonically equivalent.
 034F	COMBINING GRAPHEME JOINER
 	* commonly abbreviated as CGJ
 	* has no visible glyph
-	* the name of this character is misleading; it does not actually join graphemes
 @		Additions for the Uralic Phonetic Alphabet
 0350	COMBINING RIGHT ARROWHEAD ABOVE
 0351	COMBINING LEFT HALF RING ABOVE
 0352	COMBINING FERMATA
 0353	COMBINING X BELOW
 0354	COMBINING LEFT ARROWHEAD BELOW
+	x (combining left arrowhead above - 1DFE)
 0355	COMBINING RIGHT ARROWHEAD BELOW
 0356	COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 0357	COMBINING RIGHT HALF RING ABOVE
@@ -2934,6 +2971,7 @@
 	x (combining ligature left half - FE20)
 0362	COMBINING DOUBLE RIGHTWARDS ARROW BELOW
 	* IPA: sliding articulation
+	x (combining double rightwards arrow above - 1AEB)
 @		Medieval superscript letter diacritics
 @+		These are letter diacritics written directly above other letters. They appear primarily in medieval Germanic manuscripts, but saw some usage as late as the 19th century in some languages.
 0363	COMBINING LATIN SMALL LETTER A
@@ -3466,8 +3504,12 @@
 	x (combining inverted breve - 0311)
 0485	COMBINING CYRILLIC DASIA PNEUMATA
 	x (combining reversed comma above - 0314)
+	x (combining right tack above - 1AE1)
+	x (coptic combining spiritus asper - 2CF0)
 0486	COMBINING CYRILLIC PSILI PNEUMATA
 	x (combining comma above - 0313)
+	x (combining left tack above - 1AE0)
+	x (coptic combining spiritus lenis - 2CF1)
 0487	COMBINING CYRILLIC POKRYTIE
 	* used only with titlo letters
 	* also attested in Glagolitic
@@ -4180,6 +4222,7 @@
 064C	ARABIC DAMMATAN
 	* a common alternative form is written as two intertwined dammas, one of which is turned 180 degrees
 064D	ARABIC KASRATAN
+	x (arabic double vertical bar below - 10EFA)
 064E	ARABIC FATHA
 064F	ARABIC DAMMA
 0650	ARABIC KASRA
@@ -5090,6 +5133,9 @@
 088E	ARABIC VERTICAL TAIL
 	* mark used to indicate abbreviations in early movable type texts from Iran 
 	* only attested in final form
+@		Addition for Eastern Punjabi orthographies
+088F	ARABIC LETTER NOON WITH RING ABOVE
+	= arnoon
 @		Supertending currency symbols
 0890	ARABIC POUND MARK ABOVE
 	* Egyptian pound
@@ -5199,6 +5245,7 @@
 08C9	ARABIC SMALL FARSI YEH
 08CA	ARABIC SMALL HIGH FARSI YEH
 08CB	ARABIC SMALL HIGH YEH BARREE WITH TWO DOTS BELOW
+	x (arabic small yeh barree with two dots below - 10EC5)
 08CC	ARABIC SMALL HIGH WORD SAH
 	= sign of waqf
 08CD	ARABIC SMALL HIGH ZAH
@@ -5215,6 +5262,7 @@
 08D7	ARABIC SMALL HIGH QAF
 08D8	ARABIC SMALL HIGH NOON WITH KASRA
 08D9	ARABIC SMALL LOW NOON WITH KASRA
+	x (arabic small low noon - 10EFB)
 08DA	ARABIC SMALL HIGH WORD ATH-THALATHA
 08DB	ARABIC SMALL HIGH WORD AS-SAJDA
 08DC	ARABIC SMALL HIGH WORD AN-NISF
@@ -5641,6 +5689,8 @@
 	x (bengali sign avagraha - 09BD)
 	x (sharada sandhi mark - 111C9)
 	x (newa sandhi mark - 1145E)
+@		Addition for Sanskrit
+09FF	BENGALI LETTER SANSKRIT BA
 @@	0A00	Gurmukhi	0A7F
 @		Various signs
 0A01	GURMUKHI SIGN ADAK BINDI
@@ -5969,6 +6019,10 @@
 @		Virama
 0B4D	ORIYA SIGN VIRAMA
 @		Various signs
+0B53	ORIYA SIGN DOT ABOVE
+	* Kui
+0B54	ORIYA SIGN DOUBLE DOT ABOVE
+	* Kui
 0B55	ORIYA SIGN OVERLINE
 	* Kuvi, Kui
 0B56	ORIYA AI LENGTH MARK
@@ -6251,6 +6305,10 @@
 0C59	TELUGU LETTER DZA
 0C5A	TELUGU LETTER RRRA
 	* letter for an alveolar consonant whose exact phonetic value is not known
+@		Ligature
+0C5C	TELUGU ARCHAIC SHRII
+	* auspicious word shrii
+	* does not combine with other letters
 @		Consonant
 0C5D	TELUGU LETTER NAKAARA POLLU
 	* vowelless form of na
@@ -6385,6 +6443,10 @@
 @		Various signs
 0CD5	KANNADA LENGTH MARK
 0CD6	KANNADA AI LENGTH MARK
+@		Ligature
+0CDC	KANNADA ARCHAIC SHRII
+	* auspicious word shrii
+	* does not combine with other letters
 @		Additional consonants
 0CDD	KANNADA LETTER NAKAARA POLLU
 	* vowelless form of na
@@ -10680,6 +10742,7 @@
 	= superscript octothorp
 @		Used in extended IPA
 1AC7	COMBINING INVERTED DOUBLE ARCH ABOVE
+	= omega above
 	x (combining inverted double arch below - 032B)
 	x (combining latin small letter w - 1DF1)
 1AC8	COMBINING PLUS SIGN ABOVE
@@ -10692,6 +10755,62 @@
 1ACC	COMBINING LATIN SMALL LETTER INSULAR G
 1ACD	COMBINING LATIN SMALL LETTER INSULAR R
 1ACE	COMBINING LATIN SMALL LETTER INSULAR T
+@		Tone mark used in IPA
+1ACF	COMBINING DOUBLE CARON
+@		Compound tone diacritics
+1AD0	COMBINING VERTICAL-LINE-ACUTE
+1AD1	COMBINING GRAVE-VERTICAL-LINE
+1AD2	COMBINING VERTICAL-LINE-GRAVE
+1AD3	COMBINING ACUTE-VERTICAL-LINE
+1AD4	COMBINING VERTICAL-LINE-MACRON
+1AD5	COMBINING MACRON-VERTICAL-LINE
+1AD6	COMBINING VERTICAL-LINE-ACUTE-GRAVE
+1AD7	COMBINING VERTICAL-LINE-GRAVE-ACUTE
+1AD8	COMBINING MACRON-ACUTE-GRAVE
+@		J.P. Harrington diacritics
+1AD9	COMBINING SHARP SIGN
+1ADA	COMBINING FLAT SIGN
+1ADB	COMBINING DOWN TACK ABOVE
+	x (combining down tack below - 031E)
+1ADC	COMBINING DIAERESIS WITH RAISED LEFT DOT
+1ADD	COMBINING DOT-AND-RING BELOW
+@		IPA positional variants
+@+		These are positional variants of diacritics that normally occur below a letter.
+1AE0	COMBINING LEFT TACK ABOVE
+	x (combining left tack below - 0318)
+	x (combining cyrillic psili pneumata - 0486)
+	x (coptic combining spiritus lenis - 2CF1)
+1AE1	COMBINING RIGHT TACK ABOVE
+	x (combining right tack below - 0319)
+	x (combining cyrillic dasia pneumata - 0485)
+	x (coptic combining spiritus asper - 2CF0)
+1AE2	COMBINING MINUS SIGN ABOVE
+	x (combining minus sign below - 0320)
+1AE3	COMBINING INVERTED BRIDGE ABOVE
+	x (combining inverted bridge below - 033A)
+1AE4	COMBINING SQUARE ABOVE
+	x (combining square below - 033B)
+1AE5	COMBINING SEAGULL ABOVE
+	x (combining seagull below - 033C)
+@		Historical IPA
+@+		This pair of historical forms are positional variants of each other.
+1AE6	COMBINING DOUBLE ARCH BELOW
+	= turned omega below
+	x (combining inverted double arch below - 032B)
+	x (combining seagull below - 033C)
+1AE7	COMBINING DOUBLE ARCH ABOVE
+	= turned omega above
+@		Extended IPA positional variants
+@+		These are positional variants of diacritics that normally occur below a letter.
+1AE8	COMBINING EQUALS SIGN ABOVE
+	x (combining equals sign below - 0347)
+1AE9	COMBINING LEFT ANGLE CENTRED ABOVE
+	x (combining left angle above - 031A)
+	x (combining left angle below - 0349)
+1AEA	COMBINING UPWARDS ARROW ABOVE
+	x (combining upwards arrow below - 034E)
+1AEB	COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
+	x (combining double rightwards arrow below - 0362)
 @@	1B00	Balinese	1B7F
 @		Various signs
 1B00	BALINESE SIGN ULU RICEM
@@ -11858,6 +11977,8 @@
 	x (combining breve - 0306)
 @		Contour tone marks
 1DC4	COMBINING MACRON-ACUTE
+	x (combining tilde - 0303)
+	* also used to represent the Middle Vietnamese "apex" diacritic
 1DC5	COMBINING GRAVE-MACRON
 1DC6	COMBINING MACRON-GRAVE
 1DC7	COMBINING ACUTE-MACRON
@@ -11918,6 +12039,7 @@
 1DF4	COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 @		Diacritic for American lexicography
 1DF5	COMBINING UP TACK ABOVE
+	x (combining up tack below - 031D)
 @		Typicon marks
 1DF6	COMBINING KAVYKA ABOVE RIGHT
 1DF7	COMBINING KAVYKA ABOVE LEFT
@@ -11943,6 +12065,7 @@
 	* diacritic indicating a strident vowel in Khoisan languages
 @		Additional marks for UPA
 1DFE	COMBINING LEFT ARROWHEAD ABOVE
+	x (combining left arrowhead below - 0354)
 1DFF	COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
 @@	1E00	Latin Extended Additional	1EFF
 @+		In this block the names "WITH LINE BELOW" refer to a macron below the letter.
@@ -11986,6 +12109,7 @@
 	: 0044 0327
 1E11	LATIN SMALL LETTER D WITH CEDILLA
 	* Livonian
+	* despite their names, this pair of characters should normally be displayed with a comma below
 	: 0064 0327
 1E12	LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
 	: 0044 032D
@@ -13003,18 +13127,19 @@
 	* in computer typography sometimes equated to thin space
 	# 0020 space
 2007	FIGURE SPACE
-	* space equal to tabular width of a font
+	* space equal to tabular width of a font, typically set to the same width as digit zero 0030
 	* this is equivalent to the digit width of fonts with fixed-width digits
 	# <noBreak> 0020
 2008	PUNCTUATION SPACE
-	* space equal to narrow punctuation of a font
+	* space equal to narrow punctuation of a font, typically set to the same width as full stop 002E
 	# 0020 space
 2009	THIN SPACE
-	* a fifth of an em (or sometimes a sixth)
+	= narrow space
+	* this should be much narrower than space 0020; typically set to 1/5 or 1/6 em
 	x (narrow no-break space - 202F)
 	# 0020 space
 200A	HAIR SPACE
-	* thinner than a thin space
+	* thinner than a thin space; typically set to 1/10 to 1/16 em
 	* in traditional typography, the thinnest space available
 	# 0020 space
 @		Format characters
@@ -13155,8 +13280,9 @@
 	* commonly abbreviated RLO
 @		Space
 202F	NARROW NO-BREAK SPACE
+	= no-break thin space
 	* commonly abbreviated NNBSP
-	* a narrow form of a no-break space, typically the width of a thin space or a mid space
+	* a narrow form of a no-break space; should be the same width as thin space 2009
 	x (no-break space - 00A0)
 	x (four-per-em space - 2005)
 	x (thin space - 2009)
@@ -13618,6 +13744,7 @@
 @		Additional diacritical mark for symbols
 20E1	COMBINING LEFT RIGHT ARROW ABOVE
 	* tensor
+	x (combining left right arrow below - 034D)
 @		Additional enclosing diacritics
 20E2	COMBINING ENCLOSING SCREEN
 	x (clear screen symbol - 239A)
@@ -13841,18 +13968,14 @@
 	= order, of inferior order to
 	# <font> 006F latin small letter o
 @		Hebrew letterlike math symbols
-@+		These are left-to-right characters.
+@+		These are left-to-right characters. They are used in notations of transfinite cardinals.
 2135	ALEF SYMBOL
-	= first transfinite cardinal (countable)
 	# 05D0 hebrew letter alef
 2136	BET SYMBOL
-	= second transfinite cardinal (the continuum)
 	# 05D1 hebrew letter bet
 2137	GIMEL SYMBOL
-	= third transfinite cardinal (functions of a real variable)
 	# 05D2 hebrew letter gimel
 2138	DALET SYMBOL
-	= fourth transfinite cardinal
 	# 05D3 hebrew letter dalet
 @		Additional letterlike symbols
 2139	INFORMATION SOURCE
@@ -14152,6 +14275,7 @@
 21C3	DOWNWARDS HARPOON WITH BARB LEFTWARDS
 @		Paired arrows and harpoons
 21C4	RIGHTWARDS ARROW OVER LEFTWARDS ARROW
+	x (long rightwards arrow over long leftwards arrow - 1F8D0)
 21C5	UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
 21C6	LEFTWARDS ARROW OVER RIGHTWARDS ARROW
 21C7	LEFTWARDS PAIRED ARROWS
@@ -14160,6 +14284,7 @@
 21CA	DOWNWARDS PAIRED ARROWS
 21CB	LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
 21CC	RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
+	x (long rightwards harpoon over long leftwards harpoon - 1F8D1)
 @		Double arrows
 21CD	LEFTWARDS DOUBLE ARROW WITH STROKE
 	* negation of 21D0
@@ -15062,6 +15187,7 @@
 	x (open box - 2423)
 237E	BELL SYMBOL
 	* from ISO 2047
+	x (alarm bell symbol - 1FBFA)
 237F	VERTICAL LINE WITH MIDDLE DOT
 	* from ISO 2047
 	* symbol for End of Medium
@@ -16322,6 +16448,7 @@
 2644	SATURN
 	= alchemical symbol for lead
 2645	URANUS
+	= alchemical symbol for platinum
 	x (astronomical symbol for uranus - 26E2)
 2646	NEPTUNE
 	= alchemical symbol for bismuth/tinglass
@@ -16574,6 +16701,7 @@
 26B4	PALLAS
 26B5	JUNO
 26B6	VESTA
+	x (vesta form two - 1F777)
 26B7	CHIRON
 26B8	BLACK MOON LILITH
 @		Astrological aspects
@@ -17240,7 +17368,7 @@
 27F4	RIGHT ARROW WITH CIRCLED PLUS
 	x (left arrow with circled plus - 2B32)
 @		Long arrows
-@+		The long arrows are used for mapping whereas the short forms would be used in limits. They are also needed for MathML to complete mapping to the AMSA sets.
+@+		The long arrows are used for mapping whereas the short forms would be used in limits. They are also needed for MathML to complete mapping to the AMSA sets. Long arrows for chemical reactions constitute a set as follows: 27F5-27F7, 1F8D0-1F8D8.
 27F5	LONG LEFTWARDS ARROW
 	x (leftwards arrow - 2190)
 27F6	LONG RIGHTWARDS ARROW
@@ -17795,8 +17923,8 @@
 29B4	EMPTY SET WITH LEFT ARROW ABOVE
 @		Circle symbols
 29B5	CIRCLE WITH HORIZONTAL BAR
-	* used in superscripted form to mean standard state (chemistry)
 	x (circled minus - 2296)
+	x (medium small white circle with horizontal bar - 1CEF0)
 29B6	CIRCLED VERTICAL BAR
 	x (alchemical symbol for nitre - 1F715)
 29B7	CIRCLED PARALLEL
@@ -18655,6 +18783,10 @@
 2B95	RIGHTWARDS BLACK ARROW
 	x (black rightwards arrow - 27A1)
 	x (leftwards black arrow - 2B05)
+@		Symbol used in chess notation
+@+		The two symbols 2B96 and 2BF9 are sometimes used contrastively: the position of the infinity sign may be used to indicate which side has the compensation or which side stands better.
+2B96	EQUALS SIGN WITH INFINITY ABOVE
+	= with compensation for the material
 @		Miscellaneous symbol
 2B97	SYMBOL FOR TYPE A ELECTRONICS
 	* for type B electronics use 3036
@@ -18779,8 +18911,11 @@
 @		Miscellaneous astrological symbols
 2BD7	TRANSPLUTO
 2BD8	PROSERPINA
+	x (astronomical symbol for asteroid proserpina - 1CECD)
 2BD9	ASTRAEA
+	x (astraea form two - 1F778)
 2BDA	HYGIEA
+	x (hygiea form two - 1F779)
 2BDB	PHOLUS
 2BDC	NESSUS
 2BDD	WHITE MOON SELENA
@@ -18834,6 +18969,7 @@
 @		Symbols used in chess notation
 2BF9	EQUALS SIGN WITH INFINITY BELOW
 	= with compensation for the material
+	x (equals sign with infinity above - 2B96)
 2BFA	UNITED SYMBOL
 	= united pawns
 	x (divorce symbol - 26AE)
@@ -20850,6 +20986,9 @@
 3024	HANGZHOU NUMERAL FOUR
 3025	HANGZHOU NUMERAL FIVE
 3026	HANGZHOU NUMERAL SIX
+	= yangqin sign slow one
+	* represents one half beat in the yangqin tempo marking system
+	x (yangqin sign slow one beat - 16FF4)
 3027	HANGZHOU NUMERAL SEVEN
 3028	HANGZHOU NUMERAL EIGHT
 3029	HANGZHOU NUMERAL NINE
@@ -25154,12 +25293,19 @@ A7CB	LATIN CAPITAL LETTER RAMS HORN
 @		Letters for Luiseño
 A7CC	LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
 A7CD	LATIN SMALL LETTER S WITH DIAGONAL STROKE
+@		Cased voiced pharyngeal letters
+@+		Some bicameral orthographies for languages of Argentina, Canada, and the USA use a cased pair for voiced pharyngeal fricatives, incompatible with the caseless letter 0295.
+A7CE	LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
+A7CF	LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
+	x (latin letter pharyngeal voiced fricative - 0295)
 @		Letters used in the Middle English Ormulum
 A7D0	LATIN CAPITAL LETTER CLOSED INSULAR G
 A7D1	LATIN SMALL LETTER CLOSED INSULAR G
 	x (latin small letter insular g - 1D79)
+A7D2	LATIN CAPITAL LETTER DOUBLE THORN
 A7D3	LATIN SMALL LETTER DOUBLE THORN
 	x (latin small letter thorn - 00FE)
+A7D4	LATIN CAPITAL LETTER DOUBLE WYNN
 A7D5	LATIN SMALL LETTER DOUBLE WYNN
 	x (latin letter wynn - 01BF)
 @		Letters used in medieval palaeography
@@ -25177,6 +25323,9 @@ A7DB	LATIN SMALL LETTER LAMBDA
 A7DC	LATIN CAPITAL LETTER LAMBDA WITH STROKE
 	* lowercase is 019B 
 @		Modifier letters for Chatino (México)
+A7F1	MODIFIER LETTER CAPITAL S
+	* also used as a phonetic and phonemic wildcard character
+	# <super> 0053
 A7F2	MODIFIER LETTER CAPITAL C
 	# <super> 0043
 A7F3	MODIFIER LETTER CAPITAL F
@@ -27990,6 +28139,24 @@ FBC1	ARABIC SYMBOL SMALL TAH BELOW
 	* Urdu
 FBC2	ARABIC SYMBOL WASLA ABOVE
 	x (arabic letter alef wasla - 0671)
+@		Honorific word ligatures
+@+		These word ligatures have no decompositions.
+FBC3	ARABIC LIGATURE JALLA WA-ALAA
+FBC4	ARABIC LIGATURE DAAMAT BARAKAATUHUM
+FBC5	ARABIC LIGATURE RAHMATU ALLAAHI TAAALAA ALAYH
+FBC6	ARABIC LIGATURE RAHMATU ALLAAHI ALAYHIM
+FBC7	ARABIC LIGATURE RAHMATU ALLAAHI ALAYHIMAA
+FBC8	ARABIC LIGATURE RAHIMAHUM ALLAAHU TAAALAA
+FBC9	ARABIC LIGATURE RAHIMAHUMAA ALLAAH
+FBCA	ARABIC LIGATURE RAHIMAHUMAA ALLAAHU TAAALAA
+FBCB	ARABIC LIGATURE RADI ALLAHU TAAALAA ANHUM
+FBCC	ARABIC LIGATURE HAFIZAHU ALLAAH
+FBCD	ARABIC LIGATURE HAFIZAHU ALLAAHU TAAALAA
+FBCE	ARABIC LIGATURE HAFIZAHUM ALLAAHU TAAALAA
+FBCF	ARABIC LIGATURE HAFIZAHUMAA ALLAAHU TAAALAA
+FBD0	ARABIC LIGATURE SALLALLAAHU TAAALAA ALAYHI WA-SALLAM
+FBD1	ARABIC LIGATURE AJJAL ALLAAHU FARAJAHU ASH-SHAREEF
+FBD2	ARABIC LIGATURE ALAYHI AR-RAHMAH
 @		Glyphs for contextual forms of letters for Central Asian languages
 FBD3	ARABIC LETTER NG ISOLATED FORM
 	# <isolated> 06AD
@@ -28755,6 +28922,8 @@ FD4D	ARABIC LIGATURE ALAYHAA AS-SALAAM
 FD4E	ARABIC LIGATURE TABAARAKA WA-TAAALAA
 FD4F	ARABIC LIGATURE RAHIMAHUM ALLAAH
 @		Ligatures (three elements)
+@		Honorific word ligatures
+@+		These word ligatures have no decompositions.
 FD50	ARABIC LIGATURE TEH WITH JEEM WITH MEEM INITIAL FORM
 	# <initial> 062A 062C 0645
 FD51	ARABIC LIGATURE TEH WITH HAH WITH JEEM FINAL FORM
@@ -28883,6 +29052,9 @@ FD8E	ARABIC LIGATURE MEEM WITH KHAH WITH JEEM INITIAL FORM
 	# <initial> 0645 062E 062C
 FD8F	ARABIC LIGATURE MEEM WITH KHAH WITH MEEM INITIAL FORM
 	# <initial> 0645 062E 0645
+FD90	ARABIC LIGATURE RAHMATU ALLAAHI ALAYH
+FD91	ARABIC LIGATURE RAHMATU ALLAAHI ALAYHAA
+@		Ligatures (three elements)
 FD92	ARABIC LIGATURE MEEM WITH JEEM WITH KHAH INITIAL FORM
 	# <initial> 0645 062C 062E
 FD93	ARABIC LIGATURE HEH WITH MEEM WITH JEEM INITIAL FORM
@@ -28991,7 +29163,15 @@ FDC6	ARABIC LIGATURE SEEN WITH KHAH WITH YEH FINAL FORM
 	# <final> 0633 062E 064A
 FDC7	ARABIC LIGATURE NOON WITH JEEM WITH YEH FINAL FORM
 	# <final> 0646 062C 064A
-@		Honorific word ligature
+@		Honorific word ligatures
+@+		These word ligatures have no decompositions.
+FDC8	ARABIC LIGATURE RAHIMAHU ALLAAH TAAALAA
+FDC9	ARABIC LIGATURE RADI ALLAAHU TAAALAA ANH
+FDCA	ARABIC LIGATURE RADI ALLAAHU TAAALAA ANHAA
+FDCB	ARABIC LIGATURE RADI ALLAAHU TAAALAA ANHUMAA
+FDCC	ARABIC LIGATURE SALLALLAHU ALAYHI WA-ALAA AALIHEE WA-SALLAM
+FDCD	ARABIC LIGATURE AJJAL ALLAAHU TAAALAA FARAJAHU ASH-SHAREEF
+FDCE	ARABIC LIGATURE KARRAMA ALLAAHU WAJHAH
 FDCF	ARABIC LIGATURE SALAAMUHU ALAYNAA
 	* his blessing on us
 	* used in Christian texts
@@ -32349,6 +32529,37 @@ FFFF	<not a character>
 10939	LYDIAN LETTER C
 @		Punctuation
 1093F	LYDIAN TRIANGULAR MARK
+@@	10940	Sidetic	1095F
+@		Letters
+10940	SIDETIC LETTER N01
+10941	SIDETIC LETTER N02
+10942	SIDETIC LETTER N03
+10943	SIDETIC LETTER N04
+10944	SIDETIC LETTER N05
+10945	SIDETIC LETTER N06
+10946	SIDETIC LETTER N07
+10947	SIDETIC LETTER N08
+10948	SIDETIC LETTER N09
+10949	SIDETIC LETTER N10
+1094A	SIDETIC LETTER N11
+1094B	SIDETIC LETTER N12
+1094C	SIDETIC LETTER N13
+1094D	SIDETIC LETTER N14
+1094E	SIDETIC LETTER N15
+1094F	SIDETIC LETTER N16
+10950	SIDETIC LETTER N17
+10951	SIDETIC LETTER N18
+10952	SIDETIC LETTER N19
+10953	SIDETIC LETTER N20
+10954	SIDETIC LETTER N21
+10955	SIDETIC LETTER N22
+10956	SIDETIC LETTER N23
+10957	SIDETIC LETTER N24
+10958	SIDETIC LETTER N25
+10959	SIDETIC LETTER N26
+1095A	SIDETIC LETTER N27
+1095B	SIDETIC LETTER N28
+1095C	SIDETIC LETTER N29
 @@	10980	Meroitic Hieroglyphs	1099F
 @		Vowel letters
 10980	MEROITIC HIEROGLYPHIC LETTER A
@@ -33576,6 +33787,35 @@ FFFF	<not a character>
 10EC2	ARABIC LETTER DAL WITH TWO DOTS VERTICALLY BELOW
 10EC3	ARABIC LETTER TAH WITH TWO DOTS VERTICALLY BELOW
 10EC4	ARABIC LETTER KAF WITH TWO DOTS VERTICALLY BELOW
+@		Quranic letter used in Indonesia
+10EC5	ARABIC SMALL YEH BARREE WITH TWO DOTS BELOW
+	* used to mark unwritten yeh in Uthmanic rasm
+	x (arabic small yeh - 06E6)
+	x (arabic small high yeh barree with two dots below - 08CB)
+@		Quranic letter used in Warsh orthography
+10EC6	ARABIC LETTER THIN NOON
+	* only medial form is attested
+@		Letter used for Swahili
+10EC7	ARABIC LETTER YEH WITH FOUR DOTS BELOW
+@		Biblical punctuation mark
+10ED0	ARABIC BIBLICAL END OF VERSE
+	* used as end of verse marker in Urdu
+@		Honorific word ligatures
+@+		These word ligatures have no decompositions.
+10ED1	ARABIC LIGATURE ALAYHAA AS-SALAATU WAS-SALAAM
+10ED2	ARABIC LIGATURE ALAYHIM AS-SALAATU WAS-SALAAM
+10ED3	ARABIC LIGATURE ALAYHIMAA AS-SALAATU WAS-SALAAM
+10ED4	ARABIC LIGATURE QADDASA ALLAAHU SIRRAH
+10ED5	ARABIC LIGATURE QUDDISA SIRRAHUM
+10ED6	ARABIC LIGATURE QUDDISA SIRRAHUMAA
+10ED7	ARABIC LIGATURE QUDDISAT ASRAARUHUM
+10ED8	ARABIC LIGATURE NAWWARA ALLAAHU MARQADAH
+@		Tanween mark used in Old Sindhi
+10EFA	ARABIC DOUBLE VERTICAL BAR BELOW
+	x (arabic kasratan - 064D)
+@		Quranic mark used in Indonesia
+10EFB	ARABIC SMALL LOW NOON
+	x (arabic small low noon with kasra - 08D9)
 @		Quranic mark used in Libya
 10EFC	ARABIC COMBINING ALEF OVERLAY
 @		Quranic marks used in Turkey
@@ -36029,6 +36269,24 @@ FFFF	<not a character>
 11B08	DEVANAGARI SIGN REVERSED NINE-LIKE BHALE
 11B09	DEVANAGARI SIGN MINDU
 	x (devanagari digit zero - 0966)
+@@	11B60	Sharada Supplement	11B7F
+@		Kashmiri vowel signs
+11B60	SHARADA VOWEL SIGN OE
+	x (devanagari vowel sign oe - 093A)
+11B61	SHARADA VOWEL SIGN OOE
+	x (devanagari vowel sign ooe - 093B)
+11B62	SHARADA VOWEL SIGN UE
+	x (devanagari vowel sign ue - 0956)
+11B63	SHARADA VOWEL SIGN UUE
+	x (devanagari vowel sign uue - 0957)
+11B64	SHARADA VOWEL SIGN SHORT E
+	x (devanagari vowel sign short e - 0946)
+11B65	SHARADA VOWEL SIGN SHORT O
+	x (devanagari vowel sign short o - 094A)
+11B66	SHARADA VOWEL SIGN CANDRA E
+	x (devanagari vowel sign candra e - 0945)
+11B67	SHARADA VOWEL SIGN CANDRA O
+	x (devanagari vowel sign candra o - 0949)
 @@	11BC0	Sunuwar	11BFF
 @		Letters
 11BC0	SUNUWAR LETTER DEVI
@@ -36420,6 +36678,69 @@ FFFF	<not a character>
 11DA7	GUNJALA GONDI DIGIT SEVEN
 11DA8	GUNJALA GONDI DIGIT EIGHT
 11DA9	GUNJALA GONDI DIGIT NINE
+@@	11DB0	Tolong Siki	11DEF
+@		Vowel letters
+11DB0	TOLONG SIKI LETTER I
+11DB1	TOLONG SIKI LETTER E
+11DB2	TOLONG SIKI LETTER U
+11DB3	TOLONG SIKI LETTER O
+11DB4	TOLONG SIKI LETTER A
+11DB5	TOLONG SIKI LETTER AA
+@		Consonant letters
+11DB6	TOLONG SIKI LETTER P
+11DB7	TOLONG SIKI LETTER PH
+11DB8	TOLONG SIKI LETTER B
+11DB9	TOLONG SIKI LETTER BH
+11DBA	TOLONG SIKI LETTER M
+11DBB	TOLONG SIKI LETTER T
+11DBC	TOLONG SIKI LETTER TH
+11DBD	TOLONG SIKI LETTER D
+11DBE	TOLONG SIKI LETTER DH
+11DBF	TOLONG SIKI LETTER N
+11DC0	TOLONG SIKI LETTER TT
+11DC1	TOLONG SIKI LETTER TTH
+11DC2	TOLONG SIKI LETTER DD
+11DC3	TOLONG SIKI LETTER DDH
+11DC4	TOLONG SIKI LETTER NN
+11DC5	TOLONG SIKI LETTER C
+11DC6	TOLONG SIKI LETTER CH
+11DC7	TOLONG SIKI LETTER J
+11DC8	TOLONG SIKI LETTER JH
+11DC9	TOLONG SIKI LETTER NY
+11DCA	TOLONG SIKI LETTER K
+11DCB	TOLONG SIKI LETTER KH
+11DCC	TOLONG SIKI LETTER G
+11DCD	TOLONG SIKI LETTER GH
+11DCE	TOLONG SIKI LETTER NG
+11DCF	TOLONG SIKI LETTER Y
+11DD0	TOLONG SIKI LETTER R
+11DD1	TOLONG SIKI LETTER L
+11DD2	TOLONG SIKI LETTER V
+11DD3	TOLONG SIKI LETTER NNY
+11DD4	TOLONG SIKI LETTER S
+11DD5	TOLONG SIKI LETTER H
+11DD6	TOLONG SIKI LETTER X
+11DD7	TOLONG SIKI LETTER RR
+11DD8	TOLONG SIKI LETTER RRH
+@		Signs
+11DD9	TOLONG SIKI SIGN SELA
+	= vowel length mark
+11DDA	TOLONG SIKI SIGN HECAKA
+	= tala
+	* represents a glottal stop
+@		Auspicious sign
+11DDB	TOLONG SIKI UNGGA
+@		Digits
+11DE0	TOLONG SIKI DIGIT ZERO
+11DE1	TOLONG SIKI DIGIT ONE
+11DE2	TOLONG SIKI DIGIT TWO
+11DE3	TOLONG SIKI DIGIT THREE
+11DE4	TOLONG SIKI DIGIT FOUR
+11DE5	TOLONG SIKI DIGIT FIVE
+11DE6	TOLONG SIKI DIGIT SIX
+11DE7	TOLONG SIKI DIGIT SEVEN
+11DE8	TOLONG SIKI DIGIT EIGHT
+11DE9	TOLONG SIKI DIGIT NINE
 @@	11EE0	Makasar	11EFF
 @+		This script is known indigenously as Ukiri' Jangangjangang and in English as Old Makasar.
 @		Consonants
@@ -36748,12 +37069,19 @@ FFFF	<not a character>
 12036	CUNEIFORM SIGN ARKAB
 12037	CUNEIFORM SIGN ASAL2
 12038	CUNEIFORM SIGN ASH
+	= 1 aš
+	x (cuneiform numeric sign two ash - 12400)
 12039	CUNEIFORM SIGN ASH ZIDA TENU
+	= 1 aš tenû
+	= 1 diš tenû
+	= 1/2 iku
+	x (cuneiform numeric sign two ash tenu - 1244A)
 1203A	CUNEIFORM SIGN ASH KABA TENU
 1203B	CUNEIFORM SIGN ASH OVER ASH TUG2 OVER TUG2 TUG2 OVER TUG2 PAP
 1203C	CUNEIFORM SIGN ASH OVER ASH OVER ASH
 1203D	CUNEIFORM SIGN ASH OVER ASH OVER ASH CROSSING ASH OVER ASH OVER ASH
 1203E	CUNEIFORM SIGN ASH2
+	x (cuneiform numeric sign four ban2 variant form - 12453)
 1203F	CUNEIFORM SIGN ASHGAB
 12040	CUNEIFORM SIGN BA
 12041	CUNEIFORM SIGN BAD
@@ -36813,6 +37141,11 @@ FFFF	<not a character>
 12077	CUNEIFORM SIGN DIN
 12078	CUNEIFORM SIGN DIN KASKAL U GUNU DISH
 12079	CUNEIFORM SIGN DISH
+	= 1 diš
+	= 1 bariga
+	x (cuneiform numeric sign three dish - 12408)
+	x (cuneiform numeric sign nigidamin - 12456)
+	x (cuneiform numeric sign nigidaesh - 12457)
 1207A	CUNEIFORM SIGN DU
 1207B	CUNEIFORM SIGN DU OVER DU
 1207C	CUNEIFORM SIGN DU GUNU
@@ -37242,11 +37575,15 @@ FFFF	<not a character>
 12224	CUNEIFORM SIGN MAH
 12225	CUNEIFORM SIGN MAR
 12226	CUNEIFORM SIGN MASH
+	= 1/2 diš
+	x (cuneiform numeric sign one ban2 - 1244F)
 12227	CUNEIFORM SIGN MASH2
 12228	CUNEIFORM SIGN ME
 12229	CUNEIFORM SIGN MES
 1222A	CUNEIFORM SIGN MI
 1222B	CUNEIFORM SIGN MIN
+	= 2 diš
+	x (cuneiform numeric sign three dish - 12408)
 1222C	CUNEIFORM SIGN MU
 1222D	CUNEIFORM SIGN MU OVER MU
 1222E	CUNEIFORM SIGN MUG
@@ -37326,6 +37663,7 @@ FFFF	<not a character>
 12278	CUNEIFORM SIGN NUNUZ KISIM5 TIMES BI
 12279	CUNEIFORM SIGN NUNUZ KISIM5 TIMES BI U
 1227A	CUNEIFORM SIGN PA
+	x (cuneiform numeric sign two ban2 - 12450)
 1227B	CUNEIFORM SIGN PAD
 1227C	CUNEIFORM SIGN PAN
 1227D	CUNEIFORM SIGN PAP
@@ -37389,7 +37727,11 @@ FFFF	<not a character>
 122B7	CUNEIFORM SIGN SHA6
 122B8	CUNEIFORM SIGN SHAB6
 122B9	CUNEIFORM SIGN SHAR2
-	* formed by making a circular indentation with the end of the stylus
+	= 1 šar₂
+	* same glyph as 1212D HI in all but the most archaizing texts
+	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
+	* used for logographic šar₂ and cuneiform 1 šar₂
+	x (cuneiform numeric sign two shar2 - 12423)
 122BA	CUNEIFORM SIGN SHE
 122BB	CUNEIFORM SIGN SHE HU
 122BC	CUNEIFORM SIGN SHE OVER SHE GAD OVER GAD GAR OVER GAR
@@ -37474,8 +37816,14 @@ FFFF	<not a character>
 12309	CUNEIFORM SIGN TUR
 1230A	CUNEIFORM SIGN TUR OVER TUR ZA OVER ZA
 1230B	CUNEIFORM SIGN U
+	= 1 u
+	= 1 bur₃
+	x (cuneiform numeric sign four u - 1240F)
 1230C	CUNEIFORM SIGN U GUD
 1230D	CUNEIFORM SIGN U U U
+	= 3 u
+	= 3 bur₃
+	x (cuneiform numeric sign four u - 1240F)
 1230E	CUNEIFORM SIGN U OVER U PA OVER PA GAR OVER GAR
 1230F	CUNEIFORM SIGN U OVER U SUR OVER SUR
 12310	CUNEIFORM SIGN U OVER U U REVERSED OVER U REVERSED
@@ -37559,7 +37907,9 @@ FFFF	<not a character>
 1235B	CUNEIFORM SIGN UZ3 TIMES KASKAL
 1235C	CUNEIFORM SIGN UZU
 1235D	CUNEIFORM SIGN ZA
+	x (cuneiform numeric sign four dish - 12409)
 1235E	CUNEIFORM SIGN ZA TENU
+	x (cuneiform numeric sign four ash tenu - 1244C)
 1235F	CUNEIFORM SIGN ZA SQUARED TIMES KUR
 12360	CUNEIFORM SIGN ZAG
 12361	CUNEIFORM SIGN ZAMX
@@ -37621,9 +37971,15 @@ FFFF	<not a character>
 12397	CUNEIFORM SIGN TI2
 12398	CUNEIFORM SIGN UM TIMES ME
 12399	CUNEIFORM SIGN U U
+	= 2 u
+	= 2 bur₃
+	x (cuneiform numeric sign four u - 1240F)
 @@	12400	Cuneiform Numbers and Punctuation	1247F
-@		Numeric signs
+@		Common numeric signs
+@+		These are used in multiple metrological systems.
 12400	CUNEIFORM NUMERIC SIGN TWO ASH
+	= 2 iku
+	x (cuneiform sign ash - 12038)
 12401	CUNEIFORM NUMERIC SIGN THREE ASH
 12402	CUNEIFORM NUMERIC SIGN FOUR ASH
 12403	CUNEIFORM NUMERIC SIGN FIVE ASH
@@ -37632,13 +37988,20 @@ FFFF	<not a character>
 12406	CUNEIFORM NUMERIC SIGN EIGHT ASH
 12407	CUNEIFORM NUMERIC SIGN NINE ASH
 12408	CUNEIFORM NUMERIC SIGN THREE DISH
+	x (cuneiform sign dish - 12079)
+	x (cuneiform sign min - 1222B)
 12409	CUNEIFORM NUMERIC SIGN FOUR DISH
+	= 4 bariga
 1240A	CUNEIFORM NUMERIC SIGN FIVE DISH
 1240B	CUNEIFORM NUMERIC SIGN SIX DISH
 1240C	CUNEIFORM NUMERIC SIGN SEVEN DISH
 1240D	CUNEIFORM NUMERIC SIGN EIGHT DISH
 1240E	CUNEIFORM NUMERIC SIGN NINE DISH
 1240F	CUNEIFORM NUMERIC SIGN FOUR U
+	= 4 bur₃
+	x (cuneiform sign u - 1230B)
+	x (cuneiform sign u u - 12399)
+	x (cuneiform sign u u u - 1230D)
 12410	CUNEIFORM NUMERIC SIGN FIVE U
 12411	CUNEIFORM NUMERIC SIGN SIX U
 12412	CUNEIFORM NUMERIC SIGN SEVEN U
@@ -37659,6 +38022,7 @@ FFFF	<not a character>
 12421	CUNEIFORM NUMERIC SIGN FOUR GESHU
 12422	CUNEIFORM NUMERIC SIGN FIVE GESHU
 12423	CUNEIFORM NUMERIC SIGN TWO SHAR2
+	x (cuneiform sign shar2 - 122B9)
 12424	CUNEIFORM NUMERIC SIGN THREE SHAR2
 12425	CUNEIFORM NUMERIC SIGN THREE SHAR2 VARIANT FORM
 12426	CUNEIFORM NUMERIC SIGN FOUR SHAR2
@@ -37675,12 +38039,14 @@ FFFF	<not a character>
 12431	CUNEIFORM NUMERIC SIGN FIVE SHARU
 12432	CUNEIFORM NUMERIC SIGN SHAR2 TIMES GAL PLUS DISH
 12433	CUNEIFORM NUMERIC SIGN SHAR2 TIMES GAL PLUS MIN
+@		Area measures
 12434	CUNEIFORM NUMERIC SIGN ONE BURU
 12435	CUNEIFORM NUMERIC SIGN TWO BURU
 12436	CUNEIFORM NUMERIC SIGN THREE BURU
 12437	CUNEIFORM NUMERIC SIGN THREE BURU VARIANT FORM
 12438	CUNEIFORM NUMERIC SIGN FOUR BURU
 12439	CUNEIFORM NUMERIC SIGN FIVE BURU
+@		Variant stacking patterns
 1243A	CUNEIFORM NUMERIC SIGN THREE VARIANT FORM ESH16
 1243B	CUNEIFORM NUMERIC SIGN THREE VARIANT FORM ESH21
 1243C	CUNEIFORM NUMERIC SIGN FOUR VARIANT FORM LIMMU
@@ -37696,13 +38062,20 @@ FFFF	<not a character>
 12446	CUNEIFORM NUMERIC SIGN NINE VARIANT FORM ILIMMU
 12447	CUNEIFORM NUMERIC SIGN NINE VARIANT FORM ILIMMU3
 12448	CUNEIFORM NUMERIC SIGN NINE VARIANT FORM ILIMMU4
+@		Slanted numerals
+@+		These are used in multiple Early Dynastic metrological systems, as well as Ur III dates and subtractive notations.
 12449	CUNEIFORM NUMERIC SIGN NINE VARIANT FORM ILIMMU A
 1244A	CUNEIFORM NUMERIC SIGN TWO ASH TENU
+	= 2 diš tenû
+	x (cuneiform sign ash zida tenu - 12039)
 1244B	CUNEIFORM NUMERIC SIGN THREE ASH TENU
 1244C	CUNEIFORM NUMERIC SIGN FOUR ASH TENU
 1244D	CUNEIFORM NUMERIC SIGN FIVE ASH TENU
 1244E	CUNEIFORM NUMERIC SIGN SIX ASH TENU
+@		Capacity measures
 1244F	CUNEIFORM NUMERIC SIGN ONE BAN2
+	* 12226 should be used for 1/2 diš
+	x (cuneiform sign mash - 12226)
 12450	CUNEIFORM NUMERIC SIGN TWO BAN2
 12451	CUNEIFORM NUMERIC SIGN THREE BAN2
 12452	CUNEIFORM NUMERIC SIGN FOUR BAN2
@@ -37710,7 +38083,11 @@ FFFF	<not a character>
 12454	CUNEIFORM NUMERIC SIGN FIVE BAN2
 12455	CUNEIFORM NUMERIC SIGN FIVE BAN2 VARIANT FORM
 12456	CUNEIFORM NUMERIC SIGN NIGIDAMIN
+	= 2 bariga
+	x (cuneiform sign dish - 12079)
 12457	CUNEIFORM NUMERIC SIGN NIGIDAESH
+	= 3 bariga
+@		Area measures
 12458	CUNEIFORM NUMERIC SIGN ONE ESHE3
 12459	CUNEIFORM NUMERIC SIGN TWO ESHE3
 @		Fractions
@@ -37718,20 +38095,31 @@ FFFF	<not a character>
 1245B	CUNEIFORM NUMERIC SIGN TWO THIRDS DISH
 1245C	CUNEIFORM NUMERIC SIGN FIVE SIXTHS DISH
 1245D	CUNEIFORM NUMERIC SIGN ONE THIRD VARIANT FORM A
+	= 1/3 aš curved
+	= 1/3 diš curved
 1245E	CUNEIFORM NUMERIC SIGN TWO THIRDS VARIANT FORM A
+	= 2/3 aš curved
+	= 2/3 diš curved
 1245F	CUNEIFORM NUMERIC SIGN ONE EIGHTH ASH
+	= 1/8 iku
 12460	CUNEIFORM NUMERIC SIGN ONE QUARTER ASH
+	= 1/4 iku
 12461	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE SIXTH
 12462	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE QUARTER
+@		Capacity measures
+@+		These are used in Umma in the Ur III period with a gur of 4 bariga.
 12463	CUNEIFORM NUMERIC SIGN ONE QUARTER GUR
+	= 1 bariga variant form
 12464	CUNEIFORM NUMERIC SIGN ONE HALF GUR
+	= 2 bariga variant form
+	* the sequence 12464 12463 is used for 3/4 gur
 @		Elamite fractions
 12465	CUNEIFORM NUMERIC SIGN ELAMITE ONE THIRD
 12466	CUNEIFORM NUMERIC SIGN ELAMITE TWO THIRDS
 @		Elamite numeric signs
 12467	CUNEIFORM NUMERIC SIGN ELAMITE FORTY
 12468	CUNEIFORM NUMERIC SIGN ELAMITE FIFTY
-@		Numeric signs
+@		Variant stacking patterns
 12469	CUNEIFORM NUMERIC SIGN FOUR U VARIANT FORM
 1246A	CUNEIFORM NUMERIC SIGN FIVE U VARIANT FORM
 1246B	CUNEIFORM NUMERIC SIGN SIX U VARIANT FORM
@@ -38085,6 +38473,7 @@ FFFF	<not a character>
 	* classifier death : mt
 13012	EGYPTIAN HIEROGLYPH A015
 	* logogram (to fall) : ḫr
+	~ 13012 FE03 rotated approximately 30 degrees
 13013	EGYPTIAN HIEROGLYPH A016
 	* classifier bowing
 13014	EGYPTIAN HIEROGLYPH A017
@@ -38429,10 +38818,12 @@ FFFF	<not a character>
 	* classifier taking : ṯꜣꞽ
 130B8	EGYPTIAN HIEROGLYPH D052
 	* phonemogram : bꜣḥ
+	~ 130B8 FE03 rotated approximately 25 degrees
 130B9	EGYPTIAN HIEROGLYPH D052A
 	* phonemogram : sšm
 130BA	EGYPTIAN HIEROGLYPH D053
 	* phonemogram : bꜣḥ
+	~ 130BA FE03 rotated approximately 25 degrees
 130BB	EGYPTIAN HIEROGLYPH D054
 	* classifier movement
 130BC	EGYPTIAN HIEROGLYPH D054A
@@ -38608,6 +38999,7 @@ FFFF	<not a character>
 1310F	EGYPTIAN HIEROGLYPH F016
 	* logogram (horn) : ꜥb
 	~ 1310F FE00 rotated 90 degrees
+	~ 1310F FE03 rotated approximately 30 degrees
 13110	EGYPTIAN HIEROGLYPH F017
 	* logogram purification : ꜥb.w
 13111	EGYPTIAN HIEROGLYPH F018
@@ -38679,6 +39071,8 @@ FFFF	<not a character>
 	* classifier ribs (meat of ribs) : spḥ.t
 1312F	EGYPTIAN HIEROGLYPH F044
 	* phono-repeater : ꞽwꜥ
+	~ 1312F FE03 rotated approximately 40 degrees [but not yet vertical]
+	~ 1312F FE06 rotated approximately 325 degrees [horizontal]
 13130	EGYPTIAN HIEROGLYPH F045
 	* logogram (uterus, womb) : ꞽd.t
 13131	EGYPTIAN HIEROGLYPH F045A
@@ -38707,6 +39101,10 @@ FFFF	<not a character>
 	~ 13139 FE00 rotated 90 degrees
 	~ 13139 FE01 rotated 180 degrees
 	~ 13139 FE02 rotated 270 degrees
+	~ 13139 FE03 rotated approximately 45 degrees [vertical]
+	~ 13139 FE04 rotated approximately 135 degrees [horizontal]
+	~ 13139 FE05 rotated approximately 225 degrees [vertical]
+	~ 13139 FE06 rotated approximately 315 degrees [horizontal]
 1313A	EGYPTIAN HIEROGLYPH F051A
 	* classifier part of a body : ḥꜥ.w
 1313B	EGYPTIAN HIEROGLYPH F051B
@@ -38866,6 +39264,8 @@ FFFF	<not a character>
 	~ 13183 FE02 rotated 270 degrees
 13184	EGYPTIAN HIEROGLYPH H006
 	* phonemogram : šw
+	~ 13184 FE03 rotated approximately 25 degrees
+	~ 13184 FE06 rotated approximately 335 degrees
 13185	EGYPTIAN HIEROGLYPH H006A
 	* from hieratic
 	* phonemogram : šw
@@ -38919,12 +39319,15 @@ FFFF	<not a character>
 	* phonemogram : ꞽn
 1319C	EGYPTIAN HIEROGLYPH K002
 	* phono-repeater : bw
+	~ 1319C FE03 rotated approximately 45 degrees
 1319D	EGYPTIAN HIEROGLYPH K003
 	* logogram (fish) : rm
+	~ 1319D FE03 rotated approximately 30 degrees
 1319E	EGYPTIAN HIEROGLYPH K004
 	* phonemogram : ẖꜣ
 1319F	EGYPTIAN HIEROGLYPH K005
 	* phono-repeater : bs
+	~ 1319F FE03 rotated approximately 30 degrees
 131A0	EGYPTIAN HIEROGLYPH K006
 	* logogram (scale) : nšm.t
 	~ 131A0 FE00 rotated 90 degrees
@@ -38967,6 +39370,7 @@ FFFF	<not a character>
 	* phonemogram : ḫt
 	~ 131B1 FE00 rotated 90 degrees
 	~ 131B1 FE01 rotated 180 degrees
+	~ 131B1 FE03 rotated approximately 45 degrees
 131B2	EGYPTIAN HIEROGLYPH M003A
 	* phonemogram : m-ḫt
 131B3	EGYPTIAN HIEROGLYPH M004
@@ -39040,7 +39444,7 @@ FFFF	<not a character>
 131D0	EGYPTIAN HIEROGLYPH M021
 	* logogram (herb, plant) : sm
 131D1	EGYPTIAN HIEROGLYPH M022
-	* classifier 'bud, lotus bud'
+	* classifier "bud, lotus bud"
 	* phonemogram : nḫb
 131D2	EGYPTIAN HIEROGLYPH M022A
 	* phonemogram : nn
@@ -39062,6 +39466,8 @@ FFFF	<not a character>
 	* logogram (Upper Egypt) : šmꜥ.w
 131DB	EGYPTIAN HIEROGLYPH M029
 	* logogram (to be sweet) : nḏm
+	~ 131DB FE03 rotated approximately 20 degrees
+	~ 131DB FE06 rotated approximately 340 degrees
 131DC	EGYPTIAN HIEROGLYPH M030
 	* logogram (to be sweet) : bnr/bnꞽ
 131DD	EGYPTIAN HIEROGLYPH M031
@@ -39109,6 +39515,7 @@ FFFF	<not a character>
 	* phonemogram : spd
 	~ 131EE FE01 rotated 180 degrees
 	~ 131EE FE02 rotated 270 degrees
+	~ 131EE FE06 rotated approximately 330 degrees
 @		N. Sky, earth, water
 131EF	EGYPTIAN HIEROGLYPH N001
 	* logogram (sky) : p.t
@@ -39166,6 +39573,8 @@ FFFF	<not a character>
 	* classifier riverbank : wḏb
 13205	EGYPTIAN HIEROGLYPH N021
 	* logogram (riverbank) : ꞽdb
+	~ 13205 FE03 rotated approximately 30 degrees [but not yet vertical]
+	~ 13205 FE06 rotated approximately 330 degrees [horizontal]
 13206	EGYPTIAN HIEROGLYPH N022
 	* logogram (riverbank) : ꞽdb
 13207	EGYPTIAN HIEROGLYPH N023
@@ -39458,6 +39867,7 @@ FFFF	<not a character>
 	* classifier overthrow, demolish : whn
 1328B	EGYPTIAN HIEROGLYPH O038
 	* classifier passage : ꜥrr.yt
+	~ 1328B FE01 rotated 180 degrees
 1328C	EGYPTIAN HIEROGLYPH O039
 	* not to be confused with 13219
 	* classifier stone, brick, pebble : mꜣṯ
@@ -39483,6 +39893,7 @@ FFFF	<not a character>
 	* logogram (time, occasion) : sp
 13296	EGYPTIAN HIEROGLYPH O049
 	* logogram (city, village) : nꞽw.t
+	~ 13296 FE03 rotated 45 degrees [= 135, 225, 315 degrees]
 13297	EGYPTIAN HIEROGLYPH O050
 	* classifier treshing floor : sp.t
 13298	EGYPTIAN HIEROGLYPH O050A
@@ -39513,6 +39924,7 @@ FFFF	<not a character>
 	* phonemogram : ḫrw
 	~ 132A4 FE01 rotated 180 degrees
 	~ 132A4 FE02 rotated 270 degrees
+	~ 132A4 FE06 rotated approximately 315 degrees
 132A5	EGYPTIAN HIEROGLYPH P009
 	* phonemogram : ḫrw=f(y)
 132A6	EGYPTIAN HIEROGLYPH P010
@@ -39659,6 +40071,7 @@ FFFF	<not a character>
 132E9	EGYPTIAN HIEROGLYPH S020
 	* logogram (seal, lock, sealing) : ḫtm
 	~ 132E9 FE02 rotated 270 degrees
+	~ 132E9 FE06 rotated approximately 300 degrees
 132EA	EGYPTIAN HIEROGLYPH S021
 	* logogram (necklace, collar) : wsḫ
 132EB	EGYPTIAN HIEROGLYPH S022
@@ -39820,6 +40233,7 @@ FFFF	<not a character>
 	* classifier cutting, slaughter : ds
 1332B	EGYPTIAN HIEROGLYPH T031
 	* phonemogram : sšm
+	~ 1332B FE06 rotated approximately 340 degrees [horizontal]
 1332C	EGYPTIAN HIEROGLYPH T032
 	* phonemogram : sšm
 1332D	EGYPTIAN HIEROGLYPH T032A
@@ -39951,7 +40365,7 @@ FFFF	<not a character>
 	~ 13361 FE02 rotated 270 degrees
 @		V. Rope, fiber, baskets, bags, etc.
 13362	EGYPTIAN HIEROGLYPH V001
-	* classifier 'cord, rope'
+	* classifier "cord, rope"
 	* not to be confused with 133F2
 	* logogram (100) : šn.t
 13363	EGYPTIAN HIEROGLYPH V001A
@@ -39982,8 +40396,10 @@ FFFF	<not a character>
 	* phonemogram : wꜣ
 13370	EGYPTIAN HIEROGLYPH V005
 	* logogram (foundation) : snṯ
+	~ 13370 FE06 rotated approximately 320 degrees
 13371	EGYPTIAN HIEROGLYPH V006
 	* phonemogram : šs
+	~ 13371 FE06 rotated approximately 315 degrees
 13372	EGYPTIAN HIEROGLYPH V007
 	* phonemogram : šn
 13373	EGYPTIAN HIEROGLYPH V007A
@@ -40267,6 +40683,7 @@ FFFF	<not a character>
 133E4	EGYPTIAN HIEROGLYPH Z001
 	* not to be confused with 133FA
 	* classifier semogram
+	~ 133E4 FE00 rotated 90 degrees [= 270 degrees]
 133E5	EGYPTIAN HIEROGLYPH Z002
 	* not to be confused with 133FC
 	* classifier plural
@@ -40301,6 +40718,7 @@ FFFF	<not a character>
 	* transliterated as y
 	* not to be confused with 133FB
 	* logogram (2) : sn.w
+	~ 133EE FE00 rotated 90 degrees [= 270 degrees]
 133EF	EGYPTIAN HIEROGLYPH Z005
 	* substitute for dangerous signs
 133F0	EGYPTIAN HIEROGLYPH Z005A
@@ -40380,6 +40798,7 @@ FFFF	<not a character>
 	* transliterated as 1E2B
 	x (arabic letter khah - 062E)
 	* phonemogram : ḫ
+	~ 1340D FE04 rotated approximately 135 degrees [= 315 degrees]
 1340E	EGYPTIAN HIEROGLYPH AA002
 	* classifier bad/evil : nḥꜣ
 1340F	EGYPTIAN HIEROGLYPH AA003
@@ -40408,6 +40827,8 @@ FFFF	<not a character>
 	~ 13419 FE00 rotated 90 degrees
 	~ 13419 FE01 rotated 180 degrees
 	~ 13419 FE02 rotated 270 degrees
+	~ 13419 FE03 rotated approximately 15 degrees
+	~ 13419 FE06 rotated approximately 345 degrees
 1341A	EGYPTIAN HIEROGLYPH AA012
 	* older variant of 13419
 	* phonemogram : mꜣꜥ
@@ -44308,10 +44729,13 @@ FFFF	<not a character>
 	* phono-repeater : mḥ
 13BE8	EGYPTIAN HIEROGLYPH-13BE8
 	* classifier cutting : šꜥd
+	~ 13BE8 FE00 rotated 90 degrees [= 270 degrees]
 13BE9	EGYPTIAN HIEROGLYPH-13BE9
 	* classifier shreds, pieces : spꞽ
+	~ 13BE9 FE00 rotated 90 degrees [= 270 degrees]
 13BEA	EGYPTIAN HIEROGLYPH-13BEA
 	* phono-repeater : mḥ
+	~ 13BEA FE00 rotated 90 degrees [= 270 degrees]
 13BEB	EGYPTIAN HIEROGLYPH-13BEB
 	* phonemogram : tꜣy
 13BEC	EGYPTIAN HIEROGLYPH-13BEC
@@ -45933,6 +46357,7 @@ FFFF	<not a character>
 @		N14. Sand
 13F1F	EGYPTIAN HIEROGLYPH-13F1F
 	* classifier medicaments, incense, oil : snṯr
+	~ 13F1F FE01 rotated 180 degrees
 @		N15. Sunrise over mountain (horizon)
 13F20	EGYPTIAN HIEROGLYPH-13F20
 	* logogram (eternity) : nḥḥ
@@ -46092,6 +46517,7 @@ FFFF	<not a character>
 13F71	EGYPTIAN HIEROGLYPH-13F71
 13F72	EGYPTIAN HIEROGLYPH-13F72
 	* logogram (wall) : ꞽnb
+	~ 13F72 FE00 rotated 90 degrees [= 270 degrees]
 13F73	EGYPTIAN HIEROGLYPH-13F73
 	* classifier overthrow, demolish : snb
 13F74	EGYPTIAN HIEROGLYPH-13F74
@@ -47588,6 +48014,10 @@ FFFF	<not a character>
 @		T18. Knife
 14274	EGYPTIAN HIEROGLYPH-14274
 	* classifier cutting, slaughter : mds
+	~ 14274 FE01 rotated 180 degrees
+	~ 14274 FE02 rotated 270 degrees
+	~ 14274 FE05 rotated approximately 250 degrees [vertical]
+	~ 14274 FE06 rotated approximately 340 degrees [horizontal]
 14275	EGYPTIAN HIEROGLYPH-14275
 	* logogram (flint, in ds-km, obsidian) : ds
 14276	EGYPTIAN HIEROGLYPH-14276
@@ -48362,6 +48792,7 @@ FFFF	<not a character>
 143F9	EGYPTIAN HIEROGLYPH-143F9
 143FA	EGYPTIAN HIEROGLYPH-143FA
 	* phonemogram : ꜣb
+@~	Standardized Variation Sequences
 @@	14400	Anatolian Hieroglyphs	1467F
 @+		In the names list, most of the comments are in Latin. Those which have a Luwian phonetic value are identified as syllabic.
 @		A. The human body and clothing
@@ -50547,6 +50978,51 @@ FFFF	<not a character>
 16D77	KIRAT RAI DIGIT SEVEN
 16D78	KIRAT RAI DIGIT EIGHT
 16D79	KIRAT RAI DIGIT NINE
+@@	16D80	Chisoi	16DAF
+@		Letters
+16D80	CHISOI LETTER A
+16D81	CHISOI LETTER BA
+16D82	CHISOI LETTER AI
+16D83	CHISOI LETTER AA
+16D84	CHISOI LETTER GA
+16D85	CHISOI LETTER TA
+16D86	CHISOI LETTER E
+16D87	CHISOI LETTER SA
+16D88	CHISOI LETTER NA
+16D89	CHISOI LETTER I
+16D8A	CHISOI LETTER KA
+16D8B	CHISOI LETTER RA
+16D8C	CHISOI LETTER MA
+16D8D	CHISOI LETTER HA
+16D8E	CHISOI LETTER RRA
+16D8F	CHISOI LETTER U
+16D90	CHISOI LETTER DA
+16D91	CHISOI LETTER LA
+16D92	CHISOI LETTER O
+16D93	CHISOI LETTER NYA
+16D94	CHISOI LETTER NGA
+16D95	CHISOI LETTER CA
+16D96	CHISOI LETTER JA
+16D97	CHISOI LETTER PA
+16D98	CHISOI SIGN ANUSVARA
+16D99	CHISOI LETTER YA
+16D9A	CHISOI LETTER DDA
+16D9B	CHISOI LETTER TTA
+16D9C	CHISOI LETTER JARAHA
+@		Sign
+16D9D	CHISOI SIGN SISO
+	* vowel killer
+@		Digits
+16DA0	CHISOI DIGIT ZERO
+16DA1	CHISOI DIGIT ONE
+16DA2	CHISOI DIGIT TWO
+16DA3	CHISOI DIGIT THREE
+16DA4	CHISOI DIGIT FOUR
+16DA5	CHISOI DIGIT FIVE
+16DA6	CHISOI DIGIT SIX
+16DA7	CHISOI DIGIT SEVEN
+16DA8	CHISOI DIGIT EIGHT
+16DA9	CHISOI DIGIT NINE
 @@	16E40	Medefaidrin	16E9F
 @		Uppercase letters
 16E40	MEDEFAIDRIN CAPITAL LETTER M
@@ -50653,6 +51129,60 @@ FFFF	<not a character>
 16E99	MEDEFAIDRIN SYMBOL AIVA
 	* or
 16E9A	MEDEFAIDRIN EXCLAMATION OH
+@@	16EA0	Beria Erfe	16EDF
+@+		The Beria Erfe script is used for the language of the Zaghawa people of Sudan and Chad. The language is known as Beria, Bera, or Zaghawa.
+@		Uppercase letters
+16EA0	BERIA ERFE CAPITAL LETTER ARKAB
+16EA1	BERIA ERFE CAPITAL LETTER BASIGNA
+16EA2	BERIA ERFE CAPITAL LETTER DARBAI
+16EA3	BERIA ERFE CAPITAL LETTER EH
+16EA4	BERIA ERFE CAPITAL LETTER FITKO
+16EA5	BERIA ERFE CAPITAL LETTER GOWAY
+16EA6	BERIA ERFE CAPITAL LETTER HIRDEABO
+16EA7	BERIA ERFE CAPITAL LETTER I
+16EA8	BERIA ERFE CAPITAL LETTER DJAI
+16EA9	BERIA ERFE CAPITAL LETTER KOBO
+16EAA	BERIA ERFE CAPITAL LETTER LAKKO
+16EAB	BERIA ERFE CAPITAL LETTER MERI
+16EAC	BERIA ERFE CAPITAL LETTER NINI
+16EAD	BERIA ERFE CAPITAL LETTER GNA
+16EAE	BERIA ERFE CAPITAL LETTER NGAY
+16EAF	BERIA ERFE CAPITAL LETTER OI
+16EB0	BERIA ERFE CAPITAL LETTER PI
+16EB1	BERIA ERFE CAPITAL LETTER ERIGO
+16EB2	BERIA ERFE CAPITAL LETTER ERIGO TAMURA
+16EB3	BERIA ERFE CAPITAL LETTER SERI
+16EB4	BERIA ERFE CAPITAL LETTER SHEP
+16EB5	BERIA ERFE CAPITAL LETTER TATASOUE
+16EB6	BERIA ERFE CAPITAL LETTER UI
+16EB7	BERIA ERFE CAPITAL LETTER WASSE
+16EB8	BERIA ERFE CAPITAL LETTER AY
+@		Lowercase letters
+16EBB	BERIA ERFE SMALL LETTER ARKAB
+16EBC	BERIA ERFE SMALL LETTER BASIGNA
+16EBD	BERIA ERFE SMALL LETTER DARBAI
+16EBE	BERIA ERFE SMALL LETTER EH
+16EBF	BERIA ERFE SMALL LETTER FITKO
+16EC0	BERIA ERFE SMALL LETTER GOWAY
+16EC1	BERIA ERFE SMALL LETTER HIRDEABO
+16EC2	BERIA ERFE SMALL LETTER I
+16EC3	BERIA ERFE SMALL LETTER DJAI
+16EC4	BERIA ERFE SMALL LETTER KOBO
+16EC5	BERIA ERFE SMALL LETTER LAKKO
+16EC6	BERIA ERFE SMALL LETTER MERI
+16EC7	BERIA ERFE SMALL LETTER NINI
+16EC8	BERIA ERFE SMALL LETTER GNA
+16EC9	BERIA ERFE SMALL LETTER NGAY
+16ECA	BERIA ERFE SMALL LETTER OI
+16ECB	BERIA ERFE SMALL LETTER PI
+16ECC	BERIA ERFE SMALL LETTER ERIGO
+16ECD	BERIA ERFE SMALL LETTER ERIGO TAMURA
+16ECE	BERIA ERFE SMALL LETTER SERI
+16ECF	BERIA ERFE SMALL LETTER SHEP
+16ED0	BERIA ERFE SMALL LETTER TATASOUE
+16ED1	BERIA ERFE SMALL LETTER UI
+16ED2	BERIA ERFE SMALL LETTER WASSE
+16ED3	BERIA ERFE SMALL LETTER AY
 @@	16F00	Miao	16F9F
 @		Consonant onsets
 16F00	MIAO LETTER PA
@@ -50895,7 +51425,19 @@ FFFF	<not a character>
 	x 4E87
 16FF1	VIETNAMESE ALTERNATE READING MARK NHAY
 	x 21FE8
-@@	17000	Tangut	187F7
+@		Characters used for rhotacization
+@+		These small forms are used as non-syllabic suffixes representing the linguistic phenomenon known in Chinese as érhuà (rhotacization).
+16FF2	CHINESE SMALL SIMPLIFIED ER
+	x 513F
+16FF3	CHINESE SMALL TRADITIONAL ER
+	x 5152
+@		Characters used for Cantonese music
+@+		These tempo marks constitute a set with 3026.
+16FF4	YANGQIN SIGN SLOW ONE BEAT
+	x (hangzhou numeral six - 3026)
+16FF5	YANGQIN SIGN SLOW THREE HALF BEATS
+16FF6	YANGQIN SIGN SLOW TWO BEATS
+@@	17000	Tangut	187FF
 @@	18800	Tangut Components	18AFF
 @+		This is a superset of components used in various Tangut sources. Indexes of components (001..768) used for Tangut ideographs are shown in the Tangut block.
 @		One-stroke components
@@ -52191,7 +52733,140 @@ FFFF	<not a character>
 @		Indication of missing character
 18CFF	KHITAN SMALL SCRIPT CHARACTER-18CFF
 	* represents a lost or illegible character
-@@	18D00	Tangut Supplement	18D08
+@@	18D00	Tangut Supplement	18D1E
+@@	18D80	Tangut Components Supplement	18DFF
+@		Miscellaneous components
+18D80	TANGUT COMPONENT-769
+	* seven strokes
+18D81	TANGUT COMPONENT-770
+	* three strokes
+@		One-stroke components
+18D82	TANGUT COMPONENT-771
+18D83	TANGUT COMPONENT-772
+@		Two-stroke component
+18D84	TANGUT COMPONENT-773
+@		Three-stroke component
+18D85	TANGUT COMPONENT-774
+@		Four-stroke components
+18D86	TANGUT COMPONENT-775
+18D87	TANGUT COMPONENT-776
+18D88	TANGUT COMPONENT-777
+@		Five-stroke components
+18D89	TANGUT COMPONENT-778
+18D8A	TANGUT COMPONENT-779
+18D8B	TANGUT COMPONENT-780
+18D8C	TANGUT COMPONENT-781
+18D8D	TANGUT COMPONENT-782
+18D8E	TANGUT COMPONENT-783
+18D8F	TANGUT COMPONENT-784
+18D90	TANGUT COMPONENT-785
+@		Six-stroke components
+18D91	TANGUT COMPONENT-786
+18D92	TANGUT COMPONENT-787
+18D93	TANGUT COMPONENT-788
+18D94	TANGUT COMPONENT-789
+18D95	TANGUT COMPONENT-790
+18D96	TANGUT COMPONENT-791
+18D97	TANGUT COMPONENT-792
+18D98	TANGUT COMPONENT-793
+18D99	TANGUT COMPONENT-794
+18D9A	TANGUT COMPONENT-795
+18D9B	TANGUT COMPONENT-796
+18D9C	TANGUT COMPONENT-797
+@		Seven-stroke components
+18D9D	TANGUT COMPONENT-798
+18D9E	TANGUT COMPONENT-799
+18D9F	TANGUT COMPONENT-800
+18DA0	TANGUT COMPONENT-801
+18DA1	TANGUT COMPONENT-802
+18DA2	TANGUT COMPONENT-803
+18DA3	TANGUT COMPONENT-804
+18DA4	TANGUT COMPONENT-805
+18DA5	TANGUT COMPONENT-806
+18DA6	TANGUT COMPONENT-807
+18DA7	TANGUT COMPONENT-808
+18DA8	TANGUT COMPONENT-809
+18DA9	TANGUT COMPONENT-810
+18DAA	TANGUT COMPONENT-811
+18DAB	TANGUT COMPONENT-812
+18DAC	TANGUT COMPONENT-813
+18DAD	TANGUT COMPONENT-814
+@		Eight-stroke components
+18DAE	TANGUT COMPONENT-815
+18DAF	TANGUT COMPONENT-816
+18DB0	TANGUT COMPONENT-817
+18DB1	TANGUT COMPONENT-818
+18DB2	TANGUT COMPONENT-819
+18DB3	TANGUT COMPONENT-820
+18DB4	TANGUT COMPONENT-821
+18DB5	TANGUT COMPONENT-822
+18DB6	TANGUT COMPONENT-823
+18DB7	TANGUT COMPONENT-824
+18DB8	TANGUT COMPONENT-825
+18DB9	TANGUT COMPONENT-826
+18DBA	TANGUT COMPONENT-827
+18DBB	TANGUT COMPONENT-828
+18DBC	TANGUT COMPONENT-829
+18DBD	TANGUT COMPONENT-830
+18DBE	TANGUT COMPONENT-831
+18DBF	TANGUT COMPONENT-832
+18DC0	TANGUT COMPONENT-833
+18DC1	TANGUT COMPONENT-834
+18DC2	TANGUT COMPONENT-835
+18DC3	TANGUT COMPONENT-836
+@		Nine-stroke components
+18DC4	TANGUT COMPONENT-837
+18DC5	TANGUT COMPONENT-838
+18DC6	TANGUT COMPONENT-839
+18DC7	TANGUT COMPONENT-840
+18DC8	TANGUT COMPONENT-841
+18DC9	TANGUT COMPONENT-842
+18DCA	TANGUT COMPONENT-843
+18DCB	TANGUT COMPONENT-844
+18DCC	TANGUT COMPONENT-845
+18DCD	TANGUT COMPONENT-846
+18DCE	TANGUT COMPONENT-847
+18DCF	TANGUT COMPONENT-848
+18DD0	TANGUT COMPONENT-849
+18DD1	TANGUT COMPONENT-850
+18DD2	TANGUT COMPONENT-851
+18DD3	TANGUT COMPONENT-852
+18DD4	TANGUT COMPONENT-853
+18DD5	TANGUT COMPONENT-854
+18DD6	TANGUT COMPONENT-855
+18DD7	TANGUT COMPONENT-856
+18DD8	TANGUT COMPONENT-857
+@		Ten-stroke components
+18DD9	TANGUT COMPONENT-858
+18DDA	TANGUT COMPONENT-859
+18DDB	TANGUT COMPONENT-860
+18DDC	TANGUT COMPONENT-861
+18DDD	TANGUT COMPONENT-862
+18DDE	TANGUT COMPONENT-863
+18DDF	TANGUT COMPONENT-864
+18DE0	TANGUT COMPONENT-865
+18DE1	TANGUT COMPONENT-866
+18DE2	TANGUT COMPONENT-867
+18DE3	TANGUT COMPONENT-868
+18DE4	TANGUT COMPONENT-869
+18DE5	TANGUT COMPONENT-870
+18DE6	TANGUT COMPONENT-871
+@		Eleven-stroke components
+18DE7	TANGUT COMPONENT-872
+18DE8	TANGUT COMPONENT-873
+18DE9	TANGUT COMPONENT-874
+18DEA	TANGUT COMPONENT-875
+@		Twelve-stroke components
+18DEB	TANGUT COMPONENT-876
+18DEC	TANGUT COMPONENT-877
+18DED	TANGUT COMPONENT-878
+18DEE	TANGUT COMPONENT-879
+@		Thirteen-stroke components
+18DEF	TANGUT COMPONENT-880
+18DF0	TANGUT COMPONENT-881
+18DF1	TANGUT COMPONENT-882
+@		Fourteen-stroke component
+18DF2	TANGUT COMPONENT-883
 @@	1AFF0	Kana Extended-B	1AFFF
 @+		This block contains tone marks occasionally used in furigana extensions to annotate Minnan Chinese.
 @		Tone marks
@@ -54021,6 +54696,14 @@ FFFF	<not a character>
 	# <font> 0038 digit eight
 1CCF9	OUTLINED DIGIT NINE
 	# <font> 0039 digit nine
+@		Terminal graphic characters
+@+		These characters are not emoji. Cross-references are provided to the corresponding emoji.
+1CCFA	SNAKE SYMBOL
+	x (snake - 1F40D)
+1CCFB	FLYING SAUCER SYMBOL
+	x (flying saucer - 1F6F8)
+1CCFC	NOSE SYMBOL
+	x (nose - 1F443)
 @		Block mosaic terminal graphic characters
 @+		The term "octant" refers to block mosaics divided into eight parts.
 1CD00	BLOCK OCTANT-3
@@ -54471,6 +55154,63 @@ FFFF	<not a character>
 1CEB1	KEYHOLE
 1CEB2	OLD PERSONAL COMPUTER WITH MONITOR IN PORTRAIT ORIENTATION
 1CEB3	BLACK RIGHT TRIANGLE CARET
+@		Terminal graphic characters
+@+		These characters are not emoji. Cross-references are provided to the corresponding emoji.
+1CEBA	FRAGILE SYMBOL
+	x (wine glass - 1F377)
+1CEBB	OFFICE BUILDING SYMBOL
+	x (office building - 1F3E2)
+1CEBC	TREE SYMBOL
+	x (deciduous tree - 1F333)
+1CEBD	APPLE SYMBOL
+	x (red apple - 1F34E)
+	x (green apple - 1F34F)
+1CEBE	CHERRY SYMBOL
+	x (cherries - 1F352)
+1CEBF	STRAWBERRY SYMBOL
+	x (strawberry - 1F353)
+@@	1CEC0	Miscellaneous Symbols Supplement	1CEFF
+@		Astronomical symbols for asteroids
+1CEC0	HEBE
+1CEC1	IRIS
+1CEC2	FLORA
+1CEC3	METIS
+1CEC4	PARTHENOPE
+	x (parthenope form two - 1F77A)
+1CEC5	VICTORIA
+1CEC6	EGERIA
+1CEC7	IRENE
+1CEC8	EUNOMIA
+1CEC9	PSYCHE
+1CECA	THETIS
+1CECB	MELPOMENE
+1CECC	FORTUNA
+1CECD	ASTRONOMICAL SYMBOL FOR ASTEROID PROSERPINA
+	x (proserpina - 2BD8)
+1CECE	BELLONA
+1CECF	AMPHITRITE
+1CED0	LEUKOTHEA
+@		Symbols for geomantic figures
+1CEE0	GEOMANTIC FIGURE POPULUS
+1CEE1	GEOMANTIC FIGURE TRISTITIA
+1CEE2	GEOMANTIC FIGURE ALBUS
+1CEE3	GEOMANTIC FIGURE FORTUNA MAJOR
+1CEE4	GEOMANTIC FIGURE RUBEUS
+1CEE5	GEOMANTIC FIGURE ACQUISITIO
+1CEE6	GEOMANTIC FIGURE CONJUNCTIO
+1CEE7	GEOMANTIC FIGURE CAPUT DRACONIS
+1CEE8	GEOMANTIC FIGURE LAETITIA
+1CEE9	GEOMANTIC FIGURE CARCER
+1CEEA	GEOMANTIC FIGURE AMISSIO
+1CEEB	GEOMANTIC FIGURE PUELLA
+1CEEC	GEOMANTIC FIGURE FORTUNA MINOR
+1CEED	GEOMANTIC FIGURE PUER
+1CEEE	GEOMANTIC FIGURE CAUDA DRACONIS
+1CEEF	GEOMANTIC FIGURE VIA
+@		Miscellaneous symbol
+1CEF0	MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+	* used in superscripted form to mean standard state (chemistry)
+	x (circle with horizontal bar - 29B5)
 @@	1CF00	Znamenny Musical Notation	1CFCF
 @		Combining red marks
 1CF00	ZNAMENNY COMBINING MARK GORAZDO NIZKO S KRYZHEM ON LEFT
@@ -55006,8 +55746,8 @@ FFFF	<not a character>
 1D129	MUSICAL SYMBOL MULTIPLE MEASURE REST
 	* used to represent rests of arbitrary lengths, extending across multiple measures
 	x (musical symbol multi rest - 1D13A)
-@		Accidentals
-@+		The most common accidentals are encoded in the Miscellaneous Symbols block.
+@		Pitch modifiers
+@+		The most common pitch modifiers are encoded in the Miscellaneous Symbols block. The symbols for pitch modifiers are often termed "accidentals" in discussion of music.
 		x (music flat sign - 266D)
 		x (music natural sign - 266E)
 		x (music sharp sign - 266F)
@@ -58993,6 +59733,66 @@ FFFF	<not a character>
 1E5FA	OL ONAL DIGIT NINE
 @		Abbreviation sign
 1E5FF	OL ONAL ABBREVIATION SIGN
+@@	1E6C0	Tai Yo	1E6FF
+@		Letters
+1E6C0	TAI YO LETTER LOW KO
+1E6C1	TAI YO LETTER HIGH KO
+1E6C2	TAI YO LETTER LOW KHO
+1E6C3	TAI YO LETTER HIGH KHO
+1E6C4	TAI YO LETTER GO
+1E6C5	TAI YO LETTER NGO
+1E6C6	TAI YO LETTER CO
+1E6C7	TAI YO LETTER LOW XO
+1E6C8	TAI YO LETTER HIGH XO
+1E6C9	TAI YO LETTER LOW NYO
+1E6CA	TAI YO LETTER HIGH NYO
+1E6CB	TAI YO LETTER DO
+1E6CC	TAI YO LETTER LOW TO
+1E6CD	TAI YO LETTER HIGH TO
+1E6CE	TAI YO LETTER THO
+1E6CF	TAI YO LETTER NO
+1E6D0	TAI YO LETTER BO
+1E6D1	TAI YO LETTER LOW PO
+1E6D2	TAI YO LETTER HIGH PO
+1E6D3	TAI YO LETTER PHO
+1E6D4	TAI YO LETTER LOW FO
+1E6D5	TAI YO LETTER HIGH FO
+1E6D6	TAI YO LETTER MO
+1E6D7	TAI YO LETTER YO
+1E6D8	TAI YO LETTER LO
+1E6D9	TAI YO LETTER VO
+1E6DA	TAI YO LETTER LOW HO
+1E6DB	TAI YO LETTER HIGH HO
+1E6DC	TAI YO LETTER QO
+1E6DD	TAI YO LETTER LOW KVO
+1E6DE	TAI YO LETTER HIGH KVO
+@		Vowels
+1E6E0	TAI YO LETTER AA
+1E6E1	TAI YO LETTER I
+1E6E2	TAI YO LETTER UE
+1E6E3	TAI YO SIGN UE
+1E6E4	TAI YO LETTER U
+1E6E5	TAI YO LETTER AE
+1E6E6	TAI YO SIGN AU
+1E6E7	TAI YO LETTER O
+1E6E8	TAI YO LETTER E
+1E6E9	TAI YO LETTER IA
+1E6EA	TAI YO LETTER UEA
+1E6EB	TAI YO LETTER UA
+1E6EC	TAI YO LETTER OO
+1E6ED	TAI YO LETTER AUE
+@		Finals
+1E6EE	TAI YO SIGN AY
+1E6EF	TAI YO SIGN ANG
+1E6F0	TAI YO LETTER AN
+1E6F1	TAI YO LETTER AM
+1E6F2	TAI YO LETTER AK
+1E6F3	TAI YO LETTER AT
+1E6F4	TAI YO LETTER AP
+1E6F5	TAI YO SIGN OM
+@		Symbols
+1E6FE	TAI YO SYMBOL MUEANG
+1E6FF	TAI YO XAM LAI
 @@	1E7E0	Ethiopic Extended-B	1E7FF
 @		Syllables for Gurage
 1E7E0	ETHIOPIC SYLLABLE HHYA
@@ -60951,6 +61751,7 @@ FFFF	<not a character>
 1F332	EVERGREEN TREE
 	x (national park - 1F3DE)
 1F333	DECIDUOUS TREE
+	x (tree symbol - 1CEBC)
 1F334	PALM TREE
 	x (desert island - 1F3DD)
 1F335	CACTUS
@@ -60987,11 +61788,14 @@ FFFF	<not a character>
 1F34C	BANANA
 1F34D	PINEAPPLE
 1F34E	RED APPLE
+	x (apple symbol - 1CEBD)
 1F34F	GREEN APPLE
 1F350	PEAR
 1F351	PEACH
 1F352	CHERRIES
+	x (cherry symbol - 1CEBE)
 1F353	STRAWBERRY
+	x (strawberry symbol - 1CEBF)
 @		Food symbols
 1F354	HAMBURGER
 	= fast food place
@@ -61045,6 +61849,7 @@ FFFF	<not a character>
 	x (cup on black square - 26FE)
 1F376	SAKE BOTTLE AND CUP
 1F377	WINE GLASS
+	x (fragile symbol - 1CEBA)
 1F378	COCKTAIL GLASS
 	= lounge
 	x (couch and lamp - 1F6CB)
@@ -61068,7 +61873,7 @@ FFFF	<not a character>
 	x (package - 1F4E6)
 1F382	BIRTHDAY CAKE
 1F383	JACK-O-LANTERN
-	= Hallowe'en
+	= Halloween
 1F384	CHRISTMAS TREE
 1F385	FATHER CHRISTMAS
 	= Santa Claus
@@ -61267,6 +62072,7 @@ FFFF	<not a character>
 	= home, house with yard
 	x (house buildings - 1F3D8)
 1F3E2	OFFICE BUILDING
+	x (office building symbol - 1CEBB)
 1F3E3	JAPANESE POST OFFICE
 	x (postal mark - 3012)
 1F3E4	EUROPEAN POST OFFICE
@@ -61356,6 +62162,7 @@ FFFF	<not a character>
 	* fifth of the signs of the Asian zodiac, used in Kazakhstan
 1F40D	SNAKE
 	* sixth of the signs of the Asian zodiac
+	x (snake symbol - 1CCFA)
 1F40E	HORSE
 	= equestrian sports
 	* seventh of the signs of the Asian zodiac
@@ -61439,6 +62246,7 @@ FFFF	<not a character>
 	= sight
 1F442	EAR
 1F443	NOSE
+	x (nose symbol - 1CCFC)
 1F444	MOUTH
 1F445	TONGUE
 @		Hand symbols
@@ -61810,8 +62618,10 @@ FFFF	<not a character>
 1F513	OPEN LOCK
 1F514	BELL
 	x (tibetan symbol dril bu - 0FC4)
+	x (bell symbol - 237E)
 	x (symbol for bell - 2407)
 	x (ringing bell - 1F56D)
+	x (alarm bell symbol - 1FBFA)
 1F515	BELL WITH CANCELLATION STROKE
 1F516	BOOKMARK
 	* indicates a bookmark, not a price tag
@@ -62597,6 +63407,7 @@ FFFF	<not a character>
 1F6D5	HINDU TEMPLE
 1F6D6	HUT
 1F6D7	ELEVATOR
+1F6D8	LANDSLIDE
 @		Miscellaneous symbols
 1F6DC	WIRELESS
 1F6DD	PLAYGROUND SLIDE
@@ -62647,6 +63458,7 @@ FFFF	<not a character>
 	= sledge, toboggan
 1F6F8	FLYING SAUCER
 	= UFO
+	x (flying saucer symbol - 1CCFB)
 	x (extraterrestrial alien - 1F47D)
 1F6F9	SKATEBOARD
 1F6FA	AUTO RICKSHAW
@@ -62712,6 +63524,7 @@ FFFF	<not a character>
 1F71D	ALCHEMICAL SYMBOL FOR IRON ORE-2
 1F71E	ALCHEMICAL SYMBOL FOR CROCUS OF IRON
 	= crocus martis, red or yellow calcined powder of iron
+	x (male with stroke sign - 26A6)
 1F71F	ALCHEMICAL SYMBOL FOR REGULUS OF IRON
 	= regulus martis, scoria from refining stibnite/antimony with iron
 @		Symbols for copper, copper ore and derivatives
@@ -62831,6 +63644,7 @@ FFFF	<not a character>
 1F759	ALCHEMICAL SYMBOL FOR BRICK
 1F75A	ALCHEMICAL SYMBOL FOR POWDERED BRICK
 	= later cibratus, farina laterum
+@		Composition
 1F75B	ALCHEMICAL SYMBOL FOR AMALGAM
 1F75C	ALCHEMICAL SYMBOL FOR STRATUM SUPER STRATUM
 1F75D	ALCHEMICAL SYMBOL FOR STRATUM SUPER STRATUM-2
@@ -62842,6 +63656,8 @@ FFFF	<not a character>
 1F760	ALCHEMICAL SYMBOL FOR DISTILL
 	= sublimate
 1F761	ALCHEMICAL SYMBOL FOR DISSOLVE
+	x (latin small letter f with hook - 0192)
+	x (finite part integral - 2A0D)
 1F762	ALCHEMICAL SYMBOL FOR DISSOLVE-2
 	= water, aqua
 1F763	ALCHEMICAL SYMBOL FOR PURIFY
@@ -62849,12 +63665,12 @@ FFFF	<not a character>
 1F764	ALCHEMICAL SYMBOL FOR PUTREFACTION
 @		Apparatus
 1F765	ALCHEMICAL SYMBOL FOR CRUCIBLE
-	= tigellum
+	= tigillum
 	x (alchemical symbol for vinegar - 1F70A)
 1F766	ALCHEMICAL SYMBOL FOR CRUCIBLE-2
 1F767	ALCHEMICAL SYMBOL FOR CRUCIBLE-3
 1F768	ALCHEMICAL SYMBOL FOR CRUCIBLE-4
-	x (down tack - 22A4)
+	x (latin capital letter t with stroke - 0166)
 1F769	ALCHEMICAL SYMBOL FOR CRUCIBLE-5
 1F76A	ALCHEMICAL SYMBOL FOR ALEMBIC
 1F76B	ALCHEMICAL SYMBOL FOR BATH OF MARY
@@ -62889,6 +63705,16 @@ FFFF	<not a character>
 	x (conjunction - 260C)
 1F776	LUNAR ECLIPSE
 	x (opposition - 260D)
+@		Historical symbols for asteroids
+1F777	VESTA FORM TWO
+	x (vesta - 26B6)
+1F778	ASTRAEA FORM TWO
+	x (astraea - 2BD9)
+1F779	HYGIEA FORM TWO
+	x (hygiea - 2BDA)
+1F77A	PARTHENOPE FORM TWO
+	= Lyra
+	x (parthenope - 1CEC4)
 @		Symbols for dwarf planets
 1F77B	HAUMEA
 1F77C	MAKEMAKE
@@ -63275,6 +64101,23 @@ FFFF	<not a character>
 	* indicates writing in columns, hieroglyphs facing left (reading direction LTR)
 1F8C1	RIGHTWARDS ARROW FROM DOWNWARDS ARROW
 	* indicates writing in columns, hieroglyphs facing right (reading direction RTL)
+@		Reaction arrows for chemistry
+@+		These connect reactants with products in a formula showing a chemical reaction. They constitute a set as follows: 27F5-27F7, 1F8D0-1F8D8
+1F8D0	LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+	x (rightwards arrow over leftwards arrow - 21C4)
+1F8D1	LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+	x (rightwards harpoon over leftwards harpoon - 21CC)
+1F8D2	LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+1F8D3	SHORT RIGHTWARDS HARPOON ABOVE LONG LEFTWARDS HARPOON
+1F8D4	LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+	x (leftwards harpoon over rightwards harpoon - 21CB)
+1F8D5	SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+@		Unsuccessful reaction arrows for chemistry
+1F8D6	LONG RIGHTWARDS ARROW THROUGH X
+1F8D7	LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
+@		Isolobal arrow
+1F8D8	LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+	* indicates that the two sides have the same arrangement of electron lobes
 @@	1F900	Supplemental Symbols and Pictographs	1F9FF
 @		Typicon symbols
 1F900	CIRCLED CROSS FORMEE WITH FOUR DOTS
@@ -63752,6 +64595,13 @@ FFFF	<not a character>
 1FA51	BLACK CHESS KNIGHT-QUEEN
 1FA52	BLACK CHESS KNIGHT-ROOK
 1FA53	BLACK CHESS KNIGHT-BISHOP
+@		Shatranj chess symbols
+1FA54	WHITE CHESS FERZ
+1FA55	WHITE CHESS ALFIL
+	= white elephant
+1FA56	BLACK CHESS FERZ
+1FA57	BLACK CHESS ALFIL
+	= black elephant
 @		Xiangqi symbols
 1FA60	XIANGQI RED GENERAL
 	= hóng shuài
@@ -63837,7 +64687,9 @@ FFFF	<not a character>
 1FA87	MARACAS
 1FA88	FLUTE
 1FA89	HARP
+1FA8A	TROMBONE
 @		Miscellaneous objects
+1FA8E	TREASURE CHEST
 1FA8F	SHOVEL
 1FA90	RINGED PLANET
 1FA91	CHAIR
@@ -63905,6 +64757,8 @@ FFFF	<not a character>
 @		Miscellaneous
 1FAC6	FINGERPRINT
 @		Animals and nature
+1FAC8	HAIRY CREATURE
+1FACD	ORCA
 1FACE	MOOSE
 1FACF	DONKEY
 @		Food and drink
@@ -63922,6 +64776,7 @@ FFFF	<not a character>
 1FADA	GINGER ROOT
 1FADB	PEA POD
 1FADC	ROOT VEGETABLE
+1FADD	APPLE CORE
 @		Miscellaneous
 1FADF	SPLATTER
 @		Faces
@@ -63938,6 +64793,9 @@ FFFF	<not a character>
 @		Faces
 1FAE8	SHAKING FACE
 1FAE9	FACE WITH BAGS UNDER EYES
+1FAEA	DISTORTED FACE
+@		Emotion
+1FAEF	FIGHT CLOUD
 @		Hand symbols
 1FAF0	HAND WITH INDEX FINGER AND THUMB CROSSED
 	x (hand with index and middle fingers crossed - 1F91E)
@@ -64306,13 +65164,17 @@ FFFF	<not a character>
 	# <font> 0038 digit eight
 1FBF9	SEGMENTED DIGIT NINE
 	# <font> 0039 digit nine
+@		Terminal graphic character
+1FBFA	ALARM BELL SYMBOL
+	x (bell symbol - 237E)
+	x (bell - 1F514)
 @@	1FF80	Unassigned	1FFFF
 @		Noncharacters
 @+		These codes are intended for process-internal uses.
 1FFFE	<not a character>
 1FFFF	<not a character>
 @@	20000	CJK Unified Ideographs Extension B	2A6DF
-@@	2A700	CJK Unified Ideographs Extension C	2B739
+@@	2A700	CJK Unified Ideographs Extension C	2B73E
 @@	2B740	CJK Unified Ideographs Extension D	2B81D
 @@	2B820	CJK Unified Ideographs Extension E	2CEA1
 @@	2CEB0	CJK Unified Ideographs Extension F	2EBE0
@@ -65435,6 +66297,7 @@ FFFF	<not a character>
 2FFFF	<not a character>
 @@	30000	CJK Unified Ideographs Extension G	3134A
 @@	31350	CJK Unified Ideographs Extension H	323AF
+@@	323B0	CJK Unified Ideographs Extension J	33479
 @@	3FF80	Unassigned	3FFFF
 @		Noncharacters
 @+		These codes are intended for process-internal uses.

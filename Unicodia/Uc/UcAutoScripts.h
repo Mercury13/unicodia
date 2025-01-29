@@ -11,6 +11,7 @@ Bamu,  // Bamum
 Bass,  // Bassa Vah
 Batk,  // Batak
 Beng,  // Bengali
+Berf,  // Beria Erfe
 Bhks,  // Bhaiksuki
 Bopo,  // Bopomofo
 Brah,  // Brahmi
@@ -22,6 +23,7 @@ Cans,  // Canadian Aboriginal
 Cari,  // Carian
 Cham,  // Cham
 Cher,  // Cherokee
+Chis,  // Chisoi
 Chrs,  // Chorasmian
 Copt,  // Coptic
 Cpmn,  // Cypro Minoan
@@ -130,6 +132,7 @@ Sgnw,  // SignWriting
 Shaw,  // Shavian
 Shrd,  // Sharada
 Sidd,  // Siddham
+Sidt,  // Sidetic
 Sind,  // Khudawadi
 Sinh,  // Sinhala
 Sogd,  // Sogdian
@@ -147,6 +150,7 @@ Talu,  // New Tai Lue
 Taml,  // Tamil
 Tang,  // Tangut
 Tavt,  // Tai Viet
+Tayo,  // Tai Yo
 Telu,  // Telugu
 Tfng,  // Tifinagh
 Tglg,  // Tagalog
@@ -156,6 +160,7 @@ Tibt,  // Tibetan
 Tirh,  // Tirhuta
 Tnsa,  // Tangsa
 Todr,  // Todhri
+Tols,  // Tolong Siki
 Toto,  // Toto
 Tutg,  // Tulu Tigalari
 Ugar,  // Ugaritic
