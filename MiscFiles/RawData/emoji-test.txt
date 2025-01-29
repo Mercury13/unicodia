@@ -118,6 +118,7 @@
 1F974                                                  ; fully-qualified     # 🥴 E11.0 woozy face
 1F635                                                  ; fully-qualified     # 😵 E0.6 face with crossed-out eyes
 1F635 200D 1F4AB                                       ; fully-qualified     # 😵‍💫 E13.1 face with spiral eyes
+1FAEA                                                  ; fully-qualified     # 🤯 E17.0 distorted face
 1F92F                                                  ; fully-qualified     # 🤯 E5.0 exploding head
 
 # subgroup: face-hat
@@ -232,6 +233,7 @@
 1F4AF                                                  ; fully-qualified     # 💯 E0.6 hundred points
 1F4A2                                                  ; fully-qualified     # 💢 E0.6 anger symbol
 1F4A5                                                  ; fully-qualified     # 💥 E0.6 collision
+1FAEF                                                  ; fully-qualified     # ? E17.0 fight cloud
 1F4AB                                                  ; fully-qualified     # 💫 E0.6 dizzy
 1F4A6                                                  ; fully-qualified     # 💦 E0.6 sweat droplets
 1F4A8                                                  ; fully-qualified     # 💨 E0.6 dashing away
@@ -1937,6 +1939,7 @@
 1F9DC 1F3FE 200D 2640                                  ; minimally-qualified # 🧜🏾‍♀ E5.0 mermaid: medium-dark skin tone
 1F9DC 1F3FF 200D 2640 FE0F                             ; fully-qualified     # 🧜🏿‍♀️ E5.0 mermaid: dark skin tone
 1F9DC 1F3FF 200D 2640                                  ; minimally-qualified # 🧜🏿‍♀ E5.0 mermaid: dark skin tone
+1FAC8                                                  ; fully-qualified     # ? E17.0 hairy creature
 1F9DD                                                  ; fully-qualified     # 🧝 E5.0 elf
 1F9DD 1F3FB                                            ; fully-qualified     # 🧝🏻 E5.0 elf: light skin tone
 1F9DD 1F3FC                                            ; fully-qualified     # 🧝🏼 E5.0 elf: medium-light skin tone
@@ -2502,6 +2505,12 @@
 1F3C3 1F3FF 200D 2642 200D 27A1 FE0F                   ; minimally-qualified # 🏃🏿‍♂‍➡️ E15.1 man running facing right: dark skin tone
 1F3C3 1F3FF 200D 2642 FE0F 200D 27A1                   ; minimally-qualified # 🏃🏿‍♂️‍➡ E15.1 man running facing right: dark skin tone
 1F3C3 1F3FF 200D 2642 200D 27A1                        ; minimally-qualified # 🏃🏿‍♂‍➡ E15.1 man running facing right: dark skin tone
+1F9D1 200D 1FA70                                       ; fully-qualified     # ? E17.0 ballet dancer
+1F9D1 1F3FB 200D 1FA70                                 ; fully-qualified     # ? E17.0 ballet dancer: light skin tone
+1F9D1 1F3FC 200D 1FA70                                 ; fully-qualified     # ? E17.0 ballet dancer: medium-light skin tone
+1F9D1 1F3FD 200D 1FA70                                 ; fully-qualified     # ? E17.0 ballet dancer: medium skin tone
+1F9D1 1F3FE 200D 1FA70                                 ; fully-qualified     # ? E17.0 ballet dancer: medium-dark skin tone
+1F9D1 1F3FF 200D 1FA70                                 ; fully-qualified     # ? E17.0 ballet dancer: dark skin tone
 1F483                                                  ; fully-qualified     # 💃 E0.6 woman dancing
 1F483 1F3FB                                            ; fully-qualified     # 💃🏻 E1.0 woman dancing: light skin tone
 1F483 1F3FC                                            ; fully-qualified     # 💃🏼 E1.0 woman dancing: medium-light skin tone
@@ -3711,6 +3720,7 @@
 # subgroup: animal-marine
 1F433                                                  ; fully-qualified     # 🐳 E0.6 spouting whale
 1F40B                                                  ; fully-qualified     # 🐋 E1.0 whale
+1FACD                                                  ; fully-qualified     # ? E17.0 orca
 1F42C                                                  ; fully-qualified     # 🐬 E0.6 dolphin
 1F9AD                                                  ; fully-qualified     # 🦭 E13.0 seal
 1F41F                                                  ; fully-qualified     # 🐟 E0.6 fish
@@ -3797,6 +3807,7 @@
 1F34C                                                  ; fully-qualified     # 🍌 E0.6 banana
 1F34D                                                  ; fully-qualified     # 🍍 E0.6 pineapple
 1F96D                                                  ; fully-qualified     # 🥭 E11.0 mango
+1FADD                                                  ; fully-qualified     # ? E17.0 apple core
 1F34E                                                  ; fully-qualified     # 🍎 E0.6 red apple
 1F34F                                                  ; fully-qualified     # 🍏 E0.6 green apple
 1F350                                                  ; fully-qualified     # 🍐 E1.0 pear
@@ -3954,6 +3965,7 @@
 1F3D4                                                  ; unqualified         # 🏔 E0.7 snow-capped mountain
 26F0 FE0F                                              ; fully-qualified     # ⛰️ E0.7 mountain
 26F0                                                   ; unqualified         # ⛰ E0.7 mountain
+1F6D8                                                  ; fully-qualified     # ? E17.0 landslide
 1F30B                                                  ; fully-qualified     # 🌋 E0.6 volcano
 1F5FB                                                  ; fully-qualified     # 🗻 E0.6 mount fuji
 1F3D5 FE0F                                             ; fully-qualified     # 🏕️ E0.7 camping
@@ -4427,6 +4439,7 @@
 1F3B8                                                  ; fully-qualified     # 🎸 E0.6 guitar
 1F3B9                                                  ; fully-qualified     # 🎹 E0.6 musical keyboard
 1F3BA                                                  ; fully-qualified     # 🎺 E0.6 trumpet
+1FA8A                                                  ; fully-qualified     # ? E17.0 trombone
 1F3BB                                                  ; fully-qualified     # 🎻 E0.6 violin
 1FA95                                                  ; fully-qualified     # 🪕 E12.0 banjo
 1F941                                                  ; fully-qualified     # 🥁 E3.0 drum
@@ -4518,6 +4531,7 @@
 1F4B3                                                  ; fully-qualified     # 💳 E0.6 credit card
 1F9FE                                                  ; fully-qualified     # 🧾 E11.0 receipt
 1F4B9                                                  ; fully-qualified     # 💹 E0.6 chart increasing with yen
+1FA8E                                                  ; fully-qualified     # ? E17.0 treasure chest
 
 # subgroup: mail
 2709 FE0F                                              ; fully-qualified     # ✉️ E0.6 envelope
