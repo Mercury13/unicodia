@@ -774,11 +774,11 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Tai Le OK, M$ has a good font
     { "Tale", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yapprox(1200), EcFont::TAILE },
+        Dating::yapprox(1200), EcFont::TAI_LE },
     // New Tai Lue OK, M$ has a good font
     { "Talu", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1950), EcFont::TAILUE },
+        Dating::decade(1950), EcFont::TAI_LUE },
     // Tamil BMP OK, different fonts in W10 and W7
     { "Taml", QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -797,7 +797,7 @@ constinit const uc::Script uc::scriptInfo[] {
 #if ENABLE_17
     { "Tayo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::ASIA,
-        Dating::century(16), EcFont::NORMAL, NO_FLAGS,
+        Dating::century(16), EcFont::TAI_YO, NO_FLAGS,
         { .mantissa = 290, .numOrder = NumOrder::THOUSAND, .year = 2019,
           .locations { LOC_VIETNAM } } }, // Unicode request, Ethnologue is murky and obsolete
 #endif

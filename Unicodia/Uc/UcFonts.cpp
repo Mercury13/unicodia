@@ -275,6 +275,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft Tai Le" },                                                     // Tai Le
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
+    { "NotoSerifTaiYo-Regular.ttf" },                                           // Tai Yo
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
