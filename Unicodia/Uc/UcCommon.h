@@ -65,7 +65,7 @@ namespace uc {
                         unsigned nOtherNonZwj = 0;
                         unsigned nTotal() const noexcept
                             { return nRacial + nMultiracial + nRightFacing + nRightFacingRacial
-                                   + nOtherZwj + nFlags + nOtherNonZwj; }
+                                   + nColor + nOtherZwj + nFlags + nOtherNonZwj; }
                     } seq;
                     unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
                 } nw;
