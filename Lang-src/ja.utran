@@ -12119,17 +12119,25 @@
      <transl>垂直方向</transl>
     </text>
     <text id="Name">
-     <orig>Direction of Sogdian and derivatives</orig>
+     <orig>Direction of vertical scripts</orig>
+     <known-orig>Direction of Sogdian and derivatives</known-orig>
      <transl>ソグド語とその派生語の方向</transl>
     </text>
     <text id="Text">
      <orig>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]) are written left to right in columns, with continuous line. </p>
+      <p />
+      <p>[[ps:Tayo|Tai Yo]] is written right to left in columns, with complex [[pt:combining|marks]].</p>
+      <p />
+      <p>Most computer programs only write horizontally, so the simplest solution is to turn the text.</p>
+     </orig>
+     <known-orig>
       <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally, so the simplest solution is to turn the writing.</p>
       <p />
       <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
       <p />
       <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
-     </orig>
+     </known-orig>
      <transl>[[ps:Sogd|ソグド文字]] とその派生文字は、連続した行で列に左から右に書きます。ほとんどのコンピュータ プログラムは水平方向にしか書きません。そのため、最も簡単な解決策は、文字を回転させることです。</transl>
     </text>
    </group>

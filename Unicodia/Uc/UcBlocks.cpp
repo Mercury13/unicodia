@@ -1441,8 +1441,7 @@ constinit const uc::Block uc::blocks[] {
             "Ol Onal",
             { EcScript::Onao, 0 }, MapSubtype::ALIVE, EcScript::Onao },
     /// @todo [U17, tofu] Tai Yo
-    { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA,
-                          Ifg::PAINT_SVG | Ifg::MISSING | Ifg::ROTATE_LTR_CW },
+    { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::ROTATE_LTR_CW },
             "Tai Yo",
             { EcScript::Tayo, 0 }, MapSubtype::DEAD,
             EcScript::Tayo, EcFont::NORMAL, NO_FLAGS,

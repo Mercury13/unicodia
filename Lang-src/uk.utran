@@ -12159,23 +12159,23 @@
      <transl>Вертикально</transl>
     </text>
     <text id="Name">
-     <orig>Direction of Sogdian and derivatives</orig>
-     <transl>Напрямок согдійської та похідних</transl>
+     <orig>Direction of vertical scripts</orig>
+     <transl>Напрямок вертикального письма</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally, so the simplest solution is to turn the writing.</p>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]) are written left to right in columns, with continuous line. </p>
       <p />
-      <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
+      <p>[[ps:Tayo|Tai Yo]] is written right to left in columns, with complex [[pt:combining|marks]].</p>
       <p />
-      <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
+      <p>Most computer programs only write horizontally, so the simplest solution is to turn the text.</p>
      </orig>
      <transl>
-      <p>[[ps:Sogd|Согдійська]] та похідні писемності пишуться зліва направо стовпцями, суцільною в’яззю. Більшість комп’ютерних програм пишуть тільки горизонтально, і простіше за все повернути напис.</p>
+      <p>[[ps:Sogd|Согдійська]] писемність та похідні ([[ps:Ougr|уйгурська]], [[ps:Mong|монгольська]], [[ps:Phag|Пагба-лами]]) пишуться зліва направо стовпцями, суцільною в’яззю.</p>
       <p />
-      <p>[[ps:Mong|Монгольська]] та [[ps:Phag|Пагба-лами]] з історичних причин повернуті на 90° проти годинникової стрілки (зліва направо).</p>
+      <p>[[ps:Tayo|Тай-йо]] пишеться справа наліво стовпцями, зі складними [[pt:combining|мітками]].</p>
       <p />
-      <p>Согдійська та [[ps:Ougr|уйгурська]] повернуті на 90° за годинниковою стрілкою (справа наліво).</p>
+      <p>Більшість комп’ютерних програм пишуть тільки горизонтально, і простіше за все повернути напис.</p>
      </transl>
     </text>
    </group>

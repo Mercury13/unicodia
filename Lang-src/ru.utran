@@ -12158,23 +12158,23 @@
      <transl>Вертикально</transl>
     </text>
     <text id="Name">
-     <orig>Direction of Sogdian and derivatives</orig>
-     <transl>Направление согдийского и производных</transl>
+     <orig>Direction of vertical scripts</orig>
+     <transl>Направление вертикального письма</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally, so the simplest solution is to turn the writing.</p>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]) are written left to right in columns, with continuous line. </p>
       <p />
-      <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
+      <p>[[ps:Tayo|Tai Yo]] is written right to left in columns, with complex [[pt:combining|marks]].</p>
       <p />
-      <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
+      <p>Most computer programs only write horizontally, so the simplest solution is to turn the text.</p>
      </orig>
      <transl>
-      <p>[[ps:Sogd|Согдийская]] и производные письменности пишутся слева направо по столбцам, сплошной вязью. Большинство компьютерных программ пишут только горизонтально, и проще всего повернуть надпись.</p>
+      <p>[[ps:Sogd|Согдийская]] письменность и производные ([[ps:Ougr|уйгурская]], [[ps:Mong|монгольская]], [[ps:Phag|Пагба-ламы]]) пишутся слева направо по столбцам, сплошной вязью.</p>
       <p />
-      <p>[[ps:Mong|Монгольская]] и [[ps:Phag|Пагба-ламы]] по историческим причинам повёрнуты на 90° против часовой стрелки (слева направо).</p>
+      <p>[[ps:Tayo|Тай-йо]] пишется справа налево по столбцам, со сложными [[pt:combining|метками]].</p>
       <p />
-      <p>Согдийская и [[ps:Ougr|староуйгурская]] повёрнуты на 90° по часовой стрелке (справа налево).</p>
+      <p> Большинство компьютерных программ пишут только горизонтально, и проще всего повернуть надпись.</p>
      </transl>
     </text>
    </group>
