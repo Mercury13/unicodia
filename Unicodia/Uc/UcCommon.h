@@ -59,6 +59,7 @@ namespace uc {
                         unsigned nMultiracial = 0;
                         unsigned nRightFacing = 0;
                         unsigned nRightFacingRacial = 0;
+                        unsigned nColor = 0;
                         unsigned nOtherZwj = 0;
                         unsigned nFlags = 0;
                         unsigned nOtherNonZwj = 0;

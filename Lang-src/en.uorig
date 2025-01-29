@@ -760,6 +760,9 @@
     <text id="NewEmRightSkin">
      <orig>…Right-facing skintone sequences</orig>
     </text>
+    <text id="NewEmColor">
+     <orig>…Coloured sequences</orig>
+    </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
     </text>

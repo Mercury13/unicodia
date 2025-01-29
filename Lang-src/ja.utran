@@ -956,6 +956,9 @@
      <orig>…Right-facing skintone sequences</orig>
      <transl>…右向きのスキントーン シーケンス</transl>
     </text>
+    <text id="NewEmColor">
+     <orig>…Coloured sequences</orig>
+    </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
      <transl>…その他の [[pt:zwj|ZWJ]] シーケンス</transl>

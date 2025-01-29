@@ -2760,6 +2760,7 @@ QString mywiki::buildHtml(const uc::Version& version)
                 appendValueIf(sp, "Prop.Bullet.NewEmMulti", version.stats.emoji.nw.seq.nMultiracial);
                 appendValueIf(sp, "Prop.Bullet.NewEmRight", version.stats.emoji.nw.seq.nRightFacing);
                 appendValueIf(sp, "Prop.Bullet.NewEmRightSkin", version.stats.emoji.nw.seq.nRightFacingRacial);
+                appendValueIf(sp, "Prop.Bullet.NewEmColor", version.stats.emoji.nw.seq.nColor);
                 appendValueIf(sp, "Prop.Bullet.NewEmOtherZwj", version.stats.emoji.nw.seq.nOtherZwj);
                 appendValueIf(sp, "Prop.Bullet.NewEmFlag", version.stats.emoji.nw.seq.nFlags);
                 appendValueIf(sp, "Prop.Bullet.NewEmOtherNonZwj", version.stats.emoji.nw.seq.nOtherNonZwj);

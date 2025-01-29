@@ -464,6 +464,7 @@ namespace {
         NONE,
         SINGLE_CHAR,    ///< incl. VS16
         SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_RIGHT_RACIAL,
+        SEQ_COLOR,
         SEQ_OTHER_ZWJ,
         SEQ_FLAG,   ///< National flags, like [U][A]
         SEQ_OTHER_NONZWJ };
@@ -484,15 +485,21 @@ namespace {
         default: ;
         }
 
-        size_t nSkin = 0, nZwj = 0;
+        size_t nSkin = 0, nZwj = 0, nColor = 0;
         for (auto c : x) {
             switch (c) {
-            case cp::ZWJ:  ++nZwj; break;
+            case cp::ZWJ:
+                ++nZwj; break;
             case cp::SKIN1:
             case cp::SKIN2:
             case cp::SKIN3:
             case cp::SKIN4:
-            case cp::SKIN5: ++nSkin; break;
+            case cp::SKIN5:
+                ++nSkin; break;
+            case cp::SQUARE_BLACK:
+            case cp::SQUARE_BROWN:
+            case cp::SQUARE_GREEN:
+                ++nColor; break;
             default: ;
             }
         }
@@ -500,7 +507,9 @@ namespace {
         case 0:
             if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
                 return EmojiClass::SEQ_RIGHT;
-            return (nZwj > 0) ? EmojiClass::SEQ_OTHER_ZWJ : EmojiClass::SEQ_OTHER_NONZWJ;
+            return (nZwj > 0)
+                ? (nColor > 0 ? EmojiClass::SEQ_COLOR : EmojiClass::SEQ_OTHER_ZWJ)
+                : EmojiClass::SEQ_OTHER_NONZWJ;
         case 1:
             if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
                 return EmojiClass::SEQ_RIGHT_RACIAL;
@@ -549,6 +558,8 @@ namespace {
             ++version.stats.emoji.nw.seq.nRightFacing; break;
         case EmojiClass::SEQ_RIGHT_RACIAL:
             ++version.stats.emoji.nw.seq.nRightFacingRacial; break;
+        case EmojiClass::SEQ_COLOR:
+            ++version.stats.emoji.nw.seq.nColor; break;
         case EmojiClass::SEQ_FLAG:
             ++version.stats.emoji.nw.seq.nFlags; break;
         case EmojiClass::SEQ_OTHER_ZWJ:

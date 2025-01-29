@@ -956,6 +956,10 @@
      <orig>…Right-facing skintone sequences</orig>
      <transl>…Правосторонних расовых последовательностей</transl>
     </text>
+    <text id="NewEmColor">
+     <orig>…Coloured sequences</orig>
+     <transl>…Цветных последовательностей</transl>
+    </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
      <transl>…Других [[pt:zwj|ZWJ]]-последовательностей</transl>
