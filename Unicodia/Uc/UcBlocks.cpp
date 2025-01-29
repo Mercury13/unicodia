@@ -1298,11 +1298,10 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Kits, 0 }, MapSubtype::DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
-    /// @todo [U17, data] Tangut supplement make collapsible
     { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Tangut Supplement",
             { EcScript::Tang, 1 }, MapSubtype::DEAD,
-            EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION,
+            EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE,
             EcGlyphStyleChannel::NONE, { 0x18D8F, EcVersion::V_14_0 } },
     /// @todo [U17, tofu] Tangut Components Supplement
     { 0x18D80, 0x18DFF, { 0x18D80, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
