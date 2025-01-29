@@ -54,8 +54,17 @@ namespace uc {
         JUL = 7,  AUG = 8,  SEP = 9,  OCT = 10, NOV = 11, DEC = 12
     };
 
+    enum class LatestState : unsigned char {
+        ALPHA, BETA, RELEASE
+    };
+
 /// @todo [U17] Remove this define when permanently add U17
 #define ENABLE_17 true
+#if ENABLE_17
+    constexpr LatestState LATEST_STATE = LatestState::ALPHA;
+#else
+    constexpr LatestState LATEST_STATE = LatestState::RELEASE;
+#endif
 
     enum class EcVersion : unsigned char
     {

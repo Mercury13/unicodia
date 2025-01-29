@@ -136,7 +136,7 @@ constinit const uc::Version uc::versionInfo[] {
     { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT },
     { u8"16.0", { 2024, Month::SEP }, Vfg::TEXT },
 #if ENABLE_17
-    { u8"17.0", { 2025, Month::SEP }, Vfg::BETA },
+    { u8"17.0", { 2025, Month::SEP }, NO_FLAGS },
 #endif
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
@@ -1861,19 +1861,28 @@ const uc::Version& uc::LibNode::emojiPrevVersion() const
 }
 
 
-#define TEXT_BETA u8"\u00A0" "β"
+#define TEXT_ALPHA  u8"\u00A0" "α"
+#define TEXT_BETA   u8"\u00A0" "β"
+
+inline void appendState(std::u8string& s, const uc::Version& version)
+{
+    if constexpr (uc::LATEST_STATE != uc::LatestState::RELEASE) {
+        static constexpr std::u8string_view SUFFIX = (uc::LATEST_STATE == uc::LatestState::ALPHA)
+                ? u8"\u00A0" "α" : u8"\u00A0" "β";
+        if (&version == uc::versionInfo + static_cast<int>(uc::EcVersion::LAST))
+            s += SUFFIX;
+    }
+}
 
 std::u8string uc::Version::locName() const
 {
     std::u8string r;
     if (!unicodeName.empty()) {
         r = unicodeName;
-        if (flags.have(Vfg::BETA))
-            r += TEXT_BETA;
+        appendState(r, *this);
     } else {
         r = emojiName;
-        if (flags.have(Vfg::BETA))
-            r += TEXT_BETA;
+        appendState(r, *this);
         r = loc::get("Prob.Bullet.EmojiV").arg(r);
     }
     return r;
@@ -1885,12 +1894,10 @@ std::u8string uc::Version::termName() const
     std::u8string r;
     if (!unicodeName.empty()) {
         r = unicodeName;
-        if (flags.have(Vfg::BETA))
-            r += TEXT_BETA;
+        appendState(r, *this);
     } else {
         r = emojiName;
-        if (flags.have(Vfg::BETA))
-            r += TEXT_BETA;
+        appendState(r, *this);
         r = loc::get("TermCat.Ev").arg(r);
     }
     return r;
@@ -1937,8 +1944,7 @@ std::u8string uc::Version::locLongName() const
         r = emojiName;
         key = "Prop.Head.Em";
     }
-    if (flags.have(Vfg::BETA))
-        r += TEXT_BETA;
+    appendState(r, *this);
     r = loc::get(key).arg(r);
     return r;
 }

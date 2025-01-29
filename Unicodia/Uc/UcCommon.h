@@ -20,7 +20,6 @@ namespace uc {
 
     enum class Vfg : unsigned char {
         TEXT = 1,
-        BETA = 2,
     };
     DEFINE_ENUM_OPS(Vfg)
 
