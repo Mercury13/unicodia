@@ -2898,10 +2898,85 @@
 1F938 1F3FF 200D 2640 FE0F                             ; fully-qualified     # 🤸🏿‍♀️ E4.0 woman cartwheeling: dark skin tone
 1F938 1F3FF 200D 2640                                  ; minimally-qualified # 🤸🏿‍♀ E4.0 woman cartwheeling: dark skin tone
 1F93C                                                  ; fully-qualified     # 🤼 E3.0 people wrestling
+1F93C 1F3FB                                            ; fully-qualified     # ? E17.0 people wrestling: light skin tone
+1F93C 1F3FC                                            ; fully-qualified     # ? E17.0 people wrestling: medium-light skin tone
+1F93C 1F3FD                                            ; fully-qualified     # ? E17.0 people wrestling: medium skin tone
+1F93C 1F3FE                                            ; fully-qualified     # ? E17.0 people wrestling: medium-dark skin tone
+1F93C 1F3FF                                            ; fully-qualified     # ? E17.0 people wrestling: dark skin tone
+1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people wrestling: light skin tone, medium-light skin tone
+1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people wrestling: light skin tone, medium skin tone
+1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people wrestling: light skin tone, medium-dark skin tone
+1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people wrestling: light skin tone, dark skin tone
+1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people wrestling: medium-light skin tone, light skin tone
+1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people wrestling: medium-light skin tone, medium skin tone
+1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people wrestling: medium-light skin tone, medium-dark skin tone
+1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people wrestling: medium-light skin tone, dark skin tone
+1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people wrestling: medium skin tone, light skin tone
+1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people wrestling: medium skin tone, medium-light skin tone
+1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people wrestling: medium skin tone, medium-dark skin tone
+1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people wrestling: medium skin tone, dark skin tone
+1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people wrestling: medium-dark skin tone, light skin tone
+1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people wrestling: medium-dark skin tone, medium-light skin tone
+1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people wrestling: medium-dark skin tone, medium skin tone
+1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FF                ; fully-qualified     # ? E17.0 people wrestling: medium-dark skin tone, dark skin tone
+1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FB                ; fully-qualified     # ? E17.0 people wrestling: dark skin tone, light skin tone
+1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FC                ; fully-qualified     # ? E17.0 people wrestling: dark skin tone, medium-light skin tone
+1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FD                ; fully-qualified     # ? E17.0 people wrestling: dark skin tone, medium skin tone
+1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FE                ; fully-qualified     # ? E17.0 people wrestling: dark skin tone, medium-dark skin tone
 1F93C 200D 2642 FE0F                                   ; fully-qualified     # 🤼‍♂️ E4.0 men wrestling
 1F93C 200D 2642                                        ; minimally-qualified # 🤼‍♂ E4.0 men wrestling
+1F93C 1F3FB 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men wrestling: light skin tone
+1F93C 1F3FC 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men wrestling: medium-light skin tone
+1F93C 1F3FD 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men wrestling: medium skin tone
+1F93C 1F3FE 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men wrestling: medium-dark skin tone
+1F93C 1F3FF 200D 2642 FE0F                             ; fully-qualified     # ? E17.0 men wrestling: dark skin tone
+1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men wrestling: light skin tone, medium-light skin tone
+1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men wrestling: light skin tone, medium skin tone
+1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men wrestling: light skin tone, medium-dark skin tone
+1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men wrestling: light skin tone, dark skin tone
+1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men wrestling: medium-light skin tone, light skin tone
+1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men wrestling: medium-light skin tone, medium skin tone
+1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men wrestling: medium-light skin tone, medium-dark skin tone
+1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men wrestling: medium-light skin tone, dark skin tone
+1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men wrestling: medium skin tone, light skin tone
+1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men wrestling: medium skin tone, medium-light skin tone
+1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men wrestling: medium skin tone, medium-dark skin tone
+1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men wrestling: medium skin tone, dark skin tone
+1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men wrestling: medium-dark skin tone, light skin tone
+1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men wrestling: medium-dark skin tone, medium-light skin tone
+1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men wrestling: medium-dark skin tone, medium skin tone
+1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FF                ; fully-qualified     # ? E17.0 men wrestling: medium-dark skin tone, dark skin tone
+1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FB                ; fully-qualified     # ? E17.0 men wrestling: dark skin tone, light skin tone
+1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FC                ; fully-qualified     # ? E17.0 men wrestling: dark skin tone, medium-light skin tone
+1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FD                ; fully-qualified     # ? E17.0 men wrestling: dark skin tone, medium skin tone
+1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FE                ; fully-qualified     # ? E17.0 men wrestling: dark skin tone, medium-dark skin tone
 1F93C 200D 2640 FE0F                                   ; fully-qualified     # 🤼‍♀️ E4.0 women wrestling
 1F93C 200D 2640                                        ; minimally-qualified # 🤼‍♀ E4.0 women wrestling
+1F93C 1F3FB 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 women wrestling: light skin tone
+1F93C 1F3FC 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 women wrestling: medium-light skin tone
+1F93C 1F3FD 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 women wrestling: medium skin tone
+1F93C 1F3FE 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 women wrestling: medium-dark skin tone
+1F93C 1F3FF 200D 2640 FE0F                             ; fully-qualified     # ? E17.0 women wrestling: dark skin tone
+1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women wrestling: light skin tone, medium-light skin tone
+1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women wrestling: light skin tone, medium skin tone
+1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women wrestling: light skin tone, medium-dark skin tone
+1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women wrestling: light skin tone, dark skin tone
+1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women wrestling: medium-light skin tone, light skin tone
+1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women wrestling: medium-light skin tone, medium skin tone
+1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women wrestling: medium-light skin tone, medium-dark skin tone
+1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women wrestling: medium-light skin tone, dark skin tone
+1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women wrestling: medium skin tone, light skin tone
+1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women wrestling: medium skin tone, medium-light skin tone
+1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women wrestling: medium skin tone, medium-dark skin tone
+1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women wrestling: medium skin tone, dark skin tone
+1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women wrestling: medium-dark skin tone, light skin tone
+1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women wrestling: medium-dark skin tone, medium-light skin tone
+1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women wrestling: medium-dark skin tone, medium skin tone
+1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FF                ; fully-qualified     # ? E17.0 women wrestling: medium-dark skin tone, dark skin tone
+1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FB                ; fully-qualified     # ? E17.0 women wrestling: dark skin tone, light skin tone
+1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FC                ; fully-qualified     # ? E17.0 women wrestling: dark skin tone, medium-light skin tone
+1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FD                ; fully-qualified     # ? E17.0 women wrestling: dark skin tone, medium skin tone
+1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FE                ; fully-qualified     # ? E17.0 women wrestling: dark skin tone, medium-dark skin tone
 1F93D                                                  ; fully-qualified     # 🤽 E3.0 person playing water polo
 1F93D 1F3FB                                            ; fully-qualified     # 🤽🏻 E3.0 person playing water polo: light skin tone
 1F93D 1F3FC                                            ; fully-qualified     # 🤽🏼 E3.0 person playing water polo: medium-light skin tone
