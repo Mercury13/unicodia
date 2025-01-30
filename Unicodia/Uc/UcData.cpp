@@ -521,7 +521,8 @@ namespace {
         }
         switch (nSkin) {
         case 0:
-            if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
+            if (x.length() >= 4     // 4 = 1 + 3tail
+                    && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
                 return EmojiClass::SEQ_RIGHT;
             if (nZwj > 0) {
                 if (nGender > 0)
@@ -535,7 +536,8 @@ namespace {
             }
             return EmojiClass::SEQ_OTHER_NONZWJ;
         case 1:
-            if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
+            if (x.length() >= 5          // 5 = 1 + 1race + 3tail
+                    && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
                 return EmojiClass::SEQ_RIGHT_RACIAL;
             return EmojiClass::SEQ_RACIAL;
         default:
