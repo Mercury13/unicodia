@@ -61,13 +61,12 @@ namespace uc {
                         unsigned nRightFacingRacial = 0;
                         unsigned nZwjColor = 0;
                         unsigned nZwjGender = 0;
-                        unsigned nZwjActivity = 0;
                         unsigned nZwjOther = 0;
                         unsigned nFlags = 0;
                         unsigned nOtherNonZwj = 0;
                         unsigned nTotal() const noexcept
                             { return nRacial + nMultiracial + nRightFacing + nRightFacingRacial
-                                   + nZwjColor + nZwjActivity + nZwjOther + nFlags + nOtherNonZwj; }
+                                   + nZwjColor + nZwjGender + nZwjOther + nFlags + nOtherNonZwj; }
                     } seq;
                     unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
                 } nw;

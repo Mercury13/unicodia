@@ -464,7 +464,7 @@ namespace {
         NONE,
         SINGLE_CHAR,    ///< incl. VS16
         SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_RIGHT_RACIAL,
-        SEQ_ZWJ_COLOR, SEQ_ZWJ_ACTIVITY, SEQ_ZWJ_GENDER,
+        SEQ_ZWJ_COLOR, SEQ_ZWJ_GENDER,
         SEQ_OTHER_ZWJ,
         SEQ_FLAG,   ///< National flags, like [U][A]
         SEQ_OTHER_NONZWJ };
@@ -525,9 +525,10 @@ namespace {
                 return EmojiClass::SEQ_RIGHT;
             if (nZwj > 0) {
                 if (nGender > 0)
-                    return EmojiClass::SEQ_ZWJ_GENDER;
-                if (nPeople == 1)
-                    return EmojiClass::SEQ_ZWJ_ACTIVITY;
+                    return (nPeople == 0) ? EmojiClass::SEQ_ZWJ_GENDER : EmojiClass::SEQ_OTHER_ZWJ;
+                /// @todo [future] How to define ACTIVITY?
+                //if (nPeople == 1)
+                //    return EmojiClass::SEQ_ZWJ_ACTIVITY;
                 if (nColor > 0)
                     return EmojiClass::SEQ_ZWJ_COLOR;
                 return EmojiClass::SEQ_OTHER_ZWJ;
@@ -585,8 +586,6 @@ namespace {
             ++version.stats.emoji.nw.seq.nZwjColor; break;
         case EmojiClass::SEQ_ZWJ_GENDER:
             ++version.stats.emoji.nw.seq.nZwjGender; break;
-        case EmojiClass::SEQ_ZWJ_ACTIVITY:
-            ++version.stats.emoji.nw.seq.nZwjActivity; break;
         case EmojiClass::SEQ_FLAG:
             ++version.stats.emoji.nw.seq.nFlags; break;
         case EmojiClass::SEQ_OTHER_ZWJ:
