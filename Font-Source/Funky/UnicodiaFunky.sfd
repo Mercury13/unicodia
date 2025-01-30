@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1738271361
+ModificationTime: 1738272711
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -74,9 +74,9 @@ Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt'
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "RtL ABVM" { "RtL ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'khmr' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'khmr' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 2
 "Above" 325 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Au Gukh.Uml.Len Gukh.Uml.Anu Gukh.Lig.Aa.Anu Gukh.Lig.I.Anu Gukh.Lig.Ii.Anu Gukh.Lig.U.Anu Gukh.Lig.Uu.Anu Gukh.Lig.Oo.Anu Gukh.Lig.Au.Anu Gukh.Lig.E.Anu Gukh.Lig.Ee.Anu Gukh.Lig.Ai.Anu Gukh.Lig.O.Anu
 DEI: 91125
@@ -892,7 +892,7 @@ Grid
  2000 700 l 1024
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
+AnchorClass2: "Virama BR" "Common BLWM-1" "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
 BeginChars: 1114266 1216
 
 StartChar: Shape.Dotc
@@ -156736,7 +156736,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 323 0 basechar 0
-AnchorPoint: "Umlaut" 321 599 basechar 0
+AnchorPoint: "Umlaut" 333 579 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -157092,7 +157092,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 417 19 basechar 0
+AnchorPoint: "Virama BR" 476 72 basechar 0
+AnchorPoint: "Dot below" 329 19 basechar 0
 AnchorPoint: "Umlaut" 341 599 basechar 0
 LayerCount: 2
 Fore
@@ -157167,7 +157168,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 285 0 basechar 0
-AnchorPoint: "Umlaut" 280 599 basechar 0
+AnchorPoint: "Umlaut" 280 583 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -157512,7 +157513,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 274 0 basechar 0
-AnchorPoint: "Umlaut" 334 724 basechar 0
+AnchorPoint: "Umlaut" 334 705 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -157661,6 +157662,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Virama BR" 615 53 basechar 0
 AnchorPoint: "Dot below" 272 0 basechar 0
 AnchorPoint: "Umlaut" 312 620 basechar 0
 LayerCount: 2
@@ -158080,7 +158082,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 311 0 basechar 0
-AnchorPoint: "Umlaut" 310 620 basechar 0
+AnchorPoint: "Umlaut" 308 610 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -158109,7 +158111,7 @@ EndChar
 StartChar: u16D8E
 Encoding: 93582 93582 1190
 Width: 762
-Flags: W
+Flags: WO
 HStem: 0 130<241.909 347.472> 77 130<519.04 584.878> 492 129<21 101 536.077 601.015>
 VStem: 101 122<149.887 492> 378 120<228.358 443.037> 622.321 119.679<254.717 470.219>
 TtInstrs:
@@ -158250,7 +158252,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 333 0 basechar 0
-AnchorPoint: "Umlaut" 354 620 basechar 0
+AnchorPoint: "Umlaut" 354 602 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -158389,7 +158391,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 297 0 basechar 0
-AnchorPoint: "Umlaut" 272 620 basechar 0
+AnchorPoint: "Umlaut" 272 609 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -158656,7 +158658,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 330 0 basechar 0
-AnchorPoint: "Umlaut" 297 621 basechar 0
+AnchorPoint: "Umlaut" 297 595 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -158984,8 +158986,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Dot below" 399 0 basechar 0
-AnchorPoint: "Umlaut" 380 621 basechar 0
+AnchorPoint: "Virama BR" 866 39 basechar 0
+AnchorPoint: "Dot below" 370 0 basechar 0
+AnchorPoint: "Umlaut" 406 621 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -159516,6 +159519,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Virama BR" 560 -14 basechar 0
 AnchorPoint: "Dot below" 316 -26 basechar 0
 AnchorPoint: "Umlaut" 304 621 basechar 0
 LayerCount: 2
@@ -159807,7 +159811,7 @@ IUP[y]
 IUP[x]
 EndTTInstrs
 AnchorPoint: "Dot below" 326 0 basechar 0
-AnchorPoint: "Umlaut" 298 621 basechar 0
+AnchorPoint: "Umlaut" 298 601 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -159931,8 +159935,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Virama BR" 612 42 basechar 0
 AnchorPoint: "Dot below" 294 0 basechar 0
-AnchorPoint: "Umlaut" 294 621 basechar 0
+AnchorPoint: "Umlaut" 348 587 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -160217,6 +160222,7 @@ EndChar
 StartChar: u16D9D
 Encoding: 93597 93597 1204
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: -272 242
 VStem: -213 252
@@ -160242,6 +160248,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Virama BR" 0 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -161508,7 +161515,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut" -90 621 mark 0
+AnchorPoint: "Umlaut" -90 604 mark 0
 LayerCount: 2
 Fore
 SplineSet
