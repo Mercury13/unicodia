@@ -521,10 +521,10 @@ namespace {
         }
         switch (nSkin) {
         case 0:
-            if (x.length() >= 4     // 4 = 1 + 3tail
-                    && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
-                return EmojiClass::SEQ_RIGHT;
             if (nZwj > 0) {
+                if (x.length() >= 4     // 4 = 1 + 3tail
+                        && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
+                    return EmojiClass::SEQ_RIGHT;
                 if (nGender > 0)
                     return (nPeople == 0) ? EmojiClass::SEQ_ZWJ_GENDER : EmojiClass::SEQ_OTHER_ZWJ;
                 /// @todo [future] How to define ACTIVITY?
