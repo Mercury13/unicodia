@@ -897,19 +897,23 @@
      <transl>新しい文字</transl>
     </text>
     <text id="NewCjk">
-     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <known-orig>…[[ps:Hani|CJK ideographs]]</known-orig>
      <transl>…[[ps:Hani|CJK表意文字]]</transl>
     </text>
     <text id="NewNew">
-     <orig>…from new scripts</orig>
+     <orig>from new scripts</orig>
+     <known-orig>…from new scripts</known-orig>
      <transl>...新しいスクリプトから</transl>
     </text>
     <text id="NewEx">
-     <orig>…from existing scripts</orig>
+     <orig>from existing scripts</orig>
+     <known-orig>…from existing scripts</known-orig>
      <transl>…既存のスクリプトから</transl>
     </text>
     <text id="NewFmt">
-     <orig>…[[pt:format|format]] characters without script</orig>
+     <orig>[[pt:format|format]] characters without script</orig>
+     <known-orig>…[[pt:format|format]] characters without script</known-orig>
      <transl>…[[pt:format|書式]] 文字（スクリプトなし）</transl>
     </text>
     <text id="NewSym">
@@ -13935,6 +13939,102 @@
    </text>
   </group>
   <group id="Version">
+   <group id="Bullet">
+    <text id="NewChar">
+     <orig>New characters</orig>
+     <transl>新しい文字</transl>
+    </text>
+    <text id="NewCjk">
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <transl>[[ps:Hani|CJK表意文字]]</transl>
+    </text>
+    <text id="NewNew">
+     <orig>from new scripts</orig>
+     <transl>新しいスクリプトから</transl>
+    </text>
+    <text id="NewEx">
+     <orig>from existing scripts</orig>
+     <transl>既存のスクリプトから</transl>
+    </text>
+    <text id="NewFmt">
+     <orig>[[pt:format|format]] characters without script</orig>
+     <transl>[[pt:format|書式]] 文字（スクリプトなし）</transl>
+    </text>
+    <text id="NewSym">
+     <orig>misc. symbols</orig>
+     <transl>その他の記号</transl>
+    </text>
+    <text id="Transient">
+     <orig>Characters that would be deleted later</orig>
+     <transl>後で削除される文字</transl>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>合計文字数（[[pt:control|制御文字]]を含む）</transl>
+    </text>
+    <text id="NewEm">
+     <orig>New emoji</orig>
+     <transl>新しい絵文字</transl>
+    </text>
+    <text id="NewEm1">
+     <orig>Single-character and VS-16</orig>
+     <transl>シングル文字とVS-16</transl>
+    </text>
+    <text id="NewEm1This">
+     <orig>from this Unicode</orig>
+     <transl>このUnicodeから</transl>
+    </text>
+    <text id="NewEm1Prev">
+     <orig>from previous versions</orig>
+     <transl>以前のバージョンより</transl>
+    </text>
+    <text id="NewEm1Skin">
+     <orig>Skintone sequences</orig>
+     <transl>スキントーン シーケンス</transl>
+    </text>
+    <text id="NewEmMulti">
+     <orig>Multiracial sequences</orig>
+     <transl>多民族シーケンス</transl>
+    </text>
+    <text id="NewEmRight">
+     <orig>Right-facing sequences</orig>
+     <transl>右向きシーケンス</transl>
+    </text>
+    <text id="NewEmRightSkin">
+     <orig>Right-facing skintone sequences</orig>
+     <transl>右向きのスキントーン シーケンス</transl>
+    </text>
+    <text id="NewEmColor">
+     <orig>[[pt:zwj|ZWJ]] sequences of colour</orig>
+    </text>
+    <text id="NewEmGender">
+     <orig>[[pt:zwj|ZWJ]] sequences of gender</orig>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>Other [[pt:zwj|ZWJ]] sequences</orig>
+     <transl>その他の [[pt:zwj|ZWJ]] シーケンス</transl>
+    </text>
+    <text id="NewEmFlags">
+     <orig>National flags</orig>
+     <transl>国旗</transl>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>Other non-[[pt:zwj|ZWJ]] sequences</orig>
+     <transl>その他の非[[pt:zwj|ZWJ]]シーケンス</transl>
+    </text>
+    <text id="TotalEm">
+     <orig>Total emoji</orig>
+     <transl>絵文字の合計</transl>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+     <transl>新しいスクリプト</transl>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
+     <transl>スクリプトの合計</transl>
+    </text>
+   </group>
    <group id="1.1">
     <text id="Text">
      <orig>

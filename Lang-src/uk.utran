@@ -898,19 +898,23 @@
      <transl>Нових символів</transl>
     </text>
     <text id="NewCjk">
-     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <known-orig>…[[ps:Hani|CJK ideographs]]</known-orig>
      <transl>…[[ps:Hani|ККЯ-ієрогліфів]]</transl>
     </text>
     <text id="NewNew">
-     <orig>…from new scripts</orig>
+     <orig>from new scripts</orig>
+     <known-orig>…from new scripts</known-orig>
      <transl>…з нових писемностей</transl>
     </text>
     <text id="NewEx">
-     <orig>…from existing scripts</orig>
+     <orig>from existing scripts</orig>
+     <known-orig>…from existing scripts</known-orig>
      <transl>…з наявних писемностей</transl>
     </text>
     <text id="NewFmt">
-     <orig>…[[pt:format|format]] characters without script</orig>
+     <orig>[[pt:format|format]] characters without script</orig>
+     <known-orig>…[[pt:format|format]] characters without script</known-orig>
      <transl>…[[pt:format|форматуючих]] символів без писемності</transl>
     </text>
     <text id="NewSym">
@@ -13980,6 +13984,104 @@
    </text>
   </group>
   <group id="Version">
+   <group id="Bullet">
+    <text id="NewChar">
+     <orig>New characters</orig>
+     <transl>Нових символів</transl>
+    </text>
+    <text id="NewCjk">
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <transl>[[ps:Hani|ККЯ-ієрогліфів]]</transl>
+    </text>
+    <text id="NewNew">
+     <orig>from new scripts</orig>
+     <transl>з нових писемностей</transl>
+    </text>
+    <text id="NewEx">
+     <orig>from existing scripts</orig>
+     <transl>з наявних писемностей</transl>
+    </text>
+    <text id="NewFmt">
+     <orig>[[pt:format|format]] characters without script</orig>
+     <transl>[[pt:format|форматуючих]] символів без писемності</transl>
+    </text>
+    <text id="NewSym">
+     <orig>misc. symbols</orig>
+     <transl>різних знаків</transl>
+    </text>
+    <text id="Transient">
+     <orig>Characters that would be deleted later</orig>
+     <transl>Символів, які пізніше видалять</transl>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>Усього символів разом з [[pt:control|керуючими]]</transl>
+    </text>
+    <text id="NewEm">
+     <orig>New emoji</orig>
+     <transl>Нових емодзі</transl>
+    </text>
+    <text id="NewEm1">
+     <orig>Single-character and VS-16</orig>
+     <transl>Односимвольних та VS16</transl>
+    </text>
+    <text id="NewEm1This">
+     <orig>from this Unicode</orig>
+     <transl>з цього Юнікоду</transl>
+    </text>
+    <text id="NewEm1Prev">
+     <orig>from previous versions</orig>
+     <transl>з попередніх версій</transl>
+    </text>
+    <text id="NewEm1Skin">
+     <orig>Skintone sequences</orig>
+     <transl>Расових послідовностей</transl>
+    </text>
+    <text id="NewEmMulti">
+     <orig>Multiracial sequences</orig>
+     <transl>Багаторасових послідовностей</transl>
+    </text>
+    <text id="NewEmRight">
+     <orig>Right-facing sequences</orig>
+     <transl>Правосторонніх послідовностей</transl>
+    </text>
+    <text id="NewEmRightSkin">
+     <orig>Right-facing skintone sequences</orig>
+     <transl>Правосторонніх расових послідовностей</transl>
+    </text>
+    <text id="NewEmColor">
+     <orig>[[pt:zwj|ZWJ]] sequences of colour</orig>
+     <transl>[[pt:zwj|ZWJ]]-послідовностей кольору</transl>
+    </text>
+    <text id="NewEmGender">
+     <orig>[[pt:zwj|ZWJ]] sequences of gender</orig>
+     <transl>[[pt:zwj|ZWJ]]-послідовностей статі</transl>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>Other [[pt:zwj|ZWJ]] sequences</orig>
+     <transl>Інших [[pt:zwj|ZWJ]]-послідовностей</transl>
+    </text>
+    <text id="NewEmFlags">
+     <orig>National flags</orig>
+     <transl>Державних прапорів</transl>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>Other non-[[pt:zwj|ZWJ]] sequences</orig>
+     <transl>Інших не-[[pt:zwj|ZWJ]]-послідовностей</transl>
+    </text>
+    <text id="TotalEm">
+     <orig>Total emoji</orig>
+     <transl>Усього емодзі</transl>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+     <transl>Нових писемностей</transl>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
+     <transl>Усього писемностей</transl>
+    </text>
+   </group>
    <group id="1.1">
     <text id="Text">
      <orig>

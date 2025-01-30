@@ -897,19 +897,23 @@
      <transl>Новых символов</transl>
     </text>
     <text id="NewCjk">
-     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <known-orig>…[[ps:Hani|CJK ideographs]]</known-orig>
      <transl>…[[ps:Hani|ККЯ-иероглифов]]</transl>
     </text>
     <text id="NewNew">
-     <orig>…from new scripts</orig>
+     <orig>from new scripts</orig>
+     <known-orig>…from new scripts</known-orig>
      <transl>…из новых письменностей</transl>
     </text>
     <text id="NewEx">
-     <orig>…from existing scripts</orig>
+     <orig>from existing scripts</orig>
+     <known-orig>…from existing scripts</known-orig>
      <transl>…из имеющихся письменностей</transl>
     </text>
     <text id="NewFmt">
-     <orig>…[[pt:format|format]] characters without script</orig>
+     <orig>[[pt:format|format]] characters without script</orig>
+     <known-orig>…[[pt:format|format]] characters without script</known-orig>
      <transl>…[[pt:format|форматирующих]] символов без письменности</transl>
     </text>
     <text id="NewSym">
@@ -990,12 +994,10 @@
     </text>
     <text id="Extend">
      <orig>Extended</orig>
-     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
      <transl>Расширен</transl>
     </text>
     <text id="Shrunk">
      <orig>Shrunk</orig>
-     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
      <transl>Сжат</transl>
     </text>
    </group>
@@ -13979,6 +13981,113 @@
    </text>
   </group>
   <group id="Version">
+   <group id="Bullet">
+    <text id="NewChar">
+     <orig>New characters</orig>
+     <transl>Новых символов</transl>
+    </text>
+    <text id="NewCjk">
+     <orig>[[ps:Hani|CJK ideographs]]</orig>
+     <transl>[[ps:Hani|ККЯ-иероглифов]]</transl>
+    </text>
+    <text id="NewNew">
+     <orig>from new scripts</orig>
+     <transl>из новых письменностей</transl>
+    </text>
+    <text id="NewEx">
+     <orig>from existing scripts</orig>
+     <transl>из имеющихся письменностей</transl>
+    </text>
+    <text id="NewFmt">
+     <orig>[[pt:format|format]] characters without script</orig>
+     <transl>[[pt:format|форматирующих]] символов без письменности</transl>
+    </text>
+    <text id="NewSym">
+     <orig>misc. symbols</orig>
+     <transl>разных знаков</transl>
+    </text>
+    <text id="Transient">
+     <orig>Characters that would be deleted later</orig>
+     <transl>Символов, которые позже удалят</transl>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>Всего символов, включая [[pt:control|управляющие]]</transl>
+    </text>
+    <text id="NewEm">
+     <orig>New emoji</orig>
+     <transl>Новых эмодзи</transl>
+    </text>
+    <text id="NewEm1">
+     <orig>Single-character and VS-16</orig>
+     <transl>Односимвольных и VS16</transl>
+    </text>
+    <text id="NewEm1This">
+     <orig>from this Unicode</orig>
+     <transl>из этого Юникода</transl>
+    </text>
+    <text id="NewEm1Prev">
+     <orig>from previous versions</orig>
+     <transl>из предыдущих версий</transl>
+    </text>
+    <text id="NewEm1Skin">
+     <orig>Skintone sequences</orig>
+     <transl>Расовых последовательностей</transl>
+    </text>
+    <text id="NewEmMulti">
+     <orig>Multiracial sequences</orig>
+     <transl>Многорасовых последовательностей</transl>
+    </text>
+    <text id="NewEmRight">
+     <orig>Right-facing sequences</orig>
+     <transl>Правосторонних последовательностей</transl>
+    </text>
+    <text id="NewEmRightSkin">
+     <orig>Right-facing skintone sequences</orig>
+     <transl>Правосторонних расовых последовательностей</transl>
+    </text>
+    <text id="NewEmColor">
+     <orig>[[pt:zwj|ZWJ]] sequences of colour</orig>
+     <transl>[[pt:zwj|ZWJ]]-последовательностей цвета</transl>
+    </text>
+    <text id="NewEmGender">
+     <orig>[[pt:zwj|ZWJ]] sequences of gender</orig>
+     <transl>[[pt:zwj|ZWJ]]-последовательностей пола</transl>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>Other [[pt:zwj|ZWJ]] sequences</orig>
+     <transl>Других [[pt:zwj|ZWJ]]-последовательностей</transl>
+    </text>
+    <text id="NewEmFlags">
+     <orig>National flags</orig>
+     <transl>Государственных флагов</transl>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>Other non-[[pt:zwj|ZWJ]] sequences</orig>
+     <transl>Других не-[[pt:zwj|ZWJ]]-последовательностей</transl>
+    </text>
+    <text id="TotalEm">
+     <orig>Total emoji</orig>
+     <transl>Всего эмодзи</transl>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+     <transl>Новых письменностей</transl>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
+     <transl>Всего письменностей</transl>
+    </text>
+    <text id="Extend">
+     <orig>Extended</orig>
+     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
+     <transl>Расширен</transl>
+    </text>
+    <text id="Shrunk">
+     <orig>Shrunk</orig>
+     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
+    </text>
+   </group>
    <group id="1.1">
     <text id="Text">
      <orig>

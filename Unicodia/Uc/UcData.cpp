@@ -464,7 +464,7 @@ namespace {
         NONE,
         SINGLE_CHAR,    ///< incl. VS16
         SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_RIGHT_RACIAL,
-        SEQ_ZWJ_COLOR, SEQ_ZWJ_GENDER,
+        SEQ_ZWJ_COLOR, SEQ_ZWJ_GENDER, //SEQ_ZWJ_ACTIVITY, SEQ_ZWJ_APPEARANCE,
         SEQ_OTHER_ZWJ,
         SEQ_FLAG,   ///< National flags, like [U][A]
         SEQ_OTHER_NONZWJ };
