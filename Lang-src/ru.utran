@@ -994,10 +994,12 @@
     </text>
     <text id="Extend">
      <orig>Extended</orig>
+     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
      <transl>Расширен</transl>
     </text>
     <text id="Shrunk">
      <orig>Shrunk</orig>
+     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
      <transl>Сжат</transl>
     </text>
    </group>
@@ -8647,12 +8649,12 @@
      <orig>
       <p>Language and script used near Side, modern Turkey. The last evidence is the 2nd century BC. Only 13 inscriptions are known. The language is considered deciphered, except some rare letters. Letter meanings are:</p>
       <p />
-      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
+      <p>A E I O U W Y P . ? M T D Th Z S N . L Ts G X R ? ? B . ? ? ? ? ?</p>
      </orig>
      <transl>
       <p>Язык и письмо, использовавшиеся близ Сиде (современная Турция). Последнее свидетельство{{-}}II{{_}}век{{bc}} Известны только 13 надписей. Язык считается расшифрованным, кроме нескольких редких букв. Значения букв:</p>
       <p />
-      <p>A E I O U W Y P / ? M T D Th Z S N / L Ts G X R ? ? B / ? ? ? ? ?</p>
+      <p>A E I O U W Y P . ? M T D Th Z S N . L Ts G X R ? ? B . ? ? ? ? ?</p>
      </transl>
     </text>
    </group>
@@ -14077,15 +14079,6 @@
     <text id="TotalSc">
      <orig>Total scripts</orig>
      <transl>Всего письменностей</transl>
-    </text>
-    <text id="Extend">
-     <orig>Extended</orig>
-     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
-     <transl>Расширен</transl>
-    </text>
-    <text id="Shrunk">
-     <orig>Shrunk</orig>
-     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
     </text>
    </group>
    <group id="1.1">
