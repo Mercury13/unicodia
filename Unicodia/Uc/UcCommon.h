@@ -59,13 +59,15 @@ namespace uc {
                         unsigned nMultiracial = 0;
                         unsigned nRightFacing = 0;
                         unsigned nRightFacingRacial = 0;
-                        unsigned nColor = 0;
-                        unsigned nOtherZwj = 0;
+                        unsigned nZwjColor = 0;
+                        unsigned nZwjGender = 0;
+                        unsigned nZwjActivity = 0;
+                        unsigned nZwjOther = 0;
                         unsigned nFlags = 0;
                         unsigned nOtherNonZwj = 0;
                         unsigned nTotal() const noexcept
                             { return nRacial + nMultiracial + nRightFacing + nRightFacingRacial
-                                   + nColor + nOtherZwj + nFlags + nOtherNonZwj; }
+                                   + nZwjColor + nZwjActivity + nZwjOther + nFlags + nOtherNonZwj; }
                     } seq;
                     unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
                 } nw;

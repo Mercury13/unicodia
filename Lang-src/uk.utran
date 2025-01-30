@@ -958,8 +958,16 @@
      <transl>…Правосторонніх расових послідовностей</transl>
     </text>
     <text id="NewEmColor">
-     <orig>…Coloured sequences</orig>
-     <transl>…Кольорових послідовностей</transl>
+     <orig>…[[pt:zwj|ZWJ]] sequences of colour</orig>
+     <transl>…[[pt:zwj|ZWJ]]-послідовностей кольору</transl>
+    </text>
+    <text id="NewEmActivity">
+     <orig>…[[pt:zwj|ZWJ]] sequences of activity</orig>
+     <transl>…[[pt:zwj|ZWJ]]-послідовностей діяльності</transl>
+    </text>
+    <text id="NewEmGender">
+     <orig>…[[pt:zwj|ZWJ]] sequences of gender</orig>
+     <transl>…[[pt:zwj|ZWJ]]-послідовностей статі</transl>
     </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>

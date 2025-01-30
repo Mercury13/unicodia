@@ -761,7 +761,13 @@
      <orig>…Right-facing skintone sequences</orig>
     </text>
     <text id="NewEmColor">
-     <orig>…Coloured sequences</orig>
+     <orig>…[[pt:zwj|ZWJ]] sequences of colour</orig>
+    </text>
+    <text id="NewEmActivity">
+     <orig>…[[pt:zwj|ZWJ]] sequences of activity</orig>
+    </text>
+    <text id="NewEmGender">
+     <orig>…[[pt:zwj|ZWJ]] sequences of gender</orig>
     </text>
     <text id="NewEmOtherZwj">
      <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
