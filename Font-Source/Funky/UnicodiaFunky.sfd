@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1738272836
+ModificationTime: 1738272956
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -158111,7 +158111,7 @@ EndChar
 StartChar: u16D8E
 Encoding: 93582 93582 1190
 Width: 762
-Flags: W
+Flags: WO
 HStem: 0 130<241.909 347.472> 77 130<519.04 584.878> 492 129<21 101 536.077 601.015>
 VStem: 101 122<149.887 492> 378 120<228.358 443.037> 622.321 119.679<254.717 470.219>
 TtInstrs:
@@ -158251,6 +158251,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Virama BR" 710 34 basechar 0
 AnchorPoint: "Dot below" 333 0 basechar 0
 AnchorPoint: "Umlaut" 354 602 basechar 0
 LayerCount: 2
@@ -159041,7 +159042,7 @@ EndChar
 StartChar: u16D94
 Encoding: 93588 93588 1196
 Width: 548
-Flags: WO
+Flags: W
 HStem: 0 126<156.955 276.004> 492 129<40 200> 696 211<150.431 242.844>
 VStem: 40 97<147.924 260.648> 262 190<149.846 285.281> 383 92<644.177 733.465>
 TtInstrs:
