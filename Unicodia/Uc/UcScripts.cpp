@@ -193,10 +193,10 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1821), EcFont::FRANKEN_SANS, NO_FLAGS,
         { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
           .locations { LOC_USA } } },
-    /// @todo [U17] Chisoi: cool font exists
+    // Chisoi OK, cool font transferred to Funky for Unicodia’s needs
     { "Chis", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1994), EcFont::NORMAL, NO_FLAGS,
+        Dating::year(1994), EcFont::FUNKY_BIGGER, NO_FLAGS,
         { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E } } },
     // Chorasmian OK, installed Google Noto

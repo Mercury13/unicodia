@@ -1256,8 +1256,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, {}, SvgHint{ 10, 2, ImbaY::BELOW_3 } },
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
-    /// @todo [U17, tofu] Chisoi
-    { 0x16D80, 0x16DAF, { 0x16DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING, 1_hy },
+    // Chisoi OK
+    { 0x16D80, 0x16DAF, { 0x16D80, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
             "Chisoi",
             { EcScript::Chis, 0 }, MapSubtype::ALIVE,
             EcScript::Chis, EcFont::NORMAL },
