@@ -83,7 +83,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
       { FNAME_NOTO },                                                           // …1
-    { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky bigger
+    { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky description bigger
+    { FNAME_FUNKY, Ffg::DESC_BIGGER, 115_pc },                                  // Funky font bigger
     { FAM_SANS_FRANKEN },                                                       // Sans franken
     { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
     { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)

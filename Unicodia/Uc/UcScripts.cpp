@@ -196,7 +196,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chisoi OK, cool font transferred to Funky for Unicodia’s needs
     { "Chis", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1994), EcFont::FUNKY_BIGGER, NO_FLAGS,
+        Dating::year(1994), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
         { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E } } },
     // Chorasmian OK, installed Google Noto
@@ -266,7 +266,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Garay OK somehow, though hangs
     { "Gara", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::year(1961), EcFont::FUNKY_BIGGER, Sfg::STUB_RTL,
+        Dating::year(1961), EcFont::FUNKY_DESC_BIGGER, Sfg::STUB_RTL,
         // Wolof here as main Garay language
         { .mantissa = 22, .numOrder = NumOrder::MILLION, .year = 2021, .locations = { LOC_AFRICA_W} } },
     // Georgian OK, installed Google Noto font
@@ -477,7 +477,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Makasar OK, recreated strange font by Anshuman Pandey in Funky/OpenType
     { "Maka", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::crange(16, 17), EcFont::FUNKY_BIGGER },
+        Dating::crange(16, 17), EcFont::FUNKY_DESC_BIGGER },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
@@ -839,7 +839,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U17, tofu] Tolong Siki
     { "Tols", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1999), EcFont::NORMAL, NO_FLAGS,
+        Dating::year(1999), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
         { .mantissa = 21, .numOrder = NumOrder::HUN_THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
     // Toto OK, U14, moved that font to FunkySample
