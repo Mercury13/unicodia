@@ -34,6 +34,7 @@
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
 		<blk start="13430" /><!-- Egyptian hieroglyph format controls -->
 		<blk start="18800" /><!-- Tangut components -->
+		<blk start="18D80" /><!-- Tangut components supp -->
 		<blk start="1AFF0" /><!-- Kana extended-B -->
 		<blk start="1B000" /><!-- Kana supplement -->
 		<blk start="1B100" /><!-- Kana extended-A -->
