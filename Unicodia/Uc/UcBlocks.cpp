@@ -907,7 +907,7 @@ constinit const uc::Block uc::blocks[] {
             "Lydian",
             { EcScript::Lydi, 0 }, MapSubtype::DEAD, EcScript::Lydi },
     /// @todo [U17, tofu] Sidetic
-    { 0x10940, 0x1095F, { 0x10940, EcContinent::ASIA_RTL, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x10940, 0x1095F, { 0x10941, EcContinent::ASIA_RTL, Ifg::PAINT_SVG | Ifg::MISSING },
             "Sidetic",
             { EcScript::Sidt, 0 }, MapSubtype::DEAD, EcScript::Sidt },
     // Meroitic hiero OK
