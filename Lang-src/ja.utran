@@ -4902,12 +4902,30 @@
       <p>* other knights (3-2, 4-1, combined with pawn…) are rare but exist;</p>
       <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
+      <p>Two pieces from proto-chess:</p>
+      <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
+      <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
+      <p />
+      <p>This block also contains pieces of the Chinese game of Xiangqi.</p>
+     </orig>
+     <known-orig>
+      <p>In movable-type printing turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
+      <p>* neutral piece: both players may move it;</p>
+      <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, dragon, terror;</p>
+      <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
+      <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
+      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
+      <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as an inverted or slanted pawn;</p>
+      <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
+      <p>* other knights (3-2, 4-1, combined with pawn…) are rare but exist;</p>
+      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
+      <p />
       <p>This block also contains pieces of the Chinese game of Xiangqi.</p>
       <p />
       <p>Unicode{{_}}17 is going to accept two pieces from proto-chess:</p>
       <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
       <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>活版印刷では、回転駒が唯一の選択肢として妖精チェスの駒としてよく使用されていました。よく知られている非標準の駒（弱体化したものや他のゲームから借用したものを除く）は次のとおりです。</p>
       <p>* 中立駒：両方のプレイヤーが動かすことができます。</p>
