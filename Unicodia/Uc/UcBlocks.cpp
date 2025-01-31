@@ -1133,7 +1133,6 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Deva, 'A' }, MapSubtype::DEAD,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     /// @todo [U17] Sharada supp
-    /// @todo [U17, data] Is that Shrd supplement dead?
     { 0x11B60, 0x11B7F, { 0x11B67, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
             "Sharada Supplement",
             { EcScript::Shrd, '1' }, MapSubtype::DEAD,
