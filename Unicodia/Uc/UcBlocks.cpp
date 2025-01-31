@@ -1156,8 +1156,8 @@ constinit const uc::Block uc::blocks[] {
             "Masaram Gondi",
             MyName::INST, MapSubtype::DEAD,
             EcScript::Gonm, EcFont::NORMAL, Bfg::VIRAMA_UP },
-    /// @todo [U17, tofu] Tolong Siki
-    { 0x11DB0, 0x11DEF, { 0x11DB0, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::MISSING },
+    // Tolong Siki bad but OK
+    { 0x11DB0, 0x11DEF, { 0x11DB0, EcContinent::ASIA, Ifg::ENG_TALL_PAINT, 2_hx },
             "Tolong Siki",
             { EcScript::Tols, 0 }, MapSubtype::ALIVE,
             EcScript::Tols, EcFont::NORMAL },
