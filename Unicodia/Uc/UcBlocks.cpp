@@ -1348,7 +1348,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZOLD, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::PSEUDOGRAPHICS, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
     /// @todo [U17, tofu] Misc sym supp
-    { 0x1CEC0, 0x1CEFF, { 0x1CEC0, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x1CEC0, 0x1CEFF, { 0x1CEEA, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Miscellaneous Symbols Supplement",
             { EcScript::ZSYM, 2 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
