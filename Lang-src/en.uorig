@@ -8394,11 +8394,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Sogd|Sogdian]] and derivative scripts ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]) are written left to right in columns, with continuous line. </p>
+      <p>Scholars routinely change the direction of historical scripts to simplify their work. But for some vertical scripts, this is impossible, so the text is just turned.</p>
       <p />
-      <p>[[ps:Tayo|Tai Yo]] is written right to left in columns, with complex [[pt:combining|marks]].</p>
+      <p>[[ps:Sogd|Sogdian]] and derivatives ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]): joined letters.</p>
       <p />
-      <p>Most computer programs only write horizontally, so the simplest solution is to turn the text.</p>
+      <p>[[ps:Tayo|Tai Yo]]: complex [[pt:combining|marks]].</p>
      </orig>
     </text>
    </group>

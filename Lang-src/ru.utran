@@ -12175,18 +12175,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Sogd|Sogdian]] and derivative scripts ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]) are written left to right in columns, with continuous line. </p>
+      <p>Scholars routinely change the direction of historical scripts to simplify their work. But for some vertical scripts, this is impossible, so the text is just turned.</p>
       <p />
-      <p>[[ps:Tayo|Tai Yo]] is written right to left in columns, with complex [[pt:combining|marks]].</p>
+      <p>[[ps:Sogd|Sogdian]] and derivatives ([[ps:Ougr|Uyghur]], [[ps:Mong|Mongolian]], [[ps:Phag|Phags-Pa]]): joined letters.</p>
       <p />
-      <p>Most computer programs only write horizontally, so the simplest solution is to turn the text.</p>
+      <p>[[ps:Tayo|Tai Yo]]: complex [[pt:combining|marks]].</p>
      </orig>
      <transl>
-      <p>[[ps:Sogd|Согдийская]] письменность и производные ([[ps:Ougr|уйгурская]], [[ps:Mong|монгольская]], [[ps:Phag|Пагба-ламы]]) пишутся слева направо по столбцам, сплошной вязью.</p>
+      <p>Исследователи постоянно меняют направление исторических письменностей, чтобы упростить себе работу. Но для некоторых вертикальных письменностей это невозможно, и текст просто поворачивают.</p>
       <p />
-      <p>[[ps:Tayo|Тай-йо]] пишется справа налево по столбцам, со сложными [[pt:combining|метками]].</p>
+      <p>[[ps:Sogd|Согдийская]] и производные ([[ps:Ougr|уйгурская]], [[ps:Mong|монгольская]], [[ps:Phag|Пагба-ламы]]): соединённые буквы.</p>
       <p />
-      <p> Большинство компьютерных программ пишут только горизонтально, и проще всего повернуть надпись.</p>
+      <p>[[ps:Tayo|Тай-йо]]: сложные [[pt:combining|метки]].</p>
      </transl>
     </text>
    </group>
