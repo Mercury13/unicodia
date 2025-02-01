@@ -17,13 +17,13 @@ constexpr bool isPowerOfTwo(unsigned x) { return ((x & (x - 1)) == 0); }
 
 /// Specific platforms we perform “static-assert” unit tests on
 ///   (structure itself is platform-independent)
-enum class TfPlat : unsigned char { W64, UNK };
-#ifdef _WIN64
-    constexpr TfPlat TF_PLAT = TfPlat::W64;
+enum class TfPlat : unsigned char { X64, UNK };
+#if defined(_WIN64)
+    constexpr TfPlat TF_PLAT = TfPlat::X64;
 #else
     constexpr TfPlat TF_PLAT = TfPlat::UNK;
 #endif
-constexpr bool TF_PLAT_W64 = (TF_PLAT == TfPlat::W64);
+constexpr bool TF_PLAT_X64 = (TF_PLAT == TfPlat::X64);
 constexpr bool UNTESTED = true;
 
 class CompressedBits
@@ -38,8 +38,8 @@ private:
     static constexpr unsigned BYTES_PER_ITEM = sizeof(size_t);
     static constexpr unsigned BITS_PER_ITEM = BYTES_PER_ITEM * 8;
     static_assert(isPowerOfTwo(BYTES_PER_ITEM));
-    // Unit tests: W64
-    static_assert(TF_PLAT_W64 ? (BITS_PER_ITEM == 64) : UNTESTED);
+    // Unit tests: x64
+    static_assert(TF_PLAT_X64 ? (BITS_PER_ITEM == 64) : UNTESTED);
 
     static constexpr size_t BITS_PER_BLOCK = 4096;  // 512 bytes per block
     static constexpr size_t ITEMS_PER_BLOCK = BITS_PER_BLOCK / BITS_PER_ITEM;
@@ -60,9 +60,9 @@ private:
 
         static constexpr unsigned ITEM_HI_SHIFT = std::countr_zero(BITS_PER_ITEM);
         static constexpr unsigned ITEM_LO_MASK = BITS_PER_ITEM - 1;
-        // Unit tests: W64
-        static_assert(TF_PLAT_W64 ? (ITEM_HI_SHIFT == 6) : UNTESTED);
-        static_assert(TF_PLAT_W64 ? (ITEM_LO_MASK == 63) : UNTESTED);
+        // Unit tests: x64
+        static_assert(TF_PLAT_X64 ? (ITEM_HI_SHIFT == 6) : UNTESTED);
+        static_assert(TF_PLAT_X64 ? (ITEM_LO_MASK == 63) : UNTESTED);
         static constexpr size_t ONE = 1;
     };
     std::vector<std::unique_ptr<Block>> blocks;
