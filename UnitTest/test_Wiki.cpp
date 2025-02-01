@@ -307,7 +307,7 @@ TEST (Run, Plain)
 {
     std::string_view s = "alpha";
     Eng eng;
-    wiki::run(eng, s, wiki::Mode::ARTICLE);
+    wiki::run(eng, s, wiki::Mode::SPAN);
     EXPECT_EQ("Plain:alpha\n", eng.s);
 }
 
@@ -322,6 +322,7 @@ TEST (Run, Simple)
     Eng eng;
     wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
+            "Start!\n"
             "Plain:The \n"
             "Link:wiki,wiki\n"
             "Plain:s are \n"
@@ -363,12 +364,13 @@ TEST (Run, Features)
 ///
 ///  LF in feature WILL make a line break
 ///
-TEST (Run, LfInFreature)
+TEST (Run, LfInFeature)
 {
     std::string_view s = "alpha\n:bravo\ncharlie";
     Eng eng;
     wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
+            "Start!\n"
             "Plain:alpha\n"
             "Break[ind]!\n"
             "Plain:bravo\n"
@@ -387,6 +389,7 @@ TEST (Run, UlPrereq)
     Eng eng;
     wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
+            "Start!\n"
             "Plain:alpha\n"
             "Break[bul]!\n"
             "Plain:bravo\n"

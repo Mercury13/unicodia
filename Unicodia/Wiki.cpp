@@ -245,6 +245,8 @@ void wiki::run(Engine& engine, const char* start, const char* end, Mode mode)
             skipWhitespace(start, end);
             break;
         default: ;
+            engine.appendBreak(Strength::START, Feature::NONE, 0);
+            break;
         }
     }
     while (true) {

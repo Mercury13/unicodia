@@ -611,9 +611,6 @@ namespace {
         finishDiv();
         bool isStart = false;
         switch (strength) {
-        case wiki::Strength::START:
-            isStart = true;
-            [[fallthrough]];
         case wiki::Strength::BREAK:
             switch (feature) {
             case wiki::Feature::BULLET:
@@ -626,6 +623,7 @@ namespace {
                 isDiv = true;
                 break;
             } break;
+        case wiki::Strength::START:
         case wiki::Strength::PARAGRAPH:
             s += "<p>";
             break;
@@ -1291,7 +1289,6 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 
     str::append(text, "</p>");
 
-    str::append(text, "<p>");
     appendNoFont(text, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
@@ -1313,7 +1310,6 @@ QString mywiki::buildHtml(const uc::Category& x)
     QString text;
     appendStylesheet(text);
     appendHeader(text, x, catQuery(x));
-    str::append(text, "<p>");
     appendNoFont(text, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
@@ -1435,9 +1431,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         str::append(text, "</p>");
     }
 
-    str::append(text, "<p>");
     append(text, x.loc.description, context, wiki::Mode::ARTICLE);
-    str::append(text, "</p>");
 }
 
 
@@ -1945,7 +1939,6 @@ namespace {
         auto& desc = loc::get(key);
         auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
 
-        text += "<p>";
         mywiki::appendNoFont(text, paragraph, wiki::Mode::ARTICLE);
     }
 
@@ -2278,7 +2271,6 @@ QString mywiki::buildNonCharHtml(char32_t code)
     str::append(text, loc::get("Prop.Head.NonChar"));
     text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
-    text += "<p>";
     appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"), wiki::Mode::ARTICLE);
     return text;
 }
@@ -2326,7 +2318,6 @@ QString mywiki::buildHtml(const uc::Term& x)
         appendQuery(text, SCH_QRY_CHARS, "N=1");
     }
 
-    str::append(text, "<p>");
     appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
@@ -2391,9 +2382,7 @@ QString mywiki::buildHtml(const uc::Block& x)
     }
 
     if (x.hasDescription()) {
-        str::append(text, "<p>");
         appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
-        str::append(text, "</p>");
     } else if (x.ecScript != uc::EcScript::NONE) {
         text += "<p><b>";
         str::append(text, loc::get("Prop.Head.Script"));
@@ -2444,7 +2433,6 @@ namespace {
     void appendNodesTextIf(QString& text, const uc::LibNode& node)
     {
         if (node.flags.have(uc::Lfg::HAS_TEXT)) {
-            text += "<p>";
             char buf[40];
             snprintf(buf, std::size(buf), "Lib.Text.%s",
                      reinterpret_cast<const char*>(node.text.data()));
@@ -2829,7 +2817,6 @@ QString mywiki::buildHtml(const uc::Version& version)
 
     // Text
     if (version.flags.have(uc::Vfg::TEXT)) {
-        str::append(text, "<p>");
         auto key = str::cat("Version.", str::toSv(version.link({})) , ".Text");
         mywiki::appendNoFont(text, loc::get(key), wiki::Mode::ARTICLE);
     }
@@ -2890,7 +2877,6 @@ QString mywiki::buildHtml(const uc::GlyphStyleChannel& channel)
     text += "</b></nobr>";
 
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Text", channel.name.data());
-    text += "<p>";
     mywiki::appendNoFont(text, loc::get(buf), wiki::Mode::ARTICLE);
 
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
@@ -3067,7 +3053,6 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         appendVersionValue(text, info.versionSupportedSince());
     }
 
-    str::append(text, "<p>");
     snprintf(buf, std::size(buf), "OldComp.%s.Text", info.key.data());
     mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::ARTICLE);
 
