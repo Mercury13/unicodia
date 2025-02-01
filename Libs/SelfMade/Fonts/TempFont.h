@@ -15,7 +15,9 @@ extern std::string tempPrefix;
 
 constexpr bool isPowerOfTwo(unsigned x) { return ((x & (x - 1)) == 0); }
 
-enum class TfPlat { W64, UNK };
+/// Specific platforms we perform “static-assert” unit tests on
+///   (structure itself is platform-independent)
+enum class TfPlat : unsigned char { W64, UNK };
 #ifdef _WIN64
     constexpr TfPlat TF_PLAT = TfPlat::W64;
 #else
@@ -36,6 +38,7 @@ private:
     static constexpr unsigned BYTES_PER_ITEM = sizeof(size_t);
     static constexpr unsigned BITS_PER_ITEM = BYTES_PER_ITEM * 8;
     static_assert(isPowerOfTwo(BYTES_PER_ITEM));
+    // Unit tests: W64
     static_assert(TF_PLAT_W64 ? (BITS_PER_ITEM == 64) : UNTESTED);
 
     static constexpr size_t BITS_PER_BLOCK = 4096;  // 512 bytes per block
@@ -57,6 +60,7 @@ private:
 
         static constexpr unsigned ITEM_HI_SHIFT = std::countr_zero(BITS_PER_ITEM);
         static constexpr unsigned ITEM_LO_MASK = BITS_PER_ITEM - 1;
+        // Unit tests: W64
         static_assert(TF_PLAT_W64 ? (ITEM_HI_SHIFT == 6) : UNTESTED);
         static_assert(TF_PLAT_W64 ? (ITEM_LO_MASK == 63) : UNTESTED);
         static constexpr size_t ONE = 1;
