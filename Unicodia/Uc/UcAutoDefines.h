@@ -422,7 +422,7 @@ namespace uc {
         ///          [0] no text of that role
         std::u8string_view getText(TextRole role) const;
     private:
-        QString markProxy() const;
+        QString markProxy(char32_t code) const;
         std::u8string_view autoName() const;
     };
 

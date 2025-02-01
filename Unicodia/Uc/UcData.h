@@ -360,6 +360,7 @@ namespace uc {
         OLD_SOGDIAN,
         OLD_UYGHUR,
         ORIYA,
+          Z_ORY_1,
         PAHAWH_HMONG,
         PERMIC_OLD,
         PHAGS_PA,

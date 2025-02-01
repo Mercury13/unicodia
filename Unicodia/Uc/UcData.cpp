@@ -1196,14 +1196,14 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-QString uc::Cp::markProxy() const
+QString uc::Cp::markProxy(char32_t code) const
 {
     auto sc = script();
     if (sc.flags.have(Sfg::STUB_RTL))
-        return str::toQ(STUB_RTL_CIRCLE) + str::toQ(subj);
+        return str::toQ(STUB_RTL_CIRCLE) + str::toQ(code);
     if (sc.flags.have(Sfg::STUB_ALM))
-        return str::toQ(STUB_ALM_CIRCLE) + str::toQ(subj);
-    return STUB_CIRCLE + str::toQ(subj);
+        return str::toQ(STUB_ALM_CIRCLE) + str::toQ(code);
+    return STUB_CIRCLE + str::toQ(code);
 }
 
 
@@ -1271,7 +1271,7 @@ uc::SampleProxy uc::Cp::sampleProxy(
             // Stub off?
             if (fn->flags.have(Ffg::STUB_OFF))
                 break;
-            return { markProxy(), style };
+            return { markProxy(code), style };
         }
     default: ;
     }
@@ -1431,7 +1431,7 @@ QString uc::Cp::osProxy() const
 
     switch (category().upCat) {
     case EcUpCategory::MARK:
-        return markProxy();
+        return markProxy(subj.ch32());
     default: ;
     }
     return str::toQ(subj.ch32());
