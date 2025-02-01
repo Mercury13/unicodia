@@ -824,7 +824,6 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Frame
     painter->setBrush(Qt::white);  // Card’s face is always white, regardless of colour
-    /// @todo [dark] Playing card: what is the pen? And what will be the dark BG?
     painter->setPen(QPen{Qt::black, dim.thickness});
     painter->setRenderHint(QPainter::Antialiasing, true);
     painter->drawRoundedRect(dim.rcFrame, radius, radius);

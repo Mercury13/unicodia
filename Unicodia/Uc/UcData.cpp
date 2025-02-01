@@ -463,7 +463,6 @@ namespace {
     enum class EmojiClass : unsigned char {
         NONE,
         SINGLE_CHAR,    ///< incl. VS16
-        /// @todo [urgent] Change ZWJ concept
         ZWJ_RIGHT,
         ZWJ_COLOR,
         ZWJ_GENDER,

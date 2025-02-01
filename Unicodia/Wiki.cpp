@@ -138,7 +138,6 @@ wiki::Thing wiki::findThing(
                 }
                 auto nLfs = q - pos;
                 // Detect feature
-                /// @todo [urgent] detect feature?
                 auto feature = Feature::NONE;
                 unsigned indentSize = 0;
                 if (q != end) {
@@ -216,12 +215,37 @@ wiki::Thing wiki::findThing(
     return { {}, nullptr };
 }
 
+namespace {
+
+    void skipWhitespace(const char* &start, const char* end)
+    {
+        while (start != end && *start == ' ')
+            ++start;
+    }
+
+}
+
 
 void wiki::run(Engine& engine, const char* start, const char* end, Mode mode)
 {
     auto paraFeature = Feature::NONE;
-    if (mode == Mode::ARTICLE) {
-        /// @todo [urgent] article mode
+    if (mode == Mode::ARTICLE && start != end) {
+        switch (*start) {
+        case ':': {
+                ++start;
+                unsigned depth = 1;
+                while (start != end && *start == ':')
+                    ++depth;
+                engine.appendBreak(Strength::START, Feature::INDENT, depth);
+                skipWhitespace(start, end);
+            } break;
+        case '*':
+            ++start;
+            engine.appendBreak(Strength::START, Feature::BULLET, 1);
+            skipWhitespace(start, end);
+            break;
+        default: ;
+        }
     }
     while (true) {
         auto x = findThing(start, end, paraFeature, engine);
