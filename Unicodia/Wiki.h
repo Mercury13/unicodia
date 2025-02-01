@@ -41,7 +41,11 @@ namespace wiki {
     enum class Type : unsigned char {
             EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE,
             LINEBREAK, PARAGRAPH };
-    enum class Strength : unsigned char { BREAK, PARAGRAPH };
+    enum class Strength : unsigned char {
+        START,      ///< only when text started at mode=ARTICLE
+        BREAK,      ///< line break
+        PARAGRAPH   ///< paragraph break
+    };
     enum class Feature : unsigned char { NONE, INDENT, BULLET };
 
     struct Thing {

@@ -220,6 +220,9 @@ wiki::Thing wiki::findThing(
 void wiki::run(Engine& engine, const char* start, const char* end, Mode mode)
 {
     auto paraFeature = Feature::NONE;
+    if (mode == Mode::ARTICLE) {
+        /// @todo [urgent] article mode
+    }
     while (true) {
         auto x = findThing(start, end, paraFeature, engine);
         if (x.posStart != start)

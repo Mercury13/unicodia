@@ -609,12 +609,17 @@ namespace {
             unsigned indentSize)
     {
         finishDiv();
+        bool isStart = false;
         switch (strength) {
+        case wiki::Strength::START:
+            isStart = true;
+            [[fallthrough]];
         case wiki::Strength::BREAK:
             switch (feature) {
             case wiki::Feature::BULLET:
-                s += "<br>";
-                break;
+                if (!isStart) {
+                    s += "<br>";
+                } break;
             case wiki::Feature::NONE:
             case wiki::Feature::INDENT:
                 s += "<div>";
