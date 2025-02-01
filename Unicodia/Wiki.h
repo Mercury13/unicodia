@@ -20,7 +20,12 @@
 
 namespace wiki {
 
-    enum ParamType { BAR, THING_END, STRING_END };
+    enum Mode : unsigned char {
+        SPAN,       ///< Initial characters do not form indents etc (inline text)
+        ARTICLE     ///< Initial characters DO form indents etc (whole article)
+    };
+
+    enum ParamType : unsigned char { BAR, THING_END, STRING_END };
     struct Param {
         ParamType type;
         const char *posEnd, *posNext;
@@ -33,11 +38,11 @@ namespace wiki {
     inline Param skipParam(std::string_view data, char cEnd)
         { return skipParam(data.data(), data.data() + data.length(), cEnd); }
 
-    enum class Type {
+    enum class Type : unsigned char {
             EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE,
             LINEBREAK, PARAGRAPH };
-    enum class Strength { BREAK, PARAGRAPH };
-    enum class Feature { NONE, INDENT, BULLET };
+    enum class Strength : unsigned char { BREAK, PARAGRAPH };
+    enum class Feature : unsigned char { NONE, INDENT, BULLET };
 
     struct Thing {
         Type type;
@@ -121,12 +126,12 @@ namespace wiki {
         return probeWeights(data, data + x.size() );
     }
 
-    void run(Engine& engine, const char* start, const char* end);
-    inline void run(Engine& engine, std::string_view x)
-        { run(engine, x.data(), x.data() + x.size()); }
-    inline void run(Engine& engine, std::u8string_view x) {
+    void run(Engine& engine, const char* start, const char* end, Mode mode);
+    inline void run(Engine& engine, std::string_view x, Mode mode)
+        { run(engine, x.data(), x.data() + x.size(), mode); }
+    inline void run(Engine& engine, std::u8string_view x, Mode mode) {
         auto data = reinterpret_cast<const char*>(x.data());
-        run(engine, data, data + x.size() );
+        run(engine, data, data + x.size(), mode );
     }
 
     template <class S>

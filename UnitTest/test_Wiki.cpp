@@ -304,7 +304,7 @@ TEST (Run, Plain)
 {
     std::string_view s = "alpha";
     Eng eng;
-    wiki::run(eng, s);
+    wiki::run(eng, s, wiki::Mode::ARTICLE);
     EXPECT_EQ("Plain:alpha\n", eng.s);
 }
 
@@ -317,7 +317,7 @@ TEST (Run, Simple)
 {
     std::string_view s = "The [[wiki]]s are ''much'' {{big|simpler}} than '''HTML'''.\n\n\nSome more text";
     Eng eng;
-    wiki::run(eng, s);
+    wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
             "Plain:The \n"
             "Link:wiki,wiki\n"
@@ -344,7 +344,7 @@ TEST (Run, Features)
 {
     std::string_view s = ":alpha\nqqq\n: bravo\n\ncharlie\n\n:delta";
     Eng eng;
-    wiki::run(eng, s);
+    wiki::run(eng, s, wiki::Mode::SPAN);
     std::string_view expected =
             "Plain::alpha\nqqq\n"
             "Break[ind]!\n"
@@ -364,7 +364,7 @@ TEST (Run, LfInFreature)
 {
     std::string_view s = "alpha\n:bravo\ncharlie";
     Eng eng;
-    wiki::run(eng, s);
+    wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
             "Plain:alpha\n"
             "Break[ind]!\n"
@@ -382,8 +382,45 @@ TEST (Run, UlPrereq)
 {
     std::string_view s = "alpha\n" "* bravo\n" "* charlie";
     Eng eng;
-    wiki::run(eng, s);
+    wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
+            "Plain:alpha\n"
+            "Break[bul]!\n"
+            "Plain:bravo\n"
+            "Break[bul]!\n"
+            "Plain:charlie\n";
+    EXPECT_EQ(expected, eng.s);
+}
+
+
+///
+///  Bug: article starting with UL will fail
+///
+TEST (Run, UlSpan)
+{
+    std::string_view s = "* alpha\n" "* bravo\n" "* charlie";
+    Eng eng;
+    wiki::run(eng, s, wiki::Mode::SPAN);
+    std::string_view expected =
+            "Plain:* alpha\n"
+            "Break[bul]!\n"
+            "Plain:bravo\n"
+            "Break[bul]!\n"
+            "Plain:charlie\n";
+    EXPECT_EQ(expected, eng.s);
+}
+
+
+///
+///  Bug: article starting with UL will fail
+///
+TEST (Run, UlArticle)
+{
+    std::string_view s = "* alpha\n" "* bravo\n" "* charlie";
+    Eng eng;
+    wiki::run(eng, s, wiki::Mode::ARTICLE);
+    std::string_view expected =
+            "Break[bul]!\n"
             "Plain:alpha\n"
             "Break[bul]!\n"
             "Plain:bravo\n"

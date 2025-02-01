@@ -216,7 +216,7 @@ wiki::Thing wiki::findThing(
 }
 
 
-void wiki::run(Engine& engine, const char* start, const char* end)
+void wiki::run(Engine& engine, const char* start, const char* end, Mode mode)
 {
     auto paraFeature = Feature::NONE;
     while (true) {

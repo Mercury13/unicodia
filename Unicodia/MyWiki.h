@@ -19,6 +19,10 @@ namespace str {
     class QSep;
 }
 
+namespace wiki {
+    enum Mode : unsigned char;
+}
+
 namespace uc {
     struct Numeric;
     struct BidiClass;
@@ -202,8 +206,9 @@ namespace mywiki {
                          std::u8string_view toView,
                          std::string_view clazz="copy");
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
-    void appendNoFont(QString& x, std::u8string_view wiki);
-    mywiki::AppendWiki append(QString& x, std::u8string_view wiki, const Context& context);
+    void appendNoFont(QString& x, std::u8string_view wiki, wiki::Mode mode);
+    mywiki::AppendWiki append(QString& x, std::u8string_view wiki, const Context& context,
+                        wiki::Mode mode);
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersionValue(QString& text, uc::EcVersion version);
     void appendEmojiValue(QString& text, const uc::Version& version, const uc::Version& prevVersion);

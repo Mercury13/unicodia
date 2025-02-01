@@ -646,7 +646,7 @@ namespace {
             auto tag = weight.restartingTag();
             str::append(s, tag);
         }
-        wiki::run(*this, text);
+        wiki::run(*this, text, wiki::Mode::SPAN);
     }
 
     void Eng::finishRecursion(bool hasRemainder, bool prepareResult)
@@ -789,7 +789,7 @@ namespace {
                     s += "&nbsp;";
                 auto u8 = str::toU8(v);
                 str::replace(u8, u8' ', u8"&nbsp;");
-                mywiki::append(s, u8, context);
+                mywiki::append(s, u8, context, wiki::Mode::SPAN);
                 if (i + 1 < n)
                     s += "&nbsp;";
             }
@@ -907,7 +907,7 @@ namespace {
             bool wasWritten = false;
             // Pre-comment from L10n
             if (!x.preComment.empty()) {
-                mywiki::append(s, str::toU8sv(x.preComment), context);
+                mywiki::append(s, str::toU8sv(x.preComment), context, wiki::Mode::SPAN);
                 wasWritten = true;
             }
             // Pre-comment from data
@@ -1008,7 +1008,7 @@ namespace {
                 if (i != 1)
                     s += '+';
                 str::append(s, KEY_START);
-                mywiki::append(s, str::toU8sv(x[i]), context);
+                mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
                 str::append(s, KEY_END);
             }
         } else if (name == "kb"sv) {
@@ -1017,7 +1017,7 @@ namespace {
                     s += '+';
                 str::append(s, KEY_START);
                 s += "<b>";
-                mywiki::append(s, str::toU8sv(x[i]), context);
+                mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
                 s += "</b>";
                 str::append(s, KEY_END);
             }
@@ -1052,7 +1052,7 @@ namespace {
         } else if (name == "GrekCoptUni"
                 || name == "ArabPres1"
                 || name == "ArabPres2") {
-            mywiki::append(s, loc::get(str::cat("Snip.", name)), context);
+            mywiki::append(s, loc::get(str::cat("Snip.", name)), context, wiki::Mode::SPAN);
         } else if (name == "nspk") {
             TextLang textLang {
                 // 0 = template name
@@ -1141,7 +1141,7 @@ namespace {
     }
 
     template <class X>
-    void appendWiki(QString& text, const X& obj, std::u8string_view x)
+    void appendWiki(QString& text, const X& obj, std::u8string_view x, wiki::Mode mode)
     {
         mywiki::Context context {
             .font { getFont(obj) },
@@ -1149,13 +1149,13 @@ namespace {
             .locPrefixDot {},
         };
         Eng eng(text, context);
-        wiki::run(eng, x);
+        wiki::run(eng, x, mode);
     }
 
 }   // anon namespace
 
 
-void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
+void mywiki::appendNoFont(QString& text, std::u8string_view wiki, wiki::Mode mode)
 {
     mywiki::Context context {
         .font { uc::fontInfo[0] },
@@ -1163,15 +1163,16 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
         .locPrefixDot {},
     };
     Eng eng(text, context);
-    wiki::run(eng, wiki);
+    wiki::run(eng, wiki, mode);
 }
 
 
 mywiki::AppendWiki mywiki::append(
-        QString& text, std::u8string_view wiki, const Context& context)
+        QString& text, std::u8string_view wiki, const Context& context,
+        wiki::Mode mode)
 {
     Eng eng(text, context);
-    wiki::run(eng, wiki);
+    wiki::run(eng, wiki, mode);
     return {
         .hasNSpeakers = eng.hasNSpeakers,
     };
@@ -1286,7 +1287,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
     str::append(text, "</p>");
 
     str::append(text, "<p>");
-    appendNoFont(text, x.loc.description);
+    appendNoFont(text, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
 
@@ -1308,7 +1309,7 @@ QString mywiki::buildHtml(const uc::Category& x)
     appendStylesheet(text);
     appendHeader(text, x, catQuery(x));
     str::append(text, "<p>");
-    appendNoFont(text, x.loc.description);
+    appendNoFont(text, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
 
@@ -1383,16 +1384,16 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
         appendBullet(text, "Prop.Bullet.Type");
-        appendWiki(text, x, loc::get(x.type().locKey));
+        appendWiki(text, x, loc::get(x.type().locKey), wiki::Mode::SPAN);
         if (x.ecDir != uc::EcWritingDir::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Dir");
-            append(text, loc::get(x.dir().locKey), context);
+            append(text, loc::get(x.dir().locKey), context, wiki::Mode::SPAN);
         }
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Langs");
-            auto info = append(text, x.loc.langs, context);
+            auto info = append(text, x.loc.langs, context, wiki::Mode::SPAN);
             if (!info.hasNSpeakers && context.lang
                     && !context.lang->flags.have(uc::Langfg::NO_AUTO)) {
                 text += ' ';
@@ -1404,12 +1405,12 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             sp.sep();
             appendBullet(text, "Prop.Bullet.Appear");
             auto wikiTime = x.time.wikiText(myDatingLoc, x.loc.timeComment);
-            append(text, wikiTime, context);
+            append(text, wikiTime, context, wiki::Mode::SPAN);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Condition", "<a href='pt:status' class='popup'>", "</a>");
-            append(text, loc::get(x.life().locKey), context);
+            append(text, loc::get(x.life().locKey), context, wiki::Mode::SPAN);
         }
         if (isScript) {
             if (x.ecVersion != uc::EcVersion::TOO_HIGH) {
@@ -1430,7 +1431,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
     }
 
     str::append(text, "<p>");
-    append(text, x.loc.description, context);
+    append(text, x.loc.description, context, wiki::Mode::ARTICLE);
     str::append(text, "</p>");
 }
 
@@ -1940,7 +1941,7 @@ namespace {
         auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
 
         text += "<p>";
-        mywiki::appendNoFont(text, paragraph);
+        mywiki::appendNoFont(text, paragraph, wiki::Mode::ARTICLE);
     }
 
     enum class CpPlace : unsigned char { CP, LIB  };
@@ -2050,7 +2051,8 @@ namespace {
                     sp1.sep();
                     mywiki::appendNoFont(
                                 text, loc::get("Prop.Input.Sometimes")
-                                      .arg(im.sometimesKey));
+                                      .arg(im.sometimesKey),
+                                wiki::Mode::SPAN);
                 }
                 if (im.hasAltCode()) {
                     sp1.sep();
@@ -2214,7 +2216,9 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             if (cp.ecCategory == uc::EcCategory::CONTROL) {
                 //  Control char description
                 appendSubhead(text, "Prop.Head.Control");
-                appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description);
+                appendWiki(text, blk,
+                           uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description,
+                           wiki::Mode::ARTICLE);
             } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
                 // Script description
                 appendScriptSubhead(text);
@@ -2222,13 +2226,13 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             } else {
                 // Script description
                 appendBlockSubhead(text);
-                appendWiki(text, blk, blk.loc.description);
+                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE);
             }
         } else {
             if (blk.hasDescription()) {
                 // Block description
                 appendBlockSubhead(text);
-                appendWiki(text, blk, blk.loc.description);
+                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE);
             } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
                 // Script description
                 appendScriptSubhead(text);
@@ -2270,7 +2274,7 @@ QString mywiki::buildNonCharHtml(char32_t code)
     text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
     text += "<p>";
-    appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"));
+    appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"), wiki::Mode::ARTICLE);
     return text;
 }
 
@@ -2318,7 +2322,7 @@ QString mywiki::buildHtml(const uc::Term& x)
     }
 
     str::append(text, "<p>");
-    appendWiki(text, x, x.loc.description);
+    appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
     return text;
 }
 
@@ -2383,7 +2387,7 @@ QString mywiki::buildHtml(const uc::Block& x)
 
     if (x.hasDescription()) {
         str::append(text, "<p>");
-        appendWiki(text, x, x.loc.description);
+        appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
         str::append(text, "</p>");
     } else if (x.ecScript != uc::EcScript::NONE) {
         text += "<p><b>";
@@ -2439,7 +2443,7 @@ namespace {
             char buf[40];
             snprintf(buf, std::size(buf), "Lib.Text.%s",
                      reinterpret_cast<const char*>(node.text.data()));
-            mywiki::appendNoFont(text, loc::get(buf));
+            mywiki::appendNoFont(text, loc::get(buf), wiki::Mode::ARTICLE);
         }
     }
 
@@ -2611,16 +2615,16 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
             str::QSep sp(text, "<br>");
             // Status
             appendNonBullet(text, "Lib.Cinfo.Sta");
-            mywiki::appendNoFont(text, loc::get(cou::typeKeys[country->type]));
+            mywiki::appendNoFont(text, loc::get(cou::typeKeys[country->type]), wiki::Mode::SPAN);
             // Location
             sp.sep();
             appendNonBullet(text, "Lib.Cinfo.Loc");
-            mywiki::appendNoFont(text, loc::get(cou::locKeys[country->location]));
+            mywiki::appendNoFont(text, loc::get(cou::locKeys[country->location]), wiki::Mode::SPAN);
             // Population
             if (country->popul != cou::Popul::NOT_APPLICABLE) {
                 sp.sep();
                 appendNonBullet(text, "Lib.Cinfo.Pop");
-                mywiki::appendNoFont(text, loc::get(cou::popKeys[country->popul]));
+                mywiki::appendNoFont(text, loc::get(cou::popKeys[country->popul]), wiki::Mode::SPAN);
             }
         }
     }
@@ -2642,7 +2646,7 @@ namespace {
             for (unsigned i = 0; i < depth; ++i)
                 sp.target() += q;
         }
-        mywiki::appendNoFont(sp.target(), loc::get(locKey));
+        mywiki::appendNoFont(sp.target(), loc::get(locKey), wiki::Mode::SPAN);
         str::append(sp.target(), loc::active::punctuation.keyValueColon);
         if (value.nSkintone == 0) {
             mywiki::appendCopyable(sp.target(), value.nNormal);
@@ -2822,7 +2826,7 @@ QString mywiki::buildHtml(const uc::Version& version)
     if (version.flags.have(uc::Vfg::TEXT)) {
         str::append(text, "<p>");
         auto key = str::cat("Version.", str::toSv(version.link({})) , ".Text");
-        mywiki::appendNoFont(text, loc::get(key));
+        mywiki::appendNoFont(text, loc::get(key), wiki::Mode::ARTICLE);
     }
 
     if (!version.isFirst() && version.stats.blocks.nNew != 0) {        
@@ -2877,12 +2881,12 @@ QString mywiki::buildHtml(const uc::GlyphStyleChannel& channel)
     // Style names are always null-terminated
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
     text += "<p><nobr><b>";
-    mywiki::appendNoFont(text, loc::get(buf));
+    mywiki::appendNoFont(text, loc::get(buf), wiki::Mode::SPAN);
     text += "</b></nobr>";
 
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Text", channel.name.data());
     text += "<p>";
-    mywiki::appendNoFont(text, loc::get(buf));
+    mywiki::appendNoFont(text, loc::get(buf), wiki::Mode::ARTICLE);
 
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
     text += "<p><b>";
@@ -2919,7 +2923,7 @@ QString mywiki::buildEmptyFavsHtml()
     QString text;
     appendStylesheet(text);
     text += "<h3>";
-    mywiki::appendNoFont(text, loc::get("Main.NoFavs"));
+    mywiki::appendNoFont(text, loc::get("Main.NoFavs"), wiki::Mode::SPAN);
     text += "</h3>";
     return text;
 }
@@ -2934,7 +2938,7 @@ namespace {
             char buf[40];
             text += " <i>";
             snprintf(buf, std::size(buf), "OldComp.%s.%s", info.key.data(), subKey);
-            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+            mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::SPAN);
             text += "</i>";
         }
     }
@@ -2976,14 +2980,14 @@ QString mywiki::buildHtml(const uc::old::Info& info)
     appendNonBullet(text, "OldComp.PropName.Type");
     snprintf(buf, std::size(buf), "OldComp.Prop.Type.%s",
              uc::old::typeInfo[info.type].key);
-    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::SPAN);
 
     // CPU
     if (info.cpuDataWidth > 0) {
         sp.sep();
         mywiki::append(text,
                 loc::get("OldComp.PropName.Cpu").arg(info.cpuDataWidth),
-                DEFAULT_CONTEXT);
+                DEFAULT_CONTEXT, wiki::Mode::SPAN);
     }
 
     // Memory
@@ -3039,7 +3043,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
         sp.sep();
         appendNonBullet(text, "OldComp.PropName.Unenc");
         snprintf(buf, std::size(buf), "OldComp.%s.Unenc", info.key.data());
-        mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+        mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::SPAN);
     }
 
     // Sales
@@ -3060,7 +3064,7 @@ QString mywiki::buildHtml(const uc::old::Info& info)
 
     str::append(text, "<p>");
     snprintf(buf, std::size(buf), "OldComp.%s.Text", info.key.data());
-    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT);
+    mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::ARTICLE);
 
     return text;
 }
