@@ -375,6 +375,24 @@ TEST (Run, LfInFreature)
 }
 
 
+///
+///  Prerequisites for unordered list
+///
+TEST (Run, UlPrereq)
+{
+    std::string_view s = "alpha\n" "* bravo\n" "* charlie";
+    Eng eng;
+    wiki::run(eng, s);
+    std::string_view expected =
+            "Plain:alpha\n"
+            "Break[bul]!\n"
+            "Plain:bravo\n"
+            "Break[bul]!\n"
+            "Plain:charlie\n";
+    EXPECT_EQ(expected, eng.s);
+}
+
+
 ///// probeWeights /////////////////////////////////////////////////////////////
 
 TEST (ProbeWeights, None)
