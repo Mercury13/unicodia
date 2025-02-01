@@ -275,6 +275,9 @@ namespace {
                           unsigned)
     {
         switch (strength) {
+        case wiki::Strength::START:
+            s.append("Start");
+            break;
         case wiki::Strength::BREAK:
             s.append("Break");
             break;
@@ -420,7 +423,7 @@ TEST (Run, UlArticle)
     Eng eng;
     wiki::run(eng, s, wiki::Mode::ARTICLE);
     std::string_view expected =
-            "Break[bul]!\n"
+            "Start[bul]!\n"
             "Plain:alpha\n"
             "Break[bul]!\n"
             "Plain:bravo\n"
