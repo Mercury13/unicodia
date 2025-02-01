@@ -190,9 +190,14 @@ namespace mywiki {
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
-    void appendCopyable(QString& text, unsigned x, std::string_view clazz="copy");
+    template <class Str>
+    void appendCopyable(Str& text, unsigned x, std::string_view clazz="copy");
     /// @warning  Both toCopy and toView are raw HTML
     void appendCopyableHt(QString& text,
+                         std::string_view toCopy,
+                         std::u8string_view toView,
+                         std::string_view clazz="copy");
+    void appendCopyableHt(std::u8string& text,
                          std::string_view toCopy,
                          std::u8string_view toView,
                          std::string_view clazz="copy");

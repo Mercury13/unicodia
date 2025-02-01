@@ -276,6 +276,8 @@ namespace {
                     hPunctuation.attribute("left-paren").as_string("(((((("));
         r.punctuation.rightParen = str::toU8sv(
                     hPunctuation.attribute("right-paren").as_string("))))))"));
+        r.punctuation.indentEllip = str::toU8sv(
+                    hPunctuation.attribute("indent-ellip").as_string(">>>>>>"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

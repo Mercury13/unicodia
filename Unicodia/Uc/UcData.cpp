@@ -460,32 +460,58 @@ namespace {
                         x, cache, 'n', escape::Spaces::YES, Enquote::NO));
     }
 
-    enum class EmojiClass {
+    enum class EmojiClass : unsigned char {
         NONE,
         SINGLE_CHAR,    ///< incl. VS16
-        SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_RIGHT_RACIAL,
-        SEQ_ZWJ_COLOR, SEQ_ZWJ_GENDER, //SEQ_ZWJ_ACTIVITY, SEQ_ZWJ_APPEARANCE,
-        SEQ_OTHER_ZWJ,
-        SEQ_FLAG,   ///< National flags, like [U][A]
-        SEQ_OTHER_NONZWJ };
+        /// @todo [urgent] Change ZWJ concept
+        ZWJ_RIGHT,
+        ZWJ_COLOR,
+        ZWJ_GENDER,
+        ZWJ_ACTIVITY,
+        ZWJ_APPEARANCE,
+        ZWJ_MULTIRACIAL,    ///< By convention, isSkintone=0
+        ZWJ_OTHER,
+        OTHER_NATIONAL,     ///< National flags, like [U][A]; all OTHER have no skintone
+        OTHER_SUBDIVISION,
+        OTHER_KEYCAP };
 
-    EmojiClass classifyEmoji(std::u32string_view x)
+    struct ClassifyEmoji {
+        EmojiClass clazz;
+        bool isSkintone;
+    };
+
+    /// @param [in] x   any accepted emoji
+    ClassifyEmoji classifyEmoji(std::u32string_view x)
     {
         switch (x.length()) {
         case 0:
-            return EmojiClass::NONE;
+            return { .clazz = EmojiClass::NONE, .isSkintone = false };
         case 1:
-            return EmojiClass::SINGLE_CHAR;
+            return { .clazz = EmojiClass::SINGLE_CHAR, .isSkintone = false };
         case 2:
-            if (x[1] == cp::VS16)
-                return EmojiClass::SINGLE_CHAR;
-            if (x[0] >= cp::FLAG_A && x[0] <= cp::FLAG_Z)
-                return EmojiClass::SEQ_FLAG;
+            switch (x[1]) {
+            case cp::VS16:
+                return { .clazz = EmojiClass::SINGLE_CHAR, .isSkintone = false };
+            case cp::SKIN1:
+            case cp::SKIN2:
+            case cp::SKIN3:
+            case cp::SKIN4:
+            case cp::SKIN5:
+                return { .clazz = EmojiClass::SINGLE_CHAR, .isSkintone = true };
+            default:
+                if (x[0] >= cp::FLAG_A && x[0] <= cp::FLAG_Z)
+                    return { .clazz = EmojiClass::OTHER_NATIONAL, .isSkintone = false };
+            }
+            break;
+        case 3:
+            if (x[1] >= cp::VS16 && x[2] == cp::MARK_KEYCAP)
+                return { .clazz = EmojiClass::OTHER_KEYCAP, .isSkintone = false };
             break;
         default: ;
         }
 
-        unsigned nSkin = 0, nZwj = 0, nColor = 0, nGender = 0, nPeople = 0;
+        unsigned nSkin = 0, nZwj = 0, nColor = 0, nGender = 0, nPeople = 0,
+                 nAppearance = 0;
         for (auto c : x) {
             switch (c) {
             case cp::ZWJ:
@@ -516,33 +542,50 @@ namespace {
             case cp::BOY:
             case cp::GIRL:
                 ++nPeople; break;
+            case cp::PERSON_BLOND:
+            case cp::HAIR_RED:
+            case cp::HAIR_CURLY:
+            case cp::HAIR_BALD:
+            case cp::HAIR_WHITE:
+                ++nAppearance; break;
             default: ;
             }
         }
-        switch (nSkin) {
-        case 0:
-            if (nZwj > 0) {
-                if (x.length() >= 4     // 4 = 1 + 3tail
-                        && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
-                    return EmojiClass::SEQ_RIGHT;
-                if (nGender > 0)
-                    return (nPeople == 0) ? EmojiClass::SEQ_ZWJ_GENDER : EmojiClass::SEQ_OTHER_ZWJ;
-                /// @todo [future] How to define ACTIVITY?
-                //if (nPeople == 1)
-                //    return EmojiClass::SEQ_ZWJ_ACTIVITY;
-                if (nColor > 0)
-                    return EmojiClass::SEQ_ZWJ_COLOR;
-                return EmojiClass::SEQ_OTHER_ZWJ;
-            }
-            return EmojiClass::SEQ_OTHER_NONZWJ;
-        case 1:
-            if (x.length() >= 5          // 5 = 1 + 1race + 3tail
-                    && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
-                return EmojiClass::SEQ_RIGHT_RACIAL;
-            return EmojiClass::SEQ_RACIAL;
-        default:
-            return EmojiClass::SEQ_MULTIRACIAL;
+        // Multiracial?
+        if (nSkin >= 2) {
+            if (nZwj == 0)
+                throw std::logic_error("Multiracial w/o ZWJ?");
+            return { .clazz = EmojiClass::ZWJ_MULTIRACIAL,
+                     .isSkintone = false };  // by convention
         }
+        // Detech non-ZWJ sequences
+        if (nZwj == 0) {
+            if (nSkin != 0)
+                throw std::logic_error("Strange non-ZWJ sequence with skintone?");
+            // char+skintone: already present
+            // keycap: already present
+            if (x.starts_with(cp::BLACK_FLAG) && x.ends_with(cp::TAG_CANCEL))
+                return { .clazz = EmojiClass::OTHER_SUBDIVISION, .isSkintone = false };
+            throw std::logic_error("Unknown non-ZWJ sequence");
+        }
+        // Detect ZWJ sequences
+        bool isSkin = nSkin;
+        if (x.length() >= 4     // 4 = 1 + 3tail
+                && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
+            return { .clazz = EmojiClass::ZWJ_RIGHT, .isSkintone = isSkin };
+        if (nAppearance > 0) {
+            return { .clazz = EmojiClass::ZWJ_APPEARANCE, .isSkintone = isSkin };
+        }
+        if (nGender > 0) {
+            if (nPeople == 0)
+                return { .clazz = EmojiClass::ZWJ_GENDER, .isSkintone = isSkin };
+            return     { .clazz = EmojiClass::ZWJ_OTHER,  .isSkintone = isSkin };
+        }
+        if (nPeople == 1)
+            return { .clazz = EmojiClass::ZWJ_ACTIVITY, .isSkintone = isSkin };
+        if (nColor > 0)
+            return { .clazz = EmojiClass::ZWJ_COLOR, .isSkintone = isSkin };
+        return { .clazz = EmojiClass::ZWJ_OTHER, .isSkintone = isSkin };
     }
 
     enum class EmojiVersion { THIS, OLD };
@@ -564,36 +607,41 @@ namespace {
 
         auto& version = node.emojiVersion();
         // Emoji type
-        auto clazz = classifyEmoji(node.value);
-        switch (clazz) {
+        auto ce = classifyEmoji(node.value);
+        switch (ce.clazz) {
         case EmojiClass::NONE: break;
-        case EmojiClass::SINGLE_CHAR: {
+        case EmojiClass::SINGLE_CHAR:
+            if (ce.isSkintone) {
+                ++version.stats.emoji.nw.other.nSingleSkintone;
+            } else {
                 switch (classifyEmojiVersion(node.value[0], version)) {
                 case EmojiVersion::THIS:
                     ++version.stats.emoji.nw.singleChar.nThisUnicode; break;
                 case EmojiVersion::OLD:
                     ++version.stats.emoji.nw.singleChar.nOldUnicode; break;
                 }
-                break;
             }
-        case EmojiClass::SEQ_RACIAL:
-            ++version.stats.emoji.nw.seq.nRacial; break;
-        case EmojiClass::SEQ_MULTIRACIAL:
-            ++version.stats.emoji.nw.seq.nMultiracial; break;
-        case EmojiClass::SEQ_RIGHT:
-            ++version.stats.emoji.nw.seq.nRightFacing; break;
-        case EmojiClass::SEQ_RIGHT_RACIAL:
-            ++version.stats.emoji.nw.seq.nRightFacingRacial; break;
-        case EmojiClass::SEQ_ZWJ_COLOR:
-            ++version.stats.emoji.nw.seq.nZwjColor; break;
-        case EmojiClass::SEQ_ZWJ_GENDER:
-            ++version.stats.emoji.nw.seq.nZwjGender; break;
-        case EmojiClass::SEQ_FLAG:
-            ++version.stats.emoji.nw.seq.nFlags; break;
-        case EmojiClass::SEQ_OTHER_ZWJ:
-            ++version.stats.emoji.nw.seq.nZwjOther; break;
-        case EmojiClass::SEQ_OTHER_NONZWJ:
-            ++version.stats.emoji.nw.seq.nOtherNonZwj; break;
+            break;
+        case EmojiClass::ZWJ_MULTIRACIAL:
+            ++version.stats.emoji.nw.zwj.nMultiracial; break;
+        case EmojiClass::ZWJ_RIGHT:
+            version.stats.emoji.nw.zwj.right.add(ce.isSkintone); break;
+        case EmojiClass::ZWJ_ACTIVITY:
+            version.stats.emoji.nw.zwj.activity.add(ce.isSkintone); break;
+        case EmojiClass::ZWJ_APPEARANCE:
+            version.stats.emoji.nw.zwj.appearance.add(ce.isSkintone); break;
+        case EmojiClass::ZWJ_COLOR:
+            version.stats.emoji.nw.zwj.color.add(ce.isSkintone); break;
+        case EmojiClass::ZWJ_GENDER:
+            version.stats.emoji.nw.zwj.gender.add(ce.isSkintone); break;
+        case EmojiClass::ZWJ_OTHER:
+            version.stats.emoji.nw.zwj.other.add(ce.isSkintone); break;
+        case EmojiClass::OTHER_KEYCAP:
+            ++version.stats.emoji.nw.other.nKeycaps; break;
+        case EmojiClass::OTHER_NATIONAL:
+            ++version.stats.emoji.nw.other.nNationalFlags; break;
+        case EmojiClass::OTHER_SUBDIVISION:
+            ++version.stats.emoji.nw.other.nSubdivisionFlags; break;
         }
         // Traverse children
         const auto a = node.iFirstChild;

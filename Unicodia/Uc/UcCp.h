@@ -8,6 +8,9 @@ namespace cp {
     constexpr char32_t NBSP = 0xA0;
     constexpr char32_t NNBSP = 0x202F;  // narrow no-break space
 
+    // Marks
+    constexpr char32_t MARK_KEYCAP = 0x20E3;
+
     // Specials
     constexpr char32_t ZWJ = 0x200D;
 
@@ -91,6 +94,14 @@ namespace cp {
     constexpr char32_t TWO_WOMEN = 0x1F46D;
     constexpr char32_t KISS_MARK = 0x1F48B;
     constexpr char32_t MRS_CLAUS = 0x1F936;
+    constexpr char32_t BLACK_FLAG = 0x1F3F4;
+
+    // Appearance
+    constexpr char32_t PERSON_BLOND = 0x1F471;
+    constexpr char32_t HAIR_RED = 0x1F9B0;
+    constexpr char32_t HAIR_CURLY = 0x1F9B1;
+    constexpr char32_t HAIR_BALD = 0x1F9B2;
+    constexpr char32_t HAIR_WHITE = 0x1F9B3;
 
     // Regional
     constexpr char32_t FLAG_A = 0x1F1E6;
@@ -125,6 +136,7 @@ namespace cp {
 
     // Tags
     constexpr char32_t TAG_MIN = 0xE0000;
+    constexpr char32_t TAG_CANCEL = 0xE007F;
     constexpr char32_t TAG_MAX = 0xE007F;
 
     // NONCHAR

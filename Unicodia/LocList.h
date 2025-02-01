@@ -63,7 +63,8 @@ namespace loc
                     uniformComma,  ///< first, second
                     semicolon,     ///< first, second; third
                     leftParen,     ///< left parenthesis
-                    rightParen;    ///< right parenthesis
+                    rightParen,    ///< right parenthesis
+                    indentEllip;   ///< ellipsis for indent
         } punctuation;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh

@@ -1513,7 +1513,8 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
 }
 
 
-void mywiki::appendCopyable(QString& text, unsigned x, std::string_view clazz)
+template <class Str>
+void mywiki::appendCopyable(Str& text, unsigned x, std::string_view clazz)
 {
     char c[40];
     snprintf(c, std::size(c), "%u", x);
@@ -1533,6 +1534,17 @@ void mywiki::appendCopyableHt(
         str::append(text, "' >"sv);
     str::append(text, toView);
     str::append(text, "</a>"sv);
+}
+
+
+void mywiki::appendCopyableHt(
+        std::u8string& text, std::string_view toCopy,
+        std::u8string_view toView, std::string_view clazz)
+{
+    str::append(text,
+        u8"<a href='c:"sv, str::toU8sv(toCopy), u8"' class='"sv,
+            str::toU8sv(clazz), u8"' >"sv,
+            toView, u8"</a>"sv);
 }
 
 
@@ -2619,25 +2631,45 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 
 namespace {
 
-    void appendValue(str::QSep& sp, const char* locKey, unsigned value,
+    void appendValue(str::QSep& sp, unsigned depth, const char* locKey,
+                     const uc::EmojiCounter& value,
                      std::string_view schema, std::u8string_view unicodeLink)
     {
         sp.sep();
+        // Indent
+        if (depth != 0) {
+            auto q = str::toQ(loc::active::punctuation.indentEllip);
+            for (unsigned i = 0; i < depth; ++i)
+                sp.target() += q;
+        }
         mywiki::appendNoFont(sp.target(), loc::get(locKey));
         str::append(sp.target(), loc::active::punctuation.keyValueColon);
-        mywiki::appendCopyable(sp.target(), value);
+        if (value.nSkintone == 0) {
+            mywiki::appendCopyable(sp.target(), value.nNormal);
+        } else {
+            std::u8string fmtNormal, fmtSkintone;
+            mywiki::appendCopyable(fmtNormal, value.nNormal);
+            mywiki::appendCopyable(fmtSkintone, value.nSkintone);
+            auto q = loc::get("Version.Bullet.Plus").arg(
+                         loc::PreformN( std::u8string_view{fmtNormal},   value.nNormal ),
+                         loc::PreformN{ std::u8string_view{fmtSkintone}, value.nSkintone });
+            sp.target() += "<nobr>";
+            str::append(sp.target(), q);
+            sp.target() += "</nobr>";
+        }
         // Query
-        if (value != 0 && !schema.empty() && !unicodeLink.empty()) {
+        if (value.nTotal() != 0 && !schema.empty() && !unicodeLink.empty()) {
             auto params = str::cat("v=", str::toSv(unicodeLink));
             appendQuery(sp.target(), schema, params);
         }
     }
 
-    bool appendValueIf(str::QSep& sp, const char* locKey, unsigned value)
+    bool appendValueIf(str::QSep& sp, unsigned depth, const char* locKey,
+                       const uc::EmojiCounter& value)
     {
-        bool r = value != 0;
+        bool r = (value.nTotal() != 0);
         if (r) {
-            appendValue(sp, locKey, value, {}, {});
+            appendValue(sp, depth, locKey, value, {}, {});
         }
         return r;
     }
@@ -2728,51 +2760,59 @@ QString mywiki::buildHtml(const uc::Version& version)
         text += "<p>";
         // Transient
         str::QSep sp(text, "<br>");
-        appendValueIf(sp, "Prop.Bullet.Transient", version.stats.chars.nTransient);
+        appendValueIf(sp, 0, "Prop.Bullet.Transient", version.stats.chars.nTransient);
         auto link = version.link();
         static constexpr std::string_view NO_SCHEMA {};
         static constexpr std::u8string_view NO_LINK {};
         // New
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal(), SCH_QRY_CHARS, link);
-            appendValueIf(sp, "Prop.Bullet.NewCjk", version.stats.chars.nw.nHani);
-            appendValueIf(sp, "Prop.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
-            appendValueIf(sp, "Prop.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
-            appendValueIf(sp, "Prop.Bullet.NewFmt", version.stats.chars.nw.nFormat);
-            appendValueIf(sp, "Prop.Bullet.NewSym", version.stats.chars.nw.nSymbols);
+            appendValue(sp, 0, "Version.Bullet.NewChar", version.stats.chars.nw.nTotal(), SCH_QRY_CHARS, link);
+            appendValueIf(sp, 1, "Version.Bullet.NewCjk", version.stats.chars.nw.nHani);
+            appendValueIf(sp, 1, "Version.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
+            appendValueIf(sp, 1, "Version.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
+            appendValueIf(sp, 1, "Version.Bullet.NewFmt", version.stats.chars.nw.nFormat);
+            appendValueIf(sp, 1, "Version.Bullet.NewSym", version.stats.chars.nw.nSymbols);
         }
         // Total
-        appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal,
+        appendValue(sp, 0, "Version.Bullet.TotalChar", version.stats.chars.nTotal,
                     SCH_QRY_CHARS,
                     version.isFirst() ? static_cast<std::u8string_view>(link) : NO_LINK);
 
         if (version.stats.emoji.nTotal != 0) {
             // New emoji
             auto tot = version.stats.emoji.nw.nTotal();
-            appendValue(sp, "Prop.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
+            appendValue(sp, 0, "Version.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
             if (tot != 0) {
                 // Single-char
-                if (appendValueIf(sp, "Prop.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
-                    appendValueIf(sp, "Prop.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
-                    appendValueIf(sp, "Prop.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
+                if (appendValueIf(sp, 1, "Version.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
+                    appendValueIf(sp, 2, "Version.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
+                    appendValueIf(sp, 2, "Version.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
                 }
-                appendValueIf(sp, "Prop.Bullet.NewEmSkin",  version.stats.emoji.nw.seq.nRacial);
-                appendValueIf(sp, "Prop.Bullet.NewEmMulti", version.stats.emoji.nw.seq.nMultiracial);
-                appendValueIf(sp, "Prop.Bullet.NewEmRight", version.stats.emoji.nw.seq.nRightFacing);
-                appendValueIf(sp, "Prop.Bullet.NewEmRightSkin", version.stats.emoji.nw.seq.nRightFacingRacial);
-                appendValueIf(sp, "Prop.Bullet.NewEmColor", version.stats.emoji.nw.seq.nZwjColor);
-                appendValueIf(sp, "Prop.Bullet.NewEmGender", version.stats.emoji.nw.seq.nZwjGender);
-                appendValueIf(sp, "Prop.Bullet.NewEmOtherZwj", version.stats.emoji.nw.seq.nZwjOther);
-                appendValueIf(sp, "Prop.Bullet.NewEmFlag", version.stats.emoji.nw.seq.nFlags);
-                appendValueIf(sp, "Prop.Bullet.NewEmOtherNonZwj", version.stats.emoji.nw.seq.nOtherNonZwj);
+                // ZWJ
+                if (appendValueIf(sp, 1, "Version.Bullet.NewEmZwj", version.stats.emoji.nw.zwj.nTotal())) {
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjMulti", version.stats.emoji.nw.zwj.nMultiracial);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjRight", version.stats.emoji.nw.zwj.right);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjGender", version.stats.emoji.nw.zwj.gender);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjActivity", version.stats.emoji.nw.zwj.activity);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjApp", version.stats.emoji.nw.zwj.appearance);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjColor", version.stats.emoji.nw.zwj.color);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjOther", version.stats.emoji.nw.zwj.other);
+                }
+                // Non-ZWJ
+                if (appendValueIf(sp, 1, "Version.Bullet.NewEmNot", version.stats.emoji.nw.other.nTotal())) {
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotSkin", version.stats.emoji.nw.other.nSingleSkintone);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotFlag", version.stats.emoji.nw.other.nNationalFlags);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotSubdiv", version.stats.emoji.nw.other.nSubdivisionFlags);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotKey", version.stats.emoji.nw.other.nKeycaps);
+                }
             }
             // Total emoji
-            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal, NO_SCHEMA, NO_LINK);
+            appendValue(sp, 0, "Version.Bullet.TotalEm", version.stats.emoji.nTotal, NO_SCHEMA, NO_LINK);
         }
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);
+            appendValue(sp, 0, "Version.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);
         }
-        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, NO_LINK);
+        appendValue(sp, 0, "Version.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, NO_LINK);
     }
 
     // Text

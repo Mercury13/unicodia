@@ -100,7 +100,8 @@
 			uniform-comma: in uniform words “first, second”
 			semicolon: in “first, second; did the third”
 				(script’s languages only, in English see Sunuwar)
-			left-paren, right-paren: in script’s languages only -->
+			left-paren, right-paren: in script’s languages only
+			indent-ellip: ellipsis for indent, in version info only -->
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
-			left-paren="(" right-paren=")" />
+			left-paren="(" right-paren=")" indent-ellip="…" />
 </locale>

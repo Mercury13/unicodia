@@ -23,6 +23,24 @@ namespace uc {
     };
     DEFINE_ENUM_OPS(Vfg)
 
+    struct EmojiCounter
+    {
+        unsigned nNormal = 0, nSkintone = 0;
+
+        EmojiCounter() = default;
+        EmojiCounter(unsigned x) : nNormal(x) {}
+
+        constexpr unsigned nTotal() const { return nNormal + nSkintone; }
+        void add(bool isSkintone)
+        {
+            if (isSkintone) {
+                ++nSkintone;
+            } else {
+                ++nNormal;
+            }
+        }
+    };
+
     struct Version
     {
         std::u8string_view unicodeName;
@@ -54,24 +72,24 @@ namespace uc {
                         unsigned nOldUnicode = 0;
                         unsigned nTotal() const noexcept { return nThisUnicode + nOldUnicode; }
                     } singleChar;
-                    struct Seq {
-                        unsigned nRacial = 0;
+                    struct Zwj {
                         unsigned nMultiracial = 0;
-                        unsigned nRightFacing = 0;
-                        unsigned nRightFacingRacial = 0;
-                        unsigned nZwjColor = 0;
-                        unsigned nZwjGender = 0;
-                        unsigned nZwjActivity = 0;
-                        unsigned nZwjAppearance = 0;
-                        unsigned nZwjOther = 0;
-                        unsigned nFlags = 0;
-                        unsigned nOtherNonZwj = 0;
+                        EmojiCounter right, color, gender, activity,
+                                appearance, other;
                         unsigned nTotal() const noexcept
-                            { return nRacial + nMultiracial + nRightFacing + nRightFacingRacial
-                                   + nZwjColor + nZwjGender + nZwjActivity + nZwjAppearance
-                                   + nZwjOther + nFlags + nOtherNonZwj; }
-                    } seq;
-                    unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
+                            { return nMultiracial + right.nTotal() + color.nTotal()
+                                    + gender.nTotal() + activity.nTotal() + other.nTotal(); }
+                    } zwj;
+                    struct Other {
+                        unsigned nSingleSkintone = 0;
+                        unsigned nNationalFlags = 0;
+                        unsigned nSubdivisionFlags = 0;
+                        unsigned nKeycaps = 0;
+                        unsigned nTotal() const noexcept
+                            { return nSingleSkintone + nNationalFlags + nSubdivisionFlags
+                                   + nKeycaps; }
+                    } other;
+                    unsigned nTotal() const noexcept { return singleChar.nTotal() + zwj.nTotal() + other.nTotal(); }
                 } nw;
             } emoji;
             struct Blocks {

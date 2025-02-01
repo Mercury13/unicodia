@@ -712,78 +712,6 @@
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
     </text>
-    <text id="NewChar">
-     <orig>New characters</orig>
-    </text>
-    <text id="NewCjk">
-     <orig>[[ps:Hani|CJK ideographs]]</orig>
-    </text>
-    <text id="NewNew">
-     <orig>from new scripts</orig>
-    </text>
-    <text id="NewEx">
-     <orig>from existing scripts</orig>
-    </text>
-    <text id="NewFmt">
-     <orig>[[pt:format|format]] characters without script</orig>
-    </text>
-    <text id="NewSym">
-     <orig>…misc. symbols</orig>
-    </text>
-    <text id="Transient">
-     <orig>Characters that would be deleted later</orig>
-    </text>
-    <text id="TotalChar">
-     <orig>Total characters, incl. [[pt:control|control]]</orig>
-    </text>
-    <text id="NewEm">
-     <orig>New emoji</orig>
-    </text>
-    <text id="NewEm1">
-     <orig>…Single-character and VS-16</orig>
-    </text>
-    <text id="NewEm1This">
-     <orig>……from this Unicode</orig>
-    </text>
-    <text id="NewEm1Prev">
-     <orig>……from previous versions</orig>
-    </text>
-    <text id="NewEmSkin">
-     <orig>…Skintone sequences</orig>
-    </text>
-    <text id="NewEmMulti">
-     <orig>…Multiracial sequences</orig>
-    </text>
-    <text id="NewEmRight">
-     <orig>…Right-facing sequences</orig>
-    </text>
-    <text id="NewEmRightSkin">
-     <orig>…Right-facing skintone sequences</orig>
-    </text>
-    <text id="NewEmColor">
-     <orig>…[[pt:zwj|ZWJ]] sequences of colour</orig>
-    </text>
-    <text id="NewEmGender">
-     <orig>…[[pt:zwj|ZWJ]] sequences of gender</orig>
-    </text>
-    <text id="NewEmOtherZwj">
-     <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
-    </text>
-    <text id="NewEmFlag">
-     <orig>…National flags</orig>
-    </text>
-    <text id="NewEmOtherNonZwj">
-     <orig>…Other non-[[pt:zwj|ZWJ]] sequences</orig>
-    </text>
-    <text id="TotalEm">
-     <orig>Total emoji</orig>
-    </text>
-    <text id="NewSc">
-     <orig>New scripts</orig>
-    </text>
-    <text id="TotalSc">
-     <orig>Total scripts</orig>
-    </text>
     <text id="Extend">
      <orig>Extended</orig>
      <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
@@ -9807,7 +9735,7 @@
      <orig>New emoji</orig>
     </text>
     <text id="NewEm1">
-     <orig>Single-character and VS-16</orig>
+     <orig>Single-character and VS16</orig>
     </text>
     <text id="NewEm1This">
      <orig>from this Unicode</orig>
@@ -9818,29 +9746,44 @@
     <text id="NewEm1Skin">
      <orig>Skintone sequences</orig>
     </text>
-    <text id="NewEmMulti">
-     <orig>Multiracial sequences</orig>
+    <text id="NewEmZwj">
+     <orig>[[pt:zwj|ZWJ]] sequences</orig>
     </text>
-    <text id="NewEmRight">
-     <orig>Right-facing sequences</orig>
+    <text id="NewZwjMulti">
+     <orig>multiracial</orig>
     </text>
-    <text id="NewEmRightSkin">
-     <orig>Right-facing skintone sequences</orig>
+    <text id="NewZwjRight">
+     <orig>right-facing</orig>
     </text>
-    <text id="NewEmColor">
-     <orig>[[pt:zwj|ZWJ]] sequences of colour</orig>
+    <text id="NewZwjColor">
+     <orig>of colour</orig>
     </text>
-    <text id="NewEmGender">
-     <orig>[[pt:zwj|ZWJ]] sequences of gender</orig>
+    <text id="NewZwjGender">
+     <orig>of gender</orig>
     </text>
-    <text id="NewEmOtherZwj">
-     <orig>Other [[pt:zwj|ZWJ]] sequences</orig>
+    <text id="NewZwjActivity">
+     <orig>of activity</orig>
     </text>
-    <text id="NewEmFlags">
-     <orig>National flags</orig>
+    <text id="NewZwjApp">
+     <orig>of appearance</orig>
     </text>
-    <text id="NewEmOtherNonZwj">
-     <orig>Other non-[[pt:zwj|ZWJ]] sequences</orig>
+    <text id="NewZwjOther">
+     <orig>other</orig>
+    </text>
+    <text id="NewEmNot">
+     <orig>Non-[[pt:zwj|ZWJ]] sequences</orig>
+    </text>
+    <text id="NewNotSkin">
+     <orig>character+skintone</orig>
+    </text>
+    <text id="NewNotFlag">
+     <orig>national flags</orig>
+    </text>
+    <text id="NewNotSubdiv">
+     <orig>subdivision flags</orig>
+    </text>
+    <text id="NewNotKey">
+     <orig>keycaps</orig>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
@@ -9850,6 +9793,13 @@
     </text>
     <text id="TotalSc">
      <orig>Total scripts</orig>
+    </text>
+    <text id="Plus">
+     <orig>{1} + {2} skintone</orig>
+     <au-cmt>
+      <p>Maybe you’ll use {2|one=...|few=...}.</p>
+      <p>But skintones come in fives, maybe that’ll save some programming :)</p>
+     </au-cmt>
     </text>
    </group>
    <group id="1.1">
