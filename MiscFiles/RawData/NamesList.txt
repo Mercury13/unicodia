@@ -1,17 +1,17 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 17.0.0
 @@@+	NamesList-17.0.0.txt
-@+	Generation Date: 2024-11-14, 11:05:33 GMT
+@+	Generation Date: 2025-01-23, 16:40:26 GMT
 	Unicode 17.0.0 names list.
-	Repertoire synched with UnicodeData-17.0.0d1.txt.
-	Synch with 7th edition CD; post UTC181 annotation updates for 17.0.
+	Repertoire synched with UnicodeData-17.0.0d2.txt.
+	Synch with 7th edition CD; post UTC182 annotation updates for 17.0.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
 	for this process are aimed at readability for the human reader,
 	at the expense of some details; therefore, this file should not
 	be parsed for machine-readable information.
-@+		© 2024 Unicode®, Inc.
+@+		© 2025 Unicode®, Inc.
 	For terms of use and license, see https://www.unicode.org/terms_of_use.html
 @@	0000	C0 Controls and Basic Latin (Basic Latin)	007F
 @@+
@@ -13191,6 +13191,7 @@
 	x (heavy single turned comma quotation mark ornament - 275B)
 	~ 2018 FE00 non-fullwidth form
 	~ 2018 FE01 right-justified fullwidth form
+	~ 2018 FE02 Sibe form
 2019	RIGHT SINGLE QUOTATION MARK
 	= single comma quotation mark
 	* this is the preferred character to use for apostrophe
@@ -13199,6 +13200,7 @@
 	x (heavy single comma quotation mark ornament - 275C)
 	~ 2019 FE00 non-fullwidth form
 	~ 2019 FE01 left-justified fullwidth form
+	~ 2019 FE02 Sibe form
 201A	SINGLE LOW-9 QUOTATION MARK
 	= low single comma quotation mark
 	* used as opening single quotation mark in some languages
@@ -13214,6 +13216,7 @@
 	x (reversed double prime quotation mark - 301D)
 	~ 201C FE00 non-fullwidth form
 	~ 201C FE01 right-justified fullwidth form
+	~ 201C FE02 Sibe form
 201D	RIGHT DOUBLE QUOTATION MARK
 	= double comma quotation mark
 	x (quotation mark - 0022)
@@ -13222,6 +13225,7 @@
 	x (double prime quotation mark - 301E)
 	~ 201D FE00 non-fullwidth form
 	~ 201D FE01 left-justified fullwidth form
+	~ 201D FE02 Sibe form
 201E	DOUBLE LOW-9 QUOTATION MARK
 	= low double comma quotation mark
 	* used as opening double quotation mark in some languages
@@ -28149,7 +28153,7 @@ FBC7	ARABIC LIGATURE RAHMATU ALLAAHI ALAYHIMAA
 FBC8	ARABIC LIGATURE RAHIMAHUM ALLAAHU TAAALAA
 FBC9	ARABIC LIGATURE RAHIMAHUMAA ALLAAH
 FBCA	ARABIC LIGATURE RAHIMAHUMAA ALLAAHU TAAALAA
-FBCB	ARABIC LIGATURE RADI ALLAHU TAAALAA ANHUM
+FBCB	ARABIC LIGATURE RADI ALLAAHU TAAALAA ANHUM
 FBCC	ARABIC LIGATURE HAFIZAHU ALLAAH
 FBCD	ARABIC LIGATURE HAFIZAHU ALLAAHU TAAALAA
 FBCE	ARABIC LIGATURE HAFIZAHUM ALLAAHU TAAALAA
@@ -33806,8 +33810,8 @@ FFFF	<not a character>
 10ED2	ARABIC LIGATURE ALAYHIM AS-SALAATU WAS-SALAAM
 10ED3	ARABIC LIGATURE ALAYHIMAA AS-SALAATU WAS-SALAAM
 10ED4	ARABIC LIGATURE QADDASA ALLAAHU SIRRAH
-10ED5	ARABIC LIGATURE QUDDISA SIRRAHUM
-10ED6	ARABIC LIGATURE QUDDISA SIRRAHUMAA
+10ED5	ARABIC LIGATURE QUDDISA SIRRUHUM
+10ED6	ARABIC LIGATURE QUDDISA SIRRUHUMAA
 10ED7	ARABIC LIGATURE QUDDISAT ASRAARUHUM
 10ED8	ARABIC LIGATURE NAWWARA ALLAAHU MARQADAH
 @		Tanween mark used in Old Sindhi
