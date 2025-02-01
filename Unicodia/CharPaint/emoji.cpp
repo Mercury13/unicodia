@@ -32,6 +32,7 @@ struct RecolorLib {
     std::string_view handDark;  ///< used in new U16 hand emoji
 
     void runOn(QByteArray& bytes) const;
+    /// @param [in] race  '1' or '2'
     void runBiracialOn(char race, QByteArray& bytes) const;
 };
 
@@ -78,10 +79,13 @@ void RecolorLib::runBiracialOn(char race, QByteArray& bytes) const
     char buf[] = "#000000";
     static_assert(std::size(buf) == 8);
     buf[1] = race;
+    // 2 → fill2
     buf[6] = '2';
     repl(bytes, buf, fill2);
+    // A → light hand
     buf[6] = 'A';
     repl(bytes, buf, handLight);
+    // B → dark hand
     buf[6] = 'B';
     repl(bytes, buf, handDark);
 }
