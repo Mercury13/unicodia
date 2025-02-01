@@ -469,6 +469,7 @@ namespace {
         ZWJ_GENDER,
         ZWJ_ACTIVITY,
         ZWJ_APPEARANCE,
+        ZWJ_FAMILY,
         ZWJ_MULTIRACIAL,    ///< By convention, isSkintone=0
         ZWJ_OTHER,
         OTHER_NATIONAL,     ///< National flags, like [U][A]; all OTHER have no skintone
@@ -569,6 +570,11 @@ namespace {
             throw std::logic_error("Unknown non-ZWJ sequence");
         }
         // Detect ZWJ sequences
+        if (nPeople == nZwj + 1) {
+            if (nSkin != 0)
+                throw std::logic_error("Families do not have skintones");
+            return { .clazz = EmojiClass::ZWJ_FAMILY, .isSkintone = false };
+        }
         bool isSkin = nSkin;
         if (x.length() >= 4     // 4 = 1 + 3tail
                 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
@@ -624,6 +630,8 @@ namespace {
             break;
         case EmojiClass::ZWJ_MULTIRACIAL:
             ++version.stats.emoji.nw.zwj.nMultiracial; break;
+        case EmojiClass::ZWJ_FAMILY:
+            ++version.stats.emoji.nw.zwj.nFamilies; break;
         case EmojiClass::ZWJ_RIGHT:
             version.stats.emoji.nw.zwj.right.add(ce.isSkintone); break;
         case EmojiClass::ZWJ_ACTIVITY:

@@ -73,11 +73,11 @@ namespace uc {
                         unsigned nTotal() const noexcept { return nThisUnicode + nOldUnicode; }
                     } singleChar;
                     struct Zwj {
-                        unsigned nMultiracial = 0;
+                        unsigned nMultiracial = 0, nFamilies = 0;
                         EmojiCounter right, color, gender, activity,
                                 appearance, other;
                         unsigned nTotal() const noexcept
-                            { return nMultiracial + right.nTotal() + color.nTotal()
+                            { return nMultiracial + nFamilies + right.nTotal() + color.nTotal()
                                     + gender.nTotal() + activity.nTotal() + other.nTotal(); }
                     } zwj;
                     struct Other {

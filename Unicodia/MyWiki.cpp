@@ -2794,6 +2794,7 @@ QString mywiki::buildHtml(const uc::Version& version)
                 if (appendValueIf(sp, 1, "Version.Bullet.NewEmZwj", version.stats.emoji.nw.zwj.nTotal())) {
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjMulti", version.stats.emoji.nw.zwj.nMultiracial);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjRight", version.stats.emoji.nw.zwj.right);
+                    appendValueIf(sp, 2, "Version.Bullet.NewZwjFam", version.stats.emoji.nw.zwj.nFamilies);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjGender", version.stats.emoji.nw.zwj.gender);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjActivity", version.stats.emoji.nw.zwj.activity);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjApp", version.stats.emoji.nw.zwj.appearance);
