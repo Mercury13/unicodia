@@ -138,6 +138,7 @@ wiki::Thing wiki::findThing(
                 }
                 auto nLfs = q - pos;
                 // Detect feature
+                /// @todo [urgent] detect feature?
                 auto feature = Feature::NONE;
                 unsigned indentSize = 0;
                 if (q != end) {
