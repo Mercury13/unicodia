@@ -500,6 +500,8 @@ namespace uc {
             : text(aText), recode(aRecode) {}
         constexpr Family(std::string_view aText, ProbeChar aProbeChar)
             : text(aText), probeChar(aProbeChar) {}
+        constexpr Family(std::string_view aText, Fafg aFlag, EvRecode aRecode)
+            : text(aText), flags(aFlag), recode(aRecode) {}
         constexpr Family(std::string_view aText, Fafg aFlag, ProbeChar aProbeChar)
             : text(aText), flags(aFlag), probeChar(aProbeChar) {}
     };

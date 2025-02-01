@@ -49,6 +49,15 @@ char32_t recodeCuneiform(char32_t x)
     }
 }
 
+char32_t recodeBengali(char32_t x)
+{
+    /// @todo [U17, gag] Recode Bengali
+    switch (x) {
+    case 0x09FF: return 0x09F0;
+    default: return x;
+    }
+}
+
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …1
@@ -106,7 +115,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
       { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                 // …1
       { FAM_NAND, Ffg::FALL_TO_NEXT },                                          // …2, fall to Bengali    
-    { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC }, 120_pc },          // Bengali
+    { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC, recodeBengali }, 120_pc }, // Bengali
     { "Kedebideri-Regular.ttf" },                                               // Beria
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
