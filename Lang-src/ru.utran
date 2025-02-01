@@ -14112,6 +14112,22 @@
      </transl>
     </text>
    </group>
+   <group id="17.0">
+    <text id="Text">
+     <orig>
+      <p>This version:</p>
+      <p>* Wrote [[pt:egyp|rules]] of encoding Egyptian hieroglyphs</p>
+      <p>* Added a [[pt:inclusion|genderless]] version of the last emoji{{-}}dancer: Latin for a woman, disco for a man, and ballet for genderless</p>
+      <p>* Added multiracial versions of the last emoji{{-}}wrestlers and Playboy girls</p>
+     </orig>
+     <transl>
+      <p>Эта версия:</p>
+      <p>* Описала [[pt:egyp|правила]] кодирования египетских иероглифов</p>
+      <p>* Добавила [[pt:inclusion|бесполую]] версию последнего эмодзи{{-}}танцора: латинские для женщины, диско для мужчины, и балет для бесполого</p>
+      <p>* Добавила многорасовые версии последних эмодзи{{-}}борцов и девушек Плейбоя</p>
+     </transl>
+    </text>
+   </group>
   </group>
   <group id="Update">
    <text id="Head">
