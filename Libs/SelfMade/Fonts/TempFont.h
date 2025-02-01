@@ -17,7 +17,7 @@ constexpr bool isPowerOfTwo(unsigned x) { return ((x & (x - 1)) == 0); }
 
 /// Specific platforms we perform “static-assert” unit tests on
 ///   (structure itself is platform-independent,
-///    though need tweaks to non-binary and non-octet machine)
+///    though need tweaks to non-octet machine)
 enum class TfPlat : unsigned char { X64, UNK };
 #if defined(_WIN64) || defined(__x86_64) || defined(__x86_64__) || defined(__amd64) || defined(__amd64__)
     constexpr TfPlat TF_PLAT = TfPlat::X64;
