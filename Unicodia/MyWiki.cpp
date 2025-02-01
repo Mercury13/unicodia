@@ -2785,8 +2785,10 @@ QString mywiki::buildHtml(const uc::Version& version)
             if (tot != 0) {
                 // Single-char
                 if (appendValueIf(sp, 1, "Version.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
-                    appendValueIf(sp, 2, "Version.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
-                    appendValueIf(sp, 2, "Version.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
+                    if (version.stats.emoji.nw.singleChar.nOldUnicode > 0) {
+                        appendValueIf(sp, 2, "Version.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
+                        appendValueIf(sp, 2, "Version.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
+                    }
                 }
                 // ZWJ
                 if (appendValueIf(sp, 1, "Version.Bullet.NewEmZwj", version.stats.emoji.nw.zwj.nTotal())) {
