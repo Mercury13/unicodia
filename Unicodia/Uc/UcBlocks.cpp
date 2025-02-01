@@ -1438,7 +1438,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, {}, 14_hx  },
             "Ol Onal",
             { EcScript::Onao, 0 }, MapSubtype::ALIVE, EcScript::Onao },
-    /// @todo [U17, tofu] Tai Yo
+    // Tai Yo OK, consider the font OFL
     { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA,
                     Ifg::PAINT_SVG | Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT },
             "Tai Yo",
