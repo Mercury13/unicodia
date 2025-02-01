@@ -4,7 +4,7 @@
 # Maintained by: Andrew West (魏安) <babelstone@gmail.com>
 # Unicode Version: 16.0 (September 2024)
 # Total entries: 97,680
-# File Date: 2025-01-09
+# File Date: 2025-01-31
 #
 # Caveat Lector
 #	Please be aware that IDS sequences do not describe absolute glyph forms, but describe glyph forms in the context of
@@ -23925,7 +23925,7 @@ U+3E16	㸖	^⿰父且$(GT)
 U+3E17	㸗	^⿱父同$(GTP)
 U+3E18	㸘	^⿱父𦉬$(GT)
 U+3E19	㸙	^⿱父者$(GTKP)
-U+3E1A	㸚	^⿱⿰㐅㐅⿰㐅爻$(GT)	^⿱⿰㐅㐅⿰㐅㐅$(P)
+U+3E1A	㸚	^⿱⿰㐅㐅⿰㐅乂$(GT)	^⿱⿰㐅㐅⿰㐅㐅$(P)	^⿰爻爻$(X)
 U+3E1B	㸛	^⿰爿召$(GTP)
 U+3E1C	㸜	^⿰爿空$(GTP)
 U+3E1D	㸝	^⿰片欠$(GTP)
