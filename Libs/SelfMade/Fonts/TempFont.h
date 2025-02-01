@@ -41,7 +41,7 @@ private:
     static constexpr unsigned BYTES_PER_ITEM = sizeof(Item);
     static constexpr unsigned BITS_PER_ITEM = BYTES_PER_ITEM * 8;
     static_assert(std::numeric_limits<Item>::radix == 2, "Non-binary machine?");
-    static_assert(isPowerOfTwo(BYTES_PER_ITEM), "Strange machine");
+    static_assert(isPowerOfTwo(BYTES_PER_ITEM), "Strange word length");
 
     static constexpr Item ONE = 1;
 
