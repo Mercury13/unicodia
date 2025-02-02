@@ -168,14 +168,13 @@ void RecolorLib::recolorIds(QByteArray& bytes, std::span<const std::string> ids)
 namespace {
 
     inline QByteArray sliceBetween(
-            const QByteArray& bytes, const TagInfo& t1, const TagInfo& t2)
+            const QByteArray& bytes, size_t start, const TagInfo& t2)
     {
-        return bytes.sliced(t1.end, t2.start - t1.end);
+        return bytes.sliced(start, t2.start - start);
     }
 
-    std::vector<std::string> collectIds(const QByteArray& bytes)
+    void collectIds(const QByteArray& bytes, std::vector<std::string>& r)
     {
-        std::vector<std::string> r;
         size_t indStart = 0;
         while (true) {
             // 6 chars
@@ -199,35 +198,53 @@ namespace {
 
             indStart = end + END_LEN;
         }
-        return r;
     }
 
 }   // anon namespace
 
 
-bool RecolorInfo::runReverseDelimited(QByteArray& bytes) const
+bool RecolorInfo::runInterleaving(QByteArray& bytes) const
 {
+    /// @todo [urgent] Other marker (fe00fe)
     static const char* MARKER = R"("#c01c28")";
-    auto tagDefsRace2 = findTag(bytes, MARKER, 0);
-    if (!tagDefsRace2)
+    auto tagDefsRace1 = findTag(bytes, MARKER, 0);
+    if (!tagDefsRace1)
         return false;
-    auto tagRace2Race1 = findTag(bytes, MARKER, tagDefsRace2.end);
-    if (!tagRace2Race1)
-        return false;
-    auto dataHead = bytes.sliced(0, tagDefsRace2.start);
-    // [0…index1) is the 2nd race
-    auto data1_race2 = sliceBetween(bytes, tagDefsRace2, tagRace2Race1);
-    auto idsRace2 = collectIds(data1_race2);
-    recolor2->runOn(data1_race2);
-    // (index2 …) is the 1st race
-    auto data2_race1 = bytes.sliced(tagRace2Race1.end);
-    auto idsRace1 = collectIds(data2_race1);
-    recolor1->runOn(data2_race1);
-    // Run IDs
+    auto dataHead = bytes.sliced(0, tagDefsRace1.start);
+
+    // Get interleaving runs
+    auto dataStart = tagDefsRace1.end;
+    std::vector<QByteArray> runs;
+    while (true) {
+        auto newTag = findTag(bytes, MARKER, dataStart);
+        if (!newTag)
+            break;
+        runs.push_back(sliceBetween(bytes, dataStart, newTag));
+        dataStart = newTag.end;
+    }
+    runs.push_back(bytes.sliced(dataStart));
+
+    // Process pure runs, collect IDs
+    std::vector<std::string> idsRace1, idsRace2;
+    for (size_t i = 0; i < runs.size(); ++i) {
+        auto& ids = (i % 2 == 0) ? idsRace1 : idsRace2;
+        auto& run = runs[i];
+        collectIds(run, ids);
+    }
+
+    // Recolor IDs
+    /// @todo [performance] collect trie, make a recolor
     recolor1->recolorIds(dataHead, idsRace1);
     recolor2->recolorIds(dataHead, idsRace2);
-    // Stick them w/o marker tags
-    bytes = dataHead + data1_race2 + data2_race1;
+
+    // Stuck runs
+    bytes = dataHead;
+    size_t totalLength = dataHead.length();
+    for (auto& v : runs)
+        totalLength += v.length();
+    bytes.reserve(totalLength);
+    for (auto& v : runs)
+        bytes += v;
     return true;
 }
 
@@ -244,7 +261,7 @@ void RecolorInfo::runOn(QByteArray& bytes) const
     if (recolor1) {
         if (recolor2) {
             // Choose method of biracial
-            if (runReverseDelimited(bytes))
+            if (runInterleaving(bytes))
                 return;
             runColorSeparated(bytes);
         } else {

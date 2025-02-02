@@ -30,26 +30,26 @@ struct RecolorInfo {
     operator bool() const { return recolor1; }
     void runOn(QByteArray& bytes) const;
 private:
-    /// Method of biracial recolouring: reverse-delimited
+    /// Method of biracial recolouring: interleaving
     /// 1. Header
-    /// 2. Some shape filled with #c01c28
-    /// 3. SECOND race
-    /// 4. Some shape filled with #c01c28
-    /// 5. FIRST race
+    /// 2. Some shape filled with #00fefe (almost aqua)
+    /// 3. First race
+    /// 4. Again #00fefe
+    /// 5. Second race
+    /// 6. Again #00fefe
+    /// 7. First race…
+    /// @warning Shapes may be everywhere, where they cover the 1st and lie beneath 2nd
+    /// @warning The 1st shape should be the 1st, only defs are ahead
+    /// @warning For tool-writers: turn off gradient collapsing
+    /// @warning For editors: use SMALL letters, and place shapes strategically in XML editor
+    ///              rather than by “move up/move down”
+    /// @warning For editors: if the stack starts from the 2nd race, start with two delimiters
     /// @return  [+] method found [-] method not found
-    bool runReverseDelimited(QByteArray& bytes) const;
-    /// Method of biracial recolouring: wrestlers
-    /// 1. Header
-    /// 2. Some shape filled with #f100f1
-    /// 3. FIRST race
-    /// 4. Some shape filled with #f100f1
-    /// 5. SECOND race
-    /// 6. Some shape filled with #f100f1
-    /// 7. FIRST race
-    /// @return  [+] method found [-] method not found
-    bool runWrestlers(QByteArray& bytes) const;
+    bool runInterleaving(QByteArray& bytes) const;
+
     /// Method of biracial recolouring: 1st and 2nd have own colours
     /// No identification, the last method
+    /// Emoji used: handshake
     void runColorSeparated(QByteArray& bytes) const;
 };
 
