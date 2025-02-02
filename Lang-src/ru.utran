@@ -4797,6 +4797,7 @@
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, dragon, terror;</p>
       <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
       <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
+      <p>* grasshopper{{-}}queen that must jump over a piece (own or opponent’s) to do a move, drawn as inverted queen;</p>
       <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
       <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as an inverted or slanted pawn;</p>
       <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
@@ -4805,7 +4806,7 @@
       <p />
       <p>Two pieces from proto-chess:</p>
       <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
-      <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
+      <p>* ferz (minister){{-}}ancestor of queen, moves one square diagonally.</p>
       <p />
       <p>This block also contains pieces of the Chinese game of Xiangqi.</p>
      </orig>
@@ -4815,6 +4816,7 @@
       <p>* конеферзь{{-}}также суперферзь, ферзь всяческая, магараджа, амазонка, дракон, ужас;</p>
       <p>* конеслон{{-}}также архиепископ, кардинал, принцесса, кентавр;</p>
       <p>* конеладья{{-}}также императрица, маршал, канцлер;</p>
+      <p>* кузнечик{{-}}ферзь, который, делая ход, должен перепрыгнуть через фигуру (свою или чужую), рисуется как перевёрнутый ферзь;</p>
       <p>* манн, человек, принц{{-}}ходит как король, но не королевский (не рокируется, не нужно защищать), рисуется как перевёрнутый король;</p>
       <p>* беролина, берлинская пешка, антипешка{{-}}ходит на одно поле вперёд наискосок, берёт на одно поле вперёд, в отличие от обычной пешки, рисуется как перевёрнутая или наклонённая пешка;</p>
       <p>* всадник, единорог{{-}}делает несколько прыжков коня в одном направлении, блокируется своими и берёт чужих в точках приземления, рисуется как перевёрнутый или видоизменённый конь;</p>
@@ -4823,7 +4825,7 @@
       <p />
       <p>Две фигуры из прото-шахмат:</p>
       <p>* алфил{{-}}предок слона, ходит на две клетки наискосок, перепрыгивая через фигуры;</p>
-      <p>* ферз (ферц, фарзин){{-}}предок ферзя, ходит на одну клетку наискосок.</p>
+      <p>* ферз (ферц, фарзин, министр){{-}}предок ферзя, ходит на одну клетку наискосок.</p>
       <p />
       <p>Также в этом блоке есть фишки китайской игры сянци.</p>
      </transl>
