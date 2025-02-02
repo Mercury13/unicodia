@@ -31,11 +31,23 @@ struct RecolorInfo {
     void runOn(QByteArray& bytes) const;
 private:
     /// Method of biracial recolouring: reverse-delimited
-    /// 1. SECOND race
+    /// 1. Header
     /// 2. Some shape filled with #c01c28
-    /// 2. FIRST race
+    /// 3. SECOND race
+    /// 4. Some shape filled with #c01c28
+    /// 5. FIRST race
     /// @return  [+] method found [-] method not found
     bool runReverseDelimited(QByteArray& bytes) const;
+    /// Method of biracial recolouring: wrestlers
+    /// 1. Header
+    /// 2. Some shape filled with #f100f1
+    /// 3. FIRST race
+    /// 4. Some shape filled with #f100f1
+    /// 5. SECOND race
+    /// 6. Some shape filled with #f100f1
+    /// 7. FIRST race
+    /// @return  [+] method found [-] method not found
+    bool runWrestlers(QByteArray& bytes) const;
     /// Method of biracial recolouring: 1st and 2nd have own colours
     /// No identification, the last method
     void runColorSeparated(QByteArray& bytes) const;
