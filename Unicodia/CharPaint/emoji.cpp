@@ -99,23 +99,6 @@ namespace {
         constexpr operator bool() const { return end; }
     };
 
-    TagInfo findImpairTag(
-            const QByteArray& bytes, const char* data, size_t start)
-    {
-        // Find marker tag
-        auto index = bytes.indexOf(data, start);
-        if (index < 0)
-            return {};
-        // Find tag limits
-        auto index1 = bytes.lastIndexOf('<', index);
-        if (index1 < 0)
-            return {};
-        auto index2 = bytes.indexOf("/>", index);
-        if (index2 < 0)
-            return {};
-        return TagInfo { .start = index1, .end = index2 + 2 };
-    }
-
     TagInfo findTag(
             const QByteArray& bytes, QByteArrayView needle, size_t start)
     {
@@ -225,10 +208,10 @@ namespace {
 bool RecolorInfo::runReverseDelimited(QByteArray& bytes) const
 {
     static const char* MARKER = R"("#c01c28")";
-    auto tagDefsRace2 = findImpairTag(bytes, MARKER, 0);
+    auto tagDefsRace2 = findTag(bytes, MARKER, 0);
     if (!tagDefsRace2)
         return false;
-    auto tagRace2Race1 = findImpairTag(bytes, MARKER, tagDefsRace2.end);
+    auto tagRace2Race1 = findTag(bytes, MARKER, tagDefsRace2.end);
     if (!tagRace2Race1)
         return false;
     auto dataHead = bytes.sliced(0, tagDefsRace2.start);
