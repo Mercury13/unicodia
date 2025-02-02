@@ -187,7 +187,7 @@ OptResult OptStorage::checkFile(const char* fname)
         return { .status = OptStatus::ALREADY_OPTIMIZED, .info = &info };
     }
 
-    bool hasColorKey = contains(content, "#c01c28");
+    bool hasColorKey = contains(content, "#00fefe");
 
     // Run optimizer
     if (pathToOptimizer.empty()) {

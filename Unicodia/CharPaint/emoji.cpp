@@ -200,13 +200,17 @@ namespace {
         }
     }
 
+    struct RaceInfo {
+        const RecolorLib* lib;
+        std::vector<std::string> ids {};
+    };
+
 }   // anon namespace
 
 
 bool RecolorInfo::runInterleaving(QByteArray& bytes) const
 {
-    /// @todo [urgent] Other marker (fe00fe)
-    static const char* MARKER = R"("#c01c28")";
+    static const char* MARKER = R"("#00fefe")";
     auto tagDefsRace1 = findTag(bytes, MARKER, 0);
     if (!tagDefsRace1)
         return false;
@@ -225,17 +229,19 @@ bool RecolorInfo::runInterleaving(QByteArray& bytes) const
     runs.push_back(bytes.sliced(dataStart));
 
     // Process pure runs, collect IDs
-    std::vector<std::string> idsRace1, idsRace2;
+    enum : unsigned char { RACE_1, RACE_2, RACE_N };
+    RaceInfo races[RACE_N] { { .lib = recolor1 }, { .lib = recolor2 } };
     for (size_t i = 0; i < runs.size(); ++i) {
-        auto& ids = (i % 2 == 0) ? idsRace1 : idsRace2;
+        auto& race = races[i % 2];
         auto& run = runs[i];
-        collectIds(run, ids);
+        collectIds(run, race.ids);
+        race.lib->runOn(run);
     }
 
-    // Recolor IDs
+    // Process header; sorry, O(n²) here
     /// @todo [performance] collect trie, make a recolor
-    recolor1->recolorIds(dataHead, idsRace1);
-    recolor2->recolorIds(dataHead, idsRace2);
+    recolor1->recolorIds(dataHead, races[RACE_1].ids);
+    recolor2->recolorIds(dataHead, races[RACE_2].ids);
 
     // Stuck runs
     bytes = dataHead;
