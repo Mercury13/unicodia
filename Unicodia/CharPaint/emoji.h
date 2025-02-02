@@ -29,6 +29,16 @@ struct RecolorInfo {
 
     operator bool() const { return recolor1; }
     void runOn(QByteArray& bytes) const;
+private:
+    /// Method of biracial recolouring: reverse-delimited
+    /// 1. SECOND race
+    /// 2. Some shape filled with #c01c28
+    /// 2. FIRST race
+    /// @return  [+] method found [-] method not found
+    bool runReverseDelimited(QByteArray& bytes) const;
+    /// Method of biracial recolouring: 1st and 2nd have own colours
+    /// No identification, the last method
+    void runColorSeparated(QByteArray& bytes) const;
 };
 
 

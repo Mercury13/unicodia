@@ -33,7 +33,7 @@ struct RecolorLib {
 
     void runOn(QByteArray& bytes) const;
     /// @param [in] race  '1' or '2'
-    void runBiracialOn(char race, QByteArray& bytes) const;
+    void runColorSeparatedBiracialOn(char race, QByteArray& bytes) const;
 };
 
 namespace {
@@ -69,7 +69,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#B55E19", handDark);
 }
 
-void RecolorLib::runBiracialOn(char race, QByteArray& bytes) const
+void RecolorLib::runColorSeparatedBiracialOn(char race, QByteArray& bytes) const
 {
     // Biracial colours are 1) limited; 2) unreal
     // They are #p0000c for now;
@@ -90,12 +90,46 @@ void RecolorLib::runBiracialOn(char race, QByteArray& bytes) const
     repl(bytes, buf, handDark);
 }
 
+bool RecolorInfo::runReverseDelimited(QByteArray& bytes) const
+{
+    // Find marker tag
+    auto index = bytes.indexOf(R"("#c01c28")");
+    if (index < 0)
+        return false;
+    // Find tag limits
+    auto index1 = bytes.lastIndexOf('<', index);
+    if (index1 < 0)
+        return false;
+    auto index2 = bytes.indexOf("/>", index);
+    if (index2 < 0)
+        return false;
+    // [0…index1) is the 2nd race
+    auto data1_race2 = bytes.sliced(0, index1);
+    recolor2->runOn(data1_race2);
+    // (index2 …) is the 1st race
+    auto data2_race1 = bytes.sliced(index2 + 1);
+    recolor1->runOn(data2_race1);
+    // Stick them w/o marker tag
+    bytes = data1_race2 + data2_race1;
+    return true;
+}
+
+
+void RecolorInfo::runColorSeparated(QByteArray& bytes) const
+{
+    recolor1->runColorSeparatedBiracialOn('1', bytes);
+    recolor2->runColorSeparatedBiracialOn('2', bytes);
+}
+
+
 void RecolorInfo::runOn(QByteArray& bytes) const
 {
     if (recolor1) {
         if (recolor2) {
-            recolor1->runBiracialOn('1', bytes);
-            recolor2->runBiracialOn('2', bytes);
+            // Choose method of biracial
+            if (runReverseDelimited(bytes))
+                return;
+            runColorSeparated(bytes);
         } else {
             recolor1->runOn(bytes);
         }
