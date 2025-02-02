@@ -127,10 +127,20 @@ bool OptStorage::findOptimizer()
 }
 
 
+inline bool contains(std::string_view hay, std::string_view nee)
+{
+    return (hay.find(nee) != std::string_view::npos);
+}
+
+
 constexpr const char* COMMAND =
         "--coordinates-precision=2 --properties-precision=2 "
         "--transforms-precision=4 --paths-coordinates-precision=2 --multipass "
         "--copy-on-error";
+
+// Special commands when we have colour key
+constexpr const char* KEYS_COLOR_KEY = " "
+        "--merge-gradients=false --regroup-gradient-stops=false";
 
 
 OptResult OptStorage::checkFile(const char* fname)
@@ -177,6 +187,8 @@ OptResult OptStorage::checkFile(const char* fname)
         return { .status = OptStatus::ALREADY_OPTIMIZED, .info = &info };
     }
 
+    bool hasColorKey = contains(content, "#c01c28");
+
     // Run optimizer
     if (pathToOptimizer.empty()) {
         throw std::logic_error(str::cat(
@@ -186,6 +198,9 @@ OptResult OptStorage::checkFile(const char* fname)
     std::cout << "NOTE: optimizing " << fname << '\n';
     auto command = str::cat('"', str::toSv(pathToOptimizer.u8string()),
                             "\" ", fname, ' ', TEMPFNAME, ' ', COMMAND);
+    if (hasColorKey) {
+        command += KEYS_COLOR_KEY;
+    }
     std::system(command.c_str());
     if (!std::filesystem::exists(TEMPFNAME)) {
         throw std::logic_error(str::cat("Optimizer did not create ", TEMPFNAME));
