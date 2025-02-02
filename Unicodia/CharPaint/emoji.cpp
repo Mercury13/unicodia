@@ -140,19 +140,39 @@ namespace {
         if (firstSpace < 0 || firstSpace >= index)
             return {};
         auto nameLen = firstSpace - indName;
+        if (nameLen <= 0)
+            return {};
         std::string tagName;
         tagName.resize(nameLen);
         std::copy_n(bytes.cbegin() + indName, nameLen, tagName.begin());
-        std::cout << tagName << std::endl;
+
+        auto closingName = "</" + tagName;
+        auto closeStart = bytes.indexOf(closingName, index2 + 1);
+        if (closeStart < 0)
+            return {};
+        auto closeEnd = bytes.indexOf('>', closeStart + closingName.length());
+        if (closeEnd < 0)
+            return {};
+
+        return { .start = index1, .end = closeEnd + 1 };
     }
 }
 
 bool RecolorLib::recolorId(QByteArray& bytes, std::string_view id) const
 {
-    auto key = str::cat("=\"#", id, '"');
+    auto key = str::cat("id=\"", id, '"');
     auto tag = findTag(bytes, key, 0);
     if (!tag)
         return false;
+
+    auto leaveBefore = bytes.sliced(0, tag.start);
+    auto change = bytes.sliced(tag.start, tag.end - tag.start);
+    auto leaveAfter = bytes.sliced(tag.end);
+
+    runOn(change);
+    bytes = leaveBefore + change + leaveAfter;
+
+    return true;
 }
 
 void RecolorLib::recolorIds(QByteArray& bytes, std::span<const std::string> ids) const
