@@ -34,6 +34,8 @@ struct RecolorLib {
     void runOn(QByteArray& bytes) const;
     /// @param [in] race  '1' or '2'
     void runColorSeparatedBiracialOn(char race, QByteArray& bytes) const;
+    bool recolorId(QByteArray& bytes, std::string_view id) const;
+    void recolorIds(QByteArray& bytes, std::span<const std::string> ids) const;
 };
 
 namespace {
@@ -90,27 +92,139 @@ void RecolorLib::runColorSeparatedBiracialOn(char race, QByteArray& bytes) const
     repl(bytes, buf, handDark);
 }
 
+namespace {
+
+    struct TagInfo {
+        ptrdiff_t start = 0, end = 0;
+        constexpr operator bool() const { return end; }
+    };
+
+    TagInfo findImpairTag(
+            const QByteArray& bytes, const char* data, size_t start)
+    {
+        // Find marker tag
+        auto index = bytes.indexOf(data, start);
+        if (index < 0)
+            return {};
+        // Find tag limits
+        auto index1 = bytes.lastIndexOf('<', index);
+        if (index1 < 0)
+            return {};
+        auto index2 = bytes.indexOf("/>", index);
+        if (index2 < 0)
+            return {};
+        return TagInfo { .start = index1, .end = index2 + 2 };
+    }
+
+    TagInfo findTag(
+            const QByteArray& bytes, QByteArrayView needle, size_t start)
+    {
+        // Find marker tag
+        auto index = bytes.indexOf(needle, start);
+        if (index < 0)
+            return {};
+        // Find tag limits
+        auto index1 = bytes.lastIndexOf('<', index);
+        if (index1 < 0)
+            return {};
+        auto index2 = bytes.indexOf('>', index);
+        if (index2 < 0)
+            return {};
+        if (index2 > 0 && bytes[index2 - 1] == '/') {
+            // Impair tag?
+            return TagInfo { .start = index1, .end = index2 + 1 };
+        }
+        // Then got pair tag
+        auto indName = index1 + 1;
+        auto firstSpace = bytes.indexOf(' ', indName);
+        if (firstSpace < 0 || firstSpace >= index)
+            return {};
+        auto nameLen = firstSpace - indName;
+        std::string tagName;
+        tagName.resize(nameLen);
+        std::copy_n(bytes.cbegin() + indName, nameLen, tagName.begin());
+        std::cout << tagName << std::endl;
+    }
+}
+
+bool RecolorLib::recolorId(QByteArray& bytes, std::string_view id) const
+{
+    auto key = str::cat("=\"#", id, '"');
+    auto tag = findTag(bytes, key, 0);
+    if (!tag)
+        return false;
+}
+
+void RecolorLib::recolorIds(QByteArray& bytes, std::span<const std::string> ids) const
+{
+    for (auto& v : ids)
+        recolorId(bytes, v);
+}
+
+
+namespace {
+
+    inline QByteArray sliceBetween(
+            const QByteArray& bytes, const TagInfo& t1, const TagInfo& t2)
+    {
+        return bytes.sliced(t1.end, t2.start - t1.end);
+    }
+
+    std::vector<std::string> collectIds(const QByteArray& bytes)
+    {
+        std::vector<std::string> r;
+        size_t indStart = 0;
+        while (true) {
+            // 6 chars
+            static constexpr unsigned START_LEN = 6;
+            auto index = bytes.indexOf("\"url(#", indStart);
+            if (index < 0)
+                break;
+            auto startData = index + START_LEN;
+            static constexpr unsigned END_LEN = 2;
+            auto end = bytes.indexOf(")\"", startData);
+            if (index < 0)
+                break;
+
+            ptrdiff_t length = end - startData;
+            if (length > 0) {
+                std::string q;
+                q.resize(length);
+                std::copy_n(bytes.cbegin() + startData, length, q.begin());
+                r.push_back(std::move(q));
+            }
+
+            indStart = end + END_LEN;
+        }
+        return r;
+    }
+
+}   // anon namespace
+
+
 bool RecolorInfo::runReverseDelimited(QByteArray& bytes) const
 {
-    // Find marker tag
-    auto index = bytes.indexOf(R"("#c01c28")");
-    if (index < 0)
+    static const char* MARKER = R"("#c01c28")";
+    auto tagDefsRace2 = findImpairTag(bytes, MARKER, 0);
+    if (!tagDefsRace2)
         return false;
-    // Find tag limits
-    auto index1 = bytes.lastIndexOf('<', index);
-    if (index1 < 0)
+    auto tagRace2Race1 = findImpairTag(bytes, MARKER, tagDefsRace2.end);
+    if (!tagRace2Race1)
         return false;
-    auto index2 = bytes.indexOf("/>", index);
-    if (index2 < 0)
-        return false;
+    auto dataHead = bytes.sliced(0, tagDefsRace2.start);
     // [0…index1) is the 2nd race
-    auto data1_race2 = bytes.sliced(0, index1);
+    auto data1_race2 = sliceBetween(bytes, tagDefsRace2, tagRace2Race1);
+    auto idsRace2 = collectIds(data1_race2);
     recolor2->runOn(data1_race2);
     // (index2 …) is the 1st race
-    auto data2_race1 = bytes.sliced(index2 + 1);
+    auto data2_race1 = bytes.sliced(tagRace2Race1.end);
+    auto idsRace1 = collectIds(data2_race1);
     recolor1->runOn(data2_race1);
-    // Stick them w/o marker tag
-    bytes = data1_race2 + data2_race1;
+    // Run IDs
+    recolor1->recolorIds(dataHead, idsRace1);
+    recolor2->recolorIds(dataHead, idsRace2);
+    // Stick them w/o marker tags
+    bytes = dataHead + data1_race2 + data2_race1;
     return true;
 }
 
