@@ -468,7 +468,7 @@ namespace {
         ZWJ_GENDER,
         ZWJ_ACTIVITY,
         ZWJ_APPEARANCE,
-        ZWJ_FAMILY,
+        ZWJ_FAMILY,         ///< Couples too: several people w/o skintone (wrestlers are NOT family)
         ZWJ_MULTIRACIAL,    ///< By convention, isSkintone=0
         ZWJ_OTHER,
         OTHER_NATIONAL,     ///< National flags, like [U][A]; all OTHER have no skintone
@@ -558,6 +558,7 @@ namespace {
             return { .clazz = EmojiClass::ZWJ_MULTIRACIAL,
                      .isSkintone = false };  // by convention
         }
+        // Now no more than 1 skintone
         // Detech non-ZWJ sequences
         if (nZwj == 0) {
             if (nSkin != 0)
@@ -568,10 +569,13 @@ namespace {
                 return { .clazz = EmojiClass::OTHER_SUBDIVISION, .isSkintone = false };
             throw std::logic_error("Unknown non-ZWJ sequence");
         }
+        // Now at least 1 ZWJ
         // Detect ZWJ sequences
-        if (nPeople == nZwj + 1) {
+        if (nPeople >= 2) {
+            if (nZwj + 1 < nPeople)
+                throw std::logic_error("Multi-person emoji should have emough ZWJs");
             if (nSkin != 0)
-                throw std::logic_error("Families do not have skintones");
+                throw std::logic_error("Couples/families are either mutiracial or neutral");
             return { .clazz = EmojiClass::ZWJ_FAMILY, .isSkintone = false };
         }
         bool isSkin = nSkin;
