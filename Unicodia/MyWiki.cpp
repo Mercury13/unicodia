@@ -2787,6 +2787,13 @@ QString mywiki::buildHtml(const uc::Version& version)
                         appendValueIf(sp, 2, "Version.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
                     }
                 }
+                // Non-ZWJ
+                if (appendValueIf(sp, 1, "Version.Bullet.NewEmNot", version.stats.emoji.nw.other.nTotal())) {
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotSkin", version.stats.emoji.nw.other.nSingleSkintone);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotFlag", version.stats.emoji.nw.other.nNationalFlags);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotSubdiv", version.stats.emoji.nw.other.nSubdivisionFlags);
+                    appendValueIf(sp, 2, "Version.Bullet.NewNotKey", version.stats.emoji.nw.other.nKeycaps);
+                }
                 // ZWJ
                 if (appendValueIf(sp, 1, "Version.Bullet.NewEmZwj", version.stats.emoji.nw.zwj.nTotal())) {
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjMulti", version.stats.emoji.nw.zwj.nMultiracial);
@@ -2797,13 +2804,6 @@ QString mywiki::buildHtml(const uc::Version& version)
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjApp", version.stats.emoji.nw.zwj.appearance);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjColor", version.stats.emoji.nw.zwj.color);
                     appendValueIf(sp, 2, "Version.Bullet.NewZwjOther", version.stats.emoji.nw.zwj.other);
-                }
-                // Non-ZWJ
-                if (appendValueIf(sp, 1, "Version.Bullet.NewEmNot", version.stats.emoji.nw.other.nTotal())) {
-                    appendValueIf(sp, 2, "Version.Bullet.NewNotSkin", version.stats.emoji.nw.other.nSingleSkintone);
-                    appendValueIf(sp, 2, "Version.Bullet.NewNotFlag", version.stats.emoji.nw.other.nNationalFlags);
-                    appendValueIf(sp, 2, "Version.Bullet.NewNotSubdiv", version.stats.emoji.nw.other.nSubdivisionFlags);
-                    appendValueIf(sp, 2, "Version.Bullet.NewNotKey", version.stats.emoji.nw.other.nKeycaps);
                 }
             }
             // Total emoji
