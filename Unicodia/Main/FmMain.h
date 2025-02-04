@@ -17,7 +17,7 @@
 #include "QtMultiRadio.h"
 
 // Parts of Main
-#include "Main/tables.h"
+#include "tables.h"
 
 // CharPaint
 #include "CharPaint/global.h"

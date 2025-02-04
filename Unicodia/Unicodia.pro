@@ -41,6 +41,12 @@ SOURCES += \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
+    Main/FmMain.cpp \
+    Main/MainGui.cpp \
+    Main/WiLibCp.cpp \
+    Main/WiOsStyle.cpp \
+    Main/WiSample.cpp \
+    Main/WiShowcase.cpp \
     Main/tables.cpp \
     Search/engine.cpp \
     Search/nonAscii.cpp \
@@ -49,7 +55,6 @@ SOURCES += \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
-    MainGui.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/Fonts/TempFont.cpp \
@@ -71,15 +76,10 @@ SOURCES += \
     Uc/UcFonts.cpp \
     Uc/UcOldInput.cpp \
     Uc/UcScripts.cpp \
-    WiLibCp.cpp \
-    WiOsStyle.cpp \
-    WiSample.cpp \
-    WiShowcase.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
     d_Config.cpp \
-    main.cpp \
-    FmMain.cpp
+    main.cpp
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
@@ -120,19 +120,23 @@ HEADERS += \
     CharPaint/global.h \
     CharPaint/emoji.h \
     LocDefs.h \
+    Main/FmMain.h \
+    Main/MainGui.h \
     Main/tables.h \
+    Main/WiLibCp.h \
+    Main/WiOsStyle.h \
+    Main/WiSample.h \
+    Main/WiShowcase.h \
     Search/defs.h \
     Search/engine.h \
     Search/nonAscii.h \
     Search/request.h \
     Search/trie.h \
     Search/uc.h \
-    FmMain.h \
     FmMessage.h \
     FmPopup.h \
     FmTofuStats.h \
     LocList.h \
-    MainGui.h \
     MyWiki.h \
     Skin.h \
     Uc/FontDef.h \
@@ -149,21 +153,17 @@ HEADERS += \
     Uc/UcFlags.h \
     Uc/UcOldInput.h \
     Uc/UcSkin.h \
-    WiLibCp.h \
-    WiOsStyle.h \
-    WiSample.h \
-    WiShowcase.h \
     Wiki.h \
     c_SearchEdit.h \
     d_Config.h
 
 FORMS += \
-    FmMain.ui \
-    FmTofuStats.ui \
-    WiLibCp.ui \
-    WiOsStyle.ui \
-    WiSample.ui \
-    WiShowcase.ui
+    Main/FmMain.ui \
+    Main/WiLibCp.ui \
+    Main/WiOsStyle.ui \
+    Main/WiSample.ui \
+    Main/WiShowcase.ui \
+    FmTofuStats.ui
 
 INCLUDEPATH += \
     ../Libs \
@@ -176,6 +176,7 @@ INCLUDEPATH += \
     ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
+	Main \
     Uc
 
 LIBS += -lz
