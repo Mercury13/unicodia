@@ -11970,8 +11970,8 @@
       <p>* Size and colour are not encoded.</p>
       <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
       <p>* Similar signs with different meanings are encoded separately. A circle may mean tambourine, ring, pit…</p>
-      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it is not encoded.</p>
-      <p>* But if such form has a special meaning (leg+knife=injury), it is encoded.</p>
+      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
+      <p>* But if such form has a special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* A hieroglyph is extended if it’s attested at least three times, or is included in a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
@@ -11986,8 +11986,8 @@
       <p>* Размер и цвет не кодируются.</p>
       <p>* Если эти мелкие детали имеют значение, Юникод не для вас. Добавьте изображение.</p>
       <p>* Сходные знаки с разными значениями кодируются отдельно. Круг может значить бубен, кольцо, яму…</p>
-      <p>* Если иероглиф можно получить отзеркаливанием, поворотом и комбинированием, он не{{_}}кодируется.</p>
-      <p>* Но если такая форма имеет особое значение (нога+нож=рана), она кодируется.</p>
+      <p>* Если иероглиф можно получить отзеркаливанием, поворотом и комбинированием, он не{{_}}получит отдельной [[pt:codepoint|кодовой позиции]].</p>
+      <p>* Но если такая форма имеет особое значение (нога+нож=рана), то получит.</p>
       <p>* Иероглифы делятся на три типа: базовые, совместимые и расширенные.</p>
       <p>* Иероглиф становится расширенным, если он замечен трижды, или включён в крупный список вроде ''Thot'' или ''JSesh'', или широко используется исследователями. Тогда он получает право на кодирование.</p>
       <p>* Иероглиф становится базовым, если он подтверждён надёжным изображением (фото или достоверной обводкой). Если он закодирован в нескольких формах, часть форм могут быть исключены из базового списка.</p>

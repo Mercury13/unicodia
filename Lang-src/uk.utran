@@ -11971,8 +11971,8 @@
       <p>* Size and colour are not encoded.</p>
       <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
       <p>* Similar signs with different meanings are encoded separately. A circle may mean tambourine, ring, pit…</p>
-      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it is not encoded.</p>
-      <p>* But if such form has a special meaning (leg+knife=injury), it is encoded.</p>
+      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
+      <p>* But if such form has a special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* A hieroglyph is extended if it’s attested at least three times, or is included in a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
@@ -11987,9 +11987,9 @@
       <p>* Розмір та колір не кодуються.</p>
       <p>* Якщо ці дрібні деталі мають значення, Юнікод не{{_}}для вас. Додайте зображення.</p>
       <p>* Схожі знаки з різними значеннями кодуються окремо. Коло може значити бубон, кільце, яму…</p>
-      <p>* Якщо ієрогліф можна отримати віддзеркаленням, поворотом або комбінуванням, він не{{_}}кодується.</p>
-      <p>* Але якщо така форма має окреме значення (нога+ніж=рана), вона кодується.</p>
-      <p>* Ієрогліфи поділяються на три типи: базові, сумісні ра розширені.</p>
+      <p>* Якщо ієрогліф можна отримати віддзеркаленням, поворотом або комбінуванням, він не{{_}}отримає окремої [[pt:codepoint|кодової позиції]].</p>
+      <p>* Але якщо така форма має окреме значення (нога+ніж=рана), то отримає.</p>
+      <p>* Ієрогліфи поділяються на три типи: базові, сумісні та розширені.</p>
       <p>* Ієрогліф стає розширеним, якщо він помічений тричі, або включений у великий список на кшталт ''Thot'' чи ''JSesh'', або широко використовується дослідниками. Тоді він отримує право на кодування.</p>
       <p>* Ієрогліф стає базовим, якщо він підтверджений надійним зображенням (фото чи достовірним обведенням). Якщо він закодований у кількох формах, частину форм можуть виключити з базового списку.</p>
       <p>* Тривіальні форми та комбінації з Юнікоду{{_}}5.2{{-}}сумісні. Решта Юнікоду{{_}}5.2 (заснована на списку Ґардінера) автоматично базова.</p>
