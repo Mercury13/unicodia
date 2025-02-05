@@ -13902,6 +13902,9 @@
      <known-orig>Single-character and VS-16</known-orig>
      <transl>シングル文字とVS-16</transl>
     </text>
+    <text id="NewEm1a">
+     <orig>Single-character</orig>
+    </text>
     <text id="NewEm1This">
      <orig>from this Unicode</orig>
      <transl>このUnicodeから</transl>

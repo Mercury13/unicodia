@@ -462,7 +462,8 @@ namespace {
 
     enum class EmojiClass : unsigned char {
         NONE,
-        SINGLE_CHAR,    ///< incl. VS16
+        SINGLE_CHAR,
+        VS16,
         ZWJ_RIGHT,
         ZWJ_COLOR,
         ZWJ_GENDER,
@@ -491,7 +492,7 @@ namespace {
         case 2:
             switch (x[1]) {
             case cp::VS16:
-                return { .clazz = EmojiClass::SINGLE_CHAR, .isSkintone = false };
+                return { .clazz = EmojiClass::VS16, .isSkintone = false };
             case cp::SKIN1:
             case cp::SKIN2:
             case cp::SKIN3:
@@ -619,6 +620,9 @@ namespace {
         auto ce = classifyEmoji(node.value);
         switch (ce.clazz) {
         case EmojiClass::NONE: break;
+        case EmojiClass::VS16:
+            version.stats.emoji.nw.singleChar.areVs16Present = true;
+            [[fallthrough]];
         case EmojiClass::SINGLE_CHAR:
             if (ce.isSkintone) {
                 ++version.stats.emoji.nw.other.nSingleSkintone;

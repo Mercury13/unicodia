@@ -70,6 +70,7 @@ namespace uc {
                     struct SingleChar {
                         unsigned nThisUnicode = 0;
                         unsigned nOldUnicode = 0;
+                        bool areVs16Present = false;
                         unsigned nTotal() const noexcept { return nThisUnicode + nOldUnicode; }
                     } singleChar;
                     struct Zwj {

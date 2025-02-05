@@ -13926,6 +13926,10 @@
      <orig>Single-character and VS16</orig>
      <transl>Односимвольных и VS16</transl>
     </text>
+    <text id="NewEm1a">
+     <orig>Single-character</orig>
+     <transl>Односимвольных</transl>
+    </text>
     <text id="NewEm1This">
      <orig>from this Unicode</orig>
      <transl>из этого Юникода</transl>

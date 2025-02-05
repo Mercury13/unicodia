@@ -9738,6 +9738,9 @@
     <text id="NewEm1">
      <orig>Single-character and VS16</orig>
     </text>
+    <text id="NewEm1a">
+     <orig>Single-character</orig>
+    </text>
     <text id="NewEm1This">
      <orig>from this Unicode</orig>
     </text>

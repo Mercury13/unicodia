@@ -2781,7 +2781,9 @@ QString mywiki::buildHtml(const uc::Version& version)
             appendValue(sp, 0, "Version.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
             if (tot != 0) {
                 // Single-char
-                if (appendValueIf(sp, 1, "Version.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
+                auto singleKey = version.stats.emoji.nw.singleChar.areVs16Present
+                        ? "Version.Bullet.NewEm1" : "Version.Bullet.NewEm1a";
+                if (appendValueIf(sp, 1, singleKey, version.stats.emoji.nw.singleChar.nTotal())) {
                     if (version.stats.emoji.nw.singleChar.nOldUnicode > 0) {
                         appendValueIf(sp, 2, "Version.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
                         appendValueIf(sp, 2, "Version.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
