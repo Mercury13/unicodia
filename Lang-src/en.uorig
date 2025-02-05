@@ -7370,7 +7370,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Term “character” is ambiguous, so Unicode refers to own codes (numbers from 0 to 1,114,111₁₀=10,FFFF₁₆) as '''code points'''. A code point can be:</p>
+      <p>The term “character” is ambiguous, so Unicode refers to its own codes (numbers from 0 to 1,114,111₁₀=10,FFFF₁₆) as '''code points'''. A code point can be:</p>
       <p>* [[pt:graphic|Graphic]] (printable) character.</p>
       <p>* [[pt:control|Control]] command.</p>
       <p>* [[pt:format|Formatting]] command.</p>
