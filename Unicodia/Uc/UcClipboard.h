@@ -9,7 +9,7 @@
 namespace uc {
     class LibNode;
 
-    enum class CopiedChannel { CHAR, SAMPLE, HARD_VS15, HARD_VS16 };
+    enum class CopiedChannel { CHAR, SAMPLE, VS15, VS16 };
     void copyCp(char32_t cp, CopiedChannel channel);
     /// @return [+] string not empty
     bool copyString(std::u32string_view sv);

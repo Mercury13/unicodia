@@ -41,10 +41,10 @@ void uc::copyCp(char32_t cp, CopiedChannel channel)
                     q += QChar(cp::VS16);
                 }
             } break;
-        case CopiedChannel::HARD_VS15:
+        case CopiedChannel::VS15:
             tryAddVs(q, cp, QChar(cp::VS15));
             break;
-        case CopiedChannel::HARD_VS16:
+        case CopiedChannel::VS16:
             tryAddVs(q, cp, QChar(cp::VS16));
             break;
         }
