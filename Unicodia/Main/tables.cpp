@@ -344,13 +344,13 @@ void TableLocalMenu::init(
         menu->addAction(acCopyVs15);
         connect(acCopyVs15, &QAction::triggered, table,
                 [this]() {
-                    emit thingCopied(uc::CopiedChannel::VS15, nullptr);
+                    emit thingCopied(uc::CopiedChannel::HARD_VS15, nullptr);
                 });
     acCopyVs16 = new QAction("[CopyVs16]", menu);
         menu->addAction(acCopyVs16);
         connect(acCopyVs16, &QAction::triggered, table,
                 [this]() {
-                    emit thingCopied(uc::CopiedChannel::SAMPLE, nullptr);
+                    emit thingCopied(uc::CopiedChannel::HARD_VS16, nullptr);
                 });
     acCopyDotc = new QAction("[CopyDotc]", menu);
         menu->addAction(acCopyDotc);
@@ -426,8 +426,9 @@ void TableLocalMenu::popup(QWidget* widget, const QPoint& where)
     // Check actions
     auto charIf = model->charAt(table->currentIndex());
     acCopy->setEnabled(charIf.hasCode());
-    acCopyVs15->setVisible(charIf.hasCp() && charIf->isVs15Emoji());
-    acCopyVs16->setVisible(charIf.hasCp() && charIf->isVs16Emoji());
+    bool isEmoji = charIf.hasCp() && charIf->isEmoji();
+    acCopyVs15->setVisible(isEmoji);
+    acCopyVs16->setVisible(isEmoji);
     acCopyDotc->setVisible(charIf.hasCp() && charIf->isMark());
     emit menuActivated();
     // Get point

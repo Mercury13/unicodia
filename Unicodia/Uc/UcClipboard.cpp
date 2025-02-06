@@ -12,6 +12,20 @@
 #include "UcCp.h"
 
 
+namespace {
+
+    void tryAddVs(QString& q, char32_t cp, QChar vs)
+    {
+        if (auto ch = uc::cpsByCode[cp]) {
+            if (ch->isEmoji()) {
+                q += vs;
+            }
+        }
+    }
+
+}
+
+
 void uc::copyCp(char32_t cp, CopiedChannel channel)
 {
     QString q = str::toQ(cp);
@@ -27,12 +41,12 @@ void uc::copyCp(char32_t cp, CopiedChannel channel)
                     q += QChar(cp::VS16);
                 }
             } break;
-        case CopiedChannel::VS15:
-            if (auto ch = uc::cpsByCode[cp]) {
-                if (ch->isVs15Emoji()) {
-                    q += QChar(cp::VS15);
-                }
-            } break;
+        case CopiedChannel::HARD_VS15:
+            tryAddVs(q, cp, QChar(cp::VS15));
+            break;
+        case CopiedChannel::HARD_VS16:
+            tryAddVs(q, cp, QChar(cp::VS16));
+            break;
         }
     }
     QApplication::clipboard()->setText(q);
