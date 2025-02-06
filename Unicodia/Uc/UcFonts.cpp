@@ -69,6 +69,27 @@ char32_t recodeOriya(char32_t x)
     }
 }
 
+char32_t recodePseudographica(char32_t x)
+{
+    /// @todo [U17, gag] Recode Pseudographica
+    switch (x) {
+    // Legacy ex span 1 (3 chars)
+    case 0x1CCFA: return 0x1F40D;   // snake
+    case 0x1CCFB: return 0x1F6F8;   // flying saucer
+    //case 0x1CCFC:  nose: missing
+    // Legacy ex span 2 (5 chars)
+    case 0x1CEBA: return 0x1F377;   // fragile
+    case 0x1CEBB: return 0x1F3E2;   // office building
+    case 0x1CEBC: return 0x1F333;   // tree
+    case 0x1CEBD: return 0x1F34E;   // apple
+    case 0x1CEBE: return 0x1F352;   // cherry
+    case 0x1CEBF: return 0x1F353;   // strawberry
+    // Legacy (1 char)
+    //case 0x1FBFA: missing somehow
+    default: return x;
+    }
+}
+
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …1
@@ -275,7 +296,8 @@ constinit const uc::Font uc::fontInfo[] = {
     /// @todo [misrender] Want negative padding, but how??
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
-    { "BabelStonePseudographica.ttf" },                                         // Pseudographics
+    { { "BabelStonePseudographica.ttf", recodePseudographica }, Ffg::FALL_TO_NEXT }, // Pseudographics
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
