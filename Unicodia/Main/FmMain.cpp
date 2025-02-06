@@ -1149,6 +1149,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
     libLocalMenu.menu = new QMenu(ui->treeLibrary);
     libLocalMenu.acCopy = new QAction("[Copy]", libLocalMenu.menu);
         libLocalMenu.menu->addAction(libLocalMenu.acCopy);
+        libLocalMenu.menu->setDefaultAction(libLocalMenu.acCopy);
         QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
     libLocalMenu.menu->addSeparator();
     libLocalMenu.acAddToFavs = new QAction("[Add to favs]", libLocalMenu.menu);

@@ -336,6 +336,7 @@ void TableLocalMenu::init(
     menu = new QMenu(table);
     acCopy = new QAction("[Copy]", menu);
         menu->addAction(acCopy);
+        menu->setDefaultAction(acCopy);
         connect(acCopy, &QAction::triggered, table,
                 [this]() {
                     emit thingCopied(uc::CopiedChannel::CHAR, nullptr);
