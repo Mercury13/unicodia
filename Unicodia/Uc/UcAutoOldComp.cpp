@@ -1943,8 +1943,9 @@ OC::ATARI_ST,  // 1fbf6
 OC::ATARI_ST,  // 1fbf7
 OC::ATARI_ST,  // 1fbf8
 OC::ATARI_ST,  // 1fbf9
+OC::ATARI_ST,  // 1fbfa
 };
-static_assert(std::size(oldCompRange_41) == 250, "Autotool failed");
+static_assert(std::size(oldCompRange_41) == 251, "Autotool failed");
 
 constinit const uc::OldCompSpan uc::oldCompSpans[] {
 { .span = oldCompRange_0, .firstCp = 0xa0},
