@@ -162,8 +162,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },          // …1
       { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },               // …2
-      { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
-      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
+      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …3
+      { FNAME_UNIHAN, 120_pc },                                                 // …4
+      { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …5
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2

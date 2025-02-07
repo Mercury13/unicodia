@@ -2025,3 +2025,10 @@
 2FD3
 2FD4
 2FD5
+
+# U17 unstable characters, template unstable-u*.svg
+2B73A
+2B73B
+2B73C
+2B73D
+2B73E
