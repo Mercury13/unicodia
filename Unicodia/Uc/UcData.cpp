@@ -31,7 +31,6 @@ const uc::GlyphStyleSets uc::GlyphStyleSets::EMPTY;
 constinit const match::MainFont match::MainFont::INST;
 constinit const match::Normal match::Normal::INST;
 constinit const match::NullForTofu match::NullForTofu::INST;
-constinit const match::FallToLast match::FallToLast::INST;
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
@@ -2081,12 +2080,6 @@ bool match::Normal::check(char32_t cp, const uc::Font& font) const
 bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
 {
     return font.doesSupportChar(cp);
-}
-
-
-bool match::FallToLast::check(char32_t, const uc::Font& font) const
-{
-    return !font.flags.have(uc::Ffg::FALL_TO_NEXT);
 }
 
 
