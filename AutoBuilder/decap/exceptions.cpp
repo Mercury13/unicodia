@@ -449,6 +449,9 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("ligature tie below")            // ligature tie = smile
     EX("ligature tie")                  // Same
     EX("symbol of Iran")                // Just glitch
+    EX("combining Is below")            // Tricky
+    EX("combining Ur above")            // Same
+    EX("combining Us above")            // Same
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
