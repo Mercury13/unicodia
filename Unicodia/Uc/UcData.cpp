@@ -2079,7 +2079,7 @@ bool match::Normal::check(char32_t cp, const uc::Font& font) const
 
 bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
 {
-    return font.doesSupportChar(cp);
+    return !font.flags.have(uc::Ffg::COUNT_TOFU) && font.doesSupportChar(cp);
 }
 
 
