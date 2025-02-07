@@ -3400,7 +3400,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name">
      <orig>Sidetic</orig>
-     <transl>Сидетська</transl>
+     <transl>Сідетська</transl>
     </text>
    </group>
    <group id="10980">
@@ -8542,11 +8542,11 @@
    <group id="Sidt">
     <text id="Name">
      <orig>Sidetic</orig>
-     <transl>Сидетська</transl>
+     <transl>Сідетська</transl>
     </text>
     <text id="Lang">
      <orig>Sidetic ''(Anatolia)''</orig>
-     <transl>сидетська ''(Мала Азія)''</transl>
+     <transl>сідетська ''(Мала Азія)''</transl>
     </text>
     <text id="Text">
      <orig>
