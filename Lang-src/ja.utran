@@ -10880,7 +10880,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have beed 4,225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been 4,225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
       <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
       <p />
@@ -10894,6 +10894,21 @@
       <p />
       <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
      </orig>
+     <known-orig>
+      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have beed 4,225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p />
+      <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
+      <p />
+      <p>Most emoji are genderless; if you want you may add gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emoji: {{em|🤱}}{{_}}breast feeding and {{em|🧕}}{{_}}woman in headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
+      <p />
+      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change glyph.</p>
+      <p />
+      <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
+      <p />
+      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}16, four coloured emoji are standardized, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
+      <p />
+      <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
+     </known-orig>
      <transl>
       <p>[[pt:emoji|絵文字]] の原則の 1 つですが、これは最初から存在していたわけではありません。つまり、絵文字は、組み合わせ爆発を起こさずに可能な限り人種、性別、その他の少数派をサポートする必要があります。さまざまな人種構成の家族は 4,225 個のグリフになります。''(Unicode{{_}}{{version}} には {{nemoji}} 絵文字が含まれています。)''</p>
       <p />
