@@ -2091,7 +2091,7 @@
      <transl>Математические знаки</transl>
     </text>
     <text id="Text">
-     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. System of mathematical notation emerged in centuries and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality dy definition.</orig>
+     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. System of mathematical notation emerged in centuries and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality by definition.</orig>
      <transl>Простейшие математические знаки: математические операции, сравнение, интегралы, теория множеств. Система математических обозначений складывалась веками и отличается для разных стран, областей математики и даже математических школ. Например, плюс в круге {{smfunky|⊕}} может означать исключающее ИЛИ в формальной логике и машинное сложение в численных методах. Для равенства по определению используют {{sm|≔}}, {{sm|≝}}, {{sm|≡}}.</transl>
     </text>
    </group>
