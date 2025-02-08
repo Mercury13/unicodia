@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1739002097
+ModificationTime: 1739002802
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -108808,11 +108808,11 @@ EndChar
 
 StartChar: u10D54
 Encoding: 68948 68948 703
-Width: 867
+Width: 876
 VWidth: 1205
-Flags: W
-HStem: 0 60<379 790> 740 50<645.628 777.29>
-VStem: 813 34<629 692.075>
+Flags: WO
+HStem: 0 50<355 836> 740 50<643.958 775.442>
+VStem: 812 34<629 690.854>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -108821,7 +108821,7 @@ PUSHB_3
  0
 CALL
 PUSHB_1
- 24
+ 25
 SHP[rp1]
 PUSHB_1
  19
@@ -108834,7 +108834,7 @@ PUSHB_1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
- 33
+ 35
 MDAP[rnd]
 PUSHB_1
  11
@@ -108843,60 +108843,78 @@ PUSHB_1
  10
 MDRP[min,rnd,black]
 PUSHB_2
- 34
+ 36
  1
 CALL
-SVTCA[y-axis]
 PUSHB_2
- 14
- 19
+ 10
+ 11
 SRP1
 SRP2
+PUSHB_2
+ 20
+ 21
+IP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 19
+ 22
+SRP1
+SRP2
+PUSHB_1
+ 24
+IP
+PUSHB_1
+ 14
+SRP1
 PUSHB_7
  10
  11
  0
  23
- 27
- 30
- 31
+ 29
+ 32
+ 33
 DEPTH
 SLOOP
 IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 528 193 basechar 0
+AnchorPoint: "Umlaut RtL" 516 189 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-211 345 m 1,0,1
- 319 512 319 512 373.5 577.5 c 128,-1,2
- 428 643 428 643 483 692 c 0,3,4
- 595 790 595 790 727 790 c 0,5,6
- 760 790 760 790 785.5 771.5 c 128,-1,7
- 811 753 811 753 823 725 c 0,8,9
- 847 671 847 671 847 629 c 1,10,-1
- 813 626 l 1,11,12
- 813 669 813 669 788.5 704.5 c 128,-1,13
- 764 740 764 740 728 740 c 0,14,15
- 649 740 649 740 563.5 660 c 128,-1,16
- 478 580 478 580 324 366 c 2,17,-1
- 255 270 l 1,18,-1
- 379 60 l 1,19,-1
- 790 60 l 1,20,-1
- 790 0 l 1,21,-1
- 310 0 l 1,22,-1
- 198 190 l 1,23,-1
- 62 0 l 1,24,25
- 62 0 62 0 10 0 c 1,26,-1
- 104 350 l 1,27,-1
- 208 350 l 1,28,-1
- 211 345 l 1,0,1
-157 259 m 1,29,-1
- 139 290 l 1,30,-1
- 110 182 l 1,31,32
- 135 223 135 223 157 259 c 1,29,-1
+195 322 m 1,0,1
+ 308 501 308 501 367.5 572 c 128,-1,2
+ 427 643 427 643 482 692 c 0,3,4
+ 594 790 594 790 725 790 c 0,5,6
+ 758 790 758 790 783.5 771.5 c 128,-1,7
+ 809 753 809 753 822 725 c 0,8,9
+ 846 671 846 671 846 629 c 1,10,-1
+ 812 626 l 1,11,12
+ 812 669 812 669 787 704.5 c 128,-1,13
+ 762 740 762 740 726 740 c 0,14,15
+ 647 740 647 740 562 660 c 128,-1,16
+ 477 580 477 580 323 366 c 2,17,-1
+ 238 248 l 1,18,-1
+ 355 50 l 1,19,-1
+ 836 50 l 1,20,-1
+ 836 0 l 1,21,-1
+ 280 0 l 1,22,-1
+ 181 168 l 1,23,-1
+ 62 3 l 1,24,-1
+ 62 0 l 1,25,26
+ 62 0 62 0 11 0 c 1,27,-1
+ 10 0 l 1,28,-1
+ 104 350 l 1,29,-1
+ 178 350 l 1,30,-1
+ 195 322 l 1,0,1
+141 235 m 1,31,-1
+ 130 255 l 1,32,-1
+ 111 185 l 1,33,34
+ 127 211 127 211 141 235 c 1,31,-1
 EndSplineSet
 EndChar
 
@@ -113287,22 +113305,22 @@ EndChar
 
 StartChar: u10D74
 Encoding: 68980 68980 722
-Width: 936
+Width: 900
 VWidth: 1205
-Flags: WO
-HStem: 0 60<480 891>
+Flags: W
+HStem: 0 50<450 855>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
- 5
+ 9
  1
  0
 CALL
 PUSHB_1
- 7
+ 1
 SHP[rp1]
 PUSHB_1
- 2
+ 6
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -113316,21 +113334,20 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 587 299 basechar 0
+AnchorPoint: "Umlaut RtL" 584 252 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-205 350 m 1,0,-1
- 310 350 l 1,1,-1
- 480 60 l 1,2,-1
- 891 60 l 1,3,-1
- 891 0 l 1,4,-1
- 411 0 l 1,5,-1
- 235 299 l 1,6,-1
- 62 0 l 1,7,-1
- 5 0 l 1,8,-1
- 206 349 l 1,9,-1
- 205 350 l 1,0,-1
+218 268 m 1,0,-1
+ 63 0 l 1,1,-1
+ 5 0 l 1,2,-1
+ 207 350 l 1,3,4
+ 207 350 207 350 274 350 c 1,5,-1
+ 450 50 l 1,6,-1
+ 855 50 l 1,7,-1
+ 855 0 l 1,8,-1
+ 375 0 l 1,9,-1
+ 218 268 l 1,0,-1
 EndSplineSet
 EndChar
 
