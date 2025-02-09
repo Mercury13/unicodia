@@ -836,7 +836,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(1780), EcFont::FUNKY },
-    /// @todo [U17, tofu] Tolong Siki
+    // Tolong Siki somehow OK, though craggy
     { "Tols", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1999), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
