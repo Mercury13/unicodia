@@ -830,7 +830,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Permic",
             { EcScript::Perm, 0 }, MapSubtype::DEAD, EcScript::Perm },
     // Ugaritic OK
-    { 0x10380, 0x1039F, { 0x10399, EcContinent::ASIA },
+    { 0x10380, 0x1039F, { 0x10399, EcContinent::ASIA, Ifg::SHIFT_UP },
             "Ugaritic",
             { EcScript::Ugar, 0 }, MapSubtype::DEAD, EcScript::Ugar },
     // Old Persian OK
