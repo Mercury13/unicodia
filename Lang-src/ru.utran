@@ -4764,14 +4764,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>As of Unicode{{_}}16, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
+      <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
       <p />
-      <p>Arrows 1F8B8…BC are very thick on Ohio Scientific, but Consortium decided to draw them in normal thickness.</p>
+      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
      </orig>
      <transl>
-      <p>По состоянию на Юникод{{_}}16{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', 12 стрелок со старых компьютеров, и две стрелки для [[ps:Egyp|египетских]] иероглифов (направление чтения текста по столбцам).</p>
+      <p>148 стрелок из шрифтов ''Wingdings'' и ''Webdings''. Также стрелки со [[pk:1FB00|старых]] компьютеров, [[ps:Egyp|египтологии]] (направление чтения текста по столбцам) и химии.</p>
       <p />
-      <p>Стрелки 1F8B8…BC на Ohio Scientific очень толстые, но Консорциум решил рисовать их нормальной шириной.</p>
+      <p>Стрелки 1F8B8…BB на [[po:Ohio]] очень толстые, но Консорциум решил рисовать их нормальной шириной.</p>
      </transl>
     </text>
    </group>

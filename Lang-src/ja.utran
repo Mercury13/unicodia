@@ -4766,10 +4766,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
+      <p />
+      <p>Arrows 1F8B8…BC are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
+     </orig>
+     <known-orig>
       <p>As of Unicode{{_}}16, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
       <p />
       <p>Arrows 1F8B8…BC are very thick on Ohio Scientific, but Consortium decided to draw them in normal thickness.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode{{_}}16 の時点では、''Wingdings'' および ''Webdings'' フォントからの矢印が 148 個、レガシー コンピュータからの矢印が 12 個、および [[ps:Egyp|エジプト語]] 象形文字 (列方向のテキストの読み取り方向) の矢印が 2 個あります。</p>
       <p />
