@@ -149,7 +149,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::COMPETING, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::year(1913), EcFont::CJK_P01 },
+        Dating::year(1913), EcFont::CJK },
     // Brahmi OK, because of sheer importance installed Google Noto
     { "Brah", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -328,7 +328,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::yapprox(-2000), EcFont::CJK_P01, NO_FLAGS,
+        Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS,
         // Chinese here as the main Han language
         { .mantissa = 135, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},
     // Hanunoo OK, installed Google Noto font

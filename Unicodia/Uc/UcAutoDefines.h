@@ -287,7 +287,7 @@ namespace uc {
         SampleProxy(QString x, const uc::StyleSheet y) : text(std::move(x)), styleSheet(y) {}
     };
 
-    enum class DrawMethod;
+    enum class DrawMethod : unsigned char;
 
     enum class TofuState : unsigned char {
         PRESENT,    ///< Not a tofu, have char

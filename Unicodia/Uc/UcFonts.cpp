@@ -163,19 +163,17 @@ constinit const uc::Font uc::fontInfo[] = {
         // CJK chars are square, and there’s always not enough detail → bigger
     { "SimSun", Ffg::NOHINT_TINY | Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT, 120_pc }, // CJK fullwidth/halfwidth, fall to next
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
-    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1
-      { "SimSun", Ffg::NOHINT_TINY, 120_pc },                                   // …1
+    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::PLANE_1            // …CJK
+                    | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },
+    { FAM_BABEL_2, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
+    { FAM_BABEL_3, Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 2
+      { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
+      { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …4
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
+      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …6
+      { FNAME_UNIHAN, 120_pc },                                                 // …7 for tofu
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1, backed with Unicodia
       { FNAME_UNIHAN, 120_pc },                                                 // …1
-    { FAM_BABEL_2, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },  // CJK plane 2
-      { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },          // …1
-      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …2
-      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …3
-      { FNAME_UNIHAN, 120_pc },                                                 // …4 for tofu
-    { FAM_BABEL_3, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },  // CJK plane 3
-      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …Unicodia Han!!
-      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …1
-      { FNAME_UNIHAN, 120_pc },                                                 // …2 for tofu
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2

@@ -1039,6 +1039,12 @@ bool uc::Font::doesSupportChar(char32_t subj) const
         if (a != subj)
             return true;
     }
+    // Quick check by supported plane
+    if (auto planes = (flags & Ffg::PLANE_ANY).numeric(); planes != 0) {
+        unsigned plane = subj >> 16;
+        if (((static_cast<unsigned>(Ffg::PLANE_0) << plane) & planes) == 0)
+            return false;
+    }
     // Then load and check using one of methods:
     // rawFont or probeMetrics
     load(subj);

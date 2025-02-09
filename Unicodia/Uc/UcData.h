@@ -248,19 +248,16 @@ namespace uc {
         CHAM,
         CJK_SIMSUN,
           Z_SJS_1,
-         CJK_P01,
-           Z_CJ0_1,
+         CJK,
+           CJK_P2,      ///< The 1st is P2
+           Z_CJK_2,     ///< Babel2
+           Z_CJK_3,     ///< Sim0
+           Z_CJK_4,     ///< Sim2
+           Z_CJK_5,     ///< Unicodia Han
+           Z_CJK_6,
+           Z_CJK_7,
          CJK_P01_UHAN,  ///< Plane 0/1, but back with Unicodia Han
-           Z_CJU_1,
-         CJK_P2,
-           Z_CJ2_1,
-           Z_CJ2_2,
-           Z_CJ2_3,
-           Z_CJ2_4,
-         CJK_P3,
-           CJK_UHAN,    ///< The 2nd is Unicodia Han
-           Z_CJ3_1,
-           Z_CJ3_2,
+           CJK_UHAN,    ///< The 6th is Unicodia Han
          CJK_COMPAT,
            Z_CJC_1,
            Z_CJC_2,
@@ -429,7 +426,7 @@ namespace uc {
                                ///< but do not lose difference
     };
 
-    enum class Ffg {
+    enum class Ffg : unsigned {
         BOLD              = 1<<0,   ///< Weight: bold
         SEMIBOLD          = 1<<1,   ///< Weight: semibold
         LIGHT             = 1<<2,   ///< Weight: light
@@ -450,14 +447,21 @@ namespace uc {
         DESC_AVOID        = 1<<16,  ///< Avoid in description, use next instead
         GRAPHIC_SAMPLE    = 1<<17,  ///< Draw characters graphically, killing font’s dimensions
         COUNT_TOFU        = 1<<18,  ///< Count this font to tofu stats (for debugging)
+        PLANE_0           = 1<<19,  ///< Char outside plane 0 → unsupported
+        PLANE_1           = 1<<20,  ///< Same, plane 1
+        PLANE_2           = 1<<21,  ///< Same, plane 2
+        PLANE_3           = 1<<22,  ///< Same, plane 3
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
+        PLANE_ANY = PLANE_0 | PLANE_1 | PLANE_2 | PLANE_3,  /// Mask of all planes
     };
+    constexpr unsigned FONT_PLANE_SHIFT = 19;
+    static_assert(1 << FONT_PLANE_SHIFT == static_cast<int>(Ffg::PLANE_0), "Fix FONT_PLANE_SHIFT");
 
     DEFINE_ENUM_OPS(Ffg)
 
     struct LoadedFont;
 
-    enum class DrawMethod {
+    enum class DrawMethod : unsigned char {
         // Font-based methods
         SAMPLE,             ///< Take font and draw string
         SPACE,              ///< Take font, measure space width and draw 2 lines
