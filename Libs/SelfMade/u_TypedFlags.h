@@ -14,7 +14,7 @@ struct FlagStorage {
                                             >::type;
 };
 
-enum class NoFlags { INST };
+enum class NoFlags : unsigned char { INST };
 constexpr NoFlags NO_FLAGS = NoFlags::INST;
 
 template <class En>
