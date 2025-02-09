@@ -167,6 +167,7 @@ constinit const uc::Font uc::fontInfo[] = {
                     | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },
     { FAM_BABEL_2, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
     { FAM_BABEL_3, Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 2
+        // SimSun needed for one hiero 34F0: BS drew a hypothetical (not attested by Unicode) Chinese version
       { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …4
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
