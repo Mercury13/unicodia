@@ -1040,9 +1040,9 @@ bool uc::Font::doesSupportChar(char32_t subj) const
             return true;
     }
     // Quick check by supported plane
-    if (auto planes = (flags & Ffg::PLANE_ANY).numeric(); planes != 0) {
-        unsigned plane = subj >> 16;
-        if (((Flags<Ffg>::toStorage(Ffg::PLANE_0) << plane) & planes) == 0)
+    if (auto supportedPlanes = (flags & Ffg::PLANE_ANY).numeric(); supportedPlanes != 0) {
+        unsigned itsPlane = subj >> 16;
+        if (((Flags<Ffg>::toStorage(Ffg::PLANE_0) << itsPlane) & supportedPlanes) == 0)
             return false;
     }
     // Then load and check using one of methods:
