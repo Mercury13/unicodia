@@ -13484,6 +13484,9 @@
      <orig>Country letters</orig>
      <transl>国別文字</transl>
     </text>
+    <text id="OnOff">
+     <orig>On/off</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

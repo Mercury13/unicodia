@@ -748,7 +748,15 @@
 			<d>℄ ⌭ ⌮ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵ ⏤ ⏥</d>
 		</f>
 		<f loc="Electro">
-			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ⏦ ⏧ ⏚ ⏛ 𜰈 𜰎 𜰏 𜰐 𜰑 𜰓 𜰔 𜰕 𜰖 𜰙 𜰚</d>
+			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ∿ ⏦ ⏧ ⏚ ⏛ 𜰈 𜰎 𜰏 𜰐 𜰑 𜰓 𜰔 𜰕 𜰖 𜰙 𜰚</d>
+		</f>
+		<f loc="OnOff">
+			<sq v="⏻" name="Incomplete on/off" />
+			<sq v="⏾" name="Incomplete off, sleep mode" />
+			<sq v="⏼" name="Complete on/off" />
+			<sq v="◯" name="Complete off" />
+			<sq v="⏽" name="On" />			
+			<d>☐ ☑ ☒</d>
 		</f>
 	</f>
 	<f loc="Game">

@@ -13482,6 +13482,10 @@
      <orig>Country letters</orig>
      <transl>Літери країн</transl>
     </text>
+    <text id="OnOff">
+     <orig>On/off</orig>
+     <transl>Увімк/вимк</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

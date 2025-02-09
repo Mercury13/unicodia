@@ -9394,6 +9394,9 @@
     <text id="Regional">
      <orig>Country letters</orig>
     </text>
+    <text id="OnOff">
+     <orig>On/off</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

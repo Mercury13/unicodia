@@ -13481,6 +13481,10 @@
      <orig>Country letters</orig>
      <transl>Буквы стран</transl>
     </text>
+    <text id="OnOff">
+     <orig>On/off</orig>
+     <transl>Вкл/выкл</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
