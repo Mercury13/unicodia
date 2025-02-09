@@ -751,11 +751,11 @@
 			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ∿ ⏦ ⏧ ⏚ ⏛ 𜰈 𜰎 𜰏 𜰐 𜰑 𜰓 𜰔 𜰕 𜰖 𜰙 𜰚</d>
 		</f>
 		<f loc="OnOff">
-			<sq v="⏻" name="Incomplete on/off" />
-			<sq v="⏾" name="Incomplete off, sleep mode" />
-			<sq v="⏼" name="Complete on/off" />
-			<sq v="◯" name="Complete off" />
-			<sq v="⏽" name="On" />			
+			<sq v="⏻" name="incomplete on/off" />
+			<sq v="⏾" name="incomplete off, sleep mode" />
+			<sq v="⏼" name="complete on/off" />
+			<sq v="⭘" name="complete off" />
+			<sq v="⏽" name="on" />			
 			<d>☐ ☑ ☒</d>
 		</f>
 	</f>

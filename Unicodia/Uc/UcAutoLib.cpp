@@ -8899,11 +8899,11 @@ constinit const uc::LibNode uc::libNodes[9927] {
 { U"\U0001CC16", {}, 8231, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8893
 { U"\U0001CC19", {}, 8231, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8894
 { U"\U0001CC1A", {}, 8231, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8895
-{ U"\u23FB", u8"Incomplete on/off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8896
-{ U"\u23FE", u8"Incomplete off, sleep mode", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8897
-{ U"\u23FC", u8"Complete on/off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8898
-{ U"\u25EF", u8"Complete off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8899
-{ U"\u23FD", u8"On", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8900
+{ U"\u23FB", u8"incomplete on/off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8896
+{ U"\u23FE", u8"incomplete off, sleep mode", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8897
+{ U"\u23FC", u8"complete on/off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8898
+{ U"\u2B58", u8"complete off", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8899
+{ U"\u23FD", u8"on", 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8900
 { U"\u2610", {}, 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8901
 { U"\u2611", {}, 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8902
 { U"\u2612", {}, 8232, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8903
