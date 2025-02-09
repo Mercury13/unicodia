@@ -454,8 +454,6 @@ namespace uc {
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
         PLANE_ANY = PLANE_0 | PLANE_1 | PLANE_2 | PLANE_3,  /// Mask of all planes
     };
-    constexpr unsigned FONT_PLANE_SHIFT = 19;
-    static_assert(1 << FONT_PLANE_SHIFT == static_cast<int>(Ffg::PLANE_0), "Fix FONT_PLANE_SHIFT");
 
     DEFINE_ENUM_OPS(Ffg)
 
