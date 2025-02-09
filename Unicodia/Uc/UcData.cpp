@@ -1042,6 +1042,7 @@ bool uc::Font::doesSupportChar(char32_t subj) const
     // Quick check by supported plane
     if (auto supportedPlanes = (flags & Ffg::PLANE_ANY).numeric(); supportedPlanes != 0) {
         unsigned itsPlane = subj >> 16;
+        // std::to_underlying of C++23 would be cool!
         if (((Flags<Ffg>::toStorage(Ffg::PLANE_0) << itsPlane) & supportedPlanes) == 0)
             return false;
     }
