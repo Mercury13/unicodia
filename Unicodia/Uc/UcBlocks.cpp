@@ -556,7 +556,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
             "Bopomofo Extended",
             { EcScript::Bopo, 1 }, MapSubtype::ALIVE,
-            EcScript::Bopo, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Bopo, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK strokes OK
     { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
             "CJK Strokes",
@@ -1557,34 +1557,34 @@ constinit const uc::Block uc::blocks[] {
     { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK },
             "CJK Unified Ideographs Extension B",
             { EcScript::Hani, 'B' }, MapSubtype::ALIVE,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK C OK
     { 0x2A700, 0x2B73F, { 0x2A704, EcContinent::CJK },
             "CJK Unified Ideographs Extension C",
             { EcScript::Hani, 'C' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK D OK
     { 0x2B740, 0x2B81F, { 0x2B742, EcContinent::CJK },
             "CJK Unified Ideographs Extension D",
             { EcScript::Hani, 'D' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK E OK
     // Remove 2nd horizontal line from above from 2B283, and you’ll get
     //   common 4E1C “east”. But that’s probably feature, not bug
     { 0x2B820, 0x2CEAF, { 0x2B823, EcContinent::CJK },
             "CJK Unified Ideographs Extension E",
             { EcScript::Hani, 'E' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK F OK
     { 0x2CEB0, 0x2EBEF, { 0x2CEB5, EcContinent::CJK },
             "CJK Unified Ideographs Extension F",
             { EcScript::Hani, 'F' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK I OK, BabelStone
     { 0x2EBF0, 0x2EE5F, { 0x2EBF5, EcContinent::CJK },
             "CJK Unified Ideographs Extension I",
             { EcScript::Hani, 'I' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P2, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compat OK
     { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
             "CJK Compatibility Ideographs Supplement",
@@ -1594,17 +1594,17 @@ constinit const uc::Block uc::blocks[] {
     { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
             "CJK Unified Ideographs Extension G",
             { EcScript::Hani, 'G' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P3, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK H OK, UnicodiaHan
     { 0x31350, 0x323AF, { 0x31378, EcContinent::CJK },
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P3, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     /// @todo [U17, tofu] CJK J
     { 0x323B0, 0x3347F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "CJK Unified Ideographs Extension J",
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P3, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Tags OK
     { 0xE0000, 0xE007F,
             { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },

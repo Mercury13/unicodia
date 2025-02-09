@@ -996,7 +996,8 @@ namespace {
         if (name == "sm"sv) {
             appendFont(s, context.font, x, SIZE_SAMPLE);
         } else if (name == "smb"sv) {
-            appendFont(s, uc::EcFont::CJK_NEWHAN, x, 3);
+            /// @todo [future] Plane 2 in text?
+            appendFont(s, uc::EcFont::CJK_P2, x, 3);
         } else if (name == "smfunky"sv) {
             appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
         } else if (name == "smtable"sv) {

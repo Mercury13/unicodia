@@ -24,7 +24,9 @@ constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "UnicodiaFunky.ttf";
 constexpr uc::Family FAM_FUNKY { FNAME_FUNKY };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf" };
-constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf" };
+constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHan_BMP.ttf";
+constexpr uc::Family FAM_BABEL_2 { "BabelStoneHan_SIP.ttf" };
+constexpr uc::Family FAM_BABEL_3 { "BabelStoneHan_TIP.ttf" };
 constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf" };
 constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
 
@@ -159,30 +161,37 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, 12_bot },                 // Chakma
     { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, 12_bot },             // Cham
         // CJK chars are square, and there’s always not enough detail → bigger
-    { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK
+    { "SimSun", Ffg::NOHINT_TINY | Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT, 120_pc }, // CJK fullwidth/halfwidth, fall to next
+      { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
+    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1
+      { "SimSun", Ffg::NOHINT_TINY, 120_pc },                                   // …1
+    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1, backed with Unicodia
+      { FNAME_UNIHAN, 120_pc },                                                 // …1
+    { FAM_BABEL_2, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },  // CJK plane 2
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },          // …1
-      { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },               // …2
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …2
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …3
-      { FNAME_UNIHAN, 120_pc },                                                 // …4
+      { FNAME_UNIHAN, 120_pc },                                                 // …4 for tofu
+    { FAM_BABEL_3, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },  // CJK plane 3
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …Unicodia Han!!
+      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …1
+      { FNAME_UNIHAN, 120_pc },                                                 // …2 for tofu
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2
       { "MS Mincho", 120_pc },                                                  // …3
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 100_pc },                               // …1
-      { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …2
-    { "SimSun", Ffg::NOHINT_TINY | Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT, 120_pc }, // CJK SimSun unhinted, fall to next
-    { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
-      { FNAME_UNIHAN, 120_pc },                                                 // …1
-    { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK symbols
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 100_pc },                                 // …1
+      { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …2
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // CJK symbols
       { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                 // …1
-      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
+      { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                             // …2
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
       { FNAME_KOREAN, 110_pc},                                                  // …1
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 125_pc},           // CJK enclosed
-      { FNAME_BABEL, 120_pc },                                                  // …1
+      { FNAME_BABEL_01, 120_pc },                                                  // …1
     { { "NotoSansCuneiform-Regular.ttf", recodeCuneiform } },                   // Cuneiform
     { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …1 for descriptions
@@ -191,7 +200,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID}, // Dingbat
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 20_bot }, // …1
       { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2
-      { FNAME_BABEL, 130_pc },                                                  // …3
+      { FNAME_BABEL_01, 130_pc },                                                  // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Dingbat 2
       { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 10_bot },      // …1
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 20_bot },      // …2
@@ -227,7 +236,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanunoo-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Hanunoo
     { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
     { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
-      { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …1
+      { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Kannada
@@ -249,7 +258,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
       { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1 for sone patches
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
-      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
+      { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                            // …3 U14
         // Hariphunchai4: too small, need smth for virtual virama, incomplete
         // SIL Payap Lanna: bad char for virtual virama, one char missing
         // Lamphun: some mod of older Hariphunchai4, cropped (fixed everything, now UnicodiaLanna)
