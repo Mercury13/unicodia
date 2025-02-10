@@ -2758,7 +2758,7 @@ QString mywiki::buildHtml(const uc::Version& version)
         text += "<p>";
         // Transient
         str::QSep sp(text, "<br>");
-        appendValueIf(sp, 0, "Prop.Bullet.Transient", version.stats.chars.nTransient);
+        appendValueIf(sp, 0, "Version.Bullet.Transient", version.stats.chars.nTransient);
         auto link = version.link();
         static constexpr std::string_view NO_SCHEMA {};
         static constexpr std::u8string_view NO_LINK {};
