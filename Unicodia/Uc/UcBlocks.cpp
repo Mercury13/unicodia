@@ -1601,7 +1601,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'H' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     /// @todo [U17, tofu] CJK J
-    { 0x323B0, 0x3347F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x323B0, 0x3347F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG, SvgHint { 11, 2, ImbaX::LEFT_3 } },
             "CJK Unified Ideographs Extension J",
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
