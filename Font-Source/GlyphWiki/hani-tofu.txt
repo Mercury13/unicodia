@@ -8,7 +8,6 @@
 31369
 3137B
 3137D
-31381
 31383
 31387
 31389
@@ -757,7 +756,6 @@
 31AF0
 31AF1
 31AF2
-31AF3
 31AF4
 31AF5
 31AF6
@@ -2027,8 +2025,4 @@
 2FD5
 
 # U17 unstable characters, template unstable-u*.svg
-2B73A
-2B73B
-2B73C
-2B73D
-2B73E
+# (none for now, wait for GlyphWiki to implement something)
