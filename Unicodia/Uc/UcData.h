@@ -249,8 +249,8 @@ namespace uc {
         CJK_SIMSUN,
           Z_SJS_1,
          CJK,
-           CJK_P2,      ///< The 1st is P2
-           Z_CJK_2,     ///< Babel2
+           Z_CJK_1,     ///< Babel2
+           Z_CJK_2,     ///< Babel3
            Z_CJK_3,     ///< Sim0
            Z_CJK_4,     ///< Sim2
            Z_CJK_5,     ///< Unicodia Han
@@ -451,6 +451,7 @@ namespace uc {
         PLANE_1           = 1<<20,  ///< Same, plane 1
         PLANE_2           = 1<<21,  ///< Same, plane 2
         PLANE_3           = 1<<22,  ///< Same, plane 3
+        DESC_EXTENDED     = 1<<23,  ///< Build description’s samples from several fonts
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
         PLANE_ANY = PLANE_0 | PLANE_1 | PLANE_2 | PLANE_3,  /// Mask of all planes
     };

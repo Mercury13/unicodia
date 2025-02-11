@@ -24,6 +24,12 @@ void str::append(QString& x, std::u8string_view s)
 }
 
 
+void str::append(QString& x, std::u32string_view s)
+{
+    x += QString::fromUcs4(s.data(), s.size());
+}
+
+
 void str::QSep::sep()
 {
     if (s.length() != len)

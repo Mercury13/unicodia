@@ -729,8 +729,11 @@ namespace {
 
     constexpr int SIZE_SAMPLE = -1;
 
-    void appendFont(QString& s, const uc::Font& font, std::string_view x, int size)
+    template <class Ch>
+    void appendNormalFont(QString& s, const uc::Font& font, std::basic_string_view<Ch> x, int size)
     {
+        if (x.empty())
+            return;
         s += "<font face='";
         s += font.familiesComma();
         s += '\'';
@@ -746,6 +749,52 @@ namespace {
         s += ">";
         str::append(s, x);
         str::append(s, "</font>");
+    }
+
+    const uc::Font* getExtendedFont(const uc::Font* font, char32_t c)
+    {
+        for (; font->flags.have(uc::Ffg::FALL_TO_NEXT); ++font) {
+            if (font->flags.have(uc::Ffg::DESC_AVOID))
+                continue;
+            if (font->doesSupportChar(c))
+                return font;
+        }
+        return font;
+    }
+
+    void appendExtendedFont(QString& s, const uc::Font& font, std::string_view x, int size)
+    {
+        if (x.empty())
+            return;
+        auto cps = mojibake::toQ<std::u32string>(x);
+        // Shouldn’t really
+        if (cps.empty())
+            return;
+        size_t iWritten = 0;
+        const uc::Font* workingFont = nullptr;
+        for (size_t i = 0; i < cps.length(); ++i) {
+            auto newFont = getExtendedFont(&font, cps[i]);
+            if (newFont != workingFont) {
+                std::u32string_view part = std::u32string_view{cps}.substr(iWritten, i - iWritten);
+                appendNormalFont(s, *workingFont, part, size);
+                iWritten = i;
+                workingFont = newFont;
+            }
+        }
+        if (workingFont) {  // Should always really
+            std::u32string_view tail = std::u32string_view{cps}.substr(iWritten);
+            appendNormalFont(s, *workingFont, tail, size);
+        }
+    }
+
+    void appendFont(QString& s, const uc::Font& font, std::string_view x, int size)
+    {
+        if (font.flags.have(uc::Ffg::DESC_EXTENDED)) {
+            // Extended font
+            appendExtendedFont(s, font, x, size);
+        } else {
+            appendNormalFont(s, font, x, size);
+        }
     }
 
     void appendFont(QString& s, uc::EcFont fontId, std::string_view x, int size)
@@ -997,7 +1046,7 @@ namespace {
             appendFont(s, context.font, x, SIZE_SAMPLE);
         } else if (name == "smb"sv) {
             /// @todo [future] Plane 2 in text?
-            appendFont(s, uc::EcFont::CJK_P2, x, 3);
+            appendFont(s, uc::EcFont::CJK, x, 3);
         } else if (name == "smfunky"sv) {
             appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
         } else if (name == "smtable"sv) {
