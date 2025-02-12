@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1739392286
+ModificationTime: 1739392975
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -882,7 +882,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 429 33 14
+WinInfo: 462 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -108811,7 +108811,7 @@ Encoding: 68948 68948 703
 Width: 886
 VWidth: 1205
 Flags: W
-HStem: 0 50<355 836> 740 50<653.958 785.442>
+HStem: 0 70<343 836> 740 50<653.958 785.442>
 VStem: 822 34<629 690.854>
 TtInstrs:
 SVTCA[y-axis]
@@ -108918,7 +108918,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 543 199 basechar 0
+AnchorPoint: "Umlaut RtL" 546 253 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -108935,8 +108935,8 @@ SplineSet
  657 740 657 740 572 660 c 128,-1,16
  487 580 487 580 333 366 c 2,17,-1
  243 240 l 1,18,-1
- 355 50 l 1,19,-1
- 836 50 l 1,20,-1
+ 343 70 l 1,19,-1
+ 836 70 l 1,20,-1
  836 0 l 1,21,-1
  280 0 l 1,22,-1
  185 160 l 1,23,-1
@@ -108949,7 +108949,7 @@ SplineSet
 154 213 m 1,31,-1
  130 255 l 1,32,-1
  89 104 l 1,33,34
- 89 104 89 104 154 213 c 1,31,-1
+ 119 152 119 152 154 213 c 1,31,-1
 EndSplineSet
 EndChar
 
@@ -109967,7 +109967,7 @@ StartChar: u10D59
 Encoding: 68953 68953 708
 Width: 744
 VWidth: 1205
-Flags: WO
+Flags: W
 HStem: 0 21G<10 76.4198 257 323.532> 243 50<164 309> 740 50<387.305 570.013>
 VStem: 10 60<0 21.8077> 257 60<0 21.4321> 631 103<507.939 678.831>
 TtInstrs:
@@ -113247,8 +113247,8 @@ StartChar: u10D74
 Encoding: 68980 68980 722
 Width: 900
 VWidth: 1205
-Flags: W
-HStem: 0 50<450 855>
+Flags: WO
+HStem: 0 70<438 855>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -113274,7 +113274,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 584 252 basechar 0
+AnchorPoint: "Umlaut RtL" 575 239 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -113283,8 +113283,8 @@ SplineSet
  5 0 l 1,2,-1
  207 350 l 1,3,4
  207 350 207 350 274 350 c 1,5,-1
- 450 50 l 1,6,-1
- 855 50 l 1,7,-1
+ 438 70 l 1,6,-1
+ 855 70 l 1,7,-1
  855 0 l 1,8,-1
  375 0 l 1,9,-1
  218 268 l 1,0,-1
