@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1739392975
+ModificationTime: 1739393001
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -108810,7 +108810,7 @@ StartChar: u10D54
 Encoding: 68948 68948 703
 Width: 886
 VWidth: 1205
-Flags: W
+Flags: WO
 HStem: 0 70<343 836> 740 50<653.958 785.442>
 VStem: 822 34<629 690.854>
 TtInstrs:
@@ -108918,7 +108918,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 546 253 basechar 0
+AnchorPoint: "Umlaut RtL" 594 207 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -113247,7 +113247,7 @@ StartChar: u10D74
 Encoding: 68980 68980 722
 Width: 900
 VWidth: 1205
-Flags: WO
+Flags: W
 HStem: 0 70<438 855>
 TtInstrs:
 SVTCA[y-axis]
