@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1739362617
+ModificationTime: 1739363013
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -876,12 +876,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 129195 33 14
+WinInfo: 528 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -108807,11 +108808,11 @@ EndChar
 
 StartChar: u10D54
 Encoding: 68948 68948 703
-Width: 876
+Width: 886
 VWidth: 1205
-Flags: W
-HStem: 0 50<355 836> 740 50<643.958 775.442>
-VStem: 812 34<629 690.854>
+Flags: WO
+HStem: 0 50<355 836> 740 50<653.958 785.442>
+VStem: 822 34<629 690.854>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -108820,7 +108821,7 @@ PUSHB_3
  0
 CALL
 PUSHB_1
- 25
+ 26
 SHP[rp1]
 PUSHB_1
  19
@@ -108845,6 +108846,51 @@ PUSHB_2
  36
  1
 CALL
+PUSHB_1
+ 54
+SMD
+PUSHW_3
+ 15812
+ -4293
+ 21
+CALL
+SPVFS
+PUSHB_1
+ 26
+MDAP[no-rnd]
+SFVTPV
+PUSHB_1
+ 27
+MDRP[grey]
+PUSHB_2
+ 33
+ 32
+MIRP[rp0,min,black]
+PUSHB_1
+ 32
+MDRP[grey]
+SVTCA[y-axis]
+PUSHB_3
+ 27
+ 32
+ 33
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
+SVTCA[x-axis]
+PUSHB_4
+ 26
+ 27
+ 32
+ 33
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
+PUSHB_1
+ 64
+SMD
+SVTCA[x-axis]
 PUSHB_2
  10
  11
@@ -108857,63 +108903,53 @@ IP
 IP
 SVTCA[y-axis]
 PUSHB_2
+ 14
  19
- 22
 SRP1
 SRP2
-PUSHB_1
- 24
-IP
-PUSHB_1
- 14
-SRP1
-PUSHB_7
+PUSHB_4
  10
  11
- 0
  23
  29
- 32
- 33
 DEPTH
 SLOOP
 IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Umlaut RtL" 516 189 basechar 0
+AnchorPoint: "Umlaut RtL" 543 199 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-195 322 m 1,0,1
- 308 501 308 501 367.5 572 c 128,-1,2
- 427 643 427 643 482 692 c 0,3,4
- 594 790 594 790 725 790 c 0,5,6
- 758 790 758 790 783.5 771.5 c 128,-1,7
- 809 753 809 753 822 725 c 0,8,9
- 846 671 846 671 846 629 c 1,10,-1
- 812 626 l 1,11,12
- 812 669 812 669 787 704.5 c 128,-1,13
- 762 740 762 740 726 740 c 0,14,15
- 647 740 647 740 562 660 c 128,-1,16
- 477 580 477 580 323 366 c 2,17,-1
- 238 248 l 1,18,-1
+299 465 m 0,0,1
+ 348 537 348 537 392.5 590 c 128,-1,2
+ 437 643 437 643 492 692 c 0,3,4
+ 604 790 604 790 735 790 c 0,5,6
+ 768 790 768 790 793.5 771.5 c 128,-1,7
+ 819 753 819 753 832 725 c 0,8,9
+ 856 671 856 671 856 629 c 1,10,-1
+ 822 626 l 1,11,12
+ 822 669 822 669 797 704.5 c 128,-1,13
+ 772 740 772 740 736 740 c 0,14,15
+ 657 740 657 740 572 660 c 128,-1,16
+ 487 580 487 580 333 366 c 2,17,-1
+ 243 240 l 1,18,-1
  355 50 l 1,19,-1
  836 50 l 1,20,-1
  836 0 l 1,21,-1
  280 0 l 1,22,-1
- 181 168 l 1,23,-1
- 62 3 l 1,24,-1
- 62 0 l 1,25,26
- 62 0 62 0 11 0 c 1,27,-1
- 10 0 l 1,28,-1
- 104 350 l 1,29,-1
- 178 350 l 1,30,-1
- 195 322 l 1,0,1
-141 235 m 1,31,-1
+ 185 160 l 1,23,-1
+ 70 0 l 1,24,25
+ 70 0 70 0 10 0 c 1,26,-1
+ 104 350 l 1,27,-1
+ 178 350 l 1,28,-1
+ 206 303 l 1,29,30
+ 295 459 295 459 299 465 c 0,0,1
+154 213 m 1,31,-1
  130 255 l 1,32,-1
- 111 185 l 1,33,34
- 127 211 127 211 141 235 c 1,31,-1
+ 89 104 l 1,33,34
+ 89 104 89 104 154 213 c 1,31,-1
 EndSplineSet
 EndChar
 
@@ -174506,7 +174542,7 @@ EndChar
 StartChar: u1F8D8
 Encoding: 129240 129240 1300
 Width: 1134
-Flags: WO
+Flags: W
 HStem: -63.5381 45<441.101 542.872> 318 54<51 461.262 522.711 945>
 VStem: 375.811 45.2006<1.08864 185.387> 562.961 45.2017<1.08882 185.017>
 TtInstrs:

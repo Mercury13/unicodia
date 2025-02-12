@@ -27,9 +27,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.53386562"
-     inkscape:cx="1919.9588"
-     inkscape:cy="291.2718"
+     inkscape:zoom="0.755"
+     inkscape:cx="1578.8079"
+     inkscape:cy="631.12583"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -208,6 +208,20 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="1498.9205,200"
+       orientation="-0.81228002,0.58326766"
+       id="guide8"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="1586.0595,410.94208"
+       orientation="0.96592603,-0.2588183"
+       id="guide17"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <path
      style="fill:#e66100;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -241,7 +255,7 @@
      sodipodi:nodetypes="ccccc" />
   <path
      style="fill:#e66100;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 1757.3147,334.54461 C 1875.8034,161.02696 2010.3686,10 2193.4267,10 c 95.6743,0 120.0753,118.82254 120.0753,161.3228 l -33.3677,2.74492 C 2280.1343,119.21513 2244.4685,60 2194.3908,60 2088.1193,60 1993.8793,151.74354 1791.2803,433.89026 L 1528.3907,800 h -49.4702 c 71.0225,-156.32297 244.6223,-415.999 278.3942,-465.45539 z"
+     d="M 1767.3147,334.54461 C 1885.8034,161.02696 2020.3686,10 2203.4267,10 c 95.6743,0 120.0753,118.82254 120.0753,161.3228 l -33.3677,2.74492 C 2290.1343,119.21513 2254.4685,60 2204.3908,60 2098.1193,60 2003.8793,151.74354 1801.2803,433.89026 L 1538.3907,800 h -49.4702 c 104.5868,-145.54402 244.6223,-415.999 278.3942,-465.45539 z"
      id="path9"
      sodipodi:nodetypes="ssccssccs"
      inkscape:transform-center-x="-397.8216"
