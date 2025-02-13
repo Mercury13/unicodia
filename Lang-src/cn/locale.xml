@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<locale native="汉语" international="Chinese" eng-terms="1" trigger-stamp="2025213">
+	<trigger-langs>
+		<lang iso="cn" />
+	</trigger-langs>
+	<alpha-sort>
+		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>abcdefghijklmnopqrstuvwxyz</alp>
+		<alp>____________________Ü_____</alp>
+		<alp>____________________ü_____</alp>
+	</alpha-sort>
+	<alpha-fixup />
+	<ellipsis text="…">
+		<blk start="1AB0"  /><!-- umlauts supp. It’s the 3rd in cluster; 2 and 4 do not need -->
+		<blk start="2E00"  /><!-- supp punctuation -->
+		<blk start="2E80"  /><!-- CJK radicals supplement -->
+		<blk start="30A0"  /><!-- Katakana -->
+		<blk start="31F0"  /><!-- Katakana phonetic -->
+		<blk start="10100" /><!-- Aegean numbers -->
+		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="10F00" /><!-- Old Sogdian -->
+		<blk start="11B60" /><!-- Sharada supp, until localized -->
+		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="18D80" /><!-- Tangut components supp, until localized -->
+		<blk start="1AFF0" /><!-- Kana extended-B -->
+		<blk start="1B000" /><!-- Kana supplement -->
+		<blk start="1B100" /><!-- Kana extended-A -->
+		<blk start="1B130" /><!-- Small kana extension -->
+		<blk start="1BCA0" /><!-- Shorthand format controls -->
+		<blk start="1CEC0" /><!-- sym misc supp, until localized -->
+		<blk start="1D200" /><!-- Ancient Greek music notation -->
+		<blk start="1F900" /><!-- Sym ex -->
+		<blk start="1FA70" /><!-- Sym ex A -->
+	</ellipsis>
+	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
+	<wiki-templates>
+		<!-- first{{-}}second  →  typographic dash -->
+		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
+		<!-- first{{,-}}second  →  typographic comma-dash -->
+		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
+	</wiki-templates>
+	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
+	<icons sort-az="sort_AZ" />
+	<num-format dec-point="." thou-min-length="4" thou-min-length-dense="5" />
+	<cardinal-rules default-outcome="other" />
+	<!-- Misc. language peculiarities
+			still-uses-burmese: uses pair Myanmar/Burmese
+				(writes location of Myanmar for Burmese script) -->
+	<peculiarities still-uses-burmese="0" />
+	<punctuation key-value-colon="： " uniform-comma="、" semicolon="；"
+			left-paren="（" right-paren="）" indent-ellip="…" />
+</locale>
