@@ -32,6 +32,7 @@ https://catrinity-font.de/ — Catrinity, big Unicode font
 https://github.com/longnow/bali-fonts — Balinese fonts
 https://aksaradinusantara.com/fonta/aksara/kawi — Kawi fonts
 https://github.com/NDISCOVER/Arima-Font — progressive Taml/Mlym font
+https://github.com/ButTaiwan/genwan-font — some Han font
 
 
 CHAR IMAGES
