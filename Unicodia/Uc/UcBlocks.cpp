@@ -726,7 +726,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xF900, 0xFAFF, { L'車', EcContinent::CJK },
             "CJK Compatibility Ideographs",
             { EcScript::Hani, 1 }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Alphabetic presentation forms OK
     { 0xFB00, 0xFB4F, { L'ﬄ', EcContinent::NONE },
             "Alphabetic Presentation Forms",

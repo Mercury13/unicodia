@@ -162,7 +162,7 @@ constinit const uc::Font uc::fontInfo[] = {
         // CJK chars are square, and there’s always not enough detail → bigger
     { "SimSun", Ffg::NOHINT_TINY | Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT, 120_pc }, // CJK fullwidth/halfwidth, fall to next
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
-    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::PLANE_1            // …CJK
+    { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::PLANE_1 // …CJK
                     | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID | Ffg::DESC_EXTENDED, 120_pc },
       { FAM_BABEL_23, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
         // SimSun needed for one hiero 34F0: BS drew a hypothetical (not attested by Unicode) Chinese version
