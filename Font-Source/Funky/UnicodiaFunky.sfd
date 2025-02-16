@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1739663858
+ModificationTime: 1739663866
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -176679,7 +176679,7 @@ StartChar: u1CEC4
 Encoding: 118468 118468 1317
 Width: 970
 VWidth: 1160
-Flags: WO
+Flags: W
 HStem: 699 60<336 433 537 634>
 VStem: 338 71<209.383 398.411> 563 71<208.901 398.185>
 TtInstrs:
