@@ -24,9 +24,8 @@ constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "UnicodiaFunky.ttf";
 constexpr uc::Family FAM_FUNKY { FNAME_FUNKY };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf" };
-constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHan_BMP.ttf";
-constexpr uc::Family FAM_BABEL_2 { "BabelStoneHan_SIP.ttf" };
-constexpr uc::Family FAM_BABEL_3 { "BabelStoneHan_TIP.ttf" };
+constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHanBasic.ttf";
+constexpr uc::Family FAM_BABEL_23 { "BabelStoneHanExtra.ttf" };
 constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf" };
 constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
 
@@ -165,8 +164,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::PLANE_1            // …CJK
                     | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID | Ffg::DESC_EXTENDED, 120_pc },
-    { FAM_BABEL_2, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
-    { FAM_BABEL_3, Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 2
+      { FAM_BABEL_23, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
         // SimSun needed for one hiero 34F0: BS drew a hypothetical (not attested by Unicode) Chinese version
       { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …4

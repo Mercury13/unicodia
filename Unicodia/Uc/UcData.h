@@ -250,12 +250,11 @@ namespace uc {
           Z_SJS_1,
          CJK,
            Z_CJK_1,     ///< Babel2
-           Z_CJK_2,     ///< Babel3
-           Z_CJK_3,     ///< Sim0
-           Z_CJK_4,     ///< Sim2
-           Z_CJK_5,     ///< Unicodia Han
+           Z_CJK_2,     ///< Sim0
+           Z_CJK_3,     ///< Sim2
+           Z_CJK_4,     ///< Unicodia Han
+           Z_CJK_5,
            Z_CJK_6,
-           Z_CJK_7,
          CJK_P01_UHAN,  ///< Plane 0/1, but back with Unicodia Han
            CJK_UHAN,    ///< The 6th is Unicodia Han
          CJK_COMPAT,
