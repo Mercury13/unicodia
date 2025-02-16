@@ -43,6 +43,11 @@ Prints number of emoji in the latest Unicode.
 {{noto}} :: Text drawn with Noto Serif font :: 1 parameter
 Same as {{funky}}, just another font.
 
+{{nspk}} :: # of speakers :: 2 parameters
+Prints # of language’s speakers from internal data
+Parameter 1 = script/language code
+Parameter 2 = LOCALIZED comment, usually an alias name
+
 S
 
 {{sm}} :: Sample :: 1 parameter
