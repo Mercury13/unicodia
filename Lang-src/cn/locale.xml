@@ -40,7 +40,7 @@
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
 	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
-	<icons sort-az="sort_AZ" />
+	<icons sort-az="sort_cn" />
 	<num-format dec-point="." thou-min-length="4" thou-min-length-dense="5" />
 	<cardinal-rules default-outcome="other" />
 	<!-- Misc. language peculiarities

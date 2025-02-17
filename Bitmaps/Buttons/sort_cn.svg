@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="sort_cn.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Buttons\sort_AYa.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="30.6368"
+     inkscape:cx="15.259427"
+     inkscape:cy="17.772744"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
+    <sodipodi:guide
+       position="9,4"
+       orientation="0,-1"
+       id="guide10494"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1.0583333"
+       orientation="0,-1"
+       id="guide10496"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="20,20"
+       orientation="1,0"
+       id="guide10498"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.9999996,8.850267"
+       orientation="1,0"
+       id="guide10500"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="9.9207779,19.999994"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.9999996,18"
+       orientation="0.95447984,0.29827544"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="9.5476527,11.377134"
+       orientation="0.95506404,0.29639953"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="font-weight:300;font-size:15.6867px;line-height:1.25;font-family:'Noto Serif CJK SC';-inkscape-font-specification:'Noto Serif CJK SC Light';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#cc0000;stroke-width:1"
+       d="M 16.369061,4.2132597 15,6 H 4 L 4.2320442,7 H 18.225415 c 0.37127,0 0.649722,-0.069614 0.719336,-0.3480664 -0.99779,-0.9049724 -2.57569,-2.4386739 -2.57569,-2.4386739 z"
+       id="text3"
+       aria-label="一"
+       sodipodi:nodetypes="ccccscc" />
+    <path
+       style="font-weight:600;font-size:11.6526px;line-height:1.25;font-family:'Noto Serif CJK SC';-inkscape-font-specification:'Noto Serif CJK SC Semi-Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3465a4;stroke-width:1"
+       d="m 7.9999996,11.272169 0.2172962,0.700176 h 3.2906752 c -0.145958,3.303944 -0.849206,6.11694 -4.0337308,8.372644 l 0.1592262,0.212302 C 11.839692,18.460813 12.66236,15.475322 12.848125,11.972345 h 2.547619 v 6.859996 C 15.395744,19.721353 15.647851,20 16.735897,20 h 1.03497 c 1.724951,0 2.229167,-0.225572 2.229167,-0.743056 0,-0.252109 -0.07962,-0.371528 -0.437872,-0.530754 l -0.03981,-2.056672 h -0.159224 c -0.185763,0.849206 -0.398065,1.72495 -0.517485,1.977058 -0.06634,0.132689 -0.131957,0.17146 -0.252107,0.172495 l -1.539187,0.01327 c -0.344978,0.003 -0.411335,-0.07962 -0.411335,-0.291915 v -6.408858 c 0.311625,-0.151505 0.530754,-0.401409 0.530754,-0.540951 l -1.260541,-1.061508 -0.663442,0.743056 h -2.375124 c 0.02653,-0.875744 0.03981,-1.4759146 0.05307,-2.4180033 0.318453,-0.053075 0.451142,-0.1857635 0.477679,-0.3847963 L 11.547777,8.2968738 c 0,1.1411213 0.01327,1.9270562 -0.02654,2.9752952 z"
+       id="text4"
+       aria-label="九"
+       sodipodi:nodetypes="cccccccssssccccssscccccccccc" />
+  </g>
+</svg>
