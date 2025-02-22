@@ -9397,6 +9397,9 @@
     <text id="OnOff">
      <orig>On/off</orig>
     </text>
+    <text id="SimLatn">
+     <orig>Similar Latin</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

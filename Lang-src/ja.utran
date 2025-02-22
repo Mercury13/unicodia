@@ -4768,7 +4768,7 @@
      <orig>
       <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
       <p />
-      <p>Arrows 1F8B8…BC are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
+      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
      </orig>
      <known-orig>
       <p>As of Unicode{{_}}16, there are 148 arrows from ''Wingdings'' and ''Webdings'' fonts, 12 arrows from legacy computers, and two arrows for [[ps:Egyp|Egyptian]] hieroglyphs (reading direction of columnwise text).</p>
@@ -13491,6 +13491,9 @@
     </text>
     <text id="OnOff">
      <orig>On/off</orig>
+    </text>
+    <text id="SimLatn">
+     <orig>Similar Latin</orig>
     </text>
    </group>
    <group id="Text">

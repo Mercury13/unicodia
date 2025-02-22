@@ -13485,6 +13485,10 @@
      <orig>On/off</orig>
      <transl>Вкл/выкл</transl>
     </text>
+    <text id="SimLatn">
+     <orig>Similar Latin</orig>
+     <transl>Сходные латинские</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

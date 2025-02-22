@@ -13486,6 +13486,10 @@
      <orig>On/off</orig>
      <transl>Увімк/вимк</transl>
     </text>
+    <text id="SimLatn">
+     <orig>Similar Latin</orig>
+     <transl>Схожі латинські</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
