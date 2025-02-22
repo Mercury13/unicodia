@@ -474,7 +474,7 @@
 	</f>
 	<f loc="Cyrl1" forgetTest="1">
 		<f name="А" tilePattern="10010110">
-			<f loc="SimLatn" forgetTest="0" tilePattern="10010110"><d>Á á Ä ä Æ æ ᵃ ₐ</d></f>
+			<f loc="SimLatn" forgetTest="0" tile="0" tilePattern="10010110"><d>Á á Ä ä Æ æ ᵃ ₐ</d></f>
 			<d>А а Ӑ ӑ Ӓ ӓ Ӕ ӕ Ꙗ ꙗ 𞀰 𞁑</d>
 		</f>
 		<f name="Б" tilePattern="1011">
@@ -490,7 +490,7 @@
 			<d>Д д ᲁ Ꚁ ꚁ Ԁ ԁ Ꙣ ꙣ Ԫ ԫ Ꚉ ꚉ Ԃ ԃ Ԭ ԭ 𞀴 𞁕 𞁊 </d>
 		</f>
 		<f name="ЕЭ" tilePattern="10010110">
-			<f loc="SimLatn" forgetTest="0"  tilePattern="10010110"><d>É é È è Ë ë Ĕ ĕ Ə ə ᵉ ₑ ᵊ ₔ</d></f>
+			<f loc="SimLatn" forgetTest="0" tile="0" tilePattern="10010110"><d>É é È è Ë ë Ĕ ĕ Ə ə ᵉ ₑ ᵊ ₔ</d></f>
 			<d>Е е Ѐ ѐ Ё ё Ӗ ӗ Є є Э э Ӭ ӭ Ә ә Ӛ ӛ Ҽ ҽ Ҿ ҿ Ѥ ѥ 𞀵 𞁖 𞁋 𞁈</d>
 		</f>
 		<f name="Ѣ" tilePattern="10011">
@@ -506,7 +506,7 @@
 			<d>И и Й й Ѝ ѝ Ӣ ӣ Ӥ ӥ Ҋ ҋ 𞀸 𞁙</d>
 		</f>
 		<f name="І" tilePattern="10010110">
-			<f loc="SimLatn" forgetTest="0" tilePattern="1001101"><d>Í í Ï ï ᴵ ⁱ ᵢ</d></f>
+			<f loc="SimLatn" forgetTest="0" tile="0" tilePattern="1001101"><d>Í í Ï ï ᴵ ⁱ ᵢ</d></f>
 			<d>І і Ї ї Ӏ ӏ 𞁌 𞁐 𞁨</d>
 		</f>
 		<f name="К" tilePattern="10010110">
@@ -521,8 +521,8 @@
 		<f name="Н" tilePattern="10010110">
 			<d>Н н Ԣ ԣ Ӊ ӊ Ң ң Ԩ ԩ Ӈ ӈ Ҥ ҥ Њ њ Ԋ ԋ ᵸ</d>
 		</f>
-		<f name="О" tilePattern="101010110">
-			<f loc="SimLatn" forgetTest="0" tilePattern="10010110"><d>Ó ó Ö ö Ꝏ ꝏ ᴼ ᵒ ₒ</d></f>
+		<f name="О" tilePattern="101011110">
+			<f loc="SimLatn" forgetTest="0" tile="0" tilePattern="10010110"><d>Ó ó Ö ö Ꝏ ꝏ ᴼ ᵒ ₒ</d></f>
 			<d>О о ᲂ Ӧ ӧ Ө ө Ӫ ӫ Ꙩ ꙩ Ꙫ ꙫ Ꚛ ꚛ Ѻ ѻ Ꚙ ꚙ Ꙭ ꙭ ꙮ 𞀼 𞁎 𞁜</d>
 		</f>
 		<f name="П" tilePattern="10010110">
@@ -538,7 +538,7 @@
 			<d>Т т ᲄ ᲅ Ꚋ ꚋ Ԏ ԏ Ꚑ ꚑ Ꚍ ꚍ Ҭ ҭ Ҵ ҵ Ꚓ ꚓ Ᲊ ᲊ 𞁀</d>
 		</f>
 		<f name="У" tilePattern="10010110">
-			<f loc="SimLatn" forgetTest="0"><d>ý ȳ ÿ ʸ</d></f>
+			<f loc="SimLatn" tile="0" forgetTest="0"><d>ý ȳ ÿ ʸ</d></f>
 			<d>У у Ў ў Ӯ ӯ Ӱ ӱ Ӳ ӳ Ү ү Ұ ұ Ѹ ѹ Ꙋ ꙋ ᲈ 𞁁 𞁏 𞁭 𞁟</d>
 		</f>
 		<f name="Ф" tilePattern="1011">

@@ -7726,7 +7726,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { {}, u8"ѦѪ", 6, 14, 8159, {}, EcVersion::NOT_EMOJI },   // 7720
 { {}, u8"CyrlGrek", 6, 22, 8173, Lfg(8), EcVersion::NOT_EMOJI },   // 7721
 { {}, u8"CyrlMisc", 6, 23, 8195, Lfg(8), EcVersion::NOT_EMOJI },   // 7722
-{ {}, u8"SimLatn", 7690, 8, 7736, Lfg(8), EcVersion::NOT_EMOJI },   // 7723
+{ {}, u8"SimLatn", 7690, 8, 7736, Lfg(10), EcVersion::NOT_EMOJI },   // 7723
 { U"\u0410", {}, 7690, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7724
 { U"\u0430", {}, 7690, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7725
 { U"\u04D0", {}, 7690, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7726
@@ -7793,7 +7793,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\U0001E034", {}, 7694, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7787
 { U"\U0001E055", {}, 7694, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7788
 { U"\U0001E04A", {}, 7694, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7789
-{ {}, u8"SimLatn", 7695, 14, 7819, Lfg(8), EcVersion::NOT_EMOJI },   // 7790
+{ {}, u8"SimLatn", 7695, 14, 7819, Lfg(10), EcVersion::NOT_EMOJI },   // 7790
 { U"\u0415", {}, 7695, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7791
 { U"\u0435", {}, 7695, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7792
 { U"\u0400", {}, 7695, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7793
@@ -7894,7 +7894,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\u048B", {}, 7699, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7888
 { U"\U0001E038", {}, 7699, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7889
 { U"\U0001E059", {}, 7699, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7890
-{ {}, u8"SimLatn", 7700, 7, 7901, Lfg(8), EcVersion::NOT_EMOJI },   // 7891
+{ {}, u8"SimLatn", 7700, 7, 7901, Lfg(10), EcVersion::NOT_EMOJI },   // 7891
 { U"\u0406", {}, 7700, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7892
 { U"\u0456", {}, 7700, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7893
 { U"\u0407", {}, 7700, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7894
@@ -7976,13 +7976,13 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\u050A", {}, 7704, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7970
 { U"\u050B", {}, 7704, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7971
 { U"\u1D78", {}, 7704, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7972
-{ {}, u8"SimLatn", 7705, 9, 7999, Lfg(8), EcVersion::NOT_EMOJI },   // 7973
+{ {}, u8"SimLatn", 7705, 9, 7999, Lfg(10), EcVersion::NOT_EMOJI },   // 7973
 { U"\u041E", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7974
 { U"\u043E", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7975
 { U"\u1C82", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7976
 { U"\u04E6", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7977
 { U"\u04E7", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7978
-{ U"\u04E8", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7979
+{ U"\u04E8", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7979
 { U"\u04E9", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7980
 { U"\u04EA", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7981
 { U"\u04EB", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7982
@@ -7991,7 +7991,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\uA66A", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7985
 { U"\uA66B", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7986
 { U"\uA69A", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7987
-{ U"\uA69B", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7988
+{ U"\uA69B", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7988
 { U"\u047A", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7989
 { U"\u047B", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7990
 { U"\uA698", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7991
@@ -8000,7 +8000,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\uA66D", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7994
 { U"\uA66E", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7995
 { U"\U0001E03C", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7996
-{ U"\U0001E04E", {}, 7705, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 7997
+{ U"\U0001E04E", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7997
 { U"\U0001E05C", {}, 7705, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7998
 { U"\u00D3", {}, 7973, 0, -1, {}, EcVersion::NOT_EMOJI },   // 7999
 { U"\u00F3", {}, 7973, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 8000
@@ -8057,7 +8057,7 @@ constinit const uc::LibNode uc::libNodes[9978] {
 { U"\u1C89", {}, 7709, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 8051
 { U"\u1C8A", {}, 7709, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8052
 { U"\U0001E040", {}, 7709, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 8053
-{ {}, u8"SimLatn", 7710, 4, 8078, Lfg(8), EcVersion::NOT_EMOJI },   // 8054
+{ {}, u8"SimLatn", 7710, 4, 8078, Lfg(10), EcVersion::NOT_EMOJI },   // 8054
 { U"\u0423", {}, 7710, 0, -1, {}, EcVersion::NOT_EMOJI },   // 8055
 { U"\u0443", {}, 7710, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 8056
 { U"\u040E", {}, 7710, 0, -1, Lfg(2), EcVersion::NOT_EMOJI },   // 8057
