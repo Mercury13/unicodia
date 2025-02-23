@@ -42,7 +42,6 @@
   * Then normal work commences.
     * It’s absolutely needed to change **nose colour** E59600 → E49600, to prevent confusion with ears
     * Remove original files, copy your remake.
-    * It’s absolutely needed to run SvgCleaner, repainting engine relies on it (e.g. lowercase, XML attributes rather than CSS)
     * Make sure Unicodia is closed, run tape.bat
     * Press Ctrl+Shift+Q in Unicodia.
     * Check what’s different using QaCompareBmp. If some colour is repainted erroneously (teacher/blackboard, fireman/insignia) → change colour a bit and repeat
