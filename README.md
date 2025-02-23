@@ -44,7 +44,7 @@ _About war jargon._ Open-source software with neutral license and without specia
 
 # How to build?
 * Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
-* Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
+* Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator), [SvgCleaner](https://github.com/RazrFalcon/svgcleaner).
 * Configure and run tape.bat file.
 * Configure and run rel.bat file.
 
