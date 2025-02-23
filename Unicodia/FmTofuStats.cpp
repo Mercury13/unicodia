@@ -131,7 +131,8 @@ SafeVector<int> tofu::Model::build(uc::SvgChecker& svgChecker)
     SafeVector<int> allTofu;
 
     Counter all;
-    VersionCounter cjk, rest;
+
+    ec::Array<VersionCounter, uc::TofuPlace> counters {};
     Counter byPlane[uc::N_PLANES];
     Counter byBlock[uc::N_BLOCKS];
 
@@ -145,19 +146,16 @@ SafeVector<int> tofu::Model::build(uc::SvgChecker& svgChecker)
         auto iBlock = tofuInfo.block->permanentIndex();
         byBlock[iBlock].reg(code, tofuInfo.state);
 
-        if (tofuInfo.place == uc::TofuPlace::CJK) {
-            cjk.reg(code, cp.ecVersion, tofuInfo.state);
-        } else {
-            rest.reg(code, cp.ecVersion, tofuInfo.state);
-        }
+        counters[tofuInfo.place].reg(code, cp.ecVersion, tofuInfo.state);
 
         if (tofuInfo.state == uc::TofuState::TOFU)
             allTofu.push_back(code);
     }
 
     rows.emplace_back("All", all);
-    cjk.drop(rows, "CJK");
-    rest.drop(rows, "Rest");
+    counters[uc::TofuPlace::CJK  ].drop(rows, "CJK");
+    counters[uc::TofuPlace::HIERO].drop(rows, "Non-CJK ideo");
+    counters[uc::TofuPlace::REST ].drop(rows, "Rest");
 
     for (int iPlane = 0; iPlane < uc::N_PLANES; ++iPlane) {
         auto& ctr = byPlane[iPlane];

@@ -83,19 +83,19 @@ constinit const ec::Array<uc::WritingDir, uc::EcWritingDir> uc::writingDirInfo (
 
 
 constinit const uc::ScriptType uc::scriptTypeInfo[] {
-    { {} },
-    { "Prop.Type.Alph" },
-    { "Prop.Type.Argu" },
-    { "Prop.Type.Cons" },
-    { "Prop.Type.Syll" },
-    { "Prop.Type.Asyl" },
-    { "Prop.Type.Abug" },
-    { "Prop.Type.Brah" },
-    { "Prop.Type.Hier" },
-    { "Prop.Type.Syhi" },
-    { "Prop.Type.Cohi" },
-    { "Prop.Type.Code" },
-    { "Prop.Type.Nota" },
+    { .locKey = {},               .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Alph", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Argu", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Cons", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Syll", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Asyl", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Abug", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Brah", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Hier", .flags = Stfg::CONTAINS_HIERO },
+    { .locKey = "Prop.Type.Syhi", .flags = Stfg::CONTAINS_HIERO },
+    { .locKey = "Prop.Type.Cohi", .flags = Stfg::CONTAINS_HIERO },
+    { .locKey = "Prop.Type.Code", .flags = NO_FLAGS },
+    { .locKey = "Prop.Type.Nota", .flags = NO_FLAGS },
     //{ "Error" },
 };
 static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
@@ -1542,8 +1542,11 @@ uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
     uc::TofuInfo r;
     r.block = &block();
     if (r.block->flags.haveAny(Bfg::CJK)
-            || script().ecContinent == EcContinent::CJK)
+            || script().ecContinent == EcContinent::CJK) {
         r.place = TofuPlace::CJK;
+    } else if (r.block->script().type().flags.have(Stfg::CONTAINS_HIERO)) {
+        r.place = TofuPlace::HIERO;
+    }
 
     auto method = drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
     if (method > uc::DrawMethod::LAST_FONT) {

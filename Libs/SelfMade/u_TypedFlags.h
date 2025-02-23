@@ -92,7 +92,6 @@ public:
     explicit operator unsigned long long() const = delete;
     explicit operator float() const = delete;
     explicit operator double() const = delete;
-    [[deprecated("Use numeric()")]] constexpr Storage value() const { return fValue; }
     constexpr Storage numeric() const { return fValue; }
 
     // or

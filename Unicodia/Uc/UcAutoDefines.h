@@ -294,10 +294,11 @@ namespace uc {
         TOFU,       ///< Tofu, have no char
         NO_FONT };  ///< Have so custom method of drawing that no font needed
 
-    enum class TofuPlace : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, TofuPlace, unsigned char,
         CJK,        ///< In CJK chars
-        REST        ///< In rest of chars
-    };
+        HIERO,      ///< In non-CJK ideographic
+        REST        ///< Rest chars
+    )
 
     struct TofuInfo {
         TofuState state = TofuState::NO_FONT;

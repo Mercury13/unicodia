@@ -625,10 +625,14 @@ namespace uc {
     };
     extern const ec::Array<LangLife, EcLangLife> langLifeInfo;
 
+    enum class Stfg : unsigned char {
+        CONTAINS_HIERO = 1,
+    };
 
     struct ScriptType
     {
         std::string_view locKey;
+        Flags<Stfg> flags;
     };
     extern const ScriptType scriptTypeInfo[];
 
