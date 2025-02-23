@@ -1,0 +1,7 @@
+Run MSYS (!!! CMD does not work)
+
+cd d:/Projects/OpenSsl
+perl Configure shared mingw64
+export PATH=/mingw64/bin:$PATH
+echo $PATH
+mingw32-make
