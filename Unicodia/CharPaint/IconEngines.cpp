@@ -430,7 +430,7 @@ public:
         { loadPalette(uc::continentInfo[static_cast<unsigned>(continent)]); }
 
     /// Gets the SVG renderer, probably from cache
-    dumb::Sp<MyRenderer> get();
+    dumb::Sp<MyRenderer> get(Qt::AspectRatioMode = Qt::KeepAspectRatio);
 private:
     QString fname;
     dumb::Sp<MyRenderer> x;
@@ -468,7 +468,7 @@ void ie::LazySvg::loadPaletteIf(const uc::SynthIcon& icon)
 }
 
 
-dumb::Sp<MyRenderer> ie::LazySvg::get()
+dumb::Sp<MyRenderer> ie::LazySvg::get(Qt::AspectRatioMode mode)
 {
     if (auto r1 = x)
         return r1;
@@ -481,7 +481,7 @@ dumb::Sp<MyRenderer> ie::LazySvg::get()
         // Dumb load
         r2 = dumb::makeSp<MyRenderer>(fname);
     }
-    r2->setAspectRatioMode(Qt::KeepAspectRatio);
+    r2->setAspectRatioMode(mode);
     x = r2;
     //std::cout << "Loaded lazy SVG " << fname.toStdString() << std::endl;
     return r2;
@@ -1048,6 +1048,49 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->drawEllipse(rcEllipse);
 
     texture->get()->render(painter, rect);
+}
+
+
+///// Ffi //////////////////////////////////////////////////////////////////////
+
+
+ie::Ffi::Ffi()
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/ffi.svg", uc::EcContinent::NONE)) {}
+
+ie::Ffi::~Ffi() = default;
+
+void ie::Ffi::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    // And thus align to y=6
+    static constexpr int PIC_W = 14;
+    static constexpr int PIC_H = 12;
+
+    static constexpr int ALIGN_Y_REAL = 6;
+    static constexpr int ALIGN_Y_PIC = 4;
+    static constexpr double ALIGN_Y_IMBA = -0.2;    // − top, + bottom
+
+    static constexpr int ALIGN_X_PIC = 1;
+    static constexpr int ALIGN_X_HALF = (PIC_W / 2) - ALIGN_X_PIC;
+    static constexpr int ALIGN_X_PIC_STEP = 5;
+    static constexpr double ALIGN_X_IMBA = 0.3;  // − left, + right
+    static constexpr double ALIGN_X_MINUS = 5.8;
+
+    // Align to Y by simple scaling
+    double yScale = scale;
+    double yRealGuide = std::round((ALIGN_Y_REAL + ALIGN_Y_IMBA) * yScale);
+    double yRealOrigin = yRealGuide - ALIGN_Y_PIC * yScale;
+
+    // Align to X — get divisibility
+    double xStep = std::round((rect.width() - ALIGN_X_MINUS * scale) * 0.5);
+    double xScale = xStep / ALIGN_X_PIC_STEP;
+    double xRealGuide = std::round((rect.width() * 0.5) - (ALIGN_X_HALF - ALIGN_X_IMBA) * xScale);
+    double xRealOrigin = xRealGuide - ALIGN_X_PIC * xScale;
+
+    QRectF rcNew ( rect.x() + xRealOrigin, rect.y() + yRealOrigin,
+                   PIC_W * xScale, PIC_H * yScale);
+
+    painter->fillRect(rect, BG_INTER);
+    texture->get(Qt::IgnoreAspectRatio)->render(painter, rcNew);
 }
 
 

@@ -246,6 +246,8 @@ namespace {
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
         case 0xA640:    // Cyrl ex B
             return new ie::Margin(block.synthIcon, ":ScCustom/cyrlB.svg", ie::MRG_DETAILED, NO_FLAGS);
+        case 0xFB00:
+            return new ie::Ffi;
         case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
         case 0x104B0:   // Osage

@@ -313,6 +313,17 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
+    class Ffi : public Veng
+    {
+    public:
+        Ffi();
+        ~Ffi();
+        Ffi* clone() const override { return new Ffi(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+    };
+
     enum class Mfg : unsigned char {
         IMBA_UP = 1,  /// [+] imbalance 0.5px−ε upwards (no fine-grained like ±0.4px here)
     };
