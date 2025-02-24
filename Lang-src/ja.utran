@@ -3399,7 +3399,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name" force-attention="true">
      <orig>Sidetic</orig>
-     <transl>シデ</transl>
+     <transl>シデ文字</transl>
     </text>
    </group>
    <group id="10980">
@@ -3793,7 +3793,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name" force-attention="true">
      <orig>Tolong Siki</orig>
-     <transl>トロンシキ</transl>
+     <transl>トロンシキ文字</transl>
     </text>
    </group>
    <group id="11EE0">
@@ -3975,7 +3975,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name" force-attention="true">
      <orig>Chisoi</orig>
-     <transl>チソイ</transl>
+     <transl>チソイ文字</transl>
     </text>
    </group>
    <group id="16E40">
@@ -3988,7 +3988,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name" force-attention="true">
      <orig>Beria Erfe</orig>
-     <transl>ベリア・エルフェ</transl>
+     <transl>ベリア・エルフェ文字</transl>
     </text>
    </group>
    <group id="16F00">
@@ -4464,7 +4464,7 @@
     <text id="Name" force-attention="true">
      <orig>Tai Yo</orig>
      <au-cmt>U17</au-cmt>
-     <transl>タイヨウ</transl>
+     <transl>タイヨウ文字</transl>
     </text>
    </group>
    <group id="1E7E0">
@@ -5334,7 +5334,7 @@
    <group id="Berf">
     <text id="Name" force-attention="true">
      <orig>Beria Erfe</orig>
-     <transl>ベリア・エルフェ</transl>
+     <transl>ベリア・エルフェ文字</transl>
     </text>
     <text id="Lang">
      <orig>Zaghawa {{nspk||=Beria}}</orig>
@@ -5640,7 +5640,7 @@
    <group id="Chis">
     <text id="Name" force-attention="true">
      <orig>Chisoi</orig>
-     <transl>チソイ</transl>
+     <transl>チソイ文字</transl>
     </text>
     <text id="Lang">
      <orig>Kurmali</orig>
@@ -8572,10 +8572,11 @@
    <group id="Sidt">
     <text id="Name" force-attention="true">
      <orig>Sidetic</orig>
-     <transl>シデ</transl>
+     <transl>シデ文字</transl>
     </text>
-    <text id="Lang">
+    <text id="Lang" force-attention="true">
      <orig>Sidetic ''(Anatolia)''</orig>
+     <transl>シデ語（アナトリア）</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9036,7 +9037,7 @@
    <group id="Tayo">
     <text id="Name" force-attention="true">
      <orig>Tai Yo (Lai Tai)</orig>
-     <transl>タイヨウ（ライタイ）</transl>
+     <transl>タイヨウ文字（ライタイ文字）</transl>
     </text>
     <text id="Lang">
      <orig>Tai Yo</orig>
@@ -9291,7 +9292,7 @@
    <group id="Tols">
     <text id="Name" force-attention="true">
      <orig>Tolong Siki</orig>
-     <transl>トロン・シキ</transl>
+     <transl>トロン・シキ文字</transl>
     </text>
     <text id="Lang">
      <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
