@@ -137,12 +137,12 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
-      { FAM_FUNKY },                                                          // …2, new additions
+      { FAM_FUNKY },                                                            // …2, new additions
         // Two fonts OK, as they both are built-in
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
     { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF | Ffg::FALL_TO_NEXT },     // Balinese
-      { FAM_FUNKY },                                                          // …1
+      { FAM_FUNKY },                                                            // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                // Vedic = Deva′ → Deva → Nand → Beng
