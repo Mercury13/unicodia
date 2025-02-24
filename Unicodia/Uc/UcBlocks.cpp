@@ -728,7 +728,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 1 }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Alphabetic presentation forms OK
-    { 0xFB00, 0xFB4F, { L'ﬃ', EcContinent::NONE, Ifg::PAINT_SVG, 14_hy + ImbaY::BELOW_3 },
+    { 0xFB00, 0xFB4F, { L'ﬃ', EcContinent::NONE, Ifg::PAINT_SVG, 14_hy + ImbaY::BELOW_2 },
             "Alphabetic Presentation Forms",
             MyName::INST, MapSubtype::SYM_OTHER },
     // Arabic presentation forms A OK
