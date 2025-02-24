@@ -3399,7 +3399,7 @@
     <au-cmt>U17</au-cmt>
     <text id="Name" force-attention="true">
      <orig>Sidetic</orig>
-     <transl>シデティック</transl>
+     <transl>シデ</transl>
     </text>
    </group>
    <group id="10980">
@@ -8572,7 +8572,7 @@
    <group id="Sidt">
     <text id="Name" force-attention="true">
      <orig>Sidetic</orig>
-     <transl>シデティック</transl>
+     <transl>シデ</transl>
     </text>
     <text id="Lang">
      <orig>Sidetic ''(Anatolia)''</orig>
