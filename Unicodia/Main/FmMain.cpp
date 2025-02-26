@@ -891,8 +891,8 @@ FmMain::FmMain(QWidget *parent)
       searchModel(this, glyphSets),
       libModel(this),
       favsModel(this, glyphSets),
-      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
-      fontTofu(str::toQ(FAM_TOFU), FSZ_BIG),
+      fontBig(str::toQ(FACE_DEFAULT), FSZ_BIG),
+      fontTofu(str::toQ(FACE_TOFU), FSZ_BIG),
       mainGui(this, model.match, *this)
 {
     ui->setupUi(this);

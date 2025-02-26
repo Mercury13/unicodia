@@ -730,7 +730,8 @@ constinit const uc::Block uc::blocks[] {
     // Alphabetic presentation forms OK
     { 0xFB00, 0xFB4F, { L'ﬃ', EcContinent::NONE, Ifg::ENG_CUSTOM_PAINT },
             "Alphabetic Presentation Forms",
-            MyName::INST, MapSubtype::SYM_OTHER },
+            MyName::INST, MapSubtype::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::AVOID_BUILTIN },
     // Arabic presentation forms A OK
     { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Arabic Presentation Forms-A",

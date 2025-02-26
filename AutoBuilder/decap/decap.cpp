@@ -288,8 +288,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2C7C },             // Clipped below in Cambria
     { 0x3021, 0x3029 },     // U16 glyph changes, BabelStone’s here!
                             // Actually 26…29, the rest are for uniformness
-    { 0xFB00, 0xFB06 },     // Latn ligatures: Cambria → Noto
-    { 0xFB13, 0xFB17 },     // Armn ligatures: Cambria → Noto
     // CJK compatibles: SimSun → BabelStone
     { 0xFE31, 0xFE34 },     // Some dashes
     { 0xFE49, 0xFE4F },     // More dashes

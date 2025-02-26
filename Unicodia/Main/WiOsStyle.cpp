@@ -26,8 +26,8 @@ namespace {
 WiOsStyle::WiOsStyle(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WiOsStyle),
-    fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
-    fontTofu(str::toQ(FAM_TOFU), FSZ_BIG)
+    fontBig(str::toQ(FACE_DEFAULT), FSZ_BIG),
+    fontTofu(str::toQ(FACE_TOFU), FSZ_BIG)
 {
     ui->setupUi(this);
 

@@ -89,7 +89,7 @@ namespace {
         // Draw text
         auto availSize = rcFrame.width();
         auto sz = availSize / sp.sizeQuo(table);
-        QFont font { str::toQ(FAM_CONDENSED) };
+        QFont font { str::toQ(FACE_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
             font.setPixelSize(sz);
         painter->setFont(font);

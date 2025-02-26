@@ -12,6 +12,7 @@ consteval uc::StyleSheet operator + (
         const uc::StyleSheet& x, const uc::StyleSheet& y)
     { return { .topPc = short(x.topPc + y.topPc), .botPc = short(x.botPc + y.botPc) }; }
 
+#define FAM_DEFAULT { FACE_DEFAULT, Fafg::BUILTIN }
 
 // File names
 constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC };
@@ -111,7 +112,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
-      { FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                             // …1, both are built-in
+      { FACE_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                             // …1, both are built-in
       { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math

@@ -1495,6 +1495,7 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
     // }
     auto v = &firstFont();
     bool isBuggy = flags.have(Cfg::G_RENDER_BUG);
+    bool avoidBuiltin = block().flags.have(Bfg::AVOID_BUILTIN);
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         auto wantSkip = isBuggy
                 ? v->flags.have(Ffg::BUG_AVOID)     // BUGGY: avoid flag → bad, it’s for normal only
@@ -1502,6 +1503,8 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
         if (category().upCat == uc::EcUpCategory::MARK) {
             wantSkip |= v->flags.have(Ffg::MARK_AVOID);
         }
+        if (avoidBuiltin)
+            wantSkip |= v->family.flags.have(Fafg::BUILTIN);
         if (!wantSkip) {
             if (matcher.check(sb, *v))
                 return v;

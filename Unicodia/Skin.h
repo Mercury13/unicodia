@@ -63,10 +63,10 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
         ".query { " STYLE_QUERY " }"                                            \
 
 #ifdef _WIN32
-    #define FAM_DEFAULT "Cambria"
-    #define FAM_TOFU "Times New Roman"      ///< Need just tofu glyph
-    #define FAM_CONDENSED "Arial"
-    #define FAM_EMOJI "Segoe UI Emoji"
+    #define FACE_DEFAULT "Cambria"
+    #define FACE_TOFU "Times New Roman"      ///< Need just tofu glyph
+    #define FACE_CONDENSED "Arial"
+    #define FACE_EMOJI "Segoe UI Emoji"
 #else
     #error Unknown OS
 #endif

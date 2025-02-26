@@ -185,7 +185,7 @@ void VirtualCharsModel::paint(QPainter *painter, const QStyleOptionViewItem &opt
 
 CharsModel::CharsModel(QWidget* aOwner, uc::GlyphStyleSets& glyphSets) :
     Super(aOwner, glyphSets),
-    match(str::toQ(FAM_DEFAULT)),
+    match(str::toQ(FACE_DEFAULT)),
     rows(NCOLS) {}
 
 // -warn: strange with =default

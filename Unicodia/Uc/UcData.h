@@ -485,6 +485,7 @@ namespace uc {
     enum class Fafg : unsigned char {
         // Now all fonts use
         DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
+        BUILTIN     = 1 << 1,  ///< Built-in font
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);
@@ -773,6 +774,7 @@ namespace uc {
         VIRAMA_INSIDE   = 1<<14,    ///< [+] Plus inside virtual virama (Tutg)
         EMOJI_BY_CASE   = 1<<15,    ///< [+] Text/graphic VS16 emoji is case-by-case
         EMOJI_OVER_CHAR = 1<<16,    ///< [+] In VS16 blocks draw emoji over characters
+        AVOID_BUILTIN   = 1<<17,    ///< [+] No fonts marked as Built-in
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
