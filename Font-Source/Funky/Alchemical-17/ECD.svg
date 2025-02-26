@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 979 1000"
+   id="svg1"
+   sodipodi:docname="ECD.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.37749999"
+     inkscape:cx="46.357618"
+     inkscape:cy="822.51659"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="60,819"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="310,992"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="235,116"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="930,819"
+       orientation="-1,0"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="495,554"
+       orientation="-1,0"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="495,574.48895"
+       orientation="0,1"
+       id="guide6"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="310,957"
+       orientation="0,1"
+       id="guide18"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="1063.9382,785.46362"
+       orientation="0,1"
+       id="guide14"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="1063.9382,285.46362"
+       orientation="0,1"
+       id="guide15"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="495,759.23499"
+       orientation="0,-1"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="495,360.54664"
+       orientation="0,-1"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="95,461.035"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     id="g2"
+     transform="matrix(0.93036588,0,0,0.93036588,33.77255,25.106689)"
+     style="stroke-width:1.07485">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:64.4908;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 485.00001,739.63157 V 365.00548"
+       id="path12" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:64.4908;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 647.21786,645.97505 322.78215,458.662"
+       id="path14" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:64.4908;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 647.21787,458.662 322.78215,645.97505"
+       id="path15-5" />
+  </g>
+  <path
+     id="path1"
+     style="fill:none;stroke:#1a5fb4;stroke-width:70;stroke-linejoin:miter;stroke-dasharray:none"
+     d="M 343.0459,228.93195 A 258.04624,310.03441 0 0 0 85,538.965 258.04624,310.03441 0 0 0 343.0459,849.00004 258.04624,310.03441 0 0 0 485,797.58553 258.04624,310.03441 0 0 0 626.9541,849.00004 258.04624,310.03441 0 0 0 885,538.965 258.04624,310.03441 0 0 0 626.9541,228.93195 258.04624,310.03441 0 0 0 485.12346,280.23519 258.04624,310.03441 0 0 0 343.0459,228.93195 Z" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="M 485.12346,280.23519 C 484.99667,182.36636 512.99594,115.35577 594.69557,44.008002"
+     id="path2" />
+</svg>
