@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.755"
-     inkscape:cx="530.46358"
-     inkscape:cy="570.19868"
+     inkscape:zoom="0.53386562"
+     inkscape:cx="602.21147"
+     inkscape:cy="677.13669"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -100,24 +100,24 @@
   </sodipodi:namedview>
   <g
      id="g15"
-     transform="matrix(0.79696718,0,0,0.79696718,-82.237177,-57.249396)"
-     style="stroke-width:75.2854;stroke-dasharray:none">
+     transform="matrix(0.79696718,0,0,0.79696718,-82.237178,-58.743191)"
+     style="stroke-width:62.7378;stroke-dasharray:none">
     <path
-       style="fill:none;stroke:#000000;stroke-width:75.2854;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:62.7378;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 899.05776,261.64878 H 524.43167"
        id="path12" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:75.2854;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:62.7378;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 805.40124,99.430925 618.08819,423.86664"
        id="path14" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:75.2854;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:62.7378;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 618.08819,99.430924 805.40124,423.86664"
        id="path15-5" />
   </g>
   <path
      id="use17"
-     style="fill:none;stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 369.30892,949.66966 C 645.79535,695.33941 656.97901,500.38457 486.37959,364.31636 315.78017,500.38457 326.96383,695.33941 603.45026,949.66966"
+     style="fill:none;stroke:#000000;stroke-width:60;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 363.43215,962.9438 C 653.79776,697.23255 665.54282,493.5537 486.37958,351.39658 307.21634,493.5537 318.96141,697.23255 609.32701,962.9438"
      sodipodi:nodetypes="ccc" />
 </svg>
