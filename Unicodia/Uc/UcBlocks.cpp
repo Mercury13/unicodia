@@ -50,7 +50,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0250, 0x02AF, { 0x259, EcContinent::NONE },
             "IPA Extensions", MyName::INST, MapSubtype::LATIN, },
     // Spacing letter modifiers OK
-    { 0x02B0, 0x02FF, { 0x2D0, EcContinent::NONE },
+    { 0x02B0, 0x02FF, { 0x2D0, EcContinent::NONE, Ifg::ENG_TALL_PAINT | Ifg::HINT_PX_CENTER, 2_hx },
             "Spacing Modifier Letters",
             MyName::INST, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
