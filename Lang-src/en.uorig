@@ -8608,6 +8608,9 @@
       <p>Seen in Favourites only</p>
      </au-cmt>
     </text>
+    <text id="FindBlk">
+     <orig>Find in Blocks</orig>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

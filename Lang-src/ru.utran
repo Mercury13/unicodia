@@ -12440,6 +12440,10 @@
      </au-cmt>
      <transl>Убрать</transl>
     </text>
+    <text id="FindBlk">
+     <orig>Find in Blocks</orig>
+     <transl>Отыскать в Блоках</transl>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

@@ -201,8 +201,19 @@ private:
     PopupGui popupGui{mainGui};
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
-    TableLocalMenu localChars, localFavs;
-    bool localCharsDirection = DIR_ADD;  // Favs’ direction is always removal
+
+    class BlocksLocalMenu : public TableLocalMenu {
+    public:
+        QAction* acFavs = nullptr;
+        bool direction = DIR_ADD;  // Favs’ direction is always removal
+    } localBlocks;
+
+    class FavsLocalMenu : public TableLocalMenu {
+    public:
+        QAction *acToBlocks = nullptr,
+                *acRemove = nullptr;
+    } localFavs;
+
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
@@ -307,10 +318,11 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
-    void charsLocalMenuActivated();
-    void charsFavsCalled();
+    void blocksLocalMenuActivated();
+    void blocksFavsCalled();
     void favsLocalMenuActivated();
-    void favsFavsCalled();
+    void favsToBlocks();
+    void favsRemoveCalled();
     void libFavsCalled();
 
     // InternalWalker + slot

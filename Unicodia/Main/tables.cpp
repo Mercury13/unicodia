@@ -367,13 +367,18 @@ void TableLocalMenu::init(
 }
 
 
-QAction* TableLocalMenu::addCustomFavsAction(std::string_view aLocKey)
+void TableLocalMenu::addSeparator()
 {
-    acFavs = new QAction("[Custom favs]", menu);
-    menu->addAction(acFavs);
-    connect(acFavs, &QAction::triggered, this, &This::customFavsCalled);
-    favsLocKey = aLocKey;
-    return acFavs;
+    menu->addSeparator();
+}
+
+
+QAction* TableLocalMenu::addCustomAction(std::string_view aLocKey)
+{
+    auto action = new QAction("[Custom favs]", menu);
+    customActions.emplace_back(action, aLocKey);
+    menu->addAction(action);
+    return action;
 }
 
 
@@ -383,8 +388,11 @@ void TableLocalMenu::translate()
     acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
     acCopyVs16->setText(loc::get("Main.Local.CopyVs16"));
     acCopyDotc->setText(loc::get("Main.Local.CopyDotc"));
-    if (acFavs && !favsLocKey.empty())
-        acFavs->setText(loc::get(favsLocKey));
+    for (auto& v : customActions) {
+        if (v.ac && !v.locKey.empty()) {
+            v.ac->setText(loc::get(v.locKey));
+        }
+    }
 }
 
 

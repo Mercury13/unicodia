@@ -203,8 +203,9 @@ class TableLocalMenu : public QObject
     using This = TableLocalMenu;
 public:
     void init(QTableView* aTable, VirtualCharsModel* aModel);
-    QAction* addCustomFavsAction(std::string_view aLocKey);
-    QAction* favsAction() { return acFavs; }
+    void addSeparator();
+    QAction* addCustomAction(std::string_view aLocKey);
+    QAction* customAction(size_t index) { return customActions.at(index).ac; }
     static void popupMenu(QWidget* widget, QMenu* menu, QPoint where);
     void popup(QWidget* widget, const QPoint& where);
     void translate();
@@ -214,12 +215,14 @@ private:
     QAction *acCopy = nullptr,
             *acCopyVs15 = nullptr,
             *acCopyVs16 = nullptr,
-            *acCopyDotc = nullptr,
-            *acFavs = nullptr;
+            *acCopyDotc = nullptr;
+    struct CustomAction {
+        QAction* ac = nullptr;
+        std::string_view locKey;
+    };
+    std::vector<CustomAction> customActions;
     QMenu* menu;
-    std::string_view favsLocKey;
 signals:
     void thingCopied(uc::CopiedChannel channel, QWidget* initiator);
     void menuActivated();
-    void customFavsCalled();
 };

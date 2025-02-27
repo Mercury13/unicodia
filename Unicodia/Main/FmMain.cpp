@@ -84,6 +84,7 @@ namespace {
         I_TERMS,
         I_ABOUT
     };
+
 }
 
 ///// RowCache /////////////////////////////////////////////////////////////////
@@ -1085,11 +1086,11 @@ FmMain::InitBlocks FmMain::initBlocks()
     btSort = new QToolButton(sortBar);
 
     // Local menu
-    localChars.init(ui->tableChars, &model);
-    localChars.addCustomFavsAction({});
-    connect(&localChars, &TableLocalMenu::thingCopied, this, &This::copyCurrentThing);
-    connect(&localChars, &TableLocalMenu::customFavsCalled, this, &This::charsFavsCalled);
-    connect(&localChars, &TableLocalMenu::menuActivated, this, &This::charsLocalMenuActivated);
+    localBlocks.init(ui->tableChars, &model);
+    localBlocks.acFavs = localBlocks.addCustomAction({});
+    connect(&localBlocks, &TableLocalMenu::thingCopied, this, &This::copyCurrentThing);
+    connect(localBlocks.acFavs, &QAction::triggered, this, &This::blocksFavsCalled);
+    connect(&localBlocks, &TableLocalMenu::menuActivated, this, &This::blocksLocalMenuActivated);
 
     // ALPHA is localized!!
     sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.svg",     { 24, 24 });
@@ -1197,10 +1198,13 @@ void FmMain::initFavs(const InitBlocks& ib)
 
     // Local menu
     localFavs.init(ui->tableFavs, &favsModel);
-    localFavs.addCustomFavsAction("Main.Local.Remove");
+    localFavs.acToBlocks = localFavs.addCustomAction("Main.Local.FindBlk");
+    localFavs.addSeparator();
+    localFavs.acRemove = localFavs.addCustomAction("Main.Local.Remove");
     connect(&localFavs, &TableLocalMenu::thingCopied, this, &This::copyCurrentFavs);
     connect(&localFavs, &TableLocalMenu::menuActivated, this, &This::favsLocalMenuActivated);
-    connect(&localFavs, &TableLocalMenu::customFavsCalled, this, &This::favsFavsCalled);
+    connect(localFavs.acToBlocks, &QAction::triggered, this, &This::favsToBlocks);
+    connect(localFavs.acRemove, &QAction::triggered, this, &This::favsRemoveCalled);
 
     // Create toolbar
     btRemoveFromFavs = ui->wiFavsShowcase->addToolButton(ui->acRemoveFromFavs);
@@ -1296,7 +1300,7 @@ void FmMain::translateMe()
     rebuildBlocks();
 
     // Main tab
-    localChars.translate();
+    localBlocks.translate();
     if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
         forceShowCp(*p);    
 
@@ -2268,40 +2272,48 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
 }
 
 
-void FmMain::charsFavsCalled()
+void FmMain::blocksFavsCalled()
 {
-    acAddCpToFavsTriggered(localCharsDirection);
+    acAddCpToFavsTriggered(localBlocks.direction);
 }
 
 
-void FmMain::charsLocalMenuActivated()
+void FmMain::blocksLocalMenuActivated()
 {
     auto charIf = model.charAt(ui->tableChars->currentIndex());
-    localCharsDirection = DIR_ADD;
-    if (auto ac = localChars.favsAction()) {
-        if (charIf.hasCp()) {
-            // Contains → remove, hence NOT
-            localCharsDirection = !config::favs.contains(charIf.code);
-            ac->setEnabled(true);
-        } else {
-            ac->setEnabled(false);
-        }
-        ac->setText(localCharsDirection
-                    ? ui->acAddCpToFavs->text()
-                    : ui->acRemoveFromFavs->text());
+    localBlocks.direction = DIR_ADD;
+    if (charIf.hasCp()) {
+        // Contains → remove, hence NOT
+        localBlocks.direction = !config::favs.contains(charIf.code);
+        localBlocks.acFavs->setEnabled(true);
+    } else {
+        localBlocks.acFavs->setEnabled(false);
     }
+    localBlocks.acFavs->setText(localBlocks.direction
+                ? ui->acAddCpToFavs->text()
+                : ui->acRemoveFromFavs->text());
 }
 
 
 void FmMain::favsLocalMenuActivated()
 {
     auto charIf = favsModel.charAt(ui->tableFavs->currentIndex());
-    if (auto ac = localFavs.favsAction()) {
-        ac->setEnabled(charIf.hasCp());
+    bool hasChar = charIf.hasCp();
+    localFavs.acToBlocks->setEnabled(hasChar);
+    localFavs.acRemove->setEnabled(hasChar);
+}
+
+
+void FmMain::favsToBlocks()
+{
+    auto charIf = favsModel.charAt(ui->tableFavs->currentIndex());
+    if (charIf.hasCp()) {
+        gotoCp(nullptr, charIf.code);
     }
 }
 
-void FmMain::favsFavsCalled()
+
+void FmMain::favsRemoveCalled()
 {
     addRemoveFromFavs(ui->wiFavsShowcase, nullptr, DIR_REMOVE);
 }
