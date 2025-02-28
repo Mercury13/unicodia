@@ -478,7 +478,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2C60, 0x2C7F, { L'Ɱ', EcContinent::EUROPE },
             "Latin Extended-C",
             { EcScript::Latn, 'C' }, MapSubtype::LATIN,
-            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
     // Coptic OK
     { 0x2C80, 0x2CFF, { L'Ⲁ', EcContinent::AFRICA },
             "Coptic",

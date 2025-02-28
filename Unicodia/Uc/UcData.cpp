@@ -1495,8 +1495,10 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
     // }
     auto v = &firstFont();
     bool isBuggy = flags.have(Cfg::G_RENDER_BUG);
-    bool avoidBuiltin = block().flags.have(Bfg::AVOID_BUILTIN)
-            || ecVersion > script().lastBuiltinVersion;
+    auto& blk = block();
+    bool avoidBuiltin = blk.flags.have(Bfg::AVOID_BUILTIN)
+            || (!blk.flags.have(Bfg::FORCE_BUILTIN) &&
+                    (ecVersion > script().lastBuiltinVersion));
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         auto wantSkip = isBuggy
                 ? v->flags.have(Ffg::BUG_AVOID)     // BUGGY: avoid flag → bad, it’s for normal only

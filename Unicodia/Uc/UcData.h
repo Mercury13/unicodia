@@ -779,6 +779,7 @@ namespace uc {
         EMOJI_OVER_CHAR = 1<<16,    ///< [+] In VS16 blocks draw emoji over characters
         AVOID_BUILTIN   = 1<<17,    ///< [+] No fonts marked as Built-in (for future-proofing
                                     ///<     if both font and block expand)
+        FORCE_BUILTIN   = 1<<18,    ///< [+] Turn off other methods of built-in avoidance
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
