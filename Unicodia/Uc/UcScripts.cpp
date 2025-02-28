@@ -219,7 +219,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS, EcVersion::V_5_0,
         // Russian here as main Cyrillic language
         { .mantissa = 150, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2020 } },
     // Devanagari OK, added 8 characters to Noto Serif

@@ -74,7 +74,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0500, 0x052F, { 0x524, EcContinent::EUROPE },
             "Cyrillic Supplement",
             { EcScript::Cyrl, 1 }, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
     // Armenian OK
     { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, {}, 14_hy },
             "Armenian",
@@ -501,7 +501,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE },
             "Cyrillic Extended-A",
             { EcScript::Cyrl, 'A' }, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::NOTO, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::NOTO, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
     // Supp punct OK, drew U14 in FunkySample
     { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
             "Supplemental Punctuation",
