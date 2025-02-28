@@ -2125,6 +2125,14 @@ void FmMain::blinkAtFavs(QWidget* initiator, const QString& text)
 }
 
 
+void FmMain::reenableAllFavs()
+{
+    ui->wiCharShowcase->reenableFavs();
+    ui->wiLibShowcase->reenableFavs();
+    // Favs have special code, no need here
+}
+
+
 void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool direction)
 {
     if (auto cp = widget->shownObj().digCp()) {
@@ -2156,7 +2164,7 @@ void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool dire
                 blinkAtFavs(initiator, loc::get("Common.Favs.Rem"));
             }
         }
-        widget->reenableFavs();
+        reenableAllFavs();
     }
 }
 

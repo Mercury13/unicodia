@@ -274,6 +274,7 @@ private:
     void redrawFavsTable();
     /// @param [in]  initiator [0] default [+] some other widget
     void blinkAtFavs(QWidget* initiator, const QString& text);
+    void reenableAllFavs();
     /// @param [in]  direction [+] add [-] remove
     void addRemoveFromFavs(WiShowcase* showcase, QWidget* initiator, bool direction);
     void setCollapseColor(const QColor& x);
