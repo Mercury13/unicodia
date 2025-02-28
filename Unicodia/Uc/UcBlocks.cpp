@@ -1591,7 +1591,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
             "CJK Compatibility Ideographs Supplement",
             { EcScript::Hani, 'X' }, MapSubtype::CJ_HANI,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_P01_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK G OK, found a HanaMin version supporting CJK G
     { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
             "CJK Unified Ideographs Extension G",
