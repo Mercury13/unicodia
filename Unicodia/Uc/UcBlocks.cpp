@@ -627,7 +627,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE },
             "Latin Extended-D",
             { EcScript::Latn, 'D' }, MapSubtype::LATIN,
-            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION | Bfg::AVOID_BUILTIN },
+            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Syloti OK
     // Do not hint by X: we don’t want to grow a tree while the forest is dying
     { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA, {}, 3_hy },
@@ -702,7 +702,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE },
             "Latin Extended-E",
             { EcScript::Latn, 'E' }, MapSubtype::LATIN,
-            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION | Bfg::AVOID_BUILTIN },
+            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Cherokee supp OK
     { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA, Ifg::ENG_SMALL_PAINT, 5_hx + ImbaX::RIGHT_2 },
             "Cherokee Supplement",
@@ -878,7 +878,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
             "Latin Extended-F",
             { EcScript::Latn, 'F' }, MapSubtype::LATIN,
-            EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION | Bfg::AVOID_BUILTIN },
+            EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Cypriot OK
     { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE },
             "Cypriot Syllabary",

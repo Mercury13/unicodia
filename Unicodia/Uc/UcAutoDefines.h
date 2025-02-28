@@ -98,6 +98,7 @@ namespace uc {
         V_17_0,
         NN,
         TOO_HIGH = NN,
+        ALL_BUILTIN = TOO_HIGH,
         FIRST = 0,
         FIRST_MEANING = V_1_1,
         NO_VALUE = NOT_EMOJI,

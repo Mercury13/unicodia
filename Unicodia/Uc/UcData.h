@@ -715,6 +715,9 @@ namespace uc {
         Dating time;
         EcFont ecFont;
         Flags<Sfg> flags {};
+            /// The last version supported with standard fonts
+            /// (for future-proofing)
+        EcVersion lastBuiltinVersion = EcVersion::ALL_BUILTIN;
         Lang mainLang = NO_LANG;
 
         mutable unsigned nChars = 0;
