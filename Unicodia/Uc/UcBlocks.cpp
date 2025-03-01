@@ -339,7 +339,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
             { EcScript::ZDIA, 1, }, MapSubtype::SYM_PUNCT,
-            EcScript::NONE, EcFont::NOTO },
+            EcScript::NONE, EcFont::NORMAL, Bfg::AVOID_BUILTIN },
     // Lat ex OK
     { 0x1E00, 0x1EFF, { 0x1EEA, EcContinent::EUROPE },
             "Latin Extended Additional",
