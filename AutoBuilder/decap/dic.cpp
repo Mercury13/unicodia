@@ -802,6 +802,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     // Myth/religion characters’ names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ALLAAH",         Dicf::CAP_TITLE },
+    { "ALLAAHI",        Dicf::CAP_TITLE },
     { "ALLAAHU",        Dicf::CAP_TITLE },
     { "ALLAHOU",        Dicf::CAP_TITLE },
     { "HERMES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
