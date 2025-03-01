@@ -452,6 +452,10 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("combining Is below")            // Tricky
     EX("combining Ur above")            // Same
     EX("combining Us above")            // Same
+    EX("omega above")                   // Omega here small
+    EX("omega below")
+    EX("turned omega above")
+    EX("turned omega below")
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
