@@ -4669,6 +4669,10 @@
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
     </text>
+    <text id="StockBlock">
+     <orig>CJK unified ideographs extension {1}</orig>
+     <au-cmt>{1} = A, B, C…</au-cmt>
+    </text>
    </group>
    <group id="Hano">
     <text id="Name">
@@ -8523,7 +8527,7 @@
   </group>
   <group id="Main">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\FmMain.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\FmMain.ui">
      <format name="ui" />
     </sync>
     <text id=":windowTitle">
@@ -8627,7 +8631,7 @@
   </group>
   <group id="Showcase">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiShowcase.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\WiShowcase.ui">
      <format name="ui" />
     </sync>
     <text id="btCopy">
@@ -8642,7 +8646,7 @@
   </group>
   <group id="Sample">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiSample.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\WiSample.ui">
      <format name="ui" />
     </sync>
    </group>

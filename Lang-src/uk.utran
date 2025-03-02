@@ -6441,6 +6441,11 @@
       <p>Китайська мова все ще роздроблена на діалекти, і ввести фонетичне письмо неможливо.</p>
      </transl>
     </text>
+    <text id="StockBlock">
+     <orig>CJK unified ideographs extension {1}</orig>
+     <au-cmt>{1} = A, B, C…</au-cmt>
+     <transl>ККЯ ієрогліфи розширення {1}</transl>
+    </text>
    </group>
    <group id="Hano">
     <text id="Name">
@@ -12335,7 +12340,7 @@
   </group>
   <group id="Main">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\FmMain.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\FmMain.ui">
      <format name="ui" />
     </sync>
     <text id=":windowTitle">
@@ -12465,7 +12470,7 @@
   </group>
   <group id="Showcase">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiShowcase.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\WiShowcase.ui">
      <format name="ui" />
     </sync>
     <text id="btCopy">
@@ -12482,7 +12487,7 @@
   </group>
   <group id="Sample">
    <group id="Ui">
-    <sync text-owner="me" fname="..\Unicodia\WiSample.ui">
+    <sync text-owner="me" fname="..\Unicodia\Main\WiSample.ui">
      <format name="ui" />
     </sync>
    </group>
