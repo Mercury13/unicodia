@@ -1260,6 +1260,28 @@
    </group>
   </group>
   <group id="Block">
+   <group id="Stock">
+    <au-cmt>
+     <p>Stock (used multiple times) block names</p>
+     <p>{1} = A, B, C…</p>
+    </au-cmt>
+    <text id="Cyrl">
+     <orig>Cyrillic extended {1}</orig>
+     <transl>Кириллица расширенная {1}</transl>
+    </text>
+    <text id="Hani">
+     <orig>CJK unified ideographs extension {1}</orig>
+     <transl>ККЯ иероглифы расширение {1}</transl>
+    </text>
+    <text id="Hira">
+     <orig>Kana extended {1}</orig>
+     <transl>Кана расширенная {1}</transl>
+    </text>
+    <text id="Latn">
+     <orig>Latin extended {1}</orig>
+     <transl>Латиница расширенная {1}</transl>
+    </text>
+   </group>
    <group id="0000">
     <text id="Name">
      <orig>Latin basic (ASCII)</orig>
@@ -5676,14 +5698,6 @@
       <p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на [[ps:Latn|латиницу]] перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>
      </transl>
     </text>
-    <text id="StockBlock">
-     <orig>Cyrillic extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
-     <transl>Кириллица расширенная {1}</transl>
-    </text>
    </group>
    <group id="Deva">
     <text id="Name">
@@ -6356,11 +6370,6 @@
       <p>Китайский язык всё ещё раздроблен на диалекты, и ввести фонетическое письмо невозможно.</p>
      </transl>
     </text>
-    <text id="StockBlock">
-     <orig>CJK unified ideographs extension {1}</orig>
-     <au-cmt>{1} = A, B, C…</au-cmt>
-     <transl>ККЯ иероглифы расширение {1}</transl>
-    </text>
    </group>
    <group id="Hano">
     <text id="Name">
@@ -6476,14 +6485,6 @@
       <p />
       <p>Женщины, которым не{{_}}было доступно образование, писали слоговой азбукой, и предпочитали не{{_}}рубленую [[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>
      </transl>
-    </text>
-    <text id="StockBlock">
-     <orig>Kana extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B…</p>
-     </au-cmt>
-     <transl>Кана расширенная {1}</transl>
     </text>
    </group>
    <group id="Hluw">
@@ -6983,14 +6984,6 @@
       <p />
       <p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>
      </transl>
-    </text>
-    <text id="StockBlock">
-     <orig>Latin extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
-     <transl>Латиница расширенная {1}</transl>
     </text>
    </group>
    <group id="Lepc">

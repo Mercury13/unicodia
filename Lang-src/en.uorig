@@ -1000,6 +1000,24 @@
    </group>
   </group>
   <group id="Block">
+   <group id="Stock">
+    <au-cmt>
+     <p>Stock (used multiple times) block names</p>
+     <p>{1} = A, B, C…</p>
+    </au-cmt>
+    <text id="Cyrl">
+     <orig>Cyrillic extended {1}</orig>
+    </text>
+    <text id="Hani">
+     <orig>CJK unified ideographs extension {1}</orig>
+    </text>
+    <text id="Hira">
+     <orig>Kana extended {1}</orig>
+    </text>
+    <text id="Latn">
+     <orig>Latin extended {1}</orig>
+    </text>
+   </group>
    <group id="0000">
     <text id="Name">
      <orig>Latin basic (ASCII)</orig>
@@ -4170,13 +4188,6 @@
       <p>The USSR made Cyrillic scripts for most languages of its republics. With the fall of the USSR Azerbaijan, Moldova, Turkmenia and Uzbekistan switched to [[ps:Latn|Latin]].</p>
      </orig>
     </text>
-    <text id="StockBlock">
-     <orig>Cyrillic extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
-    </text>
    </group>
    <group id="Deva">
     <text id="Name">
@@ -4607,10 +4618,6 @@
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
     </text>
-    <text id="StockBlock">
-     <orig>CJK unified ideographs extension {1}</orig>
-     <au-cmt>{1} = A, B, C…</au-cmt>
-    </text>
    </group>
    <group id="Hano">
     <text id="Name">
@@ -4689,13 +4696,6 @@
       <p>Women could{{_}}not{{_}}get education, they wrote with syllabary, and preferred smooth Hiragana to sloppy [[ps:Kana|Katakana]]. Nowadays Hiragana is used for words that do{{_}}not{{_}}have an{{_}}ideograph or it is unknown to writer/reader (except loanwords, they are written with Katakana), word endings, teaching children, pronunciation aids for ideographs.</p>
      </orig>
      <au-cmt>in Russian: suffix = (maybe) окончание</au-cmt>
-    </text>
-    <text id="StockBlock">
-     <orig>Kana extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B…</p>
-     </au-cmt>
     </text>
    </group>
    <group id="Hluw">
@@ -5024,13 +5024,6 @@
       <p />
       <p>Azerbaijan, Moldova, Turkmenistan and Uzbekistan adopted Latin with fall of the USSR.</p>
      </orig>
-    </text>
-    <text id="StockBlock">
-     <orig>Latin extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
     </text>
    </group>
    <group id="Lepc">

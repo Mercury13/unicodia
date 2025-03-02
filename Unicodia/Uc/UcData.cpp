@@ -1627,6 +1627,12 @@ void uc::Script::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 }
 
 
+void uc::Script::printfLocKeyStockN(char* buf, size_t n) const
+{
+    snprintf(buf, n, "Block.Stock.%s", id.data());
+}
+
+
 void uc::Category::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "CharCat.%s.%s", id.data(), suffix);
@@ -1780,7 +1786,7 @@ void uc::finishTranslation(
     // Blocks, pass 1 (retrieve keys)
     for (auto& blk : allBlocks()) {
         if (blk.flags.have(Bfg::STOCK_BLOCK)) {
-            blk.alphaKey.script().printfLocKey(c, "StockBlock");
+            blk.alphaKey.script().printfLocKeyStock(c);
             auto& st = synthLocStrings.emplace_back(
                     (loc::get(c).arg(char8_t(blk.alphaKey.subKey))));
             blk.loc.name = st;

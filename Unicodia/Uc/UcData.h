@@ -739,8 +739,13 @@ namespace uc {
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKeyN(buf, N, suffix); }
+
+        template <size_t N>
+        void printfLocKeyStock(char (&buf)[N]) const
+            { printfLocKeyStockN(buf, N); }
     private:
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
+        void printfLocKeyStockN(char* buf, size_t n) const;
     };
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);
