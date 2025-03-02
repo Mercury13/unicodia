@@ -1311,20 +1311,12 @@
     </text>
    </group>
    <group id="0100">
-    <text id="Name">
-     <orig>Latin extended A</orig>
-     <transl>Латинка розширена A</transl>
-    </text>
     <text id="Text">
      <orig>Contains characters of Central and Eastern Europe, Baltic and Celtic languages, Saami, Maltese, Turkish, Esperanto and a few others.</orig>
      <transl>Містить символи мов Центральної та Східної Європи, Прибалтики, кельтських, а також саамської, мальтійської, турецької, есперанто та деяких інших.</transl>
     </text>
    </group>
    <group id="0180">
-    <text id="Name">
-     <orig>Latin extended B</orig>
-     <transl>Латинка розширена B</transl>
-    </text>
     <text id="Text">
      <orig>Contains characters of Slovene, Croatian, Romanian, Livonian, Zhuang, Pinyin (Latin trascription of Chinese), African, Native American languages, and old (pre-1930) Latin of xUSSR languages.</orig>
      <transl>Містить символи словенської, хорватської, румунської, лівської, чжуанської, піньїню (латинізації китайської), африканських, індіанських мов, а також старої (до 1930) латинки мов колишнього СРСР.</transl>
@@ -2331,10 +2323,6 @@
     </text>
    </group>
    <group id="2C60">
-    <text id="Name">
-     <orig>Latin extended C</orig>
-     <transl>Латинка розширена C</transl>
-    </text>
     <text id="Text">
      <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of the Uralic Phonetic Alphabet, and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
      <transl>Символи різних малих мов: мелпа та ніі ''(Папуа{{-}}Нова Гвінея)'', шона ''(Зімбабве)'', уйгурської та інших. Також сім літер уральського фонетичного алфавіту, і клавдієва літера Ⱶ, що означала те ж саме, що сучасний Y, але розрахована під друк існуючими трафаретами.</transl>
@@ -2765,10 +2753,6 @@
     </text>
    </group>
    <group id="A720">
-    <text id="Name">
-     <orig>Latin extended D</orig>
-     <transl>Латинка розширена D</transl>
-    </text>
     <text id="Text">
      <orig>Letters from Uralic Phonetic Alphabet, from medieval transcription and notation systems, ancillary Mayan letters used during colonial period, and others.</orig>
      <transl>Літери, що застосовуються в Уральському фонетичному алфавіті, при вивченні давніх мов, додаткові літери алфавіту мая, що вживалися у колоніальний період, та інші.</transl>
@@ -2903,10 +2887,6 @@
     </text>
    </group>
    <group id="AB30">
-    <text id="Name">
-     <orig>Latin extended E</orig>
-     <transl>Латинка розширена E</transl>
-    </text>
     <text id="Text">
      <orig>Letters used in German and Scottish dialectology, transcription of Native American and Sino-Tibetan languages, and in Latin writing of Yakut (Novgorodov alphabet, 1920–1929).</orig>
      <transl>Літери, вживані у германській та шотландській діалектології, транскрипції індіанських та сино-тибетських мов, а також у латинському записі якутської (алфавіт Новгородова, 1920–1929).</transl>
@@ -3341,10 +3321,6 @@
     </text>
    </group>
    <group id="10780">
-    <text id="Name">
-     <orig>Latin extended F</orig>
-     <transl>Латинка розширена F</transl>
-    </text>
     <text id="Text">
      <orig>Modifier AA is from Voice Quality Symbols used to transcribe speech disorders. The rest are from phonetics, and mean phonemes pronounced incompletely.</orig>
      <transl>Модифікатор AA використовується у нотації розладів мовлення (VoQS). Інші{{-}}у фонетиці та означають звуки, що вимовляються не{{_}}повністю.</transl>
@@ -4397,10 +4373,6 @@
     </text>
    </group>
    <group id="1DF00">
-    <text id="Name">
-     <orig>Latin extended G</orig>
-     <transl>Латинка розширена G</transl>
-    </text>
     <text id="Text">
      <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</orig>
      <transl>Різні символи для розладів мовлення та фонетики: м’які, ретрофлексні (з загинанням язика назад до піднебіння), клацальці звуки та деякі інші.</transl>
@@ -7020,6 +6992,14 @@
       <p />
       <p>З розвалом СРСР на латинку перейшли Азербайджан, Молдова, Туркменія, Узбекістан.</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Latin extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
+     <transl>Латинка розширена {1}</transl>
     </text>
    </group>
    <group id="Lepc">

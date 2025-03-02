@@ -1310,20 +1310,12 @@
     </text>
    </group>
    <group id="0100">
-    <text id="Name">
-     <orig>Latin extended A</orig>
-     <transl>ラテン文字 拡張A</transl>
-    </text>
     <text id="Text">
      <orig>Contains characters of Central and Eastern Europe, Baltic and Celtic languages, Saami, Maltese, Turkish, Esperanto and a few others.</orig>
      <transl>中央および東ヨーロッパ、バルト諸国語およびケルト諸語、サーミ語、マルタ語、トルコ語、エス​​ペラント語などの文字が含まれています。</transl>
     </text>
    </group>
    <group id="0180">
-    <text id="Name">
-     <orig>Latin extended B</orig>
-     <transl>ラテン文字 拡張B</transl>
-    </text>
     <text id="Text">
      <orig>Contains characters of Slovene, Croatian, Romanian, Livonian, Zhuang, Pinyin (Latin trascription of Chinese), African, Native American languages, and old (pre-1930) Latin of xUSSR languages.</orig>
      <transl>スロベニア語、クロアチア語、ルーマニア語、リヴォニア語、チワン語、ピンイン（中国語のラテン語表記）、アフリカ語、アメリカ先住民の言語、および旧ソ連言語の古い（1930 年以前）ラテン語の文字が含まれています。</transl>
@@ -2330,10 +2322,6 @@
     </text>
    </group>
    <group id="2C60">
-    <text id="Name">
-     <orig>Latin extended C</orig>
-     <transl>ラテン文字 拡張C</transl>
-    </text>
     <text id="Text">
      <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of the Uralic Phonetic Alphabet, and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
      <transl>さまざまな小言語の文字: メルパ語とニイ語 (パプアニューギニア)、ショナ語 (ジンバブエ)、ウイグル語など。また、ウラル語の音声アルファベットの 7 文字と、クラウディウス文字 Ⱶ (現代の Y と同じ意味ですが、既存のステンシルで印刷するために設計されています)。</transl>
@@ -2764,10 +2752,6 @@
     </text>
    </group>
    <group id="A720">
-    <text id="Name">
-     <orig>Latin extended D</orig>
-     <transl>ラテン文字 拡張D</transl>
-    </text>
     <text id="Text">
      <orig>Letters from Uralic Phonetic Alphabet, from medieval transcription and notation systems, ancillary Mayan letters used during colonial period, and others.</orig>
      <transl>ウラル語音声アルファベットの文字、中世の転写および表記システム、植民地時代に使用された補助的なマヤ文字など。</transl>
@@ -2902,10 +2886,6 @@
     </text>
    </group>
    <group id="AB30">
-    <text id="Name">
-     <orig>Latin extended E</orig>
-     <transl>ラテン文字 拡張E</transl>
-    </text>
     <text id="Text">
      <orig>Letters used in German and Scottish dialectology, transcription of Native American and Sino-Tibetan languages, and in Latin writing of Yakut (Novgorodov alphabet, 1920–1929).</orig>
      <transl>ドイツとスコットランドの方言、アメリカ先住民とシナ・チベット語の転写、ヤクート語のラテン文字（ノヴゴロドフ文字、1920～1929年）で使用される文字。</transl>
@@ -3340,10 +3320,6 @@
     </text>
    </group>
    <group id="10780">
-    <text id="Name">
-     <orig>Latin extended F</orig>
-     <transl>ラテン文字 拡張F</transl>
-    </text>
     <text id="Text">
      <orig>Modifier AA is from Voice Quality Symbols used to transcribe speech disorders. The rest are from phonetics, and mean phonemes pronounced incompletely.</orig>
      <transl>修飾語 AA は、発話障害を転記するために使用される音声品質記号からのものです。残りは音声学からのもので、不完全に発音された音素を意味します。</transl>
@@ -4389,10 +4365,6 @@
     </text>
    </group>
    <group id="1DF00">
-    <text id="Name">
-     <orig>Latin extended G</orig>
-     <transl>ラテン文字 拡張G</transl>
-    </text>
     <text id="Text">
      <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</orig>
      <transl>発話障害や音声学のためのさまざまな文字: 口蓋音や後屈音、クリック音など。</transl>
@@ -7045,6 +7017,14 @@
       <p />
       <p>アゼルバイジャン、モルドバ、トルクメニスタン、ウズベキスタンは、ソ連の崩壊とともにラテン語を採用しました。</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Latin extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
+     <transl>ラテン文字 拡張{1}</transl>
     </text>
    </group>
    <group id="Lepc">

@@ -1032,17 +1032,11 @@
     </text>
    </group>
    <group id="0100">
-    <text id="Name">
-     <orig>Latin extended A</orig>
-    </text>
     <text id="Text">
      <orig>Contains characters of Central and Eastern Europe, Baltic and Celtic languages, Saami, Maltese, Turkish, Esperanto and a few others.</orig>
     </text>
    </group>
    <group id="0180">
-    <text id="Name">
-     <orig>Latin extended B</orig>
-    </text>
     <text id="Text">
      <orig>Contains characters of Slovene, Croatian, Romanian, Livonian, Zhuang, Pinyin (Latin trascription of Chinese), African, Native American languages, and old (pre-1930) Latin of xUSSR languages.</orig>
     </text>
@@ -1779,9 +1773,6 @@
     </text>
    </group>
    <group id="2C60">
-    <text id="Name">
-     <orig>Latin extended C</orig>
-    </text>
     <text id="Text">
      <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of the Uralic Phonetic Alphabet, and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
     </text>
@@ -2078,9 +2069,6 @@
     </text>
    </group>
    <group id="A720">
-    <text id="Name">
-     <orig>Latin extended D</orig>
-    </text>
     <text id="Text">
      <orig>Letters from Uralic Phonetic Alphabet, from medieval transcription and notation systems, ancillary Mayan letters used during colonial period, and others.</orig>
     </text>
@@ -2187,9 +2175,6 @@
     </text>
    </group>
    <group id="AB30">
-    <text id="Name">
-     <orig>Latin extended E</orig>
-    </text>
     <text id="Text">
      <orig>Letters used in German and Scottish dialectology, transcription of Native American and Sino-Tibetan languages, and in Latin writing of Yakut (Novgorodov alphabet, 1920–1929).</orig>
     </text>
@@ -2504,9 +2489,6 @@
     </text>
    </group>
    <group id="10780">
-    <text id="Name">
-     <orig>Latin extended F</orig>
-    </text>
     <text id="Text">
      <orig>Modifier AA is from Voice Quality Symbols used to transcribe speech disorders. The rest are from phonetics, and mean phonemes pronounced incompletely.</orig>
     </text>
@@ -3301,9 +3283,6 @@
     </text>
    </group>
    <group id="1DF00">
-    <text id="Name">
-     <orig>Latin extended G</orig>
-    </text>
     <text id="Text">
      <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</orig>
     </text>
@@ -5049,6 +5028,13 @@
       <p />
       <p>Azerbaijan, Moldova, Turkmenistan and Uzbekistan adopted Latin with fall of the USSR.</p>
      </orig>
+    </text>
+    <text id="StockBlock">
+     <orig>Latin extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
     </text>
    </group>
    <group id="Lepc">
