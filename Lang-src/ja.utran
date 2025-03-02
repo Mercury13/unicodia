@@ -4035,10 +4035,6 @@
     </text>
    </group>
    <group id="1AFF0">
-    <text id="Name">
-     <orig>Kana extended B</orig>
-     <transl>仮名 拡張B</transl>
-    </text>
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
      <transl>閩南語の台湾方言を仮名で表記したもの。第二次世界大戦前に日本の言語学者によって発明された。</transl>
@@ -4055,10 +4051,6 @@
     </text>
    </group>
    <group id="1B100">
-    <text id="Name">
-     <orig>Kana extended A</orig>
-     <transl>仮名 拡張A</transl>
-    </text>
     <text id="Text">
      <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</orig>
      <transl>[[ps:Hent|変体仮名]] (旧 [[ps:Hira|ひらがな]]) 31 文字、[[ps:Kana|カタカナ]] とひらがな 4 文字。</transl>
@@ -6494,6 +6486,14 @@
       <p />
       <p>女性は教育を受けられず、音節文字で書き、雑な [[ps:Kana|カタカナ]] よりも滑らかなひらがなを好みました。現在、ひらがなは、表意文字を持たない単語や書き手/読み手に表意文字がわからない単語 (借用語は除く。借用語はカタカナで書きます)、語尾、子供の教育、表意文字の発音補助などに使用されています。</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Kana extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B…</p>
+     </au-cmt>
+     <transl>仮名 拡張{1}</transl>
     </text>
    </group>
    <group id="Hluw">

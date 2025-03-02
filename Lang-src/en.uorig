@@ -3059,9 +3059,6 @@
     </text>
    </group>
    <group id="1AFF0">
-    <text id="Name">
-     <orig>Kana extended B</orig>
-    </text>
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
     </text>
@@ -3075,9 +3072,6 @@
     </text>
    </group>
    <group id="1B100">
-    <text id="Name">
-     <orig>Kana extended A</orig>
-    </text>
     <text id="Text">
      <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</orig>
     </text>
@@ -4695,6 +4689,13 @@
       <p>Women could{{_}}not{{_}}get education, they wrote with syllabary, and preferred smooth Hiragana to sloppy [[ps:Kana|Katakana]]. Nowadays Hiragana is used for words that do{{_}}not{{_}}have an{{_}}ideograph or it is unknown to writer/reader (except loanwords, they are written with Katakana), word endings, teaching children, pronunciation aids for ideographs.</p>
      </orig>
      <au-cmt>in Russian: suffix = (maybe) окончание</au-cmt>
+    </text>
+    <text id="StockBlock">
+     <orig>Kana extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B…</p>
+     </au-cmt>
     </text>
    </group>
    <group id="Hluw">

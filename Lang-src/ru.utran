@@ -4039,10 +4039,6 @@
     </text>
    </group>
    <group id="1AFF0">
-    <text id="Name">
-     <orig>Kana extended B</orig>
-     <transl>Кана расширенная B</transl>
-    </text>
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
      <transl>Изобретённая японскими лингвистами незадолго до Второй мировой войны запись каной тайваньского диалекта южноминьского языка.</transl>
@@ -4059,10 +4055,6 @@
     </text>
    </group>
    <group id="1B100">
-    <text id="Name">
-     <orig>Kana extended A</orig>
-     <transl>Кана расширенная A</transl>
-    </text>
     <text id="Text">
      <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</orig>
      <transl>31 символ [[ps:Hent|хэнтáйганы]]{{-}}старой [[ps:Hira|хирáганы]], и 4 символа [[ps:Kana|катáканы]] и хираганы.</transl>
@@ -6484,6 +6476,14 @@
       <p />
       <p>Женщины, которым не{{_}}было доступно образование, писали слоговой азбукой, и предпочитали не{{_}}рубленую [[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Kana extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B…</p>
+     </au-cmt>
+     <transl>Кана расширенная {1}</transl>
     </text>
    </group>
    <group id="Hluw">
