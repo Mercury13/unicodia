@@ -1800,10 +1800,6 @@
     </text>
    </group>
    <group id="1C80">
-    <text id="Name">
-     <orig>Cyrillic extended C</orig>
-     <transl>キリル文字 拡張C</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
@@ -2380,10 +2376,6 @@
     </text>
    </group>
    <group id="2DE0">
-    <text id="Name">
-     <orig>Cyrillic extended A</orig>
-     <transl>キリル文字 拡張A</transl>
-    </text>
     <text id="Text">
      <orig>Combining Cyrillic letters from Church Slavonic.</orig>
      <transl>教会スラヴ語のキリル文字を組み合わせたもの。</transl>
@@ -2698,10 +2690,6 @@
     </text>
    </group>
    <group id="A640">
-    <text id="Name">
-     <orig>Cyrillic extended B</orig>
-     <transl>キリル文字 拡張 B</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
@@ -4389,10 +4377,6 @@
     </text>
    </group>
    <group id="1E030">
-    <text id="Name">
-     <orig>Cyrillic extended D</orig>
-     <transl>キリル文字 拡張D</transl>
-    </text>
     <text id="Text">
      <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
      <transl>キリル文字で書き写しを書くための修飾文字。このような表記法は、旧ソ連全域の学校や教育機関で広く使用されています。</transl>
@@ -5710,6 +5694,14 @@
       <p />
       <p>ソ連は、その共和国のほとんどの言語にキリル文字を使用した。ソ連の崩壊に伴い、アゼルバイジャン、モルドバ、トルクメニスタン、ウズベキスタンは[[ps:Latn|ラテン語]]に切り替えた。</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Cyrillic extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
+     <transl>キリル文字 拡張{1}</transl>
     </text>
    </group>
    <group id="Deva">

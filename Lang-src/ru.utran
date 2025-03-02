@@ -1800,10 +1800,6 @@
     </text>
    </group>
    <group id="1C80">
-    <text id="Name">
-     <orig>Cyrillic extended C</orig>
-     <transl>Кириллица расширенная C</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
@@ -2380,10 +2376,6 @@
     </text>
    </group>
    <group id="2DE0">
-    <text id="Name">
-     <orig>Cyrillic extended A</orig>
-     <transl>Кириллица расширенная A</transl>
-    </text>
     <text id="Text">
      <orig>Combining Cyrillic letters from Church Slavonic.</orig>
      <transl>Комбинирующие кириллические буквы из церковнославянского.</transl>
@@ -2698,10 +2690,6 @@
     </text>
    </group>
    <group id="A640">
-    <text id="Name">
-     <orig>Cyrillic extended B</orig>
-     <transl>Кириллица расширенная B</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
@@ -4396,10 +4384,6 @@
     </text>
    </group>
    <group id="1E030">
-    <text id="Name">
-     <orig>Cyrillic extended D</orig>
-     <transl>Кириллица расширенная D</transl>
-    </text>
     <text id="Text">
      <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
      <transl>Буквы-модификаторы для кириллической записи транскрипции. Такая запись распространена в школах и институтах всего бывшего СССР.</transl>
@@ -5699,6 +5683,14 @@
       <p />
       <p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на [[ps:Latn|латиницу]] перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Cyrillic extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
+     <transl>Кириллица расширенная {1}</transl>
     </text>
    </group>
    <group id="Deva">

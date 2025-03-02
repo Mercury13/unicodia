@@ -1801,10 +1801,6 @@
     </text>
    </group>
    <group id="1C80">
-    <text id="Name">
-     <orig>Cyrillic extended C</orig>
-     <transl>Кирилиця розширена C</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
@@ -2381,10 +2377,6 @@
     </text>
    </group>
    <group id="2DE0">
-    <text id="Name">
-     <orig>Cyrillic extended A</orig>
-     <transl>Кирилиця розширена A</transl>
-    </text>
     <text id="Text">
      <orig>Combining Cyrillic letters from Church Slavonic.</orig>
      <transl>Комбінуючі кирилічні літери з церковнослов’янської.</transl>
@@ -2699,10 +2691,6 @@
     </text>
    </group>
    <group id="A640">
-    <text id="Name">
-     <orig>Cyrillic extended B</orig>
-     <transl>Кирилиця розширена B</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
@@ -4397,10 +4385,6 @@
     </text>
    </group>
    <group id="1E030">
-    <text id="Name">
-     <orig>Cyrillic extended D</orig>
-     <transl>Кирилиця розширена D</transl>
-    </text>
     <text id="Text">
      <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
      <transl>Літери-модифікатори для кирилічного запису транскрипції. Такий запис розповсюджений у школах та інститутах усього колишнього СРСР.</transl>
@@ -5700,6 +5684,14 @@
       <p />
       <p>СРСР зробив кирилічну писемність для багатьох мов союзних республік. З розвалом СРСР на [[ps:Latn|латинку]] перейшли Азербайджан, Молдова, Туркменія, Узбекістан.</p>
      </transl>
+    </text>
+    <text id="StockBlock">
+     <orig>Cyrillic extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
+     <transl>Кирилиця розширена {1}</transl>
     </text>
    </group>
    <group id="Deva">

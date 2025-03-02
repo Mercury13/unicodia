@@ -1412,9 +1412,6 @@
     </text>
    </group>
    <group id="1C80">
-    <text id="Name">
-     <orig>Cyrillic extended C</orig>
-    </text>
     <text id="Text">
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
@@ -1814,9 +1811,6 @@
     </text>
    </group>
    <group id="2DE0">
-    <text id="Name">
-     <orig>Cyrillic extended A</orig>
-    </text>
     <text id="Text">
      <orig>Combining Cyrillic letters from Church Slavonic.</orig>
     </text>
@@ -2034,9 +2028,6 @@
     </text>
    </group>
    <group id="A640">
-    <text id="Name">
-     <orig>Cyrillic extended B</orig>
-    </text>
     <text id="Text">
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
@@ -3300,9 +3291,6 @@
     </text>
    </group>
    <group id="1E030">
-    <text id="Name">
-     <orig>Cyrillic extended D</orig>
-    </text>
     <text id="Text">
      <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
     </text>
@@ -4187,6 +4175,13 @@
       <p />
       <p>The USSR made Cyrillic scripts for most languages of its republics. With the fall of the USSR Azerbaijan, Moldova, Turkmenia and Uzbekistan switched to [[ps:Latn|Latin]].</p>
      </orig>
+    </text>
+    <text id="StockBlock">
+     <orig>Cyrillic extended {1}</orig>
+     <au-cmt>
+      <p>Stock block name</p>
+      <p>{1} = A, B, C…</p>
+     </au-cmt>
     </text>
    </group>
    <group id="Deva">

@@ -310,7 +310,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1C80, 0x1C8F, { 0x1C88, EcContinent::EUROPE },
             "Cyrillic Extended-C",
             { EcScript::Cyrl, 'C' }, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::GLAGOLITIC, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::GLAGOLITIC, Bfg::STOCK_BLOCK_DESC },
     // Geor ex OK
     { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_OTHER_LINES },
             "Georgian Extended",
@@ -501,7 +501,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE },
             "Cyrillic Extended-A",
             { EcScript::Cyrl, 'A' }, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::NOTO, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
+            EcScript::Cyrl, EcFont::NOTO, Bfg::STOCK_BLOCK_DESC | Bfg::FORCE_BUILTIN },
     // Supp punct OK, drew U14 in FunkySample
     { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
             "Supplemental Punctuation",
@@ -614,7 +614,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::ENG_CUSTOM_PAINT },
             "Cyrillic Extended-B",
             { EcScript::Cyrl, 'B' }, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::STOCK_BLOCK_DESC },
     // Bamum OK
     { 0xA6A0, 0xA6FF, { 0xA6AE, EcContinent::AFRICA },
             "Bamum",
@@ -1419,7 +1419,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E030, 0x1E08F, { 0x1E047, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
             "Cyrillic Extended-D",
             { EcScript::Cyrl, 'D'}, MapSubtype::ALIVE,
-            EcScript::Cyrl, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::FUNKY, Bfg::STOCK_BLOCK_DESC },
     // NP Hmong OK
     { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA, {}, 3_hx },
             "Nyiakeng Puachue Hmong",
