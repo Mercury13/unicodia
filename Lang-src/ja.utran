@@ -2636,10 +2636,6 @@
     </text>
    </group>
    <group id="3400">
-    <text id="Name">
-     <orig>CJK unified ideographs extension A</orig>
-     <transl>CJK統合漢字 拡張A</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>6582 rare [[ps:Hani|Chinese ideographs]]. In 2020 ten more were added, filling the block completely.</p>
@@ -4894,60 +4890,36 @@
     </text>
    </group>
    <group id="20000">
-    <text id="Name">
-     <orig>CJK unified ideographs extension B</orig>
-     <transl>CJK統合漢字 拡張B</transl>
-    </text>
     <text id="Text">
      <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
      <transl>希少で歴史的な [[ps:Hani|CJK 表意文字]]。これらの表意文字は、Windows の標準フォント「SimSun-ExtB」にパックされました。後に、ブロック内に多くの誤りが見つかり、誤って重複した表意文字が 8 つも見つかりました。</transl>
     </text>
    </group>
    <group id="2A700">
-    <text id="Name">
-     <orig>CJK unified ideographs extension C</orig>
-     <transl>CJK統合漢字 拡張C</transl>
-    </text>
     <text id="Text">
      <orig>4149 rare and old ideographs added in 2009. In 2021 4 more were added.</orig>
      <transl>2009 年に 4149 個の珍しい古い表意文字が追加されました。2021 年にはさらに 4 個が追加されました。</transl>
     </text>
    </group>
    <group id="2B740">
-    <text id="Name">
-     <orig>CJK unified ideographs extension D</orig>
-     <transl>CJK統合漢字 拡張D</transl>
-    </text>
     <text id="Text">
      <orig>222 rare and old ideographs added in 2010.</orig>
      <transl>2010 年に 222 個の珍しい古い表意文字が追加されました。</transl>
     </text>
    </group>
    <group id="2B820">
-    <text id="Name">
-     <orig>CJK unified ideographs extension E</orig>
-     <transl>CJK統合漢字 拡張E</transl>
-    </text>
     <text id="Text">
      <orig>5762 rare and old ideographs added in 2015.</orig>
      <transl>2015 年に 576​​2 個の珍しい古い表意文字が追加されました。</transl>
     </text>
    </group>
    <group id="2CEB0">
-    <text id="Name">
-     <orig>CJK unified ideographs extension F</orig>
-     <transl>CJK統合漢字 拡張F</transl>
-    </text>
     <text id="Text">
      <orig>7473 ideographs added in 2017, Including rare, old and more than 1000 from Zhuang language.</orig>
      <transl>2017年に7473の表意文字が追加されました。これには、珍しい文字、古い文字、チワン語の文字が1000以上含まれています。</transl>
     </text>
    </group>
    <group id="2EBF0">
-    <text id="Name">
-     <orig>CJK unified ideographs extension I</orig>
-     <transl>CJK統合漢字 拡張I</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
@@ -4976,10 +4948,6 @@
     </text>
    </group>
    <group id="30000">
-    <text id="Name">
-     <orig>CJK unified ideographs extension G</orig>
-     <transl>CJK統合漢字 拡張G</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated 4939 old and rare characters there. This block contains two record-beating ideographs:</p>
@@ -4994,10 +4962,6 @@
     </text>
    </group>
    <group id="31350">
-    <text id="Name">
-     <orig>CJK unified ideographs extension H</orig>
-     <transl>CJK統合漢字 拡張H</transl>
-    </text>
     <text id="Text">
      <orig>Rare ideographs, mainly from old Chinese newspapers.</orig>
      <transl>主に古い中国の新聞からの珍しい表意文字。</transl>
@@ -5005,10 +4969,6 @@
    </group>
    <group id="323B0">
     <au-cmt>U17</au-cmt>
-    <text id="Name">
-     <orig>CJK unified ideographs extension J</orig>
-     <transl>CJK統合漢字 拡張J</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>

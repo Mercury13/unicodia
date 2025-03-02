@@ -1,5 +1,8 @@
 #include "UcData.h"
 
+// C++
+#include <deque>
+
 // Qt
 #include <QFontDatabase>
 #include <QFontMetrics>
@@ -1736,6 +1739,8 @@ namespace {
 
     constinit const uc::Block::Loc::Telltales NO_TELLTALES;
 
+    std::deque<std::u8string> synthLocStrings;
+
 }   // anon namespace
 
 
@@ -1745,6 +1750,7 @@ void uc::finishTranslation(
         std::u32string_view ellipsisBlocks,
         const std::unordered_map<char32_t, std::u32string>& alphaFixup)
 {
+    synthLocStrings.clear();
     char c[40];
 
     for (unsigned i = 0; i < uc::N_SCRIPTS; ++i) {
@@ -1773,8 +1779,15 @@ void uc::finishTranslation(
 
     // Blocks, pass 1 (retrieve keys)
     for (auto& blk : allBlocks()) {
-        blk.printfLocKey(c, "Name");
-        blk.loc.name = loc::get(c);
+        if (blk.flags.have(Bfg::STOCK_BLOCK)) {
+            blk.alphaKey.script().printfLocKey(c, "StockBlock");
+            auto& st = synthLocStrings.emplace_back(
+                    (loc::get(c).arg(char8_t(blk.alphaKey.subKey))));
+            blk.loc.name = st;
+        } else {
+            blk.printfLocKey(c, "Name");
+            blk.loc.name = loc::get(c);
+        }
         blk.loc.hasEllipsis = std::binary_search(
                     ellipsisBlocks.begin(), ellipsisBlocks.end(), blk.startingCp);
 

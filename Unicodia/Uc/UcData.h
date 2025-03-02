@@ -780,7 +780,9 @@ namespace uc {
         AVOID_BUILTIN   = 1<<17,    ///< [+] No fonts marked as Built-in (for future-proofing
                                     ///<     if both font and block expand)
         FORCE_BUILTIN   = 1<<18,    ///< [+] Turn off other methods of built-in avoidance
+        STOCK_BLOCK     = 1<<19,    ///< [+] The block has a stock name (Script.{1}.StockBlock)
         EXPERIMENT      = 1<<30,    ///< Left for experiments
+        STOCK_BLOCK_DESC = STOCK_BLOCK | HAS_DESCRIPTION,
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
     ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
