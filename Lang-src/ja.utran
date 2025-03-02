@@ -4054,7 +4054,7 @@
      <orig>Tangut supplement</orig>
      <transl>西夏文字 補足</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words: all nine are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</p>
       <p />
@@ -4062,6 +4062,7 @@
      </orig>
      <known-orig>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</known-orig>
      <transl>このブロックには、西夏語の 9 つの [[pt:unification|disunification]] が含まれています。言い換えると、9 つの文字はすべて誰かの同音異義語です。たとえば、「pair」は同じ場所 17134 に残され、同音異義語の「foolish」は新しい番号 18D00 を取得しました。</transl>
+     <tr-cmt>WARNING: disunification untranslated here</tr-cmt>
     </text>
    </group>
    <group id="18D80">
