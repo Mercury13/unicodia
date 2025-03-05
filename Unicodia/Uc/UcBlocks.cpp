@@ -444,7 +444,8 @@ constinit const uc::Block uc::blocks[] {
     // Arrows A OK
     { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE },
             "Supplemental Arrows-A",
-            { EcScript::ZARR, 'A' }, MapSubtype::SYM_OTHER },
+            { EcScript::ZARR, 'A' }, MapSubtype::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Braille OK
     { 0x2800, 0x28FF, { L'⠝', EcContinent::NONE },
             "Braille Patterns",
@@ -453,7 +454,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
             "Supplemental Arrows-B",
             { EcScript::ZARR, 'B' }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI | Bfg::STOCK_BLOCK_DESC },
     // Misc math B OK
     { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
@@ -1535,7 +1536,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE },
             "Supplemental Arrows-C",
             { EcScript::ZARR, 'C' }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+            EcScript::NONE, EcFont::NOTO_SYMBOL2, Bfg::STOCK_BLOCK_DESC },
     // Supp sym/picto OK
     { 0x1F900, 0x1F9FF, { 0x1F98A, EcContinent::NONE },
             "Supplemental Symbols and Pictographs",

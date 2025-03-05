@@ -1281,6 +1281,10 @@
      <orig>Latin extended {1}</orig>
      <transl>ラテン文字 拡張{1}</transl>
     </text>
+    <text id="ZARR">
+     <orig>Arrows supplemental {1}</orig>
+     <transl>矢印 補足{1}</transl>
+    </text>
    </group>
    <group id="0000">
     <text id="Name">
@@ -2270,10 +2274,6 @@
     </text>
    </group>
    <group id="27F0">
-    <text id="Name">
-     <orig>Arrows supplemental A</orig>
-     <transl>矢印 補足A</transl>
-    </text>
     <text id="Text">
      <orig>Sixteen various mathematical and technical arrows, mainly circular and elongated.</orig>
      <transl>主に円形と細長い形の、16 個のさまざまな数学的および技術的な矢印。</transl>
@@ -2286,10 +2286,6 @@
     </text>
    </group>
    <group id="2900">
-    <text id="Name">
-     <orig>Arrows supplemental B</orig>
-     <transl>矢印 補足B</transl>
-    </text>
     <text id="Text">
      <orig>Intersecting arrows from theory of knots, harpoons, curved arrows, and other symbols.</orig>
      <transl>結び目の理論から生まれた交差する矢印、銛、曲がった矢印、その他の記号。</transl>
@@ -4724,10 +4720,6 @@
     </text>
    </group>
    <group id="1F800">
-    <text id="Name">
-     <orig>Arrows supplemental C</orig>
-     <transl>矢印 補助C</transl>
-    </text>
     <text id="Text" force-attention="true">
      <orig>
       <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>

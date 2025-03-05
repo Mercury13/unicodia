@@ -1282,6 +1282,10 @@
      <orig>Latin extended {1}</orig>
      <transl>Латинка розширена {1}</transl>
     </text>
+    <text id="ZARR">
+     <orig>Arrows supplemental {1}</orig>
+     <transl>Стрілки додаткові {1}</transl>
+    </text>
    </group>
    <group id="0000">
     <text id="Name">
@@ -2271,10 +2275,6 @@
     </text>
    </group>
    <group id="27F0">
-    <text id="Name">
-     <orig>Arrows supplemental A</orig>
-     <transl>Стрілки додаткові A</transl>
-    </text>
     <text id="Text">
      <orig>Sixteen various mathematical and technical arrows, mainly circular and elongated.</orig>
      <transl>Шістнадцять різних математичних і технічних стрілок, здебільшого кругові та подовжені.</transl>
@@ -2287,10 +2287,6 @@
     </text>
    </group>
    <group id="2900">
-    <text id="Name">
-     <orig>Arrows supplemental B</orig>
-     <transl>Стрілки додаткові B</transl>
-    </text>
     <text id="Text">
      <orig>Intersecting arrows from theory of knots, harpoons, curved arrows, and other symbols.</orig>
      <transl>Схрещені стрілки з теорії вузлів, гарпуни, викривлені стрілки та інші символи.</transl>
@@ -4725,10 +4721,6 @@
     </text>
    </group>
    <group id="1F800">
-    <text id="Name">
-     <orig>Arrows supplemental C</orig>
-     <transl>Стрілки додаткові C</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
