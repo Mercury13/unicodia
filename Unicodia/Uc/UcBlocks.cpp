@@ -121,12 +121,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x0870, 0x089F, { 0x877, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Arabic Extended-B",
             { EcScript::Arab, 'B' }, MapSubtype::ALIVE,
-            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Arab, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Arabic ex A OK
     { 0x08A0, 0x08FF, { 0x8A4, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Arabic Extended-A",
             { EcScript::Arab, 'A' }, MapSubtype::ALIVE,
-            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Arab, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Devanagari OK
     { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, Ifg::SHIFT_DOWN, SvgHint{ 9, 2 } },
             "Devanagari",
@@ -983,7 +983,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' }, MapSubtype::ALIVE,
-            EcScript::Arab, EcFont::ARABIC, Bfg::HAS_DESCRIPTION },
+            EcScript::Arab, EcFont::ARABIC, Bfg::STOCK_BLOCK_DESC },
     // Old Sogdian OK
     { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA_RTL, Ifg::PAINT_SVG, 14_hy },
             "Old Sogdian",

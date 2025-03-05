@@ -1265,6 +1265,10 @@
      <p>Stock (used multiple times) block names</p>
      <p>{1} = A, B, C…</p>
     </au-cmt>
+    <text id="Arab">
+     <orig>Arabic extended {1}</orig>
+     <transl>Арабский расширенный {1}</transl>
+    </text>
     <text id="Cyrl">
      <orig>Cyrillic extended {1}</orig>
      <transl>Кириллица расширенная {1}</transl>
@@ -1516,10 +1520,6 @@
     </text>
    </group>
    <group id="0870">
-    <text id="Name">
-     <orig>Arabic extended B</orig>
-     <transl>Арабский расширенный B</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Characters for comments to Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
@@ -1534,10 +1534,6 @@
     </text>
    </group>
    <group id="08A0">
-    <text id="Name">
-     <orig>Arabic extended A</orig>
-     <transl>Арабский расширенный A</transl>
-    </text>
     <text id="Text">
      <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</orig>
      <transl>Дополнительные арабские буквы для [[ps:Rohg|рохинджа]] ''(Мьянма)'', белорусского, татарского, башкирского, арви ''(Индия, Шри-Ланка)'', шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' и африканских языков (в частности, берберского). Также знаки комментариев к Корану.</transl>
@@ -3481,10 +3477,6 @@
     </text>
    </group>
    <group id="10EC0">
-    <text id="Name">
-     <orig>Arabic extended C</orig>
-     <transl>Арабский расширенный C</transl>
-    </text>
     <text id="Text">
      <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
      <transl>Символы из турецкого и ливийского Корана, и из редких вариаций пегона (записи [[ps:Java|яванского]] арабскими буквами).</transl>

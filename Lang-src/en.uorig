@@ -1005,6 +1005,9 @@
      <p>Stock (used multiple times) block names</p>
      <p>{1} = A, B, C…</p>
     </au-cmt>
+    <text id="Arab">
+     <orig>Arabic extended {1}</orig>
+    </text>
     <text id="Cyrl">
      <orig>Cyrillic extended {1}</orig>
     </text>
@@ -1185,9 +1188,6 @@
     </text>
    </group>
    <group id="0870">
-    <text id="Name">
-     <orig>Arabic extended B</orig>
-    </text>
     <text id="Text">
      <orig>
       <p>Characters for comments to Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
@@ -1197,9 +1197,6 @@
     </text>
    </group>
    <group id="08A0">
-    <text id="Name">
-     <orig>Arabic extended A</orig>
-    </text>
     <text id="Text">
      <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</orig>
     </text>
@@ -2624,9 +2621,6 @@
     </text>
    </group>
    <group id="10EC0">
-    <text id="Name">
-     <orig>Arabic extended C</orig>
-    </text>
     <text id="Text">
      <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
     </text>

@@ -1266,6 +1266,10 @@
      <p>Stock (used multiple times) block names</p>
      <p>{1} = A, B, C…</p>
     </au-cmt>
+    <text id="Arab">
+     <orig>Arabic extended {1}</orig>
+     <transl>Арабська розширена {1}</transl>
+    </text>
     <text id="Cyrl">
      <orig>Cyrillic extended {1}</orig>
      <transl>Кирилиця розширена {1}</transl>
@@ -1517,10 +1521,6 @@
     </text>
    </group>
    <group id="0870">
-    <text id="Name">
-     <orig>Arabic extended B</orig>
-     <transl>Арабська розширена B</transl>
-    </text>
     <text id="Text">
      <orig>
       <p>Characters for comments to Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
@@ -1535,10 +1535,6 @@
     </text>
    </group>
    <group id="08A0">
-    <text id="Name">
-     <orig>Arabic extended A</orig>
-     <transl>Арабська розширена A</transl>
-    </text>
     <text id="Text">
      <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</orig>
      <transl>Додаткові арабські літери для [[ps:Rohg|рохінджа]] ''(М’янма)'', білоруської, татарської, башкірської, арві ''(Індія, Шрі-Ланка)'', шахмукхі ''([[ps:Guru|пенджабської]])'', хіндко ''(Пакістан)'' та африканських мов (зокрема, берберської). Також знаки коментарів до Корану.</transl>
@@ -3482,10 +3478,6 @@
     </text>
    </group>
    <group id="10EC0">
-    <text id="Name">
-     <orig>Arabic extended C</orig>
-     <transl>Арабська розширена C</transl>
-    </text>
     <text id="Text">
      <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
      <transl>Символи з турецького та лівійського Корану, та з рідких варіацій пегону (запису [[ps:Java|яванської]] арабськими літерами).</transl>
