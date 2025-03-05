@@ -1260,6 +1260,28 @@
    </group>
   </group>
   <group id="Block">
+   <group id="Stock">
+    <au-cmt>
+     <p>Stock (used multiple times) block names</p>
+     <p>{1} = A, B, C…</p>
+    </au-cmt>
+    <text id="Cyrl">
+     <orig>Cyrillic extended {1}</orig>
+     <transl>キリル文字 拡張{1}</transl>
+    </text>
+    <text id="Hani">
+     <orig>CJK unified ideographs extension {1}</orig>
+     <transl>CJK統合漢字 拡張{1}</transl>
+    </text>
+    <text id="Hira">
+     <orig>Kana extended {1}</orig>
+     <transl>仮名 拡張{1}</transl>
+    </text>
+    <text id="Latn">
+     <orig>Latin extended {1}</orig>
+     <transl>ラテン文字 拡張{1}</transl>
+    </text>
+   </group>
    <group id="0000">
     <text id="Name">
      <orig>Latin basic (ASCII)</orig>
@@ -5687,14 +5709,6 @@
       <p>ソ連は、その共和国のほとんどの言語にキリル文字を使用した。ソ連の崩壊に伴い、アゼルバイジャン、モルドバ、トルクメニスタン、ウズベキスタンは[[ps:Latn|ラテン語]]に切り替えた。</p>
      </transl>
     </text>
-    <text id="StockBlock">
-     <orig>Cyrillic extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
-     <transl>キリル文字 拡張{1}</transl>
-    </text>
    </group>
    <group id="Deva">
     <text id="Name">
@@ -6365,12 +6379,6 @@
       <p>中国語は依然として方言に細分化されており、表音文字を導入することは不可能です。</p>
      </transl>
     </text>
-    <text id="StockBlock">
-     <orig>CJK unified ideographs extension {1}</orig>
-     <au-cmt>{1} = A, B, C…</au-cmt>
-     <transl>CJK統合漢字 拡張{1}</transl>
-     <tr-cmt>{1}=A, B, C…</tr-cmt>
-    </text>
    </group>
    <group id="Hano">
     <text id="Name">
@@ -6486,14 +6494,6 @@
       <p />
       <p>女性は教育を受けられず、音節文字で書き、雑な [[ps:Kana|カタカナ]] よりも滑らかなひらがなを好みました。現在、ひらがなは、表意文字を持たない単語や書き手/読み手に表意文字がわからない単語 (借用語は除く。借用語はカタカナで書きます)、語尾、子供の教育、表意文字の発音補助などに使用されています。</p>
      </transl>
-    </text>
-    <text id="StockBlock">
-     <orig>Kana extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B…</p>
-     </au-cmt>
-     <transl>仮名 拡張{1}</transl>
     </text>
    </group>
    <group id="Hluw">
@@ -7009,14 +7009,6 @@
       <p />
       <p>アゼルバイジャン、モルドバ、トルクメニスタン、ウズベキスタンは、ソ連の崩壊とともにラテン語を採用しました。</p>
      </transl>
-    </text>
-    <text id="StockBlock">
-     <orig>Latin extended {1}</orig>
-     <au-cmt>
-      <p>Stock block name</p>
-      <p>{1} = A, B, C…</p>
-     </au-cmt>
-     <transl>ラテン文字 拡張{1}</transl>
     </text>
    </group>
    <group id="Lepc">
