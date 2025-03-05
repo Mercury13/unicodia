@@ -440,7 +440,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",
             { EcScript::ZMAT, 'A' }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::MATH },
+            EcScript::NONE, EcFont::MATH, Bfg::STOCK_BLOCK_DESC },
     // Arrows A OK
     { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE },
             "Supplemental Arrows-A",
@@ -459,7 +459,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
             { EcScript::ZMAT, 'B' }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::MATH },
+            EcScript::NONE, EcFont::MATH, Bfg::STOCK_BLOCK_DESC },
     // Supp math ops OK
     { 0x2A00, 0x2AFF, { L'⨔', EcContinent::NONE },
             "Supplemental Mathematical Operators",

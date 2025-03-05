@@ -1023,6 +1023,9 @@
     <text id="ZARR">
      <orig>Arrows supplemental {1}</orig>
     </text>
+    <text id="ZMAT">
+     <orig>Mathematical symbols miscellaneous {1}</orig>
+    </text>
    </group>
    <group id="0000">
     <text id="Name">
@@ -1726,9 +1729,6 @@
     </text>
    </group>
    <group id="27C0">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous A</orig>
-    </text>
     <text id="Text">
      <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
     </text>
@@ -1749,9 +1749,6 @@
     </text>
    </group>
    <group id="2980">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous B</orig>
-    </text>
     <text id="Text">
      <orig>Various mathematical symbols: brackets, angles, empty sets, box-and-whiskers…</orig>
     </text>

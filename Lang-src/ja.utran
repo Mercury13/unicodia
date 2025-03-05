@@ -1289,6 +1289,10 @@
      <orig>Arrows supplemental {1}</orig>
      <transl>矢印 補足{1}</transl>
     </text>
+    <text id="ZMAT">
+     <orig>Mathematical symbols miscellaneous {1}</orig>
+     <transl>数学記号 その他{1}</transl>
+    </text>
    </group>
    <group id="0000">
     <text id="Name">
@@ -2260,10 +2264,6 @@
     </text>
    </group>
    <group id="27C0">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous A</orig>
-     <transl>数学記号 その他A</transl>
-    </text>
     <text id="Text">
      <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
      <transl>幾何学、形式論理、プログラム検証、データベース理論、その他の数学の分野で使用されるいくつかの文字。また、西洋の長除算記号（旧ソ連では主に曲がった T またはまっすぐな L を使用）</transl>
@@ -2288,10 +2288,6 @@
     </text>
    </group>
    <group id="2980">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous B</orig>
-     <transl>数学記号 その他B</transl>
-    </text>
     <text id="Text">
      <orig>Various mathematical symbols: brackets, angles, empty sets, box-and-whiskers…</orig>
      <transl>さまざまな数学記号: 括弧、角度、空集合、箱ひげ図…</transl>

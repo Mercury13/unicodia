@@ -1290,6 +1290,10 @@
      <orig>Arrows supplemental {1}</orig>
      <transl>Стрілки додаткові {1}</transl>
     </text>
+    <text id="ZMAT">
+     <orig>Mathematical symbols miscellaneous {1}</orig>
+     <transl>Математичні символи різні {1}</transl>
+    </text>
    </group>
    <group id="0000">
     <text id="Name">
@@ -2261,10 +2265,6 @@
     </text>
    </group>
    <group id="27C0">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous A</orig>
-     <transl>Математичні символи різні A</transl>
-    </text>
     <text id="Text">
      <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
      <transl>Декілька символів, що використовуються в геометрії, формальній логіці, верифікації програм, теорії баз даних та інших розділах математики. Також західний символ ділення стовпчиком.</transl>
@@ -2289,10 +2289,6 @@
     </text>
    </group>
    <group id="2980">
-    <text id="Name">
-     <orig>Mathematical symbols miscellaneous B</orig>
-     <transl>Математичні символи різні B</transl>
-    </text>
     <text id="Text">
      <orig>Various mathematical symbols: brackets, angles, empty sets, box-and-whiskers…</orig>
      <transl>Різні математичні символи: дужки, кути, порожні множини, «скриньки з вусами»…</transl>
