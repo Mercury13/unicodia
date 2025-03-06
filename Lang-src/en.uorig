@@ -1020,6 +1020,9 @@
     <text id="Latn">
      <orig>Latin extended {1}</orig>
     </text>
+    <text id="Mymr">
+     <orig>Myanmar extended {1}</orig>
+    </text>
     <text id="ZARR">
      <orig>Arrows supplemental {1}</orig>
     </text>
@@ -2128,9 +2131,6 @@
     </text>
    </group>
    <group id="A9E0">
-    <text id="Name">
-     <orig>Myanmar extended B</orig>
-    </text>
     <text id="Text">
      <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
     </text>
