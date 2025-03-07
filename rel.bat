@@ -187,21 +187,23 @@
 @set DIR_JA=%DEPLOY%\Languages\Japanese
 @md %DIR_JA%
 @copy lang-src\ja\locale.xml %DIR_JA%
-@%UTRANSL% lang-src\ja.utran -build:%DIR_JA%
+@%UTRANSL% lang-src\ja.utran -update -build:%DIR_JA%
 @copy %QTDIR%\translations\qtbase_ja.qm %DIR_JA%
 @rem ...
 @rem Russian
 @set DIR_RU=%DEPLOY%\Languages\Russian
 @md %DIR_RU%
 @copy lang-src\ru\locale.xml %DIR_RU%
-@%UTRANSL% lang-src\ru.utran -build:%DIR_RU%
+@%UTRANSL% lang-src\ru.utran -rqupdate -build:%DIR_RU%
+@if errorlevel 1 goto end
 @copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
 @rem ...
 @rem Ukrainian
 @set DIR_UK=%DEPLOY%\Languages\Ukrainian
 @md %DIR_UK%
 @copy lang-src\uk\locale.xml %DIR_UK%
-@%UTRANSL% lang-src\uk.utran -build:%DIR_UK%
+@%UTRANSL% lang-src\uk.utran -rqupdate -build:%DIR_UK%
+@if errorlevel 1 goto end
 @copy %QTDIR%\translations\qtbase_uk.qm %DIR_UK%
 
 @echo.
