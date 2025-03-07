@@ -11,6 +11,10 @@ class QGridLayout;
 class QPropertyAnimation;
 class QTimer;
 
+///
+/// @brief The FmMessage class
+///   Small slightly animated popup message
+///
 class FmMessage : public QWidget
 {
     Q_OBJECT
@@ -36,7 +40,7 @@ public slots:
 protected:
     void paintEvent(QPaintEvent*) override;
 private:
-    enum class MoveMode { LEAVE, COVER };
+    enum class MoveMode : unsigned char { LEAVE, COVER };
     std::unique_ptr<QGridLayout> layout;
     std::unique_ptr<QLabel> label;
     std::unique_ptr<QPropertyAnimation> animation;
