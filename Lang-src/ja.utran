@@ -1285,6 +1285,10 @@
      <orig>Latin extended {1}</orig>
      <transl>ラテン文字 拡張{1}</transl>
     </text>
+    <text id="Mymr">
+     <orig>Myanmar extended {1}</orig>
+     <transl>ミャンマー文字 拡張{1}</transl>
+    </text>
     <text id="ZARR">
      <orig>Arrows supplemental {1}</orig>
      <transl>矢印 補足{1}</transl>
@@ -2822,10 +2826,6 @@
     </text>
    </group>
    <group id="A9E0">
-    <text id="Name">
-     <orig>Myanmar extended B</orig>
-     <transl>ミャンマー文字 拡張B</transl>
-    </text>
     <text id="Text">
      <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
      <transl>言語の文字と数字: パーリ語 (仏教の典礼用) と紅タイ語 (ミャンマー、2010 年現在 10 万)。</transl>
@@ -2838,10 +2838,6 @@
     </text>
    </group>
    <group id="AA60">
-    <text id="Name">
-     <orig>Myanmar extended A</orig>
-     <transl>ミャンマー文字 拡張A</transl>
-    </text>
     <text id="Text">
      <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
      <transl>カムティ文字。（ミャンマー、インド、2007 年現在 13,000 人）とタイ・アイトン（アッサム、2006 年現在 1,500 人）</transl>
@@ -3637,10 +3633,6 @@
     </text>
    </group>
    <group id="116D0">
-    <text id="Name">
-     <orig>Myanmar extended C</orig>
-     <transl>ミャンマー文字 拡張C</transl>
-    </text>
     <text id="Text">
      <orig>Two sets of digits gaining popularity among minorities.</orig>
      <transl>少数民族の間で人気が高まっている 2 組の数字。</transl>

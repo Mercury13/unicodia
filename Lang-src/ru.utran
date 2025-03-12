@@ -1285,6 +1285,10 @@
      <orig>Latin extended {1}</orig>
      <transl>Латиница расширенная {1}</transl>
     </text>
+    <text id="Mymr">
+     <orig>Myanmar extended {1}</orig>
+     <transl>Бирманский расширенный {1}</transl>
+    </text>
     <text id="ZARR">
      <orig>Arrows supplemental {1}</orig>
      <transl>Стрелки дополнительные {1}</transl>
@@ -2822,10 +2826,6 @@
     </text>
    </group>
    <group id="A9E0">
-    <text id="Name">
-     <orig>Myanmar extended B</orig>
-     <transl>Бирманский расширенный B</transl>
-    </text>
     <text id="Text">
      <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
      <transl>Буквы и цифры для языков пали ''(литургический в буддизме)'' и красных тай ''(Мьянма, 100{{_}}тыс. на 2010)''.</transl>
@@ -2838,10 +2838,6 @@
     </text>
    </group>
    <group id="AA60">
-    <text id="Name">
-     <orig>Myanmar extended A</orig>
-     <transl>Бирманский расширенный A</transl>
-    </text>
     <text id="Text">
      <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
      <transl>Буквы для языков кхамти ''(Мьянма, Индия, 13{{_}}тыс. на 2007)'' и тай-айтонского ''(Ассам, 1500 на 2006)''.</transl>
@@ -3637,10 +3633,6 @@
     </text>
    </group>
    <group id="116D0">
-    <text id="Name">
-     <orig>Myanmar extended C</orig>
-     <transl>Бирманский расширенный C</transl>
-    </text>
     <text id="Text">
      <orig>Two sets of digits gaining popularity among minorities.</orig>
      <transl>Два набора цифр, набирающих популярность среди меньшинств.</transl>

@@ -675,7 +675,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA },
             "Myanmar Extended-B",
             { EcScript::Mymr, 'B' }, MapSubtype::ALIVE,
-            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Cham OK
     { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Cham",
@@ -684,7 +684,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA, {}, 12_hx },
             "Myanmar Extended-A",
             { EcScript::Mymr, 'A' }, MapSubtype::ALIVE,
-            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Tai Viet OK
     { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA },
             "Tai Viet",
@@ -1087,7 +1087,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, {}, 3_hx  },
             "Myanmar Extended-C",
             { EcScript::Mymr, 'C' }, MapSubtype::ALIVE,
-            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Mymr, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Ahom OK
     { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom",
