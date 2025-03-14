@@ -732,7 +732,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U17, tofu] Sidetic
     { "Sidt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
-        Dating::century(-5, StdNote::FIRST_KNOWN), EcFont::NORMAL, NO_FLAGS },
+        Dating::century(-5, StdNote::FIRST_KNOWN), EcFont::FUNKY, NO_FLAGS },
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
