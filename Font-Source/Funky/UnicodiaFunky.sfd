@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1742121080
+ModificationTime: 1742122570
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -74,9 +74,9 @@ Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt'
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
 Lookup: 260 0 0 "RtL ABVM" { "RtL ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'khmr' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
-Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common ABVM" { "Horn"  "Indic matra 625-1"  "Common ABVM-1"  "Common ABVM-3"  "Common ABVM-2"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'khmr' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'sidt' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'tols' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common BLWM" { "Common BLWM-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'sidt' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'tols' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 262 0 0 "Common MKMK" { "Common MKMK-1"  } ['mkmk' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'chis' <'dflt' > 'copt' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'gara' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'gukh' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'maka' <'dflt' > 'nagm' <'dflt' > 'onao' <'dflt' > 'sidt' <'dflt' > 'tel2' <'dflt' > 'todr' <'dflt' > 'tols' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 2
 "Above" 325 Gukh.Uml.Aa Gukh.Uml.I Gukh.Uml.Ii Gukh.Uml.U Gukh.Uml.Uu Gukh.Uml.E Gukh.Uml.Ee Gukh.Uml.Ai Gukh.Uml.O Gukh.Uml.Oo Gukh.Uml.Au Gukh.Uml.Len Gukh.Uml.Anu Gukh.Lig.Aa.Anu Gukh.Lig.I.Anu Gukh.Lig.Ii.Anu Gukh.Lig.U.Anu Gukh.Lig.Uu.Anu Gukh.Lig.Oo.Anu Gukh.Lig.Au.Anu Gukh.Lig.E.Anu Gukh.Lig.Ee.Anu Gukh.Lig.Ai.Anu Gukh.Lig.O.Anu
 DEI: 91125
@@ -182058,6 +182058,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 186 -15 basechar 0
+AnchorPoint: "Umlaut" 237 734 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182081,6 +182083,8 @@ StartChar: u10941
 Encoding: 67905 67905 1369
 Width: 624
 Flags: W
+AnchorPoint: "Dot below" 311 -8 basechar 0
+AnchorPoint: "Umlaut" 287 772 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182106,6 +182110,8 @@ StartChar: u10942
 Encoding: 67906 67906 1370
 Width: 578
 Flags: W
+AnchorPoint: "Dot below" 242 -4 basechar 0
+AnchorPoint: "Umlaut" 290 724 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182181,6 +182187,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 211 -14 basechar 0
+AnchorPoint: "Umlaut" 287 732 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182246,6 +182254,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 294 0 basechar 0
+AnchorPoint: "Umlaut" 292 730 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182297,6 +182307,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 268 -17 basechar 0
+AnchorPoint: "Umlaut" 187 732 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182320,6 +182332,8 @@ StartChar: u10946
 Encoding: 67910 67910 1374
 Width: 786
 Flags: W
+AnchorPoint: "Dot below" 401 -10 basechar 0
+AnchorPoint: "Umlaut" 397 725 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182496,6 +182510,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 328 -10 basechar 0
+AnchorPoint: "Umlaut" 275 770 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182596,6 +182612,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 356 0 basechar 0
+AnchorPoint: "Umlaut" 357 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182623,6 +182641,8 @@ StartChar: u10949
 Encoding: 67913 67913 1377
 Width: 477
 Flags: W
+AnchorPoint: "Dot below" 272 -9 basechar 0
+AnchorPoint: "Umlaut" 265 736 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182638,7 +182658,7 @@ EndChar
 
 StartChar: u1094A
 Encoding: 67914 67914 1378
-Width: 544
+Width: 524
 Flags: W
 HStem: 0 21G<354 444> 624 90<30 354>
 VStem: 354 90<0 624>
@@ -182684,6 +182704,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 288 0 basechar 0
+AnchorPoint: "Umlaut" 243 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182699,7 +182721,7 @@ EndChar
 
 StartChar: u1094B
 Encoding: 67915 67915 1379
-Width: 607
+Width: 587
 Flags: W
 HStem: 0 90<210.524 417> 634 90<50 138.977> 694 20G<417 507>
 VStem: 64 90<136.202 276.895> 193 90<429.406 583.047> 417 90<90 714>
@@ -182795,6 +182817,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 305 0 basechar 0
+AnchorPoint: "Umlaut" 306 720 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182898,6 +182922,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 307 0 basechar 0
+AnchorPoint: "Umlaut" 306 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -182924,10 +182950,10 @@ EndChar
 
 StartChar: u1094D
 Encoding: 67917 67917 1381
-Width: 290
+Width: 250
 Flags: W
-HStem: 0 21G<100 190> 694 20G<100 190>
-VStem: 100 90<0 714>
+HStem: 0 21G<80 170> 694 20G<80 170>
+VStem: 80 90<0 714>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -182959,23 +182985,25 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 127 0 basechar 0
+AnchorPoint: "Umlaut" 124 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-190 714 m 1,0,-1
- 190 0 l 1,1,-1
- 100 0 l 1,2,-1
- 100 714 l 1,3,-1
- 190 714 l 1,0,-1
+170 714 m 1,0,-1
+ 170 0 l 1,1,-1
+ 80 0 l 1,2,-1
+ 80 714 l 1,3,-1
+ 170 714 l 1,0,-1
 EndSplineSet
 EndChar
 
 StartChar: u1094E
 Encoding: 67918 67918 1382
-Width: 677
+Width: 657
 Flags: W
-HStem: 0 21G<100 190 491.782 577> 694 20G<100 186.203 487 577>
-VStem: 100 90<0 514> 487 90<201 714>
+HStem: 0 21G<90 180 481.782 567> 694 20G<90 176.203 477 567>
+VStem: 90 90<0 514> 477 90<201 714>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183046,20 +183074,22 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 331 0 basechar 0
+AnchorPoint: "Umlaut" 335 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-100 0 m 1,0,-1
- 100 714 l 1,1,-1
- 174 714 l 1,2,-1
- 487 201 l 1,3,-1
- 487 714 l 1,4,-1
- 577 714 l 1,5,-1
- 577 0 l 1,6,-1
- 504 0 l 1,7,-1
- 190 514 l 1,8,-1
- 190 0 l 1,9,-1
- 100 0 l 1,0,-1
+90 0 m 1,0,-1
+ 90 714 l 1,1,-1
+ 164 714 l 1,2,-1
+ 477 201 l 1,3,-1
+ 477 714 l 1,4,-1
+ 567 714 l 1,5,-1
+ 567 0 l 1,6,-1
+ 494 0 l 1,7,-1
+ 180 514 l 1,8,-1
+ 180 0 l 1,9,-1
+ 90 0 l 1,0,-1
 EndSplineSet
 EndChar
 
@@ -183088,6 +183118,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 219 -7 basechar 0
+AnchorPoint: "Umlaut" 207 720 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -183113,10 +183145,10 @@ EndChar
 
 StartChar: u10950
 Encoding: 67920 67920 1384
-Width: 627
+Width: 607
 Flags: W
-HStem: 0 21G<100 190> 694 20G<100 190>
-VStem: 100 90<0 714>
+HStem: 0 21G<80 170> 694 20G<80 170>
+VStem: 80 90<0 714>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183158,32 +183190,34 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 305 -12 basechar 0
+AnchorPoint: "Umlaut" 295 729 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-190 714 m 1,0,-1
- 190 0 l 1,1,-1
- 100 0 l 1,2,-1
- 100 714 l 1,3,-1
- 190 714 l 1,0,-1
-451 250 m 1,4,-1
- 269 472 l 1,5,-1
- 497 743 l 1,6,-1
- 566 685 l 1,7,-1
- 386 471 l 1,8,-1
- 567 251 l 1,9,-1
- 341 -28 l 1,10,-1
- 271 28 l 1,11,-1
- 451 250 l 1,4,-1
+170 714 m 1,0,-1
+ 170 0 l 1,1,-1
+ 80 0 l 1,2,-1
+ 80 714 l 1,3,-1
+ 170 714 l 1,0,-1
+431 250 m 1,4,-1
+ 249 472 l 1,5,-1
+ 477 743 l 1,6,-1
+ 546 685 l 1,7,-1
+ 366 471 l 1,8,-1
+ 547 251 l 1,9,-1
+ 321 -28 l 1,10,-1
+ 251 28 l 1,11,-1
+ 431 250 l 1,4,-1
 EndSplineSet
 EndChar
 
 StartChar: u10951
 Encoding: 67921 67921 1385
-Width: 624
+Width: 614
 Flags: W
-HStem: 0 21G<267 357> 694 20G<260 364>
-VStem: 267 90<0 574>
+HStem: 0 21G<262 352> 694 20G<255 359>
+VStem: 262 90<0 574>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183222,29 +183256,31 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 308 0 basechar 0
+AnchorPoint: "Umlaut" 306 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-35 469 m 1,0,-1
- 280 714 l 1,1,-1
- 344 714 l 1,2,-1
- 589 469 l 1,3,-1
- 525 405 l 1,4,-1
- 357 574 l 1,5,-1
- 357 0 l 1,6,-1
- 267 0 l 1,7,-1
- 267 574 l 1,8,-1
- 99 405 l 1,9,-1
- 35 469 l 1,0,-1
+30 469 m 1,0,-1
+ 275 714 l 1,1,-1
+ 339 714 l 1,2,-1
+ 584 469 l 1,3,-1
+ 520 405 l 1,4,-1
+ 352 574 l 1,5,-1
+ 352 0 l 1,6,-1
+ 262 0 l 1,7,-1
+ 262 574 l 1,8,-1
+ 94 405 l 1,9,-1
+ 30 469 l 1,0,-1
 EndSplineSet
 EndChar
 
 StartChar: u10952
 Encoding: 67922 67922 1386
-Width: 677
+Width: 637
 Flags: W
-HStem: 0 21G<100 185.218 487 577> 694 20G<100 190 490.797 577>
-VStem: 100 90<201 714> 487 90<0 514>
+HStem: 0 21G<80 165.218 467 557> 694 20G<80 170 470.797 557>
+VStem: 80 90<201 714> 467 90<0 514>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183315,51 +183351,55 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 326 0 basechar 0
+AnchorPoint: "Umlaut" 331 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-577 0 m 1,0,-1
- 487 0 l 1,1,-1
- 487 514 l 1,2,-1
- 173 0 l 1,3,-1
- 100 0 l 1,4,-1
- 100 714 l 1,5,-1
- 190 714 l 1,6,-1
- 190 201 l 1,7,-1
- 503 714 l 1,8,-1
- 577 714 l 1,9,-1
- 577 0 l 1,0,-1
+557 0 m 1,0,-1
+ 467 0 l 1,1,-1
+ 467 514 l 1,2,-1
+ 153 0 l 1,3,-1
+ 80 0 l 1,4,-1
+ 80 714 l 1,5,-1
+ 170 714 l 1,6,-1
+ 170 201 l 1,7,-1
+ 483 714 l 1,8,-1
+ 557 714 l 1,9,-1
+ 557 0 l 1,0,-1
 EndSplineSet
 EndChar
 
 StartChar: u10953
 Encoding: 67923 67923 1387
-Width: 536
+Width: 556
 Flags: W
+AnchorPoint: "Dot below" 285 -9 basechar 0
+AnchorPoint: "Umlaut" 274 727 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-268 263 m 1,0,-1
- 114 -21 l 1,1,-1
- 35 21 l 1,2,-1
- 217 357 l 1,3,-1
- 35 693 l 1,4,-1
- 114 735 l 1,5,-1
- 268 451 l 1,6,-1
- 422 735 l 1,7,-1
- 501 693 l 1,8,-1
- 319 357 l 1,9,-1
- 501 21 l 1,10,-1
- 422 -21 l 1,11,-1
- 268 263 l 1,0,-1
+278 263 m 1,0,-1
+ 124 -21 l 1,1,-1
+ 45 21 l 1,2,-1
+ 227 357 l 1,3,-1
+ 45 693 l 1,4,-1
+ 124 735 l 1,5,-1
+ 278 451 l 1,6,-1
+ 432 735 l 1,7,-1
+ 511 693 l 1,8,-1
+ 329 357 l 1,9,-1
+ 511 21 l 1,10,-1
+ 432 -21 l 1,11,-1
+ 278 263 l 1,0,-1
 EndSplineSet
 EndChar
 
 StartChar: u10954
 Encoding: 67924 67924 1388
-Width: 570
+Width: 580
 Flags: W
-HStem: 695 20G<235.96 334.04>
+HStem: 695 20G<240.96 339.04>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183493,17 +183533,19 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 288 -8 basechar 0
+AnchorPoint: "Umlaut" 287 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-30 13 m 1,0,-1
- 242 715 l 1,1,-1
- 328 715 l 1,2,-1
- 540 13 l 1,3,-1
- 454 -13 l 1,4,-1
- 285 546 l 1,5,-1
- 116 -13 l 1,6,-1
- 30 13 l 1,0,-1
+35 13 m 1,0,-1
+ 247 715 l 1,1,-1
+ 333 715 l 1,2,-1
+ 545 13 l 1,3,-1
+ 459 -13 l 1,4,-1
+ 290 546 l 1,5,-1
+ 121 -13 l 1,6,-1
+ 35 13 l 1,0,-1
 EndSplineSet
 EndChar
 
@@ -183540,6 +183582,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 233 -18 basechar 0
+AnchorPoint: "Umlaut" 244 740 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -183565,10 +183609,10 @@ EndChar
 
 StartChar: u10956
 Encoding: 67926 67926 1390
-Width: 533
+Width: 513
 Flags: W
-HStem: 0 21G<100 190> 313 90<190 329.326> 624 90<190 329.326>
-VStem: 100 90<0 313 403 624> 388 90<450.023 576.977>
+HStem: 0 21G<80 170> 313 90<170 309.326> 624 90<170 309.326>
+VStem: 80 90<0 313 403 624> 368 90<450.023 576.977>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183633,24 +183677,26 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 207 0 basechar 0
+AnchorPoint: "Umlaut" 268 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-100 0 m 1,0,-1
- 100 714 l 1,1,-1
- 190 714 l 2,2,3
- 317 714 317 714 387 675 c 0,4,5
- 478 624 478 624 478 513.5 c 128,-1,6
- 478 403 478 403 387 352 c 0,7,8
- 317 313 317 313 190 313 c 1,9,-1
- 190 0 l 1,10,-1
- 100 0 l 1,0,-1
-388 513.5 m 128,-1,12
- 388 571 388 571 343 596 c 0,13,14
- 293 624 293 624 190 624 c 1,15,-1
- 190 403 l 1,16,17
- 294 403 294 403 343 431 c 0,18,11
- 388 456 388 456 388 513.5 c 128,-1,12
+80 0 m 1,0,-1
+ 80 714 l 1,1,-1
+ 170 714 l 2,2,3
+ 297 714 297 714 367 675 c 0,4,5
+ 458 624 458 624 458 513.5 c 128,-1,6
+ 458 403 458 403 367 352 c 0,7,8
+ 297 313 297 313 170 313 c 1,9,-1
+ 170 0 l 1,10,-1
+ 80 0 l 1,0,-1
+368 513.5 m 128,-1,12
+ 368 571 368 571 323 596 c 0,13,14
+ 273 624 273 624 170 624 c 1,15,-1
+ 170 403 l 1,16,17
+ 274 403 274 403 323 431 c 0,18,11
+ 368 456 368 456 368 513.5 c 128,-1,12
 EndSplineSet
 EndChar
 
@@ -183658,6 +183704,8 @@ StartChar: u10957
 Encoding: 67927 67927 1391
 Width: 477
 Flags: W
+AnchorPoint: "Dot below" 214 -16 basechar 0
+AnchorPoint: "Umlaut" 208 727 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -183673,9 +183721,9 @@ EndChar
 
 StartChar: u10958
 Encoding: 67928 67928 1392
-Width: 454
+Width: 464
 Flags: W
-HStem: 624 90<25 260>
+HStem: 624 90<35 270>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_3
@@ -183706,23 +183754,25 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 211 -14 basechar 0
+AnchorPoint: "Umlaut" 221 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-25 714 m 1,0,-1
- 404 714 l 1,1,-1
- 404 650 l 1,2,-1
- 226 451 l 1,3,-1
- 404 270 l 1,4,-1
- 404 229 l 1,5,-1
- 182 -28 l 1,6,-1
- 114 31 l 1,7,-1
- 300 247 l 1,8,-1
- 120 430 l 1,9,-1
- 120 468 l 1,10,-1
- 260 624 l 1,11,-1
- 25 624 l 1,12,-1
- 25 714 l 1,0,-1
+35 714 m 1,0,-1
+ 414 714 l 1,1,-1
+ 414 650 l 1,2,-1
+ 236 451 l 1,3,-1
+ 414 270 l 1,4,-1
+ 414 229 l 1,5,-1
+ 192 -28 l 1,6,-1
+ 124 31 l 1,7,-1
+ 310 247 l 1,8,-1
+ 130 430 l 1,9,-1
+ 130 468 l 1,10,-1
+ 270 624 l 1,11,-1
+ 35 624 l 1,12,-1
+ 35 714 l 1,0,-1
 EndSplineSet
 EndChar
 
@@ -183730,6 +183780,8 @@ StartChar: u10959
 Encoding: 67929 67929 1393
 Width: 588
 Flags: W
+AnchorPoint: "Dot below" 241 -7 basechar 0
+AnchorPoint: "Umlaut" 304 726 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -183842,6 +183894,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 258 0 basechar 0
+AnchorPoint: "Umlaut" 258 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -183998,6 +184052,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 358 0 basechar 0
+AnchorPoint: "Umlaut" 358 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -184036,7 +184092,7 @@ EndChar
 StartChar: u1095C
 Encoding: 67932 67932 1396
 Width: 609
-Flags: WO
+Flags: W
 HStem: 0 21G<277.19 362> 694 20G<272 362>
 VStem: 272 90<186 374 509 714>
 TtInstrs:
@@ -184078,6 +184134,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 326 0 basechar 0
+AnchorPoint: "Umlaut" 314 714 basechar 0
 LayerCount: 2
 Fore
 SplineSet
