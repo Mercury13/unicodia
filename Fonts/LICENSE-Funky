@@ -98,10 +98,19 @@ Rationale:
 * T/C: somewhere in between printed and handwritten
 
 
+=== Sidetic ===
+
+Source of inspiration: none, though I looked a bot into actual inscriptions
+Status: working
+
+Rationale:
+* Thickness 90 is Noto’s standard
+
+
 == Stability policy ==
 
 WILL STAY:
-* Working scripts of decent quality made by me: Cypro-Minoan, Gurung Khema, Makasar, Nag, Ol Onal, Todhri
+* Working scripts of decent quality made by me: Cypro-Minoan, Gurung Khema, Makasar, Nag, Ol Onal, Todhri, Sidetic
 * ASCII and other auxiliary characters
 * All of them MAY change style/metrics
 

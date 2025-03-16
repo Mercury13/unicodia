@@ -729,7 +729,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sidd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(6), EcFont::SIDDHAM },
-    /// @todo [U17, tofu] Sidetic
+    // Sidetic OK, in Funky now
     { "Sidt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::century(-5, StdNote::FIRST_KNOWN), EcFont::FUNKY, NO_FLAGS },

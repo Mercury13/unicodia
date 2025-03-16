@@ -908,8 +908,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x10920, 0x1093F, { 0x10920, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Lydian",
             { EcScript::Lydi, 0 }, MapSubtype::DEAD, EcScript::Lydi },
-    /// @todo [U17, tofu] Sidetic
-    { 0x10940, 0x1095F, { 0x10941, EcContinent::ASIA_RTL, Ifg::PAINT_SVG | Ifg::MISSING },
+    // Sidetic OK, in Funky now
+    { 0x10940, 0x1095F, { 0x10941, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Sidetic",
             { EcScript::Sidt, 0 }, MapSubtype::DEAD, EcScript::Sidt },
     // Meroitic hiero OK
