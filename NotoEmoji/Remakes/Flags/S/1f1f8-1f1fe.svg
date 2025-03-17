@@ -4,7 +4,7 @@
    viewBox="0 0 36 36"
    id="svg4"
    sodipodi:docname="1f1f8-1f1fe.svg"
-   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -22,14 +22,35 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="20.972222"
-     inkscape:cx="18"
-     inkscape:cy="18"
+     inkscape:cx="14.61457"
+     inkscape:cy="18.429139"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4"
+     showguides="true">
+    <sodipodi:guide
+       position="8,20.85"
+       orientation="-1,0"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="18,36"
+       orientation="-1,0"
+       id="guide2"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="28,20.85"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <path
      d="m0 13 1-1h34l1 1v10l-1 1h-34l-1-1z"
      fill="#fff"
@@ -43,8 +64,8 @@
      fill="#141414"
      id="path3" />
   <path
-     d="m8 18.3-0.633 1.95 1.66-1.2 1.66 1.2-0.633-1.95 1.66-1.2h-2.05l-0.632-1.95-0.632 1.95h-2.05zm10 0-0.633 1.95 1.66-1.2 1.66 1.2-0.633-1.95 1.66-1.2h-2.05l-0.632-1.95-0.632 1.95h-2.05zm10 0-0.633 1.95 1.66-1.2 1.66 1.2-0.633-1.95 1.66-1.2h-2.05l-0.632-1.95-0.632 1.95h-2.05z"
-     fill="#CE1126"
+     style="fill:#ce1126;fill-opacity:1;stroke-width:1"
+     d="m 6.7616,18.42 -0.7596,2.34 1.992,-1.44 1.992,1.44 -0.7596,-2.34 1.992,-1.44 h -2.46 L 8,14.64 7.2416,16.98 h -2.46 z"
      id="path4" />
   <rect
      id="a"
@@ -56,4 +77,12 @@
      x="35.8"
      xlink:href="#a"
      id="use4" />
+  <use
+     x="10"
+     xlink:href="#path4"
+     id="use7" />
+  <use
+     xlink:href="#path4"
+     id="use8"
+     x="20" />
 </svg>
