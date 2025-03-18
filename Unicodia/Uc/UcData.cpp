@@ -1318,6 +1318,7 @@ bool uc::Cp::hasGlyph() const
 
 namespace {
 
+    /// @todo [urgent, #410] Should be no emoji by case (that’s an exhaustive list, no new)
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
