@@ -7679,7 +7679,7 @@
      <orig>
       <p>String conversion for fuzzy comparison. Unicode has four types of normalization:</p>
       <p />
-      <p>1. NFD = canonical decomposition: disassembly of [[pt:precomposed|precomposed]] characters, [[ps:Hang|Hangul syllables into jamo (letters), replacement of some signs like Ohm and Ångström, sorting of [[pt:combining|marks]] into standard order.</p>
+      <p>1. NFD = canonical decomposition: disassembly of [[pt:precomposed|precomposed]] characters, [[ps:Hang|Hangul]] syllables into jamo (letters), replacement of some signs like Ohm and Ångström, sorting of [[pt:combining|marks]] into standard order.</p>
       <p />
       <p>2. NFC = canonical composition. NFD, then assembly of precomposed characters and Hangul syllables.</p>
       <p />
