@@ -522,7 +522,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
             "Ideographic Description Characters",
             MyName::INST, MapSubtype::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
+            EcScript::NONE, EcFont::CJK_STROKES, Bfg::CJK },
     // CJK sym/punct OK
     // Cannot hint: if hint line y=3, then y=5 is too bad on 1.25×
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
@@ -747,7 +747,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Vertical Forms",
             MyName::INST, MapSubtype::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_STRUCTURE },
+            EcScript::NONE, EcFont::CJK_VERTICAL },
     // Combining half marks OK
     { 0xFE20, 0xFE2F, { U"\uFE20\uFE21", EcContinent::NONE, Ifg::BOTH_DOTTED },
             "Combining Half Marks",

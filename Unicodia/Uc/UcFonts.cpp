@@ -179,8 +179,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2
       { "MS Mincho", 120_pc },                                                  // …3
     { "Microsoft YaHei" },                                                      // CJK kanbun
-    { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 100_pc },                                 // …1
+    { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK vertical
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // …1
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …2
     { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // CJK symbols
       { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                 // …1

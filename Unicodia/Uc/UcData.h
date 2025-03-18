@@ -262,7 +262,7 @@ namespace uc {
            Z_CJC_2,
            Z_CJC_3,
          CJK_KANBUN,
-         CJK_STRUCTURE,
+         CJK_VERTICAL,
            CJK_STROKES,  ///< also dubbed as CJK strokes
            Z_CJS_2,
          CJK_SYMBOLS,
