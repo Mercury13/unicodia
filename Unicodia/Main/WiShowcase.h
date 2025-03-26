@@ -118,9 +118,9 @@ public:
     void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
     QToolBar* toolbar();
     QHBoxLayout* toolbarLayout();
-    template <class Button = QToolButton> requires std::is_base_of_v<QToolButton, Button>
+    template <std::derived_from<QToolButton> Button = QToolButton>
         Button* addToolButton(QAction* action);
-    template <class Button = QToolButton> requires std::is_base_of_v<QToolButton, Button>
+    template <std::derived_from<QToolButton> Button = QToolButton>
         Button* addFavsButton(QAction* action, const uc::SetOfChar& favs);
     void switchToLib();
     void reenableFavs();
@@ -152,6 +152,12 @@ private slots:
 };
 
 
+///
+/// ToolButton with special signal:
+/// “banged” into a disabled button.
+///
+/// Rationale: Add to Favs, sometimes it’s disabled for a techy reason
+///
 class BangButton : public QToolButton
 {
     Q_OBJECT
@@ -165,7 +171,7 @@ signals:
 };
 
 
-template <class Button> requires std::is_base_of_v<QToolButton, Button>
+template <std::derived_from<QToolButton> Button>
 Button* WiShowcase::addToolButton(QAction* action)
 {
     auto tb = toolbar();
@@ -175,7 +181,7 @@ Button* WiShowcase::addToolButton(QAction* action)
     return button;
 }
 
-template <class Button> requires std::is_base_of_v<QToolButton, Button>
+template <std::derived_from<QToolButton> Button>
 Button* WiShowcase::addFavsButton(QAction* action, const uc::SetOfChar& favs)
 {
     acFavs = action;
