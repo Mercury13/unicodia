@@ -3,6 +3,7 @@
 
 // C++
 #include <variant>
+#include <concepts>
 
 // Qt
 #include <QWidget>
