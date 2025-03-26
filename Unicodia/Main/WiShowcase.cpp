@@ -5,6 +5,7 @@
 // Qt
 #include <QTextBrowser>
 #include <QToolBar>
+#include <QMenu>
 
 // Libs
 #include "u_Strings.h"
@@ -107,6 +108,20 @@ WiShowcase::WiShowcase(QWidget *parent) :
         QFontMetrics metrics(font);
         auto sz = metrics.horizontalAdvance("+000000");
         ui->btCopyEx->setFixedWidth(sz);
+    }
+
+    { // Menu
+        QMenu* menuCopy = new QMenu(this);
+        menuCopy->addAction("one one one");
+        menuCopy->addAction("two two two");
+
+        auto font = ui->btCopyEx->font();
+        QFontMetrics metrics(font);
+        auto sz = metrics.horizontalAdvance("0000");
+        ui->btMenu->setFixedWidth(sz);
+
+        ui->btMenu->setMenu(menuCopy);
+        ui->btMenu->hide();
     }
 
     // Glyph styles
