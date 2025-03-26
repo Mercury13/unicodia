@@ -450,9 +450,11 @@ namespace uc {
         Lfgs flags;
         uc::EcVersion ecEmojiVersion = uc::EcVersion::NOT_EMOJI;
 
-        EmojiDraw emojiDraw() const;
-        inline const uc::Version& emojiVersion() const;
-        const uc::Version& emojiPrevVersion() const;
+        EmojiDraw emojiDraw() const noexcept;
+        inline const uc::Version& emojiVersion() const noexcept;
+        const uc::Version& emojiPrevVersion() const noexcept;
+
+        bool isVs15() const noexcept;
 
         QString viewableTitle(TitleMode mode) const;
 

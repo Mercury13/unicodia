@@ -217,6 +217,7 @@ private:
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
+        QAction* acCopyVs15 = nullptr;
         QAction* acAddToFavs = nullptr;
         bool direction = DIR_ADD;
     } libLocalMenu;
@@ -297,6 +298,7 @@ private slots:
     void copyCurrentSample(QWidget* initiator);
     void copyCurrentSampleNull();
     void copyCurrentLib();
+    void copyCurrentLibVs15();
     void copyCurrentFavs();
     void libLocalMenuRequested(const QPoint& where);
     void copyFavsSample();

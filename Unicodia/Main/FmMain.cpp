@@ -1154,6 +1154,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
         libLocalMenu.menu->addAction(libLocalMenu.acCopy);
         libLocalMenu.menu->setDefaultAction(libLocalMenu.acCopy);
         QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+    libLocalMenu.acCopyVs15 = new QAction("[Copy VS15]", libLocalMenu.menu);
+        libLocalMenu.menu->addAction(libLocalMenu.acCopyVs15);
+        QWidget::connect(libLocalMenu.acCopyVs15, &QAction::triggered, this, &This::copyCurrentLibVs15);
     libLocalMenu.menu->addSeparator();
     libLocalMenu.acAddToFavs = new QAction("[Add to favs]", libLocalMenu.menu);
         libLocalMenu.menu->addAction(libLocalMenu.acAddToFavs);
@@ -1306,6 +1309,7 @@ void FmMain::translateMe()
 
     // Library tab
     libLocalMenu.acCopy->setText(loc::get("Main.Local.Copy"));
+    libLocalMenu.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
     libChanged(ui->treeLibrary->currentIndex());
 
     // Favs tab
@@ -1555,6 +1559,20 @@ void FmMain::copyCurrentLib()
         return;
     if (uc::copyNode(libModel.nodeAt(index)))
         blinkCopied(ui->treeLibrary, nullptr);
+}
+
+
+void FmMain::copyCurrentLibVs15()
+{
+    auto index = ui->treeLibrary->currentIndex();
+    if (!index.isValid())
+        return;
+    auto& node = libModel.nodeAt(index);
+    auto dug = EmojiPainter::getCp(node.value);
+    if (dug) {
+        uc::copyCp(dug.cp, uc::CopiedChannel::VS15);
+        blinkCopied(ui->treeLibrary, nullptr);
+    }
 }
 
 
@@ -2263,9 +2281,15 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
     // Copy
     libLocalMenu.acCopy->setEnabled(!node.value.empty());
 
+    // Copy + VS15
+    auto dug = EmojiPainter::getCp(node.value);
+    libLocalMenu.acCopyVs15->setVisible(
+                dug.cp
+             && uc::cpsByCode[dug.cp]->isEmoji()
+             && !node.isVs15());
+
     // Favourites
     libLocalMenu.direction = DIR_ADD;
-    auto dug = EmojiPainter::getCp(node.value);
     if (dug.cp) {
         libLocalMenu.direction = !config::favs.contains(dug.cp);
         libLocalMenu.acAddToFavs->setEnabled(true);

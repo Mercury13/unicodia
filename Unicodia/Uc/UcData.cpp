@@ -1979,15 +1979,21 @@ QString uc::LibNode::viewableTitle(TitleMode mode) const
 }
 
 
-uc::EmojiDraw uc::LibNode::emojiDraw() const
+bool uc::LibNode::isVs15() const noexcept
 {
-    if (value.length() == 2 && value[1] == cp::VS15)
+    return (value.length() == 2 && value[1] == cp::VS15);
+}
+
+
+uc::EmojiDraw uc::LibNode::emojiDraw() const noexcept
+{
+    if (isVs15())
         return EmojiDraw::FORCE_TEXT;
     return flags.have(Lfg::GRAPHIC_EMOJI) ? EmojiDraw::GRAPHIC : EmojiDraw::MOSTLY_TEXT;
 }
 
 
-const uc::Version& uc::LibNode::emojiPrevVersion() const
+const uc::Version& uc::LibNode::emojiPrevVersion() const noexcept
 {
     if (ecEmojiVersion <= uc::EcVersion::FIRST_MEANING) {
         return versionInfo[0];

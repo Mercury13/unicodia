@@ -1354,4 +1354,5 @@ inline std::u8string_view uc::Cp::traverseTextsT(
 }
 
 // LibNode
-inline const uc::Version& uc::LibNode::emojiVersion() const { return versionInfo[static_cast<int>(ecEmojiVersion)]; }
+inline const uc::Version& uc::LibNode::emojiVersion() const noexcept
+    { return versionInfo[static_cast<int>(ecEmojiVersion)]; }
