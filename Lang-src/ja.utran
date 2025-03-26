@@ -12937,6 +12937,13 @@
      <orig>Seven-segment</orig>
      <transl>7セグメント</transl>
     </text>
+    <text id="EmKeycap">
+     <orig>Emoji keycaps</orig>
+    </text>
+    <text id="ConOut">
+     <orig>Console outlined</orig>
+     <transl>アウトライン</transl>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
      <transl>ビジネス文字</transl>
@@ -13369,10 +13376,6 @@
     <text id="CyrlMisc">
      <orig>Other origin</orig>
      <transl>その他の起源</transl>
-    </text>
-    <text id="ConOut">
-     <orig>Console outlined</orig>
-     <transl>アウトライン</transl>
     </text>
     <text id="Regional">
      <orig>Country letters</orig>

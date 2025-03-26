@@ -12947,6 +12947,14 @@
      <orig>Seven-segment</orig>
      <transl>Семисегментні</transl>
     </text>
+    <text id="EmKeycap">
+     <orig>Emoji keycaps</orig>
+     <transl>Емодзі-кнопки</transl>
+    </text>
+    <text id="ConOut">
+     <orig>Console outlined</orig>
+     <transl>Консольні обведені</transl>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
      <transl>Ділові символи</transl>
@@ -13379,10 +13387,6 @@
     <text id="CyrlMisc">
      <orig>Other origin</orig>
      <transl>Інше походження</transl>
-    </text>
-    <text id="ConOut">
-     <orig>Console outlined</orig>
-     <transl>Консольні обведені</transl>
     </text>
     <text id="Regional">
      <orig>Country letters</orig>

@@ -56,6 +56,21 @@
 		<f loc="CjkFull">
 			<range start="FF10" end="FF19" />
 		</f>
+		<f loc="EmKeycap">
+			<sq v="0️⃣" name="0" />
+			<sq v="1️⃣" name="1" />
+			<sq v="2️⃣" name="2" />
+			<sq v="3️⃣" name="3" />
+			<sq v="4️⃣" name="4" />
+			<sq v="5️⃣" name="5" />
+			<sq v="6️⃣" name="6" />
+			<sq v="7️⃣" name="7" />
+			<sq v="8️⃣" name="8" />
+			<sq v="9️⃣" name="9" />
+			<sq v="🔟" name="10" />
+			<sq v="*️⃣" name="*" />
+			<sq v="#️⃣" name="#" />
+		</f>
 		<f loc="7seg">
 			<range start="1FBF0" end="1FBF9" />
 		</f>

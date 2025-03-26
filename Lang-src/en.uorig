@@ -8994,6 +8994,12 @@
     <text id="7seg">
      <orig>Seven-segment</orig>
     </text>
+    <text id="EmKeycap">
+     <orig>Emoji keycaps</orig>
+    </text>
+    <text id="ConOut">
+     <orig>Console outlined</orig>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
     </text>
@@ -9318,9 +9324,6 @@
     </text>
     <text id="CyrlMisc">
      <orig>Other origin</orig>
-    </text>
-    <text id="ConOut">
-     <orig>Console outlined</orig>
     </text>
     <text id="Regional">
      <orig>Country letters</orig>
