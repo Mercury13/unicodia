@@ -12327,6 +12327,9 @@
     <text id="CopyDotc">
      <orig>Copy + dotted circle</orig>
     </text>
+    <text id="CopyBare">
+     <orig>Copy bare symbol</orig>
+    </text>
     <text id="Remove">
      <orig>Remove</orig>
      <au-cmt>

@@ -217,6 +217,7 @@ private:
     struct LibLocalMenu {
         QMenu* menu = nullptr;
         QAction* acCopy = nullptr;
+        QAction* acCopyBare = nullptr;
         QAction* acCopyVs15 = nullptr;
         QAction* acAddToFavs = nullptr;
         bool direction = DIR_ADD;
@@ -259,6 +260,7 @@ private:
     void translateTerms();
     void copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator);
     void copyFavsThing(uc::CopiedChannel channel);
+    void copyLibChar(uc::CopiedChannel channel);
     void blinkCopied(QWidget* widget, const QRect& absRect);
     /// @param [in] initiator   other initiator widget besides table
     void blinkCopied(QAbstractItemView* table, QWidget* initiator);
@@ -299,6 +301,7 @@ private slots:
     void copyCurrentSampleNull();
     void copyCurrentLib();
     void copyCurrentLibVs15();
+    void copyCurrentLibBare();
     void copyCurrentFavs();
     void libLocalMenuRequested(const QPoint& where);
     void copyFavsSample();

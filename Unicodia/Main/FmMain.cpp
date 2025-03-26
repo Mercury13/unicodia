@@ -1154,6 +1154,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
         libLocalMenu.menu->addAction(libLocalMenu.acCopy);
         libLocalMenu.menu->setDefaultAction(libLocalMenu.acCopy);
         QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+    libLocalMenu.acCopyBare = new QAction("[Copy bare]", libLocalMenu.menu);
+        libLocalMenu.menu->addAction(libLocalMenu.acCopyBare);
+        QWidget::connect(libLocalMenu.acCopyBare, &QAction::triggered, this, &This::copyCurrentLibBare);
     libLocalMenu.acCopyVs15 = new QAction("[Copy VS15]", libLocalMenu.menu);
         libLocalMenu.menu->addAction(libLocalMenu.acCopyVs15);
         QWidget::connect(libLocalMenu.acCopyVs15, &QAction::triggered, this, &This::copyCurrentLibVs15);
@@ -1309,6 +1312,7 @@ void FmMain::translateMe()
 
     // Library tab
     libLocalMenu.acCopy->setText(loc::get("Main.Local.Copy"));
+    libLocalMenu.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
     libLocalMenu.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
     libChanged(ui->treeLibrary->currentIndex());
 
@@ -1562,7 +1566,7 @@ void FmMain::copyCurrentLib()
 }
 
 
-void FmMain::copyCurrentLibVs15()
+void FmMain::copyLibChar(uc::CopiedChannel channel)
 {
     auto index = ui->treeLibrary->currentIndex();
     if (!index.isValid())
@@ -1570,9 +1574,21 @@ void FmMain::copyCurrentLibVs15()
     auto& node = libModel.nodeAt(index);
     auto dug = EmojiPainter::getCp(node.value);
     if (dug) {
-        uc::copyCp(dug.cp, uc::CopiedChannel::VS15);
+        uc::copyCp(dug.cp, channel);
         blinkCopied(ui->treeLibrary, nullptr);
     }
+}
+
+
+void FmMain::copyCurrentLibVs15()
+{
+    copyLibChar(uc::CopiedChannel::VS15);
+}
+
+
+void FmMain::copyCurrentLibBare()
+{
+    copyLibChar(uc::CopiedChannel::CHAR);
 }
 
 
@@ -2281,8 +2297,13 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
     // Copy
     libLocalMenu.acCopy->setEnabled(!node.value.empty());
 
-    // Copy + VS15
+    // Copy bare
     auto dug = EmojiPainter::getCp(node.value);
+    libLocalMenu.acCopyBare->setVisible(
+                dug.cp
+             && node.value.length() > 1);   // not just this character
+
+    // Copy + VS15
     libLocalMenu.acCopyVs15->setVisible(
                 dug.cp
              && uc::cpsByCode[dug.cp]->isEmoji()
