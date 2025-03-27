@@ -1318,56 +1318,11 @@ bool uc::Cp::hasGlyph() const
 
 namespace {
 
-    /// @todo [urgent, #410] Should be no emoji by case (that’s an exhaustive list, no new)
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
-        // Misc symbols
+        // This is just sample what used to be. Unused for now.
         case 0x260E:  // telephone
-        case 0x2618:  // shamrock
-        case 0x2611:  // ballot with check
-        case 0x2622:  // radioactive
-        case 0x2623:  // biohazard
-        case 0x261D:  // finger up
-        case 0x2626:  // Orthodox
-        case 0x262A:  // Muslim
-        case 0x262E:  // peace
-        case 0x262F:  // Dao (yin/yang)
-        case 0x2638:  // Hindu
-        case 0x2639:  // sad smiley
-        case 0x263A:  // smiley
-        case 0x2640:  // ♀
-        case 0x2642:  // ♂
-        case 0x265F:  // black pawn
-        case 0x2660:  // ♠
-        case 0x2663:  // ♣
-        case 0x2665:  // ♥
-        case 0x2666:  // ♦
-        case 0x2668:  // hot springs
-        case 0x267B:  // recycle
-        case 0x267E:  // non-acid (permanent) paper
-        case 0x2692:  // hammer and pick
-        case 0x2694:  // crossed swords
-        case 0x2695:  // staff of Aesculapius
-        case 0x2696:  // scales
-        case 0x2697:  // alembic
-        case 0x2699:  // gear
-        case 0x269B:  // atom symbol
-        case 0x269C:  // fleur-de-lis
-        case 0x26A0:  // warning
-        case 0x26A7:  // transgender
-        case 0x26B0:  // coffin
-        case 0x26B1:  // funeral urn
-        case 0x26CF:  // pick
-        case 0x26D1:  // helmet with white cross
-        case 0x26D3:  // chains
-        case 0x26E9:  // Shinto shrine
-        case 0x26F0:  // mountain
-        case 0x26F1:  // umbrella on ground
-        case 0x26F4:  // ferry
-        case 0x26F7:  // skier
-        case 0x26F8:  // ice skate
-        case 0x26F9:  // person with ball
             return false;
         default:
             return true;
