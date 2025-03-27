@@ -814,15 +814,7 @@ void uc::completeData()
         nScripts += v.stats.scripts.nNew;
         v.stats.scripts.nTotal = nScripts;
     }
-
-    // Save term INI
-//    std::ofstream os("term.ini");
-//    for (auto& v : terms) {
-//        os << "[Term." << v.key << "]\n";
-//        os << "Name=" << esc(v.locName) << '\n';
-//        os << "Text=" << esc(v.locDesc) << '\n';
-//    }
-}
+}   // completeData
 
 
 struct uc::LoadedFont : public dumb::SpTarget
