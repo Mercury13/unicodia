@@ -814,6 +814,24 @@ void uc::completeData()
         nScripts += v.stats.scripts.nNew;
         v.stats.scripts.nTotal = nScripts;
     }
+
+    // Dump VS16
+    if constexpr (false) {
+        std::vector<const uc::Block*> vs16Blocks;
+        for (auto& c : cpInfo) {
+            if (c.isVs16Emoji()) {
+                auto& blk = c.block();
+                if (vs16Blocks.empty() || vs16Blocks.back() != &blk) {
+                    vs16Blocks.emplace_back(&blk);
+                }
+            }
+        }
+        FILE* f = fopen("allVs16.log", "w");
+        for (auto blk : vs16Blocks) {
+            fprintf(f, "%s\n", blk->name.data());
+        }
+        fclose(f);
+    }
 }   // completeData
 
 
@@ -1308,21 +1326,6 @@ bool uc::Cp::hasGlyph() const
     }
 }
 
-namespace {
-
-    bool isFullEmojiByCase(char32_t ch)
-    {
-        switch (ch) {
-        // This is just sample what used to be. Unused for now.
-        case 0x260E:  // telephone
-            return false;
-        default:
-            return true;
-        }
-    }
-
-}   // anon namespace
-
 
 uc::DrawMethod uc::Cp::drawMethod(
         EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const
@@ -1343,9 +1346,7 @@ uc::DrawMethod uc::Cp::drawMethod(
                     auto& blk = block();
                     isSvg = !isVs16Emoji()  // Simple emoji w/o VS16 → automatically SVG
                                 // Both flags are off → graphic
-                            || !blk.flags.haveAny(Bfg::NO_EMOJI | Bfg::EMOJI_BY_CASE)
-                                // NO_EMOJI → sample, EMOJI_BY_CASE → check
-                            || (blk.flags.have(Bfg::EMOJI_BY_CASE) && isFullEmojiByCase(subj.ch32()));
+                            || blk.flags.have(Bfg::VS16_GRAPHIC);
                 } break;
             case EmojiDraw::GRAPHIC:
                 break;

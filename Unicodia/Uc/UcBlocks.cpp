@@ -35,7 +35,7 @@ constinit const uc::Block uc::blocks[] {
             "Latin-1 Supplement",
             { EcScript::Latn, 1 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
-            Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin extended A OK
     { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE, {}, 8_hy },
             "Latin Extended-A",
@@ -354,7 +354,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation",
             { EcScript::ZPUN, 0 }, MapSubtype::SYM_PUNCT,
-            EcScript::NONE, EcFont::PUNCTUATION, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
     { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE },
             "Superscripts and Subscripts",
@@ -373,7 +373,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2100, 0x214F, { 0x211D, EcContinent::NONE },
             "Letterlike Symbols",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
     { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
             "Number Forms",
@@ -383,7 +383,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, 7_hx + ImbaX::LEFT_3 },
             "Arrows",
             { EcScript::ZARR, 0 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL },
     // Math op OK
     { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
             "Mathematical Operators",
@@ -393,7 +393,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::TECHNICAL, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::TECHNICAL },
     // Control pictures OK
     { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::ENG_CUSTOM_PAINT },
             "Control Pictures",
@@ -409,8 +409,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Enclosed Alphanumerics",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL,
-                    Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS },
     // Box drawing OK
     { 0x2500, 0x257F, { L'╢', EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Box Drawing",
@@ -425,17 +424,17 @@ constinit const uc::Block uc::blocks[] {
     { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE },
             "Geometric Shapes",
             { EcScript::ZSHP, 0 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL },
     // Misc sym OK
     { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
             "Miscellaneous Symbols",
             { EcScript::ZSYM, 0 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::DINGBAT },
     // Dingbats OK, need Cambria here!
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats",
             { EcScript::ZDIN, 0 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS },
     // Misc math A OK
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",
@@ -454,7 +453,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
             "Supplemental Arrows-B",
             { EcScript::ZARR, 'B' }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI | Bfg::STOCK_BLOCK_DESC },
+            EcScript::NONE, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Misc math B OK
     { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
@@ -469,7 +468,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
             "Miscellaneous Symbols and Arrows",
             { EcScript::ZSYM, 1 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
+            EcScript::NONE, EcFont::NORMAL },
     // Glagolitic OK
     { 0x2C00, 0x2C5F, { 0x2C03, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Glagolitic",
@@ -529,7 +528,7 @@ constinit const uc::Block uc::blocks[] {
             "CJK Symbols and Punctuation",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_SYMBOLS,
-                    Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::NO_EMOJI },
+                    Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F, { L'あ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hiragana",
@@ -573,7 +572,7 @@ constinit const uc::Block uc::blocks[] {
             "Enclosed CJK Letters and Months",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_COMPAT,
-            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
+            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",
@@ -1496,18 +1495,19 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Enclosed Alphanumeric Supplement",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::ENCLOSED_ALNUM, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
+            EcScript::NONE, EcFont::ENCLOSED_ALNUM, Bfg::SCRIPTLIKE | Bfg::EMOJI_OVER_CHAR },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             { 0x1F202, EcContinent::CJK,
               Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::ENG_CUSTOM },
             "Enclosed Ideographic Supplement",
             MyName::INST, MapSubtype::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK_ENCLOSED, Bfg::NO_EMOJI | Bfg::EMOJI_OVER_CHAR },
+            EcScript::NONE, EcFont::CJK_ENCLOSED, Bfg::EMOJI_OVER_CHAR },
     // Misc OK
     { 0x1F300, 0x1F5FF, { 0x1F52B, EcContinent::NONE },
             "Miscellaneous Symbols and Pictographs",
-            { EcScript::ZSYM, '0' }, MapSubtype::SYM_OTHER, },
+            { EcScript::ZSYM, '0' }, MapSubtype::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::VS16_GRAPHIC },
     // Emoticons OK
     { 0x1F600, 0x1F64F, { 0x1F60D, EcContinent::NONE },
             "Emoticons",
@@ -1522,7 +1522,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F680, 0x1F6FF, { 0x1F697, EcContinent::NONE },
             "Transport and Map Symbols",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::VS16_GRAPHIC },
     // Alchem OK
     { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
             "Alchemical Symbols",

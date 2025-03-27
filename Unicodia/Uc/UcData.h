@@ -768,7 +768,7 @@ namespace uc {
         UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
         CJK             = 1<<5,     ///< [+] CJK for tofu counting (see remark below)
-        NO_EMOJI        = 1<<6,     ///< [+] VS16 emoji are always text (Latin-1, arrows)
+        VS16_GRAPHIC    = 1<<6,     ///< [+] VS16 emoji are always text (Latin-1, arrows)
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise [-] clockwise
@@ -780,12 +780,11 @@ namespace uc {
         VIRAMA_UP       = 1<<12,    ///< [+] Move dotted circle ¼r upwards in virtual virama
         VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
         VIRAMA_INSIDE   = 1<<14,    ///< [+] Plus inside virtual virama (Tutg)
-        EMOJI_BY_CASE   = 1<<15,    ///< [+] Text/graphic VS16 emoji is case-by-case
-        EMOJI_OVER_CHAR = 1<<16,    ///< [+] In VS16 blocks draw emoji over characters
-        AVOID_BUILTIN   = 1<<17,    ///< [+] No fonts marked as Built-in (for future-proofing
+        EMOJI_OVER_CHAR = 1<<15,    ///< [+] In VS16 blocks draw emoji over characters
+        AVOID_BUILTIN   = 1<<16,    ///< [+] No fonts marked as Built-in (for future-proofing
                                     ///<     if both font and block expand)
-        FORCE_BUILTIN   = 1<<18,    ///< [+] Turn off other methods of built-in avoidance
-        STOCK_BLOCK     = 1<<19,    ///< [+] The block has a stock name (Script.{1}.StockBlock)
+        FORCE_BUILTIN   = 1<<17,    ///< [+] Turn off other methods of built-in avoidance
+        STOCK_BLOCK     = 1<<18,    ///< [+] The block has a stock name (Script.{1}.StockBlock)
         EXPERIMENT      = 1<<30,    ///< Left for experiments
         STOCK_BLOCK_DESC = STOCK_BLOCK | HAS_DESCRIPTION,
     };
