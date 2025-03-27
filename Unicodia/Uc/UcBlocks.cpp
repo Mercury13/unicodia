@@ -1522,7 +1522,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F680, 0x1F6FF, { 0x1F697, EcContinent::NONE },
             "Transport and Map Symbols",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT, Bfg::VS16_GRAPHIC },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::EMOJI_OVER_CHAR },
     // Alchem OK
     { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
             "Alchemical Symbols",
