@@ -979,7 +979,7 @@ constinit const uc::Block uc::blocks[] {
             "Yezidi",
             { EcScript::Yezi, 0 }, MapSubtype::DEAD, EcScript::Yezi },
     // Arabic C OK
-    { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
+    { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA_RTL, Ifg::PAINT_SVG | Ifg::SHIFT_UP },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' }, MapSubtype::ALIVE,
             EcScript::Arab, EcFont::ARABIC, Bfg::STOCK_BLOCK_DESC },
