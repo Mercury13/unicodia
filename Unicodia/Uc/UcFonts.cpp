@@ -184,7 +184,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …2
     { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // CJK symbols
       { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                 // …1
-      { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                             // …2
+      { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                            // …2
       { FNAME_KOREAN, 110_pc},                                                  // …3
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
       { FNAME_KOREAN, 110_pc},                                                  // …1
