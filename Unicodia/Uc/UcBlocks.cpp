@@ -1135,7 +1135,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Deva, 'A' }, MapSubtype::DEAD,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     /// @todo [U17, future] Sharada supp: gagged with Funky
-    { 0x11B60, 0x11B7F, { 0x11B67, EcContinent::ASIA, Ifg::PAINT_SVG },
+    { 0x11B60, 0x11B7F, { 0x11B67, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint { 12, 6 } },
             "Sharada Supplement",
             { EcScript::Shrd, '1' }, MapSubtype::DEAD,
             EcScript::Shrd, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
