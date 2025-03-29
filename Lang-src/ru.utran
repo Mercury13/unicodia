@@ -12335,8 +12335,8 @@
      <transl>Копировать + круг из точек</transl>
     </text>
     <text id="CopyBare">
-     <orig>Copy bare symbol</orig>
-     <transl>Копировать голый символ</transl>
+     <orig>Copy main symbol</orig>
+     <transl>Копировать главный символ</transl>
     </text>
     <text id="Remove">
      <orig>Remove</orig>
