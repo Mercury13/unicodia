@@ -1149,7 +1149,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Bhks, 0 }, MapSubtype::DEAD, EcScript::Bhks },
     // Marchen OK
     { 0x11C70, 0x11CBF,
-            { 0x11C74, EcContinent::ASIA, {}, SvgHint{ 13, 1, ImbaY::ABOVE_1 } },
+            { 0x11C73, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::BIGGER,
+                            SvgHint{ 3, 1, ImbaX::RIGHT_4, ImbaY::BELOW_1 } },
             "Marchen",
             { EcScript::Marc, 0 }, MapSubtype::DEAD, EcScript::Marc },
     // Masaram Gondi OK
