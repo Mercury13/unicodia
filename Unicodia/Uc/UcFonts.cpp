@@ -195,10 +195,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …1 for descriptions
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, 10_top, SIZE_DEVA },                    // Devanagari bigger
       { FNAME_DEVA, 10_top, SIZE_DEVA },                                        // …1
-    { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID}, // Dingbat
-      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 20_bot }, // …1
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2
-      { FNAME_BABEL_01, 130_pc },                                                  // …3
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                           // Dingbat
+      { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID}, // …1
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 20_bot }, // …2
+      { FNAME_BABEL_01, 130_pc },                                               // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Dingbat 2
       { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 10_bot },      // …1
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 20_bot },      // …2
