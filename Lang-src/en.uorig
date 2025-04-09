@@ -940,6 +940,9 @@
     <text id="China">
      <orig>China</orig>
     </text>
+    <text id="Ethiopia">
+     <orig>Ethiopia</orig>
+    </text>
     <text id="IndiaCen">
      <orig>Central India</orig>
     </text>
@@ -1304,7 +1307,7 @@
      <orig>Ethiopic supplement</orig>
     </text>
     <text id="Text">
-     <orig>Letters of Sebat Bet language (Ethiopia, 1.5M as of 2018, ''Ethnogogue'' status 5: developing), and tone marks.</orig>
+     <orig>Letters of Sebat Bet language {{nspk|sgw}}, and tone marks.</orig>
     </text>
    </group>
    <group id="13A0">
@@ -1815,10 +1818,10 @@
     <text id="Text">
      <orig>
       <p>Ethiopic script for languages:</p>
-      <p>* Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin] from 2009;</p>
-      <p>* Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin from 1990s;</p>
-      <p>* Bench: Omotic family, 350k as of 2007, in Latin from 2008;</p>
-      <p>* Sebat Bet: Ethiosemitic branch, 1.5M as of 2010.</p>
+      <p>* Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin]] since 2009;</p>
+      <p>* Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin since 1990s;</p>
+      <p>* Bench: Omotic family, 350k as of 2007, in Latin since 2008;</p>
+      <p>* Sebat Bet: Ethiosemitic branch, {{nspk1|sgw}}.</p>
      </orig>
     </text>
    </group>
@@ -1851,7 +1854,7 @@
      <orig>
       <p>You will ask: how to find a CJK ideograph in the dictionary if the pronunciation is unknown? To do this, you find a ''radical'' in an ideograph{{-}}a stroke or combination of strokes.</p>
       <p />
-      <p>Kangxi dictionary of Chinese language is written 1710–1716 after the order of Kangxi Emperor of China, and contains 49,030 entries. It was considered standard until late 19th century. In 1831 about 2500 mistakes were fixed, caused by the hurry of initial authors.</p>
+      <p>Kangxi dictionary of Chinese language is written 1710–1716 after the order of Kangxi Emperor of China, and contains {{n|49030}} entries. It was considered standard until late 19th century. In 1831 about {{n|2500}} mistakes were fixed, caused by the hurry of initial authors.</p>
       <p />
       <p>The system of “alphabetical” sorting of ideographs made from 214 radicals was devised back in 1615, but the Kangxi dictionary was the one that made it standard.</p>
      </orig>
@@ -1989,7 +1992,7 @@
    <group id="3400">
     <text id="Text">
      <orig>
-      <p>6582 rare [[ps:Hani|Chinese ideographs]]. In 2020 ten more were added, filling the block completely.</p>
+      <p>{{n|6582}} rare [[ps:Hani|Chinese ideographs]]. In 2020 ten more were added, filling the block completely.</p>
       <p />
       <p>The first of ideographs means “hill, mound, grave”, and currently replaced with character {{sm|丘}}. The second is an obsolete ideograph that means in different sources “lick”, “woven mat”, “bamboo sheath”, “unilluminated”.</p>
      </orig>
@@ -2356,10 +2359,10 @@
       <p>* trimmed Π = 5, πέντε</p>
       <p>* Δ = 10, δέκα</p>
       <p>* Η = 100, ηἑκατόν</p>
-      <p>* Χ = 1000, χίλιοι</p>
-      <p>* Μ = 10,000, μύριοι</p>
+      <p>* Χ = {{n|1000}}, χίλιοι</p>
+      <p>* Μ = {{n|10000}}, μύριοι</p>
       <p />
-      <p>Characters consisting of Π and 10/100/1000… were used for 50, 500 etc.</p>
+      <p>Characters consisting of Π and 10/100/{{n|1000}}… were used for 50, 500 etc.</p>
       <p />
       <p>Later Attic system was supplanted with [[ps:Grek|Ionian]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), but cultural interchange influenced Etruscans, and that led to Roman numerals.</p>
       <p />
@@ -3326,7 +3329,7 @@
      <orig>Ethiopic extended B</orig>
     </text>
     <text id="Text">
-     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 (1.5M as of 2010). Some old letters are now [[pt:obsolete|obsolete]].</orig>
+     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</orig>
     </text>
    </group>
    <group id="1E800">
@@ -3347,7 +3350,7 @@
      <orig>
       <p>Arabic non-positional numbers used in India since the 17th century (back under Mogul rule) up to mid 20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
       <p />
-      <p>Numbers up to 90 thousand are [[pt:acrophonic|acrophonic]], from Arabic, starting from 100 thousand are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
+      <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], from Arabic, starting from {{n|100000}} are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
      </orig>
     </text>
    </group>
@@ -3385,7 +3388,7 @@
       <p />
       <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed on it holding a stick with teeth. The solitaire was a mixture of two Chinese games, mahjong and “demolish the turtle” played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
       <p />
-      <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and 10,000 coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
+      <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
       <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of 2023.</p>
      </orig>
@@ -3587,7 +3590,7 @@
    </group>
    <group id="2A700">
     <text id="Text">
-     <orig>4149 rare and old ideographs added in 2009. In 2021 4 more were added.</orig>
+     <orig>{{n|4149}} rare and old ideographs added in 2009. In 2021 4 more were added.</orig>
     </text>
    </group>
    <group id="2B740">
@@ -3597,12 +3600,12 @@
    </group>
    <group id="2B820">
     <text id="Text">
-     <orig>5762 rare and old ideographs added in 2015.</orig>
+     <orig>{{n|5762}} rare and old ideographs added in 2015.</orig>
     </text>
    </group>
    <group id="2CEB0">
     <text id="Text">
-     <orig>7473 ideographs added in 2017, Including rare, old and more than 1000 from Zhuang language.</orig>
+     <orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from Zhuang language.</orig>
     </text>
    </group>
    <group id="2EBF0">
@@ -3627,7 +3630,7 @@
    <group id="30000">
     <text id="Text">
      <orig>
-      <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated 4939 old and rare characters there. This block contains two record-beating ideographs:</p>
+      <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated {{n|4939}} old and rare characters there. This block contains two record-beating ideographs:</p>
       <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': U+30EDD simplified 42 strokes, U+30EDE traditional 58 strokes;</p>
       <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', U+3106C.</p>
      </orig>
@@ -3644,7 +3647,7 @@
      <orig>
       <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
       <p />
-      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of 4000{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
      </orig>
     </text>
    </group>
@@ -3753,7 +3756,7 @@
      <orig>
       <p>In 593{{_}}BC Achaemenid Persia conquered Babylon and created a book language based on Aramaic, so codified that it’s extremely difficult to identify the place and date of a specific document. With the conquest of Persia by Alexander the Great (330{{_}}BC) fragmentation of language started, and [[ps:Syrc|Syriac]] (ancestors of [[ps:Arab|Arabic]]) and Jewish (ancestors of [[ps:Hebr|Hebrew]]) languages began to form.</p>
       <p />
-      <p>Numbers are made by combining numerals 1, 2, 3, 10, 20, 100, 1000 and 10000: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (right to left!)</p>
+      <p>Numbers are made by combining numerals 1, 2, 3, 10, 20, 100, {{n|1000}} and {{n|10000}}: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (right to left!)</p>
      </orig>
     </text>
    </group>
@@ -4128,7 +4131,7 @@
      <orig>
       <p>Came supposedly from [[ps:Lina|Linear A]]. About 11th century{{_}}BC transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
       <p />
-      <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with a total of 2,500 characters. For comparison: in undeciphered Linear A{{-}}7,000, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}30,000.</p>
+      <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with a total of {{n|2500}} characters. For comparison: in undeciphered Linear A{{-}}{n|7000}}, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}{{n|30000}}.</p>
       <p />
       <p>The image on the icon is authentic, font is based on Michael Everson’s tracings (2020).</p>
      </orig>
@@ -4259,7 +4262,7 @@
      <orig>
       <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
-      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains 10,000 glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, 1BC05+1BC41+1BC36) looks like</p>
+      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, 1BC05+1BC41+1BC36) looks like</p>
       <p>:{{DuplCats}}</p>
      </orig>
     </text>
@@ -5166,7 +5169,7 @@
      <orig>Mandaic ''(Iran and Iraq)''</orig>
     </text>
     <text id="Text">
-     <orig>Came from [[ps:Armi|Aramaic]] or [[ps:Prti|Parthian]] script. Used by so-called “marsh Arabs” that live near confluence of Tigris and Euphrates and profess Mandaeism, unusual Gnostic religion. Their number in Iraq is greatly reducing from 45,000 (1996) to 5000 (2007), 60,000 more are spread across the world, and probably as refugees they will quickly disappear.</orig>
+     <orig>Came from [[ps:Armi|Aramaic]] or [[ps:Prti|Parthian]] script. Used by so-called “marsh Arabs” that live near confluence of Tigris and Euphrates and profess Mandaeism, unusual Gnostic religion. Their number in Iraq is greatly reducing from {{n|45000}} (1996) to {{n|5000}} (2007), {{n|60000}} more are spread across the world, and probably as refugees they will quickly disappear.</orig>
      <au-cmt>In Russian: Marsh Arabs = болотные арабы</au-cmt>
     </text>
    </group>
@@ -6183,7 +6186,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tglg|Tagalog]]. There are less than 25,000 people speaking Tagbanwa, new generation prefer Tagalog. But the script is used by other Palawan languages (97,000 as of 2010), together with [[ps:Latn|Latin]].</p>
+      <p>Comes from [[ps:Tglg|Tagalog]]. There are less than {{n|25000}} people speaking Tagbanwa, new generation prefer Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
       <p />
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </orig>
@@ -6219,7 +6222,7 @@
       <p />
       <p>In Tai Le of 3rd reform (1963–1988) usual European umlauts were used for tones: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
       <p />
-      <p>There are about 500,000 Tai Nüa in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. Less than 500,000 more are scattered across other countries.</p>
+      <p>There are about {{n|500000}} Tai Nüa in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. Less than {{n|500000}} more are scattered across other countries.</p>
      </orig>
     </text>
    </group>
@@ -6644,9 +6647,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first sample of old (ideographic) Yi script is dated ≈1500, but the script is definitely older. Legends say that it existed in Tang dynasty (618–907). Script consists of 8000 to 10000 ideographs.</p>
+      <p>The first sample of old (ideographic) Yi script is dated ≈1500, but the script is definitely older. Legends say that it existed in Tang dynasty (618–907). Script consists of {{n|8000}} to {{n|10000}} ideographs.</p>
       <p />
-      <p>Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not{{_}}all combinations are possible, and Yi script can write 1165 syllables.</p>
+      <p>Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not{{_}}all combinations are possible, and Yi script can write {{n|1165}} syllables.</p>
      </orig>
     </text>
    </group>
@@ -7175,7 +7178,7 @@
       <p />
       <p>5. Execute higher-level protocols{{-}}for example, define direction of tables.</p>
       <p />
-      <p>For example: “XX,YY 1,00&amp;lt;2,00 XX” = “ثث,حح 1,00&amp;lt;2,00 ثث”</p>
+      <p>For example: “XX,YY 1.00&amp;lt;2.00 XX” = “ثث,حح 1.00&amp;lt;2.00 ثث”</p>
       <p />
       <p>'''What to do for a simple user?'''</p>
       <p />
@@ -7219,11 +7222,11 @@
      <orig>
       <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of alive languages are encoded in Basic Plane, allowing processing of these languages right in [[pt:utf16|UTF-16]].</p>
       <p />
-      <p>Unicode had beed two-byte encoding until 1996, that gave capacity of 65,536 characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
+      <p>Unicode had beed two-byte encoding until 1996, that gave capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
       <p />
       <p>As of Unicode{{_}}16, only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
-      <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and 6400 [[pt:private|private-use]] characters.</p>
+      <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
      </orig>
     </text>
    </group>
@@ -7298,7 +7301,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The term “character” is ambiguous, so Unicode refers to its own codes (numbers from 0 to 1,114,111₁₀=10,FFFF₁₆) as '''code points'''. A code point can be:</p>
+      <p>The term “character” is ambiguous, so Unicode refers to its own codes (numbers from 0 to {{n|1114111}}₁₀={{h|10FFFF}}₁₆) as '''code points'''. A code point can be:</p>
       <p>* [[pt:graphic|Graphic]] (printable) character.</p>
       <p>* [[pt:control|Control]] command.</p>
       <p>* [[pt:format|Formatting]] command.</p>
@@ -7526,7 +7529,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been 4,225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
       <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
       <p />
@@ -7787,7 +7790,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>6400 characters E000…F8FF in [[pt:bmp|Basic Plane]], and 131068 chanacters in two [[pt:plane|planes]] 0F and 10 (except *FFFE and *FFFF that are [[pt:noncharacter|non-characters]]) are given to everyone’s own needs.</p>
+      <p>{{n|6400}} characters E000…F8FF in [[pt:bmp|Basic Plane]], and {{n|131068}} characters in two [[pt:plane|planes]] 0F and 10 (except *FFFE and *FFFF that are [[pt:noncharacter|non-characters]]) are given to everyone’s own needs.</p>
       <p />
       <p>By mutual negotiation, people can encode in these ranges everything they want, including characters that are non-eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
       <p />
@@ -8078,7 +8081,7 @@
       <p>: 1101.10yy.yyyy.yyyy{{_}}1101.11yy.yyyy.yyyy, where y=x−10000₁₆.</p>
       <p />
       <p>Properties of UTF-16:</p>
-      <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 characters.</p>
+      <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} characters.</p>
       <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
       <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will{{_}}not{{_}}make false positives.</p>
       <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
@@ -9757,11 +9760,11 @@
      <orig>
       <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
       <p />
-      <p>Version 1.0 (October 1991, ≈7200 characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and 2350 [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
+      <p>Version 1.0 (October 1991, ≈{{n|7200}} characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and {{n|2350}} [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
       <p />
-      <p>Version 1.0.1 (June 1992, ≈28,300 characters) added 20,902 [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
+      <p>Version 1.0.1 (June 1992, ≈{{n|28300}} characters) added {{n|20902}} [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
       <p />
-      <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
+      <p>Version 1.1 added {{n|4306}} more Hangul characters, and deleted Tibetan.</p>
      </orig>
     </text>
    </group>
@@ -9815,7 +9818,7 @@
       <p>* Added base of Egyptian hieroglyphs.</p>
       <p>* Turned PDF specification to HTML site.</p>
       <p />
-      <p>Unicode{{_}}16 might have exactly 155 thousand characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
+      <p>Unicode{{_}}16 might have exactly {{n|155000}} characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
     </text>
    </group>

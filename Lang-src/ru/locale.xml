@@ -44,7 +44,7 @@
 		<blk start="1F650" /><!-- Ornamental dingbats -->
 	</ellipsis>
 	<wiki-templates>
-		<!-- 12{{.}}345 → 12, narrow NBSP, 345 -->
+		<!-- 12{{.}}345 → 12, narrow NBSP, 345 (unused for now with {{n|12345}}) -->
 		<tmpl name="."><![CDATA[<font size='-3'>&#xA0;</font>]]></tmpl>
 		<!-- {{№}}5  →  №, narrow NBSP -->
 		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>

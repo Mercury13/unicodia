@@ -6,6 +6,7 @@ constexpr uc::LangLoc LOC_BANGLADESH    { .locSubKey = "Bangladesh"  };
 constexpr uc::LangLoc LOC_BHUTAN        { .locSubKey = "Bhutan"      };
 constexpr uc::LangLoc LOC_CAMBODIA      { .locSubKey = "Cambodia"    };
 constexpr uc::LangLoc LOC_CHINA         { .locSubKey = "China"       };
+constexpr uc::LangLoc LOC_ETHIOPIA      { .locSubKey = "Ethiopia"    };
 constexpr uc::LangLoc LOC_INDIA_CEN     { .locSubKey = "IndiaCen"    };
 constexpr uc::LangLoc LOC_INDIA_E       { .locSubKey = "IndiaE"      };
 constexpr uc::LangLoc LOC_INDIA_N       { .locSubKey = "IndiaN"      };
@@ -957,6 +958,10 @@ extern const uc::SideLang uc::sideLangInfo[] {
       .lang { .mantissa = 1, .numOrder = NumOrder::MILLION, .flags = Langfg::LESS_THAN, .year = 2012,
               .locations { LOC_MYANMAR } } },
                     // The greatest of known estimates (UNSD 2012)
+    { .id= "sgw",   // Sebat Beit ← Ethi
+      .lang { .mantissa = 15, .numOrder = NumOrder::HUN_THOUSAND, .flags = Langfg::GREATER_THAN, .year = 2022,
+              .locations { LOC_ETHIOPIA } } },
+                    // No reliable source, 1.5M to 3M is the greatest
     { .id = "uk",   // Ukrainian ← Cyrl
       .lang { .mantissa = 39, .numOrder = NumOrder::MILLION, .year = 2024 } },
                     // Ethnologue, counted diasporas (millions of L1 Ukrainians),

@@ -520,6 +520,7 @@ const uc::Font& mywiki::DescFont::getDescFont(const uc::Font& font)
     return *that;
 }
 
+
 namespace {
 
     constexpr std::u8string_view BULLET = u8"•\u00A0";
@@ -531,6 +532,12 @@ namespace {
         static const TextLang DFLT;
     };
     const TextLang TextLang::DFLT;
+
+    enum class Nspkf : unsigned char {
+        ITALIC_PARENS   = 1<<0,  // italic style + parentheses
+        LOCATION        = 1<<1,  // location
+        DFLT = ITALIC_PARENS | LOCATION
+    };
 
     class Eng : public wiki::Engine
     {
@@ -551,7 +558,8 @@ namespace {
         void appendBreak(wiki::Strength strength, wiki::Feature feature, unsigned indentSize) override;
         std::string_view defaultLinkTextSv(std::string_view target) override;
         void finish() override;
-        void appendNSpeakers(const TextLang& x);
+        void appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs);
+        void appendNSpeakers(Buf1d<const std::string_view> x, Flags<Nspkf> fgs);
     protected:
         std::u8string linkText;
         wiki::HtWeight weight;
@@ -884,27 +892,27 @@ namespace {
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
     constinit const std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
 
-    template <std::integral T>
-    std::u8string formatNum(T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
+    constinit const loc::Lang::Numfmt::Thousand HEX_THOUSAND = {
+        .minLength = 6
+    };
+    constexpr unsigned HEX_PERIOD = 4;
+
+    std::u8string finishFormattingNum(std::string_view x,
+                const loc::Lang::Numfmt::Thousand& fmt,
+                unsigned period,
+                std::u8string_view space)
     {
-        char tmp[30];
-        auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
-        const char* end = q.ptr;
-        if (!end || end <= tmp)
-            throw std::logic_error("Strange end");
-        const char* src = tmp;
+        const char* src = x.data();
+        const char* end = x.data() + x.size();
         std::u8string dest;
         dest.reserve(end - src);
         // Minus
-        if constexpr (std::is_signed_v<T>) {
-            if (src != end && !std::isdigit(*src)) {
-                dest += *(src++);
-            }
+        if (src != end && !std::isalnum(*src)) {
+            dest += *(src++);
         }
-        constexpr auto PERIOD = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
         // The rest
         auto length = end - src;
-        if (length < fmt.minLength || length <= PERIOD) {
+        if (length < fmt.minLength || length <= period) {
             // No formatting
             dest.append(src, end);
             return dest;
@@ -913,11 +921,23 @@ namespace {
         while (src < end) {
             dest += *(src++);
             --length;
-            if (length != 0 && length % PERIOD == 0) {
+            if (length != 0 && length % period == 0) {
                 dest += space;
             }
         }
         return dest;
+    }
+
+    template <std::integral T>
+    std::u8string formatNum(T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
+    {
+        char tmp[30];
+        auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
+        const char* end = q.ptr;
+        if (!end || end <= tmp)
+            throw std::logic_error("Strange end");
+        std::string_view sv { tmp, end };
+        return finishFormattingNum(sv, fmt, loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD, space);
     }
 
     template <std::integral T>
@@ -929,7 +949,7 @@ namespace {
         r.append(str::toSv(q).data());
     }
 
-    void Eng::appendNSpeakers(const TextLang& x)
+    void Eng::appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs)
     {
         char locBuf[40];
         auto lang = context.lang;   // primary language
@@ -953,8 +973,10 @@ namespace {
                 lang = uc::findSideLang(x.key);
             }
         }
-        s += "<i>";
-        str::append(s, loc::active::punctuation.leftParen);
+        if (fgs.have(Nspkf::ITALIC_PARENS)) {
+            s += "<i>";
+            str::append(s, loc::active::punctuation.leftParen);
+        }
         if (lang) {
             bool wasWritten = false;
             // Pre-comment from L10n
@@ -977,7 +999,7 @@ namespace {
             // Language info
             if (lang->hasValue()) {
                 // Locations
-                if (shouldWriteLocations(*lang)) {
+                if (fgs.have(Nspkf::LOCATION) && shouldWriteLocations(*lang)) {
                     if (wasWritten) {
                         str::append(s, loc::active::punctuation.semicolon);
                     }
@@ -1023,8 +1045,20 @@ namespace {
             s += "[NO LANGUAGE!!!]";
         }
         // End
-        str::append(s, loc::active::punctuation.rightParen);
-        s += "</i>";
+        if (fgs.have(Nspkf::ITALIC_PARENS)) {
+            str::append(s, loc::active::punctuation.rightParen);
+            s += "</i>";
+        }
+    }
+
+    void Eng::appendNSpeakers(Buf1d<const std::string_view> x, Flags<Nspkf> fgs)
+    {
+        TextLang textLang {
+            // 0 = template name
+            .key        = x.safeGetV(1, {}),
+            .preComment = x.safeGetV(2, {}),
+        };
+        appendNSpeakers(textLang, fgs);
     }
 
     // Key: start/end
@@ -1035,6 +1069,8 @@ namespace {
     void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         auto name = x[0];
+        if (name.empty())
+            return;
         if (loc::currLang) {
             auto& wt = loc::currLang->wikiTemplates;
             if (auto it = wt.find(name); it != wt.end()) {
@@ -1042,79 +1078,161 @@ namespace {
                 return;
             }
         }
-        if (name == "sm"sv) {
-            appendFont(s, context.font, x, SIZE_SAMPLE);
-        } else if (name == "smb"sv) {
-            /// @todo [future] Plane 2 in text?
-            appendFont(s, uc::EcFont::CJK, x, 3);
-        } else if (name == "smfunky"sv) {
-            appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
-        } else if (name == "smtable"sv) {
-            appendSmTable(s, x, context);
-        } else if (name == "_"sv) {
-            s.append(QChar(0x00A0));
-        } else if (name == "%"sv) {
-            str::append(s, x.safeGetV(1, {}));
-            str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
-        } else if (name == "k"sv) {
-            for (size_t i = 1; i < x.size(); ++i) {
-                if (i != 1)
-                    s += '+';
-                str::append(s, KEY_START);
-                mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
-                str::append(s, KEY_END);
+        switch (name[0]) {
+        case '%':
+            if (name == "%"sv) {
+                str::append(s, x.safeGetV(1, {}));
+                str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+            } else {
+                goto dflt;
             }
-        } else if (name == "kb"sv) {
-            for (size_t i = 1; i < x.size(); ++i) {
-                if (i != 1)
-                    s += '+';
-                str::append(s, KEY_START);
-                s += "<b>";
-                mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
+            break;
+
+        case '_':
+            if (name == "_"sv) {
+                    s.append(QChar(0x00A0));
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'D':
+            if (name == "DuplCats") {
+                uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
+                appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'e':
+            if (name == "em"sv) {
+                str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
+                str::append(s, x.safeGetV(1, {}));
+                str::append(s, "</font>");
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'f':
+            if (name == "fontface"sv) {
+                    s += context.font->familiesComma();
+            } else if (name == "funky"sv) {
+                appendFont(s, uc::EcFont::FUNKY, x, 0);
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'h':
+            if (name == "h"sv) {
+                auto formatted = finishFormattingNum(
+                        x.safeGetV(1, {}), HEX_THOUSAND, HEX_PERIOD, SMALL_NBSP_HT);
+                str::append(s, formatted);
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'k':
+            if (name == "k"sv) {
+                for (size_t i = 1; i < x.size(); ++i) {
+                    if (i != 1)
+                        s += '+';
+                    str::append(s, KEY_START);
+                    mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
+                    str::append(s, KEY_END);
+                }
+            } else if (name == "kb"sv) {
+                for (size_t i = 1; i < x.size(); ++i) {
+                    if (i != 1)
+                        s += '+';
+                    str::append(s, KEY_START);
+                    s += "<b>";
+                    mywiki::append(s, str::toU8sv(x[i]), context, wiki::Mode::SPAN);
+                    s += "</b>";
+                    str::append(s, KEY_END);
+                }
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'n':
+            if (name == "n"sv) {
+                auto formatted = finishFormattingNum(
+                        x.safeGetV(1, {}), loc::active::numfmt.denseThousand,
+                        loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD, SMALL_NBSP_HT);
+                str::append(s, formatted);
+            } else if (name == "nspk"sv) {
+                appendNSpeakers(x, Nspkf::DFLT);
+            } else if (name == "nspk1"sv) {
+                appendNSpeakers(x, NO_FLAGS);
+            } else if (name == "nchars"sv) {
+                appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+            } else if (name == "nemoji"sv) {
+                auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
+                appendNum(s, nEmoji, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+            } else if (name == "noto"sv) {
+                appendFont(s, uc::EcFont::NOTO, x, 0);
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 's':
+            if (name == "sm"sv) {
+                appendFont(s, context.font, x, SIZE_SAMPLE);
+            } else if (name == "smb"sv) {
+                /// @todo [future] Plane 2 in text?
+                appendFont(s, uc::EcFont::CJK, x, 3);
+            } else if (name == "smfunky"sv) {
+                appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
+            } else if (name == "smtable"sv) {
+                appendSmTable(s, x, context);
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 't':
+            if (name == "t"sv) {
+                str::append(s, u8"<span class='tr'>⌈</span>");
+                str::append(s, x.safeGetV(1, {}));
+                str::append(s, u8"<span class='tr'>⌋</span>");
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'v':
+            if (name == "version"sv) {
+                str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
+            } else {
+                goto dflt;
+            }
+            break;
+
+        case 'w':
+            if (name == "warn") {
+                s += "<b style='"  STYLE_MISRENDER "'>";
+                str::append(s, x.safeGetV(1, {}));
                 s += "</b>";
-                str::append(s, KEY_END);
+            } else {
+                goto dflt;
             }
-        } else if (name == "t"sv) {
-            str::append(s, u8"<span class='tr'>⌈</span>");
-            str::append(s, x.safeGetV(1, {}));
-            str::append(s, u8"<span class='tr'>⌋</span>");
-        } else if (name == "em"sv) {
-            str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
-            str::append(s, x.safeGetV(1, {}));
-            str::append(s, "</font>");
-        } else if (name == "fontface"sv) {
-            s += context.font->familiesComma();
-        } else if (name == "nchars"sv) {
-            appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
-        } else if (name == "nemoji"sv) {
-            auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
-            appendNum(s, nEmoji, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
-        } else if (name == "version"sv) {
-            str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
-        } else if (name == "funky"sv) {
-            appendFont(s, uc::EcFont::FUNKY, x, 0);
-        } else if (name == "noto"sv) {
-            appendFont(s, uc::EcFont::NOTO, x, 0);
-        } else if (name == "warn") {
-            s += "<b style='"  STYLE_MISRENDER "'>";
-            str::append(s, x.safeGetV(1, {}));
-            s += "</b>";
-        } else if (name == "DuplCats") {
-            uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
-            appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
-        } else if (name == "GrekCoptUni"
-                || name == "ArabPres1"
-                || name == "ArabPres2") {
-            mywiki::append(s, loc::get(str::cat("Snip.", name)), context, wiki::Mode::SPAN);
-        } else if (name == "nspk") {
-            TextLang textLang {
-                // 0 = template name
-                .key        = x.safeGetV(1, {}),
-                .preComment = x.safeGetV(2, {}),
-            };
-            appendNSpeakers(textLang);
-        } else {
-            wiki::appendHtml(s, x[0]);
+            break;
+
+        default:
+        dflt:
+            if (name == "GrekCoptUni"sv
+             || name == "ArabPres1"sv
+             || name == "ArabPres2"sv) {
+                mywiki::append(s, loc::get(str::cat("Snip.", name)), context, wiki::Mode::SPAN);
+            } else {
+                wiki::appendHtml(s, x[0]);
+            }
         }
     }
 
@@ -1449,7 +1567,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
                     && !context.lang->flags.have(uc::Langfg::NO_AUTO)) {
                 text += ' ';
                 Eng eng(text, context);
-                eng.appendNSpeakers(TextLang::DFLT);
+                eng.appendNSpeakers(TextLang::DFLT, Nspkf::DFLT);
             }
         }
         if (x.time) {
