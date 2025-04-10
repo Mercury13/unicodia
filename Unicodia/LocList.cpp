@@ -138,6 +138,21 @@ namespace {
         }
     }
 
+    char16_t readChar16(pugi::xml_node h, const char* name, char dflt)
+    {
+        char32_t buf[4];
+        // Get attribute
+        auto attr = h.attribute(name).as_string();
+        if (attr == nullptr || *attr == 0)
+            return dflt;
+        // Convert
+        auto end = mojibake::copyLimS(std::string_view(attr), std::begin(buf), std::end(buf));
+        if (end != buf && buf[0] < 65536) {
+            return buf[0];
+        }
+        return dflt;
+    }
+
     bool parseLang(loc::Lang& r, const std::filesystem::path& path)
     {
         // Remove translator
@@ -244,13 +259,9 @@ namespace {
         auto hIcons =  hLocale.child("icons");
         r.icons.sortAZ = hIcons.attribute("sort-az").as_string();
 
-        r.numfmt.decimalPoint = '.';
         auto hNumFormat = hLocale.child("num-format");
-        auto dp = mojibake::toS<std::u32string>(
-                    hNumFormat.attribute("dec-point").as_string());
-        if (!dp.empty() && dp[0] < 65536) {
-            r.numfmt.decimalPoint = dp[0];
-        }
+        r.numfmt.decimalPoint  = readChar16(hNumFormat, "dec-point",  loc::Lang::Numfmt::DEFAULT_DECIMAL_POINT);
+        r.numfmt.thousandPoint = readChar16(hNumFormat, "thou-point", loc::Lang::Numfmt::DEFAULT_THOUSAND_POINT);
         r.numfmt.thousand.minLength =
                 hNumFormat.attribute("thou-min-length").as_uint(
                             loc::Lang::Numfmt::Thousand::DEFAULT_MIN_LENGTH);

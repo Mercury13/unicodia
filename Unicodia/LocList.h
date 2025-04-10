@@ -41,7 +41,10 @@ namespace loc
             std::string sortAZ;
         } icons;
         struct Numfmt {
-            char16_t decimalPoint = '.';
+            static constexpr char16_t DEFAULT_DECIMAL_POINT = '.';
+            static constexpr char16_t DEFAULT_THOUSAND_POINT = ' ';
+            char16_t decimalPoint = DEFAULT_DECIMAL_POINT;
+            char16_t thousandPoint = DEFAULT_THOUSAND_POINT;
             struct Thousand {
                 static constexpr unsigned DEFAULT_MIN_LENGTH = 1;
                 static constexpr unsigned DEFAULT_PERIOD = 3;

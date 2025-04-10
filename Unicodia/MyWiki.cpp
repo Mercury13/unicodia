@@ -888,20 +888,36 @@ namespace {
     }
 
     // In Tahoma: 1px normal inter-char, 2px too bad, 3px some-what-OK, 4px normal space
-    constinit const std::u8string_view NNBSP_RAW = u8"\u202F";
+    constexpr std::u8string_view NNBSP_RAW = u8"\u202F"sv;
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
-    constinit const std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>";  // HTML view is still funky
+    constexpr std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>"sv;  // HTML view is still funky
 
-    constinit const loc::Lang::Numfmt::Thousand HEX_THOUSAND = {
-        .minLength = 6
-    };
-    constexpr unsigned HEX_PERIOD = 4;
+    enum class Subf { STANDALONE, DENSE, HEX };
 
     std::u8string finishFormattingNum(std::string_view x,
-                const loc::Lang::Numfmt::Thousand& fmt,
-                unsigned period,
-                std::u8string_view space)
+                Subf subformat, mywiki::NumPlace place)
     {
+        std::u8string_view space;
+        char8_t data[4];
+        if (loc::active::numfmt.thousandPoint == ' ') {
+            if (place == mywiki::NumPlace::HTML) {
+                space = SMALL_NBSP_HT;
+            } else {
+                space = NNBSP_RAW;
+            }
+        } else {
+            std::u16string_view sv { &loc::active::numfmt.thousandPoint, 1 };
+            auto end = mojibake::copyLimS(sv, data, std::end(data));
+            space = std::u8string_view{ data, end };
+        }
+        unsigned minLength = loc::active::numfmt.thousand.minLength;
+        unsigned period = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
+        switch (subformat) {
+        case Subf::STANDALONE: break;
+        case Subf::DENSE: minLength = loc::active::numfmt.denseThousand.minLength; break;
+        case Subf::HEX: minLength = 6; period = 4; break;
+        }
+
         const char* src = x.data();
         const char* end = x.data() + x.size();
         std::u8string dest;
@@ -912,10 +928,9 @@ namespace {
         }
         // The rest
         auto length = end - src;
-        if (length < fmt.minLength || length <= period) {
+        if (length < minLength || length <= period) {
             // No formatting
-            dest.append(src, end);
-            return dest;
+            return std::u8string{ str::toU8sv(x) };
         }
         // Formatting
         while (src < end) {
@@ -929,7 +944,7 @@ namespace {
     }
 
     template <std::integral T>
-    std::u8string formatNum(T x, const loc::Lang::Numfmt::Thousand& fmt, std::u8string_view space)
+    std::u8string formatNum(T x, Subf subformat, mywiki::NumPlace place)
     {
         char tmp[30];
         auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
@@ -937,15 +952,15 @@ namespace {
         if (!end || end <= tmp)
             throw std::logic_error("Strange end");
         std::string_view sv { tmp, end };
-        return finishFormattingNum(sv, fmt, loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD, space);
+        return finishFormattingNum(sv, subformat, place);
     }
 
     template <std::integral T>
     void appendNum(QString& r, T x,
-                   const loc::Lang::Numfmt::Thousand& fmt,
-                   std::u8string_view space)
+                   Subf subformat,
+                   mywiki::NumPlace place)
     {
-        auto q = formatNum(x, fmt, space);
+        auto q = formatNum(x, subformat, place);
         r.append(str::toSv(q).data());
     }
 
@@ -1128,7 +1143,7 @@ namespace {
         case 'h':
             if (name == "h"sv) {
                 auto formatted = finishFormattingNum(
-                        x.safeGetV(1, {}), HEX_THOUSAND, HEX_PERIOD, SMALL_NBSP_HT);
+                        x.safeGetV(1, {}), Subf::HEX, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else {
                 goto dflt;
@@ -1162,18 +1177,17 @@ namespace {
         case 'n':
             if (name == "n"sv) {
                 auto formatted = finishFormattingNum(
-                        x.safeGetV(1, {}), loc::active::numfmt.denseThousand,
-                        loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD, SMALL_NBSP_HT);
+                        x.safeGetV(1, {}), Subf::DENSE, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else if (name == "nspk"sv) {
                 appendNSpeakers(x, Nspkf::DFLT);
             } else if (name == "nspk1"sv) {
                 appendNSpeakers(x, NO_FLAGS);
             } else if (name == "nchars"sv) {
-                appendNum(s, uc::N_CPS, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+                appendNum(s, uc::N_CPS, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "nemoji"sv) {
                 auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
-                appendNum(s, nEmoji, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+                appendNum(s, nEmoji, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "noto"sv) {
                 appendFont(s, uc::EcFont::NOTO, x, 0);
             } else {
@@ -1286,7 +1300,7 @@ namespace {
     {
         str::append(text, "<p><nobr>"sv);
         std::u8string boldHead = str::cat(u8"<b>"sv, locName(x), u8"</b>"sv);
-        auto fmt = formatNum(x.nChars, loc::active::numfmt.denseThousand, SMALL_NBSP_HT);
+        auto fmt = formatNum(x.nChars, Subf::DENSE, mywiki::NumPlace::HTML);
         loc::PreformN pref{ std::u8string_view{fmt}, x.nChars };
         text += loc::get(specText.idOr("Prop.Head.NChars2")).argQ(
                     boldHead, pref, specText.params);
@@ -1686,7 +1700,7 @@ void mywiki::appendCopyable(Str& text, unsigned x, std::string_view clazz)
 {
     char c[40];
     snprintf(c, std::size(c), "%u", x);
-    auto q = formatNum(x, loc::active::numfmt.thousand, SMALL_NBSP_HT);
+    auto q = formatNum(x, Subf::STANDALONE, mywiki::NumPlace::HTML);
     appendCopyableHt(text, c, q.c_str(), clazz);
 }
 
@@ -1898,17 +1912,16 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 
 QString mywiki::toString(const uc::Numeric& numc, mywiki::NumPlace place)
 {
-    auto space = (place == NumPlace::RAW) ? NNBSP_RAW : SMALL_NBSP_HT;
     QString buf;
     switch (numc.fracType()) {
     case uc::FracType::NONE:        // should not happen
     case uc::FracType::INTEGER:
-        appendNum(buf, numc.num, loc::active::numfmt.thousand, space);
+        appendNum(buf, numc.num, Subf::STANDALONE, place);
         break;
     case uc::FracType::VULGAR:
-        appendNum(buf, numc.num, loc::active::numfmt.thousand, space);
+        appendNum(buf, numc.num, Subf::STANDALONE, place);
         str::append(buf, '/');
-        appendNum(buf, numc.denom, loc::active::numfmt.thousand, space);
+        appendNum(buf, numc.denom, Subf::STANDALONE, place);
         break;
     case uc::FracType::DECIMAL: {
             auto val = static_cast<double>(numc.num) / numc.denom;
@@ -1917,7 +1930,7 @@ QString mywiki::toString(const uc::Numeric& numc, mywiki::NumPlace place)
         } break;
     }
     if (numc.altInt != 0) {
-        auto q = formatNum(numc.altInt, loc::active::numfmt.thousand, space);
+        auto q = formatNum(numc.altInt, Subf::STANDALONE, place);
         buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), q));
     }
     return buf;
