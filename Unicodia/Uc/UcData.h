@@ -650,6 +650,7 @@ namespace uc {
     DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
         NONE, UNIT, THOUSAND, HUN_THOUSAND, MILLION, DEC_MILLION, HUN_MILLION)
 
+    /// @todo [urgent, #475] Getting rid of locKeys, use locale.xml instead
     struct NumOrderInfo {
         unsigned char nDigs;
         std::string_view locKey;
