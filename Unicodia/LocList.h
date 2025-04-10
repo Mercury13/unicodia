@@ -8,6 +8,7 @@
 // Libs
 #include "u_Vector.h"
 #include "LocFmt.h"
+#include "u_EnumSize.h"
 
 // L10n
 #include "LocDefs.h"
@@ -26,6 +27,15 @@ namespace loc
         loc::Plural defaultOutcome = loc::Plural::OTHER;
 
         Plural ofUint(unsigned long long n) const override;
+    };
+
+    DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
+        NEVER, AVOID, PREFER)
+
+    struct NumOrderInfo {
+        std::string tmpl;
+        unsigned char value;
+        FracPolicy fracPolicy;
     };
 
     struct Lang final : public loc::Locale
