@@ -83,7 +83,7 @@
 			Test with Latin (N characters) and CJK ideographs (N characters):
 			click Latin/CJK char, “Latin/CJK ideo” link
 		 imprecise — policy of imprecise numbers -->
-	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="4">
+	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="5">
 		<!-- Policy for imprecise numbers (people speaking the language)
 		     Shifts always increase, 0=unit, 3=thousand, 6=million, 9=billion
 			   Shift 0 may exist, but the system will auto-insert {1}/never
