@@ -866,14 +866,16 @@ namespace {
         return true;
     }
 
-    QString formatNumOnly(unsigned mantissa, const uc::NumOrderInfo& nii)
+    QString formatNumOnly(unsigned mantissa, uc::NumOrder ni)
     {
         static constexpr bool NO_TRUNCATE = false;
 
         QString s = QString::number(mantissa);
-        if (nii.nDigs > 0) {
-            s = s.rightJustified(nii.nDigs + 1, '0', NO_TRUNCATE);
-            int whereIns = s.length() - nii.nDigs;
+        if (ni > uc::NumOrder::UNIT) {
+            auto nDigs = static_cast<int>(ni);
+            s = s.rightJustified(nDigs + 1, '0', NO_TRUNCATE);
+            /// @todo [urgent, #475] What to do here?
+            int whereIns = s.length() - nDigs;
             s.insert(whereIns, loc::currLang->numfmt.decimalPoint);
         }
         return s;
@@ -1039,13 +1041,14 @@ namespace {
                 }
                 // # of speakers
                 QString sNum;
-                auto& nii = uc::numOrderInfo[lang->numOrder];
-                sNum = formatNumOnly(lang->mantissa, nii);
+                /// @todo [urgent, #475] What to do?
+                sNum = formatNumOnly(lang->mantissa, lang->numOrder);
                 if (lang->hiMantissa) {
                     sNum += "–";  // en dash
-                    sNum += formatNumOnly(lang->hiMantissa, nii);
+                    sNum += formatNumOnly(lang->hiMantissa, lang->numOrder);
                 }
-                wrapWith(sNum, nii.locKey);
+                /// @todo [urgent, #475] What to do?
+                /// wrapWith(sNum, nii.locKey);
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
                     sNum = "&gt;" + sNum;
                 } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {

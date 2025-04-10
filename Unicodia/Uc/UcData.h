@@ -647,16 +647,11 @@ namespace uc {
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;
 
-    DEFINE_ENUM_TYPE_IN_NS(uc, NumOrder, unsigned char,
-        NONE, UNIT, THOUSAND, HUN_THOUSAND, MILLION, DEC_MILLION, HUN_MILLION)
-
-    /// @todo [urgent, #475] Getting rid of locKeys, use locale.xml instead
-    struct NumOrderInfo {
-        unsigned char nDigs;
-        std::string_view locKey;
+    enum class NumOrder : signed char {
+        NONE = -1,
+        UNIT = 0, HUNDRED = 2, THOUSAND = 3, DEC_THOU = 4,
+        HUN_THOU = 5, MILLION = 6, DEC_MILLION = 7, HUN_MILLION = 8
     };
-
-    extern const ec::Array<NumOrderInfo, NumOrder> numOrderInfo;
 
     enum class Langfg : unsigned char {
         AS_NATIVE = 1<<0,       ///< [+] # of L1 (native) speakers [-] all speakers
