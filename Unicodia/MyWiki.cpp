@@ -892,6 +892,7 @@ namespace {
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
     constexpr std::u8string_view SMALL_NBSP_HT = u8"<sub>&nbsp;</sub>"sv;  // HTML view is still funky
 
+    /// @brief  Number’s subformat
     enum class Subf : unsigned char {
         STANDALONE,     ///< standalone number, key: 1'234
         DENSE,          ///< number in dense text, the key is 1234
