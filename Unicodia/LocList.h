@@ -51,6 +51,7 @@ namespace loc
             std::string sortAZ;
         } icons;
         struct Numfmt {
+            SafeVector<NumOrderInfo> numOrders;
             static constexpr char16_t DEFAULT_DECIMAL_POINT = '.';
             static constexpr char16_t DEFAULT_THOUSAND_POINT = ' ';
             char16_t decimalPoint = DEFAULT_DECIMAL_POINT;
