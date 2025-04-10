@@ -902,19 +902,21 @@ namespace {
     std::u8string finishFormattingNum(std::string_view x,
                 Subf subformat, mywiki::NumPlace place)
     {
-        std::u8string_view space;
+        // Retrieve thousand separator
+        std::u8string_view thouSep;
         char8_t data[4];
         if (loc::active::numfmt.thousandPoint == ' ') {
             if (place == mywiki::NumPlace::HTML) {
-                space = SMALL_NBSP_HT;
+                thouSep = SMALL_NBSP_HT;
             } else {
-                space = NNBSP_RAW;
+                thouSep = NNBSP_RAW;
             }
         } else {
             std::u16string_view sv { &loc::active::numfmt.thousandPoint, 1 };
             auto end = mojibake::copyLimS(sv, data, std::end(data));
-            space = std::u8string_view{ data, end };
+            thouSep = std::u8string_view{ data, end };
         }
+        // Retrieve other features: min. length and period
         unsigned minLength = loc::active::numfmt.thousand.minLength;
         unsigned period = loc::Lang::Numfmt::Thousand::DEFAULT_PERIOD;
         switch (subformat) {
@@ -934,15 +936,17 @@ namespace {
         // The rest
         auto length = end - src;
         if (length < minLength || length <= period) {
-            // No formatting
-            return std::u8string{ str::toU8sv(x) };
+            // For fixed RVO: dest will be in place
+            while (src < end)
+                dest += *(src++);
+            return dest;
         }
         // Formatting
         while (src < end) {
             dest += *(src++);
             --length;
             if (length != 0 && length % period == 0) {
-                dest += space;
+                dest += thouSep;
             }
         }
         return dest;
