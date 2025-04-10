@@ -85,7 +85,7 @@
 		 imprecise — policy of imprecise numbers -->
 	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="4">
 		<!-- Policy for imprecise numbers (people speaking the language)
-		     Shifts always increase, 0=unit, 3=1000
+		     Shifts always increase, 0=unit, 3=thousand, 6=million, 9=billion
 			   Shift 0 may exist, but the system will auto-insert {1}/never
 			 Frac: never = always whole number (1230, 12300)
 			       avoid = avoid fractions (1230, 12.3k)
