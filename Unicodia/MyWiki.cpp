@@ -869,35 +869,6 @@ namespace {
         return true;
     }
 
-    std::string formatNumOnly(
-            unsigned mantissa, unsigned loShift, const loc::ImpreciseInfo& iinfo)
-    {
-        /// @todo [urgent, #475] Add thousand point
-        auto s = std::to_string(mantissa);
-        int diff = static_cast<int>(loShift) - iinfo.shift;
-        if (diff > 0) {     // add more zeros
-            for (; diff > 0; --diff)
-                s += '0';
-        } else if (diff < 0) {  // Place decimal point somewhere
-            int whereIns = s.length() + diff;
-            if (whereIns < 1) {     // Should not happen, but let it be
-                int lack = 1 - whereIns;
-                s.insert(0, lack, '0');
-                whereIns = 1;
-            }
-            s.insert(whereIns, loc::active::numfmtHelp.u8DecimalPoint);
-        }
-        return s;
-    }
-
-    template <class... Args>
-    void wrapWith(QString& s, std::string_view locKey, Args&&... args)
-    {
-        s = loc::get(locKey).argQ(
-                str::toU8sv(s.toStdString()),
-                std::forward<Args>(args)...);
-    }
-
     // In Tahoma: 1px normal inter-char, 2px too bad, 3px some-what-OK, 4px normal space
     constexpr std::u8string_view NNBSP_RAW = u8"\u202F"sv;
     // As Qt heavily modifies HTML, that’s for HTML versions (it does not increase inter-line)
@@ -910,22 +881,31 @@ namespace {
         HEX             ///< hex number, 89'ABCD
     };
 
-    std::u8string finishFormattingNum(std::string_view x,
+    template <class D, class S> requires (sizeof(D) == sizeof(S))
+    inline std::basic_string_view<D> convSv(std::basic_string_view<S> x)
+    {
+        using CDP = const D*;
+        return { reinterpret_cast<CDP>(x.data()), x.size() };
+    }
+
+    template <class C> requires (sizeof(C) == sizeof(char))
+    std::basic_string<C> finishFormattingNum(std::string_view x,
                 Subf subformat, mywiki::NumPlace place)
     {
         // Retrieve thousand separator
-        std::u8string_view thouSep;
-        char8_t data[4];
+        using Sv = std::basic_string_view<C>;
+        Sv thouSep;
+        C data[4];
         if (loc::active::numfmt.thousandPoint == ' ') {
             if (place == mywiki::NumPlace::HTML) {
-                thouSep = SMALL_NBSP_HT;
+                thouSep = convSv<C>(SMALL_NBSP_HT);
             } else {
-                thouSep = NNBSP_RAW;
+                thouSep = convSv<C>(NNBSP_RAW);
             }
         } else {
             std::u16string_view sv { &loc::active::numfmt.thousandPoint, 1 };
             auto end = mojibake::copyLimS(sv, data, std::end(data));
-            thouSep = std::u8string_view{ data, end };
+            thouSep = Sv{ data, end };
         }
         // Retrieve other features: min. length and period
         unsigned minLength = loc::active::numfmt.thousand.minLength;
@@ -938,7 +918,7 @@ namespace {
 
         const char* src = x.data();
         const char* end = x.data() + x.size();
-        std::u8string dest;
+        std::basic_string<C> dest;
         dest.reserve(end - src);
         // Minus
         if (src != end && !std::isalnum(*src)) {
@@ -963,6 +943,36 @@ namespace {
         return dest;
     }
 
+    std::string formatNumOnly(
+            unsigned mantissa, unsigned loShift, const loc::ImpreciseInfo& iinfo)
+    {
+        /// @todo [urgent, #475] Add thousand point
+        auto s = std::to_string(mantissa);
+        int diff = static_cast<int>(loShift) - iinfo.shift;
+        if (diff > 0) {     // add more zeros
+            for (; diff > 0; --diff)
+                s += '0';
+            s = finishFormattingNum<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
+        } else if (diff < 0) {  // Place decimal point somewhere
+            int whereIns = s.length() + diff;
+            if (whereIns < 1) {     // Should not happen, but let it be
+                int lack = 1 - whereIns;
+                s.insert(0, lack, '0');
+                whereIns = 1;
+            }
+            s.insert(whereIns, loc::active::numfmtHelp.u8DecimalPoint);
+        }
+        return s;
+    }
+
+    template <class... Args>
+    void wrapWith(QString& s, std::string_view locKey, Args&&... args)
+    {
+        s = loc::get(locKey).argQ(
+                str::toU8sv(s.toStdString()),
+                std::forward<Args>(args)...);
+    }
+
     template <std::integral T>
     std::u8string formatNum(T x, Subf subformat, mywiki::NumPlace place)
     {
@@ -972,7 +982,7 @@ namespace {
         if (!end || end <= tmp)
             throw std::logic_error("Strange end");
         std::string_view sv { tmp, end };
-        return finishFormattingNum(sv, subformat, place);
+        return finishFormattingNum<char8_t>(sv, subformat, place);
     }
 
     template <std::integral T>
@@ -1203,7 +1213,7 @@ namespace {
 
         case 'h':
             if (name == "h"sv) {
-                auto formatted = finishFormattingNum(
+                auto formatted = finishFormattingNum<char8_t>(
                         x.safeGetV(1, {}), Subf::HEX, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else {
@@ -1237,7 +1247,7 @@ namespace {
 
         case 'n':
             if (name == "n"sv) {
-                auto formatted = finishFormattingNum(
+                auto formatted = finishFormattingNum<char8_t>(
                         x.safeGetV(1, {}), Subf::DENSE, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else if (name == "nspk"sv) {
