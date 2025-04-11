@@ -447,7 +447,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yapprox(-700), EcFont::NORMAL, NO_FLAGS,
         EcVersion::V_5_0,   // 5.1+ are served with Noto only
         // English here as the main Latin script
-        { .mantissa = 380, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2021 } },
+        { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::AS_NATIVE, .year = 2021 } },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -946,7 +946,7 @@ extern const uc::SideLang uc::sideLangInfo[] {
       .lang { .mantissa = 15, .numOrder = NumOrder::MILLION, .year = 2011 } },
                     // 2011 census in India
     { .id = "es",   // Spanish ← Latn
-      .lang { .mantissa = 600, .numOrder = NumOrder::MILLION, .year = 2023 } },
+      .lang { .mantissa = 6, .numOrder = NumOrder::HUN_MILLION, .year = 2023 } },
                     // Estimate by Cervantes institute
     { .id = "kkh",  // Khün ← Lana
       .lang { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .year = 1990 } },
