@@ -145,6 +145,7 @@
 			<fmt shift="4" text="{1}万" frac="never" />
 		</imprecise>
 	</num-format>
+	<!-- Japanese has no plural rules -->
 	<cardinal-rules default-outcome="other" />
 	<!-- Misc. language peculiarities
 			still-uses-burmese: uses pair Myanmar/Burmese
