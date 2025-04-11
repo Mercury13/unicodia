@@ -7551,7 +7551,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even large font collection does{{_}}not{{_}}support the entire Unicode.</p>
+      <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even a large font collection does{{_}}not{{_}}support the entire Unicode.</p>
       <p />
       <p>If no glyph found in fonts, the character is usually displayed as [[pt:tofu|tofu]]{{-}}white box. '''But some characters are just omitted.'''</p>
       <p />
