@@ -946,14 +946,13 @@ namespace {
     std::string formatNumOnly(
             unsigned mantissa, unsigned loShift, const loc::ImpreciseInfo& iinfo)
     {
-        /// @todo [urgent, #475] Add thousand point
         auto s = std::to_string(mantissa);
         int diff = static_cast<int>(loShift) - iinfo.shift;
-        if (diff > 0) {     // add more zeros
+        if (diff >= 0) {     // add more zeros
             for (; diff > 0; --diff)
                 s += '0';
             s = finishFormattingNum<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
-        } else if (diff < 0) {  // Place decimal point somewhere
+        } else {  // diff < 0, place decimal point somewhere
             int whereIns = s.length() + diff;
             if (whereIns < 1) {     // Should not happen, but let it be
                 int lack = 1 - whereIns;
