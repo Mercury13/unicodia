@@ -881,10 +881,10 @@ namespace {
         HEX             ///< hex number, 89'ABCD
     };
 
-    template <class D, class S> requires (sizeof(D) == sizeof(S))
-    inline std::basic_string_view<D> convSv(std::basic_string_view<S> x)
+    template <class Dest, class Src> requires (sizeof(Dest) == sizeof(Src))
+    inline std::basic_string_view<Dest> convSv(std::basic_string_view<Src> x)
     {
-        using CDP = const D*;
+        using CDP = const Dest*;
         return { reinterpret_cast<CDP>(x.data()), x.size() };
     }
 
