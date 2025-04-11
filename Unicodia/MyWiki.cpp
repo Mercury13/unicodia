@@ -1,5 +1,8 @@
 #include "MyWiki.h"
 
+// C++
+#include <ranges>
+
 // Qt
 #include <QWidget>
 #include <QApplication>
@@ -866,17 +869,23 @@ namespace {
         return true;
     }
 
-    QString formatNumOnly(unsigned mantissa, uc::NumOrder ni)
+    std::string formatNumOnly(
+            unsigned mantissa, unsigned loShift, const loc::ImpreciseInfo& iinfo)
     {
-        static constexpr bool NO_TRUNCATE = false;
-
-        QString s = QString::number(mantissa);
-        if (ni > uc::NumOrder::UNIT) {
-            auto nDigs = static_cast<int>(ni);
-            s = s.rightJustified(nDigs + 1, '0', NO_TRUNCATE);
-            /// @todo [urgent, #475] What to do here?
-            int whereIns = s.length() - nDigs;
-            s.insert(whereIns, loc::currLang->numfmt.decimalPoint);
+        /// @todo [urgent, #475] Add more thousands
+        auto s = std::to_string(mantissa);
+        int diff = static_cast<int>(loShift) - iinfo.shift;
+        if (diff > 0) {     // add more zeros
+            for (; diff > 0; --diff)
+                s += '0';
+        } else if (diff < 0) {  // Place decimal point somewhere
+            int whereIns = s.length() + diff;
+            if (whereIns < 1) {     // Should not happen, but let it be
+                int lack = 1 - whereIns;
+                s.insert(0, lack, '0');
+                whereIns = 1;
+            }
+            s.insert(whereIns, loc::active::numfmtHelp.u8DecimalPoint);
         }
         return s;
     }
@@ -975,6 +984,47 @@ namespace {
         r.append(str::toSv(q).data());
     }
 
+    constexpr unsigned myLog10(unsigned x)
+    {
+        unsigned r = 0;
+        while (x > 9) {
+            ++r;
+            x /= 10;
+        }
+        return r;
+    }
+
+    // UT’s for myLog10
+    static_assert(myLog10(0) == 0);
+    static_assert(myLog10(9) == 0);
+    static_assert(myLog10(10) == 1);
+    static_assert(myLog10(99) == 1);
+    static_assert(myLog10(100) == 2);
+    static_assert(myLog10(999) == 2);
+    static_assert(myLog10(1000) == 3);
+
+    const loc::ImpreciseInfo& matchImprecise(unsigned mantissa, unsigned loShift)
+    {
+        auto hiShift = loShift + myLog10(mantissa);
+        for (auto& v : std::ranges::reverse_view(loc::active::numfmt.imprecise)) {
+            if (v.shift > hiShift)      // exceeds hiShift → NEVER
+                continue;
+            switch (v.policy) {
+            case loc::FracPolicy::NEVER:
+                if (v.shift <= loShift)     // check for low shift
+                    return v;
+                break; // never → do nothing
+            case loc::FracPolicy::AVOID:
+                if (v.shift < hiShift)      // at least 2 digits: 99900 has loShift of 2 and hiShift of 4,
+                    return v;               // so shift 2 (999hu) or 3 (99.9k) is OK
+                break; // never → do nothing
+            case loc::FracPolicy::PREFER:
+                return v;       // at least 1 digit → OK:
+            }
+        }
+        return loc::active::numfmt.imprecise[0];
+    }
+
     void Eng::appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs)
     {
         char locBuf[40];
@@ -1040,15 +1090,14 @@ namespace {
                     }
                 }
                 // # of speakers
-                QString sNum;
-                /// @todo [urgent, #475] What to do?
-                sNum = formatNumOnly(lang->mantissa, lang->numOrder);
+                auto loShift = static_cast<unsigned>(lang->numOrder);
+                const auto& iinfo = matchImprecise(lang->mantissa, loShift);
+                std::string sTmp = formatNumOnly(lang->mantissa, loShift, iinfo);
                 if (lang->hiMantissa) {
-                    sNum += "–";  // en dash
-                    sNum += formatNumOnly(lang->hiMantissa, lang->numOrder);
+                    sTmp += "–";  // en dash
+                    sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo);
                 }
-                /// @todo [urgent, #475] What to do?
-                /// wrapWith(sNum, nii.locKey);
+                QString sNum = loc::Fmt(iinfo.tmpl)(sTmp).q();
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
                     sNum = "&gt;" + sNum;
                 } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {

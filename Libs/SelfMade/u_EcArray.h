@@ -18,7 +18,7 @@ namespace ec {
     }
     constexpr detail::ArrayInit ARRAY_INIT = detail::ArrayInit::INST;
 
-    template <class V, class Ec> requires std::is_enum_v<Ec>
+    template <class V, Enum Ec>
     class Array
     {
     public:
@@ -113,7 +113,7 @@ namespace ec {
 }   // namespace ec
 
 
-template <class V, class Ec> requires std::is_enum_v<Ec>
+template <class V, ec::Enum Ec>
 template <class U>
 Ec ec::Array<V, Ec>::findDef(U&& x, Ec def) const
 {
@@ -125,7 +125,7 @@ Ec ec::Array<V, Ec>::findDef(U&& x, Ec def) const
 }
 
 
-template <class V, class Ec> requires std::is_enum_v<Ec>
+template <class V, ec::Enum Ec>
 template <class Pred>
 Ec ec::Array<V, Ec>::findIfDef(Ec def, Pred&& pred) const
 {

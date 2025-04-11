@@ -32,10 +32,10 @@ namespace loc
     DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
         NEVER, AVOID, PREFER)
 
-    struct NumOrderInfo {
+    struct ImpreciseInfo {
         std::string tmpl;
-        unsigned char value;
-        FracPolicy fracPolicy;
+        unsigned char shift;
+        FracPolicy policy;
     };
 
     struct Lang final : public loc::Locale
@@ -51,7 +51,7 @@ namespace loc
             std::string sortAZ;
         } icons;
         struct Numfmt {
-            SafeVector<NumOrderInfo> numOrders;
+            SafeVector<ImpreciseInfo> imprecise;
             static constexpr char16_t DEFAULT_DECIMAL_POINT = '.';
             static constexpr char16_t DEFAULT_THOUSAND_POINT = ' ';
             char16_t decimalPoint = DEFAULT_DECIMAL_POINT;
@@ -101,9 +101,14 @@ namespace loc
         const PluralRule& cardinalRule() const override { return cardRule; }
     };
 
+    struct NumFmtHelp {
+        std::string u8DecimalPoint, u8ThousandPoint;
+    };
+
     namespace active {
         extern Lang::Icons icons;
         extern Lang::Numfmt numfmt;
+        extern NumFmtHelp numfmtHelp;
         extern Lang::Punctuation punctuation;
         extern EngTerms engTerms;
     }

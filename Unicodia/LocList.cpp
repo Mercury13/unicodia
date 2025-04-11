@@ -23,6 +23,7 @@
 // Libs
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+#include "u_EcArray.h"
 #include "mojibake.h"
 
 // L10n
@@ -35,6 +36,7 @@ loc::Lang* loc::currLang = nullptr;
 
 loc::Lang::Icons loc::active::icons;
 loc::Lang::Numfmt loc::active::numfmt;
+loc::NumFmtHelp loc::active::numfmtHelp;
 loc::Lang::Punctuation loc::active::punctuation;
 loc::EngTerms loc::active::engTerms = loc::EngTerms::OFF;
 
@@ -84,6 +86,12 @@ void loc::Lang::forceLoad()
     active::numfmt = numfmt;
     active::engTerms = engTerms;
     active::punctuation = punctuation;
+
+    // Active help
+    active::numfmtHelp.u8DecimalPoint = mojibake::toS<std::string>(
+            std::u16string_view { &active::numfmt.decimalPoint, 1 });
+    active::numfmtHelp.u8ThousandPoint = mojibake::toS<std::string>(
+            std::u16string_view { &active::numfmt.thousandPoint, 1 });
 
     // loc::FmtL locale
     loc::activeFmtLocale = currLang;
@@ -152,6 +160,9 @@ namespace {
         }
         return dflt;
     }
+
+    constinit const ec::Array<std::string_view, loc::FracPolicy> fracPolicyNames
+            { "never", "avoid", "prefer" };
 
     bool parseLang(loc::Lang& r, const std::filesystem::path& path)
     {
@@ -269,6 +280,23 @@ namespace {
         r.numfmt.denseThousand.minLength =
                 hNumFormat.attribute("thou-min-length-dense").as_uint(
                             r.numfmt.thousand.minLength);
+
+        r.numfmt.imprecise.clear();
+        auto hImprecise = hNumFormat.child("imprecise");
+        for (auto v : hImprecise.children("fmt")) {
+            unsigned char shift = v.attribute("shift").as_int(0);
+            std::string_view text = v.attribute("text").as_string("{1}");
+            std::string_view sPolicy = v.attribute("frac").as_string();
+            auto policy = fracPolicyNames.findDef(sPolicy, loc::FracPolicy::AVOID);
+            r.numfmt.imprecise.push_back(loc::ImpreciseInfo {
+                    .tmpl { text }, .shift = shift, .policy = policy });
+        }
+        // Policy for units should always exist, otherwise add dummy
+        if (r.numfmt.imprecise.empty() || r.numfmt.imprecise[0].shift > 0) {
+            auto pos = r.numfmt.imprecise.begin();
+            r.numfmt.imprecise.insert(pos, loc::ImpreciseInfo {
+                    .tmpl = "{1}", .shift = 0, .policy = loc::FracPolicy::NEVER });
+        }
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);

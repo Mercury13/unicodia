@@ -2,8 +2,15 @@
 
 #include <string_view>
 
+namespace ec {
+
+    template <class T>
+    concept Enum = std::is_enum_v<T>;
+
+}
+
 namespace detail {
-    template <class Enum> struct EnumSize;
+    template <ec::Enum Ec> struct EnumSize;
 
     ///
     ///  @return  "a, b, c, d" → 4, for DEFINE_ENUM_N
@@ -30,9 +37,9 @@ namespace detail {
 namespace ec {
 
     /// Reimplement if you want
-    template <class Enum>
-    constexpr unsigned size() {
-        return ::detail::EnumSize<Enum>::size();
+    template <Enum Ec>
+    consteval unsigned size() {
+        return ::detail::EnumSize<Ec>::size();
     }
 
 }   // namespace ec
@@ -41,7 +48,7 @@ namespace ec {
 #define DEFINE_ENUM(Name, ...) \
     enum class Name { __VA_ARGS__ }; \
     template <> struct detail::EnumSize<Name> {  \
-        static constexpr unsigned size() { return detail::countValues(#__VA_ARGS__); } \
+        static consteval unsigned size() { return detail::countValues(#__VA_ARGS__); } \
     };
 
 #define DEFINE_ENUM_TYPE(Name, Type, ...) \
