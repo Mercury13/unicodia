@@ -3092,10 +3092,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
+      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear annotations, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
       <p />
       <p>The latter, {{sm|�}}, we see most of all. It means that “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually{{-}}someone attempted to read the text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
      </orig>
+     <known-orig>
+      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
+      <p />
+      <p>The latter, {{sm|�}}, we see most of all. It means that “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually{{-}}someone attempted to read the text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
+     </known-orig>
      <transl>
       <p>[[pt:bmp|基本プレーン]]の末尾にある短いブロック。14文字（2文字は[[pt:noncharacter|非文字]]）のうち、割り当てられているのは5文字のみ：行間マークの3文字、複合文書内の置換文字（「ここに画像」）、読み取り失敗のサイン。</p>
       <p />

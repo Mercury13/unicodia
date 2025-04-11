@@ -2324,7 +2324,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
+      <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear annotations, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
       <p />
       <p>The latter, {{sm|�}}, we see most of all. It means that “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually{{-}}someone attempted to read the text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
      </orig>
