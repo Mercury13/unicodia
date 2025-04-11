@@ -889,7 +889,7 @@ namespace {
     }
 
     template <class C> requires (sizeof(C) == sizeof(char))
-    std::basic_string<C> finishFormattingNum(std::string_view x,
+    std::basic_string<C> formatThousand(std::string_view x,
                 Subf subformat, mywiki::NumPlace place)
     {
         // Retrieve thousand separator
@@ -951,7 +951,7 @@ namespace {
         if (diff >= 0) {     // add more zeros
             for (; diff > 0; --diff)
                 s += '0';
-            s = finishFormattingNum<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
+            s = formatThousand<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
         } else {  // diff < 0, place decimal point somewhere
             int whereIns = s.length() + diff;
             if (whereIns < 1) {     // Should not happen, but let it be
@@ -981,7 +981,7 @@ namespace {
         if (!end || end <= tmp)
             throw std::logic_error("Strange end");
         std::string_view sv { tmp, end };
-        return finishFormattingNum<char8_t>(sv, subformat, place);
+        return formatThousand<char8_t>(sv, subformat, place);
     }
 
     template <std::integral T>
@@ -1212,7 +1212,7 @@ namespace {
 
         case 'h':
             if (name == "h"sv) {
-                auto formatted = finishFormattingNum<char8_t>(
+                auto formatted = formatThousand<char8_t>(
                         x.safeGetV(1, {}), Subf::HEX, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else {
@@ -1246,7 +1246,7 @@ namespace {
 
         case 'n':
             if (name == "n"sv) {
-                auto formatted = finishFormattingNum<char8_t>(
+                auto formatted = formatThousand<char8_t>(
                         x.safeGetV(1, {}), Subf::DENSE, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
             } else if (name == "nspk"sv) {
