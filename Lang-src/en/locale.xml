@@ -116,7 +116,10 @@
 			semicolon: in “first, second; did the third”
 				(script’s languages only, in English see Sunuwar)
 			left-paren, right-paren: in script’s languages only
-			indent-ellip: ellipsis for indent, in version info only -->
+			indent-ellip: ellipsis for indent, in version info only
+			range: ellipsis or dash for range (1…2)
+				(script’s language only, see Rejang) -->
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
-			left-paren="(" right-paren=")" indent-ellip="…" />
+			left-paren="(" right-paren=")" indent-ellip="…"
+			range="…" />
 </locale>

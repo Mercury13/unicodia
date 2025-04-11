@@ -1094,7 +1094,7 @@ namespace {
                 const auto& iinfo = matchImprecise(lang->mantissa, loShift);
                 std::string sTmp = formatNumOnly(lang->mantissa, loShift, iinfo);
                 if (lang->hiMantissa) {
-                    sTmp += "–";  // en dash
+                    sTmp += str::toSv(loc::active::punctuation.range);
                     sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo);
                 }
                 QString sNum = loc::Fmt(iinfo.tmpl)(sTmp).q();

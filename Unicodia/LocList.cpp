@@ -317,6 +317,8 @@ namespace {
                     hPunctuation.attribute("right-paren").as_string("))))))"));
         r.punctuation.indentEllip = str::toU8sv(
                     hPunctuation.attribute("indent-ellip").as_string(">>>>>>"));
+        r.punctuation.range = str::toU8sv(
+                    hPunctuation.attribute("range").as_string("~~~~~~"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

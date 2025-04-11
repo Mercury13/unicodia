@@ -686,7 +686,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::yapprox(1750, StdNote::FIRST_KNOWN), EcFont::REJANG, NO_FLAGS,
         EcVersion::ALL_BUILTIN,
-        { .mantissa = 2, .hiMantissa = 35, .numOrder = NumOrder::HUN_THOU, .year = 0,
+        { .mantissa = 20, .hiMantissa = 35, .numOrder = NumOrder::DEC_THOU, .year = 0,
           .locations { LOC_SUMATRA } } },
     // Rohingya, installed Google Noto font
     { "Rohg", QFontDatabase::Any,
@@ -959,7 +959,7 @@ extern const uc::SideLang uc::sideLangInfo[] {
               .locations { LOC_MYANMAR } } },
                     // The greatest of known estimates (UNSD 2012)
     { .id= "sgw",   // Sebat Beit ← Ethi
-      .lang { .mantissa = 15, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::GREATER_THAN, .year = 2022,
+      .lang { .mantissa = 15, .hiMantissa = 22, .numOrder = NumOrder::HUN_THOU, .year = 2022,
               .locations { LOC_ETHIOPIA } } },
                     // No reliable source, 1.5M to 3M is the greatest
     { .id = "uk",   // Ukrainian ← Cyrl

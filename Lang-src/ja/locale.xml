@@ -153,5 +153,6 @@
 				(writes location of Myanmar for Burmese script) -->
 	<peculiarities still-uses-burmese="0" />
 	<punctuation key-value-colon="： " uniform-comma="、" semicolon="；"
-			left-paren="（" right-paren="）" indent-ellip="…" />
+			left-paren="（" right-paren="）" indent-ellip="…"
+			range="〜" />
 </locale>
