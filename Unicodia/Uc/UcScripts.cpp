@@ -85,7 +85,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::special(), EcFont::ADLAM, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 10, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN | Langfg::CUSTOM_PRENOTE,
+        { .mantissa = 1, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::GREATER_THAN | Langfg::CUSTOM_PRENOTE,
           .year = 0 } },
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
@@ -333,7 +333,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Hang", QFontDatabase::Korean,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::year(1443), EcFont::KOREAN, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 80, .numOrder = NumOrder::MILLION, .year = 2020 } },
+        { .mantissa = 8, .numOrder = NumOrder::DEC_MILLION, .year = 2020 } },
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
@@ -828,7 +828,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::CUSTOM), EcFont::TELUGU, NO_FLAGS,
         EcVersion::ALL_BUILTIN,
-        { .mantissa = 90, .numOrder = NumOrder::MILLION, .flags = Langfg::GREATER_THAN, .year = 2011,
+        { .mantissa = 9, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::GREATER_THAN, .year = 2011,
           .locations { LOC_INDIA_SE } } }, // Census
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
@@ -847,7 +847,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Thai", QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1283), EcFont::THAI, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 60, .numOrder = NumOrder::MILLION,
+        { .mantissa = 6, .numOrder = NumOrder::DEC_MILLION,
           .flags = Langfg::GREATER_THAN | Langfg::DECADE, .year = 2020 } }, // No reliable source
     // Tibetan OK, W10 did not have swastika, installed BabelStone
     { "Tibt", QFontDatabase::Tibetan,
