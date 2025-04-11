@@ -433,7 +433,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::KAITHI},
-    // Lanna OK, W10 none, installed Google Noto font
+    // Lanna OK, W10 none, installed own font
     { "Lana", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1376, StdNote::FIRST_KNOWN), EcFont::LANNA },
