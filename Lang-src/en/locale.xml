@@ -92,7 +92,7 @@
 			       avoid = avoid fractions (1230, 12.3k)
 				   prefer = use fraction if prefer fractions (1.23k, 12.3k)
 				   smaller = use smaller unit (something like 12k 3hu)
-				   secondary = use as secondary unit in “smaller” policy -->
+				   except1 = fall back to smaller unit if mantissa is “1” -->
 		<imprecise smaller-sep=" ">
 			<fmt shift="0" text="{1} people" frac="never" />
 			<fmt shift="3" text="{1}k" frac="avoid" />
