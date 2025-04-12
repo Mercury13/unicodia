@@ -85,12 +85,15 @@
 		 imprecise — policy of imprecise numbers -->
 	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="5">
 		<!-- Policy for imprecise numbers (people speaking the language)
+			 Smaller-sep for “smaller” policy, useless here
 		     Shifts always increase, 0=unit, 3=thousand, 6=million, 9=billion
 			   Shift 0 may exist, but the system will auto-insert {1}/never
 			 Frac: never = always whole number (1230, 12300)
 			       avoid = avoid fractions (1230, 12.3k)
-				   prefer = use fraction if prefer fractions (1.23k, 12.3k) -->
-		<imprecise>
+				   prefer = use fraction if prefer fractions (1.23k, 12.3k)
+				   smaller = use smaller unit (something like 12k 3hu)
+				   secondary = use as secondary unit in “smaller” policy -->
+		<imprecise smaller-sep=" ">
 			<fmt shift="0" text="{1} people" frac="never" />
 			<fmt shift="3" text="{1}k" frac="avoid" />
 			<fmt shift="6" text="{1}M" frac="prefer" />
