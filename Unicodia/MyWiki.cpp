@@ -1019,6 +1019,10 @@ namespace {
             if (v.shift > hiShift)      // exceeds hiShift → NEVER
                 continue;
             switch (v.policy) {
+            case loc::FracPolicy::EXCEPT1:
+                if (v.shift == loShift && mantissa == 1)
+                    continue;
+                [[fallthrough]];
             case loc::FracPolicy::NEVER:
                 if (v.shift <= loShift)     // check for low shift
                     return v;

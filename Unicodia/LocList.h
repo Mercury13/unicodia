@@ -30,7 +30,7 @@ namespace loc
     };
 
     DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
-        NEVER, AVOID, PREFER)
+        NEVER, AVOID, PREFER, EXCEPT1 )
 
     struct ImpreciseInfo {
         std::string tmpl;

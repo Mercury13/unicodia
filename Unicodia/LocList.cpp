@@ -162,7 +162,7 @@ namespace {
     }
 
     constinit const ec::Array<std::string_view, loc::FracPolicy> fracPolicyNames
-            { "never", "avoid", "prefer" };
+            { "never", "avoid", "prefer", "except1" };
 
     bool parseLang(loc::Lang& r, const std::filesystem::path& path)
     {
