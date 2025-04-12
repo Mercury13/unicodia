@@ -943,15 +943,48 @@ namespace {
         return dest;
     }
 
+    unsigned nTrailingZeros(unsigned x)
+    {
+        if (x == 0)
+            return 0;
+        unsigned r = 0;
+        while (x % 10 == 0) {
+            x /= 10;
+            ++r;
+        }
+        return r;
+    }
+
     std::string formatNumOnly(
-            unsigned mantissa, unsigned loShift, const loc::ImpreciseInfo& iinfo)
+            unsigned mantissa, unsigned loShift,
+            const loc::ImpreciseInfo& iinfo, bool useBiggerUnits)
     {
         auto s = std::to_string(mantissa);
         int diff = static_cast<int>(loShift) - iinfo.shift;
         if (diff >= 0) {     // add more zeros
+            if (useBiggerUnits) {
+                useBiggerUnits = iinfo.biggerSubshift > 0
+                              && !iinfo.biggerUnit.empty()
+                              // Left 0 small units → do not make big units
+                              && (diff + nTrailingZeros(mantissa) < iinfo.biggerSubshift);
+            }
             for (; diff > 0; --diff)
                 s += '0';
-            s = formatThousand<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
+            if (useBiggerUnits && s.length() > iinfo.biggerSubshift) {
+                unsigned whereDivide = s.length() - iinfo.biggerSubshift;
+                // 2M 003k → 2M 3k
+                unsigned firstNon0 = whereDivide;
+                while (s.length() > firstNon0 + 1 && s[firstNon0] == '0') {
+                    ++firstNon0;
+                }
+                std::string_view sv = s;
+                return str::cat(
+                        formatThousand<char>(sv.substr(0, whereDivide), Subf::DENSE, mywiki::NumPlace::HTML),
+                        iinfo.biggerUnit,
+                        formatThousand<char>(sv.substr(firstNon0),    Subf::DENSE, mywiki::NumPlace::HTML));
+            } else {
+                return formatThousand<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
+            }
         } else {  // diff < 0, place decimal point somewhere
             int whereIns = s.length() + diff;
             if (whereIns < 1) {     // Should not happen, but let it be
@@ -960,8 +993,8 @@ namespace {
                 whereIns = 1;
             }
             s.insert(whereIns, loc::active::numfmtHelp.u8DecimalPoint);
+            return s;
         }
-        return s;
     }
 
     template <class... Args>
@@ -1105,10 +1138,11 @@ namespace {
                 // # of speakers
                 auto loShift = static_cast<unsigned>(lang->numOrder);
                 const auto& iinfo = matchImprecise(lang->mantissa, loShift);
-                std::string sTmp = formatNumOnly(lang->mantissa, loShift, iinfo);
-                if (lang->hiMantissa) {
+                bool isRange = (lang->hiMantissa > 0);
+                std::string sTmp = formatNumOnly(lang->mantissa, loShift, iinfo, !isRange);
+                if (isRange) {
                     sTmp += str::toSv(loc::active::punctuation.range);
-                    sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo);
+                    sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo, false);
                 }
                 QString sNum = loc::Fmt(iinfo.tmpl)(sTmp).q();
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {

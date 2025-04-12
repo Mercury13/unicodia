@@ -33,8 +33,8 @@ namespace loc
         NEVER, AVOID, PREFER, EXCEPT1 )
 
     struct ImpreciseInfo {
-        std::string tmpl;
-        unsigned char shift;
+        std::string tmpl, biggerUnit;
+        unsigned char shift, biggerSubshift;
         FracPolicy policy;
     };
 

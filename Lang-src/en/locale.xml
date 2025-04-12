@@ -91,8 +91,8 @@
 			 Frac: never = always whole number (1230, 12300)
 			       avoid = avoid fractions (1230, 12.3k)
 				   prefer = use fraction if prefer fractions (1.23k, 12.3k)
-				   smaller = use smaller unit (something like 12k 3hu)
-				   except1 = same as “never” but fall back to smaller unit if mantissa=1 -->
+				   except1 = same as “never” but fall back to smaller unit if mantissa=1
+			 Also bigger units are present, see Japanese -->
 		<imprecise smaller-sep=" ">
 			<fmt shift="0" text="{1} people" frac="never" />
 			<fmt shift="3" text="{1}k" frac="avoid" />

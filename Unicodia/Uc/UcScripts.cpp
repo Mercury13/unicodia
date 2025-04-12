@@ -100,7 +100,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC,
         Sfg::STUB_ALM, EcVersion::ALL_BUILTIN,
-        { .mantissa = 380, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE | Langfg::DECADE, .year = 2020 } },
+        { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::AS_NATIVE | Langfg::DECADE, .year = 2020 } },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
@@ -136,7 +136,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::special(), EcFont::BENGALI, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 230, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2021,
+        { .mantissa = 23, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::AS_NATIVE, .year = 2021,
           .locations { LOC_BANGLADESH, LOC_INDIA_E } } },
     // Beria Erfe OK, SIL’s font
     { "Berf", QFontDatabase::Any,
@@ -222,13 +222,13 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS, EcVersion::V_5_0,
         // Russian here as main Cyrillic language
-        { .mantissa = 150, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2020 } },
+        { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::AS_NATIVE, .year = 2020 } },
     // Devanagari OK, added 8 characters to Noto Serif
     { "Deva", QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::crange(1, 7), EcFont::DEVANAGARI, NO_FLAGS, EcVersion::ALL_BUILTIN,
         // Hindi here as main Devanagari language
-        { .mantissa = 350, .numOrder = NumOrder::MILLION, .flags = Langfg::AS_NATIVE, .year = 2011 } },
+        { .mantissa = 35, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::AS_NATIVE, .year = 2011 } },
     // Diak OK, W10 off, Noto is really cool
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::OCEAN,
@@ -327,7 +327,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::GURMUKHI, NO_FLAGS, EcVersion::ALL_BUILTIN,
         // Punjabi here as the main Gurmikhi language
-        { .mantissa = 150, .numOrder = NumOrder::MILLION, .flags = Langfg::DECADE, .year = 2010,
+        { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::DECADE, .year = 2010,
           .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
@@ -364,7 +364,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::crange(8, 9), EcFont::KOREAN, NO_FLAGS, EcVersion::ALL_BUILTIN,
         // Japanese here
-        { .mantissa = 120, .numOrder = NumOrder::MILLION, .year = 2020 } },
+        { .mantissa = 12, .numOrder = NumOrder::DEC_MILLION, .year = 2020 } },
     // Anatolian hiero OK, installed Google Noto
     { "Hluw", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,

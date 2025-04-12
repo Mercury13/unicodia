@@ -285,17 +285,23 @@ namespace {
         auto hImprecise = hNumFormat.child("imprecise");
         for (auto v : hImprecise.children("fmt")) {
             unsigned char shift = v.attribute("shift").as_int(0);
-            std::string_view text = v.attribute("text").as_string("{1}");
+            unsigned char biggerSubshift = v.attribute("bigger-subshift").as_int(0);
+            auto text = v.attribute("text").as_string("{1}");
+            auto biggerUnit = v.attribute("bigger-unit").as_string();
             std::string_view sPolicy = v.attribute("frac").as_string();
             auto policy = fracPolicyNames.findDef(sPolicy, loc::FracPolicy::AVOID);
             r.numfmt.imprecise.push_back(loc::ImpreciseInfo {
-                    .tmpl { text }, .shift = shift, .policy = policy });
+                    .tmpl = text, .biggerUnit = biggerUnit,
+                    .shift = shift, .biggerSubshift = biggerSubshift,
+                    .policy = policy });
         }
         // Policy for units should always exist, otherwise add dummy
         if (r.numfmt.imprecise.empty() || r.numfmt.imprecise[0].shift > 0) {
             auto pos = r.numfmt.imprecise.begin();
             r.numfmt.imprecise.insert(pos, loc::ImpreciseInfo {
-                    .tmpl = "{1}", .shift = 0, .policy = loc::FracPolicy::NEVER });
+                    .tmpl = "{1}", .biggerUnit{},
+                    .shift = 0, .biggerSubshift = 0,
+                    .policy = loc::FracPolicy::NEVER });
         }
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
