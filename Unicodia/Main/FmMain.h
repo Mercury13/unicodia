@@ -223,7 +223,11 @@ private:
         QAction* acCopyVs15 = nullptr;
         QAction* acAddToFavs = nullptr;
         bool direction = DIR_ADD;
-    } libLocalMenu;
+    } localLib;
+
+    struct SearchLocalMenu {
+
+    } localSearch;
 
     struct PullUpDetector {
         bool isCocked = false;

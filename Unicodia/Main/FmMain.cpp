@@ -1152,21 +1152,21 @@ void FmMain::initLibrary(const InitBlocks& ib)
             ui->wiLibShowcase, ui->vwLibInfo);
 
     // Local menu
-    libLocalMenu.menu = new QMenu(ui->treeLibrary);
-    libLocalMenu.acCopy = new QAction("[Copy]", libLocalMenu.menu);
-        libLocalMenu.menu->addAction(libLocalMenu.acCopy);
-        libLocalMenu.menu->setDefaultAction(libLocalMenu.acCopy);
-        QWidget::connect(libLocalMenu.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
-    libLocalMenu.acCopyBare = new QAction("[Copy bare]", libLocalMenu.menu);
-        libLocalMenu.menu->addAction(libLocalMenu.acCopyBare);
-        QWidget::connect(libLocalMenu.acCopyBare, &QAction::triggered, this, &This::copyCurrentLibBare);
-    libLocalMenu.acCopyVs15 = new QAction("[Copy VS15]", libLocalMenu.menu);
-        libLocalMenu.menu->addAction(libLocalMenu.acCopyVs15);
-        QWidget::connect(libLocalMenu.acCopyVs15, &QAction::triggered, this, &This::copyCurrentLibVs15);
-    libLocalMenu.menu->addSeparator();
-    libLocalMenu.acAddToFavs = new QAction("[Add to favs]", libLocalMenu.menu);
-        libLocalMenu.menu->addAction(libLocalMenu.acAddToFavs);
-        QWidget::connect(libLocalMenu.acAddToFavs, &QAction::triggered, this, &This::libFavsCalled);
+    localLib.menu = new QMenu(ui->treeLibrary);
+    localLib.acCopy = new QAction("[Copy]", localLib.menu);
+        localLib.menu->addAction(localLib.acCopy);
+        localLib.menu->setDefaultAction(localLib.acCopy);
+        QWidget::connect(localLib.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+    localLib.acCopyBare = new QAction("[Copy bare]", localLib.menu);
+        localLib.menu->addAction(localLib.acCopyBare);
+        QWidget::connect(localLib.acCopyBare, &QAction::triggered, this, &This::copyCurrentLibBare);
+    localLib.acCopyVs15 = new QAction("[Copy VS15]", localLib.menu);
+        localLib.menu->addAction(localLib.acCopyVs15);
+        QWidget::connect(localLib.acCopyVs15, &QAction::triggered, this, &This::copyCurrentLibVs15);
+    localLib.menu->addSeparator();
+    localLib.acAddToFavs = new QAction("[Add to favs]", localLib.menu);
+        localLib.menu->addAction(localLib.acAddToFavs);
+        QWidget::connect(localLib.acAddToFavs, &QAction::triggered, this, &This::libFavsCalled);
     QWidget::connect(ui->treeLibrary, &QWidget::customContextMenuRequested, this, &This::libLocalMenuRequested);
 
     // Create toolbar
@@ -1317,9 +1317,9 @@ void FmMain::translateMe()
         forceShowCp(*p);    
 
     // Library tab    
-    libLocalMenu.acCopy->setText(loc::get("Main.Local.Copy"));
-    libLocalMenu.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
-    libLocalMenu.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
+    localLib.acCopy->setText(loc::get("Main.Local.Copy"));
+    localLib.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
+    localLib.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
     libChanged(ui->treeLibrary->currentIndex());
 
     // Favs tab
@@ -2301,33 +2301,33 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
     auto& node = libModel.nodeAt(index);
 
     // Copy
-    libLocalMenu.acCopy->setEnabled(!node.value.empty());
+    localLib.acCopy->setEnabled(!node.value.empty());
 
     // Copy bare
     auto dug = EmojiPainter::getCp(node.value);
-    libLocalMenu.acCopyBare->setVisible(
+    localLib.acCopyBare->setVisible(
                 dug.cp
              && node.value.length() > 1);   // not just this character
 
     // Copy + VS15
-    libLocalMenu.acCopyVs15->setVisible(
+    localLib.acCopyVs15->setVisible(
                 dug.cp
              && uc::cpsByCode[dug.cp]->isEmoji()
              && !node.isVs15());
 
     // Favourites
-    libLocalMenu.direction = DIR_ADD;
+    localLib.direction = DIR_ADD;
     if (dug.cp) {
-        libLocalMenu.direction = !config::favs.contains(dug.cp);
-        libLocalMenu.acAddToFavs->setEnabled(true);
+        localLib.direction = !config::favs.contains(dug.cp);
+        localLib.acAddToFavs->setEnabled(true);
     } else {
-        libLocalMenu.acAddToFavs->setEnabled(false);
+        localLib.acAddToFavs->setEnabled(false);
     }
-    libLocalMenu.acAddToFavs->setText(libLocalMenu.direction
+    localLib.acAddToFavs->setText(localLib.direction
                 ? ui->acAddCpToFavs->text()
                 : ui->acRemoveFromFavs->text());
 
-    TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), libLocalMenu.menu, where);
+    TableLocalMenu::popupMenu(ui->treeLibrary->viewport(), localLib.menu, where);
 }
 
 
@@ -2399,5 +2399,5 @@ void FmMain::favsRemoveCalled()
 
 void FmMain::libFavsCalled()
 {
-    addRemoveFromFavs(ui->wiLibShowcase, nullptr, libLocalMenu.direction);
+    addRemoveFromFavs(ui->wiLibShowcase, nullptr, localLib.direction);
 }
