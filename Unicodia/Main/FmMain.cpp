@@ -902,13 +902,11 @@ FmMain::FmMain(QWidget *parent)
     ui->tabsMain->setCurrentIndex(0);
 
     auto ib = initBlocks();
+    initSearch();
     initLibrary(ib);
     initFavs(ib);
     initTerms();
     initAbout();
-
-    // Search
-    ui->treeSearch->setIconSize(pixQsize());
 
     // Popup link
     connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
@@ -1054,17 +1052,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     installCopyEvents(this,
             ui->tableChars, &This::copyCurrentCharNull, &This::copyCurrentSampleNull,
             ui->wiCharShowcase, ui->vwInfo);
-
-    // Search
-    ui->stackSearch->setCurrentWidget(ui->pageInfo);
-    connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
-    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
-    ui->treeSearch->setUniformRowHeights(true);
-    ui->treeSearch->setModel(&searchModel);
-    ui->treeSearch->setItemDelegate(&searchModel);
-    connect(ui->edSearch, &SearchCombo::searchPressed, this, &This::startSearch);
-    connect(ui->edSearch, &SearchCombo::focusIn, this, &This::focusSearch);
-    connect(ui->treeSearch, &SearchTree::enterPressed, this, &This::searchEnterPressed);
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
@@ -1316,6 +1303,10 @@ void FmMain::translateMe()
     if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
         forceShowCp(*p);    
 
+    // Search
+    localSearch.acGo->setText(loc::get("Main.Local.Go"));
+    localSearch.acCopy->setText(loc::get("Main.Local.Copy"));
+
     // Library tab    
     localLib.acCopy->setText(loc::get("Main.Local.Copy"));
     localLib.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
@@ -1437,6 +1428,39 @@ void FmMain::initAbout()
     ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
     connect(ui->btCheckForUpdate, &QPushButton::clicked, this, &This::startUpdate);
+}
+
+
+void FmMain::initSearch()
+{
+    // Search
+    ui->stackSearch->setCurrentWidget(ui->pageInfo);
+    connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
+    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
+    ui->treeSearch->setUniformRowHeights(true);
+    ui->treeSearch->setModel(&searchModel);
+    ui->treeSearch->setItemDelegate(&searchModel);
+    connect(ui->edSearch, &SearchCombo::searchPressed, this, &This::startSearch);
+    connect(ui->edSearch, &SearchCombo::focusIn, this, &This::focusSearch);
+    connect(ui->treeSearch, &SearchTree::enterPressed, this, &This::searchEnterPressed);
+
+    // Search
+    ui->treeSearch->setIconSize(pixQsize());
+
+    // Local menu
+    auto menu = new QMenu(this);
+    localSearch.menu = menu;
+    localSearch.acGo = new QAction("[Go]", menu);
+        menu->addAction(localSearch.acGo);
+        menu->setDefaultAction(localSearch.acGo);
+        QWidget::connect(localSearch.acGo, &QAction::triggered,
+                         ui->treeSearch, &SearchTree::simulateEnterPress);
+        /// @todo [urgent, #477] Local menu?
+    localSearch.acCopy = new QAction("[Copy]", menu);
+        menu->addAction(localSearch.acCopy);
+        //QWidget::connect(localLib.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+
+    QWidget::connect(ui->treeSearch, &QWidget::customContextMenuRequested, this, &This::searchLocalMenuRequested);
 }
 
 
@@ -2400,4 +2424,16 @@ void FmMain::favsRemoveCalled()
 void FmMain::libFavsCalled()
 {
     addRemoveFromFavs(ui->wiLibShowcase, nullptr, localLib.direction);
+}
+
+
+void FmMain::searchLocalMenuRequested(const QPoint& where)
+{
+    auto index = ui->treeSearch->currentIndex();
+    auto line = searchModel.lineAt(index);
+    bool hasObject = line && (line->cp || line->node);
+
+    localSearch.acGo->setEnabled(hasObject);
+    localSearch.acCopy->setEnabled(hasObject);
+    TableLocalMenu::popupMenu(ui->treeSearch->viewport(), localSearch.menu, where);
 }

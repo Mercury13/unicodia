@@ -6,8 +6,6 @@
 #include "u_Vector.h"
 #include "u_TypedFlags.h"
 
-#include "defs.h"
-
 namespace srh {
 
     enum class Class { OTHER, LETTER, DIGIT };

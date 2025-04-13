@@ -7,7 +7,8 @@
 #include "u_Vector.h"
 
 // Search
-#include "Search/engine.h"
+#include "defs.h"
+#include "engine.h"
 
 // Unicode
 #include "UcAutoDefines.h"

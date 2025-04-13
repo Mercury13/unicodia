@@ -113,4 +113,6 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent* ev) override;
 signals:
     void enterPressed(const QModelIndex& index);
+public slots:
+    void simulateEnterPress();
 };

@@ -226,6 +226,7 @@ private:
     } localLib;
 
     struct SearchLocalMenu {
+        QMenu* menu = nullptr;
         QAction *acGo = nullptr,
                 *acCopy = nullptr;
     } localSearch;
@@ -253,8 +254,9 @@ private:
     InitBlocks initBlocks();
     void initLibrary(const InitBlocks& ib);
     void initFavs(const InitBlocks& ib);
-    void translateAbout();
     void initAbout();
+    void translateAbout();
+    void initSearch();
     void showCp(MaybeChar ch);
     void forceShowCp(MaybeChar ch);
     void linkClicked(
@@ -339,6 +341,7 @@ private slots:
     void favsToLibCalled();
     void favsRemoveCalled();
     void libFavsCalled();
+    void searchLocalMenuRequested(const QPoint& where);
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;

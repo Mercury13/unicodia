@@ -166,15 +166,21 @@ void CharsTable::focusOutEvent(QFocusEvent* ev)
 ///// SearchTree ///////////////////////////////////////////////////////////////
 
 
+void SearchTree::simulateEnterPress()
+{
+    if (auto index = currentIndex(); index.isValid()) {
+        emit enterPressed(index);
+    }
+}
+
+
 void SearchTree::keyPressEvent(QKeyEvent* ev)
 {
     switch (ev->key()) {
     case Qt::Key_Enter:
     case Qt::Key_Return:
         ev->accept();
-        if (auto index = currentIndex(); index.isValid()) {
-            emit enterPressed(index);
-        }
+        simulateEnterPress();
         [[fallthrough]];
     default:
         Super::keyPressEvent(ev);

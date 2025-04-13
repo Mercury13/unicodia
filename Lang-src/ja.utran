@@ -12352,6 +12352,10 @@
     <text id="FindLib">
      <orig>Find in Library</orig>
     </text>
+    <text id="Go">
+     <orig>Go</orig>
+     <au-cmt>In search results</au-cmt>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
