@@ -212,6 +212,7 @@ private:
     class FavsLocalMenu : public TableLocalMenu {
     public:
         QAction *acToBlocks = nullptr,
+                *acToLib = nullptr,
                 *acRemove = nullptr;
     } localFavs;
 
@@ -330,6 +331,7 @@ private slots:
     void blocksToLibCalled();
     void favsLocalMenuActivated();
     void favsToBlocks();
+    void favsToLibCalled();
     void favsRemoveCalled();
     void libFavsCalled();
 

@@ -1208,12 +1208,15 @@ void FmMain::initFavs(const InitBlocks& ib)
     // Local menu
     localFavs.init(ui->tableFavs, &favsModel);
     localFavs.acToBlocks = localFavs.addCustomAction("Main.Local.FindBlk");
+        connect(localFavs.acToBlocks, &QAction::triggered, this, &This::favsToBlocks);
+    localFavs.acToLib = localFavs.addCustomAction("Main.Local.FindLib");
+        connect(localFavs.acToLib, &QAction::triggered, this, &This::favsToLibCalled);
     localFavs.addSeparator();
     localFavs.acRemove = localFavs.addCustomAction("Main.Local.Remove");
+        connect(localFavs.acRemove, &QAction::triggered, this, &This::favsRemoveCalled);
+
     connect(&localFavs, &TableLocalMenu::thingCopied, this, &This::copyCurrentFavs);
     connect(&localFavs, &TableLocalMenu::menuActivated, this, &This::favsLocalMenuActivated);
-    connect(localFavs.acToBlocks, &QAction::triggered, this, &This::favsToBlocks);
-    connect(localFavs.acRemove, &QAction::triggered, this, &This::favsRemoveCalled);
 
     // Create toolbar
     btRemoveFromFavs = ui->wiFavsShowcase->addToolButton(ui->acRemoveFromFavs);
@@ -2366,6 +2369,7 @@ void FmMain::favsLocalMenuActivated()
     auto charIf = favsModel.charAt(ui->tableFavs->currentIndex());
     bool hasChar = charIf.hasCp();
     localFavs.acToBlocks->setEnabled(hasChar);
+    localFavs.acToLib->setVisible(hasChar && charIf.cp->isEmoji());
     localFavs.acRemove->setEnabled(hasChar);
 }
 
@@ -2375,6 +2379,14 @@ void FmMain::favsToBlocks()
     auto charIf = favsModel.charAt(ui->tableFavs->currentIndex());
     if (charIf.hasCp()) {
         gotoCp(nullptr, charIf.code);
+    }
+}
+
+
+void FmMain::favsToLibCalled()
+{
+    if (auto charIf = favsModel.charAt(ui->tableFavs->currentIndex())) {
+        gotoLibCp(this, charIf.code);
     }
 }
 
