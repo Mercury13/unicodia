@@ -962,7 +962,7 @@ void FmMain::installCtrlCEvent(
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, funcCopy);
-        // Ctrl+Ins
+    // Ctrl+Ins
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, funcCopy);
