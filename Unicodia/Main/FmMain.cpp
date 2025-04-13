@@ -1087,9 +1087,12 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Local menu
     localBlocks.init(ui->tableChars, &model);
+    localBlocks.acToLib = localBlocks.addCustomAction("Main.Local.FindLib"sv);
+        connect(localBlocks.acToLib, &QAction::triggered, this, &This::blocksToLibCalled);
+    localBlocks.addSeparator();
     localBlocks.acFavs = localBlocks.addCustomAction({});
+        connect(localBlocks.acFavs, &QAction::triggered, this, &This::blocksFavsCalled);
     connect(&localBlocks, &TableLocalMenu::thingCopied, this, &This::copyCurrentThing);
-    connect(localBlocks.acFavs, &QAction::triggered, this, &This::blocksFavsCalled);
     connect(&localBlocks, &TableLocalMenu::menuActivated, this, &This::blocksLocalMenuActivated);
 
     // ALPHA is localized!!
@@ -1310,7 +1313,7 @@ void FmMain::translateMe()
     if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
         forceShowCp(*p);    
 
-    // Library tab
+    // Library tab    
     libLocalMenu.acCopy->setText(loc::get("Main.Local.Copy"));
     libLocalMenu.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
     libLocalMenu.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
@@ -2331,6 +2334,14 @@ void FmMain::blocksFavsCalled()
 }
 
 
+void FmMain::blocksToLibCalled()
+{
+    if (auto cp = model.charAt(ui->tableChars->currentIndex())) {
+        gotoLibCp(this, cp.code);
+    }
+}
+
+
 void FmMain::blocksLocalMenuActivated()
 {
     auto charIf = model.charAt(ui->tableChars->currentIndex());
@@ -2339,8 +2350,10 @@ void FmMain::blocksLocalMenuActivated()
         // Contains → remove, hence NOT
         localBlocks.direction = !config::favs.contains(charIf.code);
         localBlocks.acFavs->setEnabled(true);
+        localBlocks.acToLib->setVisible(charIf.cp->isEmoji());
     } else {
         localBlocks.acFavs->setEnabled(false);
+        localBlocks.acToLib->setVisible(false);
     }
     localBlocks.acFavs->setText(localBlocks.direction
                 ? ui->acAddCpToFavs->text()

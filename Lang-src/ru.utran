@@ -12354,6 +12354,10 @@
      <orig>Find in Blocks</orig>
      <transl>Отыскать в Блоках</transl>
     </text>
+    <text id="FindLib">
+     <orig>Find in Library</orig>
+     <transl>Отыскать в Подборках</transl>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

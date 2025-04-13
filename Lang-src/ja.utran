@@ -12349,6 +12349,9 @@
     <text id="FindBlk">
      <orig>Find in Blocks</orig>
     </text>
+    <text id="FindLib">
+     <orig>Find in Library</orig>
+    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

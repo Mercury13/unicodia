@@ -204,6 +204,7 @@ private:
 
     class BlocksLocalMenu : public TableLocalMenu {
     public:
+        QAction* acToLib = nullptr;
         QAction* acFavs = nullptr;
         bool direction = DIR_ADD;  // Favs’ direction is always removal
     } localBlocks;
@@ -326,6 +327,7 @@ private slots:
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
     void blocksLocalMenuActivated();
     void blocksFavsCalled();
+    void blocksToLibCalled();
     void favsLocalMenuActivated();
     void favsToBlocks();
     void favsRemoveCalled();
