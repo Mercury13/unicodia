@@ -248,6 +248,7 @@ private:
     /// Installs the same event for both Ctrl+C and Ctrl+Ins
     void installCtrlCEvent(
             QAbstractScrollArea* widget, void(This::* funcCopy)());
+    /// Installs similar copy events for all three tabs
     void installCopyEvents(
             QAbstractScrollArea* widget,
             void(This::* funcMain)(), void(This::* funcSample)(),
