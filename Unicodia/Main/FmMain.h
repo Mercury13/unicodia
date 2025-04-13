@@ -226,7 +226,8 @@ private:
     } localLib;
 
     struct SearchLocalMenu {
-
+        QAction *acGo = nullptr,
+                *acCopy = nullptr;
     } localSearch;
 
     struct PullUpDetector {
