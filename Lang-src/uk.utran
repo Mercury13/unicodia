@@ -12359,11 +12359,6 @@
      <orig>Find in Library</orig>
      <transl>Знайти у Підбірках</transl>
     </text>
-    <text id="Go">
-     <orig>Go</orig>
-     <au-cmt>In search results</au-cmt>
-     <transl>Перейти</transl>
-    </text>
    </group>
    <text id="Sort">
     <orig>Order blocks by</orig>

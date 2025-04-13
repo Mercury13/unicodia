@@ -245,12 +245,12 @@ private:
         QList<int> sizes;
     };
 
-    static void installCopyEvents(FmMain* that,
-                           QAbstractScrollArea* widget,
-                           void(FmMain::* funcMain)(),
-                           void(FmMain::* funcSample)(),
-                           WiShowcase* showcase,
-                           QTextBrowser* browser);
+    void installCtrlCEvent(
+            QAbstractScrollArea* widget, void(This::* funcCopy)());
+    void installCopyEvents(
+            QAbstractScrollArea* widget,
+            void(This::* funcMain)(), void(This::* funcSample)(),
+            WiShowcase* showcase, QTextBrowser* browser);
     InitBlocks initBlocks();
     void initLibrary(const InitBlocks& ib);
     void initFavs(const InitBlocks& ib);
@@ -342,6 +342,7 @@ private slots:
     void favsRemoveCalled();
     void libFavsCalled();
     void searchLocalMenuRequested(const QPoint& where);
+    void copyCurrentSearch();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;

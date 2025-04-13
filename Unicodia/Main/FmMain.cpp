@@ -954,34 +954,42 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::installCopyEvents(FmMain* that,
-        QAbstractScrollArea* widget, void(FmMain::* funcMain)(), void(FmMain::* funcSample)(),
-        WiShowcase* showcase, QTextBrowser* browser)
+void FmMain::installCtrlCEvent(
+                        QAbstractScrollArea* widget,
+                        void(FmMain::* funcCopy)())
 {
     // Ctrl+C
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, that, funcMain);
+    connect(shcut, &QShortcut::activated, this, funcCopy);
         // Ctrl+Ins
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, that, funcMain);
+    connect(shcut, &QShortcut::activated, this, funcCopy);
+}
+
+
+void FmMain::installCopyEvents(
+        QAbstractScrollArea* widget, void(FmMain::* funcMain)(), void(FmMain::* funcSample)(),
+        WiShowcase* showcase, QTextBrowser* browser)
+{
+    installCtrlCEvent(widget, funcMain);
         // 2click
-    widget->viewport()->installEventFilter(that);
+    widget->viewport()->installEventFilter(this);
 
     if (funcSample) {
         // Ctrl+Shift+C
-        shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), widget,
+        auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), widget,
                     nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-        connect(shcut, &QShortcut::activated, that, funcSample);
+        connect(shcut, &QShortcut::activated, this, funcSample);
         shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), widget,
                     nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-        connect(shcut, &QShortcut::activated, that, funcSample);
+        connect(shcut, &QShortcut::activated, this, funcSample);
     }
 
-    connect(browser, &QTextBrowser::anchorClicked, that, &This::anchorClicked);
-    connect(showcase, &WiShowcase::copiedPopped, that, &This::blinkCopiedForWidget);
-    connect(showcase, &WiShowcase::linkActivated, that, &This::advancedLinkActivated);
+    connect(browser, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+    connect(showcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
+    connect(showcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
 }
 
 
@@ -1049,7 +1057,7 @@ FmMain::InitBlocks FmMain::initBlocks()
             this, &This::charChanged);
     connect(ui->wiCharShowcase, &WiShowcase::glyphStyleChanged, this, &This::glyphStyleChanged);
 
-    installCopyEvents(this,
+    installCopyEvents(
             ui->tableChars, &This::copyCurrentCharNull, &This::copyCurrentSampleNull,
             ui->wiCharShowcase, ui->vwInfo);
 
@@ -1134,7 +1142,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // GlyphStyleChanged is unused for now
 
-    installCopyEvents(this,
+    installCopyEvents(
             ui->treeLibrary, &This::copyCurrentLib, nullptr,
             ui->wiLibShowcase, ui->vwLibInfo);
 
@@ -1188,7 +1196,7 @@ void FmMain::initFavs(const InitBlocks& ib)
     connect(ui->wiFavsShowcase, &WiShowcase::glyphStyleChanged,
             this, &This::glyphStyleChanged);
 
-    installCopyEvents(this,
+    installCopyEvents(
             ui->tableFavs, &This::copyCurrentFavs, &This::copyFavsSample,
             ui->wiFavsShowcase, ui->vwFavs);
 
@@ -1304,7 +1312,7 @@ void FmMain::translateMe()
         forceShowCp(*p);    
 
     // Search
-    localSearch.acGo->setText(loc::get("Main.Local.Go"));
+    // Go changes dynamically
     localSearch.acCopy->setText(loc::get("Main.Local.Copy"));
 
     // Library tab    
@@ -1455,10 +1463,11 @@ void FmMain::initSearch()
         menu->setDefaultAction(localSearch.acGo);
         QWidget::connect(localSearch.acGo, &QAction::triggered,
                          ui->treeSearch, &SearchTree::simulateEnterPress);
-        /// @todo [urgent, #477] Local menu?
     localSearch.acCopy = new QAction("[Copy]", menu);
         menu->addAction(localSearch.acCopy);
-        //QWidget::connect(localLib.acCopy, &QAction::triggered, this, &This::copyCurrentLib);
+        QWidget::connect(localSearch.acCopy, &QAction::triggered, this, &This::copyCurrentSearch);
+
+    installCtrlCEvent(ui->treeSearch, &This::copyCurrentSearch);
 
     QWidget::connect(ui->treeSearch, &QWidget::customContextMenuRequested, this, &This::searchLocalMenuRequested);
 }
@@ -2431,9 +2440,34 @@ void FmMain::searchLocalMenuRequested(const QPoint& where)
 {
     auto index = ui->treeSearch->currentIndex();
     auto line = searchModel.lineAt(index);
-    bool hasObject = line && (line->cp || line->node);
+    bool hasCp = line && line->cp;
+    bool hasNode = line && !line->cp && line->node;
+    bool hasObject = hasCp || hasNode;
 
+    if(hasNode) {
+        localSearch.acGo->setText(loc::get("Main.Local.FindLib"));
+    } else {    // No object → let it be “Find in Blocks” as a stub
+        localSearch.acGo->setText(loc::get("Main.Local.FindBlk"));
+    }
     localSearch.acGo->setEnabled(hasObject);
     localSearch.acCopy->setEnabled(hasObject);
     TableLocalMenu::popupMenu(ui->treeSearch->viewport(), localSearch.menu, where);
+}
+
+
+void FmMain::copyCurrentSearch()
+{
+    auto index = ui->treeSearch->currentIndex();
+    auto line = searchModel.lineAt(index);
+    if (!line)
+        return;
+    if (line->cp) {
+        // Copy CP
+        uc::copyCp(line->code, uc::CopiedChannel::CHAR);
+        blinkCopied(ui->treeSearch, nullptr);
+    } else if (line->node) {
+        // Copy node
+        uc::copyNode(*line->node);
+        blinkCopied(ui->treeSearch, nullptr);
+    }
 }
