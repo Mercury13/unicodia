@@ -1454,6 +1454,7 @@ void FmMain::initSearch()
 
     // Search
     ui->treeSearch->setIconSize(pixQsize());
+    installCtrlCEvent(ui->treeSearch, &This::copyCurrentSearch);
 
     // Local menu
     auto menu = new QMenu(this);
@@ -1461,15 +1462,13 @@ void FmMain::initSearch()
     localSearch.acGo = new QAction("[Go]", menu);
         menu->addAction(localSearch.acGo);
         menu->setDefaultAction(localSearch.acGo);
-        QWidget::connect(localSearch.acGo, &QAction::triggered,
-                         ui->treeSearch, &SearchTree::simulateEnterPress);
+        connect(localSearch.acGo, &QAction::triggered,
+                ui->treeSearch, &SearchTree::simulateEnterPress);
     localSearch.acCopy = new QAction("[Copy]", menu);
         menu->addAction(localSearch.acCopy);
-        QWidget::connect(localSearch.acCopy, &QAction::triggered, this, &This::copyCurrentSearch);
+        connect(localSearch.acCopy, &QAction::triggered, this, &This::copyCurrentSearch);
 
-    installCtrlCEvent(ui->treeSearch, &This::copyCurrentSearch);
-
-    QWidget::connect(ui->treeSearch, &QWidget::customContextMenuRequested, this, &This::searchLocalMenuRequested);
+    connect(ui->treeSearch, &QWidget::customContextMenuRequested, this, &This::searchLocalMenuRequested);
 }
 
 
