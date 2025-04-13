@@ -245,6 +245,7 @@ private:
         QList<int> sizes;
     };
 
+    /// Installs the same event for both Ctrl+C and Ctrl+Ins
     void installCtrlCEvent(
             QAbstractScrollArea* widget, void(This::* funcCopy)());
     void installCopyEvents(
