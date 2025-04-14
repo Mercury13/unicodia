@@ -787,6 +787,7 @@ namespace uc {
         STOCK_BLOCK     = 1<<18,    ///< [+] The block has a stock name (Script.{1}.StockBlock)
         COOL_WORDS_1    = 1<<19,    ///< [+] Some words have special meaning and should not
                                     ///<      be lowered: IN
+            /// @todo [future] 1F51B and 1F56C have meaningful ON, but IDK how to extract them
         COOL_WORDS_2    = 1<<20,    ///< [+] Some words have special meaning and should not
                                     ///<      be lowered: ON
         EXPERIMENT      = 1<<30,    ///< Left for experiments

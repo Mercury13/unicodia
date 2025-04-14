@@ -451,7 +451,27 @@ namespace {
         return r;
     }
 
-}
+    srh::RoleType roleType(uc::TextRole role)
+    {
+        switch (role) {
+        case uc::TextRole::ABBREV:
+        case uc::TextRole::ALT_NAME:
+        case uc::TextRole::EMOJI_NAME:
+        case uc::TextRole::MAIN_NAME:
+        case uc::TextRole::HTML:
+            return srh::RoleType::BRIEF;
+        case uc::TextRole::EGYP_EWP:
+        case uc::TextRole::EGYP_UC:
+            return srh::RoleType::VERBOSE;
+        case uc::TextRole::CMD_END:
+        case uc::TextRole::DEP_INSTEAD:
+        case uc::TextRole::DEP_INSTEAD2:
+            return srh::RoleType::UNSEARCHABLE;
+        }
+        __builtin_unreachable();
+    }
+
+}   // anon namespace
 
 
 uc::MultiResult uc::doSearch(QString what)
@@ -659,6 +679,7 @@ uc::MultiResult uc::doSearch(QString what)
                                 best.prio = pr;
                                 best.name = nm.value;
                                 best.role = nm.role;
+                                best.prio.roleType = roleType(nm.role);
                             }
                         }
                     }

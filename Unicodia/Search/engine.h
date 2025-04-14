@@ -114,11 +114,17 @@ namespace srh {
                 { return (x.value <=> this->value); }
     };
 
+    enum class RoleType : unsigned char {
+        UNSEARCHABLE, ///< actually unused
+        VERBOSE,
+        BRIEF };
+
     struct Prio {
         short high = 0;
         unsigned short exact = 0, exactLoPrio = 0,
                        initial = 0, initialLoPrio = 0,
                        partial = 0;
+        RoleType roleType = RoleType::VERBOSE;
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;
     };

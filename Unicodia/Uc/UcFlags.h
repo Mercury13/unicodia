@@ -29,6 +29,8 @@ namespace uc {
         M_BIT_0          = 1<<0, ///< Method: bit 0
         M_BIT_1          = 1<<1, ///< Method: bit 1
         M_BIT_2          = 1<<2, ///< Method: bit 2
+            /// @todo [future] All three bits are used up and cannot save a bit,
+            ///                but let it be bit 3?
         M_NO_SHAPING     = 1<<3, ///< Method: turn off shaping
         U_DEPRECATED     = 1<<4, ///< [+] UC feature: char is deprecated
         U_DEF_IGNORABLE  = 1<<5, ///< [+] UC feature: default-ignorable
@@ -39,6 +41,7 @@ namespace uc {
         G_STYLE_2       = 1<<10, ///< [+] Glyph: has variable style 2
         G_STYLE_3       = 1<<11, ///< [+] Glyph: has variable style 3 (some day will be needed for isolated/initial/medial/final Arabic)
         G_MISRENDER     = 1<<12, ///< [+] emoji misrenders are possible
+        S_COOL_2        = 1<<13, ///< [+] Search: these words are meaningful: ON
         DYN_SYSTEM_TOFU = 1<<15, ///< cached in runtime; [+] the char is tofu in system fonts
     };
     DEFINE_ENUM_OPS(Cfg)

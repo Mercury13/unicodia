@@ -1351,7 +1351,8 @@ constinit const uc::Block uc::blocks[] {
     // Duployan OK
     { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE },
             "Duployan",
-            { EcScript::Dupl, 0}, MapSubtype::SYM_CODE, EcScript::Dupl },
+            { EcScript::Dupl, 0}, MapSubtype::SYM_CODE,
+            EcScript::Dupl, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
     // Shorthand format controls OK
     { 0x1BCA0, 0x1BCAF,
             { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::ENG_FORMAT, SvgHint{ 7, ImbaX::LEFT_4 } },

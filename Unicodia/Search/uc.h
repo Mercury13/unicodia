@@ -35,7 +35,7 @@ namespace uc {
         TOO_BIG)
     extern const ec::Array<std::string_view, SearchError> searchErrorKeys;
 
-    enum {
+    enum : unsigned char {
         // LOWEST
         NO_HIPRIO = 0,          ///< simple textual search, normal priority
         HIPRIO_NUMERIC,         ///< search by numeric value
