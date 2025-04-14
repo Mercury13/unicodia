@@ -454,7 +454,7 @@ namespace {
     srh::RoleType roleType(uc::TextRole role)
     {
         switch (role) {
-        case uc::TextRole::HTML:
+        case uc::TextRole::HTML:        // HTML unused (processed separately), but let it be
         case uc::TextRole::ABBREV:
             return srh::RoleType::LACONIC;
         case uc::TextRole::ALT_NAME:
@@ -464,7 +464,7 @@ namespace {
         case uc::TextRole::EGYP_EWP:
         case uc::TextRole::EGYP_UC:
             return srh::RoleType::VERBOSE;
-        case uc::TextRole::CMD_END:
+        case uc::TextRole::CMD_END:     // These are unused, but let them be
         case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::DEP_INSTEAD2:
             return srh::RoleType::UNSEARCHABLE;
