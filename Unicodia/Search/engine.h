@@ -150,9 +150,11 @@ namespace srh {
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                    Flags<HaystackClass> hclasses, const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, const Comparator& comparator);
+                    Flags<HaystackClass> hclasses, RoleType roleType,
+                    const Comparator& comparator);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, Cache& cache, const Comparator& comparator);
+                    Flags<HaystackClass> hclasses, RoleType roleType,
+                    Cache& cache, const Comparator& comparator);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
     class DefaultComparator : public Comparator

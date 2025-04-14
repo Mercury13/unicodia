@@ -674,12 +674,12 @@ uc::MultiResult uc::doSearch(QString what)
                             break;
                         default:
                             if (auto pr = srh::findNeedle(
-                                        nm.value, needle, hclasses, cache, nm.comparator);
+                                        nm.value, needle, hclasses,
+                                        roleType(nm.role), cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;
                                 best.role = nm.role;
-                                best.prio.roleType = roleType(nm.role);
                             }
                         }
                     }
@@ -699,7 +699,9 @@ uc::MultiResult uc::doSearch(QString what)
             if (!node.flags.have(uc::Lfg::SEARCHABLE))
                 continue;
             auto prio = srh::findNeedle(
-                    node.text, needle, srh::HaystackClass::EMOJI, cache,
+                    node.text, needle, srh::HaystackClass::EMOJI,
+                    // All emoji are verbose
+                    srh::RoleType::VERBOSE, cache,
                     srh::NonAsciiComparator::INST);
             if (prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, prio);

@@ -253,9 +253,10 @@ srh::Place srh::findWord(
 }
 
 srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                          Flags<HaystackClass> hclasses, const Comparator& comparator)
+                          Flags<HaystackClass> hclasses,
+                          RoleType roleType, const Comparator& comparator)
 {
-    srh::Prio r;
+    srh::Prio r { .roleType = roleType };
     for (auto& v : needle.words) {
         auto type = findWord(haystack, v, hclasses, comparator);
         switch (type) {
@@ -272,7 +273,8 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
 
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          Flags<HaystackClass> hclasses, Cache& cache,
+                          Flags<HaystackClass> hclasses,
+                          RoleType roleType, Cache& cache,
                           const Comparator& comparator)
 {
     // Uppercase haystack
@@ -287,5 +289,5 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         if (!v.empty())
             cache.words2.emplace_back(v);
     }
-    return findNeedle(cache.words2, needle, hclasses, comparator);
+    return findNeedle(cache.words2, needle, hclasses, roleType, comparator);
 }
