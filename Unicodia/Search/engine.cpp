@@ -53,10 +53,12 @@ namespace {
     inline constexpr const DicWord DIC_WORDS[] {
         { u8"IDEOGRAM", srh::HaystackClass::EVERYWHERE },
         { u8"IDEOGRAPH", srh::HaystackClass::EVERYWHERE },
+        { u8"IN", srh::HaystackClass::EXCEPT_COOL_1 },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::HaystackClass::EVERYWHERE },
         { u8"MAN", srh::HaystackClass::EMOJI },
         { u8"OF", srh::HaystackClass::EVERYWHERE },  // No letter Of at all
+        { u8"ON", srh::HaystackClass::EXCEPT_COOL_2 },
         { u8"OPPOSING", srh::HaystackClass::IDEOGRAPH },
         { u8"OVER", srh::HaystackClass::IDEOGRAPH },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },

@@ -632,6 +632,10 @@ uc::MultiResult uc::doSearch(QString what)
                             || script.containsIdeograph()) {
                         hclasses |= srh::HaystackClass::IDEOGRAPH;
                     }
+                    if (!block.flags.have(Bfg::COOL_WORDS_1))
+                        hclasses |= srh::HaystackClass::EXCEPT_COOL_1;
+                    if (!block.flags.have(Bfg::COOL_WORDS_2))
+                        hclasses |= srh::HaystackClass::EXCEPT_COOL_2;
                     for (auto& nm : names) {
                         switch (nm.role) {
                         case uc::TextRole::HTML:

@@ -18,10 +18,14 @@ namespace srh {
         NONSCRIPT = 2,      ///< Codepoint outside script
         EMOJI = 4,          ///< Emoji
         IDEOGRAPH = 8,      ///< Ideographic: pink (CJK) or other ideographic script
+        EXCEPT_COOL_1 = 16, ///< COOL_WORDS_1 is where some words have major meaning
+        EXCEPT_COOL_2 = 32, ///< COOL_WORDS_2 is where some words have major meaning
         // Technical
         DUMMY1,
         LAST = DUMMY1 - 1,
         // Overflow should not occur (calculation is in int), but…
+        // We rely here on fact that SCRIPT or NONSCRIPT will be on in CPs,
+        //    and EMOJI in the searchable part of Library
         EVERYWHERE = LAST - 1 + LAST,
     };
 
