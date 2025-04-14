@@ -57,14 +57,18 @@ namespace {
         { u8"LETTERFORM", srh::HaystackClass::EVERYWHERE },
         { u8"MAN", srh::HaystackClass::EMOJI },
         { u8"OF", srh::HaystackClass::EVERYWHERE },  // No letter Of at all
+        { u8"OPPOSING", srh::HaystackClass::IDEOGRAPH },
+        { u8"OVER", srh::HaystackClass::IDEOGRAPH },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
         { u8"PERSON", srh::HaystackClass::EMOJI },
+        { u8"PLUS", srh::HaystackClass::IDEOGRAPH },
         { u8"SIGN", srh::HaystackClass::EVERYWHERE },
-        { u8"SQUARED", srh::HaystackClass::CJK },
+        { u8"SQUARED", srh::HaystackClass::IDEOGRAPH },
         { u8"SYLLABIC", srh::HaystackClass::EVERYWHERE },
         { u8"SYLLABICS", srh::HaystackClass::EVERYWHERE },
         { u8"SYLLABLE", srh::HaystackClass::EVERYWHERE },
         { u8"SYMBOL", srh::HaystackClass::EVERYWHERE },
+        { u8"TIMES", srh::HaystackClass::IDEOGRAPH },
         { u8"WOMAN", srh::HaystackClass::EMOJI },
     };
 
@@ -246,11 +250,11 @@ srh::Place srh::findWord(
 }
 
 srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                          HaystackClass hclass, const Comparator& comparator)
+                          Flags<HaystackClass> hclasses, const Comparator& comparator)
 {
     srh::Prio r;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, v, hclass, comparator);
+        auto type = findWord(haystack, v, hclasses, comparator);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
         case Place::EXACT_LOPRIO: ++r.exactLoPrio; break;
@@ -265,7 +269,7 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
 
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          HaystackClass hclass, Cache& cache,
+                          Flags<HaystackClass> hclasses, Cache& cache,
                           const Comparator& comparator)
 {
     // Uppercase haystack
@@ -280,5 +284,5 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         if (!v.empty())
             cache.words2.emplace_back(v);
     }
-    return findNeedle(cache.words2, needle, hclass, comparator);
+    return findNeedle(cache.words2, needle, hclasses, comparator);
 }

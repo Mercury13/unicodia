@@ -619,14 +619,19 @@ uc::MultiResult uc::doSearch(QString what)
                         uc::TextRole role = uc::TextRole::CMD_END;
                     } best;
                     auto& cat = cp.category();
-                    auto block = blockOf(cp.subj);
+                    auto& block = cp.block();
+                    auto& script = cp.script();
                     bool isScript =
                             (cp.ecCategory == EcCategory::SYMBOL_MODIFIER   // Some chosen symbol types
                             || cat.upCat == EcUpCategory::LETTER
                             || cat.upCat == EcUpCategory::MARK
-                            || block->flags.have(Bfg::SCRIPTLIKE)           // …or char in script-like block
-                            || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
-                    auto hclass = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;
+                            || block.flags.have(Bfg::SCRIPTLIKE)            // …or char in script-like block
+                            || !script.flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
+                    Flags hclasses = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::NONSCRIPT;
+                    if (block.synthIcon.ecContinent == EcContinent::CJK
+                            || script.containsIdeograph()) {
+                        hclasses |= srh::HaystackClass::IDEOGRAPH;
+                    }
                     for (auto& nm : names) {
                         switch (nm.role) {
                         case uc::TextRole::HTML:
@@ -645,7 +650,7 @@ uc::MultiResult uc::doSearch(QString what)
                             break;
                         default:
                             if (auto pr = srh::findNeedle(
-                                        nm.value, needle, hclass, cache, nm.comparator);
+                                        nm.value, needle, hclasses, cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;

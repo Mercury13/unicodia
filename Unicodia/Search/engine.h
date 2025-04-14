@@ -17,7 +17,7 @@ namespace srh {
         SCRIPT = 1,         ///< Codepoint in script
         NONSCRIPT = 2,      ///< Codepoint outside script
         EMOJI = 4,          ///< Emoji
-        CJK = 8,            ///< CJK
+        IDEOGRAPH = 8,      ///< Ideographic: pink (CJK) or other ideographic script
         // Technical
         DUMMY1,
         LAST = DUMMY1 - 1,
@@ -140,9 +140,9 @@ namespace srh {
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                    Flags<HaystackClass> hclasses, const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                    HaystackClass hclass, const Comparator& comparator);
+                    Flags<HaystackClass> hclasses, const Comparator& comparator);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    HaystackClass hclass, Cache& cache, const Comparator& comparator);
+                    Flags<HaystackClass> hclasses, Cache& cache, const Comparator& comparator);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
     class DefaultComparator : public Comparator

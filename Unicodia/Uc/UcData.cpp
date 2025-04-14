@@ -222,7 +222,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
     // { u8"Error" },  // check for equal number
 };
 
-void uc::BidiClass::printfLocKeyN(char* buf, size_t n, const char* suffix) const
+void uc::BidiClass::printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept
     { snprintf(buf, n, "Prop.Bidi.%s.%s", id.data(), suffix); }
 
 
@@ -1550,30 +1550,30 @@ void uc::Block::resizeHistory(const BlockResizeSink& x) const
 }
 
 
-void uc::Block::printfLocKeyN(char* buf, size_t n, const char* suffix) const
+void uc::Block::printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept
 {
     snprintf(buf, n, "Block.%04X.%s", (int)startingCp, suffix);
 }
 
 
-void uc::Script::printfLocKeyN(char* buf, size_t n, const char* suffix) const
+void uc::Script::printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept
 {
     snprintf(buf, n, "Script.%s.%s", id.data(), suffix);
 }
 
 
-void uc::Script::printfLocKeyStockN(char* buf, size_t n) const
+void uc::Script::printfLocKeyStockN(char* buf, size_t n) const noexcept
 {
     snprintf(buf, n, "Block.Stock.%s", id.data());
 }
 
 
-void uc::Category::printfLocKeyN(char* buf, size_t n, const char* suffix) const
+void uc::Category::printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept
 {
     snprintf(buf, n, "CharCat.%s.%s", id.data(), suffix);
 }
 
-void uc::Term::printfLocKeyN(char* buf, size_t n, const char* suffix) const
+void uc::Term::printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept
 {
     snprintf(buf, n, "Term.%s.%s", key.data(), suffix);
 }

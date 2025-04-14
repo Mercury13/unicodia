@@ -733,15 +733,19 @@ namespace uc {
             { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
-        void printfLocKey(char (&buf)[N], const char* suffix) const
+        void printfLocKey(char (&buf)[N], const char* suffix) const noexcept
             { printfLocKeyN(buf, N, suffix); }
 
         template <size_t N>
-        void printfLocKeyStock(char (&buf)[N]) const
+        void printfLocKeyStock(char (&buf)[N]) const noexcept
             { printfLocKeyStockN(buf, N); }
+
+        ///  @return [+] script is ideographic at least partly
+        bool containsIdeograph() const noexcept
+            { return (type().flags.have(Stfg::CONTAINS_HIERO)); }
     private:
-        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
-        void printfLocKeyStockN(char* buf, size_t n) const;
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
+        void printfLocKeyStockN(char* buf, size_t n) const noexcept;
     };
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);
@@ -913,11 +917,11 @@ namespace uc {
         bool wasExtendedIn(uc::EcVersion v) const
             { return (history.ecVersion == v && history.oldEndingCp < endingCp); }
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const
+        void printfLocKey(char* buf, size_t n, const char* suffix) const noexcept
             { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
-        void printfLocKey(char (&buf)[N], const char* suffix) const
+        void printfLocKey(char (&buf)[N], const char* suffix) const noexcept
             { printfLocKeyN(buf, N, suffix); }
 
         /// Traverses history of all resizes from earlier to later
@@ -930,7 +934,7 @@ namespace uc {
         void resizeHistoryT(const Body& body) const
             { resizeHistory(BlockResizeSinkT<Body>(body)); }
     private:
-        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
 
     enum class Graphical : unsigned char { NO, YES };
@@ -951,14 +955,14 @@ namespace uc {
             std::u8string_view description;
         } mutable loc {};
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const
+        void printfLocKey(char* buf, size_t n, const char* suffix) const noexcept
             { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
-        void printfLocKey(char (&buf)[N], const char* suffix) const
+        void printfLocKey(char (&buf)[N], const char* suffix) const noexcept
             { printfLocKeyN(buf, N, suffix); }
     private:
-        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
 
     extern const Category categoryInfo[];
@@ -983,14 +987,14 @@ namespace uc {
             std::u8string_view description;
         } mutable loc {};
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const
+        void printfLocKey(char* buf, size_t n, const char* suffix) const noexcept
             { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
-        void printfLocKey(char (&buf)[N], const char* suffix) const
+        void printfLocKey(char (&buf)[N], const char* suffix) const noexcept
             { printfLocKeyN(buf, N, suffix); }
     private:
-        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
@@ -1057,14 +1061,14 @@ namespace uc {
 
         const uc::Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const
+        void printfLocKey(char* buf, size_t n, const char* suffix) const noexcept
             { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
-        void printfLocKey(char (&buf)[N], const char* suffix) const
+        void printfLocKey(char (&buf)[N], const char* suffix) const noexcept
             { printfLocKeyN(buf, N, suffix); }
     private:
-        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
 
     extern const Term terms[];
