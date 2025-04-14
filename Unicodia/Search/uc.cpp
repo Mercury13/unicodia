@@ -454,11 +454,12 @@ namespace {
     srh::RoleType roleType(uc::TextRole role)
     {
         switch (role) {
+        case uc::TextRole::HTML:
         case uc::TextRole::ABBREV:
+            return srh::RoleType::LACONIC;
         case uc::TextRole::ALT_NAME:
         case uc::TextRole::EMOJI_NAME:
         case uc::TextRole::MAIN_NAME:
-        case uc::TextRole::HTML:
             return srh::RoleType::BRIEF;
         case uc::TextRole::EGYP_EWP:
         case uc::TextRole::EGYP_UC:
@@ -700,8 +701,8 @@ uc::MultiResult uc::doSearch(QString what)
                 continue;
             auto prio = srh::findNeedle(
                     node.text, needle, srh::HaystackClass::EMOJI,
-                    // All emoji are verbose
-                    srh::RoleType::VERBOSE, cache,
+                    // All emoji are brief
+                    srh::RoleType::BRIEF, cache,
                     srh::NonAsciiComparator::INST);
             if (prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, prio);

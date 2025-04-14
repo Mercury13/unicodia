@@ -117,7 +117,8 @@ namespace srh {
     enum class RoleType : unsigned char {
         UNSEARCHABLE, ///< actually unused
         VERBOSE,
-        BRIEF };
+        BRIEF,
+        LACONIC };
 
     struct Prio {
         short high = 0;
