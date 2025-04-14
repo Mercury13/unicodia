@@ -71,6 +71,7 @@ namespace {
         { u8"SYLLABLE", srh::HaystackClass::EVERYWHERE },
         { u8"SYMBOL", srh::HaystackClass::EVERYWHERE },
         { u8"TIMES", srh::HaystackClass::IDEOGRAPH },
+        { u8"WITH", srh::HaystackClass::EVERYWHERE }, // Let it be this way
         { u8"WOMAN", srh::HaystackClass::EMOJI },
     };
 
