@@ -1150,6 +1150,15 @@
      <au-cmt>Test: Nag</au-cmt>
      <transl>{1} у Індії на {2}</transl>
     </text>
+    <text id="Year">
+     <orig>{1}</orig>
+     <au-cmt>
+      <p>Sometimes need something bigger than {1}, e.g.</p>
+      <p>* Japanese: 2020 year, 2020s = 2020 + year + age</p>
+      <p>* Slavic (non-abbreviated): 2020 year, 2020s years</p>
+     </au-cmt>
+     <transl>{1}</transl>
+    </text>
     <text id="Decade">
      <orig>{1}s</orig>
      <transl>{1}-і</transl>

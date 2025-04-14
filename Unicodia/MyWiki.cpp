@@ -1152,8 +1152,11 @@ namespace {
                 }
                 if (lang->year != 0) {
                     std::u8string sYear = str::toU8(std::to_string(lang->year));
-                    if (lang->flags.have(uc::Langfg::DECADE))
+                    if (lang->flags.have(uc::Langfg::DECADE)) {
                         sYear = loc::get("Prop.Lang.Decade").arg(sYear);
+                    } else {
+                        sYear = loc::get("Prop.Lang.Year").arg(sYear);
+                    }
                     const char* key = "Prop.Lang.Qty";
                     if (lang->flags.have(uc::Langfg::AS_NATIVE)) {
                         key = "Prop.Lang.QtyNative";
