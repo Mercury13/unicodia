@@ -28,6 +28,7 @@ H
 
 {{h}} :: Hexadecimal :: 1 parameter
 Formatted hex with decimal separator after every 4 characters
+Bhv for non-hex is undefined, don’t rely on it
 
 K
 
@@ -41,7 +42,9 @@ N
 
 {{n}} :: Formatted number :: 1 parameter
 Number is formatted “as in dense text”
+Fractions are unsupported. Negatives are supported.
 All instances of “sparse” formatting are programmatic
+Bhv for non-numbers is undefined, don’t rely on it
 
 {{nchars}} :: # of chars in latest Unicode :: No parameters
 Prints number of characters in the latest Unicode.
