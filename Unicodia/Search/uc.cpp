@@ -655,7 +655,7 @@ uc::MultiResult uc::doSearch(QString what)
                     }
                     if (!block.flags.have(Bfg::COOL_WORDS_1))
                         hclasses |= srh::HaystackClass::EXCEPT_COOL_1;
-                    if (!block.flags.have(Bfg::COOL_WORDS_2))
+                    if (!(block.flags.have(Bfg::COOL_WORDS_2) || cp.flags.have(Cfg::S_COOL_2)))
                         hclasses |= srh::HaystackClass::EXCEPT_COOL_2;
                     for (auto& nm : names) {
                         switch (nm.role) {

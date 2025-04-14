@@ -161,6 +161,7 @@ extern const std::unordered_set<std::string_view> cuneiformKeywords;
 extern const std::unordered_set<std::string_view> cuneiformSymbols;
 extern const std::unordered_map<char32_t, uc::Cfgs> drawMethods;
 extern const std::unordered_map<char32_t, DepInfo> deprecatedInfo;
+extern const std::unordered_set<char32_t> cool2Chars;
 
 enum class DecapDebug : unsigned char { NO, YES };
 

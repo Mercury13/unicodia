@@ -499,6 +499,10 @@ int main()
         if (auto q = drawMethods.find(cp); q != drawMethods.end())
             flags |= q->second;
         flags |= styleFlags(cp);
+        // COOL2
+        if (cool2Chars.contains(cp)) {
+            flags |= uc::Cfg::S_COOL_2;
+        }
 
         // OUTPUT
         os << "{ "

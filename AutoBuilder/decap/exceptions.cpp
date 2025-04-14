@@ -726,3 +726,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("Top with upwards arrow above")
     EX("keycap Ten")
 };
+
+
+const std::unordered_set<char32_t> cool2Chars {
+    0x1F51B, 0x1F56C,   // meaningful ON
+};
