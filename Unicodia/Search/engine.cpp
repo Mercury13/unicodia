@@ -51,19 +51,20 @@ namespace {
     /// @warning Alphabetical order, upper case
     /// Dislike such constexpr, but it’s within one TU, and need for static_assert
     inline constexpr const DicWord DIC_WORDS[] {
-        { u8"IDEOGRAM", srh::hc::EVERYWHERE },
-        { u8"IDEOGRAPH", srh::hc::EVERYWHERE },
+        { u8"IDEOGRAM", srh::HaystackClass::EVERYWHERE },
+        { u8"IDEOGRAPH", srh::HaystackClass::EVERYWHERE },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
-        { u8"LETTERFORM", srh::hc::EVERYWHERE },
+        { u8"LETTERFORM", srh::HaystackClass::EVERYWHERE },
         { u8"MAN", srh::HaystackClass::EMOJI },
-        { u8"OF", srh::hc::EVERYWHERE },  // No letter Of at all
+        { u8"OF", srh::HaystackClass::EVERYWHERE },  // No letter Of at all
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
         { u8"PERSON", srh::HaystackClass::EMOJI },
-        { u8"SIGN", srh::hc::EVERYWHERE },
-        { u8"SYLLABIC", srh::hc::EVERYWHERE },
-        { u8"SYLLABICS", srh::hc::EVERYWHERE },
-        { u8"SYLLABLE", srh::hc::EVERYWHERE },
-        { u8"SYMBOL", srh::hc::EVERYWHERE },
+        { u8"SIGN", srh::HaystackClass::EVERYWHERE },
+        { u8"SQUARED", srh::HaystackClass::CJK },
+        { u8"SYLLABIC", srh::HaystackClass::EVERYWHERE },
+        { u8"SYLLABICS", srh::HaystackClass::EVERYWHERE },
+        { u8"SYLLABLE", srh::HaystackClass::EVERYWHERE },
+        { u8"SYMBOL", srh::HaystackClass::EVERYWHERE },
         { u8"WOMAN", srh::HaystackClass::EMOJI },
     };
 
@@ -206,9 +207,9 @@ namespace {
 
 srh::Place srh::findWord(
         std::span<HayWord> haystack, const NeedleWord& needle,
-        HaystackClass hclass, const Comparator& comparator)
+        Flags<HaystackClass> hclasses, const Comparator& comparator)
 {
-    bool isNeedleLowPrio = needle.lowPrioClass.have(hclass);
+    bool isNeedleLowPrio = needle.lowPrioClass.haveAny(hclasses);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
@@ -218,11 +219,11 @@ srh::Place srh::findWord(
         Place r1 = Place::PARTIAL;
         switch (where.status) {
         case FindStatus::COMPLETE:
-            r1 = isNeedleLowPrio ? Place::EXACT_SCRIPT : Place::EXACT;
+            r1 = isNeedleLowPrio ? Place::EXACT_LOPRIO : Place::EXACT;
             break;
         case FindStatus::INITIAL:
-            r1 = where.word->lowPrioClass.have(hclass)
-                 ?  Place::INITIAL_SRIPT : Place::INITIAL;
+            r1 = where.word->lowPrioClass.haveAny(hclasses)
+                 ?  Place::INITIAL_LOPRIO : Place::INITIAL;
             break;
         case FindStatus::SUBSTR:
         case FindStatus::NONE: ;
@@ -230,10 +231,10 @@ srh::Place srh::findWord(
         // Check for dictionary word
         switch (r1) {
         case Place::EXACT:
-        case Place::EXACT_SCRIPT:
+        case Place::EXACT_LOPRIO:
             return r1;
         case Place::INITIAL:
-        case Place::INITIAL_SRIPT:
+        case Place::INITIAL_LOPRIO:
         case Place::PARTIAL:
             r = std::max(r, r1);
             [[fallthrough]];
@@ -252,9 +253,9 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
         auto type = findWord(haystack, v, hclass, comparator);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
-        case Place::EXACT_SCRIPT: ++r.exactScript; break;
+        case Place::EXACT_LOPRIO: ++r.exactLoPrio; break;
         case Place::INITIAL: ++r.initial; break;
-        case Place::INITIAL_SRIPT: ++r.initialScript; break;
+        case Place::INITIAL_LOPRIO: ++r.initialLoPrio; break;
         case Place::PARTIAL: ++r.partial; break;
         case Place::NONE: ;
         }

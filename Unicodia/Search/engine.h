@@ -8,7 +8,7 @@
 
 namespace srh {
 
-    enum class Class { OTHER, LETTER, DIGIT };
+    enum class Class : unsigned char { OTHER, LETTER, DIGIT };
 
     Class classify(char8_t x);
 
@@ -17,13 +17,18 @@ namespace srh {
         SCRIPT = 1,         ///< Codepoint in script
         NONSCRIPT = 2,      ///< Codepoint outside script
         EMOJI = 4,          ///< Emoji
+        CJK = 8,            ///< CJK
+        // Technical
+        DUMMY1,
+        LAST = DUMMY1 - 1,
+        // Overflow should not occur (calculation is in int), but…
+        EVERYWHERE = LAST - 1 + LAST,
     };
 
     DEFINE_ENUM_OPS(HaystackClass)
 
     namespace hc {
         constexpr auto ALL_CPS = HaystackClass::NONSCRIPT | HaystackClass::SCRIPT;  ///< Codepoints regardless of script
-        constexpr auto EVERYWHERE = HaystackClass::NONSCRIPT | HaystackClass::SCRIPT | HaystackClass::EMOJI;
     }
 
     enum class FindStatus : unsigned char {
@@ -68,7 +73,8 @@ namespace srh {
         size_t length() const { return v.length(); }
     };
 
-    enum class Place { NONE, PARTIAL, INITIAL_SRIPT, INITIAL, EXACT_SCRIPT, EXACT };
+    enum class Place : unsigned char {
+        NONE, PARTIAL, INITIAL_LOPRIO, INITIAL, EXACT_LOPRIO, EXACT };
 
     /// @brief
     ///   Just a normal T, but compares in reverse order
@@ -106,8 +112,8 @@ namespace srh {
 
     struct Prio {
         short high = 0;
-        unsigned short exact = 0, exactScript = 0,
-                       initial = 0, initialScript = 0,
+        unsigned short exact = 0, exactLoPrio = 0,
+                       initial = 0, initialLoPrio = 0,
                        partial = 0;
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;
@@ -132,7 +138,7 @@ namespace srh {
     };
 
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
-                   HaystackClass hclass, const Comparator& comparator);
+                   Flags<HaystackClass> hclasses, const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
                     HaystackClass hclass, const Comparator& comparator);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
