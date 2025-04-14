@@ -24,6 +24,11 @@ Example: Noto Serif Devanag000,Times New Roman
 {{funky}} :: Text drawn with FunkySample font :: 1 parameter
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 
+H
+
+{{h}} :: Hexadecimal :: 1 parameter
+Formatted hex with decimal separator after every 4 characters
+
 K
 
 {{k}} :: Key combination :: ∞ parameters
@@ -33,6 +38,10 @@ Writes [param1]+[param2]+[param3]+… where […] = crude keycap
 Same as {{k}}, just bold
 
 N
+
+{{n}} :: Formatted number :: 1 parameter
+Number is formatted “as in dense text”
+All instances of “sparse” formatting are programmatic
 
 {{nchars}} :: # of chars in latest Unicode :: No parameters
 Prints number of characters in the latest Unicode.
@@ -47,6 +56,9 @@ Same as {{funky}}, just another font.
 Prints # of language’s speakers from internal data
 Parameter 1 = script/language code
 Parameter 2 = LOCALIZED comment, usually an alias name
+
+{{nspk1}} :: # of speakers, no parentheses :: 2 parameters
+Same as {{nspk}}, but no parentheses
 
 S
 
