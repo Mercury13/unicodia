@@ -700,7 +700,7 @@ uc::MultiResult uc::doSearch(QString what)
             if (!node.flags.have(uc::Lfg::SEARCHABLE))
                 continue;
             auto prio = srh::findNeedle(
-                    node.text, needle, srh::HaystackClass::EMOJI,
+                    node.text, needle, srh::HaystackClass::MASK_EMOJI,
                     // All emoji are brief
                     srh::RoleType::BRIEF, cache,
                     srh::NonAsciiComparator::INST);

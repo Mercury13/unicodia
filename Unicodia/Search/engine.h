@@ -27,6 +27,7 @@ namespace srh {
         // We rely here on fact that SCRIPT or NONSCRIPT will be on in CPs,
         //    and EMOJI in the searchable part of Library
         EVERYWHERE = LAST - 1 + LAST,
+        MASK_EMOJI = EMOJI | EXCEPT_COOL_1 | EXCEPT_COOL_2,
     };
 
     DEFINE_ENUM_OPS(HaystackClass)

@@ -28,7 +28,7 @@ constinit const uc::Block uc::blocks[] {
             "Basic Latin",
             { EcScript::Latn, 0 }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL,
-            Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::COOL_WORDS_1 },
+            Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::WORD_IN },
     // Latin-1 OK
     { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE, Ifg::ENG_TALL_PAINT,
                               8_hx + ImbaX::RIGHT_1 },
@@ -78,7 +78,8 @@ constinit const uc::Block uc::blocks[] {
     // Armenian OK
     { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, {}, 14_hy },
             "Armenian",
-            { EcScript::Armn, 0 }, MapSubtype::ALIVE, EcScript::Armn },
+            { EcScript::Armn, 0 }, MapSubtype::ALIVE,
+            EcScript::Armn, EcFont::NORMAL, Bfg::WORD_TO },
     // Hebrew OK, managed to draw yod triangle
     { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Hebrew",
@@ -100,7 +101,8 @@ constinit const uc::Block uc::blocks[] {
     // Thaana OK
     { 0x0780, 0x07BF, { 0x798, EcContinent::OCEAN },
             "Thaana",
-            { EcScript::Thaa, 0 }, MapSubtype::ALIVE, EcScript::Thaa },
+            { EcScript::Thaa, 0 }, MapSubtype::ALIVE,
+            EcScript::Thaa, EcFont::NORMAL, Bfg::WORD_TO },
     // N’ko OK
     { 0x07C0, 0x07FF, { L'ߒ', EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint{ 13, 6, ImbaX::LEFT_4 } },
             "NKo",
@@ -109,11 +111,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x0800, 0x083F, { 0x800, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Samaritan",
             { EcScript::Samr, 0 }, MapSubtype::ALIVE,
-            EcScript::Samr, EcFont::NORMAL, Bfg::COOL_WORDS_1 },
+            EcScript::Samr, EcFont::NORMAL, Bfg::WORD_IN },
     // Mandaic OK
     { 0x0840, 0x085F, { 0x84C, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Mandaic", { EcScript::Mand, 0 }, MapSubtype::ALIVE,
-            EcScript::Mand, EcFont::NORMAL, Bfg::COOL_WORDS_1 },
+            EcScript::Mand, EcFont::NORMAL, Bfg::WORD_IN },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
     { 0x0860, 0x086F, { 0x862, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Syriac Supplement",
@@ -172,11 +174,13 @@ constinit const uc::Block uc::blocks[] {
     // Thai OK
     { 0x0E00, 0x0E7F, { 0xE0A, EcContinent::ASIA },
             "Thai",
-            { EcScript::Thai, 0 }, MapSubtype::ALIVE, EcScript::Thai },
+            { EcScript::Thai, 0 }, MapSubtype::ALIVE,
+            EcScript::Thai, EcFont::NORMAL, Bfg::WORD_TO },
     // Lao OK
     { 0x0E80, 0x0EFF, { 0xE9D, EcContinent::ASIA },
             "Lao",
-            { EcScript::Laoo, 0 }, MapSubtype::ALIVE, EcScript::Laoo },
+            { EcScript::Laoo, 0 }, MapSubtype::ALIVE,
+            EcScript::Laoo, EcFont::NORMAL, Bfg::WORD_TO },
     // Tibetan OK
     { 0x0F00, 0x0FFF, { L'ཀ', EcContinent::ASIA, Ifg::SHIFT_UP | Ifg::PAINT_SVG,
                     1_hy + ImbaY::HITS_BOTTOM },
@@ -192,7 +196,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10A0, 0x10FF, { 0x10D3, EcContinent::EUROPE },
             "Georgian",
             { EcScript::Geor, 0 }, MapSubtype::ALIVE,
-            EcScript::Geor, EcFont::NORMAL, Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            EcScript::Geor, EcFont::NORMAL, Bfg::WORD_IN | Bfg::WORD_ON },
     { 0x1100, 0x11FF, { 0x113F, EcContinent::CJK },
             "Hangul Jamo",
             { EcScript::Hang, 0 }, MapSubtype::ALIVE,
@@ -200,7 +204,8 @@ constinit const uc::Block uc::blocks[] {
     // Ethiopic OK
     { 0x1200, 0x137F, { L'አ', EcContinent::AFRICA, uc::Ifg::PAINT_SVG },
             "Ethiopic",
-            { EcScript::Ethi, 0 }, MapSubtype::ALIVE, EcScript::Ethi },
+            { EcScript::Ethi, 0 }, MapSubtype::ALIVE,
+            EcScript::Ethi, EcFont::NORMAL, Bfg::WORD_TO },
     // Ethiopic supplement OK
     { 0x1380, 0x139F, { 0x1382, EcContinent::AFRICA, {}, 2_hy },
             "Ethiopic Supplement",
@@ -214,7 +219,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x1400, 0x167F, { 0x140E, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics",
             { EcScript::Cans, 0 }, MapSubtype::ALIVE,
-            EcScript::Cans, EcFont::NORMAL, Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            EcScript::Cans, EcFont::NORMAL,
+            Bfg::WORD_IN | Bfg::WORD_ON | Bfg::WORD_TO },
     // Ogham OK
     { 0x1680, 0x169F, { 0x168E, EcContinent::EUROPE },
             "Ogham",
@@ -224,7 +230,7 @@ constinit const uc::Block uc::blocks[] {
                                 0_hx + uc::ImbaX::LEFT_2},
             "Runic",
             { EcScript::Runr, 0 }, MapSubtype::DEAD,
-            EcScript::Runr, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
+            EcScript::Runr, EcFont::NORMAL, Bfg::WORD_ON },
     // Tagalog OK
     { 0x1700, 0x171F, { 0x1706, EcContinent::OCEAN },
             "Tagalog",
@@ -246,7 +252,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1780, 0x17FF, { 0x1780, EcContinent::ASIA, Ifg::PAINT_SVG },
             "Khmer",
             { EcScript::Khmr, 0 }, MapSubtype::ALIVE,
-            EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP },
+            EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP | Bfg::WORD_TO },
     // Mongol OK, implemented ligature
     { 0x1800, 0x18AF,
             { 0x183E, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT, 11_hx },
@@ -321,7 +327,7 @@ constinit const uc::Block uc::blocks[] {
             "Georgian Extended",
             { EcScript::Geor, 2 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::NORMAL,
-            Bfg::HAS_DESCRIPTION | Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            Bfg::HAS_DESCRIPTION | Bfg::WORD_IN | Bfg::WORD_ON },
     // Sundanese supplement OK
     { 0x1CC0, 0x1CCF, { 0x1CC6, EcContinent::OCEAN, Ifg::ENG_LONG_PAINT },
             "Sundanese Supplement",
@@ -399,12 +405,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::TECHNICAL, Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            EcScript::NONE, EcFont::TECHNICAL, Bfg::WORD_ON },
     // Control pictures OK
     { 0x2400, 0x243F, { L'␣', EcContinent::NONE, Ifg::ENG_CUSTOM_PAINT },
             "Control Pictures",
             MyName::INST, MapSubtype::SYM_OTHER,
-            EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER, Bfg::COOL_WORDS_1 },
+            EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER, Bfg::WORD_IN },
     // OCR/MICR OK
     { 0x2440, 0x245F, { L'⑀', EcContinent::NONE, Ifg::ENG_TALL_PAINT, 5_hx },
             "Optical Character Recognition",
@@ -494,7 +500,7 @@ constinit const uc::Block uc::blocks[] {
             "Georgian Supplement",
             { EcScript::Geor, 1 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::GEORGIAN_NUSKHURI,
-            Bfg::HAS_DESCRIPTION | Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            Bfg::HAS_DESCRIPTION | Bfg::WORD_IN | Bfg::WORD_ON },
     // Tifinagh OK
     { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA, Ifg::ENG_TALL_PAINT, 6_hx },
             "Tifinagh",
@@ -539,11 +545,13 @@ constinit const uc::Block uc::blocks[] {
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F, { L'あ', EcContinent::CJK, Ifg::PAINT_SVG },
             "Hiragana",
-            { EcScript::Hira, 0 }, MapSubtype::ALIVE, EcScript::Hira },
+            { EcScript::Hira, 0 }, MapSubtype::ALIVE,
+            EcScript::Hira, EcFont::NORMAL, Bfg::WORD_TO },
     // Katakana OK, not collapsible: syllabary
     { 0x30A0, 0x30FF, { L'カ', EcContinent::CJK, Ifg::PAINT_SVG, SvgHint { 14, 4, ImbaX::LEFT_4 } },
             "Katakana",
-            { EcScript::Hira, 1 }, MapSubtype::ALIVE, EcScript::Kana },
+            { EcScript::Hira, 1 }, MapSubtype::ALIVE,
+            EcScript::Kana, EcFont::NORMAL, Bfg::WORD_TO },
     // Bopomofo OK
     { 0x3100, 0x312F, { L'ㄉ', EcContinent::CJK },
             "Bopomofo",
@@ -573,19 +581,19 @@ constinit const uc::Block uc::blocks[] {
     { 0x31F0, 0x31FF, { L'ㇰ', EcContinent::CJK, Ifg::PAINT_SVG, 6_hy },
             "Katakana Phonetic Extensions",
             { EcScript::Hira, 2 }, MapSubtype::ALIVE,
-            EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::WORD_TO },
     // Enclosed CJK letters and months OK
         { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Enclosed CJK Letters and Months",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_COMPAT,
-            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::WORD_TO },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_COMPAT,
-                    Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::COOL_WORDS_1 },
+                    Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::WORD_IN },
     // CJK A OK
     { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK },
             "CJK Unified Ideographs Extension A",
@@ -603,7 +611,8 @@ constinit const uc::Block uc::blocks[] {
     // Yi OK
     { 0xA000, 0xA48F, { 0xA011, EcContinent::ASIA },
             "Yi Syllables",
-            { EcScript::Yiii, 0 }, MapSubtype::ALIVE, EcScript::Yiii },
+            { EcScript::Yiii, 0 }, MapSubtype::ALIVE,
+            EcScript::Yiii, EcFont::NORMAL, Bfg::WORD_TO },
     // Yi radicals OK
     { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::ASIA },
             "Yi Radicals",
@@ -618,7 +627,8 @@ constinit const uc::Block uc::blocks[] {
     { 0xA500, 0xA63F, { L'ꕙ', EcContinent::AFRICA, Ifg::PAINT_SVG, 3_hx },
             "Vai",
             { EcScript::Vaii, 0 }, MapSubtype::ALIVE,
-            EcScript::Vaii, EcFont::NORMAL, Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            EcScript::Vaii, EcFont::NORMAL,
+            Bfg::WORD_IN | Bfg::WORD_ON | Bfg::WORD_TO },
     // Cyr ex B OK, modified font a bit
     { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE, Ifg::ENG_CUSTOM_PAINT },
             "Cyrillic Extended-B",
@@ -641,7 +651,8 @@ constinit const uc::Block uc::blocks[] {
     // Do not hint by X: we don’t want to grow a tree while the forest is dying
     { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA, {}, 3_hy },
             "Syloti Nagri",
-            { EcScript::Sylo, 0 }, MapSubtype::ALIVE, EcScript::Sylo },
+            { EcScript::Sylo, 0 }, MapSubtype::ALIVE,
+            EcScript::Sylo, EcFont::NORMAL, Bfg::WORD_TO },
     // Common Indic OK
     { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA, Ifg::SHIFT_DOWN },
             "Common Indic Number Forms",
@@ -696,7 +707,8 @@ constinit const uc::Block uc::blocks[] {
     // Tai Viet OK
     { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA },
             "Tai Viet",
-            { EcScript::Tavt, 0 }, MapSubtype::ALIVE, EcScript::Tavt },
+            { EcScript::Tavt, 0 }, MapSubtype::ALIVE,
+            EcScript::Tavt, EcFont::NORMAL, Bfg::WORD_TO },
     // Meetei ex OK
     { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA },
             "Meetei Mayek Extensions",
@@ -726,7 +738,7 @@ constinit const uc::Block uc::blocks[] {
             "Hangul Syllables",
             { EcScript::Hang, 'Z' }, MapSubtype::ALIVE,
             EcScript::Hang, EcFont::NORMAL,
-            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::COOL_WORDS_1 | Bfg::COOL_WORDS_2 },
+            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::WORD_IN | Bfg::WORD_ON | Bfg::WORD_TO },
     // Hangul Jamo B OK
     { 0xD7B0, 0xD7FF, { L'ힽ', EcContinent::CJK },
             "Hangul Jamo Extended-B",
@@ -782,7 +794,7 @@ constinit const uc::Block uc::blocks[] {
             "Halfwidth and Fullwidth Forms",
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_FULLHALF,
-            Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::WORD_TO },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },
             "Specials",
@@ -790,7 +802,8 @@ constinit const uc::Block uc::blocks[] {
     // Linear B syll OK
     { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE, {}, SvgHint { 7, 9 } },
             "Linear B Syllabary",
-            { EcScript::Linb, 0 }, MapSubtype::DEAD, EcScript::Linb },
+            { EcScript::Linb, 0 }, MapSubtype::DEAD,
+            EcScript::Linb, EcFont::NORMAL, Bfg::WORD_TO },
     // Linear B hier OK
     { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE, {}, 4_hy },
             "Linear B Ideograms",
@@ -843,7 +856,8 @@ constinit const uc::Block uc::blocks[] {
     // Ugaritic OK
     { 0x10380, 0x1039F, { 0x10399, EcContinent::ASIA, Ifg::SHIFT_UP },
             "Ugaritic",
-            { EcScript::Ugar, 0 }, MapSubtype::DEAD, EcScript::Ugar },
+            { EcScript::Ugar, 0 }, MapSubtype::DEAD,
+            EcScript::Ugar, EcFont::NORMAL, Bfg::WORD_TO },
     // Old Persian OK
     { 0x103A0, 0x103DF, { 0x103A2, EcContinent::ASIA },
             "Old Persian",
@@ -856,7 +870,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10450, 0x1047F, { 0x10459, EcContinent::EUROPE },
             "Shavian",
             { EcScript::Shaw, 0 }, MapSubtype::ALIVE,
-            EcScript::Shaw, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
+            EcScript::Shaw, EcFont::NORMAL, Bfg::WORD_ON },
     // Osmanya OK
     { 0x10480, 0x104AF, { 0x10499, EcContinent::AFRICA, Ifg::ENG_TALL_PAINT, NO_HINT },
             "Osmanya",
@@ -873,7 +887,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE, Ifg::HISTORICAL },
             "Caucasian Albanian",
             { EcScript::Aghb, 0 }, MapSubtype::DEAD,
-            EcScript::Aghb, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
+            EcScript::Aghb, EcFont::NORMAL, Bfg::WORD_ON },
     // Vithkuqi OK
     { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
             "Vithkuqi",
@@ -894,7 +908,8 @@ constinit const uc::Block uc::blocks[] {
     // Cypriot OK
     { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE },
             "Cypriot Syllabary",
-            { EcScript::Cprt, 0 }, MapSubtype::DEAD, EcScript::Cprt },
+            { EcScript::Cprt, 0 }, MapSubtype::DEAD,
+            EcScript::Cprt, EcFont::NORMAL, Bfg::WORD_TO },
     // Imperial Aramaic OK
     { 0x10840, 0x1085F, { 0x10840, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Imperial Aramaic",
@@ -926,11 +941,13 @@ constinit const uc::Block uc::blocks[] {
     // Meroitic hiero OK
     { 0x10980, 0x1099F, { 0x10980, EcContinent::AFRICA },
             "Meroitic Hieroglyphs",
-            { EcScript::Mero, 0 }, MapSubtype::DEAD, EcScript::Mero },
+            { EcScript::Mero, 0 }, MapSubtype::DEAD,
+            EcScript::Mero, EcFont::NORMAL, Bfg::WORD_TO },
     // Meroitic cursive OK
     { 0x109A0, 0x109FF, { 0x109A0, EcContinent::AFRICA },
             "Meroitic Cursive",
-            { EcScript::Mero, 1 }, MapSubtype::DEAD, EcScript::Mero },
+            { EcScript::Mero, 1 }, MapSubtype::DEAD,
+            EcScript::Mero, EcFont::NORMAL, Bfg::WORD_TO },
     // Kharoshthi OK
     { 0x10A00, 0x10A5F, { 0x10A10, EcContinent::ASIA_RTL, Ifg::PAINT_SVG },
             "Kharoshthi",
@@ -1204,7 +1221,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
             "Cuneiform",
             { EcScript::Xsux, 0 }, MapSubtype::DEAD,
-            EcScript::Xsux, EcFont::NORMAL, Bfg::COOL_WORDS_1 },
+            EcScript::Xsux, EcFont::NORMAL, Bfg::WORD_IN },
     // Cuneiform numbers and punct OK
     // By some nice coincidence, better use default engine
     // ABOVE_2 = first who makes 2px above at 1.25×
@@ -1262,7 +1279,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA,
                           Ifg::ENG_TALL_PAINT, 0_hx + ImbaX::LEFT_2 },
             "Bassa Vah",
-            { EcScript::Bass, 0 }, MapSubtype::ALIVE, EcScript::Bass },
+            { EcScript::Bass, 0 }, MapSubtype::ALIVE,
+            EcScript::Bass, EcFont::NORMAL, Bfg::WORD_TO },
     // Pahawh OK
     { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
             "Pahawh Hmong",
@@ -1352,7 +1370,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE },
             "Duployan",
             { EcScript::Dupl, 0}, MapSubtype::SYM_CODE,
-            EcScript::Dupl, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
+            EcScript::Dupl, EcFont::NORMAL, Bfg::WORD_ON },
     // Shorthand format controls OK
     { 0x1BCA0, 0x1BCAF,
             { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::ENG_FORMAT, SvgHint{ 7, ImbaX::LEFT_4 } },
@@ -1447,7 +1465,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho",
             { EcScript::Wcho, 0}, MapSubtype::ALIVE,
-            EcScript::Wcho, EcFont::NORMAL, Bfg::COOL_WORDS_2 },
+            EcScript::Wcho, EcFont::NORMAL, Bfg::WORD_ON },
     // Nag OK, done in UnicodiaFunky
     { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari",
@@ -1455,13 +1473,14 @@ constinit const uc::Block uc::blocks[] {
     // Ol Onal OK, done in UnicodiaFunky
     { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, {}, 14_hx  },
             "Ol Onal",
-            { EcScript::Onao, 0 }, MapSubtype::ALIVE, EcScript::Onao },
+            { EcScript::Onao, 0 }, MapSubtype::ALIVE,
+            EcScript::Onao, EcFont::NORMAL, Bfg::WORD_IN },
     // Tai Yo OK, consider the font OFL
     { 0x1E6C0, 0x1E6FF, { 0x1E6C0, EcContinent::ASIA,
                     Ifg::PAINT_SVG | Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT },
             "Tai Yo",
             { EcScript::Tayo, 0 }, MapSubtype::DEAD,
-            EcScript::Tayo, EcFont::NORMAL, NO_FLAGS,
+            EcScript::Tayo, EcFont::NORMAL, Bfg::WORD_TO,
             EcGlyphStyleChannel::VERTICAL },
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA, {}, SvgHint{ 14, ImbaY::ABOVE_4 } },
@@ -1471,7 +1490,8 @@ constinit const uc::Block uc::blocks[] {
     // Mende Kikakui OK
     { 0x1E800, 0x1E8DF, { 0x1E800, EcContinent::AFRICA },
             "Mende Kikakui",
-            { EcScript::Mend, 0}, MapSubtype::DEAD, EcScript::Mend },
+            { EcScript::Mend, 0}, MapSubtype::DEAD,
+            EcScript::Mend, EcFont::NORMAL, Bfg::WORD_TO },
     // Adlam OK
     { 0x1E900, 0x1E95F, { 0x1E900, EcContinent::AFRICA, Ifg::PAINT_SVG, SvgHint{ 3, 1, ImbaX::RIGHT_1 } },
             "Adlam",
