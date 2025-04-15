@@ -1485,7 +1485,7 @@ uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
 {
     uc::TofuInfo r;
     r.block = &block();
-    if (r.block->flags.haveAny(Bfg::CJK)
+    if (r.block->flags.have(Bfg::CJK)
             || script().ecContinent == EcContinent::CJK) {
         r.place = TofuPlace::CJK;
     } else if (r.block->script().type().flags.have(Stfg::CONTAINS_HIERO)) {
