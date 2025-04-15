@@ -612,7 +612,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA000, 0xA48F, { 0xA011, EcContinent::ASIA },
             "Yi Syllables",
             { EcScript::Yiii, 0 }, MapSubtype::ALIVE,
-            EcScript::Yiii, EcFont::NORMAL, Bfg::WORD_TO },
+            EcScript::Yiii, EcFont::NORMAL, Bfg::WORD_TO | Bfg::WORD_BY },
     // Yi radicals OK
     { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::ASIA },
             "Yi Radicals",

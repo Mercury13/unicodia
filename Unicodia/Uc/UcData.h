@@ -786,11 +786,12 @@ namespace uc {
         FORCE_BUILTIN   = 1<<17,    ///< [+] Turn off other methods of built-in avoidance
         STOCK_BLOCK     = 1<<18,    ///< [+] The block has a stock name (Script.{1}.StockBlock)
         COOL_WORDS_1    = 1<<19,    ///< [+] Some words have special meaning and should not
-                                    ///<      be lowered: IN, TO
+                                    ///<      be lowered: BY IN TO
         COOL_WORDS_2    = 1<<20,    ///< [+] Some words have special meaning and should not
                                     ///<      be lowered: ON
         EXPERIMENT      = 1<<30,    ///< Left for experiments
         STOCK_BLOCK_DESC = STOCK_BLOCK | HAS_DESCRIPTION,
+        WORD_BY = COOL_WORDS_1,
         WORD_IN = COOL_WORDS_1,
         WORD_TO = COOL_WORDS_1,
         WORD_ON = COOL_WORDS_2,

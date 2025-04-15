@@ -51,6 +51,7 @@ namespace {
     /// @warning Alphabetical order, upper case
     /// Dislike such constexpr, but it’s within one TU, and need for static_assert
     inline constexpr const DicWord DIC_WORDS[] {
+        { u8"BY", srh::HaystackClass::EXCEPT_COOL_1 },
         { u8"IDEOGRAM", srh::HaystackClass::EVERYWHERE },
         { u8"IDEOGRAPH", srh::HaystackClass::EVERYWHERE },
         { u8"IN", srh::HaystackClass::EXCEPT_COOL_1 },
