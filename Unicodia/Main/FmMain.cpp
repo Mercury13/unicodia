@@ -929,14 +929,17 @@ FmMain::FmMain(QWidget *parent)
     // Go to blocks
     shcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
     connect(shcut, &QShortcut::activated, this, &This::goToBlocks);
+    ui->tabsMain->setTabToolTip(I_BLOCKS, "F1");
 
     // Go to library
     shcut = new QShortcut(QKeySequence(Qt::Key_F2), this);
     connect(shcut, &QShortcut::activated, this, &This::goToLib);
+    ui->tabsMain->setTabToolTip(I_LIBRARY, "F2");
 
     // Go to favourites
     shcut = new QShortcut(QKeySequence(Qt::Key_F3), this);
     connect(shcut, &QShortcut::activated, this, &This::goToFavs);
+    ui->tabsMain->setTabToolTip(I_FAVS, "F3");
 
     // Find
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F), this);
