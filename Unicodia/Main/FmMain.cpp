@@ -926,6 +926,22 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::dumpTiles);
 
+    // Go to blocks
+    shcut = new QShortcut(QKeySequence(Qt::Key_F1), this);
+    connect(shcut, &QShortcut::activated, this, &This::goToBlocks);
+
+    // Go to library
+    shcut = new QShortcut(QKeySequence(Qt::Key_F2), this);
+    connect(shcut, &QShortcut::activated, this, &This::goToLib);
+
+    // Go to favourites
+    shcut = new QShortcut(QKeySequence(Qt::Key_F3), this);
+    connect(shcut, &QShortcut::activated, this, &This::goToFavs);
+
+    // Find
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F), this);
+    connect(shcut, &QShortcut::activated, this, &This::goToSearch);
+
     // Skin tone QA
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
     connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
@@ -2469,4 +2485,32 @@ void FmMain::copyCurrentSearch()
         uc::copyNode(*line->node);
         blinkCopied(ui->treeSearch, nullptr);
     }
+}
+
+
+void FmMain::goToSearch()
+{
+    ui->tabsMain->setCurrentIndex(I_BLOCKS);
+    ui->edSearch->setFocus();
+}
+
+
+void FmMain::goToBlocks()
+{
+    ui->tabsMain->setCurrentIndex(I_BLOCKS);
+    ui->tableChars->setFocus();
+}
+
+
+void FmMain::goToLib()
+{
+    ui->tabsMain->setCurrentIndex(I_LIBRARY);
+    ui->treeLibrary->setFocus();
+}
+
+
+void FmMain::goToFavs()
+{
+    ui->tabsMain->setCurrentIndex(I_FAVS);
+    ui->tableFavs->setFocus();
 }

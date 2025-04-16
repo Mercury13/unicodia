@@ -359,6 +359,10 @@ private slots:
     void slotSkinToneQa();
     void searchForVs16();
     void toggleSortingTelltales();
+    void goToSearch();
+    void goToBlocks();
+    void goToLib();
+    void goToFavs();
 };
 
 
