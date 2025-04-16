@@ -794,6 +794,7 @@ namespace uc {
         WORD_BY = COOL_WORDS_1,
         WORD_IN = COOL_WORDS_1,
         WORD_TO = COOL_WORDS_1,
+        WORD_AT = COOL_WORDS_1,
         WORD_ON = COOL_WORDS_2,
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
