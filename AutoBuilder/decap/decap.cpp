@@ -232,6 +232,7 @@ const std::unordered_set<std::string_view> cuneiformSuffixes {
 };
 
 const std::unordered_set<std::string_view> cuneiformKeywords {
+    "AT",
     "CUNEIFORM",
     "SIGN",
     "TIMES",
