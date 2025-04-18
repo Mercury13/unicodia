@@ -325,6 +325,8 @@ namespace {
                     hPunctuation.attribute("indent-ellip").as_string(">>>>>>"));
         r.punctuation.range = str::toU8sv(
                     hPunctuation.attribute("range").as_string("~~~~~~"));
+        r.punctuation.yearRange = str::toU8sv(
+                    hPunctuation.attribute("year-range").as_string("~~~~~~"));
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

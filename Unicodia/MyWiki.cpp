@@ -1155,6 +1155,10 @@ namespace {
                     if (lang->flags.have(uc::Langfg::DECADE)) {
                         sYear = loc::get("Prop.Lang.Decade").arg(sYear);
                     } else {
+                        if (lang->year2 != 0) {
+                            sYear = str::cat(sYear, loc::active::punctuation.yearRange,
+                                             str::toU8sv(std::to_string(lang->year2)));
+                        }
                         sYear = loc::get("Prop.Lang.Year").arg(sYear);
                     }
                     const char* key = "Prop.Lang.Qty";

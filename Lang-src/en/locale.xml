@@ -120,8 +120,10 @@
 			left-paren, right-paren: in script’s languages only
 			indent-ellip: ellipsis for indent, in version info only
 			range: ellipsis or dash for range (1…2)
-				(script’s language only, see Rejang) -->
+				(script’s language only, see Rejang)
+			year-range: ellipsis or dash for range (2000–2010)
+				(script’s language only, see Ethiopic A) -->
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" />
+			range="…" year-range="–" />
 </locale>

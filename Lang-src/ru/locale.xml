@@ -72,5 +72,5 @@
 	<peculiarities still-uses-burmese="1" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" />
+			range="…" year-range="–" />
 </locale>
