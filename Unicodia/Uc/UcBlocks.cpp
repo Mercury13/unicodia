@@ -601,7 +601,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'A' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     // Yijing OK
-    { 0x4DC0, 0x4DFF, { L'䷧', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
+    { 0x4DC0, 0x4DFF, { L'䷧', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM | Ifg::SHIFT_DOWN },
             "Yijing Hexagram Symbols",
             MyName::INST, MapSubtype::CJ_SYMBOL },
     // CJK hieroglyphs OK
@@ -1425,7 +1425,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::DEAD,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Tai Xuan Jing OK
-    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
+    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM | Ifg::SHIFT_DOWN },
             "Tai Xuan Jing Symbols",
             MyName::INST, MapSubtype::CJ_SYMBOL },
     // Counting rods OK
