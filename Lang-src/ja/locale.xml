@@ -141,10 +141,10 @@
 	<num-format dec-point="." thou-point="," thou-min-length="4" thou-min-length-dense="4">
 		<imprecise>
 			<fmt shift="0" text="{1}人" frac="never" />
-			<fmt shift="3" text="{1}千" frac="avoid" />
-			<fmt shift="4" text="{1}万" frac="never" bigger-unit="億" bigger-subshift="4" />
-			<fmt shift="7" text="{1}千万" frac="except1" bigger-unit="億" bigger-subshift="1" />
-			<fmt shift="8" text="{1}億" frac="never" />
+			<fmt shift="3" text="{1}千人" frac="avoid" />
+			<fmt shift="4" text="{1}万人" frac="never" bigger-unit="億" bigger-subshift="4" />
+			<fmt shift="7" text="{1}千万人" frac="except1" bigger-unit="億" bigger-subshift="1" />
+			<fmt shift="8" text="{1}億人" frac="never" />
 		</imprecise>
 	</num-format>
 	<!-- Japanese has no plural rules -->

@@ -1158,10 +1158,16 @@ namespace {
                         sYear = loc::get("Prop.Lang.Year").arg(sYear);
                     }
                     const char* key = "Prop.Lang.Qty";
-                    if (lang->flags.have(uc::Langfg::AS_NATIVE)) {
-                        key = "Prop.Lang.QtyNative";
-                    } else if (lang->flags.have(uc::Langfg::IN_INDIA)) {
-                        key = "Prop.Lang.QtyIndia";
+                    if (auto q = lang->flags & uc::Langfg::S_ALL) {
+                        switch (q.numeric()) {
+                        case static_cast<int>(uc::Langfg::S_AS_NATIVE):
+                            key = "Prop.Lang.QtyNative"; break;
+                        case static_cast<int>(uc::Langfg::S_IN_INDIA):
+                            key = "Prop.Lang.QtyIndia"; break;
+                        case static_cast<int>(uc::Langfg::S_TOTAL):
+                            key = "Prop.Lang.QtyTotal"; break;
+                        default: ;
+                        }
                     }
                     wrapWith(sNum, key, sYear);
                 }

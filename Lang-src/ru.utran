@@ -1149,6 +1149,11 @@
      <au-cmt>Test: Nag</au-cmt>
      <transl>{1} в Индии на {2}</transl>
     </text>
+    <text id="QtyTotal">
+     <orig>total {1} as of {2}</orig>
+     <au-cmt>Test: Ethi A, Gamo-Gofa-Dawro</au-cmt>
+     <transl>вместе {1} на {2}</transl>
+    </text>
     <text id="Year">
      <orig>{1}</orig>
      <au-cmt>
@@ -2880,15 +2885,15 @@
     <text id="Text">
      <orig>
       <p>Letters for languages:</p>
-      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, total 2M as of 2007;</p>
-      <p>* Basketo: 93k as of 2007;</p>
-      <p>* Gumuz: 250k as of 2007–2017, in [[ps:Latn|Latin]] since 2007.</p>
+      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, {{nspk1|gof}};</p>
+      <p>* Basketo: {{nspk1|bst}};</p>
+      <p>* Gumuz: {{nspk1|guk}}, in [[ps:Latn|Latin]] since 2007.</p>
      </orig>
      <transl>
       <p>Буквы для языков:</p>
-      <p>* гамо-гофа-дауро: три народа, один язык, 2{{_}}млн на всех на 2007;</p>
-      <p>* баскето: 93{{_}}тыс. на 2007;</p>
-      <p>* гумуз: 250{{_}}тыс. на 2007–2017, с 2007 на [[ps:Latn|латинице]].</p>
+      <p>* гамо-гофа-дауро: три народа, один язык, {{nspk1|gof}};</p>
+      <p>* баскето: {{nspk1|bst}};</p>
+      <p>* гумуз: {{nspk1|guk}}, с 2007 на [[ps:Latn|латинице]].</p>
      </transl>
     </text>
    </group>

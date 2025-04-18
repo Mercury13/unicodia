@@ -914,6 +914,10 @@
      <orig>{1} in India as of {2}</orig>
      <au-cmt>Test: Nag</au-cmt>
     </text>
+    <text id="QtyTotal">
+     <orig>total {1} as of {2}</orig>
+     <au-cmt>Test: Ethi A, Gamo-Gofa-Dawro</au-cmt>
+    </text>
     <text id="Year">
      <orig>{1}</orig>
      <au-cmt>
@@ -2176,9 +2180,9 @@
     <text id="Text">
      <orig>
       <p>Letters for languages:</p>
-      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, total 2M as of 2007;</p>
-      <p>* Basketo: 93k as of 2007;</p>
-      <p>* Gumuz: 250k as of 2007–2017, in [[ps:Latn|Latin]] since 2007.</p>
+      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, {{nspk1|gof}};</p>
+      <p>* Basketo: {{nspk1|bst}};</p>
+      <p>* Gumuz: {{nspk1|guk}}, in [[ps:Latn|Latin]] since 2007.</p>
      </orig>
     </text>
    </group>

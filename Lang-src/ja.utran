@@ -1149,6 +1149,11 @@
      <au-cmt>Test: Nag</au-cmt>
      <transl>{2} 時点のインドにおける {1}</transl>
     </text>
+    <text id="QtyTotal">
+     <orig>total {1} as of {2}</orig>
+     <au-cmt>Test: Ethi A, Gamo-Gofa-Dawro</au-cmt>
+     <transl>{2} 年時点で合計 {1}</transl>
+    </text>
     <text id="Year" force-attention="true">
      <orig>{1}</orig>
      <au-cmt>
@@ -1158,7 +1163,7 @@
      </au-cmt>
      <transl>{1}</transl>
     </text>
-    <text id="Decade">
+    <text id="Decade" force-attention="true">
      <orig>{1}s</orig>
      <transl>{1}s</transl>
     </text>
@@ -2880,15 +2885,15 @@
     <text id="Text">
      <orig>
       <p>Letters for languages:</p>
-      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, total 2M as of 2007;</p>
-      <p>* Basketo: 93k as of 2007;</p>
-      <p>* Gumuz: 250k as of 2007–2017, in [[ps:Latn|Latin]] since 2007.</p>
+      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, {{nspk1|gof}};</p>
+      <p>* Basketo: {{nspk1|bst}};</p>
+      <p>* Gumuz: {{nspk1|guk}}, in [[ps:Latn|Latin]] since 2007.</p>
      </orig>
      <transl>
       <p>言語の文字 :</p>
-      <p>* ガモ・ゴファ・ダウロ: 3 つの民族グループ、1 つの言語、2007 年時点で合計 200 万人。</p>
-      <p>* バスケット語: 2007 年時点で 93,000 人。</p>
-      <p>* グムズ語: 2007 年から 2017 年時点で 250,000 人、2007 年以降は [[ps:Latn|ラテン文字]] で表記。</p>
+      <p>* ガモ・ゴファ・ダウロ: 3 つの民族グループ、1 つの言語、{{nspk1|gof}}。</p>
+      <p>* バスケット語: {{nspk1|bst}}。</p>
+      <p>* グムズ語: {{nspk1|guk}}、2007 年以降は [[ps:Latn|ラテン文字]] で表記。</p>
      </transl>
     </text>
    </group>
