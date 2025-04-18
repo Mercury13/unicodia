@@ -168,6 +168,9 @@
 @%SEVENZIP% x MiscFiles\OpenSsl_1.1.1zb.zip -o%DEPLOY%
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
+@copy MiscFiles\WinManifest\Unicodia.VisualElementsManifest.xml %DEPLOY%
+@md %DEPLOY%\Start
+@copy MiscFiles\WinManifest\Start\*.png %DEPLOY%\Start
 @if [%WORKAROUND%] == [] goto no_workaround
 @%SEVENZIP% x MiscFiles\%WORKAROUND% -o%DEPLOY%
 :no_workaround
