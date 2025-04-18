@@ -116,6 +116,7 @@ public:
     const uc::SearchLine* lineAt(const QModelIndex& index) const;
 protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 private:
     uc::ReplyStyle style = uc::ReplyStyle::FLAT;
     uc::EcVersion version = uc::EcVersion::NO_VALUE;
@@ -131,7 +132,7 @@ private:
 };
 
 
-class LibModel final : public QAbstractItemModel
+class LibModel final : public QAbstractItemModel, public QStyledItemDelegate
 {
 public:
     LibModel(const PixSource* aSample) : sample(aSample) {}
@@ -145,6 +146,8 @@ public:
     const uc::LibNode& nodeAt(const QModelIndex& index) const;
     QModelIndex indexOf(const uc::LibNode& node);
     static CharTiles getCharTiles(const uc::LibNode& node);
+    // QStyledItemDelegate
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;

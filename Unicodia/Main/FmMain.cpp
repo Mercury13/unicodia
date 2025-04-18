@@ -709,6 +709,13 @@ void SearchModel::initStyleOption(
 }
 
 
+QSize SearchModel::sizeHint(const QStyleOptionViewItem & option, const QModelIndex&) const
+{
+    auto sz = option.decorationSize.height() + 2;
+    return {sz, sz };
+}
+
+
 ///// LibModel /////////////////////////////////////////////////////////////////
 
 #define STMT(x) x;    // NOLINT(bugprone-macro-parentheses)
@@ -786,6 +793,12 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
     default:
         return {};
     }
+}
+
+QSize LibModel::sizeHint(const QStyleOptionViewItem & option, const QModelIndex&) const
+{
+    auto sz = option.decorationSize.height() + 2;
+    return {sz, sz };
 }
 
 #undef GETNODE
@@ -1138,6 +1151,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
+    ui->treeLibrary->setItemDelegate(&libModel);
     ui->treeLibrary->setIconSize(pixQsize());
 
     // Divider
@@ -2023,7 +2037,9 @@ void FmMain::blockOrderChanged()
 
 int FmMain::pixSize() const
 {
-    return ISZ_LIST;
+    auto& fn = font();
+    QFontMetrics metrics{fn};
+    return std::max(ISZ_LIST, (metrics.ascent() + metrics.descent()) * 3);
 }
 
 

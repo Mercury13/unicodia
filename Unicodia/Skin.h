@@ -12,7 +12,7 @@ constexpr int FSZ_BIG = 50;
 
 // alpha of search/emoji border
 /// @todo [hidpi] When DPI is really high, make it more opaque
-constexpr int ALPHA_BORDER = 40;
+constexpr int ALPHA_BORDER = 30;
 // Alpha of international char’s BG
 constexpr int ALPHA_INTERNATIONAL = 15;
 
