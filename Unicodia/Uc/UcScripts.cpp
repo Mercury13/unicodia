@@ -945,6 +945,14 @@ extern const uc::SideLang uc::sideLangInfo[] {
     { .id = "as",   // Assamese ← Beng
       .lang { .mantissa = 15, .numOrder = NumOrder::MILLION, .year = 2011 } },
                     // 2011 census in India
+    { .id = "bcq",  // Bench ← Ethi
+      .lang { .mantissa = 35, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::AS_NATIVE, .year = 2007,
+              .locations { LOC_ETHIOPIA } } },
+                    // Ethnologue ← 2007 census
+    { .id = "byn",  // Bilen ← Ethi
+      .lang { .mantissa = 72, .numOrder = NumOrder::THOUSAND, .year = 2022,
+              .locations { LOC_ETHIOPIA } } },
+                    // Ethnologue’s estimate
     { .id = "es",   // Spanish ← Latn
       .lang { .mantissa = 6, .numOrder = NumOrder::HUN_MILLION, .year = 2023 } },
                     // Estimate by Cervantes institute
@@ -958,6 +966,10 @@ extern const uc::SideLang uc::sideLangInfo[] {
       .lang { .mantissa = 1, .numOrder = NumOrder::MILLION, .flags = Langfg::LESS_THAN, .year = 2012,
               .locations { LOC_MYANMAR } } },
                     // The greatest of known estimates (UNSD 2012)
+    { .id = "mym",  // Mekan ← Ethi
+      .lang { .mantissa = 15, .numOrder = NumOrder::DEC_THOU, .year = 2007,
+              .locations { LOC_ETHIOPIA } } },
+                    // 2007 census
     { .id= "sgw",   // Sebat Beit ← Ethi
       .lang { .mantissa = 15, .hiMantissa = 22, .numOrder = NumOrder::HUN_THOU, .year = 2022,
               .locations { LOC_ETHIOPIA } } },

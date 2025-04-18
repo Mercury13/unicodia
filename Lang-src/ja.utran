@@ -2388,16 +2388,16 @@
     <text id="Text">
      <orig>
       <p>Ethiopic script for languages:</p>
-      <p>* Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin]] since 2009;</p>
-      <p>* Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin since 1990s;</p>
-      <p>* Bench: Omotic family, 350k as of 2007, in Latin since 2008;</p>
+      <p>* Mekan: Nilo-Saharan family, {{nspk1|mym}}, in [[ps:Latn|Latin]] since 2009;</p>
+      <p>* Blin (=Bilen): Cushitic family, {{nspk1|byn}}, in Latin since 1990s;</p>
+      <p>* Bench: Omotic family, {{nspk1|bcq}}, in Latin since 2008;</p>
       <p>* Sebat Bet: Ethiosemitic branch, {{nspk1|sgw}}.</p>
      </orig>
      <transl>
       <p>エチオピア語の言語用文字 :</p>
-      <p>* Mekan: ナイル・サハラ語族、2007 年時点で 15 万語、2009 年からは [[ps:Latn|ラテン語]] で表記。</p>
-      <p>* Blin (=Bilen): クシ語族、2006 年時点で 91 万語、1990 年代からはラテン語で表記。</p>
-      <p>* Bench: オモティック語族、2007 年時点で 35 万語、2008 年からはラテン語で表記。</p>
+      <p>* Mekan: ナイル・サハラ語族、{{nspk1|mym}}、2009 年からは [[ps:Latn|ラテン語]] で表記。</p>
+      <p>* Blin (=Bilen): クシ語族、{{nspk1|byn}}、1990 年代からはラテン語で表記。</p>
+      <p>* Bench: オモティック語族、{{nspk1|bcq}}、2008 年からはラテン語で表記。</p>
       <p>* Sebat Bet: エチオピアセム語派、{{nspk1|sgw}}。</p>
      </transl>
     </text>

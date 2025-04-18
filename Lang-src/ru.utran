@@ -2388,16 +2388,16 @@
     <text id="Text">
      <orig>
       <p>Ethiopic script for languages:</p>
-      <p>* Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin]] since 2009;</p>
-      <p>* Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin since 1990s;</p>
-      <p>* Bench: Omotic family, 350k as of 2007, in Latin since 2008;</p>
+      <p>* Mekan: Nilo-Saharan family, {{nspk1|mym}}, in [[ps:Latn|Latin]] since 2009;</p>
+      <p>* Blin (=Bilen): Cushitic family, {{nspk1|byn}}, in Latin since 1990s;</p>
+      <p>* Bench: Omotic family, {{nspk1|bcq}}, in Latin since 2008;</p>
       <p>* Sebat Bet: Ethiosemitic branch, {{nspk1|sgw}}.</p>
      </orig>
      <transl>
       <p>Эфиопское письмо для языков:</p>
-      <p>* мекан: кир-аббайская семья, 150{{_}}тыс. на 2007, с 2009 перешёл на [[ps:Latn|латиницу]];</p>
-      <p>* билин: кушитская семья, 91{{_}}тыс. на 2006, с 1990‑х полностью на латинице;</p>
-      <p>* бенч: омотская семья, 350{{_}}тыс. на 2007, с 2008 на латинице;</p>
+      <p>* мекан: кир-аббайская семья, {{nspk1|mym}, с 2009 перешёл на [[ps:Latn|латиницу]];</p>
+      <p>* билин: кушитская семья, {{nspk1|byn}}, с 1990‑х полностью на латинице;</p>
+      <p>* бенч: омотская семья, {{nspk1|bcq}}, с 2008 на латинице;</p>
       <p>* себат-бет: эфиосемитская ветвь, {{nspk1|sgw}}.</p>
      </transl>
     </text>

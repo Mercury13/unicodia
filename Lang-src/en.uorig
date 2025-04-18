@@ -1826,9 +1826,9 @@
     <text id="Text">
      <orig>
       <p>Ethiopic script for languages:</p>
-      <p>* Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin]] since 2009;</p>
-      <p>* Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin since 1990s;</p>
-      <p>* Bench: Omotic family, 350k as of 2007, in Latin since 2008;</p>
+      <p>* Mekan: Nilo-Saharan family, {{nspk1|mym}}, in [[ps:Latn|Latin]] since 2009;</p>
+      <p>* Blin (=Bilen): Cushitic family, {{nspk1|byn}}, in Latin since 1990s;</p>
+      <p>* Bench: Omotic family, {{nspk1|bcq}}, in Latin since 2008;</p>
       <p>* Sebat Bet: Ethiosemitic branch, {{nspk1|sgw}}.</p>
      </orig>
     </text>
