@@ -23,7 +23,7 @@ void WiCpImage::paintEvent(QPaintEvent *event)
     if (cp) {
         auto winColor = palette().text().color();
         QPainter painter(this);
-        drawChar(&painter, rect(), 100, *cp, winColor,
+        drawChar(&painter, rect(), FSZ_TABLE, 100, *cp, winColor,
                  TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE, *glyphSets);
     }
 }

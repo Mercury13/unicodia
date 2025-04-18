@@ -6,6 +6,8 @@
 // Colors, sizes etc that are NOT derived from system
 
 constexpr int FSZ_TABLE = 15;
+constexpr int FSZ_LIST = 14;
+constexpr int ISZ_LIST = 36;  // icon size: 15→39, 14→?
 constexpr int FSZ_BIG = 50;
 
 // alpha of search/emoji border

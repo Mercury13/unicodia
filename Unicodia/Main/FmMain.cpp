@@ -2023,9 +2023,7 @@ void FmMain::blockOrderChanged()
 
 int FmMain::pixSize() const
 {
-    auto& fn = font();
-    QFontMetrics metrics{fn};
-    return (metrics.ascent() + metrics.descent()) * 3;
+    return ISZ_LIST;
 }
 
 

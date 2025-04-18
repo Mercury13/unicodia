@@ -89,7 +89,8 @@ void VirtualCharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, WiShowcase::EMOJI_DRAW, glyphSets);
+        ::drawChar(painter, rect, FSZ_TABLE, 100, *ch, color1, TABLE_DRAW,
+                   WiShowcase::EMOJI_DRAW, glyphSets);
     }
 }
 
@@ -136,7 +137,7 @@ void VirtualCharsModel::paintItem(
 std::optional<QFont> VirtualCharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, glyphSets);
+        return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, FSZ_TABLE, glyphSets);
     return {};
 }
 

@@ -871,9 +871,8 @@ void drawSpace(
 
 
 std::optional<QFont> fontAt(
-        uc::DrawMethod drawMethod,
-        int sizePc,
-        const uc::Cp& cp)
+        uc::DrawMethod drawMethod, int sizePt,
+        int sizePc, const uc::Cp& cp)
 {
     if (drawMethod > uc::DrawMethod::LAST_FONT)
         return {};
@@ -883,7 +882,7 @@ std::optional<QFont> fontAt(
         flags |= uc::FontGetFg::NO_AA;
     if (cp.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         flags |= uc::FontGetFg::KNOWN_TOFU;
-    auto r = font->get(uc::FontPlace::CELL, FSZ_TABLE * sizePc / 100,
+    auto r = font->get(uc::FontPlace::CELL, sizePt * sizePc / 100,
                     flags, &cp);
     if (sizePc <= 80 && font->flags.have(uc::Ffg::NOHINT_TINY))
         r.setHintingPreference(QFont::PreferNoHinting);
@@ -893,10 +892,10 @@ std::optional<QFont> fontAt(
 
 std::optional<QFont> fontAt(
         uc::EmojiDraw emojiMode, const uc::Cp& cp,
-        const uc::GlyphStyleSets& glyphSets)
+        int sizePt, const uc::GlyphStyleSets& glyphSets)
 {
     auto method = cp.drawMethod(emojiMode, glyphSets);
-    return fontAt(method, 100, cp);
+    return fontAt(method, sizePt, 100, cp);
 }
 
 
@@ -904,11 +903,12 @@ constexpr int EMOJI_NUM = 4;
 constexpr int EMOJI_DEN = 5;
 
 
-void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
+void drawSample(QPainter* painter, QRect rect, int sizePt,
+                int sizePc, const uc::Cp& cp,
                 const QColor& color, uc::EmojiDraw emojiMode,
                 const uc::GlyphStyleSets& glyphSets, float offset)
 {
-    auto font = fontAt(uc::DrawMethod::SAMPLE, sizePc, cp);
+    auto font = fontAt(uc::DrawMethod::SAMPLE, sizePt, sizePc, cp);
     if (font)
         painter->setFont(*font);
     painter->setBrush(color);
@@ -927,8 +927,8 @@ void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
 
 namespace {
 
-    void drawMultiSample(QPainter* painter, QRect rect, int sizePc, std::u32string_view s,
-                    const QColor& color)
+    void drawMultiSample(QPainter* painter, QRect rect, int sizePt,
+                    int sizePc, std::u32string_view s, const QColor& color)
     {
         if (s.empty())
             return;
@@ -937,7 +937,7 @@ namespace {
             c = s[1];
         }
         auto cp = uc::cpsByCode[c];
-        auto font = fontAt(uc::DrawMethod::SAMPLE, sizePc, *cp);
+        auto font = fontAt(uc::DrawMethod::SAMPLE, sizePt, sizePc, *cp);
         if (font)
             painter->setFont(*font);
         painter->setBrush(color);
@@ -951,14 +951,15 @@ namespace {
 
 
 void drawChar(
-        QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
-        const uc::GlyphStyleSets& glyphSets, UseMargins useMargins)
+        QPainter* painter, const QRect& rect, int sizePt, int sizePc,
+        const uc::Cp& cp, const QColor& color, TableDraw tableMode,
+        uc::EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets,
+        UseMargins useMargins)
 {
     auto method = cp.drawMethod(emojiMode, glyphSets);
     switch (method) {
     case uc::DrawMethod::VIRTUAL_VIRAMA:
-        drawVirtualVirama(painter, rect, color, FSZ_TABLE, cp);
+        drawVirtualVirama(painter, rect, color, sizePt, cp);
         break;
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
@@ -967,26 +968,26 @@ void drawChar(
         drawAbbreviation(painter, rect, cp.abbrev(), color);
         break;
     case uc::DrawMethod::SPACE:
-        drawSpace(painter, rect, *fontAt(method, sizePc, cp), color, cp.subj);
+        drawSpace(painter, rect, *fontAt(method, sizePt, sizePc, cp), color, cp.subj);
         break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             auto proxy = cp.sampleProxy(uc::ProxyType::EXTENDED,
                         uc::EmojiDraw::MOSTLY_TEXT, uc::GlyphStyleSets::EMPTY);
-            drawVertical(painter, rect, *fontAt(method, sizePc, cp), angle, color,
+            drawVertical(painter, rect, *fontAt(method, sizePt, sizePc, cp), angle, color,
                          proxy.text);
         } break;
     case uc::DrawMethod::MARCHEN:
-        drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, -0.3);
+        drawSample(painter, rect, sizePt, sizePc, cp, color, emojiMode, glyphSets, -0.3);
         break;
     case uc::DrawMethod::SAMPLED_CONTROL:
         drawControlFrame(painter, rect, color, Thinner::NO);
-        drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
+        drawSample(painter, rect, sizePt, sizePc, cp, color, emojiMode, glyphSets, 0);
         break;
     case uc::DrawMethod::SAMPLE:
         if (tableMode != TableDraw::INTERNAL) {
-            drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
+            drawSample(painter, rect, sizePt, sizePc, cp, color, emojiMode, glyphSets, 0);
         }
         if (cp.isVs16Emoji() && tableMode != TableDraw::LIBRARY) {
             drawEmojiIcon(painter, rect, cp.subj);
@@ -1013,11 +1014,11 @@ void drawIconChars(
     switch (s.length()) {
     case 0: break;
     case 1:
-        drawChar(painter, rect, sizePc, *uc::cpsByCode[s[0]], color, TableDraw::CUSTOM,
+        drawChar(painter, rect, FSZ_LIST, sizePc, *uc::cpsByCode[s[0]], color, TableDraw::CUSTOM,
                 uc::EmojiDraw::GRAPHIC, uc::GlyphStyleSets::EMPTY);
         break;
     default:
-        drawMultiSample(painter, rect, sizePc, s, color);
+        drawMultiSample(painter, rect, FSZ_LIST, sizePc, s, color);
     }
 }
 
@@ -1054,7 +1055,8 @@ void drawSearchChar(
 {
     drawCharBorder(painter, rect, color);
     if (cp)
-        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::SEARCH, emojiMode, glyphSets);
+        drawChar(painter, rect, FSZ_LIST, lround(100 * scale), *cp, color,
+                 TableDraw::SEARCH, emojiMode, glyphSets);
 }
 
 
@@ -1072,7 +1074,8 @@ void drawSearchChars(
     ///    (all multi-chars are emoji)
     if (c1.mayBeText(emojiMode)) {
         if (auto cp = uc::cpsByCode[c1.cp])
-            drawChar(painter, rect, lround(100 * scale), *cp, color, tableDraw, emojiMode, glyphSets);
+            drawChar(painter, rect, FSZ_LIST, lround(100 * scale), *cp, color,
+                     tableDraw, emojiMode, glyphSets);
     } else {
         // Graphic
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
@@ -1123,7 +1126,7 @@ void drawCharTiles(
         if (auto c1 = EmojiPainter::getCp(tile.text); c1.mayBeText()) {
             // Single-char
             if (auto cp = uc::cpsByCode[c1.cp])
-                drawChar(painter, r2, percent, *cp, color, TableDraw::LIBRARY,
+                drawChar(painter, r2, FSZ_LIST, percent, *cp, color, TableDraw::LIBRARY,
                          tile.emojiDraw, glyphSets, UseMargins::NO);
         } else {
             // Multi-char

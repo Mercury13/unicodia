@@ -16,6 +16,7 @@
 #include "UcSkin.h"
 
 // Char paint
+#include "Skin.h"
 #include "routines.h"
 
 ///// Util /////////////////////////////////////////////////////////////////////
@@ -574,11 +575,11 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW | uc::Ifg::ROTATE_RTL_CCW)) {
         // Draw direction
         int direction = -90;
-        if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW))
+        if (si.flags.have(uc::Ifg::ROTATE_LTR_CW))
             direction = 90;
         auto firstChar = si.subj.v[0];
         const uc::Cp& firstCp = *uc::cpsByCode[firstChar];
-        auto font = fontAt(uc::DrawMethod::SAMPLE, size, firstCp);
+        auto font = fontAt(uc::DrawMethod::SAMPLE, FSZ_LIST, size, firstCp);
         drawVertical(painter, rcContent, *font, direction, clFg, str::toQ(sample));
     } else {
         // Synth icon always draws in default settings

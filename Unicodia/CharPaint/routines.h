@@ -21,8 +21,8 @@ struct RcPair {
     RcPair(const QRectF& rcFrame, qreal quo);
 };
 
-void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
-                const QColor& color, uc::EmojiDraw emojiMode,
+void drawSample(QPainter* painter, QRect rect, int sizePt, int sizePc,
+                const uc::Cp& cp, const QColor& color, uc::EmojiDraw emojiMode,
                 const uc::GlyphStyleSets& glyphSets, float offset);
 
 void drawSample(QPainter* painter, QRect rect, TinyOpt<QFont> font, const uc::Cp& cp,
@@ -72,10 +72,10 @@ enum class TableDraw {
 
 std::optional<QFont> fontAt(
         uc::EmojiDraw emojiMode, const uc::Cp& cp,
-        const uc::GlyphStyleSets& glyphSets);
+        int sizePt, const uc::GlyphStyleSets& glyphSets);
 std::optional<QFont> fontAt(
-        uc::DrawMethod drawMethod, int sizePc,
-        const uc::Cp& cp);
+        uc::DrawMethod drawMethod, int sizePt,
+        int sizePc, const uc::Cp& cp);
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
@@ -86,9 +86,9 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 enum class UseMargins { NO, YES };
 
 void drawChar(
-        QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
-        const uc::GlyphStyleSets& glyphSets,
+        QPainter* painter, const QRect& rect, int sizePt, int sizePc,
+        const uc::Cp& cp, const QColor& color, TableDraw tableMode,
+        uc::EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets,
         UseMargins useMargins = UseMargins::YES);
 
 void drawIconChars(
