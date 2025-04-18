@@ -26,8 +26,8 @@ namespace {
 WiOsStyle::WiOsStyle(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WiOsStyle),
-    fontBig(str::toQ(FACE_DEFAULT), FSZ_BIG),
-    fontTofu(str::toQ(FACE_TOFU), FSZ_BIG)
+    fontBig(str::toQ(FACE_DEFAULT), static_cast<int>(Fsz::BIG)),
+    fontTofu(str::toQ(FACE_TOFU), static_cast<int>(Fsz::BIG))
 {
     ui->setupUi(this);
 
@@ -35,7 +35,7 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
     fontTofu.setStyleStrategy(fst::TOFU);
 
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, nullptr));
+    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, static_cast<int>(Fsz::BIG), NO_FLAGS, nullptr));
 
     connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::slotLinkActivated);
 }
@@ -87,7 +87,7 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
             ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
         } else {
             QFontDatabase::WritingSystem ws = ch.scriptEx().qtCounterpart;
-            auto font = fontMatch.sysFontFor(ch, ws, FSZ_BIG);
+            auto font = fontMatch.sysFontFor(ch, ws, static_cast<int>(Fsz::BIG));
             if (font) {
                 char buf[300];
                 ui->lbOs->setFont(*font);
@@ -144,10 +144,10 @@ void WiOsStyle::setEmojiText(std::u32string_view text, FontMatch& fontMatch)
     std::optional<QFont> font;
     if (char0 <= 0xFFFF) {
         // BMP emoji, really old
-        font = fontMatch.sysFontFor(SOME_EMOJI, FSZ_BIG);
+        font = fontMatch.sysFontFor(SOME_EMOJI, static_cast<int>(Fsz::BIG));
     } else {
         // SMP emoji
-        font = fontMatch.sysFontFor(char0, FSZ_BIG);
+        font = fontMatch.sysFontFor(char0, static_cast<int>(Fsz::BIG));
     }
     if (font) {
         ui->lbOs->setFont(*font);

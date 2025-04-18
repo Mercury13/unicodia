@@ -10,6 +10,9 @@
 #include "UcData.h"
 #include "global.h"
 
+/// @todo [future] skin?
+#include "Skin.h"
+
 class QPainter;
 class QColor;
 
@@ -21,7 +24,7 @@ struct RcPair {
     RcPair(const QRectF& rcFrame, qreal quo);
 };
 
-void drawSample(QPainter* painter, QRect rect, int sizePt, int sizePc,
+void drawSample(QPainter* painter, QRect rect, Fsz sizePt, int sizePc,
                 const uc::Cp& cp, const QColor& color, uc::EmojiDraw emojiMode,
                 const uc::GlyphStyleSets& glyphSets, float offset);
 
@@ -48,7 +51,7 @@ void drawSpace(
 
 void drawVirtualVirama(
         QPainter* painter, const QRect& rect,
-        const QColor& color, int absSize, const uc::Cp& cp);
+        const QColor& color, Fsz absSize, const uc::Cp& cp);
 
 void drawSampledControl(
         QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
@@ -73,9 +76,18 @@ enum class TableDraw {
 std::optional<QFont> fontAt(
         uc::EmojiDraw emojiMode, const uc::Cp& cp,
         int sizePt, const uc::GlyphStyleSets& glyphSets);
+inline std::optional<QFont> fontAt(
+        uc::EmojiDraw emojiMode, const uc::Cp& cp,
+        Fsz sizePt, const uc::GlyphStyleSets& glyphSets)
+    { return fontAt(emojiMode, cp, static_cast<int>(sizePt), glyphSets); }
+
 std::optional<QFont> fontAt(
         uc::DrawMethod drawMethod, int sizePt,
         int sizePc, const uc::Cp& cp);
+inline std::optional<QFont> fontAt(
+        uc::DrawMethod drawMethod, Fsz sizePt,
+        int sizePc, const uc::Cp& cp)
+    { return fontAt(drawMethod, static_cast<int>(sizePt), sizePc, cp); }
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
@@ -83,10 +95,10 @@ void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
 /// Draws murky rect with border of unallocated / reserved international
 void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
-enum class UseMargins { NO, YES };
+enum class UseMargins : unsigned char { NO, YES };
 
 void drawChar(
-        QPainter* painter, const QRect& rect, int sizePt, int sizePc,
+        QPainter* painter, const QRect& rect, Fsz sizePt, int sizePc,
         const uc::Cp& cp, const QColor& color, TableDraw tableMode,
         uc::EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets,
         UseMargins useMargins = UseMargins::YES);
@@ -121,7 +133,7 @@ void drawFolderTile(
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 
 void drawCharOverEmoji(
-        QPainter* painter, const QRect& rect, int absSize,
+        QPainter* painter, const QRect& rect, Fsz absSize,
         const QColor& color, char32_t subj);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);

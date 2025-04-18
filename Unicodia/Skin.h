@@ -5,10 +5,12 @@
 
 // Colors, sizes etc that are NOT derived from system
 
-constexpr int FSZ_TABLE = 15;
-constexpr int FSZ_LIST = 14;
+enum class Fsz : unsigned char {    // font size
+    TABLE = 15,
+    LIST = 14,
+    BIG = 50,
+};
 constexpr int ISZ_LIST = 36;  // icon size: 15→39, 14→?
-constexpr int FSZ_BIG = 50;
 
 // alpha of search/emoji border
 /// @todo [hidpi] When DPI is really high, make it more opaque

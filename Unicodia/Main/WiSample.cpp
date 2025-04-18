@@ -52,7 +52,7 @@ const uc::Font* WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& match
     Flags<uc::FontGetFg> fgs;
     if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         fgs |= uc::FontGetFg::KNOWN_TOFU;
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, &ch);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, static_cast<int>(Fsz::BIG), fgs, &ch);
     ui->lbSample->setFont(qfont);
     return font;
 }
@@ -122,7 +122,7 @@ void WiSample::showBriefly(const uc::Font* font)
 QFont WiSample::showCpBriefly(const uc::Cp& ch)
 {
     auto font = ch.font(match::Normal::INST);
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, &ch);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, static_cast<int>(Fsz::BIG), uc::FontGetFg::FAST, &ch);
     if (!font->flags.have(uc::Ffg::GRAPHIC_SAMPLE)) {
         ui->lbSample->setFont(qfont);
         showBriefly(font);
@@ -211,7 +211,7 @@ void WiSample::showCp(
                 Flags<uc::FontGetFg> fgs;
                 if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
                     fgs |= uc::FontGetFg::KNOWN_TOFU;
-                auto qfont = retFont->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, &ch);
+                auto qfont = retFont->get(uc::FontPlace::SAMPLE, static_cast<int>(Fsz::BIG), fgs, &ch);
                 ui->pageSampleCustom->setGraphicSample(qfont, proxy);
             }
             headToSample();

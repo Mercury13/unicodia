@@ -192,7 +192,7 @@ private:
     LibModel libModel;
     FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
-    QFont fontBig, fontTofu;
+    QFont fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
                 *btRemoveFromFavs = nullptr;

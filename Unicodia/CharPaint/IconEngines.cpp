@@ -579,7 +579,7 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
             direction = 90;
         auto firstChar = si.subj.v[0];
         const uc::Cp& firstCp = *uc::cpsByCode[firstChar];
-        auto font = fontAt(uc::DrawMethod::SAMPLE, FSZ_LIST, size, firstCp);
+        auto font = fontAt(uc::DrawMethod::SAMPLE, Fsz::LIST, size, firstCp);
         drawVertical(painter, rcContent, *font, direction, clFg, str::toQ(sample));
     } else {
         // Synth icon always draws in default settings
