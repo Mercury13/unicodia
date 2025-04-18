@@ -1006,6 +1006,19 @@ namespace {
     }
 
     template <std::integral T>
+    std::u8string_view printNum(T x, char* buf, size_t n)
+    {
+        auto q = std::to_chars(buf, buf + n, x);
+        return str::toU8sv(std::string_view{ buf, q.ptr });
+    }
+
+    template <std::integral T, size_t N>
+    inline std::u8string_view printNum(T x, char (&buf)[N])
+    {
+        return printNum<T>(x, buf, N);
+    }
+
+    template <std::integral T>
     std::u8string formatNum(T x, Subf subformat, mywiki::NumPlace place)
     {
         char tmp[30];
@@ -1151,13 +1164,14 @@ namespace {
                     sNum = "&lt;" + sNum;
                 }
                 if (lang->year != 0) {
-                    std::u8string sYear = str::toU8(std::to_string(lang->year));
+                    char buf[10];
+                    std::u8string sYear { printNum(lang->year, buf) };
                     if (lang->flags.have(uc::Langfg::DECADE)) {
                         sYear = loc::get("Prop.Lang.Decade").arg(sYear);
                     } else {
                         if (lang->year2 != 0) {
                             sYear = str::cat(sYear, loc::active::punctuation.yearRange,
-                                             str::toU8sv(std::to_string(lang->year2)));
+                                             printNum(lang->year2, buf));
                         }
                         sYear = loc::get("Prop.Lang.Year").arg(sYear);
                     }
