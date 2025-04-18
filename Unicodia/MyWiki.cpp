@@ -981,7 +981,7 @@ namespace {
                 return str::cat(
                         formatThousand<char>(sv.substr(0, whereDivide), Subf::DENSE, mywiki::NumPlace::HTML),
                         iinfo.biggerUnit,
-                        formatThousand<char>(sv.substr(firstNon0),    Subf::DENSE, mywiki::NumPlace::HTML));
+                        formatThousand<char>(sv.substr(firstNon0),      Subf::DENSE, mywiki::NumPlace::HTML));
             } else {
                 return formatThousand<char>(s, Subf::DENSE, mywiki::NumPlace::HTML);
             }
@@ -1006,14 +1006,27 @@ namespace {
     }
 
     template <std::integral T>
-    std::u8string_view printNum(T x, char* buf, size_t n)
+    std::u8string_view printNum8(T x, char* buf, size_t n)
     {
         auto q = std::to_chars(buf, buf + n, x);
         return str::toU8sv(std::string_view{ buf, q.ptr });
     }
 
     template <std::integral T, size_t N>
-    inline std::u8string_view printNum(T x, char (&buf)[N])
+    inline std::u8string_view printNum8(T x, char (&buf)[N])
+    {
+        return printNum8<T>(x, buf, N);
+    }
+
+    template <std::integral T>
+    std::string_view printNum(T x, char* buf, size_t n)
+    {
+        auto q = std::to_chars(buf, buf + n, x);
+        return { buf, q.ptr };
+    }
+
+    template <std::integral T, size_t N>
+    inline std::string_view printNum(T x, char (&buf)[N])
     {
         return printNum<T>(x, buf, N);
     }
@@ -1165,13 +1178,13 @@ namespace {
                 }
                 if (lang->year != 0) {
                     char buf[10];
-                    std::u8string sYear { printNum(lang->year, buf) };
+                    std::u8string sYear { printNum8(lang->year, buf) };
                     if (lang->flags.have(uc::Langfg::DECADE)) {
                         sYear = loc::get("Prop.Lang.Decade").arg(sYear);
                     } else {
                         if (lang->year2 != 0) {
                             sYear = str::cat(sYear, loc::active::punctuation.yearRange,
-                                             printNum(lang->year2, buf));
+                                             printNum8(lang->year2, buf));
                         }
                         sYear = loc::get("Prop.Lang.Year").arg(sYear);
                     }
@@ -1741,7 +1754,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             if (x.plane == uc::PLANE_BASE) {
                 str::append(text, loc::get("Prop.Bullet.base"));
             } else {
-                str::append(text, std::to_string(x.plane));
+                str::append(text, printNum(x.plane, buf));
             }
         }
 
