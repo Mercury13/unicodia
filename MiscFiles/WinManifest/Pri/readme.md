@@ -1,0 +1,1 @@
+Making special resource for smaller resolutions failed. Who can — help me.
