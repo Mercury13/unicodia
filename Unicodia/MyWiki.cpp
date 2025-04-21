@@ -3000,7 +3000,7 @@ namespace {
         return r;
     }
 
-    void appendUnicodeName(
+    void appendVersionName(
             str::QSep& sp, std::u8string_view name,
             const uc::CoarseDate& date,
             std::u8string_view altName)
@@ -3072,12 +3072,12 @@ QString mywiki::buildHtml(const uc::Version& version)
     text += "<p>";
     { str::QSep sp(text, "<br>");
         if (version.otherEmojiDate) {
-            appendUnicodeName(sp, version.locLongName(), version.date, {});
-            appendUnicodeName(sp,
+            appendVersionName(sp, version.locLongName(), version.date, {});
+            appendVersionName(sp,
                     loc::get("Prop.Head.Em").arg(version.emojiName),
                              version.otherEmojiDate, {});
         } else {
-            appendUnicodeName(sp, version.locLongName(), version.date,
+            appendVersionName(sp, version.locLongName(), version.date,
                               version.emojiName);
         }
     }
