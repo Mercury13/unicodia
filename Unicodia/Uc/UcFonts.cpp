@@ -171,7 +171,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
-      { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 125_pc }, // …6
+      { "PlangothicP2-Regular.ttf",                                             // …6
+                Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
+                15_top, 125_pc },
       { FNAME_UNIHAN, 120_pc },                                                 // …7 for tofu
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1, backed with Unicodia
       { FNAME_UNIHAN, 120_pc },                                                 // …1
