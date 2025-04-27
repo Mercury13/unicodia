@@ -41,6 +41,7 @@ SOURCES += \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
+    FmFontSupport.cpp \
     Main/FmMain.cpp \
     Main/MainGui.cpp \
     Main/WiLibCp.cpp \
@@ -119,6 +120,7 @@ HEADERS += \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
     CharPaint/emoji.h \
+    FmFontSupport.h \
     LocDefs.h \
     Main/FmMain.h \
     Main/MainGui.h \
@@ -158,6 +160,7 @@ HEADERS += \
     d_Config.h
 
 FORMS += \
+    FmFontSupport.ui \
     Main/FmMain.ui \
     Main/WiLibCp.ui \
     Main/WiOsStyle.ui \

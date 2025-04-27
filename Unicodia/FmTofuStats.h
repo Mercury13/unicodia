@@ -39,7 +39,7 @@ namespace tofu
 
         SafeVector<int> build(uc::SvgChecker& svgChecker);
     private:
-        enum {
+        enum : unsigned char {
             COL_TOTAL,
             COL_OTHER,
             COL_GOOD,
