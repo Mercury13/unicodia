@@ -9355,6 +9355,12 @@
     <text id="SimLatn">
      <orig>Similar Latin</orig>
     </text>
+    <text id="Ui">
+     <orig>User interfaces</orig>
+    </text>
+    <text id="Keyb">
+     <orig>Keyboard</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

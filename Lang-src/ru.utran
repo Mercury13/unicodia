@@ -13425,6 +13425,14 @@
      <orig>Similar Latin</orig>
      <transl>Сходные латинские</transl>
     </text>
+    <text id="Ui">
+     <orig>User interfaces</orig>
+     <transl>Интерфейсы пользователя</transl>
+    </text>
+    <text id="Keyb">
+     <orig>Keyboard</orig>
+     <transl>Клавиатура</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

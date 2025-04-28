@@ -777,6 +777,8 @@
 		<f loc="Electro">
 			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ∿ ⏦ ⏧ ⏚ ⏛ 𜰈 𜰎 𜰏 𜰐 𜰑 𜰓 𜰔 𜰕 𜰖 𜰙 𜰚</d>
 		</f>
+	</f>
+	<f loc="Ui">
 		<f loc="OnOff">
 			<sq v="⏻" name="partial on/off" />
 			<sq v="⏾" name="partial off, sleep mode" />
@@ -785,13 +787,16 @@
 			<sq v="⏽" name="on" />			
 			<d>☐ ☑ ☒</d>
 		</f>
-	</f>
-	<f loc="Game">
 		<f loc="GameConsole">
 			<f loc="ConsoleMisc"><d>🎮 🕹️ ⬆️ ➡️ ⬇️ ⬅️ ↕️ ↔️ 🔴 🟡 🟢 🔵</d></f>
 			<f name="Xbox"><d>Ⓐ Ⓑ Ⓧ Ⓨ ⧉ ≡</d></f>
 			<f name="PlayStation"><d>🞩 ⚪︎ 🞎 △ 🗤 ≡ ⊗ ⌾ 🟗 🟕</d></f>
 		</f>
+		<f loc="Keyb">
+			<d>␣ ⌫ ⌦ ⏎ ↵ ↲ ⤶ ⌘ ⌥ ⇧ ⇪ ⇬ ⇥ ↹ ⭾ ⊞</d>
+		</f>
+	</f>
+	<f loc="Game">
 		<f loc="Chess">
 			<f loc="ChPieses"><d>♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟</d></f>
 			<f loc="ChInvert"><d>🨞 🨟 🨠 🨡 🨢 🨣 🨤 🨥 🨦 🨧 🨨 🨩</d></f>
