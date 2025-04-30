@@ -94,7 +94,7 @@ char32_t recodePseudographica(char32_t x)
 
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …1
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …4
@@ -102,21 +102,21 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
       { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
-      { FAM_FUNKY },                                                          // …1
+      { FAM_FUNKY },                                                            // …1
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },        // Noto symbol2
       { "BabelStonePseudographica.ttf", Ffg::FALL_TO_NEXT },                    // …1
-      { FAM_FUNKY },                                                          // …2
+      { FAM_FUNKY },                                                            // …2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 30_bot }, // Noto symbol2 bigger
       // Intentionally unhinted
-      { FAM_FUNKY, 115_pc },                                                  // …1
+      { FAM_FUNKY, 115_pc },                                                    // …1
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
-      { FACE_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                             // …1, both are built-in
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
+      { FACE_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                            // …1, both are built-in
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …1
       { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …2
     { FNAME_MUSIC_FIXUP, Ffg::FALL_TO_NEXT, 110_pc },                           // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
@@ -124,10 +124,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 20_top },                           // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
-    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                           // Funky
       { FNAME_NOTO },                                                           // …1
-    { FAM_FUNKY, Ffg::DESC_BIGGER },                                          // Funky description bigger
-    { FAM_FUNKY, Ffg::DESC_BIGGER, 115_pc },                                  // Funky font bigger
+    { FAM_FUNKY, Ffg::DESC_BIGGER },                                            // Funky description bigger
+    { FAM_FUNKY, Ffg::DESC_BIGGER, 115_pc },                                    // Funky font bigger
     { FAM_SANS_FRANKEN },                                                       // Sans franken
     { FAM_SANS_FRANKEN, Ffg::DESC_BIGGER },                                     // Sans franken bigger (Prti)
     { FAM_SANS_FRANKEN, 110_pc },                                               // Sans franken 110% (Ogam)
@@ -227,29 +227,29 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Shafarik-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 115_pc,
             StyleChange { .delta = 0xF0200 - 0x2C00 } },                        // Glagolitic
       /// @todo [U16, gag] For Cyr C; replace with Noto Serif when it appears
-      { FAM_FUNKY },                                                          // …1  for Cyr C Khanty
+      { FAM_FUNKY },                                                            // …1  for Cyr C Khanty
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER, 10_top + 12_bot },      // Grantha
     { FNAME_NOTO, Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },                        // Greek/Coptic
-      { FAM_FUNKY },                                                          // …1
+      { FAM_FUNKY },                                                            // …1
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { { "NotoSerifGurmukhi-Regular.ttf", Fafg::DEHINT_DOTC } },                 // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Hanunoo
     { { "NotoSerifHebrew-Regular.ttf", Fafg::DEHINT_DOTC } },                   // Hebrew
-    { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                   // Hentaigana
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Kannada
-      { FAM_FUNKY },                                                          // …1
+      { FAM_FUNKY },                                                            // …1
     { "NotoSansKawi-Regular.ttf", Ffg::FALL_TO_NEXT },                          // Kawi
       /// @todo [U16, gag] Someday Kawi will handle new char
-      { FAM_FUNKY },                                                          // …1, temp patch of U16
+      { FAM_FUNKY },                                                            // …1, temp patch of U16
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc }, // Khitan small
       /// @todo [U16, gag] Someday Khitan will handle new char
-      { FAM_FUNKY },                                                          // …1, temp patch of U16
+      { FAM_FUNKY },                                                            // …1, temp patch of U16
     { "NotoSerifKhmer-Regular.ttf", Ffg::DESC_BIGGER },                         // Khmer
     { "NotoSerifKhmer-Regular.ttf", Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 90_pc }, // Khmer symbols
       { FAM_FUNKY, Ffg::DESC_BIGGER },
@@ -257,7 +257,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhudawadi-Regular.ttf", Ffg::DESC_BADLY_HINTED },                // Khudawadi
     { "Kanchenjunga-Regular.ttf" },                                             // Kirat
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1 for sone patches
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // …1 for sone patches
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
       { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                            // …3 U14
         // Hariphunchai4: too small, need smth for virtual virama, incomplete
@@ -265,7 +265,7 @@ constinit const uc::Font uc::fontInfo[] = {
         // Lamphun: some mod of older Hariphunchai4, cropped (fixed everything, now UnicodiaLanna)
     { "UnicodiaLanna.otf", Ffg::DESC_BIGGER },                                  // Lanna
     { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
-    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                           // Latin
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID },                     // …1
       { FNAME_NOTO },                                                           // …2
          // The biggest font possible w/o changes in height
@@ -335,22 +335,22 @@ constinit const uc::Font uc::fontInfo[] = {
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                      // …1
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2
       { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …3
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 40_bot },      // …4
       { FNAME_NOTOMATH },                                                       // …5
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Telugu
-      { FAM_FUNKY },                                                          // …1
+      { FAM_FUNKY },                                                            // …1
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", 10_bot, 110_pc },                             // Thai
     { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { "UnicodiaDaarage.otf", 120_pc },                                          // Tulu
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts for symbols
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
-      { FAM_FUNKY },                                                          // …3 — use it as default
+      { FAM_FUNKY },                                                            // …3 — use it as default
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
         // Normal is too thin, but bold is too coarse → worse
