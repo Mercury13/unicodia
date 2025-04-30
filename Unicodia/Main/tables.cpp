@@ -225,6 +225,11 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
                         return block->synthIcon.normalContinent().collapse.bgColor;
                     }
                 }
+                if constexpr (uc::DEBUG_FONTS) {
+                    auto font = cp->font(match::NullForTofu::INST);
+                    if (font && font->family.flags.have(uc::Fafg::DEBUG))
+                        return QColor { Qt::yellow };
+                }
             } else {
                 if (uc::isNonChar(cp.code)) {
                     return QBrush(owner->palette().windowText().color(), Qt::DiagCrossPattern);

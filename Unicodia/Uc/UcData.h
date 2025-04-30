@@ -481,12 +481,15 @@ extern template class dumb::Sp<uc::LoadedFont>;
 
 namespace uc {
 
-    enum class FontPlace { CELL, SAMPLE, PROBE };
+    constexpr bool DEBUG_FONTS = false;
+
+    enum class FontPlace : unsigned char { CELL, SAMPLE, PROBE };
 
     enum class Fafg : unsigned char {
         // Now all fonts use
         DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
         BUILTIN     = 1 << 1,  ///< Built-in font
+        DEBUG       = 1 << 2,  ///< Debug which chars are here
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);

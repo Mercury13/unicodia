@@ -96,9 +96,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
-      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
-      { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …4
-      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },      // …5
+      { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …3
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },      // …4
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
       { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
