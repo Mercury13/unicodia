@@ -4,7 +4,8 @@
 # foo = single char
 #
 # Commands:
-#   None implemented for now
+#   /range hex-from hex-to   = specify a range of characters
+#
 
 
 # Normal template u*.svg
