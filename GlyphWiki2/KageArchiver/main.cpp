@@ -6,17 +6,19 @@
 // Libs
 #include "u_Strings.h"
 
-using KageList = std::unordered_map<std::string, std::string>;
-
+// NOLINTBEGIN(bugprone-macro-parentheses)
 #define DEFINE_EXCEPTION_CLASS(CMe, CSuper) \
     class CMe : public CSuper { \
     private:                    \
         using Super = CSuper;   \
     public:                     \
         using Super::Super; };
+// NOLINTEND(bugprone-macro-parentheses)
 
 DEFINE_EXCEPTION_CLASS(StrangeDump, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
+
+using KageList = std::unordered_map<std::string, std::string>;
 
 KageList readKageList()
 {
