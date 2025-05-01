@@ -251,6 +251,10 @@ bool KlvCmp::operator () (Klv x, Klv y) const
     return (x->first < y->first);
 }
 
+// Colour in Deep-first search:
+//   White = untouched (tree-link),
+//   Grey = entered, back-link
+//   Black = entered and left, cross- or forward-link
 enum class DfsColor : unsigned char { GRAY, BLACK };
 
 struct KlvInfo {
