@@ -278,6 +278,7 @@ void doFollowDeepLinks(
         }
         return;
     }
+    // :) The thing is white, turn to grey
     it->second.color = DfsColor::GRAY;
     std::string_view kageText = thing->second;
     auto lines = str::splitSv(kageText, '$', true);
