@@ -1,10 +1,13 @@
 // STL
 #include <iostream>
-#include <unordered_map>
 #include <fstream>
+#include <map>
+#include <unordered_map>
 
 // Libs
 #include "u_Strings.h"
+
+using namespace std::string_view_literals;
 
 // NOLINTBEGIN(bugprone-macro-parentheses)
 #define DEFINE_EXCEPTION_CLASS(CMe, CSuper) \
@@ -17,6 +20,7 @@
 
 DEFINE_EXCEPTION_CLASS(StrangeDump, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
+DEFINE_EXCEPTION_CLASS(BadTask, std::logic_error)
 
 using KageList = std::unordered_map<std::string, std::string>;
 
@@ -62,14 +66,84 @@ headerEnd:
         }
         auto key = str::trim(cols[0]);
         auto value = str::trimSv(cols[2]);
-        auto eqr = r.equal_range(key);
-        if (eqr.first != eqr.second)
+        auto [_, was] = r.try_emplace(std::move(key), value);
+        if (!was)
             throw StrangeDump("Key repeats: " + key);
-        r.emplace_hint(eqr.first, KageList::value_type{ std::move(key), value });
     }
 dumpEnd:
     if (r.empty())
         throw StrangeDump("No data for some reason");
+    return r;
+}
+
+
+struct Task {};
+
+using TaskList = std::map<char32_t, Task>;
+
+void putTask(TaskList& r, char32_t code)
+{
+    auto [_, was] = r.try_emplace(code);
+    if (!was) {
+        char buf[40];
+        snprintf(buf, std::size(buf), "Code repeats: %X", code);
+        throw BadTask(buf);
+    }
+}
+
+char32_t parseHexTask(std::string_view s)
+{
+    unsigned code;
+    s = str::trimSv(s);
+    auto res = std::from_chars(
+                std::to_address(s.begin()), std::to_address(s.end()), code, 16);
+    if (res.ec != std::error_code())
+        throw BadTask(str::cat("Cannot parse hex ", s));
+    return code;
+}
+
+TaskList readTaskList()
+{
+    std::ifstream is("hani-tofu.txt");
+    if (!is.is_open())
+        throw std::logic_error("Need hani-tofu.txt, our new task list with commands");
+
+    TaskList r;
+
+    std::string s;
+    while (std::getline(is, s)) {
+        auto st = str::trimSv(s);
+        // Empty line, comment
+        if (st.empty() || st.starts_with('#'))
+            continue;
+        if (st.starts_with('/')) { // Command
+            st = st.substr(1);  // erase slash
+            auto params = str::splitSv(st, ' ', true);
+            if (params.empty())
+                throw BadTask("Just slash, no command");
+            auto cmd = params[0];
+            if (cmd == "range"sv) {
+                // COMMAND: /range
+                if (params.size() != 3)
+                    throw BadTask("/range should have two params");
+                auto min = parseHexTask(params[1]);
+                auto max = parseHexTask(params[2]);
+                if (min > max)
+                    throw BadTask("In /range min should be <= max");
+                for (char32_t c = min; c <= max; ++c) {
+                    putTask(r, c);
+                }
+            } else {
+                throw BadTask(str::cat("Unknown command: ", cmd));
+            }
+        } else { // Single char
+            char32_t code = parseHexTask(st);
+            putTask(r, code);
+        }
+    }
+
+    if (r.empty())
+        throw BadTask("No tasks for some reason");
     return r;
 }
 
@@ -82,11 +156,17 @@ void writeError(const char* header, const std::exception& e)
 int main()
 {
     try {
+        std::cout << "Reading task list..." << std::flush;
+        auto taskList = readTaskList();
+        std::cout << "OK, " << taskList.size() << " tasks" "\n";
+
         std::cout << "Reading Kage list..." << std::flush;
         auto kageList = readKageList();
         std::cout << "OK, " << kageList.size() << " entries" "\n";
 
         std::cout << "Success!" "\n";
+    } catch (const BadTask& e) {
+        writeError("BAD TASKS", e);
     } catch (const BadData& e) {
         writeError("BAD DATA", e);
     } catch (const StrangeDump& e) {
