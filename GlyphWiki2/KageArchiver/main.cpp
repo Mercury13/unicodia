@@ -1,6 +1,7 @@
 // STL
 #include <iostream>
 #include <fstream>
+#include <set>
 #include <map>
 #include <unordered_map>
 
@@ -58,7 +59,7 @@ headerEnd:
         case 0:
             continue;
         case 1: {
-                auto q = str::trimSv(cols[0]);
+                auto q = cols[0];
                 if (q.empty())
                     continue;
                 if (q.starts_with('(')) {
@@ -73,10 +74,10 @@ headerEnd:
         default:
             throw StrangeDump("Not three columns: " + s);
         }
-        auto key = str::trim(cols[0]);
-        auto value = str::trimSv(cols[2]);
-        auto [_, was] = r.try_emplace(std::move(key), value);
-        if (!was)
+        std::string key { cols[0] };
+        auto value = cols[2];
+        auto [_, wasIns] = r.try_emplace(std::move(key), value);
+        if (!wasIns)
             throw StrangeDump("Key repeats: " + key);
     }
 dumpEnd:
@@ -89,7 +90,7 @@ dumpEnd:
 struct Task
 {
     // No data for now, but next time we’ll have Taiwan
-    SafeVector<std::string> candidates(char32_t code) const;
+    [[nodiscard]] SafeVector<std::string> candidates(char32_t code) const;
 };
 
 
@@ -128,7 +129,7 @@ void putTask(TaskList& r, char32_t code)
     }
 }
 
-char32_t parseHexTask(std::string_view s)
+[[nodiscard]] char32_t parseHexTask(std::string_view s)
 {
     unsigned code;
     s = str::trimSv(s);
@@ -139,7 +140,7 @@ char32_t parseHexTask(std::string_view s)
     return code;
 }
 
-TaskList readTaskList()
+[[nodiscard]] TaskList readTaskList()
 {
     std::ifstream is("hani-tofu.txt");
     if (!is.is_open())
@@ -185,15 +186,20 @@ TaskList readTaskList()
 }
 
 
+#define PRF_SV(x) (unsigned((x).length())), ((x).data())
+
+
+/// KageList value_type
+using Klv = const KageList::value_type*;
+
 ///
 /// Follows aliases until it finds a meaningful thing
 /// @return  may return nullptr if not found
 ///
-const KageList::value_type* followKage(
-        const KageList& kageList, std::string_view root)
+[[nodiscard]] Klv followKage(const KageList& kageList, std::string_view root)
 {
-    static constexpr std::string_view HARDLINK_PREFIX = "99:0:0:0:0:200:200:";
-    static constexpr auto PREFIX_L = HARDLINK_PREFIX.length();
+    static constexpr std::string_view ALIAS_LINK_PREFIX = "99:0:0:0:0:200:200:";
+    static constexpr auto PREFIX_L = ALIAS_LINK_PREFIX.length();
 
     std::string_view key = root;
     auto it = kageList.find(key);
@@ -209,8 +215,8 @@ const KageList::value_type* followKage(
         if (pFind != std::string::npos) {
             return std::to_address(it);
         }
-        // Is not a hardlink? Stop!
-        if (!value.starts_with(HARDLINK_PREFIX)) {
+        // Is not a alias-link? Stop!
+        if (!value.starts_with(ALIAS_LINK_PREFIX)) {
             return std::to_address(it);
         }
         value = value.substr(PREFIX_L);
@@ -218,17 +224,15 @@ const KageList::value_type* followKage(
         pFind = value.find(':');
         if (pFind != std::string::npos) {
             snprintf(buf, std::size(buf),
-                     "Hardlink in %*s has extra columns",
-                     unsigned(key.length()), key.data());
+                     "Alias-link in '%*s' has extra columns", PRF_SV(key));
             throw BadData(buf);
         }
         // Find, replace key and it
         it = kageList.find(value);
         if (it == kageList.end()) {
             snprintf(buf, std::size(buf),
-                     "Ideo %*s hardlinks to missing ideo %*s",
-                     unsigned(key.length()), key.data(),
-                     unsigned(value.length()), value.data());
+                     "Ideo '%*s' hardlinks to missing ideo '%*s'",
+                     PRF_SV(key), PRF_SV(value));
             throw BadData(buf);
         }
         key = value;
@@ -236,9 +240,93 @@ const KageList::value_type* followKage(
 }
 
 
+struct KlvCmp {
+    bool operator () (Klv x, Klv y) const;
+};
+
+bool KlvCmp::operator () (Klv x, Klv y) const
+{
+    if (x == y)
+        return false;
+    return (x->first < y->first);
+}
+
+enum class DfsColor : unsigned char { GRAY, BLACK };
+
+struct KlvInfo {
+    DfsColor color = DfsColor::GRAY;
+};
+
+using Sklv = std::map<Klv, KlvInfo, KlvCmp>;
+
+void doFollowDeepLinks(
+        Sklv& r, const KageList& kageList, Klv start, Klv thing)
+{
+    char buf[200];
+    auto [it, wasIns] = r.try_emplace(thing);
+    if (!wasIns) {
+        if (it->second.color == DfsColor::GRAY) {
+            std::string_view badKey = it->first->first;
+            snprintf(buf, std::size(buf),
+                     "Cyclic reference: initiator '%*s', good '%*s', bad '%*s'",
+                     PRF_SV(start->first), PRF_SV(thing->first), PRF_SV(badKey));
+            throw BadData(buf);
+        }
+        return;
+    }
+    it->second.color = DfsColor::GRAY;
+    std::string_view kageText = thing->second;
+    auto lines = str::splitSv(kageText, '$', true);
+    for (auto line : lines) {
+        if (line.empty())
+            continue;
+        auto cols = str::splitSv(line, ':', false);
+        if (cols.empty())
+            continue;
+        if (cols[0] == "99") {  // 99 = link
+            if (cols.size() < 8) {
+                snprintf(buf, std::size(buf),
+                         "Strange link in '%*s': need 8+ cols",
+                         PRF_SV(thing->first));
+                throw BadData(buf);
+            }
+            auto target = cols[7];
+            // Target may be “blah@5”, remove that At
+            auto posAt = target.find('@');
+            if (posAt != std::string_view::npos) {
+                target = target.substr(0, posAt);
+            }
+            // Find target and recurse
+            auto it1 = kageList.find(target);
+            if (it1 == kageList.end()) {
+                snprintf(buf, std::size(buf),
+                         "Ideo '%*s' links to missing ideo '%*s'",
+                         PRF_SV(thing->first), PRF_SV(target));
+                throw BadData(buf);
+            }
+            doFollowDeepLinks(r, kageList, start, std::to_address(it1));
+        }
+    }
+    it->second.color = DfsColor::BLACK;
+}
+
+[[nodiscard]] Sklv followDeepLinks(
+        const KageList& kageList, Klv start)
+{
+    if (!start)
+        throw std::logic_error("Start should not be null");
+    Sklv r;
+    doFollowDeepLinks(r, kageList, start, start);
+    return r;
+}
+
+
 void archiveTasks(const TaskList& taskList, const KageList& kageList)
 {
     char buf[100];
+
+    std::ofstream os("hani-tasks.txt");
+
     for (const auto& [k, t] : taskList) {
         const auto cands = t.candidates(k);
         if (cands.empty()) {
@@ -248,7 +336,15 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
         }
         for (const auto& v : cands) {
             if (auto where = followKage(kageList, v)) {
-                /// @todo [urgent] What to do with Kage?
+                auto fullList = followDeepLinks(kageList, where);
+                for (auto& q : fullList) {
+                    auto& [k, v] = *q.first;
+                    os << '=' << k << '=' << v << '\n';
+                }
+                snprintf(buf, std::size(buf),
+                         "G %X %*s" "\n\n",
+                         k, PRF_SV(where->first));
+                os << buf;
                 goto found;
             }
         }
