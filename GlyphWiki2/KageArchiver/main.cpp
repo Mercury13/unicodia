@@ -330,6 +330,10 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
     char buf[100];
 
     std::ofstream os("hani-tasks.txt");
+    os << "# Automatically created with KageArchiver, do not edit!" "\n"
+          "# Commands:" "\n"
+          "#   =blah:blah  - database entry" "\n"
+          "#   G code root - create an ideograph and erase entries" "\n";
 
     for (const auto& [k, t] : taskList) {
         const auto cands = t.candidates(k);
@@ -341,12 +345,13 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
         for (const auto& v : cands) {
             if (auto where = followKage(kageList, v)) {
                 auto fullList = followDeepLinks(kageList, where);
+                os << '\n';
                 for (auto& q : fullList) {
                     auto& [k, v] = *q.first;
                     os << '=' << k << '=' << v << '\n';
                 }
                 snprintf(buf, std::size(buf),
-                         "G %X %*s" "\n\n",
+                         "G %X %*s" "\n",
                          k, PRF_SV(where->first));
                 os << buf;
                 goto found;
