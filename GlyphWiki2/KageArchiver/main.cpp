@@ -1,0 +1,92 @@
+// STL
+#include <iostream>
+#include <unordered_map>
+#include <fstream>
+
+// Libs
+#include "u_Strings.h"
+
+using KageList = std::unordered_map<std::string, std::string>;
+
+#define DEFINE_EXCEPTION_CLASS(CMe, CSuper) \
+    class CMe : public CSuper { \
+    private:                    \
+        using Super = CSuper;   \
+    public:                     \
+        using Super::Super; };
+
+DEFINE_EXCEPTION_CLASS(StrangeDump, std::logic_error)
+DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
+
+KageList readKageList()
+{
+    std::ifstream is("dump_newest_only.txt");
+    if (!is.is_open())
+        throw std::logic_error("Need dump_newest_only.txt, part of GlyphWiki dump");
+
+    KageList r;
+    std::string s;
+    // Parse header
+    while (std::getline(is, s)) {
+        if (s.starts_with("--")) {
+            goto headerEnd;
+        }
+    }
+    throw StrangeDump("Dis not find where header ends");
+headerEnd:
+    // Parse normal lines
+    size_t nLines = 0;
+    while (std::getline(is, s)) {
+        auto cols = str::splitSv(s, '|', false);
+        switch (cols.size()) {
+        case 3:
+            break;
+        case 0:
+            continue;
+        case 1: {
+                auto q = str::trimSv(cols[0]);
+                if (q.empty())
+                    continue;
+                if (q.starts_with('(')) {
+                    q = q.substr(1);
+                    unsigned value = 0;
+                    std::from_chars(std::to_address(q.begin()), std::to_address(q.end()), value);
+                    if (value != nLines)
+                        throw StrangeDump("Number of lines mismatch");
+                    goto dumpEnd;
+                }
+            } [[fallthrough]];
+        default:
+            throw StrangeDump("Not three columns: " + s);
+        }
+        ++nLines;
+    }
+dumpEnd:
+    if (r.empty())
+        throw StrangeDump("No data for some reason");
+    return r;
+}
+
+
+void writeError(const char* header, const std::exception& e)
+{
+    std::cout << "\n\n" << header << ": " << e.what() << '\n';
+}
+
+int main()
+{
+    try {
+        std::cout << "Reading Kage list..." << std::flush;
+        auto kageList = readKageList();
+        std::cout << "OK" "\n";
+
+        std::cout << "Success!" "\n";
+    } catch (const BadData& e) {
+        writeError("BAD DATA", e);
+    } catch (const StrangeDump& e) {
+        writeError("STRANGE DUMP", e);
+    } catch (const std::exception& e) {
+        writeError("ERROR", e);
+    }
+    return 0;
+}
