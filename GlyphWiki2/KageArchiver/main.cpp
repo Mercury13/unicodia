@@ -131,7 +131,7 @@ void putTask(TaskList& r, char32_t code)
 
 [[nodiscard]] char32_t parseHexTask(std::string_view s)
 {
-    unsigned code;
+    unsigned code = 0;
     s = str::trimSv(s);
     auto res = std::from_chars(
                 std::to_address(s.begin()), std::to_address(s.end()), code, 16);
