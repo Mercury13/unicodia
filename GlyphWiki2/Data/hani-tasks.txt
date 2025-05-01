@@ -1,5 +1,6 @@
 # Automatically created with KageArchiver, do not edit!
 # Commands:
+#   #blahblah   - comment, do nothing
 #   =blah:blah  - database entry
 #   G code root - create an ideograph and erase entries
 

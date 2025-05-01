@@ -333,6 +333,7 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
     std::ofstream os("hani-tasks.txt");
     os << "# Automatically created with KageArchiver, do not edit!" "\n"
           "# Commands:" "\n"
+          "#   #blahblah   - comment, do nothing" "\n"
           "#   =blah:blah  - database entry" "\n"
           "#   G code root - create an ideograph and erase entries" "\n";
 
