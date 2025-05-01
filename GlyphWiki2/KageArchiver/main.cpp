@@ -335,7 +335,7 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
           "# Commands:" "\n"
           "#   #blahblah   - comment, do nothing" "\n"
           "#   =blah:blah  - database entry" "\n"
-          "#   G code root - create an ideograph and erase entries" "\n";
+          "#   G code root - go; create an ideograph and erase entries" "\n";
 
     for (const auto& [k, t] : taskList) {
         const auto cands = t.candidates(k);
