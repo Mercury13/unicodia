@@ -9,6 +9,15 @@
 
 using namespace std::string_view_literals;
 
+class Shash : public std::hash<std::string_view>
+{
+private:
+    using Super = std::hash<std::string_view>;
+public:
+    using is_transparent = void;
+    using Super::operator ();
+};
+
 // NOLINTBEGIN(bugprone-macro-parentheses)
 #define DEFINE_EXCEPTION_CLASS(CMe, CSuper) \
     class CMe : public CSuper { \
@@ -22,7 +31,7 @@ DEFINE_EXCEPTION_CLASS(StrangeDump, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadTask, std::logic_error)
 
-using KageList = std::unordered_map<std::string, std::string>;
+using KageList = std::unordered_map<std::string, std::string, Shash, std::equal_to<>>;
 
 KageList readKageList()
 {
@@ -176,15 +185,78 @@ TaskList readTaskList()
 }
 
 
+///
+/// Follows aliases until it finds a meaningful thing
+/// @return  may return nullptr if not found
+///
+const KageList::value_type* followKage(
+        const KageList& kageList, std::string_view root)
+{
+    static constexpr std::string_view HARDLINK_PREFIX = "99:0:0:0:0:200:200:";
+    static constexpr auto PREFIX_L = HARDLINK_PREFIX.length();
+
+    std::string_view key = root;
+    auto it = kageList.find(key);
+    if (it == kageList.end()) {
+        return nullptr;
+    }
+    char buf[100];
+    // And now follow hardlinks
+    while (true) {
+        std::string_view value = it->second;
+        // Has >1 lines? Stop!
+        auto pFind = value.find('$');
+        if (pFind != std::string::npos) {
+            return std::to_address(it);
+        }
+        // Is not a hardlink? Stop!
+        if (!value.starts_with(HARDLINK_PREFIX)) {
+            return std::to_address(it);
+        }
+        value = value.substr(PREFIX_L);
+        // Ensure that no extra columns
+        pFind = value.find(':');
+        if (pFind != std::string::npos) {
+            snprintf(buf, std::size(buf),
+                     "Hardlink in %*s has extra columns",
+                     unsigned(key.length()), key.data());
+            throw BadData(buf);
+        }
+        // Find, replace key and it
+        it = kageList.find(value);
+        if (it == kageList.end()) {
+            snprintf(buf, std::size(buf),
+                     "Ideo %*s hardlinks to missing ideo %*s",
+                     unsigned(key.length()), key.data(),
+                     unsigned(value.length()), value.data());
+            throw BadData(buf);
+        }
+        key = value;
+    }
+}
+
+
 void archiveTasks(const TaskList& taskList, const KageList& kageList)
 {
+    char buf[100];
     for (const auto& [k, t] : taskList) {
-        auto cands = t.candidates(k);
+        const auto cands = t.candidates(k);
         if (cands.empty()) {
             char buf[100];
             snprintf(buf, std::size(buf), "Task for %X made no candidates", unsigned(k));
             throw BadTask(buf);
         }
+        for (const auto& v : cands) {
+            if (auto where = followKage(kageList, v)) {
+                /// @todo [urgent] What to do with Kage?
+                goto found;
+            }
+        }
+        snprintf(buf, std::size(buf),
+                 "All candidates for %X are missing in Kage base",
+                 unsigned(k));
+        throw BadTask(buf);
+    found:;
     }
 }
 
