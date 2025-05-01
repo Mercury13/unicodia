@@ -35,7 +35,6 @@ KageList readKageList()
     throw StrangeDump("Dis not find where header ends");
 headerEnd:
     // Parse normal lines
-    size_t nLines = 0;
     while (std::getline(is, s)) {
         auto cols = str::splitSv(s, '|', false);
         switch (cols.size()) {
@@ -51,7 +50,7 @@ headerEnd:
                     q = q.substr(1);
                     unsigned value = 0;
                     std::from_chars(std::to_address(q.begin()), std::to_address(q.end()), value);
-                    if (value != nLines)
+                    if (value != r.size())
                         throw StrangeDump("Number of lines mismatch");
                     goto dumpEnd;
                 }
@@ -59,7 +58,12 @@ headerEnd:
         default:
             throw StrangeDump("Not three columns: " + s);
         }
-        ++nLines;
+        auto key = str::trim(cols[0]);
+        auto value = str::trimSv(cols[2]);
+        auto eqr = r.equal_range(key);
+        if (eqr.first != eqr.second)
+            throw StrangeDump("Key repeats: " + key);
+        r.emplace_hint(eqr.first, KageList::value_type{ std::move(key), value });
     }
 dumpEnd:
     if (r.empty())
@@ -78,7 +82,7 @@ int main()
     try {
         std::cout << "Reading Kage list..." << std::flush;
         auto kageList = readKageList();
-        std::cout << "OK" "\n";
+        std::cout << "OK, " << kageList.size() << " entries" "\n";
 
         std::cout << "Success!" "\n";
     } catch (const BadData& e) {
