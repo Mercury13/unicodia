@@ -77,7 +77,35 @@ dumpEnd:
 }
 
 
-struct Task {};
+struct Task
+{
+    // No data for now, but next time we’ll have Taiwan
+    SafeVector<std::string> candidates(char32_t code) const;
+};
+
+
+constexpr unsigned BUFSZ = 100;
+using Buf = char[100];
+
+
+void printCand(Buf& buf, const char* prefix, unsigned code, const char* suffix)
+{
+    unsigned sz = snprintf(buf, BUFSZ, "%s%x%s", prefix, unsigned(code), suffix);
+    if (sz >= BUFSZ - 2) {
+        snprintf(buf, BUFSZ, "Candidate for %X too long", unsigned(code));
+        throw BadTask(buf);
+    }
+}
+
+SafeVector<std::string> Task::candidates(char32_t code) const
+{
+    char buf[100];
+    printCand(buf, "u", code, "");
+    SafeVector<std::string> r;
+    r.push_back(buf);
+    return r;
+}
+
 
 using TaskList = std::map<char32_t, Task>;
 
@@ -86,7 +114,7 @@ void putTask(TaskList& r, char32_t code)
     auto [_, was] = r.try_emplace(code);
     if (!was) {
         char buf[40];
-        snprintf(buf, std::size(buf), "Code repeats: %X", code);
+        snprintf(buf, std::size(buf), "Code repeats: %X", unsigned(code));
         throw BadTask(buf);
     }
 }
@@ -148,6 +176,19 @@ TaskList readTaskList()
 }
 
 
+void archiveTasks(const TaskList& taskList, const KageList& kageList)
+{
+    for (const auto& [k, t] : taskList) {
+        auto cands = t.candidates(k);
+        if (cands.empty()) {
+            char buf[100];
+            snprintf(buf, std::size(buf), "Task for %X made no candidates", unsigned(k));
+            throw BadTask(buf);
+        }
+    }
+}
+
+
 void writeError(const char* header, const std::exception& e)
 {
     std::cout << "\n\n" << header << ": " << e.what() << '\n';
@@ -163,6 +204,10 @@ int main()
         std::cout << "Reading Kage list..." << std::flush;
         auto kageList = readKageList();
         std::cout << "OK, " << kageList.size() << " entries" "\n";
+
+        std::cout << "Archiving tasks..." << std::flush;
+        archiveTasks(taskList, kageList);
+        std::cout << "OK" "\n";
 
         std::cout << "Success!" "\n";
     } catch (const BadTask& e) {
