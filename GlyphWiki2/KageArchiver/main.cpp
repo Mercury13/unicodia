@@ -321,6 +321,9 @@ void doFollowDeepLinks(
     if (!start)
         throw std::logic_error("Start should not be null");
     Sklv r;
+    if (start->first == "u31447") {
+        std::cout << "Debug!" << std::endl;
+    }
     doFollowDeepLinks(r, kageList, start, start);
     return r;
 }
