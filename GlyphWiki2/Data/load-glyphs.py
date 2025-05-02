@@ -86,6 +86,8 @@ for line0 in file:
             isClock = contour.isClockwise()
             if (isClock == -1):
                 contour.round(10)
+            elif not isClock:
+                raise Exception('Found non-clockwise contour');
         fg.removeOverlap()
         fg.transform(mat)
         fg.simplify(0.1)

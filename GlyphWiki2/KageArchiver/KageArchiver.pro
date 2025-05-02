@@ -5,11 +5,16 @@ CONFIG -= qt
 
 SOURCES += \
         ../../Libs/SelfMade/Strings/u_Strings.cpp \
-        main.cpp
+        kagelist.cpp \
+        main.cpp \
+        tasklist.cpp
 
 HEADERS += \
     ../../Libs/SelfMade/Strings/u_Strings.h \
-    ../../Libs/SelfMade/u_Vector.h
+    ../../Libs/SelfMade/u_Vector.h \
+    excep.h \
+    kagelist.h \
+    tasklist.h
 
 INCLUDEPATH += \
     ../../Libs/SelfMade \
