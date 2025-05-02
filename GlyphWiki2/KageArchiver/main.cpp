@@ -5,6 +5,9 @@
 #include <map>
 #include <unordered_map>
 
+#include "tsl/robin_map.h"
+#include "tsl/robin_hash.h"
+
 // Libs
 #include "u_Strings.h"
 
@@ -32,26 +35,85 @@ DEFINE_EXCEPTION_CLASS(StrangeDump, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
 DEFINE_EXCEPTION_CLASS(BadTask, std::logic_error)
 
-using KageList = std::unordered_map<std::string, std::string, Shash, std::equal_to<>>;
+using KageList = tsl::robin_map<std::string, std::string_view, Shash, std::equal_to<>>;
 
-KageList readKageList()
+struct KageCache {
+    std::string data;
+};
+
+class LineTraverser
 {
-    std::ifstream is("dump_newest_only.txt");
-    if (!is.is_open())
-        throw std::logic_error("Need dump_newest_only.txt, part of GlyphWiki dump");
+public:
+    LineTraverser(std::string_view x);
+    bool get(std::string_view& r) noexcept;
+    size_t size() const noexcept { return lines.size(); }
+    size_t remainder() const noexcept;
+private:
+    SafeVector<std::string_view> lines;
+    size_t index = 0;
+};
 
-    KageList r;
-    std::string s;
+LineTraverser::LineTraverser(std::string_view x)
+{
+    // true is OK
+    lines = str::splitByAnySv(x, "\r\n", true);
+}
+
+bool LineTraverser::get(std::string_view& r) noexcept
+{
+    if (index >= lines.size()) {
+        r = std::string_view{};
+        return false;
+    }
+    r = lines[index++];
+    return true;
+}
+
+size_t LineTraverser::remainder() const noexcept
+{
+    if (index > size())
+        return 0;
+    return size() - index;
+}
+
+
+size_t readKageList(KageList& r, KageCache& cache, const char* fname)
+{
+    if (!cache.data.empty())
+        throw std::invalid_argument("You are using full cache, that's error-prone");
+
+    auto oldSize = r.size();
+    {
+        std::ifstream is(fname, std::ios::binary);
+        if (!is.is_open()) {
+            char buf[200];
+            snprintf(buf, std::size(buf), "Need file '%s', part of GlyphWiki dump", fname);
+            throw std::logic_error(buf);
+        }
+
+        // Read big piece of data
+        is.seekg(0, std::ios::end);
+        size_t size = is.tellg();
+        is.seekg(0, std::ios::beg);
+        cache.data.resize(size);
+        is.read(cache.data.data(), size);
+        std::cout << "In mem..." << std::flush;
+    }
+
+    std::string_view s;
+    LineTraverser tr(cache.data);
     // Parse header
-    while (std::getline(is, s)) {
+    while (tr.get(s)) {
         if (s.starts_with("--")) {
             goto headerEnd;
         }
     }
-    throw StrangeDump("Dis not find where header ends");
+    throw StrangeDump("Did not find where header ends");
 headerEnd:
+    //r.rehash(r.size() + tr.remainder());
+    std::cout << "Going..." << std::flush;
     // Parse normal lines
-    while (std::getline(is, s)) {
+    while (tr.get(s)) {
         auto cols = str::splitSv(s, '|', false);
         switch (cols.size()) {
         case 3:
@@ -66,24 +128,27 @@ headerEnd:
                     q = q.substr(1);
                     unsigned value = 0;
                     std::from_chars(std::to_address(q.begin()), std::to_address(q.end()), value);
-                    if (value != r.size())
+                    auto sz = r.size() - oldSize;
+                    if (value != sz)
                         throw StrangeDump("Number of lines mismatch");
                     goto dumpEnd;
                 }
             } [[fallthrough]];
         default:
-            throw StrangeDump("Not three columns: " + s);
+            throw StrangeDump(str::cat("Not three columns: ", s));
         }
         std::string key { cols[0] };
+        str::replace(key, "\\@", "@");
         auto value = cols[2];
         auto [_, wasIns] = r.try_emplace(std::move(key), value);
         if (!wasIns)
             throw StrangeDump("Key repeats: " + key);
     }
 dumpEnd:
-    if (r.empty())
+    auto sz = r.size() - oldSize;
+    if (sz == 0)
         throw StrangeDump("No data for some reason");
-    return r;
+    return sz;
 }
 
 
@@ -296,11 +361,6 @@ void doFollowDeepLinks(
                 throw BadData(buf);
             }
             auto target = cols[7];
-            // Target may be “blah@5”, remove that At
-            auto posAt = target.find('@');
-            if (posAt != std::string_view::npos) {
-                target = target.substr(0, posAt);
-            }
             // Find target and recurse
             auto it1 = kageList.find(target);
             if (it1 == kageList.end()) {
@@ -380,15 +440,22 @@ int main()
         auto taskList = readTaskList();
         std::cout << "OK, " << taskList.size() << " tasks" "\n";
 
-        std::cout << "Reading Kage list..." << std::flush;
-        auto kageList = readKageList();
-        std::cout << "OK, " << kageList.size() << " entries" "\n";
+        KageList kageList;
+        std::cout << "Reading small Kage list..." << std::flush;
+        KageCache smallCache;
+        auto nSmall = readKageList(kageList, smallCache, "dump_newest_only.txt");
+        std::cout << "OK, " << nSmall << " entries" "\n";
+
+        std::cout << "Reading LARGE Kage list..." << std::flush;
+        KageCache largeCache;
+        auto nLarge = readKageList(kageList, largeCache, "dump_all_versions.txt");
+        std::cout << "OK, " << nLarge << " entries" "\n";
 
         std::cout << "Archiving tasks..." << std::flush;
         archiveTasks(taskList, kageList);
         std::cout << "OK" "\n";
 
-        std::cout << "Success!" "\n";
+        std::cout << "Success, wait a bit for data destruction!" "\n";
     } catch (const BadTask& e) {
         writeError("BAD TASKS", e);
     } catch (const BadData& e) {

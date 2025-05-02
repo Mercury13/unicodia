@@ -17,5 +17,6 @@ INCLUDEPATH += \
 
 win32-g++ {
     QMAKE_CXXFLAGS += -static-libgcc -static-libstdc++
+    QMAKE_CXXFLAGS_RELEASE += -O3
     LIBS += -static -lpthread
 }
