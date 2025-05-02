@@ -110,7 +110,7 @@ size_t readKageList(KageList& r, KageCache& cache, const char* fname)
     }
     throw StrangeDump("Did not find where header ends");
 headerEnd:
-    //r.rehash(r.size() + tr.remainder());
+    r.rehash(r.size() + tr.remainder());
     std::cout << "Going..." << std::flush;
     // Parse normal lines
     while (tr.get(s)) {
