@@ -1,6 +1,8 @@
 import fontforge
 import psMat
 import os
+import hashlib
+import base64
 
 TEMPFILENAME = '~UnicodiaHan1.ttf'
 OUTFILENAME = 'UnicodiaHan.ttf'
@@ -55,7 +57,11 @@ for line0 in file:
         ucode = int(sUcode, base=16)
         entryPoint = params[1]
 
-        cachedSvg = CACHE_PATH + sUcode.upper() + '.svg'
+        baHash = hashlib.sha224(baseDefs.encode()).digest()
+        sHash = base64.b64encode(baHash, b'+-').decode()
+        sHash = sHash[:12]   # 12 enough!
+
+        cachedSvg = CACHE_PATH + sUcode.upper() + '_' + sHash + '.svg'
         if not os.path.exists(cachedSvg):
             cmdline = NODELINE.format(NODE, RUN, entryPoint, baseDefs, cachedSvg)
             debugFile = open(CACHE_PATH + '~hani.log', 'w')
