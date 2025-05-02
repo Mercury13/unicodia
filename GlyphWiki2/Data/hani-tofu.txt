@@ -1818,6 +1818,7 @@
 323A6
 
 # Kangxi radicals, just need because of bad hinting
+/country g AGGR
 /range 2F00 2FD5
 
 # U17 unstable characters, template unstable-u*.svg

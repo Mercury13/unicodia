@@ -12,27 +12,83 @@
 #include "kagelist.h"
 #include "tasklist.h"
 
-#define PRF_SV(x) (unsigned((x).length())), ((x).data())
+
+DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
 
 
 /// KageList value_type
 using Klv = const KageList::value_type*;
 
+
+std::string_view tryRemovePrefixSv(
+        std::string_view currRoot,
+        std::string_view currKey,
+        std::string_view bigKey)
+{
+    auto posVersion = bigKey.find('@');
+    if (posVersion != std::string_view::npos) {
+        char buf[200];
+        snprintf(buf, std::size(buf),
+                "Aggressive search + specific version, IDK, check manually what to do:"
+                " root '%*s', key '%*s', troublesome '%*s'",
+                PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
+        throw BadData(buf);
+    }
+    auto posDash = bigKey.rfind('-');
+    if (posDash == std::string_view::npos)
+        return {};
+    auto next = bigKey.substr(posDash);
+    if (next.empty())
+        return {};
+    for (auto c : next) {
+        switch (c) {
+        case 'g':   // Possible country codes
+        case 't':
+        case 'j':
+        case 'k':
+        case 'v': break;
+        default : return {};
+        }
+    }
+    return bigKey.substr(0, posDash);
+}
+
+
+constexpr bool hasKagePrefix(std::string_view value, std::string_view prefix)
+{
+    if (prefix.empty())
+        return false;
+    return value.starts_with(prefix)
+           && ((value.length() <= prefix.length())
+                    || (value[prefix.length()] == '-'));
+}
+
+// UTs
+static_assert(!hasKagePrefix("alpha", ""));
+static_assert(!hasKagePrefix("-alpha", ""));
+static_assert(!hasKagePrefix("alpha-bravo", "charlie"));
+static_assert(!hasKagePrefix("alphab-ravo", "alpha"));
+static_assert( hasKagePrefix("alpha-bravo", "alpha"));
+
+
 ///
 /// Follows aliases until it finds a meaningful thing
 /// @return  may return nullptr if not found
 ///
-[[nodiscard]] Klv followKage(const KageList& kageList, std::string_view root)
+[[nodiscard]] Klv followKage(
+        const KageList& kageList, std::string_view root,
+        const TaskSets::Country& country)
 {
     static constexpr std::string_view ALIAS_LINK_PREFIX = "99:0:0:0:0:200:200:";
     static constexpr auto PREFIX_L = ALIAS_LINK_PREFIX.length();
 
-    std::string_view key = root;
+    std::string key { root };
     auto it = kageList.find(key);
     if (it == kageList.end()) {
         return nullptr;
     }
     char buf[100];
+    std::string circlePrevention {};  // to prevent going in circles in aggressive mode
     // And now follow hardlinks
     while (true) {
         std::string_view value = it->second;
@@ -54,6 +110,22 @@ using Klv = const KageList::value_type*;
             throw BadData(buf);
         }
         // Find, replace key and it
+        if (country.isAggressive && !hasKagePrefix(value, circlePrevention)) {
+            auto smallValue = tryRemovePrefixSv(root, key, value);
+            if (!smallValue.empty()) {
+                for (auto& suffix : country.suffixSequence) {
+                    if (suffix.empty())
+                        continue;
+                    auto newKey = str::cat(smallValue, suffix);
+                    it = kageList.find(newKey);
+                    if (it == kageList.end())
+                        continue;
+                    key = newKey;
+                    circlePrevention = smallValue;
+                    goto cont;
+                }
+            }
+        }
         it = kageList.find(value);
         if (it == kageList.end()) {
             snprintf(buf, std::size(buf),
@@ -62,6 +134,7 @@ using Klv = const KageList::value_type*;
             throw BadData(buf);
         }
         key = value;
+    cont:;
     }
 }
 
@@ -166,7 +239,7 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
             throw BadTask(buf);
         }
         for (const auto& v : cands) {
-            if (auto where = followKage(kageList, v)) {
+            if (auto where = followKage(kageList, v, t.sets->country)) {
                 auto fullList = followDeepLinks(kageList, where);
                 os << '\n';
                 for (auto& q : fullList) {
