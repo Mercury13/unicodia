@@ -74,9 +74,6 @@ for line0 in file:
             if (fileSize < 200):
                 raise Exception('Probably made an empty file');
 
-            #if (ucode == 0x2F11):
-            #    raise Exception('Debug, what happens?');
-
         glyph = font.createChar(ucode)
         glyph.glyphname = "u" + sUcode.upper()
         glyph.importOutlines(cachedSvg, scale=False, simplify=False)
