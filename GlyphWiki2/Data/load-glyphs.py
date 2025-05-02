@@ -53,13 +53,16 @@ for line0 in file:
         debugFile.write(cmdline)
         debugFile.write('\n')
         debugFile.close()
-
+        
         os.system(cmdline)
         
         fileSize = os.path.getsize(TEMPSVG)
         if (fileSize < 200):
             raise Exception('Probably made an empty file');
         
+        if (ucode == 0x2F11):
+            raise Exception('Debug, what happens?');
+
         glyph = font.createChar(ucode)
         glyph.glyphname = "u" + sUcode.upper()
         glyph.importOutlines(TEMPSVG, scale=False, simplify=False)
