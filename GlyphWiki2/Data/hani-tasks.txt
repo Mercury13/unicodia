@@ -1,7 +1,7 @@
 # Automatically created with KageArchiver, do not edit!
 # Commands:
-#   #blahblah   - comment, do nothing
-#   =blah:blah  - database entry
+#   #blahblah   - comment; do nothing
+#   =blah:blah  - assign; database entry
 #   G code root - go; create an ideograph and erase entries
 
 =u4e00-j=1:0:0:14:101:186:101
