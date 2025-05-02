@@ -37,7 +37,7 @@ std::string_view tryRemovePrefixSv(
     auto posDash = bigKey.rfind('-');
     if (posDash == std::string_view::npos)
         return {};
-    auto next = bigKey.substr(posDash);
+    auto next = bigKey.substr(posDash + 1);
     if (next.empty())
         return {};
     for (auto c : next) {
