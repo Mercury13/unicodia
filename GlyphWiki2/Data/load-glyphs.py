@@ -22,8 +22,15 @@ nHandGlyphs = sum(1 for _ in font.glyphs())
 # import ideographs
 file = open('hani-tasks.txt', 'r')
 baseDefs = ''
-TEMPSVG = '~tmp.svg'
+CACHE_DIR = '~cache'
+CACHE_PATH = CACHE_DIR + '/'
 NODELINE = '{} {} !{}{} >{}'
+
+# Make cache directory
+isDir = os.path.isdir(CACHE_DIR)
+if not isDir:
+   os.mkdir(CACHE_DIR)
+
 for line0 in file:
     line = line0.strip()
     if (line == ''):
@@ -37,7 +44,7 @@ for line0 in file:
         thing = line[1:].strip()
         if (thing == ''):
             raise Exception('Command = (assign) must have some data')
-        baseDefs = baseDefs + ' ' + thing        
+        baseDefs = baseDefs + ' ' + thing
     elif (cmd == 'G'):
         # COMMAND G go
         thing = line[1:].strip()
@@ -47,28 +54,43 @@ for line0 in file:
         sUcode = params[0]
         ucode = int(sUcode, base=16)
         entryPoint = params[1]
-        
-        cmdline = NODELINE.format(NODE, RUN, entryPoint, baseDefs, TEMPSVG)
-        debugFile = open('~hani.log', 'w')
-        debugFile.write(cmdline)
-        debugFile.write('\n')
-        debugFile.close()
-        
-        os.system(cmdline)
-        
-        fileSize = os.path.getsize(TEMPSVG)
-        if (fileSize < 200):
-            raise Exception('Probably made an empty file');
-        
-        if (ucode == 0x2F11):
-            raise Exception('Debug, what happens?');
+
+        cachedSvg = CACHE_PATH + sUcode.upper() + '.svg'
+        if not os.path.exists(cachedSvg):
+            cmdline = NODELINE.format(NODE, RUN, entryPoint, baseDefs, cachedSvg)
+            debugFile = open(CACHE_PATH + '~hani.log', 'w')
+            debugFile.write(cmdline)
+            debugFile.write('\n')
+            debugFile.close()
+            os.system(cmdline)
+
+            fileSize = os.path.getsize(cachedSvg)
+            if (fileSize < 200):
+                raise Exception('Probably made an empty file');
+
+            #if (ucode == 0x2F11):
+            #    raise Exception('Debug, what happens?');
 
         glyph = font.createChar(ucode)
         glyph.glyphname = "u" + sUcode.upper()
-        glyph.importOutlines(TEMPSVG, scale=False, simplify=False)
-        glyph.removeOverlap()
-        glyph.transform(mat)
-        glyph.width = 1000        
+        glyph.importOutlines(cachedSvg, scale=False, simplify=False)
+
+        # Work
+        fg = glyph.layers[1]
+        for contour in fg:
+            if (not contour.closed):
+                raise Exception('Found open contour');
+            isClock = contour.isClockwise()
+            if (isClock == -1):
+                contour.round(10)
+        fg.removeOverlap()
+        fg.transform(mat)
+        fg.simplify(0.1)
+        fg.round()
+        fg.removeOverlap()
+        fg.round()
+        glyph.foreground = fg
+        glyph.width = 1000
 
         # Stop those base defs
         baseDefs = ''
@@ -79,7 +101,7 @@ for line0 in file:
 # (Somehow it’s quicker and works better)
 # index = 0
 # for glyph in font.glyphs():
-   # if (index >= nHandGlyphs):    
+   # if (index >= nHandGlyphs):
        # # Round and add extrema
        # fg = glyph.layers[1]
        # fg.round()
