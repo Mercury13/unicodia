@@ -33,6 +33,9 @@ isDir = os.path.isdir(CACHE_DIR)
 if not isDir:
    os.mkdir(CACHE_DIR)
 
+errFile = open(CACHE_PATH + '~err.log', 'w')
+errFile.write('Errors START\n')
+
 for line0 in file:
     line = line0.strip()
     if (line == ''):
@@ -96,6 +99,11 @@ for line0 in file:
         fg.round()
         glyph.foreground = fg
         glyph.width = 1000
+        
+        if glyph.selfIntersects():
+            msg = 'Glyph {} self-intersects'.format(sUcode.upper())
+            errFile.write(msg)
+            errFile.write('\n')
 
         # Stop those base defs
         baseDefs = ''
@@ -122,8 +130,11 @@ for line0 in file:
            # glyph.correctDirection()
    # ++index
 
-#font.generate(TEMPFILENAME)
+errFile.write('Errors END\n')
+errFile.close
+
+font.generate(TEMPFILENAME)
 
 # Run external hinter
-#CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
-#os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
+CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
+os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))
