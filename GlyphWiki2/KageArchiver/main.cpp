@@ -78,6 +78,14 @@ size_t LineTraverser::remainder() const noexcept
 }
 
 
+///
+/// @brief readKageList
+/// @param r              KageList that accommodates both current and old hieros
+/// @param cache          cache where s_v’s are stored
+/// @param wantedSize     a little bit bigger than actual size in lines
+/// @param fname          fname for Kage DB dump
+/// @return   # of entries read
+///
 size_t readKageList(KageList& r, KageCache& cache, unsigned wantedSize, const char* fname)
 {
     if (!cache.data.empty())
