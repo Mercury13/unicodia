@@ -63,6 +63,7 @@ for line0 in file:
         glyph = font.createChar(ucode)
         glyph.glyphname = "u" + sUcode.upper()
         glyph.importOutlines(TEMPSVG, scale=False, simplify=False)
+        glyph.removeOverlap()
         glyph.transform(mat)
         glyph.width = 1000        
 
