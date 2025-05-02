@@ -44,7 +44,7 @@ struct KageCache {
 class LineTraverser
 {
 public:
-    LineTraverser(std::string_view x);
+    LineTraverser(std::string_view x, unsigned wantedSize);
     bool get(std::string_view& r) noexcept;
     size_t size() const noexcept { return lines.size(); }
     size_t remainder() const noexcept;
@@ -53,10 +53,11 @@ private:
     size_t index = 0;
 };
 
-LineTraverser::LineTraverser(std::string_view x)
+LineTraverser::LineTraverser(std::string_view x, unsigned wantedSize)
 {
     // true is OK
-    lines = str::splitByAnySv(x, "\r\n", true);
+    lines.reserve(wantedSize);
+    str::splitByAnySvTo(x, "\r\n", lines, true);
 }
 
 bool LineTraverser::get(std::string_view& r) noexcept
@@ -77,7 +78,7 @@ size_t LineTraverser::remainder() const noexcept
 }
 
 
-size_t readKageList(KageList& r, KageCache& cache, const char* fname)
+size_t readKageList(KageList& r, KageCache& cache, unsigned wantedSize, const char* fname)
 {
     if (!cache.data.empty())
         throw std::invalid_argument("You are using full cache, that's error-prone");
@@ -101,7 +102,7 @@ size_t readKageList(KageList& r, KageCache& cache, const char* fname)
     }
 
     std::string_view s;
-    LineTraverser tr(cache.data);
+    LineTraverser tr(cache.data, wantedSize);
     // Parse header
     while (tr.get(s)) {
         if (s.starts_with("--")) {
@@ -443,12 +444,12 @@ int main()
         KageList kageList;
         std::cout << "Reading small Kage list..." << std::flush;
         KageCache smallCache;
-        auto nSmall = readKageList(kageList, smallCache, "dump_newest_only.txt");
+        auto nSmall = readKageList(kageList, smallCache, 1'500'000, "dump_newest_only.txt");
         std::cout << "OK, " << nSmall << " entries" "\n";
 
         std::cout << "Reading LARGE Kage list..." << std::flush;
         KageCache largeCache;
-        auto nLarge = readKageList(kageList, largeCache, "dump_all_versions.txt");
+        auto nLarge = readKageList(kageList, largeCache, 5'000'000, "dump_all_versions.txt");
         std::cout << "OK, " << nLarge << " entries" "\n";
 
         std::cout << "Archiving tasks..." << std::flush;
