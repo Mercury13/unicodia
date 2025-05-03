@@ -25,9 +25,9 @@ std::string_view tryRemovePrefixSv(
         std::string_view currKey,
         std::string_view bigKey)
 {
+    char buf[200];
     auto posVersion = bigKey.find('@');
     if (posVersion != std::string_view::npos) {
-        char buf[200];
         snprintf(buf, std::size(buf),
                 "Aggressive search + specific version, IDK, check manually what to do:"
                 " root '%*s', key '%*s', troublesome '%*s'",
@@ -40,16 +40,36 @@ std::string_view tryRemovePrefixSv(
     auto next = bigKey.substr(posDash + 1);
     if (next.empty())
         return {};
+    bool hasNormal = false;
+    bool hasCountry = false;
     for (auto c : next) {
         switch (c) {
         case 'g':   // Possible country codes
         case 't':
         case 'j':
         case 'k':
-        case 'v': break;
-        default : return {};
+        case 'n':
+        case 'v':
+            hasCountry = true; break;
+        case '0': case '1': case '2': case '3': case '4': case '5': case '6':
+        case '7': case '8': case '9': case 'a': case 'b': case 'c': case 'd':
+        case 'e': case 'f': case 'u':
+            hasNormal = true; break;
+        default :
+            snprintf(buf, std::size(buf),
+                    "Unknown character in aggressive suffix: root '%*s', key '%*s', troublesome '%*s'",
+                    PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
+            throw BadData(buf);
         }
     }
+    if (hasNormal && hasCountry) {
+        snprintf(buf, std::size(buf),
+                "Have both normal and country characters in aggressive suffix: root '%*s', key '%*s', troublesome '%*s'",
+                PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
+        throw BadData(buf);
+    }
+    if (!hasCountry)
+        return {};
     return bigKey.substr(0, posDash);
 }
 

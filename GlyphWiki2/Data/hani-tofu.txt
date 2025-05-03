@@ -1819,7 +1819,16 @@
 
 # Kangxi radicals, just need because of bad hinting
 /country g AGGR
-/range 2F00 2FD5
+/range 2F00 2F1A
+
+# Glitch in Chinese, use normal version
+/country
+2F1B
+
+#2F2A strange discrepancy with Bablestone, let it be
+
+/country g AGGR
+/range 2F1C 2FD5
 
 # U17 unstable characters, template unstable-u*.svg
 # (none for now, wait for GlyphWiki to implement something)
