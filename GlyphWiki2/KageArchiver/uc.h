@@ -11,14 +11,14 @@ enum class CountryFg : unsigned short {
     TAIWAN     = 1<<1,
     JAPAN      = 1<<2,
     KOREA      = 1<<3,
-    N_KOREA    = 1<<4,
-    VIETNAM    = 1<<5,
-    MACAO      = 1<<6,
-    HONGKONG   = 1<<7,
-    KOREA_N    = 1<<8,
-    DAIZO      = 1<<9,  ///< Japanese Buddhist texts
-    CONSORTIUM = 1<<10, ///< added by Consortium
-    WESTERN    = 1<<11, ///< found in Western archives
+    VIETNAM    = 1<<4,
+    MACAO      = 1<<5,
+    HONGKONG   = 1<<6,
+    KOREA_N    = 1<<7,
+    DAIZO      = 1<<8,  ///< Japanese Buddhist texts
+    CONSORTIUM = 1<<9,  ///< added by Consortium
+    WESTERN    = 1<<10, ///< found in Western archives
+    ALL = WESTERN - 1 + WESTERN,
 };
 
 struct UnicodeInfo {

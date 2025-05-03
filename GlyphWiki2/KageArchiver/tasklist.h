@@ -12,6 +12,7 @@
 
 // Project-local
 #include "excep.h"
+#include "uc.h"
 
 
 DEFINE_EXCEPTION_CLASS(BadTask, std::logic_error)
@@ -38,7 +39,8 @@ struct Task
     std::shared_ptr<TaskSets> sets;
     bool alertWhenTrueCountry = false;
 
-    [[nodiscard]] SafeVector<Candidate> candidates(char32_t code) const;
+    [[nodiscard]] SafeVector<Candidate> candidates(
+            char32_t code, const UnicodeList& ulist) const;
 };
 
 using TaskList = std::map<char32_t, Task>;

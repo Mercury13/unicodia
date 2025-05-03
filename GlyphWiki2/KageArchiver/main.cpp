@@ -241,7 +241,10 @@ void doFollowDeepLinks(
 }
 
 
-void archiveTasks(const TaskList& taskList, const KageList& kageList)
+void archiveTasks(
+        const TaskList& taskList,
+        const KageList& kageList,
+        const UnicodeList& unicodeList)
 {
     char buf[300];
 
@@ -253,7 +256,7 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
           "#   G code root - go; create an ideograph and erase entries" "\n";
 
     for (const auto& [k, t] : taskList) {
-        const auto cands = t.candidates(k);
+        const auto cands = t.candidates(k, unicodeList);
         if (cands.empty()) {
             snprintf(buf, std::size(buf), "Task for %X made no candidates", unsigned(k));
             throw BadTask(buf);
@@ -316,7 +319,7 @@ int main()
         std::cout << "OK, " << nLarge << " entries" "\n";
 
         std::cout << "Archiving tasks..." << std::flush;
-        archiveTasks(taskList, kageList);
+        archiveTasks(taskList, kageList, unicodeList);
         std::cout << "OK" "\n";
 
         std::cout << "Success, wait a bit for data destruction!" "\n";

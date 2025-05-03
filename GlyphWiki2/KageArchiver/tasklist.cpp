@@ -77,14 +77,50 @@ void printCand(Buf& buf, const char* prefix, unsigned code, std::string_view suf
     }
 }
 
-SafeVector<Candidate> Task::candidates(char32_t code) const
+Flags<CountryFg> suffixToCountries(std::string_view suffix)
+{
+    if (suffix.empty())
+        return CountryFg::ALL;
+    if (suffix.length() != 2 || suffix[0] != '-')
+        return NO_FLAGS;
+    switch (suffix[1]) {
+    case 'g': return CountryFg::CHINA;
+    case 'j': return CountryFg::JAPAN;
+    case 'k': return CountryFg::KOREA;
+    case 't': return CountryFg::TAIWAN;
+    case 'h': return CountryFg::HONGKONG;
+    case 'm': return CountryFg::MACAO;
+    case 'v': return CountryFg::VIETNAM;
+    case 's': return CountryFg::DAIZO;
+    default:  return NO_FLAGS;
+    }
+}
+
+SafeVector<Candidate> Task::candidates(char32_t code, const UnicodeList& list) const
 {
     Buf buf;
     SafeVector<Candidate> r;
-    for (auto& v : sets->country.suffixSequence) {
-        printCand(buf, "u", code, v);
-        r.push_back(
-            Candidate { .text = buf, .isFallback = v.empty() });
+    if (sets->country.limitToUnihan) {
+        for (auto& v : sets->country.suffixSequence) {
+            auto it = list.find(code);
+            if (it == list.end()) {
+                snprintf(buf, std::size(buf),
+                         "No info about codepoint %u", unsigned(code));
+                throw BadTask(buf);
+            }
+            auto countries = suffixToCountries(v);
+                if (it->second.countries.haveAny(countries)) {
+                printCand(buf, "u", code, v);
+                r.push_back(
+                    Candidate { .text = buf, .isFallback = v.empty() });
+            }
+        }
+    } else {
+        for (auto& v : sets->country.suffixSequence) {
+            printCand(buf, "u", code, v);
+            r.push_back(
+                Candidate { .text = buf, .isFallback = v.empty() });
+        }
     }
     return r;
 }
