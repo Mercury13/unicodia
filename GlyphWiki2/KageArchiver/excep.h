@@ -8,3 +8,6 @@
     public:                     \
         using Super::Super; };
 // NOLINTEND(bugprone-macro-parentheses)
+
+
+#define PRF_SV(x) (unsigned((x).length())), ((x).data())

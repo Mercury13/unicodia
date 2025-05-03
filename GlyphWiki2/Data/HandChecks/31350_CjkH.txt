@@ -1,0 +1,56 @@
+DUMPS:
+a = late April 2025
+
+COUNTRIES:
+T = Taiwanese
+V = Vietnamese
+S = Japanese Buddhism
+
+STATE:
+m    = marginally improved
++    = improved
+++   = greatly improved
+=    = see no difference
+u    = unchanged
+cool = now completely matches Unicode base
+good = minor renderer-related mismatches
+gen  = generally OK
+
+31353 a T + cool
+31359 a V ++ cool
+3135C a V + cool
+31362 a V + cool
+31367 a V + cool
+31368 a K = cool
+31369 a V ++ good
+31383 a V + cool
+31387 a V + gen
+31389 a V + cool
+3138A a K + cool
+3138B a V + cool
+3138C a V u gen
+3138D a V + gen
+3138E a K + cool
+31393 a V + cool
+31397 a V ++ good
+313B4 a K + cool
+313B5 a K + cool
+313B7 a S + cool
+313BB a K m cool
+313C4 a V m cool
+313C9 a V m cool
+313D2 a K m cool
+313DA a K + good
+313E5 a V + good
+313E6 a V = gen
+313E8 a V + cool
+313EE a V ++ cool
+313EF a V m cool
+313F0 a V ++ cool
+313F2 a V m cool
+313F6 a V + cool
+3140B a K m good
+31412 a V m cool
+31418 a S m cool
+3141D a K m cool
+3141E a S + cool

@@ -11,6 +11,7 @@
 // Project-local
 #include "kagelist.h"
 #include "tasklist.h"
+#include "uc.h"
 
 
 DEFINE_EXCEPTION_CLASS(BadData, std::logic_error)
@@ -30,7 +31,7 @@ std::string_view tryRemovePrefixSv(
     if (posVersion != std::string_view::npos) {
         snprintf(buf, std::size(buf),
                 "Aggressive search + specific version, IDK, check manually what to do:"
-                " root '%*s', key '%*s', troublesome '%*s'",
+                " root '%.*s', key '%.*s', troublesome '%.*s'",
                 PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
         throw BadData(buf);
     }
@@ -57,14 +58,14 @@ std::string_view tryRemovePrefixSv(
             hasNormal = true; break;
         default :
             snprintf(buf, std::size(buf),
-                    "Unknown character in aggressive suffix: root '%*s', key '%*s', troublesome '%*s'",
+                    "Unknown character in aggressive suffix: root '%.*s', key '%.*s', troublesome '%.*s'",
                     PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
             throw BadData(buf);
         }
     }
     if (hasNormal && hasCountry) {
         snprintf(buf, std::size(buf),
-                "Have both normal and country characters in aggressive suffix: root '%*s', key '%*s', troublesome '%*s'",
+                "Have both normal and country characters in aggressive suffix: root '%.*s', key '%.*s', troublesome '%.*s'",
                 PRF_SV(currRoot), PRF_SV(currKey), PRF_SV(bigKey));
         throw BadData(buf);
     }
@@ -126,7 +127,7 @@ static_assert( hasKagePrefix("alpha-bravo", "alpha"));
         pFind = value.find(':');
         if (pFind != std::string::npos) {
             snprintf(buf, std::size(buf),
-                     "Alias-link in '%*s' has extra columns", PRF_SV(key));
+                     "Alias-link in '%.*s' has extra columns", PRF_SV(key));
             throw BadData(buf);
         }
         // Find, replace key and it
@@ -149,7 +150,7 @@ static_assert( hasKagePrefix("alpha-bravo", "alpha"));
         it = kageList.find(value);
         if (it == kageList.end()) {
             snprintf(buf, std::size(buf),
-                     "Ideo '%*s' hardlinks to missing ideo '%*s'",
+                     "Ideo '%.*s' hardlinks to missing ideo '%.*s'",
                      PRF_SV(key), PRF_SV(value));
             throw BadData(buf);
         }
@@ -191,7 +192,7 @@ void doFollowDeepLinks(
         if (it->second.color == DfsColor::GRAY) {
             std::string_view badKey = it->first->first;
             snprintf(buf, std::size(buf),
-                     "Cyclic reference: initiator '%*s', good '%*s', bad '%*s'",
+                     "Cyclic reference: initiator '%.*s', good '%.*s', bad '%.*s'",
                      PRF_SV(start->first), PRF_SV(thing->first), PRF_SV(badKey));
             throw BadData(buf);
         }
@@ -210,7 +211,7 @@ void doFollowDeepLinks(
         if (cols[0] == "99") {  // 99 = link
             if (cols.size() < 8) {
                 snprintf(buf, std::size(buf),
-                         "Strange link in '%*s': need 8+ cols",
+                         "Strange link in '%.*s': need 8+ cols",
                          PRF_SV(thing->first));
                 throw BadData(buf);
             }
@@ -219,7 +220,7 @@ void doFollowDeepLinks(
             auto it1 = kageList.find(target);
             if (it1 == kageList.end()) {
                 snprintf(buf, std::size(buf),
-                         "Ideo '%*s' links to missing ideo '%*s'",
+                         "Ideo '%.*s' links to missing ideo '%.*s'",
                          PRF_SV(thing->first), PRF_SV(target));
                 throw BadData(buf);
             }
@@ -242,7 +243,7 @@ void doFollowDeepLinks(
 
 void archiveTasks(const TaskList& taskList, const KageList& kageList)
 {
-    char buf[100];
+    char buf[300];
 
     std::ofstream os("hani-tasks.txt");
     os << "# Automatically created with KageArchiver, do not edit!" "\n"
@@ -254,12 +255,17 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
     for (const auto& [k, t] : taskList) {
         const auto cands = t.candidates(k);
         if (cands.empty()) {
-            char buf[100];
             snprintf(buf, std::size(buf), "Task for %X made no candidates", unsigned(k));
             throw BadTask(buf);
         }
         for (const auto& v : cands) {
-            if (auto where = followKage(kageList, v, t.sets->country)) {
+            if (auto where = followKage(kageList, v.text, t.sets->country)) {
+                if (t.alertWhenTrueCountry && !v.isFallback) {
+                    snprintf(buf, std::size(buf),
+                             "[ALERT] GW finally made country '%.*s' for %X: remove in hani-tofu.txt and possibly AutoBuilder",
+                             PRF_SV(v.text), unsigned(k));
+                    throw BadTask(buf);
+                }
                 auto fullList = followDeepLinks(kageList, where);
                 os << '\n';
                 for (auto& q : fullList) {
@@ -267,7 +273,7 @@ void archiveTasks(const TaskList& taskList, const KageList& kageList)
                     os << '=' << k << '=' << v << '\n';
                 }
                 snprintf(buf, std::size(buf),
-                         "G %X %*s" "\n",
+                         "G %X %.*s" "\n",
                          k, PRF_SV(where->first));
                 os << buf;
                 goto found;
@@ -294,6 +300,10 @@ int main()
         auto taskList = readTaskList();
         std::cout << "OK, " << taskList.size() << " tasks" "\n";
 
+        std::cout << "Reading Unicode list..." << std::flush;
+        UnicodeList unicodeList = readUnicodeList();
+        std::cout << "OK, " << unicodeList.size() << " chars" "\n";
+
         KageList kageList;
         std::cout << "Reading small Kage list..." << std::flush;
         KageCache smallCache;
@@ -312,6 +322,8 @@ int main()
         std::cout << "Success, wait a bit for data destruction!" "\n";
     } catch (const BadTask& e) {
         writeError("BAD TASKS", e);
+    } catch (const BadUnicode& e) {
+        writeError("BAD UNICODE", e);
     } catch (const BadData& e) {
         writeError("BAD DATA", e);
     } catch (const StrangeDump& e) {

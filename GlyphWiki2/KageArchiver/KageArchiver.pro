@@ -7,14 +7,16 @@ SOURCES += \
         ../../Libs/SelfMade/Strings/u_Strings.cpp \
         kagelist.cpp \
         main.cpp \
-        tasklist.cpp
+        tasklist.cpp \
+        uc.cpp
 
 HEADERS += \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../../Libs/SelfMade/u_Vector.h \
     excep.h \
     kagelist.h \
-    tasklist.h
+    tasklist.h \
+    uc.h
 
 INCLUDEPATH += \
     ../../Libs/SelfMade \

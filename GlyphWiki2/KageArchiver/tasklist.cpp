@@ -48,6 +48,13 @@ void SettingsMan::parseCountry(std::span<std::string_view> params)
             isStrict = true;
         } else if (v == "AGGR"sv) {
             r.isAggressive = true;
+        } else if (v == "UHAN"sv) {
+            r.limitToUnihan = true;
+        } else {
+            char buf[200];
+            snprintf(buf, std::size(buf),
+                    "Unknown special command for country: '%.*s'", PRF_SV(v));
+            throw BadTask(buf);
         }
     }
     if (!isStrict) {
@@ -63,33 +70,50 @@ using Buf = char[100];
 
 void printCand(Buf& buf, const char* prefix, unsigned code, std::string_view suffix)
 {
-    unsigned sz = snprintf(buf, BUFSZ, "%s%x%*s", prefix, unsigned(code), PRF_SV(suffix));
+    unsigned sz = snprintf(buf, BUFSZ, "%s%x%.*s", prefix, unsigned(code), PRF_SV(suffix));
     if (sz >= BUFSZ - 2) {
         snprintf(buf, BUFSZ, "Candidate for %X too long", unsigned(code));
         throw BadTask(buf);
     }
 }
 
-SafeVector<std::string> Task::candidates(char32_t code) const
+SafeVector<Candidate> Task::candidates(char32_t code) const
 {
     Buf buf;
-    SafeVector<std::string> r;
+    SafeVector<Candidate> r;
     for (auto& v : sets->country.suffixSequence) {
         printCand(buf, "u", code, v);
-        r.push_back(buf);
+        r.push_back(
+            Candidate { .text = buf, .isFallback = v.empty() });
     }
     return r;
 }
 
+enum class PutMode : unsigned char { NEW, FIXUP };
 
-void putTask(TaskList& r, char32_t code, SettingsMan& man)
+///
+///  @return  pointer to task, never null
+///
+Task* putTask(TaskList& r, char32_t code, SettingsMan& man, PutMode mode)
 {
-    auto [_, was] = r.try_emplace(code, man.sets());
-    if (!was) {
-        char buf[40];
-        snprintf(buf, std::size(buf), "Code repeats: %X", unsigned(code));
-        throw BadTask(buf);
+    auto [it, wasIns] = r.insert_or_assign(
+                        code, Task { .sets = man.sets() });
+    char buf[100];
+    switch (mode) {
+    case PutMode::NEW:
+        if (!wasIns) {
+            snprintf(buf, std::size(buf), "Code repeats: %X", unsigned(code));
+            throw BadTask(buf);
+        }
+        break;
+    case PutMode::FIXUP:
+        if (wasIns) {
+            snprintf(buf, std::size(buf), "Code does not fix up: %X", unsigned(code));
+            throw BadTask(buf);
+        }
+        break;
     }
+    return &it->second;
 }
 
 [[nodiscard]] char32_t parseHexTask(std::string_view s)
@@ -111,6 +135,7 @@ void putTask(TaskList& r, char32_t code, SettingsMan& man)
 
     TaskList r;
     SettingsMan setMan;
+    char buf[200];
 
     std::string s;
     while (std::getline(is, s)) {
@@ -133,18 +158,34 @@ void putTask(TaskList& r, char32_t code, SettingsMan& man)
                 if (min > max)
                     throw BadTask("In /range min should be <= max");
                 for (char32_t c = min; c <= max; ++c) {
-                    putTask(r, c, setMan);
+                    putTask(r, c, setMan, PutMode::NEW);
                 }
             } else if (cmd == "country"sv) {
                 std::span p1 = params;
                 p1 = p1.subspan(1);
                 setMan.parseCountry(p1);
+            } else if (cmd == "fixup"sv) {
+                if (params.size() < 2)
+                   throw BadTask("/fixup should have one param");
+                auto cp = parseHexTask(params[1]);
+                auto pTask = putTask(r, cp, setMan, PutMode::FIXUP);
+                std::span q = params;
+                q = q.subspan(2);
+                for (auto v : q) {
+                    if (v == "ALERT"sv) {
+                        pTask->alertWhenTrueCountry = true;
+                    } else {
+                        snprintf(buf, std::size(buf),
+                                "Unknown /fixup's option '%.*s'", PRF_SV(v));
+                        throw BadTask(buf);
+                    }
+                }
             } else {
                 throw BadTask(str::cat("Unknown command: ", cmd));
             }
         } else { // Single char
             char32_t code = parseHexTask(st);
-            putTask(r, code, setMan);
+            putTask(r, code, setMan, PutMode::NEW);
         }
     }
 

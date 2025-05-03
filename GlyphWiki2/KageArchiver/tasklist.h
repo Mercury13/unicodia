@@ -21,20 +21,26 @@ struct TaskSets
 {
     struct Country {
         bool isAggressive = false;
+        bool limitToUnihan = false;
         SafeVector<std::string> suffixSequence;
     } country;
+};
+
+
+struct Candidate {
+    std::string text;
+    bool isFallback;
 };
 
 
 struct Task
 {
     std::shared_ptr<TaskSets> sets;
+    bool alertWhenTrueCountry = false;
 
-    [[nodiscard]] SafeVector<std::string> candidates(char32_t code) const;
+    [[nodiscard]] SafeVector<Candidate> candidates(char32_t code) const;
 };
 
 using TaskList = std::map<char32_t, Task>;
 
 [[nodiscard]] TaskList readTaskList();
-
-#define PRF_SV(x) (unsigned((x).length())), ((x).data())

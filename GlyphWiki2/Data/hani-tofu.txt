@@ -4,14 +4,20 @@
 # foo = single char
 #
 # Commands:
-#   /country g t AGGR STRICT  = specify country 
-#           g = China, t = Taiwan, j = Japan, k = Korea,
-#                     in order of preference
+#   /country g t AGGR STRICT
+#      Specify country:
+#           g = China, t = Taiwan, j = Japan, k = Korea, in order of preference
 #           AGGR   = aggressively search for that country in redirections
 #                     (wanted for Chinese versions of Kangxi radicals but infeasible)
 #           STRICT = need specific country and don’t settle on default
 #           UHAN   = filter using UniHan base: no Chinese in Unicode → use Japanese etc
-#   /range hex-from hex-to    = same as hex-from, hex-from+1, etc.
+#
+#   /range hex-from hex-to
+#      Same as hex-from, hex-from+1, etc.
+#
+#   /fixup hex ALERT
+#      Fix up some character, SHOULD EXIST
+#      (ranges/lists are created en masse, then bad chars are hand-checked)
 #
 
 
@@ -22,7 +28,7 @@
 
 
 # Normal template u*.svg
-/country g t j k v STRICT UHAN
+/country g t j k v s STRICT UHAN
 
 31353
 31359
@@ -1832,5 +1838,53 @@
 323A5
 323A6
 
+
 # U17 unstable characters, template unstable-u*.svg
 # (none for now, wait for GlyphWiki to implement something)
+
+
+#  FIXUPS
+
+/country g t j k v s UHAN
+
+# Taiwanese, “generic” char only, correct but craggy, BUG IN AUTOBUILDER
+/fixup 31BD3 ALERT
+
+# Taiwanese, “generic” char only, BUG IN AUTOBUILDER
+/fixup 31BD4 ALERT
+
+# Taiwanese, “generic” char only, BUG IN AUTOBUILDER
+/fixup 31BE0 ALERT
+
+# Just for debugging, char is Taiwanese and good
+#/fixup 31BE1 ALERT
+
+# Taiwanese, “generic” char only, OK
+/fixup 31BEC ALERT
+
+# Taiwanese, “generic” char only, wrong rooftop, BUG IN AUTOBUILDER
+/fixup 31BF0 ALERT
+
+# Taiwanese, “generic” char only, wrong rooftop, BUG IN AUTOBUILDER
+/fixup 31BF8 ALERT
+
+# Taiwanese, “generic” char only, wrong rooftop, BUG IN AUTOBUILDER
+/fixup 31C52 ALERT
+
+# Taiwanese, “generic” char only, wrong inner TL, BUG IN AUTOBUILDER
+/fixup 31C68 ALERT
+
+# Taiwanese, “generic” char only, wrong lower, BUG IN AUTOBUILDER
+/fixup 31CA9 ALERT
+
+# Taiwanese, “generic” char only, wrong lower, BUG IN AUTOBUILDER
+/fixup 31F95 ALERT
+
+# Taiwanese, “generic” char only, wrong mid left, BUG IN AUTOBUILDER
+/fixup 31FB1 ALERT
+
+# Taiwanese, “generic” char only, correct but craggy, BUG IN AUTOBUILDER
+/fixup 31FB2 ALERT
+
+# Taiwanese, “generic” char only, correct but craggy, let it be
+/fixup 31FC7 ALERT
