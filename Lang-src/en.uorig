@@ -1864,11 +1864,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>You will ask: how to find a CJK ideograph in the dictionary if the pronunciation is unknown? To do this, you find a ''radical'' in an ideograph{{-}}a stroke or combination of strokes.</p>
+      <p>You might ask: how to find a CJK ideograph in the dictionary if you don’t know the pronunciation? The solution is to identify a ''radical''{{-}}a key stroke or component within the character.</p>
       <p />
-      <p>Kangxi dictionary of Chinese language is written 1710–1716 after the order of Kangxi Emperor of China, and contains {{n|49030}} entries. It was considered standard until late 19th century. In 1831 about {{n|2500}} mistakes were fixed, caused by the hurry of initial authors.</p>
+      <p>Kangxi dictionary of Chinese language was compiled in 1710–1716 under the order of the Kangxi Emperor of China and contains {{n|49030}} entries. It remained the standard reference until the late 19th century. A revised edition of 1831 fixed about {{n|2500}} mistakes caused by the hurry of initial authors.</p>
       <p />
-      <p>The system of “alphabetical” sorting of ideographs made from 214 radicals was devised back in 1615, but the Kangxi dictionary was the one that made it standard.</p>
+      <p>The system of “alphabetical” sorting of ideographs by 214 radicals was first devised in 1615. However, it was the Kangxi dictionary that ultimately standardized that method.</p>
+      <p />
+      <p>The sample Unicode glyphs were heavily debated, and are as country-agnostic as possible now.</p>
      </orig>
     </text>
    </group>

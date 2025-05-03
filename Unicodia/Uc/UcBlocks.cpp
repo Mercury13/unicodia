@@ -530,7 +530,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK },
             "Kangxi Radicals",
             { EcScript::ZKXI, 0 }, MapSubtype::CJ_SYMBOL,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ideographic desc OK, not collapsible: small block
     { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::ENG_CUSTOM },
             "Ideographic Description Characters",
