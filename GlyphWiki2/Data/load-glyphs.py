@@ -21,6 +21,8 @@ fontforge.runInitScripts()
 font = fontforge.activeFont()
 nHandGlyphs = sum(1 for _ in font.glyphs())
 
+# load tested versions
+
 # import ideographs
 file = open('hani-tasks.txt', 'r')
 baseDefs = ''
@@ -35,6 +37,10 @@ if not isDir:
 
 errFile = open(CACHE_PATH + '~err.log', 'w')
 errFile.write('Errors START\n')
+
+nShownErrors = 0
+nSuppressedErrors = 0
+glyphToDataId = {}
 
 for line0 in file:
     line = line0.strip()
@@ -64,9 +70,10 @@ for line0 in file:
         sHash = base64.b64encode(baHash, b'+-').decode()
         sHash = sHash[:12]   # 12 enough!
 
-        cachedSvg = CACHE_PATH + sUcode.upper() + '_' + sHash + '.svg'
+        dataId = sUcode.upper() + '_' + sHash
+        cachedSvg = CACHE_PATH + dataId + '.svg'
         if not os.path.exists(cachedSvg):
-            cmdline = NODELINE.format(NODE, RUN, entryPoint, baseDefs, cachedSvg)
+            cmdline = f'{NODE} {RUN} !{entryPoint}{baseDefs} >{cachedSvg}'
             debugFile = open(CACHE_PATH + '~hani.log', 'w')
             debugFile.write(cmdline)
             debugFile.write('\n')
@@ -78,7 +85,8 @@ for line0 in file:
                 raise Exception('Probably made an empty file');
 
         glyph = font.createChar(ucode)
-        glyph.glyphname = "u" + sUcode.upper()
+        gname = 'u' + sUcode.upper()
+        glyph.glyphname = gname
         glyph.importOutlines(cachedSvg, scale=False, simplify=False)
 
         # Work
@@ -93,18 +101,14 @@ for line0 in file:
                 raise Exception('Found non-clockwise contour');
         fg.removeOverlap()
         fg.transform(mat)
-        fg.simplify(0.1)
-        fg.round()
+        # Round to help cubic simplification that’ll destroy extraneous lines’ midpoints
+        fg.round(10)
+        fg.simplify(0.2)
         fg.removeOverlap()
-        fg.round()
         glyph.foreground = fg
         glyph.width = 1000
+        glyphToDataId[gname] = dataId
         
-        if glyph.selfIntersects():
-            msg = 'Glyph {} self-intersects'.format(sUcode.upper())
-            errFile.write(msg)
-            errFile.write('\n')
-
         # Stop those base defs
         baseDefs = ''
     else:
@@ -130,16 +134,22 @@ for line0 in file:
            # glyph.correctDirection()
    # ++index
 
-errFile.write('Errors END\n')
-errFile.close()
-
 # Now change curves to quad and simplify for a while
 font.is_quadratic = True
 for glyph in font.glyphs():
-   fg = glyph.layers[1]
-   fg.simplify(0.2)
-   fg.round()
+    fg = glyph.layers[1]
+    fg.simplify(0.2)
+    glyph.foreground = fg
+    if glyph.selfIntersects():
+        dataId = glyphToDataId[glyph.glyphname]
+        msg = f'{dataId}: glyph self-intersects\n'
+        errFile.write(msg)
+        nShownErrors += 1
 
+errFile.write(f'Errors END, {nShownErrors} shown, {nSuppressedErrors} suppressed\n')
+errFile.close()
+
+# Saving in TTF will auto-round, that’s OK
 font.generate(TEMPFILENAME)
 
 # Run external hinter
