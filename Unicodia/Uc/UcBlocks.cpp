@@ -527,7 +527,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZKXI, '1' }, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kangxi OK
-    { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK },
+    { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK, Ifg::PAINT_SVG, 1_hy + ImbaY::BELOW_2 },
             "Kangxi Radicals",
             { EcScript::ZKXI, 0 }, MapSubtype::CJ_SYMBOL,
             EcScript::Hani, EcFont::CJK_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
