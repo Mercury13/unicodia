@@ -131,7 +131,14 @@ for line0 in file:
    # ++index
 
 errFile.write('Errors END\n')
-errFile.close
+errFile.close()
+
+# Now change curves to quad and simplify for a while
+font.is_quadratic = True
+for glyph in font.glyphs():
+   fg = glyph.layers[1]
+   fg.simplify(0.2)
+   fg.round()
 
 font.generate(TEMPFILENAME)
 
