@@ -18,7 +18,9 @@ enum class CountryFg : unsigned short {
     DAIZO      = 1<<8,  ///< Japanese Buddhist texts
     CONSORTIUM = 1<<9,  ///< added by Consortium
     WESTERN    = 1<<10, ///< found in Western archives
-    ALL = (WESTERN<<1) - 1,
+    BIG_DUMMY,
+    BIGGEST = BIG_DUMMY - 1,
+    ALL = (BIGGEST<<1) - 1,
 };
 
 struct UnicodeInfo {
