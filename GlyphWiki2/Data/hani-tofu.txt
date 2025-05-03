@@ -4,15 +4,26 @@
 # foo = single char
 #
 # Commands:
-#   /range hex-from hex-to    = specify a range of characters
 #   /country g t AGGR STRICT  = specify country 
-#           g = China, t = Taiwan, j = Japan, k = Korea, etc
+#           g = China, t = Taiwan, j = Japan, k = Korea,
+#                     in order of preference
 #           AGGR   = aggressively search for that country in redirections
+#                     (wanted for Chinese versions of Kangxi radicals but infeasible)
 #           STRICT = need specific country and don’t settle on default
+#           UHAN   = filter using UniHan base: no Chinese in Unicode → use Japanese etc
+#   /range hex-from hex-to    = same as hex-from, hex-from+1, etc.
 #
 
 
+# Kangxi radicals, just need because of bad hinting and country-specific troubles
+# Make these region-agnostic
+/country
+/range 2F00 2FD5
+
+
 # Normal template u*.svg
+/country g t j k v STRICT UHAN
+
 31353
 31359
 3135C
@@ -1823,6 +1834,3 @@
 
 # U17 unstable characters, template unstable-u*.svg
 # (none for now, wait for GlyphWiki to implement something)
-
-# Kangxi radicals, just need because of bad hinting and country-specific troubles, Unicode’s things are region-agnostic
-/range 2F00 2FD5
