@@ -4,7 +4,11 @@
 # foo = single char
 #
 # Commands:
-#   /range hex-from hex-to   = specify a range of characters
+#   /range hex-from hex-to    = specify a range of characters
+#   /country g t AGGR STRICT  = specify country 
+#           g = China, t = Taiwan, j = Japan, k = Korea, etc
+#           AGGR   = aggressively search for that country in redirections
+#           STRICT = need specific country and don’t settle on default
 #
 
 
@@ -1817,18 +1821,8 @@
 323A5
 323A6
 
-# Kangxi radicals, just need because of bad hinting
-/country g AGGR
-/range 2F00 2F1A
-
-# Glitch in Chinese, use normal version
-/country
-2F1B
-
-#2F2A strange discrepancy with Bablestone, let it be
-
-/country g AGGR
-/range 2F1C 2FD5
-
 # U17 unstable characters, template unstable-u*.svg
 # (none for now, wait for GlyphWiki to implement something)
+
+# Kangxi radicals, just need because of bad hinting and country-specific troubles, Unicode’s things are region-agnostic
+/range 2F00 2FD5
