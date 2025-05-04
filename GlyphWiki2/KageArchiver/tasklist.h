@@ -21,8 +21,9 @@ DEFINE_EXCEPTION_CLASS(BadTask, std::logic_error)
 struct TaskSets
 {
     struct Country {
-        bool isAggressive = false;
-        bool limitToUnihan = false;
+        bool isAggressive = false;  ///< [+] aggressive search for country-specific variants
+        bool limitToUnihan = false; ///< [+] limit to options actually present in UniHan base
+        bool orErase = false;       ///< [+] erase if lookup failed
         SafeVector<std::string> suffixSequence;
     } country;
 };

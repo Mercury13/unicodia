@@ -175,6 +175,7 @@ constinit const uc::Font uc::fontInfo[] = {
                 Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
                 15_top, 125_pc },
       { FNAME_UNIHAN, 120_pc },                                                 // …7 for tofu
+    { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                                // Unicodia backed with P0/1
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1, backed with Unicodia
       { FNAME_UNIHAN, 120_pc },                                                 // …1
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat

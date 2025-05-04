@@ -59,6 +59,8 @@ void SettingsMan::parseCountry(std::span<std::string_view> params)
             r.limitToUnihan = true;
         } else if (v == "DEFAULT"sv) {
             insertBack(r.suffixSequence, defaultCountries);
+        } else if (v == "ORERASE"sv) {
+            r.orErase = true;
         } else {
             char buf[200];
             snprintf(buf, std::size(buf),
@@ -130,7 +132,7 @@ SafeVector<Candidate> Task::candidates(char32_t code, const UnicodeList& list) c
             auto it = list.find(code);
             if (it == list.end()) {
                 snprintf(buf, std::size(buf),
-                         "No info about codepoint %u", unsigned(code));
+                         "No info about codepoint %X", unsigned(code));
                 throw BadTask(buf);
             }
             auto countries = suffixToCountries(v);

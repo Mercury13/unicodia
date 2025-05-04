@@ -256,7 +256,8 @@ namespace uc {
            CJK_HANA,    ///< HanaMin, default ideographs
            Z_CJK_6,
            Z_CJK_7,
-        CJK_P01_UHAN,  ///< Plane 0/1, but back with Unicodia Han
+        CJK_UHAN_P01,
+        CJK_P01_UHAN,   ///< Plane 0/1, but back with Unicodia Han
            CJK_UHAN,    ///< The 6th is Unicodia Han
          CJK_COMPAT,
            Z_CJC_1,

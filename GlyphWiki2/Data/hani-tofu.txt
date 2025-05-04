@@ -4,7 +4,7 @@
 # foo = single char
 #
 # Commands:
-#   /country g t DEFAULT AGGR STRICT
+#   /country g t DEFAULT AGGR STRICT ORERASE UHAN
 #      Specify country:
 #           g = China, t = Taiwan, j = Japan, k = Korea, in order of preference
 #           DEFAULT = use values from /defaultcontry
@@ -13,6 +13,8 @@
 #                      probably flawed
 #           STRICT  = need specific country and don’t settle on default
 #           UHAN    = filter using UniHan base: no Chinese in Unicode → use Japanese etc
+#           ORERASE = failed lookup is not an error, just erase from font
+#                      Probably use with STRICT
 #
 #   /defaultcountry g t
 #      DRY in /country: just write DEFAULT and get those countries. No special keys like AGGR
@@ -23,6 +25,7 @@
 #   /fixup hex ALERT
 #      Fix up some character, SHOULD EXIST
 #      (ranges/lists are created en masse, then bad chars are hand-checked)
+#           ALERT          = alert if other character rather than default pops up
 #
 
 
@@ -31,8 +34,16 @@
 /country
 /range 2F00 2FD5
 
+
+
+# Supplemental Taiwanese compatible hieros, a few are from Hong Kong
+/country t h m g j k v s UHAN STRICT ORERASE
+/range 2F800 2FA1D
+
+
+
 # That’s for all “normal” ranges
-/defaultcountry g t j k v s
+/defaultcountry g t h m j k v s
 
 
 # Normal template u*.svg

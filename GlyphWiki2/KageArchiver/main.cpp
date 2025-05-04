@@ -282,10 +282,12 @@ void archiveTasks(
                 goto found;
             }
         }
-        snprintf(buf, std::size(buf),
-                 "All candidates for %X are missing in Kage base",
-                 unsigned(k));
-        throw BadTask(buf);
+        if (!t.sets->country.orErase) {
+            snprintf(buf, std::size(buf),
+                     "All candidates for %X are missing in Kage base",
+                     unsigned(k));
+            throw BadTask(buf);
+        }
     found:;
     }
 }
