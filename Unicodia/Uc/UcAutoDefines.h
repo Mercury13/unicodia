@@ -353,12 +353,11 @@ namespace uc {
         EcBidiClass ecBidiClass;        // +1 = 9
         EcScript ecScript;              // +1 = 10
         unsigned char iNumeric;         // +1 = 11
-                                        // PADDING 1
+                                        // PADDING 1 = 12
         mutable Cfgs flags;             // +2 = 14
         struct ScriptSpecific {
             unsigned char v1;
             signed char v2;             // +2 = 16
-            Int3 link;                  // +3 = 19
 
             // For Hani
             unsigned char haniRadical() const { return v1; }
@@ -438,7 +437,7 @@ namespace uc {
         { return sprintPlus(buf, N, text); }
 
     // Check your calculations once again
-    static_assert(sizeof(Cp) == 20, "Cp size wrong");
+    static_assert(sizeof(Cp) == 16, "Cp size wrong");
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
