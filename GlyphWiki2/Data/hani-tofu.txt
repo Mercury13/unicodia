@@ -9,7 +9,8 @@
 #           g = China, t = Taiwan, j = Japan, k = Korea, in order of preference
 #           DEFAULT = use values from /defaultcontry
 #           AGGR    = aggressively search for that country in redirections
-#                      (wanted for Chinese versions of Kangxi radicals but infeasible)
+#                      Wanted for Chinese versions of Kangxi radicals but infeasible,
+#                      probably flawed
 #           STRICT  = need specific country and don’t settle on default
 #           UHAN    = filter using UniHan base: no Chinese in Unicode → use Japanese etc
 #
