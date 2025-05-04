@@ -344,25 +344,28 @@ namespace uc {
 
     struct Cp   // code point
     {
-        Int3 subj = 0;              // 3
+        Int3 subj = 0;                  // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
         } name;
-        EcCategory ecCategory;          // +1 = 8
-        EcVersion ecVersion;            // +1 = 9
-        EcBidiClass ecBidiClass;        // +1 = 10
-        EcScript ecScript;              // +1 = 11
-        uint8_t iNumeric;               // +1 = 12
+        EcCategory ecCategory;          // +1 = 7
+        EcVersion ecVersion;            // +1 = 8
+        EcBidiClass ecBidiClass;        // +1 = 9
+        EcScript ecScript;              // +1 = 10
+        unsigned char iNumeric;         // +1 = 11
+                                        // PADDING 1
         mutable Cfgs flags;             // +2 = 14
         struct ScriptSpecific {
             unsigned char v1;
             signed char v2;             // +2 = 16
+            Int3 link;                  // +3 = 19
 
             // For Hani
             unsigned char haniRadical() const { return v1; }
             signed char haniPlusStrokes () const { return v2; }
             constexpr operator bool() const noexcept { return v1; }
         } scriptSpecific;
+            // PADDING 1
 
         const Version& version() const;
         const Category& category() const;
@@ -435,7 +438,7 @@ namespace uc {
         { return sprintPlus(buf, N, text); }
 
     // Check your calculations once again
-    static_assert(sizeof(Cp) == 16, "Cp size wrong");
+    static_assert(sizeof(Cp) == 20, "Cp size wrong");
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
