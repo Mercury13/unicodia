@@ -4,13 +4,17 @@
 # foo = single char
 #
 # Commands:
-#   /country g t AGGR STRICT
+#   /country g t DEFAULT AGGR STRICT
 #      Specify country:
 #           g = China, t = Taiwan, j = Japan, k = Korea, in order of preference
-#           AGGR   = aggressively search for that country in redirections
-#                     (wanted for Chinese versions of Kangxi radicals but infeasible)
-#           STRICT = need specific country and don’t settle on default
-#           UHAN   = filter using UniHan base: no Chinese in Unicode → use Japanese etc
+#           DEFAULT = use values from /defaultcontry
+#           AGGR    = aggressively search for that country in redirections
+#                      (wanted for Chinese versions of Kangxi radicals but infeasible)
+#           STRICT  = need specific country and don’t settle on default
+#           UHAN    = filter using UniHan base: no Chinese in Unicode → use Japanese etc
+#
+#   /defaultcountry g t
+#      DRY in /country: just write DEFAULT and get those countries. No special keys like AGGR
 #
 #   /range hex-from hex-to
 #      Same as hex-from, hex-from+1, etc.
@@ -26,9 +30,12 @@
 /country
 /range 2F00 2FD5
 
+# That’s for all “normal” ranges
+/defaultcountry g t j k v s
+
 
 # Normal template u*.svg
-/country g t j k v s STRICT UHAN
+/country DEFAULT STRICT UHAN
 
 31353
 31359
@@ -1845,7 +1852,7 @@
 
 #  FIXUPS
 
-/country g t j k v s UHAN
+/country DEFAULT UHAN
 
 # Taiwanese, “generic” char only, correct but craggy, BUG IN AUTOBUILDER
 /fixup 31BD3 ALERT

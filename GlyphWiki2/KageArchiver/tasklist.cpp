@@ -13,12 +13,14 @@ class SettingsMan
 {
 public:
     SettingsMan();
-    ///  @post  never null
     void parseCountry(std::span<std::string_view> params);
+    void parseDefaultCountry(std::span<std::string_view> params);
+    /// @post  never null
     const std::shared_ptr<TaskSets>& sets();
 private:
     TaskSets currSets;
     std::shared_ptr<TaskSets> cachedPtr;
+    SafeVector<std::string> defaultCountries {};  // empty initially
 };
 
 
@@ -36,6 +38,11 @@ const std::shared_ptr<TaskSets>& SettingsMan::sets()
     return cachedPtr;
 }
 
+template <class Dest, class Src>
+inline void insertBack(Dest& dest, Src& src)
+{
+    dest.insert(std::end(dest), std::begin(src), std::end(src));
+}
 
 void SettingsMan::parseCountry(std::span<std::string_view> params)
 {
@@ -50,10 +57,12 @@ void SettingsMan::parseCountry(std::span<std::string_view> params)
             r.isAggressive = true;
         } else if (v == "UHAN"sv) {
             r.limitToUnihan = true;
+        } else if (v == "DEFAULT"sv) {
+            insertBack(r.suffixSequence, defaultCountries);
         } else {
             char buf[200];
             snprintf(buf, std::size(buf),
-                    "Unknown special command for country: '%.*s'", PRF_SV(v));
+                    "Unknown command for /country: '%.*s'", PRF_SV(v));
             throw BadTask(buf);
         }
     }
@@ -62,6 +71,22 @@ void SettingsMan::parseCountry(std::span<std::string_view> params)
     }
     currSets.country = r;
     cachedPtr.reset();
+}
+
+
+void SettingsMan::parseDefaultCountry(std::span<std::string_view> params)
+{
+    defaultCountries.clear();
+    for (auto v : params) {
+        if (v.length() == 1) {
+            defaultCountries.emplace_back(str::cat('-', v));
+        } else {
+            char buf[200];
+            snprintf(buf, std::size(buf),
+                    "Unknown command for /defaultcountry: '%.*s'", PRF_SV(v));
+            throw BadTask(buf);
+        }
+    }
 }
 
 
@@ -216,6 +241,10 @@ Task* putTask(TaskList& r, char32_t code, SettingsMan& man, PutMode mode)
                         throw BadTask(buf);
                     }
                 }
+            } else if (cmd == "defaultcountry"sv) {
+                std::span p1 = params;
+                p1 = p1.subspan(1);
+                setMan.parseDefaultCountry(p1);
             } else {
                 throw BadTask(str::cat("Unknown command: ", cmd));
             }
