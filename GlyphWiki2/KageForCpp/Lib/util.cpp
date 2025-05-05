@@ -41,17 +41,13 @@ kage::Float kage::widfun_stop_d(Float t, Point<Float> a, Point<Float> b, Float w
             *(p-t) / std::sqrt(p*p+(p-1)*(p-1)-(p-t)*(p-t));
 }
 
-kage::Float kage::widfun_stop2(Float t, Point<Float> a, Point<Float> b, Float wid)
+kage::Float kage::widfun_stop2(Float t, Point<Float>, Point<Float>, Float wid)
 {
-    const auto len = a.distFrom(b);
-    const auto p = Float(1) + std::sqrt(Float(100)/len);
     return (  (1-std::pow(1-t, Float(1.21)))*(Float(1.10)-CURVE_THIN)+CURVE_THIN  )*wid;
 }
 
-kage::Float kage::widfun_stop2_d(Float t, Point<Float> a, Point<Float> b, Float wid)
+kage::Float kage::widfun_stop2_d(Float t, Point<Float>, Point<Float>, Float wid)
 {
-    const auto len = a.distFrom(b);
-    const auto p = Float(1) + std::sqrt(Float(100)/len);
     return wid*(Float(1.10)-CURVE_THIN)*Float(1.21) * std::pow(1-t, Float(0.21));
 }
 
