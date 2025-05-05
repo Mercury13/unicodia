@@ -2,6 +2,7 @@
 
 #include <optional>
 #include <concepts>
+#include <cmath>
 
 namespace kage {
 
@@ -18,14 +19,17 @@ namespace kage {
     using Float = float;
 
     template <Numeric T>
+    using TypeF = std::common_type_t<T, Float>;
+
+    template <Numeric T>
     struct Point {
+        using LocalFlt = TypeF<T>;
         T x, y;
         constexpr Point() noexcept : x(0), y(0) {}
         constexpr Point(T aX, T aY) noexcept : x(aX), y(aY) {}
+        LocalFlt distFrom(const Point& a) const noexcept
+            { return std::hypot(LocalFlt(a.x - x), LocalFlt(a.y - y)); }
     };
-
-    template <Numeric T>
-    using TypeF = std::common_type_t<T, Float>;
 
     template <Numeric T>
     using PointF = Point<TypeF<T>>;
@@ -47,6 +51,7 @@ namespace kage {
     bool isCrossBox(Point<T> p1, Point<T> p2, Point<T> bp1, Point<T> bp2) noexcept;
 
 }   // namespace kage
+
 
 extern template std::optional<kage::PointF<int>> kage::getCrossPoint(Point<int> p11, Point<int> p12, Point<int> p21, Point<int> p22);
 extern template std::optional<kage::PointF<float>> kage::getCrossPoint(Point<float> p11, Point<float> p12, Point<float> p21, Point<float> p22);

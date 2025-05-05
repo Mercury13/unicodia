@@ -8,6 +8,7 @@ SOURCES += \
         ../Lib/2dstroke.cpp \
         ../Lib/drawing.cpp \
         ../Lib/polygon.cpp \
+        ../Lib/util.cpp \
         main.cpp
 
 INCLUDEPATH += \
@@ -25,4 +26,5 @@ HEADERS += \
     ../Lib/defs.h \
     ../Lib/drawing.h \
     ../Lib/polygon.h \
+    ../Lib/util.h \
     ../Lib/vec.h
