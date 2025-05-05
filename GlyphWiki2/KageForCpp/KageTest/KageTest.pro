@@ -6,6 +6,7 @@ CONFIG -= qt
 SOURCES += \
         ../Lib/2d.cpp \
         ../Lib/2dstroke.cpp \
+        ../Lib/polygon.cpp \
         main.cpp
 
 INCLUDEPATH += \
@@ -19,4 +20,5 @@ win32-g++ {
 
 HEADERS += \
     ../Lib/2d.h \
-    ../Lib/2dstroke.h
+    ../Lib/2dstroke.h \
+    ../Lib/polygon.h

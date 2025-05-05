@@ -15,6 +15,8 @@ namespace kage {
     concept Lesser = Numeric<T> && Numeric<U>
                      && std::is_same_v<std::common_type_t<T, U>, T>;
 
+    using Float = float;
+
     template <Numeric T>
     struct Point {
         T x, y;
@@ -23,7 +25,7 @@ namespace kage {
     };
 
     template <Numeric T>
-    using TypeF = std::common_type_t<T, float>;
+    using TypeF = std::common_type_t<T, Float>;
 
     template <Numeric T>
     using PointF = Point<TypeF<T>>;

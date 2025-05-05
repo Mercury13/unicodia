@@ -6,7 +6,6 @@ static_assert(std::is_same_v<kage::TypeF<long long>, float>);
 static_assert(std::is_same_v<kage::TypeF<float>, float>);
 static_assert(std::is_same_v<kage::TypeF<double>, double>);
 
-
 #define x11   p11.x
 #define x12   p12.x
 #define x21   p21.x
