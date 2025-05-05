@@ -2,12 +2,16 @@
 
 // C++
 #include <stdexcept>
+#include <cmath>
 
 // STL
-#include <algorithm>
 #include <charconv>
 
+// Kage
+#include <defs.h>
+
 kage::PtIdentity kage::PtIdentity::INST;
+kage::PtFixupAndCheck kage::PtFixupAndCheck::INST;
 
 // Check once again compiler’s features
 static_assert(std::is_nothrow_default_constructible_v<kage::Off>);
@@ -27,35 +31,45 @@ void kage::Polygon::convertToFont1000()
     }
 }
 
-void kage::Polygon::reverse()
-    { std::reverse(data.begin(), data.end()); }
-
-void kage::Polygon::append(const Polygon& poly)
-{
-    data.insert(data.end(), poly.begin(), poly.end());
-}
-
-kage::PolyPoint kage::Polygon::pop_front()
-{
-    if (data.empty())
-        throw std::logic_error("[Polygon::shift] data is empty");
-    auto r = data.front();
-    data.erase(data.begin());
-    return r;
-}
-
-size_t kage::Polygon::push_front(const PolyPoint& x)
-{
-    data.insert(data.begin(), x);
-    return size();
-}
-
 kage::PolyPoint kage::Polygon::transformed(size_t i, PtTransformer& tr) const
 {
     auto r = at(i);
     tr.go(r);
     return r;
 }
+
+void kage::Polygon::doTransform(PtTransformer& tr)
+{
+    for (auto& v : data)
+        tr.go(v);
+}
+
+namespace {
+
+    kage::Float clamp(kage::Float x)
+    {
+        return std::min<kage::Float>(
+                std::max<kage::Float>(x, kage::dim::MIN), kage::dim::MAX);
+    }
+
+}
+
+void kage::PtFixupAndCheck::go(PolyPoint& p)
+{
+    if (!std::isfinite(p.x) || !std::isfinite(p.y))
+        throw std::logic_error("[fixupAndCheck] Bad point’s X/Y");
+    p.x = clamp(p.x);
+    p.y = clamp(p.y);
+}
+
+
+void kage::Polygon::fixupAndCheck()
+{
+    if (size() < 3)
+        throw std::logic_error("[fixupAndCheck] Too few points in polygon");
+    doTransform(PtFixupAndCheck::INST);
+}
+
 
 namespace {
 
