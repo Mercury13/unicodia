@@ -67,7 +67,7 @@ kage::Float kage::widfun_fat_d(Float t, Point<Float> a, Point<Float> b, Float wi
           *(p-t) / std::sqrt(p*p + (p-1)*(p-1) - (p-t)*(p-t));
 }
 
-kage::Vec1 kage::getDir(Float x, Float y)
+kage::Dir kage::getDir(Float x, Float y)
 {
     auto q = std::hypot(x, y);
     if (q <= 0)
@@ -76,7 +76,7 @@ kage::Vec1 kage::getDir(Float x, Float y)
     return { .cos = x/q, .sin = y/q };
 }
 
-auto kage::movedPoint(Point<Float> p, Vec1 dir, Float delta) -> Point<Float>
+auto kage::movedPoint(Point<Float> p, Dir dir, Float delta) -> Point<Float>
 {
   return { p.x + delta*dir.cos, p.y + delta*dir.sin };
 }

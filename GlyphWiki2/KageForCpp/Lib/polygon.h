@@ -2,7 +2,7 @@
 
 // Kage
 #include <2d.h>
-#include <vec.h>
+#include <list.h>
 
 // STL
 #include <string>
@@ -47,10 +47,10 @@ namespace kage {
         static PtFixupAndCheck INST;
     };
 
-    class Polygon : public Vec<PolyPoint>
+    class Polygon : public List<PolyPoint>
     {
     public:
-        using Vec<PolyPoint>::Vec;
+        using List<PolyPoint>::List;
 
         void push(Float x, Float y, unsigned off) { data.emplace_back(x, y, off); }
 

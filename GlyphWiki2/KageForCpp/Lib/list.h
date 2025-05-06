@@ -7,13 +7,13 @@
 namespace kage {
 
     template <class T>
-    class Vec
+    class List
     {
     private:
         using UnderVec = std::vector<T>;
     public:
-        Vec() = default;
-        Vec(size_t n) : data(n) {};
+        List() = default;
+        List(size_t n) : data(n) {};
 
         T& operator[](size_t i) { return data.at(i); }
         const T& operator[](size_t i) const { return data.at(i); }
@@ -36,8 +36,8 @@ namespace kage {
 
         void reverse();
 
-        void append(const Vec& poly);
-        [[deprecated("Use append")]] void concat(const Vec& poly) { return append(poly); }
+        void append(const List& poly);
+        [[deprecated("Use append")]] void concat(const List& poly) { return append(poly); }
 
         T pop_front();
         [[deprecated("Use pop_front")]] auto shift() { return pop_front(); }
@@ -53,15 +53,15 @@ namespace kage {
 
 
 template <class T>
-void kage::Vec<T>::reverse()
+void kage::List<T>::reverse()
     { std::reverse(data.begin(), data.end()); }
 
 template <class T>
-void kage::Vec<T>::append(const Vec& x)
+void kage::List<T>::append(const List& x)
     { data.insert(data.end(), x.begin(), x.end()); }
 
 template <class T>
-T kage::Vec<T>::pop_front()
+T kage::List<T>::pop_front()
 {
     if (data.empty())
         throw std::logic_error("[Polygon::shift] data is empty");
@@ -71,7 +71,7 @@ T kage::Vec<T>::pop_front()
 }
 
 template <class T>
-size_t kage::Vec<T>::push_front(const T& x)
+size_t kage::List<T>::push_front(const T& x)
 {
     data.insert(data.begin(), x);
     return size();

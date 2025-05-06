@@ -27,4 +27,4 @@ HEADERS += \
     ../Lib/drawing.h \
     ../Lib/polygon.h \
     ../Lib/util.h \
-    ../Lib/vec.h
+    ../Lib/list.h

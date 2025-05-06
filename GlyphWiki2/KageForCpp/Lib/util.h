@@ -18,20 +18,23 @@ namespace kage {
     Float widfun_fat(Float t, Point<Float> a, Point<Float> b, Float wid);
     Float widfun_fat_d(Float t, Point<Float> a, Point<Float> b, Float wid);
 
-    struct Vec1 {
+    struct Dir {
         Float cos, sin;
     };
-    Vec1 getDir(Float x, Float y);
+    Dir getDir(Float x, Float y);
 
-    constexpr Vec1 DIR_POSX { .cos =  1, .sin =  0 };
-    constexpr Vec1 DIR_POSY { .cos =  0, .sin =  1 };
-    constexpr Vec1 DIR_NEGX { .cos = -1, .sin =  0 };
-    constexpr Vec1 DIR_NEGY { .cos =  0, .sin = -1 };
+    constexpr Dir DIR_POSX { .cos =  1, .sin =  0 };
+    constexpr Dir DIR_POSY { .cos =  0, .sin =  1 };
+    constexpr Dir DIR_NEGX { .cos = -1, .sin =  0 };
+    constexpr Dir DIR_NEGY { .cos =  0, .sin = -1 };
 
-    Point<Float> movedPoint(Point<Float> p, Vec1 dir, Float delta);
+    Point<Float> movedPoint(Point<Float> p, Dir dir, Float delta);
     Point<Float> getExtendedDest(Point<Float> dest, Point<Float> src, Float delta);
     Point<Float> getExtendedDestWrong(Point<Float> dest, Point<Float> src, Float delta);
 
+    struct Vec {
+
+    };
     Point<Float> unitNormalVector(Float ix, Float iy);
 
 }   // namespace kage

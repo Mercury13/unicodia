@@ -7,7 +7,7 @@ namespace kage {
     ///
     ///  former Polygons
     ///
-    class Drawing : public Vec<Polygon>
+    class Drawing : public List<Polygon>
     {
     public:
         Polygon& push(const Polygon& x);
