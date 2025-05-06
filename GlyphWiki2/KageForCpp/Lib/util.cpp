@@ -11,6 +11,59 @@ constexpr kage::Float HALF = 0.5;
 constexpr kage::Float ONE = 1;
 
 
+kage::Vec kage::Vec::toLen(Float wanted) const noexcept
+{
+    auto q = wanted / len();
+    return { x * q, y * q };
+}
+
+
+kage::Dir kage::Vec::dir() const noexcept
+{
+    auto q = std::hypot(x, y);
+    if (q <= 0)
+        return { .cos = 1, .sin = 0 };
+    q = ONE / q;
+    return { .cos = x/q, .sin = y/q };
+}
+
+
+auto kage::Vec::unitNormal() const noexcept -> Vec
+{
+#define ix (this->x)
+#define iy (this->y)
+    Float ia, ib;
+  // line SUICHOKU by vector
+    if (ix != 0 && iy != 0) {
+        Float rr = ONE / std::hypot(ix, iy);
+        // Angle used to be atan(-y/x), cos/sin switched →
+        // sin(x,y) = -sin(x, -y)
+        // cos      =  cos
+        ia = -iy * rr;
+        ib =  ix * rr;
+    }
+    else if (ix == 0) {
+        if (iy < 0) {
+          ia = -1;
+        } else {
+          ia = 1;
+        }
+        ib = 0;
+    } else {
+        ia = 0;
+        ib = 1;
+    }
+    //reverse if vector is going 2nd/3rd quadrants
+    if (ix <= 0) {
+        ia = -ia;
+        ib = -ib;
+    }
+    return { ia, ib };
+#undef ix
+#undef iy
+}
+
+
 kage::Float kage::widfun(Float t, Point<Float> a, Point<Float> b, Float wid)
 {
     const auto len = a.distFrom(b);
@@ -67,15 +120,6 @@ kage::Float kage::widfun_fat_d(Float t, Point<Float> a, Point<Float> b, Float wi
           *(p-t) / std::sqrt(p*p + (p-1)*(p-1) - (p-t)*(p-t));
 }
 
-kage::Dir kage::getDir(Float x, Float y)
-{
-    auto q = std::hypot(x, y);
-    if (q <= 0)
-        return { .cos = 1, .sin = 0 };
-    q = ONE / q;
-    return { .cos = x/q, .sin = y/q };
-}
-
 auto kage::movedPoint(Point<Float> p, Dir dir, Float delta) -> Point<Float>
 {
   return { p.x + delta*dir.cos, p.y + delta*dir.sin };
@@ -83,7 +127,7 @@ auto kage::movedPoint(Point<Float> p, Dir dir, Float delta) -> Point<Float>
 
 auto kage::getExtendedDest(Point<Float> dest, Point<Float> src, Float delta) -> Point<Float>
 {
-    const auto dir = getDir(dest.x - src.x, dest.y - src.y);
+    const auto dir = (dest - src).dir();
     return movedPoint(dest, dir, delta);
 }
 
@@ -106,81 +150,53 @@ auto kage::getExtendedDestWrong(Point<Float> dest, Point<Float> src, Float delta
     return destNew;
 }
 
-auto kage::unitNormalVector(Float ix, Float iy) -> Point<Float>
+kage::Float kage::calcHosomi(Point<Float> x, Point<Float> y)
 {
-    Float ia, ib;
-  // line SUICHOKU by vector
-    if (ix != 0 && iy != 0) {
-        Float rr = ONE / std::hypot(ix, iy);
-        // Angle used to be atan(-y/x), cos/sin switched →
-        // sin(x,y) = -sin(x, -y)
-        // cos      =  cos
-        ia = -iy * rr;
-        ib =  ix * rr;
+    Float hosomi = 0.5;
+    if (auto d = x.distFrom(y); d < 50) {
+        hosomi += 0.4 * (ONE - d / 50);
     }
-    else if (ix == 0) {
-        if (iy < 0) {
-          ia = -1;
-        } else {
-          ia = 1;
-        }
-        ib = 0;
-    } else {
-        ia = 0;
-        ib = 1;
-    }
-    //reverse if vector is going 2nd/3rd quadrants
-    if (ix <= 0) {
-        ia = -ia;
-        ib = -ib;
-    }
-    return { ia, ib };
+    return hosomi;
 }
 
+/*
+kage::Vec kage::Bez::toLine(Point<Float> p0, Float rad) const
+{
+    const auto crad = std::cos(rad);
+    const auto srad = std::sin(rad);
+    const auto msrad = -srad;
 
-function normal_vector_of_len(v, l){//to the right(clockwise (in the display coordinate))
-  const len=Math.sqrt(v[0]*v[0]+v[1]*v[1]);
-  return [-v[1]*l/len,v[0]*l/len];
+// Rotation matrix, inverted
+#define minv0  crad   // Math.cos(-rad)
+#define minv1  srad   // -Math.sin(-rad)
+#define minv2 msrad   // Math.sin(-rad)
+#define minv3  crad   // Math.sin(-rad)
+
+    auto gentenRorate = [&](Point<Float>& p) {
+        auto q = p - p0;
+        p = { minv0*q.x + minv1*q.y, minv2*q.x + minv3 * q.y };
+    };
+
+// Rotation matrix, inverted
+#define m0  crad    // Math.cos(rad)
+#define m1 msrad    // -Math.sin(rad)
+#define m2  srad    // Math.sin(rad)
+#define m3  crad    // Math.cos(rad
+
+    auto gentenRotateInv = [&](Point<Float>& p) {
+        p = { minv0 * p.x + minv1 * p.y, minv2 * p.x + minv3 * p.y };
+    };
+
+    auto bezierRotated = *this;
+    bezierRotated.doTransform(gentenRorate);
+    var bezier_genten_rotated = bez.map(genten_rotate);
+    var bez_edited = bezier_to_y(bezier_genten_rotated, 0)
+    var bez_edited_return = bez_edited.map(genten_rotate_inv)
+    bez_edited_return[0] = bez[0] //始点は変わらないはずなので誤差を防ぐため元の値を代入
+    return bez_edited_return;
 }
 
-export function vector_to_len(v, l){
-  const len=Math.sqrt(v[0]*v[0]+v[1]*v[1]);
-  return [v[0]*l/len,v[1]*l/len];
-}
-
-function calc_hosomi(x1, y1, x2, y2) {
-  var hosomi = 0.5;
-  if (Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) < 50) {
-    hosomi += 0.4 * (1 - Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) / 50);
-  }
-  return hosomi;
-}
-
-export function get_rad(x, y) {
-  return Math.atan2(y,x);
-  var rad;
-  if (x == 0) {
-    if (y > 0) {
-      rad = Math.PI / 2;
-    } else {
-      rad = -Math.PI / 2;
-    }
-  } else {
-    rad = Math.atan(y / x);
-    if (x < 0) { rad += Math.PI }
-  }
-  return rad;
-}
-
-export function rad_to_vector(rad) {
-  return [Math.cos(rad), Math.sin(rad)];
-}
-
-export function rad_to_dir(rad) {
-  return {sin:  Math.sin(rad), cos: Math.cos(rad)};
-}
-/////////////////////////////////////////////////////
-export function bezier_to_line(bez, x0, y0, rad){
+kage::Vec bezierToLine(bez, x0, y0, rad){
   var rotate_mat_inv = [Math.cos(-rad), -Math.sin(-rad), Math.sin(-rad), Math.cos(-rad)]
   function genten_rotate(p){
     let [x,y] = p
@@ -399,3 +415,4 @@ export function getBoundingBox(strokes) { // minX, minY, maxX, maxY
   }
   return a;
 }
+*/

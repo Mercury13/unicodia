@@ -20,8 +20,8 @@ namespace kage {
 
     struct Dir {
         Float cos, sin;
+        static Dir ofRad(Float rad) noexcept { return { std::cos(rad), std::sin(rad) }; }
     };
-    Dir getDir(Float x, Float y);
 
     constexpr Dir DIR_POSX { .cos =  1, .sin =  0 };
     constexpr Dir DIR_POSY { .cos =  0, .sin =  1 };
@@ -33,8 +33,35 @@ namespace kage {
     Point<Float> getExtendedDestWrong(Point<Float> dest, Point<Float> src, Float delta);
 
     struct Vec {
+        Float x, y;
 
+        Float len() const noexcept { return std::hypot(x, y); }
+        Vec toLen(Float wanted) const noexcept;
+        Dir dir() const noexcept;
+        Vec unitNormal() const noexcept;
+        Float rad() const noexcept { return std::atan2(y, x); }
+
+        static Vec ofRad(Float rad) noexcept { return { std::cos(rad), std::sin(rad) }; }
     };
-    Point<Float> unitNormalVector(Float ix, Float iy);
+
+    Float calcHosomi(Point<Float> x, Point<Float> y);
+
+    struct Bez {
+        Point<Float> a, ha, hb, b;
+        const Point<Float>& v0() const noexcept { return a; }
+        const Point<Float>& v1() const noexcept { return ha; }
+        const Point<Float>& v2() const noexcept { return hb; }
+        const Point<Float>& v3() const noexcept { return b; }
+
+        //kage::Vec toLine(Point<Float> p0, Float rad) const;
+        template <class What>
+        void doTransform(What& w) {
+            w(a); w(ha); w(b); w(hb);
+        }
+    };
 
 }   // namespace kage
+
+
+inline kage::Vec operator - (kage::Point<kage::Float> a, kage::Point<kage::Float> b)
+    { return { a.x - b.x, a.y - b.y }; }
