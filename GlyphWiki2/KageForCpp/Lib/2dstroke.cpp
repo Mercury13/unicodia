@@ -2,7 +2,7 @@
 
 std::optional<kage::Ends> kage::Stroke::ends() const noexcept
 {
-    switch(v0) {
+    switch(type) {
     case 0:
     case 8:
     case 9:

@@ -4,7 +4,6 @@
 
 // STL
 #include <span>
-#include <string>
 
 namespace kage {
 
@@ -13,7 +12,8 @@ namespace kage {
     };
 
     struct Stroke {
-        int v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10;
+        unsigned type;
+        int v1, v2, v3, v4, v5, v6, v7, v8, v9, v10;
 
         Point<int> p3_4()  const noexcept { return { v3, v4  }; }
         Point<int> p5_6()  const noexcept { return { v5, v6  }; }

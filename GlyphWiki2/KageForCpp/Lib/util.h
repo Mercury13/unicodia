@@ -7,7 +7,7 @@
 
 namespace kage {
 
-    Float norm2(Float x, kage::Float y) { return std::hypot(x, y); }
+    inline Float norm2(Float x, kage::Float y) { return std::hypot(x, y); }
 
     Float widfun(Float t, Point<Float> a, Point<Float> b, Float wid);
     Float widfun_d(Float t, Point<Float> a, Point<Float> b, Float wid);
@@ -59,6 +59,14 @@ namespace kage {
             w(a); w(ha); w(b); w(hb);
         }
     };
+
+    struct Box {
+        int minX, minY, maxX, maxY;
+
+        void intersectWith(Point<int> p);
+    };
+
+    Box getBoundingBox(std::span<const Stroke> strokes);
 
 }   // namespace kage
 

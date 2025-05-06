@@ -159,6 +159,34 @@ kage::Float kage::calcHosomi(Point<Float> x, Point<Float> y)
     return hosomi;
 }
 
+
+void kage::Box::intersectWith(Point<int> p)
+{
+    minX = std::min(minX, p.x);
+    maxX = std::max(maxX, p.x);
+    minY = std::min(minY, p.y);
+    maxY = std::max(maxY, p.y);
+}
+
+
+kage::Box kage::getBoundingBox(std::span<const Stroke> strokes)
+{
+    Box a { .minX = 200, .minY = 200, .maxX = 0, .maxY = 0 };
+    for (auto& v : strokes) {
+        if (v.type == 0)
+            continue;
+        a.intersectWith(v.p3_4());
+        a.intersectWith(v.p5_6());
+        if (v.type == 1 || v.type == 99)
+            continue;
+        a.intersectWith(v.p7_8());
+        if (v.type == 2 || v.type == 3 || v.type == 4)
+            continue;
+        a.intersectWith(v.p9_10());
+    }
+    return a;
+}
+
 /*
 kage::Vec kage::Bez::toLine(Point<Float> p0, Float rad) const
 {

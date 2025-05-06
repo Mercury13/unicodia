@@ -1,6 +1,7 @@
 #include "base.h"
 
 #include "defs.h"
+#include "util.h"
 
 #include "u_Strings.h"
 
@@ -39,11 +40,60 @@ namespace {
         return q;
     }
 
-    void appendScaled(const kage::Structure& dest,
+    void doStretch(int dp, int sp, int& p, int min, int max)
+    {
+        int p1, p2, p3, p4;
+        if (p < sp + 100) {
+            p1 = min;
+            p3 = min;
+            p2 = sp + 100;
+            p4 = dp + 100;
+        } else {
+            p1 = sp + 100;
+            p3 = dp + 100;
+            p2 = max;
+            p4 = max;
+        }
+        p = ((p - p1) * (p4 - p3) / (p2 - p1)) + p3;
+    }
+
+    void appendScaled(kage::Structure& dest,
                       std::span<const kage::Stroke> src,
                       int x1, int y1, int x2, int y2, int sx, int sy, int sx2, int sy2)
     {
-
+        auto box = getBoundingBox(src);
+        if (sx != 0 || sy != 0) {
+            if (sx > 100) {
+                sx -= 200;
+            } else {
+                sx2 = 0;
+                sy2 = 0;
+            }
+        }
+        auto scalePair = [x1, y1, dx = x2 - x1, dy = y2 = y1](int& x, int& y) {
+            x = x1 + x * dx / 200;
+            y = y1 + y * dy / 200;
+        };
+        dest.reserve(dest.size() + src.size());
+        for (kage::Stroke v : src) {  // by value!
+            if (sx != 0 || sy != 0) {
+                doStretch(sx, sx2, v.v3, box.minX, box.maxX);
+                doStretch(sy, sy2, v.v4, box.minY, box.maxY);
+                doStretch(sx, sx2, v.v5, box.minX, box.maxX);
+                doStretch(sy, sy2, v.v6, box.minY, box.maxY);
+                if (v.type != kage::stroke::REFERENCE) {
+                    doStretch(sx, sx2, v.v7, box.minX, box.maxX);
+                    doStretch(sy, sy2, v.v8, box.minY, box.maxY);
+                    doStretch(sx, sx2, v.v9, box.minX, box.maxX);
+                    doStretch(sy, sy2, v.v10, box.minY, box.maxY);
+                }
+            }
+            scalePair(v.v3, v.v4);
+            scalePair(v.v5, v.v6);
+            scalePair(v.v7, v.v8);
+            scalePair(v.v9, v.v10);
+            dest.push_back(v);
+        }
     }
 
 }   // anon namespace
