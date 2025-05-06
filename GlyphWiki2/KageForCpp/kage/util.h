@@ -20,8 +20,11 @@ namespace kage {
 
     struct Dir {
         Float cos, sin;
-        Float rad() const noexcept { return std::atan2(sin, cos); }
+
         static Dir ofRad(Float rad) noexcept { return { std::cos(rad), std::sin(rad) }; }
+
+        Float rad() const noexcept { return std::atan2(sin, cos); }
+        bool isSinSmall() const noexcept { return (std::abs(sin) < 1e-4); }
     };
 
     constexpr Dir DIR_POSX { .cos =  1, .sin =  0 };
@@ -49,6 +52,7 @@ namespace kage {
         int x, y;
         Dir dir() const noexcept;
         Float rad() const noexcept { return std::atan2(Float(y), Float(x)); }
+        int len2() const noexcept { return x * x + y * y; }
     };
 
     Float calcHosomi(Point<Float> x, Point<Float> y);

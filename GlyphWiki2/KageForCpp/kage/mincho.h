@@ -31,7 +31,8 @@ namespace kage {
         unsigned kAdjustUroko2Length = 25;
 
         unsigned kAdjustTateStep = 4;
-        unsigned kAdjustMageStep = 5;
+        Float kAdjustMageStep = 5;
+        Float kMinWidthT_adjust = 6;
 
         float kMinWidthYY = 2;
 
@@ -47,6 +48,13 @@ namespace kage {
     private:
         /// @warning  You must search and skip stroke in all
         void drawAdjusted(Drawing& r, const Stroke& stroke, std::span<const Stroke>& all) const;
+        Float adjustTateParam(const Stroke& stroke, std::span<const Stroke>& all) const;
+        Float adjustMageParam(const Stroke& stroke, std::span<const Stroke>& all) const;
+        Polygon getStartOfVLine(Point<int> p1, Point<int> p2, int a1,
+                                Float kMinWidthT, Drawing& cv) const;
+        kage::Polygon getStartOfLine(Point<Float> pt, Dir dir, Float halfWidth) const;
+        kage::Polygon getStartOfOffsetLine(
+                Point<Float> pt, Dir dir, Float halfWidth, Float off_right1, Float off_left1) const;
     };
 
 }   // namespace kage

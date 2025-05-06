@@ -23,6 +23,9 @@ namespace kage {
     using TypeF = std::common_type_t<T, Float>;
 
     template <Numeric T>
+    constexpr inline T sqr(T x) noexcept { return x * x; }
+
+    template <Numeric T>
     struct Point {
         using LocalFlt = TypeF<T>;
         T x, y;
@@ -40,6 +43,8 @@ namespace kage {
 
         constexpr Point& operator = (const Point&) noexcept = default;
 
+        constexpr T dist2From(const Point& a) const noexcept
+            { return sqr(a.x - x) + sqr(a.y - y); }
         LocalFlt distFrom(const Point& a) const noexcept
             { return std::hypot(LocalFlt(a.x - x), LocalFlt(a.y - y)); }
     };
@@ -64,6 +69,10 @@ namespace kage {
     bool isCrossBox(Point<T> p1, Point<T> p2, Point<T> bp1, Point<T> bp2) noexcept;
 
 }   // namespace kage
+
+namespace kage_literals {
+    constexpr kage::Float operator "" _f (long double x) { return x; }
+}
 
 
 extern template std::optional<kage::PointF<int>> kage::getCrossPoint(Point<int> p11, Point<int> p12, Point<int> p21, Point<int> p22);

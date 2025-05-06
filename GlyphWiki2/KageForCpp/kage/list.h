@@ -65,6 +65,8 @@ namespace kage {
         void clear() noexcept { data.clear(); }
 
         void reverse();
+        void resize(size_t x) { data.resize(x); }
+        void reserve(size_t x) { data.reserve(x); }
 
         void append(const List& poly);
         [[deprecated("Use append")]] void concat(const List& poly) { return append(poly); }

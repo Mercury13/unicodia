@@ -1,9 +1,10 @@
 #include "mincho.h"
 
 #include "defs.h"
-
+#include "2d.h"
 
 constinit const kage::MinchoSets kage::MinchoSets::ONE;
+using namespace kage_literals;
 
 
 kage::Drawing kage::Mincho::draw(std::span<const Stroke> strokes) const
@@ -32,11 +33,12 @@ void kage::Mincho::drawAdjusted(
     //  console.log("error: end type"+a3)
     //}
     auto v12 = p2 - p1;
-    auto dir12 = v12.dir();
-    auto dir23 = (p3 - p2).dir();
-    auto dir34 = (p4 - p3).dir();
-    auto rad12 = dir12.rad();
-    auto rad23 = dir23.rad();
+    auto v23 = p3 - p2;
+    const auto dir12 = v12.dir();
+    const auto dir23 = v23.dir();
+    const auto dir34 = (p4 - p3).dir();
+    const auto rad12 = dir12.rad();
+    const auto rad23 = dir23.rad();
 
     switch (a1) {
     case 0: //rotate and flip
@@ -257,33 +259,32 @@ void kage::Mincho::drawAdjusted(
         break;
     }
 
-
-
     case stroke::BENDING:
     case stroke::BENDING_ROUND:  {
-    /*
-        const param_tate = a1 == STROKETYPE.BENDING ? this.adjustTateParam(s, others) : 0;
-        const param_mage = a1 == STROKETYPE.BENDING ? this.adjustMageParam(s, others) : 0;
-        const kMinWidthT_m = this.kMinWidthT - param_tate / 2;
-        const kMinWidthT_mage = this.kMinWidthT - param_mage / 2;
+        Float param_tate = (a1 == stroke::BENDING) ? adjustTateParam(s, all) : 0;
+        Float param_mage = (a1 == stroke::BENDING) ? adjustMageParam(s, all) : 0;
+        Float kMinWidthT_m = sets.kMinWidthT - param_tate / 2;
+        Float kMinWidthT_mage = sets.kMinWidthT - param_mage / 2;
 
-        var rate;
-        if (a1 == STROKETYPE.BENDING){
-          rate=1
-        }else{//BENDING_ROUND
-          rate = 6;
-          if ((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2) < 14400) { // smaller than 120 x 120
-            rate = Math.sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2)) / 120 * 6;
-          }
+        Float rate;
+        if (a1 == stroke::BENDING) {
+            rate = 1;
+        } else {//BENDING_ROUND
+            rate = 6;
+            auto area = v23.len2();
+            if (area < 14400) { // smaller than 120 x 120
+                rate = std::sqrt(Float(area)) / 120 * 6;
+            }
         }
-
-        let [tx1, ty1] = moved_point(x2, y2, dir12, -this.kMage * rate);
-        let [tx2, ty2] = moved_point(x2, y2, dir23, this.kMage * rate);
+        Float dist = sets.kMage * rate;
+        auto t1 = movedPoint(p2, dir12, -dist);
+        auto t2 = movedPoint(p2, dir23,  dist);
         //first line
-        let poly_start = this.getStartOfVLine(x1, y1, x2, y2, a2, kMinWidthT_m, cv);
-        const width_func = function (t) {
-          return (kMinWidthT_mage - kMinWidthT_m) * t + kMinWidthT_m;
-        }
+        auto polyStart = getStartOfVLine(p1, p2, a2, kMinWidthT_m, cv);
+        auto widthFunc = [&](Float t) {
+            return (kMinWidthT_mage - kMinWidthT_m) * t + kMinWidthT_m;
+        };
+        /*
         let [bez1, bez2] = Bezier.qBezier(tx1, ty1, x2, y2, tx2, ty2, width_func, t => 0, undefined);
         poly_start.concat(Bezier.bez_to_poly(bez1));
         let edd = this.getEndOfLine(tx2, ty2, x3, y3, kMinWidthT_mage);
@@ -321,10 +322,6 @@ void kage::Mincho::drawAdjusted(
         }
         */
         } break;
-
-
-    case 12:
-        throw std::logic_error("Uknown stroketype 12");
 
     case stroke::BEZIER: {
         /*
@@ -406,4 +403,202 @@ void kage::Mincho::drawAdjusted(
             throw buf;
         }
     }
+}
+
+
+kage::Float kage::Mincho::adjustTateParam(const Stroke& stroke, std::span<const Stroke>& all) const
+{
+    //for illegal strokes
+    if (stroke.v1 >= 1000)
+      return std::floor((stroke.v1 % 10000) / 1000);
+    if (stroke.type >= 100) return 0;
+
+    //(STROKETYPE.STRAIGHT || STROKETYPE.BENDING || STROKETYPE.VCURVE)
+    if (stroke.v3 != stroke.v5)
+        return 0;
+    Float sumSq = 0;
+    std::vector<Float> res_arr;
+    for (auto& other : all) {
+        if (&other == &stroke)
+            continue;
+        switch (other.type) {
+        case stroke::STRAIGHT:  // 1
+        case stroke::BENDING:   // 3
+        case stroke::VCURVE:
+            if ((stroke.v4 + 1 > other.v6 || stroke.v6 - 1 < other.v4) &&
+                    std::abs(stroke.v3 - other.v3) < sets.kMinWidthT_adjust * sets.kAdjustTateStep) {
+                auto val = (sets.kAdjustTateStep - std::floor(std::abs(stroke.v3 - other.v3) / sets.kMinWidthT_adjust));
+                sumSq += val;
+            }
+        }
+    }
+
+    constexpr Float kAdjustTateStep_org = 4;//original implementation
+    auto res = std::sqrt(sumSq) * Float(1.1);  //1.1を取ってnorm2ではなく+にすると以前と同じ
+
+    return std::min(res, kAdjustTateStep_org);
+    return res;//a2 += res * 1000
+}
+
+kage::Float kage::Mincho::adjustMageParam(const Stroke& stroke, std::span<const Stroke>& all) const
+{
+    //for illegal strokes
+    if (stroke.v2 >= 1000) return std::floor((stroke.v2 % 10000) / 1000);
+    if (stroke.type >= 100) return 0;
+
+  //STROKETYPE.BENDING
+  //applied only if y2=y3
+    if (stroke.v6 != stroke.v8) return 0;
+    Float resAbove = 0, resBelow = 0;
+    for (auto& other : all) {
+        if (&other == &stroke)
+            continue;
+        if (
+            (other.type == stroke::STRAIGHT && other.v4 == other.v6 &&
+                !(stroke.v5 + 1 > other.v5 || stroke.v7 - 1 < other.v3) &&
+                std::abs(stroke.v6 - other.v4) < sets.kMinWidthT_adjust * sets.kAdjustMageStep) ||
+            (other.type == stroke::BENDING && other.v6 == other.v8 &&
+                !(stroke.v5 + 1 > other.v7 || stroke.v7 - 1 < other.v3) &&
+                std::abs(stroke.v6 - other.v6) < sets.kMinWidthT_adjust * sets.kAdjustMageStep)) {
+            Float p = sets.kAdjustMageStep - std::floor(std::abs(stroke.v6 - other.v6) / sets.kMinWidthT_adjust);
+            if ((other.type == stroke::STRAIGHT && stroke.v6 < other.v4)
+                    || (other.type == stroke::BENDING && stroke.v6 < other.v6)) { //lines "above" the hane
+                resAbove = std::max(resAbove, p);
+            } else {
+                resBelow = std::max(resBelow, p);
+            }
+        }
+    }
+    resBelow *= Float(1.3);
+    auto res = std::max(resAbove, resBelow); //1.3とかを外して上2行を含めたmaxとかnorm2を+にすると以前と同じ
+
+    Float maxlen = (stroke.v6 - stroke.v4) * 0.6_f; //y2-y1から算出
+    auto res2 = (maxlen <= 0) ? 0 : (1 - (maxlen/sets.kWidth - 1)/4 ) * sets.kAdjustMageStep; //"this.kWidth * (4 * (1 - param_mage / this.kAdjustMageStep) + 1)" を参考に逆算
+    res = std::max(res,res2); //小数値が返るため、問題が出る可能性もある？今のところ問題なし
+    res = std::min(res, sets.kAdjustMageStep);
+    return res;//a3 += res * 1000;
+}
+
+
+kage::Polygon kage::Mincho::getStartOfVLine(
+        kage::Point<int> p1, kage::Point<int> p2, int a1, Float kMinWidthT, Drawing& cv) const
+{
+    auto dir = (p2 - p1).dir();
+    Polygon poly_start;
+    if (dir.cos == 0) {//vertical
+        Float left1, right1;
+        switch (a1) {
+        case 0:
+            right1 = -sets.kMinWidthT * Float(0.5);
+            left1 =  -sets.kMinWidthT * Float(0.7);
+            break;
+        case 12:
+            right1 = sets.kMinWidthY + kMinWidthT;
+            left1 = sets.kMinWidthY;
+            break;
+        case 32:
+            right1 = sets.kMinWidthY - 0.001;
+            left1 = sets.kMinWidthY - 0.001;
+            break;
+        case 1:
+        case 6: //... no need
+        case 22:
+        default:
+            right1 = 0;
+            left1 = 0;
+            break;
+        }
+        poly_start = getStartOfOffsetLine(p1, dir, kMinWidthT, right1, left1);
+        if (a1 == 22) { //box's right top corner
+            /// @todo [urgent] drawing here
+            /*
+            cv.drawUpperRightCorner_straight_v(x1, y1, kMinWidthT, this.kMinWidthYY, this.kWidth);
+            */
+        }
+        if (a1 == 0) { //beginning of the stroke
+            /// @todo [urgent] drawing here
+            /*
+            cv.drawOpenBegin_straight(x1, y1, kMinWidthT, this.kMinWidthYY, rad);
+            */
+        }
+    } else {
+        const Float v = 1; //previously (x1 > x2) ? -1 : 1;
+        if (a1 == 22) {
+            if (dir.isSinSmall()) { //error
+                //console.log("error: connecting_v at the end of the horizontal line")
+                poly_start = getStartOfLine(p1, dir, kMinWidthT);
+            } else {
+                //poly_start.set(1, x1 + (kMinWidthT * v + 1) / Math.sin(rad), y1 + 1);//" + 1" ??
+                poly_start.resize(2);
+                poly_start.set(1, p1.x + (kMinWidthT * v) / dir.sin, p1.y);
+                poly_start.set(0, p1.x - (kMinWidthT * v) / dir.sin, p1.y);
+            }
+        } else if (a1 == 32) {
+            if (dir.isSinSmall()) { //error
+                //console.log("error: connecting_v at the end of the horizontal line")
+                poly_start = getStartOfLine(p1, dir, kMinWidthT);
+            } else {
+                poly_start.resize(2);
+                poly_start.set(1, p1.x + (kMinWidthT * v) / dir.sin, p1.y);
+                poly_start.set(0, p1.x - (kMinWidthT * v) / dir.sin, p1.y);
+            }
+        } else {
+            Float left1, right1;
+            switch (a1) {
+            case 0:
+                right1 = -sets.kMinWidthT * 0.5_f;
+                left1  = -sets.kMinWidthT * 0.7_f;
+                break;
+            case 12:
+                right1 = sets.kMinWidthY + kMinWidthT;
+                left1  = sets.kMinWidthY;
+                break;
+            case 1:
+            case 6:
+            default:
+                right1 = 0;
+                left1 = 0;
+                break;
+            }
+            poly_start = getStartOfOffsetLine(p1, dir, kMinWidthT, right1, left1);
+        }
+        if (a1 == 22) { //SHIKAKU MIGIUE UROKO NANAME DEMO MASSUGU MUKI
+            /// @todo [urgent] drawing here
+            /*
+          cv.drawUpperRightCorner(x1, y1, kMinWidthT, this.kMinWidthYY, this.kWidth);
+          */
+        }
+        if (a1 == 0) { //beginning of the stroke
+            /// @todo [urgent] drawing here
+            /*
+          cv.drawOpenBegin_straight(x1, y1, kMinWidthT, this.kMinWidthYY, rad);
+          */
+        }
+    }
+    return poly_start;
+}
+
+
+kage::Polygon kage::Mincho::getStartOfLine(
+        Point<Float> pt, Dir dir, Float halfWidth) const
+{
+    //get polygon data for the start of line
+    Polygon poly(2);
+    poly.set(1, pt.x + dir.sin * halfWidth,
+                pt.y - dir.cos * halfWidth);
+    poly.set(0, pt.x - dir.sin * halfWidth,
+                pt.y + dir.cos * halfWidth);
+    return poly;
+}
+
+kage::Polygon kage::Mincho::getStartOfOffsetLine(
+        Point<Float> pt, Dir dir, Float halfWidth, Float off_right1, Float off_left1) const
+{
+  //get polygon data for the start of line (with offset)
+    Polygon poly(2);
+    poly.set(1, pt.x + dir.sin * halfWidth - dir.cos * off_left1,
+                pt.y - dir.cos * halfWidth - dir.sin * off_left1);
+    poly.set(0, pt.x - dir.sin * halfWidth - dir.cos * off_right1,
+                pt.y + dir.cos * halfWidth - dir.sin * off_right1);
+    return poly;
 }

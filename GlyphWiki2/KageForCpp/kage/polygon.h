@@ -60,7 +60,7 @@ namespace kage {
         template <Lesser<Float> T>
         void push(Point<T> p)   { data.emplace_back(p.x, p.y); }
 
-        void set(size_t i, Float x, Float y, unsigned off);
+        void set(size_t i, Float x, Float y, unsigned off = 0);
 
         void convertToFont1000();
         void fixupAndCheck();
