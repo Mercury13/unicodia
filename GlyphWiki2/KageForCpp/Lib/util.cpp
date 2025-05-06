@@ -112,6 +112,9 @@ auto kage::unitNormalVector(Float ix, Float iy) -> Point<Float>
   // line SUICHOKU by vector
     if (ix != 0 && iy != 0) {
         Float rr = ONE / std::hypot(ix, iy);
+        // Angle used to be atan(-y/x), cos/sin switched →
+        // sin(x,y) = -sin(x, -y)
+        // cos      =  cos
         ia = -iy * rr;
         ib =  ix * rr;
     }
