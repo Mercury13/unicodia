@@ -7,6 +7,36 @@
 namespace kage {
 
     template <class T>
+    class FixedList
+    {
+    public:
+        constexpr FixedList() noexcept = default;
+
+        template <class... Args>
+        constexpr FixedList(Args... args) : sz(sizeof...(Args)), data(args...)  {}
+
+        using iterator = T*;
+        using const_iterator = const T*;
+
+        unsigned size() const noexcept { return sz; }
+        iterator begin()              noexcept { return data; }
+        iterator end()                noexcept { return data + sz; }
+        const_iterator begin()  const noexcept { return data; }
+        const_iterator end()    const noexcept { return data + sz; }
+        const_iterator cbegin() const noexcept { return data; }
+        const_iterator cend()   const noexcept { return data + sz; }
+
+        constexpr T& at (unsigned i);
+        constexpr const T& at (unsigned i) const;
+        constexpr T& operator [] (size_t i) { return at(i); }
+        constexpr const T& operator [] (size_t i) const { return at(i); }
+    private:
+        static constexpr unsigned SIZE = 10;
+        unsigned sz = 0;
+        T data[SIZE];
+    };
+
+    template <class T>
     class List
     {
     private:
@@ -50,6 +80,19 @@ namespace kage {
     };
 
 }   // namespace kage
+
+
+template <class T>
+constexpr T& kage::FixedList<T>::at(unsigned i) {
+    if (i >= sz) throw std::invalid_argument("[FixedList] range check");
+    return data[i];
+}
+
+template <class T>
+constexpr const T& kage::FixedList<T>::at(unsigned i) const {
+    if (i >= sz) throw std::invalid_argument("[FixedList] range check");
+    return data[i];
+}
 
 
 template <class T>

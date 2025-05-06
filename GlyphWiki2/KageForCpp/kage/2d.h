@@ -12,9 +12,10 @@ namespace kage {
     ///  U = Lesser<T> → U is T or a lesser numeric type
     ///  For float → float and all int’s
     ///  For double → double, float, all int’s
-    template <class T, class U>
-    concept Lesser = Numeric<T> && Numeric<U>
-                     && std::is_same_v<std::common_type_t<T, U>, T>;
+    ///    (me lesser than param → common evaluates to param)
+    template <class Me, class Param>
+    concept Lesser = Numeric<Me> && Numeric<Param>
+                     && std::is_same_v<std::common_type_t<Me, Param>, Param>;
 
     using Float = float;
 
@@ -27,6 +28,18 @@ namespace kage {
         T x, y;
         constexpr Point() noexcept : x(0), y(0) {}
         constexpr Point(T aX, T aY) noexcept : x(aX), y(aY) {}
+
+        template <Lesser<T> U>
+        constexpr Point(const Point<U>& that) noexcept : x(that.x), y(that.y) {}
+
+        constexpr Point(const Point&) noexcept = default;
+
+        template <Lesser<T> U>
+        constexpr Point& operator = (const Point<U>& that) noexcept
+            { x = that.x; y = that.y; return *this; }
+
+        constexpr Point& operator = (const Point&) noexcept = default;
+
         LocalFlt distFrom(const Point& a) const noexcept
             { return std::hypot(LocalFlt(a.x - x), LocalFlt(a.y - y)); }
     };

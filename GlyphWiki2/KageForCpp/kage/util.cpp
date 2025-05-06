@@ -20,11 +20,19 @@ kage::Vec kage::Vec::toLen(Float wanted) const noexcept
 
 kage::Dir kage::Vec::dir() const noexcept
 {
-    auto q = std::hypot(x, y);
+    Float q = std::hypot(x, y);
     if (q <= 0)
         return { .cos = 1, .sin = 0 };
-    q = ONE / q;
     return { .cos = x/q, .sin = y/q };
+}
+
+
+kage::Dir kage::Ivec::dir() const noexcept
+{
+    Float q = std::hypot(Float(x), Float(y));
+    if (q <= 0)
+        return { .cos = 1, .sin = 0 };
+    return { .cos = x / q, .sin = y / q };
 }
 
 
@@ -160,16 +168,7 @@ kage::Float kage::calcHosomi(Point<Float> x, Point<Float> y)
 }
 
 
-void kage::Box::intersectWith(Point<int> p)
-{
-    minX = std::min(minX, p.x);
-    maxX = std::max(maxX, p.x);
-    minY = std::min(minY, p.y);
-    maxY = std::max(maxY, p.y);
-}
-
-
-kage::Box kage::getBoundingBox(std::span<const Stroke> strokes)
+kage::Box<int> kage::getBoundingBox(std::span<const Stroke> strokes)
 {
     Box a { .minX = 200, .minY = 200, .maxX = 0, .maxY = 0 };
     for (auto& v : strokes) {

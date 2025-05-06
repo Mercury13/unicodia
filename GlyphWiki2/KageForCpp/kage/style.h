@@ -8,7 +8,7 @@ namespace kage {
     class Style {
     public:
         virtual Drawing draw(std::span<const Stroke> strokes) const = 0;
-        virtual ~Style() noexcept;
+        virtual ~Style() = default;
     };
 
 }

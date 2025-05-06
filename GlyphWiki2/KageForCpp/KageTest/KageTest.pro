@@ -9,6 +9,7 @@ SOURCES += \
         ../kage/2dstroke.cpp \
         ../kage/base.cpp \
         ../kage/drawing.cpp \
+        ../kage/mincho.cpp \
         ../kage/polygon.cpp \
         ../kage/util.cpp \
         main.cpp
@@ -29,6 +30,7 @@ HEADERS += \
     ../kage/base.h \
     ../kage/defs.h \
     ../kage/drawing.h \
+    ../kage/mincho.h \
     ../kage/polygon.h \
     ../kage/style.h \
     ../kage/util.h \

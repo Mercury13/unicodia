@@ -20,6 +20,7 @@ namespace kage {
 
     struct Dir {
         Float cos, sin;
+        Float rad() const noexcept { return std::atan2(sin, cos); }
         static Dir ofRad(Float rad) noexcept { return { std::cos(rad), std::sin(rad) }; }
     };
 
@@ -44,6 +45,12 @@ namespace kage {
         static Vec ofRad(Float rad) noexcept { return { std::cos(rad), std::sin(rad) }; }
     };
 
+    struct Ivec {
+        int x, y;
+        Dir dir() const noexcept;
+        Float rad() const noexcept { return std::atan2(Float(y), Float(x)); }
+    };
+
     Float calcHosomi(Point<Float> x, Point<Float> y);
 
     struct Bez {
@@ -60,16 +67,36 @@ namespace kage {
         }
     };
 
+    template <Numeric T>
     struct Box {
-        int minX, minY, maxX, maxY;
+        T minX, minY, maxX, maxY;
 
-        void intersectWith(Point<int> p);
+        T x1() const noexcept { return minX; }
+        T x2() const noexcept { return maxX; }
+        T y1() const noexcept { return minY; }
+        T y2() const noexcept { return maxY; }
+
+        template <Lesser<T> U>
+        void intersectWith(Point<U> p);
     };
 
-    Box getBoundingBox(std::span<const Stroke> strokes);
+    Box<int> getBoundingBox(std::span<const Stroke> strokes);
 
 }   // namespace kage
 
 
+template <kage::Numeric T> template<kage::Lesser<T> U>
+void kage::Box<T>::intersectWith(kage::Point<U> p)
+{
+    minX = std::min<T>(minX, p.x);
+    maxX = std::max<T>(maxX, p.x);
+    minY = std::min<T>(minY, p.y);
+    maxY = std::max<T>(maxY, p.y);
+}
+
+
 inline kage::Vec operator - (kage::Point<kage::Float> a, kage::Point<kage::Float> b)
+    { return { a.x - b.x, a.y - b.y }; }
+
+inline kage::Ivec operator - (kage::Point<int> a, kage::Point<int> b)
     { return { a.x - b.x, a.y - b.y }; }
