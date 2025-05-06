@@ -15,6 +15,7 @@ namespace kage {
         constexpr unsigned BEZIER = 6;          ///< cubic Bezier curve
         constexpr unsigned VCURVE = 7;          ///< vertical line and curve. used in the leftmost stroke of "月".
                             ///< although the angle of line can be chosen arbitrarily, only vertical line is expected.
+        constexpr unsigned REFERENCE = 99;
     }
 
     namespace start {

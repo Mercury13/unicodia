@@ -4,6 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        ../../../Libs/SelfMade/Strings/u_Strings.cpp \
         ../Lib/2d.cpp \
         ../Lib/2dstroke.cpp \
         ../Lib/base.cpp \
@@ -22,11 +23,18 @@ win32-g++ {
 }
 
 HEADERS += \
+    ../../../Libs/SelfMade/Strings/u_Strings.h \
     ../Lib/2d.h \
     ../Lib/2dstroke.h \
     ../Lib/base.h \
     ../Lib/defs.h \
     ../Lib/drawing.h \
     ../Lib/polygon.h \
+    ../Lib/style.h \
     ../Lib/util.h \
     ../Lib/list.h
+
+INCLUDEPATH += \
+    ../../../Libs/SelfMade/Strings \
+    ../../../Libs/SelfMade \
+    ../Lib
