@@ -32,12 +32,6 @@ namespace kage {
             void operator = (std::string&& y) { text = y; cache.reset(); }
         };
         std::unordered_map<std::string, Entry, Hash, std::equal_to<>> m;
-
-        ///  Dumb links (A is the same as B) are almost 50% of GlyphWiki.
-        ///  So, to save memory, both caches link to the same object.
-        std::shared_ptr<const Structure> detectDumbLink(
-                std::string_view key,
-                std::span<const std::string_view> x) const;
     };
 
 }
