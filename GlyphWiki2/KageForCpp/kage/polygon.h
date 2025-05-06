@@ -1,8 +1,8 @@
 #pragma once
 
 // Kage
-#include <2d.h>
-#include <list.h>
+#include "2d.h"
+#include "list.h"
 
 // STL
 #include <string>

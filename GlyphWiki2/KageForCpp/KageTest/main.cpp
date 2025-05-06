@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "base.h"
+#include "kage/base.h"
 
 int main()
 {

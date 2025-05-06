@@ -5,12 +5,12 @@ CONFIG -= qt
 
 SOURCES += \
         ../../../Libs/SelfMade/Strings/u_Strings.cpp \
-        ../Lib/2d.cpp \
-        ../Lib/2dstroke.cpp \
-        ../Lib/base.cpp \
-        ../Lib/drawing.cpp \
-        ../Lib/polygon.cpp \
-        ../Lib/util.cpp \
+        ../kage/2d.cpp \
+        ../kage/2dstroke.cpp \
+        ../kage/base.cpp \
+        ../kage/drawing.cpp \
+        ../kage/polygon.cpp \
+        ../kage/util.cpp \
         main.cpp
 
 INCLUDEPATH += \
@@ -24,17 +24,17 @@ win32-g++ {
 
 HEADERS += \
     ../../../Libs/SelfMade/Strings/u_Strings.h \
-    ../Lib/2d.h \
-    ../Lib/2dstroke.h \
-    ../Lib/base.h \
-    ../Lib/defs.h \
-    ../Lib/drawing.h \
-    ../Lib/polygon.h \
-    ../Lib/style.h \
-    ../Lib/util.h \
-    ../Lib/list.h
+    ../kage/2d.h \
+    ../kage/2dstroke.h \
+    ../kage/base.h \
+    ../kage/defs.h \
+    ../kage/drawing.h \
+    ../kage/polygon.h \
+    ../kage/style.h \
+    ../kage/util.h \
+    ../kage/list.h
 
 INCLUDEPATH += \
     ../../../Libs/SelfMade/Strings \
     ../../../Libs/SelfMade \
-    ../Lib
+    ..

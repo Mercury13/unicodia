@@ -8,7 +8,7 @@
 #include <charconv>
 
 // Kage
-#include <defs.h>
+#include "defs.h"
 
 kage::PtIdentity kage::PtIdentity::INST;
 kage::PtFixupAndCheck kage::PtFixupAndCheck::INST;
