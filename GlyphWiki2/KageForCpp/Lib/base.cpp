@@ -21,12 +21,12 @@ namespace {
 
     int parseInt(std::string_view key, std::span<const std::string_view> cols, unsigned index)
     {
-        if (index > cols.size())
+        if (index >= cols.size())
             return 0;
         auto text = cols[index];
         if (text.empty())
             return 0;
-        unsigned q;
+        int q;
         auto res = std::from_chars(std::to_address(text.begin()), std::to_address(text.end()), q);
         if (res.ec != std::errc()) {
             char buf[200];
