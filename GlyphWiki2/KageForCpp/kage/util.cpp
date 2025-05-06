@@ -410,36 +410,4 @@ export function stretch(dp, sp, p, min, max) { // integer
   return Math.floor(((p - p1) / (p2 - p1)) * (p4 - p3) + p3);
 }
 
-export function getBoundingBox(strokes) { // minX, minY, maxX, maxY
-  var a = new Object();
-  a.minX = 200;
-  a.minY = 200;
-  a.maxX = 0;
-  a.maxY = 0;
-  for (var i = 0; i < strokes.length; i++) {
-    if (strokes[i][0] == 0) { continue; }
-    a.minX = Math.min(a.minX, strokes[i][3]);
-    a.maxX = Math.max(a.maxX, strokes[i][3]);
-    a.minY = Math.min(a.minY, strokes[i][4]);
-    a.maxY = Math.max(a.maxY, strokes[i][4]);
-    a.minX = Math.min(a.minX, strokes[i][5]);
-    a.maxX = Math.max(a.maxX, strokes[i][5]);
-    a.minY = Math.min(a.minY, strokes[i][6]);
-    a.maxY = Math.max(a.maxY, strokes[i][6]);
-    if (strokes[i][0] == 1) { continue; }
-    if (strokes[i][0] == 99) { continue; }
-    a.minX = Math.min(a.minX, strokes[i][7]);
-    a.maxX = Math.max(a.maxX, strokes[i][7]);
-    a.minY = Math.min(a.minY, strokes[i][8]);
-    a.maxY = Math.max(a.maxY, strokes[i][8]);
-    if (strokes[i][0] == 2) { continue; }
-    if (strokes[i][0] == 3) { continue; }
-    if (strokes[i][0] == 4) { continue; }
-    a.minX = Math.min(a.minX, strokes[i][9]);
-    a.maxX = Math.max(a.maxX, strokes[i][9]);
-    a.minY = Math.min(a.minY, strokes[i][10]);
-    a.maxY = Math.max(a.maxY, strokes[i][10]);
-  }
-  return a;
-}
 */
