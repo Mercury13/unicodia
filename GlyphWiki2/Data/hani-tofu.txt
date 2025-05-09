@@ -1869,7 +1869,7 @@
 # Taiwanese, “generic” char only, correct but craggy, BUG IN AUTOBUILDER
 /fixup 31BD3 ALERT
 
-# Taiwanese, “generic” char only, BUG IN AUTOBUILDER
+# Taiwanese, “generic” char only, strange stroke in GW, BUG IN AUTOBUILDER
 /fixup 31BD4 ALERT
 
 # Taiwanese, “generic” char only, BUG IN AUTOBUILDER
@@ -1887,7 +1887,7 @@
 # Taiwanese, “generic” char only, wrong rooftop, BUG IN AUTOBUILDER
 /fixup 31BF8 ALERT
 
-# Taiwanese, “generic” char only, wrong rooftop, BUG IN AUTOBUILDER
+# Taiwanese, “generic” char only, wrong rooftop and 1 stroke more, BUG IN AUTOBUILDER
 /fixup 31C52 ALERT
 
 # Taiwanese, “generic” char only, wrong inner TL, BUG IN AUTOBUILDER
@@ -1899,7 +1899,7 @@
 # Taiwanese, “generic” char only, wrong lower, BUG IN AUTOBUILDER
 /fixup 31F95 ALERT
 
-# Taiwanese, “generic” char only, wrong mid left, BUG IN AUTOBUILDER
+# Taiwanese, “generic” char only, wrong mid left, let it be
 /fixup 31FB1 ALERT
 
 # Taiwanese, “generic” char only, correct but craggy, BUG IN AUTOBUILDER

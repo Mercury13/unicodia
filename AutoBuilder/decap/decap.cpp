@@ -300,6 +300,17 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2561E },    // CJK B: BS drew a hypotethical Chinese version
     { 0x256A1 },    // CJK B: SimSun-B drew more canonical glyph    
 
+    // CJK H: SimSunG
+    { 0x31BD3,  0x31BD4 },
+    { 0x31BE0 },
+    { 0x31BF0 },
+    { 0x31BF8 },
+    { 0x31C52 },
+    { 0x31C68 },
+    { 0x31CA9 },
+    { 0x31F95 },
+    { 0x31FB2 },
+
     // Mathematical: Cambria → Funky
     { 0x220F, 0x2211 },     // Big sums and products
     { 0x222B, 0x2233 },     // Integrals bunch 1

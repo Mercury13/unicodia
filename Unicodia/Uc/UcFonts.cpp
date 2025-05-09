@@ -169,15 +169,16 @@ constinit const uc::Font uc::fontInfo[] = {
         // SimSun needed for one hiero 34F0: BS drew a hypothetical (not attested by Unicode) Chinese version
       { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …2
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
-      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
-      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
-      { "PlangothicP2-Regular.ttf",                                             // …6
+      { "SimSun-ExtG", Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::BUG_FIXUP | Ffg::FALL_TO_NEXT, 120_pc }, // …4
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
+      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …6
+      { "PlangothicP2-Regular.ttf",                                             // …7
                 Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
                 15_top, 125_pc },
-      { FNAME_UNIHAN, 120_pc },                                                 // …7 for tofu
+      { FNAME_UNIHAN, 120_pc },                                                 // …8 for tofu
     { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                                // Unicodia backed with P0/1
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …CJK planes 0/1, backed with Unicodia
-      { FNAME_UNIHAN, 120_pc },                                                 // …1
+      { FNAME_UNIHAN, 120_pc },                                                 // …2
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2
