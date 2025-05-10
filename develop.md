@@ -31,14 +31,14 @@
 * Two or more skintones (e.g. interracial kiss/handshake): same. They are neither repainted nor checked.
 * One skintone (one person, same-race handshake…), repainted versions are stored
   * After that press Ctrl+Shift+Q in Unicodia.
-  * Copy resulting BMP files to MiscFiles\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
+  * Copy resulting BMP files to AutoQa\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
 * One skintone, repainted versions are created on-the-fly (e.g. because of &lt;clipPath&gt;)
   * So-called “preparation”: we need to remember what was originally
     * First copy ORIGINAL files with all skintones to NotoEmoji
 	* It’s better to run SvgCleaner
     * Make sure Unicodia is closed, run tape.bat
     * Press Ctrl+Shift+Q in Unicodia.
-    * Copy resulting BMP files to MiscFiles\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
+    * Copy resulting BMP files to AutoQa\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
   * Then normal work commences.
     * It’s absolutely needed to change **nose colour** E59600 → E49600, to prevent confusion with ears
     * Remove original files, copy your remake.
