@@ -66,7 +66,11 @@ qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
         case uc::DrawMethod::SAMPLED_CONTROL:
         case uc::DrawMethod::VERTICAL_CW:
         case uc::DrawMethod::VERTICAL_CCW:
-            newFamily = cp.font(match::Normal::INST)->family.text;
+            if (auto what = cp.font(match::NullForTofu::INST)) {
+                newFamily = what->family.text;
+            } else {
+                newFamily = "[Tofu]";
+            }
         }
         if (newBlock != currInfo.blk || newFamily != currInfo.family) {
             dump();
