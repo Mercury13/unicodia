@@ -139,7 +139,10 @@
 @%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
 @cd ..
 
-@if not exist %BUILD%\release\%EXENAME% goto no_exe
+@if exist %BUILD%\release\%EXENAME% goto exe_ok
+@echo BAD: EXE NOT FOUND
+@goto end
+:exe_ok
 
 @echo.
 @echo ===== Copying files =====
@@ -225,11 +228,10 @@
 @echo ===== Making installer =====
 @%INNO% /Qp /O%DEPLOY2% MiscFiles/Unicodia-w64.iss
 
-@goto end
-
-:no_exe
-@echo BAD: EXE NOT FOUND
-@goto end
+@echo.
+@echo ===== Testing fonts =====
+@set QAFONTS=%BUILD%/font_layout.txt
+@%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
 
 :end
 @pause
