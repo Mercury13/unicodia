@@ -12,6 +12,10 @@
 // Project-local
 #include "d_Config.h"
 
+// QA
+#include "cmdline.h"
+#include "qa.h"
+
 // L10n
 #include "LocList.h"
 #include "LocManager.h"
@@ -95,7 +99,12 @@ int main(int argc, char *argv[])
 
     uc::completeData();  // …runs once and should not depend on L10n
 
-    /// @todo [qa] QA should not use translations/configs
+    auto cmdline = Cmdline::parse();
+    if (cmdline.qa) {
+        // Sanity-check is inside
+        qa::testFonts(cmdline.qa.fonts);
+        return 0;
+    }
 
     initTranslation();
 

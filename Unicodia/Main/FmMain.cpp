@@ -2540,6 +2540,7 @@ void FmMain::goToFavs()
 void FmMain::debugFontLayout()
 {
     switch (qa::testFonts("font_layout.txt")) {
+    case qa::TestFonts::EMPTY_FNAME:    // should not happen
     case qa::TestFonts::CANNOT_CREATE:
         QMessageBox::information(this, "Hidden feature", "Cannot create font_layout.txt");
         break;

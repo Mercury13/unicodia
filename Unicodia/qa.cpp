@@ -8,10 +8,14 @@
 
 qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
 {
+    if (fname.empty())
+        return TestFonts::EMPTY_FNAME;
+
     std::ofstream os(fname);
     if (!os.is_open()) {
         return TestFonts::CANNOT_CREATE;
     }
+
     constexpr char32_t BAD_CP = 0xFFFFFF;
     struct CurrInfo {
         char32_t first = BAD_CP, last = BAD_CP;
