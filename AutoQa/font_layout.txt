@@ -762,7 +762,7 @@ FFFD......: NotoSerif-Regular
 == Lydian
 10920..1093F: Segoe UI Historic
 == Sidetic
-10940..1095C: UnicodiaFunky
+10940..10959: UnicodiaFunky
 == Meroitic Hieroglyphs
 10980..1099F: NotoSansMeroitic-Regular
 == Meroitic Cursive

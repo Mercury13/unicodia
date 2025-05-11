@@ -163,6 +163,9 @@ extern const std::unordered_map<char32_t, uc::Cfgs> drawMethods;
 extern const std::unordered_map<char32_t, DepInfo> deprecatedInfo;
 extern const std::unordered_set<char32_t> cool2Chars;
 
+/// Characters that used to be in alpha version but removed due to lack of evidence
+extern const std::unordered_set<char32_t> rescindedChars;
+
 enum class DecapDebug : unsigned char { NO, YES };
 
 enum class Dcfg : unsigned char {

@@ -731,3 +731,9 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
 const std::unordered_set<char32_t> cool2Chars {
     0x1F51B, 0x1F56C,   // meaningful ON
 };
+
+
+const std::unordered_set<char32_t> rescindedChars {
+    /// @todo [U17] Three Sidetic chars rescinded
+    0x1095A, 0x1095B, 0x1095C   // U17: Sidetic
+};

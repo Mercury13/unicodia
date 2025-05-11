@@ -345,6 +345,8 @@ int main()
 
     auto proc = ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
         auto cp = cpInfo.cp;
+        if (rescindedChars.contains(cp))
+            return;
         std::string_view sName = cpInfo.name;
 
         std::string_view defaultAbbrev {};      // empty
