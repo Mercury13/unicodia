@@ -6,7 +6,7 @@
 // Unicode
 #include "UcData.h"
 
-qa::TestFonts qa::testFonts(const char* fname)
+qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
 {
     std::ofstream os(fname);
     if (!os.is_open()) {

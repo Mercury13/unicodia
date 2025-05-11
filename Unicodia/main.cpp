@@ -94,6 +94,9 @@ int main(int argc, char *argv[])
     //dark::turnOn();
 
     uc::completeData();  // …runs once and should not depend on L10n
+
+    /// @todo [qa] QA should not use translations/configs
+
     initTranslation();
 
     FmMain w;
