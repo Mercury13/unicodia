@@ -278,6 +278,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x021C, 0x021D },     // Yogh: Cambria lazy
     { 0x02CE, 0x02CF },     // Misrender in Cambria
     { 0x0333 },             // Basic umlauts: misrenders in Cambria
+    { 0x0498, 0x0499 },     // CyrZ with descender
     { 0x1D66, 0x1D6A },     // Clipped below in Cambria
     { 0x1E00, 0x1E01 },     // Clipped below in Cambria
     { 0x1E5C, 0x1E5D },     // Misplaced umlaut in Cambria

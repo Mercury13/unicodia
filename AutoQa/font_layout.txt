@@ -50,7 +50,9 @@
 0400..0482: Cambria
 0483..0487: NotoSerif-Regular
 0488, 0489: UnicodiaFunky
-048A..04FF: Cambria
+048A..0497: Cambria
+0498, 0499: NotoSerif-Regular
+049A..04FF: Cambria
 == Cyrillic Supplement
 0500..052F: Cambria
 == Armenian
