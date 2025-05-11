@@ -99,6 +99,9 @@ int main(int argc, char *argv[])
 
     uc::completeData();  // …runs once and should not depend on L10n
 
+    FmMain w;
+    w.installTempPrefix();
+
     auto cmdline = Cmdline::parse();
     if (cmdline.qa) {
         // Sanity-check is inside
@@ -108,8 +111,6 @@ int main(int argc, char *argv[])
 
     initTranslation();
 
-    FmMain w;
-    w.installTempPrefix();
     loc::man.add(w);
 
     // Load config

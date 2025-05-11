@@ -230,8 +230,18 @@
 
 @echo.
 @echo ===== Running auto-tests =====
-@set QAFONTS=%BUILD%/font_layout.txt
+@set QAFONTS=%BUILD%\font_layout.txt
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
+@rem Checking fonts
+@fc %QAFONTS% AutoQa\font_layout.txt >nul
+@if not errorlevel 1 goto fqa_ok
+@echo.
+@echo FONTS FAILED. I use updated W10, different OS can fail.
+:fqa_ok
+@echo Fonts OK
+:fqa_done
+
+@echo.
 
 :end
 @pause
