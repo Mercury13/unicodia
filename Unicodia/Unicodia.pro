@@ -79,8 +79,10 @@ SOURCES += \
     Uc/UcScripts.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
+    cmdline.cpp \
     d_Config.cpp \
-    main.cpp
+    main.cpp \
+    qa.cpp
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
@@ -157,7 +159,9 @@ HEADERS += \
     Uc/UcSkin.h \
     Wiki.h \
     c_SearchEdit.h \
-    d_Config.h
+    cmdline.h \
+    d_Config.h \
+    qa.h
 
 FORMS += \
     FmFontSupport.ui \
