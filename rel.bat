@@ -229,7 +229,7 @@
 @%INNO% /Qp /O%DEPLOY2% MiscFiles/Unicodia-w64.iss
 
 @echo.
-@echo ===== Testing fonts =====
+@echo ===== Running auto-tests =====
 @set QAFONTS=%BUILD%/font_layout.txt
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
 
