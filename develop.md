@@ -11,6 +11,7 @@
 # Hidden commands
 * F12 — reload translation from disk. Locale does NOT reload
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
+* Ctrl+Shift+L — test font dispatching
 * Ctrl+Shift+Q — test emoji repainting engine
 * Ctrl+Shift+T — tofu stats
 * Ctrl+Shift+W — debug algorithms of sorting blocks
@@ -29,7 +30,9 @@
   * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
   * Make sure **Unicodia is closed**, run tape.bat
 * Two or more skintones (e.g. interracial kiss/handshake): same. They are neither repainted nor checked.
+  * Added a special algorithm specially for wrestlers/Playboy bunnies, it won’t be described here.
 * One skintone (one person, same-race handshake…), repainted versions are stored
+  * Just store them.  
   * After that press Ctrl+Shift+Q in Unicodia.
   * Copy resulting BMP files to AutoQa\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
 * One skintone, repainted versions are created on-the-fly (e.g. because of &lt;clipPath&gt;)
