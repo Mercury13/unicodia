@@ -237,6 +237,7 @@
 @if not errorlevel 1 goto fqa_ok
 @echo.
 @echo FONTS FAILED. I use updated W10, different OS can fail.
+@goto fqa_done
 :fqa_ok
 @echo Fonts OK
 :fqa_done
