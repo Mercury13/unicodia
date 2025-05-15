@@ -530,7 +530,6 @@ namespace {
         { 'A' },    // Asymmetric
         { 'B', StrangeTarget::AFTER, uc::Lfg::NO_TILE },  // Bopomofo-like
         { 'C' },    // Cursive
-        { 'F', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Fully-reflective
         { 'H' },    // Contain Hangul
         { 'I' },    // Look incomplete
         { 'K', StrangeTarget::AFTER, uc::Lfg::NO_TILE },    // Katakana-like
@@ -539,6 +538,7 @@ namespace {
         { 'R', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },    // Rotated
         { 'S' },    // Stroke-heavy
         { 'U' },    // Unusual structure
+        { 'Y', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Fully-reflective
     };
 
 }   // anon namespace
@@ -565,8 +565,12 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
                     [](const StrangeCatInfo& x, char y) {
                         return (x.key < y);
                     });
-        if (whatFound == std::end(strangeCats) || whatFound->key != type)
-            throw std::logic_error("Unknown strange category");
+        if (whatFound == std::end(strangeCats) || whatFound->key != type) {
+            char buf[100];
+            snprintf(buf, std::size(buf),
+                     "Unknown strange category '%c'", type);
+            throw std::logic_error(buf);
+        }
         auto iCat = whatFound - std::begin(strangeCats);
         auto& subcat = root.children[iCat];
         auto& child = *subcat->children.emplace_back(new lib::Node);

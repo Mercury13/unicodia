@@ -58,7 +58,7 @@ namespace uc {
         ALPHA, BETA, RELEASE
     };
 
-    constexpr LatestState LATEST_STATE = LatestState::ALPHA;
+    constexpr LatestState LATEST_STATE = LatestState::BETA;
 
     enum class EcVersion : unsigned char
     {

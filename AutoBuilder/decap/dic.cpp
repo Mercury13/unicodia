@@ -194,6 +194,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SAMARITAN",      Dicf::TRIG_SCRIPT },
     { "SANSKRIT",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "SARATI",         Dicf::TRIG_SCRIPT },
+    { "SAUDI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SAURASHTRA",     Dicf::TRIG_SCRIPT },
     { "SCOTS",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "SHAVIAN",        Dicf::TRIG_SCRIPT },

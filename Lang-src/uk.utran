@@ -12451,10 +12451,6 @@
      <orig>C: cursive</orig>
      <transl>C: скорописні</transl>
     </text>
-    <text id="F">
-     <orig>F: fully-reflective</orig>
-     <transl>F: симетричні</transl>
-    </text>
     <text id="H">
      <orig>H: contain Hangul</orig>
      <transl>H: містять хангиль</transl>
@@ -12486,6 +12482,10 @@
     <text id="U">
      <orig>U: unusual structure</orig>
      <transl>U: незвичайна структура</transl>
+    </text>
+    <text id="Y">
+     <orig>Y: symmetric</orig>
+     <transl>Y: симетричні</transl>
     </text>
     <text id="Emoji">
      <orig>Emoji</orig>
@@ -14088,14 +14088,14 @@
       <p>* Reformed [[ps:Adlm|Adlam]] script for better legibility</p>
       <p>* Added a [[pt:inclusion|genderless]] version of the last emoji{{-}}dancer: Latin for a woman, disco for a man, and ballet for genderless</p>
       <p>* Added the last multiracial emoji{{-}}wrestlers and Playboy girls</p>
-      <p>* In early 2025, the sign for Sudi riyal was adopted. It is going to be at U+20C1</p>
+      <p>* In early 2025, the sign for Sudi riyal was adopted and quickly put to U+20C1</p>
      </orig>
      <transl>
       <p>* Описано [[pt:egyp|правила]] кодування єгипетських ієрогліфів</p>
       <p>* Реформовано [[ps:Adlm|адлам]] для кращої читаємості</p>
       <p>* Додано [[pt:inclusion|безстатеву]] версію останнього емодзі{{-}}танцюриста: латинські у жінки, диско у чоловіка, та балет у безстатевого</p>
       <p>* Додано останні багаторасові емодзі{{-}}борців та дівчат Плейбою</p>
-      <p>* На початку 2025 прийняли знак саудівського ріяла. Він буде на U+20C1</p>
+      <p>* На початку 2025 прийняли знак саудівського ріяла, та швидко поставили на U+20C1</p>
      </transl>
     </text>
    </group>

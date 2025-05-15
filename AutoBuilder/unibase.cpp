@@ -125,6 +125,9 @@ namespace {
                 targetType = &NUM_CJK_ZHUANG;
             } else if (type == "kVietnameseNumeric") {
                 targetType = &NUM_CJK_VIETNAMESE;
+            } else if (type == "kTayNumeric") {
+                /// @todo [urgent] Tay numerics!
+                //targetType = &NUM_CJK_VIETNAMESE;
             } else {
                 // We should know everything we skipped for now!
                 throw std::logic_error(str::cat(
