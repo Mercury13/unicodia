@@ -551,25 +551,9 @@
 == Katakana Phonetic Extensions
 31F0..31FF: UtoSansKR-Regular
 == Enclosed CJK Letters and Months
-3200..321C: Yu Gothic
-321D, 321E: UtoSansKR-Regular
-3220..3243: Yu Gothic
-3244..325F: UtoSansKR-Regular
-3260..327B: Yu Gothic
-327C..327E: UtoSansKR-Regular
-327F..32B0: Yu Gothic
-32B1..32BF: UtoSansKR-Regular
-32C0..32CB: Yu Gothic
-32CC..32CF: UtoSansKR-Regular
-32D0..32FE: Yu Gothic
-32FF......: UtoSansKR-Regular
+3200..32FF: UtoSansKR-Regular
 == CJK Compatibility
-3300..3376: Yu Gothic
-3377..337A: UtoSansKR-Regular
-337B..33DD: Yu Gothic
-33DE, 33DF: UtoSansKR-Regular
-33E0..33FE: Yu Gothic
-33FF......: UtoSansKR-Regular
+3300..33FF: Yu Gothic
 == CJK Unified Ideographs Extension A
 3400..34EF: BabelStoneHanBasic
 34F0......: SimSun
