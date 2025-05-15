@@ -10,6 +10,7 @@
 // Libs
 #include "u_Strings.h"
 
+constexpr bool IS_BETA = true;
 enum class FileVer : unsigned char { COL3, COL2, UCD };
 
 struct Version {
@@ -73,8 +74,8 @@ Version versions[] {
     { "15.0.0",      "",       FileVer::UCD  },
     { "15.1.0",      "",       FileVer::UCD  },
     { "16.0.0",      "",       FileVer::UCD  },
-    { "17.0.0",      "",       FileVer::UCD, true },
-    // Now Unicode
+    { "17.0.0",      "",       FileVer::UCD,  IS_BETA },
+    // Now Unicode keeps beta in place of future release
 };
 
 
