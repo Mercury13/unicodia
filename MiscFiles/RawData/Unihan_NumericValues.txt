@@ -1,5 +1,5 @@
 # Unihan_NumericValues.txt
-# Date: 2025-01-24 00:00:00 GMT [KL]
+# Date: 2025-04-25 00:00:00 GMT [KL]
 # Unicode Version 17.0.0
 #
 # Unicode Character Database
@@ -13,6 +13,7 @@
 #	kAccountingNumeric
 #	kOtherNumeric
 #	kPrimaryNumeric
+#	kTayNumeric
 #	kVietnameseNumeric
 #	kZhuangNumeric
 #
@@ -48,6 +49,7 @@ U+5146	kPrimaryNumeric	1000000000000 1000000
 U+5169	kOtherNumeric	2
 U+516B	kPrimaryNumeric	8
 U+516D	kPrimaryNumeric	6
+U+5200	kTayNumeric	1
 U+5341	kPrimaryNumeric	10
 U+5343	kPrimaryNumeric	1000
 U+5344	kOtherNumeric	20
@@ -78,6 +80,7 @@ U+62D0	kOtherNumeric	7
 U+62FE	kAccountingNumeric	10
 U+634C	kAccountingNumeric	8
 U+672C	kVietnameseNumeric	4
+U+6761	kTayNumeric	1
 U+677E	kZhuangNumeric	2
 U+6797	kVietnameseNumeric	100
 U+67D2	kAccountingNumeric	7
@@ -93,6 +96,7 @@ U+7A7A	kVietnameseNumeric	0
 U+7F62	kVietnameseNumeric	7
 U+7F77	kVietnameseNumeric	7
 U+8086	kAccountingNumeric	4
+U+80FD	kTayNumeric	1
 U+80FD	kZhuangNumeric	1
 U+842C	kPrimaryNumeric	10000
 U+8511	kVietnameseNumeric	1
@@ -146,12 +150,15 @@ U+28492	kVietnameseNumeric	10
 U+28DC8	kVietnameseNumeric	10000
 U+2B52C	kVietnameseNumeric	10000
 U+2B866	kVietnameseNumeric	9
+U+2B871	kTayNumeric	2
+U+2B872	kTayNumeric	5
 U+2B875	kVietnameseNumeric	5
 U+2B92F	kVietnameseNumeric	8
 U+2B9C7	kZhuangNumeric	1
 U+2C0BD	kVietnameseNumeric	5
 U+2C0F4	kVietnameseNumeric	100
 U+2C65E	kVietnameseNumeric	7
+U+2C954	kTayNumeric	7
 U+2CB99	kVietnameseNumeric	10000
 U+2CEB4	kZhuangNumeric	1
 U+3000C	kZhuangNumeric	1
@@ -161,6 +168,7 @@ U+31394	kVietnameseNumeric	2
 U+31396	kVietnameseNumeric	5
 U+31455	kVietnameseNumeric	10
 U+3197A	kVietnameseNumeric	1
+U+31EC7	kTayNumeric	4
 U+31FA3	kVietnameseNumeric	10000
 U+32226	kVietnameseNumeric	10000
 
