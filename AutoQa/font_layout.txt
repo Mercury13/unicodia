@@ -27581,1691 +27581,1691 @@ FFFD......: NotoSerif-Regular
 2FA1C, 2FA1D: BabelStoneHanBasic
 == CJK Unified Ideographs Extension G
 30000..30040: BabelStoneHanExtra
-30041..30046: HanaMinLiteCSC
+30041..30046: SimSun-ExtG
 30047, 30048: BabelStoneHanExtra
-30049.......: HanaMinLiteCSC
+30049.......: SimSun-ExtG
 3004A, 3004B: BabelStoneHanExtra
-3004C..3004F: HanaMinLiteCSC
+3004C..3004F: SimSun-ExtG
 30050..30058: BabelStoneHanExtra
-30059.......: HanaMinLiteCSC
+30059.......: SimSun-ExtG
 3005A..3005C: BabelStoneHanExtra
-3005D.......: HanaMinLiteCSC
+3005D.......: SimSun-ExtG
 3005E..30063: BabelStoneHanExtra
-30064.......: HanaMinLiteCSC
+30064.......: SimSun-ExtG
 30065..30070: BabelStoneHanExtra
-30071.......: HanaMinLiteCSC
+30071.......: SimSun-ExtG
 30072..30074: BabelStoneHanExtra
-30075, 30076: HanaMinLiteCSC
+30075, 30076: SimSun-ExtG
 30077..30079: BabelStoneHanExtra
-3007A, 3007B: HanaMinLiteCSC
+3007A, 3007B: SimSun-ExtG
 3007C..3007E: BabelStoneHanExtra
-3007F.......: HanaMinLiteCSC
+3007F.......: SimSun-ExtG
 30080..30083: BabelStoneHanExtra
-30084.......: HanaMinLiteCSC
+30084.......: SimSun-ExtG
 30085..30087: BabelStoneHanExtra
-30088.......: HanaMinLiteCSC
+30088.......: SimSun-ExtG
 30089..3008C: BabelStoneHanExtra
-3008D.......: HanaMinLiteCSC
+3008D.......: SimSun-ExtG
 3008E..30091: BabelStoneHanExtra
-30092.......: HanaMinLiteCSC
+30092.......: SimSun-ExtG
 30093, 30094: BabelStoneHanExtra
-30095.......: HanaMinLiteCSC
+30095.......: SimSun-ExtG
 30096, 30097: BabelStoneHanExtra
-30098.......: HanaMinLiteCSC
+30098.......: SimSun-ExtG
 30099.......: BabelStoneHanExtra
-3009A, 3009B: HanaMinLiteCSC
+3009A, 3009B: SimSun-ExtG
 3009C.......: BabelStoneHanExtra
-3009D.......: HanaMinLiteCSC
+3009D.......: SimSun-ExtG
 3009E..300A0: BabelStoneHanExtra
-300A1..300A3: HanaMinLiteCSC
+300A1..300A3: SimSun-ExtG
 300A4..300A6: BabelStoneHanExtra
-300A7.......: HanaMinLiteCSC
+300A7.......: SimSun-ExtG
 300A8..300AA: BabelStoneHanExtra
-300AB.......: HanaMinLiteCSC
+300AB.......: SimSun-ExtG
 300AC, 300AD: BabelStoneHanExtra
-300AE, 300AF: HanaMinLiteCSC
+300AE, 300AF: SimSun-ExtG
 300B0..300B6: BabelStoneHanExtra
-300B7, 300B8: HanaMinLiteCSC
+300B7, 300B8: SimSun-ExtG
 300B9..300BB: BabelStoneHanExtra
-300BC.......: HanaMinLiteCSC
+300BC.......: SimSun-ExtG
 300BD.......: BabelStoneHanExtra
-300BE.......: HanaMinLiteCSC
+300BE.......: SimSun-ExtG
 300BF..300C1: BabelStoneHanExtra
-300C2, 300C3: HanaMinLiteCSC
+300C2, 300C3: SimSun-ExtG
 300C4.......: BabelStoneHanExtra
-300C5.......: HanaMinLiteCSC
+300C5.......: SimSun-ExtG
 300C6..300C8: BabelStoneHanExtra
-300C9..300CB: HanaMinLiteCSC
+300C9..300CB: SimSun-ExtG
 300CC.......: BabelStoneHanExtra
-300CD..300CF: HanaMinLiteCSC
+300CD..300CF: SimSun-ExtG
 300D0..300DD: BabelStoneHanExtra
-300DE.......: HanaMinLiteCSC
+300DE.......: SimSun-ExtG
 300DF.......: BabelStoneHanExtra
-300E0.......: HanaMinLiteCSC
+300E0.......: SimSun-ExtG
 300E1..300EC: BabelStoneHanExtra
-300ED.......: HanaMinLiteCSC
+300ED.......: SimSun-ExtG
 300EE.......: BabelStoneHanExtra
-300EF.......: HanaMinLiteCSC
+300EF.......: SimSun-ExtG
 300F0..30106: BabelStoneHanExtra
-30107.......: HanaMinLiteCSC
+30107.......: SimSun-ExtG
 30108..3010A: BabelStoneHanExtra
-3010B.......: HanaMinLiteCSC
+3010B.......: SimSun-ExtG
 3010C..30120: BabelStoneHanExtra
-30121.......: HanaMinLiteCSC
+30121.......: SimSun-ExtG
 30122..30127: BabelStoneHanExtra
-30128.......: HanaMinLiteCSC
+30128.......: SimSun-ExtG
 30129..30132: BabelStoneHanExtra
-30133.......: HanaMinLiteCSC
+30133.......: SimSun-ExtG
 30134.......: BabelStoneHanExtra
-30135.......: HanaMinLiteCSC
+30135.......: SimSun-ExtG
 30136..3013B: BabelStoneHanExtra
-3013C.......: HanaMinLiteCSC
+3013C.......: SimSun-ExtG
 3013D..30143: BabelStoneHanExtra
-30144..30146: HanaMinLiteCSC
+30144..30146: SimSun-ExtG
 30147.......: BabelStoneHanExtra
-30148.......: HanaMinLiteCSC
+30148.......: SimSun-ExtG
 30149..3014E: BabelStoneHanExtra
-3014F, 30150: HanaMinLiteCSC
+3014F, 30150: SimSun-ExtG
 30151.......: BabelStoneHanExtra
-30152.......: HanaMinLiteCSC
+30152.......: SimSun-ExtG
 30153..30157: BabelStoneHanExtra
-30158.......: HanaMinLiteCSC
+30158.......: SimSun-ExtG
 30159.......: BabelStoneHanExtra
-3015A, 3015B: HanaMinLiteCSC
+3015A, 3015B: SimSun-ExtG
 3015C, 3015D: BabelStoneHanExtra
-3015E, 3015F: HanaMinLiteCSC
+3015E, 3015F: SimSun-ExtG
 30160, 30161: BabelStoneHanExtra
-30162, 30163: HanaMinLiteCSC
+30162, 30163: SimSun-ExtG
 30164..30168: BabelStoneHanExtra
-30169..3016C: HanaMinLiteCSC
+30169..3016C: SimSun-ExtG
 3016D..30175: BabelStoneHanExtra
-30176, 30177: HanaMinLiteCSC
+30176, 30177: SimSun-ExtG
 30178..30182: BabelStoneHanExtra
-30183.......: HanaMinLiteCSC
+30183.......: SimSun-ExtG
 30184.......: BabelStoneHanExtra
-30185..30188: HanaMinLiteCSC
+30185..30188: SimSun-ExtG
 30189..3018B: BabelStoneHanExtra
-3018C.......: HanaMinLiteCSC
+3018C.......: SimSun-ExtG
 3018D.......: BabelStoneHanExtra
-3018E..30193: HanaMinLiteCSC
+3018E..30193: SimSun-ExtG
 30194..3019C: BabelStoneHanExtra
-3019D..3019F: HanaMinLiteCSC
+3019D..3019F: SimSun-ExtG
 301A0.......: BabelStoneHanExtra
-301A1..301A3: HanaMinLiteCSC
+301A1..301A3: SimSun-ExtG
 301A4, 301A5: BabelStoneHanExtra
-301A6.......: HanaMinLiteCSC
+301A6.......: SimSun-ExtG
 301A7.......: BabelStoneHanExtra
-301A8..301AA: HanaMinLiteCSC
+301A8..301AA: SimSun-ExtG
 301AB, 301AC: BabelStoneHanExtra
-301AD.......: HanaMinLiteCSC
+301AD.......: SimSun-ExtG
 301AE..301B6: BabelStoneHanExtra
-301B7.......: HanaMinLiteCSC
+301B7.......: SimSun-ExtG
 301B8..301C2: BabelStoneHanExtra
-301C3.......: HanaMinLiteCSC
+301C3.......: SimSun-ExtG
 301C4..301CB: BabelStoneHanExtra
-301CC.......: HanaMinLiteCSC
+301CC.......: SimSun-ExtG
 301CD..301D3: BabelStoneHanExtra
-301D4.......: HanaMinLiteCSC
+301D4.......: SimSun-ExtG
 301D5..301D8: BabelStoneHanExtra
-301D9.......: HanaMinLiteCSC
+301D9.......: SimSun-ExtG
 301DA..301DE: BabelStoneHanExtra
-301DF.......: HanaMinLiteCSC
+301DF.......: SimSun-ExtG
 301E0..301E3: BabelStoneHanExtra
-301E4.......: HanaMinLiteCSC
+301E4.......: SimSun-ExtG
 301E5.......: BabelStoneHanExtra
-301E6.......: HanaMinLiteCSC
+301E6.......: SimSun-ExtG
 301E7.......: BabelStoneHanExtra
-301E8.......: HanaMinLiteCSC
+301E8.......: SimSun-ExtG
 301E9..301F9: BabelStoneHanExtra
-301FA.......: HanaMinLiteCSC
+301FA.......: SimSun-ExtG
 301FB..301FD: BabelStoneHanExtra
-301FE..30200: HanaMinLiteCSC
+301FE..30200: SimSun-ExtG
 30201..30204: BabelStoneHanExtra
-30205.......: HanaMinLiteCSC
+30205.......: SimSun-ExtG
 30206..3020B: BabelStoneHanExtra
-3020C.......: HanaMinLiteCSC
+3020C.......: SimSun-ExtG
 3020D..30210: BabelStoneHanExtra
-30211.......: HanaMinLiteCSC
+30211.......: SimSun-ExtG
 30212..30214: BabelStoneHanExtra
-30215..30217: HanaMinLiteCSC
+30215..30217: SimSun-ExtG
 30218..3021A: BabelStoneHanExtra
-3021B.......: HanaMinLiteCSC
+3021B.......: SimSun-ExtG
 3021C..3021F: BabelStoneHanExtra
-30220.......: HanaMinLiteCSC
+30220.......: SimSun-ExtG
 30221..3022A: BabelStoneHanExtra
-3022B.......: HanaMinLiteCSC
+3022B.......: SimSun-ExtG
 3022C..30232: BabelStoneHanExtra
-30233..30235: HanaMinLiteCSC
+30233..30235: SimSun-ExtG
 30236.......: BabelStoneHanExtra
-30237.......: HanaMinLiteCSC
+30237.......: SimSun-ExtG
 30238, 30239: BabelStoneHanExtra
-3023A.......: HanaMinLiteCSC
+3023A.......: SimSun-ExtG
 3023B..30253: BabelStoneHanExtra
-30254.......: HanaMinLiteCSC
+30254.......: SimSun-ExtG
 30255..3025B: BabelStoneHanExtra
-3025C, 3025D: HanaMinLiteCSC
+3025C, 3025D: SimSun-ExtG
 3025E..30263: BabelStoneHanExtra
-30264.......: HanaMinLiteCSC
+30264.......: SimSun-ExtG
 30265, 30266: BabelStoneHanExtra
-30267, 30268: HanaMinLiteCSC
+30267, 30268: SimSun-ExtG
 30269..3026D: BabelStoneHanExtra
-3026E.......: HanaMinLiteCSC
+3026E.......: SimSun-ExtG
 3026F..30278: BabelStoneHanExtra
-30279, 3027A: HanaMinLiteCSC
+30279, 3027A: SimSun-ExtG
 3027B..3027F: BabelStoneHanExtra
-30280, 30281: HanaMinLiteCSC
+30280, 30281: SimSun-ExtG
 30282.......: BabelStoneHanExtra
-30283.......: HanaMinLiteCSC
+30283.......: SimSun-ExtG
 30284..3028A: BabelStoneHanExtra
-3028B..3028D: HanaMinLiteCSC
+3028B..3028D: SimSun-ExtG
 3028E.......: BabelStoneHanExtra
-3028F, 30290: HanaMinLiteCSC
+3028F, 30290: SimSun-ExtG
 30291.......: BabelStoneHanExtra
-30292.......: HanaMinLiteCSC
+30292.......: SimSun-ExtG
 30293.......: BabelStoneHanExtra
-30294.......: HanaMinLiteCSC
+30294.......: SimSun-ExtG
 30295, 30296: BabelStoneHanExtra
-30297.......: HanaMinLiteCSC
+30297.......: SimSun-ExtG
 30298, 30299: BabelStoneHanExtra
-3029A.......: HanaMinLiteCSC
+3029A.......: SimSun-ExtG
 3029B..302A3: BabelStoneHanExtra
-302A4.......: HanaMinLiteCSC
+302A4.......: SimSun-ExtG
 302A5.......: BabelStoneHanExtra
-302A6.......: HanaMinLiteCSC
+302A6.......: SimSun-ExtG
 302A7, 302A8: BabelStoneHanExtra
-302A9..302AC: HanaMinLiteCSC
+302A9..302AC: SimSun-ExtG
 302AD..302AF: BabelStoneHanExtra
-302B0.......: HanaMinLiteCSC
+302B0.......: SimSun-ExtG
 302B1.......: BabelStoneHanExtra
-302B2, 302B3: HanaMinLiteCSC
+302B2, 302B3: SimSun-ExtG
 302B4.......: BabelStoneHanExtra
-302B5.......: HanaMinLiteCSC
+302B5.......: SimSun-ExtG
 302B6, 302B7: BabelStoneHanExtra
-302B8.......: HanaMinLiteCSC
+302B8.......: SimSun-ExtG
 302B9..302BC: BabelStoneHanExtra
-302BD.......: HanaMinLiteCSC
+302BD.......: SimSun-ExtG
 302BE..302C1: BabelStoneHanExtra
-302C2, 302C3: HanaMinLiteCSC
+302C2, 302C3: SimSun-ExtG
 302C4..302C6: BabelStoneHanExtra
-302C7, 302C8: HanaMinLiteCSC
+302C7, 302C8: SimSun-ExtG
 302C9..302CB: BabelStoneHanExtra
-302CC, 302CD: HanaMinLiteCSC
+302CC, 302CD: SimSun-ExtG
 302CE..302D3: BabelStoneHanExtra
-302D4.......: HanaMinLiteCSC
+302D4.......: SimSun-ExtG
 302D5..302E0: BabelStoneHanExtra
-302E1.......: HanaMinLiteCSC
+302E1.......: SimSun-ExtG
 302E2, 302E3: BabelStoneHanExtra
-302E4.......: HanaMinLiteCSC
+302E4.......: SimSun-ExtG
 302E5..302E7: BabelStoneHanExtra
-302E8.......: HanaMinLiteCSC
+302E8.......: SimSun-ExtG
 302E9.......: BabelStoneHanExtra
-302EA.......: HanaMinLiteCSC
+302EA.......: SimSun-ExtG
 302EB, 302EC: BabelStoneHanExtra
-302ED.......: HanaMinLiteCSC
+302ED.......: SimSun-ExtG
 302EE.......: BabelStoneHanExtra
-302EF.......: HanaMinLiteCSC
+302EF.......: SimSun-ExtG
 302F0, 302F1: BabelStoneHanExtra
-302F2.......: HanaMinLiteCSC
+302F2.......: SimSun-ExtG
 302F3..30304: BabelStoneHanExtra
-30305.......: HanaMinLiteCSC
+30305.......: SimSun-ExtG
 30306..3030C: BabelStoneHanExtra
-3030D.......: HanaMinLiteCSC
+3030D.......: SimSun-ExtG
 3030E.......: BabelStoneHanExtra
-3030F.......: HanaMinLiteCSC
+3030F.......: SimSun-ExtG
 30310.......: BabelStoneHanExtra
-30311, 30312: HanaMinLiteCSC
+30311, 30312: SimSun-ExtG
 30313..30319: BabelStoneHanExtra
-3031A.......: HanaMinLiteCSC
+3031A.......: SimSun-ExtG
 3031B..30320: BabelStoneHanExtra
-30321.......: HanaMinLiteCSC
+30321.......: SimSun-ExtG
 30322..3032C: BabelStoneHanExtra
-3032D.......: HanaMinLiteCSC
+3032D.......: SimSun-ExtG
 3032E..30337: BabelStoneHanExtra
-30338.......: HanaMinLiteCSC
+30338.......: SimSun-ExtG
 30339..3033F: BabelStoneHanExtra
-30340.......: HanaMinLiteCSC
+30340.......: SimSun-ExtG
 30341.......: BabelStoneHanExtra
-30342.......: HanaMinLiteCSC
+30342.......: SimSun-ExtG
 30343.......: BabelStoneHanExtra
-30344.......: HanaMinLiteCSC
+30344.......: SimSun-ExtG
 30345.......: BabelStoneHanExtra
-30346.......: HanaMinLiteCSC
+30346.......: SimSun-ExtG
 30347, 30348: BabelStoneHanExtra
-30349.......: HanaMinLiteCSC
+30349.......: SimSun-ExtG
 3034A.......: BabelStoneHanExtra
-3034B..3034D: HanaMinLiteCSC
+3034B..3034D: SimSun-ExtG
 3034E.......: BabelStoneHanExtra
-3034F.......: HanaMinLiteCSC
+3034F.......: SimSun-ExtG
 30350, 30351: BabelStoneHanExtra
-30352.......: HanaMinLiteCSC
+30352.......: SimSun-ExtG
 30353.......: BabelStoneHanExtra
-30354.......: HanaMinLiteCSC
+30354.......: SimSun-ExtG
 30355..3035E: BabelStoneHanExtra
-3035F.......: HanaMinLiteCSC
+3035F.......: SimSun-ExtG
 30360..3036C: BabelStoneHanExtra
-3036D, 3036E: HanaMinLiteCSC
+3036D, 3036E: SimSun-ExtG
 3036F..30371: BabelStoneHanExtra
-30372.......: HanaMinLiteCSC
+30372.......: SimSun-ExtG
 30373..30375: BabelStoneHanExtra
-30376..3037A: HanaMinLiteCSC
+30376..3037A: SimSun-ExtG
 3037B, 3037C: BabelStoneHanExtra
-3037D..30381: HanaMinLiteCSC
+3037D..30381: SimSun-ExtG
 30382.......: BabelStoneHanExtra
-30383..30386: HanaMinLiteCSC
+30383..30386: SimSun-ExtG
 30387.......: BabelStoneHanExtra
-30388.......: HanaMinLiteCSC
+30388.......: SimSun-ExtG
 30389.......: BabelStoneHanExtra
-3038A.......: HanaMinLiteCSC
+3038A.......: SimSun-ExtG
 3038B, 3038C: BabelStoneHanExtra
-3038D.......: HanaMinLiteCSC
+3038D.......: SimSun-ExtG
 3038E..30396: BabelStoneHanExtra
-30397..3039A: HanaMinLiteCSC
+30397..3039A: SimSun-ExtG
 3039B..303A0: BabelStoneHanExtra
-303A1.......: HanaMinLiteCSC
+303A1.......: SimSun-ExtG
 303A2.......: BabelStoneHanExtra
-303A3, 303A4: HanaMinLiteCSC
+303A3, 303A4: SimSun-ExtG
 303A5, 303A6: BabelStoneHanExtra
-303A7.......: HanaMinLiteCSC
+303A7.......: SimSun-ExtG
 303A8.......: BabelStoneHanExtra
-303A9, 303AA: HanaMinLiteCSC
+303A9, 303AA: SimSun-ExtG
 303AB..303AD: BabelStoneHanExtra
-303AE, 303AF: HanaMinLiteCSC
+303AE, 303AF: SimSun-ExtG
 303B0.......: BabelStoneHanExtra
-303B1, 303B2: HanaMinLiteCSC
+303B1, 303B2: SimSun-ExtG
 303B3..303BA: BabelStoneHanExtra
-303BB.......: HanaMinLiteCSC
+303BB.......: SimSun-ExtG
 303BC.......: BabelStoneHanExtra
-303BD..303BF: HanaMinLiteCSC
+303BD..303BF: SimSun-ExtG
 303C0..303C3: BabelStoneHanExtra
-303C4.......: HanaMinLiteCSC
+303C4.......: SimSun-ExtG
 303C5..303CE: BabelStoneHanExtra
-303CF.......: HanaMinLiteCSC
+303CF.......: SimSun-ExtG
 303D0..303D5: BabelStoneHanExtra
-303D6.......: HanaMinLiteCSC
+303D6.......: SimSun-ExtG
 303D7..303E0: BabelStoneHanExtra
-303E1.......: HanaMinLiteCSC
+303E1.......: SimSun-ExtG
 303E2..303E4: BabelStoneHanExtra
-303E5.......: HanaMinLiteCSC
+303E5.......: SimSun-ExtG
 303E6.......: BabelStoneHanExtra
-303E7.......: HanaMinLiteCSC
+303E7.......: SimSun-ExtG
 303E8, 303E9: BabelStoneHanExtra
-303EA.......: HanaMinLiteCSC
+303EA.......: SimSun-ExtG
 303EB..303F2: BabelStoneHanExtra
-303F3.......: HanaMinLiteCSC
+303F3.......: SimSun-ExtG
 303F4..303F6: BabelStoneHanExtra
-303F7.......: HanaMinLiteCSC
+303F7.......: SimSun-ExtG
 303F8.......: BabelStoneHanExtra
-303F9, 303FA: HanaMinLiteCSC
+303F9, 303FA: SimSun-ExtG
 303FB..303FF: BabelStoneHanExtra
-30400.......: HanaMinLiteCSC
+30400.......: SimSun-ExtG
 30401, 30402: BabelStoneHanExtra
-30403..30405: HanaMinLiteCSC
+30403..30405: SimSun-ExtG
 30406..3040B: BabelStoneHanExtra
-3040C..3040E: HanaMinLiteCSC
+3040C..3040E: SimSun-ExtG
 3040F.......: BabelStoneHanExtra
-30410..30412: HanaMinLiteCSC
+30410..30412: SimSun-ExtG
 30413..30416: BabelStoneHanExtra
-30417.......: HanaMinLiteCSC
+30417.......: SimSun-ExtG
 30418..3041A: BabelStoneHanExtra
-3041B, 3041C: HanaMinLiteCSC
+3041B, 3041C: SimSun-ExtG
 3041D, 3041E: BabelStoneHanExtra
-3041F.......: HanaMinLiteCSC
+3041F.......: SimSun-ExtG
 30420, 30421: BabelStoneHanExtra
-30422..30425: HanaMinLiteCSC
+30422..30425: SimSun-ExtG
 30426..30429: BabelStoneHanExtra
-3042A.......: HanaMinLiteCSC
+3042A.......: SimSun-ExtG
 3042B..3042E: BabelStoneHanExtra
-3042F.......: HanaMinLiteCSC
+3042F.......: SimSun-ExtG
 30430.......: BabelStoneHanExtra
-30431..30433: HanaMinLiteCSC
+30431..30433: SimSun-ExtG
 30434.......: BabelStoneHanExtra
-30435.......: HanaMinLiteCSC
+30435.......: SimSun-ExtG
 30436.......: BabelStoneHanExtra
-30437.......: HanaMinLiteCSC
+30437.......: SimSun-ExtG
 30438..30441: BabelStoneHanExtra
-30442.......: HanaMinLiteCSC
+30442.......: SimSun-ExtG
 30443..30448: BabelStoneHanExtra
-30449.......: HanaMinLiteCSC
+30449.......: SimSun-ExtG
 3044A.......: BabelStoneHanExtra
-3044B.......: HanaMinLiteCSC
+3044B.......: SimSun-ExtG
 3044C, 3044D: BabelStoneHanExtra
-3044E.......: HanaMinLiteCSC
+3044E.......: SimSun-ExtG
 3044F, 30450: BabelStoneHanExtra
-30451.......: HanaMinLiteCSC
+30451.......: SimSun-ExtG
 30452..3045F: BabelStoneHanExtra
-30460.......: HanaMinLiteCSC
+30460.......: SimSun-ExtG
 30461..30468: BabelStoneHanExtra
-30469.......: HanaMinLiteCSC
+30469.......: SimSun-ExtG
 3046A..3046C: BabelStoneHanExtra
-3046D.......: HanaMinLiteCSC
+3046D.......: SimSun-ExtG
 3046E.......: BabelStoneHanExtra
-3046F, 30470: HanaMinLiteCSC
+3046F, 30470: SimSun-ExtG
 30471.......: BabelStoneHanExtra
-30472.......: HanaMinLiteCSC
+30472.......: SimSun-ExtG
 30473..30475: BabelStoneHanExtra
-30476, 30477: HanaMinLiteCSC
+30476, 30477: SimSun-ExtG
 30478..3047A: BabelStoneHanExtra
-3047B..3047D: HanaMinLiteCSC
+3047B..3047D: SimSun-ExtG
 3047E..30483: BabelStoneHanExtra
-30484.......: HanaMinLiteCSC
+30484.......: SimSun-ExtG
 30485..30487: BabelStoneHanExtra
-30488..3048A: HanaMinLiteCSC
+30488..3048A: SimSun-ExtG
 3048B, 3048C: BabelStoneHanExtra
-3048D..3048F: HanaMinLiteCSC
+3048D..3048F: SimSun-ExtG
 30490..30493: BabelStoneHanExtra
-30494.......: HanaMinLiteCSC
+30494.......: SimSun-ExtG
 30495..3049C: BabelStoneHanExtra
-3049D.......: HanaMinLiteCSC
+3049D.......: SimSun-ExtG
 3049E.......: BabelStoneHanExtra
-3049F.......: HanaMinLiteCSC
+3049F.......: SimSun-ExtG
 304A0..304A6: BabelStoneHanExtra
-304A7.......: HanaMinLiteCSC
+304A7.......: SimSun-ExtG
 304A8.......: BabelStoneHanExtra
-304A9.......: HanaMinLiteCSC
+304A9.......: SimSun-ExtG
 304AA.......: BabelStoneHanExtra
-304AB, 304AC: HanaMinLiteCSC
+304AB, 304AC: SimSun-ExtG
 304AD..304B7: BabelStoneHanExtra
-304B8.......: HanaMinLiteCSC
+304B8.......: SimSun-ExtG
 304B9..304C4: BabelStoneHanExtra
-304C5.......: HanaMinLiteCSC
+304C5.......: SimSun-ExtG
 304C6.......: BabelStoneHanExtra
-304C7..304C9: HanaMinLiteCSC
+304C7..304C9: SimSun-ExtG
 304CA..304CC: BabelStoneHanExtra
-304CD..304CF: HanaMinLiteCSC
+304CD..304CF: SimSun-ExtG
 304D0..304D7: BabelStoneHanExtra
-304D8.......: HanaMinLiteCSC
+304D8.......: SimSun-ExtG
 304D9, 304DA: BabelStoneHanExtra
-304DB.......: HanaMinLiteCSC
+304DB.......: SimSun-ExtG
 304DC..304E0: BabelStoneHanExtra
-304E1.......: HanaMinLiteCSC
+304E1.......: SimSun-ExtG
 304E2..304E5: BabelStoneHanExtra
-304E6.......: HanaMinLiteCSC
+304E6.......: SimSun-ExtG
 304E7, 304E8: BabelStoneHanExtra
-304E9.......: HanaMinLiteCSC
+304E9.......: SimSun-ExtG
 304EA..304EE: BabelStoneHanExtra
-304EF.......: HanaMinLiteCSC
+304EF.......: SimSun-ExtG
 304F0..304F2: BabelStoneHanExtra
-304F3, 304F4: HanaMinLiteCSC
+304F3, 304F4: SimSun-ExtG
 304F5..304FC: BabelStoneHanExtra
-304FD.......: HanaMinLiteCSC
+304FD.......: SimSun-ExtG
 304FE..30500: BabelStoneHanExtra
-30501.......: HanaMinLiteCSC
+30501.......: SimSun-ExtG
 30502, 30503: BabelStoneHanExtra
-30504.......: HanaMinLiteCSC
+30504.......: SimSun-ExtG
 30505.......: BabelStoneHanExtra
-30506.......: HanaMinLiteCSC
+30506.......: SimSun-ExtG
 30507, 30508: BabelStoneHanExtra
-30509, 3050A: HanaMinLiteCSC
+30509, 3050A: SimSun-ExtG
 3050B, 3050C: BabelStoneHanExtra
-3050D.......: HanaMinLiteCSC
+3050D.......: SimSun-ExtG
 3050E.......: BabelStoneHanExtra
-3050F.......: HanaMinLiteCSC
+3050F.......: SimSun-ExtG
 30510.......: BabelStoneHanExtra
-30511..30514: HanaMinLiteCSC
+30511..30514: SimSun-ExtG
 30515.......: BabelStoneHanExtra
-30516..30519: HanaMinLiteCSC
+30516..30519: SimSun-ExtG
 3051A..3051E: BabelStoneHanExtra
-3051F.......: HanaMinLiteCSC
+3051F.......: SimSun-ExtG
 30520.......: BabelStoneHanExtra
-30521.......: HanaMinLiteCSC
+30521.......: SimSun-ExtG
 30522..30526: BabelStoneHanExtra
-30527..30529: HanaMinLiteCSC
+30527..30529: SimSun-ExtG
 3052A..3052D: BabelStoneHanExtra
-3052E, 3052F: HanaMinLiteCSC
+3052E, 3052F: SimSun-ExtG
 30530..30537: BabelStoneHanExtra
-30538.......: HanaMinLiteCSC
+30538.......: SimSun-ExtG
 30539, 3053A: BabelStoneHanExtra
-3053B, 3053C: HanaMinLiteCSC
+3053B, 3053C: SimSun-ExtG
 3053D..3053F: BabelStoneHanExtra
-30540.......: HanaMinLiteCSC
+30540.......: SimSun-ExtG
 30541.......: BabelStoneHanExtra
-30542, 30543: HanaMinLiteCSC
+30542, 30543: SimSun-ExtG
 30544, 30545: BabelStoneHanExtra
-30546, 30547: HanaMinLiteCSC
+30546, 30547: SimSun-ExtG
 30548..30551: BabelStoneHanExtra
-30552..30554: HanaMinLiteCSC
+30552..30554: SimSun-ExtG
 30555.......: BabelStoneHanExtra
-30556.......: HanaMinLiteCSC
+30556.......: SimSun-ExtG
 30557..3055A: BabelStoneHanExtra
-3055B.......: HanaMinLiteCSC
+3055B.......: SimSun-ExtG
 3055C, 3055D: BabelStoneHanExtra
-3055E..30560: HanaMinLiteCSC
+3055E..30560: SimSun-ExtG
 30561.......: BabelStoneHanExtra
-30562.......: HanaMinLiteCSC
+30562.......: SimSun-ExtG
 30563.......: BabelStoneHanExtra
-30564.......: HanaMinLiteCSC
+30564.......: SimSun-ExtG
 30565..30567: BabelStoneHanExtra
-30568..3056A: HanaMinLiteCSC
+30568..3056A: SimSun-ExtG
 3056B..30570: BabelStoneHanExtra
-30571.......: HanaMinLiteCSC
+30571.......: SimSun-ExtG
 30572..30577: BabelStoneHanExtra
-30578.......: HanaMinLiteCSC
+30578.......: SimSun-ExtG
 30579, 3057A: BabelStoneHanExtra
-3057B.......: HanaMinLiteCSC
+3057B.......: SimSun-ExtG
 3057C..3057E: BabelStoneHanExtra
-3057F.......: HanaMinLiteCSC
+3057F.......: SimSun-ExtG
 30580..30582: BabelStoneHanExtra
-30583, 30584: HanaMinLiteCSC
+30583, 30584: SimSun-ExtG
 30585.......: BabelStoneHanExtra
-30586, 30587: HanaMinLiteCSC
+30586, 30587: SimSun-ExtG
 30588.......: BabelStoneHanExtra
-30589..3058B: HanaMinLiteCSC
+30589..3058B: SimSun-ExtG
 3058C, 3058D: BabelStoneHanExtra
-3058E.......: HanaMinLiteCSC
+3058E.......: SimSun-ExtG
 3058F..30591: BabelStoneHanExtra
-30592.......: HanaMinLiteCSC
+30592.......: SimSun-ExtG
 30593..30597: BabelStoneHanExtra
-30598, 30599: HanaMinLiteCSC
+30598, 30599: SimSun-ExtG
 3059A, 3059B: BabelStoneHanExtra
-3059C, 3059D: HanaMinLiteCSC
+3059C, 3059D: SimSun-ExtG
 3059E..305A0: BabelStoneHanExtra
-305A1.......: HanaMinLiteCSC
+305A1.......: SimSun-ExtG
 305A2.......: BabelStoneHanExtra
-305A3.......: HanaMinLiteCSC
+305A3.......: SimSun-ExtG
 305A4.......: BabelStoneHanExtra
-305A5..305A7: HanaMinLiteCSC
+305A5..305A7: SimSun-ExtG
 305A8..305AA: BabelStoneHanExtra
-305AB.......: HanaMinLiteCSC
+305AB.......: SimSun-ExtG
 305AC.......: BabelStoneHanExtra
-305AD.......: HanaMinLiteCSC
+305AD.......: SimSun-ExtG
 305AE, 305AF: BabelStoneHanExtra
-305B0.......: HanaMinLiteCSC
+305B0.......: SimSun-ExtG
 305B1..305B3: BabelStoneHanExtra
-305B4, 305B5: HanaMinLiteCSC
+305B4, 305B5: SimSun-ExtG
 305B6.......: BabelStoneHanExtra
-305B7.......: HanaMinLiteCSC
+305B7.......: SimSun-ExtG
 305B8.......: BabelStoneHanExtra
-305B9, 305BA: HanaMinLiteCSC
+305B9, 305BA: SimSun-ExtG
 305BB.......: BabelStoneHanExtra
-305BC..305BE: HanaMinLiteCSC
+305BC..305BE: SimSun-ExtG
 305BF.......: BabelStoneHanExtra
-305C0, 305C1: HanaMinLiteCSC
+305C0, 305C1: SimSun-ExtG
 305C2, 305C3: BabelStoneHanExtra
-305C4.......: HanaMinLiteCSC
+305C4.......: SimSun-ExtG
 305C5..305C9: BabelStoneHanExtra
-305CA.......: HanaMinLiteCSC
+305CA.......: SimSun-ExtG
 305CB.......: BabelStoneHanExtra
-305CC.......: HanaMinLiteCSC
+305CC.......: SimSun-ExtG
 305CD, 305CE: BabelStoneHanExtra
-305CF, 305D0: HanaMinLiteCSC
+305CF, 305D0: SimSun-ExtG
 305D1.......: BabelStoneHanExtra
-305D2.......: HanaMinLiteCSC
+305D2.......: SimSun-ExtG
 305D3.......: BabelStoneHanExtra
-305D4.......: HanaMinLiteCSC
+305D4.......: SimSun-ExtG
 305D5..305DE: BabelStoneHanExtra
-305DF.......: HanaMinLiteCSC
+305DF.......: SimSun-ExtG
 305E0..305E9: BabelStoneHanExtra
-305EA, 305EB: HanaMinLiteCSC
+305EA, 305EB: SimSun-ExtG
 305EC..305F0: BabelStoneHanExtra
-305F1.......: HanaMinLiteCSC
+305F1.......: SimSun-ExtG
 305F2..30600: BabelStoneHanExtra
-30601.......: HanaMinLiteCSC
+30601.......: SimSun-ExtG
 30602.......: BabelStoneHanExtra
-30603, 30604: HanaMinLiteCSC
+30603, 30604: SimSun-ExtG
 30605..3060C: BabelStoneHanExtra
-3060D, 3060E: HanaMinLiteCSC
+3060D, 3060E: SimSun-ExtG
 3060F, 30610: BabelStoneHanExtra
-30611, 30612: HanaMinLiteCSC
+30611, 30612: SimSun-ExtG
 30613, 30614: BabelStoneHanExtra
-30615, 30616: HanaMinLiteCSC
+30615, 30616: SimSun-ExtG
 30617.......: BabelStoneHanExtra
-30618.......: HanaMinLiteCSC
+30618.......: SimSun-ExtG
 30619, 3061A: BabelStoneHanExtra
-3061B.......: HanaMinLiteCSC
+3061B.......: SimSun-ExtG
 3061C, 3061D: BabelStoneHanExtra
-3061E.......: HanaMinLiteCSC
+3061E.......: SimSun-ExtG
 3061F..30621: BabelStoneHanExtra
-30622.......: HanaMinLiteCSC
+30622.......: SimSun-ExtG
 30623.......: BabelStoneHanExtra
-30624, 30625: HanaMinLiteCSC
+30624, 30625: SimSun-ExtG
 30626, 30627: BabelStoneHanExtra
-30628.......: HanaMinLiteCSC
+30628.......: SimSun-ExtG
 30629..3062C: BabelStoneHanExtra
-3062D, 3062E: HanaMinLiteCSC
+3062D, 3062E: SimSun-ExtG
 3062F..30634: BabelStoneHanExtra
-30635.......: HanaMinLiteCSC
+30635.......: SimSun-ExtG
 30636.......: BabelStoneHanExtra
-30637.......: HanaMinLiteCSC
+30637.......: SimSun-ExtG
 30638..3063A: BabelStoneHanExtra
-3063B.......: HanaMinLiteCSC
+3063B.......: SimSun-ExtG
 3063C.......: BabelStoneHanExtra
-3063D.......: HanaMinLiteCSC
+3063D.......: SimSun-ExtG
 3063E.......: BabelStoneHanExtra
-3063F, 30640: HanaMinLiteCSC
+3063F, 30640: SimSun-ExtG
 30641.......: BabelStoneHanExtra
-30642.......: HanaMinLiteCSC
+30642.......: SimSun-ExtG
 30643.......: BabelStoneHanExtra
-30644.......: HanaMinLiteCSC
+30644.......: SimSun-ExtG
 30645.......: BabelStoneHanExtra
-30646..30648: HanaMinLiteCSC
+30646..30648: SimSun-ExtG
 30649..3064C: BabelStoneHanExtra
-3064D.......: HanaMinLiteCSC
+3064D.......: SimSun-ExtG
 3064E, 3064F: BabelStoneHanExtra
-30650.......: HanaMinLiteCSC
+30650.......: SimSun-ExtG
 30651.......: BabelStoneHanExtra
-30652, 30653: HanaMinLiteCSC
+30652, 30653: SimSun-ExtG
 30654, 30655: BabelStoneHanExtra
-30656, 30657: HanaMinLiteCSC
+30656, 30657: SimSun-ExtG
 30658.......: BabelStoneHanExtra
-30659.......: HanaMinLiteCSC
+30659.......: SimSun-ExtG
 3065A..30662: BabelStoneHanExtra
-30663.......: HanaMinLiteCSC
+30663.......: SimSun-ExtG
 30664.......: BabelStoneHanExtra
-30665.......: HanaMinLiteCSC
+30665.......: SimSun-ExtG
 30666.......: BabelStoneHanExtra
-30667.......: HanaMinLiteCSC
+30667.......: SimSun-ExtG
 30668..3066F: BabelStoneHanExtra
-30670.......: HanaMinLiteCSC
+30670.......: SimSun-ExtG
 30671..30675: BabelStoneHanExtra
-30676.......: HanaMinLiteCSC
+30676.......: SimSun-ExtG
 30677.......: BabelStoneHanExtra
-30678.......: HanaMinLiteCSC
+30678.......: SimSun-ExtG
 30679, 3067A: BabelStoneHanExtra
-3067B.......: HanaMinLiteCSC
+3067B.......: SimSun-ExtG
 3067C, 3067D: BabelStoneHanExtra
-3067E..30681: HanaMinLiteCSC
+3067E..30681: SimSun-ExtG
 30682, 30683: BabelStoneHanExtra
-30684..30686: HanaMinLiteCSC
+30684..30686: SimSun-ExtG
 30687.......: BabelStoneHanExtra
-30688..3068A: HanaMinLiteCSC
+30688..3068A: SimSun-ExtG
 3068B.......: BabelStoneHanExtra
-3068C.......: HanaMinLiteCSC
+3068C.......: SimSun-ExtG
 3068D..3068F: BabelStoneHanExtra
-30690.......: HanaMinLiteCSC
+30690.......: SimSun-ExtG
 30691.......: BabelStoneHanExtra
-30692, 30693: HanaMinLiteCSC
+30692, 30693: SimSun-ExtG
 30694.......: BabelStoneHanExtra
-30695..30698: HanaMinLiteCSC
+30695..30698: SimSun-ExtG
 30699.......: BabelStoneHanExtra
-3069A..3069E: HanaMinLiteCSC
+3069A..3069E: SimSun-ExtG
 3069F, 306A0: BabelStoneHanExtra
-306A1.......: HanaMinLiteCSC
+306A1.......: SimSun-ExtG
 306A2..306A4: BabelStoneHanExtra
-306A5.......: HanaMinLiteCSC
+306A5.......: SimSun-ExtG
 306A6.......: BabelStoneHanExtra
-306A7.......: HanaMinLiteCSC
+306A7.......: SimSun-ExtG
 306A8..306AC: BabelStoneHanExtra
-306AD..306AF: HanaMinLiteCSC
+306AD..306AF: SimSun-ExtG
 306B0, 306B1: BabelStoneHanExtra
-306B2.......: HanaMinLiteCSC
+306B2.......: SimSun-ExtG
 306B3.......: BabelStoneHanExtra
-306B4..306BA: HanaMinLiteCSC
+306B4..306BA: SimSun-ExtG
 306BB, 306BC: BabelStoneHanExtra
-306BD..306C1: HanaMinLiteCSC
+306BD..306C1: SimSun-ExtG
 306C2.......: BabelStoneHanExtra
-306C3.......: HanaMinLiteCSC
+306C3.......: SimSun-ExtG
 306C4, 306C5: BabelStoneHanExtra
-306C6.......: HanaMinLiteCSC
+306C6.......: SimSun-ExtG
 306C7..306CB: BabelStoneHanExtra
-306CC.......: HanaMinLiteCSC
+306CC.......: SimSun-ExtG
 306CD..306D3: BabelStoneHanExtra
-306D4.......: HanaMinLiteCSC
+306D4.......: SimSun-ExtG
 306D5..306DD: BabelStoneHanExtra
-306DE.......: HanaMinLiteCSC
+306DE.......: SimSun-ExtG
 306DF..306E6: BabelStoneHanExtra
-306E7.......: HanaMinLiteCSC
+306E7.......: SimSun-ExtG
 306E8..306EA: BabelStoneHanExtra
-306EB.......: HanaMinLiteCSC
+306EB.......: SimSun-ExtG
 306EC..306EE: BabelStoneHanExtra
-306EF, 306F0: HanaMinLiteCSC
+306EF, 306F0: SimSun-ExtG
 306F1, 306F2: BabelStoneHanExtra
-306F3.......: HanaMinLiteCSC
+306F3.......: SimSun-ExtG
 306F4, 306F5: BabelStoneHanExtra
-306F6.......: HanaMinLiteCSC
+306F6.......: SimSun-ExtG
 306F7.......: BabelStoneHanExtra
-306F8.......: HanaMinLiteCSC
+306F8.......: SimSun-ExtG
 306F9..30701: BabelStoneHanExtra
-30702.......: HanaMinLiteCSC
+30702.......: SimSun-ExtG
 30703.......: BabelStoneHanExtra
-30704, 30705: HanaMinLiteCSC
+30704, 30705: SimSun-ExtG
 30706..3070D: BabelStoneHanExtra
-3070E.......: HanaMinLiteCSC
+3070E.......: SimSun-ExtG
 3070F..30715: BabelStoneHanExtra
-30716.......: HanaMinLiteCSC
+30716.......: SimSun-ExtG
 30717, 30718: BabelStoneHanExtra
-30719..3071B: HanaMinLiteCSC
+30719..3071B: SimSun-ExtG
 3071C, 3071D: BabelStoneHanExtra
-3071E.......: HanaMinLiteCSC
+3071E.......: SimSun-ExtG
 3071F..30723: BabelStoneHanExtra
-30724.......: HanaMinLiteCSC
+30724.......: SimSun-ExtG
 30725.......: BabelStoneHanExtra
-30726, 30727: HanaMinLiteCSC
+30726, 30727: SimSun-ExtG
 30728, 30729: BabelStoneHanExtra
-3072A..3072C: HanaMinLiteCSC
+3072A..3072C: SimSun-ExtG
 3072D, 3072E: BabelStoneHanExtra
-3072F.......: HanaMinLiteCSC
+3072F.......: SimSun-ExtG
 30730.......: BabelStoneHanExtra
-30731, 30732: HanaMinLiteCSC
+30731, 30732: SimSun-ExtG
 30733, 30734: BabelStoneHanExtra
-30735.......: HanaMinLiteCSC
+30735.......: SimSun-ExtG
 30736, 30737: BabelStoneHanExtra
-30738, 30739: HanaMinLiteCSC
+30738, 30739: SimSun-ExtG
 3073A.......: BabelStoneHanExtra
-3073B, 3073C: HanaMinLiteCSC
+3073B, 3073C: SimSun-ExtG
 3073D.......: BabelStoneHanExtra
-3073E, 3073F: HanaMinLiteCSC
+3073E, 3073F: SimSun-ExtG
 30740..30742: BabelStoneHanExtra
-30743, 30744: HanaMinLiteCSC
+30743, 30744: SimSun-ExtG
 30745, 30746: BabelStoneHanExtra
-30747, 30748: HanaMinLiteCSC
+30747, 30748: SimSun-ExtG
 30749.......: BabelStoneHanExtra
-3074A.......: HanaMinLiteCSC
+3074A.......: SimSun-ExtG
 3074B..3074E: BabelStoneHanExtra
-3074F, 30750: HanaMinLiteCSC
+3074F, 30750: SimSun-ExtG
 30751..30759: BabelStoneHanExtra
-3075A, 3075B: HanaMinLiteCSC
+3075A, 3075B: SimSun-ExtG
 3075C.......: BabelStoneHanExtra
-3075D.......: HanaMinLiteCSC
+3075D.......: SimSun-ExtG
 3075E..30762: BabelStoneHanExtra
-30763.......: HanaMinLiteCSC
+30763.......: SimSun-ExtG
 30764, 30765: BabelStoneHanExtra
-30766..30769: HanaMinLiteCSC
+30766..30769: SimSun-ExtG
 3076A..3076C: BabelStoneHanExtra
-3076D..30775: HanaMinLiteCSC
+3076D..30775: SimSun-ExtG
 30776.......: BabelStoneHanExtra
-30777..30779: HanaMinLiteCSC
+30777..30779: SimSun-ExtG
 3077A, 3077B: BabelStoneHanExtra
-3077C.......: HanaMinLiteCSC
+3077C.......: SimSun-ExtG
 3077D..30780: BabelStoneHanExtra
-30781.......: HanaMinLiteCSC
+30781.......: SimSun-ExtG
 30782, 30783: BabelStoneHanExtra
-30784.......: HanaMinLiteCSC
+30784.......: SimSun-ExtG
 30785.......: BabelStoneHanExtra
-30786.......: HanaMinLiteCSC
+30786.......: SimSun-ExtG
 30787.......: BabelStoneHanExtra
-30788.......: HanaMinLiteCSC
+30788.......: SimSun-ExtG
 30789.......: BabelStoneHanExtra
-3078A.......: HanaMinLiteCSC
+3078A.......: SimSun-ExtG
 3078B.......: BabelStoneHanExtra
-3078C.......: HanaMinLiteCSC
+3078C.......: SimSun-ExtG
 3078D.......: BabelStoneHanExtra
-3078E.......: HanaMinLiteCSC
+3078E.......: SimSun-ExtG
 3078F..30794: BabelStoneHanExtra
-30795, 30796: HanaMinLiteCSC
+30795, 30796: SimSun-ExtG
 30797..3079A: BabelStoneHanExtra
-3079B.......: HanaMinLiteCSC
+3079B.......: SimSun-ExtG
 3079C, 3079D: BabelStoneHanExtra
-3079E, 3079F: HanaMinLiteCSC
+3079E, 3079F: SimSun-ExtG
 307A0, 307A1: BabelStoneHanExtra
-307A2, 307A3: HanaMinLiteCSC
+307A2, 307A3: SimSun-ExtG
 307A4.......: BabelStoneHanExtra
-307A5..307A8: HanaMinLiteCSC
+307A5..307A8: SimSun-ExtG
 307A9.......: BabelStoneHanExtra
-307AA.......: HanaMinLiteCSC
+307AA.......: SimSun-ExtG
 307AB, 307AC: BabelStoneHanExtra
-307AD.......: HanaMinLiteCSC
+307AD.......: SimSun-ExtG
 307AE..307B4: BabelStoneHanExtra
-307B5.......: HanaMinLiteCSC
+307B5.......: SimSun-ExtG
 307B6..307B8: BabelStoneHanExtra
-307B9, 307BA: HanaMinLiteCSC
+307B9, 307BA: SimSun-ExtG
 307BB.......: BabelStoneHanExtra
-307BC, 307BD: HanaMinLiteCSC
+307BC, 307BD: SimSun-ExtG
 307BE..307C1: BabelStoneHanExtra
-307C2, 307C3: HanaMinLiteCSC
+307C2, 307C3: SimSun-ExtG
 307C4..307C6: BabelStoneHanExtra
-307C7..307C9: HanaMinLiteCSC
+307C7..307C9: SimSun-ExtG
 307CA.......: BabelStoneHanExtra
-307CB, 307CC: HanaMinLiteCSC
+307CB, 307CC: SimSun-ExtG
 307CD..307D0: BabelStoneHanExtra
-307D1..307D3: HanaMinLiteCSC
+307D1..307D3: SimSun-ExtG
 307D4..307D6: BabelStoneHanExtra
-307D7.......: HanaMinLiteCSC
+307D7.......: SimSun-ExtG
 307D8..307DA: BabelStoneHanExtra
-307DB..307DD: HanaMinLiteCSC
+307DB..307DD: SimSun-ExtG
 307DE.......: BabelStoneHanExtra
-307DF..307E1: HanaMinLiteCSC
+307DF..307E1: SimSun-ExtG
 307E2, 307E3: BabelStoneHanExtra
-307E4..307E6: HanaMinLiteCSC
+307E4..307E6: SimSun-ExtG
 307E7, 307E8: BabelStoneHanExtra
-307E9.......: HanaMinLiteCSC
+307E9.......: SimSun-ExtG
 307EA, 307EB: BabelStoneHanExtra
-307EC.......: HanaMinLiteCSC
+307EC.......: SimSun-ExtG
 307ED, 307EE: BabelStoneHanExtra
-307EF, 307F0: HanaMinLiteCSC
+307EF, 307F0: SimSun-ExtG
 307F1.......: BabelStoneHanExtra
-307F2.......: HanaMinLiteCSC
+307F2.......: SimSun-ExtG
 307F3, 307F4: BabelStoneHanExtra
-307F5.......: HanaMinLiteCSC
+307F5.......: SimSun-ExtG
 307F6..307F8: BabelStoneHanExtra
-307F9.......: HanaMinLiteCSC
+307F9.......: SimSun-ExtG
 307FA.......: BabelStoneHanExtra
-307FB.......: HanaMinLiteCSC
+307FB.......: SimSun-ExtG
 307FC.......: BabelStoneHanExtra
-307FD.......: HanaMinLiteCSC
+307FD.......: SimSun-ExtG
 307FE.......: BabelStoneHanExtra
-307FF.......: HanaMinLiteCSC
+307FF.......: SimSun-ExtG
 30800.......: BabelStoneHanExtra
-30801, 30802: HanaMinLiteCSC
+30801, 30802: SimSun-ExtG
 30803..30805: BabelStoneHanExtra
-30806..30809: HanaMinLiteCSC
+30806..30809: SimSun-ExtG
 3080A..3080D: BabelStoneHanExtra
-3080E.......: HanaMinLiteCSC
+3080E.......: SimSun-ExtG
 3080F.......: BabelStoneHanExtra
-30810.......: HanaMinLiteCSC
+30810.......: SimSun-ExtG
 30811.......: BabelStoneHanExtra
-30812.......: HanaMinLiteCSC
+30812.......: SimSun-ExtG
 30813, 30814: BabelStoneHanExtra
-30815, 30816: HanaMinLiteCSC
+30815, 30816: SimSun-ExtG
 30817.......: BabelStoneHanExtra
-30818..3081A: HanaMinLiteCSC
+30818..3081A: SimSun-ExtG
 3081B..3081E: BabelStoneHanExtra
-3081F.......: HanaMinLiteCSC
+3081F.......: SimSun-ExtG
 30820.......: BabelStoneHanExtra
-30821.......: HanaMinLiteCSC
+30821.......: SimSun-ExtG
 30822..30824: BabelStoneHanExtra
-30825, 30826: HanaMinLiteCSC
+30825, 30826: SimSun-ExtG
 30827, 30828: BabelStoneHanExtra
-30829.......: HanaMinLiteCSC
+30829.......: SimSun-ExtG
 3082A..3082D: BabelStoneHanExtra
-3082E.......: HanaMinLiteCSC
+3082E.......: SimSun-ExtG
 3082F..30832: BabelStoneHanExtra
-30833.......: HanaMinLiteCSC
+30833.......: SimSun-ExtG
 30834, 30835: BabelStoneHanExtra
-30836, 30837: HanaMinLiteCSC
+30836, 30837: SimSun-ExtG
 30838, 30839: BabelStoneHanExtra
-3083A.......: HanaMinLiteCSC
+3083A.......: SimSun-ExtG
 3083B.......: BabelStoneHanExtra
-3083C, 3083D: HanaMinLiteCSC
+3083C, 3083D: SimSun-ExtG
 3083E..30844: BabelStoneHanExtra
-30845.......: HanaMinLiteCSC
+30845.......: SimSun-ExtG
 30846, 30847: BabelStoneHanExtra
-30848.......: HanaMinLiteCSC
+30848.......: SimSun-ExtG
 30849..3084C: BabelStoneHanExtra
-3084D.......: HanaMinLiteCSC
+3084D.......: SimSun-ExtG
 3084E..30854: BabelStoneHanExtra
-30855, 30856: HanaMinLiteCSC
+30855, 30856: SimSun-ExtG
 30857, 30858: BabelStoneHanExtra
-30859.......: HanaMinLiteCSC
+30859.......: SimSun-ExtG
 3085A..3085C: BabelStoneHanExtra
-3085D.......: HanaMinLiteCSC
+3085D.......: SimSun-ExtG
 3085E..30860: BabelStoneHanExtra
-30861.......: HanaMinLiteCSC
+30861.......: SimSun-ExtG
 30862.......: BabelStoneHanExtra
-30863, 30864: HanaMinLiteCSC
+30863, 30864: SimSun-ExtG
 30865.......: BabelStoneHanExtra
-30866.......: HanaMinLiteCSC
+30866.......: SimSun-ExtG
 30867.......: BabelStoneHanExtra
-30868.......: HanaMinLiteCSC
+30868.......: SimSun-ExtG
 30869.......: BabelStoneHanExtra
-3086A.......: HanaMinLiteCSC
+3086A.......: SimSun-ExtG
 3086B, 3086C: BabelStoneHanExtra
-3086D.......: HanaMinLiteCSC
+3086D.......: SimSun-ExtG
 3086E..30870: BabelStoneHanExtra
-30871..30874: HanaMinLiteCSC
+30871..30874: SimSun-ExtG
 30875, 30876: BabelStoneHanExtra
-30877, 30878: HanaMinLiteCSC
+30877, 30878: SimSun-ExtG
 30879.......: BabelStoneHanExtra
-3087A.......: HanaMinLiteCSC
+3087A.......: SimSun-ExtG
 3087B..3087D: BabelStoneHanExtra
-3087E..30882: HanaMinLiteCSC
+3087E..30882: SimSun-ExtG
 30883..30885: BabelStoneHanExtra
-30886..30888: HanaMinLiteCSC
+30886..30888: SimSun-ExtG
 30889..3088B: BabelStoneHanExtra
-3088C, 3088D: HanaMinLiteCSC
+3088C, 3088D: SimSun-ExtG
 3088E, 3088F: BabelStoneHanExtra
-30890.......: HanaMinLiteCSC
+30890.......: SimSun-ExtG
 30891.......: BabelStoneHanExtra
-30892..30894: HanaMinLiteCSC
+30892..30894: SimSun-ExtG
 30895.......: BabelStoneHanExtra
-30896..30898: HanaMinLiteCSC
+30896..30898: SimSun-ExtG
 30899, 3089A: BabelStoneHanExtra
-3089B, 3089C: HanaMinLiteCSC
+3089B, 3089C: SimSun-ExtG
 3089D, 3089E: BabelStoneHanExtra
-3089F.......: HanaMinLiteCSC
+3089F.......: SimSun-ExtG
 308A0.......: BabelStoneHanExtra
-308A1.......: HanaMinLiteCSC
+308A1.......: SimSun-ExtG
 308A2.......: BabelStoneHanExtra
-308A3.......: HanaMinLiteCSC
+308A3.......: SimSun-ExtG
 308A4..308B2: BabelStoneHanExtra
-308B3.......: HanaMinLiteCSC
+308B3.......: SimSun-ExtG
 308B4, 308B5: BabelStoneHanExtra
-308B6.......: HanaMinLiteCSC
+308B6.......: SimSun-ExtG
 308B7, 308B8: BabelStoneHanExtra
-308B9..308BD: HanaMinLiteCSC
+308B9..308BD: SimSun-ExtG
 308BE.......: BabelStoneHanExtra
-308BF..308C1: HanaMinLiteCSC
+308BF..308C1: SimSun-ExtG
 308C2..308C7: BabelStoneHanExtra
-308C8, 308C9: HanaMinLiteCSC
+308C8, 308C9: SimSun-ExtG
 308CA..308CD: BabelStoneHanExtra
-308CE..308D1: HanaMinLiteCSC
+308CE..308D1: SimSun-ExtG
 308D2.......: BabelStoneHanExtra
-308D3.......: HanaMinLiteCSC
+308D3.......: SimSun-ExtG
 308D4.......: BabelStoneHanExtra
-308D5.......: HanaMinLiteCSC
+308D5.......: SimSun-ExtG
 308D6.......: BabelStoneHanExtra
-308D7.......: HanaMinLiteCSC
+308D7.......: SimSun-ExtG
 308D8.......: BabelStoneHanExtra
-308D9.......: HanaMinLiteCSC
+308D9.......: SimSun-ExtG
 308DA, 308DB: BabelStoneHanExtra
-308DC, 308DD: HanaMinLiteCSC
+308DC, 308DD: SimSun-ExtG
 308DE.......: BabelStoneHanExtra
-308DF..308E1: HanaMinLiteCSC
+308DF..308E1: SimSun-ExtG
 308E2.......: BabelStoneHanExtra
-308E3.......: HanaMinLiteCSC
+308E3.......: SimSun-ExtG
 308E4.......: BabelStoneHanExtra
-308E5.......: HanaMinLiteCSC
+308E5.......: SimSun-ExtG
 308E6.......: BabelStoneHanExtra
-308E7.......: HanaMinLiteCSC
+308E7.......: SimSun-ExtG
 308E8, 308E9: BabelStoneHanExtra
-308EA.......: HanaMinLiteCSC
+308EA.......: SimSun-ExtG
 308EB..308EF: BabelStoneHanExtra
-308F0, 308F1: HanaMinLiteCSC
+308F0, 308F1: SimSun-ExtG
 308F2.......: BabelStoneHanExtra
-308F3..308F5: HanaMinLiteCSC
+308F3..308F5: SimSun-ExtG
 308F6..308F8: BabelStoneHanExtra
-308F9.......: HanaMinLiteCSC
+308F9.......: SimSun-ExtG
 308FA..308FD: BabelStoneHanExtra
-308FE..30900: HanaMinLiteCSC
+308FE..30900: SimSun-ExtG
 30901, 30902: BabelStoneHanExtra
-30903, 30904: HanaMinLiteCSC
+30903, 30904: SimSun-ExtG
 30905, 30906: BabelStoneHanExtra
-30907..3090A: HanaMinLiteCSC
+30907..3090A: SimSun-ExtG
 3090B.......: BabelStoneHanExtra
-3090C.......: HanaMinLiteCSC
+3090C.......: SimSun-ExtG
 3090D.......: BabelStoneHanExtra
-3090E..30910: HanaMinLiteCSC
+3090E..30910: SimSun-ExtG
 30911..30915: BabelStoneHanExtra
-30916, 30917: HanaMinLiteCSC
+30916, 30917: SimSun-ExtG
 30918, 30919: BabelStoneHanExtra
-3091A, 3091B: HanaMinLiteCSC
+3091A, 3091B: SimSun-ExtG
 3091C.......: BabelStoneHanExtra
-3091D.......: HanaMinLiteCSC
+3091D.......: SimSun-ExtG
 3091E..30920: BabelStoneHanExtra
-30921.......: HanaMinLiteCSC
+30921.......: SimSun-ExtG
 30922.......: BabelStoneHanExtra
-30923.......: HanaMinLiteCSC
+30923.......: SimSun-ExtG
 30924, 30925: BabelStoneHanExtra
-30926.......: HanaMinLiteCSC
+30926.......: SimSun-ExtG
 30927..30929: BabelStoneHanExtra
-3092A.......: HanaMinLiteCSC
+3092A.......: SimSun-ExtG
 3092B, 3092C: BabelStoneHanExtra
-3092D..30930: HanaMinLiteCSC
+3092D..30930: SimSun-ExtG
 30931..30933: BabelStoneHanExtra
-30934.......: HanaMinLiteCSC
+30934.......: SimSun-ExtG
 30935.......: BabelStoneHanExtra
-30936.......: HanaMinLiteCSC
+30936.......: SimSun-ExtG
 30937.......: BabelStoneHanExtra
-30938.......: HanaMinLiteCSC
+30938.......: SimSun-ExtG
 30939..3093B: BabelStoneHanExtra
-3093C.......: HanaMinLiteCSC
+3093C.......: SimSun-ExtG
 3093D.......: BabelStoneHanExtra
-3093E..30940: HanaMinLiteCSC
+3093E..30940: SimSun-ExtG
 30941..30944: BabelStoneHanExtra
-30945.......: HanaMinLiteCSC
+30945.......: SimSun-ExtG
 30946, 30947: BabelStoneHanExtra
-30948.......: HanaMinLiteCSC
+30948.......: SimSun-ExtG
 30949..30950: BabelStoneHanExtra
-30951.......: HanaMinLiteCSC
+30951.......: SimSun-ExtG
 30952..30955: BabelStoneHanExtra
-30956..3095A: HanaMinLiteCSC
+30956..3095A: SimSun-ExtG
 3095B, 3095C: BabelStoneHanExtra
-3095D.......: HanaMinLiteCSC
+3095D.......: SimSun-ExtG
 3095E..30963: BabelStoneHanExtra
-30964, 30965: HanaMinLiteCSC
+30964, 30965: SimSun-ExtG
 30966.......: BabelStoneHanExtra
-30967.......: HanaMinLiteCSC
+30967.......: SimSun-ExtG
 30968..3096A: BabelStoneHanExtra
-3096B, 3096C: HanaMinLiteCSC
+3096B, 3096C: SimSun-ExtG
 3096D, 3096E: BabelStoneHanExtra
-3096F.......: HanaMinLiteCSC
+3096F.......: SimSun-ExtG
 30970.......: BabelStoneHanExtra
-30971, 30972: HanaMinLiteCSC
+30971, 30972: SimSun-ExtG
 30973.......: BabelStoneHanExtra
-30974.......: HanaMinLiteCSC
+30974.......: SimSun-ExtG
 30975..30979: BabelStoneHanExtra
-3097A.......: HanaMinLiteCSC
+3097A.......: SimSun-ExtG
 3097B..3097D: BabelStoneHanExtra
-3097E, 3097F: HanaMinLiteCSC
+3097E, 3097F: SimSun-ExtG
 30980.......: BabelStoneHanExtra
-30981..30984: HanaMinLiteCSC
+30981..30984: SimSun-ExtG
 30985.......: BabelStoneHanExtra
-30986, 30987: HanaMinLiteCSC
+30986, 30987: SimSun-ExtG
 30988.......: BabelStoneHanExtra
-30989, 3098A: HanaMinLiteCSC
+30989, 3098A: SimSun-ExtG
 3098B, 3098C: BabelStoneHanExtra
-3098D, 3098E: HanaMinLiteCSC
+3098D, 3098E: SimSun-ExtG
 3098F..30994: BabelStoneHanExtra
-30995.......: HanaMinLiteCSC
+30995.......: SimSun-ExtG
 30996, 30997: BabelStoneHanExtra
-30998..3099B: HanaMinLiteCSC
+30998..3099B: SimSun-ExtG
 3099C, 3099D: BabelStoneHanExtra
-3099E, 3099F: HanaMinLiteCSC
+3099E, 3099F: SimSun-ExtG
 309A0.......: BabelStoneHanExtra
-309A1.......: HanaMinLiteCSC
+309A1.......: SimSun-ExtG
 309A2, 309A3: BabelStoneHanExtra
-309A4.......: HanaMinLiteCSC
+309A4.......: SimSun-ExtG
 309A5..309B0: BabelStoneHanExtra
-309B1.......: HanaMinLiteCSC
+309B1.......: SimSun-ExtG
 309B2..309B7: BabelStoneHanExtra
-309B8.......: HanaMinLiteCSC
+309B8.......: SimSun-ExtG
 309B9, 309BA: BabelStoneHanExtra
-309BB, 309BC: HanaMinLiteCSC
+309BB, 309BC: SimSun-ExtG
 309BD..309C1: BabelStoneHanExtra
-309C2.......: HanaMinLiteCSC
+309C2.......: SimSun-ExtG
 309C3, 309C4: BabelStoneHanExtra
-309C5.......: HanaMinLiteCSC
+309C5.......: SimSun-ExtG
 309C6..309CA: BabelStoneHanExtra
-309CB.......: HanaMinLiteCSC
+309CB.......: SimSun-ExtG
 309CC.......: BabelStoneHanExtra
-309CD.......: HanaMinLiteCSC
+309CD.......: SimSun-ExtG
 309CE.......: BabelStoneHanExtra
-309CF.......: HanaMinLiteCSC
+309CF.......: SimSun-ExtG
 309D0..309D4: BabelStoneHanExtra
-309D5.......: HanaMinLiteCSC
+309D5.......: SimSun-ExtG
 309D6.......: BabelStoneHanExtra
-309D7.......: HanaMinLiteCSC
+309D7.......: SimSun-ExtG
 309D8..309DB: BabelStoneHanExtra
-309DC.......: HanaMinLiteCSC
+309DC.......: SimSun-ExtG
 309DD..309DF: BabelStoneHanExtra
-309E0.......: HanaMinLiteCSC
+309E0.......: SimSun-ExtG
 309E1..309E3: BabelStoneHanExtra
-309E4.......: HanaMinLiteCSC
+309E4.......: SimSun-ExtG
 309E5..309E7: BabelStoneHanExtra
-309E8, 309E9: HanaMinLiteCSC
+309E8, 309E9: SimSun-ExtG
 309EA, 309EB: BabelStoneHanExtra
-309EC.......: HanaMinLiteCSC
+309EC.......: SimSun-ExtG
 309ED, 309EE: BabelStoneHanExtra
-309EF.......: HanaMinLiteCSC
+309EF.......: SimSun-ExtG
 309F0..309F2: BabelStoneHanExtra
-309F3..309F7: HanaMinLiteCSC
+309F3..309F7: SimSun-ExtG
 309F8.......: BabelStoneHanExtra
-309F9, 309FA: HanaMinLiteCSC
+309F9, 309FA: SimSun-ExtG
 309FB.......: BabelStoneHanExtra
-309FC, 309FD: HanaMinLiteCSC
+309FC, 309FD: SimSun-ExtG
 309FE.......: BabelStoneHanExtra
-309FF.......: HanaMinLiteCSC
+309FF.......: SimSun-ExtG
 30A00..30A02: BabelStoneHanExtra
-30A03.......: HanaMinLiteCSC
+30A03.......: SimSun-ExtG
 30A04.......: BabelStoneHanExtra
-30A05, 30A06: HanaMinLiteCSC
+30A05, 30A06: SimSun-ExtG
 30A07.......: BabelStoneHanExtra
-30A08..30A0B: HanaMinLiteCSC
+30A08..30A0B: SimSun-ExtG
 30A0C.......: BabelStoneHanExtra
-30A0D..30A12: HanaMinLiteCSC
+30A0D..30A12: SimSun-ExtG
 30A13, 30A14: BabelStoneHanExtra
-30A15.......: HanaMinLiteCSC
+30A15.......: SimSun-ExtG
 30A16.......: BabelStoneHanExtra
-30A17.......: HanaMinLiteCSC
+30A17.......: SimSun-ExtG
 30A18..30A1E: BabelStoneHanExtra
-30A1F.......: HanaMinLiteCSC
+30A1F.......: SimSun-ExtG
 30A20..30A22: BabelStoneHanExtra
-30A23, 30A24: HanaMinLiteCSC
+30A23, 30A24: SimSun-ExtG
 30A25..30A2D: BabelStoneHanExtra
-30A2E.......: HanaMinLiteCSC
+30A2E.......: SimSun-ExtG
 30A2F.......: BabelStoneHanExtra
-30A30..30A32: HanaMinLiteCSC
+30A30..30A32: SimSun-ExtG
 30A33.......: BabelStoneHanExtra
-30A34.......: HanaMinLiteCSC
+30A34.......: SimSun-ExtG
 30A35.......: BabelStoneHanExtra
-30A36.......: HanaMinLiteCSC
+30A36.......: SimSun-ExtG
 30A37.......: BabelStoneHanExtra
-30A38..30A3C: HanaMinLiteCSC
+30A38..30A3C: SimSun-ExtG
 30A3D.......: BabelStoneHanExtra
-30A3E..30A40: HanaMinLiteCSC
+30A3E..30A40: SimSun-ExtG
 30A41.......: BabelStoneHanExtra
-30A42, 30A43: HanaMinLiteCSC
+30A42, 30A43: SimSun-ExtG
 30A44, 30A45: BabelStoneHanExtra
-30A46.......: HanaMinLiteCSC
+30A46.......: SimSun-ExtG
 30A47, 30A48: BabelStoneHanExtra
-30A49, 30A4A: HanaMinLiteCSC
+30A49, 30A4A: SimSun-ExtG
 30A4B..30A4D: BabelStoneHanExtra
-30A4E.......: HanaMinLiteCSC
+30A4E.......: SimSun-ExtG
 30A4F.......: BabelStoneHanExtra
-30A50, 30A51: HanaMinLiteCSC
+30A50, 30A51: SimSun-ExtG
 30A52, 30A53: BabelStoneHanExtra
-30A54..30A5F: HanaMinLiteCSC
+30A54..30A5F: SimSun-ExtG
 30A60..30A62: BabelStoneHanExtra
-30A63..30A66: HanaMinLiteCSC
+30A63..30A66: SimSun-ExtG
 30A67..30A73: BabelStoneHanExtra
-30A74.......: HanaMinLiteCSC
+30A74.......: SimSun-ExtG
 30A75, 30A76: BabelStoneHanExtra
-30A77.......: HanaMinLiteCSC
+30A77.......: SimSun-ExtG
 30A78..30A7C: BabelStoneHanExtra
-30A7D, 30A7E: HanaMinLiteCSC
+30A7D, 30A7E: SimSun-ExtG
 30A7F, 30A80: BabelStoneHanExtra
-30A81.......: HanaMinLiteCSC
+30A81.......: SimSun-ExtG
 30A82..30A84: BabelStoneHanExtra
-30A85.......: HanaMinLiteCSC
+30A85.......: SimSun-ExtG
 30A86, 30A87: BabelStoneHanExtra
-30A88.......: HanaMinLiteCSC
+30A88.......: SimSun-ExtG
 30A89..30A8B: BabelStoneHanExtra
-30A8C, 30A8D: HanaMinLiteCSC
+30A8C, 30A8D: SimSun-ExtG
 30A8E, 30A8F: BabelStoneHanExtra
-30A90, 30A91: HanaMinLiteCSC
+30A90, 30A91: SimSun-ExtG
 30A92..30A94: BabelStoneHanExtra
-30A95.......: HanaMinLiteCSC
+30A95.......: SimSun-ExtG
 30A96.......: BabelStoneHanExtra
-30A97..30A9A: HanaMinLiteCSC
+30A97..30A9A: SimSun-ExtG
 30A9B.......: BabelStoneHanExtra
-30A9C, 30A9D: HanaMinLiteCSC
+30A9C, 30A9D: SimSun-ExtG
 30A9E.......: BabelStoneHanExtra
-30A9F.......: HanaMinLiteCSC
+30A9F.......: SimSun-ExtG
 30AA0.......: BabelStoneHanExtra
-30AA1.......: HanaMinLiteCSC
+30AA1.......: SimSun-ExtG
 30AA2..30AA5: BabelStoneHanExtra
-30AA6..30AA8: HanaMinLiteCSC
+30AA6..30AA8: SimSun-ExtG
 30AA9..30AAF: BabelStoneHanExtra
-30AB0.......: HanaMinLiteCSC
+30AB0.......: SimSun-ExtG
 30AB1.......: BabelStoneHanExtra
-30AB2.......: HanaMinLiteCSC
+30AB2.......: SimSun-ExtG
 30AB3.......: BabelStoneHanExtra
-30AB4, 30AB5: HanaMinLiteCSC
+30AB4, 30AB5: SimSun-ExtG
 30AB6.......: BabelStoneHanExtra
-30AB7..30AB9: HanaMinLiteCSC
+30AB7..30AB9: SimSun-ExtG
 30ABA..30ABC: BabelStoneHanExtra
-30ABD.......: HanaMinLiteCSC
+30ABD.......: SimSun-ExtG
 30ABE..30AC0: BabelStoneHanExtra
-30AC1..30AC3: HanaMinLiteCSC
+30AC1..30AC3: SimSun-ExtG
 30AC4..30AC7: BabelStoneHanExtra
-30AC8.......: HanaMinLiteCSC
+30AC8.......: SimSun-ExtG
 30AC9.......: BabelStoneHanExtra
-30ACA.......: HanaMinLiteCSC
+30ACA.......: SimSun-ExtG
 30ACB.......: BabelStoneHanExtra
-30ACC, 30ACD: HanaMinLiteCSC
+30ACC, 30ACD: SimSun-ExtG
 30ACE..30AD3: BabelStoneHanExtra
-30AD4.......: HanaMinLiteCSC
+30AD4.......: SimSun-ExtG
 30AD5..30AD9: BabelStoneHanExtra
-30ADA.......: HanaMinLiteCSC
+30ADA.......: SimSun-ExtG
 30ADB.......: BabelStoneHanExtra
-30ADC.......: HanaMinLiteCSC
+30ADC.......: SimSun-ExtG
 30ADD..30AEB: BabelStoneHanExtra
-30AEC.......: HanaMinLiteCSC
+30AEC.......: SimSun-ExtG
 30AED.......: BabelStoneHanExtra
-30AEE..30AF1: HanaMinLiteCSC
+30AEE..30AF1: SimSun-ExtG
 30AF2, 30AF3: BabelStoneHanExtra
-30AF4, 30AF5: HanaMinLiteCSC
+30AF4, 30AF5: SimSun-ExtG
 30AF6, 30AF7: BabelStoneHanExtra
-30AF8..30AFB: HanaMinLiteCSC
+30AF8..30AFB: SimSun-ExtG
 30AFC..30B48: BabelStoneHanExtra
-30B49, 30B4A: HanaMinLiteCSC
+30B49, 30B4A: SimSun-ExtG
 30B4B..30B4E: BabelStoneHanExtra
-30B4F, 30B50: HanaMinLiteCSC
+30B4F, 30B50: SimSun-ExtG
 30B51.......: BabelStoneHanExtra
-30B52, 30B53: HanaMinLiteCSC
+30B52, 30B53: SimSun-ExtG
 30B54..30B57: BabelStoneHanExtra
-30B58, 30B59: HanaMinLiteCSC
+30B58, 30B59: SimSun-ExtG
 30B5A..30B5E: BabelStoneHanExtra
-30B5F..30B61: HanaMinLiteCSC
+30B5F..30B61: SimSun-ExtG
 30B62, 30B63: BabelStoneHanExtra
-30B64, 30B65: HanaMinLiteCSC
+30B64, 30B65: SimSun-ExtG
 30B66, 30B67: BabelStoneHanExtra
-30B68.......: HanaMinLiteCSC
+30B68.......: SimSun-ExtG
 30B69, 30B6A: BabelStoneHanExtra
-30B6B.......: HanaMinLiteCSC
+30B6B.......: SimSun-ExtG
 30B6C.......: BabelStoneHanExtra
-30B6D, 30B6E: HanaMinLiteCSC
+30B6D, 30B6E: SimSun-ExtG
 30B6F.......: BabelStoneHanExtra
-30B70.......: HanaMinLiteCSC
+30B70.......: SimSun-ExtG
 30B71.......: BabelStoneHanExtra
-30B72.......: HanaMinLiteCSC
+30B72.......: SimSun-ExtG
 30B73..30B75: BabelStoneHanExtra
-30B76.......: HanaMinLiteCSC
+30B76.......: SimSun-ExtG
 30B77.......: BabelStoneHanExtra
-30B78.......: HanaMinLiteCSC
+30B78.......: SimSun-ExtG
 30B79.......: BabelStoneHanExtra
-30B7A..30B7E: HanaMinLiteCSC
+30B7A..30B7E: SimSun-ExtG
 30B7F.......: BabelStoneHanExtra
-30B80.......: HanaMinLiteCSC
+30B80.......: SimSun-ExtG
 30B81.......: BabelStoneHanExtra
-30B82.......: HanaMinLiteCSC
+30B82.......: SimSun-ExtG
 30B83..30B85: BabelStoneHanExtra
-30B86.......: HanaMinLiteCSC
+30B86.......: SimSun-ExtG
 30B87.......: BabelStoneHanExtra
-30B88, 30B89: HanaMinLiteCSC
+30B88, 30B89: SimSun-ExtG
 30B8A, 30B8B: BabelStoneHanExtra
-30B8C.......: HanaMinLiteCSC
+30B8C.......: SimSun-ExtG
 30B8D.......: BabelStoneHanExtra
-30B8E, 30B8F: HanaMinLiteCSC
+30B8E, 30B8F: SimSun-ExtG
 30B90.......: BabelStoneHanExtra
-30B91.......: HanaMinLiteCSC
+30B91.......: SimSun-ExtG
 30B92.......: BabelStoneHanExtra
-30B93, 30B94: HanaMinLiteCSC
+30B93, 30B94: SimSun-ExtG
 30B95.......: BabelStoneHanExtra
-30B96.......: HanaMinLiteCSC
+30B96.......: SimSun-ExtG
 30B97.......: BabelStoneHanExtra
-30B98.......: HanaMinLiteCSC
+30B98.......: SimSun-ExtG
 30B99, 30B9A: BabelStoneHanExtra
-30B9B, 30B9C: HanaMinLiteCSC
+30B9B, 30B9C: SimSun-ExtG
 30B9D.......: BabelStoneHanExtra
-30B9E..30BA3: HanaMinLiteCSC
+30B9E..30BA3: SimSun-ExtG
 30BA4..30BA6: BabelStoneHanExtra
-30BA7, 30BA8: HanaMinLiteCSC
+30BA7, 30BA8: SimSun-ExtG
 30BA9..30BAB: BabelStoneHanExtra
-30BAC.......: HanaMinLiteCSC
+30BAC.......: SimSun-ExtG
 30BAD, 30BAE: BabelStoneHanExtra
-30BAF.......: HanaMinLiteCSC
+30BAF.......: SimSun-ExtG
 30BB0.......: BabelStoneHanExtra
-30BB1.......: HanaMinLiteCSC
+30BB1.......: SimSun-ExtG
 30BB2..30BB4: BabelStoneHanExtra
-30BB5.......: HanaMinLiteCSC
+30BB5.......: SimSun-ExtG
 30BB6..30BB9: BabelStoneHanExtra
-30BBA, 30BBB: HanaMinLiteCSC
+30BBA, 30BBB: SimSun-ExtG
 30BBC..30BBE: BabelStoneHanExtra
-30BBF.......: HanaMinLiteCSC
+30BBF.......: SimSun-ExtG
 30BC0.......: BabelStoneHanExtra
-30BC1.......: HanaMinLiteCSC
+30BC1.......: SimSun-ExtG
 30BC2.......: BabelStoneHanExtra
-30BC3, 30BC4: HanaMinLiteCSC
+30BC3, 30BC4: SimSun-ExtG
 30BC5.......: BabelStoneHanExtra
-30BC6.......: HanaMinLiteCSC
+30BC6.......: SimSun-ExtG
 30BC7.......: BabelStoneHanExtra
-30BC8.......: HanaMinLiteCSC
+30BC8.......: SimSun-ExtG
 30BC9.......: BabelStoneHanExtra
-30BCA.......: HanaMinLiteCSC
+30BCA.......: SimSun-ExtG
 30BCB, 30BCC: BabelStoneHanExtra
-30BCD.......: HanaMinLiteCSC
+30BCD.......: SimSun-ExtG
 30BCE.......: BabelStoneHanExtra
-30BCF.......: HanaMinLiteCSC
+30BCF.......: SimSun-ExtG
 30BD0.......: BabelStoneHanExtra
-30BD1..30BD3: HanaMinLiteCSC
+30BD1..30BD3: SimSun-ExtG
 30BD4..30BD6: BabelStoneHanExtra
-30BD7, 30BD8: HanaMinLiteCSC
+30BD7, 30BD8: SimSun-ExtG
 30BD9..30BDB: BabelStoneHanExtra
-30BDC..30BDE: HanaMinLiteCSC
+30BDC..30BDE: SimSun-ExtG
 30BDF.......: BabelStoneHanExtra
-30BE0.......: HanaMinLiteCSC
+30BE0.......: SimSun-ExtG
 30BE1.......: BabelStoneHanExtra
-30BE2, 30BE3: HanaMinLiteCSC
+30BE2, 30BE3: SimSun-ExtG
 30BE4.......: BabelStoneHanExtra
-30BE5..30BE7: HanaMinLiteCSC
+30BE5..30BE7: SimSun-ExtG
 30BE8, 30BE9: BabelStoneHanExtra
-30BEA.......: HanaMinLiteCSC
+30BEA.......: SimSun-ExtG
 30BEB..30BF0: BabelStoneHanExtra
-30BF1.......: HanaMinLiteCSC
+30BF1.......: SimSun-ExtG
 30BF2.......: BabelStoneHanExtra
-30BF3.......: HanaMinLiteCSC
+30BF3.......: SimSun-ExtG
 30BF4..30BF6: BabelStoneHanExtra
-30BF7..30BFB: HanaMinLiteCSC
+30BF7..30BFB: SimSun-ExtG
 30BFC, 30BFD: BabelStoneHanExtra
-30BFE, 30BFF: HanaMinLiteCSC
+30BFE, 30BFF: SimSun-ExtG
 30C00..30C09: BabelStoneHanExtra
-30C0A.......: HanaMinLiteCSC
+30C0A.......: SimSun-ExtG
 30C0B..30C0F: BabelStoneHanExtra
-30C10.......: HanaMinLiteCSC
+30C10.......: SimSun-ExtG
 30C11, 30C12: BabelStoneHanExtra
-30C13.......: HanaMinLiteCSC
+30C13.......: SimSun-ExtG
 30C14..30C17: BabelStoneHanExtra
-30C18.......: HanaMinLiteCSC
+30C18.......: SimSun-ExtG
 30C19..30C22: BabelStoneHanExtra
-30C23.......: HanaMinLiteCSC
+30C23.......: SimSun-ExtG
 30C24.......: BabelStoneHanExtra
-30C25..30C27: HanaMinLiteCSC
+30C25..30C27: SimSun-ExtG
 30C28..30C2C: BabelStoneHanExtra
-30C2D.......: HanaMinLiteCSC
+30C2D.......: SimSun-ExtG
 30C2E, 30C2F: BabelStoneHanExtra
-30C30.......: HanaMinLiteCSC
+30C30.......: SimSun-ExtG
 30C31.......: BabelStoneHanExtra
-30C32.......: HanaMinLiteCSC
+30C32.......: SimSun-ExtG
 30C33..30C37: BabelStoneHanExtra
-30C38.......: HanaMinLiteCSC
+30C38.......: SimSun-ExtG
 30C39..30C3B: BabelStoneHanExtra
-30C3C, 30C3D: HanaMinLiteCSC
+30C3C, 30C3D: SimSun-ExtG
 30C3E..30C40: BabelStoneHanExtra
-30C41.......: HanaMinLiteCSC
+30C41.......: SimSun-ExtG
 30C42, 30C43: BabelStoneHanExtra
-30C44.......: HanaMinLiteCSC
+30C44.......: SimSun-ExtG
 30C45.......: BabelStoneHanExtra
-30C46.......: HanaMinLiteCSC
+30C46.......: SimSun-ExtG
 30C47..30C4D: BabelStoneHanExtra
-30C4E, 30C4F: HanaMinLiteCSC
+30C4E, 30C4F: SimSun-ExtG
 30C50, 30C51: BabelStoneHanExtra
-30C52.......: HanaMinLiteCSC
+30C52.......: SimSun-ExtG
 30C53..30C5B: BabelStoneHanExtra
-30C5C.......: HanaMinLiteCSC
+30C5C.......: SimSun-ExtG
 30C5D.......: BabelStoneHanExtra
-30C5E.......: HanaMinLiteCSC
+30C5E.......: SimSun-ExtG
 30C5F.......: BabelStoneHanExtra
-30C60.......: HanaMinLiteCSC
+30C60.......: SimSun-ExtG
 30C61, 30C62: BabelStoneHanExtra
-30C63..30C65: HanaMinLiteCSC
+30C63..30C65: SimSun-ExtG
 30C66..30C6A: BabelStoneHanExtra
-30C6B.......: HanaMinLiteCSC
+30C6B.......: SimSun-ExtG
 30C6C.......: BabelStoneHanExtra
-30C6D.......: HanaMinLiteCSC
+30C6D.......: SimSun-ExtG
 30C6E..30C72: BabelStoneHanExtra
-30C73..30C75: HanaMinLiteCSC
+30C73..30C75: SimSun-ExtG
 30C76..30C79: BabelStoneHanExtra
-30C7A..30C7D: HanaMinLiteCSC
+30C7A..30C7D: SimSun-ExtG
 30C7E.......: BabelStoneHanExtra
-30C7F, 30C80: HanaMinLiteCSC
+30C7F, 30C80: SimSun-ExtG
 30C81, 30C82: BabelStoneHanExtra
-30C83.......: HanaMinLiteCSC
+30C83.......: SimSun-ExtG
 30C84..30C86: BabelStoneHanExtra
-30C87.......: HanaMinLiteCSC
+30C87.......: SimSun-ExtG
 30C88..30C8A: BabelStoneHanExtra
-30C8B, 30C8C: HanaMinLiteCSC
+30C8B, 30C8C: SimSun-ExtG
 30C8D.......: BabelStoneHanExtra
-30C8E.......: HanaMinLiteCSC
+30C8E.......: SimSun-ExtG
 30C8F, 30C90: BabelStoneHanExtra
-30C91.......: HanaMinLiteCSC
+30C91.......: SimSun-ExtG
 30C92.......: BabelStoneHanExtra
-30C93..30C95: HanaMinLiteCSC
+30C93..30C95: SimSun-ExtG
 30C96.......: BabelStoneHanExtra
-30C97.......: HanaMinLiteCSC
+30C97.......: SimSun-ExtG
 30C98..30C9B: BabelStoneHanExtra
-30C9C.......: HanaMinLiteCSC
+30C9C.......: SimSun-ExtG
 30C9D..30CA7: BabelStoneHanExtra
-30CA8.......: HanaMinLiteCSC
+30CA8.......: SimSun-ExtG
 30CA9..30CCA: BabelStoneHanExtra
-30CCB.......: HanaMinLiteCSC
+30CCB.......: SimSun-ExtG
 30CCC..30CCF: BabelStoneHanExtra
-30CD0, 30CD1: HanaMinLiteCSC
+30CD0, 30CD1: SimSun-ExtG
 30CD2..30CE2: BabelStoneHanExtra
-30CE3.......: HanaMinLiteCSC
+30CE3.......: SimSun-ExtG
 30CE4..30CE6: BabelStoneHanExtra
-30CE7.......: HanaMinLiteCSC
+30CE7.......: SimSun-ExtG
 30CE8.......: BabelStoneHanExtra
-30CE9..30CEB: HanaMinLiteCSC
+30CE9..30CEB: SimSun-ExtG
 30CEC..30CF2: BabelStoneHanExtra
-30CF3, 30CF4: HanaMinLiteCSC
+30CF3, 30CF4: SimSun-ExtG
 30CF5..30CFD: BabelStoneHanExtra
-30CFE..30D00: HanaMinLiteCSC
+30CFE..30D00: SimSun-ExtG
 30D01..30D03: BabelStoneHanExtra
-30D04, 30D05: HanaMinLiteCSC
+30D04, 30D05: SimSun-ExtG
 30D06..30D08: BabelStoneHanExtra
-30D09.......: HanaMinLiteCSC
+30D09.......: SimSun-ExtG
 30D0A.......: BabelStoneHanExtra
-30D0B, 30D0C: HanaMinLiteCSC
+30D0B, 30D0C: SimSun-ExtG
 30D0D.......: BabelStoneHanExtra
-30D0E.......: HanaMinLiteCSC
+30D0E.......: SimSun-ExtG
 30D0F..30D11: BabelStoneHanExtra
-30D12.......: HanaMinLiteCSC
+30D12.......: SimSun-ExtG
 30D13.......: BabelStoneHanExtra
-30D14.......: HanaMinLiteCSC
+30D14.......: SimSun-ExtG
 30D15..30D2A: BabelStoneHanExtra
-30D2B, 30D2C: HanaMinLiteCSC
+30D2B, 30D2C: SimSun-ExtG
 30D2D..30D2F: BabelStoneHanExtra
-30D30, 30D31: HanaMinLiteCSC
+30D30, 30D31: SimSun-ExtG
 30D32.......: BabelStoneHanExtra
-30D33.......: HanaMinLiteCSC
+30D33.......: SimSun-ExtG
 30D34, 30D35: BabelStoneHanExtra
-30D36.......: HanaMinLiteCSC
+30D36.......: SimSun-ExtG
 30D37..30D3B: BabelStoneHanExtra
-30D3C.......: HanaMinLiteCSC
+30D3C.......: SimSun-ExtG
 30D3D.......: BabelStoneHanExtra
-30D3E.......: HanaMinLiteCSC
+30D3E.......: SimSun-ExtG
 30D3F, 30D40: BabelStoneHanExtra
-30D41.......: HanaMinLiteCSC
+30D41.......: SimSun-ExtG
 30D42.......: BabelStoneHanExtra
-30D43.......: HanaMinLiteCSC
+30D43.......: SimSun-ExtG
 30D44.......: BabelStoneHanExtra
-30D45.......: HanaMinLiteCSC
+30D45.......: SimSun-ExtG
 30D46..30D8F: BabelStoneHanExtra
-30D90.......: HanaMinLiteCSC
+30D90.......: SimSun-ExtG
 30D91, 30D92: BabelStoneHanExtra
-30D93.......: HanaMinLiteCSC
+30D93.......: SimSun-ExtG
 30D94.......: BabelStoneHanExtra
-30D95.......: HanaMinLiteCSC
+30D95.......: SimSun-ExtG
 30D96, 30D97: BabelStoneHanExtra
-30D98..30D9B: HanaMinLiteCSC
+30D98..30D9B: SimSun-ExtG
 30D9C.......: BabelStoneHanExtra
-30D9D, 30D9E: HanaMinLiteCSC
+30D9D, 30D9E: SimSun-ExtG
 30D9F.......: BabelStoneHanExtra
-30DA0.......: HanaMinLiteCSC
+30DA0.......: SimSun-ExtG
 30DA1.......: BabelStoneHanExtra
-30DA2, 30DA3: HanaMinLiteCSC
+30DA2, 30DA3: SimSun-ExtG
 30DA4..30DA6: BabelStoneHanExtra
-30DA7.......: HanaMinLiteCSC
+30DA7.......: SimSun-ExtG
 30DA8.......: BabelStoneHanExtra
-30DA9.......: HanaMinLiteCSC
+30DA9.......: SimSun-ExtG
 30DAA..30DAD: BabelStoneHanExtra
-30DAE.......: HanaMinLiteCSC
+30DAE.......: SimSun-ExtG
 30DAF..30DB8: BabelStoneHanExtra
-30DB9.......: HanaMinLiteCSC
+30DB9.......: SimSun-ExtG
 30DBA.......: BabelStoneHanExtra
-30DBB.......: HanaMinLiteCSC
+30DBB.......: SimSun-ExtG
 30DBC, 30DBD: BabelStoneHanExtra
-30DBE.......: HanaMinLiteCSC
+30DBE.......: SimSun-ExtG
 30DBF.......: BabelStoneHanExtra
-30DC0.......: HanaMinLiteCSC
+30DC0.......: SimSun-ExtG
 30DC1.......: BabelStoneHanExtra
-30DC2..30DC4: HanaMinLiteCSC
+30DC2..30DC4: SimSun-ExtG
 30DC5.......: BabelStoneHanExtra
-30DC6..30DC8: HanaMinLiteCSC
+30DC6..30DC8: SimSun-ExtG
 30DC9.......: BabelStoneHanExtra
-30DCA..30DCC: HanaMinLiteCSC
+30DCA..30DCC: SimSun-ExtG
 30DCD, 30DCE: BabelStoneHanExtra
-30DCF.......: HanaMinLiteCSC
+30DCF.......: SimSun-ExtG
 30DD0.......: BabelStoneHanExtra
-30DD1, 30DD2: HanaMinLiteCSC
+30DD1, 30DD2: SimSun-ExtG
 30DD3.......: BabelStoneHanExtra
-30DD4.......: HanaMinLiteCSC
+30DD4.......: SimSun-ExtG
 30DD5, 30DD6: BabelStoneHanExtra
-30DD7, 30DD8: HanaMinLiteCSC
+30DD7, 30DD8: SimSun-ExtG
 30DD9, 30DDA: BabelStoneHanExtra
-30DDB..30DDD: HanaMinLiteCSC
+30DDB..30DDD: SimSun-ExtG
 30DDE..30DEE: BabelStoneHanExtra
-30DEF.......: HanaMinLiteCSC
+30DEF.......: SimSun-ExtG
 30DF0.......: BabelStoneHanExtra
-30DF1..30DF3: HanaMinLiteCSC
+30DF1..30DF3: SimSun-ExtG
 30DF4..30DF6: BabelStoneHanExtra
-30DF7.......: HanaMinLiteCSC
+30DF7.......: SimSun-ExtG
 30DF8.......: BabelStoneHanExtra
-30DF9..30E00: HanaMinLiteCSC
+30DF9..30E00: SimSun-ExtG
 30E01..30E0A: BabelStoneHanExtra
-30E0B..30E0D: HanaMinLiteCSC
+30E0B..30E0D: SimSun-ExtG
 30E0E.......: BabelStoneHanExtra
-30E0F.......: HanaMinLiteCSC
+30E0F.......: SimSun-ExtG
 30E10..30E12: BabelStoneHanExtra
-30E13.......: HanaMinLiteCSC
+30E13.......: SimSun-ExtG
 30E14.......: BabelStoneHanExtra
-30E15..30E18: HanaMinLiteCSC
+30E15..30E18: SimSun-ExtG
 30E19..30E1C: BabelStoneHanExtra
-30E1D.......: HanaMinLiteCSC
+30E1D.......: SimSun-ExtG
 30E1E.......: BabelStoneHanExtra
-30E1F.......: HanaMinLiteCSC
+30E1F.......: SimSun-ExtG
 30E20.......: BabelStoneHanExtra
-30E21.......: HanaMinLiteCSC
+30E21.......: SimSun-ExtG
 30E22, 30E23: BabelStoneHanExtra
-30E24.......: HanaMinLiteCSC
+30E24.......: SimSun-ExtG
 30E25, 30E26: BabelStoneHanExtra
-30E27..30E29: HanaMinLiteCSC
+30E27..30E29: SimSun-ExtG
 30E2A..30E2C: BabelStoneHanExtra
-30E2D.......: HanaMinLiteCSC
+30E2D.......: SimSun-ExtG
 30E2E, 30E2F: BabelStoneHanExtra
-30E30..30E36: HanaMinLiteCSC
+30E30..30E36: SimSun-ExtG
 30E37.......: BabelStoneHanExtra
-30E38, 30E39: HanaMinLiteCSC
+30E38, 30E39: SimSun-ExtG
 30E3A.......: BabelStoneHanExtra
-30E3B, 30E3C: HanaMinLiteCSC
+30E3B, 30E3C: SimSun-ExtG
 30E3D..30E40: BabelStoneHanExtra
-30E41.......: HanaMinLiteCSC
+30E41.......: SimSun-ExtG
 30E42, 30E43: BabelStoneHanExtra
-30E44.......: HanaMinLiteCSC
+30E44.......: SimSun-ExtG
 30E45, 30E46: BabelStoneHanExtra
-30E47.......: HanaMinLiteCSC
+30E47.......: SimSun-ExtG
 30E48.......: BabelStoneHanExtra
-30E49..30E4B: HanaMinLiteCSC
+30E49..30E4B: SimSun-ExtG
 30E4C, 30E4D: BabelStoneHanExtra
-30E4E, 30E4F: HanaMinLiteCSC
+30E4E, 30E4F: SimSun-ExtG
 30E50.......: BabelStoneHanExtra
-30E51.......: HanaMinLiteCSC
+30E51.......: SimSun-ExtG
 30E52, 30E53: BabelStoneHanExtra
-30E54..30E56: HanaMinLiteCSC
+30E54..30E56: SimSun-ExtG
 30E57.......: BabelStoneHanExtra
-30E58..30E5C: HanaMinLiteCSC
+30E58..30E5C: SimSun-ExtG
 30E5D.......: BabelStoneHanExtra
-30E5E.......: HanaMinLiteCSC
+30E5E.......: SimSun-ExtG
 30E5F.......: BabelStoneHanExtra
-30E60.......: HanaMinLiteCSC
+30E60.......: SimSun-ExtG
 30E61.......: BabelStoneHanExtra
-30E62.......: HanaMinLiteCSC
+30E62.......: SimSun-ExtG
 30E63..30E65: BabelStoneHanExtra
-30E66..30E6B: HanaMinLiteCSC
+30E66..30E6B: SimSun-ExtG
 30E6C.......: BabelStoneHanExtra
-30E6D, 30E6E: HanaMinLiteCSC
+30E6D, 30E6E: SimSun-ExtG
 30E6F..30EA5: BabelStoneHanExtra
-30EA6, 30EA7: HanaMinLiteCSC
+30EA6, 30EA7: SimSun-ExtG
 30EA8.......: BabelStoneHanExtra
-30EA9.......: HanaMinLiteCSC
+30EA9.......: SimSun-ExtG
 30EAA, 30EAB: BabelStoneHanExtra
-30EAC.......: HanaMinLiteCSC
+30EAC.......: SimSun-ExtG
 30EAD.......: BabelStoneHanExtra
-30EAE.......: HanaMinLiteCSC
+30EAE.......: SimSun-ExtG
 30EAF, 30EB0: BabelStoneHanExtra
-30EB1.......: HanaMinLiteCSC
+30EB1.......: SimSun-ExtG
 30EB2.......: BabelStoneHanExtra
-30EB3, 30EB4: HanaMinLiteCSC
+30EB3, 30EB4: SimSun-ExtG
 30EB5.......: BabelStoneHanExtra
-30EB6.......: HanaMinLiteCSC
+30EB6.......: SimSun-ExtG
 30EB7.......: BabelStoneHanExtra
-30EB8.......: HanaMinLiteCSC
+30EB8.......: SimSun-ExtG
 30EB9.......: BabelStoneHanExtra
-30EBA..30EBC: HanaMinLiteCSC
+30EBA..30EBC: SimSun-ExtG
 30EBD.......: BabelStoneHanExtra
-30EBE.......: HanaMinLiteCSC
+30EBE.......: SimSun-ExtG
 30EBF.......: BabelStoneHanExtra
-30EC0, 30EC1: HanaMinLiteCSC
+30EC0, 30EC1: SimSun-ExtG
 30EC2.......: BabelStoneHanExtra
-30EC3, 30EC4: HanaMinLiteCSC
+30EC3, 30EC4: SimSun-ExtG
 30EC5..30EC7: BabelStoneHanExtra
-30EC8..30ECC: HanaMinLiteCSC
+30EC8..30ECC: SimSun-ExtG
 30ECD, 30ECE: BabelStoneHanExtra
-30ECF.......: HanaMinLiteCSC
+30ECF.......: SimSun-ExtG
 30ED0.......: BabelStoneHanExtra
-30ED1..30ED3: HanaMinLiteCSC
+30ED1..30ED3: SimSun-ExtG
 30ED4..30ED7: BabelStoneHanExtra
-30ED8..30EDB: HanaMinLiteCSC
+30ED8..30EDB: SimSun-ExtG
 30EDC..30EE2: BabelStoneHanExtra
-30EE3, 30EE4: HanaMinLiteCSC
+30EE3, 30EE4: SimSun-ExtG
 30EE5, 30EE6: BabelStoneHanExtra
-30EE7.......: HanaMinLiteCSC
+30EE7.......: SimSun-ExtG
 30EE8.......: BabelStoneHanExtra
-30EE9, 30EEA: HanaMinLiteCSC
+30EE9, 30EEA: SimSun-ExtG
 30EEB, 30EEC: BabelStoneHanExtra
-30EED.......: HanaMinLiteCSC
+30EED.......: SimSun-ExtG
 30EEE, 30EEF: BabelStoneHanExtra
-30EF0.......: HanaMinLiteCSC
+30EF0.......: SimSun-ExtG
 30EF1.......: BabelStoneHanExtra
-30EF2.......: HanaMinLiteCSC
+30EF2.......: SimSun-ExtG
 30EF3.......: BabelStoneHanExtra
-30EF4..30EF6: HanaMinLiteCSC
+30EF4..30EF6: SimSun-ExtG
 30EF7.......: BabelStoneHanExtra
-30EF8.......: HanaMinLiteCSC
+30EF8.......: SimSun-ExtG
 30EF9.......: BabelStoneHanExtra
-30EFA.......: HanaMinLiteCSC
+30EFA.......: SimSun-ExtG
 30EFB.......: BabelStoneHanExtra
-30EFC..30EFF: HanaMinLiteCSC
+30EFC..30EFF: SimSun-ExtG
 30F00.......: BabelStoneHanExtra
-30F01.......: HanaMinLiteCSC
+30F01.......: SimSun-ExtG
 30F02, 30F03: BabelStoneHanExtra
-30F04.......: HanaMinLiteCSC
+30F04.......: SimSun-ExtG
 30F05.......: BabelStoneHanExtra
-30F06, 30F07: HanaMinLiteCSC
+30F06, 30F07: SimSun-ExtG
 30F08.......: BabelStoneHanExtra
-30F09.......: HanaMinLiteCSC
+30F09.......: SimSun-ExtG
 30F0A, 30F0B: BabelStoneHanExtra
-30F0C.......: HanaMinLiteCSC
+30F0C.......: SimSun-ExtG
 30F0D.......: BabelStoneHanExtra
-30F0E.......: HanaMinLiteCSC
+30F0E.......: SimSun-ExtG
 30F0F.......: BabelStoneHanExtra
-30F10.......: HanaMinLiteCSC
+30F10.......: SimSun-ExtG
 30F11.......: BabelStoneHanExtra
-30F12..30F15: HanaMinLiteCSC
+30F12..30F15: SimSun-ExtG
 30F16.......: BabelStoneHanExtra
-30F17.......: HanaMinLiteCSC
+30F17.......: SimSun-ExtG
 30F18, 30F19: BabelStoneHanExtra
-30F1A.......: HanaMinLiteCSC
+30F1A.......: SimSun-ExtG
 30F1B..30F1E: BabelStoneHanExtra
-30F1F.......: HanaMinLiteCSC
+30F1F.......: SimSun-ExtG
 30F20..30F2E: BabelStoneHanExtra
-30F2F.......: HanaMinLiteCSC
+30F2F.......: SimSun-ExtG
 30F30..30F35: BabelStoneHanExtra
-30F36..30F38: HanaMinLiteCSC
+30F36..30F38: SimSun-ExtG
 30F39..30F3B: BabelStoneHanExtra
-30F3C, 30F3D: HanaMinLiteCSC
+30F3C, 30F3D: SimSun-ExtG
 30F3E.......: BabelStoneHanExtra
-30F3F.......: HanaMinLiteCSC
+30F3F.......: SimSun-ExtG
 30F40, 30F41: BabelStoneHanExtra
-30F42.......: HanaMinLiteCSC
+30F42.......: SimSun-ExtG
 30F43..30F4C: BabelStoneHanExtra
-30F4D..30F4F: HanaMinLiteCSC
+30F4D..30F4F: SimSun-ExtG
 30F50..30FCC: BabelStoneHanExtra
-30FCD..30FCF: HanaMinLiteCSC
+30FCD..30FCF: SimSun-ExtG
 30FD0.......: BabelStoneHanExtra
-30FD1, 30FD2: HanaMinLiteCSC
+30FD1, 30FD2: SimSun-ExtG
 30FD3.......: BabelStoneHanExtra
-30FD4.......: HanaMinLiteCSC
+30FD4.......: SimSun-ExtG
 30FD5..30FD8: BabelStoneHanExtra
-30FD9.......: HanaMinLiteCSC
+30FD9.......: SimSun-ExtG
 30FDA, 30FDB: BabelStoneHanExtra
-30FDC.......: HanaMinLiteCSC
+30FDC.......: SimSun-ExtG
 30FDD..31002: BabelStoneHanExtra
-31003..31005: HanaMinLiteCSC
+31003..31005: SimSun-ExtG
 31006, 31007: BabelStoneHanExtra
-31008.......: HanaMinLiteCSC
+31008.......: SimSun-ExtG
 31009.......: BabelStoneHanExtra
-3100A.......: HanaMinLiteCSC
+3100A.......: SimSun-ExtG
 3100B.......: BabelStoneHanExtra
-3100C.......: HanaMinLiteCSC
+3100C.......: SimSun-ExtG
 3100D.......: BabelStoneHanExtra
-3100E.......: HanaMinLiteCSC
+3100E.......: SimSun-ExtG
 3100F.......: BabelStoneHanExtra
-31010.......: HanaMinLiteCSC
+31010.......: SimSun-ExtG
 31011.......: BabelStoneHanExtra
-31012.......: HanaMinLiteCSC
+31012.......: SimSun-ExtG
 31013, 31014: BabelStoneHanExtra
-31015.......: HanaMinLiteCSC
+31015.......: SimSun-ExtG
 31016..31018: BabelStoneHanExtra
-31019.......: HanaMinLiteCSC
+31019.......: SimSun-ExtG
 3101A.......: BabelStoneHanExtra
-3101B, 3101C: HanaMinLiteCSC
+3101B, 3101C: SimSun-ExtG
 3101D.......: BabelStoneHanExtra
-3101E, 3101F: HanaMinLiteCSC
+3101E, 3101F: SimSun-ExtG
 31020..31022: BabelStoneHanExtra
-31023, 31024: HanaMinLiteCSC
+31023, 31024: SimSun-ExtG
 31025.......: BabelStoneHanExtra
-31026..31028: HanaMinLiteCSC
+31026..31028: SimSun-ExtG
 31029.......: BabelStoneHanExtra
-3102A, 3102B: HanaMinLiteCSC
+3102A, 3102B: SimSun-ExtG
 3102C, 3102D: BabelStoneHanExtra
-3102E.......: HanaMinLiteCSC
+3102E.......: SimSun-ExtG
 3102F.......: BabelStoneHanExtra
-31030..31032: HanaMinLiteCSC
+31030..31032: SimSun-ExtG
 31033.......: BabelStoneHanExtra
-31034.......: HanaMinLiteCSC
+31034.......: SimSun-ExtG
 31035..31039: BabelStoneHanExtra
-3103A.......: HanaMinLiteCSC
+3103A.......: SimSun-ExtG
 3103B..3103D: BabelStoneHanExtra
-3103E.......: HanaMinLiteCSC
+3103E.......: SimSun-ExtG
 3103F.......: BabelStoneHanExtra
-31040..31042: HanaMinLiteCSC
+31040..31042: SimSun-ExtG
 31043..3104C: BabelStoneHanExtra
-3104D, 3104E: HanaMinLiteCSC
+3104D, 3104E: SimSun-ExtG
 3104F..31052: BabelStoneHanExtra
-31053, 31054: HanaMinLiteCSC
+31053, 31054: SimSun-ExtG
 31055, 31056: BabelStoneHanExtra
-31057..3105C: HanaMinLiteCSC
+31057..3105C: SimSun-ExtG
 3105D..31060: BabelStoneHanExtra
-31061, 31062: HanaMinLiteCSC
+31061, 31062: SimSun-ExtG
 31063, 31064: BabelStoneHanExtra
-31065.......: HanaMinLiteCSC
+31065.......: SimSun-ExtG
 31066.......: BabelStoneHanExtra
-31067..31069: HanaMinLiteCSC
+31067..31069: SimSun-ExtG
 3106A..31071: BabelStoneHanExtra
-31072.......: HanaMinLiteCSC
+31072.......: SimSun-ExtG
 31073..31077: BabelStoneHanExtra
-31078.......: HanaMinLiteCSC
+31078.......: SimSun-ExtG
 31079, 3107A: BabelStoneHanExtra
-3107B, 3107C: HanaMinLiteCSC
+3107B, 3107C: SimSun-ExtG
 3107D..31081: BabelStoneHanExtra
-31082.......: HanaMinLiteCSC
+31082.......: SimSun-ExtG
 31083..3108E: BabelStoneHanExtra
-3108F.......: HanaMinLiteCSC
+3108F.......: SimSun-ExtG
 31090.......: BabelStoneHanExtra
-31091.......: HanaMinLiteCSC
+31091.......: SimSun-ExtG
 31092.......: BabelStoneHanExtra
-31093.......: HanaMinLiteCSC
+31093.......: SimSun-ExtG
 31094..31096: BabelStoneHanExtra
-31097, 31098: HanaMinLiteCSC
+31097, 31098: SimSun-ExtG
 31099.......: BabelStoneHanExtra
-3109A.......: HanaMinLiteCSC
+3109A.......: SimSun-ExtG
 3109B.......: BabelStoneHanExtra
-3109C..3109F: HanaMinLiteCSC
+3109C..3109F: SimSun-ExtG
 310A0..310BB: BabelStoneHanExtra
-310BC..310C2: HanaMinLiteCSC
+310BC..310C2: SimSun-ExtG
 310C3, 310C4: BabelStoneHanExtra
-310C5..310C8: HanaMinLiteCSC
+310C5..310C8: SimSun-ExtG
 310C9.......: BabelStoneHanExtra
-310CA.......: HanaMinLiteCSC
+310CA.......: SimSun-ExtG
 310CB.......: BabelStoneHanExtra
-310CC..310D3: HanaMinLiteCSC
+310CC..310D3: SimSun-ExtG
 310D4..310E3: BabelStoneHanExtra
-310E4, 310E5: HanaMinLiteCSC
+310E4, 310E5: SimSun-ExtG
 310E6..310EC: BabelStoneHanExtra
-310ED, 310EE: HanaMinLiteCSC
+310ED, 310EE: SimSun-ExtG
 310EF.......: BabelStoneHanExtra
-310F0.......: HanaMinLiteCSC
+310F0.......: SimSun-ExtG
 310F1..3110C: BabelStoneHanExtra
-3110D, 3110E: HanaMinLiteCSC
+3110D, 3110E: SimSun-ExtG
 3110F, 31110: BabelStoneHanExtra
-31111..31113: HanaMinLiteCSC
+31111..31113: SimSun-ExtG
 31114.......: BabelStoneHanExtra
-31115, 31116: HanaMinLiteCSC
+31115, 31116: SimSun-ExtG
 31117..3111A: BabelStoneHanExtra
-3111B, 3111C: HanaMinLiteCSC
+3111B, 3111C: SimSun-ExtG
 3111D, 3111E: BabelStoneHanExtra
-3111F..31123: HanaMinLiteCSC
+3111F..31123: SimSun-ExtG
 31124.......: BabelStoneHanExtra
-31125, 31126: HanaMinLiteCSC
+31125, 31126: SimSun-ExtG
 31127.......: BabelStoneHanExtra
-31128..31130: HanaMinLiteCSC
+31128..31130: SimSun-ExtG
 31131.......: BabelStoneHanExtra
-31132.......: HanaMinLiteCSC
+31132.......: SimSun-ExtG
 31133.......: BabelStoneHanExtra
-31134..31136: HanaMinLiteCSC
+31134..31136: SimSun-ExtG
 31137.......: BabelStoneHanExtra
-31138..3113A: HanaMinLiteCSC
+31138..3113A: SimSun-ExtG
 3113B..3116E: BabelStoneHanExtra
-3116F.......: HanaMinLiteCSC
+3116F.......: SimSun-ExtG
 31170..31174: BabelStoneHanExtra
-31175, 31176: HanaMinLiteCSC
+31175, 31176: SimSun-ExtG
 31177.......: BabelStoneHanExtra
-31178, 31179: HanaMinLiteCSC
+31178, 31179: SimSun-ExtG
 3117A..3117C: BabelStoneHanExtra
-3117D..3117F: HanaMinLiteCSC
+3117D..3117F: SimSun-ExtG
 31180, 31181: BabelStoneHanExtra
-31182.......: HanaMinLiteCSC
+31182.......: SimSun-ExtG
 31183..31186: BabelStoneHanExtra
-31187.......: HanaMinLiteCSC
+31187.......: SimSun-ExtG
 31188..3118F: BabelStoneHanExtra
-31190..31192: HanaMinLiteCSC
+31190..31192: SimSun-ExtG
 31193.......: BabelStoneHanExtra
-31194, 31195: HanaMinLiteCSC
+31194, 31195: SimSun-ExtG
 31196..311A7: BabelStoneHanExtra
-311A8.......: HanaMinLiteCSC
+311A8.......: SimSun-ExtG
 311A9.......: BabelStoneHanExtra
-311AA.......: HanaMinLiteCSC
+311AA.......: SimSun-ExtG
 311AB, 311AC: BabelStoneHanExtra
-311AD.......: HanaMinLiteCSC
+311AD.......: SimSun-ExtG
 311AE..311B0: BabelStoneHanExtra
-311B1.......: HanaMinLiteCSC
+311B1.......: SimSun-ExtG
 311B2.......: BabelStoneHanExtra
-311B3.......: HanaMinLiteCSC
+311B3.......: SimSun-ExtG
 311B4, 311B5: BabelStoneHanExtra
-311B6..311B8: HanaMinLiteCSC
+311B6..311B8: SimSun-ExtG
 311B9.......: BabelStoneHanExtra
-311BA..311C0: HanaMinLiteCSC
+311BA..311C0: SimSun-ExtG
 311C1..311C5: BabelStoneHanExtra
-311C6, 311C7: HanaMinLiteCSC
+311C6, 311C7: SimSun-ExtG
 311C8..311CB: BabelStoneHanExtra
-311CC.......: HanaMinLiteCSC
+311CC.......: SimSun-ExtG
 311CD..3121C: BabelStoneHanExtra
-3121D..3121F: HanaMinLiteCSC
+3121D..3121F: SimSun-ExtG
 31220..31222: BabelStoneHanExtra
-31223.......: HanaMinLiteCSC
+31223.......: SimSun-ExtG
 31224..31226: BabelStoneHanExtra
-31227.......: HanaMinLiteCSC
+31227.......: SimSun-ExtG
 31228..3122B: BabelStoneHanExtra
-3122C.......: HanaMinLiteCSC
+3122C.......: SimSun-ExtG
 3122D..31232: BabelStoneHanExtra
-31233.......: HanaMinLiteCSC
+31233.......: SimSun-ExtG
 31234.......: BabelStoneHanExtra
-31235.......: HanaMinLiteCSC
+31235.......: SimSun-ExtG
 31236, 31237: BabelStoneHanExtra
-31238.......: HanaMinLiteCSC
+31238.......: SimSun-ExtG
 31239.......: BabelStoneHanExtra
-3123A, 3123B: HanaMinLiteCSC
+3123A, 3123B: SimSun-ExtG
 3123C, 3123D: BabelStoneHanExtra
-3123E..31240: HanaMinLiteCSC
+3123E..31240: SimSun-ExtG
 31241.......: BabelStoneHanExtra
-31242..31246: HanaMinLiteCSC
+31242..31246: SimSun-ExtG
 31247..312BE: BabelStoneHanExtra
-312BF.......: HanaMinLiteCSC
+312BF.......: SimSun-ExtG
 312C0..312F7: BabelStoneHanExtra
-312F8.......: HanaMinLiteCSC
+312F8.......: SimSun-ExtG
 312F9..3130A: BabelStoneHanExtra
-3130B, 3130C: HanaMinLiteCSC
+3130B, 3130C: SimSun-ExtG
 3130D.......: BabelStoneHanExtra
-3130E.......: HanaMinLiteCSC
+3130E.......: SimSun-ExtG
 3130F..3131B: BabelStoneHanExtra
-3131C.......: HanaMinLiteCSC
+3131C.......: SimSun-ExtG
 3131D.......: BabelStoneHanExtra
-3131E, 3131F: HanaMinLiteCSC
+3131E, 3131F: SimSun-ExtG
 31320, 31321: BabelStoneHanExtra
-31322.......: HanaMinLiteCSC
+31322.......: SimSun-ExtG
 31323.......: BabelStoneHanExtra
-31324, 31325: HanaMinLiteCSC
+31324, 31325: SimSun-ExtG
 31326..3134A: BabelStoneHanExtra
 == CJK Unified Ideographs Extension H
 31350..31352: BabelStoneHanExtra
