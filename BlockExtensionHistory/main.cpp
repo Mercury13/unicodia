@@ -10,17 +10,20 @@
 // Libs
 #include "u_Strings.h"
 
-constexpr bool IS_BETA = true;
+
+enum class Stability : unsigned char { RELEASE, BETA };
 enum class FileVer : unsigned char { COL3, COL2, UCD };
 
 struct Version {
     const char* name;
     const char* suffix;
     FileVer version;
-    bool isBeta = false;
+    Stability stability = Stability::RELEASE;
 
     std::string remoteFileName() const;
     std::string localFileName() const;
+
+    bool isBeta() const { return static_cast<bool>(stability); }
 };
 
 std::string Version::remoteFileName() const
@@ -40,9 +43,8 @@ std::string Version::remoteFileName() const
 
 std::string Version::localFileName() const
 {
-    return str::cat(
-            "Blocks-",
-            isBeta ? "beta" : name,
+    return str::cat("Blocks-",
+            isBeta() ? "beta" : name,
             ".txt");
 }
 
@@ -74,7 +76,7 @@ Version versions[] {
     { "15.0.0",      "",       FileVer::UCD  },
     { "15.1.0",      "",       FileVer::UCD  },
     { "16.0.0",      "",       FileVer::UCD  },
-    { "17.0.0",      "",       FileVer::UCD,  IS_BETA },
+    { "17.0.0",      "",       FileVer::UCD,  Stability::BETA },
     // Now Unicode keeps beta in place of future release
 };
 
@@ -85,7 +87,7 @@ void ensureLocalFiles()
     for (auto& v : versions) {
         auto localName = v.localFileName();
         // Beta is always loaded!
-        if (!v.isBeta && std::filesystem::exists(localName))
+        if (!v.isBeta() && std::filesystem::exists(localName))
             continue;
         // Load
         auto remoteName = v.remoteFileName();
