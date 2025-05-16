@@ -26,6 +26,7 @@ struct TaskSets
         bool orErase = false;       ///< [+] erase if lookup failed
         SafeVector<std::string> suffixSequence;
     } country;
+    std::string prefix = "u";
 };
 
 

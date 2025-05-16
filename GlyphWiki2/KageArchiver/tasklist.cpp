@@ -15,6 +15,7 @@ public:
     SettingsMan();
     void parseCountry(std::span<std::string_view> params);
     void parseDefaultCountry(std::span<std::string_view> params);
+    void setPrefix(std::string x);
     /// @post  never null
     const std::shared_ptr<TaskSets>& sets();
 private:
@@ -76,6 +77,13 @@ void SettingsMan::parseCountry(std::span<std::string_view> params)
 }
 
 
+void SettingsMan::setPrefix(std::string x)
+{
+    currSets.prefix = std::move(x);
+    cachedPtr.reset();
+}
+
+
 void SettingsMan::parseDefaultCountry(std::span<std::string_view> params)
 {
     defaultCountries.clear();
@@ -95,9 +103,10 @@ void SettingsMan::parseDefaultCountry(std::span<std::string_view> params)
 constexpr unsigned BUFSZ = 100;
 using Buf = char[100];
 
-void printCand(Buf& buf, const char* prefix, unsigned code, std::string_view suffix)
+void printCand(Buf& buf, std::string_view prefix, unsigned code, std::string_view suffix)
 {
-    unsigned sz = snprintf(buf, BUFSZ, "%s%x%.*s", prefix, unsigned(code), PRF_SV(suffix));
+    unsigned sz = snprintf(buf, BUFSZ, "%.*s%x%.*s",
+                           PRF_SV(prefix), unsigned(code), PRF_SV(suffix));
     if (sz >= BUFSZ - 2) {
         snprintf(buf, BUFSZ, "Candidate for %X too long", unsigned(code));
         throw BadTask(buf);
@@ -137,14 +146,14 @@ SafeVector<Candidate> Task::candidates(char32_t code, const UnicodeList& list) c
             }
             auto countries = suffixToCountries(v);
                 if (it->second.countries.haveAny(countries)) {
-                printCand(buf, "u", code, v);
+                printCand(buf, sets->prefix, code, v);
                 r.push_back(
                     Candidate { .text = buf, .isFallback = v.empty() });
             }
         }
     } else {
         for (auto& v : sets->country.suffixSequence) {
-            printCand(buf, "u", code, v);
+            printCand(buf, sets->prefix, code, v);
             r.push_back(
                 Candidate { .text = buf, .isFallback = v.empty() });
         }
@@ -247,6 +256,9 @@ Task* putTask(TaskList& r, char32_t code, SettingsMan& man, PutMode mode)
                 std::span p1 = params;
                 p1 = p1.subspan(1);
                 setMan.parseDefaultCountry(p1);
+            } else if (cmd == "prefix"sv) {
+                std::string_view prefix = params.safeGetV(1, {});
+                setMan.setPrefix(std::string{prefix});
             } else {
                 throw BadTask(str::cat("Unknown command: ", cmd));
             }
