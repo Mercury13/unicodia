@@ -273,7 +273,7 @@
 20B8..20BA: Cambria
 20BB......: NotoSerif-Regular
 20BC..20BF: Cambria
-20C0......: UnicodiaFunky
+20C0, 20C1: UnicodiaFunky
 == Combining Diacritical Marks for Symbols
 20D0..20E1: UnicodiaFunky
 20E2, 20E3: NotoSansSymbols2-Regular
@@ -2385,7 +2385,8 @@ FFFD......: NotoSerif-Regular
 18D00..18D08: NotoSerifTangut-Regular
 18D09..18D1E: [Tofu]
 == Tangut Components Supplement
-18D80..18DF2: [Tofu]
+18D80..18D8E: UnicodiaHan
+18D8F..18DF2: [Tofu]
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
 == Kana Supplement
@@ -22040,6 +22041,7 @@ FFFD......: NotoSerif-Regular
 2B718, 2B719: BabelStoneHanExtra
 2B71A, 2B71B: SimSun-ExtB
 2B71C..2B73E: BabelStoneHanExtra
+2B73F.......: UnicodiaHan
 == CJK Unified Ideographs Extension D
 2B740..2B81D: BabelStoneHanExtra
 == CJK Unified Ideographs Extension E
@@ -24222,6 +24224,7 @@ FFFD......: NotoSerif-Regular
 2CE71..2CE77: BabelStoneHanExtra
 2CE78, 2CE79: SimSun-ExtB
 2CE7A..2CEA1: BabelStoneHanExtra
+2CEA2..2CEAD: UnicodiaHan
 == CJK Unified Ideographs Extension F
 2CEB0..2CED3: BabelStoneHanExtra
 2CED4, 2CED5: SimSun-ExtB
@@ -27559,9 +27562,7 @@ FFFD......: NotoSerif-Regular
 2FA09..2FA14: BabelStoneHanBasic
 2FA15.......: UnicodiaHan
 2FA16, 2FA17: BabelStoneHanBasic
-2FA18, 2FA19: UnicodiaHan
-2FA1A.......: BabelStoneHanBasic
-2FA1B.......: UnicodiaHan
+2FA18..2FA1B: UnicodiaHan
 2FA1C, 2FA1D: BabelStoneHanBasic
 == CJK Unified Ideographs Extension G
 30000..30040: BabelStoneHanExtra
