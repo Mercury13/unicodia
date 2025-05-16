@@ -1170,12 +1170,13 @@ namespace {
                     sTmp += str::toSv(loc::active::punctuation.range);
                     sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo, false);
                 }
-                QString sNum = loc::Fmt(iinfo.tmpl)(sTmp).q();
+                std::string_view sGreaterLess;
                 if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
-                    sNum = "&gt;" + sNum;
+                    sGreaterLess = "&gt;";
                 } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {
-                    sNum = "&lt;" + sNum;
+                    sGreaterLess = "&lt;";
                 }
+                QString sNum = loc::Fmt(iinfo.tmpl)(sTmp, sGreaterLess).q();
                 if (lang->year != 0) {
                     char buf[10];
                     std::u8string sYear { printNum8(lang->year, buf) };

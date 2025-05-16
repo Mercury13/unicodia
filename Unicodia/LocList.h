@@ -32,6 +32,8 @@ namespace loc
     DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
         NEVER, AVOID, PREFER, EXCEPT1 )
 
+    enum class MoreLessPhase : unsigned char { RAW, UNIT };
+
     struct ImpreciseInfo {
         std::string tmpl, biggerUnit;
         unsigned char shift, biggerSubshift;
@@ -63,6 +65,10 @@ namespace loc
                 // There’ll be other problems
             } thousand;
             Thousand denseThousand;  ///< thousand format in dense text
+            struct MoreLess {
+                std::u8string less, more;
+                MoreLessPhase phase = MoreLessPhase::RAW;
+            } moreLess;
         } numfmt;
         struct Ellipsis {
             std::u8string text;
