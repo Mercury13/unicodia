@@ -41,6 +41,13 @@
 /range 2F800 2FA1D
 
 
+# Tangut, just something
+/country
+/prefix tangut-
+/range 18D80 18D8E
+
+
+
 # That’s for all “normal” ranges
 /defaultcountry g t h m j k v s
 

@@ -258,7 +258,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhudawadi-Regular.ttf", Ffg::DESC_BADLY_HINTED },                // Khudawadi
     { "Kanchenjunga-Regular.ttf" },                                             // Kirat
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // …1 for sone patches
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // …1 for some patches
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
       { FNAME_BABEL_01, Ffg::FALL_TO_NEXT, 120_pc },                            // …3 U14
         // Hariphunchai4: too small, need smth for virtual virama, incomplete
@@ -334,7 +334,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
-    { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
+    { "NotoSerifTangut-Regular.ttf", Ffg::FALL_TO_NEXT, 125_pc },               // Tangut
+      { FNAME_UNIHAN, 120_pc },                                                 // …1
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2
