@@ -41,9 +41,17 @@
 /range 2F800 2FA1D
 
 
-
 # That’s for all “normal” ranges
 /defaultcountry g t h m j k v s
+
+
+
+# Additions
+/prefix unstable-
+/country DEFAULT UHAN
+2B73F
+/range 2CEA2 2CEAD
+/prefix
 
 
 # Normal template u*.svg
