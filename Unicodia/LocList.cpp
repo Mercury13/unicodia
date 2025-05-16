@@ -164,6 +164,9 @@ namespace {
     constinit const ec::Array<std::string_view, loc::FracPolicy> fracPolicyNames
             { "never", "avoid", "prefer", "except1" };
 
+    constinit const ec::Array<std::string_view, loc::MoreLessPhase> moreLessPhaseNames
+            { "raw", "unit" };
+
     bool parseLang(loc::Lang& r, const std::filesystem::path& path)
     {
         // Remove translator
@@ -303,6 +306,13 @@ namespace {
                     .shift = 0, .biggerSubshift = 0,
                     .policy = loc::FracPolicy::NEVER });
         }
+
+        // More and less
+        auto hMoreLess = hNumFormat.child("moreless");
+        r.numfmt.moreLess.less = hMoreLess.attribute("less").as_string("<{1}");
+        r.numfmt.moreLess.more = hMoreLess.attribute("more").as_string(">{1}");
+        std::string_view sPhase = hMoreLess.attribute("phase").as_string();
+        r.numfmt.moreLess.phase = moreLessPhaseNames.findDef(sPhase, loc::MoreLessPhase::RAW);
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);
