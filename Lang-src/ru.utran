@@ -1149,7 +1149,7 @@
      <transl>{1} на {2}</transl>
     </text>
     <text id="QtyNative">
-     <orig>{1} as native as of {2}</orig>
+     <orig>{1} native speakers as of {2}</orig>
      <transl>{1} как родной на {2}</transl>
     </text>
     <text id="QtyIndia">
