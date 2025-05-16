@@ -24,7 +24,7 @@ namespace ucd {
     };
 
     struct Numeric {
-        const NumType* type = nullptr;
+        const NumType *type = nullptr;
         std::string value;
     };
 

@@ -189,6 +189,8 @@ constexpr uc::NumType numTypeRawInfo[] {
     NUM_RAW("CjkAccount"),
     NUM_RAW("CjkZhuang"),
     NUM_RAW("CjkVietnamese"),
+    NUM_RAW("CjkTay"),
+    NUM_RAW("CjkZhuangTay"),
 };
 #undef NUM_RAW
 

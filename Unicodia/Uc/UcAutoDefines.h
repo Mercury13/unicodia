@@ -202,7 +202,9 @@ namespace uc {
         CJK_RARE,           ///< CJK rare meaning
         CJK_ACCOUNTING,     ///< CJK accounting meaning (to prevent counterfeits)
         CJK_ZHUANG,         ///< CJK Zhuang meaning
-        CJK_VIETNAMESE      ///< CJK Vietnamese meaning
+        CJK_VIETNAMESE,     ///< CJK Vietnamese meaning
+        CJK_TAY,            ///< CJK Tay meaning
+        CJK_ZHUANG_TAY,     ///< CJK Zhuang/Tay meaning
     )
 
     struct NumType;

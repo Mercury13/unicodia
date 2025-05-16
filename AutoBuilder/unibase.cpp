@@ -28,6 +28,8 @@ namespace {
     constinit ucd::NumType NUM_CJK_ACCOUNTING { "CJK_ACCOUNTING" };
     constinit ucd::NumType NUM_CJK_ZHUANG { "CJK_ZHUANG" };
     constinit ucd::NumType NUM_CJK_VIETNAMESE { "CJK_VIETNAMESE" };
+    constinit ucd::NumType NUM_CJK_TAY { "CJK_TAY" };
+    constinit ucd::NumType NUM_CJK_ZHUANG_TAY { "CJK_ZHUANG_TAY" };
 
     const ucd::Numeric NO_NUMERIC {
         .type = &NUM_NONE,
@@ -91,9 +93,12 @@ namespace {
         return r;
     }
 
+#define PRF_SV(x) unsigned((x).length()), (x).data()
+
     std::unordered_map<char32_t, ucd::Numeric> loadHanNumValues()
     {
         std::unordered_map<char32_t, ucd::Numeric> r;
+        char buf[200];
 
         std::string line;
         std::ifstream is(HAN_NUM_VALUE);
@@ -126,8 +131,7 @@ namespace {
             } else if (type == "kVietnameseNumeric") {
                 targetType = &NUM_CJK_VIETNAMESE;
             } else if (type == "kTayNumeric") {
-                /// @todo [urgent] Tay numerics!
-                //targetType = &NUM_CJK_VIETNAMESE;
+                targetType = &NUM_CJK_TAY;
             } else {
                 // We should know everything we skipped for now!
                 throw std::logic_error(str::cat(
@@ -137,11 +141,28 @@ namespace {
             if (targetType) {
                 auto& target = r[cp];
                 if (target.type != nullptr) {
+                    if (target.value != value) {
+                        throw std::logic_error("CJK numeric repeats and makes other value");
+                    }
+                    auto oldType = target.type;
+                    if (oldType != &NUM_CJK_TAY && targetType != &NUM_CJK_TAY) {
+                        throw std::logic_error("Only Tay can repeat in CJK numerics");
+                    }
+                    if (oldType != &NUM_CJK_TAY)
+                        targetType = oldType;
+                    if (targetType == &NUM_CJK_ZHUANG) {
+                        target.type = &NUM_CJK_ZHUANG_TAY;
+                    } else {
+                        snprintf(buf, std::size(buf),
+                                 "Cannot stick '%.*s' and '%.*s'",
+                                 PRF_SV(oldType->id), PRF_SV(targetType->id));
+                        throw std::logic_error(buf);
+                    }
                     /// @todo [future] Zhuang or Vietnamese may override PRIMARY etc, but now does not
-                    throw std::logic_error("Repeating CJK numeric");
+                } else {
+                    target.type = targetType;
+                    target.value = value;
                 }
-                target.type = targetType;
-                target.value = value;
             }
         }
 
@@ -248,7 +269,6 @@ ucd::MainProc ucd::processMainBase(
     char32_t firstCp = 0;
     bool needNumeric = false;
     std::string_view repeatedText = "REPEAT!! #"sv;
-    std::string replNameCache;
     while (std::getline(is, line)) {
         auto trimmed = str::trimSv(line);
         if (trimmed.empty())

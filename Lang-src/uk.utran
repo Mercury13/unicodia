@@ -708,6 +708,14 @@
      <orig>Vietnamese number</orig>
      <transl>В’єтнамське число</transl>
     </text>
+    <text id="CjkTay">
+     <orig>Tay number</orig>
+     <transl>Число тай</transl>
+    </text>
+    <text id="CjkZhuangTay">
+     <orig>Zhuang/Tay number</orig>
+     <transl>Чжуанське/тай число</transl>
+    </text>
    </group>
    <group id="Input">
     <text id="Bullet">
@@ -11108,7 +11116,7 @@
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and numbers: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
-      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang and Vietnamese.</p>
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang, Vietnamese and Tay.</p>
       <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
@@ -11119,7 +11127,7 @@
       <p>* Ці ж цифри, використані в особливих контекстах{{-}}наприклад, у верхніх/нижніх індексах.</p>
       <p>* Інші числові символи: цифри недесяткових, непозиційних та частково позиційних систем числення (римські, егейські, палички для лічби), [[pt:precomposed|монолітні]] числа на кшталт &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
-      <p>[[pt:cjk|ККЯ]] числа можуть бути звичайними (зазвичай означають число), рідкими (зрідка означають число), антипідробками (у бухгалтерських документах, щоб неможливо було домалювати), чжуанськими та в’єтнамськими.</p>
+      <p>[[pt:cjk|ККЯ]] числа можуть бути звичайними (зазвичай означають число), рідкими (зрідка означають число), антипідробками (у бухгалтерських документах, щоб неможливо було домалювати), чжуанськими, в’єтнамськими і тай.</p>
       <p />
       <p>Символи, чиє основне призначення не{{_}}числове (наприклад, слов’янські цифри на кшталт А̄) Юнікод числами не{{_}}вважає.</p>
      </transl>
@@ -12116,6 +12124,14 @@
     <text id="CjkVietnamese">
      <orig>Vietnamese</orig>
      <transl>в’єтнамське</transl>
+    </text>
+    <text id="CjkTay">
+     <orig>Tay</orig>
+     <transl>тай</transl>
+    </text>
+    <text id="CjkZhuangTay">
+     <orig>Zhuang/Tay</orig>
+     <transl>чжуанське/тай</transl>
     </text>
    </group>
    <text id="NonChar">
