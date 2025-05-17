@@ -146,7 +146,7 @@
 			<fmt shift="7" text="{1}千万人" frac="except1" bigger-unit="億" bigger-subshift="1" />
 			<fmt shift="8" text="{1}億人" frac="never" />
 		</imprecise>
-		<moreless less="{1}未満" more="{1}超" phase="unit" />
+		<moreless less="{1}以下" more="{1}以上" phase="unit" />
 	</num-format>
 	<!-- Japanese has no plural rules -->
 	<cardinal-rules default-outcome="other" />
