@@ -142,7 +142,7 @@
 		<imprecise>
 			<!-- Bigger units specially for Japanese:
 				 instead of “2,400k” you write “2M400k”.
-				 Program’s limitation: bidder units are never written in ranges -->
+				 Program’s limitation: bigger units are never written in ranges -->
 			<fmt shift="0" text="{1}人" frac="never" />
 			<fmt shift="3" text="{1}千人" frac="avoid" />
 			<fmt shift="4" text="{1}万人" frac="never" bigger-unit="億" bigger-subshift="4" />
