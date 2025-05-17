@@ -98,7 +98,7 @@
 			<fmt shift="6" text="{1}M" frac="prefer" />
 			<fmt shift="9" text="{1}bn" frac="prefer" />
 		</imprecise>
-		<!-- Policy for more-less
+		<!-- Policy for “over 10k” / “under 10k”
 			 phase: num = raw number, unit = number with unit -->
 		<moreless less="<{1}" more=">{1}" phase="num" />
 	</num-format>
