@@ -941,7 +941,7 @@
    </group>
    <group id="Life">
     <text id="Alive">
-     <orig>alive ''(no threats for main language, like Cyrillic)''</orig>
+     <orig>alive ''(no threats to the main language, like Cyrillic)''</orig>
      <transl>живая ''(основным языкам ничего не{{_}}угрожает, как кириллица)''</transl>
     </text>
     <text id="Danger">

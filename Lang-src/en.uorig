@@ -751,7 +751,7 @@
    </group>
    <group id="Life">
     <text id="Alive">
-     <orig>alive ''(no threats for main language, like Cyrillic)''</orig>
+     <orig>alive ''(no threats to the main language, like Cyrillic)''</orig>
     </text>
     <text id="Danger">
      <orig>endangered due to language ''(like Cherokee)''</orig>

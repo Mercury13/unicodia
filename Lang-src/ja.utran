@@ -939,7 +939,7 @@
    </group>
    <group id="Life">
     <text id="Alive">
-     <orig>alive ''(no threats for main language, like Cyrillic)''</orig>
+     <orig>alive ''(no threats to the main language, like Cyrillic)''</orig>
      <transl>有効 ''(キリル文字のように主要言語に対する脅威はありません)''</transl>
     </text>
     <text id="Danger">
@@ -1147,7 +1147,8 @@
      <transl>{2}年時点で {1}</transl>
     </text>
     <text id="QtyNative">
-     <orig>{1} as native as of {2}</orig>
+     <orig>{1} native speakers as of {2}</orig>
+     <known-orig>{1} as native as of {2}</known-orig>
      <transl>{1} は {2} と同様にネイティブ</transl>
     </text>
     <text id="QtyIndia">
