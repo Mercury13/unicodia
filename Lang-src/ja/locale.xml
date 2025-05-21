@@ -144,9 +144,9 @@
 				 instead of “2,400k” you write “2M400k”.
 				 Program’s limitation: bigger units are never written in ranges -->
 			<fmt shift="0" text="{1}人" frac="never" />
-			<fmt shift="3" text="{1}千人" frac="avoid" />
+			<fmt shift="3" text="{1}千人" frac="avoid" bigger-unit="万" bigger-subshift="1" />
 			<fmt shift="4" text="{1}万人" frac="never" bigger-unit="億" bigger-subshift="4" />
-			<fmt shift="7" text="{1}千万人" frac="except1" bigger-unit="億" bigger-subshift="1" />
+			<!-- <fmt shift="7" text="{1}千万人" frac="except1" bigger-unit="億" bigger-subshift="1" /> -->
 			<fmt shift="8" text="{1}億人" frac="never" />
 		</imprecise>
 		<moreless less="{1}以下" more="{1}以上" phase="unit" />
