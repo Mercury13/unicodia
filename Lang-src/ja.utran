@@ -1144,12 +1144,11 @@
     </group>
     <text id="Qty">
      <orig>{1} as of {2}</orig>
-     <transl>{2}年時点で {1}</transl>
+     <transl>{2}年時点で話者数は {1}</transl>
     </text>
     <text id="QtyNative">
      <orig>{1} native speakers as of {2}</orig>
-     <known-orig>{1} as native as of {2}</known-orig>
-     <transl>{1} は {2} と同様にネイティブ</transl>
+     <transl>{2}年時点で母語話者は {1}</transl>
     </text>
     <text id="QtyIndia">
      <orig>{1} in India as of {2}</orig>
@@ -1161,18 +1160,15 @@
      <au-cmt>Test: Ethi A, Gamo-Gofa-Dawro</au-cmt>
      <transl>{2}年時点で合計 {1}</transl>
     </text>
-    <text id="Year" force-attention="true">
-     <orig>{1}</orig>
-     <au-cmt>
-      <p>Sometimes need something bigger than {1}, e.g.</p>
-      <p>* Japanese: 2020 year, 2020s = 2020 + year + age</p>
-      <p>* Slavic (non-abbreviated): 2020 year, 2020s years</p>
-     </au-cmt>
-     <transl>{1}</transl>
+    <text id="QtyDecade">
+     <orig>{1} as of {2}s</orig>
+     <au-cmt>Test: Cakm, Gong, Guru, Limb…</au-cmt>
+     <transl>{2}年代時点で話者数は {1}</transl>
     </text>
-    <text id="Decade" force-attention="true">
-     <orig>{1}s</orig>
-     <transl>{1}s</transl>
+    <text id="QtyDecadeNative">
+     <orig>{1} native speakers as of {2}s</orig>
+     <au-cmt>Test: Arab only</au-cmt>
+     <transl>{2}年代時点で母語話者は {1}</transl>
     </text>
    </group>
    <group id="LangLoc">

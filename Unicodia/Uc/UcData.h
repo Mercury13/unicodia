@@ -663,18 +663,22 @@ namespace uc {
     enum class Langfg : unsigned char {
         S_0 = 1<<0,             ///< Special string, bit 0
         S_1 = 1<<1,             ///< Special string, bit 1
-        DECADE = 1<<2,          ///< Year = decade rather than exact year of census
+        S_2 = 1<<2,             ///< Special string, bit 2
         MORE_THAN = 1<<3,       ///< [+] more than (# is lower limit)
         LESS_THAN = 1<<4,       ///< [+] less than (# is upper limit)
         BURMESE = 1<<5,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<6,  ///< Custom (rather than stock) pre-note
         NO_AUTO = 1<<7,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
+        S_NORMAL = 0,
         S_AS_NATIVE = S_0,
         S_IN_INDIA = S_1,
         S_TOTAL = S_0 | S_1,
-        S_ALL = S_0 | S_1,
+        S_DECADE = S_2,
+        S_DECADE_AS_NATIVE = S_2 | S_0,
+        S_ALL = S_0 | S_1 | S_2,
     };
     DEFINE_ENUM_OPS(Langfg)
+    extern const char* langfgLocNames[];
 
     struct LangLoc {
         std::string_view locSubKey;

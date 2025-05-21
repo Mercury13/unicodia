@@ -924,16 +924,13 @@
      <orig>total {1} as of {2}</orig>
      <au-cmt>Test: Ethi A, Gamo-Gofa-Dawro</au-cmt>
     </text>
-    <text id="Year">
-     <orig>{1}</orig>
-     <au-cmt>
-      <p>Sometimes need something bigger than {1}, e.g.</p>
-      <p>* Japanese: 2020 year, 2020s = 2020 + year + age</p>
-      <p>* Slavic (non-abbreviated): 2020 year, 2020s years</p>
-     </au-cmt>
+    <text id="QtyDecade">
+     <orig>{1} as of {2}s</orig>
+     <au-cmt>Test: Cakm, Gong, Guru, Limb…</au-cmt>
     </text>
-    <text id="Decade">
-     <orig>{1}s</orig>
+    <text id="QtyDecadeNative">
+     <orig>{1} native speakers as of {2}s</orig>
+     <au-cmt>Test: Arab only</au-cmt>
     </text>
    </group>
    <group id="LangLoc">

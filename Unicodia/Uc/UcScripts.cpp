@@ -100,7 +100,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC,
         Sfg::STUB_ALM, EcVersion::ALL_BUILTIN,
-        { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_AS_NATIVE | Langfg::DECADE, .year = 2020 } },
+        { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_DECADE_AS_NATIVE, .year = 2020 } },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA_RTL,
@@ -174,7 +174,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::unknown(), EcFont::CHAKMA, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 7, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::DECADE | Langfg::MORE_THAN,
+        { .mantissa = 7, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::S_DECADE | Langfg::MORE_THAN,
           .year = 2010, .locations { LOC_BANGLADESH, LOC_INDIA_E, LOC_MYANMAR } } },
     // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
     { "Cans", QFontDatabase::Any,
@@ -288,7 +288,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1750, StdNote::FIRST_KNOWN), EcFont::GUNJALA_GONDI, NO_FLAGS,
         EcVersion::ALL_BUILTIN,
-        { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::DECADE, .year = 2010,
+        { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_INDIA_CEN } } },
     // Gondi/Masaram OK, W10 none, installed Google Noto
     { "Gonm", QFontDatabase::Any,
@@ -327,7 +327,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::GURMUKHI, NO_FLAGS, EcVersion::ALL_BUILTIN,
         // Punjabi here as the main Gurmikhi language
-        { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::DECADE, .year = 2010,
+        { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
@@ -458,7 +458,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Limb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(18), EcFont::LIMBU, NO_FLAGS, EcVersion::ALL_BUILTIN,
-        { .mantissa = 41, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::DECADE, .year = 2010,
+        { .mantissa = 41, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_NEPAL } } },
     // Linear A OK, W10 none, installed Google Noto font
     { "Lina", QFontDatabase::Any,
@@ -739,7 +739,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::KHUDAWADI, NO_FLAGS,
         EcVersion::ALL_BUILTIN,
-        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::DECADE, .year = 2010,
+        { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     { "Sinh", QFontDatabase::Sinhala,
@@ -848,7 +848,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1283), EcFont::THAI, NO_FLAGS, EcVersion::ALL_BUILTIN,
         { .mantissa = 6, .numOrder = NumOrder::DEC_MILLION,
-          .flags = Langfg::MORE_THAN | Langfg::DECADE, .year = 2020 } }, // No reliable source
+          .flags = Langfg::MORE_THAN | Langfg::S_DECADE, .year = 2020 } }, // No reliable source
     // Tibetan OK, W10 did not have swastika, installed BabelStone
     { "Tibt", QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,

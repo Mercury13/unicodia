@@ -1189,27 +1189,12 @@ namespace {
                 if (lang->year != 0) {
                     char buf[10];
                     std::u8string sYear { printNum8(lang->year, buf) };
-                    if (lang->flags.have(uc::Langfg::DECADE)) {
-                        sYear = loc::get("Prop.Lang.Decade").arg(sYear);
-                    } else {
-                        if (lang->year2 != 0) {
-                            sYear = str::cat(sYear, loc::active::punctuation.yearRange,
-                                             printNum8(lang->year2, buf));
-                        }
-                        sYear = loc::get("Prop.Lang.Year").arg(sYear);
+                    if (lang->year2 != 0) {
+                        sYear = str::cat(sYear, loc::active::punctuation.yearRange,
+                                         printNum8(lang->year2, buf));
                     }
-                    const char* key = "Prop.Lang.Qty";
-                    if (auto q = lang->flags & uc::Langfg::S_ALL) {
-                        switch (q.numeric()) {
-                        case static_cast<int>(uc::Langfg::S_AS_NATIVE):
-                            key = "Prop.Lang.QtyNative"; break;
-                        case static_cast<int>(uc::Langfg::S_IN_INDIA):
-                            key = "Prop.Lang.QtyIndia"; break;
-                        case static_cast<int>(uc::Langfg::S_TOTAL):
-                            key = "Prop.Lang.QtyTotal"; break;
-                        default: ;
-                        }
-                    }
+                    auto iKey = (lang->flags & uc::Langfg::S_ALL).numeric();
+                    const char* key = uc::langfgLocNames[iKey];
                     wrapWith(sNum, key, sYear);
                 }
                 s += sNum.toHtmlEscaped();

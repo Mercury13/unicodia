@@ -46,6 +46,20 @@ namespace fst {
     constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;
 }
 
+constexpr const char* S_DEFAULT = "Prop.Lang.Qty";
+constinit const char* uc::langfgLocNames[] {
+    S_DEFAULT,
+    "Prop.Lang.QtyNative",
+    "Prop.Lang.QtyIndia",
+    "Prop.Lang.QtyTotal",
+    "Prop.Lang.QtyDecade",
+    "Prop.Lang.QtyDecadeNative",
+    S_DEFAULT,
+    S_DEFAULT,
+};
+static_assert(std::size(uc::langfgLocNames) == static_cast<int>(uc::Langfg::S_ALL) + 1);
+
+
 constexpr uc::LangLife langLifeInfoProto[] {
     { {} },
     { "Prop.Life.Alive" },
