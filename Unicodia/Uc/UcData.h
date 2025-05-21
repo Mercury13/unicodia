@@ -663,7 +663,7 @@ namespace uc {
     enum class Langfg : unsigned char {
         S_0 = 1<<0,             ///< Special string, bit 0
         S_1 = 1<<1,             ///< Special string, bit 1
-        GREATER_THAN = 1<<2,    ///< [+] greater than (# is lower limit)
+        MORE_THAN = 1<<2,       ///< [+] more than (# is lower limit)
         LESS_THAN = 1<<3,       ///< [+] less than (# is upper limit)
         DECADE = 1<<4,          ///< Year = decade rather than exact year of census
         BURMESE = 1<<5,         ///< Special action for Burmese

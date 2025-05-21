@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-enum class SkinToneError {
+enum class SkinToneError : unsigned char {
     OK, CANNOT_CREATE_DIR, CANNOT_REMOVE_FILE, REPEATING_EMOJI,
     INCOMPLETE_EMOJI, CANNOT_SAVE_FILE };
 

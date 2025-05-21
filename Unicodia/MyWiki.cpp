@@ -1097,6 +1097,18 @@ namespace {
         return loc::active::numfmt.imprecise[0];
     }
 
+    void applyMoreLessIf(std::string& x, loc::MoreLessPhase phase,
+                         Flags<uc::Langfg> flags)
+    {
+        if (phase == loc::active::numfmt.moreLess.phase
+                && flags.haveAny(uc::Langfg::MORE_THAN | uc::Langfg::LESS_THAN)) {
+            auto fmt = (flags.have(uc::Langfg::MORE_THAN))
+                       ? loc::active::numfmt.moreLess.more
+                       : loc::active::numfmt.moreLess.less;
+            x = loc::Fmt(fmt)(x).str();
+        }
+    }
+
     void Eng::appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs)
     {
         char locBuf[40];
@@ -1170,13 +1182,10 @@ namespace {
                     sTmp += str::toSv(loc::active::punctuation.range);
                     sTmp += formatNumOnly(lang->hiMantissa, loShift, iinfo, false);
                 }
-                std::string_view sGreaterLess;
-                if (lang->flags.have(uc::Langfg::GREATER_THAN)) {
-                    sGreaterLess = "&gt;";
-                } else if (lang->flags.have(uc::Langfg::LESS_THAN)) {
-                    sGreaterLess = "&lt;";
-                }
-                QString sNum = loc::Fmt(iinfo.tmpl)(sTmp, sGreaterLess).q();
+                applyMoreLessIf(sTmp, loc::MoreLessPhase::RAW,  lang->flags);
+                sTmp = loc::Fmt(iinfo.tmpl)(sTmp).str();
+                applyMoreLessIf(sTmp, loc::MoreLessPhase::UNIT, lang->flags);
+                QString sNum = QString::fromStdString(sTmp);
                 if (lang->year != 0) {
                     char buf[10];
                     std::u8string sYear { printNum8(lang->year, buf) };
@@ -1203,7 +1212,7 @@ namespace {
                     }
                     wrapWith(sNum, key, sYear);
                 }
-                s += sNum;
+                s += sNum.toHtmlEscaped();
             }
         } else {
             s += "[NO LANGUAGE!!!]";
