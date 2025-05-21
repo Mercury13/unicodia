@@ -663,9 +663,9 @@ namespace uc {
     enum class Langfg : unsigned char {
         S_0 = 1<<0,             ///< Special string, bit 0
         S_1 = 1<<1,             ///< Special string, bit 1
-        MORE_THAN = 1<<2,       ///< [+] more than (# is lower limit)
-        LESS_THAN = 1<<3,       ///< [+] less than (# is upper limit)
-        DECADE = 1<<4,          ///< Year = decade rather than exact year of census
+        DECADE = 1<<2,          ///< Year = decade rather than exact year of census
+        MORE_THAN = 1<<3,       ///< [+] more than (# is lower limit)
+        LESS_THAN = 1<<4,       ///< [+] less than (# is upper limit)
         BURMESE = 1<<5,         ///< Special action for Burmese
         CUSTOM_PRENOTE = 1<<6,  ///< Custom (rather than stock) pre-note
         NO_AUTO = 1<<7,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
