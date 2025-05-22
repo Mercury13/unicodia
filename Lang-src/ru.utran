@@ -1164,10 +1164,12 @@
     </text>
     <text id="QtyDecade">
      <orig>{1} as of {2}s</orig>
+     <au-cmt>Test: Cakm, Gong, Guru, Limb…</au-cmt>
      <transl>{1} на {2}-е</transl>
     </text>
     <text id="QtyDecadeNative">
      <orig>{1} native speakers as of {2}s</orig>
+     <au-cmt>Test: Arab only</au-cmt>
      <transl>{1} как родной на {2}-е</transl>
     </text>
    </group>
@@ -1354,7 +1356,7 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private-use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
       <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but the French delegate insisted that OE was enough.</p>
      </orig>
@@ -1362,7 +1364,7 @@
      <transl>
       <p>Латиница-1{{-}}второе название 8-битной кодировки '''ISO{{_}}8859-1''', появившейся в 1987 году и расширяющей [[pt:ascii|ASCII]] до европейских языков.</p>
       <p />
-      <p>Первые 32 символа, 80…9F, [[pt:control|управляющие]] для совместимости с 7-битными кодировками: почтовые программы иногда теряли верхний бит, и не{{_}}хотелось бы в этих позициях ставить [[pt:graphic|печатные]] символы. Сейчас эти символы не{{_}}применяются по назначению и служат [[pt:private|личными]]. Так, кодировка Windows-1252{{-}}это та же латиница-1, только вместо управляющих символов типографские. Дошло до того, что в стандартах Всемирной паутины написано: если страница просит кодировку ISO{{_}}8859-1, отобразить сайт в Windows-1252.</p>
+      <p>Первые 32 символа, 80…9F, [[pt:control|управляющие]] для совместимости с 7-битными кодировками: ранние почтовые программы отбрасывали верхний бит, и не{{_}}хотелось бы в этих позициях ставить [[pt:graphic|печатные]] символы. Сейчас эти символы не{{_}}применяются по назначению и служат [[pt:private|личными]]. Так, кодировка Windows-1252{{-}}это та же латиница-1, только вместо управляющих символов типографские. Дошло до того, что в стандартах Всемирной паутины написано: если страница просит кодировку ISO{{_}}8859-1, отобразить сайт в Windows-1252.</p>
       <p />
       <p>Среди букв видны символы × и ÷. Изначально там должен быть Œœ, но французский делегат настаивал, что хватает OE.</p>
      </transl>
