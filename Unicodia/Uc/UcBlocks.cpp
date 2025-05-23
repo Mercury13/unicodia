@@ -1174,8 +1174,8 @@ constinit const uc::Block uc::blocks[] {
             "Sharada Supplement",
             { EcScript::Shrd, '1' }, MapSubtype::DEAD,
             EcScript::Shrd, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
-    // Sunuwar OK, though font is horrible
-    { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, {}, 7_hx },
+    // Sunuwar OK
+    { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, Ifg::PAINT_SVG, 13_hx + ImbaX::LEFT_3 },
             "Sunuwar",
             { EcScript::Sunu, 0 }, MapSubtype::ALIVE, EcScript::Sunu },
     // Bhaiksuki OK
