@@ -188,8 +188,9 @@
 * Egyp: real lo-res (need head only) + both LR’s blocks are just men, what’s the difference?
 * Egyp format: mine is better because I took an image specific for Egyp
 * Ethi: egg, the first letter in “abugida”
-* Gara: LR probably thought less than I and took a vowel-carrier w/o point. The ideal icon is G (H-like) with hook, and I’ll take it in new font
+* Gara: initial letter of “Garay”. LR probably thought less than I and took a vowel-carrier w/o point
 * Mend: what’s better, Ki or Kee? (The script is also named Kikakui)
+* Vaii: initial letter of “Vai”
 
 ## America
 * Cans all: somehow decided with an umlaut
