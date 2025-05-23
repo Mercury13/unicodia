@@ -8764,12 +8764,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}}, [[pt:virama|virama]], a mark for final {{t|r}}, and even [[pt:ligature|ligatures]] for consonant conjuncts. The official orthography does not recognize these changes.</p>
+      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially a pure alphabet, it later adopted features from Brahmic scripts such as inherent {{t|a}}, [[pt:virama|virama]], a mark for final {{t|r}}, and even [[pt:ligature|ligatures]] for consonant conjuncts. The official orthography does not recognize these changes.</p>
       <p />
       <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
       <p />
       <p>The main script is [[ps:Deva|Devanagari]], which poorly conveys Sunuwar phonetics. Also, there’s Tikamuli, an unencoded Brahmic abugida promoted by influential funds since 2005.</p>
      </orig>
+     <known-orig>
+      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}}, [[pt:virama|virama]], a mark for final {{t|r}}, and even [[pt:ligature|ligatures]] for consonant conjuncts. The official orthography does not recognize these changes.</p>
+      <p />
+      <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
+      <p />
+      <p>The main script is [[ps:Deva|Devanagari]], which poorly conveys Sunuwar phonetics. Also, there’s Tikamuli, an unencoded Brahmic abugida promoted by influential funds since 2005.</p>
+     </known-orig>
      <transl>
       <p>クリシュナ・バハドゥル・ジェンティッチ（1926–1991）によって発明されました。当初は純粋なアルファベットでしたが、ブラーフミー文字との相互作用により、固有の {{t|a}}、[[pt:virama|ヴィラマ]]、末尾の {{t|r}} のマーク、さらには子音接続詞の [[pt:ligature|合字]] を使用するようになりました。公式の正書法では、これらの変更は認識されていません。</p>
       <p />
