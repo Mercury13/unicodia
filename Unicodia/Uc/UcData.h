@@ -295,6 +295,8 @@ namespace uc {
         EGYPTIAN,
           Z_EGY_1,
           Z_EGY_2,
+          Z_EGY_3,
+          Z_EGY_4,
         ELBASAN,
         ENCLOSED_ALNUM, // Korean
           Z_EAN_1,      // Backed up by Symbol2
@@ -493,6 +495,7 @@ namespace uc {
         DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
         BUILTIN     = 1 << 1,  ///< Built-in font
         DEBUG       = 1 << 2,  ///< Debug which chars are here
+        STRONG_TOFU = 1 << 3,  ///< Strategy for tofu
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);
@@ -504,12 +507,20 @@ namespace uc {
         explicit operator bool() const noexcept { return value; }
     };
 
+    enum class ExTofuType : unsigned char { NONE, GARDINER };
+
+    struct ExTofu {
+        ExTofuType type = ExTofuType::NONE;
+        std::string_view fname {};
+    };
+
     struct Family
     {
         std::string_view text;
         Flags<Fafg> flags {};
         EvRecode recode = nullptr;
         ProbeChar probeChar {};
+        ExTofu exTofu {};   ///< external tofu list
 
         constexpr Family(std::string_view aText) : text(aText) {}
         constexpr Family(std::string_view aText, Fafg aFlag)
@@ -524,6 +535,8 @@ namespace uc {
             : text(aText), flags(aFlag), recode(aRecode) {}
         constexpr Family(std::string_view aText, Fafg aFlag, ProbeChar aProbeChar)
             : text(aText), flags(aFlag), probeChar(aProbeChar) {}
+        constexpr Family(std::string_view aText, ExTofu aTofu)
+            : text(aText), exTofu(aTofu) {}
     };
 
     /// Other set of styled characters is at alternate CPs → add/subtract some delta to code
@@ -624,6 +637,7 @@ namespace uc {
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;
+        void loadGardinerTofu() const;
     };
     extern const Font fontInfo[];
 

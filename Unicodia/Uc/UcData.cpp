@@ -845,6 +845,7 @@ struct uc::LoadedFont : public dumb::SpTarget
     std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
     CompressedBits cps;
+    QFont::StyleStrategy defaultStrategy;
     bool isRejected = false;
 
     const QString& onlyFamily() const;
@@ -946,6 +947,29 @@ void uc::Font::newLoadedStruc() const
 }
 
 
+void uc::Font::loadGardinerTofu() const
+{
+    auto absPath = expandTempFontName(family.exTofu.fname).toStdU16String();
+    std::ifstream is(std::filesystem::path{absPath});
+    if (!is.is_open())
+        return;
+    std::string s;
+    while (std::getline(is, s)) {
+        auto s1 = str::trimSv(s);
+        if (s1.starts_with("0x")) {
+            auto s2 = s1.substr(2);
+            unsigned cp;
+            auto fcr = std::from_chars(
+                           std::to_address(s2.begin()),
+                           std::to_address(s2.end()), cp, 16);
+            if (fcr.ec == std::errc{}) {
+                q.loaded->cps.erase(cp);
+            }
+        }
+    }
+}
+
+
 void uc::Font::load(char32_t trigger) const
 {
 onceAgain:
@@ -979,6 +1003,11 @@ onceAgain:
         }
 
         q.loaded->cps = std::move(tempFont.cps);
+        switch (family.exTofu.type) {
+        case ExTofuType::NONE: break;
+        case ExTofuType::GARDINER:
+            loadGardinerTofu(); break;
+        }
     } else {
         // FAMILY
         newLoadedStruc();
@@ -986,7 +1015,7 @@ onceAgain:
         q.loaded->families = toQList(family.text);
     }
 
-    // Does not support → make probe font, force EXACT match
+    // For system fonts
     if (q.loaded->cps.isEmpty()) {
         q.loaded->get(q.loaded->probe,  fst::TOFU,   flags);
         q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
@@ -997,7 +1026,9 @@ onceAgain:
             return;
         }
     }
-    q.loaded->get(q.loaded->normal, fst::DEFAULT, flags);
+    auto defaultStrategy = (family.flags.have(Fafg::STRONG_TOFU))
+                           ? fst::TOFU : fst::DEFAULT;
+    q.loaded->get(q.loaded->normal, defaultStrategy, flags);
 }
 
 
