@@ -867,7 +867,7 @@ FFFD......: NotoSerif-Regular
 == Sharada Supplement
 11B60..11B67: UnicodiaFunky
 == Sunuwar
-11BC0..11BF9: Mukdum-Final-Unicode
+11BC0..11BF9: SEISunuwar-Regular
 == Bhaiksuki
 11C00..11C6C: NotoSansBhaiksuki-Regular
 == Marchen
@@ -915,1431 +915,1445 @@ FFFD......: NotoSerif-Regular
 13443..13455: UnicodiaEgypFixupRegular
 == Egyptian Hieroglyphs Extended-A
 13460..13468: UnicodiaSesh
-13469.......: [Tofu]
+13469.......: NewGardiner
 1346A..1346C: UnicodiaSesh
-1346D.......: [Tofu]
+1346D.......: NewGardiner
 1346E.......: UnicodiaSesh
-1346F.......: [Tofu]
+1346F.......: NewGardiner
 13470.......: UnicodiaSesh
-13471..13473: [Tofu]
+13471..13473: NewGardiner
 13474, 13475: UnicodiaSesh
-13476, 13477: [Tofu]
+13476, 13477: NewGardiner
 13478, 13479: UnicodiaSesh
-1347A.......: [Tofu]
+1347A.......: NewGardiner
 1347B.......: UnicodiaSesh
-1347C.......: [Tofu]
+1347C.......: NewGardiner
 1347D.......: UnicodiaSesh
-1347E..13482: [Tofu]
+1347E..13482: NewGardiner
 13483..13485: UnicodiaSesh
-13486, 13487: [Tofu]
+13486, 13487: NewGardiner
 13488..1348B: UnicodiaSesh
-1348C.......: [Tofu]
+1348C.......: NewGardiner
 1348D.......: UnicodiaSesh
-1348E.......: [Tofu]
+1348E.......: NewGardiner
 1348F..13495: UnicodiaSesh
-13496.......: [Tofu]
+13496.......: NewGardiner
 13497..1349B: UnicodiaSesh
-1349C.......: [Tofu]
+1349C.......: NewGardiner
 1349D..1349F: UnicodiaSesh
-134A0.......: [Tofu]
+134A0.......: NewGardiner
 134A1, 134A2: UnicodiaSesh
-134A3..134A5: [Tofu]
+134A3..134A5: NewGardiner
 134A6.......: UnicodiaSesh
-134A7.......: [Tofu]
+134A7.......: NewGardiner
 134A8..134AC: UnicodiaSesh
-134AD.......: [Tofu]
+134AD.......: NewGardiner
 134AE, 134AF: UnicodiaSesh
-134B0..134B2: [Tofu]
+134B0..134B2: NewGardiner
 134B3.......: UnicodiaSesh
-134B4..134B6: [Tofu]
+134B4..134B6: NewGardiner
 134B7.......: UnicodiaSesh
-134B8.......: [Tofu]
+134B8.......: NewGardiner
 134B9, 134BA: UnicodiaSesh
-134BB.......: [Tofu]
+134BB.......: NewGardiner
 134BC..134BF: UnicodiaSesh
-134C0.......: [Tofu]
+134C0.......: NewGardiner
 134C1..134C3: UnicodiaSesh
-134C4.......: [Tofu]
+134C4.......: NewGardiner
 134C5..134C7: UnicodiaSesh
-134C8..134CA: [Tofu]
+134C8..134CA: NewGardiner
 134CB.......: UnicodiaSesh
-134CC, 134CD: [Tofu]
+134CC.......: [Tofu]
+134CD.......: NewGardiner
 134CE..134D1: UnicodiaSesh
-134D2.......: [Tofu]
+134D2.......: NewGardiner
 134D3..134D6: UnicodiaSesh
-134D7, 134D8: [Tofu]
+134D7, 134D8: NewGardiner
 134D9.......: UnicodiaSesh
-134DA.......: [Tofu]
+134DA.......: NewGardiner
 134DB..134DF: UnicodiaSesh
-134E0..134E3: [Tofu]
+134E0..134E3: NewGardiner
 134E4.......: UnicodiaSesh
-134E5.......: [Tofu]
+134E5.......: NewGardiner
 134E6.......: UnicodiaSesh
-134E7..134E9: [Tofu]
+134E7..134E9: NewGardiner
 134EA.......: UnicodiaSesh
-134EB.......: [Tofu]
+134EB.......: NewGardiner
 134EC, 134ED: UnicodiaSesh
-134EE..134F0: [Tofu]
+134EE..134F0: NewGardiner
 134F1..134F5: UnicodiaSesh
-134F6, 134F7: [Tofu]
+134F6, 134F7: NewGardiner
 134F8.......: UnicodiaSesh
-134F9.......: [Tofu]
+134F9.......: NewGardiner
 134FA..134FE: UnicodiaSesh
-134FF.......: [Tofu]
+134FF.......: NewGardiner
 13500, 13501: UnicodiaSesh
-13502.......: [Tofu]
+13502.......: NewGardiner
 13503..13506: UnicodiaSesh
-13507.......: [Tofu]
+13507.......: NewGardiner
 13508.......: UnicodiaSesh
-13509..1350E: [Tofu]
+13509..1350E: NewGardiner
 1350F.......: UnicodiaSesh
-13510..13514: [Tofu]
+13510..13514: NewGardiner
 13515.......: UnicodiaSesh
-13516.......: [Tofu]
+13516.......: NewGardiner
 13517.......: UnicodiaSesh
-13518.......: [Tofu]
+13518.......: NewGardiner
 13519..1351B: UnicodiaSesh
-1351C.......: [Tofu]
+1351C.......: NewGardiner
 1351D, 1351E: UnicodiaSesh
-1351F, 13520: [Tofu]
+1351F, 13520: NewGardiner
 13521..13525: UnicodiaSesh
-13526..13528: [Tofu]
+13526..13528: NewGardiner
 13529.......: UnicodiaSesh
-1352A.......: [Tofu]
+1352A.......: NewGardiner
 1352B..1352D: UnicodiaSesh
-1352E.......: [Tofu]
+1352E.......: NewGardiner
 1352F..13532: UnicodiaSesh
-13533, 13534: [Tofu]
+13533, 13534: NewGardiner
 13535.......: UnicodiaSesh
-13536.......: [Tofu]
+13536.......: NewGardiner
 13537.......: UnicodiaSesh
-13538, 13539: [Tofu]
+13538, 13539: NewGardiner
 1353A..13540: UnicodiaSesh
-13541.......: [Tofu]
+13541.......: NewGardiner
 13542..13547: UnicodiaSesh
-13548.......: [Tofu]
+13548.......: NewGardiner
 13549..1354C: UnicodiaSesh
-1354D.......: [Tofu]
+1354D.......: NewGardiner
 1354E.......: UnicodiaSesh
-1354F..13551: [Tofu]
+1354F..13551: NewGardiner
 13552, 13553: UnicodiaSesh
-13554.......: [Tofu]
+13554.......: NewGardiner
 13555.......: UnicodiaSesh
-13556..13559: [Tofu]
+13556..13559: NewGardiner
 1355A, 1355B: UnicodiaSesh
-1355C.......: [Tofu]
+1355C.......: NewGardiner
 1355D..13560: UnicodiaSesh
-13561, 13562: [Tofu]
+13561, 13562: NewGardiner
 13563.......: UnicodiaSesh
-13564.......: [Tofu]
+13564.......: NewGardiner
 13565..1356B: UnicodiaSesh
-1356C.......: [Tofu]
+1356C.......: NewGardiner
 1356D..13571: UnicodiaSesh
-13572.......: [Tofu]
+13572.......: NewGardiner
 13573.......: UnicodiaSesh
-13574.......: [Tofu]
+13574.......: NewGardiner
 13575..13577: UnicodiaSesh
-13578.......: [Tofu]
+13578.......: NewGardiner
 13579..1357D: UnicodiaSesh
-1357E.......: [Tofu]
+1357E.......: NewGardiner
 1357F..13581: UnicodiaSesh
-13582.......: [Tofu]
+13582.......: NewGardiner
 13583, 13584: UnicodiaSesh
-13585.......: [Tofu]
+13585.......: NewGardiner
 13586..13589: UnicodiaSesh
-1358A..13590: [Tofu]
+1358A..13590: NewGardiner
 13591.......: UnicodiaSesh
-13592.......: [Tofu]
+13592.......: NewGardiner
 13593, 13594: UnicodiaSesh
-13595.......: [Tofu]
+13595.......: NewGardiner
 13596.......: UnicodiaSesh
-13597..13599: [Tofu]
+13597..13599: NewGardiner
 1359A..1359C: UnicodiaSesh
-1359D.......: [Tofu]
+1359D.......: NewGardiner
 1359E.......: UnicodiaSesh
-1359F.......: [Tofu]
+1359F.......: NewGardiner
 135A0.......: UnicodiaSesh
-135A1.......: [Tofu]
+135A1.......: NewGardiner
 135A2..135A5: UnicodiaSesh
-135A6..135A9: [Tofu]
+135A6..135A9: NewGardiner
 135AA.......: UnicodiaSesh
-135AB..135AE: [Tofu]
+135AB..135AE: NewGardiner
 135AF, 135B0: UnicodiaSesh
-135B1..135B5: [Tofu]
+135B1..135B5: NewGardiner
 135B6..135B8: UnicodiaSesh
-135B9..135BB: [Tofu]
+135B9..135BB: NewGardiner
 135BC..135C2: UnicodiaSesh
-135C3, 135C4: [Tofu]
+135C3, 135C4: NewGardiner
 135C5, 135C6: UnicodiaSesh
-135C7..135C9: [Tofu]
+135C7..135C9: NewGardiner
 135CA.......: UnicodiaSesh
-135CB.......: [Tofu]
+135CB.......: NewGardiner
 135CC.......: UnicodiaSesh
-135CD.......: [Tofu]
+135CD.......: NewGardiner
 135CE..135D2: UnicodiaSesh
-135D3, 135D4: [Tofu]
+135D3, 135D4: NewGardiner
 135D5..135D7: UnicodiaSesh
-135D8, 135D9: [Tofu]
+135D8, 135D9: NewGardiner
 135DA, 135DB: UnicodiaSesh
-135DC, 135DD: [Tofu]
+135DC, 135DD: NewGardiner
 135DE, 135DF: UnicodiaSesh
-135E0.......: [Tofu]
+135E0.......: NewGardiner
 135E1..135E6: UnicodiaSesh
-135E7, 135E8: [Tofu]
+135E7, 135E8: NewGardiner
 135E9, 135EA: UnicodiaSesh
-135EB..135EE: [Tofu]
+135EB.......: NewGardiner
+135EC.......: [Tofu]
+135ED, 135EE: NewGardiner
 135EF.......: UnicodiaSesh
-135F0.......: [Tofu]
+135F0.......: NewGardiner
 135F1.......: UnicodiaSesh
-135F2..135FA: [Tofu]
+135F2..135FA: NewGardiner
 135FB.......: UnicodiaSesh
-135FC, 135FD: [Tofu]
+135FC, 135FD: NewGardiner
 135FE..13600: UnicodiaSesh
-13601.......: [Tofu]
+13601.......: NewGardiner
 13602.......: UnicodiaSesh
-13603.......: [Tofu]
+13603.......: NewGardiner
 13604..13606: UnicodiaSesh
-13607.......: [Tofu]
+13607.......: NewGardiner
 13608..1360A: UnicodiaSesh
-1360B.......: [Tofu]
+1360B.......: NewGardiner
 1360C..1360F: UnicodiaSesh
-13610.......: [Tofu]
+13610.......: NewGardiner
 13611.......: UnicodiaSesh
-13612.......: [Tofu]
+13612.......: NewGardiner
 13613..13618: UnicodiaSesh
-13619.......: [Tofu]
+13619.......: NewGardiner
 1361A..1361F: UnicodiaSesh
-13620..13622: [Tofu]
+13620..13622: NewGardiner
 13623..13625: UnicodiaSesh
-13626.......: [Tofu]
+13626.......: NewGardiner
 13627.......: UnicodiaSesh
-13628.......: [Tofu]
+13628.......: NewGardiner
 13629.......: UnicodiaSesh
-1362A.......: [Tofu]
+1362A.......: NewGardiner
 1362B.......: UnicodiaSesh
-1362C, 1362D: [Tofu]
+1362C, 1362D: NewGardiner
 1362E..13631: UnicodiaSesh
-13632, 13633: [Tofu]
+13632, 13633: NewGardiner
 13634..13638: UnicodiaSesh
-13639.......: [Tofu]
+13639.......: NewGardiner
 1363A.......: UnicodiaSesh
-1363B, 1363C: [Tofu]
+1363B, 1363C: NewGardiner
 1363D, 1363E: UnicodiaSesh
-1363F.......: [Tofu]
+1363F.......: NewGardiner
 13640, 13641: UnicodiaSesh
-13642.......: [Tofu]
+13642.......: NewGardiner
 13643..13645: UnicodiaSesh
-13646, 13647: [Tofu]
+13646, 13647: NewGardiner
 13648, 13649: UnicodiaSesh
-1364A.......: [Tofu]
+1364A.......: NewGardiner
 1364B..1364F: UnicodiaSesh
-13650..13654: [Tofu]
+13650..13654: NewGardiner
 13655.......: UnicodiaSesh
-13656, 13657: [Tofu]
+13656, 13657: NewGardiner
 13658..1365F: UnicodiaSesh
-13660, 13661: [Tofu]
+13660, 13661: NewGardiner
 13662.......: UnicodiaSesh
-13663.......: [Tofu]
+13663.......: NewGardiner
 13664..1366D: UnicodiaSesh
-1366E..13670: [Tofu]
+1366E..13670: NewGardiner
 13671.......: UnicodiaSesh
-13672.......: [Tofu]
+13672.......: NewGardiner
 13673.......: UnicodiaSesh
-13674.......: [Tofu]
+13674.......: NewGardiner
 13675, 13676: UnicodiaSesh
-13677.......: [Tofu]
+13677.......: NewGardiner
 13678..1367D: UnicodiaSesh
-1367E, 1367F: [Tofu]
+1367E, 1367F: NewGardiner
 13680.......: UnicodiaSesh
-13681..13683: [Tofu]
+13681..13683: NewGardiner
 13684.......: UnicodiaSesh
-13685..1368A: [Tofu]
+13685..1368A: NewGardiner
 1368B..1368D: UnicodiaSesh
-1368E.......: [Tofu]
+1368E.......: NewGardiner
 1368F..13692: UnicodiaSesh
-13693..13696: [Tofu]
+13693..13696: NewGardiner
 13697..136A1: UnicodiaSesh
-136A2.......: [Tofu]
+136A2.......: NewGardiner
 136A3..136AD: UnicodiaSesh
-136AE, 136AF: [Tofu]
+136AE, 136AF: NewGardiner
 136B0..136B5: UnicodiaSesh
-136B6.......: [Tofu]
+136B6.......: NewGardiner
 136B7, 136B8: UnicodiaSesh
-136B9.......: [Tofu]
+136B9.......: NewGardiner
 136BA..136BC: UnicodiaSesh
-136BD.......: [Tofu]
+136BD.......: NewGardiner
 136BE, 136BF: UnicodiaSesh
-136C0, 136C1: [Tofu]
+136C0, 136C1: NewGardiner
 136C2..136C5: UnicodiaSesh
-136C6, 136C7: [Tofu]
+136C6, 136C7: NewGardiner
 136C8..136CA: UnicodiaSesh
-136CB, 136CC: [Tofu]
+136CB, 136CC: NewGardiner
 136CD..136D1: UnicodiaSesh
-136D2.......: [Tofu]
+136D2.......: NewGardiner
 136D3..136D6: UnicodiaSesh
-136D7.......: [Tofu]
+136D7.......: NewGardiner
 136D8.......: UnicodiaSesh
-136D9.......: [Tofu]
+136D9.......: NewGardiner
 136DA..136DD: UnicodiaSesh
-136DE.......: [Tofu]
+136DE.......: NewGardiner
 136DF..136E9: UnicodiaSesh
-136EA.......: [Tofu]
+136EA.......: NewGardiner
 136EB..136FE: UnicodiaSesh
-136FF.......: [Tofu]
+136FF.......: NewGardiner
 13700, 13701: UnicodiaSesh
-13702.......: [Tofu]
+13702.......: NewGardiner
 13703.......: UnicodiaSesh
-13704.......: [Tofu]
+13704.......: NewGardiner
 13705..13707: UnicodiaSesh
-13708.......: [Tofu]
+13708.......: NewGardiner
 13709.......: UnicodiaSesh
-1370A.......: [Tofu]
+1370A.......: NewGardiner
 1370B.......: UnicodiaSesh
-1370C.......: [Tofu]
+1370C.......: NewGardiner
 1370D, 1370E: UnicodiaSesh
-1370F.......: [Tofu]
+1370F.......: NewGardiner
 13710.......: UnicodiaSesh
-13711, 13712: [Tofu]
+13711.......: NewGardiner
+13712.......: [Tofu]
 13713..1371A: UnicodiaSesh
-1371B.......: [Tofu]
+1371B.......: NewGardiner
 1371C, 1371D: UnicodiaSesh
-1371E, 1371F: [Tofu]
+1371E, 1371F: NewGardiner
 13720, 13721: UnicodiaSesh
-13722, 13723: [Tofu]
+13722, 13723: NewGardiner
 13724, 13725: UnicodiaSesh
-13726.......: [Tofu]
+13726.......: NewGardiner
 13727, 13728: UnicodiaSesh
-13729.......: [Tofu]
+13729.......: NewGardiner
 1372A..1372C: UnicodiaSesh
 1372D.......: [Tofu]
 1372E..13730: UnicodiaSesh
-13731.......: [Tofu]
+13731.......: NewGardiner
 13732..13735: UnicodiaSesh
-13736.......: [Tofu]
+13736.......: NewGardiner
 13737..13739: UnicodiaSesh
-1373A..1373C: [Tofu]
+1373A..1373C: NewGardiner
 1373D..13743: UnicodiaSesh
-13744.......: [Tofu]
+13744.......: NewGardiner
 13745, 13746: UnicodiaSesh
-13747.......: [Tofu]
+13747.......: NewGardiner
 13748..1374A: UnicodiaSesh
-1374B, 1374C: [Tofu]
+1374B.......: NewGardiner
+1374C.......: [Tofu]
 1374D..13751: UnicodiaSesh
-13752..13754: [Tofu]
+13752..13754: NewGardiner
 13755..13757: UnicodiaSesh
-13758.......: [Tofu]
+13758.......: NewGardiner
 13759..1375C: UnicodiaSesh
-1375D.......: [Tofu]
+1375D.......: NewGardiner
 1375E, 1375F: UnicodiaSesh
-13760.......: [Tofu]
+13760.......: NewGardiner
 13761..1376B: UnicodiaSesh
-1376C.......: [Tofu]
+1376C.......: NewGardiner
 1376D..13775: UnicodiaSesh
-13776.......: [Tofu]
+13776.......: NewGardiner
 13777..1377A: UnicodiaSesh
-1377B.......: [Tofu]
+1377B.......: NewGardiner
 1377C, 1377D: UnicodiaSesh
-1377E, 1377F: [Tofu]
+1377E, 1377F: NewGardiner
 13780..13783: UnicodiaSesh
-13784.......: [Tofu]
+13784.......: NewGardiner
 13785..13787: UnicodiaSesh
-13788, 13789: [Tofu]
+13788, 13789: NewGardiner
 1378A.......: UnicodiaSesh
-1378B.......: [Tofu]
+1378B.......: NewGardiner
 1378C..1378E: UnicodiaSesh
-1378F.......: [Tofu]
+1378F.......: NewGardiner
 13790..13792: UnicodiaSesh
-13793, 13794: [Tofu]
+13793, 13794: NewGardiner
 13795..137A2: UnicodiaSesh
-137A3.......: [Tofu]
+137A3.......: NewGardiner
 137A4..137A7: UnicodiaSesh
-137A8, 137A9: [Tofu]
+137A8, 137A9: NewGardiner
 137AA..137B0: UnicodiaSesh
-137B1, 137B2: [Tofu]
+137B1, 137B2: NewGardiner
 137B3..137B9: UnicodiaSesh
-137BA.......: [Tofu]
+137BA.......: NewGardiner
 137BB..137C3: UnicodiaSesh
-137C4.......: [Tofu]
+137C4.......: NewGardiner
 137C5.......: UnicodiaSesh
-137C6..137CB: [Tofu]
+137C6..137C9: NewGardiner
+137CA.......: [Tofu]
+137CB.......: NewGardiner
 137CC, 137CD: UnicodiaSesh
-137CE.......: [Tofu]
+137CE.......: NewGardiner
 137CF..137D1: UnicodiaSesh
-137D2.......: [Tofu]
+137D2.......: NewGardiner
 137D3.......: UnicodiaSesh
-137D4.......: [Tofu]
+137D4.......: NewGardiner
 137D5..137DD: UnicodiaSesh
-137DE.......: [Tofu]
+137DE.......: NewGardiner
 137DF..137E1: UnicodiaSesh
-137E2.......: [Tofu]
+137E2.......: NewGardiner
 137E3..137E7: UnicodiaSesh
-137E8..137EB: [Tofu]
+137E8..137EB: NewGardiner
 137EC.......: UnicodiaSesh
-137ED, 137EE: [Tofu]
+137ED, 137EE: NewGardiner
 137EF.......: UnicodiaSesh
-137F0.......: [Tofu]
+137F0.......: NewGardiner
 137F1, 137F2: UnicodiaSesh
-137F3.......: [Tofu]
+137F3.......: NewGardiner
 137F4, 137F5: UnicodiaSesh
-137F6.......: [Tofu]
+137F6.......: NewGardiner
 137F7..137FB: UnicodiaSesh
-137FC..137FE: [Tofu]
+137FC..137FE: NewGardiner
 137FF, 13800: UnicodiaSesh
-13801..13804: [Tofu]
+13801..13803: NewGardiner
+13804.......: [Tofu]
 13805.......: UnicodiaSesh
-13806..13809: [Tofu]
+13806.......: [Tofu]
+13807..13809: NewGardiner
 1380A..1380E: UnicodiaSesh
-1380F..13811: [Tofu]
+1380F..13811: NewGardiner
 13812..13814: UnicodiaSesh
-13815.......: [Tofu]
+13815.......: NewGardiner
 13816.......: UnicodiaSesh
-13817..1381A: [Tofu]
+13817..1381A: NewGardiner
 1381B.......: UnicodiaSesh
-1381C.......: [Tofu]
+1381C.......: NewGardiner
 1381D.......: UnicodiaSesh
-1381E.......: [Tofu]
+1381E.......: NewGardiner
 1381F..13828: UnicodiaSesh
-13829, 1382A: [Tofu]
+13829, 1382A: NewGardiner
 1382B, 1382C: UnicodiaSesh
-1382D, 1382E: [Tofu]
+1382D, 1382E: NewGardiner
 1382F..13834: UnicodiaSesh
-13835, 13836: [Tofu]
+13835, 13836: NewGardiner
 13837..1383B: UnicodiaSesh
-1383C.......: [Tofu]
+1383C.......: NewGardiner
 1383D, 1383E: UnicodiaSesh
-1383F.......: [Tofu]
+1383F.......: NewGardiner
 13840.......: UnicodiaSesh
-13841, 13842: [Tofu]
+13841, 13842: NewGardiner
 13843..13845: UnicodiaSesh
-13846, 13847: [Tofu]
+13846, 13847: NewGardiner
 13848..1384A: UnicodiaSesh
-1384B.......: [Tofu]
+1384B.......: NewGardiner
 1384C..13852: UnicodiaSesh
-13853.......: [Tofu]
+13853.......: NewGardiner
 13854..13858: UnicodiaSesh
-13859.......: [Tofu]
+13859.......: NewGardiner
 1385A, 1385B: UnicodiaSesh
-1385C, 1385D: [Tofu]
+1385C, 1385D: NewGardiner
 1385E, 1385F: UnicodiaSesh
-13860.......: [Tofu]
+13860.......: NewGardiner
 13861.......: UnicodiaSesh
-13862, 13863: [Tofu]
+13862, 13863: NewGardiner
 13864.......: UnicodiaSesh
-13865, 13866: [Tofu]
+13865, 13866: NewGardiner
 13867..13869: UnicodiaSesh
-1386A..1386C: [Tofu]
+1386A..1386C: NewGardiner
 1386D..13874: UnicodiaSesh
-13875.......: [Tofu]
+13875.......: NewGardiner
 13876..13886: UnicodiaSesh
-13887..1388B: [Tofu]
+13887.......: [Tofu]
+13888..1388B: NewGardiner
 1388C, 1388D: UnicodiaSesh
-1388E, 1388F: [Tofu]
+1388E, 1388F: NewGardiner
 13890, 13891: UnicodiaSesh
-13892, 13893: [Tofu]
+13892, 13893: NewGardiner
 13894.......: UnicodiaSesh
-13895..13897: [Tofu]
+13895..13897: NewGardiner
 13898.......: UnicodiaSesh
-13899.......: [Tofu]
+13899.......: NewGardiner
 1389A.......: UnicodiaSesh
-1389B, 1389C: [Tofu]
+1389B, 1389C: NewGardiner
 1389D..138A3: UnicodiaSesh
-138A4.......: [Tofu]
+138A4.......: NewGardiner
 138A5..138A8: UnicodiaSesh
-138A9.......: [Tofu]
+138A9.......: NewGardiner
 138AA..138AC: UnicodiaSesh
-138AD.......: [Tofu]
+138AD.......: NewGardiner
 138AE..138B7: UnicodiaSesh
-138B8.......: [Tofu]
+138B8.......: NewGardiner
 138B9.......: UnicodiaSesh
-138BA, 138BB: [Tofu]
+138BA, 138BB: NewGardiner
 138BC..138C0: UnicodiaSesh
-138C1..138C7: [Tofu]
+138C1..138C7: NewGardiner
 138C8..138CD: UnicodiaSesh
-138CE.......: [Tofu]
+138CE.......: NewGardiner
 138CF, 138D0: UnicodiaSesh
-138D1, 138D2: [Tofu]
+138D1, 138D2: NewGardiner
 138D3..138D8: UnicodiaSesh
-138D9.......: [Tofu]
+138D9.......: NewGardiner
 138DA..138DE: UnicodiaSesh
-138DF..138E1: [Tofu]
+138DF..138E1: NewGardiner
 138E2.......: UnicodiaSesh
-138E3, 138E4: [Tofu]
+138E3, 138E4: NewGardiner
 138E5..138E7: UnicodiaSesh
-138E8, 138E9: [Tofu]
+138E8, 138E9: NewGardiner
 138EA, 138EB: UnicodiaSesh
-138EC.......: [Tofu]
+138EC.......: NewGardiner
 138ED.......: UnicodiaSesh
-138EE..138F0: [Tofu]
+138EE..138F0: NewGardiner
 138F1..138F8: UnicodiaSesh
-138F9.......: [Tofu]
+138F9.......: NewGardiner
 138FA.......: UnicodiaSesh
-138FB.......: [Tofu]
+138FB.......: NewGardiner
 138FC, 138FD: UnicodiaSesh
-138FE.......: [Tofu]
+138FE.......: NewGardiner
 138FF.......: UnicodiaSesh
-13900.......: [Tofu]
+13900.......: NewGardiner
 13901..13907: UnicodiaSesh
-13908.......: [Tofu]
+13908.......: NewGardiner
 13909..1390B: UnicodiaSesh
-1390C..1390F: [Tofu]
+1390C..1390F: NewGardiner
 13910, 13911: UnicodiaSesh
-13912.......: [Tofu]
+13912.......: NewGardiner
 13913.......: UnicodiaSesh
-13914.......: [Tofu]
+13914.......: NewGardiner
 13915..13921: UnicodiaSesh
-13922.......: [Tofu]
+13922.......: NewGardiner
 13923, 13924: UnicodiaSesh
-13925, 13926: [Tofu]
+13925, 13926: NewGardiner
 13927.......: UnicodiaSesh
-13928.......: [Tofu]
+13928.......: NewGardiner
 13929, 1392A: UnicodiaSesh
-1392B..1392E: [Tofu]
+1392B..1392E: NewGardiner
 1392F..13932: UnicodiaSesh
-13933, 13934: [Tofu]
+13933, 13934: NewGardiner
 13935.......: UnicodiaSesh
-13936.......: [Tofu]
+13936.......: NewGardiner
 13937.......: UnicodiaSesh
-13938, 13939: [Tofu]
+13938, 13939: NewGardiner
 1393A.......: UnicodiaSesh
 1393B.......: [Tofu]
 1393C.......: UnicodiaSesh
-1393D, 1393E: [Tofu]
+1393D, 1393E: NewGardiner
 1393F..13943: UnicodiaSesh
-13944.......: [Tofu]
+13944.......: NewGardiner
 13945..1394C: UnicodiaSesh
-1394D.......: [Tofu]
+1394D.......: NewGardiner
 1394E..13971: UnicodiaSesh
-13972, 13973: [Tofu]
+13972, 13973: NewGardiner
 13974.......: UnicodiaSesh
-13975.......: [Tofu]
+13975.......: NewGardiner
 13976.......: UnicodiaSesh
-13977.......: [Tofu]
+13977.......: NewGardiner
 13978..1397C: UnicodiaSesh
-1397D, 1397E: [Tofu]
+1397D, 1397E: NewGardiner
 1397F..13982: UnicodiaSesh
 13983.......: [Tofu]
 13984.......: UnicodiaSesh
-13985.......: [Tofu]
+13985.......: NewGardiner
 13986..13988: UnicodiaSesh
-13989.......: [Tofu]
+13989.......: NewGardiner
 1398A.......: UnicodiaSesh
-1398B.......: [Tofu]
+1398B.......: NewGardiner
 1398C..1398E: UnicodiaSesh
-1398F.......: [Tofu]
+1398F.......: NewGardiner
 13990.......: UnicodiaSesh
-13991.......: [Tofu]
+13991.......: NewGardiner
 13992..13996: UnicodiaSesh
-13997, 13998: [Tofu]
+13997, 13998: NewGardiner
 13999.......: UnicodiaSesh
-1399A.......: [Tofu]
+1399A.......: NewGardiner
 1399B..1399F: UnicodiaSesh
-139A0.......: [Tofu]
+139A0.......: NewGardiner
 139A1.......: UnicodiaSesh
-139A2.......: [Tofu]
+139A2.......: NewGardiner
 139A3.......: UnicodiaSesh
-139A4, 139A5: [Tofu]
+139A4, 139A5: NewGardiner
 139A6..139AA: UnicodiaSesh
-139AB.......: [Tofu]
+139AB.......: NewGardiner
 139AC..139AE: UnicodiaSesh
-139AF.......: [Tofu]
+139AF.......: NewGardiner
 139B0..139B2: UnicodiaSesh
-139B3..139B7: [Tofu]
+139B3..139B7: NewGardiner
 139B8.......: UnicodiaSesh
-139B9, 139BA: [Tofu]
+139B9, 139BA: NewGardiner
 139BB.......: UnicodiaSesh
-139BC.......: [Tofu]
+139BC.......: NewGardiner
 139BD..139C0: UnicodiaSesh
-139C1.......: [Tofu]
+139C1.......: NewGardiner
 139C2.......: UnicodiaSesh
-139C3.......: [Tofu]
+139C3.......: NewGardiner
 139C4.......: UnicodiaSesh
-139C5.......: [Tofu]
+139C5.......: NewGardiner
 139C6..139C8: UnicodiaSesh
-139C9, 139CA: [Tofu]
+139C9, 139CA: NewGardiner
 139CB..139CE: UnicodiaSesh
-139CF.......: [Tofu]
+139CF.......: NewGardiner
 139D0.......: UnicodiaSesh
-139D1.......: [Tofu]
+139D1.......: NewGardiner
 139D2..139D4: UnicodiaSesh
-139D5..139D7: [Tofu]
+139D5..139D7: NewGardiner
 139D8..139DD: UnicodiaSesh
-139DE.......: [Tofu]
+139DE.......: NewGardiner
 139DF..139E8: UnicodiaSesh
-139E9, 139EA: [Tofu]
+139E9, 139EA: NewGardiner
 139EB.......: UnicodiaSesh
-139EC.......: [Tofu]
+139EC.......: NewGardiner
 139ED..139F8: UnicodiaSesh
-139F9, 139FA: [Tofu]
+139F9, 139FA: NewGardiner
 139FB, 139FC: UnicodiaSesh
-139FD.......: [Tofu]
+139FD.......: NewGardiner
 139FE.......: UnicodiaSesh
-139FF.......: [Tofu]
+139FF.......: NewGardiner
 13A00, 13A01: UnicodiaSesh
-13A02.......: [Tofu]
+13A02.......: NewGardiner
 13A03..13A05: UnicodiaSesh
-13A06.......: [Tofu]
+13A06.......: NewGardiner
 13A07.......: UnicodiaSesh
-13A08, 13A09: [Tofu]
+13A08, 13A09: NewGardiner
 13A0A..13A0C: UnicodiaSesh
-13A0D, 13A0E: [Tofu]
+13A0D, 13A0E: NewGardiner
 13A0F..13A13: UnicodiaSesh
-13A14.......: [Tofu]
+13A14.......: NewGardiner
 13A15..13A18: UnicodiaSesh
-13A19, 13A1A: [Tofu]
+13A19, 13A1A: NewGardiner
 13A1B..13A1D: UnicodiaSesh
-13A1E, 13A1F: [Tofu]
+13A1E, 13A1F: NewGardiner
 13A20.......: UnicodiaSesh
-13A21.......: [Tofu]
+13A21.......: NewGardiner
 13A22..13A25: UnicodiaSesh
-13A26.......: [Tofu]
+13A26.......: NewGardiner
 13A27..13A34: UnicodiaSesh
-13A35.......: [Tofu]
+13A35.......: NewGardiner
 13A36.......: UnicodiaSesh
-13A37.......: [Tofu]
+13A37.......: NewGardiner
 13A38..13A40: UnicodiaSesh
-13A41.......: [Tofu]
+13A41.......: NewGardiner
 13A42, 13A43: UnicodiaSesh
-13A44.......: [Tofu]
+13A44.......: NewGardiner
 13A45..13A58: UnicodiaSesh
-13A59.......: [Tofu]
+13A59.......: NewGardiner
 13A5A..13A62: UnicodiaSesh
-13A63.......: [Tofu]
+13A63.......: NewGardiner
 13A64, 13A65: UnicodiaSesh
-13A66.......: [Tofu]
+13A66.......: NewGardiner
 13A67, 13A68: UnicodiaSesh
-13A69.......: [Tofu]
+13A69.......: NewGardiner
 13A6A..13A72: UnicodiaSesh
-13A73, 13A74: [Tofu]
+13A73, 13A74: NewGardiner
 13A75..13A7B: UnicodiaSesh
-13A7C.......: [Tofu]
+13A7C.......: NewGardiner
 13A7D..13A80: UnicodiaSesh
-13A81.......: [Tofu]
+13A81.......: NewGardiner
 13A82.......: UnicodiaSesh
-13A83, 13A84: [Tofu]
+13A83, 13A84: NewGardiner
 13A85..13A8A: UnicodiaSesh
-13A8B.......: [Tofu]
+13A8B.......: NewGardiner
 13A8C.......: UnicodiaSesh
-13A8D.......: [Tofu]
+13A8D.......: NewGardiner
 13A8E.......: UnicodiaSesh
-13A8F.......: [Tofu]
+13A8F.......: NewGardiner
 13A90.......: UnicodiaSesh
-13A91..13A93: [Tofu]
+13A91..13A93: NewGardiner
 13A94..13A98: UnicodiaSesh
-13A99.......: [Tofu]
+13A99.......: NewGardiner
 13A9A..13A9C: UnicodiaSesh
-13A9D.......: [Tofu]
+13A9D.......: NewGardiner
 13A9E.......: UnicodiaSesh
-13A9F..13AA1: [Tofu]
+13A9F..13AA1: NewGardiner
 13AA2, 13AA3: UnicodiaSesh
-13AA4.......: [Tofu]
+13AA4.......: NewGardiner
 13AA5, 13AA6: UnicodiaSesh
-13AA7.......: [Tofu]
+13AA7.......: NewGardiner
 13AA8..13AB7: UnicodiaSesh
-13AB8, 13AB9: [Tofu]
+13AB8, 13AB9: NewGardiner
 13ABA..13ABC: UnicodiaSesh
-13ABD, 13ABE: [Tofu]
+13ABD, 13ABE: NewGardiner
 13ABF..13AC4: UnicodiaSesh
-13AC5.......: [Tofu]
+13AC5.......: NewGardiner
 13AC6..13AD0: UnicodiaSesh
-13AD1.......: [Tofu]
+13AD1.......: NewGardiner
 13AD2..13AD4: UnicodiaSesh
-13AD5, 13AD6: [Tofu]
+13AD5, 13AD6: NewGardiner
 13AD7..13AD9: UnicodiaSesh
-13ADA.......: [Tofu]
+13ADA.......: NewGardiner
 13ADB..13AE0: UnicodiaSesh
-13AE1..13AE4: [Tofu]
+13AE1..13AE4: NewGardiner
 13AE5.......: UnicodiaSesh
-13AE6, 13AE7: [Tofu]
+13AE6, 13AE7: NewGardiner
 13AE8.......: UnicodiaSesh
-13AE9.......: [Tofu]
+13AE9.......: NewGardiner
 13AEA..13AEE: UnicodiaSesh
-13AEF.......: [Tofu]
+13AEF.......: NewGardiner
 13AF0..13AF6: UnicodiaSesh
-13AF7.......: [Tofu]
+13AF7.......: NewGardiner
 13AF8..13AFA: UnicodiaSesh
-13AFB.......: [Tofu]
+13AFB.......: NewGardiner
 13AFC..13AFE: UnicodiaSesh
-13AFF.......: [Tofu]
+13AFF.......: NewGardiner
 13B00.......: UnicodiaSesh
-13B01.......: [Tofu]
+13B01.......: NewGardiner
 13B02..13B09: UnicodiaSesh
-13B0A.......: [Tofu]
+13B0A.......: NewGardiner
 13B0B.......: UnicodiaSesh
-13B0C.......: [Tofu]
+13B0C.......: NewGardiner
 13B0D.......: UnicodiaSesh
-13B0E.......: [Tofu]
+13B0E.......: NewGardiner
 13B0F..13B11: UnicodiaSesh
-13B12.......: [Tofu]
+13B12.......: NewGardiner
 13B13..13B1B: UnicodiaSesh
-13B1C.......: [Tofu]
+13B1C.......: NewGardiner
 13B1D.......: UnicodiaSesh
-13B1E.......: [Tofu]
+13B1E.......: NewGardiner
 13B1F.......: UnicodiaSesh
-13B20, 13B21: [Tofu]
+13B20, 13B21: NewGardiner
 13B22..13B25: UnicodiaSesh
-13B26.......: [Tofu]
+13B26.......: NewGardiner
 13B27..13B2F: UnicodiaSesh
-13B30, 13B31: [Tofu]
+13B30, 13B31: NewGardiner
 13B32, 13B33: UnicodiaSesh
-13B34, 13B35: [Tofu]
+13B34, 13B35: NewGardiner
 13B36..13B3A: UnicodiaSesh
-13B3B.......: [Tofu]
+13B3B.......: NewGardiner
 13B3C..13B3E: UnicodiaSesh
-13B3F.......: [Tofu]
+13B3F.......: NewGardiner
 13B40..13B49: UnicodiaSesh
-13B4A.......: [Tofu]
+13B4A.......: NewGardiner
 13B4B, 13B4C: UnicodiaSesh
-13B4D.......: [Tofu]
+13B4D.......: NewGardiner
 13B4E.......: UnicodiaSesh
-13B4F.......: [Tofu]
+13B4F.......: NewGardiner
 13B50, 13B51: UnicodiaSesh
-13B52, 13B53: [Tofu]
+13B52.......: [Tofu]
+13B53.......: NewGardiner
 13B54..13B57: UnicodiaSesh
-13B58.......: [Tofu]
+13B58.......: NewGardiner
 13B59..13B5C: UnicodiaSesh
-13B5D.......: [Tofu]
+13B5D.......: NewGardiner
 13B5E..13B60: UnicodiaSesh
-13B61.......: [Tofu]
+13B61.......: NewGardiner
 13B62..13B64: UnicodiaSesh
-13B65.......: [Tofu]
+13B65.......: NewGardiner
 13B66..13B69: UnicodiaSesh
-13B6A.......: [Tofu]
+13B6A.......: NewGardiner
 13B6B..13B6D: UnicodiaSesh
-13B6E.......: [Tofu]
+13B6E.......: NewGardiner
 13B6F, 13B70: UnicodiaSesh
-13B71.......: [Tofu]
+13B71.......: NewGardiner
 13B72.......: UnicodiaSesh
-13B73.......: [Tofu]
+13B73.......: NewGardiner
 13B74.......: UnicodiaSesh
-13B75.......: [Tofu]
+13B75.......: NewGardiner
 13B76.......: UnicodiaSesh
-13B77.......: [Tofu]
+13B77.......: NewGardiner
 13B78..13B7A: UnicodiaSesh
-13B7B.......: [Tofu]
+13B7B.......: NewGardiner
 13B7C..13B82: UnicodiaSesh
-13B83.......: [Tofu]
+13B83.......: NewGardiner
 13B84.......: UnicodiaSesh
-13B85.......: [Tofu]
+13B85.......: NewGardiner
 13B86..13B97: UnicodiaSesh
-13B98.......: [Tofu]
+13B98.......: NewGardiner
 13B99..13B9D: UnicodiaSesh
-13B9E, 13B9F: [Tofu]
+13B9E.......: [Tofu]
+13B9F.......: NewGardiner
 13BA0..13BA2: UnicodiaSesh
-13BA3.......: [Tofu]
+13BA3.......: NewGardiner
 13BA4..13BA8: UnicodiaSesh
-13BA9.......: [Tofu]
+13BA9.......: NewGardiner
 13BAA..13BAD: UnicodiaSesh
-13BAE.......: [Tofu]
+13BAE.......: NewGardiner
 13BAF..13BB3: UnicodiaSesh
-13BB4.......: [Tofu]
+13BB4.......: NewGardiner
 13BB5..13BB8: UnicodiaSesh
-13BB9.......: [Tofu]
+13BB9.......: NewGardiner
 13BBA..13BBC: UnicodiaSesh
-13BBD.......: [Tofu]
+13BBD.......: NewGardiner
 13BBE.......: UnicodiaSesh
-13BBF, 13BC0: [Tofu]
+13BBF, 13BC0: NewGardiner
 13BC1..13BC5: UnicodiaSesh
-13BC6.......: [Tofu]
+13BC6.......: NewGardiner
 13BC7, 13BC8: UnicodiaSesh
-13BC9.......: [Tofu]
+13BC9.......: NewGardiner
 13BCA..13BCC: UnicodiaSesh
-13BCD.......: [Tofu]
+13BCD.......: NewGardiner
 13BCE..13BD1: UnicodiaSesh
-13BD2, 13BD3: [Tofu]
+13BD2, 13BD3: NewGardiner
 13BD4.......: UnicodiaSesh
-13BD5.......: [Tofu]
+13BD5.......: NewGardiner
 13BD6..13BDC: UnicodiaSesh
-13BDD.......: [Tofu]
+13BDD.......: NewGardiner
 13BDE.......: UnicodiaSesh
-13BDF.......: [Tofu]
+13BDF.......: NewGardiner
 13BE0..13BE3: UnicodiaSesh
-13BE4.......: [Tofu]
+13BE4.......: NewGardiner
 13BE5..13BE7: UnicodiaSesh
-13BE8.......: [Tofu]
+13BE8.......: NewGardiner
 13BE9.......: UnicodiaSesh
-13BEA.......: [Tofu]
+13BEA.......: NewGardiner
 13BEB..13BF3: UnicodiaSesh
-13BF4.......: [Tofu]
+13BF4.......: NewGardiner
 13BF5..13C02: UnicodiaSesh
-13C03, 13C04: [Tofu]
+13C03, 13C04: NewGardiner
 13C05..13C10: UnicodiaSesh
-13C11.......: [Tofu]
+13C11.......: NewGardiner
 13C12.......: UnicodiaSesh
-13C13, 13C14: [Tofu]
+13C13, 13C14: NewGardiner
 13C15..13C19: UnicodiaSesh
-13C1A.......: [Tofu]
+13C1A.......: NewGardiner
 13C1B, 13C1C: UnicodiaSesh
-13C1D.......: [Tofu]
+13C1D.......: NewGardiner
 13C1E..13C2F: UnicodiaSesh
-13C30.......: [Tofu]
+13C30.......: NewGardiner
 13C31..13C35: UnicodiaSesh
-13C36.......: [Tofu]
+13C36.......: NewGardiner
 13C37.......: UnicodiaSesh
-13C38.......: [Tofu]
+13C38.......: NewGardiner
 13C39..13C3E: UnicodiaSesh
-13C3F.......: [Tofu]
+13C3F.......: NewGardiner
 13C40..13C42: UnicodiaSesh
-13C43.......: [Tofu]
+13C43.......: NewGardiner
 13C44, 13C45: UnicodiaSesh
-13C46.......: [Tofu]
+13C46.......: NewGardiner
 13C47..13C4D: UnicodiaSesh
-13C4E, 13C4F: [Tofu]
+13C4E, 13C4F: NewGardiner
 13C50..13C55: UnicodiaSesh
-13C56.......: [Tofu]
+13C56.......: NewGardiner
 13C57..13C59: UnicodiaSesh
-13C5A.......: [Tofu]
+13C5A.......: NewGardiner
 13C5B, 13C5C: UnicodiaSesh
-13C5D.......: [Tofu]
+13C5D.......: NewGardiner
 13C5E..13C71: UnicodiaSesh
-13C72, 13C73: [Tofu]
+13C72, 13C73: NewGardiner
 13C74.......: UnicodiaSesh
-13C75..13C77: [Tofu]
+13C75..13C77: NewGardiner
 13C78..13C7A: UnicodiaSesh
-13C7B.......: [Tofu]
+13C7B.......: NewGardiner
 13C7C..13C7E: UnicodiaSesh
-13C7F.......: [Tofu]
+13C7F.......: NewGardiner
 13C80..13C83: UnicodiaSesh
-13C84.......: [Tofu]
+13C84.......: NewGardiner
 13C85..13C8B: UnicodiaSesh
-13C8C.......: [Tofu]
+13C8C.......: NewGardiner
 13C8D.......: UnicodiaSesh
-13C8E, 13C8F: [Tofu]
+13C8E, 13C8F: NewGardiner
 13C90..13C92: UnicodiaSesh
-13C93..13C95: [Tofu]
+13C93..13C95: NewGardiner
 13C96.......: UnicodiaSesh
-13C97.......: [Tofu]
+13C97.......: NewGardiner
 13C98..13C9C: UnicodiaSesh
-13C9D.......: [Tofu]
+13C9D.......: NewGardiner
 13C9E.......: UnicodiaSesh
-13C9F.......: [Tofu]
+13C9F.......: NewGardiner
 13CA0.......: UnicodiaSesh
-13CA1, 13CA2: [Tofu]
+13CA1, 13CA2: NewGardiner
 13CA3..13CB2: UnicodiaSesh
-13CB3.......: [Tofu]
+13CB3.......: NewGardiner
 13CB4..13CB7: UnicodiaSesh
-13CB8.......: [Tofu]
+13CB8.......: NewGardiner
 13CB9.......: UnicodiaSesh
-13CBA.......: [Tofu]
+13CBA.......: NewGardiner
 13CBB..13CC5: UnicodiaSesh
-13CC6..13CC8: [Tofu]
+13CC6..13CC8: NewGardiner
 13CC9.......: UnicodiaSesh
-13CCA.......: [Tofu]
+13CCA.......: NewGardiner
 13CCB..13CCD: UnicodiaSesh
 13CCE.......: [Tofu]
 13CCF, 13CD0: UnicodiaSesh
-13CD1.......: [Tofu]
+13CD1.......: NewGardiner
 13CD2, 13CD3: UnicodiaSesh
-13CD4.......: [Tofu]
+13CD4.......: NewGardiner
 13CD5..13CD9: UnicodiaSesh
-13CDA.......: [Tofu]
+13CDA.......: NewGardiner
 13CDB, 13CDC: UnicodiaSesh
-13CDD.......: [Tofu]
+13CDD.......: NewGardiner
 13CDE, 13CDF: UnicodiaSesh
-13CE0.......: [Tofu]
+13CE0.......: NewGardiner
 13CE1..13CED: UnicodiaSesh
-13CEE.......: [Tofu]
+13CEE.......: NewGardiner
 13CEF..13CF2: UnicodiaSesh
-13CF3.......: [Tofu]
+13CF3.......: NewGardiner
 13CF4..13CF6: UnicodiaSesh
-13CF7.......: [Tofu]
+13CF7.......: NewGardiner
 13CF8.......: UnicodiaSesh
-13CF9.......: [Tofu]
+13CF9.......: NewGardiner
 13CFA..13D05: UnicodiaSesh
-13D06.......: [Tofu]
+13D06.......: NewGardiner
 13D07..13D0A: UnicodiaSesh
-13D0B.......: [Tofu]
+13D0B.......: NewGardiner
 13D0C..13D0E: UnicodiaSesh
-13D0F.......: [Tofu]
+13D0F.......: NewGardiner
 13D10.......: UnicodiaSesh
-13D11..13D13: [Tofu]
+13D11..13D13: NewGardiner
 13D14..13D2F: UnicodiaSesh
-13D30..13D33: [Tofu]
+13D30..13D33: NewGardiner
 13D34.......: UnicodiaSesh
-13D35..13D37: [Tofu]
+13D35..13D37: NewGardiner
 13D38..13D3C: UnicodiaSesh
-13D3D.......: [Tofu]
+13D3D.......: NewGardiner
 13D3E..13D41: UnicodiaSesh
-13D42..13D44: [Tofu]
+13D42..13D44: NewGardiner
 13D45.......: UnicodiaSesh
-13D46..13D48: [Tofu]
+13D46..13D48: NewGardiner
 13D49..13D51: UnicodiaSesh
-13D52.......: [Tofu]
+13D52.......: NewGardiner
 13D53..13D60: UnicodiaSesh
-13D61.......: [Tofu]
+13D61.......: NewGardiner
 13D62, 13D63: UnicodiaSesh
-13D64.......: [Tofu]
+13D64.......: NewGardiner
 13D65..13D71: UnicodiaSesh
-13D72.......: [Tofu]
+13D72.......: NewGardiner
 13D73.......: UnicodiaSesh
-13D74.......: [Tofu]
+13D74.......: NewGardiner
 13D75..13D7B: UnicodiaSesh
-13D7C.......: [Tofu]
+13D7C.......: NewGardiner
 13D7D..13D86: UnicodiaSesh
-13D87.......: [Tofu]
+13D87.......: NewGardiner
 13D88..13D8D: UnicodiaSesh
-13D8E.......: [Tofu]
+13D8E.......: NewGardiner
 13D8F.......: UnicodiaSesh
-13D90, 13D91: [Tofu]
+13D90, 13D91: NewGardiner
 13D92, 13D93: UnicodiaSesh
-13D94.......: [Tofu]
+13D94.......: NewGardiner
 13D95.......: UnicodiaSesh
-13D96.......: [Tofu]
+13D96.......: NewGardiner
 13D97.......: UnicodiaSesh
-13D98.......: [Tofu]
+13D98.......: NewGardiner
 13D99.......: UnicodiaSesh
-13D9A.......: [Tofu]
+13D9A.......: NewGardiner
 13D9B..13DA6: UnicodiaSesh
-13DA7, 13DA8: [Tofu]
+13DA7, 13DA8: NewGardiner
 13DA9.......: UnicodiaSesh
-13DAA.......: [Tofu]
+13DAA.......: NewGardiner
 13DAB..13DAD: UnicodiaSesh
-13DAE, 13DAF: [Tofu]
+13DAE, 13DAF: NewGardiner
 13DB0.......: UnicodiaSesh
-13DB1..13DB4: [Tofu]
+13DB1..13DB4: NewGardiner
 13DB5..13DBC: UnicodiaSesh
-13DBD..13DBF: [Tofu]
+13DBD..13DBF: NewGardiner
 13DC0..13DCB: UnicodiaSesh
-13DCC..13DD0: [Tofu]
+13DCC..13DD0: NewGardiner
 13DD1.......: UnicodiaSesh
-13DD2.......: [Tofu]
+13DD2.......: NewGardiner
 13DD3..13DD7: UnicodiaSesh
-13DD8.......: [Tofu]
+13DD8.......: NewGardiner
 13DD9..13DDC: UnicodiaSesh
-13DDD.......: [Tofu]
+13DDD.......: NewGardiner
 13DDE.......: UnicodiaSesh
-13DDF.......: [Tofu]
+13DDF.......: NewGardiner
 13DE0.......: UnicodiaSesh
-13DE1, 13DE2: [Tofu]
+13DE1, 13DE2: NewGardiner
 13DE3..13DE6: UnicodiaSesh
-13DE7.......: [Tofu]
+13DE7.......: NewGardiner
 13DE8, 13DE9: UnicodiaSesh
-13DEA.......: [Tofu]
+13DEA.......: NewGardiner
 13DEB..13DEF: UnicodiaSesh
-13DF0.......: [Tofu]
+13DF0.......: NewGardiner
 13DF1..13DF4: UnicodiaSesh
-13DF5..13DF7: [Tofu]
+13DF5..13DF7: NewGardiner
 13DF8.......: UnicodiaSesh
-13DF9.......: [Tofu]
+13DF9.......: NewGardiner
 13DFA..13DFD: UnicodiaSesh
-13DFE.......: [Tofu]
+13DFE.......: NewGardiner
 13DFF.......: UnicodiaSesh
-13E00.......: [Tofu]
+13E00.......: NewGardiner
 13E01.......: UnicodiaSesh
-13E02.......: [Tofu]
+13E02.......: NewGardiner
 13E03..13E05: UnicodiaSesh
-13E06, 13E07: [Tofu]
+13E06, 13E07: NewGardiner
 13E08.......: UnicodiaSesh
-13E09.......: [Tofu]
+13E09.......: NewGardiner
 13E0A.......: UnicodiaSesh
-13E0B.......: [Tofu]
+13E0B.......: NewGardiner
 13E0C..13E0F: UnicodiaSesh
-13E10, 13E11: [Tofu]
+13E10, 13E11: NewGardiner
 13E12..13E14: UnicodiaSesh
-13E15.......: [Tofu]
+13E15.......: NewGardiner
 13E16..13E18: UnicodiaSesh
-13E19.......: [Tofu]
+13E19.......: NewGardiner
 13E1A, 13E1B: UnicodiaSesh
-13E1C.......: [Tofu]
+13E1C.......: NewGardiner
 13E1D, 13E1E: UnicodiaSesh
-13E1F.......: [Tofu]
+13E1F.......: NewGardiner
 13E20, 13E21: UnicodiaSesh
-13E22.......: [Tofu]
+13E22.......: NewGardiner
 13E23..13E26: UnicodiaSesh
-13E27.......: [Tofu]
+13E27.......: NewGardiner
 13E28..13E2D: UnicodiaSesh
-13E2E.......: [Tofu]
+13E2E.......: NewGardiner
 13E2F..13E32: UnicodiaSesh
-13E33, 13E34: [Tofu]
+13E33, 13E34: NewGardiner
 13E35.......: UnicodiaSesh
-13E36.......: [Tofu]
+13E36.......: NewGardiner
 13E37.......: UnicodiaSesh
-13E38.......: [Tofu]
+13E38.......: NewGardiner
 13E39..13E3E: UnicodiaSesh
-13E3F.......: [Tofu]
+13E3F.......: NewGardiner
 13E40..13E43: UnicodiaSesh
-13E44, 13E45: [Tofu]
+13E44, 13E45: NewGardiner
 13E46..13E49: UnicodiaSesh
-13E4A..13E4C: [Tofu]
+13E4A..13E4C: NewGardiner
 13E4D..13E59: UnicodiaSesh
-13E5A.......: [Tofu]
+13E5A.......: NewGardiner
 13E5B..13E76: UnicodiaSesh
-13E77.......: [Tofu]
+13E77.......: NewGardiner
 13E78..13E80: UnicodiaSesh
-13E81.......: [Tofu]
+13E81.......: NewGardiner
 13E82.......: UnicodiaSesh
-13E83.......: [Tofu]
+13E83.......: NewGardiner
 13E84, 13E85: UnicodiaSesh
-13E86.......: [Tofu]
+13E86.......: NewGardiner
 13E87..13E89: UnicodiaSesh
-13E8A, 13E8B: [Tofu]
+13E8A, 13E8B: NewGardiner
 13E8C..13E98: UnicodiaSesh
-13E99.......: [Tofu]
+13E99.......: NewGardiner
 13E9A.......: UnicodiaSesh
-13E9B.......: [Tofu]
+13E9B.......: NewGardiner
 13E9C..13EA1: UnicodiaSesh
-13EA2.......: [Tofu]
+13EA2.......: NewGardiner
 13EA3..13EAF: UnicodiaSesh
-13EB0, 13EB1: [Tofu]
+13EB0, 13EB1: NewGardiner
 13EB2..13EB7: UnicodiaSesh
-13EB8.......: [Tofu]
+13EB8.......: NewGardiner
 13EB9..13EBF: UnicodiaSesh
-13EC0.......: [Tofu]
+13EC0.......: NewGardiner
 13EC1, 13EC2: UnicodiaSesh
-13EC3.......: [Tofu]
+13EC3.......: NewGardiner
 13EC4..13ECA: UnicodiaSesh
-13ECB.......: [Tofu]
+13ECB.......: NewGardiner
 13ECC.......: UnicodiaSesh
-13ECD.......: [Tofu]
+13ECD.......: NewGardiner
 13ECE..13EDC: UnicodiaSesh
-13EDD.......: [Tofu]
+13EDD.......: NewGardiner
 13EDE..13EE3: UnicodiaSesh
-13EE4..13EE6: [Tofu]
+13EE4..13EE6: NewGardiner
 13EE7, 13EE8: UnicodiaSesh
-13EE9.......: [Tofu]
+13EE9.......: NewGardiner
 13EEA..13EF1: UnicodiaSesh
-13EF2.......: [Tofu]
+13EF2.......: NewGardiner
 13EF3..13EF7: UnicodiaSesh
-13EF8.......: [Tofu]
+13EF8.......: NewGardiner
 13EF9, 13EFA: UnicodiaSesh
-13EFB, 13EFC: [Tofu]
+13EFB, 13EFC: NewGardiner
 13EFD..13EFF: UnicodiaSesh
-13F00.......: [Tofu]
+13F00.......: NewGardiner
 13F01.......: UnicodiaSesh
-13F02.......: [Tofu]
+13F02.......: NewGardiner
 13F03..13F18: UnicodiaSesh
-13F19.......: [Tofu]
+13F19.......: NewGardiner
 13F1A..13F1E: UnicodiaSesh
-13F1F.......: [Tofu]
+13F1F.......: NewGardiner
 13F20..13F23: UnicodiaSesh
-13F24.......: [Tofu]
+13F24.......: NewGardiner
 13F25.......: UnicodiaSesh
-13F26.......: [Tofu]
+13F26.......: NewGardiner
 13F27.......: UnicodiaSesh
-13F28.......: [Tofu]
+13F28.......: NewGardiner
 13F29.......: UnicodiaSesh
-13F2A.......: [Tofu]
+13F2A.......: NewGardiner
 13F2B..13F2E: UnicodiaSesh
-13F2F, 13F30: [Tofu]
+13F2F, 13F30: NewGardiner
 13F31, 13F32: UnicodiaSesh
-13F33.......: [Tofu]
+13F33.......: NewGardiner
 13F34..13F3A: UnicodiaSesh
-13F3B..13F3D: [Tofu]
+13F3B, 13F3C: NewGardiner
+13F3D.......: [Tofu]
 13F3E..13F40: UnicodiaSesh
-13F41.......: [Tofu]
+13F41.......: NewGardiner
 13F42.......: UnicodiaSesh
-13F43.......: [Tofu]
+13F43.......: NewGardiner
 13F44.......: UnicodiaSesh
-13F45.......: [Tofu]
+13F45.......: NewGardiner
 13F46..13F4F: UnicodiaSesh
-13F50.......: [Tofu]
+13F50.......: NewGardiner
 13F51..13F5D: UnicodiaSesh
-13F5E, 13F5F: [Tofu]
+13F5E, 13F5F: NewGardiner
 13F60, 13F61: UnicodiaSesh
-13F62..13F64: [Tofu]
+13F62..13F64: NewGardiner
 13F65.......: UnicodiaSesh
-13F66.......: [Tofu]
+13F66.......: NewGardiner
 13F67..13F69: UnicodiaSesh
-13F6A..13F6E: [Tofu]
+13F6A..13F6E: NewGardiner
 13F6F.......: UnicodiaSesh
-13F70, 13F71: [Tofu]
+13F70, 13F71: NewGardiner
 13F72..13F74: UnicodiaSesh
-13F75, 13F76: [Tofu]
+13F75, 13F76: NewGardiner
 13F77..13F80: UnicodiaSesh
-13F81.......: [Tofu]
+13F81.......: NewGardiner
 13F82, 13F83: UnicodiaSesh
-13F84..13F87: [Tofu]
+13F84..13F87: NewGardiner
 13F88..13F90: UnicodiaSesh
-13F91.......: [Tofu]
+13F91.......: NewGardiner
 13F92..13F99: UnicodiaSesh
-13F9A.......: [Tofu]
+13F9A.......: NewGardiner
 13F9B..13F9D: UnicodiaSesh
-13F9E.......: [Tofu]
+13F9E.......: NewGardiner
 13F9F..13FAC: UnicodiaSesh
-13FAD.......: [Tofu]
+13FAD.......: NewGardiner
 13FAE..13FB0: UnicodiaSesh
-13FB1.......: [Tofu]
+13FB1.......: NewGardiner
 13FB2..13FB4: UnicodiaSesh
-13FB5, 13FB6: [Tofu]
+13FB5, 13FB6: NewGardiner
 13FB7, 13FB8: UnicodiaSesh
-13FB9, 13FBA: [Tofu]
+13FB9, 13FBA: NewGardiner
 13FBB..13FCA: UnicodiaSesh
-13FCB.......: [Tofu]
+13FCB.......: NewGardiner
 13FCC.......: UnicodiaSesh
-13FCD.......: [Tofu]
+13FCD.......: NewGardiner
 13FCE..13FD1: UnicodiaSesh
-13FD2.......: [Tofu]
+13FD2.......: NewGardiner
 13FD3..13FDF: UnicodiaSesh
-13FE0.......: [Tofu]
+13FE0.......: NewGardiner
 13FE1..13FEA: UnicodiaSesh
-13FEB.......: [Tofu]
+13FEB.......: NewGardiner
 13FEC..13FF0: UnicodiaSesh
-13FF1.......: [Tofu]
+13FF1.......: NewGardiner
 13FF2, 13FF3: UnicodiaSesh
-13FF4.......: [Tofu]
+13FF4.......: NewGardiner
 13FF5..13FFF: UnicodiaSesh
-14000.......: [Tofu]
+14000.......: NewGardiner
 14001.......: UnicodiaSesh
-14002.......: [Tofu]
+14002.......: NewGardiner
 14003..14007: UnicodiaSesh
-14008.......: [Tofu]
+14008.......: NewGardiner
 14009..1400C: UnicodiaSesh
-1400D..14010: [Tofu]
+1400D..14010: NewGardiner
 14011.......: UnicodiaSesh
-14012.......: [Tofu]
+14012.......: NewGardiner
 14013..14015: UnicodiaSesh
 14016.......: [Tofu]
 14017, 14018: UnicodiaSesh
-14019.......: [Tofu]
+14019.......: NewGardiner
 1401A..1401F: UnicodiaSesh
-14020.......: [Tofu]
+14020.......: NewGardiner
 14021.......: UnicodiaSesh
-14022.......: [Tofu]
+14022.......: NewGardiner
 14023..1402C: UnicodiaSesh
-1402D.......: [Tofu]
+1402D.......: NewGardiner
 1402E..14037: UnicodiaSesh
-14038.......: [Tofu]
+14038.......: NewGardiner
 14039..14045: UnicodiaSesh
-14046.......: [Tofu]
+14046.......: NewGardiner
 14047..1404A: UnicodiaSesh
-1404B..1404D: [Tofu]
+1404B..1404D: NewGardiner
 1404E..14050: UnicodiaSesh
-14051, 14052: [Tofu]
+14051, 14052: NewGardiner
 14053..14056: UnicodiaSesh
-14057, 14058: [Tofu]
+14057, 14058: NewGardiner
 14059.......: UnicodiaSesh
-1405A.......: [Tofu]
+1405A.......: NewGardiner
 1405B..14060: UnicodiaSesh
-14061.......: [Tofu]
+14061.......: NewGardiner
 14062.......: UnicodiaSesh
-14063.......: [Tofu]
+14063.......: NewGardiner
 14064..14066: UnicodiaSesh
-14067.......: [Tofu]
+14067.......: NewGardiner
 14068..1406A: UnicodiaSesh
-1406B.......: [Tofu]
+1406B.......: NewGardiner
 1406C.......: UnicodiaSesh
-1406D.......: [Tofu]
+1406D.......: NewGardiner
 1406E..14070: UnicodiaSesh
-14071.......: [Tofu]
+14071.......: NewGardiner
 14072..14075: UnicodiaSesh
-14076.......: [Tofu]
+14076.......: NewGardiner
 14077, 14078: UnicodiaSesh
-14079.......: [Tofu]
+14079.......: NewGardiner
 1407A..14080: UnicodiaSesh
-14081.......: [Tofu]
+14081.......: NewGardiner
 14082..14087: UnicodiaSesh
-14088.......: [Tofu]
+14088.......: NewGardiner
 14089..1408B: UnicodiaSesh
-1408C.......: [Tofu]
+1408C.......: NewGardiner
 1408D..14090: UnicodiaSesh
 14091.......: [Tofu]
 14092..14098: UnicodiaSesh
-14099.......: [Tofu]
+14099.......: NewGardiner
 1409A.......: UnicodiaSesh
-1409B.......: [Tofu]
+1409B.......: NewGardiner
 1409C..1409E: UnicodiaSesh
-1409F.......: [Tofu]
+1409F.......: NewGardiner
 140A0..140A2: UnicodiaSesh
-140A3.......: [Tofu]
+140A3.......: NewGardiner
 140A4..140AE: UnicodiaSesh
-140AF.......: [Tofu]
+140AF.......: NewGardiner
 140B0.......: UnicodiaSesh
-140B1.......: [Tofu]
+140B1.......: NewGardiner
 140B2.......: UnicodiaSesh
-140B3, 140B4: [Tofu]
+140B3, 140B4: NewGardiner
 140B5..140BB: UnicodiaSesh
-140BC.......: [Tofu]
+140BC.......: NewGardiner
 140BD..140C7: UnicodiaSesh
-140C8.......: [Tofu]
+140C8.......: NewGardiner
 140C9..140CB: UnicodiaSesh
-140CC.......: [Tofu]
+140CC.......: NewGardiner
 140CD.......: UnicodiaSesh
-140CE.......: [Tofu]
+140CE.......: NewGardiner
 140CF..140DC: UnicodiaSesh
-140DD, 140DE: [Tofu]
+140DD, 140DE: NewGardiner
 140DF, 140E0: UnicodiaSesh
-140E1, 140E2: [Tofu]
+140E1, 140E2: NewGardiner
 140E3..140E5: UnicodiaSesh
-140E6.......: [Tofu]
+140E6.......: NewGardiner
 140E7..140ED: UnicodiaSesh
-140EE.......: [Tofu]
+140EE.......: NewGardiner
 140EF.......: UnicodiaSesh
-140F0.......: [Tofu]
+140F0.......: NewGardiner
 140F1, 140F2: UnicodiaSesh
-140F3, 140F4: [Tofu]
+140F3, 140F4: NewGardiner
 140F5..140FC: UnicodiaSesh
-140FD, 140FE: [Tofu]
+140FD, 140FE: NewGardiner
 140FF..14103: UnicodiaSesh
-14104.......: [Tofu]
+14104.......: NewGardiner
 14105, 14106: UnicodiaSesh
-14107.......: [Tofu]
+14107.......: NewGardiner
 14108..1410A: UnicodiaSesh
-1410B..1410E: [Tofu]
+1410B..1410E: NewGardiner
 1410F.......: UnicodiaSesh
-14110.......: [Tofu]
+14110.......: NewGardiner
 14111..14113: UnicodiaSesh
-14114.......: [Tofu]
+14114.......: NewGardiner
 14115..14123: UnicodiaSesh
-14124.......: [Tofu]
+14124.......: NewGardiner
 14125..14127: UnicodiaSesh
-14128.......: [Tofu]
+14128.......: NewGardiner
 14129.......: UnicodiaSesh
-1412A.......: [Tofu]
+1412A.......: NewGardiner
 1412B..14130: UnicodiaSesh
-14131, 14132: [Tofu]
+14131, 14132: NewGardiner
 14133..14135: UnicodiaSesh
-14136.......: [Tofu]
+14136.......: NewGardiner
 14137..1413B: UnicodiaSesh
-1413C.......: [Tofu]
+1413C.......: NewGardiner
 1413D..14140: UnicodiaSesh
-14141.......: [Tofu]
+14141.......: NewGardiner
 14142..14144: UnicodiaSesh
-14145.......: [Tofu]
+14145.......: NewGardiner
 14146..1414D: UnicodiaSesh
-1414E.......: [Tofu]
+1414E.......: NewGardiner
 1414F, 14150: UnicodiaSesh
-14151.......: [Tofu]
+14151.......: NewGardiner
 14152..14157: UnicodiaSesh
-14158.......: [Tofu]
+14158.......: NewGardiner
 14159.......: UnicodiaSesh
-1415A, 1415B: [Tofu]
+1415A, 1415B: NewGardiner
 1415C, 1415D: UnicodiaSesh
-1415E.......: [Tofu]
+1415E.......: NewGardiner
 1415F..14164: UnicodiaSesh
-14165.......: [Tofu]
+14165.......: NewGardiner
 14166, 14167: UnicodiaSesh
-14168, 14169: [Tofu]
+14168, 14169: NewGardiner
 1416A..1416C: UnicodiaSesh
-1416D.......: [Tofu]
+1416D.......: NewGardiner
 1416E..14174: UnicodiaSesh
-14175.......: [Tofu]
+14175.......: NewGardiner
 14176..1417C: UnicodiaSesh
-1417D.......: [Tofu]
+1417D.......: NewGardiner
 1417E..14180: UnicodiaSesh
-14181.......: [Tofu]
+14181.......: NewGardiner
 14182..14186: UnicodiaSesh
-14187.......: [Tofu]
+14187.......: NewGardiner
 14188.......: UnicodiaSesh
-14189.......: [Tofu]
+14189.......: NewGardiner
 1418A..1418D: UnicodiaSesh
-1418E.......: [Tofu]
+1418E.......: NewGardiner
 1418F, 14190: UnicodiaSesh
-14191.......: [Tofu]
+14191.......: NewGardiner
 14192..14195: UnicodiaSesh
-14196.......: [Tofu]
+14196.......: NewGardiner
 14197.......: UnicodiaSesh
 14198.......: [Tofu]
 14199..1419C: UnicodiaSesh
-1419D.......: [Tofu]
+1419D.......: NewGardiner
 1419E.......: UnicodiaSesh
-1419F.......: [Tofu]
+1419F.......: NewGardiner
 141A0, 141A1: UnicodiaSesh
-141A2.......: [Tofu]
+141A2.......: NewGardiner
 141A3, 141A4: UnicodiaSesh
-141A5..141A8: [Tofu]
+141A5..141A8: NewGardiner
 141A9.......: UnicodiaSesh
-141AA.......: [Tofu]
+141AA.......: NewGardiner
 141AB, 141AC: UnicodiaSesh
-141AD.......: [Tofu]
+141AD.......: NewGardiner
 141AE.......: UnicodiaSesh
-141AF.......: [Tofu]
+141AF.......: NewGardiner
 141B0.......: UnicodiaSesh
-141B1.......: [Tofu]
+141B1.......: NewGardiner
 141B2..141B7: UnicodiaSesh
-141B8, 141B9: [Tofu]
+141B8, 141B9: NewGardiner
 141BA..141BE: UnicodiaSesh
-141BF.......: [Tofu]
+141BF.......: NewGardiner
 141C0.......: UnicodiaSesh
-141C1.......: [Tofu]
+141C1.......: NewGardiner
 141C2..141C8: UnicodiaSesh
-141C9.......: [Tofu]
+141C9.......: NewGardiner
 141CA..141CD: UnicodiaSesh
-141CE.......: [Tofu]
+141CE.......: NewGardiner
 141CF..141DC: UnicodiaSesh
-141DD.......: [Tofu]
+141DD.......: NewGardiner
 141DE, 141DF: UnicodiaSesh
-141E0.......: [Tofu]
+141E0.......: NewGardiner
 141E1..141E3: UnicodiaSesh
-141E4.......: [Tofu]
+141E4.......: NewGardiner
 141E5.......: UnicodiaSesh
-141E6, 141E7: [Tofu]
+141E6, 141E7: NewGardiner
 141E8..141EC: UnicodiaSesh
-141ED, 141EE: [Tofu]
+141ED, 141EE: NewGardiner
 141EF.......: UnicodiaSesh
-141F0.......: [Tofu]
+141F0.......: NewGardiner
 141F1..141FA: UnicodiaSesh
-141FB.......: [Tofu]
+141FB.......: NewGardiner
 141FC, 141FD: UnicodiaSesh
-141FE, 141FF: [Tofu]
+141FE, 141FF: NewGardiner
 14200..14202: UnicodiaSesh
-14203.......: [Tofu]
+14203.......: NewGardiner
 14204..1420A: UnicodiaSesh
-1420B.......: [Tofu]
+1420B.......: NewGardiner
 1420C.......: UnicodiaSesh
-1420D.......: [Tofu]
+1420D.......: NewGardiner
 1420E..14210: UnicodiaSesh
-14211.......: [Tofu]
+14211.......: NewGardiner
 14212..14214: UnicodiaSesh
-14215, 14216: [Tofu]
+14215, 14216: NewGardiner
 14217..1421E: UnicodiaSesh
-1421F.......: [Tofu]
+1421F.......: NewGardiner
 14220.......: UnicodiaSesh
-14221..14223: [Tofu]
+14221..14223: NewGardiner
 14224..14227: UnicodiaSesh
-14228.......: [Tofu]
+14228.......: NewGardiner
 14229..1422C: UnicodiaSesh
-1422D.......: [Tofu]
+1422D.......: NewGardiner
 1422E, 1422F: UnicodiaSesh
-14230.......: [Tofu]
+14230.......: NewGardiner
 14231.......: UnicodiaSesh
-14232, 14233: [Tofu]
+14232, 14233: NewGardiner
 14234..1423B: UnicodiaSesh
-1423C.......: [Tofu]
+1423C.......: NewGardiner
 1423D..14241: UnicodiaSesh
-14242.......: [Tofu]
+14242.......: NewGardiner
 14243, 14244: UnicodiaSesh
-14245.......: [Tofu]
+14245.......: NewGardiner
 14246..14249: UnicodiaSesh
-1424A.......: [Tofu]
+1424A.......: NewGardiner
 1424B..1424F: UnicodiaSesh
-14250, 14251: [Tofu]
+14250, 14251: NewGardiner
 14252..1425A: UnicodiaSesh
-1425B.......: [Tofu]
+1425B.......: NewGardiner
 1425C, 1425D: UnicodiaSesh
-1425E.......: [Tofu]
+1425E.......: NewGardiner
 1425F..14261: UnicodiaSesh
-14262.......: [Tofu]
+14262.......: NewGardiner
 14263..14269: UnicodiaSesh
-1426A.......: [Tofu]
+1426A.......: NewGardiner
 1426B, 1426C: UnicodiaSesh
-1426D.......: [Tofu]
+1426D.......: NewGardiner
 1426E..14271: UnicodiaSesh
-14272.......: [Tofu]
+14272.......: NewGardiner
 14273, 14274: UnicodiaSesh
-14275.......: [Tofu]
+14275.......: NewGardiner
 14276..1427C: UnicodiaSesh
-1427D.......: [Tofu]
+1427D.......: NewGardiner
 1427E.......: UnicodiaSesh
-1427F, 14280: [Tofu]
+1427F, 14280: NewGardiner
 14281.......: UnicodiaSesh
-14282.......: [Tofu]
+14282.......: NewGardiner
 14283, 14284: UnicodiaSesh
-14285.......: [Tofu]
+14285.......: NewGardiner
 14286..14291: UnicodiaSesh
-14292.......: [Tofu]
+14292.......: NewGardiner
 14293..14296: UnicodiaSesh
-14297.......: [Tofu]
+14297.......: NewGardiner
 14298.......: UnicodiaSesh
-14299.......: [Tofu]
+14299.......: NewGardiner
 1429A..142A2: UnicodiaSesh
-142A3.......: [Tofu]
+142A3.......: NewGardiner
 142A4..142A7: UnicodiaSesh
-142A8, 142A9: [Tofu]
+142A8, 142A9: NewGardiner
 142AA, 142AB: UnicodiaSesh
-142AC, 142AD: [Tofu]
+142AC, 142AD: NewGardiner
 142AE..142B8: UnicodiaSesh
-142B9, 142BA: [Tofu]
+142B9, 142BA: NewGardiner
 142BB..142BD: UnicodiaSesh
-142BE.......: [Tofu]
+142BE.......: NewGardiner
 142BF..142C1: UnicodiaSesh
-142C2.......: [Tofu]
+142C2.......: NewGardiner
 142C3, 142C4: UnicodiaSesh
-142C5, 142C6: [Tofu]
+142C5, 142C6: NewGardiner
 142C7..142C9: UnicodiaSesh
-142CA..142CC: [Tofu]
+142CA, 142CB: NewGardiner
+142CC.......: [Tofu]
 142CD..142D0: UnicodiaSesh
-142D1.......: [Tofu]
+142D1.......: NewGardiner
 142D2.......: UnicodiaSesh
-142D3..142D6: [Tofu]
+142D3..142D6: NewGardiner
 142D7, 142D8: UnicodiaSesh
-142D9, 142DA: [Tofu]
+142D9, 142DA: NewGardiner
 142DB..142DE: UnicodiaSesh
-142DF, 142E0: [Tofu]
+142DF, 142E0: NewGardiner
 142E1..142E9: UnicodiaSesh
-142EA.......: [Tofu]
+142EA.......: NewGardiner
 142EB..142EF: UnicodiaSesh
-142F0.......: [Tofu]
+142F0.......: NewGardiner
 142F1..142F6: UnicodiaSesh
-142F7, 142F8: [Tofu]
+142F7, 142F8: NewGardiner
 142F9..142FD: UnicodiaSesh
-142FE..14300: [Tofu]
+142FE..14300: NewGardiner
 14301..14307: UnicodiaSesh
-14308.......: [Tofu]
+14308.......: NewGardiner
 14309..1430C: UnicodiaSesh
-1430D.......: [Tofu]
+1430D.......: NewGardiner
 1430E..1431C: UnicodiaSesh
-1431D.......: [Tofu]
+1431D.......: NewGardiner
 1431E..14324: UnicodiaSesh
-14325.......: [Tofu]
+14325.......: NewGardiner
 14326..14329: UnicodiaSesh
-1432A.......: [Tofu]
+1432A.......: NewGardiner
 1432B, 1432C: UnicodiaSesh
-1432D.......: [Tofu]
+1432D.......: NewGardiner
 1432E, 1432F: UnicodiaSesh
 14330.......: [Tofu]
 14331..1433A: UnicodiaSesh
-1433B..1433E: [Tofu]
+1433B..1433E: NewGardiner
 1433F..14341: UnicodiaSesh
-14342.......: [Tofu]
+14342.......: NewGardiner
 14343..1434A: UnicodiaSesh
-1434B.......: [Tofu]
+1434B.......: NewGardiner
 1434C..1434F: UnicodiaSesh
-14350.......: [Tofu]
+14350.......: NewGardiner
 14351..14357: UnicodiaSesh
-14358.......: [Tofu]
+14358.......: NewGardiner
 14359..1435B: UnicodiaSesh
-1435C.......: [Tofu]
+1435C.......: NewGardiner
 1435D..14363: UnicodiaSesh
-14364.......: [Tofu]
+14364.......: NewGardiner
 14365, 14366: UnicodiaSesh
-14367.......: [Tofu]
+14367.......: NewGardiner
 14368..14370: UnicodiaSesh
-14371.......: [Tofu]
+14371.......: NewGardiner
 14372.......: UnicodiaSesh
-14373, 14374: [Tofu]
+14373, 14374: NewGardiner
 14375..14379: UnicodiaSesh
-1437A.......: [Tofu]
+1437A.......: NewGardiner
 1437B..1437E: UnicodiaSesh
-1437F, 14380: [Tofu]
+1437F, 14380: NewGardiner
 14381..14388: UnicodiaSesh
-14389.......: [Tofu]
+14389.......: NewGardiner
 1438A..14392: UnicodiaSesh
-14393.......: [Tofu]
+14393.......: NewGardiner
 14394..14396: UnicodiaSesh
-14397.......: [Tofu]
+14397.......: NewGardiner
 14398, 14399: UnicodiaSesh
-1439A, 1439B: [Tofu]
+1439A, 1439B: NewGardiner
 1439C.......: UnicodiaSesh
-1439D.......: [Tofu]
+1439D.......: NewGardiner
 1439E..143AE: UnicodiaSesh
-143AF, 143B0: [Tofu]
+143AF, 143B0: NewGardiner
 143B1..143B6: UnicodiaSesh
-143B7.......: [Tofu]
+143B7.......: NewGardiner
 143B8..143BC: UnicodiaSesh
-143BD.......: [Tofu]
+143BD.......: NewGardiner
 143BE..143C1: UnicodiaSesh
-143C2.......: [Tofu]
+143C2.......: NewGardiner
 143C3.......: UnicodiaSesh
-143C4.......: [Tofu]
+143C4.......: NewGardiner
 143C5.......: UnicodiaSesh
-143C6.......: [Tofu]
+143C6.......: NewGardiner
 143C7..143D2: UnicodiaSesh
-143D3.......: [Tofu]
+143D3.......: NewGardiner
 143D4..143D7: UnicodiaSesh
-143D8.......: [Tofu]
+143D8.......: NewGardiner
 143D9.......: UnicodiaSesh
-143DA..143DC: [Tofu]
+143DA..143DC: NewGardiner
 143DD, 143DE: UnicodiaSesh
-143DF.......: [Tofu]
+143DF.......: NewGardiner
 143E0..143E2: UnicodiaSesh
-143E3.......: [Tofu]
+143E3.......: NewGardiner
 143E4.......: UnicodiaSesh
-143E5.......: [Tofu]
+143E5.......: NewGardiner
 143E6, 143E7: UnicodiaSesh
-143E8.......: [Tofu]
+143E8.......: NewGardiner
 143E9..143F5: UnicodiaSesh
-143F6.......: [Tofu]
+143F6.......: NewGardiner
 143F7.......: UnicodiaSesh
-143F8.......: [Tofu]
+143F8.......: NewGardiner
 143F9, 143FA: UnicodiaSesh
 == Anatolian Hieroglyphs
 14400..14646: NotoSansAnatolianHieroglyphs-Regular
@@ -3939,8 +3953,8 @@ FFFD......: NotoSerif-Regular
 20CDD, 20CDE: BabelStoneHanExtra
 20CDF.......: SimSun-ExtB
 20CE0..20CE4: BabelStoneHanExtra
-20CE5..20CE7: SimSun-ExtB
-20CE8..20CEA: BabelStoneHanExtra
+20CE5, 20CE6: SimSun-ExtB
+20CE7..20CEA: BabelStoneHanExtra
 20CEB.......: SimSun-ExtB
 20CEC..20CEF: BabelStoneHanExtra
 20CF0.......: SimSun-ExtB
@@ -5730,9 +5744,7 @@ FFFD......: NotoSerif-Regular
 21D95.......: SimSun-ExtB
 21D96.......: BabelStoneHanExtra
 21D97, 21D98: SimSun-ExtB
-21D99.......: BabelStoneHanExtra
-21D9A.......: SimSun-ExtB
-21D9B, 21D9C: BabelStoneHanExtra
+21D99..21D9C: BabelStoneHanExtra
 21D9D.......: SimSun-ExtB
 21D9E.......: BabelStoneHanExtra
 21D9F, 21DA0: SimSun-ExtB
@@ -8929,8 +8941,8 @@ FFFD......: NotoSerif-Regular
 23AA5.......: BabelStoneHanExtra
 23AA6.......: SimSun-ExtB
 23AA7, 23AA8: BabelStoneHanExtra
-23AA9..23AAB: SimSun-ExtB
-23AAC.......: BabelStoneHanExtra
+23AA9, 23AAA: SimSun-ExtB
+23AAB, 23AAC: BabelStoneHanExtra
 23AAD, 23AAE: SimSun-ExtB
 23AAF.......: BabelStoneHanExtra
 23AB0..23AB2: SimSun-ExtB
@@ -8976,8 +8988,8 @@ FFFD......: NotoSerif-Regular
 23B06, 23B07: SimSun-ExtB
 23B08, 23B09: BabelStoneHanExtra
 23B0A.......: SimSun-ExtB
-23B0B.......: BabelStoneHanExtra
-23B0C, 23B0D: SimSun-ExtB
+23B0B, 23B0C: BabelStoneHanExtra
+23B0D.......: SimSun-ExtB
 23B0E.......: BabelStoneHanExtra
 23B0F.......: SimSun-ExtB
 23B10.......: BabelStoneHanExtra
@@ -10168,8 +10180,8 @@ FFFD......: NotoSerif-Regular
 24632.......: SimSun-ExtB
 24633.......: BabelStoneHanExtra
 24634..24639: SimSun-ExtB
-2463A.......: BabelStoneHanExtra
-2463B, 2463C: SimSun-ExtB
+2463A, 2463B: BabelStoneHanExtra
+2463C.......: SimSun-ExtB
 2463D.......: BabelStoneHanExtra
 2463E, 2463F: SimSun-ExtB
 24640..24642: BabelStoneHanExtra
@@ -11693,8 +11705,8 @@ FFFD......: NotoSerif-Regular
 2545F..25461: BabelStoneHanExtra
 25462, 25463: SimSun-ExtB
 25464.......: BabelStoneHanExtra
-25465..25468: SimSun-ExtB
-25469..2546B: BabelStoneHanExtra
+25465..25467: SimSun-ExtB
+25468..2546B: BabelStoneHanExtra
 2546C, 2546D: SimSun-ExtB
 2546E.......: BabelStoneHanExtra
 2546F..25471: SimSun-ExtB
@@ -12331,7 +12343,9 @@ FFFD......: NotoSerif-Regular
 25A23.......: BabelStoneHanExtra
 25A24..25A28: SimSun-ExtB
 25A29..25A2B: BabelStoneHanExtra
-25A2C..25A3C: SimSun-ExtB
+25A2C..25A37: SimSun-ExtB
+25A38.......: BabelStoneHanExtra
+25A39..25A3C: SimSun-ExtB
 25A3D.......: BabelStoneHanExtra
 25A3E..25A47: SimSun-ExtB
 25A48.......: BabelStoneHanExtra
@@ -12670,8 +12684,8 @@ FFFD......: NotoSerif-Regular
 25D9A..25D9F: SimSun-ExtB
 25DA0, 25DA1: BabelStoneHanExtra
 25DA2.......: SimSun-ExtB
-25DA3.......: BabelStoneHanExtra
-25DA4..25DB3: SimSun-ExtB
+25DA3, 25DA4: BabelStoneHanExtra
+25DA5..25DB3: SimSun-ExtB
 25DB4.......: BabelStoneHanExtra
 25DB5.......: SimSun-ExtB
 25DB6, 25DB7: BabelStoneHanExtra
@@ -16001,7 +16015,9 @@ FFFD......: NotoSerif-Regular
 27C5A.......: BabelStoneHanExtra
 27C5B, 27C5C: SimSun-ExtB
 27C5D.......: BabelStoneHanExtra
-27C5E..27C62: SimSun-ExtB
+27C5E, 27C5F: SimSun-ExtB
+27C60.......: BabelStoneHanExtra
+27C61, 27C62: SimSun-ExtB
 27C63..27C66: BabelStoneHanExtra
 27C67..27C6A: SimSun-ExtB
 27C6B, 27C6C: BabelStoneHanExtra
@@ -21728,9 +21744,7 @@ FFFD......: NotoSerif-Regular
 2B279..2B27F: SimSun-ExtB
 2B280.......: BabelStoneHanExtra
 2B281..2B285: SimSun-ExtB
-2B286.......: BabelStoneHanExtra
-2B287.......: SimSun-ExtB
-2B288, 2B289: BabelStoneHanExtra
+2B286..2B289: BabelStoneHanExtra
 2B28A, 2B28B: SimSun-ExtB
 2B28C.......: BabelStoneHanExtra
 2B28D..2B296: SimSun-ExtB
@@ -22126,8 +22140,7 @@ FFFD......: NotoSerif-Regular
 2B716, 2B717: SimSun-ExtB
 2B718, 2B719: BabelStoneHanExtra
 2B71A, 2B71B: SimSun-ExtB
-2B71C..2B73E: BabelStoneHanExtra
-2B73F.......: UnicodiaHan
+2B71C..2B73F: BabelStoneHanExtra
 == CJK Unified Ideographs Extension D
 2B740..2B81D: BabelStoneHanExtra
 == CJK Unified Ideographs Extension E
@@ -29018,8 +29031,8 @@ FFFD......: NotoSerif-Regular
 30E47.......: SimSun-ExtG
 30E48.......: BabelStoneHanExtra
 30E49.......: SimSun-ExtG
-30E4A..30E4D: BabelStoneHanExtra
-30E4E, 30E4F: SimSun-ExtG
+30E4A..30E4E: BabelStoneHanExtra
+30E4F.......: SimSun-ExtG
 30E50.......: BabelStoneHanExtra
 30E51.......: SimSun-ExtG
 30E52, 30E53: BabelStoneHanExtra
@@ -31036,7 +31049,9 @@ FFFD......: NotoSerif-Regular
 3251F, 32520: BabelStoneHanExtra
 32521, 32522: PlangothicP2-Regular
 32523, 32524: BabelStoneHanExtra
-32525..32528: PlangothicP2-Regular
+32525.......: PlangothicP2-Regular
+32526.......: BabelStoneHanExtra
+32527, 32528: PlangothicP2-Regular
 32529.......: BabelStoneHanExtra
 3252A.......: PlangothicP2-Regular
 3252B.......: BabelStoneHanExtra
@@ -31105,8 +31120,8 @@ FFFD......: NotoSerif-Regular
 325C6.......: PlangothicP2-Regular
 325C7.......: BabelStoneHanExtra
 325C8..325CB: PlangothicP2-Regular
-325CC..325CE: BabelStoneHanExtra
-325CF..325D1: PlangothicP2-Regular
+325CC..325CF: BabelStoneHanExtra
+325D0, 325D1: PlangothicP2-Regular
 325D2..325D4: BabelStoneHanExtra
 325D5.......: PlangothicP2-Regular
 325D6..325DA: BabelStoneHanExtra
@@ -31141,9 +31156,7 @@ FFFD......: NotoSerif-Regular
 32610..32612: PlangothicP2-Regular
 32613..32615: BabelStoneHanExtra
 32616.......: PlangothicP2-Regular
-32617..3261E: BabelStoneHanExtra
-3261F.......: PlangothicP2-Regular
-32620.......: BabelStoneHanExtra
+32617..32620: BabelStoneHanExtra
 32621.......: PlangothicP2-Regular
 32622..3262D: BabelStoneHanExtra
 3262E, 3262F: PlangothicP2-Regular
@@ -31511,8 +31524,8 @@ FFFD......: NotoSerif-Regular
 32965..32968: PlangothicP2-Regular
 32969.......: BabelStoneHanExtra
 3296A..3296D: PlangothicP2-Regular
-3296E.......: BabelStoneHanExtra
-3296F, 32970: PlangothicP2-Regular
+3296E, 3296F: BabelStoneHanExtra
+32970.......: PlangothicP2-Regular
 32971.......: BabelStoneHanExtra
 32972..32974: PlangothicP2-Regular
 32975.......: BabelStoneHanExtra
@@ -31579,8 +31592,8 @@ FFFD......: NotoSerif-Regular
 32A33.......: PlangothicP2-Regular
 32A34..32A37: BabelStoneHanExtra
 32A38.......: PlangothicP2-Regular
-32A39..32A3B: BabelStoneHanExtra
-32A3C, 32A3D: PlangothicP2-Regular
+32A39..32A3C: BabelStoneHanExtra
+32A3D.......: PlangothicP2-Regular
 32A3E..32A41: BabelStoneHanExtra
 32A42, 32A43: PlangothicP2-Regular
 32A44, 32A45: BabelStoneHanExtra
@@ -31741,9 +31754,7 @@ FFFD......: NotoSerif-Regular
 32BB5.......: PlangothicP2-Regular
 32BB6..32BBB: BabelStoneHanExtra
 32BBC.......: PlangothicP2-Regular
-32BBD..32BBF: BabelStoneHanExtra
-32BC0.......: PlangothicP2-Regular
-32BC1.......: BabelStoneHanExtra
+32BBD..32BC1: BabelStoneHanExtra
 32BC2.......: PlangothicP2-Regular
 32BC3..32BCC: BabelStoneHanExtra
 32BCD, 32BCE: PlangothicP2-Regular
@@ -32044,8 +32055,8 @@ FFFD......: NotoSerif-Regular
 32E5D.......: BabelStoneHanExtra
 32E5E..32E63: PlangothicP2-Regular
 32E64.......: BabelStoneHanExtra
-32E65..32E67: PlangothicP2-Regular
-32E68.......: BabelStoneHanExtra
+32E65, 32E66: PlangothicP2-Regular
+32E67, 32E68: BabelStoneHanExtra
 32E69.......: PlangothicP2-Regular
 32E6A, 32E6B: BabelStoneHanExtra
 32E6C.......: PlangothicP2-Regular
@@ -32263,9 +32274,7 @@ FFFD......: NotoSerif-Regular
 3307E..33081: PlangothicP2-Regular
 33082..33086: BabelStoneHanExtra
 33087.......: PlangothicP2-Regular
-33088..33094: BabelStoneHanExtra
-33095.......: PlangothicP2-Regular
-33096.......: BabelStoneHanExtra
+33088..33096: BabelStoneHanExtra
 33097..330A3: PlangothicP2-Regular
 330A4.......: BabelStoneHanExtra
 330A5..330AA: PlangothicP2-Regular
@@ -32518,7 +32527,9 @@ FFFD......: NotoSerif-Regular
 3330D..33310: BabelStoneHanExtra
 33311.......: PlangothicP2-Regular
 33312..3331E: BabelStoneHanExtra
-3331F..33322: PlangothicP2-Regular
+3331F.......: PlangothicP2-Regular
+33320.......: BabelStoneHanExtra
+33321, 33322: PlangothicP2-Regular
 33323.......: BabelStoneHanExtra
 33324.......: PlangothicP2-Regular
 33325, 33326: BabelStoneHanExtra
@@ -32549,9 +32560,7 @@ FFFD......: NotoSerif-Regular
 33365.......: PlangothicP2-Regular
 33366, 33367: BabelStoneHanExtra
 33368.......: PlangothicP2-Regular
-33369..3336B: BabelStoneHanExtra
-3336C.......: PlangothicP2-Regular
-3336D..33372: BabelStoneHanExtra
+33369..33372: BabelStoneHanExtra
 33373.......: PlangothicP2-Regular
 33374..3337A: BabelStoneHanExtra
 3337B.......: PlangothicP2-Regular
@@ -32568,8 +32577,8 @@ FFFD......: NotoSerif-Regular
 333AD..333B2: BabelStoneHanExtra
 333B3.......: PlangothicP2-Regular
 333B4, 333B5: BabelStoneHanExtra
-333B6, 333B7: PlangothicP2-Regular
-333B8..333C7: BabelStoneHanExtra
+333B6.......: PlangothicP2-Regular
+333B7..333C7: BabelStoneHanExtra
 333C8..333CA: PlangothicP2-Regular
 333CB..333D4: BabelStoneHanExtra
 333D5.......: PlangothicP2-Regular
