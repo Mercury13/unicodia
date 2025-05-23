@@ -58,6 +58,7 @@
 * Legacy: JSI; as resolution is 16×16, found Apple II’s 7×8 pair
 * Legacy ex: same, wanted in unison with Apple’s on HiDPI
 * Symbols misc: JSI, lo-res
+* Symbols misc supp: something positive from geomancy
 * Symbols and arrows misc: JSI influenced with lo-res
 * Symbols and pictographs misc: story of water pistol
 * Symbols and pictographs supp: JSI, lo-res
