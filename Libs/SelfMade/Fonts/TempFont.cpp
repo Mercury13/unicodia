@@ -26,7 +26,7 @@ inline void msg([[maybe_unused]] Args&&... x)
     if constexpr (debugTempFont) {
         ((std::cout << x), ...);
         // OK, this is debug and flushing is really needed
-        std::cout << std::endl;
+        std::cout << std::endl;     // NOLINT performance-avoid-endl
     }
 }
 
@@ -41,6 +41,16 @@ void CompressedBits::Block::set(unsigned n)
     auto hi = n >> ITEM_HI_SHIFT;
     auto lo = n & ITEM_LO_MASK;
     items[hi] |= (ONE << lo);
+}
+
+
+void CompressedBits::Block::erase(unsigned n)
+{
+    if (n >= BITS_PER_BLOCK)
+        return;
+    auto hi = n >> ITEM_HI_SHIFT;
+    auto lo = n & ITEM_LO_MASK;
+    items[hi] &= ~(ONE << lo);
 }
 
 
@@ -64,6 +74,16 @@ void CompressedBits::add(unsigned x)
     if (!blk)
         blk = std::make_unique<Block>();
     blk->set(x & BLOCK_LO_MASK);
+}
+
+
+void CompressedBits::erase(unsigned x)
+{
+    auto hi = x >> BLOCK_HI_SHIFT;
+    if (hi >= blocks.size())
+        return;
+    if (auto& blk = blocks[hi])
+        blk->erase(x & BLOCK_LO_MASK);
 }
 
 

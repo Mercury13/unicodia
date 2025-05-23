@@ -34,6 +34,7 @@ public:
     bool hasSmth() const noexcept { return !isEmpty(); }
 
     void add(unsigned x);
+    void erase(unsigned x);
     bool have(unsigned x) const noexcept;
 private:
     using Item = size_t;
@@ -66,6 +67,7 @@ private:
     public:
         Block() { std::fill_n(items, ITEMS_PER_BLOCK, 0); }
         void set(unsigned n);
+        void erase(unsigned n);
         bool have(unsigned n);
     private:
         Item items[ITEMS_PER_BLOCK];
