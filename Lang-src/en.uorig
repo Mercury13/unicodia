@@ -7361,7 +7361,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The Unicode Consortium does not define what is a country and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Notable cases from ISO{{_}}3166:</p>
+      <p>The Unicode Consortium does not define what is a country and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Among unusual reasons:</p>
       <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after independence.</p>
       <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and rename.</p>
       <p>* PS (Palestine): way to recognition.</p>
