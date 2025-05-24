@@ -815,6 +815,10 @@
      <orig>↓↓→ in columns</orig>
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
     </text>
+    <text id="L_most">
+     <orig>mostly →</orig>
+     <au-cmt>Test: Runr</au-cmt>
+    </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>

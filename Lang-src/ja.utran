@@ -1022,6 +1022,11 @@
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
      <transl>↓↓→ 列内</transl>
     </text>
+    <text id="L_most" force-attention="true">
+     <orig>mostly →</orig>
+     <au-cmt>Test: Runr</au-cmt>
+     <transl>大部分 →</transl>
+    </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>

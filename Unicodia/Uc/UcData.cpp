@@ -88,6 +88,7 @@ constexpr uc::WritingDir writingDirProto[] {
     { "Prop.Dir.L_cunei" },
     { "Prop.Dir.L_ogam" },
     { "Prop.Dir.L_col" },
+    { "Prop.Dir.L_most" },
     { "Prop.Dir.TD" },
     { "Prop.Dir.Both" },
     { "Prop.Dir.R_col" },

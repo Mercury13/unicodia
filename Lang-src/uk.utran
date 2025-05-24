@@ -1025,6 +1025,11 @@
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
      <transl>↓↓→ стовпцями</transl>
     </text>
+    <text id="L_most">
+     <orig>mostly →</orig>
+     <au-cmt>Test: Runr</au-cmt>
+     <transl>переважно →</transl>
+    </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>

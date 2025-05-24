@@ -156,6 +156,7 @@ namespace uc {
         LTR_CUNEIFORM,
         LTR_BU,
         LTR_COL,
+        LTR_MOSTLY,
         TD,
         BOTH_LTR,   ///< Both, encoded as →
         RTL_COL,

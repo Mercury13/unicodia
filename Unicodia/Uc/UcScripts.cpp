@@ -697,7 +697,7 @@ constinit const uc::Script uc::scriptInfo[] {
           .locations { LOC_BANGLADESH, LOC_MYANMAR } } },
     // Runes OK, several tofu → installed Google Noto font
     { "Runr", QFontDatabase::Runic,
-        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR_MOSTLY, EcContinent::EUROPE,
         Dating::century(2, StdNote::FIRST_KNOWN), EcFont::FRANKEN_SANS },
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr", QFontDatabase::Any,
