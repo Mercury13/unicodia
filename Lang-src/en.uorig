@@ -7357,14 +7357,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode Consortium does not define for themselves what is a country and how its flag should look. Instead they take two-letter country codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some territories of disputable status. Among unusual reasons:</p>
-      <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after gaining independence.</p>
+      <p>The Unicode Consortium does not define what is a country and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Notable cases from ISO{{_}}3166:</p>
+      <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after independence.</p>
       <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and rename.</p>
       <p>* PS (Palestine): way to recognition.</p>
       <p>* DG (Diego Garcia) and others: telecommunication sites.</p>
       <p>* EA (Ceuta and Melilla), IC (Canary Islands): special customs rules different from common-European.</p>
       <p>* GG (Guernsey) and others: issue their own postal stamps.</p>
-      <p>* XK (Kosovo): temporary code used by Europe.</p>
+      <p>* XK (Kosovo): temporary code used by EU.</p>
       <p />
       <p>Image on country emoji (usually flag) is up to vendor.</p>
      </orig>
