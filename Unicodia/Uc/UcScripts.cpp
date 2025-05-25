@@ -232,7 +232,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Diak OK, W10 off, Noto is really cool
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        // 6…8: Grantha, 9…10: clearly Evela [Pandey]
+        // 6…8: coral in Grantha, 9…10: statue clearly in Evela [Pandey]
         Dating::crange(9, 10, StdNote::FIRST_KNOWN), EcFont::DIVES_AKURU },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
