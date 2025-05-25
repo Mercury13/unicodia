@@ -1261,6 +1261,10 @@
      <au-cmt>Gurmukhi</au-cmt>
      <transl>Пакістан</transl>
     </text>
+    <text id="Russia">
+     <orig>Russia</orig>
+     <transl>Росія</transl>
+    </text>
     <text id="SierraLeone">
      <orig>Sierra Leone</orig>
      <transl>Сьєрра-Леоне</transl>
@@ -1863,12 +1867,12 @@
      <orig>
       <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
       <p />
-      <p>Ligature ТЬ is from the new Khanty ''(Russia, 9500 as of 2010)'' alphabet of 2013.</p>
+      <p>Ligature ТЬ is from the new Khanty {{nspk|kca}} alphabet of 2013.</p>
      </orig>
      <transl>
       <p>Варіанти кириличних літер з друкованих церковних книг: від Біблії Франциска Скорини (Прага, 1519, ще до Федорова) до Києво-Печерського Типікона (1893).</p>
       <p />
-      <p>Лігатура ТЬ{{-}}з нового (2013) алфавіту ханти ''(Роcія, 9500 чоловік на 2010)''.</p>
+      <p>Лігатура ТЬ{{-}}з нового (2013) алфавіту ханти {{nspk|kca}}.</p>
      </transl>
     </text>
    </group>

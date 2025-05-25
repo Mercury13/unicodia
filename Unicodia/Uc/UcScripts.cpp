@@ -19,8 +19,9 @@ constexpr uc::LangLoc LOC_LIBERIA       { .locSubKey = "Liberia"     };
 constexpr uc::LangLoc LOC_MYANMAR       { .locSubKey = "Myanmar"     };
 constexpr uc::LangLoc LOC_NEPAL         { .locSubKey = "Nepal"       };
 constexpr uc::LangLoc LOC_PAKISTAN      { .locSubKey = "Pakistan"    };
+constexpr uc::LangLoc LOC_RUSSIA        { .locSubKey = "Russia"      };
 constexpr uc::LangLoc LOC_SIERRA_LEONE  { .locSubKey = "SierraLeone" };
-constexpr uc::LangLoc LOC_SRI_LANKA     { .locSubKey = "SriLanka"     };
+constexpr uc::LangLoc LOC_SRI_LANKA     { .locSubKey = "SriLanka"    };
 constexpr uc::LangLoc LOC_SUMATRA       { .locSubKey = "Sumatra"     };
 constexpr uc::LangLoc LOC_THAILAND      { .locSubKey = "Thailand"    };
 constexpr uc::LangLoc LOC_USA           { .locSubKey = "Usa"         };
@@ -968,6 +969,9 @@ extern const uc::SideLang uc::sideLangInfo[] {
     { .id = "guk",  // Gumuz ← Ethi
       .lang { .mantissa = 25, .numOrder = NumOrder::DEC_THOU, .year = 2007, .year2 = 2017,
               .locations { LOC_ETHIOPIA } } },
+    { .id = "kca",  // Khanty ← Cyrl
+      .lang { .mantissa = 14, .numOrder = NumOrder::THOUSAND, .year = 2020,
+              .locations { LOC_RUSSIA } } },  // RosStat 2020 census
     { .id = "kkh",  // Khün ← Lana
       .lang { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .year = 1990 } },
                     // Ethnologue ← Diller and Juntanamalaga 1990
