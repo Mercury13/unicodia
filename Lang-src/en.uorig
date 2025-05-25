@@ -7484,7 +7484,7 @@
       <p>* If such fine details are truly important, Unicode is just not for you. Include the image.</p>
       <p>* Similar signs with different meanings are encoded separately. A circle might represent a tambourine, a ring, a pit…</p>
       <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
-      <p>* But if such form has a special meaning (leg+knife=injury), it will get.</p>
+      <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* A hieroglyph is extended if it’s attested at least three times in modern publications, and has a number in one of two databases (''JSesh'' or ''Hieroglyphica''). Then it receives the right for encoding. As an exception, scholars may add commonly-used signs.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
