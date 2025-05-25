@@ -841,7 +841,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa", QFontDatabase::Thaana,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::OCEAN,
-        Dating::century(18), EcFont::THAANA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1599, StdNote::FIRST_KNOWN), EcFont::THAANA, NO_FLAGS, EcVersion::ALL_BUILTIN,
         { .mantissa = 49, .numOrder = NumOrder::DEC_THOU, .year = 2022 } }, // Census
     // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai", QFontDatabase::Thai,

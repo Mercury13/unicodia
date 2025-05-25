@@ -9143,12 +9143,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Writing culture came to Maldives together with Buddhism, and the ''Evela Akuru'' script emerged, based on [[ps:Sinh|Sinhala]]. The oldest known inscriptions date back to the 7–8th century. In 1153, the local king converted to Islam and took the name name to Muhammad al-Adil; by 14th century the script had evolved to ''[[ps:Diak|Dives Akuru]]'' but remained left-to-right. In the 17th century, a new script started to emerge, probably for Islamic quotes.</p>
+      <p />
+      <p>The origin of Thaana is unique: its consonants came from Arabic numerals and pre-Islamic digits, and vowels from [[ps:Arab|Arabic]] vowel marks. Over time the lines became smoother, and the elegant 45-degree slanted writing style became widespread. The explorer Thor Heyerdahl once compared Thaana to noodles.</p>
+      <p />
+      <p>In the 1970s, Thaana was on the verge of extinction: President Ibrahim Nasir established telex communication, and the government switched to a poorly designed [[ps:Latn|Latin]] transliteration. However, the next president, Maumoon Abdul Gayoom, restored Thaana. Today both scripts are used in parallel.</p>
+     </orig>
+     <known-orig>
       <p>Writing culture came to Maldives together with Buddhism, ''Evela Akuru'' script appeared based on [[ps:Sinh|Sinhala]]. The oldest inscription is dated 7–8th century. In 1153 local king adopted Islam and changed name to Muhammad al Adil; by 14th century it evolved to ''[[ps:Diak|Dives Akuru]]'' but remained left-to-right. In 1703 Sultan Ibrahim{{_}}III replaced the old script with new ''Gabuli Thaana'' (''standard script'').</p>
       <p />
       <p>The origin of Thaana is unique: consonants came from Arabic and pre-Islamic digits, and vowels from [[ps:Arab|Arabic]] vowel marks. The time smoothed lines, and writing with elegant 45-degree slant became widespread. Traveler Thor Heyerdahl compared Thaana with noodles.</p>
       <p />
       <p>In 1970s Thaana was on the edge of extinction: President Ibrahim Nasir established Telex communication, and government switched to a low-quality [[ps:Latn|Latin]] transliteration. Maumoon Abdul Gayoom, the next president, restored Thaana, and both scripts are used in parallel.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>モルディブには仏教とともに文字文化が伝わり、シンハラ語に基づく「エヴェラ・アクル」文字が登場しました。最も古い碑文は7～8世紀のものです。1153年に地元の王がイスラム教を受け入れ、名前をムハンマド・アル・アディルに変更しました。14世紀までに「[[ps:Diak|ディヴェス・アクル]]」に進化しましたが、左から右への書き方はそのままでした。1703年にスルタン・イブラヒム3世は古い文字を新しい「ガブリ・ターナ」(「標準文字」)に置き換えました。</p>
       <p />
@@ -9156,6 +9163,7 @@
       <p />
       <p>1970年代、ターナ文字は消滅の危機に瀕していました。イブラヒム・ナシル大統領がテレックス通信を確立し、政府は低品質の[[ps:Latn|ラテン語]]音訳に切り替えました。次の大統領、マウムーン・アブドゥル・ガユームがターナ文字を復活させ、両方の文字が並行して使用されています。</p>
      </transl>
+     <tr-cmt>PLEASE CHECK — facts</tr-cmt>
     </text>
    </group>
    <group id="Thai">
