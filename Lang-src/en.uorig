@@ -1002,6 +1002,7 @@
     </text>
     <text id="Russia">
      <orig>Russia</orig>
+     <au-cmt>Test: Cyrl C</au-cmt>
     </text>
     <text id="SierraLeone">
      <orig>Sierra Leone</orig>
