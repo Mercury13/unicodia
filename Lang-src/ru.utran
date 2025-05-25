@@ -10707,11 +10707,11 @@
      <orig>
       <p>In early 2025, principles for encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
       <p />
-      <p>* A hieroglyph may have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 or more coils. These forms are encoded at the discretion of scholars.</p>
-      <p>* A hieroglyph is encoded in the most detailed form. Really fine details like armbands are omitted at the discretion of scholars.</p>
+      <p>* A hieroglyph can have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 or more coils. These forms are encoded at scholars’ discretion.</p>
+      <p>* Hieroglyphs are encoded in the most detailed form. Really fine details like armbands are omitted at scholars’ discretion.</p>
       <p>* Size and colour are not encoded.</p>
-      <p>* If those fine details really matter, Unicode is just not for you. Include the image.</p>
-      <p>* Similar signs with different meanings are encoded separately. A circle may mean tambourine, ring, pit…</p>
+      <p>* If such fine details are truly important, Unicode is just not for you. Include the image.</p>
+      <p>* Similar signs with different meanings are encoded separately. A circle might represent a tambourine, a ring, a pit…</p>
       <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
       <p>* But if such form has a special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
@@ -10724,7 +10724,7 @@
       <p>В начале 2025 написали принципы кодирования [[ps:Egyp|египетских иероглифов]].</p>
       <p />
       <p>* Иероглиф может иметь множество форм: человек склоняется легко или низко, змея с 2-мя, 3-мя и более кольцами. Эти формы кодируются по решению исследователей.</p>
-      <p>* Иероглиф кодируется в самой детальной форме. Совсем мелкие детали вроде наручных повязок опускаются по решению исследователей.</p>
+      <p>* Иероглифы кодируются в самой детальной форме. Совсем мелкие детали вроде наручных повязок опускаются по решению исследователей.</p>
       <p>* Размер и цвет не кодируются.</p>
       <p>* Если эти мелкие детали имеют значение, Юникод не для вас. Добавьте изображение.</p>
       <p>* Сходные знаки с разными значениями кодируются отдельно. Круг может значить бубен, кольцо, яму…</p>
