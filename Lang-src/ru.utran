@@ -1262,6 +1262,7 @@
     </text>
     <text id="Russia">
      <orig>Russia</orig>
+     <au-cmt>Test: Cyrl C</au-cmt>
      <transl>Россия</transl>
     </text>
     <text id="SierraLeone">
@@ -10715,7 +10716,7 @@
       <p>* But if such form has a special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* A hieroglyph is extended if it’s attested at least three times, or is included in a major list like ''Thot'' or ''JSesh'', or is commonly used by scholars. Then it receives the right for encoding.</p>
-      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
      </orig>
      <au-cmt>Thot, JSesh are always Latin</au-cmt>
@@ -10731,7 +10732,7 @@
       <p>* Но если такая форма имеет особое значение (нога+нож=рана), то получит.</p>
       <p>* Иероглифы делятся на три типа: базовые, совместимые и расширенные.</p>
       <p>* Иероглиф становится расширенным, если он замечен трижды, или включён в крупный список вроде ''Thot'' или ''JSesh'', или широко используется исследователями. Тогда он получает право на кодирование.</p>
-      <p>* Иероглиф становится базовым, если он подтверждён надёжным изображением (фото или достоверной обводкой). Если он закодирован в нескольких формах, часть форм могут быть исключены из базового списка.</p>
+      <p>* Иероглиф становится базовым, если он подтверждён надёжным изображением (фото или достоверной обводкой). Если он найден в иератическом тексте, иероглифическая форма должна легко реконструироваться. Если он закодирован в нескольких формах, часть форм могут быть исключены из базового списка.</p>
       <p>* Тривиальные формы и комбинации из Юникода{{_}}5.2{{-}}совместимые. Остальной Юникод{{_}}5.2 (основанный на списке Гардинера) автоматически базовый.</p>
      </transl>
     </text>
