@@ -14279,6 +14279,10 @@
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
       <transl>домашний/учебный ПК ''(клавиатурный форм-фактор, Бейсик в ПЗУ, поддерживает ТВ и магнитофон)''</transl>
      </text>
+     <text id="Lux">
+      <orig>luxurious home/educational PC ''(keyboard form factor, BASIC in ROM, tape recorder, but dedicated monitor and disks as an option)''</orig>
+      <transl>роскошный домашний/учебный ПК ''(клавиатурный форм-фактор, Бейсик в ПЗУ, магнитофон, но отдельный монитор и диски как опция)''</transl>
+     </text>
      <text id="Desk">
       <orig>early hobby PC with monitor</orig>
       <transl>ранний хобби-ПК с монитором</transl>

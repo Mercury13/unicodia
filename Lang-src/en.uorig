@@ -10001,6 +10001,9 @@
      <text id="Home">
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
      </text>
+     <text id="Lux">
+      <orig>luxurious home/educational PC ''(keyboard form factor, BASIC in ROM, tape recorder, but dedicated monitor and disks as an option)''</orig>
+     </text>
      <text id="Desk">
       <orig>early hobby PC with monitor</orig>
      </text>

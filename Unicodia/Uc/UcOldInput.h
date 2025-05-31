@@ -16,6 +16,7 @@ namespace uc {
 
         DEFINE_ENUM_TYPE_IN_NS2(uc, old, Type, unsigned char,
             HOME_EDUC_PC,
+            LUXURY_PC,
             HOBBY_PC,
             ADVANCED_PC,
             TERMINAL,
