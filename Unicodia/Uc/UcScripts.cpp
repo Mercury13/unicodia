@@ -85,7 +85,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::special(), EcFont::ADLAM, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::special(), EcFont::ADLAM, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 1, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::MORE_THAN | Langfg::CUSTOM_PRENOTE,
           .year = 0 } },
     // Caucasian Albanian OK, W10 none, installed Google Noto
@@ -99,8 +100,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Arabic OK, three fonts: SIL Scheherazade main, Google Noto Math + Google Noto Arabic for special ranges
     { "Arab", QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_RTL,
-        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC,
-        Sfg::STUB_ALM, EcVersion::ALL_BUILTIN,
+        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC, Sfg::STUB_ALM,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_DECADE_AS_NATIVE, .year = 2020 } },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
@@ -109,7 +110,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Armenian OK, Cambria+Noto is more than nice!
     { "Armn", QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(405), EcFont::ARMENIAN, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(405), EcFont::ARMENIAN, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 38, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::MORE_THAN, .year = 2022 } },
     // Avestan OK, installed Google Noto
     /// @todo [future, link] wait for book Pahlavi (sorry, cannot put todo at lockit)
@@ -127,7 +129,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bassa Vah OK, none in W10, installed Google Noto
     { "Bass", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::yapprox(1900), EcFont::FRANKEN_SANS, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::yapprox(1900), EcFont::FRANKEN_SANS, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 4, .numOrder = NumOrder::HUN_THOU, .year = 2006, .locations { LOC_LIBERIA } } },
     // Batak OK, installed Google Noto font
     { "Batk", QFontDatabase::Any,
@@ -136,13 +139,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::special(), EcFont::BENGALI, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::special(), EcFont::BENGALI, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 23, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2021,
           .locations { LOC_BANGLADESH, LOC_INDIA_E } } },
     // Beria Erfe OK, SIL’s font
     { "Berf", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
-        Dating::decade(1950), EcFont::BERIA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::decade(1950), EcFont::BERIA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 44, .numOrder = NumOrder::DEC_THOU, .year = 2022,
           .locations { LOC_AFRICA_C } } },
     // Bhaiksuki OK, installed Google Noto
@@ -164,17 +169,20 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buginese OK, W10 only → made LelawadeeUI → Google Noto chain
     { "Bugi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::crange(15, 17), EcFont::BUGINESE, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::crange(15, 17), EcFont::BUGINESE, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 4, .numOrder = NumOrder::MILLION, .year = 2015 } },
     // Buhid OK, installed Google Noto font
     { "Buhd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::yapprox(1300), EcFont::BUHID, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::yapprox(1300), EcFont::BUHID, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 12, .numOrder = NumOrder::THOUSAND, .flags = Langfg::CUSTOM_PRENOTE, .year = 2010 }},
     // Chakma OK, added Noto font, mostly because of missing glyphs
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::unknown(), EcFont::CHAKMA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::unknown(), EcFont::CHAKMA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 7, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::S_DECADE | Langfg::MORE_THAN,
           .year = 2010, .locations { LOC_BANGLADESH, LOC_INDIA_E, LOC_MYANMAR } } },
     // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
@@ -187,19 +195,22 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(-7), EcFont::HISTORIC },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(4), EcFont::CHAM, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(4), EcFont::CHAM, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 49, .numOrder = NumOrder::DEC_THOU, .year = 2019,
           .locations { LOC_CAMBODIA, LOC_VIETNAM } } },
     // Cherokee OK, installed Google Noto font. Need it, W7 has no 2014 extensions.
     { "Cher", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
-        Dating::year(1821), EcFont::FRANKEN_SANS, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1821), EcFont::FRANKEN_SANS, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
           .locations { LOC_USA } } },
     // Chisoi OK, cool font transferred to Funky for Unicodia’s needs
     { "Chis", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1994), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1994), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E } } },
     // Chorasmian OK, installed Google Noto
@@ -221,13 +232,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS, EcVersion::V_5_0,
+        Dating::ybefore(900), EcFont::NORMAL, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::V_5_0,
         // Russian here as main Cyrillic language
         { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2020 } },
     // Devanagari OK, added 8 characters to Noto Serif
     { "Deva", QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::crange(1, 7), EcFont::DEVANAGARI, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::crange(1, 7), EcFont::DEVANAGARI, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Hindi here as main Devanagari language
         { .mantissa = 35, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2011 } },
     // Diak OK, W10 off, Noto is really cool
@@ -238,7 +251,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(19), EcFont::DOGRA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(19), EcFont::DOGRA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 26, .numOrder = NumOrder::HUN_THOU, .year = 2011,
           .locations = { LOC_INDIA_N } } },
     // Deseret OK, W10 Segoe UI Symbol, plane 1
@@ -265,21 +279,21 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Amharic here as main Ethiopic language
         { .mantissa = 33, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2020 } },
     // Garay OK somehow, though hangs
     { "Gara", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::year(1961), EcFont::FUNKY_DESC_BIGGER, Sfg::STUB_RTL,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Wolof here as main Garay language
         { .mantissa = 22, .numOrder = NumOrder::MILLION, .year = 2021, .locations = { LOC_AFRICA_W} } },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::year(430, StdNote::FIRST_KNOWN), EcFont::GEORGIAN, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 37, .numOrder = NumOrder::HUN_THOU, .year = 2020 } },
     // Glagolitic OK, installed Google Noto font
     { "Glag", QFontDatabase::Any,
@@ -289,14 +303,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1750, StdNote::FIRST_KNOWN), EcFont::GUNJALA_GONDI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_INDIA_CEN } } },
     // Gondi/Masaram OK, W10 none, installed Google Noto
     { "Gonm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1918), EcFont::MASARAM_GONDI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 3, .numOrder = NumOrder::MILLION, .year = 2011, .locations { LOC_INDIA_CEN } } },
     // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
@@ -310,42 +324,47 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::crange_ins(-9, -8), EcFont::GREEK_COPTIC, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 135, .numOrder = NumOrder::HUN_THOU, .year = 2012 } },  // 13.5M as of 2012
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 57, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2011,
           .locations { LOC_INDIA_W } } },
     // Gurung Khema now in Funky
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1977), EcFont::FUNKY, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1977), EcFont::FUNKY, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 38, .numOrder = NumOrder::DEC_THOU, .year = 2021, .locations { LOC_NEPAL } } },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(16), EcFont::GURMUKHI, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(16), EcFont::GURMUKHI, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Punjabi here as the main Gurmikhi language
         { .mantissa = 15, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::year(1443), EcFont::KOREAN, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1443), EcFont::KOREAN, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 8, .numOrder = NumOrder::DEC_MILLION, .year = 2020 } },
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS,
+        ScriptSpec::RADICAL_STROKE_HANI, EcVersion::ALL_BUILTIN,
         // Chinese here as the main Han language
         { .mantissa = 135, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},
     // Hanunoo OK, installed Google Noto font
     { "Hano", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::yapprox(1300), EcFont::HANUNOO, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::yapprox(1300), EcFont::HANUNOO, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 13, .numOrder = NumOrder::THOUSAND, .year = 2000 } },
     // Hatran OK, W10 none, installed Google Noto
     { "Hatr", QFontDatabase::Any,
@@ -355,7 +374,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Hebr", QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::century(-2, StdNote::MODERN_FORM), EcFont::HEBREW, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 9, .numOrder = NumOrder::MILLION, .flags = Langfg::MORE_THAN, .year = 2018 } },
     // Hentaigana currently OK
     { "Hent", QFontDatabase::Japanese,
@@ -364,7 +383,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::crange(8, 9), EcFont::KOREAN, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::crange(8, 9), EcFont::KOREAN, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Japanese here
         { .mantissa = 12, .numOrder = NumOrder::DEC_MILLION, .year = 2020 } },
     // Anatolian hiero OK, installed Google Noto
@@ -422,13 +442,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::CUSTOM), EcFont::KANNADA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 44, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2011,
           .locations { LOC_INDIA_SW } } },
     // Kirat OK, excellent font from SIL
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1920), EcFont::KIRAT, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1920), EcFont::KIRAT, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 17, .numOrder = NumOrder::DEC_THOU, .year = 2011,
           .locations { LOC_INDIA_NE, LOC_NEPAL } } },
     // Kaithi OK, W10 none → installed Google Noto
@@ -447,19 +468,21 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Latn", QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(-700), EcFont::NORMAL, NO_FLAGS,
-        EcVersion::V_5_0,   // 5.1+ are served with Noto only
+        ScriptSpec::NONE, EcVersion::V_5_0,   // 5.1+ are served with Noto only
         // English here as the main Latin script
         { .mantissa = 38, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2021 } },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yapprox(1700), EcFont::LEPCHA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::yapprox(1700), EcFont::LEPCHA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 65, .numOrder = NumOrder::THOUSAND, .year = 2011,
           .locations { LOC_INDIA_E, LOC_BHUTAN, LOC_NEPAL } } },
     // Limbu OK, W10 none, installed Google Noto font
     { "Limb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(18), EcFont::LIMBU, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(18), EcFont::LIMBU, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 41, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_NEPAL } } },
     // Linear A OK, W10 none, installed Google Noto font
@@ -474,7 +497,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Lisu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1915), EcFont::FRANKEN_SANS, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 94, .numOrder = NumOrder::DEC_THOU, .year = 2007,
           .locations { LOC_CHINA, LOC_MYANMAR, LOC_THAILAND } } },
     // Lycian OK, W10 P1 Segoe Historic
@@ -513,7 +536,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mend", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::yapprox(1920), EcFont::FRANKEN_SANS, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 25, .numOrder = NumOrder::HUN_THOU, .year = 2021,
           .locations { LOC_SIERRA_LEONE } } },
     // Meroitic cursive OK, W10 has small part
@@ -528,14 +551,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mlym", QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(830, StdNote::FIRST_KNOWN), EcFont::MALAYALAM, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 37, .numOrder = NumOrder::MILLION, .year = 2011,
           .locations { LOC_INDIA_S } } },
     // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yrange(1200, 1600), EcFont::MODI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         // Marathi here as the main Modi script
         { .mantissa = 83, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2011,
           .locations { LOC_INDIA_W } } },
@@ -547,14 +570,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mroo", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1980), EcFont::FRANKEN_SANS, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 7, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::MORE_THAN, .year = 2022,
           .locations { LOC_BANGLADESH, LOC_MYANMAR } } },
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(1500, StdNote::FIRST_KNOWN), EcFont::MEETEI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 17, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::MORE_THAN, .year = 2011,
           .locations { LOC_INDIA_E } }},
     // Multani OK, W10 none → installed Google Noto
@@ -565,14 +588,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1035, StdNote::FIRST_KNOWN), EcFont::MYANMAR, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 33, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE | Langfg::BURMESE,
           .year = 2007, .locations { LOC_MYANMAR } } },
     // Nag OK, done in FunkySample
     { "Nagm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yrange(1949, 1982), EcFont::FUNKY, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 11, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::S_IN_INDIA | Langfg::MORE_THAN,
           .year = 2011, .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_MYANMAR } } },
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
@@ -593,13 +616,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Newa", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1654, StdNote::CUSTOM), EcFont::NEWA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 88, .numOrder = NumOrder::DEC_THOU, .year = 2021,
           .locations { LOC_NEPAL } } },
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo", QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        Dating::year(1949), EcFont::NKO, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1949), EcFont::NKO, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 9, .numOrder = NumOrder::MILLION, .year = 2021,
           .locations { LOC_AFRICA_W } } },
     // Nushu OK, W10 off, installed Google Noto
@@ -613,13 +637,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ol Chiki OK, W10 “Nirmala UI”, W7 none → installed Google Noto
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1925), EcFont::OLCHIKI, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1925), EcFont::OLCHIKI, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 73, .numOrder = NumOrder::HUN_THOU, .flags = Langfg::MORE_THAN, .year = 2011,
           .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
     // Ol Onal OK, made in Funky
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::decade(1980), EcFont::FUNKY, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::decade(1980), EcFont::FUNKY, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 27, .numOrder = NumOrder::THOUSAND, .year = 2011,
           .locations { LOC_INDIA_E } } },
     // Orkhon runes OK, took Noto
@@ -630,7 +656,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Orya", QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::MODERN_FORM), EcFont::ORIYA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 34, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE, .year = 2011,
           .locations { LOC_INDIA_E } } },
     // Osage OK, W10 Gadugi
@@ -653,7 +679,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Pauc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::special(), EcFont::FRANKEN_SANS, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 34, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::NO_AUTO, .year = 1990 } },
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
@@ -687,14 +713,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Rjng", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::yapprox(1750, StdNote::FIRST_KNOWN), EcFont::REJANG, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 20, .hiMantissa = 35, .numOrder = NumOrder::DEC_THOU, .year = 0,
           .locations { LOC_SUMATRA } } },
     // Rohingya, installed Google Noto font
     { "Rohg", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::ASIA_RTL,
         Dating::decade(1980), EcFont::ROHINGYA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2, .numOrder = NumOrder::MILLION, .flags = Langfg::MORE_THAN, .year = 2017,
           .locations { LOC_BANGLADESH, LOC_MYANMAR } } },
     // Runes OK, several tofu → installed Google Noto font
@@ -713,7 +739,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(19, StdNote::MAYBE_EARLIER), EcFont::SAURASHTRA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 25, .numOrder = NumOrder::DEC_THOU, .year = 2011,
           .locations { LOC_INDIA_S } } },
     // Sutton SignWriting OK, installed Google Noto font
@@ -740,14 +766,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::KHUDAWADI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::S_DECADE, .year = 2010,
           .locations { LOC_PAKISTAN, LOC_INDIA_N } } },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(13, StdNote::MODERN_FORM), EcFont::SINHALA, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 18, .numOrder = NumOrder::MILLION, .year = 2021, .locations { LOC_SRI_LANKA } } },
     // Sogdian OK, W10 None → installed Google Noto
     { "Sogd", QFontDatabase::Any,
@@ -760,7 +786,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sora Sompeng OK, W10 Nirmala UI
     { "Sora", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1936), EcFont::TAMIL, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1936), EcFont::TAMIL, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 4, .numOrder = NumOrder::HUN_THOU, .year = 2011,
           .locations { LOC_INDIA_SE } } },
     // Soyombo OK, W10 none → installed Google Noto
@@ -771,18 +798,19 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(14), EcFont::SUNDANESE, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 32, .numOrder = NumOrder::MILLION, .flags = Langfg::S_AS_NATIVE | Langfg::NO_AUTO, .year = 2015 } }, // UNSD
     // Sunuwar OK, though font is REALLY bad
     { "Sunu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1942), EcFont::SUNUWAR, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1942), EcFont::SUNUWAR, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 38, .numOrder = NumOrder::THOUSAND, .year = 2011, .locations { LOC_NEPAL } } }, // Census
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(15), EcFont::SYLOTI_NAGRI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 11, .numOrder = NumOrder::MILLION, .year = 2017,
           .locations { LOC_BANGLADESH, LOC_INDIA_E } }},  // Ethnologue
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
@@ -808,7 +836,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tamil BMP OK, different fonts in W10 and W7
     { "Taml", QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::crange(6, 9), EcFont::TAMIL, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::crange(6, 9), EcFont::TAMIL, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 75, .numOrder = NumOrder::MILLION, .flags = Langfg::MORE_THAN, .year = 2011,
           .locations { LOC_INDIA_S, LOC_SRI_LANKA } } },  // Census
     // Tangut OK, installed Google Noto
@@ -822,14 +851,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tai Yo OK, presume SIL license
     { "Tayo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::RTL_COL, EcContinent::ASIA,
-        Dating::century(16), EcFont::TAI_YO, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(16), EcFont::TAI_YO, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 29, .numOrder = NumOrder::DEC_THOU, .year = 2019,
           .locations { LOC_VIETNAM } } }, // Unicode request, Ethnologue is murky and obsolete
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::CUSTOM), EcFont::TELUGU, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 9, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::MORE_THAN, .year = 2011,
           .locations { LOC_INDIA_SE } } }, // Census
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
@@ -843,12 +873,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa", QFontDatabase::Thaana,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::OCEAN,
-        Dating::year(1599, StdNote::FIRST_KNOWN), EcFont::THAANA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1599, StdNote::FIRST_KNOWN), EcFont::THAANA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 49, .numOrder = NumOrder::DEC_THOU, .year = 2022 } }, // Census
     // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai", QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1283), EcFont::THAI, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1283), EcFont::THAI, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 6, .numOrder = NumOrder::DEC_MILLION,
           .flags = Langfg::MORE_THAN | Langfg::S_DECADE, .year = 2020 } }, // No reliable source
     // Tibetan OK, W10 did not have swastika, installed BabelStone
@@ -862,7 +894,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tangsa OK, U14, called author and he gave font
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1990), EcFont::TANGSA, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1990), EcFont::TANGSA, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .year = 2010,
           .locations { LOC_MYANMAR, LOC_INDIA_NE } } }, // Ethnologue
     // Todhri OK, drew in Funky
@@ -872,18 +905,21 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tolong Siki somehow OK, though craggy
     { "Tols", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1999), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(1999), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 21, .numOrder = NumOrder::HUN_THOU, .year = 2011,  // Same 2011 census
           .locations { LOC_INDIA_E, LOC_BANGLADESH, LOC_NEPAL } } },
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(2015), EcFont::FUNKY, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::year(2015), EcFont::FUNKY, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 1400, .numOrder = NumOrder::UNIT, .year = 2014, .locations { LOC_INDIA_E } } },
     // Tulu partly OK, font is just a gag
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::century(9), EcFont::TULU, NO_FLAGS, EcVersion::ALL_BUILTIN,
+        Dating::century(9), EcFont::TULU, NO_FLAGS,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 18, .numOrder = NumOrder::HUN_THOU, .year = 2011, .locations { LOC_INDIA_SW } } },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
@@ -901,14 +937,14 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1950), EcFont::FRANKEN_SANS, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 14, .numOrder = NumOrder::HUN_THOU, .year = 2011,
           .locations = { LOC_INDIA_E } } },
     // Wancho OK, W10 none, installed Google Noto
     { "Wcho", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yrange(2001, 2012), EcFont::FRANKEN_SANS_BIGGER, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 59, .numOrder = NumOrder::THOUSAND, .year = 2011, .locations { LOC_INDIA_NE } } },
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
@@ -926,7 +962,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Yiii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1974, StdNote::CUSTOM), EcFont::YI, NO_FLAGS,
-        EcVersion::ALL_BUILTIN,
+        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2, .numOrder = NumOrder::MILLION, .year = 2000,
           .locations = { LOC_CHINA } } }, // Census
     // Zanabazar square OK, installed Google Noto

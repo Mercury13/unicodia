@@ -2302,12 +2302,12 @@ namespace {
 
         // Kangxi
         if (cp.scriptSpecific) {
-            switch (cp.ecScript) {
-            case uc::EcScript::Hani:
+            switch (cp.script().scriptSpec) {
+            case uc::ScriptSpec::RADICAL_STROKE_HANI:
                 sp.sep();
                 appendHaniRadical(text, cp.scriptSpecific);
                 break;
-            default: ;
+            case uc::ScriptSpec::NONE:;
             }
         }
 

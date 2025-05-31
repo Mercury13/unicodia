@@ -545,7 +545,7 @@ namespace uc {
         int delta = 0;
     };
 
-    enum class FontGetFg {
+    enum class FontGetFg : unsigned char {
         NO_AA = 1,
         KNOWN_TOFU = 2,
         FAST = KNOWN_TOFU,        ///< accent that it shows faster
@@ -731,6 +731,12 @@ namespace uc {
     };
     DEFINE_ENUM_OPS(Sfg)
 
+    /// Meaning of ScriptSpecific flags
+    enum class ScriptSpec : unsigned char {
+        NONE,
+        RADICAL_STROKE_HANI
+    };
+
     struct Script
     {
         std::string_view id;
@@ -744,6 +750,7 @@ namespace uc {
         Flags<Sfg> flags {};
             /// The last version supported with standard fonts
             /// (for future-proofing)
+        ScriptSpec scriptSpec = ScriptSpec::NONE;
         EcVersion lastBuiltinVersion = EcVersion::ALL_BUILTIN;
         Lang mainLang = NO_LANG;
 
