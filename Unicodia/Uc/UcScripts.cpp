@@ -266,7 +266,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Egyptian hiero OK, W7 none, W10 troubles → better Noto + temporary fallbacks
     { "Egyp", QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::AFRICA,
-        Dating::yapprox(-3200), EcFont::EGYPTIAN },
+        Dating::yapprox(-3200), EcFont::EGYPTIAN, NO_FLAGS,
+        ScriptSpec::RELIABILITY_EGYP },
     // Elbasan OK, none in W10 → installed Google Noto
     { "Elba", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,

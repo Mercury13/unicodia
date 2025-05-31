@@ -2287,6 +2287,20 @@ namespace {
                     std::abs(sspec.haniPlusStrokes()));
     }
 
+    constinit ec::Array<const char*, uc::EgypReliability> egypRelInfo {
+        "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core"
+    };
+
+    void appendEgypReliability(QString& text, const uc::Cp::ScriptSpecific& sspec)
+    {
+        text += "<a href='pt:egyp' class='popup'>";
+        text += loc::get("Prop.Egyp.Bullet");
+        text += "</a>";
+        str::append(text, loc::active::punctuation.keyValueColon);
+        auto& value = loc::get(egypRelInfo[sspec.egypReliability()]);
+        mywiki::append(text, value, DEFAULT_CONTEXT, wiki::Mode::SPAN);
+    }
+
     /// @param [in] serializations  [+] write UTF-8, HTML etc
     ///
     void appendCpBullets(QString& text, const uc::Cp& cp,
@@ -2307,6 +2321,10 @@ namespace {
                 sp.sep();
                 appendHaniRadical(text, cp.scriptSpecific);
             }
+            break;
+        case uc::ScriptSpec::RELIABILITY_EGYP:
+            sp.sep();
+            appendEgypReliability(text, cp.scriptSpecific);
             break;
         case uc::ScriptSpec::NONE:;
         }

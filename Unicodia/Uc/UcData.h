@@ -734,7 +734,8 @@ namespace uc {
     /// Meaning of ScriptSpecific flags
     enum class ScriptSpec : unsigned char {
         NONE,
-        RADICAL_STROKE_HANI
+        RADICAL_STROKE_HANI,
+        RELIABILITY_EGYP,
     };
 
     struct Script

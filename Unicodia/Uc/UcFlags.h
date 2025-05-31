@@ -6,6 +6,7 @@
 
 // What else used
 #include "u_TypedFlags.h"
+#include "u_EnumSize.h"
 
 // C++
 #include <cassert>
@@ -154,6 +155,10 @@ namespace uc {
         FIRST = 1
     };
     DEFINE_ENUM_OPS(OldComp)
+
+    DEFINE_ENUM_TYPE_IN_NS(uc, EgypReliability, unsigned char,
+        EXTENDED, LEGACY, CORE
+    )
 
 }   // namespace uc
 

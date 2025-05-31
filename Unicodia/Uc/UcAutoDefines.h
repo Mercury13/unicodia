@@ -364,6 +364,7 @@ namespace uc {
             // For Hani
             unsigned char haniRadical() const { return v1; }
             signed char haniPlusStrokes () const { return v2; }
+            EgypReliability egypReliability() const { return static_cast<EgypReliability>(v1); }
             constexpr operator bool() const noexcept { return v1; }
         } scriptSpecific;
             // PADDING 1

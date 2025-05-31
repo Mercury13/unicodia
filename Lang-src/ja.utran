@@ -1289,6 +1289,20 @@
      <transl>ベトナム</transl>
     </text>
    </group>
+   <group id="Egyp">
+    <text id="Bullet">
+     <orig>Reliability</orig>
+    </text>
+    <text id="Ext">
+     <orig>extended ''(unreliable)''</orig>
+    </text>
+    <text id="Leg">
+     <orig>legacy ''(confirmed but deemed extraneous)''</orig>
+    </text>
+    <text id="Core">
+     <orig>core ''(confirmed)''</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="Stock">

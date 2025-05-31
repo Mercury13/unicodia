@@ -1291,6 +1291,24 @@
      <transl>Вьетнам</transl>
     </text>
    </group>
+   <group id="Egyp">
+    <text id="Bullet">
+     <orig>Reliability</orig>
+     <transl>Надёжность</transl>
+    </text>
+    <text id="Ext">
+     <orig>extended ''(unreliable)''</orig>
+     <transl>расширенный ''(ненадёжный)''</transl>
+    </text>
+    <text id="Leg">
+     <orig>legacy ''(confirmed but deemed extraneous)''</orig>
+     <transl>совместимый ''(подтверждён, но признан излишним)''</transl>
+    </text>
+    <text id="Core">
+     <orig>core ''(confirmed)''</orig>
+     <transl>базовый ''(подтверждённый)''</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="Stock">
