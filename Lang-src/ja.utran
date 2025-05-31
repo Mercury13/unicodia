@@ -14503,7 +14503,7 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64, the main American home computer, inherited encoding from the earlier Commodore PET. It put the formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison, IBM CGA had 320×200, 4 colours and no clash cells. Those 16 colours were very drab, that made games more realistic.</orig>
+     <orig>Commodore 64, the main American home computer, inherited encoding from the earlier Commodore PET. It put the formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison, IBM CGA had 320×200, 4 colours and no clash cells. Those 16 colours were very drab, making games more realistic.</orig>
      <known-orig>Commodore 64, the main American home computer, took encoding from earlier Commodore PET. It put formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison: IBM CGA had 320×200, 4 colours without clash cells. Those 16 colours were very drab, that made games more realistic.</known-orig>
      <transl>アメリカの家庭用コンピュータの主流であった Commodore 64 は、以前の Commodore PET からエンコードを採用しました。これにより、家庭用コンピュータの「多色、低解像度」という方式が限界に達しました。ゲームのメイン モードは 160×200、合計 16 色、4×8 セルあたり 4 色でした。比較すると、IBM CGA は 320×200、衝突セルなしの 4 色でした。これらの 16 色は非常に単調で、ゲームをよりリアルにしていました。</transl>
     </text>
