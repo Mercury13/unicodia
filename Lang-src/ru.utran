@@ -1308,6 +1308,10 @@
      <orig>core ''(confirmed)''</orig>
      <transl>базовый ''(подтверждённый)''</transl>
     </text>
+    <text id="Spec">
+     <orig>special character</orig>
+     <transl>спецсимвол</transl>
+    </text>
    </group>
   </group>
   <group id="Block">

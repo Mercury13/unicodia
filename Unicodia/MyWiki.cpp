@@ -2288,7 +2288,8 @@ namespace {
     }
 
     constinit ec::Array<const char*, uc::EgypReliability> egypRelInfo {
-        "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core"
+        "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core",
+        "Prop.Egyp.Spec"
     };
 
     void appendEgypReliability(QString& text, const uc::Cp::ScriptSpecific& sspec)

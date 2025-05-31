@@ -1037,6 +1037,9 @@
     <text id="Core">
      <orig>core ''(confirmed)''</orig>
     </text>
+    <text id="Spec">
+     <orig>special character</orig>
+    </text>
    </group>
   </group>
   <group id="Block">

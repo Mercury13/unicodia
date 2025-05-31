@@ -157,7 +157,8 @@ namespace uc {
     DEFINE_ENUM_OPS(OldComp)
 
     DEFINE_ENUM_TYPE_IN_NS(uc, EgypReliability, unsigned char,
-        EXTENDED, LEGACY, CORE
+        EXTENDED,   // =0!!!!!!
+        LEGACY, CORE, SPECIAL
     )
 
 }   // namespace uc

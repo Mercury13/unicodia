@@ -420,8 +420,10 @@ int main()
             strings.forceRemember(pTech, cp, uc::TextRole::ALT_NAME, v);
         }
 
+        auto egypReliability = uc::EgypReliability::EXTENDED;
         if (auto kv = egypBase.find(cp); kv != egypBase.end()) {
             auto& v = kv->second;
+            egypReliability = v.reliability;
             if (!v.descEwp.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EWP, v.descEwp);
             } else if (!v.descUnicode.empty()) {
@@ -559,7 +561,15 @@ int main()
             os << "{}";
         }
 
-        os << ", {" << cpInfo.kx.radical << "," << cpInfo.kx.plusStrokes << "}";
+        os << ", {";
+        if (egypReliability != uc::EgypReliability::EXTENDED) {
+            // EGYPTIAN
+            os << static_cast<int>(egypReliability) << ",0";
+        } else {
+            // KANGXI
+            os << cpInfo.kx.radical << "," << cpInfo.kx.plusStrokes;
+        }
+        os << "}";
 
         os << "}," << '\n';
         ++nChars;

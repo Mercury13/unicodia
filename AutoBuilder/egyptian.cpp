@@ -96,6 +96,11 @@ namespace {
 
     void loadUnikemet(egyp::Base& r)
     {
+        for (char32_t c = 0x13430; c <= 0x1345F; ++c) {
+            auto& q = r[c];
+            q.reliability = uc::EgypReliability::SPECIAL;
+        }
+
         std::ifstream is(UCD_UNIKEMET);
         if (!is.is_open())
             throw std::logic_error("Cannot open Unikemet base!");
@@ -121,6 +126,16 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
+            } else if (sField == "kEH_Core") {
+                auto& en = r[cp];
+                if (sValue == "C"sv) {
+                    en.reliability = uc::EgypReliability::CORE;
+                } else if (sValue == "L"sv) {
+                    en.reliability = uc::EgypReliability::LEGACY;
+                } else {
+                    throw std::logic_error(str::cat(
+                        "Unknown Egyp reliability level '", sValue, '\''));
+                }
             }
         }
     }
