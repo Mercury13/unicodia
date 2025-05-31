@@ -417,6 +417,11 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
                 break;
             }
             break;
+        case 'E':   // Egyptian
+            if (auto v = str::fromChars(value, uTmp); v.ec == std::errc{}) {
+                fields.egypReliability = static_cast<uc::EgypReliability>(uTmp);
+            }
+            break;
         default:
             return nullptr;
         }
@@ -563,6 +568,7 @@ namespace {
         void finish() override;
         void appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs);
         void appendNSpeakers(Buf1d<const std::string_view> x, Flags<Nspkf> fgs);
+        void appendEgypInfo(uc::EgypReliability rel);
     protected:
         std::u8string linkText;
         wiki::HtWeight weight;
@@ -1219,6 +1225,25 @@ namespace {
         appendNSpeakers(textLang, fgs);
     }
 
+    void appendQuery(QString& text, std::string_view schema, std::string_view params)
+    {
+        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
+        auto names = font.familiesComma().toStdString();
+        text += loc::Fmt(
+                "&nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
+                       (schema)(params)(names)
+                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
+    }
+
+    void Eng::appendEgypInfo(uc::EgypReliability rel)
+    {
+        auto count = uc::egypByReliability[rel];
+        appendNum(s, count, Subf::STANDALONE, mywiki::NumPlace::HTML);
+        char buf[20];
+        snprintf(buf, std::size(buf), "E=%u", static_cast<unsigned>(rel));
+        appendQuery(s, SCH_QRY_CHARS, buf);
+    }
+
     // Key: start/end
     constinit const std::u8string_view KEY_START =
             u8"<span style='background-color:palette(midlight);'>\u00A0";
@@ -1288,6 +1313,14 @@ namespace {
                 auto formatted = formatThousand<char8_t>(
                         x.safeGetV(1, {}), Subf::HEX, mywiki::NumPlace::HTML);
                 str::append(s, formatted);
+            } else if (name == "hcore"sv) {
+                appendEgypInfo(uc::EgypReliability::CORE);
+            } else if (name == "hlegacy"sv) {
+                appendEgypInfo(uc::EgypReliability::LEGACY);
+            } else if (name == "hextended"sv) {
+                appendEgypInfo(uc::EgypReliability::EXTENDED);
+            } else if (name == "hspecial"sv) {
+                appendEgypInfo(uc::EgypReliability::SPECIAL);
             } else {
                 goto dflt;
             }
@@ -1415,16 +1448,6 @@ namespace {
     template <Locable T>
     inline std::u8string_view locName(const T& x) {
         return x.loc.name;
-    }
-
-    void appendQuery(QString& text, std::string_view schema, std::string_view params)
-    {
-        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
-        auto names = font.familiesComma().toStdString();
-        text += loc::Fmt(
-                "&nbsp;&nbsp;<a href='{1}:{2}' class='query' style='font-family: {3};'>&#{4};</a>")
-                       (schema)(params)(names)
-                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
     }
 
     template <class... T>
@@ -2289,7 +2312,7 @@ namespace {
 
     constinit ec::Array<const char*, uc::EgypReliability> egypRelInfo {
         "Prop.Egyp.Ext", "Prop.Egyp.Leg", "Prop.Egyp.Core",
-        "Prop.Egyp.Spec"
+        "Prop.Egyp.Spec", "[Dummy]"
     };
 
     void appendEgypReliability(QString& text, const uc::Cp::ScriptSpecific& sspec)

@@ -35,6 +35,8 @@ constinit const match::MainFont match::MainFont::INST;
 constinit const match::Normal match::Normal::INST;
 constinit const match::NullForTofu match::NullForTofu::INST;
 
+constinit ec::Array<unsigned, uc::EgypReliability> uc::egypByReliability { 0u, 0u, 0u, 0u, 0u };
+
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
 
@@ -695,6 +697,12 @@ void uc::completeData()
         // Script
         auto& script = cp.script();
         ++script.nChars;
+        switch (script.scriptSpec) {
+        case ScriptSpec::NONE: break;
+        case ScriptSpec::RADICAL_STROKE_HANI: break;
+        case ScriptSpec::RELIABILITY_EGYP:
+            ++egypByReliability[cp.scriptSpecific.egypReliability()];
+        }
         script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
         if (script.plane == PLANE_UNKNOWN)
             script.plane = cp.plane();

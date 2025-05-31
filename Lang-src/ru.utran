@@ -10740,6 +10740,12 @@
       <p>* A hieroglyph is extended if it’s attested at least three times in modern publications, and has a number in one of two databases (''JSesh'' or ''Hieroglyphica''). Then it receives the right for encoding. As an exception, scholars may add commonly-used signs.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
+      <p />
+      <p>Unicode {{version}} contains:</p>
+      <p>* core hieroglyphs: {{hcore}}</p>
+      <p>* legacy: {{hlegacy}}</p>
+      <p>* extended: {{hextended}}</p>
+      <p>* special characters: {{hspecial}}</p>
      </orig>
      <au-cmt>Thot, JSesh are always Latin</au-cmt>
      <transl>
@@ -10756,6 +10762,12 @@
       <p>* Иероглиф становится расширенным, если он замечен трижды в современных публикациях, и имеет номер в одной из двух баз (''JSesh'' или ''Hieroglyphica''). Тогда он получает право на кодирование. Как исключение, исследователи могут добавить широко используемый знак.</p>
       <p>* Иероглиф становится базовым, если он подтверждён надёжным изображением (фото или достоверной обводкой). Если он найден в иератическом тексте, иероглифическая форма должна легко реконструироваться. Если он закодирован в нескольких формах, часть форм могут быть исключены из базового списка.</p>
       <p>* Тривиальные формы и комбинации из Юникода{{_}}5.2{{-}}совместимые. Остальной Юникод{{_}}5.2 (основанный на списке Гардинера) автоматически базовый.</p>
+      <p />
+      <p>Юникод {{version}} содержит:</p>
+      <p>* базовых иероглифов: {{hcore}}</p>
+      <p>* совместимых: {{hlegacy}}</p>
+      <p>* расширенных: {{hextended}}</p>
+      <p>* спецсимволов: {{hspecial}}</p>
      </transl>
     </text>
    </group>

@@ -1204,6 +1204,8 @@ namespace uc {
 
     inline Action stopIf(bool x) noexcept { return static_cast<Action>(x); }
 
+    extern ec::Array<unsigned, uc::EgypReliability> egypByReliability;
+
 }   // namespace uc
 
 namespace sw {
@@ -1344,7 +1346,6 @@ namespace cou {
     extern const ec::Array<const char*, Popul> popKeys;
 
     const Country* find(TwoLetters key);
-
 }
 
 namespace match {

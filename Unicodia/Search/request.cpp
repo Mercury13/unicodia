@@ -107,6 +107,10 @@ bool uc::CharFieldRequest::isOk(const Cp& cp) const
     // Old computers
     if (fields.oldComp != uc::OldComp::NONE && !uc::cpOldComps(cp.subj).have(fields.oldComp))
         return false;
+    if (fields.egypReliability != uc::EgypReliability::DUMMY
+            && (cp.script().scriptSpec != ScriptSpec::RELIABILITY_EGYP
+                || cp.scriptSpecific.egypReliability() != fields.egypReliability))
+        return false;
     return true;
 }
 

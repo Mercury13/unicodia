@@ -39,6 +39,7 @@ namespace uc {
         uc::EcBidiClass ecBidiClass = uc::EcBidiClass::NO_VALUE;
         uc::Cfgs fgs {};
         uc::OldComp oldComp = uc::OldComp::NONE;
+        uc::EgypReliability egypReliability = uc::EgypReliability::DUMMY;
         bool isNumber = false;
     };
 
