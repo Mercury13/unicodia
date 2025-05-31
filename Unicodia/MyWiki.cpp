@@ -2301,14 +2301,14 @@ namespace {
         appendValuePopup(text, scr, "Prop.Bullet.Script", "ps");
 
         // Kangxi
-        if (cp.scriptSpecific) {
-            switch (cp.script().scriptSpec) {
-            case uc::ScriptSpec::RADICAL_STROKE_HANI:
+        switch (cp.script().scriptSpec) {
+        case uc::ScriptSpec::RADICAL_STROKE_HANI:
+            if (cp.scriptSpecific) {
                 sp.sep();
                 appendHaniRadical(text, cp.scriptSpecific);
-                break;
-            case uc::ScriptSpec::NONE:;
             }
+            break;
+        case uc::ScriptSpec::NONE:;
         }
 
         // Unicode version
