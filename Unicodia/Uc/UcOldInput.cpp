@@ -27,7 +27,7 @@ constinit const uc::old::Info uc::old::info[] {
     { .key = "AmstradCpc",
       .fixedName = u8"Amstrad" NBSP "CPC",
       .country = Country::GB,
-      .type = Type::LUXURY_PC,
+      .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
       .color = Color::YES,
       .sales = Sales::OVER_3M,
@@ -496,7 +496,6 @@ constinit const ec::Array<uc::old::CountryInfo, uc::old::Country> uc::old::count
 
 constexpr const uc::old::TypeInfo typeInfoArray[] {
     { .key = "Home" },
-    { .key = "Lux" },
     { .key = "Desk" },
     { .key = "Adv" },
     { .key = "Term" },
