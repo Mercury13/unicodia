@@ -1041,6 +1041,14 @@
      <orig>special character</orig>
     </text>
    </group>
+   <group id="Egyp2">
+    <text id="Short">
+     <orig>Short description</orig>
+    </text>
+    <text id="Uni">
+     <orig>Unicode’s description</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="Stock">

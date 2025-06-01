@@ -12,7 +12,7 @@
 #include <QRect>
 
 // Lib
-#include "u_EcArray.h"  // used e.g. for EcNumType!
+#include "u_EnumSize.h"
 
 // Project-local
 #include "UcFlags.h"

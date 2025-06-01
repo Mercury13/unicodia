@@ -5,6 +5,7 @@
 
 // Libs
 #include "u_Vector.h"
+#include "u_EcArray.h"
 
 // Search
 #include "defs.h"

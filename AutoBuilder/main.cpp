@@ -426,7 +426,8 @@ int main()
             egypReliability = v.reliability;
             if (!v.descEwp.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EWP, v.descEwp);
-            } else if (!v.descUnicode.empty()) {
+            }
+            if (!v.descUnicode.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_UC, v.descUnicode);
             }
         }

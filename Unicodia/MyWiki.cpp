@@ -2229,9 +2229,6 @@ namespace {
                 case uc::TextRole::ALT_NAME:
                 case uc::TextRole::ABBREV:
                 case uc::TextRole::EMOJI_NAME:
-                /// @todo [future] Need “description in Wikipedia”, “description in Unicode”…
-                case uc::TextRole::EGYP_EWP:
-                case uc::TextRole::EGYP_UC:
                     if (isInitial) {
                         isInitial = false;
                         text += "<p style='" CNAME_ALTNAME "'>";
@@ -2245,6 +2242,8 @@ namespace {
                 case uc::TextRole::DEP_INSTEAD:
                 case uc::TextRole::DEP_INSTEAD2:
                 case uc::TextRole::CMD_END:
+                case uc::TextRole::EGYP_EWP:
+                case uc::TextRole::EGYP_UC:
                     break;
                 }
             });
@@ -2349,6 +2348,23 @@ namespace {
         case uc::ScriptSpec::RELIABILITY_EGYP:
             sp.sep();
             appendEgypReliability(text, cp.scriptSpecific);
+            cp.traverseTextsT(uc::AutoName::NO,
+                [&text, &sp](uc::TextRole role, std::u8string_view s) {
+                    switch (role) {
+                    case uc::TextRole::EGYP_EWP:
+                        sp.sep();
+                        appendNonBullet(text, "Prop.Egyp2.Short");
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        break;
+                    case uc::TextRole::EGYP_UC:
+                        sp.sep();
+                        appendNonBullet(text, "Prop.Egyp2.Uni");
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        break;
+                    default: ;
+                        break;
+                    }
+                });
             break;
         case uc::ScriptSpec::NONE:;
         }

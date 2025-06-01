@@ -1313,6 +1313,16 @@
      <transl>спецсимвол</transl>
     </text>
    </group>
+   <group id="Egyp2">
+    <text id="Short">
+     <orig>Short description</orig>
+     <transl>Короткое описание</transl>
+    </text>
+    <text id="Uni">
+     <orig>Unicode’s description</orig>
+     <transl>Описание из Юникода</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="Stock">
