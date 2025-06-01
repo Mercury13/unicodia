@@ -346,13 +346,21 @@ def loadUnikemet():
                             cacheName = "cache/{}.svg".format(sValue)                        
                             manualName = getManualName('manual', glyphName)
                             manualWideName = getManualName('manual-wide', glyphName)
+                            reallyMyName = "svg-my/{}.svg".format(sHex)
                             svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                             # Load SVG
                             glyph = font.createChar(code)
                                   # both Unicode and fname, for troubleshooting
                             glyph.glyphname = glyphName
                             # Load?
-                            if os.path.exists(manualWideName):
+                            if os.path.exists(reallyMyName):
+                                # Really manual glyph, usually for UniKemet’s troubles
+                                newSvgHeight = getSvgHeight(reallyMyName)
+                                loadGlyph(code, glyph, reallyMyName, newSvgHeight, True)
+                                # Fix up glyph names
+                                newGlyphName = "u{}".format(sHex.upper())
+                                glyph.glyphname = newGlyphName
+                            elif os.path.exists(manualWideName):
                                 # Manual glyph
                                 loadManual(glyph, manualWideName, 'manual-wide')
                             elif os.path.exists(manualName):
