@@ -9550,9 +9550,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Yezidis are a part of Kurdish people that profess religion of Yezidism derived from [[ps:Avst|Zoroastrianism]]. Yezidi holy books, ''Book of Revelation'' and ''Black Book'', are written with special script (earlier versions in [[ps:Arab|Arabic]] are also known). There is no consensus on dating of these books.</p>
+      <p>Yezidis are a part of the Kurdish people that profess the religion of Yezidism derived from [[ps:Avst|Zoroastrianism]]. Yezidi holy books, ''Book of Revelation'' and ''Black Book'', are written with a special script (earlier versions in [[ps:Arab|Arabic]] are also known). There is no consensus on dating of these books.</p>
       <p />
-      <p>Yezidis were constantly oppressed by Muslims, so their religion is mostly oral, few witnessed books in written form. Islamic State made a genocide of Yezidis in 2014–2017: about 5000 are killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became UN Goodwill Ambassador, and was awarded Nobel Peace Prize in 2018.</p>
+      <p>Yezidis were constantly oppressed by Muslims, so their religion is mostly oral, few witnessed books in written form. Islamic State made a genocide of Yezidis in 2014–2017: about 5000 were killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became the UN Goodwill Ambassador, and was awarded the Nobel Peace Prize in 2018.</p>
      </orig>
      <transl>
       <p>ヤジディ教徒はクルド人の一部で、[[ps:Avst|ゾロアスター教]]に由来するヤジディ教を信仰している。ヤジディ教徒の聖典である『ヨハネの黙示録』と『黒の書』は特別な文字で書かれている（[[ps:Arab|アラビア語]]の以前のバージョンも知られている）。これらの書物の年代については一致した見解はない。</p>
@@ -10799,6 +10799,12 @@
       <p>* A hieroglyph is extended if it’s attested at least three times in modern publications, and has a number in one of two databases (''JSesh'' or ''Hieroglyphica''). Then it receives the right for encoding. As an exception, scholars may add commonly-used signs.</p>
       <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
+      <p />
+      <p>Unicode {{version}} contains:</p>
+      <p>* core hieroglyphs: {{hcore}}</p>
+      <p>* legacy: {{hlegacy}}</p>
+      <p>* extended: {{hextended}}</p>
+      <p>* special characters: {{hspecial}}</p>
      </orig>
      <au-cmt>Thot, JSesh are always Latin</au-cmt>
     </text>
