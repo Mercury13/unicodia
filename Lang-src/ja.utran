@@ -10807,9 +10807,10 @@
       <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
       <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
-      <p>* A hieroglyph is extended if it’s attested at least three times in modern publications, and has a number in one of two databases (''JSesh'' or ''Hieroglyphica''). Then it receives the right for encoding. As an exception, scholars may add commonly-used signs.</p>
-      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
-      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
+      <p>* The hieroglyph is extended if it’s widely used in modern publications.</p>
+      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. They have an equivalent sequence: how would they have been encoded today?</p>
+      <p>* The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
       <p />
       <p>Unicode {{version}} contains:</p>
       <p>* core hieroglyphs: {{hcore}}</p>
@@ -10817,7 +10818,7 @@
       <p>* extended: {{hextended}}</p>
       <p>* special characters: {{hspecial}}</p>
      </orig>
-     <au-cmt>Thot, JSesh are always Latin</au-cmt>
+     <au-cmt>JSesh, Hieroglyphica are always Latin</au-cmt>
     </text>
    </group>
    <group id="emoji">
@@ -14176,11 +14177,11 @@
    <group id="17.0">
     <text id="Text">
      <orig>
-      <p>* Written [[pt:egyp|rules]] of encoding Egyptian hieroglyphs</p>
+      <p>* Written [[pt:egyp|rules]] of encoding Egyptian hieroglyphs, swapped glyphs 130F9↔ABE and 130FB↔AE8 for compatibility with Gardiner’s list</p>
       <p>* Reformed [[ps:Adlm|Adlam]] script for better legibility</p>
       <p>* Added a [[pt:inclusion|genderless]] version of the last emoji{{-}}dancer: Latin for a woman, disco for a man, and ballet for genderless</p>
       <p>* Added the last multiracial emoji{{-}}wrestlers and Playboy girls</p>
-      <p>* In early 2025, the sign for Sudi riyal was adopted and quickly put to U+20C1</p>
+      <p>* In early 2025, the sign for Saudi riyal was adopted and quickly put to U+20C1</p>
      </orig>
     </text>
    </group>
