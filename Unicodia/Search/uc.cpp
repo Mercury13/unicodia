@@ -263,8 +263,9 @@ namespace {
                 case uc::TextRole::EGYP_UC:
                     r.emplace_back(text, srh::NonAsciiComparator::INST, role);
                     break;
-                case uc::TextRole::DEP_INSTEAD:
+                case uc::TextRole::DEP_INSTEAD:  // They are not searchable
                 case uc::TextRole::DEP_INSTEAD2:
+                case uc::TextRole::EGYP_EQUIV:
                 case uc::TextRole::CMD_END:
                     break;
                 }
@@ -289,6 +290,7 @@ namespace {
                 case uc::TextRole::EMOJI_NAME:
                 case uc::TextRole::EGYP_EWP:
                 case uc::TextRole::EGYP_UC:
+                case uc::TextRole::EGYP_EQUIV:
                     break;
                 }
             });
@@ -467,6 +469,7 @@ namespace {
         case uc::TextRole::CMD_END:     // These are unused, but let them be
         case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::DEP_INSTEAD2:
+        case uc::TextRole::EGYP_EQUIV:
             return srh::RoleType::UNSEARCHABLE;
         }
         __builtin_unreachable();

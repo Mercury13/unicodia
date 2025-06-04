@@ -9,6 +9,7 @@
 
 // My libs
 #include "u_Strings.h"
+#include "mojibake.h"
 
 // Unicode
 #include "UcCp.h"
@@ -430,6 +431,10 @@ int main()
             if (!v.descUnicode.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_UC, v.descUnicode);
             }
+            if (!v.equivSequence.empty()) {
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EQUIV,
+                        mojibake::toS<std::string>(v.equivSequence));
+            }
         }
 
         for (auto& v : textCp->names) {
@@ -614,7 +619,7 @@ int main()
 
     os.open("auto-names.log");
     for (auto& q : proc.autoNames) {
-        os << q << std::endl;
+        os << q << '\n';
     }
     os.close();
 

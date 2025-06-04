@@ -2244,6 +2244,7 @@ namespace {
                 case uc::TextRole::CMD_END:
                 case uc::TextRole::EGYP_EWP:
                 case uc::TextRole::EGYP_UC:
+                case uc::TextRole::EGYP_EQUIV:
                     break;
                 }
             });
@@ -2361,6 +2362,18 @@ namespace {
                         appendNonBullet(text, "Prop.Egyp2.Uni");
                         mywiki::appendCopyable(text, str::toQ(s), "altname");
                         break;
+                    case uc::TextRole::EGYP_EQUIV: {
+                            sp.sep();
+                            appendNonBullet(text, "Prop.Egyp2.Equiv");
+                            auto cps = mojibake::toS<std::u32string>(s);
+                            str::QSep sp1(text, " ");
+                            for (auto& v : cps) {
+                                sp1.sep();
+                                char buf[10];
+                                snprintf(buf, std::size(buf), "%X", int(v));
+                                text += buf;
+                            }
+                        } break;
                     default: ;
                         break;
                     }
@@ -2919,6 +2932,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                     case uc::TextRole::CMD_END:
                     case uc::TextRole::EGYP_EWP:
                     case uc::TextRole::EGYP_UC:
+                    case uc::TextRole::EGYP_EQUIV:
                     case uc::TextRole::EMOJI_NAME:  // Equal to mine
                         break;
                     }

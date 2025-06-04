@@ -1202,6 +1202,7 @@ std::u8string_view uc::Cp::traverseTexts(
         case TextRole::EMOJI_NAME:
         case TextRole::EGYP_EWP:
         case TextRole::EGYP_UC:
+        case TextRole::EGYP_EQUIV:
             if (auto q = checkAutoName(); !q.empty())
                 return q;
             [[fallthrough]];

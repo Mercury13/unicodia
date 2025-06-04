@@ -1313,6 +1313,9 @@
     <text id="Uni">
      <orig>Unicode’s description</orig>
     </text>
+    <text id="Equiv">
+     <orig>Equivalent sequence</orig>
+    </text>
    </group>
   </group>
   <group id="Block">

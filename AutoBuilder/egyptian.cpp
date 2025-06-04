@@ -94,6 +94,18 @@ namespace {
         }
     }
 
+    std::u32string parseCpSequence(std::string_view x)
+    {
+        std::u32string s;
+        auto vals = str::splitSv(x, ' ', true);
+        s.reserve(vals.size());
+        for (auto& v : vals) {
+            auto cp = fromHex(v);
+            s += char32_t(cp);
+        }
+        return s;
+    }
+
     void loadUnikemet(egyp::Base& r)
     {
         for (char32_t c = 0x13430; c <= 0x1345F; ++c) {
@@ -118,7 +130,7 @@ namespace {
             auto cp = fromHex(sUnicode);
             auto sField = d[1];
             auto sValue = d[2];
-            if (sField == "kEH_Desc") {
+            if (sField == "kEH_Desc"sv) {
                 auto& du = r[cp].descUnicode;
                 du = sValue;
                 // Known typo
@@ -126,7 +138,7 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
-            } else if (sField == "kEH_Core") {
+            } else if (sField == "kEH_Core"sv) {
                 auto& en = r[cp];
                 if (sValue == "C"sv) {
                     en.reliability = uc::EgypReliability::CORE;
@@ -136,6 +148,9 @@ namespace {
                     throw std::logic_error(str::cat(
                         "Unknown Egyp reliability level '", sValue, '\''));
                 }
+            } else if (sField == "kEH_AltSeq"sv) {
+                auto& en = r[cp];
+                en.equivSequence = parseCpSequence(sValue);
             }
         }
     }

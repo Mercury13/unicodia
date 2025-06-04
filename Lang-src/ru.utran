@@ -1322,6 +1322,10 @@
      <orig>Unicode’s description</orig>
      <transl>Описание из Юникода</transl>
     </text>
+    <text id="Equiv">
+     <orig>Equivalent sequence</orig>
+     <transl>Эквивалентная последовательность</transl>
+    </text>
    </group>
   </group>
   <group id="Block">

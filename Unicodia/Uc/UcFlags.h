@@ -90,16 +90,17 @@ namespace uc {
     }
 
     enum class TextRole : unsigned char {
-        CMD_END = 0,    // Command: text end
-        MAIN_NAME = 1,  // Character’s name, should exist
-        ALT_NAME = 2,   // Alternate names, always unique (non-template)
-        ABBREV = 3,     // Abbreviation, always unique (non-template)
-        HTML = 4,       // HTML mnemonic, WITH ampersand & and semicolon ;
-        DEP_INSTEAD = 5, // For deprecated chars: what’s instead
-        DEP_INSTEAD2 = 6, // For deprecated chars: alternative instead
-        EMOJI_NAME = 7, // Emoji name from Library, if inequal
-        EGYP_EWP = 8,   // Egyptian description from English Wikipedia
-        EGYP_UC = 9,    // Egyptian description from Unicode
+        CMD_END = 0,        // Command: text end
+        MAIN_NAME = 1,      // Character’s name, should exist
+        ALT_NAME = 2,       // Alternate names, always unique (non-template)
+        ABBREV = 3,         // Abbreviation, always unique (non-template)
+        HTML = 4,           // HTML mnemonic, WITH ampersand & and semicolon ;
+        DEP_INSTEAD = 5,    // For deprecated chars: what’s instead
+        DEP_INSTEAD2 = 6,   // For deprecated chars: alternative instead
+        EMOJI_NAME = 7,     // Emoji name from Library, if inequal
+        EGYP_EWP = 8,       // Egyptian description from English Wikipedia
+        EGYP_UC = 9,        // Egyptian description from Unicode
+        EGYP_EQUIV = 10,    // Egyptian equivalent sequence
     };
 
     enum : unsigned char {
