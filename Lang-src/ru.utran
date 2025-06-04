@@ -10751,8 +10751,8 @@
       <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
       <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
-      <p>* A hieroglyph is extended if it’s attested at least three times in modern publications, and has a number in one of two databases (''JSesh'' or ''Hieroglyphica''). Then it gets the right for encoding. As an exception, scholars may add commonly-used signs.</p>
-      <p>* A hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* The hieroglyph is extended if it’s widely used in modern publications.</p>
+      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. They have an equivalent sequence: how would they have been encoded today?</p>
       <p>* The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
       <p />
@@ -10774,7 +10774,7 @@
       <p>* Если иероглиф можно получить отзеркаливанием, поворотом и комбинированием, он не{{_}}получит отдельной [[pt:codepoint|кодовой позиции]].</p>
       <p>* Но если такая форма имеет особое значение (нога+нож=рана), то получит.</p>
       <p>* Иероглифы делятся на три типа: базовые, совместимые и расширенные.</p>
-      <p>* Иероглиф становится расширенным, если он замечен трижды в современных публикациях, и имеет номер в одной из двух баз (''JSesh'' или ''Hieroglyphica''). Тогда он получает право на кодирование. Как исключение, исследователи могут добавить широко используемый знак.</p>
+      <p>* Иероглиф становится расширенным, если он широко используется в современных публикациях.</p>
       <p>* Иероглиф становится базовым, если он подтверждён надёжным изображением (фото или достоверной обводкой). Если он найден в иератическом тексте, иероглифическая форма должна легко реконструироваться. Если он закодирован в нескольких формах, часть форм могут быть исключены из базового списка.</p>
       <p>* Тривиальные формы и комбинации из Юникода{{_}}5.2{{-}}совместимые. У них есть эквивалентная последовательность: как бы их закодировали сегодня?</p>
       <p>* Остальной Юникод{{_}}5.2 (основанный на списке Гардинера) автоматически базовый.</p>
