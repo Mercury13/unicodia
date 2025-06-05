@@ -867,7 +867,7 @@ FFFD......: NotoSerif-Regular
 == Sharada Supplement
 11B60..11B67: UnicodiaFunky
 == Sunuwar
-11BC0..11BF9: SEISunuwar-Regular
+11BC0..11BF9: NotoSansSunuwar-Regular
 == Bhaiksuki
 11C00..11C6C: NotoSansBhaiksuki-Regular
 == Marchen
@@ -1038,8 +1038,8 @@ FFFD......: NotoSerif-Regular
 13572.......: NewGardiner
 13573.......: UnicodiaSesh
 13574.......: NewGardiner
-13575..13577: UnicodiaSesh
-13578.......: NewGardiner
+13575, 13576: UnicodiaSesh
+13577, 13578: NewGardiner
 13579..1357D: UnicodiaSesh
 1357E.......: NewGardiner
 1357F..13581: UnicodiaSesh
@@ -1163,7 +1163,8 @@ FFFD......: NotoSerif-Regular
 13697..136A1: UnicodiaSesh
 136A2.......: NewGardiner
 136A3..136AD: UnicodiaSesh
-136AE, 136AF: NewGardiner
+136AE.......: NewGardinerNonCore
+136AF.......: NewGardiner
 136B0..136B5: UnicodiaSesh
 136B6.......: NewGardiner
 136B7, 136B8: UnicodiaSesh
@@ -1543,8 +1544,8 @@ FFFD......: NotoSerif-Regular
 13AA8..13AB7: UnicodiaSesh
 13AB8, 13AB9: NewGardiner
 13ABA..13ABC: UnicodiaSesh
-13ABD, 13ABE: NewGardiner
-13ABF..13AC4: UnicodiaSesh
+13ABD.......: NewGardiner
+13ABE..13AC4: UnicodiaSesh
 13AC5.......: NewGardiner
 13AC6..13AD0: UnicodiaSesh
 13AD1.......: NewGardiner
@@ -2244,7 +2245,8 @@ FFFD......: NotoSerif-Regular
 142A4..142A7: UnicodiaSesh
 142A8, 142A9: NewGardiner
 142AA, 142AB: UnicodiaSesh
-142AC, 142AD: NewGardiner
+142AC.......: NewGardiner
+142AD.......: NewGardinerNonCore
 142AE..142B8: UnicodiaSesh
 142B9, 142BA: NewGardiner
 142BB..142BD: UnicodiaSesh
