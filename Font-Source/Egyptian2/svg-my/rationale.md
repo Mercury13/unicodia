@@ -23,6 +23,9 @@ Subtotal: 2
 - 13712: tofu 3
 - 1372D: tofu 4
 
+## 13A
+- 13ABE: just easy after 130F9
+
 Subtotal: 2
 
 Total: 15
