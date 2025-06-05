@@ -358,6 +358,7 @@ def loadUnikemet():
                         if (isCpGood(code)):
                             hasSeshGlyph = True
                             isKnownBadGlyph = (code in BAD_JSESH_KEYS) and (BAD_JSESH_HIEROS[code] == sValue)
+                                  # both Unicode and fname, for troubleshooting
                             glyphName = "u{}_{}".format(sHex.upper(), sValue)
                             svgName = "svg/{}.svg".format(sValue)
                             svgRemadeName = "svg-remade/{}.svg".format(sValue)
@@ -366,10 +367,6 @@ def loadUnikemet():
                             manualWideName = getManualName('manual-wide', glyphName)
                             reallyMyName = "svg-my/{}.svg".format(sHex)
                             svgHeight = getSvgHeight(svgName)  # requested rather than actual size
-                            # Load SVG
-                            glyph = font.createChar(code)
-                                  # both Unicode and fname, for troubleshooting
-                            glyph.glyphname = glyphName
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
