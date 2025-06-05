@@ -218,6 +218,8 @@ constinit const uc::Font uc::fontInfo[] = {
             Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 105_pc },
       { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },     // …2
       { { "NewGardiner.ttf", ExTofu { ExTofuType::GARDINER, "omitted.csv" } },  // …3
+                Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },
+      { { "NewGardinerNonCore.ttf", Fafg::STRONG_TOFU },                        // …4
                 Ffg::CELL_BIGGER, 110_pc },
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
