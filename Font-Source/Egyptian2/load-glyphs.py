@@ -8,6 +8,13 @@ OUTFILENAME = 'UnicodiaSesh.ttf'
 HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
 INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
+# These pairs are known to be bad
+BAD_JSESH_HIEROS = {
+    0x1355D: "A049D",
+    0x13577: "A369",    
+}
+BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
+
 fontforge.runInitScripts()
 font = fontforge.activeFont()
 nHandGlyphs = sum(1 for _ in font.glyphs())
@@ -340,6 +347,7 @@ def loadUnikemet():
                         code = int(sHex, base=16)
                         if (isCpGood(code)):
                             hasSeshGlyph = True
+                            isKnownBadGlyph = (code in BAD_JSESH_KEYS) and (BAD_JSESH_HIEROS[code] == sValue)
                             glyphName = "u{}_{}".format(sHex.upper(), sValue)
                             svgName = "svg/{}.svg".format(sValue)
                             svgRemadeName = "svg-remade/{}.svg".format(sValue)
@@ -353,6 +361,7 @@ def loadUnikemet():
                                   # both Unicode and fname, for troubleshooting
                             glyph.glyphname = glyphName
                             # Load?
+                            isLoaded = True
                             if os.path.exists(reallyMyName):
                                 # Really manual glyph, usually for UniKemet’s troubles
                                 newSvgHeight = getSvgHeight(reallyMyName)
@@ -368,10 +377,10 @@ def loadUnikemet():
                                 loadManual(glyph, manualName, 'manual')
                             elif os.path.exists(svgRemadeName):
                                 loadGlyph(code, glyph, svgRemadeName, svgHeight, True)
-                            elif os.path.exists(cacheName):
+                            elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
                                 loadGlyph(code, glyph, cacheName, svgHeight, True)
-                            else:
+                            elif not isKnownBadGlyph:
                                 # Unknown glyph
                                 isGood = loadGlyph(code, glyph, svgName, svgHeight, False)
                                 if not isGood:
@@ -381,9 +390,12 @@ def loadUnikemet():
                                     os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                     glyph.clear()
                                     loadGlyph(code, glyph, cacheName, svgHeight, True)
-                            nCps += 1
-                            if nCps >= 5000:
-                                return
+                            else:
+                                isLoaded = False
+                            if isLoaded:
+                                nCps += 1
+                                if nCps >= 5000:
+                                    return
 
 loadUnikemet()
 
