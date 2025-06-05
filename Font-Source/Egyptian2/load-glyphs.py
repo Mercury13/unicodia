@@ -296,13 +296,20 @@ def fixSize(cp, glyph, svgHeight):
         mat = psMat.translate(0, (V_THRESHOLD - y2)  / 2)
         glyph.transform(mat)
 
-def loadGlyph(cp, glyph, fname, svgHeight, logBad):
+def loadGlyph(glyph, cp, fname, svgHeight, logBad):
     glyph.importOutlines(fname, scale=False, correctdir=True)
     fixSize(cp, glyph, svgHeight)
     fixBearings(glyph)
     return improveGlyph(glyph, logBad)
+    
+def newGlyph(font, code, glyphName):
+    glyph = font.createChar(code)
+    glyph.glyphname = glyphName
+    return glyph
 
-def loadManual(glyph, fname, logName):
+# Load glyph manually optimized by user
+def loadManualGlyph(font, code, glyphName, fname, logName):
+    glyph = newGlyph(font, code, glyphName)
     glyph.importOutlines(fname, scale=False, correctdir=True)
     glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
     fixBearings(glyph)
@@ -311,6 +318,14 @@ def loadManual(glyph, fname, logName):
 
 def getManualName(dirName, glyphName):
     return "{}/{}_UnicodiaSesh.svg".format(dirName, glyphName)
+    
+# Load glyph created from scratch by user
+# The glyph is surely flat, do not run InkScape
+def loadMyGlyph(font, sHex, cp, svgName):
+    newGlyphName = "u{}".format(sHex.upper())
+    glyph = newGlyph(font, cp, newGlyphName)
+    newSvgHeight = getSvgHeight(svgName)
+    loadGlyph(glyph, cp, svgName, newSvgHeight, True)
 
 # import hieroglyphs
 def loadUnikemet():
@@ -332,14 +347,9 @@ def loadUnikemet():
                             sHex = sOldCp[2:]
                             code = int(sHex, base=16)
                             if (isCpGood(code)):
-                                glyphName = "u{}".format(sHex.upper())
                                 svgName = "svg-my/{}.svg".format(sHex)
                                 if os.path.exists(svgName):
-                                    # Do the same but do not run Inkscape
-                                    svgHeight = getSvgHeight(svgName)
-                                    glyph = font.createChar(code)
-                                    glyph.glyphname = glyphName
-                                    loadGlyph(code, glyph, svgName, svgHeight, True)                            
+                                    loadMyGlyph(font, sHex, code, svgName)
                         hasSeshGlyph = False
                     sOldCp = sCp
                     if sCommand == 'kEH_JSesh':
@@ -363,33 +373,31 @@ def loadUnikemet():
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
-                                # Really manual glyph, usually for UniKemet’s troubles
-                                newSvgHeight = getSvgHeight(reallyMyName)
-                                loadGlyph(code, glyph, reallyMyName, newSvgHeight, True)
-                                # Fix up glyph names
-                                newGlyphName = "u{}".format(sHex.upper())
-                                glyph.glyphname = newGlyphName
+                                loadMyGlyph(font, sHex, code, reallyMyName)
                             elif os.path.exists(manualWideName):
                                 # Manual glyph
-                                loadManual(glyph, manualWideName, 'manual-wide')
+                                loadManualGlyph(font, code, glyphName, manualWideName, 'manual-wide')
                             elif os.path.exists(manualName):
                                 # Manual glyph
-                                loadManual(glyph, manualName, 'manual')
+                                loadManualGlyph(font, code, glyphName, manualName, 'manual')
                             elif os.path.exists(svgRemadeName):
-                                loadGlyph(code, glyph, svgRemadeName, svgHeight, True)
+                                glyph = newGlyph(font, code, glyphName)
+                                loadGlyph(glyph, code, svgRemadeName, svgHeight, True)
                             elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
-                                loadGlyph(code, glyph, cacheName, svgHeight, True)
+                                glyph = newGlyph(font, code, glyphName)
+                                loadGlyph(glyph, code, cacheName, svgHeight, True)
                             elif not isKnownBadGlyph:
                                 # Unknown glyph
-                                isGood = loadGlyph(code, glyph, svgName, svgHeight, False)
+                                glyph = newGlyph(font, code, glyphName)
+                                isGood = loadGlyph(glyph, code, svgName, svgHeight, False)
                                 if not isGood:
                                     # Run Inkscape
                                     log.write("Forced to run Inkscape!\n")
                                     cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
                                     os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                     glyph.clear()
-                                    loadGlyph(code, glyph, cacheName, svgHeight, True)
+                                    loadGlyph(glyph, code, cacheName, svgHeight, True)
                             else:
                                 isLoaded = False
                             if isLoaded:
