@@ -1225,8 +1225,7 @@ FFFD......: NotoSerif-Regular
 13747.......: NewGardiner
 13748..1374A: UnicodiaSesh
 1374B.......: NewGardiner
-1374C.......: [Tofu]
-1374D..13751: UnicodiaSesh
+1374C..13751: UnicodiaSesh
 13752..13754: NewGardiner
 13755..13757: UnicodiaSesh
 13758.......: NewGardiner
