@@ -101,6 +101,7 @@ namespace uc {
         EGYP_EWP = 8,       // Egyptian description from English Wikipedia
         EGYP_UC = 9,        // Egyptian description from Unicode
         EGYP_EQUIV = 10,    // Egyptian equivalent sequence
+        EGYP_MEANING = 11,  // Egyptian meaning
     };
 
     enum : unsigned char {

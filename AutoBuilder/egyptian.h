@@ -11,6 +11,7 @@ namespace egyp {
     struct Entry {
         std::string descEwp;        ///< description from English Wikipedia
         std::string descUnicode;    ///< description from Unicode
+        std::string meaning;        ///< meaning from UniKemet
         std::u32string equivSequence;  ///< equivalent sequence for legacy hiero
         uc::EgypReliability reliability = uc::EgypReliability::EXTENDED;
     };

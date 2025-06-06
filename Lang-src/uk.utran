@@ -1327,6 +1327,10 @@
      <orig>Equivalent sequence</orig>
      <transl>Еквівалентна послідовність</transl>
     </text>
+    <text id="Mean">
+     <orig>Meaning</orig>
+     <transl>Зміст</transl>
+    </text>
    </group>
   </group>
   <group id="Block">

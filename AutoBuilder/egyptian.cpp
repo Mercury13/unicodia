@@ -151,6 +151,9 @@ namespace {
             } else if (sField == "kEH_AltSeq"sv) {
                 auto& en = r[cp];
                 en.equivSequence = parseCpSequence(sValue);
+            } else if (sField == "kEH_Func"sv) {
+                auto& en = r[cp];
+                en.meaning = sValue;
             }
         }
     }

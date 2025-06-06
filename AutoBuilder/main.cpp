@@ -435,6 +435,9 @@ int main()
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EQUIV,
                         mojibake::toS<std::string>(v.equivSequence));
             }
+            if (!v.meaning.empty()) {
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_MEANING, v.meaning);
+            }
         }
 
         for (auto& v : textCp->names) {

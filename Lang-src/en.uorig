@@ -1051,6 +1051,9 @@
     <text id="Equiv">
      <orig>Equivalent sequence</orig>
     </text>
+    <text id="Mean">
+     <orig>Meaning</orig>
+    </text>
    </group>
   </group>
   <group id="Block">
