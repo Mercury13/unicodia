@@ -48,9 +48,9 @@
 	<num-format dec-point="," thou-point=" " thou-min-length="4" thou-min-length-dense="5">
 		<imprecise>
 			<fmt shift="0" text="{1} чоловік" frac="never" />
-			<fmt shift="3" text="{1} тис." frac="avoid" />
-			<fmt shift="6" text="{1} млн" frac="prefer" />
-			<fmt shift="9" text="{1} млрд" frac="prefer" />
+			<fmt shift="3" text="{1}&#160;тис." frac="avoid" />
+			<fmt shift="6" text="{1}&#160;млн" frac="prefer" />
+			<fmt shift="9" text="{1}&#160;млрд" frac="prefer" />
 		</imprecise>
 		<moreless less="<{1}" more=">{1}" phase="num" />
 	</num-format>
