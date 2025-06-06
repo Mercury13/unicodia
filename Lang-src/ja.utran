@@ -3793,8 +3793,8 @@
      <transl>シャラダサプリメント</transl>
     </text>
     <text id="Text" force-attention="true">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
-     <transl>カシミール語の現代シャラダの母音記号は、[[ps:Deva|デーバナーガリー文字]] から改作したものです。頭文字を得るには、これらの記号を U+11183 またはその他の頭母音に付けます。カシミール語は通常 [[ps:Arab|アラビア語-ウルドゥー語]] で書かれます。</transl>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <transl>カシミール語の現代シャラダの母音記号は、[[ps:Deva|デーバナーガリー文字]] から改作したものです。頭文字を得るには、これらの記号を U+11183 またはその他の頭母音に付けます。カシミール語{{nspk|ks}}は通常 [[ps:Arab|アラビア語-ウルドゥー語]] で書かれます。</transl>
     </text>
    </group>
    <group id="11BC0">

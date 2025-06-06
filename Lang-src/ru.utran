@@ -3786,8 +3786,8 @@
      <transl>Шарада дополнительная</transl>
     </text>
     <text id="Text">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
-     <transl>Огласовки современной шарады для кашмирского, позаимствованные из [[ps:Deva|деванагари]]. Чтобы получить начальные буквы, эти метки крепятся к U+11183 или другой начальной гласной. Кашмирский обычно пишется [[ps:Arab|арабским-урду]].</transl>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <transl>Огласовки современной шарады для кашмирского, позаимствованные из [[ps:Deva|деванагари]]. Чтобы получить начальные буквы, эти метки крепятся к U+11183 или другой начальной гласной. Кашмирский {{nspk|ks}} обычно пишется [[ps:Arab|арабским-урду]].</transl>
     </text>
    </group>
    <group id="11BC0">

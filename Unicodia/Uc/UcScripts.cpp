@@ -1012,6 +1012,10 @@ extern const uc::SideLang uc::sideLangInfo[] {
     { .id = "kkh",  // Khün ← Lana
       .lang { .mantissa = 1, .numOrder = NumOrder::HUN_THOU, .year = 1990 } },
                     // Ethnologue ← Diller and Juntanamalaga 1990
+    { .id = "ks",   // Kashmiri ← Sharada
+      .lang { .mantissa = 71, .numOrder = NumOrder::HUN_THOU, .year = 2011,
+              .locations { LOC_INDIA_N, LOC_PAKISTAN } } },
+                    // Ethnologue ← 2011 census
     { .id = "mnk",  // Mandinka ← Gara
       .lang { .mantissa = 21, .numOrder = NumOrder::HUN_THOU, .year = 2017 } },
                     // Ethnologue
