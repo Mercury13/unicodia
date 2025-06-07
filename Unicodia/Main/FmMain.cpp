@@ -924,15 +924,12 @@ FmMain::FmMain(QWidget *parent)
     // Popup link
     connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
 
-    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
-    connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
-
     // Change language
     ui->comboLang->setModel(&langModel);
     connect(ui->comboLang, &QComboBox::currentIndexChanged, this, &This::languageChanged);
 
     // Reload language
-    shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
+    auto shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
     // Write tiles
@@ -965,6 +962,10 @@ FmMain::FmMain(QWidget *parent)
     // Skin tone QA
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
     connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
+
+    // Tofu stats
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
+    connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
 
     // Search for all VS16 emoji
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_V), this);
