@@ -2386,7 +2386,8 @@ FFFD......: NotoSerif-Regular
 16FF0..16FF6: BabelStoneHanBasic
 == Tangut
 17000..187F7: NotoSerifTangut-Regular
-187F8..187FF: [Tofu]
+187F8..187FA: UnicodiaHan
+187FB..187FF: [Tofu]
 == Tangut Components
 18800..18AFF: NotoSerifTangut-Regular
 == Khitan Small Script
@@ -2397,7 +2398,8 @@ FFFD......: NotoSerif-Regular
 18D09..18D1E: [Tofu]
 == Tangut Components Supplement
 18D80..18D8E: UnicodiaHan
-18D8F..18DF2: [Tofu]
+18D8F..18DED: [Tofu]
+18DEE..18DF2: UnicodiaHan
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
 == Kana Supplement
@@ -29426,7 +29428,9 @@ FFFD......: NotoSerif-Regular
 31450.......: UnicodiaHan
 31451.......: BabelStoneHanExtra
 31452.......: UnicodiaHan
-31453..31456: BabelStoneHanExtra
+31453.......: BabelStoneHanExtra
+31454.......: UnicodiaHan
+31455, 31456: BabelStoneHanExtra
 31457.......: UnicodiaHan
 31458..3145B: BabelStoneHanExtra
 3145C.......: UnicodiaHan
@@ -30916,11 +30920,11 @@ FFFD......: NotoSerif-Regular
 323A7..323AF: BabelStoneHanExtra
 == CJK Unified Ideographs Extension J
 323B0..323B3: BabelStoneHanExtra
-323B4.......: PlangothicP2-Regular
+323B4.......: UnicodiaHan
 323B5..323B8: BabelStoneHanExtra
-323B9.......: PlangothicP2-Regular
+323B9.......: UnicodiaHan
 323BA..323BD: BabelStoneHanExtra
-323BE.......: PlangothicP2-Regular
+323BE.......: UnicodiaHan
 323BF, 323C0: BabelStoneHanExtra
 323C1, 323C2: PlangothicP2-Regular
 323C3.......: BabelStoneHanExtra
