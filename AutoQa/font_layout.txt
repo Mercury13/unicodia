@@ -1263,7 +1263,7 @@ FFFD......: NotoSerif-Regular
 137C4.......: NewGardiner
 137C5.......: UnicodiaSesh
 137C6..137C9: NewGardiner
-137CA.......: [Tofu]
+137CA.......: UnicodiaSesh
 137CB.......: NewGardiner
 137CC, 137CD: UnicodiaSesh
 137CE.......: NewGardiner
@@ -2774,13 +2774,15 @@ FFFD......: NotoSerif-Regular
 20186, 20187: BabelStoneHanExtra
 20188, 20189: SimSun-ExtB
 2018A.......: BabelStoneHanExtra
-2018B..20191: SimSun-ExtB
+2018B..2018F: SimSun-ExtB
+20190.......: BabelStoneHanExtra
+20191.......: SimSun-ExtB
 20192.......: BabelStoneHanExtra
 20193..20196: SimSun-ExtB
 20197.......: BabelStoneHanExtra
 20198.......: SimSun-ExtB
-20199.......: BabelStoneHanExtra
-2019A..201A0: SimSun-ExtB
+20199, 2019A: BabelStoneHanExtra
+2019B..201A0: SimSun-ExtB
 201A1..201AC: BabelStoneHanExtra
 201AD..201B0: SimSun-ExtB
 201B1..201B8: BabelStoneHanExtra
@@ -5006,7 +5008,9 @@ FFFD......: NotoSerif-Regular
 21690.......: BabelStoneHanExtra
 21691.......: SimSun-ExtB
 21692.......: BabelStoneHanExtra
-21693..21695: SimSun-ExtB
+21693.......: SimSun-ExtB
+21694.......: BabelStoneHanExtra
+21695.......: SimSun-ExtB
 21696, 21697: BabelStoneHanExtra
 21698..216A2: SimSun-ExtB
 216A3, 216A4: BabelStoneHanExtra
@@ -28239,12 +28243,12 @@ FFFD......: NotoSerif-Regular
 30671..3067D: BabelStoneHanExtra
 3067E..30681: SimSun-ExtG
 30682, 30683: BabelStoneHanExtra
-30684..30686: SimSun-ExtG
-30687.......: BabelStoneHanExtra
-30688..3068A: SimSun-ExtG
-3068B.......: BabelStoneHanExtra
-3068C.......: SimSun-ExtG
-3068D..3068F: BabelStoneHanExtra
+30684.......: SimSun-ExtG
+30685.......: BabelStoneHanExtra
+30686.......: SimSun-ExtG
+30687, 30688: BabelStoneHanExtra
+30689, 3068A: SimSun-ExtG
+3068B..3068F: BabelStoneHanExtra
 30690.......: SimSun-ExtG
 30691.......: BabelStoneHanExtra
 30692, 30693: SimSun-ExtG
@@ -28263,7 +28267,11 @@ FFFD......: NotoSerif-Regular
 306B0, 306B1: BabelStoneHanExtra
 306B2.......: SimSun-ExtG
 306B3.......: BabelStoneHanExtra
-306B4..306BA: SimSun-ExtG
+306B4, 306B5: SimSun-ExtG
+306B6.......: BabelStoneHanExtra
+306B7.......: SimSun-ExtG
+306B8.......: BabelStoneHanExtra
+306B9, 306BA: SimSun-ExtG
 306BB, 306BC: BabelStoneHanExtra
 306BD..306C1: SimSun-ExtG
 306C2.......: BabelStoneHanExtra
