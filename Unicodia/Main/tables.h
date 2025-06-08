@@ -154,18 +154,23 @@ public:
     MaybeChar charAt(const QModelIndex& index) const override;
     QModelIndex indexOf(char32_t code);
 
-    /// \brief isCharCollapsed
-    /// \param code
-    ///    Code of valid (in a block) character
-    /// \return
-    ///    [+] it is collapsed
-    ///
+    /// @brief isCharCollapsed
+    /// @param code Code of valid (in a block) character
+    /// @return  [+] it is collapsed
     bool isCharCollapsed(char32_t code) const;
+
+    /// Highlights a family by name
+    /// Used first of all for Egyp: both Sesh and Gardiner cover, and Sesh is
+    ///    not really reliable
+    void highlightFamily(std::string_view x);
+    const std::string& highlightedFamily() const { return fHighlightedFamily; }
+
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
 private:
     RowCache rows;
+    std::string fHighlightedFamily {};
 };
 
 

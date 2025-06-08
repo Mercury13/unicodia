@@ -219,16 +219,25 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (cp) {
+                if constexpr (uc::DEBUG_FONTS) {
+                    auto font = cp->font(match::NullForTofu::INST);
+                    if (font && font->family.flags.have(uc::Fafg::DEBUG))
+                        return QColor { Qt::yellow };
+                }
+                if (!fHighlightedFamily.empty()) {
+                    if (cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)
+                            <= uc::DrawMethod::LAST_FONT) {
+                        auto font = cp->font(match::NullForTofu::INST);
+                        if (font && font->family.text == fHighlightedFamily) {
+                            return QColor { Qt::yellow };
+                        }
+                    }
+                }
                 if (isCjkCollapsed) {
                     auto block = uc::blockOf(cp->subj);
                     if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
                         return block->synthIcon.normalContinent().collapse.bgColor;
                     }
-                }
-                if constexpr (uc::DEBUG_FONTS) {
-                    auto font = cp->font(match::NullForTofu::INST);
-                    if (font && font->family.flags.have(uc::Fafg::DEBUG))
-                        return QColor { Qt::yellow };
                 }
             } else {
                 if (uc::isNonChar(cp.code)) {
@@ -328,6 +337,15 @@ bool CharsModel::isCharCollapsed(char32_t code) const
                 && (code ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS);
     } else {
         return false;
+    }
+}
+
+
+void CharsModel::highlightFamily(std::string_view x)
+{
+    if (fHighlightedFamily != x) {
+        fHighlightedFamily = x;
+        emit dataChanged({}, {}, { Qt::BackgroundRole });
     }
 }
 

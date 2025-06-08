@@ -349,6 +349,7 @@ private slots:
     void searchLocalMenuRequested(const QPoint& where);
     void copyCurrentSearch();
     void debugFontLayout();
+    void highlightFont();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;

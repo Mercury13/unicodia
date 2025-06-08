@@ -955,6 +955,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F), this);
     connect(shcut, &QShortcut::activated, this, &This::goToSearch);
 
+    // Highlight
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_H), this);
+    connect(shcut, &QShortcut::activated, this, &This::highlightFont);
+
     // Debug font layout
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_L), this);
     connect(shcut, &QShortcut::activated, this, &This::debugFontLayout);
@@ -2549,4 +2553,33 @@ void FmMain::debugFontLayout()
         QMessageBox::information(this, "Hidden feature", "Font layout dumped to font_layout.txt!");
         break;
     }
+}
+
+
+void FmMain::highlightFont()
+{
+    static constexpr const char* HEAD = "Highlight font";
+    if (ui->tabsMain->currentIndex() != I_BLOCKS) {
+        QMessageBox::critical(this, HEAD, "First switch to Blocks.");
+        return;
+    }
+    if (!model.highlightedFamily().empty()) {
+        model.highlightFamily({});
+        QMessageBox::information(this, HEAD, "Font highlight removed.");
+        return;
+    }
+    auto mc = model.charAt(ui->tableChars->currentIndex());
+    if (!mc.cp
+            || mc.cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY) > uc::DrawMethod::LAST_FONT) {
+        QMessageBox::critical(this, HEAD, "Select a character with a font (not control, not emoji).");
+        return;
+    }
+    auto font = mc.cp->font(match::NullForTofu::INST);
+    if (!font) {
+        QMessageBox::critical(this, HEAD, "Somehow no font (tofu?), choose another character.");
+        return;
+    }
+    model.highlightFamily(font->family.text);
+    QMessageBox::information(this, HEAD,
+            QString::fromStdString(str::cat("Font “", font->family.text, "” highlighted.")));
 }
