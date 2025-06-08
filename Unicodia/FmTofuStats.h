@@ -4,6 +4,7 @@
 // Qt
 #include <QDialog>
 #include <QAbstractTableModel>
+#include <QPlainTextEdit>
 
 // Libs
 #include "u_Vector.h"
@@ -15,6 +16,16 @@ class FmTofuStats;
 
 namespace tofu
 {
+    struct Memo : public QPlainTextEdit
+    {
+    private:
+        using Super = QPlainTextEdit;
+    public:
+        using QPlainTextEdit::QPlainTextEdit;
+    protected:
+        void inputMethodEvent(QInputMethodEvent *) override;
+        void keyPressEvent(QKeyEvent *e) override;
+    };
 
     struct Counter
     {

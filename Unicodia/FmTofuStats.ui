@@ -53,7 +53,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPlainTextEdit" name="memoTofuList"/>
+        <widget class="tofu::Memo" name="memoTofuList"/>
        </item>
       </layout>
      </item>
@@ -85,6 +85,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>tofu::Memo</class>
+   <extends>QPlainTextEdit</extends>
+   <header>FmTofuStats.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

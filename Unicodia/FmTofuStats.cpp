@@ -5,7 +5,38 @@
 #include "u_Qstrings.h"
 
 
-///// tofu::Counter //////////////////////////////////////////////////////////////
+///// tofu::Memo ///////////////////////////////////////////////////////////////
+
+
+void tofu::Memo::inputMethodEvent(QInputMethodEvent *e)
+{
+    e->ignore();
+}
+
+
+void tofu::Memo::keyPressEvent(QKeyEvent *e)
+{
+    if (auto tx = e->text(); !tx.isEmpty()) {
+        QKeyEvent g (
+            e->type(),
+            e->key(),
+            e->modifiers(),
+            e->nativeScanCode(),
+            e->nativeVirtualKey(),
+            e->nativeModifiers(),
+            QString(),  // text
+            e->isAutoRepeat(),
+            e->count(),
+            e->device()
+        );
+        Super::keyPressEvent(&g);
+    } else {
+        Super::keyPressEvent(e);
+    }
+}
+
+
+///// tofu::Counter ////////////////////////////////////////////////////////////
 
 
 void tofu::Counter::reg(int code, uc::TofuState state)
