@@ -11,6 +11,7 @@
 # Hidden commands
 * F12 — reload translation from disk. Locale does NOT reload
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
+* Ctrl+Shift+H — highlight all chars served by that font, to check font dispatching/correctness
 * Ctrl+Shift+L — test font dispatching
 * Ctrl+Shift+Q — test emoji repainting engine
 * Ctrl+Shift+T — tofu stats
