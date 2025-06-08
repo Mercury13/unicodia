@@ -25,6 +25,8 @@ namespace tofu
     protected:
         void inputMethodEvent(QInputMethodEvent *) override;
         void keyPressEvent(QKeyEvent *e) override;
+        bool canInsertFromMimeData(const QMimeData *) const override { return false; }
+        void insertFromMimeData(const QMimeData *) override {}
     };
 
     struct Counter
