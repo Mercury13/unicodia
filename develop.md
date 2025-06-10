@@ -27,12 +27,12 @@
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * ``Originals`` is directory for original SVGs, ``Remakes`` is for remade but unoptimized
-  * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
   * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
-  * Make sure **Unicodia is closed**, run tape.bat
+  * Make sure **Unicodia is closed**, run tape.bat. It’ll automatically run SVG cleaner from Program Files (x86).
 * Two or more skintones (e.g. interracial kiss/handshake): same. They are repainted sometimes, but not checked.
   * Algorithm 1 is for interracial handshakes (few colours, easy, tedious), algorithm 2 is for wrestlers/Playboy bunnies (harder but quicker to do), they won’t be described here.
 * One skintone (one person, same-race handshake…), repainted versions are stored
+  * Same technical requirement: no clipPath’s
   * Just store them.  
   * After that press Ctrl+Shift+Q in Unicodia.
   * Copy resulting BMP files to AutoQa\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
