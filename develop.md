@@ -26,7 +26,7 @@
 # How to update emoji?
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
-    * Originals is directory for original SVGs, Remakes if for remade but unoptimized
+    * ``Originals`` is directory for original SVGs, ``Remakes`` is for remade but unoptimized
   * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
   * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
   * Make sure **Unicodia is closed**, run tape.bat
