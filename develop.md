@@ -196,18 +196,9 @@ Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM 
 1. Toto letter Breathy Iu
    * Two rules here, script TOTO and adjective BREATHY
 
-# If you want to rebuild GlyphWiki font
-
-Need FontForge, TtfAutoHint, Qt Creator.
-
-1. Data is in ``Font-Source/GlyphWiki``
-1. Font consists of manual and automatic glyphs. Manual ones are in UnicodiaHan.sfd and are taken from various sources. But we need automatic ones now!
-1. Rename GlyphWiki font temporarily. Open Unicodia, find Tofu Statistics, extract CJK tofu. Put to ``hani-tofu.txt``. (See comments in ``hani-tofu.txt``, we also need Kangxi radicals just because there’s no good font!
-1. Run GwLoader. Put contents of ``hani-tofu.txt`` to editing box. Load data. Empty ``Font-Source/GlyphWiki/Raw`` (except files starting with ! and $, they are just tests), move resulting SVGs here. This directory **is** versioned!
-1. Run GwRemake. Get AutoRemade directory. This directory **is not** versioned, just exists, and may contain lots of harmless garbage!
-1. Open ``load-glyphs.py``, set path to your TtfAutoHint
-1. Open ``UnicodiaHan.sfd``. Run script ``load-glyphs.py``. **Do not save!**
-1. VCS (Git etc) should notice changes in ``Font-Source/GlyphWiki/Raw`` and ``UnicodiaHan.ttf``.
+# Font rebuilding
+1. UnicodiaSesh — see ``FontSource\Egyptian2``.
+1. UnicodiaHan — see ``GlyphWiki2\Data``.
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
