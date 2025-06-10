@@ -30,8 +30,8 @@
   * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
   * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
   * Make sure **Unicodia is closed**, run tape.bat
-* Two or more skintones (e.g. interracial kiss/handshake): same. They are neither repainted nor checked.
-  * Added a special algorithm specially for wrestlers/Playboy bunnies, it won’t be described here.
+* Two or more skintones (e.g. interracial kiss/handshake): same. They are repainted sometimes, but not checked.
+  * Algorithm 1 is for interracial handshakes (few colours, easy, tedious), algorithm 2 is for wrestlers/Playboy bunnies (harder but quicker to de), they won’t be described here.
 * One skintone (one person, same-race handshake…), repainted versions are stored
   * Just store them.  
   * After that press Ctrl+Shift+Q in Unicodia.
