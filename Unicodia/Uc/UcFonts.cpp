@@ -41,16 +41,6 @@ constexpr uc::StyleSheet STYLE_NONE {};
 constexpr auto STYLE_DEVA = STYLE_NONE;
 constexpr auto SIZE_DEVA = 110_pc;
 
-char32_t recodeCuneiform(char32_t x)
-{
-    /// @todo [U16, gag] Recode cuneiform
-    switch (x) {
-    case 0x12326: return 0x12327;
-    case 0x12327: return 0x12326;
-    default: return x;
-    }
-}
-
 char32_t recodeBengali(char32_t x)
 {
     /// @todo [U17, gag] Recode Bengali
@@ -193,8 +183,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },                 // CJK fullwidth/halfwidth
       { FNAME_KOREAN, 110_pc},                                                  // …1
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 125_pc},           // CJK enclosed
-      { FNAME_BABEL_01, 120_pc },                                                  // …1
-    { { "NotoSansCuneiform-Regular.ttf", recodeCuneiform } },                   // Cuneiform
+      { FNAME_BABEL_01, 120_pc },                                               // …1
+    { "NotoSansCuneiform-Regular.ttf"},                                         // Cuneiform
     { FNAME_DEVA, Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA }, // Devanagari
       { "Arial Unicode MS,Nirmala UI,Mangal" },                                 // …1 for descriptions
     { FNAME_DEVAFIX, Ffg::FALL_TO_NEXT, 10_top, SIZE_DEVA },                    // Devanagari bigger
