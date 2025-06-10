@@ -95,7 +95,7 @@
   * 16×16 px, scale 1, no background, foreground is arbitrary. Put them to ``Resources/Scripts``, optimize somehow, write a new filename to ``scripts.qrc``
     * **All new icons** will have foreground colour #c01c28 (=Gnome HIG red 4). This colour is automatically repainted to block-specific. Raise flag Ifg::PAINT_SVG to enable this feature. Of course, you may use any colour you want, but better use placeholder unless there’s a good reason.
 	* Very rare (one custom icon only), but: background colour is #f9f06b (=Gnome HIG yellow 1).
-    * What to draw if the block is still full of tofu? In U14 and U15 I drew “U ↵ 14”, in U16 I drew very crude images of characters.
+    * What to draw if the block is still full of tofu? In U14/15 I drew “U ↵ 14”, in U16/17 I drew very crude images of characters.
   * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (up to two) you drew and how to align that picture to pixels on HiDPI
     * Example 1: Devanagari 0900 has upper line at 2px and vertical stem at 9px — thus coordinates of cardinal stem are (9, 2)
     * Example 2: Basic Latin 0000 has vertical stem at 5px and horizontal line at 15px, but to make it aligned to pixels, I greatly shifted to the right — I think that imbalance is 0.3px to the right.
