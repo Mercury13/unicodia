@@ -16,21 +16,29 @@ Subtotal: 3
 ## 136
 - 13625: removed placeholders
 - 13626: just easy after 25
+- 1363E: misrender, need beard
 
-Subtotal: 2
+Subtotal: 3
 
 ## 137
 - 13712: tofu 3
 - 1372D: tofu 4
 - 1374C: tofu 5
+- 137CA: tofu 6
 
-Subtotal: 3
+Subtotal: 4
+
+## 138
+
+- 13804: tofu 7
+
+Subtotal: 1
 
 ## 13A
 - 13ABE: just easy after 130F9
 
 Subtotal: 1
 
-Total: 17
+Total: 20
 
-Fixed tofu: 4
+Fixed tofu: 7
