@@ -201,16 +201,14 @@ Right now only Cuneiform uses script-specific rules: e.g. “cuneiform sign LAM 
 1. UnicodiaHan — see ``GlyphWiki2\Data``.
 
 # What do utilities do?
-* AutoBuilder — build UcAuto.cpp from Unicode base.
-  * **Warning**: transition to older/newer Unicode requires a bit of handwork.
-* BlockExtensionHistory: 
-* GwLoader — loads glyphs from GlyphWiki
-* GwRemake — does an auto-remake of GlyphWiki
-* PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
+* AutoBuilder — build UcAuto.cpp from Unicode base
+  * **Warning**: transition to older/newer Unicode requires a bit of handwork
+* BlockExtensionHistory — check when the blocks were extended/shrunken
 * QaCompareBmp — to check what changed in single-skintone emoji (e.g. changed repainting engine, stored→repainted)
-* SmartCopy — copies the file if it actually differs.
-* TapeMaker — creates a tape file for graphic emoji.
-* [UTranslator](https://github.com/Mercury13/utranslator) — translation tool.
+* SmartCopy — copies the file if it actually differs
+* TapeMaker — creates a tape file for graphic emoji
+* TtfBrowser — simple TTF hacking tool
+* [UTranslator](https://github.com/Mercury13/utranslator) — translation tool
 
 # Unicodia emoji style guide
 If you decide to make a new character, there are two decisions available: 1) Mimic existing style; 2) Use new style. If you decide the latter (right now just three emoji have new style, placard and pushing hands)…
