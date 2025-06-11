@@ -28,11 +28,12 @@ Subtotal: 7
 Subtotal: 8
 
 # Duped with NewGardiner
+- 1348C: after 8B
 - 13626: after 25
 - 136DE: after DD
 - 13933: after 32
 - 13ABE: after 130F9
 
-Subtotal: 4
+Subtotal: 5
 
-Total: 26
+Total: 27
