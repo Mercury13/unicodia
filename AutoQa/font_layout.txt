@@ -29339,7 +29339,9 @@ FFFD......: NotoSerif-Regular
 31362.......: UnicodiaHan
 31363..31366: BabelStoneHanExtra
 31367..31369: UnicodiaHan
-3136A..3137C: BabelStoneHanExtra
+3136A..3137A: BabelStoneHanExtra
+3137B.......: UnicodiaHan
+3137C.......: BabelStoneHanExtra
 3137D.......: UnicodiaHan
 3137E..31382: BabelStoneHanExtra
 31383.......: UnicodiaHan
@@ -29550,9 +29552,7 @@ FFFD......: NotoSerif-Regular
 31636.......: BabelStoneHanExtra
 31637..3163B: UnicodiaHan
 3163C, 3163D: BabelStoneHanExtra
-3163E.......: UnicodiaHan
-3163F.......: BabelStoneHanExtra
-31640.......: UnicodiaHan
+3163E..31640: UnicodiaHan
 31641, 31642: BabelStoneHanExtra
 31643.......: UnicodiaHan
 31644..3164B: BabelStoneHanExtra
@@ -29569,7 +29569,9 @@ FFFD......: NotoSerif-Regular
 31669..3166C: UnicodiaHan
 3166D, 3166E: BabelStoneHanExtra
 3166F.......: UnicodiaHan
-31670..31675: BabelStoneHanExtra
+31670..31672: BabelStoneHanExtra
+31673.......: UnicodiaHan
+31674, 31675: BabelStoneHanExtra
 31676.......: UnicodiaHan
 31677, 31678: BabelStoneHanExtra
 31679.......: UnicodiaHan
@@ -29797,7 +29799,9 @@ FFFD......: NotoSerif-Regular
 3188E.......: UnicodiaHan
 3188F..31892: BabelStoneHanExtra
 31893.......: UnicodiaHan
-31894..31896: BabelStoneHanExtra
+31894.......: BabelStoneHanExtra
+31895.......: UnicodiaHan
+31896.......: BabelStoneHanExtra
 31897, 31898: UnicodiaHan
 31899..3189B: BabelStoneHanExtra
 3189C.......: UnicodiaHan
@@ -29837,7 +29841,9 @@ FFFD......: NotoSerif-Regular
 318F2, 318F3: UnicodiaHan
 318F4.......: BabelStoneHanExtra
 318F5.......: UnicodiaHan
-318F6..318FB: BabelStoneHanExtra
+318F6, 318F7: BabelStoneHanExtra
+318F8.......: UnicodiaHan
+318F9..318FB: BabelStoneHanExtra
 318FC, 318FD: UnicodiaHan
 318FE.......: BabelStoneHanExtra
 318FF..31902: UnicodiaHan
@@ -30171,7 +30177,9 @@ FFFD......: NotoSerif-Regular
 31C54.......: UnicodiaHan
 31C55.......: BabelStoneHanExtra
 31C56.......: UnicodiaHan
-31C57..31C5A: BabelStoneHanExtra
+31C57, 31C58: BabelStoneHanExtra
+31C59.......: UnicodiaHan
+31C5A.......: BabelStoneHanExtra
 31C5B, 31C5C: UnicodiaHan
 31C5D..31C61: BabelStoneHanExtra
 31C62.......: UnicodiaHan
@@ -30334,8 +30342,8 @@ FFFD......: NotoSerif-Regular
 31DA8.......: BabelStoneHanExtra
 31DA9.......: UnicodiaHan
 31DAA..31DAC: BabelStoneHanExtra
-31DAD..31DB1: UnicodiaHan
-31DB2, 31DB3: BabelStoneHanExtra
+31DAD..31DB2: UnicodiaHan
+31DB3.......: BabelStoneHanExtra
 31DB4.......: UnicodiaHan
 31DB5, 31DB6: BabelStoneHanExtra
 31DB7, 31DB8: UnicodiaHan
@@ -30795,17 +30803,13 @@ FFFD......: NotoSerif-Regular
 32251.......: BabelStoneHanExtra
 32252.......: UnicodiaHan
 32253.......: BabelStoneHanExtra
-32254.......: UnicodiaHan
-32255.......: BabelStoneHanExtra
-32256, 32257: UnicodiaHan
+32254..32257: UnicodiaHan
 32258.......: BabelStoneHanExtra
 32259..3225B: UnicodiaHan
 3225C.......: BabelStoneHanExtra
 3225D, 3225E: UnicodiaHan
 3225F.......: BabelStoneHanExtra
-32260.......: UnicodiaHan
-32261.......: BabelStoneHanExtra
-32262..32266: UnicodiaHan
+32260..32266: UnicodiaHan
 32267..3226A: BabelStoneHanExtra
 3226B..3226D: UnicodiaHan
 3226E.......: BabelStoneHanExtra
