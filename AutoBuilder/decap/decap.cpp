@@ -305,16 +305,25 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x3068C },    // Strange BS glyph
 
     // CJK H: SimSunG
+    { 0x3137B },    // UHan (V-form)
     { 0x31454 },    // UHan (S-form)
+    { 0x3163F },    // UHan (K-form)
+    { 0x31673 },    // UHan (V-form)
+    { 0x31895 },    // UHan (V-form)
+    { 0x318F8 },    // UHan (V-form)
     { 0x31BD3,  0x31BD4 },
     { 0x31BE0 },
     { 0x31BF0 },
     { 0x31BF8 },
     { 0x31C52 },
+    { 0x31C59 },    // UHan (T-form)
     { 0x31C68 },
     { 0x31CA9 },
+    { 0x31DB2 },    // UHan (K-form)
     { 0x31F95 },
     { 0x31FB2 },
+    { 0x32255 },    // UHan (T-form)
+    { 0x32261 },    // UHan (T-form)
 
     // Mathematical: Cambria → Funky
     { 0x220F, 0x2211 },     // Big sums and products
