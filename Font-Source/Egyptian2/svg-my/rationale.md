@@ -6,11 +6,14 @@
 Subtotal: 7
 
 # Misrenders (including cases when misrendered char covers another CP)
+- 13468: other legs
+- 1347D: covered
+- 134C3: leaning by 45° to the left (rather than lying)
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 13625: removed placeholders
 - 1363E: need beard
 
-Subtotal: 4
+Subtotal: 7
 
 # Tofu
 - 134CC
@@ -25,10 +28,11 @@ Subtotal: 4
 Subtotal: 8
 
 # Duped with NewGardiner
-- 13626: just easy after 25
-- 136DE: just easy after DD
-- 13ABE: just easy after 130F9
+- 13626: after 25
+- 136DE: after DD
+- 13933: after 32
+- 13ABE: after 130F9
 
-Subtotal: 3
+Subtotal: 4
 
-Total: 22
+Total: 26
