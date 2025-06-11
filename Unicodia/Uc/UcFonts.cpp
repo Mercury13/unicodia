@@ -159,9 +159,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …2
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
-      { "SimSun-ExtG", Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::BUG_FIXUP | Ffg::FALL_TO_NEXT, 120_pc }, // …5
-      { "SimSun-ExtG", Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT, 120_pc }, // …6
-      { "PlangothicP2-Regular.ttf",                                             // …7
+      { "SimSun-ExtG", Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT, 120_pc }, // …5
+      { "PlangothicP2-Regular.ttf",                                             // …6
                 Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
                 15_top, 125_pc },
       { FNAME_UNIHAN, 120_pc },                                                 // …8 for tofu

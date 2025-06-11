@@ -257,7 +257,6 @@ namespace uc {
            Z_CJK_5,
            Z_CJK_6,
            Z_CJK_7,
-           Z_CJK_8,
          CJK_UHAN_P01,
          CJK_P01_UHAN,   ///< Plane 0/1, but back with Unicodia Han
            CJK_UHAN,    ///< The 6th is Unicodia Han

@@ -28253,7 +28253,9 @@ FFFD......: NotoSerif-Regular
 30686.......: SimSun-ExtG
 30687, 30688: BabelStoneHanExtra
 30689, 3068A: SimSun-ExtG
-3068B..3068F: BabelStoneHanExtra
+3068B.......: BabelStoneHanExtra
+3068C.......: SimSun-ExtG
+3068D..3068F: BabelStoneHanExtra
 30690.......: SimSun-ExtG
 30691.......: BabelStoneHanExtra
 30692, 30693: SimSun-ExtG
