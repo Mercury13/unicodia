@@ -30,8 +30,12 @@ Subtotal: 4
 Subtotal: 4
 
 ## 138
-
 - 13804: tofu 7
+
+Subtotal: 1
+
+## 139
+- 1393B: tofu 8
 
 Subtotal: 1
 
@@ -40,6 +44,6 @@ Subtotal: 1
 
 Subtotal: 1
 
-Total: 21
+Total: 22
 
-Fixed tofu: 7
+Fixed tofu: 8
