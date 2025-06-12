@@ -83,7 +83,7 @@ These fonts are taken to Unicodia without author’s consent:
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
 ## CJK
-I’m just scratching a surface, but my policy for CJK ideographs is:
+I’m just scratching a surface, but my (badly enforced) policy for CJK ideographs is:
 * One style is enough.
 * Serif style is preferred for Chinese ideographs (Hani).
 * Preference of styles: real Chinese (G) > real other styles (J, K, KP, V…) > hypothetical Chinese, country-independent (JV)
