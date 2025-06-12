@@ -77,12 +77,19 @@ Fonts are always updated to release versions. Font is updated to alpha/beta if f
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 These fonts are taken to Unicodia without author’s consent:
-* Craggy font with missing/trivial tables. Examples: Sunuwar, Garay
+* Craggy font with missing/trivial tables. Examples: Garay, Tolong Siki
 * Font without license belonging to author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
 * Author is surely SIL, even if found elsewhere. Example: Toto
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
-There’s no special policy for CJK Han ideographs, but mainland Chinese is preferred. All such fonts tend to recreate hypothetical mainland ideographs even if unseen in Chinese bases: SimSun does it for 25 of 100 ideographs from CJK A block. Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
+## CJK
+I’m just scratching a surface, but my policy for CJK ideographs is:
+* One style is enough.
+* Serif style is preferred for Chinese ideographs (Hani).
+* Preference of styles: real Chinese (G) > real other styles (J, K, KP, V…) > hypothetical Chinese, country-independent (JV)
+* But if hypothetical Chinese is wrong in stroke types and stroke joins only (what is invisible or barely seen in sans style), it’s perfectly OK to take it.
+
+Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
 ## Data
 Data is as neutral as possible. Examples.
