@@ -45,11 +45,11 @@ namespace dumb {
         }
         ~Sp() noexcept { assignRelease(nullptr); }
         void reset() noexcept { assignRelease(nullptr); }
-        Target* get() const noexcept { return x.load(); }
-        Target& operator * () const noexcept { return *x.load(); }
-        Target* operator -> () const noexcept { return x.load(); }
-        explicit operator bool() const noexcept { return x; }
-        size_t refCount() const noexcept;
+        [[nodiscard]] Target* get() const noexcept { return x.load(); }
+        [[nodiscard]] Target& operator * () const noexcept { return *x.load(); }
+        [[nodiscard]] Target* operator -> () const noexcept { return x.load(); }
+        [[nodiscard]] explicit operator bool() const noexcept { return x; }
+        [[nodiscard]] size_t refCount() const noexcept;
     private:
         std::atomic<Target*> x = nullptr;
         void assignRelease(Target* newX) noexcept;

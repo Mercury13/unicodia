@@ -5,7 +5,9 @@
 #include <memory>
 
 // Libs
-#include <u_Vector.h>
+#include "u_Vector.h"
+#include "u_DumbSp.h"
+#include "UcCp.h"
 
 // Search
 #include "defs.h"
@@ -15,19 +17,23 @@ namespace srh {
     template <class T>
     concept Result = std::is_default_constructible_v<T>;
 
+    template <Result R>
+    struct TrieNode;
+
     ///
     ///  @tparam  R result
     ///
     template <Result R>
-    struct TrieNode {
+    struct TrieNode : public dumb::SpTarget {
     public:
-        constexpr TrieNode(unsigned aDepth) : fDepth(aDepth) {}
+        constexpr TrieNode(unsigned short aDepth, unsigned short anZwjs)
+            : fDepth(aDepth), fnZwjs(anZwjs) {}
 
-        const R& result() const { return fResult; }
-        bool isFinal() const { return fIsFinal; }
-        unsigned depth() const { return fDepth; }
+        const R& result() const noexcept { return fResult; }
+        bool isFinal() const noexcept { return fIsFinal; }
+        unsigned short depth() const noexcept { return fDepth; }
 
-        inline TrieNode* add(char32_t c);
+        TrieNode* add(char32_t c);
         inline void setFinal(R res)
         {
             fIsFinal = true;
@@ -37,13 +43,18 @@ namespace srh {
         inline const TrieNode* unsafeFind(char32_t c) const;
         const TrieNode* find(char32_t c) const;
     protected:
+        struct Link {
+            dumb::Sp<TrieNode<R>> target;
+        };
+        using M = std::unordered_map<char32_t, Link>;
+
         R fResult {};
-        using M = std::unordered_map<char32_t, TrieNode>;
         std::unique_ptr<M> children;
-        const unsigned fDepth;
+        const unsigned short fDepth;
+        const unsigned short fnZwjs;
         bool fIsFinal = false;
 
-        TrieNode(M* init) : children(init), fDepth(0) {}
+        TrieNode(M* init) : children(init), fDepth(0), fnZwjs(0) {}
     };
 
     template <Result R>
@@ -67,13 +78,14 @@ namespace srh {
     };
 
 
-}
+}   // namespace srh
 
 template <srh::Result R>
 inline const srh::TrieNode<R>* srh::TrieNode<R>::unsafeFind(char32_t c) const
 {
-    if (auto x = children->find(c); x != children->end())
-        return &x->second;
+    if (auto x = children->find(c); x != children->end()) {
+        return x->second.target.get();
+    }
     return nullptr;
 }
 
@@ -86,12 +98,16 @@ const srh::TrieNode<R>* srh::TrieNode<R>::find(char32_t c) const
 }
 
 template <srh::Result R>
-inline srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
+srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
 {
     if (!children)
         children = std::make_unique<M>();
-    auto [it, _] = children->try_emplace(c, fDepth + 1);
-    return &it->second;
+    auto [it, _] = children->try_emplace(c);
+    if (!it->second.target) {
+        auto nNewZwjs = fnZwjs + static_cast<unsigned short>(c == cp::ZWJ);
+        it->second.target = dumb::makeSp<TrieNode<R>>(fDepth + 1, nNewZwjs);
+    }
+    return it->second.target.get();
 }
 
 template <srh::Result R>
