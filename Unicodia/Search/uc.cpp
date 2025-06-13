@@ -234,11 +234,7 @@ namespace {
     /// @todo [future] Can move this set to compile-time?
     std::unordered_map<char32_t, const uc::LibNode*> singleChars;
 
-    enum class NoFlag : unsigned char { X = 0 };
-
-    using MyNode = srh::TrieNode<const uc::LibNode*, NoFlag>;
-    using MyRoot = srh::TrieRoot<const uc::LibNode*, NoFlag>;
-    constinit MyRoot trieRoot;
+    constinit srh::TrieRoot trieRoot;
 
     struct SearchableName {
         const std::u8string_view value;
