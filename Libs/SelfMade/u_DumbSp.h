@@ -12,7 +12,7 @@ namespace dumb {
     class SpTarget
     {
     protected:
-        std::atomic<ptrdiff_t> fRefCount = 0;
+        std::atomic<intptr_t> fRefCount = 0;
 
         friend ptrdiff_t addRef(SpTarget& x) noexcept;
         friend ptrdiff_t subRef(SpTarget& x) noexcept;
