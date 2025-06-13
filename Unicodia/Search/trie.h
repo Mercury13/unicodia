@@ -17,13 +17,14 @@ namespace srh {
     template <class T>
     concept Result = std::is_default_constructible_v<T>;
 
-    template <Result R>
-    struct TrieNode;
+    template <class T>
+    concept Flag = std::is_enum_v<T>;
 
     ///
     ///  @tparam  R result
+    ///     Just to get rid of concrete result
     ///
-    template <Result R>
+    template <Result R, Flag F>
     struct TrieNode : public dumb::SpTarget {
     public:
         constexpr TrieNode(unsigned short aDepth, unsigned short anZwjs)
@@ -32,8 +33,11 @@ namespace srh {
         const R& result() const noexcept { return fResult; }
         bool isFinal() const noexcept { return fIsFinal; }
         unsigned short depth() const noexcept { return fDepth; }
+        unsigned short nZwjs() const noexcept { return fnZwjs; }
 
+        /// @return   never null
         TrieNode* add(char32_t c);
+
         inline void setFinal(R res)
         {
             fIsFinal = true;
@@ -44,7 +48,7 @@ namespace srh {
         const TrieNode* find(char32_t c) const;
     protected:
         struct Link {
-            dumb::Sp<TrieNode<R>> target;
+            dumb::Sp<TrieNode<R, F>> target;
         };
         using M = std::unordered_map<char32_t, Link>;
 
@@ -54,18 +58,20 @@ namespace srh {
         const unsigned short fnZwjs;
         bool fIsFinal = false;
 
-        TrieNode(M* init) : children(init), fDepth(0), fnZwjs(0) {}
+        constexpr TrieNode() : fDepth(0), fnZwjs(0) {}
     };
 
-    template <Result R>
-    struct TrieRoot : public TrieNode<R> {
+    template <Result R, Flag F>
+    struct TrieRoot : public TrieNode<R, F> {
     private:
-        using Super = TrieNode<R>;
-        using Node = TrieNode<R>;
+        using Super = TrieNode<R, F>;
+        using Node = TrieNode<R, F>;
         using typename Super::M;
         using Super::children;
     public:
-        TrieRoot() : Super(new M) {}
+        constexpr TrieRoot() : Super() {}
+        /// @return [+] has some data
+        operator bool() const noexcept { return children.get(); }
         void add(std::u32string_view s, const R& res);
         template <class... Args>
             void addMulti(const R& res, Args&&... args)
@@ -80,38 +86,41 @@ namespace srh {
 
 }   // namespace srh
 
-template <srh::Result R>
-inline const srh::TrieNode<R>* srh::TrieNode<R>::unsafeFind(char32_t c) const
+template <srh::Result R, srh::Flag F>
+inline auto srh::TrieNode<R, F>::unsafeFind(char32_t c) const
+        -> const srh::TrieNode<R, F>*
 {
-    if (auto x = children->find(c); x != children->end()) {
-        return x->second.target.get();
+    if (children) {
+        if (auto x = children->find(c); x != children->end()) {
+            return x->second.target.get();
+        }
     }
     return nullptr;
 }
 
-template <srh::Result R>
-const srh::TrieNode<R>* srh::TrieNode<R>::find(char32_t c) const
+template <srh::Result R, srh::Flag F>
+auto srh::TrieNode<R, F>::find(char32_t c) const -> const srh::TrieNode<R, F>*
 {
     if (!children)
         return nullptr;
     return unsafeFind(c);
 }
 
-template <srh::Result R>
-srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
+template <srh::Result R, srh::Flag F>
+auto srh::TrieNode<R, F>::add(char32_t c) -> srh::TrieNode<R, F>*
 {
     if (!children)
         children = std::make_unique<M>();
     auto [it, _] = children->try_emplace(c);
     if (!it->second.target) {
         auto nNewZwjs = fnZwjs + static_cast<unsigned short>(c == cp::ZWJ);
-        it->second.target = dumb::makeSp<TrieNode<R>>(fDepth + 1, nNewZwjs);
+        it->second.target = dumb::makeSp<TrieNode<R, F>>(fDepth + 1, nNewZwjs);
     }
     return it->second.target.get();
 }
 
-template <srh::Result R>
-void srh::TrieRoot<R>::add(std::u32string_view s, const R& res)
+template <srh::Result R, srh::Flag F>
+void srh::TrieRoot<R, F>::add(std::u32string_view s, const R& res)
 {
     Node* p = this;
     for (auto c : s) {
@@ -120,8 +129,8 @@ void srh::TrieRoot<R>::add(std::u32string_view s, const R& res)
     p->setFinal(res);
 }
 
-template <srh::Result R>
-SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) const
+template <srh::Result R, srh::Flag F>
+auto srh::TrieRoot<R, F>::decode(std::u32string_view s) const -> SafeVector<srh::Decoded<R>>
 {
     static constexpr size_t NO_RESULT = -1;
     struct Last {

@@ -231,14 +231,14 @@ std::u8string uc::toMnemo(const QString& x)
 
 namespace {
 
-    bool hasEmojiSearch = false;
-
     /// @todo [future] Can move this set to compile-time?
     std::unordered_map<char32_t, const uc::LibNode*> singleChars;
 
-    using MyNode = srh::TrieNode<const uc::LibNode*>;
-    using MyRoot = srh::TrieRoot<const uc::LibNode*>;
-    MyRoot trieRoot;
+    enum class NoFlag { X = 0 };
+
+    using MyNode = srh::TrieNode<const uc::LibNode*, NoFlag>;
+    using MyRoot = srh::TrieRoot<const uc::LibNode*, NoFlag>;
+    constinit MyRoot trieRoot;
 
     struct SearchableName {
         const std::u8string_view value;
@@ -408,7 +408,7 @@ namespace {
 
 void uc::ensureEmojiSearch()
 {
-    if (hasEmojiSearch)
+    if (trieRoot)
         return;
 
     for (auto& node : allLibNodes()) {
@@ -422,7 +422,6 @@ void uc::ensureEmojiSearch()
             }
         }
     }
-    hasEmojiSearch = true;
 }
 
 
