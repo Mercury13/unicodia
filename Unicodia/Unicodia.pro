@@ -52,6 +52,7 @@ SOURCES += \
     Search/engine.cpp \
     Search/nonAscii.cpp \
     Search/request.cpp \
+    Search/trie.cpp \
     Search/uc.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
