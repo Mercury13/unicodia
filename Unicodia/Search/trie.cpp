@@ -1,5 +1,7 @@
 #include "trie.h"
 
+#include "UcCp.h"
+
 const srh::TrieNode* srh::TrieNode::find(char32_t c) const
 {
     if (!children)
@@ -28,7 +30,7 @@ void srh::TrieRoot::add(std::u32string_view s, const uc::LibNode* res)
     p->setFinal(res);
 }
 
-auto srh::TrieRoot::decode(std::u32string_view s) const -> SafeVector<Decoded<const uc::LibNode*>>
+SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
 {
     static constexpr size_t NO_RESULT = -1;
     struct Last {
@@ -36,7 +38,7 @@ auto srh::TrieRoot::decode(std::u32string_view s) const -> SafeVector<Decoded<co
         size_t iLastPos = NO_RESULT;
     } lastKnown;
 
-    SafeVector<srh::Decoded<const uc::LibNode*>> r;
+    SafeVector<srh::DecodedLine> r;
 
     size_t index = 0;
 
@@ -44,8 +46,10 @@ auto srh::TrieRoot::decode(std::u32string_view s) const -> SafeVector<Decoded<co
         // Why +1? We do not search for single-char emoji, but if…
         //   iLastPos == 0, length == 1 → how to make 0 out of them?
         r.emplace_back(
+            lastKnown.node->result(),
             lastKnown.iLastPos + 1 - lastKnown.node->depth(),
-            lastKnown.node->result());
+            /// @todo [urgent] emoji type
+            EmojiType::FULL);
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
         //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A

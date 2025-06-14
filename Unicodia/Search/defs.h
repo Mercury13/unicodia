@@ -2,12 +2,21 @@
 
 #include <cstddef>
 
+namespace uc {
+    struct LibNode;
+}
+
 namespace srh {
 
-    template <class T>
-    struct Decoded {
+    enum class EmojiType : unsigned char {
+        FULL,   ///< fully-qualified
+        PART,   ///< minimally qualified
+    };
+
+    struct DecodedLine {
+        const uc::LibNode* result;
         size_t index;
-        T result;
+        EmojiType type;
     };
 
 }   // namespace srh

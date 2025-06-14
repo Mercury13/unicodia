@@ -7,14 +7,9 @@
 // Libs
 #include "u_Vector.h"
 #include "u_DumbSp.h"
-#include "UcCp.h"
 
 // Search
 #include "defs.h"
-
-namespace uc {
-    struct LibNode;
-}
 
 namespace srh {
 
@@ -75,7 +70,7 @@ namespace srh {
                 std::u32string_view sv { v, std::size(v) };
                 add(sv, res);
             }
-        SafeVector<Decoded<const uc::LibNode*>> decode(std::u32string_view s) const;
+        SafeVector<DecodedLine> decode(std::u32string_view s) const;
     };
 
 }   // namespace srh

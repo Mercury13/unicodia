@@ -421,7 +421,7 @@ void uc::ensureEmojiSearch()
 }
 
 
-SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
+SafeVector<srh::DecodedLine> uc::decodeEmoji(std::u32string_view s)
 {
     ensureEmojiSearch();
     return trieRoot.decode(s);
