@@ -369,7 +369,7 @@ namespace {
             return {};
 
         std::string_view goodWord {};
-        enum class State { UNKNOWN, DUBIOUS, KNOWN };
+        enum class State : unsigned char { UNKNOWN, DUBIOUS, KNOWN };
         State state = State::UNKNOWN;
         for (auto word : words) {
             if (word.length() == 2 && lat::isLower(word)) {
