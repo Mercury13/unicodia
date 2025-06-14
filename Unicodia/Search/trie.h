@@ -20,6 +20,7 @@ namespace srh {
 
     ///  @tparam  R result
     ///     Just for unit-testing, surely small
+    ///     (I don’t want to pull the entire Unicode base)
     ///
     template <class R>
     struct TrieNode : public dumb::SpTarget {
