@@ -13,6 +13,10 @@
 
 namespace srh {
 
+    enum class NodeType : unsigned char {
+        TRANSIENT, FINAL, UNKNOWN_FLAG
+    };
+
     ///  @tparam  R result
     ///     Just to get rid of concrete result
     ///
@@ -22,7 +26,7 @@ namespace srh {
             : fnZwjs(anZwjs) {}
 
         const uc::LibNode* result() const noexcept { return fResult; }
-        bool isFinal() const noexcept { return fIsFinal; }
+        NodeType type() const noexcept { return fType; }
         unsigned short nZwjs() const noexcept { return fnZwjs; }
 
         /// @return   never null
@@ -30,7 +34,7 @@ namespace srh {
 
         inline void setFinal(const uc::LibNode* res)
         {
-            fIsFinal = true;
+            fType = NodeType::TRANSIENT;
             fResult = res;
         }
 
@@ -45,7 +49,7 @@ namespace srh {
         const uc::LibNode* fResult {};
         std::unique_ptr<M> children;
         const unsigned short fnZwjs;
-        bool fIsFinal = false;
+        NodeType fType = NodeType::TRANSIENT;
 
         constexpr TrieNode() : fnZwjs(0) {}
     };

@@ -50,13 +50,13 @@ SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
             lastKnown.node->result(),
             lastKnown.resetTime,
             lastKnown.length,
-            EmojiType::FULL);
+            lastKnown.type);
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
         //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
         // After A we have WOMAN RACE1, but still want to identify HEART VS16
         lastKnown.resetTime += lastKnown.length;
-        index = lastKnown.resetTime - 1;  // We’ll increase that index
+        index = lastKnown.resetTime - 1;  // We’ll increase that index, so −1
         lastKnown.node = nullptr;
     };
 
@@ -66,12 +66,12 @@ SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
             char32_t c = s[index];
             if (auto child = p->find(c)) {
                 p = child;
-                if (p->isFinal()) {
+                if (p->type() != NodeType::TRANSIENT) {
                     lastKnown.node = p;
-                    /// @todo [urgent] When to
-                    lastKnown.length = index + 1 - lastKnown.resetTime,
+                    lastKnown.length = index + 1 - lastKnown.resetTime;
                     /// @todo [urgent] emoji type
-                    lastKnown.type = EmojiType::FULL;
+                    lastKnown.type = (p->type() == NodeType::UNKNOWN_FLAG)
+                                     ? EmojiType::UNKNOWN_FLAG : EmojiType::FULL;
                 }
             } else if (p != this) {
                 // p==&trieRoot → we already tried and no need 2nd time

@@ -11,6 +11,7 @@ namespace srh {
     enum class EmojiType : unsigned char {
         FULL,   ///< fully-qualified
         PART,   ///< minimally qualified
+        UNKNOWN_FLAG,  ///< unknown flag
     };
 
     struct DecodedLine {
