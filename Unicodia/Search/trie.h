@@ -36,7 +36,7 @@ namespace srh {
 
         inline void setFinal(R res)
         {
-            fType = NodeType::TRANSIENT;
+            fType = NodeType::FINAL;
             fResult = res;
         }
 
