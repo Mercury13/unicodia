@@ -157,6 +157,8 @@ namespace uc {
         bool hasSmth() const { return !isEmpty(); }
     };
 
+    using DecodedEmoji = srh::Decoded<const uc::LibNode*>;
+
     constexpr long long NO_CODE = -1;
     SingleResult findCode(unsigned long long ull);
     SingleResult findStrCode(QStringView what, int base, long long& code);
@@ -167,7 +169,7 @@ namespace uc {
     bool isMnemoChar(QStringView x);
     std::u8string toMnemo(const QString& x);
     void ensureEmojiSearch();
-    SafeVector<srh::DecodedLine> decodeEmoji(std::u32string_view s);
+    SafeVector<DecodedEmoji> decodeEmoji(std::u32string_view s);
 
     /// Finds emoji (including VS16)
     /// @return  node containing x (maybe x+VS16)

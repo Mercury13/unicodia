@@ -234,7 +234,7 @@ namespace {
     /// @todo [future] Can move this set to compile-time?
     std::unordered_map<char32_t, const uc::LibNode*> singleChars;
 
-    constinit srh::TrieRoot trieRoot;
+    constinit srh::TrieRoot<const uc::LibNode*> trieRoot;
 
     struct SearchableName {
         const std::u8string_view value;
@@ -421,7 +421,7 @@ void uc::ensureEmojiSearch()
 }
 
 
-SafeVector<srh::DecodedLine> uc::decodeEmoji(std::u32string_view s)
+SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
 {
     ensureEmojiSearch();
     return trieRoot.decode(s);

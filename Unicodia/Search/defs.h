@@ -2,10 +2,6 @@
 
 #include <cstddef>
 
-namespace uc {
-    struct LibNode;
-}
-
 namespace srh {
 
     enum class EmojiType : unsigned char {
@@ -14,8 +10,11 @@ namespace srh {
         UNKNOWN_FLAG,  ///< unknown flag
     };
 
-    struct DecodedLine {
-        const uc::LibNode* result;
+    /// @tparam R
+    ///    Needed for unit-testing: won’t pull things here
+    template <class R>
+    struct Decoded {
+        R result;
         size_t index;
         unsigned length;
         EmojiType type;
