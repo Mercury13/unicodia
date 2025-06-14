@@ -18,12 +18,11 @@ namespace srh {
     ///
     struct TrieNode : public dumb::SpTarget {
     public:
-        constexpr TrieNode(unsigned short aDepth, unsigned short anZwjs)
-            : fDepth(aDepth), fnZwjs(anZwjs) {}
+        constexpr TrieNode(unsigned short anZwjs)
+            : fnZwjs(anZwjs) {}
 
         const uc::LibNode* result() const noexcept { return fResult; }
         bool isFinal() const noexcept { return fIsFinal; }
-        unsigned short depth() const noexcept { return fDepth; }
         unsigned short nZwjs() const noexcept { return fnZwjs; }
 
         /// @return   never null
@@ -45,11 +44,10 @@ namespace srh {
 
         const uc::LibNode* fResult {};
         std::unique_ptr<M> children;
-        const unsigned short fDepth;
         const unsigned short fnZwjs;
         bool fIsFinal = false;
 
-        constexpr TrieNode() : fDepth(0), fnZwjs(0) {}
+        constexpr TrieNode() : fnZwjs(0) {}
     };
 
     struct TrieRoot : public TrieNode {

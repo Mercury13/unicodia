@@ -16,6 +16,7 @@ namespace srh {
     struct DecodedLine {
         const uc::LibNode* result;
         size_t index;
+        unsigned length;
         EmojiType type;
     };
 

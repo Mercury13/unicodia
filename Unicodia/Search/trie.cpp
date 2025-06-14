@@ -16,7 +16,7 @@ srh::TrieNode* srh::TrieNode::add(char32_t c)
     auto [it, _] = children->try_emplace(c);
     if (!it->second.target) {
         auto nNewZwjs = fnZwjs + static_cast<unsigned short>(c == cp::ZWJ);
-        it->second.target = dumb::makeSp<TrieNode>(fDepth + 1, nNewZwjs);
+        it->second.target = dumb::makeSp<TrieNode>(nNewZwjs);
     }
     return it->second.target.get();
 }
@@ -32,10 +32,11 @@ void srh::TrieRoot::add(std::u32string_view s, const uc::LibNode* res)
 
 SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
 {
-    static constexpr size_t NO_RESULT = -1;
     struct Last {
         const Node* node = nullptr;
-        size_t iLastPos = NO_RESULT;
+        size_t resetTime = 0;
+        unsigned length = 0;
+        EmojiType type = EmojiType::FULL;
     } lastKnown;
 
     SafeVector<srh::DecodedLine> r;
@@ -47,14 +48,15 @@ SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
         //   iLastPos == 0, length == 1 → how to make 0 out of them?
         r.emplace_back(
             lastKnown.node->result(),
-            lastKnown.iLastPos + 1 - lastKnown.node->depth(),
-            /// @todo [urgent] emoji type
+            lastKnown.resetTime,
+            lastKnown.length,
             EmojiType::FULL);
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
         //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
         // After A we have WOMAN RACE1, but still want to identify HEART VS16
-        index = lastKnown.iLastPos;
+        lastKnown.resetTime += lastKnown.length;
+        index = lastKnown.resetTime - 1;  // We’ll increase that index
         lastKnown.node = nullptr;
     };
 
@@ -66,7 +68,10 @@ SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
                 p = child;
                 if (p->isFinal()) {
                     lastKnown.node = p;
-                    lastKnown.iLastPos = index;
+                    /// @todo [urgent] When to
+                    lastKnown.length = index + 1 - lastKnown.resetTime,
+                    /// @todo [urgent] emoji type
+                    lastKnown.type = EmojiType::FULL;
                 }
             } else if (p != this) {
                 // p==&trieRoot → we already tried and no need 2nd time
@@ -78,9 +83,19 @@ SafeVector<srh::DecodedLine> srh::TrieRoot::decode(std::u32string_view s) const
                     registerResult();
                 // Run through last character again, root’s children are always present
                 } else if (auto child = p->unsafeFind(c)) {
+                    // Why needed [A][A][D], all are flag components
+                    lastKnown.resetTime = index;
                     p = child;
                     // 1st is never decodeable
+                } else {
+                    // Nothing found, just reset
+                    // Why needed: [A]a[A][D]
+                    //  a = character, [A] = flag component A
+                    lastKnown.resetTime = index + 1;
                 }
+            } else {
+                // Nothing found, reset once again
+                lastKnown.resetTime = index + 1;
             }
         }
         // Went out of loop — what have?
