@@ -7,7 +7,8 @@
 #include "UcCp.h"
 
 
-enum class Emoji {
+enum class Emoji : unsigned char {
+    NONE,
     CUBA,
     PUERTO_RICO,
     SPAIN,
@@ -39,6 +40,18 @@ Trie1::Trie1()
                cp::MAN, cp::SKIN5);
 };
 
+void expectEmoji(const srh::Decoded<Emoji>& line,
+                 size_t index,
+                 unsigned length,
+                 srh::EmojiType type,
+                 Emoji thing)
+{
+    EXPECT_EQ(index, line.index);
+    EXPECT_EQ(length, line.length);
+    EXPECT_EQ(thing, line.result);
+    EXPECT_EQ(type, line.type);
+}
+
 ///
 ///  This was a trouble for #371
 ///
@@ -50,17 +63,9 @@ TEST (DecodeTrie, ThreeFlags)
 
     EXPECT_EQ(3u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(0u, r0.index);
-    EXPECT_EQ(Emoji::PUERTO_RICO, r0.result);
-
-    auto& r1 = res[1];
-    EXPECT_EQ(2u, r1.index);
-    EXPECT_EQ(Emoji::CUBA, r1.result);
-
-    auto& r2 = res[2];
-    EXPECT_EQ(4u, r2.index);
-    EXPECT_EQ(Emoji::SPAIN, r2.result);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::PUERTO_RICO);
+    expectEmoji(res.at(1), 2, 2, srh::EmojiType::FULL, Emoji::CUBA);
+    expectEmoji(res.at(2), 4, 2, srh::EmojiType::FULL, Emoji::SPAIN);
 }
 
 
@@ -79,9 +84,7 @@ TEST (DecodeTrie, InterracialKiss)
 
     EXPECT_EQ(1u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(1u, r0.index);
-    EXPECT_EQ(Emoji::KISS_INTERRACIAL, r0.result);
+    expectEmoji(res.at(0), 1, 10, srh::EmojiType::FULL, Emoji::KISS_INTERRACIAL);
 }
 
 
@@ -102,13 +105,8 @@ TEST (DecodeTrie, InterracialKissMan)
 
     EXPECT_EQ(2u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(1u, r0.index);
-    EXPECT_EQ(Emoji::KISS_INTERRACIAL, r0.result);
-
-    auto& r1 = res[1];
-    EXPECT_EQ(12u, r1.index);
-    EXPECT_EQ(Emoji::MAN_BLACK, r1.result);
+    expectEmoji(res.at(0), 1,  10, srh::EmojiType::FULL, Emoji::KISS_INTERRACIAL);
+    expectEmoji(res.at(1), 12, 2,  srh::EmojiType::FULL, Emoji::MAN_BLACK);
 }
 
 
@@ -127,13 +125,8 @@ TEST (DecodeTrie, KissBadChar)
 
     EXPECT_EQ(2u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(0u, r0.index);
-    EXPECT_EQ(Emoji::WOMAN_WHITE, r0.result);
-
-    auto& r1 = res[1];
-    EXPECT_EQ(3u, r1.index);
-    EXPECT_EQ(Emoji::HEART_RED, r1.result);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
 }
 
 
@@ -152,13 +145,8 @@ TEST (DecodeTrie, KissAbrupt)
 
     EXPECT_EQ(2u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(0u, r0.index);
-    EXPECT_EQ(Emoji::WOMAN_WHITE, r0.result);
-
-    auto& r1 = res[1];
-    EXPECT_EQ(3u, r1.index);
-    EXPECT_EQ(Emoji::HEART_RED, r1.result);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
 }
 
 
@@ -178,15 +166,7 @@ TEST (DecodeTrie, KissMoreEmoji)
 
     EXPECT_EQ(3u, res.size());
 
-    auto& r0 = res[0];
-    EXPECT_EQ(0u, r0.index);
-    EXPECT_EQ(Emoji::WOMAN_WHITE, r0.result);
-
-    auto& r1 = res[1];
-    EXPECT_EQ(3u, r1.index);
-    EXPECT_EQ(Emoji::HEART_RED, r1.result);
-
-    auto& r2 = res[2];
-    EXPECT_EQ(9u, r2.index);
-    EXPECT_EQ(Emoji::SPAIN, r2.result);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
+    expectEmoji(res.at(2), 9, 2, srh::EmojiType::FULL, Emoji::SPAIN);
 }
