@@ -11,7 +11,8 @@ namespace srh {
     };
 
     /// @tparam R
-    ///    Needed for unit-testing: won’t pull things here
+    ///    Needed for unit-testing: won’t pull Unicode bases
+    ///
     template <class R>
     struct Decoded {
         R result;
