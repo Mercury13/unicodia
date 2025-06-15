@@ -1261,21 +1261,19 @@ namespace {
                 return;
             }
         }
+
+        auto oldLen = s.length();
         switch (name[0]) {
         case '%':
             if (name == "%"sv) {
                 str::append(s, x.safeGetV(1, {}));
                 str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
-            } else {
-                goto dflt;
             }
             break;
 
         case '_':
             if (name == "_"sv) {
                     s.append(QChar(0x00A0));
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1283,8 +1281,6 @@ namespace {
             if (name == "DuplCats") {
                 uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
                 appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1293,8 +1289,6 @@ namespace {
                 str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
                 str::append(s, x.safeGetV(1, {}));
                 str::append(s, "</font>");
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1303,8 +1297,6 @@ namespace {
                     s += context.font->familiesComma();
             } else if (name == "funky"sv) {
                 appendFont(s, uc::EcFont::FUNKY, x, 0);
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1321,8 +1313,6 @@ namespace {
                 appendEgypInfo(uc::EgypReliability::EXTENDED);
             } else if (name == "hspecial"sv) {
                 appendEgypInfo(uc::EgypReliability::SPECIAL);
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1345,8 +1335,6 @@ namespace {
                     s += "</b>";
                     str::append(s, KEY_END);
                 }
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1366,8 +1354,6 @@ namespace {
                 appendNum(s, nEmoji, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "noto"sv) {
                 appendFont(s, uc::EcFont::NOTO, x, 0);
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1381,8 +1367,6 @@ namespace {
                 appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
             } else if (name == "smtable"sv) {
                 appendSmTable(s, x, context);
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1391,16 +1375,12 @@ namespace {
                 str::append(s, u8"<span class='tr'>⌈</span>");
                 str::append(s, x.safeGetV(1, {}));
                 str::append(s, u8"<span class='tr'>⌋</span>");
-            } else {
-                goto dflt;
             }
             break;
 
         case 'v':
             if (name == "version"sv) {
                 str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
-            } else {
-                goto dflt;
             }
             break;
 
@@ -1409,17 +1389,24 @@ namespace {
                 s += "<b style='"  STYLE_MISRENDER "'>";
                 str::append(s, x.safeGetV(1, {}));
                 s += "</b>";
-            } else {
-                goto dflt;
             }
             break;
 
-        default:
-        dflt:
+        case 'y':
+            if (name == "ytalib") {
+                s += QString::number(uc::YEAR_TALIBAN);
+            }
+            break;
+
+        default:;
+        }
+
+        if (s.length() == oldLen) {
             if (name == "GrekCoptUni"sv
              || name == "ArabPres1"sv
              || name == "ArabPres2"sv) {
-                mywiki::append(s, loc::get(str::cat("Snip.", name)), context, wiki::Mode::SPAN);
+                const auto& text = loc::get(str::cat("Snip.", name));
+                mywiki::append(s, text, context, wiki::Mode::SPAN);
             } else {
                 wiki::appendHtml(s, x[0]);
             }

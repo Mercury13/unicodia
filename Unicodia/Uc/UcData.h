@@ -68,6 +68,11 @@ constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
 
 namespace uc {
 
+    /// Year when checked the situation with Taliban:
+    ///   flag of Afghanistan, {{ytalib}} template
+    constexpr unsigned YEAR_TALIBAN = 2025;
+
+
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };

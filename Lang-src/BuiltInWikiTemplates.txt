@@ -85,3 +85,9 @@ V
 
 {{version}} :: Latest version of Unicode :: No parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
+
+
+Y
+
+{{ytalib}} :: Year when checked situation with the Taliban :: no parameters
+Prints 2025 (at the time of writing). May increase when check again in 2026
