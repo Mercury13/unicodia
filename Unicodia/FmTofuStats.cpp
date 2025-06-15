@@ -16,6 +16,13 @@ void tofu::Memo::inputMethodEvent(QInputMethodEvent *e)
 
 void tofu::Memo::keyPressEvent(QKeyEvent *e)
 {
+    switch (e->key()) {
+    case Qt::Key_Enter:
+    case Qt::Key_Return:
+    case Qt::Key_Backspace:
+        e->ignore();
+        return;
+    }
     if (auto tx = e->text(); !tx.isEmpty()) {
         QKeyEvent g (
             e->type(),
