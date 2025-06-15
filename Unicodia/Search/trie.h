@@ -19,9 +19,9 @@ namespace srh {
     };
 
     ///  @tparam  R result
-    ///     Just for unit-testing, surely small
-    ///       (I don’t want to pull the entire Unicode base)
-    ///     So you may add special logic here (e.g. full/partial qualification),
+    ///   • Just for unit-testing, I don’t want to pull the entire Unicode base
+    ///   • Surely small, the “combat” object is a pointer to entry
+    ///   • So you may add special logic here (e.g. full/partial qualification),
     ///       if you UT it and create a toy base that repeats the phenomenon
     ///       in smaller scale.
     ///
