@@ -68,6 +68,10 @@ constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
 
 namespace uc {
 
+    /// Year when checked the situation with Antarctica:
+    ///   flag of Antarctica, {{yantarc}} template
+    constexpr unsigned YEAR_ANTARC = 2025;
+
     /// Year when checked the situation with Taliban:
     ///   flag of Afghanistan, {{ytalib}} template
     constexpr unsigned YEAR_TALIBAN = 2025;

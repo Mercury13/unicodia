@@ -13535,8 +13535,9 @@
      <transl>Поточний ({{ytalib}}) уряд, Талібан, майже ніде не{{_}}визнаний. Його прапор білий з чорною ''шахáдою'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
     </text>
     <text id="U+1F1E6+1F1F6">
-     <orig>As of 2024, all vendors use the flag created in 1996 for ''3D World Atlas'' multimedia encyclopedia: UN blue with white continent. A competing flag, navy blue and white with a diamond, has existed since 2018.</orig>
-     <transl>На 2024 усі виробники використовують прапор, створений у 1996 для мультимедійної енциклопедії ''3D World Atlas'': ООНівський синій з білим континентом. З 2018 існує прапор-конкурент: темно-синій та білий, з ромбом.</transl>
+     <orig>As of {{yantarc}}, all vendors use the flag created in 1996 for ''3D World Atlas'' multimedia encyclopedia: UN blue with white continent. A competing flag, navy blue and white with a diamond, has existed since 2018.</orig>
+     <au-cmt>{{yantarc}} = year when checked the situation with Antarctica, e.g. 2025 </au-cmt>
+     <transl>На {{yantarc}} усі виробники використовують прапор, створений у 1996 для мультимедійної енциклопедії ''3D World Atlas'': ООНівський синій з білим континентом. З 2018 існує прапор-конкурент: темно-синій та білий, з ромбом.</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
      <orig>The red-green-black flag was adopted in 2023. Before that, all vendors used blue French naval ensign with white snakes.</orig>

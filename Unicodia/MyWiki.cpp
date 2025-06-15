@@ -1393,7 +1393,9 @@ namespace {
             break;
 
         case 'y':
-            if (name == "ytalib") {
+            if (name == "yantarc") {
+                s += QString::number(uc::YEAR_ANTARC);
+            } if (name == "ytalib") {
                 s += QString::number(uc::YEAR_TALIBAN);
             }
             break;
