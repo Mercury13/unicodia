@@ -12,6 +12,8 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 BAD_JSESH_HIEROS = {
     0x1355D: "A049D",
     0x13577: "A369",    
+    0x13AD2: "E240",   # lion → lioness
+    0x13AD3: "E241",   # lion → lioness
 }
 BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
 
