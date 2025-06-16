@@ -301,9 +301,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2561E },    // CJK B: BS drew a hypotethical Chinese version
     { 0x256A1 },    // CJK B: SimSun-B drew more canonical glyph    
 
-    // CJK G: SimSunG
-    { 0x3068C },    // Strange BS glyph
-
     // CJK H: SimSunG
     { 0x3137B },    // UHan (V-form)
     { 0x31454 },    // UHan (S-form)
