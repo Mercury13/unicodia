@@ -87,7 +87,9 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
 * Serif style > correctness
 * One country is enough
 * Preference of countries: confirmed Chinese (G) > confirmed other (J, K, KP, V…) > hypothetical Chinese, country-independent (JV)
-* But if hypothetical Chinese is wrong in stroke types and stroke joins only (what is invisible or barely seen in sans style), it’s perfectly OK to take it
+* It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
+  * stroke types and stroke joins only (what is invisible or barely seen in sans style)
+  * whether the strokes leave a small gap or written together
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
