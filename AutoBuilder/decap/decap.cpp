@@ -305,7 +305,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x24292 },    // SimB (T-form)
     { 0x24CDA },    // SimB (T-form)
     { 0x2561E },    // CJK B: BS drew a hypotethical Chinese version
-    { 0x256A1 },    // CJK B: SimSun-B drew more canonical glyph    
     { 0x28BCA },    // SimB (T-form)
     { 0x28F55 },    // SimB (T-form)
     { 0x25963 },    // SimB (T-form)
