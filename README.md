@@ -88,8 +88,10 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
 * One country is enough
 * Preference of countries: confirmed Chinese (G) > confirmed other (J, K, KP, V…) > hypothetical Chinese, country-independent (JV)
 * It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
-  * stroke types and stroke joins only (what is invisible or barely seen in sans style)
-  * whether the strokes leave a small gap or written together
+  * stroke types and stroke joins only (what is invisible or barely seen in sans style), even pointy vs dot
+  * whether the strokes leave a small gap or written together, even two crosses (T) vs horizontal dagger (G)
+  * whether a stroke is convex up or down
+  * minor difference of stroke length e.g. in “three”
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
