@@ -310,6 +310,9 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x25963 },    // SimB (T-form)
     //{ 0x2615B },  // H-form; if choose between SimB and BS → BS better
 
+    // CJK E: SinSumB
+    { 0x2C287 },    // SimB: BS drew a strange version
+
     // CJK H: SimSunG
     { 0x3137B },    // UHan (V-form)
     { 0x31454 },    // UHan (S-form)
