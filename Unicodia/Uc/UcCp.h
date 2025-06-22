@@ -69,6 +69,10 @@ namespace cp {
     constexpr char32_t HANGUL_SYLL_LAST = 0xD7AF;
 
     // Variation selectors
+    constexpr char32_t VS01 = 0xFE00;
+    constexpr char32_t VS02 = 0xFE01;
+    constexpr char32_t VS03 = 0xFE02;
+    constexpr char32_t VS04 = 0xFE03;
     constexpr char32_t VS15 = 0xFE0E;
     constexpr char32_t VS16 = 0xFE0F;
 
