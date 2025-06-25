@@ -130,7 +130,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
-      { FAM_FUNKY },                                                            // …2, new additions
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …2, new additions
+        { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT,  // …3
+                  15_top, 125_pc },
+      { FAM_FUNKY },                                                            // …for tofu
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
