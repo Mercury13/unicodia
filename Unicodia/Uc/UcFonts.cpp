@@ -41,6 +41,9 @@ constexpr uc::StyleSheet STYLE_NONE {};
 constexpr auto STYLE_DEVA = STYLE_NONE;
 constexpr auto SIZE_DEVA = 110_pc;
 
+// Flags of BabelStone 2/3
+constexpr auto FGS_BAB23 = uc::Ffg::NOHINT_TINY | uc::Ffg::PLANE_2 | uc::Ffg::PLANE_3;
+
 char32_t recodeBengali(char32_t x)
 {
     /// @todo [U17, gag] Recode Bengali
@@ -154,14 +157,16 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL_01, Ffg::NOHINT_TINY, 120_pc },                             // …1
     { FNAME_BABEL_01, Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::PLANE_1 // …CJK
                     | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID | Ffg::DESC_EXTENDED, 120_pc },
-      { FAM_BABEL_23, Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
+      { FAM_BABEL_23, FGS_BAB23 | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // 1
         // SimSun needed for one hiero 34F0: BS drew a hypothetical (not attested by Unicode) Chinese version
       { "SimSun", Ffg::NOHINT_TINY | Ffg::PLANE_0 | Ffg::FALL_TO_NEXT, 120_pc }, // …2
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::PLANE_2 | Ffg::FALL_TO_NEXT, 120_pc }, // …3
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { "SimSun-ExtG", Ffg::NOHINT_TINY | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT, 120_pc }, // …5
-      { "PlangothicP2-Regular.ttf",                                             // …6
-                Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
+            // on unsupported OS like W7 BabelStohe Han > PlanGothic
+      { FAM_BABEL_23, FGS_BAB23 | Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP, 120_pc }, // 6
+      { "PlangothicP2-Regular.ttf",                                             // …7
+                Ffg::GRAPHIC_SAMPLE | Ffg::PLANE_2 | Ffg::PLANE_3 | Ffg::FALL_TO_NEXT,
                 15_top, 125_pc },
       { FNAME_UNIHAN, 120_pc },                                                 // …8 for tofu
     { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                                // Unicodia backed with P0/1
@@ -328,7 +333,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", Ffg::FALL_TO_NEXT, 125_pc },               // Tangut
-      { FNAME_UNIHAN, 120_pc },                                                 // …1
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …1
+      { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT,    // …2
+                  15_top, 125_pc },
+      { FNAME_UNIHAN, 120_pc },                                                 // …For tofu
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2
