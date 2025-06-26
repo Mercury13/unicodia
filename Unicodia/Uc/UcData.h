@@ -77,7 +77,7 @@ namespace uc {
     constexpr unsigned YEAR_TALIBAN = 2025;
 
     /// Year when checked that Brodie Lockard is alive:
-    /// Mahjong, {{ylockard}} template
+    ///   Mahjong, {{ylockard}} template
     /// DO NOT update until you find real evidence of being alive:
     ///   2025 is his February article
     /// When he dies: first check all L10Ns, THEN delete.
