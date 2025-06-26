@@ -156,6 +156,7 @@ HEADERS += \
     Uc/UcDating.h \
     Uc/UcFlags.h \
     Uc/UcOldInput.h \
+    Uc/UcRecent.h \
     Uc/UcSkin.h \
     Wiki.h \
     c_SearchEdit.h \

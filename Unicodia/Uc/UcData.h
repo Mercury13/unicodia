@@ -68,24 +68,6 @@ constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
 
 namespace uc {
 
-    /// Year when checked the situation with Antarctica:
-    ///   flag of Antarctica, {{yantarc}} template
-    constexpr unsigned YEAR_ANTARC = 2025;
-
-    /// Year when checked the situation with Taliban:
-    ///   flag of Afghanistan, {{ytalib}} template
-    constexpr unsigned YEAR_TALIBAN = 2025;
-
-    /// Year when checked that Brodie Lockard is alive:
-    ///   Mahjong, {{ylockard}} template
-    /// DO NOT update until you find real evidence of being alive:
-    ///   2025 is his February article
-    /// When he dies: first check all L10Ns, THEN delete.
-    ///   If cannot (e.g. you don’t know language): died in 2060 → set 2059
-    ///   UNLESS the year is already 2060 because of some evidence
-    constexpr unsigned YEAR_LOCKARD = 2025;
-
-
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };

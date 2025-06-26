@@ -16,6 +16,7 @@
 #include "UcData.h"
 #include "UcOldInput.h"
 #include "UcCp.h"
+#include "UcRecent.h"
 
 // Search
 #include "Search/request.h"
