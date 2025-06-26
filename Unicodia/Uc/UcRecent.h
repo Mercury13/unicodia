@@ -15,16 +15,16 @@ namespace uc {
     /// Fact to check: All major vendors use UN blue emoji of Antarctica
     /// Article: flag of Antarctica (AQ)
     /// Template: {{yantarc}}
-    /// Reaction to partial change: cannot think up this situation
+    /// Reaction to partial change: think for yourself, e.g.
+    ///    “Horns and Hoves switched to the new flag in 2060”,
+    ///    without template (no longer need to confirm every year)
     /// Known status: still true
     constexpr unsigned YEAR_ANTARC = 2025;
 
     /// Fact to check: All major vendors use 2021 flag of Afghanistan
     /// Article: flag of Afghanistan (AF)
     /// Template: {{ytalib}}
-    /// Reaction to partial change: think for yourself, e.g.
-    ///    “Only in 2060 Horns and Hooves drew the new flag”,
-    ///    without template (no longer need to confirm every year)
+    /// Reaction to partial change: same as with Antarctica
     /// Known status: still true
     constexpr unsigned YEAR_TALIBAN = 2025;
 
