@@ -12,7 +12,7 @@
 
 namespace uc {
 
-    /// Fact to check: All major vendors use UN blue emoji of Antarctica
+    /// Fact to check: all major vendors use UN blue emoji of Antarctica
     /// Article: flag of Antarctica (AQ)
     /// L10n key: Lib.Misr.U+1F1E6+1F1F6
     /// Template: {{yantarc}}
@@ -22,7 +22,7 @@ namespace uc {
     /// Known status: still true
     constexpr unsigned YEAR_ANTARC = 2025;
 
-    /// Fact to check: All major vendors use 2021 flag of Afghanistan
+    /// Fact to check: all major vendors use 2021 flag of Afghanistan
     /// Article: flag of Afghanistan (AF)
     /// L10n key: Lib.Misr.U+1F1E6+1F1EB
     /// Template: {{ytalib}}
