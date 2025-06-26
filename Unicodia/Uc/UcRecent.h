@@ -12,18 +12,28 @@
 
 namespace uc {
 
-    /// Year when checked the situation with Antarctica:
-    ///   flag of Antarctica, {{yantarc}} template
+    /// Fact to check: All major vendors use UN blue emoji of Antarctica
+    /// Where: flag of Antarctica (AQ)
+    /// Template: {{yantarc}}
+    /// Reaction to partial change: cannot think up this situation
+    /// Known status: still true
     constexpr unsigned YEAR_ANTARC = 2025;
 
-    /// Year when checked the situation with Taliban:
-    ///   flag of Afghanistan, {{ytalib}} template
+    /// Fact to check: All major vendors use 2021 flag of Afghanistan
+    /// Where: flag of Afghanistan (AF)
+    /// Template: {{ytalib}}
+    /// Reaction to partial change: think for yourself, e.g.
+    ///    “Only in 2060 Horns and Hooves drew the new flag”,
+    ///    without template (no longer need to confirm every year)
+    /// Known status: still true
     constexpr unsigned YEAR_TALIBAN = 2025;
 
-    /// Year when checked that Brodie Lockard is alive:
-    ///   Mahjong, {{ylockard}} template
-    /// DO NOT update until you find real evidence of him being alive:
-    ///   2025 is his February article
+    /// Fact to check: Brodie Lockard is alive
+    /// Where: mahjong
+    /// Template: {{ylockard}}
+    /// Reaction to partial change: N/A, he’s either alive or dead,
+    ///    and I wrote nothing about his current life (environemntal activist)
+    /// Known status: still true
     constexpr unsigned YEAR_LOCKARD = 2025;
 
-}
+}   // anmespace uc
