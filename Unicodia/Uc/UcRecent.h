@@ -18,7 +18,7 @@ namespace uc {
     /// L10n key: Lib.Misr.U+1F1E6+1F1F6
     /// Template: {{yantarc}}
     /// Sample reaction: Horns and Hooves switched to the new flag in 2060
-    /// Known status: still true
+    /// Known status: still unanimous
     constexpr unsigned YEAR_ANTARC = 2025;
 
     /// Fact to check: all major vendors use 2021 flag of Afghanistan
@@ -26,7 +26,7 @@ namespace uc {
     /// L10n key: Lib.Misr.U+1F1E6+1F1EB
     /// Template: {{ytalib}}
     /// Sample reaction: see Antarctica
-    /// Known status: still true
+    /// Known status: only Catrinity switched
     constexpr unsigned YEAR_TALIBAN = 2025;
 
     /// Fact to check: Brodie Lockard is alive
@@ -34,7 +34,7 @@ namespace uc {
     /// L10n key: Block.1F000.Text
     /// Template: {{ylockard}}
     /// Sample reaction: “Brodie Lockard (1960-2060)”, born actually 1960
-    /// Known status: still true
+    /// Known status: still alive
     constexpr unsigned YEAR_LOCKARD = 2025;
 
 }   // anmespace uc
