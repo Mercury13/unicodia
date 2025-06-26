@@ -32,7 +32,7 @@ namespace uc {
     /// Where: mahjong
     /// Template: {{ylockard}}
     /// Reaction to partial change: N/A, he’s either alive or dead,
-    ///    and I wrote nothing about his current life (environemntal activist)
+    ///    and I wrote nothing about his current life (environmental activist)
     /// Known status: still true
     constexpr unsigned YEAR_LOCKARD = 2025;
 
