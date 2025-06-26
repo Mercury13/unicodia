@@ -82,6 +82,7 @@ namespace uc {
     ///   2025 is his February article
     /// When he dies: first check all L10Ns, THEN delete.
     ///   If cannot (e.g. you don’t know language): died in 2060 → set 2059
+    ///   UNLESS the year is already 2060 because of some evidence
     constexpr unsigned YEAR_LOCKARD = 2025;
 
 
