@@ -17,7 +17,7 @@ namespace uc {
     /// L10n key: Lib.Misr.U+1F1E6+1F1F6
     /// Template: {{yantarc}}
     /// Reaction to partial change: think for yourself, e.g.
-    ///    “Horns and Hoves switched to the new flag in 2060”,
+    ///    “Horns and Hooves switched to the new flag in 2060”,
     ///    without template (no longer need to confirm every year)
     /// Known status: still true
     constexpr unsigned YEAR_ANTARC = 2025;
