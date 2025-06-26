@@ -78,6 +78,8 @@ namespace uc {
 
     /// Year when checked that Brodie Lockard is alive:
     /// Mahjong, {{ylockard}} template
+    /// DO NOT update until you find real evidence of being alive:
+    ///   2025 is his February article
     constexpr unsigned YEAR_LOCKARD = 2025;
 
 
