@@ -5,7 +5,7 @@
 //
 //  If the situation changes in 2060:
 //  1. Change all L10n’s you know.
-//  2. Are any L10n’s left
+//  2. Are any L10n’s left?
 //     2.1. No, all → delete here and from MyWiki
 //     2.2. Yes, left → set to 2059
 //
