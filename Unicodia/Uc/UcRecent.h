@@ -6,7 +6,7 @@
 //  If the situation changes in 2060:
 //  1. Change all L10n’s you know.
 //     1.1. If these are all → delete here and from MyWiki
-//     1.2. Otherwise set to 2059 unless it was 2060 due to some evidence
+//     1.2. Otherwise set to 2059
 //
 
 namespace uc {
