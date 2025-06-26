@@ -4584,8 +4584,12 @@
       <p />
       <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
-      <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of 2023.</p>
+      <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of {{ylockard}}.</p>
      </orig>
+     <au-cmt>
+      <p>{{ylockard}} = 2025 at the time of writing</p>
+      <p>May increase when I find some evidence of being alive, or disappear when he’s dead</p>
+     </au-cmt>
      <transl>
       <p>Азартна гра мацзян (часто через романізацію звана маджонг) винайдена у кінці XIX{{_}}століття, перший збережений набір{{-}}1870. Сама гра західному світові маловідома, але поширений пасьянс: з боків фігури знімати однакові фішки.</p>
       <p />
@@ -4593,7 +4597,7 @@
       <p />
       <p>Масті маджонгу походять від однієї монети (кíльця), в’язки зі 100 монет (бамбуки) та {{n|10000}} монет (ієрогліф внизу означає {{n|10000}}). Козирі{{-}}чотири вітри, три дракони, чотири пори року та чотири квітки. У деяких видах маджонгу зустрічаються і інші козирі{{-}}професії (рибак, дроворуб, селянин, вчений) або види мистецтва (музика, го, каліграфія, малювання).</p>
       <p />
-      <p>…Локард так і залишився прикутим до візка, але прославився як розробник ігор та ПЗ для реабілітації, і на 2023 живий.</p>
+      <p>…Локард так і залишився прикутим до візка, але прославився як розробник ігор та ПЗ для реабілітації, і на {{ylockard}} живий.</p>
      </transl>
     </text>
    </group>

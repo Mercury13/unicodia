@@ -1393,11 +1393,9 @@ namespace {
             break;
 
         case 'y':
-            if (name == "yantarc") {
-                s += QString::number(uc::YEAR_ANTARC);
-            } if (name == "ytalib") {
-                s += QString::number(uc::YEAR_TALIBAN);
-            }
+            if (name == "yantarc")       { s += QString::number(uc::YEAR_ANTARC);  }
+            else if (name == "ylockard") { s += QString::number(uc::YEAR_LOCKARD); }
+            else if (name == "ytalib")   { s += QString::number(uc::YEAR_TALIBAN); }
             break;
 
         default:;

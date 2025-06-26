@@ -4582,8 +4582,12 @@
       <p />
       <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
-      <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of 2023.</p>
+      <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of {{ylockard}}.</p>
      </orig>
+     <au-cmt>
+      <p>{{ylockard}} = 2025 at the time of writing</p>
+      <p>May increase when I find some evidence of being alive, or disappear when he’s dead</p>
+     </au-cmt>
      <transl>
       <p>ギャンブルゲームである麻雀（ローマ字表記では「麻雀」と呼ばれることが多い）は 19 世紀後半に発明され、現存する最初のセットは 1870 年のものです。ゲーム自体は西洋ではあまり知られていませんが、ソリティアは広く普及しています。ソリティアは、図形の側面から同じ牌を取り除くゲームです。</p>
       <p />
@@ -4591,7 +4595,7 @@
       <p />
       <p>麻雀の牌は、1枚のコイン（輪）、100枚のコインの束（竹）、1万枚のコイン（下の表意文字は万を意味する）から成ります。切り札は、4つの風、3つの龍、4つの季節、4つの花です。一部のバリエーションには、他の切り札{{-}}職業（漁師、木こり、農民、学者）または芸術（音楽、囲碁、書道、絵画）が含まれます。</p>
       <p />
-      <p>…ロッカードは車椅子生活を続けましたが、ゲームや支援ソフトウェアの開発者として名声を博し、2023年現在も存命です。</p>
+      <p>…ロッカードは車椅子生活を続けましたが、ゲームや支援ソフトウェアの開発者として名声を博し、{{ylockard}}年現在も存命です。</p>
      </transl>
     </text>
    </group>

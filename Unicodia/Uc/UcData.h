@@ -76,6 +76,10 @@ namespace uc {
     ///   flag of Afghanistan, {{ytalib}} template
     constexpr unsigned YEAR_TALIBAN = 2025;
 
+    /// Year when checked that Brodie Lockard is alive:
+    /// Mahjong, {{ylockard}} template
+    constexpr unsigned YEAR_LOCKARD = 2025;
+
 
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
