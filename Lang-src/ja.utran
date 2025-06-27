@@ -1839,12 +1839,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this character, and in Unicode{{_}}16 is still not{{_}}recommended.</p>
+      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this character, and in Unicode{{_}}{{vkhmer}} is still not{{_}}recommended.</p>
       <p />
       <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
      <transl>
-      <p>{{sm|᧠}} ブロックの最初の文字は、仏教の太陽太陰暦の 8 番目の月の名前です (クメール語の ''Asat'' または ''Băthámsath''、サンスクリット語の ''Ashadha''、6月～7月に相当)。季節の変化に遅れないようにするため、この月は 2 ～ 3年に 2 回繰り返されます。マーク 17D3 {{sm|◌៓}} は、この文字が優先されて [[pt:deprecated|非推奨]] になったこともあり、Unicode では {{_}}16 はまだ {{_}} 推奨されていません。</p>
+      <p>{{sm|᧠}} ブロックの最初の文字は、仏教の太陽太陰暦の 8 番目の月の名前です (クメール語の ''Asat'' または ''Băthámsath''、サンスクリット語の ''Ashadha''、6月～7月に相当)。季節の変化に遅れないようにするため、この月は 2 ～ 3年に 2 回繰り返されます。マーク 17D3 {{sm|◌៓}} は、この文字が優先されて [[pt:deprecated|非推奨]] になったこともあり、Unicode では{{_}}{{vkhmer}} はまだ 推奨されていません。</p>
       <p />
       <p>残りは、太陰暦の新月から満月まで、そして新月から新月までの日の名前です。</p>
      </transl>
@@ -10449,7 +10449,7 @@
       <p />
       <p>Unicode had beed two-byte encoding until 1996, that gave capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
       <p />
-      <p>As of Unicode{{_}}16, only 16 positions are unallocated, 2FE0…2FEF.</p>
+      <p>As of Unicode{{_}}{{vleft16}}, only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
      </orig>
@@ -10458,7 +10458,7 @@
       <p />
       <p>Unicode は 1996 年まで 2 バイト エンコードで、{{n|65536}} 文字の容量がありました。拡張の問題が遅れたとき、いくつかの進歩的な言語とライブラリ (Java、Windows{{_}}NT) はすでに Unicode を採用しており、それが基本プレーンと UTF-16 の形で妥協につながりました。</p>
       <p />
-      <p>Unicode{{_}}16 の時点では、割り当てられていない位置は 2FE0…2FEF の 16 位置のみです。</p>
+      <p>Unicode{{_}}{{vleft16}} の時点では、割り当てられていない位置は 2FE0…2FEF の 16 位置のみです。</p>
       <p />
       <p>基本プレーンには [[pt:ascii|ASCII]]、[[pt:latin1|ラテン-1]]、および {{n|6400}} 個の [[pt:private|私的使用]] 文字が含まれています。</p>
      </transl>
@@ -11306,7 +11306,7 @@
      <orig>
       <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
       <p />
-      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}16.</p>
+      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}{{vleft16}}.</p>
       <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
       <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
       <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
@@ -11317,7 +11317,7 @@
      <transl>
       <p>文字の範囲は *0000 から *FFFD です。各プレーンの最後の 2 つの [[pt:codepoint|コード ポイント]]、*FFFE と *FFFF は [[pt:noncharacter|非文字]] です。[[pt:utf16|UTF-16]] の制限により、Unicode には 17 のプレーンがあります。</p>
       <p />
-      <p>* プレーン #0 は '''[[pt:bmp|基本多言語プレーン]]''' で、ほとんどの現存する言語の文字が含まれています。Unicode{{_}}16 には 16 個の未割り当ての位置があります。</p>
+      <p>* プレーン #0 は '''[[pt:bmp|基本多言語プレーン]]''' で、ほとんどの現存する言語の文字が含まれています。Unicode{{_}}{{vleft16}} には 16 個の未割り当ての位置があります。</p>
       <p />
       <p>* プレーン #1 は '''補足多言語プレーン''' で、珍しい言語や死語、および技術言語の文字が含まれています。{{%|50}} 未満がいっぱいです。</p>
       <p />

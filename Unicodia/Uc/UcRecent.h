@@ -50,4 +50,25 @@ namespace recent {
     /// Known status: still 15 as of U17
     constexpr const char8_t* V_DEPREC_15 = u8"17";
 
+    /// Fact to check: BMP has 16 unallocated chars, 2FE0…2FEF
+    ///     (go to “Ideo desc chars” 2FF0 and check what’s before)
+    /// Piece of data: Unicode version, w/o “alpha” or “beta”
+    /// Article 1: BMP
+    /// L10n key 1: Term.bmp.Text
+    /// Article 2: plane
+    /// L10n key 2: Term.plane.Text
+    /// Template: {{vleft16}}
+    /// Sample reaction: Since Unicode 33 the entire BMP is allocated
+    /// Known status: still unallocated
+    constexpr const char8_t* V_LEFT_16 = u8"17";
+
+    /// Fact to check: 17D3 (Khmer umlaut) is discouraged
+    /// Piece of data: Unicode version, w/o “alpha” or “beta”
+    /// Article: Khmer symbols
+    /// L10n key: Block.19E0.Text
+    /// Template: {{vkhmer}}
+    /// Sample reaction: “Mark is/was deprecated, PERIOD”
+    /// Known status: still discouraged
+    constexpr const char8_t* V_KHMER_DISCOUR = u8"17";
+
 }   // anmespace uc

@@ -117,6 +117,12 @@ Prints the version of Unicode that has 15 deprecated characters
 {{version}} :: Latest version of Unicode :: Data/internal :: No parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
 
+{{vkhmer}} :: Version that discourages 17D3 :: Data/ongoing / No parameters
+Prints the version of Unicode that discourages Khmer umlaut 17D3
+
+{{vleft16}} :: Version that has 16 chars left in BMP :: Data/ongoing / No parameters
+Prints the version of Unicode that has 16 unallocated characters in BMP, 2FE0…2FEF
+
 Y
 
 {{yantarc}} :: Year when checked situation with the Antarctica :: Data/ongoing :: No parameters

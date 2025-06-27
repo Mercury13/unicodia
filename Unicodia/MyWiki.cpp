@@ -1383,6 +1383,10 @@ namespace {
                 str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
             } else if (name == "vdeprec15") {
                 str::append(s, recent::V_DEPREC_15);
+            } else if (name == "vleft16") {
+                str::append(s, recent::V_LEFT_16);
+            } else if (name == "vkhmer") {
+                str::append(s, recent::V_KHMER_DISCOUR);
             }
             break;
 
