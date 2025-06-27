@@ -40,7 +40,7 @@ F
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 Example: Noto Serif Devanag000,Times New Roman
 
-{{funky}} :: Text drawn with FunkySample font :: Samples :: 1 parameter
+{{funky}} :: Text drawn with UnicodiaFunky font :: Samples :: 1 parameter
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 
 G
