@@ -1381,6 +1381,8 @@ namespace {
         case 'v':
             if (name == "version"sv) {
                 str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
+            } else if (name == "vdeprec15") {
+                str::append(s, recent::V_DEPREC_15);
             }
             break;
 
@@ -1393,9 +1395,9 @@ namespace {
             break;
 
         case 'y':
-            if (name == "yantarc")       { s += QString::number(uc::YEAR_ANTARC);  }
-            else if (name == "ylockard") { s += QString::number(uc::YEAR_LOCKARD); }
-            else if (name == "ytalib")   { s += QString::number(uc::YEAR_TALIBAN); }
+            if (name == "yantarc")       { s += QString::number(recent::YEAR_ANTARC);  }
+            else if (name == "ylockard") { s += QString::number(recent::YEAR_LOCKARD); }
+            else if (name == "ytalib")   { s += QString::number(recent::YEAR_TALIBAN); }
             break;
 
         default:;

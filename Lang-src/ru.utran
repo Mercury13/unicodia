@@ -10701,7 +10701,7 @@
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
-      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}16.</p>
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
@@ -10710,6 +10710,7 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
+     <au-cmt>vdeprec15 = version of Unicode with 15 deprecated characters</au-cmt>
      <transl>
       <p>Символ, чьё использование настоятельно не{{_}}рекомендуется.</p>
       <p />
@@ -10717,7 +10718,7 @@
       <p />
       <p>В Консорциуме Юникода сидят люди западной культуры, и они могут лишь ссылаться на исследования специалистов по редким языкам{{-}}так случилось для пяти символов [[ps:Arab|арабского]], [[ps:Tibt|тибетского]] и [[ps:Khmr|кхмерского]].</p>
       <p />
-      <p>Две технические угловые скобки запретили, чтобы не{{_}}путали с математическими. Также запрещены языковый [[pk:E0000|тэг]] (внёс больше неразберихи, чем решил проблем), шесть символов [[pt:bidi|двунаправленного письма]] (предложен другой механизм) и латинская [[pt:ligature|лигатура]] '''ŉ''' (в голландском и африкаанс есть много похожих сокращений, никак не{{_}}закодированных, проблемы с [[pt:normalization|нормализацией]], упразднили тип символов «буква со знаком»){{-}}итого 15 на Юникод{{_}}16.</p>
+      <p>Две технические угловые скобки запретили, чтобы не{{_}}путали с математическими. Также запрещены языковый [[pk:E0000|тэг]] (внёс больше неразберихи, чем решил проблем), шесть символов [[pt:bidi|двунаправленного письма]] (предложен другой механизм) и латинская [[pt:ligature|лигатура]] '''ŉ''' (в голландском и африкаанс есть много похожих сокращений, никак не{{_}}закодированных, проблемы с [[pt:normalization|нормализацией]], упразднили тип символов «буква со знаком»){{-}}итого 15 на Юникод{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Известны несколько случаев возврата символов в обиход.</p>
       <p>* Блок тэгов{{-}}использовался для указания языка. Вернули для [[pt:emoji|эмодзи]] флагов регионов (например, Шотландии), оставив под запретом один символ.</p>

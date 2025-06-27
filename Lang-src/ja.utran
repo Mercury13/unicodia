@@ -10758,7 +10758,7 @@
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
-      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}16.</p>
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
@@ -10767,6 +10767,7 @@
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
+     <au-cmt>vdeprec15 = version of Unicode with 15 deprecated characters</au-cmt>
      <transl>
       <p>使用を強くお勧めしない文字。</p>
       <p />
@@ -10774,7 +10775,7 @@
       <p />
       <p>Unicode コンソーシアムは西洋文化の人々で構成されており、希少言語の専門家の研究を参照することしかできません。{{-}}これは、[[ps:Arab|アラビア文字]]、[[ps:Tibt|チベット文字]]、[[ps:Khmr|クメール文字]] の 5 つの文字で発生しました。</p>
       <p />
-      <p>数学的な山括弧との混同を避けるため、技術的な山括弧 2 つが禁止されています。また、言語の [[pk:E0000|タグ]] (解決する問題よりも混乱を招く)、[[pt:bidi|双方向表記]] の一部の文字 (別のアルゴリズムが提案されています)、ラテン語の [[pt:ligature|合字]] '''ŉ''' (オランダ語とアフリカーンス語には、エンコードされていない類似の略語が多数あり、[[pt:normalization|正規化]] に問題があり、文字タイプ「句読点付き文字」が削除されました) も非推奨です。{{-}}Unicode の時点で合計 15 個{{_}}16。</p>
+      <p>数学的な山括弧との混同を避けるため、技術的な山括弧 2 つが禁止されています。また、言語の [[pk:E0000|タグ]] (解決する問題よりも混乱を招く)、[[pt:bidi|双方向表記]] の一部の文字 (別のアルゴリズムが提案されています)、ラテン語の [[pt:ligature|合字]] '''ŉ''' (オランダ語とアフリカーンス語には、エンコードされていない類似の略語が多数あり、[[pt:normalization|正規化]] に問題があり、文字タイプ「句読点付き文字」が削除されました) も非推奨です。{{-}}Unicode の時点で合計 15 個{{_}}{{vdeprec15}}。</p>
       <p />
       <p>使用する文字を返すいくつかの例が知られている:</p>
       <p>* 「タグ」ブロック{{-}}は言語を指定するために使用されていました。地域の旗（スコットランドなど）の[[pt:emoji|絵文字]]に対して返され、1文字が禁止されました。</p>
