@@ -4,7 +4,7 @@
   • ongoing: may become false, but still true
   • obsolete: ongoing becomes false, no templates for now
 • Image: you understand
-• L10n: for internationalization/localization
+• L10n: for internationalization/localization, intersects with Typographic sometimes
 • Samples: to display sample characters
 • Snippet: to display a snippet of text
 • Typographic: to display some nice characters or text style
