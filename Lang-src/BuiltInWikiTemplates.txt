@@ -1,6 +1,6 @@
 ﻿Types:
 • Data: for displaying some data from central storage
-  • truism: always true, but may change sometimes
+  • truism: always true, sometimes changes to other true statement
   • ongoing: may become false, but still true
   • obsolete: ongoing becomes false, no templates for now
 • Image: you understand
