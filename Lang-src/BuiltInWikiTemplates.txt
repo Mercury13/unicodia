@@ -1,7 +1,7 @@
 ﻿Data is divided into:
 • truism: always true, but may change sometimes
 • ongoing: may become false, but still true
-• obsolete: none for now (ongoing becomes false)
+• obsolete: ongoing becomes false, no templates for now
 
 
 #
