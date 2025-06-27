@@ -22,7 +22,8 @@ namespace recent {
     /// Known status: still unanimous
     constexpr unsigned YEAR_ANTARC = 2025;
 
-    /// Fact to check: all major vendors use 2021 flag of Afghanistan
+    /// Fact to check: Afghanistan is ruled by the Taliban,
+    ///     and all major vendors still use 2021 flag of Afghanistan
     /// Piece of data: year
     /// Article: flag of Afghanistan (AF)
     /// L10n key: Lib.Misr.U+1F1E6+1F1EB
