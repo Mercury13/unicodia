@@ -4265,7 +4265,7 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
-      <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}17 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
@@ -4276,7 +4276,7 @@
       <p />
       <p>音楽は [[pt:universality|非テキスト]] 情報であるため、Unicode の範囲外です。しかし、既存のタイポグラフィ エンジンを使用して音符とそのパートをフォントに保存し、音楽ソフトウェアを簡素化し、楽譜 PDF を短縮することは魅力的です。この観点から、8 つの [[pt:format|書式]] 文字 (ビーム、タイ、スラー、フレーズ) の目的は不明です。 2013 年にオープン スタンダード SMuFL (Standard Music Font Layout) が登場し、[[pt:private|私的使用]] コードポイントを使用してブロックを 2600 文字に拡張しました。</p>
       <p />
-      <p>Unicode で最初に受け入れられた微分音表記 (1D132 および 33) は広く使用されておらず、これらの文字を「実際に」見たことがある人はほとんどいません。 Unicode{{_}}17 では、音楽ソフトウェアで広く使用されている別の表記 (ハーフシャープ、ハーフフラット) が追加されます。</p>
+      <p>Unicode で最初に受け入れられた微分音表記 (1D132 および 33) は広く使用されておらず、これらの文字を「実際に」見たことがある人はほとんどいません。 Unicode{{_}}18 では、音楽ソフトウェアで広く使用されている別の表記 (ハーフシャープ、ハーフフラット) が追加されます。</p>
       <p />
       <p>また、このブロックには、廃止された音楽表記の文字がいくつか含まれています。</p>
      </transl>
