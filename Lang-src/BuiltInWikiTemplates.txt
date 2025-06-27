@@ -6,6 +6,7 @@
 • Image: you understand
 • L10n: for internationalization/localization
 • Samples: to display sample characters
+• Snippet: to display a snippet of text
 • Typographic: to display some nice characters or text style
 
 
@@ -16,6 +17,13 @@ Prints parameter 1, synthesized thin non-break space, percent sign %.
 
 {{_}} :: Non-break space :: Typographic :: No parameters
 Just inserts a non-break space 00A0.
+
+A
+{{ArabPres1}} :: Arabic presentation forms, part 1 :: Snippet :: No parameters
+Used in both Arabic presentation forms A and B
+
+{{ArabPres2}} :: Arabic presentation forms, part 2 :: Snippet :: No parameters
+Used in both Arabic presentation forms A and B
 
 D
 {{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: Image :: No parameters
@@ -34,6 +42,11 @@ Example: Noto Serif Devanag000,Times New Roman
 
 {{funky}} :: Text drawn with FunkySample font :: Samples :: 1 parameter
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
+
+G
+
+{{GrekCoptUni}} : Coptic/Unicode :: Snippet :: No parameters
+Information on Coptic in Unicode, used in both Greek and Coptic
 
 H
 
