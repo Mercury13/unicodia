@@ -1,5 +1,6 @@
 ﻿Types:
 • Data: for displaying some data from central storage
+  • internal: deduced from Unicode tables
   • truism: always true to my best, sometimes changes to other true statement
   • ongoing: may become false, but still true
   • obsolete: ongoing becomes false, no templates for now
@@ -70,10 +71,10 @@ Fractions are unsupported. Negatives are supported.
 All instances of “sparse” formatting are programmatic
 Bhv for non-numbers is undefined, don’t rely on it
 
-{{nchars}} :: # of chars in latest Unicode :: Data/truism :: No parameters
+{{nchars}} :: # of chars in latest Unicode :: Data/internal :: No parameters
 Prints number of characters in the latest Unicode.
 
-{{nemoji}} :: # of emoji in latest Unicode :: Data/truism :: No parameters
+{{nemoji}} :: # of emoji in latest Unicode :: Data/internal :: No parameters
 Prints number of emoji in the latest Unicode.
 
 {{noto}} :: Text drawn with Noto Serif font :: Samples :: 1 parameter
@@ -110,7 +111,7 @@ V
 {{vdeprec15}} :: Version with 15 deprecated chars :: Data/ongoing :: No parameters
 Prints the version of Unicode that has 15 deprecated characters
 
-{{version}} :: Latest version of Unicode :: Data/truism :: No parameters
+{{version}} :: Latest version of Unicode :: Data/internal :: No parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
 
 Y
