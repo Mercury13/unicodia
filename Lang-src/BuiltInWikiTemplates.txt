@@ -55,6 +55,9 @@ H
 Formatted hex with decimal separator after every 4 characters
 Bhv for non-hex is undefined, don’t rely on it
 
+{{hcore}} {{hlegacy}} {{hextended}} {{hspecial}} :: Egyptian info :: Data/internal :: No parameters
+# of core (legacy, extended, special) Egyptian hieros
+
 K
 
 {{k}} :: Key combination :: Typographic :: ∞ parameters
