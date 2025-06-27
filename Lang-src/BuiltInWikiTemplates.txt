@@ -1,93 +1,101 @@
 ﻿#
 
-{{%}} :: Typographic percentage :: 1 parameter
+{{%}} :: Percentage :: Typographic :: 1 parameter
 Prints parameter 1, synthesized thin non-break space, percent sign %.
 
-{{_}} :: Non-break space :: No parameters
+{{_}} :: Non-break space :: Typographic :: No parameters
 Just inserts a non-break space 00A0.
 
 D
-{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: No parameters
+{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: HiDPI :: No parameters
 As a workaround, this sample is coded to FunkySample’s private-use codepoint.
 
 E
 
-{{em|}} :: Emoji sample :: 1 parameter
+{{em|}} :: Emoji sample :: Samples :: 1 parameter
 That parameter is displayed with known emoji fonts, size +2.
 
 F
 
-{{fontface}} :: Comma-separated families of object’s (block’s, script’s…) font :: No parameters
+{{fontface}} :: Comma-separated families of object’s (block’s, script’s…) font :: Samples :: No parameters
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 Example: Noto Serif Devanag000,Times New Roman
 
-{{funky}} :: Text drawn with FunkySample font :: 1 parameter
+{{funky}} :: Text drawn with FunkySample font :: Samples :: 1 parameter
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 
 H
 
-{{h}} :: Hexadecimal :: 1 parameter
+{{h}} :: Hexadecimal :: L10n :: 1 parameter
 Formatted hex with decimal separator after every 4 characters
 Bhv for non-hex is undefined, don’t rely on it
 
 K
 
-{{k}} :: Key combination :: ∞ parameters
+{{k}} :: Key combination :: Typographic :: ∞ parameters
 Writes [param1]+[param2]+[param3]+… where […] = crude keycap
 
-{{kb}} :: Key combination in bold :: ∞ parameters
+{{kb}} :: Key combination in bold :: Typographic :: ∞ parameters
 Same as {{k}}, just bold
 
 N
 
-{{n}} :: Formatted number :: 1 parameter
+{{n}} :: Formatted number :: L10n :: 1 parameter
 Number is formatted “as in dense text”
 Fractions are unsupported. Negatives are supported.
 All instances of “sparse” formatting are programmatic
 Bhv for non-numbers is undefined, don’t rely on it
 
-{{nchars}} :: # of chars in latest Unicode :: No parameters
+{{nchars}} :: # of chars in latest Unicode :: Data :: No parameters
 Prints number of characters in the latest Unicode.
 
-{{nemoji}} :: # of emoji in latest Unicode :: No parameters
+{{nemoji}} :: # of emoji in latest Unicode :: Data :: No parameters
 Prints number of emoji in the latest Unicode.
 
-{{noto}} :: Text drawn with Noto Serif font :: 1 parameter
+{{noto}} :: Text drawn with Noto Serif font :: Samples :: 1 parameter
 Same as {{funky}}, just another font.
 
-{{nspk}} :: # of speakers :: 2 parameters
+{{nspk}} :: # of speakers :: Data :: 2 parameters
 Prints # of language’s speakers from internal data
 Parameter 1 = script/language code
 Parameter 2 = LOCALIZED comment, usually an alias name
 
-{{nspk1}} :: # of speakers, no parentheses :: 2 parameters
+{{nspk1}} :: # of speakers, no parentheses :: Data :: 2 parameters
 Same as {{nspk}}, but no parentheses
 
 S
 
-{{sm}} :: Sample :: 1 parameter
+{{sm}} :: Sample :: Samples :: 1 parameter
 Difference from {{noto}}, {{funky}}, etc: the text is drawn in object’s font, in size +1, +2 or +3 (coded in font flags).
 
-{{smb}} :: Sample in Babelstone Han font :: 1 parameter
+{{smb}} :: Sample in Babelstone Han font :: Samples :: 1 parameter
 Same as {{sm}} but displayed in Babelstone Han font.
 
-{{smtable}} :: Sample with workaround via <table> :: ∞ parameters
+{{smtable}} :: Sample with workaround via <table> :: Samples :: ∞ parameters
 Used when text + sample + text glitches and physical barrier is needed.
 Parameter prepended with * = sample.
 Parameter prepended with ** = glitchy sample.
 
 T
 
-{{t}} :: Transcription :: 1 parameter
+{{t}} :: Transcription :: Typographic :: 1 parameter
 Just a transcription with nice brackets.
 
 V
 
-{{version}} :: Latest version of Unicode :: No parameters
-Prints the latest version of Unicode (15.0, 15.1β etc)
+{{vdeprec15}} :: Version with 15 deprecated chars :: Data :: No parameters
+Prints the version of Unicode that has 15 deprecated characters
 
+{{version}} :: Latest version of Unicode :: Data :: No parameters
+Prints the latest version of Unicode (15.0, 15.1β etc)
 
 Y
 
-{{ytalib}} :: Year when checked situation with the Taliban :: no parameters
+{{yantarc}} :: Year when checked situation with the Antarctica :: Data :: No parameters
+Prints 2025 (at the time of writing). May increase when check again in 2026
+
+{{ylockard}} :: Year when checked situation with the Lockard :: Data :: No parameters
+Prints 2025 (at the time of writing). May increase when check again in 2026
+
+{{ytalib}} :: Year when checked situation with the Taliban :: Data :: No parameters
 Prints 2025 (at the time of writing). May increase when check again in 2026
