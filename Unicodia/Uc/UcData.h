@@ -680,24 +680,26 @@ namespace uc {
     };
 
     enum class Langfg : unsigned char {
-        S_0 = 1<<0,             ///< Special string, bit 0
-        S_1 = 1<<1,             ///< Special string, bit 1
-        S_2 = 1<<2,             ///< Special string, bit 2
-        MORE_THAN = 1<<3,       ///< [+] more than (# is lower limit)
-        LESS_THAN = 1<<4,       ///< [+] less than (# is upper limit)
-        BURMESE = 1<<5,         ///< Special action for Burmese
-        CUSTOM_PRENOTE = 1<<6,  ///< Custom (rather than stock) pre-note
-        NO_AUTO = 1<<7,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
-        S_NORMAL = 0,
-        S_AS_NATIVE = S_0,
-        S_IN_INDIA = S_1,
-        S_TOTAL = S_0 | S_1,
-        S_DECADE = S_2,
-        S_DECADE_AS_NATIVE = S_2 | S_0,
-        S_ALL = S_0 | S_1 | S_2,
+        MORE_THAN = 1<<0,       ///< [+] more than (# is lower limit)
+        LESS_THAN = 1<<1,       ///< [+] less than (# is upper limit)
+        BURMESE = 1<<2,         ///< Special action for Burmese
+        CUSTOM_PRENOTE = 1<<3,  ///< Custom (rather than stock) pre-note
+        NO_AUTO = 1<<4,         ///< [+] Avoid auto {{nspk}}, mainly for competing scripts
     };
     DEFINE_ENUM_OPS(Langfg)
-    extern const char* langfgLocNames[];
+
+    DEFINE_ENUM_TYPE_IN_NS ( uc, Langstr, unsigned char,
+        NORMAL,
+        AS_NATIVE,  ///< L2 omitted for clarity or for political reasons: ##k native speakers
+        IN_INDIA,   ///< Partly known situation: ##k in India
+        TOTAL,      ///< Gamo-Gofa-Dawro: ##M total
+        DECADE,     ///< Compilation of different sources: ##k as of 2010s
+        DECADE_AS_NATIVE )
+
+    struct LangstrInfo {
+        std::string_view locKey;
+    };
+    extern const ec::Array<LangstrInfo, Langstr> langstrInfo;
 
     struct LangLoc {
         std::string_view locSubKey;
@@ -708,6 +710,7 @@ namespace uc {
         unsigned short hiMantissa = 0;
         NumOrder numOrder;
         Flags<Langfg> flags {};
+        Langstr str = Langstr::NORMAL;
         unsigned short year;
         unsigned short year2 = 0;
         MicroList<LangLoc, 3> locations {};

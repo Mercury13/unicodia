@@ -1206,6 +1206,10 @@
      <orig>China</orig>
      <transl>Китай</transl>
     </text>
+    <text id="ChinaSw">
+     <orig>South-Western China</orig>
+     <transl>Юго-Западный Китай</transl>
+    </text>
     <text id="Ethiopia">
      <orig>Ethiopia</orig>
      <transl>Эфиопия</transl>
@@ -3849,8 +3853,8 @@
      <transl>Лису дополнительный</transl>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language (South-East China, 300K, safe).</orig>
-     <transl>Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).</transl>
+     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
+     <transl>Один символ из языка наси {{nspk|nxq}}.</transl>
     </text>
    </group>
    <group id="11FC0">

@@ -959,6 +959,9 @@
     <text id="China">
      <orig>China</orig>
     </text>
+    <text id="ChinaSw">
+     <orig>South-Western China</orig>
+    </text>
     <text id="Ethiopia">
      <orig>Ethiopia</orig>
     </text>
@@ -2921,7 +2924,7 @@
      <orig>Lisu supplement</orig>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language (South-East China, 300K, safe).</orig>
+     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
     </text>
    </group>
    <group id="11FC0">

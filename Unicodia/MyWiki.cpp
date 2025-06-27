@@ -1200,8 +1200,7 @@ namespace {
                         sYear = str::cat(sYear, loc::active::punctuation.yearRange,
                                          printNum8(lang->year2, buf));
                     }
-                    auto iKey = (lang->flags & uc::Langfg::S_ALL).numeric();
-                    const char* key = uc::langfgLocNames[iKey];
+                    std::string_view key = uc::langstrInfo[lang->str].locKey;
                     wrapWith(sNum, key, sYear);
                 }
                 s += sNum.toHtmlEscaped();

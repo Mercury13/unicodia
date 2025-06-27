@@ -1207,6 +1207,10 @@
      <orig>China</orig>
      <transl>Китай</transl>
     </text>
+    <text id="ChinaSw">
+     <orig>South-Western China</orig>
+     <transl>Південно-Західний Китай</transl>
+    </text>
     <text id="Ethiopia">
      <orig>Ethiopia</orig>
      <transl>Ефіопія</transl>
@@ -3850,8 +3854,8 @@
      <transl>Лісу додатковий</transl>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language (South-East China, 300K, safe).</orig>
-     <transl>Один символ з мови насі (південно-західний Китай, 300{{_}}тис., у безпеці).</transl>
+     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
+     <transl>Один символ з мови насі {{nspk|nxq}}.</transl>
     </text>
    </group>
    <group id="11FC0">

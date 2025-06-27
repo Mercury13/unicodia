@@ -1204,6 +1204,10 @@
      <orig>China</orig>
      <transl>中国</transl>
     </text>
+    <text id="ChinaSw">
+     <orig>South-Western China</orig>
+     <transl>中国南東部</transl>
+    </text>
     <text id="Ethiopia">
      <orig>Ethiopia</orig>
      <transl>エチオピア</transl>
@@ -3855,8 +3859,9 @@
      <transl>リス文字 補足</transl>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language (South-East China, 300K, safe).</orig>
-     <transl>ナシ語の 1 文字 (中国南東部、30 万、安全)。</transl>
+     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
+     <transl>ナシ語の 1 文字 {{nspk|nxq}}。</transl>
+     <tr-cmt>中国南東部</tr-cmt>
     </text>
    </group>
    <group id="11FC0">
