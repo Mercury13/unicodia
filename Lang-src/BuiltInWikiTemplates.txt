@@ -1,7 +1,12 @@
-﻿Data is divided into:
-• truism: always true, but may change sometimes
-• ongoing: may become false, but still true
-• obsolete: ongoing becomes false, no templates for now
+﻿Types:
+• Data: for displaying some data from central storage
+  • truism: always true, but may change sometimes
+  • ongoing: may become false, but still true
+  • obsolete: ongoing becomes false, no templates for now
+• Image: you understand
+• L10n: for internationalization/localization
+• Samples: to display sample characters
+• Typographic: to display some nice characters or text style
 
 
 #
@@ -13,7 +18,7 @@ Prints parameter 1, synthesized thin non-break space, percent sign %.
 Just inserts a non-break space 00A0.
 
 D
-{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: HiDPI :: No parameters
+{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: Image :: No parameters
 As a workaround, this sample is coded to FunkySample’s private-use codepoint.
 
 E
