@@ -1,4 +1,10 @@
-﻿#
+﻿Data is divided into:
+• truism: always true, but may change sometimes
+• ongoing: may become false, but still true
+• obsolete: none for now (ongoing becomes false)
+
+
+#
 
 {{%}} :: Percentage :: Typographic :: 1 parameter
 Prints parameter 1, synthesized thin non-break space, percent sign %.
@@ -46,21 +52,21 @@ Fractions are unsupported. Negatives are supported.
 All instances of “sparse” formatting are programmatic
 Bhv for non-numbers is undefined, don’t rely on it
 
-{{nchars}} :: # of chars in latest Unicode :: Data :: No parameters
+{{nchars}} :: # of chars in latest Unicode :: Data/truism :: No parameters
 Prints number of characters in the latest Unicode.
 
-{{nemoji}} :: # of emoji in latest Unicode :: Data :: No parameters
+{{nemoji}} :: # of emoji in latest Unicode :: Data/truism :: No parameters
 Prints number of emoji in the latest Unicode.
 
 {{noto}} :: Text drawn with Noto Serif font :: Samples :: 1 parameter
 Same as {{funky}}, just another font.
 
-{{nspk}} :: # of speakers :: Data :: 2 parameters
+{{nspk}} :: # of speakers :: Data/truism :: 2 parameters
 Prints # of language’s speakers from internal data
 Parameter 1 = script/language code
 Parameter 2 = LOCALIZED comment, usually an alias name
 
-{{nspk1}} :: # of speakers, no parentheses :: Data :: 2 parameters
+{{nspk1}} :: # of speakers, no parentheses :: Data/truism :: 2 parameters
 Same as {{nspk}}, but no parentheses
 
 S
@@ -83,19 +89,19 @@ Just a transcription with nice brackets.
 
 V
 
-{{vdeprec15}} :: Version with 15 deprecated chars :: Data :: No parameters
+{{vdeprec15}} :: Version with 15 deprecated chars :: Data/ongoing :: No parameters
 Prints the version of Unicode that has 15 deprecated characters
 
-{{version}} :: Latest version of Unicode :: Data :: No parameters
+{{version}} :: Latest version of Unicode :: Data/truism :: No parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
 
 Y
 
-{{yantarc}} :: Year when checked situation with the Antarctica :: Data :: No parameters
+{{yantarc}} :: Year when checked situation with the Antarctica :: Data/ongoing :: No parameters
 Prints 2025 (at the time of writing). May increase when check again in 2026
 
-{{ylockard}} :: Year when checked situation with the Lockard :: Data :: No parameters
+{{ylockard}} :: Year when checked situation with the Lockard :: Data/ongoing :: No parameters
 Prints 2025 (at the time of writing). May increase when check again in 2026
 
-{{ytalib}} :: Year when checked situation with the Taliban :: Data :: No parameters
+{{ytalib}} :: Year when checked situation with the Taliban :: Data/ongoing :: No parameters
 Prints 2025 (at the time of writing). May increase when check again in 2026
