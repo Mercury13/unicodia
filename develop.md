@@ -141,8 +141,9 @@
     * Find your block in search results, you’ll see a SYNTHESIZED icon. Make sure that icon is in harmony with hand-drawn 16×16, change ``synthIcon`` field if needed
 * GlyphWiki’s placeholder of CJK fonts
   * (See GlyphWiki below)
-* Latin in Library
+* Latin/Cyrillic in Library
   * AutoBuilder has some sort of forget-checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
+* Recent data, see Unicodia/Uc/UcRecent.h
 
 # Decapitalization rules
 I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
