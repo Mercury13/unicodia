@@ -219,11 +219,6 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (cp) {
-                if constexpr (uc::DEBUG_FONTS) {
-                    auto font = cp->font(match::NullForTofu::INST);
-                    if (font && font->family.flags.have(uc::Fafg::DEBUG))
-                        return QColor { Qt::yellow };
-                }
                 if (!fHighlightedFamily.empty()) {
                     if (cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)
                             <= uc::DrawMethod::LAST_FONT) {
