@@ -195,7 +195,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
     // Carian OK, W10 P1
     { "Cari", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH_LTR, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::LTR_MOSTLY, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
