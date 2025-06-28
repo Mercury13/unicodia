@@ -1843,6 +1843,7 @@
       <p />
       <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
+     <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
       <p>{{sm|᧠}} ブロックの最初の文字は、仏教の太陽太陰暦の 8 番目の月の名前です (クメール語の ''Asat'' または ''Băthámsath''、サンスクリット語の ''Ashadha''、6月～7月に相当)。季節の変化に遅れないようにするため、この月は 2 ～ 3年に 2 回繰り返されます。マーク 17D3 {{sm|◌៓}} は、この文字が優先されて [[pt:deprecated|非推奨]] になったこともあり、Unicode では{{_}}{{vkhmer}} はまだ 推奨されていません。</p>
       <p />
@@ -10453,6 +10454,7 @@
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
      </orig>
+     <au-cmt>{{vleft16}} = version that has those 16 chars left</au-cmt>
      <transl>
       <p>Unicode [[pt:plane|plane]] #0 には 0000…FFFD の文字が含まれています。現在使用されている言語で最も頻繁に使用される文字は基本プレーンでエンコードされており、これらの言語を [[pt:utf16|UTF-16]] で処理できます。</p>
       <p />
@@ -11302,29 +11304,31 @@
      <orig>plane</orig>
      <transl>プレーン</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
       <p />
       <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}{{vleft16}}.</p>
-      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
-      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
-      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
+      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is {{plane%|1}} full.</p>
+      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{plane%|2}} full.</p>
+      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{plane%|3}} full.</p>
       <p>* Planes 4 to 0D are unused.</p>
-      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
+      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than {{approx14}} special characters.</p>
       <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
      </orig>
+     <au-cmt>
+      <p>{{vleft16}} = version that has those 16 chars left</p>
+      <p>{{plane%}} = plane fill %</p>
+     </au-cmt>
      <transl>
       <p>文字の範囲は *0000 から *FFFD です。各プレーンの最後の 2 つの [[pt:codepoint|コード ポイント]]、*FFFE と *FFFF は [[pt:noncharacter|非文字]] です。[[pt:utf16|UTF-16]] の制限により、Unicode には 17 のプレーンがあります。</p>
       <p />
       <p>* プレーン #0 は '''[[pt:bmp|基本多言語プレーン]]''' で、ほとんどの現存する言語の文字が含まれています。Unicode{{_}}{{vleft16}} には 16 個の未割り当ての位置があります。</p>
-      <p />
-      <p>* プレーン #1 は '''補足多言語プレーン''' で、珍しい言語や死語、および技術言語の文字が含まれています。{{%|50}} 未満がいっぱいです。</p>
-      <p />
-      <p>* プレーン #2 は '''補足表意文字プレーン''' で、[[ps:Hani|CJK 表意文字]] のみが含まれており、{{%|93}} いっぱいです。</p>
-      <p>* プレーン #3 は '''第 3 次表意文字プレーン''' で、CJK 表意文字のみが含まれており、{{%|14}} がいっぱいです。</p>
+      <p>* プレーン #1 は '''補足多言語プレーン''' で、珍しい言語や死語、および技術言語の文字が含まれています、{{plane%|1}} いっぱいです。</p>
+      <p>* プレーン #2 は '''補足表意文字プレーン''' で、[[ps:Hani|CJK 表意文字]] のみが含まれており、{{plane%|2}} いっぱいです。</p>
+      <p>* プレーン #3 は '''第 3 次表意文字プレーン''' で、CJK 表意文字のみが含まれており、{{plane%|3}} がいっぱいです。</p>
       <p>* プレーン 4 から 0D は未使用です。</p>
-      <p>* プレーン 0E は '''補助特殊用途プレーン''' で、500 個未満の特殊文字が含まれています。</p>
+      <p>* プレーン 0E は '''補助特殊用途プレーン''' で、{{approx14}} 個未満の特殊文字が含まれています。</p>
       <p>* プレーン 0E と 10 は [[pt:private|私的使用]] 用に残されています。</p>
      </transl>
     </text>

@@ -35,6 +35,7 @@ constinit const match::MainFont match::MainFont::INST;
 constinit const match::Normal match::Normal::INST;
 constinit const match::NullForTofu match::NullForTofu::INST;
 
+constinit uc::PlaneInfo uc::planeInfo[N_PLANES];
 constinit ec::Array<unsigned, uc::EgypReliability> uc::egypByReliability { 0u, 0u, 0u, 0u, 0u };
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
@@ -746,7 +747,13 @@ void uc::completeData()
         if (!v.firstAllocated || !v.lastAllocated)
             throw std::logic_error("Block w/o chars leaked into data!");
 
-        // Check synthesized icon        
+        // Plane info
+        auto iPlane = v.startingCp >> 16;
+        auto& plane = uc::planeInfo[iPlane];
+        plane.nChars += v.nChars;
+        plane.blockSum += v.length();
+
+        // Check synthesized icon
         if (!v.synthIcon.flags.have(Ifg::MISSING)) {
             auto sv = v.synthIcon.subj.sv();
             for (auto c : sv) {

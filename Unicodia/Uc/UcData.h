@@ -985,6 +985,9 @@ namespace uc {
         template <class Body>
         void resizeHistoryT(const Body& body) const
             { resizeHistory(BlockResizeSinkT<Body>(body)); }
+
+        /// Block’s length, in CPs
+        unsigned length() const noexcept { return endingCp + 1 - startingCp; }
     private:
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
@@ -1209,6 +1212,33 @@ namespace uc {
     inline Action stopIf(bool x) noexcept { return static_cast<Action>(x); }
 
     extern ec::Array<unsigned, uc::EgypReliability> egypByReliability;
+
+    struct PlaneInfo {
+        unsigned blockSum = 0;
+        unsigned nChars = 0;
+
+        /// Approximate percentage by filled sum
+        unsigned approxSumPc() const noexcept
+        {
+            // Actually 65534 with non-chars, but let it be this way
+            static constexpr unsigned DEN = 65536;
+            static constexpr unsigned DEN2 = DEN / 2;
+            if (blockSum >= DEN)
+                return 100;
+            return std::min(99u, (blockSum * 100 + DEN2) / DEN);
+        }
+
+        /// # of chars, rounded up to 100
+        unsigned nRoundUp100() const noexcept
+        {
+            static constexpr unsigned DEN = 100;
+            static constexpr unsigned DEN1 = DEN - 1;
+            unsigned q = nChars + DEN1;
+            return q - (q % DEN);
+        }
+    };
+
+    extern PlaneInfo planeInfo[N_PLANES];
 
 }   // namespace uc
 

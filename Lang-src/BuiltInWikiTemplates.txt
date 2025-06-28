@@ -20,6 +20,11 @@ Prints parameter 1, synthesized thin non-break space, percent sign %.
 Just inserts a non-break space 00A0.
 
 A
+
+{{approx14}} :: Approximate # of chars in plane 14 :: Data/internal :: No parameters
+Formatted as in dense text.
+Rounded upwards to hundred, to avoid triggering L10n troubles.
+
 {{ArabPres1}} :: Arabic presentation forms, part 1 :: Snippet :: No parameters
 Used in both Arabic presentation forms A and B
 
@@ -90,6 +95,14 @@ Parameter 2 = LOCALIZED comment, usually an alias name
 
 {{nspk1}} :: # of speakers, no parentheses :: Data/truism :: 2 parameters
 Same as {{nspk}}, but no parentheses
+
+P
+
+{{plane%}} : plane’s fill % :: Data/internal :: 1 parameter
+Prints approximate fill percentage of plane. 
+Value = round(sum(block’s size) / 65536),
+but no more than 99 unless the plane is actually full
+Parameter = 1…16, 0 does not work (does not count surrogates)
 
 S
 

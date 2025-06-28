@@ -1013,33 +1013,33 @@ namespace {
     }
 
     template <std::integral T>
-    std::u8string_view printNum8(T x, char* buf, size_t n)
+    [[nodiscard]] std::u8string_view printNum8(T x, char* buf, size_t n)
     {
         auto q = std::to_chars(buf, buf + n, x);
         return str::toU8sv(std::string_view{ buf, q.ptr });
     }
 
     template <std::integral T, size_t N>
-    inline std::u8string_view printNum8(T x, char (&buf)[N])
+    [[nodiscard]] inline std::u8string_view printNum8(T x, char (&buf)[N])
     {
         return printNum8<T>(x, buf, N);
     }
 
     template <std::integral T>
-    std::string_view printNum(T x, char* buf, size_t n)
+    [[nodiscard]] std::string_view printNum(T x, char* buf, size_t n)
     {
         auto q = std::to_chars(buf, buf + n, x);
         return { buf, q.ptr };
     }
 
     template <std::integral T, size_t N>
-    inline std::string_view printNum(T x, char (&buf)[N])
+    [[nodiscard]] inline std::string_view printNum(T x, char (&buf)[N])
     {
         return printNum<T>(x, buf, N);
     }
 
     template <std::integral T>
-    std::u8string formatNum(T x, Subf subformat, mywiki::NumPlace place)
+    [[nodiscard]] std::u8string formatNum(T x, Subf subformat, mywiki::NumPlace place)
     {
         char tmp[30];
         auto q = std::to_chars(std::begin(tmp), std::end(tmp), x);
@@ -1249,6 +1249,21 @@ namespace {
             u8"<span style='background-color:palette(midlight);'>\u00A0";
     constinit const std::u8string_view KEY_END = u8"\u00A0</span>";
 
+    void appendPercent(QString& s, std::string_view text)
+    {
+        str::append(s, text);
+            // 00A0 = NBSP
+        str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+    }
+
+    template <std::integral T>
+    void appendPercent(QString& s, T value)
+    {
+        char buf[30];
+        auto num = printNum(value, buf);
+        appendPercent(s, num);
+    }
+
     void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         auto name = x[0];
@@ -1266,14 +1281,20 @@ namespace {
         switch (name[0]) {
         case '%':
             if (name == "%"sv) {
-                str::append(s, x.safeGetV(1, {}));
-                str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+                appendPercent(s, x.safeGetV(1, {}));
             }
             break;
 
         case '_':
             if (name == "_"sv) {
                     s.append(QChar(0x00A0));
+            }
+            break;
+
+        case 'a':
+            if (name == "approx14") {
+                appendNum(s, uc::planeInfo[14].nRoundUp100(),
+                          Subf::DENSE, mywiki::NumPlace::HTML);
             }
             break;
 
@@ -1354,6 +1375,19 @@ namespace {
                 appendNum(s, nEmoji, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "noto"sv) {
                 appendFont(s, uc::EcFont::NOTO, x, 0);
+            }
+            break;
+
+        case 'p':
+            if (name == "plane%") {
+                auto sPlane = x.safeGetV(1, {});
+                unsigned iPlane = 99;
+                auto res = std::from_chars(sPlane.begin(), sPlane.end(), iPlane);
+                if (res.ec != std::errc{} || iPlane > uc::N_PLANES) {
+                    s += "PLANE%???";
+                } else {
+                    appendPercent(s, uc::planeInfo[iPlane].approxSumPc());
+                }
             }
             break;
 

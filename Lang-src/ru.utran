@@ -1847,6 +1847,7 @@
       <p />
       <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
      </orig>
+     <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
       <p>Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре (по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). Чтобы не{{_}}отставать от смены времён года, этот месяц повторяется дважды каждые два-три года. Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, да и в Юникоде{{_}}{{vkhmer}} всё еще не{{_}}рекомендуется.</p>
       <p />
@@ -10383,6 +10384,7 @@
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
      </orig>
+     <au-cmt>{{vleft16}} = version that has those 16 chars left</au-cmt>
      <transl>
       <p>[[pt:plane|Плоскость]] Юникода с номером 0, содержащая символы 0000…FFFD. В базовой плоскости закодированы наиболее ходовые символы живых языков, что позволяет обрабатывать эти языки прямо в [[pt:utf16|UTF-16]]. </p>
       <p />
@@ -11260,33 +11262,26 @@
       <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
       <p />
       <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}{{vleft16}}.</p>
-      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
-      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
-      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
+      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is {{plane%|1}} full.</p>
+      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{plane%|2}} full.</p>
+      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{plane%|3}} full.</p>
       <p>* Planes 4 to 0D are unused.</p>
-      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
+      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than {{approx14}} special characters.</p>
       <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
      </orig>
-     <known-orig>
-      <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
-      <p />
-      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}16.</p>
-      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
-      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
-      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
-      <p>* Planes 4 to 0D are unused.</p>
-      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
-      <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
-     </known-orig>
+     <au-cmt>
+      <p>{{vleft16}} = version that has those 16 chars left</p>
+      <p>{{plane%}} = plane fill %</p>
+     </au-cmt>
      <transl>
       <p>Диапазон символов от *0000 до *FFFD. Последние две [[pt:codepoint|позиции]] каждой плоскости, *FFFE и *FFFF, [[pt:noncharacter|выброшены]]. Из-за ограничений [[pt:utf16|UTF-16]] в{{_}}Юникоде семнадцать плоскостей.</p>
       <p />
       <p>* Плоскость {{№}}0 называется '''[[pt:bmp|базовой многоязычной]]''' и содержит большинство символов живых языков. В Юникоде{{_}}{{vleft16}} остаются 16{{_}}нераспределённых позиций.</p>
-      <p>* Плоскость {{№}}1 называется '''дополнительной многоязычной''' и содержит символы редких и мёртвых языков, а также технические. Заполнена менее чем на {{%|50}}.</p>
-      <p>* Плоскость {{№}}2 называется '''дополнительной иероглифической''' и содержит только [[ps:Hani|китайские иероглифы]]. Заполнена на {{%|93}}.</p>
-      <p>* Плоскость {{№}}3 называется '''третичной иероглифической''', содержит только китайские иероглифы, и заполнена на {{%|14}}.</p>
+      <p>* Плоскость {{№}}1 называется '''дополнительной многоязычной''' и содержит символы редких и мёртвых языков, а также технические. Заполнена на {{plane%|1}}.</p>
+      <p>* Плоскость {{№}}2 называется '''дополнительной иероглифической''' и содержит только [[ps:Hani|китайские иероглифы]]. Заполнена на {{plane%|2}}.</p>
+      <p>* Плоскость {{№}}3 называется '''третичной иероглифической''', содержит только китайские иероглифы, и заполнена на {{plane%|3}}.</p>
       <p>* Плоскости 4…0D не{{_}}задействованы.</p>
-      <p>* Плоскость 0E называется '''дополнительной плоскостью специального назначения''' и содержит менее 500 специсмволов.</p>
+      <p>* Плоскость 0E называется '''дополнительной плоскостью специального назначения''' и содержит менее {{approx14}} специсмволов.</p>
       <p>* Плоскости 0F и 10 отведены под [[pt:private|личное пользование]].</p>
      </transl>
     </text>
