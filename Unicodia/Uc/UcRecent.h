@@ -72,3 +72,12 @@ namespace recent {
     constexpr const char8_t* V_KHMER_DISCOUR = u8"17";
 
 }   // anmespace uc
+
+/// Also check
+
+/// Fact: Planes 4+ are untouched, plane 0E=14 contains just a few chars
+/// Article: plane
+/// L10n key: Term.plane.Text
+/// Sample reactions: Plane 4 contains... Plane 0E now contains...
+/// Known status: roadmap to plane 1 filled almost everything,
+///     but no roadmaps to these planes
