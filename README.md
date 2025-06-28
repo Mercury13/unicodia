@@ -86,7 +86,11 @@ These fonts are taken to Unicodia without author’s consent:
 I’m just scratching a surface, but my (badly enforced) policy for CJK ideographs (Hani) is:
 * Serif style > correctness
 * One country is enough
-* Preference of countries: confirmed Chinese (G) > confirmed other (J, K, KP, V…) > hypothetical Chinese, country-independent (JV)
+* Preference of countries
+  * confirmed Chinese (G)
+  * = modernized confirmed Chinese
+  * > confirmed other (J, K, KP, V…)
+  * > hypothetical Chinese, country-independent (JV)
 * It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
   * stroke types and stroke joins only (what is invisible or barely seen in sans style), even pointy vs dot
   * whether the strokes leave a small gap or written together, even two crosses (T) vs horizontal dagger (G)
