@@ -10704,12 +10704,12 @@
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
-      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (another algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
-      <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 are just not{{_}}recommended.</p>
-      <p>* 17D3 (Khmer mark ''bathamasat''). With advent of [[pt:precomposed|precomposed]] characters of [[pk:19E0|moon calendar]] it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. Author of ''Unicodia'' had troubles finding font where ligatures fit into cell.</p>
+      <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 they are just not{{_}}recommended.</p>
+      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding font where ligatures fit into the cell.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
@@ -10726,7 +10726,7 @@
       <p>Відомі декілька випадків повернення символів у використання.</p>
       <p>* Блок тегів{{-}}використовувався для вказання мови. Повернули для [[pt:emoji|емодзі]] прапорів регіонів (наприклад, Шотландії), залишивши під забороною один символ.</p>
       <p>* 0340, 0341 (мітки нисхідного/висхідного тону). Пропонується заміна у вигляді звичайних умляутів à та á. З Юнікоду{{_}}5.2 просто не{{_}}рекомендуються.</p>
-      <p>* 17D3 (кхмерський умляут ''bathamasat''). З появою [[pt:precomposed|монолітних]] символів [[pk:19E0|місячного календаря]] у Юнікоді{{_}}4.0 заборонили. З Юнікоду{{_}}5.2 просто не{{_}}рекомендується{{-}}ймовірно, через громіздкість календарної лігатури. У автора «Юнікодії» були проблеми з пошуком шрифта, де лігатури добре видно.</p>
+      <p>* 17D3 (кхмерський умляут ''bathamasat''). З появою [[pt:precomposed|монолітних]] символів [[pk:19E0|місячного календаря]] у Юнікоді{{_}}4.0 заборонили. З Юнікоду{{_}}5.2 просто не{{_}}рекомендується{{-}}ймовірно, через громіздкість календарної лігатури. У автора «Юнікодії» були проблеми з пошуком шрифта, де лігатури поміщаються у комірку.</p>
       <p />
       <p>Не плутати з [[pt:obsolete|застарілим]].</p>
      </transl>
