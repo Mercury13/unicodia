@@ -6,6 +6,10 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
+# Privacy policy
+
+Unicodia does not collect data at all, but uses GitHub API for updating.
+
 # How to translate?
 * Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic version. The rest are unchangeable for now… until needed.
 * Download Lang-src/en.uorig from this repo.
