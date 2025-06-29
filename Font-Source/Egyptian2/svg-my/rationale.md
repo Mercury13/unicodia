@@ -9,11 +9,16 @@ Subtotal: 7
 - 13468: other legs
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
+- 134D9: shorter clothes
+- 134E4: king’s beard
+- 134F3: kneeling
+- 13552: short beard
+- 13555: long wig
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 13625: removed placeholders
 - 1363E: need beard
 
-Subtotal: 7
+Subtotal: 12
 
 # Tofu
 - 134CC
@@ -36,4 +41,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 27
+Total: 31
