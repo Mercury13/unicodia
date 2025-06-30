@@ -5186,7 +5186,7 @@
       <p />
       <p>При арабах зороастрийцы стали переселяться в Индию, а с XII{{_}}века писали на авестийском местным письмом, традиционно [[ps:Gujr|гуджарати]]. Самый известный из таких зороастрийцев{{-}}Фредди Меркьюри (правда, его родителей судьба занесла аж на Занзибар).</p>
       <p />
-      <p>В 2000 древние письменности разделили на пять категорий: A (используемые{{-}}[[ps:Copt|коптский]], [[ps:Runr|руны]]), B1 (изученные [[pt:character|кодируемые]]{{-}}[[ps:Xpeo|персидская клинопись]]), B2 (изученные некодируемые{{-}}[[ps:Egyp|египетские иероглифы]]), C1 (несистематизируемые, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), и C2 (малоизученные, запросы от любителей{{-}}[[pk:101D0|Фестский диск]]). Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. Для незакодированного книжного пехлеви в Юникоде оставлена дыра.</p>
+      <p>В 2000 древние письменности разделили на пять категорий: A (используемые{{-}}[[ps:Copt|коптский]], [[ps:Runr|руны]]), B1 (изученные, поддаются [[pt:character|кодированию]]{{-}}[[ps:Xpeo|персидская клинопись]]), B2 (изученные, не{{_}}поддаются кодированию{{-}}[[ps:Egyp|египетские иероглифы]]), C1 (несистематизируемые, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), и C2 (малоизученные, запросы от любителей{{-}}[[pk:101D0|Фестский диск]]). Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. Для незакодированного книжного пехлеви в Юникоде оставлена дыра.</p>
      </transl>
     </text>
    </group>
@@ -11423,13 +11423,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], less than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
+      <p>The Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], less than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
       <p />
-      <p>Two fictional scripts are rejected, Aiha by Ursula Le Guin and Klingon from ''Star Trek'' series. But Tengwar and Cirth invented by John Tolkien are en route to encoding.</p>
+      <p>Two fictional scripts are rejected, ''Aiha'' by Ursula Le Guin and ''Klingon'' from ''Star Trek'' series. But ''Tengwar'' and ''Cirth'' invented by John Tolkien are en route to encoding.</p>
       <p />
-      <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
+      <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
       <p />
-      <p>''Jindai'' was also rejected. Supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of 17th century.</p>
+      <p>''Jindai'' was also rejected. The supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of the 17th century.</p>
      </orig>
      <transl>
       <p>Консорциум Юникода постоянно отказывает в кодировке [[pt:emoji|эмодзи]], не{{_}}более четверти доходят до выпуска, к тому же народ показывает удивительную креативность в комбинировании эмодзи ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = коммунальные платежи). Больше не{{_}}кодируются флаги и надписи.</p>

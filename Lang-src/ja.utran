@@ -11493,6 +11493,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], less than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
+      <p />
+      <p>Two fictional scripts are rejected, ''Aiha'' by Ursula Le Guin and ''Klingon'' from ''Star Trek'' series. But ''Tengwar'' and ''Cirth'' invented by John Tolkien are en route to encoding.</p>
+      <p />
+      <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
+      <p />
+      <p>''Jindai'' was also rejected. The supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of the 17th century.</p>
+     </orig>
+     <known-orig>
       <p>Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], less than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
       <p />
       <p>Two fictional scripts are rejected, Aiha by Ursula Le Guin and Klingon from ''Star Trek'' series. But Tengwar and Cirth invented by John Tolkien are en route to encoding.</p>
@@ -11500,7 +11509,7 @@
       <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
       <p />
       <p>''Jindai'' was also rejected. Supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of 17th century.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode コンソーシアムは [[pt:emoji|絵文字]] のエンコードを定期的に拒否しており、実際にリリースされているのは 4 分の 1 未満で、人々は驚くほど独創的に絵文字を組み合わせています ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = 公共料金の請求書)。国旗とテキストはエンコードされなくなりました。</p>
       <p />
