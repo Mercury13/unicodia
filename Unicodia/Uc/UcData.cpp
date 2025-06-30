@@ -752,7 +752,7 @@ void uc::completeData()
         if (iPlane < uc::N_PLANES) {
             auto& plane = uc::planeInfo[iPlane];
             plane.nChars += v.nChars;
-            plane.blockSum += v.length();
+            plane.blockSum += v.nTotalPlaces();
         } else {
             throw std::logic_error("Block with a strange plane leaked into data!");
         }

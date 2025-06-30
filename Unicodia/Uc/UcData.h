@@ -985,9 +985,6 @@ namespace uc {
         template <class Body>
         void resizeHistoryT(const Body& body) const
             { resizeHistory(BlockResizeSinkT<Body>(body)); }
-
-        /// Block’s length, in CPs
-        unsigned length() const noexcept { return endingCp + 1 - startingCp; }
     private:
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const noexcept;
     };
