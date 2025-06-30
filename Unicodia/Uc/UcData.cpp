@@ -748,10 +748,12 @@ void uc::completeData()
             throw std::logic_error("Block w/o chars leaked into data!");
 
         // Plane info
-        auto iPlane = v.startingCp >> 16;
-        auto& plane = uc::planeInfo[iPlane];
-        plane.nChars += v.nChars;
-        plane.blockSum += v.length();
+        unsigned iPlane = v.startingCp >> 16;
+        if (iPlane < uc::N_PLANES) {
+            auto& plane = uc::planeInfo[iPlane];
+            plane.nChars += v.nChars;
+            plane.blockSum += v.length();
+        }
 
         // Check synthesized icon
         if (!v.synthIcon.flags.have(Ifg::MISSING)) {
