@@ -1,7 +1,7 @@
 ﻿# Rationale behind these characters
 
 ## Above the fold
-- 13460, 61, 62, 63, 64, 65, 67
+- 13460, 61, 62, 63, 64, 65, 67: characters 60…67 must not be tofu, at any cost
 
 Subtotal: 7
 
@@ -17,8 +17,9 @@ Subtotal: 7
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 13625: removed placeholders
 - 1363E: need beard
+- 13AA3: rotate 90°
 
-Subtotal: 12
+Subtotal: 13
 
 # Tofu
 - 134CC
@@ -41,4 +42,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 31
+Total: 33
