@@ -753,6 +753,8 @@ void uc::completeData()
             auto& plane = uc::planeInfo[iPlane];
             plane.nChars += v.nChars;
             plane.blockSum += v.length();
+        } else {
+            throw std::logic_error("Block with a strange plane leaked into data!");
         }
 
         // Check synthesized icon
