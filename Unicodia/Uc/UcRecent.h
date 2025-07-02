@@ -81,3 +81,10 @@ namespace recent {
 /// Sample reactions: Plane 4 contains... Plane 0E now contains...
 /// Known status: roadmap to plane 1 filled almost everything,
 ///     but no roadmaps to these planes
+
+
+/// Fact: # of standard coloured emoji is not 21, 31, 41…
+/// Article: inclusion (check directly in that article)
+/// L10n key: Term.inclusion.Text
+/// Sample reactions: implement in Russian/Ukrainian
+/// Known status: 4, added one-two at a time
