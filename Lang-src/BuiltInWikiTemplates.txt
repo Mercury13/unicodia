@@ -1,9 +1,9 @@
 ﻿Types:
 • Data: for displaying some data from central storage
-  • internal: deduced from Unicode tables
-  • truism: always true to my best, sometimes changes to other true statement
+  • Unicode: deduced from Unicode tables
+  • central: from central storage
   • ongoing: may become false, but still true
-  • obsolete: ongoing becomes false, no templates for now
+  • obsolete: ongoing becomes false (none for now)
 • Image: you understand
 • L10n: for internationalization/localization, often intersects with Typographic
 • Samples: to display sample characters
@@ -21,7 +21,7 @@ Just inserts a non-break space 00A0.
 
 A
 
-{{approx14}} :: Approximate # of chars in plane 14 :: Data/internal :: No parameters
+{{approx14}} :: Approximate # of chars in plane 14 :: Data/Unicode :: No parameters
 Formatted as in dense text.
 Rounded upwards to hundred, to avoid triggering L10n troubles.
 
@@ -60,7 +60,7 @@ H
 Formatted hex with decimal separator after every 4 characters
 Bhv for non-hex is undefined, don’t rely on it
 
-{{hcore}} {{hlegacy}} {{hextended}} {{hspecial}} :: Egyptian info :: Data/internal :: No parameters
+{{hcore}} {{hlegacy}} {{hextended}} {{hspecial}} :: Egyptian info :: Data/Unicode :: No parameters
 # of core (legacy, extended, special) Egyptian hieros
 
 K
@@ -79,26 +79,26 @@ Fractions are unsupported. Negatives are supported.
 All instances of “sparse” formatting are programmatic
 Bhv for non-numbers is undefined, don’t rely on it
 
-{{nchars}} :: # of chars in latest Unicode :: Data/internal :: No parameters
+{{nchars}} :: # of chars in latest Unicode :: Data/Unicode :: No parameters
 Prints number of characters in the latest Unicode.
 
-{{nemoji}} :: # of emoji in latest Unicode :: Data/internal :: No parameters
+{{nemoji}} :: # of emoji in latest Unicode :: Data/Unicode :: No parameters
 Prints number of emoji in the latest Unicode.
 
 {{noto}} :: Text drawn with Noto Serif font :: Samples :: 1 parameter
 Same as {{funky}}, just another font.
 
-{{nspk}} :: # of speakers :: Data/truism :: 2 parameters
-Prints # of language’s speakers from internal data
+{{nspk}} :: # of speakers :: Data/central :: 2 parameters
+Prints # of language’s speakers from central data
 Parameter 1 = script/language code
 Parameter 2 = LOCALIZED comment, usually an alias name
 
-{{nspk1}} :: # of speakers, no parentheses :: Data/truism :: 2 parameters
+{{nspk1}} :: # of speakers, no parentheses :: Data/central :: 2 parameters
 Same as {{nspk}}, but no parentheses
 
 P
 
-{{plane%}} : plane’s fill % :: Data/internal :: 1 parameter
+{{plane%}} : plane’s fill % :: Data/Unicode :: 1 parameter
 Prints approximate fill percentage of plane. 
 Value = round(sum(block’s size) / 65536),
 but no more than 99 unless the plane is actually full
@@ -127,7 +127,7 @@ V
 {{vdeprec15}} :: Version with 15 deprecated chars :: Data/ongoing :: No parameters
 Prints the version of Unicode that has 15 deprecated characters
 
-{{version}} :: Latest version of Unicode :: Data/internal :: No parameters
+{{version}} :: Latest version of Unicode :: Data/Unicode :: No parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
 
 {{vkhmer}} :: Version that discourages 17D3 :: Data/ongoing / No parameters
