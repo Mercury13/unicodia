@@ -8,11 +8,17 @@
 #include "u_Vector.h"
 #include "u_DumbSp.h"
 #include "UcCp.h"
+#include "u_TypedFlags.h"
 
 // Search
 #include "defs.h"
 
 namespace srh {
+
+    enum class Linkfg : unsigned char {
+        LOSES_QUAL = 1<<0,
+    };
+    DEFINE_ENUM_OPS(Linkfg)
 
     enum class NodeType : unsigned char {
         TRANSIENT, FINAL, UNKNOWN_FLAG
@@ -49,6 +55,7 @@ namespace srh {
     protected:
         struct Link {
             dumb::Sp<TrieNode> target;
+            Flags<Linkfg> fgs;
         };
         using M = std::unordered_map<char32_t, Link>;
 

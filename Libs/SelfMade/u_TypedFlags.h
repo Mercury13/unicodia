@@ -210,7 +210,7 @@ constexpr inline Flags<En> flagIf(bool x, En y)
                 // A small hack: 0/1 → 0/FFFF
                       ); }
 
-// AND and XOR are unneded for obvious reasons
+// AND and XOR are unneeded for obvious reasons
 #define DEFINE_ENUM_OPS(En)  \
     [[maybe_unused]] constexpr inline Flags<En> operator | (En x, En y) { return Flags<En>(x) | y; }  \
     [[maybe_unused]] constexpr inline Flags<En> operator ~ (En x) { return Flags<En>(~Flags<En>::toStorage(x)); }
