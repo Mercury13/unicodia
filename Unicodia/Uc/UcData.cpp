@@ -817,7 +817,8 @@ void uc::completeData()
     }
 
     // Check versions
-    unsigned nChars = 0, nEmoji = 0, nScripts = 0;
+    unsigned nChars = 0, nScripts = 0;
+    uc:: Version::Stats::Emoji::Total subtotal {};
     // v1.1
     auto& v11 = uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)];
     v11.stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
@@ -827,8 +828,9 @@ void uc::completeData()
         nChars += v.stats.chars.nw.nTotal();
         v.stats.chars.nTotal = nChars + v.stats.chars.nTransient;
         // Emoji
-        nEmoji += v.stats.emoji.nw.nTotal();
-        v.stats.emoji.nTotal = nEmoji;
+        subtotal.n += v.stats.emoji.nw.nTotal();
+        subtotal.nColor += v.stats.emoji.nw.zwj.color.nTotal();
+        v.stats.emoji.total = subtotal;
         // Scripts
         nScripts += v.stats.scripts.nNew;
         v.stats.scripts.nTotal = nScripts;

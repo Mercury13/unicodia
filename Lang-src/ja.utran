@@ -10947,7 +10947,7 @@
      <orig>inclusion and diversity</orig>
      <transl>包括性と多様性</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
@@ -10959,7 +10959,7 @@
       <p />
       <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
-      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}16, four coloured emoji are standardized, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
+      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
      </orig>
@@ -10974,7 +10974,7 @@
       <p />
       <p>絵文字に複数の人物が含まれている場合、性別と肌色はケースバイケースで実装されます。授乳中 {{em|🤱}} の赤ちゃんの肌は覆われているため、キス {{em|💏}} は {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}} として最初から組み立てられます。</p>
       <p />
-      <p>ZWJ シーケンスの修飾子の順序: 基本文字、肌の色 (ZWJ なし)、髪、その他の色 {{em|⬛}}、性別、動きの方向 {{em|⬅}}+VS16。 Unicode{{_}}16 の時点では、4 つの色の絵文字が標準化されています (例: 黒猫 {{em|🐈}}+ZWJ+{{em|⬛}})。</p>
+      <p>ZWJ シーケンスの修飾子の順序: 基本文字、肌の色 (ZWJ なし)、髪、その他の色 {{em|⬛}}、性別、動きの方向 {{em|⬅}}+VS16。 Unicode{{_}}{{version}} の時点では、{{ncolor}} つの色の絵文字が標準化されています (例: 黒猫 {{em|🐈}}+ZWJ+{{em|⬛}})。</p>
       <p />
       <p>顔 {{em|😂}} は{{_}}包括的ではなく{{_}}常に黄色です。</p>
      </transl>
@@ -11497,7 +11497,7 @@
       <p />
       <p>Two fictional scripts are rejected, ''Aiha'' by Ursula Le Guin and ''Klingon'' from ''Star Trek'' series. But ''Tengwar'' and ''Cirth'' invented by John Tolkien are en route to encoding.</p>
       <p />
-      <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
+      <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts were rejected. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may eventually be encoded.</p>
       <p />
       <p>''Jindai'' was also rejected. The supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of the 17th century.</p>
      </orig>

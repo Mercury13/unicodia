@@ -1292,14 +1292,14 @@ namespace {
             break;
 
         case 'a':
-            if (name == "approx14") {
+            if (name == "approx14"sv) {
                 appendNum(s, uc::planeInfo[14].nRoundUp100(),
                           Subf::DENSE, mywiki::NumPlace::HTML);
             }
             break;
 
         case 'D':
-            if (name == "DuplCats") {
+            if (name == "DuplCats"sv) {
                 uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
                 appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
             }
@@ -1371,15 +1371,18 @@ namespace {
             } else if (name == "nchars"sv) {
                 appendNum(s, uc::N_CPS, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "nemoji"sv) {
-                auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.nTotal;
+                auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.total.n;
                 appendNum(s, nEmoji, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "noto"sv) {
                 appendFont(s, uc::EcFont::NOTO, x, 0);
+            } else if (name == "ncolor"sv) {
+                auto nColor = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.total.nColor;
+                appendNum(s, nColor, Subf::DENSE, mywiki::NumPlace::HTML);
             }
             break;
 
         case 'p':
-            if (name == "plane%") {
+            if (name == "plane%"sv) {
                 auto sPlane = x.safeGetV(1, {});
                 unsigned iPlane = 99;
                 auto res = std::from_chars(sPlane.begin(), sPlane.end(), iPlane);
@@ -3205,7 +3208,7 @@ QString mywiki::buildHtml(const uc::Version& version)
                     SCH_QRY_CHARS,
                     version.isFirst() ? static_cast<std::u8string_view>(link) : NO_LINK);
 
-        if (version.stats.emoji.nTotal != 0) {
+        if (version.stats.emoji.total.n != 0) {
             // New emoji
             auto tot = version.stats.emoji.nw.nTotal();
             appendValue(sp, 0, "Version.Bullet.NewEm", tot, SCH_QRY_EMOJI, link);
@@ -3239,7 +3242,7 @@ QString mywiki::buildHtml(const uc::Version& version)
                 }
             }
             // Total emoji
-            appendValue(sp, 0, "Version.Bullet.TotalEm", version.stats.emoji.nTotal, NO_SCHEMA, NO_LINK);
+            appendValue(sp, 0, "Version.Bullet.TotalEm", version.stats.emoji.total.n, NO_SCHEMA, NO_LINK);
         }
         if (!version.isFirst()) {
             appendValue(sp, 0, "Version.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);

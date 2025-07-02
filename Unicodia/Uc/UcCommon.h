@@ -64,7 +64,10 @@ namespace uc {
                 } nw;
             } chars;
             struct Emoji {
-                unsigned nTotal = 0;
+                struct Total {
+                    unsigned n = 0;
+                    unsigned nColor = 0;
+                } total;
                 /// New emoji
                 struct Nw {
                     struct SingleChar {

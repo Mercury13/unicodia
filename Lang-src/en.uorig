@@ -7613,7 +7613,7 @@
       <p />
       <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
-      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}16, four coloured emoji are standardized, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
+      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
      </orig>
