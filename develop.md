@@ -246,3 +246,4 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Medium, ends have different colour (France, Luxembourg): grey outline
   * Large (England, Slovakia): also grey outline
   * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
+  * When the white field touches rounded corners, check if non-white fields form a clue. Scotland: rounded corners totally dissolve → outline. Burundi: marginal. Britain: no need.
