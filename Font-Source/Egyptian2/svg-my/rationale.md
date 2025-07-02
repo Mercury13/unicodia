@@ -10,16 +10,21 @@ Subtotal: 7
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
-- 134E4: king’s beard
+- 134E4: king’s beard: FIVE
 - 134F3: kneeling
 - 13552: short beard
 - 13555: long wig
-- 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
+- 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0: TEN
 - 13625: removed placeholders
 - 1363E: need beard
+- 13641: beard barely god → god
+- 13645: beard king → god
+- 13659: beard god → king
+- 1365B: beard king → god
+- 1365C: beard god → king
 - 13AA3: rotate 90°
 
-Subtotal: 13
+Subtotal: 18
 
 # Tofu
 - 134CC
@@ -42,4 +47,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 33
+Total: 38
