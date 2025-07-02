@@ -101,7 +101,7 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
   * whether the strokes leave a small gap or written together, even two crosses (T) vs horizontal dagger (G)
   * whether a stroke is convex up or down
   * minor difference of stroke length e.g. in “three”
-  * style of roof stroke e.g. in 2F34: straight (older) vs slanted (current)
+  * style of roof stroke e.g. in 2F34: straight S (31D1, older) vs backslash dot D (31D4, current)
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
