@@ -102,7 +102,7 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
   * whether a stroke is convex up or down
   * minor difference of stroke length e.g. in “three”
   * style of roof stroke e.g. in 2F34: straight S (31D1, older) vs backslash dot D (31D4, current)
-  * Number of strokes if off by one e.g. in 2E3D9: one dot in Chinese, two in SAT
+  * number of strokes if off by one e.g. in 2E3D9: one dot in Chinese, two in SAT
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
