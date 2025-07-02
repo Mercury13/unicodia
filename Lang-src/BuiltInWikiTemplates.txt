@@ -4,7 +4,7 @@
   • central: from central storage
   • ongoing: may become false, but still true
   • obsolete: ongoing becomes false (none for now)
-• Image: you understand
+• Image: to display illustration
 • L10n: for internationalization/localization, often intersects with Typographic
 • Samples: to display sample characters
 • Snippet: to display a snippet of text
