@@ -1,6 +1,6 @@
 ﻿# Rationale behind these characters
 
-## Above the fold
+## Above the fold: will never extend
 - 13460, 61, 62, 63, 64, 65, 67: characters 60…67 must not be tofu, at any cost
 
 Subtotal: 7
@@ -10,7 +10,7 @@ Subtotal: 7
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
-- 134E4: king’s beard: FIVE
+- 134E4: king’s beard
 - 134F3: kneeling
 - 13552: short beard
 - 13555: long wig
@@ -22,9 +22,12 @@ Subtotal: 7
 - 13659: beard god → king
 - 1365B: beard king → god
 - 1365C: beard god → king
+- 1365D: beard king → god
+- 1365E: beard king → god
+- 1365F: beard king → god: TWENTY
 - 13AA3: rotate 90°
 
-Subtotal: 18
+Subtotal: 21
 
 # Tofu
 - 134CC
@@ -47,4 +50,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 38
+Total: 41
