@@ -97,6 +97,7 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
   * &gt; confirmed other (J, K, H, M, KP, V)
   * &gt; hypothetical Chinese, country-independent (JV)
 * It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
+  * SimSun makes the same decision
   * stroke types and stroke joins only (what is invisible or barely seen in sans style), even pointy vs dot
   * whether the strokes leave a small gap or written together, even two crosses (T) vs horizontal dagger (G)
   * whether a stroke is convex up or down
