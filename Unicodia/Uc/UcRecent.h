@@ -22,14 +22,19 @@ namespace recent {
     /// Known status: still unanimous
     constexpr unsigned YEAR_ANTARC = 2025;
 
-    /// Fact to check: Afghanistan is ruled by the Taliban,
-    ///     and all major vendors still use 2021 flag of Afghanistan
+    /// Facts to check:
+    ///     1. Afghanistan is ruled by the Taliban
+    ///     2. They aren’t really recognized
+    ///     3. All major vendors still use 2021 flag of Afghanistan
     /// Piece of data: year
     /// Article: flag of Afghanistan (AF)
     /// L10n key: Lib.Misr.U+1F1E6+1F1EB
     /// Template: {{ytalib}}
     /// Sample reaction: see Antarctica
-    /// Known status: only Catrinity switched
+    /// Known status:
+    ///     1. Yes.
+    ///     2. Only Russia recognized, and b/w flag is actually flown there.
+    ///     3. Only Catrinity switched, ways before.
     constexpr unsigned YEAR_TALIBAN = 2025;
 
     /// Fact to check: Brodie Lockard is alive
