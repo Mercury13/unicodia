@@ -25,6 +25,7 @@ Subtotal: 7
 - 1365D: beard king → god
 - 1365E: beard king → god
 - 1365F: beard king → god: TWENTY
+- 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 
 Subtotal: 21
