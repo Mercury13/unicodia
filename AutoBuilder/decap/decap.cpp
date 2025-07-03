@@ -314,26 +314,17 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2C287 },    // SimB: BS drew a strange version
 
     // CJK H: SimSunG
-    { 0x3137B },    // UHan (V-form)
-    { 0x31454 },    // UHan (S-form)
-    { 0x3163F },    // UHan (K-form)
-    { 0x31673 },    // UHan (V-form)
+    //{ 0x3137B },    // G vs V: roof dot
+    //{ 0x31454 },    // G vs V: roof dot
+    { 0x3163F },    // UHan (K-form), big difference
+    { 0x31673 },    // UHan (V-form), V = sticking stem + one dot
     { 0x31895 },    // UHan (V-form)
-    { 0x318F8 },    // UHan (V-form)
-    { 0x31BD3,  0x31BD4 },
-    { 0x31BE0 },
-    { 0x31BF0 },
-    { 0x31BF8 },
-    { 0x31C52 },
-    { 0x31C59 },    // UHan (T-form)
-    { 0x31C68 },
-    { 0x31CA9 },
-    { 0x31DB2 },    // UHan (K-form)
-    { 0x31F95 },
-    { 0x31FB2 },
-    { 0x32181 },    // UHan (V-form)
-    { 0x32255 },    // UHan (T-form)
-    { 0x32261 },    // UHan (T-form)
+    //{ 0x318F8 },    // G vs V: just joints
+    //{ 0x31C59 },    // G vs T: just joints
+    { 0x31DB2 },    // UHan (K-form), really other strokes
+    { 0x32181 },    // UHan; G vs V: one dot vs two dots, let it be for now
+    { 0x32255 },    // UHan; G vs T: gap vs touching, let it be
+    { 0x32261 },    // UHan; G vs T: gap vs touching, let it be
 
     // Mathematical: Cambria → Funky
     { 0x220F, 0x2211 },     // Big sums and products
