@@ -25,10 +25,11 @@ Subtotal: 7
 - 1365D: beard king → god
 - 1365E: beard king → god
 - 1365F: beard king → god: TWENTY
+- 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 
-Subtotal: 21
+Subtotal: 23
 
 # Tofu
 - 134CC
@@ -51,4 +52,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 41
+Total: 43
