@@ -331,7 +331,7 @@ def loadMyGlyph(font, sHex, cp, svgName):
 
 # import hieroglyphs
 def loadUnikemet():
-    file = open('Unikemet.txt', 'r')
+    file = open('Unisesh.txt', 'r')
     nCps = 0
     sOldCp = ''
     hasSeshGlyph = True
