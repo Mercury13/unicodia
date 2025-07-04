@@ -319,7 +319,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Olck, 0 }, MapSubtype::ALIVE,
             EcScript::Olck, EcFont::NORMAL, Bfg::WORD_AT },
     // Cyr C OK
-    { 0x1C80, 0x1C8F, { 0x1C88, EcContinent::EUROPE },
+    { 0x1C80, 0x1C8F, { 0x1C88, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Cyrillic Extended-C",
             { EcScript::Cyrl, 'C' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::GLAGOLITIC, Bfg::STOCK_BLOCK_DESC },
@@ -354,7 +354,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZDIA, 1, }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NORMAL, Bfg::AVOID_BUILTIN },
     // Lat ex OK
-    { 0x1E00, 0x1EFF, { 0x1EEA, EcContinent::EUROPE },
+    { 0x1E00, 0x1EFF, { 0x1EEA, EcContinent::EUROPE, Ifg::PAINT_SVG, 4_hy },
             "Latin Extended Additional",
             { EcScript::Latn, 2 }, MapSubtype::ALIVE,
             EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -488,7 +488,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Glag, 0 }, MapSubtype::DEAD,
             EcScript::Glag, EcFont::NORMAL, {}, EcGlyphStyleChannel::GLAGOLITIC },
     // Latin C OK
-    { 0x2C60, 0x2C7F, { L'Ɱ', EcContinent::EUROPE },
+    { 0x2C60, 0x2C7F, { L'Ɱ', EcContinent::EUROPE, Ifg::PAINT_SVG, SvgHint{14, 2, ImbaY::HITS_BOTTOM } },
             "Latin Extended-C",
             { EcScript::Latn, 'C' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC | Bfg::FORCE_BUILTIN },
@@ -497,7 +497,7 @@ constinit const uc::Block uc::blocks[] {
             "Coptic",
             { EcScript::Copt, 0 }, MapSubtype::DEAD, EcScript::Copt },
     // Georgian supp OK
-    { 0x2D00, 0x2D2F, { L'ⴃ', EcContinent::EUROPE },
+    { 0x2D00, 0x2D2F, { L'ⴃ', EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Georgian Supplement",
             { EcScript::Geor, 1 }, MapSubtype::ALIVE,
             EcScript::Geor, EcFont::GEORGIAN_NUSKHURI,
@@ -512,7 +512,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Ethi, 1 }, MapSubtype::ALIVE,
             EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cyr ex A OK, fixed those renderings in Noto
-    { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE },
+    { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Cyrillic Extended-A",
             { EcScript::Cyrl, 'A' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NOTO, Bfg::STOCK_BLOCK_DESC | Bfg::FORCE_BUILTIN },
@@ -1373,7 +1373,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Nshu, 0}, MapSubtype::DEAD,
             EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Duployan OK
-    { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE },
+    { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Duployan",
             { EcScript::Dupl, 0}, MapSubtype::SYM_CODE,
             EcScript::Dupl, EcFont::NORMAL, Bfg::WORD_ON },
@@ -1394,12 +1394,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZSYM, 2 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Znamenny OK, found cool font on Ponomar
-    { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
+    { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Znamenny Musical Notation",
             MyName::INST, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::ZNAMENNY },
     // Byzantine music seemingly OK
-    { 0x1D000, 0x1D0FF, { 0x1D035, EcContinent::EUROPE, Ifg::CONTINENT_OK },
+    { 0x1D000, 0x1D0FF, { 0x1D035, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Byzantine Musical Symbols",
             MyName::INST, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
@@ -1409,7 +1409,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC },
     // Greek music OK
-    { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE, {}, 1_hx },
+    { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE, Ifg::PAINT_SVG, 1_hx },
             "Ancient Greek Musical Notation",
             { EcScript::Grek, 3 }, MapSubtype::SYM_CODE,
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1449,7 +1449,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'G'}, MapSubtype::LATIN,
             EcScript::Latn, EcFont::FUNKY, Bfg::STOCK_BLOCK_DESC },
     // Glagolitic supp OK
-    { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE, {}, 5_hy },
+    { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE, Ifg::PAINT_SVG, 5_hy },
             "Glagolitic Supplement",
             { EcScript::Glag, 1 }, MapSubtype::DEAD,
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::HIDE_STYLE,
