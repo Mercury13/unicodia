@@ -28,8 +28,10 @@ Subtotal: 7
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
+- 13AAB: took other goat, drew seal
+- 13AAC: aligned that goat
 
-Subtotal: 23
+Subtotal: 25
 
 # Tofu
 - 134CC
@@ -52,4 +54,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 43
+Total: 45
