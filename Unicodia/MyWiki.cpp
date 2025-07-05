@@ -1264,6 +1264,22 @@ namespace {
         appendPercent(s, num);
     }
 
+    constinit const std::string_view snippetNames[] {
+        // Sorted by the 1st letter
+        "ArabPres1", "ArabPres2", "GrekCoptUni"
+    };
+
+    constexpr bool mySvLess(const std::string_view x, const std::string_view y)
+        { return x[0] < y[0]; }
+
+    bool isSnippetName(const std::string_view x)
+    {
+        if (x.empty())      // Guard
+            return false;
+        auto eqr = std::ranges::equal_range(snippetNames, x, mySvLess);
+        return std::ranges::find(eqr, x) != eqr.end();
+    }
+
     void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         auto name = x[0];
@@ -1445,9 +1461,7 @@ namespace {
         }
 
         if (s.length() == oldLen) {
-            if (name == "GrekCoptUni"sv
-             || name == "ArabPres1"sv
-             || name == "ArabPres2"sv) {
+            if (isSnippetName(name)) {
                 const auto& text = loc::get(str::cat("Snip.", name));
                 mywiki::append(s, text, context, wiki::Mode::SPAN);
             } else {
