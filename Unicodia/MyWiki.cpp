@@ -46,7 +46,10 @@ const mywiki::Context DEFAULT_CONTEXT {
     .font { uc::fontInfo[0] },
     .lang = nullptr,
     .locPrefixDot {},
+    .articleLinks {},
 };
+
+constexpr std::span<std::string> NO_LINKS {};
 
 ///// Gui //////////////////////////////////////////////////////////////////////
 
@@ -695,18 +698,24 @@ namespace {
         return {};
     }
 
+    /// Empty target = link to myself, do nothing
     void startLink(QString& s, std::string_view style, std::string_view target)
     {
-        s.append("<a ");
-        str::append(s, style);
-        s.append(" href='");
-        str::append(s, target);
-        s.append("'>");
+        if (!target.empty()) {
+            s.append("<a ");
+            str::append(s, style);
+            s.append(" href='");
+            str::append(s, target);
+            s.append("'>");
+        }
     }
 
-    void finishLink(QString& s)
+    /// Empty target = link to myself, do nothing
+    void finishLink(QString& s, std::string_view target)
     {
-        s.append("</a>");
+        if (!target.empty()) {
+            s.append("</a>");
+        }
     }
 
     void Eng::appendLink(const SafeVector<std::string_view>& x,
@@ -719,29 +728,36 @@ namespace {
         auto link = mywiki::parseLink(target);
         if (!link) {
             style = "class=missing";
-        } else switch (link->clazz()) {
-        case mywiki::LinkClass::COPY:
-            style = "class=copy";
-            break;
-        case mywiki::LinkClass::INET:
-        case mywiki::LinkClass::INTERNAL:
-            style = "class=inet";
-            break;
-        case mywiki::LinkClass::POPUP:
-            style = "class=popup";
-            break;
+        } else {
+            // Empty target will be a clue for link to myself
+            if (std::ranges::find(context.articleLinks, target)
+                            != context.articleLinks.end()) {
+                target = {};
+            }
+            switch (link->clazz()) {
+            case mywiki::LinkClass::COPY:
+                style = "class=copy";
+                break;
+            case mywiki::LinkClass::INET:
+            case mywiki::LinkClass::INTERNAL:
+                style = "class=inet";
+                break;
+            case mywiki::LinkClass::POPUP:
+                style = "class=popup";
+                break;
+            }
         }
 
         if (needRecurse) {
             auto q = prepareRecursion(text);
             startLink(s, style, target);
             runRecursive(text);
-            finishLink(s);
+            finishLink(s, target);
             finishRecursion(hasRemainder, q);
         } else {
             startLink(s, style, target);
             str::append(s, text);
-            finishLink(s);
+            finishLink(s, target);
         }
     }
 
@@ -1266,7 +1282,7 @@ namespace {
 
     constinit const std::string_view snippetNames[] {
         // Sorted by the 1st letter
-        "ArabPres1", "ArabPres2", "GrekCoptUni"
+        "Albanian", "ArabPres1", "ArabPres2", "GrekCoptUni"
     };
 
     constexpr bool mySvLess(const std::string_view x, const std::string_view y)
@@ -1536,12 +1552,14 @@ namespace {
     }
 
     template <class X>
-    void appendWiki(QString& text, const X& obj, std::u8string_view x, wiki::Mode mode)
+    void appendWiki(QString& text, const X& obj, std::u8string_view x, wiki::Mode mode,
+                    std::span<std::string> links)
     {
         mywiki::Context context {
             .font { getFont(obj) },
             .lang = nullptr,
             .locPrefixDot {},
+            .articleLinks = links,
         };
         Eng eng(text, context);
         wiki::run(eng, x, mode);
@@ -1556,6 +1574,7 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki, wiki::Mode mod
         .font { uc::fontInfo[0] },
         .lang = nullptr,
         .locPrefixDot {},
+        .articleLinks {},
     };
     Eng eng(text, context);
     wiki::run(eng, wiki, mode);
@@ -1768,16 +1787,24 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 {
     char buf[40];
     x.printfLocKey(buf, "");
+
+    // Generating links
+    std::string links[4];
+    // 0. Link to me
+    unsigned nLinks = 0;
+    links[nLinks++] = str::cat("ps:", x.id);
+
     mywiki::Context context {
         .font = x.font(),
         .lang = x.mainLang ? &x.mainLang : nullptr,
         .locPrefixDot = buf,
+        .articleLinks { links, nLinks },
     };
     if (x.ecType != uc::EcScriptType::NONE) {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
         appendBullet(text, "Prop.Bullet.Type");
-        appendWiki(text, x, loc::get(x.type().locKey), wiki::Mode::SPAN);
+        appendWiki(text, x, loc::get(x.type().locKey), wiki::Mode::SPAN, context.articleLinks );
         if (x.ecDir != uc::EcWritingDir::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Dir");
@@ -2659,23 +2686,25 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             if (cp.ecCategory == uc::EcCategory::CONTROL) {
                 //  Control char description
                 appendSubhead(text, "Prop.Head.Control");
+                // No link checking here, that’s OK for now
                 appendWiki(text, blk,
                            uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description,
-                           wiki::Mode::ARTICLE);
+                           wiki::Mode::ARTICLE, NO_LINKS);
             } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
                 // Script description
                 appendScriptSubhead(text);
                 mywiki::appendHtml(text, sc, false);
             } else {
-                // Script description
+                // Block description
                 appendBlockSubhead(text);
-                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE);
+                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
             }
         } else {
             if (blk.hasDescription()) {
                 // Block description
                 appendBlockSubhead(text);
-                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE);
+                // No link checking here, that’s OK for now
+                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
             } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
                 // Script description
                 appendScriptSubhead(text);
@@ -2716,7 +2745,9 @@ QString mywiki::buildNonCharHtml(char32_t code)
     str::append(text, loc::get("Prop.Head.NonChar"));
     text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
-    appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"), wiki::Mode::ARTICLE);
+    // No link checking here, that’s OK
+    appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"),
+               wiki::Mode::ARTICLE, NO_LINKS);
     return text;
 }
 
@@ -2763,7 +2794,8 @@ QString mywiki::buildHtml(const uc::Term& x)
         appendQuery(text, SCH_QRY_CHARS, "N=1");
     }
 
-    appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
+    // No link checking here, that’s OK
+    appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
     return text;
 }
 
@@ -2827,7 +2859,8 @@ QString mywiki::buildHtml(const uc::Block& x)
     }
 
     if (x.hasDescription()) {
-        appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE);
+        // No link checking here, that’s OK
+        appendWiki(text, x, x.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
     } else if (x.ecScript != uc::EcScript::NONE) {
         text += "<p><b>";
         str::append(text, loc::get("Prop.Head.Script"));

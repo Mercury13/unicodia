@@ -153,6 +153,7 @@ namespace mywiki {
         DescFont font;
         const uc::Lang* lang;
         std::string_view locPrefixDot;
+        std::span<std::string> articleLinks;
     };
 
     struct AppendWiki {

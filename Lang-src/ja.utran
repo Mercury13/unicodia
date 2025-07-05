@@ -5997,18 +5997,15 @@
      <orig>
       <p>The only source is the 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
-      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso-Bey, Vellara) were used as a cipher against Turks. According to other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets.</p>
+      <p>{{Albanian}}</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
      </orig>
-     <au-cmt>
-      <p>Left for Todhri:</p>
-      <p>Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</p>
-     </au-cmt>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
       <p>唯一の資料は、18 世紀半ばの 59 ページのエルバサン福音書で、大きさはわずか 7×10{{_}}cm です。1945 年、親ナチスの文献学者で収集家のレフ・ノシが社会主義政府に逮捕され、すぐに死刑判決を受け、彼のコレクションからこの写本が見つかりました。著者はアルバニアの修道士、グレゴリー・ド・ドゥラスとされています。</p>
       <p />
-      <p>地元のアルバニア語の文字 (エルバサン、[[ps:Vith|Vithkuqi]]、[[ps:Todr|Todhri]]、ベソ・ベイ、ヴェッララ) はトルコ人に対する暗号として使用されたと考えられています。他のデータによると、アルバニアの啓蒙主義者は、独自のアルファベットを持つスラブ人、ギリシャ人、トルコ人を手本にしていました。</p>
+      <p>{{Albanian}}</p>
       <p />
       <p>[[ps:Todr|Todhri]] アルファベット (Elbasan とも呼ばれる) と混同しないでください。</p>
      </transl>
@@ -9333,12 +9330,17 @@
       <p />
       <p>Encoding order is different from Hahn’s, and is sutable for modern Albanian studies.</p>
       <p />
+      <p>{{Albanian}}</p>
+      <p />
       <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
      </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
       <p>テオドール・ハキシフィリピ（別名トドリ先生）が考案。彼は複数のキリスト教文書をアルバニア語に翻訳し、聖書全体を翻訳したとされる。残っている文書はごくわずかで、特にヨハネによる福音書といくつかの祈りが残っている。この文字は彼が1805年に亡くなった後もずっとエルバサンで使われていた。1849年頃にヨハン・フォン・ハーン（彼はトドリという名前にもかかわらず古代のものだと思っていた）によって発見され、非常に珍しいものだった。1900年にトドリ語で読み書きができる老僧が発見されたが、最後の読み書きができる人々は1930年頃に亡くなったとされている。</p>
       <p />
       <p>エンコーディングの順序はハーンのものとは異なっており、現代のアルバニア語研究に適している。</p>
+      <p />
+      <p>{{Albanian}}</p>
       <p />
       <p>[[ps:Elba|エルバサン福音書のアルファベット]]と混同しないように！</p>
      </transl>
@@ -9458,20 +9460,21 @@
      <orig>Albanian</orig>
      <transl>アルバニア語</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
       <p>The alphabet was created by Naum Veqilharxhi, writer, translator and lawyer. He worked on alphabet for 20 years, 1824–1844. Naum died two years later, and alphabet did{{_}}not{{_}}get significant spread. Named after Vithkuq, village where Naum was born. Also Germanized “Büthakukye” is widespread.</p>
       <p />
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
-      <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
+      <p>{{Albanian}} Naum’s reason is surely the former: his letters survived where he responded to criticism, and the alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
      </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian. The former = cultural autonomy, the latter = secrecy from Turks.</au-cmt>
      <transl>
       <p>このアルファベットは、作家、翻訳家、弁護士のナウム・ヴェキルハルシによって作成されました。彼は1824年から1844年までの20年間、アルファベットの作成に取り組みました。ナウムは2年後に亡くなり、アルファベットはそれほど普及しませんでした。ナウムの生まれた村、ヴィトククにちなんで名付けられました。ドイツ語化された「ブトクキエ」も広く普及しています。</p>
       <p />
       <p>アルファベットはアルバニア語の音声学によく適合しますが、何らかの理由で、現代アルバニア語の二重音字「gj」、「rr」、「xh」、「zh」の文字がありません。</p>
       <p />
-      <p>アルバニア語のアルファベットが複数ある（[[ps:Elba|エルバサン]]、ヴィトクキ、[[ps:Todr|トドリ]]、ベソ・ベイ、ヴェッララ）理由はいくつかある。民族解放運動の学者たちがスラブ人、ギリシャ人、トルコ人を見て、独自のアルファベットを望み、トルコ人だけに秘密にしようとしたのだ（アルバニアはオスマン帝国の崩壊とともに1912年に独立した）。ナウムの理由は間違いなく前者である。彼が批判に応えた文字は生き残り、宗教的中立のためアルファベットは[[ps:Latn|ラテン語]]、[[ps:Grek|ギリシャ語]]、[[ps:Arab|アラビア語]]から離れたものにされた。</p>
+      <p>{{Albanian}}ナウムの理由は間違いなく前者である。彼が批判に応えた文字は生き残り、宗教的中立のためアルファベットは[[ps:Latn|ラテン語]]、[[ps:Grek|ギリシャ語]]、[[ps:Arab|アラビア語]]から離れたものにされた。</p>
      </transl>
     </text>
    </group>
@@ -9645,6 +9648,10 @@
    </group>
   </group>
   <group id="Snip">
+   <text id="Albanian" force-attention="true">
+    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
+    <transl>アルバニア語のアルファベットが複数ある（[[ps:Elba|エルバサン]]、[[ps:Vith|ヴィトクキ]]、[[ps:Todr|トドリ]]、ベソ・ベイ、ヴェッララ）理由はいくつかある。民族解放運動の学者たちがスラブ人、ギリシャ人、トルコ人を見て、独自のアルファベットを望み、トルコ人だけに秘密にしようとしたのだ（アルバニアはオスマン帝国の崩壊とともに1912年に独立した）。</transl>
+   </text>
    <text id="ArabPres1">
     <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
     <transl>このブロックは、[[pt:convertibility|互換性]]のために作成されており、CP864 (DOS) などの古いエンコーディングでは、[[pt:dynamic|制限された]] タイポグラフィ エンジンにより、孤立文字、先頭文字、中間文字、末尾文字に異なるコードが使用されていました。</transl>

@@ -5968,18 +5968,15 @@
      <orig>
       <p>The only source is the 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
-      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso-Bey, Vellara) were used as a cipher against Turks. According to other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets.</p>
+      <p>{{Albanian}}</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
      </orig>
-     <au-cmt>
-      <p>Left for Todhri:</p>
-      <p>Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</p>
-     </au-cmt>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
       <p>Единственный источник{{-}}59-страничное Эльбасанское Евангелие середины XVIII{{_}}века размером всего 7×10{{_}}см. В 1945 Леф Носи, профашистский филолог и коллекционер, был арестован социалистическим правительством и вскоре расстрелян, и рукопись обнаружилась у него. Авторство приписывается Григорию Дурресскому, албанскому монаху.</p>
       <p />
-      <p>Полагают, что создание местных письменностей в Албании (эльбасанской, [[ps:Vith|виткутьской]], [[ps:Todr|Тодри]], Весо-Бея, Веллары) служило для конспирации от турок. По другим данным, албанские просвещённые умы смотрели на славян, греков и турок с собственным алфавитом. </p>
+      <p>{{Albanian}}</p>
       <p />
       <p>Не путать с алфавитом [[ps:Todr|Тодри]], который иногда также называют эльбасанским!</p>
      </transl>
@@ -9253,12 +9250,17 @@
       <p />
       <p>Encoding order is different from Hahn’s, and is sutable for modern Albanian studies.</p>
       <p />
+      <p>{{Albanian}}</p>
+      <p />
       <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
      </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
       <p>Изобрёл Теодор Хаджифилипп, он же Учитель Тодри. Он перевёл множество христианских текстов на албанский, якобы даже всю Библию. Сохранились немногие тексты, в том числе Евангелие от Иоанна и несколько молитв. Письмо использовалось вокруг Эльбасана долго после его смерти в 1805: его открыл около 1849 Иоганн фон Хан (он подозревал, что оно древнее, несмотря на имя Тодри), и оно было редким. В 1900 нашли старого монаха, грамотного в Тодри, последние грамотные якобы умерли около 1930.</p>
       <p />
       <p>Порядок кодировки отличается от записанного Ханом, и годится для современного изучения албанского.</p>
+      <p />
+      <p>{{Albanian}}</p>
       <p />
       <p>Не путать с [[ps:Elba|алфавитом Эльбасанского Евангелия]]!</p>
      </transl>
@@ -9386,14 +9388,15 @@
       <p />
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
-      <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
+      <p>{{Albanian}} Naum’s reason is surely the former: his letters survived where he responded to criticism, and the alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
      </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian. The former = cultural autonomy, the latter = secrecy from Turks.</au-cmt>
      <transl>
       <p>Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. Через два года Наум умер, и алфавит не{{_}}получил особого распространения. Назван по родине Наума{{-}}селу Виткуть. Также распространено онемеченное «алфавит Бютакукье».</p>
       <p />
       <p>Алфавит хорошо отвечает фонетике албанского, но почему-то нет букв для звуков «rr», «xh» и «zh».</p>
       <p />
-      <p>Есть несколько причин большого количества албанских алфавитов ([[ps:Elba|эльбасанский]], виткутьский, [[ps:Todr|Тодри]], Весо-Бея, Веллары): мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции). Для Наума причина точно первая: сохранились его письма, где он отвечал на критику, и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] ради религиозной нейтральности.</p>
+      <p>{{Albanian}} Для Наума причина точно первая: сохранились его письма, где он отвечал на критику, и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] ради религиозной нейтральности.</p>
      </transl>
     </text>
    </group>
@@ -9567,6 +9570,10 @@
    </group>
   </group>
   <group id="Snip">
+   <text id="Albanian">
+    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
+    <transl>Есть несколько причин большого количества албанских алфавитов ([[ps:Elba|эльбасанский]], [[ps:Vith|виткутьский]], [[ps:Todr|Тодри]], Весо-Бея, Веллары): мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции).</transl>
+   </text>
    <text id="ArabPres1">
     <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
     <transl>Блок создан для [[pt:convertibility|совместимости]] со старыми кодировками вроде CP864 (DOS), где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.</transl>

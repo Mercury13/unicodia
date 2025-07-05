@@ -25,6 +25,9 @@ A
 Formatted as in dense text.
 Rounded upwards to hundred, to avoid triggering L10n troubles.
 
+{{Albanian}} :: Multiple Albanian scripts :: Snippet :: No parameters
+Used in old Albanian scripts: Elba, Todr, Vith
+
 {{ArabPres1}} :: Arabic presentation forms, part 1 :: Snippet :: No parameters
 Used in both Arabic presentation forms A and B
 
