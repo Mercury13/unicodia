@@ -313,6 +313,9 @@ const std::set<RangeByEnd> alternateRanges {
     // CJK E: SinSumB
     { 0x2C287 },    // SimB: BS drew a strange version
 
+    // CJK G: SimSunG
+    { 0x30DD1 },    // SimG: Chinese only, different object
+
     // CJK H: SimSunG
     //{ 0x3137B },    // G vs V: roof dot
     //{ 0x31454 },    // G vs V: roof dot
