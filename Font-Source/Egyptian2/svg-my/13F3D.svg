@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.75"
+   height="5"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="13F3D.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="15.715697"
+     inkscape:cx="2.1316267"
+     inkscape:cy="-3.5951316"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="0.484375,4.5"
+       orientation="0.58975014,0.80758577"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.265625,4.5"
+       orientation="0.58975014,-0.80758577"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.265625,0.484375"
+       orientation="-0.59319904,-0.80505584"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.875,-1.6273644"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="path1"
+     style="fill:#000000;stroke:none"
+     d="M 0 0 L 0 0.859375 L 2.234375 2.5 L 0 4.140625 L 0 5 L 17.75 5 L 17.75 4.140625 L 15.515625 2.5 L 17.75 0.859375 L 17.75 0 L 0 0 z M 0.484375 0.5 L 6.7128906 0.5 L 4.3964844 4.515625 L 0.484375 4.515625 L 3.2207031 2.4980469 L 0.484375 0.5 z M 7.40625 0.5 L 8.6855469 0.5 L 6.3671875 4.515625 L 5.0878906 4.515625 L 7.40625 0.5 z M 9.3789062 0.5 L 10.65625 0.5 L 8.3398438 4.515625 L 7.0605469 4.515625 L 9.3789062 0.5 z M 11.351562 0.5 L 12.628906 0.5 L 10.3125 4.515625 L 9.03125 4.515625 L 11.351562 0.5 z M 13.322266 0.5 L 17.265625 0.5 L 14.529297 2.4980469 L 17.265625 4.515625 L 11.003906 4.515625 L 13.322266 0.5 z " />
+</svg>

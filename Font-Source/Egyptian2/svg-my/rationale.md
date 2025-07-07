@@ -48,8 +48,14 @@ Subtotal: 28
 - 13887
 - 1393B: TEN
 - 13983
+- 13B52
+- 13B9E
+- 13CCE
+- 13F3D: FIFTEEN
+- 14016
+- 14091
 
-Subtotal: 11
+Subtotal: 17
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -60,4 +66,4 @@ Subtotal: 11
 
 Subtotal: 5
 
-Total: 51
+Total: 57
