@@ -25,13 +25,16 @@ Subtotal: 7
 - 1365D: beard king → god
 - 1365E: beard king → god
 - 1365F: beard king → god: TWENTY
+- 137EF: no beard, no collar
+- 137F1: no beard, no collar
+- 137F2: no beard, no collar one of hieros for million
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 25
+Subtotal: 28
 
 # Tofu
 - 134CC
@@ -41,9 +44,12 @@ Subtotal: 25
 - 1374C: FIVE
 - 137CA
 - 13804
-- 1393B
+- 13806
+- 13887
+- 1393B: TEN
+- 13983
 
-Subtotal: 8
+Subtotal: 11
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -54,4 +60,4 @@ Subtotal: 8
 
 Subtotal: 5
 
-Total: 45
+Total: 51
