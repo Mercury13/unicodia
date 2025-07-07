@@ -1,9 +1,11 @@
 ﻿# Rationale behind these characters
 
-## Above the fold: will never extend
-- 13460, 61, 62, 63, 64, 65, 67: characters 60…67 must not be tofu, at any cost
+## Will never extend: above the fold + tofu
+- 13460, 61, 62, 63, 64, 65, 67
+- 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B
+- 13983, 13B52, 13B9E, 13CCE, 13F3D, 14016, 14091, 14198, 142СС, 14330
 
-Subtotal: 7
+Subtotal: 27
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -36,34 +38,15 @@ Subtotal: 7
 
 Subtotal: 28
 
-# Tofu
-- 134CC
-- 135EC
-- 13712
-- 1372D
-- 1374C: FIVE
-- 137CA
-- 13804
-- 13806
-- 13887
-- 1393B: TEN
-- 13983
-- 13B52
-- 13B9E
-- 13CCE
-- 13F3D: FIFTEEN
-- 14016
-- 14091
-
-Subtotal: 17
-
 # Duped with NewGardiner
 - 1348C: after 8B
 - 13626: after 25
 - 136DE: after DD
+- 137F0: after EF, man with palm branches for million
 - 13933: after 32
 - 13ABE: after 130F9
+- 14196: after 97, pectoral
 
-Subtotal: 5
+Subtotal: 7
 
-Total: 57
+Total: 62
