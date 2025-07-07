@@ -16,7 +16,9 @@ Subtotal: 27
 - 134F3: kneeling
 - 13552: short beard
 - 13555: long wig
-- 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0: TEN
+- 13560: bushy beard
+- 135A5: sit on heel: TEN
+- 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 13625: removed placeholders
 - 1363E: need beard
 - 13641: beard barely god → god
@@ -24,9 +26,9 @@ Subtotal: 27
 - 13659: beard god → king
 - 1365B: beard king → god
 - 1365C: beard god → king
-- 1365D: beard king → god
+- 1365D: beard king → god: TWENTY
 - 1365E: beard king → god
-- 1365F: beard king → god: TWENTY
+- 1365F: beard king → god
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
@@ -34,12 +36,14 @@ Subtotal: 27
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
-- 13AAC: aligned that goat
+- 13AAC: aligned that goat: THIRTY
 
-Subtotal: 28
+Subtotal: 30
 
 # Duped with NewGardiner
 - 1348C: after 8B
+- 13561: after 60
+- 1356C: after 6B
 - 13626: after 25
 - 136DE: after DD
 - 137F0: after EF, man with palm branches for million
@@ -47,6 +51,6 @@ Subtotal: 28
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 7
+Subtotal: 9
 
-Total: 62
+Total: 66
