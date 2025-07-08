@@ -1028,13 +1028,11 @@ FFFD......: NotoSerif-Regular
 13556..13559: NewGardiner
 1355A, 1355B: UnicodiaSesh
 1355C, 1355D: NewGardiner
-1355E..13560: UnicodiaSesh
-13561, 13562: NewGardiner
+1355E..13561: UnicodiaSesh
+13562.......: NewGardiner
 13563.......: UnicodiaSesh
 13564.......: NewGardiner
-13565..1356B: UnicodiaSesh
-1356C.......: NewGardiner
-1356D..13571: UnicodiaSesh
+13565..13571: UnicodiaSesh
 13572.......: NewGardiner
 13573.......: UnicodiaSesh
 13574.......: NewGardiner
