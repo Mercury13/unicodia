@@ -107,6 +107,11 @@ I’m just scratching a surface, but my (badly enforced) policy for CJK ideograp
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
+## Egyptian
+* Legacy hieroglyphs are done with the same attention as core
+* Extended hieroglyphs just somehow resemble the sample image
+* Same if the sample image is not in harmony with description
+
 ## Data
 Data is as neutral as possible. Examples.
 * Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So just # of L1 speakers
