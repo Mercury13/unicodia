@@ -14,6 +14,9 @@ namespace cp {
     // Specials
     constexpr char32_t ZWJ = 0x200D;
 
+    // Arrows
+    constexpr char32_t ARROW_UP_DOWN = 0x2195;
+
     // Shapes
     constexpr char32_t DOTTED_CIRCLE = 0x25CC;
 
@@ -99,6 +102,9 @@ namespace cp {
     constexpr char32_t KISS_MARK = 0x1F48B;
     constexpr char32_t MRS_CLAUS = 0x1F936;
     constexpr char32_t BLACK_FLAG = 0x1F3F4;
+
+    // Smiley
+    constexpr char32_t SMILE_SLIGHTLY_SMILING = 0x1F642;
 
     // Appearance
     constexpr char32_t PERSON_BLOND = 0x1F471;

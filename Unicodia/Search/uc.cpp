@@ -725,7 +725,7 @@ uc::MultiResult uc::doSearch(QString what)
             if (pEmoji != emojiList.end() && pEmoji->index == i32) {
                 auto& bk = r.emplace_back(pEmoji->result);
                 bk.prio.high = HIPRIO_HEX;
-                iLevel1 = i32 + bk.node->value.length();
+                iLevel1 = i32 + pEmoji->length;
                 ++pEmoji;
             }
             auto c = u32[i32];

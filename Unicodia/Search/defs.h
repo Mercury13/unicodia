@@ -2,14 +2,15 @@
 
 #include <cstddef>
 
+#define SRH_LEVELS \
+    FULL, PART, UNKNOWN_FLAG
+
 namespace srh {
 
     /// @warning From best to worst;
     ///     unrelated (PART and UNKNOWN_FLAG) in any order
     enum class EmojiLevel : unsigned char {
-        FULL,   ///< fully-qualified
-        PART,   ///< minimally qualified/unqualified
-        UNKNOWN_FLAG,  ///< unknown flag        
+        SRH_LEVELS
     };
 
     /// @tparam R

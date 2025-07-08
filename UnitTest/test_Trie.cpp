@@ -17,6 +17,7 @@ enum class Emoji : unsigned char {
     MAN_BLACK,
     HEART_RED,
     KISS_INTERRACIAL,
+    HEAD_YES,
 };
 
 
@@ -36,10 +37,13 @@ Trie1::Trie1()
     addMulti(Emoji::MAN_BLACK,   cp::MAN,    cp::SKIN5);
     addMulti(Emoji::HEART_RED,   cp::EMOJI_RED_HEART, cp::VS16);
     addMulti(Emoji::KISS_INTERRACIAL,
-               cp::WOMAN, cp::SKIN1, cp::ZWJ,
-               cp::EMOJI_RED_HEART, cp::VS16, cp::ZWJ,
-               cp::KISS_MARK, cp::ZWJ,
-               cp::MAN, cp::SKIN5);
+                cp::WOMAN, cp::SKIN1, cp::ZWJ,
+                cp::EMOJI_RED_HEART, cp::VS16, cp::ZWJ,
+                cp::KISS_MARK, cp::ZWJ,
+                cp::MAN, cp::SKIN5);
+    addMulti(Emoji::HEAD_YES,
+                cp::SMILE_SLIGHTLY_SMILING, cp::ZWJ,
+                cp::ARROW_UP_DOWN, cp::VS16);
 };
 
 void expectEmoji(const srh::Decoded<Emoji>& line,
@@ -223,4 +227,100 @@ TEST (DecodeTrie, InterracialKissPart)
     EXPECT_EQ(1u, res.size());
 
     expectEmoji(res.at(0), 1,  9, srh::EmojiLevel::PART, Emoji::KISS_INTERRACIAL);
+}
+
+
+///
+///  Decode
+///
+TEST (DecodeTrie, HeadYesFull)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                cp::SMILE_SLIGHTLY_SMILING, cp::ZWJ,
+                cp::ARROW_UP_DOWN, cp::VS16 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(1u, res.size());
+
+    expectEmoji(res.at(0), 0,  4, srh::EmojiLevel::FULL, Emoji::HEAD_YES);
+}
+
+
+///
+///  Decode
+///
+TEST (DecodeTrie, HeadYesPart)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                cp::SMILE_SLIGHTLY_SMILING, cp::ZWJ,
+                cp::ARROW_UP_DOWN, cp::VS15 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(1u, res.size());
+
+    expectEmoji(res.at(0), 0,  3, srh::EmojiLevel::PART, Emoji::HEAD_YES);
+}
+
+
+///
+///  Prereq — should decode read heart
+///
+TEST (DecodeTrie, HeartRedFull1)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                'a', 'b', cp::EMOJI_RED_HEART, cp::VS16, 'b' };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(1u, res.size());
+
+    expectEmoji(res.at(0), 2,  2, srh::EmojiLevel::FULL, Emoji::HEART_RED);
+}
+
+
+
+
+///
+///  End works too
+///
+TEST (DecodeTrie, HeartRedFull2)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                'a', 'b', cp::EMOJI_RED_HEART, cp::VS16 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(1u, res.size());
+
+    expectEmoji(res.at(0), 2,  2, srh::EmojiLevel::FULL, Emoji::HEART_RED);
+}
+
+
+///
+///  Should not decode 1-char read heart
+///
+TEST (DecodeTrie, HeartRedPart1)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                'a', 'b', cp::EMOJI_RED_HEART, 'c' };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(0u, res.size());
+}
+
+
+///
+///  Same
+///
+TEST (DecodeTrie, HeartRedPart2)
+{
+    Trie1 tr;
+    const char32_t data[] {
+                'a', 'b', cp::EMOJI_RED_HEART };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(0u, res.size());
 }

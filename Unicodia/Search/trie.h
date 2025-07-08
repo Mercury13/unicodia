@@ -15,7 +15,8 @@
 namespace srh {
 
     enum class NodeType : unsigned char {
-        TRANSIENT, FINAL, UNKNOWN_FLAG
+        SRH_LEVELS,
+        TRANSIENT,
     };
 
     ///  @tparam  R result
@@ -40,9 +41,9 @@ namespace srh {
 
         void link(char32_t c, EmojiLevel level, TrieNode* target);
 
-        inline void setFinal(R res)
+        inline void setFinal(R res, NodeType type)
         {
-            fType = NodeType::FINAL;
+            fType = type;
             fResult = res;
         }
 
@@ -140,19 +141,26 @@ void srh::TrieRoot<R>::add(std::u32string_view s, R res)
 {
     Node* p = this;
     Node* prevP = nullptr;
+    bool hasZwj = false;
     for (auto c : s) {
         auto* oldP = p;
         p = oldP->add(c, EmojiLevel::FULL);
         if (c == cp::VS16) {
             prevP = oldP;
         } else {
+            if (c == cp::ZWJ) {
+                hasZwj = true;
+            }
             if (prevP) {
                 prevP->link(c, EmojiLevel::PART, p);
             }
             prevP = nullptr;
         }
     }
-    p->setFinal(std::move(res));
+    if (hasZwj && prevP) {
+        prevP->setFinal(res, NodeType::PART);
+    }
+    p->setFinal(std::move(res), NodeType::FULL);
 }
 
 template <class R>
@@ -199,9 +207,9 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
                 if (p->type() != NodeType::TRANSIENT) {
                     lastKnown.node = p;
                     lastKnown.length = index + 1 - lastKnown.resetTime;
-                    /// @todo [urgent] emoji type
-                    lastKnown.level = (p->type() == NodeType::UNKNOWN_FLAG)
-                                     ? EmojiLevel::UNKNOWN_FLAG : level;
+                    lastKnown.level = std::max(
+                                level, static_cast<srh::EmojiLevel>(p->type()));
+
                 }
             } else if (p != this) {
                 // p==&trieRoot → we already tried and no need 2nd time
