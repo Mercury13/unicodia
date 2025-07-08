@@ -4,7 +4,6 @@
 // Google test
 #include "gtest/gtest.h"
 
-
 // Testing fixture
 struct Counter
 {
@@ -244,7 +243,16 @@ TEST (DumbSp, AssignToSelf)
         EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(46, p->tag);
 
+#ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wself-assign-overloaded"
+#endif
+
         p = p;
+
+#ifdef __clang__
+    #pragma clang diagnostic pop
+#endif
 
         EXPECT_EQ(1u, ctr.nCtors);
         EXPECT_EQ(0u, ctr.nDtors);
