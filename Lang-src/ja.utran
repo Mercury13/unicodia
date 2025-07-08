@@ -12291,6 +12291,17 @@
      <orig>Zhuang/Tay</orig>
     </text>
    </group>
+   <group id="Type">
+    <text id="IncEmoji" force-attention="true">
+     <orig>Incomplete emoji</orig>
+     <au-cmt>Example: search "🙂‍↕︎" = smile+ZWJ+UD+VS15</au-cmt>
+     <transl>不完全な絵文字</transl>
+    </text>
+    <text id="UnkFlag" force-attention="true">
+     <orig>Unknown flag</orig>
+     <transl>不明な国旗</transl>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
     <au-cmt>Test: search for FFFF</au-cmt>

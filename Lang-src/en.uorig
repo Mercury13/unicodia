@@ -8425,6 +8425,15 @@
      <orig>Zhuang/Tay</orig>
     </text>
    </group>
+   <group id="Type">
+    <text id="IncEmoji">
+     <orig>Incomplete emoji</orig>
+     <au-cmt>Example: search "🙂‍↕︎" = smile+ZWJ+UD+VS15</au-cmt>
+    </text>
+    <text id="UnkFlag">
+     <orig>Unknown flag</orig>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
     <au-cmt>Test: search for FFFF</au-cmt>

@@ -52,6 +52,7 @@ namespace uc {
     struct MiniLine {
         char32_t code = 0xFFFFFF;           ///< char code
         CpType type = CpType::NONCHARACTER; ///< what found
+        srh::EmojiLevel emojiLevel = srh::EmojiLevel::FULL;
         const uc::Cp* cp = nullptr;         ///< code point
         const uc::LibNode* node = nullptr;  ///< library node
 
@@ -61,7 +62,8 @@ namespace uc {
                  CpType aType = CpType::NONCHARACTER,
                  const uc::Cp* aCp = nullptr) noexcept
             : code(aCode), type(aType), cp(aCp) {}
-        constexpr MiniLine(const uc::LibNode* aNode) : type(CpType::LIBNODE), node(aNode) {}
+        constexpr MiniLine(const uc::LibNode* aNode, srh::EmojiLevel aLevel)
+            : type(CpType::LIBNODE),  emojiLevel(aLevel), node(aNode) {}
     };
 
     struct SearchLine : public MiniLine {
@@ -78,14 +80,14 @@ namespace uc {
             : MiniLine{x} {}
         SearchLine(const uc::Cp& cp) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
-        constexpr SearchLine(const uc::LibNode* node) noexcept
-            : MiniLine{node} {}
+        constexpr SearchLine(const uc::LibNode* node, srh::EmojiLevel level) noexcept
+            : MiniLine{node, level} {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr) noexcept
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn), prio(pr) {}
-        SearchLine(const uc::LibNode* node, const srh::Prio& pr) noexcept
-            : MiniLine(node), prio(pr) {}
+        SearchLine(const uc::LibNode* node, srh::EmojiLevel level, const srh::Prio& pr) noexcept
+            : MiniLine(node, level), prio(pr) {}
 
         void giveTriggerName(std::u8string r)
         {

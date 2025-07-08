@@ -27,7 +27,7 @@ namespace {
                 state.oldCat = category;
             }
             if (state.lastGroup) {  // -warn, should always be true
-                state.lastGroup->lines.emplace_back(&node);
+                state.lastGroup->lines.emplace_back(&node, srh::EmojiLevel::FULL);
             }
         }
         const auto a = node.iFirstChild;

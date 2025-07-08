@@ -12212,6 +12212,17 @@
      <transl>чжуанское/тай</transl>
     </text>
    </group>
+   <group id="Type">
+    <text id="IncEmoji">
+     <orig>Incomplete emoji</orig>
+     <au-cmt>Example: search "🙂‍↕︎" = smile+ZWJ+UD+VS15</au-cmt>
+     <transl>Неполный эмодзи</transl>
+    </text>
+    <text id="UnkFlag">
+     <orig>Unknown flag</orig>
+     <transl>Неизвестный флаг</transl>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
     <au-cmt>Test: search for FFFF</au-cmt>

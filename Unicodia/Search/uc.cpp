@@ -566,7 +566,7 @@ uc::MultiResult uc::doSearch(QString what)
                 auto [where2, _] = where1->find(cp2);
                 if (where2 && where2->result()) {
                     // At last found
-                    auto& bk = r.emplace_back(where2->result());
+                    auto& bk = r.emplace_back(where2->result(), srh::EmojiLevel::FULL);
                     bk.prio.high = uc::HIPRIO_FLAG;
                     bk.giveTriggerName(str::toU8(flagName));
                 }
@@ -706,7 +706,7 @@ uc::MultiResult uc::doSearch(QString what)
                     srh::RoleType::BRIEF, cache,
                     srh::NonAsciiComparator::INST);
             if (prio > srh::Prio::EMPTY) {
-                r.emplace_back(&node, prio);
+                r.emplace_back(&node, srh::EmojiLevel::FULL, prio);
             }
         }
 
@@ -723,7 +723,7 @@ uc::MultiResult uc::doSearch(QString what)
         for (size_t i32 = 0; i32 < u32.length(); ++i32) {
             // Insert emoji
             if (pEmoji != emojiList.end() && pEmoji->index == i32) {
-                auto& bk = r.emplace_back(pEmoji->result);
+                auto& bk = r.emplace_back(pEmoji->result, pEmoji->level);
                 bk.prio.high = HIPRIO_HEX;
                 iLevel1 = i32 + pEmoji->length;
                 ++pEmoji;

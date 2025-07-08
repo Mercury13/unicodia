@@ -614,19 +614,29 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 }
             } else if (line.node) {
                 // …Library object
-                std::u32string_view val = line.node->value;
-                static constexpr auto SHORTLEN = 2;
-                bool needShort = (val.length() > SHORTLEN && !line.triggerName.empty());
-                if (needShort) {
-                    val = val.substr(0, SHORTLEN);
-                    auto n = 0;
-                    for (auto c : val)
-                        n = uc::appendUPLUS(buf, n, c);
-                    s += buf;
-                    s += "+…";
-                } else {
-                    line.node->sprintUPLUS(buf);
-                    s += buf;
+                switch (line.emojiLevel) {
+                case srh::EmojiLevel::FULL: {
+                        std::u32string_view val = line.node->value;
+                        static constexpr auto SHORTLEN = 2;
+                        bool needShort = (val.length() > SHORTLEN && !line.triggerName.empty());
+                        if (needShort) {
+                            val = val.substr(0, SHORTLEN);
+                            auto n = 0;
+                            for (auto c : val)
+                                n = uc::appendUPLUS(buf, n, c);
+                            s += buf;
+                            s += "+…";
+                        } else {
+                            line.node->sprintUPLUS(buf);
+                            s += buf;
+                        }
+                    } break;
+                case srh::EmojiLevel::PART:
+                    s = loc::get("Search.Type.IncEmoji");
+                    break;
+                case srh::EmojiLevel::UNKNOWN_FLAG:
+                    // One line
+                    return loc::get("Search.Type.UnkFlag").q();
                 }
             }
             switch (primaryObj) {
