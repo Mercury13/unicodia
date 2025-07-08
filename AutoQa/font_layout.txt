@@ -2804,9 +2804,7 @@ FFFD......: NotoSerif-Regular
 20202.......: SimSun-ExtB
 20203..20205: BabelStoneHanExtra
 20206.......: SimSun-ExtB
-20207, 20208: BabelStoneHanExtra
-20209.......: SimSun-ExtB
-2020A..2020D: BabelStoneHanExtra
+20207..2020D: BabelStoneHanExtra
 2020E, 2020F: SimSun-ExtB
 20210.......: BabelStoneHanExtra
 20211.......: SimSun-ExtB
@@ -2949,7 +2947,9 @@ FFFD......: NotoSerif-Regular
 2035F..20361: BabelStoneHanExtra
 20362..20365: SimSun-ExtB
 20366..20368: BabelStoneHanExtra
-20369..20370: SimSun-ExtB
+20369..2036D: SimSun-ExtB
+2036E.......: BabelStoneHanExtra
+2036F, 20370: SimSun-ExtB
 20371..20379: BabelStoneHanExtra
 2037A.......: SimSun-ExtB
 2037B..2037F: BabelStoneHanExtra
@@ -3617,7 +3617,9 @@ FFFD......: NotoSerif-Regular
 209AC.......: BabelStoneHanExtra
 209AD..209B2: SimSun-ExtB
 209B3.......: BabelStoneHanExtra
-209B4..209C2: SimSun-ExtB
+209B4, 209B5: SimSun-ExtB
+209B6.......: BabelStoneHanExtra
+209B7..209C2: SimSun-ExtB
 209C3..209C5: BabelStoneHanExtra
 209C6, 209C7: SimSun-ExtB
 209C8, 209C9: BabelStoneHanExtra
@@ -3631,20 +3633,20 @@ FFFD......: NotoSerif-Regular
 209D6, 209D7: BabelStoneHanExtra
 209D8.......: SimSun-ExtB
 209D9, 209DA: BabelStoneHanExtra
-209DB, 209DC: SimSun-ExtB
-209DD..209E2: BabelStoneHanExtra
+209DB.......: SimSun-ExtB
+209DC..209E2: BabelStoneHanExtra
 209E3.......: SimSun-ExtB
 209E4..209EB: BabelStoneHanExtra
 209EC..209EE: SimSun-ExtB
-209EF.......: BabelStoneHanExtra
-209F0.......: SimSun-ExtB
-209F1.......: BabelStoneHanExtra
-209F2, 209F3: SimSun-ExtB
+209EF..209F2: BabelStoneHanExtra
+209F3.......: SimSun-ExtB
 209F4, 209F5: BabelStoneHanExtra
 209F6.......: SimSun-ExtB
 209F7..209F9: BabelStoneHanExtra
-209FA..20A01: SimSun-ExtB
-20A02..20A05: BabelStoneHanExtra
+209FA, 209FB: SimSun-ExtB
+209FC.......: BabelStoneHanExtra
+209FD..20A00: SimSun-ExtB
+20A01..20A05: BabelStoneHanExtra
 20A06..20A0A: SimSun-ExtB
 20A0B.......: BabelStoneHanExtra
 20A0C.......: SimSun-ExtB
@@ -3656,8 +3658,8 @@ FFFD......: NotoSerif-Regular
 20A19..20A1B: SimSun-ExtB
 20A1C.......: BabelStoneHanExtra
 20A1D.......: SimSun-ExtB
-20A1E.......: BabelStoneHanExtra
-20A1F..20A22: SimSun-ExtB
+20A1E, 20A1F: BabelStoneHanExtra
+20A20..20A22: SimSun-ExtB
 20A23..20A25: BabelStoneHanExtra
 20A26.......: SimSun-ExtB
 20A27..20A29: BabelStoneHanExtra
@@ -3720,8 +3722,8 @@ FFFD......: NotoSerif-Regular
 20AA3, 20AA4: SimSun-ExtB
 20AA5.......: BabelStoneHanExtra
 20AA6, 20AA7: SimSun-ExtB
-20AA8, 20AA9: BabelStoneHanExtra
-20AAA, 20AAB: SimSun-ExtB
+20AA8..20AAA: BabelStoneHanExtra
+20AAB.......: SimSun-ExtB
 20AAC.......: BabelStoneHanExtra
 20AAD..20AAF: SimSun-ExtB
 20AB0..20AB2: BabelStoneHanExtra
@@ -4200,9 +4202,7 @@ FFFD......: NotoSerif-Regular
 20F83, 20F84: SimSun-ExtB
 20F85..20F87: BabelStoneHanExtra
 20F88.......: SimSun-ExtB
-20F89.......: BabelStoneHanExtra
-20F8A.......: SimSun-ExtB
-20F8B.......: BabelStoneHanExtra
+20F89..20F8B: BabelStoneHanExtra
 20F8C.......: SimSun-ExtB
 20F8D..20F96: BabelStoneHanExtra
 20F97, 20F98: SimSun-ExtB
@@ -4735,8 +4735,8 @@ FFFD......: NotoSerif-Regular
 21442.......: BabelStoneHanExtra
 21443.......: SimSun-ExtB
 21444..21448: BabelStoneHanExtra
-21449, 2144A: SimSun-ExtB
-2144B..21452: BabelStoneHanExtra
+21449.......: SimSun-ExtB
+2144A..21452: BabelStoneHanExtra
 21453..21459: SimSun-ExtB
 2145A, 2145B: BabelStoneHanExtra
 2145C.......: SimSun-ExtB
@@ -4861,8 +4861,8 @@ FFFD......: NotoSerif-Regular
 21565..21569: BabelStoneHanExtra
 2156A.......: SimSun-ExtB
 2156B.......: BabelStoneHanExtra
-2156C..2156F: SimSun-ExtB
-21570, 21571: BabelStoneHanExtra
+2156C..2156E: SimSun-ExtB
+2156F..21571: BabelStoneHanExtra
 21572..21576: SimSun-ExtB
 21577, 21578: BabelStoneHanExtra
 21579..2157D: SimSun-ExtB
@@ -4929,7 +4929,9 @@ FFFD......: NotoSerif-Regular
 21613, 21614: BabelStoneHanExtra
 21615..21618: SimSun-ExtB
 21619, 2161A: BabelStoneHanExtra
-2161B..2161D: SimSun-ExtB
+2161B.......: SimSun-ExtB
+2161C.......: BabelStoneHanExtra
+2161D.......: SimSun-ExtB
 2161E, 2161F: BabelStoneHanExtra
 21620.......: SimSun-ExtB
 21621.......: BabelStoneHanExtra
@@ -4975,8 +4977,8 @@ FFFD......: NotoSerif-Regular
 21676, 21677: BabelStoneHanExtra
 21678..21680: SimSun-ExtB
 21681.......: BabelStoneHanExtra
-21682..21686: SimSun-ExtB
-21687.......: BabelStoneHanExtra
+21682..21685: SimSun-ExtB
+21686, 21687: BabelStoneHanExtra
 21688.......: SimSun-ExtB
 21689.......: BabelStoneHanExtra
 2168A, 2168B: SimSun-ExtB
@@ -6046,8 +6048,8 @@ FFFD......: NotoSerif-Regular
 2204A.......: SimSun-ExtB
 2204B.......: BabelStoneHanExtra
 2204C..2204F: SimSun-ExtB
-22050, 22051: BabelStoneHanExtra
-22052..22058: SimSun-ExtB
+22050..22052: BabelStoneHanExtra
+22053..22058: SimSun-ExtB
 22059.......: BabelStoneHanExtra
 2205A.......: SimSun-ExtB
 2205B.......: BabelStoneHanExtra
@@ -6617,7 +6619,9 @@ FFFD......: NotoSerif-Regular
 2257F.......: BabelStoneHanExtra
 22580..22585: SimSun-ExtB
 22586, 22587: BabelStoneHanExtra
-22588..2258C: SimSun-ExtB
+22588.......: SimSun-ExtB
+22589, 2258A: BabelStoneHanExtra
+2258B, 2258C: SimSun-ExtB
 2258D.......: BabelStoneHanExtra
 2258E..22592: SimSun-ExtB
 22593..22596: BabelStoneHanExtra
@@ -7445,8 +7449,8 @@ FFFD......: NotoSerif-Regular
 22D31..22D33: BabelStoneHanExtra
 22D34.......: SimSun-ExtB
 22D35.......: BabelStoneHanExtra
-22D36..22D39: SimSun-ExtB
-22D3A.......: BabelStoneHanExtra
+22D36..22D38: SimSun-ExtB
+22D39, 22D3A: BabelStoneHanExtra
 22D3B..22D3D: SimSun-ExtB
 22D3E.......: BabelStoneHanExtra
 22D3F..22D41: SimSun-ExtB
@@ -7648,8 +7652,8 @@ FFFD......: NotoSerif-Regular
 22EE9, 22EEA: SimSun-ExtB
 22EEB..22EED: BabelStoneHanExtra
 22EEE.......: SimSun-ExtB
-22EEF..22EF1: BabelStoneHanExtra
-22EF2..22EF6: SimSun-ExtB
+22EEF..22EF2: BabelStoneHanExtra
+22EF3..22EF6: SimSun-ExtB
 22EF7.......: BabelStoneHanExtra
 22EF8.......: SimSun-ExtB
 22EF9.......: BabelStoneHanExtra
@@ -8136,8 +8140,8 @@ FFFD......: NotoSerif-Regular
 2335E.......: SimSun-ExtB
 2335F.......: BabelStoneHanExtra
 23360.......: SimSun-ExtB
-23361.......: BabelStoneHanExtra
-23362, 23363: SimSun-ExtB
+23361, 23362: BabelStoneHanExtra
+23363.......: SimSun-ExtB
 23364..2336A: BabelStoneHanExtra
 2336B.......: SimSun-ExtB
 2336C..23372: BabelStoneHanExtra
@@ -9172,8 +9176,8 @@ FFFD......: NotoSerif-Regular
 23CE1.......: SimSun-ExtB
 23CE2, 23CE3: BabelStoneHanExtra
 23CE4.......: SimSun-ExtB
-23CE5, 23CE6: BabelStoneHanExtra
-23CE7..23CE9: SimSun-ExtB
+23CE5..23CE7: BabelStoneHanExtra
+23CE8, 23CE9: SimSun-ExtB
 23CEA..23CEE: BabelStoneHanExtra
 23CEF..23CF1: SimSun-ExtB
 23CF2.......: BabelStoneHanExtra
@@ -9237,8 +9241,8 @@ FFFD......: NotoSerif-Regular
 23D80..23D83: BabelStoneHanExtra
 23D84, 23D85: SimSun-ExtB
 23D86..23D89: BabelStoneHanExtra
-23D8A..23D8C: SimSun-ExtB
-23D8D.......: BabelStoneHanExtra
+23D8A, 23D8B: SimSun-ExtB
+23D8C, 23D8D: BabelStoneHanExtra
 23D8E.......: SimSun-ExtB
 23D8F..23D93: BabelStoneHanExtra
 23D94..23D98: SimSun-ExtB
@@ -9494,8 +9498,8 @@ FFFD......: NotoSerif-Regular
 23FFE, 23FFF: SimSun-ExtB
 24000.......: BabelStoneHanExtra
 24001..24003: SimSun-ExtB
-24004.......: BabelStoneHanExtra
-24005..24009: SimSun-ExtB
+24004, 24005: BabelStoneHanExtra
+24006..24009: SimSun-ExtB
 2400A, 2400B: BabelStoneHanExtra
 2400C, 2400D: SimSun-ExtB
 2400E.......: BabelStoneHanExtra
@@ -9844,8 +9848,8 @@ FFFD......: NotoSerif-Regular
 2430C.......: SimSun-ExtB
 2430D.......: BabelStoneHanExtra
 2430E, 2430F: SimSun-ExtB
-24310.......: BabelStoneHanExtra
-24311..24316: SimSun-ExtB
+24310, 24311: BabelStoneHanExtra
+24312..24316: SimSun-ExtB
 24317..24319: BabelStoneHanExtra
 2431A..2431D: SimSun-ExtB
 2431E.......: BabelStoneHanExtra
@@ -10739,8 +10743,8 @@ FFFD......: NotoSerif-Regular
 24B4C.......: BabelStoneHanExtra
 24B4D..24B4F: SimSun-ExtB
 24B50..24B52: BabelStoneHanExtra
-24B53, 24B54: SimSun-ExtB
-24B55, 24B56: BabelStoneHanExtra
+24B53.......: SimSun-ExtB
+24B54..24B56: BabelStoneHanExtra
 24B57, 24B58: SimSun-ExtB
 24B59.......: BabelStoneHanExtra
 24B5A.......: SimSun-ExtB
@@ -10797,8 +10801,8 @@ FFFD......: NotoSerif-Regular
 24BD2..24BD4: BabelStoneHanExtra
 24BD5..24BD9: SimSun-ExtB
 24BDA.......: BabelStoneHanExtra
-24BDB, 24BDC: SimSun-ExtB
-24BDD..24BDF: BabelStoneHanExtra
+24BDB.......: SimSun-ExtB
+24BDC..24BDF: BabelStoneHanExtra
 24BE0.......: SimSun-ExtB
 24BE1.......: BabelStoneHanExtra
 24BE2..24BE5: SimSun-ExtB
@@ -11557,8 +11561,8 @@ FFFD......: NotoSerif-Regular
 252C8.......: BabelStoneHanExtra
 252C9.......: SimSun-ExtB
 252CA, 252CB: BabelStoneHanExtra
-252CC, 252CD: SimSun-ExtB
-252CE.......: BabelStoneHanExtra
+252CC.......: SimSun-ExtB
+252CD, 252CE: BabelStoneHanExtra
 252CF..252D4: SimSun-ExtB
 252D5..252D8: BabelStoneHanExtra
 252D9..252DB: SimSun-ExtB
@@ -11724,8 +11728,8 @@ FFFD......: NotoSerif-Regular
 2546C, 2546D: SimSun-ExtB
 2546E.......: BabelStoneHanExtra
 2546F..25471: SimSun-ExtB
-25472.......: BabelStoneHanExtra
-25473..25475: SimSun-ExtB
+25472, 25473: BabelStoneHanExtra
+25474, 25475: SimSun-ExtB
 25476.......: BabelStoneHanExtra
 25477.......: SimSun-ExtB
 25478..2547A: BabelStoneHanExtra
@@ -11847,8 +11851,8 @@ FFFD......: NotoSerif-Regular
 25584, 25585: BabelStoneHanExtra
 25586.......: SimSun-ExtB
 25587.......: BabelStoneHanExtra
-25588..2558C: SimSun-ExtB
-2558D..2558F: BabelStoneHanExtra
+25588..2558B: SimSun-ExtB
+2558C..2558F: BabelStoneHanExtra
 25590..25598: SimSun-ExtB
 25599, 2559A: BabelStoneHanExtra
 2559B.......: SimSun-ExtB
@@ -12205,7 +12209,9 @@ FFFD......: NotoSerif-Regular
 2589C.......: BabelStoneHanExtra
 2589D..2589F: SimSun-ExtB
 258A0..258A2: BabelStoneHanExtra
-258A3..258A8: SimSun-ExtB
+258A3.......: SimSun-ExtB
+258A4.......: BabelStoneHanExtra
+258A5..258A8: SimSun-ExtB
 258A9.......: BabelStoneHanExtra
 258AA..258B4: SimSun-ExtB
 258B5..258B7: BabelStoneHanExtra
@@ -12593,7 +12599,9 @@ FFFD......: NotoSerif-Regular
 25C76.......: BabelStoneHanExtra
 25C77.......: SimSun-ExtB
 25C78.......: BabelStoneHanExtra
-25C79..25C7B: SimSun-ExtB
+25C79.......: SimSun-ExtB
+25C7A.......: BabelStoneHanExtra
+25C7B.......: SimSun-ExtB
 25C7C.......: BabelStoneHanExtra
 25C7D.......: SimSun-ExtB
 25C7E..25C80: BabelStoneHanExtra
@@ -12654,9 +12662,7 @@ FFFD......: NotoSerif-Regular
 25D09.......: SimSun-ExtB
 25D0A.......: BabelStoneHanExtra
 25D0B..25D11: SimSun-ExtB
-25D12.......: BabelStoneHanExtra
-25D13.......: SimSun-ExtB
-25D14.......: BabelStoneHanExtra
+25D12..25D14: BabelStoneHanExtra
 25D15, 25D16: SimSun-ExtB
 25D17.......: BabelStoneHanExtra
 25D18..25D1F: SimSun-ExtB
@@ -12783,7 +12789,9 @@ FFFD......: NotoSerif-Regular
 25E56, 25E57: BabelStoneHanExtra
 25E58..25E5A: SimSun-ExtB
 25E5B, 25E5C: BabelStoneHanExtra
-25E5D..25E61: SimSun-ExtB
+25E5D, 25E5E: SimSun-ExtB
+25E5F.......: BabelStoneHanExtra
+25E60, 25E61: SimSun-ExtB
 25E62..25E65: BabelStoneHanExtra
 25E66..25E6A: SimSun-ExtB
 25E6B.......: BabelStoneHanExtra
@@ -12915,7 +12923,9 @@ FFFD......: NotoSerif-Regular
 25F56.......: BabelStoneHanExtra
 25F57.......: SimSun-ExtB
 25F58.......: BabelStoneHanExtra
-25F59..25F5B: SimSun-ExtB
+25F59.......: SimSun-ExtB
+25F5A.......: BabelStoneHanExtra
+25F5B.......: SimSun-ExtB
 25F5C.......: BabelStoneHanExtra
 25F5D..25F65: SimSun-ExtB
 25F66.......: BabelStoneHanExtra
@@ -13238,8 +13248,8 @@ FFFD......: NotoSerif-Regular
 26252.......: SimSun-ExtB
 26253.......: BabelStoneHanExtra
 26254.......: SimSun-ExtB
-26255.......: BabelStoneHanExtra
-26256, 26257: SimSun-ExtB
+26255, 26256: BabelStoneHanExtra
+26257.......: SimSun-ExtB
 26258, 26259: BabelStoneHanExtra
 2625A, 2625B: SimSun-ExtB
 2625C.......: BabelStoneHanExtra
@@ -13277,7 +13287,9 @@ FFFD......: NotoSerif-Regular
 262AE.......: BabelStoneHanExtra
 262AF.......: SimSun-ExtB
 262B0..262B2: BabelStoneHanExtra
-262B3..262B6: SimSun-ExtB
+262B3.......: SimSun-ExtB
+262B4.......: BabelStoneHanExtra
+262B5, 262B6: SimSun-ExtB
 262B7, 262B8: BabelStoneHanExtra
 262B9..262BC: SimSun-ExtB
 262BD.......: BabelStoneHanExtra
@@ -14273,8 +14285,8 @@ FFFD......: NotoSerif-Regular
 26B90.......: BabelStoneHanExtra
 26B91..26B93: SimSun-ExtB
 26B94, 26B95: BabelStoneHanExtra
-26B96, 26B97: SimSun-ExtB
-26B98, 26B99: BabelStoneHanExtra
+26B96.......: SimSun-ExtB
+26B97..26B99: BabelStoneHanExtra
 26B9A..26B9F: SimSun-ExtB
 26BA0.......: BabelStoneHanExtra
 26BA1..26BA5: SimSun-ExtB
@@ -14520,8 +14532,8 @@ FFFD......: NotoSerif-Regular
 26E03, 26E04: SimSun-ExtB
 26E05.......: BabelStoneHanExtra
 26E06..26E08: SimSun-ExtB
-26E09.......: BabelStoneHanExtra
-26E0A..26E1A: SimSun-ExtB
+26E09, 26E0A: BabelStoneHanExtra
+26E0B..26E1A: SimSun-ExtB
 26E1B..26E1D: BabelStoneHanExtra
 26E1E.......: SimSun-ExtB
 26E1F.......: BabelStoneHanExtra
@@ -14853,7 +14865,9 @@ FFFD......: NotoSerif-Regular
 271A8.......: BabelStoneHanExtra
 271A9.......: SimSun-ExtB
 271AA.......: BabelStoneHanExtra
-271AB..271AF: SimSun-ExtB
+271AB, 271AC: SimSun-ExtB
+271AD.......: BabelStoneHanExtra
+271AE, 271AF: SimSun-ExtB
 271B0.......: BabelStoneHanExtra
 271B1.......: SimSun-ExtB
 271B2.......: BabelStoneHanExtra
@@ -15911,7 +15925,9 @@ FFFD......: NotoSerif-Regular
 27B18.......: BabelStoneHanExtra
 27B19..27B1D: SimSun-ExtB
 27B1E.......: BabelStoneHanExtra
-27B1F..27B23: SimSun-ExtB
+27B1F, 27B20: SimSun-ExtB
+27B21.......: BabelStoneHanExtra
+27B22, 27B23: SimSun-ExtB
 27B24.......: BabelStoneHanExtra
 27B25, 27B26: SimSun-ExtB
 27B27, 27B28: BabelStoneHanExtra
@@ -17239,8 +17255,8 @@ FFFD......: NotoSerif-Regular
 28778..2877D: BabelStoneHanExtra
 2877E, 2877F: SimSun-ExtB
 28780, 28781: BabelStoneHanExtra
-28782..28784: SimSun-ExtB
-28785.......: BabelStoneHanExtra
+28782, 28783: SimSun-ExtB
+28784, 28785: BabelStoneHanExtra
 28786.......: SimSun-ExtB
 28787.......: BabelStoneHanExtra
 28788..2878B: SimSun-ExtB
@@ -17313,7 +17329,9 @@ FFFD......: NotoSerif-Regular
 28819, 2881A: BabelStoneHanExtra
 2881B..28820: SimSun-ExtB
 28821.......: BabelStoneHanExtra
-28822..28825: SimSun-ExtB
+28822, 28823: SimSun-ExtB
+28824.......: BabelStoneHanExtra
+28825.......: SimSun-ExtB
 28826.......: BabelStoneHanExtra
 28827.......: SimSun-ExtB
 28828..2882A: BabelStoneHanExtra
@@ -17678,8 +17696,8 @@ FFFD......: NotoSerif-Regular
 28B3C..28B42: SimSun-ExtB
 28B43.......: BabelStoneHanExtra
 28B44, 28B45: SimSun-ExtB
-28B46.......: BabelStoneHanExtra
-28B47, 28B48: SimSun-ExtB
+28B46, 28B47: BabelStoneHanExtra
+28B48.......: SimSun-ExtB
 28B49.......: BabelStoneHanExtra
 28B4A.......: SimSun-ExtB
 28B4B, 28B4C: BabelStoneHanExtra
@@ -17811,8 +17829,8 @@ FFFD......: NotoSerif-Regular
 28C78.......: BabelStoneHanExtra
 28C79..28C7C: SimSun-ExtB
 28C7D.......: BabelStoneHanExtra
-28C7E, 28C7F: SimSun-ExtB
-28C80.......: BabelStoneHanExtra
+28C7E.......: SimSun-ExtB
+28C7F, 28C80: BabelStoneHanExtra
 28C81..28C8B: SimSun-ExtB
 28C8C, 28C8D: BabelStoneHanExtra
 28C8E..28C91: SimSun-ExtB
@@ -18100,8 +18118,8 @@ FFFD......: NotoSerif-Regular
 28F21, 28F22: SimSun-ExtB
 28F23.......: BabelStoneHanExtra
 28F24.......: SimSun-ExtB
-28F25.......: BabelStoneHanExtra
-28F26..28F28: SimSun-ExtB
+28F25, 28F26: BabelStoneHanExtra
+28F27, 28F28: SimSun-ExtB
 28F29, 28F2A: BabelStoneHanExtra
 28F2B.......: SimSun-ExtB
 28F2C.......: BabelStoneHanExtra
@@ -18173,8 +18191,8 @@ FFFD......: NotoSerif-Regular
 28FD7.......: BabelStoneHanExtra
 28FD8.......: SimSun-ExtB
 28FD9, 28FDA: BabelStoneHanExtra
-28FDB..28FE0: SimSun-ExtB
-28FE1..28FE3: BabelStoneHanExtra
+28FDB..28FDF: SimSun-ExtB
+28FE0..28FE3: BabelStoneHanExtra
 28FE4..28FE9: SimSun-ExtB
 28FEA, 28FEB: BabelStoneHanExtra
 28FEC..28FEE: SimSun-ExtB
@@ -18209,8 +18227,8 @@ FFFD......: NotoSerif-Regular
 29030, 29031: BabelStoneHanExtra
 29032..2903C: SimSun-ExtB
 2903D, 2903E: BabelStoneHanExtra
-2903F..29045: SimSun-ExtB
-29046.......: BabelStoneHanExtra
+2903F..29044: SimSun-ExtB
+29045, 29046: BabelStoneHanExtra
 29047..29049: SimSun-ExtB
 2904A, 2904B: BabelStoneHanExtra
 2904C..2904E: SimSun-ExtB
@@ -19108,9 +19126,7 @@ FFFD......: NotoSerif-Regular
 29881, 29882: SimSun-ExtB
 29883.......: BabelStoneHanExtra
 29884..29888: SimSun-ExtB
-29889.......: BabelStoneHanExtra
-2988A.......: SimSun-ExtB
-2988B.......: BabelStoneHanExtra
+29889..2988B: BabelStoneHanExtra
 2988C.......: SimSun-ExtB
 2988D.......: BabelStoneHanExtra
 2988E..29893: SimSun-ExtB
@@ -19119,7 +19135,9 @@ FFFD......: NotoSerif-Regular
 29896.......: BabelStoneHanExtra
 29897..29899: SimSun-ExtB
 2989A, 2989B: BabelStoneHanExtra
-2989C..298A0: SimSun-ExtB
+2989C..2989E: SimSun-ExtB
+2989F.......: BabelStoneHanExtra
+298A0.......: SimSun-ExtB
 298A1, 298A2: BabelStoneHanExtra
 298A3..298A9: SimSun-ExtB
 298AA.......: BabelStoneHanExtra
@@ -19238,9 +19256,7 @@ FFFD......: NotoSerif-Regular
 29996, 29997: SimSun-ExtB
 29998.......: BabelStoneHanExtra
 29999.......: SimSun-ExtB
-2999A.......: BabelStoneHanExtra
-2999B.......: SimSun-ExtB
-2999C.......: BabelStoneHanExtra
+2999A..2999C: BabelStoneHanExtra
 2999D.......: SimSun-ExtB
 2999E..299A0: BabelStoneHanExtra
 299A1.......: SimSun-ExtB
@@ -19634,8 +19650,8 @@ FFFD......: NotoSerif-Regular
 29DAE.......: SimSun-ExtB
 29DAF..29DB5: BabelStoneHanExtra
 29DB6.......: SimSun-ExtB
-29DB7..29DB9: BabelStoneHanExtra
-29DBA, 29DBB: SimSun-ExtB
+29DB7..29DBA: BabelStoneHanExtra
+29DBB.......: SimSun-ExtB
 29DBC..29DBE: BabelStoneHanExtra
 29DBF, 29DC0: SimSun-ExtB
 29DC1, 29DC2: BabelStoneHanExtra
@@ -28319,8 +28335,8 @@ FFFD......: NotoSerif-Regular
 30689, 3068A: SimSun-ExtG
 3068B..3068F: BabelStoneHanExtra
 30690.......: SimSun-ExtG
-30691.......: BabelStoneHanExtra
-30692, 30693: SimSun-ExtG
+30691, 30692: BabelStoneHanExtra
+30693.......: SimSun-ExtG
 30694.......: BabelStoneHanExtra
 30695..30698: SimSun-ExtG
 30699.......: BabelStoneHanExtra
@@ -28397,8 +28413,8 @@ FFFD......: NotoSerif-Regular
 3073E, 3073F: SimSun-ExtG
 30740..30742: BabelStoneHanExtra
 30743, 30744: SimSun-ExtG
-30745, 30746: BabelStoneHanExtra
-30747, 30748: SimSun-ExtG
+30745..30747: BabelStoneHanExtra
+30748.......: SimSun-ExtG
 30749.......: BabelStoneHanExtra
 3074A.......: SimSun-ExtG
 3074B..3074E: BabelStoneHanExtra
@@ -29122,23 +29138,19 @@ FFFD......: NotoSerif-Regular
 30EE5, 30EE6: BabelStoneHanExtra
 30EE7.......: SimSun-ExtG
 30EE8.......: BabelStoneHanExtra
-30EE9, 30EEA: SimSun-ExtG
-30EEB, 30EEC: BabelStoneHanExtra
+30EE9.......: SimSun-ExtG
+30EEA..30EEC: BabelStoneHanExtra
 30EED.......: SimSun-ExtG
 30EEE, 30EEF: BabelStoneHanExtra
 30EF0.......: SimSun-ExtG
-30EF1.......: BabelStoneHanExtra
-30EF2.......: SimSun-ExtG
-30EF3.......: BabelStoneHanExtra
-30EF4.......: SimSun-ExtG
-30EF5.......: BabelStoneHanExtra
+30EF1..30EF5: BabelStoneHanExtra
 30EF6.......: SimSun-ExtG
 30EF7.......: BabelStoneHanExtra
 30EF8.......: SimSun-ExtG
 30EF9.......: BabelStoneHanExtra
 30EFA.......: SimSun-ExtG
-30EFB.......: BabelStoneHanExtra
-30EFC..30EFF: SimSun-ExtG
+30EFB, 30EFC: BabelStoneHanExtra
+30EFD..30EFF: SimSun-ExtG
 30F00..30F03: BabelStoneHanExtra
 30F04.......: SimSun-ExtG
 30F05.......: BabelStoneHanExtra
@@ -29284,8 +29296,8 @@ FFFD......: NotoSerif-Regular
 31170..31174: BabelStoneHanExtra
 31175, 31176: SimSun-ExtG
 31177.......: BabelStoneHanExtra
-31178, 31179: SimSun-ExtG
-3117A..3117C: BabelStoneHanExtra
+31178.......: SimSun-ExtG
+31179..3117C: BabelStoneHanExtra
 3117D..3117F: SimSun-ExtG
 31180, 31181: BabelStoneHanExtra
 31182.......: SimSun-ExtG
