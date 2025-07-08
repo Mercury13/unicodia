@@ -561,9 +561,9 @@ uc::MultiResult uc::doSearch(QString what)
             ensureEmojiSearch();
             static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
             const auto cp1 = char32_t(flagName[0]) + OFS_FLAGA;
-            if (auto where1 = trieRoot.unsafeFind(cp1)) {
+            if (auto where1 = trieRoot.find(cp1)) {
                 const auto cp2 = char32_t(flagName[1]) + OFS_FLAGA;
-                auto where2 = where1->find(cp2);
+                auto [where2, _] = where1->find(cp2);
                 if (where2 && where2->result()) {
                     // At last found
                     auto& bk = r.emplace_back(where2->result());

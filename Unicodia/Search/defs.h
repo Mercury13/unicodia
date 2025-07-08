@@ -4,10 +4,12 @@
 
 namespace srh {
 
-    enum class EmojiType : unsigned char {
+    /// @warning From best to worst;
+    ///     unrelated (PART and UNKNOWN_FLAG) in any order
+    enum class EmojiLevel : unsigned char {
         FULL,   ///< fully-qualified
-        PART,   ///< minimally qualified
-        UNKNOWN_FLAG,  ///< unknown flag
+        PART,   ///< minimally qualified/unqualified
+        UNKNOWN_FLAG,  ///< unknown flag        
     };
 
     /// @tparam R
@@ -18,7 +20,7 @@ namespace srh {
         R result;
         size_t index;
         unsigned length;
-        EmojiType type;
+        EmojiLevel level;
     };
 
 }   // namespace srh

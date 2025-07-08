@@ -45,13 +45,13 @@ Trie1::Trie1()
 void expectEmoji(const srh::Decoded<Emoji>& line,
                  size_t index,
                  unsigned length,
-                 srh::EmojiType type,
+                 srh::EmojiLevel level,
                  Emoji thing)
 {
     EXPECT_EQ(index, line.index);
     EXPECT_EQ(length, line.length);
     EXPECT_EQ(thing, line.result);
-    EXPECT_EQ(type, line.type);
+    EXPECT_EQ(level, line.level);
 }
 
 ///
@@ -65,9 +65,9 @@ TEST (DecodeTrie, ThreeFlags)
 
     EXPECT_EQ(3u, res.size());
 
-    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::PUERTO_RICO);
-    expectEmoji(res.at(1), 2, 2, srh::EmojiType::FULL, Emoji::CUBA);
-    expectEmoji(res.at(2), 4, 2, srh::EmojiType::FULL, Emoji::SPAIN);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::FULL, Emoji::PUERTO_RICO);
+    expectEmoji(res.at(1), 2, 2, srh::EmojiLevel::FULL, Emoji::CUBA);
+    expectEmoji(res.at(2), 4, 2, srh::EmojiLevel::FULL, Emoji::SPAIN);
 }
 
 
@@ -86,7 +86,7 @@ TEST (DecodeTrie, InterracialKiss)
 
     EXPECT_EQ(1u, res.size());
 
-    expectEmoji(res.at(0), 1, 10, srh::EmojiType::FULL, Emoji::KISS_INTERRACIAL);
+    expectEmoji(res.at(0), 1, 10, srh::EmojiLevel::FULL, Emoji::KISS_INTERRACIAL);
 }
 
 
@@ -107,8 +107,8 @@ TEST (DecodeTrie, InterracialKissMan)
 
     EXPECT_EQ(2u, res.size());
 
-    expectEmoji(res.at(0), 1,  10, srh::EmojiType::FULL, Emoji::KISS_INTERRACIAL);
-    expectEmoji(res.at(1), 12, 2,  srh::EmojiType::FULL, Emoji::MAN_BLACK);
+    expectEmoji(res.at(0), 1,  10, srh::EmojiLevel::FULL, Emoji::KISS_INTERRACIAL);
+    expectEmoji(res.at(1), 12, 2,  srh::EmojiLevel::FULL, Emoji::MAN_BLACK);
 }
 
 
@@ -127,8 +127,8 @@ TEST (DecodeTrie, KissBadChar)
 
     EXPECT_EQ(2u, res.size());
 
-    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
-    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiLevel::FULL, Emoji::HEART_RED);
 }
 
 
@@ -147,8 +147,8 @@ TEST (DecodeTrie, KissAbrupt)
 
     EXPECT_EQ(2u, res.size());
 
-    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
-    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiLevel::FULL, Emoji::HEART_RED);
 }
 
 
@@ -168,9 +168,9 @@ TEST (DecodeTrie, KissMoreEmoji)
 
     EXPECT_EQ(3u, res.size());
 
-    expectEmoji(res.at(0), 0, 2, srh::EmojiType::FULL, Emoji::WOMAN_WHITE);
-    expectEmoji(res.at(1), 3, 2, srh::EmojiType::FULL, Emoji::HEART_RED);
-    expectEmoji(res.at(2), 9, 2, srh::EmojiType::FULL, Emoji::SPAIN);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::FULL, Emoji::WOMAN_WHITE);
+    expectEmoji(res.at(1), 3, 2, srh::EmojiLevel::FULL, Emoji::HEART_RED);
+    expectEmoji(res.at(2), 9, 2, srh::EmojiLevel::FULL, Emoji::SPAIN);
 }
 
 
@@ -186,7 +186,7 @@ TEST (DecodeTrie, StrangeFlags)
 
     EXPECT_EQ(1u, res.size());
 
-    expectEmoji(res.at(0), 1, 2, srh::EmojiType::FULL, Emoji::AFGHANISTAN);
+    expectEmoji(res.at(0), 1, 2, srh::EmojiLevel::FULL, Emoji::AFGHANISTAN);
 }
 
 
@@ -202,6 +202,6 @@ TEST (DecodeTrie, IncompleteFlags)
 
     EXPECT_EQ(2u, res.size());
 
-    expectEmoji(res.at(0), 2, 2, srh::EmojiType::FULL, Emoji::AFGHANISTAN);
-    expectEmoji(res.at(1), 5, 2, srh::EmojiType::FULL, Emoji::SPAIN);
+    expectEmoji(res.at(0), 2, 2, srh::EmojiLevel::FULL, Emoji::AFGHANISTAN);
+    expectEmoji(res.at(1), 5, 2, srh::EmojiLevel::FULL, Emoji::SPAIN);
 }

@@ -8,17 +8,11 @@
 #include "u_Vector.h"
 #include "u_DumbSp.h"
 #include "UcCp.h"
-#include "u_TypedFlags.h"
 
 // Search
 #include "defs.h"
 
 namespace srh {
-
-    enum class Linkfg : unsigned char {
-        LOSES_QUAL = 1<<0,
-    };
-    DEFINE_ENUM_OPS(Linkfg)
 
     enum class NodeType : unsigned char {
         TRANSIENT, FINAL, UNKNOWN_FLAG
@@ -50,12 +44,20 @@ namespace srh {
             fResult = res;
         }
 
-        inline const TrieNode* unsafeFind(char32_t c) const;
-        const TrieNode* find(char32_t c) const;
+        struct FindResult {
+            const TrieNode* node = nullptr;
+            EmojiLevel level = EmojiLevel::FULL;
+
+            constexpr operator bool() const { return node; }
+            constexpr const TrieNode& operator * () const { return *node; }
+            constexpr const TrieNode* operator ->() const { return  node; }
+        };
+
+        FindResult find(char32_t c) const;
     protected:
         struct Link {
             dumb::Sp<TrieNode> target;
-            Flags<Linkfg> fgs;
+            EmojiLevel level = EmojiLevel::FULL;
         };
         using M = std::unordered_map<char32_t, Link>;
 
@@ -92,22 +94,17 @@ namespace srh {
 }   // namespace srh
 
 template <class R>
-inline const srh::TrieNode<R>* srh::TrieNode<R>::unsafeFind(char32_t c) const
+auto srh::TrieNode<R>::find(char32_t c) const -> FindResult
 {
     if (children) {
         if (auto x = children->find(c); x != children->end()) {
-            return x->second.target.get();
+            return {
+                .node = x->second.target.get(),
+                .level = x->second.level,
+            };
         }
     }
-    return nullptr;
-}
-
-template <class R>
-const srh::TrieNode<R>* srh::TrieNode<R>::find(char32_t c) const
-{
-    if (!children)
-        return nullptr;
-    return unsafeFind(c);
+    return {};
 }
 
 template <class R>
@@ -140,12 +137,14 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
         const Node* node = nullptr;
         size_t resetTime = 0;
         unsigned length = 0;
-        EmojiType type = EmojiType::FULL;
+        EmojiLevel level = EmojiLevel::FULL;
     } lastKnown;
 
     SafeVector<srh::Decoded<R>> r;
 
     size_t index = 0;
+    static constexpr EmojiLevel STARTING_LEVEL = EmojiLevel::FULL;
+    EmojiLevel level = STARTING_LEVEL;
 
     auto registerResult = [&]() {
         // Why +1? We do not search for single-char emoji, but if…
@@ -154,7 +153,7 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
             lastKnown.node->result(),
             lastKnown.resetTime,
             lastKnown.length,
-            lastKnown.type);
+            lastKnown.level);
         // I do not want to make true Aho-Corasick here, so back down
         // Need backing down, counter-example: incomplete multi-racial kiss + A
         //  WOMAN RACE1 ZWJ HEART VS16 ZWJ KISS_MARK ZWJ MAN (no race2) A
@@ -169,27 +168,31 @@ SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) cons
         for (; index < s.length(); ++index) {
             char32_t c = s[index];
             if (auto child = p->find(c)) {
-                p = child;
+                p = child.node;
+                // Max = worse
+                level = std::max(level, child.level);
                 if (p->type() != NodeType::TRANSIENT) {
                     lastKnown.node = p;
                     lastKnown.length = index + 1 - lastKnown.resetTime;
                     /// @todo [urgent] emoji type
-                    lastKnown.type = (p->type() == NodeType::UNKNOWN_FLAG)
-                                     ? EmojiType::UNKNOWN_FLAG : EmojiType::FULL;
+                    lastKnown.level = (p->type() == NodeType::UNKNOWN_FLAG)
+                                     ? EmojiLevel::UNKNOWN_FLAG : level;
                 }
             } else if (p != this) {
                 // p==&trieRoot → we already tried and no need 2nd time
                 // We are at dead end!
                 // Anyway move to root
                 p = this;
+                level = STARTING_LEVEL;
                 // Found smth? (never in root)
                 if (lastKnown.node) {
                     registerResult();
                 // Run through last character again, root’s children are always present
-                } else if (auto child = p->unsafeFind(c)) {
-                    // Why needed [A][A][D], all are flag components
+                } else if (auto child = p->find(c)) {
+                    // Why needed: [A][A][D], all are flag components
                     lastKnown.resetTime = index;
-                    p = child;
+                    p = child.node;
+                    level = child.level;
                     // 1st is never decodeable
                 } else {
                     // Nothing found, just reset
