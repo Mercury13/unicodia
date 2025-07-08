@@ -109,7 +109,7 @@ Anyway, Unicodia will never be a good ideograph guide, everything I write about 
 
 ## Egyptian
 * Legacy hieroglyphs are done with the same attention as core
-* Extended hieroglyphs just somehow resemble the sample image
+* Hieroglyphs w/o description just somehow resemble the sample image, no efforts are made to make them look exactly
 * Same if the sample image is not in harmony with description
 
 ## Data
