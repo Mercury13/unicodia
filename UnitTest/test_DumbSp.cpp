@@ -27,7 +27,7 @@ TEST (DumbSp, CtorDtor)
     dumb::Sp<Target> p;
     EXPECT_FALSE(p);
     EXPECT_EQ(nullptr, p.get());
-    EXPECT_EQ(0, p.refCount());
+    EXPECT_EQ(0u, p.refCount());
 }
 
 
@@ -45,12 +45,12 @@ TEST (DumbSp, ConstructByPtr)
         EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(41, p->tag);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -60,22 +60,22 @@ TEST (DumbSp, AssignByPtr)
     {
         dumb::Sp<Target> p;
 
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         p = dumb::Sp<Target>(new Target(42, ctr));
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(42, p->tag);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -85,33 +85,33 @@ TEST (DumbSp, MoveConstructByPtr)
     {
         dumb::Sp<Target> p, q;
 
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         p = dumb::Sp<Target>(new Target(42, ctr));
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(42, p->tag);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         q = std::move(p);
 
-        EXPECT_FALSE(p);
+        EXPECT_FALSE(p);    // NOLINT bugprone-use-after-move
         EXPECT_EQ(nullptr, p.get());
-        EXPECT_EQ(0, p.refCount());
+        EXPECT_EQ(0u, p.refCount());
 
         EXPECT_TRUE(q);
         EXPECT_NE(nullptr, q.get());
-        EXPECT_EQ(1, q.refCount());
+        EXPECT_EQ(1u, q.refCount());
         EXPECT_EQ(42, q->tag);
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -119,19 +119,19 @@ TEST (DumbSp, Reset)
 {
     Counter ctr;
     {
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         dumb::Sp<Target> p(new Target(43, ctr));
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
         EXPECT_TRUE(p);
 
         p.reset();
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(1, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(1u, ctr.nDtors);
         EXPECT_FALSE(p);
     }
 }
@@ -141,22 +141,22 @@ TEST (DumbSp, MakeSp)
 {
     Counter ctr;
     {
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         auto p = dumb::makeSp<Target>(43, ctr);
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(43, p->tag);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -164,34 +164,34 @@ TEST (DumbSp, CtorByCopy)
 {
     Counter ctr;
     {
-        EXPECT_EQ(0, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(0u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         auto p = dumb::makeSp<Target>(44, ctr);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(44, p->tag);
 
         {
-            auto q(p);
-            EXPECT_EQ(2, p.refCount());
-            EXPECT_EQ(2, q.refCount());
+            const auto q(p);
+            EXPECT_EQ(2u, p.refCount());
+            EXPECT_EQ(2u, q.refCount());
             EXPECT_EQ(44, q->tag);
 
-            EXPECT_EQ(1, ctr.nCtors);
-            EXPECT_EQ(0, ctr.nDtors);
+            EXPECT_EQ(1u, ctr.nCtors);
+            EXPECT_EQ(0u, ctr.nDtors);
         }
 
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -201,32 +201,32 @@ TEST (DumbSp, AssignByCopy)
     {
         auto p = dumb::makeSp<Target>(45, ctr);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(45, p->tag);
 
         {
             dumb::Sp<Target> q;
-            EXPECT_EQ(0, q.refCount());
+            EXPECT_EQ(0u, q.refCount());
 
             q = p;
-            EXPECT_EQ(2, p.refCount());
-            EXPECT_EQ(2, q.refCount());
+            EXPECT_EQ(2u, p.refCount());
+            EXPECT_EQ(2u, q.refCount());
             EXPECT_EQ(45, q->tag);
 
-            EXPECT_EQ(1, ctr.nCtors);
-            EXPECT_EQ(0, ctr.nDtors);
+            EXPECT_EQ(1u, ctr.nCtors);
+            EXPECT_EQ(0u, ctr.nDtors);
         }
 
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -236,27 +236,27 @@ TEST (DumbSp, AssignToSelf)
     {
         auto p = dumb::makeSp<Target>(46, ctr);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(46, p->tag);
 
         p = p;
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
         EXPECT_TRUE(p);
         EXPECT_NE(nullptr, p.get());
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(46, p->tag);
     }
 
-    EXPECT_EQ(1, ctr.nCtors);
-    EXPECT_EQ(1, ctr.nDtors);
+    EXPECT_EQ(1u, ctr.nCtors);
+    EXPECT_EQ(1u, ctr.nDtors);
 }
 
 
@@ -266,32 +266,32 @@ TEST (DumbSp, AssignAdvanced)
     {
         auto p = dumb::makeSp<Target>(47, ctr);
 
-        EXPECT_EQ(1, ctr.nCtors);
-        EXPECT_EQ(0, ctr.nDtors);
+        EXPECT_EQ(1u, ctr.nCtors);
+        EXPECT_EQ(0u, ctr.nDtors);
 
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
         EXPECT_EQ(47, p->tag);
 
         {
             auto q = dumb::makeSp<Target>(48, ctr);
-            EXPECT_EQ(1, q.refCount());
+            EXPECT_EQ(1u, q.refCount());
             EXPECT_EQ(48, q->tag);
 
-            EXPECT_EQ(2, ctr.nCtors);
-            EXPECT_EQ(0, ctr.nDtors);
+            EXPECT_EQ(2u, ctr.nCtors);
+            EXPECT_EQ(0u, ctr.nDtors);
 
             q = p;
-            EXPECT_EQ(2, p.refCount());
-            EXPECT_EQ(2, q.refCount());
+            EXPECT_EQ(2u, p.refCount());
+            EXPECT_EQ(2u, q.refCount());
             EXPECT_EQ(47, q->tag);
 
-            EXPECT_EQ(2, ctr.nCtors);
-            EXPECT_EQ(1, ctr.nDtors);
+            EXPECT_EQ(2u, ctr.nCtors);
+            EXPECT_EQ(1u, ctr.nDtors);
         }
 
-        EXPECT_EQ(1, p.refCount());
+        EXPECT_EQ(1u, p.refCount());
     }
 
-    EXPECT_EQ(2, ctr.nCtors);
-    EXPECT_EQ(2, ctr.nDtors);
+    EXPECT_EQ(2u, ctr.nCtors);
+    EXPECT_EQ(2u, ctr.nDtors);
 }

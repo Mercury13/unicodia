@@ -36,7 +36,9 @@ namespace srh {
         unsigned short nZwjs() const noexcept { return fnZwjs; }
 
         /// @return   never null
-        TrieNode* add(char32_t c);
+        TrieNode* add(char32_t c, EmojiLevel level);
+
+        void link(char32_t c, EmojiLevel level, TrieNode* target);
 
         inline void setFinal(R res)
         {
@@ -108,7 +110,7 @@ auto srh::TrieNode<R>::find(char32_t c) const -> FindResult
 }
 
 template <class R>
-srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
+srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c, EmojiLevel level)
 {
     if (!children)
         children = std::make_unique<M>();
@@ -116,16 +118,39 @@ srh::TrieNode<R>* srh::TrieNode<R>::add(char32_t c)
     if (!it->second.target) {
         auto nNewZwjs = fnZwjs + static_cast<unsigned short>(c == cp::ZWJ);
         it->second.target = dumb::makeSp<TrieNode>(nNewZwjs);
+        it->second.level = level;
     }
     return it->second.target.get();
+}
+
+template <class R>
+void srh::TrieNode<R>::link(char32_t c, EmojiLevel level, TrieNode* target)
+{
+    if (!children)
+        children = std::make_unique<M>();
+    auto [it, _] = children->try_emplace(c);
+    if (!it->second.target) {
+        it->second.target.reset(target);
+        it->second.level = level;
+    }
 }
 
 template <class R>
 void srh::TrieRoot<R>::add(std::u32string_view s, R res)
 {
     Node* p = this;
+    Node* prevP = nullptr;
     for (auto c : s) {
-        p = p->add(c);
+        auto* oldP = p;
+        p = oldP->add(c, EmojiLevel::FULL);
+        if (c == cp::VS16) {
+            prevP = oldP;
+        } else {
+            if (prevP) {
+                prevP->link(c, EmojiLevel::PART, p);
+            }
+            prevP = nullptr;
+        }
     }
     p->setFinal(std::move(res));
 }

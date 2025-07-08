@@ -39,12 +39,14 @@ namespace dumb {
         Sp(const Sp& other) noexcept : Sp(other.x) {}
         constexpr Sp(Sp&& other) noexcept : x(other.x.exchange(nullptr)) {}
         Sp& operator = (const Sp& other) noexcept;
+        [[deprecated("Use reset")]] Sp& operator = (Target* other) = delete;
         Sp& operator = (Sp&& other) noexcept {
             assignRelease(other.x.exchange(nullptr));
             return *this;
         }
         ~Sp() noexcept { assignRelease(nullptr); }
         void reset() noexcept { assignRelease(nullptr); }
+        void reset(Target* x) noexcept { add(x); assignRelease(x); }
         [[nodiscard]] Target* get() const noexcept { return x.load(); }
         [[nodiscard]] Target& operator * () const noexcept { return *x.load(); }
         [[nodiscard]] Target* operator -> () const noexcept { return x.load(); }
