@@ -205,3 +205,22 @@ TEST (DecodeTrie, IncompleteFlags)
     expectEmoji(res.at(0), 2, 2, srh::EmojiLevel::FULL, Emoji::AFGHANISTAN);
     expectEmoji(res.at(1), 5, 2, srh::EmojiLevel::FULL, Emoji::SPAIN);
 }
+
+
+///
+///  Decode
+///
+TEST (DecodeTrie, InterracialKissPart)
+{
+    Trie1 tr;
+    const char32_t data[] { 'A',
+                cp::WOMAN, cp::SKIN1, cp::ZWJ,
+                cp::EMOJI_RED_HEART, cp::ZWJ,
+                cp::KISS_MARK, cp::ZWJ,
+                cp::MAN, cp::SKIN5, 'B', 'C' };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(1u, res.size());
+
+    expectEmoji(res.at(0), 1,  9, srh::EmojiLevel::PART, Emoji::KISS_INTERRACIAL);
+}
