@@ -61,10 +61,8 @@ struct GetCp {
     explicit operator bool() const noexcept { return cp; }
     /// @return [+] may be text  [-] surely graphic
     [[nodiscard]] bool mayBeText() const noexcept { return cp && !forceGraphic; }
-    [[nodiscard]] bool mayBeText(uc::EmojiDraw emojiDraw)
-        { return (cp && ((emojiDraw == uc::EmojiDraw::FORCE_TEXT) || !forceGraphic)); }
+    [[nodiscard]] bool mayBeText(uc::EmojiDraw emojiDraw) const noexcept;
 };
-
 
 struct SvgThing
 {

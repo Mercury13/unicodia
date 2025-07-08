@@ -47,6 +47,14 @@ namespace uc {
 /// (do not need in Blocks, and need in Library)
 enum class Want32 : unsigned char { NO, YES };
 
+struct LocKey {
+    const char* v;
+};
+
+constexpr LocKey operator ""_lk (const char* x, size_t) { return { .v = x }; }
+
+constexpr LocKey LK_COPIED = "Common.Copied"_lk;
+
 namespace mywiki {
 
     /// Interface that’s used to walk through internal links
@@ -101,7 +109,8 @@ namespace mywiki {
         ///                         Window will shun this rectangle if possible
         /// @param [in] text       Text to copy
         virtual void copyTextAbs(
-                QWidget* widget, const QRect& absRect, const QString& text) = 0;
+                QWidget* widget, const QRect& absRect, const QString& text,
+                LocKey locKey) = 0;
 
         /// Follows standard internet link: HTTP(S), MailTo…
         /// (Wiki itself parses links and decides what to do on click)
@@ -119,7 +128,8 @@ namespace mywiki {
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& html);
         void popupAtWidget(QWidget* widget, const QString& html);
         void copyTextRel(
-                QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
+                QWidget* widget, TinyOpt<QRect> relRect, const QString& text,
+                LocKey locKey);
     };
 
     enum class LinkClass : unsigned char {

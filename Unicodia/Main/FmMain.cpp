@@ -1556,13 +1556,13 @@ FmMain::~FmMain()
 }
 
 
-void FmMain::blinkCopied(QWidget* widget, const QRect& absRect)
+void FmMain::blinkCopied(QWidget* widget, const QRect& absRect, LocKey locKey)
 {
-    mainGui.blinkCopied(widget, absRect);
+    mainGui.blinkCopied(widget, absRect, locKey);
 }
 
 
-void FmMain::blinkCopied(QAbstractItemView* table, QWidget* initiator)
+void FmMain::blinkCopied(QAbstractItemView* table, QWidget* initiator, LocKey locKey)
 {
     if (!initiator)
         initiator = qobject_cast<QWidget*>(sender());
@@ -1589,7 +1589,7 @@ void FmMain::blinkCopied(QAbstractItemView* table, QWidget* initiator)
     }
 
     corner = initiator->mapToGlobal(corner);
-    blinkCopied(initiator, QRect{ corner, size});
+    blinkCopied(initiator, QRect{ corner, size}, locKey);
 }
 
 
@@ -1597,7 +1597,7 @@ void FmMain::copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
     uc::copyCp(ch.code, channel);
-    blinkCopied(ui->tableChars, initiator);
+    blinkCopied(ui->tableChars, initiator, LK_COPIED);
 }
 
 
@@ -1605,7 +1605,7 @@ void FmMain::copyFavsThing(uc::CopiedChannel channel)
 {
     if (auto ch = favsModel.charAt(ui->tableFavs->currentIndex())) {
         uc::copyCp(ch.code, channel);
-        blinkCopied(ui->tableFavs, nullptr);
+        blinkCopied(ui->tableFavs, nullptr, LK_COPIED);
     }
 }
 
@@ -1619,7 +1619,7 @@ void FmMain::copyFavsSample()
 
 
 void FmMain::blinkCopiedForWidget(QWidget* initiator)
-    { blinkCopied(nullptr, initiator); }
+    { blinkCopied(nullptr, initiator, LK_COPIED); }
 
 
 void FmMain::copyCurrentCharNull()
@@ -1652,7 +1652,7 @@ void FmMain::copyCurrentLib()
     if (!index.isValid())
         return;
     if (uc::copyNode(libModel.nodeAt(index)))
-        blinkCopied(ui->treeLibrary, nullptr);
+        blinkCopied(ui->treeLibrary, nullptr, LK_COPIED);
 }
 
 
@@ -1665,7 +1665,7 @@ void FmMain::copyLibChar(uc::CopiedChannel channel)
     auto dug = EmojiPainter::getCp(node.value);
     if (dug) {
         uc::copyCp(dug.cp, channel);
-        blinkCopied(ui->treeLibrary, nullptr);
+        blinkCopied(ui->treeLibrary, nullptr, LK_COPIED);
     }
 }
 
@@ -2134,11 +2134,14 @@ void FmMain::blinkAddCpToFavs()
 }
 
 
-void FmMain::goToNode(const uc::LibNode& node)
+bool FmMain::goToNode(const uc::LibNode& node)
 {
+    if (!node.isGoTarget())
+        return false;
     ui->tabsMain->setCurrentWidget(ui->tabLibrary);
     auto index = libModel.indexOf(node);
     ui->treeLibrary->setCurrentIndex(index);
+    return true;
 }
 
 
@@ -2494,14 +2497,18 @@ void FmMain::searchLocalMenuRequested(const QPoint& where)
     bool hasCp = line && line->cp;
     bool hasNode = line && !line->cp && line->node;
     bool hasObject = hasCp || hasNode;
+    bool isCopyable = hasObject;
 
     if(hasNode) {
         localSearch.acGo->setText(loc::get("Main.Local.FindLib"));
+        hasObject = line->node->isGoTarget();
+        isCopyable = (line->nodeCopyState() >= uc::CopyState::MIN_COPYABLE);
     } else {    // No object → let it be “Find in Blocks” as a stub
         localSearch.acGo->setText(loc::get("Main.Local.FindBlk"));
     }
+    // You can go to incomplete object, but cannot copy
     localSearch.acGo->setEnabled(hasObject);
-    localSearch.acCopy->setEnabled(hasObject);
+    localSearch.acCopy->setEnabled(hasObject && isCopyable);
     TableLocalMenu::popupMenu(ui->treeSearch->viewport(), localSearch.menu, where);
 }
 
@@ -2515,11 +2522,19 @@ void FmMain::copyCurrentSearch()
     if (line->cp) {
         // Copy CP
         uc::copyCp(line->code, uc::CopiedChannel::CHAR);
-        blinkCopied(ui->treeSearch, nullptr);
+        blinkCopied(ui->treeSearch, nullptr, LK_COPIED);
     } else if (line->node) {
-        // Copy node
-        uc::copyNode(*line->node);
-        blinkCopied(ui->treeSearch, nullptr);
+        LocKey locKey = LK_COPIED;
+        switch (line->nodeCopyState()) {
+        case uc::CopyState::UNCOPYABLE: break;
+        case uc::CopyState::OTHER_THING:
+            locKey = "Search.FullEmoji"_lk;
+            [[fallthrough]];
+        case uc::CopyState::NORMAL:
+            uc::copyNode(*line->node);
+            blinkCopied(ui->treeSearch, nullptr, locKey);
+            break;
+        }
     }
 }
 

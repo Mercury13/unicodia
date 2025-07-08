@@ -12355,6 +12355,11 @@
     </au-cmt>
     <transl>{1} 絵文字</transl>
    </text>
+   <text id="FullEmoji" force-attention="true">
+    <orig>Warning: copied full emoji</orig>
+    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji but warn</au-cmt>
+    <transl>警告: 絵文字全体をコピーしました</transl>
+   </text>
   </group>
   <group id="Expand">
    <au-cmt>Test: expand/collapse CJK</au-cmt>

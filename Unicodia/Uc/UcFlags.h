@@ -76,6 +76,7 @@ namespace uc {
         MISRENDER_0   = 1<<8,   ///< [+] emoji misrenders are possible
         MISRENDER_1   = 1<<9,   ///< [+] emoji misrenders are possible
         MISRENDER_2   = 1<<10,  ///< [+] emoji misrenders are possible
+        TECHNICAL     = 1<<15,  ///< [+] technical block we cannot go to
     };
     using Lfgs = Flags<Lfg>;
     DEFINE_ENUM_OPS(Lfg)

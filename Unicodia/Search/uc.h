@@ -49,6 +49,13 @@ namespace uc {
         // HIGHEST
     };
 
+    enum class CopyState : unsigned char {
+        UNCOPYABLE,     // Uncopyable. At all
+        OTHER_THING,    // Other thing to copy
+        NORMAL,         // Copy what is shown
+        MIN_COPYABLE = CopyState::OTHER_THING   // Minimal copyable
+    };
+
     struct MiniLine {
         char32_t code = 0xFFFFFF;           ///< char code
         CpType type = CpType::NONCHARACTER; ///< what found
@@ -64,6 +71,14 @@ namespace uc {
             : code(aCode), type(aType), cp(aCp) {}
         constexpr MiniLine(const uc::LibNode* aNode, srh::EmojiLevel aLevel)
             : type(CpType::LIBNODE),  emojiLevel(aLevel), node(aNode) {}
+
+        CopyState nodeCopyState() const noexcept
+        {
+            if (!node || !node->isGoTarget())
+                return CopyState::UNCOPYABLE;
+            return (emojiLevel == srh::EmojiLevel::FULL)
+                    ? CopyState::NORMAL : CopyState::OTHER_THING;
+        }
     };
 
     struct SearchLine : public MiniLine {

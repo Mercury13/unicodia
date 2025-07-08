@@ -57,10 +57,10 @@ void MyGui::popupLinkActivated(const QString& link)
 }
 
 
-void MyGui::blinkCopied(QWidget* widget, const QRect& absRect)
+void MyGui::blinkCopied(QWidget* widget, const QRect& absRect, LocKey locKey)
 {
     fmMessage.ensure(wiMain)
-             .showNearAbs(loc::get("Common.Copied"), widget, absRect);
+             .showNearAbs(loc::get(locKey.v), widget, absRect);
 }
 
 
@@ -88,10 +88,11 @@ void MyGui::popupAtAbs(
 
 
 void MyGui::copyTextAbs(
-        QWidget* widget, const QRect& absRect, const QString& text)
+        QWidget* widget, const QRect& absRect, const QString& text,
+        LocKey locKey)
 {
     QApplication::clipboard()->setText(text);
-    blinkCopied(widget, absRect);
+    blinkCopied(widget, absRect, locKey);
 }
 
 void MyGui::followUrl(const QString& x)
@@ -129,8 +130,9 @@ void PopupGui::popupAtAbs(
 FontSource& PopupGui::fontSource() { return owner.fontSource(); }
 
 void PopupGui::copyTextAbs(
-        QWidget* widget, const QRect& absRect, const QString& text)
-    { owner.copyTextAbs(widget, absRect, text); }
+        QWidget* widget, const QRect& absRect, const QString& text,
+        LocKey locKey)
+    { owner.copyTextAbs(widget, absRect, text, locKey); }
 
 void PopupGui::followUrl(const QString& x)
     { owner.followUrl(x); }

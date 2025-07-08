@@ -8432,6 +8432,7 @@
     </text>
     <text id="UnkFlag">
      <orig>Unknown flag</orig>
+     <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
     </text>
    </group>
    <text id="NonChar">
@@ -8476,6 +8477,10 @@
      <p>“Emoji” is unchangeable, but you may still use one/few/many</p>
      <p>Test: version info → emoji search</p>
     </au-cmt>
+   </text>
+   <text id="FullEmoji">
+    <orig>Warning: copied full emoji</orig>
+    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji (smile+ZVJ+UD+VS16) but warn</au-cmt>
    </text>
   </group>
   <group id="Expand">

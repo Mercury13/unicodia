@@ -12276,6 +12276,11 @@
     </au-cmt>
     <transl>{1} эмодзи</transl>
    </text>
+   <text id="FullEmoji">
+    <orig>Warning: copied full emoji</orig>
+    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji but warn</au-cmt>
+    <transl>Внимание: скопирован полный эмодзи</transl>
+   </text>
   </group>
   <group id="Expand">
    <au-cmt>Test: expand/collapse CJK</au-cmt>

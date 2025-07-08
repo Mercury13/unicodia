@@ -275,9 +275,9 @@ private:
     void copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator);
     void copyFavsThing(uc::CopiedChannel channel);
     void copyLibChar(uc::CopiedChannel channel);
-    void blinkCopied(QWidget* widget, const QRect& absRect);
+    void blinkCopied(QWidget* widget, const QRect& absRect, LocKey locKey);
     /// @param [in] initiator   other initiator widget besides table
-    void blinkCopied(QAbstractItemView* table, QWidget* initiator);
+    void blinkCopied(QAbstractItemView* table, QWidget* initiator, LocKey locKey);
     void clearSample();
     bool doSearch(const QString& what);
     void showSearchResult(uc::MultiResult&& x);
@@ -354,7 +354,7 @@ private slots:
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
 
-    void goToNode(const uc::LibNode& node);
+    bool goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
     void acAddCpToFavsTriggered(bool isChecked);

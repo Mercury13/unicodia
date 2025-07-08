@@ -63,14 +63,15 @@ void mywiki::Gui::popupAtRel(
 
 
 void mywiki::Gui::copyTextRel(
-        QWidget* widget, const TinyOpt<QRect> relRect, const QString& text)
+        QWidget* widget, const TinyOpt<QRect> relRect, const QString& text,
+        LocKey locKey)
 {
     QRect r = relRect
             ? *relRect
             : widget->rect();
     copyTextAbs(widget,
             QRect{ widget->mapToGlobal(r.topLeft()), r.size() },
-            text);
+            text, locKey);
 }
 
 
@@ -150,7 +151,7 @@ namespace {
 
     void CopyLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
     {
-        gui.copyTextRel(widget, rect, text);
+        gui.copyTextRel(widget, rect, text, LK_COPIED);
     }
 
     class InetLink : public mywiki::Link

@@ -42,6 +42,21 @@ constinit const ec::Array<std::string_view, uc::SearchError> uc::searchErrorKeys
     "Search.BigCode",
 };
 
+namespace {
+
+    constinit const uc::LibNode UNKNOWN_FLAG {
+        .value = U"\uE001",
+        .text = u8"???",
+        .iParent = 0,
+        .nChildren = 0,
+        .iFirstChild = 0,
+        // Need GRAPHIC_EMOJI: we’ll use emoji library
+        .flags = uc::Lfg::GRAPHIC_EMOJI | uc::Lfg::TECHNICAL,
+        .ecEmojiVersion = uc::EcVersion::FIRST
+    };
+
+}   // anon namespace
+
 
 ///// MultiResult //////////////////////////////////////////////////////////////
 
@@ -418,6 +433,8 @@ void uc::ensureEmojiSearch()
             }
         }
     }
+
+    trieRoot.addUnknownFlags(&UNKNOWN_FLAG);
 }
 
 

@@ -16,6 +16,26 @@
 // Painters
 #include "global.h"
 
+///// GetCp ////////////////////////////////////////////////////////////////////
+
+bool GetCp::mayBeText(uc::EmojiDraw emojiDraw) const noexcept
+{
+    switch (emojiDraw) {
+    case uc::EmojiDraw::GRAPHIC:
+        return false;
+    case uc::EmojiDraw::CONSERVATIVE:
+    case uc::EmojiDraw::MOSTLY_TEXT:
+        return !forceGraphic;
+    case uc::EmojiDraw::FORCE_TEXT:
+        return true;
+    }
+    __builtin_unreachable();
+    // used to be
+    //return (cp && ((emojiDraw == uc::EmojiDraw::FORCE_TEXT) || !forceGraphic));
+}
+
+
+
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;

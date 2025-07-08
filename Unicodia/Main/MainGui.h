@@ -41,12 +41,14 @@ public:
             QWidget* widget, const QRect& absRect, const QString& html) override;
     FontSource& fontSource() override { return fFontSource; }
     void copyTextAbs(
-            QWidget* widget, const QRect& absRect, const QString& text) override;
+            QWidget* widget, const QRect& absRect, const QString& text,
+            LocKey locKey) override;
     void followUrl(const QString& x) override;
     mywiki::InternalLinkWalker& linkWalker() override { return fInternalWalker; }
 
     // Several ways to blink fmMessage
-    void blinkCopied(QWidget* widget, const QRect& absRect);
+    void blinkCopied(QWidget* widget, const QRect& absRect,
+                     LocKey locKey);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
     void closePopup();
@@ -80,7 +82,8 @@ public:
             QWidget* widget, const QRect& absRect, const QString& html) override;
     FontSource& fontSource() override;
     void copyTextAbs(
-            QWidget* widget, const QRect& absRect, const QString& text) override;
+            QWidget* widget, const QRect& absRect, const QString& text,
+            LocKey locKey) override;
     void followUrl(const QString& x) override;
     mywiki::InternalLinkWalker& linkWalker() override;
 private:

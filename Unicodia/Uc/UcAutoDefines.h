@@ -465,20 +465,24 @@ namespace uc {
 
         /// Prints “U+0000+1111+2222”
         /// @return new pos
-        size_t sprintUPLUS(char* data, size_t n) const;
+        size_t sprintUPLUS(char* data, size_t n) const noexcept;
 
         /// @return new pos
         template<size_t N>
-        size_t sprintUPLUS(char (&data)[N]) const { return sprintUPLUS(data, N); }
+        size_t sprintUPLUS(char (&data)[N]) const noexcept { return sprintUPLUS(data, N); }
 
         /// Prints “0000+1111+2222”
         /// @return new pos
-        size_t sprintPlus(char* data, size_t n) const
+        size_t sprintPlus(char* data, size_t n) const noexcept
             { return uc::sprintPlus(data, n, value); }
 
         /// @return new pos
         template<size_t N>
-        size_t sprintPlus(char (&data)[N]) const { return sprintPlus(data, N); }
+        size_t sprintPlus(char (&data)[N]) const noexcept { return sprintPlus(data, N); }
+
+        /// @return [+] can be target of Go
+        [[nodiscard]] bool isGoTarget() const noexcept
+            { return !flags.have(uc::Lfg::TECHNICAL); }
     };
 
     constexpr auto ILIB_EMOJI_ROOT = 1;   ///< index of Emoji node

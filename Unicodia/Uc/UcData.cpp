@@ -1949,7 +1949,7 @@ size_t uc::sprintPlus(char* buf, size_t n, std::u32string_view text)
 }
 
 
-size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const
+size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const noexcept
 {
     *data = 0;
     size_t pos = 0;
