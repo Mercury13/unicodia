@@ -9,6 +9,7 @@
 
 enum class Emoji : unsigned char {
     NONE,
+    ARAB_EMIRATES,
     AFGHANISTAN,
     CUBA,
     PUERTO_RICO,
@@ -18,6 +19,7 @@ enum class Emoji : unsigned char {
     HEART_RED,
     KISS_INTERRACIAL,
     HEAD_YES,
+    UNKNOWN_FLAG,
 };
 
 
@@ -30,6 +32,7 @@ public:
 Trie1::Trie1()
 {
     addMulti(Emoji::AFGHANISTAN, cp::FLAG_A, cp::FLAG_F);
+    addMulti(Emoji::ARAB_EMIRATES, cp::FLAG_A, cp::FLAG_E);
     addMulti(Emoji::CUBA,        cp::FLAG_C, cp::FLAG_U);
     addMulti(Emoji::PUERTO_RICO, cp::FLAG_P, cp::FLAG_R);
     addMulti(Emoji::SPAIN,       cp::FLAG_E, cp::FLAG_S);
@@ -44,6 +47,7 @@ Trie1::Trie1()
     addMulti(Emoji::HEAD_YES,
                 cp::SMILE_SLIGHTLY_SMILING, cp::ZWJ,
                 cp::ARROW_UP_DOWN, cp::VS16);
+    addUnknownFlags(Emoji::UNKNOWN_FLAG);
 };
 
 void expectEmoji(const srh::Decoded<Emoji>& line,
@@ -180,17 +184,33 @@ TEST (DecodeTrie, KissMoreEmoji)
 
 ///
 ///  Current bhv for strange flags
-///  @warning  May change anytime to unknown flag AA
 ///
 TEST (DecodeTrie, StrangeFlags)
 {
     Trie1 tr;
-    const char32_t data[] { cp::FLAG_A, cp::FLAG_A, cp::FLAG_F, 0 };
+    const char32_t data[] { cp::FLAG_A, cp::FLAG_A, cp::FLAG_E, cp::FLAG_S,  0 };
     auto res = tr.decode(data);
 
-    EXPECT_EQ(1u, res.size());
+    EXPECT_EQ(2u, res.size());
 
-    expectEmoji(res.at(0), 1, 2, srh::EmojiLevel::FULL, Emoji::AFGHANISTAN);
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::UNKNOWN_FLAG, Emoji::UNKNOWN_FLAG);
+    expectEmoji(res.at(1), 2, 2, srh::EmojiLevel::FULL, Emoji::SPAIN);
+}
+
+
+///
+///  Arab Emirates in a normal position → OK
+///
+TEST (DecodeTrie, StrangeFlags2)
+{
+    Trie1 tr;
+    const char32_t data[] { cp::FLAG_B, cp::FLAG_A, cp::FLAG_A, cp::FLAG_E,  0 };
+    auto res = tr.decode(data);
+
+    EXPECT_EQ(2u, res.size());
+
+    expectEmoji(res.at(0), 0, 2, srh::EmojiLevel::UNKNOWN_FLAG, Emoji::UNKNOWN_FLAG);
+    expectEmoji(res.at(1), 2, 2, srh::EmojiLevel::FULL, Emoji::ARAB_EMIRATES);
 }
 
 

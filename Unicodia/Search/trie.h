@@ -92,6 +92,7 @@ namespace srh {
                 add(sv, std::move(res));
             }
         SafeVector<Decoded<R>> decode(std::u32string_view s) const;
+        void addUnknownFlags(R wantedR);
     };
 
 }   // namespace srh
@@ -162,6 +163,21 @@ void srh::TrieRoot<R>::add(std::u32string_view s, R res)
     }
     p->setFinal(std::move(res), NodeType::FULL);
 }
+
+
+template <class R>
+void srh::TrieRoot<R>::addUnknownFlags(R wantedR)
+{
+    auto badNode = dumb::makeSp<TrieNode<R>>(0);
+    badNode->setFinal(wantedR, NodeType::UNKNOWN_FLAG);
+    for (char32_t c1 = cp::FLAG_A; c1 <= cp::FLAG_Z; ++c1) {
+        auto node1 = Super::add(c1, EmojiLevel::UNKNOWN_FLAG);
+        for (char32_t c2 = cp::FLAG_A; c2 <= cp::FLAG_Z; ++c2) {
+            node1->link(c2, EmojiLevel::UNKNOWN_FLAG, badNode.get());
+        }
+    }
+}
+
 
 template <class R>
 SafeVector<srh::Decoded<R>> srh::TrieRoot<R>::decode(std::u32string_view s) const
