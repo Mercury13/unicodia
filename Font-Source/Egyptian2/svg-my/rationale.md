@@ -37,7 +37,13 @@ Subtotal: 29
 - 13673: beard ?→king
 - 13675: beard ?→god
 - 13676: beard ?→king
-- 137EF: no beard, no collar: THIRTY
+- 13678: beard ?→king: THIRTY
+- 13679: beard ?→god
+- 1367A: beard ?→god
+- 1367B: beard ?→king
+- 1367C: beard ?→king
+- 1367D: beard ?→king
+- 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 13A6E: wings in V-shape
@@ -46,7 +52,7 @@ Subtotal: 29
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 37
+Subtotal: 43
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -66,4 +72,4 @@ Subtotal: 37
 
 Subtotal: 14
 
-Total: 80
+Total: 86
