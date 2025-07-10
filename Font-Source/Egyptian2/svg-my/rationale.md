@@ -1,11 +1,12 @@
 ﻿# Rationale behind these characters
 
-## Will never extend: above the fold + tofu
+## Will never extend: above the fold + tofu + NonCore
 - 13460, 61, 62, 63, 64, 65, 67
 - 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B
 - 13983, 13B52, 13B9E, 13CCE, 13F3D, 14016, 14091, 14198, 142СС, 14330
+- 136AE, 142AD
 
-Subtotal: 27
+Subtotal: 29
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -56,4 +57,4 @@ Subtotal: 33
 
 Subtotal: 9
 
-Total: 69
+Total: 71

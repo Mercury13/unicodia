@@ -1160,8 +1160,7 @@ FFFD......: NotoSerif-Regular
 13693..13696: NewGardiner
 13697..136A1: UnicodiaSesh
 136A2.......: NewGardiner
-136A3..136AD: UnicodiaSesh
-136AE.......: NewGardinerNonCore
+136A3..136AE: UnicodiaSesh
 136AF.......: NewGardiner
 136B0..136B5: UnicodiaSesh
 136B6.......: NewGardiner
@@ -2219,8 +2218,7 @@ FFFD......: NotoSerif-Regular
 142A8, 142A9: NewGardiner
 142AA, 142AB: UnicodiaSesh
 142AC.......: NewGardiner
-142AD.......: NewGardinerNonCore
-142AE..142B8: UnicodiaSesh
+142AD..142B8: UnicodiaSesh
 142B9, 142BA: NewGardiner
 142BB..142BD: UnicodiaSesh
 142BE.......: NewGardiner
