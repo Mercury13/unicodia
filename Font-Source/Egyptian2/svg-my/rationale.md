@@ -31,16 +31,17 @@ Subtotal: 27
 - 1365D: beard king → god
 - 1365E: beard king → god
 - 1365F: beard king → god
+- 13667: beard none→god, wig short→long
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 13A6E: wings in V-shape
-- 13A79: differ from 13A7A, maybe draw hind legs in other fashion
-- 13AA3: rotate 90°: THIRTY
+- 13A79: differ from 13A7A, maybe draw hind legs in other fashion: THIRTY
+- 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 32
+Subtotal: 33
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -55,4 +56,4 @@ Subtotal: 32
 
 Subtotal: 9
 
-Total: 68
+Total: 69
