@@ -26,13 +26,54 @@
 // No need custom drawing — solves nothing
 constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 
+///// HighlightHost ////////////////////////////////////////////////////////////
+
+
+void HighlightHost::addClient(VirtualCharsModel* client)
+{
+    if (!client)
+        return;
+    if (nClients > MAX_CLIENTS) {
+        throw std::logic_error("# of clients exceeded!");
+    }
+    fClients[nClients++] = client;
+}
+
+
+void HighlightHost::highlightFamily(std::string_view x)
+{
+    if (fHighlightedFamily != x) {
+        fHighlightedFamily = x;
+        for (auto v : clients()) {
+            emit v->dataChanged({}, {}, { Qt::BackgroundRole });
+        }
+    }
+}
+
+
+bool HighlightHost::isHighlighted(const uc::Cp& cp) const
+{
+    if (cp.drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)
+            > uc::DrawMethod::LAST_FONT) {
+        return false;
+    }
+    auto font = cp.font(match::NullForTofu::INST);
+    return (font && font->family.text == fHighlightedFamily);
+}
+
+
+
 ///// VirtualCharsModel ////////////////////////////////////////////////////////
 
 VirtualCharsModel::VirtualCharsModel(
-        QWidget* aOwner, uc::GlyphStyleSets& aGlyphSets)
-    : owner(aOwner), glyphSets(aGlyphSets),
+        QWidget* aOwner, dumb::Sp<HighlightHost> aHiHost,
+        uc::GlyphStyleSets& aGlyphSets)
+    : owner(aOwner), hiHost(aHiHost), glyphSets(aGlyphSets),
       dummyLv(new QListView)
 {
+    if (hiHost) {
+        hiHost->addClient(this);
+    }
     tcache.connectSignals(this);
 }
 
@@ -184,8 +225,9 @@ void VirtualCharsModel::paint(QPainter *painter, const QStyleOptionViewItem &opt
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
-CharsModel::CharsModel(QWidget* aOwner, uc::GlyphStyleSets& glyphSets) :
-    Super(aOwner, glyphSets),
+CharsModel::CharsModel(QWidget* aOwner, dumb::Sp<HighlightHost> aHiHost,
+                       uc::GlyphStyleSets& glyphSets) :
+    Super(aOwner, aHiHost, glyphSets),
     match(str::toQ(FACE_DEFAULT)),
     rows(NCOLS) {}
 
@@ -219,14 +261,8 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (cp) {
-                if (!fHighlightedFamily.empty()) {
-                    if (cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)
-                            <= uc::DrawMethod::LAST_FONT) {
-                        auto font = cp->font(match::NullForTofu::INST);
-                        if (font && font->family.text == fHighlightedFamily) {
-                            return QColor { Qt::yellow };
-                        }
-                    }
+                if (auto q = hiHost.get(); q && q->isHighlighted(cp.cp)) {
+                    return QColor { Qt::yellow };
                 }
                 if (isCjkCollapsed) {
                     auto block = uc::blockOf(cp->subj);
@@ -332,15 +368,6 @@ bool CharsModel::isCharCollapsed(char32_t code) const
                 && (code ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS);
     } else {
         return false;
-    }
-}
-
-
-void CharsModel::highlightFamily(std::string_view x)
-{
-    if (fHighlightedFamily != x) {
-        fHighlightedFamily = x;
-        emit dataChanged({}, {}, { Qt::BackgroundRole });
     }
 }
 

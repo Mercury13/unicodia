@@ -185,6 +185,7 @@ protected:
 private:
     Ui::FmMain *ui = nullptr;
     uc::GlyphStyleSets glyphSets;
+    const dumb::Sp<HighlightHost> hiHost;
     CharsModel model;
     BlocksModel blocksModel;
     SearchModel searchModel;

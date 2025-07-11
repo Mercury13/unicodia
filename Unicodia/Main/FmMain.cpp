@@ -896,8 +896,14 @@ QVariant FavsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::BackgroundRole: {
-        if (auto iCp = toOrder(index))
+            if (auto iCp = toOrder(index)) {
+                // Normal
+                if (auto q = hiHost.get();
+                        q && q->isHighlighted(charAt(index).cp)) {
+                    return QColor(Qt::yellow);
+                }
                 return {};
+            }
             return owner->palette().button().color();
         }
     default:
@@ -912,10 +918,11 @@ QVariant FavsModel::data(const QModelIndex& index, int role) const
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain),
-      model(this, glyphSets),
+      hiHost(new HighlightHost),
+      model(this, hiHost, glyphSets),
       searchModel(this, glyphSets),
       libModel(this),
-      favsModel(this, glyphSets),
+      favsModel(this, hiHost, glyphSets),
       fontTofu(str::toQ(FACE_TOFU), static_cast<int>(Fsz::BIG)),
       mainGui(this, model.match, *this)
 {
@@ -2588,8 +2595,8 @@ void FmMain::highlightFont()
         QMessageBox::critical(this, HEAD, "First switch to Blocks.");
         return;
     }
-    if (!model.highlightedFamily().empty()) {
-        model.highlightFamily({});
+    if (!hiHost->highlightedFamily().empty()) {
+        hiHost->highlightFamily({});
         QMessageBox::information(this, HEAD, "Font highlight removed.");
         return;
     }
@@ -2604,7 +2611,7 @@ void FmMain::highlightFont()
         QMessageBox::critical(this, HEAD, "Somehow no font (tofu?), choose another character.");
         return;
     }
-    model.highlightFamily(font->family.text);
+    hiHost->highlightFamily(font->family.text);
     QMessageBox::information(this, HEAD,
             QString::fromStdString(str::cat("Font “", font->family.text, "” highlighted.")));
 }

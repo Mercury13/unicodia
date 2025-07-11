@@ -12,6 +12,7 @@
 
 // Utils
 #include "u_TinyOpt.h"
+#include "u_DumbSp.h"
 
 // C++
 #include <memory>
@@ -46,6 +47,34 @@ struct MaybeChar {
 enum class TableColors : unsigned char { NO, YES };
 
 
+class VirtualCharsModel;
+
+class HighlightHost : public dumb::SpTarget
+{
+public:
+    void addClient(VirtualCharsModel* client);
+
+    /// Highlights a family by name
+    /// Used first of all for Egyp: both Sesh and Gardiner cover, and Sesh is
+    ///    not really reliable
+    void highlightFamily(std::string_view x);
+    const std::string& highlightedFamily() const { return fHighlightedFamily; }
+
+    std::span<VirtualCharsModel* const> clients() const noexcept
+        { return { fClients, nClients }; }
+
+    bool isHighlighted(const uc::Cp& cp) const;
+    bool isHighlighted(const uc::Cp* cp) const
+        { return cp && isHighlighted(*cp); }
+private:
+    static constexpr unsigned MAX_CLIENTS = 4;
+    VirtualCharsModel* fClients[MAX_CLIENTS];
+    unsigned nClients = 0;
+
+    std::string fHighlightedFamily {};
+};
+
+
 class VirtualCharsModel
         : public QAbstractTableModel,
           public QStyledItemDelegate,
@@ -54,7 +83,8 @@ class VirtualCharsModel
     using SuperD = QStyledItemDelegate;
 public:
     QWidget* const owner;
-    VirtualCharsModel(QWidget* aOwner, uc::GlyphStyleSets& aGlyphSets);
+    const dumb::Sp<HighlightHost> hiHost;
+    VirtualCharsModel(QWidget* aOwner, dumb::Sp<HighlightHost> aHiHost, uc::GlyphStyleSets& aGlyphSets);
 
     // QAbstractTableModel
     int columnCount(const QModelIndex& = {}) const override;
@@ -141,7 +171,8 @@ public:
     FontMatch match;
     bool isCjkCollapsed = true;
 
-    CharsModel(QWidget* aOwner, uc::GlyphStyleSets& glyphSets);
+    CharsModel(QWidget* aOwner, dumb::Sp<HighlightHost> aHiHost,
+               uc::GlyphStyleSets& glyphSets);
     ~CharsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
@@ -159,18 +190,11 @@ public:
     /// @return  [+] it is collapsed
     bool isCharCollapsed(char32_t code) const;
 
-    /// Highlights a family by name
-    /// Used first of all for Egyp: both Sesh and Gardiner cover, and Sesh is
-    ///    not really reliable
-    void highlightFamily(std::string_view x);
-    const std::string& highlightedFamily() const { return fHighlightedFamily; }
-
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
 private:
     RowCache rows;
-    std::string fHighlightedFamily {};
 };
 
 
