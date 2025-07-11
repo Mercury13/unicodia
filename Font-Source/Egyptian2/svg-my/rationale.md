@@ -52,13 +52,27 @@ Subtotal: 29
 - 1368D: beard ?→king
 - 1368F: beard ?→king
 - 13697: beard god→king
+- 13698: beard man→king
+- 1369A: beard man→king
+- 1369B: beard man→king
+- 1369C: beard man→king
+- 1369D: beard man→god
+- 1369E: beard man→king: FIFTY
+- 1369F: beard man→king
+- 136A1: beard poor god → king
+- 136B0: beard ? → king
+- 136B1: beard ? → king
+- 136B2: beard ? → king
+- 136B3: beard ? → king
+- 136B4: beard ? → king
+- 136B7: beard ? → god
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 49
+Subtotal: 63
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -81,4 +95,4 @@ Subtotal: 49
 
 Subtotal: 17
 
-Total: 95
+Total: 109
