@@ -69,16 +69,19 @@ Subtotal: 29
 - 136C9: beard ?→king
 - 136CA: beard ?→king
 - 136D3: beard ?→gods
+- 136E7: slanted ankh
+- 136F4: more traditional woman
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 66
+Subtotal: 68
 
 # Duped with NewGardiner
 - 1348C: after 8B
+- 134C0: after C1
 - 13561: after 60
 - 1356C: after 6B
 - 13626: after 25
@@ -91,11 +94,15 @@ Subtotal: 66
 - 1367E
 - 1368A
 - 1368E
+- 136D4: just three holes in seated women
+- 136D7: same
+- 136D9: same
+- 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
 - 13933: after 32
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 17
+Subtotal: 22
 
-Total: 112
+Total: 119
