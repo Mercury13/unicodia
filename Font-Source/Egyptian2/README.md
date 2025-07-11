@@ -20,3 +20,5 @@ Meaning of directories:
 2. Check what changed in Unisesh.txt. That’s Unicode ID and JSesh ID. Changed → something really big happened.
 3. Then check sample images (using delta code charts).
 4. Then descriptions (using Unikemet changes)
+
+Check = what changed? Is the character original or redrawn? Can we find something in JSesh base?
