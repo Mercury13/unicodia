@@ -15,10 +15,11 @@ Subtotal: 29
 - 134D9: shorter clothes
 - 134E4: king’s beard
 - 134F3: kneeling
+- 1354E: more consistent short wig
 - 13552: short beard
 - 13555: long wig
-- 13560: bushy beard
-- 135A5: sit on heel: TEN
+- 13560: bushy beard: TEN
+- 135A5: sit on heel
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
@@ -26,8 +27,8 @@ Subtotal: 29
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
-- 13659: beard god → king
-- 1365B: beard king → god: TWENTY
+- 13659: beard god → king: TWENTY
+- 1365B: beard king → god
 - 1365C: beard god → king
 - 1365D: beard king → god
 - 1365E: beard king → god
@@ -36,8 +37,8 @@ Subtotal: 29
 - 13671: beard ?→king
 - 13673: beard ?→king
 - 13675: beard ?→god
-- 13676: beard ?→king
-- 13678: beard ?→king: THIRTY
+- 13676: beard ?→king: THIRTY
+- 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
 - 1367B: beard ?→king
@@ -46,8 +47,8 @@ Subtotal: 29
 - 13680: beard (god, per NewGar)
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
-- 137F2: no beard, no collar one of hieros for million
-- 1368B: beard ?→king: FORTY
+- 137F2: no beard, no collar one of hieros for million: FORTY
+- 1368B: beard ?→king
 - 1368C: beard ?→king
 - 1368D: beard ?→king
 - 1368F: beard ?→king
@@ -56,8 +57,8 @@ Subtotal: 29
 - 1369A: beard man→king
 - 1369B: beard man→king
 - 1369C: beard man→king
-- 1369D: beard man→god
-- 1369E: beard man→king: FIFTY
+- 1369D: beard man→god: FIFTY
+- 1369E: beard man→king
 - 1369F: beard man→king
 - 136A1: beard poor god → king
 - 136B0: beard ?→king
@@ -77,11 +78,12 @@ Subtotal: 29
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 68
+Subtotal: 69
 
 # Duped with NewGardiner
 - 1348C: after 8B
 - 134C0: after C1
+- 134EE: after ED
 - 13561: after 60
 - 1356C: after 6B
 - 13626: after 25
@@ -92,6 +94,7 @@ Subtotal: 68
 - 13674: after 75 etc
 - 13677: 76 + 70
 - 1367E
+- 1367F: filled that seated hole
 - 1368A
 - 1368E
 - 136D4: just three holes in seated women
@@ -103,6 +106,6 @@ Subtotal: 68
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 22
+Subtotal: 24
 
-Total: 119
+Total: 122
