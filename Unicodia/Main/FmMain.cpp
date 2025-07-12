@@ -2589,10 +2589,21 @@ void FmMain::debugFontLayout()
 
 
 void FmMain::highlightFont()
-{
+{    
     static constexpr const char* HEAD = "Highlight font";
-    if (ui->tabsMain->currentIndex() != I_BLOCKS) {
-        QMessageBox::critical(this, HEAD, "First switch to Blocks.");
+    QAbstractItemView* thatView  = nullptr;
+    switch (ui->tabsMain->currentIndex()) {
+    case I_BLOCKS: thatView = ui->tableChars; break;
+    case I_FAVS:   thatView = ui->tableFavs;  break;
+    default: break;
+    }
+    if (!thatView) {
+        QMessageBox::critical(this, HEAD, "First switch to Blocks/Favourites.");
+        return;
+    }
+    auto thatModel = dynamic_cast<VirtualCharsModel*>(thatView->model());
+    if (!thatModel) {
+        QMessageBox::critical(this, HEAD, "Something went wrong, no model.");
         return;
     }
     if (!hiHost->highlightedFamily().empty()) {
@@ -2600,7 +2611,7 @@ void FmMain::highlightFont()
         QMessageBox::information(this, HEAD, "Font highlight removed.");
         return;
     }
-    auto mc = model.charAt(ui->tableChars->currentIndex());
+    auto mc = thatModel->charAt(thatView->currentIndex());
     if (!mc.cp
             || mc.cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY) > uc::DrawMethod::LAST_FONT) {
         QMessageBox::critical(this, HEAD, "Select a character with a font (not control, not emoji).");
