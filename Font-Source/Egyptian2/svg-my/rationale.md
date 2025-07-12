@@ -75,6 +75,9 @@ Subtotal: 29
 - 13738: same
 - 13739: same
 - 1374D: 4F minus holding
+- 1374F: short hair
+- 13750: short hair
+- 13751: short hair
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar: SEVENTY
