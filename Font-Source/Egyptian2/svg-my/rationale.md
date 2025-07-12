@@ -77,10 +77,10 @@ Subtotal: 29
 - 1374D: 4F minus holding
 - 1374F: short hair
 - 13750: short hair
-- 13751: short hair
+- 13751: short hair: SEVENTY
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
-- 137F1: no beard, no collar: SEVENTY
+- 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
@@ -97,7 +97,7 @@ Subtotal: 29
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 85
+Subtotal: 88
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -131,4 +131,4 @@ Subtotal: 85
 
 Subtotal: 28
 
-Total: 142
+Total: 145
