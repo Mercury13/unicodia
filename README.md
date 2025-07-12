@@ -111,6 +111,8 @@ Anyway, Unicodia will never be a good ideograph guide, everything I write about 
 * Legacy hieroglyphs are done with the same attention as core
 * Hieroglyphs w/o description just somehow resemble the sample image, no efforts are made to make them look exactly
 * Same if the sample image is not in harmony with description
+* Short-haired man has absolutely no beard unless specified
+* Other men may have any beard except god’s
 
 ## Data
 Data is as neutral as possible. Examples.
