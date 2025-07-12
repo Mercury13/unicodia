@@ -67,23 +67,27 @@ Subtotal: 29
 - 136B3: beard ?→king
 - 136B4: beard ?→king
 - 136B7: beard ?→god
+- 136BE: beard goddier: SIXTY
+- 136BF: beard curved
 - 136C9: beard ?→king
 - 136CA: beard ?→king
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
+- 1374D: 4F minus holding
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 69
+Subtotal: 72
 
 # Duped with NewGardiner
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
+- 13559: 5A minus beard
 - 13561: after 60
 - 1356C: after 6B
 - 13626: after 25
@@ -106,6 +110,6 @@ Subtotal: 69
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 24
+Subtotal: 25
 
-Total: 122
+Total: 126
