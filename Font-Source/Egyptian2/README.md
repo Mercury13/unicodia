@@ -17,7 +17,7 @@ Meaning of directories:
 # How to update data
 
 1. After loading Unikemet.txt run file filter_unikemet.bat
-2. Check what changed in Unisesh.txt. That’s Unicode ID and JSesh ID. Changed → something really big happened.
+2. Check what changed in Unisesh.txt. That’s some random ID and JSesh ID. Changed → something really big happened.
 3. Then check sample images (using delta code charts).
 4. Then descriptions (using Unikemet changes)
 
