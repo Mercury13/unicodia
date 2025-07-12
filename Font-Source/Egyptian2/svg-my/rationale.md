@@ -45,61 +45,65 @@ Subtotal: 29
 - 1367C: beard ?→king
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
-- 137EF: no beard, no collar
-- 137F1: no beard, no collar
-- 137F2: no beard, no collar one of hieros for million: FORTY
 - 1368B: beard ?→king
 - 1368C: beard ?→king
-- 1368D: beard ?→king
+- 1368D: beard ?→king: FORTY
 - 1368F: beard ?→king
 - 13697: beard god→king
 - 13698: beard man→king
 - 1369A: beard man→king
 - 1369B: beard man→king
 - 1369C: beard man→king
-- 1369D: beard man→god: FIFTY
+- 1369D: beard man→god
 - 1369E: beard man→king
 - 1369F: beard man→king
-- 136A1: beard poor god → king
+- 136A1: beard poor god → king: FIFTY
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
 - 136B3: beard ?→king
 - 136B4: beard ?→king
 - 136B7: beard ?→god
-- 136BE: beard goddier: SIXTY
+- 136BE: beard goddier
 - 136BF: beard curved
 - 136C9: beard ?→king
-- 136CA: beard ?→king
+- 136CA: beard ?→king: SIXTY
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
 - 13737: pregnant
 - 13738: same
 - 13739: same
-- 1374D: 4F minus holding: SEVENTY
+- 1374D: 4F minus holding
 - 137EC: man’s hair/beard
+- 137EF: no beard, no collar
+- 137F1: no beard, no collar: SEVENTY
+- 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
+- 137F7: man’s hair/beard/clothing
+- 137F8: same
+- 137F9: same
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 78
+Subtotal: 81
 
 # Duped with NewGardiner
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
+- 134EF: EE + legs on heels
 - 13559: 5A minus beard
 - 13561: after 60
 - 1356C: after 6B
 - 13626: after 25
 - 136D2: 13478×2
-- 136DE: after DD
-- 1366F: franken: TEN
+- 136DE: after DD: TEN
+- 1366F: franken
 - 13670: after 74
 - 13672: after 73
 - 13674: after 75 etc
@@ -118,6 +122,6 @@ Subtotal: 78
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 27
+Subtotal: 28
 
-Total: 134
+Total: 138
