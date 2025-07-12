@@ -125,10 +125,12 @@ Subtotal: 88
 - 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
+- 13925: after nearby (23?)
+- 13926: same
 - 13933: after 32
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 28
+Subtotal: 30
 
-Total: 145
+Total: 147
