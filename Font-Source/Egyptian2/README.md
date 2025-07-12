@@ -21,4 +21,4 @@ Meaning of directories:
 3. Then check sample images (using delta code charts).
 4. Then descriptions (using Unikemet changes)
 
-Check = what changed? Is the character original or redrawn? Can we find something in JSesh base?
+Check = what changed? Is the character original or redrawn? Can we find something in JSesh base? Maybe revert to JSesh’s image?
