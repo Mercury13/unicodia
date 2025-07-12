@@ -11,7 +11,7 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
     0x1355D: "A049D",
-    0x13577: "A369",    
+    0x13577: "A369",
     0x13AD2: "E240",   # lion → lioness
     0x13AD3: "E241",   # lion → lioness
 }
@@ -174,6 +174,7 @@ GLYPH_SIZES = {
     0x1395F: MEDIUM,
     0x1396A: MEDIUM, 0x1396B: MEDIUM, 0x1396C: MEDIUM, 0x1396D: MEDIUM, 0x1396E: MEDWIDE,
     0x1397B: WIDE,
+    0x1399F: SMALL,
     0x139F8: WIDE,
     0x139FC: SMALL,
     0x13A05: SMALL,

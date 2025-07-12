@@ -77,14 +77,17 @@ Subtotal: 29
 - 13737: pregnant
 - 13738: same
 - 13739: same
-- 1374D: 4F minus holding
+- 1374D: 4F minus holding: SEVENTY
+- 137EC: man’s hair/beard
+- 137F4: no beard, lower branches
+- 137F5: man’s hair/beard/clothing
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 75
+Subtotal: 78
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -108,12 +111,13 @@ Subtotal: 75
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
+- 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
 - 13933: after 32
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 26
+Subtotal: 27
 
-Total: 130
+Total: 134
