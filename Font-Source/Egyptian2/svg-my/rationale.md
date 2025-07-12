@@ -74,6 +74,9 @@ Subtotal: 29
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
+- 13737: pregnant
+- 13738: same
+- 13739: same
 - 1374D: 4F minus holding
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
@@ -81,7 +84,7 @@ Subtotal: 29
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 72
+Subtotal: 75
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -91,8 +94,9 @@ Subtotal: 72
 - 13561: after 60
 - 1356C: after 6B
 - 13626: after 25
+- 136D2: 13478×2
 - 136DE: after DD
-- 1366F: franken
+- 1366F: franken: TEN
 - 13670: after 74
 - 13672: after 73
 - 13674: after 75 etc
@@ -110,6 +114,6 @@ Subtotal: 72
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 25
+Subtotal: 26
 
-Total: 126
+Total: 130
