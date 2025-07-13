@@ -98,6 +98,8 @@ Subtotal: 29
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
+- 1381F: based on 20
+- 13820: reduced height, simplified hat, more curvy beard
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
