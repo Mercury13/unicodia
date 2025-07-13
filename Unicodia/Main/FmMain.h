@@ -351,6 +351,7 @@ private slots:
     void copyCurrentSearch();
     void debugFontLayout();
     void highlightFont();
+    void showBlockFontStats();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;

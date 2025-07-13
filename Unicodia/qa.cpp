@@ -2,9 +2,13 @@
 
 // C++
 #include <fstream>
+#include <unordered_map>
 
 // Unicode
 #include "UcData.h"
+
+// Lib
+#include "u_Strings.h"
 
 qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
 {
@@ -86,4 +90,65 @@ qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
     dump();
     os.close();
     return TestFonts::OK;
+}
+
+
+namespace {
+
+    struct Counter {
+        unsigned v = 0;
+    };
+
+}   // anon namespace
+
+
+std::vector<qa::BlockFontLine> qa::blockFontStats(const uc::Block& block)
+{
+    unsigned nNonFont = 0;
+    unsigned nTofu = 0;
+    std::unordered_map<std::string_view, Counter> m;
+    for (auto c = block.startingCp; c <= block.endingCp; ++c) {
+        auto cp = uc::cpsByCode[c];
+        if (!cp)
+            continue;
+        switch (cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)) {
+        case uc::DrawMethod::VIRTUAL_VIRAMA:
+        case uc::DrawMethod::SVG_EMOJI:
+        case uc::DrawMethod::ABBREVIATION:
+        case uc::DrawMethod::CUSTOM_CONTROL:
+            ++nNonFont; break;
+        case uc::DrawMethod::SAMPLE:
+        case uc::DrawMethod::SPACE:
+        case uc::DrawMethod::MARCHEN:
+        case uc::DrawMethod::SAMPLED_CONTROL:
+        case uc::DrawMethod::VERTICAL_CW:
+        case uc::DrawMethod::VERTICAL_CCW:
+            if (auto what = cp->font(match::NullForTofu::INST)) {
+                ++m[what->family.text].v;
+            } else {
+                ++nTofu;
+            }
+        }
+    }
+    std::vector<qa::BlockFontLine> r;
+    r.reserve(m.size());
+    if (nTofu != 0) {
+        r.emplace_back(BlockFontSpecial::TOFU, "[Tofu]", std::string{}, nTofu);
+    }
+    if (nNonFont != 0) {
+        r.emplace_back(BlockFontSpecial::NONFONT, "[Non-font]", std::string{}, nNonFont);
+    }
+    auto iNonSort = r.size();
+    for (auto& v : m) {
+        auto& bk = r.emplace_back(BlockFontSpecial::NORMAL, std::string{v.first}, std::string{}, v.second.v);
+        if (bk.fname.ends_with(".ttf") || bk.fname.ends_with((".otf"))) {
+            bk.fname.resize(bk.fname.length() - 4);
+        }
+        bk.sortKey = lat::toUpper(bk.fname);
+    }
+    std::sort(r.begin() + iNonSort, r.end(),
+            [](const BlockFontLine& x, const BlockFontLine& y) {
+                return x.sortKey < y.sortKey;
+            });
+    return r;
 }

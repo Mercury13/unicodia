@@ -984,6 +984,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
     connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
 
+    // Block font stats
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_S), this);
+    connect(shcut, &QShortcut::activated, this, &This::showBlockFontStats);
+
     // Tofu stats
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
@@ -2625,4 +2629,30 @@ void FmMain::highlightFont()
     hiHost->highlightFamily(font->family.text);
     QMessageBox::information(this, HEAD,
             QString::fromStdString(str::cat("Font “", font->family.text, "” highlighted.")));
+}
+
+
+void FmMain::showBlockFontStats()
+{
+    static constexpr const char* HEAD = "Block font stats";
+    if (ui->tabsMain->currentIndex() != I_BLOCKS) {
+        QMessageBox::critical(this, HEAD, "First switch to Blocks.");
+        return;
+    }
+    unsigned iBlock = ui->comboBlock->currentIndex();
+    if (iBlock > uc::N_BLOCKS) {
+        QMessageBox::critical(this, HEAD, "Somehow no block selected.");
+        return;
+    }
+    const auto& block = blocksModel[iBlock];
+    auto data = qa::blockFontStats(block);
+    QString s;
+    str::QSep sp(s, "\n");
+    for (auto& v : data) {
+        sp.sep();
+        s += QString::fromStdString(v.fname);
+        s += ": ";
+        s += QString::number(v.count);
+    }
+    QMessageBox::information(this, HEAD, s);
 }
