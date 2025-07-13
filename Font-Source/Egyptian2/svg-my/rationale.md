@@ -87,7 +87,7 @@ Subtotal: 29
 - 1375C: short hair
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
-- 137F1: no beard, no collar
+- 137F1: no beard, no collar: EIGHTY
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
@@ -97,7 +97,7 @@ Subtotal: 29
 - 137FA: mismatch, removed beard
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
-- 13800: mismatch, removed beard, fixed very sharp inner angles
+- 13800: mismatch, removed beard, fixed very sharp inner angles: NINETY
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
@@ -111,8 +111,15 @@ Subtotal: 29
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
+- 13C51: egret has two feathers
+- 13C52: same + fixed intersection at claw/base
+- 13C53: same
+- 13C54: same
+- 13C55: same
+- 13C57: same
+- 13C58: this one has one feather
 
-Subtotal: 103
+Subtotal: 110
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -145,8 +152,9 @@ Subtotal: 103
 - 13926: same
 - 13933: after 32
 - 13ABE: after 130F9
+- 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 31
+Subtotal: 32
 
-Total: 163
+Total: 171
