@@ -81,6 +81,10 @@ Subtotal: 29
 - 13755: short hair
 - 13756: short hair
 - 13757: short hair
+- 13759: short hair
+- 1375A: short hair
+- 1375B: short hair
+- 1375C: short hair
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
@@ -100,7 +104,7 @@ Subtotal: 29
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 91
+Subtotal: 95
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -136,4 +140,4 @@ Subtotal: 91
 
 Subtotal: 30
 
-Total: 150
+Total: 154
