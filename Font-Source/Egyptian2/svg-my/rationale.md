@@ -129,6 +129,10 @@ Subtotal: 110
 - 13559: 5A minus beard
 - 13561: after 60
 - 1356C: after 6B
+- 13595: made from man with straight sticks
+- 135B3: lots of captives here
+- 135B9: lots of captives here
+- 135C9: lots of captives here
 - 13626: after 25
 - 136D2: 13478×2
 - 136DE: after DD: TEN
@@ -156,6 +160,6 @@ Subtotal: 110
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 33
+Subtotal: 37
 
-Total: 172
+Total: 176
