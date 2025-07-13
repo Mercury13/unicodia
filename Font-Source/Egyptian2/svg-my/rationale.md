@@ -100,13 +100,19 @@ Subtotal: 29
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
+- 13839: Ptah, straight beard
+- 1383A: same
+- 1383B: same
+- 1387A: strange image
+- 1387B: bigger tits
+- 1387B: same
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 
-Subtotal: 95
+Subtotal: 103
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -134,12 +140,13 @@ Subtotal: 95
 - 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
+- 1383C: Imhotep is close to Ptah
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
 - 13ABE: after 130F9
 - 14196: after 97, pectoral
 
-Subtotal: 30
+Subtotal: 31
 
-Total: 154
+Total: 163
