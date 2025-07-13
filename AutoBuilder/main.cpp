@@ -151,7 +151,7 @@ std::string_view transform(std::string_view x, StrMap (&map)[N])
     }
     std::string errm = "[transform] Bad string ";
     errm.append(x);
-    throw std::invalid_argument(std::move(errm));
+    throw std::invalid_argument(errm);
 }
 
 StrMap smCharCat[] {
@@ -184,7 +184,7 @@ StrMap smCharCat[] {
     { "Zs"sv, "SEPARATOR_SPACE"sv },
 };
 
-enum class AbbrevState { NORMAL, ALIAS, DISABLE };
+enum class AbbrevState : unsigned char { NORMAL, ALIAS, DISABLE };
 
 
 class NewLine
