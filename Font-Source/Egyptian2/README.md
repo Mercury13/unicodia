@@ -5,6 +5,8 @@
 3. Open UnicodiaSesh.sfd
 4. Run load-glyphs.py
 5. Wait REALLY long, approx 30m
+6. DO NOT SAVE
+7. Check sesh.log, it might show problems
 
 Meaning of directories:
 - InkTest: just a test for Inkscape
