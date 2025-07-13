@@ -14,6 +14,7 @@
 * Ctrl+Shift+H — highlight all chars served by that font, to check font dispatching/correctness
 * Ctrl+Shift+L — test font dispatching
 * Ctrl+Shift+Q — test emoji repainting engine
+* Ctrl+Shift+S — font stats for a block
 * Ctrl+Shift+T — tofu stats
 * Ctrl+Shift+W — debug algorithms of sorting blocks
 
