@@ -144,6 +144,7 @@ Subtotal: 110
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
+- 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
@@ -155,6 +156,6 @@ Subtotal: 110
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 32
+Subtotal: 33
 
-Total: 171
+Total: 172
