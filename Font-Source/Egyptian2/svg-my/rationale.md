@@ -126,6 +126,7 @@ Subtotal: 29
 Subtotal: 112
 
 # Duped with NewGardiner
+- 13469: prereq for 5B2
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
@@ -134,7 +135,9 @@ Subtotal: 112
 - 13561: after 60
 - 1356C: after 6B
 - 13595: made from man with straight sticks
-- 135B3: lots of captives here
+- 135B1: lots of captives here
+- 135B2: same
+- 135B3: same
 - 135B4: same
 - 135B9: lots of captives here
 - 135BA: same
