@@ -106,6 +106,48 @@ namespace {
         return s;
     }
 
+    std::string simplifyIndex(std::string_view x)
+    {
+        if (x.starts_with("HJ "sv)) {
+            x = x.substr(3);
+        }
+        if (x.find(' ') != std::string_view::npos) {
+            throw std::logic_error(str::cat(
+                "Egyptian index <", x, "> somehow contains spaces"));
+        }
+        std::string r;
+        const char* p = std::to_address(x.begin());
+        const char* const end = std::to_address(x.end());
+        // 1. Letters
+        auto p1 = p;
+        for (; p != end && std::isalpha(*p); ++p)
+            r += lat::toUpper(*p);
+        if (p1 == p) {
+            throw std::logic_error(str::cat(
+                "Egyptian index <", x, "> has no letters in front"));
+        }
+        // 2. Heading zeros
+        for (; p != end && *p == '0'; ++p) ;
+        // 3. Digits
+        p1 = p;
+        for (; p != end && std::isdigit(*p); ++p) {
+            r += *p;
+        }
+        if (p1 == p) {
+            throw std::logic_error(str::cat(
+                "Egyptian index <", x, "> has no digits or is 000"));
+        }
+        // 4. Tail
+        for (; p != end && std::isalpha(*p); ++p) {
+            r += std::tolower(*p);
+        }
+        if (p != end) {
+            throw std::logic_error(str::cat(
+                "Egyptian index <", x, "> is no alpha-d1g1t5-alpha"));
+        }
+        return r;
+    }
+
     void loadUnikemet(egyp::Base& r)
     {
         for (char32_t c = 0x13430; c <= 0x1345F; ++c) {
@@ -154,6 +196,10 @@ namespace {
             } else if (sField == "kEH_Func"sv) {
                 auto& en = r[cp];
                 en.meaning = sValue;
+            } else if (sField == "kEH_UniK"sv) {
+                /// @todo [urgent] simplify index
+                auto& en = r[cp];
+                en.index = simplifyIndex(sValue);
             }
         }
     }
