@@ -132,8 +132,11 @@ Subtotal: 110
 - 13595: made from man with straight sticks
 - 135B3: lots of captives here
 - 135B9: lots of captives here
+- 135BA: same
+- 135BB: same
 - 135C9: lots of captives here
 - 13626: after 25
+- 13639: just drew a line
 - 136D2: 13478×2
 - 136DE: after DD: TEN
 - 1366F: franken
@@ -160,6 +163,6 @@ Subtotal: 110
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 37
+Subtotal: 40
 
-Total: 176
+Total: 179
