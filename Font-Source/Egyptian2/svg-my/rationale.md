@@ -24,6 +24,7 @@ Subtotal: 29
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
 - 135A5: sit on heel
+- 135B6: more detailed foreigner captive
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
