@@ -27,9 +27,9 @@ Subtotal: 29
 - 1361E: arm raise in front rather than begging
 - 13625: removed placeholders
 - 1363E: need beard
-- 13641: beard barely god → god
+- 13641: beard barely god → god: TWENTY
 - 13645: beard king → god
-- 13659: beard god → king: TWENTY
+- 13659: beard god → king
 - 1365B: beard king → god
 - 1365C: beard god → king
 - 1365D: beard king → god
@@ -37,9 +37,9 @@ Subtotal: 29
 - 1365F: beard king → god
 - 13667: beard none→god, wig short→long
 - 13671: beard ?→king
-- 13673: beard ?→king
+- 13673: beard ?→king: THIRTY
 - 13675: beard ?→god
-- 13676: beard ?→king: THIRTY
+- 13676: beard ?→king
 - 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
@@ -47,9 +47,9 @@ Subtotal: 29
 - 1367C: beard ?→king
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
-- 1368B: beard ?→king
+- 1368B: beard ?→king: FORTY
 - 1368C: beard ?→king
-- 1368D: beard ?→king: FORTY
+- 1368D: beard ?→king
 - 1368F: beard ?→king
 - 13697: beard god→king
 - 13698: beard man→king
@@ -57,9 +57,9 @@ Subtotal: 29
 - 1369B: beard man→king
 - 1369C: beard man→king
 - 1369D: beard man→god
-- 1369E: beard man→king
+- 1369E: beard man→king: FIFTY
 - 1369F: beard man→king
-- 136A1: beard poor god → king: FIFTY
+- 136A1: beard poor god → king
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
@@ -67,9 +67,9 @@ Subtotal: 29
 - 136B4: beard ?→king
 - 136B7: beard ?→god
 - 136BE: beard goddier
-- 136BF: beard curved
+- 136BF: beard curved: SIXTY
 - 136C9: beard ?→king
-- 136CA: beard ?→king: SIXTY
+- 136CA: beard ?→king
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
@@ -77,9 +77,9 @@ Subtotal: 29
 - 13738: same
 - 13739: same
 - 1374D: 4F minus holding
-- 1374F: short hair
+- 1374F: short hair: SEVENTY
 - 13750: short hair
-- 13751: short hair: SEVENTY
+- 13751: short hair
 - 13755: short hair
 - 13756: short hair
 - 13757: short hair
@@ -87,9 +87,9 @@ Subtotal: 29
 - 1375A: short hair
 - 1375B: short hair
 - 1375C: short hair
-- 137EC: man’s hair/beard
+- 137EC: man’s hair/beard: EIGHTY
 - 137EF: no beard, no collar
-- 137F1: no beard, no collar: EIGHTY
+- 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
@@ -97,9 +97,9 @@ Subtotal: 29
 - 137F8: same
 - 137F9: same
 - 137FA: mismatch, removed beard
-- 137FB: mismatch, removed beard
+- 137FB: mismatch, removed beard: NINETY
 - 137FF: mismatch, removed beard
-- 13800: mismatch, removed beard, fixed very sharp inner angles: NINETY
+- 13800: mismatch, removed beard, fixed very sharp inner angles
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
@@ -107,7 +107,7 @@ Subtotal: 29
 - 1383B: same
 - 1387A: strange image
 - 1387B: bigger tits
-- 1387B: same
+- 1387B: same: ONE HUNDRED
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
@@ -121,7 +121,7 @@ Subtotal: 29
 - 13C57: same
 - 13C58: this one has one feather
 
-Subtotal: 110
+Subtotal: 112
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -133,6 +133,7 @@ Subtotal: 110
 - 1356C: after 6B
 - 13595: made from man with straight sticks
 - 135B3: lots of captives here
+- 135B4: same
 - 135B9: lots of captives here
 - 135BA: same
 - 135BB: same
@@ -165,6 +166,6 @@ Subtotal: 110
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 40
+Subtotal: 41
 
-Total: 179
+Total: 182
