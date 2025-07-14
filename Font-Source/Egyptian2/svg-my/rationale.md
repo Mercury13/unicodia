@@ -1,5 +1,7 @@
 ﻿# Rationale behind these characters
 
+RETURN = temporarily deleted, then returned
+
 ## Will never extend: above the fold + tofu + NonCore
 - 13460, 61, 62, 63, 64, 65, 67
 - 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B
