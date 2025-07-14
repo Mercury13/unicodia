@@ -145,6 +145,9 @@ Subtotal: 113
 - 135BA: same
 - 135BB: same
 - 135C9: lots of captives here
+- 135CB: lots of captives here
+- 135D4: lots of captives here
+- 135D8: lots of captives here
 - 13626: after 25
 - 13639: just drew a line
 - 136D2: 13478×2
@@ -173,6 +176,6 @@ Subtotal: 113
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 41
+Subtotal: 48
 
-Total: 182
+Total: 190
