@@ -1057,6 +1057,10 @@
     <text id="Mean">
      <orig>Meaning</orig>
     </text>
+    <text id="Ind">
+     <orig>Index</orig>
+     <au-cmt>A1, B10c etc</au-cmt>
+    </text>
    </group>
   </group>
   <group id="Block">

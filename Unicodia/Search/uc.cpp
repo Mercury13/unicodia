@@ -266,6 +266,7 @@ namespace {
                 case uc::TextRole::MAIN_NAME:
                 case uc::TextRole::HTML:
                 case uc::TextRole::ABBREV:
+                case uc::TextRole::EGYP_INDEX:
                     r.emplace_back(text, srh::DefaultComparator::INST, role);
                     break;
                 case uc::TextRole::ALT_NAME:
@@ -304,6 +305,7 @@ namespace {
                 case uc::TextRole::EGYP_UC:
                 case uc::TextRole::EGYP_EQUIV:
                 case uc::TextRole::EGYP_MEANING:
+                case uc::TextRole::EGYP_INDEX:
                     break;
                 }
             });
@@ -472,6 +474,7 @@ namespace {
         switch (role) {
         case uc::TextRole::HTML:        // HTML unused (processed separately), but let it be
         case uc::TextRole::ABBREV:
+        case uc::TextRole::EGYP_INDEX:
             return srh::RoleType::LACONIC;
         case uc::TextRole::ALT_NAME:
         case uc::TextRole::EMOJI_NAME:

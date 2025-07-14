@@ -1335,6 +1335,11 @@
      <orig>Meaning</orig>
      <transl>Зміст</transl>
     </text>
+    <text id="Ind">
+     <orig>Index</orig>
+     <au-cmt>A1, B10c etc</au-cmt>
+     <transl>Індекс</transl>
+    </text>
    </group>
   </group>
   <group id="Block">
@@ -12220,6 +12225,7 @@
     </text>
     <text id="UnkFlag">
      <orig>Unknown flag</orig>
+     <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
      <transl>Невідомий прапор</transl>
     </text>
    </group>
@@ -12278,7 +12284,7 @@
    </text>
    <text id="FullEmoji">
     <orig>Warning: copied full emoji</orig>
-    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji but warn</au-cmt>
+    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji (smile+ZVJ+UD+VS16) but warn</au-cmt>
     <transl>Увага: скопійовано повний емодзі</transl>
    </text>
   </group>

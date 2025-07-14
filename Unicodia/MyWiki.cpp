@@ -2318,6 +2318,7 @@ namespace {
                 case uc::TextRole::EGYP_UC:
                 case uc::TextRole::EGYP_EQUIV:
                 case uc::TextRole::EGYP_MEANING:
+                case uc::TextRole::EGYP_INDEX:
                     break;
                 }
             });
@@ -2425,6 +2426,11 @@ namespace {
             cp.traverseTextsT(uc::AutoName::NO,
                 [&text, &sp](uc::TextRole role, std::u8string_view s) {
                     switch (role) {
+                    case uc::TextRole::EGYP_INDEX:
+                        sp.sep();
+                        appendNonBullet(text, "Prop.Egyp2.Ind");
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        break;
                     case uc::TextRole::EGYP_EWP:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Short");
@@ -3018,6 +3024,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                     case uc::TextRole::EGYP_UC:
                     case uc::TextRole::EGYP_EQUIV:
                     case uc::TextRole::EGYP_MEANING:
+                    case uc::TextRole::EGYP_INDEX:
                     case uc::TextRole::EMOJI_NAME:  // Equal to mine
                         break;
                     }

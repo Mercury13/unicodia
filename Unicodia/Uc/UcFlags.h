@@ -103,6 +103,7 @@ namespace uc {
         EGYP_UC = 9,        // Egyptian description from Unicode
         EGYP_EQUIV = 10,    // Egyptian equivalent sequence
         EGYP_MEANING = 11,  // Egyptian meaning
+        EGYP_INDEX = 12,    // Egyptian index
     };
 
     enum : unsigned char {

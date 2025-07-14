@@ -1323,6 +1323,10 @@
     <text id="Mean">
      <orig>Meaning</orig>
     </text>
+    <text id="Ind">
+     <orig>Index</orig>
+     <au-cmt>A1, B10c etc</au-cmt>
+    </text>
    </group>
   </group>
   <group id="Block">
@@ -12299,6 +12303,7 @@
     </text>
     <text id="UnkFlag" force-attention="true">
      <orig>Unknown flag</orig>
+     <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
      <transl>不明な国旗</transl>
     </text>
    </group>
@@ -12357,7 +12362,7 @@
    </text>
    <text id="FullEmoji" force-attention="true">
     <orig>Warning: copied full emoji</orig>
-    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji but warn</au-cmt>
+    <au-cmt>Test: search "🙂‍↕︎" = smile+ZWJ+UD+VS15, should copy full emoji (smile+ZVJ+UD+VS16) but warn</au-cmt>
     <transl>警告: 絵文字全体をコピーしました</transl>
    </text>
   </group>
