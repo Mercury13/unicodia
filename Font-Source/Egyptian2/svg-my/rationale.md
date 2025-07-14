@@ -20,16 +20,18 @@ Subtotal: 29
 - 1354E: more consistent short wig
 - 13552: short beard
 - 13555: long wig
-- 13560: bushy beard: TEN
+- 13560: bushy beard
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
 - 135A5: sit on heel
 - 135B6: more detailed foreigner captive
-- 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
+- 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
+- 135C2: other legs, need C3
+- 135C8: see C0
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
-- 13625: removed placeholders
-- 1363E: need beard: TWENTY
+- 13625: removed placeholders: TWENTY
+- 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
 - 13659: beard god → king
@@ -39,7 +41,7 @@ Subtotal: 29
 - 1365E: beard king → god
 - 1365F: beard king → god
 - 13667: beard none→god, wig short→long
-- 13671: beard ?→king: THIRTY
+- 13671: beard ?→king
 - 13673: beard ?→king
 - 13675: beard ?→god
 - 13676: beard ?→king
@@ -48,8 +50,8 @@ Subtotal: 29
 - 1367A: beard ?→god
 - 1367B: beard ?→king
 - 1367C: beard ?→king
-- 1367D: beard ?→king
-- 13680: beard (god, per NewGar): FORTY
+- 1367D: beard ?→king: FORTY
+- 13680: beard (god, per NewGar)
 - 1368B: beard ?→king
 - 1368C: beard ?→king
 - 1368D: beard ?→king
@@ -59,7 +61,7 @@ Subtotal: 29
 - 1369A: beard man→king
 - 1369B: beard man→king
 - 1369C: beard man→king
-- 1369D: beard man→god: FIFTY
+- 1369D: beard man→god
 - 1369E: beard man→king
 - 1369F: beard man→king
 - 136A1: beard poor god → king
@@ -68,8 +70,8 @@ Subtotal: 29
 - 136B2: beard ?→king
 - 136B3: beard ?→king
 - 136B4: beard ?→king
-- 136B7: beard ?→god
-- 136BE: beard goddier: SIXTY
+- 136B7: beard ?→god: SIXTY
+- 136BE: beard goddier
 - 136BF: beard curved
 - 136C9: beard ?→king
 - 136CA: beard ?→king
@@ -79,7 +81,7 @@ Subtotal: 29
 - 13737: pregnant
 - 13738: same
 - 13739: same
-- 1374D: 4F minus holding: SEVENTY
+- 1374D: 4F minus holding
 - 1374F: short hair
 - 13750: short hair
 - 13751: short hair
@@ -88,8 +90,8 @@ Subtotal: 29
 - 13757: short hair
 - 13759: short hair
 - 1375A: short hair
-- 1375B: short hair
-- 1375C: short hair: EIGHTY
+- 1375B: short hair: EIGHTY
+- 1375C: short hair
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
@@ -99,7 +101,7 @@ Subtotal: 29
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
 - 137F9: same
-- 137FA: mismatch, removed beard: NINETY
+- 137FA: mismatch, removed beard
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
@@ -108,8 +110,8 @@ Subtotal: 29
 - 13839: Ptah, straight beard
 - 1383A: same
 - 1383B: same
-- 1387A: strange image
-- 1387B: bigger tits: ONE HUNDRED
+- 1387A: strange image: ONE HUNDRED
+- 1387B: bigger tits
 - 1387B: same
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
@@ -124,7 +126,7 @@ Subtotal: 29
 - 13C57: same
 - 13C58: this one has one feather
 
-Subtotal: 113
+Subtotal: 114
 
 # Duped with NewGardiner
 - 13469: prereq for 5B2
@@ -144,10 +146,14 @@ Subtotal: 113
 - 135B9: lots of captives here
 - 135BA: same
 - 135BB: same
+- 135C3: lots of captives here
+- 135C4: same
+- 135C7: same
 - 135C9: lots of captives here
 - 135CB: lots of captives here
 - 135D4: lots of captives here
 - 135D8: lots of captives here
+- 135DD: lots of captives here
 - 13626: after 25
 - 13639: just drew a line
 - 136D2: 13478×2
@@ -176,6 +182,6 @@ Subtotal: 113
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 48
+Subtotal: 52
 
-Total: 190
+Total: 195
