@@ -20,7 +20,7 @@ Subtotal: 29
 - 13555: long wig
 - 13560: bushy beard: TEN
 - 13576: added scroll
-- 13577: temporarily deleted, then added another with pelt
+- 13577: RETURN: added another with pelt
 - 135A5: sit on heel
 - 135C0, C8: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 1360F: kneel rather than ride the back
