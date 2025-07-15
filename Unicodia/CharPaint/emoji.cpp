@@ -25,7 +25,7 @@ bool GetCp::mayBeText(uc::EmojiDraw emojiDraw) const noexcept
         return false;
     case uc::EmojiDraw::CONSERVATIVE:
     case uc::EmojiDraw::MOSTLY_TEXT:
-        return !forceGraphic;
+        return hasCp() && !forceGraphic;
     case uc::EmojiDraw::FORCE_TEXT:
         return true;
     }
@@ -599,7 +599,7 @@ GetCp EmojiPainter::getCp(std::u32string_view text)
         }
         [[fallthrough]];
     default:
-        return { .cp = 0, .forceGraphic = false };
+        return { .cp = NO_CP, .forceGraphic = false };
     }
 }
 

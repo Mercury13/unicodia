@@ -2404,18 +2404,18 @@ void FmMain::libLocalMenuRequested(const QPoint& where)
     // Copy bare
     auto dug = EmojiPainter::getCp(node.value);
     localLib.acCopyBare->setVisible(
-                dug.cp
+                dug
              && node.value.length() > 1);   // not just this character
 
     // Copy + VS15
     localLib.acCopyVs15->setVisible(
-                dug.cp
+                dug
              && uc::cpsByCode[dug.cp]->isEmoji()
              && !node.isVs15());
 
     // Favourites
     localLib.direction = DIR_ADD;
-    if (dug.cp) {
+    if (dug) {
         localLib.direction = !config::favs.contains(dug.cp);
         localLib.acAddToFavs->setEnabled(true);
     } else {

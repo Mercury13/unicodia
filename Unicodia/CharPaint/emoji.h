@@ -53,14 +53,16 @@ private:
     void runColorSeparated(QByteArray& bytes) const;
 };
 
+constexpr char32_t NO_CP = std::numeric_limits<char32_t>::max();
 
 struct GetCp {
     char32_t cp = 0;
     bool forceGraphic = false;
 
-    explicit operator bool() const noexcept { return cp; }
+    bool hasCp() const noexcept { return (cp != NO_CP); }
+    explicit operator bool() const noexcept { return hasCp(); }
     /// @return [+] may be text  [-] surely graphic
-    [[nodiscard]] bool mayBeText() const noexcept { return cp && !forceGraphic; }
+    [[nodiscard]] bool mayBeText() const noexcept { return hasCp() && !forceGraphic; }
     [[nodiscard]] bool mayBeText(uc::EmojiDraw emojiDraw) const noexcept;
 };
 
