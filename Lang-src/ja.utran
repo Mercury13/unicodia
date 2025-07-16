@@ -14681,10 +14681,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
+      <p>The most advanced educational computer of the USSR. The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
       <p />
       <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
      </orig>
+     <known-orig>
+      <p>The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
+      <p />
+      <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
+     </known-orig>
      <transl>このコンピューターは面白く、グラフィックも良かったのですが、製造品質が低く、8 ビット CPU は弱すぎたため、スクロールするゲームはほとんどありませんでした。ソ連崩壊後、Korvet 用に作られたケースは、より小型のコンピューターに再利用されました。</transl>
     </text>
    </group>
