@@ -118,7 +118,7 @@
 * CJK: Hira, Kana and Kana phonetic are confirmed by a Japanese, and will no longer change
 * For symbols: the most used, or the most iconic
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
-* Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances.
+* Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances
 
 ## When Unicode transitions from beta to release:
 * Go to ``MiscFiles/RawData`` and change addresses to final ones
