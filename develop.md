@@ -97,7 +97,6 @@
     * **All new icons** will have foreground colour #c01c28 (=Gnome HIG red 4). This colour is automatically repainted to block-specific. Raise flag Ifg::PAINT_SVG to enable this feature. Of course, you may use any colour you want, but better use placeholder unless there’s a good reason.
 	* Very rare (one custom icon only), but: background colour is #f9f06b (=Gnome HIG yellow 1).
     * What to draw if the block is still full of tofu? In U14/15 I drew “U ↵ 14”, in U16/17 I drew very crude images of characters.
-	* Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances.
   * Go to UcBlocks.cpp. Write in ``synthIcon`` field what characters (up to two) you drew and how to align that picture to pixels on HiDPI
     * Example 1: Devanagari 0900 has upper line at 2px and vertical stem at 9px — thus coordinates of cardinal stem are (9, 2)
     * Example 2: Basic Latin 0000 has vertical stem at 5px and horizontal line at 15px, but to make it aligned to pixels, I greatly shifted to the right — I think that imbalance is 0.3px to the right.
@@ -119,6 +118,7 @@
 * CJK: Hira, Kana and Kana phonetic are confirmed by a Japanese, and will no longer change
 * For symbols: the most used, or the most iconic
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
+* Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances.
 
 ## When Unicode transitions from beta to release:
 * Go to ``MiscFiles/RawData`` and change addresses to final ones
