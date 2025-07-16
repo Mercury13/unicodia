@@ -130,6 +130,8 @@ Subtotal: 114
 
 # Duped with NewGardiner
 - 13469: prereq for 5B2
+- 1346D: campaign for sitting men
+- 1346F: same
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
@@ -182,6 +184,6 @@ Subtotal: 114
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 52
+Subtotal: 54
 
-Total: 195
+Total: 197
