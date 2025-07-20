@@ -118,6 +118,7 @@ Subtotal: 29
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
+- 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -126,7 +127,7 @@ Subtotal: 29
 - 13C57: same
 - 13C58: this one has one feather
 
-Subtotal: 114
+Subtotal: 115
 
 # Duped with NewGardiner
 - 13469: prereq for 5B2
@@ -186,9 +187,11 @@ Subtotal: 114
 - 13926: same
 - 13933: after 32
 - 13ABE: after 130F9
+- 13B98: after 97
+- 13B9F: after 98
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 59
+Subtotal: 61
 
-Total: 202
+Total: 205
