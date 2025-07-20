@@ -11348,7 +11348,7 @@
       <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{plane%|3}} full.</p>
       <p>* Planes 4 to 0D are unused.</p>
       <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than {{approx14}} special characters.</p>
-      <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
+      <p>* Planes 0F and 10 are left for [[pt:private|private use]].</p>
      </orig>
      <au-cmt>
       <p>{{vleft16}} = version that has those 16 chars left</p>
@@ -11363,7 +11363,7 @@
       <p>* プレーン #3 は '''第 3 次表意文字プレーン''' で、CJK 表意文字のみが含まれており、{{plane%|3}} がいっぱいです。</p>
       <p>* プレーン 4 から 0D は未使用です。</p>
       <p>* プレーン 0E は '''補助特殊用途プレーン''' で、{{approx14}} 個未満の特殊文字が含まれています。</p>
-      <p>* プレーン 0E と 10 は [[pt:private|私的使用]] 用に残されています。</p>
+      <p>* プレーン 0F と 10 は [[pt:private|私的使用]] 用に残されています。</p>
      </transl>
     </text>
    </group>
