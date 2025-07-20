@@ -139,6 +139,7 @@ Subtotal: 115
 - 13476: same
 - 13477: same
 - 1347A: same
+- 1347C: same, after 7B
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
@@ -193,6 +194,6 @@ Subtotal: 115
 - 13C56: 55 + flail
 - 14196: after 97, pectoral
 
-Subtotal: 62
+Subtotal: 63
 
-Total: 206
+Total: 207
