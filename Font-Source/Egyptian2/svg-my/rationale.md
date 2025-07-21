@@ -2,13 +2,15 @@
 
 RETURN = temporarily deleted, then returned
 
-## Will never extend: above the fold + tofu + NonCore
-- 13460, 61, 62, 63, 64, 65, 67
-- 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B
-- 13983, 13B52, 13B9E, 13CCE, 13F3D, 14016, 14091, 14198, 142СС, 14330
-- 136AE, 142AD
+# Will never extend
+- 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
+- 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B = tofu
+- 13983, 13B52, 13B9E, 13CCE, 13F3D, 14016, 14091, 14198, 142СС, 14330 = tofu (20)
+- 136AE, 142AD = NonCore (2)
+- 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for sitting men
+- 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = same (17)
 
-Subtotal: 29
+Subtotal: 46
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -131,20 +133,6 @@ Subtotal: 29
 Subtotal: 116
 
 # Duped with NewGardiner
-- 13469: prereq for 5B2
-- 1346D: campaign for sitting men
-- 1346F: same
-- 13471: same
-- 13472: same
-- 13473: same
-- 13476: same
-- 13477: same
-- 1347A: same
-- 1347C: same, after 7B
-- 1347E: same
-- 1347F: same
-- 13481: same
-- 13482: same
 - 1348C: after 8B
 - 134C0: after C1
 - 134EE: after ED
@@ -201,6 +189,6 @@ Subtotal: 116
 - 13EFC: same
 - 14196: after 97, pectoral
 
-Subtotal: 69
+Subtotal: 55
 
-Total: 214
+Total: 217
