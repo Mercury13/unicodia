@@ -197,8 +197,10 @@ Subtotal: 116
 - 13B98: after 97
 - 13B9F: after 98
 - 13C56: 55 + flail
+- 13EFB: after FD
+- 13EFC: same
 - 14196: after 97, pectoral
 
-Subtotal: 67
+Subtotal: 69
 
-Total: 212
+Total: 214
