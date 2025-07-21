@@ -180,6 +180,7 @@ Subtotal: 118
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
 - 1383C: Imhotep is close to Ptah
+- 138FB: after FA
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
@@ -192,6 +193,6 @@ Subtotal: 118
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 56
+Subtotal: 57
 
-Total: 220
+Total: 221
