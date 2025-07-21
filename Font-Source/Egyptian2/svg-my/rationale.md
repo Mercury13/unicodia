@@ -113,6 +113,7 @@ Subtotal: 29
 - 1387A: strange image: ONE HUNDRED
 - 1387B: bigger tits
 - 1387B: same
+- 1392A: fixed self-intersection
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
@@ -127,7 +128,7 @@ Subtotal: 29
 - 13C57: same
 - 13C58: this one has one feather
 
-Subtotal: 115
+Subtotal: 116
 
 # Duped with NewGardiner
 - 13469: prereq for 5B2
@@ -199,4 +200,4 @@ Subtotal: 115
 
 Subtotal: 66
 
-Total: 210
+Total: 211
