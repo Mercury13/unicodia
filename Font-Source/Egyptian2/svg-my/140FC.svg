@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="18.000000px"
+   height="18.000000px"
+   id="svg1290"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="140FC.svg"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="10.820261"
+     inkscape:cx="-6.330716"
+     inkscape:cy="18.992148"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/2.0/" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>JSesh hieroglyph</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Karnak Hypostyle walls.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.593374;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 7.2120825,0.02641488 6.9170057,0.03945672 0.33402769,0.3133401 C 0.17606495,0.31922559 0.05089198,0.4487148 0.05036267,0.6067889 V 3.7890505 C 0.04997931,3.9389825 0.16225695,4.0652969 0.31120378,4.0824944 2.4955742,4.3394815 4.5113892,4.4863315 6.8501651,4.687318 l 0.048908,0.0049 L 6.8110392,18 H 8.5749777 L 8.1364386,0.04923676 H 7.2137129 Z M 6.9267876,0.62797738 6.9039638,4.1004257 h -0.00326 C 4.6527529,3.9072433 2.7090809,3.7614455 0.64051575,3.5249469 V 0.89045241 Z"
+       id="path2091" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.593374;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 15.483652,0.02641488 15.188576,0.03945672 8.6055975,0.3133401 C 8.4476348,0.3192251 8.3224618,0.4487148 8.3219325,0.6067889 v 3.1822616 c -3.833e-4,0.149932 0.1118943,0.2762464 0.2608411,0.2934439 2.1843704,0.2569871 4.2001854,0.4038371 6.5389614,0.6048236 l 0.04891,0.0049 L 15.082609,18 h 1.763938 L 16.408008,0.04923676 h -0.922726 z m -0.285295,0.6015625 -0.02282,3.47244832 h -0.0033 C 12.924322,3.9072433 10.98065,3.7614455 8.9120855,3.5249469 V 0.89045241 Z"
+       id="path1871" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.593374;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 23.755223,0.02641488 23.460146,0.03945672 16.877168,0.3133401 c -0.157963,0.005885 -0.283136,0.1353747 -0.283665,0.2934488 v 3.1822616 c -3.84e-4,0.149932 0.111894,0.2762464 0.260841,0.2934439 2.18437,0.2569871 4.200185,0.4038371 6.538961,0.6048236 l 0.04891,0.0049 L 23.354179,18 h 1.763939 L 24.679579,0.04923676 h -0.922726 z m -0.285295,0.6015625 -0.02282,3.47244832 h -0.0033 C 21.195893,3.9072433 19.252221,3.7614455 17.183656,3.5249469 V 0.89045241 Z"
+       id="path1873" />
+  </g>
+</svg>

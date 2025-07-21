@@ -4,11 +4,11 @@ RETURN = temporarily deleted, then returned
 
 # Will never extend
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
-- 134CC, 135EC, 13712, 1372D, 1374C, 137CA, 13804, 13806, 13887, 1393B = tofu
-- 13983, 13B52, 13B9E, 13CCE, 13F3D, 14016, 14091, 14198, 142СС, 14330 = tofu (20)
+- 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
+- 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
 - 136AE, 142AD = NonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for sitting men
-- 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = same (17)
+- 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for sitting men (17)
 
 Subtotal: 46
 
@@ -32,7 +32,7 @@ Subtotal: 46
 - 135C8: see C0
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
-- 13625: removed placeholders: TWENTY
+- 13625: removed PLACEHOLDERS: TWENTY
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
@@ -129,8 +129,10 @@ Subtotal: 46
 - 13C55: same
 - 13C57: same
 - 13C58: this one has one feather
+- 140FC: removed PLACEHOLDERS
+- 14386: removed PLACEHOLDERS
 
-Subtotal: 116
+Subtotal: 118
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -188,7 +190,8 @@ Subtotal: 116
 - 13EFB: after FD
 - 13EFC: same
 - 14196: after 97, pectoral
+- 141A2: after A1
 
-Subtotal: 55
+Subtotal: 56
 
-Total: 217
+Total: 220
