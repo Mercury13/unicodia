@@ -7,8 +7,8 @@ RETURN = temporarily deleted, then returned
 - 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
 - 136AE, 142AD = NonCore (2)
-- 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for sitting men
-- 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for sitting men (17)
+- 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
+- 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
 
 Subtotal: 46
 
@@ -136,6 +136,7 @@ Subtotal: 118
 
 # Duped with NewGardiner
 - 1348C: after 8B
+- 1348E: campaign for standing men, after A202
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
@@ -193,11 +194,11 @@ Subtotal: 118
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 57
+Subtotal: 58
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 222
+Total: 223
