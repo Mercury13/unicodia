@@ -20,7 +20,8 @@ Meaning of directories:
 
 1. After loading Unikemet.txt run file filter_unikemet.bat
 2. Check what changed in Unisesh.txt. That’s some random ID and JSesh ID. Changed → something really big happened.
-3. Then check sample images (using delta code charts).
-4. Then descriptions (using Unikemet changes)
+3. In rationale.txt there are a few chars I found for myself. Have they landed to the same or different code point?
+4. Then check sample images (using delta code charts).
+5. Then descriptions (using Unikemet changes)
 
 Check = what changed? Is the character original or redrawn? Can we find something in JSesh base? Maybe revert to JSesh’s image?
