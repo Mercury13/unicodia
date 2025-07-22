@@ -76,6 +76,8 @@ namespace uc {
         MISRENDER_0   = 1<<8,   ///< [+] emoji misrenders are possible
         MISRENDER_1   = 1<<9,   ///< [+] emoji misrenders are possible
         MISRENDER_2   = 1<<10,  ///< [+] emoji misrenders are possible
+        SWAP_MAN_WOMAN= 1<<11,  ///< [+] can swap man and woman
+        SWAP_BOY_GIRL = 1<<12,  ///< [+] can swap boy and girl
         TECHNICAL     = 1<<15,  ///< [+] technical block we cannot go to
     };
     using Lfgs = Flags<Lfg>;

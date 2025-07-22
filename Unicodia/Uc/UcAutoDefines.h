@@ -454,6 +454,7 @@ namespace uc {
         short iParent, nChildren, iFirstChild;
         Lfgs flags;
         uc::EcVersion ecEmojiVersion = uc::EcVersion::NOT_EMOJI;
+        std::u32string_view nonStandardValue {};
 
         EmojiDraw emojiDraw() const noexcept;
         inline const uc::Version& emojiVersion() const noexcept;
