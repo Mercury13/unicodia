@@ -583,11 +583,12 @@ uc::MultiResult uc::doSearch(QString what)
             const auto cp1 = char32_t(flagName[0]) + OFS_FLAGA;
             if (auto where1 = trieRoot.find(cp1)) {
                 const auto cp2 = char32_t(flagName[1]) + OFS_FLAGA;
-                auto [where2, _] = where1->find(cp2);
+                auto [where2, level2] = where1->find(cp2);
                 if (where2 && where2->result()) {
                     // At last found
                     auto& bk = r.emplace_back(where2->result(), srh::EmojiLevel::FULL);
                     bk.prio.high = uc::HIPRIO_FLAG;
+                    bk.emojiLevel = level2;
                     bk.giveTriggerName(str::toU8(flagName));
                 }
             }
