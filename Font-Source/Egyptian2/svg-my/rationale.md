@@ -94,6 +94,8 @@ Subtotal: 46
 - 1375A: short hair
 - 1375B: short hair: EIGHTY
 - 1375C: short hair
+- 13766: vertical ankh
+- 13767: same
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
@@ -110,9 +112,9 @@ Subtotal: 46
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
-- 1383A: same
+- 1383A: same: ONE HUNDRED
 - 1383B: same
-- 1387A: strange image: ONE HUNDRED
+- 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
 - 1392A: fixed self-intersection
@@ -132,7 +134,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 118
+Subtotal: 120
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -201,4 +203,4 @@ Subtotal: 58
 
 Subtotal: 1
 
-Total: 223
+Total: 225
