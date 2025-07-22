@@ -8438,6 +8438,9 @@
      <orig>Unknown flag</orig>
      <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
     </text>
+    <text id="NsEmoji">
+     <orig>Non-standard emoji</orig>
+    </text>
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>

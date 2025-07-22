@@ -12228,6 +12228,10 @@
      <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
      <transl>Невідомий прапор</transl>
     </text>
+    <text id="NsEmoji">
+     <orig>Non-standard emoji</orig>
+     <transl>Нестандартний емодзі</transl>
+    </text>
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>

@@ -12306,6 +12306,10 @@
      <au-cmt>Search for a bad flag like "🇦🇦"</au-cmt>
      <transl>不明な国旗</transl>
     </text>
+    <text id="NsEmoji" force-attention="true">
+     <orig>Non-standard emoji</orig>
+     <transl>非標準絵文字</transl>
+    </text>
    </group>
    <text id="NonChar">
     <orig>Non-character</orig>
