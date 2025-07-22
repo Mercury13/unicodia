@@ -22,9 +22,9 @@ namespace lib {
 
     struct Node {
         std::u8string name;
-        std::u32string value;
+        std::u32string value, nonStandardValue;
         SafeVector<std::unique_ptr<Node>> children {};
-        uc::Lfgs flags {};
+        uc::Lfgs flags = NO_FLAGS;
         std::string emojiVersion;
         mutable struct Cache {
             int index = 0;

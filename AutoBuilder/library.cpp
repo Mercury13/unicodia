@@ -263,6 +263,67 @@ namespace {
         }
     }
 
+    constexpr int NO_POS = -2;
+    constexpr int TWIN_POS = -1;
+    constexpr int REAL_POS = 0;
+
+    int onlyPos(std::u32string_view x, char32_t c)
+    {
+        auto p1 = x.find(c);
+        if (p1 == std::u32string_view::npos)
+            return NO_POS;
+        auto p2 = x.find(c, p1 + 1);
+        if (p2 != std::u32string_view::npos)
+            return TWIN_POS;
+        return p1;
+    }
+
+    uc::Lfgs checkMenWomen(std::u32string_view x, std::string_view name)
+    {
+        uc::Lfgs r;
+        // No ZWJ → do nothing
+        if (x.size() < 3    // min 3: XXX + ZWJ + YYY
+                || x.find(cp::ZWJ) == std::u32string_view::npos)
+            return r;
+
+        // Men/women
+        auto pMan = onlyPos(x, cp::MAN);
+        auto pWoman = onlyPos(x, cp::WOMAN);
+        bool hasManWoman = (pMan >= REAL_POS && pWoman >= REAL_POS);
+        if (hasManWoman) {
+            r |= uc::Lfg::SWAP_MAN_WOMAN;
+        }
+
+        // Boys/girls
+        auto pBoy = onlyPos(x, cp::BOY);
+        auto pGirl = onlyPos(x, cp::GIRL);
+        if (pBoy >= TWIN_POS || pGirl >= TWIN_POS) {
+            // Family emoji: man → woman, girl → boy
+            if (pMan < TWIN_POS && pWoman < TWIN_POS) {
+                throw std::logic_error(str::cat(
+                    "Family emoji <", name, ">: has boy/girl, no men/women"));
+            }
+            if (pBoy >= REAL_POS && pGirl >= REAL_POS) {
+                if (pBoy < pGirl) {
+                    throw std::logic_error(str::cat(
+                        "Emoji <", name, ">: BOY < GIRL"));
+                }
+                if (hasManWoman && (pWoman < pMan)) {
+                    throw std::logic_error(str::cat(
+                        "Family emoji <", name, ">: WOMAN < MAN"));
+                }
+                r |= uc::Lfg::SWAP_BOY_GIRL;
+            }
+        } else {
+            // Couple emoji: woman → man
+            if (hasManWoman && (pMan < pWoman)) {
+                throw std::logic_error(str::cat(
+                    "Couple emoji <", name, ">: MAN < WOMAN"));
+            }
+        }
+        return r;
+    }
+
 }   // anon namespace
 
 
@@ -319,8 +380,10 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     mainCode = codes[0];
                 }
                 std::u32string_view myStr { codes.buffer(), nCodes };
+
                 // Add to tree
-                auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
+                auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');                
+                auto additionalFlags = checkMenWomen(myStr, name);
                 auto& newItem = treePath.top()->newChild();
                 if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
@@ -330,7 +393,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 newItem.value.assign(codes.buffer(), nCodes);
 
                 newItem.emojiVersion = emVersion;
-                newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
+                newItem.flags = additionalFlags | uc::Lfg::GRAPHIC_EMOJI;
                 if (mainCode != 0)
                     r.allSingleChar.emplace(mainCode, &newItem);
                 if (NO_TILE.contains(newItem.name))
@@ -344,6 +407,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     if (it->second == uc::MISRENDER_SIMPLE && mainCode != 0)
                         r.misrenders.insert(mainCode);
                 }
+
+                /// @todo [urgent] alt sequence
 
                 auto level = searchLevel(newItem.value);
                 switch (level) {
