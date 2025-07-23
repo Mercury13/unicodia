@@ -353,6 +353,30 @@ namespace {
         return r;
     }
 
+    constexpr char32_t NO_CP = 0;
+    struct EmojiCpInfo {
+        char32_t mainCp;
+        char32_t skin;
+
+        constexpr operator bool() const noexcept { return mainCp; }
+    };
+
+    EmojiCpInfo emojiCp(std::u32string_view x)
+    {
+        switch (x.length()) {
+        case 1:
+            return { .mainCp = x[0], .skin = NO_CP };
+        case 2:
+            if (x[1] == cp::VS16)
+                return { .mainCp = x[0], .skin = NO_CP };
+            if (x[1] >= cp::SKIN1 && x[1] <= cp::SKIN5)
+                return { .mainCp = x[0], .skin = x[1] };
+            [[fallthrough]];
+        default:
+            return { .mainCp = NO_CP, .skin = NO_CP };
+        }
+    }
+
 }   // anon namespace
 
 
@@ -408,7 +432,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     r.vs16.insert(codes[0]);
                     mainCode = codes[0];
                 }
-                std::u32string_view myStr { codes.buffer(), nCodes };
+                const std::u32string_view myStr { codes.buffer(), nCodes };
 
                 // Add to tree
                 const auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
@@ -437,7 +461,16 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                         r.misrenders.insert(mainCode);
                 }
 
-                /// @todo [urgent] alt sequence
+                // Non-standard sequence
+                if (auto ocp = emojiCp(myStr)) {
+                    // For ZWJ sequence non-standard values are computed in Unicodia
+                    // and sometimes multiple, need a special branch for
+                    // single-chars and VS16
+                    auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
+                    if (nsit != NON_STD_EMOJI.end()) {
+                        newItem.nonStandardValue = nsit->second;
+                    }
+                }
 
                 auto level = searchLevel(newItem.value);
                 switch (level) {
@@ -562,6 +595,11 @@ namespace {
             std::string newVer = node.emojiVersion;
             str::replace(newVer, '.', '_');
             os << newVer;
+        }
+        // non-standard sequence
+        if (!node.nonStandardValue.empty()) {
+            os << ", ";
+            writeU32sv(os, node.nonStandardValue);
         }
         // closing brace
         os << " },   // " << node.cache.index << "\n";
