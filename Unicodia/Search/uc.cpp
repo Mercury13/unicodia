@@ -445,6 +445,7 @@ namespace {
         }
         // Non-standard emoji 1: 👨‍🤝‍👩 (man, handshake, woman)
         // Non-standard emoji 2: 👨🏾‍❤️‍💋‍👩🏻 (man, heart, kiss, woman)
+        // Non-standard emoji 3: 👩🏻‍🐰‍👩🏻 (woman-skin, bunny, woman-same skin)
     }
 
 }   // anon namespace
