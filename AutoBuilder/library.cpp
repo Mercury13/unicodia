@@ -207,6 +207,8 @@ namespace {
         { cp::TWO_WOMEN,     ZZ(cp::WOMAN, cp::HANDSHAKE, cp::WOMAN) },
         { cp::KISS,          ZZ(cp::ADULT, HEART_16, cp::KISS_MARK, cp::ADULT)},
         { cp::COUPLE_HEART,  ZZ(cp::ADULT, HEART_16, cp::ADULT) },
+        { cp::WRESTLERS,     ZZ(cp::ADULT, cp::FIGHT_CLOUD, cp::ADULT) },
+        { cp::PLAYBOY_BUNNIES, ZZ(cp::ADULT, cp::RABBIT_FACE, cp::ADULT) },
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
@@ -290,7 +292,7 @@ namespace {
         static constinit char32_t ALL_CHARS_AR[] {
             // Allowed when used alone
             cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5,   // 5
-            cp::MALE, cp::FEMALE, cp::MAN, cp::WOMAN,            // 9
+            cp::MARS, cp::VENUS, cp::MAN, cp::WOMAN,            // 9
             cp::EMOJI_RIGHT_ARROW,                         // 10
             // The rest
             cp::MAN_AND_WOMAN, cp::TWO_MEN, cp::TWO_WOMEN, cp::SANTA_CLAUS, cp::MRS_CLAUS };
@@ -379,27 +381,64 @@ namespace {
     struct EmojiCpInfo {
         char32_t mainCp;
         char32_t skin;
+        char32_t genderHuman;   ///< adult / man / woman
 
         constexpr operator bool() const noexcept { return mainCp; }
     };
 
-    EmojiCpInfo emojiCp(std::u32string_view x)
+    char32_t planetToHuman(char32_t x)
     {
-        switch (x.length()) {
-        case 1:
-            return { .mainCp = x[0], .skin = NO_CP };
-        case 2:
-            if (x[1] == cp::VS16)
-                return { .mainCp = x[0], .skin = NO_CP };
-            if (x[1] >= cp::SKIN1 && x[1] <= cp::SKIN5)
-                return { .mainCp = x[0], .skin = x[1] };
-            [[fallthrough]];
-        default:
-            return { .mainCp = NO_CP, .skin = NO_CP };
+        switch (x) {
+        case cp::VENUS: return cp::WOMAN;
+        case cp::MARS:  return cp::MAN;
+        default: return NO_CP;
         }
     }
 
-    std::u32string applySkin(std::u32string_view x, char32_t skin)
+    char32_t checkSkin(char32_t x, std::string_view name)
+    {
+        if (x >= cp::SKIN1 && x <= cp::SKIN5)
+            return x;
+        if (x == cp::VS16)
+            return 0;
+        throw std::logic_error(str::cat(
+                "Strange skin in emoji <", name, ">"));
+    }
+
+    constexpr EmojiCpInfo NO_INFO = { .mainCp = NO_CP, .skin = NO_CP, .genderHuman = cp::ADULT };
+
+    EmojiCpInfo emojiCp(std::u32string_view x, std::string_view name)
+    {
+        switch (x.length()) {
+        case 1:
+            return { .mainCp = x[0], .skin = NO_CP, .genderHuman = cp::ADULT };
+        case 2:
+            if (x[1] == cp::VS16)
+                return { .mainCp = x[0], .skin = NO_CP, .genderHuman = cp::ADULT };
+            if (x[1] >= cp::SKIN1 && x[1] <= cp::SKIN5)
+                return { .mainCp = x[0], .skin = x[1], .genderHuman = cp::ADULT };
+            [[fallthrough]];
+        case 4:  // CP-ZWJ-V/M-VS16
+            if (x[1] == cp::ZWJ && x[3] == cp::VS16) {
+                if (auto human = planetToHuman(x[2])) {
+                    return { .mainCp = x[0], .skin = NO_CP, .genderHuman = human };
+                }
+            }
+            return NO_INFO;
+        case 5:  // CP-VS16-ZWJ-V/M-VS16, CP-race-ZWJ-V/M-VS16
+            if (x[2] == cp::ZWJ && x[4] == cp::VS16) {
+                if (auto human = planetToHuman(x[3])) {
+                    auto mySkin = checkSkin(x[1], name);
+                    return { .mainCp = x[0], .skin = mySkin, .genderHuman = human };
+                }
+            }
+            return NO_INFO;
+        default:
+            return NO_INFO;
+        }
+    }
+
+    std::u32string applySkinGender(std::u32string_view x, char32_t skin, char32_t genderHuman)
     {
         if (skin == NO_CP) {
             return std::u32string{x};
@@ -408,9 +447,12 @@ namespace {
         r.reserve(x.length() + 2);
         for (auto c : x) {
             switch (c) {
+            case cp::ADULT:
+                r += genderHuman;
+                r += skin;
+                break;
             case cp::MAN:
             case cp::WOMAN:
-            case cp::ADULT:
                 r += c;
                 r += skin;
                 break;
@@ -517,7 +559,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 }
 
                 // Non-standard sequence
-                if (auto ocp = emojiCp(myStr)) {
+                if (auto ocp = emojiCp(myStr, name)) {
                     // For ZWJ sequence non-standard values are computed in Unicodia
                     // and sometimes multiple.
                     // Need a special branch for single-chars and VS16 only
@@ -535,7 +577,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                             throw std::logic_error("Non-standard emoji has boy and girl, correct Unicodia");
                         }
                         newItem.flags |= newFlags;
-                        newItem.nonStandardValue = applySkin(cleanVersion, ocp.skin);
+                        newItem.nonStandardValue = applySkinGender(
+                                        cleanVersion, ocp.skin, ocp.genderHuman);
                     }
                 }
 

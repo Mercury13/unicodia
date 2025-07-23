@@ -87,22 +87,25 @@ namespace cp {
     constexpr char32_t SKIN5 = 0x1F3FF;
 
     // Misc emoji
-    constexpr char32_t MALE = 0x2642;
-    constexpr char32_t FEMALE = 0x2640;
+    constexpr char32_t MARS = 0x2642;
+    constexpr char32_t VENUS = 0x2640;
     constexpr char32_t SANTA_CLAUS = 0x1F385;
     constexpr char32_t BLACK_FLAG = 0x1F3F4;
+    constexpr char32_t RABBIT_FACE = 0x1F430;
     constexpr char32_t BOY = 0x1F466;
     constexpr char32_t GIRL = 0x1F467;
     constexpr char32_t MAN  = 0x1F468;
     constexpr char32_t WOMAN = 0x1F469;
     constexpr char32_t MAN_AND_WOMAN = 0x1F46B;
     constexpr char32_t TWO_MEN = 0x1F46C;
+    constexpr char32_t PLAYBOY_BUNNIES = 0x1F46F;
     constexpr char32_t TWO_WOMEN = 0x1F46D;
     constexpr char32_t KISS_MARK = 0x1F48B;
     constexpr char32_t KISS = 0x1F48F;
     constexpr char32_t COUPLE_HEART = 0x1F491;
     constexpr char32_t HANDSHAKE = 0x1F91D;
     constexpr char32_t MRS_CLAUS = 0x1F936;
+    constexpr char32_t WRESTLERS = 0x1F93C;
     constexpr char32_t ADULT = 0x1F9D1;
     constexpr char32_t CHILD = 0x1F9D2;
     constexpr char32_t FIGHT_CLOUD = 0x1FAEF;

@@ -1846,24 +1846,24 @@ constinit const uc::LibNode uc::libNodes[10078] {
 { U"\U0001F574\U0001F3FD", u8"person in suit levitating: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1840
 { U"\U0001F574\U0001F3FE", u8"person in suit levitating: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1841
 { U"\U0001F574\U0001F3FF", u8"person in suit levitating: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1842
-{ U"\U0001F46F", u8"people with bunny ears", 220, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1843
-{ U"\U0001F46F\U0001F3FB", u8"people with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1844
-{ U"\U0001F46F\U0001F3FC", u8"people with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1845
-{ U"\U0001F46F\U0001F3FD", u8"people with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1846
-{ U"\U0001F46F\U0001F3FE", u8"people with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1847
-{ U"\U0001F46F\U0001F3FF", u8"people with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1848
-{ U"\U0001F46F\u200D\u2642\uFE0F", u8"men with bunny ears", 220, 0, -1, Lfg(99), EcVersion::E4_0 },   // 1849
-{ U"\U0001F46F\U0001F3FB\u200D\u2642\uFE0F", u8"men with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1850
-{ U"\U0001F46F\U0001F3FC\u200D\u2642\uFE0F", u8"men with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1851
-{ U"\U0001F46F\U0001F3FD\u200D\u2642\uFE0F", u8"men with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1852
-{ U"\U0001F46F\U0001F3FE\u200D\u2642\uFE0F", u8"men with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1853
-{ U"\U0001F46F\U0001F3FF\u200D\u2642\uFE0F", u8"men with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1854
-{ U"\U0001F46F\u200D\u2640\uFE0F", u8"women with bunny ears", 220, 0, -1, Lfg(99), EcVersion::E4_0 },   // 1855
-{ U"\U0001F46F\U0001F3FB\u200D\u2640\uFE0F", u8"women with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1856
-{ U"\U0001F46F\U0001F3FC\u200D\u2640\uFE0F", u8"women with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1857
-{ U"\U0001F46F\U0001F3FD\u200D\u2640\uFE0F", u8"women with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1858
-{ U"\U0001F46F\U0001F3FE\u200D\u2640\uFE0F", u8"women with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1859
-{ U"\U0001F46F\U0001F3FF\u200D\u2640\uFE0F", u8"women with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1860
+{ U"\U0001F46F", u8"people with bunny ears", 220, 0, -1, Lfg(1), EcVersion::E0_6, U"\U0001F9D1\u200D\U0001F430\u200D\U0001F9D1" },   // 1843
+{ U"\U0001F46F\U0001F3FB", u8"people with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FB\u200D\U0001F430\u200D\U0001F9D1\U0001F3FB" },   // 1844
+{ U"\U0001F46F\U0001F3FC", u8"people with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FC\u200D\U0001F430\u200D\U0001F9D1\U0001F3FC" },   // 1845
+{ U"\U0001F46F\U0001F3FD", u8"people with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FD\u200D\U0001F430\u200D\U0001F9D1\U0001F3FD" },   // 1846
+{ U"\U0001F46F\U0001F3FE", u8"people with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FE\u200D\U0001F430\u200D\U0001F9D1\U0001F3FE" },   // 1847
+{ U"\U0001F46F\U0001F3FF", u8"people with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FF\u200D\U0001F430\u200D\U0001F9D1\U0001F3FF" },   // 1848
+{ U"\U0001F46F\u200D\u2642\uFE0F", u8"men with bunny ears", 220, 0, -1, Lfg(99), EcVersion::E4_0, U"\U0001F9D1\u200D\U0001F430\u200D\U0001F9D1" },   // 1849
+{ U"\U0001F46F\U0001F3FB\u200D\u2642\uFE0F", u8"men with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FB\u200D\U0001F430\u200D\U0001F468\U0001F3FB" },   // 1850
+{ U"\U0001F46F\U0001F3FC\u200D\u2642\uFE0F", u8"men with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FC\u200D\U0001F430\u200D\U0001F468\U0001F3FC" },   // 1851
+{ U"\U0001F46F\U0001F3FD\u200D\u2642\uFE0F", u8"men with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FD\u200D\U0001F430\u200D\U0001F468\U0001F3FD" },   // 1852
+{ U"\U0001F46F\U0001F3FE\u200D\u2642\uFE0F", u8"men with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FE\u200D\U0001F430\u200D\U0001F468\U0001F3FE" },   // 1853
+{ U"\U0001F46F\U0001F3FF\u200D\u2642\uFE0F", u8"men with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FF\u200D\U0001F430\u200D\U0001F468\U0001F3FF" },   // 1854
+{ U"\U0001F46F\u200D\u2640\uFE0F", u8"women with bunny ears", 220, 0, -1, Lfg(99), EcVersion::E4_0, U"\U0001F9D1\u200D\U0001F430\u200D\U0001F9D1" },   // 1855
+{ U"\U0001F46F\U0001F3FB\u200D\u2640\uFE0F", u8"women with bunny ears: light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FB\u200D\U0001F430\u200D\U0001F469\U0001F3FB" },   // 1856
+{ U"\U0001F46F\U0001F3FC\u200D\u2640\uFE0F", u8"women with bunny ears: medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FC\u200D\U0001F430\u200D\U0001F469\U0001F3FC" },   // 1857
+{ U"\U0001F46F\U0001F3FD\u200D\u2640\uFE0F", u8"women with bunny ears: medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FD\u200D\U0001F430\u200D\U0001F469\U0001F3FD" },   // 1858
+{ U"\U0001F46F\U0001F3FE\u200D\u2640\uFE0F", u8"women with bunny ears: medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FE\u200D\U0001F430\u200D\U0001F469\U0001F3FE" },   // 1859
+{ U"\U0001F46F\U0001F3FF\u200D\u2640\uFE0F", u8"women with bunny ears: dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FF\u200D\U0001F430\u200D\U0001F469\U0001F3FF" },   // 1860
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F430\u200D\U0001F9D1\U0001F3FC", u8"people with bunny ears: light skin tone, medium-light skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1861
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F430\u200D\U0001F9D1\U0001F3FD", u8"people with bunny ears: light skin tone, medium skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1862
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F430\u200D\U0001F9D1\U0001F3FE", u8"people with bunny ears: light skin tone, medium-dark skin tone", 220, 0, -1, Lfg(67), EcVersion::E17_0 },   // 1863
@@ -2136,24 +2136,24 @@ constinit const uc::LibNode uc::libNodes[10078] {
 { U"\U0001F938\U0001F3FD\u200D\u2640\uFE0F", u8"woman cartwheeling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2130
 { U"\U0001F938\U0001F3FE\u200D\u2640\uFE0F", u8"woman cartwheeling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2131
 { U"\U0001F938\U0001F3FF\u200D\u2640\uFE0F", u8"woman cartwheeling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2132
-{ U"\U0001F93C", u8"people wrestling", 221, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2133
-{ U"\U0001F93C\U0001F3FB", u8"people wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2134
-{ U"\U0001F93C\U0001F3FC", u8"people wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2135
-{ U"\U0001F93C\U0001F3FD", u8"people wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2136
-{ U"\U0001F93C\U0001F3FE", u8"people wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2137
-{ U"\U0001F93C\U0001F3FF", u8"people wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2138
-{ U"\U0001F93C\u200D\u2642\uFE0F", u8"men wrestling", 221, 0, -1, Lfg(99), EcVersion::E4_0 },   // 2139
-{ U"\U0001F93C\U0001F3FB\u200D\u2642\uFE0F", u8"men wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2140
-{ U"\U0001F93C\U0001F3FC\u200D\u2642\uFE0F", u8"men wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2141
-{ U"\U0001F93C\U0001F3FD\u200D\u2642\uFE0F", u8"men wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2142
-{ U"\U0001F93C\U0001F3FE\u200D\u2642\uFE0F", u8"men wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2143
-{ U"\U0001F93C\U0001F3FF\u200D\u2642\uFE0F", u8"men wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2144
-{ U"\U0001F93C\u200D\u2640\uFE0F", u8"women wrestling", 221, 0, -1, Lfg(99), EcVersion::E4_0 },   // 2145
-{ U"\U0001F93C\U0001F3FB\u200D\u2640\uFE0F", u8"women wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2146
-{ U"\U0001F93C\U0001F3FC\u200D\u2640\uFE0F", u8"women wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2147
-{ U"\U0001F93C\U0001F3FD\u200D\u2640\uFE0F", u8"women wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2148
-{ U"\U0001F93C\U0001F3FE\u200D\u2640\uFE0F", u8"women wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2149
-{ U"\U0001F93C\U0001F3FF\u200D\u2640\uFE0F", u8"women wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2150
+{ U"\U0001F93C", u8"people wrestling", 221, 0, -1, Lfg(1), EcVersion::E3_0, U"\U0001F9D1\u200D\U0001FAEF\u200D\U0001F9D1" },   // 2133
+{ U"\U0001F93C\U0001F3FB", u8"people wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FB\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FB" },   // 2134
+{ U"\U0001F93C\U0001F3FC", u8"people wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FC\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FC" },   // 2135
+{ U"\U0001F93C\U0001F3FD", u8"people wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FD\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FD" },   // 2136
+{ U"\U0001F93C\U0001F3FE", u8"people wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FE\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FE" },   // 2137
+{ U"\U0001F93C\U0001F3FF", u8"people wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F9D1\U0001F3FF\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FF" },   // 2138
+{ U"\U0001F93C\u200D\u2642\uFE0F", u8"men wrestling", 221, 0, -1, Lfg(99), EcVersion::E4_0, U"\U0001F9D1\u200D\U0001FAEF\u200D\U0001F9D1" },   // 2139
+{ U"\U0001F93C\U0001F3FB\u200D\u2642\uFE0F", u8"men wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FB\u200D\U0001FAEF\u200D\U0001F468\U0001F3FB" },   // 2140
+{ U"\U0001F93C\U0001F3FC\u200D\u2642\uFE0F", u8"men wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FC\u200D\U0001FAEF\u200D\U0001F468\U0001F3FC" },   // 2141
+{ U"\U0001F93C\U0001F3FD\u200D\u2642\uFE0F", u8"men wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FD\u200D\U0001FAEF\u200D\U0001F468\U0001F3FD" },   // 2142
+{ U"\U0001F93C\U0001F3FE\u200D\u2642\uFE0F", u8"men wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FE\u200D\U0001FAEF\u200D\U0001F468\U0001F3FE" },   // 2143
+{ U"\U0001F93C\U0001F3FF\u200D\u2642\uFE0F", u8"men wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F468\U0001F3FF\u200D\U0001FAEF\u200D\U0001F468\U0001F3FF" },   // 2144
+{ U"\U0001F93C\u200D\u2640\uFE0F", u8"women wrestling", 221, 0, -1, Lfg(99), EcVersion::E4_0, U"\U0001F9D1\u200D\U0001FAEF\u200D\U0001F9D1" },   // 2145
+{ U"\U0001F93C\U0001F3FB\u200D\u2640\uFE0F", u8"women wrestling: light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FB\u200D\U0001FAEF\u200D\U0001F469\U0001F3FB" },   // 2146
+{ U"\U0001F93C\U0001F3FC\u200D\u2640\uFE0F", u8"women wrestling: medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FC\u200D\U0001FAEF\u200D\U0001F469\U0001F3FC" },   // 2147
+{ U"\U0001F93C\U0001F3FD\u200D\u2640\uFE0F", u8"women wrestling: medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FD\u200D\U0001FAEF\u200D\U0001F469\U0001F3FD" },   // 2148
+{ U"\U0001F93C\U0001F3FE\u200D\u2640\uFE0F", u8"women wrestling: medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FE\u200D\U0001FAEF\u200D\U0001F469\U0001F3FE" },   // 2149
+{ U"\U0001F93C\U0001F3FF\u200D\u2640\uFE0F", u8"women wrestling: dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0, U"\U0001F469\U0001F3FF\u200D\U0001FAEF\u200D\U0001F469\U0001F3FF" },   // 2150
 { U"\U0001F9D1\U0001F3FB\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FC", u8"people wrestling: light skin tone, medium-light skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2151
 { U"\U0001F9D1\U0001F3FB\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FD", u8"people wrestling: light skin tone, medium skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2152
 { U"\U0001F9D1\U0001F3FB\u200D\U0001FAEF\u200D\U0001F9D1\U0001F3FE", u8"people wrestling: light skin tone, medium-dark skin tone", 221, 0, -1, Lfg(67), EcVersion::E17_0 },   // 2153
