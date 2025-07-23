@@ -14,6 +14,7 @@ Subtotal: 46
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
+- 13478: traces of erased knee
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
@@ -31,8 +32,8 @@ Subtotal: 46
 - 135C2: other legs, need C3
 - 135C8: see C0
 - 1360F: kneel rather than ride the back
-- 1361E: arm raise in front rather than begging
-- 13625: removed PLACEHOLDERS: TWENTY
+- 1361E: arm raise in front rather than begging: TWENTY
+- 13625: removed PLACEHOLDERS
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
@@ -51,8 +52,8 @@ Subtotal: 46
 - 13679: beard ?→god
 - 1367A: beard ?→god
 - 1367B: beard ?→king
-- 1367C: beard ?→king
-- 1367D: beard ?→king: FORTY
+- 1367C: beard ?→king: FORTY
+- 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
 - 1368B: beard ?→king
 - 1368C: beard ?→king
@@ -71,8 +72,8 @@ Subtotal: 46
 - 136B1: beard ?→king
 - 136B2: beard ?→king
 - 136B3: beard ?→king
-- 136B4: beard ?→king
-- 136B7: beard ?→god: SIXTY
+- 136B4: beard ?→king: SIXTY
+- 136B7: beard ?→god
 - 136BE: beard goddier
 - 136BF: beard curved
 - 136C9: beard ?→king
@@ -91,8 +92,8 @@ Subtotal: 46
 - 13756: short hair
 - 13757: short hair
 - 13759: short hair
-- 1375A: short hair
-- 1375B: short hair: EIGHTY
+- 1375A: short hair: EIGHTY
+- 1375B: short hair
 - 1375C: short hair
 - 13766: vertical ankh
 - 13767: same
@@ -109,10 +110,11 @@ Subtotal: 46
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
+- 13816: sit on block
 - 1381F: based on 20
-- 13820: reduced height, simplified hat, more curvy beard
+- 13820: reduced height, simplified hat, more curvy beard: ONE HUNDRED
 - 13839: Ptah, straight beard
-- 1383A: same: ONE HUNDRED
+- 1383A: same
 - 1383B: same
 - 1387A: strange image
 - 1387B: bigger tits
@@ -134,7 +136,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 120
+Subtotal: 122
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -182,6 +184,8 @@ Subtotal: 120
 - 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137F0: after EF, man with palm branches for million
+- 13817: after initial 16
+- 13819: after 17
 - 1383C: Imhotep is close to Ptah
 - 138FB: after FA
 - 13925: after nearby (23?)
@@ -196,11 +200,11 @@ Subtotal: 120
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 58
+Subtotal: 60
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 225
+Total: 229
