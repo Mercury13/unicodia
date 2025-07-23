@@ -100,6 +100,10 @@ namespace {
 
     #define ZZ(...) ZwjCat<__VA_ARGS__>::sv
 
+    /// Unit-test for that ZwjCat
+    constexpr std::u32string_view WOMAN_BOY = ZZ(cp::WOMAN, cp::BOY);
+    static_assert(WOMAN_BOY == U"\U0001F469" "\u200D" "\U0001F466"sv);
+
 
     /// Library items that do not make tiles
     const std::unordered_set<std::u8string_view> NO_TILE {
@@ -164,9 +168,6 @@ namespace {
         { ZZ(cp::WOMAN, cp::BOY,  cp::BOY),               uc::MISRENDER_FAMILY },
         { ZZ(cp::WOMAN, cp::GIRL, cp::GIRL),              uc::MISRENDER_FAMILY },
     };
-
-    constexpr std::u32string_view WOMAN_BOY = ZZ(cp::WOMAN, cp::BOY);
-    static_assert(WOMAN_BOY == U"\U0001F469" "\u200D" "\U0001F466"sv);
 
     const std::unordered_map<char32_t, std::u32string_view> NON_STD_EMOJI {
         { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) }
