@@ -83,13 +83,13 @@ namespace srh {
         constexpr TrieRoot() : Super() {}
         /// @return [+] has some data
         operator bool() const noexcept { return children.get(); }
-        void add(std::u32string_view s, R res);
+        void add(std::u32string_view s, R res, NodeType type);
         template <class... Args>
             void addMulti(R res, Args&&... args)
             {
                 char32_t v[] { std::forward<Args>(args)... };
                 std::u32string_view sv { v, std::size(v) };
-                add(sv, std::move(res));
+                add(sv, std::move(res), NodeType::FULL);
             }
         SafeVector<Decoded<R>> decode(std::u32string_view s) const;
         void addUnknownFlags(R wantedR);
@@ -138,7 +138,7 @@ void srh::TrieNode<R>::link(char32_t c, EmojiLevel level, TrieNode* target)
 }
 
 template <class R>
-void srh::TrieRoot<R>::add(std::u32string_view s, R res)
+void srh::TrieRoot<R>::add(std::u32string_view s, R res, NodeType type)
 {
     Node* p = this;
     Node* prevP = nullptr;
@@ -161,7 +161,7 @@ void srh::TrieRoot<R>::add(std::u32string_view s, R res)
     if (hasZwj && prevP) {
         prevP->setFinal(res, NodeType::PART);
     }
-    p->setFinal(std::move(res), NodeType::FULL);
+    p->setFinal(std::move(res), type);
 }
 
 

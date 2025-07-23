@@ -416,6 +416,37 @@ namespace {
         return lat::toUpper(goodWord);
     }
 
+    bool isSkinTone(std::u32string_view x, size_t p)
+    {
+        if (p >= x.length())
+            return false;
+        auto c = x[p];
+        return (c >= cp::SKIN1 && c <= cp::SKIN5);
+    }
+
+    void swapTwo(std::u32string& x, char32_t a, char32_t b)
+    {
+        auto pA = x.find(a);
+        if (pA == std::u32string::npos)
+            throw std::logic_error("Char A not found");
+        auto pB = x.find(b);
+        if (pB == std::u32string::npos)
+            throw std::logic_error("Char B not found");
+        x[pA] = b;
+        x[pB] = a;
+        ++pA; ++pB;
+        if (isSkinTone(x, pA)) {
+            if (!isSkinTone(x, pB))
+                throw std::logic_error("A is skintone, B isn't");
+            std::swap(x[pA], x[pB]);
+        } else {
+            if (isSkinTone(x, pB))
+                throw std::logic_error("A isn't skintone, B is");
+        }
+        // Non-standard emoji 1: 👨‍🤝‍👩 (man, handshake, woman)
+        // Non-standard emoji 2: 👨🏾‍❤️‍💋‍👩🏻 (man, heart, kiss, woman)
+    }
+
 }   // anon namespace
 
 
@@ -428,8 +459,35 @@ void uc::ensureEmojiSearch()
         if (!node.value.empty() && node.flags.have(Lfg::GRAPHIC_EMOJI)) {
             // Build trie
             if (node.flags.have(Lfg::DECODEABLE)) {
-                trieRoot.add(node.value, &node);
+                trieRoot.add(node.value, &node, srh::NodeType::FULL);
+
+                // Try swapping
+                if (auto bits = node.flags & SWAP_MASK) {
+                    std::u32string newValue(node.value);
+                    if (bits.have(Lfg::SWAP_MAN_WOMAN)) {
+                        // Swap man and woman
+                        swapTwo(newValue, cp::MAN, cp::WOMAN);
+                        trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                        if (bits.have(Lfg::SWAP_BOY_GIRL)) {
+                            // Swap man and woman, boy and girl
+                            swapTwo(newValue, cp::BOY, cp::GIRL);
+                            trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                            // Gray’s code: get all three non-standard emoji
+                            swapTwo(newValue, cp::MAN, cp::WOMAN);
+                            trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                        }
+                    } else {
+                        // Swap boy and girl
+                        swapTwo(newValue, cp::BOY, cp::GIRL);
+                        trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                    }
+                }
             }
+            // Nodes may have non-standard value
+            if (!node.nonStandardValue.empty()) {
+                trieRoot.add(node.nonStandardValue, &node, srh::NodeType::NON_STANDARD);
+            }
+
             if (auto q = EmojiPainter::getCp(node.value)) {
                 singleChars[q.cp] = &node;
             }
