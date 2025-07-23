@@ -377,6 +377,27 @@ namespace {
         }
     }
 
+    std::u32string paintCp(std::u32string_view x, char32_t skin)
+    {
+        if (skin == NO_CP) {
+            return std::u32string{x};
+        }
+        std::u32string r;
+        r.reserve(x.length() + 2);
+        for (auto c : x) {
+            switch (c) {
+            case cp::MAN:
+            case cp::WOMAN:
+                r += c;
+                r += skin;
+                break;
+            default:
+                r += c;
+            }
+        }
+        return r;
+    }
+
 }   // anon namespace
 
 
@@ -464,11 +485,11 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 // Non-standard sequence
                 if (auto ocp = emojiCp(myStr)) {
                     // For ZWJ sequence non-standard values are computed in Unicodia
-                    // and sometimes multiple, need a special branch for
-                    // single-chars and VS16
+                    // and sometimes multiple.
+                    // Need a special branch for single-chars and VS16 only
                     auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
                     if (nsit != NON_STD_EMOJI.end()) {
-                        newItem.nonStandardValue = nsit->second;
+                        newItem.nonStandardValue = paintCp(nsit->second, ocp.skin);
                     }
                 }
 
