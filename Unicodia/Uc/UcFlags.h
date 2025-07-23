@@ -86,6 +86,7 @@ namespace uc {
     constexpr Lfgs MISRENDER_SIMPLE { Lfg::MISRENDER_0 };       // 01
     constexpr Lfgs MISRENDER_FAMILY { Lfg::MISRENDER_1 };       // 10
     constexpr Lfgs MISRENDER_IO     { Lfg::MISRENDER_1 | Lfg::MISRENDER_0 }; // 11
+    constexpr Lfgs SWAP_MASK        { Lfg::SWAP_BOY_GIRL | Lfg::SWAP_MAN_WOMAN };
 
     namespace detail {
         // it’ll leave >25k bytes of string

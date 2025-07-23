@@ -164,7 +164,7 @@ namespace {
             || (cp >= '0' && cp <= '9');
     }
 
-}
+}   // anon namespace
 
 
 bool uc::isNameChar(char32_t cp)

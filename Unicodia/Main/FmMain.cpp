@@ -632,7 +632,12 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                         }
                     } break;
                 case srh::EmojiLevel::PART:
+                    // Incomplete emoji: two lines
                     s = loc::get("Search.Type.IncEmoji");
+                    break;
+                case srh::EmojiLevel::NON_STANDARD:
+                    // Non-standard emoji: two lines
+                    s = loc::get("Search.Type.NsEmoji").q();
                     break;
                 case srh::EmojiLevel::UNKNOWN_FLAG:
                     // One line

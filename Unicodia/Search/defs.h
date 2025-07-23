@@ -3,12 +3,12 @@
 #include <cstddef>
 
 #define SRH_LEVELS \
-    FULL, PART, UNKNOWN_FLAG
+    FULL, PART, NON_STANDARD, UNKNOWN_FLAG
 
 namespace srh {
 
     /// @warning From best to worst;
-    ///     unrelated (PART and UNKNOWN_FLAG) in any order
+    ///     unrelated (NON_STANDARD and UNKNOWN_FLAG) in any order
     enum class EmojiLevel : unsigned char {
         SRH_LEVELS
     };
