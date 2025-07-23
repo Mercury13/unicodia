@@ -124,6 +124,8 @@ Subtotal: 46
 - 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
+- 13890: arm lower
+- 13891: arm lower, bottom forked, ankh bigger
 - 1392A: fixed self-intersection
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
@@ -141,7 +143,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 127
+Subtotal: 129
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -213,4 +215,4 @@ Subtotal: 61
 
 Subtotal: 1
 
-Total: 235
+Total: 237
