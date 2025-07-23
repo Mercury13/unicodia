@@ -111,11 +111,15 @@ Subtotal: 46
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
-- 1381F: based on 20
-- 13820: reduced height, simplified hat, more curvy beard: ONE HUNDRED
+- 1381D: stick + vertical knife, based on 1B
+- 1381F: based on 20: ONE HUNDRED
+- 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
 - 1383A: same
 - 1383B: same
+- 1383D: same + bigger djed-ankh
+- 1383E: same
+- 13840: same + bigger djed-ankh
 - 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
@@ -136,7 +140,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 122
+Subtotal: 126
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -187,6 +191,7 @@ Subtotal: 122
 - 13817: after initial 16
 - 13819: after 17
 - 1383C: Imhotep is close to Ptah
+- 1383F: drew that Ptah
 - 138FB: after FA
 - 13925: after nearby (23?)
 - 13926: same
@@ -200,11 +205,11 @@ Subtotal: 122
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 60
+Subtotal: 61
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 229
+Total: 234
