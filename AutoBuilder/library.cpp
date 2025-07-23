@@ -85,15 +85,20 @@ namespace {
     }
 
     template <char32_t... Cps>
-    consteval auto zwj() {
-        constexpr auto N = zwjSize<Cps...>();
-        std::array<char32_t, N + 1> res;
-        std::fill(res.begin(), res.end(), 0);
-        copyZwj<N, Cps...>(res);
-        return res;
-    }
+    struct ZwjCat {
+        static constexpr auto N = zwjSize<Cps...>();
+        using Arr = std::array<char32_t, N + 1>;
+        static consteval Arr go() {
+            Arr res;
+            std::fill(res.begin(), res.end(), 0);
+            copyZwj<N, Cps...>(res);
+            return res;
+        }
+        static constexpr Arr arr = go();
+        static constexpr std::u32string_view sv { arr.data(), arr.size() - 1 };
+    };
 
-    #define ZZ(...) zwj<__VA_ARGS__>().data()
+    #define ZZ(...) ZwjCat<__VA_ARGS__>::sv
 
 
     /// Library items that do not make tiles
@@ -111,8 +116,7 @@ namespace {
         U"\U0001F468" "\u200D" "\U0001F469" "\u200D" "\U0001F466",  // Family: man, woman, boy
     };
 
-    // For some reason string_view is impossible
-    const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
+    const std::unordered_map<std::u32string_view, uc::Lfgs> MISRENDERS {
         { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
         { U"\U0001F1E6\U0001F1F6", uc::MISRENDER_SIMPLE }, // Antarctica
         { U"\U0001F1E9\U0001F1EC", uc::MISRENDER_IO     }, // Diego Garcia
@@ -160,6 +164,9 @@ namespace {
         { ZZ(cp::WOMAN, cp::BOY,  cp::BOY),               uc::MISRENDER_FAMILY },
         { ZZ(cp::WOMAN, cp::GIRL, cp::GIRL),              uc::MISRENDER_FAMILY },
     };
+
+    constexpr std::u32string_view WOMAN_BOY = ZZ(cp::WOMAN, cp::BOY);
+    static_assert(WOMAN_BOY == U"\U0001F469" "\u200D" "\U0001F466"sv);
 
     const std::unordered_map<char32_t, std::u32string_view> NON_STD_EMOJI {
         { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) }
