@@ -12308,6 +12308,7 @@
     </text>
     <text id="NsEmoji" force-attention="true">
      <orig>Non-standard emoji</orig>
+     <au-cmt>Singular!</au-cmt>
      <transl>非標準絵文字</transl>
     </text>
    </group>
