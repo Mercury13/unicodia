@@ -538,8 +538,8 @@ namespace {
             case cp::SQUARE_PURPLE:
             case cp::SQUARE_BROWN:
                 ++nColor; break;
-            case cp::MALE:
-            case cp::FEMALE:
+            case cp::VENUS:
+            case cp::MARS:
                 ++nGender; break;
             case cp::ADULT:
             case cp::CHILD:
