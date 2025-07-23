@@ -2350,32 +2350,32 @@ constinit const uc::LibNode uc::libNodes[10078] {
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FD", u8"women holding hands: dark skin tone, medium skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2344
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FE", u8"women holding hands: dark skin tone, medium-dark skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2345
 { U"\U0001F46D\U0001F3FF", u8"women holding hands: dark skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2346
-{ U"\U0001F46B", u8"woman and man holding hands", 223, 0, -1, Lfg(3), EcVersion::E0_6, U"\U0001F468\u200D\U0001F91D\u200D\U0001F469" },   // 2347
-{ U"\U0001F46B\U0001F3FB", u8"woman and man holding hands: light skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0, U"\U0001F468\U0001F3FB\u200D\U0001F91D\u200D\U0001F469\U0001F3FB" },   // 2348
+{ U"\U0001F46B", u8"woman and man holding hands", 223, 0, -1, Lfg(2051), EcVersion::E0_6, U"\U0001F468\u200D\U0001F91D\u200D\U0001F469" },   // 2347
+{ U"\U0001F46B\U0001F3FB", u8"woman and man holding hands: light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0, U"\U0001F468\U0001F3FB\u200D\U0001F91D\u200D\U0001F469\U0001F3FB" },   // 2348
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"woman and man holding hands: light skin tone, medium-light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2349
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: light skin tone, medium skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2350
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"woman and man holding hands: light skin tone, medium-dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2351
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FF", u8"woman and man holding hands: light skin tone, dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2352
 { U"\U0001F469\U0001F3FC\u200D\U0001F91D\u200D\U0001F468\U0001F3FB", u8"woman and man holding hands: medium-light skin tone, light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2353
-{ U"\U0001F46B\U0001F3FC", u8"woman and man holding hands: medium-light skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0, U"\U0001F468\U0001F3FC\u200D\U0001F91D\u200D\U0001F469\U0001F3FC" },   // 2354
+{ U"\U0001F46B\U0001F3FC", u8"woman and man holding hands: medium-light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0, U"\U0001F468\U0001F3FC\u200D\U0001F91D\u200D\U0001F469\U0001F3FC" },   // 2354
 { U"\U0001F469\U0001F3FC\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: medium-light skin tone, medium skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2355
 { U"\U0001F469\U0001F3FC\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"woman and man holding hands: medium-light skin tone, medium-dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2356
 { U"\U0001F469\U0001F3FC\u200D\U0001F91D\u200D\U0001F468\U0001F3FF", u8"woman and man holding hands: medium-light skin tone, dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2357
 { U"\U0001F469\U0001F3FD\u200D\U0001F91D\u200D\U0001F468\U0001F3FB", u8"woman and man holding hands: medium skin tone, light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2358
 { U"\U0001F469\U0001F3FD\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"woman and man holding hands: medium skin tone, medium-light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2359
-{ U"\U0001F46B\U0001F3FD", u8"woman and man holding hands: medium skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0, U"\U0001F468\U0001F3FD\u200D\U0001F91D\u200D\U0001F469\U0001F3FD" },   // 2360
+{ U"\U0001F46B\U0001F3FD", u8"woman and man holding hands: medium skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0, U"\U0001F468\U0001F3FD\u200D\U0001F91D\u200D\U0001F469\U0001F3FD" },   // 2360
 { U"\U0001F469\U0001F3FD\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"woman and man holding hands: medium skin tone, medium-dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2361
 { U"\U0001F469\U0001F3FD\u200D\U0001F91D\u200D\U0001F468\U0001F3FF", u8"woman and man holding hands: medium skin tone, dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2362
 { U"\U0001F469\U0001F3FE\u200D\U0001F91D\u200D\U0001F468\U0001F3FB", u8"woman and man holding hands: medium-dark skin tone, light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2363
 { U"\U0001F469\U0001F3FE\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"woman and man holding hands: medium-dark skin tone, medium-light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2364
 { U"\U0001F469\U0001F3FE\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: medium-dark skin tone, medium skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2365
-{ U"\U0001F46B\U0001F3FE", u8"woman and man holding hands: medium-dark skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0, U"\U0001F468\U0001F3FE\u200D\U0001F91D\u200D\U0001F469\U0001F3FE" },   // 2366
+{ U"\U0001F46B\U0001F3FE", u8"woman and man holding hands: medium-dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0, U"\U0001F468\U0001F3FE\u200D\U0001F91D\u200D\U0001F469\U0001F3FE" },   // 2366
 { U"\U0001F469\U0001F3FE\u200D\U0001F91D\u200D\U0001F468\U0001F3FF", u8"woman and man holding hands: medium-dark skin tone, dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2367
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FB", u8"woman and man holding hands: dark skin tone, light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2368
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"woman and man holding hands: dark skin tone, medium-light skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2369
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: dark skin tone, medium skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2370
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"woman and man holding hands: dark skin tone, medium-dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0 },   // 2371
-{ U"\U0001F46B\U0001F3FF", u8"woman and man holding hands: dark skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0, U"\U0001F468\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FF" },   // 2372
+{ U"\U0001F46B\U0001F3FF", u8"woman and man holding hands: dark skin tone", 223, 0, -1, Lfg(2115), EcVersion::E12_0, U"\U0001F468\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FF" },   // 2372
 { U"\U0001F46C", u8"men holding hands", 223, 0, -1, Lfg(3), EcVersion::E1_0 },   // 2373
 { U"\U0001F46C\U0001F3FB", u8"men holding hands: light skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2374
 { U"\U0001F468\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"men holding hands: light skin tone, medium-light skin tone", 223, 0, -1, Lfg(67), EcVersion::E12_1 },   // 2375

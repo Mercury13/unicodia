@@ -307,7 +307,9 @@ namespace {
         return p1;
     }
 
-    uc::Lfgs checkMenWomen(std::u32string_view x, std::string_view name)
+    enum class CheckCorr : unsigned char { NO, YES };
+
+    uc::Lfgs checkMenWomen(std::u32string_view x, std::string_view name, CheckCorr check)
     {
         uc::Lfgs r;
         // No ZWJ → do nothing
@@ -333,11 +335,11 @@ namespace {
                     "Family emoji <", name, ">: has boy/girl, no men/women"));
             }
             if (pBoy >= REAL_POS && pGirl >= REAL_POS) {
-                if (pBoy < pGirl) {
+                if (check != CheckCorr::NO && pBoy < pGirl) {
                     throw std::logic_error(str::cat(
                         "Emoji <", name, ">: BOY < GIRL"));
                 }
-                if (hasManWoman && (pWoman < pMan)) {
+                if (check != CheckCorr::NO && hasManWoman && (pWoman < pMan)) {
                     throw std::logic_error(str::cat(
                         "Family emoji <", name, ">: WOMAN < MAN"));
                 }
@@ -345,7 +347,7 @@ namespace {
             }
         } else {
             // Couple emoji: woman → man
-            if (hasManWoman && (pMan < pWoman)) {
+            if (check != CheckCorr::NO && hasManWoman && (pMan < pWoman)) {
                 throw std::logic_error(str::cat(
                     "Couple emoji <", name, ">: MAN < WOMAN"));
             }
@@ -377,7 +379,7 @@ namespace {
         }
     }
 
-    std::u32string paintCp(std::u32string_view x, char32_t skin)
+    std::u32string applySkin(std::u32string_view x, char32_t skin)
     {
         if (skin == NO_CP) {
             return std::u32string{x};
@@ -457,7 +459,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
 
                 // Add to tree
                 const auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
-                const auto additionalFlags = checkMenWomen(myStr, name);
+                const auto additionalFlags = checkMenWomen(myStr, name, CheckCorr::YES);
                 auto& newItem = treePath.top()->newChild();
                 if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
@@ -482,17 +484,6 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                         r.misrenders.insert(mainCode);
                 }
 
-                // Non-standard sequence
-                if (auto ocp = emojiCp(myStr)) {
-                    // For ZWJ sequence non-standard values are computed in Unicodia
-                    // and sometimes multiple.
-                    // Need a special branch for single-chars and VS16 only
-                    auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
-                    if (nsit != NON_STD_EMOJI.end()) {
-                        newItem.nonStandardValue = paintCp(nsit->second, ocp.skin);
-                    }
-                }
-
                 auto level = searchLevel(newItem.value);
                 switch (level) {
                 case SearchLevel::SEARCHABLE:
@@ -502,6 +493,29 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     newItem.flags |= uc::Lfg::DECODEABLE;
                     break;
                 case SearchLevel::HIDDEN: ;
+                }
+
+                // Non-standard sequence
+                if (auto ocp = emojiCp(myStr)) {
+                    // For ZWJ sequence non-standard values are computed in Unicodia
+                    // and sometimes multiple.
+                    // Need a special branch for single-chars and VS16 only
+                    auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
+                    if (nsit != NON_STD_EMOJI.end()) {
+                        std::u32string_view cleanVersion = nsit->second;
+                        if (additionalFlags) {
+                            // If it happens → maybe need another flag
+                            throw std::logic_error("Initial emoji has non-standard flags + non-standard emoji");
+                        }
+                        // Non-standard emoji is apriori incorrent
+                        auto newFlags = checkMenWomen(
+                                cleanVersion, "additional emoji", CheckCorr::NO);
+                        if (newFlags.have(uc::Lfg::SWAP_BOY_GIRL)) {
+                            throw std::logic_error("Non-standard emoji has boy and girl, correct Unicodia");
+                        }
+                        newItem.flags |= newFlags;
+                        newItem.nonStandardValue = applySkin(cleanVersion, ocp.skin);
+                    }
                 }
 
                 // Emoji data
