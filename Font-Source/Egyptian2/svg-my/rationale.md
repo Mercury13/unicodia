@@ -120,6 +120,7 @@ Subtotal: 46
 - 1383D: same + bigger djed-ankh
 - 1383E: same
 - 13840: same + bigger djed-ankh
+- 1384E: turn knife around
 - 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
@@ -140,7 +141,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 126
+Subtotal: 127
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -212,4 +213,4 @@ Subtotal: 61
 
 Subtotal: 1
 
-Total: 234
+Total: 235
