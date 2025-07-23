@@ -99,10 +99,13 @@ namespace cp {
     constexpr char32_t TWO_MEN = 0x1F46C;
     constexpr char32_t TWO_WOMEN = 0x1F46D;
     constexpr char32_t KISS_MARK = 0x1F48B;
+    constexpr char32_t KISS = 0x1F48F;
+    constexpr char32_t COUPLE_HEART = 0x1F491;
     constexpr char32_t HANDSHAKE = 0x1F91D;
     constexpr char32_t MRS_CLAUS = 0x1F936;
     constexpr char32_t ADULT = 0x1F9D1;
     constexpr char32_t CHILD = 0x1F9D2;
+    constexpr char32_t FIGHT_CLOUD = 0x1FAEF;
 
     // Smiley
     constexpr char32_t SMILE_SLIGHTLY_SMILING = 0x1F642;

@@ -462,30 +462,38 @@ void uc::ensureEmojiSearch()
                 trieRoot.add(node.value, &node, srh::NodeType::FULL);
 
                 // Try swapping
-                if (auto bits = node.flags & SWAP_MASK) {
-                    std::u32string newValue(node.value);
-                    if (bits.have(Lfg::SWAP_MAN_WOMAN)) {
-                        // Swap man and woman
-                        swapTwo(newValue, cp::MAN, cp::WOMAN);
-                        trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
-                        if (bits.have(Lfg::SWAP_BOY_GIRL)) {
-                            // Swap man and woman, boy and girl
-                            swapTwo(newValue, cp::BOY, cp::GIRL);
-                            trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
-                            // Gray’s code: get all three non-standard emoji
+                // Non-standard value, if present, will take those flags
+                if (node.nonStandardValue.empty()) {
+                    if (auto bits = node.flags & SWAP_MASK) {
+                        std::u32string newValue(node.value);
+                        if (bits.have(Lfg::SWAP_MAN_WOMAN)) {
+                            // Swap man and woman
                             swapTwo(newValue, cp::MAN, cp::WOMAN);
                             trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                            if (bits.have(Lfg::SWAP_BOY_GIRL)) {
+                                // Swap man and woman, boy and girl
+                                swapTwo(newValue, cp::BOY, cp::GIRL);
+                                trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                                // Gray’s code: get all three non-standard emoji
+                                swapTwo(newValue, cp::MAN, cp::WOMAN);
+                                trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                            }
+                        } else {
+                            // Swap boy and girl
+                            swapTwo(newValue, cp::BOY, cp::GIRL);
+                            trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
                         }
-                    } else {
-                        // Swap boy and girl
-                        swapTwo(newValue, cp::BOY, cp::GIRL);
-                        trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
                     }
                 }
             }
-            // Nodes may have non-standard value
+            // Non-standard value
             if (!node.nonStandardValue.empty()) {
                 trieRoot.add(node.nonStandardValue, &node, srh::NodeType::NON_STANDARD);
+                if (node.flags.have(Lfg::SWAP_MAN_WOMAN)) {
+                    std::u32string newValue(node.nonStandardValue);
+                    swapTwo(newValue, cp::MAN, cp::WOMAN);
+                    trieRoot.add(newValue, &node, srh::NodeType::NON_STANDARD);
+                }
             }
 
             if (auto q = EmojiPainter::getCp(node.value)) {

@@ -72,8 +72,7 @@ size_t lib::Node::countLeaves() const
 namespace {
 
     consteval size_t slLen(char32_t) { return 1; }
-    // Kiss is genderless → does not require concatenating strings rather than CPs
-    //consteval size_t slLen(std::u32string_view x) { return x.length(); }
+    consteval size_t slLen(std::pair<char32_t, char32_t>) { return 2; }
 
     template <class Obj>
     concept StringLike = requires(Obj x) {
@@ -93,14 +92,29 @@ namespace {
     template <StringLike auto... Cps>
     consteval size_t zwjSize() { return zwjRemder<Cps...>() - 1; }
 
-    template <size_t N, StringLike auto First, StringLike auto... Rest>
-    consteval void copyZwj(std::array<char32_t, N + 1>& data) {
-        auto i = 0;
-        data[i] = First; ++i;
-        (..., (data[i] = cp::ZWJ, ++i, data[i] = Rest, ++i));
+    template <size_t N>
+    consteval void ctAppend(std::array<char32_t, N + 1>& data, size_t& i, char32_t x)
+        { data[i] = x; ++i; }
+
+    template <size_t N>
+    consteval void ctAppend(std::array<char32_t, N + 1>& data, size_t& i,
+                            std::pair<char32_t, char32_t> x)
+        { data[i] = x.first; ++i; data[i] = x.second; ++i; }
+
+    template <size_t N, StringLike auto... All>
+    consteval void copyChars(std::array<char32_t, N + 1>& data) {
+        size_t i = 0;
+        (..., ctAppend<N>(data, i, All));
     }
 
-    template <char32_t... Cps>
+    template <size_t N, StringLike auto First, StringLike auto... Rest>
+    consteval void copyZwj(std::array<char32_t, N + 1>& data) {
+        size_t i = 0;
+        ctAppend<N>(data, i, First);
+        (..., (ctAppend<N>(data, i, cp::ZWJ), ctAppend<N>(data, i, Rest)));
+    }
+
+    template <StringLike auto... Cps>
     struct ZwjCat {
         static constexpr auto N = zwjSize<Cps...>();
         using Arr = std::array<char32_t, N + 1>;
@@ -111,7 +125,8 @@ namespace {
             return res;
         }
         static constexpr Arr arr = go();
-        static constexpr std::u32string_view sv { arr.data(), arr.size() - 1 };
+        static constexpr std::u32string_view sv1 { arr.data(), N };
+        static constexpr const std::u32string_view& sv = sv1;
     };
 
     #define ZZ(...) ZwjCat<__VA_ARGS__>::sv
@@ -120,6 +135,7 @@ namespace {
     constexpr std::u32string_view WOMAN_BOY = ZZ(cp::WOMAN, cp::BOY);
     static_assert(WOMAN_BOY == U"\U0001F469" "\u200D" "\U0001F466"sv);
 
+    constexpr std::pair HEART_16 { cp::EMOJI_RED_HEART, cp::VS16 };
 
     /// Library items that do not make tiles
     const std::unordered_set<std::u8string_view> NO_TILE {
@@ -186,7 +202,11 @@ namespace {
     };
 
     const std::unordered_map<char32_t, std::u32string_view> NON_STD_EMOJI {
-        { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) },
+        { cp::MAN_AND_WOMAN, ZZ(cp::MAN,   cp::HANDSHAKE, cp::WOMAN) },
+        { cp::TWO_MEN,       ZZ(cp::MAN,   cp::HANDSHAKE, cp::MAN  ) },
+        { cp::TWO_WOMEN,     ZZ(cp::WOMAN, cp::HANDSHAKE, cp::WOMAN) },
+        { cp::KISS,          ZZ(cp::ADULT, HEART_16, cp::KISS_MARK, cp::ADULT)},
+        { cp::COUPLE_HEART,  ZZ(cp::ADULT, HEART_16, cp::ADULT) },
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
@@ -307,7 +327,9 @@ namespace {
         return p1;
     }
 
-    uc::Lfgs checkMenWomen(std::u32string_view x, std::string_view name)
+    enum class CheckCorr : unsigned char { NO, YES };
+
+    uc::Lfgs checkMenWomen(std::u32string_view x, std::string_view name, CheckCorr check)
     {
         uc::Lfgs r;
         // No ZWJ → do nothing
@@ -333,11 +355,11 @@ namespace {
                     "Family emoji <", name, ">: has boy/girl, no men/women"));
             }
             if (pBoy >= REAL_POS && pGirl >= REAL_POS) {
-                if (pBoy < pGirl) {
+                if (check != CheckCorr::NO && pBoy < pGirl) {
                     throw std::logic_error(str::cat(
                         "Emoji <", name, ">: BOY < GIRL"));
                 }
-                if (hasManWoman && (pWoman < pMan)) {
+                if (check != CheckCorr::NO && hasManWoman && (pWoman < pMan)) {
                     throw std::logic_error(str::cat(
                         "Family emoji <", name, ">: WOMAN < MAN"));
                 }
@@ -345,7 +367,7 @@ namespace {
             }
         } else {
             // Couple emoji: woman → man
-            if (hasManWoman && (pMan < pWoman)) {
+            if (check != CheckCorr::NO && hasManWoman && (pMan < pWoman)) {
                 throw std::logic_error(str::cat(
                     "Couple emoji <", name, ">: MAN < WOMAN"));
             }
@@ -377,7 +399,7 @@ namespace {
         }
     }
 
-    std::u32string paintCp(std::u32string_view x, char32_t skin)
+    std::u32string applySkin(std::u32string_view x, char32_t skin)
     {
         if (skin == NO_CP) {
             return std::u32string{x};
@@ -388,6 +410,7 @@ namespace {
             switch (c) {
             case cp::MAN:
             case cp::WOMAN:
+            case cp::ADULT:
                 r += c;
                 r += skin;
                 break;
@@ -457,7 +480,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
 
                 // Add to tree
                 const auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
-                const auto additionalFlags = checkMenWomen(myStr, name);
+                const auto additionalFlags = checkMenWomen(myStr, name, CheckCorr::YES);
                 auto& newItem = treePath.top()->newChild();
                 if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
@@ -482,17 +505,6 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                         r.misrenders.insert(mainCode);
                 }
 
-                // Non-standard sequence
-                if (auto ocp = emojiCp(myStr)) {
-                    // For ZWJ sequence non-standard values are computed in Unicodia
-                    // and sometimes multiple.
-                    // Need a special branch for single-chars and VS16 only
-                    auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
-                    if (nsit != NON_STD_EMOJI.end()) {
-                        newItem.nonStandardValue = paintCp(nsit->second, ocp.skin);
-                    }
-                }
-
                 auto level = searchLevel(newItem.value);
                 switch (level) {
                 case SearchLevel::SEARCHABLE:
@@ -502,6 +514,29 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     newItem.flags |= uc::Lfg::DECODEABLE;
                     break;
                 case SearchLevel::HIDDEN: ;
+                }
+
+                // Non-standard sequence
+                if (auto ocp = emojiCp(myStr)) {
+                    // For ZWJ sequence non-standard values are computed in Unicodia
+                    // and sometimes multiple.
+                    // Need a special branch for single-chars and VS16 only
+                    auto nsit = NON_STD_EMOJI.find(ocp.mainCp);
+                    if (nsit != NON_STD_EMOJI.end()) {
+                        std::u32string_view cleanVersion = nsit->second;
+                        if (additionalFlags) {
+                            // If it happens → maybe need another flag
+                            throw std::logic_error("Initial emoji has non-standard flags + non-standard emoji");
+                        }
+                        // Non-standard emoji is apriori incorrent
+                        auto newFlags = checkMenWomen(
+                                cleanVersion, "additional emoji", CheckCorr::NO);
+                        if (newFlags.have(uc::Lfg::SWAP_BOY_GIRL)) {
+                            throw std::logic_error("Non-standard emoji has boy and girl, correct Unicodia");
+                        }
+                        newItem.flags |= newFlags;
+                        newItem.nonStandardValue = applySkin(cleanVersion, ocp.skin);
+                    }
                 }
 
                 // Emoji data
