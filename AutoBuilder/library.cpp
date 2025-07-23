@@ -71,17 +71,32 @@ size_t lib::Node::countLeaves() const
 
 namespace {
 
-    template <char32_t... Cps>
-    consteval size_t zwjRemder() { return sizeof...(Cps) * 2; }
+    consteval size_t slLen(char32_t) { return 1; }
+    //consteval size_t slLen(std::u32string_view x) { return x.length(); }
 
-    template <char32_t... Cps>
+    template <class Obj>
+    concept StringLike = requires(Obj x) {
+        { slLen(x) } -> std::integral;
+    };
+
+    template <StringLike auto... Cps>
+    consteval size_t totalLength() {
+        size_t r = 0;
+        (..., (r += slLen(Cps)));
+        return r;
+    }
+
+    template <StringLike auto... Cps>
+    consteval size_t zwjRemder() { return sizeof...(Cps) + totalLength<Cps...>(); }
+
+    template <StringLike auto... Cps>
     consteval size_t zwjSize() { return zwjRemder<Cps...>() - 1; }
 
-    template <size_t N, char32_t First, char32_t... Rest>
+    template <size_t N, StringLike auto First, StringLike auto... Rest>
     consteval void copyZwj(std::array<char32_t, N + 1>& data) {
         auto i = 0;
         data[i] = First; ++i;
-        ((data[i] = cp::ZWJ, ++i, data[i] = Rest, ++i), ...);
+        (..., (data[i] = cp::ZWJ, ++i, data[i] = Rest, ++i));
     }
 
     template <char32_t... Cps>
@@ -177,7 +192,7 @@ namespace {
         cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5, cp::EMOJI_RIGHT_ARROW, 0 };
     constexpr const std::u32string_view UNSEARCHABLE_EMOJI (UNSEARCHABLE_EMOJI_C);
 
-    enum class SearchLevel {
+    enum class SearchLevel : unsigned char {
         HIDDEN, DECODEABLE, SEARCHABLE
     };
 
