@@ -185,7 +185,7 @@ namespace {
     };
 
     const std::unordered_map<char32_t, std::u32string_view> NON_STD_EMOJI {
-        { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) }
+        { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) },
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
