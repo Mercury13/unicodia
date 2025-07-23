@@ -72,6 +72,7 @@ size_t lib::Node::countLeaves() const
 namespace {
 
     consteval size_t slLen(char32_t) { return 1; }
+    // Kiss is genderless → does not require concatenating strings rather than CPs
     //consteval size_t slLen(std::u32string_view x) { return x.length(); }
 
     template <class Obj>
