@@ -111,6 +111,7 @@ namespace {
         U"\U0001F468" "\u200D" "\U0001F469" "\u200D" "\U0001F466",  // Family: man, woman, boy
     };
 
+    // For some reason string_view is impossible
     const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
         { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
         { U"\U0001F1E6\U0001F1F6", uc::MISRENDER_SIMPLE }, // Antarctica
@@ -158,6 +159,10 @@ namespace {
         { ZZ(cp::WOMAN, cp::GIRL, cp::BOY),               uc::MISRENDER_FAMILY },
         { ZZ(cp::WOMAN, cp::BOY,  cp::BOY),               uc::MISRENDER_FAMILY },
         { ZZ(cp::WOMAN, cp::GIRL, cp::GIRL),              uc::MISRENDER_FAMILY },
+    };
+
+    const std::unordered_map<char32_t, std::u32string_view> NON_STD_EMOJI {
+        { cp::MAN_AND_WOMAN, ZZ(cp::MAN, cp::HANDSHAKE, cp::WOMAN) }
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
@@ -382,8 +387,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 std::u32string_view myStr { codes.buffer(), nCodes };
 
                 // Add to tree
-                auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');                
-                auto additionalFlags = checkMenWomen(myStr, name);
+                const auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
+                const auto additionalFlags = checkMenWomen(myStr, name);
                 auto& newItem = treePath.top()->newChild();
                 if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
