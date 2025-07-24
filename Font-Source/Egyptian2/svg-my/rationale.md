@@ -126,6 +126,7 @@ Subtotal: 46
 - 1387B: same
 - 13890: arm lower
 - 13891: arm lower, bottom forked, ankh bigger
+- 1389A: ankhs bigger
 - 1392A: fixed self-intersection
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
@@ -143,7 +144,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 129
+Subtotal: 130
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -195,6 +196,7 @@ Subtotal: 129
 - 13819: after 17
 - 1383C: Imhotep is close to Ptah
 - 1383F: drew that Ptah
+- 1389B: after 9A
 - 138FB: after FA
 - 13925: after nearby (23?)
 - 13926: same
@@ -210,11 +212,11 @@ Subtotal: 129
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 63
+Subtotal: 64
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 239
+Total: 241
