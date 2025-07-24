@@ -43,6 +43,7 @@ Subtotal: 46
 - 1365D: beard king → god
 - 1365E: beard king → god
 - 1365F: beard king → god
+- 13606: shorter rope to make hiero narrower
 - 13667: beard none→god, wig short→long
 - 13671: beard ?→king
 - 13673: beard ?→king
@@ -51,8 +52,8 @@ Subtotal: 46
 - 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
-- 1367B: beard ?→king
-- 1367C: beard ?→king: FORTY
+- 1367B: beard ?→king: FORTY
+- 1367C: beard ?→king
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
 - 1368B: beard ?→king
@@ -71,8 +72,8 @@ Subtotal: 46
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
-- 136B3: beard ?→king
-- 136B4: beard ?→king: SIXTY
+- 136B3: beard ?→king: SIXTY
+- 136B4: beard ?→king
 - 136B7: beard ?→god
 - 136BE: beard goddier
 - 136BF: beard curved
@@ -91,8 +92,8 @@ Subtotal: 46
 - 13755: short hair
 - 13756: short hair
 - 13757: short hair
-- 13759: short hair
-- 1375A: short hair: EIGHTY
+- 13759: short hair: EIGHTY
+- 1375A: short hair
 - 1375B: short hair
 - 1375C: short hair
 - 13766: vertical ankh
@@ -111,8 +112,8 @@ Subtotal: 46
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
-- 1381D: stick + vertical knife, based on 1B
-- 1381F: based on 20: ONE HUNDRED
+- 1381D: stick + vertical knife, based on 1B: ONE HUNDRED
+- 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
 - 1383A: same
@@ -147,7 +148,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 132
+Subtotal: 134
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -222,4 +223,4 @@ Subtotal: 64
 
 Subtotal: 1
 
-Total: 243
+Total: 245
