@@ -199,6 +199,8 @@ Subtotal: 129
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
+- 13A59: after 58
+- 13AA7: after A8
 - 13ABE: after 130F9
 - 13B98: after 97
 - 13B9F: after 98
@@ -208,11 +210,11 @@ Subtotal: 129
 - 14196: after 97, pectoral
 - 141A2: after A1
 
-Subtotal: 61
+Subtotal: 63
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 237
+Total: 239

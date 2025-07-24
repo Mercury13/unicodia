@@ -261,6 +261,8 @@ GLYPH_SIZES = {
 def glyphSize(cp):
     if cp in GLYPH_SIZES:
         return GLYPH_SIZES[cp]
+    if (cp >= 0x13A4C) and (cp <= 0x13A59):
+        return MEDWIDE  # animal of Seth
     if (cp >= 0x13A36) and (cp <= 0x13B59):
         return WIDE     # donkeys, goats, lions, mice, sphinxes, cows, crocodiles
     if (cp >= 0x13B97) and (cp <= 0x13BA0):
