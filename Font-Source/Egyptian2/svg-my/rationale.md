@@ -129,6 +129,7 @@ Subtotal: 46
 - 1389A: ankhs bigger
 - 138A8: arm lower
 - 138AC: arm lower
+- 138CF: arm lower, fork bigger, ankh bigger, removed fine details
 - 1392A: fixed self-intersection
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
