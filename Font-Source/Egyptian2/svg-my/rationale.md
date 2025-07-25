@@ -134,6 +134,8 @@ Subtotal: 46
 - 138D0: same
 - 138D4: same
 - 138EB: arm lower
+- 138ED: arm lower
+- 138F8: arm lower
 - 1392A: fixed self-intersection
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
@@ -151,7 +153,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 137
+Subtotal: 139
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -227,4 +229,4 @@ Subtotal: 65
 
 Subtotal: 1
 
-Total: 249
+Total: 251
