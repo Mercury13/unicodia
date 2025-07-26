@@ -220,6 +220,8 @@ Subtotal: 161
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
+- 13702: campaign for tits
+- 13704: same
 - 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
@@ -250,11 +252,11 @@ Subtotal: 161
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 71
+Subtotal: 73
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 279
+Total: 281
