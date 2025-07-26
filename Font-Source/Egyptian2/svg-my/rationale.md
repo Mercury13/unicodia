@@ -222,6 +222,9 @@ Subtotal: 161
 - 136D9: same
 - 13702: campaign for tits
 - 13704: same
+- 13708: same
+- 1370A: same
+- 1370C: same
 - 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
@@ -252,11 +255,11 @@ Subtotal: 161
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 73
+Subtotal: 76
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 281
+Total: 284
