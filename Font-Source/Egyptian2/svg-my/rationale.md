@@ -171,6 +171,7 @@ Subtotal: 152
 # Duped with NewGardiner
 - 1348C: after 8B
 - 1348E: campaign for standing men, after A202
+- 13496: campaign for standing men, after 95
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
@@ -240,11 +241,11 @@ Subtotal: 152
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 70
+Subtotal: 71
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 269
+Total: 240
