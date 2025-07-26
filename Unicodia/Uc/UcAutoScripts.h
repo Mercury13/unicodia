@@ -23,7 +23,6 @@ Cans,  // Canadian Aboriginal
 Cari,  // Carian
 Cham,  // Cham
 Cher,  // Cherokee
-Chis,  // Chisoi
 Chrs,  // Chorasmian
 Copt,  // Coptic
 Cpmn,  // Cypro Minoan

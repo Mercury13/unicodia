@@ -210,13 +210,13 @@ constinit const uc::Script uc::scriptInfo[] {
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 2100, .numOrder = NumOrder::UNIT, .flags = Langfg::LESS_THAN, .year = 2019,
           .locations { LOC_USA } } },
-    // Chisoi OK, cool font transferred to Funky for Unicodia’s needs
-    { "Chis", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1994), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
-        ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
-        { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
-          .locations { LOC_INDIA_E } } },
+    /// @todo [U18] Chisoi
+    // { "Chis", QFontDatabase::Any,
+    //     EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+    //     Dating::year(1994), EcFont::FUNKY_FONT_BIGGER, NO_FLAGS,
+    //     ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
+    //     { .mantissa = 311, .numOrder = NumOrder::THOUSAND, .year = 2011,  // Same 2011 census
+    //       .locations { LOC_INDIA_E } } },
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA_RTL,

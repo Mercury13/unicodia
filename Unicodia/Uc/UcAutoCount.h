@@ -3,8 +3,8 @@
 // Automatically generated, do not edit!
 
 namespace uc {
-constexpr int N_CPS = 159910;
-constexpr int N_BLOCKS = 341;
+constexpr int N_CPS = 159867;
+constexpr int N_BLOCKS = 340;
 constexpr int N_NUMERICS = 222;
 constexpr unsigned LONGEST_LIB = 10;  // in codepoints
 constexpr unsigned N_OLDCOMP_SPANS = 42;

@@ -1295,11 +1295,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, {}, SvgHint{ 10, 2, ImbaY::BELOW_3 } },
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
-    // Chisoi OK
-    { 0x16D80, 0x16DAF, { 0x16D80, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
-            "Chisoi",
-            { EcScript::Chis, 0 }, MapSubtype::ALIVE,
-            EcScript::Chis, EcFont::NORMAL },
+    /// @todo [U18] Chisoi
+    // { 0x16D80, 0x16DAF, { 0x16D80, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
+    //         "Chisoi",
+    //         { EcScript::Chis, 0 }, MapSubtype::ALIVE,
+    //         EcScript::Chis, EcFont::NORMAL },
     // Medefaidrin OK
     { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin",
