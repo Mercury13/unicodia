@@ -9,8 +9,9 @@ RETURN = temporarily deleted, then returned
 - 136AE, 142AD = NonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
+- 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 
-Subtotal: 46
+Subtotal: 60
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -82,17 +83,8 @@ Subtotal: 46
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
-- 13700: +tits
-- 13701: same
-- 13703: same
-- 13705: same
-- 13706: same
-- 13707: same
-- 13709: same
-- 1370B: same
-- 1370D: same
 - 13737: pregnant
-- 13738: same: EIGHTY
+- 13738: same
 - 13739: same
 - 13746: re-fixed self-intersection
 - 1374D: 4F minus holding
@@ -101,7 +93,7 @@ Subtotal: 46
 - 13751: short hair
 - 13755: short hair
 - 13756: short hair
-- 13757: short hair
+- 13757: short hair: EIGHTY
 - 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
@@ -112,7 +104,7 @@ Subtotal: 46
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
-- 137F4: no beard, lower branches: ONE HUNDRED
+- 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
@@ -121,7 +113,7 @@ Subtotal: 46
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block
+- 13816: sit on block: ONE HUNDRED
 - 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
@@ -141,7 +133,7 @@ Subtotal: 46
 - 138A8: arm lower
 - 138AC: arm lower
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
-- 138D0: same
+- 138D0: same: ONE-TWENTY
 - 138D4: same
 - 138DB: palm up
 - 138DC: simplified, palm up
@@ -175,7 +167,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 161
+Subtotal: 152
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -220,11 +212,6 @@ Subtotal: 161
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
-- 13702: campaign for tits
-- 13704: same
-- 13708: same
-- 1370A: same
-- 1370C: same
 - 1371B: after 46
 - 13776: after 75
 - 137D4: found similar, drew sun
@@ -256,7 +243,7 @@ Subtotal: 161
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 77
+Subtotal: 72
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
