@@ -140,6 +140,8 @@ Subtotal: 46
 - 138EB: arm lower
 - 138ED: arm lower
 - 138F8: arm lower
+- 138FF: tits, it’s a woman
+- 13901: same
 - 13902: arm lower
 - 13913: arm lower, simpler stalk
 - 1391D: arm lower, greatly simplified
@@ -160,7 +162,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 146
+Subtotal: 148
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -216,6 +218,7 @@ Subtotal: 146
 - 1389B: after 9A
 - 138EC: EB + ankh
 - 138FB: after FA
+- 13900: after 01
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
@@ -233,11 +236,11 @@ Subtotal: 146
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 69
+Subtotal: 70
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 262
+Total: 265
