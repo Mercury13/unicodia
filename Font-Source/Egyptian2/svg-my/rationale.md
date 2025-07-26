@@ -136,7 +136,9 @@ Subtotal: 46
 - 138D4: same
 - 138DB: palm up
 - 138DC: simplified, palm up
+- 138DD: same + detailed beads
 - 138E2: arm lower
+- 138E6: no heels
 - 138EB: arm lower
 - 138ED: arm lower
 - 138F8: arm lower
@@ -144,8 +146,10 @@ Subtotal: 46
 - 13901: same
 - 13902: arm lower
 - 13913: arm lower, simpler stalk
+- 1391C: ankh sloped forward
 - 1391D: arm lower, greatly simplified
 - 1392A: fixed self-intersection
+- 1394B: cut forearm
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
@@ -162,7 +166,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 148
+Subtotal: 152
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -243,4 +247,4 @@ Subtotal: 70
 
 Subtotal: 1
 
-Total: 265
+Total: 269
