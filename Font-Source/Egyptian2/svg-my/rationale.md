@@ -82,8 +82,17 @@ Subtotal: 46
 - 136D3: beard ?→gods
 - 136E7: slanted ankh
 - 136F4: more traditional woman
+- 13700: +tits
+- 13701: same
+- 13703: same
+- 13705: same
+- 13706: same
+- 13707: same
+- 13709: same
+- 1370B: same
+- 1370D: same
 - 13737: pregnant
-- 13738: same
+- 13738: same: EIGHTY
 - 13739: same
 - 13746: re-fixed self-intersection
 - 1374D: 4F minus holding
@@ -92,7 +101,7 @@ Subtotal: 46
 - 13751: short hair
 - 13755: short hair
 - 13756: short hair
-- 13757: short hair: EIGHTY
+- 13757: short hair
 - 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
@@ -103,7 +112,7 @@ Subtotal: 46
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
-- 137F4: no beard, lower branches
+- 137F4: no beard, lower branches: ONE HUNDRED
 - 137F5: man’s hair/beard/clothing
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
@@ -112,7 +121,7 @@ Subtotal: 46
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block: ONE HUNDRED
+- 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
@@ -166,7 +175,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 152
+Subtotal: 161
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -248,4 +257,4 @@ Subtotal: 71
 
 Subtotal: 1
 
-Total: 240
+Total: 279
