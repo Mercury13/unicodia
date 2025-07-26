@@ -224,15 +224,17 @@ Subtotal: 143
 - 13C56: 55 + flail
 - 13EFB: after FD
 - 13EFC: same
+- 140FE: after FC
 - 14196: after 97, pectoral
 - 141A2: after A1
+- 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 67
+Subtotal: 69
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 257
+Total: 259
