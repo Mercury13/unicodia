@@ -225,6 +225,7 @@ Subtotal: 161
 - 13708: same
 - 1370A: same
 - 1370C: same
+- 1371B: after 46
 - 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
@@ -255,11 +256,11 @@ Subtotal: 161
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 76
+Subtotal: 77
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 284
+Total: 285
