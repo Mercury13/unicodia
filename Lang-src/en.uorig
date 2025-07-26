@@ -2996,6 +2996,8 @@
      <orig>
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped 130FB↔AE8 and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
       <p />
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>

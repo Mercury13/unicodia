@@ -3956,11 +3956,20 @@
      <orig>
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped 130FB↔AE8 and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
       <p />
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
+     <known-orig>
+      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
+      <p />
+      <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+      <p />
+      <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
+     </known-orig>
      <transl>
       <p>アラン・ガーディナー以外の情報源から、さらに 3995 の象形文字が見つかりました。最初の提案はひどいものだったので、ラップトップを持った男性が何とか紛れ込んでしまいましたが、学者たちがすべてをチェックした結果、Unicode のエジプト象形文字のベースである「ユニケメット」が誕生しました (「ケメット」は古代エジプトの自称です)。</p>
       <p />

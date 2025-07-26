@@ -3951,6 +3951,8 @@
      <orig>
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped 130FB↔AE8 and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p />
       <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
       <p />
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
@@ -3958,6 +3960,8 @@
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
      <transl>
       <p>Ще 3995 ієрогліфів з інших джерел, окрім Алана Ґардінера. Перші заявки були такі погані, що туди якось потрапила людина з ноутбуком, але вчені усе перевірили, і це призвело до ''Unikemet'', бази єгипетських ієрогліфів Юнікоду. (''Кемет''{{-}}самоназва давнього Єгипту.)</p>
+      <p />
+      <p>Робота все рівно була не кращою, і подальша ревізія виявила невдалу [[pt:unification|розуніфікацію]] (Юнікод{{_}}17 обміняв 130FB↔AE8 та інші), і неспівпадіння гліфів з описами.</p>
       <p />
       <p>Єгиптологи розробили спеціальні стрілки для напрямку читання{{-}}U+1F8C0 та C1.</p>
       <p />
