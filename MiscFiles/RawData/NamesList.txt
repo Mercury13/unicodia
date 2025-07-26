@@ -1,14 +1,19 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 17.0.0
 @@@+	NamesList-17.0.0.txt
-@+	Generation Date: 2025-05-14, 08:55:45 GMT
+@+	Generation Date: 2025-07-02, 14:13:39 GMT
 	Unicode 17.0.0 names list.
-	Repertoire synched with UnicodeData-17.0.0d5.txt.
-	Synch with 7th edition CD2; post UTC183 annotation updates for 17.0.
+	Repertoire synched with UnicodeData-17.0.0d6.txt.
+	Synch with 7th edition CD3; post UTC183 annotation updates for 17.0.
 	Added 4 formal name aliases for Bamum: 16881, 1688E, 168DC, 1697D.
 	Add annotation to 1AB3.
 	Various updates re legacy hieroglyphs. See L2/25-110 for reference.
 	Corrected location of subhead for 1244A.
+	Adjusted annotation for 06C0.
+	Corrected alias for 3026.
+	Removed Chisoi heading, subheads and annotations.
+	Removed annotations for 09FF, 0B53, 0B54.
+	Corrections for Egyptian hieroglyph subheads.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -4482,7 +4487,7 @@
 06BF	ARABIC LETTER TCHEH WITH DOT ABOVE
 06C0	ARABIC LETTER HEH WITH YEH ABOVE
 	= arabic letter hamzah on ha (1.0)
-	* for ezafe, use 0654 over the language-appropriate base letter
+	* for Persian ezafe, Urdu izāfat, or similar cases, instead use 0654 over the language-appropriate base letter
 	* actually a ligature, not an independent letter
 	: 06D5 0654
 06C1	ARABIC LETTER HEH GOAL
@@ -5696,8 +5701,6 @@
 	x (bengali sign avagraha - 09BD)
 	x (sharada sandhi mark - 111C9)
 	x (newa sandhi mark - 1145E)
-@		Addition for Sanskrit
-09FF	BENGALI LETTER SANSKRIT BA
 @@	0A00	Gurmukhi	0A7F
 @		Various signs
 0A01	GURMUKHI SIGN ADAK BINDI
@@ -6026,10 +6029,6 @@
 @		Virama
 0B4D	ORIYA SIGN VIRAMA
 @		Various signs
-0B53	ORIYA SIGN DOT ABOVE
-	* Kui
-0B54	ORIYA SIGN DOUBLE DOT ABOVE
-	* Kui
 0B55	ORIYA SIGN OVERLINE
 	* Kuvi, Kui
 0B56	ORIYA AI LENGTH MARK
@@ -21004,7 +21003,7 @@
 3024	HANGZHOU NUMERAL FOUR
 3025	HANGZHOU NUMERAL FIVE
 3026	HANGZHOU NUMERAL SIX
-	= yangqin sign slow one
+	= yangqin sign slow one half beat
 	* represents one half beat in the yangqin tempo marking system
 	x (yangqin sign slow one beat - 16FF4)
 3027	HANGZHOU NUMERAL SEVEN
@@ -43573,14 +43572,14 @@ FFFF	<not a character>
 	* classifier weeping/crying : rmꞽ
 1398B	EGYPTIAN HIEROGLYPH-1398B
 	* classifier eye related actions : dgꞽ
-@		D08. Eye oudjat
+@		D08. Udjat eye
 1398C	EGYPTIAN HIEROGLYPH-1398C
 	* logogram (The dazzling eye (=Egypt)) : bꜣḳ.t
 1398D	EGYPTIAN HIEROGLYPH-1398D
 	* logogram (eye) : ꞽr.t
 1398E	EGYPTIAN HIEROGLYPH-1398E
 	* logogram (the eye of Re) : ꞽr.t-rꜥ
-@		D09. Eye oudjat components
+@		D09. Udjat eye components
 1398F	EGYPTIAN HIEROGLYPH-1398F
 	* logogram (to see) : mꜣꜣ
 @		D10. Ear
@@ -44608,7 +44607,7 @@ FFFF	<not a character>
 13B95	EGYPTIAN HIEROGLYPH-13B95
 	* classifier strength : ꜣ.t
 13B96	EGYPTIAN HIEROGLYPH-13B96
-@		F09. Donkey and horse protome
+@		F09. Donkey and horse protomes
 13B97	EGYPTIAN HIEROGLYPH-13B97
 	* phonemogram : ḫntš
 13B98	EGYPTIAN HIEROGLYPH-13B98
@@ -46246,7 +46245,7 @@ FFFF	<not a character>
 @		N02. Sun
 13ED2	EGYPTIAN HIEROGLYPH-13ED2
 	* classifier time : nḥḥ
-@		N03. Sun with Uraeus
+@		N03. Sun with uraeus
 13ED3	EGYPTIAN HIEROGLYPH-13ED3
 	* classifier divinity : ḥr
 13ED4	EGYPTIAN HIEROGLYPH-13ED4
@@ -46708,7 +46707,7 @@ FFFF	<not a character>
 	* phonemogram (in ꜥrḳ-wr) : ꜥrḳ
 13FBF	EGYPTIAN HIEROGLYPH-13FBF
 	* phonemogram : ꜥrḳ
-@		O11. Double platform (sed festival)
+@		O11. Double platform (sed-festival)
 13FC0	EGYPTIAN HIEROGLYPH-13FC0
 	* logogram (jubilee, sed-festival) : ḥb-sd
 13FC1	EGYPTIAN HIEROGLYPH-13FC1
@@ -48020,7 +48019,7 @@ FFFF	<not a character>
 	* classifier catching, netting : ꞽḥ.t
 14260	EGYPTIAN HIEROGLYPH-14260
 	* classifier fish-trap : ḥꜥd
-@		T15. Reed float (Object db.)
+@		T15. Reed float
 14261	EGYPTIAN HIEROGLYPH-14261
 	* phonemogram : ḏbꜣ
 14262	EGYPTIAN HIEROGLYPH-14262
@@ -51028,51 +51027,6 @@ FFFF	<not a character>
 16D77	KIRAT RAI DIGIT SEVEN
 16D78	KIRAT RAI DIGIT EIGHT
 16D79	KIRAT RAI DIGIT NINE
-@@	16D80	Chisoi	16DAF
-@		Letters
-16D80	CHISOI LETTER A
-16D81	CHISOI LETTER BA
-16D82	CHISOI LETTER AI
-16D83	CHISOI LETTER AA
-16D84	CHISOI LETTER GA
-16D85	CHISOI LETTER TA
-16D86	CHISOI LETTER E
-16D87	CHISOI LETTER SA
-16D88	CHISOI LETTER NA
-16D89	CHISOI LETTER I
-16D8A	CHISOI LETTER KA
-16D8B	CHISOI LETTER RA
-16D8C	CHISOI LETTER MA
-16D8D	CHISOI LETTER HA
-16D8E	CHISOI LETTER RRA
-16D8F	CHISOI LETTER U
-16D90	CHISOI LETTER DA
-16D91	CHISOI LETTER LA
-16D92	CHISOI LETTER O
-16D93	CHISOI LETTER NYA
-16D94	CHISOI LETTER NGA
-16D95	CHISOI LETTER CA
-16D96	CHISOI LETTER JA
-16D97	CHISOI LETTER PA
-16D98	CHISOI SIGN ANUSVARA
-16D99	CHISOI LETTER YA
-16D9A	CHISOI LETTER DDA
-16D9B	CHISOI LETTER TTA
-16D9C	CHISOI LETTER JARAHA
-@		Sign
-16D9D	CHISOI SIGN SISO
-	* vowel killer
-@		Digits
-16DA0	CHISOI DIGIT ZERO
-16DA1	CHISOI DIGIT ONE
-16DA2	CHISOI DIGIT TWO
-16DA3	CHISOI DIGIT THREE
-16DA4	CHISOI DIGIT FOUR
-16DA5	CHISOI DIGIT FIVE
-16DA6	CHISOI DIGIT SIX
-16DA7	CHISOI DIGIT SEVEN
-16DA8	CHISOI DIGIT EIGHT
-16DA9	CHISOI DIGIT NINE
 @@	16E40	Medefaidrin	16E9F
 @		Uppercase letters
 16E40	MEDEFAIDRIN CAPITAL LETTER M
