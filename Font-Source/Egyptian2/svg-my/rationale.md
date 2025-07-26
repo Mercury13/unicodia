@@ -85,14 +85,15 @@ Subtotal: 46
 - 13737: pregnant
 - 13738: same
 - 13739: same
+- 13746: re-fixed self-intersection
 - 1374D: 4F minus holding
 - 1374F: short hair
 - 13750: short hair
 - 13751: short hair
 - 13755: short hair
 - 13756: short hair
-- 13757: short hair
-- 13759: short hair: EIGHTY
+- 13757: short hair: EIGHTY
+- 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
 - 1375C: short hair
@@ -111,8 +112,8 @@ Subtotal: 46
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block
-- 1381D: stick + vertical knife, based on 1B: ONE HUNDRED
+- 13816: sit on block: ONE HUNDRED
+- 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
@@ -133,6 +134,8 @@ Subtotal: 46
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
 - 138D0: same
 - 138D4: same
+- 138DB: palm up
+- 138DC: simplified, palm up
 - 138E2: arm lower
 - 138EB: arm lower
 - 138ED: arm lower
@@ -157,7 +160,7 @@ Subtotal: 46
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 143
+Subtotal: 146
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -237,4 +240,4 @@ Subtotal: 69
 
 Subtotal: 1
 
-Total: 259
+Total: 262
