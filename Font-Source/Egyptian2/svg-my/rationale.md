@@ -24,7 +24,7 @@ Subtotal: 60
 - 1354E: more consistent short wig
 - 13552: short beard
 - 13555: long wig
-- 13560: bushy beard
+- 13560: campaign for terror beard
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
 - 135A5: sit on heel
@@ -179,7 +179,9 @@ Subtotal: 152
 - 13551: campaign for terror beard
 - 13554: campaign for terror beard
 - 13559: 5A minus beard
-- 13561: after 60
+- 1355D: campaign for terror beard
+- 13561: campaign for terror beard
+- 13562: campaign for terror beard
 - 1356C: after 6B
 - 13595: made from man with straight sticks
 - 135B1: lots of captives here
@@ -246,11 +248,11 @@ Subtotal: 152
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 75
+Subtotal: 77
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 288
+Total: 290
