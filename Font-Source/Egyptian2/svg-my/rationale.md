@@ -9,9 +9,10 @@ RETURN = temporarily deleted, then returned
 - 136AE, 142AD = NonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
+- 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 
-Subtotal: 60
+Subtotal: 67
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -24,7 +25,6 @@ Subtotal: 60
 - 1354E: more consistent short wig
 - 13552: short beard
 - 13555: long wig
-- 13560: campaign for terror beard
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
 - 135A5: sit on heel
@@ -33,8 +33,8 @@ Subtotal: 60
 - 135C2: other legs, need C3
 - 135C8: see C0
 - 1360F: kneel rather than ride the back
-- 1361E: arm raise in front rather than begging: TWENTY
-- 13625: removed PLACEHOLDERS
+- 1361E: arm raise in front rather than begging
+- 13625: removed PLACEHOLDERS: TWENTY
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
@@ -53,8 +53,8 @@ Subtotal: 60
 - 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
-- 1367B: beard ?→king: FORTY
-- 1367C: beard ?→king
+- 1367B: beard ?→king
+- 1367C: beard ?→king: FORTY
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
 - 1368B: beard ?→king
@@ -73,8 +73,8 @@ Subtotal: 60
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
-- 136B3: beard ?→king: SIXTY
-- 136B4: beard ?→king
+- 136B3: beard ?→king
+- 136B4: beard ?→king: SIXTY
 - 136B7: beard ?→god
 - 136BE: beard goddier
 - 136BF: beard curved
@@ -93,8 +93,8 @@ Subtotal: 60
 - 13751: short hair
 - 13755: short hair
 - 13756: short hair
-- 13757: short hair: EIGHTY
-- 13759: short hair
+- 13757: short hair
+- 13759: short hair: EIGHTY
 - 1375A: short hair
 - 1375B: short hair
 - 1375C: short hair
@@ -113,8 +113,8 @@ Subtotal: 60
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block: ONE HUNDRED
-- 1381D: stick + vertical knife, based on 1B
+- 13816: sit on block
+- 1381D: stick + vertical knife, based on 1B: ONE HUNDRED
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
@@ -133,8 +133,8 @@ Subtotal: 60
 - 138A8: arm lower
 - 138AC: arm lower
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
-- 138D0: same: ONE-TWENTY
-- 138D4: same
+- 138D0: same
+- 138D4: same: ONE-TWENTY
 - 138DB: palm up
 - 138DC: simplified, palm up
 - 138DD: same + detailed beads
@@ -167,7 +167,7 @@ Subtotal: 60
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 152
+Subtotal: 151
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -176,15 +176,9 @@ Subtotal: 152
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
-- 13551: campaign for terror beard
-- 13554: campaign for terror beard
 - 13559: 5A minus beard
-- 1355D: campaign for terror beard
-- 13561: campaign for terror beard
-- 13562: campaign for terror beard
 - 1356C: after 6B
 - 13595: made from man with straight sticks
-- 135A1: campaign for terror beard
 - 135B1: lots of captives here
 - 135B2: same
 - 135B3: same
@@ -249,7 +243,7 @@ Subtotal: 152
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 78
+Subtotal: 72
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
