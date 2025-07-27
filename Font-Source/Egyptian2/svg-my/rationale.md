@@ -152,6 +152,10 @@ Subtotal: 67
 - 1391D: arm lower, greatly simplified
 - 1392A: fixed self-intersection
 - 1394B: cut forearm
+- 1396A: craggy, badly converted
+- 13981: wrong eye position
+- 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
+- 13984: consistency w/81
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13AA3: rotate 90°
@@ -168,7 +172,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 152
+Subtotal: 156
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -251,4 +255,4 @@ Subtotal: 72
 
 Subtotal: 1
 
-Total: 292
+Total: 296
