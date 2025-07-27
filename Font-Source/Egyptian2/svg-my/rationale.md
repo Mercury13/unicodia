@@ -238,6 +238,7 @@ Subtotal: 160
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
+- 13973: after 7B
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABE: after 130F9
@@ -252,11 +253,11 @@ Subtotal: 160
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 72
+Subtotal: 73
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 300
+Total: 301
