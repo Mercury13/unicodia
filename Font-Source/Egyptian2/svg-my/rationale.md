@@ -154,7 +154,7 @@ Subtotal: 67
 - 1394B: cut forearm
 - 1396A: craggy, badly converted
 - 13981: wrong eye position
-- 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
+- 13982: consistency w/81  (83=tofu, was also redrawn during this campaign): ONE-FORTY
 - 13984: consistency w/81
 - 1398A: triangles, not corners
 - 13A36: +bundle of straw
@@ -165,6 +165,7 @@ Subtotal: 67
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
+- 13AB4: flip knife
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -176,7 +177,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 160
+Subtotal: 161
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -260,4 +261,4 @@ Subtotal: 73
 
 Subtotal: 1
 
-Total: 301
+Total: 302
