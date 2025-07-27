@@ -166,6 +166,8 @@ Subtotal: 67
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 - 13AB4: flip knife
+- 13AF0: holds staff
+- 13AF1: same
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -177,7 +179,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 161
+Subtotal: 163
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -261,4 +263,4 @@ Subtotal: 73
 
 Subtotal: 1
 
-Total: 302
+Total: 304
