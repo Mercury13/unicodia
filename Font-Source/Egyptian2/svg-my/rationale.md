@@ -27,14 +27,15 @@ Subtotal: 67
 - 13555: long wig
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
+- 135A2: shield from inside, spear→Bronze Age sword
 - 135A5: sit on heel
 - 135B6: more detailed foreigner captive
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
 - 135C8: see C0
 - 1360F: kneel rather than ride the back
-- 1361E: arm raise in front rather than begging
-- 13625: removed PLACEHOLDERS: TWENTY
+- 1361E: arm raise in front rather than begging: TWENTY
+- 13625: removed PLACEHOLDERS
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
@@ -53,8 +54,8 @@ Subtotal: 67
 - 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
-- 1367B: beard ?→king
-- 1367C: beard ?→king: FORTY
+- 1367B: beard ?→king: FORTY
+- 1367C: beard ?→king
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
 - 1368B: beard ?→king
@@ -73,8 +74,8 @@ Subtotal: 67
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
-- 136B3: beard ?→king
-- 136B4: beard ?→king: SIXTY
+- 136B3: beard ?→king: SIXTY
+- 136B4: beard ?→king
 - 136B7: beard ?→god
 - 136BE: beard goddier
 - 136BF: beard curved
@@ -93,8 +94,8 @@ Subtotal: 67
 - 13751: short hair
 - 13755: short hair
 - 13756: short hair
-- 13757: short hair
-- 13759: short hair: EIGHTY
+- 13757: short hair: EIGHTY
+- 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
 - 1375C: short hair
@@ -113,8 +114,8 @@ Subtotal: 67
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block
-- 1381D: stick + vertical knife, based on 1B: ONE HUNDRED
+- 13816: sit on block: ONE HUNDRED
+- 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
@@ -133,8 +134,8 @@ Subtotal: 67
 - 138A8: arm lower
 - 138AC: arm lower
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
-- 138D0: same
-- 138D4: same: ONE-TWENTY
+- 138D0: same: ONE-TWENTY
+- 138D4: same
 - 138DB: palm up
 - 138DC: simplified, palm up
 - 138DD: same + detailed beads
@@ -167,7 +168,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 151
+Subtotal: 152
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -250,4 +251,4 @@ Subtotal: 72
 
 Subtotal: 1
 
-Total: 291
+Total: 292
