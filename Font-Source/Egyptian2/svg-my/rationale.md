@@ -157,8 +157,11 @@ Subtotal: 67
 - 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
 - 13984: consistency w/81
 - 1398A: triangles, not corners
+- 13A36: +bundle of straw
+- 13A5C: nothing on neck
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
+- 13A85: greatly simplified
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
@@ -173,7 +176,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 157
+Subtotal: 160
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -256,4 +259,4 @@ Subtotal: 72
 
 Subtotal: 1
 
-Total: 297
+Total: 300
