@@ -168,6 +168,7 @@ Subtotal: 67
 - 13AB4: flip knife
 - 13AF0: holds staff
 - 13AF1: same
+- 13B42: simplified, more pronounced beard
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -179,7 +180,7 @@ Subtotal: 67
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 163
+Subtotal: 164
 
 # Duped with NewGardiner
 - 1348C: after 8B
@@ -263,4 +264,4 @@ Subtotal: 73
 
 Subtotal: 1
 
-Total: 304
+Total: 305
