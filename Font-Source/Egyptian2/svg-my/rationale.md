@@ -184,6 +184,7 @@ Subtotal: 152
 - 13562: campaign for terror beard
 - 1356C: after 6B
 - 13595: made from man with straight sticks
+- 135A1: campaign for terror beard
 - 135B1: lots of captives here
 - 135B2: same
 - 135B3: same
@@ -248,11 +249,11 @@ Subtotal: 152
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 77
+Subtotal: 78
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 290
+Total: 291
