@@ -176,6 +176,8 @@ Subtotal: 152
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
+- 13551: campaign for terror beard
+- 13554: campaign for terror beard
 - 13559: 5A minus beard
 - 13561: after 60
 - 1356C: after 6B
@@ -244,11 +246,11 @@ Subtotal: 152
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 73
+Subtotal: 75
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 286
+Total: 288
