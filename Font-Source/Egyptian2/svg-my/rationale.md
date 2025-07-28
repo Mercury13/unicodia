@@ -9,10 +9,11 @@ RETURN = temporarily deleted, then returned
 - 136AE, 142AD = NonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
+- 1348C, 1348E, 13496, 1349C, 134A0 / 134A3, 134A4, 134A5, 134A7, 134AD = campaign for standing men (10)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 
-Subtotal: 67
+Subtotal: 77
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -183,16 +184,6 @@ Subtotal: 67
 Subtotal: 164
 
 # Duped with NewGardiner
-- 1348C: after 8B
-- 1348E: campaign for standing men, after A202
-- 13496: campaign for standing men, after 95
-- 1349C: campaign for standing men, after 9A
-- 134A0: campaign for standing men, after 95
-- 134A3: campaign for standing men, after 96
-- 134A4: campaign for standing men, after 96
-- 134A5: campaign for standing men, after A6
-- 134A7: campaign for standing men, after A6
-- 134AD: campaign for standing men, AE+6E
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
@@ -267,7 +258,7 @@ Subtotal: 164
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 83
+Subtotal: 73
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
