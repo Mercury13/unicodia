@@ -131,9 +131,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
       { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …2, new additions
-        { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT,  // …3
-                  15_top, 125_pc },
-      { FAM_FUNKY },                                                            // …for tofu
+      { "UFSZeroExt.ttf", Ffg::FALL_TO_NEXT },                                  // …3, new additions
+      { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 15_top, 125_pc },      // …4, just one new char
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
@@ -334,10 +333,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", Ffg::FALL_TO_NEXT, 125_pc },               // Tangut
-      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …1
-      { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT,    // …2
-                  15_top, 125_pc },
-      { FNAME_UNIHAN, 120_pc },                                                 // …For tofu
+      { "UFSZeroExt.ttf", 125_pc },                                             // …1
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2

@@ -406,8 +406,6 @@ namespace uc {
         TANGSA,
         TANGUT,
           Z_TAN_1,
-          Z_TAN_2,
-          Z_TAN_3,
         TECHNICAL,
           Z_TEC_1,
           Z_TEC_2,
