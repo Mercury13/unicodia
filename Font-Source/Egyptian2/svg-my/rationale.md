@@ -186,6 +186,8 @@ Subtotal: 164
 - 1348C: after 8B
 - 1348E: campaign for standing men, after A202
 - 13496: campaign for standing men, after 95
+- 1349C: campaign for standing men, after 9A
+- 134A0: campaign for standing men, after 95
 - 134C0: after C1
 - 134EE: after ED
 - 134EF: EE + legs on heels
@@ -242,7 +244,10 @@ Subtotal: 164
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
-- 13973: after 7B
+- 13973: eyes, after 7B
+- 1397B: eyes, after 7A
+- 13989: eyes
+- 1398B: eyes
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABE: after 130F9
@@ -257,11 +262,11 @@ Subtotal: 164
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 73
+Subtotal: 78
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 305
+Total: 310
