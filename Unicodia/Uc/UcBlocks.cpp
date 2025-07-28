@@ -1336,14 +1336,14 @@ constinit const uc::Block uc::blocks[] {
             "Khitan Small Script",
             { EcScript::Kits, 0 }, MapSubtype::DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [U17, tofu] Tangut components
+    // Tangut components OK, Noto-compatible fixup font by Losketch
     { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Tangut Supplement",
             { EcScript::Tang, 1 }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE,
             EcGlyphStyleChannel::NONE, { 0x18D8F, EcVersion::V_14_0 } },
-    /// @todo [U17, tofu] Tangut Components Supplement
-    { 0x18D80, 0x18DFF, { 0x18D81, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    // Tangut components supplement, Noto-compatible fixup font by Losketch
+    { 0x18D80, 0x18DFF, { 0x18D81, EcContinent::CJK, Ifg::PAINT_SVG, SvgHint{ 14, 2 } },
             "Tangut Components Supplement",
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
