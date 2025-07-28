@@ -1255,7 +1255,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Egyp, EcFont::NORMAL,
                 Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE,
             EcGlyphStyleChannel::NONE, { 0x1343F, EcVersion::V_15_0 } },
-    /// @todo [U16, huge tofu] Egyp A
+    // Egyp A OK, though I’m still working on the font
     { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::APPROX_PART  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapSubtype::DEAD,
