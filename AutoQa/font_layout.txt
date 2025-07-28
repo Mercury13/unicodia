@@ -90,15 +90,13 @@
 == Devanagari
 0900..097F: NotoSerifDevanagari-Regular
 == Bengali
-0980..09FF: NotoSerifBengali-Regular
+0980..09FE: NotoSerifBengali-Regular
 == Gurmukhi
 0A01..0A76: NotoSerifGurmukhi-Regular
 == Gujarati
 0A81..0AFF: NotoSerifGujarati-Regular
 == Oriya
-0B01..0B4D: UtoSerifOriya-Regular
-0B53, 0B54: UnicodiaFunky
-0B55..0B77: UtoSerifOriya-Regular
+0B01..0B77: UtoSerifOriya-Regular
 == Tamil
 0B82..0BFA: Nirmala UI,Latha
 == Telugu
@@ -643,13 +641,13 @@ FB13..FB17: NotoSerifArmenian-Regular
 FB1D..FB4F: NotoSerifHebrew-Regular
 == Arabic Presentation Forms-A
 FB50..FBC2: NotoNaskhArabic-Regular
-FBC3..FBD2: [Tofu]
+FBC3..FBD2: UFSZeroExt
 FBD3..FD3D: NotoNaskhArabic-Regular
 FD3E..FD4F: ScheherazadeNew-Regular
 FD50..FD8F: NotoNaskhArabic-Regular
-FD90, FD91: [Tofu]
+FD90, FD91: UFSZeroExt
 FD92..FDC7: NotoNaskhArabic-Regular
-FDC8..FDCE: [Tofu]
+FDC8..FDCE: UFSZeroExt
 FDCF......: ScheherazadeNew-Regular
 FDF0, FDF1: NotoNaskhArabic-Regular
 FDF2......: ScheherazadeNew-Regular
@@ -783,9 +781,9 @@ FFFD......: NotoSerif-Regular
 10E80..10EB1: NotoSerifYezidi-Regular
 == Arabic Extended-C
 10EC2..10EC4: ScheherazadeNew-Regular
-10EC5, 10EC6: [Tofu]
+10EC5, 10EC6: UFSZeroExt
 10EC7.......: PlangothicP2-Regular
-10ED0..10EFB: [Tofu]
+10ED0..10EFB: UFSZeroExt
 10EFC..10EFF: ScheherazadeNew-Regular
 == Old Sogdian
 10F00..10F27: NotoSansOldSogdian-Regular
@@ -916,17 +914,7 @@ FFFD......: NotoSerif-Regular
 13441, 13442: NotoSansEgyptianHieroglyphs-Regular
 13443..13455: UnicodiaEgypFixupRegular
 == Egyptian Hieroglyphs Extended-A
-13460..1349B: UnicodiaSesh
-1349C.......: NewGardiner
-1349D..1349F: UnicodiaSesh
-134A0.......: NewGardiner
-134A1, 134A2: UnicodiaSesh
-134A3..134A5: NewGardiner
-134A6.......: UnicodiaSesh
-134A7.......: NewGardiner
-134A8..134AC: UnicodiaSesh
-134AD.......: NewGardiner
-134AE, 134AF: UnicodiaSesh
+13460..134AF: UnicodiaSesh
 134B0..134B2: NewGardiner
 134B3.......: UnicodiaSesh
 134B4..134B6: NewGardiner
@@ -997,16 +985,12 @@ FFFD......: NotoSerif-Regular
 13549..1354C: UnicodiaSesh
 1354D.......: NewGardiner
 1354E.......: UnicodiaSesh
-1354F..13551: NewGardiner
-13552, 13553: UnicodiaSesh
-13554.......: NewGardiner
-13555.......: UnicodiaSesh
+1354F, 13550: NewGardiner
+13551..13555: UnicodiaSesh
 13556..13558: NewGardiner
 13559..1355B: UnicodiaSesh
-1355C, 1355D: NewGardiner
-1355E..13561: UnicodiaSesh
-13562.......: NewGardiner
-13563.......: UnicodiaSesh
+1355C.......: NewGardiner
+1355D..13563: UnicodiaSesh
 13564.......: NewGardiner
 13565..13571: UnicodiaSesh
 13572.......: NewGardiner
@@ -1030,9 +1014,7 @@ FFFD......: NotoSerif-Regular
 1359D.......: NewGardiner
 1359E.......: UnicodiaSesh
 1359F.......: NewGardiner
-135A0.......: UnicodiaSesh
-135A1.......: NewGardiner
-135A2..135A5: UnicodiaSesh
+135A0..135A5: UnicodiaSesh
 135A6..135A9: NewGardiner
 135AA.......: UnicodiaSesh
 135AB..135AE: NewGardiner
@@ -1313,20 +1295,16 @@ FFFD......: NotoSerif-Regular
 13945..1394C: UnicodiaSesh
 1394D.......: NewGardiner
 1394E..13971: UnicodiaSesh
-13972, 13973: NewGardiner
-13974.......: UnicodiaSesh
+13972.......: NewGardiner
+13973, 13974: UnicodiaSesh
 13975.......: NewGardiner
 13976.......: UnicodiaSesh
 13977.......: NewGardiner
-13978..1397C: UnicodiaSesh
-1397D, 1397E: NewGardiner
+13978..1397D: UnicodiaSesh
+1397E.......: NewGardiner
 1397F..13984: UnicodiaSesh
 13985.......: NewGardiner
-13986..13988: UnicodiaSesh
-13989.......: NewGardiner
-1398A.......: UnicodiaSesh
-1398B.......: NewGardiner
-1398C..1398E: UnicodiaSesh
+13986..1398E: UnicodiaSesh
 1398F.......: NewGardiner
 13990.......: UnicodiaSesh
 13991.......: NewGardiner
@@ -2229,8 +2207,6 @@ FFFD......: NotoSerif-Regular
 16B00..16B8F: NotoSansPahawhHmong-Regular
 == Kirat Rai
 16D40..16D79: Kanchenjunga-Regular
-== Chisoi
-16D80..16DA9: UnicodiaFunky
 == Medefaidrin
 16E40..16E9A: UtoSansFranken
 == Beria Erfe
@@ -2247,8 +2223,7 @@ FFFD......: NotoSerif-Regular
 16FF0..16FF6: BabelStoneHanBasic
 == Tangut
 17000..187F7: NotoSerifTangut-Regular
-187F8..187FA: UnicodiaHan
-187FB..187FF: [Tofu]
+187F8..187FF: UFSZeroExt
 == Tangut Components
 18800..18AFF: NotoSerifTangut-Regular
 == Khitan Small Script
@@ -2256,13 +2231,9 @@ FFFD......: NotoSerif-Regular
 18CFF.......: UnicodiaFunky
 == Tangut Supplement
 18D00..18D08: NotoSerifTangut-Regular
-18D09..18D1C: [Tofu]
-18D1D.......: PlangothicP2-Regular
-18D1E.......: [Tofu]
+18D09..18D1E: UFSZeroExt
 == Tangut Components Supplement
-18D80..18D8E: UnicodiaHan
-18D8F..18DED: [Tofu]
-18DEE..18DF2: UnicodiaHan
+18D80..18DF2: UFSZeroExt
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
 == Kana Supplement
