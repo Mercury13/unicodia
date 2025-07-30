@@ -171,6 +171,7 @@ Subtotal: 77
 - 13AF1: same
 - 13B42: simplified, more pronounced beard
 - 13B64: other feathers
+- 13B66: greatly simplified
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -182,7 +183,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 165
+Subtotal: 166
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -267,4 +268,4 @@ Subtotal: 74
 
 Subtotal: 1
 
-Total: 317
+Total: 318
