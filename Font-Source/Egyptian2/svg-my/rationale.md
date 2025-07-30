@@ -170,6 +170,7 @@ Subtotal: 77
 - 13AF0: holds staff
 - 13AF1: same
 - 13B42: simplified, more pronounced beard
+- 13B64: other feathers
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -181,7 +182,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 164
+Subtotal: 165
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -247,6 +248,7 @@ Subtotal: 164
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABE: after 130F9
+- 13B65: after 64
 - 13B98: after 97
 - 13B9F: after 98
 - 13C56: 55 + flail
@@ -258,11 +260,11 @@ Subtotal: 164
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 73
+Subtotal: 74
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 315
+Total: 317
