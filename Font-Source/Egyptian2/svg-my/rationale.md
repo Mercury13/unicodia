@@ -253,6 +253,7 @@ Subtotal: 173
 - 1397B: eyes, after 7A
 - 13989: eyes
 - 1398B: eyes
+- 13A26: after 25
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABE: after 130F9
@@ -269,11 +270,11 @@ Subtotal: 173
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 75
+Subtotal: 76
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 326
+Total: 327
