@@ -112,7 +112,7 @@ Anyway, Unicodia will never be a good ideograph guide, everything I write about 
 * Hieroglyphs w/o description just somehow resemble the sample image, no efforts are made to make them look exactly
 * Same if the sample image is not in harmony with description
 * Short-haired man has absolutely no beard unless specified
-* Other men may have any beard except god’s
+* Other men may have any beard except god’s unless specified
 * Described but really small detail (ankh in the hand…) = thing of lower importance, fix if the hiero was touched for another reason.
 * The difference between duck and goose is ephemeral, no efforts to make them distinct. However, their necks are light.
 
