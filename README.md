@@ -114,6 +114,7 @@ Anyway, Unicodia will never be a good ideograph guide, everything I write about 
 * Short-haired man has absolutely no beard unless specified
 * Other men may have any beard except god’s
 * Described but really small detail (ankh in the hand…) = thing of lower importance, fix if the hiero was touched for another reason.
+* The difference between duck and goose is ephemeral, no efforts to make them distinct. However, their necks are light.
 
 ## Data
 Data is as neutral as possible. Examples.

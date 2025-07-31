@@ -182,6 +182,7 @@ Subtotal: 77
 - 13BAB: same, plus redrew semicircle
 - 13BE5: flip ←→
 - 13C17: just 10% bigger
+- 13C18: more detailed head, white neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -192,7 +193,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 175
+Subtotal: 176
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -281,4 +282,4 @@ Subtotal: 78
 
 Subtotal: 1
 
-Total: 331
+Total: 332
