@@ -180,6 +180,7 @@ Subtotal: 77
 - 13B9C: other legs
 - 13BAA: waves unseen in cell’s detail
 - 13BAB: same, plus redrew semicircle
+- 13BE5: flip ←→
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -190,7 +191,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 173
+Subtotal: 174
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -263,6 +264,7 @@ Subtotal: 173
 - 13BB4: after B3
 - 13BCD: after CC
 - 13C56: 55 + flail
+- 13D06: after 07
 - 13EFB: after FD
 - 13EFC: same
 - 140FE: after FC
@@ -271,11 +273,11 @@ Subtotal: 173
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 77
+Subtotal: 78
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 328
+Total: 330
