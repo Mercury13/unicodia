@@ -403,6 +403,10 @@ def loadUnikemet():
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
+                                if os.path.exists(manualName):
+                                    log.write("{} exists!\n".format(manualName))
+                                if os.path.exists(manualWideName):
+                                    log.write("{} exists!\n".format(manualWideName))
                                 loadMyGlyph(font, sHex, code, reallyMyName)
                             elif os.path.exists(manualWideName):
                                 # Manual glyph
