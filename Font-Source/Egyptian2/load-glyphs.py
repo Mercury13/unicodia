@@ -13,6 +13,8 @@ BAD_JSESH_HIEROS = {
     0x1355D: "A049D",  # foreigner, how to draw?
     0x13AD2: "E240",   # lion → lioness
     0x13AD3: "E241",   # lion → lioness
+    0x13BD4: "F128",   # cauldron? → udder
+    0x13BDA: "F132B",  # IDK
 }
 BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
 
@@ -247,6 +249,7 @@ GLYPH_SIZES = {
     0x140FA: MEDIUM,
     0x140FE: EVERYBIT,
     0x14015: SMALL,
+    0x141B5: WIDE, 0x141B6: EVERYBIT,
     0x141F1: SMALL,
     0x14202: SMALL,
     0x14226: MEDIUM, 0x14227: MEDIUM,
