@@ -173,6 +173,7 @@ Subtotal: 77
 - 13B64: other feathers
 - 13B66: greatly simplified
 - 13B68: uraeus, not snake
+- 13B69: 40% bigger rams
 - 13B9C: other legs
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -184,7 +185,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 167
+Subtotal: 168
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -269,4 +270,4 @@ Subtotal: 74
 
 Subtotal: 1
 
-Total: 319
+Total: 320
