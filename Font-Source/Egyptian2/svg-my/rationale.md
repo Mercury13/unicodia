@@ -174,7 +174,11 @@ Subtotal: 77
 - 13B66: greatly simplified
 - 13B68: uraeus, not snake
 - 13B69: 40% bigger rams
+- 13B93: after 94
+- 13B94: false hole, symmetry
+- 13B95: uraeus, not snake
 - 13B9C: other legs
+- 13BAA: waves unseen in cell’s detail
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -185,7 +189,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 168
+Subtotal: 172
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -270,4 +274,4 @@ Subtotal: 74
 
 Subtotal: 1
 
-Total: 320
+Total: 324
