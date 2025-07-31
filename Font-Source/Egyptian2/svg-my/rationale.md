@@ -179,6 +179,7 @@ Subtotal: 77
 - 13B95: uraeus, not snake
 - 13B9C: other legs
 - 13BAA: waves unseen in cell’s detail
+- 13BAB: same, plus redrew semicircle
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -189,7 +190,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 172
+Subtotal: 173
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -274,4 +275,4 @@ Subtotal: 74
 
 Subtotal: 1
 
-Total: 324
+Total: 325
