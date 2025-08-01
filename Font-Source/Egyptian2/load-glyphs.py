@@ -207,6 +207,7 @@ GLYPH_SIZES = {
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
+    0x13B59: WIDE,
     0x13B5B: WIDE,
     0x13B60: MEDIUM,
     0x13B69: WIDE,
@@ -284,8 +285,10 @@ def glyphSize(cp):
         return GLYPH_SIZES[cp]
     if (cp >= 0x13A4C) and (cp <= 0x13A59):
         return MEDWIDE  # animal of Seth
-    if (cp >= 0x13A36) and (cp <= 0x13B59):
-        return WIDE     # donkeys, goats, lions, mice, sphinxes, cows, crocodiles
+    if (cp >= 0x13A36) and (cp <= 0x13B28):
+        return WIDE     # donkeys, goats, lions, mice, sphinxes, crocodiles
+    if (cp >= 0x13B29) and (cp <= 0x13B58):
+        return MEDWIDE     # bulls
     if (cp >= 0x13B97) and (cp <= 0x13BA0):
         return MEDWIDE  # architectural (?) donkeys
     if (cp >= 0x13B91) and (cp <= 0x13BA1):
@@ -421,6 +424,7 @@ def loadUnikemet():
                                 loadManualGlyph(font, code, glyphName, manualName, 'manual')
                             elif os.path.exists(svgRemadeName):
                                 glyph = newGlyph(font, code, glyphName)
+                                svgHeight = getSvgHeight(svgRemadeName)
                                 loadGlyph(glyph, code, svgRemadeName, svgHeight, True)
                             elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
