@@ -185,6 +185,9 @@ Subtotal: 77
 - 13C17: just 10% bigger
 - 13C18: more detailed head, white neck
 - 13C19: white neck
+- 13C1C: white neck
+- 13C1F: wrong direction
+- 13C20: same
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -195,7 +198,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 178
+Subtotal: 181
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -284,4 +287,4 @@ Subtotal: 78
 
 Subtotal: 1
 
-Total: 334
+Total: 337
