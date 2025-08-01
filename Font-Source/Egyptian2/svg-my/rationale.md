@@ -159,6 +159,7 @@ Subtotal: 77
 - 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
 - 13984: consistency w/81
 - 1398A: triangles, not corners
+- 139AA: other “torso”, for AB
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
 - 13A6E: wings in V-shape
@@ -198,7 +199,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 181
+Subtotal: 182
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -261,6 +262,7 @@ Subtotal: 181
 - 1397B: eyes, after 7A
 - 13989: eyes
 - 1398B: eyes
+- 139AB: after AA
 - 13A26: after 25
 - 13A59: after 58
 - 13AA7: after A8
@@ -280,11 +282,11 @@ Subtotal: 181
 - 141C9: after C8
 - 143D3: after D2
 
-Subtotal: 78
+Subtotal: 79
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 337
+Total: 339
