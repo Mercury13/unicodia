@@ -77,6 +77,7 @@ Subtotal: 77
 - 136B2: beard ?→king
 - 136B3: beard ?→king: SIXTY
 - 136B4: beard ?→king
+- 136B5: beard no→god
 - 136B7: beard ?→god
 - 136BE: beard goddier
 - 136BF: beard curved
@@ -94,8 +95,8 @@ Subtotal: 77
 - 13750: short hair
 - 13751: short hair
 - 13755: short hair
-- 13756: short hair
-- 13757: short hair: EIGHTY
+- 13756: short hair: EIGHTY
+- 13757: short hair
 - 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
@@ -114,8 +115,8 @@ Subtotal: 77
 - 137FA: mismatch, removed beard
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
-- 13800: mismatch, removed beard, fixed very sharp inner angles
-- 13816: sit on block: ONE HUNDRED
+- 13800: mismatch, removed beard, fixed very sharp inner angles: ONE HUNDRED
+- 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
 - 13820: reduced height, simplified hat, more curvy beard
@@ -134,8 +135,8 @@ Subtotal: 77
 - 1389A: ankhs bigger
 - 138A8: arm lower
 - 138AC: arm lower
-- 138CF: arm lower, fork bigger, ankh bigger, removed fine details
-- 138D0: same: ONE-TWENTY
+- 138CF: arm lower, fork bigger, ankh bigger, removed fine details: ONE-TWENTY
+- 138D0: same
 - 138D4: same
 - 138DB: palm up
 - 138DC: simplified, palm up
@@ -154,8 +155,8 @@ Subtotal: 77
 - 1392A: fixed self-intersection
 - 1394B: cut forearm
 - 1396A: craggy, badly converted
-- 13981: wrong eye position
-- 13982: consistency w/81  (83=tofu, was also redrawn during this campaign): ONE-FORTY
+- 13981: wrong eye position: ONE-FORTY
+- 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
 - 13984: consistency w/81
 - 1398A: triangles, not corners
 - 13A36: +bundle of straw
@@ -194,7 +195,7 @@ Subtotal: 77
 - 140FC: removed PLACEHOLDERS
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 177
+Subtotal: 178
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -283,4 +284,4 @@ Subtotal: 78
 
 Subtotal: 1
 
-Total: 333
+Total: 334
