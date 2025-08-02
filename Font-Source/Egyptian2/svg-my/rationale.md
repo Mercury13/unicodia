@@ -197,9 +197,10 @@ Subtotal: 77
 - 13C57: same
 - 13C58: this one has one feather
 - 140FC: removed PLACEHOLDERS
+- 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 182
+Subtotal: 183
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -277,16 +278,20 @@ Subtotal: 182
 - 13EFB: after FD
 - 13EFC: same
 - 140FE: after FC
+- 14128: after 2A
 - 14196: after 97, pectoral
 - 141A2: after A1
 - 141C9: after C8
+- 1425B: after 5A
+- 142EA: after EB
+- 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 79
+Subtotal: 83
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 339
+Total: 344
