@@ -203,7 +203,7 @@ Subtotal: 77
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 184
+Subtotal: 186
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -276,6 +276,8 @@ Subtotal: 184
 - 13B9F: after 98
 - 13BB4: after B3
 - 13BCD: after CC
+- 13C11: after 10
+- 13C1D: after 1C
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13D06: after 07
@@ -291,11 +293,11 @@ Subtotal: 184
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 84
+Subtotal: 86
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 346
+Total: 350

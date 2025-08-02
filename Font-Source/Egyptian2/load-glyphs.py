@@ -10,7 +10,6 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
-    0x1355D: "A049D",  # foreigner, how to draw?
     0x13AD2: "E240",   # lion → lioness
     0x13AD3: "E241",   # lion → lioness
     0x13BD4: "F128",   # cauldron? → udder
