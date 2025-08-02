@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2500"
+   height="1000"
+   id="svg1609"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="13985.svg"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata1616">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:date>18/02/06</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Serge Thomas</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:description>optimisation et régularisation du signe de Jsesh
+valeur :Xr</dc:description>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1614" />
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.438"
+     inkscape:cx="727.16895"
+     inkscape:cy="850.45662"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg1609"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1"
+     showguides="true" />
+  <path
+     id="path1"
+     style="fill:#000000;stroke:none;stroke-width:0.736764"
+     d="M 985.38605,0.14086725 C 915.7678,-1.0848058 847.12868,5.6588084 779.47157,20.366886 644.15725,49.783041 506.8828,137.54114 367.64631,283.64139 228.40983,428.76107 106.33405,506.22091 1.4164277,516.0263 L -1.524735,618.98537 c 238.270855,20.59131 472.127875,51.96876 701.573885,94.13192 229.44604,42.16314 490.76015,27.9446 783.94115,-42.65421 292.2004,-70.59876 477.5212,-113.25456 555.9643,-127.96265 h 194.1462 V 416.01207 H 2034.0722 C 1938.9601,383.65426 1811.4901,319.42928 1651.6624,223.33651 1492.8151,127.24372 1341.322,62.038636 1197.1828,27.719787 1125.6036,10.560363 1055.0043,1.3665403 985.38605,0.14086725 Z M 978.76844,99.696926 c 148.24566,5.02e-4 268.42216,120.527644 268.42156,269.204854 0,148.67575 -120.1773,269.20065 -268.42156,269.20115 C 830.52273,638.10486 710.34466,517.57898 710.3432,368.90178 710.34261,220.22311 830.52132,99.695364 978.76844,99.696926 Z m 308.13086,67.750154 c 53.9297,3.92216 144.6316,44.6141 272.1017,122.07663 127.47,76.482 258.8602,139.72691 394.1746,189.73437 -99.0345,5.88325 -206.8916,26.96245 -323.5756,63.24235 -117.6646,35.29939 -241.2144,61.77642 -370.6454,79.42611 92.5144,-110.13619 135.3172,-308.75997 27.9447,-454.47946 z M 658.86552,179.21171 C 637.1758,219.88002 536.56206,432.9663 698.57856,618.98537 521.10107,586.62759 361.2736,562.60449 219.09554,546.91587 308.32455,493.9668 378.43375,435.13222 429.42176,370.4167 481.39029,305.70116 557.87005,241.9662 658.86552,179.21171 Z"
+     sodipodi:nodetypes="sscccscccccccscccccccccccccccc" />
+  <path
+     style="fill:none;stroke:#813d9c;stroke-width:90;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="M 1517.9435,656.67304 1603.137,955"
+     id="path5"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#813d9c;stroke-width:90;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="M 477.48585,653.69601 422.9463,955"
+     id="path6"
+     sodipodi:nodetypes="cc" />
+</svg>
