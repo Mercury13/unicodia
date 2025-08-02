@@ -190,6 +190,8 @@ Subtotal: 77
 - 13C1C: white neck
 - 13C1F: wrong direction
 - 13C20: same
+- 13C28: white neck
+- 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
