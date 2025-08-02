@@ -264,6 +264,7 @@ Subtotal: 187
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
+- 13972: eyes (and hair)
 - 13973: eyes, after 7B
 - 13975: eyes, franken
 - 13977: eyes
@@ -312,7 +313,7 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 104
+Subtotal: 105
 
 # Found for myself in JSesh
 - 135D3 = A14E + union

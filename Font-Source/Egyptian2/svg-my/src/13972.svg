@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="1000"
+   viewBox="0 0 500 1000"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="13972.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.672594"
+     inkscape:cx="125.633"
+     inkscape:cy="370.95187"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 218.22966,25.007789 c -55.18958,0 -84.22464,31.508437 -84.74259,75.159511 -0.57347,48.33165 32.90754,97.37617 84.74259,149.19314 49.61296,49.59565 82.65456,95.22958 82.65456,133.84638 0,38.61679 -21.25041,74.65479 -82.65456,125.18072 -56.65452,46.61773 -84.40158,94.72461 -83.71827,140.05877 0.68332,45.3341 30.20918,86.02997 83.71827,143.25234 43.11002,46.10165 208.53247,189.41772 208.53247,189.41772"
+       id="path1"
+       sodipodi:nodetypes="csszszsc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path1"
+       id="use3"
+       transform="matrix(-1,0,0,1,436.45931,0)" />
+  </g>
+</svg>
