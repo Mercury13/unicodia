@@ -274,6 +274,7 @@ Subtotal: 187
 - 13AA7: after A8
 - 13ABE: after 130F9
 - 13B65: after 64
+- 13B85: after 81
 - 13B98: after 97
 - 13B9F: after 98
 - 13BB4: after B3
@@ -292,6 +293,8 @@ Subtotal: 187
 - 13EFB: after FD
 - 13EFC: same
 - 13F41: after 42
+- 14081: after 7F, trusted description/NG rather than samples
+- 1408C: after 8E
 - 140FE: after FC
 - 14128: after 2A
 - 14189: 1A + simplified
@@ -303,11 +306,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 95
+Subtotal: 98
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 360
+Total: 363
