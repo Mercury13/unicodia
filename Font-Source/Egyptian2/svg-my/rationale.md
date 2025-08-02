@@ -209,6 +209,7 @@ Subtotal: 187
 
 # Duped with NewGardiner
 - 134C0: after C1
+- 134CD: campaign for staves
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 13559: 5A minus beard
@@ -304,7 +305,7 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 95
+Subtotal: 96
 
 # Found for myself in JSesh
 - 135D3 = A14E + union

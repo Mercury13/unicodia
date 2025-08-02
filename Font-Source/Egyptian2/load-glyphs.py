@@ -142,9 +142,11 @@ TEENY = 400
 TINY = 500
 SMALL = 650
 MEDIUM = 800
-MEDWIDE = 1250
-WIDE = 1400
-EVERYBIT = 1500  # squeeze out every bit of width
+# Positive = limited by height; negative = limited by width
+SQUARE = -1000
+MEDWIDE = -1250
+WIDE = -1400
+EVERYBIT = -1500  # squeeze out every bit of width
 BOTTOMHANG = 125
 BEARING = 40
 V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
@@ -155,7 +157,7 @@ GLYPH_SIZES = {
     0x1348E: MEDWIDE,
     0x134AA: MEDIUM, 0x134AB: MEDIUM,
     0x134AF: MEDIUM,
-    0x134C0: MEDWIDE, 0x134C1: MEDWIDE,
+    0x134BE: SQUARE, 0x134C0: MEDWIDE, 0x134C1: MEDWIDE,
     0x134C2: WIDE,  0x134C3: WIDE,  0x134C5: WIDE,
     0x134F4: MEDWIDE,
     0x134FA: WIDE,
@@ -315,8 +317,8 @@ def fixBearings(glyph):
     
 def fixSize(cp, glyph, svgHeight):
     mySize = glyphSize(cp)
-    if (mySize > CELLHEIGHT):
-        [myWidth, myHeight] = [mySize, CELLHEIGHT]
+    if (mySize < 0):
+        [myWidth, myHeight] = [-mySize, CELLHEIGHT]
     else:
         [myWidth, myHeight] = [CELLWIDTH, mySize]
     # Get transformation matrix
