@@ -209,6 +209,7 @@ Subtotal: 187
 
 # Duped with NewGardiner
 - 134C0: after C1
+- 134CA: campaign for staves
 - 134CD: campaign for staves
 - 134EE: after ED
 - 134EF: EE + legs on heels
