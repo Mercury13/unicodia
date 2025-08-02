@@ -12,8 +12,9 @@ RETURN = temporarily deleted, then returned
 - 1348C, 1348E, 13496, 1349C, 134A0 / 134A3, 134A4, 134A5, 134A7, 134AD = campaign for standing men (10)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
+- 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 
-Subtotal: 77
+Subtotal: 87
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -264,16 +265,6 @@ Subtotal: 187
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
-- 13972: eyes (and hair)
-- 13973: eyes, after 7B
-- 13975: eyes, franken
-- 13977: eyes
-- 1397B: eyes, after 7A
-- 1397E: eyes, franken
-- 13985: eyes
-- 13989: eyes
-- 1398B: eyes
-- 1398F: eyes
 - 139AB: after AA
 - 139E9: franken
 - 13A26: after 25
@@ -313,11 +304,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 105
+Subtotal: 95
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 369
+Total: 370
