@@ -281,6 +281,7 @@ Subtotal: 186
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13D06: after 07
+- 13D74: franken
 - 13EFB: after FD
 - 13EFC: same
 - 140FE: after FC
@@ -293,11 +294,11 @@ Subtotal: 186
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 86
+Subtotal: 87
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 350
+Total: 351
