@@ -255,6 +255,7 @@ Subtotal: 187
 - 13819: after 17
 - 1383C: Imhotep is close to Ptah
 - 1383F: drew that Ptah
+- 13865: after 69
 - 13892: after 90
 - 1389B: after 9A
 - 138EC: EB + ankh
@@ -264,7 +265,9 @@ Subtotal: 187
 - 13926: same
 - 13933: after 32
 - 13973: eyes, after 7B
+- 13975: eyes, franken
 - 1397B: eyes, after 7A
+- 1397E: eyes, franken
 - 13989: eyes
 - 1398B: eyes
 - 139AB: after AA
@@ -306,11 +309,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 98
+Subtotal: 101
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 363
+Total: 366
