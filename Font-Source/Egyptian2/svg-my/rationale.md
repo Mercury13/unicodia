@@ -208,6 +208,7 @@ Subtotal: 87
 Subtotal: 187
 
 # Duped with NewGardiner
+- 134BB: campaign for lying, big franken
 - 134C0: after C1
 - 134CA: campaign for staves
 - 134CD: campaign for staves
@@ -306,11 +307,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 97
+Subtotal: 98
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 372
+Total: 373
