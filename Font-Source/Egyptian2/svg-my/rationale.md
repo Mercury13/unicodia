@@ -289,6 +289,7 @@ Subtotal: 186
 - 13DA7: DA3 + feathers
 - 13EFB: after FD
 - 13EFC: same
+- 13F41: after 42
 - 140FE: after FC
 - 14128: after 2A
 - 14189: 1A + simplified
@@ -300,11 +301,11 @@ Subtotal: 186
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 93
+Subtotal: 94
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 357
+Total: 358

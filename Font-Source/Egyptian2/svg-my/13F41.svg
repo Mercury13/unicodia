@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2000"
+   height="1000"
+   id="svg2774"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="13F41.svg"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata2781">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.5/" />
+        <dc:description>variant ede N40 combinaisonde N37A et de D54</dc:description>
+        <dc:title>US22N40A</dc:title>
+        <dc:date>30/09/06</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ST</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc-nd/2.5/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:prohibits
+           rdf:resource="http://web.resource.org/cc/CommercialUse" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2779" />
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.19357048"
+     inkscape:cx="-209.22612"
+     inkscape:cy="374.54058"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg2774"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <path
+     id="path2776"
+     style="fill:#000000;stroke:none;stroke-width:1"
+     d="M 0,0 V 386.44141 H 708.47461 C 568.36175,553.67295 450.84694,708.47473 355.93164,850.84766 264.27925,921.87825 221.20449,926.89009 105.08398,937.28906 39.547276,941.80878 6.7792969,952.54295 6.7792969,969.49219 v 1.69336 l 1.6953125,1.69531 c 0,12.42919 71.7510736,20.33851 215.2539106,23.72852 16.94912,-5.64976 38.41757,-8.47461 64.40625,-8.47461 h 16.94921 c 42.58672,7.88647 56.49385,8.47461 64.40821,8.47461 58.76824,-2e-5 70.62844,-31.03802 77.96484,-100 0,-13.55926 43.78494,-69.77243 131.35547,-168.64258 87.57059,-98.87005 137.57059,-172.03462 150,-219.49219 0,-19.20904 15.82053,-28.81445 47.45898,-28.81445 35.02827,1.12995 71.75184,25.42518 110.16993,72.88281 87.00559,103.95468 163.84119,212.42938 230.50779,325.42383 0,4.51982 -8.4746,7.90817 -25.4238,10.16797 -40.6779,25.98894 -73.446,41.24407 -98.3047,45.76367 -88.13554,14.68922 -132.20312,30.50784 -132.20312,47.45703 v 3.39062 c 0,7.90973 50.2826,12.99409 150.84762,15.25391 L 1123.7285,989.83008 1238.9824,1000 c 76.6113,-9.99311 19.0816,-88.83323 11.8653,-98.30469 C 1214.6895,856.49749 1178.5313,797.17492 1142.373,723.72852 1061.0174,555.36709 962.7113,442.93859 847.45703,386.44141 H 1454.2363 V 0 Z m 52.542969,50.847656 343.982561,0 200,283.050784 -543.982561,0 z m 413.474751,0 h 130.50781 l 200,283.050784 H 664.32241 Z m 199.99805,0 h 130.50976 l 200,283.050784 H 864.32241 Z m 198.30664,0 537.37289,0 V 333.89844 l -337.3729,0 z"
+     sodipodi:nodetypes="cccccscccscscsccccccssccccccccccccccccccccccccccccc" />
+</svg>
