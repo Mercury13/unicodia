@@ -267,6 +267,7 @@ Subtotal: 186
 - 13989: eyes
 - 1398B: eyes
 - 139AB: after AA
+- 139E9: franken
 - 13A26: after 25
 - 13A59: after 58
 - 13AA7: after A8
@@ -285,10 +286,12 @@ Subtotal: 186
 - 13D06: after 07
 - 13D74: franken
 - 13D94: 93 + flail
+- 13DA7: DA3 + feathers
 - 13EFB: after FD
 - 13EFC: same
 - 140FE: after FC
 - 14128: after 2A
+- 14189: 1A + simplified
 - 14196: after 97, pectoral
 - 141A2: after A1
 - 141C9: after C8
@@ -297,11 +300,11 @@ Subtotal: 186
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 90
+Subtotal: 93
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 354
+Total: 357
