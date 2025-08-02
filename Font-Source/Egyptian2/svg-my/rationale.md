@@ -266,6 +266,7 @@ Subtotal: 187
 - 13933: after 32
 - 13973: eyes, after 7B
 - 13975: eyes, franken
+- 13977: eyes
 - 1397B: eyes, after 7A
 - 1397E: eyes, franken
 - 13985: eyes
@@ -310,11 +311,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 102
+Subtotal: 103
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 367
+Total: 368
