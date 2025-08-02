@@ -275,6 +275,7 @@ Subtotal: 184
 - 13BB4: after B3
 - 13BCD: after CC
 - 13C56: 55 + flail
+- 13CC6: after CC4, simplified
 - 13D06: after 07
 - 13EFB: after FD
 - 13EFC: same
@@ -288,11 +289,11 @@ Subtotal: 184
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 83
+Subtotal: 84
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 345
+Total: 346
