@@ -171,6 +171,7 @@ Subtotal: 77
 - 13AB4: flip knife
 - 13AF0: holds staff
 - 13AF1: same
+- 13B2D: greatly simplified
 - 13B42: simplified, more pronounced beard
 - 13B64: other feathers
 - 13B66: greatly simplified
@@ -200,7 +201,7 @@ Subtotal: 77
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 183
+Subtotal: 184
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -294,4 +295,4 @@ Subtotal: 83
 
 Subtotal: 1
 
-Total: 344
+Total: 345
