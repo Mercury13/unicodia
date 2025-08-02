@@ -183,6 +183,7 @@ Subtotal: 77
 - 13B9C: other legs
 - 13BAA: waves unseen in cell’s detail
 - 13BAB: same, plus redrew semicircle
+- 13BDE: a bit out of canvas
 - 13BE5: flip ←→
 - 13C17: just 10% bigger
 - 13C18: more detailed head, white neck
@@ -203,7 +204,7 @@ Subtotal: 77
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 186
+Subtotal: 187
 
 # Duped with NewGardiner
 - 134C0: after C1
@@ -277,6 +278,7 @@ Subtotal: 186
 - 13B9F: after 98
 - 13BB4: after B3
 - 13BCD: after CC
+- 13BDD: after DE
 - 13C11: after 10
 - 13C1D: after 1C
 - 13C36: G29 + R7
@@ -301,11 +303,11 @@ Subtotal: 186
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 94
+Subtotal: 95
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 358
+Total: 360
