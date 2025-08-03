@@ -218,6 +218,7 @@ Subtotal: 188
 - 134B8: campaign for lying, after B7
 - 134BB: campaign for lying, big franken
 - 134C0: after C1
+- 134C4: campaign for lying
 - 134C8: campaign for staves
 - 134C9: campaign for staves
 - 134CA: campaign for staves
@@ -318,11 +319,11 @@ Subtotal: 188
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 108
+Subtotal: 109
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 384
+Total: 385
