@@ -161,6 +161,7 @@ Subtotal: 87
 - 13984: consistency w/81
 - 1398A: triangles, not corners
 - 139AA: other “torso”, for AB
+- 139D3: grafted knife from EB, simplified
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
 - 13A6E: wings in V-shape
@@ -205,7 +206,7 @@ Subtotal: 87
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 187
+Subtotal: 188
 
 # Duped with NewGardiner
 - 134B0: campaign for lying
@@ -320,4 +321,4 @@ Subtotal: 104
 
 Subtotal: 1
 
-Total: 379
+Total: 380
