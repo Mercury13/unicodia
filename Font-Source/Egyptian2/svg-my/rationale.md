@@ -211,7 +211,9 @@ Subtotal: 188
 # Duped with NewGardiner
 - 134B0: campaign for lying
 - 134B1: after B0, campaign for lying
+- 134B2: after A101, campaign for lying
 - 134B4: after B3
+- 134B5: after A101, campaign for lying
 - 134B6: after B3+B4
 - 134B8: campaign for lying, after B7
 - 134BB: campaign for lying, big franken
@@ -316,11 +318,11 @@ Subtotal: 188
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 106
+Subtotal: 108
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 382
+Total: 384
