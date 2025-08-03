@@ -210,6 +210,8 @@ Subtotal: 187
 # Duped with NewGardiner
 - 134BB: campaign for lying, big franken
 - 134C0: after C1
+- 134C8: campaign for staves
+- 134C9: campaign for staves
 - 134CA: campaign for staves
 - 134CD: campaign for staves
 - 134EE: after ED
@@ -288,6 +290,7 @@ Subtotal: 187
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13D06: after 07
+- 13D61: oval from eyes + some snake
 - 13D74: franken
 - 13D94: 93 + flail
 - 13DA7: DA3 + feathers
@@ -307,11 +310,11 @@ Subtotal: 187
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 98
+Subtotal: 101
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 373
+Total: 376
