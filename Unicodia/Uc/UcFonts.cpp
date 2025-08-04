@@ -130,8 +130,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
-      { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                         // …2, new additions
-      { "UFSZeroExt.ttf", Ffg::FALL_TO_NEXT },                                  // …3, new additions
+      { FAM_FUNKY, Ffg::FALL_TO_NEXT,  20_top + 20_bot },                       // …2, new additions
+      { "UFSArabicFixup.ttf", Ffg::FALL_TO_NEXT },                              // …3, new additions
       { "PlangothicP2-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 15_top, 125_pc },      // …4, just one new char
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Armenian
@@ -332,7 +332,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
-    { "UFSZeroExt.ttf", Ffg::FALL_TO_NEXT, 125_pc },                            // Tangut
+    { "UFSTangutFixup.ttf", Ffg::FALL_TO_NEXT, 125_pc },                        // Tangut
       { "NotoSerifTangut-Regular.ttf", 125_pc },                                // …1
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
