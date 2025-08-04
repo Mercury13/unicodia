@@ -150,6 +150,7 @@
 			<fmt shift="8" text="{1}億人" frac="never" />
 		</imprecise>
 		<moreless less="{1}以下" more="{1}以上" phase="unit" />
+		<percent inverse="0" space="1" />
 	</num-format>
 	<!-- Japanese has no plural rules -->
 	<cardinal-rules default-outcome="other" />

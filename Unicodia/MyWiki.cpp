@@ -1278,11 +1278,25 @@ namespace {
             u8"<span style='background-color:palette(midlight);'>\u00A0";
     constinit const std::u8string_view KEY_END = u8"\u00A0</span>";
 
+    void appendPercentSpace(QString& s)
+    {
+        if (loc::active::numfmt.percent.isSpace) {
+            // 00A0 = NBSP
+            str::append(s, "<span style='font-size:3pt'>\u00A0</span>"sv);
+        }
+    }
+
     void appendPercent(QString& s, std::string_view text)
     {
-        str::append(s, text);
-            // 00A0 = NBSP
-        str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+        if (loc::active::numfmt.percent.isInverse) {
+            s += '%';
+            appendPercentSpace(s);
+            str::append(s, text);
+        } else {
+            str::append(s, text);
+            appendPercentSpace(s);
+            s += '%';
+        }
     }
 
     template <std::integral T>

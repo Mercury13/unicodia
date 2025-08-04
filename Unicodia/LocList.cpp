@@ -314,6 +314,12 @@ namespace {
         std::string_view sPhase = hMoreLess.attribute("phase").as_string();
         r.numfmt.moreLess.phase = moreLessPhaseNames.findDef(sPhase, loc::MoreLessPhase::RAW);
 
+        auto hPercent = hNumFormat.child("percent");
+        static constexpr bool DEFAULT_INVERSE = loc::Lang::Numfmt::Percent::DEFAULT_INVERSE;
+        static constexpr bool DEFAULT_SPACE = loc::Lang::Numfmt::Percent::DEFAULT_SPACE;
+        r.numfmt.percent.isInverse = hPercent.attribute("inverse").as_bool(DEFAULT_INVERSE);
+        r.numfmt.percent.isSpace = hPercent.attribute("space").as_bool(DEFAULT_SPACE);
+
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);
 

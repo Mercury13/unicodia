@@ -102,6 +102,11 @@
 			 phase: num = raw number,
 			        unit = after application of imprecise’s format -->
 		<moreless less="<{1}" more=">{1}" phase="num" />
+		<!-- Turkish write “%10” 
+				inverse: swap number and %, true/false
+				space: need thin space, true/false
+			 Used in both {{%|10}} and more high-level templates working with percentages -->
+		<percent inverse="0" space="1" />
 	</num-format>
 	<!-- Rules for building cardinal plural forms: 1 lap, 2 laps
 			All lines are sequentially checked: take remainder by MOD,

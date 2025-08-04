@@ -64,6 +64,7 @@
 			<fmt shift="9" text="{1}&#160;млрд" frac="prefer" />
 		</imprecise>
 		<moreless less="<{1}" more=">{1}" phase="num" />
+		<percent inverse="0" space="1" />
 	</num-format>
 	<cardinal-rules default-outcome="many">
 		<rule mod="100" min="5" max="20" outcome="many" /><!-- 5 кругов … 20 кругов, 105 кругов … 120 кругов -->

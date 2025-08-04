@@ -70,6 +70,12 @@ namespace loc
                 std::string less, more;
                 MoreLessPhase phase = MoreLessPhase::RAW;
             } moreLess;
+            struct Percent {
+                static constexpr bool DEFAULT_INVERSE = false;
+                static constexpr bool DEFAULT_SPACE = true;
+                bool isInverse = DEFAULT_INVERSE;
+                bool isSpace = DEFAULT_SPACE;
+            } percent;
         } numfmt;
         struct Ellipsis {
             std::u8string text;
