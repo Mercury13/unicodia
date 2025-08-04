@@ -641,13 +641,13 @@ FB13..FB17: NotoSerifArmenian-Regular
 FB1D..FB4F: NotoSerifHebrew-Regular
 == Arabic Presentation Forms-A
 FB50..FBC2: NotoNaskhArabic-Regular
-FBC3..FBD2: UFSZeroExt
+FBC3..FBD2: UFSArabicFixup
 FBD3..FD3D: NotoNaskhArabic-Regular
 FD3E..FD4F: ScheherazadeNew-Regular
 FD50..FD8F: NotoNaskhArabic-Regular
-FD90, FD91: UFSZeroExt
+FD90, FD91: UFSArabicFixup
 FD92..FDC7: NotoNaskhArabic-Regular
-FDC8..FDCE: UFSZeroExt
+FDC8..FDCE: UFSArabicFixup
 FDCF......: ScheherazadeNew-Regular
 FDF0, FDF1: NotoNaskhArabic-Regular
 FDF2......: ScheherazadeNew-Regular
@@ -781,9 +781,9 @@ FFFD......: NotoSerif-Regular
 10E80..10EB1: NotoSerifYezidi-Regular
 == Arabic Extended-C
 10EC2..10EC4: ScheherazadeNew-Regular
-10EC5, 10EC6: UFSZeroExt
+10EC5, 10EC6: UFSArabicFixup
 10EC7.......: PlangothicP2-Regular
-10ED0..10EFB: UFSZeroExt
+10ED0..10EFB: UFSArabicFixup
 10EFC..10EFF: ScheherazadeNew-Regular
 == Old Sogdian
 10F00..10F27: NotoSansOldSogdian-Regular
@@ -2150,8 +2150,16 @@ FFFD......: NotoSerif-Regular
 16FE4.......: [Abbreviation]
 16FF0..16FF6: BabelStoneHanBasic
 == Tangut
-17000..187F7: NotoSerifTangut-Regular
-187F8..187FF: UFSZeroExt
+17000..17120: NotoSerifTangut-Regular
+17121.......: UFSTangutFixup
+17122..17C50: NotoSerifTangut-Regular
+17C51.......: UFSTangutFixup
+17C52..17D0A: NotoSerifTangut-Regular
+17D0B.......: UFSTangutFixup
+17D0C..180DE: NotoSerifTangut-Regular
+180DF.......: UFSTangutFixup
+180E0..187F7: NotoSerifTangut-Regular
+187F8..187FF: UFSTangutFixup
 == Tangut Components
 18800..18AFF: NotoSerifTangut-Regular
 == Khitan Small Script
@@ -2159,9 +2167,9 @@ FFFD......: NotoSerif-Regular
 18CFF.......: UnicodiaFunky
 == Tangut Supplement
 18D00..18D08: NotoSerifTangut-Regular
-18D09..18D1E: UFSZeroExt
+18D09..18D1E: UFSTangutFixup
 == Tangut Components Supplement
-18D80..18DF2: UFSZeroExt
+18D80..18DF2: UFSTangutFixup
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
 == Kana Supplement
