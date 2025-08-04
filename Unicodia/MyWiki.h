@@ -81,6 +81,8 @@ namespace mywiki {
         /// Blink “Favs are empty, go here and add”
         ///   (actual link is in lockit, Main.NoFavs)
         virtual void blinkAddCpToFavs() = 0;
+        /// Blink “F”
+        virtual void blinkRespect(QWidget* initiator, TinyOpt<QRect> rect) = 0;
         /// Searches for some request
         virtual void searchForRequest(const uc::Request& request) = 0;
         /// Just a simple dtor

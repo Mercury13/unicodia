@@ -210,6 +210,16 @@ namespace {
     void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.linkWalker().blinkAddCpToFavs(); }
 
+    class BlinkRespectLink : public mywiki::Link
+    {
+    public:
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+    };
+
+    void BlinkRespectLink::go(QWidget* initiator, TinyOpt<QRect> r, mywiki::Gui& gui)
+        { gui.linkWalker().blinkRespect(initiator, r); }
+
     template <class Fields, class Request>
     class RequestLink : public mywiki::Link
     {
@@ -334,6 +344,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoInterfaceLink(std::string_view ta
 {
     if (target == "blinkaddcp") {
         return std::make_unique<BlinkAddCpToFavsLink>();
+    } else if (target == "respect") {
+        return std::make_unique<BlinkRespectLink>();
     }
     return {};
 }

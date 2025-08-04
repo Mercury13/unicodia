@@ -19,7 +19,7 @@ constexpr auto FGS_MESSAGE =
 
 constexpr auto STY_LABEL =
         "QLabel { color : white; "
-        "font-size: 10pt; "
+        "font-size: %1pt; "
         "margin: 6px 10px; }";
 
 constexpr auto ALPHA_DEFAULT = 180;
@@ -41,7 +41,7 @@ FmMessage::FmMessage(QWidget* parent)
     // Label
     label = std::make_unique<QLabel>(this);
     label->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-    label->setStyleSheet(STY_LABEL);
+    buildStyleSheet();
 
     // Layout
     layout = std::make_unique<QGridLayout>(this);
@@ -64,10 +64,23 @@ FmMessage::FmMessage(QWidget* parent)
 FmMessage::~FmMessage() = default;
 
 
+void FmMessage::buildStyleSheet()
+{
+    label->setStyleSheet(QString(STY_LABEL).arg(fFontSize));
+}
+
+
 void FmMessage::setPopupOpacity(float x)
 {
     fPopupOpacity = x;
     setWindowOpacity(x);
+}
+
+
+void FmMessage::setFontSize(int x)
+{
+    fFontSize = x;
+    buildStyleSheet();
 }
 
 

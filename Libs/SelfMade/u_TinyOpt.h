@@ -10,7 +10,7 @@
 /// beacuse of extreme simplicity
 ///
 
-enum class tinynull_t { INST };
+enum class tinynull_t : unsigned char { INST };
 constexpr tinynull_t TINY_NULL = tinynull_t::INST;
 
 ///
@@ -30,6 +30,10 @@ struct TinyOpt
     constexpr explicit operator bool () const noexcept { return target; }
     constexpr const T& operator *  () const noexcept { return *target; }
     constexpr const T* operator -> () const noexcept { return target; }
+    constexpr T orV(const T& dflt) const noexcept(std::is_nothrow_copy_assignable_v<T>)
+        { return target ? *target : dflt; }
+    constexpr const T& orR(const T& dflt) const noexcept
+        { return target ? *target : dflt; }
 };
 
 

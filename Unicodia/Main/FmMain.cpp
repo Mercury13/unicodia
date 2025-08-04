@@ -60,6 +60,7 @@
 
 // Forms
 #include "FmTofuStats.h"
+#include "FmMessage.h"
 #include "WiOsStyle.h"
 #include "WiLibCp.h"
 
@@ -87,6 +88,13 @@ namespace {
     };
 
 }
+
+
+class FmRespect : public FmMessage
+{
+public:
+    FmRespect(QWidget* wi) : FmMessage(wi) { setFontSize((32)); }
+};
 
 ///// RowCache /////////////////////////////////////////////////////////////////
 
@@ -1491,6 +1499,9 @@ void FmMain::translateAbout()
     s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
     ui->vwAbout->setText(s);
 
+    // We used to have HTTPS only, but now have Easter eggs
+    connect(ui->vwAbout, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+
     // lbTofuStats
     ui->lbTofuStats->setText(qPopupLink("About.TofuStats", "ac:tofustats"));
 }
@@ -2147,6 +2158,13 @@ void FmMain::blinkAddCpToFavs()
 {
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     mainGui.blinkAtWidget("↑↑↑", btAddCpToFavs);
+}
+
+
+void FmMain::blinkRespect(QWidget* initiator, TinyOpt<QRect> r)
+{
+    QRect myR = r.orV(initiator->rect());
+    fmRespect.ensure(this).showNearRel(" F ", initiator, myR);
 }
 
 

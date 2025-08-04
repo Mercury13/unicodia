@@ -19,6 +19,7 @@ class FmMessage : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY (float popupOpacity READ popupOpacity WRITE setPopupOpacity)
+    Q_PROPERTY (int fontSize READ fontSize WRITE setFontSize)
     using Super = QWidget;
     using This = FmMessage;
 public:
@@ -26,6 +27,8 @@ public:
     ~FmMessage() override;
     float popupOpacity() const { return fPopupOpacity; }
     void setPopupOpacity(float x);
+    int fontSize() const { return fFontSize; }
+    void setFontSize(int x);
 public slots:
     void setPopupText(const QString& text);
     void moveNear(const QWidget* widget, const QRect& globalRect);
@@ -46,10 +49,12 @@ private:
     std::unique_ptr<QPropertyAnimation> animation;
     std::unique_ptr<QTimer> timer;
     float fPopupOpacity;
+    int fFontSize = 10;
 
     void setY(const QRect& globalRect, const QRect& screenRect, int y);
     QRect screenRectAt(const QWidget* widget, const QRect& globalRect) const;
 private slots:
     void hideAnimation();
     void finalHide();
+    void buildStyleSheet();
 };

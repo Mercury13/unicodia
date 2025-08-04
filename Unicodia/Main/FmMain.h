@@ -50,6 +50,8 @@ class WiLibCp;
 class WiShowcase;
 class BangButton;
 
+class FmRespect;
+
 
 namespace uc {
     enum class CopiedChannel;
@@ -193,6 +195,7 @@ private:
     LibModel libModel;
     FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
+    Uptr<FmRespect> fmRespect;
     QFont fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
@@ -305,6 +308,7 @@ private:
     void blinkAddCpToFavs() override;
     void gotoLibCp(QWidget* initiator, char32_t cp) override;
     void searchForRequest(const uc::Request& request) override;
+    void blinkRespect(QWidget* initiator, TinyOpt<QRect> r) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
