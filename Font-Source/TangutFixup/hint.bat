@@ -1,0 +1,1 @@
+d:\Soft\FontEditing\ttfautohint.exe --stem-width-mode=sss --symbol UFSZeroExt-Regular.ttf UFSZeroExt.ttf

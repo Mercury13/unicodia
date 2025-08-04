@@ -332,8 +332,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
-    { "NotoSerifTangut-Regular.ttf", Ffg::FALL_TO_NEXT, 125_pc },               // Tangut
-      { "UFSZeroExt.ttf", 125_pc },                                             // …1
+    { "UFSZeroExt.ttf", Ffg::FALL_TO_NEXT, 125_pc },                            // Tangut
+      { "NotoSerifTangut-Regular.ttf", 125_pc },                                // …1
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …2
