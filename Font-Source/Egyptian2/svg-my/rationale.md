@@ -203,11 +203,19 @@ Subtotal: 97
 - 13C55: same
 - 13C57: same
 - 13C58: this one has one feather
+- 13C81: rope rather than feather
+- 13C85: loop on the end of perch
+- 13C96: no base
+- 13C98: feather → loop
+- 13C99: loop on perch
+- 13C9A: bull’s head
+- 13C9C: same as 9A
+- 13CA0: remove inner wall
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 188
+Subtotal: 196
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -317,4 +325,4 @@ Subtotal: 99
 
 Subtotal: 1
 
-Total: 385
+Total: 393
