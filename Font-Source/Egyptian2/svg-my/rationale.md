@@ -215,11 +215,12 @@ Subtotal: 97
 - 13CB5: uraeus after CB4
 - 13CB6: added uraeus
 - 13CB7: same
+- 13D28: drew claw from scratch
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 200
+Subtotal: 201
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -329,4 +330,4 @@ Subtotal: 99
 
 Subtotal: 1
 
-Total: 397
+Total: 398
