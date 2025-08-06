@@ -216,11 +216,12 @@ Subtotal: 97
 - 13CB6: added uraeus
 - 13CB7: same
 - 13D28: drew claw from scratch
+- 13D6F: removed sun, curvier beard
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 201
+Subtotal: 202
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -330,4 +331,4 @@ Subtotal: 99
 
 Subtotal: 1
 
-Total: 398
+Total: 399
