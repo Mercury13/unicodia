@@ -217,11 +217,13 @@ Subtotal: 97
 - 13CB7: same
 - 13D28: drew claw from scratch
 - 13D6F: removed sun, curvier beard
+- 13D8F: removed sun
+- 13DC3: mirror
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 202
+Subtotal: 204
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -307,6 +309,8 @@ Subtotal: 202
 - 13D61: oval from eyes + some snake
 - 13D74: franken
 - 13D94: 93 + flail
+- 13D96: after I12 and 8F
+- 13D87: franken
 - 13DA7: DA3 + feathers
 - 13EFB: after FD
 - 13EFC: same
@@ -324,11 +328,11 @@ Subtotal: 202
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 99
+Subtotal: 101
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 399
+Total: 403
