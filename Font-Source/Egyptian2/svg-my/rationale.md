@@ -316,6 +316,7 @@ Subtotal: 204
 - 13E2E: see desc
 - 13EFB: after FD
 - 13EFC: same
+- 13E99: after 98
 - 13F41: after 42
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
@@ -330,11 +331,11 @@ Subtotal: 204
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 103
+Subtotal: 104
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 405
+Total: 406
