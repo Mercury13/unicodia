@@ -312,6 +312,8 @@ Subtotal: 204
 - 13D96: after I12 and 8F
 - 13D87: franken
 - 13DA7: DA3 + feathers
+- 13E19: after 18
+- 13E2E: see desc
 - 13EFB: after FD
 - 13EFC: same
 - 13F41: after 42
@@ -328,11 +330,11 @@ Subtotal: 204
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 101
+Subtotal: 103
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 403
+Total: 405
