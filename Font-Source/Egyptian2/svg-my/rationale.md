@@ -177,7 +177,7 @@ Subtotal: 97
 - 13B2D: greatly simplified
 - 13B42: simplified, more pronounced beard
 - 13B64: other feathers
-- 13B66: greatly simplified
+- 13B66: greatly simplified: ONE-SIXTY
 - 13B68: uraeus, not snake
 - 13B69: 40% bigger rams
 - 13B93: after 94
@@ -211,11 +211,15 @@ Subtotal: 97
 - 13C9A: bull’s head
 - 13C9C: same as 9A
 - 13CA0: remove inner wall
+- 13CB4: added uraeus
+- 13CB5: uraeus after CB4
+- 13CB6: added uraeus
+- 13CB7: same
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 196
+Subtotal: 200
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -246,7 +250,7 @@ Subtotal: 196
 - 13626: after 25
 - 13639: just drew a line
 - 136D2: 13478×2
-- 136DE: after DD: TEN
+- 136DE: after DD
 - 1366F: franken
 - 13670: after 74
 - 13672: after 73
@@ -325,4 +329,4 @@ Subtotal: 99
 
 Subtotal: 1
 
-Total: 393
+Total: 397
