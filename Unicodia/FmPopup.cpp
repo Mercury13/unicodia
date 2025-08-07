@@ -115,7 +115,7 @@ FmPopup::FmPopup(QWidget* owner, const char* color)
         lbText->setGraphicsEffect(effect);
     }
 
-    setStyleSheet("QWidget { background-color: black }");
+    setStyleSheet("FmPopup { background-color: black }");
     char buf[100];
     snprintf(buf, std::size(buf),
              "QLabel { background-color: %s; padding: 10px; border: 1px solid black }",
