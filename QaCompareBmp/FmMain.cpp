@@ -212,7 +212,7 @@ bool DiffModel::copyAsGood(size_t index) const
         auto fnSrc = dirWorking / line.name;
         if (!std::filesystem::exists(fnSrc))
             return false;
-        if (std::filesystem::exists(fnSrc) && !std::filesystem::remove(fnDest))
+        if (std::filesystem::exists(fnDest) && !std::filesystem::remove(fnDest))
             return false;
         std::error_code ec;
         using Opt = std::filesystem::copy_options;
