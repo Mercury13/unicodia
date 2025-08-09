@@ -14,6 +14,7 @@ BAD_JSESH_HIEROS = {
     0x13AD3: "E241",   # lion → lioness
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
+    0x13EB2: "M39B",   # big basket of fruit
 }
 BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
 
