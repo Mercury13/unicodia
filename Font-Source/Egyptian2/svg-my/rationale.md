@@ -228,12 +228,15 @@ Subtotal: 105
 - 13E84: was not hollow, did not look like reed
 - 13E85: craggy
 - 13EA8: after A9
+- 13ED3: hang lower
+- 13ED5: mirror, rounder circles
+- 13EDA: mirror, rounder circles
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 213
+Subtotal: 216
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -349,4 +352,4 @@ Subtotal: 105
 
 Subtotal: 1
 
-Total: 424
+Total: 427
