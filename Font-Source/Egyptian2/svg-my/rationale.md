@@ -11,11 +11,12 @@ RETURN = temporarily deleted, then returned
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
 - 1348C, 1348E, 13496, 1349C, 134A0 / 134A3, 134A4, 134A5, 134A7, 134AD = campaign for standing men (10)
 - 134B0, 134B1, 134B2, 134B4, 134B5 / 134B6, 134B8, 134BB, 134C0, 134C4 = campaign for lying (10)
+- 134C8, 134C9, 134CA, 134CD, 134D2 / 134D7, 134D8, 134DA = campaign for staves (8)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 
-Subtotal: 97
+Subtotal: 105
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -233,14 +234,6 @@ Subtotal: 97
 Subtotal: 211
 
 # Duped with NewGardiner
-- 134C8: campaign for staves
-- 134C9: campaign for staves
-- 134CA: campaign for staves
-- 134CD: campaign for staves
-- 134D2: campaign for staves
-- 134D7: campaign for staves
-- 134D8: campaign for staves
-- 134DA: campaign for staves
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 13559: 5A minus beard
@@ -344,7 +337,7 @@ Subtotal: 211
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 110
+Subtotal: 102
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
