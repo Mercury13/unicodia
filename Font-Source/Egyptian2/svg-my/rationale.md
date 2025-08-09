@@ -240,6 +240,7 @@ Subtotal: 211
 - 134D2: campaign for staves
 - 134D7: campaign for staves
 - 134D8: campaign for staves
+- 134DA: campaign for staves
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 13559: 5A minus beard
@@ -343,11 +344,11 @@ Subtotal: 211
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 109
+Subtotal: 110
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 418
+Total: 419
