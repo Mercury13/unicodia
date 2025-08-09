@@ -227,12 +227,13 @@ Subtotal: 105
 - 13E7D: craggy, after 7C and 7E
 - 13E84: was not hollow, did not look like reed
 - 13E85: craggy
+- 13EA8: after A9
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 212
+Subtotal: 213
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -345,4 +346,4 @@ Subtotal: 102
 
 Subtotal: 1
 
-Total: 420
+Total: 421
