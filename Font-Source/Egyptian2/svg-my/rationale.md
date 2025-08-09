@@ -220,11 +220,15 @@ Subtotal: 97
 - 13D6F: removed sun, curvier beard
 - 13D8F: removed sun
 - 13DC3: mirror
+- 13E55: straight stem
+- 13E5D: solid line
+- 13E5F: after 5D, craggy
+- 13E7D: craggy, after 7C and 7E
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 205
+Subtotal: 209
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -344,4 +348,4 @@ Subtotal: 109
 
 Subtotal: 1
 
-Total: 412
+Total: 416
