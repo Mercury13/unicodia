@@ -1,5 +1,5 @@
 # Scripts-17.0.0.txt
-# Date: 2025-06-30, 06:20:47 GMT
+# Date: 2025-07-24, 13:28:55 GMT
 # © 2025 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -628,7 +628,7 @@ FFFC..FFFD    ; Common # So   [2] OBJECT REPLACEMENT CHARACTER..REPLACEMENT CHAR
 1FA80..1FA8A  ; Common # So  [11] YO-YO..TROMBONE
 1FA8E..1FAC6  ; Common # So  [57] TREASURE CHEST..FINGERPRINT
 1FAC8         ; Common # So       HAIRY CREATURE
-1FACD..1FADD  ; Common # So  [17] ORCA..APPLE CORE
+1FACD..1FADC  ; Common # So  [16] ORCA..ROOT VEGETABLE
 1FADF..1FAEA  ; Common # So  [12] SPLATTER..DISTORTED FACE
 1FAEF..1FAF8  ; Common # So  [10] FIGHT CLOUD..RIGHTWARDS PUSHING HAND
 1FB00..1FB92  ; Common # So [147] BLOCK SEXTANT-1..UPPER HALF INVERSE MEDIUM SHADE AND LOWER HALF BLOCK
@@ -638,7 +638,7 @@ FFFC..FFFD    ; Common # So   [2] OBJECT REPLACEMENT CHARACTER..REPLACEMENT CHAR
 E0001         ; Common # Cf       LANGUAGE TAG
 E0020..E007F  ; Common # Cf  [96] TAG SPACE..CANCEL TAG
 
-# Total code points: 9124
+# Total code points: 9123
 
 # ================================================
 

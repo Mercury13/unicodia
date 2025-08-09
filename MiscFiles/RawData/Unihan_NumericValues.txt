@@ -1,5 +1,5 @@
 # Unihan_NumericValues.txt
-# Date: 2025-04-25 00:00:00 GMT [KL]
+# Date: 2025-07-24 00:00:00 GMT [KL]
 # Unicode Version 17.0.0
 #
 # Unicode Character Database

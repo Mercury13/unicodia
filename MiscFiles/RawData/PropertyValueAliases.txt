@@ -887,7 +887,7 @@ InPC; Bottom_And_Left                 ; Bottom_And_Left
 InPC; Bottom_And_Right                ; Bottom_And_Right
 InPC; Left                            ; Left
 InPC; Left_And_Right                  ; Left_And_Right
-InPC; NA                              ; NA
+InPC; NA                              ; Not_Applicable
 InPC; Overstruck                      ; Overstruck
 InPC; Right                           ; Right
 InPC; Top                             ; Top

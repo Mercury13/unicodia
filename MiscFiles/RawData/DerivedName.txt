@@ -1,5 +1,5 @@
 # DerivedName-17.0.0.txt
-# Date: 2025-06-30, 06:20:21 GMT
+# Date: 2025-07-30, 23:55:12 GMT
 # © 2025 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -9,7 +9,7 @@
 #
 # This file lists the values of the Name property.
 # This property is specified by the derivation documented in
-# Section 4.8 of the Unicode Standard, Version 13.0,
+# the "Character Properties" / "Name" section of the core specification,
 # based on the Name field in UnicodeData.txt,
 # the Jamo_Short_Name property in Jamo.txt,
 # and a specified list of pattern strings used to derive names
@@ -45205,7 +45205,6 @@ FFFD          ; REPLACEMENT CHARACTER
 1FADA         ; GINGER ROOT
 1FADB         ; PEA POD
 1FADC         ; ROOT VEGETABLE
-1FADD         ; APPLE CORE
 1FADF         ; SPLATTER
 1FAE0         ; MELTING FACE
 1FAE1         ; SALUTING FACE
@@ -45824,6 +45823,6 @@ E01ED         ; VARIATION SELECTOR-254
 E01EE         ; VARIATION SELECTOR-255
 E01EF         ; VARIATION SELECTOR-256
 
-# Total code points: 159802
+# Total code points: 159801
 
 # EOF

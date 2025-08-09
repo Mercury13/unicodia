@@ -1,5 +1,5 @@
 # DerivedCoreProperties-17.0.0.txt
-# Date: 2025-06-30, 06:20:18 GMT
+# Date: 2025-07-30, 23:55:08 GMT
 # © 2025 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -3553,7 +3553,8 @@ E0100..E01EF  ; Case_Ignorable # Mn [240] VARIATION SELECTOR-17..VARIATION SELEC
 
 # Derived Property:   Changes_When_Lowercased (CWL)
 #  Characters whose normalized forms are not stable under a toLowercase mapping.
-#  For more information, see D139 in Section 3.13, "Default Case Algorithms".
+#  For more information, see the definition of "isLowercase(X)"
+#  in the "Conformance" / "Default Case Algorithms" section of the core specification.
 #  Changes_When_Lowercased(X) is true when toLowercase(toNFD(X)) != toNFD(X)
 
 0041..005A    ; Changes_When_Lowercased # L&  [26] LATIN CAPITAL LETTER A..LATIN CAPITAL LETTER Z
@@ -4181,7 +4182,8 @@ FF21..FF3A    ; Changes_When_Lowercased # L&  [26] FULLWIDTH LATIN CAPITAL LETTE
 
 # Derived Property:   Changes_When_Uppercased (CWU)
 #  Characters whose normalized forms are not stable under a toUppercase mapping.
-#  For more information, see D140 in Section 3.13, "Default Case Algorithms".
+#  For more information, see the definition of "isUppercase(X)"
+#  in the "Conformance" / "Default Case Algorithms" section of the core specification.
 #  Changes_When_Uppercased(X) is true when toUppercase(toNFD(X)) != toNFD(X)
 
 0061..007A    ; Changes_When_Uppercased # L&  [26] LATIN SMALL LETTER A..LATIN SMALL LETTER Z
@@ -4825,7 +4827,8 @@ FF41..FF5A    ; Changes_When_Uppercased # L&  [26] FULLWIDTH LATIN SMALL LETTER 
 
 # Derived Property:   Changes_When_Titlecased (CWT)
 #  Characters whose normalized forms are not stable under a toTitlecase mapping.
-#  For more information, see D141 in Section 3.13, "Default Case Algorithms".
+#  For more information, see the definition of "isTitlecase(X)"
+#  in the "Conformance" / "Default Case Algorithms" section of the core specification.
 #  Changes_When_Titlecased(X) is true when toTitlecase(toNFD(X)) != toNFD(X)
 
 0061..007A    ; Changes_When_Titlecased # L&  [26] LATIN SMALL LETTER A..LATIN SMALL LETTER Z
@@ -5468,7 +5471,8 @@ FF41..FF5A    ; Changes_When_Titlecased # L&  [26] FULLWIDTH LATIN SMALL LETTER 
 
 # Derived Property:   Changes_When_Casefolded (CWCF)
 #  Characters whose normalized forms are not stable under case folding.
-#  For more information, see D142 in Section 3.13, "Default Case Algorithms".
+#  For more information, see the definition of "isCasefolded(X)"
+#  in the "Conformance" / "Default Case Algorithms" section of the core specification.
 #  Changes_When_Casefolded(X) is true when toCasefold(toNFD(X)) != toNFD(X)
 
 0041..005A    ; Changes_When_Casefolded # L&  [26] LATIN CAPITAL LETTER A..LATIN CAPITAL LETTER Z
@@ -6108,7 +6112,8 @@ FF21..FF3A    ; Changes_When_Casefolded # L&  [26] FULLWIDTH LATIN CAPITAL LETTE
 
 # Derived Property:   Changes_When_Casemapped (CWCM)
 #  Characters whose normalized forms are not stable under case mapping.
-#  For more information, see D143 in Section 3.13, "Default Case Algorithms".
+#  For more information, see the definition of "isCased(X)"
+#  in the "Conformance" / "Default Case Algorithms" section of the core specification.
 #  Changes_When_Casemapped(X) is true when CWL(X), or CWT(X), or CWU(X)
 
 0041..005A    ; Changes_When_Casemapped # L&  [26] LATIN CAPITAL LETTER A..LATIN CAPITAL LETTER Z
@@ -12964,7 +12969,7 @@ FFFC..FFFD    ; Grapheme_Base # So   [2] OBJECT REPLACEMENT CHARACTER..REPLACEME
 1FA80..1FA8A  ; Grapheme_Base # So  [11] YO-YO..TROMBONE
 1FA8E..1FAC6  ; Grapheme_Base # So  [57] TREASURE CHEST..FINGERPRINT
 1FAC8         ; Grapheme_Base # So       HAIRY CREATURE
-1FACD..1FADD  ; Grapheme_Base # So  [17] ORCA..APPLE CORE
+1FACD..1FADC  ; Grapheme_Base # So  [16] ORCA..ROOT VEGETABLE
 1FADF..1FAEA  ; Grapheme_Base # So  [12] SPLATTER..DISTORTED FACE
 1FAEF..1FAF8  ; Grapheme_Base # So  [10] FIGHT CLOUD..RIGHTWARDS PUSHING HAND
 1FB00..1FB92  ; Grapheme_Base # So [147] BLOCK SEXTANT-1..UPPER HALF INVERSE MEDIUM SHADE AND LOWER HALF BLOCK
@@ -12980,7 +12985,7 @@ FFFC..FFFD    ; Grapheme_Base # So   [2] OBJECT REPLACEMENT CHARACTER..REPLACEME
 30000..3134A  ; Grapheme_Base # Lo [4939] CJK UNIFIED IDEOGRAPH-30000..CJK UNIFIED IDEOGRAPH-3134A
 31350..33479  ; Grapheme_Base # Lo [8490] CJK UNIFIED IDEOGRAPH-31350..CJK UNIFIED IDEOGRAPH-33479
 
-# Total code points: 157495
+# Total code points: 157494
 
 # ================================================
 
