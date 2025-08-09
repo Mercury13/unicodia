@@ -257,6 +257,7 @@ Subtotal: 213
 - 135D4: lots of captives here
 - 135D8: lots of captives here
 - 135DD: lots of captives here
+- 13607: campaign for horses
 - 13626: after 25
 - 13639: just drew a line
 - 136D2: 13478×2
@@ -339,11 +340,11 @@ Subtotal: 213
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 102
+Subtotal: 103
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 421
+Total: 422
