@@ -215,6 +215,7 @@ Subtotal: 97
 - 13CB5: uraeus after CB4
 - 13CB6: added uraeus
 - 13CB7: same
+- 13CDC: no beard
 - 13D28: drew claw from scratch
 - 13D6F: removed sun, curvier beard
 - 13D8F: removed sun
@@ -223,7 +224,7 @@ Subtotal: 97
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 204
+Subtotal: 205
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -309,6 +310,7 @@ Subtotal: 204
 - 13C38: G29 + 37
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
+- 13CDD: after DC
 - 13D06: after 07
 - 13D61: oval from eyes + some snake
 - 13D74: franken
@@ -335,11 +337,11 @@ Subtotal: 204
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 108
+Subtotal: 109
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 410
+Total: 412
