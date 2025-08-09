@@ -224,11 +224,13 @@ Subtotal: 97
 - 13E5D: solid line
 - 13E5F: after 5D, craggy
 - 13E7D: craggy, after 7C and 7E
+- 13E84: was not hollow, did not look like reed
+- 13E85: craggy
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 209
+Subtotal: 211
 
 # Duped with NewGardiner
 - 134C8: campaign for staves
@@ -348,4 +350,4 @@ Subtotal: 109
 
 Subtotal: 1
 
-Total: 416
+Total: 418

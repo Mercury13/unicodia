@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="1000"
+   id="svg1392"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="13E85.svg"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata1399">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:date>26/01/2006</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Serge Thomas</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>US22</dc:identifier>
+        <dc:source>KV17 passim</dc:source>
+        <dc:language>valeur : i</dc:language>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1397" />
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.3775"
+     inkscape:cx="396.02649"
+     inkscape:cy="475.49669"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg1392"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <path
+     id="path1394"
+     style="fill:#000000;stroke:none;stroke-width:0.999995"
+     d="M 0,88.330078 443.08789,687.60156 c 69.60398,-13.01544 260.65542,-49.01389 323.46875,22.85352 l 131.14648,130.07031 c -101.64639,-9.11647 -212.17203,18.05492 -293.11328,98.99609 -35.97942,54.9158 -33.61159,72.43432 7.10157,52.55079 61.54408,-53.96911 193.40261,-81.33179 361.1289,-77.04688 l 56.86519,-58.44922 c -4.2849,-167.72629 23.0778,-299.58678 77.0469,-361.13086 19.8835,-40.71316 2.365,-43.07903 -52.5508,-7.09961 -81.13779,81.13786 -108.24488,192.00368 -98.92965,293.85352 L 184.125,11.660156 C 99.533809,-27.228316 26.404524,42.122713 0,88.330078 Z M 161.53906,63.832031 690.87305,598.05469 c -30.78747,-11.92366 -98.5373,-23.63722 -230.98633,10.35937 L 82.929688,105.09375 C 82.744432,98.980297 80.972775,97.363196 90.023438,88.3125 110.43995,67.895958 140.06138,54.748058 161.53906,63.832031 Z"
+     sodipodi:nodetypes="cccccccccccccccccsc" />
+</svg>
