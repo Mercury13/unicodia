@@ -328,6 +328,7 @@ Subtotal: 213
 - 13EFC: same
 - 13E99: after 98
 - 13F41: after 42
+- 13FD2: misrender in NewG, after D1 and D5
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140FE: after FC
@@ -341,11 +342,11 @@ Subtotal: 213
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 104
+Subtotal: 105
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 423
+Total: 424
