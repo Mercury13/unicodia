@@ -7,6 +7,7 @@
 5. Wait REALLY long, approx 30m
 6. DO NOT SAVE
 7. Check sesh.log, it might show problems
+8. The longest operation, SVG uniting, will be cached, and next runs will be shorter
 
 Meaning of directories:
 - InkTest: just a test for Inkscape

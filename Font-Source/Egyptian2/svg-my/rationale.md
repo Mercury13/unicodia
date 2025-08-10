@@ -246,12 +246,13 @@ Subtotal: 105
 - 1404A: greatly simplified, removed touching curves
 - 1405C: greatly simplified, removed touching curves
 - 1405D: most curves to lines, simplified Re, removed one rope
+- 14075: removed cow on the bow
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 231
+Subtotal: 232
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -355,6 +356,7 @@ Subtotal: 231
 - 13FD2: misrender in NewG, after D1 and D5
 - 14002: after 03
 - 14020: inverted 1F
+- 14076: after 78
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140FE: after FC
@@ -369,11 +371,11 @@ Subtotal: 231
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 114
+Subtotal: 115
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 451
+Total: 453
