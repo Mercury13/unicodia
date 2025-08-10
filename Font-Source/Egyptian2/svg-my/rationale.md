@@ -26,6 +26,7 @@ Subtotal: 105
 - 134D9: shorter clothes
 - 134E4: king’s beard
 - 134F3: kneeling
+- 134FE: square→oval, bigger (carrlying, well?)
 - 1354E: more consistent short wig
 - 13552: short beard
 - 13555: long wig
@@ -37,8 +38,8 @@ Subtotal: 105
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
 - 135C8: see C0
-- 1360F: kneel rather than ride the back
-- 1361E: arm raise in front rather than begging: TWENTY
+- 1360F: kneel rather than ride the back: TWENTY
+- 1361E: arm raise in front rather than begging
 - 13625: removed PLACEHOLDERS
 - 1363E: need beard
 - 13641: beard barely god → god
@@ -57,8 +58,8 @@ Subtotal: 105
 - 13676: beard ?→king
 - 13678: beard ?→king
 - 13679: beard ?→god
-- 1367A: beard ?→god
-- 1367B: beard ?→king: FORTY
+- 1367A: beard ?→god: FORTY
+- 1367B: beard ?→king
 - 1367C: beard ?→king
 - 1367D: beard ?→king
 - 13680: beard (god, per NewGar)
@@ -77,8 +78,8 @@ Subtotal: 105
 - 136A1: beard poor god → king
 - 136B0: beard ?→king
 - 136B1: beard ?→king
-- 136B2: beard ?→king
-- 136B3: beard ?→king: SIXTY
+- 136B2: beard ?→king: SIXTY
+- 136B3: beard ?→king
 - 136B4: beard ?→king
 - 136B5: beard no→god
 - 136B7: beard ?→god
@@ -97,8 +98,8 @@ Subtotal: 105
 - 1374F: short hair
 - 13750: short hair
 - 13751: short hair
-- 13755: short hair
-- 13756: short hair: EIGHTY
+- 13755: short hair: EIGHTY
+- 13756: short hair
 - 13757: short hair
 - 13759: short hair
 - 1375A: short hair
@@ -117,8 +118,8 @@ Subtotal: 105
 - 137F9: same
 - 137FA: mismatch, removed beard
 - 137FB: mismatch, removed beard
-- 137FF: mismatch, removed beard
-- 13800: mismatch, removed beard, fixed very sharp inner angles: ONE HUNDRED
+- 137FF: mismatch, removed beard: ONE HUNDRED
+- 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
 - 1381F: based on 20
@@ -137,8 +138,8 @@ Subtotal: 105
 - 13891: arm lower, bottom forked, ankh bigger
 - 1389A: ankhs bigger
 - 138A8: arm lower
-- 138AC: arm lower
-- 138CF: arm lower, fork bigger, ankh bigger, removed fine details: ONE-TWENTY
+- 138AC: arm lower: ONE-TWENTY
+- 138CF: arm lower, fork bigger, ankh bigger, removed fine details
 - 138D0: same
 - 138D4: same
 - 138DB: palm up
@@ -157,8 +158,8 @@ Subtotal: 105
 - 1391D: arm lower, greatly simplified
 - 1392A: fixed self-intersection
 - 1394B: cut forearm
-- 1396A: craggy, badly converted
-- 13981: wrong eye position: ONE-FORTY
+- 1396A: craggy, badly converted: ONE-FORTY
+- 13981: wrong eye position
 - 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
 - 13984: consistency w/81
 - 1398A: triangles, not corners
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13AF1: same
 - 13B2D: greatly simplified
 - 13B42: simplified, more pronounced beard
-- 13B64: other feathers
-- 13B66: greatly simplified: ONE-SIXTY
+- 13B64: other feathers: ONE-SIXTY
+- 13B66: greatly simplified
 - 13B68: uraeus, not snake
 - 13B69: 40% bigger rams
 - 13B93: after 94
@@ -197,7 +198,7 @@ Subtotal: 105
 - 13C20: same
 - 13C28: white neck
 - 13C2B: white curvier neck
-- 13C51: egret has two feathers
+- 13C51: egret has two feathers: ONE-EIGHTY
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
@@ -239,7 +240,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 219
+Subtotal: 220
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -336,6 +337,7 @@ Subtotal: 219
 - 13E99: after 98
 - 13F41: after 42
 - 13FD2: misrender in NewG, after D1 and D5
+- 14002: after 03
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140FE: after FC
@@ -349,11 +351,11 @@ Subtotal: 219
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 106
+Subtotal: 107
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 431
+Total: 433
