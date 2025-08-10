@@ -88,7 +88,7 @@ These fonts are taken to Unicodia without author’s consent:
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
 ## CJK
-I’m just scratching a surface, but my (badly enforced) policy for CJK ideographs (Hani) is:
+**The only person I could ask about ideographs has died. Let these rules be for history, maybe I’ll coin others.**
 * Serif style > correctness
 * One country is enough
 * Preference of countries
