@@ -247,6 +247,7 @@ Subtotal: 222
 # Duped with NewGardiner
 - 134EE: after ED
 - 134EF: EE + legs on heels
+- 134FF: after FE + random jug W22?
 - 13559: 5A minus beard
 - 1356C: after 6B
 - 13595: made from man with straight sticks
@@ -356,11 +357,11 @@ Subtotal: 222
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 110
+Subtotal: 111
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 438
+Total: 439
