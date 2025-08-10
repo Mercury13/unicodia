@@ -238,10 +238,11 @@ Subtotal: 105
 - 13EEC: bigger snake
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
+- 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 221
+Subtotal: 222
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -361,4 +362,4 @@ Subtotal: 109
 
 Subtotal: 1
 
-Total: 436
+Total: 437
