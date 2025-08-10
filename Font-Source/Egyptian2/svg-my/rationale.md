@@ -236,13 +236,15 @@ Subtotal: 105
 - 13EE0: deleted 2 triangles
 - 13EE1: no dot inside
 - 13EEC: bigger snake
+- 13F1E: greatly redrawn after 1D
+- 13F22: just one N27 rather than two
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 222
+Subtotal: 224
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -365,4 +367,4 @@ Subtotal: 112
 
 Subtotal: 1
 
-Total: 440
+Total: 442
