@@ -315,6 +315,7 @@ Subtotal: 222
 - 13ABE: after 130F9
 - 13B0A: after 09
 - 13B65: after 64
+- 13B7B: after other dogs and mace T3
 - 13B85: after 81
 - 13B98: after 97
 - 13B9F: after 98
@@ -357,11 +358,11 @@ Subtotal: 222
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 111
+Subtotal: 112
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 439
+Total: 440
