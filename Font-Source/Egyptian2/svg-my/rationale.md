@@ -235,12 +235,13 @@ Subtotal: 105
 - 13EDF: per E0
 - 13EE0: deleted 2 triangles
 - 13EE1: no dot inside
+- 13EEC: bigger snake
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 220
+Subtotal: 221
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -265,6 +266,7 @@ Subtotal: 220
 - 135D8: lots of captives here
 - 135DD: lots of captives here
 - 13607: campaign for horses
+- 1360A: campaign for horses, big franken
 - 13626: after 25
 - 13639: just drew a line
 - 136D2: 13478×2
@@ -351,11 +353,11 @@ Subtotal: 220
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 107
+Subtotal: 108
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 433
+Total: 435
