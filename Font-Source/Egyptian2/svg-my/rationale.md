@@ -351,13 +351,14 @@ Subtotal: 221
 - 1425B: after 5A
 - 142EA: after EB
 - 142F0: after F1
+- 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 108
+Subtotal: 109
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 435
+Total: 436
