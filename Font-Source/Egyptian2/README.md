@@ -17,6 +17,11 @@ Meaning of directories:
 - manual: everything is done manually except bearings (gradually phasing out this directory)
 - manual-wide: same, but accent that the image is wide
 
+# Error messages
+
+- XXX self-intersects / Critical / Built-in systems are unable to fix SVG’s self-intersections. Use other ways, like ``manual`` (complete pre-scaled glyphs) and ``svg-remade`` (technical changes).
+- XXX exists / Warning / Way A is overridden by way B. Just delete that file.
+
 # How to update data
 
 1. After loading Unikemet.txt run file filter_unikemet.bat
