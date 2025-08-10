@@ -32,13 +32,14 @@ Subtotal: 105
 - 13555: long wig
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
+- 13581: improved legibility
 - 135A2: shield from inside, spear→Bronze Age sword
 - 135A5: sit on heel
 - 135B6: more detailed foreigner captive
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
-- 135C8: see C0
-- 1360F: kneel rather than ride the back: TWENTY
+- 135C8: see C0: TWENTY
+- 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
 - 13625: removed PLACEHOLDERS
 - 1363E: need beard
@@ -57,8 +58,8 @@ Subtotal: 105
 - 13675: beard ?→god
 - 13676: beard ?→king
 - 13678: beard ?→king
-- 13679: beard ?→god
-- 1367A: beard ?→god: FORTY
+- 13679: beard ?→god: FORTY
+- 1367A: beard ?→god
 - 1367B: beard ?→king
 - 1367C: beard ?→king
 - 1367D: beard ?→king
@@ -77,8 +78,8 @@ Subtotal: 105
 - 1369F: beard man→king
 - 136A1: beard poor god → king
 - 136B0: beard ?→king
-- 136B1: beard ?→king
-- 136B2: beard ?→king: SIXTY
+- 136B1: beard ?→king: SIXTY
+- 136B2: beard ?→king
 - 136B3: beard ?→king
 - 136B4: beard ?→king
 - 136B5: beard no→god
@@ -97,8 +98,8 @@ Subtotal: 105
 - 1374D: 4F minus holding
 - 1374F: short hair
 - 13750: short hair
-- 13751: short hair
-- 13755: short hair: EIGHTY
+- 13751: short hair: EIGHTY
+- 13755: short hair
 - 13756: short hair
 - 13757: short hair
 - 13759: short hair
@@ -117,8 +118,8 @@ Subtotal: 105
 - 137F8: same
 - 137F9: same
 - 137FA: mismatch, removed beard
-- 137FB: mismatch, removed beard
-- 137FF: mismatch, removed beard: ONE HUNDRED
+- 137FB: mismatch, removed beard: ONE HUNDRED
+- 137FF: mismatch, removed beard
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
@@ -137,8 +138,8 @@ Subtotal: 105
 - 13890: arm lower
 - 13891: arm lower, bottom forked, ankh bigger
 - 1389A: ankhs bigger
-- 138A8: arm lower
-- 138AC: arm lower: ONE-TWENTY
+- 138A8: arm lower: ONE-TWENTY
+- 138AC: arm lower
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
 - 138D0: same
 - 138D4: same
@@ -157,8 +158,8 @@ Subtotal: 105
 - 1391C: ankh sloped forward
 - 1391D: arm lower, greatly simplified
 - 1392A: fixed self-intersection
-- 1394B: cut forearm
-- 1396A: craggy, badly converted: ONE-FORTY
+- 1394B: cut forearm: ONE-FORTY
+- 1396A: craggy, badly converted
 - 13981: wrong eye position
 - 13982: consistency w/81  (83=tofu, was also redrawn during this campaign)
 - 13984: consistency w/81
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13AF0: holds staff
 - 13AF1: same
 - 13B2D: greatly simplified
-- 13B42: simplified, more pronounced beard
-- 13B64: other feathers: ONE-SIXTY
+- 13B42: simplified, more pronounced beard: ONE-SIXTY
+- 13B64: other feathers
 - 13B66: greatly simplified
 - 13B68: uraeus, not snake
 - 13B69: 40% bigger rams
@@ -197,8 +198,8 @@ Subtotal: 105
 - 13C1F: wrong direction
 - 13C20: same
 - 13C28: white neck
-- 13C2B: white curvier neck
-- 13C51: egret has two feathers: ONE-EIGHTY
+- 13C2B: white curvier neck: ONE-EIGHTY
+- 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
@@ -245,7 +246,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 225
+Subtotal: 226
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -253,6 +254,7 @@ Subtotal: 225
 - 134FF: after FE + random jug W22?
 - 13559: 5A minus beard
 - 1356C: after 6B
+- 13582: franken near 81
 - 13595: made from man with straight sticks
 - 135B1: lots of captives here
 - 135B2: same
@@ -361,11 +363,11 @@ Subtotal: 225
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 112
+Subtotal: 113
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 443
+Total: 445
