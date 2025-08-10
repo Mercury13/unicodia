@@ -8563,6 +8563,10 @@
    <text id="ToJa">
     <orig>for translation to Japanese</orig>
    </text>
+   <text id="ToTr">
+    <orig>for translation to Turkish</orig>
+    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">

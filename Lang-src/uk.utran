@@ -12387,6 +12387,11 @@
     <orig>for translation to Japanese</orig>
     <transl>за переклад на японську</transl>
    </text>
+   <text id="ToTr">
+    <orig>for translation to Turkish</orig>
+    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
+    <transl>за переклад на турецьку</transl>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">
