@@ -15,6 +15,8 @@ BAD_JSESH_HIEROS = {
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13EB2: "M39B",   # big basket of fruit
+    0x13F29: "N31h",   # flowers in circular road
+    0x13F44: "N104",   # a well with a stroke
 }
 BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
 
@@ -257,7 +259,7 @@ GLYPH_SIZES = {
     0x13EBE: MEDIUM,
     0x13EE7: MEDWIDE, 0x13EE8: MEDWIDE,
     0x13EF5: TINY,
-    0x13F44: TINY, 0x13F46: SMALL, 0x13F47: MEDIUM,
+    0x13F44: TINY, 0x13F47: MEDIUM,
     0x13F4B: MEDIUM,
     0x13FD7: MEDWIDE,
     0x13FDB: MEDIUM,
