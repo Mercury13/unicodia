@@ -241,12 +241,14 @@ Subtotal: 105
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
 - 13FD7: self-intersections, no beard
+- 14048: greatly simplified, removed self-intersection on margin of error
+- 14049: greatly simplified, removed self-intersection on margin of error
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 226
+Subtotal: 228
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -349,6 +351,7 @@ Subtotal: 226
 - 13F41: after 42
 - 13FD2: misrender in NewG, after D1 and D5
 - 14002: after 03
+- 14020: inverted 1F
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140FE: after FC
@@ -363,11 +366,11 @@ Subtotal: 226
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 113
+Subtotal: 114
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 445
+Total: 448

@@ -321,7 +321,7 @@ def glyphSize(cp):
     if (cp >= 0x13DB0) and (cp <= 0x13E01):
         return WIDE     # snakes, fish, beetles
     if (cp >= 0x1401A) and (cp <= 0x1407A):
-        return WIDE     # boats
+        return MEDWIDE     # boats
     return CELLHEIGHT
 
 def fixBearings(glyph):
