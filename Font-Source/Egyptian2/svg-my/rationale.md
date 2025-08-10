@@ -231,12 +231,15 @@ Subtotal: 105
 - 13ED3: hang lower
 - 13ED5: mirror, rounder circles
 - 13EDA: mirror, rounder circles
+- 13EDF: per E0
+- 13EE0: deleted 2 triangles
+- 13EE1: no dot inside
 - 13FD7: self-intersections, no beard
 - 140FC: removed PLACEHOLDERS
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 216
+Subtotal: 219
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -353,4 +356,4 @@ Subtotal: 106
 
 Subtotal: 1
 
-Total: 428
+Total: 431
