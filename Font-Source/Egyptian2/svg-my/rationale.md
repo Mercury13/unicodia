@@ -282,6 +282,7 @@ Subtotal: 216
 - 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
+- 137E8: campaign for millions
 - 137F0: after EF, man with palm branches for million
 - 13817: after initial 16
 - 13819: after 17
@@ -345,11 +346,11 @@ Subtotal: 216
 - 142F0: after F1
 - 143D3: after D2
 
-Subtotal: 105
+Subtotal: 106
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 427
+Total: 428
