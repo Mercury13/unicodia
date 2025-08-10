@@ -263,6 +263,7 @@ Subtotal: 222
 - 135C7: same
 - 135C9: lots of captives here
 - 135CB: lots of captives here
+- 135CD: finalize captives
 - 135D4: lots of captives here
 - 135D8: lots of captives here
 - 135DD: lots of captives here
@@ -355,11 +356,11 @@ Subtotal: 222
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 109
+Subtotal: 110
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 437
+Total: 438
