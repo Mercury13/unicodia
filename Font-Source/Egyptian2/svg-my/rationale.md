@@ -243,12 +243,15 @@ Subtotal: 105
 - 13FD7: self-intersections, no beard
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
+- 1404A: greatly simplified, removed touching curves
+- 1405C: greatly simplified, removed touching curves
+- 1405D: most curves to lines, simplified Re, removed one rope
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 228
+Subtotal: 231
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -373,4 +376,4 @@ Subtotal: 114
 
 Subtotal: 1
 
-Total: 448
+Total: 451
