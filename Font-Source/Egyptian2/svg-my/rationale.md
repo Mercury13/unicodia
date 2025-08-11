@@ -41,6 +41,8 @@ Subtotal: 105
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0: TWENTY
 - 135C2: other legs, need C3
 - 135C8: see C0
+- 135DE: black arms, not really verticla forearms
+- 135DF: black arms, not really verticla forearms
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
 - 13625: removed PLACEHOLDERS
@@ -56,9 +58,9 @@ Subtotal: 105
 - 13606: shorter rope to make hiero narrower
 - 13667: beard none→god, wig short→long
 - 13671: beard ?→king
-- 13673: beard ?→king
+- 13673: beard ?→king: FORTY
 - 13675: beard ?→god
-- 13676: beard ?→king: FORTY
+- 13676: beard ?→king
 - 13678: beard ?→king
 - 13679: beard ?→god
 - 1367A: beard ?→god
@@ -76,9 +78,9 @@ Subtotal: 105
 - 1369B: beard man→king
 - 1369C: beard man→king
 - 1369D: beard man→god
-- 1369E: beard man→king
+- 1369E: beard man→king: SIXTY
 - 1369F: beard man→king
-- 136A1: beard poor god → king: SIXTY
+- 136A1: beard poor god → king
 - 136B0: beard ?→king
 - 136B1: beard ?→king
 - 136B2: beard ?→king
@@ -96,9 +98,9 @@ Subtotal: 105
 - 13737: pregnant
 - 13738: same
 - 13739: same
-- 13746: re-fixed self-intersection
+- 13746: re-fixed self-intersection: EIGHTY
 - 1374D: 4F minus holding
-- 1374F: short hair: EIGHTY
+- 1374F: short hair
 - 13750: short hair
 - 13751: short hair
 - 13755: short hair
@@ -116,9 +118,9 @@ Subtotal: 105
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
-- 137F7: man’s hair/beard/clothing
+- 137F7: man’s hair/beard/clothing: ONE HUNDRED
 - 137F8: same
-- 137F9: same: ONE HUNDRED
+- 137F9: same
 - 137FA: mismatch, removed beard
 - 137FB: mismatch, removed beard
 - 137FF: mismatch, removed beard
@@ -136,9 +138,9 @@ Subtotal: 105
 - 1384E: turn knife around
 - 1387A: strange image
 - 1387B: bigger tits
-- 1387B: same
+- 1387B: same: ONE-TWENTY
 - 13890: arm lower
-- 13891: arm lower, bottom forked, ankh bigger: ONE-TWENTY
+- 13891: arm lower, bottom forked, ankh bigger
 - 1389A: ankhs bigger
 - 138AA: removed feather in sun, simplified
 - 138A8: arm lower
@@ -156,9 +158,9 @@ Subtotal: 105
 - 138F8: arm lower
 - 138FF: tits, it’s a woman
 - 13901: same
-- 13902: arm lower
+- 13902: arm lower: ONE-FORTY
 - 13913: arm lower, simpler stalk
-- 1391C: ankh sloped forward: ONE-FORTY
+- 1391C: ankh sloped forward
 - 1391D: arm lower, greatly simplified
 - 1392A: fixed self-intersection
 - 1394B: cut forearm
@@ -176,9 +178,9 @@ Subtotal: 105
 - 13A85: greatly simplified
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
-- 13AAC: aligned that goat
+- 13AAC: aligned that goat: ONE-SIXTY
 - 13AB4: flip knife
-- 13AF0: holds staff: ONE-SIXTY
+- 13AF0: holds staff
 - 13AF1: same
 - 13B2D: greatly simplified
 - 13B42: simplified, more pronounced beard
@@ -196,9 +198,9 @@ Subtotal: 105
 - 13BE5: flip ←→
 - 13C17: just 10% bigger
 - 13C18: more detailed head, white neck
-- 13C19: white neck
+- 13C19: white neck: ONE-EIGHTY
 - 13C1C: white neck
-- 13C1F: wrong direction: ONE-EIGHTY
+- 13C1F: wrong direction
 - 13C20: same
 - 13C28: white neck
 - 13C2B: white curvier neck
@@ -255,7 +257,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 235
+Subtotal: 237
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -283,6 +285,7 @@ Subtotal: 235
 - 135D4: lots of captives here
 - 135D8: lots of captives here
 - 135DD: lots of captives here
+- 135E0: dancer after DF
 - 13607: campaign for horses
 - 1360A: campaign for horses, big franken
 - 13626: after 25
@@ -375,11 +378,11 @@ Subtotal: 235
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 116
+Subtotal: 117
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 457
+Total: 460
