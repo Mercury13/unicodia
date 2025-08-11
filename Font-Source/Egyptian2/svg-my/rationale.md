@@ -139,6 +139,7 @@ Subtotal: 105
 - 13890: arm lower
 - 13891: arm lower, bottom forked, ankh bigger
 - 1389A: ankhs bigger: ONE-TWENTY
+- 138AA: removed feather in sun, simplified
 - 138A8: arm lower
 - 138AC: arm lower
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
@@ -157,8 +158,8 @@ Subtotal: 105
 - 13902: arm lower
 - 13913: arm lower, simpler stalk
 - 1391C: ankh sloped forward
-- 1391D: arm lower, greatly simplified
-- 1392A: fixed self-intersection: ONE-FORTY
+- 1391D: arm lower, greatly simplified: ONE-FORTY
+- 1392A: fixed self-intersection
 - 1394B: cut forearm
 - 1396A: craggy, badly converted
 - 13981: wrong eye position
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13AAC: aligned that goat
 - 13AB4: flip knife
 - 13AF0: holds staff
-- 13AF1: same
-- 13B2D: greatly simplified: ONE-SIXTY
+- 13AF1: same: ONE-SIXTY
+- 13B2D: greatly simplified
 - 13B42: simplified, more pronounced beard
 - 13B64: other feathers
 - 13B66: greatly simplified
@@ -197,8 +198,8 @@ Subtotal: 105
 - 13C19: white neck
 - 13C1C: white neck
 - 13C1F: wrong direction
-- 13C20: same
-- 13C28: white neck: ONE-EIGHTY
+- 13C20: same: ONE-EIGHTY
+- 13C28: white neck
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -253,7 +254,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 233
+Subtotal: 234
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -379,4 +380,4 @@ Subtotal: 115
 
 Subtotal: 1
 
-Total: 454
+Total: 455
