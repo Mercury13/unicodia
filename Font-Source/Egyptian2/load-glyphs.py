@@ -148,6 +148,7 @@ MEDIUM = 800
 # Positive = limited by height; negative = limited by width
 SQUARE = -1000
 MEDWIDE = -1250
+MEDDONKEY = -1300  # donkey with folded/outstretched legs are somehow equal
 WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
 BOTTOMHANG = 125
@@ -211,6 +212,7 @@ GLYPH_SIZES = {
     0x13A17: MEDIUM, 0x13A18: MEDIUM,
     0x13A31: SMALL,
     0x13A34: SMALL,
+    0x13A39: MEDDONKEY,  # donkeys
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
