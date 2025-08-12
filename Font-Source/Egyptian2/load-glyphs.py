@@ -148,6 +148,7 @@ MEDIUM = 800
 # Positive = limited by height; negative = limited by width
 ARM = -1000
 SQUARE = -1000
+BUBALIS = -1150
 SMALLDONKEY = -1220
 MEDWIDE = -1250
 MEDDONKEY = -1300  # donkey with folded/outstretched legs are somehow equal
@@ -218,6 +219,7 @@ GLYPH_SIZES = {
     0x13A39: MEDDONKEY,  # donkeys
     0x13A42: SMALLDONKEY, 0x13A43: SMALLDONKEY,  # more donkeys
     0x13A53: CELLHEIGHT,
+    0x13A7B: BUBALIS, # newborn bubalis
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
