@@ -146,6 +146,7 @@ TINY = 500
 SMALL = 650
 MEDIUM = 800
 # Positive = limited by height; negative = limited by width
+ARM = -1000
 SQUARE = -1000
 SMALLDONKEY = -1220
 MEDWIDE = -1250
@@ -204,7 +205,8 @@ GLYPH_SIZES = {
     0x13981: MEDWIDE, 0x13982: MEDWIDE, 0x13983: MEDWIDE, 0x13984: MEDWIDE,
     0x1398F: MICROSCOPIC,
     0x1399F: SMALL,
-    0x139C2: WIDE,
+    0x139C2: WIDE, 0x139C3: ARM,  # arms
+    0x139C9: ARM, # arms
     0x139F6: EVERYBIT,
     0x139F8: WIDE,
     0x139FC: SMALL,

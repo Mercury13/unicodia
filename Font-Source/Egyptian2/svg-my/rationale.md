@@ -326,6 +326,8 @@ Subtotal: 237
 - 13926: same
 - 13933: after 32
 - 139AB: after AA
+- 139C3: after D35, too small in NewG
+- 139C9: after D35a, too small in NewG
 - 139E9: franken
 - 13A26: after 25
 - 13A59: after 58
@@ -378,11 +380,11 @@ Subtotal: 237
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 117
+Subtotal: 119
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 460
+Total: 462

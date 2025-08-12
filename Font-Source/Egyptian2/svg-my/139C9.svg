@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1800"
+   height="400"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="139C9.svg"
+   version="1.0"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:description>Small change made to SJP. Thomas D35 to build D35A. S. Rosmorduc
+</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.58388889"
+     inkscape:cx="411.89343"
+     inkscape:cy="-148.14462"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg2"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="623.68029,48.801389"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="path1958"
+     style="fill:#000000;stroke:none;stroke-width:0.999998"
+     d="M 989.34135,288.71676 C 983.72175,264.10012 955.67702,163.43807 946.72148,100.74947 937.7659,38.060939 893.64378,4.4777775 833.19433,1.0820307e-7 771.62509,4.4777775 736.36272,38.060939 727.40721,100.74947 c -7.13512,39.83255 -12.50155,118.88915 -50.09911,145.70708 -39.4639,-1.4992 -98.23433,0.74004 -174.35609,6.33695 -76.12176,5.5972 -151.12417,-0.55992 -225.00722,-18.47081 -81.71902,-25.74709 -154.4825,-23.5082 -218.290453,6.71668 -50.3747829,33.58325 -68.8455315,59.89006 -55.4122426,78.92042 8.9555036,17.91102 37.2213326,12.03398 84.7974866,-17.63111 47.576099,-29.66508 113.902769,-29.38524 198.980039,0.83989 -17.91089,35.82195 -46.45652,50.37466 -85.63691,43.65811 -48.13583,-5.5972 -77.80095,-4.75759 -88.99534,2.51873 -11.1944,7.27632 -18.190878,16.79159 -20.989451,28.54573 -2.798627,11.75401 10.354761,18.75049 39.460161,20.98944 29.10541,2.23886 64.92746,1.11939 107.46615,-3.35843 66.04679,-17.91094 113.62293,-43.65798 142.72847,-77.24111 113.06307,21.26932 214.31498,44.04514 296.23301,30.32842 70.60952,-11.82317 104.80968,-69.86125 108.16805,-139.26627 3.35824,-69.40527 19.59017,-104.1079 48.69576,-104.1079 27.98599,0 50.50835,33.84632 59.00474,104.1079 3.34081,27.62705 12.17731,82.67437 22.05103,105.77433 8.16324,19.0982 20.19999,36.08109 47.11388,36.08109 28.96177,0 32.55136,-33.88077 26.02218,-62.48185 z"
+     sodipodi:nodetypes="sscscsccssccsssccsssssss" />
+</svg>
