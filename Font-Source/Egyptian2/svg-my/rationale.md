@@ -243,6 +243,9 @@ Subtotal: 105
 - 13EE0: deleted 2 triangles
 - 13EE1: no dot inside
 - 13EEC: bigger snake
+- 13F4D: campaign for plans
+- 13F4E: campaign for plans
+- 13F4F: campaign for plans
 - 13F1E: greatly redrawn after 1D
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
@@ -258,7 +261,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 238
+Subtotal: 241
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -391,4 +394,4 @@ Subtotal: 122
 
 Subtotal: 1
 
-Total: 466
+Total: 469
