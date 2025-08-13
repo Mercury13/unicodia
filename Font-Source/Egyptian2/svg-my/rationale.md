@@ -248,6 +248,8 @@ Subtotal: 105
 - 13F4F: campaign for plans
 - 13F51: campaign for plans
 - 13F52: campaign for plans
+- 13F53: campaign for plans
+- 13F54: campaign for plans
 - 13F1E: greatly redrawn after 1D
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
@@ -263,7 +265,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 243
+Subtotal: 245
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -397,4 +399,4 @@ Subtotal: 123
 
 Subtotal: 1
 
-Total: 472
+Total: 474
