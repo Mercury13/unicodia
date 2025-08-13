@@ -366,6 +366,7 @@ Subtotal: 238
 - 13E99: after 98
 - 13F41: after 42
 - 13FD2: misrender in NewG, after D1 and D5
+- 14000: after 13FFF
 - 14002: after 03
 - 14020: inverted 1F
 - 14076: after 78
@@ -383,11 +384,11 @@ Subtotal: 238
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 121
+Subtotal: 122
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 465
+Total: 466
