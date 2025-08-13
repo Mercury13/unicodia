@@ -170,6 +170,7 @@ Subtotal: 105
 - 13984: consistency w/81
 - 1398A: triangles, not corners
 - 139AA: other “torso”, for AB
+- 139B9: bigger shield
 - 139D3: grafted knife from EB, simplified
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13A85: greatly simplified
 - 13AA3: rotate 90°
-- 13AAB: took other goat, drew seal
-- 13AAC: aligned that goat: ONE-SIXTY
+- 13AAB: took other goat, drew seal: ONE-SIXTY
+- 13AAC: aligned that goat
 - 13AB4: flip knife
 - 13AF0: holds staff
 - 13AF1: same
@@ -197,8 +198,8 @@ Subtotal: 105
 - 13BDE: a bit out of canvas
 - 13BE5: flip ←→
 - 13C17: just 10% bigger
-- 13C18: more detailed head, white neck
-- 13C19: white neck: ONE-EIGHTY
+- 13C18: more detailed head, white neck: ONE-EIGHTY
+- 13C19: white neck
 - 13C1C: white neck
 - 13C1F: wrong direction
 - 13C20: same
@@ -217,7 +218,7 @@ Subtotal: 105
 - 13C98: feather → loop
 - 13C99: loop on perch
 - 13C9A: bull’s head
-- 13C9C: same as 9A
+- 13C9C: same as 9A: TWO HUNDRED
 - 13CA0: remove inner wall
 - 13CB4: added uraeus
 - 13CB5: uraeus after CB4
@@ -257,7 +258,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 237
+Subtotal: 238
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -326,6 +327,8 @@ Subtotal: 237
 - 13926: same
 - 13933: after 32
 - 139AB: after AA
+- 139B7: after B8
+- 139B9: after B8
 - 139C3: after D35, too small in NewG
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
@@ -380,11 +383,11 @@ Subtotal: 237
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 119
+Subtotal: 121
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 462
+Total: 465
