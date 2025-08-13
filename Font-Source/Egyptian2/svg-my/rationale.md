@@ -246,6 +246,8 @@ Subtotal: 105
 - 13F4D: campaign for plans
 - 13F4E: campaign for plans
 - 13F4F: campaign for plans
+- 13F51: campaign for plans
+- 13F52: campaign for plans
 - 13F1E: greatly redrawn after 1D
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
@@ -261,7 +263,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 241
+Subtotal: 243
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -368,6 +370,7 @@ Subtotal: 241
 - 13EFC: same
 - 13E99: after 98
 - 13F41: after 42
+- 13F50: campaign for plans
 - 13FD2: misrender in NewG, after D1 and D5
 - 14000: after 13FFF
 - 14002: after 03
@@ -387,11 +390,11 @@ Subtotal: 241
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 122
+Subtotal: 123
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 469
+Total: 472
