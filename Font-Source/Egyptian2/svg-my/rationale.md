@@ -266,6 +266,8 @@ Subtotal: 105
 - 13F72: campaign for walls
 - 13F73: campaign for walls
 - 13F74: campaign for walls
+- 13FB3: simplified, thinned two slabs
+- 13FB4: simplified, thinned two slabs
 - 13FD7: self-intersections, no beard
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
@@ -278,7 +280,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 258
+Subtotal: 260
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -412,4 +414,4 @@ Subtotal: 123
 
 Subtotal: 1
 
-Total: 487
+Total: 489
