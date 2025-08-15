@@ -388,6 +388,7 @@ Subtotal: 260
 - 13E99: after 98
 - 13F41: after 42
 - 13F50: campaign for plans
+- 13F81: drawn after 80
 - 13FD2: misrender in NewG, after D1 and D5
 - 14000: after 13FFF
 - 14002: after 03
@@ -407,11 +408,11 @@ Subtotal: 260
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 123
+Subtotal: 124
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 489
+Total: 490
