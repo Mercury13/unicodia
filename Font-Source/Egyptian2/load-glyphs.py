@@ -271,6 +271,7 @@ GLYPH_SIZES = {
     0x13F44: TINY, 0x13F47: MEDIUM,
     0x13F4B: MEDIUM,
     0x13F50: MEDWIDE, 0x13F51: MEDWIDE, 0x13F52: MEDWIDE, # building plans
+    0x13F74: WIDE, # overthrow wall, not really enough width
     0x13FD7: MEDWIDE,
     0x13FDB: MEDIUM,
     0x13FEF: EVERYBIT,  # gate of lions

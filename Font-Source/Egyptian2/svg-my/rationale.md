@@ -244,6 +244,9 @@ Subtotal: 105
 - 13EE0: deleted 2 triangles
 - 13EE1: no dot inside
 - 13EEC: bigger snake
+- 13F1E: greatly redrawn after 1D
+- 13F22: just one N27 rather than two
+- 13F46: too thick; decided to take the inner path and turn to outline
 - 13F4D: campaign for plans
 - 13F4E: campaign for plans
 - 13F4F: campaign for plans
@@ -259,9 +262,10 @@ Subtotal: 105
 - 13F5B: campaign for plans, consistent
 - 13F5C: campaign for plans, consistent
 - 13F5D: campaign for plans, thinner basket
-- 13F1E: greatly redrawn after 1D
-- 13F22: just one N27 rather than two
-- 13F46: too thick; decided to take the inner path and turn to outline
+- 13F60: campaign for plans
+- 13F72: campaign for walls
+- 13F73: campaign for walls
+- 13F74: campaign for walls
 - 13FD7: self-intersections, no beard
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
@@ -274,7 +278,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 254
+Subtotal: 258
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -408,4 +412,4 @@ Subtotal: 123
 
 Subtotal: 1
 
-Total: 483
+Total: 487
