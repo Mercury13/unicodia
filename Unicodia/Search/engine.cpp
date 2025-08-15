@@ -58,7 +58,7 @@ namespace {
         { u8"IN", srh::HaystackClass::EXCEPT_COOL_1 },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::HaystackClass::EVERYWHERE },
-        { u8"MAN", srh::HaystackClass::EMOJI },
+        { u8"MAN", srh::HaystackClass::EMOJI | srh::HaystackClass::EGYPTIAN },
         { u8"OF", srh::HaystackClass::EVERYWHERE },  // No letter Of at all
         { u8"ON", srh::HaystackClass::EXCEPT_COOL_2 },
         { u8"OPPOSING", srh::HaystackClass::IDEOGRAPH },
@@ -75,7 +75,7 @@ namespace {
         { u8"TIMES", srh::HaystackClass::IDEOGRAPH },
         { u8"TO", srh::HaystackClass::EXCEPT_COOL_1 },
         { u8"WITH", srh::HaystackClass::EVERYWHERE }, // Let it be this way
-        { u8"WOMAN", srh::HaystackClass::EMOJI },
+        { u8"WOMAN", srh::HaystackClass::EMOJI | srh::HaystackClass::EGYPTIAN },
     };
 
     constexpr auto ALL_SEPARATORS = u8" ,():";

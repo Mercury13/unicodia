@@ -13,13 +13,14 @@ namespace srh {
     Class classify(char8_t x);
 
     enum class HaystackClass : unsigned char {
-        NOWHERE = 0,        ///< Technical value
-        SCRIPT = 1,         ///< Codepoint in script
-        NONSCRIPT = 2,      ///< Codepoint outside script
-        EMOJI = 4,          ///< Emoji
-        IDEOGRAPH = 8,      ///< Ideographic: pink (CJK) or other ideographic script
-        EXCEPT_COOL_1 = 16, ///< COOL_WORDS_1 is where some words have major meaning
-        EXCEPT_COOL_2 = 32, ///< COOL_WORDS_2 is where some words have major meaning
+        NOWHERE       = 0,    ///< Technical value
+        SCRIPT        = 1<<0, ///< Codepoint in script
+        NONSCRIPT     = 1<<1, ///< Codepoint outside script
+        EMOJI         = 1<<2, ///< Emoji
+        IDEOGRAPH     = 1<<3, ///< Ideographic: pink (CJK) or other ideographic script
+        EGYPTIAN      = 1<<4, ///< In Egyptian hieros
+        EXCEPT_COOL_1 = 1<<5, ///< COOL_WORDS_1 is where some words have major meaning
+        EXCEPT_COOL_2 = 1<<6, ///< COOL_WORDS_2 is where some words have major meaning
         // Technical
         DUMMY1,
         LAST = DUMMY1 - 1,

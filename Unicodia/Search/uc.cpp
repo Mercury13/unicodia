@@ -749,6 +749,7 @@ uc::MultiResult uc::doSearch(QString what)
                     if (!(block.flags.have(Bfg::COOL_WORDS_2) || cp.flags.have(Cfg::S_COOL_2)))
                         hclasses |= srh::HaystackClass::EXCEPT_COOL_2;
                     for (auto& nm : names) {
+                        auto hclasses1 = hclasses;
                         switch (nm.role) {
                         case uc::TextRole::HTML:
                             if (nm.value.size() == sv.size() + 2) {
@@ -764,9 +765,13 @@ uc::MultiResult uc::doSearch(QString what)
                                 }
                             }
                             break;
+                        case uc::TextRole::EGYP_EWP:
+                        case uc::TextRole::EGYP_UC:
+                            hclasses1 |= srh::HaystackClass::EGYPTIAN;
+                            [[fallthrough]];
                         default:
                             if (auto pr = srh::findNeedle(
-                                        nm.value, needle, hclasses,
+                                        nm.value, needle, hclasses1,
                                         roleType(nm.role), cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
