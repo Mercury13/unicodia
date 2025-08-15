@@ -74,13 +74,13 @@
        y="30.000048" />
     <path
        style="fill:none;stroke:#613583;stroke-width:60.0001;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 813.33332,30.000048 V 415.71419 H 970"
+       d="M 202.2454,30.000048 V 415.71419 H 30.000002"
        id="path2"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#613583;stroke-width:60.0001;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 186.66668,30.000048 V 415.71421 H 30.000002"
-       id="path3"
+       d="M 797.7546,30.000048 V 415.71419 H 970"
+       id="path1"
        sodipodi:nodetypes="ccc" />
   </g>
 </svg>

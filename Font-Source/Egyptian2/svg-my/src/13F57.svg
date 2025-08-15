@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1000"
+   width="1100"
    height="1000"
-   viewBox="0 0 1000 1000"
+   viewBox="0 0 1100 1000"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.336297"
-     inkscape:cx="66.905147"
-     inkscape:cy="664.59112"
+     inkscape:zoom="0.755"
+     inkscape:cx="550.33113"
+     inkscape:cy="500"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -64,13 +64,13 @@
     <rect
        style="fill:none;fill-rule:evenodd;stroke:#613583;stroke-width:60;stroke-linecap:round;stroke-dasharray:none"
        id="rect2"
-       width="313.33331"
+       width="346.66666"
        height="939.99988"
        x="30"
        y="30.000048" />
     <path
        style="fill:none;stroke:#613583;stroke-width:60.0001;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 186.66666,967.48015 V 581.76601 H 342.35"
+       d="M 203.33333,967.48015 V 581.76601 h 172.2454"
        id="path2"
        sodipodi:nodetypes="ccc" />
     <use
@@ -78,28 +78,28 @@
        y="0"
        xlink:href="#rect2"
        id="use5"
-       transform="translate(313.33334)"
-       style="stroke-width:1.0081" />
+       transform="translate(346.66668)"
+       style="stroke-width:0.958409" />
     <use
        x="0"
        y="0"
        xlink:href="#path2"
        id="use6"
-       transform="translate(313.33334)"
-       style="stroke-width:1.0081" />
+       transform="translate(346.66668)"
+       style="stroke-width:0.958409" />
     <use
        x="0"
        y="0"
        xlink:href="#use5"
        id="use7"
-       transform="translate(313.33334)"
-       style="stroke-width:1.0081" />
+       transform="translate(346.66668)"
+       style="stroke-width:0.958409" />
     <use
        x="0"
        y="0"
        xlink:href="#use6"
        id="use8"
-       transform="translate(313.33334)"
-       style="stroke-width:1.0081" />
+       transform="translate(346.66668)"
+       style="stroke-width:0.958409" />
   </g>
 </svg>

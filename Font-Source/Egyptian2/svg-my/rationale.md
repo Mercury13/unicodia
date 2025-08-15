@@ -31,14 +31,15 @@ Subtotal: 105
 - 13549: better sits on heel
 - 13552: short beard
 - 13555: long wig
+- 13566: bundle closer to body
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
 - 13581: improved legibility
 - 13584: bent, bigger vessel
 - 135A2: shield from inside, spear→Bronze Age sword
 - 135A5: sit on heel
-- 135B6: more detailed foreigner captive
-- 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0: TWENTY
+- 135B6: more detailed foreigner captive: TWENTY
+- 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
 - 135C8: see C0
 - 135DE: black arms, not really verticla forearms
@@ -57,8 +58,8 @@ Subtotal: 105
 - 1365F: beard king → god
 - 13606: shorter rope to make hiero narrower
 - 13667: beard none→god, wig short→long
-- 13671: beard ?→king
-- 13673: beard ?→king: FORTY
+- 13671: beard ?→king: FORTY
+- 13673: beard ?→king
 - 13675: beard ?→god
 - 13676: beard ?→king
 - 13678: beard ?→king
@@ -77,8 +78,8 @@ Subtotal: 105
 - 1369A: beard man→king
 - 1369B: beard man→king
 - 1369C: beard man→king
-- 1369D: beard man→god
-- 1369E: beard man→king: SIXTY
+- 1369D: beard man→god: SIXTY
+- 1369E: beard man→king
 - 1369F: beard man→king
 - 136A1: beard poor god → king
 - 136B0: beard ?→king
@@ -97,8 +98,8 @@ Subtotal: 105
 - 136F4: more traditional woman
 - 13737: pregnant
 - 13738: same
-- 13739: same
-- 13746: re-fixed self-intersection: EIGHTY
+- 13739: same: EIGHTY
+- 13746: re-fixed self-intersection
 - 1374D: 4F minus holding
 - 1374F: short hair
 - 13750: short hair
@@ -117,8 +118,8 @@ Subtotal: 105
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
-- 137F5: man’s hair/beard/clothing
-- 137F7: man’s hair/beard/clothing: ONE HUNDRED
+- 137F5: man’s hair/beard/clothing: ONE HUNDRED
+- 137F7: man’s hair/beard/clothing
 - 137F8: same
 - 137F9: same
 - 137FA: mismatch, removed beard
@@ -137,8 +138,8 @@ Subtotal: 105
 - 13840: same + bigger djed-ankh
 - 1384E: turn knife around
 - 1387A: strange image
-- 1387B: bigger tits
-- 1387B: same: ONE-TWENTY
+- 1387B: bigger tits: ONE-TWENTY
+- 1387B: same
 - 13890: arm lower
 - 13891: arm lower, bottom forked, ankh bigger
 - 1389A: ankhs bigger
@@ -157,8 +158,8 @@ Subtotal: 105
 - 138ED: arm lower
 - 138F8: arm lower
 - 138FF: tits, it’s a woman
-- 13901: same
-- 13902: arm lower: ONE-FORTY
+- 13901: same: ONE-FORTY
+- 13902: arm lower
 - 13913: arm lower, simpler stalk
 - 1391C: ankh sloped forward
 - 1391D: arm lower, greatly simplified
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13A85: greatly simplified
-- 13AA3: rotate 90°
-- 13AAB: took other goat, drew seal: ONE-SIXTY
+- 13AA3: rotate 90°: ONE-SIXTY
+- 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 - 13AB4: flip knife
 - 13AF0: holds staff
@@ -197,8 +198,8 @@ Subtotal: 105
 - 13BAB: same, plus redrew semicircle
 - 13BDE: a bit out of canvas
 - 13BE5: flip ←→
-- 13C17: just 10% bigger
-- 13C18: more detailed head, white neck: ONE-EIGHTY
+- 13C17: just 10% bigger: ONE-EIGHTY
+- 13C18: more detailed head, white neck
 - 13C19: white neck
 - 13C1C: white neck
 - 13C1F: wrong direction
@@ -217,8 +218,8 @@ Subtotal: 105
 - 13C96: no base
 - 13C98: feather → loop
 - 13C99: loop on perch
-- 13C9A: bull’s head
-- 13C9C: same as 9A: TWO HUNDRED
+- 13C9A: bull’s head: TWO HUNDRED
+- 13C9C: same as 9A
 - 13CA0: remove inner wall
 - 13CB4: added uraeus
 - 13CB5: uraeus after CB4
@@ -255,6 +256,9 @@ Subtotal: 105
 - 13F57: campaign for plans
 - 13F58: campaign for plans
 - 13F59: campaign for plans
+- 13F5B: campaign for plans, consistent
+- 13F5C: campaign for plans, consistent
+- 13F5D: campaign for plans, thinner basket
 - 13F1E: greatly redrawn after 1D
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
@@ -270,7 +274,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 250
+Subtotal: 254
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -404,4 +408,4 @@ Subtotal: 123
 
 Subtotal: 1
 
-Total: 479
+Total: 483
