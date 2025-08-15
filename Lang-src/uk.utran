@@ -2122,7 +2122,7 @@
     </text>
     <text id="Text">
      <orig>Almost all of these characters work properly if the font has a [[pt:ligature|ligature]]{{-}}for example, {{sm| 1⃣}}. Author of ''Unicodia'' had to assemble all samples except three in font editor.</orig>
-     <transl>Практично всі з цих символів нормально пріцюють, якщо в шрифті є відповідна [[pt:ligature|лігатура]]{{-}}наприклад, {{sm| 1⃣}}. Зразки усіх символів, окрім трьох, довелося збирати у редакторі шрифтів.</transl>
+     <transl>Практично всі з цих символів нормально працюють, якщо в шрифті є відповідна [[pt:ligature|лігатура]]{{-}}наприклад, {{sm| 1⃣}}. Зразки усіх символів, окрім трьох, довелося збирати у редакторі шрифтів.</transl>
     </text>
    </group>
    <group id="2100">
