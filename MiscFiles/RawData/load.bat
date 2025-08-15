@@ -4,6 +4,7 @@ curl %UCD%/DerivedAge.txt -L --output DerivedAge.txt
 curl %UCD%/NameAliases.txt -L --output NameAliases.txt
 curl %UCD%/NamesList.txt -L --output NamesList.txt
 curl %UCD%/Scripts.txt -L --output Scripts.txt
+curl %UCD%/LineBreak.txt -L --output LineBreak.txt
 curl %UCD%/PropertyValueAliases.txt -L --output PropertyValueAliases.txt
 curl %UCD%/DerivedCoreProperties.txt -L --output DerivedCoreProperties.txt
 curl %UCD%/PropList.txt -L --output PropList.txt
