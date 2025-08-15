@@ -1,7 +1,5 @@
 #pragma once
 
-#include <unordered_map>
-
 namespace sw {
 
     struct Result {

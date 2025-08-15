@@ -134,7 +134,7 @@ namespace {
 
 
     // Step flags
-    enum class Stfg {
+    enum class Stfg : unsigned char {
         FINAL = 1,
     };
 
@@ -154,6 +154,7 @@ namespace {
         { RAWDATA UCD_PROP },
         { RAWDATA UCD_BLOCKS },
         { RAWDATA UCD_MAIN },
+        { RAWDATA UCD_LINEBREAK },
         { RAWDATA UCD_UNIKEMET },
         { RAWDATA DER_AGE },
         { RAWDATA DER_CORE },

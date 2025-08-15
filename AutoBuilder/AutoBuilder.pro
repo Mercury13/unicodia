@@ -22,6 +22,7 @@ SOURCES += \
         forget.cpp \
         legacy.cpp \
         library.cpp \
+        linebreak.cpp \
         loader.cpp \
         main.cpp \
         stringlib.cpp \
@@ -46,6 +47,7 @@ HEADERS += \
     forget.h \
     legacy.h \
     library.h \
+    linebreak.h \
     loader.h \
     stringlib.h \
     sutton.h \

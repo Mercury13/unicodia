@@ -26,6 +26,7 @@
 #include "textbase.h"
 #include "unibase.h"
 #include "stringlib.h"
+#include "linebreak.h"
 
 using namespace std::string_view_literals;
 
@@ -283,6 +284,12 @@ int main()
     std::cout << "Loading Unicode ages..." << std::flush;
     const tx::Ages ages = tx::loadAges();
     std::cout << "OK, " << ages.size() << " lines." << '\n';
+
+    ///// LineBreaks ///////////////////////////////////////////////////////////
+
+    std::cout << "Loading line breaks..." << std::flush;
+    const lb::Base lineBreaks = lb::load();
+    std::cout << "OK, " << lineBreaks.size() << " lines." << '\n';
 
     ///// Derived props ////////////////////////////////////////////////////////
 

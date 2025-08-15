@@ -342,6 +342,64 @@ namespace uc {
         EXTENDED        ///< What we draw with other font-related methods
     };
 
+    enum class BreakClass : unsigned char {
+        // Hard
+        BK,     // Mandatory break, CR, LF
+        CM,     // Control and marks
+        WJ,     // Word joiner
+        ZW,     // Zero width space
+        GL,     // Glue
+        SP,     // Space
+        ZWJ,    // Zero width joiner
+        // Break opportunities
+        B2,     // Break before and after
+        BA,     // Break after
+        BB,     // Break before
+        HY,     // Can break except before/after numbers
+        CB,     // Depends on object
+        // Prohibiting
+        CL,     // Closing punctuation
+        CP,     // Closing parenthesis
+        EX,     // Exclamation/interrogation
+        IN,     // Inseparable
+        NS,     // Non-starter
+        OP,     // Open punctuation
+        QU,     // Quotation
+        // Numeric
+        IS,     // Infix separator
+        NU,     // Numeric
+        PO,     // Postfix numeric
+        PR,     // Prefix numeric
+        SY,     // Allow break after
+        // Brahmic
+        AK,     // Aksara (consonant)
+        AP,     // Aksara pre-base
+        AS,     // Aksara start
+        SA,     // Context dependent
+        VF,     // Virama final
+        VI,     // Virama
+        // CJK
+        AI,     // Ambiguous (Alphabetic or ideographic)
+        CJ,     // Conditional Japanese starter
+        ID,     // Ideographic
+        // Hangul
+        H2,     // Hangul initial + medial
+        H3,     // Hangul complete syllable
+        JL,     // Hangul initial
+        JV,     // Hangul medial
+        JT,     // Hangul final
+        // Emoji
+        EB,     // Emoji base
+        EM,     // Emoji modifier
+        RI,     // Regional indicator
+        // Alphabet
+        AL,     // Alphabetic
+        HL,     // Hebrew letter
+        // Stuck
+        NN,
+        CR = BK, LF = BK, NL = BK,
+    };
+
     enum class AutoName : unsigned char { NO, YES };
 
     struct Cp   // code point
