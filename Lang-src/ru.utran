@@ -15127,14 +15127,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break before slash.</p>
+      <p>Do not break before U+002F Slash.</p>
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
       <p>You can break after slash in other places.</p>
      </orig>
      <transl>
-      <p>Не разрывать перед косой чертой.</p>
+      <p>Не разрывать перед косой чертой U+002F.</p>
       <p />
       <p>Не разрывать после косой черты в числах, в иврите.</p>
       <p />

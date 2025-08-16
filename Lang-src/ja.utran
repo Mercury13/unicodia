@@ -14919,7 +14919,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break after U+200D Zero-width joiner.</p>
+      <p>Do not break after U+200D [[pt:zwj|Zero-width joiner]].</p>
       <p />
       <p>You can only break between U+0020 space and ZWJ.</p>
      </orig>
@@ -14959,7 +14959,7 @@
      <orig>Break/hyphen-minus</orig>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HY|hyphen’s]] rules.</orig>
+     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
     </text>
    </group>
    <group id="HH">
@@ -15092,7 +15092,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break before slash.</p>
+      <p>Do not break before U+002F Slash.</p>
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
@@ -15183,7 +15183,7 @@
      <orig>Hangul/initial+medial</orig>
     </text>
     <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
+     <orig>Do not break a [[ps:Hang|Korean]] syllable.</orig>
     </text>
    </group>
    <group id="H3">
@@ -15217,9 +15217,6 @@
    <group id="EM">
     <text id="Name">
      <orig>Emoji/modifier</orig>
-    </text>
-    <text id="Text">
-     <orig>Do not break emoji from modifiers.</orig>
     </text>
    </group>
    <group id="RI">
@@ -15263,7 +15260,10 @@
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (Web links etc), or program’s audience.</orig>
    </text>
    <text id="Brah">
-    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+   </text>
+   <text id="See">
+    <orig>See [[pt:linebreak|Line breaking]].</orig>
    </text>
   </group>
  </file>

@@ -10637,7 +10637,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break before slash.</p>
+      <p>Do not break before U+002F Slash.</p>
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
