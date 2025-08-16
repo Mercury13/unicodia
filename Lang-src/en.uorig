@@ -10616,7 +10616,7 @@
      <orig>Numeric/prefix</orig>
     </text>
     <text id="Text">
-     <orig>Do not break between numbers and these characters.</orig>
+     <orig>Do not break between these characters and numbers.</orig>
     </text>
    </group>
    <group id="SY">
