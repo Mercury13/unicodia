@@ -10464,7 +10464,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break after U+200D Zero-width joiner.</p>
+      <p>Do not break after U+200D [[pt:zwj|Zero-width joiner]].</p>
       <p />
       <p>You can only break between U+0020 space and ZWJ.</p>
      </orig>

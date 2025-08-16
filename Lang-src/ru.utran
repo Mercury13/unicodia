@@ -14890,13 +14890,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break after U+200D Zero-width joiner.</p>
+      <p>Do not break after U+200D [[pt:zwj|Zero-width joiner]].</p>
       <p />
       <p>You can only break between U+0020 space and ZWJ.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
      <transl>
-      <p>Не разрывать после нулевого соединителя U+200D.</p>
+      <p>Не разрывать после [[pt:zwj|нулевого соединителя]] U+200D.</p>
       <p />
       <p>Можно разрывать только между пробелом U+0020 и ZWJ.</p>
      </transl>
