@@ -15071,7 +15071,7 @@
    <group id="IS">
     <text id="Name">
      <orig>Numeric/infix</orig>
-     <transl>Цифровий/внутрішній</transl>
+     <transl>Числовий/внутрішній</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15089,7 +15089,7 @@
    <group id="NU">
     <text id="Name">
      <orig>Numeric/digit</orig>
-     <transl>Цифровий/цифра</transl>
+     <transl>Числовий/цифра</transl>
     </text>
     <text id="Text">
      <orig>Do not break numbers. Do not break letters from numbers.</orig>
@@ -15109,7 +15109,7 @@
    <group id="PR">
     <text id="Name">
      <orig>Numeric/prefix</orig>
-     <transl>Цифровий/початковий</transl>
+     <transl>Числовий/початковий</transl>
     </text>
     <text id="Text">
      <orig>Do not break between these characters and numbers.</orig>
@@ -15119,7 +15119,7 @@
    <group id="SY">
     <text id="Name">
      <orig>Numeric/slash</orig>
-     <transl>Цифровий/слеш</transl>
+     <transl>Числовий/слеш</transl>
     </text>
     <text id="Text">
      <orig>
