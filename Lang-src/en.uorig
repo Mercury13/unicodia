@@ -10600,7 +10600,7 @@
      <orig>Numeric/digit</orig>
     </text>
     <text id="Text">
-     <orig>Do not break numbers.</orig>
+     <orig>Do not break numbers. Do not break letters from numbers.</orig>
     </text>
    </group>
    <group id="PO">
@@ -10791,7 +10791,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break words.</p>
+      <p>Do not break words. Do not break letters from numbers.</p>
       <p />
       <p>Brahmic scripts that started to use spaces also have this class.</p>
      </orig>
@@ -10803,7 +10803,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break words.</p>
+      <p>Do not break words. Do not break letters from numbers.</p>
       <p />
       <p>Do not break Hebrew+hyphen+non-Hebrew.</p>
       <p />

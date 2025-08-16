@@ -15078,8 +15078,8 @@
      <transl>Цифровой/цифра</transl>
     </text>
     <text id="Text">
-     <orig>Do not break numbers.</orig>
-     <transl>Не разрывать числа.</transl>
+     <orig>Do not break numbers. Do not break letters from numbers.</orig>
+     <transl>Не разрывать числа. Не отрывать буквы от чисел.</transl>
     </text>
    </group>
    <group id="PO">
@@ -15333,12 +15333,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break words.</p>
+      <p>Do not break words. Do not break letters from numbers.</p>
       <p />
       <p>Brahmic scripts that started to use spaces also have this class.</p>
      </orig>
      <transl>
-      <p>Не разрывать слова.</p>
+      <p>Не разрывать слова. Не отрывать буквы от чисел.</p>
       <p />
       <p>Брахмийские письменности, которые начали пользоваться пробелами, тоже попадают в этот класс.</p>
      </transl>
@@ -15351,14 +15351,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break words.</p>
+      <p>Do not break words. Do not break letters from numbers.</p>
       <p />
       <p>Do not break Hebrew+hyphen+non-Hebrew.</p>
       <p />
       <p>So not break slash+Hebrew.</p>
      </orig>
      <transl>
-      <p>Не разрывать слова.</p>
+      <p>Не разрывать слова. Не отрывать буквы от чисел.</p>
       <p />
       <p>Не разрывать иврит+дефис+не-иврит.</p>
       <p />
