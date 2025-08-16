@@ -14840,7 +14840,7 @@
     </text>
     <text id="Text">
      <orig>Do not break a line before and after U+2060 Word joiner.</orig>
-     <transl>Не розривати рядок перед та після з’єднувача слва U+2060.</transl>
+     <transl>Не розривати рядок перед та після з’єднувача слів U+2060.</transl>
     </text>
    </group>
    <group id="ZW">
