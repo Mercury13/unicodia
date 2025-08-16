@@ -14971,7 +14971,7 @@
    <group id="CL">
     <text id="Name">
      <orig>Prohibit/closing punctuation</orig>
-     <transl>Запрет/закрывающийся знак препинания</transl>
+     <transl>Запрет/закрывающий знак препинания</transl>
     </text>
     <text id="Text">
      <orig>Do not break before these characters, even after spaces.</orig>
@@ -14981,7 +14981,7 @@
    <group id="CP">
     <text id="Name">
      <orig>Prohibit/closing parenthesis</orig>
-     <transl>Запрет/закрывающаяся скобка</transl>
+     <transl>Запрет/закрывающая скобка</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15029,7 +15029,7 @@
    <group id="OP">
     <text id="Name">
      <orig>Prohibit/opening punctuation</orig>
-     <transl>Запрет/открывающийся знак препинания</transl>
+     <transl>Запрет/открывающий знак препинания</transl>
     </text>
     <text id="Text">
      <orig>
