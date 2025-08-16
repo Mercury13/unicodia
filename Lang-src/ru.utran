@@ -14918,8 +14918,8 @@
      <transl>Разрыв/перед</transl>
     </text>
     <text id="Text">
-     <orig>You can break before these characters.</orig>
-     <transl>Можно разрывать перед этими символами.</transl>
+     <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
+     <transl>Можно разрывать перед этими символами. Все пять европейских символов{{-}}из словарей.</transl>
     </text>
    </group>
    <group id="HY">
