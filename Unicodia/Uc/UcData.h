@@ -1234,6 +1234,17 @@ namespace uc {
 
     extern PlaneInfo planeInfo[N_PLANES];
 
+    enum class BreakStrength : unsigned char { HARD, AMBI, SOFT };
+
+    struct BreakInfo {
+        std::string_view id;
+        BreakStrength strength;
+        mutable unsigned nChars = 0;
+    };
+
+    extern const ec::Array<BreakInfo, BreakClass> breakInfo;
+    const BreakInfo* findBreakInfo(std::string_view id);
+
 }   // namespace uc
 
 namespace sw {
@@ -1413,6 +1424,7 @@ inline const uc::Version& uc::Cp::version() const { return versionInfo[static_ca
 inline const uc::Category& uc::Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
 inline const uc::BidiClass& uc::Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
 inline const uc::Script& uc::Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
+inline const uc::BreakInfo& uc::Cp::breakInfo() const { return ::uc::breakInfo[breakClass]; }
 inline const uc::Script& uc::Cp::scriptEx() const
     { return scriptInfo[static_cast<int>(ecScriptEx())]; }
 inline bool uc::Cp::isTrueSpace() const

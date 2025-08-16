@@ -289,6 +289,8 @@ int main()
 
     std::cout << "Loading line breaks..." << std::flush;
     const lb::Base lineBreaks = lb::load();
+    if (lineBreaks.empty())
+        throw std::logic_error("No line breaks");
     std::cout << "OK, " << lineBreaks.size() << " lines." << '\n';
 
     ///// Derived props ////////////////////////////////////////////////////////
@@ -350,6 +352,8 @@ int main()
 
     os << '\n';
     os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
+
+    auto itLineBreaks = lineBreaks.begin();
 
     auto proc = ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
         auto cp = cpInfo.cp;
@@ -573,6 +577,18 @@ int main()
         // nv = Nan / whole number / vulgar fraction
         auto& numPlace = nums.parse(cpInfo.numeric.type->id, cpInfo.numeric.value);
         os << numPlace.index << ", ";
+
+        // Line breaks
+        while (cp > itLineBreaks->second.rangeEnd) {
+            ++itLineBreaks;
+            if (itLineBreaks == lineBreaks.end()) {
+                throw std::logic_error("Line breaks reached end");
+            }
+            if (itLineBreaks->first > cp) {
+                throw std::logic_error("Hole in line breaks");
+            }
+        }
+        os << "BreakClass::" << itLineBreaks->second.value << ", ";
 
         if (flags) {
             os << "Cfgs{" << flags.numeric() << "}";

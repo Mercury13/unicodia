@@ -35,6 +35,7 @@ namespace uc {
     struct Term;
     struct LibNode;
     struct GlyphStyleChannel;
+    struct BreakInfo;
     class Request;
     enum class EcVersion : unsigned char;
     struct Lang;
@@ -179,6 +180,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseLink(std::string_view scheme, std::string_view target);
     std::unique_ptr<Link> parsePopBidiLink(std::string_view target);
     std::unique_ptr<Link> parsePopCatLink(std::string_view target);
+    std::unique_ptr<Link> parsePopBreakLink(std::string_view target);
     std::unique_ptr<Link> parsePopFontsLink(std::string_view target);
     std::unique_ptr<Link> parsePopScriptLink(std::string_view target);
     std::unique_ptr<Link> parsePopTermLink(std::string_view target);
@@ -192,6 +194,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseCharRequestLink(std::string_view target);
     std::unique_ptr<Link> parseEmojiRequestLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
+    QString buildHtml(const uc::BreakInfo& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
     QString buildHtml(const uc::Term& x);

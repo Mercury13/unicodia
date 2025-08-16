@@ -270,6 +270,7 @@ namespace uc {
     struct BidiClass;
     struct Block;
     struct Font;
+    struct BreakInfo;
 
     struct StyleSheet {
         short topPc = 0, botPc = 0;
@@ -342,7 +343,8 @@ namespace uc {
         EXTENDED        ///< What we draw with other font-related methods
     };
 
-    enum class BreakClass : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, BreakClass, unsigned char,
+        UNK,    // Technical: unknown
         // Hard
         BK,     // Mandatory break, CR, LF
         CM,     // Control and marks
@@ -356,6 +358,7 @@ namespace uc {
         BA,     // Break after
         BB,     // Break before
         HY,     // Can break except before/after numbers
+        HH,     // Unambiguous hyphen
         CB,     // Depends on object
         // Prohibiting
         CL,     // Closing punctuation
@@ -396,9 +399,8 @@ namespace uc {
         AL,     // Alphabetic
         HL,     // Hebrew letter
         // Stuck
-        NN,
         CR = BK, LF = BK, NL = BK,
-    };
+    )
 
     enum class AutoName : unsigned char { NO, YES };
 
@@ -413,7 +415,7 @@ namespace uc {
         EcBidiClass ecBidiClass;        // +1 = 9
         EcScript ecScript;              // +1 = 10
         unsigned char iNumeric;         // +1 = 11
-                                        // PADDING 1 = 12
+        BreakClass breakClass;
         mutable Cfgs flags;             // +2 = 14
         struct ScriptSpecific {
             unsigned char v1;
@@ -435,6 +437,7 @@ namespace uc {
         EcScript ecScriptEx() const;
         const Script& scriptEx() const;
         const Font& firstFont() const;
+        const BreakInfo& breakInfo() const;
 
         /// @param [in] matchLast  [+] match last font, can return null
         ///                        [-] take last font, never null

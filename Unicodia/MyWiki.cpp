@@ -274,6 +274,12 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopTermLink(std::string_view target)
     return {};
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parsePopBreakLink(std::string_view target)
+{
+    if (auto* term = uc::findBreakInfo(target))
+        return mu(*term);
+    return {};
+}
 
 std::unique_ptr<mywiki::Link> mywiki::parsePopVersionLink(std::string_view target)
 {
@@ -493,6 +499,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopVersionLink(target);
     } else if (scheme == "po"sv) {
         return parsePopOldCompLink(target);
+    } else if (scheme == "pl"sv) {
+        return parsePopBreakLink(target);
     } else if (scheme == "pgs"sv) {
         return parsePopGlyphStyleLink(target);
     } else if (scheme == "gc"sv) {
@@ -1537,6 +1545,13 @@ namespace {
         return x.loc.name;
     }
 
+    template <>
+    inline std::u8string_view locName(const uc::BreakInfo& x) {
+        char s[40];
+        snprintf(s, std::size(s), "Brk.%*s.Name", int(x.id.size()), x.id.data());
+        return loc::get(s);
+    }
+
     template <class... T>
     struct SpecText {
         std::string_view id {};
@@ -1732,6 +1747,43 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 }
 
 
+QString mywiki::buildHtml(const uc::BreakInfo& x)
+{
+    QString text;
+    appendStylesheet(text);
+    appendHeader(text, x, str::cat("l=", x.id));
+
+    //str::append(text, "<p>");
+    //str::QSep sp(text, "<br>");
+
+    //sp.sep();
+    //appendBullet(text, "Prop.Bullet.InTech");
+    //str::append(text, x.tech);
+
+    str::append(text, "</p>");
+    str::append(text, "<p>");
+
+    char s[40];
+    snprintf(s, std::size(s), "Brk.%*s.Text", int(x.id.size()), x.id.data());
+    auto& locText = loc::get(s);
+    appendNoFont(text, locText, wiki::Mode::ARTICLE);
+
+    switch (x.strength) {
+    case uc::BreakStrength::AMBI: break;
+    case uc::BreakStrength::HARD:
+        str::append(text, "<p>");
+        appendNoFont(text, loc::get("Brk.Hard"), wiki::Mode::ARTICLE);
+        break;
+    case uc::BreakStrength::SOFT:
+        str::append(text, "<p>");
+        appendNoFont(text, loc::get("Brk.Soft"), wiki::Mode::ARTICLE);
+        break;
+    }
+
+    return text;
+}
+
+
 namespace {
 
     std::string catQuery(const uc::Category& x)
@@ -1919,9 +1971,17 @@ namespace {
     inline void appendVal(QString& text, const T& value)
         { str::append(text, value.loc.name); }
 
-    template<>
+    template <>
     inline void appendVal(QString& text, const uc::BidiClass& value)
         { str::append(text, value.loc.shortName); }
+
+    template <>
+    void appendVal(QString& text, const uc::BreakInfo& value)
+    {
+        char buf[40];
+        snprintf(buf, std::size(buf), "Brk.%*s.Name", int(value.id.length()), value.id.data());
+        str::append(text, loc::get(buf));
+    }
 
     struct FontLink {
         QString family;
@@ -2511,6 +2571,9 @@ namespace {
         // Bidi writing
         sp.sep();
         appendValuePopup(text, cp.bidiClass(), "Prop.Bullet.Bidi", "pb");
+
+        sp.sep();
+        appendValuePopup(text, cp.breakInfo(), "Prop.Bullet.Brk", "pl");
 
         // Block
         auto& blk = cp.block();

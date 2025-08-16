@@ -404,6 +404,57 @@ const uc::GlyphStyleChannel uc::glyphStyleChannelInfo[] = {
 static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::EcGlyphStyleChannel::NN));
 
 
+constexpr const uc::BreakInfo breakInfoProto[] {
+    { .id = "UNK", .strength = uc::BreakStrength::AMBI },
+    { .id = "BK",  .strength = uc::BreakStrength::HARD },
+    { .id = "CM",  .strength = uc::BreakStrength::HARD },
+    { .id = "WJ",  .strength = uc::BreakStrength::HARD },
+    { .id = "ZW",  .strength = uc::BreakStrength::HARD },
+    { .id = "GL",  .strength = uc::BreakStrength::AMBI },
+    { .id = "SP",  .strength = uc::BreakStrength::HARD },
+    { .id = "ZWJ", .strength = uc::BreakStrength::HARD },
+    { .id = "B2",  .strength = uc::BreakStrength::SOFT },
+    { .id = "BA",  .strength = uc::BreakStrength::SOFT },
+    { .id = "BB",  .strength = uc::BreakStrength::SOFT },
+    { .id = "HY",  .strength = uc::BreakStrength::SOFT },
+    { .id = "HH",  .strength = uc::BreakStrength::SOFT },
+    { .id = "CB",  .strength = uc::BreakStrength::SOFT },
+    { .id = "CL",  .strength = uc::BreakStrength::SOFT },
+    { .id = "CP",  .strength = uc::BreakStrength::SOFT },
+    { .id = "EX",  .strength = uc::BreakStrength::SOFT },
+    { .id = "IN",  .strength = uc::BreakStrength::SOFT },
+    { .id = "NS",  .strength = uc::BreakStrength::SOFT },
+    { .id = "OP",  .strength = uc::BreakStrength::SOFT },
+    { .id = "QU",  .strength = uc::BreakStrength::SOFT },
+    { .id = "IS",  .strength = uc::BreakStrength::SOFT },
+    { .id = "NU",  .strength = uc::BreakStrength::SOFT },
+    { .id = "PO",  .strength = uc::BreakStrength::SOFT },
+    { .id = "PR",  .strength = uc::BreakStrength::SOFT },
+    { .id = "SY",  .strength = uc::BreakStrength::SOFT },
+    { .id = "AK",  .strength = uc::BreakStrength::SOFT },
+    { .id = "AP",  .strength = uc::BreakStrength::SOFT },
+    { .id = "AS",  .strength = uc::BreakStrength::SOFT },
+    { .id = "SA",  .strength = uc::BreakStrength::SOFT },
+    { .id = "VF",  .strength = uc::BreakStrength::SOFT },
+    { .id = "VI",  .strength = uc::BreakStrength::SOFT },
+    { .id = "AI",  .strength = uc::BreakStrength::SOFT },
+    { .id = "CJ",  .strength = uc::BreakStrength::SOFT },
+    { .id = "ID",  .strength = uc::BreakStrength::SOFT },
+    { .id = "H2",  .strength = uc::BreakStrength::SOFT },
+    { .id = "H3",  .strength = uc::BreakStrength::SOFT },
+    { .id = "JL",  .strength = uc::BreakStrength::SOFT },
+    { .id = "JV",  .strength = uc::BreakStrength::SOFT },
+    { .id = "JT",  .strength = uc::BreakStrength::SOFT },
+    { .id = "EB",  .strength = uc::BreakStrength::SOFT },
+    { .id = "EM",  .strength = uc::BreakStrength::SOFT },
+    { .id = "RI",  .strength = uc::BreakStrength::SOFT },
+    { .id = "AL",  .strength = uc::BreakStrength::SOFT },
+    { .id = "HL",  .strength = uc::BreakStrength::SOFT },
+};
+constinit const ec::Array<uc::BreakInfo, uc::BreakClass> uc::breakInfo { ec::ARRAY_INIT, breakInfoProto };
+
+
+
 ///// Sutton SignWriting ///////////////////////////////////////////////////////
 
 sw::Info::Info(const uc::Cp& aCp) : fCp(aCp), fData(&EMPTY_CHAR)
@@ -692,6 +743,8 @@ void uc::completeData()
         ++cp.bidiClass().nChars;
         // Category
         ++cp.category().nChars;
+        // Line breaking
+        ++cp.breakInfo().nChars;
         // Script
         auto& script = cp.script();
         ++script.nChars;
@@ -1656,6 +1709,14 @@ const uc::Term* uc::findTerm(std::string_view id)
     return nullptr;
 }
 
+const uc::BreakInfo* uc::findBreakInfo(std::string_view id)
+{
+    for (auto& v : breakInfo) {
+        if (v.id == id)
+            return &v;
+    }
+    return nullptr;
+}
 
 const uc::Version* uc::findVersion(std::string_view id)
 {
