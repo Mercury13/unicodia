@@ -10639,7 +10639,9 @@
      <orig>
       <p>Do not break before slash.</p>
       <p />
-      <p>You can break after slash, except in Hebrew.</p>
+      <p>Do not break after slash in numbers, in Hebrew.</p>
+      <p />
+      <p>You can break after slash in other places.</p>
      </orig>
     </text>
    </group>

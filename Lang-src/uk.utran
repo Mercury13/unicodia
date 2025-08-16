@@ -15125,12 +15125,16 @@
      <orig>
       <p>Do not break before slash.</p>
       <p />
-      <p>You can break after slash, except in Hebrew.</p>
+      <p>Do not break after slash in numbers, in Hebrew.</p>
+      <p />
+      <p>You can break after slash in other places.</p>
      </orig>
      <transl>
       <p>Не розривати перед похилою рискою.</p>
       <p />
-      <p>Після риски можна розривати, окрім як у івриті.</p>
+      <p>Не розривати після риски у числах, у івриті.</p>
+      <p />
+      <p>В інших місцях після риски розривати можна.</p>
      </transl>
     </text>
    </group>
