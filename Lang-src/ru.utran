@@ -15293,10 +15293,6 @@
      <orig>Emoji/modifier</orig>
      <transl>Эмодзи/модификатор</transl>
     </text>
-    <text id="Text">
-     <orig>Do not break emoji from modifiers.</orig>
-     <transl>Не отрывать эмодзи от модификаторов.</transl>
-    </text>
    </group>
    <group id="RI">
     <text id="Name">

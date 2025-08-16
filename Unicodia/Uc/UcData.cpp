@@ -446,7 +446,7 @@ constexpr const uc::BreakInfo1 breakInfoProto[] {
     { .id = "JV", .altId = "H2", .strength = uc::BreakStrength::SOFT },
     { .id = "JT", .altId = "H2", .strength = uc::BreakStrength::SOFT },
     { .id = "EB",  .strength = uc::BreakStrength::SOFT },
-    { .id = "EM",  .strength = uc::BreakStrength::SOFT },
+    { .id = "EM", .altId = "EB", .strength = uc::BreakStrength::SOFT },
     { .id = "RI",  .strength = uc::BreakStrength::SOFT },
     { .id = "AL",  .strength = uc::BreakStrength::SOFT },
     { .id = "HL",  .strength = uc::BreakStrength::SOFT },

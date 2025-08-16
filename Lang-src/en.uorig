@@ -10763,9 +10763,6 @@
     <text id="Name">
      <orig>Emoji/modifier</orig>
     </text>
-    <text id="Text">
-     <orig>Do not break emoji from modifiers.</orig>
-    </text>
    </group>
    <group id="RI">
     <text id="Name">
