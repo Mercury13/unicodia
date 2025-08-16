@@ -22,13 +22,13 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 1
 CreationTime: 1752977242
-ModificationTime: 1755346236
+ModificationTime: 1755347397
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
 LineGap: 0
 VLineGap: 0
-Panose: 1 1 5 0 6 1 1 1 1 1
+Panose: 1 1 1 1 1 1 1 1 1 1
 OS2TypoAscent: 1069
 OS2TypoAOffset: 0
 OS2TypoDescent: -634
@@ -54,13 +54,13 @@ OS2StrikeYSize: 50
 OS2StrikeYPos: 272
 OS2CapHeight: 712
 OS2XHeight: 502
-OS2Vendor: 'LOSK'
+OS2Vendor: 'LSK1'
 OS2CodePages: 00020001.00000000
 OS2UnicodeRanges: 00002000.80002000.00000000.00000000
 Lookup: 260 0 0 "My Blwm" { "My Blwm-1"  } ['blwm' ('DFLT' <'dflt' > 'arab' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-LangName: 1033 "Copyright (c) 2025 by Losketch. All rights reserved." "UFSZero Ext" "" "" "UFSZero Ext" "Version 3.178;July 31, 2025;FontCreator 15.0.0.3017 64-bit" "" "UFSet is a trademark of Losketch." "Losketch" "Losketch" "" "https://github.com/Losketch" "https://github.com/Losketch" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "https://scripts.sil.org/OFL" "" "" "" "" "++8z70gAA"
+LangName: 1033 "Copyright (c) 2025 by Losketch. All rights reserved." "" "" "" "" "Version 3.178;July 31, 2025;FontCreator 15.0.0.3017 64-bit" "" "UFSet is a trademark of Losketch." "Losketch" "Losketch" "" "https://github.com/Losketch" "https://github.com/Losketch" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "https://scripts.sil.org/OFL" "" "" "" "" "++8z70gAA"
 GaspTable: 3 8 10 17 5 65535 15 1
 Encoding: UnicodeFull
 Compacted: 1
