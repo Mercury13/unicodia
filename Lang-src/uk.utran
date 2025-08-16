@@ -15349,7 +15349,7 @@
     <transl>Це правило '''м’яке''': може бути вилучено або змінено залежно від мови, контексту (інтернет-посилання та{{_}}ін.) або публіки програми.</transl>
    </text>
    <text id="Brah">
-    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
     <transl>У деяких [[pt:brahmic|брахмійських]] писемностях текст може йти суцільною стіною без пропусків, і треба знайти місце для розриву рядка{{-}}за складами аба словами. Склад розривати не{{_}}можна.</transl>
    </text>
   </group>

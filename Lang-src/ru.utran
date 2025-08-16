@@ -15353,7 +15353,7 @@
     <transl>Это правило '''мягкое''': может быть убрано или изменено в зависимости от языка, контекста (интернет-ссылки и{{_}}т.д.) или публики программы.</transl>
    </text>
    <text id="Brah">
-    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
     <transl>В некоторых [[pt:brahmic|брахмийских]] письменностях текст может идти сплошной стеной без пробелов, и нужно найти место для разрыва строки{{-}}по слогам или словам. Слог разрывать нельзя.</transl>
    </text>
   </group>
