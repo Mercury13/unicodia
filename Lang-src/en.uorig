@@ -10807,6 +10807,9 @@
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
    </text>
+   <text id="See">
+    <orig>See [[pt:linebreak|Line breaking]].</orig>
+   </text>
   </group>
  </file>
 </ut>

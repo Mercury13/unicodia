@@ -15356,6 +15356,10 @@
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
     <transl>В некоторых [[pt:brahmic|брахмийских]] письменностях текст может идти сплошной стеной без пробелов, и нужно найти место для разрыва строки{{-}}по слогам или словам. Слог разрывать нельзя.</transl>
    </text>
+   <text id="See">
+    <orig>See [[pt:linebreak|Line breaking]].</orig>
+    <transl>См. [[pt:linebreak|Разбиение на строки]].</transl>
+   </text>
   </group>
  </file>
 </ut>

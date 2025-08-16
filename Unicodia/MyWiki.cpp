@@ -1824,6 +1824,9 @@ QString mywiki::buildHtml(const uc::BreakInfo& x)
         break;
     }
 
+    str::append(text, "<p>");
+    appendNoFont(text, loc::get("Brk.See"), wiki::Mode::ARTICLE);
+
     return text;
 }
 
