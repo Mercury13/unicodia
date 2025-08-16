@@ -338,6 +338,7 @@ constinit const uc::Term uc::terms[] {
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
     { "casefolding", EcTermCat::ALGORITHM, u8"case folding" },
+    { "linebreak", EcTermCat::ALGORITHM, u8"line breaking" },
 
     // Serialization unsorted
     { "serialization", EcTermCat::SERIALIZATION, u8"serialization" },
@@ -405,7 +406,6 @@ static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::Ec
 
 
 constexpr const uc::BreakInfo1 breakInfoProto[] {
-    { .id = "UNK", .strength = uc::BreakStrength::AMBI },
     { .id = "BK",  .strength = uc::BreakStrength::HARD },
     { .id = "CM",  .strength = uc::BreakStrength::HARD },
     { .id = "WJ",  .strength = uc::BreakStrength::HARD },
@@ -450,6 +450,7 @@ constexpr const uc::BreakInfo1 breakInfoProto[] {
     { .id = "RI",  .strength = uc::BreakStrength::SOFT },
     { .id = "AL",  .strength = uc::BreakStrength::SOFT },
     { .id = "HL",  .strength = uc::BreakStrength::SOFT },
+    { .id = "UNK", .strength = uc::BreakStrength::AMBI },
 };
 constinit const ec::Array<uc::BreakInfo, uc::BreakClass> uc::breakInfo { ec::ARRAY_INIT, breakInfoProto };
 

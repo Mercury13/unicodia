@@ -7697,6 +7697,18 @@
      </orig>
     </text>
    </group>
+   <group id="linebreak">
+    <text id="Name">
+     <orig>line breaking</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>To break a long text into lines, the characters are divided into several categories.</p>
+      <p />
+      <p>{{LineBreakTypes}}</p>
+     </orig>
+    </text>
+   </group>
    <group id="logical">
     <text id="Name">
      <orig>logical order</orig>

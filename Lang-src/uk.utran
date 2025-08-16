@@ -11058,6 +11058,24 @@
      </transl>
     </text>
    </group>
+   <group id="linebreak">
+    <text id="Name">
+     <orig>line breaking</orig>
+     <transl>розбиття на рядки</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>To break a long text into lines, the characters are divided into several categories.</p>
+      <p />
+      <p>{{LineBreakTypes}}</p>
+     </orig>
+     <transl>
+      <p>Щоб розбити довгий текст на рядки, символи поділяются на такі категорії.</p>
+      <p />
+      <p>{{LineBreakTypes}}</p>
+     </transl>
+    </text>
+   </group>
    <group id="logical">
     <text id="Name">
      <orig>logical order</orig>

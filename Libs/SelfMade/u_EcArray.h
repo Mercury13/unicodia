@@ -85,20 +85,30 @@ namespace ec {
 
         constexpr V& operator [] (Ec i) noexcept(AT_NOEXCEPT)
         {
-            if constexpr (RANGE_CHECK) {
-                if (static_cast<size_t>(i) >= Size)
-                    throw std::range_error("ec::Array range check!");
-            }
-            return a[static_cast<size_t>(i)];
+            return inOrder(static_cast<size_t>(i));
         }
 
         constexpr const V& operator [] (Ec i) const noexcept(AT_NOEXCEPT)
         {
+            return inOrder(static_cast<size_t>(i));
+        }
+
+        constexpr V& inOrder (size_t i) noexcept(AT_NOEXCEPT)
+        {
             if constexpr (RANGE_CHECK) {
-                if (static_cast<size_t>(i) >= Size)
+                if (i >= Size)
+                    throw std::range_error("ec::Array range check!");
+            }
+            return a[i];
+        }
+
+        constexpr const V& inOrder (size_t i) const noexcept(AT_NOEXCEPT)
+        {
+            if constexpr (RANGE_CHECK) {
+                if (i >= Size)
                     throw std::range_error("ec::Array const range check!");
             }
-            return a[static_cast<size_t>(i)];
+            return a[i];
         }
 
         template <class U>

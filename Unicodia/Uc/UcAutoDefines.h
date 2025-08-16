@@ -344,7 +344,6 @@ namespace uc {
     };
 
     DEFINE_ENUM_TYPE_IN_NS(uc, BreakClass, unsigned char,
-        UNK,    // Technical: unknown
         // Hard
         BK,     // Mandatory break, CR, LF
         CM,     // Control and marks
@@ -398,8 +397,12 @@ namespace uc {
         // Alphabet
         AL,     // Alphabetic
         HL,     // Hebrew letter
+        // Technical
+        UNK,    // unknown
         // Stuck
         CR = BK, LF = BK, NL = BK,
+        MIN = 0,
+        MAX = UNK - 1,
     )
 
     enum class AutoName : unsigned char { NO, YES };

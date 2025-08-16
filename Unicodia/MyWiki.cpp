@@ -1432,6 +1432,31 @@ namespace {
             }
             break;
 
+        case 'L':
+            if (name == "LineBreakTypes") {
+                s += "<table border=0><tr><td>";
+                str::QSep sp(s, "<br>");
+                static constexpr auto I_MIN = static_cast<int>(uc::BreakClass::MIN);
+                static constexpr auto I_MAX = static_cast<int>(uc::BreakClass::MAX);
+                static constexpr auto WHERE_TO_BREAK = (I_MIN + I_MAX) / 2;
+                for (int i = I_MIN; i <= I_MAX; ++i) {
+                    auto& info = uc::breakInfo.inOrder(i);
+                    sp.sep();
+                    s += "<a class='popup' href='pl:";
+                    str::append(s, info.id);
+                    s += "'>";
+                    char buf[40];
+                    snprintf(buf, std::size(buf), "Brk.%*s.Name", (int)(info.id.length()), info.id.data());
+                    str::append(s, loc::get(buf));
+                    s += "</a>";
+                    if (i == WHERE_TO_BREAK) {
+                        s += "<td>";
+                        sp.reset();
+                    }
+                }
+                s += "</table>";
+            } break;
+
         case 'n':
             if (name == "n"sv) {
                 auto formatted = formatThousand<char8_t>(
