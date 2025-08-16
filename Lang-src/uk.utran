@@ -15246,8 +15246,8 @@
      <transl>Хангиль/початкова+середня</transl>
     </text>
     <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-     <transl>Не розривати корейський склад.</transl>
+     <orig>Do not break a [[ps:Hang|Korean]] syllable.</orig>
+     <transl>Не розривати [[ps:Hang|корейський]] склад.</transl>
     </text>
    </group>
    <group id="H3">
@@ -15354,7 +15354,7 @@
    </text>
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
-    <transl>У деяких брахмійських писемностях текст може йти суцільною стіною без пропусків, і треба знайти місце для розриву рядка{{-}}за складами аба словами. Склад розривати не{{_}}можна.</transl>
+    <transl>У деяких [[pt:brahmic|брахмійських]] писемностях текст може йти суцільною стіною без пропусків, і треба знайти місце для розриву рядка{{-}}за складами аба словами. Склад розривати не{{_}}можна.</transl>
    </text>
   </group>
  </file>
