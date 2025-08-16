@@ -14797,8 +14797,8 @@
   <group id="Brk">
    <group id="BK">
     <text id="Name">
-     <orig>Hard/mandatory break</orig>
-     <transl>Жёсткий/принудительный разрыв</transl>
+     <orig>Important/mandatory break</orig>
+     <transl>Важный/принудительный разрыв</transl>
     </text>
     <text id="Text">
      <orig>This character forcefully breaks a line. But CR+LF (0D+0A) is one break rather than two.</orig>
@@ -14807,8 +14807,8 @@
    </group>
    <group id="CM">
     <text id="Name">
-     <orig>Hard/control and marks</orig>
-     <transl>Жёсткий/управляющие и метки</transl>
+     <orig>Important/control and marks</orig>
+     <transl>Важный/управляющие и метки</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before [[pt:control|control]] characters and [[pt:combining|marks]].</orig>
@@ -14817,8 +14817,8 @@
    </group>
    <group id="WJ">
     <text id="Name">
-     <orig>Hard/word joiner</orig>
-     <transl>Жёсткий/соединитель слов</transl>
+     <orig>Important/word joiner</orig>
+     <transl>Важный/соединитель слов</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before and after U+2060 Word joiner.</orig>
@@ -14827,8 +14827,8 @@
    </group>
    <group id="ZW">
     <text id="Name">
-     <orig>Hard/zero-width space</orig>
-     <transl>Жёсткий/нулевой пробел</transl>
+     <orig>Important/zero-width space</orig>
+     <transl>Важный/нулевой пробел</transl>
     </text>
     <text id="Text">
      <orig>You can break a line at U+200B Zero-width space.</orig>
@@ -14837,18 +14837,18 @@
    </group>
    <group id="GL">
     <text id="Name">
-     <orig>Hard/glue</orig>
-     <transl>Жёсткий/неразрывный</transl>
+     <orig>Important/glue</orig>
+     <transl>Важный/неразрывный</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>'''Hard''' (mandatory) rule: Do not break after U+00A0 No-break space and related characters.</p>
+      <p>'''Important''' (mandatory) rule: Do not break after U+00A0 No-break space and related characters.</p>
       <p />
       <p>'''Soft''' (tailorable) rule: Do not break before these characters. However, you can break after spaces and hyphens.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
      <transl>
-      <p>'''Жёсткое''' (обязательное) правило: Не разрывать после неразрывного пробела U+00A0 и сходных символов.</p>
+      <p>'''Важное''' (обязательное) правило: Не разрывать после неразрывного пробела U+00A0 и сходных символов.</p>
       <p />
       <p>'''Мягкое''' (настраиваемое) правило: Не разрывать перед этими символами. Но можно разрывать после пробелов и дефисов.</p>
      </transl>
@@ -14856,8 +14856,8 @@
    </group>
    <group id="SP">
     <text id="Name">
-     <orig>Hard/space</orig>
-     <transl>Жёсткий/пробел</transl>
+     <orig>Important/space</orig>
+     <transl>Важный/пробел</transl>
     </text>
     <text id="Text">
      <orig>You can break after a chain of U+0020 spaces, unless other characters prohibit this.</orig>
@@ -14867,8 +14867,8 @@
    </group>
    <group id="ZWJ">
     <text id="Name">
-     <orig>Hard/zero-width joiner</orig>
-     <transl>Жёсткий/нулевой соединитель</transl>
+     <orig>Important/zero-width joiner</orig>
+     <transl>Важный/нулевой соединитель</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14928,8 +14928,8 @@
      <transl>Разрыв/дефис-минус</transl>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by hyphen’s rules.</orig>
-     <transl>U+002B дефис-минус может иметь множество применений: дефис, минус, цифровое тире. Если анализ показал, что это дефис, можно разрывать по правилам дефиса.</transl>
+     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HY|hyphen’s]] rules.</orig>
+     <transl>U+002B дефис-минус может иметь множество применений: дефис, минус, цифровое тире. Если анализ показал, что это дефис, можно разрывать по правилам [[pl:HY|дефиса]].</transl>
     </text>
    </group>
    <group id="HH">
@@ -15126,8 +15126,8 @@
      <transl>Брахмийский/аксара (согласная)</transl>
     </text>
     <text id="Text">
-     <orig>Do not break a Brahmic syllable.</orig>
-     <transl>Не разрывать брахмийский слог.</transl>
+     <orig>Consonants are central in Brahmic scripts.</orig>
+     <transl>Согласные играют главную роль в брахмийском письме.</transl>
     </text>
    </group>
    <group id="AP">
@@ -15136,8 +15136,8 @@
      <transl>Брахмийский/перед согласной</transl>
     </text>
     <text id="Text">
-     <orig>Do not break a Brahmic syllable. To do this, do not break between these and consonants.</orig>
-     <transl>Не разрывать брахмийский слог. Для этого не разрывать между этими и согласными.</transl>
+     <orig>Do not break between these characters and consonants.</orig>
+     <transl>Не разрывать между этими символами и согласными.</transl>
     </text>
    </group>
    <group id="AS">
@@ -15146,16 +15146,8 @@
      <transl>Брахмийский/начальная согласная</transl>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This character marks the beginning of the syllable.</p>
-     </orig>
-     <transl>
-      <p>Не разрывать брахмийский слог.</p>
-      <p />
-      <p>Эти символы означают начало слога.</p>
-     </transl>
+     <orig>This character marks the beginning of the syllable.</orig>
+     <transl>Эти символы означают начало слога.</transl>
     </text>
    </group>
    <group id="SA">
@@ -15174,16 +15166,8 @@
      <transl>Брахмийский/вирама</transl>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</p>
-     </orig>
-     <transl>
-      <p>Не разрывать брахмийский слог.</p>
-      <p />
-      <p>Эта [[pt:virama|вирама]] '''может''' быть внутри слога. Не разрывать после этого символа.</p>
-     </transl>
+     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
+     <transl>Эта [[pt:virama|вирама]] '''может''' быть внутри слога. Не разрывать после этого символа.</transl>
     </text>
    </group>
    <group id="VF">
@@ -15192,26 +15176,18 @@
      <transl>Брахмийский/конечная вирама</transl>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</p>
-     </orig>
-     <transl>
-      <p>Не разрывать брахмийский слог.</p>
-      <p />
-      <p>Эта [[pt:virama|вирама]] всегда в конце слова. Не разрывать '''перед''' согласной с этой вирамой. Но можно разрывать '''после''' этой вирамы.</p>
-     </transl>
+     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
+     <transl>Эта [[pt:virama|вирама]] всегда в конце слова. Не разрывать '''перед''' согласной с этой вирамой. Но можно разрывать '''после''' этой вирамы.</transl>
     </text>
    </group>
    <group id="AI">
     <text id="Name">
-     <orig>CJK/ambiguous</orig>
-     <transl>ККЯ/неоднозначно</transl>
+     <orig>CJK/letter or ideograph</orig>
+     <transl>ККЯ/буква или иероглиф</transl>
     </text>
     <text id="Text">
-     <orig>To break here, you must detect by complex rules that the context is CJK rather than alphabetic.</orig>
-     <transl>Чтобы тут разорвать, надо сложным анализом определить, что контекст ККЯ, а не алфавитный.</transl>
+     <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
+     <transl>В [[pt:cjk|ККЯ]]-тексте здесь можно разорвать, как будто это иероглиф. Иначе работает как буква.</transl>
     </text>
    </group>
    <group id="CJ">
@@ -15261,19 +15237,11 @@
      <orig>Hangul/initial+medial+final</orig>
      <transl>Хангыль/начальная+средняя+конечная</transl>
     </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-     <transl>Не разрывать корейский слог.</transl>
-    </text>
    </group>
    <group id="JL">
     <text id="Name">
      <orig>Hangul/initial</orig>
      <transl>Хангыль/начальная</transl>
-    </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-     <transl>Не разрывать корейский слог.</transl>
     </text>
    </group>
    <group id="JV">
@@ -15281,19 +15249,11 @@
      <orig>Hangul/medial</orig>
      <transl>Хангыль/средняя</transl>
     </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-     <transl>Не разрывать корейский слог.</transl>
-    </text>
    </group>
    <group id="JT">
     <text id="Name">
      <orig>Hangul/final</orig>
      <transl>Хангыль/конечная</transl>
-    </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-     <transl>Не разрывать корейский слог.</transl>
     </text>
    </group>
    <group id="EB">
@@ -15367,12 +15327,16 @@
     </text>
    </group>
    <text id="Hard">
-    <orig>This rule is '''hard''': must exist in some form in every program.</orig>
-    <transl>Это правило '''жёсткое''': должно иметься в какой-то форме в любой программе.</transl>
+    <orig>This rule is '''important''': must exist in some form in every program.</orig>
+    <transl>Это правило '''важное''': должно иметься в какой-то форме в любой программе.</transl>
    </text>
    <text id="Soft">
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (Web links etc), or program’s audience.</orig>
     <transl>Это правило '''мягкое''': может быть убрано или изменено в зависимости от языка, контекста (интернет-ссылки и{{_}}т.д.) или публики программы.</transl>
+   </text>
+   <text id="Brah">
+    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <transl>В некоторых [[pt:brahmic|брахмийских]] письменностях текст может идти сплошной стеной без пробелов, и нужно найти место для разрыва строки{{-}}по слогам или словам. Слог разрывать нельзя.</transl>
    </text>
   </group>
  </file>

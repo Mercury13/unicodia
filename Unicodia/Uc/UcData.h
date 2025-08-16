@@ -1234,15 +1234,23 @@ namespace uc {
 
     extern PlaneInfo planeInfo[N_PLANES];
 
-    enum class BreakStrength : unsigned char { HARD, AMBI, SOFT };
+    enum class BreakStrength : unsigned char {
+        HARD,   ///< hard (non-tailorable) rule
+        AMBI,   ///< ambivalent (hard+soft) rule
+        BRAH,   ///< soft, plus info on Brahmic
+        SOFT    ///< soft (tailorable) rule
+    };
 
     struct BreakInfo1 {
         std::string_view id;
+        std::string_view altId {};
         BreakStrength strength;
+
+        std::string_view textId() const noexcept { return altId.empty() ? id: altId; }
     };
     struct BreakInfo : public BreakInfo1 {
         mutable unsigned nChars = 0;
-        constexpr BreakInfo& operator = (const BreakInfo1& x)
+        constexpr BreakInfo& operator = (const BreakInfo1& x) noexcept
             { BreakInfo1::operator = (x); return *this; }
     };
 

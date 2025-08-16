@@ -10394,7 +10394,7 @@
   <group id="Brk">
    <group id="BK">
     <text id="Name">
-     <orig>Hard/mandatory break</orig>
+     <orig>Important/mandatory break</orig>
     </text>
     <text id="Text">
      <orig>This character forcefully breaks a line. But CR+LF (0D+0A) is one break rather than two.</orig>
@@ -10402,7 +10402,7 @@
    </group>
    <group id="CM">
     <text id="Name">
-     <orig>Hard/control and marks</orig>
+     <orig>Important/control and marks</orig>
     </text>
     <text id="Text">
      <orig>Do not break a line before [[pt:control|control]] characters and [[pt:combining|marks]].</orig>
@@ -10410,7 +10410,7 @@
    </group>
    <group id="WJ">
     <text id="Name">
-     <orig>Hard/word joiner</orig>
+     <orig>Important/word joiner</orig>
     </text>
     <text id="Text">
      <orig>Do not break a line before and after U+2060 Word joiner.</orig>
@@ -10418,7 +10418,7 @@
    </group>
    <group id="ZW">
     <text id="Name">
-     <orig>Hard/zero-width space</orig>
+     <orig>Important/zero-width space</orig>
     </text>
     <text id="Text">
      <orig>You can break a line at U+200B Zero-width space.</orig>
@@ -10426,11 +10426,11 @@
    </group>
    <group id="GL">
     <text id="Name">
-     <orig>Hard/glue</orig>
+     <orig>Important/glue</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>'''Hard''' (mandatory) rule: Do not break after U+00A0 No-break space and related characters.</p>
+      <p>'''Important''' (mandatory) rule: Do not break after U+00A0 No-break space and related characters.</p>
       <p />
       <p>'''Soft''' (tailorable) rule: Do not break before these characters. However, you can break after spaces and hyphens.</p>
      </orig>
@@ -10439,7 +10439,7 @@
    </group>
    <group id="SP">
     <text id="Name">
-     <orig>Hard/space</orig>
+     <orig>Important/space</orig>
     </text>
     <text id="Text">
      <orig>You can break after a chain of U+0020 spaces, unless other characters prohibit this.</orig>
@@ -10448,7 +10448,7 @@
    </group>
    <group id="ZWJ">
     <text id="Name">
-     <orig>Hard/zero-width joiner</orig>
+     <orig>Important/zero-width joiner</orig>
     </text>
     <text id="Text">
      <orig>
@@ -10492,7 +10492,7 @@
      <orig>Break/hyphen-minus</orig>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by hyphen’s rules.</orig>
+     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HY|hyphen’s]] rules.</orig>
     </text>
    </group>
    <group id="HH">
@@ -10636,7 +10636,7 @@
      <orig>Brahmic/aksara (consonant)</orig>
     </text>
     <text id="Text">
-     <orig>Do not break a Brahmic syllable.</orig>
+     <orig>Consonants are central in Brahmic scripts.</orig>
     </text>
    </group>
    <group id="AP">
@@ -10644,7 +10644,7 @@
      <orig>Brahmic/pre-consonant</orig>
     </text>
     <text id="Text">
-     <orig>Do not break a Brahmic syllable. To do this, do not break between these and consonants.</orig>
+     <orig>Do not break between these characters and consonants.</orig>
     </text>
    </group>
    <group id="AS">
@@ -10652,11 +10652,7 @@
      <orig>Brahmic/initial consonant</orig>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This character marks the beginning of the syllable.</p>
-     </orig>
+     <orig>This character marks the beginning of the syllable.</orig>
     </text>
    </group>
    <group id="SA">
@@ -10672,11 +10668,7 @@
      <orig>Brahmic/virama</orig>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</p>
-     </orig>
+     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
     </text>
    </group>
    <group id="VF">
@@ -10684,19 +10676,15 @@
      <orig>Brahmic/final virama</orig>
     </text>
     <text id="Text">
-     <orig>
-      <p>Do not break a Brahmic syllable.</p>
-      <p />
-      <p>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</p>
-     </orig>
+     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
     </text>
    </group>
    <group id="AI">
     <text id="Name">
-     <orig>CJK/ambiguous</orig>
+     <orig>CJK/letter or ideograph</orig>
     </text>
     <text id="Text">
-     <orig>To break here, you must detect by complex rules that the context is CJK rather than alphabetic.</orig>
+     <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
     </text>
    </group>
    <group id="CJ">
@@ -10733,32 +10721,20 @@
     <text id="Name">
      <orig>Hangul/initial+medial+final</orig>
     </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-    </text>
    </group>
    <group id="JL">
     <text id="Name">
      <orig>Hangul/initial</orig>
-    </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
     </text>
    </group>
    <group id="JV">
     <text id="Name">
      <orig>Hangul/medial</orig>
     </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
-    </text>
    </group>
    <group id="JT">
     <text id="Name">
      <orig>Hangul/final</orig>
-    </text>
-    <text id="Text">
-     <orig>Do not break a Korean syllable.</orig>
     </text>
    </group>
    <group id="EB">
@@ -10812,10 +10788,13 @@
     </text>
    </group>
    <text id="Hard">
-    <orig>This rule is '''hard''': must exist in some form in every program.</orig>
+    <orig>This rule is '''important''': must exist in some form in every program.</orig>
    </text>
    <text id="Soft">
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (Web links etc), or program’s audience.</orig>
+   </text>
+   <text id="Brah">
+    <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run as a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
    </text>
   </group>
  </file>

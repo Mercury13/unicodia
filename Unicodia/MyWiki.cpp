@@ -1767,10 +1767,22 @@ QString mywiki::buildHtml(const uc::BreakInfo& x)
     //str::append(text, x.tech);
 
     str::append(text, "</p>");
+    switch (x.strength) {
+    case uc::BreakStrength::AMBI:
+    case uc::BreakStrength::HARD:
+    case uc::BreakStrength::SOFT:
+        break;
+    case uc::BreakStrength::BRAH:
+        str::append(text, "<p>");
+        appendNoFont(text, loc::get("Brk.Brah"), wiki::Mode::ARTICLE);
+        break;
+    }
+
     str::append(text, "<p>");
 
+    auto textId = x.textId();
     char s[40];
-    snprintf(s, std::size(s), "Brk.%*s.Text", int(x.id.size()), x.id.data());
+    snprintf(s, std::size(s), "Brk.%*s.Text", int(textId.size()), textId.data());
     auto& locText = loc::get(s);
     appendNoFont(text, locText, wiki::Mode::ARTICLE);
 
@@ -1780,6 +1792,7 @@ QString mywiki::buildHtml(const uc::BreakInfo& x)
         str::append(text, "<p>");
         appendNoFont(text, loc::get("Brk.Hard"), wiki::Mode::ARTICLE);
         break;
+    case uc::BreakStrength::BRAH:
     case uc::BreakStrength::SOFT:
         str::append(text, "<p>");
         appendNoFont(text, loc::get("Brk.Soft"), wiki::Mode::ARTICLE);
