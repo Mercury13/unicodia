@@ -14946,8 +14946,8 @@
      <transl>Разрыв/дефис-минус</transl>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HY|hyphen’s]] rules.</orig>
-     <transl>U+002B дефис-минус может иметь множество применений: дефис, минус, цифровое тире. Если анализ показал, что это дефис, можно разрывать по правилам [[pl:HY|дефиса]].</transl>
+     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <transl>U+002B дефис-минус может иметь множество применений: дефис, минус, цифровое тире. Если анализ показал, что это дефис, можно разрывать по правилам [[pl:HH|дефиса]].</transl>
     </text>
    </group>
    <group id="HH">

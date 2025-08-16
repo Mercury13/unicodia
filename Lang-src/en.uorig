@@ -10504,7 +10504,7 @@
      <orig>Break/hyphen-minus</orig>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HY|hyphen’s]] rules.</orig>
+     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
     </text>
    </group>
    <group id="HH">
