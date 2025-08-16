@@ -404,7 +404,7 @@ const uc::GlyphStyleChannel uc::glyphStyleChannelInfo[] = {
 static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::EcGlyphStyleChannel::NN));
 
 
-constexpr const uc::BreakInfo breakInfoProto[] {
+constexpr const uc::BreakInfo1 breakInfoProto[] {
     { .id = "UNK", .strength = uc::BreakStrength::AMBI },
     { .id = "BK",  .strength = uc::BreakStrength::HARD },
     { .id = "CM",  .strength = uc::BreakStrength::HARD },

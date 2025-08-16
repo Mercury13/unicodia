@@ -40,6 +40,7 @@ namespace uc {
         uc::Cfgs fgs {};
         uc::OldComp oldComp = uc::OldComp::NONE;
         uc::EgypReliability egypReliability = uc::EgypReliability::DUMMY;
+        uc::BreakClass breakClass = uc::BreakClass::UNK;
         bool isNumber = false;
     };
 

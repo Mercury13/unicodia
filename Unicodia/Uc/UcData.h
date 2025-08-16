@@ -1236,10 +1236,14 @@ namespace uc {
 
     enum class BreakStrength : unsigned char { HARD, AMBI, SOFT };
 
-    struct BreakInfo {
+    struct BreakInfo1 {
         std::string_view id;
         BreakStrength strength;
+    };
+    struct BreakInfo : public BreakInfo1 {
         mutable unsigned nChars = 0;
+        constexpr BreakInfo& operator = (const BreakInfo1& x)
+            { BreakInfo1::operator = (x); return *this; }
     };
 
     extern const ec::Array<BreakInfo, BreakClass> breakInfo;

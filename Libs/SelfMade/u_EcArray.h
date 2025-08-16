@@ -106,6 +106,9 @@ namespace ec {
 
         template <class Pred>
         Ec findIfDef(Ec def, Pred&& pred) const;
+
+        constexpr Ec toIndex(const V& x) const noexcept
+            { return static_cast<Ec>(&x - a); }
     private:
         CArray a {};
     };

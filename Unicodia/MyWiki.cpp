@@ -428,6 +428,12 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
                 break;
             }
             return nullptr;
+        case 'l':   // line breaks
+            if (auto lbi = uc::findBreakInfo(value)) {
+                fields.breakClass = uc::breakInfo.toIndex(*lbi);
+                break;
+            }
+            return nullptr;
         case 'N':   // number
             if (value == "1"sv) {
                 fields.isNumber = 1;
