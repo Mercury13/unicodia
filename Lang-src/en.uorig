@@ -10803,7 +10803,7 @@
     <orig>This rule is '''important''': must exist in some form in every program.</orig>
    </text>
    <text id="Soft">
-    <orig>This rule is '''soft''': may be removed or changed depending on language, context (Web links etc), or program’s audience.</orig>
+    <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
    </text>
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>

@@ -15350,8 +15350,8 @@
     <transl>Это правило '''важное''': должно иметься в какой-то форме в любой программе.</transl>
    </text>
    <text id="Soft">
-    <orig>This rule is '''soft''': may be removed or changed depending on language, context (Web links etc), or program’s audience.</orig>
-    <transl>Это правило '''мягкое''': может быть убрано или изменено в зависимости от языка, контекста (интернет-ссылки и{{_}}т.д.) или публики программы.</transl>
+    <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
+    <transl>Это правило '''мягкое''': может быть убрано или изменено в зависимости от языка, контекста (математика, интернет-ссылки и{{_}}т.д.) или публики программы.</transl>
    </text>
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
