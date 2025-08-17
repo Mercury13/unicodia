@@ -15027,7 +15027,7 @@
     </text>
     <text id="Text">
      <orig>These characters are often used in chains. Do not break these chains.</orig>
-     <transl>Ці символи часто використовуються ланцюжками. Не розривати ці ланцюжки.</transl>
+     <transl>Ці символи часто використовуються ланцюжками. Не{{_}}розривати ці ланцюжки.</transl>
     </text>
    </group>
    <group id="NS">
