@@ -15131,14 +15131,15 @@
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
-      <p>You can break after slash in other places.</p>
+      <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
+     <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
      <transl>
       <p>Не разрывать перед косой чертой U+002F.</p>
       <p />
       <p>Не разрывать после косой черты в числах, в иврите.</p>
       <p />
-      <p>В других местах после черты разрывать можно.</p>
+      <p>В других местах после черты разрывать можно. Как побочный эффект, разрываются сокращения вроде «ж/д», и программам разрешается разрывать, если другие места далеко.</p>
      </transl>
     </text>
    </group>

@@ -10641,8 +10641,9 @@
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
-      <p>You can break after slash in other places.</p>
+      <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
+     <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
     </text>
    </group>
    <group id="AK">

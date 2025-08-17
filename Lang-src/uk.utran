@@ -15127,14 +15127,15 @@
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
-      <p>You can break after slash in other places.</p>
+      <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
+     <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
      <transl>
       <p>Не розривати перед похилою рискою U+002F.</p>
       <p />
       <p>Не розривати після риски у числах, у івриті.</p>
       <p />
-      <p>В інших місцях після риски розривати можна.</p>
+      <p>В інших місцях після риски розривати можна. Як побічний ефект, розриваються скорочення на кшталт «б/в», і програмам дозволяється розривати, якщо інші місця далеко.</p>
      </transl>
     </text>
    </group>
