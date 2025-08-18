@@ -267,6 +267,7 @@ Subtotal: 105
 - 13F73: campaign for walls
 - 13F74: campaign for walls
 - 13F9F: beard, simpler djed
+- 13FA8: line of black circles
 - 13FB3: simplified, thinned two slabs
 - 13FB4: simplified, thinned two slabs
 - 13FD7: self-intersections, no beard
@@ -281,7 +282,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 261
+Subtotal: 262
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -390,6 +391,7 @@ Subtotal: 261
 - 13F41: after 42
 - 13F50: campaign for plans
 - 13F81: drawn after 80
+- 13FAD: after AC
 - 13FD2: misrender in NewG, after D1 and D5
 - 14000: after 13FFF
 - 14002: after 03
@@ -409,11 +411,11 @@ Subtotal: 261
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 124
+Subtotal: 125
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 491
+Total: 493
