@@ -270,6 +270,7 @@ Subtotal: 105
 - 13FA8: line of black circles
 - 13FB3: simplified, thinned two slabs
 - 13FB4: simplified, thinned two slabs
+- 13FBB: other roof
 - 13FD7: self-intersections, no beard
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
@@ -282,7 +283,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 262
+Subtotal: 263
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -419,4 +420,4 @@ Subtotal: 126
 
 Subtotal: 1
 
-Total: 494
+Total: 495
