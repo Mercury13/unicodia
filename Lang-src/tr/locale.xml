@@ -4,8 +4,8 @@
 		<lang iso="tr" />
 	</trigger-langs>
 	<alpha-sort>
-		<alp>ABCÇDEFGHIİJKLMNOÖPQRSŞTUVWXYZ</alp>
-		<alp>abcçdefghıijklmnoöpqrsştuvwxyz</alp>
+		<alp>ABCÇDEFGHIİJKLMNOÖPQRSŞTUÜVWXYZ</alp>
+		<alp>abcçdefghıijklmnoöpqrsştuüvwxyz</alp>
 	</alpha-sort>
 	<alpha-fixup />
 	<ellipsis text="…">
