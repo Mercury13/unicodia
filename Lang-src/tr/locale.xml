@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<locale native="Türkçe" international="Turkish" eng-terms="0" trigger-stamp="2025080">
+	<trigger-langs>
+		<lang iso="tr" />
+	</trigger-langs>
+	<alpha-sort>
+		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>abcdefghijklmnopqrstuvwxyz</alp>
+		<alp>____________________Ü_____</alp>
+		<alp>____________________ü_____</alp>
+	</alpha-sort>
+	<alpha-fixup />
+	<ellipsis text="…">
+		<blk start="2E80"  /><!-- CJK radicals supplement -->
+		<blk start="30A0"  /><!-- Katakana -->
+		<blk start="31F0"  /><!-- Katakana phonetic -->
+		<blk start="10100" /><!-- Aegean numbers -->
+		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="1AFF0" /><!-- Kana extended-B -->
+		<blk start="1B000" /><!-- Kana supplement -->
+		<blk start="1B100" /><!-- Kana extended-A -->
+		<blk start="1B130" /><!-- Small kana extension -->
+		<blk start="1BCA0" /><!-- Shorthand format controls -->
+		<blk start="1D200" /><!-- Ancient Greek music notation -->
+		<blk start="1F650" /><!-- Ornamental dingbats -->
+	</ellipsis>
+	<wiki-templates>
+		<!-- first{{-}}second  →  typographic dash -->
+		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
+		<!-- first{{,-}}second  →  typographic comma-dash -->
+		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
+	</wiki-templates>
+	<icons sort-az="sort_AZ" />
+	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="5">
+		<imprecise>
+			<fmt shift="0" text="{1} people" frac="never" />
+			<fmt shift="3" text="{1}k" frac="avoid" />
+			<fmt shift="6" text="{1}M" frac="prefer" />
+			<fmt shift="9" text="{1}bn" frac="prefer" />
+		</imprecise>
+		<moreless less="{1}" more=">{1}" phase="num" />
+		<percent inverse="1" space="1" />
+	</num-format>
+	<cardinal-rules default-outcome="many">
+		<rule mod="0" min="1" max="1" outcome="one" /><!-- 1 lap -->
+	</cardinal-rules>
+	<peculiarities still-uses-burmese="0" />
+	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
+			left-paren="(" right-paren=")" indent-ellip="…"
+			range="…" year-range="–" />
+</locale>
