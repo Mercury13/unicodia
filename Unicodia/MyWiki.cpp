@@ -1136,6 +1136,10 @@ namespace {
                 if (v.shift <= loShift)     // check for low shift
                     return v;
                 break; // never → do nothing
+            case loc::FracPolicy::ONEDIG:
+                if (v.shift <= loShift + 1)
+                    return v;
+                break;
             case loc::FracPolicy::AVOID:
                 if (v.shift < hiShift)      // at least 2 digits: 99900 has loShift of 2 and hiShift of 4,
                     return v;               // so shift 2 (999hu) or 3 (99.9k) is OK

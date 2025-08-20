@@ -89,6 +89,7 @@
 			   Shift 0 may exist, but the system will auto-insert {1}/never
 			 Frac: never = always whole number (1230, 12300)
 			       avoid = avoid fractions (1230, 12.3k)
+				   onedig = only if one-digit fraction (1230, 1.2k, 12.3k)
 				   prefer = use fraction if prefer fractions (1.23k, 12.3k)
 				   except1 = same as “never” but fall back to smaller unit if mantissa=1
 			 Also bigger units are present, see Japanese -->

@@ -162,7 +162,7 @@ namespace {
     }
 
     constinit const ec::Array<std::string_view, loc::FracPolicy> fracPolicyNames
-            { "never", "avoid", "prefer", "except1" };
+            { "never", "avoid", "onedig", "prefer", "except1" };
 
     constinit const ec::Array<std::string_view, loc::MoreLessPhase> moreLessPhaseNames
             { "raw", "unit" };

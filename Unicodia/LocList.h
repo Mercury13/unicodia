@@ -30,7 +30,7 @@ namespace loc
     };
 
     DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
-        NEVER, AVOID, PREFER, EXCEPT1 )
+        NEVER, AVOID, ONEDIG, PREFER, EXCEPT1 )
 
     DEFINE_ENUM_TYPE_IN_NS(loc, MoreLessPhase, unsigned char,
         RAW, UNIT )
