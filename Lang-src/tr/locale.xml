@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Türkçe" international="Turkish" eng-terms="0" trigger-stamp="2025080">
+<locale native="Türkçe" international="Turkish" eng-terms="1" trigger-stamp="2025080">
 	<trigger-langs>
 		<lang iso="tr" />
 	</trigger-langs>

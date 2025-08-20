@@ -10741,7 +10741,7 @@
       <p>Kullanılacak karakterlerin döndürülmesiyle ilgili birkaç durum bilinmektedir:</p>
       <p>* "Etiketler" bloğu{{-}}dili belirtmek için kullanılıyordu. Bölgesel bayrakların [[pt:emoji|emoji]]'si için döndürüldü (örneğin, İskoçya), bir karakter yasaklı kaldı.</p>
       <p>* 0340, 0341 (alçalan/yükselen ton işaretleri). Sıradan aksan işaretler à ve á ile değiştirildi. Unicode{{_}}5.2’den beri önerilmiyorlar.</p>
-      <p>* 17D3 (Kmer işareti ''bathamasat''). [[pk:19E0|Ay takviminin]] [[pt:precomposed|önceden oluşturulmuş]] karakterlerinin ortaya çıkmasıyla, Unicode 4.0{{_}}’da kullanımdan kaldırıldı. Unicode{{_}}5.2'den beri önerilmiyor, belki de takvim bağları hantal olduğu için. ''Unicodia''nın yazarı, bağların hücreye sığacağı yazı tipini bulmakta zorluk çekmişti.</p>
+      <p>* 17D3 (Kmer işareti ''bathamasat''). [[pk:19E0|Ay takviminin]] [[pt:precomposed|önceden oluşturulmuş]] karakterlerinin ortaya çıkmasıyla, Unicode{{_}}4.0{{_}}’da kullanımdan kaldırıldı. Unicode{{_}}5.2'den beri önerilmiyor, belki de takvim bağları hantal olduğu için. ''Unicodia''nın yazarı, bağların hücreye sığacağı yazı tipini bulmakta zorluk çekmişti.</p>
       <p />
       <p>[[pt:obsolete|eski]] ile karıştırmayın.</p>
      </transl>
