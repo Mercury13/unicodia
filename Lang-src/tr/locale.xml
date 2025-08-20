@@ -31,12 +31,12 @@
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
 	<icons sort-az="sort_AZ" />
-	<num-format dec-point="." thou-point="’" thou-min-length="4" thou-min-length-dense="5">
+	<num-format dec-point="," thou-point="." thou-min-length="4" thou-min-length-dense="4">
 		<imprecise>
 			<fmt shift="0" text="{1} people" frac="never" />
-			<fmt shift="3" text="{1}k" frac="avoid" />
-			<fmt shift="6" text="{1}M" frac="prefer" />
-			<fmt shift="9" text="{1}bn" frac="prefer" />
+			<fmt shift="3" text="{1}&#160;B" frac="onedig" />
+			<fmt shift="6" text="{1}&#160;Mn" frac="prefer" />
+			<fmt shift="9" text="{1}&#160;Mr" frac="prefer" />
 		</imprecise>
 		<moreless less="{1}" more=">{1}" phase="num" />
 		<percent inverse="1" space="1" />
