@@ -82,83 +82,83 @@
     <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
     <text id="1">
      <orig>1st</orig>
-     <transl>1'inci</transl>
+     <transl>1’inci</transl>
     </text>
     <text id="2">
      <orig>2nd</orig>
-     <transl>2'nci</transl>
+     <transl>2’nci</transl>
     </text>
     <text id="3">
      <orig>3rd</orig>
-     <transl>3'üncü</transl>
+     <transl>3’üncü</transl>
     </text>
     <text id="4">
      <orig>4th</orig>
-     <transl>4'üncü</transl>
+     <transl>4’üncü</transl>
     </text>
     <text id="5">
      <orig>5th</orig>
-     <transl>5'inci</transl>
+     <transl>5’inci</transl>
     </text>
     <text id="6">
      <orig>6th</orig>
-     <transl>6'ncı</transl>
+     <transl>6’ncı</transl>
     </text>
     <text id="7">
      <orig>7th</orig>
-     <transl>7'nci</transl>
+     <transl>7’nci</transl>
     </text>
     <text id="8">
      <orig>8th</orig>
-     <transl>8'inci</transl>
+     <transl>8’inci</transl>
     </text>
     <text id="9">
      <orig>9th</orig>
-     <transl>9'uncu</transl>
+     <transl>9’uncu</transl>
     </text>
     <text id="10">
      <orig>10th</orig>
-     <transl>10'uncu</transl>
+     <transl>10’uncu</transl>
     </text>
     <text id="11">
      <orig>11th</orig>
-     <transl>11'inci</transl>
+     <transl>11’inci</transl>
     </text>
     <text id="12">
      <orig>12th</orig>
-     <transl>12'inci</transl>
+     <transl>12’inci</transl>
     </text>
     <text id="13">
      <orig>13th</orig>
-     <transl>13'üncü</transl>
+     <transl>13’üncü</transl>
     </text>
     <text id="14">
      <orig>14th</orig>
-     <transl>14'üncü</transl>
+     <transl>14’üncü</transl>
     </text>
     <text id="15">
      <orig>15th</orig>
-     <transl>15'inci</transl>
+     <transl>15’inci</transl>
     </text>
     <text id="16">
      <orig>16th</orig>
-     <transl>16'ncı</transl>
+     <transl>16’ncı</transl>
     </text>
     <text id="17">
      <orig>17th</orig>
-     <transl>17'nci</transl>
+     <transl>17’nci</transl>
     </text>
     <text id="18">
      <orig>18th</orig>
-     <transl>18'inci</transl>
+     <transl>18’inci</transl>
     </text>
     <text id="19">
      <orig>19th</orig>
-     <transl>19'uncu</transl>
+     <transl>19’uncu</transl>
     </text>
     <text id="20">
      <orig>20th</orig>
-     <transl>20'nci</transl>
+     <transl>20’nci</transl>
     </text>
    </group>
    <group id="Name">
@@ -174,7 +174,7 @@
     <text id="YBefore">
      <orig>before $</orig>
      <au-cmt>Years BC are unsupported</au-cmt>
-     <transl>$'dan önce</transl>
+     <transl>$’dan önce</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
@@ -551,7 +551,7 @@
      </text>
      <text id="Text">
       <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
-      <transl>Latin, Kiril ve diğer alfabeler soldan sağa yazılır. [[ps:Hani|CJK ideogramları]] Unicode'un en çok sayıda kısmı olduğundan, en kalabalık sınıfıdır.</transl>
+      <transl>Latin, Kiril ve diğer alfabeler soldan sağa yazılır. [[ps:Hani|CJK ideogramları]] Unicode’un en çok sayıda kısmı olduğundan, en kalabalık sınıfıdır.</transl>
      </text>
     </group>
     <group id="NSM">
@@ -619,7 +619,7 @@
        <p>[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</p>
       </orig>
       <transl>
-       <p>[[ps:Hebr|İbranice]] ve Orta Doğu'nun tarihi yazıları.</p>
+       <p>[[ps:Hebr|İbranice]] ve Orta Doğu’nun tarihi yazıları.</p>
        <p />
        <p>[[pb:AL|Arap harfleri]] Avrupa rakamlarıyla farklı davranır ve ayrı bir kategori oluşturur.</p>
       </transl>
@@ -898,7 +898,7 @@
     </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
-     <transl>, Unicode {1}'den sonra</transl>
+     <transl>, Unicode {1}’den sonra</transl>
     </text>
     <text id="Extend">
      <orig>Extended</orig>
@@ -1540,7 +1540,7 @@
      <transl>
       <p>Küçük Kiril dillerinin harfleri: Abhazca, Kürtçe ''(SSCB'de azınlık olarak)'', Komi, Mordovca, Aleutça, Azerice ''(şimdi [[ps:Latn|Latin]])'' ve Yakovlev alfabesinde Çuvaşça ''(1873-1938 yılları arasında kullanıldı)''.</p>
       <p />
-      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça "büyük başarısızlık" anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından "icat edilmiş"; ancak ilk olmadığı ortaya çıktı: Kaganov'un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya'da satılıyordu. Ondan bağımsız olarak Abhazlar, {{sm|Ҧ}} {{t|pʰ}} harfi yerine "türeyen" yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode'da bir yer kazandırdı.</p>
+      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça "büyük başarısızlık" anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından "icat edilmiş"; ancak ilk olmadığı ortaya çıktı: Kaganov'un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya'da satılıyordu. Ondan bağımsız olarak Abhazlar, {{sm|Ҧ}} {{t|pʰ}} harfi yerine "türeyen" yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode’da bir yer kazandırdı.</p>
      </transl>
     </text>
    </group>
@@ -1853,7 +1853,7 @@
      </orig>
      <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
-      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. Markos 17D3 {{sm|◌៓}} bazen bu karakter lehine [[pt:deprecated|kullanımdan kaldırılmıştı]] ve Unicode'da {{_}}{{vkhmer}} hala önerilmemektedir.</p>
+      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. Markos 17D3 {{sm|◌៓}} bazen bu karakter lehine [[pt:deprecated|kullanımdan kaldırılmıştı]] ve Unicode’da {{_}}{{vkhmer}} hala önerilmemektedir.</p>
       <p />
       <p>Geri kalanlar, ay takviminde yeni aydan dolunaya ve tekrar dolunaya kadar olan günlerin adlarıdır.</p>
      </transl>
@@ -1919,7 +1919,7 @@
       <p>Ligature ТЬ is from the new Khanty {{nspk|kca}} alphabet of 2013.</p>
      </orig>
      <transl>
-      <p>Basılı kilise kitaplarından Kiril harflerinin varyantları: Francysk Skaryna'nın İncil'inden (Prag, 1519, Ivan Fyodorov'dan önce) Kyiv-Pechersk Typicon'a (1893).</p>
+      <p>Basılı kilise kitaplarından Kiril harflerinin varyantları: Francysk Skaryna'nın İncil'inden (Prag, 1519, Ivan Fyodorov’dan önce) Kyiv-Pechersk Typicon’a (1893).</p>
       <p />
       <p>ТЬ ligatürü 2013 tarihli yeni Khanty {{nspk|kca}} alfabesinden alınmıştır.</p>
      </transl>
@@ -1941,7 +1941,7 @@
      <transl>
       <p>'‘Mtavruli’' standart Gürcü tipi ‘'Mkhedruli’'nin büyük harf biçimidir. Ana bloktaki [[pk:10A0|ana blok]] büyük harfler ‘'Asomtavruli’' olarak adlandırılır ve eski kabul edilir.</p>
       <p />
-      <p>Mtavruli vurgularda ve başlıklarda kullanılır ve uzun bir süre fontun bir çeşidi olarak kabul edilmiştir. Ancak akademisyenler 19. yüzyıl ve 20. yüzyılın başlarında Mkhedruli ve Mtavruli'nin karıştırıldığı belgeler bulmuşlardır. Ayrıca, Gürcüce yazı tipleri Mkhedruli ve Mtavruli olarak çiftler halinde gelir, bu da günlük işleri zorlaştırır ve yazı tipi değişikliği imkansızsa Gürcüce metni daha az etkileyici hale getirir. Konsorsiyum'dan bir tipograf olan Michael Everson, DRINK ME'nin Mtavruli ile yazıldığı 8 bit kodlamada bir “Alice Harikalar Diyarında” çevirisi aldı.</p>
+      <p>Mtavruli vurgularda ve başlıklarda kullanılır ve uzun bir süre fontun bir çeşidi olarak kabul edilmiştir. Ancak akademisyenler 19. yüzyıl ve 20. yüzyılın başlarında Mkhedruli ve Mtavruli’nin karıştırıldığı belgeler bulmuşlardır. Ayrıca, Gürcüce yazı tipleri Mkhedruli ve Mtavruli olarak çiftler halinde gelir, bu da günlük işleri zorlaştırır ve yazı tipi değişikliği imkansızsa Gürcüce metni daha az etkileyici hale getirir. Konsorsiyum’dan bir tipograf olan Michael Everson, DRINK ME'nin Mtavruli ile yazıldığı 8 bit kodlamada bir “Alice Harikalar Diyarında” çevirisi aldı.</p>
       <p />
       <p>Unicode artık Mkhedruli ve Mtavruli'yi küçük ve büyük harf olarak kabul ediyor, sadece diğer kullanım kurallarıyla{{-}} tüm kelime büyük harfle yazılıyor. Simgenin hemen altında, zar zor görülebilen çift çizgi, büyük harf anlamına gelen bir editoryal işarettir.</p>
      </transl>
@@ -1971,7 +1971,7 @@
      <transl>
       <p>[[ps:Deva|Devanagari]] ve diğer Hint alfabelerinde kullanılan Veda karakterleri. O dönemlerin telaffuzu modern telaffuzdan büyük ölçüde farklıydı ve çoğunlukla fonetik işaretlerdi.</p>
       <p />
-      <p>Sembollerin bir kısmı dilden dile değişir. Devanagari'deki 1CF5 kum saatine, Bengalce'de ise haça benzer. Devanagari'deki 1CF6 ise Bengalce'de dik veya ters küçük omega ω gibi, ˘ kısaltmasına benzer. Ters omeganın üzerine dik omega gibi görünen glifler bir süre Unicode'da mevcuttu ve orijinal kaynaklardan ziyade araştırmalarda daha sık bulunur.</p>
+      <p>Sembollerin bir kısmı dilden dile değişir. Devanagari'deki 1CF5 kum saatine, Bengalce'de ise haça benzer. Devanagari’deki 1CF6 ise Bengalce’de dik veya ters küçük omega ω gibi, ˘ kısaltmasına benzer. Ters omeganın üzerine dik omega gibi görünen glifler bir süre Unicode’da mevcuttu ve orijinal kaynaklardan ziyade araştırmalarda daha sık bulunur.</p>
      </transl>
     </text>
    </group>
@@ -2139,7 +2139,7 @@
      <transl>
       <p>Matematiksel, teknik ve ticari semboller harflerden türetilmiştir.</p>
       <p />
-      <p>Blackboard bold {{sm|ℕℤℚℝℂ}}, tebeşirle yazılmış bold'dan gelir. Gunning ve Rossi tarafından 1965'te yazılmış, karmaşık analiz üzerine önemli bir ders kitabıyla birlikte yayınlanmıştır.</p>
+      <p>Blackboard bold {{sm|ℕℤℚℝℂ}}, tebeşirle yazılmış bold’dan gelir. Gunning ve Rossi tarafından 1965'te yazılmış, karmaşık analiz üzerine önemli bir ders kitabıyla birlikte yayınlanmıştır.</p>
       <p />
       <p>Bir kümenin kardinalitesi için {{sm|ℵ}} karakteri Georg Cantor tarafından tanıtılmıştır.</p>
      </transl>
@@ -2249,11 +2249,11 @@
      <transl>
       <p>Optik ve manyetik mürekkep karakter tanıma, çoğunlukla pasaportlar, banka çekleri ve ulaşım biletleri gibi otomatik belge girişi için kullanılır. Barkodların aksine, sahtekarlığı azaltmak için aynı karakterler hem insanlar hem de makineler tarafından tanınır. Her iki teknoloji de özel tek aralıklı yazı tipleri kullanır. Bu yazı tipleri (bazen bozuk biçimde), siberpunk türündeki filmlerde ve video oyunlarında yaygın olarak kullanılır.</p>
       <p />
-      <p>1956'da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR'dir.</p>
+      <p>1956’da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR'dir.</p>
       <p />
-      <p>1968'de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A'yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi'nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
+      <p>1968’de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A'yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi'nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
       <p />
-      <p>Yazı tipinden bağımsız optik tanıma teknolojisi ancak 1990'larda geliştirildi. Kitapların dijitalleştirilmesi ve anketlerin işlenmesi için kullanılır ve çok daha az güvenilirdir. Dolayısıyla, makine tarafından okunabilir bir sayfaya sahip ve OCR-B yazı tipiyle yazılmış yabancı pasaportlar anakronizm değildir.</p>
+      <p>Yazı tipinden bağımsız optik tanıma teknolojisi ancak 1990’larda geliştirildi. Kitapların dijitalleştirilmesi ve anketlerin işlenmesi için kullanılır ve çok daha az güvenilirdir. Dolayısıyla, makine tarafından okunabilir bir sayfaya sahip ve OCR-B yazı tipiyle yazılmış yabancı pasaportlar anakronizm değildir.</p>
      </transl>
     </text>
    </group>
@@ -2303,11 +2303,11 @@
       <p>Part of pseudographics from legacy computers, for example 2×3 blocks, are missing here and were [[pk:1FB00|added]] only in 2020.</p>
      </orig>
      <transl>
-      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM'in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}'dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016'da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
+      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM'in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}'dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016’da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
       <p />
       <p>Sözde grafiklerde genellikle karakterler arası aralık yoktur.</p>
       <p />
-      <p>Eski bilgisayarlardan gelen sözde grafiklerin bir kısmı, örneğin 2×3 bloklar, burada eksiktir ve sadece 2020'de [[pk:1FB00|eklendi]].</p>
+      <p>Eski bilgisayarlardan gelen sözde grafiklerin bir kısmı, örneğin 2×3 bloklar, burada eksiktir ve sadece 2020’de [[pk:1FB00|eklendi]].</p>
      </transl>
     </text>
    </group>
@@ -11612,11 +11612,11 @@
       <p />
       <p>'''Yeni'''{{-}}çok yakın zamanda icat edildiği için durumu hakkında kesin bir şey söylemek mümkün değil.</p>
       <p />
-      <p>'''Yeniden Canlandırıldı'''{{-}}bir süre sessiz kaldıktan sonra tekrar kullanıma sunuldu. Yeniden Canlandırma, [[ps:Tfng|Tifinagh]]'da olduğu gibi türünü ve yazım yönünü değiştirebilir.</p>
+      <p>'''Yeniden Canlandırıldı'''{{-}}bir süre sessiz kaldıktan sonra tekrar kullanıma sunuldu. Yeniden Canlandırma, [[ps:Tfng|Tifinagh]]’da olduğu gibi türünü ve yazım yönünü değiştirebilir.</p>
       <p />
       <p>'''Ölü bir dilin yeniden canlandırılması için'''{{-}}[[ps:Osge|Osage]] sadece (Latince yazmak kötü sonuç verdi).</p>
       <p />
-      <p>'''Deneysel'''{{-}}yazımsal bir reform yapma girişiminin başarısızlığı. Unicode'da bulunan tüm örnekler üç kategoriye ayrılıyor: 1){{_}}İngilizce: karmaşık tarihsel yazım; 2){{_}}Arnavutça: hem Türklerden gizlilik hem de kültürel özerklik arzusu 1800 civarında mevcuttu; 3){{_}}20. yüzyılda Afrika'nın kurtuluşuyla ilgili.</p>
+      <p>'''Deneysel'''{{-}}yazımsal bir reform yapma girişiminin başarısızlığı. Unicode’da bulunan tüm örnekler üç kategoriye ayrılıyor: 1){{_}}İngilizce: karmaşık tarihsel yazım; 2){{_}}Arnavutça: hem Türklerden gizlilik hem de kültürel özerklik arzusu 1800 civarında mevcuttu; 3){{_}}20. yüzyılda Afrika’nın kurtuluşuyla ilgili.</p>
      </transl>
     </text>
    </group>
