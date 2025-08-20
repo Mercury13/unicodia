@@ -9,6 +9,7 @@
 	</alpha-sort>
 	<alpha-fixup />
 	<ellipsis text="…">
+		<blk start="20D0"  /><!-- Umlauts for symbols -->
 		<blk start="2E80"  /><!-- CJK radicals supplement -->
 		<blk start="30A0"  /><!-- Katakana -->
 		<blk start="31F0"  /><!-- Katakana phonetic -->

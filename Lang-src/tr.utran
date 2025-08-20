@@ -2054,7 +2054,7 @@
    <group id="2000">
     <text id="Name">
      <orig>Punctuation — general</orig>
-     <transl>Noktalama işaretleri — genel</transl>
+     <transl>Noktalama işaretleri - genel</transl>
     </text>
     <text id="Text">
      <orig>
@@ -2480,7 +2480,7 @@
    <group id="2E00">
     <text id="Name">
      <orig>Punctuation — supplemental</orig>
-     <transl>Noktalama işaretleri — ek</transl>
+     <transl>Noktalama işaretleri - ek</transl>
     </text>
     <text id="Text">
      <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
@@ -3493,7 +3493,7 @@
    <group id="10B40">
     <text id="Name">
      <orig>Parthian — inscriptional</orig>
-     <transl>Parthian — yazıt</transl>
+     <transl>Parthian - yazıt</transl>
     </text>
    </group>
    <group id="10B60">
@@ -3818,13 +3818,13 @@
    <group id="11D00">
     <text id="Name">
      <orig>Gondi — Masaram script</orig>
-     <transl>Gondi — Masaram betiği</transl>
+     <transl>Gondi - Masaram betiği</transl>
     </text>
    </group>
    <group id="11D60">
     <text id="Name">
      <orig>Gondi — Gunjala</orig>
-     <transl>Gondi — Gunjala</transl>
+     <transl>Gondi - Gunjala</transl>
     </text>
    </group>
    <group id="11DB0">
@@ -4526,7 +4526,7 @@
    <group id="1EC70">
     <text id="Name">
      <orig>Siyaq numbers — Indic</orig>
-     <transl>Siyak sayıları — Hintçe</transl>
+     <transl>Siyak sayıları - Hintçe</transl>
     </text>
     <text id="Text">
      <orig>
@@ -4544,7 +4544,7 @@
    <group id="1ED00">
     <text id="Name">
      <orig>Siyaq numbers — Ottoman</orig>
-     <transl>Siyak sayıları — Osmanlı</transl>
+     <transl>Siyak sayıları - Osmanlı</transl>
     </text>
     <text id="Text">
      <orig>
