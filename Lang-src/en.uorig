@@ -3217,7 +3217,10 @@
       <p />
       <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
      </orig>
-     <au-cmt>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</au-cmt>
+     <au-cmt>
+      <p>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</p>
+      <p>As a fail-safe, use “priznaki”.</p>
+     </au-cmt>
     </text>
    </group>
    <group id="1D000">
