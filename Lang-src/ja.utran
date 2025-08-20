@@ -14579,7 +14579,7 @@
      </text>
      <text id="2">
       <orig>{1}–{2} kbytes</orig>
-      <transl>{1}–{2} kバイト</transl>
+      <transl>{1}〜{2} kバイト</transl>
      </text>
     </group>
     <group id="Color">
