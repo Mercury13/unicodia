@@ -2723,7 +2723,7 @@
       <p>The first of ideographs means “hill, mound, grave”, and currently replaced with character {{sm|丘}}. The second is an obsolete ideograph that means in different sources “lick”, “woven mat”, “bamboo sheath”, “unilluminated”.</p>
      </orig>
      <transl>
-      <p>{{n|6582}} nadir [[ps:Hani|Çince ideogram]]. 2020'de on tane daha eklenerek blok tamamen dolduruldu.</p>
+      <p>{{n|6582}} nadir [[ps:Hani|Çince ideogram]]. 2020’de on tane daha eklenerek blok tamamen dolduruldu.</p>
       <p />
       <p>İdeogramların ilki "tepe, höyük, mezar" anlamına gelir ve şu anda {{sm|丘}} karakteriyle değiştirilmiştir. İkincisi ise farklı kaynaklarda "yalamak", "dokuma hasır", "bambu kılıf", "aydınlatılmamış" anlamına gelen eski bir ideogramdır.</p>
      </transl>
@@ -3301,7 +3301,7 @@
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
      </orig>
      <transl>
-      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada "ödünç alınmış" anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]’dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800'lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
+      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada "ödünç alınmış" anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]’dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800’lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
       <p />
       <p>Bu standart dışı kullanım nedeniyle, bu sayılar Kıpti’nin bir varyantı olarak değil, ayrı bir blok olarak kodlanmıştır.</p>
       <p />
@@ -4103,9 +4103,9 @@
       <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
      </orig>
      <transl>
-      <p>2020'de dokuz karakter [[pt:unification|ayrıştırıldı]]. Başka bir deyişle: dokuzu da birinin homografı. Örneğin, "pair" kelimesi aynı yerde (17134) kaldı ve "foolish" homografı 18D00 olarak yeni bir numara aldı.</p>
+      <p>2020’de dokuz karakter [[pt:unification|ayrıştırıldı]]. Başka bir deyişle: dokuzu da birinin homografı. Örneğin, "pair" kelimesi aynı yerde (17134) kaldı ve "foolish" homografı 18D00 olarak yeni bir numara aldı.</p>
       <p />
-      <p>2021'de Çin'de bir Tangut sözlüğü piyasaya sürülerek yeni ideogramların kodlanması hızlandırıldı.</p>
+      <p>2021’de Çin’de bir Tangut sözlüğü piyasaya sürülerek yeni ideogramların kodlanması hızlandırıldı.</p>
      </transl>
     </text>
    </group>
@@ -10342,7 +10342,7 @@
    <group id="birman">
     <text id="Name">
      <orig>Ilya Birman’s typography layout</orig>
-     <transl>Ilya Birman'ın tipografi düzeni</transl>
+     <transl>Ilya Birman’ın tipografi düzeni</transl>
     </text>
     <text id="Text">
      <orig>
@@ -10365,7 +10365,7 @@
       <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
      </orig>
      <transl>
-      <p>İngilizce (ABD) ve Rusça olmak üzere iki dilde mevcuttur, özel tuşları aynıdır. Windows'ta {{k|AltGr}}, MacOS'ta Alt kullanarak aşağıdaki karakterleri yazın:</p>
+      <p>İngilizce (ABD) ve Rusça olmak üzere iki dilde mevcuttur, özel tuşları aynıdır. Windows’ta {{k|AltGr}}, MacOS’ta Alt kullanarak aşağıdaki karakterleri yazın:</p>
       <p />
       <p>* Avrupa harfleri ve noktalama işaretleri ó ò ö ŏ ǒ ő õ ç ß ¡ ¿</p>
       <p>* 1918 öncesi Kiril alfabesi ѣ і ѵ ѳ</p>
