@@ -82,83 +82,83 @@
     <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
     <text id="1">
      <orig>1st</orig>
-     <transl>1'inci</transl>
+     <transl>1’inci</transl>
     </text>
     <text id="2">
      <orig>2nd</orig>
-     <transl>2'nci</transl>
+     <transl>2’nci</transl>
     </text>
     <text id="3">
      <orig>3rd</orig>
-     <transl>3'üncü</transl>
+     <transl>3’üncü</transl>
     </text>
     <text id="4">
      <orig>4th</orig>
-     <transl>4'üncü</transl>
+     <transl>4’üncü</transl>
     </text>
     <text id="5">
      <orig>5th</orig>
-     <transl>5'inci</transl>
+     <transl>5’inci</transl>
     </text>
     <text id="6">
      <orig>6th</orig>
-     <transl>6'ncı</transl>
+     <transl>6’ncı</transl>
     </text>
     <text id="7">
      <orig>7th</orig>
-     <transl>7'nci</transl>
+     <transl>7’nci</transl>
     </text>
     <text id="8">
      <orig>8th</orig>
-     <transl>8'inci</transl>
+     <transl>8’inci</transl>
     </text>
     <text id="9">
      <orig>9th</orig>
-     <transl>9'uncu</transl>
+     <transl>9’uncu</transl>
     </text>
     <text id="10">
      <orig>10th</orig>
-     <transl>10'uncu</transl>
+     <transl>10’uncu</transl>
     </text>
     <text id="11">
      <orig>11th</orig>
-     <transl>11'inci</transl>
+     <transl>11’inci</transl>
     </text>
     <text id="12">
      <orig>12th</orig>
-     <transl>12'inci</transl>
+     <transl>12’inci</transl>
     </text>
     <text id="13">
      <orig>13th</orig>
-     <transl>13'üncü</transl>
+     <transl>13’üncü</transl>
     </text>
     <text id="14">
      <orig>14th</orig>
-     <transl>14'üncü</transl>
+     <transl>14’üncü</transl>
     </text>
     <text id="15">
      <orig>15th</orig>
-     <transl>15'inci</transl>
+     <transl>15’inci</transl>
     </text>
     <text id="16">
      <orig>16th</orig>
-     <transl>16'ncı</transl>
+     <transl>16’ncı</transl>
     </text>
     <text id="17">
      <orig>17th</orig>
-     <transl>17'nci</transl>
+     <transl>17’nci</transl>
     </text>
     <text id="18">
      <orig>18th</orig>
-     <transl>18'inci</transl>
+     <transl>18’inci</transl>
     </text>
     <text id="19">
      <orig>19th</orig>
-     <transl>19'uncu</transl>
+     <transl>19’uncu</transl>
     </text>
     <text id="20">
      <orig>20th</orig>
-     <transl>20'nci</transl>
+     <transl>20’nci</transl>
     </text>
    </group>
    <group id="Name">
@@ -174,7 +174,7 @@
     <text id="YBefore">
      <orig>before $</orig>
      <au-cmt>Years BC are unsupported</au-cmt>
-     <transl>$'dan önce</transl>
+     <transl>$’dan önce</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
@@ -551,7 +551,7 @@
      </text>
      <text id="Text">
       <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
-      <transl>Latin, Kiril ve diğer alfabeler soldan sağa yazılır. [[ps:Hani|CJK ideogramları]] Unicode'un en çok sayıda kısmı olduğundan, en kalabalık sınıfıdır.</transl>
+      <transl>Latin, Kiril ve diğer alfabeler soldan sağa yazılır. [[ps:Hani|CJK ideogramları]] Unicode’un en çok sayıda kısmı olduğundan, en kalabalık sınıfıdır.</transl>
      </text>
     </group>
     <group id="NSM">
@@ -619,7 +619,7 @@
        <p>[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</p>
       </orig>
       <transl>
-       <p>[[ps:Hebr|İbranice]] ve Orta Doğu'nun tarihi yazıları.</p>
+       <p>[[ps:Hebr|İbranice]] ve Orta Doğu’nun tarihi yazıları.</p>
        <p />
        <p>[[pb:AL|Arap harfleri]] Avrupa rakamlarıyla farklı davranır ve ayrı bir kategori oluşturur.</p>
       </transl>
@@ -898,7 +898,7 @@
     </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
-     <transl>, Unicode {1}'den sonra</transl>
+     <transl>, Unicode {1}’den sonra</transl>
     </text>
     <text id="Extend">
      <orig>Extended</orig>
@@ -1160,7 +1160,7 @@
     <text id="QtyIndia">
      <orig>{1} in India as of {2}</orig>
      <au-cmt>Test: Nag</au-cmt>
-     <transl>{2} itibarıyla Hindistan'da {1}</transl>
+     <transl>{2} itibarıyla Hindistan’da {1}</transl>
     </text>
     <text id="QtyTotal">
      <orig>total {1} as of {2}</orig>
@@ -1535,9 +1535,9 @@
       <p>Contains a funny letter {{sm|Ԥ}} (looks like the word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him, Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
      </orig>
      <transl>
-      <p>Küçük Kiril dillerinin harfleri: Abhazca, Kürtçe ''(SSCB'de azınlık olarak)'', Komi, Mordovca, Aleutça, Azerice ''(şimdi [[ps:Latn|Latin]])'' ve Yakovlev alfabesinde Çuvaşça ''(1873-1938 yılları arasında kullanıldı)''.</p>
+      <p>Küçük Kiril dillerinin harfleri: Abhazca, Kürtçe ''(SSCB’de azınlık olarak)'', Komi, Mordovca, Aleutça, Azerice ''(şimdi [[ps:Latn|Latin]])'' ve Yakovlev alfabesinde Çuvaşça ''(1873-1938 yılları arasında kullanıldı)''.</p>
       <p />
-      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça "büyük başarısızlık" anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından "icat edilmiş"; ancak ilk olmadığı ortaya çıktı: Kaganov'un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya'da satılıyordu. Ondan bağımsız olarak Abhazlar, {{sm|Ҧ}} {{t|pʰ}} harfi yerine "türeyen" yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode'da bir yer kazandırdı.</p>
+      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça "büyük başarısızlık" anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından "icat edilmiş"; ancak ilk olmadığı ortaya çıktı: Kaganov'un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya’da satılıyordu. Ondan bağımsız olarak Abhazlar, {{sm|Ҧ}} {{t|pʰ}} harfi yerine "türeyen" yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode’da bir yer kazandırdı.</p>
      </transl>
     </text>
    </group>
@@ -1850,7 +1850,7 @@
      </orig>
      <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
-      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. 17D3 {{sm|◌៓}} işareti, bazen bu karakter lehine (yararına) [[pt:deprecated|kullanımdan kaldırıldı]] ve Unicode{{_}}{{vkhmer}}'de hala önerilmemektedir.</p>
+      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. 17D3 {{sm|◌៓}} işareti, bazen bu karakter lehine (yararına) [[pt:deprecated|kullanımdan kaldırıldı]] ve Unicode{{_}}{{vkhmer}}’de hala önerilmemektedir.</p>
       <p />
       <p>Geri kalanlar, ay takviminde yeni aydan dolunaya ve tekrar dolunaya kadar olan günlerin adlarıdır.</p>
      </transl>
@@ -1916,7 +1916,7 @@
       <p>Ligature ТЬ is from the new Khanty {{nspk|kca}} alphabet of 2013.</p>
      </orig>
      <transl>
-      <p>Basılı kilise kitaplarından Kiril harflerinin varyantları: Francysk Skaryna'nın İncil'inden (Prag, 1519, Ivan Fyodorov'dan önce) Kyiv-Pechersk Typicon'a (1893).</p>
+      <p>Basılı kilise kitaplarından Kiril harflerinin varyantları: Francysk Skaryna'nın İncil'inden (Prag, 1519, Ivan Fyodorov’dan önce) Kyiv-Pechersk Typicon’a (1893).</p>
       <p />
       <p>ТЬ ligatürü 2013 tarihli yeni Khanty {{nspk|kca}} alfabesinden alınmıştır.</p>
      </transl>
@@ -1938,7 +1938,7 @@
      <transl>
       <p>''Mtavruli'' standart Gürcü tipi ''Mkhedruli''nin büyük harf biçimidir. Ana bloktaki [[pk:10A0|ana blok]] büyük harfler ''Asomtavruli'' olarak adlandırılır ve eski kabul edilir.</p>
       <p />
-      <p>Mtavruli vurgularda ve başlıklarda kullanılır ve uzun bir süre fontun bir çeşidi olarak kabul edilmiştir. Ancak akademisyenler 19. yüzyıl ve 20. yüzyılın başlarında Mkhedruli ve Mtavruli'nin karıştırıldığı belgeler bulmuşlardır. Ayrıca, Gürcüce yazı tipleri Mkhedruli ve Mtavruli olarak çiftler halinde gelir, bu da günlük işleri zorlaştırır ve yazı tipi değişikliği imkansızsa Gürcüce metni daha az etkileyici hale getirir. Konsorsiyum'dan bir tipograf olan Michael Everson, DRINK ME'nin Mtavruli ile yazıldığı 8 bit kodlamada bir “Alice Harikalar Diyarında” çevirisi aldı.</p>
+      <p>Mtavruli vurgularda ve başlıklarda kullanılır ve uzun bir süre fontun bir çeşidi olarak kabul edilmiştir. Ancak akademisyenler 19. yüzyıl ve 20. yüzyılın başlarında Mkhedruli ve Mtavruli’nin karıştırıldığı belgeler bulmuşlardır. Ayrıca, Gürcüce yazı tipleri Mkhedruli ve Mtavruli olarak çiftler halinde gelir, bu da günlük işleri zorlaştırır ve yazı tipi değişikliği imkansızsa Gürcüce metni daha az etkileyici hale getirir. Konsorsiyum’dan bir tipograf olan Michael Everson, DRINK ME'nin Mtavruli ile yazıldığı 8 bit kodlamada bir “Alice Harikalar Diyarında” çevirisi aldı.</p>
       <p />
       <p>Unicode artık Mkhedruli ve Mtavruli'yi küçük ve büyük harf olarak kabul ediyor, sadece diğer kullanım kurallarıyla{{-}} tüm kelime büyük harfle yazılıyor. Simgenin hemen altında, zar zor görülebilen çift çizgi, büyük harf anlamına gelen bir editoryal işarettir.</p>
      </transl>
@@ -1968,7 +1968,7 @@
      <transl>
       <p>[[ps:Deva|Devanagari]] ve diğer Hint alfabelerinde kullanılan Veda karakterleri. O dönemlerin telaffuzu modern telaffuzdan büyük ölçüde farklıydı ve çoğunlukla fonetik işaretlerdi.</p>
       <p />
-      <p>Sembollerin bir kısmı dilden dile değişir. Devanagari'deki 1CF5 kum saatine, Bengalce'de ise haça benzer. Devanagari'deki 1CF6 ise Bengalce'de dik veya ters küçük omega ω gibi, ˘ kısaltmasına benzer. Ters omeganın üzerine dik omega gibi görünen glifler bir süre Unicode'da mevcuttu ve orijinal kaynaklardan ziyade araştırmalarda daha sık bulunur.</p>
+      <p>Sembollerin bir kısmı dilden dile değişir. Devanagari'deki 1CF5 kum saatine, Bengalce'de ise haça benzer. Devanagari’deki 1CF6 ise Bengalce’de dik veya ters küçük omega ω gibi, ˘ kısaltmasına benzer. Ters omeganın üzerine dik omega gibi görünen glifler bir süre Unicode’da mevcuttu ve orijinal kaynaklardan ziyade araştırmalarda daha sık bulunur.</p>
      </transl>
     </text>
    </group>
@@ -2136,7 +2136,7 @@
      <transl>
       <p>Matematiksel, teknik ve ticari semboller harflerden türetilmiştir.</p>
       <p />
-      <p>Blackboard bold {{sm|ℕℤℚℝℂ}}, tebeşirle yazılmış bold'dan gelir. Gunning ve Rossi tarafından 1965'te yazılmış, karmaşık analiz üzerine önemli bir ders kitabıyla birlikte yayınlanmıştır.</p>
+      <p>Blackboard bold {{sm|ℕℤℚℝℂ}}, tebeşirle yazılmış bold’dan gelir. Gunning ve Rossi tarafından 1965'te yazılmış, karmaşık analiz üzerine önemli bir ders kitabıyla birlikte yayınlanmıştır.</p>
       <p />
       <p>Bir kümenin kardinalitesi için {{sm|ℵ}} karakteri Georg Cantor tarafından tanıtılmıştır.</p>
      </transl>
@@ -2246,11 +2246,11 @@
      <transl>
       <p>Optik ve manyetik mürekkep karakter tanıma, çoğunlukla pasaportlar, banka çekleri ve ulaşım biletleri gibi otomatik belge girişi için kullanılır. Barkodların aksine, sahtekarlığı azaltmak için aynı karakterler hem insanlar hem de makineler tarafından tanınır. Her iki teknoloji de özel tek aralıklı yazı tipleri kullanır. Bu yazı tipleri (bazen bozuk biçimde), siberpunk türündeki filmlerde ve video oyunlarında yaygın olarak kullanılır.</p>
       <p />
-      <p>1956'da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR'dir.</p>
+      <p>1956’da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR'dir.</p>
       <p />
-      <p>1968'de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A'yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi'nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
+      <p>1968’de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A'yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi'nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
       <p />
-      <p>Yazı tipinden bağımsız optik tanıma teknolojisi ancak 1990'larda geliştirildi. Kitapların dijitalleştirilmesi ve anketlerin işlenmesi için kullanılır ve çok daha az güvenilirdir. Dolayısıyla, makine tarafından okunabilir bir sayfaya sahip ve OCR-B yazı tipiyle yazılmış yabancı pasaportlar anakronizm değildir.</p>
+      <p>Yazı tipinden bağımsız optik tanıma teknolojisi ancak 1990’larda geliştirildi. Kitapların dijitalleştirilmesi ve anketlerin işlenmesi için kullanılır ve çok daha az güvenilirdir. Dolayısıyla, makine tarafından okunabilir bir sayfaya sahip ve OCR-B yazı tipiyle yazılmış yabancı pasaportlar anakronizm değildir.</p>
      </transl>
     </text>
    </group>
@@ -2300,11 +2300,11 @@
       <p>Part of pseudographics from legacy computers, for example 2×3 blocks, are missing here and were [[pk:1FB00|added]] only in 2020.</p>
      </orig>
      <transl>
-      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM'in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}'dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016'da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
+      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM'in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}’dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016’da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
       <p />
       <p>Sözde grafiklerde genellikle karakterler arası aralık yoktur.</p>
       <p />
-      <p>Eski bilgisayarlardan gelen sözde grafiklerin bir kısmı, örneğin 2×3 bloklar, burada eksiktir ve sadece 2020'de [[pk:1FB00|eklendi]].</p>
+      <p>Eski bilgisayarlardan gelen sözde grafiklerin bir kısmı, örneğin 2×3 bloklar, burada eksiktir ve sadece 2020’de [[pk:1FB00|eklendi]].</p>
      </transl>
     </text>
    </group>
@@ -2315,7 +2315,7 @@
     </text>
     <text id="Text">
      <orig>Geometric shapes are used for button marking, rough drawing of user interfaces. For instance, four buttons of ''Sony Playstation'' {{sm|🞩○△□}}{{-}}three of them are taken from this block. Character {{sm|◌}} is used in Unicode for showcasing [[pt:combining|combining]] marks.</orig>
-     <transl>Geometrik şekiller, düğme işaretleme ve kullanıcı arayüzlerinin kabataslak çizimleri için kullanılır. Örneğin, ''Sony Playstation''ın dört düğmesi {{sm|🞩○△□}}{{-}}bunlardan üçü bu bloktan alınmıştır. {{sm|◌}} karakteri, Unicode'da [[pt:combining|birleştirme]] işaretlerini göstermek için kullanılır.</transl>
+     <transl>Geometrik şekiller, düğme işaretleme ve kullanıcı arayüzlerinin kabataslak çizimleri için kullanılır. Örneğin, ''Sony Playstation''’ın dört düğmesi {{sm|🞩○△□}}{{-}}bunlardan üçü bu bloktan alınmıştır. {{sm|◌}} karakteri, Unicode’da [[pt:combining|birleştirme]] işaretlerini göstermek için kullanılır.</transl>
     </text>
    </group>
    <group id="2600">
@@ -2349,7 +2349,7 @@
    <group id="27C0">
     <text id="Text">
      <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
-     <transl>Geometri, biçimsel mantık, program doğrulama, veri tabanı teorisi ve matematiğin diğer alanlarında kullanılan çeşitli karakterler. Ayrıca Batı'da uzun bölme işareti olarak da kullanılır (eski SSCB'de çoğunlukla T harfi veya düz L kullanılır).</transl>
+     <transl>Geometri, biçimsel mantık, program doğrulama, veri tabanı teorisi ve matematiğin diğer alanlarında kullanılan çeşitli karakterler. Ayrıca Batı’da uzun bölme işareti olarak da kullanılır (eski SSCB’de çoğunlukla T harfi veya düz L kullanılır).</transl>
     </text>
    </group>
    <group id="27F0">
@@ -2461,9 +2461,9 @@
      </orig>
      <transl>
       <p>Diller için Ethiopic alfabesi:</p>
-      <p>* Mekan: Nil-Sahra ailesi, {{nspk1|mym}}, 2009'dan beri [[ps:Latn|Latin]]'de;</p>
-      <p>* Blin (=Bilen): Cushitic ailesi, {{nspk1|byn}}, 1990'lardan beri Latin'de;</p>
-      <p>* Bank: Omotik ailesi, {{nspk1|bcq}}, 2008'den beri Latin'de;</p>
+      <p>* Mekan: Nil-Sahra ailesi, {{nspk1|mym}}, 2009’dan beri [[ps:Latn|Latin]]'de;</p>
+      <p>* Blin (=Bilen): Cushitic ailesi, {{nspk1|byn}}, 1990’lardan beri Latin'de;</p>
+      <p>* Bank: Omotik ailesi, {{nspk1|bcq}}, 2008’den beri Latin'de;</p>
       <p>* Sebat Bet: Etiyosemitik dal, {{nspk1|sgw}}.</p>
      </transl>
     </text>
@@ -2481,7 +2481,7 @@
     </text>
     <text id="Text">
      <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
-     <transl>Özel noktalama işaretleri: Yeni Ahit metinleri, antik Yunan papirüslerindeki karakterler, Alman sözlük işaretleri, Typicon'daki karakterler (15. yüzyıl Ortodoks ibadet tüzüğü) ve daha fazlası.</transl>
+     <transl>Özel noktalama işaretleri: Yeni Ahit metinleri, antik Yunan papirüslerindeki karakterler, Alman sözlük işaretleri, Typicon’daki karakterler (15. yüzyıl Ortodoks ibadet tüzüğü) ve daha fazlası.</transl>
     </text>
    </group>
    <group id="2E80">
@@ -2555,14 +2555,14 @@
       <p>Ideographic variation indicator 303E has no special meaning in Unicode, and was encoded for compatibility with two-byte GBK encoding used in China.</p>
      </orig>
      <transl>
-      <p>[[pt:cjk|CJK]]'da kullanılan noktalama işaretleri ve diğer karakterler:</p>
+      <p>[[pt:cjk|CJK]]’da kullanılan noktalama işaretleri ve diğer karakterler:</p>
       <p>* İdeogram genelinde [[pt:space|boşluk]].</p>
-      <p>* CJK aynı ideogramı üst üste iki kez yazmaz ve gerekirse yatay ve dikey metinde, ideogramlarda ve kana'da değişen yineleme işareti yazar. (Günümüzde Çinliler basılı metinlerde tekrarlar, ancak yazıda yine de yineleme işareti kullanırlar.)</p>
+      <p>* CJK aynı ideogramı üst üste iki kez yazmaz ve gerekirse yatay ve dikey metinde, ideogramlarda ve kana’da değişen yineleme işareti yazar. (Günümüzde Çinliler basılı metinlerde tekrarlar, ancak yazıda yine de yineleme işareti kullanırlar.)</p>
       <p>* Bazı Japon amblemleri.</p>
       <p>* Japonca parantezler ve tırnak işaretleri.</p>
       <p>* Ditto işareti —//— listelerimizde yaygın olarak kullanılır, sadece ideografik biçimde.</p>
       <p />
-      <p>İdeografik varyasyon göstergesi 303E'nin Unicode'da özel bir anlamı yoktur ve Çin'de kullanılan iki baytlık GBK kodlamasıyla uyumluluk için kodlanmıştır.</p>
+      <p>İdeografik varyasyon göstergesi 303E'nin Unicode’da özel bir anlamı yoktur ve Çin’de kullanılan iki baytlık GBK kodlamasıyla uyumluluk için kodlanmıştır.</p>
      </transl>
     </text>
    </group>
@@ -2610,9 +2610,9 @@
       <p>This block contains one sign for merged reading and proper names (vertical line), and fifteen signs of reading order.</p>
      </orig>
      <transl>
-      <p>Kanbun (kelimenin tam anlamıyla ''Han yazısı''), [[ps:Hani|Çince]]'ye dayanan Orta Çağ Japonya'sında kullanılan bir yazı dilidir. Çinliler "özne-fiil-nesne" der ve Japonlar "özne-nesne-fiil" kullanır, bu nedenle metin yazım sırasına göre{{_}}okunmazdı{{_}}ve ''kaeriten'' işaretleri icat edildi. Bu işaretler genellikle ideogramlardan daha küçüktür.</p>
+      <p>Kanbun (kelimenin tam anlamıyla ''Han yazısı''), [[ps:Hani|Çince]]’ye dayanan Orta Çağ Japonya’sında kullanılan bir yazı dilidir. Çinliler "özne-fiil-nesne" der ve Japonlar "özne-nesne-fiil" kullanır, bu nedenle metin yazım sırasına göre{{_}}okunmazdı{{_}}ve ''kaeriten'' işaretleri icat edildi. Bu işaretler genellikle ideogramlardan daha küçüktür.</p>
       <p />
-      <p>Kanbun'un kaeriten dışında başka karakterleri de vardı: kelimelerin çekimi, noktalama işaretleri, Japonca'da ideogramın ''(kunyomi)'' şeklinde okunması, Çince'deki ''(onyomi)''nin aksine...</p>
+      <p>Kanbun’un kaeriten dışında başka karakterleri de vardı: kelimelerin çekimi, noktalama işaretleri, Japonca’da ideogramın ''(kunyomi)'' şeklinde okunması, Çince’deki ''(onyomi)''nin aksine...</p>
       <p />
       <p>Meiji Modernizasyonu sırasında (19. yüzyılın sonları) Kanbun kaldırıldı. Modern Japon okullarında hâlâ öğretiliyor, ancak{{_}}yeni metinler yazılmıyor.</p>
       <p />
@@ -2877,7 +2877,7 @@
     </text>
     <text id="Text">
      <orig>Chanting from Samaveda (book of religious songs), variants of ''candrabindu'' sign (nasal vowel), editorial marks, religious symbols, vowel “ay” invented by Europeans for small non-written languages of India.</orig>
-     <transl>Samaveda'dan (dini şarkılar kitabı) ilahiler, ''candrabindu'' işaretinin (burun ünlüsü) çeşitleri, editoryal işaretler, dini semboller, Avrupalıların Hindistan'ın küçük yazılı olmayan dilleri için icat ettiği ''ay'' ünlüsü.</transl>
+     <transl>Samaveda’dan (dini şarkılar kitabı) ilahiler, ''candrabindu'' işaretinin (burun ünlüsü) çeşitleri, editoryal işaretler, dini semboller, Avrupalıların Hindistan’ın küçük yazılı olmayan dilleri için icat ettiği ''ay'' ünlüsü.</transl>
     </text>
    </group>
    <group id="A900">
@@ -2998,7 +2998,7 @@
      <transl>
       <p>[[pt:precomposed|Önceden oluşturulmuş]] Hangul heceleri, özellikle diğer kodlamalarla uyumluluk için.</p>
       <p />
-      <p>Koreceyi Unicode'a eklemek zordu. Unicode{{_}}1.0'da blok 3400…3D2D'ydi ([[ps:Hani|Han ideogramları]] artık mevcut). Unicode{{_}}2.0'da (1996), hâlâ çok fazla Korece Unicode metni kalmaması umuduyla blok son yere konuldu. Bu durum "büyük Kore karmaşası" olarak adlandırıldı. Buna karşılık Konsorsiyum, ana [[pt:stability|istikrar]] garantisini verdi: tek bir karakter bile hareket etmeyecek veya kaybolmayacak.</p>
+      <p>Koreceyi Unicode’a eklemek zordu. Unicode{{_}}1.0’da blok 3400…3D2D’ydi ([[ps:Hani|Han ideogramları]] artık mevcut). Unicode{{_}}2.0’da (1996), hâlâ çok fazla Korece Unicode metni kalmaması umuduyla blok son yere konuldu. Bu durum "büyük Kore karmaşası" olarak adlandırıldı. Buna karşılık Konsorsiyum, ana [[pt:stability|istikrar]] garantisini verdi: tek bir karakter bile hareket etmeyecek veya kaybolmayacak.</p>
      </transl>
     </text>
    </group>
@@ -3111,7 +3111,7 @@
     </text>
     <text id="Text">
      <orig>Characters for vertical [[pt:cjk|CJK]] writing, mostly for compatibility with existing encodings. Particularly with Chinese encoding CNS{{_}}11643{{-}}hence name in Unicode 1.0, ''CNS 11643 Compatibility''.</orig>
-     <transl>Dikey [[pt:cjk|CJK]] yazımına yönelik karakterler, çoğunlukla mevcut kodlamalarla uyumluluk için. Özellikle Çince kodlamada CNS{{_}}11643{{-}}bu nedenle Unicode 1.0'daki adı ''CNS 11643 Uyumluluğu''dur.</transl>
+     <transl>Dikey [[pt:cjk|CJK]] yazımına yönelik karakterler, çoğunlukla mevcut kodlamalarla uyumluluk için. Özellikle Çince kodlamada CNS{{_}}11643{{-}}bu nedenle Unicode 1.0’daki adı ''CNS 11643 Uyumluluğu''dur.</transl>
     </text>
    </group>
    <group id="FE50">
@@ -3152,7 +3152,7 @@
       <p>This block contains “wrong” characters that take half of a cell instead of the full one, and vice-versa.</p>
      </orig>
      <transl>
-      <p>CJK'da bir ideogram geleneksel olarak ızgaranın tüm hücresini kaplarken, bir Avrupa harfi hücrenin yarısını kaplar. Bu nedenle, kötü seçilmiş yazı tiplerine sahip ucuz Çin mallarındaki metinlerin komik stili: Rus internetinde "Atletizm" tabanlıkları meşhur oldu.</p>
+      <p>CJK’da bir ideogram geleneksel olarak ızgaranın tüm hücresini kaplarken, bir Avrupa harfi hücrenin yarısını kaplar. Bu nedenle, kötü seçilmiş yazı tiplerine sahip ucuz Çin mallarındaki metinlerin komik stili: Rus internetinde "Atletizm" tabanlıkları meşhur oldu.</p>
       <p />
       <p>Bu blok, bir hücrenin tamamını değil yarısını kaplayan "yanlış" karakterler içeriyor ve bunun tersi de geçerli.</p>
      </transl>
@@ -3230,13 +3230,13 @@
       <p>* Χ = {{n|1000}}, χίλιοι</p>
       <p>* Μ = {{n|10000}}, μύριοι</p>
       <p />
-      <p>Π ve 10/100/{{n|1000}}…'den oluşan karakterler 50, 500 vb. için kullanıldı.</p>
+      <p>Π ve 10/100/{{n|1000}}…’den oluşan karakterler 50, 500 vb. için kullanıldı.</p>
       <p />
       <p>Daha sonra Attic sistemi [[ps:Grek|İyon]] (Α=1, Β=2, ..., Ι=10, Κ=20, ..., Ρ=100, Σ=200...) ile değiştirildi, ancak kültürel değişim Etrüskleri etkiledi ve bu da Roma rakamlarının ortaya çıkmasına yol açtı.</p>
       <p />
       <p>Bu blok aynı zamanda Antik Yunan ölçü birimlerinin sembollerini de içermektedir.</p>
       <p />
-      <p>Rus alkoliklerin bir litrelik şişe için kullandığı komik kelime ''Litra'' aslında litre ile ilişkilidir. Antik Yunanistan'da ''litra'' bir madeni para ve ağırlık birimiydi. Fransa'da ''litron'' kuru hacim ölçüsüydü, dolayısıyla ''litre''.</p>
+      <p>Rus alkoliklerin bir litrelik şişe için kullandığı komik kelime ''Litra'' aslında litre ile ilişkilidir. Antik Yunanistan’da ''litra'' bir madeni para ve ağırlık birimiydi. Fransa'da ''litron'' kuru hacim ölçüsüydü, dolayısıyla ''litre''.</p>
      </transl>
     </text>
    </group>
@@ -3298,9 +3298,9 @@
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
      </orig>
      <transl>
-      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada "ödünç alınmış" anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]'dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800'lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
+      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada "ödünç alınmış" anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]’dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800'lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
       <p />
-      <p>Bu standart dışı kullanım nedeniyle, bu sayılar Kıpti'nin bir varyantı olarak değil, ayrı bir blok olarak kodlanmıştır.</p>
+      <p>Bu standart dışı kullanım nedeniyle, bu sayılar Kıpti’nin bir varyantı olarak değil, ayrı bir blok olarak kodlanmıştır.</p>
       <p />
       <p>Karakter örneklerinde Unicode tablolarıyla büyük bir fark göreceksiniz: Antik yazılar konusunda uzman olan ''Anshuman Pandey'' eski mürekkep sembollerini çizdi ve ''Google Noto'' projesi bunları sabit genişlikteki satırlarla tekrarlamaya çalıştı.</p>
      </transl>
@@ -3624,7 +3624,7 @@
     </text>
     <text id="Text">
      <orig>The old non-positional number system used in Sri Lanka up to the early 19th century.</orig>
-     <transl>Sri Lanka'da 19. yüzyılın başlarına kadar kullanılan eski pozisyonel olmayan sayı sistemi.</transl>
+     <transl>Sri Lanka’da 19. yüzyılın başlarına kadar kullanılan eski pozisyonel olmayan sayı sistemi.</transl>
     </text>
    </group>
    <group id="11200">
@@ -3881,7 +3881,7 @@
       <p>Before that, a non-positional system was used, when different objects and different positions were written with different signs.</p>
      </orig>
      <transl>
-      <p>Babilliler, MÖ{{_}}2000civarında ilk konumsal sayı sistemini geliştirdiler; bu sistem 60 tabanlıydı. {{sm|𒐕}}, 0'dan 9'a kadar bir birimdir, {{sm|𒌋}} ise 0'dan 5'e kadar onluktur. Sıfır {{sm|𒑊}} yalnızca konumlar arasında yazılırdı, Sayının sonunda{{_}}olmadığı için sayının sırası yalnızca bağlamdan çıkarılabilir.</p>
+      <p>Babilliler, MÖ{{_}}2000civarında ilk konumsal sayı sistemini geliştirdiler; bu sistem 60 tabanlıydı. {{sm|𒐕}}, 0’dan 9’a kadar bir birimdir, {{sm|𒌋}} ise 0'dan 5'e kadar onluktur. Sıfır {{sm|𒑊}} yalnızca konumlar arasında yazılırdı, Sayının sonunda{{_}}olmadığı için sayının sırası yalnızca bağlamdan çıkarılabilir.</p>
       <p />
       <p>Bundan önce, farklı nesnelerin ve farklı konumların farklı işaretlerle yazıldığı konumsal olmayan bir sistem kullanılıyordu.</p>
      </transl>
@@ -3983,7 +3983,7 @@
     </text>
     <text id="Text">
      <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</orig>
-     <transl>[[ps:Bamu|Bamum]]'un ilk evreleri A'dan F'ye, hem ideografik hem de hecesel. Son hecesel evre G, [[pt:bmp|Temel Düzey]]'dedir.</transl>
+     <transl>[[ps:Bamu|Bamum]]’un ilk evreleri A’dan F’ye, hem ideografik hem de hecesel. Son hecesel evre G, [[pt:bmp|Temel Düzey]]’dedir.</transl>
     </text>
    </group>
    <group id="16A40">
@@ -4314,9 +4314,9 @@
       <p>There is no special character for fractional part (“vigesimal point”). Sometimes middle dot is used.</p>
      </orig>
      <transl>
-      <p>Konumsal 20 tabanlı rakamlar 1980'lerde Alaska'nın Kaktovik kasabasındaki İnuit (Eskimo) okul çocukları tarafından icat edilmiştir. İnuitler yirmili sayılarla sayarlar &lt;nobr&gt;(74 = 3×20 + 15 - 1)&lt;/nobr&gt; ve bu sistemin getirilmesinden önce, ABD genelinde matematikte en kötüler arasındaydılar{{-}}ortalamanın biraz üzerindeydiler, sanki iki dilli insanlar dil bilimde genellikle daha iyi gibidir.</p>
+      <p>Konumsal 20 tabanlı rakamlar 1980’lerde Alaska'nın Kaktovik kasabasındaki İnuit (Eskimo) okul çocukları tarafından icat edilmiştir. İnuitler yirmili sayılarla sayarlar &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt; ve bu sistemin getirilmesinden önce, ABD genelinde matematikte en kötüler arasındaydılar{{-}}ortalamanın biraz üzerindeydiler, sanki iki dilli insanlar dil bilimde genellikle daha iyi gibidir.</p>
       <p />
-      <p>20 tabanlı bir abaküs tasarlandı. Japonca ''soroban''a benziyor, ancak üç “cennet” boncuğu var. Japonya'da olduğu gibi, boncuk kenara yakınsa “kapalı”, orta duvara yakınsa “açık”. Taban-20'den ondalık sayıya dönüşüm için basit algoritmalar vardır.</p>
+      <p>20 tabanlı bir abaküs tasarlandı. Japonca ''soroban''a benziyor, ancak üç “cennet” boncuğu var. Japonya’da olduğu gibi, boncuk kenara yakınsa “kapalı”, orta duvara yakınsa “açık”. Taban-20’den ondalık sayıya dönüşüm için basit algoritmalar vardır.</p>
       <p />
       <p>Kesirli kısım (“yirmilik nokta”) için özel bir karakter yoktur. Bazen orta nokta kullanılır.</p>
      </transl>
@@ -4380,7 +4380,7 @@
       <p />
       <p>Dikey çubuklar birimler, yüzler, on binler..., yatay{{-}}onlar, binler, yüz binler... anlamına gelir. Bazen tam tersi{{-}}bu şekilde çubuklar Unicode'a girmiştir. Sayma çubuklarının sembolleri bazen kağıt üzerine yazılır.</p>
       <p />
-      <p>Bir şeyi saymanız ve sayıyı ezberlemeniz gerekiyorsa, çentik işaretleri kullanılır. Avrupa beşleri {{sm|𝍸}} genellikle hapishaneyle ilişkilendirilir. Çinliler &lt;font size='+1'&gt;正&lt;/font&gt; ideogramını kullanır. Ormancılar hem Amerika'da hem de eski SSCB'de onluk sayarlar (Ya.I.{{_}}Perelman'ın bir kitabında görülmüştür), ancak bu yöntem Unicode'a{{_}}girmemiştir.</p>
+      <p>Bir şeyi saymanız ve sayıyı ezberlemeniz gerekiyorsa, çentik işaretleri kullanılır. Avrupa beşleri {{sm|𝍸}} genellikle hapishaneyle ilişkilendirilir. Çinliler &lt;font size='+1'&gt;正&lt;/font&gt; ideogramını kullanır. Ormancılar hem Amerika’da hem de eski SSCB’de onluk sayarlar (Ya.I.{{_}}Perelman’ın bir kitabında görülmüştür), ancak bu yöntem Unicode'a{{_}}girmemiştir.</p>
      </transl>
     </text>
    </group>
@@ -11597,11 +11597,11 @@
       <p />
       <p>'''Yeni'''{{-}}çok yakın zamanda icat edildiği için durumu hakkında kesin bir şey söylemek mümkün değil.</p>
       <p />
-      <p>'''Yeniden Canlandırıldı'''{{-}}bir süre sessiz kaldıktan sonra tekrar kullanıma sunuldu. Yeniden Canlandırma, [[ps:Tfng|Tifinagh]]'da olduğu gibi türünü ve yazım yönünü değiştirebilir.</p>
+      <p>'''Yeniden Canlandırıldı'''{{-}}bir süre sessiz kaldıktan sonra tekrar kullanıma sunuldu. Yeniden Canlandırma, [[ps:Tfng|Tifinagh]]’da olduğu gibi türünü ve yazım yönünü değiştirebilir.</p>
       <p />
       <p>'''Ölü bir dilin yeniden canlandırılması için'''{{-}}[[ps:Osge|Osage]] sadece (Latince yazmak kötü sonuç verdi).</p>
       <p />
-      <p>'''Deneysel'''{{-}}yazımsal bir reform yapma girişiminin başarısızlığı. Unicode'da bulunan tüm örnekler üç kategoriye ayrılıyor: 1){{_}}İngilizce: karmaşık tarihsel yazım; 2){{_}}Arnavutça: hem Türklerden gizlilik hem de kültürel özerklik arzusu 1800 civarında mevcuttu; 3){{_}}20. yüzyılda Afrika'nın kurtuluşuyla ilgili.</p>
+      <p>'''Deneysel'''{{-}}yazımsal bir reform yapma girişiminin başarısızlığı. Unicode’da bulunan tüm örnekler üç kategoriye ayrılıyor: 1){{_}}İngilizce: karmaşık tarihsel yazım; 2){{_}}Arnavutça: hem Türklerden gizlilik hem de kültürel özerklik arzusu 1800 civarında mevcuttu; 3){{_}}20. yüzyılda Afrika’nın kurtuluşuyla ilgili.</p>
      </transl>
     </text>
    </group>
@@ -14320,7 +14320,7 @@
     </text>
     <text id="Supp">
      <orig>Supported in Unicode</orig>
-     <transl>Unicode'da desteklenir</transl>
+     <transl>Unicode’da desteklenir</transl>
     </text>
    </group>
    <group id="Prop">
