@@ -5406,15 +5406,15 @@
       <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
      </orig>
      <transl>
-      <p>Brahmi'nin ne zaman ortaya çıktığı ve atasının ne olduğu bilinmemektedir. Genellikle MÖ{{_}}8-7. yüzyıllarda [[ps:Armi|Aramice]]'den geldiği düşünülmektedir. Diğer bilim insanları ise Brahmi'yi daha eski ve henüz çözülememiş İndus yazısıyla ilişkilendirmektedir. Güvenilir kaynaklardan en eskisi, Kral Aşoka'nın (MÖ{{_}}3. yüzyıl) sütunlarıdır. Daha önceki kaynakların tarihleri ise yetersizdir.</p>
+      <p>Brahmi’nin ne zaman ortaya çıktığı ve atasının ne olduğu bilinmemektedir. Genellikle MÖ{{_}}8-7. yüzyıllarda [[ps:Armi|Aramice]]'den geldiği düşünülmektedir. Diğer bilim insanları ise Brahmi’yi daha eski ve henüz çözülememiş İndus yazısıyla ilişkilendirmektedir. Güvenilir kaynaklardan en eskisi, Kral Aşoka’nın (MÖ{{_}}3. yüzyıl) sütunlarıdır. Daha önceki kaynakların tarihleri ise yetersizdir.</p>
       <p />
       <p>Brahmi'nin şu özellikleri vardır: soldan sağa yazılır, ünsüz harf, {{t|a}} fonemli hece anlamına gelir, geri kalan ünlüler aksan işaretlerle eklenir, içsel {{t|a}} [[pt:virama|virama]] işaretiyle kaldırılır.</p>
       <p />
       <p>Brahmi kökenli yazılar, karakterlerin grafiklerini ve içsel fonemi büyük ölçüde değiştirir, ancak bu özellikleri korur ve "Brahmi abugidas" olarak adlandırılır.</p>
       <p />
-      <p>Ünsüz bağlaçları genellikle bir harf yığınıyla yazılır: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (Windows{{_}}7/8'de düzgün şekilde işlenmiyor).</p>
+      <p>Ünsüz bağlaçları genellikle bir harf yığınıyla yazılır: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (Windows{{_}}7/8’de düzgün şekilde işlenmiyor).</p>
       <p />
-      <p>Unicode, Brahmi'yi zaman ve mekana göre ayırmaz; çoğu yazı tipi, Aşoka'nın sütunlarının geometrik yazılarına yakındır. 5. yüzyılda Brahmi iki ana kola dönüştü:</p>
+      <p>Unicode, Brahmi’yi zaman ve mekana göre ayırmaz; çoğu yazı tipi, Aşoka’nın sütunlarının geometrik yazılarına yakındır. 5. yüzyılda Brahmi iki ana kola dönüştü:</p>
       <p>* kuzey (=Gupta, geç Brahmi, kuzey Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetçe]], [[ps:Bhks|Bhaiksuki]];</p>
       <p>* güney → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] ve diğer Hint olmayan yazılar genellikle ayrı bir güneydoğu koluna ayrılır.</p>
      </transl>
@@ -6983,9 +6983,9 @@
       <p>There are several million people speaking Yuan, but since 20th century few are literate in Lanna, [[ps:Thai|Thai]] is used more often. Only small Khün language {{nspk|kkh}} uses Tai Tham as primary script.</p>
      </orig>
      <transl>
-      <p>Kuzey Tayland'daki Lanna veya Lannathai krallığından (1296-1558) gelir. Daha sonra Burma tarafından fethedilmiş ve 1774'te Siam (Tayland) tarafından ele geçirilmiştir. Siam çok kültürlüydü, ancak 1912'deki başarısız darbeden sonra kral milliyetçiliği teşvik etmeye başladı. 1933'te milliyetçiler iktidara geldi ve birçok Tai Tham örneğini yok etti.</p>
+      <p>Kuzey Tayland’daki Lanna veya Lannathai krallığından (1296-1558) gelir. Daha sonra Burma tarafından fethedilmiş ve 1774’te Siam (Tayland) tarafından ele geçirilmiştir. Siam çok kültürlüydü, ancak 1912’deki başarısız darbeden sonra kral milliyetçiliği teşvik etmeye başladı. 1933’te milliyetçiler iktidara geldi ve birçok Tai Tham örneğini yok etti.</p>
       <p />
-      <p>Diğer benzer yazılarda olduğu gibi, yuvarlak harfler palmiye yapraklarına yazılarak elde edilir (düz çizgi, yaprağı damarlardan keser). Özündeki ünlü {{t|a}}'dır. Kelimeler arasında boşluk yoktur. İki tür ünlü vardır: bağımsız ünlüler ve ünlü işaretleri. [[pt:virama|virama]] yok, bunun yerine heceleri bir araya getirmek için benzer bir karakter var:</p>
+      <p>Diğer benzer yazılarda olduğu gibi, yuvarlak harfler palmiye yapraklarına yazılarak elde edilir (düz çizgi, yaprağı damarlardan keser). Özündeki ünlü {{t|a}}’dır. Kelimeler arasında boşluk yoktur. İki tür ünlü vardır: bağımsız ünlüler ve ünlü işaretleri. [[pt:virama|virama]] yok, bunun yerine heceleri bir araya getirmek için benzer bir karakter var:</p>
       <p>: yüksek ha {{sm|ᩉ}} + i {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + na {{sm|ᨶ}} = hin {{sm|ᩉᩥ᩠ᨶ}}</p>
       <p />
       <p>İki rakam kümesi vardır: Hora (günlük) ve Tham (kutsal).</p>
@@ -9093,7 +9093,7 @@
       <p>In 20th century a new script was created from Old Lybian, written left to right. Muslim states (particularly Gaddafi’s Lybia and Morocco of 80s) banned the script, but in 2003 the king of Morocco permitted Tifinagh. Transitional Council of Libya also permitted Berber languages and Tifinagh.</p>
      </orig>
      <transl>
-      <p>Eski Libya yazısının kökeni belirsizdir; genellikle [[ps:Phnx|Fenikece]]'den geldiği düşünülmektedir. En eski örnekler, MÖ 2. yüzyıla{{_}} ait iki iki dilli yazıdır; Prens Ateban anıtından ve Kral Masinissa tapınağından alınmıştır. Betik [[pt:abjad|ünsüz]] harfliydi ve genellikle aşağıdan yukarıya veya sağdan sola yazılırdı.</p>
+      <p>Eski Libya yazısının kökeni belirsizdir; genellikle [[ps:Phnx|Fenikece]]’den geldiği düşünülmektedir. En eski örnekler, MÖ 2. yüzyıla{{_}} ait iki iki dilli yazıdır; Prens Ateban anıtından ve Kral Masinissa tapınağından alınmıştır. Betik [[pt:abjad|ünsüz]] harfliydi ve genellikle aşağıdan yukarıya veya sağdan sola yazılırdı.</p>
       <p />
       <p>20. yüzyılda, Eski Libya’dan soldan sağa yazılan yeni bir betik oluşturuldu. Müslüman devletler (özellikle Kaddafi’nin Libya'sı ve 80’lerin Fas’ı) bu betiği yasakladı, ancak 2003’te Fas kralı, Tifinagh’a izin verdi. Libya Geçiş Konseyi de Berberi dillerine ve Tifinagh’a izin verdi.</p>
      </transl>
@@ -9167,9 +9167,9 @@
       <p>Inherent vowel is {{t|a}} in open syllables and {{t|o}} in closed ones: {{sm|ถนน}}={{t|thanon}} (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</p>
      </orig>
      <transl>
-      <p>[[ps:Khmr|Eski Khmer]]'den gelir, o da [[ps:Brah|Brahmi]]'den gelir. Alfabe, 1283 yılında Büyük Kral Ramkhamhaeng tarafından düzenlenmiş ve onaylanmıştır.</p>
+      <p>[[ps:Khmr|Eski Khmer]]’den gelir, o da [[ps:Brah|Brahmi]]’den gelir. Alfabe, 1283 yılında Büyük Kral Ramkhamhaeng tarafından düzenlenmiş ve onaylanmıştır.</p>
       <p />
-      <p>Açık hecelerde içsel sesli harf {{t|a}}, kapalı hecelerde {{t|o}}'dur: {{sm|ถนน}}={{t|thanon}} (yol). Harfler [[pt:akrofonik|akrofonik]]tir: örneğin, {{sm|ช}} harfi "cho chang" (fil) olarak adlandırılır. Kelimeler arasında boşluk yoktur.</p>
+      <p>Açık hecelerde içsel sesli harf {{t|a}}, kapalı hecelerde {{t|o}}’dur: {{sm|ถนน}}={{t|thanon}} (yol). Harfler [[pt:akrofonik|akrofonik]]tir: örneğin, {{sm|ช}} harfi "cho chang" (fil) olarak adlandırılır. Kelimeler arasında boşluk yoktur.</p>
      </transl>
     </text>
    </group>
