@@ -271,6 +271,10 @@ Subtotal: 105
 - 13FB3: simplified, thinned two slabs
 - 13FB4: simplified, thinned two slabs
 - 13FBB: other roof
+- 13FBE: campaign for forked booth
+- 13FC4: campaign for forked booth
+- 13FC9: campaign for forked booth
+- 13FCA: campaign for forked booth
 - 13FD7: self-intersections, no beard
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
@@ -283,7 +287,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 263
+Subtotal: 267
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -394,6 +398,7 @@ Subtotal: 263
 - 13F50: campaign for plans
 - 13F81: drawn after 80
 - 13FAD: after AC
+- 13FBC: campaign for forked booth
 - 13FD2: misrender in NewG, after D1 and D5
 - 14000: after 13FFF
 - 14002: after 03
@@ -413,11 +418,11 @@ Subtotal: 263
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 126
+Subtotal: 127
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 495
+Total: 500
