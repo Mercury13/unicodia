@@ -1149,7 +1149,7 @@
      </text>
      <text id="Bil">
       <orig>{1}bn</orig>
-      <transl>1}milyar</transl>
+      <transl>{1}milyar</transl>
      </text>
     </group>
     <text id="Qty">
@@ -1853,7 +1853,7 @@
      </orig>
      <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
-      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. Markos 17D3 {{sm|◌៓}} bazen bu karakter lehine [[pt:deprecated|kullanımdan kaldırılmıştı]] ve Unicode’da {{_}}{{vkhmer}} hala önerilmemektedir.</p>
+      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. 17D3 {{sm|◌៓}} işareti, bazen bu karakter lehine (yararına) [[pt:deprecated|kullanımdan kaldırıldı]] ve Unicode{{_}}{{vkhmer}}’de hala önerilmemektedir.</p>
       <p />
       <p>Geri kalanlar, ay takviminde yeni aydan dolunaya ve tekrar dolunaya kadar olan günlerin adlarıdır.</p>
      </transl>
@@ -1939,7 +1939,7 @@
       <p>Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. The double line below barely visible on the icon is an editorial mark meaning capital letter.</p>
      </orig>
      <transl>
-      <p>'‘Mtavruli’' standart Gürcü tipi ‘'Mkhedruli’'nin büyük harf biçimidir. Ana bloktaki [[pk:10A0|ana blok]] büyük harfler ‘'Asomtavruli’' olarak adlandırılır ve eski kabul edilir.</p>
+      <p>''Mtavruli'' standart Gürcü tipi ''Mkhedruli''nin büyük harf biçimidir. Ana bloktaki [[pk:10A0|ana blok]] büyük harfler ''Asomtavruli'' olarak adlandırılır ve eski kabul edilir.</p>
       <p />
       <p>Mtavruli vurgularda ve başlıklarda kullanılır ve uzun bir süre fontun bir çeşidi olarak kabul edilmiştir. Ancak akademisyenler 19. yüzyıl ve 20. yüzyılın başlarında Mkhedruli ve Mtavruli’nin karıştırıldığı belgeler bulmuşlardır. Ayrıca, Gürcüce yazı tipleri Mkhedruli ve Mtavruli olarak çiftler halinde gelir, bu da günlük işleri zorlaştırır ve yazı tipi değişikliği imkansızsa Gürcüce metni daha az etkileyici hale getirir. Konsorsiyum’dan bir tipograf olan Michael Everson, DRINK ME'nin Mtavruli ile yazıldığı 8 bit kodlamada bir “Alice Harikalar Diyarında” çevirisi aldı.</p>
       <p />
@@ -4103,7 +4103,7 @@
       <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
      </orig>
      <transl>
-      <p>2020’de dokuz karakter [[pt:unification|ayrıştırıldı]]. Başka bir deyişle: dokuzu da birinin homografı. Örneğin, "pair" kelimesi aynı yerde (17134) kaldı ve "foolish" homografı 18D00 olarak yeni bir numara aldı.</p>
+      <p>2020’de dokuz karakter [[pt:unification|ayrıştırıldı]]. Başka bir deyişle: dokuz karakterin tümü birinin homografıdır(yazımdaş). Örneğin, "pair" kelimesi aynı yerde 17134 olarak kaldı ve "foolish" homografı 18D00 olarak yeni bir numara aldı.</p>
       <p />
       <p>2021’de Çin’de bir Tangut sözlüğü piyasaya sürülerek yeni ideogramların kodlanması hızlandırıldı.</p>
      </transl>
@@ -6153,7 +6153,7 @@
      <transl>
       <p>2006 yılında, Gunjala köyünde 1750 yılına ait belgeler bulundu. Yazıyı okuyabilen kişiler daha sonra buranın Gondi olduğunu doğruladı. Keşif 2014 yılında ortaya çıktı ve Andhra Pradesh eyaleti yazıyı yeniden canlandırmaya başladı. Dahası, dil neredeyse hiç yazılmamış, insanlar ara sıra [[ps:Deva|Devanagari]] ve [[ps:Telu|Telugu]] yazıyor.</p>
       <p />
-      <p>Her harf {{t|a}} ile başlayan bir heceyi ifade eder. Başka bir ünlü oluşturmak için ünlü işaretleri eklenir. Betik, uzun ve kısa {{t|e}} ve {{t|o}} arasında ayrım yapmaz{{_}}; yeni harflerin eklenmesi konusunda tartışmalar vardır. [[pt:virama|Virama]] ("ünlüyü kaldır" işareti) yalnızca kelimelerin sonunda görünür. Ünsüz bağlaçlarda baş vuruşundan bir harfi ayırır. </p>
+      <p>Her harf {{t|a}} ile başlayan bir heceyi ifade eder. Başka bir ünlü oluşturmak için ünlü işaretleri eklenir. Betik, uzun ve kısa {{t|e}} ve {{t|o}} arasında ayrım yapmaz; yeni harflerin eklenmesi konusunda tartışmalar vardır. [[pt:virama|Virama]] ("ünlüyü kaldır" işareti) yalnızca kelimelerin sonunda görünür. Ünsüz bağlaçlarda baş vuruşundan bir harfi ayırır. </p>
       <p>: ka {{sm|𑵱}} + i {{sm|◌𑶋}} = ki {{sm|𑵱𑶋}}</p>
       <p>: ka {{sm|𑵱}} + virama = k {{sm|𑵱𑶗}}</p>
       <p>: ka {{sm|𑵱}} + virama + ta {{sm|𑵳}} = kta {{sm|𑵱𑶗𑵳}}</p>
@@ -7279,7 +7279,7 @@
      <transl>
       <p>[[ps:Kawi|Kawi]]'den (eski Javanese) gelir. Harflerin şeklinden dolayı "kuş betiği" olarak adlandırılmıştır. Betiğin ne zaman ortaya çıktığı konusunda tartışmalar olsa da antik{{_}} değildir: Bilinen biçimi palmiye yapraklarından ziyade tüy kalem ve kağıt için uygundur. Bilinen ilk örnek, Hollanda Doğu Hindistan Şirketi ile yapılan bir antlaşmanın (1667) imzasıdır.</p>
       <p />
-      <p>[[pt:virama|virama]] içermeyen 17 ünsüz harften oluşan Brahmic abugida. İlk harf {{sm|𑻱}}'dır (belki sesli harf işaretleriyle). Son ünsüz harfler olan {{t|m}}, {{t|nn}} ve gırtlaksı nokta atışı atlanmıştır. Boşluk{{_}}yoktur, kelimeler ve ifadeler dikey üç nokta ile ayrılmıştır. Bu işlevselliğe sahip betik açıkça eksiktir{{-}}ve 19. yüzyılda kardeş betik olarak kabul edilen [[ps:Bugi|Lontara]] ile tamamen yer değiştirmiştir.</p>
+      <p>[[pt:virama|virama]] içermeyen 17 ünsüz harften oluşan Brahmic abugida. İlk harf {{sm|𑻱}}'dır (belki sesli harf işaretleriyle). Son ünsüz harfler olan {{t|m}}, {{t|nn}} ve gırtlaksı nokta atışı atlanmıştır. Boşluk yoktur, kelimeler ve ifadeler dikey üç nokta ile ayrılmıştır. Bu işlevselliğe sahip betik açıkça eksiktir{{-}}ve 19. yüzyılda kardeş betik olarak kabul edilen [[ps:Bugi|Lontara]] ile tamamen yer değiştirmiştir.</p>
       <p />
       <p>Hem Avrupa hem de Arap-Hint rakamları belgelenmiştir. El yazmalarından birinde, palmiye ağacına benzeyen bir noktalama işareti vardır; [[pt:unification|birleştirilmiş]], {{em|🌴}} [[pt:emoji|emoji]] ile.</p>
       <p />
@@ -8051,7 +8051,7 @@
       <p>Deciphered in 1754 using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
      </orig>
      <transl>
-      <p>Bu betik MÖ 100{{_}}yılından MS 300{{_}}yılına kadar Palmira (modern Suriye) çevresinde kullanılmıştır. [[ps:Armi|Aramice]]den gelmektedir. Alfabede 22 ünsüz vardır, bunlardan birinin iki varyantı vardır. Boşluk ve noktalama işareti yoktur. Rakamlar Roma rakamlarına benzeyen pozisyonsuz bir sistemle sağdan sola doğru yazılmıştır.</p>
+      <p>Bu betik MÖ{{_}}100 yılından MS{{_}}300 yılına kadar Palmira (modern Suriye) çevresinde kullanılmıştır. [[ps:Armi|Aramice]]den gelmektedir. Alfabede 22 ünsüz vardır, bunlardan birinin iki varyantı vardır. Boşluk ve noktalama işareti yoktur. Rakamlar Roma rakamlarına benzeyen pozisyonsuz bir sistemle sağdan sola doğru yazılmıştır.</p>
       <p />
       <p>Jean-Jacques Barthélemy 1754 yılında [[ps:Grekçe|Yunanca]] ile iki dilli bir alfabe kullanarak soyu tükenmiş bir alfabeyi deşifre eden ilk kişidir. 1758 yılında [[ps:Phnx|Fenikece]] alfabesini deşifre etmiştir.</p>
      </transl>
@@ -9122,11 +9122,11 @@
      <transl>
       <p>İçsel sesli harf {{t|a}} ve [[pt:virama|virama]] ile Brahmic abugida. Ben sadece betiğin öz adını yazacağım: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} "ba-y-ba-yi-n".</p>
       <p />
-      <p>16. yüzyılda İspanyol misyonerler, adalıların neredeyse {{%|100}} okuryazar olduğunu keşfettiler ve Baybayin'i kendileri öğretmeye başladılar. Başlangıçta yazının yönünü {{_}}anlamadılar: metin bambu tahtalarına oyulmuştu, bıçak gövdeden dışarı doğru yönlendirilmişti, böylece bir yönde yazıp başka bir yönde okuyabiliyorlardı.</p>
+      <p>16. yüzyılda İspanyol misyonerler, adalıların neredeyse {{%|100}} okuryazar olduğunu keşfettiler ve Baybayin'i kendileri öğretmeye başladılar. Başlangıçta yazının yönünü anlamadılar: metin bambu tahtalarına oyulmuştu, bıçak gövdeden dışarı doğru yönlendirilmişti, böylece bir yönde yazıp başka bir yönde okuyabiliyorlardı.</p>
       <p />
-      <p>Baybayin'in düşüşünün birkaç nedeni vardır: İspanyol ithal kağıdı, kalem ve baskı. Tagalogca, onların etkisi altında {{t|r/d}}, {{t|u/o}}, {{t|i/e}} harflerini ayırt etmeye başladı. Sonuncusu ama {{_}}en az önemli olmayanı: [[ps:Latn|Latin]] hayatta yardımcı oldu ve prestijli bir ofis işine olanak sağladı. 19. yüzyıla gelindiğinde Baybayin neredeyse yok olmuştu ve geriye kalan tek şey Latin alfabesini düzenlemekti. Baybayin'i canlandırmak için modern girişimler mevcut.</p>
+      <p>Baybayin'in düşüşünün birkaç nedeni vardır: İspanyol ithal kağıdı, kalem ve baskı. Tagalogca, onların etkisi altında {{t|r/d}}, {{t|u/o}}, {{t|i/e}} harflerini ayırt etmeye başladı. Sonuncusu ama en az önemli olmayanı: [[ps:Latn|Latin]] hayatta yardımcı oldu ve prestijli bir ofis işine olanak sağladı. 19. yüzyıla gelindiğinde Baybayin neredeyse yok olmuştu ve geriye kalan tek şey Latin alfabesini düzenlemekti. Baybayin'i canlandırmak için modern girişimler mevcut.</p>
       <p />
-      <p>2021'de yeni bir fonem olan {{t|r}} kodlandı{{_}}. Her iki versiyon da 19. yüzyıldan kalma ve bugüne kadar gayri resmi olarak (Unicode 14'ten önce) varlığını sürdüren fonem 170D konumuna getirildi. Ayrıca ikinci bir virama ortaya çıktı: İspanyollar tarafından icat edilen haç, sömürge geçmişini hatırlatıyor ve küçük perdelerde okunamıyor.</p>
+      <p>2021’de yeni bir fonem olan {{t|r}} kodlandı. Her iki versiyon da 19. yüzyıldan kalma ve bugüne kadar gayri resmi olarak (Unicode 14'ten önce) varlığını sürdüren fonem 170D konumuna getirildi. Ayrıca ikinci bir virama ortaya çıktı: İspanyollar tarafından icat edilen haç, sömürge geçmişini hatırlatıyor ve küçük perdelerde okunamıyor.</p>
      </transl>
     </text>
    </group>
@@ -10484,8 +10484,8 @@
      </orig>
      <transl>
       <p>Dize dönüşümü (çoğunlukla) yerel ayardan bağımsız, büyük/küçük harfe duyarlı olmayan dize karşılaştırması için kullanılır. İki ana türü ve bir yardımcı türü vardır:</p>
-      <p>* Basit (uzunluğu {{_}}değiştirmez{{_}}): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
-      <p>* Tam ([[pt:ligature|bağlantıları]] açar): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
+      <p>* Basit (uzunluğu değiştirmez): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
+      <p>* Tam ([[pt:ligature|bitişik harfleri]] açar): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
       <p>* Türkçe (Türkçe ve Azerice için özel kurallar): &lt;big&gt;I → ı&lt;/big&gt;</p>
       <p />
       <p>Genellikle büyük/küçük harf katlama işlemi küçük harfe dönüştürmedir. Ancak [[ps:Cher|Çerokice]] için büyük harfe dönüştürme işlemidir: büyük harf önce görünür.</p>
@@ -10745,7 +10745,7 @@
       <p>Kullanılacak karakterlerin döndürülmesiyle ilgili birkaç durum bilinmektedir:</p>
       <p>* "Etiketler" bloğu{{-}}dili belirtmek için kullanılıyordu. Bölgesel bayrakların [[pt:emoji|emoji]]'si için döndürüldü (örneğin, İskoçya), bir karakter yasaklı kaldı.</p>
       <p>* 0340, 0341 (alçalan/yükselen ton işaretleri). Sıradan aksan işaretler à ve á ile değiştirildi. Unicode{{_}}5.2’den beri önerilmiyorlar.</p>
-      <p>* 17D3 (Kmer işareti ''bathamasat''). [[pk:19E0|Ay takviminin]] [[pt:precomposed|önceden oluşturulmuş]] karakterlerinin ortaya çıkmasıyla, Unicode{{_}}4.0{{_}}’da kullanımdan kaldırıldı. Unicode{{_}}5.2'den beri önerilmiyor, belki de takvim bağları hantal olduğu için. ''Unicodia''nın yazarı, bağların hücreye sığacağı yazı tipini bulmakta zorluk çekmişti.</p>
+      <p>* 17D3 (Kmer işareti ''bathamasat''). [[pk:19E0|Ay takviminin]] [[pt:precomposed|önceden oluşturulmuş]] karakterlerinin ortaya çıkmasıyla, Unicode{{_}}4.0’da kullanımdan kaldırıldı. Unicode{{_}}5.2’den beri önerilmiyor, belki de takvim bağları hantal olduğu için. ''Unicodia''nın yazarı, bağların hücreye sığacağı yazı tipini bulmakta zorluk çekmişti.</p>
       <p />
       <p>[[pt:obsolete|eski]] ile karıştırmayın.</p>
      </transl>
@@ -11464,7 +11464,7 @@
       <p>''Jindai'' was also rejected. The supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of the 17th century.</p>
      </orig>
      <transl>
-      <p>Unicode Konsorsiyumu [[pt:emoji|emoji]] kodlamayı rutin olarak reddediyor, dörtte birinden azı gerçekten yayınlanıyor ve insanlar emojileri birleştirmede şaşırtıcı derecede yaratıcı ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = elektrik faturaları). Bayraklar ve metinler{{_}}artık kodlanmıyor.</p>
+      <p>Unicode Konsorsiyumu [[pt:emoji|emoji]] kodlamayı rutin olarak reddediyor, dörtte birinden azı gerçekten yayınlanıyor ve insanlar emojileri birleştirmede şaşırtıcı derecede yaratıcı ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = elektrik faturaları). Bayraklar ve metinler artık kodlanmıyor.</p>
       <p />
       <p>İki kurgusal betik reddedildi: Ursula Le Guin'in "Aiha"sı ve "Star Trek" serisinden "Klingon". Ancak John Tolkien tarafından icat edilen "Tengwar" ve "Cirth" kodlama yolunda.</p>
       <p />
@@ -11560,19 +11560,19 @@
      <transl>
       <p>Unicode Konsorsiyumu, karakterlerin bazı özelliklerini değiştirmeyeceğini garanti eder.</p>
       <p />
-      <p>'''Bir karakter hareket etmeyecek veya kaybolmayacak''' (2.0+). Her yeni Unicode, öncekinin bir üst kümesi olacaktır. Metin, ulusal sıralama düzeni kullanılarak sıralanır.</p>
+      <p>'''Bir karakter hareket{{_}}etmeyecek veya kaybolmayacak''' (2.0+). Her yeni Unicode, öncekinin bir üst kümesi olacaktır. Metin, ulusal sıralama düzeni kullanılarak sıralanır.</p>
       <p />
       <p>'''Karakterin adı değişmeyecek''' (2.0+). Düzeltme adları mevcut olsa da ve ''Unicodia'' tarafından '''onlar''' gösterilse de. Eş anlamlılar da değişmeyecektir; düzeltmeler de dahil (5.0+).</p>
       <p />
       <p>'''Dizenin [[pt:normalization|Normalizasyonu]] değişmeyecek''' (4.1+). 3.1 sürümünde daha zayıf garantiler vardı: Unicode, normalleştirmenin önemli olduğu [[ps:Latn|Latin]] ve diğer yaygın betikleri giderek daha fazla benimsedi.</p>
       <p />
-      <p>'''Karakterin özellikleri değişebilir, ancak doğası değişecek kadar değil''' (1.1+). Örneğin, büyük harf küçük harfe{{_}}dönüşmeyecek{{_}}ve [[pt:noncharacter|karakter dışı]] tekrar kullanıma girmeyecek. Unicode’un sonraki sürümlerinde bu kural açıklığa kavuşturuldu.</p>
+      <p>'''Karakterin özellikleri değişebilir, ancak doğası değişecek kadar{{_}}değil''' (1.1+). Örneğin, büyük harf küçük harfe dönüşmeyecek ve [[pt:noncharacter|karakter dışı]] tekrar kullanıma girmeyecek. Unicode'un sonraki sürümlerinde bu kural açıklığa kavuşturuldu.</p>
       <p />
       <p>'''Karakterin normatif ve bilgilendirici özellikleri Unicode tabanlarından kaybolmayacak''' (5.2+). Geri kalanlar yeniden adlandırılabilir veya kaldırılabilir, ancak yeniden adlandırma sırasında asla başkalarının yerini almayacak.</p>
       <p />
       <p>'''[[pt:casefolding|Büyük/küçük harf katlama]] değişmeyecek''' (5.0+). Büyük/küçük harf katlama, dizelerin yerel ayarlardan bağımsız karşılaştırılması için tasarlanmıştır ve genellikle (ancak zorunlu olarak{{_}}değil) küçük harfe dönüştürmedir: [[ps:Cher|Çerokice]]'de bu, daha önce tanıtıldıkları için büyük harflere dönüştürmedir.</p>
       <p />
-      <p>'''İki karakter büyük/küçük harf çiftindeyse (veya{{_}}değilse) orada kalırlar''' (5.0+). Küçük harf büyük harfle eşleşebilir (veya Çerokicede olduğu gibi tam tersi) ve bir harfin büyük/küçük harf çiftine girmesinin tek yolu budur.</p>
+      <p>'''İki karakter büyük/küçük harf çiftindeyse (veya değilse) orada kalırlar''' (5.0+). Küçük harf büyük harfle eşleşebilir (veya Çerokicede olduğu gibi tam tersi) ve bir harfin büyük/küçük harf çiftine girmesinin tek yolu budur.</p>
      </transl>
     </text>
    </group>
