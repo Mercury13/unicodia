@@ -276,6 +276,7 @@ Subtotal: 105
 - 13FC9: campaign for forked booth
 - 13FCA: campaign for forked booth
 - 13FD7: self-intersections, no beard
+- 13FDB: thinner lines
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
 - 1404A: greatly simplified, removed touching curves
@@ -287,7 +288,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 267
+Subtotal: 268
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -425,4 +426,4 @@ Subtotal: 127
 
 Subtotal: 1
 
-Total: 500
+Total: 501
