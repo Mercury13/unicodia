@@ -17,7 +17,7 @@
 #include "u_TinyOpt.h"
 
 
-DEFINE_ENUM (BlockOrder,
+DEFINE_ENUM_TYPE (BlockOrder, unsigned char,
     ALPHA,      ///< Alphabetical
     CONTINENT,  ///< By continent, then alphabetically
     CODE,       ///< By code
@@ -27,7 +27,7 @@ DEFINE_ENUM (BlockOrder,
 
 
 namespace progsets {
-    enum class DirMode { INSTALLED, PORTABLE };
+    enum class DirMode : unsigned char { INSTALLED, PORTABLE };
     extern DirMode dirMode;
 }
 
