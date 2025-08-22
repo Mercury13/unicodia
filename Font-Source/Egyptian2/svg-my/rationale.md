@@ -238,7 +238,7 @@ Subtotal: 105
 - 13E85: craggy
 - 13EA8: after A9
 - 13ED3: hang lower
-- 13ED5: mirror, rounder circles
+- 13ED5: mirror, rounder circles: TWO-TWENTY
 - 13EDA: mirror, rounder circles
 - 13EDF: per E0
 - 13EE0: deleted 2 triangles
@@ -282,6 +282,7 @@ Subtotal: 105
 - 14018: double lines → thin
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
+- 1403A: other hull, same plant (but a bit shorter)
 - 1404A: greatly simplified, removed touching curves
 - 1405C: greatly simplified, removed touching curves
 - 1405D: most curves to lines, simplified Re, removed one rope
@@ -291,7 +292,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 271
+Subtotal: 272
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -429,4 +430,4 @@ Subtotal: 127
 
 Subtotal: 1
 
-Total: 504
+Total: 505
