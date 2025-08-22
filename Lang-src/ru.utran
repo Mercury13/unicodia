@@ -4243,6 +4243,10 @@
       <p />
       <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
      </orig>
+     <au-cmt>
+      <p>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</p>
+      <p>As a fail-safe, use “priznaki”.</p>
+     </au-cmt>
      <transl>
       <p>Знáменное, или крюковое пение{{-}}одноголосое (весь хор поёт в унисон) православное пение. Названо в честь знамён{{-}}нотных знаков, к которым прикрепляются признáки. Признáки изначально писались красным; Александр Мезенец (XVII{{_}}век) придумал систему признáков, не{{_}}требующую киновари. В отличие от европейских нот, которые закодированы больше для упрощения жизни программистам и в [[pt:plaintext|простом тексте]] передают только ритм, кодировка знаменного пения вполне работоспособна.</p>
       <p />
@@ -10113,7 +10117,7 @@
       <p />
       <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
-      <p>With all adantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+      <p>With all advantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
      <transl>
       <p>Линейное письмо, записывающее гласные и согласные звуки. Первым известным алфавитом считается [[ps:Grek|греческий]].</p>
@@ -11885,7 +11889,7 @@
       <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
       <p />
       <p>Properties of UTF-32:</p>
-      <p>* Constant-length encoding. That’s why it is the most suitable for compex text processing.</p>
+      <p>* Constant-length encoding. That’s why it is the most suitable for complex text processing.</p>
       <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
       <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
       <p />
