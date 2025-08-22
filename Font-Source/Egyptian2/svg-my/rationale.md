@@ -287,13 +287,14 @@ Subtotal: 105
 - 1403C: thicker throwing stick
 - 1405C: greatly simplified, removed touching curves
 - 1405D: most curves to lines, simplified Re, removed one rope
+- 1406A: removed cow on the bow
 - 14075: removed cow on the bow
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 273
+Subtotal: 274
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -431,4 +432,4 @@ Subtotal: 127
 
 Subtotal: 1
 
-Total: 506
+Total: 507
