@@ -90,4 +90,5 @@ namespace config {
     void init(window::State& state, BlockOrder& blockOrder);
 
     void save(const window::State& state, BlockOrder blockOrder);
-}
+
+}   // namespace config
