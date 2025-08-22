@@ -284,6 +284,7 @@ Subtotal: 105
 - 14049: greatly simplified, removed self-intersection on margin of error
 - 1403A: other hull, same plant (but a bit shorter)
 - 1404A: greatly simplified, removed touching curves
+- 1403C: thicker throwing stick
 - 1405C: greatly simplified, removed touching curves
 - 1405D: most curves to lines, simplified Re, removed one rope
 - 14075: removed cow on the bow
@@ -292,7 +293,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 272
+Subtotal: 273
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -430,4 +431,4 @@ Subtotal: 127
 
 Subtotal: 1
 
-Total: 505
+Total: 506
