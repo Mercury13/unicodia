@@ -279,6 +279,7 @@ Subtotal: 105
 - 13FDB: thinner lines
 - 13FEA: thinner lines
 - 1400A: redrew
+- 14018: double lines → thin
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
 - 1404A: greatly simplified, removed touching curves
@@ -290,7 +291,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 270
+Subtotal: 271
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -428,4 +429,4 @@ Subtotal: 127
 
 Subtotal: 1
 
-Total: 503
+Total: 504
