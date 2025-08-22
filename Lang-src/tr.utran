@@ -912,6 +912,7 @@
     </text>
     <text id="Brk">
      <orig>Line breaking</orig>
+     <transl>Satır sonu</transl>
     </text>
    </group>
    <group id="Os">
@@ -5120,7 +5121,7 @@
       <p>Computer Arabic is complicated with the writing of Arabic letters: each has isolated, initial, medial and final forms. In normal text “[[pt:character|general-form]]” letters adapting to position in the word are preferred. But if you need the final form in an isolated letter, Unicode has “rigid” variants.</p>
      </orig>
      <transl>
-      <p>Yazı, [[ps:Armi|Aramice]]’den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]’ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam’ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
+      <p>Yazı, [[ps:Armi|Aramice]]'den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]'ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam'ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
       <p />
       <p>Bilgisayar Arapçası, Arap harflerinin yazımı ile karmaşıktır: her harfin ayrı, ilk, orta ve son biçimleri vardır. Normal metinde, kelimedeki konuma uyum sağlayan "[[pt:character|genel biçim]]" harfleri tercih edilir. Ancak, ayrı bir harfte son biçime ihtiyacınız varsa Unicode’un "katı" varyantları vardır.</p>
      </transl>
@@ -7251,7 +7252,7 @@
       <p />
       <p>Betik neredeyse [[pt:abjad|ünsüz]]’e indirgenmiştir: ünsüz harf {{t|ka}}, {{t|ki}} ve {{t|k}} anlamına gelir. Bir ünlü önemliyse, özel işaretler vardır. [[pt:virama|viramalar]] ve [[pt:ligature|bitişik harf]] yoktur. Öte yandan, muhasebe defterleri için önemli olan birçok kısaltma ve kesir vardır. Bunların çoğu yeterince araştırılmamış ve henüz kodlanmamıştır.</p>
       <p />
-      <p>Kafa vuruşları yalnızca başlıklarda belgelenmiştir. [[ps:Deva|Devanagari]] ve [[ps:Gujr|Gujarati]]’ye benzeyen rakamlar görülmüştür; Unicode’da bunlar [[pt:unification|birleştirilmiş]] haldedir.</p>
+      <p>Kafa vuruşları yalnızca başlıklarda belgelenmiştir. [[ps:Deva|Devanagari]] ve [[ps:Gujr|Gujarati]]'ye benzeyen rakamlar görülmüştür; Unicode’da bunlar [[pt:unification|birleştirilmiş]] haldedir.</p>
      </transl>
     </text>
    </group>
@@ -8259,7 +8260,7 @@
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
      <transl>
-      <p>Sasani İmparatorluğu’nun kuruluşundan (3. yüzyıl) önce yazıtlarda ve sikkelerde kullanılmıştır. Daha sonra [[ps:Phli|Pehlevi]] yazısıyla Farsça ile değiştirilmiş, ancak ara sıra kullanılmıştır. Yedi bitişik harf [[pt:ligature|bitişik harfler]] ve iki swash-tail harfi içerir:</p>
+      <p>Sasani İmparatorluğu’nun kuruluşundan (3. yüzyıl) önce yazıtlarda ve sikkelerde kullanılmıştır. Daha sonra [[ps:Phli|Pehlevi]] yazısıyla Farsça ile değiştirilmiş, ancak ara sıra kullanılmıştır. Yedi bitişik harf [[pt:ligature|bitişik harfler]] ve iki uzun kuyruk harfi içerir:</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (sağdan sola!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </transl>
@@ -11060,6 +11061,7 @@
    <group id="linebreak">
     <text id="Name">
      <orig>line breaking</orig>
+     <transl>Satır sonu</transl>
     </text>
     <text id="Text">
      <orig>
@@ -11067,6 +11069,11 @@
       <p />
       <p>{{LineBreakTypes}}</p>
      </orig>
+     <transl>
+      <p>Uzun bir metni satırlara bölmek için karakterler birkaç kategoriye ayrılır.</p>
+      <p />
+      <p>{{LineBreakTypes}}</p>
+     </transl>
     </text>
    </group>
    <group id="logical">
@@ -14807,38 +14814,47 @@
    <group id="BK">
     <text id="Name">
      <orig>Important/mandatory break</orig>
+     <transl>Önemli/zorunlu satır sonu</transl>
     </text>
     <text id="Text">
      <orig>This character forcefully breaks a line. But CR+LF (0D+0A) is one break rather than two.</orig>
+     <transl>Bu karakter bir satırı zorla keser. Ancak CR+LF (0D+0A) iki değil, sadece bir kesmedir.</transl>
     </text>
    </group>
    <group id="CM">
     <text id="Name">
      <orig>Important/control and marks</orig>
+     <transl>Önemli/kontrol ve işaretler</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before [[pt:control|control]] characters and [[pt:combining|marks]].</orig>
+     <transl>[[pt:control|Kontrol]] karakterlerinden ve [[pt:combining|işaretlerden]] önce satırı bölmeyin.</transl>
     </text>
    </group>
    <group id="WJ">
     <text id="Name">
      <orig>Important/word joiner</orig>
+     <transl>Önemli/kelime birleştirici</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before and after U+2060 Word joiner.</orig>
+     <transl>U+2060 Word birleştiriciden önce ve sonra satır bölmeyin.</transl>
     </text>
    </group>
    <group id="ZW">
     <text id="Name">
      <orig>Important/zero-width space</orig>
+     <transl>Önemli/sıfır genişlikli boşluk</transl>
     </text>
     <text id="Text">
      <orig>You can break a line at U+200B Zero-width space.</orig>
+     <transl>Bir satırı U+200B Sıfır genişlikli boşlukta bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="GL">
     <text id="Name">
      <orig>Important/glue</orig>
+     <transl>Önemli/yapıştırıcı</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14847,20 +14863,28 @@
       <p>'''Soft''' (tailorable) rule: Do not break before these characters. However, you can break after spaces and hyphens.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>
+      <p>'''Önemli''' (zorunlu) kural: U+00A0ʼdan sonra bölmeyin. Bölünemez boşluk ve ilgili karakterler.</p>
+      <p />
+      <p>'''Yumuşak''' (uyarlanabilir) kural: Bu karakterlerden önce bölmeyin. Ancak boşluk ve tirelerden sonra bölebilirsiniz.</p>
+     </transl>
     </text>
    </group>
    <group id="SP">
     <text id="Name">
      <orig>Important/space</orig>
+     <transl>Önemli/boşluk</transl>
     </text>
     <text id="Text">
      <orig>You can break after a chain of U+0020 spaces, unless other characters prohibit this.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>U+0020 boşluklarından oluşan bir zincirin ardından, başka karakterler bunu engellemediği sürece satır sonu yapabilirsiniz.</transl>
     </text>
    </group>
    <group id="ZWJ">
     <text id="Name">
      <orig>Important/zero-width joiner</orig>
+     <transl>Önemli/sıfır genişlikli birleştirici</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14869,11 +14893,17 @@
       <p>You can only break between U+0020 space and ZWJ.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>
+      <p>U+200D [[pt:zwj|Sıfır genişlikli birleştirici]]ʼden sonra bölmeyin.</p>
+      <p />
+      <p>Yalnızca U+0020 boşluk ve ZWJ arasında satır sonu yapabilirsiniz.</p>
+     </transl>
     </text>
    </group>
    <group id="B2">
     <text id="Name">
      <orig>Break/before and after</orig>
+     <transl>Satır sonu/öncesi ve sonrası</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14881,35 +14911,47 @@
       <p />
       <p>Do not break chains of dashes, even after spaces.</p>
      </orig>
+     <transl>
+      <p>U+2014 Em tireden önce ve sonra, başka karakterler engellemediği sürece, satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>Boşluklardan sonra bile tire zincirlerini bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <group id="BA">
     <text id="Name">
      <orig>Break/after</orig>
+     <transl>Satır sonu/sonrası</transl>
     </text>
     <text id="Text">
      <orig>You can break after these characters.</orig>
+     <transl>Bu karakterlerden sonra bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="BB">
     <text id="Name">
      <orig>Break/before</orig>
+     <transl>Satır sonu/öncesi</transl>
     </text>
     <text id="Text">
      <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
+     <transl>Bu karakterlerden önce bölebilirsiniz. Beş Avrupa karakterinin tümü sözlüklerden alınmıştır.</transl>
     </text>
    </group>
    <group id="HY">
     <text id="Name">
      <orig>Break/hyphen-minus</orig>
+     <transl>Satır sonu/tire-eksi</transl>
     </text>
     <text id="Text">
      <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <transl>U+002B Tire-eksi işaretinin birçok kullanım alanı vardır: tire, eksi, sayısal tire. Daha detaylı bir analiz bunun tire olduğunu gösterirse tirenin ardından [[pl:HH|tirenin]] kurallarına göre bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="HH">
     <text id="Name">
      <orig>Break/unambiguous hyphen</orig>
+     <transl>Satır sonu/belirgin tire</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14921,27 +14963,41 @@
       <p>* disparate → dispara- / te</p>
       <p>* dispara-te → dispara- / -te</p>
      </orig>
+     <transl>
+      <p>Tireden sonra satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>İbranice metinden önce/sonra, kelime başındaki tireden (-ing) sonra satır sonu yapamazsınız.</p>
+      <p />
+      <p>Bazı diller (Portekizce) tirelerde satır sonu yapmak için özel kurallar kullanır:</p>
+      <p>* disparate → dispara- / te</p>
+      <p>* dispara-te → dispara- / -te</p>
+     </transl>
     </text>
    </group>
    <group id="CB">
     <text id="Name">
      <orig>Break/conditional</orig>
+     <transl>Satır sonu/koşullu</transl>
     </text>
     <text id="Text">
      <orig>You can or cannot break near U+FFFC Object replacement character depending on object type.</orig>
+     <transl>Nesne türüne bağlı olarak U+FFFC Nesne değiştirme karakterinin yakınında bölebilir veya bölemezsiniz.</transl>
     </text>
    </group>
    <group id="CL">
     <text id="Name">
      <orig>Prohibit/closing punctuation</orig>
+     <transl>Yasak/kapanış noktalama işaretleri</transl>
     </text>
     <text id="Text">
      <orig>Do not break before these characters, even after spaces.</orig>
+     <transl>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="CP">
     <text id="Name">
      <orig>Prohibit/closing parenthesis</orig>
+     <transl>Yasak/kapanış parantezi</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14949,35 +15005,47 @@
       <p />
       <p>Do not break between non-CJK closing parentheses and letters/numbers.</p>
      </orig>
+     <transl>
+      <p>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</p>
+      <p />
+      <p>CJK olmayan kapanış parantezleri ile harfler/sayılar arasında satır sonu yapmayın.</p>
+     </transl>
     </text>
    </group>
    <group id="EX">
     <text id="Name">
      <orig>Prohibit/exclamation and interrogation</orig>
+     <transl>Yasak/ünlem ve sorgulama</transl>
     </text>
     <text id="Text">
      <orig>Do not break before these characters, even after spaces.</orig>
+     <transl>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="IN">
     <text id="Name">
      <orig>Prohibit/inseparable</orig>
+     <transl>Yasak/ayrılamaz</transl>
     </text>
     <text id="Text">
      <orig>These characters are often used in chains. Do not break these chains.</orig>
+     <transl>Bu karakterler genellikle zincir halinde kullanılır. Bu zincirleri bölmeyin.</transl>
     </text>
    </group>
    <group id="NS">
     <text id="Name">
      <orig>Prohibit/non-starting</orig>
+     <transl>Yasak/başlamayan</transl>
     </text>
     <text id="Text">
      <orig>These characters cannot start a line. Do not break before them, even after spaces.</orig>
+     <transl>Bu karakterler satır başı yapamaz. Onlardan önce, hatta boşluklardan sonra bile bölmeyin.</transl>
     </text>
    </group>
    <group id="OP">
     <text id="Name">
      <orig>Prohibit/opening punctuation</orig>
+     <transl>Yasak/açılış noktalama işaretleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14985,19 +15053,27 @@
       <p />
       <p>Do not break between letters/numbers and non-CJK openinng punctuation.</p>
      </orig>
+     <transl>
+      <p>Bu karakterlerden sonra boşluklarla devam etseler bile satır sonu yapmayın.</p>
+      <p />
+      <p>Harfler/sayılar ile CJK olmayan açılış noktalama işaretleri arasında satır sonu yapmayın.</p>
+     </transl>
     </text>
    </group>
    <group id="QU">
     <text id="Name">
      <orig>Prohibit/quote</orig>
+     <transl>Yasak/tırnak</transl>
     </text>
     <text id="Text">
      <orig>Quotes can be opening or closing depending on context. They can break for themselves, without spaces, in CJK context only.</orig>
+     <transl>Tırnak işareti, bağlama bağlı olarak açılış veya kapanış olabilir. Yalnızca CJK bağlamında, boşluk bırakmadan kendi başlarına bölünebilirler.</transl>
     </text>
    </group>
    <group id="IS">
     <text id="Name">
      <orig>Numeric/infix</orig>
+     <transl>Sayısal/orta ek</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15005,35 +15081,47 @@
       <p />
       <p>In words: do not break before these characters, even after spaces.</p>
      </orig>
+     <transl>
+      <p>Sayılarla: Sayının bir parçasıdır, bölmeyin.</p>
+      <p />
+      <p>Sözcüklerle: Bu karakterlerden önce, boşluklardan sonra bile bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <group id="NU">
     <text id="Name">
      <orig>Numeric/digit</orig>
+     <transl>Sayısal/rakam</transl>
     </text>
     <text id="Text">
      <orig>Do not break numbers. Do not break letters from numbers.</orig>
+     <transl>Sayıları bölmeyin. Harfleri sayılardan ayırmayın.</transl>
     </text>
    </group>
    <group id="PO">
     <text id="Name">
      <orig>Numeric/postfix</orig>
+     <transl>Sayısal/son ek</transl>
     </text>
     <text id="Text">
      <orig>Do not break between numbers and these characters.</orig>
+     <transl>Sayılar ve bu karakterler arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="PR">
     <text id="Name">
      <orig>Numeric/prefix</orig>
+     <transl>Sayısal/ön ek</transl>
     </text>
     <text id="Text">
      <orig>Do not break between these characters and numbers.</orig>
+     <transl>Bu karakterler ve sayılar arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="SY">
     <text id="Name">
      <orig>Numeric/slash</orig>
+     <transl>Sayısal/eğik çizgi</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15044,75 +15132,99 @@
       <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
      <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
+     <transl>
+      <p>U+002F Eğik çizgiden önce bölmeyin.</p>
+      <p />
+      <p>İbranicede sayılarda eğik çizgiden sonra bölmeyin.</p>
+      <p />
+      <p>Başka yerlerde eğik çizgiden sonra bölebilirsiniz. Yan etki olarak, “w/o” gibi kısaltmalar bölünür ve yazılımların burada bölmesine yalnızca diğer fırsatlar çok uzaktaysa izin verilir.</p>
+     </transl>
     </text>
    </group>
    <group id="AK">
     <text id="Name">
      <orig>Brahmic/aksara (consonant)</orig>
+     <transl>Brahmic/aksara (ünsüz)</transl>
     </text>
     <text id="Text">
      <orig>Consonants are central in Brahmic scripts.</orig>
+     <transl>Brahma betiklerinde ünsüzler merkezi bir öneme sahiptir.</transl>
     </text>
    </group>
    <group id="AP">
     <text id="Name">
      <orig>Brahmic/pre-consonant</orig>
+     <transl>Brahmic/ön ünsüz</transl>
     </text>
     <text id="Text">
      <orig>Do not break between these characters and consonants.</orig>
+     <transl>Bu karakterler ve ünsüzler arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="AS">
     <text id="Name">
      <orig>Brahmic/initial consonant</orig>
+     <transl>Brahmic/ilk ünsüz</transl>
     </text>
     <text id="Text">
      <orig>This character marks the beginning of the syllable.</orig>
+     <transl>Bu karakter hecenin başlangıcını işaretler.</transl>
     </text>
    </group>
    <group id="SA">
     <text id="Name">
      <orig>Brahmic/context-dependent</orig>
+     <transl>Brahmic/bağlam-bağımlı</transl>
     </text>
     <text id="Text">
      <orig>Complex analysis similar to auto-hyphenation is required to decide whether you can break here.</orig>
+     <transl>Burada satır sonu yapıp yapamayacağınıza karar vermek için otomatik tirelemeye benzer karmaşık bir analiz gerekir.</transl>
     </text>
    </group>
    <group id="VI">
     <text id="Name">
      <orig>Brahmic/virama</orig>
+     <transl>Brahmic/virama</transl>
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
+     <transl>Bu [[pt:virama|virama]] bir hecenin içinde '''olabilir'''. Bu nedenle bu karakterden sonra satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="VF">
     <text id="Name">
      <orig>Brahmic/final virama</orig>
+     <transl>Brahmic/son virama</transl>
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
+     <transl>Bu [[pt:virama|virama]] her zaman kelimenin sonundadır. Bu virama ile uyumlu '''önce'''yi bölmeyin. Ama bu virama ile uyumlu '''sonra'''yı bölmek güvenlidir.</transl>
     </text>
    </group>
    <group id="AI">
     <text id="Name">
      <orig>CJK/letter or ideograph</orig>
+     <transl>CJK/harf veya ideogram</transl>
     </text>
     <text id="Text">
      <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
+     <transl>[[pt:cjk|CJK]] metninde, bir ideogrammış gibi, burada bölebilirsiniz. Aksi takdirde, harf olarak işlev görür.</transl>
     </text>
    </group>
    <group id="CJ">
     <text id="Name">
      <orig>CJK/conditional Japanese starter</orig>
+     <transl>CJK/koşullu Japonca başlangıç</transl>
     </text>
     <text id="Text">
      <orig>You can break before these characters in certain contexts only.</orig>
+     <transl>Sadece belirli bağlamlarda bu karakterlerden önce satır sonu yapabilirsiniz.</transl>
     </text>
    </group>
    <group id="ID">
     <text id="Name">
      <orig>CJK/ideograph</orig>
+     <transl>CJK/ideogram</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15122,60 +15234,79 @@
       <p />
       <p>Some non-CJK characters also fall to this class.</p>
      </orig>
+     <transl>
+      <p>İdeogramlar arasında satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>İdeogramları sayılardan ayıramazsınız.</p>
+      <p />
+      <p>Bazı CJK dışı karakterler de bu sınıfa girer.</p>
+     </transl>
     </text>
    </group>
    <group id="H2">
     <text id="Name">
      <orig>Hangul/initial+medial</orig>
+     <transl>Hangul/ilk+orta</transl>
     </text>
     <text id="Text">
      <orig>Do not break a [[ps:Hang|Korean]] syllable.</orig>
+     <transl>[[ps:Hang|Korece]] hecesini bölmeyin.</transl>
     </text>
    </group>
    <group id="H3">
     <text id="Name">
      <orig>Hangul/initial+medial+final</orig>
+     <transl>Hangul/ilk+orta+son</transl>
     </text>
    </group>
    <group id="JL">
     <text id="Name">
      <orig>Hangul/initial</orig>
+     <transl>Hangul/ilk</transl>
     </text>
    </group>
    <group id="JV">
     <text id="Name">
      <orig>Hangul/medial</orig>
+     <transl>Hangul/orta</transl>
     </text>
    </group>
    <group id="JT">
     <text id="Name">
      <orig>Hangul/final</orig>
+     <transl>Hangul/son</transl>
     </text>
    </group>
    <group id="EB">
     <text id="Name">
      <orig>Emoji/base</orig>
+     <transl>Emoji/temel</transl>
     </text>
     <text id="Text">
      <orig>Do not break emoji from modifiers.</orig>
+     <transl>Emojiyi değiştiricilerden ayırmayın.</transl>
     </text>
    </group>
    <group id="EM">
     <text id="Name">
      <orig>Emoji/modifier</orig>
+     <transl>Emoji/değiştirici</transl>
     </text>
    </group>
    <group id="RI">
     <text id="Name">
      <orig>Emoji/regional indicator</orig>
+     <transl>Emoji/bölgesel gösterge</transl>
     </text>
     <text id="Text">
      <orig>Keep regional indicators in pairs.</orig>
+     <transl>Bölgesel göstergeleri çiftler halinde tutun.</transl>
     </text>
    </group>
    <group id="AL">
     <text id="Name">
      <orig>Alphabetic/letter</orig>
+     <transl>Alfabetik/harf</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15183,11 +15314,17 @@
       <p />
       <p>Brahmic scripts that started to use spaces also have this class.</p>
      </orig>
+     <transl>
+      <p>Kelimeleri bölmeyin. Harfleri sayılardan bölmeyin.</p>
+      <p />
+      <p>Boşluk kullanmaya başlayan Brahmic betiklerinde de bu sınıf vardır.</p>
+     </transl>
     </text>
    </group>
    <group id="HL">
     <text id="Name">
      <orig>Alphabetic/Hebrew</orig>
+     <transl>Alfabetik/İbranice</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15197,19 +15334,30 @@
       <p />
       <p>So not break slash+Hebrew.</p>
      </orig>
+     <transl>
+      <p>Kelimeleri bölmeyin. Harfleri sayılardan ayırmayın.</p>
+      <p />
+      <p>İbranice+tire+İbranice olmayanı bölmeyin.</p>
+      <p />
+      <p>Sonra eğik çizgi+İbraniceyi bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <text id="Hard">
     <orig>This rule is '''important''': must exist in some form in every program.</orig>
+    <transl>Bu kural '''önemlidir''': her programda bir şekilde bulunmalıdır.</transl>
    </text>
    <text id="Soft">
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
+    <transl>Bu kural '''yumuşak'''tır: dile, bağlama (matematik, web bağlantıları vb.) veya programın hedef kitlesine bağlı olarak kaldırılabilir veya değiştirilebilir.</transl>
    </text>
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <transl>Bazı [[pt:brahmic|Brahmic]] betiklerde, metin boşluksuz, sağlam bir duvar gibi uzayabilir ve hecelere veya kelimelere göre satır sonu için yer bulmanız gerekir. Heceyi bölemezsiniz.</transl>
    </text>
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
+    <transl>[[pt:linebreak|Satır sonu]]ʼna bakın.</transl>
    </text>
   </group>
  </file>
