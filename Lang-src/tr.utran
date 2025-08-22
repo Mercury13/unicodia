@@ -912,6 +912,7 @@
     </text>
     <text id="Brk">
      <orig>Line breaking</orig>
+     <transl>Satır sonu</transl>
     </text>
    </group>
    <group id="Os">
@@ -2701,7 +2702,7 @@
       <p />
       <p>Ayrıca diğer bloklarda olması gereken birkaç karakter daha var: ölçü birimlerinin kısaltmaları, daireler içinde 21 ile 50 arasındaki rakamlar, hız sınırı işaretleri (daire ve karelerde 10…80).</p>
       <p />
-      <p>2019 yılında, yeni İmparator Naruhito’nun saltanatını simgeleyen Reiwa işareti eklendi.</p>
+      <p>2019 yılında, yeni İmparator Naruhito'nun saltanatını simgeleyen Reiwa işareti eklendi.</p>
      </transl>
     </text>
    </group>
@@ -4186,7 +4187,7 @@
       <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
      <transl>
-      <p>Eski bilgisayarlardan sembollerin son parçası. Nadir [[pt:pseudographics|sözde grafikler]], oyun grafikleri (bazı bilgisayarlarda grafik yoktu), birden fazla [[pt:mono|karakter hücresi]]ni kaplayan büyük harfler... 2010’ların mikrobilgisayarları standart kodlamalara bağlı kalma eğiliminde olduğundan, muhtemelen bu tür sembollere artık büyük eklemeler yapılmayacak.</p>
+      <p>Eski bilgisayarlardan sembollerin son parçası. Nadir [[pt:pseudographics|sözde grafikler]], oyun grafikleri (bazı bilgisayarlarda grafik yoktu), birden fazla [[pt:mono|karakter hücresi]]ni kaplayan büyük harfler... 2010'ların mikrobilgisayarları standart kodlamalara bağlı kalma eğiliminde olduğundan, muhtemelen bu tür sembollere artık büyük eklemeler yapılmayacak.</p>
       <p />
       <p>Unicode{{_}}17 [[pt:unification|ayrılmış]] konsol sembolü [[pt:emoji|emoji]]'den.</p>
      </transl>
@@ -4281,7 +4282,7 @@
       <p />
       <p>Notalar, 17. yüzyılda, müziğin diğer enstrümanlara aktarılmasını ve orkestralarda çalınmasını mümkün kılan eşit mizaçla bugünkü hallerine evrildi.</p>
       <p />
-      <p>Müzik [[pt:universality|metin dışı]] bir bilgidir ve bu nedenle Unicode kapsamı dışındadır. Ancak, müzik yazılımlarını basitleştirmek ve sayfa PDF’lerini kısaltmak için notaları ve bölümlerini yazı tiplerinde depolamak için mevcut tipografi motorlarını kullanmak caziptir. Bu bağlamda, sekiz [[pt:format|biçim]] karakterinin (beam, tie, slur, phrase) amacı belirsizdir. 2013 yılında açık standart SMuFL ''(Standart Müzik Yazı Tipi Düzeni)'' geldi ve [[pt:private|özel kullanım]] kod noktalarını kullanarak bloğu 2600 karaktere çıkardı.</p>
+      <p>Müzik [[pt:universality|metin dışı]] bir bilgidir ve bu nedenle Unicode kapsamı dışındadır. Ancak, müzik yazılımlarını basitleştirmek ve sayfa PDF'lerini kısaltmak için notaları ve bölümlerini yazı tiplerinde depolamak için mevcut tipografi motorlarını kullanmak caziptir. Bu bağlamda, sekiz [[pt:format|biçim]] karakterinin (beam, tie, slur, phrase) amacı belirsizdir. 2013 yılında açık standart SMuFL ''(Standart Müzik Yazı Tipi Düzeni)'' geldi ve [[pt:private|özel kullanım]] kod noktalarını kullanarak bloğu 2600 karaktere çıkardı.</p>
       <p />
       <p>Unicode tarafından başlangıçta kabul edilen mikroton notasyonu (1D132 ve 33) yaygın olarak kullanılmıyordu ve bu karakterleri "doğal hayatta" gören çok az kişi vardı. Unicode{{_}}18, müzik yazılımları tarafından yaygın olarak kullanılan başka bir notasyon (yarı diyez, yarı bemol) ekleyecek.</p>
       <p />
@@ -5041,7 +5042,7 @@
     </text>
     <text id="Note">
      <orig>late 1980s</orig>
-     <transl>1980’lerin sonu</transl>
+     <transl>1980'lerin sonu</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5120,7 +5121,7 @@
       <p>Computer Arabic is complicated with the writing of Arabic letters: each has isolated, initial, medial and final forms. In normal text “[[pt:character|general-form]]” letters adapting to position in the word are preferred. But if you need the final form in an isolated letter, Unicode has “rigid” variants.</p>
      </orig>
      <transl>
-      <p>Yazı, [[ps:Armi|Aramice]]’den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]’ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam’ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
+      <p>Yazı, [[ps:Armi|Aramice]]'den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]'ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam'ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
       <p />
       <p>Bilgisayar Arapçası, Arap harflerinin yazımı ile karmaşıktır: her harfin ayrı, ilk, orta ve son biçimleri vardır. Normal metinde, kelimedeki konuma uyum sağlayan "[[pt:character|genel biçim]]" harfleri tercih edilir. Ancak, ayrı bir harfte son biçime ihtiyacınız varsa Unicode’un "katı" varyantları vardır.</p>
      </transl>
@@ -5406,15 +5407,15 @@
       <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
      </orig>
      <transl>
-      <p>Brahmi’nin ne zaman ortaya çıktığı ve atasının ne olduğu bilinmemektedir. Genellikle MÖ{{_}}8-7. yüzyıllarda [[ps:Armi|Aramice]]'den geldiği düşünülmektedir. Diğer bilim insanları ise Brahmi’yi daha eski ve henüz çözülememiş İndus yazısıyla ilişkilendirmektedir. Güvenilir kaynaklardan en eskisi, Kral Aşoka’nın (MÖ{{_}}3. yüzyıl) sütunlarıdır. Daha önceki kaynakların tarihleri ise yetersizdir.</p>
+      <p>Brahmi'nin ne zaman ortaya çıktığı ve atasının ne olduğu bilinmemektedir. Genellikle MÖ{{_}}8-7. yüzyıllarda [[ps:Armi|Aramice]]'den geldiği düşünülmektedir. Diğer bilim insanları ise Brahmi'yi daha eski ve henüz çözülememiş İndus yazısıyla ilişkilendirmektedir. Güvenilir kaynaklardan en eskisi, Kral Aşoka'nın (MÖ{{_}}3. yüzyıl) sütunlarıdır. Daha önceki kaynakların tarihleri ise yetersizdir.</p>
       <p />
       <p>Brahmi'nin şu özellikleri vardır: soldan sağa yazılır, ünsüz harf, {{t|a}} fonemli hece anlamına gelir, geri kalan ünlüler aksan işaretlerle eklenir, içsel {{t|a}} [[pt:virama|virama]] işaretiyle kaldırılır.</p>
       <p />
       <p>Brahmi kökenli yazılar, karakterlerin grafiklerini ve içsel fonemi büyük ölçüde değiştirir, ancak bu özellikleri korur ve "Brahmi abugidas" olarak adlandırılır.</p>
       <p />
-      <p>Ünsüz bağlaçları genellikle bir harf yığınıyla yazılır: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (Windows{{_}}7/8’de düzgün şekilde işlenmiyor).</p>
+      <p>Ünsüz bağlaçları genellikle bir harf yığınıyla yazılır: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (Windows{{_}}7/8'de düzgün şekilde işlenmiyor).</p>
       <p />
-      <p>Unicode, Brahmi’yi zaman ve mekana göre ayırmaz; çoğu yazı tipi, Aşoka’nın sütunlarının geometrik yazılarına yakındır. 5. yüzyılda Brahmi iki ana kola dönüştü:</p>
+      <p>Unicode, Brahmi'yi zaman ve mekana göre ayırmaz; çoğu yazı tipi, Aşoka'nın sütunlarının geometrik yazılarına yakındır. 5. yüzyılda Brahmi iki ana kola dönüştü:</p>
       <p>* kuzey (=Gupta, geç Brahmi, kuzey Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetçe]], [[ps:Bhks|Bhaiksuki]];</p>
       <p>* güney → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] ve diğer Hint olmayan yazılar genellikle ayrı bir güneydoğu koluna ayrılır.</p>
      </transl>
@@ -5438,11 +5439,11 @@
       <p>Braille industrialized assistive technologies for the blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to the normal text for sighted people or even over it.</p>
      </orig>
      <transl>
-      <p>Braille, görme engelliler için bir nokta yazı sistemidir. İkili kodlamayla 2×3{{_}}'lük noktalardan oluşan gruplar kullanır, bazen dördüncü satır eklenir. Kodlama, İngiliz ve Amerikan Braille’i için bile farklılık gösterir. Özel karakterlerle "değiştirilmiş" birkaç "mod" (harfler, sayılar, vurgulama) içerir.</p>
+      <p>Braille, görme engelliler için bir nokta yazı sistemidir. İkili kodlamayla 2x3{{_}}'lük noktalardan oluşan gruplar kullanır, bazen dördüncü satır eklenir. Kodlama, İngiliz ve Amerikan Braille'i için bile farklılık gösterir. Özel karakterlerle "değiştirilmiş" birkaç "mod" (harfler, sayılar, vurgulama) içerir.</p>
       <p />
-      <p>Bir dericinin oğlu olan Louis Braille, 3 yaşındayken bir yassı bıçakla yaralandı ve görme yetisini kaybetti. Braille, Valentin Haüy'nin görme engelliler okuluna girmeyi başardı ve orada kabartmalı çizgiler kullandı. Braille'in diğer prototipi Charles Barbier'in "gece yazısı"dır. Barbier, her sütunda 1 ila 6 nokta kabartmalı olan 2×6’lık bir matris kullandı; bu, bazen dokunarak okuyan görme engelli memurlar için sorun değil, ancak uzun metinleri okuyan görme engelli kişiler için kötü. Braille, matrisi ikili kod kullanarak küçülttü. Braille, kodunu 15 yaşında icat etti ve Haüy'ün okulunda çalıştı, ancak gören öğretmenler buna o kadar karşıydı ki, ölümünden sadece 2{{_}}yıl sonra görme engelli öğrenciler, öğretmenleri sistemi benimsemeye ikna ettiler.</p>
+      <p>Bir dericinin oğlu olan Louis Braille, 3 yaşındayken bir yassı bıçakla yaralandı ve görme yetisini kaybetti. Braille, Valentin Haüy'nin görme engelliler okuluna girmeyi başardı ve orada kabartmalı çizgiler kullandı. Braille'in diğer prototipi Charles Barbier'in "gece yazısı"dır. Barbier, her sütunda 1 ila 6 nokta kabartmalı olan 2x6{{_}}'lık bir matris kullandı; bu, bazen dokunarak okuyan görme engelli memurlar için sorun değil, ancak uzun metinleri okuyan görme engelli kişiler için kötü. Braille, matrisi ikili kod kullanarak küçülttü. Braille, kodunu 15 yaşında icat etti ve Haüy'ün okulunda çalıştı, ancak gören öğretmenler buna o kadar karşıydı ki, ölümünden sadece 2{{_}} yıl sonra görme engelli öğrenciler, öğretmenleri sistemi benimsemeye ikna ettiler.</p>
       <p />
-      <p>Braille, görme engelliler için yardımcı teknolojileri endüstrileştirdi: kabartması kolay, gören kişiler için normal metnin yanına veya üzerine kabartma yapıldığında bile görünür hale gelmiyor.</p>
+      <p>Braille, görme engelliler için yardımcı teknolojileri endüstrileştirdi: kabartması kolay, gören kişiler için normal metnin yanına veya üzerine kabartma yapıldığında bile {{_}}görünür hale gelmiyor{{_}}.</p>
      </transl>
     </text>
    </group>
@@ -5488,7 +5489,7 @@
       <p>The language has just 15 consonants and three vowels: {{t|a}} is inherent, {{t|i}} and {{t|u}} are vowel marks. Initial vowels are separate letters. Other consonants may appear between syllables, they are just omitted: {{sm|ᝐᝒᝑᝋᝓ}} means ''sihamu'', but is pronounced ''singhanmu''.</p>
      </orig>
      <transl>
-      <p>Filipinler’de küçük bir etnik grup olan Mangyan tarafından kullanılır. Yazı [[ps:Brah|Brahmi]]’ye dayanır ve [[ps:Tglg|Tagalog]]’un kardeş yazısıdır.</p>
+      <p>Filipinler'de küçük bir etnik grup olan Mangyan tarafından kullanılır. Yazı [[ps:Brah|Brahmi]]'ye dayanır ve [[ps:Tglg|Tagalog]]'un kardeş yazısıdır.</p>
       <p />
       <p>Dilde yalnızca 15 ünsüz ve üç ünlü vardır: {{t|a}} doğaldır, {{t|i}} ve {{t|u}} ünlü işaretleridir. Baştaki ünlüler ayrı harflerdir. Heceler arasında başka ünsüzler de bulunabilir, ancak bunlar atlanır: {{sm|ᝐᝒᝑᝋᝓ}} ''sihamu'' anlamına gelir, ancak ''singhanmu'' olarak telaffuz edilir.</p>
      </transl>
@@ -5540,7 +5541,7 @@
      <transl>
       <p>MÖ 7. yüzyıldan 1.{{_}}yüzyıla kadar kullanılmıştır. Alfabenin birçok çeşidi mevcuttu. Anadolu'da soldan sağa, Mısır'da ise paralı askerler sağdan sola yazıyordu.</p>
       <p />
-      <p>Dönemin Sovyet bilim insanı Vitaly Shevoroshkin 1960 yılında betiğin{{_}}hece değil alfabetik olduğunu göstermiştir. Şİfre çözme üzerine temel kitap (Ignasi-Xavier Adiego) 1993 yılında çıktı. 1996'da bulunan [[ps:Grekçe|Yunanca]] ile iki dilli bir yazıt, onun haklı olduğunu doğruladı. Bazı karakterler hala bilinmiyor.</p>
+      <p>Dönemin Sovyet bilim insanı Vitaly Shevoroshkin 1960 yılında betiğin {{_}}hece değil alfabetik olduğunu göstermiştir. Şİfre çözme üzerine temel kitap (Ignasi-Xavier Adiego) 1993 yılında çıktı. 1996'da bulunan [[ps:Grekçe|Yunanca]] ile iki dilli bir yazıt, onun haklı olduğunu doğruladı. Bazı karakterler hala bilinmiyor.</p>
      </transl>
     </text>
    </group>
@@ -5609,9 +5610,9 @@
      <transl>
       <p>Çeroki betiğinin mucidi olan gelecekteki şef Sequoia okuma yazma bilmiyordu ancak mevcut kitaplardan karakterler aldı{{-}}, bu yüzden harfler prototip dillerdekinden farklı anlamlara sahip. Örneğin, ünlü {{t|i}} harfi {{sm|Ꭲ}} harfiyle yazılır.</p>
       <p />
-      <p>İlk öğrencisi, altı yaşındaki kızı Ayoka’ydı. Yazının icadı güvensizlikle karşılandı, Ayoka’nın cinnet geçirdiği düşünüldü, ancak Sequoia ve Ayoka birbirlerinin notlarını okuyarak bir sınavı başarıyla geçtiler. Betik kabile arasında hızla yayıldı ve Çerokilerin {{%|90}}’ı 1830’da okuma yazma biliyordu.</p>
+      <p>İlk öğrencisi, altı yaşındaki kızı Ayoka'ydı. Yazının icadı güvensizlikle karşılandı, Ayoka'nın cinnet geçirdiği düşünüldü, ancak Sequoia ve Ayoka birbirlerinin notlarını okuyarak bir sınavı başarıyla geçtiler. Betik kabile arasında hızla yayıldı ve Çerokilerin {{%|90}}'ı 1830'da okuma yazma biliyordu.</p>
       <p />
-      <p>Sequoia, 1828’den beri Çeroki toprakları için ABD ile müzakerelere katıldı.</p>
+      <p>Sequoia, 1828'den beri Çeroki toprakları için ABD ile müzakerelere katıldı.</p>
      </transl>
     </text>
    </group>
@@ -5633,7 +5634,7 @@
      <transl>
       <p>Kurmali genellikle [[ps:Deva|Devanagari]], [[ps:Orya|Odia]], [[ps:Beng|Bengalce]] veya [[ps:Latn|Latince]] ile yazılır. Bu betik Jayanta Kumar Mahata tarafından oluşturulmuştur. Harf şekilleri yerel betiklere dayanmaktadır. "Chisoi" adı bir çocuk tekerlemesinden gelmektedir.</p>
       <p />
-      <p>[[ps:Sora|Sora]] veya [[ps:Wara|Warang Citi]]’ye benzemesine rağmen (doğal sesli harf {{t|ɔ}} [[pt:virama|virama]] ile susturulur), kaynaklar bir alfabe olduğu konusunda hemfikirdir.</p>
+      <p>[[ps:Sora|Sora]] veya [[ps:Wara|Warang Citi]]'ye benzemesine rağmen (doğal sesli harf {{t|ɔ}} [[pt:virama|virama]] ile susturulur), kaynaklar bir alfabe olduğu konusunda hemfikirdir.</p>
      </transl>
     </text>
    </group>
@@ -5949,15 +5950,16 @@
       <p />
       <p>Hiyerogliflerin yanı sıra, iki tane de kodlanmamış yazı vardı:</p>
       <p>* hiyeratik (''kutsal'') betik{{-}}büyük ölçüde küçültülmüş hiyeroglifler; kitaplarda ve iş belgelerinde kullanılırdı;</p>
+      <p />
       <p>* demotik (''halkın'') betiği{{-}}MÖ 7. yüzyılda ortaya çıktı, daha çok alfabetik karakterler; ilk harfler ve iş belgeleri, ardından kitaplar.</p>
       <p />
       <p>Ancak hiyeroglifleri en iyi biz biliyoruz, çünkü taşlara iyi bir şekilde oyulmuş olarak korunuyorlar. Demotik yazının yaygınlaşmasına rağmen, karmaşık yazıyı anlayan insan sayısı sürekli azalsa da hiyeroglifler hâlâ kullanılıyordu. Hristiyanlığın ortaya çıkışıyla hiyeroglifler nihayet terk edildi, son yazıt MS{{_}}394 tarihlidir.</p>
       <p />
-      <p>[[ps:Grek|Yunanca]] ve [[ps:Copt|Kıpti]] bilgisine sahip iki dilli bir kişi olan Jean-François Champollion, 1820’lerde önce isimleri, sonra da metni okuyabildi ve kısa süre sonra öldü. Eserleri, ölümünden çok sonra, 1860’larda doğrulandı.</p>
+      <p>[[ps:Grek|Yunanca]] ve [[ps:Copt|Kıpti]] bilgisine sahip iki dilli bir kişi olan Jean-François Champollion, 1820'lerde önce isimleri, sonra da metni okuyabildi ve kısa süre sonra öldü. Eserleri, ölümünden çok sonra, 1860'larda doğrulandı.</p>
       <p />
       <p>Windows yazı tiplerinde penisin (fallus) üç hiyeroglifi gizlenmiş{{-}}ve yalnızca diğer hiyerogliflerin yanında görüntüleniyor.</p>
       <p />
-      <p>Unicode{{_}}5.2 (2009) örnek karakterleri yeterince tarihi (Alan Gardiner'ın 1957 tarihli kitabından) ancak ilkeldi. Unicode{{_}}9.0 (2016)’da ise gerçeklerden bir şekilde saparak profesyonel bir tasarımcı tarafından yeniden çizildiler. Unicode{{_}}14.0 (2021) Mısırbilimciler hataları düzelttiğinden, bazı karakterler (örneğin 1309A) iki kez değiştirildi. Saç ve sakal, çizilen kişiyi tanımlar{{-}}tanrı, kral, Mısırlı veya yabancı.</p>
+      <p>Unicode{{_}}5.2 (2009) örnek karakterleri yeterince tarihi (Alan Gardiner'ın 1957 tarihli kitabından) ancak ilkeldi. Unicode{{_}}9.0 (2016)'da ise gerçeklerden bir şekilde saparak profesyonel bir tasarımcı tarafından yeniden çizildiler. Unicode{{_}}14.0 (2021) Mısırbilimciler hataları düzelttiğinden, bazı karakterler (örneğin 1309A) iki kez değiştirildi. Saç ve sakal, çizilen kişiyi tanımlar{{-}}tanrı, kral, Mısırlı veya yabancı.</p>
      </transl>
     </text>
    </group>
@@ -6032,9 +6034,9 @@
       <p>Loses influence since the late 20th century. For all languages except Ethiosemitic (Blin{{-}}Kushitic family, Mekan{{-}}Nilo-Saharan) [[ps:Latn|Latin]] script is introduced.</p>
      </orig>
      <transl>
-      <p>13. yüzyılda kullanımdan kalkan Ge’ez dili için Ethiopic betiği kullanıldı. [[ps:Sarb|Güney Arapça]] kökenli betik, 4. yüzyılda Hristiyanlığın ortaya çıkmasıyla ünlü işaretleri ortaya çıktı. Ge’ez, Ethiopian Hristiyanlar tarafından ayin{{-}} amaçlı olarak kullanılmaya devam etti ve betik Ethiopia’nın diğer dillerine yayıldı.</p>
+      <p>13. yüzyılda kullanımdan kalkan Ge'ez dili için Ethiopic betiği kullanıldı. [[ps:Sarb|Güney Arapça]] kökenli betik, 4. yüzyılda Hristiyanlığın ortaya çıkmasıyla ünlü işaretleri ortaya çıktı. Ge'ez, Ethiopian Hristiyanlar tarafından ayin{{-}} amaçlı olarak kullanılmaya devam etti ve betik Ethiopia'nın diğer dillerine yayıldı.</p>
       <p />
-      <p>[[ps:Grek|Yunanca]] türünde bir sayı sistemine sahiptir, yalnızca 1’den 9’a ve 10’dan 90’a kadar olan sayılar 26 ünsüz harfle yazılabilir. 83692={{sm|፰፼፴፮፻፺፪}}, yani 8-10000-30-6-100-90-2.</p>
+      <p>[[ps:Grek|Yunanca]] türünde bir sayı sistemine sahiptir, yalnızca 1'den 9'a ve 10'dan 90'a kadar olan sayılar 26 ünsüz harfle yazılabilir. 83692={{sm|፰፼፴፮፻፺፪}}, yani 8-10000-30-6-100-90-2.</p>
       <p />
       <p>20. yüzyılın sonlarından itibaren etkisini yitirmiştir. Etiyosemitik (Blin{{-}}Kuşitik ailesi, Mekan{{-}}Nil-Sahra) dışındaki tüm diller için [[ps:Latn|Latin]] alfabesi tanıtıldı.</p>
      </transl>
@@ -6207,11 +6209,11 @@
       <p>Letter {{sm|𐌹̈}} consists of letter {{sm|𐌹}} and combining umlaut U+0308.</p>
      </orig>
      <transl>
-      <p>Alfabeyi Piskopos Wulfila’nın yarattığına inanılıyor: İncil’i Gotçaya çevirdi ve kutsal metinlerin [[ps:Runr|runiklerle]] yazılmasını istemedi. 4.-6. yüzyıllara ait Gotça dil kaynakları bu betikle yazılmıştır.</p>
+      <p>Alfabeyi Piskopos Wulfila'nın yarattığına inanılıyor: İncil'i Gotçaya çevirdi ve kutsal metinlerin [[ps:Runr|runiklerle]] yazılmasını {{_}}istemedi{{_}}. 4.-6. yüzyıllara ait Gotça dil kaynakları bu betikle yazılmıştır.</p>
       <p />
-      <p>Alfabe [[ps:Grek|Yunanca]]’dan alınmıştır, harf adları runiklerle aynıdır. İki harfin yalnızca rakamsal değeri vardır: {{sm|𐍁}}=90 ve {{sm|𐍊}}=900. Betiğin bu kökeni nedeniyle, "kanonik görünümlü" Gotik harfler, keskin bir nesne yerine kalın bir kalemle yazılır.</p>
+      <p>Alfabe [[ps:Grek|Yunanca]]'dan alınmıştır, harf adları runiklerle aynıdır. İki harfin yalnızca rakamsal değeri vardır: {{sm|𐍁}}=90 ve {{sm|𐍊}}=900. Betiğin bu kökeni nedeniyle, "kanonik görünümlü" Gotik harfler, keskin bir nesne yerine kalın bir kalemle yazılır.</p>
       <p />
-      <p>{{sm|𐌹̈}} harfi; {{sm|𐌹}} harfi ve çift nokta U+0308’in birleşiminden oluşur.</p>
+      <p>{{sm|𐌹̈}} harfi; {{sm|𐌹}} harfi ve çift nokta U+0308'in birleşiminden oluşur.</p>
      </transl>
     </text>
    </group>
@@ -6240,11 +6242,11 @@
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
      </orig>
      <transl>
-      <p>Grantha [[ps:Brah|Brahmi]]’nin güney kolunun evriminin bir ara aşamasıdır. Grantha'nın erken çeşitlemesi ‘'Pallava’' olarak adlandırılır ve Pallava Krallığı’nda (275-897) kullanılmıştır. Grantha 17. yüzyıla kadar Tamil dili için, 19. yüzyıla kadar Sanskritçe için kullanılmıştır. Bu dil [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]] dillerini etkilemiştir. Yaklaşık 200{{_}}bin örnek Hindistan’daki kütüphanelerde hem palmiye yaprakları üzerine yazılmış hem de basılmış olarak saklanmaktadır.</p>
+      <p>Grantha [[ps:Brah|Brahmi]]'nin güney kolunun evriminin bir ara aşamasıdır. Grantha'nın erken çeşitlemesi ‘'Pallava’' olarak adlandırılır ve Pallava Krallığı'nda (275-897) kullanılmıştır. Grantha 17. yüzyıla kadar Tamil dili için, 19. yüzyıla kadar Sanskritçe için kullanılmıştır. Bu dil [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]] dillerini etkilemiştir. Yaklaşık 200{{_}}bin örnek Hindistan'daki kütüphanelerde hem palmiye yaprakları üzerine yazılmış hem de basılmış olarak saklanmaktadır.</p>
       <p />
-      <p>2010 civarında Grantha’yı Tamil ile [[pt:unification|birleştirme]] girişimi başarısız oldu. Tepkiler nedeniyle (Tamiller arasında milliyetçilik güçlü olduğundan) alfabeler ayrıldı ve geriye sadece Tamilce ve geç Grantha’da örtüşen rakamlar bırakıldı.</p>
+      <p>2010 civarında Grantha'yı Tamil ile [[pt:unification|birleştirme]] girişimi başarısız oldu. Tepkiler nedeniyle (Tamiller arasında milliyetçilik güçlü olduğundan) alfabeler ayrıldı ve geriye sadece Tamilce ve geç Grantha'da örtüşen rakamlar bırakıldı.</p>
       <p />
-      <p>İçsel ünlü {{t|a}}’dır. Ünsüz bağlaçları için birden fazla [[pt:ligature|bitişik harfler]] vardır.</p>
+      <p>İçsel ünlü {{t|a}}'dır. Ünsüz bağlaçları için birden fazla [[pt:ligature|bitişik harfler]] vardır.</p>
       <p>: ka {{sm|𑌕}} + i {{sm|◌𑌿}} {{_}} = ki {{sm|𑌕𑌿}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} = k {{sm|𑌕𑍍}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
@@ -6355,13 +6357,6 @@
       <p />
       <p>Gurmukhi is tightly connected with Sikhism, its name means “said by Guru”. Punjabi Muslims use Shahmukhi (“said by Shah”), a form of [[ps:Arab|Arabic]] alphabet.</p>
      </orig>
-     <known-orig>
-      <p>Since 10th century Punjab used [[ps:Shrd|Sharada]] script that badly conveyed local language. New script was invented by Sikh guru Angad, one of founders of religion. He founded schools where people learned native Punjabi instead of classic Sanskrit, and public canteens where people sat together regardless of Hindu varna.</p>
-      <p />
-      <p>Inherent vowel is {{t|ə}} (in Unicode by convertion “a”). The rest vowels are added with vowel marks: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Vowel {{t|ə}} greatly reduced in unstressed syllables, and is completely silent in the end of words, that’s seen well in autonym: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Also there are subjoined letters{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}}, they are typed in standard way: main letter, [[pt:virama|virama]], subjoined letter. That’s why Punjabi needs virama on a keyboard but not{{_}}in type, but virama in used in dictionaries and Sanskrit. To start a word with vowel, vowel marks are affixed to zero consonant that differs between vowels.</p>
-      <p />
-      <p>Gurmukhi is tightly connected with Sikhism, its name means “said by Guru”. Punjabi Muslims use Shahmukhi (“said by Shah”), a form of [[ps:Arab|Arabic]] alphabet.</p>
-     </known-orig>
      <transl>
       <p>10. yüzyıldan beri Pencap, yerel dili kötü bir şekilde aktaran [[ps:Shrd|Sharada]] betiğini kullanıyordu. Yeni betik, dinin kurucularından biri olan Sih guru Angad tarafından icat edildi. Angad, insanların klasik Sanskritçe yerine yerel Pencapçayı öğrendikleri okullar ve Hindu varnasına bakılmaksızın insanların birlikte oturduğu halka açık kantinler kurdu.</p>
       <p />
@@ -6455,9 +6450,9 @@
       <p>Mark {{t|i}} is always above the letter, and {{t|u}} is attached where convenient: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Historically {{t|r}} looked like horizontal or slanted dash, but in 2010s it changed shape.</p>
      </orig>
      <transl>
-      <p>Hanunó’o [[ps:Brah|Brahmi]]’den türemiştir. Yakın akrabası [[ps:Tglg|Tagalog]] gibi, başlangıçta gövdeden dışarı bambu tahtalar üzerine yazılmış ve soldan sağa okunmuştur.</p>
+      <p>Hanunó'o [[ps:Brah|Brahmi]]'den türemiştir. Yakın akrabası [[ps:Tglg|Tagalog]] gibi, başlangıçta gövdeden dışarı bambu tahtalar üzerine yazılmış ve soldan sağa okunmuştur.</p>
       <p />
-      <p>İşaret {{t|i}} her zaman harfin üzerindedir ve {{t|u}} uygun yerlerde eklenir: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Tarihsel olarak {{t|r}} yatay veya eğimli çizgi gibi görünüyordu, ancak 2010’larda şekil değiştirdi.</p>
+      <p>İşaret {{t|i}} her zaman harfin üzerindedir ve {{t|u}} uygun yerlerde eklenir: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Tarihsel olarak {{t|r}} yatay veya eğimli çizgi gibi görünüyordu, ancak 2010'larda şekil değiştirdi.</p>
      </transl>
     </text>
    </group>
@@ -6524,9 +6519,9 @@
      <transl>
       <p>Hentaigana, son derece özensiz bir şekilde yazılmış, kullanılmayan [[ps:Hira|Hiragana]] harflerinin genel adıdır.</p>
       <p />
-      <p>Man’yōgana’nın yardımcı hece yazımı, [[ps:Hani|Çin ideogramlarından]] ortaya çıkmıştır.{{-}}İdeogramın okunması, resimden ziyade önemliydi. 10. yüzyıla gelindiğinde Man’yōgana’nın yerini Hiragana ve [[ps:Kana|Katakana]] almıştı. Bir sistem olmadığından, tek bir hece için farklı işaretler mevcuttu.</p>
+      <p>Man’yōgana'nın yardımcı hece yazımı, [[ps:Hani|Çin ideogramlarından]] ortaya çıkmıştır.{{-}}İdeogramın okunması, resimden ziyade önemliydi. 10. yüzyıla gelindiğinde Man’yōgana'nın yerini Hiragana ve [[ps:Kana|Katakana]] almıştı. Bir sistem olmadığından, tek bir hece için farklı işaretler mevcuttu.</p>
       <p />
-      <p>Hiragana 1900’de standartlaştırılmıştı ve her hece için yalnızca bir karakter bırakılmıştı. Ve Hentaigana, Batı kara harfleri veya Kiril uncial alfabesi gibi bir şeye dönüştü{{-}}kartpostallarda, dini belgelerde, dövüş sanatları okullarının diplomalarında ve… restoran tabelalarında kullanılıyordu.</p>
+      <p>Hiragana 1900'de standartlaştırılmıştı ve her hece için yalnızca bir karakter bırakılmıştı. Ve Hentaigana, Batı kara harfleri veya Kiril uncial alfabesi gibi bir şeye dönüştü{{-}}kartpostallarda, dini belgelerde, dövüş sanatları okullarının diplomalarında ve... restoran tabelalarında kullanılıyordu.</p>
       <p />
       <p>"Japornimation" hentai sesteş bir sözcüktür: {{sm|変態}} "hentai" ''sapkın''dan ve Hentaigana da {{sm|変体}} "hentai" ''tuhaf''tan gelir.</p>
      </transl>
@@ -6577,7 +6572,7 @@
       <p />
       <p>Yaklaşık 500 hiyeroglif bilinmektedir. Bazı hiyeroglifler sadece kavram{{_}}değil, hece anlamına da gelebilir, ancak sayıları azdır.</p>
       <p />
-      <p>Yaklaşık 1800 hiyeroglif bilim insanlarının dikkatini çekmiş ve bunların Hititçe olduğu varsayılmıştır. 1915 yılında Luvi dili nihayet [[ps:Xsux|çivi yazısı]] ile çözüldü, 1930’larda ise ilk hiyeroglif yazıları ortaya çıkmaya başladı. Nihayet 1973’te çözüldü.</p>
+      <p>Yaklaşık 1800 hiyeroglif bilim insanlarının dikkatini çekmiş ve bunların Hititçe olduğu varsayılmıştır. 1915 yılında Luvi dili nihayet [[ps:Xsux|çivi yazısı]] ile çözüldü, 1930'larda ise ilk hiyeroglif yazıları ortaya çıkmaya başladı. Nihayet 1973'te çözüldü.</p>
      </transl>
     </text>
    </group>
@@ -6632,9 +6627,9 @@
       <p>The script was invented in 1980s by Chervang Kong, priest of one of American Evangelist churches. The church did active missionary work, and script spread across USA. Also used in Asia and Australia to a limited extent. Special signs are used for proper names instead of capital letters.</p>
      </orig>
      <transl>
-      <p>1970’lerde Vietnam ve Lao Hmongları ülkeler arasında göç etti, bazıları ABD’ye yerleşti. Bir Amerikan Hmong’unun kaderini anlatan mükemmel bir film olan ''Gran Torino'' (2008) var.</p>
+      <p>1970'lerde Vietnam ve Lao Hmongları ülkeler arasında göç etti, bazıları ABD'ye yerleşti. Bir Amerikan Hmong'unun kaderini anlatan mükemmel bir film olan ''Gran Torino'' (2008) var.</p>
       <p />
-      <p>Betik, 1980’lerde Amerikan Evanjelist kiliselerinden birinin rahibi Chervang Kong tarafından icat edildi. Kilise aktif misyonerlik çalışmaları yaptı ve senaryo ABD’ye yayıldı. Asya ve Avustralya’da da sınırlı bir ölçüde kullanıldı. Özel isimler için büyük harfler yerine özel işaretler kullanıldı.</p>
+      <p>Betik, 1980'lerde Amerikan Evanjelist kiliselerinden birinin rahibi Chervang Kong tarafından icat edildi. Kilise aktif misyonerlik çalışmaları yaptı ve senaryo ABD'ye yayıldı. Asya ve Avustralya'da da sınırlı bir ölçüde kullanıldı. Özel isimler için büyük harfler yerine özel işaretler kullanıldı.</p>
      </transl>
     </text>
    </group>
@@ -6697,7 +6692,7 @@
     </text>
     <text id="Text">
      <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
-     <transl>[[ps:Kawi|Kawi]]’den gelir. İçsel ünlü {{t|a}}’dır. [[pt:virama|Virama]] işareti "pangkon" olarak adlandırılır ve eğik çizgi yerine uzun bir kancadır. Java betiği [[ps:Bali|Bali]]’ye yakındır. 20. yüzyılın ortalarına gelindiğinde, betik tamamen [[ps:Latn|Latin]] ile yer değiştirmiştir. Günümüzde ise gerçekten güzel olduğu için törensel olarak kullanılmaktadır.</transl>
+     <transl>[[ps:Kawi|Kawi]]'den gelir. İçsel ünlü {{t|a}}'dır. [[pt:virama|Virama]] işareti "pangkon" olarak adlandırılır ve eğik çizgi yerine uzun bir kancadır. Java betiği [[ps:Bali|Bali]]'ye yakındır. 20. yüzyılın ortalarına gelindiğinde, betik tamamen [[ps:Latn|Latin]] ile yer değiştirmiştir. Günümüzde ise gerçekten güzel olduğu için törensel olarak kullanılmaktadır.</transl>
     </text>
    </group>
    <group id="Kali">
@@ -6934,9 +6929,9 @@
       <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
      </orig>
      <transl>
-      <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]’ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan'ın Sikkim eyaleti Bantawa’yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat’ı resmi betik haline getirmiştir.</p>
+      <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]'ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan'ın Sikkim eyaleti Bantawa'yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat'ı resmi betik haline getirmiştir.</p>
       <p />
-      <p>Brahmi kökenli bir abugida olmasına rağmen, [[pt:ligature|bititşik harfleri]], işaretler üzerinde işaretleri ve diğer karmaşık gösterimleri yoktur; tüm karakterler sıradan [[pt:spacing|aralıkları]] kullanır. Noktalama işareti ''danda'', {{t|ā}}'dan ayırt etmek için eğiktir, bu nedenle yazı, Devanagari’deki yaygın Hintçe yerine kendi dandasını kullanır.</p>
+      <p>Brahmi kökenli bir abugida olmasına rağmen, [[pt:ligature|bititşik harfleri]], işaretler üzerinde işaretleri ve diğer karmaşık gösterimleri yoktur; tüm karakterler sıradan [[pt:spacing|aralıkları]] kullanır. Noktalama işareti ''danda'', {{t|ā}}'dan ayırt etmek için eğiktir, bu nedenle yazı, Devanagari'deki yaygın Hintçe yerine kendi dandasını kullanır.</p>
      </transl>
     </text>
    </group>
@@ -6983,9 +6978,9 @@
       <p>There are several million people speaking Yuan, but since 20th century few are literate in Lanna, [[ps:Thai|Thai]] is used more often. Only small Khün language {{nspk|kkh}} uses Tai Tham as primary script.</p>
      </orig>
      <transl>
-      <p>Kuzey Tayland’daki Lanna veya Lannathai krallığından (1296-1558) gelir. Daha sonra Burma tarafından fethedilmiş ve 1774’te Siam (Tayland) tarafından ele geçirilmiştir. Siam çok kültürlüydü, ancak 1912’deki başarısız darbeden sonra kral milliyetçiliği teşvik etmeye başladı. 1933’te milliyetçiler iktidara geldi ve birçok Tai Tham örneğini yok etti.</p>
+      <p>Kuzey Tayland'daki Lanna veya Lannathai krallığından (1296-1558) gelir. Daha sonra Burma tarafından fethedilmiş ve 1774'te Siam (Tayland) tarafından ele geçirilmiştir. Siam çok kültürlüydü, ancak 1912'deki başarısız darbeden sonra kral milliyetçiliği teşvik etmeye başladı. 1933'te milliyetçiler iktidara geldi ve birçok Tai Tham örneğini yok etti.</p>
       <p />
-      <p>Diğer benzer yazılarda olduğu gibi, yuvarlak harfler palmiye yapraklarına yazılarak elde edilir (düz çizgi, yaprağı damarlardan keser). Özündeki ünlü {{t|a}}’dır. Kelimeler arasında boşluk yoktur. İki tür ünlü vardır: bağımsız ünlüler ve ünlü işaretleri. [[pt:virama|virama]] yok, bunun yerine heceleri bir araya getirmek için benzer bir karakter var:</p>
+      <p>Diğer benzer yazılarda olduğu gibi, yuvarlak harfler palmiye yapraklarına yazılarak elde edilir (düz çizgi, yaprağı damarlardan keser). Özündeki ünlü {{t|a}}'dır. Kelimeler arasında boşluk yoktur. İki tür ünlü vardır: bağımsız ünlüler ve ünlü işaretleri. [[pt:virama|virama]] yok, bunun yerine heceleri bir araya getirmek için benzer bir karakter var:</p>
       <p>: yüksek ha {{sm|ᩉ}} + i {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + na {{sm|ᨶ}} = hin {{sm|ᩉᩥ᩠ᨶ}}</p>
       <p />
       <p>İki rakam kümesi vardır: Hora (günlük) ve Tham (kutsal).</p>
@@ -7014,7 +7009,7 @@
       <p>Unicode uses a dotted circle for empty place under mark. Laos traditionally use X mark that’s absent in Unicode. Sometimes [[ps:Latn|Latin]] “x” is used instead.</p>
      </orig>
      <transl>
-      <p>Lao betiği 14. yüzyılda standartlaştırıldı. [[ps:Thai|Tay]] gibi, [[ps:Khmr|Khmer]]'den türemiştir. 1960’ta komünistler tarafından yapılan reformdan sonra, doğal ünlü ve [[pt:virama|virama]] ortadan kalktı ve Lao, abugida{{-}}ünlü yazım kurallarının son işaretini korudu: {{sm|ເກົ້າ}} ''kao'' "dokuz". Lao dili tonaldır ve burada hem üç (!) harflik ünlü işaretini hem de {{sm|ກ}} ünsüzünün üzerindeki tonlamayı görüyoruz. Birçok ünlü işareti, tarihsel nedenlerle sıradan [[pt:spacing|aralık]] harfleridir.</p>
+      <p>Lao betiği 14. yüzyılda standartlaştırıldı. [[ps:Thai|Tay]] gibi, [[ps:Khmr|Khmer]]'den türemiştir. 1960'ta komünistler tarafından yapılan reformdan sonra, doğal ünlü ve [[pt:virama|virama]] ortadan kalktı ve Lao, abugida{{-}}ünlü yazım kurallarının son işaretini korudu: {{sm|ເກົ້າ}} ''kao'' "dokuz". Lao dili tonaldır ve burada hem üç (!) harflik ünlü işaretini hem de {{sm|ກ}} ünsüzünün üzerindeki tonlamayı görüyoruz. Birçok ünlü işareti, tarihsel nedenlerle sıradan [[pt:spacing|aralık]] harfleridir.</p>
       <p />
       <p>Kelimeler arasında boşluk yoktur. Taycada olduğu gibi, harfler [[pt:akrofonik|akrofonik]] olup uygun kelimelerle adlandırılır: {{sm|ບ}} harfi "bo-be" veya sadece "be" (keçi) şeklindedir. {{sm|ຣ}} (r) harfi sessizleşti veya "L"ye dönüştü ve yazımdan silindi, yalnızca yabancı isimlerde kaldı.</p>
       <p />
@@ -7046,9 +7041,9 @@
      <transl>
       <p>Latin alfabesi, MÖ 700{{_}} yıllarında [[ps:Grek|Antik Yunan]] betiği olup daha sonra Latinceye dönüşen [[ps:Ital|Etrüsk]] dillerini yazmak için uyarlanmıştır.</p>
       <p />
-      <p>Orta Çağ’da Latinceye J, V ve W harfleri eklenmiştir. Pahalı parşömen tasarrufu için icat edilen [[pt:minuscule|Minuscule]] yazı, küçük harflere dönüşmüştür.</p>
+      <p>Orta Çağ'da Latinceye J, V ve W harfleri eklenmiştir. Pahalı parşömen tasarrufu için icat edilen [[pt:minuscule|Minuscule]] yazı, küçük harflere dönüşmüştür.</p>
       <p />
-      <p>Latin dili çoktan ölmüştür, ancak Roma İmparatorluğu’nun geniş toprakları, Vatikan’ın misyonerlik çalışmaları ve çoğunlukla Batı dünyası tarafından yürütülen Keşif Çağı, Latin alfabesini dünyanın 1 numaralı alfabesi haline getirmiştir. Latin alfabesi matematik, tıp, fonetik ve programlamada kullanılır.</p>
+      <p>Latin dili çoktan ölmüştür, ancak Roma İmparatorluğu'nun geniş toprakları, Vatikan'ın misyonerlik çalışmaları ve çoğunlukla Batı dünyası tarafından yürütülen Keşif Çağı, Latin alfabesini dünyanın 1 numaralı alfabesi haline getirmiştir. Latin alfabesi matematik, tıp, fonetik ve programlamada kullanılır.</p>
       <p />
       <p>Azerbaycan, Moldova, Türkmenistan ve Özbekistan, SSCB'nin dağılmasıyla Latin alfabesini benimsemiştir.</p>
      </transl>
@@ -7094,11 +7089,11 @@
       <p>Initial vowels do{{_}}not{{_}}have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. To get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. Underscore-like [[pt:virama|virama]] is used in loadwords for letters that do not have final form, and sometimes in syllables with long vowel {{sm|ᤁᤁ᤻}} {{t|kɔ:k}}.</p>
      </orig>
      <transl>
-      <p>Geleneğe göre, yazı 9. yüzyılda Kral Sirijunga tarafından icat edilmiş ve sekiz yüzyıl sonra, Kral’ın reenkarnasyonu olarak kabul edilen aynı bilgin tarafından yeniden canlandırılmıştır. Daha gerçekçi bir versiyon, yazının [[ps:Lepc|Lepcha]]’dan geldiğini ve bu kadar eski olamayacağını belirtir.</p>
+      <p>Geleneğe göre, yazı 9. yüzyılda Kral Sirijunga tarafından icat edilmiş ve sekiz yüzyıl sonra, Kral'ın reenkarnasyonu olarak kabul edilen aynı bilgin tarafından yeniden canlandırılmıştır. Daha gerçekçi bir versiyon, yazının [[ps:Lepc|Lepcha]]'dan geldiğini ve bu kadar eski olamayacağını belirtir.</p>
       <p />
-      <p>İçsel ünlü {{t|ɔ}}’dir.</p>
+      <p>İçsel ünlü {{t|ɔ}}'dir.</p>
       <p />
-      <p>Baştaki ünlülerin özel bir şekli yoktur, bunun yerine Nepal bayrağı gibi "boş" ünsüz {{sm|ᤀ}} ile yazılırlar. Üç fonemden oluşan bir hece elde etmek için önce ünlü işareti, ardından son ünsüz eklenir: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. Alt çizgi benzeri [[pt:virama|virama]], son şekli olmayan harfler için yüklenen sözcüklerde ve bazen uzun ünlü {{sm|ᤁᤁ᤻}} {{t|kɔ:k}} olan hecelerde kullanılır.</p>
+      <p>Baştaki ünlülerin özel bir şekli {{_}}yoktur{{_}}, bunun yerine Nepal bayrağı gibi "boş" ünsüz {{sm|ᤀ}} ile yazılırlar. Üç fonemden oluşan bir hece elde etmek için önce ünlü işareti, ardından son ünsüz eklenir: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. Alt çizgi benzeri [[pt:virama|virama]], son şekli olmayan harfler için yüklenen sözcüklerde ve bazen uzun ünlü {{sm|ᤁᤁ᤻}} {{t|kɔ:k}} olan hecelerde kullanılır.</p>
      </transl>
     </text>
    </group>
@@ -7142,11 +7137,11 @@
       <p>Discovered in early 20th century by Arthur Evans. Deciphered in 1950s.</p>
      </orig>
      <transl>
-      <p>Girit’in Yunanlılar tarafından fethedildiği tarih oldukça kesin olarak biliniyor: MÖ{{_}}1450. [[ps:Lina|Doğrusal A]] kullanımdan kalkmaya başladı.</p>
+      <p>Girit'in Yunanlılar tarafından fethedildiği tarih oldukça kesin olarak biliniyor: MÖ{{_}}1450. [[ps:Lina|Doğrusal A]] kullanımdan kalkmaya başladı.</p>
       <p />
       <p>Harflerin kıvrımlı şekli, deri veya papirüs üzerine yazıldıklarını düşündürüyor; üstelik Doğrusal A aslında mürekkeple yazılmıştı. Ancak günümüze ulaşan tüm örnekler, ateşlerde yakılan ve binlerce yıl boyunca korunan kil tabletler üzerine yazılmıştır. Bu yazıt, Yunanca yerine Minos dilinin dil bilgisine bağlı kalan dar bir kesim tarafından kullanılıyordu. Bilinen tüm yazıtlar ticari belgelerdir: kira sözleşmeleri, zanaatkar listeleri, mülk envanterleri…</p>
       <p />
-      <p>20. yüzyılın başlarında Arthur Evans tarafından keşfedildi. 1950’lerde çözüldü.</p>
+      <p>20. yüzyılın başlarında Arthur Evans tarafından keşfedildi. 1950'lerde çözüldü.</p>
      </transl>
     </text>
    </group>
@@ -7167,7 +7162,7 @@
      </orig>
      <au-cmt>In Russian: Sara Ba Thaw = Сара Ба Тау</au-cmt>
      <transl>
-      <p>Alfabe, Myanmarlı vaiz Sara Ba Thaw ve İngiliz misyoner James Fraser tarafından icat edilmiştir. Hem dik hem de kıvrık büyük [[ps:Latn|Latin]] harflerinden oluşur. Küçük harf yoktur. Misyonerlerin çabaları sayesinde Lisu’nun {{%|40}}’u Protestan olmuştur. Çin, yazıyı 1992’de tanımıştır.</p>
+      <p>Alfabe, Myanmarlı vaiz Sara Ba Thaw ve İngiliz misyoner James Fraser tarafından icat edilmiştir. Hem dik hem de kıvrık büyük [[ps:Latn|Latin]] harflerinden oluşur. Küçük harf yoktur. Misyonerlerin çabaları sayesinde Lisu'nun {{%|40}}'u Protestan olmuştur. Çin, yazıyı 1992'de tanımıştır.</p>
       <p />
       <p>Lisu yazısını öğretmek için başka girişimler de olmuştur: [[ps:Hani|Çince ideogramlara]] benzeyen hece yazısı (≈1925), Pinyin tabanlı (Çincenin Latince çevirisi) Latin (1957), [[ps:Plrd|Pollard alfabesi]] (Miao) ve [[ps:Mymr|Myanmar]] tabanlı yazı.</p>
      </transl>
@@ -7251,7 +7246,7 @@
       <p />
       <p>Betik neredeyse [[pt:abjad|ünsüz]]’e indirgenmiştir: ünsüz harf {{t|ka}}, {{t|ki}} ve {{t|k}} anlamına gelir. Bir ünlü önemliyse, özel işaretler vardır. [[pt:virama|viramalar]] ve [[pt:ligature|bitişik harf]] yoktur. Öte yandan, muhasebe defterleri için önemli olan birçok kısaltma ve kesir vardır. Bunların çoğu yeterince araştırılmamış ve henüz kodlanmamıştır.</p>
       <p />
-      <p>Kafa vuruşları yalnızca başlıklarda belgelenmiştir. [[ps:Deva|Devanagari]] ve [[ps:Gujr|Gujarati]]’ye benzeyen rakamlar görülmüştür; Unicode’da bunlar [[pt:unification|birleştirilmiş]] haldedir.</p>
+      <p>Kafa vuruşları yalnızca başlıklarda belgelenmiştir. [[ps:Deva|Devanagari]] ve [[ps:Gujr|Gujarati]]'ye benzeyen rakamlar görülmüştür; Unicode’da bunlar [[pt:unification|birleştirilmiş]] haldedir.</p>
      </transl>
     </text>
    </group>
@@ -7370,9 +7365,9 @@
       <p>New language was used in liturgy, taught in school. This violated local education law, the school was oppressed and fined, and teaching was ceased. Several manuscripts remain, all are in bad condition. Scholars discovered Medefaidrin in 1947. About 4000 Obɛri exist today, but few know the language. Nigerian authorities are heavily exploring the language and scanning remaining documents.</p>
      </orig>
      <transl>
-      <p>Yapılandırılmış dil ve betik, Michael Ukpong ve Akpan Akpan Udofia tarafından 1931 civarında Nijerya’daki yarı-Hristiyan kilisesi "Obɛri Ɔkaimɛ"de yaratıldı. Kelimeler yapılandırılmıştır ve dil bilgisi İngilizce ile yerel dil olan Ibibio’nun bir karışımıdır. Rakamlar 20 tabanlı konumsaldır ve Ibibio’nun sayma alışkanlıklarını yansıtır. Noktalama işaretleri orijinaldir.</p>
+      <p>Yapılandırılmış dil ve betik, Michael Ukpong ve Akpan Akpan Udofia tarafından 1931 civarında Nijerya'daki yarı-Hristiyan kilisesi "Obɛri Ɔkaimɛ"de yaratıldı. Kelimeler yapılandırılmıştır ve dil bilgisi İngilizce ile yerel dil olan Ibibio'nun bir karışımıdır. Rakamlar 20 tabanlı konumsaldır ve Ibibio'nun sayma alışkanlıklarını yansıtır. Noktalama işaretleri orijinaldir.</p>
       <p />
-      <p>Yeni dil ayinlerde kullanıldı, okullarda öğretildi. Bu, yerel eğitim yasasını ihlal etti, okul baskı altına alındı ve para cezasına çarptırıldı ve eğitim durduruldu. Birkaç el yazması kaldı, hepsi kötü durumda. Akademisyenler Medefaidrin’i 1947’de keşfettiler. Bugün yaklaşık 4000 Obɛri mevcut, ancak çok azı dili biliyor. Nijeryalı yetkililer dili yoğun bir şekilde araştırıyor ve kalan belgeleri tarıyor.</p>
+      <p>Yeni dil ayinlerde kullanıldı, okullarda öğretildi. Bu, yerel eğitim yasasını ihlal etti, okul baskı altına alındı ve para cezasına çarptırıldı ve eğitim durduruldu. Birkaç el yazması kaldı, hepsi kötü durumda. Akademisyenler Medefaidrin'i 1947'de keşfettiler. Bugün yaklaşık 4000 Obɛri mevcut, ancak çok azı dili biliyor. Nijeryalı yetkililer dili yoğun bir şekilde araştırıyor ve kalan belgeleri tarıyor.</p>
      </transl>
     </text>
    </group>
@@ -7394,7 +7389,7 @@
      <transl>
       <p>Betik, İslam vaizi Muhammed Turay tarafından icat edilmiştir. 42 karakterden oluşan ilk betik [[pt:abugida|abugida]] idi, ancak öğrencilerinin yaptığı eklemelerle tutarlılığını yitirdi. İlk üç heceden adını aldı. Ayrıca, konumsal olmayan bir sayı sistemi de betiğe girdi.</p>
       <p />
-      <p>20. yüzyılın başlarında yaygın olarak kullanılıyordu, ancak daha sonra Mende [[ps:Latn|Latin]]’i benimsedi. Günümüzde (2010’larda) Kikakui dilinde okuma yazma bilen yüzlerce insan bulunmaktadır.</p>
+      <p>20. yüzyılın başlarında yaygın olarak kullanılıyordu, ancak daha sonra Mende [[ps:Latn|Latin]]'i benimsedi. Günümüzde (2010'larda) Kikakui dilinde okuma yazma bilen yüzlerce insan bulunmaktadır.</p>
      </transl>
     </text>
    </group>
@@ -7414,9 +7409,9 @@
       <p>More than 2000 inscripitons exist. The alphabet was deciphered in early 20th century via Meroitic pronunciation of Egyptian names. But the language is still unclear.</p>
      </orig>
      <transl>
-      <p>Meroitic betik, 7. yüzyıla kadar Nubia ve Sudan'da yerel dilleri yazmak için kullanılmıştır. Hiyeroglif ve el yazısı olmak üzere iki biçimi vardır. Hiyeroglif biçimi [[ps:Egyp|Mısır hiyerogliflerinden]] gelir ve sütunlarda sağdan sola yazılır; yalnızca anıtlara oyulmuş yazıtlar bilinmektedir. El yazısı ise Demotik yazıdan türetilmiştir ve sağdan sola yazılır, yani tüm yazıtların {{%|90}}’ı.</p>
+      <p>Meroitic betik, 7. yüzyıla kadar Nubia ve Sudan'da yerel dilleri yazmak için kullanılmıştır. Hiyeroglif ve el yazısı olmak üzere iki biçimi vardır. Hiyeroglif biçimi [[ps:Egyp|Mısır hiyerogliflerinden]] gelir ve sütunlarda sağdan sola yazılır; yalnızca anıtlara oyulmuş yazıtlar bilinmektedir. El yazısı ise Demotik yazıdan türetilmiştir ve sağdan sola yazılır, yani tüm yazıtların {{%|90}}'ı.</p>
       <p />
-      <p>2000’den fazla yazıt mevcuttur. Alfabe, 20. yüzyılın başlarında Mısır isimlerinin Meroitic telaffuzuyla çözülmüştür. Ancak dil hala belirsizdir.</p>
+      <p>2000'den fazla yazıt mevcuttur. Alfabe, 20. yüzyılın başlarında Mısır isimlerinin Meroitic telaffuzuyla çözülmüştür. Ancak dil hala belirsizdir.</p>
      </transl>
     </text>
    </group>
@@ -7461,9 +7456,9 @@
       <p>https://github.com/NDISCOVER/Arima-Font/issues/36</p>
      </au-cmt>
      <transl>
-      <p>[[ps:Gran|Grantha]]’dan gelir. İçsel ünlü {{t|a}}’dır. Kıvrımlı harfler, palmiye yaprağının damarlar boyunca kesilmesini önler.</p>
+      <p>[[ps:Gran|Grantha]]'dan gelir. İçsel ünlü {{t|a}}'dır. Kıvrımlı harfler, palmiye yaprağının damarlar boyunca kesilmesini önler.</p>
       <p />
-      <p>İlk basılı kitapta (Roma, 1772) yaklaşık 1000 farklı glif vardı. 1971’de yapılan bir yazım reformuyla, basılı kitaplarda 250, daktiloda ise 90 glif haline getirildi{{-}}ünlü işaretleri ve {{t|r}} harflerden ayrıldı, sık kullanılan ünsüz bağlaçları yukarıdan aşağıya değil soldan sağa doğru yazıldı, nadir durumlarda ise sadece [[pt:virama|virama]] kullanıldı. </p>
+      <p>İlk basılı kitapta (Roma, 1772) yaklaşık 1000 farklı glif vardı. 1971'de yapılan bir yazım reformuyla, basılı kitaplarda 250, daktiloda ise 90 glif haline getirildi{{-}}ünlü işaretleri ve {{t|r}} harflerden ayrıldı, sık kullanılan ünsüz bağlaçları yukarıdan aşağıya değil soldan sağa doğru yazıldı, nadir durumlarda ise sadece [[pt:virama|virama]] kullanıldı. </p>
       <p>: ka {{sm|ക}} + i {{sm|◌ി}}{{_}}{{_}}= ki {{sm|കി}}</p>
       <p>: ka {{sm|ക}} + virama {{sm|◌്}} = k {{sm|ക്}}</p>
       <p>: ta {{sm|ത}} + virama {{sm|◌്}} + ka {{sm|ക}} = tka {{sm|ത്ക}}</p>
@@ -7472,7 +7467,7 @@
       <p />
       <p>''Chillu'' harfleri yerleşik bir virama taşır, bazıları farklı harflerden türemiştir: örneğin, "ta" harfinden gelen L{{-}}. Bunlardan beşi (NN, N, R, LL, LL) modern kullanımdadır ve dördü (K, M, Y, LLL) [[pt:obsolete|eski]].</p>
       <p />
-      <p>Yazım reformları nadiren benimsenir; günlük yazı ve film afişleri eski yazım kurallarını kullanmaya devam eder. Unicode öncesi yazı tipleri yeni yazım kurallarını daha da yaygınlaştırır. Microsoft, Apple ve Google yeni yazım kurallarıyla Unicode yazı tipleri üretirken, yerel satıcılar da eski yazım kurallarını kullanır. 2010’ların sonlarından itibaren basılı medya eski yazım kurallarına geri dönmeye başladı. 2022’de bu reform kısmen geri alındı ve daha fazla alt simge eklendi. ''Unicodia'' Google’ın yazı tipini kullanıyor.</p>
+      <p>Yazım reformları nadiren benimsenir; günlük yazı ve film afişleri eski yazım kurallarını kullanmaya devam eder. Unicode öncesi yazı tipleri yeni yazım kurallarını daha da yaygınlaştırır. Microsoft, Apple ve Google yeni yazım kurallarıyla Unicode yazı tipleri üretirken, yerel satıcılar da eski yazım kurallarını kullanır. 2010'ların sonlarından itibaren basılı medya eski yazım kurallarına geri dönmeye başladı. 2022'de bu reform kısmen geri alındı ve daha fazla alt simge eklendi. ''Unicodia'' Google'ın yazı tipini kullanıyor.</p>
      </transl>
     </text>
    </group>
@@ -7498,14 +7493,14 @@
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </orig>
      <transl>
-      <p>Betik [[ps:Deva|Devanagari]] ile akrabadır ancak önemli ölçüde [[pt:cursive|el yazısı]]’na yakındır. Kökenine dair iki standart teori vardır: Diplomat ve bakan Hemādri Paṇḍit (yaklaşık 1260) ve diplomat Khanderao Ballal (yaklaşık 1700). 1950’lere kadar Devanagari ile birlikte kullanılmış, ardından en azından 1800’den beri var olan Devanagari’nin el yazısı stili olan ''Balbodh'' (kelimenin tam anlamıyla "çocuklar tarafından anlaşılan") Marathi için standart betik olarak ilan edilmiştir. Modi’nin yeniden canlanması 21. yüzyılda başlamıştır.</p>
+      <p>Betik [[ps:Deva|Devanagari]] ile akrabadır ancak önemli ölçüde [[pt:cursive|el yazısı]]'na yakındır. Kökenine dair iki standart teori vardır: Diplomat ve bakan Hemādri Paṇḍit (yaklaşık 1260) ve diplomat Khanderao Ballal (yaklaşık 1700). 1950'lere kadar Devanagari ile birlikte kullanılmış, ardından en azından 1800'den beri var olan Devanagari'nin el yazısı stili olan ''Balbodh'' (kelimenin tam anlamıyla "çocuklar tarafından anlaşılan") Marathi için standart betik olarak ilan edilmiştir. Modi'nin yeniden canlanması 21. yüzyılda başlamıştır.</p>
       <p />
       <p>Başlık genellikle yazıdan önce çizilir ve boşluklar neredeyse hiç görülmez. Bağlaçlarda ünsüzlerden biri (genellikle ilk) hafifçe kısaltılır. Sadece iki ünsüz bağlacı [[pt:ligature|lbitişik harf]] vardır: {{t|ksə}} ve {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
       <p>Ancak sesli harf işaretlerini ekleme yöntemleri oldukça tuhaftır ve kendileri için bitişik harfler oluştururlar:</p>
       <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
-      <p>[[pt:virama|Virama]] Marathi’de asla kullanılmaz. Viramaya benzeyen alt işaret aslında {{t|r}} ile bir bağdır:</p>
+      <p>[[pt:virama|Virama]] Marathi'de asla kullanılmaz. Viramaya benzeyen alt işaret aslında {{t|r}} ile bir bağdır:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </transl>
     </text>
@@ -7570,7 +7565,7 @@
      <transl>
       <p>Mroların çoğu Budisttir ve İslam ülkesi Bangladeş yetkilileri onları desteklemek{{_}}istemez.</p>
       <p />
-      <p>Mro betiği, 1980’lerde ''Krama'' dininin kurucusu Menlay Murang tarafından icat edilmiştir. 2000’lerde Murang alfabesi popüler hale geldi ve önceki alfabeyi bile geride bıraktı: {{%|80}}’den fazla Mro bu alfabeyi okuryazardır. Ayrıca mevcut Latin, Mro fonetiğini kötü bir şekilde aktarmıştır.</p>
+      <p>Mro betiği, 1980'lerde ''Krama'' dininin kurucusu Menlay Murang tarafından icat edilmiştir. 2000'lerde Murang alfabesi popüler hale geldi ve önceki alfabeyi bile geride bıraktı: {{%|80}}'den fazla Mro bu alfabeyi okuryazardır. Ayrıca mevcut Latin, Mro fonetiğini kötü bir şekilde aktarmıştır.</p>
       <p />
       <p>Teknik bir zorluk yoktur: soldan sağa yazım, [[pt:format|biçim]] karakterleri ve [[pt:combining|birleştirme işaretleri]] yoktur, [[pt:abc|alfabetik sıra]] kodlamaya uygundur, satır kaydırma kuralları standarttır. Noktalama işaretleri Avrupa'dır ve ''danda'' çubuğunun yerel bir versiyonu eklenmiştir.</p>
      </transl>
@@ -7594,9 +7589,9 @@
       <p>: k {{sm|ꯛ}}</p>
      </orig>
      <transl>
-      <p>Yaygın kanıya göre, bu betik 11. yüzyılda ortaya çıkmıştır. 18. yüzyılda [[ps:Beng|Bengalce]] benimsenmiştir. 1930’larda betik yeniden canlandırılmış ve 1976’da modern fonetiğe uyarlanmıştır.</p>
+      <p>Yaygın kanıya göre, bu betik 11. yüzyılda ortaya çıkmıştır. 18. yüzyılda [[ps:Beng|Bengalce]] benimsenmiştir. 1930'larda betik yeniden canlandırılmış ve 1976'da modern fonetiğe uyarlanmıştır.</p>
       <p />
-      <p>Harfler vücut bölümlerine göre isimlendirilmiştir: ilki "kok"tur (baş). İçsel ünlü {{t|ə}}’dir. [[pt:virama|Virama]] tamamen sanaldır ve eski [[pt:ligature|bitişik harf]]’lerin bir araya getirilmesinde kullanılır: tek bir ünsüz, küçültülmüş harflerle gösterilir.</p>
+      <p>Harfler vücut bölümlerine göre isimlendirilmiştir: ilki "kok"tur (baş). İçsel ünlü {{t|ə}}'dir. [[pt:virama|Virama]] tamamen sanaldır ve eski [[pt:ligature|bitişik harf]]'lerin bir araya getirilmesinde kullanılır: tek bir ünsüz, küçültülmüş harflerle gösterilir.</p>
       <p>: kə {{sm|ꯀ}} + i {{sm|◌ꯤ}} = ki {{sm|ꯀꯤ}}</p>
       <p>: k {{sm|ꯛ}}</p>
      </transl>
@@ -7620,9 +7615,9 @@
       <p>All sources consider Multani script a Brahmic abugida, but in fact it degraded to [[pt:abjad|consonant]]: no vowel marks, vowels are written extremely selectively. Digits are [[pt:unification|unified]] with [[ps:Guru|Gurmukhi]]: there’s minor difference in 6 and 7.</p>
      </orig>
      <transl>
-      <p>Siraikilerin neredeyse tamamı Müslümandır. 2010’lar itibarıyla sayıları 14...19 milyondur ve farklı kaynaklara göre yalnızca Pakistan’da sayıları 19 milyondur.</p>
+      <p>Siraikilerin neredeyse tamamı Müslümandır. 2010'lar itibarıyla sayıları 14...19 milyondur ve farklı kaynaklara göre yalnızca Pakistan'da sayıları 19 milyondur.</p>
       <p />
-      <p>Betik 18. yüzyılda ortaya çıkmıştır. İlk basılı kaynak 1819 tarihli Yeni Ahit’tir. 19. yüzyılın sonlarında İngiliz yönetimi [[ps:Arab|Arapça]] betiği icat etmiş ve 20. yüzyılda Siraiki bunu benimsemiştir.</p>
+      <p>Betik 18. yüzyılda ortaya çıkmıştır. İlk basılı kaynak 1819 tarihli Yeni Ahit'tir. 19. yüzyılın sonlarında İngiliz yönetimi [[ps:Arab|Arapça]] betiği icat etmiş ve 20. yüzyılda Siraiki bunu benimsemiştir.</p>
       <p />
       <p>Tüm kaynaklar Multani betiğini Brahmic bir abugida olarak kabul etse de, aslında [[pt:abjad|ünsüz]]e dönüşmüştür: ünlü işareti yoktur, ünlüler son derece seçici bir şekilde yazılır. Rakamlar [[pt:unification|birleştirilmiştir]] ve [[ps:Guru|Gurmukhi]] ile: 6 ve 7 arasında küçük bir fark vardır.</p>
      </transl>
@@ -7757,7 +7752,7 @@
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|+ ta|*𑐟|= kta|*𑐎𑑂𑐟}}</p>
      </orig>
      <transl>
-      <p>Kökenleri bilinmemektedir, 10. yüzyıldan beri farklı yazı stilleri mevcuttur. İlk kanıt: Nepal kralı Pratap Malla 1654’te "Newara betiği"nı yazmıştır. Günümüze ulaşan örnekler ise 18. yüzyıldan kalmadır. 1905’te Rana hanedanının Nepal diktatörleri dili ve betiği yasakladı. 1951’de Hindistan işgal etti, gaspçıları kovdu, eski Şah hanedanını devirdi ve tekrar izin verdi. 1960’tan itibaren krallar parlamentoyu feshetti ve milliyetçi politikayı yeniden başlattı; Hinduizm ve Nepalce [[ps:Deva|Devanagari]] dilinde yazılmştır, ancak ekonomik sıkıntılar nedeniyle demokrasi 1989 civarında yaygınlaştı.</p>
+      <p>Kökenleri bilinmemektedir, 10. yüzyıldan beri farklı yazı stilleri mevcuttur. İlk kanıt: Nepal kralı Pratap Malla 1654'te "Newara betiği"nı yazmıştır. Günümüze ulaşan örnekler ise 18. yüzyıldan kalmadır. 1905'te Rana hanedanının Nepal diktatörleri dili ve betiği yasakladı. 1951'de Hindistan işgal etti, gaspçıları kovdu, eski Şah hanedanını devirdi ve tekrar izin verdi. 1960'tan itibaren krallar parlamentoyu feshetti ve milliyetçi politikayı yeniden başlattı; Hinduizm ve Nepalce [[ps:Deva|Devanagari]] dilinde yazılmştır, ancak ekonomik sıkıntılar nedeniyle demokrasi 1989 civarında yaygınlaştı.</p>
       <p />
       <p>Klasik Brahmic abugida. Küçük ünsüzlerden oluşan birden fazla [[pt:ligature|bitişik harf]] olmasına rağmen, [[pt:virama|virama]] bazen görülür. </p>
       <p>{{smtable|ka|*𑐎|+ i|**◌𑐶|= ki|*𑐎𑐶}}</p>
@@ -7783,9 +7778,9 @@
      </orig>
      <au-cmt>Typewriters: https://www.nytimes.com/2011/12/11/magazine/everyone-speaks-text-message.html</au-cmt>
      <transl>
-      <p>Alfabe, 1949 yılında Gineli yazar Solomana Kante tarafından icat edildi. 1950’lerde Sovyet Bloku’ndan biri Solomana için iki N’Ko daktilo üretti. Bu daktilolar çoğunlukla Gine, Fildişi Sahili ve Mali'de kullanılırdı. "N’Ko", "diyorum" anlamına gelir. Harfler birbirine bağlıdır.</p>
+      <p>Alfabe, 1949 yılında Gineli yazar Solomana Kante tarafından icat edildi. 1950'lerde Sovyet Bloku'ndan biri Solomana için iki N'Ko daktilo üretti. Bu daktilolar çoğunlukla Gine, Fildişi Sahili ve Mali'de kullanılırdı. "N'Ko", "diyorum" anlamına gelir. Harfler birbirine bağlıdır.</p>
       <p />
-      <p>Manding grubunun farklı dilleri [[ps:Latn|Latin]] ve [[ps:Arab|Arapça]] kullanır, ancak N’Ko daha yaygındır. Manding dillerinin edebi biçimine de N’Ko denir.</p>
+      <p>Manding grubunun farklı dilleri [[ps:Latn|Latin]] ve [[ps:Arab|Arapça]] kullanır, ancak N'Ko daha yaygındır. Manding dillerinin edebi biçimine de N'Ko denir.</p>
      </transl>
     </text>
    </group>
@@ -7819,11 +7814,11 @@
      <transl>
       <p>Nüshu yüzyıllar boyunca varlığını sürdürdü ve kadın betiği olarak kullanıldı: erkekler [[ps:Hani|okuma-yazma]] konusunda eğitilirken, kadınlar daha basit hece yazısı kullanıyordu. Geniş ideogramların aksine, Nüshu ince bir şeritle yazıldı. Nüshu örneklerinin çoğu ''üçüncü gün mektupları''dır: bir kız evlenmek için başka bir köye gider ve kız kardeşleri ve arkadaşlarının kızları ona dileklerini, genellikle şiirsel olarak işlerler.</p>
       <p />
-      <p>Yaygın yanılgıya rağmen, Nüshu bir{{_}}şifre{{_}}değildi; erkekler onu sadece "düşük" bir betik olarak görüyordu. Bilinen ilk örnek 20. yüzyılın başlarında yapılmış olsa da karakterlerin şekli Nüshu’nun 1300’de var olduğunu gösteriyor.</p>
+      <p>Yaygın yanılgıya rağmen, Nüshu bir{{_}}şifre{{_}}değildi; erkekler onu sadece "düşük" bir betik olarak görüyordu. Bilinen ilk örnek 20. yüzyılın başlarında yapılmış olsa da karakterlerin şekli Nüshu'nun 1300'de var olduğunu gösteriyor.</p>
       <p />
-      <p>Benzer kullanımlı Japon [[ps:Hira|Hiragana]]’sının aksine, Nüshu resmi olmayan bir betik olarak kaldı. 20. yüzyılda okuma-yazma bilmemeye ve dikiş makinelerinin yaygınlaşmasına karşı yürütülen kampanyalar Nüshu’nun gerilemesine neden oldu. Japon işgalciler Nüshu’da bir şifre görerek onu yasakladı ve Kültür Devrimi sırasında Kızıl Muhafızlar, nakışlar da dahil olmak üzere antika eşyaları imha etti.</p>
+      <p>Benzer kullanımlı Japon [[ps:Hira|Hiragana]]'sının aksine, Nüshu resmi olmayan bir betik olarak kaldı. 20. yüzyılda okuma-yazma bilmemeye ve dikiş makinelerinin yaygınlaşmasına karşı yürütülen kampanyalar Nüshu'nun gerilemesine neden oldu. Japon işgalciler Nüshu'da bir şifre görerek onu yasakladı ve Kültür Devrimi sırasında Kızıl Muhafızlar, nakışlar da dahil olmak üzere antika eşyaları imha etti.</p>
       <p />
-      <p>Nüshu, 1980’lerde yeniden keşfedildi. Nüshu’da uzmanlaşan son kadın olan Yang Huanyi, Nüshu’su yalnızca akademisyenler tarafından bilinir olduktan sonra 2004 yılında 98{{-}} yaşında öldü. Nüshu içeren nakışlar popüler bir turistik hediyelik eşya haline geldi; turizmin eski bir betiği bozacağından endişe ediliyor.</p>
+      <p>Nüshu, 1980'lerde yeniden keşfedildi. Nüshu'da uzmanlaşan son kadın olan Yang Huanyi, Nüshu'su yalnızca akademisyenler tarafından bilinir olduktan sonra 2004 yılında 98{{-}} yaşında öldü. Nüshu içeren nakışlar popüler bir turistik hediyelik eşya haline geldi; turizmin eski bir betiği bozacağından endişe ediliyor.</p>
       <p />
       <p>Yaklaşık 1800 karakter biliniyor, ancak çoğu aynı heceyi ifade ediyor.</p>
       <p />
@@ -7870,7 +7865,7 @@
      </orig>
      <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal to encode]</au-cmt>
      <transl>
-      <p>Alfabe 1925 yılında Raghunath Murmu tarafından icat edildi. Nüfusun çoğu okuma yazma bilmese de daha önce [[ps:Beng|Bengalce]], [[ps:Orya|Odia]] ve [[ps:Latn|Latin]] kullanılıyordu. Santali dili Hint-Avrupa değil, Avusturya-Asya kökenlidir ve Brahmi temelli alfabeler pek uygun değildir. Örneğin, sesli ve sessiz ünsüzler kelime çekimi sırasında birbirinin yerine geçer ve bunları ayırt etmenin bir anlamı yoktur.</p>
+      <p>Alfabe 1925 yılında Raghunath Murmu tarafından icat edildi. Nüfusun çoğu okuma yazma bilmese de daha önce [[ps:Beng|Bengalce]], [[ps:Orya|Odia]] ve [[ps:Latn|Latin]] kullanılıyordu. Santali dili {{_}}Hint-Avrupa değil, Avusturya-Asya kökenlidir ve Brahmi temelli alfabeler pek uygun değildir. Örneğin, sesli ve sessiz ünsüzler kelime çekimi sırasında birbirinin yerine geçer ve bunları ayırt etmenin bir anlamı yoktur.</p>
       <p />
       <p>Ol Chiki 30 harften oluşur ve isimler görünüme karşılık gelir. İlk üçü: {{sm|ᱚ}}{{_}}ateş, {{sm|ᱛ}}{{_}}toprak, {{sm|ᱜ}}{{_}}kusmuk.</p>
      </transl>
@@ -7926,9 +7921,9 @@
      <transl>
       <p>Rus kaşifler, Büyük Petro döneminde (18. yüzyılın başlarında) bilgi toplamaya başladıklarında, yazıtlar [[ps:Runr|Cermen runikleriyle]] karşılaştırıldı. Dahası, Poltava Muharebesi'nden sonra hapse atılan İsveçliler aslında Daniel Messerschmidt'e yardım etti. Finliler, runikleri atalarına atfetmekte hızlı davrandılar.</p>
       <p />
-      <p>Danimarkalı bilim adamı Vilhelm Thomsen, 1893’te yazıyı çözdü ve Finleri şaşırttı: bu Türk metni.</p>
+      <p>Danimarkalı bilim adamı Vilhelm Thomsen, 1893'te yazıyı çözdü ve Finleri şaşırttı: bu Türk metni.</p>
       <p />
-      <p>7-10. yüzyıllara ait yaklaşık 200 yazıt ve 9-10. yüzyıllara ait birkaç el yazması bilinmektedir. İkinci Türk Kağanlığı 682-744, Uygur Kağanlığı ise 744-840 yılları arasında yaşadı. Yenisey Kırgızlarına yenildikten sonra Uygurlar güneye gittiler ve 1030’da [[ps:Tang|Tangutlar]] tarafından fethedildiler. Kırgızların tarihi belirsizdir; 13. yüzyılda Cengiz Han’a boyun eğdikleri biliniyor.</p>
+      <p>7-10. yüzyıllara ait yaklaşık 200 yazıt ve 9-10. yüzyıllara ait birkaç el yazması bilinmektedir. İkinci Türk Kağanlığı 682-744, Uygur Kağanlığı ise 744-840 yılları arasında yaşadı. Yenisey Kırgızlarına yenildikten sonra Uygurlar güneye gittiler ve 1030'da [[ps:Tang|Tangutlar]] tarafından fethedildiler. Kırgızların tarihi belirsizdir; 13. yüzyılda Cengiz Han'a boyun eğdikleri biliniyor.</p>
       <p />
       <p>Glif {{sm|𐱇}} 2021 sonbaharında değiştirildi.</p>
      </transl>
@@ -8146,7 +8141,7 @@
     </text>
     <text id="Text">
      <orig>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, heyday of Sasanid Empire.</orig>
-     <transl>Pehlevi yazısının en eski varyantı olan kilden İran yazıtlarının dili. Sasanî İmparatorluğu’nun en parlak dönemi olan 5. yüzyıla kadar kullanılmıştır.</transl>
+     <transl>Pehlevi yazısının en eski varyantı olan kilden İran yazıtlarının dili. Sasanî İmparatorluğu'nun en parlak dönemi olan 5. yüzyıla kadar kullanılmıştır.</transl>
     </text>
    </group>
    <group id="Phlp">
@@ -8259,7 +8254,7 @@
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
      <transl>
-      <p>Sasani İmparatorluğu’nun kuruluşundan (3. yüzyıl) önce yazıtlarda ve sikkelerde kullanılmıştır. Daha sonra [[ps:Phli|Pehlevi]] yazısıyla Farsça ile değiştirilmiş, ancak ara sıra kullanılmıştır. Yedi bitişik harf [[pt:ligature|bitişik harfler]] ve iki swash-tail harfi içerir:</p>
+      <p>Sasani İmparatorluğu'nun kuruluşundan (3. yüzyıl) önce yazıtlarda ve sikkelerde kullanılmıştır. Daha sonra [[ps:Phli|Pehlevi]] yazısıyla Farsça ile değiştirilmiş, ancak ara sıra kullanılmıştır. Yedi bitişik harf [[pt:ligature|bitişik harfler]] ve iki uzun kuyruk harfi içerir:</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (sağdan sola!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </transl>
@@ -8309,9 +8304,9 @@
      <transl>
       <p>Rohingya veya Ruáingga, Bangladeş, Myanmar ve komşu ülkelere yayılmış, çoğunluğu Müslüman olan küçük bir etnik gruptur. [[ps:Arab|Arapça]] yazı 19. yüzyıldan beri bilinmektedir.</p>
       <p />
-      <p>1980’den beri İslam vaizi Muhammed Hanif, Rohingya için daha uygun bir alfabe icat etmiştir. Bu alfabe, kendine özgü ondalık basamaklar kullanır. Harfler, Arapçada olduğu gibi bitişiktir; özerkliği çözmeye çalışın: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
+      <p>1980'den beri İslam vaizi Muhammed Hanif, Rohingya için daha uygun bir alfabe icat etmiştir. Bu alfabe, kendine özgü ondalık basamaklar kullanır. Harfler, Arapçada olduğu gibi bitişiktir; özerkliği çözmeye çalışın: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
       <p />
-      <p>Dilde, aksan işaretleriyle gösterilen üç tonlama vardır. Noktalama işaretleri sıradan Arapçadır: ünlem işareti '''!''', noktalı virgül ''';''' ve bazen nokta '''.''' [[pt:ascii|ASCII]]’dir, geri kalanı Arapça bloktan ters çevrilmiştir.</p>
+      <p>Dilde, aksan işaretleriyle gösterilen üç tonlama vardır. Noktalama işaretleri sıradan Arapçadır: ünlem işareti '''!''', noktalı virgül ''';''' ve bazen nokta '''.''' [[pt:ascii|ASCII]]'dir, geri kalanı Arapça bloktan ters çevrilmiştir.</p>
      </transl>
     </text>
    </group>
@@ -8372,7 +8367,7 @@
     </text>
     <text id="Text">
      <orig>Comes from Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to Bible, Samaritans came to Palestine from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
-     <transl>Paleo-İbranice ([[ps:Phnx|Fenikece]]) alfabesinden gelir. İncil’e göre, Samiriler Mezopotamya’dan Filistin’e gelerek Yahudi dinini ve kültürünü benimsemişlerdir. 2021 itibarıyla, 700’den fazla Samiri bulunmamaktadır.</transl>
+     <transl>Paleo-İbranice ([[ps:Phnx|Fenikece]]) alfabesinden gelir. İncil'e göre, Samiriler Mezopotamya'dan Filistin'e gelerek Yahudi dinini ve kültürünü benimsemişlerdir. 2021 itibarıyla, 700'den fazla Samiri bulunmamaktadır.</transl>
     </text>
    </group>
    <group id="Sarb">
@@ -8585,7 +8580,7 @@
       <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </orig>
      <transl>
-      <p>Betik, Pakistan’ın Hudabad şehrinden adını almıştır. 1868'de Hudavadi, İngiliz yönetimi tarafından Sindhi’nin ana betiği ilan edilmiştir. 20. yüzyılda, çoğunluğu Müslüman olan Sindhi, [[ps:Arab|Arapça]]’ya geçmiştir, ancak betik hâlâ varlığını sürdürmektedir. [[ps:Deva|Devanagari]] ve [[ps:Guru|Gurmukhi]] de kullanılmaktadır; tarihsel olarak [[ps:Khoj|Khojki]] kullanılmıştır.</p>
+      <p>Betik, Pakistan'ın Hudabad şehrinden adını almıştır. 1868'de Hudavadi, İngiliz yönetimi tarafından Sindhi'nin ana betiği ilan edilmiştir. 20. yüzyılda, çoğunluğu Müslüman olan Sindhi, [[ps:Arab|Arapça]]'ya geçmiştir, ancak betik hâlâ varlığını sürdürmektedir. [[ps:Deva|Devanagari]] ve [[ps:Guru|Gurmukhi]] de kullanılmaktadır; tarihsel olarak [[ps:Khoj|Khojki]] kullanılmıştır.</p>
       <p />
       <p>İçsel {{t|a}} ünlüsü ve sık kullanılan [[pt:virama|virama]] bulunan Brahmic abugida:</p>
       <p>{{smtable|ka|*𑊺|+ i|**◌𑋡|= ki|*𑊺𑋡}}</p>
@@ -8616,9 +8611,9 @@
       <p>Sri Lankans use European digits, but two sets are encoded: positional digits were used for numbering palm-leaf books, and they are used today in horoscopes. [[pk:111E0|Others]], non-positional, disappeared in early 19th century. Also at least two letter-based systems exist.</p>
      </orig>
      <transl>
-      <p>Güneydoğu Asya’nın diğer çoğu betiği gibi, [[ps:Brah|Brahmi]]’den gelir. Yazı Sri Lanka’ya 3. yüzyılda gelmiş ve 13. yüzyılda betik oluşmuştur. Harfler kıvrımlıdır: Eski zamanlarda palmiye yapraklarına yazı yazmak yaygındı ve düz çizgiler yaprağı damarları boyunca keserdi.</p>
+      <p>Güneydoğu Asya'nın diğer çoğu betiği gibi, [[ps:Brah|Brahmi]]'den gelir. Yazı Sri Lanka'ya 3. yüzyılda gelmiş ve 13. yüzyılda betik oluşmuştur. Harfler kıvrımlıdır: Eski zamanlarda palmiye yapraklarına yazı yazmak yaygındı ve düz çizgiler yaprağı damarları boyunca keserdi.</p>
       <p />
-      <p>İçsel sesli {{t|ʌ}}’dir. 30’dan az [[pt:ligature|bitişik harf]] vardır. “ünsüz-ünsüz”, hepsi U+200D{{_}}ZWJ karakteri kullanılarak açıkça yazılır. Arapçada [[pt:virama|Virama]] (“ünlüyü kaldır” işareti) “al-lakuna” olarak adlandırılır ve çok sık kullanılır.</p>
+      <p>İçsel sesli {{t|ʌ}}'dir. 30'dan az [[pt:ligature|bitişik harf]] vardır. “ünsüz-ünsüz”, hepsi U+200D{{_}}ZWJ karakteri kullanılarak açıkça yazılır. Arapçada [[pt:virama|Virama]] (“ünlüyü kaldır” işareti) “al-lakuna” olarak adlandırılır ve çok sık kullanılır.</p>
       <p>: ka {{sm|ක}} + i {{sm|◌ි}} = ki {{sm|කි}}</p>
       <p>: ka {{sm|ක}} + virama {{sm|◌්}} = k {{sm|ක්}}</p>
       <p>: ka {{sm|ක}} + virama {{sm|&amp;#x25CC;&amp;#xDCA;}} + ZWJ + va {{sm|&amp;#xDC0;}} = kva {{sm|&amp;#xD9A;&amp;#xDCA;&amp;zwj;&amp;#xDC0;}}</p>
@@ -8799,7 +8794,7 @@
       <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
      </orig>
      <transl>
-      <p>Bir teoriye göre, betik [[ps:Kthi|Kaithi]]’den gelmiş ve Müslümanlar tarafından icat edilmiştir. 19. yüzyıl şairleri tarafından sadeliği nedeniyle tercih edilmiş, ancak 20. yüzyılın ortalarına kadar [[ps:Beng|Bengalce]] ile yer değiştirmiştir. 2000’li yıllarda Bangladeş’te Syloti Nagri öğrenimi yeniden başlamıştır.</p>
+      <p>Bir teoriye göre, betik [[ps:Kthi|Kaithi]]'den gelmiş ve Müslümanlar tarafından icat edilmiştir. 19. yüzyıl şairleri tarafından sadeliği nedeniyle tercih edilmiş, ancak 20. yüzyılın ortalarına kadar [[ps:Beng|Bengalce]] ile yer değiştirmiştir. 2000'li yıllarda Bangladeş'te Syloti Nagri öğrenimi yeniden başlamıştır.</p>
       <p />
       <p>İçsel ünlü {{t|ɔ}} ve [[pt:virama|virama]] ''(hasanta)'' içeren Brahmic abugida: {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Diğer Brahmic betiklerinde olduğu gibi, virama'nın başka bir çeşidi de vardır: {{sm|ꠇ꠬}}=k. İlk ünlüler ayrı harflerdir. Metin, baş vuruşundan sarkıyor, ancak [[ps:Deva|Devanagari]]'nin aksine, onu sıkıca "tutuyor".</p>
       <p />
@@ -8864,7 +8859,7 @@
     </text>
     <text id="Lang">
      <orig>small languages of North India and Pakistan</orig>
-     <transl>Kuzey Hindistan ve Pakistan’ın küçük dilleri</transl>
+     <transl>Kuzey Hindistan ve Pakistan'ın küçük dilleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -9093,9 +9088,9 @@
       <p>In 20th century a new script was created from Old Lybian, written left to right. Muslim states (particularly Gaddafi’s Lybia and Morocco of 80s) banned the script, but in 2003 the king of Morocco permitted Tifinagh. Transitional Council of Libya also permitted Berber languages and Tifinagh.</p>
      </orig>
      <transl>
-      <p>Eski Libya yazısının kökeni belirsizdir; genellikle [[ps:Phnx|Fenikece]]’den geldiği düşünülmektedir. En eski örnekler, MÖ 2. yüzyıla{{_}} ait iki iki dilli yazıdır; Prens Ateban anıtından ve Kral Masinissa tapınağından alınmıştır. Betik [[pt:abjad|ünsüz]] harfliydi ve genellikle aşağıdan yukarıya veya sağdan sola yazılırdı.</p>
+      <p>Eski Libya yazısının kökeni belirsizdir; genellikle [[ps:Phnx|Fenikece]]'den geldiği düşünülmektedir. En eski örnekler, MÖ 2. yüzyıla{{_}} ait iki iki dilli yazıdır; Prens Ateban anıtından ve Kral Masinissa tapınağından alınmıştır. Betik [[pt:abjad|ünsüz]] harfliydi ve genellikle aşağıdan yukarıya veya sağdan sola yazılırdı.</p>
       <p />
-      <p>20. yüzyılda, Eski Libya’dan soldan sağa yazılan yeni bir betik oluşturuldu. Müslüman devletler (özellikle Kaddafi’nin Libya'sı ve 80’lerin Fas’ı) bu betiği yasakladı, ancak 2003’te Fas kralı, Tifinagh’a izin verdi. Libya Geçiş Konseyi de Berberi dillerine ve Tifinagh’a izin verdi.</p>
+      <p>20. yüzyılda, Eski Libya'dan soldan sağa yazılan yeni bir betik oluşturuldu. Müslüman devletler (özellikle Kaddafi'nin Libya'sı ve 80'lerin Fas'ı) bu betiği yasakladı, ancak 2003'te Fas kralı, Tifinagh'a izin verdi. Libya Geçiş Konseyi de Berberi dillerine ve Tifinagh'a izin verdi.</p>
      </transl>
     </text>
    </group>
@@ -9145,9 +9140,9 @@
       <p>In the 1970s, Thaana was on the verge of extinction: President Ibrahim Nasir established telex communication, and the government switched to a poorly designed [[ps:Latn|Latin]] transliteration. However, the next president, Maumoon Abdul Gayoom, restored Thaana. Today both scripts are used in parallel.</p>
      </orig>
      <transl>
-      <p>1153 yılında Maldivler Budizmden İslama geçti. Muhtemelen İslami alıntılar için icat edilen ''Gabulhi Thaana'' (''eksik yazı''), 17. yüzyılda [[ps:Diak|Dives Akuru]]’nun yerini almaya başladı. Kökeni benzersizdir: ünsüz harfleri Arap rakamlarından ve İslam öncesi rakamlardan, ünlü harfleri ise [[ps:Arab|Arapça]] ünlü işaretlerinden gelir. Zamanla çizgiler daha düzgün hale geldi ve zarif 45 derecelik eğik yazı stili yaygınlaştı. Kaşif Thor Heyerdahl bir keresinde Thaana'yı erişteye benzetmişti.</p>
+      <p>1153 yılında Maldivler Budizmden İslama geçti. Muhtemelen İslami alıntılar için icat edilen ''Gabulhi Thaana'' (''eksik yazı''), 17. yüzyılda [[ps:Diak|Dives Akuru]]'nun yerini almaya başladı. Kökeni benzersizdir: ünsüz harfleri Arap rakamlarından ve İslam öncesi rakamlardan, ünlü harfleri ise [[ps:Arab|Arapça]] ünlü işaretlerinden gelir. Zamanla çizgiler daha düzgün hale geldi ve zarif 45 derecelik eğik yazı stili yaygınlaştı. Kaşif Thor Heyerdahl bir keresinde Thaana'yı erişteye benzetmişti.</p>
       <p />
-      <p>1970’lerde Thaana yok olma eşiğindeydi: Başkan İbrahim Nasır teleks iletişimini kurdu ve hükümet kötü tasarlanmış bir [[ps:Latn|Latin]] transliterasyonuna geçti. Ancak, bir sonraki başkan Maumoon Abdul Gayoom, Thaana’yı yeniden canlandırdı. Günümüzde her iki betik de paralel olarak kullanılmaktadır.</p>
+      <p>1970'lerde Thaana yok olma eşiğindeydi: Başkan İbrahim Nasır teleks iletişimini kurdu ve hükümet kötü tasarlanmış bir [[ps:Latn|Latin]] transliterasyonuna geçti. Ancak, bir sonraki başkan Maumoon Abdul Gayoom, Thaana'yı yeniden canlandırdı. Günümüzde her iki betik de paralel olarak kullanılmaktadır.</p>
      </transl>
     </text>
    </group>
@@ -9167,9 +9162,9 @@
       <p>Inherent vowel is {{t|a}} in open syllables and {{t|o}} in closed ones: {{sm|ถนน}}={{t|thanon}} (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</p>
      </orig>
      <transl>
-      <p>[[ps:Khmr|Eski Khmer]]’den gelir, o da [[ps:Brah|Brahmi]]’den gelir. Alfabe, 1283 yılında Büyük Kral Ramkhamhaeng tarafından düzenlenmiş ve onaylanmıştır.</p>
+      <p>[[ps:Khmr|Eski Khmer]]'den gelir, o da [[ps:Brah|Brahmi]]'den gelir. Alfabe, 1283 yılında Büyük Kral Ramkhamhaeng tarafından düzenlenmiş ve onaylanmıştır.</p>
       <p />
-      <p>Açık hecelerde içsel sesli harf {{t|a}}, kapalı hecelerde {{t|o}}’dur: {{sm|ถนน}}={{t|thanon}} (yol). Harfler [[pt:akrofonik|akrofonik]]tir: örneğin, {{sm|ช}} harfi "cho chang" (fil) olarak adlandırılır. Kelimeler arasında boşluk yoktur.</p>
+      <p>Açık hecelerde içsel sesli harf {{t|a}}, kapalı hecelerde {{t|o}}'dur: {{sm|ถนน}}={{t|thanon}} (yol). Harfler [[pt:akrofonik|akrofonik]]tir: örneğin, {{sm|ช}} harfi "cho chang" (fil) olarak adlandırılır. Kelimeler arasında boşluk yoktur.</p>
      </transl>
     </text>
    </group>
@@ -9191,7 +9186,7 @@
      <transl>
       <p>Güneydoğu Asya'nın çoğu betiği gibi, Brahmi'den gelmiştir, içsel sesli harf {{t|a}}'dır.</p>
       <p />
-      <p>Betiğin Hindistan'a seyahat eden ve Tibet Budizminin temelini atan Thonmi Sambhota tarafından icat edildiği yaygın olarak kabul edilmektedir. O zamandan beri yazım çok fazla değişmedi ve dil değişti, bu nedenle yazı telaffuzdan büyük ölçüde farklıdır.</p>
+      <p>Betiğin Hindistan'a seyahat eden ve Tibet Budizminin temelini atan Thonmi Sambhota tarafından icat edildiği yaygın olarak kabul edilmektedir. O zamandan beri yazım çok fazla {{_}}değişmedi{{_}} ve dil değişti, bu nedenle yazı telaffuzdan büyük ölçüde farklıdır.</p>
      </transl>
     </text>
    </group>
@@ -9217,9 +9212,9 @@
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </orig>
      <transl>
-      <p>Betik [[ps:Beng|Bengalce]]’ye yakındır, çoğu karakter benzerdir, ancak diğer [[pt:ligature|bitişik harfler]] nedeniyle [[pt:unification|birleştirme]] imkansızdır. İlk metal yazı tipi 1920’lerde, ilk dijital yazı tipi ise 1990’larda yapılmıştır. Konuşanların çoğu (2000 itibarıyla 34{{_}}milyon) 20. yüzyılda [[ps:Deva|Devanagari]]’ye geçmiştir ve betik esas olarak Hinduizmde kullanılmaktadır. Maithili uzun bir süre Hintçe veya Bengalcenin bir lehçesi olarak kabul edilmiş, ancak 2003 yılında ayrı bir dil ilan edilmiş ve Devanagari ana betik olarak bırakılmıştır.</p>
+      <p>Betik [[ps:Beng|Bengalce]]'ye yakındır, çoğu karakter benzerdir, ancak diğer [[pt:ligature|bitişik harfler]] nedeniyle [[pt:unification|birleştirme]] imkansızdır. İlk metal yazı tipi 1920'lerde, ilk dijital yazı tipi ise 1990'larda yapılmıştır. Konuşanların çoğu (2000 itibarıyla 34{{_}}milyon) 20. yüzyılda [[ps:Deva|Devanagari]]'ye geçmiştir ve betik esas olarak Hinduizmde kullanılmaktadır. Maithili uzun bir süre Hintçe veya Bengalcenin bir lehçesi olarak kabul edilmiş, ancak 2003 yılında ayrı bir dil ilan edilmiş ve Devanagari ana betik olarak bırakılmıştır.</p>
       <p />
-      <p>İçsel sesli harf {{t|a}}’dır. [[pt:virama|Virama]] yalnızca Sanskritçe için kullanılır: ünsüz bağlaçlar bağlaç olarak yazılır ve sesli harf kelimelerin sonunda sessizleşir. {{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
+      <p>İçsel sesli harf {{t|a}}'dır. [[pt:virama|Virama]] yalnızca Sanskritçe için kullanılır: ünsüz bağlaçlar bağlaç olarak yazılır ve sesli harf kelimelerin sonunda sessizleşir. {{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </transl>
     </text>
@@ -9240,7 +9235,7 @@
       <p>Vowel names are phoneme + one of four tones. In comparison, in Hmong Latin tones are also written with letters.</p>
      </orig>
      <transl>
-      <p>Farklı [[ps:Latn|Latin]] türlerinde yazılan küçük bir Çin-Tibet dilleri ailesi. 1990 yılında Hindistan'dan Lakhum Mossang alfabeyi oluşturdu ve 2020’deki ölümüne kadar yaklaşık 100 kişiye öğretti.</p>
+      <p>Farklı [[ps:Latn|Latin]] türlerinde yazılan küçük bir Çin-Tibet dilleri ailesi. 1990 yılında Hindistan'dan Lakhum Mossang alfabeyi oluşturdu ve 2020'deki ölümüne kadar yaklaşık 100 kişiye öğretti.</p>
       <p />
       <p>Sesli harf isimleri fonem + dört tondan biridir. Buna karşılık, Hmong'da Latin tonları da harflerle yazılır.</p>
      </transl>
@@ -9324,11 +9319,11 @@
      </orig>
      <au-cmt>1159 is actually inscription on stone rather than palm leaf</au-cmt>
      <transl>
-      <p>''Tulu'' ve ''Tigalari'' çok yakın eski betikler, hatta bazıları onları tek bir betik olarak görüyor. Belki kardeş betik ''Grantha-Malayalam'' karakterleri de yakında eklenecektir. Hepsi [[ps:Gran|Grantha]] ile ilgilidir ve günümüzde Hinduizmde nadiren kullanılmaktadır. Bilinen ilk yazıt 1159 yılına aittir, ancak betik çok daha eskidir. Bir azınlık dili olarak Tulu, İngiliz yetkililer tarafından ihmal edilmiş ve betik neredeyse ölmüştür.</p>
+      <p>'‘Tulu’' ve ‘'Tigalari’' çok yakın eski betikler, hatta bazıları onları tek bir betik olarak görüyor. Belki kardeş betik ‘'Grantha-Malayalam’' karakterleri de yakında eklenecektir. Hepsi [[ps:Gran|Grantha]] ile ilgilidir ve günümüzde Hinduizmde nadiren kullanılmaktadır. Bilinen ilk yazıt 1159 yılına aittir, ancak betik çok daha eskidir. Bir azınlık dili olarak Tulu, İngiliz yetkililer tarafından ihmal edilmiş ve betik neredeyse ölmüştür.</p>
       <p />
-      <p>Modern Tulu [[ps:Knda|Kannada]] ve [[ps:Mlym|Malayalam]] veya Malayalam ile yaygın olarak [[pt:unification|birleştirilmiş]] yeniden canlandırılmış yazıyla yazılır. Eski ve modern Tulu’nun birleştirilmemesi konusunda bir fikir birliği vardır: canlı Brahmik yazılar yazımı basitleştirme eğilimindedir ve ölü olanlar yazı tipi tasarımını basitleştirir ve kusurlu yazı tiplerinde bile yazarın yazımını iletir.</p>
+      <p>Modern Tulu [[ps:Knda|Kannada]] ve [[ps:Mlym|Malayalam]] veya Malayalam ile yaygın olarak [[pt:unification|birleştirilmiş]] yeniden canlandırılmış yazıyla yazılır. Eski ve modern Tulu'nun birleştirilmemesi konusunda bir fikir birliği vardır: canlı Brahmik yazılar yazımı basitleştirme eğilimindedir ve ölü olanlar yazı tipi tasarımını basitleştirir ve kusurlu yazı tiplerinde bile yazarın yazımını iletir.</p>
       <p />
-      <p>Eski rakamlar çok nadiren tasdik edilir ve kodlanmaz, modern olanlar Kannada ile birleştirilir. Tulu el yazmalarında alt simge + gibi görünen editoryal işaretler bulunur (muhtemelen daha sonra pan-Indic noktalama işareti olarak kodlanacaktır), bu nedenle sanal [[pt:virama|virama]] için resimde artı altta değil içte bulunur. ''Danda'' çubuğu sıradan bir çubuktur ve çok dilli metinlerdeki sorunları önlemek için kodlanmıştır.</p>
+      <p>Eski rakamlar çok nadiren tasdik edilir ve kodlanmaz, modern olanlar Kannada ile birleştirilir. Tulu el yazmalarında alt simge + gibi görünen editoryal işaretler bulunur (muhtemelen daha sonra pan-Indic noktalama işareti olarak kodlanacaktır), bu nedenle sanal [[pt:virama|virama]] için resimde artı altta değil içte bulunur. '‘Danda’' çubuğu sıradan bir çubuktur ve çok dilli metinlerdeki sorunları önlemek için kodlanmıştır.</p>
      </transl>
     </text>
    </group>
@@ -9496,7 +9491,7 @@
       <p />
       <p>Tabletler İran ve Irak çöllerinde birkaç bin yıl boyunca korunmuş ve İran çivi yazısı 19. yüzyılın ortalarında çözülmüştür. Bu Sümerce için bir anahtar oldu. Bilinen tüm diller 1900 yılına kadar deşifre edilmişti.</p>
       <p />
-      <p>“Çivi yazısı” bloğu yaklaşık olarak Üçüncü Ur Hanedanlığı’nın (MÖ{{_}}2100 civarı) çivi yazısına karşılık gelir ve daha sonraki biçimler (Eski ve Yeni Asurca) [[pt:unification|birleştirilmiş]] varyant olarak kabul edilir. “Erken hanedan çivi yazısı” bloğu yaklaşık MÖ{{_}}2900’den önceki karakterleri tanımlar.</p>
+      <p>“Çivi yazısı” bloğu yaklaşık olarak Üçüncü Ur Hanedanlığı'nın (MÖ{{_}}2100 civarı) çivi yazısına karşılık gelir ve daha sonraki biçimler (Eski ve Yeni Asurca) [[pt:unification|birleştirilmiş]] varyant olarak kabul edilir. “Erken hanedan çivi yazısı” bloğu yaklaşık MÖ{{_}}2900'den önceki karakterleri tanımlar.</p>
      </transl>
     </text>
    </group>
@@ -9584,7 +9579,7 @@
   <group id="Snip">
    <text id="Albanian">
     <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
-    <transl>Arnavut alfabesinin birden fazla olmasının birkaç nedeni vardır ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): Ulusal kurtuluş hareketinin bilim insanları Slavlara, Yunanlılara ve Türklere baktılar ve kendi alfabelerini ve Türklerden sadece gizlilik istediler (Arnavutluk, Osmanlı İmparatorluğu’nun çöküşüyle 1912’de bağımsızlığını kazandı).</transl>
+    <transl>Arnavut alfabesinin birden fazla olmasının birkaç nedeni vardır ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): Ulusal kurtuluş hareketinin bilim insanları Slavlara, Yunanlılara ve Türklere baktılar ve kendi alfabelerini ve Türklerden sadece gizlilik istediler (Arnavutluk, Osmanlı İmparatorluğu'nun çöküşüyle 1912'de bağımsızlığını kazandı).</transl>
    </text>
    <text id="ArabPres1">
     <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
@@ -9596,7 +9591,7 @@
    </text>
    <text id="GrekCoptUni">
     <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
-    <transl>Unicode{{_}}1.0’da Kıpti dili Yunanca ile [[pt:unification|birleştirildi]] ve tüm saf Kıpti harfleri de Yunanca kabul edildi. Unicode{{_}}4.1’den (2005) bu yana bu diller birbirinden ayrıldı: Kıpti çalışmaları genellikle Yunanca metinler içeriyordu. Dahası, yalnızca bir Kıpti harfi büyük ve küçük harflerde önemli ölçüde farklı gliflere sahipti: {{smfunky|Ϧϧ}}.</transl>
+    <transl>Unicode{{_}}1.0'da Kıpti dili Yunanca ile [[pt:unification|birleştirildi]] ve tüm saf Kıpti harfleri de Yunanca kabul edildi. Unicode{{_}}4.1'den (2005) bu yana bu diller birbirinden ayrıldı: Kıpti çalışmaları genellikle Yunanca metinler içeriyordu. Dahası, yalnızca bir Kıpti harfi büyük ve küçük harflerde önemli ölçüde farklı gliflere sahipti: {{smfunky|Ϧϧ}}.</transl>
    </text>
   </group>
   <group id="CharCat">
@@ -9894,7 +9889,7 @@
     </text>
     <text id="Text">
      <orig>Currency character is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does{{_}}not{{_}}need a{{_}}special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
-     <transl>Para birimi karakteri, ülke imajının önemli bir parçasıdır ve Moğol tugrikinin bile mezar taşına benzeyen bir &lt;font size='+1'&gt;₮&lt;/font&gt; işareti vardır. Artemy Lebedev, 1990’ların sonunda Rus rublesinin özel bir karaktere ihtiyacı olmadığını söylemiş, ancak daha sonra halkla ilişkiler çalışmaları sayesinde &lt;font size='+1'&gt;₽&lt;/font&gt; işaretini resmi statüye getirmiştir.</transl>
+     <transl>Para birimi karakteri, ülke imajının önemli bir parçasıdır ve Moğol tugrikinin bile mezar taşına benzeyen bir &lt;font size='+1'&gt;₮&lt;/font&gt; işareti vardır. Artemy Lebedev, 1990'ların sonunda Rus rublesinin özel bir karaktere ihtiyacı{{_}}olmadığını{{_}}söylemiş, ancak daha sonra halkla ilişkiler çalışmaları sayesinde &lt;font size='+1'&gt;₽&lt;/font&gt; işaretini resmi statüye getirmiştir.</transl>
     </text>
    </group>
    <group id="Sk">
@@ -10153,19 +10148,19 @@
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
      <transl>
-      <p>IBM PC’nin BIOS’unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows’un NT ailesi üç tür koda sahiptir.</p>
+      <p>IBM PC'nin BIOS'unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows'un NT ailesi üç tür koda sahiptir.</p>
       <p />
       <p>'''DOS kodları'''</p>
       <p />
-      <p>{{kb|Alt}} tuşuna basılı tutarak (sol{{-}}her yerde, sağ{{-}}klavye düzenine bağlıdır), '''sayısal''' tuş takımında 1’den 255’e kadar '''ondalık''' karakter kodunu yazın. Örneğin, {{k|Alt|51}}, 3 rakamını oluşturur.</p>
+      <p>{{kb|Alt}} tuşuna basılı tutarak (sol{{-}}her yerde, sağ{{-}}klavye düzenine bağlıdır), '''sayısal''' tuş takımında 1'den 255'e kadar '''ondalık''' karakter kodunu yazın. Örneğin, {{k|Alt|51}}, 3 rakamını oluşturur.</p>
       <p />
-      <p>Kodlama tüm kullanıcılar için ortaktır, DOS kodlamalarından biridir (437, 866 vb.) ve Unicode olmayan uygulamalar için seçilen dile bağlıdır. 1’den 31’e ve 127’ye kadar olan kodlar, bu karakterlerin yazdırılabilir sürümlerini oluşturur: 1={{em|☺}}.</p>
+      <p>Kodlama tüm kullanıcılar için ortaktır, DOS kodlamalarından biridir (437, 866 vb.) ve Unicode olmayan uygulamalar için seçilen dile bağlıdır. 1'den 31'e ve 127'ye kadar olan kodlar, bu karakterlerin yazdırılabilir sürümlerini oluşturur: 1={{em|☺}}.</p>
       <p />
       <p>'''Windows kodları'''</p>
       <p />
       <p>{{kb|Alt}} tuşuna basılı tutarak sayısal tuş takımında {{k|'''0'''}} yazın, ardından '''ondalık''' karakter kodu 32 ile 255 arasında değişir. {{k|Alt|0240}}, ð harfini oluşturur.</p>
       <p />
-      <p>Kodlama, Windows ayarlarından bağımsız olarak Windows-1252’dir. 127 kodu çalışmaz. 128 ile 159 arasındaki kodlar çeşitli tipografi karakterleridir. Geri kalanlar [[pt:latin1|Latin-1]] ile aynıdır.</p>
+      <p>Kodlama, Windows ayarlarından bağımsız olarak Windows-1252'dir. 127 kodu {{_}}çalışmaz{{_}}. 128 ile 159 arasındaki kodlar çeşitli tipografi karakterleridir. Geri kalanlar [[pt:latin1|Latin-1]] ile aynıdır.</p>
       <p />
       <p>'''Unicode kodları'''</p>
       <p />
@@ -10173,7 +10168,7 @@
       <p>: HKEY_CURRENT_USER\Control Panel\Input Method</p>
       <p>'''string''' parametresini EnableHexNumpad=1 olarak ekleyin ve bilgisayarı yeniden başlatın.</p>
       <p />
-      <p>{{kb|Alt}} tuşuna basılı tutarak {{kb|Num+}} ve '''onaltılık''' karakter kodunu yazın. A…F harfleri ana klavyeden girilir. Sadece [[pt:bmp|Temel Düzlem]] çalışır. {{k|Alt|+262F}} Yin ve yang’ı {{em|☯}} yapar.</p>
+      <p>{{kb|Alt}} tuşuna basılı tutarak {{kb|Num+}} ve '''onaltılık''' karakter kodunu yazın. A…F harfleri ana klavyeden girilir. Sadece [[pt:bmp|Temel Düzlem]] çalışır. {{k|Alt|+262F}} Yin ve yang'ı {{em|☯}} yapar.</p>
      </transl>
     </text>
    </group>
@@ -10288,7 +10283,7 @@
       <p>* Ünsüz bağlacı kullanımı (pa-nda): Devanagari {{sm|क्ष}} kša. Bağlaç olmadığı için yazılır: ka+virama+ša{{-}}, ancak açık biçimde virama yalnızca kelimelerin sonunda bulunur. Genellikle kelimelerin sonunda da yoktur (doğal ünlü sessizleşir). R harfi bu bağlaçlarda genellikle küçülür. Küçük baş harf R ({{sm|र्क}} rka) ''repha'', küçük alt harf R ({{sm|क्र}} kra) ''rakar'' olarak adlandırılır.</p>
       <p>* Son ünsüz (pan-da){{-}}[[ps:Phag|Phags-Pa]] kullanılır. Virama kullanılmaz. Sanal virama veya baş ünsüz bağlaçları oluşturmanın başka yolları olabilir.</p>
       <p>* Eksik, karmaşık heceleri kötü ileten (pa-da){{-}}[[ps:Bugi|Buginese]]. Bazı örnekler ünsüz harflere dönüşmüştür.</p>
-      <p>* İçsel ünlü (pa-nᵊ-da) reform ([[ps:Laoo|Lao]]) veya doğal evrim ([[ps:Guru|Gurmukhi]]) yoluyla kaybolmuştur. İkinci durumda, sözlüklerde her zaman {{t|na}} ve {{t|n}} ayrımı yapılamaz ve virama kullanılır.</p>
+      <p>* İçsel ünlü (pa-nᵊ-da) reform ([[ps:Laoo|Lao]]) veya doğal evrim ([[ps:Guru|Gurmukhi]]) yoluyla kaybolmuştur. İkinci durumda, sözlüklerde her zaman {{_}} {{t|na}} ve {{t|n}} ayrımı yapılamaz ve virama kullanılır.</p>
      </transl>
     </text>
    </group>
@@ -10441,9 +10436,9 @@
       <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
       <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
       <p />
-      <p>[[pt:utf7|UTF-7]] ve [[pt:punycode|Punycode]] metin dosyalarının biçimi olarak kullanılmaz. UTF-32 oldukça nadirdir.</p>
+      <p>[[pt:utf7|UTF-7]] ve [[pt:punycode|Punycode]] metin dosyalarının biçimi olarak {{_}}kullanılmaz{{_}}. UTF-32 oldukça nadirdir.</p>
       <p />
-      <p>İkili dosyalar serileştirme biçimini kesin olarak belirtir ve bayt sırası işaretine ihtiyaç duymaz.</p>
+      <p>İkili dosyalar serileştirme biçimini kesin olarak belirtir ve bayt sırası işaretine{{_}}ihtiyaç duymaz.</p>
      </transl>
     </text>
    </group>
@@ -10540,7 +10535,7 @@
       <p>See also [[pt:unification|unification]] (writing different characters with one code point) and duplication (writing a single character with different code points).</p>
      </orig>
      <transl>
-      <p>"Karakter" terimi muğlaktır, bu nedenle Unicode kendi kodlarını (0’dan {{n|1114111}}₁₀={{h|10FFFF}}₁₆’a kadar olan sayılar) '''kod noktaları''' olarak adlandırır. Bir kod noktası şunlar olabilir:</p>
+      <p>"Karakter" terimi muğlaktır, bu nedenle Unicode kendi kodlarını (0'dan {{n|1114111}}₁₀={{h|10FFFF}}₁₆'a kadar olan sayılar) '''kod noktaları''' olarak adlandırır. Bir kod noktası şunlar olabilir:</p>
       <p>* [[pt:graphic|Grafik]] (yazdırılabilir) karakter.</p>
       <p>* [[pt:control|Kontrol]] komutu.</p>
       <p>* [[pt:format|Biçimlendirme]] komutu.</p>
@@ -10839,7 +10834,7 @@
      <transl>
       <p>Japonca {{sm|絵}} ''e{{-}}resim'' + {{sm|文字}} ''moji{{-}}karakter, sembol'' kelimelerinden türetilmiştir.</p>
       <p />
-      <p>Cep telefonu operatörü NTT DoCoMo tarafından 1999 civarında SMS'lerde karakter tasarrufu amacıyla icat edilmiştir. Batılı operatörler 2004 yılında kendi setlerini geliştirmeye başlamış ve 2010 yılında DoCoMo’nun kodlaması Unicode{{_}}6.0’a uyarlanmıştır. Birçok emoji Japonya'ya özgüdür: eğilen iş adamı {{em|🙇}}, acemi sürücü işareti {{em|🔰}}… Diğerlerinin anlamı Japonya dışında değişmiştir: en yüksek okul notu {{em|💯}} "tamamen katılıyorum"a dönüşmüştür.</p>
+      <p>Cep telefonu operatörü NTT DoCoMo tarafından 1999 civarında SMS'lerde karakter tasarrufu amacıyla icat edilmiştir. Batılı operatörler 2004 yılında kendi setlerini geliştirmeye başlamış ve 2010 yılında DoCoMo'nun kodlaması Unicode{{_}}6.0'a uyarlanmıştır. Birçok emoji Japonya'ya özgüdür: eğilen iş adamı {{em|🙇}}, acemi sürücü işareti {{em|🔰}}… Diğerlerinin anlamı Japonya dışında değişmiştir: en yüksek okul notu {{em|💯}} "tamamen katılıyorum"a dönüşmüştür.</p>
       <p />
       <p>2010 öncesi birçok eski piktogramın yalnızca U+FE0F karakteriyle (''aka'' varyasyon seçici 16) emoji olarak gösterilmesi garanti edilmiştir.</p>
       <p />
@@ -11060,6 +11055,7 @@
    <group id="linebreak">
     <text id="Name">
      <orig>line breaking</orig>
+     <transl>Satır sonu</transl>
     </text>
     <text id="Text">
      <orig>
@@ -11067,6 +11063,11 @@
       <p />
       <p>{{LineBreakTypes}}</p>
      </orig>
+     <transl>
+      <p>Uzun bir metni satırlara bölmek için karakterler birkaç kategoriye ayrılır.</p>
+      <p />
+      <p>{{LineBreakTypes}}</p>
+     </transl>
     </text>
    </group>
    <group id="logical">
@@ -11374,13 +11375,13 @@
       <p>Unofficially [[pt:control|control]] characters are taken for custom control and format characters: in most cases they cannot appear in text.</p>
      </orig>
      <transl>
-      <p>{{n|6400}} karakter E000…F8FF [[pt:bmp|Temel Düzlem]]’de ve {{n|131068}} karakter iki [[pt:plane|düzlem]] 0F ve 10’da ([[pt:noncharacter|karakter olmayan]] *FFFE ve *FFFF hariç) herkesin kendi ihtiyaçlarına göre verilmiştir.</p>
+      <p>{{n|6400}} karakter E000…F8FF [[pt:bmp|Temel Düzlem]]'de ve {{n|131068}} karakter iki [[pt:plane|düzlem]] 0F ve 10'da ([[pt:noncharacter|karakter olmayan]] *FFFE ve *FFFF hariç) herkesin kendi ihtiyaçlarına göre verilmiştir.</p>
       <p />
       <p>Karşılıklı müzakere ile, insanlar bu aralıklarda istedikleri her şeyi kodlayabilirler; Unicode için uygun olmayan karakterler de dahil: ticari markalar, kurgusal alfabeler, nadir karakterler ve betikler, stil etiketleri, ikame işaretleri. Unicode Konsorsiyumu bundan sorumlu{{_}}değildir{{_}}. Özel karakterlerin dört yaygın kullanımını listeleyelim.</p>
       <p />
       <p>* İşletim sistemi satıcıları genellikle kendi logolarını burada kodlar. Son kullanıcılar E000 ve üzeri kodlar alır ve yazılım satıcıları{{-}}F8FF ve altı kodlar alır.</p>
-      <p>* ConScript Unicode Kayıt Defteri ve onun atası Under-ConScript Unicode Kayıt Defteri{{-}}60’tan fazla yapılandırılmış dil, film, edebiyat ve oyun senaryolarını içerir. Bunlardan üçü, [[pk:101D0|Phaistos Disk]], [[ps:Shaw|Shavian alfabesi]], [[ps:Dsrt|Deseret alfabesi]], gerçek Unicode tarafından kabul edilmiştir.</p>
-      <p>* Standart Müzik Yazı Tipi Düzeni (SMuFL){{-}}[[pk:1D100|nota]] PDF’lerini kısaltmak için müzik yazı tiplerinin standartlarını açar.</p>
+      <p>* ConScript Unicode Kayıt Defteri ve onun atası Under-ConScript Unicode Kayıt Defteri{{-}}60'tan fazla yapılandırılmış dil, film, edebiyat ve oyun senaryolarını içerir. Bunlardan üçü, [[pk:101D0|Phaistos Disk]], [[ps:Shaw|Shavian alfabesi]], [[ps:Dsrt|Deseret alfabesi]], gerçek Unicode tarafından kabul edilmiştir.</p>
+      <p>* Standart Müzik Yazı Tipi Düzeni (SMuFL){{-}}[[pk:1D100|nota]] PDF'lerini kısaltmak için müzik yazı tiplerinin standartlarını açar.</p>
       <p>* Unicode{{-}}bloğu için öneriler{{_}}henüz tahsis edilmemiştir ve uygulama yazı tipi yapılması gerekmektedir.</p>
       <p />
       <p>Resmi olmayan [[pt:control|kontrol]] karakterleri, özel kontrol ve biçimlendirme karakterleri olarak alınır: çoğu durumda metinde görünemezler.</p>
@@ -11771,13 +11772,13 @@
      <transl>
       <p>'''Unicode dönüşüm biçimi, 7 bit''', Unicode [[pt:serialization|serileştirme]]nin yazdırılabilir [[pt:ascii|ASCII]] karakterlerinden oluşan bir zincire dönüştürülmesi biçimidir.</p>
       <p />
-      <p>52 harf, 10 rakam ve '(),-./:?' sadece yazılır. Bazen ~\+ dışındaki diğer ASCII karakterleri de sadece yazılabilir. Artı +, +- (artı-tire) olarak kodlanabilir. Geri kalan karakterler [[pt:utf16|UTF-16BE]]’ye, ardından Base64’e (62='''+''', 63='''/''') kodlanır ve +…- karakterleriyle çevrelenir (örneğin, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
+      <p>52 harf, 10 rakam ve '(),-./:?' sadece yazılır. Bazen ~\+ dışındaki diğer ASCII karakterleri de sadece yazılabilir. Artı +, +- (artı-tire) olarak kodlanabilir. Geri kalan karakterler [[pt:utf16|UTF-16BE]]'ye, ardından Base64'e (62='''+''', 63='''/''') kodlanır ve +…- karakterleriyle çevrelenir (örneğin, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
       <p />
       <p>Kodun ardından Base64 karakterleri ve tire dışında herhangi bir karakter gelirse, son tire atlanabilir. İki kodlanabilir karakter arasında tek bir kodlanamayan karakter varsa, bayt tasarrufu sağlamak için bu da kodlanabilir.</p>
       <p />
       <p>UTF-7 biçimi, [[pt:utf8|UTF-8]]'in iyi özelliklerine sahip{{_}}değildir{{_}}ve hatta belirsizdir: aynı metin birden fazla şekilde kodlanabilir.</p>
       <p />
-      <p>E-postalarda yalnızca daha hacimli "tırnak içine alınmış yazdırılabilir" biçimine alternatif olarak kullanılır. IMAP protokolünde, posta kutusu adları için özel bir UTF-7 sürümü kullanılır; burada artı '''+''' yerine ve işareti '''&amp;''' kullanılır, 63=virgül kullanılır, son tire her zaman yazılır ve ASCII karakterleri arasında yalnızca &amp; kodlanır. Bu tür UTF-7’ler belirsiz değildir ve bu, arama için önemlidir. World Wide Web’de UTF-7 kesinlikle yasaktır: tarayıcıyı sayfanın UTF-7 olduğunu düşünmesi için kandırırsanız bir XSS saldırısı yapabilirsiniz.</p>
+      <p>E-postalarda yalnızca daha hacimli "tırnak içine alınmış yazdırılabilir" biçimine alternatif olarak kullanılır. IMAP protokolünde, posta kutusu adları için özel bir UTF-7 sürümü kullanılır; burada artı '''+''' yerine ve işareti '''&amp;''' kullanılır, 63=virgül kullanılır, son tire her zaman yazılır ve ASCII karakterleri arasında yalnızca &amp; kodlanır. Bu tür UTF-7'ler belirsiz değildir ve bu, arama için önemlidir. World Wide Web'de UTF-7 kesinlikle yasaktır: tarayıcıyı sayfanın UTF-7 olduğunu düşünmesi için kandırırsanız bir XSS saldırısı yapabilirsiniz.</p>
      </transl>
     </text>
    </group>
@@ -11886,12 +11887,12 @@
      <transl>
       <p>'''Unicode dönüşüm biçimi, 32 bit''' veya diğer adıyla '''UCS-4''', Unicode [[pt:serialization|serileştirme]]'nin dört baytlık makine sözcüklerinden oluşan bir zincire dönüştürülmesi biçimidir. Karakter kodları yalnızca birbiri ardına yazılır.</p>
       <p />
-      <p>UTF-32’nin Özellikleri:</p>
+      <p>UTF-32'nin Özellikleri:</p>
       <p>* Sabit uzunlukta kodlama. Bu nedenle karmaşık metin işleme için en uygun olanıdır.</p>
-      <p>* Son derece hacimlidir: [[pt:utf8|UTF-8]] ve [[pt:utf16|UTF-16]]’da maksimum karakter boyutu 4 bayttır ve UTF-32’de tüm karakterler dört bayttır.</p>
+      <p>* Son derece hacimlidir: [[pt:utf8|UTF-8]] ve [[pt:utf16|UTF-16]]'da maksimum karakter boyutu 4 bayttır ve UTF-32'de tüm karakterler dört bayttır.</p>
       <p>* En önemli on bir bit tarafından güvenilir bir şekilde algılanır ve her zaman sıfırdır.</p>
       <p />
-      <p>Yazılımlar arası değişim biçimi olarak UTF-32, hacimli olması nedeniyle neredeyse hiç kullanılmaz. İhtiyacınız varsa{{-}}[[pt:bom|bayt sırası işareti]] UTF-32BE için 00{{_}}00{{_}}FE{{_}}FF ve UTF-32LE için FF{{_}}FE{{_}}00{{_}}00’dır. Program arayüzü biçimi olarak UTF-32, MacOS dahil olmak üzere Unix benzeri işletim sistemlerinin yeni sürümlerinde kullanılır.</p>
+      <p>Yazılımlar arası değişim biçimi olarak UTF-32, hacimli olması nedeniyle neredeyse hiç kullanılmaz. İhtiyacınız varsa{{-}}[[pt:bom|bayt sırası işareti]] UTF-32BE için 00{{_}}00{{_}}FE{{_}}FF ve UTF-32LE için FF{{_}}FE{{_}}00{{_}}00'dır. Program arayüzü biçimi olarak UTF-32, MacOS dahil olmak üzere Unix benzeri işletim sistemlerinin yeni sürümlerinde kullanılır.</p>
      </transl>
     </text>
    </group>
@@ -14200,7 +14201,7 @@
       <p />
       <p>Çin hükümeti de acil bir iş yapmak zorunda kaldı, bkz. [[pk:2EBF0|CJK ideogram uzantısı I]].</p>
       <p />
-      <p>2024’te çok büyük bir sürüm olan 16.0’ın yayınlanması bekleniyor.</p>
+      <p>2024'te çok büyük bir sürüm olan 16.0'ın yayınlanması bekleniyor.</p>
      </transl>
     </text>
    </group>
@@ -14634,13 +14635,13 @@
       <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in the 2010s). Only portable and special-purpose systems use other architectures.</p>
      </orig>
      <transl>
-      <p>PC, 1980’lerin sonlarında fiili standart haline geldi: 1982’de klonlanmıştı ve yeni modeller giderek daha güçlü hale gelerek eski yazılımlarla uyumluluğunu korudu. Oyunlar başlangıçta zayıftı, ancak VGA (320x200, 256 renk, 1987) ve saf CPU gücü, oldukça güzel oyunları mümkün kıldı{{-}}ve daha da önemlisi, düşük bellek veya grafik hızlandırıcının yetenekleriyle sınırlı olmayan çeşitlilikte oyunlara olanak sağladı.</p>
+      <p>PC, 1980'lerin sonlarında fiili standart haline geldi: 1982'de klonlanmıştı ve yeni modeller giderek daha güçlü hale gelerek eski yazılımlarla uyumluluğunu korudu. Oyunlar başlangıçta zayıftı, ancak VGA (320x200, 256 renk, 1987) ve saf CPU gücü, oldukça güzel oyunları mümkün kıldı{{-}}ve daha da önemlisi, düşük bellek veya grafik hızlandırıcının yetenekleriyle sınırlı olmayan çeşitlilikte oyunlara olanak sağladı.</p>
       <p />
-      <p>IBM’in bir diğer güçlü yanı da mükemmel metin kalitesi (sonraki adaptörlerde her biri 9×16 olan 80×25 hücre) ve yerelleştirme kolaylığıydı (tamamen yazılımla yapılıyordu).</p>
+      <p>IBM'in bir diğer güçlü yanı da mükemmel metin kalitesi (sonraki adaptörlerde her biri 9x16 olan 80x25 hücre) ve yerelleştirme kolaylığıydı (tamamen yazılımla yapılıyordu).</p>
       <p />
-      <p>Microsoft Windows{{_}}95’i sunana kadar uzun yıllar eski DOS işletim sistemini kullandı. Unix veya Windows{{_}}NT gibi eski işletim sistemleri nadirdi.</p>
+      <p>Microsoft Windows{{_}}95'i sunana kadar uzun yıllar eski DOS işletim sistemini kullandı. Unix veya Windows{{_}}NT gibi eski işletim sistemleri nadirdi.</p>
       <p />
-      <p>Modern genel amaçlı bilgisayarların çoğu, IBM uyumlu bilgisayarların soyundan gelir (DOS uyumluluğu nihayet 2010’larda bozuldu). Sadece taşınabilir ve özel amaçlı sistemler diğer mimarileri kullanır.</p>
+      <p>Modern genel amaçlı bilgisayarların çoğu, IBM uyumlu bilgisayarların soyundan gelir (DOS uyumluluğu nihayet 2010'larda bozuldu). Sadece taşınabilir ve özel amaçlı sistemler diğer mimarileri kullanır.</p>
      </transl>
     </text>
     <text id="SalesNote">
@@ -14649,13 +14650,13 @@
     </text>
     <text id="MemNote">
      <orig>(until 1990)</orig>
-     <transl>(1990’a kadar)</transl>
+     <transl>(1990'a kadar)</transl>
     </text>
    </group>
    <group id="Kaypro">
     <text id="Text">
      <orig>The company found an interesting niche: they made very advanced 8-bit computers. In 1984 they switched to IBM compatibles, but the time had gone, and by 1990 they filed bankruptcy.</orig>
-     <transl>Şirket ilginç bir niş buldu: Çok gelişmiş 8 bit bilgisayarlar üretiyorlardı. 1984’te IBM uyumlu cihazlara geçtiler, ancak artık zamanı geçmişti ve 1990’da iflas başvurusunda bulundular.</transl>
+     <transl>Şirket ilginç bir niş buldu: Çok gelişmiş 8 bit bilgisayarlar üretiyorlardı. 1984'te IBM uyumlu cihazlara geçtiler, ancak artık zamanı geçmişti ve 1990'da iflas başvurusunda bulundular.</transl>
     </text>
    </group>
    <group id="Korvet">
@@ -14691,7 +14692,7 @@
     </text>
     <text id="SalesNote">
      <orig>(until 1990)</orig>
-     <transl>(1990’a kadar)</transl>
+     <transl>(1990'a kadar)</transl>
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
@@ -14754,7 +14755,7 @@
      <transl>
       <p>ZX Spectrum, İngiltere'nin ana ev bilgisayarıydı: ucuzdu (200 pounddan az) ve çeşitli oyunlar içeriyordu. Grafik hızlandırması yoktu ve en basitleri hariç tüm oyunlar gerçekten yavaştı.</p>
       <p />
-      <p>En ilginç hikaye 80’lerin sonlarında başladı: Doğu Bloku’ndaki kendin yapçılar, grafik çipini ayrı mantık kapılarından yeniden oluşturdular ve Spectrum klonları, Windows ve artan gelir [[po:Ibm|IBM uyumlu]] bilgisayarların yaygınlaşmasını sağlayana kadar kısa bir süreliğine xSSCB’nin ana bilgisayarları haline geldi.</p>
+      <p>En ilginç hikaye 80'lerin sonlarında başladı: Doğu Bloku'ndaki kendin yapçılar, grafik çipini ayrı mantık kapılarından yeniden oluşturdular ve Spectrum klonları, Windows ve artan gelir [[po:Ibm|IBM uyumlu]] bilgisayarların yaygınlaşmasını sağlayana kadar kısa bir süreliğine xSSCB'nin ana bilgisayarları haline geldi.</p>
      </transl>
     </text>
     <text id="MemNote">
@@ -14807,38 +14808,47 @@
    <group id="BK">
     <text id="Name">
      <orig>Important/mandatory break</orig>
+     <transl>Önemli/zorunlu satır sonu</transl>
     </text>
     <text id="Text">
      <orig>This character forcefully breaks a line. But CR+LF (0D+0A) is one break rather than two.</orig>
+     <transl>Bu karakter bir satırı zorla keser. Ancak CR+LF (0D+0A) iki değil, sadece bir kesmedir.</transl>
     </text>
    </group>
    <group id="CM">
     <text id="Name">
      <orig>Important/control and marks</orig>
+     <transl>Önemli/kontrol ve işaretler</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before [[pt:control|control]] characters and [[pt:combining|marks]].</orig>
+     <transl>[[pt:control|Kontrol]] karakterlerinden ve [[pt:combining|işaretlerden]] önce satırı bölmeyin.</transl>
     </text>
    </group>
    <group id="WJ">
     <text id="Name">
      <orig>Important/word joiner</orig>
+     <transl>Önemli/kelime birleştirici</transl>
     </text>
     <text id="Text">
      <orig>Do not break a line before and after U+2060 Word joiner.</orig>
+     <transl>U+2060 Word birleştiriciden önce ve sonra satır bölmeyin.</transl>
     </text>
    </group>
    <group id="ZW">
     <text id="Name">
      <orig>Important/zero-width space</orig>
+     <transl>Önemli/sıfır genişlikli boşluk</transl>
     </text>
     <text id="Text">
      <orig>You can break a line at U+200B Zero-width space.</orig>
+     <transl>Bir satırı U+200B Sıfır genişlikli boşlukta bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="GL">
     <text id="Name">
      <orig>Important/glue</orig>
+     <transl>Önemli/yapıştırıcı</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14847,20 +14857,28 @@
       <p>'''Soft''' (tailorable) rule: Do not break before these characters. However, you can break after spaces and hyphens.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>
+      <p>'''Önemli''' (zorunlu) kural: U+00A0ʼdan sonra bölmeyin. Bölünemez boşluk ve ilgili karakterler.</p>
+      <p />
+      <p>'''Yumuşak''' (uyarlanabilir) kural: Bu karakterlerden önce bölmeyin. Ancak boşluk ve tirelerden sonra bölebilirsiniz.</p>
+     </transl>
     </text>
    </group>
    <group id="SP">
     <text id="Name">
      <orig>Important/space</orig>
+     <transl>Önemli/boşluk</transl>
     </text>
     <text id="Text">
      <orig>You can break after a chain of U+0020 spaces, unless other characters prohibit this.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>U+0020 boşluklarından oluşan bir zincirin ardından, başka karakterler bunu engellemediği sürece satır sonu yapabilirsiniz.</transl>
     </text>
    </group>
    <group id="ZWJ">
     <text id="Name">
      <orig>Important/zero-width joiner</orig>
+     <transl>Önemli/sıfır genişlikli birleştirici</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14869,11 +14887,17 @@
       <p>You can only break between U+0020 space and ZWJ.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
+     <transl>
+      <p>U+200D [[pt:zwj|Sıfır genişlikli birleştirici]]ʼden sonra bölmeyin.</p>
+      <p />
+      <p>Yalnızca U+0020 boşluk ve ZWJ arasında satır sonu yapabilirsiniz.</p>
+     </transl>
     </text>
    </group>
    <group id="B2">
     <text id="Name">
      <orig>Break/before and after</orig>
+     <transl>Satır sonu/öncesi ve sonrası</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14881,35 +14905,47 @@
       <p />
       <p>Do not break chains of dashes, even after spaces.</p>
      </orig>
+     <transl>
+      <p>U+2014 Em tireden önce ve sonra, başka karakterler engellemediği sürece, satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>Boşluklardan sonra bile tire zincirlerini bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <group id="BA">
     <text id="Name">
      <orig>Break/after</orig>
+     <transl>Satır sonu/sonrası</transl>
     </text>
     <text id="Text">
      <orig>You can break after these characters.</orig>
+     <transl>Bu karakterlerden sonra bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="BB">
     <text id="Name">
      <orig>Break/before</orig>
+     <transl>Satır sonu/öncesi</transl>
     </text>
     <text id="Text">
      <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
+     <transl>Bu karakterlerden önce bölebilirsiniz. Beş Avrupa karakterinin tümü sözlüklerden alınmıştır.</transl>
     </text>
    </group>
    <group id="HY">
     <text id="Name">
      <orig>Break/hyphen-minus</orig>
+     <transl>Satır sonu/tire-eksi</transl>
     </text>
     <text id="Text">
      <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <transl>U+002B Tire-eksi işaretinin birçok kullanım alanı vardır: tire, eksi, sayısal tire. Daha detaylı bir analiz bunun tire olduğunu gösterirse tirenin ardından [[pl:HH|tirenin]] kurallarına göre bölebilirsiniz.</transl>
     </text>
    </group>
    <group id="HH">
     <text id="Name">
      <orig>Break/unambiguous hyphen</orig>
+     <transl>Satır sonu/belirgin tire</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14921,27 +14957,41 @@
       <p>* disparate → dispara- / te</p>
       <p>* dispara-te → dispara- / -te</p>
      </orig>
+     <transl>
+      <p>Tireden sonra satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>İbranice metinden önce/sonra, kelime başındaki tireden (-ing) sonra satır sonu yapamazsınız.</p>
+      <p />
+      <p>Bazı diller (Portekizce) tirelerde satır sonu yapmak için özel kurallar kullanır:</p>
+      <p>* disparate → dispara- / te</p>
+      <p>* dispara-te → dispara- / -te</p>
+     </transl>
     </text>
    </group>
    <group id="CB">
     <text id="Name">
      <orig>Break/conditional</orig>
+     <transl>Satır sonu/koşullu</transl>
     </text>
     <text id="Text">
      <orig>You can or cannot break near U+FFFC Object replacement character depending on object type.</orig>
+     <transl>Nesne türüne bağlı olarak U+FFFC Nesne değiştirme karakterinin yakınında bölebilir veya bölemezsiniz.</transl>
     </text>
    </group>
    <group id="CL">
     <text id="Name">
      <orig>Prohibit/closing punctuation</orig>
+     <transl>Yasak/kapanış noktalama işaretleri</transl>
     </text>
     <text id="Text">
      <orig>Do not break before these characters, even after spaces.</orig>
+     <transl>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="CP">
     <text id="Name">
      <orig>Prohibit/closing parenthesis</orig>
+     <transl>Yasak/kapanış parantezi</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14949,35 +14999,47 @@
       <p />
       <p>Do not break between non-CJK closing parentheses and letters/numbers.</p>
      </orig>
+     <transl>
+      <p>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</p>
+      <p />
+      <p>CJK olmayan kapanış parantezleri ile harfler/sayılar arasında satır sonu yapmayın.</p>
+     </transl>
     </text>
    </group>
    <group id="EX">
     <text id="Name">
      <orig>Prohibit/exclamation and interrogation</orig>
+     <transl>Yasak/ünlem ve sorgulama</transl>
     </text>
     <text id="Text">
      <orig>Do not break before these characters, even after spaces.</orig>
+     <transl>Bu karakterlerden önce, boşluklardan sonra bile satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="IN">
     <text id="Name">
      <orig>Prohibit/inseparable</orig>
+     <transl>Yasak/ayrılamaz</transl>
     </text>
     <text id="Text">
      <orig>These characters are often used in chains. Do not break these chains.</orig>
+     <transl>Bu karakterler genellikle zincir halinde kullanılır. Bu zincirleri bölmeyin.</transl>
     </text>
    </group>
    <group id="NS">
     <text id="Name">
      <orig>Prohibit/non-starting</orig>
+     <transl>Yasak/başlamayan</transl>
     </text>
     <text id="Text">
      <orig>These characters cannot start a line. Do not break before them, even after spaces.</orig>
+     <transl>Bu karakterler satır başı yapamaz. Onlardan önce, hatta boşluklardan sonra bile bölmeyin.</transl>
     </text>
    </group>
    <group id="OP">
     <text id="Name">
      <orig>Prohibit/opening punctuation</orig>
+     <transl>Yasak/açılış noktalama işaretleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -14985,19 +15047,27 @@
       <p />
       <p>Do not break between letters/numbers and non-CJK openinng punctuation.</p>
      </orig>
+     <transl>
+      <p>Bu karakterlerden sonra boşluklarla devam etseler bile satır sonu yapmayın.</p>
+      <p />
+      <p>Harfler/sayılar ile CJK olmayan açılış noktalama işaretleri arasında satır sonu yapmayın.</p>
+     </transl>
     </text>
    </group>
    <group id="QU">
     <text id="Name">
      <orig>Prohibit/quote</orig>
+     <transl>Yasak/tırnak</transl>
     </text>
     <text id="Text">
      <orig>Quotes can be opening or closing depending on context. They can break for themselves, without spaces, in CJK context only.</orig>
+     <transl>Tırnak işareti, bağlama bağlı olarak açılış veya kapanış olabilir. Yalnızca CJK bağlamında, boşluk bırakmadan kendi başlarına bölünebilirler.</transl>
     </text>
    </group>
    <group id="IS">
     <text id="Name">
      <orig>Numeric/infix</orig>
+     <transl>Sayısal/orta ek</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15005,35 +15075,47 @@
       <p />
       <p>In words: do not break before these characters, even after spaces.</p>
      </orig>
+     <transl>
+      <p>Sayılarla: Sayının bir parçasıdır, bölmeyin.</p>
+      <p />
+      <p>Sözcüklerle: Bu karakterlerden önce, boşluklardan sonra bile bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <group id="NU">
     <text id="Name">
      <orig>Numeric/digit</orig>
+     <transl>Sayısal/rakam</transl>
     </text>
     <text id="Text">
      <orig>Do not break numbers. Do not break letters from numbers.</orig>
+     <transl>Sayıları bölmeyin. Harfleri sayılardan ayırmayın.</transl>
     </text>
    </group>
    <group id="PO">
     <text id="Name">
      <orig>Numeric/postfix</orig>
+     <transl>Sayısal/son ek</transl>
     </text>
     <text id="Text">
      <orig>Do not break between numbers and these characters.</orig>
+     <transl>Sayılar ve bu karakterler arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="PR">
     <text id="Name">
      <orig>Numeric/prefix</orig>
+     <transl>Sayısal/ön ek</transl>
     </text>
     <text id="Text">
      <orig>Do not break between these characters and numbers.</orig>
+     <transl>Bu karakterler ve sayılar arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="SY">
     <text id="Name">
      <orig>Numeric/slash</orig>
+     <transl>Sayısal/eğik çizgi</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15044,75 +15126,99 @@
       <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
      <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
+     <transl>
+      <p>U+002F Eğik çizgiden önce bölmeyin.</p>
+      <p />
+      <p>İbranicede sayılarda eğik çizgiden sonra bölmeyin.</p>
+      <p />
+      <p>Başka yerlerde eğik çizgiden sonra bölebilirsiniz. Yan etki olarak, “w/o” gibi kısaltmalar bölünür ve yazılımların burada bölmesine yalnızca diğer fırsatlar çok uzaktaysa izin verilir.</p>
+     </transl>
     </text>
    </group>
    <group id="AK">
     <text id="Name">
      <orig>Brahmic/aksara (consonant)</orig>
+     <transl>Brahmic/aksara (ünsüz)</transl>
     </text>
     <text id="Text">
      <orig>Consonants are central in Brahmic scripts.</orig>
+     <transl>Brahma betiklerinde ünsüzler merkezi bir öneme sahiptir.</transl>
     </text>
    </group>
    <group id="AP">
     <text id="Name">
      <orig>Brahmic/pre-consonant</orig>
+     <transl>Brahmic/ön ünsüz</transl>
     </text>
     <text id="Text">
      <orig>Do not break between these characters and consonants.</orig>
+     <transl>Bu karakterler ve ünsüzler arasında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="AS">
     <text id="Name">
      <orig>Brahmic/initial consonant</orig>
+     <transl>Brahmic/ilk ünsüz</transl>
     </text>
     <text id="Text">
      <orig>This character marks the beginning of the syllable.</orig>
+     <transl>Bu karakter hecenin başlangıcını işaretler.</transl>
     </text>
    </group>
    <group id="SA">
     <text id="Name">
      <orig>Brahmic/context-dependent</orig>
+     <transl>Brahmic/bağlam-bağımlı</transl>
     </text>
     <text id="Text">
      <orig>Complex analysis similar to auto-hyphenation is required to decide whether you can break here.</orig>
+     <transl>Burada satır sonu yapıp yapamayacağınıza karar vermek için otomatik tirelemeye benzer karmaşık bir analiz gerekir.</transl>
     </text>
    </group>
    <group id="VI">
     <text id="Name">
      <orig>Brahmic/virama</orig>
+     <transl>Brahmic/virama</transl>
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
+     <transl>Bu [[pt:virama|virama]] bir hecenin içinde '''olabilir'''. Bu nedenle bu karakterden sonra satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="VF">
     <text id="Name">
      <orig>Brahmic/final virama</orig>
+     <transl>Brahmic/son virama</transl>
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
+     <transl>Bu [[pt:virama|virama]] her zaman kelimenin sonundadır. Bu virama ile uyumlu '''önce'''yi bölmeyin. Ama bu virama ile uyumlu '''sonra'''yı bölmek güvenlidir.</transl>
     </text>
    </group>
    <group id="AI">
     <text id="Name">
      <orig>CJK/letter or ideograph</orig>
+     <transl>CJK/harf veya ideogram</transl>
     </text>
     <text id="Text">
      <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
+     <transl>[[pt:cjk|CJK]] metninde, bir ideogrammış gibi, burada bölebilirsiniz. Aksi takdirde, harf olarak işlev görür.</transl>
     </text>
    </group>
    <group id="CJ">
     <text id="Name">
      <orig>CJK/conditional Japanese starter</orig>
+     <transl>CJK/koşullu Japonca başlangıç</transl>
     </text>
     <text id="Text">
      <orig>You can break before these characters in certain contexts only.</orig>
+     <transl>Sadece belirli bağlamlarda bu karakterlerden önce satır sonu yapabilirsiniz.</transl>
     </text>
    </group>
    <group id="ID">
     <text id="Name">
      <orig>CJK/ideograph</orig>
+     <transl>CJK/ideogram</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15122,60 +15228,79 @@
       <p />
       <p>Some non-CJK characters also fall to this class.</p>
      </orig>
+     <transl>
+      <p>İdeogramlar arasında satır sonu yapabilirsiniz.</p>
+      <p />
+      <p>İdeogramları sayılardan ayıramazsınız.</p>
+      <p />
+      <p>Bazı CJK dışı karakterler de bu sınıfa girer.</p>
+     </transl>
     </text>
    </group>
    <group id="H2">
     <text id="Name">
      <orig>Hangul/initial+medial</orig>
+     <transl>Hangul/ilk+orta</transl>
     </text>
     <text id="Text">
      <orig>Do not break a [[ps:Hang|Korean]] syllable.</orig>
+     <transl>[[ps:Hang|Korece]] hecesini bölmeyin.</transl>
     </text>
    </group>
    <group id="H3">
     <text id="Name">
      <orig>Hangul/initial+medial+final</orig>
+     <transl>Hangul/ilk+orta+son</transl>
     </text>
    </group>
    <group id="JL">
     <text id="Name">
      <orig>Hangul/initial</orig>
+     <transl>Hangul/ilk</transl>
     </text>
    </group>
    <group id="JV">
     <text id="Name">
      <orig>Hangul/medial</orig>
+     <transl>Hangul/orta</transl>
     </text>
    </group>
    <group id="JT">
     <text id="Name">
      <orig>Hangul/final</orig>
+     <transl>Hangul/son</transl>
     </text>
    </group>
    <group id="EB">
     <text id="Name">
      <orig>Emoji/base</orig>
+     <transl>Emoji/temel</transl>
     </text>
     <text id="Text">
      <orig>Do not break emoji from modifiers.</orig>
+     <transl>Emojiyi değiştiricilerden ayırmayın.</transl>
     </text>
    </group>
    <group id="EM">
     <text id="Name">
      <orig>Emoji/modifier</orig>
+     <transl>Emoji/değiştirici</transl>
     </text>
    </group>
    <group id="RI">
     <text id="Name">
      <orig>Emoji/regional indicator</orig>
+     <transl>Emoji/bölgesel gösterge</transl>
     </text>
     <text id="Text">
      <orig>Keep regional indicators in pairs.</orig>
+     <transl>Bölgesel göstergeleri çiftler halinde tutun.</transl>
     </text>
    </group>
    <group id="AL">
     <text id="Name">
      <orig>Alphabetic/letter</orig>
+     <transl>Alfabetik/harf</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15183,11 +15308,17 @@
       <p />
       <p>Brahmic scripts that started to use spaces also have this class.</p>
      </orig>
+     <transl>
+      <p>Kelimeleri bölmeyin. Harfleri sayılardan bölmeyin.</p>
+      <p />
+      <p>Boşluk kullanmaya başlayan Brahmic betiklerinde de bu sınıf vardır.</p>
+     </transl>
     </text>
    </group>
    <group id="HL">
     <text id="Name">
      <orig>Alphabetic/Hebrew</orig>
+     <transl>Alfabetik/İbranice</transl>
     </text>
     <text id="Text">
      <orig>
@@ -15197,19 +15328,30 @@
       <p />
       <p>So not break slash+Hebrew.</p>
      </orig>
+     <transl>
+      <p>Kelimeleri bölmeyin. Harfleri sayılardan ayırmayın.</p>
+      <p />
+      <p>İbranice+tire+İbranice olmayanı bölmeyin.</p>
+      <p />
+      <p>Sonra eğik çizgi+İbraniceyi bölmeyin.</p>
+     </transl>
     </text>
    </group>
    <text id="Hard">
     <orig>This rule is '''important''': must exist in some form in every program.</orig>
+    <transl>Bu kural '''önemlidir''': her programda bir şekilde bulunmalıdır.</transl>
    </text>
    <text id="Soft">
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
+    <transl>Bu kural '''yumuşak'''tır: dile, bağlama (matematik, web bağlantıları vb.) veya programın hedef kitlesine bağlı olarak kaldırılabilir veya değiştirilebilir.</transl>
    </text>
    <text id="Brah">
     <orig>In some [[pt:brahmic|Brahmic]] scripts, the text may run like a solid wall without spaces, and you need to find a place for a line break{{-}}either by syllables or by words. You cannot break a syllable.</orig>
+    <transl>Bazı [[pt:brahmic|Brahmic]] betiklerde, metin boşluksuz, sağlam bir duvar gibi uzayabilir ve hecelere veya kelimelere göre satır sonu için yer bulmanız gerekir. Heceyi bölemezsiniz.</transl>
    </text>
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
+    <transl>[[pt:linebreak|Satır sonu]]ʼna bakın.</transl>
    </text>
   </group>
  </file>
