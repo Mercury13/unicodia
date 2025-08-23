@@ -410,6 +410,9 @@ Subtotal: 274
 - 14000: after 13FFF
 - 14002: after 03
 - 14020: inverted 1F
+- 14061: “low-hanging” boats
+- 14063: “low-hanging” boats
+- 1406B: “low-hanging” boats
 - 14076: after 78
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
@@ -425,11 +428,11 @@ Subtotal: 274
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 127
+Subtotal: 130
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 507
+Total: 510
