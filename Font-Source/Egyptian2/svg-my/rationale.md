@@ -285,7 +285,7 @@ Subtotal: 105
 - 1403A: other hull, same plant (but a bit shorter)
 - 1404A: greatly simplified, removed touching curves
 - 1403C: thicker throwing stick
-- 1405C: greatly simplified, removed touching curves
+- 1405C: greatly simplified, removed touching curves, solid canal
 - 1405D: most curves to lines, simplified Re, removed one rope
 - 1406A: removed cow on the bow
 - 14075: removed cow on the bow
@@ -410,6 +410,7 @@ Subtotal: 274
 - 14000: after 13FFF
 - 14002: after 03
 - 14020: inverted 1F
+- 14046: “low-hanging” boats, after 45
 - 14061: “low-hanging” boats
 - 14063: “low-hanging” boats
 - 1406B: “low-hanging” boats
@@ -428,11 +429,11 @@ Subtotal: 274
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 130
+Subtotal: 131
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 510
+Total: 511
