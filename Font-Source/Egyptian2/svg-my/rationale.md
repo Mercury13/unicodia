@@ -280,6 +280,7 @@ Subtotal: 105
 - 13FEA: thinner lines
 - 1400A: redrew
 - 14018: double lines → thin
+- 1401E: canal does not have curved lines
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
 - 1403A: other hull, same plant (but a bit shorter)
@@ -294,7 +295,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 274
+Subtotal: 275
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -411,6 +412,7 @@ Subtotal: 274
 - 14002: after 03
 - 14020: inverted 1F
 - 14046: “low-hanging” boats, after 45
+- 14051: “low-hanging” boats, after 4F
 - 14061: “low-hanging” boats
 - 14063: “low-hanging” boats
 - 1406B: “low-hanging” boats
@@ -429,11 +431,11 @@ Subtotal: 274
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 131
+Subtotal: 132
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 511
+Total: 513
