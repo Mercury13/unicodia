@@ -25,7 +25,7 @@ Subtotal: 105
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
 - 134E4: king’s beard
-- 134E6: vessel on the head bigger
+- 134E6: campaign for sitting with props, vessel on the head bigger
 - 134F3: kneeling
 - 134FE: square→oval, bigger (carrlying, well?)
 - 1354E: more consistent short wig
