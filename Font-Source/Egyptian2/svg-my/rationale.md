@@ -429,6 +429,8 @@ Subtotal: 281
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140FE: after FC
+- 14107: misrender in NewG, need butcher’s block
+- 14114: after 13, just a bit wrong NewG
 - 14128: after 2A
 - 14189: 1A + simplified
 - 14196: after 97, pectoral
@@ -440,11 +442,11 @@ Subtotal: 281
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 135
+Subtotal: 137
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 522
+Total: 524
