@@ -371,6 +371,7 @@ Subtotal: 281
 - 13926: same
 - 13933: after 32
 - 139AB: after AA
+- 139AF: after A8
 - 139B7: after B8
 - 139B9: after B8
 - 139C3: after D35, too small in NewG
@@ -443,11 +444,11 @@ Subtotal: 281
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 138
+Subtotal: 139
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 525
+Total: 526
