@@ -279,6 +279,7 @@ Subtotal: 105
 - 13FDB: thinner lines
 - 13FEA: thinner lines
 - 1400A: redrew
+- 140C6: found out that loop was done by adding a white object, but redrew
 - 14018: double lines → thin
 - 1401E: canal does not have curved lines
 - 14048: greatly simplified, removed self-intersection on margin of error
@@ -298,7 +299,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 278
+Subtotal: 279
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -443,4 +444,4 @@ Subtotal: 134
 
 Subtotal: 1
 
-Total: 518
+Total: 519
