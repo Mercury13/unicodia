@@ -416,6 +416,7 @@ Subtotal: 275
 - 14052: “low-hanging” boats, after 4E
 - 14061: “low-hanging” boats
 - 14063: “low-hanging” boats
+- 14067: “low-hanging” boats, after 69
 - 1406B: “low-hanging” boats
 - 14076: after 78
 - 14081: after 7F, trusted description/NG rather than samples
@@ -432,11 +433,11 @@ Subtotal: 275
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 133
+Subtotal: 134
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 514
+Total: 515
