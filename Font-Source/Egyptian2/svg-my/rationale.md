@@ -292,12 +292,13 @@ Subtotal: 105
 - 14075: removed cow on the bow
 - 14094: really other thing
 - 140A8: more details
+- 140BF: bull → bubalis
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 277
+Subtotal: 278
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -442,4 +443,4 @@ Subtotal: 134
 
 Subtotal: 1
 
-Total: 517
+Total: 518
