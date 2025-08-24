@@ -307,6 +307,7 @@ Subtotal: 281
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 134FF: after FE + random jug W22?
+- 13526: after 25
 - 13559: 5A minus beard
 - 1356C: after 6B
 - 13582: franken near 81
@@ -442,11 +443,11 @@ Subtotal: 281
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 137
+Subtotal: 138
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 524
+Total: 525
