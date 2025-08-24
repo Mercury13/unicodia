@@ -25,6 +25,7 @@ Subtotal: 105
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
 - 134E4: king’s beard
+- 134E6: vessel on the head bigger
 - 134F3: kneeling
 - 134FE: square→oval, bigger (carrlying, well?)
 - 1354E: more consistent short wig
@@ -38,7 +39,7 @@ Subtotal: 105
 - 13584: bent, bigger vessel
 - 135A2: shield from inside, spear→Bronze Age sword
 - 135A5: sit on heel
-- 135B6: more detailed foreigner captive: TWENTY
+- 135B6: more detailed foreigner captive
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
 - 135C8: see C0
@@ -58,7 +59,7 @@ Subtotal: 105
 - 1365F: beard king → god
 - 13606: shorter rope to make hiero narrower
 - 13667: beard none→god, wig short→long
-- 13671: beard ?→king: FORTY
+- 13671: beard ?→king
 - 13673: beard ?→king
 - 13675: beard ?→god
 - 13676: beard ?→king
@@ -78,7 +79,7 @@ Subtotal: 105
 - 1369A: beard man→king
 - 1369B: beard man→king
 - 1369C: beard man→king
-- 1369D: beard man→god: SIXTY
+- 1369D: beard man→god
 - 1369E: beard man→king
 - 1369F: beard man→king
 - 136A1: beard poor god → king
@@ -98,7 +99,7 @@ Subtotal: 105
 - 136F4: more traditional woman
 - 13737: pregnant
 - 13738: same
-- 13739: same: EIGHTY
+- 13739: same
 - 13746: re-fixed self-intersection
 - 1374D: 4F minus holding
 - 1374F: short hair
@@ -117,8 +118,8 @@ Subtotal: 105
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
-- 137F4: no beard, lower branches
-- 137F5: man’s hair/beard/clothing: ONE HUNDRED
+- 137F4: no beard, lower branches: ONE HUNDRED
+- 137F5: man’s hair/beard/clothing
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
 - 137F9: same
@@ -137,8 +138,8 @@ Subtotal: 105
 - 1383E: same
 - 13840: same + bigger djed-ankh
 - 1384E: turn knife around
-- 1387A: strange image
-- 1387B: bigger tits: ONE-TWENTY
+- 1387A: strange image: ONE-TWENTY
+- 1387B: bigger tits
 - 1387B: same
 - 13890: arm lower
 - 13891: arm lower, bottom forked, ankh bigger
@@ -157,8 +158,8 @@ Subtotal: 105
 - 138EB: arm lower
 - 138ED: arm lower
 - 138F8: arm lower
-- 138FF: tits, it’s a woman
-- 13901: same: ONE-FORTY
+- 138FF: tits, it’s a woman: ONE-FORTY
+- 13901: same
 - 13902: arm lower
 - 13913: arm lower, simpler stalk
 - 1391C: ankh sloped forward
@@ -177,8 +178,8 @@ Subtotal: 105
 - 13A5C: nothing on neck
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
-- 13A85: greatly simplified
-- 13AA3: rotate 90°: ONE-SIXTY
+- 13A85: greatly simplified: ONE-SIXTY
+- 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 - 13AB4: flip knife
@@ -197,8 +198,8 @@ Subtotal: 105
 - 13BAA: waves unseen in cell’s detail
 - 13BAB: same, plus redrew semicircle
 - 13BDE: a bit out of canvas
-- 13BE5: flip ←→
-- 13C17: just 10% bigger: ONE-EIGHTY
+- 13BE5: flip ←→: ONE-EIGHTY
+- 13C17: just 10% bigger
 - 13C18: more detailed head, white neck
 - 13C19: white neck
 - 13C1C: white neck
@@ -217,8 +218,8 @@ Subtotal: 105
 - 13C85: loop on the end of perch
 - 13C96: no base
 - 13C98: feather → loop
-- 13C99: loop on perch
-- 13C9A: bull’s head: TWO HUNDRED
+- 13C99: loop on perch: TWO HUNDRED
+- 13C9A: bull’s head
 - 13C9C: same as 9A
 - 13CA0: remove inner wall
 - 13CB4: added uraeus
@@ -237,8 +238,8 @@ Subtotal: 105
 - 13E84: was not hollow, did not look like reed
 - 13E85: craggy
 - 13EA8: after A9
-- 13ED3: hang lower
-- 13ED5: mirror, rounder circles: TWO-TWENTY
+- 13ED3: hang lower: TWO-TWENTY
+- 13ED5: mirror, rounder circles
 - 13EDA: mirror, rounder circles
 - 13EDF: per E0
 - 13EE0: deleted 2 triangles
@@ -301,9 +302,11 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 281
+Subtotal: 282
 
 # Duped with NewGardiner
+- 134E7: campaign for sitting with props
+- 134E9: campaign for sitting with props
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 134FF: after FE + random jug W22?
@@ -444,11 +447,11 @@ Subtotal: 281
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 139
+Subtotal: 141
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 526
+Total: 529
