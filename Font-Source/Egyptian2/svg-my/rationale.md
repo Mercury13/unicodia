@@ -290,12 +290,14 @@ Subtotal: 105
 - 1405D: most curves to lines, simplified Re, removed one rope
 - 1406A: removed cow on the bow
 - 14075: removed cow on the bow
+- 14094: really other thing
+- 140A8: more details
 - 140FC: removed PLACEHOLDERS
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 275
+Subtotal: 277
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -440,4 +442,4 @@ Subtotal: 134
 
 Subtotal: 1
 
-Total: 515
+Total: 517
