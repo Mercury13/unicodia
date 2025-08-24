@@ -281,7 +281,9 @@ Subtotal: 105
 - 1400A: redrew
 - 140C6: found out that loop was done by adding a white object, but redrew
 - 14018: double lines → thin
+- 1401A: consistency, after 22/26
 - 1401E: canal does not have curved lines
+- 14026: consistency, after 22
 - 14048: greatly simplified, removed self-intersection on margin of error
 - 14049: greatly simplified, removed self-intersection on margin of error
 - 1403A: other hull, same plant (but a bit shorter)
@@ -299,7 +301,7 @@ Subtotal: 105
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 279
+Subtotal: 281
 
 # Duped with NewGardiner
 - 134EE: after ED
@@ -415,6 +417,7 @@ Subtotal: 279
 - 14000: after 13FFF
 - 14002: after 03
 - 14020: inverted 1F
+- 14022: “low-hanging” boats, after 1E
 - 14046: “low-hanging” boats, after 45
 - 14051: “low-hanging” boats, after 4F
 - 14052: “low-hanging” boats, after 4E
@@ -437,11 +440,11 @@ Subtotal: 279
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 134
+Subtotal: 135
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 519
+Total: 522
