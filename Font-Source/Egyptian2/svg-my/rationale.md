@@ -309,6 +309,7 @@ Subtotal: 282
 - 134E7: campaign for sitting with props
 - 134E8: campaign for sitting with props
 - 134E9: campaign for sitting with props
+- 134EB: campaign for sitting with props
 - 134EE: after ED
 - 134EF: EE + legs on heels
 - 134FF: after FE + random jug W22?
@@ -449,11 +450,11 @@ Subtotal: 282
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 143
+Subtotal: 144
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 531
+Total: 532
