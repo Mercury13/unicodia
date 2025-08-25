@@ -305,6 +305,7 @@ Subtotal: 105
 Subtotal: 282
 
 # Duped with NewGardiner
+- 134E5: campaign for sitting with props
 - 134E7: campaign for sitting with props
 - 134E9: campaign for sitting with props
 - 134EE: after ED
@@ -447,11 +448,11 @@ Subtotal: 282
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 141
+Subtotal: 142
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 529
+Total: 530
