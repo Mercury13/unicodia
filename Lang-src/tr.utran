@@ -1306,7 +1306,7 @@
     </text>
     <text id="Ext">
      <orig>extended ''(unreliable)''</orig>
-     <transl>genişletilmiş ‘’(güvenilmez)''</transl>
+     <transl>genişletilmiş ''(güvenilmez)''</transl>
     </text>
     <text id="Leg">
      <orig>legacy ''(confirmed but deemed extraneous)''</orig>
@@ -1507,7 +1507,7 @@
      <transl>
       <p>Aksan işaretleri, harflere yapıştırılan ve anlamlarını değiştiren veya netleştiren satır üstü, satır altı ve satır içi karakterlerdir. Örneğin, “résumé” deki aksan gibi.</p>
       <p />
-      <p>Unicode aksanları aktarmak için iki yol sunar, [[pt:precomposed|önceden oluşturulmuş]] karakterler ve kombinasyonlar “ana karakter +{{_}}‘’[[pt:combining|birleştirme]] işareti'‘’”. Böyle bir karmaşa içinde aramayı kolaylaştırmak için Unicode’un [[pt:normalization|normalleştirme]] algoritması vardır.</p>
+      <p>Unicode aksanları aktarmak için iki yol sunar, [[pt:precomposed|önceden oluşturulmuş]] karakterler ve kombinasyonlar “ana karakter +{{_}}'''[[pt:combining|birleştirme]] işareti'''”. Böyle bir karmaşa içinde aramayı kolaylaştırmak için Unicode’un [[pt:normalization|normalleştirme]] algoritması vardır.</p>
       <p />
       <p>Karakterler 034F CGJ, çift harflerin birleştiricisi değil, ''ayırıcısıdır''. Çekçede (ch harfi {{t|x}} olarak telaffuz edilir ve alfabetik sırası ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch şeklindedir), Macarcada, İbranicede ve bazı diğer dillerde kullanılır.</p>
       <p />
@@ -1541,7 +1541,7 @@
      <transl>
       <p>Küçük Kiril dillerinin harfleri: Abhazca, Kürtçe ''(SSCB’de azınlık olarak)'', Komi, Mordovca, Aleutça, Azerice ''(şimdi [[ps:Latn|Latin]])'' ve Yakovlev alfabesinde Çuvaşça ''(1873-1938 yılları arasında kullanıldı)''.</p>
       <p />
-      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça "büyük başarısızlık" anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından "icat edilmiş"; ancak ilk olmadığı ortaya çıktı: Kaganov'un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya’da satılıyordu. Ondan bağımsız olarak Abhazlar, {{sm|Ҧ}} {{t|pʰ}} harfi yerine "türeyen" yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode’da bir yer kazandırdı.</p>
+      <p>Komik bir {{sm|Ԥ}} harfi içeriyor (Rusça “büyük başarısızlık” anlamına gelen mat kelimesine benziyor). Leonid Kaganov tarafından “icat edilmiş”; ancak ilk olmadığı ortaya çıktı: Kaganov’un görevinden üç yıl önce (2008), bu harfin yazılı olduğu tişörtler Rusya’da satılıyordu. Ondan bağımsız olarak Abhazlar, kanca {{sm|Ҧ}} {{t|pʰ}} harfi yerine, alt çıkıntısı olan harfi yazmaya başladılar ve bu da {{sm|Ԥ}} harfine Unicode’da bir yer kazandırdı.</p>
      </transl>
     </text>
    </group>
@@ -2003,7 +2003,7 @@
     </text>
     <text id="Text">
      <orig>Characters of Uralic Phonetic Alphabet, medieval abbreviations and Teuthonista (system for writing German dialects).</orig>
-     <transl>Ural Fonetik Alfabesi'nin karakterleri, Orta Çağ kısaltmaları ve Teuthonista (Alman lehçelerinin yazım sistemi).</transl>
+     <transl>Ural Fonetik Alfabesi’nin karakterleri, Orta Çağ kısaltmaları ve Teuthonista (Alman lehçelerinin yazım sistemi).</transl>
     </text>
    </group>
    <group id="1E00">
@@ -2013,7 +2013,7 @@
     </text>
     <text id="Text">
      <orig>[[pt:precomposed|Precomposed]] characters with various marks. Ninety of them are Vietnamese, about dozen are medieval, including capital Eszett '''ẞ'''.</orig>
-     <transl>[[pt:precomposed|Önceden oluşturulmuş]] çeşitli işaretlere sahip karakterler. Bunlardan doksanı Vietnamca, yaklaşık bir düzinesi Orta Çağ'a ait, bunların arasında büyük harf Eszett '''ẞ''' de var.</transl>
+     <transl>[[pt:precomposed|Önceden oluşturulmuş]] çeşitli işaretlere sahip karakterler. Bunlardan doksanı Vietnamca, yaklaşık bir düzinesi Orta Çağ’a ait, bunların arasında büyük harf Eszett '''ẞ''' de var.</transl>
     </text>
    </group>
    <group id="1F00">
@@ -2044,11 +2044,11 @@
       <p>* oxia{{-}}yüksek/yükselen perde;</p>
       <p>* varia{{-}}normal/düşük perde;</p>
       <p>* circumflex{{-}}bir hecede ton değişimi;</p>
-      <p>* breve{{-}}alfabe ile iletilmiyorsa kısa ünlü, ε/η ve ο/ω'nin aksine;</p>
+      <p>* breve{{-}}alfabe ile iletilmiyorsa kısa ünlü, ε/η ve ο/ω’nin aksine;</p>
       <p>* macron{{-}}uzun ünlü;</p>
       <p>* diaeresis{{-}}ünlülerin ayrı telaffuzu.</p>
       <p />
-      <p>Miladi tarihin başlangıcında eklenmiş, ancak bu tür karmaşık fonetiklerin yüzyıllar boyunca var olmaması nedeniyle 1982'de kaldırılmıştır.</p>
+      <p>Miladi tarihin başlangıcında eklenmiş, ancak bu tür karmaşık fonetiklerin yüzyıllar boyunca var olmaması nedeniyle 1982’de kaldırılmıştır.</p>
      </transl>
     </text>
    </group>
@@ -2088,7 +2088,7 @@
      <transl>
       <p>Blok; matematik ve fonetikte kullanılan üst simge ve alt simge harfleri, işaretleri ve rakamları içerir.</p>
       <p />
-      <p>İnternetin ortaya çıkmasından çok önce, bu durum netleşmişti: Metnin dikkatsizce kopyalanması Avogadro sayısının 6.022×1023'e “eşit” olmasına yol açabilir. Sistem (metin dosyası, İnternet forumu...) üst simgeleri desteklemeyebilir ve insanları başka sistemlere geçmeye ya da “6.022e23” veya “6.022×10^23” gibi simülasyonlar yapmaya zorlamanın bir anlamı yoktur.</p>
+      <p>İnternetin ortaya çıkmasından çok önce, bu durum netleşmişti: Metnin dikkatsizce kopyalanması Avogadro sayısının 6.022×1023’e “eşit” olmasına yol açabilir. Sistem (metin dosyası, İnternet forumu...) üst simgeleri desteklemeyebilir ve insanları başka sistemlere geçmeye ya da “6.022e23” veya “6.022×10^23” gibi simülasyonlar yapmaya zorlamanın bir anlamı yoktur.</p>
       <p />
       <p>Ayrıca, daktilograflar tarafından çizilen üst simgeler genellikle kelime işlemciler tarafından sentezlenenden daha iyidir.</p>
       <p />
@@ -2110,7 +2110,7 @@
      <transl>
       <p>Para birimi karakterleri iki açık kategoriye ayrılır. Bir grup 17-19. yüzyılda iş dilinin gelişmesiyle ortaya çıkmıştır: dolar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupi işareti {{sm|௹}}. Diğerleri 20. yüzyılın sonlarından itibaren devlet tarafından kullanılmaya başlanmıştır: euro {{sm|€}}, grivna {{sm|₴}}, ruble {{sm|₽}}, rupi {{sm|₹}}.</p>
       <p />
-      <p>Rus rublesi sembolünün bir gün kabul edileceğini bekleyen Paratype şirketi 2009 yılında bloğun geri kalanını bu sembolle doldurdu. PT ailesinin fontları iyi olduğunu kanıtladı ve internette yayıldı. Bu yüzden 2021'in yeni sembolü ₽ işareti ile “desteklenirse” şaşırmayın.</p>
+      <p>Rus rublesi sembolünün bir gün kabul edileceğini bekleyen Paratype şirketi 2009 yılında bloğun geri kalanını bu sembolle doldurdu. PT ailesinin fontları iyi olduğunu kanıtladı ve internette yayıldı. Bu yüzden 2021’in yeni sembolü ₽ işareti ile “desteklenirse” şaşırmayın.</p>
      </transl>
     </text>
    </group>
@@ -2250,9 +2250,9 @@
      <transl>
       <p>Optik ve manyetik mürekkep karakter tanıma, çoğunlukla pasaportlar, banka çekleri ve ulaşım biletleri gibi otomatik belge girişi için kullanılır. Barkodların aksine, sahtekarlığı azaltmak için aynı karakterler hem insanlar hem de makineler tarafından tanınır. Her iki teknoloji de özel tek aralıklı yazı tipleri kullanır. Bu yazı tipleri (bazen bozuk biçimde), siberpunk türündeki filmlerde ve video oyunlarında yaygın olarak kullanılır.</p>
       <p />
-      <p>1956’da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR'dir.</p>
+      <p>1956’da ABD, manyetik mürekkep karakter tanımayı (MICR) geliştirdi. Sistem, alanın anlamını belirleyen on rakamı ve dört özel karakteri anlar. Manyetik tanıma, optik tanımadan önemli ölçüde daha güvenilirdir. Dikey çizgilerin bir kısmının kalın olduğu kare bir yazı tipi görürseniz (örneğin, ''Magnavox Odyssey'' konsolunun kutusunda){{-}}bu stilize edilmiş MICR’dir.</p>
       <p />
-      <p>1968’de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A'yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi'nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
+      <p>1968’de ABD, ilk çalışan optik tanıma teknolojisi olan OCR-A’yı geliştirdi. Küçük harflerle tüm [[ps:Latn|Latin]] alfabesini anlar. Alanları ayırmak için özel karakterler kullanılır: kanca, sandalye, çatal, toka ve papyon. Bu yazı tipi, "13 Saat: Benghazi’nin Gizli Askerleri", "Kara Liste", "Sahtekâr", "Böcekler" ve diğer filmlerde bulunur.</p>
       <p />
       <p>Yazı tipinden bağımsız optik tanıma teknolojisi ancak 1990’larda geliştirildi. Kitapların dijitalleştirilmesi ve anketlerin işlenmesi için kullanılır ve çok daha az güvenilirdir. Dolayısıyla, makine tarafından okunabilir bir sayfaya sahip ve OCR-B yazı tipiyle yazılmış yabancı pasaportlar anakronizm değildir.</p>
      </transl>
@@ -2265,7 +2265,7 @@
     </text>
     <text id="Text">
      <orig>According to English Wikipedia, these characters are mainly used for lists{{-}}“half numbered, half bulleted”. {{em|Ⓜ}} is used as [[pt:emoji|emoji]] for metro/subway.</orig>
-     <transl>İngilizce Wikipedia'ya göre bu karakterler çoğunlukla listeler için kullanılır{{-}}“yarı numaralı, yarı madde işaretli”. {{em|Ⓜ}} metro/subway için [[pt:emoji|emoji]] olarak kullanılır.</transl>
+     <transl>İngilizce Wikipedia’ya göre bu karakterler çoğunlukla listeler için kullanılır{{-}}“yarı numaralı, yarı madde işaretli”. {{em|Ⓜ}} metro/subway için [[pt:emoji|emoji]] olarak kullanılır.</transl>
     </text>
    </group>
    <group id="2500">
@@ -2304,7 +2304,7 @@
       <p>Part of pseudographics from legacy computers, for example 2×3 blocks, are missing here and were [[pk:1FB00|added]] only in 2020.</p>
      </orig>
      <transl>
-      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM'in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}’dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016’da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
+      <p>Katı dolgu için kullanılan [[pt:pseudographics|sözde grafikler]] ögeleri. Tüm sözde grafikler gibi, çoğunlukla monospace yazı tiplerinde kullanılırlar. Orantılı yazı tiplerinde yarım dolgu {{sm|▀}}, gölgeli dolgu {{sm|░}} ve IBM’in diğer karakterleri genellikle dikey olarak gerilir ve ZX{{_}}Spectrum {{sm|▚}}’dan çeyrek dolgu kare şeklindedir. Bu yazı tipinde{{-}} 2016’da terk edilen açık fint DejaVu{{-}}her şey doğru.</p>
       <p />
       <p>Sözde grafiklerde genellikle karakterler arası aralık yoktur.</p>
       <p />
@@ -2319,7 +2319,7 @@
     </text>
     <text id="Text">
      <orig>Geometric shapes are used for button marking, rough drawing of user interfaces. For instance, four buttons of ''Sony Playstation'' {{sm|🞩○△□}}{{-}}three of them are taken from this block. Character {{sm|◌}} is used in Unicode for showcasing [[pt:combining|combining]] marks.</orig>
-     <transl>Geometrik şekiller, düğme işaretleme ve kullanıcı arayüzlerinin kabataslak çizimleri için kullanılır. Örneğin, ''Sony Playstation''’ın dört düğmesi {{sm|🞩○△□}}{{-}}bunlardan üçü bu bloktan alınmıştır. {{sm|◌}} karakteri, Unicode’da [[pt:combining|birleştirme]] işaretlerini göstermek için kullanılır.</transl>
+     <transl>Geometrik şekiller, düğme işaretleme ve kullanıcı arayüzlerinin kabataslak çizimleri için kullanılır. Örneğin, ''Sony Playstation''ın dört düğmesi {{sm|🞩○△□}}{{-}}bunlardan üçü bu bloktan alınmıştır. {{sm|◌}} karakteri, Unicode’da [[pt:combining|birleştirme]] işaretlerini göstermek için kullanılır.</transl>
     </text>
    </group>
    <group id="2600">
@@ -2417,7 +2417,7 @@
    <group id="2C60">
     <text id="Text">
      <orig>Characters of various small languages: Melpa and Nii ''(Papua New Guinea)'', Shona ''(Zimbabwe)'', Uyghur and others. Also seven letters of the Uralic Phonetic Alphabet, and Claudian letter Ⱶ meaning the same as modern Y but designed for printing with existing stencils.</orig>
-     <transl>Çeşitli küçük dillerin karakterleri: Melpa ve Nii ''(Papua Yeni Gine)'', Şona ''(Zimbabve)'', Uygur ve diğerleri. Ayrıca Ural Fonetik Alfabesi'nin yedi harfi ve modern Y ile aynı anlama gelen ancak mevcut şablonlarla basılmak üzere tasarlanmış Claudius harfi Ⱶ.</transl>
+     <transl>Çeşitli küçük dillerin karakterleri: Melpa ve Nii ''(Papua Yeni Gine)'', Şona ''(Zimbabve)'', Uygur ve diğerleri. Ayrıca Ural Fonetik Alfabesi’nin yedi harfi ve modern Y ile aynı anlama gelen ancak mevcut şablonlarla basılmak üzere tasarlanmış Claudius harfi Ⱶ.</transl>
     </text>
    </group>
    <group id="2C80">
@@ -2440,7 +2440,7 @@
      <transl>
       <p>Eski [[pt:minuscule|küçük]] Gürcü yazı tipi "Nuskhuri". Harfler sağa eğik ve çok köşeli. Baş harfler ana bloktan "Asomtavruli" ile yazılmış.</p>
       <p />
-      <p>2000 yılında Gürcistan Devlet Bilgi Teknolojileri Dairesi ve Katolikos Patriği (Gürcü kilisesinin başı) Nushkhuri'nin kodlanmasını istedi ve Konsorsiyum öne çıktı.</p>
+      <p>2000 yılında Gürcistan Devlet Bilgi Teknolojileri Dairesi ve Katolikos Patriği (Gürcü kilisesinin başı) Nushkhuri’nin kodlanmasını istedi ve Konsorsiyum öne çıktı.</p>
      </transl>
     </text>
    </group>
@@ -2467,7 +2467,7 @@
       <p>Diller için Ethiopic alfabesi:</p>
       <p>* Mekan: Nil-Sahra ailesi, {{nspk1|mym}}, 2009’dan beri [[ps:Latn|Latin]]’de;</p>
       <p>* Blin (=Bilen): Cushitic ailesi, {{nspk1|byn}}, 1990’lardan beri Latin’de;</p>
-      <p>* Bank: Omotik ailesi, {{nspk1|bcq}}, 2008’den beri Latin'de;</p>
+      <p>* Bank: Omotik ailesi, {{nspk1|bcq}}, 2008’den beri Latin’de;</p>
       <p>* Sebat Bet: Etiyosemitik dal, {{nspk1|sgw}}.</p>
      </transl>
     </text>
@@ -2475,7 +2475,7 @@
    <group id="2DE0">
     <text id="Text">
      <orig>Combining Cyrillic letters from Church Slavonic.</orig>
-     <transl>Kilise Slavcası'ndan Kiril harflerinin birleştirilmesi.</transl>
+     <transl>Kilise Slavcası’ndan Kiril harflerinin birleştirilmesi.</transl>
     </text>
    </group>
    <group id="2E00">
@@ -2516,9 +2516,9 @@
      <transl>
       <p>Telaffuzunu bilmiyorsanız sözlükte bir CJK ideogramını nasıl bulabilirsiniz diye sorabilirsiniz. Çözüm, karakter içindeki bir tuş vuruşu veya bileşeni olan bir{{-}}"kök"ü belirlemektir.</p>
       <p />
-      <p>Kangxi Çince Sözlüğü, 1710-1716 yılları arasında Çin İmparatoru Kangxi'nin emriyle derlendi ve {{n|49030}} madde içeriyor. 19. yüzyılın sonlarına kadar standart referans olarak kaldı. 1831 tarihli gözden geçirilmiş bir baskı, ilk yazarların aceleciliğinden kaynaklanan yaklaşık {{n|2500}} hatayı düzeltti.</p>
+      <p>Kangxi Çince Sözlüğü, 1710-1716 yılları arasında Çin İmparatoru Kangxi’nin emriyle derlendi ve {{n|49030}} madde içeriyor. 19. yüzyılın sonlarına kadar standart referans olarak kaldı. 1831 tarihli gözden geçirilmiş bir baskı, ilk yazarların aceleciliğinden kaynaklanan yaklaşık {{n|2500}} hatayı düzeltti.</p>
       <p />
-      <p>İdeogramların 214 köke göre "alfabetik" olarak sıralanması sistemi ilk olarak 1615'te tasarlandı. Ancak, bu yöntemi nihayetinde standartlaştıran Kangxi Sözlüğü oldu.</p>
+      <p>İdeogramların 214 köke göre “alfabetik” olarak sıralanması sistemi ilk olarak 1615’te tasarlandı. Ancak, bu yöntemi nihayetinde standartlaştıran Kangxi Sözlüğü oldu.</p>
       <p />
       <p>Örnek Unicode glifleri yoğun tartışmalara yol açtı ve artık mümkün olduğunca ülkeden bağımsız.</p>
      </transl>
@@ -2538,7 +2538,7 @@
      <transl>
       <p>Unicode, kodlanmamış [[ps:Hani|CJK ideogramını]] tanımlamak için bir mekanizmaya sahiptir. Bunu yapmak için, hangi parçalara bölüneceğini ve her parçanın içinde ne olduğunu belirtirsiniz. Bu blok, ilk şeyi oluşturur.</p>
       <p />
-      <p>Tüm karakterler görünür, ancak işleyiciler genellikle ideogramın görünümünü yeniden{{_}}oluşturmaz. Zhuang karakteri U+2DA21 {{smb|𭨡}}, {{sm|⿰書史}} olarak tanımlanabilir. Unicode{{_}}15.1'de blok tamamen doldurulur ve hatta [[pk:31C0|CJK vuruşlarında]] bir karakter tahsis edilir.</p>
+      <p>Tüm karakterler görünür, ancak işleyiciler genellikle ideogramın görünümünü yeniden{{_}}oluşturmaz. Zhuang karakteri U+2DA21 {{smb|𭨡}}, {{sm|⿰書史}} olarak tanımlanabilir. Unicode{{_}}15.1’de blok tamamen doldurulur ve hatta [[pk:31C0|CJK vuruşlarında]] bir karakter tahsis edilir.</p>
      </transl>
     </text>
    </group>
@@ -2566,7 +2566,7 @@
       <p>* Japonca parantezler ve tırnak işaretleri.</p>
       <p>* Ditto işareti —//— listelerimizde yaygın olarak kullanılır, sadece ideografik biçimde.</p>
       <p />
-      <p>İdeografik varyasyon göstergesi 303E'nin Unicode’da özel bir anlamı yoktur ve Çin’de kullanılan iki baytlık GBK kodlamasıyla uyumluluk için kodlanmıştır.</p>
+      <p>İdeografik varyasyon göstergesi 303E’nin Unicode’da özel bir anlamı yoktur ve Çin’de kullanılan iki baytlık GBK kodlamasıyla uyumluluk için kodlanmıştır.</p>
      </transl>
     </text>
    </group>
@@ -2614,7 +2614,7 @@
       <p>This block contains one sign for merged reading and proper names (vertical line), and fifteen signs of reading order.</p>
      </orig>
      <transl>
-      <p>Kanbun (kelimenin tam anlamıyla ''Han yazısı''), [[ps:Hani|Çince]]’ye dayanan Orta Çağ Japonya’sında kullanılan bir yazı dilidir. Çinliler "özne-fiil-nesne" der ve Japonlar "özne-nesne-fiil" kullanır, bu nedenle metin yazım sırasına göre{{_}}okunmazdı{{_}}ve ''kaeriten'' işaretleri icat edildi. Bu işaretler genellikle ideogramlardan daha küçüktür.</p>
+      <p>Kanbun (kelimenin tam anlamıyla ''Han yazısı''), [[ps:Hani|Çince]]’ye dayanan Orta Çağ Japonya’sında kullanılan bir yazı dilidir. Çinliler “özne-fiil-nesne” der ve Japonlar “özne-nesne-fiil” kullanır, bu nedenle metin yazım sırasına göre{{_}}okunmazdı{{_}}ve ''kaeriten'' işaretleri icat edildi. Bu işaretler genellikle ideogramlardan daha küçüktür.</p>
       <p />
       <p>Kanbun’un kaeriten dışında başka karakterleri de vardı: kelimelerin çekimi, noktalama işaretleri, Japonca’da ideogramın ''(kunyomi)'' şeklinde okunması, Çince’deki ''(onyomi)''nin aksine...</p>
       <p />
@@ -2670,7 +2670,7 @@
       <p />
       <p>Tamamlayıcı unsurlar arasında: düz kısım B, daire Q, eğik X, kırık Z. Her vuruş için hangi yönde yazılması gerektiği kodlanmıştır.</p>
       <p />
-      <p>Tüm isimler Çincedir: Örneğin, B ''biǎn'' "düz" kelimesinden gelir.</p>
+      <p>Tüm isimler Çincedir: Örneğin, B ''biǎn'' “düz” kelimesinden gelir.</p>
      </transl>
     </text>
    </group>
@@ -2800,7 +2800,7 @@
      <transl>
       <p>Eski ve Kilise Slavcası, 1917 öncesi Abhazca (Uslar Kiril alfabesi, 1862), Litvanya lehçesi için vurgu işareti.</p>
       <p />
-      <p>Nadir görülen [[pt:ligature|bitişik harf]] "çok gözlü O" harfi yalnızca kilise sıfatı olan "çok gözlü"de (мног{{funky|ꙮ}}кий) kullanılır. Unicode{{_}}15'te yedi göz yerine on göz kullanılmıştır. İlk el yazmalarında kaç göz olduğunu saymak zor olsa da, ona yakın sayıdadır.</p>
+      <p>Nadir görülen [[pt:ligature|bitişik harf]] “çok gözlü O” harfi yalnızca kilise sıfatı olan “çok gözlü”de (мног{{funky|ꙮ}}кий) kullanılır. Unicode{{_}}15’te yedi göz yerine on göz kullanılmıştır. İlk el yazmalarında kaç göz olduğunu saymak zor olsa da ona yakın sayıdadır.</p>
      </transl>
     </text>
    </group>
@@ -2832,7 +2832,7 @@
       <p />
       <p>{{sm|꜀꜁}} ve diğerleri Çince tonlarının etimolojik analizinde kullanılır.</p>
       <p />
-      <p>{{sm|꜈꜉}} ve diğerleri doğrudan ton ve ''ton sandhi''nin belirlenmesi için kullanılır. (''Sandhi'', çevreleyen fonemlere bağlı olarak fonem değişimi anlamına gelen Sanskritçe bir terimdir. Örneğin, İngilizce &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}ancak bu sandhi{{_}}ton değildir{{_}}, İngilizcede ton{{_}}yoktur.)</p>
+      <p>{{sm|꜈꜉}} ve diğerleri doğrudan ton ve ''ton sandhi''nin belirlenmesi için kullanılır. (''Sandhi'', çevreleyen fonemlere bağlı olarak fonem değişimi anlamına gelen Sanskritçe bir terimdir. Örneğin, İngilizce &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}ancak bu sandhi ton{{_}}değildir, İngilizcede ton yoktur.)</p>
       <p />
       <p>{{sm|ꜗꜘꜙꜚ}} Chinantec dilinde kullanılır.</p>
       <p />
@@ -2843,7 +2843,7 @@
    <group id="A720">
     <text id="Text">
      <orig>Letters from Uralic Phonetic Alphabet, from medieval transcription and notation systems, ancillary Mayan letters used during colonial period, and others.</orig>
-     <transl>Ural Fonetik Alfabesi'nden gelen harfler, Orta Çağ transkripsiyon ve notasyon sistemleri, sömürge döneminde kullanılan yardımcı Maya harfleri ve diğerleri.</transl>
+     <transl>Ural Fonetik Alfabesi’nden gelen harfler, Orta Çağ transkripsiyon ve notasyon sistemleri, sömürge döneminde kullanılan yardımcı Maya harfleri ve diğerleri.</transl>
     </text>
    </group>
    <group id="A800">
@@ -2859,7 +2859,7 @@
     </text>
     <text id="Text">
      <orig>Such characters are found in sources of 16th century, and are used even today in North India, Pakistan and Nepal for writing fractions of size, weight or price.</orig>
-     <transl>Bu tür karakterler 16. yüzyıl kaynaklarında bulunmakta olup bugün bile Kuzey Hindistan, Pakistan ve Nepal'de boyut, ağırlık veya fiyat kesirlerini yazmak için kullanılmaktadır.</transl>
+     <transl>Bu tür karakterler 16. yüzyıl kaynaklarında bulunmakta olup bugün bile Kuzey Hindistan, Pakistan ve Nepal’de boyut, ağırlık veya fiyat kesirlerini yazmak için kullanılmaktadır.</transl>
     </text>
    </group>
    <group id="A840">
@@ -2903,7 +2903,7 @@
     </text>
     <text id="Text">
      <orig>Initial ''(choseong)'' old consonants of the Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
-     <transl>İlk ‘’(choseong)‘’ Kore dilinin eski ünsüzleridir. Modern Korecede{{-}} bulunmayan ve dolayısıyla [[pt:precomposed|önceden oluşturulmuş]] biçiminde bulunmayan heceleri dinamik olarak yapmak için kullanılırlar.</transl>
+     <transl>İlk ''(choseong)'' Kore dilinin eski ünsüzleridir. Modern Korecede{{-}}bulunmayan ve dolayısıyla [[pt:precomposed|önceden oluşturulmuş]] biçiminde bulunmayan heceleri dinamik olarak yapmak için kullanılırlar.</transl>
     </text>
    </group>
    <group id="A980">
@@ -2915,7 +2915,7 @@
    <group id="A9E0">
     <text id="Text">
      <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
-     <transl>Diller için harfler ve rakamlar: Pali ‘’(Budizm'de liturjik)‘’ ve Red Tai ‘’(Myanmar, 2010 itibarıyla 100 bin)‘’.</transl>
+     <transl>Diller için harfler ve rakamlar: Pali ''(Budizm'de liturjik)'' ve Red Tai ''(Myanmar, 2010 itibarıyla 100 bin)''.</transl>
     </text>
    </group>
    <group id="AA00">
@@ -3013,7 +3013,7 @@
     </text>
     <text id="Text">
      <orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit dynamic composition of syllables absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
-     <transl>Korecenin eski orta ve son ‘’(jungseong ve jongseong)‘’ harfleridir. Modern Korecede{{-}} bulunmayan ve bu nedenle [[pt:precomposed|önceden oluşturulmuş]] biçiminde bulunmayan hecelerin dinamik bileşimine izin verirler.</transl>
+     <transl>Korecenin eski orta ve son ''(jungseong ve jongseong)'' harfleridir. Modern Korecede{{-}}bulunmayan ve bu nedenle [[pt:precomposed|önceden oluşturulmuş]] biçiminde bulunmayan hecelerin dinamik bileşimine izin verirler.</transl>
     </text>
    </group>
    <group id="F900">
@@ -3540,7 +3540,7 @@
     </text>
     <text id="Text">
      <orig>Numbers that were used in Arabic Africa from the 10th to 17th century, especially in Fez ''(Morocco)''.</orig>
-     <transl>Arap Afrika'sında 10. yüzyıldan 17. yüzyıla kadar, özellikle Fez'de kullanılan sayılar ‘’(Fas)‘’.</transl>
+     <transl>Arap Afrika’sında 10. yüzyıldan 17. yüzyıla kadar, özellikle Fez’de kullanılan sayılar ''(Fas)''.</transl>
     </text>
    </group>
    <group id="10E80">
@@ -4542,7 +4542,7 @@
      <transl>
       <p>17. yüzyıldan (Moğol egemenliği altında) 20. yüzyılın ortalarına kadar Hindistan’da kullanılan Arapça konumsal olmayan sayılar. Arapçada ''siyaq'' "düzen" anlamına gelir. Arapçada ''raqm'', yani "hesap" olarak da bilinir.</p>
       <p />
-      <p>{{n|90000}}'e kadar olan sayılar [[pt:acrophonic|akrofonik]] olup Arapçada {{n|100000}}’den başlayarak Hintçe kökenlidir. Sağdan sola doğru yazıldığında, sıra karmaşıktır: 515, 500, 5 (''ön ekli'' çeşitlemesi), 10 olarak yazılır.</p>
+      <p>{{n|90000}}’e kadar olan sayılar [[pt:acrophonic|akrofonik]] olup Arapçada {{n|100000}}’den başlayarak Hintçe kökenlidir. Sağdan sola doğru yazıldığında, sıra karmaşıktır: 515, 500, 5 (''ön ekli'' çeşitlemesi), 10 olarak yazılır.</p>
      </transl>
     </text>
    </group>
@@ -4654,7 +4654,7 @@
      <transl>
       <p>Blok, standart kartları ve Tarot destesini birleştirir.</p>
       <p />
-      <p>İskambil oyunu yaklaşık 12. yüzyılda Doğu Asya’da icat edilmiştir. Avrupa’da kartlardan ilk kez 14. yüzyılda bahsedilmiştir. Müslümanlar kartları Batı'ya aktardıklarını inkar etseler de Memlüklerin Tarot'a benzeyen kendi desteleri olduğu ortaya çıkmıştır.</p>
+      <p>İskambil oyunu yaklaşık 12. yüzyılda Doğu Asya’da icat edilmiştir. Avrupa’da kartlardan ilk kez 14. yüzyılda bahsedilmiştir. Müslümanlar kartları Batı’ya aktardıklarını inkar etseler de Memlüklerin Tarot’a benzeyen kendi desteleri olduğu ortaya çıkmıştır.</p>
       <p />
       <p>Joker'in Tarot kozlarıyla bir ilişkisi yoktur, 19. yüzyılda eklenmiştir.</p>
       <p />
@@ -5057,7 +5057,7 @@
       <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
      </orig>
      <transl>
-      <p>Fula, Fulani veya Fulbe, Sahra Altı Afrika'daki Avrupalılara antropolojik olarak en yakın ve Batı Afrika’da İslam'ın en ateşli savunucuları olan göçebe çobanlardır.</p>
+      <p>Fula, Fulani veya Fulbe, Sahra Altı Afrika’daki Avrupalılara antropolojik olarak en yakın ve Batı Afrika’da İslam’ın en ateşli savunucuları olan göçebe çobanlardır.</p>
       <p />
       <p>Alfabe, Fula dillerini Latin veya Arapçadan daha iyi aktarmak için ergenlik çağındaki İbrahima ve Abdoulaye Barry kardeşler tarafından icat edilmiştir. Yeni yazı popüler olmuş ve Gine, Liberya ve diğer ülkelerdeki okullarda öğretilmektedir. Android yerelleştirilmiştir.</p>
       <p />
@@ -5121,9 +5121,9 @@
       <p>Computer Arabic is complicated with the writing of Arabic letters: each has isolated, initial, medial and final forms. In normal text “[[pt:character|general-form]]” letters adapting to position in the word are preferred. But if you need the final form in an isolated letter, Unicode has “rigid” variants.</p>
      </orig>
      <transl>
-      <p>Yazı, [[ps:Armi|Aramice]]’den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]’ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam'ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
+      <p>Yazı, [[ps:Armi|Aramice]]’den [[ps:Syrc|Süryani]] ve/veya [[ps:Nbat|Nebati]]’ye doğru gelişmiştir. Arap dili İslam ile yakından ilişkilidir; Kur’an (610-632) bu dilde yazılmıştır. Kur’an’ın kopyacıları, son alfabeyi belirleyen kişilerdi. Arap Halifeliği hem İslam’ı hem de yazıyı zorunlu kılmıştır. Birçok İslam halkı (Türkler, Kazaklar, Başkurtlar) 20. yüzyılın başlarına kadar Arapça kullanmıştır.</p>
       <p />
-      <p>Bilgisayar Arapçası, Arap harflerinin yazımı ile karmaşıktır: her harfin ayrı, ilk, orta ve son biçimleri vardır. Normal metinde, kelimedeki konuma uyum sağlayan "[[pt:character|genel biçim]]" harfleri tercih edilir. Ancak, ayrı bir harfte son biçime ihtiyacınız varsa Unicode’un "katı" varyantları vardır.</p>
+      <p>Bilgisayar Arapçası, Arap harflerinin yazımı ile karmaşıktır: Her harfin ayrı, ilk, orta ve son biçimleri vardır. Normal metinde, kelimedeki konuma uyum sağlayan "[[pt:character|genel biçim]]" harfleri tercih edilir. Ancak, ayrı bir harfte son biçime ihtiyacınız varsa Unicode’un "katı" varyantları vardır.</p>
      </transl>
     </text>
    </group>
@@ -5143,7 +5143,7 @@
       <p>Numbers are made by combining numerals 1, 2, 3, 10, 20, 100, {{n|1000}} and {{n|10000}}: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (right to left!)</p>
      </orig>
      <transl>
-      <p>MÖ{{_}}593 yılında Ahameniş Persleri Babil'i fethetmiş ve Aramice temelli bir kitap dili yaratmışlardır, bu dil o kadar kodlanmıştır ki belirli bir belgenin yerini ve tarihini tespit etmek son derece zordur. Perslerin Büyük İskender tarafından fethedilmesiyle (MÖ{{_}}330) dilde parçalanma başlamış ve [[ps:Syrc|Süryanice]] ([[ps:Arab|Arapça]]’nın ataları) ve Yahudi ([[ps:Hebr|İbranice]]’nin ataları) dilleri oluşmaya başlamıştır.</p>
+      <p>MÖ{{_}}593 yılında Ahameniş Persleri Babil’i fethetmiş ve Aramice temelli bir kitap dili yaratmışlardır, bu dil o kadar kodlanmıştır ki belirli bir belgenin yerini ve tarihini tespit etmek son derece zordur. Perslerin Büyük İskender tarafından fethedilmesiyle (MÖ{{_}}330) dilde parçalanma başlamış ve [[ps:Syrc|Süryanice]] ([[ps:Arab|Arapça]]’nın ataları) ve Yahudi ([[ps:Hebr|İbranice]]’nin ataları) dilleri oluşmaya başlamıştır.</p>
       <p />
       <p>Sayılar 1, 2, 3, 10, 20, 100, {{n|1000}} ve {{n|10000}} rakamlarının birleştirilmesiyle oluşturulur: 55{{_}}={{_}}20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (sağdan sola!)</p>
      </transl>
@@ -5191,7 +5191,7 @@
      <transl>
       <p>Alfabe, Zerdüştlük ve kutsal metni Avesta ile ilişkilidir. Yaklaşık 400 yıl önce Sasani İmparatorluğu’nda, Avesta’yı sistemleştirmek için Pehlevi Kitabı’na (Orta Farsça el yazmalarındaki betik) dayanan özel bir alfabe oluşturuldu. O dönemde Zerdüştlük yüzyıllar öncesine dayanıyordu ve dil çok az anlaşılıyordu. Duaların etkili olması için tam olarak tekrarlanması gerekiyordu, bu nedenle alfabe komşu yazılardan ödünç alınan gerçek ünlülerle donatılmıştı.</p>
       <p />
-      <p>Araplar döneminde Zerdüştler Hindistan’a göç etmeye başladı ve 12. yüzyıldan itibaren geleneksel olarak [[ps:Gujr|Gujarati]] olarak bilinen yerel abugidas ile Avesta dilinde yazmaya başladılar. Bu Zerdüştlerin en ünlüsü Freddie Mercury’dir (ancak ailesi Zanzibar'a kadar taşınmıştır).</p>
+      <p>Araplar döneminde Zerdüştler Hindistan’a göç etmeye başladı ve 12. yüzyıldan itibaren geleneksel olarak [[ps:Gujr|Gujarati]] olarak bilinen yerel abugidas ile Avesta dilinde yazmaya başladılar. Bu Zerdüştlerin en ünlüsü Freddie Mercury’dir (ancak ailesi Zanzibar’a kadar taşınmıştır).</p>
       <p />
       <p>2000 yılında antik yazılar beş kategoriye ayrılmıştı: A (modern kullanımda{{-}}[[ps:Copt|Kıpti]], [[ps:Runr|runikler]]), B1 ([[pt:character|kodlanabilir]] çalışılmış{{-}}[[ps:Xpeo|Fars çivi yazısı]]), B2 (kodlanamayan{{-}}[[ps:Egyp|Mısır hiyerojileri]] çalışılmış), C1 (sistematik olmayan, amatörlerin istekleri{{-}}[[ps:Xsux|Sümer çivi yazısı]]) ve C2 (keşfedilmemiş, amatörlerin istekleri{{-}}[[pk:101D0|Phaistos Dilleri]]). Avesta en önemli kategori olan A’ya giriyordu ve bu ona [[pt:bmp|Temel Düzey]]’de yer alma şansı veriyordu. Ancak başka bir görüş daha ağır bastı: Avesta ve [[ps:Phlp|Pehlevi]]’yi tamamlayıcı düzlemde yan yana kodlayın. Kodlanmamış Pehlevi Kitabı için bir boşluk bırakıldı.</p>
      </transl>
@@ -5227,7 +5227,7 @@
       <p>Consonants are initially voiceless, adding the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… The top line works as [[pt:virama|virama]] removing a vowel from syllable, and is attested above just 13 signs.</p>
      </orig>
      <transl>
-      <p>Betik, Kamerun'un batısındaki Bamum Sultanı İbrahim Njoya tarafından icat edildi. İdeografikten başlayıp hecesele kadar A’dan G’ye yedi versiyon (aşama) yayınlandı. Ancak Njoya’nın alfabesi tüm tonları aktaramıyordu ve birçok homograf vardı. Fransızca 1918’de geldi, Njoya'yı devirdi ve dili [[ps:Latn|Latin]]’e çevirdi, ancak yazı Njoya’nın 1930’lardaki ölümüne kadar sınırlı bir hacimde kullanılmaya devam etti. 2007’de bir canlandırma projesi başladı, ancak ilerleme önemsiz. Njoya'nın önceki sanatlarını Unicode’un ek düzlemlerinde [[pk:16800|görebilirsiniz]].</p>
+      <p>Betik, Kamerun'un batısındaki Bamum Sultanı İbrahim Njoya tarafından icat edildi. İdeografikten başlayıp hecesele kadar A’dan G’ye yedi versiyon (aşama) yayınlandı. Ancak Njoya’nın alfabesi tüm tonları aktaramıyordu ve birçok homograf vardı. Fransızca 1918’de geldi, Njoya’yı devirdi ve dili [[ps:Latn|Latin]]’e çevirdi, ancak yazı Njoya’nın 1930’lardaki ölümüne kadar sınırlı bir hacimde kullanılmaya devam etti. 2007’de bir canlandırma projesi başladı, ancak ilerleme önemsiz. Njoya’nın önceki sanatlarını Unicode’un ek düzlemlerinde [[pk:16800|görebilirsiniz]].</p>
       <p />
       <p>Ünsüz harfler başlangıçta sessizdir, aynı ünlü eklendiğinde sesli hale gelir: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Heceden sonraki ünlü, başka bir ünlü ekler: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Bir karakterin üzerine gelen şapka işareti heceyi bir şekilde değiştirir{{-}} gottal bir durak ekler, genizden gelen sesi kaldırır, ünlüyü değiştirir… En üst satır, heceden bir ünlüyü çıkaran [[pt:virama|virama]] işlevi görür ve yukarıda sadece 13 işarette doğrulanmıştır.</p>
      </transl>
