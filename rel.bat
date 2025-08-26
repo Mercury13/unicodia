@@ -208,7 +208,7 @@
 @rem ...
 @rem Turkish
 @set DIR_TR=%DEPLOY%\Languages\Turkish
-@md %DIR_RU%
+@md %DIR_TR%
 @copy lang-src\tr\locale.xml %DIR_TR%
 @%UTRANSL% lang-src\tr.utran -update -build:%DIR_TR%
 @if errorlevel 1 goto end
