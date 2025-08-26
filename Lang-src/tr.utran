@@ -10113,8 +10113,15 @@
       <p />
       <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
-      <p>With all adantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+      <p>With all advantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
+     <known-orig>
+      <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
+      <p />
+      <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
+      <p />
+      <p>With all adantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+     </known-orig>
      <transl>
       <p>Hem ünsüz hem de ünlü harfleri yazan doğrusal betik. Bilinen ilk alfabe [[ps:Grek|Yunanca]]’dır.</p>
       <p />
@@ -10998,11 +11005,29 @@
    </group>
    <group id="hiero">
     <text id="Name">
-     <orig>ideographic script</orig>
+     <orig>logographic (ideographic, hieroglyphic) script</orig>
+     <known-orig>ideographic script</known-orig>
      <transl>ideografik betik</transl>
     </text>
     <text id="Text">
      <orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
+     </orig>
+     <au-cmt>
+      <p>up/down → write “top/bottom” if better in your language</p>
+      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
+     </au-cmt>
+     <known-orig>
       <p>As Artemy Lebedev said, pictogram of drinking glass means drinking glass. Ideogram means drinking glass, glass as material, fragile, drunkenness… Both are called “hieroglyphs” sometimes. Chinese ideograph “man+tree” mean “rest”.</p>
       <p />
       <p>Writing short thoughts with pictograms and ideograms surrounds us everywhere: on road signs, in interfaces of appiances and software. But generally this writing has{{_}}not{{_}}advanced far from pictograms. Writing speech with ideograms is two steps forward: picture may mean a concept, and they are ordered by position in language, not{{_}}by{{_}}mutual relation. If “hunter killed a deer with a spear”, a sign for killing is made, and the spear is drawn the last, not{{_}}between hunter and deer.</p>
@@ -11010,7 +11035,7 @@
       <p>Read about '''[[ps:Hani|CJK ideographs]]''' how Chinese turned drawbacks of ideograph to advantages.</p>
       <p />
       <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Artemy Lebedev'in dediği gibi, içki bardağı piktogramı, içki bardağı anlamına gelir. İdeogram ise içki bardağı, cam malzeme, kırılganlık, sarhoşluk anlamına gelir... Her ikisine de bazen "hiyeroglif" denir. Çince "adam+ağaç" ideogramı "dinlenme" anlamına gelir.</p>
       <p />
@@ -11884,12 +11909,22 @@
       <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
       <p />
       <p>Properties of UTF-32:</p>
-      <p>* Constant-length encoding. That’s why it is the most suitable for compex text processing.</p>
+      <p>* Constant-length encoding. That’s why it is the most suitable for complex text processing.</p>
       <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
       <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
       <p />
       <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
      </orig>
+     <known-orig>
+      <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
+      <p />
+      <p>Properties of UTF-32:</p>
+      <p>* Constant-length encoding. That’s why it is the most suitable for compex text processing.</p>
+      <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
+      <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
+      <p />
+      <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
+     </known-orig>
      <transl>
       <p>'''Unicode dönüşüm biçimi, 32 bit''' veya diğer adıyla '''UCS-4''', Unicode [[pt:serialization|serileştirme]]’nin dört baytlık makine sözcüklerinden oluşan bir zincire dönüştürülmesi biçimidir. Karakter kodları yalnızca birbiri ardına yazılır.</p>
       <p />
