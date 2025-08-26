@@ -11015,11 +11015,14 @@
       <p>* Compound ideographs:  &lt;big&gt;休&lt;/big&gt; rest = &lt;big&gt;人&lt;/big&gt; person + &lt;big&gt;木&lt;/big&gt; tree</p>
       <p>* New meanings with different pronunciations: &lt;big&gt;樂&lt;/big&gt; (traditional) / &lt;big&gt;乐&lt;/big&gt; (simp.China) yuè (music), and also lè (pleasure)</p>
       <p>* Loaned by pronunciation: &lt;big&gt;自&lt;/big&gt; nose → self (in Old Chinese had similar pronunciation)</p>
-      <p>* Pronunciation+classifier: &lt;big&gt;樑&lt;/big&gt; liáng (beam in construction) = &lt;big&gt;梁&lt;/big&gt; liáng + &lt;big&gt;木&lt;/big&gt; wood</p>
+      <p>* Pronunciation+classifier: &lt;big&gt;樑&lt;/big&gt; liáng (beam in construction) = &lt;big&gt;木&lt;/big&gt; wood + &lt;big&gt;梁&lt;/big&gt; liáng</p>
       <p />
       <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
      </orig>
-     <au-cmt>Of course, if BEAM has no homonyms, don’t write “in construction”</au-cmt>
+     <au-cmt>
+      <p>up/down → write “top/bottom” if better in your language</p>
+      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
+     </au-cmt>
      <transl>
       <p>Нефонетичні писемності, відомі як ''ієрогліфічні'' або ''ідеографічні'', більш точно звуться '''логографічними''': один символ означає слово чи його частину.</p>
       <p />
@@ -11029,7 +11032,7 @@
       <p>* Складені ієрогліфи: &lt;big&gt;休&lt;/big&gt; відпочинок = &lt;big&gt;人&lt;/big&gt; людина + &lt;big&gt;木&lt;/big&gt; дерево</p>
       <p>* Нові значення з іншою вимовою: &lt;big&gt;樂&lt;/big&gt; (традиційний) / &lt;big&gt;乐&lt;/big&gt; (спр.Китай) yuè (музика), і{{_}}також lè (радість)</p>
       <p>* Запозичено за вимовою: &lt;big&gt;自&lt;/big&gt; ніс → сам (у старокитайській вимовлялися схоже)</p>
-      <p>* Вимова+класифікатор: &lt;big&gt;樑&lt;/big&gt; liáng (балка) = &lt;big&gt;梁&lt;/big&gt; liáng + &lt;big&gt;木&lt;/big&gt; дерево</p>
+      <p>* Вимова+класифікатор: &lt;big&gt;樑&lt;/big&gt; liáng (балка) = &lt;big&gt;木&lt;/big&gt; дерево + &lt;big&gt;梁&lt;/big&gt; liáng</p>
       <p />
       <p>Перехід від ієрогліфів до [[pt:syllabic|складового письма]] простий: досить записати незнайоме слово відповідними односкладовими ієрогліфами. Усі великі цивілізації Євразії, окрім китайської, до початку нашої ери кинули ієрогліфи.</p>
      </transl>
