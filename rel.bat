@@ -206,6 +206,14 @@
 @if errorlevel 1 goto end
 @copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
 @rem ...
+@rem Turkish
+@set DIR_TR=%DEPLOY%\Languages\Turkish
+@md %DIR_RU%
+@copy lang-src\tr\locale.xml %DIR_TR%
+@%UTRANSL% lang-src\tr.utran -update -build:%DIR_TR%
+@if errorlevel 1 goto end
+@copy %QTDIR%\translations\qtbase_tr.qm %DIR_TR%
+@rem ...
 @rem Ukrainian
 @set DIR_UK=%DEPLOY%\Languages\Ukrainian
 @md %DIR_UK%
