@@ -11002,20 +11002,20 @@
    </group>
    <group id="hiero">
     <text id="Name">
-     <orig>ideographic script</orig>
-     <transl>ієрогліфи</transl>
+     <orig>logographic (ideographic, hieroglyphic) script</orig>
+     <transl>логографічне письмо (ідеографічне, ієрогліфи)</transl>
     </text>
     <text id="Text">
      <orig>
       <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
       <p />
       <p>The anatomy of an ideographic script is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
-      <p>* Pictograms mean the very object that’s drawn: &lt;big&gt;山&lt;/big&gt; mountain</p>
-      <p>* Ideograms visualize abstract concepts: &lt;big&gt;上&lt;/big&gt; up, &lt;big&gt;下&lt;/big&gt; down</p>
-      <p>* Compound ideographs:  &lt;big&gt;休&lt;/big&gt; rest = &lt;big&gt;人&lt;/big&gt; person + &lt;big&gt;木&lt;/big&gt; tree</p>
-      <p>* New meanings with different pronunciations: &lt;big&gt;樂&lt;/big&gt; (traditional) / &lt;big&gt;乐&lt;/big&gt; (simp.China) yuè (music), and also lè (pleasure)</p>
-      <p>* Loaned by pronunciation: &lt;big&gt;自&lt;/big&gt; nose → self (in Old Chinese had similar pronunciation)</p>
-      <p>* Pronunciation+classifier: &lt;big&gt;樑&lt;/big&gt; liáng (beam in construction) = &lt;big&gt;木&lt;/big&gt; wood + &lt;big&gt;梁&lt;/big&gt; liáng</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
       <p />
       <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
      </orig>
@@ -11027,12 +11027,12 @@
       <p>Нефонетичні писемності, відомі як ''ієрогліфічні'' або ''ідеографічні'', більш точно звуться '''логографічними''': символ (або група символів) означає слово чи його частину.</p>
       <p />
       <p>Устрій ієрогліфічної писемності добре видно на '''[[ps:Hani|китайських ієрогліфах]]'''. Символи традиційно діляться на шість типів.</p>
-      <p>* Піктограми означають намальований об’єкт: &lt;big&gt;山&lt;/big&gt; гора</p>
-      <p>* Ідеограми показують абстрактні концепції: &lt;big&gt;上&lt;/big&gt; верх, &lt;big&gt;下&lt;/big&gt; низ</p>
-      <p>* Складені ієрогліфи: &lt;big&gt;休&lt;/big&gt; відпочинок = &lt;big&gt;人&lt;/big&gt; людина + &lt;big&gt;木&lt;/big&gt; дерево</p>
-      <p>* Нові значення з іншою вимовою: &lt;big&gt;樂&lt;/big&gt; (традиційний) / &lt;big&gt;乐&lt;/big&gt; (спр.Китай) yuè (музика), і{{_}}також lè (радість)</p>
-      <p>* Запозичено за вимовою: &lt;big&gt;自&lt;/big&gt; ніс → сам (у старокитайській вимовлялися схоже)</p>
-      <p>* Вимова+класифікатор: &lt;big&gt;樑&lt;/big&gt; liáng (балка) = &lt;big&gt;木&lt;/big&gt; дерево + &lt;big&gt;梁&lt;/big&gt; liáng</p>
+      <p>* Піктограми означають намальований об’єкт: {{sm|山}} гора</p>
+      <p>* Ідеограми показують абстрактні концепції: {{sm|上}} верх, {{sm|下}} низ</p>
+      <p>* Складені ієрогліфи: &lt;big&gt;休&lt;/big&gt; відпочинок = {{sm|人}} людина + {{sm|木}} дерево</p>
+      <p>* Нові значення з іншою вимовою: {{sm|樂}} (традиційний) / {{sm|乐}} (спр.Китай) yuè (музика), і{{_}}також lè (радість)</p>
+      <p>* Запозичено за вимовою: {{sm|自}} ніс → сам (у старокитайській вимовлялися схоже)</p>
+      <p>* Вимова+класифікатор: {{sm|樑}} liáng (балка) = {{sm|木}} дерево + {{sm|梁}} liáng</p>
       <p />
       <p>Перехід від ієрогліфів до [[pt:syllabic|складового письма]] простий: досить записати незнайоме слово відповідними односкладовими ієрогліфами. Усі великі цивілізації Євразії, окрім китайської, до початку нашої ери кинули ієрогліфи.</p>
      </transl>

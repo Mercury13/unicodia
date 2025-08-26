@@ -264,7 +264,9 @@ constinit const uc::Term uc::terms[] {
     { "birman", EcTermCat::INPUT, {} },
 
     // Script classes sorted
-    { "hiero", EcTermCat::SCRIPT_CLASS, u8"ideographic script" },
+    { .key = "hiero", .ecCat = EcTermCat::SCRIPT_CLASS,
+                .engName = u8"logographic (ideographic) script",
+                .ecFont = EcFont::CJK },
     { "abjad", EcTermCat::SCRIPT_CLASS, u8"consonant script, abjad" },
     { "syllabic", EcTermCat::SCRIPT_CLASS, u8"syllabic script" },
     { .key = "abugida", .ecCat = EcTermCat::SCRIPT_CLASS, .engName = u8"abugida",
