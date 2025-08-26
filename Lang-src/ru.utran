@@ -11007,20 +11007,29 @@
     </text>
     <text id="Text">
      <orig>
-      <p>As Artemy Lebedev said, pictogram of drinking glass means drinking glass. Ideogram means drinking glass, glass as material, fragile, drunkenness… Both are called “hieroglyphs” sometimes. Chinese ideograph “man+tree” mean “rest”.</p>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a single character denotes a word or its part.</p>
       <p />
-      <p>Writing short thoughts with pictograms and ideograms surrounds us everywhere: on road signs, in interfaces of appiances and software. But generally this writing has{{_}}not{{_}}advanced far from pictograms. Writing speech with ideograms is two steps forward: picture may mean a concept, and they are ordered by position in language, not{{_}}by{{_}}mutual relation. If “hunter killed a deer with a spear”, a sign for killing is made, and the spear is drawn the last, not{{_}}between hunter and deer.</p>
-      <p />
-      <p>Read about '''[[ps:Hani|CJK ideographs]]''' how Chinese turned drawbacks of ideograph to advantages.</p>
+      <p>The anatomy of an ideographic script is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms: mean the very object that’s drawn. &lt;big&gt;山&lt;/big&gt; mountain</p>
+      <p>* Ideograms: visualize abstract concepts. &lt;big&gt;上&lt;/big&gt; up, &lt;big&gt;下&lt;/big&gt; down</p>
+      <p>* Compound ideographs:  &lt;big&gt;休&lt;/big&gt; rest = &lt;big&gt;人&lt;/big&gt; person + &lt;big&gt;木&lt;/big&gt; tree</p>
+      <p>* New meanings with different pronunciations: &lt;big&gt;樂&lt;/big&gt; (traditional) / &lt;big&gt;乐&lt;/big&gt; (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: &lt;big&gt;自&lt;/big&gt; nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: &lt;big&gt;樑&lt;/big&gt; liáng (beam in construction) = &lt;big&gt;梁&lt;/big&gt; liáng + &lt;big&gt;木&lt;/big&gt; wood</p>
       <p />
       <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
      </orig>
+     <au-cmt>Of course, if BEAM has no homonyms, don’t write “in construction”</au-cmt>
      <transl>
-      <p>Как говорил Артемий Лебедев, пиктограмма «стакан» означает стакан. Идеограмма означает стакан, стекло, хрупкость, пьянство… То и другое{{-}}иероглифы. Так, китайский иероглиф «человек+дерево» означает «отдых».</p>
+      <p>Нефонетические письменности, известные как ''иероглифические'' или ''идеографические'', более точно зовутся '''логографическими''': один символ означает слово или его часть.</p>
       <p />
-      <p>Запись иероглифами коротких мыслей нас окружает повсюду{{-}}на дорожных знаках, в интерфейсах приборов и программ. Но в целом такая запись недалеко ушла от пиктограмм. Запись иероглифами речи{{-}}это два шага вперёд: картинка может означать понятие, и упорядочены они по месту в языке, а не{{_}}по отношению друг к другу. Если «охотник убил оленя копьём», то придумывают знак для убийства, и копьё рисуют последним, а не{{_}}между охотником и оленем.</p>
-      <p />
-      <p>Прочитайте про '''[[ps:Hani|китайские иероглифы]]''', как китайцы обратили недостатки иероглифов в достоинства.</p>
+      <p>Устройство иероглифической письменности хорошо видно на '''[[ps:Hani|китайских иероглифах]]'''. Символы традиционно делятся на шесть типов.</p>
+      <p>* Пиктограммы: означают нарисованный объект. &lt;big&gt;山&lt;/big&gt; гора</p>
+      <p>* Идеограммы: показывают абстрактные концепции. &lt;big&gt;上&lt;/big&gt; верх, &lt;big&gt;下&lt;/big&gt; низ</p>
+      <p>* Составные иероглифы: &lt;big&gt;休&lt;/big&gt; отдых = &lt;big&gt;人&lt;/big&gt; человек + &lt;big&gt;木&lt;/big&gt; дерево</p>
+      <p>* Новые значения с другим произношением: &lt;big&gt;樂&lt;/big&gt; (традиционный) / &lt;big&gt;乐&lt;/big&gt; (упр.Китай) yuè (музыка), и также lè (радость)</p>
+      <p>* Позаимствовано по произношению: &lt;big&gt;自&lt;/big&gt; нос → сам (в старокитайском сходно произносились)</p>
+      <p>* Произношение+классификатор: &lt;big&gt;樑&lt;/big&gt; liáng (балка) = &lt;big&gt;梁&lt;/big&gt; liáng + &lt;big&gt;木&lt;/big&gt; дерево</p>
       <p />
       <p>Переход от иероглифов к [[pt:syllabic|слоговому письму]] прост: достаточно записать незнакомое слово подходящими односложными иероглифами. Все крупные цивилизации Евразии, кроме китайской, к началу нашей эры бросили иероглифы.</p>
      </transl>
