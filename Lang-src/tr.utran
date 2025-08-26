@@ -3302,7 +3302,7 @@
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
      </orig>
      <transl>
-      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada "ödünç alınmış" anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]’dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800’lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
+      <p>''Epact'' kelimesi (Yunanca ἐπακτός) burada “ödünç alınmış” anlamına gelir; güneş takviminden ay takvimine dönüşümler veya Paskalya tarihini belirlemek için kullanılan denklemler değil. Nitekim, [[ps:Grek|Yunanca]]’dan ödünç alınan normal [[ps:Copt|Kıpti]] gösteriminin torunları olan bu sayılar, 10. yüzyıldan 19. yüzyıla kadar Kıpti-Arap dünyasında, özellikle de 1800’lere kadar astronomi tablolarında yaygın olarak kullanılmıştır. Soldan sağa yazılmıştır.</p>
       <p />
       <p>Bu standart dışı kullanım nedeniyle, bu sayılar Kıpti’nin bir varyantı olarak değil, ayrı bir blok olarak kodlanmıştır.</p>
       <p />
@@ -3397,7 +3397,7 @@
    <group id="10780">
     <text id="Text">
      <orig>Modifier AA is from Voice Quality Symbols used to transcribe speech disorders. The rest are from phonetics, and mean phonemes pronounced incompletely.</orig>
-     <transl>AA düzenleyicisi, konuşma bozukluklarını yazıya dökmek için kullanılan Ses Kalitesi Sembolleri'ndendir. Diğerleri fonetikten gelir ve eksik telaffuz edilen fonemler anlamındadır.</transl>
+     <transl>AA düzenleyicisi, konuşma bozukluklarını yazıya dökmek için kullanılan Ses Kalitesi Sembolleri’ndendir. Diğerleri fonetikten gelir ve eksik telaffuz edilen fonemler anlamındadır.</transl>
     </text>
    </group>
    <group id="10800">
@@ -3552,7 +3552,7 @@
    <group id="10EC0">
     <text id="Text">
      <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
-     <transl>Türkçe ve Libya dili Kur’an’ından karakterler ve Pegon'un nadir çeşitlemeleri (Arap harfleriyle [[ps:Java|Cava dili]] yazımı).</transl>
+     <transl>Türkçe ve Libya dili Kur’an’ından karakterler ve Pegon’un nadir çeşitlemeleri (Arap harfleriyle [[ps:Java|Cava dili]] yazımı).</transl>
     </text>
    </group>
    <group id="10F00">
@@ -4124,7 +4124,7 @@
    <group id="1AFF0">
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
-     <transl>Güney Min dilinin Tayvan lehçesinin kana ile yazımı. Japon dil bilimciler tarafından II. Dünya Savaşı'ndan önce icat edilmiştir.</transl>
+     <transl>Güney Min dilinin Tayvan lehçesinin kana ile yazımı. Japon dil bilimciler tarafından II. Dünya Savaşı’ndan önce icat edilmiştir.</transl>
     </text>
    </group>
    <group id="1B000">
@@ -4322,7 +4322,7 @@
       <p>There is no special character for fractional part (“vigesimal point”). Sometimes middle dot is used.</p>
      </orig>
      <transl>
-      <p>Konumsal 20 tabanlı rakamlar 1980’lerde Alaska'nın Kaktovik kasabasındaki İnuit (Eskimo) okul çocukları tarafından icat edilmiştir. İnuitler yirmili sayılarla sayarlar &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt; ve bu sistemin getirilmesinden önce, ABD genelinde matematikte en kötüler arasındaydılar{{-}}ortalamanın biraz üzerindeydiler, sanki iki dilli insanlar dil bilimde genellikle daha iyi gibidir.</p>
+      <p>Konumsal 20 tabanlı rakamlar 1980’lerde Alaska’nın Kaktovik kasabasındaki İnuit (Eskimo) okul çocukları tarafından icat edilmiştir. İnuitler yirmili sayılarla sayarlar &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt; ve bu sistemin getirilmesinden önce, ABD genelinde matematikte en kötüler arasındaydılar{{-}}ortalamanın biraz üzerindeydiler, sanki iki dilli insanlar dil bilimde genellikle daha iyi gibidir.</p>
       <p />
       <p>20 tabanlı bir abaküs tasarlandı. Japonca ''soroban''a benziyor, ancak üç “cennet” boncuğu var. Japonya’da olduğu gibi, boncuk kenara yakınsa “kapalı”, orta duvara yakınsa “açık”. Taban-20’den ondalık sayıya dönüşüm için basit algoritmalar vardır.</p>
       <p />
@@ -4465,7 +4465,7 @@
    <group id="1E030">
     <text id="Text">
      <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
-     <transl>Kiril harfleriyle transkripsiyon yazmak için kullanılan belirteç harfleri. Bu tür notasyon, eski SSCB'deki tüm okul ve enstitülerde yaygındır.</transl>
+     <transl>Kiril harfleriyle transkripsiyon yazmak için kullanılan belirteç harfleri. Bu tür notasyon, eski SSCB’deki tüm okul ve enstitülerde yaygındır.</transl>
     </text>
    </group>
    <group id="1E100">
@@ -4540,7 +4540,7 @@
       <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], from Arabic, starting from {{n|100000}} are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
      </orig>
      <transl>
-      <p>17. yüzyıldan (Moğol egemenliği altında) 20. yüzyılın ortalarına kadar Hindistan’da kullanılan Arapça konumsal olmayan sayılar. Arapçada ''siyaq'' "düzen" anlamına gelir. Arapçada ''raqm'', yani "hesap" olarak da bilinir.</p>
+      <p>17. yüzyıldan (Moğol egemenliği altında) 20. yüzyılın ortalarına kadar Hindistan’da kullanılan Arapça konumsal olmayan sayılar. Arapçada ''siyaq'' “düzen” anlamına gelir. Arapçada ''raqm'', yani “hesap” olarak da bilinir.</p>
       <p />
       <p>{{n|90000}}’e kadar olan sayılar [[pt:acrophonic|akrofonik]] olup Arapçada {{n|100000}}’den başlayarak Hintçe kökenlidir. Sağdan sola doğru yazıldığında, sıra karmaşıktır: 515, 500, 5 (''ön ekli'' çeşitlemesi), 10 olarak yazılır.</p>
      </transl>
@@ -4558,7 +4558,7 @@
       <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
      </orig>
      <transl>
-      <p>Geç Orta Çağ Türkiye'sinde kullanılan Arapça pozisyonsuz [[pt:acrophonic|akrofonik]] rakamlar, aynı zamanda "rakamları" (Arapça ''raqm'' "hesap"). Arapça ''siyaq'' "düzen" anlamına gelir.</p>
+      <p>Geç Orta Çağ Türkiye’sinde kullanılan Arapça pozisyonsuz [[pt:acrophonic|akrofonik]] rakamlar, aynı zamanda “rakamları” (Arapça ''raqm'' “hesap”). Arapça ''siyaq'' “düzen” anlamına gelir.</p>
       <p />
       <p>Sağdan sola yazıldığında, düzen karmaşıktır: 123, 100, 3, 20 olarak yazılır. ''Marratan'' sembolü, milyonları belirtmek için binlerle yazılır.</p>
      </transl>
@@ -4626,7 +4626,7 @@
       <p>After rethinking the word ''domino'', in mathematics ''trimino'', ''tetramino'' etc appeared{{-}}figures of 3, 4 etc squares.</p>
      </orig>
      <transl>
-      <p>Domino 13. yüzyılda Çinliler tarafından icat edilmiştir. Oyun 18. yüzyılda İtalya'ya ulaşmıştır.</p>
+      <p>Domino 13. yüzyılda Çinliler tarafından icat edilmiştir. Oyun 18. yüzyılda İtalya’ya ulaşmıştır.</p>
       <p />
       <p>İsim etimolojisinin üç versiyonu vardır. Birincisine göre, kazanan ''domino'' efendisi olmuştur. İkincisine göre, oyuna manastırlarda izin verilirdi ve keşişler her işe dua ederek başlarlardı, İtalyanca ''Domino''. Üçüncü versiyonda ise siyah-beyaz karnaval kıyafeti şerefine keşişi canlandıran ''domino''.</p>
       <p />
@@ -4656,7 +4656,7 @@
       <p />
       <p>İskambil oyunu yaklaşık 12. yüzyılda Doğu Asya’da icat edilmiştir. Avrupa’da kartlardan ilk kez 14. yüzyılda bahsedilmiştir. Müslümanlar kartları Batı’ya aktardıklarını inkar etseler de Memlüklerin Tarot’a benzeyen kendi desteleri olduğu ortaya çıkmıştır.</p>
       <p />
-      <p>Joker'in Tarot kozlarıyla bir ilişkisi yoktur, 19. yüzyılda eklenmiştir.</p>
+      <p>Joker’in Tarot kozlarıyla bir ilişkisi yoktur, 19. yüzyılda eklenmiştir.</p>
       <p />
       <p>Kozların Unicode isimleri Fransız Tarot destesine karşılık gelir (kehanet genellikle bir İtalyan destesi ile yapılır). Aynen öyle: 0){{_}}aptal, 1){{_}}birey, 2){{_}}çocukluk, 3){{_}}gençlik, 4){{_}}olgunluk, 5){{_}}yaşlılık, 6){{_}}sabah, 7){{_}}öğleden sonra, 8){{_}}akşam, 9){{_}}gece, 10){{_}}toprak ve hava, 11){{_}}su ve ateş, 12){{_}}dans, 13){{_}}alışveriş, 14){{_}}açık hava eğlence, 15){{_}}sanat, 16){{_}}ilkbahar, 17){{_}}yaz, 18){{_}}sonbahar, 19){{_}}kış, 20){{_}}oyun, 21){{_}}kollektif.</p>
       <p />
@@ -4733,7 +4733,7 @@
     </text>
     <text id="Text">
      <orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. According to Consortium’s study (2019), six of the ten most used [[pt:emoji|emoji]] are smilies.</orig>
-     <transl>İfadeler veya gülümsemeler, duyguları gösteren karakterler ve piktogramlardır. Önerinin sunulduğu tarihe (2008) kadar, ifadeler yaklaşık 9 yıldır Japon hücresel ağlarında dolaşımdaydı. Konsorsiyum'un araştırmasına (2019) göre, en çok kullanılan on [[pt:emoji|emoji]]den altısı gülümsemedir.</transl>
+     <transl>İfadeler veya gülümsemeler, duyguları gösteren karakterler ve piktogramlardır. Önerinin sunulduğu tarihe (2008) kadar, ifadeler yaklaşık 9 yıldır Japon hücresel ağlarında dolaşımdaydı. Konsorsiyum’un araştırmasına (2019) göre, en çok kullanılan on [[pt:emoji|emoji]]den altısı gülümsemedir.</transl>
     </text>
    </group>
    <group id="1F650">
@@ -4858,7 +4858,7 @@
       <p>* alfil (fil){{-}}filin koruyucusu, çapraz olarak iki kare hareket eder, taşların üzerinden atlar;</p>
       <p>* ferz (bakan){{-}} vezirin koruyucusu, çapraz olarak bir kare hareket eder.</p>
       <p />
-      <p>Bu blok aynı zamanda Çin oyunu Xiangqi'nin parçalarını da içerir.</p>
+      <p>Bu blok aynı zamanda Çin oyunu Xiangqi’nin parçalarını da içerir.</p>
      </transl>
     </text>
    </group>
@@ -5085,9 +5085,9 @@
       <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886 a 16th century note in Armenian with Albanian script was found. In 1937 Soviet Armenologists found the full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. In 1996 Sinai Palimpsest was found, the Bible written in Albanian, then erased and written in Georgian. It helped in decipherment, and the first one came in 2008.</p>
      </orig>
      <transl>
-      <p>Ülkenin Balkan Arnavutluk'uyla hiçbir bağı{{_}}yoktur{{_}}ve özerkliği bilinmemektedir: "Arnavutluk" Yunanca bir isimdir, "Ağvank" ise modern Ermenicedir. Halkı Lezgi dilleri konuşurdu. MÖ 1. yüzyıldan itibaren güçlü bir krallığı vardı. 461'de Persler tarafından fethedildi, 7. yüzyılda kısa bir süre Hazarlara boyun eğdi ve tekrar özgürlüğüne kavuştu. 10. yüzyıldan itibaren Arnavutluk'un bir kısmı Türkleştirilerek Şirvan (modern Azerbaycan) ve Karabağ'a dönüştürüldü. Diğer bölgeler Ermeniler, Kaheti Gürcüleri ve Dağıstanlıların etnogenezinde yer aldı. Alfabenin 12. yüzyıla kadar torun diller tarafından kullanılmış olması muhtemeldir. Ülke, modern Rusya ve Gürcistan topraklarını kapsıyor ve bu nedenle geleneksel olarak Avrupa olarak sınıflandırılıyor.</p>
+      <p>Ülkenin Balkan Arnavutluk’uyla hiçbir bağı yoktur ve özerkliği bilinmemektedir: ''Arnavutluk'' Yunanca bir isimdir, ''Ağvank'' ise modern Ermenicedir. Halkı Lezgi dilleri konuşurdu. MÖ 1. yüzyıldan itibaren güçlü bir krallığı vardı. 461’de Persler tarafından fethedildi, 7. yüzyılda kısa bir süre Hazarlara boyun eğdi ve tekrar özgürlüğüne kavuştu. 10. yüzyıldan itibaren Arnavutluk’un bir kısmı Türkleştirilerek Şirvan (modern Azerbaycan) ve Karabağ’a dönüştürüldü. Diğer bölgeler Ermeniler, Kaheti Gürcüleri ve Dağıstanlıların etnogenezinde yer aldı. Alfabenin 12. yüzyıla kadar torun diller tarafından kullanılmış olması muhtemeldir. Ülke, modern Rusya ve Gürcistan topraklarını kapsıyor ve bu nedenle geleneksel olarak Avrupa olarak sınıflandırılıyor.</p>
       <p />
-      <p>Ermeni kaynakları, betiğin [[ps:Armn|Ermenice]] alfabesinin yaratıcısı Mesrop Maştots tarafından yaratıldığını belirtiyor{{-}}ancak bu kaynaklar yazı örnekleri{{_}}içermiyor{{_}}ve Ermeni{{_}}olmayan{{_}}kaynaklarla doğrulanmıyor. 1886'da, Arnavutça yazıyla yazılmış 16. yüzyıldan kalma bir Ermeni notu bulundu. 1937'de Sovyet Ermeni bilimciler tam alfabeyi buldu. 1948'de, bir hidroelektrik santrali inşa edilirken, üzerinde gerçek yazıtlar bulunan 6. yüzyıldan kalma erken dönem bir Hristiyan tapınağı kazıldı. 1996'da, Arnavutça yazılmış, daha sonra silinip Gürcüce yazılmış İncil'in bulunduğu Sina Palimpsest'i bulundu. Bu, deşifre edilmesine yardımcı oldu ve ilki 2008'de bulundu.</p>
+      <p>Ermeni kaynakları, betiğin [[ps:Armn|Ermenice]] alfabesinin yaratıcısı Mesrop Maştots tarafından yaratıldığını belirtiyor{{-}}ancak bu kaynaklar yazı örnekleri içermiyor ve Ermeni olmayan kaynaklarla doğrulanmıyor. 1886’da, Arnavutça yazıyla yazılmış 16. yüzyıldan kalma bir Ermeni notu bulundu. 1937’de Sovyet Ermeni bilimciler tam alfabeyi buldu. 1948’de, bir hidroelektrik santrali inşa edilirken, üzerinde gerçek yazıtlar bulunan 6. yüzyıldan kalma erken dönem bir Hristiyan tapınağı kazıldı. 1996’da, Arnavutça yazılmış, daha sonra silinip Gürcüce yazılmış İncil’in bulunduğu Sina Palimpsest’i bulundu. Bu, deşifre edilmesine yardımcı oldu ve ilki 2008’de bulundu.</p>
      </transl>
     </text>
    </group>
@@ -5165,9 +5165,9 @@
       <p>It is believed that Armenian literature was richer than Middle Persian (pre-Islamic) because Armenian alphabet was simpler than [[ps:Mani|Manichaean]].</p>
      </orig>
      <transl>
-      <p>Betik, bilgin ve rahip Mesrop Maştots (362-440) tarafından icat edilmiştir. Herhangi bir alfabeyi (belki de günümüze ulaşmamış eski Ermeni harflerini) temel alıp almadığı bilinmemektedir. Alfabe, Ermenistan'da Hristiyanlığın yayılmasıyla yakından ilişkilidir. 12. yüzyılda {{sm|Օ}} ve {{sm|Ֆ}} harfleri eklenmiştir.</p>
+      <p>Betik, bilgin ve rahip Mesrop Maştots (362-440) tarafından icat edilmiştir. Herhangi bir alfabeyi (belki de günümüze ulaşmamış eski Ermeni harflerini) temel alıp almadığı bilinmemektedir. Alfabe, Ermenistan’da Hristiyanlığın yayılmasıyla yakından ilişkilidir. 12. yüzyılda {{sm|Օ}} ve {{sm|Ֆ}} harfleri eklenmiştir.</p>
       <p />
-      <p>Ermeni alfabesinin [[ps:Mani|Maniheist]] alfabesinden daha basit olması nedeniyle, Ermeni edebiyatının Orta Farsça'dan (İslamiyet öncesi) daha zengin olduğuna inanılmaktadır.</p>
+      <p>Ermeni alfabesinin [[ps:Mani|Maniheist]] alfabesinden daha basit olması nedeniyle, Ermeni edebiyatının Orta Farsçadan (İslamiyet öncesi) daha zengin olduğuna inanılmaktadır.</p>
      </transl>
     </text>
    </group>
@@ -5227,7 +5227,7 @@
       <p>Consonants are initially voiceless, adding the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… The top line works as [[pt:virama|virama]] removing a vowel from syllable, and is attested above just 13 signs.</p>
      </orig>
      <transl>
-      <p>Betik, Kamerun'un batısındaki Bamum Sultanı İbrahim Njoya tarafından icat edildi. İdeografikten başlayıp hecesele kadar A’dan G’ye yedi versiyon (aşama) yayınlandı. Ancak Njoya’nın alfabesi tüm tonları aktaramıyordu ve birçok homograf vardı. Fransızca 1918’de geldi, Njoya’yı devirdi ve dili [[ps:Latn|Latin]]’e çevirdi, ancak yazı Njoya’nın 1930’lardaki ölümüne kadar sınırlı bir hacimde kullanılmaya devam etti. 2007’de bir canlandırma projesi başladı, ancak ilerleme önemsiz. Njoya’nın önceki sanatlarını Unicode’un ek düzlemlerinde [[pk:16800|görebilirsiniz]].</p>
+      <p>Betik, Kamerun’un batısındaki Bamum Sultanı İbrahim Njoya tarafından icat edildi. İdeografikten başlayıp hecesele kadar A’dan G’ye yedi versiyon (aşama) yayınlandı. Ancak Njoya’nın alfabesi tüm tonları aktaramıyordu ve birçok homograf vardı. Fransızca 1918’de geldi, Njoya’yı devirdi ve dili [[ps:Latn|Latin]]’e çevirdi, ancak yazı Njoya’nın 1930’lardaki ölümüne kadar sınırlı bir hacimde kullanılmaya devam etti. 2007’de bir canlandırma projesi başladı, ancak ilerleme önemsiz. Njoya’nın önceki sanatlarını Unicode’un ek düzlemlerinde [[pk:16800|görebilirsiniz]].</p>
       <p />
       <p>Ünsüz harfler başlangıçta sessizdir, aynı ünlü eklendiğinde sesli hale gelir: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Heceden sonraki ünlü, başka bir ünlü ekler: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Bir karakterin üzerine gelen şapka işareti heceyi bir şekilde değiştirir{{-}} gottal bir durak ekler, genizden gelen sesi kaldırır, ünlüyü değiştirir… En üst satır, heceden bir ünlüyü çıkaran [[pt:virama|virama]] işlevi görür ve yukarıda sadece 13 işarette doğrulanmıştır.</p>
      </transl>
@@ -5244,7 +5244,7 @@
     </text>
     <text id="Text">
      <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
-     <transl>Thomas Lewis adlı Bassa, Amerika'dan gelen eski kölelerin alışılmadık bir yazı kullandığını keşfetti. Diğer verilere göre, bu yazıyı kendisi için yarattı. Bassa bu yazıya ''Vah''{{-}}“işaret atmak” adını verdi. Otantik yazı 20. yüzyılda yaygındı ve 21. yüzyılda [[ps:Latn|Latin]] ile sürekli olarak yer değiştirmektedir.</transl>
+     <transl>Thomas Lewis adlı Bassa, Amerika’dan gelen eski kölelerin alışılmadık bir yazı kullandığını keşfetti. Diğer verilere göre, bu yazıyı kendisi için yarattı. Bassa bu yazıya ''Vah''{{-}}“işaret atmak” adını verdi. Otantik yazı 20. yüzyılda yaygındı ve 21. yüzyılda [[ps:Latn|Latin]] ile sürekli olarak yer değiştirmektedir.</transl>
     </text>
    </group>
    <group id="Batk">
@@ -5295,7 +5295,7 @@
       <p>Bangladesh is one of two Islamic states with own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not{{_}}[[ps:Cyrl|Cyrillic]]). The other is [[ps:Thaa|Maldives]].</p>
      </orig>
      <transl>
-      <p>Hint betiğinin doğu koluna aittir. Bengalce ve [[ps:Orya|Oriya]]’nın atası olan ''Gaudi'' aracılığıyla [[ps:Sidd|Siddham]]’dan gelir. Bengalce ve Assam alfabesi önemsiz bir şekilde farklılık gösterir ve [[pt:unification|birleştirilmiştir]]. İçsel ünlü {{t|ɔ}}’dir ve Unicode’da geleneksel olarak "a", diğer kaynaklarda ise "ô" olarak adlandırılır. Ünlüyü değiştirmek için ünlü işaretleri eklenir: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
+      <p>Hint betiğinin doğu koluna aittir. Bengalce ve [[ps:Orya|Oriya]]’nın atası olan ''Gaudi'' aracılığıyla [[ps:Sidd|Siddham]]’dan gelir. Bengalce ve Assam alfabesi önemsiz bir şekilde farklılık gösterir ve [[pt:unification|birleştirilmiştir]]. İçsel ünlü {{t|ɔ}}’dir ve Unicode’da geleneksel olarak “a”, diğer kaynaklarda ise “ô” olarak adlandırılır. Ünlüyü değiştirmek için ünlü işaretleri eklenir: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
       <p />
       <p>[[pt:virama|Virama]] (''hôsôntô'', doğal ünlüyü kaldır) son derece nadirdir{{-}}{{sm|নাক্ }}= nôk{{-}}çünkü Bengalcede iki ünsüzden oluşan birden fazla [[pt:ligature|bitişik harf]] vardır: {{sm|ক্ত}}=ktô. Bu nedenle Bengalce dünyanın en güzel yazılarından biri olarak kabul edilir. Bağlaç girişi standarttır: ilk harf, virama, ikinci harf.</p>
       <p />
@@ -5344,7 +5344,7 @@
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} + ta {{sm|𑰝}} = kta {{sm|𑰎𑰿𑰝}}</p>
      </orig>
      <transl>
-      <p>11-12. yüzyıllarda Doğu Hindistan'da kullanılmış ve Harezmli (modern Türkmenistan/Özbekistan) bilim adamı El-Biruni tarafından bahsedilmiştir. İlk yazıt 1884 yılında Katmandu'da keşfedilmiş ve Biruni'nin "Bhaiksuki"si olduğu varsayılmıştır. 4 el yazması ve 11 yazıt mevcuttur ve hepsi Budist metinlerdir. 0 ve 3 rakamları bilinmemektedir ve benzer yazılardan alınmıştır. Uzun sesli L'nin ilk harfi de bilinmemektedir.</p>
+      <p>11-12. yüzyıllarda Doğu HindistanVda kullanılmış ve Harezmli (modern Türkmenistan/Özbekistan) bilim adamı El-Biruni tarafından bahsedilmiştir. İlk yazıt 1884 yılında KatmanduVda keşfedilmiş ve BiruniVnin “Bhaiksuki”si olduğu varsayılmıştır. 4 el yazması ve 11 yazıt mevcuttur ve hepsi Budist metinlerdir. 0 ve 3 rakamları bilinmemektedir ve benzer yazılardan alınmıştır. Uzun sesli L’nin ilk harfi de bilinmemektedir.</p>
       <p />
       <p>İçsel ünlü {{t|a}}'dır, geri kalanlar ünlü işaretleriyle eklenmiş ve [[pt:virama|virama]] ile düz ünsüzlere dönüştürülmüştür. Yaygın bir [[pt:ligature|bitişik harfler]] "ünsüz-ünsüz" sistemi nedeniyle, belirgin biçimdeki virama yalnızca kelimelerin sonunda görülür.</p>
       <p>: ka {{sm|𑰎}} + i {{sm|◌𑰰}} = ki {{sm|𑰎𑰰}}</p>
@@ -5371,11 +5371,11 @@
       <p>In 2007 in Taiwan Blackberry smartphone hit shelves, it supported entry only via Pinyin and suffered from low demand. In the next versions, Research In Motion promised Zhuyin too.</p>
      </orig>
      <transl>
-      <p>Bopomofo (ilk dört harfle) veya Zhuyin Fuhao, Wu Zhihui tarafından 1912-13 yıllarında icat edilen ve 1918'de benimsenen bir Çin fonetik sistemidir.</p>
+      <p>Bopomofo (ilk dört harfle) veya Zhuyin Fuhao, Wu Zhihui tarafından 1912-13 yıllarında icat edilen ve 1918’de benimsenen bir Çin fonetik sistemidir.</p>
       <p />
-      <p>Yazar, Kuomintang'da yüksek bir konuma ulaştı ve bu, sistemin kaderini önceden belirledi: Mao Zedong'un iktidara gelmesinden sonra (1949), yalnızca Tayvan'da kullanıldı. Bopomofo, orada da giderek geleneksel pinyin (Çince hecelerin Romanizasyonu) ile yer değiştirdi ve çoğunlukla çocuklara ilk öğretimde, cep telefonlarına girişte ve sözlüklerde telaffuza göre aramada kullanıldı.</p>
+      <p>Yazar, Kuomintang’da yüksek bir konuma ulaştı ve bu, sistemin kaderini önceden belirledi: Mao Zedong’un iktidara gelmesinden sonra (1949), yalnızca Tayvan’da kullanıldı. Bopomofo, orada da giderek geleneksel pinyin (Çince hecelerin Romanizasyonu) ile yer değiştirdi ve çoğunlukla çocuklara ilk öğretimde, cep telefonlarına girişte ve sözlüklerde telaffuza göre aramada kullanıldı.</p>
       <p />
-      <p>2007 yılında Tayvan'da Blackberry akıllı telefonlar raflara çıktı, yalnızca Pinyin ile girişi destekliyordu ve düşük talep gördü. Research In Motion, sonraki sürümlerinde Zhuyin'i de vaat etti.</p>
+      <p>2007 yılında Tayvan’da Blackberry akıllı telefonlar raflara çıktı, yalnızca Pinyin ile girişi destekliyordu ve düşük talep gördü. Research In Motion, sonraki sürümlerinde Zhuyin’i de sunacağını vaat etti.</p>
      </transl>
     </text>
    </group>
@@ -5409,7 +5409,7 @@
      <transl>
       <p>Brahmi’nin ne zaman ortaya çıktığı ve atasının ne olduğu bilinmemektedir. Genellikle MÖ{{_}}8-7. yüzyıllarda [[ps:Armi|Aramice]]’den geldiği düşünülmektedir. Diğer bilim insanları ise Brahmi’yi daha eski ve henüz çözülememiş İndus yazısıyla ilişkilendirmektedir. Güvenilir kaynaklardan en eskisi, Kral Aşoka’nın (MÖ{{_}}3. yüzyıl) sütunlarıdır. Daha önceki kaynakların tarihleri ise yetersizdir.</p>
       <p />
-      <p>Brahmi'nin şu özellikleri vardır: soldan sağa yazılır, ünsüz harf, {{t|a}} fonemli hece anlamına gelir, geri kalan ünlüler aksan işaretlerle eklenir, içsel {{t|a}} [[pt:virama|virama]] işaretiyle kaldırılır.</p>
+      <p>Brahmi’nin şu özellikleri vardır: soldan sağa yazılır, ünsüz harf, {{t|a}} fonemli hece anlamına gelir, geri kalan ünlüler aksan işaretlerle eklenir, içsel {{t|a}} [[pt:virama|virama]] işaretiyle kaldırılır.</p>
       <p />
       <p>Brahmi kökenli yazılar, karakterlerin grafiklerini ve içsel fonemi büyük ölçüde değiştirir, ancak bu özellikleri korur ve "Brahmi abugidas" olarak adlandırılır.</p>
       <p />
@@ -5439,9 +5439,9 @@
       <p>Braille industrialized assistive technologies for the blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to the normal text for sighted people or even over it.</p>
      </orig>
      <transl>
-      <p>Braille, görme engelliler için bir nokta yazı sistemidir. İkili kodlamayla 2×3{{_}}'lük noktalardan oluşan gruplar kullanır, bazen dördüncü satır eklenir. Kodlama, İngiliz ve Amerikan Braille’i için bile farklılık gösterir. Özel karakterlerle "değiştirilmiş" birkaç "mod" (harfler, sayılar, vurgulama) içerir.</p>
+      <p>Braille, görme engelliler için bir nokta yazı sistemidir. İkili kodlamayla 2×3{{_}}’lük noktalardan oluşan gruplar kullanır, bazen dördüncü satır eklenir. Kodlama, İngiliz ve Amerikan Braille’i için bile farklılık gösterir. Özel karakterlerle “değiştirilmiş” birkaç “mod” (harfler, sayılar, vurgulama) içerir.</p>
       <p />
-      <p>Bir dericinin oğlu olan Louis Braille, 3 yaşındayken bir yassı bıçakla yaralandı ve görme yetisini kaybetti. Braille, Valentin Haüy'nin görme engelliler okuluna girmeyi başardı ve orada kabartmalı çizgiler kullandı. Braille'in diğer prototipi Charles Barbier'in "gece yazısı"dır. Barbier, her sütunda 1 ila 6 nokta kabartmalı olan 2×6’lık bir matris kullandı; bu, bazen dokunarak okuyan görme engelli memurlar için sorun değil, ancak uzun metinleri okuyan görme engelli kişiler için kötü. Braille, matrisi ikili kod kullanarak küçülttü. Braille, kodunu 15 yaşında icat etti ve Haüy'ün okulunda çalıştı, ancak gören öğretmenler buna o kadar karşıydı ki, ölümünden sadece 2{{_}}yıl sonra görme engelli öğrenciler, öğretmenleri sistemi benimsemeye ikna ettiler.</p>
+      <p>Bir dericinin oğlu olan Louis Braille, 3 yaşındayken bir yassı bıçakla yaralandı ve görme yetisini kaybetti. Braille, Valentin Haüy’nin görme engelliler okuluna girmeyi başardı ve orada kabartmalı çizgiler kullandı. Braille'in diğer prototipi Charles Barbier'in “gece yazısı”dır. Barbier, her sütunda 1 ila 6 nokta kabartmalı olan 2×6’lık bir matris kullandı; bu, bazen dokunarak okuyan görme engelli memurlar için sorun değil, ancak uzun metinleri okuyan görme engelli kişiler için kötü. Braille, matrisi ikili kod kullanarak küçülttü. Braille, kodunu 15 yaşında icat etti ve Haüy'ün okulunda çalıştı, ancak gören öğretmenler buna o kadar karşıydı ki, ölümünden sadece 2{{_}}yıl sonra görme engelli öğrenciler, öğretmenleri sistemi benimsemeye ikna ettiler.</p>
       <p />
       <p>Braille, görme engelliler için yardımcı teknolojileri endüstrileştirdi: kabartması kolay, gören kişiler için normal metnin yanına veya üzerine kabartma yapıldığında bile görünür hale gelmiyor.</p>
      </transl>
@@ -5539,9 +5539,9 @@
       <p>Then-Soviet scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
      </orig>
      <transl>
-      <p>MÖ 7. yüzyıldan 1.{{_}}yüzyıla kadar kullanılmıştır. Alfabenin birçok çeşidi mevcuttu. Anadolu'da soldan sağa, Mısır'da ise paralı askerler sağdan sola yazıyordu.</p>
+      <p>MÖ 7. yüzyıldan 1.{{_}}yüzyıla kadar kullanılmıştır. Alfabenin birçok çeşidi mevcuttu. Anadolu’da soldan sağa, Mısır’da ise paralı askerler sağdan sola yazıyordu.</p>
       <p />
-      <p>Dönemin Sovyet bilim insanı Vitaly Shevoroshkin 1960 yılında betiğin{{_}}hece değil alfabetik olduğunu göstermiştir. Şİfre çözme üzerine temel kitap (Ignasi-Xavier Adiego) 1993 yılında çıktı. 1996'da bulunan [[ps:Grekçe|Yunanca]] ile iki dilli bir yazıt, onun haklı olduğunu doğruladı. Bazı karakterler hala bilinmiyor.</p>
+      <p>Dönemin Sovyet bilim insanı Vitaly Shevoroshkin 1960 yılında betiğin{{_}}hece değil alfabetik olduğunu göstermiştir. Şİfre çözme üzerine temel kitap (Ignasi-Xavier Adiego) 1993 yılında çıktı. 1996’da bulunan [[ps:Grekçe|Yunanca]] ile iki dilli bir yazıt, onun haklı olduğunu doğruladı. Bazı karakterler hala bilinmiyor.</p>
      </transl>
     </text>
    </group>
@@ -5584,9 +5584,9 @@
       <p>Most Chams practice Islam and write with [[ps:Arab|Arabic]] script, just some Chams of Vietnam use Cham script.</p>
      </orig>
      <transl>
-      <p>Cham yazısı Pallava'dan (erken dönem [[ps:Gran|Grantha]]) gelir ve içerdiği ünlü {{t|a}}'dır. [[pt:virama|virama]] ("ünlüyü kaldır" işareti) yoktur, bunun yerine son ünsüzler yazılır: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
+      <p>Cham yazısı Pallava’dan (erken dönem [[ps:Gran|Grantha]]) gelir ve içerdiği ünlü {{t|a}}’dır. [[pt:virama|virama]] (“ünlüyü kaldır” işareti) yoktur, bunun yerine son ünsüzler yazılır: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
       <p />
-      <p>Chamların çoğu İslam'ı benimser ve [[ps:Arab|Arapça]] alfabesiyle yazar, sadece Vietnam'daki bazı Chamlar Cham yazısını kullanır.</p>
+      <p>Chamların çoğu İslam’ı benimser ve [[ps:Arab|Arapça]] alfabesiyle yazar, sadece Vietnam’daki bazı Chamlar Cham yazısını kullanır.</p>
      </transl>
     </text>
    </group>
@@ -5654,7 +5654,7 @@
       <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, less frequently joined if shape permits.</p>
      </orig>
      <transl>
-      <p>Dil, 13. yüzyıla kadar Amu Derya Nehri yakınlarındaki Harezm'de kullanılmış ve zamanla Farsçaya dönüşmüştür. Bilim insanı Biruni ve ilahiyatçı Zemahşeri bu dili konuşmuştur{{-}} ancak 8. yüzyılda [[ps:Armi|Aramice]] kökenli yazı, [[ps:Arab|Arapça]] ile değiştirilmiştir.</p>
+      <p>Dil, 13. yüzyıla kadar Amu Derya Nehri yakınlarındaki Harezm’de kullanılmış ve zamanla Farsçaya dönüşmüştür. Bilim insanı Biruni ve ilahiyatçı Zemahşeri bu dili konuşmuştur{{-}}ancak 8. yüzyılda [[ps:Armi|Aramice]] kökenli yazı, [[ps:Arab|Arapça]] ile değiştirilmiştir.</p>
       <p />
       <p>22{{-}}''teth, sadhe, qoph''{{-}}olan üç Aramice harfinin Harezm karşılığı yoktur. İki harfin varyantları vardır, toplam 21 harf. Çoğu yazıtta harfler bitişik{{_}}değildir, şekil izin veriyorsa daha az sıklıkla birleştirilmiştir.</p>
      </transl>
@@ -5741,7 +5741,7 @@
     </text>
     <text id="Lang">
      <orig>Russian {{nspk}}, Ukrainian {{nspk|uk}}, Belorussian, Rusyn, Bulgarian, Macedonian, Serbo-Croatian ''(Serbia)'', Kazakh, Kyrghyz, Tajik, minor languages of Russia</orig>
-     <transl>Rusça {{nspk}}, Ukraynaca {{nspk|uk}}, Beyaz Rusça, Rusyn, Bulgarca, Makedonca, Sırp-Hırvatça ‘’(Sırbistan)‘’, Kazakça, Kırgızca, Tacikçe, Rusya'nın küçük dilleri</transl>
+     <transl>Rusça {{nspk}}, Ukraynaca {{nspk|uk}}, Beyaz Rusça, Rusyn, Bulgarca, Makedonca, Sırp-Hırvatça ''(Sırbistan)'', Kazakça, Kırgızca, Tacikçe, Rusya’nın küçük dilleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5754,9 +5754,9 @@
       <p>The USSR made Cyrillic scripts for most languages of its republics. With the fall of the USSR Azerbaijan, Moldova, Turkmenia and Uzbekistan switched to [[ps:Latn|Latin]].</p>
      </orig>
      <transl>
-      <p>Yaklaşık 863 yılında Bizans rahipleri Kiril ve Metodius, Moravya'da çalışırken [[ps:Glag|Glagolitik]] yazıyı icat ettiler. Kiril kısa süre sonra öldü ve Bizanslılar Bulgaristan'a sürüldü. Oradaki halk [[ps:Grek|Yunanca]] konusunda okuryazardı ve öğrencilerden biri, muhtemelen Ohrili Clemens, [[ps:Grek|Yunanca]] için Bizans onsiyal yazısını temel alan ve Yunancada bulunmayan fonemleri ekleyen Kiril alfabesini icat etti. Yunanca ödünç kelimelerin ve sayıların alışılmış yazılışı için Ѯ ve Ѳ gibi Yunan harfleri eklendi.</p>
+      <p>Yaklaşık 863 yılında Bizans rahipleri Kiril ve Metodius, Moravya’da çalışırken [[ps:Glag|Glagolitik]] yazıyı icat ettiler. Kiril kısa süre sonra öldü ve Bizanslılar Bulgaristan’a sürüldü. Oradaki halk [[ps:Grek|Yunanca]] konusunda okuryazardı ve öğrencilerden biri, muhtemelen Ohrili Clemens, [[ps:Grek|Yunanca]] için Bizans onsiyal yazısını temel alan ve Yunancada bulunmayan fonemleri ekleyen Kiril alfabesini icat etti. Yunanca ödünç kelimelerin ve sayıların alışılmış yazılışı için Ѯ ve Ѳ gibi Yunan harfleri eklendi.</p>
       <p />
-      <p>Kiril alfabesi Güney Slavlar arasında yayıldı ve Hristiyanlaştırma ile Rusya'ya geldi. Kiril alfabesi, Roma etkisi altına giren ülkelerde açıkça yasaklandı.</p>
+      <p>Kiril alfabesi Güney Slavlar arasında yayıldı ve Hristiyanlaştırma ile Rusya’ya geldi. Kiril alfabesi, Roma etkisi altına giren ülkelerde açıkça yasaklandı.</p>
       <p />
       <p>Modern Kiril alfabesi, Büyük Petro tarafından getirilen medeni yazıya dayanmaktadır. Bu yazı, Batı yanlıları ile gelenekçiler arasında bir uzlaşma haline geldi.</p>
       <p />
@@ -5771,7 +5771,7 @@
     </text>
     <text id="Lang">
      <orig>Hindi {{nspk}}, Marathi {{nspk|Modi}}, Sanskrit and other languages of India</orig>
-     <transl>Hintçe {{nspk}}, Marathi {{nspk|Modi}}, Sanskritçe ve Hindistan'ın diğer dilleri</transl>
+     <transl>Hintçe {{nspk}}, Marathi {{nspk|Modi}}, Sanskritçe ve Hindistan’ın diğer dilleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5785,7 +5785,7 @@
       <p>''Unicodia'' uses ''Noto Serif Devanagari'' font due to wide coverage. In real-life text it’s better to use other fonts: for example, [[http://www.sanskritweb.net/itrans/index.html#SIDDHANTA|Siddhanta]] or [[https://software.sil.org/annapurna/|Annapurna SIL]].</p>
      </orig>
      <transl>
-      <p>Devanagari (kelimenin tam anlamıyla ''tanrılar şehrinden''), Brahmi betiğinden türemiş ve çoğu Hint dilinin alfabesi haline gelmiştir. Devanagari'nin ayırt edici bir özelliği, harflerin yatay bir çizgiden sarkmasıdır.</p>
+      <p>Devanagari (kelimenin tam anlamıyla ''tanrılar şehrinden''), Brahmi betiğinden türemiş ve çoğu Hint dilinin alfabesi haline gelmiştir. Devanagari’nin ayırt edici bir özelliği, harflerin yatay bir çizgiden sarkmasıdır.</p>
       <p />
       <p>Ünsüz harfler, {{t|a}} sesli harfli heceleri ifade eder (bazı dil ve lehçelerde {{t|ə}}). Diğer heceleri görüntülemek için sesli harf işareti gerekir: &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;. Tek bir ünsüz elde etmek için [[pt:virama|virama]] (''dur'' veya ''katil'') işareti eklenir: k{{_}}{{sm|क्}}.</p>
       <p />
@@ -5823,7 +5823,7 @@
       <p />
       <p>Antik Maldivler’de hem fonem hem de harf varyasyonları bol miktarda bulunurdu: aynı belge, hem ayrı harfler hem de U+11925 üzerindeki işaretler olarak ilk ünlüleri içeriyordu. ''Dives'' yazısı ise ikinci biçimi korumuş, damak ve soluk ünsüzlerini düşürmüştür.</p>
       <p />
-      <p>Özündeki ünlü {{t|a}}’dır, yerine [[pt:combining|işaretler]] ünlüsüyle diğer ünlüler gelir, kelimelerin sonundaki [[pt:virama|virama]] işareti ''(halanta)'' ile kaldırılır. Kelimelerin ortasındaki virama, "u" ünlüsünün alternatif telaffuzu anlamına gelir. Bir diğer virama ise tamamen sanaldır ve ünsüz bağlaçları için kullanılır{{-}}iki harf birbirine yapışıktır (ayrıca "sta" gibi 13 [[pt:ligature|bitişik harfler]] vardır). </p>
+      <p>Özündeki ünlü {{t|a}}’dır, yerine [[pt:combining|işaretler]] ünlüsüyle diğer ünlüler gelir, kelimelerin sonundaki [[pt:virama|virama]] işareti ''(halanta)'' ile kaldırılır. Kelimelerin ortasındaki virama, “u” ünlüsünün alternatif telaffuzu anlamına gelir. Bir diğer virama ise tamamen sanaldır ve ünsüz bağlaçları için kullanılır{{-}}iki harf birbirine yapışıktır (ayrıca “sta” gibi 13 [[pt:ligature|bitişik harfler]] vardır). </p>
       <p>: ka {{sm|𑤌}} + i {{sm|◌𑤱}} = ki {{sm|𑤌𑤱}}</p>
       <p>: ka {{sm|𑤌}} + halanta {{sm|◌𑤽}} = k {{sm|𑤌𑤽}}</p>
       <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
@@ -5850,7 +5850,7 @@
       <p>Digits are taken from Takri.</p>
      </orig>
      <transl>
-      <p>Hindistan halkı Dogri’nin dili. Bu yazı, 19. yüzyılın ortalarında Maharaja Ranbir Singh döneminde standartlaştırılan [[ps:Takr|Takri]]’den alınmıştır. Ranbir’in 1885'te ölümünden sonra, İngiliz baskısıyla [[ps:Arab|Urduca]] resmi dil olarak seçildi. 20. yüzyılda [[ps:Deva|Devanagari]] yazısı yaygınlaştı ve 21. yüzyıldan itibaren insanlar yerel yazıya ilgi duymaya başladı.</p>
+      <p>Hindistan halkı Dogri’nin dili. Bu yazı, 19. yüzyılın ortalarında Maharaja Ranbir Singh döneminde standartlaştırılan [[ps:Takr|Takri]]’den alınmıştır. Ranbir’in 1885’te ölümünden sonra, İngiliz baskısıyla [[ps:Arab|Urduca]] resmi dil olarak seçildi. 20. yüzyılda [[ps:Deva|Devanagari]] yazısı yaygınlaştı ve 21. yüzyıldan itibaren insanlar yerel yazıya ilgi duymaya başladı.</p>
       <p />
       <p>[[ps:Guru|Pencapça]]’da olduğu gibi, vurgusuz heceleri büyük ölçüde azaltılmış, içsel ünlü {{t|ə}} (Unicode’da geleneksel olarak "a") içeren Brahmic abugida. Ayrıca, Dogri’de bu yazı tipinde kodlanmamış [[pt:ligature|bitişik harfler]] de mevcuttur. Bu yüzden [[pt:virama|virama]] Dogri’de nadirdir, özerk olarak şöyle görülür: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
       <p />
@@ -5882,13 +5882,13 @@
      <transl>
       <p>19. yüzyılda İngilizce için fonetik bir yazı oluşturma girişimleri çok oldu ve Mormon kilisesinin ikinci lideri Brigham Young ne ilk ne de sonuncusuydu. İddiaya göre bu girişim, göçmenlere İngilizceyi daha kolay öğrenme fırsatı sunacaktı. Asıl işi Parley Pratt ve George Watt üstlendi.</p>
       <p />
-      <p>''Deseret'' (Mormon Kitabı’ndaki dillerden birinde "bal arısı"), Mormon eyaletinin daha az ölçüde ''Utah'' olarak uyguladığı bir projedir ve Mormonlar arasında sembolik bir anlamı vardır (örneğin, ''Deseret Üniversitesi'', şimdiki adıyla ''Utah Üniversitesi'').</p>
+      <p>''Deseret'' (Mormon Kitabı’ndaki dillerden birinde “bal arısı”), Mormon eyaletinin daha az ölçüde ''Utah'' olarak uyguladığı bir projedir ve Mormonlar arasında sembolik bir anlamı vardır (örneğin, ''Deseret Üniversitesi'', şimdiki adıyla ''Utah Üniversitesi'').</p>
       <p />
       <p>Alfabede kasıtlı olarak yükselen ve alçalan harfler yoktur, bu sayede metal harflerin aşınması azaltılır. Modern yazı tiplerinde bazen yükselen ve alçalan harfler eklenir.</p>
       <p />
       <p>Yeni alfabeyle dört kitap yayımlandı. Young, tüm kütüphanenin basımının ne kadar maliyetli olduğunu fark edince deneyler durduruldu.</p>
       <p />
-      <p>1997’de alfabe [[pt:private|ConScript Unicode Kaydı]]’na kodlandı. Deseret'in gerçek Unicode’da görünmesiyle 2001’de kaldırıldı.</p>
+      <p>1997’de alfabe [[pt:private|ConScript Unicode Kaydı]]’na kodlandı. Deseret’in gerçek Unicode’da görünmesiyle 2001’de kaldırıldı.</p>
      </transl>
     </text>
    </group>
@@ -5911,7 +5911,7 @@
      <transl>
       <p>Fransız rahip Émile Duployé tarafından icat edilen kısaltma (stenografi) sistemi. Geometrik (karakterler noktalardan, çizgilerden ve dairelerden oluşur) ve alfabetik (ünlü ve ünsüz harflere eşit önem verir) olarak sınıflandırılır.</p>
       <p />
-      <p>Kelimeler tek bir çizgiyle yazılır ve yazı çizginin çok üstüne veya altına gidebilir. ''Unicodia'', anlaşılırlık için eski ''Noto Sans Duployan{{_}}2'' yazı tipini kullanır, Unicode karakterlerine sadece bazı glifler ekler. 2023'te karmaşık yazıyı modelleyen Noto{{_}}3 çıktı. 2{{_}}megabayt boyutunda, {{n|10000}} glif ve 500 kural içeriyor ve Perrault İngilizce sisteminde (K+A+TS, 1BC05+1BC41+1BC36) "kediler" kelimesi şöyle görünür:</p>
+      <p>Kelimeler tek bir çizgiyle yazılır ve yazı çizginin çok üstüne veya altına gidebilir. ''Unicodia'', anlaşılırlık için eski ''Noto Sans Duployan{{_}}2'' yazı tipini kullanır, Unicode karakterlerine sadece bazı glifler ekler. 2023'te karmaşık yazıyı modelleyen Noto{{_}}3 çıktı. 2{{_}}megabayt boyutunda, {{n|10000}} glif ve 500 kural içeriyor ve Perrault İngilizce sisteminde (K+A+TS, 1BC05+1BC41+1BC36) “kediler” kelimesi şöyle görünür:</p>
       <p>:{{DuplCats}}</p>
      </transl>
     </text>
@@ -5958,7 +5958,7 @@
       <p />
       <p>Windows yazı tiplerinde penisin (fallus) üç hiyeroglifi gizlenmiş{{-}}ve yalnızca diğer hiyerogliflerin yanında görüntüleniyor.</p>
       <p />
-      <p>Unicode{{_}}5.2 (2009) örnek karakterleri yeterince tarihi (Alan Gardiner'ın 1957 tarihli kitabından) ancak ilkeldi. Unicode{{_}}9.0 (2016)’da ise gerçeklerden bir şekilde saparak profesyonel bir tasarımcı tarafından yeniden çizildiler. Unicode{{_}}14.0 (2021) Mısırbilimciler hataları düzelttiğinden, bazı karakterler (örneğin 1309A) iki kez değiştirildi. Saç ve sakal, çizilen kişiyi tanımlar{{-}}tanrı, kral, Mısırlı veya yabancı.</p>
+      <p>Unicode{{_}}5.2 (2009) örnek karakterleri yeterince tarihi (Alan Gardiner’ın 1957 tarihli kitabından) ancak ilkeldi. Unicode{{_}}9.0 (2016)’da ise gerçeklerden bir şekilde saparak profesyonel bir tasarımcı tarafından yeniden çizildiler. Unicode{{_}}14.0 (2021) Mısırbilimciler hataları düzelttiğinden, bazı karakterler (örneğin 1309A) iki kez değiştirildi. Saç ve sakal, çizilen kişiyi tanımlar{{-}}tanrı, kral, Mısırlı veya yabancı.</p>
      </transl>
     </text>
    </group>
@@ -5981,7 +5981,7 @@
      </orig>
      <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
-      <p>Tek kaynak, 18. yüzyıl ortalarına ait, yalnızca 7×10{{_}}cm boyutlarındaki 59 sayfalık Elbasan İncili'dir. 1945 yılında Nazi yanlısı bir filolog ve koleksiyoncu olan Lef Nosi, sosyalist hükümet tarafından tutuklanmış ve kısa süre sonra ölüm cezasına çarptırılmış ve el yazması onun koleksiyonunda bulunmuştur. Yazarı, Arnavut bir rahip olan Dıraçlı Gregorius'a atfedilmektedir.</p>
+      <p>Tek kaynak, 18. yüzyıl ortalarına ait, yalnızca 7×10{{_}}cm boyutlarındaki 59 sayfalık Elbasan İncili’dir. 1945 yılında Nazi yanlısı bir filolog ve koleksiyoncu olan Lef Nosi, sosyalist hükümet tarafından tutuklanmış ve kısa süre sonra ölüm cezasına çarptırılmış ve el yazması onun koleksiyonunda bulunmuştur. Yazarı, Arnavut bir rahip olan Dıraçlı Gregorius’a atfedilmektedir.</p>
       <p />
       <p>{{Arnavutça}}</p>
       <p />
@@ -6064,11 +6064,11 @@
      </orig>
      <au-cmt>Cave: https://www.endangeredalphabets.net/alphabets/garay/</au-cmt>
      <transl>
-      <p>Afrika'nın kurtuluşundan sonra birçok yeni betik ortaya çıktı. Bunlardan biri Senegalli Assane Faye tarafından yaratıldı. Garay, yerel bir mağaranın adıdır.</p>
+      <p>Afrika’nın kurtuluşundan sonra birçok yeni betik ortaya çıktı. Bunlardan biri Senegalli Assane Faye tarafından yaratıldı. Garay, yerel bir mağaranın adıdır.</p>
       <p />
       <p>Mevcut topluluk küçük, yaklaşık 200 kişidir. Wolof ve Mandinka, [[ps:Latn|Latin]], [[ps:Arab|Arapça]] ve [[ps:Nkoo|N’Ko]] ile yazılır.</p>
       <p />
-      <p>Büyük harflerin büyük bir kancası vardır. Arapça kökenli betiklerde genellikle bitişik harfler bulunur, ancak Garay'da böyle bir özellik yoktur. Bazen kelimenin tamamı, son harften gelen büyük bir kıvrımla altı çizilir.</p>
+      <p>Büyük harflerin büyük bir kancası vardır. Arapça kökenli betiklerde genellikle bitişik harfler bulunur, ancak Garay’da böyle bir özellik yoktur. Bazen kelimenin tamamı, son harften gelen büyük bir kıvrımla altı çizilir.</p>
       <p />
       <p>Ünlüler, ünsüzlere eklenen işaretlerdir. İlk ünlüler, ünlü taşıyıcı harfe (A) bağlıdır.</p>
       <p />
@@ -6124,11 +6124,11 @@
       <p>Glagolitic seldom appeared in Rus, more often it was used in Bulgaria and Croatia. Bulgarian style is round, Croatian is square, and both are [[pt:unification|unified]].</p>
      </orig>
      <transl>
-      <p>Glagolitic, yaklaşık 863 yılında Bizanslı Kiril ve Metodios tarafından Batılı rahipleri Moravya'dan kovmak ve Franklar tarafından fethedilmeyi önlemek için özerk bir kilise kurmak gibi siyasi bir amaç{{-}uğruna icat edildi. Bu görev başarısız oldu, Kiril kısa süre sonra öldü, Bizanslılar Batı kilisesi tarafından kovuldu ve Moravya'dan kaçanlar Bulgaristan'ı Hristiyanlaştırarak [[ps:Cyrl|Kiril]] alfabesini icat etti.</p>
+      <p>Glagolitic, yaklaşık 863 yılında Bizanslı Kiril ve Metodios tarafından Batılı rahipleri Moravya’dan kovmak ve Franklar tarafından fethedilmeyi önlemek için özerk bir kilise kurmak gibi siyasi bir amaç uğruna{{-}}icat edildi. Bu görev başarısız oldu, Kiril kısa süre sonra öldü, Bizanslılar Batı kilisesi tarafından kovuldu ve Moravya’dan kaçanlar Bulgaristan’ı Hristiyanlaştırarak [[ps:Cyrl|Kiril]] alfabesini icat etti.</p>
       <p />
-      <p>20. yüzyılda Glagolitic'in Kiril alfabesinden daha eski olduğu nihayet kanıtlandı: pahalı parşömenler sıklıkla yeniden kullanılıyordu ve Glagolitik'in Kiril alfabesiyle yeniden yazıldığı palimpsestler (bir metni silinmiş, diğeri yazılmış parşömenler) günümüze ulaşmıştı. Dilbilimsel tartışmalar da mevcut. Yine de Glagolitik, 19. yüzyıla kadar Kiril alfabesiyle birlikte var olmuş ve ondan harf biçimleri almış, bu da tartışmalara yol açmıştır. Muhtemelen "Kiril" adı başlangıçta Glagolitic betik anlamına geliyordu.</p>
+      <p>20. yüzyılda Glagolitic’in Kiril alfabesinden daha eski olduğu nihayet kanıtlandı: pahalı parşömenler sıklıkla yeniden kullanılıyordu ve Glagolitik’in Kiril alfabesiyle yeniden yazıldığı palimpsestler (bir metni silinmiş, diğeri yazılmış parşömenler) günümüze ulaşmıştı. Dil bilimsel tartışmalar da mevcut. Yine de Glagolitik, 19. yüzyıla kadar Kiril alfabesiyle birlikte var olmuş ve ondan harf biçimleri almış, bu da tartışmalara yol açmıştır. Muhtemelen ''Kiril'' adı başlangıçta Glagolitic betik anlamına geliyordu.</p>
       <p />
-      <p>Glagolitik yazı tipi Rusya'da nadiren görülür, daha çok Bulgaristan ve Hırvatistan'da kullanılırdı. Bulgar yazı tipi yuvarlak, Hırvat yazı tipi karedir ve her ikisi de [[pt:unification|birleşik]]tir.</p>
+      <p>Glagolitik yazı tipi Rusya’da nadiren görülür, daha çok Bulgaristan ve Hırvatistan’da kullanılırdı. Bulgar yazı tipi yuvarlak, Hırvat yazı tipi karedir ve her ikisi de [[pt:unification|birleşik]]tir.</p>
      </transl>
     </text>
    </group>
@@ -6241,7 +6241,7 @@
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
      </orig>
      <transl>
-      <p>Grantha [[ps:Brah|Brahmi]]’nin güney kolunun evriminin bir ara aşamasıdır. Grantha'nın erken çeşitlemesi ‘'Pallava’' olarak adlandırılır ve Pallava Krallığı’nda (275-897) kullanılmıştır. Grantha 17. yüzyıla kadar Tamil dili için, 19. yüzyıla kadar Sanskritçe için kullanılmıştır. Bu dil [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]] dillerini etkilemiştir. Yaklaşık 200{{_}}bin örnek Hindistan’daki kütüphanelerde hem palmiye yaprakları üzerine yazılmış hem de basılmış olarak saklanmaktadır.</p>
+      <p>Grantha [[ps:Brah|Brahmi]]’nin güney kolunun evriminin bir ara aşamasıdır. Grantha’nın erken çeşitlemesi ''Pallava'' olarak adlandırılır ve Pallava Krallığı’nda (275-897) kullanılmıştır. Grantha 17. yüzyıla kadar Tamil dili için, 19. yüzyıla kadar Sanskritçe için kullanılmıştır. Bu dil [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]] dillerini etkilemiştir. Yaklaşık 200{{_}}bin örnek Hindistan’daki kütüphanelerde hem palmiye yaprakları üzerine yazılmış hem de basılmış olarak saklanmaktadır.</p>
       <p />
       <p>2010 civarında Grantha’yı Tamil ile [[pt:unification|birleştirme]] girişimi başarısız oldu. Tepkiler nedeniyle (Tamiller arasında milliyetçilik güçlü olduğundan) alfabeler ayrıldı ve geriye sadece Tamilce ve geç Grantha’da örtüşen rakamlar bırakıldı.</p>
       <p />
@@ -6331,11 +6331,11 @@
       <p>At the moment of writing Khema has no Unicode fonts, but in handwriting anusvara (nasalization mark) is tick when empty, and smile when houses a circle inside (e.g. in E+anusvara).</p>
      </orig>
      <transl>
-      <p>Bal Narsingh Gurung tarafından icat edilmiştir. 1997'de Hindistan'ın Sikkim eyaleti Gurung'u tanımış ve Khema'yı resmi betik haline getirmiştir.</p>
+      <p>Bal Narsingh Gurung tarafından icat edilmiştir. 1997’de Hindistan’ın Sikkim eyaleti Gurung’u tanımış ve Khema’yı resmi betik haline getirmiştir.</p>
       <p />
       <p>Ünsüz bağlaçlar için bitişik harfler yoktur, [[pt:virama|virama]] (''tholhoma'') her zaman görünür durumdadır. Ünlü harf uzunluğu işareti yalnızca [[pt:normalization|ayrıştırma]] içindir. Noktalama işaretleri [[pt:ascii|ASCII]]’dir ve ayrıca [[ps:Deva|Devanagari]]’den gelen dikey çizgi ''danda''dır.</p>
       <p />
-      <p>Khema'nın yazımında Unicode yazı tipleri yoktur, ancak el yazısında anusvara (burun işareti) boşken işaretlenir ve içinde daire varsa gülümser (örneğin E+anusvara'da).</p>
+      <p>Khema’nın yazımında Unicode yazı tipleri yoktur, ancak el yazısında anusvara (burun işareti) boşken işaretlenir ve içinde daire varsa gülümser (örneğin E+anusvara’da).</p>
      </transl>
     </text>
    </group>
@@ -6366,9 +6366,9 @@
      <transl>
       <p>10. yüzyıldan beri Pencap, yerel dili kötü bir şekilde aktaran [[ps:Shrd|Sharada]] betiğini kullanıyordu. Yeni betik, dinin kurucularından biri olan Sih guru Angad tarafından icat edildi. Angad, insanların klasik Sanskritçe yerine yerel Pencapçayı öğrendikleri okullar ve Hindu varnasına bakılmaksızın insanların birlikte oturduğu halka açık kantinler kurdu.</p>
       <p />
-      <p>İçsel ünlü {{t|ə}}'dir (Unicode’da "a" dönüşümüyle). Diğer ünlüler ünlü işaretleriyle eklenir: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Ünlü {{t|ə}} vurgusuz hecelerde büyük ölçüde azaltılır ve kelimelerin sonunda tamamen sessizdir; bu, özadvermede açıkça görülür: {{sm|ਗੁਰਮੁਖੀ}} "gu-rᵊ-mu-khii". Ayrıca, alt bitişik harfler{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}} vardır ve bunlar standart şekilde yazılır: ana harf, [[pt:virama|virama]], alt bitişik harf. Bu nedenle Pencapçada klavyede virama'ya ihtiyaç duyulurken, yazıda kullanılmaz, sözlüklerde ve Sanskritçede virama kullanılır. Ünlü harfle bir kelimeye başlamak için, ünlü harfler arasında farklılık gösteren sıfır ünsüzüne ünlü işaretleri eklenir.</p>
+      <p>İçsel ünlü {{t|ə}}’dir (Unicode’da “a” dönüşümüyle). Diğer ünlüler ünlü işaretleriyle eklenir: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Ünlü {{t|ə}} vurgusuz hecelerde büyük ölçüde azaltılır ve kelimelerin sonunda tamamen sessizdir; bu, özadvermede açıkça görülür: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Ayrıca, alt bitişik harfler{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}} vardır ve bunlar standart şekilde yazılır: ana harf, [[pt:virama|virama]], alt bitişik harf. Bu nedenle Pencapçada klavyede viramaya ihtiyaç duyulurken, yazıda kullanılmaz, sözlüklerde ve Sanskritçede virama kullanılır. Ünlü harfle bir kelimeye başlamak için, ünlü harfler arasında farklılık gösteren sıfır ünsüzüne ünlü işaretleri eklenir.</p>
       <p />
-      <p>Gurmukhi, Sihizm ile sıkı bir bağa sahiptir ve adı "Guru tarafından söylenmiş" anlamına gelir. Pencap Müslümanları, [[ps:Arab|Arapça]] alfabesinin bir biçimi olan Shahmukhi'yi ("Şah tarafından söylenmiş") kullanır.</p>
+      <p>Gurmukhi, Sihizm ile sıkı bir bağa sahiptir ve adı “Guru tarafından söylenmiş” anlamına gelir. Pencap Müslümanları, [[ps:Arab|Arapça]] alfabesinin bir biçimi olan Shahmukhi’yi (“Şah tarafından söylenmiş”) kullanır.</p>
      </transl>
     </text>
    </group>
@@ -6390,7 +6390,7 @@
      <transl>
       <p>Hangul, Korecenin alfa heceli bir betik sistemidir. 51 jamo (harf), yaklaşık olarak hecelerle gruplara ayrılmıştır.</p>
       <p />
-      <p>Büyük Kral Sejong liderliğindeki bir grup bilim insanı tarafından icat edilen bu yazı sistemi, [[ps:Hani|Çince ideogramların]] Koreceyi kötü aktardığını ve insanlar için zor olduğunu düşünüyordu. Eğitimli insanlar, Hangul'a küçümseyici bir bakış açısıyla bakıyor, onu kadın, çocuk veya yerel yazı sistemi olarak görüyorlardı; bu yüzden ona ''eonmun{{-}}yerel betik'' adı verildi. Daha sonraki krallar Hangul'u bile yasakladı. Şiirin ve Batılı misyonerlerin çalışmalarının artması, Hangul kullanımını bir ölçüde yaygınlaştırdı. 19. yüzyılın sonlarındaki Japon yanlısı hükümet, Çince olan her şeyi yasaklamaya ve Hangul'u tanıtmaya başladı. Kore'nin Japonya tarafından ilhak edilmesinden (1910) sonra Japonca zorunlu hale getirildi ve o dönemde kelimenin tam anlamıyla "büyük betik" anlamına gelen "Hangul" adı ortaya çıktı. 1946'da, Japonya'dan kurtuluşun ardından yeni bir yazım sistemi yayınlandı. Kuzey Kore'nin tek ve Güney'in ana betiği.</p>
+      <p>Büyük Kral Sejong liderliğindeki bir grup bilim insanı tarafından icat edilen bu yazı sistemi, [[ps:Hani|Çince ideogramların]] Koreceyi kötü aktardığını ve insanlar için zor olduğunu düşünüyordu. Eğitimli insanlar, Hangul’a küçümseyici bir bakış açısıyla bakıyor, onu kadın, çocuk veya yerel yazı sistemi olarak görüyorlardı; bu yüzden ona ''eonmun{{-}}yerel betik'' adı verildi. Daha sonraki krallar Hangul’u bile yasakladı. Şiirin ve Batılı misyonerlerin çalışmalarının artması, Hangul kullanımını bir ölçüde yaygınlaştırdı. 19. yüzyılın sonlarındaki Japon yanlısı hükümet, Çince olan her şeyi yasaklamaya ve Hangul’u tanıtmaya başladı. Kore’nin Japonya tarafından ilhak edilmesinden (1910) sonra Japonca zorunlu hale getirildi ve o dönemde kelimenin tam anlamıyla “büyük betik” anlamına gelen “Hangul” adı ortaya çıktı. 1946’da, Japonya’dan kurtuluşun ardından yeni bir yazım sistemi yayınlandı. Kuzey Kore’nin tek ve Güney’in ana betiği.</p>
      </transl>
     </text>
    </group>
@@ -6430,11 +6430,11 @@
       <p>* gelenek kültü{{-}}bugün bile Çinliler oldukça muhafazakârdır;</p>
       <p>* bir şekilde işleyen meritokrasi{{-}}binlerce işaret ve bunları güzelce yazma yeteneği eğitilebilir insanları tespit etti.</p>
       <p />
-      <p>MS 3. yüzyılda ideograflar Japonya'ya getirilmiştir. Birçok ideografın hem Çince hem de Japonca telaffuzu vardır: örneğin, {{sm|月}} (ay) Çince “getsu” ve “gatsu“ ve Japonca “tsuki” telaffuzlarına sahiptir. Okuma şekli bağlam ile tanımlanır: {{sm|月曜日}}=getsuyōbi (Pazartesi), {{sm|月見}}=tsukimi (ayı izlemek).</p>
+      <p>MS 3. yüzyılda ideogramlar Japonya’ya getirilmiştir. Birçok ideogramın hem Çince hem de Japonca telaffuzu vardır: örneğin, {{sm|月}} (ay) Çince “getsu” ve “gatsu” ve Japonca “tsuki” telaffuzlarına sahiptir. Okuma şekli bağlam ile tanımlanır: {{sm|月曜日}}=getsuyōbi (Pazartesi), {{sm|月見}}=tsukimi (ayı izlemek).</p>
       <p />
-      <p>İdeograflar Çin, Tayvan, Japonya ve Kore'de farklılık gösterir. Unicode bu farklılıkları{{_}} kodlamaz: yazının ayrıntıları yazı tipleriyle aktarılır ve yazı tipi yanlış olsa bile ne hakkında yazdıkları anlaşılabilir.</p>
+      <p>İdeogramlar Çin, Tayvan, Japonya ve Kore’de farklılık gösterir. Unicode bu farklılıkları kodlamaz: yazının ayrıntıları yazı tipleriyle aktarılır ve yazı tipi yanlış olsa bile ne hakkında yazdıkları anlaşılabilir.</p>
       <p />
-      <p>Vietnam 1945'te ideografları bıraktı. Kuzey Kore ideografları{{_}}kullanmıyor, Güney ise çok nadir kullanıyor.</p>
+      <p>Vietnam 1945’te ideogramları bıraktı. Kuzey Kore ideogramları kullanmıyor, Güney ise çok nadir kullanıyor.</p>
       <p />
       <p>Çin dili hala lehçelere bölünmüş durumda ve fonetik yazıyı tanıtmak imkansız.</p>
      </transl>
@@ -6447,7 +6447,7 @@
     </text>
     <text id="Lang">
      <orig>Hanunó’o {{nspk}} and other peoples of Mindoro Island, Philippines</orig>
-     <transl>Hanunó'o {{nspk}} ve Mindoro Adası'nın diğer halkları, Filipinler</transl>
+     <transl>Hanunó’o {{nspk}} ve Mindoro Adası’nın diğer halkları, Filipinler</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6473,7 +6473,7 @@
     </text>
     <text id="Text">
      <orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</orig>
-     <transl>[[ps:Armi|Aramice]]’nin soyundan gelir. Hatra'da (modern Irak) 3. yüzyıldan önce, Hatra Şapur{{_}}I Sasaniler tarafından yıkılana kadar kullanılmıştır. Bilinen tüm yazıtlar kısadır, en büyüğü sadece 13{{_}}satır uzunluğundadır.</transl>
+     <transl>[[ps:Armi|Aramice]]’nin soyundan gelir. Hatra’da (modern Irak) 3. yüzyıldan önce, Hatra Şapur{{_}}I Sasaniler tarafından yıkılana kadar kullanılmıştır. Bilinen tüm yazıtlar kısadır, en büyüğü sadece 13{{_}}satır uzunluğundadır.</transl>
     </text>
    </group>
    <group id="Hebr">
@@ -6496,7 +6496,7 @@
      <transl>
       <p>MÖ 500 civarında, Babil yönetimi altında Yahudiler, Fenikecenin neredeyse birebir kopyası olan Paleo-İbraniceden Aramiceye geçtiler. Alfabe, Yahudi mistisizminde neredeyse evrenin bir direğiydi ve 22 Aramice harf günümüze ulaşmış ve MÖ 2. yüzyıla gelindiğinde modern şeklini almıştır.</p>
       <p />
-      <p>Sadece ünsüz fonemler yazılır, ancak dört harf {{sm|אהוי}} sesli harfler anlamına gelebilir ve bu harflere [[pt:abjad|okumanın anneleri]] adı verilir. 6-8. yüzyıllarda, Tevrat'ın doğru okunması için önemli olan harflerin üzerine{{-}}noktalar konarak sesli harf işaretleri icat edildi.</p>
+      <p>Sadece ünsüz fonemler yazılır, ancak dört harf {{sm|אהוי}} sesli harfler anlamına gelebilir ve bu harflere [[pt:abjad|okumanın anneleri]] adı verilir. 6-8. yüzyıllarda, Tevrat’ın doğru okunması için önemli olan harflerin üzerine{{-}}noktalar konarak sesli harf işaretleri icat edildi.</p>
       <p />
       <p>10. yüzyıla gelindiğinde İbranice konuşma dilinden çıkıp yalnızca bir kitap dili olarak kalmıştı, ancak İbranice harfler konuşma dilinde kullanılan Yahudi dilleri için de kullanılıyordu: Yidiş, Ladino ve diğerleri. İsrail devletinin kurulmasıyla İbranice günlük konuşma dili olarak yeniden canlandı.</p>
      </transl>
@@ -6529,7 +6529,7 @@
       <p />
       <p>Hiragana 1900’de standartlaştırılmıştı ve her hece için yalnızca bir karakter bırakılmıştı. Ve Hentaigana, Batı kara harfleri veya Kiril uncial alfabesi gibi bir şeye dönüştü{{-}}kartpostallarda, dini belgelerde, dövüş sanatları okullarının diplomalarında ve… restoran tabelalarında kullanılıyordu.</p>
       <p />
-      <p>"Japornimation" hentai sesteş bir sözcüktür: {{sm|変態}} "hentai" ''sapkın''dan ve Hentaigana da {{sm|変体}} "hentai" ''tuhaf''tan gelir.</p>
+      <p>“Japornimation” hentai sesteş bir sözcüktür: {{sm|変態}} “hentai” yani ''sapkın''dan ve Hentaigana ise {{sm|変体}} “hentai” yani ''tuhaf''tan gelir.</p>
      </transl>
     </text>
    </group>
@@ -6550,7 +6550,7 @@
      </orig>
      <au-cmt>in Russian: suffix = (maybe) окончание</au-cmt>
      <transl>
-      <p>Yaklaşık 3. yüzyılda Japonlar [[ps:Hani|Çince ideogramlarla]] yazmaya başladı. Man’yōgana’nın yardımcı hece yazısı, ideogramlardan ortaya çıktı ve resimden ziyade telaffuz önemliydi. Hiragana, Man’yōgana'nın aşırı derecede el yazısıyla yazılmış halidir.</p>
+      <p>Yaklaşık 3. yüzyılda Japonlar [[ps:Hani|Çince ideogramlarla]] yazmaya başladı. Man’yōgana’nın yardımcı hece yazısı, ideogramlardan ortaya çıktı ve resimden ziyade telaffuz önemliydi. Hiragana, Man’yōgana’nın aşırı derecede el yazısıyla yazılmış halidir.</p>
       <p />
       <p>Kadınlar eğitim alamazdı, heceyle yazarlardı ve düzgün Hiragana’yı özensiz [[ps:Kana|Katakana]]’ya tercih ederlerdi. Günümüzde Hiragana ideografı olmayan ya da yazar/okuyucu tarafından bilinmeyen sözcükler (alıntı sözcükler hariç, onlar Katakana ile yazılır), sözcük sonları, çocuklara öğretim, ideograflar için telaffuz yardımcıları için kullanılır.</p>
      </transl>
@@ -6607,9 +6607,9 @@
      </orig>
      <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
      <transl>
-      <p>Betiğin mucidi Shong Lue Yang, betiğin kendisine Tanrı tarafından verildiğini söylemiştir. "Pahawh" ismi "birleş" anlamına gelir. Geliştirme 1959'dan 1971'e kadar sürmüştür. Vietnam Savaşı devam ederken, Shong'un grubu hem komünist hem de Amerikan yanlısı güçler tarafından şüphe altındaydı ve betiğin yaratılmasından kısa bir süre sonra Shong, Amerikan yanlıları tarafından suikasta kurban gitti.</p>
+      <p>Betiğin mucidi Shong Lue Yang, betiğin kendisine Tanrı tarafından verildiğini söylemiştir. “Pahawh” ismi “birleş” anlamına gelir. Geliştirme 1959’dan 1971’e kadar sürmüştür. Vietnam Savaşı devam ederken, Shong’un grubu hem komünist hem de Amerikan yanlısı güçler tarafından şüphe altındaydı ve betiğin yaratılmasından kısa bir süre sonra Shong, Amerikan yanlıları tarafından suikasta kurban gitti.</p>
       <p />
-      <p>Çoğu abugida "ünsüz merkezlidir". Pahawh'un merkezi bileşeni bir ünlüdür ve ilk ünsüzler onun sağındadır. Örneğin, "Hmong" kelimesi {{sm|𖬌𖬣𖬵}}; "oob" ünlüsü, "qh" ünsüzü ve ton işareti içermektedir.</p>
+      <p>Çoğu abugida “ünsüz merkezlidir”. Pahawh’un merkezi bileşeni bir ünlüdür ve ilk ünsüzler onun sağındadır. Örneğin, “Hmong” kelimesi {{sm|𖬌𖬣𖬵}}; “oob” ünlüsü, “qh” ünsüzü ve ton işareti içermektedir.</p>
       <p />
       <p>Dört aşama vardır ve sonuncusu suikasttan sadece bir ay önce önerilmiştir. İkinci ve üçüncü aşamalar farklı Hmong grupları tarafından kullanılmaktadır ve bu blok, ilk aşama hariç tüm aşamaları kodlamaktadır.</p>
       <p />
@@ -6672,7 +6672,7 @@
     </text>
     <text id="Lang">
      <orig>Etruscan and other languages of Italy</orig>
-     <transl>Etrüsk ve İtalya'nın diğer dilleri</transl>
+     <transl>Etrüsk ve İtalya’nın diğer dilleri</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6694,7 +6694,7 @@
     </text>
     <text id="Lang">
      <orig>Javanese, small languages of Java</orig>
-     <transl>Javanese, Java'nın küçük dilleri</transl>
+     <transl>Javanese, Java’nın küçük dilleri</transl>
     </text>
     <text id="Text">
      <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
@@ -6739,9 +6739,9 @@
       <p>Katakana is used for loanwords and initial teaching of foreigners. Before 1946 it had been used for writing word endings, nowadays it’s done with [[ps:Hira|Hiragana]].</p>
      </orig>
      <transl>
-      <p>Yaklaşık 3. yüzyılda Japonlar [[ps:Hani|Çince ideogramlarla]] yazmaya başladı. Man’yōgana'nın yardımcı hece yazımı ideogramlardan ortaya çıktı ve imgeden ziyade telaffuz önemliydi. Man’yōgana, Katakana olarak basitleştirildi.</p>
+      <p>Yaklaşık 3. yüzyılda Japonlar [[ps:Hani|Çince ideogramlarla]] yazmaya başladı. Man’yōgana’nın yardımcı hece yazımı ideogramlardan ortaya çıktı ve imgeden ziyade telaffuz önemliydi. Man’yōgana, Katakana olarak basitleştirildi.</p>
       <p />
-      <p>Katakana, yabancı sözcüklerden alıntı yapmak ve yabancılara ilk öğretimde kullanılır. 1946'dan önce kelime sonlarını yazmak için kullanılırdı; günümüzde ise [[ps:Hira|Hiragana]] ile yapılıyor.</p>
+      <p>Katakana, yabancı sözcüklerden alıntı yapmak ve yabancılara ilk öğretimde kullanılır. 1946’dan önce kelime sonlarını yazmak için kullanılırdı; günümüzde ise [[ps:Hira|Hiragana]] ile yapılıyor.</p>
      </transl>
     </text>
    </group>
@@ -6752,7 +6752,7 @@
     </text>
     <text id="Lang">
      <orig>Sanskrit, old languages of Java: Balinese, Javanese, Sundanese, Malay</orig>
-     <transl>Sanskritçe, Java'nın eski dilleri: Bali dili, Javanese dili, Sundanese dili, Malay dili</transl>
+     <transl>Sanskritçe, Java’nın eski dilleri: Bali dili, Javanese dili, Sundanese dili, Malay dili</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6820,7 +6820,7 @@
       <p>: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</p>
      </orig>
      <transl>
-      <p>Güneydoğu Asya'nın diğer betikleri gibi, Pallava'dan (erken dönem [[ps:Gran|Grantha]]) gelir. [[ps:Thai|Tay]] ve [[ps:Laoo|Lao]] için temel teşkil etmiştir.</p>
+      <p>Güneydoğu Asya’nın diğer betikleri gibi, Pallava’dan (erken dönem [[ps:Gran|Grantha]]) gelir. [[ps:Thai|Tay]] ve [[ps:Laoo|Lao]] için temel teşkil etmiştir.</p>
       <p />
       <p>Kelimeler arasında boşluk yoktur. İki ünsüz kümesi vardır: birinde doğal ünlü {{t|a}}, diğerinde {{t|o}} bulunur. Bu ünsüzlerin üzerindeki ünlü işaretleri de farklı telaffuz edilir. {{t|o}} ile biten ünsüzler de son ünsüz olarak kullanılır. İki [[pt:virama|virama]] vardır: biri görünür, kullanılmaz, diğeri ise ünsüz bağlaçlarını birleştirmek için sanaldır: küçük ikinci ünsüz, ilkinin altına yazılır. Örneğin, özerklik {{sm|ខ្មែរ}} şunlardan oluşur:</p>
       <p>: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</p>
@@ -6848,7 +6848,7 @@
       <p>Virama may look like slash {{sm|𑈈/}}. Digits resemble [[ps:Gujr|Gujarati]] and [[pt:unification|unified]] with it.</p>
      </orig>
      <transl>
-      <p>Geleneklere göre, Hojki, İslamiyeti yaymak için Hindistan'a gönderilen Pir Sadardin (14. yüzyıl) tarafından icat edilmiştir. Daha gerçekçi bir versiyonuyla, 16. yüzyılda Landa'nın bir çeşidi olarak ortaya çıkmıştır; aşırı el yazısıyla yazılmış [[ps:Shrd|Sharada]]. Günümüzde bile Hintli Şiiler tarafından kullanılmakta ve incelenmektedir.</p>
+      <p>Geleneklere göre, Hojki, İslamiyeti yaymak için Hindistan’a gönderilen Pir Sadardin (14. yüzyıl) tarafından icat edilmiştir. Daha gerçekçi bir versiyonuyla, 16. yüzyılda Landa’nın bir çeşidi olarak ortaya çıkmıştır; aşırı el yazısıyla yazılmış [[ps:Shrd|Sharada]]. Günümüzde bile Hintli Şiiler tarafından kullanılmakta ve incelenmektedir.</p>
       <p />
       <p>İçsel ünlü {{t|a}}, [[pt:virama|virama]] ve dört ünsüz bağlacına sahip Brahmic abugida, bunlardan biri "ša" harfinin eksikliğinden dolayı nukta işaretiyle yazılır:</p>
       <p>: ka {{sm|𑈈}} + i {{sm|◌𑈭}} = ki {{sm|𑈈𑈭}}</p>
@@ -6879,11 +6879,11 @@
       <p>The last square looking like [[pt:tofu|tofu]] is illegible character. It forms blocks like the rest Khitan characters.</p>
      </orig>
      <transl>
-      <p>Liao imparatorluğunda (Kuzeydoğu Çin) kullanılmıştır. Yelü Diela adlı bir bilgin tarafından yaklaşık 925 yılında icat edilmiş ve [[ps:Ougr|Uygur]] diline dayandırılmıştır. Kelimeler en fazla yedi karakterden oluşan bloklar halinde yazılır. 1987 itibarıyla, bilinen 378 karakterden 125'i ideografik, 115'i fonetiktir, geri kalanı{{_}}deşifre edilmemiştir.</p>
+      <p>Liao imparatorluğunda (Kuzeydoğu Çin) kullanılmıştır. Yelü Diela adlı bir bilgin tarafından yaklaşık 925 yılında icat edilmiş ve [[ps:Ougr|Uygur]] diline dayandırılmıştır. Kelimeler en fazla yedi karakterden oluşan bloklar halinde yazılır. 1987 itibarıyla, bilinen 378 karakterden 125’i ideografik, 115’i fonetiktir, geri kalanı deşifre edilmemiştir.</p>
       <p />
-      <p>Büyük ve küçük betik paralel olarak kullanılmıştır, küçük daha basittir (büyük tamamen ideografiktir). Kitan kitapları{{_}}günümüze ulaşamamıştır, sadece kullanım eşyaları ve soylu insanların mezar taşlarındaki yazıtlar, sonuncusu{{-}}yaklaşık 1200. 1216 yılında Kitanlar nihayet Moğollar ve Çinliler tarafından yenilgiye uğratıldı.</p>
+      <p>Büyük ve küçük betik paralel olarak kullanılmıştır, küçük daha basittir (büyük tamamen ideografiktir). Kitan kitapları günümüze ulaşamamıştır, sadece kullanım eşyaları ve soylu insanların mezar taşlarındaki yazıtlar, sonuncusu{{-}}yaklaşık 1200. 1216 yılında Kitanlar nihayet Moğollar ve Çinliler tarafından yenilgiye uğratıldı.</p>
       <p />
-      <p>Birçok yazı tipi Kitan metnini saat yönünün tersine 90° çevirir. Bu yazı tipi, “Daniel Kane” kitabında olduğu gibi hiyeroglifleri dik gösterir. Kitan Dili ve Yazısı'' kitabında olduğu gibi. Telif hakkı sorunları nedeniyle, simge Kitan bronz aynasından (Profesör Jǐng Yǒngshí tarafından izlenen) karakterlerden birini gösterir ve yazı tipi Google tarafından bir araya getirilen modern italiktir.</p>
+      <p>Birçok yazı tipi Kitan metnini saat yönünün tersine 90° çevirir. Bu yazı tipi, ''Daniel Kane. Kitan Dili ve Yazısı'' kitabında olduğu gibi hiyeroglifleri dik olarak gösterir. Telif hakkı sorunları nedeniyle, simge Kitan bronz aynasından (Profesör Jǐng Yǒngshí tarafından izlenen) karakterlerden birini gösterir ve yazı tipi Google tarafından bir araya getirilen modern italiktir.</p>
       <p />
       <p>Son kare [[pt:tofu|tofu]] gibi görünen okunaksız bir karakterdir. Diğer Kitan karakterleri gibi bloklar oluşturur.</p>
      </transl>
@@ -6911,7 +6911,7 @@
       <p>Often used in smilies: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</p>
      </orig>
      <transl>
-      <p>Güneydoğu Asya'nın çoğu betiği gibi, [[ps:Brah|Brahmi]]’den gelir. İçsel ünlü, ünlü işaretleriyle değiştirilmiş {{t|a}}’dır:</p>
+      <p>Güneydoğu Asya’nın çoğu betiği gibi, [[ps:Brah|Brahmi]]’den gelir. İçsel ünlü, ünlü işaretleriyle değiştirilmiş {{t|a}}’dır:</p>
       <p>: ka {{sm|ಕ}} + i {{sm|◌ಿ}} = ki {{sm|ಕಿ}}</p>
       <p>[[pt:virama|Virama]] ("ünlüyü kaldır" işareti) yalnızca Sanskritçe yazılarda görülür. Bilgisayarlarda virama, ünsüz bağlaçlarını yazmak için kullanılır [[pt:ligature|bitişik harf]]:</p>
       <p>: ka {{sm|ಕ}} + virama {{sm|◌್}} + ta {{sm|ತ}} = kta {{sm|ಕ್ತ}}</p>
@@ -6935,7 +6935,7 @@
       <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
      </orig>
      <transl>
-      <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]’ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan'ın Sikkim eyaleti Bantawa’yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat’ı resmi betik haline getirmiştir.</p>
+      <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]’ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan’ın Sikkim eyaleti Bantawa’yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat’ı resmi betik haline getirmiştir.</p>
       <p />
       <p>Brahmi kökenli bir abugida olmasına rağmen, [[pt:ligature|bititşik harfleri]], işaretler üzerinde işaretleri ve diğer karmaşık gösterimleri yoktur; tüm karakterler sıradan [[pt:spacing|aralıkları]] kullanır. Noktalama işareti ''danda'', {{t|ā}}'dan ayırt etmek için eğiktir, bu nedenle yazı, Devanagari’deki yaygın Hintçe yerine kendi dandasını kullanır.</p>
      </transl>
@@ -6991,7 +6991,7 @@
       <p />
       <p>İki rakam kümesi vardır: Hora (günlük) ve Tham (kutsal).</p>
       <p />
-      <p>Yuan dili konuşan birkaç milyon insan var, ancak 20. yüzyıldan beri Lanna'da okuryazar olan çok az kişi var, [[ps:Thai|Tayca]] daha sık kullanılıyor. Sadece küçük Khun dili {{nspk|kkh}}, ana betik olarak Tai Tham kullanıyor.</p>
+      <p>Yuan dili konuşan birkaç milyon insan var, ancak 20. yüzyıldan beri Lanna’da okuryazar olan çok az kişi var, [[ps:Thai|Tayca]] daha sık kullanılıyor. Sadece küçük Khun dili {{nspk|kkh}}, ana betik olarak Tai Tham kullanıyor.</p>
      </transl>
     </text>
    </group>
@@ -7002,7 +7002,7 @@
     </text>
     <text id="Lang">
      <orig>Lao ''(native for 3M and second for 4M in Laos, &gt;20M more in Thailand use [[ps:Thai|Thai script]])''</orig>
-     <transl>Lao ''(Laos'ta 3 milyon ve 4 milyon için yerli, Tayland'da 20 milyondan fazla kişi [[ps:Thai|Tayca betiği]] kullanıyor)''</transl>
+     <transl>Lao ''(Laos’ta 3 milyon ve 4 milyon için yerli, Tayland’da 20 milyondan fazla kişi [[ps:Thai|Tayca betiği]] kullanıyor)''</transl>
     </text>
     <text id="Text">
      <orig>
