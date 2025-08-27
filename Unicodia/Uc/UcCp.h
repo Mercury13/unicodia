@@ -12,6 +12,7 @@ namespace cp {
     constexpr char32_t MARK_KEYCAP = 0x20E3;
 
     // Specials
+    constexpr char32_t SHY = 0x00AD;
     constexpr char32_t ZWJ = 0x200D;
 
     // Arrows

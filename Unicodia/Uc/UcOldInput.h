@@ -149,25 +149,51 @@ namespace uc {
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
+    DEFINE_ENUM_TYPE_IN_NS(uc, DosLang, unsigned char,
+        EN, RU, EL, TR);
+
     struct AltCode {
-        unsigned char dosCommon = 0, dosEn = 0, dosRu = 0, dosEl = 0, win = 0;
+        static constexpr unsigned char NO_COMMON = 1;
+        unsigned char dosCommon = 0, win = 0;
+        struct LocDos : public ec::Array<unsigned char, DosLang> {
+        private:
+            using Super = ec::Array<unsigned char, DosLang>;
+            static constexpr unsigned char C0 = 0;
+        public:
+            constexpr LocDos() : Super{ C0, C0, C0, C0 } {}
+            /// @return [+] code is present and has the same in all known encodings
+            unsigned char singleCode() const noexcept;
+            constexpr bool operator == (const LocDos& x) const noexcept = default;
+
+            template <class Body>
+            void run(const Body& body) const
+            {
+                /// @todo [future] Traverse using loop
+                body(operator[](DosLang::EN), "en");
+                body(operator[](DosLang::RU), "ru");
+                body(operator[](DosLang::EL), "el");
+                body(operator[](DosLang::TR), "tr");
+            }
+
+            bool hasOtherThan(unsigned char x) const noexcept;
+        } locDos;
         unsigned short unicode = 0;
         bool hasLocaleIndependent() const
             { return (dosCommon != 0 || win != 0); }
-        constexpr bool operator == (const AltCode& x) const = default;
+        constexpr bool operator == (const AltCode& x) const noexcept = default;
     };
 
     struct AltgrKey {
         char key = 0, letter = 0;
         bool isTwice = false;
-        constexpr bool operator == (const AltgrKey& x) const = default;
+        constexpr bool operator == (const AltgrKey& x) const noexcept = default;
     };
 
     struct InputMethods {
         AltCode alt;
         AltgrKey birman;
         std::u8string_view sometimesKey;
-        constexpr bool operator == (const InputMethods& x) const = default;
+        constexpr bool operator == (const InputMethods& x) const noexcept = default;
         static const uc::InputMethods NONE;
         bool hasSmth() const { return (*this != NONE); }
         bool hasAltCode() const { return (alt != NONE.alt); }

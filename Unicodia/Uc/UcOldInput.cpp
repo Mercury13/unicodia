@@ -7,8 +7,11 @@
 // Libs
 #include "u_Cmap.h"
 
+// Unicode
+#include "UcCp.h"
 
-#define NBSP "\u00A0"
+
+#define M_NBSP "\u00A0"
 
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
@@ -16,6 +19,35 @@ using ReverseMap = Cmap<char16_t, unsigned char, 128>;
 template class Cmap<char16_t, unsigned char, 128>;
 
 constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 1024; }
+
+unsigned char uc::AltCode::LocDos::singleCode() const noexcept
+{
+    unsigned char r = 0;
+    for (auto x : *this) {
+        // x/r
+        // 0/0 do nothing
+        // 0/* do nothing
+        // */0 assign
+        // */* check
+        if (x != 0) {
+            if (r == 0) { r = x; }          // */0
+            else if (r != x) { return 0; }  // */*
+        }
+    }
+    return r;
+}
+
+
+bool uc::AltCode::LocDos::hasOtherThan(unsigned char x) const noexcept
+{
+    for (auto c : *this) {
+        // x is never NO_COMMON, so OK
+        if (c != 0 && c != x)
+            return true;
+    }
+    return false;
+}
+
 
 ///
 /// @warning
@@ -25,7 +57,7 @@ constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 102
 constinit const uc::old::Info uc::old::info[] {
     // Amstrad CPC
     { .key = "AmstradCpc",
-      .fixedName = u8"Amstrad" NBSP "CPC",
+      .fixedName = u8"Amstrad" M_NBSP "CPC",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
@@ -45,7 +77,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 64, 128 } },
     // Apple II
     { .key = "Apple2",
-      .fixedName = u8"Apple" NBSP "II",
+      .fixedName = u8"Apple" M_NBSP "II",
       .country = Country::US,
       .type = Type::HOBBY_PC,
       .graphics = Graphics::YES,
@@ -66,7 +98,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4, 128 } },
     // Mattel Aquarius
     { .key = "Aquarius",
-      .fixedName = u8"Mattel" NBSP "Aquarius",
+      .fixedName = u8"Mattel" M_NBSP "Aquarius",
       .country = Country::US_HK,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
@@ -83,7 +115,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4 } },
     // Atari 400 / 800
     { .key = "Atari400",
-      .fixedName = u8"Atari" NBSP "400/800",
+      .fixedName = u8"Atari" M_NBSP "400/800",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::LIMITED,
@@ -99,7 +131,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4, 64 } },
     // Atari ST
     { .key = "AtariSt",
-      .fixedName = u8"Atari" NBSP "ST",
+      .fixedName = u8"Atari" M_NBSP "ST",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
@@ -160,8 +192,8 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 16, 48 } },
     // Commodore
     { .key = "C64",
-      .fixedName = u8"Commodore" NBSP "PET/64",
-      .altName = u8"Commodore" NBSP "64",
+      .fixedName = u8"Commodore" M_NBSP "PET/64",
+      .altName = u8"Commodore" M_NBSP "64",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
@@ -177,8 +209,8 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 64 } },
     // RISC OS
     { .key = "RiscOs",
-      .fixedName = u8"RISC" NBSP "OS",
-      .altName = u8"Acorn" NBSP "Archimedes" NBSP "(RISC" NBSP "OS)",
+      .fixedName = u8"RISC" M_NBSP "OS",
+      .altName = u8"Acorn" M_NBSP "Archimedes" M_NBSP "(RISC" M_NBSP "OS)",
       .country = Country::GB,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
@@ -194,7 +226,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 512, 16_mb } },
     // Sinclair ZX80/81
     { .key = "Zx80",
-      .fixedName = u8"Sinclair" NBSP "ZX80/81",
+      .fixedName = u8"Sinclair" M_NBSP "ZX80/81",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
@@ -226,7 +258,7 @@ constinit const uc::old::Info uc::old::info[] {
     // TRS-80
     { .key = "Trs80",
       .fixedName = u8"TRS-80",
-      .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Model" NBSP "I/III/4",
+      .altName = u8"Tandy/RadioShack" M_NBSP "TRS-80" M_NBSP "Model" M_NBSP "I/III/4",
       .country = Country::US,
       .type = Type::HOBBY_PC,
       .graphics = Graphics::LATER_MODELS,
@@ -245,8 +277,8 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4, 128 } },
     // Tandy CoCo
     { .key = "CoCo",
-      .fixedName = u8"TRS-80" NBSP "Color",
-      .altName = u8"Tandy/RadioShack" NBSP "TRS-80" NBSP "Color" NBSP "Computer",
+      .fixedName = u8"TRS-80" M_NBSP "Color",
+      .altName = u8"Tandy/RadioShack" M_NBSP "TRS-80" M_NBSP "Color" M_NBSP "Computer",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::LATER_MODELS,
@@ -290,7 +322,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem {} },
     // Sharp MZ
     { .key = "SharpMz",
-      .fixedName = u8"Sharp" NBSP "MZ",
+      .fixedName = u8"Sharp" M_NBSP "MZ",
       .country = Country::JP,
       .type = Type::HOBBY_PC,
       .graphics = Graphics::LATER_MODELS,
@@ -314,7 +346,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 48 } },
     // Ohio Scientific
     { .key = "Ohio",
-      .fixedName = u8"Ohio" NBSP "Scientific",
+      .fixedName = u8"Ohio" M_NBSP "Scientific",
       .country = Country::US,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::LATER_MODELS,
@@ -332,7 +364,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 4, 8 } },
     // Robotron
     { .key = "Robotron",
-      .fixedName = u8"Robotron" NBSP "Z9001",
+      .fixedName = u8"Robotron" M_NBSP "Z9001",
       .country = Country::DD,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::NO,
@@ -381,7 +413,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 64 } },
     // IBM
     { .key = "Ibm",
-      .fixedName = u8"IBM" NBSP "PC",
+      .fixedName = u8"IBM" M_NBSP "PC",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::LATER_MODELS,
@@ -398,7 +430,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 16, 4_mb } },
     // Old Motorola Macintosh
     { .key = "Mac",
-      .fixedName = u8"Apple" NBSP "Macintosh",
+      .fixedName = u8"Apple" M_NBSP "Macintosh",
       .country = Country::US,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
@@ -414,8 +446,8 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 128, 8_mb } },
     // ZX Spectrum
     { .key = "Spectrum",
-      .fixedName = u8"ZX" NBSP "Spectrum",
-      .altName = u8"Sinclair" NBSP "ZX" NBSP "Spectrum",
+      .fixedName = u8"ZX" M_NBSP "Spectrum",
+      .altName = u8"Sinclair" M_NBSP "ZX" M_NBSP "Spectrum",
       .country = Country::GB,
       .type = Type::HOME_EDUC_PC,
       .graphics = Graphics::YES,
@@ -429,7 +461,7 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 48, 128 } },
     // BBC Master
     { .key = "BbcMaster",
-      .fixedName = u8"BBC" NBSP "Master",
+      .fixedName = u8"BBC" M_NBSP "Master",
       .country = Country::GB,
       .type = Type::ADVANCED_PC,
       .graphics = Graphics::YES,
@@ -455,7 +487,7 @@ std::u8string uc::old::Info::locName() const
         char buf[40];
         snprintf(buf, std::size(buf), "OldComp.%s.Name", key.data());
         std::u8string r = loc::get(buf);
-        str::replace(r, u8" ", u8"" NBSP);
+        str::replace(r, u8" ", u8"" M_NBSP);
         return r;
     }
 }
@@ -591,7 +623,7 @@ namespace {
         { u'╘', 0xD4 }, { u'╒', 0xD5 }, { u'╓', 0xD6 }, { u'╫', 0xD7 },
         { u'╪', 0xD8 }, { u'┘', 0xD9 }, { u'┌', 0xDA }, { u'█', 0xDB },
         { u'▄', 0xDC }, { u'▌', 0xDD }, { u'▐', 0xDE }, { u'▀', 0xDF },
-        { u'■', 0xFE }, { 0xA0, 0xFF }
+        { u'■', 0xFE }, { cp::NBSP, 0xFF }
     }};
 
     constinit const ReverseMap rmDosRu {{
@@ -614,7 +646,7 @@ namespace {
         { u'ÿ', 0x98 }, { u'Ö', 0x99 }, { u'Ü', 0x9A }, { u'¢', 0x9B },
         { u'£', 0x9C }, { u'¥', 0x9D }, { u'₧', 0x9E }, { u'ƒ', 0x9F },
         { u'á', 0xA0 }, { u'í', 0xA1 }, { u'ó', 0xA2 }, { u'ú', 0xA3 },
-        { u'ñ', 0xA4 }, { u'Ñ', 0xA5 }, { u'ª', 0xA6 }, { u'º', 0xA6 },
+        { u'ñ', 0xA4 }, { u'Ñ', 0xA5 }, { u'ª', 0xA6 }, { u'º', 0xA7 },
         { u'¿', 0xA8 }, { u'⌐', 0xA9 }, { u'¬', 0xAA }, { u'½', 0xAB },
         { u'¼', 0xAC }, { u'¡', 0xAD }, { u'«', 0xAE }, { u'»', 0xAF },
         { u'α', 0xE0 }, { u'ß', 0xE1 }, { u'Γ', 0xE2 }, { u'π', 0xE3 },
@@ -641,6 +673,34 @@ namespace {
         { u'Ϊ', 0xF4 }, { u'Ϋ', 0xF5 }, { u'÷', 0xF6 }, { u'≈', 0xF7 },
         { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
         { u'ⁿ', 0xFC }, { u'²', 0xFD }
+    }};
+
+    constinit const ReverseMap rmDosTr {{
+            { u'Ç', 0x80 }, { u'ü', 0x81 }, { u'é', 0x82 }, { u'â', 0x83 },
+            { u'ä', 0x84 }, { u'à', 0x85 }, { u'å', 0x86 }, { u'ç', 0x87 },
+            { u'ê', 0x88 }, { u'ë', 0x89 }, { u'è', 0x8A }, { u'ï', 0x8B },
+            { u'î', 0x8C }, { u'ı', 0x8D }, { u'Ä', 0x8E }, { u'Å', 0x8F },
+            { u'É', 0x90 }, { u'æ', 0x91 }, { u'Æ', 0x92 }, { u'ô', 0x93 },
+            { u'ö', 0x94 }, { u'ò', 0x95 }, { u'û', 0x96 }, { u'ù', 0x97 },
+            { u'İ', 0x98 }, { u'Ö', 0x99 }, { u'Ü', 0x9A }, { u'ø', 0x9B },
+            { u'£', 0x9C }, { u'Ø', 0x9D }, { u'Ş', 0x9E }, { u'ş', 0x9F },
+            { u'á', 0xA0 }, { u'í', 0xA1 }, { u'ó', 0xA2 }, { u'ú', 0xA3 },
+            { u'ñ', 0xA4 }, { u'Ñ', 0xA5 }, { u'Ğ', 0xA6 }, { u'ğ', 0xA7 },
+            { u'¿', 0xA8 }, { u'®', 0xA9 }, { u'¬', 0xAA }, { u'½', 0xAB },
+            { u'¼', 0xAC }, { u'¡', 0xAD }, { u'«', 0xAE }, { u'»', 0xAF },
+            // D
+            { u'º', 0xD0 }, { u'ª', 0xD1 }, { u'Ê', 0xD2 }, { u'Ë', 0xD3 },
+            { u'È', 0xD4 }, { u'€', 0xD5 }, { u'Í', 0xD6 }, { u'Î', 0xD7 },
+            { u'Ï', 0xD8 }, { u'¦', 0xDD }, { u'Ì', 0xDE },
+            // E
+            { u'Ó', 0xE0 }, { u'ß', 0xE1 }, { u'Ô', 0xE2 }, { u'Ò', 0xE3 },
+            { u'õ', 0xE4 }, { u'Õ', 0xE5 }, { u'µ', 0xE6 },
+            { u'×', 0xE8 }, { u'Ú', 0xE9 }, { u'Û', 0xEA }, { u'Ù', 0xEB },
+            { u'ì', 0xEC }, { u'ÿ', 0xED }, { u'¯', 0xEE }, { u'´', 0xEF },
+            { cp::SHY, 0xF0 }, { u'±', 0xF1 }, { u'¾', 0xF3 },
+            { u'¶', 0xF4 }, { u'§', 0xF5 }, { u'÷', 0xF6 }, { u'¸', 0xF7 },
+            { u'°', 0xF8 }, { u'¨', 0xF9 }, { u'·', 0xFA }, { u'¹', 0xFB },
+            { u'³', 0xFC }, { u'²', 0xFD }
     }};
 
     constinit const ReverseMap rmWin {{
@@ -938,9 +998,11 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         }
     } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
         rmDosCommon.query(cp, r.alt.dosCommon);
-        rmDosEn.query(cp, r.alt.dosEn);
-        rmDosRu.query(cp, r.alt.dosRu);
-        rmDosEl.query(cp, r.alt.dosEl);
+        /// @todo [future] Is it possible to use
+        rmDosEn.query(cp, r.alt.locDos[DosLang::EN]);
+        rmDosRu.query(cp, r.alt.locDos[DosLang::RU]);
+        rmDosEl.query(cp, r.alt.locDos[DosLang::EL]);
+        rmDosTr.query(cp, r.alt.locDos[DosLang::TR]);
         if (cp <= 0xFF) {     // ISO1
             r.alt.win = cp;
         } else {

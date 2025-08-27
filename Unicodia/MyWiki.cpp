@@ -2677,38 +2677,61 @@ namespace {
                     str::append(text, loc::get("Prop.Input.AltCode"));
                     text += "</a> ";
                     str::QSep sp2(text, EURO_COMMA);    // alt codes
+                    bool needLocale = !im.alt.hasLocaleIndependent();
                     if (im.alt.dosCommon) {
                         sp2.sep();
                         str::append(text, static_cast<int>(im.alt.dosCommon));
+                        if (im.alt.locDos.hasOtherThan(im.alt.dosCommon)) {
+                            text += " (";
+                            str::QSep sp3(text, "/");
+                            auto addLang = [&sp3, commonCode = im.alt.dosCommon]
+                                        (unsigned char code, std::string_view lang) {
+                                // commonCode is never NO_COMMON, so OK
+                                if (code == 0 || code == commonCode) {
+                                    sp3.sep();
+                                    /// @todo [urgent] language renaming
+                                    str::append(sp3.target(), lang);
+                                }
+                            };
+                            im.alt.locDos.run(addLang);
+                            text += ")";
+                            needLocale = true;
+                        }
                     }
                     if (im.alt.win) {
                         sp2.sep();
                         str::append(text, "0");
                         str::append(text, static_cast<int>(im.alt.win));
                     }
-                    if (!im.alt.hasLocaleIndependent()) {
-                        if (im.alt.dosEn
-                                && im.alt.dosRu == im.alt.dosEn
-                                && im.alt.dosEl == im.alt.dosEn) {
+                    if (needLocale) {
+                        if (auto code = im.alt.locDos.singleCode(); code != 0) {
                             sp2.sep();
-                            str::append(text, static_cast<int>(im.alt.dosEn));
-                            str::append(text, u8" (en/ru/el)");
+                            str::append(text, static_cast<int>(code));
+                            text += " (";
+                            str::QSep sp3(text, "/");
+                            auto addLang = [&sp3, commonCode = im.alt.dosCommon]
+                                           (unsigned char code, std::string_view lang) {
+                                if (code != 0 && code != commonCode) {
+                                    sp3.sep();
+                                    /// @todo [urgent] language renaming
+                                    str::append(sp3.target(), lang);
+                                }
+                            };
+                            im.alt.locDos.run(addLang);
+                            text += ")";
                         } else {
-                            if (im.alt.dosEn) {
-                                sp2.sep();
-                                str::append(text, static_cast<int>(im.alt.dosEn));
-                                str::append(text, u8" (en)");
-                            }
-                            if (im.alt.dosRu) {
-                                sp2.sep();
-                                str::append(text, static_cast<int>(im.alt.dosRu));
-                                str::append(text, u8" (ru)");
-                            }
-                            if (im.alt.dosEl) {
-                                sp2.sep();
-                                str::append(text, static_cast<int>(im.alt.dosEl));
-                                str::append(text, u8" (el)");
-                            }
+                            auto addCode = [&sp2](unsigned char code, std::string_view lang) {
+                                if (code != 0) {
+                                    sp2.sep();
+                                    auto& text = sp2.target();
+                                    str::append(text, static_cast<int>(code));
+                                    text += " (";
+                                    /// @todo [urgent] language renaming
+                                    str::append(text, lang);
+                                    text += ")";
+                                }
+                            };
+                            im.alt.locDos.run(addCode);
                         }
                         if (im.alt.unicode) {
                             sp2.sep();

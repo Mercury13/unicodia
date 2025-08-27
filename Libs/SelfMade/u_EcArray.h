@@ -119,6 +119,9 @@ namespace ec {
 
         constexpr Ec toIndex(const V& x) const noexcept
             { return static_cast<Ec>(&x - a); }
+
+        constexpr bool operator == (const Array& other) const
+            { return std::equal(std::begin(a), std::end(a), std::begin(other.a)); }
     private:
         CArray a {};
     };
