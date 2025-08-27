@@ -100,6 +100,16 @@ void loc::Lang::forceLoad()
 }
 
 
+std::string_view loc::Lang::renameAltCodeSv(std::string_view x) const noexcept
+{
+    if (altCodeRename.empty())
+        return x;
+    if (auto q = altCodeRename.find(x); q != altCodeRename.end())
+        return q->second;
+    return x;
+}
+
+
 void loc::Lang::load()
 {
     if (currLang == this)
@@ -343,6 +353,14 @@ namespace {
                     hPunctuation.attribute("range").as_string("~~~~~~"));
         r.punctuation.yearRange = str::toU8sv(
                     hPunctuation.attribute("year-range").as_string("~~~~~~"));
+
+        auto hRename = hLocale.child("rename-altcode");
+        for (auto q : hRename.children("ren")) {
+            std::string src = q.attribute("src").as_string();
+            std::string_view dest = q.attribute("dest").as_string();
+            if (!src.empty() && !dest.empty())
+                r.altCodeRename[std::move(src)] = dest;
+        }
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

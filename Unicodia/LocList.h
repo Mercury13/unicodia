@@ -41,6 +41,11 @@ namespace loc
         FracPolicy policy;
     };
 
+    struct SHash : public std::hash<std::string_view> {
+        using is_transparent = void;
+        using std::hash<std::string_view>::operator ();
+    };
+
     struct Lang final : public loc::Locale
     {
         struct Name {
@@ -104,6 +109,7 @@ namespace loc
         std::unordered_map<char32_t, int> sortOrder;
         CustomRule cardRule;  ///< rule for cardinal forms: 1 crow, 2 crows
         std::unordered_map<char32_t, std::u32string> alphaFixup;
+        std::unordered_map<std::string, std::string, SHash, std::equal_to<>> altCodeRename;
 
         void load();
         void forceLoad();
@@ -111,6 +117,9 @@ namespace loc
         bool hasTriggerLang(std::string_view iso) const;
         bool hasMainLang(std::string_view iso) const;
         const std::string& mainLang() const { return triggerLangs.front(); }
+
+        /// Renames locale of Alt codes for patriotism
+        std::string_view renameAltCodeSv(std::string_view x) const noexcept;
 
         // Locale
         const PluralRule& cardinalRule() const override { return cardRule; }

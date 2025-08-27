@@ -2690,8 +2690,7 @@ namespace {
                                 // commonCode is never CMAP_NO_COMMON, so OK
                                 if (code == 0 || code == commonCode) {
                                     sp3.sep();
-                                    /// @todo [urgent] language renaming
-                                    str::append(sp3.target(), lang);
+                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
                                 }
                             };
                             im.alt.locDos.run(addLang);
@@ -2714,8 +2713,7 @@ namespace {
                                            (unsigned char code, std::string_view lang) {
                                 if (code != 0 && code != commonCode) {
                                     sp3.sep();
-                                    /// @todo [urgent] language renaming
-                                    str::append(sp3.target(), lang);
+                                    str::append(sp3.target(), loc::currLang->renameAltCodeSv(lang));
                                 }
                             };
                             im.alt.locDos.run(addLang);
@@ -2727,8 +2725,7 @@ namespace {
                                     auto& text = sp2.target();
                                     str::append(text, static_cast<int>(code));
                                     text += " (";
-                                    /// @todo [urgent] language renaming
-                                    str::append(text, lang);
+                                    str::append(text, loc::currLang->renameAltCodeSv(lang));
                                     text += ")";
                                 }
                             };
