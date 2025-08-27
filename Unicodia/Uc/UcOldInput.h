@@ -153,7 +153,6 @@ namespace uc {
         EN, RU, EL, TR);
 
     struct AltCode {
-        static constexpr unsigned char NO_COMMON = 1;
         unsigned char dosCommon = 0, win = 0;
         struct LocDos : public ec::Array<unsigned char, DosLang> {
         private:

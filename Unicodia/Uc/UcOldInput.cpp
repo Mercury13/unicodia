@@ -15,8 +15,11 @@
 
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
-using ReverseMap = Cmap<char16_t, unsigned char, 128>;
+using CommonMap = Cmap<char16_t, unsigned char, 128>;
 template class Cmap<char16_t, unsigned char, 128>;
+
+using ReverseMap = DoubleCmap<char16_t, 128>;
+template class DoubleCmap<char16_t, 128>;
 
 constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 1024; }
 
@@ -41,7 +44,7 @@ unsigned char uc::AltCode::LocDos::singleCode() const noexcept
 bool uc::AltCode::LocDos::hasOtherThan(unsigned char x) const noexcept
 {
     for (auto c : *this) {
-        // x is never NO_COMMON, so OK
+        // x is never CMAP_NO_COMMON, so OK
         if (c != 0 && c != x)
             return true;
     }
@@ -602,7 +605,7 @@ namespace {
     #define REV_16(x, y) REV_8(x, y), REV_8((x)+8, (y)+8)
     #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
 
-    constinit const ReverseMap rmDosCommon {{
+    constinit const CommonMap rmDosCommon {{
         { u'☺',  1 }, { u'☻',  2 }, { u'♥',  3 },  { u'♦',  4 },
         { u'♣',  5 }, { u'♠',  6 }, { u'•',  7 },  { u'◘',  8 },
         { u'○',  9 }, { u'◙', 10 }, { u'♂', 11 },  { u'♀', 12 },
@@ -703,7 +706,7 @@ namespace {
             { u'³', 0xFC }, { u'²', 0xFD }
     }};
 
-    constinit const ReverseMap rmWin {{
+    constinit const CommonMap rmWin {{
         { u'€', 128 }, { u'‚', 130 }, { u'ƒ', 131 }, { u'„', 132 },
         { u'…', 133 }, { u'†', 134 }, { u'‡', 135 }, { u'ˆ', 136 },
         { u'‰', 137 }, { u'Š', 138 }, { u'‹', 139 }, { u'Œ', 140 },
@@ -998,11 +1001,11 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         }
     } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
         rmDosCommon.query(cp, r.alt.dosCommon);
-        /// @todo [future] Is it possible to use
-        rmDosEn.query(cp, r.alt.locDos[DosLang::EN]);
-        rmDosRu.query(cp, r.alt.locDos[DosLang::RU]);
-        rmDosEl.query(cp, r.alt.locDos[DosLang::EL]);
-        rmDosTr.query(cp, r.alt.locDos[DosLang::TR]);
+        /// @todo [future] Is it possible to use loop
+        rmDosEn.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EN]);
+        rmDosRu.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::RU]);
+        rmDosEl.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EL]);
+        rmDosTr.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::TR]);
         if (cp <= 0xFF) {     // ISO1
             r.alt.win = cp;
         } else {

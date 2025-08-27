@@ -23,19 +23,19 @@ public:
     static constexpr bool areEqual(const value_type& x, const value_type& y)
         { return x.first == y.first; }
 
-    consteval Cmap() : revMap{}, n(0) {}
+    consteval Cmap() : d{}, n(0) {}
 
     template <size_t N1>
     consteval Cmap(const value_type (&x)[N1]) : n(N1)
     {
         static_assert(N1 <= N);
-        std::copy(std::begin(x), std::end(x), revMap.begin());
-        std::sort(revMap.begin(), revMap.begin() + n, isLess);
+        std::copy(std::begin(x), std::end(x), d.begin());
+        std::sort(d.begin(), d.begin() + n, isLess);
         checkForRepeat();
     }
 
     constexpr size_t size() const { return n; }
-    constexpr iterator begin() const { return revMap.data(); }
+    constexpr iterator begin() const { return d.data(); }
     constexpr iterator cbegin() const { return begin(); }
     constexpr iterator end() const { return begin() + n; }
     constexpr iterator cend() const { return end(); }
@@ -50,11 +50,11 @@ public:
     ///  If k is not found: v intact, returns false
     bool query(K k, V& v) const;
 private:
-    std::array<value_type, N> revMap;
+    std::array<value_type, N> d;
     const size_t n;
 
     constexpr void checkForRepeat() {
-        auto b = revMap.begin();
+        auto b = d.begin();
         auto e = b + n;
         auto v = std::unique(b, e, areEqual);
         assert(v == e);
@@ -94,4 +94,54 @@ bool Cmap<K, V, N>::query(K k, V& v) const
     } else {
         return false;
     }
+}
+
+
+constexpr unsigned char CMAP_NO_COMMON = 1;
+constexpr unsigned char CMAP_LAST_TECH = 1;
+
+
+template <class K, size_t N>
+class DoubleCmap : public Cmap<K, unsigned char, N>
+{
+    using Super = Cmap<K, unsigned char, N>;
+    using typename Super::value_type;
+public:
+    consteval DoubleCmap() {}
+
+    template <size_t N1>
+    consteval DoubleCmap(const value_type (&x)[N1]) : Super(x)
+    {
+        /// @todo [urgent] fill reverse map
+        std::fill(std::begin(revMap), std::end(revMap), K{});
+        for (auto& [k, v] : x) {
+            assert(v >= BASE);
+            revMap[v - BASE] = k;
+        }
+    }
+    ///  If k is found: changes v, returns true
+    ///  If k is not found: v intact, returns false
+    bool query(K k, unsigned char commonValue, unsigned char& v) const;
+private:
+    static_assert(N <= 256);
+    unsigned BASE = 256 - N;
+    K revMap [N];
+};
+
+
+template <class K, size_t N>
+bool DoubleCmap<K, N>::query(K k, unsigned char commonValue, unsigned char& v) const
+{
+    bool r = Super::query(k, v);
+    if (!r) {
+        // Not found
+        if (commonValue >= BASE) {
+            K revKey = revMap[commonValue - BASE];
+            if (revKey != K{} && revKey != k) {
+                v = CMAP_NO_COMMON;
+                return true;
+            }
+        }
+    }
+    return r;
 }

@@ -11,6 +11,7 @@
 // Libs
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+#include "u_Cmap.h"
 
 // Unicode
 #include "UcData.h"
@@ -2686,7 +2687,7 @@ namespace {
                             str::QSep sp3(text, "/");
                             auto addLang = [&sp3, commonCode = im.alt.dosCommon]
                                         (unsigned char code, std::string_view lang) {
-                                // commonCode is never NO_COMMON, so OK
+                                // commonCode is never CMAP_NO_COMMON, so OK
                                 if (code == 0 || code == commonCode) {
                                     sp3.sep();
                                     /// @todo [urgent] language renaming
@@ -2704,7 +2705,7 @@ namespace {
                         str::append(text, static_cast<int>(im.alt.win));
                     }
                     if (needLocale) {
-                        if (auto code = im.alt.locDos.singleCode(); code != 0) {
+                        if (auto code = im.alt.locDos.singleCode(); code > CMAP_LAST_TECH) {
                             sp2.sep();
                             str::append(text, static_cast<int>(code));
                             text += " (";
@@ -2721,7 +2722,7 @@ namespace {
                             text += ")";
                         } else {
                             auto addCode = [&sp2](unsigned char code, std::string_view lang) {
-                                if (code != 0) {
+                                if (code > CMAP_LAST_TECH) {
                                     sp2.sep();
                                     auto& text = sp2.target();
                                     str::append(text, static_cast<int>(code));
