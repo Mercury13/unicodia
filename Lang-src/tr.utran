@@ -10138,7 +10138,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Method of character entry by its code introduced in BIOS (firmware) of IBM PC. NT family of Windows has three types of codes.</p>
+      <p>Method of character entry by its code introduced in BIOS (firmware) of [[po:Ibm|IBM PC]]. NT family of Windows has three types of codes.</p>
       <p />
       <p>'''DOS codes'''</p>
       <p />
@@ -10161,7 +10161,7 @@
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
      <transl>
-      <p>IBM PC’nin BIOS’unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows’un NT ailesi üç tür koda sahiptir.</p>
+      <p>[[po:Ibm|IBM PC]]’nin BIOS’unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows’un NT ailesi üç tür koda sahiptir.</p>
       <p />
       <p>'''DOS kodları'''</p>
       <p />
@@ -14446,7 +14446,7 @@
     <group id="Type">
      <text id="Home">
       <orig>home/educational PC ''(keyboard form factor, BASIC in ROM, supports TV and tape recorder)''</orig>
-      <transl>ev/eğitim bilgisayarı ''(klavye form faktörü, ROM'da BASIC, TV ve teyp kaydediciyi destekler)''</transl>
+      <transl>ev/eğitim bilgisayarı ''(klavye form faktörü, ROM’da BASIC, TV ve teyp kaydediciyi destekler)''</transl>
      </text>
      <text id="Desk">
       <orig>early hobby PC with monitor</orig>
@@ -14542,7 +14542,7 @@
      </text>
      <text id="Gam">
       <orig>game sprites</orig>
-      <transl> oyun grafikleri</transl>
+      <transl>oyun grafikleri</transl>
      </text>
      <text id="Mul">
       <orig>multi-cell graphics</orig>
@@ -14593,13 +14593,13 @@
    <group id="AmstradCpc">
     <text id="Text">
      <orig>Designed to be as luxurious as possible for a home computer, it was the second British home computer after ZX Spectrum. It was not plugged into a TV, instead it came with a monitor.</orig>
-     <transl>Bir ev bilgisayarı için olabildiğince lüks olacak şekilde tasarlanan bu bilgisayar, ZX Spectrum'dan sonra ikinci İngiliz ev bilgisayarıydı. Televizyona bağlı değildi, bunun yerine bir monitörle birlikte geliyordu.</transl>
+     <transl>Bir ev bilgisayarı için olabildiğince lüks olacak şekilde tasarlanan bu bilgisayar, ZX Spectrum’dan sonra ikinci İngiliz ev bilgisayarıydı. Televizyona bağlı değildi, bunun yerine bir monitörle birlikte geliyordu.</transl>
     </text>
    </group>
    <group id="Apple2">
     <text id="Text">
      <orig>Despite the advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but the monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
-     <transl>Macintosh'un (1984) ortaya çıkışına rağmen, mütevazı Apple{{_}}II şirketin gelirinin çoğunu oluşturuyordu. Bir monitörle geliyordu (muhtemelen kısa ömürlü düzenlemeler nedeniyle{{-}} konsollar yakındaki TV setlerinde çok fazla parazite neden oluyordu), ancak monitör, TV gibi kompozit kablo kullanılarak bağlanıyordu (o yıllarda kompozit giriş nadirdi).</transl>
+     <transl>Macintosh’un (1984) ortaya çıkışına rağmen, mütevazı Apple{{_}}II şirketin gelirinin çoğunu oluşturuyordu. Bir monitörle geliyordu (muhtemelen kısa ömürlü düzenlemeler nedeniyle{{-}}konsollar yakındaki TV setlerinde çok fazla parazite neden oluyordu), ancak monitör, TV gibi kompozit kablo kullanılarak bağlanıyordu (o yıllarda kompozit giriş nadirdi).</transl>
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
@@ -14636,7 +14636,7 @@
       <p>A later model had a second Intel CPU, but IBM compatibility was basic{{-}}though it could run several important programs like ''Turbo{{_}}C'', and with memory expansion module even ''WordPerfect''.</p>
      </orig>
      <transl>
-      <p>Acorn Computers tarafından (BBC Micro'dan sonra) ikinci eğitim bilgisayarı olarak geliştirildi. Güzel bir grafiksel işletim sistemine sahipti, ancak birçok farklı nişi hedefleyip hiçbirini tutturamayan tuhaf bir bilgisayardı. Düşük fiyatı ve TV desteği, 8 bit işlemci ve kare olmayan piksele yol açtı ve düşük bellek nedeniyle bilimsel model iptal edildi.</p>
+      <p>Acorn Computers tarafından (BBC Micro’dan sonra) ikinci eğitim bilgisayarı olarak geliştirildi. Güzel bir grafiksel işletim sistemine sahipti, ancak birçok farklı nişi hedefleyip hiçbirini tutturamayan tuhaf bir bilgisayardı. Düşük fiyatı ve TV desteği, 8 bit işlemci ve kare olmayan piksele yol açtı ve düşük bellek nedeniyle bilimsel model iptal edildi.</p>
       <p />
       <p>Daha sonraki bir modelde ikinci bir Intel CPU vardı, ancak IBM uyumluluğu temel düzeydeydi, ancak ''Turbo{{_}}C'' gibi önemli programları ve hatta bellek genişletme modülüyle ''WordPerfect''i çalıştırabiliyordu.</p>
      </transl>
@@ -14645,7 +14645,7 @@
    <group id="C64">
     <text id="Text">
      <orig>Commodore 64, the main American home computer, inherited encoding from the earlier Commodore PET. It put the formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison, IBM CGA had 320×200, 4 colours and no clash cells. Those 16 colours were very drab, making games more realistic.</orig>
-     <transl>Amerika'nın başlıca ev bilgisayarı olan Commodore 64, kodlamayı önceki Commodore PET'ten devralmıştı. Ev bilgisayarlarının "çok renkli, düşük çözünürlüklü" formülünü sınıra kadar zorladı: Oyunlar için ana mod 160x200 piksel, toplam 16 renk ve 4x8 hücre başına 4 renkti. Karşılaştırma için, IBM CGA'nın 320x200 piksel çözünürlüğünde 4 renk ve çakışan hücre yoktu. Bu 16 renk çok donuktu ve oyunları daha gerçekçi kılıyordu.</transl>
+     <transl>Amerika’nın başlıca ev bilgisayarı olan Commodore 64, kodlamayı önceki Commodore PET’ten devralmıştı. Ev bilgisayarlarının "çok renkli, düşük çözünürlüklü" formülünü sınıra kadar zorladı: Oyunlar için ana mod 160×200 piksel, toplam 16 renk ve 4×8 hücre başına 4 renkti. Karşılaştırma için, IBM CGA’nın 320×200 piksel çözünürlüğünde 4 renk ve çakışan hücre yoktu. Bu 16 renk çok donuktu ve oyunları daha gerçekçi kılıyordu.</transl>
     </text>
    </group>
    <group id="CoCo">
@@ -14676,7 +14676,7 @@
       <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in the 2010s). Only portable and special-purpose systems use other architectures.</p>
      </orig>
      <transl>
-      <p>PC, 1980’lerin sonlarında fiili standart haline geldi: 1982’de klonlanmıştı ve yeni modeller giderek daha güçlü hale gelerek eski yazılımlarla uyumluluğunu korudu. Oyunlar başlangıçta zayıftı, ancak VGA (320x200, 256 renk, 1987) ve saf CPU gücü, oldukça güzel oyunları mümkün kıldı{{-}}ve daha da önemlisi, düşük bellek veya grafik hızlandırıcının yetenekleriyle sınırlı olmayan çeşitlilikte oyunlara olanak sağladı.</p>
+      <p>PC, 1980’lerin sonlarında fiili standart haline geldi: 1982’de klonlanmıştı ve yeni modeller giderek daha güçlü hale gelerek eski yazılımlarla uyumluluğunu korudu. Oyunlar başlangıçta zayıftı, ancak VGA (320×200, 256 renk, 1987) ve saf CPU gücü, oldukça güzel oyunları mümkün kıldı{{-}}ve daha da önemlisi, düşük bellek veya grafik hızlandırıcının yetenekleriyle sınırlı olmayan çeşitlilikte oyunlara olanak sağladı.</p>
       <p />
       <p>IBM’in bir diğer güçlü yanı da mükemmel metin kalitesi (sonraki adaptörlerde her biri 9×16 olan 80×25 hücre) ve yerelleştirme kolaylığıydı (tamamen yazılımla yapılıyordu).</p>
       <p />
@@ -14726,7 +14726,7 @@
       <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
      </orig>
      <transl>
-      <p>Mac'in faresi ve mükemmel bir işletim sistemi vardı ve kodlaması [[pt:pseudographics|sahte grafikler]] ile sınırlı değildi, bu yüzden dizgicilerden övgüyle söz ediyordu. "Adobe Photoshop" da dahil olmak üzere çoğu tasarım yazılımı Mac'ten geliyordu. Ancak ilk renkli Mac ancak 1987'de çıktı. Aynı Mac 32 bit oldu.</p>
+      <p>Mac’in faresi ve mükemmel bir işletim sistemi vardı ve kodlaması [[pt:pseudographics|sahte grafikler]] ile sınırlı değildi, bu yüzden dizgicilerden övgüyle söz ediyordu. "Adobe Photoshop" da dahil olmak üzere çoğu tasarım yazılımı Mac’ten geliyordu. Ancak ilk renkli Mac ancak 1987’de çıktı. Aynı Mac 32 bit oldu.</p>
       <p />
       <p>Sistem yazı tiplerinde kullanıcı arayüzü sembolleri standart olmayan konumlardaydı ve "Unicodia"nın yazarı bunların hepsini bulmaya çalıştı.</p>
      </transl>
@@ -14741,7 +14741,7 @@
     </text>
     <text id="MemNote">
      <orig>(classic Motorola 68000, until 1994)</orig>
-     <transl>(klasik Motorola 68000, 1994'e kadar)</transl>
+     <transl>(klasik Motorola 68000, 1994’e kadar)</transl>
     </text>
    </group>
    <group id="Minitel">
@@ -14765,7 +14765,7 @@
    <group id="Oric">
     <text id="Text">
      <orig>Not a successful computer, it was cloned in Yugoslavia (Nova 64) and Bulgaria (Pravetz 8D).</orig>
-     <transl>Başarılı bir bilgisayar olmadı, Yugoslavya'da (Nova 64) ve Bulgaristan'da (Pravetz 8D) klonlandı.</transl>
+     <transl>Başarılı bir bilgisayar olmadı, Yugoslavya’da (Nova 64) ve Bulgaristan’da (Pravetz 8D) klonlandı.</transl>
     </text>
    </group>
    <group id="RiscOs">
@@ -14794,24 +14794,24 @@
       <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
      </orig>
      <transl>
-      <p>ZX Spectrum, İngiltere'nin ana ev bilgisayarıydı: ucuzdu (200 pounddan az) ve çeşitli oyunlar içeriyordu. Grafik hızlandırması yoktu ve en basitleri hariç tüm oyunlar gerçekten yavaştı.</p>
+      <p>ZX Spectrum, İngiltere’nin ana ev bilgisayarıydı: ucuzdu (200 pounddan az) ve çeşitli oyunlar içeriyordu. Grafik hızlandırması yoktu ve en basitleri hariç tüm oyunlar gerçekten yavaştı.</p>
       <p />
       <p>En ilginç hikaye 80’lerin sonlarında başladı: Doğu Bloku’ndaki kendin yapçılar, grafik çipini ayrı mantık kapılarından yeniden oluşturdular ve Spectrum klonları, Windows ve artan gelir [[po:Ibm|IBM uyumlu]] bilgisayarların yaygınlaşmasını sağlayana kadar kısa bir süreliğine xSSCB’nin ana bilgisayarları haline geldi.</p>
      </transl>
     </text>
     <text id="MemNote">
      <orig>(early 16K version was rare, and conversion kit to 48K existed)</orig>
-     <transl>(erken 16K sürümü nadirdi ve 48K'ye dönüştürme kiti mevcuttu)</transl>
+     <transl>(erken 16K sürümü nadirdi ve 48K’ye dönüştürme kiti mevcuttu)</transl>
     </text>
     <text id="SalesNote">
      <orig>(Sinclair’s original)</orig>
-     <transl>(Sinclair'in orijinali)</transl>
+     <transl>(Sinclair’in orijinali)</transl>
     </text>
    </group>
    <group id="SharpMz">
     <text id="Text">
      <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
-     <transl>ROM'da hiçbir programlama dili yoktu ve bu nedenle rakip şirketler tarafından geliştirilen birçok dili barındırıyordu. Ancak kullanıcının bunları kaset veya disketten yüklemesi gerekiyordu.</transl>
+     <transl>ROM’da hiçbir programlama dili yoktu ve bu nedenle rakip şirketler tarafından geliştirilen birçok dili barındırıyordu. Ancak kullanıcının bunları kaset veya disketten yüklemesi gerekiyordu.</transl>
     </text>
     <text id="Unenc">
      <orig>Pac-Man</orig>
@@ -14835,7 +14835,7 @@
    <group id="Trs80">
     <text id="Text">
      <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
-     <transl>Bilgisayar, Tandy'nin elektronik mağaza zinciri RadioShack'te satılıyordu. Radyo parazitlerinden, kötü çalışan kaset arayüzüne kadar birçok doğuştan gelen sorunu vardı. Daha sonraki modellerde disket vardı.</transl>
+     <transl>Bilgisayar, Tandy’nin elektronik mağaza zinciri RadioShack’te satılıyordu. Radyo parazitlerinden, kötü çalışan kaset arayüzüne kadar birçok doğuştan gelen sorunu vardı. Daha sonraki modellerde disket vardı.</transl>
     </text>
    </group>
    <group id="Zx80">

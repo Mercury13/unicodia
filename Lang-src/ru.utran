@@ -10135,7 +10135,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Method of character entry by its code introduced in BIOS (firmware) of IBM PC. NT family of Windows has three types of codes.</p>
+      <p>Method of character entry by its code introduced in BIOS (firmware) of [[po:Ibm|IBM PC]]. NT family of Windows has three types of codes.</p>
       <p />
       <p>'''DOS codes'''</p>
       <p />
@@ -10158,7 +10158,7 @@
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
      <transl>
-      <p>Появившийся в BIOS (прошивке) компьютера IBM PC метод ввода символов по коду. В Windows семейства NT есть три типа кодов.</p>
+      <p>Появившийся в BIOS (прошивке) компьютера [[po:Ibm|IBM PC]] метод ввода символов по коду. В Windows семейства NT есть три типа кодов.</p>
       <p />
       <p>'''Коды DOS'''</p>
       <p />
