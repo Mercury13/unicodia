@@ -38,7 +38,7 @@
 			<fmt shift="6" text="{1}&#160;Mn" frac="prefer" />
 			<fmt shift="9" text="{1}&#160;Mr" frac="prefer" />
 		</imprecise>
-		<moreless less="{1}" more=">{1}" phase="num" />
+		<moreless less="&lt;{1}" more="&gt;{1}" phase="num" />
 		<percent inverse="1" space="1" />
 	</num-format>
 	<cardinal-rules default-outcome="many">
@@ -48,4 +48,5 @@
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
 			range="…" year-range="–" />
+	<rename-altcode />
 </locale>

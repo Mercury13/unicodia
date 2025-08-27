@@ -161,4 +161,5 @@
 	<punctuation key-value-colon="： " uniform-comma="、" semicolon="；"
 			left-paren="（" right-paren="）" indent-ellip="…"
 			range="〜" year-range="〜" />
+	<rename-altcode />
 </locale>

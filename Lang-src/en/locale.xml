@@ -102,7 +102,7 @@
 		<!-- Policy for “over 10k” / “under 10k”
 			 phase: num = raw number,
 			        unit = after application of imprecise’s format -->
-		<moreless less="<{1}" more=">{1}" phase="num" />
+		<moreless less="&lt;{1}" more="&gt;{1}" phase="num" />
 		<!-- Turkish write “%10” 
 				inverse: swap number and %, true/false
 				space: need thin space, true/false
@@ -136,4 +136,8 @@
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
 			range="…" year-range="–" />
+	<!-- Alt codes renaming for patriotism
+			Use for smaller languages that sit in the shadow of a bigger one 
+			and use its encoding, see Ukrainian -->
+	<rename-altcode />
 </locale>
