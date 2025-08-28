@@ -85,6 +85,7 @@ These fonts are taken to Unicodia without author’s consent:
 * Craggy font with missing/trivial tables. Examples: Garay, Tolong Siki
 * Font without license belonging to the author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
 * The author is surely SIL, even if found elsewhere. Example: Toto
+* Incomplete fonts that have only a few fixup characters, if found in requests in TTF form. Example: a few rare CJK chars.
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
 I never rip fonts from Unicode charts, always use TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
