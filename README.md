@@ -24,7 +24,7 @@ Unicodia does not collect data at all, but uses GitHub API for updating.
 * When new original arrived: File → Update data, Go → Find warnings → All.
 * nspk template parameters: 1=language name (or script name, non-localizable), 2=pre-comment (e.g. synonym, localizable).
   * If there’s no {{nspk}} in languages and there’s language data, default {{nspk}} is added automatically. So: {{nspk}} at the end → delete, it’ll be added! Need e.g. synonym → add {{nspk||=Klingon}}. Synonym is the SECOND parameter. See _Script.Mroo_ in English/Russian.
-* To test alphabetic sorting, especially in troublesome languages like Japanese: press Ct+Sh+W and look into Blocks drop-down list (does not work in Sort by tech name). There’s only one telltale, [1] when the 1st character does not belong to the sorting alphabet. All these [1]’s are often mistakes and always signs of attention.
+* To test alphabetic sorting, especially in troublesome languages like Japanese: press Ct+Sh+W and look into Blocks drop-down list (does not work in Sort by tech name). There’s only one telltale, [1] when the 1st character does not belong to the sorting alphabet. These [1]’s are often mistakes and always signs of attention.
 
 ## Language policy
 **Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in English language. Apostrophe is U+2019.
