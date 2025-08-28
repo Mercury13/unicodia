@@ -119,6 +119,7 @@ namespace loc
         const std::string& mainLang() const { return triggerLangs.front(); }
 
         /// Renames locale of Alt codes for patriotism
+        /// @warning  May return x, check its lifetime
         std::string_view renameAltCodeSv(std::string_view x) const noexcept;
 
         // Locale
