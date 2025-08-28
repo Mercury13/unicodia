@@ -228,7 +228,6 @@ namespace uc {
           Z_ARA_1,
           Z_ARA_2,
           Z_ARA_3,
-          Z_ARA_4,
         ARMENIAN,
           Z_ARM_1,
         BALINESE,
