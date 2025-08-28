@@ -10123,7 +10123,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Method of character entry by its code introduced in BIOS (firmware) of IBM PC. NT family of Windows has three types of codes.</p>
+      <p>Method of character entry by its code introduced in BIOS (firmware) of [[po:Ibm|IBM PC]]. NT family of Windows has three types of codes.</p>
       <p />
       <p>'''DOS codes'''</p>
       <p />
@@ -10146,7 +10146,7 @@
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
      <transl>
-      <p>IBM PC’nin BIOS’unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows’un NT ailesi üç tür koda sahiptir.</p>
+      <p>[[po:Ibm|IBM PC]]’nin BIOS’unda (donanım yazılımı) tanıtılan, koduyla karakter girme yöntemi. Windows’un NT ailesi üç tür koda sahiptir.</p>
       <p />
       <p>'''DOS kodları'''</p>
       <p />
