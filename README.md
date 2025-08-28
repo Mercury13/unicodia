@@ -86,7 +86,8 @@ These fonts are taken to Unicodia without author’s consent:
 * Font without license belonging to the author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
 * The author is surely SIL, even if found elsewhere. Example: Toto
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
-* I never rip fonts from Unicode charts, always use TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
+
+I never rip fonts from Unicode charts, always use TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
 
 ## CJK
 **The only person I could ask about ideographs has died. Let these rules be for history, maybe I’ll coin others.**
