@@ -118,7 +118,7 @@ namespace loc
         bool hasMainLang(std::string_view iso) const;
         const std::string& mainLang() const { return triggerLangs.front(); }
 
-        /// Renames locale of Alt codes for patriotism
+        /// Renames locale of Alt codes for patriotism (e.g. ru→uk)
         /// @warning  May return x, check its lifetime
         std::string_view renameAltCodeSv(std::string_view x) const noexcept;
 
