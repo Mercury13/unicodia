@@ -82,9 +82,7 @@
 == Syriac Supplement
 0860..086A: SertoAntochBible_2020_Release
 == Arabic Extended-B
-0870..088E: ScheherazadeNew-Regular
-088F......: UnicodiaFunky
-0890..089F: ScheherazadeNew-Regular
+0870..089F: ScheherazadeNew-Regular
 == Arabic Extended-A
 08A0..08FF: ScheherazadeNew-Regular
 == Devanagari
@@ -641,11 +639,13 @@ FB13..FB17: NotoSerifArmenian-Regular
 FB1D..FB4F: NotoSerifHebrew-Regular
 == Arabic Presentation Forms-A
 FB50..FBC2: NotoNaskhArabic-Regular
-FBC3..FBD2: UFSArabicFixup
+FBC3..FBC5: UFSArabicFixup
+FBC6, FBC7: ScheherazadeNew-Regular
+FBC8..FBD2: UFSArabicFixup
 FBD3..FD3D: NotoNaskhArabic-Regular
 FD3E..FD4F: ScheherazadeNew-Regular
 FD50..FD8F: NotoNaskhArabic-Regular
-FD90, FD91: UFSArabicFixup
+FD90, FD91: ScheherazadeNew-Regular
 FD92..FDC7: NotoNaskhArabic-Regular
 FDC8..FDCE: UFSArabicFixup
 FDCF......: ScheherazadeNew-Regular
@@ -780,11 +780,9 @@ FFFD......: NotoSerif-Regular
 == Yezidi
 10E80..10EB1: NotoSerifYezidi-Regular
 == Arabic Extended-C
-10EC2..10EC4: ScheherazadeNew-Regular
-10EC5, 10EC6: UFSArabicFixup
-10EC7.......: PlangothicP2-Regular
-10ED0..10EFB: UFSArabicFixup
-10EFC..10EFF: ScheherazadeNew-Regular
+10EC2..10ED0: ScheherazadeNew-Regular
+10ED1..10ED8: UFSArabicFixup
+10EFA..10EFF: ScheherazadeNew-Regular
 == Old Sogdian
 10F00..10F27: NotoSansOldSogdian-Regular
 == Sogdian
