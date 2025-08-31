@@ -1092,6 +1092,7 @@ namespace {
     {
         auto r = Super::sectionSizeFromContents(logicalIndex);
         // Why +2: adjust size to multiple of 4, from −1 to +2 dipels
+        // Multiples of 4 = Windows’ standard scales of 1, 1.25, 1.5, 1.75 and 2
         r.setWidth((r.width() + 2) & 0xFFFF'FFFC);
         return r;
     }
