@@ -1091,7 +1091,7 @@ namespace {
     QSize MyVertHeader::sectionSizeFromContents(int logicalIndex) const
     {
         auto r = Super::sectionSizeFromContents(logicalIndex);
-        r.setWidth((r.width() + 3) & 0xFFFFFFC);
+        r.setWidth((r.width() + 3) & 0xFFFF'FFFC);
         return r;
     }
 
@@ -1105,12 +1105,18 @@ namespace {
     {
         if constexpr (NEED_WIDTH_FIXUP) {
             // Set custom header
-            auto defaultSize = x->verticalHeader()->defaultSectionSize();
-            x->setVerticalHeader(new MyVertHeader(Qt::Vertical, x));
-            x->verticalHeader()->setDefaultSectionSize(defaultSize);
+            auto oldH = x->verticalHeader();
+            auto defaultSize = oldH->defaultSectionSize();
+            auto* newH = new MyVertHeader(Qt::Vertical, x);
+            newH->setDefaultSectionSize(defaultSize);
+            newH->setSectionsClickable(true);
+            newH->setHighlightSections(true);
+            newH->setMouseTracking(true);
+            x->setVerticalHeader(newH);
         }
     }
-}
+
+}   // anon namespace
 
 
 FmMain::InitBlocks FmMain::initBlocks()
