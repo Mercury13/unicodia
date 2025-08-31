@@ -1078,9 +1078,46 @@ void FmMain::setCollapseColor(const QColor& x)
 }
 
 
+namespace {
+
+    class MyVertHeader : public QHeaderView
+    {
+        using Super = QHeaderView;
+    public:
+        using Super::Super;
+        QSize sectionSizeFromContents(int logicalIndex) const override;
+    };
+
+    QSize MyVertHeader::sectionSizeFromContents(int logicalIndex) const
+    {
+        auto r = Super::sectionSizeFromContents(logicalIndex);
+        r.setWidth((r.width() + 3) & 0xFFFFFFC);
+        return r;
+    }
+
+#ifdef _WIN32
+    constexpr bool NEED_WIDTH_FIXUP = true;
+#else
+    constexpr bool NEED_WIDTH_FIXUP = true;
+#endif
+
+    void setMyHeader([[maybe_unused]] QTableView* x)
+    {
+        if constexpr (NEED_WIDTH_FIXUP) {
+            // Set custom header
+            auto defaultSize = x->verticalHeader()->defaultSectionSize();
+            x->setVerticalHeader(new MyVertHeader(Qt::Vertical, x));
+            x->verticalHeader()->setDefaultSectionSize(defaultSize);
+        }
+    }
+}
+
+
 FmMain::InitBlocks FmMain::initBlocks()
 {
     InitBlocks r;
+
+    setMyHeader(ui->tableChars);
 
     // Collapse bar
     ui->wiCollapse->hide();
@@ -1253,6 +1290,8 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
 void FmMain::initFavs(const InitBlocks& ib)
 {    
+    setMyHeader(ui->tableFavs);
+
     paintTo(ui->wiFavsBar, ib.buttonColor);
     ui->wiFavsShowcase->enableGoto();
 
