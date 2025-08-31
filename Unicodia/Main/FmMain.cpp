@@ -1091,7 +1091,8 @@ namespace {
     QSize MyVertHeader::sectionSizeFromContents(int logicalIndex) const
     {
         auto r = Super::sectionSizeFromContents(logicalIndex);
-        r.setWidth((r.width() + 3) & 0xFFFF'FFFC);
+        // Why +2: adjust size to multiple of 4, from −1 to +2 dipels
+        r.setWidth((r.width() + 2) & 0xFFFF'FFFC);
         return r;
     }
 
