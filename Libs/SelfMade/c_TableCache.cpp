@@ -202,7 +202,8 @@ void TableCache::paint(
     // Partial drop
     if (fWidget) {  // just for reliability
         // Leave ±N rows, ±M cols in cache
-        enum { LEAVE_ROWS = 15, LEAVE_COLS = 2 };
+        static constexpr unsigned LEAVE_ROWS = 15;
+        static constexpr unsigned LEAVE_COLS = 2;
         if (ir < fFirstRow || ir >= fLastRowPlus) {
             // Back for 1st
             int newFirst = ir;
