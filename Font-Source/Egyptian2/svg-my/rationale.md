@@ -302,11 +302,15 @@ Subtotal: 105
 - 14138: no sun
 - 1413A: no sun
 - 1413B: no sun
+- 1413E: other feather, no double lines, other handle
+- 1413F: per 3E
+- 14140: no double lines
+- 14146: after R22, but true circle
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 286
+Subtotal: 290
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -466,4 +470,4 @@ Subtotal: 149
 
 Subtotal: 1
 
-Total: 541
+Total: 545
