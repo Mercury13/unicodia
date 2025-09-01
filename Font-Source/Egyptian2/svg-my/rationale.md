@@ -311,12 +311,13 @@ Subtotal: 105
 - 14177: not slanted, after 76
 - 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
+- 14183: after 84
 - 14184: thinner “sun”, base for 83
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 295
+Subtotal: 297
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -477,4 +478,4 @@ Subtotal: 150
 
 Subtotal: 1
 
-Total: 551
+Total: 553
