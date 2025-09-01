@@ -306,11 +306,14 @@ Subtotal: 105
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
+- 1414D: bigger uraeus
+- 14176: back after 77
+- 14177: not slanted, after 76
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 290
+Subtotal: 293
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -453,6 +456,7 @@ Subtotal: 290
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
 - 14128: after 2A
+- 1414E: after 4D
 - 14189: 1A + simplified
 - 14196: after 97, pectoral
 - 141A2: after A1
@@ -463,11 +467,11 @@ Subtotal: 290
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 149
+Subtotal: 150
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 545
+Total: 549
