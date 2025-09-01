@@ -258,7 +258,7 @@ Subtotal: 105
 - 13F55: campaign for plans
 - 13F56: campaign for plans
 - 13F57: campaign for plans
-- 13F58: campaign for plans
+- 13F58: campaign for plans: TWO-FORTY
 - 13F59: campaign for plans
 - 13F5B: campaign for plans, consistent
 - 13F5C: campaign for plans, consistent
@@ -298,11 +298,15 @@ Subtotal: 105
 - 140A8: more details
 - 140BF: bull → bubalis
 - 140FC: removed PLACEHOLDERS
+- 14137: no sun
+- 14138: no sun
+- 1413A: no sun
+- 1413B: no sun
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 282
+Subtotal: 286
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -462,4 +466,4 @@ Subtotal: 149
 
 Subtotal: 1
 
-Total: 537
+Total: 541
