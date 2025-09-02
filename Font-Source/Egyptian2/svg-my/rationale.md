@@ -15,8 +15,9 @@ RETURN = temporarily deleted, then returned
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
+- 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 
-Subtotal: 105
+Subtotal: 110
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -321,15 +322,11 @@ Subtotal: 105
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
-- 14224: campaign for bowstrings
-- 14225: campaign for bowstrings
-- 14226: campaign for bowstrings
-- 14227: campaign for bowstrings
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 309
+Subtotal: 305
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -479,14 +476,13 @@ Subtotal: 309
 - 141A2: after A1
 - 141C9: after C8
 - 14203: after 02
-- 14228: campaign for bowstrings
 - 1425B: after 5A
 - 142EA: after EB
 - 142F0: after F1
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 153
+Subtotal: 152
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
