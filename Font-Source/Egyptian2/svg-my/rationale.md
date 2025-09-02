@@ -459,6 +459,7 @@ Subtotal: 297
 - 140FE: after FC
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
+- 1418E: implement somehow badly
 - 14128: after 2A
 - 1414E: after 4D
 - 14189: 1A + simplified
@@ -471,11 +472,11 @@ Subtotal: 297
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 150
+Subtotal: 151
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 553
+Total: 554
