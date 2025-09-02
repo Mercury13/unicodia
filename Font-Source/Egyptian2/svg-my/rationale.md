@@ -313,11 +313,14 @@ Subtotal: 105
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
 - 14184: thinner “sun”, base for 83
+- 141D6: no loop
+- 141D7: same
+- 141E8: redrew for more pronounced “bell”
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 297
+Subtotal: 300
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -479,4 +482,4 @@ Subtotal: 151
 
 Subtotal: 1
 
-Total: 554
+Total: 557
