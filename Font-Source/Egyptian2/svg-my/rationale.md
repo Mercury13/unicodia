@@ -318,7 +318,7 @@ Subtotal: 105
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
 - 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
-- 14202: redrew from scratch; think lines even on small size
+- 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
 - 142B7: strange glitch, deleted almost everything
