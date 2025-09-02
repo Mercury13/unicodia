@@ -317,11 +317,15 @@ Subtotal: 105
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
+- 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
+- 14202: redrew from scratch; think lines even on small size
+- 14212: after 13
+- 14213: flip arrows ↑↓
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 301
+Subtotal: 305
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -470,17 +474,18 @@ Subtotal: 301
 - 14196: after 97, pectoral
 - 141A2: after A1
 - 141C9: after C8
+- 14203: after 02
 - 1425B: after 5A
 - 142EA: after EB
 - 142F0: after F1
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 151
+Subtotal: 152
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 558
+Total: 563

@@ -145,6 +145,7 @@ TEENY = 400
 TINY = 500
 SMALL = 650
 MEDIUM = 800
+BUCKLER = 800
 # Positive = limited by height; negative = limited by width
 ARM = -1000
 SQUARE = -1000
@@ -286,7 +287,7 @@ GLYPH_SIZES = {
     0x14183: MEDWIDE, 0x14184: MEDWIDE,
     0x141B5: WIDE, 0x141B6: EVERYBIT,
     0x141F1: MEDIUM,
-    0x14202: SMALL,
+    0x14202: BUCKLER,
     0x14226: MEDIUM, 0x14227: MEDIUM,
     0x14295: SMALL,
     0x142D8: MEDIUM,
