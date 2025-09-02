@@ -138,26 +138,31 @@ def improveGlyph(glyph, logBad):
     # Correct direction
     return isOk
 
+# General dimensions
 CELLHEIGHT = 1000
 CELLWIDTH = 1100
+BOTTOMHANG = 125
+BEARING = 40
+V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
+# General height-limited (=positive)
 MICROSCOPIC = 320
 TEENY = 400
 TINY = 500
 SMALL = 650
 MEDIUM = 800
+# Special height-limited
 BUCKLER = 800
-# Positive = limited by height; negative = limited by width
-ARM = -1000
+BOWSTRING = 800
+# General width-limited (=negative)
 SQUARE = -1000
-BUBALIS = -1150
-SMALLDONKEY = -1220
 MEDWIDE = -1250
-MEDDONKEY = -1300  # donkey with folded/outstretched legs are somehow equal
 WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
-BOTTOMHANG = 125
-BEARING = 40
-V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
+#Special width-limited
+ARM = -1000
+SMALLDONKEY = -1220
+MEDDONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
+BUBALIS = -1150
 
 GLYPH_SIZES = {
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
@@ -288,7 +293,7 @@ GLYPH_SIZES = {
     0x141B5: WIDE, 0x141B6: EVERYBIT,
     0x141F1: MEDIUM,
     0x14202: BUCKLER,
-    0x14226: MEDIUM, 0x14227: MEDIUM,
+    0x14224: BOWSTRING, 0x14225: BOWSTRING, 0x14226: BOWSTRING, 0x14227: BOWSTRING, 0x14228: BOWSTRING,  # bowstrings
     0x14295: SMALL,
     0x142D8: MEDIUM,
     0x1431B: MEDIUM,
@@ -338,7 +343,7 @@ def glyphSize(cp):
         return WIDE     # snakes, fish, beetles
     if (cp >= 0x1401A) and (cp <= 0x1407A):
         return MEDWIDE     # boats
-    return CELLHEIGHT
+    return -CELLWIDTH  # default CELLWIDTH × CELLHEIGHT
 
 def fixBearings(glyph):
     glyph.left_side_bearing = BEARING
@@ -349,7 +354,7 @@ def fixSize(cp, glyph, svgHeight):
     if (mySize < 0):
         [myWidth, myHeight] = [-mySize, CELLHEIGHT]
     else:
-        [myWidth, myHeight] = [CELLWIDTH, mySize]
+        [myWidth, myHeight] = [-MEDWIDE, mySize] # shrinking → give a bit leeway
     # Get transformation matrix
     mat1 = psMat.translate(0, svgHeight - 800)  # move over baseline
     mat2 = psMat.scale(myHeight / svgHeight) # And now to myHeight
