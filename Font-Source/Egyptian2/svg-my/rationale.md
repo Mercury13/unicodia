@@ -278,7 +278,7 @@ Subtotal: 105
 - 13FCA: campaign for forked booth
 - 13FD7: self-intersections, no beard
 - 13FDB: thinner lines
-- 13FEA: thinner lines
+- 13FEA: thinner lines: TWO-SIXTY
 - 1400A: redrew
 - 140C6: found out that loop was done by adding a white object, but redrew
 - 14018: double lines → thin
@@ -316,11 +316,12 @@ Subtotal: 105
 - 141D6: no loop
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
+- 141F1: redrew from scratch
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 300
+Subtotal: 301
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -482,4 +483,4 @@ Subtotal: 151
 
 Subtotal: 1
 
-Total: 557
+Total: 558
