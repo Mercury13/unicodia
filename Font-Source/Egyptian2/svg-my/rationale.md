@@ -328,11 +328,12 @@ Subtotal: 110
 - 14283: thinner lines
 - 14289: from scratch, 90° left
 - 1428A: removed thing at the end
+- 1428B: these were not harpoons
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 311
+Subtotal: 312
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -497,4 +498,4 @@ Subtotal: 154
 
 Subtotal: 1
 
-Total: 576
+Total: 577
