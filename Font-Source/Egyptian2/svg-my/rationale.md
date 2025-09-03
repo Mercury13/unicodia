@@ -324,7 +324,7 @@ Subtotal: 110
 - 14213: flip arrows ↑↓
 - 14234: smaller handle, bigger blade
 - 14236: no signs of knife
-- 14259: redrew from scratch for thicker line
+- 14259: flipped, redrew from scratch for thicker line instead of double
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
