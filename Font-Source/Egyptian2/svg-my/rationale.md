@@ -482,16 +482,17 @@ Subtotal: 309
 - 141C9: after C8
 - 14203: after 02
 - 1425B: after 5A
+- 142BA: after B7
 - 142EA: after EB
 - 142F0: after F1
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 153
+Subtotal: 154
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 573
+Total: 574
