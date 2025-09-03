@@ -324,11 +324,12 @@ Subtotal: 110
 - 14213: flip arrows ↑↓
 - 14234: smaller handle, bigger blade
 - 14236: no signs of knife
+- 14259: redrew from scratch for thicker line
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 307
+Subtotal: 308
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -491,4 +492,4 @@ Subtotal: 152
 
 Subtotal: 1
 
-Total: 570
+Total: 571
