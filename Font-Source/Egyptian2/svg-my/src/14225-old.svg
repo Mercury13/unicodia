@@ -37,9 +37,9 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.32419146"
-     inkscape:cx="732.59179"
-     inkscape:cy="94.080209"
+     inkscape:zoom="0.64838291"
+     inkscape:cx="518.98345"
+     inkscape:cy="435.69933"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:current-layer="svg1320"
@@ -55,31 +55,17 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="0,800"
-       orientation="0,-1"
-       id="guide2"
-       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
-     style="fill:none;stroke:#613583;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 342.57341,12.757075 C 216.97723,164.42694 108.1405,349.30564 22.842732,525.12268 -25.100983,623.94499 77.08913,670.5556 126.60688,588.53589 176.12462,506.51619 335.85047,32.960209 335.85047,32.960209"
-     id="path2"
-     sodipodi:nodetypes="cssc" />
-  <path
-     style="fill:none;stroke:#613583;stroke-width:50;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 550,774.93677 c 129.17118,0 182.43562,-152.33286 115.73075,-307.72262 C 575.56955,257.1826 462.05373,160.64845 332.75828,36.749609"
-     id="path1" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path2"
-     id="use2"
-     transform="matrix(-1,0,0,1,1100,0)" />
+     style="fill:none;stroke:#613583;stroke-width:50;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="m 550,774.93677 c 129.17118,0 182.43562,-152.33286 115.73075,-307.72262 C 575.56955,257.1826 462.05373,160.64845 332.75828,36.749609 207.1621,188.41947 108.1405,349.30564 22.842732,525.12268 -25.100983,623.94499 77.08913,670.5556 126.60688,588.53589 176.12462,506.51619 337.0573,56.181594 337.0573,56.181594"
+     id="path1"
+     sodipodi:nodetypes="cccssc" />
   <use
      x="0"
      y="0"
      xlink:href="#path1"
-     id="use3"
-     transform="matrix(-1,0,0,1,1100,0)" />
+     id="use1"
+     transform="matrix(-1,0,0,1,1100,0)"
+     style="stroke-width:1.08097" />
 </svg>
