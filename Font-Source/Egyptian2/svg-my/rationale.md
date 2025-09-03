@@ -420,6 +420,7 @@ Subtotal: 308
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABE: after 130F9
+- 13AE9: E8 + feather, baboon
 - 13B0A: after 09
 - 13B65: after 64
 - 13B7B: after other dogs and mace T3
@@ -485,7 +486,7 @@ Subtotal: 308
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 152
+Subtotal: 153
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
