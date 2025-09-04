@@ -280,6 +280,7 @@ Subtotal: 110
 - 13FD7: self-intersections, no beard
 - 13FDB: thinner lines
 - 13FEA: thinner lines: TWO-SIXTY
+- 13FEC: bovid’s ears
 - 1400A: redrew
 - 140C6: found out that loop was done by adding a white object, but redrew
 - 14018: double lines → thin
@@ -333,7 +334,7 @@ Subtotal: 110
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 312
+Subtotal: 313
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -412,6 +413,7 @@ Subtotal: 312
 - 13925: after nearby (23?)
 - 13926: same
 - 13933: after 32
+- 13936: after 13FEC
 - 139AB: after AA
 - 139AF: after A8
 - 139B7: after B8
@@ -491,11 +493,11 @@ Subtotal: 312
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 154
+Subtotal: 155
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 577
+Total: 579
