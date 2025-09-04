@@ -333,11 +333,12 @@ Subtotal: 110
 - 14290: was totally wrong
 - 14291: strip of land
 - 14293: bigger circle
+- 142A2: outlined hoe to filled
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 316
+Subtotal: 317
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -504,4 +505,4 @@ Subtotal: 156
 
 Subtotal: 1
 
-Total: 583
+Total: 584
