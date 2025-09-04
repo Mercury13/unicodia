@@ -320,6 +320,7 @@ GLYPH_SIZES = {
     0x143D4: MEDWIDE, 0x143D5: MEDIUM,
     0x143E0: SMALL,
     0x143EE: MEDIUM,
+    0x143F5: WIDE,
 }
 
 def glyphSize(cp):
