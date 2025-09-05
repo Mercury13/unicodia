@@ -345,9 +345,11 @@ Subtotal: 110
 - 14329: other thing inside
 - 1432B: consistency
 - 1432C: consistency
+- 14366: poles → hands
+- 1437B: double line → single
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 326
+Subtotal: 328
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -516,4 +518,4 @@ Subtotal: 158
 
 Subtotal: 1
 
-Total: 595
+Total: 597
