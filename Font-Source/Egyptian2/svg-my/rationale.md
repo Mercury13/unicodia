@@ -343,9 +343,11 @@ Subtotal: 110
 - 142EB: changed top of column
 - 142FD: redrew from scratch, tall potter’s wheel
 - 14329: other thing inside
+- 1432B: consistency
+- 1432C: consistency
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 324
+Subtotal: 326
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -503,14 +505,15 @@ Subtotal: 324
 - 142EA: after EB
 - 142F0: after F1
 - 142FE: after FD
+- 1432A: after 2B/2C
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 157
+Subtotal: 158
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 592
+Total: 595
