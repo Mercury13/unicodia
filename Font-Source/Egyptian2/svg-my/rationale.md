@@ -337,11 +337,13 @@ Subtotal: 110
 - 142A2: outlined hoe to filled
 - 142A7: 3×3, no “handle”
 - 142AF: 4 lines, filled
+- 142B0: more details, filled
 - 142B7: strange glitch, deleted almost everything
+- 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 320
+Subtotal: 322
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -508,4 +510,4 @@ Subtotal: 156
 
 Subtotal: 1
 
-Total: 587
+Total: 589
