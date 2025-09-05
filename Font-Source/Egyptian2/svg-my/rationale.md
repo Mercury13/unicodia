@@ -341,9 +341,10 @@ Subtotal: 110
 - 142B7: strange glitch, deleted almost everything
 - 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
+- 142FD: redrew from scratch, tall potter’s wheel
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 322
+Subtotal: 323
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -500,14 +501,15 @@ Subtotal: 322
 - 142BA: after B7
 - 142EA: after EB
 - 142F0: after F1
+- 142FE: after FD
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 156
+Subtotal: 157
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 589
+Total: 591
