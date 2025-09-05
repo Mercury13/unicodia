@@ -335,11 +335,12 @@ Subtotal: 110
 - 14293: bigger circle
 - 1429C: mirrored
 - 142A2: outlined hoe to filled
+- 142A7: 3×3, no “handle”
 - 142B7: strange glitch, deleted almost everything
 - 142EB: changed top of column
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 318
+Subtotal: 319
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -506,4 +507,4 @@ Subtotal: 156
 
 Subtotal: 1
 
-Total: 585
+Total: 586
