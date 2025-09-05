@@ -348,8 +348,9 @@ Subtotal: 110
 - 14366: poles → hands
 - 1437B: double line → single
 - 14386: removed PLACEHOLDERS
+- 1438E: thinner, redrew from scratch
 
-Subtotal: 328
+Subtotal: 329
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -518,4 +519,4 @@ Subtotal: 158
 
 Subtotal: 1
 
-Total: 597
+Total: 598
