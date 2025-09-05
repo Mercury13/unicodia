@@ -52,9 +52,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.78771695"
-     inkscape:cx="351.64916"
-     inkscape:cy="314.19915"
+     inkscape:zoom="1.5754339"
+     inkscape:cx="375.76949"
+     inkscape:cy="117.11059"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:current-layer="svg3564"
@@ -103,9 +103,9 @@
        id="guide9"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="353.46045,626.51441"
+       position="351.55621,612.43259"
        orientation="0,-1"
-       id="guide10"
+       id="guide1"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <path
@@ -121,15 +121,9 @@
      ry="249.55116" />
   <path
      style="fill:none;stroke:#613583;stroke-width:40;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="m 207.36087,161.57989 -44.88331,-138.0943 190.98289,0"
+     d="m 212.18554,161.43076 -48.37688,-123.863345 189.65179,-5e-6"
      id="path10"
      sodipodi:nodetypes="ccc" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path10"
-     id="use10"
-     transform="matrix(-1,0,0,1,706.9209,0)" />
   <path
      style="fill:none;stroke:#613583;stroke-width:50;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
      d="M 0,269.91525 H 705.08474"
@@ -140,4 +134,10 @@
      xlink:href="#path11"
      id="use11"
      transform="translate(0,181.77967)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path10"
+     id="use1"
+     transform="matrix(-1,0,0,1,706.9209,0)" />
 </svg>
