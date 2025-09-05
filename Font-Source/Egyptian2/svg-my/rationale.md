@@ -342,9 +342,10 @@ Subtotal: 110
 - 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
 - 142FD: redrew from scratch, tall potter’s wheel
+- 14329: other thing inside
 - 14386: removed PLACEHOLDERS
 
-Subtotal: 323
+Subtotal: 324
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -512,4 +513,4 @@ Subtotal: 157
 
 Subtotal: 1
 
-Total: 591
+Total: 592
