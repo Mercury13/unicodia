@@ -333,6 +333,7 @@ Subtotal: 110
 - 14290: was totally wrong
 - 14291: strip of land
 - 14293: bigger circle
+- 14296: dislike vessel
 - 1429C: mirrored
 - 142A2: outlined hoe to filled
 - 142A7: 3×3, no “handle”
@@ -367,7 +368,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 346
+Subtotal: 347
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -521,6 +522,7 @@ Subtotal: 346
 - 14203: after 02
 - 1425B: after 5A
 - 14292: after 90 and others
+- 14297: after 96
 - 142BA: after B7, BEFORE campaign for drills
 - 142C2: campaign for drills
 - 142C5: campaign for drills
@@ -533,11 +535,11 @@ Subtotal: 346
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 162
+Subtotal: 163
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 619
+Total: 621
