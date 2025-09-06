@@ -516,7 +516,7 @@ Subtotal: 341
 - 14203: after 02
 - 1425B: after 5A
 - 14292: after 90 and others
-- 142BA: after B7, campaign for drills
+- 142BA: after B7, BEFORE campaign for drills
 - 142C2: campaign for drills
 - 142C5: campaign for drills
 - 142EA: after EB
