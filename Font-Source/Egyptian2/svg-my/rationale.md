@@ -343,6 +343,8 @@ Subtotal: 110
 - 142C1: campaign for drills
 - 142C3: filled end, campaign for drills
 - 142C4: campaign for drills
+- 142C7: campaign for drills
+- 142C8: campaign for drills
 - 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
 - 142F6: square prongs, thicker rope
@@ -358,7 +360,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 337
+Subtotal: 339
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -514,6 +516,7 @@ Subtotal: 337
 - 14292: after 90 and others
 - 142BA: after B7, campaign for drills
 - 142C2: campaign for drills
+- 142C5: campaign for drills
 - 142EA: after EB
 - 142F0: after F1
 - 142FE: after FD
@@ -521,11 +524,11 @@ Subtotal: 337
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 159
+Subtotal: 160
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 607
+Total: 610
