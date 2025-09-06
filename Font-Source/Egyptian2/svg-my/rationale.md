@@ -350,8 +350,9 @@ Subtotal: 110
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
+- 143CE: wider but lower, redrew from scratch
 
-Subtotal: 330
+Subtotal: 331
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -520,4 +521,4 @@ Subtotal: 158
 
 Subtotal: 1
 
-Total: 599
+Total: 600

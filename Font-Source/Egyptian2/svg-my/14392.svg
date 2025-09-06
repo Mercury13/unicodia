@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="0.53386562"
-     inkscape:cx="357.76793"
-     inkscape:cy="562.87573"
+     inkscape:zoom="0.53386561"
+     inkscape:cx="470.15578"
+     inkscape:cy="431.7566"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -46,17 +46,17 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="1046.3576,558.9404"
+       position="1030.4636,554.96687"
        orientation="0,-1"
        id="guide4"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="329.99529,558.9404"
+       position="330.80468,558.9404"
        orientation="1,0"
        id="guide6"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="639.99067,558.9404"
+       position="639.1445,558.9404"
        orientation="1,0"
        id="guide7"
        inkscape:locked="false" />
@@ -69,6 +69,6 @@
   <path
      id="path3"
      style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#000000;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-     d="M 309.22461,-0.00195313 V 144.30859 H 154.99805 v 147.9668 H 0 v 148.49609 h 0.00390625 v 30.20508 L 226.81055,1000.2891 h 516.3789 L 969.99609,470.97656 v -30.20508 h -0.01 V 292.27539 H 814.21875 V 144.30859 H 659.2207 V -0.00195313 Z m 40,40.00000013 H 619.2207 V 144.30859 H 349.22461 Z M 194.99805,184.30859 h 269.22461 v 107.9668 H 194.99805 Z m 309.99414,0 h 269.22656 v 107.9668 H 504.99219 Z M 40,332.27539 H 309.99609 V 440.77148 H 40 Z m 309.99609,0 H 619.99023 V 440.77148 H 349.99609 Z m 309.99414,0 h 269.9961 V 440.77148 H 659.99023 Z M 47.71875,480.77148 h 874.5625 l -205.4707,479.51758 h -463.6211 z"
-     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+     d="M 307.53906,-0.171875 V 148.28711 H 154.13477 V 296.74414 H -0.03515625 V 478.14453 L 226.49219,1000.0859 H 743.67773 L 970.20703,478.14453 969.98438,296.57617 H 815.04883 V 148.11719 H 660.87891 V -0.171875 Z m 45,45 H 615.87891 V 148.11719 l -263.33985,0.16992 z M 507.47461,193.11719 H 770.04883 V 296.57617 H 507.47461 Z m -308.33984,0.16992 h 262.57421 v 103.28906 l -262.57421,0.16797 z M 353.30469,341.57617 H 616.64453 V 444.98242 H 353.30469 Z m 308.33984,0 H 924.98438 V 444.98242 H 661.64453 Z M 44.964844,341.74414 H 308.30469 V 444.98242 H 44.964844 Z m 9.193359,148.23828 H 916.01367 L 714.15234,955.08594 H 256.01758 Z"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccc" />
 </svg>
