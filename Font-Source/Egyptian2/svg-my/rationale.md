@@ -348,6 +348,7 @@ Subtotal: 110
 - 142C9: bolder feather, concentric, campaign for drills
 - 142CF: campaign for drills
 - 142D0: wrong head, filled end, campaign for drills
+- 142D2: concentric, campaign for drills
 - 142D7: filled end, campaign for drills
 - 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
@@ -364,7 +365,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 343
+Subtotal: 344
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -535,4 +536,4 @@ Subtotal: 160
 
 Subtotal: 1
 
-Total: 614
+Total: 615
