@@ -319,7 +319,7 @@ Subtotal: 110
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
-- 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
+- 141F3: redrew from scratch; it’s a cloth rather than a room with uraei: THREE HUNDRED
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
@@ -345,6 +345,7 @@ Subtotal: 110
 - 142C4: campaign for drills
 - 142C7: campaign for drills
 - 142C8: campaign for drills
+- 142CF: campaign for drills
 - 142E3: added heart, changed to solid lines
 - 142EB: changed top of column
 - 142F6: square prongs, thicker rope
@@ -360,7 +361,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 339
+Subtotal: 340
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -531,4 +532,4 @@ Subtotal: 160
 
 Subtotal: 1
 
-Total: 610
+Total: 611
