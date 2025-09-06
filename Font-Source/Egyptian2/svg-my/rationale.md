@@ -524,6 +524,8 @@ Subtotal: 346
 - 142BA: after B7, BEFORE campaign for drills
 - 142C2: campaign for drills
 - 142C5: campaign for drills
+- 142D1: campaign for drills
+- 142D6: campaign for drills
 - 142EA: after EB
 - 142F0: after F1
 - 142FE: after FD
@@ -531,11 +533,11 @@ Subtotal: 346
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 160
+Subtotal: 162
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 617
+Total: 619
