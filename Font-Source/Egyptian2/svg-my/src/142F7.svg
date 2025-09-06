@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.83888889"
-     inkscape:cx="267.01987"
-     inkscape:cy="411.8543"
+     inkscape:zoom="0.59318402"
+     inkscape:cx="185.43992"
+     inkscape:cy="304.29006"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -48,13 +48,13 @@
      id="path2"
      sodipodi:nodetypes="cc" />
   <path
-     style="fill:none;stroke:#813d9c;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;stroke:#813d9c;stroke-width:35;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="m 550.00002,520.84942 v -70.8494"
      id="path3"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#613583;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 550.00002,450.00002 h -52.91393 c 7.16472,-39.19526 22.56922,-83.57594 52.91393,-114.34211"
+     d="M 549.4252,449.74197 H 480.49676 C 489.8299,400.23961 509.8966,344.18823 549.4252,305.33154"
      id="path4"
      sodipodi:nodetypes="ccc" />
   <use
@@ -62,5 +62,5 @@
      y="0"
      xlink:href="#path4"
      id="use4"
-     transform="matrix(-1,0,0,1,1100,0)" />
+     transform="matrix(-1,0,0,1,1099.4252,0)" />
 </svg>
