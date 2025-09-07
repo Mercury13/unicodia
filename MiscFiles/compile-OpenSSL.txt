@@ -1,4 +1,5 @@
 https://github.com/kzalewski/openssl-1.1.1
+https://github.com/dtechsrv/openssl-1.1.1 (1 patch ahead as of Sep 2025)
 
 Run MSYS (!!! CMD does not work)
 
