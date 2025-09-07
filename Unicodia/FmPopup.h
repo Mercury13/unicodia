@@ -50,9 +50,6 @@ protected slots:
 };
 
 
-class QScreen;
-
-
 template <class Wi, class ... Args>
 Wi& ensure(std::unique_ptr<Wi>& x, Args&& ... args)
 {
