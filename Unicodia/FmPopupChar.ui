@@ -74,6 +74,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QLabel" name="lbCode">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
               <property name="text">
                <string>[lbCode]</string>
               </property>
