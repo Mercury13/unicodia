@@ -29,6 +29,7 @@ protected:
         int start = -1;
         qsizetype length = 0;
 
+        // Let it be this way: C++17 instead of 20, probably for older MinGW
         bool operator == (const Selection& x) const { return (start == x.start && length == x.length); }
         bool operator != (const Selection& x) const { return !operator == (x); }
     };
