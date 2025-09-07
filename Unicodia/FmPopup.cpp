@@ -125,53 +125,6 @@ FmPopup& FmPopup::setText(const QString& x)
 }
 
 
-FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
-{
-    if (!widget)
-        throw std::invalid_argument("[FmPopup.popupAtAbs] Widget should be non-null!");
-    fLastAbsRect = absRect;
-    fLastWidget = widget;
-    auto screen = QApplication::screenAt(absRect.center());
-    if (!screen) {
-        screen = widget->screen();
-        if (!screen)
-            screen = QApplication::primaryScreen();
-    }
-    popupAtScreen(screen, absRect);
-    return *this;
-}
-
-
-FmPopup& FmPopup::popupAtAbsBacked(QWidget* widget, const QRect& absRect)
-{
-    if (widget) {
-        return popupAtAbs(widget, absRect);
-    } else {
-        return popupAtAbs(fLastWidget, fLastAbsRect);
-    }
-}
-
-
-FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
-{
-    if (rect) {
-        return popupAtAbs(widget, QRect(
-                    widget->mapToGlobal(rect->topLeft()), rect->size()));
-    } else if (!widget) {
-        return popupAtAbs(fLastWidget, fLastAbsRect);
-    } else {
-        return popup(widget);
-    }
-}
-
-
-FmPopup& FmPopup::popup(QWidget* widget)
-{
-    return popupAtAbs(widget, QRect(
-                widget->mapToGlobal(QPoint(0, 0)), widget->size()));
-}
-
-
 void FmPopup::focusOutEvent(QFocusEvent* ev)
 {
     Super::focusOutEvent(ev);

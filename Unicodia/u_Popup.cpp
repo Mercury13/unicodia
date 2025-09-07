@@ -106,3 +106,18 @@ void pop::popupAtScreen(
         popupAtY(me, absRect, ownerRect, screenRect, myY);
     }
 }
+
+
+QScreen* pop::findScreen(QWidget* widget, const QRect& absRect)
+{
+    // By coords
+    if (auto screen = QApplication::screenAt(absRect.center())) {
+        return screen;
+    }
+    // By widget
+    if (auto screen = widget->screen()) {
+        return screen;
+    }
+    // Somehow
+    return QApplication::primaryScreen();
+}

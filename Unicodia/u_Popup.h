@@ -33,6 +33,7 @@ namespace pop {
             const QRect& screenRect);
     void popupAtScreen(
             QWidget* me, QWidget* owner, QScreen* screen, const QRect& absRect);
+    QScreen* findScreen(QWidget* widget, const QRect& absRect);
 
     constexpr int RIGHT_MARGIN = 8;
     constexpr int LEFT_MARGIN = 1;
@@ -48,6 +49,26 @@ public:
 
     const QRect& lastAbsRect() const { return fLastAbsRect; }
     QWidget* lastWidget() const { return fLastWidget; }
+
+    Me& popupAtAbs(QWidget* widget, const QRect& absRect)
+    {
+        if (!widget)
+            throw std::invalid_argument("[MxPopup.popupAtAbs] Widget should be non-null!");
+        fLastAbsRect = absRect;
+        fLastWidget = widget;
+        auto screen = pop::findScreen(widget, absRect);
+        popupAtScreen(screen, absRect);
+        return *mee();
+    }
+
+    Me& popupAtAbsBacked(QWidget* widget, const QRect& absRect)
+    {
+        if (widget) {
+            return popupAtAbs(widget, absRect);
+        } else {
+            return popupAtAbs(fLastWidget, fLastAbsRect);
+        }
+    }
 
 protected:
     QWidget* const fOwner;
@@ -79,6 +100,26 @@ protected:
         adjustAfterPopup();
         return *mee();
     }
+
+    void popup(QWidget* widget)
+    {
+        popupAtAbs(widget, QRect(
+                   widget->mapToGlobal(QPoint(0, 0)), widget->size()));
+    }
+
+    void popup(QWidget* widget, TinyOpt<QRect> rect)
+    {
+        if (rect) {
+            popupAtAbs(widget, QRect(
+                        widget->mapToGlobal(rect->topLeft()), rect->size()));
+        } else if (!widget) {
+            popupAtAbs(fLastWidget, fLastAbsRect);
+        } else {
+            popup(widget);
+        }
+    }
+
+
 };
 
 

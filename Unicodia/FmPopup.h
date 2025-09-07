@@ -70,10 +70,6 @@ class FmPopup : public QWidget, public MxPopup<FmPopup>
 public:
     FmPopup(QWidget* owner, const char* color);
     ~FmPopup() override = default;
-    FmPopup& popupAtAbs(QWidget* widget, const QRect& absRect);
-    FmPopup& popupAtAbsBacked(QWidget* widget, const QRect& absRect);
-    FmPopup& popup(QWidget* widget, TinyOpt<QRect> rect);
-    FmPopup& popup(QWidget* widget);
     FmPopup& setText(const QString& x);
 
     ClickableLabel* viewport() const { return lbText; }
