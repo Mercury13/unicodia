@@ -97,13 +97,21 @@ namespace mywiki {
     class Gui    // interface
     {
     public:
-        /// @param [in] widget     Widget who initiated copying, NEVER null
+        /// @param [in] widget     Widget who initiated popping up, NEVER null
         /// @param [in] absRect    Absolute (in desktop coords) rectangle
         ///                         that encloses link
         ///                         Window will shun this rectangle if possible
         /// @param [in] text       QHTML of popup window
         virtual void popupAtAbs(
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
+
+        /// @param [in] widget     Widget who initiated popping up, NEVER null
+        /// @param [in] absRect    Absolute (in desktop coords) rectangle
+        ///                         that encloses link
+        ///                         Window will shun this rectangle if possible
+        /// @param [in] cp         Code point
+        virtual void popupCharAbs(
+                QWidget* widget, const QRect& absRect, const uc::Cp& cp) = 0;
 
         /// Copies text to clipboard, writes “Copied”
         /// @param [in] widget     Widget who initiated copying, NEVER null
@@ -130,6 +138,10 @@ namespace mywiki {
         void popupAtRelMaybe(
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& html);
         void popupAtWidget(QWidget* widget, const QString& html);
+        void popupCharRel(
+                QWidget* widget, const QRect& relRect, const uc::Cp& cp);
+        void popupCharWidget(
+                QWidget* widget, const uc::Cp& cp);
         void copyTextRel(
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text,
                 LocKey locKey);

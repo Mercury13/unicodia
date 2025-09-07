@@ -4,8 +4,10 @@
 // Project-local
 #include "u_Popup.h"
 
+#include "UcAutoDefines.h"
+
 FmPopupChar::FmPopupChar(QWidget *parent) :
-    QWidget(parent, WF_POPUP),
+    Super(parent),
     ui(new Ui::FmPopupChar)
 {
     ui->setupUi(this);
@@ -14,4 +16,14 @@ FmPopupChar::FmPopupChar(QWidget *parent) :
 FmPopupChar::~FmPopupChar()
 {
     delete ui;
+}
+
+auto FmPopupChar::setCp(const uc::Cp& cp) -> This&
+{
+    /// @todo [urgent] setCp: what to do?
+    char buf[30];
+    snprintf(buf, std::size(buf), "U+%04X", cp.subj.uval());
+    ui->lbCode->setText(buf);
+
+    return *this;
 }

@@ -121,7 +121,7 @@ QScreen* pop::findScreen(QWidget* widget, const QRect& absRect)
 
 
 WiPopup::WiPopup(QWidget* aOwner)
-    : QWidget(aOwner, WF_POPUP), fOwner(aOwner)
+    : Super(aOwner, WF_POPUP), fOwner(aOwner)
 {
     if (!aOwner)
         throw std::invalid_argument("[WiPopup] Need owner widget");
@@ -134,4 +134,17 @@ void WiPopup::adjustAfterPopup()
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
         setFocus();
     }
+}
+
+void WiPopup::focusOutEvent(QFocusEvent* ev)
+{
+    Super::focusOutEvent(ev);
+    hide();
+}
+
+
+void WiPopup::mouseReleaseEvent(QMouseEvent* ev)
+{
+    Super::mouseReleaseEvent(ev);
+    hide();
 }

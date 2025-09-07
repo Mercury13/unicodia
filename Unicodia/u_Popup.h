@@ -43,6 +43,8 @@ namespace pop {
 
 class WiPopup : public QWidget
 {
+private:
+    using Super = QWidget;
 public:
     WiPopup(QWidget* aOwner);
 
@@ -90,6 +92,9 @@ protected:
     QWidget* const fOwner;
     QRect fLastAbsRect;
     QWidget* fLastWidget;
+
+    void focusOutEvent(QFocusEvent*) override;
+    void mouseReleaseEvent(QMouseEvent*) override;
 
     virtual void mySetFocus() {}
 

@@ -43,6 +43,7 @@
 // Unicode
 #include "UcClipboard.h"
 #include "UcSkin.h"
+#include "UcCp.h"
 
 // Search
 #include "Search/request.h"
@@ -1253,7 +1254,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
         auto wi = new WiLibCp(ui->wiLibCps);
         layout->addWidget(wi);
         libCpWidgets[i] = wi;
-        connect(wi, &WiLibCp::goToCp, this, &This::gotoCp);
+        connect(wi, &WiLibCp::goToCp, this, &This::popupCp);
     }
     layout->addStretch(1);
 
@@ -2198,6 +2199,15 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
         ui->tableFavs->setFocus();
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
+}
+
+
+void FmMain::popupCp(QWidget* initiator, char32_t cp)
+{
+    if (cp >= cp::MAX_NONPRIVATE)
+        return;
+    if (auto what = uc::cpsByCode[cp])
+        mainGui.popupCharWidget(initiator, *what);
 }
 
 

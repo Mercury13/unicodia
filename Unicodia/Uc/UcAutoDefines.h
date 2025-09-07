@@ -180,12 +180,12 @@ namespace uc {
     {
     public:
         consteval Int3(int32_t x) : lo(x), med(x >> 8), hi(x >> 16) {}
-        constexpr int32_t val() const
-            { return (static_cast<int32_t>(hi) << 16) | (med << 8) | lo; }
-        constexpr operator int32_t() const { return val(); }
-        constexpr uint32_t uval() const
-            { return (static_cast<uint32_t>(hi) << 16) | (med << 8) | lo; }
-        constexpr operator uint32_t() const { return uval(); }
+        constexpr int val() const
+            { return (static_cast<int>(hi) << 16) | (med << 8) | lo; }
+        constexpr operator int() const { return val(); }
+        constexpr unsigned uval() const
+            { return (static_cast<unsigned>(hi) << 16) | (med << 8) | lo; }
+        constexpr operator unsigned() const { return uval(); }
 
         constexpr operator char32_t() const { return val(); }
         constexpr char32_t ch32() const { return val(); }

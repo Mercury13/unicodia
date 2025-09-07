@@ -4,6 +4,7 @@
 
 class FmMessage;
 class FmPopup2;
+class FmPopupChar;
 
 template <class T>
 class Uptr
@@ -39,6 +40,8 @@ public:
 
     void popupAtAbs(
             QWidget* widget, const QRect& absRect, const QString& html) override;
+    void popupCharAbs(
+            QWidget* widget, const QRect& absRect, const uc::Cp& cp) override;
     FontSource& fontSource() override { return fFontSource; }
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text,
@@ -63,6 +66,7 @@ private:
     FontSource& fFontSource;
     mywiki::InternalLinkWalker& fInternalWalker;
     Uptr<FmPopup2> popup;
+    Uptr<FmPopupChar> popupChar;
     Uptr<FmMessage> fmMessage;
 private slots:
     void popupLinkActivated(const QString& link);
@@ -80,6 +84,8 @@ public:
     PopupGui(MyGui& aOwner) : owner(aOwner) {}
     void popupAtAbs(
             QWidget* widget, const QRect& absRect, const QString& html) override;
+    void popupCharAbs(
+            QWidget* widget, const QRect& absRect, const uc::Cp& cp) override;
     FontSource& fontSource() override;
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text,

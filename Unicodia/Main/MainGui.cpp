@@ -10,6 +10,7 @@
 #include "Skin.h"
 #include "FmPopup.h"
 #include "FmMessage.h"
+#include "FmPopupChar.h"
 
 // L10n
 #include "LocDic.h"
@@ -87,6 +88,15 @@ void MyGui::popupAtAbs(
 }
 
 
+void MyGui::popupCharAbs(
+        QWidget* widget, const QRect& absRect, const uc::Cp& cp)
+{
+    popupChar.ensure(this->wiMain)
+             .setCp(cp)
+             .popupAtAbsBacked(widget, absRect);
+}
+
+
 void MyGui::copyTextAbs(
         QWidget* widget, const QRect& absRect, const QString& text,
         LocKey locKey)
@@ -125,6 +135,20 @@ void PopupGui::popupAtAbs(
     }
     // otherwise
     owner.popupAtAbs(widget, absRect, html);
+}
+
+void PopupGui::popupCharAbs(
+        QWidget* widget, const QRect& absRect, const uc::Cp& cp)
+{
+    if (owner.popup) {
+        if (auto wi = owner.popup->lastWidget()) {
+            auto rect = owner.popup->lastAbsRect();
+            owner.popupCharAbs(wi, rect, cp);
+            return;
+        }
+    }
+    // otherwise
+    owner.popupCharAbs(widget, absRect, cp);
 }
 
 FontSource& PopupGui::fontSource() { return owner.fontSource(); }

@@ -63,6 +63,15 @@ void mywiki::Gui::popupAtRel(
 }
 
 
+void mywiki::Gui::popupCharRel(
+        QWidget* widget, const QRect& relRect, const uc::Cp& cp)
+{
+    popupCharAbs(widget,
+                 QRect{ widget->mapToGlobal(relRect.topLeft()), relRect.size() },
+                 cp);
+}
+
+
 void mywiki::Gui::copyTextRel(
         QWidget* widget, const TinyOpt<QRect> relRect, const QString& text,
         LocKey locKey)
@@ -80,6 +89,13 @@ void mywiki::Gui::popupAtWidget(
         QWidget* widget, const QString& html)
 {
     popupAtRel(widget, widget->rect(), html);
+}
+
+
+void mywiki::Gui::popupCharWidget(
+        QWidget* widget, const uc::Cp& cp)
+{
+    popupCharRel(widget, widget->rect(), cp);
 }
 
 

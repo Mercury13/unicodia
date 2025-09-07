@@ -359,6 +359,7 @@ private slots:
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
+    void popupCp(QWidget* initiator, char32_t cp);
 
     bool goToNode(const uc::LibNode& node);
     void startUpdate();

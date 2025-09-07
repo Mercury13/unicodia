@@ -75,9 +75,6 @@ public:
     ClickableLabel* viewport() const { return lbText; }
     void deselectLink();
     void mySetFocus() override;
-protected:
-    void focusOutEvent(QFocusEvent*) override;
-    void mouseReleaseEvent(QMouseEvent*) override;
 private:
     ClickableLabel* lbText;    
     class QVBoxLayout* layout;
