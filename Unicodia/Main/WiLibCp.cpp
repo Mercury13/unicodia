@@ -3,6 +3,7 @@
 
 // Qt
 #include <QPainter>
+#include <QMouseEvent>
 
 // Unicode
 #include "UcData.h"
@@ -34,7 +35,6 @@ void WiCpImage::setCp(const uc::Cp* x, const uc::GlyphStyleSets& y)
         cp = x;
         glyphSets = &y;
         if (cp) {
-            /// @todo [urgent] Should act exactly like label
             setCursor(Qt::PointingHandCursor);
             //setToolTip(cp->viewableName());
         } else {
@@ -57,6 +57,25 @@ void WiCpImage::setCp(char32_t x, const uc::GlyphStyleSets& y)
 }
 
 
+void WiCpImage::mousePressEvent(QMouseEvent *event)
+{
+    isLeftButton = (event->button() == Qt::LeftButton);
+}
+
+
+void WiCpImage::mouseReleaseEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton) {
+        if (isLeftButton        // really left button
+                && rect().contains(event->pos())) {   // released within
+            // Let it be this way: if some button has erroneously stuck → OK
+            emit clicked();
+        }
+    }
+    isLeftButton = false;
+}
+
+
 ///// WiLibCp //////////////////////////////////////////////////////////////////
 
 WiLibCp::WiLibCp(QWidget *parent) :
@@ -65,6 +84,7 @@ WiLibCp::WiLibCp(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->lbCode, &QLabel::linkActivated, this, &This::linkActivated);
+    connect(ui->wiImage, &WiCpImage::clicked, this, &This::linkActivated);
 }
 
 WiLibCp::~WiLibCp()

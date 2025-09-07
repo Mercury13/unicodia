@@ -2,8 +2,6 @@
 
 #include <QWidget>
 
-#include "UcFlags.h"
-
 namespace Ui {
     class WiLibCp;
 }
@@ -15,6 +13,7 @@ namespace uc {
 
 class WiCpImage : public QWidget
 {
+    Q_OBJECT
 private:
     using Super = QWidget;
 public:
@@ -23,9 +22,14 @@ public:
     void setCp(const uc::Cp* x, const uc::GlyphStyleSets& y);
 protected:
     void paintEvent(QPaintEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 private:
     const uc::Cp* cp = nullptr;
     const uc::GlyphStyleSets* glyphSets;
+    bool isLeftButton = false;
+signals:
+    void clicked();
 };
 
 class WiLibCp : public QWidget
