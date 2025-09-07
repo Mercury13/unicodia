@@ -187,7 +187,15 @@ namespace mywiki {
 
     void translateDatingLoc();
 
-    enum class CpSize : unsigned char { POPUP, FULL };
+    enum class HtmlSize : unsigned char { POPUP, FULL };
+
+    struct HtmlVariant
+    {
+        const char *headStart, *headEnd, *headCopyStyle;
+        HtmlSize size;
+
+        static const HtmlVariant DFLT, POPUP;
+    };
 
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view link);
@@ -214,7 +222,7 @@ namespace mywiki {
     QString buildHtml(const uc::Term& x);
     QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
-    QString buildHtml(const uc::Cp& cp, CpSize size = CpSize::FULL);
+    QString buildHtml(const uc::Cp& cp, const HtmlVariant& var = HtmlVariant::DFLT);
     QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
     QString buildHtml(const uc::LibNode& node, const uc::LibNode& parent);
     QString buildHtml(const uc::Version& version);

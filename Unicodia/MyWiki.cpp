@@ -52,7 +52,7 @@ const mywiki::Context DEFAULT_CONTEXT {
 
 constexpr std::span<std::string> NO_LINKS {};
 
-///// Gui //////////////////////////////////////////////////////////////////////
+/////  //////////////////////////////////////////////////////////////////////
 
 void mywiki::Gui::popupAtRel(
         QWidget* widget, const QRect& relRect, const QString& html)
@@ -2789,18 +2789,33 @@ namespace {
 }   // anon namespace
 
 
-QString mywiki::buildHtml(const uc::Cp& cp, CpSize size)
+constinit const mywiki::HtmlVariant mywiki::HtmlVariant::DFLT {
+    .headStart = "<h1>",
+    .headEnd = "</h1>",
+    .headCopyStyle = "bigcopy",
+    .size = HtmlSize::FULL
+};
+
+constinit const mywiki::HtmlVariant mywiki::HtmlVariant::POPUP {
+    .headStart = "<h2>",
+    .headEnd = "</h2>",
+    .headCopyStyle = "bigcopy",
+    .size = HtmlSize::POPUP
+};
+
+
+QString mywiki::buildHtml(const uc::Cp& cp, const HtmlVariant& var)
 {
     QString text;
 
     sw::Info sw(cp);
-    bool hasSgnw = sw && (size >= CpSize::FULL);
+    bool hasSgnw = sw && (var.size >= HtmlSize::FULL);
 
     appendStylesheet(text, hasSgnw);
-    str::append(text, "<h1>");
+    str::append(text, var.headStart);
     QString name = cp.viewableName();
-    appendCopyable(text, name, "bigcopy");
-    str::append(text, "</h1>");
+    appendCopyable(text, name, var.headCopyStyle);
+    str::append(text, var.headEnd);
 
     appendCpAltNames(text, cp);
 
@@ -2864,7 +2879,7 @@ QString mywiki::buildHtml(const uc::Cp& cp, CpSize size)
     {   // Info box
         appendCpBullets(text, cp, CpSerializations::YES, CpPlace::CP);
 
-        if (size >= CpSize::FULL) {
+        if (var.size >= HtmlSize::FULL) {
             auto& blk = cp.block();
             if (blk.startingCp == 0) {
                 // Basic Latin:

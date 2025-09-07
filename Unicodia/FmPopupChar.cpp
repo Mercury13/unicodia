@@ -34,7 +34,7 @@ auto FmPopupChar::setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets) -
 
     ui->wiSample->showCp(cp, uc::EmojiDraw::CONSERVATIVE, glyphSets, false);
 
-    auto text = mywiki::buildHtml(cp, mywiki::CpSize::POPUP);
+    auto text = mywiki::buildHtml(cp, mywiki::HtmlVariant::POPUP);
     ui->lbText->setText(text);
 
     return *this;
