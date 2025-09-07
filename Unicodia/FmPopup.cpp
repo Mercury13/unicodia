@@ -112,120 +112,18 @@ FmPopup::FmPopup(QWidget* owner, const char* color)
 }
 
 
+void FmPopup::mySetFocus()
+{
+    lbText->setFocus();
+}
+
+
 FmPopup& FmPopup::setText(const QString& x)
 {
     lbText->setText(x);
     return *this;
 }
 
-
-namespace {
-
-    void eatRightMargin(QRect& rect, int mainMargin, int auxMargin)
-    {
-        mainMargin = std::min(mainMargin, rect.width() / 2);
-        rect.setWidth(rect.width() - mainMargin);
-        if (QApplication::layoutDirection() == Qt::RightToLeft) {
-            // ←
-            rect.moveLeft(rect.left() + mainMargin);
-            rect.moveRight(rect.right() - auxMargin);
-        } else {
-            // →
-            rect.moveLeft(rect.left() + auxMargin);
-        }
-    }
-
-    void eatBottomMargin(QRect& rect, int margin)
-    {
-        margin = std::min(margin, rect.height() / 2);
-        rect.setHeight(rect.height() - margin);
-    }
-
-}   // anon namespace
-
-constexpr int POPUP_RIGHT_MARGIN = 8;
-constexpr int POPUP_LEFT_MARGIN = 1;
-constexpr int POPUP_BOTTOM_MARGIN = 3;
-
-void FmPopup::popupAtY(
-        const QRect& hotspotAbsRect,
-        QRect ownerRect,
-        const QRect& screenRect,
-        int y)
-{
-    // Modify ownerRect
-    eatRightMargin(ownerRect, POPUP_RIGHT_MARGIN, POPUP_LEFT_MARGIN);
-
-    auto myW = width();    
-    QRect testRect = (myW <= ownerRect.width()) ? ownerRect : screenRect;
-    auto x = std::min(hotspotAbsRect.left(), testRect.right() - myW);
-    x = std::max(x, testRect.left());
-    move(x, y);
-    show();
-
-    lbText->setFocus();
-    if constexpr (popupMode == PopupMode::ARTIFICIAL) {
-        setFocus();
-    }
-}
-
-
-void FmPopup::myAdjustSize(const QRect& screenRect)
-{
-    // My params
-    static constexpr int MAX_WIDTH = 900;       // maximum (non really tight) width
-    static constexpr int WIDTH_STEP = 50;
-    static constexpr int COOL_WIDTH = 450;
-    static constexpr int COOL_HEIGHT = 650;
-    static constexpr int HEIGHT_LEEWAY = 50;
-    static constexpr int WIDTH_LEEWAY = 20;
-
-    adjustSize();
-    if (height() >= 350) {
-        auto maxWidth = std::min(MAX_WIDTH, screenRect.width() - WIDTH_LEEWAY);
-        auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
-        auto myW = std::max(width(), COOL_WIDTH - WIDTH_STEP);
-        int h;
-        do {
-            // Took 2nd (maxWidth) → will surely break!
-            myW = std::min(myW + WIDTH_STEP, maxWidth);
-            h = layout->heightForWidth(myW);
-        } while (h > rqHeight && myW < maxWidth);
-        resize(myW, h);
-    }
-}
-
-
-FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
-{
-    auto screenRect = screen->availableGeometry();
-    hide();  // if shown
-    myAdjustSize(screenRect);
-    auto ownerRect = fOwner->geometry().intersected(screenRect);
-    eatBottomMargin(ownerRect, POPUP_BOTTOM_MARGIN);
-
-    auto myH = height();
-    if (auto bottomRemainder = ownerRect.bottom() - absRect.bottom();
-            bottomRemainder >= myH) {
-        // Try on the bottom
-        popupAtY(absRect, ownerRect, screenRect, absRect.bottom());
-    } else if (auto topRemainder = absRect.top() - ownerRect.top();
-            topRemainder >= myH) {
-        // Try on the top
-        popupAtY(absRect, ownerRect, screenRect, absRect.top() - myH);
-    } else if (myH <= ownerRect.height()) {
-        // Try stuck to owner rect
-        popupAtY(absRect, ownerRect, screenRect, ownerRect.bottom() - myH);
-    } else {
-        // Try everywhere
-        const auto maxY = screenRect.bottom() - myH;
-        auto myY = ownerRect.top() + (ownerRect.height() - myH) / 2;
-        if (myY > maxY) myY = maxY;
-        if (myY < 0) myY = 0;
-        popupAtY(absRect, ownerRect, screenRect, myY);
-    }
-    return *this;
-}
 
 FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
 {

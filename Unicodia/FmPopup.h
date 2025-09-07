@@ -78,20 +78,13 @@ public:
 
     ClickableLabel* viewport() const { return lbText; }
     void deselectLink();
+    void mySetFocus();
 protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
-    virtual void myAdjustSize(const QRect& screenRect);
 private:
     ClickableLabel* lbText;    
     class QVBoxLayout* layout;
-
-    void popupAtY(
-            const QRect& hotspotAbsRect,
-            QRect ownerRect,
-            const QRect& screenRect,
-            int y);
-    FmPopup& popupAtScreen(QScreen* screen, const QRect& absRect);
 };
 
 extern template class MxPopup<FmPopup>;
