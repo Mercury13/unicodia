@@ -25,7 +25,7 @@ public:
     ~FmPopupChar() override;
     This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
 
-private:
+protected:
     Ui::FmPopupChar *ui;
 };
 

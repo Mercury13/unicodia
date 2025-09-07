@@ -11,6 +11,7 @@
 #include "FmPopup.h"
 #include "FmMessage.h"
 #include "FmPopupChar.h"
+#include "ui_FmPopupChar.h"
 
 // L10n
 #include "LocDic.h"
@@ -39,6 +40,25 @@ FmPopup2::FmPopup2(MyGui& owner) : Super(owner.wiMain, owner.memory, CNAME_BG_PO
     connect(vw, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
 }
 
+
+///// FmPopupChar2 /////////////////////////////////////////////////////////////
+
+
+class FmPopupChar2 : public FmPopupChar
+{
+    using Super = FmPopupChar;
+    using This = FmPopupChar2;
+public:
+    FmPopupChar2(MyGui& owner);
+    ~FmPopupChar2() override = default;
+};
+
+
+FmPopupChar2::FmPopupChar2(MyGui& owner)
+    : Super(owner.wiMain, owner.memory)
+{
+    connect(ui->lbText, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
+}
 
 ///// MyGui ////////////////////////////////////////////////////////////////////
 
@@ -94,8 +114,8 @@ void MyGui::popupAtAbs(
 void MyGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
-    /// @todo [urgent] Which settings?
-    popupChar.ensure(this->wiMain, memory)
+    popupChar.ensure(*this)
+            /// @todo [urgent] Which settings?
              .setCp(cp, uc::GlyphStyleSets::EMPTY)
              .popupAtAbsBacked(widget, absRect);
 }

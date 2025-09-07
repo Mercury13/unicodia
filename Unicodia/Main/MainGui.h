@@ -5,7 +5,7 @@
 
 class FmMessage;
 class FmPopup2;
-class FmPopupChar;
+class FmPopupChar2;
 
 template <class T>
 class Uptr
@@ -63,12 +63,13 @@ signals:
     void linkActivated(QWidget* thing, const QString& link);
 private:
     friend class FmPopup2;
+    friend class FmPopupChar2;
     friend class PopupGui;
     QWidget* wiMain;
     FontSource& fFontSource;
     mywiki::InternalLinkWalker& fInternalWalker;
     Uptr<FmPopup2> popup;
-    Uptr<FmPopupChar> popupChar;
+    Uptr<FmPopupChar2> popupChar;
     Uptr<FmMessage> fmMessage;
 private slots:
     void popupLinkActivated(const QString& link);
