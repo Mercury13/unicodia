@@ -374,8 +374,9 @@ Subtotal: 110
 - 143CB: redrew from scratch for consistency and LOAF size
 - 143CC: redrew from scratch for consistency and LOAF size
 - 143CE: wider but lower, redrew from scratch
+- 143E0: redrew from scratch for consistency and MEDIUM size
 
-Subtotal: 354
+Subtotal: 355
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -542,12 +543,13 @@ Subtotal: 354
 - 1432A: after 2B/2C
 - 143C4: after C3
 - 143D3: after D2
+- 143DF: just a MEDIUM circle
 
-Subtotal: 164
+Subtotal: 165
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 629
+Total: 631
