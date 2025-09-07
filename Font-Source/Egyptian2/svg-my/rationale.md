@@ -139,7 +139,7 @@ Subtotal: 110
 - 1383E: same
 - 13840: same + bigger djed-ankh
 - 1384E: turn knife around
-- 1387A: strange image: ONE-TWENTY
+- 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
 - 13890: arm lower
@@ -159,7 +159,7 @@ Subtotal: 110
 - 138EB: arm lower
 - 138ED: arm lower
 - 138F8: arm lower
-- 138FF: tits, it’s a woman: ONE-FORTY
+- 138FF: tits, it’s a woman
 - 13901: same
 - 13902: arm lower
 - 13913: arm lower, simpler stalk
@@ -175,11 +175,12 @@ Subtotal: 110
 - 139AA: other “torso”, for AB
 - 139B9: bigger shield
 - 139D3: grafted knife from EB, simplified
+- 13A31: thinner, more resembling Unicode (it’s a toe rather than finger)
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
 - 13A6E: wings in V-shape
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
-- 13A85: greatly simplified: ONE-SIXTY
+- 13A85: greatly simplified
 - 13AA3: rotate 90°
 - 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
@@ -199,7 +200,7 @@ Subtotal: 110
 - 13BAA: waves unseen in cell’s detail
 - 13BAB: same, plus redrew semicircle
 - 13BDE: a bit out of canvas
-- 13BE5: flip ←→: ONE-EIGHTY
+- 13BE5: flip ←→
 - 13C17: just 10% bigger
 - 13C18: more detailed head, white neck
 - 13C19: white neck
@@ -218,8 +219,8 @@ Subtotal: 110
 - 13C81: rope rather than feather
 - 13C85: loop on the end of perch
 - 13C96: no base
-- 13C98: feather → loop
-- 13C99: loop on perch: TWO HUNDRED
+- 13C98: feather → loop: TWO HUNDRED
+- 13C99: loop on perch
 - 13C9A: bull’s head
 - 13C9C: same as 9A
 - 13CA0: remove inner wall
@@ -239,7 +240,7 @@ Subtotal: 110
 - 13E84: was not hollow, did not look like reed
 - 13E85: craggy
 - 13EA8: after A9
-- 13ED3: hang lower: TWO-TWENTY
+- 13ED3: hang lower
 - 13ED5: mirror, rounder circles
 - 13EDA: mirror, rounder circles
 - 13EDF: per E0
@@ -259,7 +260,7 @@ Subtotal: 110
 - 13F55: campaign for plans
 - 13F56: campaign for plans
 - 13F57: campaign for plans
-- 13F58: campaign for plans: TWO-FORTY
+- 13F58: campaign for plans
 - 13F59: campaign for plans
 - 13F5B: campaign for plans, consistent
 - 13F5C: campaign for plans, consistent
@@ -279,7 +280,7 @@ Subtotal: 110
 - 13FCA: campaign for forked booth
 - 13FD7: self-intersections, no beard
 - 13FDB: thinner lines
-- 13FEA: thinner lines: TWO-SIXTY
+- 13FEA: thinner lines
 - 13FEC: bovid’s ears
 - 1400A: redrew
 - 140C6: found out that loop was done by adding a white object, but redrew
@@ -299,7 +300,7 @@ Subtotal: 110
 - 14094: really other thing
 - 140A8: more details
 - 140BF: bull → bubalis
-- 140FC: removed PLACEHOLDERS: TWO-EIGHTY
+- 140FC: removed PLACEHOLDERS
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
@@ -318,8 +319,8 @@ Subtotal: 110
 - 141D6: no loop
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
-- 141F1: redrew from scratch
-- 141F3: redrew from scratch; it’s a cloth rather than a room with uraei: THREE HUNDRED
+- 141F1: redrew from scratch: THREE HUNDRED
+- 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
@@ -377,7 +378,7 @@ Subtotal: 110
 - 143CE: wider but lower, redrew from scratch
 - 143E0: redrew from scratch for consistency and MEDIUM size
 
-Subtotal: 356
+Subtotal: 357
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -553,4 +554,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 632
+Total: 633
