@@ -15,7 +15,8 @@ constexpr auto FGS_MESSAGE =
         | Qt::FramelessWindowHint
         | Qt::NoDropShadowWindowHint
         | Qt::WindowTransparentForInput
-        | Qt::WindowDoesNotAcceptFocus;
+        | Qt::WindowDoesNotAcceptFocus
+        | Qt::WindowStaysOnTopHint;
 
 constexpr auto STY_LABEL =
         "QLabel { color : white; "
@@ -37,6 +38,7 @@ FmMessage::FmMessage(QWidget* parent)
 {
     setAttribute(Qt::WA_TranslucentBackground);
     setAttribute(Qt::WA_ShowWithoutActivating);
+    setAttribute(Qt::WA_TransparentForMouseEvents);
 
     // Label
     label = std::make_unique<QLabel>(this);
