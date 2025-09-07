@@ -50,7 +50,7 @@ public:
     const QRect& lastAbsRect() const { return fLastAbsRect; }
     QWidget* lastWidget() const { return fLastWidget; }
 
-    Me& popupAtAbs(QWidget* widget, const QRect& absRect)
+    void popupAtAbs(QWidget* widget, const QRect& absRect)
     {
         if (!widget)
             throw std::invalid_argument("[MxPopup.popupAtAbs] Widget should be non-null!");
@@ -58,15 +58,32 @@ public:
         fLastWidget = widget;
         auto screen = pop::findScreen(widget, absRect);
         popupAtScreen(screen, absRect);
-        return *mee();
     }
 
-    Me& popupAtAbsBacked(QWidget* widget, const QRect& absRect)
+    void popupAtAbsBacked(QWidget* widget, const QRect& absRect)
     {
         if (widget) {
-            return popupAtAbs(widget, absRect);
+            popupAtAbs(widget, absRect);
         } else {
-            return popupAtAbs(fLastWidget, fLastAbsRect);
+            popupAtAbs(fLastWidget, fLastAbsRect);
+        }
+    }
+
+    void popup(QWidget* widget)
+    {
+        popupAtAbs(widget, QRect(
+                   widget->mapToGlobal(QPoint(0, 0)), widget->size()));
+    }
+
+    void popup(QWidget* widget, TinyOpt<QRect> rect)
+    {
+        if (rect) {
+            popupAtAbs(widget, QRect(
+                        widget->mapToGlobal(rect->topLeft()), rect->size()));
+        } else if (!widget) {
+            popupAtAbs(fLastWidget, fLastAbsRect);
+        } else {
+            popup(widget);
         }
     }
 
@@ -94,32 +111,11 @@ protected:
     void myAdjustSize(const QRect& screenRect)
         { pop::myAdjustSize(me(), screenRect); }
 
-    Me& popupAtScreen(QScreen* screen, const QRect& absRect)
+    void popupAtScreen(QScreen* screen, const QRect& absRect)
     {
         pop::popupAtScreen(me(), fOwner, screen, absRect);
         adjustAfterPopup();
-        return *mee();
     }
-
-    void popup(QWidget* widget)
-    {
-        popupAtAbs(widget, QRect(
-                   widget->mapToGlobal(QPoint(0, 0)), widget->size()));
-    }
-
-    void popup(QWidget* widget, TinyOpt<QRect> rect)
-    {
-        if (rect) {
-            popupAtAbs(widget, QRect(
-                        widget->mapToGlobal(rect->topLeft()), rect->size()));
-        } else if (!widget) {
-            popupAtAbs(fLastWidget, fLastAbsRect);
-        } else {
-            popup(widget);
-        }
-    }
-
-
 };
 
 
