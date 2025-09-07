@@ -370,6 +370,7 @@ Subtotal: 110
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
+- 143CA: redrew from scratch for bigger
 - 143CE: wider but lower, redrew from scratch
 
 Subtotal: 351
