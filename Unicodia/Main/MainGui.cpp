@@ -15,6 +15,9 @@
 // L10n
 #include "LocDic.h"
 
+// Unicode
+#include "UcData.h"
+
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
 
@@ -91,8 +94,9 @@ void MyGui::popupAtAbs(
 void MyGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
+    /// @todo [urgent] Which settings?
     popupChar.ensure(this->wiMain)
-             .setCp(cp)
+             .setCp(cp, uc::GlyphStyleSets::EMPTY)
              .popupAtAbsBacked(widget, absRect);
 }
 

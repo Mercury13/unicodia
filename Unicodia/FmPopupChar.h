@@ -8,6 +8,7 @@
 
 namespace uc {
     struct Cp;
+    struct GlyphStyleSets;
 }
 
 namespace Ui {
@@ -22,7 +23,7 @@ class FmPopupChar : public WiPopup
 public:
     explicit FmPopupChar(QWidget *parent = nullptr);
     ~FmPopupChar() override;
-    This& setCp(const uc::Cp& cp);
+    This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
 
 private:
     Ui::FmPopupChar *ui;

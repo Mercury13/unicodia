@@ -128,7 +128,7 @@ private:
     SafeVector<uc::SearchGroup> groups;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
 
-    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;    
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
     static constexpr quintptr ZERO = 0;
     static constexpr auto GROUP = std::numeric_limits<quintptr>::max();
 };

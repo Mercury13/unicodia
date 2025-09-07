@@ -2789,13 +2789,14 @@ namespace {
 }   // anon namespace
 
 
-QString mywiki::buildHtml(const uc::Cp& cp)
+QString mywiki::buildHtml(const uc::Cp& cp, CpSize size)
 {
     QString text;
 
     sw::Info sw(cp);
+    bool hasSgnw = sw && (size >= CpSize::FULL);
 
-    appendStylesheet(text, sw);
+    appendStylesheet(text, hasSgnw);
     str::append(text, "<h1>");
     QString name = cp.viewableName();
     appendCopyable(text, name, "bigcopy");
@@ -2856,43 +2857,47 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         appendMisrender(text, { s, 1 }, uc::MISRENDER_SIMPLE);
     }
 
-    appendSgnwVariants(text, sw);
+    if (hasSgnw) {
+        appendSgnwVariants(text, sw);
+    }
 
     {   // Info box
         appendCpBullets(text, cp, CpSerializations::YES, CpPlace::CP);
 
-        auto& blk = cp.block();
-        if (blk.startingCp == 0) {
-            // Basic Latin:
-            // Control → t:control (stored in catInfo)
-            // Latn → s:Latn
-            // Others → t:ASCII, stored here for simplicity
-            if (cp.ecCategory == uc::EcCategory::CONTROL) {
-                //  Control char description
-                appendSubhead(text, "Prop.Head.Control");
-                // No link checking here, that’s OK for now
-                appendWiki(text, blk,
-                           uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description,
-                           wiki::Mode::ARTICLE, NO_LINKS);
-            } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
-                // Script description
-                appendScriptSubhead(text);
-                mywiki::appendHtml(text, sc, false);
+        if (size >= CpSize::FULL) {
+            auto& blk = cp.block();
+            if (blk.startingCp == 0) {
+                // Basic Latin:
+                // Control → t:control (stored in catInfo)
+                // Latn → s:Latn
+                // Others → t:ASCII, stored here for simplicity
+                if (cp.ecCategory == uc::EcCategory::CONTROL) {
+                    //  Control char description
+                    appendSubhead(text, "Prop.Head.Control");
+                    // No link checking here, that’s OK for now
+                    appendWiki(text, blk,
+                               uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description,
+                               wiki::Mode::ARTICLE, NO_LINKS);
+                } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
+                    // Script description
+                    appendScriptSubhead(text);
+                    mywiki::appendHtml(text, sc, false);
+                } else {
+                    // Block description
+                    appendBlockSubhead(text);
+                    appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
+                }
             } else {
-                // Block description
-                appendBlockSubhead(text);
-                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
-            }
-        } else {
-            if (blk.hasDescription()) {
-                // Block description
-                appendBlockSubhead(text);
-                // No link checking here, that’s OK for now
-                appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
-            } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
-                // Script description
-                appendScriptSubhead(text);
-                mywiki::appendHtml(text, sc, false);
+                if (blk.hasDescription()) {
+                    // Block description
+                    appendBlockSubhead(text);
+                    // No link checking here, that’s OK for now
+                    appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
+                } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
+                    // Script description
+                    appendScriptSubhead(text);
+                    mywiki::appendHtml(text, sc, false);
+                }
             }
         }
     }
