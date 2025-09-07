@@ -342,6 +342,7 @@ Subtotal: 110
 - 142B6: campaign for drills
 - 142B7: strange glitch, deleted almost everything, campaign for drills
 - 142B8: campaign for drills
+- 142BB: symmetrize, campaign for drills
 - 142C0: filled end, campaign for drills
 - 142C1: campaign for drills
 - 142C3: filled end, campaign for drills
@@ -370,7 +371,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 349
+Subtotal: 350
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -545,4 +546,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 624
+Total: 625
