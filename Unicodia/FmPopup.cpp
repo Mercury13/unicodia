@@ -10,8 +10,6 @@
 #include <QGraphicsDropShadowEffect>
 
 
-template class MxPopup<FmPopup>;
-
 ///// ClickableLabel ///////////////////////////////////////////////////////////
 
 
@@ -79,7 +77,7 @@ bool ClickableLabel::event(QEvent* ev)
 
 
 FmPopup::FmPopup(QWidget* owner, const char* color)
-    : Super(owner, WF_POPUP), MxPopup(owner)
+    : Super(owner)
 {
     layout = new QVBoxLayout(this);
     setLayout(layout);

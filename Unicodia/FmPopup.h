@@ -62,10 +62,10 @@ Wi& ensure(std::unique_ptr<Wi>& x, Args&& ... args)
 }
 
 
-class FmPopup : public QWidget, public MxPopup<FmPopup>
+class FmPopup : public WiPopup
 {
     Q_OBJECT
-    using Super = QWidget;
+    using Super = WiPopup;
     using This = FmPopup;
 public:
     FmPopup(QWidget* owner, const char* color);
@@ -74,7 +74,7 @@ public:
 
     ClickableLabel* viewport() const { return lbText; }
     void deselectLink();
-    void mySetFocus();
+    void mySetFocus() override;
 protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
@@ -82,5 +82,3 @@ private:
     ClickableLabel* lbText;    
     class QVBoxLayout* layout;
 };
-
-extern template class MxPopup<FmPopup>;

@@ -5,12 +5,6 @@
 #include <QLayout>
 #include <QScreen>
 
-void pop::checkOwner(QWidget* owner)
-{
-    if (!owner)
-        throw std::invalid_argument("[MxPopup] Need owner widget");
-}
-
 void pop::eatRightMargin(QRect& rect, int mainMargin, int auxMargin)
 {
     mainMargin = std::min(mainMargin, rect.width() / 2);
@@ -120,4 +114,24 @@ QScreen* pop::findScreen(QWidget* widget, const QRect& absRect)
     }
     // Somehow
     return QApplication::primaryScreen();
+}
+
+
+///// WiPopup //////////////////////////////////////////////////////////////////
+
+
+WiPopup::WiPopup(QWidget* aOwner)
+    : QWidget(aOwner, WF_POPUP), fOwner(aOwner)
+{
+    if (!aOwner)
+        throw std::invalid_argument("[WiPopup] Need owner widget");
+}
+
+
+void WiPopup::adjustAfterPopup()
+{
+    mySetFocus();
+    if constexpr (popupMode == PopupMode::ARTIFICIAL) {
+        setFocus();
+    }
 }
