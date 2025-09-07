@@ -22,7 +22,9 @@ constexpr int ALPHA_INTERNATIONAL = 15;
 // Color names
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP "ForestGreen"
-#define CNAME_LINK_CODE "#0000CC"
+#define CNAME_LINK_POPUP_DARK "DarkGreen"
+/// @todo [future, #528] style unused, but let it be for now
+//#define CNAME_LINK_CODE "#0000CC"
 #define CNAME_LINK_DEPRECATED "#CC0000"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_U_COPY "#808080"
@@ -44,13 +46,14 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 #define STYLE_LINK_CAMO(color,place)    STYLE_LINK2("palette(window-text)",color,place)
 
 #define STYLE_POPUP        STYLE_LINK(CNAME_LINK_POPUP, "0.05")
+#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK, "0.04")
 #define STYLE_DEPRECATED   STYLE_LINK(CNAME_LINK_DEPRECATED, "0.04")
 #define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
 #define STYLE_BIGINET      STYLE_LINK2(CNAME_LINK_OUTSIDE, CNAME_U_BIGOUTSIDE, "0.05")
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
 #define STYLE_ALTNAME      STYLE_LINK2(CNAME_ALTNAME, CNAME_U_COPY, "0.05") " font-weight:bold;"
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
-#define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
+//#define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
 #define STYLE_MISRENDER    "color:" CNAME_LINK_DEPRECATED
 #define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
 
