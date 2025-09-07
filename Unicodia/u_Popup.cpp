@@ -120,8 +120,8 @@ QScreen* pop::findScreen(QWidget* widget, const QRect& absRect)
 ///// WiPopup //////////////////////////////////////////////////////////////////
 
 
-WiPopup::WiPopup(QWidget* aOwner)
-    : Super(aOwner, WF_POPUP), fOwner(aOwner)
+WiPopup::WiPopup(QWidget* aOwner, pop::ClickMemory& aMemory)
+    : Super(aOwner, WF_POPUP), fOwner(aOwner), fMemory(aMemory)
 {
     if (!aOwner)
         throw std::invalid_argument("[WiPopup] Need owner widget");

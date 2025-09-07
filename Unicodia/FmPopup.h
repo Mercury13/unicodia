@@ -68,7 +68,7 @@ class FmPopup : public WiPopup
     using Super = WiPopup;
     using This = FmPopup;
 public:
-    FmPopup(QWidget* owner, const char* color);
+    FmPopup(QWidget* owner, pop::ClickMemory& memory, const char* color);
     ~FmPopup() override = default;
     FmPopup& setText(const QString& x);
 

@@ -38,6 +38,11 @@ namespace pop {
     constexpr int LEFT_MARGIN = 1;
     constexpr int BOTTOM_MARGIN = 3;
 
+    struct ClickMemory {
+        QWidget* lastWidget;
+        QRect lastAbsRect;
+    };
+
 }   // namespace pop
 
 
@@ -46,17 +51,16 @@ class WiPopup : public QWidget
 private:
     using Super = QWidget;
 public:
-    WiPopup(QWidget* aOwner);
+    WiPopup(QWidget* aOwner, pop::ClickMemory& memory);
 
-    const QRect& lastAbsRect() const { return fLastAbsRect; }
-    QWidget* lastWidget() const { return fLastWidget; }
+    pop::ClickMemory& memory() const { return fMemory; }
 
     void popupAtAbs(QWidget* widget, const QRect& absRect)
     {
         if (!widget)
             throw std::invalid_argument("[MxPopup.popupAtAbs] Widget should be non-null!");
-        fLastAbsRect = absRect;
-        fLastWidget = widget;
+        fMemory.lastAbsRect = absRect;
+        fMemory.lastWidget = widget;
         auto screen = pop::findScreen(widget, absRect);
         popupAtScreen(screen, absRect);
     }
@@ -66,7 +70,7 @@ public:
         if (widget) {
             popupAtAbs(widget, absRect);
         } else {
-            popupAtAbs(fLastWidget, fLastAbsRect);
+            popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
         }
     }
 
@@ -82,7 +86,7 @@ public:
             popupAtAbs(widget, QRect(
                         widget->mapToGlobal(rect->topLeft()), rect->size()));
         } else if (!widget) {
-            popupAtAbs(fLastWidget, fLastAbsRect);
+            popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
         } else {
             popup(widget);
         }
@@ -90,8 +94,7 @@ public:
 
 protected:
     QWidget* const fOwner;
-    QRect fLastAbsRect;
-    QWidget* fLastWidget;
+    pop::ClickMemory& fMemory;
 
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;

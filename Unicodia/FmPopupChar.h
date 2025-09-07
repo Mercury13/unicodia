@@ -21,7 +21,7 @@ class FmPopupChar : public WiPopup
     using Super = WiPopup;
     using This = FmPopupChar;
 public:
-    explicit FmPopupChar(QWidget *parent = nullptr);
+    explicit FmPopupChar(QWidget *parent, pop::ClickMemory& memory);
     ~FmPopupChar() override;
     This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
 

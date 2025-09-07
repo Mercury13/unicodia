@@ -9,8 +9,8 @@
 // Unicode
 #include "UcAutoDefines.h"
 
-FmPopupChar::FmPopupChar(QWidget *parent) :
-    Super(parent),
+FmPopupChar::FmPopupChar(QWidget *parent, pop::ClickMemory& memory) :
+    Super(parent, memory),
     ui(new Ui::FmPopupChar)
 {
     ui->setupUi(this);

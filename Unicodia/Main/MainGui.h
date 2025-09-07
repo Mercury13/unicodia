@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MyWiki.h"
+#include "u_Popup.h"
 
 class FmMessage;
 class FmPopup2;
@@ -36,6 +37,7 @@ class MyGui :
 {
     Q_OBJECT
 public:
+    pop::ClickMemory memory;
     MyGui(QWidget* aWiMain, FontSource& aFontSource, mywiki::InternalLinkWalker& aWalker);
 
     void popupAtAbs(

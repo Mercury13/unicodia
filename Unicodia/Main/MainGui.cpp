@@ -32,7 +32,7 @@ public:
 };
 
 
-FmPopup2::FmPopup2(MyGui& owner) : Super(owner.wiMain, CNAME_BG_POPUP)
+FmPopup2::FmPopup2(MyGui& owner) : Super(owner.wiMain, owner.memory, CNAME_BG_POPUP)
 {
     auto vw = viewport();
     vw->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);
@@ -95,7 +95,7 @@ void MyGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
     /// @todo [urgent] Which settings?
-    popupChar.ensure(this->wiMain)
+    popupChar.ensure(this->wiMain, memory)
              .setCp(cp, uc::GlyphStyleSets::EMPTY)
              .popupAtAbsBacked(widget, absRect);
 }
@@ -131,8 +131,8 @@ void PopupGui::popupAtAbs(
         QWidget* widget, const QRect& absRect, const QString& html)
 {
     if (owner.popup) {
-        if (auto wi = owner.popup->lastWidget()) {
-            auto rect = owner.popup->lastAbsRect();
+        if (auto wi = owner.memory.lastWidget) {
+            auto rect = owner.memory.lastAbsRect;  // let it be copy
             owner.popupAtAbs(wi, rect, html);
             return;
         }
@@ -145,8 +145,8 @@ void PopupGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
     if (owner.popup) {
-        if (auto wi = owner.popup->lastWidget()) {
-            auto rect = owner.popup->lastAbsRect();
+        if (auto wi = owner.memory.lastWidget) {
+            auto rect = owner.memory.lastAbsRect;  // let it be copy
             owner.popupCharAbs(wi, rect, cp);
             return;
         }

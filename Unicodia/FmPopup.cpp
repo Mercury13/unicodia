@@ -76,8 +76,8 @@ bool ClickableLabel::event(QEvent* ev)
 ///// FmPopup //////////////////////////////////////////////////////////////////
 
 
-FmPopup::FmPopup(QWidget* owner, const char* color)
-    : Super(owner)
+FmPopup::FmPopup(QWidget* owner, pop::ClickMemory& memory, const char* color)
+    : Super(owner, memory)
 {
     layout = new QVBoxLayout(this);
     setLayout(layout);
