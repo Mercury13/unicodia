@@ -7,8 +7,8 @@
 #include <QWidget>
 #include <QLabel>
 
-// My libs
-#include <u_TinyOpt.h>
+// Project-local
+#include "u_Popup.h"
 
 
 class ClickableLabel: public QLabel
@@ -62,7 +62,7 @@ Wi& ensure(std::unique_ptr<Wi>& x, Args&& ... args)
 }
 
 
-class FmPopup : public QWidget
+class FmPopup : public QWidget, public MxPopup<FmPopup>
 {
     Q_OBJECT
     using Super = QWidget;
@@ -76,8 +76,6 @@ public:
     FmPopup& popup(QWidget* widget);
     FmPopup& setText(const QString& x);
 
-    const QRect& lastAbsRect() const { return fLastAbsRect; }
-    QWidget* lastWidget() const { return fLastWidget; }
     ClickableLabel* viewport() const { return lbText; }
     void deselectLink();
 protected:
@@ -85,10 +83,7 @@ protected:
     void mouseReleaseEvent(QMouseEvent*) override;
     virtual void myAdjustSize(const QRect& screenRect);
 private:
-    QWidget* fOwner;
     ClickableLabel* lbText;    
-    QRect fLastAbsRect;
-    QWidget* fLastWidget;
     class QVBoxLayout* layout;
 
     void popupAtY(
@@ -98,3 +93,5 @@ private:
             int y);
     FmPopup& popupAtScreen(QScreen* screen, const QRect& absRect);
 };
+
+extern template class MxPopup<FmPopup>;

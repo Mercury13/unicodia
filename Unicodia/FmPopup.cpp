@@ -9,18 +9,8 @@
 #include <QMouseEvent>
 #include <QGraphicsDropShadowEffect>
 
-namespace {
-    enum class PopupMode {
-        NATIVE,         ///< Use native popup window (default)
-        ARTIFICIAL      ///< Simulate popup with other means
-    };
-    constexpr auto popupMode = PopupMode::NATIVE;
 
-    constexpr auto WF_POPUP = (popupMode == PopupMode::ARTIFICIAL)
-            ? Qt::FramelessWindowHint | Qt::Tool
-            : Qt::Popup;
-}
-
+template class MxPopup<FmPopup>;
 
 ///// ClickableLabel ///////////////////////////////////////////////////////////
 
@@ -89,10 +79,8 @@ bool ClickableLabel::event(QEvent* ev)
 
 
 FmPopup::FmPopup(QWidget* owner, const char* color)
-    : Super(owner, WF_POPUP), fOwner(owner)
+    : Super(owner, WF_POPUP), MxPopup(owner)
 {
-    if (!owner)
-        throw std::invalid_argument("[FmPopup] Need owner widget");
     layout = new QVBoxLayout(this);
     setLayout(layout);
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {

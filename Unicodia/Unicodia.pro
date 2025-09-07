@@ -42,6 +42,7 @@ SOURCES += \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
     FmFontSupport.cpp \
+    FmPopupChar.cpp \
     Main/FmMain.cpp \
     Main/MainGui.cpp \
     Main/WiLibCp.cpp \
@@ -82,7 +83,8 @@ SOURCES += \
     cmdline.cpp \
     d_Config.cpp \
     main.cpp \
-    qa.cpp
+    qa.cpp \
+    u_Popup.cpp
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
@@ -123,6 +125,7 @@ HEADERS += \
     CharPaint/global.h \
     CharPaint/emoji.h \
     FmFontSupport.h \
+    FmPopupChar.h \
     LocDefs.h \
     Main/FmMain.h \
     Main/MainGui.h \
@@ -162,10 +165,12 @@ HEADERS += \
     c_SearchEdit.h \
     cmdline.h \
     d_Config.h \
-    qa.h
+    qa.h \
+    u_Popup.h
 
 FORMS += \
     FmFontSupport.ui \
+    FmPopupChar.ui \
     Main/FmMain.ui \
     Main/WiLibCp.ui \
     Main/WiOsStyle.ui \
