@@ -361,6 +361,7 @@ Subtotal: 110
 - 142F6: square prongs, thicker rope
 - 142F7: implemented after F6
 - 142FD: redrew from scratch, tall potter’s wheel
+- 14314: more white
 - 14329: other thing inside
 - 1432B: consistency
 - 1432C: consistency
@@ -371,7 +372,7 @@ Subtotal: 110
 - 14392: other pile of bricks, redrew from scratch
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 350
+Subtotal: 351
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -546,4 +547,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 625
+Total: 626
