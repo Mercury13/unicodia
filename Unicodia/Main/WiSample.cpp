@@ -24,6 +24,13 @@ WiSample::WiSample(QWidget *parent) :
     connect(ui->lbSampleTitle, &QLabel::linkActivated, this, &This::labelLinkActivated);
 }
 
+
+void WiSample::hideHead()
+{
+    ui->lbSampleTitle->hide();
+}
+
+
 WiSample::~WiSample()
 {
     delete ui;

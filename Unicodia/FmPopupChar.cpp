@@ -11,6 +11,7 @@ FmPopupChar::FmPopupChar(QWidget *parent) :
     ui(new Ui::FmPopupChar)
 {
     ui->setupUi(this);
+    ui->wiSample->hideHead();
 }
 
 FmPopupChar::~FmPopupChar()

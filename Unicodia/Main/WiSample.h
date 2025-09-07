@@ -24,6 +24,7 @@ public:
     explicit WiSample(QWidget *parent = nullptr);
     ~WiSample() override;
 
+    void hideHead();
     void showCp(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
             const uc::GlyphStyleSets& sets,
