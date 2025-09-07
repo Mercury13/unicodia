@@ -16,8 +16,9 @@ RETURN = temporarily deleted, then returned
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
+- 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 110
+Subtotal: 115
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -372,13 +373,9 @@ Subtotal: 110
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
 - 143BE: after CC, previous was thicker
-- 143CA: redrew from scratch for consistency and MEDIUM size
-- 143CB: redrew from scratch for consistency and LOAF size
-- 143CC: redrew from scratch for consistency and LOAF size
 - 143CE: wider but lower, redrew from scratch
-- 143E0: redrew from scratch for consistency and MEDIUM size
 
-Subtotal: 357
+Subtotal: 353
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -545,9 +542,8 @@ Subtotal: 357
 - 1432A: after 2B/2C
 - 143C4: after C3
 - 143D3: after D2
-- 143DF: just a MEDIUM circle
 
-Subtotal: 165
+Subtotal: 164
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
