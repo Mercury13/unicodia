@@ -370,13 +370,14 @@ Subtotal: 110
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
+- 143BE: after CC, previous was thicker
 - 143CA: redrew from scratch for consistency and MEDIUM size
 - 143CB: redrew from scratch for consistency and LOAF size
 - 143CC: redrew from scratch for consistency and LOAF size
 - 143CE: wider but lower, redrew from scratch
 - 143E0: redrew from scratch for consistency and MEDIUM size
 
-Subtotal: 355
+Subtotal: 356
 
 # Duped with NewGardiner
 - 134E0: campaign for sitting with props
@@ -552,4 +553,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 631
+Total: 632
