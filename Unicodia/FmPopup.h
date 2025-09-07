@@ -32,10 +32,10 @@ protected:
         bool operator == (const Selection& x) const { return (start == x.start && length == x.length); }
         bool operator != (const Selection& x) const { return !operator == (x); }
     };
-    Selection selection();
     Selection lastSel;
     bool allowClose = false;
 
+    Selection selection();
     void mousePressEvent(QMouseEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
     bool event(QEvent*) override;
