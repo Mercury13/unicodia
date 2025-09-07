@@ -56,7 +56,7 @@ public:
                      LocKey locKey);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
-    void closePopup();
+    void closePopup(void* remainingThing = nullptr);
 
     ~MyGui() override;
 signals:

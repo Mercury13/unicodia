@@ -105,6 +105,7 @@ void MyGui::blinkAtRel(const QString& text, const QWidget* widget, const QRect& 
 void MyGui::popupAtAbs(
         QWidget* widget, const QRect& absRect, const QString& html)
 {
+    closePopup(&popup);
     popup.ensure(*this)
          .setText(html)
          .popupAtAbsBacked(widget, absRect);
@@ -114,6 +115,7 @@ void MyGui::popupAtAbs(
 void MyGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
+    closePopup(&popupChar);
     popupChar.ensure(*this)
             /// @todo [urgent] Which settings?
              .setCp(cp, uc::GlyphStyleSets::EMPTY)
@@ -135,11 +137,16 @@ void MyGui::followUrl(const QString& x)
 }
 
 
-void MyGui::closePopup()
+void MyGui::closePopup(void* remainingThing)
 {
-    if (popup) {
+    if (remainingThing != &popup && popup) {
         popup->deselectLink();
         popup->close();
+    }
+    if (remainingThing != &popupChar && popupChar) {
+        /// @todo [urgent] How to deselect link?
+        //popupChar->deselectLink();
+        popupChar->close();
     }
 }
 
@@ -150,12 +157,10 @@ void MyGui::closePopup()
 void PopupGui::popupAtAbs(
         QWidget* widget, const QRect& absRect, const QString& html)
 {
-    if (owner.popup) {
-        if (auto wi = owner.memory.lastWidget) {
-            auto rect = owner.memory.lastAbsRect;  // let it be copy
-            owner.popupAtAbs(wi, rect, html);
-            return;
-        }
+    if (auto wi = owner.memory.lastWidget) {
+        auto rect = owner.memory.lastAbsRect;  // let it be copy
+        owner.popupAtAbs(wi, rect, html);
+        return;
     }
     // otherwise
     owner.popupAtAbs(widget, absRect, html);
@@ -164,12 +169,10 @@ void PopupGui::popupAtAbs(
 void PopupGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
-    if (owner.popup) {
-        if (auto wi = owner.memory.lastWidget) {
-            auto rect = owner.memory.lastAbsRect;  // let it be copy
-            owner.popupCharAbs(wi, rect, cp);
-            return;
-        }
+    if (auto wi = owner.memory.lastWidget) {
+        auto rect = owner.memory.lastAbsRect;  // let it be copy
+        owner.popupCharAbs(wi, rect, cp);
+        return;
     }
     // otherwise
     owner.popupCharAbs(widget, absRect, cp);
