@@ -12556,6 +12556,12 @@
      <transl>Отыскать в Подборках</transl>
     </text>
    </group>
+   <group id="Popup">
+    <text id="CopyVs16">
+     <orig>Copy + VS16</orig>
+     <transl>Копировать + VS16</transl>
+    </text>
+   </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
     <transl>Порядок блоков</transl>

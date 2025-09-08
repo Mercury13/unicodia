@@ -12556,6 +12556,12 @@
      <transl>Знайти у Підбірках</transl>
     </text>
    </group>
+   <group id="Popup">
+    <text id="CopyVs16">
+     <orig>Copy + VS16</orig>
+     <transl>Копіювати + VS16</transl>
+    </text>
+   </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
     <transl>Порядок блоків</transl>

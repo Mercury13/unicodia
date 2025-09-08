@@ -8694,6 +8694,11 @@
      <orig>Find in Library</orig>
     </text>
    </group>
+   <group id="Popup">
+    <text id="CopyVs16">
+     <orig>Copy + VS16</orig>
+    </text>
+   </group>
    <text id="Sort">
     <orig>Order blocks by</orig>
    </text>

@@ -18,6 +18,7 @@
 
 // Unicode
 #include "UcData.h"
+#include "UcCp.h"
 
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
@@ -58,6 +59,26 @@ FmPopupChar2::FmPopupChar2(MyGui& owner)
     : Super(owner.wiMain, owner.memory)
 {
     connect(ui->lbText, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
+    connect(ui->lbCode, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
+    connect(ui->lbToBlocks, &QLabel::linkActivated,
+            this, // context object — who owns the lambda function
+            [this, &owner]() {
+                hide();
+                owner.linkWalker().gotoCp(nullptr, charCode);
+            });
+    connect(ui->lbCopy, &QLabel::linkActivated,
+            this, // context object — who owns the lambda function
+            [this, &owner]() {
+                QString text = QString::fromUcs4(&charCode, 1);
+                owner.copyTextRel(ui->lbCopy, {}, text, LK_COPIED);
+            });
+    connect(ui->lbCopyVs16, &QLabel::linkActivated,
+            this, // context object — who owns the lambda function
+            [this, &owner]() {
+                char32_t cps[2] { charCode, cp::VS16 };
+                QString text = QString::fromUcs4(cps, 2);
+                owner.copyTextRel(ui->lbCopyVs16, {}, text, LK_COPIED);
+            });
 }
 
 ///// MyGui ////////////////////////////////////////////////////////////////////
@@ -144,7 +165,7 @@ void MyGui::closePopup(void* remainingThing)
         popup->close();
     }
     if (remainingThing != &popupChar && popupChar) {
-        /// @todo [urgent] How to deselect link?
+        /// @todo [future] We don’t select text in that popup, so no link deselecting
         //popupChar->deselectLink();
         popupChar->close();
     }
