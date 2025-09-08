@@ -18,12 +18,13 @@ WiCpImage::WiCpImage(QWidget *parent, Qt::WindowFlags f)
     : Super(parent, f), glyphSets(&uc::GlyphStyleSets::EMPTY) {}
 
 
-void WiCpImage::paintEvent(QPaintEvent *event)
+void WiCpImage::paintEvent(QPaintEvent *)
 {
-    Super::paintEvent(event);
+    QPainter painter(this);
+    auto bgColor = palette().window().color();
+    painter.fillRect(rect(), bgColor);
     if (cp) {
-        auto winColor = palette().text().color();
-        QPainter painter(this);
+        auto winColor = palette().windowText().color();
         drawChar(&painter, rect(), Fsz::TABLE, 100, *cp, winColor,
                  TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE, *glyphSets);
     }
