@@ -62,5 +62,5 @@ pu:89A0 :: Character+Unicode
 Type: pop-up
 Link text: hex number (abbreviations work but not recommended)
 Default caption: link text prepended with U+
-  [[pc:89AB]] → U+89AB
+  [[pu:89AB]] → U+89AB
 Shows the same window as pc:, they differ in default caption only
