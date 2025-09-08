@@ -2999,9 +2999,9 @@
      <orig>
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
-      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped 130FB↔AE8 and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped [[pc:130FB]]↔[[pc:13AE8|AE8]] and others), and inconsistencies between glyphs and their descriptions.</p>
       <p />
-      <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+      <p>Egyptologists developed special arrows for reading direction, [[pu:1F8C0]] and [[pc:1F8C1|C1]].</p>
       <p />
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
@@ -6782,22 +6782,22 @@
      <orig>
       <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Currently few of them are used:</p>
       <p />
-      <p>* null character 00{{-}}end of string in memory;</p>
-      <p>* end of file 04 (Unix) and 1A (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
-      <p>* bell 07{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;</p>
-      <p>* backspace 08{{-}}moves carriage one step back;</p>
-      <p>* tabulation 09{{-}}moves to positions 9, 17, 25, 33… for table formatting;</p>
-      <p>* line feed 0A{{-}}end of line in text file (Unix), turns drum one line forward;</p>
-      <p>* form feed 0C{{-}}printer ejects the sheet;</p>
-      <p>* carriage return 0D. Hence end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;</p>
-      <p>* escape 1B{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
+      <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
+      <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
+      <p>* bell [[pc:07]]{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;</p>
+      <p>* backspace [[pc:08]]{{-}}moves carriage one step back;</p>
+      <p>* tabulation [[pc:09]]{{-}}moves to positions 9, 17, 25, 33… for table formatting;</p>
+      <p>* line feed [[pc:0A]]{{-}}end of line in text file (Unix), turns drum one line forward;</p>
+      <p>* form feed [[pc:0C]]{{-}}printer ejects the sheet;</p>
+      <p>* carriage return [[pc:0D]]. Hence end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;</p>
+      <p>* escape [[pc:1B]]{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
       <p />
       <p>Other interesting commands:</p>
       <p />
-      <p>* vertical tabulation 0B{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
-      <p>* shift out/in 0E/0F{{-}}other ribbon colour, other character set;</p>
-      <p>* data link escape 10{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
-      <p>* delete 7F{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
+      <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
+      <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
+      <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
       <p />
       <p>All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>

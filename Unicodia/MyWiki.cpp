@@ -109,6 +109,16 @@ void mywiki::Gui::popupAtRelMaybe(
     }
 }
 
+void mywiki::Gui::popupCharRelMaybe(
+        QWidget* widget, TinyOpt<QRect> relRect, const uc::Cp& cp)
+{
+    if (!relRect) {      // have widget, no rect
+        popupCharWidget(widget, cp);
+    } else {                    // have widget and rect
+        popupCharRel(widget, *relRect, cp);
+    }
+}
+
 template <>
 constexpr unsigned ec::size<uc::EcUpCategory>()
     { return static_cast<unsigned>(uc::EcUpCategory::NN); }
@@ -204,6 +214,22 @@ namespace {
 
     void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.linkWalker().gotoCp(wi, cp); }
+
+    class PopCpLink : public mywiki::Link
+    {
+    public:
+        char32_t cp;
+        PopCpLink(char32_t x) : cp(x) {}
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::POPUP; }
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+    };
+
+    void PopCpLink::go(QWidget* wi, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    {
+        if (auto target = uc::cpsByCode[cp]) {
+            gui.popupCharRelMaybe(wi, rect, *target);
+        }
+    }
 
     class GotoLibCpLink : public mywiki::Link
     {
@@ -499,6 +525,16 @@ std::unique_ptr<mywiki::Link> mywiki::parseEmojiRequestLink(std::string_view tar
 }
 
 
+std::unique_ptr<mywiki::Link> mywiki::parsePopCpLink(std::string_view target)
+{
+    int code = 0;
+    auto q = str::fromChars(target, code, 16);
+    if (q.ec != std::errc() || code >= uc::CAPACITY || !uc::cpsByCode[code])
+        return {};
+    return std::make_unique<PopCpLink>(code);
+}
+
+
 constexpr std::string_view SCH_QRY_CHARS = "srq";
 constexpr std::string_view SCH_QRY_EMOJI = "sre";
 
@@ -508,7 +544,9 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
 {
     if (scheme == "pb"sv) {
         return parsePopBidiLink(target);
-    } else if (scheme == "pc"sv) {
+    } else if (scheme == "pc"sv || scheme == "pu"sv) {
+        return parsePopCpLink(target);
+    } else if (scheme == "pca"sv) {
         return parsePopCatLink(target);
     } else if (scheme == "ps"sv) {
         return parsePopScriptLink(target);
@@ -619,6 +657,7 @@ namespace {
         void appendEgypInfo(uc::EgypReliability rel);
     protected:
         std::u8string linkText;
+        std::string linkText2;
         wiki::HtWeight weight;
         bool isSuppressed = false;
         bool isDiv = false;
@@ -732,12 +771,17 @@ namespace {
 
     std::string_view Eng::defaultLinkTextSv(std::string_view target)
     {
-        if (target.starts_with("po:")) {
+        if (target.starts_with("pc:")) {
+            return target.substr(3);
+        } else if (target.starts_with("po:")) {
             auto key = target.substr(3);
             if (auto info = uc::old::findComp(key)) {
                 linkText = info->locName();
                 return str::toSv(linkText);
             }
+        } else if (target.starts_with("pu:")) {
+            linkText2 = str::cat("U+", target.substr(3));
+            return linkText2;
         }
         return {};
     }
@@ -2626,7 +2670,7 @@ namespace {
 
         // Character type
         sp.sep();
-        appendValuePopup(text, cp.category(), "Prop.Bullet.Type", "pc");
+        appendValuePopup(text, cp.category(), "Prop.Bullet.Type", "pca");
 
         // Numeric value        
         if (auto& numc = cp.numeric(); numc.isPresent()) {

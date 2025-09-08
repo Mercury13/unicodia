@@ -141,6 +141,8 @@ namespace mywiki {
         void popupAtWidget(QWidget* widget, const QString& html);
         void popupCharRel(
                 QWidget* widget, const QRect& relRect, const uc::Cp& cp);
+        void popupCharRelMaybe(
+                QWidget* widget, TinyOpt<QRect> relRect, const uc::Cp& cp);
         void popupCharWidget(
                 QWidget* widget, const uc::Cp& cp);
         void copyTextRel(
@@ -216,6 +218,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
     std::unique_ptr<Link> parseCharRequestLink(std::string_view target);
     std::unique_ptr<Link> parseEmojiRequestLink(std::string_view target);
+    std::unique_ptr<Link> parsePopCpLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::BreakInfo& x);
     QString buildHtml(const uc::Category& x);
