@@ -359,7 +359,7 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopGlyphStyleLink(std::string_view ta
 
 std::unique_ptr<mywiki::Link> mywiki::parseGotoCpLink(std::string_view target)
 {
-    int code = 0;
+    unsigned code = 0;
     str::fromChars(target, code, 16);
     if (code >= uc::CAPACITY || !uc::cpsByCode[code])
         return {};
@@ -525,13 +525,59 @@ std::unique_ptr<mywiki::Link> mywiki::parseEmojiRequestLink(std::string_view tar
 }
 
 
+namespace {
+
+    struct MiniAbbr {
+        std::string_view text;
+        char32_t code;
+        std::strong_ordering operator <=> (const MiniAbbr& x) const noexcept
+            { return (text <=> x.text); }
+        std::strong_ordering operator <=> (std::string_view x) const noexcept
+            { return (text <=> x); }
+    };
+
+    constinit const MiniAbbr KNOWN_ABBRS[] {
+        // A
+        { .text = "ALM",  .code = 0x061C },
+        // L
+        { .text = "LRE",  .code = 0x202A },
+        { .text = "LRM",  .code = 0x200E },
+        { .text = "LRO",  .code = 0x202D },
+        // P
+        { .text = "PDF",  .code = 0x202C },
+        // R
+        { .text = "RLE",  .code = 0x202B },
+        { .text = "RLM",  .code = 0x200F },
+        { .text = "RLO",  .code = 0x202E },
+        // V
+        { .text = "VS15", .code = 0xFE0E },
+        { .text = "VS16", .code = 0xFE0F },
+        // Z
+        { .text = "ZWSP", .code = 0x200B },
+    };
+
+}   // anon namespace
+
+
 std::unique_ptr<mywiki::Link> mywiki::parsePopCpLink(std::string_view target)
 {
-    int code = 0;
+    unsigned code = 0;
     auto q = str::fromChars(target, code, 16);
-    if (q.ec != std::errc() || code >= uc::CAPACITY || !uc::cpsByCode[code])
-        return {};
-    return std::make_unique<PopCpLink>(code);
+    if (q.ec == std::errc()) {
+        // Okay, parsed
+        if (code < uc::CAPACITY && uc::cpsByCode[code]) {
+            return std::make_unique<PopCpLink>(code);
+        }
+    } else {
+        // Erroneous code → try parse abbreviation
+        auto beg = std::begin(KNOWN_ABBRS);
+        auto end = std::end(KNOWN_ABBRS);
+        auto [from, to] = std::equal_range(beg, end, target);
+        if (from != to) {
+            return std::make_unique<PopCpLink>(from->code);
+        }
+    }
+    return {};
 }
 
 
@@ -545,6 +591,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
     if (scheme == "pb"sv) {
         return parsePopBidiLink(target);
     } else if (scheme == "pc"sv || scheme == "pu"sv) {
+        // They differ in default text only
         return parsePopCpLink(target);
     } else if (scheme == "pca"sv) {
         return parsePopCatLink(target);

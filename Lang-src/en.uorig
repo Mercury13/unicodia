@@ -1793,7 +1793,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:FE0F|VS16]] [[pt:emoji|emoji]].</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:VS16]] [[pt:emoji|emoji]].</p>
       <p />
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
@@ -7266,9 +7266,9 @@
       <p />
       <p>'''What to do for a simple user?'''</p>
       <p />
-      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:202A|LRE]]/[[pc:202B|RLE]], and finish with [[pc:202C|PDF]].</p>
-      <p>* You can use [[pc:200E|LRM]], [[pc:200F|RLM]] and [[pc:061C|ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
-      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:202D|LRO]]/[[pc:202E|RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
+      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]], and finish with [[pc:PDF]].</p>
+      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
+      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
      </orig>
     </text>
    </group>
@@ -7651,9 +7651,9 @@
       <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
-      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:200E|LRM]] and [[pc:200F|RLM]].</p>
+      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
       <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
-      <p>* Zero width space [[pc:200B|ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
+      <p>* Zero width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
       <p>These characters '''are{{_}}not''' default-ignorable:</p>
