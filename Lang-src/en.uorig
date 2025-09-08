@@ -7651,7 +7651,7 @@
       <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
-      <p>* Writing [[pt:bidi|direction]] tags: marks LRM and RLM.</p>
+      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:200E|LRM]] and [[pc:200F|RLM]].</p>
       <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
       <p>* Zero width space [[pc:200B|ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
@@ -10523,7 +10523,7 @@
      <orig>Break/hyphen-minus</orig>
     </text>
     <text id="Text">
-     <orig>[[pu:002B]] Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <orig>[[pu:002D]] Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
     </text>
    </group>
    <group id="HH">
