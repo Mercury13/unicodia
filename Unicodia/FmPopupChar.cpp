@@ -65,11 +65,20 @@ auto FmPopupChar::setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets) -
                     (str::toSv(loc::get("Main.Popup.CopyVs16"))).q();
         ui->lbCopyVs16->setText(s);
     }
-    //ui->lbCopyVs16->setVisible(hasVs16);
+    ui->lbCopyVs16->setVisible(hasVs16);
 
     // Text
+    ui->lbText->setText({});  // touch at least smth
     auto text = mywiki::buildHtml(cp, mywiki::HtmlVariant::POPUP);
     ui->lbText->setText(text);
 
     return *this;
+}
+
+
+void FmPopupChar::adjustSize()
+{
+    ui->wiControl->adjustSize();
+    ui->wiBg->adjustSize();
+    Super::adjustSize();
 }

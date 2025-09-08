@@ -17,6 +17,17 @@ constexpr auto WF_POPUP = (popupMode == PopupMode::ARTIFICIAL)
         : Qt::Popup;
 
 
+class WiAdjust : public QWidget
+{
+private:
+    using Super = QWidget;
+public:
+    using Super::Super;
+    virtual void adjustSize()
+        { Super::adjustSize(); }
+};
+
+
 namespace pop {
 
     void eatRightMargin(QRect& rect, int mainMargin, int auxMargin);
@@ -28,10 +39,10 @@ namespace pop {
             const QRect& screenRect,
             int y);
     void myAdjustSize(
-            QWidget* me,
+            WiAdjust* me,
             const QRect& screenRect);
     void popupAtScreen(
-            QWidget* me, QWidget* owner, QScreen* screen, const QRect& absRect);
+            WiAdjust* me, QWidget* owner, QScreen* screen, const QRect& absRect);
     QScreen* findScreen(QWidget* widget, const QRect& absRect);
 
     constexpr int RIGHT_MARGIN = 8;
@@ -46,51 +57,19 @@ namespace pop {
 }   // namespace pop
 
 
-class WiPopup : public QWidget
+class WiPopup : public WiAdjust
 {
 private:
-    using Super = QWidget;
+    using Super = WiAdjust;
 public:
     WiPopup(QWidget* aOwner, pop::ClickMemory& memory);
 
     pop::ClickMemory& memory() const { return fMemory; }
 
-    void popupAtAbs(QWidget* widget, const QRect& absRect)
-    {
-        if (!widget)
-            throw std::invalid_argument("[MxPopup.popupAtAbs] Widget should be non-null!");
-        fMemory.lastAbsRect = absRect;
-        fMemory.lastWidget = widget;
-        auto screen = pop::findScreen(widget, absRect);
-        popupAtScreen(screen, absRect);
-    }
-
-    void popupAtAbsBacked(QWidget* widget, const QRect& absRect)
-    {
-        if (widget) {
-            popupAtAbs(widget, absRect);
-        } else {
-            popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
-        }
-    }
-
-    void popup(QWidget* widget)
-    {
-        popupAtAbs(widget, QRect(
-                   widget->mapToGlobal(QPoint(0, 0)), widget->size()));
-    }
-
-    void popup(QWidget* widget, TinyOpt<QRect> rect)
-    {
-        if (rect) {
-            popupAtAbs(widget, QRect(
-                        widget->mapToGlobal(rect->topLeft()), rect->size()));
-        } else if (!widget) {
-            popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
-        } else {
-            popup(widget);
-        }
-    }
+    void popupAtAbs(QWidget* widget, const QRect& absRect);
+    void popupAtAbsBacked(QWidget* widget, const QRect& absRect);
+    void popup(QWidget* widget);
+    void popup(QWidget* widget, TinyOpt<QRect> rect);
 
 protected:
     QWidget* const fOwner;

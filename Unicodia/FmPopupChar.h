@@ -25,6 +25,7 @@ public:
     char32_t charCode = 0;
     ~FmPopupChar() override;
     This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
+    void adjustSize() override;
 
 protected:
     Ui::FmPopupChar *ui;

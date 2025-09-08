@@ -2,6 +2,7 @@
 
 // STL
 #include <memory>
+#include <span>
 
 // Qt
 #include <QString>

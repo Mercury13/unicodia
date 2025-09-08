@@ -44,7 +44,7 @@ void pop::popupAtY(
 }
 
 
-void pop::myAdjustSize(QWidget* me, const QRect& screenRect)
+void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
 {
     // My params
     static constexpr int MAX_WIDTH = 900;       // maximum (non really tight) width
@@ -65,13 +65,15 @@ void pop::myAdjustSize(QWidget* me, const QRect& screenRect)
             myW = std::min(myW + WIDTH_STEP, maxWidth);
             h = me->layout()->heightForWidth(myW);
         } while (h > rqHeight && myW < maxWidth);
-        me->resize(myW, h);
+        if (h >= 0 && h < me->height()) {  // something was actually done
+            me->resize(myW, h);
+        }
     }
 }
 
 
 void pop::popupAtScreen(
-        QWidget* me, QWidget* owner, QScreen* screen, const QRect& absRect)
+        WiAdjust* me, QWidget* owner, QScreen* screen, const QRect& absRect)
 {
     auto screenRect = screen->availableGeometry();
     me->hide();  // if shown
@@ -147,4 +149,41 @@ void WiPopup::mouseReleaseEvent(QMouseEvent* ev)
 {
     Super::mouseReleaseEvent(ev);
     hide();
+}
+
+void WiPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
+{
+    if (!widget)
+        throw std::invalid_argument("[MxPopup.popupAtAbs] Widget should be non-null!");
+    fMemory.lastAbsRect = absRect;
+    fMemory.lastWidget = widget;
+    auto screen = pop::findScreen(widget, absRect);
+    popupAtScreen(screen, absRect);
+}
+
+void WiPopup::popupAtAbsBacked(QWidget* widget, const QRect& absRect)
+{
+    if (widget) {
+        popupAtAbs(widget, absRect);
+    } else {
+        popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
+    }
+}
+
+void WiPopup::popup(QWidget* widget)
+{
+    popupAtAbs(widget, QRect(
+               widget->mapToGlobal(QPoint(0, 0)), widget->size()));
+}
+
+void WiPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
+{
+    if (rect) {
+        popupAtAbs(widget, QRect(
+                    widget->mapToGlobal(rect->topLeft()), rect->size()));
+    } else if (!widget) {
+        popupAtAbs(fMemory.lastWidget, fMemory.lastAbsRect);
+    } else {
+        popup(widget);
+    }
 }
