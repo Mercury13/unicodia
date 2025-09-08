@@ -63,4 +63,4 @@ Type: pop-up
 Link text: hex number (abbreviations work but not recommended)
 Default caption: link text prepended with U+
   [[pc:89AB]] → U+89AB
-Shows the same window as pc:, the only difference is a special default text
+Shows the same window as pc:, they differ in default caption only
