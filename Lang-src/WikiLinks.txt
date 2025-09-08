@@ -33,6 +33,12 @@ Link text: hex code of block start
 Default caption: none
 Shows a pop-up window of block info
 
+pl:GL :: Line breaking category
+Type: pop-up
+Link text: two-letter category code, see in Unicode docs and L10n
+Default caption: none
+Shows a pop-up window of line-breaking category
+
 po:Ibm :: Old computer
 Type: pop-up
 Link text: see L10n
