@@ -2,75 +2,8 @@
 #include "FmPopup.h"
 
 // Qt
-#include <QLabel>
-#include <QApplication>
-#include <QScreen>
 #include <QLayout>
-#include <QMouseEvent>
 #include <QGraphicsDropShadowEffect>
-
-
-///// ClickableLabel ///////////////////////////////////////////////////////////
-
-
-ClickableLabel::ClickableLabel(const QString& text, QWidget* owner)
-    : Super(text, owner)
-{
-    connect(this, &QLabel::linkActivated, this, &This::onLinkActivated);
-}
-
-
-ClickableLabel::Selection ClickableLabel::selection()
-{
-    Selection sel { selectionStart(), selectedText().length() };
-    if (sel.length == 0)
-        sel.start = -1;
-    return sel;
-}
-
-
-void ClickableLabel::mousePressEvent(QMouseEvent* ev)
-{
-    allowClose = (ev->button() == Qt::LeftButton && selection().length == 0);
-    Super::mousePressEvent(ev);
-}
-
-
-void ClickableLabel::mouseReleaseEvent(QMouseEvent* ev)
-{
-    if (ev->button() == Qt::RightButton)
-        allowClose = false;
-
-    Super::mouseReleaseEvent(ev);
-
-    if (allowClose) {
-        auto sel = selection();
-        if (sel.length == 0)
-            emit clicked();
-    }
-}
-
-
-void ClickableLabel::onLinkActivated()
-{
-    allowClose = false;
-}
-
-
-bool ClickableLabel::event(QEvent* ev)
-{
-    switch (ev->type()) {
-    case QEvent::Enter:
-        emit mouseEnter();
-        break;
-    case QEvent::Leave:
-        emit mouseLeave();
-        break;
-    default: ;
-    }
-    return Super::event(ev);
-}
-
 
 
 ///// FmPopup //////////////////////////////////////////////////////////////////

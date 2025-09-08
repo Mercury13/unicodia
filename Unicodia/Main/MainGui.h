@@ -56,7 +56,19 @@ public:
                      LocKey locKey);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
-    void closePopup(void* remainingThing = nullptr);
+
+    struct RestrictedPtr {
+        const void* v = nullptr;
+
+        RestrictedPtr(std::nullptr_t) noexcept {}
+        RestrictedPtr() noexcept = default;
+
+        template <class Target>
+        RestrictedPtr(Uptr<Target>& x) noexcept : v(&x) {}
+
+        operator const void* () { return v; }
+    };
+    void closePopup(RestrictedPtr remainingThing = {});
 
     ~MyGui() override;
 signals:

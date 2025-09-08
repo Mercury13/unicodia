@@ -26,6 +26,7 @@ public:
     ~FmPopupChar() override;
     This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
     void adjustSize() override;
+    void deselectLink();
 
 protected:
     Ui::FmPopupChar *ui;

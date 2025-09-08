@@ -126,7 +126,7 @@ void MyGui::blinkAtRel(const QString& text, const QWidget* widget, const QRect& 
 void MyGui::popupAtAbs(
         QWidget* widget, const QRect& absRect, const QString& html)
 {
-    closePopup(&popup);
+    closePopup(popup);
     popup.ensure(*this)
          .setText(html)
          .popupAtAbsBacked(widget, absRect);
@@ -136,7 +136,7 @@ void MyGui::popupAtAbs(
 void MyGui::popupCharAbs(
         QWidget* widget, const QRect& absRect, const uc::Cp& cp)
 {
-    closePopup(&popupChar);
+    closePopup(popupChar);
     popupChar.ensure(*this)
             /// @todo [urgent] Which settings?
              .setCp(cp, uc::GlyphStyleSets::EMPTY)
@@ -158,15 +158,14 @@ void MyGui::followUrl(const QString& x)
 }
 
 
-void MyGui::closePopup(void* remainingThing)
+void MyGui::closePopup(RestrictedPtr remainingThing)
 {
     if (remainingThing != &popup && popup) {
         popup->deselectLink();
         popup->close();
     }
     if (remainingThing != &popupChar && popupChar) {
-        /// @todo [future] We don’t select text in that popup, so no link deselecting
-        //popupChar->deselectLink();
+        popupChar->deselectLink();
         popupChar->close();
     }
 }

@@ -23,6 +23,9 @@ FmPopupChar::FmPopupChar(QWidget *parent, pop::ClickMemory& memory) :
 
     ui->wiBg->setStyleSheet(
         "#wiBg { background-color: " CNAME_BG_POPUP "; border: 1px solid black; }");
+    // ClickableLabel’s
+    connect(ui->lbCode, &ClickableLabel::clicked, this, &This::hide);
+    connect(ui->lbText, &ClickableLabel::clicked, this, &This::hide);
 }
 
 FmPopupChar::~FmPopupChar()
@@ -81,4 +84,10 @@ void FmPopupChar::adjustSize()
     ui->wiControl->adjustSize();
     ui->wiBg->adjustSize();
     Super::adjustSize();
+}
+
+
+void FmPopupChar::deselectLink()
+{
+    ui->lbText->setSelection(0, 0);
 }
