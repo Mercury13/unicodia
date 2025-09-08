@@ -2388,7 +2388,7 @@ namespace {
         { appendSubhead(text, "Prop.Head.Script"); }
 
     struct DepBuf {
-        char d[30] = {0};
+        char d[150] = {0};
         void build(std::u8string_view text);
         std::u8string_view u8() const { return str::toU8sv(d); }
     };
@@ -2403,7 +2403,10 @@ namespace {
                 *(p++) = ' ';
             }
             auto nRem = end - p;
-            auto nChars = snprintf(p, nRem, "%04X", static_cast<int>(ch));
+            int iCh = ch;
+            auto nChars = snprintf(p, nRem,
+                        "<a href='pc:%X' class='popup'>%04X</a>",
+                        iCh, iCh);
             p += nChars;
         }
     }
