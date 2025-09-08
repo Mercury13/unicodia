@@ -57,8 +57,10 @@ public:
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
 
+    /// @brief
+    ///   Simple pointer with a little bit error-proofing
     struct RestrictedPtr {
-        const void* v = nullptr;
+        const void* const v = nullptr;
 
         RestrictedPtr(std::nullptr_t) noexcept {}
         RestrictedPtr() noexcept = default;
