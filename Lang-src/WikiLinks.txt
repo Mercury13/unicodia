@@ -1,0 +1,60 @@
+SOME MOST frequent types of links actually usable in wiki texts
+
+Wiki links are in MediaWiki format:
+[[schema:text]]
+[[schema:text|caption]]
+<a href='schema:text'>caption</a>
+
+
+http://example.org :: HTTP
+Type: internet
+Link text: unrestricted
+Default caption: just URL
+Ordinary HTTP link
+
+https://example.org :: HTTPS
+Type: internet
+Link text: unrestricted
+Default caption: just URL
+Ordinary HTTPS link
+
+pc:89AB :: Character
+Type: pop-up
+Link text: hex number, or uppercase abbreviation:
+  ALM LRE LRM LRO PDF RLE RLM RLO VS15 VS16 ZWSP
+Default caption: same as link text
+  [[pc:89AB]] → 89AB
+  [[pc:ALM]] → ALM
+Shows a special pop-up window of character
+
+pk:1230 :: Block
+Type: pop-up
+Link text: hex code of block start
+Default caption: none
+Shows a pop-up window of block info
+
+po:Ibm :: Old computer
+Type: pop-up
+Link text: see L10n
+Default caption: hardcoded/localized text, depending on computer
+  [[po:Mac]] → Macintosh
+Shows a pop-up window of old computer
+
+ps:Latn :: Script
+Type: pop-up
+Link text: four-letter code of script
+Default caption: none
+Shows a pop-up window of script
+
+pt:zwj :: Term
+Type: pop-up
+Link text: lowercase term codes, see L10n
+Default caption: none
+Shows a pop-up window of term
+
+pu:89A0 :: Character+Unicode
+Type: pop-up
+Link text: hex number (abbreviations work but not recommended)
+Default caption: link text prepended with U+
+  [[pc:89AB]] → U+89AB
+Shows the same window as pc:, the only difference is a special default text
