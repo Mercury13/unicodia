@@ -62,9 +62,11 @@ public:
     struct RestrictedPtr {
         const void* const v = nullptr;
 
+        /// …can point to nowhere
         RestrictedPtr(std::nullptr_t) noexcept {}
         RestrictedPtr() noexcept = default;
 
+        /// …can point to Uptr, that’s all
         template <class Target>
         RestrictedPtr(Uptr<Target>& x) noexcept : v(&x) {}
 
