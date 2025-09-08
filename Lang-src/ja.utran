@@ -253,12 +253,12 @@
      <transl>デフォルト無視文字</transl>
     </text>
     <text id="Emoji16">
-     <orig>Graphic &lt;a {1}&gt;emoji&lt;/a&gt; requires U+FE0F (=VS16)</orig>
+     <orig>Graphic &lt;a {1}&gt;emoji&lt;/a&gt; requires &lt;a {2}&gt;U+FE0F&lt;/a&gt; (=VS16)</orig>
      <au-cmt>
       <p>{1}=misc props of &lt;a&gt;, do not forget</p>
       <p>Test: Misc symbols (U+2600)</p>
      </au-cmt>
-     <transl>グラフィック &lt;a {1}&gt;絵文字&lt;/a&gt; には U+FE0F (=VS16)が必要です</transl>
+     <transl>グラフィック &lt;a {1}&gt;絵文字&lt;/a&gt; には &lt;a {2}&gt;U+FE0F&lt;/a&gt; (=VS16)が必要です</transl>
     </text>
     <text id="SuttonNoFill">
      <orig>No fills and rotations</orig>
@@ -1494,18 +1494,18 @@
       <p />
       <p>Unicode provides two ways of conveying diacritics, [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify search in such a mess, Unicode has an algorithm of [[pt:normalization|normalization]].</p>
       <p />
-      <p>Characters 034F CGJ is not{{_}}a{{_}}joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
+      <p>Characters [[pc:034F]] CGJ is not{{_}}a{{_}}joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
       <p />
-      <p>Character 0310 Candrabindu is intended for writing Indic languages in Latin and Cyrillic. Every [[pt:brahmic|Indic]] script has its own candrabindu.</p>
+      <p>Character [[pc:0310]] Candrabindu is intended for writing Indic languages in Latin and Cyrillic. Every [[pt:brahmic|Indic]] script has its own candrabindu.</p>
      </orig>
      <transl>
       <p>発音区別符号は、文字に付加され、文字の意味を変更または明確にする行の上、下、行内の文字です。たとえば、''résumé'' のアクセントなどです。</p>
       <p />
       <p>Unicode では、発音区別符号を伝える方法として、[[pt:precomposed|合成]] 文字と「メイン文字 +{{_}}'''[[pt:combining|結合]] マーク'''」の組み合わせの 2 つが用意されています。このような混乱の中での検索を簡素化するために、Unicode には [[pt:normalization|正規化]] アルゴリズムがあります。</p>
       <p />
-      <p>文字 034F CGJ は、二重音字の結合子ではなく、二重音字の分離子です。チェコ語 (ch は {{t|x}} と発音され、アルファベット順は ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch)、ハンガリー語、ヘブライ語、その他の言語で使用されています。</p>
+      <p>文字 [[pc:034F]] CGJ は、二重音字の結合子ではなく、二重音字の分離子です。チェコ語 (ch は {{t|x}} と発音され、アルファベット順は ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch)、ハンガリー語、ヘブライ語、その他の言語で使用されています。</p>
       <p />
-      <p>文字 0310 Candrabindu は、インド諸語をラテン文字とキリル文字で表記するためのものです。すべての [[pt:brahmic|インド諸語]] 文字には独自の candrabindu があります。</p>
+      <p>文字 [[pc:0310]] Candrabindu は、インド諸語をラテン文字とキリル文字で表記するためのものです。すべての [[pt:brahmic|インド諸語]] 文字には独自の candrabindu があります。</p>
      </transl>
     </text>
    </group>
@@ -2337,12 +2337,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several VS16 [[pt:emoji|emoji]].</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:VS16]] [[pt:emoji|emoji]].</p>
       <p />
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
      <transl>
-      <p>コンピューター以前の有名なプリンター装飾ライブラリ「ヘルマン・ツァップのディングバット」(1977)。PostScript フォントとして広く配布され、すべての PDF ビューアーに必ず存在します。ブロックには、VS16 [[pt:emoji|絵文字]] がいくつか含まれています。</p>
+      <p>コンピューター以前の有名なプリンター装飾ライブラリ「ヘルマン・ツァップのディングバット」(1977)。PostScript フォントとして広く配布され、すべての PDF ビューアーに必ず存在します。ブロックには、[[pc:VS16]] [[pt:emoji|絵文字]] がいくつか含まれています。</p>
       <p />
       <p>新しい絵文字は、そのライブラリに含まれていないものがわずかにあります。これらはバージョン 6.0 以降で追加されたもので、VS16 ではありません。</p>
      </transl>
@@ -2536,12 +2536,12 @@
      <orig>
       <p>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</p>
       <p />
-      <p>All characters are visible, renderers usually do{{_}}not{{_}}recreate ideograph’s look. Zhuang character U+2DA21 {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
+      <p>All characters are visible, renderers usually do{{_}}not{{_}}recreate ideograph’s look. Zhuang character [[pu:2DA21]] {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
      </orig>
      <transl>
       <p>Unicode には、エンコードされていない [[ps:Hani|CJK 表意文字]] を記述するメカニズムがあります。これを行うには、どの部分に分割するか、各部分に何が含まれているかを指定します。このブロックは最初のものになります。</p>
       <p />
-      <p>すべての文字が表示され、レンダラーは通常、表意文字の外観を再現しません。古壮字 U+2DA21 {{smb|𭨡}} は {{sm|⿰書史}} と記述できます。Unicode{{_}}15.1 では、ブロックが完全に埋められ、1 つの文字が [[pk:31C0|CJK ストローク]] に割り当てられます。</p>
+      <p>すべての文字が表示され、レンダラーは通常、表意文字の外観を再現しません。古壮字 [[pu:2DA21]] {{smb|𭨡}} は {{sm|⿰書史}} と記述できます。Unicode{{_}}15.1 では、ブロックが完全に埋められ、1 つの文字が [[pk:31C0|CJK ストローク]] に割り当てられます。</p>
      </transl>
     </text>
    </group>
@@ -3808,8 +3808,8 @@
      <transl>シャラダサプリメント</transl>
     </text>
     <text id="Text" force-attention="true">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to U+11183 or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
-     <transl>カシミール語の現代シャラダの母音記号は、[[ps:Deva|デーバナーガリー文字]] から改作したものです。頭文字を得るには、これらの記号を U+11183 またはその他の頭母音に付けます。カシミール語{{nspk|ks}}は通常 [[ps:Arab|アラビア語-ウルドゥー語]] で書かれます。</transl>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <transl>カシミール語の現代シャラダの母音記号は、[[ps:Deva|デーバナーガリー文字]] から改作したものです。頭文字を得るには、これらの記号を [[pu:11183]] またはその他の頭母音に付けます。カシミール語{{nspk|ks}}は通常 [[ps:Arab|アラビア語-ウルドゥー語]] で書かれます。</transl>
     </text>
    </group>
    <group id="11BC0">
@@ -3959,9 +3959,9 @@
      <orig>
       <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
-      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped 130FB↔AE8 and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped [[pc:130FB]]↔[[pc:13AE8|AE8]] and others), and inconsistencies between glyphs and their descriptions.</p>
       <p />
-      <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+      <p>Egyptologists developed special arrows for reading direction, [[pu:1F8C0]] and [[pc:1F8C1|C1]].</p>
       <p />
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
@@ -3976,7 +3976,7 @@
      <transl>
       <p>アラン・ガーディナー以外の情報源から、さらに 3995 の象形文字が見つかりました。最初の提案はひどいものだったので、ラップトップを持った男性が何とか紛れ込んでしまいましたが、学者たちがすべてをチェックした結果、Unicode のエジプト象形文字のベースである「ユニケメット」が誕生しました (「ケメット」は古代エジプトの自称です)。</p>
       <p />
-      <p>エジプト学者は、読み方向を示す特別な矢印 U+1F8C0 と C1 を開発しました。</p>
+      <p>エジプト学者は、読み方向を示す特別な矢印 [[pu:1F8C0]] と [[pc:1F8C1|C1]] を開発しました。</p>
       <p />
       <p>2025年初頭、象形文字をエンコードするための[[pt:egyp|ルール]]が書かれました。</p>
      </transl>
@@ -4069,6 +4069,17 @@
      <orig>
       <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
       <p />
+      <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} [[pu:3005]].</p>
+      <p />
+      <p>Hook means the end of a sentence or section in old manuscripts.</p>
+      <p />
+      <p>If a block of Khitan Small starts with a single ideograph instead of two, a [[pc:16FE4|filler]] is put in the vacant place.</p>
+      <p />
+      <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and thus [[pt:unification|unified]]. The second form looks like arrow &lt;big&gt;↑&lt;/big&gt; and lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
+     </orig>
+     <known-orig>
+      <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
+      <p />
       <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} U+3005.</p>
       <p />
       <p>Hook means the end of a sentence or section in old manuscripts.</p>
@@ -4076,11 +4087,11 @@
       <p>If a block of Khitan Small starts with a single ideograph instead of two, a filler is put in the vacant place.</p>
       <p />
       <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and thus [[pt:unification|unified]]. The second form looks like arrow &lt;big&gt;↑&lt;/big&gt; and lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>古い [[pt:cjk|CJK]] 文字で使用されているさまざまな文字: [[ps:Nshu|女書]]、[[ps:Tang|西夏文字]]、[[ps:Kits|契丹小文字]]、古い [[ps:Hani|中国語表意文字]]。</p>
       <p />
-      <p>同じ表意文字を続けて 2 回書くことはなく、代わりに繰り返し記号が書かれます。 現代の印刷された中国語では繰り返しが許可されていますが、中国語では非公式に、日本語では {{sm|々}} U+3005 を使用します。</p>
+      <p>同じ表意文字を続けて 2 回書くことはなく、代わりに繰り返し記号が書かれます。 現代の印刷された中国語では繰り返しが許可されていますが、中国語では非公式に、日本語では {{sm|々}} [[pu:3005]] を使用します。</p>
       <p />
       <p>フックは、古い写本では文またはセクションの終わりを意味します。</p>
       <p />
@@ -4284,9 +4295,9 @@
       <p />
       <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
       <p />
-      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters (beam, tie, slur, phrase) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
-      <p>Microtone notation initially accepted by Unicode (1D132 and 33) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
@@ -4295,9 +4306,9 @@
       <p />
       <p>音符は 17 世紀に平均律によって現在の形に進化し、オーケストラで演奏する他の楽器に音楽を移植できるようになりました。</p>
       <p />
-      <p>音楽は [[pt:universality|非テキスト]] 情報であるため、Unicode の範囲外です。しかし、既存のタイポグラフィ エンジンを使用して音符とそのパートをフォントに保存し、音楽ソフトウェアを簡素化し、楽譜 PDF を短縮することは魅力的です。この観点から、8 つの [[pt:format|書式]] 文字 (ビーム、タイ、スラー、フレーズ) の目的は不明です。 2013 年にオープン スタンダード SMuFL (Standard Music Font Layout) が登場し、[[pt:private|私的使用]] コードポイントを使用してブロックを 2600 文字に拡張しました。</p>
+      <p>音楽は [[pt:universality|非テキスト]] 情報であるため、Unicode の範囲外です。しかし、既存のタイポグラフィ エンジンを使用して音符とそのパートをフォントに保存し、音楽ソフトウェアを簡素化し、楽譜 PDF を短縮することは魅力的です。この観点から、8 つの [[pt:format|書式]] 文字 ([[pc:1D173|ビーム]]、[[pc:1D175|タイ]]、[[pc:1D177|スラー]]、[[pc:1D179|フレーズ]]) の目的は不明です。 2013 年にオープン スタンダード SMuFL (Standard Music Font Layout) が登場し、[[pt:private|私的使用]] コードポイントを使用してブロックを 2600 文字に拡張しました。</p>
       <p />
-      <p>Unicode で最初に受け入れられた微分音表記 (1D132 および 33) は広く使用されておらず、これらの文字を「実際に」見たことがある人はほとんどいません。 Unicode{{_}}18 では、音楽ソフトウェアで広く使用されている別の表記 (ハーフシャープ、ハーフフラット) が追加されます。</p>
+      <p>Unicode で最初に受け入れられた微分音表記 ([[pc:1D132]] および [[pc:1D133|33]]) は広く使用されておらず、これらの文字を「実際に」見たことがある人はほとんどいません。 Unicode{{_}}18 では、音楽ソフトウェアで広く使用されている別の表記 (ハーフシャープ、ハーフフラット) が追加されます。</p>
       <p />
       <p>また、このブロックには、廃止された音楽表記の文字がいくつか含まれています。</p>
      </transl>
@@ -5006,13 +5017,13 @@
     <text id="Text">
      <orig>
       <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated {{n|4939}} old and rare characters there. This block contains two record-beating ideographs:</p>
-      <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': U+30EDD simplified 42 strokes, U+30EDE traditional 58 strokes;</p>
-      <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', U+3106C.</p>
+      <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': [[pu:30EDD]] simplified 42 strokes, [[pu:30EDE]] traditional 58 strokes;</p>
+      <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', [[pu:3106C]].</p>
      </orig>
      <transl>
       <p>2020年、Unicodeは[[pt:plane|plane]]番号3に踏み込み、そこに{{n|4939}}個の古くて珍しい文字を割り当てました。このブロックには、記録を破った2つの表意文字が含まれています。</p>
-      <p>* 中国の麺類「ビアンビアン」で2回書かれた「ビアン」{{-}}：U+30EDD簡体字42画、U+30EDE繁体字58画。</p>
-      <p>* 日本の発明による「ダイト」または「オトド」{{-}}84画の表意文字で、「飛んでいる龍の姿」を意味し、U+3106C。</p>
+      <p>* 中国の麺類「ビアンビアン」で2回書かれた「ビアン」{{-}}：[[pu:30EDD]]簡体字42画、[[pu:30EDE]]繁体字58画。</p>
+      <p>* 日本の発明による「ダイト」または「オトド」{{-}}84画の表意文字で、「飛んでいる龍の姿」を意味し、[[pu:3106C]]。</p>
      </transl>
     </text>
    </group>
@@ -5840,7 +5851,7 @@
      <orig>
       <p>Developed in Maldives from [[ps:Gran|Grantha]] and existed until 18th century, and in some islands until 20th. Early form (before 12th century) scholars call ''Evela Akuru'' (retronym, not{{_}}autonym!). With the conversion from Buddhism to Islam in 1153, ''Evela'' transformed to ''Dives'', remaining left-to-right. Since the 17th century, it was gradually supplanted with [[ps:Thaa|Thaana]].</p>
       <p />
-      <p>Ancient Maldivian had plenty of both phonemes and letter variants: the same document contained initial vowels both as separate letters and as marks upon U+11925. ''Dives'' script retained the latter form, dropped palatal and aspirated consonants.</p>
+      <p>Ancient Maldivian had plenty of both phonemes and letter variants: the same document contained initial vowels both as separate letters and as marks upon [[pu:11925]]. ''Dives'' script retained the latter form, dropped palatal and aspirated consonants.</p>
       <p />
       <p>Inherent vowel is {{t|a}}, replaced by other with vowel [[pt:combining|marks]], removed in the end of words with [[pt:virama|virama]] sign ''(halanta)''. In the middle of words, virama means the alternate pronunciation of “u” vowel. Another virama is purely virtual and serves for consonant conjuncts{{-}}two letters are just stuck together (also 13 [[pt:ligature|ligatures]] such as “sta” exist).</p>
       <p>: ka {{sm|𑤌}} + i {{sm|◌𑤱}} = ki {{sm|𑤌𑤱}}</p>
@@ -5864,7 +5875,7 @@
      <transl>
       <p>モルディブで [[ps:Gran|グランタ文字]] から発展し、18 世紀まで、一部の島では 20 世紀まで存在しました。初期の形式 (12 世紀以前) では、学者は ''Evela Akuru'' (レトロニム、{{_}} 自称ではありません!) と呼んでいます。イスラム教の採用により、''Evela'' は ''Dives'' に変わり、左から右のままになりました。18 世紀初頭に、スルタンの法令により、右から左の [[ps:Thaa|ターナ文字]] に置き換えられました。</p>
       <p />
-      <p>古代モルディブ語には、音素と文字の両方のバリエーションが豊富にありました。同じ文書に、最初の母音が独立した文字と U+11925 のマークの両方で含まれていました。''Dives'' スクリプトは後者の形式を保持し、口蓋音と有気音を削除しました。</p>
+      <p>古代モルディブ語には、音素と文字の両方のバリエーションが豊富にありました。同じ文書に、最初の母音が独立した文字と [[pu:11925]] のマークの両方で含まれていました。''Dives'' スクリプトは後者の形式を保持し、口蓋音と有気音を削除しました。</p>
       <p />
       <p>固有の母音は {{t|a}} で、他の母音 [[pt:combining|マーク]] に置き換えられ、単語の末尾では [[pt:virama|ヴィラマ]] 記号 ''(halanta)'' で削除されます。単語の途中では、virama は「u」母音の代替発音を意味します。別の ヴィラマ は完全に仮想的で、子音接続詞として機能します。{{-}} 2 つの文字が単にくっついています (また、「sta」などの 13 個の [[pt:ligature|合字]] が存在します)。</p>
       <p>: ka {{sm|𑤌}} + i {{sm|◌𑤱}} = ki {{sm|𑤌𑤱}}</p>
@@ -6254,14 +6265,14 @@
       <p />
       <p>Alphabet is taken from [[ps:Grek|Greek]], letter names are same as runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of such origin of script, “canonically looking” Gothic letters are written with a thick pen rather than a sharp object.</p>
       <p />
-      <p>Letter {{sm|𐌹̈}} consists of letter {{sm|𐌹}} and combining umlaut U+0308.</p>
+      <p>Letter {{sm|𐌹̈}} consists of letter {{sm|𐌹}} and combining umlaut [[pu:0308]].</p>
      </orig>
      <transl>
       <p>アルファベットを作ったのはウルフィラ司教だと考えられています。彼は聖書をゴート語に翻訳し、聖典を [[ps:Runr|ルーン文字]] で書くことを{{_}}望んでいませんでした。4～6 世紀のゴート語の資料はこの文字で書かれています。</p>
       <p />
       <p>アルファベットは [[ps:Grek|ギリシャ語]] から取られ、文字の名前はルーン文字と同じです。2 つの文字は数値のみを持ちます: {{sm|𐍁}}=90 と {{sm|𐍊}}=900。このような文字の起源のため、「正典的」なゴート文字は鋭い物ではなく太いペンで書かれています。</p>
       <p />
-      <p>文字 {{sm|𐌹̈}} は文字 {{sm|𐌹}} と結合ウムラウト U+0308 で構成されています。</p>
+      <p>文字 {{sm|𐌹̈}} は文字 {{sm|𐌹}} と結合ウムラウト [[pu:0308]] で構成されています。</p>
      </transl>
     </text>
    </group>
@@ -8206,7 +8217,7 @@
       <p />
       <p>Thee styles existed: book (main), seal (mimicked old Chinese calligraphy that was used in seals), and Tibetan (resembles [[ps:Marc|Marchen]]).</p>
       <p />
-      <p>Numbers are spelled out in all specimen. Most specimen have no punctuation; some used Mongolian marks or middle circular full-stop unified with U+3002.</p>
+      <p>Numbers are spelled out in all specimen. Most specimen have no punctuation; some used Mongolian marks or middle circular full-stop unified with [[pu:3002]].</p>
      </orig>
      <transl>
       <p>[[ps:Mong|モンゴル人]]は、[[ps:Ougr|ウイグル語]]のアルファベットを若干の変更を加えて使用しました。モンゴル人が中国を征服したとき、クビライ・ハーンは宮廷と多国籍の人々の間の意思疎通に問題を抱え、その課題はクビライの師であるパクパ（1235–1280）によって解決されました。この文字は多大な努力によって導入されましたが、ウイグル語のアルファベットは少なくとも2回禁止されました。1368年に中国人がモンゴルを倒したとき、この文字はすぐに忘れ去られました。今日では、チベットやブータンの寺院の印章に時々使用されています。</p>
@@ -8216,7 +8227,7 @@
       <p />
       <p>3 つのスタイルが存在しました: 本 (メイン)、篆書 (印章に使用されていた古い中国の書道を模倣)、およびチベット語 ([[ps:Marc|マーチェン文字]] に似ています)。</p>
       <p />
-      <p>すべての標本で数字は綴られています。ほとんどの標本には句読点がありません。一部の標本では、モンゴル語の​​記号または U+3002 で統一された中丸の終止符が使用されていました。</p>
+      <p>すべての標本で数字は綴られています。ほとんどの標本には句読点がありません。一部の標本では、モンゴル語の​​記号または [[pu:3002]] で統一された中丸の終止符が使用されていました。</p>
      </transl>
     </text>
    </group>
@@ -8702,7 +8713,7 @@
      <orig>
       <p>As most other scripts of South-East Asia, comes from [[ps:Brah|Brahmi]]. Writing came to Sri Lanka in 3rd century, and by 13th century the script had formed. Letters have curly shape: in ancient times writing on palm leaves was widespread, anf straight lines would cut the leaf along veins.</p>
       <p />
-      <p>Inherent vowel is {{t|ʌ}}. There are less than 30 [[pt:ligature|ligatures]] “consonant-consonant”, they all are written explicitly, using character U+200D{{_}}ZWJ. [[pt:virama|Virama]] (“remove vowel” sign) is called “al-lakuna” in Arabic manner and is very frequent.</p>
+      <p>Inherent vowel is {{t|ʌ}}. There are less than 30 [[pt:ligature|ligatures]] “consonant-consonant”, they all are written explicitly, using character U+200D{{_}}[[pt:zwj|ZWJ]]. [[pt:virama|Virama]] (“remove vowel” sign) is called “al-lakuna” in Arabic manner and is very frequent.</p>
       <p>: ka {{sm|&amp;#xD9A;}} + i {{sm|&amp;#x25CC;&amp;#3538;}} = ki {{sm|&amp;#xD9A;&amp;#3538;}}</p>
       <p>: ka {{sm|&amp;#xD9A;}} + virama {{sm|&amp;#x25CC;&amp;#xDCA;}} = k {{sm|&amp;#xD9A;&amp;#xDCA;}}</p>
       <p>: ka {{sm|&amp;#xD9A;}} + virama {{sm|&amp;#x25CC;&amp;#xDCA;}} + ZWJ + va {{sm|&amp;#xDC0;}} = kva {{sm|&amp;#xD9A;&amp;#xDCA;&amp;zwj;&amp;#xDC0;}}</p>
@@ -8712,7 +8723,7 @@
      <transl>
       <p>東南アジアの他の文字のほとんどと同様に、ブラーフミー文字は [[ps:Brah|ブラーフミー文字]] に由来します。文字は 3 世紀にスリランカに伝わり、13 世紀までに文字が形成されました。文字はカールした形をしています。古代ではヤシの葉に文字を書くことが広く行われ、葉脈に沿って直線が葉を切っていました。</p>
       <p />
-      <p>固有の母音は {{t|ʌ}} です。[[pt:ligature|合字]]「子音-子音」は 30 未満で、すべて U+200D{{_}}ZWJ 文字を使用して明示的に記述されます。[[pt:virama|ヴィラマ]]（「母音を削除」記号）はアラビア語で「al-lakuna」と呼ばれ、非常によく使用されます。</p>
+      <p>固有の母音は {{t|ʌ}} です。[[pt:ligature|合字]]「子音-子音」は 30 未満で、すべて U+200D{{_}}[[pt:zwj|ZWJ]] 文字を使用して明示的に記述されます。[[pt:virama|ヴィラマ]]（「母音を削除」記号）はアラビア語で「al-lakuna」と呼ばれ、非常によく使用されます。</p>
       <p>: ka {{sm|&amp;#xD9A;}} + i {{sm|&amp;#x25CC;&amp;#3538;}} = ki {{sm|&amp;#xD9A;&amp;#3538;}}</p>
       <p>: ka {{sm|&amp;#xD9A;}} + virama {{sm|&amp;#x25CC;&amp;#xDCA;}} = k {{sm|&amp;#xD9A;&amp;#xDCA;}}</p>
       <p>: ka {{sm|&amp;#xD9A;}} + virama {{sm|&amp;#x25CC;&amp;#xDCA;}} + ZWJ + va {{sm|&amp;#xDC0;}} = kva {{sm|&amp;#xD9A;&amp;#xDCA;&amp;zwj;&amp;#xDC0;}}</p>
@@ -9128,7 +9139,7 @@
       <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
       <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese U+3001 and 02 are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
+      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese [[pu:3001]] and [[pc:3002|02]] are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
       <p />
       <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
      </orig>
@@ -9710,44 +9721,44 @@
      <orig>
       <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Currently few of them are used:</p>
       <p />
-      <p>* null character 00{{-}}end of string in memory;</p>
-      <p>* end of file 04 (Unix) and 1A (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
-      <p>* bell 07{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;</p>
-      <p>* backspace 08{{-}}moves carriage one step back;</p>
-      <p>* tabulation 09{{-}}moves to positions 9, 17, 25, 33… for table formatting;</p>
-      <p>* line feed 0A{{-}}end of line in text file (Unix), turns drum one line forward;</p>
-      <p>* form feed 0C{{-}}printer ejects the sheet;</p>
-      <p>* carriage return 0D. Hence end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;</p>
-      <p>* escape 1B{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
+      <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
+      <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
+      <p>* bell [[pc:07]]{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;</p>
+      <p>* backspace [[pc:08]]{{-}}moves carriage one step back;</p>
+      <p>* tabulation [[pc:09]]{{-}}moves to positions 9, 17, 25, 33… for table formatting;</p>
+      <p>* line feed [[pc:0A]]{{-}}end of line in text file (Unix), turns drum one line forward;</p>
+      <p>* form feed [[pc:0C]]{{-}}printer ejects the sheet;</p>
+      <p>* carriage return [[pc:0D]]. Hence end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;</p>
+      <p>* escape [[pc:1B]]{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
       <p />
       <p>Other interesting commands:</p>
       <p />
-      <p>* vertical tabulation 0B{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
-      <p>* shift out/in 0E/0F{{-}}other ribbon colour, other character set;</p>
-      <p>* data link escape 10{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
-      <p>* delete 7F{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
+      <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
+      <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
+      <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
       <p />
       <p>All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>
      <transl>
       <p>最初の数年間、交換セッションを手動で繰り返す必要があったため (パンチ テープまたはコンソールを使用)、データ形式やネットワーク プロトコルの代わりに制御文字が使用されました。{{k|Ctrl}} キーは、当初は制御文字の入力に使用されていました。現在使用されている制御文字は、次のとおりです :</p>
       <p />
-      <p>* ヌル文字 00{{-}}メモリ内の文字列の終わり;</p>
-      <p>* ファイルの終わり 04 (Unix) および 1A (DOS/Windows){{-}} コンソールから {{k|Ctrl|D}}/{{k|Ctrl|Z}} と入力してテキスト入力を終了します;</p>
-      <p>* ベル07{{-}}端末またはプリンタがオペレータの注意を引きます。現在は通常サウンドカード経由で印刷を一時停止せずに行われます;</p>
-      <p>* backspace 08{{-}} キャリッジを1ステップ後ろに移動;</p>
-      <p>* 表の書式設定では、タブ09{{-}}は位置9、17、25、33…に移動します;</p>
-      <p>* 改行 0A{{-}}テキストファイルの行末（Unix）、ドラムを1行進めます;</p>
-      <p>* フォームフィード0C{{-}}プリンタがシートを排出します;</p>
-      <p>* キャリッジリターン0D。したがって、DOS/Windowsの行末は0D+0A{{-}}プリンタがキャリッジを戻し、ドラムを回転させる;</p>
-      <p>* escape 1B{{-}}プリンタ（フォント、グラフィック）またはコンソール（カーソル移動、色）のコマンドを実行します。.</p>
+      <p>* ヌル文字 [[pc:00]]{{-}}メモリ内の文字列の終わり;</p>
+      <p>* ファイルの終わり [[pc:04]] (Unix) および [[pc:1A]] (DOS/Windows){{-}} コンソールから {{k|Ctrl|D}}/{{k|Ctrl|Z}} と入力してテキスト入力を終了します;</p>
+      <p>* ベル[[pc:07]]{{-}}端末またはプリンタがオペレータの注意を引きます。現在は通常サウンドカード経由で印刷を一時停止せずに行われます;</p>
+      <p>* backspace [[pc:08]]{{-}} キャリッジを1ステップ後ろに移動;</p>
+      <p>* 表の書式設定では、タブ[[pc:09]]{{-}}は位置9、17、25、33…に移動します;</p>
+      <p>* 改行 [[pc:0A]]{{-}}テキストファイルの行末（Unix）、ドラムを1行進めます;</p>
+      <p>* フォームフィード[[pc:0C]]{{-}}プリンタがシートを排出します;</p>
+      <p>* キャリッジリターン[[pc:0D]]。したがって、DOS/Windowsの行末は0D+0A{{-}}プリンタがキャリッジを戻し、ドラムを回転させる;</p>
+      <p>* escape [[pc:1B]]{{-}}プリンタ（フォント、グラフィック）またはコンソール（カーソル移動、色）のコマンドを実行します。.</p>
       <p />
       <p>その他の興味深いコマンド:</p>
       <p />
-      <p>* 垂直タブ0B{{-}}ドラムをあらかじめプログラムされた位置に回します。既存のフォームへの印刷がより速く静かになります;</p>
-      <p>* シフトアウト/シフトイン 0E/0F{{-}}他のリボンの色、他の文字セット;</p>
-      <p>* データリンクエスケープ 10{{-}}次の文字は[[pt:graphic|グラフィック]]であり、{{_}}制御文字ではありません;</p>
-      <p>* 7F{{-}} を削除して、パンチ テープ上の誤りを修正します (7 つのトラックすべてがパンチされている場合、この文字はスキップされます)。一部の端末では FF 文字がこの役割を果たします。そのため、[[ps:Cyrl|ロシア語]] の “я” は、ファイル サーバーや MUD ゲームで大文字に置き換えられました。</p>
+      <p>* 垂直タブ[[pc:0B]]{{-}}ドラムをあらかじめプログラムされた位置に回します。既存のフォームへの印刷がより速く静かになります;</p>
+      <p>* シフトアウト/シフトイン [[pc:0E]]/[[pc:0F]]{{-}}他のリボンの色、他の文字セット;</p>
+      <p>* データリンクエスケープ [[pc:10]]{{-}}次の文字は[[pt:graphic|グラフィック]]であり、{{_}}制御文字ではありません;</p>
+      <p>* [[pc:7F]]{{-}} を削除して、パンチ テープ上の誤りを修正します (7 つのトラックすべてがパンチされている場合、この文字はスキップされます)。一部の端末では FF 文字がこの役割を果たします。そのため、[[ps:Cyrl|ロシア語]] の “я” は、ファイル サーバーや MUD ゲームで大文字に置き換えられました。</p>
       <p />
       <p>制御カテゴリの 65 文字はすべて歴史的なものです。実際にテキストの表示に影響する文字は [[pt:format|書式文字]] と呼ばれます。</p>
      </transl>
@@ -10066,8 +10077,17 @@
      <orig>Separator/whitespace</orig>
      <transl>区切り文字/空白</transl>
     </text>
-    <text id="Text">
+    <text id="Text" force-attention="true">
      <orig>
+      <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to next line.</p>
+      <p />
+      <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
+      <p />
+      <p>In ''Unicodia'' spaces are marked exactly by body’s size, so narrowness is deceptive. Hair space [[pu:200A]] is often enough to leave a little space.</p>
+      <p />
+      <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
+     </orig>
+     <known-orig>
       <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to next line.</p>
       <p />
       <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
@@ -10075,7 +10095,7 @@
       <p>In ''Unicodia'' spaces are marked exactly by body’s size, so narrowness is deceptive. Hair space U+200A is often enough to leave a little space.</p>
       <p />
       <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
-     </orig>
+     </known-orig>
      <transl>スペースを残すための文字です。適切にタイプセットされたテキストには、必要なだけのスペースがあります。146%{{-}} は少なすぎ、146{{_}}%{{-}} は多すぎ、{{%|146}}{{-}} はちょうどよいです。スペースも異なるのはこのためです。スペースの一部は改行不可です。両端揃えのテキストでは引き伸ばされず、次の行に折り返されません。</transl>
     </text>
    </group>
@@ -10285,7 +10305,7 @@
      <orig>
       <p>'''Libre and Microsoft Office'''</p>
       <p />
-      <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to character{{-}}in this case {{em|☯}} U+262F Yin and yang.</p>
+      <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to character{{-}}in this case {{em|☯}} [[pu:262F]] Yin and yang.</p>
       <p />
       <p>'''UnicodeInput'''</p>
       <p />
@@ -10296,7 +10316,7 @@
      <transl>
       <p>'''Libre と Microsoft Office'''</p>
       <p />
-      <p>16進文字コード（たとえば、262F）を入力し、{{kb|Alt|X}}を押します。コードは文字{{-}}（この場合は{{em|☯}} U+262F 陰陽）に変換されます。</p>
+      <p>16進文字コード（たとえば、262F）を入力し、{{kb|Alt|X}}を押します。コードは文字{{-}}（この場合は{{em|☯}} [[pu:262F]] 陰陽）に変換されます。</p>
       <p />
       <p>'''Unicode入力'''</p>
       <p />
@@ -10414,9 +10434,9 @@
       <p />
       <p>'''What to do for a simple user?'''</p>
       <p />
-      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with LRE/RLE, and finish with PDF.</p>
-      <p>* You can use LRM, RLM and ALM for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
-      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with LRO/RLO, and finish with PDF. Avoid this notation, it’s a security issue.</p>
+      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]], and finish with [[pc:PDF]].</p>
+      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
+      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
      </orig>
      <transl>
       <p>右から左に書かれた文字が少なくとも 1 つ含まれるテキスト。このようなテキストを処理するアルゴリズムは複雑なので、一般的な説明をします。</p>
@@ -10435,9 +10455,9 @@
       <p />
       <p>'''単純なユーザーの場合の対処法は?'''</p>
       <p />
-      <p>* ヘブライ語の引用を英語のテキストに書き、システムがそれを正しくフォーマットしない場合は、引用を LRE/RLE で開始し、PDF で終了します。</p>
-      <p>* 小さなテキストには LRM、RLM、ALM を使用できます。これらは、方向が厳密に指定された空の文字であり、システムが方向がわかっている文字を見つけるまでこの方向が維持されます。</p>
-      <p>* 左から右の言語で右から左に書きたい場合、またはその逆の場合は、テキストを LRO/RLO で開始し、PDF で終了します。この表記はセキュリティ上の問題なので避けてください。</p>
+      <p>* ヘブライ語の引用を英語のテキストに書き、システムがそれを正しくフォーマットしない場合は、引用を [[pc:LRE]]/[[pc:RLE]] で開始し、[[pc:PDF]] で終了します。</p>
+      <p>* 小さなテキストには [[pc:LRM]]、[[pc:RLM]]、[[pc:ALM]] を使用できます。これらは、方向が厳密に指定された空の文字であり、システムが方向がわかっている文字を見つけるまでこの方向が維持されます。</p>
+      <p>* 左から右の言語で右から左に書きたい場合、またはその逆の場合は、テキストを [[pc:LRO]]/[[pc:RLO]] で開始し、PDF で終了します。この表記はセキュリティ上の問題なので避けてください。</p>
      </transl>
     </text>
    </group>
@@ -10521,7 +10541,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character U+FEFF. It may (not must) be put in the beginning of Unicode text file to indicate [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
+      <p>Character [[pu:FEFF]]. It may (not must) be put in the beginning of Unicode text file to indicate [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
       <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
       <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (most significant byte first);</p>
       <p>* FF{{_}}FE, then everything except 00{{_}}00{{-}}UTF-16LE (least significant byte first);</p>
@@ -10533,7 +10553,7 @@
       <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need byte order mark.</p>
      </orig>
      <transl>
-      <p>文字 U+FEFF。[[pt:serialization|シリアル化]] 形式を示すために、Unicode テキスト ファイルの先頭に置くことができます (置かなければならないわけではありません)。エンコードされたバイト オーダー マークは次のようになります:</p>
+      <p>文字 [[pu:FEFF]]。[[pt:serialization|シリアル化]] 形式を示すために、Unicode テキスト ファイルの先頭に置くことができます (置かなければならないわけではありません)。エンコードされたバイト オーダー マークは次のようになります:</p>
       <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
       <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (最上位バイトが先頭);</p>
       <p>* FF{{_}}FE、その後 00{{_}}00{{-}}UTF-16LE (最下位バイトが先頭);</p>
@@ -10911,7 +10931,7 @@
       <p />
       <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: highest school grade {{em|💯}} turned to “fully agree”.</p>
       <p />
-      <p>Several old pre-2010 pictograms are guaranteed to show as emoji only with U+FE0F character (''aka'' variation selector 16).</p>
+      <p>Several old pre-2010 pictograms are guaranteed to show as emoji only with [[pu:FE0F]] character (''aka'' variation selector 16).</p>
       <p />
       <p>All emoji are [[pt:spacing|spacing]] characters.</p>
      </orig>
@@ -10920,7 +10940,7 @@
       <p />
       <p>携帯電話事業者 NTT DoCoMo が 1999 年頃に SMS の文字数を節約するために考案。欧米の事業者は 2004 年に独自のセットの開発を開始し、2010 年に DoCoMo のエンコードは Unicode{{_}}6.0 に導入されました。多くの絵文字は日本固有のものです。お辞儀をするビジネスマン {{em|😅}}、初心者ドライバーのサイン {{em|🔰}}… 日本国外で意味が変わったものもいくつかあります。最高学年の {{em|💯}} は「完全に同意」に変わりました。</p>
       <p />
-      <p>2010 年以前の古い絵文字のいくつかは、U+FE0F 文字 (別名 ''variation selector 16) でのみ絵文字として表示されることが保証されています。</p>
+      <p>2010 年以前の古い絵文字のいくつかは、[[pu:FE0F]] 文字 (別名 ''variation selector 16) でのみ絵文字として表示されることが保証されています。</p>
       <p />
       <p>すべての絵文字は [[pt:spacing|前進用]] 文字です。</p>
      </transl>
@@ -11041,10 +11061,10 @@
       <p />
       <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
       <p />
-      <p>* Characters that convey ancillary semantics: soft hyphen 00AD, grapheme joiner 034F, [[pk:E0000|tags]]…</p>
-      <p>* Writing [[pt:bidi|direction]] tags: marks LRM and RLM.</p>
+      <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
+      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
       <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
-      <p>* Zero width space ZWSP; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner ZWNJ.</p>
+      <p>* Zero width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
       <p>These characters '''are{{_}}not''' default-ignorable:</p>
@@ -11060,10 +11080,10 @@
       <p />
       <p>デフォルトで無視できる文字のほとんどは [[pt:format|書式文字]] ですが、スペースを含まない [[pt:combining|マーク]] も存在します。デフォルトで無視できる文字は、次のカテゴリに分類されます。;</p>
       <p />
-      <p>* 補助的な意味を伝える文字: ソフトハイフン 00AD、書記素結合子 034F、[[pk:E0000|タグ]]…</p>
-      <p>* [[pt:bidi|方向]] タグの記述: LRM と RLM をマークします。</p>
+      <p>* 補助的な意味を伝える文字: ソフトハイフン [[pc:00AD]]、書記素結合子 [[pc:034F]]、[[pk:E0000|タグ]]…</p>
+      <p>* [[pt:bidi|方向]] タグの記述: [[pc:LRM]] と [[pc:RLM]] をマークします。</p>
       <p>* 何も言わずにスキップしても安全なフォントメカニズム: ゼロ幅ジョイナー ([[pt:zwj|ZWJ]])、異体字セレクター (VS)、[[ps:Hang|韓国語]] 字母フィラー。フォントに ZWJ が存在するかどうかに関係なく、合字がない場合、Pilot (person+ZWJ+plane) は person+plane {{em|🧑✈️}} として表示されます。</p>
-      <p>* ゼロ幅スペース ZWSP、[[pt:bom|バイトオーダーマーク]] BOM （これもゼロ幅スペース）、ゼロ幅非結合子 ZWNJ。</p>
+      <p>* ゼロ幅スペース [[pc:ZWSP]]、[[pt:bom|バイトオーダーマーク]] BOM （これもゼロ幅スペース）、ゼロ幅非結合子 [[pt:zwnj|ZWNJ]]。</p>
       <p>* 複雑な [[pk:1BCA0|省略形]] と [[pk:1D100|音楽]] の書式設定に使用する文字。</p>
       <p />
       <p>これらの文字はデフォルトで無視できません:</p>
@@ -12111,7 +12131,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:format|Format]] character U+200D intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
+      <p>[[pt:format|Format]] character [[pu:200D]] intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
       <p />
       <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]:</p>
       <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|*ष|ša =|*क्ष|kša}}</p>
@@ -12125,7 +12145,7 @@
       <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
      </orig>
      <transl>
-      <p>[[pt:format|書式]] 文字 U+200D は、文字を [[pt:ligature|合字]] に結合することを目的としています。これは [[pt:ignorable|デフォルトで無視可能]] であるため、何も言わずに無視してもまったく問題ありません。</p>
+      <p>[[pt:format|書式]] 文字 [[pu:200D]] は、文字を [[pt:ligature|合字]] に結合することを目的としています。これは [[pt:ignorable|デフォルトで無視可能]] であるため、何も言わずに無視してもまったく問題ありません。</p>
       <p />
       <p>'''[[pt:brahmic|インド系]] 文字'''、例: [[ps:Deva|デーヴァナーガリー文字]]:</p>
       <p>{{smtable|*क|ka +|**◌्|[[pt:virama|ヴィラマ]] +|*ष|ša =|*क्ष|kša}}</p>
@@ -12147,7 +12167,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:format|Format]] character U+200C intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does{{_}}not{{_}}have to be in the font.</p>
+      <p>[[pt:format|Format]] character [[pu:200C]] intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does{{_}}not{{_}}have to be in the font.</p>
       <p />
       <p>'''[[ps:Latn|Latin]]'''</p>
       <p>: In some fonts '''stop''' → '''ﬆop'''</p>
@@ -12159,7 +12179,7 @@
       <p>::: (usually in compound words)</p>
      </orig>
      <transl>
-      <p>[[pt:format|書式]] 文字 U+200C は [[pt:ligature|合字]] を分割するために使用されます。これは [[pt:ignorable|デフォルトで無視可能]] であるため、フォント内に存在する必要はありません。</p>
+      <p>[[pt:format|書式]] 文字 [[pu:200C]] は [[pt:ligature|合字]] を分割するために使用されます。これは [[pt:ignorable|デフォルトで無視可能]] であるため、フォント内に存在する必要はありません。</p>
       <p />
       <p>'''[[ps:Latn|ラテン文字]]'''</p>
       <p>: 一部のフォントでは '''stop''' → '''ﬆop'''</p>
@@ -14271,8 +14291,8 @@
    </group>
    <group id="2.1">
     <text id="Text">
-     <orig>Added euro '''€''' and object replacement character FFFC.</orig>
-     <transl>ユーロ '''€''' とオブジェクト置換文字 FFFC を追加しました。</transl>
+     <orig>Added euro '''[[pc:20AC|€]]''' and object replacement character [[pc:FFFC]].</orig>
+     <transl>ユーロ '''[[pc:20AC|€]]''' とオブジェクト置換文字 [[pc:FFFC]] を追加しました。</transl>
     </text>
    </group>
    <group id="3.1">
@@ -14283,8 +14303,8 @@
    </group>
    <group id="6.2">
     <text id="Text">
-     <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
-     <transl>2012 年 3 月に発表されたトルコ リラ記号 20BA を追加しました。</transl>
+     <orig>Added Turkish lira sign [[pc:20BA]] presented in March 2012.</orig>
+     <transl>2012 年 3 月に発表されたトルコ リラ記号 [[pc:20BA]] を追加しました。</transl>
     </text>
    </group>
    <group id="6.3">
@@ -14295,8 +14315,8 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
-     <transl>日本の伝統的な暦である令和の元号を表す 32FF という 1 つの文字を含む Unicode の緊急リリース。2016 年に明仁天皇が退位を決意されたとき、新しいコード ポイントが後継者のために確保されました。2019 年 4 月 30 日に天皇が退位されたとき、この文字はすぐにエンコードされました。</transl>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>日本の伝統的な暦である令和の元号を表す [[pc:32FF]] という 1 つの文字を含む Unicode の緊急リリース。2016 年に明仁天皇が退位を決意されたとき、新しいコード ポイントが後継者のために確保されました。2019 年 4 月 30 日に天皇が退位されたとき、この文字はすぐにエンコードされました。</transl>
     </text>
    </group>
    <group id="15.1">
@@ -14347,11 +14367,11 @@
    <group id="17.0">
     <text id="Text">
      <orig>
-      <p>* Written [[pt:egyp|rules]] of encoding Egyptian hieroglyphs, swapped glyphs 130F9↔ABE and 130FB↔AE8 for compatibility with Gardiner’s list</p>
+      <p>* Written [[pt:egyp|rules]] of encoding Egyptian hieroglyphs, swapped glyphs [[pc:130F9]]↔[[pc:13ABE|ABE]] and [[pc:130FB]]↔[[pc:13AE8|AE8]] for compatibility with Gardiner’s list</p>
       <p>* Reformed [[ps:Adlm|Adlam]] script for better legibility</p>
       <p>* Added a [[pt:inclusion|genderless]] version of the last emoji{{-}}dancer: Latin for a woman, disco for a man, and ballet for genderless</p>
       <p>* Added the last multiracial emoji{{-}}wrestlers and Playboy girls</p>
-      <p>* In early 2025, the sign for Saudi riyal was adopted and quickly put to U+20C1</p>
+      <p>* In early 2025, the sign for Saudi riyal was adopted and quickly put to [[pu:20C1]]</p>
      </orig>
     </text>
    </group>
@@ -14938,7 +14958,7 @@
      <orig>Important/word joiner</orig>
     </text>
     <text id="Text">
-     <orig>Do not break a line before and after U+2060 Word joiner.</orig>
+     <orig>Do not break a line before and after [[pu:2060]] Word joiner.</orig>
     </text>
    </group>
    <group id="ZW">
@@ -14946,7 +14966,7 @@
      <orig>Important/zero-width space</orig>
     </text>
     <text id="Text">
-     <orig>You can break a line at U+200B Zero-width space.</orig>
+     <orig>You can break a line at [[pu:200B]] Zero-width space.</orig>
     </text>
    </group>
    <group id="GL">
@@ -14955,7 +14975,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Important''' (mandatory) rule: Do not break after U+00A0 No-break space and related characters.</p>
+      <p>'''Important''' (mandatory) rule: Do not break after [[pu:00A0]] No-break space and related characters.</p>
       <p />
       <p>'''Soft''' (tailorable) rule: Do not break before these characters. However, you can break after spaces and hyphens.</p>
      </orig>
@@ -14967,7 +14987,7 @@
      <orig>Important/space</orig>
     </text>
     <text id="Text">
-     <orig>You can break after a chain of U+0020 spaces, unless other characters prohibit this.</orig>
+     <orig>You can break after a chain of [[pu:0020]] spaces, unless other characters prohibit this.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
     </text>
    </group>
@@ -14979,7 +14999,7 @@
      <orig>
       <p>Do not break after U+200D [[pt:zwj|Zero-width joiner]].</p>
       <p />
-      <p>You can only break between U+0020 space and ZWJ.</p>
+      <p>You can only break between [[pu:0020]] space and ZWJ.</p>
      </orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
     </text>
@@ -14990,7 +15010,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>You can break before and after U+2014 Em dash, unless other characters prohibit.</p>
+      <p>You can break before and after [[pu:2014]] Em dash, unless other characters prohibit.</p>
       <p />
       <p>Do not break chains of dashes, even after spaces.</p>
      </orig>
@@ -15017,7 +15037,7 @@
      <orig>Break/hyphen-minus</orig>
     </text>
     <text id="Text">
-     <orig>U+002B Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <orig>[[pu:002D]] Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
     </text>
    </group>
    <group id="HH">
@@ -15041,7 +15061,7 @@
      <orig>Break/conditional</orig>
     </text>
     <text id="Text">
-     <orig>You can or cannot break near U+FFFC Object replacement character depending on object type.</orig>
+     <orig>You can or cannot break near [[pu:FFFC]] Object replacement character depending on object type.</orig>
     </text>
    </group>
    <group id="CL">
@@ -15150,7 +15170,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break before U+002F Slash.</p>
+      <p>Do not break before [[pu:002F]] Slash.</p>
       <p />
       <p>Do not break after slash in numbers, in Hebrew.</p>
       <p />
