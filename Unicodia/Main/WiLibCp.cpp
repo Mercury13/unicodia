@@ -36,10 +36,8 @@ void WiCpImage::setCp(const uc::Cp* x, const uc::GlyphStyleSets& y)
         glyphSets = &y;
         if (cp) {
             setCursor(Qt::PointingHandCursor);
-            //setToolTip(cp->viewableName());
         } else {
             setCursor(Qt::ArrowCursor);
-            //setToolTip({});
         }
         update();
     }
