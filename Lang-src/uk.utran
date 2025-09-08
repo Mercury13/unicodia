@@ -2344,12 +2344,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:FE0F|VS16]] [[pt:emoji|emoji]].</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:VS16]] [[pt:emoji|emoji]].</p>
       <p />
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
      <transl>
-      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька [[pc:FE0F|VS16]]-[[pt:emoji|емодзі]].</p>
+      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька [[pc:VS16]]-[[pt:emoji|емодзі]].</p>
       <p />
       <p>Тільки декілька нових емодзі не{{_}}входять до цієї бібліотеки: вони були додані у версії 6.0 або пізніше, та не{{_}}VS16.</p>
      </transl>
@@ -10322,9 +10322,9 @@
       <p />
       <p>'''What to do for a simple user?'''</p>
       <p />
-      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:202A|LRE]]/[[pc:202B|RLE]], and finish with [[pc:202C|PDF]].</p>
-      <p>* You can use [[pc:200E|LRM]], [[pc:200F|RLM]] and [[pc:061C|ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
-      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:202D|LRO]]/[[pc:202E|RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
+      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]], and finish with [[pc:PDF]].</p>
+      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
+      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
      </orig>
      <transl>
       <p>Текст, що містить хоча б один символ з написанням «справа наліво». Алгоритм обробки такого текста складний, і опишемо його узагальнено.</p>
@@ -10343,9 +10343,9 @@
       <p />
       <p>'''Що ж робити простому користувачу?'''</p>
       <p />
-      <p>* Якщо пишете уривок івритом в англійському тексті і система його форматує невірно, почніть його символом [[pc:202A|LRE]]/[[pc:202B|RLE]], і закінчіть символом [[pc:202C|PDF]].</p>
-      <p>* Для невеликих шматків можна використовувати [[pc:200E|LRM]], [[pc:200F|RLM]] та [[pc:061C|ALM]]. Це порожні символи з заданим напрямком, і цей напрямок буде зберігатися, поки не{{_}}знайдеться символ, чий напрямок система знає.</p>
-      <p>* Якщо треба писати справа наліво мовою, що пишеться зліва направо, та навпаки, почніть текст символом [[pc:202D|LRO]]/[[pc:202E|RLO]], і закінчіть символом PDF. Уникайте такого запису, це діра у безпеці.</p>
+      <p>* Якщо пишете уривок івритом в англійському тексті і система його форматує невірно, почніть його символом [[pc:LRE]]/[[pc:RLE]], і закінчіть символом [[pc:PDF]].</p>
+      <p>* Для невеликих шматків можна використовувати [[pc:LRM]], [[pc:RLM]] та [[pc:ALM]]. Це порожні символи з заданим напрямком, і цей напрямок буде зберігатися, поки не{{_}}знайдеться символ, чий напрямок система знає.</p>
+      <p>* Якщо треба писати справа наліво мовою, що пишеться зліва направо, та навпаки, почніть текст символом [[pc:LRO]]/[[pc:RLO]], і закінчіть символом PDF. Уникайте такого запису, це діра у безпеці.</p>
      </transl>
     </text>
    </group>
@@ -10972,9 +10972,9 @@
       <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
-      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:200E|LRM]] and [[pc:200F|RLM]].</p>
+      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
       <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
-      <p>* Zero width space [[pc:200B|ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
+      <p>* Zero width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
       <p>These characters '''are{{_}}not''' default-ignorable:</p>
@@ -10991,9 +10991,9 @@
       <p>Більшість ігнорованих символів є [[pt:format|форматуючими]], але є й непротяжні [[pt:combining|мітки]]. Ігноровані символи поділяються на такі категорії:</p>
       <p />
       <p>* Символи, що несуть додаткову семантику{{-}}м’який перенос [[pc:00AD]], роз’єднувач графем [[pc:034F]], [[pk:E0000|теги]]…</p>
-      <p>* Теги [[pt:bidi|напрямку]] написання{{-}}наприклад, мітки [[pc:200E|LRM]] та [[pc:200F|RLM]].</p>
+      <p>* Теги [[pt:bidi|напрямку]] написання{{-}}наприклад, мітки [[pc:LRM]] та [[pc:RLM]].</p>
       <p>* Шрифтові механізми, які припустимо пропускати{{-}}з’єднувач нульової довжини ([[pt:zwj|ZWJ]]), селектори написання (VS), заповнювачі [[ps:Hang|корейських]] чамо. Пілот (людина+ZWJ+літак) за відсутності [[pt:ligature|лігатури]] відобразиться як людина+літак {{em|🧑✈️}}{{-}}і не{{_}}важливо, чи є у шрифті ZWJ.</p>
-      <p>* Пропуск нульової довжини [[pc:200B|ZWSP]]; [[pt:bom|мітка порядку байтів]] BOM, що також є пропуском нульової довжини; роз’єднувач нульової довжини [[pt:zwnj|ZWNJ]].</p>
+      <p>* Пропуск нульової довжини [[pc:ZWSP]]; [[pt:bom|мітка порядку байтів]] BOM, що також є пропуском нульової довжини; роз’єднувач нульової довжини [[pt:zwnj|ZWNJ]].</p>
       <p>* Символи складного форматування{{-}}[[pk:1BCA0|стенографії]], [[pk:1D100|нот]].</p>
       <p />
       <p>'''Не є''' ігнорованими:</p>
@@ -14193,8 +14193,8 @@
    </group>
    <group id="2.1">
     <text id="Text">
-     <orig>Added euro '''€''' and object replacement character FFFC.</orig>
-     <transl>Додані євро '''€''' та символ-замінник для об’єкта FFFC.</transl>
+     <orig>Added euro '''[[pc:20AC|€]]''' and object replacement character [[pc:FFFC]].</orig>
+     <transl>Додані євро '''[[pc:20AC|€]]''' та символ-замінник для об’єкта [[pc:FFFC]].</transl>
     </text>
    </group>
    <group id="3.1">
@@ -14205,8 +14205,8 @@
    </group>
    <group id="6.2">
     <text id="Text">
-     <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
-     <transl>Добавлено знак турецької ліри 20BA, представлений у березні 2012.</transl>
+     <orig>Added Turkish lira sign [[pc:20BA]] presented in March 2012.</orig>
+     <transl>Добавлено знак турецької ліри [[pc:20BA]], представлений у березні 2012.</transl>
     </text>
    </group>
    <group id="6.3">
@@ -14217,8 +14217,8 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
-     <transl>Екстрений випуск Юнікоду, що містить лище один символ 32FF{{-}}еру Рейва японського традиційного календаря. Коли у 2016 старенький імператор Акіхіто вирішив зректися, за його наступником закріпили кодову позицію. Коли він остаточно зрікся 30 квітня 2019, символ швидко закодували.</transl>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>Екстрений випуск Юнікоду, що містить лище один символ [[pc:32FF]]{{-}}еру Рейва японського традиційного календаря. Коли у 2016 старенький імператор Акіхіто вирішив зректися, за його наступником закріпили кодову позицію. Коли він остаточно зрікся 30 квітня 2019, символ швидко закодували.</transl>
     </text>
    </group>
    <group id="15.1">
