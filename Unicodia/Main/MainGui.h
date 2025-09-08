@@ -64,7 +64,7 @@ public:
 
         /// …can point to nowhere
         RestrictedPtr(std::nullptr_t) noexcept {}
-        RestrictedPtr() noexcept = default;
+        RestrictedPtr() noexcept {}
 
         /// …can point to Uptr, that’s all
         template <class Target>
