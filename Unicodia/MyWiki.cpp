@@ -2906,7 +2906,8 @@ QString mywiki::buildHtml(const uc::Cp& cp, const HtmlVariant& var)
     if (cp.isVs16Emoji()) {
         text += "<h4>";
         str::append(text, loc::get("Prop.Head.Emoji16")
-                          .arg(u8"href='pt:emoji' class='popup'"));
+                          .arg(u8"href='pt:emoji' class='popup'",
+                               u8"href='pc:FE0F' class='popup'"));
         text += "</h4>";
     }
 
