@@ -162,6 +162,7 @@ HEADERS += \
     Uc/UcRecent.h \
     Uc/UcSkin.h \
     Wiki.h \
+    WikiLink.h \
     c_SearchEdit.h \
     cmdline.h \
     d_Config.h \

@@ -40,7 +40,6 @@ auto FmPopupChar::setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets) -
     // Sample
     ui->wiSample->showCp(cp, uc::EmojiDraw::CONSERVATIVE, glyphSets, false);
 
-    /// @todo [urgent] setCp: what to do?
     // Code
     char buf[40];
     QString s = "U+";

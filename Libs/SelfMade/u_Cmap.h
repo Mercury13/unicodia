@@ -112,7 +112,6 @@ public:
     template <size_t N1>
     consteval DoubleCmap(const value_type (&x)[N1]) : Super(x)
     {
-        /// @todo [urgent] fill reverse map
         std::fill(std::begin(revMap), std::end(revMap), K{});
         for (auto& [k, v] : x) {
             assert(v >= BASE);

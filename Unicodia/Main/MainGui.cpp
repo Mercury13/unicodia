@@ -138,7 +138,8 @@ void MyGui::popupCharAbs(
 {
     closePopup(popupChar);
     popupChar.ensure(*this)
-            /// @todo [urgent] Which settings?
+            /// @todo [future] Let it be EMPTY, while these character are not shown
+            ///                in Library and articles
              .setCp(cp, uc::GlyphStyleSets::EMPTY)
              .popupAtAbsBacked(widget, absRect);
 }

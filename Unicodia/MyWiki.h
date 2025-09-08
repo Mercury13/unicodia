@@ -1,7 +1,6 @@
 #pragma once
 
 // STL
-#include <memory>
 #include <span>
 
 // Qt
@@ -12,6 +11,9 @@
 // Common libs
 #include "u_TinyOpt.h"
 #include "FontDef.h"
+
+// Links
+#include "WikiLink.h"
 
 class QWidget;
 class QRect;
@@ -148,22 +150,6 @@ namespace mywiki {
         void copyTextRel(
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text,
                 LocKey locKey);
-    };
-
-    enum class LinkClass : unsigned char {
-        POPUP,      ///< Opens a popup window, green
-        COPY,       ///< Copies text, pale
-        INTERNAL,   ///< Goes somewhere within program, blue
-        INET,       ///< Opens browser/mailer, also blue
-        SEARCH = INTERNAL   ///< Opens search; as we use enum for colour only, no difference
-    };
-
-    class Link    // interface
-    {
-    public:
-        virtual void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui) = 0;
-        virtual LinkClass clazz() const { return LinkClass::POPUP; }
-        virtual ~Link() = default;
     };
 
     class DescFont {
