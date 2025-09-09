@@ -79,6 +79,7 @@ SOURCES += \
     Uc/UcOldInput.cpp \
     Uc/UcScripts.cpp \
     Wiki.cpp \
+    WikiLink.cpp \
     c_SearchEdit.cpp \
     cmdline.cpp \
     d_Config.cpp \
