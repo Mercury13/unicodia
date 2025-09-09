@@ -55,19 +55,23 @@ constexpr std::span<std::string> NO_LINKS {};
 /////  //////////////////////////////////////////////////////////////////////
 
 void mywiki::Gui::popupAtRel(
-        QWidget* widget, const QRect& relRect, const QString& html)
+        QWidget* widget, const QRect& relRect,
+        const mywiki::PLink& that, const QString& html)
 {
     popupAtAbs(widget,
                QRect{ widget->mapToGlobal(relRect.topLeft()), relRect.size() },
+               that,
                html);
 }
 
 
 void mywiki::Gui::popupCharRel(
-        QWidget* widget, const QRect& relRect, const uc::Cp& cp)
+        QWidget* widget, const QRect& relRect,
+        const mywiki::PLink& that, const uc::Cp& cp)
 {
     popupCharAbs(widget,
                  QRect{ widget->mapToGlobal(relRect.topLeft()), relRect.size() },
+                 that,
                  cp);
 }
 
@@ -86,36 +90,38 @@ void mywiki::Gui::copyTextRel(
 
 
 void mywiki::Gui::popupAtWidget(
-        QWidget* widget, const QString& html)
+        QWidget* widget, const mywiki::PLink& that, const QString& html)
 {
-    popupAtRel(widget, widget->rect(), html);
+    popupAtRel(widget, widget->rect(), that, html);
 }
 
 
 void mywiki::Gui::popupCharWidget(
-        QWidget* widget, const uc::Cp& cp)
+        QWidget* widget, const mywiki::PLink& that, const uc::Cp& cp)
 {
-    popupCharRel(widget, widget->rect(), cp);
+    popupCharRel(widget, widget->rect(), that, cp);
 }
 
 
 void mywiki::Gui::popupAtRelMaybe(
-        QWidget* widget, TinyOpt<QRect> relRect, const QString& html)
+        QWidget* widget, TinyOpt<QRect> relRect,
+        const mywiki::PLink& that, const QString& html)
 {
     if (!relRect) {      // have widget, no rect
-        popupAtWidget(widget, html);
+        popupAtWidget(widget, that, html);
     } else {                    // have widget and rect
-        popupAtRel(widget, *relRect, html);
+        popupAtRel(widget, *relRect, that, html);
     }
 }
 
 void mywiki::Gui::popupCharRelMaybe(
-        QWidget* widget, TinyOpt<QRect> relRect, const uc::Cp& cp)
+        QWidget* widget, TinyOpt<QRect> relRect,
+        const mywiki::PLink& that, const uc::Cp& cp)
 {
     if (!relRect) {      // have widget, no rect
-        popupCharWidget(widget, cp);
+        popupCharWidget(widget, that, cp);
     } else {                    // have widget and rect
-        popupCharRel(widget, *relRect, cp);
+        popupCharRel(widget, *relRect, that, cp);
     }
 }
 
@@ -136,14 +142,16 @@ namespace {
         static_assert(!std::is_pointer<Thing>::value, "Need object rather than pointer");
         const Thing& thing;
         PopLink(const Thing& aThing) : thing(aThing) {}
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
     };
 
     template <class Thing>
-    void PopLink<Thing>::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    void PopLink<Thing>::go(QWidget* widget, TinyOpt<QRect> rect,
+                            const mywiki::PLink& that, mywiki::Gui& gui) const
     {
         auto html = mywiki::buildHtml(thing);
-        gui.popupAtRelMaybe(widget, rect, html);
+        gui.popupAtRelMaybe(widget, rect, that, html);
     }
 
     // Some sort of deduction guide, MU = Make Unique
@@ -151,19 +159,22 @@ namespace {
     inline std::unique_ptr<PopLink<Thing>> mu(const Thing& x)
         { return std::make_unique<PopLink<Thing>>(x); }
 
+    /// Well, PopFonts will be exempt from history
     class PopFontsLink : public mywiki::Link
     {
     public:
         char32_t cp;
         QFontDatabase::WritingSystem ws;
         PopFontsLink(char32_t aCp, QFontDatabase::WritingSystem aWs) : cp(aCp), ws(aWs) {}
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
     };
 
-    void PopFontsLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    void PopFontsLink::go(QWidget* widget, TinyOpt<QRect> rect,
+                          const mywiki::PLink& that, mywiki::Gui& gui) const
     {
         auto html = mywiki::buildFontsHtml(cp, ws, gui);
-        gui.popupAtRelMaybe(widget, rect, html);
+        gui.popupAtRelMaybe(widget, rect, that, html);
     }
 
     class CopyLink : public mywiki::Link
@@ -172,11 +183,13 @@ namespace {
         QString text;
         QFontDatabase::WritingSystem ws;
         CopyLink(std::string_view aText) : text(str::toQ(aText)) {}
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::COPY; }
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::COPY; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
     };
 
-    void CopyLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    void CopyLink::go(QWidget* widget, TinyOpt<QRect> rect,
+                      const mywiki::PLink&, mywiki::Gui& gui) const
     {
         gui.copyTextRel(widget, rect, text, LK_COPIED);
     }
@@ -186,8 +199,9 @@ namespace {
     public:
         QString s;
         InetLink(std::string_view scheme, std::string_view target);
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INET; }
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INET; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
     };
 
     InetLink::InetLink(std::string_view scheme, std::string_view target)
@@ -198,7 +212,8 @@ namespace {
         str::append(s, target);
     }
 
-    void InetLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    void InetLink::go(QWidget*, TinyOpt<QRect>,
+                      const mywiki::PLink&, mywiki::Gui& gui) const
     {
         gui.followUrl(s);
     }
@@ -208,27 +223,52 @@ namespace {
     public:
         char32_t cp;
         GotoCpLink(char32_t x) : cp(x) {}
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
     };
 
-    void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
+    void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>,
+                        const mywiki::PLink&, mywiki::Gui& gui) const
         { gui.linkWalker().gotoCp(wi, cp); }
 
-    class PopCpLink : public mywiki::Link
+    class PopCpLink : public mywiki::HistoryLink
     {
     public:
-        char32_t cp;
-        PopCpLink(char32_t x) : cp(x) {}
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::POPUP; }
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        const uc::Cp& cp;
+        PopCpLink(const uc::Cp& x) : cp(x) {}
+        mywiki::HistoryObj obj() const noexcept override { return &cp; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
+        std::u8string header() const override;
     };
 
-    void PopCpLink::go(QWidget* wi, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    void PopCpLink::go(QWidget* wi, TinyOpt<QRect> rect,
+                       const mywiki::PLink& that, mywiki::Gui& gui) const
     {
-        if (auto target = uc::cpsByCode[cp]) {
-            gui.popupCharRelMaybe(wi, rect, *target);
-        }
+        gui.popupCharRelMaybe(wi, rect, that, cp);
+    }
+
+    std::u8string PopCpLink::header() const
+    {
+        char buf[20];
+        uc::sprintUPLUS(buf, cp.subj);
+        return std::u8string(str::toU8sv(buf));
+    }
+
+    class GoHistoryLink : public mywiki::Link
+    {
+    public:
+        const unsigned index;
+        GoHistoryLink(unsigned i) : index(i) {}
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink& that, mywiki::Gui& gui) const override;
+    };
+
+    void GoHistoryLink::go(QWidget* widget, TinyOpt<QRect>,
+            const mywiki::PLink&, mywiki::Gui& gui) const
+    {
+        gui.goToHistory(widget, index);
     }
 
     class GotoLibCpLink : public mywiki::Link
@@ -236,31 +276,36 @@ namespace {
     public:
         char32_t cp;
         GotoLibCpLink(char32_t x) : cp(x) {}
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget* widget, TinyOpt<QRect> rect,
+                const mywiki::PLink&, mywiki::Gui& gui) const override;
     };
 
-    void GotoLibCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
+    void GotoLibCpLink::go(QWidget* wi, TinyOpt<QRect>,
+                           const mywiki::PLink&, mywiki::Gui& gui) const
         { gui.linkWalker().gotoLibCp(wi, cp); }
 
     class BlinkAddCpToFavsLink : public mywiki::Link
     {
     public:
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
-        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget*, TinyOpt<QRect>, const mywiki::PLink&, mywiki::Gui& gui) const override;
     };
 
-    void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>,
+                                  const mywiki::PLink&, mywiki::Gui& gui) const
         { gui.linkWalker().blinkAddCpToFavs(); }
 
     class BlinkRespectLink : public mywiki::Link
     {
     public:
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
-        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget*, TinyOpt<QRect>,
+                const mywiki::PLink&, mywiki::Gui& gui) const override;
     };
 
-    void BlinkRespectLink::go(QWidget* initiator, TinyOpt<QRect> r, mywiki::Gui& gui)
+    void BlinkRespectLink::go(QWidget* initiator, TinyOpt<QRect> r,
+                              const mywiki::PLink&, mywiki::Gui& gui) const
         { gui.linkWalker().blinkRespect(initiator, r); }
 
     template <class Fields, class Request>
@@ -268,14 +313,16 @@ namespace {
     {
     public:
         RequestLink(const Fields& x) : fields(x) {}
-        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::SEARCH; }
-        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+        mywiki::LinkClass clazz() const noexcept override { return mywiki::LinkClass::SEARCH; }
+        void go(QWidget*, TinyOpt<QRect>,
+                const mywiki::PLink&, mywiki::Gui& gui) const override;
     private:
         const Fields fields;
     };
 
     template <class Fields, class Request>
-    void RequestLink<Fields, Request>::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    void RequestLink<Fields, Request>::go(
+            QWidget*, TinyOpt<QRect>, const mywiki::PLink&, mywiki::Gui& gui) const
     {
         Request rq(fields);
         gui.linkWalker().searchForRequest(rq);
@@ -565,8 +612,10 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopCpLink(std::string_view target)
     auto q = str::fromChars(target, code, 16);
     if (q.ec == std::errc()) {
         // Okay, parsed
-        if (code < uc::CAPACITY && uc::cpsByCode[code]) {
-            return std::make_unique<PopCpLink>(code);
+        if (code < uc::CAPACITY) {
+            if (auto cp = uc::cpsByCode[code]) {
+                return std::make_unique<PopCpLink>(*cp);
+            }
         }
     } else {
         // Erroneous code → try parse abbreviation
@@ -574,8 +623,21 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopCpLink(std::string_view target)
         auto end = std::end(KNOWN_ABBRS);
         auto [from, to] = std::equal_range(beg, end, target);
         if (from != to) {
-            return std::make_unique<PopCpLink>(from->code);
+            if (auto cp = uc::cpsByCode[from->code]) {  // should exist, but check
+                return std::make_unique<PopCpLink>(*cp);
+            }
         }
+    }
+    return {};
+}
+
+
+std::unique_ptr<mywiki::Link> mywiki::parseHistoryLink(std::string_view target)
+{
+    unsigned index = 0;
+    auto q = str::fromChars(target, index);
+    if (q.ec == std::errc()) {
+        return std::make_unique<GoHistoryLink>(index);
     }
     return {};
 }
@@ -593,6 +655,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
     } else if (scheme == "pc"sv || scheme == "pu"sv) {
         // They differ in default text only
         return parsePopCpLink(target);
+    } else if (scheme == "phi"sv) {
+        return parseHistoryLink(target);
     } else if (scheme == "pca"sv) {
         return parsePopCatLink(target);
     } else if (scheme == "ps"sv) {
@@ -646,9 +710,9 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(std::string_view link)
 
 void mywiki::go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link)
 {
-    auto p = parseLink(link);
+    PLink p = parseLink(link);
     if (p) {
-        p->go(widget, rect, gui);
+        p->go(widget, rect, p, gui);
     }
 }
 
@@ -3839,4 +3903,22 @@ QString mywiki::buildHtml(const uc::old::Info& info)
     mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::ARTICLE);
 
     return text;
+}
+
+
+std::unique_ptr<mywiki::Link> mywiki::makeCpLink(const uc::Cp& cp)
+{
+    return std::make_unique<PopCpLink>(cp);
+}
+
+
+void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
+{
+    if (place) {
+        char buf[60];
+        snprintf(buf, std::size(buf), "<p>◀&nbsp;<a href='phi:%u' class='popup'>", place.index);
+        html += buf;
+        str::append(html, place.thing->header());
+        html += "</a>";
+    }
 }

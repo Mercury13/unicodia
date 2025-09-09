@@ -68,7 +68,7 @@ bool HighlightHost::isHighlighted(const uc::Cp& cp) const
 VirtualCharsModel::VirtualCharsModel(
         QWidget* aOwner, dumb::Sp<HighlightHost> aHiHost,
         uc::GlyphStyleSets& aGlyphSets)
-    : owner(aOwner), hiHost(aHiHost), glyphSets(aGlyphSets),
+    : owner(aOwner), hiHost(std::move(aHiHost)), glyphSets(aGlyphSets),
       dummyLv(new QListView)
 {
     if (hiHost) {

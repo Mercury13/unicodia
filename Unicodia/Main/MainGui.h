@@ -41,9 +41,12 @@ public:
     MyGui(QWidget* aWiMain, FontSource& aFontSource, mywiki::InternalLinkWalker& aWalker);
 
     void popupAtAbs(
-            QWidget* widget, const QRect& absRect, const QString& html) override;
+            QWidget* widget, const QRect& absRect,
+            const mywiki::PLink& that, const QString& html) override;
     void popupCharAbs(
-            QWidget* widget, const QRect& absRect, const uc::Cp& cp) override;
+            QWidget* widget, const QRect& absRect,
+            const mywiki::PLink& that, const uc::Cp& cp) override;
+    void goToHistory(QWidget* widget, unsigned index) override;
     FontSource& fontSource() override { return fFontSource; }
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text,
@@ -56,6 +59,7 @@ public:
                      LocKey locKey);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
+    void goToHistory1(QWidget* widget, const QRect& absRect, unsigned index);
 
     /// @brief
     ///   Simple pointer with a little bit error-proofing
@@ -71,6 +75,7 @@ public:
         RestrictedPtr(Uptr<Target>& x) noexcept : v(&x) {}
 
         operator const void* () { return v; }
+        bool operator == (const void* x) const noexcept { return (v == x); }
     };
     void closePopup(RestrictedPtr remainingThing = {});
 
@@ -87,6 +92,7 @@ private:
     Uptr<FmPopup2> popup;
     Uptr<FmPopupChar2> popupChar;
     Uptr<FmMessage> fmMessage;
+    mywiki::History history;
 private slots:
     void popupLinkActivated(const QString& link);
 };
@@ -102,9 +108,12 @@ class PopupGui : public mywiki::Gui
 public:
     PopupGui(MyGui& aOwner) : owner(aOwner) {}
     void popupAtAbs(
-            QWidget* widget, const QRect& absRect, const QString& html) override;
+            QWidget* widget, const QRect& absRect,
+            const mywiki::PLink& that, const QString& html) override;
     void popupCharAbs(
-            QWidget* widget, const QRect& absRect, const uc::Cp& cp) override;
+            QWidget* widget, const QRect& absRect,
+            const mywiki::PLink& that, const uc::Cp& cp) override;
+    void goToHistory(QWidget* widget, unsigned index) override;
     FontSource& fontSource() override;
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text,

@@ -124,24 +124,51 @@ void MyGui::blinkAtRel(const QString& text, const QWidget* widget, const QRect& 
 
 
 void MyGui::popupAtAbs(
-        QWidget* widget, const QRect& absRect, const QString& html)
+        QWidget* widget, const QRect& absRect,
+        const mywiki::PLink& that, const QString& html)
 {
     closePopup(popup);
+    mywiki::PHistoryLink lowerLink = std::dynamic_pointer_cast<const mywiki::HistoryLink>(that);
+    history.push(lowerLink);
+    auto html2 = html;
+    /// @todo [urgent] We are not popping from history
+    auto backPlace = history.back(lowerLink.get());
+    mywiki::appendHistoryLink(html2, backPlace);
+    /// @todo [urgent] use that here
     popup.ensure(*this)
-         .setText(html)
+         .setText(html2)
          .popupAtAbsBacked(widget, absRect);
 }
 
 
 void MyGui::popupCharAbs(
-        QWidget* widget, const QRect& absRect, const uc::Cp& cp)
+        QWidget* widget, const QRect& absRect,
+        const mywiki::PLink& that, const uc::Cp& cp)
 {
     closePopup(popupChar);
+    mywiki::PHistoryLink lowerLink = std::dynamic_pointer_cast<const mywiki::HistoryLink>(that);
+    history.push(lowerLink);
+    auto backPlace = history.back(lowerLink.get());
     popupChar.ensure(*this)
-            /// @todo [future] Let it be EMPTY, while these character are not shown
-            ///                in Library and articles
-             .setCp(cp, uc::GlyphStyleSets::EMPTY)
+             /// @todo [future] Let it be EMPTY, while these character are not shown
+             ///                in Library and articles
+             .setCp(cp, uc::GlyphStyleSets::EMPTY, backPlace)
              .popupAtAbsBacked(widget, absRect);
+}
+
+
+void MyGui::goToHistory(QWidget* widget, unsigned index)
+{
+    QRect rect { widget->mapToGlobal(QPoint{ 0, 0 }), QSize{1, 1} };
+    goToHistory1(widget, rect, index);
+}
+
+
+void MyGui::goToHistory1(QWidget* widget, const QRect& absRect, unsigned index)
+{
+    if (auto thing = history.extract(index)) {
+        thing->go(widget, absRect, thing, *this);
+    }
 }
 
 
@@ -161,11 +188,11 @@ void MyGui::followUrl(const QString& x)
 
 void MyGui::closePopup(RestrictedPtr remainingThing)
 {
-    if (remainingThing != &popup && popup) {
+    if ((remainingThing != &popup) && popup) {
         popup->deselectLink();
         popup->close();
     }
-    if (remainingThing != &popupChar && popupChar) {
+    if ((remainingThing != &popupChar) && popupChar) {
         popupChar->deselectLink();
         popupChar->close();
     }
@@ -176,28 +203,42 @@ void MyGui::closePopup(RestrictedPtr remainingThing)
 
 
 void PopupGui::popupAtAbs(
-        QWidget* widget, const QRect& absRect, const QString& html)
+        QWidget* widget, const QRect& absRect,
+        const mywiki::PLink& that, const QString& html)
 {
     if (auto wi = owner.memory.lastWidget) {
         auto rect = owner.memory.lastAbsRect;  // let it be copy
-        owner.popupAtAbs(wi, rect, html);
+        owner.popupAtAbs(wi, rect, that, html);
         return;
     }
     // otherwise
-    owner.popupAtAbs(widget, absRect, html);
+    owner.popupAtAbs(widget, absRect, that, html);
 }
 
 void PopupGui::popupCharAbs(
-        QWidget* widget, const QRect& absRect, const uc::Cp& cp)
+        QWidget* widget, const QRect& absRect,
+        const mywiki::PLink& that, const uc::Cp& cp)
 {
     if (auto wi = owner.memory.lastWidget) {
         auto rect = owner.memory.lastAbsRect;  // let it be copy
-        owner.popupCharAbs(wi, rect, cp);
+        owner.popupCharAbs(wi, rect, that, cp);
         return;
     }
     // otherwise
-    owner.popupCharAbs(widget, absRect, cp);
+    owner.popupCharAbs(widget, absRect, that, cp);
 }
+
+void PopupGui::goToHistory(QWidget* widget, unsigned index)
+{
+    if (auto wi = owner.memory.lastWidget) {
+        auto rect = owner.memory.lastAbsRect;  // let it be copy
+        owner.goToHistory1(wi, rect, index);
+        return;
+    }
+    // otherwise
+    owner.goToHistory(widget, index);
+}
+
 
 FontSource& PopupGui::fontSource() { return owner.fontSource(); }
 

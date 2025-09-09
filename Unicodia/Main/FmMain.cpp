@@ -2206,8 +2206,10 @@ void FmMain::popupCp(QWidget* initiator, char32_t cp)
 {
     if (cp >= cp::MAX_NONPRIVATE)
         return;
-    if (auto what = uc::cpsByCode[cp])
-        mainGui.popupCharWidget(initiator, *what);
+    if (auto what = uc::cpsByCode[cp]) {
+        mywiki::PLink link = mywiki::makeCpLink(*what);
+        mainGui.popupCharWidget(initiator, link, *what);
+    }
 }
 
 

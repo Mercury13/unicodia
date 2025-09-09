@@ -33,8 +33,13 @@ FmPopupChar::~FmPopupChar()
     delete ui;
 }
 
-auto FmPopupChar::setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets) -> This&
+auto FmPopupChar::setCp(
+        const uc::Cp& cp,
+        const uc::GlyphStyleSets& glyphSets,
+        const mywiki::HistoryPlace& backPlace) -> This&
 {
+    printf("Going to char %04X\n", cp.subj.uval());
+    fflush(stdout);
     charCode = cp.subj;
 
     // Sample
@@ -71,8 +76,9 @@ auto FmPopupChar::setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets) -
 
     // Text
     ui->lbText->setText({});  // touch at least smth
-    auto text = mywiki::buildHtml(cp, mywiki::HtmlVariant::POPUP);
-    ui->lbText->setText(text);
+    s = mywiki::buildHtml(cp, mywiki::HtmlVariant::POPUP);
+    mywiki::appendHistoryLink(s, backPlace);
+    ui->lbText->setText(s);
 
     return *this;
 }

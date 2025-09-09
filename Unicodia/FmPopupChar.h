@@ -5,6 +5,7 @@
 
 // Project-local
 #include "u_Popup.h"
+#include "WikiLink.h"
 
 namespace uc {
     struct Cp;
@@ -24,7 +25,9 @@ public:
     explicit FmPopupChar(QWidget *parent, pop::ClickMemory& memory);
     char32_t charCode = 0;
     ~FmPopupChar() override;
-    This& setCp(const uc::Cp& cp, const uc::GlyphStyleSets& glyphSets);
+    This& setCp(const uc::Cp& cp,
+                const uc::GlyphStyleSets& glyphSets,
+                const mywiki::HistoryPlace& backPlace);
     void adjustSize() override;
     void deselectLink();
 

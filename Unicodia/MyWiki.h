@@ -106,7 +106,8 @@ namespace mywiki {
         ///                         Window will shun this rectangle if possible
         /// @param [in] text       QHTML of popup window
         virtual void popupAtAbs(
-                QWidget* widget, const QRect& absRect, const QString& html) = 0;
+                QWidget* widget, const QRect& absRect,
+                const mywiki::PLink& that, const QString& html) = 0;
 
         /// @param [in] widget     Widget who initiated popping up, NEVER null
         /// @param [in] absRect    Absolute (in desktop coords) rectangle
@@ -114,7 +115,12 @@ namespace mywiki {
         ///                         Window will shun this rectangle if possible
         /// @param [in] cp         Code point
         virtual void popupCharAbs(
-                QWidget* widget, const QRect& absRect, const uc::Cp& cp) = 0;
+                QWidget* widget, const QRect& absRect,
+                const mywiki::PLink& that, const uc::Cp& cp) = 0;
+
+        /// @param [in] widget     Just for reliability, actually should be remembered
+        /// @param [in] index      Index in history
+        virtual void goToHistory(QWidget* widget, unsigned index) = 0;
 
         /// Copies text to clipboard, writes “Copied”
         /// @param [in] widget     Widget who initiated copying, NEVER null
@@ -137,16 +143,22 @@ namespace mywiki {
 
         // Utils
         void popupAtRel(
-                QWidget* widget, const QRect& relRect, const QString& html);
+                QWidget* widget, const QRect& relRect,
+                const mywiki::PLink& that, const QString& html);
         void popupAtRelMaybe(
-                QWidget* widget, TinyOpt<QRect> relRect, const QString& html);
-        void popupAtWidget(QWidget* widget, const QString& html);
+                QWidget* widget, TinyOpt<QRect> relRect,
+                const mywiki::PLink& that, const QString& html);
+        void popupAtWidget(QWidget* widget,
+                const mywiki::PLink& that, const QString& html);
         void popupCharRel(
-                QWidget* widget, const QRect& relRect, const uc::Cp& cp);
+                QWidget* widget, const QRect& relRect,
+                const mywiki::PLink& that, const uc::Cp& cp);
         void popupCharRelMaybe(
-                QWidget* widget, TinyOpt<QRect> relRect, const uc::Cp& cp);
+                QWidget* widget, TinyOpt<QRect> relRect,
+                const mywiki::PLink& that, const uc::Cp& cp);
         void popupCharWidget(
-                QWidget* widget, const uc::Cp& cp);
+                QWidget* widget,
+                const mywiki::PLink& that, const uc::Cp& cp);
         void copyTextRel(
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text,
                 LocKey locKey);
@@ -186,6 +198,7 @@ namespace mywiki {
         static const HtmlVariant DFLT, POPUP;
     };
 
+    std::unique_ptr<Link> makeCpLink(const uc::Cp& cp);
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view scheme, std::string_view target);
@@ -205,6 +218,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseCharRequestLink(std::string_view target);
     std::unique_ptr<Link> parseEmojiRequestLink(std::string_view target);
     std::unique_ptr<Link> parsePopCpLink(std::string_view target);
+    std::unique_ptr<Link> parseHistoryLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::BreakInfo& x);
     QString buildHtml(const uc::Category& x);
@@ -251,5 +265,6 @@ namespace mywiki {
     void hackDocument(QTextDocument* doc);
     enum class NumPlace : unsigned char { RAW, HTML };
     QString toString(const uc::Numeric& numc, NumPlace place);
+    void appendHistoryLink(QString& html, const mywiki::HistoryPlace& place);
 
 }   // namespace mywiki
