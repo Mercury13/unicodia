@@ -2,10 +2,7 @@
 @@@	The Unicode Standard 17.0.0
 @@@+	NamesList-17.0.0.txt
 @+	Generation Date: 2025-07-30, 17:12:45 GMT
-	Unicode 17.0.0 names list.
-	Repertoire synched with UnicodeData-17.0.0d7.txt.
-	Synch with 7th edition CD3; post UTC184 annotation updates for 17.0.
-	Adjusted notice at 0B00.
+	Unicode 17.0.0 final names list.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
