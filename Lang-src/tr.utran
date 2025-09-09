@@ -4045,7 +4045,7 @@
      <orig>Ideographic symbols and punctuation</orig>
      <transl>İdeografik semboller ve noktalama işaretleri</transl>
     </text>
-    <text id="Text" force-attention="true">
+    <text id="Text">
      <orig>
       <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
       <p />
@@ -4060,7 +4060,7 @@
      <transl>
       <p>Eski [[pt:cjk|CJK]] betiklerinde kullanılan çeşitli karakterler: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Küçük Kitan]], eski [[ps:Hani|Çin ideogramları]].</p>
       <p />
-      <p>Aynı ideograf{{_}}arka arkaya iki kez{{_}}yazılmaz, bunun yerine yineleme işareti yazılır. Modern basılı Çincede yinelemeye izin verilir, Çince gayriresmi ve Japoncada {{sm|々}} [[pu:3005]] kullanılır.</p>
+      <p>Aynı ideograf arka arkaya iki kez yazılmaz, bunun yerine yineleme işareti yazılır. Modern basılı Çincede yinelemeye izin verilir, Çince gayriresmi ve Japoncada {{sm|々}} [[pu:3005]] kullanılır.</p>
       <p />
       <p>Kanca, eski el yazmalarında bir cümlenin veya bölümün sonu anlamına gelir.</p>
       <p />
@@ -4282,7 +4282,7 @@
       <p />
       <p>Notalar, 17. yüzyılda, müziğin diğer enstrümanlara aktarılmasını ve orkestralarda çalınmasını mümkün kılan eşit mizaçla bugünkü hallerine evrildi.</p>
       <p />
-      <p>Müzik [[pt:universality|metin dışı]] bir bilgidir ve bu nedenle Unicode kapsamı dışındadır. Ancak, müzik yazılımlarını basitleştirmek ve sayfa PDF’lerini kısaltmak için notaları ve bölümlerini yazı tiplerinde depolamak için mevcut tipografi motorlarını kullanmak caziptir. Bu bağlamda, sekiz [[pt:format|biçim]] karakterinin ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) amacı belirsizdir. 2013 yılında açık standart SMuFL ''(Standart Müzik Yazı Tipi Düzeni)'' geldi ve [[pt:private|özel kullanım]] kod noktalarını kullanarak bloğu 2600 karaktere çıkardı.</p>
+      <p>Müzik [[pt:universality|metin dışı]] bir bilgidir ve bu nedenle Unicode kapsamı dışındadır. Ancak, müzik yazılımlarını basitleştirmek ve sayfa PDF’lerini kısaltmak için notaları ve bölümlerini yazı tiplerinde depolamak için mevcut tipografi motorlarını kullanmak caziptir. Bu bağlamda, sekiz [[pt:format|biçim]] karakterinin ([[pc:1D173|kiriş]], [[pc:1D175|bağ]], [[pc:1D177|birleştirme]], [[pc:1D179|müzik cümlesi]]) amacı belirsizdir. 2013 yılında açık standart SMuFL ''(Standart Müzik Yazı Tipi Düzeni)'' geldi ve [[pt:private|özel kullanım]] kod noktalarını kullanarak bloğu 2600 karaktere çıkardı.</p>
       <p />
       <p>Unicode tarafından başlangıçta kabul edilen mikroton notasyonu ([[pc:1D132]] ve [[pc:1D133|33]]) yaygın olarak kullanılmıyordu ve bu karakterleri "doğal hayatta" gören çok az kişi vardı. Unicode{{_}}18, müzik yazılımları tarafından yaygın olarak kullanılan başka bir notasyon (yarı diyez, yarı bemol) ekleyecek.</p>
       <p />
@@ -6006,15 +6006,12 @@
       <p />
       <p>Do not confuse with Linear Elamite (2000{{_}}BC, deciphered in 2020) and Elamite cuneiform (1st millennium{{_}}BC, deciphered in 1840s).</p>
      </orig>
-     <known-orig>
-      <p>Persia ceased existence after military defeats by Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
-      <p />
-      <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
-     </known-orig>
      <transl>
-      <p>Pers İmparatorluğu, Büyük İskender’in askeri yenilgilerinden sonra varlığını sona erdirdi. İskender’in torunları çok uluslu bir imparatorluğu idare edemediler{{_}} ve bir çöküşten sonra Elymais diğer uluslar arasında ortaya çıktı.</p>
+      <p>Pers İmparatorluğu, Büyük İskender’in askeri yenilgilerinden sonra varlığını sona erdirdi. İskender’in torunları çok uluslu bir imparatorluğu idare edemediler ve bir çöküşten sonra Elymais diğer uluslar arasında ortaya çıktı.</p>
       <p />
-      <p>Devlet MÖ 147{{_}}’den MS 224{{_}}’e kadar varlığını sürdürmüş, sık sık  Parthian hükümdarlığı altına girmiş ve [[ps:Armi|Aramice]] kökenli bitişik olmayan harflerden oluşan bir betiğe sahip olmuştur. Boşluk dışında{{_}}noktalama işareti bilinmemektedir. Yerel harf isimleri bilinmemektedir ve Aramiceden alınmıştır.</p>
+      <p>Devlet MÖ{{_}}147’den MS{{_}}224’e kadar varlığını sürdürmüş, sık sık  Parthian hükümdarlığı altına girmiş ve [[ps:Armi|Aramice]] kökenli bitişik olmayan harflerden oluşan bir betiğe sahip olmuştur. Boşluk dışında noktalama işareti bilinmemektedir. Yerel harf isimleri bilinmemektedir ve Aramiceden alınmıştır.</p>
+      <p />
+      <p>MÖ{{_}}2000'li yıllara ait Doğrusal Elam yazısı (2020'de çözüldü) ve MÖ{{_}}1. binyıllara ait Elam çivi yazısı (1840'larda çözüldü) ile karıştırmayın.</p>
      </transl>
     </text>
    </group>
