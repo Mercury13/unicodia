@@ -46,7 +46,7 @@ constexpr auto FGS_BAB23 = uc::Ffg::NOHINT_TINY | uc::Ffg::PLANE_2 | uc::Ffg::PL
 
 char32_t recodeBengali(char32_t x)
 {
-    /// @todo [U17, gag] Recode Bengali
+    /// @todo [U18, gag] Recode Bengali
     switch (x) {
     case 0x09FF: return 0x09F0;
     default: return x;
@@ -55,7 +55,7 @@ char32_t recodeBengali(char32_t x)
 
 char32_t recodeOriya(char32_t x)
 {
-    /// @todo [U17, gag] Recode Oriya
+    /// @todo [U18, gag] Recode Oriya
     switch (x) {
     case 0x0B53: return 0x307;
     case 0x0B54: return 0x308;
