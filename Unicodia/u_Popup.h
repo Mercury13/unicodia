@@ -52,7 +52,7 @@ signals:
     void mouseEnter();
     void mouseLeave();
 
-protected slots:
+private slots:
     void onLinkActivated();
 };
 

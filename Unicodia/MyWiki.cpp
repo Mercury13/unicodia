@@ -3916,7 +3916,7 @@ void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
 {
     if (place) {
         char buf[60];
-        snprintf(buf, std::size(buf), "<p>◀&nbsp;<a href='phi:%u' class='popup'>", place.index);
+        snprintf(buf, std::size(buf), "<p>🡄&nbsp;<a href='phi:%u' class='popup'>", place.index);
         html += buf;
         str::append(html, place.thing->header());
         html += "</a>";
