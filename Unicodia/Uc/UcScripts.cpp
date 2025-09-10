@@ -485,7 +485,7 @@ constinit const uc::Script uc::scriptInfo[] {
           .locations { LOC_INDIA_E, LOC_BHUTAN, LOC_NEPAL } } },
     // Limbu OK, W10 none, installed Google Noto font
     { "Limb", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(18), EcFont::LIMBU, NO_FLAGS,
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 41, .numOrder = NumOrder::DEC_THOU, .str = Langstr::DECADE, .year = 2010,
