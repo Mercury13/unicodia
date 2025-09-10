@@ -167,7 +167,8 @@ void MyGui::goToHistory(QWidget* widget, unsigned index)
 void MyGui::goToHistory1(QWidget* widget, const QRect& absRect, unsigned index)
 {
     if (auto thing = history.extract(index)) {
-        thing->go(widget, absRect, thing, *this);
+        QRect r1 { widget->mapFromGlobal(absRect.topLeft()), absRect.size() };
+        thing->go(widget, r1, thing, *this);
     }
 }
 
