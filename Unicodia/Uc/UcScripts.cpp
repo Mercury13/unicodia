@@ -853,7 +853,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1036), EcFont::TANGUT },
     // Tai Viet OK, installed Google Noto font
     { "Tavt", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(16), EcFont::TAI_VIET },
     // Tai Yo OK, presume SIL license
     { "Tayo", QFontDatabase::Any,
