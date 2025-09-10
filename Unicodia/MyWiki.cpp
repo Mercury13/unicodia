@@ -3936,8 +3936,14 @@ std::unique_ptr<mywiki::Link> mywiki::makeCpLink(const uc::Cp& cp)
 void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
 {
     if (place) {
+        html += "<p>";
+        if (QApplication::layoutDirection() == Qt::LeftToRight) {
+            html += "◀◀◀";
+        } else {
+            html += "&rlm;▶▶▶";
+        }
         char buf[80];
-        snprintf(buf, std::size(buf), "<p>◀◀◀&nbsp;<small><a href='phi:%u' class='popdark'>", place.index);
+        snprintf(buf, std::size(buf), "&nbsp;<small><a href='phi:%u' class='popdark'>", place.index);
         html += buf;
         str::append(html, place.thing->header());
         html += "</small></a>";
