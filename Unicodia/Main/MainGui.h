@@ -59,7 +59,9 @@ public:
                      LocKey locKey);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
-    void goToHistory1(QWidget* widget, const QRect& absRect, unsigned index);
+
+    void goToHistoryAbs(QWidget* widget, const QRect& rect, unsigned index);
+    void goToHistoryRel(QWidget* widget, const QRect& rect, unsigned index);
 
     /// @brief
     ///   Simple pointer with a little bit error-proofing

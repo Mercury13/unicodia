@@ -159,17 +159,22 @@ void MyGui::popupCharAbs(
 
 void MyGui::goToHistory(QWidget* widget, unsigned index)
 {
-    QRect rect { widget->mapToGlobal(QPoint{ 0, 0 }), QSize{1, 1} };
-    goToHistory1(widget, rect, index);
+    goToHistoryRel(widget, QRect{0,0,1,1}, index);
 }
 
 
-void MyGui::goToHistory1(QWidget* widget, const QRect& absRect, unsigned index)
+void MyGui::goToHistoryRel(QWidget* widget, const QRect& relRect, unsigned index)
 {
     if (auto thing = history.extract(index)) {
-        QRect r1 { widget->mapFromGlobal(absRect.topLeft()), absRect.size() };
-        thing->go(widget, r1, thing, *this);
+        thing->go(widget, relRect, thing, *this);
     }
+}
+
+
+void MyGui::goToHistoryAbs(QWidget* widget, const QRect& absRect, unsigned index)
+{
+    QRect r1 { widget->mapFromGlobal(absRect.topLeft()), absRect.size() };
+    goToHistoryRel(widget, r1, index);
 }
 
 
@@ -233,7 +238,7 @@ void PopupGui::goToHistory(QWidget* widget, unsigned index)
 {
     if (auto wi = owner.memory.lastWidget) {
         auto rect = owner.memory.lastAbsRect;  // let it be copy
-        owner.goToHistory1(wi, rect, index);
+        owner.goToHistoryAbs(wi, rect, index);
         return;
     }
     // otherwise
