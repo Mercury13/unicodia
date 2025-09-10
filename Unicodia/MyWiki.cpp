@@ -171,6 +171,13 @@ namespace {
     std::u8string headerOf(const uc::old::Info& oldInfo)
         { return oldInfo.locName(); }
 
+    std::u8string headerOf(const uc::Block& block)
+    {
+        char buf[16];
+        snprintf(buf, std::size(buf), "%04X ", int(block.startingCp));
+        return str::cat(str::toU8sv(buf), block.loc.name);
+    }
+
     template <class Thing>
     class PopLink final : public mywiki::HistoryLink
     {
