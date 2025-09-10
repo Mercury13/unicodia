@@ -47,6 +47,10 @@ namespace mywiki {
     public:
         LinkClass clazz() const noexcept final { return LinkClass::POPUP; }
 
+        /// @return  Localized header of linked object
+        /// @warning  As it creates a string, is NOT noexcept
+        virtual std::u8string header() const = 0;
+
         /// @return  Some object associated with a link
         virtual HistoryObj obj() const noexcept = 0;
 
@@ -59,10 +63,6 @@ namespace mywiki {
 
         bool isDifferent(const HistoryLink& that) const noexcept
             { return !isSame(that); }
-
-        /// @return  Localized header of linked object
-        /// @warning  As it creates a string, is NOT noexcept
-        virtual std::u8string header() const = 0;
     };
     using PHistoryLink = std::shared_ptr<const HistoryLink>;
 
