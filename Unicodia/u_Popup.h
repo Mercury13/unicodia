@@ -24,7 +24,7 @@ class ClickableLabel: public QLabel
     using This = ClickableLabel;
     Q_OBJECT
 public:
-    using Super::QLabel;
+    ClickableLabel( QWidget* owner = nullptr);
     ClickableLabel(const QString& text, QWidget* owner);
     ~ClickableLabel() override = default;
 
@@ -48,6 +48,8 @@ protected:
     void mouseReleaseEvent(QMouseEvent*) override;
     bool event(QEvent*) override;
 
+private:
+    void init();
 signals:
     void mouseEnter();
     void mouseLeave();

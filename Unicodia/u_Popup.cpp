@@ -9,10 +9,21 @@
 ///// ClickableLabel ///////////////////////////////////////////////////////////
 
 
+ClickableLabel::ClickableLabel( QWidget* owner) : Super(owner)
+{
+    init();
+}
+
+
 ClickableLabel::ClickableLabel(const QString& text, QWidget* owner)
     : Super(text, owner)
 {
-    connect(this, &QLabel::linkActivated, this, &This::onLinkActivated);
+    init();
+}
+
+void ClickableLabel::init()
+{
+    connect(this, &This::linkActivated, this, &This::onLinkActivated);
 }
 
 
@@ -41,8 +52,9 @@ void ClickableLabel::mouseReleaseEvent(QMouseEvent* ev)
 
     if (allowClose) {
         auto sel = selection();
-        if (sel.length == 0)
+        if (sel.length == 0) {
             emit clicked();
+        }
     }
 }
 
