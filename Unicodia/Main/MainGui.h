@@ -60,7 +60,10 @@ public:
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
 
+    /// @param  rect   relative coords
     void goToHistoryAbs(QWidget* widget, const QRect& rect, unsigned index);
+
+    /// @param   rect   absolute coords
     void goToHistoryRel(QWidget* widget, const QRect& rect, unsigned index);
 
     /// @brief
