@@ -131,8 +131,12 @@ void MyGui::popupAtAbs(
     mywiki::PHistoryLink lowerLink = std::dynamic_pointer_cast<const mywiki::HistoryLink>(that);
     history.push(lowerLink);
     auto html2 = html;
-    auto backPlace = history.back(lowerLink.get());
-    mywiki::appendHistoryLink(html2, backPlace);
+    if (lowerLink) {
+        // Add history link only if the link is really part of history
+        // Do not add for e.g. fonts for
+        auto backPlace = history.back(lowerLink.get());
+        mywiki::appendHistoryLink(html2, backPlace);
+    }
     popup.ensure(*this)
          .setText(html2)
          .popupAtAbsBacked(widget, absRect);

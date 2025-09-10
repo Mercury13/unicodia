@@ -67,7 +67,8 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
         ".inet { " STYLE_INET " } "                                             \
         ".missing { color: " CNAME_LINK_DEPRECATED "; } "                       \
         ".tr { color: " CNAME_TRANSCRIPTION "; }"                               \
-        ".query { " STYLE_QUERY " }"                                            \
+        ".query { " STYLE_QUERY " } "                                           \
+        ".popdark { " STYLE_POPUP_DARK " }"
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"

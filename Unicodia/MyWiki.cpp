@@ -135,15 +135,54 @@ namespace {
         'C', 'F', 'L', 'M', 'N', 'P', 'S', 'Z'
     };
 
+    template <class T>
+    inline std::u8string_view locName(const T& x) {
+        return x.locName;
+    }
+
+    template <Locable T>
+    inline std::u8string_view locName(const T& x) {
+        return x.loc.name;
+    }
+
+    template <>
+    inline std::u8string_view locName(const uc::BreakInfo& x) {
+        char s[40];
+        snprintf(s, std::size(s), "Brk.%*s.Name", int(x.id.size()), x.id.data());
+        return loc::get(s);
+    }
+
+    template <class T>
+    inline std::u8string headerOf(const T& x) {
+        return std::u8string { locName(x) };
+    }
+
+    template<>
+    std::u8string headerOf<uc::GlyphStyleChannel>(const uc::GlyphStyleChannel& channel)
+    {
+        char buf[40];
+        snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
+        return loc::get(buf);
+    }
+
+    std::u8string headerOf(const uc::Version& version)
+        { return version.locName(); }
+
+    std::u8string headerOf(const uc::old::Info& oldInfo)
+        { return oldInfo.locName(); }
+
     template <class Thing>
-    class PopLink : public mywiki::Link
+    class PopLink final : public mywiki::HistoryLink
     {
     public:
         static_assert(!std::is_pointer<Thing>::value, "Need object rather than pointer");
         const Thing& thing;
         PopLink(const Thing& aThing) : thing(aThing) {}
+        mywiki::HistoryObj obj() const noexcept override { return &thing; }
         void go(QWidget* widget, TinyOpt<QRect> rect,
                 const mywiki::PLink& that, mywiki::Gui& gui) const override;
+        std::u8string header() const override
+            { return headerOf(thing); }
     };
 
     template <class Thing>
@@ -1740,23 +1779,6 @@ namespace {
     {
         size_t len = strnlen(x, N);
         appendHeader(text, std::string_view{ x, len });
-    }
-
-    template <class T>
-    inline std::u8string_view locName(const T& x) {
-        return x.locName;
-    }
-
-    template <Locable T>
-    inline std::u8string_view locName(const T& x) {
-        return x.loc.name;
-    }
-
-    template <>
-    inline std::u8string_view locName(const uc::BreakInfo& x) {
-        char s[40];
-        snprintf(s, std::size(s), "Brk.%*s.Name", int(x.id.size()), x.id.data());
-        return loc::get(s);
     }
 
     template <class... T>
@@ -3717,9 +3739,8 @@ QString mywiki::buildHtml(const uc::GlyphStyleChannel& channel)
     appendStylesheet(text);
 
     // Style names are always null-terminated
-    snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
     text += "<p><nobr><b>";
-    mywiki::appendNoFont(text, loc::get(buf), wiki::Mode::SPAN);
+    mywiki::appendNoFont(text, headerOf(channel), wiki::Mode::SPAN);
     text += "</b></nobr>";
 
     snprintf(buf, sizeof(buf), "GlyphVar.%s.Text", channel.name.data());
@@ -3915,10 +3936,10 @@ std::unique_ptr<mywiki::Link> mywiki::makeCpLink(const uc::Cp& cp)
 void mywiki::appendHistoryLink(QString& html, const mywiki::HistoryPlace& place)
 {
     if (place) {
-        char buf[60];
-        snprintf(buf, std::size(buf), "<p>🡄&nbsp;<a href='phi:%u' class='popup'>", place.index);
+        char buf[80];
+        snprintf(buf, std::size(buf), "<p>◀◀◀&nbsp;<small><a href='phi:%u' class='popdark'>", place.index);
         html += buf;
         str::append(html, place.thing->header());
-        html += "</a>";
+        html += "</small></a>";
     }
 }
