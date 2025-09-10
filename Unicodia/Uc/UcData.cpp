@@ -2091,7 +2091,7 @@ std::u8string uc::Version::locName() const
     } else {
         r = emojiName;
         appendState(r, *this);
-        r = loc::get("Prob.Bullet.EmojiV").arg(r);
+        r = loc::get("Prop.Bullet.EmojiV").arg(r);
     }
     return r;
 }
