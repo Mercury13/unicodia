@@ -2794,8 +2794,10 @@ namespace {
                             str::QSep sp1(text, " ");
                             for (auto& v : cps) {
                                 sp1.sep();
-                                char buf[10];
-                                snprintf(buf, std::size(buf), "%X", int(v));
+                                char buf[60];
+                                snprintf(buf, std::size(buf),
+                                         "<a href='pc:%X' class='popup'>%04X</a>",
+                                         unsigned(v), unsigned(v));
                                 text += buf;
                             }
                         } break;
