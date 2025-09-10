@@ -76,21 +76,19 @@ namespace mywiki {
     class History
     {
     public:
-        static constexpr unsigned MAX_SIZE = 5;
+        static constexpr unsigned MAX_SIZE = 100;
         using Vec = SafeVector<PHistoryLink>;
 
         unsigned size() const noexcept { return links.size(); }
 
-        /// Trims history to MAX_SIZE
-        void trimTo(size_t wantedSize);
-        void trim() { trimTo(MAX_SIZE); }
-        void trim1() { trimTo(MAX_SIZE - 1); }
         void push(const PHistoryLink& link);
         HistoryPlace back(TinyOpt<HistoryLink> me) const noexcept;
         PHistoryLink extract(unsigned index);
     private:
         Vec links;
         std::optional<Vec::iterator> findIt(const HistoryLink& x) noexcept;
+        void trimTo(size_t wantedSize);
+        void trim1() { trimTo(MAX_SIZE - 1); }
     };
 }
 
