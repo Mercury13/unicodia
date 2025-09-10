@@ -131,10 +131,8 @@ void MyGui::popupAtAbs(
     mywiki::PHistoryLink lowerLink = std::dynamic_pointer_cast<const mywiki::HistoryLink>(that);
     history.push(lowerLink);
     auto html2 = html;
-    /// @todo [urgent] We are not popping from history
     auto backPlace = history.back(lowerLink.get());
     mywiki::appendHistoryLink(html2, backPlace);
-    /// @todo [urgent] use that here
     popup.ensure(*this)
          .setText(html2)
          .popupAtAbsBacked(widget, absRect);
