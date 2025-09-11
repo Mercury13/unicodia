@@ -312,12 +312,12 @@ int main()
         KageList kageList;
         std::cout << "Reading small Kage list..." << std::flush;
         KageCache smallCache;
-        auto nSmall = readKageList(kageList, smallCache, 2'000'000, "dump_newest_only.txt");
+        auto nSmall = readKageList(kageList, smallCache, 3'000'000, "dump_newest_only.txt");
         std::cout << "OK, " << nSmall << " entries" "\n";
 
         std::cout << "Reading LARGE Kage list..." << std::flush;
         KageCache largeCache;
-        auto nLarge = readKageList(kageList, largeCache, 5'500'000, "dump_all_versions.txt");
+        auto nLarge = readKageList(kageList, largeCache, 6'500'000, "dump_all_versions.txt");
         std::cout << "OK, " << nLarge << " entries" "\n";
 
         std::cout << "Archiving tasks..." << std::flush;
