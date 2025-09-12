@@ -397,6 +397,7 @@ Subtotal: 353
 - 13507: campaign for standing with props
 - 134FF: after FE + random jug W22?
 - 13526: after 25
+- 13548: was squished in NewG
 - 13559: 5A minus beard
 - 1356C: after 6B
 - 13582: franken near 81
@@ -548,11 +549,11 @@ Subtotal: 353
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 168
+Subtotal: 170
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 638
+Total: 639
