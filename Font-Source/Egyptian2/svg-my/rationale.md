@@ -12,13 +12,15 @@ RETURN = temporarily deleted, then returned
 - 1348C, 1348E, 13496, 1349C, 134A0 / 134A3, 134A4, 134A5, 134A7, 134AD = campaign for standing men (10)
 - 134B0, 134B1, 134B2, 134B4, 134B5 / 134B6, 134B8, 134BB, 134C0, 134C4 = campaign for lying (10)
 - 134C8, 134C9, 134CA, 134CD, 134D2 / 134D7, 134D8, 134DA = campaign for staves (8)
+- 134E0, 134E1, 134E2, 134E3, 134E5 / 134E7, 134E8, 134E9, 134EB, 134EE = campaign for sitting with props
+- 134EF, 134F0, 134F6, 134F7, 134F9 = campaign for sitting with props (15)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 115
+Subtotal: 130
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -378,21 +380,6 @@ Subtotal: 115
 Subtotal: 353
 
 # Duped with NewGardiner
-- 134E0: campaign for sitting with props
-- 134E1: campaign for sitting with props
-- 134E2: campaign for sitting with props
-- 134E3: campaign for sitting with props
-- 134E5: campaign for sitting with props
-- 134E7: campaign for sitting with props
-- 134E8: campaign for sitting with props
-- 134E9: campaign for sitting with props
-- 134EB: campaign for sitting with props
-- 134EE: after ED
-- 134EF: EE + legs on heels
-- 134F0: campaign for sitting with props
-- 134F6: campaign for sitting with props
-- 134F7: campaign for sitting with props
-- 134F9: campaign for sitting with props
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
@@ -551,7 +538,7 @@ Subtotal: 353
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 172
+Subtotal: 157
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
