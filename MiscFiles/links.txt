@@ -33,6 +33,7 @@ https://github.com/longnow/bali-fonts — Balinese fonts
 https://aksaradinusantara.com/fonta/aksara/kawi — Kawi fonts
 https://github.com/NDISCOVER/Arima-Font — progressive Taml/Mlym font
 https://github.com/ButTaiwan/genwan-font — some Han font
+https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project — quickly adopts new chars
 
 
 CHAR IMAGES
