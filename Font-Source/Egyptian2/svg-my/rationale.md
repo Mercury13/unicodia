@@ -395,6 +395,8 @@ Subtotal: 353
 - 134F9: campaign for sitting with props
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
+- 13509: campaign for standing with props
+- 1350D: campaign for standing with props
 - 134FF: after FE + random jug W22?
 - 13526: after 25
 - 13548: was squished in NewG
@@ -549,11 +551,11 @@ Subtotal: 353
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 170
+Subtotal: 172
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 639
+Total: 641
