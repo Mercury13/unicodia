@@ -25,7 +25,7 @@ Subtotal: 138
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
-- 13478: traces of erased knee
+- 13478: frankenmade from scratch after 13527 using old hands
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134D9: shorter clothes
@@ -388,6 +388,8 @@ Subtotal: 353
 - 1350E: campaign for standing with props
 - 134FF: after FE + random jug W22?
 - 13526: after 25
+- 13527: 28 + old 478
+- 13528: 29 + 79 + knee from captives
 - 13548: was squished in NewG
 - 1356C: after 6B
 - 13582: franken near 81
@@ -539,11 +541,11 @@ Subtotal: 353
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 157
+Subtotal: 159
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 649
+Total: 651
