@@ -38,22 +38,16 @@ bool GetCp::mayBeText(uc::EmojiDraw emojiDraw) const noexcept
 
 struct RecolorLib {
     std::string_view fill1;
-    std::string_view fill2;     ///< U17 still use fill
+    std::string_view fill2;
     std::string_view outline1;
-    std::string_view shadow1;   ///< U17
-    std::string_view shadow2;   ///< U17
-    std::string_view hair1;     ///< U17 still use this hair
+    std::string_view hair1;
     std::string_view hairHighlight;  ///< Highlighs on the top of hair made by radial gradient
     std::string_view eyebrows;  ///< Eyebrows, same colour as hair highlight!!
-        /// @warning Leave hair #62453B, set eyebrows #61453B
-    std::string_view eyebrows2; ///< U17 eyebrows
     std::string_view ears1;     ///< used in firefighter emoji
         /// @warning: Leave ears E59600, set nose #E49600
     std::string_view nose1;     ///< used at least in swimmer emoji
     std::string_view mouth1;    ///< used at least in firefighter emoji
-    std::string_view mouth2;    ///< U17 mouth
     std::string_view eyes1;     ///< used at least in firefighter emoji
-    std::string_view eyes2;     ///< U17 eyes
     std::string_view handLight; ///< used in new U16 hand emoji
     std::string_view handDark;  ///< used in new U16 hand emoji
 
@@ -84,23 +78,15 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
-    repl(bytes, "#FEC925", fill2);      // U17 (2025) emoji, e.g. rowing
     // U15 replaced lots of hands and other body parts → some colours now unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
-    repl(bytes, "#F8AB16", shadow1);    // U17 (2025) emoji, e.g. rowing
-    repl(bytes, "#F8AD1E", shadow1);    // same
-    repl(bytes, "#E59502", shadow2);    // same
     repl(bytes, "#543930", hair1);
     repl(bytes, STOP_COLOR "#6D4C41", hairHighlight);
-    repl(bytes, "#62453B", hair1);      // U17 (2025) emoji, e.g. rowing
     repl(bytes, "#6D4C41", eyebrows);
-    repl(bytes, "#61453B", eyebrows2);  // ARTIFICIAL U17 (2025) emoji, e.g. rowing
     repl(bytes, "#E59600", ears1);
     repl(bytes, "#E49600", nose1);      // artificially made (missing in actual Noto): e.g. swimmer
     repl(bytes, "#795548", mouth1);
-    repl(bytes, "#604338", mouth2);
     repl(bytes, "#404040", eyes1);
-    repl(bytes, "#444540", eyes2);
     repl(bytes, "#FAA700", handLight);
     repl(bytes, "#B55E19", handDark);
 }
@@ -319,18 +305,13 @@ namespace {
             .fill1 = "#FFD29C",
             .fill2 = "#F9DDBD",
             .outline1 = "#E6B77E",
-            .shadow1 = "#EDBD82",
-            .shadow2 = "#D89852",
             .hair1 = "#312D2D",
             .hairHighlight = STOP_COLOR "#454140",
             .eyebrows = "#454140",
-            .eyebrows2 = "#312D2D", // same as hair
             .ears1 = "#EDC391",
             .nose1 = "#DBA689",
             .mouth1 = "#444444",
-            .mouth2 = "#444444",    // same as mouth1
             .eyes1 = "#312D2D",
-            .eyes2 = "#3F4040",
             .handLight = "#EFB682",
             .handDark = "#B26830",
         },
@@ -338,18 +319,13 @@ namespace {
             .fill1 = "#CCA47A",
             .fill2 = "#E0BB95",
             .outline1 = "#BA8F63",
-            .shadow1 = "#C48E6A",
-            .shadow2 = "#A87254",
             .hair1 = "#AB872F",
             .hairHighlight = STOP_COLOR "#BFA055",
             .eyebrows = "#AB872F",
-            .eyebrows2 = "#9B782C", // darker than hair
             .ears1 = "#C48E6A",
             .nose1 = "#C48E6A",
             .mouth1 = "#6D4C41",
-            .mouth2 = "#785446",    // lighter than mouth1
             .eyes1 = "#5D4037",
-            .eyes2 = "#3F4040",
             .handLight = "#D19661",
             .handDark = "#8D542E",
         },
@@ -357,18 +333,13 @@ namespace {
             .fill1 = "#A47B62",
             .fill2 = "#BA8D68",
             .outline1 = "#91674D",
-            .shadow1 = "#99674F",
-            .shadow2 = "#824E3A",
             .hair1 = "#543930",
             .hairHighlight = STOP_COLOR "#6D4C41",
             .eyebrows = "#613E31",
-            .eyebrows2 = "#613E31", // same as eyebrows, lighter than hair
             .ears1 = "#99674F",
             .nose1 = "#99674F",
             .mouth1 = "#5D4037",
-            .mouth2 = "#49352E",    // darker than mouth1
             .eyes1 = "#49362E",
-            .eyes2 = "#49352E",     // close to eyes1
             .handLight = "#9A6648",
             .handDark = "#62392B",
         },
@@ -376,18 +347,13 @@ namespace {
             .fill1 = "#8D5738",
             .fill2 = "#A56C43",
             .outline1 = "#875334",
-            .shadow1 = "#875334",
-            .shadow2 = "#63351E",
             .hair1 = "#3C2C23",
             .hairHighlight = STOP_COLOR "#554138",
             .eyebrows = "#42312C",
-            .eyebrows2 = "#3C2C23", // same as hair
             .ears1 = "#7A4C32",
             .nose1 = "#875334",
             .mouth1 = "#473530",
-            .mouth2 = "#473530",    // same as mouth1
             .eyes1 = "#42312C",
-            .eyes2 = "#42312C",     // same as eyes1
             .handLight = "#824624",
             .handDark = "#422319",
         },
@@ -395,18 +361,13 @@ namespace {
             .fill1 = "#5C4037",
             .fill2 = "#70534A",
             .outline1 = "#4A2F27",
-            .shadow1 = "#573D36",
-            .shadow2 = "#492C25",
             .hair1 = "#232020",
             .hairHighlight = STOP_COLOR "#444140",
             .eyebrows = "#1A1717",
-            .eyebrows2 = "#1A1717", // same as eyebrows, darker than hair
             .ears1 = "#3C2B24",
             .nose1 = "#33251F",
             .mouth1 = "#1A1717",
-            .mouth2 = "#1A1717",    // same as many things
             .eyes1 = "#1A1717",
-            .eyes2 = "#1A1717",     // same as namy things
             .handLight = "#58382B",
             .handDark = "#000000",  // really black
         },
