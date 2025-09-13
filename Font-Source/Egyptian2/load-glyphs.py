@@ -151,17 +151,18 @@ TINY = 500
 SMALL = 650
 MEDIUM = 800
 # Special height-limited
+HARE = 700
 LOAF = 700
 BUCKLER = 800
 BOWSTRING = 800
 COILED_ROPE = 800
 # General width-limited (=negative)
+NORMAL = CELLHEIGHT
 SQUARE = -1000
 MEDWIDE = -1250
 WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
-#Special width-limited
-NORMAL = CELLHEIGHT
+# Special width-limited
 ARM = -1000
 SMALLDONKEY = -1220
 MEDDONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
@@ -234,7 +235,7 @@ GLYPH_SIZES = {
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
-    0x13ABD: NORMAL, 0x13ABE: NORMAL,  #hares
+    0x13ABD: HARE, 0x13ABE: HARE,  #hares
     0x13B2D: EVERYBIT,
     0x13B59: WIDE,
     0x13B5B: WIDE,
