@@ -1324,9 +1324,7 @@ FFFD......: NotoSerif-Regular
 13AA4.......: NewGardiner
 13AA5..13AB7: UnicodiaSesh
 13AB8, 13AB9: NewGardiner
-13ABA..13ABC: UnicodiaSesh
-13ABD.......: NewGardiner
-13ABE..13AC4: UnicodiaSesh
+13ABA..13AC4: UnicodiaSesh
 13AC5.......: NewGardiner
 13AC6..13AD0: UnicodiaSesh
 13AD1..13AD3: NewGardiner
