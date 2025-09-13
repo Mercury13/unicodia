@@ -48,8 +48,8 @@ Subtotal: 130
 - 135C0: noticed a trouble (sent to Unicode), JSesh A216C is actually C8 rather than C0
 - 135C2: other legs, need C3
 - 135C8: see C0
-- 135DE: black arms, not really verticla forearms
-- 135DF: black arms, not really verticla forearms
+- 135DE: black arms, not really vertical forearms
+- 135DF: black arms, not really vertical forearms
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
 - 13625: removed PLACEHOLDERS
