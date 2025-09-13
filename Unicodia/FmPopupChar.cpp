@@ -38,8 +38,6 @@ auto FmPopupChar::setCp(
         const uc::GlyphStyleSets& glyphSets,
         const mywiki::HistoryPlace& backPlace) -> This&
 {
-    printf("Going to char %04X\n", cp.subj.uval());
-    fflush(stdout);
     charCode = cp.subj;
 
     // Sample
