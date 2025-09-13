@@ -390,6 +390,8 @@ Subtotal: 354
 - 13526: after 25
 - 13548: was squished in NewG
 - 1354F: campaign for seat-covered 1
+- 13556: campaign for seat-covered 1
+- 13557: campaign for seat-covered 1
 - 13558: campaign for seat-covered 1
 - 13559: 5A minus beard
 - 1355C: campaign for seat-covered 1
@@ -543,11 +545,11 @@ Subtotal: 354
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 161
+Subtotal: 163
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 646
+Total: 648
