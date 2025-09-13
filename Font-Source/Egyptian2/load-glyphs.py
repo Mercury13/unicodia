@@ -161,6 +161,7 @@ MEDWIDE = -1250
 WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
 #Special width-limited
+NORMAL = CELLHEIGHT
 ARM = -1000
 SMALLDONKEY = -1220
 MEDDONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
@@ -233,6 +234,7 @@ GLYPH_SIZES = {
     0x13A85: WIDE,
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
+    0x13ABD: NORMAL, 0x13ABE: NORMAL,  #hares
     0x13B2D: EVERYBIT,
     0x13B59: WIDE,
     0x13B5B: WIDE,
