@@ -122,8 +122,8 @@ Subtotal: 130
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
-- 137F2: no beard, no collar one of hieros for million
-- 137F4: no beard, lower branches: ONE HUNDRED
+- 137F2: no beard, no collar one of hieros for million: ONE HUNDRED
+- 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
@@ -222,8 +222,8 @@ Subtotal: 130
 - 13C58: this one has one feather
 - 13C81: rope rather than feather
 - 13C85: loop on the end of perch
-- 13C96: no base
-- 13C98: feather → loop: TWO HUNDRED
+- 13C96: no base: TWO HUNDRED
+- 13C98: feather → loop
 - 13C99: loop on perch
 - 13C9A: bull’s head
 - 13C9C: same as 9A
@@ -322,8 +322,8 @@ Subtotal: 130
 - 14184: thinner “sun”, base for 83
 - 141D6: no loop
 - 141D7: same
-- 141E8: redrew for more pronounced “bell”
-- 141F1: redrew from scratch: THREE HUNDRED
+- 141E8: redrew for more pronounced “bell”: THREE HUNDRED
+- 141F1: redrew from scratch
 - 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
