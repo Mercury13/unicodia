@@ -36,6 +36,7 @@ Subtotal: 130
 - 13549: better sits on heel
 - 13552: short beard
 - 13555: long wig
+- 1355A: uniformity (thicker lines of object held)
 - 13566: bundle closer to body
 - 13576: added scroll
 - 13577: RETURN: added another with pelt
@@ -377,7 +378,7 @@ Subtotal: 130
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 353
+Subtotal: 354
 
 # Duped with NewGardiner
 - 13502: campaign for standing with props
@@ -549,4 +550,4 @@ Subtotal: 161
 
 Subtotal: 1
 
-Total: 645
+Total: 646
