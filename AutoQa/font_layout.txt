@@ -912,17 +912,9 @@ FFFD......: NotoSerif-Regular
 13441, 13442: NotoSansEgyptianHieroglyphs-Regular
 13443..13455: UnicodiaEgypFixupRegular
 == Egyptian Hieroglyphs Extended-A
-13460..134F5: UnicodiaSesh
-134F6, 134F7: NewGardiner
-134F8.......: UnicodiaSesh
-134F9.......: NewGardiner
-134FA..13501: UnicodiaSesh
-13502.......: NewGardiner
-13503..13506: UnicodiaSesh
-13507.......: NewGardiner
-13508.......: UnicodiaSesh
-13509..1350E: NewGardiner
-1350F.......: UnicodiaSesh
+13460..13509: UnicodiaSesh
+1350A..1350C: NewGardiner
+1350D..1350F: UnicodiaSesh
 13510..13514: NewGardiner
 13515.......: UnicodiaSesh
 13516.......: NewGardiner
@@ -946,17 +938,11 @@ FFFD......: NotoSerif-Regular
 13538, 13539: NewGardiner
 1353A..13540: UnicodiaSesh
 13541.......: NewGardiner
-13542..13547: UnicodiaSesh
-13548.......: NewGardiner
-13549..1354C: UnicodiaSesh
+13542..1354C: UnicodiaSesh
 1354D.......: NewGardiner
-1354E.......: UnicodiaSesh
-1354F, 13550: NewGardiner
-13551..13555: UnicodiaSesh
-13556..13558: NewGardiner
-13559..1355B: UnicodiaSesh
-1355C.......: NewGardiner
-1355D..13563: UnicodiaSesh
+1354E, 1354F: UnicodiaSesh
+13550.......: NewGardiner
+13551..13563: UnicodiaSesh
 13564.......: NewGardiner
 13565..13571: UnicodiaSesh
 13572.......: NewGardiner
@@ -27289,9 +27275,9 @@ FFFD......: NotoSerif-Regular
 == CJK Unified Ideographs Extension I
 2EBF0..2EE5D: BabelStoneHanExtra
 == CJK Compatibility Ideographs Supplement
-2F800..2F840: UnicodiaHan
-2F841..2F845: BabelStoneHanBasic
-2F846.......: UnicodiaHan
+2F800..2F841: UnicodiaHan
+2F842..2F844: BabelStoneHanBasic
+2F845, 2F846: UnicodiaHan
 2F847.......: BabelStoneHanBasic
 2F848.......: UnicodiaHan
 2F849..2F84D: BabelStoneHanBasic
@@ -27308,9 +27294,9 @@ FFFD......: NotoSerif-Regular
 2F872.......: UnicodiaHan
 2F873.......: BabelStoneHanBasic
 2F874, 2F875: UnicodiaHan
-2F876, 2F877: BabelStoneHanBasic
-2F878..2F87A: UnicodiaHan
-2F87B..2F880: BabelStoneHanBasic
+2F876.......: BabelStoneHanBasic
+2F877..2F87B: UnicodiaHan
+2F87C..2F880: BabelStoneHanBasic
 2F881, 2F882: UnicodiaHan
 2F883.......: BabelStoneHanBasic
 2F884.......: UnicodiaHan
@@ -27344,13 +27330,13 @@ FFFD......: NotoSerif-Regular
 2F8C1.......: UnicodiaHan
 2F8C2..2F8C8: BabelStoneHanBasic
 2F8C9.......: UnicodiaHan
-2F8CA, 2F8CB: BabelStoneHanBasic
-2F8CC, 2F8CD: UnicodiaHan
+2F8CA.......: BabelStoneHanBasic
+2F8CB..2F8CD: UnicodiaHan
 2F8CE, 2F8CF: BabelStoneHanBasic
 2F8D0, 2F8D1: UnicodiaHan
 2F8D2..2F8D5: BabelStoneHanBasic
-2F8D6, 2F8D7: UnicodiaHan
-2F8D8, 2F8D9: BabelStoneHanBasic
+2F8D6..2F8D8: UnicodiaHan
+2F8D9.......: BabelStoneHanBasic
 2F8DA..2F8DC: UnicodiaHan
 2F8DD.......: BabelStoneHanBasic
 2F8DE.......: UnicodiaHan
@@ -27368,19 +27354,21 @@ FFFD......: NotoSerif-Regular
 2F8F8, 2F8F9: UnicodiaHan
 2F8FA..2F8FC: BabelStoneHanBasic
 2F8FD, 2F8FE: UnicodiaHan
-2F8FF..2F901: BabelStoneHanBasic
+2F8FF.......: BabelStoneHanBasic
+2F900.......: UnicodiaHan
+2F901.......: BabelStoneHanBasic
 2F902.......: UnicodiaHan
 2F903, 2F904: BabelStoneHanBasic
 2F905, 2F906: UnicodiaHan
 2F907, 2F908: BabelStoneHanBasic
-2F909.......: UnicodiaHan
-2F90A..2F90D: BabelStoneHanBasic
+2F909, 2F90A: UnicodiaHan
+2F90B..2F90D: BabelStoneHanBasic
 2F90E.......: UnicodiaHan
 2F90F..2F917: BabelStoneHanBasic
 2F918.......: UnicodiaHan
 2F919.......: BabelStoneHanBasic
-2F91A.......: UnicodiaHan
-2F91B, 2F91C: BabelStoneHanBasic
+2F91A, 2F91B: UnicodiaHan
+2F91C.......: BabelStoneHanBasic
 2F91D.......: UnicodiaHan
 2F91E..2F926: BabelStoneHanBasic
 2F927.......: UnicodiaHan
@@ -27396,8 +27384,8 @@ FFFD......: NotoSerif-Regular
 2F940.......: UnicodiaHan
 2F941.......: BabelStoneHanBasic
 2F942, 2F943: UnicodiaHan
-2F944, 2F945: BabelStoneHanBasic
-2F946..2F949: UnicodiaHan
+2F944.......: BabelStoneHanBasic
+2F945..2F949: UnicodiaHan
 2F94A.......: BabelStoneHanBasic
 2F94B.......: UnicodiaHan
 2F94C..2F955: BabelStoneHanBasic
@@ -27414,7 +27402,9 @@ FFFD......: NotoSerif-Regular
 2F975.......: UnicodiaHan
 2F976..2F97B: BabelStoneHanBasic
 2F97C.......: UnicodiaHan
-2F97D..2F97F: BabelStoneHanBasic
+2F97D.......: BabelStoneHanBasic
+2F97E.......: UnicodiaHan
+2F97F.......: BabelStoneHanBasic
 2F980.......: UnicodiaHan
 2F981.......: BabelStoneHanBasic
 2F982.......: UnicodiaHan
@@ -27426,8 +27416,8 @@ FFFD......: NotoSerif-Regular
 2F98F, 2F990: UnicodiaHan
 2F991.......: BabelStoneHanBasic
 2F992..2F994: UnicodiaHan
-2F995..2F997: BabelStoneHanBasic
-2F998.......: UnicodiaHan
+2F995, 2F996: BabelStoneHanBasic
+2F997, 2F998: UnicodiaHan
 2F999.......: BabelStoneHanBasic
 2F99A.......: UnicodiaHan
 2F99B..2F99E: BabelStoneHanBasic
@@ -27442,7 +27432,9 @@ FFFD......: NotoSerif-Regular
 2F9AB, 2F9AC: UnicodiaHan
 2F9AD..2F9B1: BabelStoneHanBasic
 2F9B2.......: UnicodiaHan
-2F9B3..2F9B5: BabelStoneHanBasic
+2F9B3.......: BabelStoneHanBasic
+2F9B4.......: UnicodiaHan
+2F9B5.......: BabelStoneHanBasic
 2F9B6.......: UnicodiaHan
 2F9B7..2F9BB: BabelStoneHanBasic
 2F9BC..2F9BE: UnicodiaHan
@@ -27451,8 +27443,8 @@ FFFD......: NotoSerif-Regular
 2F9CA.......: BabelStoneHanBasic
 2F9CB, 2F9CC: UnicodiaHan
 2F9CD..2F9D3: BabelStoneHanBasic
-2F9D4..2F9D6: UnicodiaHan
-2F9D7..2F9DC: BabelStoneHanBasic
+2F9D4..2F9D7: UnicodiaHan
+2F9D8..2F9DC: BabelStoneHanBasic
 2F9DD.......: UnicodiaHan
 2F9DE..2F9E3: BabelStoneHanBasic
 2F9E4.......: UnicodiaHan
@@ -27466,7 +27458,9 @@ FFFD......: NotoSerif-Regular
 2FA02.......: UnicodiaHan
 2FA03..2FA07: BabelStoneHanBasic
 2FA08.......: UnicodiaHan
-2FA09..2FA14: BabelStoneHanBasic
+2FA09..2FA11: BabelStoneHanBasic
+2FA12.......: UnicodiaHan
+2FA13, 2FA14: BabelStoneHanBasic
 2FA15.......: UnicodiaHan
 2FA16, 2FA17: BabelStoneHanBasic
 2FA18..2FA1B: UnicodiaHan
@@ -30628,1721 +30622,1721 @@ FFFD......: NotoSerif-Regular
 323BA..323BD: BabelStoneHanExtra
 323BE.......: UnicodiaHan
 323BF, 323C0: BabelStoneHanExtra
-323C1, 323C2: PlangothicP2-Regular
+323C1, 323C2: UnicodiaHan
 323C3.......: BabelStoneHanExtra
-323C4, 323C5: PlangothicP2-Regular
+323C4, 323C5: UnicodiaHan
 323C6.......: BabelStoneHanExtra
-323C7..323C9: PlangothicP2-Regular
+323C7..323C9: UnicodiaHan
 323CA.......: BabelStoneHanExtra
-323CB.......: PlangothicP2-Regular
+323CB.......: UnicodiaHan
 323CC.......: BabelStoneHanExtra
-323CD..323D0: PlangothicP2-Regular
+323CD..323D0: UnicodiaHan
 323D1..323D3: BabelStoneHanExtra
-323D4..323DA: PlangothicP2-Regular
+323D4..323DA: UnicodiaHan
 323DB.......: BabelStoneHanExtra
-323DC..323E2: PlangothicP2-Regular
+323DC..323E2: UnicodiaHan
 323E3.......: BabelStoneHanExtra
-323E4..32401: PlangothicP2-Regular
+323E4..32401: UnicodiaHan
 32402..32405: BabelStoneHanExtra
-32406.......: PlangothicP2-Regular
+32406.......: UnicodiaHan
 32407..3240A: BabelStoneHanExtra
-3240B..3240E: PlangothicP2-Regular
+3240B..3240E: UnicodiaHan
 3240F, 32410: BabelStoneHanExtra
-32411.......: PlangothicP2-Regular
+32411.......: UnicodiaHan
 32412, 32413: BabelStoneHanExtra
-32414.......: PlangothicP2-Regular
+32414.......: UnicodiaHan
 32415.......: BabelStoneHanExtra
-32416..32418: PlangothicP2-Regular
+32416..32418: UnicodiaHan
 32419.......: BabelStoneHanExtra
-3241A..3241C: PlangothicP2-Regular
+3241A..3241C: UnicodiaHan
 3241D, 3241E: BabelStoneHanExtra
-3241F.......: PlangothicP2-Regular
+3241F.......: UnicodiaHan
 32420, 32421: BabelStoneHanExtra
-32422.......: PlangothicP2-Regular
+32422.......: UnicodiaHan
 32423.......: BabelStoneHanExtra
-32424.......: PlangothicP2-Regular
+32424.......: UnicodiaHan
 32425, 32426: BabelStoneHanExtra
-32427..32429: PlangothicP2-Regular
+32427..32429: UnicodiaHan
 3242A, 3242B: BabelStoneHanExtra
-3242C..32431: PlangothicP2-Regular
+3242C..32431: UnicodiaHan
 32432..32434: BabelStoneHanExtra
-32435..32437: PlangothicP2-Regular
+32435..32437: UnicodiaHan
 32438, 32439: BabelStoneHanExtra
-3243A.......: PlangothicP2-Regular
+3243A.......: UnicodiaHan
 3243B.......: BabelStoneHanExtra
-3243C..3243F: PlangothicP2-Regular
+3243C..3243F: UnicodiaHan
 32440.......: BabelStoneHanExtra
-32441..32447: PlangothicP2-Regular
+32441..32447: UnicodiaHan
 32448.......: BabelStoneHanExtra
-32449..3244B: PlangothicP2-Regular
+32449..3244B: UnicodiaHan
 3244C.......: BabelStoneHanExtra
-3244D, 3244E: PlangothicP2-Regular
+3244D, 3244E: UnicodiaHan
 3244F.......: BabelStoneHanExtra
-32450.......: PlangothicP2-Regular
+32450.......: UnicodiaHan
 32451.......: BabelStoneHanExtra
-32452.......: PlangothicP2-Regular
+32452.......: UnicodiaHan
 32453.......: BabelStoneHanExtra
-32454.......: PlangothicP2-Regular
+32454.......: UnicodiaHan
 32455.......: BabelStoneHanExtra
-32456.......: PlangothicP2-Regular
+32456.......: UnicodiaHan
 32457.......: BabelStoneHanExtra
-32458, 32459: PlangothicP2-Regular
+32458, 32459: UnicodiaHan
 3245A..3245C: BabelStoneHanExtra
-3245D..32464: PlangothicP2-Regular
+3245D..32464: UnicodiaHan
 32465, 32466: BabelStoneHanExtra
-32467..32469: PlangothicP2-Regular
+32467..32469: UnicodiaHan
 3246A, 3246B: BabelStoneHanExtra
-3246C, 3246D: PlangothicP2-Regular
+3246C, 3246D: UnicodiaHan
 3246E.......: BabelStoneHanExtra
-3246F.......: PlangothicP2-Regular
+3246F.......: UnicodiaHan
 32470..32472: BabelStoneHanExtra
-32473..32476: PlangothicP2-Regular
+32473..32476: UnicodiaHan
 32477, 32478: BabelStoneHanExtra
-32479..3247B: PlangothicP2-Regular
+32479..3247B: UnicodiaHan
 3247C..3247E: BabelStoneHanExtra
-3247F..32484: PlangothicP2-Regular
+3247F..32484: UnicodiaHan
 32485..32487: BabelStoneHanExtra
-32488.......: PlangothicP2-Regular
+32488.......: UnicodiaHan
 32489.......: BabelStoneHanExtra
-3248A.......: PlangothicP2-Regular
+3248A.......: UnicodiaHan
 3248B.......: BabelStoneHanExtra
-3248C, 3248D: PlangothicP2-Regular
+3248C, 3248D: UnicodiaHan
 3248E, 3248F: BabelStoneHanExtra
-32490..32494: PlangothicP2-Regular
+32490..32494: UnicodiaHan
 32495..32497: BabelStoneHanExtra
-32498..3249D: PlangothicP2-Regular
+32498..3249D: UnicodiaHan
 3249E.......: BabelStoneHanExtra
-3249F, 324A0: PlangothicP2-Regular
+3249F, 324A0: UnicodiaHan
 324A1.......: BabelStoneHanExtra
-324A2..324A4: PlangothicP2-Regular
+324A2..324A4: UnicodiaHan
 324A5..324A7: BabelStoneHanExtra
-324A8..324AA: PlangothicP2-Regular
+324A8..324AA: UnicodiaHan
 324AB, 324AC: BabelStoneHanExtra
-324AD, 324AE: PlangothicP2-Regular
+324AD, 324AE: UnicodiaHan
 324AF.......: BabelStoneHanExtra
-324B0, 324B1: PlangothicP2-Regular
+324B0, 324B1: UnicodiaHan
 324B2..324B4: BabelStoneHanExtra
-324B5, 324B6: PlangothicP2-Regular
+324B5, 324B6: UnicodiaHan
 324B7.......: BabelStoneHanExtra
-324B8..324BC: PlangothicP2-Regular
+324B8..324BC: UnicodiaHan
 324BD.......: BabelStoneHanExtra
-324BE..324C1: PlangothicP2-Regular
+324BE..324C1: UnicodiaHan
 324C2..324C4: BabelStoneHanExtra
-324C5..324C9: PlangothicP2-Regular
+324C5..324C9: UnicodiaHan
 324CA.......: BabelStoneHanExtra
-324CB.......: PlangothicP2-Regular
+324CB.......: UnicodiaHan
 324CC.......: BabelStoneHanExtra
-324CD, 324CE: PlangothicP2-Regular
+324CD, 324CE: UnicodiaHan
 324CF..324D2: BabelStoneHanExtra
-324D3, 324D4: PlangothicP2-Regular
+324D3, 324D4: UnicodiaHan
 324D5, 324D6: BabelStoneHanExtra
-324D7..324D9: PlangothicP2-Regular
+324D7..324D9: UnicodiaHan
 324DA.......: BabelStoneHanExtra
-324DB.......: PlangothicP2-Regular
+324DB.......: UnicodiaHan
 324DC..324DF: BabelStoneHanExtra
-324E0.......: PlangothicP2-Regular
+324E0.......: UnicodiaHan
 324E1..324E3: BabelStoneHanExtra
-324E4, 324E5: PlangothicP2-Regular
+324E4, 324E5: UnicodiaHan
 324E6, 324E7: BabelStoneHanExtra
-324E8..324F1: PlangothicP2-Regular
+324E8..324F1: UnicodiaHan
 324F2.......: BabelStoneHanExtra
-324F3..324F8: PlangothicP2-Regular
+324F3..324F8: UnicodiaHan
 324F9, 324FA: BabelStoneHanExtra
-324FB..324FF: PlangothicP2-Regular
+324FB..324FF: UnicodiaHan
 32500, 32501: BabelStoneHanExtra
-32502.......: PlangothicP2-Regular
+32502.......: UnicodiaHan
 32503.......: BabelStoneHanExtra
-32504, 32505: PlangothicP2-Regular
+32504, 32505: UnicodiaHan
 32506.......: BabelStoneHanExtra
-32507..3250D: PlangothicP2-Regular
+32507..3250D: UnicodiaHan
 3250E..32510: BabelStoneHanExtra
-32511.......: PlangothicP2-Regular
+32511.......: UnicodiaHan
 32512..32514: BabelStoneHanExtra
-32515.......: PlangothicP2-Regular
+32515.......: UnicodiaHan
 32516.......: BabelStoneHanExtra
-32517, 32518: PlangothicP2-Regular
+32517, 32518: UnicodiaHan
 32519..3251D: BabelStoneHanExtra
-3251E.......: PlangothicP2-Regular
+3251E.......: UnicodiaHan
 3251F, 32520: BabelStoneHanExtra
-32521, 32522: PlangothicP2-Regular
+32521, 32522: UnicodiaHan
 32523, 32524: BabelStoneHanExtra
-32525.......: PlangothicP2-Regular
+32525.......: UnicodiaHan
 32526.......: BabelStoneHanExtra
-32527, 32528: PlangothicP2-Regular
+32527, 32528: UnicodiaHan
 32529.......: BabelStoneHanExtra
-3252A.......: PlangothicP2-Regular
+3252A.......: UnicodiaHan
 3252B.......: BabelStoneHanExtra
-3252C, 3252D: PlangothicP2-Regular
+3252C, 3252D: UnicodiaHan
 3252E, 3252F: BabelStoneHanExtra
-32530, 32531: PlangothicP2-Regular
+32530, 32531: UnicodiaHan
 32532.......: BabelStoneHanExtra
-32533.......: PlangothicP2-Regular
+32533.......: UnicodiaHan
 32534, 32535: BabelStoneHanExtra
-32536, 32537: PlangothicP2-Regular
+32536, 32537: UnicodiaHan
 32538.......: BabelStoneHanExtra
-32539, 3253A: PlangothicP2-Regular
+32539, 3253A: UnicodiaHan
 3253B.......: BabelStoneHanExtra
-3253C.......: PlangothicP2-Regular
+3253C.......: UnicodiaHan
 3253D..3253F: BabelStoneHanExtra
-32540..32542: PlangothicP2-Regular
+32540..32542: UnicodiaHan
 32543..32545: BabelStoneHanExtra
-32546..3254A: PlangothicP2-Regular
+32546..3254A: UnicodiaHan
 3254B..32551: BabelStoneHanExtra
-32552.......: PlangothicP2-Regular
+32552.......: UnicodiaHan
 32553.......: BabelStoneHanExtra
-32554.......: PlangothicP2-Regular
+32554.......: UnicodiaHan
 32555.......: BabelStoneHanExtra
-32556..32559: PlangothicP2-Regular
+32556..32559: UnicodiaHan
 3255A..3255C: BabelStoneHanExtra
-3255D..3255F: PlangothicP2-Regular
+3255D..3255F: UnicodiaHan
 32560..32564: BabelStoneHanExtra
-32565..32568: PlangothicP2-Regular
+32565..32568: UnicodiaHan
 32569.......: BabelStoneHanExtra
-3256A.......: PlangothicP2-Regular
+3256A.......: UnicodiaHan
 3256B..3256E: BabelStoneHanExtra
-3256F, 32570: PlangothicP2-Regular
+3256F, 32570: UnicodiaHan
 32571.......: BabelStoneHanExtra
-32572, 32573: PlangothicP2-Regular
+32572, 32573: UnicodiaHan
 32574..32578: BabelStoneHanExtra
-32579.......: PlangothicP2-Regular
+32579.......: UnicodiaHan
 3257A..3257D: BabelStoneHanExtra
-3257E.......: PlangothicP2-Regular
+3257E.......: UnicodiaHan
 3257F..32583: BabelStoneHanExtra
-32584, 32585: PlangothicP2-Regular
+32584, 32585: UnicodiaHan
 32586..3258C: BabelStoneHanExtra
-3258D.......: PlangothicP2-Regular
+3258D.......: UnicodiaHan
 3258E, 3258F: BabelStoneHanExtra
-32590.......: PlangothicP2-Regular
+32590.......: UnicodiaHan
 32591..32594: BabelStoneHanExtra
-32595, 32596: PlangothicP2-Regular
+32595, 32596: UnicodiaHan
 32597..3259D: BabelStoneHanExtra
-3259E.......: PlangothicP2-Regular
+3259E.......: UnicodiaHan
 3259F, 325A0: BabelStoneHanExtra
-325A1.......: PlangothicP2-Regular
+325A1.......: UnicodiaHan
 325A2..325A4: BabelStoneHanExtra
-325A5..325A7: PlangothicP2-Regular
+325A5..325A7: UnicodiaHan
 325A8..325AA: BabelStoneHanExtra
-325AB.......: PlangothicP2-Regular
+325AB.......: UnicodiaHan
 325AC..325AE: BabelStoneHanExtra
-325AF..325B1: PlangothicP2-Regular
+325AF..325B1: UnicodiaHan
 325B2, 325B3: BabelStoneHanExtra
-325B4..325B7: PlangothicP2-Regular
+325B4..325B7: UnicodiaHan
 325B8, 325B9: BabelStoneHanExtra
-325BA.......: PlangothicP2-Regular
+325BA.......: UnicodiaHan
 325BB, 325BC: BabelStoneHanExtra
-325BD, 325BE: PlangothicP2-Regular
+325BD, 325BE: UnicodiaHan
 325BF.......: BabelStoneHanExtra
-325C0.......: PlangothicP2-Regular
+325C0.......: UnicodiaHan
 325C1..325C5: BabelStoneHanExtra
-325C6.......: PlangothicP2-Regular
+325C6.......: UnicodiaHan
 325C7.......: BabelStoneHanExtra
-325C8..325CB: PlangothicP2-Regular
+325C8..325CB: UnicodiaHan
 325CC..325CF: BabelStoneHanExtra
-325D0, 325D1: PlangothicP2-Regular
+325D0, 325D1: UnicodiaHan
 325D2..325D4: BabelStoneHanExtra
-325D5.......: PlangothicP2-Regular
+325D5.......: UnicodiaHan
 325D6..325DA: BabelStoneHanExtra
-325DB..325DE: PlangothicP2-Regular
+325DB..325DE: UnicodiaHan
 325DF, 325E0: BabelStoneHanExtra
-325E1..325E3: PlangothicP2-Regular
+325E1..325E3: UnicodiaHan
 325E4.......: BabelStoneHanExtra
-325E5, 325E6: PlangothicP2-Regular
+325E5, 325E6: UnicodiaHan
 325E7.......: BabelStoneHanExtra
-325E8.......: PlangothicP2-Regular
+325E8.......: UnicodiaHan
 325E9..325EB: BabelStoneHanExtra
-325EC..325EE: PlangothicP2-Regular
+325EC..325EE: UnicodiaHan
 325EF.......: BabelStoneHanExtra
-325F0.......: PlangothicP2-Regular
+325F0.......: UnicodiaHan
 325F1, 325F2: BabelStoneHanExtra
-325F3.......: PlangothicP2-Regular
+325F3.......: UnicodiaHan
 325F4, 325F5: BabelStoneHanExtra
-325F6.......: PlangothicP2-Regular
+325F6.......: UnicodiaHan
 325F7, 325F8: BabelStoneHanExtra
-325F9, 325FA: PlangothicP2-Regular
+325F9, 325FA: UnicodiaHan
 325FB, 325FC: BabelStoneHanExtra
-325FD.......: PlangothicP2-Regular
+325FD.......: UnicodiaHan
 325FE, 325FF: BabelStoneHanExtra
-32600.......: PlangothicP2-Regular
+32600.......: UnicodiaHan
 32601.......: BabelStoneHanExtra
-32602.......: PlangothicP2-Regular
+32602.......: UnicodiaHan
 32603.......: BabelStoneHanExtra
-32604, 32605: PlangothicP2-Regular
+32604, 32605: UnicodiaHan
 32606..3260A: BabelStoneHanExtra
-3260B..3260E: PlangothicP2-Regular
+3260B..3260E: UnicodiaHan
 3260F.......: BabelStoneHanExtra
-32610..32612: PlangothicP2-Regular
+32610..32612: UnicodiaHan
 32613..32615: BabelStoneHanExtra
-32616.......: PlangothicP2-Regular
+32616.......: UnicodiaHan
 32617..32620: BabelStoneHanExtra
-32621.......: PlangothicP2-Regular
+32621.......: UnicodiaHan
 32622..3262D: BabelStoneHanExtra
-3262E, 3262F: PlangothicP2-Regular
+3262E, 3262F: UnicodiaHan
 32630..32638: BabelStoneHanExtra
-32639, 3263A: PlangothicP2-Regular
+32639, 3263A: UnicodiaHan
 3263B, 3263C: BabelStoneHanExtra
-3263D.......: PlangothicP2-Regular
+3263D.......: UnicodiaHan
 3263E..32641: BabelStoneHanExtra
-32642, 32643: PlangothicP2-Regular
+32642, 32643: UnicodiaHan
 32644..32647: BabelStoneHanExtra
-32648.......: PlangothicP2-Regular
+32648.......: UnicodiaHan
 32649..32654: BabelStoneHanExtra
-32655.......: PlangothicP2-Regular
+32655.......: UnicodiaHan
 32656, 32657: BabelStoneHanExtra
-32658, 32659: PlangothicP2-Regular
+32658, 32659: UnicodiaHan
 3265A, 3265B: BabelStoneHanExtra
-3265C.......: PlangothicP2-Regular
+3265C.......: UnicodiaHan
 3265D..32660: BabelStoneHanExtra
-32661.......: PlangothicP2-Regular
+32661.......: UnicodiaHan
 32662..32669: BabelStoneHanExtra
-3266A.......: PlangothicP2-Regular
+3266A.......: UnicodiaHan
 3266B.......: BabelStoneHanExtra
-3266C.......: PlangothicP2-Regular
+3266C.......: UnicodiaHan
 3266D.......: BabelStoneHanExtra
-3266E.......: PlangothicP2-Regular
+3266E.......: UnicodiaHan
 3266F.......: BabelStoneHanExtra
-32670, 32671: PlangothicP2-Regular
+32670, 32671: UnicodiaHan
 32672.......: BabelStoneHanExtra
-32673.......: PlangothicP2-Regular
+32673.......: UnicodiaHan
 32674.......: BabelStoneHanExtra
-32675, 32676: PlangothicP2-Regular
+32675, 32676: UnicodiaHan
 32677, 32678: BabelStoneHanExtra
-32679.......: PlangothicP2-Regular
+32679.......: UnicodiaHan
 3267A..3267E: BabelStoneHanExtra
-3267F, 32680: PlangothicP2-Regular
+3267F, 32680: UnicodiaHan
 32681.......: BabelStoneHanExtra
-32682.......: PlangothicP2-Regular
+32682.......: UnicodiaHan
 32683.......: BabelStoneHanExtra
-32684, 32685: PlangothicP2-Regular
+32684, 32685: UnicodiaHan
 32686..3268A: BabelStoneHanExtra
-3268B, 3268C: PlangothicP2-Regular
+3268B, 3268C: UnicodiaHan
 3268D.......: BabelStoneHanExtra
-3268E.......: PlangothicP2-Regular
+3268E.......: UnicodiaHan
 3268F.......: BabelStoneHanExtra
-32690, 32691: PlangothicP2-Regular
+32690, 32691: UnicodiaHan
 32692.......: BabelStoneHanExtra
-32693.......: PlangothicP2-Regular
+32693.......: UnicodiaHan
 32694, 32695: BabelStoneHanExtra
-32696, 32697: PlangothicP2-Regular
+32696, 32697: UnicodiaHan
 32698.......: BabelStoneHanExtra
-32699.......: PlangothicP2-Regular
+32699.......: UnicodiaHan
 3269A.......: BabelStoneHanExtra
-3269B..3269D: PlangothicP2-Regular
+3269B..3269D: UnicodiaHan
 3269E.......: BabelStoneHanExtra
-3269F..326A5: PlangothicP2-Regular
+3269F..326A5: UnicodiaHan
 326A6, 326A7: BabelStoneHanExtra
-326A8.......: PlangothicP2-Regular
+326A8.......: UnicodiaHan
 326A9.......: BabelStoneHanExtra
-326AA.......: PlangothicP2-Regular
+326AA.......: UnicodiaHan
 326AB, 326AC: BabelStoneHanExtra
-326AD, 326AE: PlangothicP2-Regular
+326AD, 326AE: UnicodiaHan
 326AF.......: BabelStoneHanExtra
-326B0..326B3: PlangothicP2-Regular
+326B0..326B3: UnicodiaHan
 326B4..326B6: BabelStoneHanExtra
-326B7, 326B8: PlangothicP2-Regular
+326B7, 326B8: UnicodiaHan
 326B9.......: BabelStoneHanExtra
-326BA..326BC: PlangothicP2-Regular
+326BA..326BC: UnicodiaHan
 326BD..326C1: BabelStoneHanExtra
-326C2.......: PlangothicP2-Regular
+326C2.......: UnicodiaHan
 326C3.......: BabelStoneHanExtra
-326C4..326C8: PlangothicP2-Regular
+326C4..326C8: UnicodiaHan
 326C9.......: BabelStoneHanExtra
-326CA.......: PlangothicP2-Regular
+326CA.......: UnicodiaHan
 326CB, 326CC: BabelStoneHanExtra
-326CD.......: PlangothicP2-Regular
+326CD.......: UnicodiaHan
 326CE, 326CF: BabelStoneHanExtra
-326D0..326D3: PlangothicP2-Regular
+326D0..326D3: UnicodiaHan
 326D4.......: BabelStoneHanExtra
-326D5..326D9: PlangothicP2-Regular
+326D5..326D9: UnicodiaHan
 326DA, 326DB: BabelStoneHanExtra
-326DC..326DE: PlangothicP2-Regular
+326DC..326DE: UnicodiaHan
 326DF.......: BabelStoneHanExtra
-326E0.......: PlangothicP2-Regular
+326E0.......: UnicodiaHan
 326E1, 326E2: BabelStoneHanExtra
-326E3, 326E4: PlangothicP2-Regular
+326E3, 326E4: UnicodiaHan
 326E5.......: BabelStoneHanExtra
-326E6.......: PlangothicP2-Regular
+326E6.......: UnicodiaHan
 326E7.......: BabelStoneHanExtra
-326E8, 326E9: PlangothicP2-Regular
+326E8, 326E9: UnicodiaHan
 326EA.......: BabelStoneHanExtra
-326EB..326ED: PlangothicP2-Regular
+326EB..326ED: UnicodiaHan
 326EE.......: BabelStoneHanExtra
-326EF.......: PlangothicP2-Regular
+326EF.......: UnicodiaHan
 326F0.......: BabelStoneHanExtra
-326F1..326F4: PlangothicP2-Regular
+326F1..326F4: UnicodiaHan
 326F5.......: BabelStoneHanExtra
-326F6..326F9: PlangothicP2-Regular
+326F6..326F9: UnicodiaHan
 326FA..326FC: BabelStoneHanExtra
-326FD..326FF: PlangothicP2-Regular
+326FD..326FF: UnicodiaHan
 32700, 32701: BabelStoneHanExtra
-32702..32704: PlangothicP2-Regular
+32702..32704: UnicodiaHan
 32705.......: BabelStoneHanExtra
-32706, 32707: PlangothicP2-Regular
+32706, 32707: UnicodiaHan
 32708..3270B: BabelStoneHanExtra
-3270C..32713: PlangothicP2-Regular
+3270C..32713: UnicodiaHan
 32714.......: BabelStoneHanExtra
-32715.......: PlangothicP2-Regular
+32715.......: UnicodiaHan
 32716.......: BabelStoneHanExtra
-32717.......: PlangothicP2-Regular
+32717.......: UnicodiaHan
 32718..3271A: BabelStoneHanExtra
-3271B..32725: PlangothicP2-Regular
+3271B..32725: UnicodiaHan
 32726.......: BabelStoneHanExtra
-32727..3272E: PlangothicP2-Regular
+32727..3272E: UnicodiaHan
 3272F.......: BabelStoneHanExtra
-32730..32732: PlangothicP2-Regular
+32730..32732: UnicodiaHan
 32733.......: BabelStoneHanExtra
-32734.......: PlangothicP2-Regular
+32734.......: UnicodiaHan
 32735, 32736: BabelStoneHanExtra
-32737..3273A: PlangothicP2-Regular
+32737..3273A: UnicodiaHan
 3273B.......: BabelStoneHanExtra
-3273C.......: PlangothicP2-Regular
+3273C.......: UnicodiaHan
 3273D..3273F: BabelStoneHanExtra
-32740..32742: PlangothicP2-Regular
+32740..32742: UnicodiaHan
 32743..32750: BabelStoneHanExtra
-32751.......: PlangothicP2-Regular
+32751.......: UnicodiaHan
 32752..32755: BabelStoneHanExtra
-32756.......: PlangothicP2-Regular
+32756.......: UnicodiaHan
 32757, 32758: BabelStoneHanExtra
-32759.......: PlangothicP2-Regular
+32759.......: UnicodiaHan
 3275A, 3275B: BabelStoneHanExtra
-3275C.......: PlangothicP2-Regular
+3275C.......: UnicodiaHan
 3275D.......: BabelStoneHanExtra
-3275E, 3275F: PlangothicP2-Regular
+3275E, 3275F: UnicodiaHan
 32760, 32761: BabelStoneHanExtra
-32762..32764: PlangothicP2-Regular
+32762..32764: UnicodiaHan
 32765.......: BabelStoneHanExtra
-32766.......: PlangothicP2-Regular
+32766.......: UnicodiaHan
 32767..3276C: BabelStoneHanExtra
-3276D.......: PlangothicP2-Regular
+3276D.......: UnicodiaHan
 3276E, 3276F: BabelStoneHanExtra
-32770.......: PlangothicP2-Regular
+32770.......: UnicodiaHan
 32771..32776: BabelStoneHanExtra
-32777.......: PlangothicP2-Regular
+32777.......: UnicodiaHan
 32778..3277C: BabelStoneHanExtra
-3277D..3277F: PlangothicP2-Regular
+3277D..3277F: UnicodiaHan
 32780, 32781: BabelStoneHanExtra
-32782.......: PlangothicP2-Regular
+32782.......: UnicodiaHan
 32783, 32784: BabelStoneHanExtra
-32785.......: PlangothicP2-Regular
+32785.......: UnicodiaHan
 32786.......: BabelStoneHanExtra
-32787.......: PlangothicP2-Regular
+32787.......: UnicodiaHan
 32788..3278B: BabelStoneHanExtra
-3278C..3278F: PlangothicP2-Regular
+3278C..3278F: UnicodiaHan
 32790.......: BabelStoneHanExtra
-32791..32794: PlangothicP2-Regular
+32791..32794: UnicodiaHan
 32795..32797: BabelStoneHanExtra
-32798, 32799: PlangothicP2-Regular
+32798, 32799: UnicodiaHan
 3279A, 3279B: BabelStoneHanExtra
-3279C.......: PlangothicP2-Regular
+3279C.......: UnicodiaHan
 3279D..327A0: BabelStoneHanExtra
-327A1..327A8: PlangothicP2-Regular
+327A1..327A8: UnicodiaHan
 327A9.......: BabelStoneHanExtra
-327AA..327AD: PlangothicP2-Regular
+327AA..327AD: UnicodiaHan
 327AE, 327AF: BabelStoneHanExtra
-327B0, 327B1: PlangothicP2-Regular
+327B0, 327B1: UnicodiaHan
 327B2.......: BabelStoneHanExtra
-327B3, 327B4: PlangothicP2-Regular
+327B3, 327B4: UnicodiaHan
 327B5.......: BabelStoneHanExtra
-327B6, 327B7: PlangothicP2-Regular
+327B6, 327B7: UnicodiaHan
 327B8.......: BabelStoneHanExtra
-327B9.......: PlangothicP2-Regular
+327B9.......: UnicodiaHan
 327BA, 327BB: BabelStoneHanExtra
-327BC..327BF: PlangothicP2-Regular
+327BC..327BF: UnicodiaHan
 327C0, 327C1: BabelStoneHanExtra
-327C2.......: PlangothicP2-Regular
+327C2.......: UnicodiaHan
 327C3.......: BabelStoneHanExtra
-327C4.......: PlangothicP2-Regular
+327C4.......: UnicodiaHan
 327C5, 327C6: BabelStoneHanExtra
-327C7..327C9: PlangothicP2-Regular
+327C7..327C9: UnicodiaHan
 327CA.......: BabelStoneHanExtra
-327CB, 327CC: PlangothicP2-Regular
+327CB, 327CC: UnicodiaHan
 327CD.......: BabelStoneHanExtra
-327CE..327D2: PlangothicP2-Regular
+327CE..327D2: UnicodiaHan
 327D3.......: BabelStoneHanExtra
-327D4..327D8: PlangothicP2-Regular
+327D4..327D8: UnicodiaHan
 327D9.......: BabelStoneHanExtra
-327DA.......: PlangothicP2-Regular
+327DA.......: UnicodiaHan
 327DB.......: BabelStoneHanExtra
-327DC..327E0: PlangothicP2-Regular
+327DC..327E0: UnicodiaHan
 327E1..327E3: BabelStoneHanExtra
-327E4.......: PlangothicP2-Regular
+327E4.......: UnicodiaHan
 327E5..327E7: BabelStoneHanExtra
-327E8..327F0: PlangothicP2-Regular
+327E8..327F0: UnicodiaHan
 327F1.......: BabelStoneHanExtra
-327F2.......: PlangothicP2-Regular
+327F2.......: UnicodiaHan
 327F3.......: BabelStoneHanExtra
-327F4.......: PlangothicP2-Regular
+327F4.......: UnicodiaHan
 327F5, 327F6: BabelStoneHanExtra
-327F7, 327F8: PlangothicP2-Regular
+327F7, 327F8: UnicodiaHan
 327F9.......: BabelStoneHanExtra
-327FA..327FC: PlangothicP2-Regular
+327FA..327FC: UnicodiaHan
 327FD..32801: BabelStoneHanExtra
-32802.......: PlangothicP2-Regular
+32802.......: UnicodiaHan
 32803.......: BabelStoneHanExtra
-32804.......: PlangothicP2-Regular
+32804.......: UnicodiaHan
 32805.......: BabelStoneHanExtra
-32806.......: PlangothicP2-Regular
+32806.......: UnicodiaHan
 32807.......: BabelStoneHanExtra
-32808..3280C: PlangothicP2-Regular
+32808..3280C: UnicodiaHan
 3280D.......: BabelStoneHanExtra
-3280E..32812: PlangothicP2-Regular
+3280E..32812: UnicodiaHan
 32813, 32814: BabelStoneHanExtra
-32815, 32816: PlangothicP2-Regular
+32815, 32816: UnicodiaHan
 32817.......: BabelStoneHanExtra
-32818..3281C: PlangothicP2-Regular
+32818..3281C: UnicodiaHan
 3281D.......: BabelStoneHanExtra
-3281E..32820: PlangothicP2-Regular
+3281E..32820: UnicodiaHan
 32821.......: BabelStoneHanExtra
-32822, 32823: PlangothicP2-Regular
+32822, 32823: UnicodiaHan
 32824, 32825: BabelStoneHanExtra
-32826, 32827: PlangothicP2-Regular
+32826, 32827: UnicodiaHan
 32828.......: BabelStoneHanExtra
-32829, 3282A: PlangothicP2-Regular
+32829, 3282A: UnicodiaHan
 3282B, 3282C: BabelStoneHanExtra
-3282D..3282F: PlangothicP2-Regular
+3282D..3282F: UnicodiaHan
 32830..32832: BabelStoneHanExtra
-32833.......: PlangothicP2-Regular
+32833.......: UnicodiaHan
 32834.......: BabelStoneHanExtra
-32835..3283E: PlangothicP2-Regular
+32835..3283E: UnicodiaHan
 3283F.......: BabelStoneHanExtra
-32840, 32841: PlangothicP2-Regular
+32840, 32841: UnicodiaHan
 32842.......: BabelStoneHanExtra
-32843.......: PlangothicP2-Regular
+32843.......: UnicodiaHan
 32844.......: BabelStoneHanExtra
-32845..32848: PlangothicP2-Regular
+32845..32848: UnicodiaHan
 32849.......: BabelStoneHanExtra
-3284A, 3284B: PlangothicP2-Regular
+3284A, 3284B: UnicodiaHan
 3284C.......: BabelStoneHanExtra
-3284D.......: PlangothicP2-Regular
+3284D.......: UnicodiaHan
 3284E, 3284F: BabelStoneHanExtra
-32850..32856: PlangothicP2-Regular
+32850..32856: UnicodiaHan
 32857.......: BabelStoneHanExtra
-32858.......: PlangothicP2-Regular
+32858.......: UnicodiaHan
 32859..32861: BabelStoneHanExtra
-32862.......: PlangothicP2-Regular
+32862.......: UnicodiaHan
 32863.......: BabelStoneHanExtra
-32864.......: PlangothicP2-Regular
+32864.......: UnicodiaHan
 32865..32868: BabelStoneHanExtra
-32869, 3286A: PlangothicP2-Regular
+32869, 3286A: UnicodiaHan
 3286B, 3286C: BabelStoneHanExtra
-3286D, 3286E: PlangothicP2-Regular
+3286D, 3286E: UnicodiaHan
 3286F, 32870: BabelStoneHanExtra
-32871..32873: PlangothicP2-Regular
+32871..32873: UnicodiaHan
 32874..32879: BabelStoneHanExtra
-3287A.......: PlangothicP2-Regular
+3287A.......: UnicodiaHan
 3287B..3287D: BabelStoneHanExtra
-3287E..32881: PlangothicP2-Regular
+3287E..32881: UnicodiaHan
 32882.......: BabelStoneHanExtra
-32883, 32884: PlangothicP2-Regular
+32883, 32884: UnicodiaHan
 32885..32887: BabelStoneHanExtra
-32888, 32889: PlangothicP2-Regular
+32888, 32889: UnicodiaHan
 3288A.......: BabelStoneHanExtra
-3288B, 3288C: PlangothicP2-Regular
+3288B, 3288C: UnicodiaHan
 3288D.......: BabelStoneHanExtra
-3288E.......: PlangothicP2-Regular
+3288E.......: UnicodiaHan
 3288F.......: BabelStoneHanExtra
-32890..32896: PlangothicP2-Regular
+32890..32896: UnicodiaHan
 32897.......: BabelStoneHanExtra
-32898..3289B: PlangothicP2-Regular
+32898..3289B: UnicodiaHan
 3289C.......: BabelStoneHanExtra
-3289D, 3289E: PlangothicP2-Regular
+3289D, 3289E: UnicodiaHan
 3289F.......: BabelStoneHanExtra
-328A0..328A5: PlangothicP2-Regular
+328A0..328A5: UnicodiaHan
 328A6, 328A7: BabelStoneHanExtra
-328A8.......: PlangothicP2-Regular
+328A8.......: UnicodiaHan
 328A9.......: BabelStoneHanExtra
-328AA.......: PlangothicP2-Regular
+328AA.......: UnicodiaHan
 328AB, 328AC: BabelStoneHanExtra
-328AD..328B3: PlangothicP2-Regular
+328AD..328B3: UnicodiaHan
 328B4.......: BabelStoneHanExtra
-328B5.......: PlangothicP2-Regular
+328B5.......: UnicodiaHan
 328B6..328B9: BabelStoneHanExtra
-328BA..328BE: PlangothicP2-Regular
+328BA..328BE: UnicodiaHan
 328BF.......: BabelStoneHanExtra
-328C0.......: PlangothicP2-Regular
+328C0.......: UnicodiaHan
 328C1.......: BabelStoneHanExtra
-328C2, 328C3: PlangothicP2-Regular
+328C2, 328C3: UnicodiaHan
 328C4.......: BabelStoneHanExtra
-328C5..328C7: PlangothicP2-Regular
+328C5..328C7: UnicodiaHan
 328C8.......: BabelStoneHanExtra
-328C9, 328CA: PlangothicP2-Regular
+328C9, 328CA: UnicodiaHan
 328CB.......: BabelStoneHanExtra
-328CC..328CE: PlangothicP2-Regular
+328CC..328CE: UnicodiaHan
 328CF.......: BabelStoneHanExtra
-328D0..328D2: PlangothicP2-Regular
+328D0..328D2: UnicodiaHan
 328D3.......: BabelStoneHanExtra
-328D4.......: PlangothicP2-Regular
+328D4.......: UnicodiaHan
 328D5.......: BabelStoneHanExtra
-328D6.......: PlangothicP2-Regular
+328D6.......: UnicodiaHan
 328D7..328DA: BabelStoneHanExtra
-328DB.......: PlangothicP2-Regular
+328DB.......: UnicodiaHan
 328DC.......: BabelStoneHanExtra
-328DD..328E3: PlangothicP2-Regular
+328DD..328E3: UnicodiaHan
 328E4.......: BabelStoneHanExtra
-328E5, 328E6: PlangothicP2-Regular
+328E5, 328E6: UnicodiaHan
 328E7.......: BabelStoneHanExtra
-328E8..328EA: PlangothicP2-Regular
+328E8..328EA: UnicodiaHan
 328EB.......: BabelStoneHanExtra
-328EC..328F5: PlangothicP2-Regular
+328EC..328F5: UnicodiaHan
 328F6, 328F7: BabelStoneHanExtra
-328F8, 328F9: PlangothicP2-Regular
+328F8, 328F9: UnicodiaHan
 328FA, 328FB: BabelStoneHanExtra
-328FC, 328FD: PlangothicP2-Regular
+328FC, 328FD: UnicodiaHan
 328FE.......: BabelStoneHanExtra
-328FF, 32900: PlangothicP2-Regular
+328FF, 32900: UnicodiaHan
 32901.......: BabelStoneHanExtra
-32902.......: PlangothicP2-Regular
+32902.......: UnicodiaHan
 32903..32905: BabelStoneHanExtra
-32906, 32907: PlangothicP2-Regular
+32906, 32907: UnicodiaHan
 32908.......: BabelStoneHanExtra
-32909.......: PlangothicP2-Regular
+32909.......: UnicodiaHan
 3290A..3290D: BabelStoneHanExtra
-3290E..32911: PlangothicP2-Regular
+3290E..32911: UnicodiaHan
 32912.......: BabelStoneHanExtra
-32913.......: PlangothicP2-Regular
+32913.......: UnicodiaHan
 32914.......: BabelStoneHanExtra
-32915, 32916: PlangothicP2-Regular
+32915, 32916: UnicodiaHan
 32917..3291A: BabelStoneHanExtra
-3291B..3291E: PlangothicP2-Regular
+3291B..3291E: UnicodiaHan
 3291F.......: BabelStoneHanExtra
-32920..32923: PlangothicP2-Regular
+32920..32923: UnicodiaHan
 32924..32928: BabelStoneHanExtra
-32929, 3292A: PlangothicP2-Regular
+32929, 3292A: UnicodiaHan
 3292B.......: BabelStoneHanExtra
-3292C..3292E: PlangothicP2-Regular
+3292C..3292E: UnicodiaHan
 3292F, 32930: BabelStoneHanExtra
-32931..32933: PlangothicP2-Regular
+32931..32933: UnicodiaHan
 32934.......: BabelStoneHanExtra
-32935.......: PlangothicP2-Regular
+32935.......: UnicodiaHan
 32936, 32937: BabelStoneHanExtra
-32938.......: PlangothicP2-Regular
+32938.......: UnicodiaHan
 32939.......: BabelStoneHanExtra
-3293A..3293F: PlangothicP2-Regular
+3293A..3293F: UnicodiaHan
 32940.......: BabelStoneHanExtra
-32941.......: PlangothicP2-Regular
+32941.......: UnicodiaHan
 32942, 32943: BabelStoneHanExtra
-32944.......: PlangothicP2-Regular
+32944.......: UnicodiaHan
 32945.......: BabelStoneHanExtra
-32946.......: PlangothicP2-Regular
+32946.......: UnicodiaHan
 32947.......: BabelStoneHanExtra
-32948.......: PlangothicP2-Regular
+32948.......: UnicodiaHan
 32949, 3294A: BabelStoneHanExtra
-3294B.......: PlangothicP2-Regular
+3294B.......: UnicodiaHan
 3294C..3294E: BabelStoneHanExtra
-3294F..32956: PlangothicP2-Regular
+3294F..32956: UnicodiaHan
 32957.......: BabelStoneHanExtra
-32958..3295A: PlangothicP2-Regular
+32958..3295A: UnicodiaHan
 3295B, 3295C: BabelStoneHanExtra
-3295D.......: PlangothicP2-Regular
+3295D.......: UnicodiaHan
 3295E.......: BabelStoneHanExtra
-3295F..32961: PlangothicP2-Regular
+3295F..32961: UnicodiaHan
 32962..32964: BabelStoneHanExtra
-32965..32968: PlangothicP2-Regular
+32965..32968: UnicodiaHan
 32969.......: BabelStoneHanExtra
-3296A..3296D: PlangothicP2-Regular
+3296A..3296D: UnicodiaHan
 3296E, 3296F: BabelStoneHanExtra
-32970.......: PlangothicP2-Regular
+32970.......: UnicodiaHan
 32971.......: BabelStoneHanExtra
-32972..32974: PlangothicP2-Regular
+32972..32974: UnicodiaHan
 32975.......: BabelStoneHanExtra
-32976..32979: PlangothicP2-Regular
+32976..32979: UnicodiaHan
 3297A.......: BabelStoneHanExtra
-3297B, 3297C: PlangothicP2-Regular
+3297B, 3297C: UnicodiaHan
 3297D.......: BabelStoneHanExtra
-3297E..32983: PlangothicP2-Regular
+3297E..32983: UnicodiaHan
 32984..3298C: BabelStoneHanExtra
-3298D, 3298E: PlangothicP2-Regular
+3298D, 3298E: UnicodiaHan
 3298F.......: BabelStoneHanExtra
-32990..32995: PlangothicP2-Regular
+32990..32995: UnicodiaHan
 32996, 32997: BabelStoneHanExtra
-32998, 32999: PlangothicP2-Regular
+32998, 32999: UnicodiaHan
 3299A.......: BabelStoneHanExtra
-3299B..3299F: PlangothicP2-Regular
+3299B..3299F: UnicodiaHan
 329A0.......: BabelStoneHanExtra
-329A1, 329A2: PlangothicP2-Regular
+329A1, 329A2: UnicodiaHan
 329A3.......: BabelStoneHanExtra
-329A4..329A6: PlangothicP2-Regular
+329A4..329A6: UnicodiaHan
 329A7.......: BabelStoneHanExtra
-329A8..329AB: PlangothicP2-Regular
+329A8..329AB: UnicodiaHan
 329AC, 329AD: BabelStoneHanExtra
-329AE..329B2: PlangothicP2-Regular
+329AE..329B2: UnicodiaHan
 329B3, 329B4: BabelStoneHanExtra
-329B5.......: PlangothicP2-Regular
+329B5.......: UnicodiaHan
 329B6.......: BabelStoneHanExtra
-329B7..329C0: PlangothicP2-Regular
+329B7..329C0: UnicodiaHan
 329C1.......: BabelStoneHanExtra
-329C2.......: PlangothicP2-Regular
+329C2.......: UnicodiaHan
 329C3.......: BabelStoneHanExtra
-329C4, 329C5: PlangothicP2-Regular
+329C4, 329C5: UnicodiaHan
 329C6, 329C7: BabelStoneHanExtra
-329C8, 329C9: PlangothicP2-Regular
+329C8, 329C9: UnicodiaHan
 329CA.......: BabelStoneHanExtra
-329CB..329CD: PlangothicP2-Regular
+329CB..329CD: UnicodiaHan
 329CE.......: BabelStoneHanExtra
-329CF, 329D0: PlangothicP2-Regular
+329CF, 329D0: UnicodiaHan
 329D1, 329D2: BabelStoneHanExtra
-329D3..329D5: PlangothicP2-Regular
+329D3..329D5: UnicodiaHan
 329D6.......: BabelStoneHanExtra
-329D7.......: PlangothicP2-Regular
+329D7.......: UnicodiaHan
 329D8.......: BabelStoneHanExtra
-329D9..329E3: PlangothicP2-Regular
+329D9..329E3: UnicodiaHan
 329E4.......: BabelStoneHanExtra
-329E5..329E8: PlangothicP2-Regular
+329E5..329E8: UnicodiaHan
 329E9, 329EA: BabelStoneHanExtra
-329EB..329F0: PlangothicP2-Regular
+329EB..329F0: UnicodiaHan
 329F1.......: BabelStoneHanExtra
-329F2..329F5: PlangothicP2-Regular
+329F2..329F5: UnicodiaHan
 329F6.......: BabelStoneHanExtra
-329F7, 329F8: PlangothicP2-Regular
+329F7, 329F8: UnicodiaHan
 329F9, 329FA: BabelStoneHanExtra
-329FB..32A04: PlangothicP2-Regular
+329FB..32A04: UnicodiaHan
 32A05, 32A06: BabelStoneHanExtra
-32A07, 32A08: PlangothicP2-Regular
+32A07, 32A08: UnicodiaHan
 32A09.......: BabelStoneHanExtra
-32A0A.......: PlangothicP2-Regular
+32A0A.......: UnicodiaHan
 32A0B, 32A0C: BabelStoneHanExtra
-32A0D, 32A0E: PlangothicP2-Regular
+32A0D, 32A0E: UnicodiaHan
 32A0F..32A11: BabelStoneHanExtra
-32A12, 32A13: PlangothicP2-Regular
+32A12, 32A13: UnicodiaHan
 32A14..32A32: BabelStoneHanExtra
-32A33.......: PlangothicP2-Regular
+32A33.......: UnicodiaHan
 32A34..32A37: BabelStoneHanExtra
-32A38.......: PlangothicP2-Regular
+32A38.......: UnicodiaHan
 32A39..32A3C: BabelStoneHanExtra
-32A3D.......: PlangothicP2-Regular
+32A3D.......: UnicodiaHan
 32A3E..32A41: BabelStoneHanExtra
-32A42, 32A43: PlangothicP2-Regular
+32A42, 32A43: UnicodiaHan
 32A44, 32A45: BabelStoneHanExtra
-32A46..32A48: PlangothicP2-Regular
+32A46..32A48: UnicodiaHan
 32A49.......: BabelStoneHanExtra
-32A4A, 32A4B: PlangothicP2-Regular
+32A4A, 32A4B: UnicodiaHan
 32A4C.......: BabelStoneHanExtra
-32A4D.......: PlangothicP2-Regular
+32A4D.......: UnicodiaHan
 32A4E, 32A4F: BabelStoneHanExtra
-32A50.......: PlangothicP2-Regular
+32A50.......: UnicodiaHan
 32A51, 32A52: BabelStoneHanExtra
-32A53, 32A54: PlangothicP2-Regular
+32A53, 32A54: UnicodiaHan
 32A55..32A57: BabelStoneHanExtra
-32A58, 32A59: PlangothicP2-Regular
+32A58, 32A59: UnicodiaHan
 32A5A.......: BabelStoneHanExtra
-32A5B..32A5E: PlangothicP2-Regular
+32A5B..32A5E: UnicodiaHan
 32A5F.......: BabelStoneHanExtra
-32A60..32A63: PlangothicP2-Regular
+32A60..32A63: UnicodiaHan
 32A64.......: BabelStoneHanExtra
-32A65..32A67: PlangothicP2-Regular
+32A65..32A67: UnicodiaHan
 32A68..32A6A: BabelStoneHanExtra
-32A6B.......: PlangothicP2-Regular
+32A6B.......: UnicodiaHan
 32A6C, 32A6D: BabelStoneHanExtra
-32A6E..32A70: PlangothicP2-Regular
+32A6E..32A70: UnicodiaHan
 32A71, 32A72: BabelStoneHanExtra
-32A73.......: PlangothicP2-Regular
+32A73.......: UnicodiaHan
 32A74..32A76: BabelStoneHanExtra
-32A77.......: PlangothicP2-Regular
+32A77.......: UnicodiaHan
 32A78.......: BabelStoneHanExtra
-32A79..32A7B: PlangothicP2-Regular
+32A79..32A7B: UnicodiaHan
 32A7C.......: BabelStoneHanExtra
-32A7D.......: PlangothicP2-Regular
+32A7D.......: UnicodiaHan
 32A7E..32A81: BabelStoneHanExtra
-32A82.......: PlangothicP2-Regular
+32A82.......: UnicodiaHan
 32A83..32A85: BabelStoneHanExtra
-32A86..32A88: PlangothicP2-Regular
+32A86..32A88: UnicodiaHan
 32A89.......: BabelStoneHanExtra
-32A8A..32A90: PlangothicP2-Regular
+32A8A..32A90: UnicodiaHan
 32A91..32A95: BabelStoneHanExtra
-32A96, 32A97: PlangothicP2-Regular
+32A96, 32A97: UnicodiaHan
 32A98, 32A99: BabelStoneHanExtra
-32A9A.......: PlangothicP2-Regular
+32A9A.......: UnicodiaHan
 32A9B.......: BabelStoneHanExtra
-32A9C.......: PlangothicP2-Regular
+32A9C.......: UnicodiaHan
 32A9D.......: BabelStoneHanExtra
-32A9E, 32A9F: PlangothicP2-Regular
+32A9E, 32A9F: UnicodiaHan
 32AA0.......: BabelStoneHanExtra
-32AA1.......: PlangothicP2-Regular
+32AA1.......: UnicodiaHan
 32AA2.......: BabelStoneHanExtra
-32AA3.......: PlangothicP2-Regular
+32AA3.......: UnicodiaHan
 32AA4.......: BabelStoneHanExtra
-32AA5, 32AA6: PlangothicP2-Regular
+32AA5, 32AA6: UnicodiaHan
 32AA7, 32AA8: BabelStoneHanExtra
-32AA9..32AB2: PlangothicP2-Regular
+32AA9..32AB2: UnicodiaHan
 32AB3.......: BabelStoneHanExtra
-32AB4..32ABA: PlangothicP2-Regular
+32AB4..32ABA: UnicodiaHan
 32ABB, 32ABC: BabelStoneHanExtra
-32ABD..32AC5: PlangothicP2-Regular
+32ABD..32AC5: UnicodiaHan
 32AC6.......: BabelStoneHanExtra
-32AC7, 32AC8: PlangothicP2-Regular
+32AC7, 32AC8: UnicodiaHan
 32AC9.......: BabelStoneHanExtra
-32ACA.......: PlangothicP2-Regular
+32ACA.......: UnicodiaHan
 32ACB.......: BabelStoneHanExtra
-32ACC, 32ACD: PlangothicP2-Regular
+32ACC, 32ACD: UnicodiaHan
 32ACE.......: BabelStoneHanExtra
-32ACF.......: PlangothicP2-Regular
+32ACF.......: UnicodiaHan
 32AD0..32AD4: BabelStoneHanExtra
-32AD5.......: PlangothicP2-Regular
+32AD5.......: UnicodiaHan
 32AD6.......: BabelStoneHanExtra
-32AD7.......: PlangothicP2-Regular
+32AD7.......: UnicodiaHan
 32AD8, 32AD9: BabelStoneHanExtra
-32ADA..32AE2: PlangothicP2-Regular
+32ADA..32AE2: UnicodiaHan
 32AE3.......: BabelStoneHanExtra
-32AE4..32AE7: PlangothicP2-Regular
+32AE4..32AE7: UnicodiaHan
 32AE8, 32AE9: BabelStoneHanExtra
-32AEA..32AEC: PlangothicP2-Regular
+32AEA..32AEC: UnicodiaHan
 32AED.......: BabelStoneHanExtra
-32AEE.......: PlangothicP2-Regular
+32AEE.......: UnicodiaHan
 32AEF.......: BabelStoneHanExtra
-32AF0.......: PlangothicP2-Regular
+32AF0.......: UnicodiaHan
 32AF1.......: BabelStoneHanExtra
-32AF2.......: PlangothicP2-Regular
+32AF2.......: UnicodiaHan
 32AF3.......: BabelStoneHanExtra
-32AF4, 32AF5: PlangothicP2-Regular
+32AF4, 32AF5: UnicodiaHan
 32AF6.......: BabelStoneHanExtra
-32AF7, 32AF8: PlangothicP2-Regular
+32AF7, 32AF8: UnicodiaHan
 32AF9..32AFB: BabelStoneHanExtra
-32AFC.......: PlangothicP2-Regular
+32AFC.......: UnicodiaHan
 32AFD.......: BabelStoneHanExtra
-32AFE, 32AFF: PlangothicP2-Regular
+32AFE, 32AFF: UnicodiaHan
 32B00, 32B01: BabelStoneHanExtra
-32B02..32B04: PlangothicP2-Regular
+32B02..32B04: UnicodiaHan
 32B05.......: BabelStoneHanExtra
-32B06, 32B07: PlangothicP2-Regular
+32B06, 32B07: UnicodiaHan
 32B08, 32B09: BabelStoneHanExtra
-32B0A, 32B0B: PlangothicP2-Regular
+32B0A, 32B0B: UnicodiaHan
 32B0C, 32B0D: BabelStoneHanExtra
-32B0E..32B10: PlangothicP2-Regular
+32B0E..32B10: UnicodiaHan
 32B11.......: BabelStoneHanExtra
-32B12..32B14: PlangothicP2-Regular
+32B12..32B14: UnicodiaHan
 32B15..32B18: BabelStoneHanExtra
-32B19..32B1C: PlangothicP2-Regular
+32B19..32B1C: UnicodiaHan
 32B1D.......: BabelStoneHanExtra
-32B1E.......: PlangothicP2-Regular
+32B1E.......: UnicodiaHan
 32B1F.......: BabelStoneHanExtra
-32B20.......: PlangothicP2-Regular
+32B20.......: UnicodiaHan
 32B21.......: BabelStoneHanExtra
-32B22.......: PlangothicP2-Regular
+32B22.......: UnicodiaHan
 32B23.......: BabelStoneHanExtra
-32B24.......: PlangothicP2-Regular
+32B24.......: UnicodiaHan
 32B25.......: BabelStoneHanExtra
-32B26.......: PlangothicP2-Regular
+32B26.......: UnicodiaHan
 32B27.......: BabelStoneHanExtra
-32B28, 32B29: PlangothicP2-Regular
+32B28, 32B29: UnicodiaHan
 32B2A.......: BabelStoneHanExtra
-32B2B.......: PlangothicP2-Regular
+32B2B.......: UnicodiaHan
 32B2C.......: BabelStoneHanExtra
-32B2D..32B2F: PlangothicP2-Regular
+32B2D..32B2F: UnicodiaHan
 32B30.......: BabelStoneHanExtra
-32B31, 32B32: PlangothicP2-Regular
+32B31, 32B32: UnicodiaHan
 32B33.......: BabelStoneHanExtra
-32B34..32B38: PlangothicP2-Regular
+32B34..32B38: UnicodiaHan
 32B39..32B3C: BabelStoneHanExtra
-32B3D..32B3F: PlangothicP2-Regular
+32B3D..32B3F: UnicodiaHan
 32B40, 32B41: BabelStoneHanExtra
-32B42, 32B43: PlangothicP2-Regular
+32B42, 32B43: UnicodiaHan
 32B44.......: BabelStoneHanExtra
-32B45, 32B46: PlangothicP2-Regular
+32B45, 32B46: UnicodiaHan
 32B47.......: BabelStoneHanExtra
-32B48, 32B49: PlangothicP2-Regular
+32B48, 32B49: UnicodiaHan
 32B4A.......: BabelStoneHanExtra
-32B4B, 32B4C: PlangothicP2-Regular
+32B4B, 32B4C: UnicodiaHan
 32B4D.......: BabelStoneHanExtra
-32B4E..32B51: PlangothicP2-Regular
+32B4E..32B51: UnicodiaHan
 32B52..32B56: BabelStoneHanExtra
-32B57.......: PlangothicP2-Regular
+32B57.......: UnicodiaHan
 32B58..32B5D: BabelStoneHanExtra
-32B5E.......: PlangothicP2-Regular
+32B5E.......: UnicodiaHan
 32B5F.......: BabelStoneHanExtra
-32B60.......: PlangothicP2-Regular
+32B60.......: UnicodiaHan
 32B61..32B63: BabelStoneHanExtra
-32B64.......: PlangothicP2-Regular
+32B64.......: UnicodiaHan
 32B65..32B67: BabelStoneHanExtra
-32B68..32B6A: PlangothicP2-Regular
+32B68..32B6A: UnicodiaHan
 32B6B..32B73: BabelStoneHanExtra
-32B74.......: PlangothicP2-Regular
+32B74.......: UnicodiaHan
 32B75..32B78: BabelStoneHanExtra
-32B79.......: PlangothicP2-Regular
+32B79.......: UnicodiaHan
 32B7A..32B88: BabelStoneHanExtra
-32B89.......: PlangothicP2-Regular
+32B89.......: UnicodiaHan
 32B8A..32B8C: BabelStoneHanExtra
-32B8D.......: PlangothicP2-Regular
+32B8D.......: UnicodiaHan
 32B8E..32B98: BabelStoneHanExtra
-32B99.......: PlangothicP2-Regular
+32B99.......: UnicodiaHan
 32B9A..32B9E: BabelStoneHanExtra
-32B9F.......: PlangothicP2-Regular
+32B9F.......: UnicodiaHan
 32BA0..32BAB: BabelStoneHanExtra
-32BAC.......: PlangothicP2-Regular
+32BAC.......: UnicodiaHan
 32BAD..32BB4: BabelStoneHanExtra
-32BB5.......: PlangothicP2-Regular
+32BB5.......: UnicodiaHan
 32BB6..32BBB: BabelStoneHanExtra
-32BBC.......: PlangothicP2-Regular
+32BBC.......: UnicodiaHan
 32BBD..32BC1: BabelStoneHanExtra
-32BC2.......: PlangothicP2-Regular
+32BC2.......: UnicodiaHan
 32BC3..32BCC: BabelStoneHanExtra
-32BCD, 32BCE: PlangothicP2-Regular
+32BCD, 32BCE: UnicodiaHan
 32BCF.......: BabelStoneHanExtra
-32BD0.......: PlangothicP2-Regular
+32BD0.......: UnicodiaHan
 32BD1..32BD5: BabelStoneHanExtra
-32BD6.......: PlangothicP2-Regular
+32BD6.......: UnicodiaHan
 32BD7, 32BD8: BabelStoneHanExtra
-32BD9.......: PlangothicP2-Regular
+32BD9.......: UnicodiaHan
 32BDA, 32BDB: BabelStoneHanExtra
-32BDC.......: PlangothicP2-Regular
+32BDC.......: UnicodiaHan
 32BDD, 32BDE: BabelStoneHanExtra
-32BDF.......: PlangothicP2-Regular
+32BDF.......: UnicodiaHan
 32BE0..32BE2: BabelStoneHanExtra
-32BE3, 32BE4: PlangothicP2-Regular
+32BE3, 32BE4: UnicodiaHan
 32BE5.......: BabelStoneHanExtra
-32BE6, 32BE7: PlangothicP2-Regular
+32BE6, 32BE7: UnicodiaHan
 32BE8.......: BabelStoneHanExtra
-32BE9.......: PlangothicP2-Regular
+32BE9.......: UnicodiaHan
 32BEA.......: BabelStoneHanExtra
-32BEB..32BEE: PlangothicP2-Regular
+32BEB..32BEE: UnicodiaHan
 32BEF, 32BF0: BabelStoneHanExtra
-32BF1.......: PlangothicP2-Regular
+32BF1.......: UnicodiaHan
 32BF2.......: BabelStoneHanExtra
-32BF3.......: PlangothicP2-Regular
+32BF3.......: UnicodiaHan
 32BF4, 32BF5: BabelStoneHanExtra
-32BF6.......: PlangothicP2-Regular
+32BF6.......: UnicodiaHan
 32BF7, 32BF8: BabelStoneHanExtra
-32BF9..32BFE: PlangothicP2-Regular
+32BF9..32BFE: UnicodiaHan
 32BFF.......: BabelStoneHanExtra
-32C00..32C05: PlangothicP2-Regular
+32C00..32C05: UnicodiaHan
 32C06, 32C07: BabelStoneHanExtra
-32C08.......: PlangothicP2-Regular
+32C08.......: UnicodiaHan
 32C09, 32C0A: BabelStoneHanExtra
-32C0B.......: PlangothicP2-Regular
+32C0B.......: UnicodiaHan
 32C0C, 32C0D: BabelStoneHanExtra
-32C0E.......: PlangothicP2-Regular
+32C0E.......: UnicodiaHan
 32C0F..32C14: BabelStoneHanExtra
-32C15.......: PlangothicP2-Regular
+32C15.......: UnicodiaHan
 32C16.......: BabelStoneHanExtra
-32C17, 32C18: PlangothicP2-Regular
+32C17, 32C18: UnicodiaHan
 32C19.......: BabelStoneHanExtra
-32C1A.......: PlangothicP2-Regular
+32C1A.......: UnicodiaHan
 32C1B..32C1D: BabelStoneHanExtra
-32C1E, 32C1F: PlangothicP2-Regular
+32C1E, 32C1F: UnicodiaHan
 32C20.......: BabelStoneHanExtra
-32C21.......: PlangothicP2-Regular
+32C21.......: UnicodiaHan
 32C22.......: BabelStoneHanExtra
-32C23.......: PlangothicP2-Regular
+32C23.......: UnicodiaHan
 32C24.......: BabelStoneHanExtra
-32C25..32C27: PlangothicP2-Regular
+32C25..32C27: UnicodiaHan
 32C28..32C2B: BabelStoneHanExtra
-32C2C.......: PlangothicP2-Regular
+32C2C.......: UnicodiaHan
 32C2D.......: BabelStoneHanExtra
-32C2E..32C30: PlangothicP2-Regular
+32C2E..32C30: UnicodiaHan
 32C31.......: BabelStoneHanExtra
-32C32, 32C33: PlangothicP2-Regular
+32C32, 32C33: UnicodiaHan
 32C34..32C3C: BabelStoneHanExtra
-32C3D, 32C3E: PlangothicP2-Regular
+32C3D, 32C3E: UnicodiaHan
 32C3F.......: BabelStoneHanExtra
-32C40.......: PlangothicP2-Regular
+32C40.......: UnicodiaHan
 32C41..32C43: BabelStoneHanExtra
-32C44.......: PlangothicP2-Regular
+32C44.......: UnicodiaHan
 32C45.......: BabelStoneHanExtra
-32C46.......: PlangothicP2-Regular
+32C46.......: UnicodiaHan
 32C47, 32C48: BabelStoneHanExtra
-32C49..32C52: PlangothicP2-Regular
+32C49..32C52: UnicodiaHan
 32C53..32C55: BabelStoneHanExtra
-32C56.......: PlangothicP2-Regular
+32C56.......: UnicodiaHan
 32C57, 32C58: BabelStoneHanExtra
-32C59.......: PlangothicP2-Regular
+32C59.......: UnicodiaHan
 32C5A.......: BabelStoneHanExtra
-32C5B.......: PlangothicP2-Regular
+32C5B.......: UnicodiaHan
 32C5C, 32C5D: BabelStoneHanExtra
-32C5E.......: PlangothicP2-Regular
+32C5E.......: UnicodiaHan
 32C5F.......: BabelStoneHanExtra
-32C60.......: PlangothicP2-Regular
+32C60.......: UnicodiaHan
 32C61..32C63: BabelStoneHanExtra
-32C64.......: PlangothicP2-Regular
+32C64.......: UnicodiaHan
 32C65..32C6A: BabelStoneHanExtra
-32C6B.......: PlangothicP2-Regular
+32C6B.......: UnicodiaHan
 32C6C..32C6E: BabelStoneHanExtra
-32C6F.......: PlangothicP2-Regular
+32C6F.......: UnicodiaHan
 32C70, 32C71: BabelStoneHanExtra
-32C72.......: PlangothicP2-Regular
+32C72.......: UnicodiaHan
 32C73.......: BabelStoneHanExtra
-32C74..32C76: PlangothicP2-Regular
+32C74..32C76: UnicodiaHan
 32C77.......: BabelStoneHanExtra
-32C78..32C7A: PlangothicP2-Regular
+32C78..32C7A: UnicodiaHan
 32C7B.......: BabelStoneHanExtra
-32C7C, 32C7D: PlangothicP2-Regular
+32C7C, 32C7D: UnicodiaHan
 32C7E.......: BabelStoneHanExtra
-32C7F, 32C80: PlangothicP2-Regular
+32C7F, 32C80: UnicodiaHan
 32C81, 32C82: BabelStoneHanExtra
-32C83.......: PlangothicP2-Regular
+32C83.......: UnicodiaHan
 32C84.......: BabelStoneHanExtra
-32C85.......: PlangothicP2-Regular
+32C85.......: UnicodiaHan
 32C86, 32C87: BabelStoneHanExtra
-32C88.......: PlangothicP2-Regular
+32C88.......: UnicodiaHan
 32C89.......: BabelStoneHanExtra
-32C8A.......: PlangothicP2-Regular
+32C8A.......: UnicodiaHan
 32C8B.......: BabelStoneHanExtra
-32C8C..32C8F: PlangothicP2-Regular
+32C8C..32C8F: UnicodiaHan
 32C90.......: BabelStoneHanExtra
-32C91, 32C92: PlangothicP2-Regular
+32C91, 32C92: UnicodiaHan
 32C93.......: BabelStoneHanExtra
-32C94, 32C95: PlangothicP2-Regular
+32C94, 32C95: UnicodiaHan
 32C96..32C98: BabelStoneHanExtra
-32C99.......: PlangothicP2-Regular
+32C99.......: UnicodiaHan
 32C9A, 32C9B: BabelStoneHanExtra
-32C9C..32C9E: PlangothicP2-Regular
+32C9C..32C9E: UnicodiaHan
 32C9F..32CA1: BabelStoneHanExtra
-32CA2..32CA4: PlangothicP2-Regular
+32CA2..32CA4: UnicodiaHan
 32CA5, 32CA6: BabelStoneHanExtra
-32CA7.......: PlangothicP2-Regular
+32CA7.......: UnicodiaHan
 32CA8..32CAA: BabelStoneHanExtra
-32CAB.......: PlangothicP2-Regular
+32CAB.......: UnicodiaHan
 32CAC.......: BabelStoneHanExtra
-32CAD.......: PlangothicP2-Regular
+32CAD.......: UnicodiaHan
 32CAE, 32CAF: BabelStoneHanExtra
-32CB0.......: PlangothicP2-Regular
+32CB0.......: UnicodiaHan
 32CB1.......: BabelStoneHanExtra
-32CB2.......: PlangothicP2-Regular
+32CB2.......: UnicodiaHan
 32CB3, 32CB4: BabelStoneHanExtra
-32CB5..32CB9: PlangothicP2-Regular
+32CB5..32CB9: UnicodiaHan
 32CBA.......: BabelStoneHanExtra
-32CBB.......: PlangothicP2-Regular
+32CBB.......: UnicodiaHan
 32CBC.......: BabelStoneHanExtra
-32CBD..32CC5: PlangothicP2-Regular
+32CBD..32CC5: UnicodiaHan
 32CC6, 32CC7: BabelStoneHanExtra
-32CC8.......: PlangothicP2-Regular
+32CC8.......: UnicodiaHan
 32CC9, 32CCA: BabelStoneHanExtra
-32CCB.......: PlangothicP2-Regular
+32CCB.......: UnicodiaHan
 32CCC, 32CCD: BabelStoneHanExtra
-32CCE.......: PlangothicP2-Regular
+32CCE.......: UnicodiaHan
 32CCF..32CDA: BabelStoneHanExtra
-32CDB.......: PlangothicP2-Regular
+32CDB.......: UnicodiaHan
 32CDC..32CDE: BabelStoneHanExtra
-32CDF, 32CE0: PlangothicP2-Regular
+32CDF, 32CE0: UnicodiaHan
 32CE1, 32CE2: BabelStoneHanExtra
-32CE3.......: PlangothicP2-Regular
+32CE3.......: UnicodiaHan
 32CE4..32CED: BabelStoneHanExtra
-32CEE, 32CEF: PlangothicP2-Regular
+32CEE, 32CEF: UnicodiaHan
 32CF0..32CF8: BabelStoneHanExtra
-32CF9.......: PlangothicP2-Regular
+32CF9.......: UnicodiaHan
 32CFA, 32CFB: BabelStoneHanExtra
-32CFC.......: PlangothicP2-Regular
+32CFC.......: UnicodiaHan
 32CFD..32D00: BabelStoneHanExtra
-32D01.......: PlangothicP2-Regular
+32D01.......: UnicodiaHan
 32D02.......: BabelStoneHanExtra
-32D03.......: PlangothicP2-Regular
+32D03.......: UnicodiaHan
 32D04..32D06: BabelStoneHanExtra
-32D07.......: PlangothicP2-Regular
+32D07.......: UnicodiaHan
 32D08..32D0D: BabelStoneHanExtra
-32D0E.......: PlangothicP2-Regular
+32D0E.......: UnicodiaHan
 32D0F.......: BabelStoneHanExtra
-32D10.......: PlangothicP2-Regular
+32D10.......: UnicodiaHan
 32D11.......: BabelStoneHanExtra
-32D12..32D14: PlangothicP2-Regular
+32D12..32D14: UnicodiaHan
 32D15.......: BabelStoneHanExtra
-32D16.......: PlangothicP2-Regular
+32D16.......: UnicodiaHan
 32D17..32D1A: BabelStoneHanExtra
-32D1B.......: PlangothicP2-Regular
+32D1B.......: UnicodiaHan
 32D1C.......: BabelStoneHanExtra
-32D1D.......: PlangothicP2-Regular
+32D1D.......: UnicodiaHan
 32D1E..32D21: BabelStoneHanExtra
-32D22.......: PlangothicP2-Regular
+32D22.......: UnicodiaHan
 32D23.......: BabelStoneHanExtra
-32D24..32D26: PlangothicP2-Regular
+32D24..32D26: UnicodiaHan
 32D27, 32D28: BabelStoneHanExtra
-32D29, 32D2A: PlangothicP2-Regular
+32D29, 32D2A: UnicodiaHan
 32D2B.......: BabelStoneHanExtra
-32D2C, 32D2D: PlangothicP2-Regular
+32D2C, 32D2D: UnicodiaHan
 32D2E, 32D2F: BabelStoneHanExtra
-32D30.......: PlangothicP2-Regular
+32D30.......: UnicodiaHan
 32D31..32D33: BabelStoneHanExtra
-32D34..32D3B: PlangothicP2-Regular
+32D34..32D3B: UnicodiaHan
 32D3C.......: BabelStoneHanExtra
-32D3D..32D40: PlangothicP2-Regular
+32D3D..32D40: UnicodiaHan
 32D41.......: BabelStoneHanExtra
-32D42.......: PlangothicP2-Regular
+32D42.......: UnicodiaHan
 32D43.......: BabelStoneHanExtra
-32D44.......: PlangothicP2-Regular
+32D44.......: UnicodiaHan
 32D45, 32D46: BabelStoneHanExtra
-32D47, 32D48: PlangothicP2-Regular
+32D47, 32D48: UnicodiaHan
 32D49..32D4D: BabelStoneHanExtra
-32D4E.......: PlangothicP2-Regular
+32D4E.......: UnicodiaHan
 32D4F, 32D50: BabelStoneHanExtra
-32D51.......: PlangothicP2-Regular
+32D51.......: UnicodiaHan
 32D52, 32D53: BabelStoneHanExtra
-32D54..32D5D: PlangothicP2-Regular
+32D54..32D5D: UnicodiaHan
 32D5E.......: BabelStoneHanExtra
-32D5F, 32D60: PlangothicP2-Regular
+32D5F, 32D60: UnicodiaHan
 32D61.......: BabelStoneHanExtra
-32D62..32D64: PlangothicP2-Regular
+32D62..32D64: UnicodiaHan
 32D65, 32D66: BabelStoneHanExtra
-32D67.......: PlangothicP2-Regular
+32D67.......: UnicodiaHan
 32D68, 32D69: BabelStoneHanExtra
-32D6A.......: PlangothicP2-Regular
+32D6A.......: UnicodiaHan
 32D6B, 32D6C: BabelStoneHanExtra
-32D6D..32D71: PlangothicP2-Regular
+32D6D..32D71: UnicodiaHan
 32D72.......: BabelStoneHanExtra
-32D73, 32D74: PlangothicP2-Regular
+32D73, 32D74: UnicodiaHan
 32D75..32D77: BabelStoneHanExtra
-32D78.......: PlangothicP2-Regular
+32D78.......: UnicodiaHan
 32D79.......: BabelStoneHanExtra
-32D7A.......: PlangothicP2-Regular
+32D7A.......: UnicodiaHan
 32D7B, 32D7C: BabelStoneHanExtra
-32D7D..32D81: PlangothicP2-Regular
+32D7D..32D81: UnicodiaHan
 32D82.......: BabelStoneHanExtra
-32D83.......: PlangothicP2-Regular
+32D83.......: UnicodiaHan
 32D84, 32D85: BabelStoneHanExtra
-32D86..32D88: PlangothicP2-Regular
+32D86..32D88: UnicodiaHan
 32D89.......: BabelStoneHanExtra
-32D8A.......: PlangothicP2-Regular
+32D8A.......: UnicodiaHan
 32D8B.......: BabelStoneHanExtra
-32D8C..32D92: PlangothicP2-Regular
+32D8C..32D92: UnicodiaHan
 32D93.......: BabelStoneHanExtra
-32D94..32D9A: PlangothicP2-Regular
+32D94..32D9A: UnicodiaHan
 32D9B.......: BabelStoneHanExtra
-32D9C, 32D9D: PlangothicP2-Regular
+32D9C, 32D9D: UnicodiaHan
 32D9E.......: BabelStoneHanExtra
-32D9F..32DA2: PlangothicP2-Regular
+32D9F..32DA2: UnicodiaHan
 32DA3.......: BabelStoneHanExtra
-32DA4..32DAE: PlangothicP2-Regular
+32DA4..32DAE: UnicodiaHan
 32DAF.......: BabelStoneHanExtra
-32DB0.......: PlangothicP2-Regular
+32DB0.......: UnicodiaHan
 32DB1.......: BabelStoneHanExtra
-32DB2.......: PlangothicP2-Regular
+32DB2.......: UnicodiaHan
 32DB3.......: BabelStoneHanExtra
-32DB4.......: PlangothicP2-Regular
+32DB4.......: UnicodiaHan
 32DB5.......: BabelStoneHanExtra
-32DB6.......: PlangothicP2-Regular
+32DB6.......: UnicodiaHan
 32DB7..32DBA: BabelStoneHanExtra
-32DBB..32DBF: PlangothicP2-Regular
+32DBB..32DBF: UnicodiaHan
 32DC0.......: BabelStoneHanExtra
-32DC1.......: PlangothicP2-Regular
+32DC1.......: UnicodiaHan
 32DC2.......: BabelStoneHanExtra
-32DC3.......: PlangothicP2-Regular
+32DC3.......: UnicodiaHan
 32DC4.......: BabelStoneHanExtra
-32DC5, 32DC6: PlangothicP2-Regular
+32DC5, 32DC6: UnicodiaHan
 32DC7, 32DC8: BabelStoneHanExtra
-32DC9.......: PlangothicP2-Regular
+32DC9.......: UnicodiaHan
 32DCA, 32DCB: BabelStoneHanExtra
-32DCC..32DCE: PlangothicP2-Regular
+32DCC..32DCE: UnicodiaHan
 32DCF.......: BabelStoneHanExtra
-32DD0..32DD2: PlangothicP2-Regular
+32DD0..32DD2: UnicodiaHan
 32DD3.......: BabelStoneHanExtra
-32DD4.......: PlangothicP2-Regular
+32DD4.......: UnicodiaHan
 32DD5, 32DD6: BabelStoneHanExtra
-32DD7, 32DD8: PlangothicP2-Regular
+32DD7, 32DD8: UnicodiaHan
 32DD9, 32DDA: BabelStoneHanExtra
-32DDB..32DE0: PlangothicP2-Regular
+32DDB..32DE0: UnicodiaHan
 32DE1.......: BabelStoneHanExtra
-32DE2.......: PlangothicP2-Regular
+32DE2.......: UnicodiaHan
 32DE3.......: BabelStoneHanExtra
-32DE4..32DE6: PlangothicP2-Regular
+32DE4..32DE6: UnicodiaHan
 32DE7..32DEA: BabelStoneHanExtra
-32DEB..32DEE: PlangothicP2-Regular
+32DEB..32DEE: UnicodiaHan
 32DEF.......: BabelStoneHanExtra
-32DF0..32E00: PlangothicP2-Regular
+32DF0..32E00: UnicodiaHan
 32E01.......: BabelStoneHanExtra
-32E02..32E05: PlangothicP2-Regular
+32E02..32E05: UnicodiaHan
 32E06.......: BabelStoneHanExtra
-32E07.......: PlangothicP2-Regular
+32E07.......: UnicodiaHan
 32E08.......: BabelStoneHanExtra
-32E09.......: PlangothicP2-Regular
+32E09.......: UnicodiaHan
 32E0A.......: BabelStoneHanExtra
-32E0B.......: PlangothicP2-Regular
+32E0B.......: UnicodiaHan
 32E0C, 32E0D: BabelStoneHanExtra
-32E0E..32E11: PlangothicP2-Regular
+32E0E..32E11: UnicodiaHan
 32E12.......: BabelStoneHanExtra
-32E13..32E22: PlangothicP2-Regular
+32E13..32E22: UnicodiaHan
 32E23, 32E24: BabelStoneHanExtra
-32E25..32E28: PlangothicP2-Regular
+32E25..32E28: UnicodiaHan
 32E29.......: BabelStoneHanExtra
-32E2A, 32E2B: PlangothicP2-Regular
+32E2A, 32E2B: UnicodiaHan
 32E2C.......: BabelStoneHanExtra
-32E2D, 32E2E: PlangothicP2-Regular
+32E2D, 32E2E: UnicodiaHan
 32E2F..32E34: BabelStoneHanExtra
-32E35, 32E36: PlangothicP2-Regular
+32E35, 32E36: UnicodiaHan
 32E37.......: BabelStoneHanExtra
-32E38.......: PlangothicP2-Regular
+32E38.......: UnicodiaHan
 32E39.......: BabelStoneHanExtra
-32E3A.......: PlangothicP2-Regular
+32E3A.......: UnicodiaHan
 32E3B, 32E3C: BabelStoneHanExtra
-32E3D, 32E3E: PlangothicP2-Regular
+32E3D, 32E3E: UnicodiaHan
 32E3F.......: BabelStoneHanExtra
-32E40.......: PlangothicP2-Regular
+32E40.......: UnicodiaHan
 32E41, 32E42: BabelStoneHanExtra
-32E43, 32E44: PlangothicP2-Regular
+32E43, 32E44: UnicodiaHan
 32E45..32E47: BabelStoneHanExtra
-32E48, 32E49: PlangothicP2-Regular
+32E48, 32E49: UnicodiaHan
 32E4A..32E4D: BabelStoneHanExtra
-32E4E..32E52: PlangothicP2-Regular
+32E4E..32E52: UnicodiaHan
 32E53.......: BabelStoneHanExtra
-32E54..32E5C: PlangothicP2-Regular
+32E54..32E5C: UnicodiaHan
 32E5D.......: BabelStoneHanExtra
-32E5E..32E63: PlangothicP2-Regular
+32E5E..32E63: UnicodiaHan
 32E64.......: BabelStoneHanExtra
-32E65, 32E66: PlangothicP2-Regular
+32E65, 32E66: UnicodiaHan
 32E67, 32E68: BabelStoneHanExtra
-32E69.......: PlangothicP2-Regular
+32E69.......: UnicodiaHan
 32E6A, 32E6B: BabelStoneHanExtra
-32E6C.......: PlangothicP2-Regular
+32E6C.......: UnicodiaHan
 32E6D.......: BabelStoneHanExtra
-32E6E..32E74: PlangothicP2-Regular
+32E6E..32E74: UnicodiaHan
 32E75.......: BabelStoneHanExtra
-32E76..32E7D: PlangothicP2-Regular
+32E76..32E7D: UnicodiaHan
 32E7E.......: BabelStoneHanExtra
-32E7F..32E87: PlangothicP2-Regular
+32E7F..32E87: UnicodiaHan
 32E88..32E8D: BabelStoneHanExtra
-32E8E, 32E8F: PlangothicP2-Regular
+32E8E, 32E8F: UnicodiaHan
 32E90, 32E91: BabelStoneHanExtra
-32E92.......: PlangothicP2-Regular
+32E92.......: UnicodiaHan
 32E93.......: BabelStoneHanExtra
-32E94, 32E95: PlangothicP2-Regular
+32E94, 32E95: UnicodiaHan
 32E96.......: BabelStoneHanExtra
-32E97.......: PlangothicP2-Regular
+32E97.......: UnicodiaHan
 32E98..32E9A: BabelStoneHanExtra
-32E9B..32E9E: PlangothicP2-Regular
+32E9B..32E9E: UnicodiaHan
 32E9F, 32EA0: BabelStoneHanExtra
-32EA1.......: PlangothicP2-Regular
+32EA1.......: UnicodiaHan
 32EA2..32EA5: BabelStoneHanExtra
-32EA6.......: PlangothicP2-Regular
+32EA6.......: UnicodiaHan
 32EA7..32EA9: BabelStoneHanExtra
-32EAA..32EAC: PlangothicP2-Regular
+32EAA..32EAC: UnicodiaHan
 32EAD, 32EAE: BabelStoneHanExtra
-32EAF..32EB2: PlangothicP2-Regular
+32EAF..32EB2: UnicodiaHan
 32EB3.......: BabelStoneHanExtra
-32EB4.......: PlangothicP2-Regular
+32EB4.......: UnicodiaHan
 32EB5, 32EB6: BabelStoneHanExtra
-32EB7.......: PlangothicP2-Regular
+32EB7.......: UnicodiaHan
 32EB8.......: BabelStoneHanExtra
-32EB9..32EBB: PlangothicP2-Regular
+32EB9..32EBB: UnicodiaHan
 32EBC.......: BabelStoneHanExtra
-32EBD.......: PlangothicP2-Regular
+32EBD.......: UnicodiaHan
 32EBE.......: BabelStoneHanExtra
-32EBF..32EC7: PlangothicP2-Regular
+32EBF..32EC7: UnicodiaHan
 32EC8.......: BabelStoneHanExtra
-32EC9..32ECF: PlangothicP2-Regular
+32EC9..32ECF: UnicodiaHan
 32ED0, 32ED1: BabelStoneHanExtra
-32ED2.......: PlangothicP2-Regular
+32ED2.......: UnicodiaHan
 32ED3..32ED5: BabelStoneHanExtra
-32ED6.......: PlangothicP2-Regular
+32ED6.......: UnicodiaHan
 32ED7.......: BabelStoneHanExtra
-32ED8, 32ED9: PlangothicP2-Regular
+32ED8, 32ED9: UnicodiaHan
 32EDA..32EDE: BabelStoneHanExtra
-32EDF.......: PlangothicP2-Regular
+32EDF.......: UnicodiaHan
 32EE0..32EE2: BabelStoneHanExtra
-32EE3.......: PlangothicP2-Regular
+32EE3.......: UnicodiaHan
 32EE4, 32EE5: BabelStoneHanExtra
-32EE6..32EE8: PlangothicP2-Regular
+32EE6..32EE8: UnicodiaHan
 32EE9.......: BabelStoneHanExtra
-32EEA.......: PlangothicP2-Regular
+32EEA.......: UnicodiaHan
 32EEB.......: BabelStoneHanExtra
-32EEC.......: PlangothicP2-Regular
+32EEC.......: UnicodiaHan
 32EED.......: BabelStoneHanExtra
-32EEE.......: PlangothicP2-Regular
+32EEE.......: UnicodiaHan
 32EEF..32EF5: BabelStoneHanExtra
-32EF6..32EF8: PlangothicP2-Regular
+32EF6..32EF8: UnicodiaHan
 32EF9..32EFB: BabelStoneHanExtra
-32EFC.......: PlangothicP2-Regular
+32EFC.......: UnicodiaHan
 32EFD.......: BabelStoneHanExtra
-32EFE, 32EFF: PlangothicP2-Regular
+32EFE, 32EFF: UnicodiaHan
 32F00, 32F01: BabelStoneHanExtra
-32F02, 32F03: PlangothicP2-Regular
+32F02, 32F03: UnicodiaHan
 32F04.......: BabelStoneHanExtra
-32F05.......: PlangothicP2-Regular
+32F05.......: UnicodiaHan
 32F06..32F0A: BabelStoneHanExtra
-32F0B, 32F0C: PlangothicP2-Regular
+32F0B, 32F0C: UnicodiaHan
 32F0D, 32F0E: BabelStoneHanExtra
-32F0F..32F11: PlangothicP2-Regular
+32F0F..32F11: UnicodiaHan
 32F12.......: BabelStoneHanExtra
-32F13.......: PlangothicP2-Regular
+32F13.......: UnicodiaHan
 32F14, 32F15: BabelStoneHanExtra
-32F16.......: PlangothicP2-Regular
+32F16.......: UnicodiaHan
 32F17..32F1A: BabelStoneHanExtra
-32F1B, 32F1C: PlangothicP2-Regular
+32F1B, 32F1C: UnicodiaHan
 32F1D..32F1F: BabelStoneHanExtra
-32F20.......: PlangothicP2-Regular
+32F20.......: UnicodiaHan
 32F21..32F28: BabelStoneHanExtra
-32F29..32F2F: PlangothicP2-Regular
+32F29..32F2F: UnicodiaHan
 32F30..32F32: BabelStoneHanExtra
-32F33, 32F34: PlangothicP2-Regular
+32F33, 32F34: UnicodiaHan
 32F35, 32F36: BabelStoneHanExtra
-32F37..32F3A: PlangothicP2-Regular
+32F37..32F3A: UnicodiaHan
 32F3B.......: BabelStoneHanExtra
-32F3C..32F40: PlangothicP2-Regular
+32F3C..32F40: UnicodiaHan
 32F41.......: BabelStoneHanExtra
-32F42..32F45: PlangothicP2-Regular
+32F42..32F45: UnicodiaHan
 32F46..32F4A: BabelStoneHanExtra
-32F4B..32F50: PlangothicP2-Regular
+32F4B..32F50: UnicodiaHan
 32F51.......: BabelStoneHanExtra
-32F52..32F54: PlangothicP2-Regular
+32F52..32F54: UnicodiaHan
 32F55, 32F56: BabelStoneHanExtra
-32F57.......: PlangothicP2-Regular
+32F57.......: UnicodiaHan
 32F58..32F5A: BabelStoneHanExtra
-32F5B..32F5D: PlangothicP2-Regular
+32F5B..32F5D: UnicodiaHan
 32F5E.......: BabelStoneHanExtra
-32F5F..32F64: PlangothicP2-Regular
+32F5F..32F64: UnicodiaHan
 32F65, 32F66: BabelStoneHanExtra
-32F67.......: PlangothicP2-Regular
+32F67.......: UnicodiaHan
 32F68, 32F69: BabelStoneHanExtra
-32F6A.......: PlangothicP2-Regular
+32F6A.......: UnicodiaHan
 32F6B, 32F6C: BabelStoneHanExtra
-32F6D..32F7A: PlangothicP2-Regular
+32F6D..32F7A: UnicodiaHan
 32F7B.......: BabelStoneHanExtra
-32F7C..32F81: PlangothicP2-Regular
+32F7C..32F81: UnicodiaHan
 32F82.......: BabelStoneHanExtra
-32F83, 32F84: PlangothicP2-Regular
+32F83, 32F84: UnicodiaHan
 32F85..32F87: BabelStoneHanExtra
-32F88.......: PlangothicP2-Regular
+32F88.......: UnicodiaHan
 32F89.......: BabelStoneHanExtra
-32F8A.......: PlangothicP2-Regular
+32F8A.......: UnicodiaHan
 32F8B..32F8E: BabelStoneHanExtra
-32F8F.......: PlangothicP2-Regular
+32F8F.......: UnicodiaHan
 32F90..32F97: BabelStoneHanExtra
-32F98.......: PlangothicP2-Regular
+32F98.......: UnicodiaHan
 32F99..32F9F: BabelStoneHanExtra
-32FA0.......: PlangothicP2-Regular
+32FA0.......: UnicodiaHan
 32FA1, 32FA2: BabelStoneHanExtra
-32FA3.......: PlangothicP2-Regular
+32FA3.......: UnicodiaHan
 32FA4.......: BabelStoneHanExtra
-32FA5.......: PlangothicP2-Regular
+32FA5.......: UnicodiaHan
 32FA6..32FA9: BabelStoneHanExtra
-32FAA.......: PlangothicP2-Regular
+32FAA.......: UnicodiaHan
 32FAB..32FAD: BabelStoneHanExtra
-32FAE.......: PlangothicP2-Regular
+32FAE.......: UnicodiaHan
 32FAF..32FB5: BabelStoneHanExtra
-32FB6.......: PlangothicP2-Regular
+32FB6.......: UnicodiaHan
 32FB7..32FB9: BabelStoneHanExtra
-32FBA.......: PlangothicP2-Regular
+32FBA.......: UnicodiaHan
 32FBB..32FBF: BabelStoneHanExtra
-32FC0.......: PlangothicP2-Regular
+32FC0.......: UnicodiaHan
 32FC1.......: BabelStoneHanExtra
-32FC2.......: PlangothicP2-Regular
+32FC2.......: UnicodiaHan
 32FC3, 32FC4: BabelStoneHanExtra
-32FC5.......: PlangothicP2-Regular
+32FC5.......: UnicodiaHan
 32FC6.......: BabelStoneHanExtra
-32FC7, 32FC8: PlangothicP2-Regular
+32FC7, 32FC8: UnicodiaHan
 32FC9, 32FCA: BabelStoneHanExtra
-32FCB.......: PlangothicP2-Regular
+32FCB.......: UnicodiaHan
 32FCC..32FCE: BabelStoneHanExtra
-32FCF.......: PlangothicP2-Regular
+32FCF.......: UnicodiaHan
 32FD0..32FD2: BabelStoneHanExtra
-32FD3.......: PlangothicP2-Regular
+32FD3.......: UnicodiaHan
 32FD4..32FDA: BabelStoneHanExtra
-32FDB.......: PlangothicP2-Regular
+32FDB.......: UnicodiaHan
 32FDC..32FDF: BabelStoneHanExtra
-32FE0.......: PlangothicP2-Regular
+32FE0.......: UnicodiaHan
 32FE1.......: BabelStoneHanExtra
-32FE2, 32FE3: PlangothicP2-Regular
+32FE2, 32FE3: UnicodiaHan
 32FE4.......: BabelStoneHanExtra
-32FE5.......: PlangothicP2-Regular
+32FE5.......: UnicodiaHan
 32FE6.......: BabelStoneHanExtra
-32FE7.......: PlangothicP2-Regular
+32FE7.......: UnicodiaHan
 32FE8..32FEB: BabelStoneHanExtra
-32FEC.......: PlangothicP2-Regular
+32FEC.......: UnicodiaHan
 32FED..32FF0: BabelStoneHanExtra
-32FF1..32FF3: PlangothicP2-Regular
+32FF1..32FF3: UnicodiaHan
 32FF4..32FF7: BabelStoneHanExtra
-32FF8.......: PlangothicP2-Regular
+32FF8.......: UnicodiaHan
 32FF9..32FFB: BabelStoneHanExtra
-32FFC.......: PlangothicP2-Regular
+32FFC.......: UnicodiaHan
 32FFD, 32FFE: BabelStoneHanExtra
-32FFF, 33000: PlangothicP2-Regular
+32FFF, 33000: UnicodiaHan
 33001..33005: BabelStoneHanExtra
-33006.......: PlangothicP2-Regular
+33006.......: UnicodiaHan
 33007.......: BabelStoneHanExtra
-33008, 33009: PlangothicP2-Regular
+33008, 33009: UnicodiaHan
 3300A..3300D: BabelStoneHanExtra
-3300E, 3300F: PlangothicP2-Regular
+3300E, 3300F: UnicodiaHan
 33010..33012: BabelStoneHanExtra
-33013..33015: PlangothicP2-Regular
+33013..33015: UnicodiaHan
 33016..33020: BabelStoneHanExtra
-33021.......: PlangothicP2-Regular
+33021.......: UnicodiaHan
 33022.......: BabelStoneHanExtra
-33023.......: PlangothicP2-Regular
+33023.......: UnicodiaHan
 33024..3302C: BabelStoneHanExtra
-3302D, 3302E: PlangothicP2-Regular
+3302D, 3302E: UnicodiaHan
 3302F..33031: BabelStoneHanExtra
-33032..33034: PlangothicP2-Regular
+33032..33034: UnicodiaHan
 33035.......: BabelStoneHanExtra
-33036.......: PlangothicP2-Regular
+33036.......: UnicodiaHan
 33037.......: BabelStoneHanExtra
-33038.......: PlangothicP2-Regular
+33038.......: UnicodiaHan
 33039..3303C: BabelStoneHanExtra
-3303D, 3303E: PlangothicP2-Regular
+3303D, 3303E: UnicodiaHan
 3303F..33041: BabelStoneHanExtra
-33042, 33043: PlangothicP2-Regular
+33042, 33043: UnicodiaHan
 33044, 33045: BabelStoneHanExtra
-33046.......: PlangothicP2-Regular
+33046.......: UnicodiaHan
 33047.......: BabelStoneHanExtra
-33048.......: PlangothicP2-Regular
+33048.......: UnicodiaHan
 33049.......: BabelStoneHanExtra
-3304A.......: PlangothicP2-Regular
+3304A.......: UnicodiaHan
 3304B.......: BabelStoneHanExtra
-3304C.......: PlangothicP2-Regular
+3304C.......: UnicodiaHan
 3304D, 3304E: BabelStoneHanExtra
-3304F..33052: PlangothicP2-Regular
+3304F..33052: UnicodiaHan
 33053.......: BabelStoneHanExtra
-33054, 33055: PlangothicP2-Regular
+33054, 33055: UnicodiaHan
 33056, 33057: BabelStoneHanExtra
-33058.......: PlangothicP2-Regular
+33058.......: UnicodiaHan
 33059.......: BabelStoneHanExtra
-3305A, 3305B: PlangothicP2-Regular
+3305A, 3305B: UnicodiaHan
 3305C.......: BabelStoneHanExtra
-3305D..33067: PlangothicP2-Regular
+3305D..33067: UnicodiaHan
 33068..3306B: BabelStoneHanExtra
-3306C..3306E: PlangothicP2-Regular
+3306C..3306E: UnicodiaHan
 3306F.......: BabelStoneHanExtra
-33070..33073: PlangothicP2-Regular
+33070..33073: UnicodiaHan
 33074..33077: BabelStoneHanExtra
-33078..3307B: PlangothicP2-Regular
+33078..3307B: UnicodiaHan
 3307C, 3307D: BabelStoneHanExtra
-3307E..33081: PlangothicP2-Regular
+3307E..33081: UnicodiaHan
 33082..33086: BabelStoneHanExtra
-33087.......: PlangothicP2-Regular
+33087.......: UnicodiaHan
 33088..33096: BabelStoneHanExtra
-33097..330A3: PlangothicP2-Regular
+33097..330A3: UnicodiaHan
 330A4.......: BabelStoneHanExtra
-330A5..330AA: PlangothicP2-Regular
+330A5..330AA: UnicodiaHan
 330AB, 330AC: BabelStoneHanExtra
-330AD..330AF: PlangothicP2-Regular
+330AD..330AF: UnicodiaHan
 330B0.......: BabelStoneHanExtra
-330B1..330B4: PlangothicP2-Regular
+330B1..330B4: UnicodiaHan
 330B5.......: BabelStoneHanExtra
-330B6, 330B7: PlangothicP2-Regular
+330B6, 330B7: UnicodiaHan
 330B8.......: BabelStoneHanExtra
-330B9, 330BA: PlangothicP2-Regular
+330B9, 330BA: UnicodiaHan
 330BB.......: BabelStoneHanExtra
-330BC..330BF: PlangothicP2-Regular
+330BC..330BF: UnicodiaHan
 330C0, 330C1: BabelStoneHanExtra
-330C2..330C6: PlangothicP2-Regular
+330C2..330C6: UnicodiaHan
 330C7..330C9: BabelStoneHanExtra
-330CA.......: PlangothicP2-Regular
+330CA.......: UnicodiaHan
 330CB.......: BabelStoneHanExtra
-330CC.......: PlangothicP2-Regular
+330CC.......: UnicodiaHan
 330CD.......: BabelStoneHanExtra
-330CE, 330CF: PlangothicP2-Regular
+330CE, 330CF: UnicodiaHan
 330D0.......: BabelStoneHanExtra
-330D1.......: PlangothicP2-Regular
+330D1.......: UnicodiaHan
 330D2..330D6: BabelStoneHanExtra
-330D7, 330D8: PlangothicP2-Regular
+330D7, 330D8: UnicodiaHan
 330D9, 330DA: BabelStoneHanExtra
-330DB.......: PlangothicP2-Regular
+330DB.......: UnicodiaHan
 330DC.......: BabelStoneHanExtra
-330DD, 330DE: PlangothicP2-Regular
+330DD, 330DE: UnicodiaHan
 330DF, 330E0: BabelStoneHanExtra
-330E1, 330E2: PlangothicP2-Regular
+330E1, 330E2: UnicodiaHan
 330E3.......: BabelStoneHanExtra
-330E4, 330E5: PlangothicP2-Regular
+330E4, 330E5: UnicodiaHan
 330E6, 330E7: BabelStoneHanExtra
-330E8.......: PlangothicP2-Regular
+330E8.......: UnicodiaHan
 330E9..330EB: BabelStoneHanExtra
-330EC..330F0: PlangothicP2-Regular
+330EC..330F0: UnicodiaHan
 330F1..330F5: BabelStoneHanExtra
-330F6.......: PlangothicP2-Regular
+330F6.......: UnicodiaHan
 330F7..330F9: BabelStoneHanExtra
-330FA..330FE: PlangothicP2-Regular
+330FA..330FE: UnicodiaHan
 330FF.......: BabelStoneHanExtra
-33100..33102: PlangothicP2-Regular
+33100..33102: UnicodiaHan
 33103.......: BabelStoneHanExtra
-33104..33107: PlangothicP2-Regular
+33104..33107: UnicodiaHan
 33108..3310A: BabelStoneHanExtra
-3310B.......: PlangothicP2-Regular
+3310B.......: UnicodiaHan
 3310C..3310E: BabelStoneHanExtra
-3310F.......: PlangothicP2-Regular
+3310F.......: UnicodiaHan
 33110, 33111: BabelStoneHanExtra
-33112.......: PlangothicP2-Regular
+33112.......: UnicodiaHan
 33113.......: BabelStoneHanExtra
-33114..33116: PlangothicP2-Regular
+33114..33116: UnicodiaHan
 33117.......: BabelStoneHanExtra
-33118.......: PlangothicP2-Regular
+33118.......: UnicodiaHan
 33119, 3311A: BabelStoneHanExtra
-3311B, 3311C: PlangothicP2-Regular
+3311B, 3311C: UnicodiaHan
 3311D.......: BabelStoneHanExtra
-3311E.......: PlangothicP2-Regular
+3311E.......: UnicodiaHan
 3311F, 33120: BabelStoneHanExtra
-33121..3312A: PlangothicP2-Regular
+33121..3312A: UnicodiaHan
 3312B.......: BabelStoneHanExtra
-3312C.......: PlangothicP2-Regular
+3312C.......: UnicodiaHan
 3312D, 3312E: BabelStoneHanExtra
-3312F.......: PlangothicP2-Regular
+3312F.......: UnicodiaHan
 33130..33133: BabelStoneHanExtra
-33134..33141: PlangothicP2-Regular
+33134..33141: UnicodiaHan
 33142, 33143: BabelStoneHanExtra
-33144, 33145: PlangothicP2-Regular
+33144, 33145: UnicodiaHan
 33146.......: BabelStoneHanExtra
-33147.......: PlangothicP2-Regular
+33147.......: UnicodiaHan
 33148.......: BabelStoneHanExtra
-33149.......: PlangothicP2-Regular
+33149.......: UnicodiaHan
 3314A.......: BabelStoneHanExtra
-3314B, 3314C: PlangothicP2-Regular
+3314B, 3314C: UnicodiaHan
 3314D, 3314E: BabelStoneHanExtra
-3314F..33151: PlangothicP2-Regular
+3314F..33151: UnicodiaHan
 33152.......: BabelStoneHanExtra
-33153.......: PlangothicP2-Regular
+33153.......: UnicodiaHan
 33154.......: BabelStoneHanExtra
-33155.......: PlangothicP2-Regular
+33155.......: UnicodiaHan
 33156..33158: BabelStoneHanExtra
-33159..3315B: PlangothicP2-Regular
+33159..3315B: UnicodiaHan
 3315C, 3315D: BabelStoneHanExtra
-3315E..33162: PlangothicP2-Regular
+3315E..33162: UnicodiaHan
 33163.......: BabelStoneHanExtra
-33164..3316F: PlangothicP2-Regular
+33164..3316F: UnicodiaHan
 33170.......: BabelStoneHanExtra
-33171.......: PlangothicP2-Regular
+33171.......: UnicodiaHan
 33172, 33173: BabelStoneHanExtra
-33174.......: PlangothicP2-Regular
+33174.......: UnicodiaHan
 33175.......: BabelStoneHanExtra
-33176.......: PlangothicP2-Regular
+33176.......: UnicodiaHan
 33177..3317E: BabelStoneHanExtra
-3317F, 33180: PlangothicP2-Regular
+3317F, 33180: UnicodiaHan
 33181, 33182: BabelStoneHanExtra
-33183.......: PlangothicP2-Regular
+33183.......: UnicodiaHan
 33184.......: BabelStoneHanExtra
-33185.......: PlangothicP2-Regular
+33185.......: UnicodiaHan
 33186.......: BabelStoneHanExtra
-33187.......: PlangothicP2-Regular
+33187.......: UnicodiaHan
 33188..3318A: BabelStoneHanExtra
-3318B.......: PlangothicP2-Regular
+3318B.......: UnicodiaHan
 3318C.......: BabelStoneHanExtra
-3318D.......: PlangothicP2-Regular
+3318D.......: UnicodiaHan
 3318E..33192: BabelStoneHanExtra
-33193.......: PlangothicP2-Regular
+33193.......: UnicodiaHan
 33194..33199: BabelStoneHanExtra
-3319A.......: PlangothicP2-Regular
+3319A.......: UnicodiaHan
 3319B, 3319C: BabelStoneHanExtra
-3319D, 3319E: PlangothicP2-Regular
+3319D, 3319E: UnicodiaHan
 3319F..331A4: BabelStoneHanExtra
-331A5.......: PlangothicP2-Regular
+331A5.......: UnicodiaHan
 331A6..331AA: BabelStoneHanExtra
-331AB..331AD: PlangothicP2-Regular
+331AB..331AD: UnicodiaHan
 331AE..331B4: BabelStoneHanExtra
-331B5.......: PlangothicP2-Regular
+331B5.......: UnicodiaHan
 331B6..331BA: BabelStoneHanExtra
-331BB, 331BC: PlangothicP2-Regular
+331BB, 331BC: UnicodiaHan
 331BD.......: BabelStoneHanExtra
-331BE..331C1: PlangothicP2-Regular
+331BE..331C1: UnicodiaHan
 331C2, 331C3: BabelStoneHanExtra
-331C4..331C9: PlangothicP2-Regular
+331C4..331C9: UnicodiaHan
 331CA, 331CB: BabelStoneHanExtra
-331CC, 331CD: PlangothicP2-Regular
+331CC, 331CD: UnicodiaHan
 331CE, 331CF: BabelStoneHanExtra
-331D0.......: PlangothicP2-Regular
+331D0.......: UnicodiaHan
 331D1.......: BabelStoneHanExtra
-331D2.......: PlangothicP2-Regular
+331D2.......: UnicodiaHan
 331D3..331D9: BabelStoneHanExtra
-331DA.......: PlangothicP2-Regular
+331DA.......: UnicodiaHan
 331DB.......: BabelStoneHanExtra
-331DC.......: PlangothicP2-Regular
+331DC.......: UnicodiaHan
 331DD.......: BabelStoneHanExtra
-331DE.......: PlangothicP2-Regular
+331DE.......: UnicodiaHan
 331DF.......: BabelStoneHanExtra
-331E0.......: PlangothicP2-Regular
+331E0.......: UnicodiaHan
 331E1..331E4: BabelStoneHanExtra
-331E5.......: PlangothicP2-Regular
+331E5.......: UnicodiaHan
 331E6..331F4: BabelStoneHanExtra
-331F5.......: PlangothicP2-Regular
+331F5.......: UnicodiaHan
 331F6..331F8: BabelStoneHanExtra
-331F9.......: PlangothicP2-Regular
+331F9.......: UnicodiaHan
 331FA, 331FB: BabelStoneHanExtra
-331FC, 331FD: PlangothicP2-Regular
+331FC, 331FD: UnicodiaHan
 331FE..33200: BabelStoneHanExtra
-33201, 33202: PlangothicP2-Regular
+33201, 33202: UnicodiaHan
 33203.......: BabelStoneHanExtra
-33204, 33205: PlangothicP2-Regular
+33204, 33205: UnicodiaHan
 33206.......: BabelStoneHanExtra
-33207..33209: PlangothicP2-Regular
+33207..33209: UnicodiaHan
 3320A.......: BabelStoneHanExtra
-3320B..33210: PlangothicP2-Regular
+3320B..33210: UnicodiaHan
 33211..33218: BabelStoneHanExtra
-33219, 3321A: PlangothicP2-Regular
+33219, 3321A: UnicodiaHan
 3321B..33220: BabelStoneHanExtra
-33221, 33222: PlangothicP2-Regular
+33221, 33222: UnicodiaHan
 33223.......: BabelStoneHanExtra
-33224.......: PlangothicP2-Regular
+33224.......: UnicodiaHan
 33225.......: BabelStoneHanExtra
-33226, 33227: PlangothicP2-Regular
+33226, 33227: UnicodiaHan
 33228.......: BabelStoneHanExtra
-33229..33231: PlangothicP2-Regular
+33229..33231: UnicodiaHan
 33232.......: BabelStoneHanExtra
-33233..33239: PlangothicP2-Regular
+33233..33239: UnicodiaHan
 3323A.......: BabelStoneHanExtra
-3323B..3323D: PlangothicP2-Regular
+3323B..3323D: UnicodiaHan
 3323E, 3323F: BabelStoneHanExtra
-33240..33244: PlangothicP2-Regular
+33240..33244: UnicodiaHan
 33245.......: BabelStoneHanExtra
-33246, 33247: PlangothicP2-Regular
+33246, 33247: UnicodiaHan
 33248.......: BabelStoneHanExtra
-33249, 3324A: PlangothicP2-Regular
+33249, 3324A: UnicodiaHan
 3324B..33252: BabelStoneHanExtra
-33253.......: PlangothicP2-Regular
+33253.......: UnicodiaHan
 33254..3325B: BabelStoneHanExtra
-3325C, 3325D: PlangothicP2-Regular
+3325C, 3325D: UnicodiaHan
 3325E, 3325F: BabelStoneHanExtra
-33260.......: PlangothicP2-Regular
+33260.......: UnicodiaHan
 33261.......: BabelStoneHanExtra
-33262, 33263: PlangothicP2-Regular
+33262, 33263: UnicodiaHan
 33264..3326B: BabelStoneHanExtra
-3326C, 3326D: PlangothicP2-Regular
+3326C, 3326D: UnicodiaHan
 3326E.......: BabelStoneHanExtra
-3326F.......: PlangothicP2-Regular
+3326F.......: UnicodiaHan
 33270..33274: BabelStoneHanExtra
-33275.......: PlangothicP2-Regular
+33275.......: UnicodiaHan
 33276.......: BabelStoneHanExtra
-33277.......: PlangothicP2-Regular
+33277.......: UnicodiaHan
 33278..3327A: BabelStoneHanExtra
-3327B.......: PlangothicP2-Regular
+3327B.......: UnicodiaHan
 3327C..3327E: BabelStoneHanExtra
-3327F.......: PlangothicP2-Regular
+3327F.......: UnicodiaHan
 33280..33288: BabelStoneHanExtra
-33289.......: PlangothicP2-Regular
+33289.......: UnicodiaHan
 3328A..33291: BabelStoneHanExtra
-33292.......: PlangothicP2-Regular
+33292.......: UnicodiaHan
 33293, 33294: BabelStoneHanExtra
-33295.......: PlangothicP2-Regular
+33295.......: UnicodiaHan
 33296, 33297: BabelStoneHanExtra
-33298..3329A: PlangothicP2-Regular
+33298..3329A: UnicodiaHan
 3329B..3329F: BabelStoneHanExtra
-332A0.......: PlangothicP2-Regular
+332A0.......: UnicodiaHan
 332A1, 332A2: BabelStoneHanExtra
-332A3.......: PlangothicP2-Regular
+332A3.......: UnicodiaHan
 332A4.......: BabelStoneHanExtra
-332A5.......: PlangothicP2-Regular
+332A5.......: UnicodiaHan
 332A6.......: BabelStoneHanExtra
-332A7, 332A8: PlangothicP2-Regular
+332A7, 332A8: UnicodiaHan
 332A9.......: BabelStoneHanExtra
-332AA..332AC: PlangothicP2-Regular
+332AA..332AC: UnicodiaHan
 332AD, 332AE: BabelStoneHanExtra
-332AF.......: PlangothicP2-Regular
+332AF.......: UnicodiaHan
 332B0.......: BabelStoneHanExtra
-332B1, 332B2: PlangothicP2-Regular
+332B1, 332B2: UnicodiaHan
 332B3.......: BabelStoneHanExtra
-332B4.......: PlangothicP2-Regular
+332B4.......: UnicodiaHan
 332B5.......: BabelStoneHanExtra
-332B6.......: PlangothicP2-Regular
+332B6.......: UnicodiaHan
 332B7.......: BabelStoneHanExtra
-332B8, 332B9: PlangothicP2-Regular
+332B8, 332B9: UnicodiaHan
 332BA.......: BabelStoneHanExtra
-332BB..332BE: PlangothicP2-Regular
+332BB..332BE: UnicodiaHan
 332BF..332C1: BabelStoneHanExtra
-332C2.......: PlangothicP2-Regular
+332C2.......: UnicodiaHan
 332C3..332C6: BabelStoneHanExtra
-332C7..332CD: PlangothicP2-Regular
+332C7..332CD: UnicodiaHan
 332CE.......: BabelStoneHanExtra
-332CF..332D1: PlangothicP2-Regular
+332CF..332D1: UnicodiaHan
 332D2, 332D3: BabelStoneHanExtra
-332D4.......: PlangothicP2-Regular
+332D4.......: UnicodiaHan
 332D5.......: BabelStoneHanExtra
-332D6.......: PlangothicP2-Regular
+332D6.......: UnicodiaHan
 332D7.......: BabelStoneHanExtra
-332D8.......: PlangothicP2-Regular
+332D8.......: UnicodiaHan
 332D9..332DB: BabelStoneHanExtra
-332DC..332E0: PlangothicP2-Regular
+332DC..332E0: UnicodiaHan
 332E1..332E4: BabelStoneHanExtra
-332E5..332E7: PlangothicP2-Regular
+332E5..332E7: UnicodiaHan
 332E8..332F3: BabelStoneHanExtra
-332F4..332FB: PlangothicP2-Regular
+332F4..332FB: UnicodiaHan
 332FC.......: BabelStoneHanExtra
-332FD.......: PlangothicP2-Regular
+332FD.......: UnicodiaHan
 332FE.......: BabelStoneHanExtra
-332FF, 33300: PlangothicP2-Regular
+332FF, 33300: UnicodiaHan
 33301.......: BabelStoneHanExtra
-33302.......: PlangothicP2-Regular
+33302.......: UnicodiaHan
 33303, 33304: BabelStoneHanExtra
-33305, 33306: PlangothicP2-Regular
+33305, 33306: UnicodiaHan
 33307.......: BabelStoneHanExtra
-33308..3330C: PlangothicP2-Regular
+33308..3330C: UnicodiaHan
 3330D..33310: BabelStoneHanExtra
-33311.......: PlangothicP2-Regular
+33311.......: UnicodiaHan
 33312..3331E: BabelStoneHanExtra
-3331F.......: PlangothicP2-Regular
+3331F.......: UnicodiaHan
 33320.......: BabelStoneHanExtra
-33321, 33322: PlangothicP2-Regular
+33321, 33322: UnicodiaHan
 33323.......: BabelStoneHanExtra
-33324.......: PlangothicP2-Regular
+33324.......: UnicodiaHan
 33325, 33326: BabelStoneHanExtra
-33327..3332D: PlangothicP2-Regular
+33327..3332D: UnicodiaHan
 3332E..33330: BabelStoneHanExtra
-33331, 33332: PlangothicP2-Regular
+33331, 33332: UnicodiaHan
 33333.......: BabelStoneHanExtra
-33334.......: PlangothicP2-Regular
+33334.......: UnicodiaHan
 33335..33337: BabelStoneHanExtra
-33338..3333B: PlangothicP2-Regular
+33338..3333B: UnicodiaHan
 3333C..3333F: BabelStoneHanExtra
-33340.......: PlangothicP2-Regular
+33340.......: UnicodiaHan
 33341..33346: BabelStoneHanExtra
-33347.......: PlangothicP2-Regular
+33347.......: UnicodiaHan
 33348..3334C: BabelStoneHanExtra
-3334D.......: PlangothicP2-Regular
+3334D.......: UnicodiaHan
 3334E..33350: BabelStoneHanExtra
-33351, 33352: PlangothicP2-Regular
+33351, 33352: UnicodiaHan
 33353..33356: BabelStoneHanExtra
-33357.......: PlangothicP2-Regular
+33357.......: UnicodiaHan
 33358, 33359: BabelStoneHanExtra
-3335A.......: PlangothicP2-Regular
+3335A.......: UnicodiaHan
 3335B.......: BabelStoneHanExtra
-3335C.......: PlangothicP2-Regular
+3335C.......: UnicodiaHan
 3335D..33360: BabelStoneHanExtra
-33361, 33362: PlangothicP2-Regular
+33361, 33362: UnicodiaHan
 33363, 33364: BabelStoneHanExtra
-33365.......: PlangothicP2-Regular
+33365.......: UnicodiaHan
 33366, 33367: BabelStoneHanExtra
-33368.......: PlangothicP2-Regular
+33368.......: UnicodiaHan
 33369..33372: BabelStoneHanExtra
-33373.......: PlangothicP2-Regular
+33373.......: UnicodiaHan
 33374..3337A: BabelStoneHanExtra
-3337B.......: PlangothicP2-Regular
+3337B.......: UnicodiaHan
 3337C..33383: BabelStoneHanExtra
-33384, 33385: PlangothicP2-Regular
+33384, 33385: UnicodiaHan
 33386.......: BabelStoneHanExtra
-33387, 33388: PlangothicP2-Regular
+33387, 33388: UnicodiaHan
 33389..3338C: BabelStoneHanExtra
-3338D.......: PlangothicP2-Regular
+3338D.......: UnicodiaHan
 3338E..333A7: BabelStoneHanExtra
-333A8..333AA: PlangothicP2-Regular
+333A8..333AA: UnicodiaHan
 333AB.......: BabelStoneHanExtra
-333AC.......: PlangothicP2-Regular
+333AC.......: UnicodiaHan
 333AD..333B2: BabelStoneHanExtra
-333B3.......: PlangothicP2-Regular
+333B3.......: UnicodiaHan
 333B4, 333B5: BabelStoneHanExtra
-333B6.......: PlangothicP2-Regular
+333B6.......: UnicodiaHan
 333B7..333C7: BabelStoneHanExtra
-333C8..333CA: PlangothicP2-Regular
+333C8..333CA: UnicodiaHan
 333CB..333D4: BabelStoneHanExtra
-333D5.......: PlangothicP2-Regular
+333D5.......: UnicodiaHan
 333D6..333D8: BabelStoneHanExtra
-333D9, 333DA: PlangothicP2-Regular
+333D9, 333DA: UnicodiaHan
 333DB, 333DC: BabelStoneHanExtra
-333DD.......: PlangothicP2-Regular
+333DD.......: UnicodiaHan
 333DE..333E2: BabelStoneHanExtra
-333E3.......: PlangothicP2-Regular
+333E3.......: UnicodiaHan
 333E4..333E8: BabelStoneHanExtra
-333E9.......: PlangothicP2-Regular
+333E9.......: UnicodiaHan
 333EA..333EC: BabelStoneHanExtra
-333ED.......: PlangothicP2-Regular
+333ED.......: UnicodiaHan
 333EE..333F3: BabelStoneHanExtra
-333F4, 333F5: PlangothicP2-Regular
+333F4, 333F5: UnicodiaHan
 333F6..333FA: BabelStoneHanExtra
-333FB.......: PlangothicP2-Regular
+333FB.......: UnicodiaHan
 333FC.......: BabelStoneHanExtra
-333FD.......: PlangothicP2-Regular
+333FD.......: UnicodiaHan
 333FE..33419: BabelStoneHanExtra
-3341A, 3341B: PlangothicP2-Regular
+3341A, 3341B: UnicodiaHan
 3341C..33426: BabelStoneHanExtra
-33427.......: PlangothicP2-Regular
+33427.......: UnicodiaHan
 33428.......: BabelStoneHanExtra
-33429.......: PlangothicP2-Regular
+33429.......: UnicodiaHan
 3342A..3342F: BabelStoneHanExtra
-33430.......: PlangothicP2-Regular
+33430.......: UnicodiaHan
 33431, 33432: BabelStoneHanExtra
-33433, 33434: PlangothicP2-Regular
+33433, 33434: UnicodiaHan
 33435.......: BabelStoneHanExtra
-33436.......: PlangothicP2-Regular
+33436.......: UnicodiaHan
 33437.......: BabelStoneHanExtra
-33438.......: PlangothicP2-Regular
+33438.......: UnicodiaHan
 33439..33441: BabelStoneHanExtra
-33442.......: PlangothicP2-Regular
+33442.......: UnicodiaHan
 33443..33447: BabelStoneHanExtra
-33448.......: PlangothicP2-Regular
+33448.......: UnicodiaHan
 33449, 3344A: BabelStoneHanExtra
-3344B.......: PlangothicP2-Regular
+3344B.......: UnicodiaHan
 3344C.......: BabelStoneHanExtra
-3344D..33450: PlangothicP2-Regular
+3344D..33450: UnicodiaHan
 33451, 33452: BabelStoneHanExtra
-33453, 33454: PlangothicP2-Regular
+33453, 33454: UnicodiaHan
 33455..33468: BabelStoneHanExtra
-33469..3346D: PlangothicP2-Regular
+33469..3346D: UnicodiaHan
 3346E..33479: BabelStoneHanExtra
 == Tags
 E0001..E007F: [Custom control]
