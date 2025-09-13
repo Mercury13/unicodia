@@ -30,6 +30,9 @@
 #      (ranges/lists are created en masse, then bad chars are hand-checked)
 #           ALERT          = alert if other character rather than default pops up
 #
+#   /erase hex
+#      Erases a character, UNCHECKED
+#
 
 
 # Kangxi radicals, just need because of bad hinting and country-specific troubles

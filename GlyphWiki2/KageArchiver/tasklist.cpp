@@ -188,6 +188,16 @@ Task* putTask(TaskList& r, char32_t code, SettingsMan& man, PutMode mode)
     return &it->second;
 }
 
+void eraseTask(TaskList& r, char32_t code)
+{
+    auto whatDel = r.erase(code);
+    if (whatDel != 1) {
+        char buf[100];
+        snprintf(buf, std::size(buf), "Cannot erase: %X", unsigned(code));
+        throw BadTask(buf);
+    }
+}
+
 [[nodiscard]] char32_t parseHexTask(std::string_view s)
 {
     unsigned code = 0;
@@ -232,6 +242,11 @@ Task* putTask(TaskList& r, char32_t code, SettingsMan& man, PutMode mode)
                 for (char32_t c = min; c <= max; ++c) {
                     putTask(r, c, setMan, PutMode::NEW);
                 }
+            } else if (cmd == "erase"sv) {
+                if (params.size() != 2)
+                    throw BadTask("/erase should have one param");
+                auto cp = parseHexTask(params[1]);
+                eraseTask(r, cp);
             } else if (cmd == "country"sv) {
                 std::span p1 = params;
                 p1 = p1.subspan(1);
