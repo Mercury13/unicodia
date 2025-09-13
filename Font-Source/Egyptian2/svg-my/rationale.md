@@ -14,13 +14,14 @@ RETURN = temporarily deleted, then returned
 - 134C8, 134C9, 134CA, 134CD, 134D2 / 134D7, 134D8, 134DA = campaign for staves (8)
 - 134E0, 134E1, 134E2, 134E3, 134E5 / 134E7, 134E8, 134E9, 134EB, 134EE = campaign for sitting with props
 - 134EF, 134F0, 134F6, 134F7, 134F9 = campaign for sitting with props (15)
+- 1354E, 1354F, 13550, 13556, 13557 / 13558, 13559, 1355C = seat-covered #1, 1 fixed, 7 new (8)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 130
+Subtotal: 138
 
 # Misrenders (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -32,7 +33,6 @@ Subtotal: 130
 - 134E6: campaign for sitting with props, vessel on the head bigger
 - 134F3: kneeling
 - 134FE: square→oval, bigger (carrlying, well?)
-- 1354E: more consistent short wig
 - 13549: better sits on heel
 - 13552: short beard
 - 13555: long wig
@@ -122,8 +122,8 @@ Subtotal: 130
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
-- 137F2: no beard, no collar one of hieros for million: ONE HUNDRED
-- 137F4: no beard, lower branches
+- 137F2: no beard, no collar one of hieros for million
+- 137F4: no beard, lower branches: ONE HUNDRED
 - 137F5: man’s hair/beard/clothing
 - 137F7: man’s hair/beard/clothing
 - 137F8: same
@@ -222,8 +222,8 @@ Subtotal: 130
 - 13C58: this one has one feather
 - 13C81: rope rather than feather
 - 13C85: loop on the end of perch
-- 13C96: no base: TWO HUNDRED
-- 13C98: feather → loop
+- 13C96: no base
+- 13C98: feather → loop: TWO HUNDRED
 - 13C99: loop on perch
 - 13C9A: bull’s head
 - 13C9C: same as 9A
@@ -322,8 +322,8 @@ Subtotal: 130
 - 14184: thinner “sun”, base for 83
 - 141D6: no loop
 - 141D7: same
-- 141E8: redrew for more pronounced “bell”: THREE HUNDRED
-- 141F1: redrew from scratch
+- 141E8: redrew for more pronounced “bell”
+- 141F1: redrew from scratch: THREE HUNDRED
 - 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
@@ -378,7 +378,7 @@ Subtotal: 130
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 354
+Subtotal: 353
 
 # Duped with NewGardiner
 - 13502: campaign for standing with props
@@ -389,13 +389,6 @@ Subtotal: 354
 - 134FF: after FE + random jug W22?
 - 13526: after 25
 - 13548: was squished in NewG
-- 1354F: campaign for seat-covered 1
-- 13550: campaign for seat-covered 1
-- 13556: campaign for seat-covered 1
-- 13557: campaign for seat-covered 1
-- 13558: campaign for seat-covered 1
-- 13559: 5A minus beard
-- 1355C: campaign for seat-covered 1
 - 1356C: after 6B
 - 13582: franken near 81
 - 13585: after 84
@@ -546,7 +539,7 @@ Subtotal: 354
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 169
+Subtotal: 157
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
