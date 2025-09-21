@@ -23,7 +23,12 @@ RETURN = temporarily deleted, then returned
 
 Subtotal: 138
 
-# Misrenders (including cases when misrendered char covers another CP)
+# Misrenders / basic
+- 13000: made better A1 for another reason
+
+Subtotal: 1
+
+# Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
 - 13478: frankenmade from scratch after 13527 using old hands
 - 1347D: covered

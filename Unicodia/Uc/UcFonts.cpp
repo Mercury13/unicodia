@@ -203,12 +203,12 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                    // Dominoes
-    { "UnicodiaEgypFixupRegular.otf",                                           // Egyptian
-            Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },
-      { "NotoSansEgyptianHieroglyphs-Regular.otf",                              // …1
+    { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },       // Egyptian
+      { "UnicodiaEgypFixupRegular.otf",
+            Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },   // …1
+      { "NotoSansEgyptianHieroglyphs-Regular.otf",                              // …2
             Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 105_pc },
-      { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },     // …2
-      { { "NewGardiner.ttf",  ExTofu { .type = ExTofuType::GARDINER, .fname = "omitted.csv" } },  // …3
+      { { "NewGardiner.ttf",  ExTofu { .type = ExTofuType::GARDINER, .fname = "omitted.csv" } }, // …3
                 Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
