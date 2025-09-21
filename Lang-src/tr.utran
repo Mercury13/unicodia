@@ -11845,22 +11845,22 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode tranformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
+      <p>'''Unicode transformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
-      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows{{_}}NT quickly adopted two-byte character, that simplified text processing. But soon it became clear that two bytes are{{_}}not{{_}}enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
+      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte character, that simplified text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
       <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
       <p>* Characters D800…DFFF are forbidden;</p>
-      <p>* Characters 10000 and greater are written as '''surrogate pair''':</p>
+      <p>* Characters 10000 and greater are written as a '''surrogate pair''':</p>
       <p>: 1101.10yy.yyyy.yyyy{{_}}1101.11yy.yyyy.yyyy, where y=x−10000₁₆.</p>
       <p />
       <p>Properties of UTF-16:</p>
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} characters.</p>
       <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
-      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will{{_}}not{{_}}make false positives.</p>
-      <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
+      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even for one character, will{{_}}not{{_}}make false positives.</p>
+      <p>* Unreliable detection: without a [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence, by statistics or surrogate pairs if they are present. The well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
-      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
+      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
      <transl>
       <p>'''Unicode dönüşüm biçimi, 16 bit''', Unicode’un iki baytlık makine sözcüklerinden oluşan bir zincire [[pt:serialization|serileştirme]] biçimidir.</p>
@@ -11875,7 +11875,7 @@
       <p>* Unicode kapasitesine bir sınırlama getirir: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} karakter.</p>
       <p>* Geriye dönük uyumluluk: [[pt:bmp|Temel Düzlem]] metni UCS-2’den ayırt edilemez. Çalışma dili Temel Düzlem'de bulunuyorsa ve diğer düzlemlerin karakterleri işlenmemişse (bozulmamış veya silinmişse), iki baytlık karakterler metin işleme için uygundur.</p>
       <p>* Kendi kendini senkronize etme: Herhangi bir hatalı '''kelime''' (bayt değil) ekleseniz bile, metnin geri kalanı okunabilir kalır. UTF-16’da, tek bir karakter bile olsa arama, yanlış pozitif sonuç vermez.</p>
-      <p>* Güvenilir olmayan algılama: [[pt:bom|bayt sırası işareti]] olmadan UTF-16 biçimi ve bayt sırası, yalnızca dolaylı kanıtlarla (istatistikler veya varsa vekil çiftler) tespit edilebilir. İyi bilinen [[pt:ascii|ASCII]] dizesi “Bush hid the facts” (Bush gerçekleri sakladı), Windows’un UCS-2’yi istatistiksel olarak tespit etmesini engeller.</p>
+      <p>* Güvenilir olmayan algılama: [[pt:bom|bayt sırası işareti]] olmadan UTF-16 biçimi ve bayt sırası, yalnızca dolaylı kanıtlarla (istatistikler veya varsa vekil çiftler) tespit edilebilir. İyi bilinen [[pt:ascii|ASCII]] dizesi “Bush hid the facts” (''Bush gerçekleri sakladı''), Windows’un UCS-2’yi istatistiksel olarak tespit etmesini engeller.</p>
       <p>* Tekdüze olmayan: UTF-16 sözcüklerine göre sıralama, karakter kodlarına göre sıralamadan farklıdır.</p>
       <p />
       <p>Yazılımlar arası değişim biçimi olarak UTF-16, çoğunlukla Windows ve Mac/Motorola kaynaklı ikili dosyalarda (örneğin, TrueType yazı tiplerinde) kullanılır. Bu dosyaların bayt sıralama işaretine ihtiyacı yoktur; metin dosyalarında UTF-16BE için FE{{_}}FF ve UTF-16LE için FF{{_}}FE’dir. Program arayüzü biçimi olarak Windows, Java, JavaScript ve Qt’de kullanılır.</p>
