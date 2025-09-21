@@ -30,10 +30,11 @@ Subtotal: 138
 - 13005: craggy
 - 13006: craggy
 - 1300B: craggy
+- 1300F: craggy
 - 1301C: craggy
 - 1301D: craggy
 
-Subtotal: 8
+Subtotal: 9
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -564,4 +565,4 @@ Subtotal: 163
 
 Subtotal: 1
 
-Total: 663
+Total: 664
