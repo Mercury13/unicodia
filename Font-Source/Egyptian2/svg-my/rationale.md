@@ -25,8 +25,11 @@ Subtotal: 138
 
 # Misrenders / basic
 - 13000: made better A1 for another reason
+- 13002: craggy
+- 13003: craggy
+- 13005: craggy
 
-Subtotal: 1
+Subtotal: 4
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -557,4 +560,4 @@ Subtotal: 163
 
 Subtotal: 1
 
-Total: 656
+Total: 659
