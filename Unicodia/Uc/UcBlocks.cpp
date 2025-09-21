@@ -1244,7 +1244,7 @@ constinit const uc::Block uc::blocks[] {
             "Cypro-Minoan",
             { EcScript::Cpmn, 0 }, MapSubtype::DEAD, EcScript::Cpmn },
     // Egyptian hiero OK
-    { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA, Ifg::APPROX_PART },
+    { 0x13000, 0x1342F, { 0x13000, EcContinent::AFRICA, Ifg::APPROX_PART | Ifg::PAINT_SVG },
             "Egyptian Hieroglyphs",
             { EcScript::Egyp, 0 }, MapSubtype::DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::COLLAPSIBLE },
