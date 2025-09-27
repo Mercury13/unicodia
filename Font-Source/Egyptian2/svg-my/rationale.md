@@ -33,11 +33,12 @@ Subtotal: 138
 - 1300A: craggy
 - 1300B: craggy
 - 1300C: craggy
+- 1300D: bad heel, but managed to make the entire hiero from 02
 - 1300F: craggy
 - 1301C: craggy
 - 1301D: craggy
 
-Subtotal: 12
+Subtotal: 13
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -570,4 +571,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 669
+Total: 670
