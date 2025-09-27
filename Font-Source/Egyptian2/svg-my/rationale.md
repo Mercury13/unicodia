@@ -41,8 +41,10 @@ Subtotal: 138
 - 1301C: craggy
 - 1301D: craggy
 - 1301E: palm up, arm a bit lower
+- 13012: per 134A0, used to be hands out
+- 13021: per 134A0, used to be hands out
 
-Subtotal: 17
+Subtotal: 19
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -578,4 +580,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 677
+Total: 679
