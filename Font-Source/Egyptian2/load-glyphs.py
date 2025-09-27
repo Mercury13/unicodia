@@ -157,6 +157,7 @@ LOAF = 700
 BUCKLER = 800
 BOWSTRING = 800
 COILED_ROPE = 800
+BOWING = 950
 # General width-limited (=negative)
 NORMAL = CELLHEIGHT
 SQUARE = -1000
@@ -172,6 +173,7 @@ COILED_WIDE = -1450
 
 GLYPH_SIZES = {
     0x13010: SQUARE,  # corpse
+    0x13012: SQUARE, 0x13013: BOWING,  # horiz man / bowing man
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
     0x1348E: MEDWIDE,
