@@ -40,8 +40,9 @@ Subtotal: 138
 - 1301B: beard god→king, enlarged triangular thing, aligned staff to feet
 - 1301C: craggy
 - 1301D: craggy
+- 1301E: palm up, arm a bit lower
 
-Subtotal: 16
+Subtotal: 17
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -576,4 +577,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 675
+Total: 676
