@@ -133,7 +133,7 @@ def improveGlyph(glyph, logBad):
         isOk = True
     elif logBad:
         nSelfIntersecting += 1
-        log.write("{} self-intersects, {} so far\n".format(
+        log.write("CRIT: {} self-intersects, {} so far\n".format(
                 glyph.glyphname, nSelfIntersecting))
     #glyph.removeOverlap()
     # Correct direction
@@ -411,7 +411,7 @@ def loadManualGlyph(font, code, glyphName, fname, logName):
     glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
     fixBearings(glyph)
     if glyph.selfIntersects():
-        log.write("{} is {}, and still self-intersects!\n".format(glyph.glyphname, logName))
+        log.write("CRIT: {} is {}, and still self-intersects!\n".format(glyph.glyphname, logName))
 
 def getManualName(dirName, glyphName):
     return "{}/{}_UnicodiaSesh.svg".format(dirName, glyphName)
@@ -423,6 +423,10 @@ def loadMyGlyph(font, sHex, cp, svgName):
     glyph = newGlyph(font, cp, newGlyphName)
     newSvgHeight = getSvgHeight(svgName)
     loadGlyph(glyph, cp, svgName, newSvgHeight, True)
+
+def checkLowPriority(fname):
+    if os.path.exists(fname):
+        log.write("WARN: {} exists!\n".format(fname))
 
 # import hieroglyphs
 def loadUnikemet():
@@ -444,9 +448,13 @@ def loadUnikemet():
                             sHex = sOldCp[2:]
                             code = int(sHex, base=16)
                             if (isCpGood(code)):
+                                extensionName = "svg-ex/{}.svg".format(sHex)
                                 svgName = "svg-my/{}.svg".format(sHex)
                                 if os.path.exists(svgName):
+                                    checkLowPriority(extensionName)
                                     loadMyGlyph(font, sHex, code, svgName)
+                                elif os.path.exists(extensionName):
+                                    loadMyGlyph(font, sHex, code, extensionName)
                         hasSeshGlyph = False
                     sOldCp = sCp
                     if sCommand == 'kEH_JSesh':
@@ -462,27 +470,39 @@ def loadUnikemet():
                             cacheName = "cache/{}.svg".format(sValue)                        
                             manualName = getManualName('manual', glyphName)
                             manualWideName = getManualName('manual-wide', glyphName)
+                            extensionName = "svg-ex/{}.svg".format(sHex)
                             reallyMyName = "svg-my/{}.svg".format(sHex)
                             svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
-                                if os.path.exists(manualName):
-                                    log.write("{} exists!\n".format(manualName))
-                                if os.path.exists(manualWideName):
-                                    log.write("{} exists!\n".format(manualWideName))
-                                if os.path.exists(cacheName):
-                                    log.write("{} exists!\n".format(cacheName))
+                                checkLowPriority(manualWideName)
+                                checkLowPriority(manualName)
+                                checkLowPriority(extensionName)
+                                checkLowPriority(svgRemadeName)
+                                checkLowPriority(cacheName)
                                 loadMyGlyph(font, sHex, code, reallyMyName)
                             elif os.path.exists(manualWideName):
-                                # Manual glyph
+                                # Manual-wide glyph
+                                checkLowPriority(manualName)
+                                checkLowPriority(extensionName)
+                                checkLowPriority(svgRemadeName)
+                                checkLowPriority(cacheName)
                                 loadManualGlyph(font, code, glyphName, manualWideName, 'manual-wide')
                             elif os.path.exists(manualName):
                                 # Manual glyph
+                                checkLowPriority(extensionName)
+                                checkLowPriority(svgRemadeName)
+                                checkLowPriority(cacheName)
                                 loadManualGlyph(font, code, glyphName, manualName, 'manual')
+                            elif os.path.exists(extensionName):
+                                checkLowPriority(svgRemadeName)
+                                checkLowPriority(cacheName)
+                                loadMyGlyph(font, sHex, code, extensionName)
                             elif os.path.exists(svgRemadeName):
                                 glyph = newGlyph(font, code, glyphName)
                                 svgHeight = getSvgHeight(svgRemadeName)
+                                checkLowPriority(cacheName)
                                 loadGlyph(glyph, code, svgRemadeName, svgHeight, True)
                             elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
@@ -494,7 +514,7 @@ def loadUnikemet():
                                 isGood = loadGlyph(glyph, code, svgName, svgHeight, False)
                                 if not isGood:
                                     # Run Inkscape
-                                    log.write("Forced to run Inkscape!\n")
+                                    log.write("NOTE: Forced to run Inkscape on {}.\n".format(glyphName))
                                     cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
                                     os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                     glyph.clear()
