@@ -143,8 +143,9 @@ Subtotal: 17
 - 1375C: short hair
 - 13766: vertical ankh
 - 13767: same
-- 137EC: man’s hair/beard
-- 137EF: no beard, no collar: ONE HUNDRED
+- 13772: stretched heel → normal, white legs → black
+- 137EC: man’s hair/beard: ONE HUNDRED
+- 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
@@ -243,8 +244,8 @@ Subtotal: 17
 - 13C54: same
 - 13C55: same
 - 13C57: same
-- 13C58: this one has one feather
-- 13C81: rope rather than feather: TWO HUNDRED
+- 13C58: this one has one feather: TWO HUNDRED
+- 13C81: rope rather than feather
 - 13C85: loop on the end of perch
 - 13C96: no base
 - 13C98: feather → loop
@@ -343,8 +344,8 @@ Subtotal: 17
 - 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
-- 14184: thinner “sun”, base for 83
-- 141D6: no loop: THREE HUNDRED
+- 14184: thinner “sun”, base for 83: THREE HUNDRED
+- 141D6: no loop
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
@@ -402,7 +403,7 @@ Subtotal: 17
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 356
+Subtotal: 357
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -577,4 +578,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 676
+Total: 677
