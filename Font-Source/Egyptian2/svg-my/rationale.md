@@ -36,10 +36,11 @@ Subtotal: 138
 - 1300D: bad heel, but managed to make the entire hiero from 00/02
 - 1300E: bad heel, don’t need beard, a bit craggy, too much detail, but managed to make the entire hiero from 02
 - 1300F: craggy
+- 13019: lots of bugs (beard, hair…)
 - 1301C: craggy
 - 1301D: craggy
 
-Subtotal: 14
+Subtotal: 15
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -48,6 +49,7 @@ Subtotal: 14
 - 1347D: covered
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134CB: removed beard per NewG, a little bit bigger ankh
+- 134D6: automation glitched → maybe just enlarge rag?
 - 134D9: shorter clothes
 - 134E4: king’s beard
 - 134E6: campaign for sitting with props, vessel on the head bigger
@@ -140,8 +142,8 @@ Subtotal: 14
 - 13766: vertical ankh
 - 13767: same
 - 137EC: man’s hair/beard
-- 137EF: no beard, no collar
-- 137F1: no beard, no collar: ONE HUNDRED
+- 137EF: no beard, no collar: ONE HUNDRED
+- 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
 - 137F4: no beard, lower branches
 - 137F5: man’s hair/beard/clothing
@@ -240,8 +242,8 @@ Subtotal: 14
 - 13C55: same
 - 13C57: same
 - 13C58: this one has one feather
-- 13C81: rope rather than feather
-- 13C85: loop on the end of perch: TWO HUNDRED
+- 13C81: rope rather than feather: TWO HUNDRED
+- 13C85: loop on the end of perch
 - 13C96: no base
 - 13C98: feather → loop
 - 13C99: loop on perch
@@ -340,8 +342,8 @@ Subtotal: 14
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
 - 14184: thinner “sun”, base for 83
-- 141D6: no loop
-- 141D7: same: THREE HUNDRED
+- 141D6: no loop: THREE HUNDRED
+- 141D7: same
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
 - 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
@@ -398,7 +400,7 @@ Subtotal: 14
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 355
+Subtotal: 356
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -573,4 +575,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 672
+Total: 674
