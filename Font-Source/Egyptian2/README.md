@@ -19,6 +19,7 @@ Meaning of directories:
   - manual uniting
   - removal of red
   - nudging vertices to eliminate situation “program 1 sees intersection, program 2 doesn’t” 
+  - simplification
 - cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
 - manual: fixed directly in FontForge, everything is done manually except bearings (gradually phasing out this directory)
 - manual-wide: same, but accent that the image is wide

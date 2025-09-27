@@ -27,6 +27,7 @@ Subtotal: 138
 - 13000: made better A1 for another reason
 - 13002: craggy
 - 13003: craggy
+- 13004: craggy, took man from extension, wall from 05
 - 13005: craggy
 - 13006: craggy
 - 13008: really wrong, after 13475
@@ -44,7 +45,7 @@ Subtotal: 138
 - 13012: per 134A0, used to be hands out
 - 13021: per 134A0, used to be hands out
 
-Subtotal: 19
+Subtotal: 20
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -580,4 +581,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 679
+Total: 680
