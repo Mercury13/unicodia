@@ -36,7 +36,6 @@ Subtotal: 138
 - 1300C: craggy
 - 1300D: bad heel, but managed to make the entire hiero from 00/02
 - 1300E: bad heel, don’t need beard, a bit craggy, too much detail, but managed to make the entire hiero from 02
-- 1300F: craggy
 - 13012: a bit craggy, per 022ex, arms a bit more tucked
 - 13019: lots of bugs (beard, hair…)
 - 1301B: beard god→king, enlarged triangular thing, aligned staff to feet
@@ -46,7 +45,7 @@ Subtotal: 138
 - 13012: per 134A0, used to be hands out
 - 13021: per 134A0, used to be hands out
 
-Subtotal: 21
+Subtotal: 20
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -582,4 +581,4 @@ Subtotal: 164
 
 Subtotal: 1
 
-Total: 681
+Total: 680
