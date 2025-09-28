@@ -410,6 +410,7 @@ Subtotal: 357
 
 # Duped with NewGardiner
 - 13007: basic, after 08
+- 13025: franken, t6he main source is 24
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
@@ -574,11 +575,11 @@ Subtotal: 357
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 164
+Subtotal: 165
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 680
+Total: 681
