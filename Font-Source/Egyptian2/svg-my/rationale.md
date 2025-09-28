@@ -48,8 +48,10 @@ Subtotal: 138
 - 1302D: after 2E
 - 1302E: salvaged somewhere, beard king→god
 - 1302F: beard god→king, small improvements
+- 13030: beard god→king, after 2F
+- 13031: beard god→king, after 2F
 
-Subtotal: 24
+Subtotal: 26
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -586,4 +588,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 685
+Total: 687

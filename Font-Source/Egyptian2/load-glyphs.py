@@ -29,7 +29,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1302F)) \
+    return ((code >= 0x13000) and (code <= 0x13037)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
