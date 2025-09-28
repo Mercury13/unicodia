@@ -56,8 +56,9 @@ Subtotal: 138
 - 13035: taken from advanced
 - 13036: taken from advanced
 - 13037: taken from advanced
+- 13038: per 1354F
 
-Subtotal: 32
+Subtotal: 33
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -594,4 +595,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 693
+Total: 694
