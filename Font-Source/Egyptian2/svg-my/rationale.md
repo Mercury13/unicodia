@@ -50,8 +50,11 @@ Subtotal: 138
 - 1302F: beard god→king, small improvements
 - 13030: beard god→king, after 2F
 - 13031: beard god→king, after 2F
+- 13032: taken from advanced
+- 13033: taken from advanced
+- 13034: taken from advanced
 
-Subtotal: 26
+Subtotal: 29
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -588,4 +591,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 687
+Total: 690
