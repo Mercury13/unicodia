@@ -44,8 +44,12 @@ Subtotal: 138
 - 1301E: palm up, arm a bit lower
 - 13012: per 134A0, used to be hands out
 - 13021: per 134A0, used to be hands out
+- 1302C: extension, greatly simplified, shortened giraffes’ legs
+- 1302D: after 2E
+- 1302E: salvaged somewhere, beard king→god
+- 1302F: beard god→king, small improvements
 
-Subtotal: 20
+Subtotal: 24
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -582,4 +586,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 681
+Total: 685
