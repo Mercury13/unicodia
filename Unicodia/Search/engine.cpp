@@ -78,7 +78,7 @@ namespace {
         { u8"WOMAN", srh::HaystackClass::EMOJI | srh::HaystackClass::EGYPTIAN },
     };
 
-    constexpr auto ALL_SEPARATORS = u8" ,():";
+    constexpr auto ALL_SEPARATORS = u8" ,():/";
 
     template <size_t N>
     consteval bool isAsc(const DicWord (&x)[N])
