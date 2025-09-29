@@ -64,8 +64,10 @@ Subtotal: 138
 - 13040: after 3E/3F, and Noto 40
 - 13041: craggy, extension has wrong legs, after 00
 - 13042: extension, beard
+- 13043: enlarged hoe just a little
+- 13045: after 526
 
-Subtotal: 40
+Subtotal: 42
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -602,4 +604,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 701
+Total: 703
