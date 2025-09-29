@@ -50,16 +50,16 @@ Subtotal: 138
 - 1302F: beard god→king, small improvements
 - 13030: beard god→king, after 2F
 - 13031: beard god→king, after 2F
-- 13032: taken from advanced
-- 13033: taken from advanced
-- 13034: taken from advanced
-- 13035: taken from advanced
-- 13036: taken from advanced
-- 13037: taken from advanced
+- 13032: taken from block A
+- 13033: taken from block A
+- 13034: taken from block A
+- 13035: taken from block A
+- 13036: taken from block A
+- 13037: taken from block A
 - 13038: after 1354F
-- 13039: taken from advanced, beard Egyptian→none
-- 1303A: taken from advanced, replaced stick and Bin Laden
-- 1303E: taken from advanced, reduced height, more pronounced beard
+- 13039: extension, beard Egyptian→none
+- 1303A: extension, replaced stick and Bin Laden
+- 1303E: extension, reduced height, more pronounced beard
 - 1303F: after 3E
 
 Subtotal: 35
