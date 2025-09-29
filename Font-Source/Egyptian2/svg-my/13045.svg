@@ -4,7 +4,7 @@
    height="1000"
    version="1.1"
    id="svg1"
-   sodipodi:docname="13044.svg"
+   sodipodi:docname="13045.svg"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.53386562"
-     inkscape:cx="456.10729"
-     inkscape:cy="634.05469"
+     inkscape:zoom="0.755"
+     inkscape:cx="621.8543"
+     inkscape:cy="449.66887"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -39,9 +39,9 @@
   <circle
      style="fill:#000000;fill-rule:evenodd;stroke-width:18"
      id="path2"
-     cx="492.16504"
-     cy="21.07272"
-     r="20.136154" />
+     cx="492.16507"
+     cy="23.414133"
+     r="22.477568" />
   <use
      x="0"
      y="0"
