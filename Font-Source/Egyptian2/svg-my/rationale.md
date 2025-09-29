@@ -57,8 +57,10 @@ Subtotal: 138
 - 13036: taken from advanced
 - 13037: taken from advanced
 - 13038: per 1354F
+- 13039: taken from advanced, beard Egyptian→none
+- 1303A: taken from advanced, replaced stick and Bin Laden
 
-Subtotal: 33
+Subtotal: 35
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -595,4 +597,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 694
+Total: 696
