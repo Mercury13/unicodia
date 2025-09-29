@@ -61,8 +61,11 @@ Subtotal: 138
 - 1303A: extension, replaced stick and Bin Laden
 - 1303E: extension, reduced height, more pronounced beard
 - 1303F: after 3E
+- 13040: after 3E/3F, and Noto 40
+- 13041: craggy, extension has wrong legs, after 00
+- 13042: extension, beard
 
-Subtotal: 35
+Subtotal: 40
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -599,4 +602,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 698
+Total: 701
