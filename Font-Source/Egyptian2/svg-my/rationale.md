@@ -56,9 +56,11 @@ Subtotal: 138
 - 13035: taken from advanced
 - 13036: taken from advanced
 - 13037: taken from advanced
-- 13038: per 1354F
+- 13038: after 1354F
 - 13039: taken from advanced, beard Egyptian→none
 - 1303A: taken from advanced, replaced stick and Bin Laden
+- 1303E: taken from advanced, reduced height, more pronounced beard
+- 1303F: after 3E
 
 Subtotal: 35
 
@@ -597,4 +599,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 696
+Total: 698

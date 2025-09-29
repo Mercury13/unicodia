@@ -29,7 +29,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1303A)) \
+    return ((code >= 0x13000) and (code <= 0x1303F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -174,6 +174,7 @@ COILED_WIDE = -1450
 GLYPH_SIZES = {
     0x13010: SQUARE,  # corpse
     0x13012: SQUARE, 0x13013: BOWING,  # horiz man / bowing man
+    0x1303F: SQUARE,  # lying mummy
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
     0x1348E: MEDWIDE,
