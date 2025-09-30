@@ -69,8 +69,10 @@ Subtotal: 138
 - 13048: beard god→king (who knows, but the consensus is king)
 - 1304B: extension, enlarged sistrum
 - 1304F: straighter arms
+- 13050: +tits
+- 13059: enlarged sistrum
 
-Subtotal: 45
+Subtotal: 47
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -436,6 +438,7 @@ Subtotal: 357
 # Duped with NewGardiner
 - 13007: basic, after 08
 - 13025: franken, t6he main source is 24
+- 13065: after C9, no uraeus
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
@@ -600,11 +603,11 @@ Subtotal: 357
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 165
+Subtotal: 166
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 706
+Total: 709
