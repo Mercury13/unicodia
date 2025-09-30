@@ -71,8 +71,9 @@ Subtotal: 138
 - 1304F: straighter arms
 - 13050: +tits
 - 13059: enlarged sistrum
+- 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 47
+Subtotal: 48
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -610,4 +611,4 @@ Subtotal: 166
 
 Subtotal: 1
 
-Total: 709
+Total: 710
