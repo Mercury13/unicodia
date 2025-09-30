@@ -66,8 +66,11 @@ Subtotal: 138
 - 13042: extension, beard
 - 13043: enlarged hoe just a little
 - 13045: after 526
+- 13048: beard god→king (who knows, but the consensus is king)
+- 1304B: extension, enlarged sistrum
+- 1304F: straighter arms
 
-Subtotal: 42
+Subtotal: 45
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -604,4 +607,4 @@ Subtotal: 165
 
 Subtotal: 1
 
-Total: 703
+Total: 706
