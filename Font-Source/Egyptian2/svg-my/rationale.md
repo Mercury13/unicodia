@@ -74,10 +74,12 @@ Subtotal: 138
 - 1305B: added hand
 - 1305E: 5B reversed
 - 13063: craggy knees
+- 13064: enlarged his pencil and beard, simplified plume, removed sun
 - 13067: ankh angling forward
+- 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 52
+Subtotal: 54
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -616,4 +618,4 @@ Subtotal: 166
 
 Subtotal: 1
 
-Total: 715
+Total: 717
