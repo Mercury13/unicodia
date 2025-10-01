@@ -74,9 +74,10 @@ Subtotal: 138
 - 1305B: added hand
 - 1305E: 5B reversed
 - 13063: craggy knees
+- 13067: ankh angling forward
 - 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 51
+Subtotal: 52
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -211,6 +212,7 @@ Subtotal: 51
 - 138AA: removed feather in sun, simplified
 - 138A8: arm lower
 - 138AC: arm lower
+- 138B5: mace is even taller that lioness’ head
 - 138CF: arm lower, fork bigger, ankh bigger, removed fine details
 - 138D0: same
 - 138D4: same
@@ -277,8 +279,8 @@ Subtotal: 51
 - 13C53: same
 - 13C54: same
 - 13C55: same
-- 13C57: same
-- 13C58: this one has one feather: TWO HUNDRED
+- 13C57: same: TWO HUNDRED
+- 13C58: this one has one feather
 - 13C81: rope rather than feather
 - 13C85: loop on the end of perch
 - 13C96: no base
@@ -313,7 +315,7 @@ Subtotal: 51
 - 13F1E: greatly redrawn after 1D
 - 13F22: just one N27 rather than two
 - 13F46: too thick; decided to take the inner path and turn to outline
-- 13F4D: campaign for plans
+- 13F4D: campaign for plans (first of all consistency, then minor glitches)
 - 13F4E: campaign for plans
 - 13F4F: campaign for plans
 - 13F51: campaign for plans
@@ -377,8 +379,8 @@ Subtotal: 51
 - 14177: not slanted, after 76
 - 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
-- 14183: after 84
-- 14184: thinner “sun”, base for 83: THREE HUNDRED
+- 14183: after 84: THREE HUNDRED
+- 14184: thinner “sun”, base for 83
 - 141D6: no loop
 - 141D7: same
 - 141E8: redrew for more pronounced “bell”
@@ -437,7 +439,7 @@ Subtotal: 51
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 357
+Subtotal: 358
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -614,4 +616,4 @@ Subtotal: 166
 
 Subtotal: 1
 
-Total: 713
+Total: 715
