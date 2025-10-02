@@ -448,6 +448,7 @@ Subtotal: 358
 # Duped with NewGardiner
 - 13007: basic, after 08
 - 13025: franken, t6he main source is 24
+- 1304C: after A282, drew skirt
 - 13065: after C9, no uraeus
 - 1306D: was present in JSesh but not marked, replaced ankh
 - 13502: campaign for standing with props
@@ -615,11 +616,11 @@ Subtotal: 358
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 168
+Subtotal: 169
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 721
+Total: 722
