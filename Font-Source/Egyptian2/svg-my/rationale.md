@@ -77,10 +77,11 @@ Subtotal: 138
 - 13064: enlarged his pencil and beard, simplified plume, removed sun
 - 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
+- 13068: after 137E8, present is utterly wrong
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 55
+Subtotal: 56
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -508,6 +509,7 @@ Subtotal: 358
 - 137D4: found similar, drew sun
 - 1378F: after 8E
 - 137E8: campaign for millions
+- 137E9: campaign for millions
 - 137F0: after EF, man with palm branches for million
 - 13817: after initial 16
 - 13819: after 17
@@ -613,11 +615,11 @@ Subtotal: 358
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 167
+Subtotal: 168
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 719
+Total: 721
