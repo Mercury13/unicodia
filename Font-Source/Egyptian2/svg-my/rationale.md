@@ -77,7 +77,7 @@ Subtotal: 138
 - 13064: enlarged his pencil and beard, simplified plume, removed sun
 - 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
-- 13068: after 137E8, present is utterly wrong
+- 13068: now looks somewhat like Heh from Wikipedia
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 
