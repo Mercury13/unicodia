@@ -75,11 +75,12 @@ Subtotal: 138
 - 1305E: 5B reversed
 - 13063: craggy knees
 - 13064: enlarged his pencil and beard, simplified plume, removed sun
+- 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 54
+Subtotal: 55
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -447,6 +448,7 @@ Subtotal: 358
 - 13007: basic, after 08
 - 13025: franken, t6he main source is 24
 - 13065: after C9, no uraeus
+- 1306D: was present in JSesh but not marked, replaced ankh
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
@@ -611,11 +613,11 @@ Subtotal: 358
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 166
+Subtotal: 167
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 717
+Total: 719
