@@ -70,6 +70,9 @@ Subtotal: 138
 - 1304B: extension, enlarged sistrum
 - 1304F: straighter arms
 - 13050: +tits
+- 13051: bigger belly, arms a bit down
+- 13052: same
+- 13053: same, plus took arrows from B4 extension
 - 13055: long hair + ribbon taken from B2
 - 13059: enlarged sistrum
 - 1305B: added hand
@@ -82,7 +85,7 @@ Subtotal: 138
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 
-Subtotal: 57
+Subtotal: 60
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -624,4 +627,4 @@ Subtotal: 169
 
 Subtotal: 1
 
-Total: 723
+Total: 726
