@@ -84,8 +84,9 @@ Subtotal: 138
 - 13068: now looks somewhat like Heh from Wikipedia
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
+- 13095: shorter tail
 
-Subtotal: 60
+Subtotal: 61
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -627,4 +628,4 @@ Subtotal: 169
 
 Subtotal: 1
 
-Total: 726
+Total: 727
