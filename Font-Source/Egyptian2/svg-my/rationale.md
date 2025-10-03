@@ -459,6 +459,7 @@ Subtotal: 360
 # Duped with NewGardiner
 - 13007: basic, after 08
 - 13025: franken, t6he main source is 24
+- 13047: made that Bin Laden, the original was disunified to 13488
 - 1304C: after A282, drew skirt
 - 13065: after C9, no uraeus
 - 1306D: was present in JSesh but not marked, replaced ankh
@@ -629,11 +630,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 171
+Subtotal: 172
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 735
+Total: 736
