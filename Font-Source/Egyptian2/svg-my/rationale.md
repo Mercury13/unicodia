@@ -85,8 +85,11 @@ Subtotal: 138
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 - 13095: shorter tail
+- 13096: after block-A
+- 13097: enlarged arms
+- 13098: after block-A
 
-Subtotal: 61
+Subtotal: 64
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -628,4 +631,4 @@ Subtotal: 169
 
 Subtotal: 1
 
-Total: 727
+Total: 730
