@@ -85,7 +85,7 @@ Subtotal: 138
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
 - 13095: shorter tail
-- 13096: after block-A
+- 13096: after block-A, enlarged arms
 - 13097: enlarged arms
 - 13098: after block-A
 - 1309A: franken from craggy 1309A and nice 9B
