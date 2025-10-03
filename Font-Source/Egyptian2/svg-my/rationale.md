@@ -127,7 +127,9 @@ Subtotal: 64
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
+- 13658: beard ambiguous → king
 - 13659: beard god → king
+- 1365A: beard ambiguous → king
 - 1365B: beard king → god
 - 1365C: beard god → king
 - 1365D: beard king → god
@@ -189,9 +191,9 @@ Subtotal: 64
 - 1375B: short hair
 - 1375C: short hair
 - 13766: vertical ankh
-- 13767: same
+- 13767: same: ONE HUNDRED
 - 13772: stretched heel → normal, white legs → black
-- 137EC: man’s hair/beard: ONE HUNDRED
+- 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
 - 137F2: no beard, no collar one of hieros for million
@@ -289,9 +291,9 @@ Subtotal: 64
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
-- 13C54: same
+- 13C54: same: TWO HUNDRED
 - 13C55: same
-- 13C57: same: TWO HUNDRED
+- 13C57: same
 - 13C58: this one has one feather
 - 13C81: rope rather than feather
 - 13C85: loop on the end of perch
@@ -389,9 +391,9 @@ Subtotal: 64
 - 1414D: bigger uraeus
 - 14176: back after 77
 - 14177: not slanted, after 76
-- 1417B: too thick lines, redrew
+- 1417B: too thick lines, redrew: THREE HUNDRED
 - 1417F: more symmetry, removed suns from uraei
-- 14183: after 84: THREE HUNDRED
+- 14183: after 84
 - 14184: thinner “sun”, base for 83
 - 141D6: no loop
 - 141D7: same
@@ -451,7 +453,7 @@ Subtotal: 64
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 358
+Subtotal: 360
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -497,6 +499,7 @@ Subtotal: 358
 - 13639: just drew a line
 - 13652: seat-covered #2
 - 13654: seat-covered #2
+- 13656: seat-covered #2, after 58
 - 13657: seat-covered #2
 - 136D2: 13478×2
 - 136DE: after DD
@@ -624,11 +627,11 @@ Subtotal: 358
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 169
+Subtotal: 170
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 730
+Total: 733
