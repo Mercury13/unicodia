@@ -88,8 +88,9 @@ Subtotal: 138
 - 13096: after block-A
 - 13097: enlarged arms
 - 13098: after block-A
+- 1309A: franken from craggy 1309A and nice 9B
 
-Subtotal: 64
+Subtotal: 65
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -542,6 +543,7 @@ Subtotal: 360
 - 139AF: after A8
 - 139B7: after B8
 - 139B9: after B8
+- 139BA: after 1309A
 - 139C3: after D35, too small in NewG
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
@@ -627,11 +629,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 170
+Subtotal: 171
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 733
+Total: 735
