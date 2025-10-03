@@ -309,6 +309,7 @@ Subtotal: 65
 - 13CB6: added uraeus
 - 13CB7: same
 - 13CDC: no beard
+- 13CF5: after F6 (had a bit different paws)
 - 13D28: drew claw from scratch
 - 13D6F: removed sun, curvier beard
 - 13D8F: removed sun
@@ -391,8 +392,8 @@ Subtotal: 65
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
-- 14177: not slanted, after 76
-- 1417B: too thick lines, redrew: THREE HUNDRED
+- 14177: not slanted, after 76: THREE HUNDRED
+- 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
 - 14184: thinner “sun”, base for 83
@@ -454,7 +455,7 @@ Subtotal: 65
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 360
+Subtotal: 361
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -568,6 +569,7 @@ Subtotal: 360
 - 13C1D: after 1C
 - 13C36: G29 + R7
 - 13C38: G29 + 37
+- 13C43: if it’s a guineafowl, let it be, IDK.
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13CDD: after DC
@@ -630,11 +632,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 172
+Subtotal: 173
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 736
+Total: 738
