@@ -89,8 +89,10 @@ Subtotal: 138
 - 13097: enlarged arms
 - 13098: after block-A
 - 1309A: franken from craggy 1309A and nice 9B
+- 130AB: strange shape of egg
+- 130AC: too thick outline
 
-Subtotal: 65
+Subtotal: 67
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -639,4 +641,4 @@ Subtotal: 173
 
 Subtotal: 1
 
-Total: 738
+Total: 740
