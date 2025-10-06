@@ -544,6 +544,7 @@ Subtotal: 360
 - 13900: after 01
 - 13925: after nearby (23?)
 - 13926: same
+- 1392D: after some woman’s head+arms
 - 13933: after 32
 - 13936: after 13FEC
 - 139AB: after AA
@@ -637,11 +638,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 173
+Subtotal: 174
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 743
+Total: 744
