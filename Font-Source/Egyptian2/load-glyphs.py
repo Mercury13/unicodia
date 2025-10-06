@@ -29,7 +29,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x130AC)) \
+    return ((code >= 0x13000) and (code <= 0x130FD)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -182,6 +182,15 @@ GLYPH_SIZES = {
     0x13088: MEDIUM, 0x13089: MEDIUM, 0x1308A: MEDIUM, # ears and faces
     0x1309C: WIDE,  # 2 arms
     0x130AC: SQUARE,  # fist
+    0x130D2: MEDWIDE, 0x130D3: WIDE, 0x130D4: MEDWIDE, 0x130D5: MEDWIDE,  # cows
+    0x130D6: MEDWIDE, 0x130D7: MEDWIDE, 0x130D8: MEDWIDE,
+    0x130DB: MEDWIDE, 0x130DC: MEDWIDE, 0x130DD: MEDWIDE, 0x130DE: MEDWIDE,  # bubalis, cow, sheep
+    0x130DF: MEDWIDE,  # pig…
+    0x130E1: MEDWIDE, 0x130E2: MEDWIDE, 0x130E3: MEDWIDE, 0x130E4: MEDWIDE,  # jackal
+    0x130E5: MEDWIDE,  # jackal
+    0x130EB: WIDE, 0x130EC: MEDWIDE, 0x130ED: WIDE, 0x130EE: WIDE, 0x130EF: MEDWIDE, # misc. animals
+    0x130F0: MEDWIDE,  # elephant
+    0x130F6: MEDWIDE, 0x130F7: MEDWIDE,  # goat, monkey
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
     0x1348E: MEDWIDE,
@@ -245,6 +254,7 @@ GLYPH_SIZES = {
     0x13A53: CELLHEIGHT,
     0x13A7B: BUBALIS, # newborn bubalis
     0x13A85: WIDE,
+    0x13AAB: MEDWIDE, #goat
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
     0x13ABB: MEDWIDE,  # hyena
@@ -483,7 +493,6 @@ def loadUnikemet():
                             manualWideName = getManualName('manual-wide', glyphName)
                             extensionName = "svg-ex/{}.svg".format(sHex)
                             reallyMyName = "svg-my/{}.svg".format(sHex)
-                            svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
@@ -518,10 +527,12 @@ def loadUnikemet():
                             elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
                                 glyph = newGlyph(font, code, glyphName)
+                                svgHeight = getSvgHeight(svgName)  # requested rather than actual size
                                 loadGlyph(glyph, code, cacheName, svgHeight, True)
                             elif not isKnownBadGlyph:
                                 # Unknown glyph
                                 glyph = newGlyph(font, code, glyphName)
+                                svgHeight = getSvgHeight(svgName)
                                 isGood = loadGlyph(glyph, code, svgName, svgHeight, False)
                                 if not isGood:
                                     # Run Inkscape

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20.063749"
+   height="12.48"
+   id="svg1781"
+   sodipodi:version="0.32"
+   inkscape:version="0.44"
+   sodipodi:docname="D66.svg"
+   sodipodi:docbase="/home/rosmord/Travail/Gsigns/Distribution">
+  <metadata
+     id="metadata1788">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:description>pour rendre le signe : D66 de la classification de Bob Richmond.
+Note, S. Rosmorduc: The Manuel (p. 95) gives this sign the code D245 (with D246 as a variant).</dc:description>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Serge Thomas</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>US22D66</dc:title>
+        <dc:date>17/04/06</dc:date>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1786" />
+  <sodipodi:namedview
+     inkscape:window-height="583"
+     inkscape:window-width="1009"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="29.887822"
+     inkscape:cx="10.031875"
+     inkscape:cy="6.2399998"
+     inkscape:window-x="154"
+     inkscape:window-y="269"
+     inkscape:current-layer="svg1781" />
+  <path
+     style="fill:#000000; stroke:none"
+     d=" M 6.343746 10.746041  Q 10.255724 10.55573 11.693639 10.227967  Q 13.131555 9.90021 14.326291 8.589168  Q 15.521031 7.278127 17.381865 5.152972  Q 19.242699 3.027817 18.840927 1.357297  Q 17.699051 0.257715 16.768633 3.789066  Q 15.542176 5.248128 12.624054 8.758333  Q 10.044264 9.117813 6.280308 10.45  L 6.343746 10.746041  Z  M 3.933122 10.746041  Q 3.446769 10.323125 3.298748 9.921354  L 2.960415 10.259687  Q 3.08729 11.042084 3.933122 10.746041  L 3.933122 10.746041  Z  M 3.044998 8.906355  L 6.343746 5.797919  L 6.978121 6.516878  L 3.848539 9.435  Q 4.250309 9.942501 5.244163 10.027083  Q 10.255724 8.293125 12.053118 8.06052  Q 14.188843 5.121253 15.77478 3.535317  L 16.02853 2.160838  Q 17.381865 -0.841868 19.877071 0.321152  Q 20.426861 1.54761 19.369574 3.810212  Q 18.312279 6.072816 13.279575 10.640312  Q 10.128848 11.486146 7.792233 11.486146  Q 5.455622 11.486146 3.425623 12.331978  Q 2.57979 12.522291 1.924269 11.232395  L 0.570937 12.48  L 0 11.739895  L 1.501353 10.34427  Q 1.289895 9.498437 2.326041 8.737188  Q 3.044998 7.954792 3.1613 8.324844  Q 3.277602 8.694897 3.044998 8.906355  Z "
+     id="path1783" />
+</svg>

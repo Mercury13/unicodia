@@ -92,8 +92,9 @@ Subtotal: 138
 - 1309A: franken from craggy 1309A and nice 9B
 - 130AB: strange shape of egg
 - 130AC: too thick outline
+- 130B9: wanted to fit into 1100×1000
 
-Subtotal: 68
+Subtotal: 69
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -265,7 +266,6 @@ Subtotal: 68
 - 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13A85: greatly simplified
 - 13AA3: rotate 90°
-- 13AAB: took other goat, drew seal
 - 13AAC: aligned that goat
 - 13AB4: flip knife
 - 13AF0: holds staff
@@ -295,8 +295,8 @@ Subtotal: 68
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
-- 13C54: same: TWO HUNDRED
-- 13C55: same
+- 13C54: same
+- 13C55: same: TWO HUNDRED
 - 13C57: same
 - 13C58: this one has one feather
 - 13C81: rope rather than feather
@@ -395,8 +395,8 @@ Subtotal: 68
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
-- 14177: not slanted, after 76: THREE HUNDRED
-- 1417B: too thick lines, redrew
+- 14177: not slanted, after 76
+- 1417B: too thick lines, redrew: THREE HUNDRED
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
 - 14184: thinner “sun”, base for 83
@@ -458,7 +458,7 @@ Subtotal: 68
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 361
+Subtotal: 360
 
 # Duped with NewGardiner
 - 13007: basic, after 08
