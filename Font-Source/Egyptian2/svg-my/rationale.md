@@ -93,8 +93,10 @@ Subtotal: 138
 - 130AB: strange shape of egg
 - 130AC: too thick outline
 - 130B9: wanted to fit into 1100×1000
+- 130BC: strange dimensions + strange hook
+- 130ED: removed that line on the belly
 
-Subtotal: 69
+Subtotal: 71
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -642,4 +644,4 @@ Subtotal: 173
 
 Subtotal: 1
 
-Total: 741
+Total: 743
