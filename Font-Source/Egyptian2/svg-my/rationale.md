@@ -556,6 +556,7 @@ Subtotal: 360
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
 - 13A26: after 25
+- 13A69: the proper one had two set of horns, was forced to remove flail from improper :(
 - 13A8F: after 8E
 - 13A59: after 58
 - 13AA7: after A8
@@ -638,11 +639,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 174
+Subtotal: 175
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 744
+Total: 745
