@@ -556,7 +556,7 @@ Subtotal: 360
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
 - 13A26: after 25
-- 13A69: the proper one had two set of horns, was forced to remove flail from improper :(
+- 13A69: the proper one had two sets of horns, removed flail from the improper :(
 - 13A8F: after 8E
 - 13A59: after 58
 - 13AA7: after A8
