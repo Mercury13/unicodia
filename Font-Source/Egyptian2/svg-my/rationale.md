@@ -95,8 +95,10 @@ Subtotal: 138
 - 130B9: wanted to fit into 1100×1000
 - 130BC: strange dimensions + strange hook
 - 130ED: removed that line on the belly
+- 130FB: removed individual fingers
+- 130FC: after FB, squeezed monkey just a bit
 
-Subtotal: 71
+Subtotal: 73
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -563,6 +565,7 @@ Subtotal: 360
 - 13ABD: after BE
 - 13ABE: after 130F9
 - 13AE9: E8 + feather, baboon
+- 13AF7: after E45, baboon
 - 13B0A: after 09
 - 13B65: after 64
 - 13B7B: after other dogs and mace T3
@@ -639,11 +642,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 175
+Subtotal: 176
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 745
+Total: 748
