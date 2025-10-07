@@ -15,6 +15,7 @@ Meaning of directories:
 - svg-ex: SVGs from JSesh exceptions, possibly with my slight remakes
 - svg-my: rather big remakes, both new and existing
 - svg-remade: small remakes of extsting JSesh hieros w/o changing content:
+  - changing canvas and/or image size
   - subtracting white
   - manual uniting
   - removal of red
