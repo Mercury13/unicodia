@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.471875"
-     inkscape:cx="238.4106"
-     inkscape:cy="607.15232"
+     inkscape:zoom="0.94375"
+     inkscape:cx="189.13907"
+     inkscape:cy="568.47682"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,17 +44,17 @@
      id="path1" />
   <path
      style="fill:none;stroke:#613583;stroke-width:45;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 278.84315,660.6624 c 48.19872,58.25812 45.08852,116.83451 0,116.83451 H 74.852751 c -34.629225,0 -67.7462767,-46.86407 -46.389151,-84.78104 L 270.59813,262.83557 C 353.92607,114.89697 539.12792,22.50309 731.31157,22.50309"
+     d="m 336.26555,633.58413 c 63.1535,68.28129 58.6595,143.91278 -21.39591,143.91278 H 94.985201 c -64.417258,0 -84.872705,-62.85519 -58.381948,-108.80278 L 270.59813,262.83557 C 355.40512,115.73986 539.12792,22.50309 731.31157,22.50309"
      id="path2"
      sodipodi:nodetypes="cssssc" />
   <path
      id="path3"
      style="fill:none;stroke:#613583;stroke-width:45.0001;stroke-linecap:butt;stroke-miterlimit:3;stroke-dasharray:none"
-     d="m 499.59648,500.51361 c -98.96811,0 -179.19759,-36.01681 -179.19759,-60.87072 0,-24.85391 80.22949,-60.87068 179.19759,-60.87068"
+     d="m 486.10994,487.02707 c -98.96811,0 -179.19759,-36.01681 -179.19759,-60.87072 0,-24.85391 80.22949,-60.87068 179.19759,-60.87068"
      sodipodi:nodetypes="czc" />
   <path
      style="fill:none;stroke:#613583;stroke-width:45.0001;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 243.51464,310.919 c 181.2468,-73.05386 319.64947,-86.5218 518.14262,-6.08451"
+     d="m 242.87597,310.919 c 181.2468,-73.05386 319.64947,-86.5218 518.14262,-6.08451"
      id="path4"
      sodipodi:nodetypes="cc" />
   <use
@@ -62,6 +62,6 @@
      y="0"
      xlink:href="#path3"
      id="use2"
-     transform="matrix(-1,0,0,1,999.17153,5.6290451e-7)"
+     transform="matrix(-1,0,0,1,972.19845,6.3877346e-8)"
      style="stroke-width:0.788796" />
 </svg>
