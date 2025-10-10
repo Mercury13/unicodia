@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="800"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="1308A.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <path
+     id="use2"
+     style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#000000;stroke-miterlimit:3;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+     d="m 731.3125,0.00390625 c -199.39502,0 -391.96023,94.91996575 -480.31836,251.78906375 L 8.859375,681.67383 c -28.920947,51.34561 12.352487,118.32226 65.994141,118.32226 H 278.84375 c 30.76685,0 56.80523,-20.69734 57.47852,-58.66992 0.53171,-29.98821 -13.53074,-62.83995 -40.14258,-95.00586 -7.92109,-9.57531 -22.10491,-10.91587 -31.67969,-2.99414 -9.5747,7.92166 -10.91438,22.10542 -2.99219,31.67969 21.58688,26.09221 30.0681,51.65697 29.82227,65.52148 0.0515,9.2026 -3.2747,14.26844 -12.48633,14.46875 H 74.853516 c -15.547488,0 -40.489834,-26.9073 -26.785157,-51.23828 L 259.23047,328.86523 c 174.68063,-69.34193 302.32905,-80.8409 493.97656,-3.17773 11.51654,4.66668 24.63565,-0.88597 29.30274,-12.40234 4.66668,-11.51654 -0.88597,-24.63566 -12.40235,-29.30274 -88.67136,-35.93315 -166.93155,-53.46323 -242.33008,-55.60156 -78.37036,-2.22261 -153.64907,12.1826 -234.3125,39.83008 C 373.35749,132.43159 548.8655,45.003906 731.3125,45.003906 c 12.42641,0 22.5,-10.073593 22.5,-22.5 0,-12.426407 -10.07359,-22.49999975 -22.5,-22.49999975 z M 499.57422,356.27148 c -93.73737,0.001 -201.67578,33.13314 -201.67578,83.3711 0,50.23796 107.97558,83.36979 201.67578,83.37109 93.7002,0.001 201.69922,-33.1353 201.69922,-83.37109 0,-50.23579 -107.96185,-83.37218 -201.69922,-83.3711 z m 0,45 c 81.72311,-0.002 140.60766,25.45032 153.79297,38.37305 -13.17876,12.91508 -72.05466,38.36877 -153.78125,38.36914 -81.72659,3.7e-4 -140.60221,-25.4536 -153.78125,-38.36914 13.18884,-12.92637 72.04642,-38.37058 153.76953,-38.37305 z"
+     sodipodi:nodetypes="sssssscscssssccccscssszzzzzzczcz" />
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.2359375"
+     inkscape:cx="-1074.4371"
+     inkscape:cy="1540.6623"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="-0.0020120755,400"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+</svg>
