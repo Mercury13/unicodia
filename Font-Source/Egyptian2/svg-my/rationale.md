@@ -84,7 +84,8 @@ Subtotal: 138
 - 13068: now looks somewhat like Heh from Wikipedia
 - 13070: Ptah beard god→king
 - 13072: greatly simplified Bes, half + reflection
-- 13092: too thick outline, decided to make it variable-width
+- 13091: too thick outline, decided to make it variable-width
+- 13092: same
 - 13095: shorter tail
 - 13096: after block-A, enlarged arms
 - 13097: enlarged arms
@@ -98,7 +99,7 @@ Subtotal: 138
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
 
-Subtotal: 73
+Subtotal: 74
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -649,4 +650,4 @@ Subtotal: 176
 
 Subtotal: 1
 
-Total: 748
+Total: 749

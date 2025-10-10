@@ -154,6 +154,7 @@ MEDIUM = 800
 # Special height-limited
 HARE = 700
 LOAF = 700
+SMALL_TIT = 700
 BUCKLER = 800
 BOWSTRING = 800
 COILED_ROPE = 800
@@ -172,16 +173,20 @@ BUBALIS = -1150
 COILED_WIDE = -1450
 
 GLYPH_SIZES = {
+    # A: Man
     0x13010: SQUARE,  # corpse
     0x13012: SQUARE, 0x13013: BOWING,  # horiz man / bowing man
     0x1303F: SQUARE,  0x13040: SQUARE, # lying mummy
+    # D: parts of human
     0x13076: MEDIUM,  # head in profile
     0x13081: TEENY, 0x13082: TEENY, 0x13084: TEENY, # parts of eyes
     0x13086: MEDIUM,  # parts of eyes
     0x1307D: MEDWIDE, 0x1307E: MEDWIDE, # eyes in rectangle
     0x13088: MEDIUM, 0x13089: MEDIUM, 0x1308A: MEDIUM, # ears and faces
+    0x13091: SMALL_TIT,  # tit
     0x1309C: WIDE,  # 2 arms
     0x130AC: SQUARE,  # fist
+    # E: animals
     0x130D2: MEDWIDE, 0x130D3: WIDE, 0x130D4: MEDWIDE, 0x130D5: MEDWIDE,  # cows
     0x130D6: MEDWIDE, 0x130D7: MEDWIDE, 0x130D8: MEDWIDE,
     0x130DB: MEDWIDE, 0x130DC: MEDWIDE, 0x130DD: MEDWIDE, 0x130DE: MEDWIDE,  # bubalis, cow, sheep
