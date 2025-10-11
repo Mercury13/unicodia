@@ -537,6 +537,7 @@ Subtotal: 360
 - 137F0: after EF, man with palm branches for million
 - 13817: after initial 16
 - 13819: after 17
+- 1381E: franken from 13064 and extension
 - 1383C: Imhotep is close to Ptah
 - 1383F: drew that Ptah
 - 13859: after 58
@@ -587,6 +588,7 @@ Subtotal: 360
 - 13C36: G29 + R7
 - 13C38: G29 + 37
 - 13C43: if it’s a guineafowl, let it be, IDK.
+- 13C4E: after 50
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13CDD: after DC
@@ -649,11 +651,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 181
+Subtotal: 183
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 755
+Total: 757
