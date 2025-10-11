@@ -543,6 +543,8 @@ Subtotal: 360
 - 13865: after 69
 - 13892: after 90
 - 1389B: after 9A
+- 138BA: B7 + filled uraeus + changed thing
+- 138BB: after BA but sun from scratch
 - 138EC: EB + ankh
 - 138FB: after FA
 - 13900: after 01
@@ -551,6 +553,7 @@ Subtotal: 360
 - 1392D: after some woman’s head+arms
 - 13933: after 32
 - 13936: after 13FEC
+- 13944: after extended D78
 - 139AB: after AA
 - 139AF: after A8
 - 139B7: after B8
@@ -646,11 +649,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 178
+Subtotal: 181
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 752
+Total: 755
