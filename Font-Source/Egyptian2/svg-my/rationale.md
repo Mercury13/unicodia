@@ -560,7 +560,9 @@ Subtotal: 360
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
 - 13A26: after 25
+- 13A41: campaign for donkeys, after E216k
 - 13A69: the proper one had two sets of horns, removed flail from the improper :(
+- 13A73: extension + removed thing in front, straighter slanted plank
 - 13A8F: after 8E
 - 13A59: after 58
 - 13AA7: after A8
@@ -644,11 +646,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 176
+Subtotal: 178
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 749
+Total: 752

@@ -167,8 +167,9 @@ WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
 # Special width-limited
 ARM = -1000
-SMALLDONKEY = -1220
-MEDDONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
+SMALL_DONKEY = -1220
+TAILLESS_DONKEY = -1240
+MED_DONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
 BUBALIS = -1150
 COILED_WIDE = -1450
 
@@ -255,8 +256,8 @@ GLYPH_SIZES = {
     0x13A17: MEDIUM, 0x13A18: MEDIUM,
     0x13A31: SMALL,
     0x13A34: SMALL,
-    0x13A39: MEDDONKEY,  # donkeys
-    0x13A42: SMALLDONKEY, 0x13A43: SMALLDONKEY,  # more donkeys
+    0x13A39: MED_DONKEY,  # donkeys
+    0x13A41: TAILLESS_DONKEY, 0x13A42: SMALL_DONKEY, 0x13A43: SMALL_DONKEY,  # more donkeys
     0x13A53: CELLHEIGHT,
     0x13A7B: BUBALIS, # newborn bubalis
     0x13A85: WIDE,
