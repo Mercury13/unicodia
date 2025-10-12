@@ -99,10 +99,11 @@ Subtotal: 138
 - 130E7: made almost from scratch, poor-quality glyph
 - 130E8: same
 - 130ED: removed that line on the belly
+- 130F1: after 2C
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
 
-Subtotal: 77
+Subtotal: 78
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -660,4 +661,4 @@ Subtotal: 183
 
 Subtotal: 1
 
-Total: 759
+Total: 760
