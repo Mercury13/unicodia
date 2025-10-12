@@ -96,11 +96,13 @@ Subtotal: 138
 - 130AC: too thick outline
 - 130B9: wanted to fit into 1100×1000
 - 130BC: strange dimensions + strange hook
+- 130E7: made almost from scratch, poor-quality glyph
+- 130E8: same
 - 130ED: removed that line on the belly
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
 
-Subtotal: 75
+Subtotal: 77
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -658,4 +660,4 @@ Subtotal: 183
 
 Subtotal: 1
 
-Total: 757
+Total: 759
