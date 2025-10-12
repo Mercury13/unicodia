@@ -581,6 +581,7 @@ Subtotal: 360
 - 13AE9: E8 + feather, baboon
 - 13AF7: after E45, baboon
 - 13B0A: after 09
+- 13B58: after extended E268
 - 13B65: after 64
 - 13B7B: after other dogs and mace T3
 - 13B85: after 81
@@ -657,11 +658,11 @@ Subtotal: 360
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 183
+Subtotal: 184
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 763
+Total: 764
