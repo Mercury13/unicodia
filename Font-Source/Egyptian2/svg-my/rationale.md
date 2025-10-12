@@ -580,6 +580,7 @@ Subtotal: 362
 - 13A59: after 58
 - 13AA7: after A8
 - 13ABD: after BE
+- 13AC5: after C4
 - 13AE9: E8 + feather, baboon
 - 13AF7: after E45, baboon
 - 13B0A: after 09
@@ -661,11 +662,11 @@ Subtotal: 362
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 184
+Subtotal: 185
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 767
+Total: 768
