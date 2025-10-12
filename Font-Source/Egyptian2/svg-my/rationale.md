@@ -281,6 +281,7 @@ Subtotal: 81
 - 13AA3: rotate 90°
 - 13AAC: aligned that goat
 - 13AB4: flip knife
+- 13AC4: removed line under belly
 - 13AF0: holds staff
 - 13AF1: same
 - 13B2D: greatly simplified
@@ -307,8 +308,8 @@ Subtotal: 81
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
-- 13C53: same
-- 13C54: same: TWO HUNDRED
+- 13C53: same: TWO HUNDRED
+- 13C54: same
 - 13C55: same
 - 13C57: same
 - 13C58: this one has one feather
@@ -407,8 +408,8 @@ Subtotal: 81
 - 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
-- 14176: back after 77
-- 14177: not slanted, after 76: THREE HUNDRED
+- 14176: back after 77: THREE HUNDRED
+- 14177: not slanted, after 76
 - 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
 - 14183: after 84
@@ -471,7 +472,7 @@ Subtotal: 81
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 361
+Subtotal: 362
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -591,6 +592,7 @@ Subtotal: 361
 - 13BB4: after B3
 - 13BCD: after CC
 - 13BDD: after DE
+- 13BDF: after orig F36
 - 13C11: after 10
 - 13C1D: after 1C
 - 13C36: G29 + R7
@@ -659,11 +661,11 @@ Subtotal: 361
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 184
+Subtotal: 185
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 765
+Total: 766
