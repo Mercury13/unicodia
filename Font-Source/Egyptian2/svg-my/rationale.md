@@ -282,6 +282,7 @@ Subtotal: 82
 - 13AA3: rotate 90°
 - 13AAC: aligned that goat
 - 13AB4: flip knife
+- 13ABF: made from scratch
 - 13AC4: removed line under belly
 - 13AF0: holds staff
 - 13AF1: same
@@ -308,8 +309,8 @@ Subtotal: 82
 - 13C28: white neck
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
-- 13C52: same + fixed intersection at claw/base
-- 13C53: same: TWO HUNDRED
+- 13C52: same + fixed intersection at claw/base: TWO HUNDRED
+- 13C53: same
 - 13C54: same
 - 13C55: same
 - 13C57: same
@@ -408,8 +409,8 @@ Subtotal: 82
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
-- 1414D: bigger uraeus
-- 14176: back after 77: THREE HUNDRED
+- 1414D: bigger uraeus: THREE HUNDRED
+- 14176: back after 77
 - 14177: not slanted, after 76
 - 1417B: too thick lines, redrew
 - 1417F: more symmetry, removed suns from uraei
@@ -473,7 +474,7 @@ Subtotal: 82
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 362
+Subtotal: 363
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -671,4 +672,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 770
+Total: 771
