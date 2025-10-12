@@ -29,7 +29,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x130FD)) \
+    return ((code >= 0x13000) and (code <= 0x1312F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -174,7 +174,7 @@ BUBALIS = -1150
 COILED_WIDE = -1450
 
 GLYPH_SIZES = {
-    # A: Man
+    # EGYP MAIN -- A: Man
     0x13010: SQUARE,  # corpse
     0x13012: SQUARE, 0x13013: BOWING,  # horiz man / bowing man
     0x1303F: SQUARE,  0x13040: SQUARE, # lying mummy
@@ -198,6 +198,11 @@ GLYPH_SIZES = {
     0x130F0: MEDWIDE,  # elephant
     0x130F6: MEDWIDE, 0x130F7: MEDWIDE,  # goat, monkey
     0x130F9: MEDWIDE, 0x130FA: SQUARE,  # hare
+    # F: parts of animals
+    0x13105: MEDWIDE,  # ram’s head
+    0x13114: MEDIUM, 0x13115: MEDIUM,  # animal’s ears
+    0x13F2B: WIDE,  # some kind of spine
+    # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
     0x1348E: MEDWIDE,

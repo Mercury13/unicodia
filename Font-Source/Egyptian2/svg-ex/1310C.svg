@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1100"
+   height="1000"
+   id="svg1290"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="1310B.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs3">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 995.91361 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="18 : 995.91361 : 1"
+       inkscape:persp3d-origin="9 : 992.91361 : 1"
+       id="perspective2720" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.3775"
+     inkscape:cx="565.56291"
+     inkscape:cy="539.07285"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/2.0/" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>JSesh hieroglyph</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.0181377,-4.9323967)">
+    <path
+       id="path2961"
+       style="display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="m 1093.7974,208.3699 c -2.567,-0.12792 -5.6611,0.47453 -8.9961,1.48828 -10.6715,3.244 -24.7295,10.5732 -30.4336,15.21679 C 908.88477,322.17657 875.48702,513.23594 805.19392,620.70974 744.73282,704.26101 647.51749,739.71081 552.2154,767.17068 373.69484,722.8346 319.54094,652.23013 297.33454,620.70974 227.11656,513.35086 190.34556,321.24491 46.258372,225.07497 37.702203,218.10958 13.286039,203.87434 4.4126689,209.85818 1.4548792,211.8528 -1.2253868,215.38359 0.60798145,223.17263 70.757366,325.522 123.41239,440.71587 150.87361,561.7449 176.2907,650.44757 222.17836,734.32473 287.82478,799.50662 200.45265,802.34389 98.303129,799.37858 0.60798145,805.21365 V 1004.9324 C 149.4944,1002.7084 427.75459,993.8895 550.31306,959.28201 664.03589,991.39454 923.19112,1002.291 1100.0181,1004.9324 V 805.21365 C 1004.8472,799.52934 908.46357,802.6157 812.80134,799.50662 878.55361,734.29583 926.21216,650.53699 951.65486,561.7449 979.11608,440.71588 1029.8687,325.522 1100.0181,223.17263 c 2.5209,-10.70993 -0.5732,-14.52131 -6.2207,-14.80273 z M 114.73493,354.41677 c 83.09902,88.54413 85.95461,222.2979 167.38282,311.94336 67.09491,76.43863 166.0379,114.71794 262.49023,138.85352 166.55203,41.01276 349.25749,35.77907 519.26952,38.04101 v 123.63672 c -198.47159,0 -388.36146,-9.15822 -561.11717,-62.76953 C 375.24943,847.95357 269.39529,744.66682 209.83845,618.8074 173.70785,532.02221 162.26853,436.57778 114.73493,354.41677 Z m 873.06055,0 C 940.26192,436.57778 928.82064,532.02218 892.69001,618.8074 861.1891,685.37716 815.2508,745.29361 761.44587,795.70193 718.17676,793.27407 674.88631,789.03685 632.10408,782.38747 702.01282,757.70949 769.12372,722.62213 818.50837,666.36013 899.93656,576.71467 904.6965,442.96091 987.79548,354.41677 Z M 327.76814,837.54763 c 45.36279,39.59365 96.90784,73.16159 152.16797,97.00781 -139.39717,27.37674 -287.52427,32.33594 -441.28516,32.33594 V 843.25466 c 94.36396,-1.25569 191.97044,-0.0377 289.11719,-5.70703 z"
+       sodipodi:nodetypes="sscccccscccccccccccsccccccccccccccccccc" />
+  </g>
+</svg>

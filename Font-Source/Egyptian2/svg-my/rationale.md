@@ -102,8 +102,11 @@ Subtotal: 138
 - 130F1: after 2C
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
+- 1310A: extended + thin solid stick
+- 13113: took extended F20 and changed to b/w F20
+- 13121: was self-intersecting, made two halves
 
-Subtotal: 78
+Subtotal: 81
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -661,4 +664,4 @@ Subtotal: 183
 
 Subtotal: 1
 
-Total: 760
+Total: 763
