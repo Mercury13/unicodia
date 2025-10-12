@@ -67,6 +67,7 @@ Subtotal: 138
 - 13043: enlarged hoe just a little
 - 13045: after 526
 - 13048: beard god→king (who knows, but the consensus is king)
+- 1304A: drew from scratch, the sample is Noto
 - 1304B: extension, enlarged sistrum
 - 1304F: straighter arms
 - 13050: +tits
@@ -106,7 +107,7 @@ Subtotal: 138
 - 13113: took extended F20 and changed to b/w F20
 - 13121: was self-intersecting, made two halves
 
-Subtotal: 81
+Subtotal: 82
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -668,4 +669,4 @@ Subtotal: 185
 
 Subtotal: 1
 
-Total: 766
+Total: 768
