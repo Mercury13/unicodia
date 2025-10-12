@@ -162,6 +162,7 @@ BOWING = 950
 # General width-limited (=negative)
 NORMAL = CELLHEIGHT
 SQUARE = -1000
+HARE_NO_WHISKERS = -1131
 MEDWIDE = -1250
 WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
@@ -271,7 +272,7 @@ GLYPH_SIZES = {
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
     0x13ABB: MEDWIDE,  # hyena
-    0x13ABD: HARE, 0x13ABE: HARE,  # hares
+    0x13ABD: HARE, 0x13ABE: HARE_NO_WHISKERS,  # hares
     0x13B2D: EVERYBIT,
     0x13B3C: WIDE,  # attacking bull
     0x13B59: WIDE,

@@ -20,6 +20,7 @@ Meaning of directories:
   - manual uniting
   - removal of red
   - nudging vertices to eliminate situation “program 1 sees intersection, program 2 doesn’t” 
+  - nudging vertices to align them to some guide
   - simplification
   - enforcing symmetry via half+clone
 - cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
