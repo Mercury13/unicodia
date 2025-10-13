@@ -14,9 +14,9 @@ Meaning of directories:
 - svg: raw JSesh SVGs
 - svg-ex: SVGs from JSesh exceptions, possibly with my slight remakes (see svg-remade)
 - svg-my: rather big remakes, both new and existing. These changes automatically make object My:
-  - deleting anything
-  - adding anything
-  - filling anything
+  - deleting an object
+  - adding an object
+  - filling hollow object, hollowing filled object
   - major simplifications that surely change content
   - making anything (pose, object) more pronounced
 - svg-remade: small remakes of existing JSesh hieros w/o changing content:
