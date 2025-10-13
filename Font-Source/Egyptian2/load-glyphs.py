@@ -200,7 +200,8 @@ GLYPH_SIZES = {
     # F: parts of animals
     0x13105: MEDWIDE,  # ram’s head
     0x13114: MEDIUM, 0x13115: MEDIUM,  # animal’s ears
-    0x13F2B: WIDE,  # some kind of spine
+    0x1312B: WIDE,  # some kind of spine
+    0x13132: SQUARE,  # intestine
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
