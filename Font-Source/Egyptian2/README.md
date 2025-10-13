@@ -12,9 +12,14 @@
 Meaning of directories:
 - InkTest: just a test for Inkscape
 - svg: raw JSesh SVGs
-- svg-ex: SVGs from JSesh exceptions, possibly with my slight remakes
-- svg-my: rather big remakes, both new and existing
-- svg-remade: small remakes of extsting JSesh hieros w/o changing content:
+- svg-ex: SVGs from JSesh exceptions, possibly with my slight remakes (see svg-remade)
+- svg-my: rather big remakes, both new and existing. These changes automatically make object My:
+  - deleting anything
+  - adding anything
+  - filling anything
+  - major simplifications that surely change content
+  - making anything (pose, object) more pronounced
+- svg-remade: small remakes of existing JSesh hieros w/o changing content:
   - changing canvas and/or image size
   - subtracting white
   - manual uniting
