@@ -110,8 +110,9 @@ Subtotal: 138
 - 13133: same
 - 13134: same
 - 13135: same
+- 13138: same
 
-Subtotal: 86
+Subtotal: 87
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -676,4 +677,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 775
+Total: 776
