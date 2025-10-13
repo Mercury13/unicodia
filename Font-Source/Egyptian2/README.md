@@ -18,7 +18,7 @@ Meaning of directories:
   - adding an object
   - filling hollow object, hollowing filled object
   - major simplifications that surely change content
-  - making anything (pose, object) more pronounced
+  - making anything (pose, object, thickness) more pronounced
 - svg-remade: small remakes of existing JSesh hieros w/o changing content:
   - changing canvas and/or image size
   - subtracting white
