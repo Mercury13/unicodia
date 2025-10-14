@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   sodipodi:docname="13A16.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:version="0.32"
+   id="svg1290"
+   height="650"
+   width="1100"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="415.64501"
+     inkscape:cx="204.30009"
+     inkscape:zoom="0.49681818"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/2.0/" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>JSesh hieroglyph</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Karnak Hypostyle hall</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>S. Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       style="fill:#000000;stroke:none;stroke-width:1"
+       d="M 639.78723,650 603.57376,628.87548 Q 416.47088,399.52357 303.30379,236.56294 226.35017,194.31384 191.64558,169.41714 156.94099,144.52037 87.531879,132.44924 0.01600112,126.41368 0.01600112,103.78022 V 102.27134 82.655697 Q -1.492872,73.602317 137.32542,78.129007 q 73.9358,19.61564 111.65814,9.80782 37.72241,-9.80782 61.86467,-9.80782 24.14233,0 38.47685,12.82557 14.33451,12.825643 21.87895,79.217003 0,18.1067 125.23821,141.08167 125.23829,122.97484 143.34499,186.34845 0,16.59783 46.77572,42.24903 16.59782,0 75.44475,-64.88249 114.67595,-138.81829 156.17055,-197.66514 41.49459,-58.84685 11.31669,-76.19918 -30.1779,-17.35226 -60.3558,-46.77573 -30.17782,-29.42346 -63.37354,-26.40564 -66.39136,-10.56226 -66.39136,-34.704593 v -15.08895 h 155.41618 q 64.88242,34.704593 106.37698,17.35226 41.4946,-17.35226 64.128,-17.35226 34.7046,4.52669 34.7046,28.669033 0,25.6512 -24.1423,58.84685 -37.7224,60.3558 -95.06035,211.99966 Q 923.45938,529.28848 789.16778,597.18871 710.70528,650 668.45625,650 Z"
+       id="path1" />
+  </g>
+</svg>

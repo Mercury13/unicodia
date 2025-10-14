@@ -278,6 +278,7 @@ Subtotal: 87
 - 139AA: other “torso”, for AB
 - 139B9: bigger shield
 - 139D3: grafted knife from EB, simplified
+- 13A16: after D54, the initial was really small
 - 13A31: thinner, more resembling Unicode (it’s a toe rather than finger)
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
@@ -313,8 +314,8 @@ Subtotal: 87
 - 13C20: same
 - 13C28: white neck
 - 13C2B: white curvier neck
-- 13C51: egret has two feathers
-- 13C52: same + fixed intersection at claw/base: TWO HUNDRED
+- 13C51: egret has two feathers: TWO HUNDRED
+- 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
 - 13C55: same
@@ -413,8 +414,8 @@ Subtotal: 87
 - 1413B: no sun
 - 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
-- 14140: no double lines
-- 14146: after R22, but true circle: THREE HUNDRED
+- 14140: no double lines: THREE HUNDRED
+- 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
 - 14177: not slanted, after 76
@@ -480,7 +481,7 @@ Subtotal: 87
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 364
+Subtotal: 365
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -678,4 +679,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 777
+Total: 778
