@@ -341,6 +341,7 @@ Subtotal: 87
 - 13E55: straight stem
 - 13E5D: solid line
 - 13E5F: after 5D, craggy
+- 13E64: too thick
 - 13E7D: craggy, after 7C and 7E
 - 13E84: was not hollow, did not look like reed
 - 13E85: craggy
@@ -413,8 +414,8 @@ Subtotal: 87
 - 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
-- 14146: after R22, but true circle
-- 1414D: bigger uraeus: THREE HUNDRED
+- 14146: after R22, but true circle: THREE HUNDRED
+- 1414D: bigger uraeus
 - 14176: back after 77
 - 14177: not slanted, after 76
 - 1417B: too thick lines, redrew
@@ -479,7 +480,7 @@ Subtotal: 87
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 363
+Subtotal: 364
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -677,4 +678,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 776
+Total: 777
