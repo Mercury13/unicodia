@@ -244,6 +244,7 @@ Subtotal: 89
 - 1383E: same
 - 13840: same + bigger djed-ankh
 - 1384E: turn knife around
+- 1385F: 5E + snakes
 - 1387A: strange image
 - 1387B: bigger tits
 - 1387B: same
@@ -315,8 +316,8 @@ Subtotal: 89
 - 13C19: white neck
 - 13C1C: white neck
 - 13C1F: wrong direction
-- 13C20: same
-- 13C28: white neck: TWO HUNDRED
+- 13C20: same: TWO HUNDRED
+- 13C28: white neck
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -415,8 +416,8 @@ Subtotal: 89
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun
-- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413B: no sun: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
@@ -485,7 +486,7 @@ Subtotal: 89
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 367
+Subtotal: 368
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -683,4 +684,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 782
+Total: 783

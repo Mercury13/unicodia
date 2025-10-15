@@ -506,25 +506,16 @@ def loadUnikemet():
                             svgRemadeName = "svg-remade/{}.svg".format(sValue)
                             cacheName = "cache/{}.svg".format(sValue)                        
                             manualName = getManualName('manual', glyphName)
-                            manualWideName = getManualName('manual-wide', glyphName)
                             extensionName = "svg-ex/{}.svg".format(sHex)
                             reallyMyName = "svg-my/{}.svg".format(sHex)
                             # Load?
                             isLoaded = True
                             if os.path.exists(reallyMyName):
-                                checkLowPriority(manualWideName)
                                 checkLowPriority(manualName)
                                 checkLowPriority(extensionName)
                                 checkLowPriority(svgRemadeName)
                                 checkLowPriority(cacheName)
                                 loadMyGlyph(font, sHex, code, reallyMyName)
-                            elif os.path.exists(manualWideName):
-                                # Manual-wide glyph
-                                checkLowPriority(manualName)
-                                checkLowPriority(extensionName)
-                                checkLowPriority(svgRemadeName)
-                                checkLowPriority(cacheName)
-                                loadManualGlyph(font, code, glyphName, manualWideName, 'manual-wide')
                             elif os.path.exists(manualName):
                                 # Manual glyph
                                 checkLowPriority(extensionName)
