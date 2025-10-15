@@ -344,6 +344,7 @@ Subtotal: 89
 - 13D6F: removed sun, curvier beard
 - 13D8F: removed sun
 - 13DC3: mirror
+- 13DD7: existing is DD8 now
 - 13E55: straight stem
 - 13E5D: solid line
 - 13E5F: after 5D, craggy
@@ -415,8 +416,8 @@ Subtotal: 89
 - 140FC: removed PLACEHOLDERS
 - 14137: no sun
 - 14138: no sun
-- 1413A: no sun
-- 1413B: no sun: THREE HUNDRED
+- 1413A: no sun: THREE HUNDRED
+- 1413B: no sun
 - 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
@@ -486,7 +487,7 @@ Subtotal: 89
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 368
+Subtotal: 369
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -683,7 +684,8 @@ Subtotal: 189
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
+- 13DD8 = used to be K18b = 13DD7
 
-Subtotal: 1
+Subtotal: 2
 
-Total: 785
+Total: 787

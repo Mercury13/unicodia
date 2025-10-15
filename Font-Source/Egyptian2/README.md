@@ -30,6 +30,7 @@ Meaning of directories:
   - removal of SVG artifacts
   - removal of tiny objects from uniting
   - turning bad ellipses to right ellipses when dimensions are kept
+  - turning 1-point curve to something that does not look like glitch
   - enforcing symmetry via half+clone
 - cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
 - manual: fixed directly in FontForge, everything is done manually except bearings (gradually phasing out this directory)
