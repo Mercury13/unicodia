@@ -110,9 +110,11 @@ Subtotal: 138
 - 13133: same
 - 13134: same
 - 13135: same
+- 13136: same
+- 13137: same
 - 13138: same
 
-Subtotal: 87
+Subtotal: 89
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -127,6 +129,7 @@ Subtotal: 87
 - 134E6: campaign for sitting with props, vessel on the head bigger
 - 134F3: kneeling
 - 134FE: square→oval, bigger (carrlying, well?)
+- 1351E: denser layout
 - 13549: better sits on heel
 - 13552: short beard
 - 13555: long wig
@@ -213,8 +216,8 @@ Subtotal: 87
 - 13759: short hair
 - 1375A: short hair
 - 1375B: short hair
-- 1375C: short hair
-- 13766: vertical ankh: ONE HUNDRED
+- 1375C: short hair: ONE HUNDRED
+- 13766: vertical ankh
 - 13767: same
 - 13772: stretched heel → normal, white legs → black
 - 137EC: man’s hair/beard
@@ -313,8 +316,8 @@ Subtotal: 87
 - 13C1C: white neck
 - 13C1F: wrong direction
 - 13C20: same
-- 13C28: white neck
-- 13C2B: white curvier neck: TWO HUNDRED
+- 13C28: white neck: TWO HUNDRED
+- 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
@@ -413,8 +416,8 @@ Subtotal: 87
 - 14138: no sun
 - 1413A: no sun
 - 1413B: no sun
-- 1413E: other feather, no double lines, other handle
-- 1413F: per 3E: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
@@ -482,7 +485,7 @@ Subtotal: 87
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 366
+Subtotal: 367
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -680,4 +683,4 @@ Subtotal: 187
 
 Subtotal: 1
 
-Total: 778
+Total: 782
