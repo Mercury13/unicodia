@@ -118,7 +118,7 @@ Subtotal: 87
 - 13468: other legs
 - 13475: better feet
 - 13478: frankenmade from scratch after 13527 using old hands
-- 1347D: covered
+- 1347D: covered, removed beard
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134CB: removed beard per NewG, a little bit bigger ankh
 - 134D6: automation glitched → maybe just enlarge rag?
