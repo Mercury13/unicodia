@@ -290,6 +290,7 @@ Subtotal: 87
 - 13AB4: flip knife
 - 13ABF: made from scratch
 - 13AC4: removed line under belly
+- 13ACE: another sistrum
 - 13AF0: holds staff
 - 13AF1: same
 - 13B2D: greatly simplified
@@ -313,8 +314,8 @@ Subtotal: 87
 - 13C1F: wrong direction
 - 13C20: same
 - 13C28: white neck
-- 13C2B: white curvier neck
-- 13C51: egret has two feathers: TWO HUNDRED
+- 13C2B: white curvier neck: TWO HUNDRED
+- 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
@@ -413,8 +414,8 @@ Subtotal: 87
 - 1413A: no sun
 - 1413B: no sun
 - 1413E: other feather, no double lines, other handle
-- 1413F: per 3E
-- 14140: no double lines: THREE HUNDRED
+- 1413F: per 3E: THREE HUNDRED
+- 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
@@ -481,7 +482,7 @@ Subtotal: 87
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 365
+Subtotal: 366
 
 # Duped with NewGardiner
 - 13007: basic, after 08
