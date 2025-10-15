@@ -601,6 +601,7 @@ Subtotal: 369
 - 13AD3: symmetry + lioness
 - 13AE9: E8 + feather, baboon
 - 13AF7: after E45, baboon
+- 13B01: 00 + head from E32
 - 13B0A: after 09
 - 13B58: after extended E268
 - 13B65: after 64
@@ -618,6 +619,7 @@ Subtotal: 369
 - 13C38: G29 + 37
 - 13C43: if it’s a guineafowl, let it be, IDK.
 - 13C4E: after 50
+- 13C4F: after 50 + bottom of legs taken elsewhere
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13CDD: after DC
@@ -680,7 +682,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 189
+Subtotal: 191
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -688,4 +690,4 @@ Subtotal: 189
 
 Subtotal: 2
 
-Total: 787
+Total: 789
