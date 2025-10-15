@@ -506,6 +506,8 @@ Subtotal: 368
 - 13528: 29 + 79 + knee from captives
 - 13548: was squished in NewG
 - 1356C: after 6B
+- 13574: after some extended
+- 13578: stock pose + leg
 - 13582: franken near 81
 - 13585: after 84
 - 13595: made from man with straight sticks
@@ -677,11 +679,11 @@ Subtotal: 368
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 187
+Subtotal: 189
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
 
 Subtotal: 1
 
-Total: 783
+Total: 785
