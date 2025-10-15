@@ -565,6 +565,7 @@ Subtotal: 369
 - 1381E: franken from 13064 and extension
 - 1383C: Imhotep is close to Ptah
 - 1383F: drew that Ptah
+- 13853: 52 + horns from ram
 - 13859: after 58
 - 13865: after 69
 - 13892: after 90
@@ -682,7 +683,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 191
+Subtotal: 192
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -690,4 +691,4 @@ Subtotal: 191
 
 Subtotal: 2
 
-Total: 789
+Total: 790
