@@ -81,7 +81,7 @@ def removeObviousPaths(layer):
             del layer[i]
     removeSmallPaths(layer, 2)
 
-SIMPVALUE = 0.6
+SIMPVALUE = 0.8
 SMALLSIMPVALUE = 0.6
 BIGSMALLVALUE = 5
 

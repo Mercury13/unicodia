@@ -27,6 +27,7 @@ Meaning of directories:
   - nudging vertices to eliminate situation “program 1 sees intersection, program 2 doesn’t” 
   - nudging vertices to align them to some guide
   - simplification
+  - turning bad ellipses to right ellipses when dimensions are kept
   - enforcing symmetry via half+clone
 - cache: cache for auto-Inkscape’d JSesh SVGs (running Inkscape takes ≈1s/file)
 - manual: fixed directly in FontForge, everything is done manually except bearings (gradually phasing out this directory)
