@@ -631,6 +631,7 @@ Subtotal: 369
 - 13D96: after I12 and 8F
 - 13D87: franken
 - 13DA7: DA3 + feathers
+- 13DF0: L2 minus wings
 - 13E19: after 18
 - 13E2E: see desc
 - 13EFB: after FD
@@ -683,7 +684,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 192
+Subtotal: 193
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -691,4 +692,4 @@ Subtotal: 192
 
 Subtotal: 2
 
-Total: 790
+Total: 791
