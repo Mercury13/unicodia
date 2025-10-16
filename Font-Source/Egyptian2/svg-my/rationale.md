@@ -502,9 +502,13 @@ Subtotal: 369
 - 1350D: campaign for standing with props
 - 1350E: campaign for standing with props
 - 134FF: after FE + random jug W22?
+- 13510: after 13006
+- 13512: 13510 + UniKemet A4c
+- 13513: 13510 + UniKemet A426
 - 13526: after 25
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
+- 13534: after 13027
 - 13548: was squished in NewG
 - 1356C: after 6B
 - 13574: after some extended
@@ -684,7 +688,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 193
+Subtotal: 197
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -692,4 +696,4 @@ Subtotal: 193
 
 Subtotal: 2
 
-Total: 791
+Total: 795
