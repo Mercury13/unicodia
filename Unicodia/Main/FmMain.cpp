@@ -1443,6 +1443,7 @@ void FmMain::translateMe()
     localLib.acCopy->setText(loc::get("Main.Local.Copy"));
     localLib.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
     localLib.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
+    emit libModel.dataChanged({}, {});
     libChanged(ui->treeLibrary->currentIndex());
 
     // Favs tab

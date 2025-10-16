@@ -1,5 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <library>
+	<f loc="Typo">
+		<f loc="Dash">
+			<d>‑ ­ ‒ – — ― −</d>
+		</f>
+		<f loc="Quote">
+			<f loc="QuoTop">
+				<d>“ ” ‘ ’</d>
+			</f>
+			<f loc="QuoAngle">
+				<d>« » ‹ ›</d>
+			</f>
+			<f loc="QuoSlav">
+				<d>„ “ ‚ ‘</d>
+			</f>
+			<f loc="QuoNl">
+				<d>„ ” ‚ ’</d>
+			</f>
+			<f loc="QuoJp">
+				<d>「 」 『 』</d>
+			</f>
+			<f loc="QuoKr">
+				<d>《 》 〈 〉</d>
+			</f>
+		</f>
+		<f loc="Space">
+			<d> </d><!-- m/3 -->
+			<d> </d><!-- m/4 -->
+			<d> </d><!-- m/6 -->
+			<d> </d><!-- figure -->
+			<d> </d><!-- punct -->
+			<d> </d><!-- thin -->
+			<d> </d><!-- hair -->
+			<d>​</d><!-- ZWSP -->
+			<d> </d><!-- med math -->
+			<d>　</d><!-- ideo -->
+			<d> </d><!-- NBSP -->
+			<d> </d><!-- narrow NBSP -->
+			<d>⁠</d><!-- word joiner -->
+		</f>
+		<f loc="Arrow">
+			<d>↑ ↗ → ↘ ↓ ↙ ← ↖ ↕ ↔</d>
+		</f>
+		<f loc="TypoMisc">
+			<d>… • † ‡ ‽ ¡ ⸘</d>
+		</f>
+	</f>
 	<f loc="Numbers">
 		<f loc="Vulgar fractions">
 			<d>⅟ ⁄ ½ ↉ ⅓ ⅔ ¼ ¾ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅐ ⅛ ⅜ ⅝ ⅞ ⅑ ⅒</d>

@@ -13622,6 +13622,60 @@
      <orig>Keyboard</orig>
      <transl>Клавіатура</transl>
     </text>
+    <text id="Typo">
+     <orig>Typography characters</orig>
+     <transl>Типографські символи</transl>
+    </text>
+    <text id="Space">
+     <orig>Spaces</orig>
+     <transl>Пропуски</transl>
+    </text>
+    <text id="Dash">
+     <orig>Dashes</orig>
+     <transl>Тире</transl>
+    </text>
+    <text id="Quote">
+     <orig>Quotation marks</orig>
+     <transl>Лапки</transl>
+    </text>
+    <text id="QuoTop">
+     <orig>Top</orig>
+     <au-cmt>…top quotes</au-cmt>
+     <transl>Верхні</transl>
+    </text>
+    <text id="QuoAngle">
+     <orig>Angle</orig>
+     <au-cmt>…angle quotes</au-cmt>
+     <transl>Кутові</transl>
+    </text>
+    <text id="QuoSlav">
+     <orig>Slavic</orig>
+     <au-cmt>…Slavic quotes</au-cmt>
+     <transl>Слов’янські</transl>
+    </text>
+    <text id="QuoNl">
+     <orig>Dutch</orig>
+     <au-cmt>…Dutch quotes</au-cmt>
+     <transl>Голландські</transl>
+    </text>
+    <text id="QuoJp">
+     <orig>Chinese/Japanese</orig>
+     <au-cmt>…Chinese/Japanese quotes</au-cmt>
+     <transl>Китайські/японські</transl>
+    </text>
+    <text id="QuoKr">
+     <orig>South Asian</orig>
+     <au-cmt>…South Asign quotes, used mainly in North Korea and other minor countries</au-cmt>
+     <transl>Південноазійські</transl>
+    </text>
+    <text id="Arrow">
+     <orig>Arrows</orig>
+     <transl>Стрілки</transl>
+    </text>
+    <text id="TypoMisc">
+     <orig>Misc. punctuation</orig>
+     <transl>Різні розділові знаки</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
