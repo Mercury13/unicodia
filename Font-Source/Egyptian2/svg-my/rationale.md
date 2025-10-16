@@ -501,6 +501,8 @@ Subtotal: 369
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
 - 1350A: campaign for standing with props
+- 1350B: campaign for standing with props
+- 1350C: campaign for standing with props
 - 1350D: campaign for standing with props
 - 1350E: campaign for standing with props
 - 13510: after 13006
@@ -689,7 +691,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 197
+Subtotal: 200
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -697,4 +699,4 @@ Subtotal: 197
 
 Subtotal: 2
 
-Total: 795
+Total: 798
