@@ -496,12 +496,13 @@ Subtotal: 369
 - 1304C: after A282, drew skirt
 - 13065: after C9, no uraeus
 - 1306D: was present in JSesh but not marked, replaced ankh
+- 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
 - 13509: campaign for standing with props
+- 1350A: campaign for standing with props
 - 1350D: campaign for standing with props
 - 1350E: campaign for standing with props
-- 134FF: after FE + random jug W22?
 - 13510: after 13006
 - 13512: 13510 + UniKemet A4c
 - 13513: 13510 + UniKemet A426
