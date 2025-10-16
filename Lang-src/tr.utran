@@ -13609,6 +13609,48 @@
      <orig>Keyboard</orig>
      <transl>Klavye</transl>
     </text>
+    <text id="Typo">
+     <orig>Typography characters</orig>
+    </text>
+    <text id="Space">
+     <orig>Spaces</orig>
+    </text>
+    <text id="Dash">
+     <orig>Dashes</orig>
+    </text>
+    <text id="Quote">
+     <orig>Quotation marks</orig>
+    </text>
+    <text id="QuoTop">
+     <orig>Top</orig>
+     <au-cmt>…top quotes</au-cmt>
+    </text>
+    <text id="QuoAngle">
+     <orig>Angle</orig>
+     <au-cmt>…angle quotes</au-cmt>
+    </text>
+    <text id="QuoSlav">
+     <orig>Slavic</orig>
+     <au-cmt>…Slavic quotes</au-cmt>
+    </text>
+    <text id="QuoNl">
+     <orig>Dutch</orig>
+     <au-cmt>…Dutch quotes</au-cmt>
+    </text>
+    <text id="QuoJp">
+     <orig>Chinese/Japanese</orig>
+     <au-cmt>…Chinese/Japanese quotes</au-cmt>
+    </text>
+    <text id="QuoKr">
+     <orig>South Asian</orig>
+     <au-cmt>…South Asign quotes, used mainly in North Korea and other minor countries</au-cmt>
+    </text>
+    <text id="Arrow">
+     <orig>Arrows</orig>
+    </text>
+    <text id="TypoMisc">
+     <orig>Misc. punctuation</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
