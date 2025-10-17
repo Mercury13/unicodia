@@ -6,7 +6,7 @@
 constinit const srh::Prio srh::Prio::EMPTY;
 constinit const srh::DefaultComparator srh::DefaultComparator::INST;
 constinit const srh::RoleInfo srh::RoleInfo::BRIEF
-        { .type = srh::RoleType::BRIEF, .isIndex = false };
+        { .type = srh::RoleType::BRIEF, .indexLocation = IndexLocation::NEVER };
 
 
 namespace {
@@ -241,8 +241,9 @@ namespace {
 }   // anon namespace
 
 srh::Place srh::findWord(
-        std::span<HayWord> haystack, const NeedleWord& needle,
-        Flags<HaystackClass> hclasses, const Comparator& comparator)
+        std::span<HayWord> haystack, IndexLocation indexLocation,
+        const NeedleWord& needle, Flags<HaystackClass> hclasses,
+        const Comparator& comparator)
 {
     bool isNeedleLowPrio = needle.lowPrioClass.haveAny(hclasses);
     Place r = Place::NONE;
@@ -284,15 +285,15 @@ srh::Place srh::findWord(
     return r;
 }
 
-srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
+srh::Prio srh::findNeedle(std::span<HayWord> haystack,
+                          const Needle& needle,
                           Flags<HaystackClass> hclasses,
                           RoleInfo roleInfo, const Comparator& comparator)
 {
     srh::Prio r { .roleType = roleInfo.type };
     bool isIndex1 = false;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, v, hclasses, comparator);
-        isIndex1 = false;  // only the last word is index
+        auto type = findWord(haystack, roleInfo.indexLocation, v, hclasses, comparator);
         switch (type) {
         case Place::EXACT: ++r.exact; isIndex1 = true; break;
         case Place::EXACT_LOPRIO: ++r.exactLoPrio; isIndex1 = true; break;
@@ -303,7 +304,8 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
         case Place::NONE: ;
         }
     }
-    if (isIndex1 && roleInfo.isIndex
+    if (isIndex1
+            && roleInfo.indexLocation != IndexLocation::NEVER
             && (needle.words.size() == 1)
             && needle.words[0].isShortIndex) {
         r.high = HIPRIO_INDEX_MATCH;

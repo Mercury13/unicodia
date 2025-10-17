@@ -541,23 +541,30 @@ namespace {
         switch (role) {
         case uc::TextRole::HTML:        // HTML unused (processed separately), but let it be
         case uc::TextRole::ABBREV:
-            return { .type = srh::RoleType::LACONIC,  .isIndex = false };
+            return { .type = srh::RoleType::LACONIC,
+                     .indexLocation = srh::IndexLocation::NEVER };
         case uc::TextRole::EGYP_INDEX:
-            return { .type = srh::RoleType::LACONIC,  .isIndex = true };
+            return { .type = srh::RoleType::LACONIC,
+                     .indexLocation = srh::IndexLocation::ANYWHERE };
         case uc::TextRole::MAIN_NAME:
-            return { .type = srh::RoleType::BRIEF, .isIndex = true };
+            /// @todo [urgent] not necessarily end
+            return { .type = srh::RoleType::BRIEF,
+                     .indexLocation = srh::IndexLocation::END };
         case uc::TextRole::EMOJI_NAME:
         case uc::TextRole::ALT_NAME:
-            return { .type = srh::RoleType::BRIEF, .isIndex = false };
+            return { .type = srh::RoleType::BRIEF,
+                     .indexLocation = srh::IndexLocation::NEVER };
         case uc::TextRole::EGYP_EWP:
         case uc::TextRole::EGYP_UC:
         case uc::TextRole::EGYP_MEANING:
-            return { .type = srh::RoleType::VERBOSE, .isIndex = false };
+            return { .type = srh::RoleType::VERBOSE,
+                     .indexLocation = srh::IndexLocation::NEVER };
         case uc::TextRole::CMD_END:     // These are unused, but let them be
         case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::DEP_INSTEAD2:
         case uc::TextRole::EGYP_EQUIV:
-            return { .type = srh::RoleType::UNSEARCHABLE, .isIndex = false };
+            return { .type = srh::RoleType::UNSEARCHABLE,
+                     .indexLocation = srh::IndexLocation::NEVER };
         }
         __builtin_unreachable();
     }

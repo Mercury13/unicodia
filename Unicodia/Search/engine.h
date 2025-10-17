@@ -57,6 +57,7 @@ namespace srh {
 
     struct NeedleWord {
         std::u8string v;
+        std::u8string twoDigitIndex, threeDigitIndex;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
         bool isDicWord = false;
@@ -127,9 +128,15 @@ namespace srh {
         IMPOSSIBLE    ///< technical
     };
 
+    enum class IndexLocation : unsigned char {
+        NEVER,
+        END,
+        ANYWHERE
+    };
+
     struct RoleInfo {
         RoleType type;
-        bool isIndex;
+        IndexLocation indexLocation;
 
         static const RoleInfo BRIEF;
     };
@@ -173,8 +180,9 @@ namespace srh {
         SafeVector<HayWord> words2;
     };
 
-    Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
-                   Flags<HaystackClass> hclasses, const Comparator& comparator);
+    Place findWord(std::span<HayWord> haystack, IndexLocation indexLocation,
+                   const NeedleWord& needle, Flags<HaystackClass> hclasses,
+                   const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
                     Flags<HaystackClass> hclasses, RoleInfo roleInfo,
                     const Comparator& comparator);
