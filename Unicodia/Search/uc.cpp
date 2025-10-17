@@ -536,26 +536,28 @@ namespace {
         return r;
     }
 
-    srh::RoleType roleType(uc::TextRole role)
+    srh::RoleInfo roleInfo(uc::TextRole role)
     {
         switch (role) {
         case uc::TextRole::HTML:        // HTML unused (processed separately), but let it be
         case uc::TextRole::ABBREV:
+            return { .type = srh::RoleType::LACONIC,  .isIndex = false };
         case uc::TextRole::EGYP_INDEX:
-            return srh::RoleType::LACONIC;
-        case uc::TextRole::ALT_NAME:
-        case uc::TextRole::EMOJI_NAME:
+            return { .type = srh::RoleType::LACONIC,  .isIndex = true };
         case uc::TextRole::MAIN_NAME:
-            return srh::RoleType::BRIEF;
+            return { .type = srh::RoleType::BRIEF, .isIndex = true };
+        case uc::TextRole::EMOJI_NAME:
+        case uc::TextRole::ALT_NAME:
+            return { .type = srh::RoleType::BRIEF, .isIndex = false };
         case uc::TextRole::EGYP_EWP:
         case uc::TextRole::EGYP_UC:
         case uc::TextRole::EGYP_MEANING:
-            return srh::RoleType::VERBOSE;
+            return { .type = srh::RoleType::VERBOSE, .isIndex = false };
         case uc::TextRole::CMD_END:     // These are unused, but let them be
         case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::DEP_INSTEAD2:
         case uc::TextRole::EGYP_EQUIV:
-            return srh::RoleType::UNSEARCHABLE;
+            return { .type = srh::RoleType::UNSEARCHABLE, .isIndex = false };
         }
         __builtin_unreachable();
     }
@@ -772,7 +774,7 @@ uc::MultiResult uc::doSearch(QString what)
                         default:
                             if (auto pr = srh::findNeedle(
                                         nm.value, needle, hclasses1,
-                                        roleType(nm.role), cache, nm.comparator);
+                                        roleInfo(nm.role), cache, nm.comparator);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;
@@ -798,7 +800,7 @@ uc::MultiResult uc::doSearch(QString what)
             auto prio = srh::findNeedle(
                     node.text, needle, srh::HaystackClass::MASK_EMOJI,
                     // All emoji are brief
-                    srh::RoleType::BRIEF, cache,
+                    srh::RoleInfo::BRIEF, cache,
                     srh::NonAsciiComparator::INST);
             if (prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, srh::EmojiLevel::FULL, prio);

@@ -3,8 +3,10 @@
 #include "u_Strings.h"
 #include "u_TypedFlags.h"
 
-const srh::Prio srh::Prio::EMPTY;
-const srh::DefaultComparator srh::DefaultComparator::INST;
+constinit const srh::Prio srh::Prio::EMPTY;
+constinit const srh::DefaultComparator srh::DefaultComparator::INST;
+constinit const srh::RoleInfo srh::RoleInfo::BRIEF
+        { .type = srh::RoleType::BRIEF, .isIndex = false };
 
 
 namespace {
@@ -284,20 +286,27 @@ srh::Place srh::findWord(
 
 srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
                           Flags<HaystackClass> hclasses,
-                          RoleType roleType, const Comparator& comparator)
+                          RoleInfo roleInfo, const Comparator& comparator)
 {
-    srh::Prio r { .roleType = roleType };
+    srh::Prio r { .roleType = roleInfo.type };
+    bool isIndex1 = false;
     for (auto& v : needle.words) {
         auto type = findWord(haystack, v, hclasses, comparator);
+        isIndex1 = false;  // only the last word is index
         switch (type) {
-        case Place::EXACT: ++r.exact; break;
-        case Place::EXACT_LOPRIO: ++r.exactLoPrio; break;
-        case Place::INDEX: ++r.initial; ++r.initialIndex; break;
+        case Place::EXACT: ++r.exact; isIndex1 = true; break;
+        case Place::EXACT_LOPRIO: ++r.exactLoPrio; isIndex1 = true; break;
+        case Place::INDEX: ++r.initial; ++r.initialIndex; isIndex1 = true; break;
         case Place::INITIAL: ++r.initial; break;
         case Place::INITIAL_LOPRIO: ++r.initialLoPrio; break;
         case Place::PARTIAL: ++r.partial; break;
         case Place::NONE: ;
         }
+    }
+    if (isIndex1 && roleInfo.isIndex
+            && (needle.words.size() == 1)
+            && needle.words[0].isShortIndex) {
+        r.high = HIPRIO_INDEX_MATCH;
     }
     return r;
 }
@@ -305,7 +314,7 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
                           Flags<HaystackClass> hclasses,
-                          RoleType roleType, Cache& cache,
+                          RoleInfo roleInfo, Cache& cache,
                           const Comparator& comparator)
 {
     // Uppercase haystack
@@ -320,5 +329,5 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         if (!v.empty())
             cache.words2.emplace_back(v);
     }
-    return findNeedle(cache.words2, needle, hclasses, roleType, comparator);
+    return findNeedle(cache.words2, needle, hclasses, roleInfo, comparator);
 }

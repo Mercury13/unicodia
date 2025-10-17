@@ -38,7 +38,8 @@ namespace uc {
 
     enum : unsigned char {
         // LOWEST
-        NO_HIPRIO = 0,          ///< simple textual search, normal priority
+        HIPRIO_BIGGER = srh::HIPRIO_BIGGER,
+        HIPRIO_LACONIC_MATCH,   ///< found in laconic
         HIPRIO_NUMERIC,         ///< search by numeric value
         HIPRIO_NUMERIC_HI,      ///< same but stronger
         HIPRIO_MNEMONIC_CASE,   ///< search by HTML mnemonic — wrong case

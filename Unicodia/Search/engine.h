@@ -127,10 +127,25 @@ namespace srh {
         IMPOSSIBLE    ///< technical
     };
 
+    struct RoleInfo {
+        RoleType type;
+        bool isIndex;
+
+        static const RoleInfo BRIEF;
+    };
+
+    enum : unsigned char {
+        NO_HIPRIO = 0,
+        // SMALLEST
+        HIPRIO_INDEX_MATCH,
+        // BIGGEST
+        HIPRIO_BIGGER
+    };
+
     struct Prio {
-        short high = 0;
-        unsigned short exact = 0, exactLoPrio = 0,
-                       initial = 0, initialLoPrio = 0;
+        short high = NO_HIPRIO;
+        unsigned short exact = 0, exactLoPrio = 0;
+        unsigned short initial = 0, initialLoPrio = 0;
         /// @warning  initialIndex is a part of initial/initialLoPrio:
         ///           search by index (e.g. A1a) makes initial = 1, initialIndex = 1
         unsigned short initialIndex = 0;
@@ -161,10 +176,10 @@ namespace srh {
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                    Flags<HaystackClass> hclasses, const Comparator& comparator);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, RoleType roleType,
+                    Flags<HaystackClass> hclasses, RoleInfo roleInfo,
                     const Comparator& comparator);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, RoleType roleType,
+                    Flags<HaystackClass> hclasses, RoleInfo roleInfo,
                     Cache& cache, const Comparator& comparator);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
