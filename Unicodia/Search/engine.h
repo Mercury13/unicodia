@@ -58,6 +58,7 @@ namespace srh {
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
         bool isDicWord = false;
+        bool isIndex = false;
         /// Interesting thing here: searching for “le” → avoid “letter”
         Flags<HaystackClass> lowPrioClass = HaystackClass::NOWHERE;
 
@@ -80,7 +81,7 @@ namespace srh {
     };
 
     enum class Place : unsigned char {
-        NONE, PARTIAL, INITIAL_LOPRIO, INITIAL, EXACT_LOPRIO, EXACT };
+        NONE, PARTIAL, INITIAL_LOPRIO, INITIAL, INDEX_LOPRIO, INDEX, EXACT_LOPRIO, EXACT };
 
     /// @brief
     ///   Just a normal T, but compares in reverse order
@@ -127,8 +128,11 @@ namespace srh {
     struct Prio {
         short high = 0;
         unsigned short exact = 0, exactLoPrio = 0,
-                       initial = 0, initialLoPrio = 0,
-                       partial = 0;
+                       initial = 0, initialLoPrio = 0;
+        /// @warning  initialIndex is a part of initial/initialLoPrio:
+        ///           search by index (e.g. A1a) makes initial = 1, initialIndex = 1
+        unsigned short initialIndex = 0;
+        unsigned short partial = 0;
         RoleType roleType = RoleType::IMPOSSIBLE;  ///< Everything else should override IMPOSSIBLE
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;

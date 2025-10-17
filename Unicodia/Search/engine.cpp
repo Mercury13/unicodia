@@ -243,6 +243,8 @@ srh::Place srh::findWord(
         case Place::EXACT:
         case Place::EXACT_LOPRIO:
             return r1;
+        case Place::INDEX:
+        case Place::INDEX_LOPRIO:
         case Place::INITIAL:
         case Place::INITIAL_LOPRIO:
         case Place::PARTIAL:
@@ -265,6 +267,8 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
         switch (type) {
         case Place::EXACT: ++r.exact; break;
         case Place::EXACT_LOPRIO: ++r.exactLoPrio; break;
+        case Place::INDEX: ++r.initial; ++r.initialIndex; break;
+        case Place::INDEX_LOPRIO: ++r.initialLoPrio; ++r.initialIndex; break;
         case Place::INITIAL: ++r.initial; break;
         case Place::INITIAL_LOPRIO: ++r.initialLoPrio; break;
         case Place::PARTIAL: ++r.partial; break;
