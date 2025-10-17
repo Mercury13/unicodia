@@ -96,15 +96,22 @@ namespace {
 }
 
 
-bool str::isIndex(std::string_view s)
+bool lat::isIndex(std::string_view s)
 {
     // Length
     if (s.size() < 2)
         return false;
     const char* p = s.data();
     const char* const end = p + s.size();
-    // Alpha, then digit
-    if (!isalpha(getChar(p, end)) || !isdigit(getChar(p, end)))
+    // Alpha
+    if (!isalpha(getChar(p, end)))
+        return false;
+    // Allow one more alpha
+    auto c2 = getChar(p, end);
+    if (isalpha(c2)) {
+        c2 = getChar(p, end);
+    }
+    if (!isdigit(c2))
         return false;
     int a;
     do {
@@ -114,5 +121,30 @@ bool str::isIndex(std::string_view s)
     if (isalpha(a))
         a = getChar(p, end);
     // End;
+    return (a == CHAR_END);
+}
+
+
+bool lat::isShortIndex(std::string_view s)
+{
+    // Length
+    if (s.size() < 2)
+        return false;
+    const char* p = s.data();
+    const char* const end = p + s.size();
+    // Alpha
+    if (!isalpha(getChar(p, end)))
+        return false;
+    // Allow one more alpha
+    auto c2 = getChar(p, end);
+    if (isalpha(c2)) {
+        c2 = getChar(p, end);
+    }
+    if (!isdigit(c2))
+        return false;
+    int a;
+    do {
+        a = getChar(p, end);
+    } while (isdigit(a));
     return (a == CHAR_END);
 }

@@ -852,7 +852,7 @@ std::string decapitalize(
     for (auto iWord = words.size(); iWord != 0; ) { --iWord;
         auto& word = words[iWord];
 
-        if (str::isIndex(word.original))
+        if (lat::isIndex(word.original))
             word.isCapital = true;
 
         auto itWord = dictionary.find(word.original);

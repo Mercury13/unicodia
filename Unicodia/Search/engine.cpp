@@ -6,8 +6,29 @@
 const srh::Prio srh::Prio::EMPTY;
 const srh::DefaultComparator srh::DefaultComparator::INST;
 
+
+namespace {
+
+    inline srh::FindStatus detectIndex(
+            std::u8string_view haystack, std::u8string_view needle,
+            bool isNeedleIndex, size_t where)
+    {
+        if (isNeedleIndex) [[unlikely]] {
+            where += needle.length();
+            if (where < haystack.size()) {
+                if (std::isalpha(haystack[where])) {
+                    return srh::FindStatus::INDEX;
+                }
+            }
+        }
+        return srh::FindStatus::INITIAL;
+    }
+
+}   // anon namespace
+
 srh::FindStatus srh::DefaultComparator::find(
-        std::u8string_view haystack, std::u8string_view needle) const
+        std::u8string_view haystack, std::u8string_view needle,
+        bool isNeedleIndex) const
 {
     auto pos = haystack.find(needle);
     if ( pos == std::u8string_view::npos)
@@ -16,11 +37,11 @@ srh::FindStatus srh::DefaultComparator::find(
         if (haystack.length() == needle.length()) {
             return srh::FindStatus::COMPLETE;
         } else {
-            return srh::FindStatus::INITIAL;
+            return detectIndex(haystack, needle, isNeedleIndex, pos);
         }
     } else {
         if (srh::classify(haystack.at(pos - 1)) == srh::Class::OTHER) {
-            return srh::FindStatus::INITIAL;
+            return detectIndex(haystack, needle, isNeedleIndex, pos);
         } else {
             return srh::FindStatus::SUBSTR;
         }
@@ -129,7 +150,8 @@ bool srh::stringsCiEq(std::u8string_view s1, std::u8string_view s2)
 srh::NeedleWord::NeedleWord(std::u8string x)
     : v(std::move(x)),
       ccFirst(classify(v.front())),
-      ccLast(classify(v.back()))
+      ccLast(classify(v.back())),
+      isShortIndex(lat::isShortIndex(v))
 {
     auto beg = std::begin(DIC_WORDS);
     auto end = std::end(DIC_WORDS);
@@ -197,13 +219,14 @@ namespace {
             const srh::Comparator& comparator,
             std::span<const srh::HayWord> haystack,
             std::u8string_view needle,
+            bool isIndex,
             size_t iStartWord)
     {
         for (auto itHay = haystack.begin() + iStartWord;
              itHay != haystack.end();
              ++itHay) {
             auto hayword = itHay->sv();
-            auto status = comparator.find(hayword, needle);
+            auto status = comparator.find(hayword, needle, isIndex);
             if (status != srh::FindStatus::NONE) {
                 return { .word = std::to_address(itHay),
                          .iWord = size_t(itHay - haystack.begin()),
@@ -223,7 +246,7 @@ srh::Place srh::findWord(
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
-        auto where = myFind(comparator, haystack, needle.sv(), pos);
+        auto where = myFind(comparator, haystack, needle.sv(), needle.isShortIndex, pos);
         if (!where)
             break;
         Place r1 = Place::PARTIAL;
@@ -235,6 +258,9 @@ srh::Place srh::findWord(
             r1 = where.word->lowPrioClass.haveAny(hclasses)
                  ?  Place::INITIAL_LOPRIO : Place::INITIAL;
             break;
+        case FindStatus::INDEX:
+            r1 = Place::INDEX;
+            break;
         case FindStatus::SUBSTR:
         case FindStatus::NONE: ;
         }
@@ -244,7 +270,6 @@ srh::Place srh::findWord(
         case Place::EXACT_LOPRIO:
             return r1;
         case Place::INDEX:
-        case Place::INDEX_LOPRIO:
         case Place::INITIAL:
         case Place::INITIAL_LOPRIO:
         case Place::PARTIAL:
@@ -268,7 +293,6 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
         case Place::EXACT: ++r.exact; break;
         case Place::EXACT_LOPRIO: ++r.exactLoPrio; break;
         case Place::INDEX: ++r.initial; ++r.initialIndex; break;
-        case Place::INDEX_LOPRIO: ++r.initialLoPrio; ++r.initialIndex; break;
         case Place::INITIAL: ++r.initial; break;
         case Place::INITIAL_LOPRIO: ++r.initialLoPrio; break;
         case Place::PARTIAL: ++r.partial; break;

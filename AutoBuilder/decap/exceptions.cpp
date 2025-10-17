@@ -427,6 +427,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("ren di")
     EX("Chinese small simplified Er")
     EX("Chinese small traditional Er")
+    EX("li2")  // looks like index
 
     // SPECIALS
         // Misc

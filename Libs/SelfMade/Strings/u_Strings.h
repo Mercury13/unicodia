@@ -18,10 +18,6 @@ namespace str {
     template <class Ch> void trimLeft(const Ch* &start, const Ch* &end);
     template <class Ch> void trimRight(const Ch* &start, const Ch* &end);
 
-    /// @return [+] is letter digits+ [letter]
-    ///       (used for Linear B etc. where chars are marked with these indexes)
-    bool isIndex(std::string_view s);
-
     namespace detail {
 
         template <class T>
@@ -705,6 +701,14 @@ namespace lat {
         using Sv = str::trait::Sv<S>;
         return detail::areCaseEqual<Sv>(x, y);
     }
+
+    /// @return [+] is letter[1-2] digits+ [letter]
+    ///       (used for Linear B etc. where chars are marked with these indexes)
+    bool isIndex(std::string_view s);
+    inline bool isIndex(std::u8string_view s) { return isIndex(str::toSv(s)); }
+
+    bool isShortIndex(std::string_view s);
+    inline bool isShortIndex(std::u8string_view s) { return isShortIndex(str::toSv(s)); }
 
 }   // namespace lat
 

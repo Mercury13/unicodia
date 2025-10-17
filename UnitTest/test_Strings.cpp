@@ -48,22 +48,50 @@ TEST (ContainsWord, BadWords)
 ///
 TEST (isIndex, Simple)
 {
-    EXPECT_FALSE(str::isIndex(""));
-    EXPECT_FALSE(str::isIndex("A"));
-    EXPECT_FALSE(str::isIndex("1"));
-    EXPECT_FALSE(str::isIndex("SDKLJFHSDKFJH"));
-    EXPECT_FALSE(str::isIndex("46238476239"));
-    EXPECT_TRUE (str::isIndex("A1"));
-    EXPECT_TRUE (str::isIndex("Z9"));
-    EXPECT_TRUE (str::isIndex("G1221498723948728945623846823746238764"));
-    EXPECT_TRUE (str::isIndex("A1J"));
-    EXPECT_TRUE (str::isIndex("G1221498723948728945623846823746238764J"));
-    EXPECT_FALSE(str::isIndex("GH1212"));
-    EXPECT_TRUE (str::isIndex("G1212"));
-    EXPECT_TRUE (str::isIndex("G1212L"));
-    EXPECT_FALSE(str::isIndex("G1212LL"));
-    EXPECT_FALSE(str::isIndex("G1212L9"));
-    EXPECT_TRUE (str::isIndex("B105"));
+    EXPECT_FALSE(lat::isIndex(""));
+    EXPECT_FALSE(lat::isIndex("A"));
+    EXPECT_FALSE(lat::isIndex("1"));
+    EXPECT_FALSE(lat::isIndex("SDKLJFHSDKFJH"));
+    EXPECT_FALSE(lat::isIndex("46238476239"));
+    EXPECT_TRUE (lat::isIndex("A1"));
+    EXPECT_TRUE (lat::isIndex("Z9"));
+    EXPECT_TRUE (lat::isIndex("G1221498723948728945623846823746238764"));
+    EXPECT_TRUE (lat::isIndex("A1J"));
+    EXPECT_TRUE (lat::isIndex("G1221498723948728945623846823746238764J"));
+    EXPECT_TRUE (lat::isIndex("GH1212"));
+    EXPECT_FALSE(lat::isIndex("GHJ1212"));
+    EXPECT_TRUE (lat::isIndex("G1212"));
+    EXPECT_TRUE (lat::isIndex("G1212L"));
+    EXPECT_FALSE(lat::isIndex("G1212LL"));
+    EXPECT_FALSE(lat::isIndex("G1212L9"));
+    EXPECT_TRUE (lat::isIndex("B105"));
+    EXPECT_TRUE (lat::isIndex("li2"));  // from Unicode tables, some Chinese pronunciation
+}
+
+
+///
+///  isShortIndex
+///
+TEST (isShortIndex, Simple)
+{
+    EXPECT_FALSE(lat::isShortIndex(""));
+    EXPECT_FALSE(lat::isShortIndex("A"));
+    EXPECT_FALSE(lat::isShortIndex("1"));
+    EXPECT_FALSE(lat::isShortIndex("SDKLJFHSDKFJH"));
+    EXPECT_FALSE(lat::isShortIndex("46238476239"));
+    EXPECT_TRUE (lat::isShortIndex("A1"));
+    EXPECT_TRUE (lat::isShortIndex("Z9"));
+    EXPECT_TRUE (lat::isShortIndex("G1221498723948728945623846823746238764"));
+    EXPECT_FALSE(lat::isShortIndex("A1J"));
+    EXPECT_FALSE(lat::isShortIndex("G1221498723948728945623846823746238764J"));
+    EXPECT_TRUE (lat::isShortIndex("GH1212"));
+    EXPECT_FALSE(lat::isShortIndex("GHJ1212"));
+    EXPECT_TRUE (lat::isShortIndex("G1212"));
+    EXPECT_FALSE(lat::isShortIndex("G1212L"));
+    EXPECT_FALSE(lat::isShortIndex("G1212LL"));
+    EXPECT_FALSE(lat::isShortIndex("G1212L9"));
+    EXPECT_TRUE (lat::isShortIndex("B105"));
+    EXPECT_TRUE (lat::isShortIndex("li2"));  // from Unicode tables, some Chinese pronunciation
 }
 
 

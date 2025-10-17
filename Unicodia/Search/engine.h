@@ -41,6 +41,7 @@ namespace srh {
         NONE,           ///< not found
         SUBSTR,         ///< found as substring
         INITIAL,        ///< found as prefix
+        INDEX,          ///< found as index
         COMPLETE };     ///< found as complete match
 
     class Comparator
@@ -49,7 +50,8 @@ namespace srh {
         virtual void prepareHaystack(
                 std::u8string_view haystack, std::u8string& result) const = 0;
         virtual srh::FindStatus find(
-                std::u8string_view haystack, std::u8string_view needle) const = 0;
+                std::u8string_view haystack, std::u8string_view needle,
+                bool isNeedleIndex) const = 0;
         virtual ~Comparator() = default;
     };
 
@@ -58,7 +60,7 @@ namespace srh {
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
         bool isDicWord = false;
-        bool isIndex = false;
+        bool isShortIndex = false;
         /// Interesting thing here: searching for “le” → avoid “letter”
         Flags<HaystackClass> lowPrioClass = HaystackClass::NOWHERE;
 
@@ -81,7 +83,7 @@ namespace srh {
     };
 
     enum class Place : unsigned char {
-        NONE, PARTIAL, INITIAL_LOPRIO, INITIAL, INDEX_LOPRIO, INDEX, EXACT_LOPRIO, EXACT };
+        NONE, PARTIAL, INITIAL_LOPRIO, INITIAL, INDEX, EXACT_LOPRIO, EXACT };
 
     /// @brief
     ///   Just a normal T, but compares in reverse order
@@ -173,7 +175,8 @@ namespace srh {
                 std::u8string_view haystack, std::u8string& result) const override;
         /// final just for optimization, w/o logical reason
         srh::FindStatus find(
-                std::u8string_view haystack, std::u8string_view needle) const final;
+                std::u8string_view haystack, std::u8string_view needle,
+                bool isNeedleIndex) const final;
         static const DefaultComparator INST;
     };
 
