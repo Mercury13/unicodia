@@ -118,18 +118,23 @@ namespace {
         std::string r;
         const char* p = std::to_address(x.begin());
         const char* const end = std::to_address(x.end());
-        // 1. Letters
-        auto p1 = p;
-        for (; p != end && std::isalpha(*p); ++p)
-            r += lat::toUpper(*p);
-        if (p1 == p) {
+        // 1. First letter
+        if (p == end)
+            throw std::logic_error(str::cat(
+                "Egyptian index <", x, "> has nothing in front"));
+        auto firstLetter = *(p++);
+        if (!std::isalpha(firstLetter)) {
             throw std::logic_error(str::cat(
                 "Egyptian index <", x, "> has no letters in front"));
         }
-        // 2. Heading zeros
+        r += lat::toUpper(firstLetter);
+        // 2. Rest letters
+        for (; p != end && std::isalpha(*p); ++p)
+            r += std::tolower(*p);
+        // 3. Heading zeros
         for (; p != end && *p == '0'; ++p) ;
-        // 3. Digits
-        p1 = p;
+        // 4. Digits
+        auto p1 = p;
         for (; p != end && std::isdigit(*p); ++p) {
             r += *p;
         }
