@@ -13609,48 +13609,48 @@
      <orig>Keyboard</orig>
      <transl>Klavye</transl>
     </text>
-    <text id="Typo" force-attention="true">
+    <text id="Typo">
      <orig>Typography characters</orig>
-     <transl>Tipografik semboller</transl>
+     <transl>Tipografik karakterler</transl>
     </text>
-    <text id="Space" force-attention="true">
+    <text id="Space">
      <orig>Spaces</orig>
      <transl>Boşluklar</transl>
     </text>
-    <text id="Dash" force-attention="true">
+    <text id="Dash">
      <orig>Dashes</orig>
      <transl>Tireler</transl>
     </text>
-    <text id="Quote" force-attention="true">
+    <text id="Quote">
      <orig>Quotation marks</orig>
      <transl>Tırnaklar</transl>
     </text>
-    <text id="QuoTop" force-attention="true">
+    <text id="QuoTop">
      <orig>Top</orig>
      <au-cmt>…top quotes</au-cmt>
      <transl>Üst</transl>
     </text>
-    <text id="QuoAngle" force-attention="true">
+    <text id="QuoAngle">
      <orig>Angle</orig>
      <au-cmt>…angle quotes</au-cmt>
      <transl>Açı</transl>
     </text>
-    <text id="QuoSlav" force-attention="true">
+    <text id="QuoSlav">
      <orig>German/Slavic</orig>
      <au-cmt>…German/Slavic quotes</au-cmt>
      <transl>Almanca/Slavca</transl>
     </text>
-    <text id="QuoNl" force-attention="true">
+    <text id="QuoNl">
      <orig>Dutch</orig>
      <au-cmt>…Dutch quotes</au-cmt>
      <transl>Felemenkçe</transl>
     </text>
-    <text id="QuoJp" force-attention="true">
+    <text id="QuoJp">
      <orig>Chinese/Japanese</orig>
      <au-cmt>…Chinese/Japanese quotes</au-cmt>
      <transl>Çince/Japonca</transl>
     </text>
-    <text id="QuoKr" force-attention="true">
+    <text id="QuoKr">
      <orig>South Asian</orig>
      <au-cmt>…South Asign quotes, used mainly in North Korea and other minor countries</au-cmt>
      <transl>Güney Asya</transl>
@@ -13659,7 +13659,7 @@
      <orig>Arrows</orig>
      <transl>Oklar</transl>
     </text>
-    <text id="TypoMisc" force-attention="true">
+    <text id="TypoMisc">
      <orig>Misc. punctuation</orig>
      <transl>Çeşitli noktalama işaretleri</transl>
     </text>
