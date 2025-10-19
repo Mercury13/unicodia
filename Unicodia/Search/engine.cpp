@@ -1,5 +1,8 @@
 #include "engine.h"
 
+// STL
+#include <span>
+
 #include "u_Strings.h"
 #include "u_TypedFlags.h"
 

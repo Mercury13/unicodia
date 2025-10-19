@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <span>
 
 #include "u_Vector.h"
 #include "u_TypedFlags.h"
