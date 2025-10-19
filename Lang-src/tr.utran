@@ -1343,6 +1343,10 @@
      <au-cmt>A1, B10c etc</au-cmt>
      <transl>Dizin</transl>
     </text>
+    <text id="Pron" force-attention="true">
+     <orig>Pronunciation</orig>
+     <transl>Telaffuz</transl>
+    </text>
    </group>
   </group>
   <group id="Block">

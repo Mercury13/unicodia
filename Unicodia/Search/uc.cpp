@@ -257,6 +257,7 @@ namespace {
         const uc::TextRole role;
     };
 
+    /// @todo [bad] functionality is divided between allSNT and roleInfo
     void allSearchableNamesTo(const uc::Cp& cp, SafeVector<SearchableName>& r)
     {
         r.clear();
@@ -279,6 +280,7 @@ namespace {
                 case uc::TextRole::DEP_INSTEAD:  // They are not searchable
                 case uc::TextRole::DEP_INSTEAD2:
                 case uc::TextRole::EGYP_EQUIV:
+                case uc::TextRole::EGYP_PRONUN:
                 case uc::TextRole::CMD_END:
                     break;
                 }
@@ -306,6 +308,7 @@ namespace {
                 case uc::TextRole::EGYP_EQUIV:
                 case uc::TextRole::EGYP_MEANING:
                 case uc::TextRole::EGYP_INDEX:
+                case uc::TextRole::EGYP_PRONUN:
                     break;
                 }
             });
@@ -565,6 +568,7 @@ namespace {
         case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::DEP_INSTEAD2:
         case uc::TextRole::EGYP_EQUIV:
+        case uc::TextRole::EGYP_PRONUN:
             return { .type = srh::RoleType::UNSEARCHABLE,
                      .indexLocation = srh::IndexLocation::NEVER };
         }

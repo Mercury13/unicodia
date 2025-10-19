@@ -1344,6 +1344,10 @@
      <au-cmt>A1, B10c etc</au-cmt>
      <transl>Індекс</transl>
     </text>
+    <text id="Pron">
+     <orig>Pronunciation</orig>
+     <transl>Вимова</transl>
+    </text>
    </group>
   </group>
   <group id="Block">

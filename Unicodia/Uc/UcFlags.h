@@ -107,6 +107,7 @@ namespace uc {
         EGYP_EQUIV = 10,    // Egyptian equivalent sequence
         EGYP_MEANING = 11,  // Egyptian meaning
         EGYP_INDEX = 12,    // Egyptian index
+        EGYP_PRONUN = 13,   // Egyptian pronunciation
     };
 
     enum : unsigned char {

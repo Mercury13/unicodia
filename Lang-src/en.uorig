@@ -1064,6 +1064,9 @@
      <orig>Index</orig>
      <au-cmt>A1, B10c etc</au-cmt>
     </text>
+    <text id="Pron">
+     <orig>Pronunciation</orig>
+    </text>
    </group>
   </group>
   <group id="Block">

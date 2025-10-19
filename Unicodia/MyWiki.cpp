@@ -2660,6 +2660,7 @@ namespace {
                 case uc::TextRole::EGYP_EQUIV:
                 case uc::TextRole::EGYP_MEANING:
                 case uc::TextRole::EGYP_INDEX:
+                case uc::TextRole::EGYP_PRONUN:
                     break;
                 }
             });
@@ -2785,6 +2786,11 @@ namespace {
                     case uc::TextRole::EGYP_MEANING:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Mean");
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        break;
+                    case uc::TextRole::EGYP_PRONUN:
+                        sp.sep();
+                        appendNonBullet(text, "Prop.Egyp2.Pron");
                         mywiki::appendCopyable(text, str::toQ(s), "altname");
                         break;
                     case uc::TextRole::EGYP_EQUIV: {
@@ -3412,6 +3418,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                     case uc::TextRole::EGYP_EQUIV:
                     case uc::TextRole::EGYP_MEANING:
                     case uc::TextRole::EGYP_INDEX:
+                    case uc::TextRole::EGYP_PRONUN:
                     case uc::TextRole::EMOJI_NAME:  // Equal to mine
                         break;
                     }

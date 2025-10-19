@@ -452,6 +452,9 @@ int main()
             if (!v.meaning.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_MEANING, v.meaning);
             }
+            if (!v.pronunciation.empty()) {
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_PRONUN, v.pronunciation);
+            }
         }
 
         for (auto& v : textCp->names) {

@@ -201,8 +201,10 @@ namespace {
             } else if (sField == "kEH_Func"sv) {
                 auto& en = r[cp];
                 en.meaning = sValue;
+            } else if (sField == "kEH_FVal"sv) {
+                auto& en = r[cp];
+                en.pronunciation = sValue;
             } else if (sField == "kEH_UniK"sv) {
-                /// @todo [urgent] simplify index
                 auto& en = r[cp];
                 en.index = simplifyIndex(sValue);
             }

@@ -1271,6 +1271,7 @@ std::u8string_view uc::Cp::traverseTexts(
         case TextRole::EGYP_EQUIV:
         case TextRole::EGYP_MEANING:
         case TextRole::EGYP_INDEX:
+        case TextRole::EGYP_PRONUN:
             if (auto q = checkAutoName(); !q.empty())
                 return q;
             [[fallthrough]];
