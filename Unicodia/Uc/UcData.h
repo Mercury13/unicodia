@@ -826,6 +826,7 @@ namespace uc {
                                     ///<      be lowered: BY IN TO
         COOL_WORDS_2    = 1<<20,    ///< [+] Some words have special meaning and should not
                                     ///<      be lowered: ON
+        INDEX_ANYWHERE  = 1<<21,    ///< [+] index may be everywhere, not just in the end
         EXPERIMENT      = 1<<30,    ///< Left for experiments
         STOCK_BLOCK_DESC = STOCK_BLOCK | HAS_DESCRIPTION,
         WORD_BY = COOL_WORDS_1,

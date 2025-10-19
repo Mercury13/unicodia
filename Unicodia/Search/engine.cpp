@@ -5,8 +5,9 @@
 
 constinit const srh::Prio srh::Prio::EMPTY;
 constinit const srh::DefaultComparator srh::DefaultComparator::INST;
-constinit const srh::RoleInfo srh::RoleInfo::BRIEF
-        { .type = srh::RoleType::BRIEF, .indexLocation = IndexLocation::NEVER };
+constinit const srh::RoleInfo srh::RoleInfo::EMOJI {
+    .type = srh::RoleType::BRIEF,
+    .indexLocation = IndexLocation::NEVER };
 
 
 namespace {
@@ -201,6 +202,29 @@ srh::Needle::Needle(std::u8string_view x)
 }
 
 
+void srh::HaystackCache::load(
+        std::u8string_view x,
+        const RoleInfo& aRoleInfo,
+        Flags<HaystackClass> aClasses,
+        const Comparator& aComparator)
+{
+    comparator = &aComparator;
+    classes = aClasses;
+    roleInfo = aRoleInfo;
+    // Uppercase haystack
+    aComparator.prepareHaystack(x, text);
+    // Words — simple
+    words1.clear();
+    str::splitByAnySvTo(text, ALL_SEPARATORS, words1);
+    // Words — bigger
+    words2.clear();
+    words2.reserve(words1.size());
+    for (auto v : words1) {
+        if (!v.empty())
+            words2.emplace_back(v);
+    }
+}
+
 namespace {
 
     template<typename charT>
@@ -240,16 +264,14 @@ namespace {
 
 }   // anon namespace
 
-srh::Place srh::findWord(
-        std::span<HayWord> haystack, IndexLocation indexLocation,
-        const NeedleWord& needle, Flags<HaystackClass> hclasses,
-        const Comparator& comparator)
+
+srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
 {
-    bool isNeedleLowPrio = needle.lowPrioClass.haveAny(hclasses);
+    bool isNeedleLowPrio = needle.lowPrioClass.haveAny(classes);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
-        auto where = myFind(comparator, haystack, needle.sv(), needle.isShortIndex, pos);
+        auto where = myFind(*comparator, words2, needle.sv(), needle.isShortIndex, pos);
         if (!where)
             break;
         Place r1 = Place::PARTIAL;
@@ -258,7 +280,7 @@ srh::Place srh::findWord(
             r1 = isNeedleLowPrio ? Place::EXACT_LOPRIO : Place::EXACT;
             break;
         case FindStatus::INITIAL:
-            r1 = where.word->lowPrioClass.haveAny(hclasses)
+            r1 = where.word->lowPrioClass.haveAny(classes)
                  ?  Place::INITIAL_LOPRIO : Place::INITIAL;
             break;
         case FindStatus::INDEX:
@@ -285,15 +307,12 @@ srh::Place srh::findWord(
     return r;
 }
 
-srh::Prio srh::findNeedle(std::span<HayWord> haystack,
-                          const Needle& needle,
-                          Flags<HaystackClass> hclasses,
-                          RoleInfo roleInfo, const Comparator& comparator)
+srh::Prio srh::HaystackCache::findNeedle(const Needle& needle) const
 {
     srh::Prio r { .roleType = roleInfo.type };
     bool isIndex1 = false;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, roleInfo.indexLocation, v, hclasses, comparator);
+        auto type = findWord(v);
         switch (type) {
         case Place::EXACT: ++r.exact; isIndex1 = true; break;
         case Place::EXACT_LOPRIO: ++r.exactLoPrio; isIndex1 = true; break;
@@ -311,25 +330,4 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack,
         r.high = HIPRIO_INDEX_MATCH;
     }
     return r;
-}
-
-
-srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          Flags<HaystackClass> hclasses,
-                          RoleInfo roleInfo, Cache& cache,
-                          const Comparator& comparator)
-{
-    // Uppercase haystack
-    comparator.prepareHaystack(haystack, cache.haystack);
-    // Words — simple
-    cache.words1.clear();
-    str::splitByAnySvTo(cache.haystack, ALL_SEPARATORS, cache.words1);
-    // Words — bigger
-    cache.words2.clear();
-    cache.words2.reserve(cache.words1.size());
-    for (auto v : cache.words1) {
-        if (!v.empty())
-            cache.words2.emplace_back(v);
-    }
-    return findNeedle(cache.words2, needle, hclasses, roleInfo, comparator);
 }

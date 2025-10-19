@@ -807,11 +807,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE, {}, SvgHint { 7, 9 } },
             "Linear B Syllabary",
             { EcScript::Linb, 0 }, MapSubtype::DEAD,
-            EcScript::Linb, EcFont::NORMAL, Bfg::WORD_TO },
+            EcScript::Linb, EcFont::NORMAL, Bfg::WORD_TO | Bfg::INDEX_ANYWHERE },
     // Linear B hier OK
     { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE, {}, 4_hy },
             "Linear B Ideograms",
-            { EcScript::Linb, 1 }, MapSubtype::DEAD, EcScript::Linb },
+            { EcScript::Linb, 1 }, MapSubtype::DEAD,
+            EcScript::Linb, EcFont::NORMAL, Bfg::INDEX_ANYWHERE },
     // Aegean numbers OK
     { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE, Ifg::ENG_CUSTOM },
             "Aegean Numbers",
@@ -900,7 +901,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE },
             "Todhri",
             { EcScript::Todr, 0 }, MapSubtype::DEAD, EcScript::Todr },
-    // Linear A OK
+    // Linear A OK; Lina indexes are perfectly searchable this way
     { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE },
             "Linear A",
             { EcScript::Lina, 0 }, MapSubtype::DEAD, EcScript::Lina },

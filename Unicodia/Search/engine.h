@@ -138,7 +138,7 @@ namespace srh {
         RoleType type;
         IndexLocation indexLocation;
 
-        static const RoleInfo BRIEF;
+        static const RoleInfo EMOJI;
     };
 
     enum : unsigned char {
@@ -174,21 +174,24 @@ namespace srh {
         Needle(std::u8string_view x);
     };
 
-    struct Cache {
-        std::u8string haystack;
+    struct HaystackCache {
+        std::u8string text;
         SafeVector<std::u8string_view> words1;
         SafeVector<HayWord> words2;
+        RoleInfo roleInfo;
+        Flags<HaystackClass> classes;
+        bool isIndexEverywhere = false;
+        const Comparator* comparator = nullptr;
+
+        void load(
+                std::u8string_view x,
+                const RoleInfo& aRoleInfo,
+                Flags<HaystackClass> aClasses,
+                const Comparator& aComparator);
+        Place findWord(const NeedleWord& needle) const;
+        Prio findNeedle(const Needle& needle) const;
     };
 
-    Place findWord(std::span<HayWord> haystack, IndexLocation indexLocation,
-                   const NeedleWord& needle, Flags<HaystackClass> hclasses,
-                   const Comparator& comparator);
-    Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, RoleInfo roleInfo,
-                    const Comparator& comparator);
-    Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    Flags<HaystackClass> hclasses, RoleInfo roleInfo,
-                    Cache& cache, const Comparator& comparator);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
     class DefaultComparator : public Comparator

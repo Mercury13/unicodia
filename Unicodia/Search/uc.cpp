@@ -536,7 +536,7 @@ namespace {
         return r;
     }
 
-    srh::RoleInfo roleInfo(uc::TextRole role)
+    srh::RoleInfo roleInfo(uc::TextRole role, bool isIndexAnywhere)
     {
         switch (role) {
         case uc::TextRole::HTML:        // HTML unused (processed separately), but let it be
@@ -549,7 +549,9 @@ namespace {
         case uc::TextRole::MAIN_NAME:
             /// @todo [urgent] not necessarily end
             return { .type = srh::RoleType::BRIEF,
-                     .indexLocation = srh::IndexLocation::END };
+                     .indexLocation = isIndexAnywhere
+                            ? srh::IndexLocation::ANYWHERE
+                            : srh::IndexLocation::END };
         case uc::TextRole::EMOJI_NAME:
         case uc::TextRole::ALT_NAME:
             return { .type = srh::RoleType::BRIEF,
@@ -722,7 +724,7 @@ uc::MultiResult uc::doSearch(QString what)
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
-        srh::Cache cache;
+        srh::HaystackCache cache;
         SafeVector<SearchableName> names;
         for (auto& cp : uc::cpInfo) {
             if (&cp != hex && &cp != dec) {  // Do not check what we found once again
@@ -757,6 +759,7 @@ uc::MultiResult uc::doSearch(QString what)
                         hclasses |= srh::HaystackClass::EXCEPT_COOL_1;
                     if (!(block.flags.have(Bfg::COOL_WORDS_2) || cp.flags.have(Cfg::S_COOL_2)))
                         hclasses |= srh::HaystackClass::EXCEPT_COOL_2;
+                    bool isIndexAnywhere = block.flags.have(Bfg::INDEX_ANYWHERE);
                     for (auto& nm : names) {
                         auto hclasses1 = hclasses;
                         switch (nm.role) {
@@ -779,10 +782,13 @@ uc::MultiResult uc::doSearch(QString what)
                             hclasses1 |= srh::HaystackClass::EGYPTIAN;
                             [[fallthrough]];
                         default:
-                            if (auto pr = srh::findNeedle(
-                                        nm.value, needle, hclasses1,
-                                        roleInfo(nm.role), cache, nm.comparator);
-                                    pr > best.prio) {
+                            cache.load(
+                                    nm.value,
+                                    roleInfo(nm.role, isIndexAnywhere),
+                                    hclasses1,
+                                    nm.comparator);
+                            if (auto pr = cache.findNeedle(needle);
+                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm.value;
                                 best.role = nm.role;
@@ -804,12 +810,11 @@ uc::MultiResult uc::doSearch(QString what)
         for (auto& node: uc::allLibNodes()) {
             if (!node.flags.have(uc::Lfg::SEARCHABLE))
                 continue;
-            auto prio = srh::findNeedle(
-                    node.text, needle, srh::HaystackClass::MASK_EMOJI,
-                    // All emoji are brief
-                    srh::RoleInfo::BRIEF, cache,
-                    srh::NonAsciiComparator::INST);
-            if (prio > srh::Prio::EMPTY) {
+            cache.load(node.text, srh::RoleInfo::EMOJI,
+                       srh::HaystackClass::MASK_EMOJI,
+                       srh::NonAsciiComparator::INST);
+            if (auto prio = cache.findNeedle(needle);
+                     prio > srh::Prio::EMPTY) {
                 r.emplace_back(&node, srh::EmojiLevel::FULL, prio);
             }
         }
