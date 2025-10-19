@@ -22,7 +22,8 @@ namespace {
         if (isNeedleIndex) [[unlikely]] {
             where += needle.length();
             if (where < haystack.size()) {
-                if (std::isalpha(haystack[where])) {
+                auto nextChar = haystack[where];
+                if (std::isalpha(nextChar) || nextChar == '-') {
                     return srh::FindStatus::INDEX;
                 }
             }
@@ -283,7 +284,18 @@ namespace {
 }   // anon namespace
 
 
-srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
+bool srh::HaystackCache::checkIndex(size_t iWord) const
+{
+    switch (roleInfo.indexLocation) {
+    case IndexLocation::END:      return (iWord + 1 == words2.size());
+    case IndexLocation::ANYWHERE: return true;
+    case IndexLocation::NEVER:    return false;
+    }
+    __builtin_unreachable();
+}
+
+
+srh::Place srh::HaystackCache::findNormalWord(const NeedleWord& needle) const
 {
     bool isNeedleLowPrio = needle.lowPrioClass.haveAny(classes);
     Place r = Place::NONE;
@@ -295,19 +307,12 @@ srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
         Place r1 = Place::PARTIAL;
         switch (where.status) {
         case FindStatus::COMPLETE:
-            r1 = isNeedleLowPrio ? Place::EXACT_LOPRIO : Place::EXACT;
-            break;
+            return isNeedleLowPrio ? Place::EXACT_LOPRIO : Place::EXACT;
         case FindStatus::INDEX:
-            switch (roleInfo.indexLocation) {
-            case IndexLocation::END:
-                if (where.iWord + 1 != words2.size())
-                    break;  // and fall through to initial;
-                [[fallthrough]];  // otherwise fall through to ANYWHERE
-            case IndexLocation::ANYWHERE:
-                r1 = Place::INDEX; goto brk1;
-            case IndexLocation::NEVER:;  // and fall through to initial
+            if (checkIndex(where.iWord)) {
+                r1 = Place::INDEX;  break;
             }
-            [[fallthrough]];
+            [[fallthrough]];  // otherwise fall through
         case FindStatus::INITIAL:
             r1 = where.word->lowPrioClass.haveAny(classes)
                  ?  Place::INITIAL_LOPRIO : Place::INITIAL;
@@ -315,7 +320,6 @@ srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
         case FindStatus::SUBSTR:
         case FindStatus::NONE: ;
         }
-    brk1:;
         // Check for dictionary word
         switch (r1) {
         case Place::EXACT:
@@ -330,6 +334,69 @@ srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
         case Place::NONE: ;
         }
         pos = where.iWord + 1;
+    }
+    return r;
+}
+
+
+srh::Place srh::HaystackCache::findIndexWord(
+        std::u8string_view needle, bool isShortIndex) const
+{
+    // Role does not permit
+    if (needle.empty())
+        return Place::NONE;
+
+    if (roleInfo.indexLocation != IndexLocation::ANYWHERE) {
+        if (words2.empty())   // over-assurance, for back()
+            return Place::NONE;
+        auto where1 = comparator->find(
+                words2.back().v, needle, isShortIndex);
+        switch (where1) {
+        case FindStatus::COMPLETE:
+            return Place::EXACT;
+        case FindStatus::INITIAL:
+        case FindStatus::INDEX:
+            return Place::INDEX;
+        case FindStatus::SUBSTR:
+        case FindStatus::NONE: ;
+        }
+        return Place::NONE;
+    } else {
+        // Indexes have no low-prio classes
+        size_t pos = 0;
+        while (true) {
+            auto where = myFind(*comparator, words2, needle, isShortIndex, pos);
+            if (!where)
+                break;
+            switch (where.status) {
+            case FindStatus::COMPLETE:
+                return Place::EXACT;
+            case FindStatus::INDEX:
+            case FindStatus::INITIAL:
+                return Place::INDEX;
+            case FindStatus::SUBSTR:
+            case FindStatus::NONE: ;
+            }
+            pos = where.iWord + 1;
+        }
+        return Place::NONE;
+    }
+}
+
+
+srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
+{
+    auto r = findNormalWord(needle);
+    if (r < Place::INDEX  // Complete / index → do not check
+            && roleInfo.indexLocation != IndexLocation::NEVER) {  // Role does not permit → do not check
+        if (auto r1 = findIndexWord(needle.twoDigitIndex, needle.isShortIndex);
+                 r1 > r) {
+            return r1;
+        }
+        if (auto r1 = findIndexWord(needle.threeDigitIndex, needle.isShortIndex);
+                 r1 > r) {
+            return r1;
+        }
     }
     return r;
 }

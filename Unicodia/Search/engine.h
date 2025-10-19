@@ -188,6 +188,12 @@ namespace srh {
                 const Comparator& aComparator);
         Place findWord(const NeedleWord& needle) const;
         Prio findNeedle(const Needle& needle) const;
+    private:
+        /// Finds a word, but only checks main word
+        Place findNormalWord(const NeedleWord& needle) const;
+        /// Finds an index word
+        Place findIndexWord(std::u8string_view needle, bool isShortIndex) const;
+        bool checkIndex(size_t iWord) const;
     };
 
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
