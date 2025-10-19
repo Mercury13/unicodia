@@ -170,6 +170,21 @@ srh::NeedleWord::NeedleWord(std::u8string x)
             lowPrioClass = it->lowPrioClass;
         }
     }
+    if (lat::isIndex(v)) {
+        auto iFirst = v.find_first_of(u8"0123456789");
+        auto iLast  = v.find_last_of (u8"0123456789");
+        if (iLast != std::u8string_view::npos && iFirst <= iLast && v[iFirst] != 0) {
+            auto numLen = iLast + 1 - iFirst;
+            if (numLen < 3) {
+                threeDigitIndex = v;
+                threeDigitIndex.insert(iFirst, 3 - numLen, '0');
+                if (numLen == 1) {
+                    twoDigitIndex = v;
+                    twoDigitIndex.insert(iFirst, 1, '0');
+                }
+            }
+        }
+    }
 }
 
 
@@ -282,16 +297,25 @@ srh::Place srh::HaystackCache::findWord(const NeedleWord& needle) const
         case FindStatus::COMPLETE:
             r1 = isNeedleLowPrio ? Place::EXACT_LOPRIO : Place::EXACT;
             break;
+        case FindStatus::INDEX:
+            switch (roleInfo.indexLocation) {
+            case IndexLocation::END:
+                if (where.iWord + 1 != words2.size())
+                    break;  // and fall through to initial;
+                [[fallthrough]];  // otherwise fall through to ANYWHERE
+            case IndexLocation::ANYWHERE:
+                r1 = Place::INDEX; goto brk1;
+            case IndexLocation::NEVER:;  // and fall through to initial
+            }
+            [[fallthrough]];
         case FindStatus::INITIAL:
             r1 = where.word->lowPrioClass.haveAny(classes)
                  ?  Place::INITIAL_LOPRIO : Place::INITIAL;
             break;
-        case FindStatus::INDEX:
-            r1 = Place::INDEX;
-            break;
         case FindStatus::SUBSTR:
         case FindStatus::NONE: ;
         }
+    brk1:;
         // Check for dictionary word
         switch (r1) {
         case Place::EXACT:

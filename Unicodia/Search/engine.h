@@ -179,7 +179,6 @@ namespace srh {
         SafeVector<HayWord> words2;
         RoleInfo roleInfo;
         Flags<HaystackClass> classes;
-        bool isIndexEverywhere = false;
         const Comparator* comparator = nullptr;
 
         void load(
