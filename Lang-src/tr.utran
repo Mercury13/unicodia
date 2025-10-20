@@ -1343,7 +1343,7 @@
      <au-cmt>A1, B10c etc</au-cmt>
      <transl>Dizin</transl>
     </text>
-    <text id="Pron" force-attention="true">
+    <text id="Pron">
      <orig>Pronunciation</orig>
      <transl>Telaffuz</transl>
     </text>
