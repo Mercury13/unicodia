@@ -3,6 +3,7 @@
 RETURN = temporarily deleted, then returned
 
 # Will never extend
+- 130C9, 130CA, 130CB, 130CC, 130CD / 130CE, 130CF, 130D1, 130D2 = counting circles (9)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
@@ -21,7 +22,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 138
+Subtotal: 147
 
 # Misrenders / basic
 - 13000: made better A1 for another reason
@@ -519,6 +520,7 @@ Subtotal: 369
 - 13582: franken near 81
 - 13585: after 84
 - 13595: made from man with straight sticks
+- 13597: after A202: longer/thicker sticks, bigger lower hand, right is the mirrored clone of left
 - 135B1: lots of captives here
 - 135B2: same
 - 135B3: same
@@ -691,7 +693,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 200
+Subtotal: 201
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -699,4 +701,4 @@ Subtotal: 200
 
 Subtotal: 2
 
-Total: 798
+Total: 808
