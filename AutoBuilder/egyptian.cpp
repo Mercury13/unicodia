@@ -153,6 +153,11 @@ namespace {
         return r;
     }
 
+    void repl(std::string& x)
+    {
+        str::replace(x, "\uA7BD"sv, "ĭ"sv);
+    }
+
     void loadUnikemet(egyp::Base& r)
     {
         for (char32_t c = 0x13430; c <= 0x1345F; ++c) {
@@ -185,6 +190,7 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
+                repl(du);
             } else if (sField == "kEH_Core"sv) {
                 auto& en = r[cp];
                 if (sValue == "C"sv) {
@@ -201,9 +207,11 @@ namespace {
             } else if (sField == "kEH_Func"sv) {
                 auto& en = r[cp];
                 en.meaning = sValue;
+                repl(en.meaning);
             } else if (sField == "kEH_FVal"sv) {
                 auto& en = r[cp];
                 en.pronunciation = sValue;
+                repl(en.pronunciation);
             } else if (sField == "kEH_UniK"sv) {
                 auto& en = r[cp];
                 en.index = simplifyIndex(sValue);
