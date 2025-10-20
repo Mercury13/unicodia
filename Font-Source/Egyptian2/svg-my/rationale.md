@@ -512,6 +512,7 @@ Subtotal: 369
 - 13526: after 25
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
+- 1352A: hiding almost from scratch, took only four buds from A421
 - 13534: after 13027
 - 13548: was squished in NewG
 - 1356C: after 6B
@@ -693,7 +694,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 201
+Subtotal: 202
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -701,4 +702,4 @@ Subtotal: 201
 
 Subtotal: 2
 
-Total: 808
+Total: 809

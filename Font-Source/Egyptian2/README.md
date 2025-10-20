@@ -51,3 +51,9 @@ Meaning of directories:
 Check = what changed? Is the character original or redrawn? Can we find something in JSesh base? Maybe revert to JSesh’s image?
 
 Why Unisesh.txt? Just to make changes more obvious.
+
+# Colour code
+
+- All shades of violet: convert to path, mainly Stroke to path
+- Crimson, grey, dark-blue etc: just to remind that you need to unite the objects while exporting
+- Yellow: 
