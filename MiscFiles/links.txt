@@ -59,8 +59,15 @@ https://www.endangeredalphabets.net/alphabets/vai/ — info on rare scripts
 Лоукотка Ч., Развитие письма, М., 1950
 
 
+EGYPTIAN
+
+https://jsesh.qenherkhopeshef.org/glyphs — JSesh base
+https://www.phrp.be/ListAllSigns.php — real coloured hieros
+
+
 DATA BEYOND UNICODE
 https://github.com/cjkvi/cjkvi-ids — CJK bases
+https://github.com/yi-bai/ids — another CJK base
 https://html.spec.whatwg.org/multipage/named-characters.html — named chars in HTML
 
 

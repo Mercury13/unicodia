@@ -25,8 +25,8 @@ RETURN = temporarily deleted, then returned
 Subtotal: 147
 
 # Misrenders / basic
-- 13000: made better A1 for another reason
-- 13002: craggy
+- 13000: A1 ex + someone’s else head
+- 13002: A3 ex has really bad heels
 - 13003: craggy
 - 13004: craggy, took man from extension, wall from 05
 - 13005: craggy
