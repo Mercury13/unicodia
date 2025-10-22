@@ -25,8 +25,8 @@ RETURN = temporarily deleted, then returned
 Subtotal: 147
 
 # Misrenders / basic
-- 13000: A1 ex + someone’s else head
-- 13002: A3 ex has really bad heels
+- 13000: A1 extended + someone’s else head
+- 13002: A3 extended has really bad heels
 - 13003: craggy
 - 13004: craggy, took man from extension, wall from 05
 - 13005: craggy
@@ -119,7 +119,7 @@ Subtotal: 89
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
-- 13475: better feet
+- 13475: from extended, better feet
 - 13478: frankenmade from scratch after 13527 using old hands
 - 1347D: covered, removed beard
 - 134C3: leaning by 45° to the left (rather than lying)
