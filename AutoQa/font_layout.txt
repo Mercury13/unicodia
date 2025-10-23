@@ -900,11 +900,7 @@ FFFD......: NotoSerif-Regular
 == Cypro-Minoan
 12F90..12FF2: UnicodiaFunky
 == Egyptian Hieroglyphs
-13000..130AD: UnicodiaSesh
-130AE..130B6: NotoSansEgyptianHieroglyphs-Regular
-130B7..130C8: UnicodiaSesh
-130C9..130D1: NotoSansEgyptianHieroglyphs-Regular
-130D2..13138: UnicodiaSesh
+13000..13138: UnicodiaSesh
 13139..133F9: NotoSansEgyptianHieroglyphs-Regular
 133FA..1340C: UnicodiaEgypFixupRegular
 1340D..1342F: NotoSansEgyptianHieroglyphs-Regular
@@ -929,9 +925,7 @@ FFFD......: NotoSerif-Regular
 1351C.......: NewGardiner
 1351D, 1351E: UnicodiaSesh
 1351F, 13520: NewGardiner
-13521..13529: UnicodiaSesh
-1352A.......: NewGardiner
-1352B..1352D: UnicodiaSesh
+13521..1352D: UnicodiaSesh
 1352E.......: NewGardiner
 1352F..13532: UnicodiaSesh
 13533.......: NewGardiner
@@ -953,11 +947,9 @@ FFFD......: NotoSerif-Regular
 1358A..13590: NewGardiner
 13591.......: UnicodiaSesh
 13592.......: NewGardiner
-13593..13596: UnicodiaSesh
-13597..13599: NewGardiner
-1359A..1359C: UnicodiaSesh
-1359D.......: NewGardiner
-1359E.......: UnicodiaSesh
+13593..13597: UnicodiaSesh
+13598, 13599: NewGardiner
+1359A..1359E: UnicodiaSesh
 1359F.......: NewGardiner
 135A0..135A5: UnicodiaSesh
 135A6..135A9: NewGardiner
