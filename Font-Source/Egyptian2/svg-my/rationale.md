@@ -107,6 +107,8 @@ Subtotal: 147
 - 1310A: extended + thin solid stick
 - 13113: took extended F20 and changed to b/w F20
 - 13121: was self-intersecting, made two halves
+- 13130: changed Sesh a bit, mainly made branches more pronounced
+- 13131: same
 - 13132: remade from scratch, was too thin
 - 13133: same
 - 13134: same
@@ -115,7 +117,7 @@ Subtotal: 147
 - 13137: same
 - 13138: same
 
-Subtotal: 89
+Subtotal: 91
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -703,4 +705,4 @@ Subtotal: 203
 
 Subtotal: 2
 
-Total: 810
+Total: 812
