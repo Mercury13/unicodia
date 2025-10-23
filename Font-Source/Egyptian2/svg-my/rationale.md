@@ -522,6 +522,7 @@ Subtotal: 369
 - 13585: after 84
 - 13595: made from man with straight sticks
 - 13597: after A202: longer/thicker sticks, bigger lower hand, right is the mirrored clone of left
+- 1359D: found his cap among A1!
 - 135B1: lots of captives here
 - 135B2: same
 - 135B3: same
@@ -694,7 +695,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 202
+Subtotal: 203
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -702,4 +703,4 @@ Subtotal: 202
 
 Subtotal: 2
 
-Total: 809
+Total: 810
