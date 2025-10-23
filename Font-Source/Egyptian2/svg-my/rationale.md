@@ -4,6 +4,7 @@ RETURN = temporarily deleted, then returned
 
 # Will never extend
 - 130C9, 130CA, 130CB, 130CC, 130CD / 130CE, 130CF, 130D1, 130D2 = counting circles (9)
+- 130AD, 130AE, 130AF, 130B0, 130B1 / 130B2, 130B3, 130B4, 130B5, 130B6 / 130B7 = counting fingers (11)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
@@ -22,7 +23,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 147
+Subtotal: 158
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -705,4 +706,4 @@ Subtotal: 203
 
 Subtotal: 2
 
-Total: 812
+Total: 823
