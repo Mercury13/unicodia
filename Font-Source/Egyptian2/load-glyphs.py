@@ -186,6 +186,8 @@ GLYPH_SIZES = {
     0x13091: SMALL_TIT,  # tit
     0x1309C: WIDE,  # 2 arms
     0x130AC: SQUARE,  # fist
+    0x130B0: WIDE,  #finger…
+    0x130B6: EVERYBIT, 0x130B7: SQUARE,  # fingers
     0x130C3: MEDIUM, 0x130C4: MEDIUM,  # IDK, limit them by height
     0x130CD: MEDWIDE, 0x130CE: MEDWIDE, 0x130CF: EVERYBIT, 0x130D0: EVERYBIT, 0x130D1: MEDWIDE, # rings
     # E: animals
