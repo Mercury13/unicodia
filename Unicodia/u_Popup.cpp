@@ -125,25 +125,30 @@ void pop::popupAtY(
 void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
 {
     // My params
-    static constexpr int MAX_WIDTH = 900;       // maximum (non really tight) width
+    static constexpr int MAX_WIDTH = 1100;       // maximum (non really tight) width
     static constexpr int WIDTH_STEP = 50;
     static constexpr int COOL_WIDTH = 450;
     static constexpr int COOL_HEIGHT = 650;
-    static constexpr int HEIGHT_LEEWAY = 50;
+    static constexpr int HEIGHT_LEEWAY = 30;
     static constexpr int WIDTH_LEEWAY = 20;
 
     me->adjustSize();
-    if (me->height() >= 350) {
+    auto oldHeight = me->height();
+    if (oldHeight >= 350) {
         auto maxWidth = std::min(MAX_WIDTH, screenRect.width() - WIDTH_LEEWAY);
         auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
         auto myW = std::max(me->width(), COOL_WIDTH - WIDTH_STEP);
         int h;
+        bool haveTroublesWithSpace = false;
+        bool onceHadTroublesWithSpace = false;
         do {
             // Took 2nd (maxWidth) → will surely break!
             myW = std::min(myW + WIDTH_STEP, maxWidth);
             h = me->layout()->heightForWidth(myW);
-        } while (h > rqHeight && myW < maxWidth);
-        if (h >= 0 && h < me->height()) {  // something was actually done
+            haveTroublesWithSpace = (h > rqHeight);
+            onceHadTroublesWithSpace |= haveTroublesWithSpace;
+        } while (haveTroublesWithSpace && myW < maxWidth);
+        if (h >= 0 && (onceHadTroublesWithSpace || h < oldHeight)) {  // something was actually done
             me->resize(myW, h);
         }
     }
