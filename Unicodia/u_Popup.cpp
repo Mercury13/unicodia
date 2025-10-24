@@ -141,15 +141,26 @@ void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
         int h;
         bool haveTroublesWithSpace = false;
         bool onceHadTroublesWithSpace = false;
+        int workingW = -1;
+        int workingH = std::numeric_limits<int>::max();
         do {
             // Took 2nd (maxWidth) → will surely break!
             myW = std::min(myW + WIDTH_STEP, maxWidth);
             h = me->layout()->heightForWidth(myW);
             haveTroublesWithSpace = (h > rqHeight);
             onceHadTroublesWithSpace |= haveTroublesWithSpace;
+            if (h > 0                           // have some height
+                    && (haveTroublesWithSpace   // troubles with space → act more aggressively
+                       || h < workingH)) {      // could not get reduce height → too bad
+                workingW = myW;
+                workingH = h;
+            }
         } while (haveTroublesWithSpace && myW < maxWidth);
-        if (h >= 0 && (onceHadTroublesWithSpace || h < oldHeight)) {  // something was actually done
-            me->resize(myW, h);
+                // Something was actually done?
+        if (workingW > 0                        // assigned at least once
+                && (onceHadTroublesWithSpace    // troubles with space → act more aggressively
+                   || workingH < oldHeight)) {  // reduced height? → OK
+            me->resize(workingW, workingH);
         }
     }
 }
