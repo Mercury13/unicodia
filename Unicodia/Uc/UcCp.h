@@ -45,6 +45,8 @@ namespace cp {
     constexpr char32_t HANI_0_FIRST = 0x4E00;
     constexpr char32_t HANI_0_LAST = 0x9FFF;
 
+    constexpr char32_t LATN_SM_GLOTTAL_I = 0xA7BD;
+
     constexpr char32_t HANI_COMPAT_FIRST = 0xF900;
     constexpr char32_t HANI_COMPAT_LAST = 0xFAFF;
 

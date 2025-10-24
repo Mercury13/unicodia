@@ -201,11 +201,11 @@ namespace {
 }   // anon namespace
 
 
-void WiShowcase::redrawViewerCp(char32_t code, QTextBrowser* viewer)
+void WiShowcase::redrawViewerCp(char32_t code, const EgypChecker& checker, QTextBrowser* viewer)
 {
     if (auto ch = uc::cpsByCode[code]) {
         // Normal CP
-        QString text = mywiki::buildHtml(*ch);
+        QString text = mywiki::buildHtml(*ch, checker);
         setWiki(viewer, text);
     } else if (uc::isNonChar(code)) {
         // Non-character
@@ -220,7 +220,8 @@ void WiShowcase::redrawViewerCp(char32_t code, QTextBrowser* viewer)
 }
 
 
-void WiShowcase::redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer)
+void WiShowcase::redrawViewerNode(
+        const uc::LibNode& node, const EgypChecker& checker, QTextBrowser* viewer)
 {
     if (node.value.empty()) {
         // Folder
@@ -229,7 +230,7 @@ void WiShowcase::redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer)
         setWiki(viewer, s);
     } else {
         auto& parent = uc::libNodes[node.iParent];
-        QString s = mywiki::buildHtml(node, parent);
+        QString s = mywiki::buildHtml(node, parent, checker);
         setWiki(viewer, s);
     }
 }
@@ -237,6 +238,7 @@ void WiShowcase::redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer)
 
 void WiShowcase::set(
         char32_t code,
+        const EgypChecker& checker,
         QTextBrowser* viewer,
         FontMatch& fonts,
         const uc::GlyphStyleSets& glyphSets)
@@ -306,7 +308,7 @@ void WiShowcase::set(
 
     reenableFavs();
     redrawSampleChar(glyphSets);
-    redrawViewerCp(code, viewer);
+    redrawViewerCp(code, checker, viewer);
 }
 
 
@@ -334,6 +336,7 @@ void WiShowcase::reenableFavs()
 
 void WiShowcase::set(
         const uc::LibNode& node,
+        const EgypChecker& checker,
         QTextBrowser* viewer,
         FontMatch& fonts)
 {
@@ -388,7 +391,7 @@ void WiShowcase::set(
         ui->btCopy->setEnabled(true);
     }
     reenableFavs();
-    redrawViewerNode(node, viewer);
+    redrawViewerNode(node, checker, viewer);
 }
 
 

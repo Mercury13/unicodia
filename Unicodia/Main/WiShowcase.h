@@ -28,6 +28,7 @@ class QHBoxLayout;
 class WiOsStyle;
 class WiSample;
 class FontMatch;
+class EgypChecker;
 
 namespace Ui {
     class WiShowcase;
@@ -105,10 +106,12 @@ public:
 
     const ShownObj& shownObj() const { return fShownObj; }
     void set(char32_t ch,
+             const EgypChecker& checker,
              QTextBrowser* viewer,
              FontMatch& fonts,
              const uc::GlyphStyleSets& glyphSets);
     void set(const uc::LibNode& node,
+             const EgypChecker& checker,
              QTextBrowser* viewer,
              FontMatch& fonts);
     void reset();
@@ -138,8 +141,8 @@ private:
 
     void init();
     bool doCopy(uc::CopiedChannel channel);
-    void redrawViewerCp(char32_t code, QTextBrowser* viewer);
-    void redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer);
+    void redrawViewerCp(char32_t code, const EgypChecker& checker, QTextBrowser* viewer);
+    void redrawViewerNode(const uc::LibNode& node, const EgypChecker& checker, QTextBrowser* viewer);
 signals:
     void linkActivated(QWidget* initiator, const QString& link);
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);

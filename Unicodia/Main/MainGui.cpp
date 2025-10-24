@@ -154,7 +154,7 @@ void MyGui::popupCharAbs(
     popupChar.ensure(*this)
              /// @todo [future] Let it be EMPTY, while these character are not shown
              ///                in Library and articles
-             .setCp(cp, uc::GlyphStyleSets::EMPTY, backPlace)
+             .setCp(cp, uc::GlyphStyleSets::EMPTY, *this, backPlace)
              .popupAtAbsBacked(widget, absRect);
 }
 
@@ -204,6 +204,16 @@ void MyGui::closePopup(RestrictedPtr remainingThing)
         popupChar->deselectLink();
         popupChar->close();
     }
+}
+
+
+bool MyGui::hasEgypI() const
+{
+    if (!fHasEgypI) {
+        auto metrics = wiMain->fontMetrics();
+        fHasEgypI = metrics.inFontUcs4(cp::LATN_SM_GLOTTAL_I);
+    }
+    return *fHasEgypI;
 }
 
 

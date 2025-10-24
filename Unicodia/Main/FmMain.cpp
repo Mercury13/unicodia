@@ -1760,7 +1760,7 @@ void FmMain::copyCurrentLibBare()
 
 void FmMain::forceShowCp(MaybeChar ch)
 {
-    ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, glyphSets);
+    ui->wiCharShowcase->set(ch.code, mainGui, ui->vwInfo, model.match, glyphSets);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1793,7 +1793,7 @@ void FmMain::charChanged(const QModelIndex& current)
 void FmMain::libChanged(const QModelIndex& current)
 {
     auto& node = libModel.nodeAt(current);
-    ui->wiLibShowcase->set(node, ui->vwLibInfo, model.match);
+    ui->wiLibShowcase->set(node, mainGui, ui->vwLibInfo, model.match);
 
     if (node.value.empty()) {
         // Cps
@@ -1821,7 +1821,7 @@ void FmMain::libChanged(const QModelIndex& current)
 void FmMain::favsCurrentChanged(const QModelIndex& current)
 {
     if (auto cp = favsModel.charAt(current)) {
-        ui->wiFavsShowcase->set(cp.code, ui->vwFavs, model.match, glyphSets);        
+        ui->wiFavsShowcase->set(cp.code, mainGui, ui->vwFavs, model.match, glyphSets);
         ui->acRemoveFromFavs->setEnabled(true);
     } else {
         ui->wiFavsShowcase->reset();

@@ -226,9 +226,15 @@ namespace mywiki {
     QString buildHtml(const uc::Term& x);
     QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
-    QString buildHtml(const uc::Cp& cp, const HtmlVariant& var = HtmlVariant::DFLT);
+    QString buildHtml(
+            const uc::Cp& cp,
+            const EgypChecker& checker,
+            const HtmlVariant& var = HtmlVariant::DFLT);
     QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
-    QString buildHtml(const uc::LibNode& node, const uc::LibNode& parent);
+    QString buildHtml(
+            const uc::LibNode& node,
+            const uc::LibNode& parent,
+            const EgypChecker& checker);
     QString buildHtml(const uc::Version& version);
     QString buildHtml(const uc::GlyphStyleChannel& channel);
     QString buildHtml(const uc::old::Info& info);
@@ -236,6 +242,7 @@ namespace mywiki {
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
+    void appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker);
     template <class Str>
     void appendCopyable(Str& text, unsigned x, std::string_view clazz="copy");
     /// @warning  Both toCopy and toView are raw HTML

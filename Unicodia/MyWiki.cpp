@@ -2271,6 +2271,16 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
 }
 
 
+void mywiki::appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker)
+{
+    auto y = str::toQ(x);
+    if (!checker.hasEgypI()) {
+        y.replace(QChar(cp::LATN_SM_GLOTTAL_I), u'ĭ');
+    }
+    appendCopyable(text, y, "altname"sv);
+}
+
+
 template <class Str>
 void mywiki::appendCopyable(Str& text, unsigned x, std::string_view clazz)
 {
@@ -2744,7 +2754,8 @@ namespace {
     /// @param [in] serializations  [+] write UTF-8, HTML etc
     ///
     void appendCpBullets(QString& text, const uc::Cp& cp,
-                         CpSerializations serializations, CpPlace place)
+                         CpSerializations serializations, CpPlace place,
+                         const EgypChecker& checker)
     {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
@@ -2766,12 +2777,11 @@ namespace {
             sp.sep();
             appendEgypReliability(text, cp.scriptSpecific);
             cp.traverseTextsT(uc::AutoName::NO,
-                [&text, &sp](uc::TextRole role, std::u8string_view s) {
+                [&text, &sp, &checker](uc::TextRole role, std::u8string_view s) {
                     switch (role) {
                     case uc::TextRole::EGYP_INDEX:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Ind");
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
                         break;
                     case uc::TextRole::EGYP_EWP:
                         sp.sep();
@@ -2781,17 +2791,17 @@ namespace {
                     case uc::TextRole::EGYP_UC:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Uni");
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        mywiki::appendEgypCopyable(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_MEANING:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Mean");
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        mywiki::appendEgypCopyable(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_PRONUN:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Pron");
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        mywiki::appendEgypCopyable(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_EQUIV: {
                             sp.sep();
@@ -2999,7 +3009,9 @@ constinit const mywiki::HtmlVariant mywiki::HtmlVariant::POPUP {
 };
 
 
-QString mywiki::buildHtml(const uc::Cp& cp, const HtmlVariant& var)
+QString mywiki::buildHtml(
+        const uc::Cp& cp, const EgypChecker& checker,
+        const HtmlVariant& var)
 {
     QString text;
 
@@ -3073,7 +3085,7 @@ QString mywiki::buildHtml(const uc::Cp& cp, const HtmlVariant& var)
     }
 
     {   // Info box
-        appendCpBullets(text, cp, CpSerializations::YES, CpPlace::CP);
+        appendCpBullets(text, cp, CpSerializations::YES, CpPlace::CP, checker);
 
         if (var.size >= HtmlSize::FULL) {
             auto& blk = cp.block();
@@ -3381,7 +3393,9 @@ QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
 }
 
 
-QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
+QString mywiki::buildHtml(
+        const uc::LibNode& node, const uc::LibNode& parent,
+        const EgypChecker& checker)
 {
     QString text;
     appendStylesheet(text);
@@ -3483,7 +3497,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         text += buf;
         appendCopyable(text, cp->viewableName());
         text += "</h2>";
-        appendCpBullets(text, *cp, CpSerializations::NO, CpPlace::LIB);
+        appendCpBullets(text, *cp, CpSerializations::NO, CpPlace::LIB, checker);
     } else if (auto letters = countryLetters(node.value)) {
         if (auto country = cou::find(letters)) {
             appendSubhead(text, "Lib.Cinfo.Info");

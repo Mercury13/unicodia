@@ -9,6 +9,9 @@
 // Unicode
 #include "UcData.h"
 
+// wiki
+#include "FontDef.h"
+
 // L10n
 #include "LocFmt.h"
 #include "LocDic.h"
@@ -36,6 +39,7 @@ FmPopupChar::~FmPopupChar()
 auto FmPopupChar::setCp(
         const uc::Cp& cp,
         const uc::GlyphStyleSets& glyphSets,
+        const EgypChecker& checker,
         const mywiki::HistoryPlace& backPlace) -> This&
 {
     charCode = cp.subj;
@@ -74,7 +78,7 @@ auto FmPopupChar::setCp(
 
     // Text
     ui->lbText->setText({});  // touch at least smth
-    s = mywiki::buildHtml(cp, mywiki::HtmlVariant::POPUP);
+    s = mywiki::buildHtml(cp, checker, mywiki::HtmlVariant::POPUP);
     mywiki::appendHistoryLink(s, backPlace);
     ui->lbText->setText(s);
 

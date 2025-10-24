@@ -12,6 +12,8 @@ namespace uc {
     struct GlyphStyleSets;
 }
 
+class EgypChecker;
+
 namespace Ui {
 class FmPopupChar;
 }
@@ -27,6 +29,7 @@ public:
     ~FmPopupChar() override;
     This& setCp(const uc::Cp& cp,
                 const uc::GlyphStyleSets& glyphSets,
+                const EgypChecker& checker,
                 const mywiki::HistoryPlace& backPlace);
     void adjustSize() override;
     void deselectLink();

@@ -33,7 +33,8 @@ private:
 
 class MyGui :
         public QObject,
-        public mywiki::Gui
+        public mywiki::Gui,
+        public EgypChecker
 {
     Q_OBJECT
 public:
@@ -53,6 +54,9 @@ public:
             LocKey locKey) override;
     void followUrl(const QString& x) override;
     mywiki::InternalLinkWalker& linkWalker() override { return fInternalWalker; }
+
+    // EgypChecker
+    bool hasEgypI() const override;
 
     // Several ways to blink fmMessage
     void blinkCopied(QWidget* widget, const QRect& absRect,
@@ -98,6 +102,7 @@ private:
     Uptr<FmPopupChar2> popupChar;
     Uptr<FmMessage> fmMessage;
     mywiki::History history;
+    mutable std::optional<bool> fHasEgypI {};
 private slots:
     void popupLinkActivated(const QString& link);
 };
