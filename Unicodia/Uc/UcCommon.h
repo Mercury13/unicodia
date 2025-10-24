@@ -19,7 +19,8 @@ namespace uc {
     };
 
     enum class Vfg : unsigned char {
-        TEXT = 1,
+        TEXT = 1,        ///< [+] have text
+        FORCE_2COL = 2,  ///< force 2 columns because of stats/text
     };
     DEFINE_ENUM_OPS(Vfg)
 

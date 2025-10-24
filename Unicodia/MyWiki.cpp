@@ -3711,7 +3711,7 @@ QString mywiki::buildHtml(const uc::Version& version)
         text += "</b><p>";
         constexpr auto NO_BREAK = std::numeric_limits<unsigned>::max();
         unsigned columnBreak = NO_BREAK;
-        if (version.stats.blocks.nNew > 15) {
+        if (version.stats.blocks.nNew > 15 || version.flags.have(uc::Vfg::FORCE_2COL)) {
             columnBreak = (version.stats.blocks.nNew + 1) / 2;
         }
         if (columnBreak != NO_BREAK) {
