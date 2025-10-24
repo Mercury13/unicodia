@@ -129,7 +129,7 @@ void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
     static constexpr int WIDTH_STEP = 50;
     static constexpr int COOL_WIDTH = 450;
     static constexpr int COOL_HEIGHT = 650;
-    static constexpr int HEIGHT_LEEWAY = 30;
+    static constexpr int HEIGHT_LEEWAY = 35;
     static constexpr int WIDTH_LEEWAY = 20;
 
     me->adjustSize();
