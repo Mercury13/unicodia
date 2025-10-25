@@ -27,7 +27,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1317E)) \
+    return ((code >= 0x13000) and (code <= 0x131AC)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -195,6 +195,20 @@ GLYPH_SIZES = {
     0x1317A: WIDE,  # ducks
     0x1317C: MEDWIDE,  # goose
     0x1317E: MEDWIDE,  # plucked duck
+    # H: parts of birds
+    0x1317F: MEDIUM, 0x13180: MEDIUM, 0x13181: MEDIUM, 0x13182: MEDIUM, 0x13183: MEDWIDE,  # misc
+    0x13187: MEDIUM,  #egg
+    # I: reptiles
+    0x13188: MEDWIDE, 0x13189: MEDWIDE, 0x1318A: WIDE, 0x1318B: MEDWIDE, 0x1318C: MEDWIDE, 0x1318D: WIDE,  # lizard, turtle, croc
+    0x1318E: SMALL,  # croc scale
+    0x13191: MEDWIDE,  # viper
+    0x13199: MEDWIDE, 0x1319A: MEDWIDE,  # snakes
+    # K: fish
+    0x1319B: MEDWIDE, 0x1319C: MEDWIDE, 0x1319D: MEDWIDE, 0x1319E: MEDWIDE, 0x1319F: MEDWIDE,  # misc fishes
+    0x131A0: SMALL,  # fish scale
+    0x131A2: MEDWIDE,  # catfish
+    # L: lesser animals
+    0x131A9: MEDIUM, 0x131AA: MEDIUM,  # bivalves
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,

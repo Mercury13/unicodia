@@ -119,9 +119,13 @@ Subtotal: 164
 - 13137: same
 - 13138: same
 - 1314B: taken from blockA (simpler)
+- 1314D: simpler eye, different crossbeam
+- 1314F: removed sun
 - 13152: squeezed every bit of width
+- 131A1: ex, rotated 45°
+- 131A9: made from scratch, both glitch and wrong rotation
 
-Subtotal: 93
+Subtotal: 97
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -503,7 +507,9 @@ Subtotal: 369
 - 1304C: after A282, drew skirt
 - 13065: after C9, no uraeus
 - 1306D: was present in JSesh but not marked, replaced ankh
+- 13159: hoopoe w/feathers is a different CP
 - 13172: ex, moved + symmetrized loaf
+- 131AA: after A9, reversed
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -702,7 +708,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 204
+Subtotal: 206
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -710,4 +716,4 @@ Subtotal: 204
 
 Subtotal: 2
 
-Total: 831
+Total: 837
