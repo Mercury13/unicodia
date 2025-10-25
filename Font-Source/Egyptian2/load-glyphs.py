@@ -27,7 +27,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x13138)) \
+    return ((code >= 0x13000) and (code <= 0x1314F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -108,34 +108,6 @@ def removeMicroIntersections(layer):
             # Got exactly one, replace
             if (len(tempLayer) == 1) and not tempLayer.selfIntersects():
                 layer[i] = tempLayer[0]
-
-def improveGlyph(glyph, logBad):
-    global nSelfIntersecting
-    fg = glyph.layers[1]
-    # Remove open paths
-    removeObviousPaths(fg)
-    # Round and add extrema
-    #fg.round()
-    fg.addExtrema("all")
-    #fg.round()
-    # Simplify to get rid of poor extrema
-    removeMicroIntersections(fg)
-    fg.simplify(SIMPVALUE, ['mergelines'])
-    #fg.round()
-    # Hint
-    selfInter = fg.selfIntersects()
-    glyph.foreground = fg
-    isOk = False
-    if not selfInter:
-        glyph.correctDirection()
-        isOk = True
-    elif logBad:
-        nSelfIntersecting += 1
-        log.write("CRIT: {} self-intersects, {} so far\n".format(
-                glyph.glyphname, nSelfIntersecting))
-    #glyph.removeOverlap()
-    # Correct direction
-    return isOk
 
 # General dimensions
 CELLHEIGHT = 1000
@@ -406,6 +378,35 @@ def fixBearings(glyph):
     glyph.left_side_bearing = BEARING
     glyph.right_side_bearing = BEARING
     
+# @return [+] OK
+def improveGlyph(glyph, logBad):
+    global nSelfIntersecting
+    fg = glyph.layers[1]
+    # Remove open paths
+    removeObviousPaths(fg)
+    # Round and add extrema
+    #fg.round()
+    fg.addExtrema("all")
+    #fg.round()
+    # Simplify to get rid of poor extrema
+    removeMicroIntersections(fg)
+    fg.simplify(SIMPVALUE, ['mergelines'])
+    # Hint
+    glyph.foreground = fg
+    fixBearings(glyph)
+    selfInter = glyph.selfIntersects()
+    isOk = False
+    if not selfInter:
+        glyph.correctDirection()
+        isOk = True
+    elif logBad:
+        nSelfIntersecting += 1
+        log.write("CRIT: {} self-intersects, {} so far\n".format(
+                glyph.glyphname, nSelfIntersecting))
+    #glyph.removeOverlap()
+    # Correct direction
+    return isOk
+
 def fixSize(cp, glyph, svgHeight):
     mySize = glyphSize(cp)
     if (mySize < 0):
@@ -437,7 +438,6 @@ def fixSize(cp, glyph, svgHeight):
 def loadGlyph(glyph, cp, fname, svgHeight, logBad):
     glyph.importOutlines(fname, scale=False, correctdir=True)
     fixSize(cp, glyph, svgHeight)
-    fixBearings(glyph)
     return improveGlyph(glyph, logBad)
     
 def newGlyph(font, code, glyphName):

@@ -2782,6 +2782,7 @@ namespace {
                     case uc::TextRole::EGYP_INDEX:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Ind");
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
                         break;
                     case uc::TextRole::EGYP_EWP:
                         sp.sep();
