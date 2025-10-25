@@ -734,10 +734,10 @@ void SearchModel::initStyleOption(
 }
 
 
-QSize SearchModel::sizeHint(const QStyleOptionViewItem & option, const QModelIndex&) const
+QSize SearchModel::sizeHint(const QStyleOptionViewItem &, const QModelIndex&) const
 {
-    auto sz = option.decorationSize.height() + 2;
-    return {sz, sz };
+    auto q = sample->pixSize() + 2;
+    return { q, q };
 }
 
 
@@ -820,10 +820,10 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
     }
 }
 
-QSize LibModel::sizeHint(const QStyleOptionViewItem & option, const QModelIndex&) const
+QSize LibModel::sizeHint(const QStyleOptionViewItem&, const QModelIndex&) const
 {
-    auto sz = option.decorationSize.height() + 2;
-    return {sz, sz };
+    auto q = sample->pixSize() + 2;
+    return { q, q };
 }
 
 #undef GETNODE
@@ -2132,9 +2132,14 @@ void FmMain::blockOrderChanged()
 
 int FmMain::pixSize() const
 {
-    auto& fn = font();
-    QFontMetrics metrics{fn};
-    return std::max(ISZ_LIST, (metrics.ascent() + metrics.descent()) * 3);
+    if (pixSizeCache < 0) {
+        auto& fn = font();
+        QFontMetrics metrics{fn};
+        auto asc = metrics.ascent();    // should not change with DPI
+        auto desc = metrics.descent();
+        pixSizeCache = std::max(ISZ_LIST, (asc + desc) * 5 / 2);
+    }
+    return pixSizeCache;
 }
 
 

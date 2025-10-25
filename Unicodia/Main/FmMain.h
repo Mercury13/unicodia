@@ -208,6 +208,7 @@ private:
     PopupGui popupGui{mainGui};
     std::unique_ptr<QNetworkAccessManager> netMan;
     QColor clCollapse;
+    mutable int pixSizeCache = -1;
 
     class BlocksLocalMenu : public TableLocalMenu {
     public:
