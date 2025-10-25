@@ -27,7 +27,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1314F)) \
+    return ((code >= 0x13000) and (code <= 0x1317E)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -179,6 +179,22 @@ GLYPH_SIZES = {
     0x1312B: WIDE,  # some kind of spine
     0x13132: SQUARE, 0x13133: SQUARE, 0x13134: SQUARE, 0x13135: SQUARE,  # intestine
     0x13136: SQUARE, 0x13137: SQUARE, 0x13138: SQUARE,  # intestine
+    # G: birds
+    0x13140: MEDWIDE, 0x13141: MEDWIDE, # vultures
+    0x1314B: MEDWIDE,  # bark of Sokar
+    0x1314C: MEDWIDE, 0x1314D: MEDWIDE, 0x1314E: MEDWIDE, 0x1314F: MEDWIDE,  # monuments of falcon
+    0x13152: EVERYBIT, 0x13154: WIDE, 0x13155: WIDE, 0x13156: WIDE,  0x13157: WIDE, # more birds
+    0x1315A: MEDWIDE, 0x1315B: MEDWIDE,  # and more birds
+    0x1315F: MEDWIDE,  # flamingo
+    0x13162: EVERYBIT,  # storks
+    0x13167: MEDWIDE,  # cormorant
+    0x13170: MEDWIDE,  # some seagull
+    0x13172: WIDE,  # chick+bread, legacy
+    0x13174: WIDE, 0x13175: WIDE, 0x13176: WIDE,  # chicks
+    0x13178: WIDE, 0x13179: WIDE,  # ducklings
+    0x1317A: WIDE,  # ducks
+    0x1317C: MEDWIDE,  # goose
+    0x1317E: MEDWIDE,  # plucked duck
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
@@ -269,6 +285,7 @@ GLYPH_SIZES = {
     0x13C08: SMALL,
     0x13C27: CELLHEIGHT, 0x13C28: CELLHEIGHT,
     0x13C2E: MEDIUM, 0x13C2F: MEDIUM,
+    0x13C31: MEDWIDE,
     0x13C3A: EVERYBIT,
     0x13CE1: MEDIUM, 0x13CE2: MEDWIDE,
     0x13D2B: MEDIUM, 0x13D2C: MEDIUM, 0x13D2D: MEDIUM,

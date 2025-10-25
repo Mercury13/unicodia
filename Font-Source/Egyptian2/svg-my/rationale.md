@@ -119,8 +119,9 @@ Subtotal: 164
 - 13137: same
 - 13138: same
 - 1314B: taken from blockA (simpler)
+- 13152: squeezed every bit of width
 
-Subtotal: 92
+Subtotal: 93
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -502,6 +503,7 @@ Subtotal: 369
 - 1304C: after A282, drew skirt
 - 13065: after C9, no uraeus
 - 1306D: was present in JSesh but not marked, replaced ankh
+- 13172: ex, moved + symmetrized loaf
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -700,7 +702,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 203
+Subtotal: 204
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -708,4 +710,4 @@ Subtotal: 203
 
 Subtotal: 2
 
-Total: 829
+Total: 831
