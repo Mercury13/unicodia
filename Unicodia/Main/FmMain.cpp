@@ -990,6 +990,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_H), this);
     connect(shcut, &QShortcut::activated, this, &This::highlightFont);
 
+    // Test icons
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_I), this);
+    connect(shcut, &QShortcut::activated, this, &This::findAll);
+
     // Debug font layout
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_L), this);
     connect(shcut, &QShortcut::activated, this, &This::debugFontLayout);
@@ -2743,4 +2747,11 @@ void FmMain::showBlockFontStats()
         s += QString::number(v.count);
     }
     QMessageBox::information(this, HEAD, s);
+}
+
+
+void FmMain::findAll()
+{
+    uc::CharFieldRequest rq({});
+    searchForRequest(rq);
 }
