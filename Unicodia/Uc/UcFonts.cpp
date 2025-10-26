@@ -202,7 +202,6 @@ constinit const uc::Font uc::fontInfo[] = {
       // Unlike Egyptian, OTF is poor;
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
-    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                    // Dominoes
     { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },       // Egyptian
       { "UnicodiaEgypFixupRegular.otf",
             Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },   // …1
@@ -266,6 +265,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Mingzat-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 18_top, 80_pc },              // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
+    { FAM_SEMOJI, Ffg::FALL_TO_NEXT },                                          // Mahjong tiles
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                  // Dominoes
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
@@ -296,9 +297,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansOldPermic-Regular.ttf" },                                        // Permic old
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
-    { FAM_SEMOJI, Ffg::FALL_TO_NEXT },                                          // Mahjong tiles
-    /// @todo [misrender] Want negative padding, but how??
-      { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
+    { FNAME_NOTOSYM2, 150_pc },                                                 // Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { { "BabelStonePseudographica.ttf", recodePseudographica }, Ffg::FALL_TO_NEXT }, // Pseudographics
       { FNAME_FUNKY },                                                          // …1

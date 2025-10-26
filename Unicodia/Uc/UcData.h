@@ -291,7 +291,6 @@ namespace uc {
           Z_DI2_3,
         DIVES_AKURU,
         DOGRA,
-        DOMINOES,
         EGYPTIAN,
           Z_EGY_1,
           Z_EGY_2,
@@ -344,6 +343,8 @@ namespace uc {
         LEPCHA,
         LIMBU,
         MAHAJANI,
+        MAHJONG_TILES,  // Fall down to Dominoes
+          DOMINOES,
         MALAYALAM,
         MANDAIC,
         MANICHAEAN,
@@ -371,8 +372,7 @@ namespace uc {
         PAHAWH_HMONG,
         PERMIC_OLD,
         PHAGS_PA,
-        MAHJONG_TILES,      ///< Fall down to Phaistos Disc
-         PHAISTOS_DISC,        
+        PHAISTOS_DISC,
         POLLARD,
         PSEUDOGRAPHICS,
           Z_PSE_1,
