@@ -210,7 +210,7 @@ GLYPH_SIZES = {
     # L: lesser animals
     0x131A9: MEDIUM, 0x131AA: MEDIUM,  # bivalves
     # M: plants
-    0x131B2: WIDE, #owl+branch
+    0x131D1: MEDWIDE,  # two stalks
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,

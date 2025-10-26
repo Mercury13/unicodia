@@ -128,8 +128,11 @@ Subtotal: 163
 - 131AE: not-really-simple combination (picked that Y)
 - 131B1: from man hitting with branch, added outline
 - 131B2: not-really-simple combination (picked that Y)
+- 131D1: righted, symmetrized, removed unnecessary cusp corners
+- 131D2: 2×D1
+- 131D3: based on D1
 
-Subtotal: 101
+Subtotal: 104
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -619,6 +622,7 @@ Subtotal: 369
 - 139E9: franken
 - 13A26: after 25
 - 13A41: campaign for donkeys, after E216k
+- 13A63: master class
 - 13A69: the proper one had two sets of horns, removed flail from the improper :(
 - 13A73: extension + removed thing in front, straighter slanted plank
 - 13A8F: after 8E
@@ -713,7 +717,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 207
+Subtotal: 208
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -721,4 +725,4 @@ Subtotal: 207
 
 Subtotal: 2
 
-Total: 842
+Total: 846
