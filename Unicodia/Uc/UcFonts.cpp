@@ -297,7 +297,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansOldPermic-Regular.ttf" },                                        // Permic old
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
-    { FNAME_NOTOSYM2, 150_pc },                                                 // Phaistos disc
+    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 12_bot, 150_pc },                    // Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { { "BabelStonePseudographica.ttf", recodePseudographica }, Ffg::FALL_TO_NEXT }, // Pseudographics
       { FNAME_FUNKY },                                                          // …1
