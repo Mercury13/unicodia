@@ -2141,7 +2141,8 @@ int FmMain::pixSize() const
         QFontMetrics metrics{fn};
         auto asc = metrics.ascent();    // should not change with DPI
         auto desc = metrics.descent();
-        pixSizeCache = std::max(ISZ_LIST, (asc + desc) * 5 / 2);
+        // 2.3 = 7/3
+        pixSizeCache = std::max(ISZ_LIST, (asc + desc) * 7 / 3);
     }
     return pixSizeCache;
 }
