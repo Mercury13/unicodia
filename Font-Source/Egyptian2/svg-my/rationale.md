@@ -24,7 +24,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 164
+Subtotal: 163
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -124,8 +124,10 @@ Subtotal: 164
 - 13152: squeezed every bit of width
 - 131A1: ex, rotated 45°
 - 131A9: made from scratch, both glitch and wrong rotation
+- 131B1: from man hitting with branch
+- 131B2: simple combination
 
-Subtotal: 97
+Subtotal: 99
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -661,6 +663,7 @@ Subtotal: 369
 - 13EFB: after FD
 - 13EFC: same
 - 13E99: after 98
+- 13E9B: after M242 ex
 - 13F41: after 42
 - 13F50: campaign for plans
 - 13F81: drawn after 80
@@ -708,7 +711,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 206
+Subtotal: 207
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -716,4 +719,4 @@ Subtotal: 206
 
 Subtotal: 2
 
-Total: 837
+Total: 840
