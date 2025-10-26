@@ -41,7 +41,6 @@
 * One skintone, repainted versions are created on-the-fly (e.g. because of &lt;clipPath&gt;)
   * So-called “preparation”: we need to remember what was originally
     * First copy ORIGINAL files with all skintones to NotoEmoji
-	* It’s better to run SvgCleaner
     * Make sure Unicodia is closed, run tape.bat
     * Press Ctrl+Shift+Q in Unicodia.
     * Copy resulting BMP files to AutoQa\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
