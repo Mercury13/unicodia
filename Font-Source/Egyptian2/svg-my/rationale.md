@@ -123,6 +123,7 @@ Subtotal: 163
 - 1314F: removed sun
 - 13152: squeezed every bit of width
 - 13187: too heavy
+- 13192: thicker walls
 - 131A1: ex, rotated 45°
 - 131A9: made from scratch, both glitch and wrong rotation
 - 131AE: not-really-simple combination (picked that Y)
@@ -131,8 +132,9 @@ Subtotal: 163
 - 131D1: righted, symmetrized, removed unnecessary cusp corners
 - 131D2: 2×D1
 - 131D3: based on D1
+- 131E4: was thick and craggy
 
-Subtotal: 104
+Subtotal: 106
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -725,4 +727,4 @@ Subtotal: 208
 
 Subtotal: 2
 
-Total: 846
+Total: 848
