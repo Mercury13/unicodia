@@ -153,6 +153,11 @@ namespace {
         return r;
     }
 
+    void fixupUniDesc(std::string& s)
+    {
+        str::replace(s, "canal (M36)"sv, "canal (N36)"sv);
+    }
+
     void loadUnikemet(egyp::Base& r)
     {
         for (char32_t c = 0x13430; c <= 0x1345F; ++c) {
@@ -185,6 +190,7 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
+                fixupUniDesc(du);
             } else if (sField == "kEH_Core"sv) {
                 auto& en = r[cp];
                 if (sValue == "C"sv) {
