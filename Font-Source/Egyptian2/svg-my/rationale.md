@@ -122,12 +122,14 @@ Subtotal: 163
 - 1314D: simpler eye, different crossbeam
 - 1314F: removed sun
 - 13152: squeezed every bit of width
+- 13187: too heavy
 - 131A1: ex, rotated 45°
 - 131A9: made from scratch, both glitch and wrong rotation
-- 131B1: from man hitting with branch
-- 131B2: simple combination
+- 131AE: not-really-simple combination (picked that Y)
+- 131B1: from man hitting with branch, added outline
+- 131B2: not-really-simple combination (picked that Y)
 
-Subtotal: 99
+Subtotal: 101
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -719,4 +721,4 @@ Subtotal: 207
 
 Subtotal: 2
 
-Total: 840
+Total: 842
