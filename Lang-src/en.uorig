@@ -9246,6 +9246,10 @@
     <text id="Div">
      <orig>Division</orig>
     </text>
+    <text id="Root">
+     <orig>Root</orig>
+     <au-cmt>Square, cube…</au-cmt>
+    </text>
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
     </text>

@@ -13285,6 +13285,11 @@
      <orig>Division</orig>
      <transl>Ділення</transl>
     </text>
+    <text id="Root">
+     <orig>Root</orig>
+     <au-cmt>Square, cube…</au-cmt>
+     <transl>Корінь</transl>
+    </text>
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
      <transl>Різні символи нерівності</transl>
