@@ -10,6 +10,8 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
+    0x13212: "N33",    # missing for some reason, need to implement
+    0x13219: "N37",    # missing for some reason, need to implement
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13EB2: "M39B",   # big basket of fruit
@@ -27,7 +29,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x131EE)) \
+    return ((code >= 0x13000) and (code <= 0x1321F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -210,7 +212,16 @@ GLYPH_SIZES = {
     # L: lesser animals
     0x131A9: MEDIUM, 0x131AA: MEDIUM,  # bivalves
     # M: plants
+    0x131BE: WIDE, 0x131BF: EVERYBIT, 0x131C0: EVERYBIT,  # flowers counting
     0x131D1: MEDWIDE,  # two stalks
+    # N: geography
+    0x131F2: MEDWIDE,  # sky
+    0x131F3: MEDIUM,   # sun
+    0x131F4: MEDWIDE,  # uraeus
+    0x131F7: MEDIUM, 0x131F8: MEDIUM,  # moon
+    0x13205: TEENY,
+    0x1320E: SMALL,
+    0x13211: MEDIUM,
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="400"
+   height="1000"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="131BC.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.3775"
+     inkscape:cx="-459.60265"
+     inkscape:cy="554.96689"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="172.99238,766.86265"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1000"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1000"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="25,883.6815"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="325.94301,1e-05"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="311.8727,951.11695"
+       orientation="1,0"
+       id="guide10"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="311.8727,951.11695"
+       orientation="-0.70710678,0.70710678"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="244.43725,883.6815"
+       orientation="-0.70710678,-0.70710678"
+       id="guide12"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="196.66982,979.04379"
+       orientation="0.99997849,0.0065594475"
+       id="guide13"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="196.66982,979.04379"
+       orientation="0,-1"
+       id="guide14"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="198.45052,788.31337"
+       orientation="0,-1"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="336.32706,261.7568"
+       orientation="0,-1"
+       id="guide16"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="path7"
+     style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#613583;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+     d="M 197.56641 0.95117188 C 65.506175 1.3518953 18.046874 59.427419 18.046875 116.31836 C 18.046876 170.04044 60.358893 224.0246 173.58398 230.94141 L 176.89844 811.20117 L 81.585938 723.52344 L 54.505859 752.96289 L 159.54883 849.5918 C 109.70833 868.87549 74.691406 920.95343 74.691406 980.5 L 74.691406 1000.5 L 329.67773 1000.5 L 329.67773 980.5 C 329.67773 920.95501 294.66117 868.87672 244.82227 849.5918 L 349.86719 752.96289 L 322.78711 723.52344 L 226.9043 811.72656 L 223.58398 231.00391 C 268.13637 227.41615 304.51632 211.3955 344.20312 187.80078 L 272.72266 116.31836 L 344.20312 44.837891 C 298.92821 14.680431 252.12262 2.0003966 197.56641 0.95117188 z M 197.6875 40.951172 C 225.82467 40.865792 253.91455 45.709781 277.73438 54.736328 L 216.15234 116.31836 L 277.73438 177.90039 C 253.99129 186.89845 226.00604 191.74024 197.95898 191.68555 C 160.51767 191.61255 58.046875 185.12699 58.046875 116.31836 C 58.046875 47.833006 159.44227 41.067223 197.6875 40.951172 z M 202.18359 881.64062 C 243.75727 881.64062 279.67817 914.69588 287.90039 960.5 L 116.4668 960.5 C 124.68901 914.69587 160.60991 881.64064 202.18359 881.64062 z " />
+</svg>
