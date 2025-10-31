@@ -23,8 +23,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.53386562"
-     inkscape:cx="549.76382"
-     inkscape:cy="761.42757"
+     inkscape:cx="133.92883"
+     inkscape:cy="812.00209"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -73,10 +73,12 @@
        id="guide12"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="196.66982,979.04379"
-       orientation="0.99997849,0.0065594475"
+       position="198.47468,788.31337"
+       orientation="-1,0"
        id="guide13"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="196.66982,979.04379"
        orientation="0,-1"
@@ -95,24 +97,24 @@
   </sodipodi:namedview>
   <path
      style="fill:none;stroke:#613583;stroke-width:50;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 198.45052,207.45837 3.76259,658.51576"
+     d="m 198.44694,207.45837 0.0277,658.51576"
      id="path7"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;fill-rule:evenodd;stroke:#613583;stroke-width:40;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
      id="path8"
      sodipodi:type="arc"
-     sodipodi:cx="202.18436"
+     sodipodi:cx="198.47469"
      sodipodi:cy="980.5"
      sodipodi:rx="107.49249"
      sodipodi:ry="118.85995"
      sodipodi:start="3.1415927"
      sodipodi:end="0"
      sodipodi:arc-type="slice"
-     d="M 94.691864,980.5 A 107.49249,118.85995 0 0 1 202.18436,861.64005 107.49249,118.85995 0 0 1 309.67685,980.5 H 202.18436 Z" />
+     d="M 90.982193,980.5 A 107.49249,118.85995 0 0 1 198.47469,861.64005 107.49249,118.85995 0 0 1 305.96718,980.5 H 198.47469 Z" />
   <path
      style="fill:none;stroke:#c061cb;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 202.18436,861.64005 336.32706,738.2432"
+     d="M 198.47047,861.64005 332.61317,738.2432"
      id="path9"
      inkscape:transform-center-x="-67.07135"
      inkscape:transform-center-y="-61.698425" />
@@ -123,7 +125,7 @@
      inkscape:transform-center-x="67.07135"
      inkscape:transform-center-y="-61.698425"
      id="use9"
-     transform="matrix(-1,0,0,1,404.37271,-5.5908203e-6)" />
+     transform="matrix(-1,0,0,1,396.94493,-5.5908203e-6)" />
   <path
      id="path10"
      style="fill:none;stroke:#c061cb;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
