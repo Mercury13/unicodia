@@ -135,8 +135,9 @@ Subtotal: 172
 - 131D2: 2×D1
 - 131D3: based on D1
 - 131E4: was thick and craggy
+- 131F3: too thick
 
-Subtotal: 106
+Subtotal: 107
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -729,4 +730,4 @@ Subtotal: 208
 
 Subtotal: 2
 
-Total: 857
+Total: 858

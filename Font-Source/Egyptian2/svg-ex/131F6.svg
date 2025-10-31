@@ -21,17 +21,86 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.755"
-     inkscape:cx="550.33113"
-     inkscape:cy="500"
+     inkscape:zoom="0.3775"
+     inkscape:cx="695.36424"
+     inkscape:cy="594.70199"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1" />
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="456.58073,1000"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="221.16688,769.33512"
+       orientation="1,0"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="458.61599,533.24287"
+       orientation="0,-1"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="691.99458,769.33512"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="265.94304,770.69198"
+       orientation="1,0"
+       id="guide10"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="648.57534,770.69198"
+       orientation="1,0"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="458.61599,956.58076"
+       orientation="0,-1"
+       id="guide12"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="458.61599,576.66217"
+       orientation="0,-1"
+       id="guide13"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="457.25913,822.25236"
+       orientation="0,-1"
+       id="guide14"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="404.34195,770.69198"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="511.53328,770.69198"
+       orientation="1,0"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="457.25913,715.06109"
+       orientation="0,-1"
+       id="guide17"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <path
+     id="path6"
      style="fill:#000000;stroke:none;stroke-width:1"
-     d="m 458.61599,0 q 109.90504,1.3568565 170.96341,74.626884 61.05832,73.269976 62.41518,156.037996 0,85.48168 -61.73678,160.10851 -61.73677,74.62688 -171.64181,75.98374 -96.33648,0 -166.89279,-65.80735 -70.55632,-65.80729 -70.55632,-170.2849 0,-90.90911 62.41523,-160.787022 Q 345.99729,0 458.61599,0 Z m -1.35686,177.74764 q 48.84667,4.07052 54.27415,51.56038 -4.07063,51.56038 -54.27415,55.63089 -50.20352,-4.07051 -52.91718,-55.63089 2.71366,-47.48986 52.91718,-51.56038 z m 1.35686,-134.3284 q -89.55225,0 -141.11263,56.309405 -51.56032,56.309345 -51.56032,129.579375 -1.35692,85.48168 55.63089,139.75572 56.9878,54.27409 137.04206,54.27409 84.12488,-1.35686 136.36366,-59.70146 52.23883,-58.34466 53.59569,-134.32835 Q 644.50471,157.39485 597.0149,101.0855 549.52509,44.776097 458.61599,43.41924 Z M 427.4084,1000 V 465.40027 h 59.70152 V 1000 Z M 299.86434,370.42059 351.42472,397.55767 52.917236,976.93344 0,949.79648 Z M 917.23198,949.79648 864.3148,976.93344 565.80732,397.55767 617.3677,370.42059 Z"
-     id="path1" />
+     d="M 456.58008 0 A 235.41385 233.37857 0 0 0 221.16602 233.37891 A 235.41385 233.37857 0 0 0 287.00781 395.26172 L 0 949.79688 L 52.917969 976.93359 L 333.50977 432.32812 A 235.41385 233.37857 0 0 0 427.4082 464.95898 L 427.4082 1000 L 487.10938 1000 L 487.10938 464.78711 A 235.41385 233.37857 0 0 0 582.73633 430.41797 L 864.31445 976.93359 L 917.23242 949.79688 L 628.79492 392.49805 A 235.41385 233.37857 0 0 0 691.99414 233.37891 A 235.41385 233.37857 0 0 0 456.58008 0 z M 457.25977 43.419922 A 191.31615 189.95929 0 0 1 648.57617 233.37891 A 191.31615 189.95929 0 0 1 457.25977 423.33789 A 191.31615 189.95929 0 0 1 265.94336 233.37891 A 191.31615 189.95929 0 0 1 457.25977 43.419922 z " />
+  <ellipse
+     style="fill:#000000;fill-rule:evenodd;stroke-width:50;stroke-miterlimit:2"
+     id="path19"
+     cx="457.93762"
+     cy="231.34328"
+     rx="53.595665"
+     ry="53.595634" />
 </svg>
