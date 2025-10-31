@@ -215,7 +215,7 @@ GLYPH_SIZES = {
     0x131BE: WIDE, 0x131BF: EVERYBIT, 0x131C0: EVERYBIT,  # flowers counting
     0x131D1: MEDWIDE,  # two stalks
     # N: geography
-    0x131F2: MEDWIDE,  # sky
+    0x131F2: SQUARE,  # sky
     0x131F3: MEDIUM,   # sun
     0x131F4: MEDWIDE,  # uraeus
     0x131F7: MEDIUM, 0x131F8: MEDIUM,  # moon

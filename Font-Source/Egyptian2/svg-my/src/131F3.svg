@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.94375"
-     inkscape:cx="400"
-     inkscape:cy="400"
+     inkscape:zoom="0.66733202"
+     inkscape:cx="571.67945"
+     inkscape:cy="438.31255"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -46,16 +46,17 @@
      style="fill:#ffa348;stroke:none;stroke-width:1"
      d="M 403.45826,0 Q 590.2018,2.325614 693.94819,127.90702 797.69457,253.48833 800,395.34886 800,541.86044 695.10094,670.93026 590.2018,800 403.45826,800 239.76945,800 119.88477,687.2093 0,574.41859 0,395.34886 0,239.53491 106.05189,119.76746 212.10379,0 403.45826,0 Z m -2.30551,304.65114 q 82.99716,6.97675 89.9136,88.3721 -4.61093,88.37211 -89.9136,95.34886 -85.30258,-6.97675 -89.91351,-95.34886 2.30542,-81.39535 89.91351,-88.3721 z m 0,-216.279035 q -145.24492,0 -228.24208,93.023245 -82.997073,93.02325 -82.997073,213.95351 -2.305508,137.2093 89.913513,226.74412 92.21902,89.53491 223.63115,89.53491 Q 539.48132,709.30228 624.7839,612.7907 710.08657,516.27903 712.39199,395.34886 703.17005,276.74421 625.93666,183.72096 548.70318,90.697719 401.15275,88.372105 Z"
      id="path1" />
-  <circle
-     style="fill:none;fill-rule:evenodd;stroke:#c061cb;stroke-width:50;stroke-miterlimit:2;stroke-dasharray:none"
+  <ellipse
+     style="fill:none;fill-rule:evenodd;stroke:#c061cb;stroke-width:60;stroke-miterlimit:2;stroke-dasharray:none"
      id="path2"
      cx="400"
-     cy="400"
-     r="375" />
+     cy="400.00003"
+     rx="369.99997"
+     ry="370" />
   <circle
      style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:50;stroke-miterlimit:2;stroke-dasharray:none"
      id="path3"
      cx="400"
      cy="400"
-     r="91.655632" />
+     r="82.664604" />
 </svg>

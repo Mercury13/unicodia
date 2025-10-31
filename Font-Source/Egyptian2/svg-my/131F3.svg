@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.94375"
-     inkscape:cx="400"
-     inkscape:cy="400"
+     inkscape:zoom="0.66733202"
+     inkscape:cx="571.67945"
+     inkscape:cy="438.31255"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -42,16 +42,17 @@
        id="guide2"
        inkscape:locked="false" />
   </sodipodi:namedview>
-  <circle
-     style="fill:none;fill-rule:evenodd;stroke:#c061cb;stroke-width:50;stroke-miterlimit:2;stroke-dasharray:none"
+  <ellipse
+     style="fill:none;fill-rule:evenodd;stroke:#c061cb;stroke-width:60;stroke-miterlimit:2;stroke-dasharray:none"
      id="path2"
      cx="400"
-     cy="400"
-     r="375" />
+     cy="400.00003"
+     rx="369.99997"
+     ry="370" />
   <circle
      style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:50;stroke-miterlimit:2;stroke-dasharray:none"
      id="path3"
      cx="400"
      cy="400"
-     r="91.655632" />
+     r="82.664604" />
 </svg>
