@@ -7,6 +7,7 @@ RETURN = temporarily deleted, then returned
 - 130AD, 130AE, 130AF, 130B0, 130B1 / 130B2, 130B3, 130B4, 130B5, 130B6 / 130B7 = counting fingers (11)
 - 13139, 1313A, 1313B, 1313C, 1313D = flesh and shit (5)
 - 131BC, 131BD, 131BE, 131BF, 131C0 / 131C1, 131C2, 1313, 1314 = counting flowers (9)
+    (warning, in BC_2 fixed curvature and aligned stalk)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
