@@ -125,6 +125,7 @@ Subtotal: 172
 - 1314F: removed sun
 - 13152: squeezed every bit of width
 - 13187: too heavy
+- 1318E: too heavy, accidentally found in Egyptian nomes and remade
 - 13192: thicker walls
 - 131A1: ex, rotated 45°
 - 131A9: made from scratch, both glitch and wrong rotation
@@ -136,8 +137,10 @@ Subtotal: 172
 - 131D3: based on D1
 - 131E4: was thick and craggy
 - 131F3: too thick
+- 13214: too thick
+- 1324F: franken from several Nu22’s
 
-Subtotal: 107
+Subtotal: 110
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -522,6 +525,7 @@ Subtotal: 369
 - 13159: hoopoe w/feathers is a different CP
 - 13172: ex, moved + symmetrized loaf
 - 131AA: after A9, reversed
+- 13215: after 14
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -722,7 +726,7 @@ Subtotal: 369
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 208
+Subtotal: 209
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -730,4 +734,4 @@ Subtotal: 208
 
 Subtotal: 2
 
-Total: 858
+Total: 862
