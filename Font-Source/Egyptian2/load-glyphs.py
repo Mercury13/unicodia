@@ -16,7 +16,6 @@ BAD_JSESH_HIEROS = {
     0x13BDA: "F132B",  # IDK
     0x13EB2: "M39B",   # big basket of fruit
     0x13F29: "N31h",   # flowers in circular road
-    0x13F44: "N104",   # a well with a stroke
 }
 BAD_JSESH_KEYS = BAD_JSESH_HIEROS.keys()
 
@@ -224,6 +223,7 @@ GLYPH_SIZES = {
     0x13211: MEDIUM,
     0x13214: MEDWIDE,  # some metal
     0x13215: MEDIUM,  # less metal
+    0x1321E: MEDIUM, 0x1321F: MEDIUM,  # wells
     # Nu/Ul: coats of arms
     0x13230: WIDE,  # Nl16: hanging fishtail
     0x13248: WIDE,  # Nu17: hanging jackal’s tail
@@ -345,7 +345,8 @@ GLYPH_SIZES = {
     0x13EBE: MEDIUM,
     0x13EE7: MEDWIDE, 0x13EE8: MEDWIDE,
     0x13EF5: TINY,
-    0x13F44: TINY, 0x13F47: MEDIUM,
+    0x13F44: MEDIUM, 0x13F45: MEDIUM,  # wells
+    0x13F47: MEDIUM,
     0x13F4B: MEDIUM,
     0x13F50: MEDWIDE, 0x13F51: MEDWIDE, 0x13F52: MEDWIDE, # building plans
     0x13F74: WIDE, # overthrow wall, not really enough width
