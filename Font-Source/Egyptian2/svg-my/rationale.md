@@ -314,7 +314,6 @@ Subtotal: 110
 - 13A36: +bundle of straw
 - 13A5C: nothing on neck
 - 13A6E: wings in V-shape
-- 13A79: differ from 13A7A, maybe draw hind legs in other fashion
 - 13A85: greatly simplified
 - 13AA3: rotate 90°
 - 13AAC: aligned that goat
@@ -514,7 +513,7 @@ Subtotal: 110
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 369
+Subtotal: 368
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -735,4 +734,4 @@ Subtotal: 209
 
 Subtotal: 2
 
-Total: 865
+Total: 864
