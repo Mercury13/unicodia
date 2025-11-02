@@ -588,7 +588,7 @@ def loadUnikemet():
                             elif os.path.exists(cacheName) and not isKnownBadGlyph:
                                 # Cached glyph: already ran software
                                 glyph = newGlyph(font, code, glyphName)
-                                svgHeight = getSvgHeight(svgName)  # requested rather than actual size
+                                svgHeight = getSvgHeight(cacheName)
                                 loadGlyph(glyph, code, cacheName, svgHeight, True)
                             elif not isKnownBadGlyph:
                                 # Unknown glyph
@@ -598,9 +598,16 @@ def loadUnikemet():
                                 if not isGood:
                                     # Run Inkscape
                                     log.write("NOTE: Forced to run Inkscape on {}.\n".format(glyphName))
-                                    cmdline = '"{}" --actions=select-all;path-union --export-filename={} {}'
-                                    os.system(cmdline.format(INKSCAPE, cacheName, svgName))
+                                    if svgHeight > 200:
+                                        # leave
+                                        cmdline = '"{}" --actions=select-all;path-union;fit-canvas-to-selection --export-filename={} {}'
+                                        os.system(cmdline.format(INKSCAPE, cacheName, svgName))
+                                    else:
+                                        # enlarge
+                                        cmdline = '"{}" --actions=select-all;transform-scale:40;path-union;fit-canvas-to-selection --export-filename={} {}'
+                                        os.system(cmdline.format(INKSCAPE, cacheName, svgName))
                                     glyph.clear()
+                                    svgHeight = getSvgHeight(cacheName)
                                     loadGlyph(glyph, code, cacheName, svgHeight, True)
                             else:
                                 isLoaded = False
