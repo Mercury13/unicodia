@@ -342,8 +342,8 @@ Subtotal: 110
 - 13C19: white neck
 - 13C1C: white neck
 - 13C1F: wrong direction
-- 13C20: same: TWO HUNDRED
-- 13C28: white neck
+- 13C20: same
+- 13C28: white neck: TWO HUNDRED
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
@@ -442,8 +442,8 @@ Subtotal: 110
 - 140FC: removed PLACEHOLDERS
 - 14137: no sun
 - 14138: no sun
-- 1413A: no sun: THREE HUNDRED
-- 1413B: no sun
+- 1413A: no sun
+- 1413B: no sun: THREE HUNDRED
 - 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
