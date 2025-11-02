@@ -107,6 +107,7 @@ Subtotal: 175
 - 130E8: same
 - 130ED: removed that line on the belly
 - 130F1: after 2C
+- 130F8: head swap F7-F8
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
 - 1310A: extended + thin solid stick
@@ -142,7 +143,7 @@ Subtotal: 175
 - 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 111
+Subtotal: 112
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -736,4 +737,4 @@ Subtotal: 210
 
 Subtotal: 2
 
-Total: 866
+Total: 867
