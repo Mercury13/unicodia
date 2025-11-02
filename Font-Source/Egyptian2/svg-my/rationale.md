@@ -139,9 +139,10 @@ Subtotal: 175
 - 131E4: was thick and craggy
 - 131F3: too thick
 - 13214: too thick
+- 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 110
+Subtotal: 111
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -735,4 +736,4 @@ Subtotal: 210
 
 Subtotal: 2
 
-Total: 865
+Total: 866
