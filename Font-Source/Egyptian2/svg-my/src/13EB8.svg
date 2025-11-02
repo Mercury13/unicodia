@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1250"
+   height="1000"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="13EB8.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">US12M43VARA</title>
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.29702079"
+     inkscape:cx="136.35409"
+     inkscape:cy="971.31247"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="881.66293,60.00006"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     d="m 201.13456,119.97656 -34.12179,94.66049 -33.02111,-94.66049 z m 702.24826,0 -34.12166,94.66049 -34.12185,-94.66049 z M 667.82103,315.90157 c 31.55346,0 47.33017,30.45277 47.33017,91.3583 0,60.90567 -15.77671,91.3585 -47.33017,91.3585 -26.41688,0 -39.62534,-30.45283 -39.62534,-91.3585 0,-60.90553 13.20846,-91.3583 39.62534,-91.3583 z m -282.57819,0 c 31.55344,0 47.33018,30.8197 47.33018,92.45909 0,60.90558 -15.77674,91.35837 -47.33018,91.35837 -26.41685,0 -39.62528,-30.45279 -39.62528,-91.35837 0,-61.63939 13.20843,-92.45909 39.62528,-92.45909 z M 55.841799,0 83.35937,73.74707 H 10.712989 v 46.22949 h 85.854775 l 46.229546,138.68855 v 681.33483 h 48.43091 V 258.66511 l 47.3302,-138.68855 h 126.8717 v 155.19915 c -41.82666,0 -62.73999,44.39499 -62.73999,133.18495 0,88.05634 27.51757,132.08452 82.55271,132.08452 55.03509,0 82.36924,-44.21162 82.00243,-132.63485 -0.36695,-88.42308 -21.46378,-132.63462 -63.29046,-132.63462 V 119.97656 h 245.15415 v 154.09836 c -42.56041,0 -63.8406,44.39499 -63.8406,133.18495 0,88.05629 27.51754,132.08444 82.55267,132.08444 55.76899,0 83.46993,-44.21154 83.1029,-132.63462 -0.36691,-88.42317 -21.46365,-132.63477 -63.29028,-132.63477 V 119.97656 h 111.18259 l 46.22946,138.68855 v 681.33483 h 47.33022 V 258.66511 l 48.43082,-138.68855 h 40.7259 c 0.7457,-0.0212 1.48867,-0.032 2.22883,-0.032 101.19323,0 186.44003,421.57988 179.15553,820.05538 h 51.2279 c 9.8598,-327.42162 -54.3757,-610.2025 -86.6631,-707.79811 C 1095.1946,134.6062 1061.0109,79.235114 981.53264,73.747076 H 954.01516 L 982.63346,0 H 945.20958 L 916.59123,73.74707 H 823.03149 L 794.41325,0 h -37.42388 l 28.61826,73.74707 H 251.76686 L 280.38516,0 h -37.42389 l -27.51759,73.74707 h -94.6604 L 93.265697,0 Z"
+     style="fill:#000000;stroke:none;stroke-width:99.8553"
+     id="path1"
+     sodipodi:nodetypes="ccccccccssssssssssccccccccccccsscccccssscccccccccsccscccccccccccccccc" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>US12M43VARA</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Serge Thomas, modified by Serge Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Standardized sign, from S. Thomas M43, copying features from Old Kingdom sign in Verner, M.,  Abusir I: The Mastaba of Ptahshepses : Reliefs. Excavations of the Czech Institute of Egyptology. Charles University.  n° 78</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:none;stroke:#613583;stroke-width:60;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="M 0,969.99997 H 1250"
+     id="path2" />
+</svg>

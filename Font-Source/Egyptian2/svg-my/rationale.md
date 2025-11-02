@@ -139,11 +139,13 @@ Subtotal: 175
 - 131D3: based on D1
 - 131E4: was thick and craggy
 - 131F3: too thick
+- 131FE: after other strips like 13EFC
+- 131FF: same
 - 13214: too thick
 - 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 112
+Subtotal: 114
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -465,7 +467,6 @@ Subtotal: 112
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
-- 14234: smaller handle, bigger blade
 - 14236: no signs of knife
 - 14259: flipped, redrew from scratch for thicker line instead of double
 - 14283: thinner lines
@@ -515,7 +516,7 @@ Subtotal: 112
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 368
+Subtotal: 367
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -676,8 +677,10 @@ Subtotal: 368
 - 13D87: franken
 - 13DA7: DA3 + feathers
 - 13DF0: L2 minus wings
+- 13E02: N112 minus canals
 - 13E19: after 18
 - 13E2E: see desc
+- 13EB8: found in JSesh, added base
 - 13EFB: after FD
 - 13EFC: same
 - 13E99: after 98
@@ -729,7 +732,7 @@ Subtotal: 368
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 210
+Subtotal: 212
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -737,4 +740,4 @@ Subtotal: 210
 
 Subtotal: 2
 
-Total: 867
+Total: 870
