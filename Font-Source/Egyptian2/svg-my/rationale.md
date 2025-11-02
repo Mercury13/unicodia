@@ -10,8 +10,8 @@ RETURN = temporarily deleted, then returned
     **(warning, in BC_2 fixed curvature and aligned stalk)**
 - 1321E, 1321F, 13F44, 13F45 = campaign for wells (4)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
-- 134CC, 135EC, 13712, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
-- 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (20)
+- 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
+- 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (19)
 - 136AE, 142AD = campaign for phasing out NewGardinerNonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
@@ -27,7 +27,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 176
+Subtotal: 175
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -735,4 +735,4 @@ Subtotal: 209
 
 Subtotal: 2
 
-Total: 866
+Total: 865
