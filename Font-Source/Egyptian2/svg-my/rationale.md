@@ -368,7 +368,6 @@ Subtotal: 114
 - 13CB5: uraeus after CB4
 - 13CB6: added uraeus
 - 13CB7: same
-- 13CDC: no beard
 - 13CF5: after F6 (had a bit different paws)
 - 13D28: drew claw from scratch
 - 13D6F: removed sun, curvier beard
@@ -447,8 +446,8 @@ Subtotal: 114
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun: THREE HUNDRED
-- 1413E: other feather, no double lines, other handle
+- 1413B: no sun
+- 1413E: other feather, no double lines, other handle: THREE HUNDRED
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
@@ -516,7 +515,7 @@ Subtotal: 114
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 367
+Subtotal: 366
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -740,4 +739,4 @@ Subtotal: 212
 
 Subtotal: 2
 
-Total: 870
+Total: 869
