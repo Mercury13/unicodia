@@ -3,7 +3,7 @@
 1. Need software: FontForge, Inkscape, TtfAutoHint
 2. Put JSesh SVGs to Svg directory. WARNING: those SVGs are non-versioned
 3. Open UnicodiaSesh.sfd
-4. Run load-glyphs.py
+4. Run script (Ctrl+Period) load-glyphs.py
 5. Wait REALLY long, approx 30m
 6. DO NOT SAVE
 7. Check sesh.log, it might show problems
