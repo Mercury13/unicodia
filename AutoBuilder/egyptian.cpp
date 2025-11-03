@@ -153,10 +153,18 @@ namespace {
         return r;
     }
 
-    void fixupUniDesc(std::string& s)
+    void fixupUniDesc(std::string& s, char32_t cp)
     {
         str::replace(s, "canal (M36)"sv, "canal (N36)"sv);
-        str::replace(s, "HG N37A", "N37d");
+        str::replace(s, "HG N37A", "N37D");
+        str::replace(s, "(HG T19)", "(T19E)");
+        switch (cp) {
+        case 0x1423E:
+        case 0x14240:
+            str::replace(s, "(T19)", "(T19E)");
+            break;
+        default: ;
+        }
     }
 
     void loadUnikemet(egyp::Base& r)
@@ -191,7 +199,7 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
-                fixupUniDesc(du);
+                fixupUniDesc(du, cp);
             } else if (sField == "kEH_Core"sv) {
                 auto& en = r[cp];
                 if (sValue == "C"sv) {
