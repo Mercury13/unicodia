@@ -213,6 +213,7 @@ GLYPH_SIZES = {
     # M: plants
     0x131BE: WIDE, 0x131BF: EVERYBIT, 0x131C0: EVERYBIT,  # flowers counting
     0x131D1: MEDWIDE,  # two stalks
+    0x131E0: MEDWIDE,  # grains
     # N: geography
     0x131F2: SQUARE,  # sky
     0x131F3: MEDIUM,   # sun
@@ -341,7 +342,7 @@ GLYPH_SIZES = {
     0x13E46: SMALL,
     0x13E64: SMALL,
     0x13E85: MEDIUM,
-    0x13EA3: SMALL, 0x13EA4: SMALL, 0x13EA5: TEENY,
+    0x13EA3: SMALL, 0x13EA4: SMALL,
     0x13EA8: MEDWIDE,
     0x13EAB: SMALL,
     0x13EB8: MEDWIDE,  # vine on trellis

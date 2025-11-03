@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="1000"
+   id="svg3378"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="131E0.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata3385">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3383">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 988.67911 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="20.727343 : 988.67911 : 1"
+       inkscape:persp3d-origin="10.363671 : 985.68191 : 1"
+       id="perspective3387" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.18875001"
+     inkscape:cx="-792.05295"
+     inkscape:cy="580.13243"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg3378"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="0,1000"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,600"
+       orientation="0,1"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,800"
+       orientation="0,1"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="-418.54305,800"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,550"
+       orientation="0,1"
+       id="guide7"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#000000;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="m 81.332031,737.60352 c -20.068422,-0.0479 -40.677617,2.08344 -61.783203,6.79882 A 25.0025,25.0025 0 0 0 1.1445312,776.2793 C 27.021125,858.82198 84.747023,913.82581 150.3457,951.69922 c 65.59869,37.87341 142.09526,60.36348 226.51758,41.50195 a 25.0025,25.0025 0 0 0 18.4043,-31.87695 C 369.39101,878.78157 311.66507,823.77773 246.06641,785.9043 196.86739,757.49923 141.5373,737.7471 81.332031,737.60352 Z m 0.244141,49.84179 c 49.715948,-0.0221 95.455928,16.3385 139.490238,41.76172 50.52436,29.17027 91.78893,66.29635 116.0332,119.78516 C 278.65483,954.74043 225.87007,937.56673 175.3457,908.39648 124.82109,879.22609 83.554791,842.10057 59.310547,788.61133 c 7.507966,-0.73848 14.937704,-1.16276 22.265625,-1.16602 z"
+     id="path1" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path1"
+     id="use1"
+     transform="translate(803.58922)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path1"
+     id="use2"
+     transform="translate(401.79461)" />
+</svg>

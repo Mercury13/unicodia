@@ -8,6 +8,7 @@ RETURN = temporarily deleted, then returned
 - 13139, 1313A, 1313B, 1313C, 1313D = flesh and shit (5)
 - 131BC, 131BD, 131BE, 131BF, 131C0 / 131C1, 131C2, 1313, 1314 = counting flowers (9)
     **(warning, in BC_2 fixed curvature and aligned stalk)**
+- 131E0, 131E1, 131E2, 13EA5 = grains (4)
 - 1321E, 1321F, 13F44, 13F45 = campaign for wells (4)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
@@ -27,7 +28,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 175
+Subtotal: 179
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -743,4 +744,4 @@ Subtotal: 215
 
 Subtotal: 2
 
-Total: 873
+Total: 877

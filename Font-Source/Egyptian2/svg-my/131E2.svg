@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="1000"
+   id="svg3378"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="131E2.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata3385">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3383">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 988.67911 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="20.727343 : 988.67911 : 1"
+       inkscape:persp3d-origin="10.363671 : 985.68191 : 1"
+       id="perspective3387" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.37750001"
+     inkscape:cx="139.07284"
+     inkscape:cy="705.96024"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg3378"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="0,1000"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,600"
+       orientation="0,1"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,800"
+       orientation="0,1"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="-418.54305,800"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,550"
+       orientation="0,1"
+       id="guide7"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="81.33156,737.6023"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="395.26709,513.8816"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#000000;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+     d="m 475.45459,737.60352 c -20.06843,-0.0479 -40.67762,2.08344 -61.78321,6.79882 a 25.0025,25.0025 0 0 0 -18.40429,31.87696 c 25.87659,82.54268 83.60249,137.54651 149.20115,175.41992 65.59869,37.87341 142.09526,60.36348 226.51758,41.50195 a 25.0025,25.0025 0 0 0 18.4043,-31.87695 C 763.51355,878.78157 705.78761,823.77773 640.18895,785.9043 590.98993,757.49923 535.65984,737.7471 475.45459,737.60352 Z m 0.24414,49.84179 c 49.71593,-0.0221 95.45591,16.3385 139.49022,41.76172 50.52436,29.17027 91.78893,66.29635 116.0332,119.78516 -58.44478,5.74824 -111.22954,-11.42546 -161.75391,-40.59571 -50.52461,-29.17039 -91.79089,-66.29591 -116.03514,-119.78515 7.50797,-0.73848 14.93771,-1.16276 22.26563,-1.16602 z"
+     id="path1" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path1"
+     id="use1"
+     transform="translate(-394.12303,-475.20582)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path1"
+     id="use2"
+     transform="translate(262.83058,-475.20582)" />
+</svg>
