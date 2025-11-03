@@ -9,7 +9,15 @@
 7. Check sesh.log, it might show problems
 8. The longest operation, SVG uniting, will be cached, and next runs will be shorter
 
-Meaning of directories:
+# If you want to repeat precisely
+
+- FontForge Oct 2025
+- Inkscape 1.4.2
+- TtfAutoHint 1.8.4
+- JSesh 7.9.1
+
+# Meaning of directories
+
 - InkTest: just a test for Inkscape
 - svg: raw JSesh SVGs
 - svg-ex:
