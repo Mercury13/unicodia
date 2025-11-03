@@ -60,4 +60,5 @@ Why Unisesh.txt? Just to make changes more obvious.
 
 - All shades of violet: convert to path, mainly Stroke to path
 - Crimson, grey, dark-blue etc: just to remind that you need to unite the objects while exporting
-- Yellow: 
+- Yellow: background here. Either subtract, or leave as and let the loader do its job
+- Scarlet: technical rigs e.g. to put a guideline in place; delete when exporting
