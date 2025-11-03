@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1657.8"
+   height="1800"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="W17C.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">W17C</title>
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.25534412"
+     inkscape:cx="795.00559"
+     inkscape:cy="1147.4711"
+     inkscape:window-width="1440"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     id="path1"
+     style="fill:#000000;stroke:none;stroke-width:99.9956"
+     d="m 98.136719,0 -2.001953,115.12305 243.259764,1 -1.00195,511.54687 C 90.127665,631.67418 -1.9708864,631.67417 0.03125,755.80664 V 1806.5 L 1657.8008,1795.3008 V 757.80859 c -2.002,-112.11966 -57.0618,-124.13281 -257.2754,-124.13281 h -82.0879 l 1.002,-516.55078 h 259.2773 V 0 Z M 505.57031,120.12891 h 244.26172 l 5.00391,1535.63869 H 505.57031 Z m 410.43946,5.0039 H 1158.2676 V 1655.7676 l -238.25393,2.0019 z M 145.18555,793.84766 h 193.20703 l 2.00195,868.92574 H 145.18555 Z m 1173.25195,2.00195 h 195.209 v 862.91989 h -195.209 z"
+     sodipodi:nodetypes="ccccccccsccccccccccccccccccccccccc" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>W17C</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>S. J. P. Thomas</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Fixed by S. Rosmorduc to match Hieroglyphica shape (the original JSesh W17C was a replica of W18A)
+</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

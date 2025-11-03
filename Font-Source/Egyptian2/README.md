@@ -12,7 +12,10 @@
 Meaning of directories:
 - InkTest: just a test for Inkscape
 - svg: raw JSesh SVGs
-- svg-ex: SVGs from JSesh exceptions, possibly with my slight remakes (see svg-remade)
+- svg-ex:
+  - SVGs from JSesh exceptions
+  - SVGs that appeared after UniKemet
+  - possibly with my slight remakes (see svg-remade)
 - svg-my: rather big remakes, both new and existing. These changes automatically make object My:
   - deleting an object
   - adding an object
