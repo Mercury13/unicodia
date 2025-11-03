@@ -111,7 +111,10 @@ I never rip fonts from Unicode charts, always use TTF form. But the authors of f
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
 ## Egyptian
-* Legacy hieroglyphs are done with the same attention as core
+* Legacy policy:
+  * Equiv. sequence = some core → invent a difference
+  * Equiv. sequence = flipped core → flip!
+  * Equiv. sequence = combination → combine somehow
 * Hieroglyphs w/o description just somehow resemble the sample image, no efforts are made to make them look exactly
 * Same if the sample image is not in harmony with description
 * Short-haired man has absolutely no beard unless specified
