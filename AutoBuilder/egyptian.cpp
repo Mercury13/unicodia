@@ -156,6 +156,7 @@ namespace {
     void fixupUniDesc(std::string& s)
     {
         str::replace(s, "canal (M36)"sv, "canal (N36)"sv);
+        str::replace(s, "HG N37A", "N37d");
     }
 
     void loadUnikemet(egyp::Base& r)
