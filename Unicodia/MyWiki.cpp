@@ -572,7 +572,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseCharRequestLink(std::string_view targ
             return nullptr;
         case 'N':   // number
             if (value == "1"sv) {
-                fields.isNumber = 1;
+                fields.isNumber = true;
             }
             break;
         case 'C':   // old computers

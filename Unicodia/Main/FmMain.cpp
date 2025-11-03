@@ -594,6 +594,14 @@ namespace {
         return {};
     }
 
+    void tryAddingNumeric(QString& s, const uc::SearchLine& line) {
+        if (auto sNum = toNumeric(line); !sNum.isEmpty()) {
+            // Code on the left → probably common for all LtR typography
+            s += ": ";
+            s += sNum;
+        }
+    }
+
 }   // anon namespace
 
 
@@ -615,11 +623,18 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 // …Character code
                 uc::sprintUPLUS(buf, line.code);
                 s += buf;
-                if (line.prio.high == uc::HIPRIO_DEC) {
+                switch (line.prio.high) {
+                case uc::HIPRIO_DEC:
                     // Found by decimal
                     s += " = ";
                     s += QString::number(line.code);
                     s += "₁₀";
+                    break;
+                case uc::HIPRIO_NUMERIC:
+                case uc::HIPRIO_NUMERIC_HI:
+                    tryAddingNumeric(s, line);
+                    break;
+                default:;
                 }
             } else if (line.node) {
                 // …Library object
@@ -655,11 +670,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             }
             switch (primaryObj) {
             case uc::PrimaryObj::NUMERIC:
-                if (auto sNum = toNumeric(line); !sNum.isEmpty()) {
-                    // Code on the left → probably common for all LtR typography
-                    s += ": ";
-                    s += sNum;
-                }
+                tryAddingNumeric(s, line);
                 break;
             case uc::PrimaryObj::DFLT:
                 // OK here, we concat “U+1234: Klingon X”

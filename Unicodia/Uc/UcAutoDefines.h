@@ -260,7 +260,9 @@ namespace uc {
         SEPARATOR_PARAGRAPH,    ///< Zp   Paragraph sign
         SEPARATOR_SPACE,        ///< Zs   Space sign
         NN,
-        NO_VALUE = NN
+        NO_VALUE = NN,
+        NUMBER_FIRST = NUMBER_DECIMAL,
+        NUMBER_LAST = NUMBER_OTHER,
     };
 
     struct Version;

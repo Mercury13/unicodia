@@ -126,7 +126,11 @@ uc::PrimaryObj uc::CharFieldRequest::primaryObj() const
     static_assert((int)uc::PrimaryObj::DFLT == (int)false);
     static_assert((int)uc::PrimaryObj::NUMERIC == (int)true);
     // The most optimized version for this checks
-    return static_cast<uc::PrimaryObj>(fields.isNumber);
+    return static_cast<uc::PrimaryObj>(
+                fields.isNumber
+            || (fields.ecCategory >= uc::EcCategory::NUMBER_FIRST
+                && fields.ecCategory <= uc::EcCategory::NUMBER_LAST)
+            || fields.ecUpCat == uc::EcUpCategory::NUMBER);
 }
 
 
