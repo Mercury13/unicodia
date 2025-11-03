@@ -129,6 +129,7 @@ Subtotal: 175
 - 13187: too heavy
 - 1318E: too heavy, accidentally found in Egyptian nomes and remade
 - 13192: thicker walls
+- 13196: other strip of land
 - 131A1: ex, rotated 45°
 - 131A9: made from scratch, both glitch and wrong rotation
 - 131AE: not-really-simple combination (picked that Y)
@@ -145,7 +146,7 @@ Subtotal: 175
 - 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 114
+Subtotal: 115
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -527,6 +528,7 @@ Subtotal: 366
 - 13159: hoopoe w/feathers is a different CP
 - 13172: ex, moved + symmetrized loaf
 - 131AA: after A9, reversed
+- 13201: just assembled somehow
 - 13215: after 14
 - 13219: after 2A, in harmony with it
 - 134FF: after FE + random jug W22?
@@ -732,7 +734,7 @@ Subtotal: 366
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 213
+Subtotal: 214
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -740,4 +742,4 @@ Subtotal: 213
 
 Subtotal: 2
 
-Total: 870
+Total: 872
