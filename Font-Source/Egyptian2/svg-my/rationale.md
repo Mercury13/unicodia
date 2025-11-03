@@ -529,6 +529,7 @@ Subtotal: 366
 - 13172: ex, moved + symmetrized loaf
 - 131AA: after A9, reversed
 - 13201: just assembled somehow
+- 13202: same but door bolt is home-made
 - 13215: after 14
 - 13219: after 2A, in harmony with it
 - 134FF: after FE + random jug W22?
@@ -734,7 +735,7 @@ Subtotal: 366
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 214
+Subtotal: 215
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -742,4 +743,4 @@ Subtotal: 214
 
 Subtotal: 2
 
-Total: 872
+Total: 873
