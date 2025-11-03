@@ -1,6 +1,6 @@
 ﻿# How to build UnicodiaSesh font
 
-1. Need software: Inkscape, TtfAutoHint
+1. Need software: FontForge, Inkscape, TtfAutoHint
 2. Put JSesh SVGs to Svg directory. WARNING: those SVGs are non-versioned
 3. Open UnicodiaSesh.sfd
 4. Run load-glyphs.py
