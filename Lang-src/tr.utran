@@ -12252,42 +12252,45 @@
     </text>
    </group>
    <group id="Num">
-    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
-    <text id="Digit">
-     <orig>digit</orig>
-     <transl>rakam</transl>
+    <au-cmt>
+     <p>Term “Number character”, magnifying glass icon</p>
+     <p>1 = number</p>
+    </au-cmt>
+    <text id="Digit" force-attention="true">
+     <orig>digit {1}</orig>
+     <transl>rakam {1}</transl>
     </text>
-    <text id="SpecDigit">
-     <orig>special digit</orig>
-     <transl>özel rakam</transl>
+    <text id="SpecDigit" force-attention="true">
+     <orig>special digit {1}</orig>
+     <transl>özel rakam {1}</transl>
     </text>
-    <text id="Number">
-     <orig>number</orig>
-     <transl>sayı</transl>
+    <text id="Number" force-attention="true">
+     <orig>number {1}</orig>
+     <transl>sayı {1}</transl>
     </text>
-    <text id="CjkRare">
-     <orig>rarely</orig>
-     <transl>nadiren</transl>
+    <text id="CjkRare" force-attention="true">
+     <orig>rarely {1}</orig>
+     <transl>nadiren {1}</transl>
     </text>
-    <text id="CjkAccount">
-     <orig>anti-forgery</orig>
-     <transl>sahteciliğe karşı</transl>
+    <text id="CjkAccount" force-attention="true">
+     <orig>anti-forgery {1}</orig>
+     <transl>sahteciliğe karşı {1}</transl>
     </text>
-    <text id="CjkZhuang">
-     <orig>Zhuang</orig>
-     <transl>Zhuang</transl>
+    <text id="CjkZhuang" force-attention="true">
+     <orig>Zhuang {1}</orig>
+     <transl>Zhuang {1}</transl>
     </text>
-    <text id="CjkVietnamese">
-     <orig>Vietnamese</orig>
-     <transl>Vietnamca</transl>
+    <text id="CjkVietnamese" force-attention="true">
+     <orig>Vietnamese {1}</orig>
+     <transl>Vietnamca {1}</transl>
     </text>
-    <text id="CjkTay">
-     <orig>Tay</orig>
-     <transl>Tay</transl>
+    <text id="CjkTay" force-attention="true">
+     <orig>Tay {1}</orig>
+     <transl>Tay {1}</transl>
     </text>
-    <text id="CjkZhuangTay">
-     <orig>Zhuang/Tay</orig>
-     <transl>Zhuang/Tay</transl>
+    <text id="CjkZhuangTay" force-attention="true">
+     <orig>Zhuang/Tay {1}</orig>
+     <transl>Zhuang/Tay {1}</transl>
     </text>
    </group>
    <group id="Type">

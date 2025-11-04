@@ -8434,33 +8434,36 @@
     </text>
    </group>
    <group id="Num">
-    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
+    <au-cmt>
+     <p>Term “Number character”, magnifying glass icon</p>
+     <p>1 = number</p>
+    </au-cmt>
     <text id="Digit">
-     <orig>digit</orig>
+     <orig>digit {1}</orig>
     </text>
     <text id="SpecDigit">
-     <orig>special digit</orig>
+     <orig>special digit {1}</orig>
     </text>
     <text id="Number">
-     <orig>number</orig>
+     <orig>number {1}</orig>
     </text>
     <text id="CjkRare">
-     <orig>rarely</orig>
+     <orig>rarely {1}</orig>
     </text>
     <text id="CjkAccount">
-     <orig>anti-forgery</orig>
+     <orig>anti-forgery {1}</orig>
     </text>
     <text id="CjkZhuang">
-     <orig>Zhuang</orig>
+     <orig>Zhuang {1}</orig>
     </text>
     <text id="CjkVietnamese">
-     <orig>Vietnamese</orig>
+     <orig>Vietnamese {1}</orig>
     </text>
     <text id="CjkTay">
-     <orig>Tay</orig>
+     <orig>Tay {1}</orig>
     </text>
     <text id="CjkZhuangTay">
-     <orig>Zhuang/Tay</orig>
+     <orig>Zhuang/Tay {1}</orig>
     </text>
    </group>
    <group id="Type">

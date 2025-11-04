@@ -25,7 +25,7 @@ namespace loc {
         Text& operator = (Text&&) = default;
 
         template <class T>
-        Text(T&& x) : fSrc(std::forward<T>(x)), fIsFull(true) {}
+        explicit Text(T&& x) : fSrc(std::forward<T>(x)), fIsFull(true) {}
 
         template <class T>
         Text& operator = (T&& x)

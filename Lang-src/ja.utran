@@ -1330,6 +1330,9 @@
      <orig>Index</orig>
      <au-cmt>A1, B10c etc</au-cmt>
     </text>
+    <text id="Pron">
+     <orig>Pronunciation</orig>
+    </text>
    </group>
   </group>
   <group id="Block">
@@ -6626,12 +6629,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrect, Hittite language was never written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.</p>
+      <p>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrect, Hittite language had never been written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.</p>
       <p />
       <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not{{_}}just concept but syllable, but they are few.</p>
       <p />
       <p>About 1800 hieroglyphs drew scholars’ attention, it was hypothesized that they are Hittite. In 1915 Luwian language was finally deciphered via [[ps:Xsux|cuneiform]], in 1930s first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</p>
      </orig>
+     <known-orig>
+      <p>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrect, Hittite language was never written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.</p>
+      <p />
+      <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not{{_}}just concept but syllable, but they are few.</p>
+      <p />
+      <p>About 1800 hieroglyphs drew scholars’ attention, it was hypothesized that they are Hittite. In 1915 Luwian language was finally deciphered via [[ps:Xsux|cuneiform]], in 1930s first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</p>
+     </known-orig>
      <transl>
       <p>ヒエログリフは、発見された場所（アナトリア＝小アジア）または言語（ルウィ語）によって命名されます。ヒッタイト語という名前は誤りです。ヒッタイト語は、ヒッタイト語とルウィ語のバイリンガル主義で最初に発明されたものの、ヒッタイト語で書かれたことはありませんでした。紀元前12世紀と11世紀には、資料不足で青銅器時代が崩壊しましたが、10世紀以降、ヒエログリフは再び現れました。紀元前7世紀頃、ヒエログリフは[[pt:alphabet|アルファベット]]の文字に置き換えられ、忘れ去られました。</p>
       <p />
@@ -6662,9 +6672,18 @@
       <p />
       <p>Four stages exist, the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
       <p />
-      <p>Hmongs from the same clan are perceived to be like brothers and sisters, and should not do anything looking like relationships, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges, or drawn on doors. These characters have never used widely.</p>
+      <p>Hmongs from the same clan are perceived to be like brothers and sisters, and should not do anything looking like relationships, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges, or drawn on doors. These characters have never been used widely.</p>
      </orig>
      <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
+     <known-orig>
+      <p>Shong Lue Yang, the inventor of the script, said that the script was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam war was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, Shong was assassinated by pro-Americans.</p>
+      <p />
+      <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of vowel “oob”, consonant “qh” and a tack for tone.</p>
+      <p />
+      <p>Four stages exist, the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
+      <p />
+      <p>Hmongs from the same clan are perceived to be like brothers and sisters, and should not do anything looking like relationships, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges, or drawn on doors. These characters have never used widely.</p>
+     </known-orig>
      <transl>
       <p>文字の発明者であるション・ルー・ヤンは、この文字は神から与えられたものだと語った。「パハウ」という名前は「団結」を意味する。開発は1959年から1971年まで続いた。ベトナム戦争が続いており、ションのグループは共産主義勢力と親米勢力の両方から疑われ、文字作成後すぐにションは親米勢力に暗殺された。</p>
       <p />
@@ -8044,10 +8063,19 @@
       <p />
       <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, headstroke became an arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
+      <p>The inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
       <p />
       <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
+     <known-orig>
+      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken headstroke, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
+      <p />
+      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, headstroke became an arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
+      <p />
+      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+     </known-orig>
      <transl>
       <p>オディア語またはオリヤー語（伝統的には「アーリア人」に関連すると考えられているが、不正確）は、上部の線が破線である [[ps:Sidd|悉曇文字]] から、ガウディ（「原始 [[ps:Beng|ベンガル語]]」、「原始オリヤー語」でもある）を経て発展した。</p>
       <p />
@@ -9648,10 +9676,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The first sample of old (ideographic) Yi script dates to ≈1500, but the script is definitely older. Legends say that it existed in the Tang dynasty (618–907). The script consists of {{n|8000}} to {{n|10000}} ideographs.</p>
+      <p />
+      <p>Modern syllabic Yi was invented by the Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not{{_}}all combinations are possible, and the Yi script can write {{n|1165}} syllables.</p>
+     </orig>
+     <known-orig>
       <p>The first sample of old (ideographic) Yi script is dated ≈1500, but the script is definitely older. Legends say that it existed in Tang dynasty (618–907). Script consists of {{n|8000}} to {{n|10000}} ideographs.</p>
       <p />
       <p>Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not{{_}}all combinations are possible, and Yi script can write {{n|1165}} syllables.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>古い（表意文字）彝文字の最初のサンプルは 1500 年頃のものですが、文字自体は間違いなくそれより古いものです。伝説によると、唐の時代（618～907 年）に存在していたと言われています。文字は {{n|8000}}～{{n|10000}} の表意文字で構成されています。</p>
       <p />
@@ -10146,8 +10179,19 @@
       <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
+     <known-orig>
+      <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p />
+      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
+      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
+      <p />
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+     </known-orig>
      <transl>
       <p>子音素のみが書かれる文字。母音は完全に省略されるか、オプションの母音記号で書かれます。''Abjad'' という名前は、[[ps:Arab|アラビア文字]] アルファベットの自称 {{-}}أبجد ''abjadiya'' に由来します。</p>
       <p />
@@ -11977,6 +12021,24 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
+      <p />
+      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte character, that simplified text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
+      <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
+      <p>* Characters D800…DFFF are forbidden;</p>
+      <p>* Characters 10000 and greater are written as a '''surrogate pair''':</p>
+      <p>: 1101.10yy.yyyy.yyyy{{_}}1101.11yy.yyyy.yyyy, where y=x−10000₁₆.</p>
+      <p />
+      <p>Properties of UTF-16:</p>
+      <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} characters.</p>
+      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
+      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even for one character, will{{_}}not{{_}}make false positives.</p>
+      <p>* Unreliable detection: without a [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence, by statistics or surrogate pairs if they are present. The well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
+      <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
+      <p />
+      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode tranformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
       <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows{{_}}NT quickly adopted two-byte character, that simplified text processing. But soon it became clear that two bytes are{{_}}not{{_}}enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
@@ -11993,7 +12055,7 @@
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 変換形式、16 ビット''' は、Unicode [[pt:serialization|シリアル化]] を 2 バイトのマシン ワードのチェーンにシリアル化する形式です。</p>
       <p />
@@ -12356,40 +12418,43 @@
     </text>
    </group>
    <group id="Num">
-    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
-    <text id="Digit">
-     <orig>digit</orig>
-     <transl>数字</transl>
+    <au-cmt>
+     <p>Term “Number character”, magnifying glass icon</p>
+     <p>1 = number</p>
+    </au-cmt>
+    <text id="Digit" force-attention="true">
+     <orig>digit {1}</orig>
+     <transl>数字 {1}</transl>
     </text>
-    <text id="SpecDigit">
-     <orig>special digit</orig>
-     <transl>特殊数字</transl>
+    <text id="SpecDigit" force-attention="true">
+     <orig>special digit {1}</orig>
+     <transl>特殊数字 {1}</transl>
     </text>
-    <text id="Number">
-     <orig>number</orig>
-     <transl>件数</transl>
+    <text id="Number" force-attention="true">
+     <orig>number {1}</orig>
+     <transl>件数 {1}</transl>
     </text>
-    <text id="CjkRare">
-     <orig>rarely</orig>
-     <transl>稀</transl>
+    <text id="CjkRare" force-attention="true">
+     <orig>rarely {1}</orig>
+     <transl>稀 {1}</transl>
     </text>
-    <text id="CjkAccount">
-     <orig>anti-forgery</orig>
-     <transl>偽造防止</transl>
+    <text id="CjkAccount" force-attention="true">
+     <orig>anti-forgery {1}</orig>
+     <transl>偽造防止 {1}</transl>
     </text>
-    <text id="CjkZhuang">
-     <orig>Zhuang</orig>
-     <transl>チワン族</transl>
+    <text id="CjkZhuang" force-attention="true">
+     <orig>Zhuang {1}</orig>
+     <transl>チワン族 {1}</transl>
     </text>
-    <text id="CjkVietnamese">
-     <orig>Vietnamese</orig>
-     <transl>ベトナム語</transl>
+    <text id="CjkVietnamese" force-attention="true">
+     <orig>Vietnamese {1}</orig>
+     <transl>ベトナム語 {1}</transl>
     </text>
     <text id="CjkTay">
-     <orig>Tay</orig>
+     <orig>Tay {1}</orig>
     </text>
     <text id="CjkZhuangTay">
-     <orig>Zhuang/Tay</orig>
+     <orig>Zhuang/Tay {1}</orig>
     </text>
    </group>
    <group id="Type">
@@ -13399,6 +13464,10 @@
      <orig>Division</orig>
      <transl>除算</transl>
     </text>
+    <text id="Root">
+     <orig>Root</orig>
+     <au-cmt>Square, cube…</au-cmt>
+    </text>
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
      <transl>その他の不等号文字</transl>
@@ -13735,6 +13804,48 @@
     </text>
     <text id="Keyb">
      <orig>Keyboard</orig>
+    </text>
+    <text id="Typo">
+     <orig>Typography characters</orig>
+    </text>
+    <text id="Space">
+     <orig>Spaces</orig>
+    </text>
+    <text id="Dash">
+     <orig>Dashes</orig>
+    </text>
+    <text id="Quote">
+     <orig>Quotation marks</orig>
+    </text>
+    <text id="QuoTop">
+     <orig>Top</orig>
+     <au-cmt>…top quotes</au-cmt>
+    </text>
+    <text id="QuoAngle">
+     <orig>Angle</orig>
+     <au-cmt>…angle quotes</au-cmt>
+    </text>
+    <text id="QuoSlav">
+     <orig>German/Slavic</orig>
+     <au-cmt>…German/Slavic quotes</au-cmt>
+    </text>
+    <text id="QuoNl">
+     <orig>Dutch</orig>
+     <au-cmt>…Dutch quotes</au-cmt>
+    </text>
+    <text id="QuoJp">
+     <orig>Chinese/Japanese</orig>
+     <au-cmt>…Chinese/Japanese quotes</au-cmt>
+    </text>
+    <text id="QuoKr">
+     <orig>South Asian</orig>
+     <au-cmt>…South Asign quotes, used mainly in North Korea and other minor countries</au-cmt>
+    </text>
+    <text id="Arrow">
+     <orig>Arrows</orig>
+    </text>
+    <text id="TypoMisc">
+     <orig>Misc. punctuation</orig>
     </text>
    </group>
    <group id="Text">

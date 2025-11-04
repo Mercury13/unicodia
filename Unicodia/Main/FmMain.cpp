@@ -584,10 +584,9 @@ namespace {
         if (line.code < uc::CAPACITY) {
             if (auto& cp = uc::cpsByCode[line.code]) {
                 if (auto& num = cp->numeric(); num.isPresent()) {
-                    QString r = loc::get(uc::numTypeInfo[num.ecType].searchLocKey);
-                    r += ' ';
-                    r += mywiki::toString(num, mywiki::NumPlace::RAW);
-                    return r;
+                    const loc::Text& text = loc::get(uc::numTypeInfo[num.ecType].searchLocKey);
+                    QString sNum = mywiki::toString(num, mywiki::NumPlace::RAW);
+                    return text.argQ(str::toU8(sNum));
                 }
             }
         }
@@ -597,7 +596,7 @@ namespace {
     void tryAddingNumeric(QString& s, const uc::SearchLine& line) {
         if (auto sNum = toNumeric(line); !sNum.isEmpty()) {
             // Code on the left → probably common for all LtR typography
-            s += ": ";
+            str::append(s, loc::active::punctuation.keyValueColon);
             s += sNum;
         }
     }

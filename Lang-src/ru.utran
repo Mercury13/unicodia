@@ -12229,42 +12229,45 @@
     </text>
    </group>
    <group id="Num">
-    <au-cmt>Term “Number character”, magnifying glass icon</au-cmt>
+    <au-cmt>
+     <p>Term “Number character”, magnifying glass icon</p>
+     <p>1 = number</p>
+    </au-cmt>
     <text id="Digit">
-     <orig>digit</orig>
-     <transl>цифра</transl>
+     <orig>digit {1}</orig>
+     <transl>цифра {1}</transl>
     </text>
     <text id="SpecDigit">
-     <orig>special digit</orig>
-     <transl>особая цифра</transl>
+     <orig>special digit {1}</orig>
+     <transl>особая цифра {1}</transl>
     </text>
     <text id="Number">
-     <orig>number</orig>
-     <transl>число</transl>
+     <orig>number {1}</orig>
+     <transl>число {1}</transl>
     </text>
     <text id="CjkRare">
-     <orig>rarely</orig>
-     <transl>редко</transl>
+     <orig>rarely {1}</orig>
+     <transl>редко {1}</transl>
     </text>
     <text id="CjkAccount">
-     <orig>anti-forgery</orig>
-     <transl>антиподделка</transl>
+     <orig>anti-forgery {1}</orig>
+     <transl>антиподделка {1}</transl>
     </text>
     <text id="CjkZhuang">
-     <orig>Zhuang</orig>
-     <transl>чжуанское</transl>
+     <orig>Zhuang {1}</orig>
+     <transl>чжуанское {1}</transl>
     </text>
     <text id="CjkVietnamese">
-     <orig>Vietnamese</orig>
-     <transl>вьетнамское</transl>
+     <orig>Vietnamese {1}</orig>
+     <transl>вьетнамское {1}</transl>
     </text>
     <text id="CjkTay">
-     <orig>Tay</orig>
-     <transl>тай</transl>
+     <orig>Tay {1}</orig>
+     <transl>тай {1}</transl>
     </text>
     <text id="CjkZhuangTay">
-     <orig>Zhuang/Tay</orig>
-     <transl>чжуанское/тай</transl>
+     <orig>Zhuang/Tay {1}</orig>
+     <transl>чжуанское/тай {1}</transl>
     </text>
    </group>
    <group id="Type">
