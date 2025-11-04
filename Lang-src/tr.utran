@@ -13724,8 +13724,9 @@
      <transl>{{{{warn|Başka görseller de mümkün!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
-     <orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021.</orig>
+     <orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021. Sometimes even pre-2013 version, with smaller coat of arms.</orig>
      <au-cmt>{{ytalib}} = year when checked the situation with Taliban, e.g. 2025</au-cmt>
+     <known-orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021.</known-orig>
      <transl>Mevcut ({{ytalib}}) hükümet olan Taliban neredeyse hiçbir yerde tanınmamaktadır. Bayrakları, Müslümanların sloganı olan siyah “şehadet” üzerine beyaz renkte. Bu arada satıcılar 2021'de terk edilen eski bayrağı kullanıyor.</transl>
     </text>
     <text id="U+1F1E6+1F1F6">
