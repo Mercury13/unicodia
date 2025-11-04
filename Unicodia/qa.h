@@ -25,6 +25,11 @@ namespace qa {
         unsigned count = 0;
     };
 
-    std::vector<BlockFontLine> blockFontStats(const uc::Block& block);
+    struct BlockFontStats {
+        std::vector<BlockFontLine> lines;
+        unsigned nTotal = 0;
+    };
+
+    BlockFontStats blockFontStats(const uc::Block& block);
 
 }   // namespace qa

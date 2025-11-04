@@ -2739,20 +2739,41 @@ void FmMain::showBlockFontStats()
 {
     static constexpr const char* HEAD = "Block font stats";
     if (ui->tabsMain->currentIndex() != I_BLOCKS) {
-        QMessageBox::critical(this, HEAD, "First switch to Blocks.");
+    }
+    const uc::Block* block = nullptr;
+    switch (ui->tabsMain->currentIndex()) {
+    case I_BLOCKS:
+        if (unsigned iBlock = ui->comboBlock->currentIndex();
+                iBlock < uc::N_BLOCKS) {
+            block = &blocksModel[iBlock];
+        }
+        break;
+    case I_FAVS: {
+            auto ch = favsModel.charAt(ui->tableFavs->currentIndex());
+            if (!ch) {
+                QMessageBox::critical(this, HEAD, "Select some character.");
+                return;
+            }
+            block = &ch->block();
+        } break;
+    default:
+        QMessageBox::critical(this, HEAD, "First switch to Blocks/Favourites.");
         return;
     }
-    unsigned iBlock = ui->comboBlock->currentIndex();
-    if (iBlock > uc::N_BLOCKS) {
+    if (!block) {
         QMessageBox::critical(this, HEAD, "Somehow no block selected.");
         return;
     }
-    const auto& block = blocksModel[iBlock];
-    auto data = qa::blockFontStats(block);
+    auto data = qa::blockFontStats(*block);
     QString s;
-    str::QSep sp(s, "\n");
-    for (auto& v : data) {
-        sp.sep();
+    // Head
+    s += "Block: ";
+    str::append(s, block->name);
+    // Total
+    s += "\nTotal: ";
+    str::append(s, data.nTotal);
+    for (auto& v : data.lines) {
+        s += '\n';
         s += QString::fromStdString(v.fname);
         s += ": ";
         s += QString::number(v.count);

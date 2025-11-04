@@ -102,15 +102,17 @@ namespace {
 }   // anon namespace
 
 
-std::vector<qa::BlockFontLine> qa::blockFontStats(const uc::Block& block)
+qa::BlockFontStats qa::blockFontStats(const uc::Block& block)
 {
     unsigned nNonFont = 0;
     unsigned nTofu = 0;
+    BlockFontStats r;
     std::unordered_map<std::string_view, Counter> m;
     for (auto c = block.startingCp; c <= block.endingCp; ++c) {
         auto cp = uc::cpsByCode[c];
         if (!cp)
             continue;
+        ++r.nTotal;
         switch (cp->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY)) {
         case uc::DrawMethod::VIRTUAL_VIRAMA:
         case uc::DrawMethod::SVG_EMOJI:
@@ -130,23 +132,22 @@ std::vector<qa::BlockFontLine> qa::blockFontStats(const uc::Block& block)
             }
         }
     }
-    std::vector<qa::BlockFontLine> r;
-    r.reserve(m.size());
+    r.lines.reserve(m.size());
     if (nTofu != 0) {
-        r.emplace_back(BlockFontSpecial::TOFU, "[Tofu]", std::string{}, nTofu);
+        r.lines.emplace_back(BlockFontSpecial::TOFU, "[Tofu]", std::string{}, nTofu);
     }
     if (nNonFont != 0) {
-        r.emplace_back(BlockFontSpecial::NONFONT, "[Non-font]", std::string{}, nNonFont);
+        r.lines.emplace_back(BlockFontSpecial::NONFONT, "[Non-font]", std::string{}, nNonFont);
     }
-    auto iNonSort = r.size();
+    auto iNonSort = r.lines.size();
     for (auto& v : m) {
-        auto& bk = r.emplace_back(BlockFontSpecial::NORMAL, std::string{v.first}, std::string{}, v.second.v);
+        auto& bk = r.lines.emplace_back(BlockFontSpecial::NORMAL, std::string{v.first}, std::string{}, v.second.v);
         if (bk.fname.ends_with(".ttf") || bk.fname.ends_with((".otf"))) {
             bk.fname.resize(bk.fname.length() - 4);
         }
         bk.sortKey = lat::toUpper(bk.fname);
     }
-    std::sort(r.begin() + iNonSort, r.end(),
+    std::sort(r.lines.begin() + iNonSort, r.lines.end(),
             [](const BlockFontLine& x, const BlockFontLine& y) {
                 return x.sortKey < y.sortKey;
             });
