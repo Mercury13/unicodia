@@ -9,6 +9,7 @@ RETURN = temporarily deleted, then returned
 - 131BC, 131BD, 131BE, 131BF, 131C0 / 131C1, 131C2, 1313, 1314 = counting flowers (9)
     **(warning, in BC_2 fixed curvature and aligned stalk)**
 - 131E0, 131E1, 131E2, 13EA5 = grains (4)
+- 131E8, 13EB1, 13EB2 = baskets (3)
 - 1321E, 1321F, 13F44, 13F45 = campaign for wells (4)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
@@ -529,6 +530,7 @@ Subtotal: 366
 - 13159: hoopoe w/feathers is a different CP
 - 13172: ex, moved + symmetrized loaf
 - 131AA: after A9, reversed
+- 131EB: made somehow
 - 13201: just assembled somehow
 - 13202: same but door bolt is home-made
 - 13215: after 14
@@ -736,7 +738,7 @@ Subtotal: 366
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 215
+Subtotal: 216
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -744,4 +746,4 @@ Subtotal: 215
 
 Subtotal: 2
 
-Total: 877
+Total: 878
