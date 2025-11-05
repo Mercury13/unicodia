@@ -112,6 +112,7 @@ Subtotal: 181
 - 130F8: head swap F7-F8
 - 130FB: removed individual fingers
 - 130FC: after FB, squeezed monkey just a bit
+- 13108: Werning’s review, after 1FE=F1
 - 1310A: extended + thin solid stick
 - 13113: took extended F20 and changed to b/w F20
 - 13121: was self-intersecting, made two halves
@@ -148,7 +149,7 @@ Subtotal: 181
 - 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 115
+Subtotal: 116
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -746,4 +747,4 @@ Subtotal: 216
 
 Subtotal: 2
 
-Total: 881
+Total: 882
