@@ -4,6 +4,8 @@ RETURN = temporarily deleted, then returned
 
 # Will never extend
 - 130C9, 130CA, 130CB, 130CC, 130CD / 130CE, 130CF, 130D1, 130D2 = counting circles (9)
+- 13064, 1381E, 1381F, 13820 = Min (4)
+  - made dwarfier, enlarged pencil, removed sun, changed hat, main is 1F now
 - 130AD, 130AE, 130AF, 130B0, 130B1 / 130B2, 130B3, 130B4, 130B5, 130B6 / 130B7 = counting fingers (11)
 - 13139, 1313A, 1313B, 1313C, 1313D = flesh and shit (5)
 - 131BC, 131BD, 131BE, 131BF, 131C0 / 131C1, 131C2, 1313, 1314 = counting flowers (9)
@@ -29,7 +31,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 181
+Subtotal: 186
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -87,7 +89,6 @@ Subtotal: 181
 - 1305B: added hand
 - 1305E: 5B reversed
 - 13063: craggy knees
-- 13064: enlarged his pencil and beard, simplified plume, removed sun
 - 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
 - 13068: now looks somewhat like Heh from Wikipedia
@@ -149,7 +150,7 @@ Subtotal: 181
 - 1321B: in harmony with other pools
 - 1324F: franken from several Nu22’s
 
-Subtotal: 116
+Subtotal: 115
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -270,8 +271,6 @@ Subtotal: 116
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
-- 1381F: based on 20
-- 13820: reduced height, simplified hat, more curvy beard
 - 13839: Ptah, straight beard
 - 1383A: same
 - 1383B: same
@@ -351,9 +350,9 @@ Subtotal: 116
 - 13C1C: white neck
 - 13C1F: wrong direction
 - 13C20: same
-- 13C28: white neck: TWO HUNDRED
+- 13C28: white neck
 - 13C2B: white curvier neck
-- 13C51: egret has two feathers
+- 13C51: egret has two feathers: TWO HUNDRED
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
@@ -451,9 +450,9 @@ Subtotal: 116
 - 14138: no sun
 - 1413A: no sun
 - 1413B: no sun
-- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
-- 14140: no double lines
+- 14140: no double lines: THREE HUNDRED
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
@@ -519,7 +518,7 @@ Subtotal: 116
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 366
+Subtotal: 364
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -612,7 +611,6 @@ Subtotal: 366
 - 137F0: after EF, man with palm branches for million
 - 13817: after initial 16
 - 13819: after 17
-- 1381E: franken from 13064 and extension
 - 1383C: Imhotep is close to Ptah
 - 1383F: drew that Ptah
 - 13853: 52 + horns from ram
@@ -739,7 +737,7 @@ Subtotal: 366
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 216
+Subtotal: 215
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
