@@ -29,7 +29,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 179
+Subtotal: 181
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -746,4 +746,4 @@ Subtotal: 216
 
 Subtotal: 2
 
-Total: 878
+Total: 881
