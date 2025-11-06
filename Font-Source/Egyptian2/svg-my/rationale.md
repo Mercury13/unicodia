@@ -93,7 +93,7 @@ Subtotal: 189
 - 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
 - 13068: now looks somewhat like Heh from Wikipedia
-- 13070: Ptah beard god→king
+- 13070: my standing Ptah has longer beard than his (Sep’25) + stick same height as Ptah
 - 13072: greatly simplified Bes, half + reflection
 - 1308A: more cursive image
 - 13091: too thick outline, decided to make it variable-width
@@ -275,12 +275,10 @@ Subtotal: 118
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
-- 13839: Ptah, straight beard
-- 1383A: same
-- 1383B: same
-- 1383D: same + bigger djed-ankh
-- 1383E: same
-- 13840: same + bigger djed-ankh
+- 1383A: no reason for Seth stick to be taller than Ptah
+- 1383D: Ptah, see 1383E + bigger djed-ankh
+- 1383E: my standing Ptah has longer beard than his (Sep’25) + stick same height as Ptah
+- 13840: Ptah, straight beard + bigger djed-ankh
 - 1384E: turn knife around
 - 1385F: 5E + snakes
 - 1387A: strange image
@@ -356,9 +354,9 @@ Subtotal: 118
 - 13C20: same
 - 13C28: white neck
 - 13C2B: white curvier neck
-- 13C51: egret has two feathers: TWO HUNDRED
+- 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
-- 13C53: same
+- 13C53: same: TWO HUNDRED
 - 13C54: same
 - 13C55: same
 - 13C57: same
@@ -456,9 +454,9 @@ Subtotal: 118
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun: THREE HUNDRED
+- 1413B: no sun
 - 1413E: other feather, no double lines, other handle
-- 1413F: per 3E
+- 1413F: per 3E: THREE HUNDRED
 - 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
@@ -525,7 +523,7 @@ Subtotal: 118
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 367
+Subtotal: 365
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -621,7 +619,7 @@ Subtotal: 367
 - 137F0: after EF, man with palm branches for million
 - 13817: after initial 16
 - 13819: after 17
-- 1383C: Imhotep is close to Ptah
+- 1383C: Imhotep is close to Ptah, copied beard from newer (Sep’25) Ptah
 - 1383F: drew that Ptah
 - 13853: 52 + horns from ram
 - 13859: after 58
@@ -747,7 +745,7 @@ Subtotal: 367
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 217
+Subtotal: 218
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
