@@ -93,7 +93,7 @@ Subtotal: 189
 - 1306E: added ankh angling forward (actually removed Seth staff from C17B)
 - 13067: ankh angling forward
 - 13068: now looks somewhat like Heh from Wikipedia
-- 13070: my standing Ptah has longer beard than his (Sep’25) + stick same height as Ptah
+- 13070: Ptah, Sep’25 version + lengthened beard + stick same height as he
 - 13072: greatly simplified Bes, half + reflection
 - 1308A: more cursive image
 - 13091: too thick outline, decided to make it variable-width
@@ -275,10 +275,10 @@ Subtotal: 118
 - 13800: mismatch, removed beard, fixed very sharp inner angles
 - 13816: sit on block
 - 1381D: stick + vertical knife, based on 1B
-- 1383A: no reason for Seth stick to be taller than Ptah
-- 1383D: Ptah, see 1383E + bigger djed-ankh
-- 1383E: my standing Ptah has longer beard than his (Sep’25) + stick same height as Ptah
-- 13840: Ptah, straight beard + bigger djed-ankh
+- 1383A: Ptah, Sep’25 version + stick same height as he
+- 1383D: Ptah, Sep’25 version + lengthened beard + stick same height as he
+- 1383E: Ptah, Sep’25 version + lengthened beard + stick same height as he
+- 13840: Ptah, Sep’25 version + just lengthened beard
 - 1384E: turn knife around
 - 1385F: 5E + snakes
 - 1387A: strange image
@@ -609,6 +609,7 @@ Subtotal: 365
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
+- 136A2: franken from two extended A310’s
 - 1371B: after 46
 - 13747: after 46
 - 13776: after 75
@@ -620,7 +621,7 @@ Subtotal: 365
 - 13817: after initial 16
 - 13819: after 17
 - 1383C: Imhotep is close to Ptah, copied beard from newer (Sep’25) Ptah
-- 1383F: drew that Ptah
+- 1383F: combo of old 3F (IDR how made) and new Sep’25 Ptah + longer beard
 - 13853: 52 + horns from ram
 - 13859: after 58
 - 13865: after 69
@@ -745,7 +746,7 @@ Subtotal: 365
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 218
+Subtotal: 219
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -753,4 +754,4 @@ Subtotal: 218
 
 Subtotal: 2
 
-Total: 892
+Total: 893
