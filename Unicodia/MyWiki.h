@@ -245,7 +245,7 @@ namespace mywiki {
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
     void fixEgypI(QString& text, const EgypChecker& checker);
     void appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker);
-    void appendEgypParsed(QString& text, std::u8string_view x, const EgypChecker& checker);
+    void appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const EgypChecker> checker);
     template <class Str>
     void appendCopyable(Str& text, unsigned x, std::string_view clazz="copy");
     /// @warning  Both toCopy and toView are raw HTML

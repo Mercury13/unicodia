@@ -2294,14 +2294,16 @@ void mywiki::appendEgypCopyable(QString& text, std::u8string_view x, const EgypC
 }
 
 
-void mywiki::appendEgypParsed(QString& text, std::u8string_view x, const EgypChecker& checker)
+void mywiki::appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const EgypChecker> checker)
 {
     QString rawText, parsedText;
     egyp::extractIndexes(str::toSv(x),
         [&](std::string_view text, std::string_view index) {
             // Text
             auto qtext = str::toQ(text);
-            fixEgypI(qtext, checker);
+            if (checker) {
+                fixEgypI(qtext, *checker);
+            }
             rawText += qtext;
             parsedText += qtext.toHtmlEscaped();
             // Index
@@ -2824,12 +2826,12 @@ namespace {
                     case uc::TextRole::EGYP_EWP:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Short");
-                        mywiki::appendEgypParsed(text, s, checker);
+                        mywiki::appendEgypParsed(text, s, nullptr);
                         break;
                     case uc::TextRole::EGYP_UC:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Uni");
-                        mywiki::appendEgypParsed(text, s, checker);
+                        mywiki::appendEgypParsed(text, s, &checker);
                         break;
                     case uc::TextRole::EGYP_MEANING:
                         sp.sep();
