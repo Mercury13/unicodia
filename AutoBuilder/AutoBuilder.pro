@@ -13,6 +13,7 @@ DEFINES += AT_RANGE_CHECK
 
 SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
+        ../Libs/SelfMade/Strings/u_EgypIndex.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         decap/decap.cpp \
         decap/dic.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Mojibake/mojibake.h \
+    ../Libs/SelfMade/Strings/u_EgypIndex.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_TypedFlags.h \

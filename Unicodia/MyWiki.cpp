@@ -2307,7 +2307,7 @@ void mywiki::appendEgypParsed(QString& text, std::u8string_view x, const EgypChe
             // Index
             if (!index.empty()) {
                 str::append(rawText, index);
-                parsedText += "<a href='c:0000' class='popup'>";
+                parsedText += "<a href='pc:0000' class='popup'>";
                 str::append(parsedText, index);
                 parsedText += "</a>";
             }

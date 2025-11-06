@@ -7,6 +7,7 @@
 
 // Libs
 #include "u_Strings.h"
+#include "u_EgypIndex.h"
 
 // Project-local
 #include "loader.h"
@@ -20,91 +21,6 @@
 using namespace std::string_view_literals;
 
 namespace {
-
-    void loadDutchBase(egyp::Base& r)
-    {
-        std::unordered_map<std::string, char32_t> mNameToUnicode;
-
-        pugi::xml_document doc;
-        { doc.load_file(EGYP_UNICODE);
-            auto hRoot = doc.root().child("signlist");
-
-            for (auto h : hRoot.children("sign")) {
-                auto id = h.attribute("id").as_string();
-                auto code = h.attribute("code").as_int();
-                mNameToUnicode[id] = code;
-            }
-        }
-
-        { doc.load_file(EGYP_DESCRIPTION);
-            auto hRoot = doc.root().child("signlist");
-            std::string desc;
-
-            for (auto h : hRoot.children("sign")) {
-                auto id = h.attribute("id").as_string();
-                if (auto it = mNameToUnicode.find(id); it != mNameToUnicode.end()) {
-                    if (auto hDesc = h.child("descr")) {
-                        desc.clear();
-                        for (auto part : hDesc.children()) {
-                            switch (part.type()) {
-                            case pugi::node_cdata:
-                            case pugi::node_pcdata:
-                                desc += part.value();
-                                break;
-                            case pugi::node_element:
-                                if (part.name() == "signref"sv) {
-                                    auto name = part.attribute("name").as_string();
-                                    desc += name;
-                                    if (auto it2 = mNameToUnicode.find(name); it2 != mNameToUnicode.end()) {
-                                        char buf[20];
-                                        snprintf(buf, std::size(buf), " (U+%04X)", int(it2->second));
-                                        desc += buf;
-                                    }
-                                } else if (part.name() == "al"sv) {
-                                    for (auto part2 : part.children()) {
-                                        switch (part2.type()) {
-                                        case pugi::node_cdata:
-                                        case pugi::node_pcdata:
-                                            desc += part2.value();
-                                            break;
-                                        default:
-                                            throw std::logic_error("Unknown child in Egyptian AL");
-                                        }
-                                    }
-                                } else {
-                                    throw std::logic_error(
-                                        str::cat("Unknown tag <", part.name(), "> in Egyptian base"));
-                                }
-                                break;
-                            default:
-                                throw std::logic_error("Unknown child in Egyptian description");
-                            }
-                        }
-
-                        str::replace(desc, '\r', ' ');
-                        str::replace(desc, '\n', ' ');
-                        str::replace(desc, "  ", " ");
-                        desc = str::trim(desc);
-                        r[it->second].descEwp = desc;
-                    }
-                } else {
-                    throw std::logic_error(str::cat("Cannot find sign <", id, ">"));
-                }
-            }
-        }
-    }
-
-    std::u32string parseCpSequence(std::string_view x)
-    {
-        std::u32string s;
-        auto vals = str::splitSv(x, ' ', true);
-        s.reserve(vals.size());
-        for (auto& v : vals) {
-            auto cp = fromHex(v);
-            s += char32_t(cp);
-        }
-        return s;
-    }
 
     std::string simplifyIndex(std::string_view x)
     {
@@ -153,6 +69,115 @@ namespace {
         return r;
     }
 
+    void loadDutchBase(egyp::Base& r)
+    {
+        std::unordered_map<std::string, char32_t> mNameToUnicode;
+
+        pugi::xml_document doc;
+        { doc.load_file(EGYP_UNICODE);
+            auto hRoot = doc.root().child("signlist");
+
+            for (auto h : hRoot.children("sign")) {
+                auto id = h.attribute("id").as_string();
+                auto code = h.attribute("code").as_int();
+                mNameToUnicode[id] = code;
+            }
+        }
+
+        { doc.load_file(EGYP_DESCRIPTION);
+            auto hRoot = doc.root().child("signlist");
+            std::string desc;
+
+            for (auto h : hRoot.children("sign")) {
+                auto id = h.attribute("id").as_string();
+                if (auto it = mNameToUnicode.find(id); it != mNameToUnicode.end()) {
+                    if (auto hDesc = h.child("descr")) {
+                        desc.clear();
+                        for (auto part : hDesc.children()) {
+                            switch (part.type()) {
+                            case pugi::node_cdata:
+                            case pugi::node_pcdata:
+                                desc += part.value();
+                                break;
+                            case pugi::node_element:
+                                if (part.name() == "signref"sv) {
+                                    std::string_view name = part.attribute("name").as_string();
+                                    auto name1 = simplifyIndex(name);
+                                    desc += name1;
+                                } else if (part.name() == "al"sv) {
+                                    for (auto part2 : part.children()) {
+                                        switch (part2.type()) {
+                                        case pugi::node_cdata:
+                                        case pugi::node_pcdata:
+                                            desc += part2.value();
+                                            break;
+                                        default:
+                                            throw std::logic_error("Unknown child in Egyptian AL");
+                                        }
+                                    }
+                                } else {
+                                    throw std::logic_error(
+                                        str::cat("Unknown tag <", part.name(), "> in Egyptian base"));
+                                }
+                                break;
+                            default:
+                                throw std::logic_error("Unknown child in Egyptian description");
+                            }
+                        }
+
+                        str::replace(desc, '\r', ' ');
+                        str::replace(desc, '\n', ' ');
+                        str::replace(desc, "  ", " ");
+                        desc = str::trim(desc);
+                        r[it->second].descEwp = desc;
+                    }
+                } else {
+                    throw std::logic_error(str::cat("Cannot find sign <", id, ">"));
+                }
+            }
+        }
+    }
+
+    std::u32string parseCpSequence(std::string_view x)
+    {
+        std::u32string s;
+        auto vals = str::splitSv(x, ' ', true);
+        s.reserve(vals.size());
+        for (auto& v : vals) {
+            auto cp = fromHex(v);
+            s += char32_t(cp);
+        }
+        return s;
+    }
+
+    void checkEquality(std::string_view s, std::string_view r, int shortened)
+    {
+        if (r.length() + shortened != s.length()) {
+            throw std::logic_error(str::cat(
+                    "Length inequal: s=<", s, ">, r=<", r, ">"));
+        }
+        int plus = 0;
+        for (size_t i = 0; i < r.length(); ++i) {
+            auto cr = r[i];
+            while (true) {
+                auto si = i + plus;
+                if (si > s.length())
+                    throw std::logic_error("Exceeded s.length");
+
+                auto cs = s[si];
+                // Case OK
+                if (toupper(cr) == toupper(cs)) {
+                    break;
+                }
+                if (isdigit(cr) && (cs == '0')) {
+                    ++plus;
+                } else {
+                    throw std::logic_error("Case inequal!");
+                }
+            }
+        }
+    }
+
     void fixupUniDesc(std::string& s, char32_t cp)
     {
         str::replace(s, "canal (M36)"sv, "canal (N36)"sv);
@@ -165,6 +190,24 @@ namespace {
             break;
         default: ;
         }
+        std::string r;
+        r.reserve(s.length());
+        int shortened = 0;
+        egyp::extractIndexes(s, [&r, &shortened](std::string_view text, std::string_view index) {
+            r += text;
+            if (!index.empty()) {
+                if (!lat::isIndex(index))
+                    throw std::logic_error("Somehow not index!");
+                auto simp = simplifyIndex(index);
+                r += simp;
+                int delta = int(index.length()) - int(simp.length());
+                if (delta < 0)
+                    throw std::logic_error("Somehow delta < 0!");
+                shortened += delta;
+            }
+        });
+        checkEquality(s, r, shortened);
+        s = std::move(r);
     }
 
     void loadUnikemet(egyp::Base& r)
