@@ -34,6 +34,7 @@ SOURCES += \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/Qt/RememberWindow.cpp \
+    ../Libs/SelfMade/Strings/u_EgypIndex.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     ../Libs/SelfMade/i_DarkMode.cpp \
     ../Libs/SelfMade/u_Version.cpp \
@@ -100,6 +101,7 @@ HEADERS += \
     ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/Qt/QtMultiRadio.h \
     ../Libs/SelfMade/Qt/RememberWindow.h \
+    ../Libs/SelfMade/Strings/u_EgypIndex.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
