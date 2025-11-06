@@ -137,6 +137,7 @@ WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
 # Special width-limited
 ARM = -1000
+SUN_HILL = -1200
 SMALL_DONKEY = -1220
 TAILLESS_DONKEY = -1240
 MED_DONKEY = -1300  # donkeys with folded/outstretched legs are somehow equal
@@ -218,10 +219,10 @@ GLYPH_SIZES = {
     0x131F4: MEDWIDE,  # uraeus
     0x131F7: MEDIUM, 0x131F8: MEDIUM,  # moon
     0x13205: TEENY,
-    0x1320E: SMALL,
-    0x13211: MEDIUM,
-    0x13214: MEDWIDE,  # some metal
-    0x13215: MEDIUM,  # less metal
+    0x1320D: SUN_HILL,  # sun behind hill
+    0x1320E: SMALL,  # small slope
+    0x13211: MEDIUM,  # clay
+    0x13214: MEDWIDE, 0x13215: MEDIUM,  # some metal
     0x1321E: MEDIUM, 0x1321F: MEDIUM,  # wells
     # Nu/Ul: coats of arms
     0x13230: WIDE,  # Nl16: hanging fishtail

@@ -148,9 +148,12 @@ Subtotal: 186
 - 131FF: same
 - 13214: too thick
 - 1321B: in harmony with other pools
+- 13204: double line
+- 13206: double line
+- 1320D: thick line
 - 1324F: franken from several Nu22’s
 
-Subtotal: 115
+Subtotal: 118
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -745,4 +748,4 @@ Subtotal: 215
 
 Subtotal: 2
 
-Total: 882
+Total: 885
