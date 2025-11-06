@@ -12,6 +12,7 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 #include "u_Cmap.h"
+#include "u_EgypIndex.h"
 
 // Unicode
 #include "UcData.h"
@@ -2259,25 +2260,61 @@ namespace {
 }
 
 
-void mywiki::appendCopyable(QString& text, const QString& x, std::string_view clazz)
+void mywiki::appendCopyTag(QString& text, const QString& x, std::string_view clazz)
 {
     str::append(text, "<a href='c:"sv);
         text += x;
         str::append(text, "' class='"sv);
         str::append(text, clazz);
         str::append(text, "' >"sv);
+}
+
+
+void mywiki::appendCopyable(QString& text, const QString& x, std::string_view clazz)
+{
+    appendCopyTag(text, x, clazz);
     text += x.toHtmlEscaped();
     str::append(text, "</a>"sv);
+}
+
+
+void mywiki::fixEgypI(QString& text, const EgypChecker& checker)
+{
+    if (!checker.hasEgypI()) {
+        text.replace(QChar(cp::LATN_SM_GLOTTAL_I), u'ĭ');
+    }
 }
 
 
 void mywiki::appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker)
 {
     auto y = str::toQ(x);
-    if (!checker.hasEgypI()) {
-        y.replace(QChar(cp::LATN_SM_GLOTTAL_I), u'ĭ');
-    }
+    fixEgypI(y, checker);
     appendCopyable(text, y, "altname"sv);
+}
+
+
+void mywiki::appendEgypParsed(QString& text, std::u8string_view x, const EgypChecker& checker)
+{
+    QString rawText, parsedText;
+    egyp::extractIndexes(str::toSv(x),
+        [&](std::string_view text, std::string_view index) {
+            // Text
+            auto qtext = str::toQ(text);
+            fixEgypI(qtext, checker);
+            rawText += qtext;
+            parsedText += qtext.toHtmlEscaped();
+            // Index
+            if (!index.empty()) {
+                str::append(rawText, index);
+                parsedText += "<a href='c:0000' class='popup'>";
+                str::append(parsedText, index);
+                parsedText += "</a>";
+            }
+        });
+    appendCopyTag(text, rawText, "altname");
+    text += parsedText;
+    text += "</a>";
 }
 
 
@@ -2787,12 +2824,12 @@ namespace {
                     case uc::TextRole::EGYP_EWP:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Short");
-                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                        mywiki::appendEgypParsed(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_UC:
                         sp.sep();
                         appendNonBullet(text, "Prop.Egyp2.Uni");
-                        mywiki::appendEgypCopyable(text, s, checker);
+                        mywiki::appendEgypParsed(text, s, checker);
                         break;
                     case uc::TextRole::EGYP_MEANING:
                         sp.sep();
