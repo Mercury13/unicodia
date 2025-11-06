@@ -12,6 +12,7 @@ RETURN = temporarily deleted, then returned
     **(warning, in BC_2 fixed curvature and aligned stalk)**
 - 131E0, 131E1, 131E2, 13EA5 = grains (4)
 - 131E8, 13EB1, 13EB2 = baskets (3)
+- 13212, 13213, 13F1F = campaign for sand (3)
 - 1321E, 1321F, 13F44, 13F45 = campaign for wells (4)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
@@ -31,7 +32,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 186
+Subtotal: 189
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -375,6 +376,7 @@ Subtotal: 118
 - 13CB6: added uraeus
 - 13CB7: same
 - 13CF5: after F6 (had a bit different paws)
+- 13D24: softened feather, took my own land N6
 - 13D28: drew claw from scratch
 - 13D6F: removed sun, curvier beard
 - 13D8F: removed sun
@@ -454,8 +456,8 @@ Subtotal: 118
 - 1413A: no sun
 - 1413B: no sun
 - 1413E: other feather, no double lines, other handle
-- 1413F: per 3E
-- 14140: no double lines: THREE HUNDRED
+- 1413F: per 3E: THREE HUNDRED
+- 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
 - 14176: back after 77
@@ -521,7 +523,7 @@ Subtotal: 118
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 364
+Subtotal: 365
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -548,8 +550,11 @@ Subtotal: 364
 - 1350D: campaign for standing with props
 - 1350E: campaign for standing with props
 - 13510: after 13006
+- 13511: 13510 + legs from 1D + flipped hands
 - 13512: 13510 + UniKemet A4c
 - 13513: 13510 + UniKemet A426
+- 13514: 13513 + 2nd arm from 13466
+- 13516: 13514 + 134AA
 - 13526: after 25
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
@@ -740,7 +745,7 @@ Subtotal: 364
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 215
+Subtotal: 217
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -748,4 +753,4 @@ Subtotal: 215
 
 Subtotal: 2
 
-Total: 885
+Total: 892

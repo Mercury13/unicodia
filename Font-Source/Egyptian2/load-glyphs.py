@@ -10,7 +10,6 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
-    0x13212: "N33",    # missing for some reason, need to implement
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13F29: "N31h",   # flowers in circular road
@@ -475,7 +474,7 @@ def fixSize(cp, glyph, svgHeight):
     [x1,y1,x2,y2] = glyph.boundingBox()
     actualWidth = x2 - x1
     actualHeight = y2 - y1
-    if (actualWidth < 300) and (actualHeight < 300):
+    if (actualWidth < 220) and (actualHeight < 220):
         log.write("{} is really small\n".format(
                 glyph.glyphname))
     if actualWidth > myWidth:
