@@ -375,6 +375,7 @@ Subtotal: 118
 - 13CB5: uraeus after CB4
 - 13CB6: added uraeus
 - 13CB7: same
+- 13CC9: removed sun
 - 13CF5: after F6 (had a bit different paws)
 - 13D24: softened feather, took my own land N6
 - 13D28: drew claw from scratch
@@ -383,6 +384,7 @@ Subtotal: 118
 - 13DC3: mirror
 - 13DD7: existing is DD8 now
 - 13E55: straight stem
+- 13E5C: after 131BC
 - 13E5D: solid line
 - 13E5F: after 5D, craggy
 - 13E64: too thick
@@ -454,9 +456,9 @@ Subtotal: 118
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun
+- 1413B: no sun: THREE HUNDRED
 - 1413E: other feather, no double lines, other handle
-- 1413F: per 3E: THREE HUNDRED
+- 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
@@ -523,7 +525,7 @@ Subtotal: 118
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 365
+Subtotal: 367
 
 # Duped with NewGardiner
 - 13007: basic, after 08
