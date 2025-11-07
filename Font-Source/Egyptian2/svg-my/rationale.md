@@ -592,6 +592,8 @@ Subtotal: 365
 - 13607: campaign for horses
 - 1360A: campaign for horses, big franken
 - 13626: after 25
+- 13633: after 13014
+- 1363C: after 13014
 - 13639: just drew a line
 - 13652: seat-covered #2
 - 13654: seat-covered #2
@@ -748,7 +750,7 @@ Subtotal: 365
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 219
+Subtotal: 221
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -756,4 +758,4 @@ Subtotal: 219
 
 Subtotal: 2
 
-Total: 895
+Total: 897
