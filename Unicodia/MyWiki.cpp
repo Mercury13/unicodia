@@ -2294,11 +2294,34 @@ void mywiki::appendEgypCopyable(QString& text, std::u8string_view x, const EgypC
 }
 
 
+mywiki::PCMEgyp mywiki::getEgypDictionary()
+{
+    static PCMEgyp cache;
+    if (!cache) {
+        auto tmp = std::make_unique<MEgyp>();
+        for (auto& block : uc::allBlocks()) {
+            if (block.ecScript == uc::EcScript::Egyp) { // Egyptian script, otherwise not worth traversing
+                for (auto c = block.startingCp; c <= block.endingCp; ++c) {
+                    if (auto pCp = uc::cpsByCode[c]) { // have CP
+                        if (std::u8string_view index = pCp->getText(uc::TextRole::EGYP_INDEX);
+                                !index.empty()) { // have Egyptian index
+                            tmp->m[str::toSv(index)] = c;
+                        }
+                    }
+                }
+            }
+        }
+        cache.reset(tmp.release());
+    }
+    return cache;
+}
+
+
 void mywiki::appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const EgypChecker> checker)
 {
     QString rawText, parsedText;
     egyp::extractIndexes(str::toSv(x),
-        [&](std::string_view text, std::string_view index) {
+        [&, dic=PCMEgyp{}](std::string_view text, std::string_view index) mutable {
             // Text
             auto qtext = str::toQ(text);
             if (checker) {
@@ -2311,8 +2334,17 @@ void mywiki::appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const
                 str::append(rawText, index);
                 // Check for target
                 char32_t target = 0;
+                // Condition 1: no signs of index outside Unicodia
                 if (!text.ends_with("HG ") && !text.ends_with("HGx ")) {
-                    target = 1;
+                    // Condition 2: found in Egyptian
+                    if (!dic) {
+                        // save a few CPU cycles :)
+                        dic = getEgypDictionary();
+                    }
+                    // AutoBuilder has already normalized index
+                    if (auto it = dic->m.find(index); it != dic->m.end()) {
+                        target = it->second;
+                    }
                 }
                 // Have target?
                 if (target != 0) { // HAVE TARGET

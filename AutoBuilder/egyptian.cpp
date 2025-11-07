@@ -150,6 +150,9 @@ namespace {
         return s;
     }
 
+    ///
+    /// This is actually a unit test that works on actual live strings
+    ///
     void checkEquality(std::string_view s, std::string_view r, int shortened)
     {
         if (r.length() + shortened != s.length()) {

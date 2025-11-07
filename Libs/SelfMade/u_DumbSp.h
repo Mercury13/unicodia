@@ -12,15 +12,16 @@ namespace dumb {
     class SpTarget
     {
     protected:
-        std::atomic<intptr_t> fRefCount = 0;
+        /// Mutable: should properly const
+        mutable std::atomic<intptr_t> fRefCount = 0;
 
-        friend ptrdiff_t addRef(SpTarget& x) noexcept;
-        friend ptrdiff_t subRef(SpTarget& x) noexcept;
+        friend ptrdiff_t addRef(const SpTarget& x) noexcept;
+        friend ptrdiff_t subRef(const SpTarget& x) noexcept;
         friend ptrdiff_t refCount(const SpTarget& x) noexcept;
     };
 
-    inline ptrdiff_t addRef(SpTarget& x) noexcept { return ++x.fRefCount; }
-    inline ptrdiff_t subRef(SpTarget& x) noexcept { return --x.fRefCount; }
+    inline ptrdiff_t addRef(const SpTarget& x) noexcept { return ++x.fRefCount; }
+    inline ptrdiff_t subRef(const SpTarget& x) noexcept { return --x.fRefCount; }
     inline ptrdiff_t refCount(const SpTarget& x) noexcept { return x.fRefCount; }
 
     ///

@@ -11,6 +11,7 @@
 // Common libs
 #include "u_TinyOpt.h"
 #include "FontDef.h"
+#include "u_DumbSp.h"
 
 // Links
 #include "WikiLink.h"
@@ -198,6 +199,14 @@ namespace mywiki {
         static const HtmlVariant DFLT, POPUP;
     };
 
+    using RawMEgyp = std::unordered_map<std::string_view, char32_t>;
+    class MEgyp : public dumb::SpTarget
+    {
+    public:
+        RawMEgyp m;
+    };
+    using PCMEgyp = dumb::Sp<const MEgyp>;
+
     std::unique_ptr<Link> makeCpLink(const uc::Cp& cp);
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view link);
@@ -246,6 +255,7 @@ namespace mywiki {
     void fixEgypI(QString& text, const EgypChecker& checker);
     void appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker);
     void appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const EgypChecker> checker);
+    PCMEgyp getEgypDictionary();
     template <class Str>
     void appendCopyable(Str& text, unsigned x, std::string_view clazz="copy");
     /// @warning  Both toCopy and toView are raw HTML
