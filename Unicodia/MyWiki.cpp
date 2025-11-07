@@ -2302,19 +2302,25 @@ namespace {
     std::string_view getEgypAbbrev(char32_t x, std::span<char> tmp)
     {
         switch (x) {
-        case 0x13430: return "<b>::</b>";
-        case 0x13431: return "<b>*</b>";
-        case 0x13432: return "TopSt";
-        case 0x13433: return "BotSt";
-        case 0x1343A: return "Top";
+        case 0x13431: return "[*]";
+        case 0x13432: return "[TopSt]";
+        case 0x13433: return "[BotSt]";
+        case 0x13437: return "[(";
+        case 0x13438: return ")]";
+        case 0x13439: return "[Mid]";
+        case 0x1343A: return "[Top]";
         }
 
         if (auto pCp = uc::cpsByCode[x]) {
             std::string_view r {};
             pCp->traverseTextsT(uc::AutoName::NO,
-                [&r](uc::TextRole role, std::u8string_view q) {
+                [&r,&tmp](uc::TextRole role, std::u8string_view q) {
                     switch(role) {
                     case uc::TextRole::ABBREV:
+                        snprintf(tmp.data(), tmp.size(), "[%.*s]",
+                                 int(q.size()), reinterpret_cast<const char*>(q.data()));
+                        r = tmp.data();
+                        return uc::Action::STOP;
                     case uc::TextRole::EGYP_INDEX:
                         r = str::toSv(q);
                         return uc::Action::STOP;
@@ -2326,7 +2332,7 @@ namespace {
                 return r;
         }
         // Fallback: write code
-        snprintf(tmp.data(), tmp.size(), "%04X", int(x));
+        snprintf(tmp.data(), tmp.size(), "[%04X]", int(x));
         return tmp.data();
     }
 
