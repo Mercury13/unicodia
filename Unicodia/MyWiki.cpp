@@ -2318,11 +2318,13 @@ namespace {
                 [&r,&tmp](uc::TextRole role, std::u8string_view q) {
                     switch(role) {
                     case uc::TextRole::ABBREV:
+                        // Parenthesize abbreviation
                         snprintf(tmp.data(), tmp.size(), "[%.*s]",
                                  int(q.size()), reinterpret_cast<const char*>(q.data()));
                         r = tmp.data();
                         return uc::Action::STOP;
                     case uc::TextRole::EGYP_INDEX:
+                        // Write index as is
                         r = str::toSv(q);
                         return uc::Action::STOP;
                     default:
