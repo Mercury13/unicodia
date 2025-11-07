@@ -2309,6 +2309,7 @@ namespace {
         case 0x13438: return ")]";
         case 0x13439: return "[Mid]";
         case 0x1343A: return "[Top]";
+        case 0x1343B: return "[Bot]";
         }
 
         if (auto pCp = uc::cpsByCode[x]) {
