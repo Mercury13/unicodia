@@ -2309,9 +2309,23 @@ void mywiki::appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const
             // Index
             if (!index.empty()) {
                 str::append(rawText, index);
-                parsedText += "<a href='pc:0000' class='popup'>";
-                str::append(parsedText, index);
-                parsedText += "</a>";
+                // Check for target
+                char32_t target = 0;
+                if (!text.ends_with("HG ") && !text.ends_with("HGx ")) {
+                    target = 1;
+                }
+                // Have target?
+                if (target != 0) { // HAVE TARGET
+                    char buf[48];
+                    snprintf(buf, std::size(buf),
+                             "<a href='pc:%04X' class='popup'>",
+                             int(target));
+                    parsedText += buf;
+                    str::append(parsedText, index);
+                    parsedText += "</a>";
+                } else { // NO TARGET
+                    str::append(parsedText, index);
+                }
             }
         });
     appendCopyTag(text, rawText, "altname");
