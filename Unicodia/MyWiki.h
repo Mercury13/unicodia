@@ -255,6 +255,8 @@ namespace mywiki {
     void fixEgypI(QString& text, const EgypChecker& checker);
     void appendEgypCopyable(QString& text, std::u8string_view x, const EgypChecker& checker);
     void appendEgypParsed(QString& text, std::u8string_view x, TinyOpt<const EgypChecker> checker);
+    void appendEgypEquiv(QString& text, std::u32string_view x);
+    void appendEgypEquiv(QString& text, std::u8string_view x);
     PCMEgyp getEgypDictionary();
     template <class Str>
     void appendCopyable(Str& text, unsigned x, std::string_view clazz="copy");

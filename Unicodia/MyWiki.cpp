@@ -2294,6 +2294,67 @@ void mywiki::appendEgypCopyable(QString& text, std::u8string_view x, const EgypC
 }
 
 
+namespace {
+
+    /// Finds a human-readable Egyptian abbreviation of a character
+    /// @warning  Can do smth in tmp
+    ///
+    std::string_view getEgypAbbrev(char32_t x, std::span<char> tmp)
+    {
+        switch (x) {
+        case 0x13430: return "<b>::</b>";
+        case 0x13431: return "<b>*</b>";
+        case 0x13432: return "TopSt";
+        case 0x13433: return "BotSt";
+        case 0x1343A: return "Top";
+        }
+
+        if (auto pCp = uc::cpsByCode[x]) {
+            std::string_view r {};
+            pCp->traverseTextsT(uc::AutoName::NO,
+                [&r](uc::TextRole role, std::u8string_view q) {
+                    switch(role) {
+                    case uc::TextRole::ABBREV:
+                    case uc::TextRole::EGYP_INDEX:
+                        r = str::toSv(q);
+                        return uc::Action::STOP;
+                    default:
+                        return uc::Action::CONTINUE;
+                    }
+                });
+            if (!r.empty())
+                return r;
+        }
+        // Fallback: write code
+        snprintf(tmp.data(), tmp.size(), "%04X", int(x));
+        return tmp.data();
+    }
+
+}   // anon namespace
+
+
+void mywiki::appendEgypEquiv(QString& text, std::u32string_view x)
+{
+    str::QSep sp1(text, " ");
+    for (auto& v : x) {
+        sp1.sep();
+        char tmp[20];
+        auto abbrev = getEgypAbbrev(v, tmp);
+        char buf[128];
+        snprintf(buf, std::size(buf),
+                 "<a href='pc:%X' class='popup'>%.*s</a>",
+                 unsigned(v), int(abbrev.length()), abbrev.data());
+        text += buf;
+    }
+}
+
+
+void mywiki::appendEgypEquiv(QString& text, std::u8string_view x)
+{
+    appendEgypEquiv(text, mojibake::toS<std::u32string>(x));
+}
+
+
 mywiki::PCMEgyp mywiki::getEgypDictionary()
 {
     static PCMEgyp cache;
@@ -2889,20 +2950,11 @@ namespace {
                         appendNonBullet(text, "Prop.Egyp2.Pron");
                         mywiki::appendEgypCopyable(text, s, checker);
                         break;
-                    case uc::TextRole::EGYP_EQUIV: {
-                            sp.sep();
-                            appendNonBullet(text, "Prop.Egyp2.Equiv");
-                            auto cps = mojibake::toS<std::u32string>(s);
-                            str::QSep sp1(text, " ");
-                            for (auto& v : cps) {
-                                sp1.sep();
-                                char buf[60];
-                                snprintf(buf, std::size(buf),
-                                         "<a href='pc:%X' class='popup'>%04X</a>",
-                                         unsigned(v), unsigned(v));
-                                text += buf;
-                            }
-                        } break;
+                    case uc::TextRole::EGYP_EQUIV:
+                        sp.sep();
+                        appendNonBullet(text, "Prop.Egyp2.Equiv");
+                        mywiki::appendEgypEquiv(text, s);
+                        break;
                     default: ;
                         break;
                     }
