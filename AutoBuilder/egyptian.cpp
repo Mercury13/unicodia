@@ -271,12 +271,60 @@ namespace {
             }
         }
     }
-}
+
+    bool contains(std::string_view haystack, std::string_view needle)
+    {
+        return (haystack.find(needle) != std::string_view::npos);
+    }
+
+    void modernizeHiero(
+            egyp::Entry& e,
+            std::string_view ancient, std::string_view modern)
+    {
+        if (contains(e.descEwp, ancient)
+                && contains(e.descUnicode, modern)) {
+            std::string r;
+            bool wasTouched = false;
+            egyp::extractIndexes(e.descEwp,
+                [&](std::string_view text, std::string_view index) {
+                    r += text;
+                    if (index == ancient) {
+                        r += modern;
+                        wasTouched = true;
+                    } else {
+                        r += index;
+                    }
+                });
+            if (wasTouched) {
+                e.descEwp = std::move(r);
+            }
+        }
+    }
+
+    void modernizeDutch(egyp::Entry& e)
+    {
+        if (e.descEwp.empty() || e.descUnicode.empty())
+            return;
+        // White crown
+        modernizeHiero(e, "S1", "S1a");
+    }
+
+    /// The Dutch base is old, pre-U16.
+    /// Some links are outright obsolete, so auto-update them
+    void modernizeDutchBase(egyp::Base& r)
+    {
+        for (auto& [_,v] : r) {
+            modernizeDutch(v);
+        }
+    }
+
+}   // anon namespace
 
 egyp::Base egyp::loadBase()
 {
     Base r;
     loadDutchBase(r);
     loadUnikemet(r);
+    modernizeDutchBase(r);
     return r;
 }
