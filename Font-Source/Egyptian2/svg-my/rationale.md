@@ -49,6 +49,7 @@ Subtotal: 189
 - 1300E: bad heel, don’t need beard, a bit craggy, too much detail, but managed to make the entire hiero from 02
 - 13012: a bit craggy, per 022ex, arms a bit more tucked
 - 13014: absent somehow in detailed form
+- 13015: same
 - 13019: lots of bugs (beard, hair…)
 - 1301B: beard god→king, enlarged triangular thing, aligned staff to feet
 - 1301C: craggy
@@ -155,7 +156,7 @@ Subtotal: 189
 - 1320D: thick line
 - 1324F: franken from several Nu22’s
 
-Subtotal: 119
+Subtotal: 121
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -755,4 +756,4 @@ Subtotal: 219
 
 Subtotal: 2
 
-Total: 894
+Total: 895
