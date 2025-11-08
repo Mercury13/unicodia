@@ -5212,9 +5212,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>One more remainder of Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in extremely small use.</p>
+      <p>One more remnant of the Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in minimal use.</p>
       <p />
-      <p>Script degraded almost to [[pt:abjad|consonant]]: consonant letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions important for accounting books. Many of them are badly explored and haven’t been yet encoded.</p>
+      <p>The script degraded almost to the point of being a [[pt:abjad|consonant]]: the same letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions important for accounting books. Many of them are badly explored and haven’t been encoded yet.</p>
       <p />
       <p>Headstrokes are attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
      </orig>
