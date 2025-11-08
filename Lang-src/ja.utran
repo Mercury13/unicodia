@@ -7160,14 +7160,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
+      <p>Comes from [[ps:Tibt|Tibetan]] and was initially written top-down. Later, horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</p>
+      <p>The inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to a null letter looking like ampersand. No [[pt:virama|virama]]. Instead, to get a syllable of three phonemes, first a vowel mark is added, then a final consonant.</p>
      </orig>
      <transl>
       <p>[[ps:Tibt|チベット語]] に由来し、当初は上から下に書かれていました。後に横書きが採用されたため、文字は 90° 回転したチベット語のように見えます。伝承によると、この文字は 1700 年頃に仏教宣教師によって発明され、シッキムの王子チャクドル・ナムゲル (統治 1700-1717) によって採用されました。最初に印刷されたテキストは 1845 年のマタイによる福音書です。</p>
       <p />
-      <p>固有の母音は {{t|a}} です。最初の母音は特別な形をしていません。代わりに、アンパサンドのように見えるヌル文字に付加されます。[[pt:virama|ヴィラマ]] はありません。代わりに、3 つの音素からなる音節を取得するために、最初の母音記号が追加され、次に最後の子音が追加されます。単語間にスペースはありません。</p>
+      <p>固有の母音は {{t|a}} です。最初の母音は特別な形をしていません。代わりに、アンパサンドのように見えるヌル文字に付加されます。[[pt:virama|ヴィラマ]] はありません。代わりに、3 つの音素からなる音節を取得するために、最初の母音記号が追加され、次に最後の子音が追加されます。</p>
      </transl>
     </text>
    </group>
@@ -13860,8 +13860,9 @@
      <transl>{{{{warn|他の画像も可能!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
-     <orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021.</orig>
+     <orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021. Sometimes even pre-2013 version, with smaller coat of arms.</orig>
      <au-cmt>{{ytalib}} = year when checked the situation with Taliban, e.g. 2025</au-cmt>
+     <known-orig>The current ({{ytalib}}) government, the Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', the Muslim motto. Meanwhile, vendors use the old flag abandoned in 2021.</known-orig>
      <transl>現政権（{{ytalib}}年）であるタリバンは、ほとんどどこでも認知されていない。彼らの旗は白地に黒のシャハーダ（イスラム教のモットー）が描かれている。一方、商人たちは2021年に放棄された古い旗を使用している。</transl>
     </text>
     <text id="U+1F1E6+1F1F6">

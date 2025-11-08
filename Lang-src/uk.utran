@@ -7077,14 +7077,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
+      <p>Comes from [[ps:Tibt|Tibetan]] and was initially written top-down. Later, horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</p>
+      <p>The inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to a null letter looking like ampersand. No [[pt:virama|virama]]. Instead, to get a syllable of three phonemes, first a vowel mark is added, then a final consonant.</p>
      </orig>
      <transl>
-      <p>Пішла від [[ps:Tibt|тибетської]], початково писалася зверху донизу, але потім стали писати горизонтально, тому літери схожі на тибетські, повернуті на 90°. Традиційно вважається, что розробили письмо буддійські проповідники біля 1700, а впровадив Чакдор Намг’ял, князь Сіккіму (правив 1700–1717). Перший друкований текст{{-}}Євангеліє від Матвія, 1845.</p>
+      <p>Пішла від [[ps:Tibt|тибетської]], початково писалася зверху донизу, але потім стали писати горизонтально, тому літери схожі на тибетські, повернуті на 90°. Традиційно вважається, что розробили письмо буддійські проповідники біля 1700, а впровадив Чакдор Намґ’ял, князь Сіккіму (правив 1700–1717). Перший друкований текст{{-}}Євангеліє від Матвія, 1845.</p>
       <p />
-      <p>Голосна по замовчанню {{t|а}}. Початкові голосні не{{_}}мають особливу форму, а пишуться з «нульовою» приголосною літерою, схожою на амперсанд. [[pt:virama|Вірами]] нема. Замість цього, щоб одержати склад з тьох звуків, додають спочатку оголос, а потім кінцевий приголосний. Між словами нема пропусків.</p>
+      <p>Голосна по замовчанню {{t|а}}. Початкові голосні не{{_}}мають особливу форму, а пишуться з «нульовою» приголосною літерою, схожою на амперсанд. [[pt:virama|Вірами]] нема. Замість цього, щоб одержати склад з трьох звуків, додають спочатку оголос, а потім кінцевий приголосний.</p>
      </transl>
     </text>
    </group>
