@@ -13774,6 +13774,9 @@
      <orig>Population</orig>
      <transl>Nüfus</transl>
     </text>
+    <text id="Ori">
+     <orig>Origin of code</orig>
+    </text>
    </group>
    <group id="Sta">
     <text id="Rec">
@@ -14080,6 +14083,66 @@
     <text id="GS">
      <orig>Abandoned with decline of whaling, mainly scientists and tourists</orig>
      <transl>Balina avcılığının azalmasıyla terk edilen bölge, çoğunlukla bilim insanları ve turistler tarafından kullanılıyor</transl>
+    </text>
+   </group>
+   <group id="Ori">
+    <text id="Brk">
+     <orig>{1} ({2})</orig>
+     <au-cmt>
+      <p>In Western langs — no translation, in Asian — maybe</p>
+      <p>1 = reason, 2 = name</p>
+     </au-cmt>
+    </text>
+    <text id="Com">
+     <orig>Local/foreign name</orig>
+    </text>
+    <text id="Aut">
+     <orig>Local name</orig>
+    </text>
+    <text id="Exo">
+     <orig>Common foreign name</orig>
+    </text>
+    <text id="Old">
+     <orig>Old name</orig>
+    </text>
+    <text id="Fre">
+     <orig>Free code</orig>
+    </text>
+    <text id="Eur">
+     <orig>European name for land</orig>
+    </text>
+    <text id="en">
+     <orig>English</orig>
+    </text>
+    <text id="es">
+     <orig>Spanish</orig>
+    </text>
+    <text id="fr">
+     <orig>French</orig>
+    </text>
+    <text id="la">
+     <orig>Latin</orig>
+    </text>
+    <text id="nl">
+     <orig>Dutch</orig>
+    </text>
+    <text id="ru">
+     <orig>Russian</orig>
+    </text>
+    <text id="BQ">
+     <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
+    </text>
+    <text id="CQ">
+     <orig>Free code; Norman French</orig>
+    </text>
+    <text id="SX">
+     <orig>Free code; code for Princess Juliana Airport</orig>
+    </text>
+    <text id="UA">
+     <orig>UK is reserved for Great Britain</orig>
+    </text>
+    <text id="XK">
+     <orig>Temporary EU code</orig>
     </text>
    </group>
    <text id="Favs">

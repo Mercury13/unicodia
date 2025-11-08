@@ -13780,6 +13780,10 @@
      <orig>Population</orig>
      <transl>Население</transl>
     </text>
+    <text id="Ori">
+     <orig>Origin of code</orig>
+     <transl>Происхождение кода</transl>
+    </text>
    </group>
    <group id="Sta">
     <text id="Rec">
@@ -14086,6 +14090,89 @@
     <text id="GS">
      <orig>Abandoned with decline of whaling, mainly scientists and tourists</orig>
      <transl>Брошены с упадком китового промысла, в основном учёные и туристы</transl>
+    </text>
+   </group>
+   <group id="Ori">
+    <au-cmt>No wiki templates in English origin, but you MAY use them</au-cmt>
+    <text id="Brk">
+     <orig>{1} ({2})</orig>
+     <au-cmt>
+      <p>In Western langs — no translation, in Asian — maybe</p>
+      <p>1 = reason, 2 = name</p>
+     </au-cmt>
+     <transl>{1} ({2})</transl>
+    </text>
+    <text id="Com">
+     <orig>Local/foreign name</orig>
+     <transl>Местное/иностранное название</transl>
+    </text>
+    <text id="Aut">
+     <orig>Local name</orig>
+     <transl>Местное название</transl>
+    </text>
+    <text id="Exo">
+     <orig>Common foreign name</orig>
+     <transl>Распространённое иностранное название</transl>
+    </text>
+    <text id="Old">
+     <orig>Old name</orig>
+     <transl>Старое название</transl>
+    </text>
+    <text id="Fre">
+     <orig>Free code</orig>
+     <transl>Свободный код</transl>
+    </text>
+    <text id="Eur">
+     <orig>European name for land</orig>
+     <transl>Европейское название земли</transl>
+    </text>
+    <text id="en">
+     <orig>English</orig>
+     <transl>Английский</transl>
+    </text>
+    <text id="es">
+     <orig>Spanish</orig>
+     <transl>Испанский</transl>
+    </text>
+    <text id="fr">
+     <orig>French</orig>
+     <transl>Французский</transl>
+    </text>
+    <text id="la">
+     <orig>Latin</orig>
+     <transl>Латинский</transl>
+    </text>
+    <text id="nl">
+     <orig>Dutch</orig>
+     <transl>Голландский</transl>
+    </text>
+    <text id="ru">
+     <orig>Russian</orig>
+     <transl>Русский</transl>
+    </text>
+    <text id="BQ">
+     <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
+     <transl>Свободный код; другое название Бонэр, Саба и Синт-Эстатиус</transl>
+    </text>
+    <text id="CQ">
+     <orig>Free code; Norman French</orig>
+     <transl>Свободный код; нормандский французский</transl>
+    </text>
+    <text id="KZ">
+     <orig>Established name of Russian origin; the Romanized autonym is Qazaqstan</orig>
+     <transl>Устоявшееся название русского происхождения; латинизованное самонозвание{{-}}Qazaqstan</transl>
+    </text>
+    <text id="SX">
+     <orig>Free code; code for Princess Juliana Airport</orig>
+     <transl>Свободный код; код аэропорта им. принцессы Юлианы</transl>
+    </text>
+    <text id="UA">
+     <orig>UK is reserved for Great Britain</orig>
+     <transl>UK оставлено за Великобританией</transl>
+    </text>
+    <text id="XK">
+     <orig>Temporary EU code</orig>
+     <transl>Временный код ЕС</transl>
     </text>
    </group>
    <text id="Favs">

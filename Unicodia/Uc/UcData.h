@@ -1367,6 +1367,27 @@ namespace cou {
         NOT_APPLICABLE, ///< UN
     )
 
+    DEFINE_ENUM_TYPE_IN_NS(cou, Origin, unsigned char,
+        COMMON,     ///< common name
+        AUTO,       ///< autonym
+        EXO,        ///< common Latin exonym
+        OLD,        ///< old name
+        FREE,       ///< some free code
+        EURO,       ///< European name for land
+        L_EN,       ///< English
+        L_ES,       ///< Spanish
+        L_FR,       ///< French,
+        L_LA,       ///< Latin
+        L_NL,       ///< Dutch
+        L_RU,       ///< Russian
+        SPEC_BQ,    ///< Caribbean Netherlands
+        SPEC_CQ,    ///< Sark
+        SPEC_KZ,    ///< Kazakhstan
+        SPEC_SX,    ///< Dutch
+        SPEC_UA,    ///< Ukraine
+        SPEC_XK,    ///< Kosovo
+    )
+
     struct TwoLetters {
         uint16_t value = 0;
 
@@ -1387,12 +1408,15 @@ namespace cou {
         TwoLetters name;
         Type type;
         Location location;
+        Origin origin;
+        std::string_view originStr;
         Popul popul;
     };
 
     extern const ec::Array<const char*, Type> typeKeys;
     extern const ec::Array<const char*, Location> locKeys;
     extern const ec::Array<const char*, Popul> popKeys;
+    extern const ec::Array<const char*, Origin> originKeys;
 
     const Country* find(TwoLetters key);
 }

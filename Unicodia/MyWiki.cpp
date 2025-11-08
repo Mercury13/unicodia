@@ -3662,6 +3662,20 @@ QString mywiki::buildHtml(
                 appendNonBullet(text, "Lib.Cinfo.Pop");
                 mywiki::appendNoFont(text, loc::get(cou::popKeys[country->popul]), wiki::Mode::SPAN);
             }
+            // Origin
+            sp.sep();
+            appendNonBullet(text, "Lib.Cinfo.Ori");
+            auto& txOrigin = loc::get(cou::originKeys[country->origin]);
+            if (country->originStr.empty()) {
+                mywiki::appendNoFont(text, txOrigin, wiki::Mode::SPAN);
+            } else {
+                std::string tmp{ country->originStr };
+                str::replace(tmp, '[', "<b>");
+                str::replace(tmp, ']', "</b>");
+                auto& bracket = loc::get("Lib.Ori.Brk");
+                std::u8string s = bracket.arg(txOrigin, str::toU8sv(tmp));
+                mywiki::appendNoFont(text, s, wiki::Mode::SPAN);
+            }
         }
     }
 
