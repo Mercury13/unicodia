@@ -14126,6 +14126,10 @@
      <orig>European name for land</orig>
      <transl>Европейское название земли</transl>
     </text>
+    <text id="Tur">
+     <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
+     <transl>Иностранное название русского происхождения + старая латинизация местной кириллицы</transl>
+    </text>
     <text id="en">
      <orig>English</orig>
      <transl>Английский</transl>
@@ -14158,10 +14162,6 @@
      <orig>Free code; Norman French</orig>
      <transl>Свободный код; нормандский французский</transl>
     </text>
-    <text id="KZ">
-     <orig>Established name of Russian origin; the Romanized autonym is Qazaqstan</orig>
-     <transl>Устоявшееся название русского происхождения; латинизованное самонозвание{{-}}Qazaqstan</transl>
-    </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
      <transl>Свободный код; код аэропорта им. принцессы Юлианы</transl>
@@ -14169,10 +14169,6 @@
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
      <transl>UK оставлено за Великобританией</transl>
-    </text>
-    <text id="UZ">
-     <orig>Established name of Russian origin; the autonym is Oʻzbekiston</orig>
-     <transl>Устоявшееся название русского происхождения; самоназвание{{-}}Oʻzbekiston</transl>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>

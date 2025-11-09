@@ -99,6 +99,7 @@ constinit const ec::Array<const char*, cou::Origin> cou::originKeys {
     TX_ORI "Old",
     TX_ORI "Fre",
     TX_ORI "Eur",
+    TX_ORI "Tur",
     // Langs
     TX_ORI "en",
     TX_ORI "es",
@@ -109,10 +110,8 @@ constinit const ec::Array<const char*, cou::Origin> cou::originKeys {
     // Special cases
     TX_ORI "BQ",
     TX_ORI "CQ",
-    TX_ORI "KZ",
     TX_ORI "SX",
     TX_ORI "UA",
-    TX_ORI "UZ",
     TX_ORI "XK",
 };
 
@@ -669,7 +668,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ WP: As of 2017, no evidence has been found that the islands
                 // had been occupied before their discovery by Europeans
     { "KZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Kazakhstan
-            cou::Origin::SPEC_KZ, {},
+            cou::Origin::TURKIC, {},
             cou::Popul::DFLT },
                 // ↑ Continent
     { "LA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Laos
@@ -1128,7 +1127,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
                 // ↑ Continent
     { "UZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Uzbekistan
-            cou::Origin::SPEC_UZ, {},
+            cou::Origin::TURKIC, {},
             cou::Popul::DFLT },
                 // ↑ Continent
     { "VA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Vatican City

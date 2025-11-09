@@ -1374,6 +1374,7 @@ namespace cou {
         OLD,        ///< old name
         FREE,       ///< some free code
         EURO,       ///< European name for land
+        TURKIC,     ///< For some xUSSR countries of Middle Asia
         L_EN,       ///< English
         L_ES,       ///< Spanish
         L_FR,       ///< French,
@@ -1382,10 +1383,8 @@ namespace cou {
         L_RU,       ///< Russian
         SPEC_BQ,    ///< Caribbean Netherlands
         SPEC_CQ,    ///< Sark
-        SPEC_KZ,    ///< Kazakhstan
         SPEC_SX,    ///< Dutch
         SPEC_UA,    ///< Ukraine
-        SPEC_UZ,    ///< Uzbekistan
         SPEC_XK,    ///< Kosovo
     )
 

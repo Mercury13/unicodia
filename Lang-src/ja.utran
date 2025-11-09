@@ -14252,6 +14252,7 @@
     </text>
    </group>
    <group id="Ori">
+    <au-cmt>No wiki templates in English origin, but you MAY use them</au-cmt>
     <text id="Brk">
      <orig>{1} ({2})</orig>
      <au-cmt>
@@ -14276,6 +14277,9 @@
     </text>
     <text id="Eur">
      <orig>European name for land</orig>
+    </text>
+    <text id="Tur">
+     <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
     </text>
     <text id="en">
      <orig>English</orig>

@@ -9891,6 +9891,9 @@
     <text id="Eur">
      <orig>European name for land</orig>
     </text>
+    <text id="Tur">
+     <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
+    </text>
     <text id="en">
      <orig>English</orig>
     </text>
@@ -9915,17 +9918,11 @@
     <text id="CQ">
      <orig>Free code; Norman French</orig>
     </text>
-    <text id="KZ">
-     <orig>Established name of Russian origin; the Romanized autonym is Qazaqstan</orig>
-    </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
     </text>
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
-    </text>
-    <text id="UZ">
-     <orig>Established name of Russian origin; the autonym is Oʻzbekiston</orig>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>
