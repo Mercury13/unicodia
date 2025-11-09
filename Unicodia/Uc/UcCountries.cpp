@@ -112,6 +112,7 @@ constinit const ec::Array<const char*, cou::Origin> cou::originKeys {
     TX_ORI "KZ",
     TX_ORI "SX",
     TX_ORI "UA",
+    TX_ORI "UZ",
     TX_ORI "XK",
 };
 
@@ -747,7 +748,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
                 // ↑ Micronesian made stick charts, that’s enough
     { "MK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // North Macedonia
-            cou::Origin::AUTO, "Makedonija",
+            cou::Origin::AUTO, "[M]a[k]edonija",
             cou::Popul::DFLT },
                 // ↑ Continent
     { "ML", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Mali
@@ -1127,7 +1128,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
                 // ↑ Continent
     { "UZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Uzbekistan
-            cou::Origin::COMMON, {},
+            cou::Origin::SPEC_UZ, {},
             cou::Popul::DFLT },
                 // ↑ Continent
     { "VA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Vatican City

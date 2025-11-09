@@ -1385,6 +1385,7 @@ namespace cou {
         SPEC_KZ,    ///< Kazakhstan
         SPEC_SX,    ///< Dutch
         SPEC_UA,    ///< Ukraine
+        SPEC_UZ,    ///< Uzbekistan
         SPEC_XK,    ///< Kosovo
     )
 
