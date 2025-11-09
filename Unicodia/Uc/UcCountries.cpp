@@ -1169,7 +1169,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
                 // ↑ WP: with the arrival of French missionaries in 1837, who converted
                 // the population to Roman Catholicism
     { "WS", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA, // Samoa
-            cou::Origin::OLD, "Western Samoa",
+            cou::Origin::OLD, "[W]estern [S]amoa",
             cou::Popul::DFLT },
                 // ↑ WP: for recruiting local men to serve as crewmen on their ships
     { "XK", cou::Type::PARTLY_KOSOVO, cou::Location::EUROPE, // Kosovo
