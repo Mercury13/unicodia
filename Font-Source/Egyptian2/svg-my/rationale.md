@@ -158,6 +158,18 @@ Subtotal: 189
 
 Subtotal: 121
 
+# Campaign for walls / main block
+- 13250
+- 13251
+- 13252
+- 13253
+- 13254
+- 13255
+- 13256
+- 13257
+
+Subtotal: 8
+
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
 - 13475: from extended, better feet
@@ -758,4 +770,4 @@ Subtotal: 221
 
 Subtotal: 2
 
-Total: 897
+Total: 905
