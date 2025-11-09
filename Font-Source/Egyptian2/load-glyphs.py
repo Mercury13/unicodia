@@ -110,8 +110,10 @@ def removeMicroIntersections(layer):
 # General dimensions
 CELLHEIGHT = 1000
 CELLWIDTH = 1100
-BOTTOMHANG = 125
-BEARING = 40
+BRKHEIGHT = 1200  # brackets’ height
+BOTTOMHANG = 100
+BEARING = 50
+SMALL_BEARING = 35
 V_THRESHOLD = CELLHEIGHT - BOTTOMHANG * 2
 # General height-limited (=positive)
 MICROSCOPIC = 320
@@ -402,9 +404,24 @@ GLYPH_SIZES = {
     0x143F5: WIDE,
 }
 
+# Brackets: they are taller than normal chars and have different bearings
+BRK_OPEN = 1
+BRK_CLOSE = -1
+
+BRK_INFO = {
+    0x13258: BRK_OPEN  * 280, 0x13259: BRK_OPEN  * 200, 0x1325A: BRK_OPEN  * 200,  # walls 1
+    0x1325B: BRK_CLOSE * 200, 0x1325C: BRK_CLOSE * 200, 0x1325D: BRK_CLOSE * 280,  # walls 2
+    0x13286: BRK_OPEN,  0x13287: BRK_CLOSE,  # round fortified walls
+    0x13288: BRK_OPEN,  0x13289: BRK_CLOSE,  # square fortified walls
+    0x13379: BRK_OPEN,  0x1337A: BRK_CLOSE, 0x1337B: BRK_CLOSE,  # cartouches
+    0x1342F: BRK_OPEN,  # leftover cartouche
+}
+
 def glyphSize(cp):
     if cp in GLYPH_SIZES:
         return GLYPH_SIZES[cp]
+    if cp in BRK_INFO:
+        return BRKHEIGHT
     if (cp >= 0x13A4C) and (cp <= 0x13A59):
         return MEDWIDE  # animal of Seth
     if (cp >= 0x13A36) and (cp <= 0x13B28):
@@ -427,12 +444,26 @@ def glyphSize(cp):
         return MEDWIDE     # boats
     return -CELLWIDTH  # default CELLWIDTH × CELLHEIGHT
 
-def fixBearings(glyph):
-    glyph.left_side_bearing = BEARING
-    glyph.right_side_bearing = BEARING
+def fixBearings(glyph, cp):
+    leftBearing = BEARING
+    rightBearing = BEARING
+    # Squeezing every bit → smaller bearings
+    if cp in GLYPH_SIZES:
+        if GLYPH_SIZES[cp] < WIDE:
+            leftBearing = SMALL_BEARING
+            rightBearing = SMALL_BEARING
+    # Have brackets → take from table
+    if cp in BRK_INFO:
+        what = BRK_INFO[cp]
+        if what > 0:
+            rightBearing = -what
+        elif what < 0:
+            leftBearing = what
+    glyph.left_side_bearing = leftBearing
+    glyph.right_side_bearing = rightBearing
     
 # @return [+] OK
-def improveGlyph(glyph, logBad):
+def improveGlyph(glyph, cp, logBad):
     global nSelfIntersecting
     fg = glyph.layers[1]
     # Remove open paths
@@ -446,7 +477,7 @@ def improveGlyph(glyph, logBad):
     fg.simplify(SIMPVALUE, ['mergelines'])
     # Hint
     glyph.foreground = fg
-    fixBearings(glyph)
+    fixBearings(glyph, cp)
     selfInter = glyph.selfIntersects()
     isOk = False
     if not selfInter:
@@ -491,7 +522,7 @@ def fixSize(cp, glyph, svgHeight):
 def loadGlyph(glyph, cp, fname, svgHeight, logBad):
     glyph.importOutlines(fname, scale=False, correctdir=True)
     fixSize(cp, glyph, svgHeight)
-    return improveGlyph(glyph, logBad)
+    return improveGlyph(glyph, cp, logBad)
     
 def newGlyph(font, code, glyphName):
     glyph = font.createChar(code)
@@ -503,7 +534,7 @@ def loadManualGlyph(font, code, glyphName, fname, logName):
     glyph = newGlyph(font, code, glyphName)
     glyph.importOutlines(fname, scale=False, correctdir=True)
     glyph.simplify(SMALLSIMPVALUE, ['mergelines'])
-    fixBearings(glyph)
+    fixBearings(glyph, code)
     if glyph.selfIntersects():
         log.write("CRIT: {} is {}, and still self-intersects!\n".format(glyph.glyphname, logName))
 
