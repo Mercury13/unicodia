@@ -176,8 +176,9 @@ Subtotal: 121
 - 1325D
 - 1325E
 - 1325F
+- 13261
 
-Subtotal: 16
+Subtotal: 17
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -779,4 +780,4 @@ Subtotal: 221
 
 Subtotal: 2
 
-Total: 914
+Total: 915
