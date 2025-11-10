@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1100"
+   width="600"
    height="1000"
-   viewBox="0 0 1100 1000"
+   viewBox="0 0 600 1000"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
@@ -25,7 +25,7 @@
      inkscape:document-units="px"
      inkscape:zoom="0.53386562"
      inkscape:cx="590.97269"
-     inkscape:cy="656.53226"
+     inkscape:cy="658.40539"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -63,7 +63,7 @@
     <path
        id="rect2"
        style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#000000;fill-rule:evenodd;stroke-linecap:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-       d="M 0,0 V 1000 H 406.66602 V 0 Z M 60,60 H 346.66602 V 551.76562 H 173.33398 V 940 H 60 Z M 233.33398,611.76562 H 346.66602 V 940 H 233.33398 Z"
+       d="M 0,0 V 1000 H 600 V 0 Z M 60,60 H 540 V 551.76562 H 366.66796 V 940 H 60 Z M 426.66796,611.76562 H 540 V 940 H 426.66796 Z"
        sodipodi:nodetypes="ccccccccccccccccc" />
   </g>
 </svg>

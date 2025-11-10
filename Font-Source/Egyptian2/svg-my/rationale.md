@@ -147,6 +147,7 @@ Subtotal: 189
 - 131D3: based on D1
 - 131E4: was thick and craggy
 - 131F3: too thick
+- 131F4: with elusive self-intersection, decided to remake
 - 131FE: after other strips like 13EFC
 - 131FF: same
 - 13214: too thick
@@ -776,4 +777,4 @@ Subtotal: 221
 
 Subtotal: 2
 
-Total: 911
+Total: 912
