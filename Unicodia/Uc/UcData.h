@@ -1383,7 +1383,8 @@ namespace cou {
         L_RU,       ///< Russian
         SPEC_BQ,    ///< Caribbean Netherlands
         SPEC_CQ,    ///< Sark
-        SPEC_SX,    ///< Dutch
+        SPEC_SX,    ///< Dutch St.Martin
+        SPEC_TW,    ///< Taiwan
         SPEC_UA,    ///< Ukraine
         SPEC_XK,    ///< Kosovo
     )

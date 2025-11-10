@@ -111,6 +111,7 @@ constinit const ec::Array<const char*, cou::Origin> cou::originKeys {
     TX_ORI "BQ",
     TX_ORI "CQ",
     TX_ORI "SX",
+    TX_ORI "TW",
     TX_ORI "UA",
     TX_ORI "XK",
 };
@@ -1095,7 +1096,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
                 // ↑ WP: Mendaña made contact with the islanders but was unable to land
     { "TW", cou::Type::PARTLY_TAIWAN, cou::Location::PACIFIC_ASIA, // Taiwan
-            cou::Origin::EXO, {},
+            cou::Origin::SPEC_TW, {},
             cou::Popul::DFLT },
                 // ↑ Obvious
     { "TZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Tanzania
