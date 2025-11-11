@@ -138,6 +138,7 @@ WIDE = -1400
 EVERYBIT = -1500  # squeeze out every bit of width
 # Special width-limited
 ARM = -1000
+GOAT_CALF = -1200
 SUN_HILL = -1200
 SMALL_DONKEY = -1220
 TAILLESS_DONKEY = -1240
@@ -166,6 +167,7 @@ GLYPH_SIZES = {
     # E: animals
     0x130D2: MEDWIDE, 0x130D3: WIDE, 0x130D4: MEDWIDE, 0x130D5: MEDWIDE,  # cows
     0x130D6: MEDWIDE, 0x130D7: MEDWIDE, 0x130D8: MEDWIDE,
+    0x130D9: GOAT_CALF, 0x130DA: GOAT_CALF,  # goats w/o beard
     0x130DB: MEDWIDE, 0x130DC: MEDWIDE, 0x130DD: MEDWIDE, 0x130DE: MEDWIDE,  # bubalis, cow, sheep
     0x130DF: MEDWIDE,  # pig…
     0x130E1: MEDWIDE, 0x130E2: MEDWIDE, 0x130E3: MEDWIDE, 0x130E4: MEDWIDE,  # jackal
@@ -291,9 +293,9 @@ GLYPH_SIZES = {
     0x13A39: MED_DONKEY,  # donkeys
     0x13A41: TAILLESS_DONKEY, 0x13A42: SMALL_DONKEY, 0x13A43: SMALL_DONKEY,  # more donkeys
     0x13A53: CELLHEIGHT,
-    0x13A7B: BUBALIS, # newborn bubalis
+    0x13A7B: BUBALIS,  # newborn bubalis
     0x13A85: WIDE,
-    0x13AAB: MEDWIDE, #goat
+    0x13AAB: GOAT_CALF,  #goat
     0x13A54: WIDE, 0x13A55: WIDE, 0x13A56: WIDE, 0x13A58: WIDE,
     0x13A85: EVERYBIT,
     0x13ABB: MEDWIDE,  # hyena
