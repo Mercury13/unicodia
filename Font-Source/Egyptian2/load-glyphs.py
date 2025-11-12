@@ -25,7 +25,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1326F)) \
+    return ((code >= 0x13000) and (code <= 0x1327F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -230,6 +230,10 @@ GLYPH_SIZES = {
     # Nu/Ul: coats of arms
     0x13230: WIDE,  # Nl16: hanging fishtail
     0x13248: WIDE,  # Nu17: hanging jackal’s tail
+    # O: buildings
+    0x1326A: MEDWIDE,  # portico with 7 uraei
+    0x13275: MEDIUM,  # pedestal of sun
+    0x1327E: WIDE,  # four Y-poles
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
@@ -357,6 +361,7 @@ GLYPH_SIZES = {
     0x13F4B: MEDIUM,
     0x13F50: MEDWIDE, 0x13F51: MEDWIDE, 0x13F52: MEDWIDE, # building plans
     0x13F74: WIDE, # overthrow wall, not really enough width
+    0x13F97: MEDWIDE,  # portico with 7 uraei
     0x13FD7: MEDWIDE,
     0x13FEF: EVERYBIT,  # gate of lions
     0x14004: MEDWIDE,

@@ -156,8 +156,9 @@ Subtotal: 189
 - 13206: double line
 - 1320D: thick line
 - 1324F: franken from several Nu22’s
+- 1326F: thicker outer lines
 
-Subtotal: 121
+Subtotal: 122
 
 # Campaign for walls / main block
 - 13250
@@ -176,11 +177,16 @@ Subtotal: 121
 - 1325D
 - 1325E
 - 1325F
+- 13260
 - 13261
 - 13262
 - 13263
+- 13269
+- 1326A
+- 1326B
+- 13F97
 
-Subtotal: 19
+Subtotal: 24
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -441,7 +447,7 @@ Subtotal: 19
 - 13F5B: campaign for plans, consistent
 - 13F5C: campaign for plans, consistent
 - 13F5D: campaign for plans, thinner basket
-- 13F60: campaign for plans
+- 13F60: campaign for plans, after 13260
 - 13F72: campaign for walls
 - 13F73: campaign for walls
 - 13F74: campaign for walls
@@ -566,6 +572,7 @@ Subtotal: 365
 - 13202: same but door bolt is home-made
 - 13215: after 14
 - 13219: after 2A, in harmony with it
+- 1327E: legacy, four poles
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -718,6 +725,7 @@ Subtotal: 365
 - 13D96: after I12 and 8F
 - 13D87: franken
 - 13DA7: DA3 + feathers
+- 13DCC: found some catfish in extensions
 - 13DF0: L2 minus wings
 - 13E02: N112 minus canals
 - 13E19: after 18
@@ -774,7 +782,7 @@ Subtotal: 365
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 221
+Subtotal: 223
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -782,4 +790,4 @@ Subtotal: 221
 
 Subtotal: 2
 
-Total: 917
+Total: 926
