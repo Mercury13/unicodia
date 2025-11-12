@@ -413,6 +413,7 @@ Subtotal: 24
 - 13D8F: removed sun
 - 13DC3: mirror
 - 13DD7: existing is DD8 now
+- 13E51: canal outline → solid
 - 13E55: straight stem
 - 13E5C: after 131BC
 - 13E5D: solid line
@@ -487,8 +488,8 @@ Subtotal: 24
 - 14138: no sun
 - 1413A: no sun
 - 1413B: no sun
-- 1413E: other feather, no double lines, other handle
-- 1413F: per 3E: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
 - 1414D: bigger uraeus
@@ -555,7 +556,7 @@ Subtotal: 24
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 365
+Subtotal: 366
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -572,6 +573,8 @@ Subtotal: 365
 - 13202: same but door bolt is home-made
 - 13215: after 14
 - 13219: after 2A, in harmony with it
+- 13270: legacy, shrine
+- 13277: after obelisk w/o sun
 - 1327E: legacy, four poles
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
@@ -782,7 +785,7 @@ Subtotal: 365
 - 143C4: after C3
 - 143D3: after D2
 
-Subtotal: 223
+Subtotal: 225
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -790,4 +793,4 @@ Subtotal: 223
 
 Subtotal: 2
 
-Total: 926
+Total: 928
