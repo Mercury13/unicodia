@@ -2350,6 +2350,7 @@ void FmMain::updateFinished(QNetworkReply* reply)
 void FmMain::redrawFavsTable()
 {
     emit favsModel.dataChanged({}, {});
+    emit favsModel.headerDataChanged(Qt::Vertical, 0, favsModel.rowCount());
     favsCurrentChanged(ui->tableFavs->currentIndex());
     redrawFavsTab();
 }
