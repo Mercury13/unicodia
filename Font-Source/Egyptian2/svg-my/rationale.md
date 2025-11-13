@@ -120,6 +120,7 @@ Subtotal: 189
 - 1310A: extended + thin solid stick
 - 13113: took extended F20 and changed to b/w F20
 - 13121: was self-intersecting, made two halves
+- 1312E: drew from scratch
 - 13130: changed Sesh a bit, mainly made branches more pronounced
 - 13131: same
 - 13132: remade from scratch, was too thin
@@ -163,7 +164,7 @@ Subtotal: 189
 - 132AA: bigger, thicker
 - 132AB: thinner
 
-Subtotal: 127
+Subtotal: 128
 
 # Campaign for walls / main block
 - 13250
@@ -799,4 +800,4 @@ Subtotal: 226
 
 Subtotal: 2
 
-Total: 934
+Total: 935
