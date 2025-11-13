@@ -160,8 +160,10 @@ Subtotal: 189
 - 13292: thinner
 - 13295: thinner
 - 13296: thinner
+- 132AA: bigger, thicker
+- 132AB: thinner
 
-Subtotal: 125
+Subtotal: 127
 
 # Campaign for walls / main block
 - 13250
@@ -797,4 +799,4 @@ Subtotal: 226
 
 Subtotal: 2
 
-Total: 932
+Total: 934
