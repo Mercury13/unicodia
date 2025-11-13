@@ -158,13 +158,16 @@ Subtotal: 189
 - 1320D: thick line
 - 1324F: franken from several Nu22’s
 - 1326F: thicker outer lines
+- 13272: single line
 - 13292: thinner
 - 13295: thinner
 - 13296: thinner
+- 132A6: different P8 as source
 - 132AA: bigger, thicker
 - 132AB: thinner
+- 132C2: removed hollow handle
 
-Subtotal: 128
+Subtotal: 131
 
 # Campaign for walls / main block
 - 13250
@@ -582,6 +585,7 @@ Subtotal: 366
 - 13270: legacy, shrine
 - 13277: after obelisk w/o sun
 - 1327E: legacy, four poles
+- 132C3: after C2
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -792,7 +796,7 @@ Subtotal: 366
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 226
+Subtotal: 227
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -800,4 +804,4 @@ Subtotal: 226
 
 Subtotal: 2
 
-Total: 935
+Total: 939
