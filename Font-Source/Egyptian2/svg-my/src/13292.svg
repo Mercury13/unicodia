@@ -75,10 +75,10 @@
      sodipodi:type="arc"
      sodipodi:cx="777.5"
      sodipodi:cy="777.5"
-     sodipodi:rx="550.31116"
-     sodipodi:ry="550.31116"
+     sodipodi:rx="514.72168"
+     sodipodi:ry="514.72168"
      sodipodi:start="3.1415927"
      sodipodi:end="4.712389"
      sodipodi:arc-type="slice"
-     d="M 227.18884,777.5 A 550.31116,550.31116 0 0 1 777.5,227.18884 V 777.5 Z" />
+     d="M 262.77832,777.5 A 514.72168,514.72168 0 0 1 777.5,262.77832 V 777.5 Z" />
 </svg>
