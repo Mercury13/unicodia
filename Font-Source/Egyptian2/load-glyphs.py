@@ -434,8 +434,8 @@ BRK_CLOSE = -1
 BRK_INFO = {
     0x13258: BRK_OPEN  * 280, 0x13259: BRK_OPEN  * 200, 0x1325A: BRK_OPEN  * 200,  # walls 1
     0x1325B: BRK_CLOSE * 200, 0x1325C: BRK_CLOSE * 200, 0x1325D: BRK_CLOSE * 280,  # walls 2
-    0x13286: BRK_OPEN,  0x13287: BRK_CLOSE,  # round fortified walls
-    0x13288: BRK_OPEN,  0x13289: BRK_CLOSE,  # square fortified walls
+    0x13286: BRK_OPEN * 180,  0x13287: BRK_CLOSE * 180,  # round fortified walls
+    0x13288: BRK_OPEN * 280,  0x13289: BRK_CLOSE * 280,  # square fortified walls
     0x13379: BRK_OPEN,  0x1337A: BRK_CLOSE, 0x1337B: BRK_CLOSE,  # cartouches
     0x1342F: BRK_OPEN,  # leftover cartouche
 }

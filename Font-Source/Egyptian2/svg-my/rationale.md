@@ -159,6 +159,8 @@ Subtotal: 189
 - 1324F: franken from several Nu22’s
 - 1326F: thicker outer lines
 - 13272: single line
+- 13288: gave more space above/below
+- 13289: same
 - 13292: thinner
 - 13295: thinner
 - 13296: thinner
@@ -167,7 +169,7 @@ Subtotal: 189
 - 132AB: thinner
 - 132C2: removed hollow handle
 
-Subtotal: 131
+Subtotal: 133
 
 # Campaign for walls / main block
 - 13250
@@ -245,6 +247,7 @@ Subtotal: 24
 - 1365F: beard king → god
 - 13606: shorter rope to make hiero narrower
 - 13667: beard none→god, wig short→long
+- 1366D: beard god→king
 - 13671: beard ?→king
 - 13673: beard ?→king
 - 13675: beard ?→god
@@ -296,8 +299,8 @@ Subtotal: 24
 - 13757: short hair
 - 13759: short hair
 - 1375A: short hair
-- 1375B: short hair
-- 1375C: short hair: ONE HUNDRED
+- 1375B: short hair: ONE HUNDRED
+- 1375C: short hair
 - 13766: vertical ankh
 - 13767: same
 - 13772: stretched heel → normal, white legs → black
@@ -396,8 +399,8 @@ Subtotal: 24
 - 13C28: white neck
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
-- 13C52: same + fixed intersection at claw/base
-- 13C53: same: TWO HUNDRED
+- 13C52: same + fixed intersection at claw/base: TWO HUNDRED
+- 13C53: same
 - 13C54: same
 - 13C55: same
 - 13C57: same
@@ -496,8 +499,8 @@ Subtotal: 24
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun
-- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413B: no sun: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
@@ -565,7 +568,7 @@ Subtotal: 24
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 366
+Subtotal: 367
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -804,4 +807,4 @@ Subtotal: 227
 
 Subtotal: 2
 
-Total: 939
+Total: 942
