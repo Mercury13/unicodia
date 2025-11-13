@@ -157,8 +157,11 @@ Subtotal: 189
 - 1320D: thick line
 - 1324F: franken from several Nu22’s
 - 1326F: thicker outer lines
+- 13292: thinner
+- 13295: thinner
+- 13296: thinner
 
-Subtotal: 122
+Subtotal: 125
 
 # Campaign for walls / main block
 - 13250
@@ -783,9 +786,10 @@ Subtotal: 366
 - 142FE: after FD
 - 1432A: after 2B/2C
 - 143C4: after C3
+- 14371: after 70
 - 143D3: after D2
 
-Subtotal: 225
+Subtotal: 226
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -793,4 +797,4 @@ Subtotal: 225
 
 Subtotal: 2
 
-Total: 928
+Total: 932

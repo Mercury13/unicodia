@@ -10,6 +10,7 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
+    0x13297: "O50",    # missing for some reason
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13F29: "N31h",   # flowers in circular road
@@ -25,7 +26,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x1327F)) \
+    return ((code >= 0x13000) and (code <= 0x132AE)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -234,6 +235,16 @@ GLYPH_SIZES = {
     0x1326A: MEDWIDE,  # portico with 7 uraei
     0x13275: MEDIUM,  # pedestal of sun
     0x1327E: WIDE,  # four Y-poles
+    0x1328B: MEDIUM,  # corner
+    0x1328E: WIDE,  # double stairs
+    0x13292: MEDIUM, 0x13293: MEDIUM,  # dome
+    0x13295: SMALL,  # enclosed mound
+    0x13296: SMALL,  # village
+    # P: ships
+    0x1329B: MEDWIDE, 0x1329C: MEDWIDE,  # basic boat
+    0x1329D: MEDWIDE,  # ship under sail
+    0x1329E: MEDWIDE, 0x1329F: MEDWIDE,
+    0x132A0: MEDWIDE,  # fisher’s boat
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
