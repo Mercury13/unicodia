@@ -195,6 +195,7 @@ Subtotal: 133
 - 13269
 - 1326A
 - 1326B
+- 13280
 - 13F97
 
 Subtotal: 24
@@ -588,6 +589,7 @@ Subtotal: 367
 - 13270: legacy, shrine
 - 13277: after obelisk w/o sun
 - 1327E: legacy, four poles
+- 13297: drew from scratch
 - 132C3: after C2
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
@@ -799,7 +801,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 227
+Subtotal: 228
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -807,4 +809,4 @@ Subtotal: 227
 
 Subtotal: 2
 
-Total: 942
+Total: 943
