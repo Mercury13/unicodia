@@ -244,7 +244,7 @@ GLYPH_SIZES = {
     # P: ships
     0x1329B: MEDWIDE, 0x1329C: MEDWIDE,  # basic boat
     0x1329D: MEDWIDE,  # ship under sail
-    0x1329E: MEDWIDE, 0x1329F: MEDWIDE,
+    0x1329E: MEDWIDE, 0x1329F: MEDWIDE,  # sacred ship
     0x132A0: MEDWIDE,  # fisher’s boat
     0x132A6: MEDIUM,  # rudder oar
     # Q: furniture

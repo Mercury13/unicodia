@@ -199,7 +199,7 @@ Subtotal: 134
 - 13280
 - 13F97
 
-Subtotal: 24
+Subtotal: 25
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13468: other legs
@@ -591,6 +591,8 @@ Subtotal: 367
 - 13277: after obelisk w/o sun
 - 1327E: legacy, four poles
 - 13297: drew from scratch
+- 1329E: drew from scratch
+- 1329F: after 9E
 - 132C3: after C2
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
@@ -764,6 +766,7 @@ Subtotal: 367
 - 14002: after 03
 - 14020: inverted 1F
 - 14022: “low-hanging” boats, after 1E
+- 1402D: after 1329E
 - 14046: “low-hanging” boats, after 45
 - 14051: “low-hanging” boats, after 4F
 - 14052: “low-hanging” boats, after 4E
@@ -802,7 +805,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 228
+Subtotal: 231
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -810,4 +813,4 @@ Subtotal: 228
 
 Subtotal: 2
 
-Total: 944
+Total: 948
