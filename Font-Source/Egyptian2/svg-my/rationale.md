@@ -593,6 +593,7 @@ Subtotal: 367
 - 13297: drew from scratch
 - 1329E: drew from scratch
 - 1329F: after 9E
+- 132BC: made from R10
 - 132C3: after C2
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
@@ -805,7 +806,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 231
+Subtotal: 232
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -813,4 +814,4 @@ Subtotal: 231
 
 Subtotal: 2
 
-Total: 948
+Total: 949
