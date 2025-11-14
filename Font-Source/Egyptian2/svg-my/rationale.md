@@ -688,6 +688,7 @@ Subtotal: 367
 - 138BB: after BA but sun from scratch
 - 138EC: EB + ankh
 - 138FB: after FA
+- 138FE: JSesh C204 + strip of land
 - 13900: after 01
 - 13925: after nearby (23?)
 - 13926: same
@@ -806,7 +807,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 232
+Subtotal: 233
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -814,4 +815,4 @@ Subtotal: 232
 
 Subtotal: 2
 
-Total: 949
+Total: 950
