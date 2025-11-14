@@ -109,6 +109,7 @@ Subtotal: 189
 - 130AC: too thick outline
 - 130B9: wanted to fit into 1100×1000
 - 130BC: strange dimensions + strange hook
+- 130C5: thinner lines, flags closer
 - 130E7: made almost from scratch, poor-quality glyph
 - 130E8: same
 - 130ED: removed that line on the belly
@@ -169,7 +170,7 @@ Subtotal: 189
 - 132AB: thinner
 - 132C2: removed hollow handle
 
-Subtotal: 133
+Subtotal: 134
 
 # Campaign for walls / main block
 - 13250
@@ -809,4 +810,4 @@ Subtotal: 228
 
 Subtotal: 2
 
-Total: 943
+Total: 944
