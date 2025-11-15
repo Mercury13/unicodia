@@ -149,6 +149,7 @@ COILED_WIDE = -1450
 
 GLYPH_SIZES = {
     # EGYP MAIN -- A: Man
+    0x13009: MEDWIDE,  # tired
     0x13010: SQUARE,  # corpse
     0x13012: SQUARE, 0x13013: BOWING,  # horiz man / bowing man
     0x1303F: SQUARE,  0x13040: SQUARE, # lying mummy

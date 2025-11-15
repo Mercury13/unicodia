@@ -162,6 +162,7 @@ Subtotal: 189
 - 13272: single line
 - 13288: gave more space above/below
 - 13289: same
+- 13290: from scratch
 - 13292: thinner
 - 13295: thinner
 - 13296: thinner
@@ -170,7 +171,7 @@ Subtotal: 189
 - 132AB: thinner
 - 132C2: removed hollow handle
 
-Subtotal: 134
+Subtotal: 135
 
 # Campaign for walls / main block
 - 13250
@@ -202,10 +203,10 @@ Subtotal: 134
 Subtotal: 25
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
-- 13468: other legs
 - 13475: from extended, better feet
 - 13478: frankenmade from scratch after 13527 using old hands
 - 1347D: covered, removed beard
+- 13483: my A1, just low-hanging
 - 134C3: leaning by 45° to the left (rather than lying)
 - 134CB: removed beard per NewG, a little bit bigger ankh
 - 134D6: automation glitched → maybe just enlarge rag?
@@ -815,4 +816,4 @@ Subtotal: 233
 
 Subtotal: 2
 
-Total: 950
+Total: 951
