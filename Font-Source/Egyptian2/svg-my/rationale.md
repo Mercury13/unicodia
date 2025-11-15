@@ -736,6 +736,7 @@ Subtotal: 367
 - 13BDF: after orig F36
 - 13C11: after 10
 - 13C1D: after 1C
+- 13C30: after 2E
 - 13C36: G29 + R7
 - 13C38: G29 + 37
 - 13C43: if it’s a guineafowl, let it be, IDK.
@@ -814,7 +815,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 237
+Subtotal: 238
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -822,4 +823,4 @@ Subtotal: 237
 
 Subtotal: 2
 
-Total: 957
+Total: 958
