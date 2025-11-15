@@ -10,7 +10,6 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
-    0x13297: "O50",    # missing for some reason
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13F29: "N31h",   # flowers in circular road
@@ -26,7 +25,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x132D0)) \
+    return ((code >= 0x13000) and (code <= 0x132D7)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -131,7 +130,7 @@ BOWSTRING = 800
 COILED_ROPE = 800
 BOWING = 950
 # General width-limited (=negative)
-NORMAL = CELLHEIGHT
+NORMAL = -CELLWIDTH
 SQUARE = -1000
 HARE_NO_WHISKERS = -1131
 MEDWIDE = -1250
@@ -347,6 +346,7 @@ GLYPH_SIZES = {
     0x13C31: MEDWIDE,
     0x13C3A: EVERYBIT,
     0x13CBF: MEDWIDE, 0x13CC0: MEDWIDE,  # sitting falcons
+    0x13CCF: NORMAL,  # short-tailed bird
     0x13CE1: MEDIUM, 0x13CE2: MEDWIDE,  # ducks
     0x13CF7: MEDWIDE, 0x13CF8: EVERYBIT,  # lapwings
     0x13D2B: MEDIUM, 0x13D2C: MEDIUM, 0x13D2D: MEDIUM,
@@ -384,7 +384,8 @@ GLYPH_SIZES = {
     0x13FD7: MEDWIDE,
     0x13FEF: EVERYBIT,  # gate of lions
     0x14004: MEDWIDE,
-    0x14015: SMALL,
+    0x14015: MEDIUM,  # threshing floor + village
+    0x14016: MEDIUM,  # another version of threshing floor
     0x140CA: MEDIUM,
     0x140F5: WIDE, 0x140F6:WIDE, 0x140F7: WIDE, 0x140F8: WIDE,
     0x140FA: MEDIUM,

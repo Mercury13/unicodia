@@ -484,6 +484,7 @@ Subtotal: 25
 - 13FEA: thinner lines
 - 13FEC: bovid’s ears
 - 1400A: redrew
+- 14015: after similar-looking basic O50’s
 - 140C6: found out that loop was done by adding a white object, but redrew
 - 14018: double lines → thin
 - 1401A: consistency, after 22/26
@@ -505,8 +506,8 @@ Subtotal: 25
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun
-- 1413E: other feather, no double lines, other handle: THREE HUNDRED
+- 1413B: no sun: THREE HUNDRED
+- 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
@@ -574,7 +575,7 @@ Subtotal: 25
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 366
+Subtotal: 367
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -599,6 +600,7 @@ Subtotal: 366
 - 1329F: after 9E
 - 132BC: made from R10
 - 132C3: after C2
+- 132CD: made somehow from another R26
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -747,6 +749,7 @@ Subtotal: 366
 - 13C4F: after 50 + bottom of legs taken elsewhere
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
+- 13CC7: JSesh G162A + some very simplified uraeus
 - 13CDD: after DC
 - 13D06: after 07
 - 13D46: 13D47 − flail
@@ -819,7 +822,7 @@ Subtotal: 366
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 241
+Subtotal: 243
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -827,4 +830,4 @@ Subtotal: 241
 
 Subtotal: 2
 
-Total: 962
+Total: 965
