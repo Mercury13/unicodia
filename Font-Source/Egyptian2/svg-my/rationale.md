@@ -674,6 +674,7 @@ Subtotal: 366
 - 13776: after 75
 - 137D4: found similar, drew sun
 - 1378F: after 8E
+- 137E2: JSesh C72, −staff, +spear
 - 137E8: campaign for millions
 - 137E9: campaign for millions
 - 137F0: after EF, man with palm branches for million
@@ -814,7 +815,7 @@ Subtotal: 366
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 238
+Subtotal: 239
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -822,4 +823,4 @@ Subtotal: 238
 
 Subtotal: 2
 
-Total: 957
+Total: 958
