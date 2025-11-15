@@ -743,8 +743,9 @@ Subtotal: 367
 - 13CC6: after CC4, simplified
 - 13CDD: after DC
 - 13D06: after 07
-- 13D46: 47 − flail
+- 13D46: 13D47 − flail
 - 13D47: some I98 + greatly simplified
+- 13D52: I7C − wickerwork
 - 13D61: oval from eyes + some snake
 - 13D74: franken
 - 13D94: 93 + flail
@@ -811,7 +812,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 236
+Subtotal: 237
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -819,4 +820,4 @@ Subtotal: 236
 
 Subtotal: 2
 
-Total: 954
+Total: 955
