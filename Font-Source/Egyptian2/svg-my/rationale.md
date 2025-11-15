@@ -132,8 +132,10 @@ Subtotal: 189
 - 13137: same
 - 13138: same
 - 1314B: taken from blockA (simpler)
+- 1314C: our falcon-sphinxes HAVE base
 - 1314D: simpler eye, different crossbeam
-- 1314F: removed sun
+- 1314E: our falcon-sphinxes HAVE base
+- 1314F: removed sun, our falcon-sphinxes HAVE base
 - 13152: squeezed every bit of width
 - 13187: too heavy
 - 1318E: too heavy, accidentally found in Egyptian nomes and remade
@@ -171,7 +173,7 @@ Subtotal: 189
 - 132AB: thinner
 - 132C2: removed hollow handle
 
-Subtotal: 135
+Subtotal: 137
 
 # Campaign for walls / main block
 - 13250
@@ -820,4 +822,4 @@ Subtotal: 237
 
 Subtotal: 2
 
-Total: 955
+Total: 957
