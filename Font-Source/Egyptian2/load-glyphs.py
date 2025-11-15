@@ -242,6 +242,7 @@ GLYPH_SIZES = {
     0x13295: SMALL,  # enclosed mound
     0x13296: SMALL,  # village
     0x13297: MEDIUM,  # threshing floor
+    0x13298: MEDIUM, 0x13299: MEDIUM,  # same, simplified
     # P: ships
     0x1329B: MEDWIDE, 0x1329C: MEDWIDE,  # basic boat
     0x1329D: MEDWIDE,  # ship under sail

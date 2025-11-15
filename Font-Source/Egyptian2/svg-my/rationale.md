@@ -168,12 +168,14 @@ Subtotal: 189
 - 13292: thinner
 - 13295: thinner
 - 13296: thinner
+- 13298: craggy
+- 13299: 13298 turned
 - 132A6: different P8 as source
 - 132AA: bigger, thicker
 - 132AB: thinner
 - 132C2: removed hollow handle
 
-Subtotal: 137
+Subtotal: 139
 
 # Campaign for walls / main block
 - 13250
@@ -787,6 +789,7 @@ Subtotal: 366
 - 14076: after 78
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
+- 140B1: from JSesh Q25a
 - 140FE: after FC
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
@@ -815,7 +818,7 @@ Subtotal: 366
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 239
+Subtotal: 240
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -823,4 +826,4 @@ Subtotal: 239
 
 Subtotal: 2
 
-Total: 958
+Total: 961
