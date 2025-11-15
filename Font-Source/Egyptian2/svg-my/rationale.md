@@ -238,7 +238,6 @@ Subtotal: 25
 - 135FB: removed intersection, major simplifications
 - 1360F: kneel rather than ride the back
 - 1361E: arm raise in front rather than begging
-- 13625: removed PLACEHOLDERS
 - 1363E: need beard
 - 13641: beard barely god → god
 - 13645: beard king → god
@@ -304,8 +303,8 @@ Subtotal: 25
 - 13757: short hair
 - 13759: short hair
 - 1375A: short hair
-- 1375B: short hair: ONE HUNDRED
-- 1375C: short hair
+- 1375B: short hair
+- 1375C: short hair: ONE HUNDRED
 - 13766: vertical ankh
 - 13767: same
 - 13772: stretched heel → normal, white legs → black
@@ -404,8 +403,8 @@ Subtotal: 25
 - 13C28: white neck
 - 13C2B: white curvier neck
 - 13C51: egret has two feathers
-- 13C52: same + fixed intersection at claw/base: TWO HUNDRED
-- 13C53: same
+- 13C52: same + fixed intersection at claw/base
+- 13C53: same: TWO HUNDRED
 - 13C54: same
 - 13C55: same
 - 13C57: same
@@ -504,8 +503,8 @@ Subtotal: 25
 - 14137: no sun
 - 14138: no sun
 - 1413A: no sun
-- 1413B: no sun: THREE HUNDRED
-- 1413E: other feather, no double lines, other handle
+- 1413B: no sun
+- 1413E: other feather, no double lines, other handle: THREE HUNDRED
 - 1413F: per 3E
 - 14140: no double lines
 - 14146: after R22, but true circle
@@ -573,7 +572,7 @@ Subtotal: 25
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 367
+Subtotal: 366
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -823,4 +822,4 @@ Subtotal: 238
 
 Subtotal: 2
 
-Total: 958
+Total: 957
