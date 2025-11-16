@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   sodipodi:docname="T3.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:version="0.32"
+   id="svg1290"
+   height="1000"
+   width="400"
+   version="1.0"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="998"
+     inkscape:window-width="1680"
+     inkscape:current-layer="svg1290"
+     inkscape:document-units="px"
+     inkscape:cy="500"
+     inkscape:cx="199.33775"
+     inkscape:zoom="0.755"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false"
+     gridspacingx="0px"
+     gridspacingy="0px"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/2.0/" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>JSesh hieroglyph</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:28.6894;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+     d="M 73.570038,0.03589396 V 46.353574 C 31.56608,56.461214 -2.4407164,89.069066 0.15884377,197.75893 1.8031738,266.5098 45.556112,332.26017 82.395034,345.40069 L 72.222634,1000 H 175.13155 L 155.93343,347.60887 c 57.22329,-15.33294 83.18861,-98.53286 84.80236,-149.307 C 244.20187,88.380203 199.01046,55.303656 161.57012,45.271538 V 0.03589396 Z M 105.32476,31.790815 h 24.49059 v 44.553451 c 16.17434,-0.465127 26.13621,-0.617632 34.03387,2.744736 42.7999,15.239254 45.80891,81.305828 44.22189,118.125438 -2.22809,50.82644 -27.52486,109.68897 -65.80342,119.22069 -15.65886,4.56267 -35.09777,5.09017 -50.515836,-1.29852 -26.366386,-11.84432 -59.534996,-71.29175 -59.534996,-117.20513 0,-74.56683 11.666035,-105.307838 42.201989,-118.777486 9.852176,-4.007745 20.565325,-2.516816 30.905913,-2.809712 z m 12.73125,330.519425 16.56921,338.71085 -24.07545,-0.0994 z m -8.19812,370.92201 25.7013,0.1667 0.76099,27.95858 -27.08502,0.0667 z m 27.39626,59.8819 0.58807,19.88997 -29.74847,0.0667 0.44955,-19.82068 z m 1.52199,52.20042 0.8648,29.95818 -32.93082,0.40564 0.69176,-30.78624 z m 1.79872,61.74758 1.86795,61.18306 h -37.77363 l 1.34907,-60.67312 z"
+     id="path1352"
+     sodipodi:nodetypes="ccsccccscccccccsccsccccccccccccccccccccccccccc" />
+</svg>

@@ -162,6 +162,7 @@ Subtotal: 189
 - 1324F: franken from several Nu22’s
 - 1326F: thicker outer lines
 - 13272: single line
+- 13281: made from scratch, with metrics of Unicode
 - 13288: gave more space above/below
 - 13289: same
 - 13290: from scratch
@@ -177,8 +178,12 @@ Subtotal: 189
 - 132DE: liberated from some collar + Seth staff
 - 132E1: grafted fork from 132E2
 - 132E2: made from E1, wider fork
+- 132F4: old S29 from intestine
+- 132F5: made for myself, nicer
+- 132F9: had good optimized ankh
+- 13304: made from scratch, taking flail from 132EC
 
-Subtotal: 142
+Subtotal: 147
 
 # Campaign for walls / main block
 - 13250
@@ -598,14 +603,18 @@ Subtotal: 367
 - 13270: legacy, shrine
 - 13277: after obelisk w/o sun
 - 1327E: legacy, four poles
+- 13282: made from scratch, with metrics of Unicode
 - 13297: drew from scratch
 - 1329E: drew from scratch
 - 1329F: after 9E
 - 132BC: made from R10
 - 132C3: after C2
 - 132CD: made somehow from another R26
+- 132CE: made almost from scratch (handle and arrows are not mine)
 - 132D3: obvious
 - 132D8: obvious
+- 132F0: from scratch
+- 132F1: from scratch
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -755,6 +764,7 @@ Subtotal: 367
 - 13C56: 55 + flail
 - 13CC6: after CC4, simplified
 - 13CC7: JSesh G162A + some very simplified uraeus
+- 13CD4: metrics from Unicode + bird obvious + made room for curve joining
 - 13CDD: after DC
 - 13D06: after 07
 - 13D46: 13D47 − flail
@@ -827,7 +837,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 245
+Subtotal: 250
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -835,4 +845,4 @@ Subtotal: 245
 
 Subtotal: 2
 
-Total: 970
+Total: 980
