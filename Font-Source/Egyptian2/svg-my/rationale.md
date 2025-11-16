@@ -632,6 +632,9 @@ Subtotal: 367
 - 13514: 13513 + 2nd arm from 13466
 - 13516: 13514 + 134AA
 - 13518: 13510 + 0A + 19
+- 1351C: implemented from random hieros
+- 1351F: implemented from random hieros
+- 13520: 1F + water from 22
 - 13526: after 25
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
@@ -822,7 +825,7 @@ Subtotal: 367
 - 141A2: after A1
 - 141C9: after C8
 - 14203: after 02
-- 1321F: after 132CE
+- 1421F: after 132CE
 - 1425B: after 5A
 - 14292: after 90 and others
 - 14297: after 96
@@ -840,7 +843,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 252
+Subtotal: 255
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -848,4 +851,4 @@ Subtotal: 252
 
 Subtotal: 2
 
-Total: 983
+Total: 986
