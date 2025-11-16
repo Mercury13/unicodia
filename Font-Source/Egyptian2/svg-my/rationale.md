@@ -175,6 +175,7 @@ Subtotal: 189
 - 132AA: bigger, thicker
 - 132AB: thinner
 - 132C2: removed hollow handle
+- 132DC: made from scratch, too thick
 - 132DE: liberated from some collar + Seth staff
 - 132E1: grafted fork from 132E2
 - 132E2: made from E1, wider fork
@@ -183,7 +184,7 @@ Subtotal: 189
 - 132F9: had good optimized ankh
 - 13304: made from scratch, taking flail from 132EC
 
-Subtotal: 147
+Subtotal: 148
 
 # Campaign for walls / main block
 - 13250
@@ -846,4 +847,4 @@ Subtotal: 251
 
 Subtotal: 2
 
-Total: 981
+Total: 982
