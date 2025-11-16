@@ -736,6 +736,7 @@ Subtotal: 367
 - 13A63: master class
 - 13A69: the proper one had two sets of horns, removed flail from the improper :(
 - 13A73: extension + removed thing in front, straighter slanted plank
+- 13A8B: 8A + longer paws + found S42 at main range
 - 13A8F: after 8E
 - 13A59: after 58
 - 13AA7: after A8
@@ -844,7 +845,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 256
+Subtotal: 257
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -852,4 +853,4 @@ Subtotal: 256
 
 Subtotal: 2
 
-Total: 987
+Total: 988
