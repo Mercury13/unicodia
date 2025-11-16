@@ -183,8 +183,13 @@ Subtotal: 189
 - 132F5: made for myself, nicer
 - 132F9: had good optimized ankh
 - 13304: made from scratch, taking flail from 132EC
+- 13315: made from cowhide pierced by arrow
+- 13316: 2×13315×1.0
+- 13328: from 14283
+- 13329: from 14283
+- 1332A: from 14283
 
-Subtotal: 148
+Subtotal: 153
 
 # Campaign for walls / main block
 - 13250
@@ -853,4 +858,4 @@ Subtotal: 257
 
 Subtotal: 2
 
-Total: 988
+Total: 993

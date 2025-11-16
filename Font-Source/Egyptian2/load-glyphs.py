@@ -25,7 +25,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x13316)) \
+    return ((code >= 0x13000) and (code <= 0x13332)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -258,7 +258,9 @@ GLYPH_SIZES = {
     0x132EC: MEDWIDE,  # cartouche + 2 flails
     0x13306: MEDIUM,  # Arafat hat
     # T: weapons
-    0x13312 : MEDWIDE, 0x13313: MEDWIDE, 0x13314: MEDWIDE,  # bows
+    0x13312: MEDWIDE, 0x13313: MEDWIDE, 0x13314: MEDWIDE,  # bows
+    0x1331D: WIDE,  # chariot
+    0x13328: MEDIUM,  # butcher’s block
     # EGYP A
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
