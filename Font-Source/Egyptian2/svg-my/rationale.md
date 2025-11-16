@@ -631,6 +631,7 @@ Subtotal: 367
 - 13513: 13510 + UniKemet A426
 - 13514: 13513 + 2nd arm from 13466
 - 13516: 13514 + 134AA
+- 13518: 13510 + 0A + 19
 - 13526: after 25
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
@@ -839,7 +840,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 251
+Subtotal: 252
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -847,4 +848,4 @@ Subtotal: 251
 
 Subtotal: 2
 
-Total: 982
+Total: 983
