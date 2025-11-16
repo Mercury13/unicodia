@@ -174,8 +174,11 @@ Subtotal: 189
 - 132AA: bigger, thicker
 - 132AB: thinner
 - 132C2: removed hollow handle
+- 132DE: liberated from some collar + Seth staff
+- 132E1: grafted fork from 132E2
+- 132E2: made from E1, wider fork
 
-Subtotal: 139
+Subtotal: 142
 
 # Campaign for walls / main block
 - 13250
@@ -601,6 +604,8 @@ Subtotal: 367
 - 132BC: made from R10
 - 132C3: after C2
 - 132CD: made somehow from another R26
+- 132D3: obvious
+- 132D8: obvious
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -822,7 +827,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 243
+Subtotal: 245
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -830,4 +835,4 @@ Subtotal: 243
 
 Subtotal: 2
 
-Total: 965
+Total: 970
