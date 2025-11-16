@@ -749,6 +749,7 @@ Subtotal: 367
 - 13B0A: after 09
 - 13B1C: after 1D
 - 13B58: after extended E268
+- 13B5D: after 5C
 - 13B65: after 64
 - 13B7B: after other dogs and mace T3
 - 13B85: after 81
@@ -843,7 +844,7 @@ Subtotal: 367
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 255
+Subtotal: 256
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -851,4 +852,4 @@ Subtotal: 255
 
 Subtotal: 2
 
-Total: 986
+Total: 987
