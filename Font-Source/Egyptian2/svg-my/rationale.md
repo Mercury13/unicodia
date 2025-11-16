@@ -188,8 +188,10 @@ Subtotal: 189
 - 13328: from 14283
 - 13329: from 14283
 - 1332A: from 14283
+- 1322D: my new folded cloth
+- 1322F: my new folded cloth
 
-Subtotal: 153
+Subtotal: 155
 
 # Campaign for walls / main block
 - 13250
@@ -858,4 +860,4 @@ Subtotal: 257
 
 Subtotal: 2
 
-Total: 993
+Total: 995
