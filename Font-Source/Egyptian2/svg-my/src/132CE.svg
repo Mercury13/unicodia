@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.53386562"
-     inkscape:cx="113.3244"
-     inkscape:cy="544.14442"
+     inkscape:zoom="0.755"
+     inkscape:cx="366.22517"
+     inkscape:cy="452.31788"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -59,7 +59,7 @@
      id="path4"
      sodipodi:nodetypes="ccsccc" />
   <rect
-     style="fill:none;fill-rule:evenodd;stroke:#813d9c;stroke-width:30;stroke-linecap:round;stroke-miterlimit:2;stroke-dasharray:none"
+     style="fill:none;fill-rule:evenodd;stroke:#ff7800;stroke-width:30;stroke-linecap:round;stroke-miterlimit:2;stroke-dasharray:none"
      id="rect5"
      width="187.83337"
      height="529.51007"
@@ -73,21 +73,40 @@
      id="path6" />
   <path
      style="fill:#000000;stroke:none;stroke-width:0.999998"
-     d="m 719.59112,462.04986 -14.19224,-8.19389 5.55639,38.64558 -13.84653,-2.83352 -5.90207,-44.00594 -13.67617,-7.89594 5.04027,38.3476 -13.84649,-2.83349 -5.38604,-43.70801 -14.1922,-8.19388 5.55635,38.64556 -14.3626,-3.13147 -5.386,-43.70799 -13.4181,-7.74694 4.78224,38.19863 -13.5885,-2.68454 -5.38599,-43.70799 -440.40631,-253.23656 17.09905,44.2776 -2.68164,4.64474 -63.31182,-90.56964 109.79355,10.06093 -2.68164,4.64474 -46.89505,7.33058 439.95938,254.01066 40.09829,-16.41548 9.41708,9.90965 -35.32312,14.69973 13.4181,7.74694 40.0983,-16.41548 10.19118,10.35658 -36.09723,14.2528 14.1922,8.19388 40.09834,-16.41546 9.67507,10.0586 -35.58115,14.55076 13.67617,7.89594 40.61437,-16.11753 9.67511,10.05863 -36.09727,14.25278 14.19224,8.19389 z"
-     id="path1"
-     inkscape:transform-center-x="-10.503085"
-     inkscape:transform-center-y="17.67578" />
+     d="m 647.50806,41.781278 -11.58791,11.587917 -4.63516,-38.766861 -12.64134,6.320715 5.6886,44.034043 -11.16654,11.166545 -5.05657,-38.345453 -12.64131,6.320672 6.10994,43.612713 -11.58787,11.587889 -4.63519,-38.766832 -13.06273,6.742079 6.10999,43.612675 -10.95584,10.95583 -5.26724,-38.134778 -12.43066,6.110025 6.10999,43.612673 -359.85739,358.59329 5.05652,-47.19444 -3.79241,-3.79242 -37.71336,103.86987 103.44846,-38.13477 -3.79242,-3.79243 -47.19442,5.05655 359.22533,-359.22533 42.9806,5.47793 6.53141,-12.0093 -37.92409,-5.05655 10.95583,-10.95583 42.98063,5.47792 7.16343,-12.64135 -38.55613,-4.4245 11.58788,-11.5879 42.98064,5.47791 6.74205,-12.219969 -38.13477,-4.845866 11.16656,-11.166553 43.40198,5.056564 6.74208,-12.219987 -38.55617,-4.424466 11.58791,-11.58791 z"
+     id="use6" />
+  <path
+     style="fill:none;stroke:#613583;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="m 513.00143,452.8293 c 71.17896,71.17897 105.45304,167.55721 106.30016,317.49563 h -46.82827 c 0,-129.33398 -14.51676,-230.39506 -59.47189,-317.49563 z"
+     id="path7"
+     sodipodi:nodetypes="cccc" />
   <use
      x="0"
      y="0"
-     xlink:href="#path1"
-     inkscape:transform-center-x="-10.503085"
-     inkscape:transform-center-y="-17.67578"
-     id="use6"
+     xlink:href="#use6"
+     id="use2"
      transform="matrix(1,0,0,-1,0,559.50976)" />
   <path
-     style="fill:none;stroke:#613583;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 518.62082,391.95256 c 71.17896,71.17897 105.45304,167.55721 106.30016,317.49563 h -46.82827 c 0,-129.33398 -14.51676,-230.39506 -59.47189,-317.49563 z"
-     id="path7"
-     sodipodi:nodetypes="cccc" />
+     id="rect3"
+     style="fill:none;fill-rule:evenodd;stroke:#813d9c;stroke-width:30;stroke-linecap:butt;stroke-miterlimit:2"
+     d="m 367.87354,279.75488 c 0,-68.20434 -37.08609,-113.89213 -37.08609,-170.83819 0,-52.029849 41.88684,-93.916691 93.91668,-93.916691"
+     sodipodi:nodetypes="csc" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#rect3"
+     id="use3"
+     transform="matrix(1,0,0,-1,0,559.50976)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#rect3"
+     id="use4"
+     transform="matrix(-1,0,0,1,849.40826,0)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#rect3"
+     id="use5"
+     transform="rotate(180,424.70412,279.75488)" />
 </svg>
