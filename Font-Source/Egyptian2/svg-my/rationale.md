@@ -185,6 +185,7 @@ Subtotal: 189
 - 13304: made from scratch, taking flail from 132EC
 - 13315: made from cowhide pierced by arrow
 - 13316: 2×13315×1.0
+- 13317: campaign for bowstrings
 - 13328: from 14283
 - 13329: from 14283
 - 1332A: from 14283
@@ -192,7 +193,7 @@ Subtotal: 189
 - 1322F: my new folded cloth
 - 13337: 34 + 36
 
-Subtotal: 156
+Subtotal: 157
 
 # Campaign for walls / main block
 - 13250
@@ -864,4 +865,4 @@ Subtotal: 258
 
 Subtotal: 2
 
-Total: 999
+Total: 1000
