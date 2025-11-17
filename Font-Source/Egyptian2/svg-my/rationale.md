@@ -190,8 +190,9 @@ Subtotal: 189
 - 1332A: from 14283
 - 1322D: my new folded cloth
 - 1322F: my new folded cloth
+- 13337: 34 + 36
 
-Subtotal: 155
+Subtotal: 156
 
 # Campaign for walls / main block
 - 13250
@@ -540,6 +541,7 @@ Subtotal: 25
 - 141E8: redrew for more pronounced “bell”
 - 141F1: redrew from scratch
 - 141F3: redrew from scratch; it’s a cloth rather than a room with uraei
+- 14201: redrew from scratch; consistent with 02 and 03
 - 14202: redrew from scratch; thick lines even on small size
 - 14212: after 13
 - 14213: flip arrows ↑↓
@@ -592,7 +594,7 @@ Subtotal: 25
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 368
+Subtotal: 369
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -624,6 +626,7 @@ Subtotal: 368
 - 132D8: obvious
 - 132F0: from scratch
 - 132F1: from scratch
+- 13332: 14201 + loop
 - 134FF: after FE + random jug W22?
 - 13502: campaign for standing with props
 - 13507: campaign for standing with props
@@ -853,7 +856,7 @@ Subtotal: 368
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 257
+Subtotal: 258
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -861,4 +864,4 @@ Subtotal: 257
 
 Subtotal: 2
 
-Total: 996
+Total: 999

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   version="1.0"
+   sodipodi:docname="14201.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.59318402"
+     inkscape:cx="218.31337"
+     inkscape:cy="595.93648"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="1800px"
+     height="1800px"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1"
+     showguides="true">
+    <sodipodi:guide
+       position="547.79264,0"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="273.89632,0"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="25,25"
+       orientation="0,1"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="25,25"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="522.79266,25"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="211.66015,737.68671"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>S. Rosmorduc</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>T36 shield, loosely inpired by a Karnak version and the Manuel de codage.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path5466"
+       style="opacity:1;fill:#ff7800;fill-opacity:1;stroke:none;stroke-width:36.0546;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 273.89901,178.36887 c -46.21436,0 -83.92559,37.73005 -83.9256,83.94442 0,46.21436 37.71124,83.92559 83.9256,83.92559 50.49421,0 82.36787,-31.93431 83.94441,-83.92559 0.2592,-51.13785 -38.60808,-83.94442 -83.94441,-83.94442 z m 0,21.70555 c 34.47288,0 62.23886,27.76599 62.23886,62.23887 0,34.47286 -27.76598,62.22005 -62.23886,62.22005 -34.47287,0 -62.23886,-27.74719 -62.23886,-62.22005 1e-5,-34.47288 27.76599,-62.23887 62.23886,-62.23887 z M 273.90478,2.1222779e-8 C 153.80558,4.0139384 0,57.447345 0,190.61101 V 1000 H 547.79264 V 190.61101 C 547.79264,55.645456 391.08298,6.7251284 273.90478,2.1222779e-8 Z M 273.90478,32.5512 c 99.35088,4.204786 241.33663,44.498745 241.33663,158.05981 V 967.44879 H 32.5512 V 190.61101 C 32.5512,76.032867 175.86966,38.352665 273.90478,32.5512 Z" />
+    <path
+       id="rect3"
+       style="fill:none;fill-rule:evenodd;stroke:#613583;stroke-width:50;stroke-miterlimit:2"
+       d="M 273.89632,975 H 25 V 214.53643 C 25,89.122917 136.00776,25 273.89633,25"
+       sodipodi:nodetypes="ccsc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect3"
+       id="use6"
+       transform="matrix(-1,0,0,1,547.79266,0)" />
+    <circle
+       style="fill:none;fill-rule:evenodd;stroke:#613583;stroke-width:29.9999;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+       id="path7"
+       cx="273.89633"
+       cy="262.31329"
+       r="83.925591" />
+  </g>
+</svg>
