@@ -226,6 +226,7 @@ Subtotal: 158
 Subtotal: 25
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
+- 13470: a bit craggy, not A1 + A2
 - 13475: from extended, better feet
 - 13478: frankenmade from scratch after 13527 using old hands
 - 1347D: covered, removed beard
@@ -324,8 +325,8 @@ Subtotal: 25
 - 13756: short hair
 - 13757: short hair
 - 13759: short hair
-- 1375A: short hair
-- 1375B: short hair: ONE HUNDRED
+- 1375A: short hair: ONE HUNDRED
+- 1375B: short hair
 - 1375C: short hair
 - 13766: vertical ankh
 - 13767: same
@@ -424,8 +425,8 @@ Subtotal: 25
 - 13C20: same
 - 13C28: white neck
 - 13C2B: white curvier neck
-- 13C51: egret has two feathers
-- 13C52: same + fixed intersection at claw/base: TWO HUNDRED
+- 13C51: egret has two feathers: TWO HUNDRED
+- 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
 - 13C55: same
@@ -524,8 +525,8 @@ Subtotal: 25
 - 140BF: bull → bubalis
 - 140FC: removed PLACEHOLDERS
 - 14137: no sun
-- 14138: no sun
-- 1413A: no sun: THREE HUNDRED
+- 14138: no sun: THREE HUNDRED
+- 1413A: no sun
 - 1413B: no sun
 - 1413E: other feather, no double lines, other handle
 - 1413F: per 3E
@@ -596,7 +597,7 @@ Subtotal: 25
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 369
+Subtotal: 370
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -867,4 +868,4 @@ Subtotal: 259
 
 Subtotal: 2
 
-Total: 1002
+Total: 1003
