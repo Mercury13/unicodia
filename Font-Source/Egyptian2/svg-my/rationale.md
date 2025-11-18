@@ -174,6 +174,7 @@ Subtotal: 189
 - 132A6: different P8 as source
 - 132AA: bigger, thicker
 - 132AB: thinner
+- 132AE: after 140C6 and C7
 - 132C2: removed hollow handle
 - 132DC: made from scratch, too thick
 - 132DE: liberated from some collar + Seth staff
@@ -193,7 +194,7 @@ Subtotal: 189
 - 1322F: my new folded cloth
 - 13337: 34 + 36
 
-Subtotal: 157
+Subtotal: 158
 
 # Campaign for walls / main block
 - 13250
@@ -828,6 +829,7 @@ Subtotal: 369
 - 14081: after 7F, trusted description/NG rather than samples
 - 1408C: after 8E
 - 140B1: from JSesh Q25a
+- 140C8: after Q7=132AE
 - 140FE: after FC
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
@@ -857,7 +859,7 @@ Subtotal: 369
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 258
+Subtotal: 259
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -865,4 +867,4 @@ Subtotal: 258
 
 Subtotal: 2
 
-Total: 1000
+Total: 1002
