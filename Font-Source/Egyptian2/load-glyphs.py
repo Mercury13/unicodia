@@ -274,7 +274,7 @@ GLYPH_SIZES = {
     0x134FA: WIDE,
     0x13518: MEDWIDE,  # pouring
     0x1351B: WIDE, 0x1351C: WIDE, 0x1351D: WIDE, 0x1351E: WIDE,  # pouring
-    0x1352E: EVERYBIT,  # man w/grindstone
+    0x1352E: WIDE,  # man w/grindstone, no need to squeeze
     0x13548: EVERYBIT,
     0x135BB: MEDWIDE,
     0x135BD: WIDE,
