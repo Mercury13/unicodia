@@ -262,6 +262,7 @@ GLYPH_SIZES = {
     0x1331D: WIDE,  # chariot
     0x13328: MEDIUM,  # butcher’s block
     # EGYP A
+    # A: man
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
     0x13481: MEDWIDE,
     0x1348E: MEDWIDE,
@@ -273,6 +274,7 @@ GLYPH_SIZES = {
     0x134FA: WIDE,
     0x13518: MEDWIDE,  # pouring
     0x1351B: WIDE, 0x1351C: WIDE, 0x1351D: WIDE, 0x1351E: WIDE,  # pouring
+    0x1352E: EVERYBIT,  # man w/grindstone
     0x13548: EVERYBIT,
     0x135BB: MEDWIDE,
     0x135BD: WIDE,
@@ -290,8 +292,10 @@ GLYPH_SIZES = {
     0x136A4: WIDE,
     0x136CE: EVERYBIT,
     0x136D1: WIDE, 0x136D2: EVERYBIT,
+    # B: woman
     0x1371B: MEDIUM,
     0x13746: MEDIUM, 0x13747: MEDIUM,
+    # C: god
     0x1378C: WIDE,
     0x137E3: WIDE, 0x137E4: WIDE, 0x137E5: WIDE, 0x137E6: WIDE,
     0x137F1: WIDE, 0x137F2: WIDE,
