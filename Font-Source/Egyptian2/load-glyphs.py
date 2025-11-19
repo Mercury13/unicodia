@@ -304,7 +304,8 @@ GLYPH_SIZES = {
     0x13872: WIDE,
     0x138BE: WIDE,
     0x13923: WIDE, 0x13924: WIDE, 
-    0x1392A: EVERYBIT,
+    0x1392A: EVERYBIT,  # woman holding sky
+    # D: parts of human
     0x1392D: MEDIUM, 0x1392E: SMALL, 0x1392F: SMALL,  # heads
     0x1393C: MEDIUM,
     0x13944: MEDWIDE, 0x13945: SQUARE, 0x13946: SQUARE,  # head + arm
@@ -322,10 +323,12 @@ GLYPH_SIZES = {
     0x139F8: WIDE,
     0x139FC: SMALL,
     0x13A05: SMALL,
-    0x13A0A: SMALL, 0x13A0B: SMALL, 0x13A0C: MEDIUM, 0x13A0F: MEDIUM,
-    0x13A17: MEDIUM, 0x13A18: MEDIUM,
-    0x13A31: SMALL,
-    0x13A34: SMALL,
+    0x13A0A: SMALL, 0x13A0B: SMALL, 0x13A0C: MEDIUM,  # testicles
+    0x13A0E: SMALL, 0x13A0F: MEDIUM,  # vulva
+    0x13A17: MEDIUM, 0x13A18: MEDIUM, # smth on feet: wanted consistent size?
+    0x13A31: SMALL,  # toe
+    0x13A34: SMALL,  # windpipe
+    # E: animals
     0x13A39: MED_DONKEY,  # donkeys
     0x13A41: TAILLESS_DONKEY, 0x13A42: SMALL_DONKEY, 0x13A43: SMALL_DONKEY,  # more donkeys
     0x13A53: CELLHEIGHT,

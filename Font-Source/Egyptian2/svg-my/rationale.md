@@ -653,6 +653,7 @@ Subtotal: 370
 - 13527: 28 + old 478
 - 13528: 29 + 79 + knee from captives
 - 1352A: hiding almost from scratch, took only four buds from A421
+- 13533: after 13574
 - 13534: after 13027
 - 13548: was squished in NewG
 - 1356C: after 6B
@@ -766,6 +767,7 @@ Subtotal: 370
 - 13B58: after extended E268
 - 13B5D: after 5C
 - 13B65: after 64
+- 13B6A: after extended F1
 - 13B7B: after other dogs and mace T3
 - 13B85: after 81
 - 13B98: after 97
@@ -860,7 +862,7 @@ Subtotal: 370
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 259
+Subtotal: 261
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -868,4 +870,4 @@ Subtotal: 259
 
 Subtotal: 2
 
-Total: 1003
+Total: 1005
