@@ -14117,24 +14117,29 @@
     <text id="Tur">
      <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
     </text>
-    <text id="en">
+    <text id="en" force-attention="true">
      <orig>English</orig>
+     <transl>İngilizce</transl>
     </text>
-    <text id="es">
+    <text id="es" force-attention="true">
      <orig>Spanish</orig>
+     <transl>İspanyolca</transl>
     </text>
     <text id="fr">
      <orig>French</orig>
      <transl>Fransızca</transl>
     </text>
-    <text id="la">
+    <text id="la" force-attention="true">
      <orig>Latin</orig>
+     <transl>Latin</transl>
     </text>
-    <text id="nl">
+    <text id="nl" force-attention="true">
      <orig>Dutch</orig>
+     <transl>Hollanda</transl>
     </text>
-    <text id="ru">
+    <text id="ru" force-attention="true">
      <orig>Russian</orig>
+     <transl>Rus</transl>
     </text>
     <text id="BQ">
      <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
