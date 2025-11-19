@@ -227,6 +227,11 @@ Subtotal: 159
 
 Subtotal: 25
 
+# Campaign for cartouches
+- 13376
+
+Subtotal: 1
+
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
 - 13475: from extended, better feet
@@ -874,4 +879,4 @@ Subtotal: 263
 
 Subtotal: 2
 
-Total: 1013
+Total: 1014
