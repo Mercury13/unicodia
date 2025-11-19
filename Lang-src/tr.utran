@@ -14094,6 +14094,7 @@
       <p>In Western langs — no translation, in Asian — maybe</p>
       <p>1 = reason, 2 = name</p>
      </au-cmt>
+     <transl>{1} ({2})</transl>
     </text>
     <text id="Com">
      <orig>Local/foreign name</orig>
