@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1250"
+   height="650"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="13377.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.13346641"
+     inkscape:cx="-1307.4451"
+     inkscape:cy="-678.07323"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="500,650"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1220,650"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1190,650"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     id="g6"
+     transform="translate(-769.59683)"
+     style="fill:#000000" />
+  <path
+     id="path8"
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#000000;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="M 318.74219 0 C 142.38143 0 3.7895613e-14 145.34165 0 324.0625 L 0 325.9375 C 0 504.65835 142.38143 650 318.74219 650 L 901.25781 650 C 1029.1599 650 1139.1903 573.55726 1190 463.37695 L 1190 650 L 1250 650 L 1250 0 L 1190 0 L 1190 186.62305 C 1139.1903 76.442742 1029.1599 0 901.25781 0 L 318.74219 0 z M 318.74219 60 L 901.25781 60 C 1044.8229 60 1160 176.96105 1160 324.0625 L 1160 325.9375 C 1160 473.03895 1044.8229 590 901.25781 590 L 318.74219 590 C 175.17711 590 60 473.03895 60 325.9375 L 60 324.0625 C 60 176.96105 175.17711 60 318.74219 60 z " />
+</svg>

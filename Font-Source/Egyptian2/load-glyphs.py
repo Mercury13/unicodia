@@ -270,6 +270,7 @@ GLYPH_SIZES = {
     0x13371: SMALL, 0x13372: SMALL, 0x13373: MEDIUM,  # rope coils
     0x13375: MEDIUM,  # coil + bread
     0x13376: MEDIUM,  # round cartouche
+    0x13377: MEDWIDE,  # oblong cartouche
     0x13378: SMALL,  # part of cartouche
     0x13382: EVERYBIT,  # looped cord
     # EGYP A
