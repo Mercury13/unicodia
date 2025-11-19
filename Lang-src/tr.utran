@@ -13776,6 +13776,7 @@
     </text>
     <text id="Ori">
      <orig>Origin of code</orig>
+     <transl>Kodun kökeni</transl>
     </text>
    </group>
    <group id="Sta">
@@ -14123,6 +14124,7 @@
     </text>
     <text id="fr">
      <orig>French</orig>
+     <transl>Fransızca</transl>
     </text>
     <text id="la">
      <orig>Latin</orig>
