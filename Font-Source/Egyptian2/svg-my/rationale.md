@@ -837,6 +837,7 @@ Subtotal: 370
 - 140FE: after FC
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
+- 14158: normal red crown + cut curl
 - 1418E: implement somehow badly
 - 14128: after 2A
 - 1414E: after 4D
@@ -863,7 +864,7 @@ Subtotal: 370
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 262
+Subtotal: 263
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -871,4 +872,4 @@ Subtotal: 262
 
 Subtotal: 2
 
-Total: 1006
+Total: 1007
