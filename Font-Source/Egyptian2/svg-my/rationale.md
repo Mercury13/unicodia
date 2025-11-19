@@ -14,6 +14,9 @@ RETURN = temporarily deleted, then returned
 - 131E8, 13EB1, 13EB2 = baskets (3)
 - 13212, 13213, 13F1F = campaign for sand (3)
 - 1321E, 1321F, 13F44, 13F45 = campaign for wells (4)
+- 13250, 13251, 13252, 13253, 13254 / 13255, 13256, 13257, 13258, 13259…
+- 1325A, 1325B, 1325C, 1325D, 1325E / 1325F, 13260, 13261, 13262, 13263…
+- 13269, 1326A, 1326B, 13280, 13F97 = campaign for walls (25)
 - 13338, 13339, 1333A, 1333B, 1333C = campaign for hoes (5)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
@@ -33,7 +36,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 194
+Subtotal: 219
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -197,35 +200,6 @@ Subtotal: 194
 - 13353: rope behind, franken between rope and drill
 
 Subtotal: 159
-
-# Campaign for walls / main block
-- 13250
-- 13251
-- 13252
-- 13253
-- 13254
-- 13255
-- 13256
-- 13257
-- 13258
-- 13259
-- 1325A
-- 1325B
-- 1325C
-- 1325D
-- 1325E
-- 1325F
-- 13260
-- 13261
-- 13262
-- 13263
-- 13269
-- 1326A
-- 1326B
-- 13280
-- 13F97
-
-Subtotal: 25
 
 # Campaign for cartouches
 - 13376
