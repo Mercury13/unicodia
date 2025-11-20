@@ -9869,8 +9869,9 @@
     <text id="Brk">
      <orig>{1} ({2})</orig>
      <au-cmt>
-      <p>In Western langs — no translation, in Asian — maybe</p>
-      <p>1 = reason, 2 = name</p>
+      <p>In Western langs — no translation, in Asian — maybe (special brackets or LtR marks)</p>
+      <p>1 = reason, always localized</p>
+      <p>2 = name, always Latin</p>
      </au-cmt>
     </text>
     <text id="Com">
