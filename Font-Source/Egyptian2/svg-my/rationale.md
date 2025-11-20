@@ -573,10 +573,11 @@ Subtotal: 159
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
+- 1439E: well rather than vessel
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 371
+Subtotal: 372
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -855,4 +856,4 @@ Subtotal: 267
 
 Subtotal: 2
 
-Total: 1035
+Total: 1036
