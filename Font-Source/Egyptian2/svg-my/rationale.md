@@ -203,6 +203,10 @@ Subtotal: 226
 Subtotal: 159
 
 # Counting ropes
+- 13362
+- 13363
+- 13364
+- 13365
 - 13366
 - 13367
 - 13368
@@ -210,7 +214,7 @@ Subtotal: 159
 - 1336A
 - 1336B
 
-Subtotal: 6
+Subtotal: 10
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
@@ -864,4 +868,4 @@ Subtotal: 267
 
 Subtotal: 2
 
-Total: 1031
+Total: 1035
