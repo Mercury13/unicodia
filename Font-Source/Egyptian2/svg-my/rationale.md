@@ -23,12 +23,12 @@ RETURN = temporarily deleted, then returned
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (19)
 - 136AE, 142AD = campaign for phasing out NewGardinerNonCore (2)
-- 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C = campaign for crouching men
+- 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C…
 - 1347E, 1347F, 13480, 13481, 13482 / 13486, 13487 = campaign for crouching men (17)
 - 1348C, 1348E, 13496, 1349C, 134A0 / 134A3, 134A4, 134A5, 134A7, 134AD = campaign for standing men (10)
 - 134B0, 134B1, 134B2, 134B4, 134B5 / 134B6, 134B8, 134BB, 134C0, 134C4 = campaign for lying (10)
 - 134C8, 134C9, 134CA, 134CD, 134D2 / 134D7, 134D8, 134DA = campaign for staves (8)
-- 134E0, 134E1, 134E2, 134E3, 134E5 / 134E7, 134E8, 134E9, 134EB, 134EE = campaign for sitting with props
+- 134E0, 134E1, 134E2, 134E3, 134E5 / 134E7, 134E8, 134E9, 134EB, 134EE…
 - 134EF, 134F0, 134F6, 134F7, 134F9 = campaign for sitting with props (15)
 - 1354E, 1354F, 13550, 13556, 13557 / 13558, 13559, 1355C = seat-covered #1, 1 fixed, 7 new (8)
 - 13551, 54, 5D, 60, 61, 62, A1: campaign for terror beard, 1 fixed + 6 new (7)
