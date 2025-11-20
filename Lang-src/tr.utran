@@ -7248,17 +7248,10 @@
       <p />
       <p>Headstrokes are attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
      </orig>
-     <known-orig>
-      <p>One more remainder of Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in extremely small use.</p>
-      <p />
-      <p>Script degraded almost to [[pt:abjad|consonant]]: consonant letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions important for accounting books. Many of them are badly explored and haven’t been yet encoded.</p>
-      <p />
-      <p>Headstrokes are attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
-     </known-orig>
      <transl>
-      <p>Hint kast sisteminin bir kalıntısı daha, [[ps:Kthi|Kaithi]] gibi: bu betik 20. yüzyıla kadar bankacılar ve muhasebeciler tarafından kullanılmış ve şu anda oldukça az kullanılmaktadır.</p>
+      <p>Hint kast sisteminden bir başka kalıntı, [[ps:Kthi|Kaithi]] gibi: bu betik 20. yüzyıla kadar bankacılar ve muhasebeciler tarafından kullanılmış ve şu anda asgari düzeyde kullanımda.</p>
       <p />
-      <p>Betik neredeyse [[pt:abjad|ünsüz]]’e indirgenmiştir: ünsüz harf {{t|ka}}, {{t|ki}} ve {{t|k}} anlamına gelir. Bir ünlü önemliyse, özel işaretler vardır. [[pt:virama|viramalar]] ve [[pt:ligature|bitişik harf]] yoktur. Öte yandan, muhasebe defterleri için önemli olan birçok kısaltma ve kesir vardır. Bunların çoğu yeterince araştırılmamış ve henüz kodlanmamıştır.</p>
+      <p>Betik neredeyse [[pt:abjad|ünsüz]]’üne dönüşecek kadar bozulmuştu: aynı harf {{t|ka}}, {{t|ki}} ve {{t|k}} anlamına gelir. Bir ünlü önemliyse, özel işaretler vardır. [[pt:virama|viramalar]] ve [[pt:ligature|bitişik harf]] yoktur. Öte yandan, muhasebe defterleri için önemli olan birçok kısaltma ve kesir vardır. Bunların çoğu yeterince araştırılmamış ve henüz kodlanmamıştır.</p>
       <p />
       <p>Kafa vuruşları yalnızca başlıklarda belgelenmiştir. [[ps:Deva|Devanagari]] ve [[ps:Gujr|Gujarati]]’ye benzeyen rakamlar görülmüştür; Unicode’da bunlar [[pt:unification|birleştirilmiş]] haldedir.</p>
      </transl>
@@ -14099,37 +14092,44 @@
     <text id="Com">
      <orig>Local/foreign name</orig>
      <au-cmt>Most countries, incl. Turkey</au-cmt>
+     <transl>Yerel/yabancı ad</transl>
     </text>
     <text id="Aut">
      <orig>Local name</orig>
      <au-cmt>e.g. Germany=Deutschland</au-cmt>
+     <transl>Yerel ad</transl>
     </text>
     <text id="Exo">
      <orig>Common foreign name</orig>
      <au-cmt>common=widely used, rather than shared — e.g. Finland=Suomi, Russia=Rossiya, Montenegro=Crna Gora</au-cmt>
+     <transl>Yaygın yabancı ad</transl>
     </text>
     <text id="Old">
      <orig>Old name</orig>
      <au-cmt>e.g. for Eswatini=Swaziland, Cambodia=Khmer</au-cmt>
+     <transl>Eski ad</transl>
     </text>
     <text id="Fre">
      <orig>Free code</orig>
      <au-cmt>for some new/renamed countries like Benin, Guernsey, Serbia when it’s hard even to find a suitable code</au-cmt>
+     <transl>Serbest kod</transl>
     </text>
     <text id="Eur">
      <orig>European name for land</orig>
      <au-cmt>some scarcely inhabited islands</au-cmt>
+     <transl>Ülkenin Avrupa adı</transl>
     </text>
     <text id="Tur">
      <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
      <au-cmt>for Kazakhstan=Qazaqstan, Uzbekistan=Ozbekiston</au-cmt>
+     <transl>Rus kökenli yabancı ad + yerel Kiril yazısının eski Latinleştirilmiş biçimi</transl>
     </text>
-    <text id="en" force-attention="true">
+    <text id="en">
      <orig>English</orig>
      <au-cmt>for Hungary=Magyar and some islands</au-cmt>
      <transl>İngilizce</transl>
     </text>
-    <text id="es" force-attention="true">
+    <text id="es">
      <orig>Spanish</orig>
      <au-cmt>for some colonies related to Spain, e.g. West Sahara</au-cmt>
      <transl>İspanyolca</transl>
@@ -14139,44 +14139,50 @@
      <au-cmt>For Antarctica=Antarctique and more</au-cmt>
      <transl>Fransızca</transl>
     </text>
-    <text id="la" force-attention="true">
+    <text id="la">
      <orig>Latin</orig>
      <au-cmt>For Switzerland=Confoederatio Helvetica</au-cmt>
      <transl>Latin</transl>
     </text>
-    <text id="nl" force-attention="true">
+    <text id="nl">
      <orig>Dutch</orig>
      <au-cmt>For South Africa=Zuid Afrika</au-cmt>
-     <transl>Hollanda</transl>
+     <transl>Flemenkçe</transl>
     </text>
-    <text id="ru" force-attention="true">
+    <text id="ru">
      <orig>Russian</orig>
      <au-cmt>For Belarus=Byelorussia</au-cmt>
-     <transl>Rus</transl>
+     <transl>Rusça</transl>
     </text>
     <text id="BQ">
      <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
      <au-cmt>For Caribbean Netherlands</au-cmt>
+     <transl>Serbest kod; diğer adı Bonaire, Saba ve Sint Eustatius</transl>
     </text>
     <text id="CQ">
      <orig>Free code; Norman French</orig>
      <au-cmt>For Sark=Sercq</au-cmt>
+     <transl>Serbest kod; Norman Fransızcası</transl>
     </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
      <au-cmt>for Dutch St Martin</au-cmt>
+     <transl>Serbest kod; Princess Juliana Havalimanı için kod</transl>
     </text>
     <text id="TW">
      <orig>The official name “Republic of China” is almost never used by foreigners</orig>
      <au-cmt>For Taiwan</au-cmt>
+     <transl>Çin Cumhuriyeti olan resmî ad, yabancılar tarafından neredeyse hiç kullanılmaz</transl>
     </text>
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
      <au-cmt>For Ukraine</au-cmt>
+     <transl>Birleşik Krallık, Büyük Britanya için ayrılmıştır</transl>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>
      <au-cmt>For Kosovo</au-cmt>
+     <transl>Geçici AB kodu</transl>
     </text>
    </group>
    <text id="Favs">
