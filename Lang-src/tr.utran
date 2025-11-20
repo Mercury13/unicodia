@@ -14098,70 +14098,94 @@
     </text>
     <text id="Com">
      <orig>Local/foreign name</orig>
+     <au-cmt>Most countries, incl. Turkey</au-cmt>
     </text>
     <text id="Aut">
      <orig>Local name</orig>
+     <au-cmt>e.g. Germany=Deutschland</au-cmt>
     </text>
     <text id="Exo">
      <orig>Common foreign name</orig>
+     <au-cmt>common=widely used, rather than shared — e.g. Finland=Suomi, Russia=Rossiya, Montenegro=Crna Gora</au-cmt>
     </text>
     <text id="Old">
      <orig>Old name</orig>
+     <au-cmt>e.g. for Eswatini=Swaziland, Cambodia=Khmer</au-cmt>
     </text>
     <text id="Fre">
      <orig>Free code</orig>
+     <au-cmt>for some new/renamed countries like Benin, Guernsey, Serbia when it’s hard even to find a suitable code</au-cmt>
     </text>
     <text id="Eur">
      <orig>European name for land</orig>
+     <au-cmt>some scarcely inhabited islands</au-cmt>
     </text>
     <text id="Tur">
      <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
+     <au-cmt>for Kazakhstan=Qazaqstan, Uzbekistan=Ozbekiston</au-cmt>
     </text>
     <text id="en" force-attention="true">
      <orig>English</orig>
+     <au-cmt>for Hungary=Magyar and some islands</au-cmt>
      <transl>İngilizce</transl>
     </text>
     <text id="es" force-attention="true">
      <orig>Spanish</orig>
+     <au-cmt>for some colonies related to Spain, e.g. West Sahara</au-cmt>
      <transl>İspanyolca</transl>
     </text>
     <text id="fr">
      <orig>French</orig>
+     <au-cmt>For Antarctica=Antarctique and more</au-cmt>
      <transl>Fransızca</transl>
     </text>
     <text id="la" force-attention="true">
      <orig>Latin</orig>
+     <au-cmt>For Switzerland=Confoederatio Helvetica</au-cmt>
      <transl>Latin</transl>
     </text>
     <text id="nl" force-attention="true">
      <orig>Dutch</orig>
+     <au-cmt>For South Africa=Zuid Afrika</au-cmt>
      <transl>Hollanda</transl>
     </text>
     <text id="ru" force-attention="true">
      <orig>Russian</orig>
+     <au-cmt>For Belarus=Byelorussia</au-cmt>
      <transl>Rus</transl>
     </text>
     <text id="BQ">
      <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
+     <au-cmt>For Caribbean Netherlands</au-cmt>
     </text>
     <text id="CQ">
      <orig>Free code; Norman French</orig>
+     <au-cmt>For Sark=Sercq</au-cmt>
     </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
+     <au-cmt>for Dutch St Martin</au-cmt>
     </text>
     <text id="TW">
      <orig>The official name “Republic of China” is almost never used by foreigners</orig>
+     <au-cmt>For Taiwan</au-cmt>
     </text>
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
+     <au-cmt>For Ukraine</au-cmt>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>
+     <au-cmt>For Kosovo</au-cmt>
     </text>
    </group>
    <text id="Favs">
     <orig>Favourites work with single characters only</orig>
+    <au-cmt>
+     <p>Test:</p>
+     <p>1. Lib, complex emoji like Animals→Birds→phoenix</p>
+     <p>2. Click heart button that’s greyed</p>
+    </au-cmt>
     <transl>Favoriler yalnızca tek karakterlerle çalışır</transl>
    </text>
   </group>
