@@ -820,6 +820,7 @@ Subtotal: 371
 - 1408C: after 8E
 - 140B1: from JSesh Q25a
 - 140C8: after Q7=132AE
+- 140F4: after 132B7
 - 140FE: after FC
 - 14107: misrender in NewG, need butcher’s block
 - 14114: after 13, just a bit wrong NewG
@@ -850,7 +851,7 @@ Subtotal: 371
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 265
+Subtotal: 266
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -858,4 +859,4 @@ Subtotal: 265
 
 Subtotal: 2
 
-Total: 1019
+Total: 1020

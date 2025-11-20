@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="1000"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="140F4.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.3775"
+     inkscape:cx="377.48344"
+     inkscape:cy="480.7947"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="588.04056,962.31632"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="475.86523,962.31641"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="path1"
+     style="fill:#000000;stroke:none;stroke-width:1"
+     d="M 530.20117 0 C 379.46649 0 250.93184 58.132138 144.59961 174.39648 L 0 160.375 L 0 340.90625 L 144.59961 326.00781 C 277.80702 440.51944 406.92512 497.77539 531.95312 497.77539 C 550.67638 497.77539 569.3727 496.44223 588.04102 493.77734 L 588.04102 460.9668 L 588.04102 37.683594 L 588.04102 4.2929688 C 568.81795 1.4307141 549.53816 0 530.20117 0 z M 514.42578 35.931641 C 526.11061 35.347416 537.7956 35.930878 549.48047 37.683594 L 549.48047 460.9668 C 537.21138 462.71951 525.52638 462.71951 514.42578 460.9668 L 514.42578 35.931641 z M 475.86523 37.683594 L 475.86523 460.9668 C 381.21787 452.20309 279.55984 397.57762 170.89062 297.08789 L 170.89062 198.05859 C 279.55984 93.479158 381.21787 40.020576 475.86523 37.683594 z M 36.806641 194.55273 L 116.55664 198.05859 L 116.55664 297.08789 L 36.806641 306.72852 L 36.806641 194.55273 z " />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path1"
+     id="use1"
+     transform="matrix(-1,0,0,1,1063.9062,0)" />
+</svg>
