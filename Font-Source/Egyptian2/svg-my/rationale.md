@@ -646,6 +646,7 @@ Subtotal: 372
 - 13578: stock pose + leg
 - 13582: franken near 81
 - 13585: after 84
+- 1358F: master class (Kolya + me), after 13509 + knife from some donkey
 - 13595: made from man with straight sticks
 - 13597: after A202: longer/thicker sticks, bigger lower hand, right is the mirrored clone of left
 - 1359D: found his cap among A1!
@@ -669,6 +670,8 @@ Subtotal: 372
 - 135E0: dancer after DF
 - 13607: campaign for horses
 - 1360A: campaign for horses, big franken
+- 13620: master class (Kolya + me), some child + the most craggy Y8
+- 13621: Kolya found the vessel, the rest craggy, put again to A446
 - 13626: after 25
 - 1362A: after 13016
 - 13633: after 13014
@@ -687,6 +690,7 @@ Subtotal: 372
 - 13677: 76 + 70
 - 1367E
 - 1367F: filled that seated hole
+- 13688: Kolya extracted Seth’s stick, the rest craggy, put again to 16384
 - 1368A
 - 1368E
 - 136D4: just three holes in seated women
@@ -851,7 +855,7 @@ Subtotal: 372
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 269
+Subtotal: 273
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -859,4 +863,4 @@ Subtotal: 269
 
 Subtotal: 2
 
-Total: 1039
+Total: 1043
