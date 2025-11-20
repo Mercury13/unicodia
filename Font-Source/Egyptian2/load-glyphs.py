@@ -10,7 +10,6 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
-    0x1333B: "U7",     # Anyway the hoe is mine, but meanwhile…
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13F29: "N31h",   # flowers in circular road
@@ -273,6 +272,7 @@ GLYPH_SIZES = {
     0x13377: MEDWIDE,  # oblong cartouche
     0x13378: SMALL,  # part of cartouche
     0x13382: EVERYBIT,  # looped cord
+    0x13385: MEDIUM,  # hobble + crossbar
     # EGYP A
     # A: man
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,

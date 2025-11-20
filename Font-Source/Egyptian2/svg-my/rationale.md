@@ -638,6 +638,7 @@ Subtotal: 372
 - 13533: after 13574
 - 13534: after 13027
 - 13536: after 13535
+- 13541: after some other JSesh’s A152
 - 13548: was squished in NewG
 - 1356C: after 6B
 - 13572: M13 (symmetrized) + A30
@@ -824,6 +825,7 @@ Subtotal: 372
 - 14114: after 13, just a bit wrong NewG
 - 14158: normal red crown + cut curl
 - 1418E: implement somehow badly
+- 14124: after 23
 - 14128: after 2A
 - 1414E: after 4D
 - 14189: 1A + simplified
@@ -849,7 +851,7 @@ Subtotal: 372
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 267
+Subtotal: 269
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -857,4 +859,4 @@ Subtotal: 267
 
 Subtotal: 2
 
-Total: 1037
+Total: 1039
