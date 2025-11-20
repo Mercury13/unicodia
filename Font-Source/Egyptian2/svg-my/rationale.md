@@ -314,6 +314,7 @@ Subtotal: 3
 - 13766: vertical ankh
 - 13767: same
 - 13772: stretched heel → normal, white legs → black
+- 13797: too long and polygonal foot he sits on, deleted armbands
 - 137EC: man’s hair/beard
 - 137EF: no beard, no collar
 - 137F1: no beard, no collar
@@ -407,8 +408,8 @@ Subtotal: 3
 - 13C1F: wrong direction
 - 13C20: same
 - 13C28: white neck
-- 13C2B: white curvier neck
-- 13C51: egret has two feathers: TWO HUNDRED
+- 13C2B: white curvier neck: TWO HUNDRED
+- 13C51: egret has two feathers
 - 13C52: same + fixed intersection at claw/base
 - 13C53: same
 - 13C54: same
@@ -507,8 +508,8 @@ Subtotal: 3
 - 140A8: more details
 - 140BF: bull → bubalis
 - 140FC: removed PLACEHOLDERS
-- 14137: no sun
-- 14138: no sun: THREE HUNDRED
+- 14137: no sun: THREE HUNDRED
+- 14138: no sun
 - 1413A: no sun
 - 1413B: no sun
 - 1413E: other feather, no double lines, other handle
@@ -580,7 +581,7 @@ Subtotal: 3
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 370
+Subtotal: 371
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -641,6 +642,7 @@ Subtotal: 370
 - 13534: after 13027
 - 13548: was squished in NewG
 - 1356C: after 6B
+- 13572: M13 (symmetrized) + A30
 - 13574: after some extended
 - 13578: stock pose + leg
 - 13582: franken near 81
@@ -847,7 +849,7 @@ Subtotal: 370
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 263
+Subtotal: 264
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -855,4 +857,4 @@ Subtotal: 263
 
 Subtotal: 2
 
-Total: 1016
+Total: 1018
