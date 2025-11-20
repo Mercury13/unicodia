@@ -202,6 +202,16 @@ Subtotal: 226
 
 Subtotal: 159
 
+# Counting ropes
+- 13366
+- 13367
+- 13368
+- 13369
+- 1336A
+- 1336B
+
+Subtotal: 6
+
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
 - 13475: from extended, better feet
@@ -854,4 +864,4 @@ Subtotal: 267
 
 Subtotal: 2
 
-Total: 1025
+Total: 1031

@@ -266,7 +266,7 @@ GLYPH_SIZES = {
     0x1334A: SMALL,
     # V: ropes
     0x13364: MEDWIDE, 0x13365: WIDE, 0x13366: MEDWIDE, 0x13367: MEDWIDE,  # rope counting
-    0x13368: WIDE, 0x13369: WIDE, 0x1336A: EVERYBIT, 0x1336B: EVERYBIT,  # rope counting
+    0x13368: WIDE, 0x13369: WIDE, 0x1336A: WIDE, 0x1336B: EVERYBIT,  # rope counting
     0x13371: SMALL, 0x13372: SMALL, 0x13373: MEDIUM,  # rope coils
     0x13375: MEDIUM,  # coil + bread
     0x13376: MEDIUM,  # round cartouche
