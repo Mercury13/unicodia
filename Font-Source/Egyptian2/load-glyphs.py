@@ -336,7 +336,7 @@ GLYPH_SIZES = {
     0x139FC: SMALL,
     0x13A05: SMALL,
     0x13A0A: SMALL, 0x13A0B: SMALL, 0x13A0C: MEDIUM,  # testicles
-    0x13A0E: SMALL, 0x13A0F: MEDIUM,  # vulva
+    0x13A0D: SMALL, 0x13A0E: SMALL, 0x13A0F: MEDIUM,  # vulva
     0x13A17: MEDIUM, 0x13A18: MEDIUM, # smth on feet: wanted consistent size?
     0x13A31: SMALL,  # toe
     0x13A34: SMALL,  # windpipe

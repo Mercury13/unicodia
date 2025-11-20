@@ -732,6 +732,7 @@ Subtotal: 371
 - 139C3: after D35, too small in NewG
 - 139C9: after D35a, too small in NewG
 - 139E9: franken
+- 13A0D: after 0E, and 0E is from new JSesh
 - 13A26: after 25
 - 13A41: campaign for donkeys, after E216k
 - 13A63: master class
@@ -849,7 +850,7 @@ Subtotal: 371
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 264
+Subtotal: 265
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -857,4 +858,4 @@ Subtotal: 264
 
 Subtotal: 2
 
-Total: 1018
+Total: 1019
