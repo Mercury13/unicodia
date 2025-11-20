@@ -18,6 +18,7 @@ RETURN = temporarily deleted, then returned
 - 1325A, 1325B, 1325C, 1325D, 1325E / 1325F, 13260, 13261, 13262, 13263…
 - 13269, 1326A, 1326B, 13280, 13F97 = campaign for walls (25)
 - 13338, 13339, 1333A, 1333B, 1333C = campaign for hoes (5)
+- 13362, 13363, 13364, 13365, 13366 / 13367, 13368, 13369, 1336A, 1336B = counting ropes (10)
 - 13376, 13377, 13378, 13379, 1337A / 1337B, 1342F = campaign for cartouches (7)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
@@ -37,7 +38,7 @@ RETURN = temporarily deleted, then returned
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 226
+Subtotal: 236
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -201,20 +202,6 @@ Subtotal: 226
 - 13353: rope behind, franken between rope and drill
 
 Subtotal: 159
-
-# Counting ropes
-- 13362
-- 13363
-- 13364
-- 13365
-- 13366
-- 13367
-- 13368
-- 13369
-- 1336A
-- 1336B
-
-Subtotal: 10
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
