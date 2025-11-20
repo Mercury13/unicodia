@@ -469,8 +469,8 @@ BRK_INFO = {
     0x1325B: BRK_CLOSE * 200, 0x1325C: BRK_CLOSE * 200, 0x1325D: BRK_CLOSE * 280,  # walls 2
     0x13286: BRK_OPEN * 180,  0x13287: BRK_CLOSE * 180,  # round fortified walls
     0x13288: BRK_OPEN * 280,  0x13289: BRK_CLOSE * 280,  # square fortified walls
-    0x13379: BRK_OPEN,  0x1337A: BRK_CLOSE, 0x1337B: BRK_CLOSE,  # cartouches
-    0x1342F: BRK_OPEN,  # leftover cartouche
+    0x13379: BRK_OPEN * 170,  0x1337A: BRK_CLOSE * 170, 0x1337B: BRK_CLOSE * 170,  # cartouches
+    0x1342F: BRK_OPEN * 170,  # leftover cartouche
 }
 
 def glyphSize(cp):
