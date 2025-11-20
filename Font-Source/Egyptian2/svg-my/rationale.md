@@ -640,6 +640,7 @@ Subtotal: 371
 - 1352E: 1352D + 135B3 + some random head
 - 13533: after 13574
 - 13534: after 13027
+- 13536: after 13535
 - 13548: was squished in NewG
 - 1356C: after 6B
 - 13572: M13 (symmetrized) + A30
@@ -851,7 +852,7 @@ Subtotal: 371
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 266
+Subtotal: 267
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -859,4 +860,4 @@ Subtotal: 266
 
 Subtotal: 2
 
-Total: 1020
+Total: 1021
