@@ -2095,6 +2095,7 @@ void mywiki::translateDatingLoc()
     myDatingLoc = uc::DatingLoc {
         .yBc            = loc::get("Dating.Name.YBc"),
         .yBefore        = loc::get("Dating.Name.YBefore"),
+        .yBeforeBc      = loc::get("Dating.Name.YBeforeBc"),
         .yApprox        = loc::get("Dating.Name.YApprox"),
         .yApproxBc      = loc::get("Dating.Name.YApproxBc"),
         .decade         = loc::get("Dating.Name.Decade"),

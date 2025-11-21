@@ -361,7 +361,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::yapprox(-2000), EcFont::CJK, NO_FLAGS,
+        Dating::ybefore(-1200, StdNote::FIRST_KNOWN), EcFont::CJK, NO_FLAGS,
         ScriptSpec::RADICAL_STROKE_HANI, EcVersion::ALL_BUILTIN,
         // Chinese here as the main Han language
         { .mantissa = 135, .numOrder = NumOrder::DEC_MILLION, .flags = Langfg::CUSTOM_PRENOTE, .year = 2022 }},

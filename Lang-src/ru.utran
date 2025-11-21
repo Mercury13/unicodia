@@ -173,8 +173,12 @@
     </text>
     <text id="YBefore">
      <orig>before $</orig>
-     <au-cmt>Years BC are unsupported</au-cmt>
      <transl>до $</transl>
+    </text>
+    <text id="YBeforeBc">
+     <orig>before $ BC</orig>
+     <au-cmt>Test: CJK ideographs, that’s probably all</au-cmt>
+     <transl>до $ до н.э.</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
@@ -6420,9 +6424,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>First pictographs are dated with the 6th millennium BC, they were scratched or written with ink, later they were modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
-      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
-      <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
+      <p>Archaeologists have discovered pictographs dating back to ≈6000{{_}}BC. The first inscriptions that were surely texts are questions on oracle bones from ≈1200{{_}}BC. By 200{{_}}BC, the characters got a style similar to modern.</p>
+      <p />
+      <p>People had abandoned ideographs by the common era, but China conserved the archaic script for several reasons:</p>
+      <p>* multiethnic population{{-}}besides the state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
+      <p>* suitable grammar{{-}}nuances of words’ meaning are indicated with function words;</p>
       <p>* cult of tradition{{-}}even today the Chinese are rather conservative;</p>
       <p>* meritocracy that worked somehow{{-}}thousands of signs and the ability to write them nicely detected trainable people.</p>
       <p />
@@ -6435,7 +6441,9 @@
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
      <transl>
-      <p>Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, впоследствии они видоизменились под письмо кистью и тушью. Уже в I{{_}}тысячелетии до н.э. люди стали отходить от иероглифов, но Китай законсервировал архаичную письменность, этому есть несколько причин:</p>
+      <p>Археологи нашли пиктограммы аж ≈6000{{bc}} Первые точно тексты{{-}}вопросы на гадательных костях ≈1200{{bc}} К 200{{bc}} символы получили стиль, близкий к современному.</p>
+      <p />
+      <p>К нашей эре люди бросили иероглифы, но Китай законсервировал архаичную письменность, этому есть несколько причин:</p>
       <p>* многонациональный народ{{-}}помимо государствообразующего народа хань, было ещё около десятка, и они понимали друг друга хоть на письме;</p>
       <p>* подходящая грамматика{{-}}оттенки смысла показываются частицами;</p>
       <p>* культ традиции{{-}}даже сейчас китайцы довольно консервативны;</p>
@@ -14097,90 +14105,115 @@
     <text id="Brk">
      <orig>{1} ({2})</orig>
      <au-cmt>
-      <p>In Western langs — no translation, in Asian — maybe</p>
-      <p>1 = reason, 2 = name</p>
+      <p>In Western langs — no translation, in Asian — maybe (special brackets or LtR marks)</p>
+      <p>1 = reason, always localized</p>
+      <p>2 = name, always Latin</p>
      </au-cmt>
      <transl>{1} ({2})</transl>
     </text>
     <text id="Com">
      <orig>Local/foreign name</orig>
+     <au-cmt>Most countries, incl. Turkey</au-cmt>
      <transl>Местное/иностранное название</transl>
     </text>
     <text id="Aut">
      <orig>Local name</orig>
+     <au-cmt>e.g. Germany=Deutschland</au-cmt>
      <transl>Местное название</transl>
     </text>
     <text id="Exo">
      <orig>Common foreign name</orig>
+     <au-cmt>common=widely used, rather than shared — e.g. Finland=Suomi, Russia=Rossiya, Montenegro=Crna Gora</au-cmt>
      <transl>Распространённое иностранное название</transl>
     </text>
     <text id="Old">
      <orig>Old name</orig>
+     <au-cmt>e.g. for Eswatini=Swaziland, Cambodia=Khmer</au-cmt>
      <transl>Старое название</transl>
     </text>
     <text id="Fre">
      <orig>Free code</orig>
+     <au-cmt>for some new/renamed countries like Benin, Guernsey, Serbia when it’s hard even to find a suitable code</au-cmt>
      <transl>Свободный код</transl>
     </text>
     <text id="Eur">
      <orig>European name for land</orig>
+     <au-cmt>some scarcely inhabited islands</au-cmt>
      <transl>Европейское название земли</transl>
     </text>
     <text id="Tur">
      <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
+     <au-cmt>for Kazakhstan=Qazaqstan, Uzbekistan=Ozbekiston</au-cmt>
      <transl>Иностранное название русского происхождения + старая латинизация местной кириллицы</transl>
     </text>
     <text id="en">
      <orig>English</orig>
+     <au-cmt>for Hungary=Magyar and some islands</au-cmt>
      <transl>Английский</transl>
     </text>
     <text id="es">
      <orig>Spanish</orig>
+     <au-cmt>for some colonies related to Spain, e.g. West Sahara</au-cmt>
      <transl>Испанский</transl>
     </text>
     <text id="fr">
      <orig>French</orig>
+     <au-cmt>For Antarctica=Antarctique and more</au-cmt>
      <transl>Французский</transl>
     </text>
     <text id="la">
      <orig>Latin</orig>
+     <au-cmt>For Switzerland=Confoederatio Helvetica</au-cmt>
      <transl>Латинский</transl>
     </text>
     <text id="nl">
      <orig>Dutch</orig>
+     <au-cmt>For South Africa=Zuid Afrika</au-cmt>
      <transl>Голландский</transl>
     </text>
     <text id="ru">
      <orig>Russian</orig>
+     <au-cmt>For Belarus=Byelorussia</au-cmt>
      <transl>Русский</transl>
     </text>
     <text id="BQ">
      <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
+     <au-cmt>For Caribbean Netherlands</au-cmt>
      <transl>Свободный код; другое название Бонэр, Саба и Синт-Эстатиус</transl>
     </text>
     <text id="CQ">
      <orig>Free code; Norman French</orig>
+     <au-cmt>For Sark=Sercq</au-cmt>
      <transl>Свободный код; нормандский французский</transl>
     </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
+     <au-cmt>for Dutch St Martin</au-cmt>
      <transl>Свободный код; код аэропорта им. принцессы Юлианы</transl>
     </text>
     <text id="TW">
      <orig>The official name “Republic of China” is almost never used by foreigners</orig>
+     <au-cmt>For Taiwan</au-cmt>
      <transl>Официальное название «Китайская республика» почти не используется иностранцами</transl>
     </text>
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
+     <au-cmt>For Ukraine</au-cmt>
      <transl>UK оставлено за Великобританией</transl>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>
+     <au-cmt>For Kosovo</au-cmt>
      <transl>Временный код ЕС</transl>
     </text>
    </group>
    <text id="Favs">
     <orig>Favourites work with single characters only</orig>
+    <au-cmt>
+     <p>Test:</p>
+     <p>1. Lib, complex emoji like Animals→Birds→phoenix</p>
+     <p>2. Click heart button that’s greyed</p>
+    </au-cmt>
     <transl>Любимые работают только с одинокими символами</transl>
    </text>
   </group>

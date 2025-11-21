@@ -25,7 +25,8 @@ namespace uc {
         // Year
                 // 1234 not localized
         std::u8string_view yBc;         ///< 1234 BC
-        std::u8string_view yBefore;     ///< before 1234, never BC
+        std::u8string_view yBefore;     ///< before 1234
+        std::u8string_view yBeforeBc;   ///< before 1234 BC
                 // 1234–1357 not localized
         std::u8string_view yApprox;     ///< ≈1234
         std::u8string_view yApproxBc;   ///< ≈1234 BC

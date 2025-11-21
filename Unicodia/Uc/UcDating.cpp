@@ -153,8 +153,12 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc, std::u8string_view cust
             str::replace(r, BUCK, u8);
         } break;
     case Mode::YBEFORE: {
-            auto u8 = str::toCharsU8(buf, fValue1);     // never BC
-            r = loc.yBefore;
+            auto u8 = str::toCharsU8(buf, std::abs(fValue1));
+            if (fValue1 >= 0) {     // before 1234 CE
+                r = loc.yBefore;
+            } else {        // before 1234 BC
+                r = loc.yBeforeBc;
+            }
             str::replace(r, BUCK, u8);
         } break;
     // DECADE
