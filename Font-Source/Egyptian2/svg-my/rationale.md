@@ -690,6 +690,9 @@ Subtotal: 372
 - 13677: 76 + 70
 - 1367E
 - 1367F: filled that seated hole
+- 13685: Kolya’s work re-grafted to 16384
+- 13686: Kolya’s work re-grafted to 16384, removed uraeus
+- 13687: Kolya’s work re-grafted to 16384, removed uraeus
 - 13688: Kolya extracted Seth’s stick, the rest craggy, put again to 16384
 - 1368A
 - 1368E
@@ -855,7 +858,7 @@ Subtotal: 372
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 273
+Subtotal: 276
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -863,4 +866,4 @@ Subtotal: 273
 
 Subtotal: 2
 
-Total: 1043
+Total: 1046
