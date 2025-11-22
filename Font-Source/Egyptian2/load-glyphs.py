@@ -299,6 +299,7 @@ GLYPH_SIZES = {
     0x133CF: TEENY,  # Ukrainian bread :)
     0x133D0: MEDIUM, 0x133D1: MEDIUM,  # tall breads
     0x133D6: MEDIUM, 0x133D7: MEDIUM,  # round breads
+    0x133D8: MEDIUM,  # half bread
     # Y: culture items
     0x133E0: MEDWIDE, 0x133E1: SMALL,  # board game
     # Z: marks

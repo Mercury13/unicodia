@@ -207,6 +207,16 @@ Subtotal: 241
 
 Subtotal: 162
 
+# Campaign for sticks
+- 133E4
+- 133E5
+- 133E6
+- 133EA
+- 133EB
+- 133EE
+
+Subtotal: 6
+
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
 - 13475: from extended, better feet
@@ -872,4 +882,4 @@ Subtotal: 280
 
 Subtotal: 2
 
-Total: 1056
+Total: 1062
