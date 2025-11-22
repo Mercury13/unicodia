@@ -694,8 +694,12 @@ Subtotal: 372
 - 13686: Kolya’s work re-grafted to 16384, removed uraeus
 - 13687: Kolya’s work re-grafted to 16384, removed uraeus
 - 13688: Kolya extracted Seth’s stick, the rest craggy, put again to 16384
+- 13689: Kolya’s work, fixed
 - 1368A
 - 1368E
+- 13693: Kolya’s work, fixed
+- 13694: Kolya’s work, fixed
+- 13695: Kolya’s work, fixed
 - 136D4: just three holes in seated women
 - 136D7: same
 - 136D9: same
@@ -858,7 +862,7 @@ Subtotal: 372
 - 14371: after 70
 - 143D3: after D2
 
-Subtotal: 276
+Subtotal: 280
 
 # Found for myself in JSesh
 - 135D3 = A14E + union
@@ -866,4 +870,4 @@ Subtotal: 276
 
 Subtotal: 2
 
-Total: 1046
+Total: 1050
