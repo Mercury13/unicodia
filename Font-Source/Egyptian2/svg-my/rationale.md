@@ -207,15 +207,19 @@ Subtotal: 241
 
 Subtotal: 162
 
-# Campaign for sticks
+# Campaign for sticks and dots
 - 133E4
 - 133E5
 - 133E6
+- 133E7
 - 133EA
 - 133EB
+- 133EC
+- 133ED
 - 133EE
+- 133F0
 
-Subtotal: 6
+Subtotal: 10
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
@@ -882,4 +886,4 @@ Subtotal: 280
 
 Subtotal: 2
 
-Total: 1062
+Total: 1066
