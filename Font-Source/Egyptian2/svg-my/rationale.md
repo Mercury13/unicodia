@@ -21,7 +21,7 @@ RETURN = temporarily deleted, then returned
 - 13362, 13363, 13364, 13365, 13366 / 13367, 13368, 13369, 1336A, 1336B = counting ropes (10)
 - 13376, 13377, 13378, 13379, 1337A / 1337B, 1342F = campaign for cartouches (7)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
-- 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B = tofu
+- 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B…
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (19)
 - 136AE, 142AD = campaign for phasing out NewGardinerNonCore (2)
 - 13469, 1346D, 1346F, 13471, 13472 / 13473, 13476, 13477, 1347A, 1347C…
@@ -36,9 +36,10 @@ RETURN = temporarily deleted, then returned
 - 13700..0D = campaign for tits, cannot make new w/o fixing existing, 9 fixed + 5 new (14)
 - 13972, 13973, 13975, 13977, 1397B / 1397E, 13985, 13989, 1398B, 1398F = eyes (10)
 - 14224, 14225, 14226, 14227, 14228 = bowstrings, 4 fixed + 1 new (5)
+- 1437A, 1437B, 1437C, 1437D, 1437E = 60 unit racks (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 236
+Subtotal: 241
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -572,11 +573,6 @@ Subtotal: 162
 - 1432B: consistency
 - 1432C: consistency
 - 14366: poles → hands
-- 1437A: line to 60 units
-- 1437B: double line → single
-- 1437C: line to 60 units
-- 1437D: line to 60 units
-- 1437E: line to 60 units
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
@@ -584,7 +580,7 @@ Subtotal: 162
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 376
+Subtotal: 371
 
 # Duped with NewGardiner
 - 13007: basic, after 08
