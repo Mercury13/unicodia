@@ -173,8 +173,12 @@
     </text>
     <text id="YBefore">
      <orig>before $</orig>
-     <au-cmt>Years BC are unsupported</au-cmt>
      <transl>$’dan önce</transl>
+    </text>
+    <text id="YBeforeBc">
+     <orig>before $ BC</orig>
+     <au-cmt>Test: CJK ideographs, that’s probably all</au-cmt>
+     <transl>MÖ $’dan önce</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
@@ -6410,9 +6414,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>First pictographs are dated with the 6th millennium BC, they were scratched or written with ink, later they were modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
-      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
-      <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
+      <p>Archaeologists have discovered pictographs dating back to ≈6000{{_}}BC. The first inscriptions that were surely texts are questions on oracle bones from ≈1200{{_}}BC. By 200{{_}}BC, the characters got a style similar to modern.</p>
+      <p />
+      <p>People had abandoned ideographs by the common era, but China conserved the archaic script for several reasons:</p>
+      <p>* multiethnic population{{-}}besides the state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
+      <p>* suitable grammar{{-}}nuances of words’ meaning are indicated with function words;</p>
       <p>* cult of tradition{{-}}even today the Chinese are rather conservative;</p>
       <p>* meritocracy that worked somehow{{-}}thousands of signs and the ability to write them nicely detected trainable people.</p>
       <p />
@@ -6425,9 +6431,11 @@
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
      <transl>
-      <p>İlk piktograflar MÖ 6. binyıla tarihlenir, mürekkeple çizilir ya da yazılırdı, daha sonra fırça ile yazılacak şekilde değiştirildi. MÖ 1. binyılda insanlar ideografları terk etmeye başladılar, ancak Çin arkaik yazıyı korudu, bunun birkaç nedeni var:</p>
+      <p>Arkeologlar, yaklaşık MÖ{{_}}6000’e tarihlenen piktografik çizimler keşfetmiştir. Kesin olarak metin olduğu bilinen ilk yazıtlar ise yaklaşık MÖ{{_}}1200’den kalma kehanet kemiklerine yazılmış sorulardır. MÖ{{_}}200’e gelindiğinde karakterler modern stile benzer bir biçim kazanmıştır.</p>
+      <p />
+      <p>İdeogramlar çağın başlangıcına gelindiğinde terk edilmişti ancak Çin çeşitli nedenlerle arkaik yazıyı korumuştur:</p>
       <p>* Çok etnikli nüfus{{-}}Han devletini oluşturan insanların yanı sıra, yaklaşık on tane daha vardı ve birbirlerini en azından yazılı olarak anlıyorlardı;</p>
-      <p>* uygun gramer{{-}}kelimenin anlamının nüansları işlevsel kelimelerle belirtilir;</p>
+      <p>* uygun gramer{{-}}kelime anlamının nüansları işlevsel kelimelerle belirtilir;</p>
       <p>* gelenek kültü{{-}}bugün bile Çinliler oldukça muhafazakârdır;</p>
       <p>* bir şekilde işleyen meritokrasi{{-}}binlerce işaret ve bunları güzelce yazma yeteneği eğitilebilir insanları tespit etti.</p>
       <p />
@@ -14084,8 +14092,9 @@
     <text id="Brk">
      <orig>{1} ({2})</orig>
      <au-cmt>
-      <p>In Western langs — no translation, in Asian — maybe</p>
-      <p>1 = reason, 2 = name</p>
+      <p>In Western langs — no translation, in Asian — maybe (special brackets or LtR marks)</p>
+      <p>1 = reason, always localized</p>
+      <p>2 = name, always Latin</p>
      </au-cmt>
      <transl>{1} ({2})</transl>
     </text>
