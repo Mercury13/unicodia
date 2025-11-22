@@ -575,6 +575,8 @@ Subtotal: 162
 - 1437A: line to 60 units
 - 1437B: double line → single
 - 1437C: line to 60 units
+- 1437D: line to 60 units
+- 1437E: line to 60 units
 - 14386: removed PLACEHOLDERS
 - 1438E: thinner, redrew from scratch
 - 14392: other pile of bricks, redrew from scratch
@@ -582,7 +584,7 @@ Subtotal: 162
 - 143BE: after CC, previous was thicker
 - 143CE: wider but lower, redrew from scratch
 
-Subtotal: 374
+Subtotal: 376
 
 # Duped with NewGardiner
 - 13007: basic, after 08
@@ -874,4 +876,4 @@ Subtotal: 280
 
 Subtotal: 2
 
-Total: 1054
+Total: 1056
