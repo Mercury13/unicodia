@@ -5,7 +5,7 @@ FamilyName: UnicodiaSesh
 Weight: Regular
 Copyright: Glyphs taken from JSesh
 UComments: "2024-9-29: Created with FontForge (http://fontforge.org)"
-Version: 3.0.3
+Version: 3.0.4
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1727638123
-ModificationTime: 1762709120
+ModificationTime: 1763847693
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
