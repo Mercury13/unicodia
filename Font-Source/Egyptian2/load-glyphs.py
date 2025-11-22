@@ -10,6 +10,15 @@ INKSCAPE = 'c:/Program Files/Inkscape/bin/inkscape.com'
 
 # These pairs are known to be bad
 BAD_JSESH_HIEROS = {
+    0x133EA: "Z3",     # no file, better do manually
+    0x133F3: "Z8",     # ??? no file
+    0x133F4: "Z9",     # ??? no file
+    0x133F9: "Ff1",    # ??? no file
+    0x13416: "Aa8",    # ??? no file, even in base
+    0x13417: "Aa9",    # ??? no file, even in base
+    0x13418: "Aa10",   # ??? no file, even in base
+    0x13419: "Aa11",   # ??? no file, even in base
+    0x1341A: "Aa12",   # ??? no file, even in base
     0x13BD4: "F128",   # cauldron? → udder
     0x13BDA: "F132B",  # IDK
     0x13F29: "N31h",   # flowers in circular road
@@ -25,7 +34,7 @@ log = open('sesh.log', 'w')
 
 # checks whether codepoint is good
 def isCpGood(code):
-    return ((code >= 0x13000) and (code <= 0x13385)) \
+    return ((code >= 0x13000) and (code <= 0x1342F)) \
         or ((code >= 0x13460) and (code <= 0x143FF));
 
 log.write("Loading SVG\n");
@@ -273,6 +282,30 @@ GLYPH_SIZES = {
     0x13378: SMALL,  # part of cartouche
     0x13382: EVERYBIT,  # looped cord
     0x13385: MEDIUM,  # hobble + crossbar
+    0x133A3: MEDWIDE,  # frail
+    0x133A4: SMALL,  # some bag
+    0x133A6: SMALL, 0x133A7: SMALL,  # another bag
+    0x133A9: MEDIUM,  # bandage
+    # W: vessels
+    0x133B6: SMALL,  # some really craggy vessel
+    0x133B8: MEDIUM, 0x133B9: MEDIUM,  # jug
+    0x133BA: SMALL, 0x133BB: SMALL,  # cup
+    0x133BC: SMALL, 0x133BD: SMALL, 0x133BE: SMALL,  # some other pots
+    0x133C3: WIDE,  # three water jugs
+    0x133C5: EVERYBIT,  # four water jugs
+    0x133C9: MEDIUM, 0x133CA: MEDIUM,  # misc jugs
+    0x133CC: SMALL,  # well-known round jug
+    # X: food
+    0x133D0: MEDIUM,  0x133D1: MEDIUM,   # tall breads
+    # Y: culture items
+    0x133E0: MEDWIDE, 0x133E1: SMALL,  # board game
+    # Z: marks
+    0x133EF: SMALL,  # backslash
+    0x133F2: SMALL,  # spiral
+    # Aa: misc
+    0x1340D: MEDIUM,  # some circle
+    0x1340E: MEDIUM, 0x1340F: MEDIUM,  # pustule
+    0x1341F: MEDIUM,  # lid
     # EGYP A
     # A: man
     0x1347B: MEDWIDE, 0x1347C: MEDWIDE,
