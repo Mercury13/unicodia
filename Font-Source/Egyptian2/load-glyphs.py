@@ -296,6 +296,7 @@ GLYPH_SIZES = {
     0x133C9: MEDIUM, 0x133CA: MEDIUM,  # misc jugs
     0x133CC: SMALL,  # well-known round jug
     # X: food
+    0x133CF: TEENY,  # Ukrainian bread :)
     0x133D0: MEDIUM,  0x133D1: MEDIUM,   # tall breads
     # Y: culture items
     0x133E0: MEDWIDE, 0x133E1: SMALL,  # board game
