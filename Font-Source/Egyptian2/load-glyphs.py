@@ -292,7 +292,7 @@ GLYPH_SIZES = {
     0x133BC: SMALL, 0x133BD: SMALL, 0x133BE: SMALL,  # some other pots
     0x133C3: WIDE,  # three water jugs
     0x133C5: EVERYBIT,  # four water jugs
-    0x133C9: MEDIUM, 0x133CA: MEDIUM,  # misc jugs
+    0x133CA: MEDIUM,  # jug
     0x133CC: SMALL,  # well-known round jug
     # X: food
     0x133CF: TEENY,  # Ukrainian bread :)

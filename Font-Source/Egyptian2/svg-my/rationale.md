@@ -203,10 +203,12 @@ Subtotal: 253
 - 13337: 34 + 36
 - 13353: rope behind, franken between rope and drill
 - 1337D: too thick
+- 133A8: too thick, franken
+- 133C9: wanted bounding lines just two thick lines
 - 133D6: consistency with other breads
 - 133D7: same
 
-Subtotal: 162
+Subtotal: 164
 
 # Misrenders / extended (including cases when misrendered char covers another CP)
 - 13470: a bit craggy, not A1 + A2
@@ -873,4 +875,4 @@ Subtotal: 280
 
 Subtotal: 2
 
-Total: 1068
+Total: 1070
