@@ -20,7 +20,7 @@ RETURN = temporarily deleted, then returned
 - 13338, 13339, 1333A, 1333B, 1333C = campaign for hoes (5)
 - 13362, 13363, 13364, 13365, 13366 / 13367, 13368, 13369, 1336A, 1336B = counting ropes (10)
 - 13376, 13377, 13378, 13379, 1337A / 1337B, 1342F = campaign for cartouches (7)
-- 133E4, 133E5, 133E6, 133E7, 133EA / 133EB, 133EC, 133ED, 133EE, 133F0 = sticks and dots (10)
+- 133E4, 133E5, 133E6, 133E7, 133EA / 133EB, 133EC, 133ED, 133EE, 133F0 / 143E7, 143E8 = sticks and dots (12)
 - 13460, 61, 62, 63, 64, 65, 67 = above the fold (7)
 - 134CC, 135EC, 1372D, 1374C / 137CA, 13804, 13806, 13887, 1393B…
 - 13983, 13B52, 13B9E, 13CCE, 13F3D / 14016, 14091, 14198, 142СС, 14330 = tofu (19)
@@ -40,7 +40,7 @@ RETURN = temporarily deleted, then returned
 - 1437A, 1437B, 1437C, 1437D, 1437E = 60 unit racks (5)
 - 143CA, 143CB, 143CC, 143DF, 143E0 = circles, 4 fixed + 1 new (5)
 
-Subtotal: 251
+Subtotal: 253
 
 # Misrenders / basic
 - 13000: A1 extended + someone’s else head
@@ -873,4 +873,4 @@ Subtotal: 280
 
 Subtotal: 2
 
-Total: 1066
+Total: 1068
