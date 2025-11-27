@@ -205,8 +205,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },       // Egyptian
       { "UnicodiaEgypFixupRegular.otf",
             Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },   // …1
-      { "NotoSansEgyptianHieroglyphs-Regular.otf",                              // …2
-            Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 105_pc },
       { { "NewGardiner.ttf",  ExTofu { .type = ExTofuType::GARDINER, .fname = "omitted.csv" } }, // …3
                 Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan

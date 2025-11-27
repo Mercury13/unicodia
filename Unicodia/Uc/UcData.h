@@ -294,7 +294,6 @@ namespace uc {
         EGYPTIAN,
           Z_EGY_1,
           Z_EGY_2,
-          Z_EGY_3,
         ELBASAN,
         ENCLOSED_ALNUM, // Korean
           Z_EAN_1,      // Backed up by Symbol2
