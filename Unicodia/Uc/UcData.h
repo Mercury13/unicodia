@@ -447,7 +447,7 @@ namespace uc {
         FALL2_IF_ACCEPTED = 1<<14,  ///< Fall over one font if not rejected;
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
         MARK_AVOID        = 1<<15,  ///< If char’s type is mark → avoid!
-        DESC_AVOID        = 1<<16,  ///< Avoid in description, use next instead
+        DESC_AVOID        = 1<<16,  ///< Avoid in description, use the next instead
         GRAPHIC_SAMPLE    = 1<<17,  ///< Draw characters graphically, killing font’s dimensions
         COUNT_TOFU        = 1<<18,  ///< Count this font to tofu stats (for debugging)
         PLANE_0           = 1<<19,  ///< Char outside plane 0 → unsupported
