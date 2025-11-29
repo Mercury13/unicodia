@@ -357,6 +357,7 @@ constinit const uc::Term uc::terms[] {
     { "abc", EcTermCat::OTHER, u8"collation" },
     { "mono", EcTermCat::OTHER, u8"character cell" },
     { "inclusion", EcTermCat::OTHER, u8"inclusion and diversity" },
+    { "legacy", EcTermCat::OTHER, u8"legacy computers", },
     { "tofu", EcTermCat::OTHER, u8"tofu" },
 
     { "status", EcTermCat::HIDDEN, u8"" },

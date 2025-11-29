@@ -11060,6 +11060,17 @@
      <transl>латиница-1</transl>
     </text>
    </group>
+   <group id="legacy">
+    <text id="Name">
+     <orig>legacy computers</orig>
+     <transl>старые компьютеры</transl>
+    </text>
+    <text id="Text">
+     <orig>{{LegacyComps}}</orig>
+     <au-cmt>Just a template, but you can write anything before.</au-cmt>
+     <transl>{{LegacyComps}}</transl>
+    </text>
+   </group>
    <group id="ligature">
     <text id="Name">
      <orig>ligature</orig>

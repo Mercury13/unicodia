@@ -1,9 +1,10 @@
 ﻿Types:
 • Data: for displaying some data from central storage
-  • Unicode: deduced from Unicode tables
+  • auto-snippet: so much data that it’s a paragraph of text
   • central: from central storage
   • ongoing: may become false, but still true
   • obsolete: ongoing becomes false (none for now)
+  • Unicode: deduced from Unicode tables
 • Image: to display illustration
 • L10n: for internationalization/localization, often intersects with Typographic
 • Samples: to display sample characters
@@ -35,12 +36,14 @@ Used in both Arabic presentation forms A and B
 Used in both Arabic presentation forms A and B
 
 D
-{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: Image :: No parameters
-As a workaround, this sample is coded to FunkySample’s private-use codepoint.
+
+{{DuplCats}} :: Sample of Dupl :: Image :: No parameters
+A sample of Duployan shorthand reading “Cats”.
+As a workaround, this sample is coded to UnicodiaFunky’s private-use codepoint.
 
 E
 
-{{em|}} :: Emoji sample :: Samples :: 1 parameter
+{{em}} :: Emoji sample :: Samples :: 1 parameter
 That parameter is displayed with known emoji fonts, size +2.
 
 F
@@ -64,7 +67,7 @@ Formatted hex with decimal separator after every 4 characters
 Bhv for non-hex is undefined, don’t rely on it
 
 {{hcore}} {{hlegacy}} {{hextended}} {{hspecial}} :: Egyptian info :: Data/Unicode :: No parameters
-# of core (legacy, extended, special) Egyptian hieros
+# of core (legacy, extended, special) Egyptian hieroglyphs
 
 K
 
@@ -73,6 +76,14 @@ Writes [param1]+[param2]+[param3]+… where […] = crude keycap
 
 {{kb}} :: Key combination in bold :: Typographic :: ∞ parameters
 Same as {{k}}, just bold
+
+L
+
+{{LegacyComps}} :: Legacy computers :: Data/auto-snippet :: No parameters
+All known legacy computers
+
+{{LineBreakTypes}} :: Line breaking :: Data/auto-snippet :: No parameters
+All known line break types
 
 N
 

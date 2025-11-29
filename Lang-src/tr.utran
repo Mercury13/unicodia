@@ -6941,8 +6941,13 @@
      <orig>
       <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
       <p />
-      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than common-Indic from Devanagari.</p>
      </orig>
+     <known-orig>
+      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
+      <p />
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
+     </known-orig>
      <transl>
       <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]’ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan’ın Sikkim eyaleti Bantawa’yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat’ı resmi betik haline getirmiştir.</p>
       <p />
@@ -11046,6 +11051,17 @@
     <text id="Name">
      <orig>Latin-1</orig>
      <transl>Latin-1</transl>
+    </text>
+   </group>
+   <group id="legacy">
+    <text id="Name" force-attention="true">
+     <orig>legacy computers</orig>
+     <transl>eski bilgisayarlar</transl>
+    </text>
+    <text id="Text">
+     <orig>{{legacy}}</orig>
+     <au-cmt>Just a template, but you can write anything before.</au-cmt>
+     <transl>{{legacy}}</transl>
     </text>
    </group>
    <group id="ligature">
