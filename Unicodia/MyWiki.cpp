@@ -2,6 +2,7 @@
 
 // C++
 #include <ranges>
+#include <map>
 
 // Qt
 #include <QWidget>
@@ -1544,6 +1545,53 @@ namespace {
         appendPercent(s, num);
     }
 
+    ///
+    /// @brief Appends legacy computer info
+    ///
+    void appendLegacyComps(QString& s)
+    {
+        // Build list version → computers
+        using VOld = std::vector<const uc::old::Info*>;
+        std::map<uc::EcVersion, VOld> byVersion;
+        for (const auto& v : uc::old::allInfo()) {
+            auto& subList = byVersion[v.supportedSince];
+            subList.push_back(&v);
+        }
+        // Go!
+        for (const auto& [ecv, list] : byVersion) {
+            const auto& version = uc::versionInfo[static_cast<int>(ecv)];
+            // Header
+            s += "<p>";  // No need bold
+            std::u8string verLink = loc::Fmt(
+                        u8"<a href='pv:{1}' class='popup'>{2}</a>")
+                        (version.link())(version.locName()).str();
+            str::append(s, loc::get("Term.legacy.Subhead")
+                        .arg(verLink, version.date.year));
+            // Versions
+            s += "<table><tr><td>";
+            unsigned iColBreak = std::numeric_limits<unsigned>::max();
+            if (list.size() >= 3) {
+                // 3→1, 4→1, so (n−1)/2
+                iColBreak = (list.size() - 1) / 2;
+            }
+            for (size_t i = 0; i < list.size(); ++i) {
+                const auto& comp = *list[i];
+                s += "<a href='po:";
+                str::append(s, comp.key);
+                s += "' class='popup'>";
+                str::append(s, comp.locName());
+                s += "</a>";
+                // Break line/column
+                if (i == iColBreak) {
+                    s += "<td>";
+                } else if (i + 1 < list.size()) {
+                    s += "<br>";
+                }
+            }
+            s += "</table>";
+        }
+    }
+
     constinit const std::string_view snippetNames[] {
         // Sorted by the 1st letter
         "Albanian", "ArabPres1", "ArabPres2", "GrekCoptUni"
@@ -1656,7 +1704,9 @@ namespace {
             break;
 
         case 'L':
-            if (name == "LineBreakTypes") {
+            if (name == "LegacyComps") {
+                appendLegacyComps(s);
+            } else if (name == "LineBreakTypes") {
                 s += "<table border=0><tr><td>";
                 str::QSep sp(s, "<br>");
                 static constexpr auto I_MIN = static_cast<int>(uc::BreakClass::MIN);
@@ -4114,6 +4164,9 @@ QString mywiki::buildHtml(const uc::old::Info& info)
 
     snprintf(buf, std::size(buf), "OldComp.%s.Text", info.key.data());
     mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::ARTICLE);
+
+    str::append(text, "<p>");
+    appendNoFont(text, loc::get("OldComp.See"), wiki::Mode::ARTICLE);
 
     return text;
 }

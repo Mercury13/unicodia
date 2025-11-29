@@ -11070,6 +11070,14 @@
      <au-cmt>Just a template, but you can write anything before.</au-cmt>
      <transl>{{LegacyComps}}</transl>
     </text>
+    <text id="Subhead">
+     <orig>Unicode {1} ({2}) supports</orig>
+     <au-cmt>
+      <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
+      <p>{2} = year (do not want month)</p>
+     </au-cmt>
+     <transl>Юнікод {1} ({2}) підтримує</transl>
+    </text>
    </group>
    <group id="ligature">
     <text id="Name">
@@ -14876,7 +14884,7 @@
       <p />
       <p>Багато років він працював на застарілій DOS, поки Microsoft не запропонував Windows{{_}}95. Більш ранні ОС, як Unix та Windows{{_}}NT, були рідкі.</p>
       <p />
-      <p>Більшість комп’ютерів загального призначення{{-}}нащадки IBM-сумісних (сумісність з DOS остаточно порушена у 2010-і). Тільки портативні та спеціалізовані системи використовують інші архітектури.</p>
+      <p>Більшість комп’ютерів загального призначення{{-}}нащадки IBM-сумісних (сумісність з DOS остаточно порушено у 2010-і). Тільки портативні та спеціалізовані системи використовують інші архітектури.</p>
      </transl>
     </text>
     <text id="SalesNote">
@@ -15038,6 +15046,10 @@
      <transl>Sinclair ZX80 та ZX81 були найдешевшими працюючими комп’ютерами. Версія з 2 кілобайтами продавалась за 70 фунтів.</transl>
     </text>
    </group>
+   <text id="See">
+    <orig>See [[pt:legacy|Legacy computers]].</orig>
+    <transl>Див. [[pt:legacy|Старі комп’ютери]].</transl>
+   </text>
   </group>
   <group id="Brk">
    <group id="BK">

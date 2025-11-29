@@ -113,6 +113,7 @@ namespace uc {
                 { return versionInfo[static_cast<int>(supportedSince)]; }
         };
         extern const Info info[];
+        extern std::span<const Info> allInfo();
 
         const Info* findComp(std::string_view target);
 

@@ -11059,9 +11059,17 @@
      <transl>eski bilgisayarlar</transl>
     </text>
     <text id="Text">
-     <orig>{{legacy}}</orig>
+     <orig>{{LegacyComps}}</orig>
      <au-cmt>Just a template, but you can write anything before.</au-cmt>
-     <transl>{{legacy}}</transl>
+     <transl>{{LegacyComps}}</transl>
+    </text>
+    <text id="Subhead" force-attention="true">
+     <orig>Unicode {1} ({2}) supports</orig>
+     <au-cmt>
+      <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
+      <p>{2} = year (do not want month)</p>
+     </au-cmt>
+     <transl>Unicode {1} ({2}) destekler</transl>
     </text>
    </group>
    <group id="ligature">
@@ -15029,6 +15037,10 @@
      <transl>Sinclair ZX80 ve ZX81 en ucuz çalışan bilgisayarlar oldu. 2 kilobaytlık sürümü 70 pounda satıldı.</transl>
     </text>
    </group>
+   <text id="See" force-attention="true">
+    <orig>See [[pt:legacy|Legacy computers]].</orig>
+    <transl>[[pt:legacy|Eski bilgisayarlar]]ʼa bakın.</transl>
+   </text>
   </group>
   <group id="Brk">
    <group id="BK">

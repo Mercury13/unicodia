@@ -479,6 +479,9 @@ constinit const uc::old::Info uc::old::info[] {
       .mem { 128, 512 } },
 };
 
+std::span<const uc::old::Info> uc::old::allInfo() { return info; }
+
+
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;
 static_assert((1 << I_LAST_OLD_COMP) == static_cast<int>(uc::OldComp::LAST));
 

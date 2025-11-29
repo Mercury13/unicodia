@@ -7709,6 +7709,13 @@
      <orig>{{LegacyComps}}</orig>
      <au-cmt>Just a template, but you can write anything before.</au-cmt>
     </text>
+    <text id="Subhead">
+     <orig>Unicode {1} ({2}) supports</orig>
+     <au-cmt>
+      <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
+      <p>{2} = year (do not want month)</p>
+     </au-cmt>
+    </text>
    </group>
    <group id="ligature">
     <text id="Name">
@@ -10582,6 +10589,9 @@
      <orig>Sinclair ZX80 and ZX81 were the cheapest working computers. Version with 2 kilobytes was sold for 70 pounds.</orig>
     </text>
    </group>
+   <text id="See">
+    <orig>See [[pt:legacy|Legacy computers]].</orig>
+   </text>
   </group>
   <group id="Brk">
    <group id="BK">

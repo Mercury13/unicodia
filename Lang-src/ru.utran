@@ -11070,6 +11070,10 @@
      <au-cmt>Just a template, but you can write anything before.</au-cmt>
      <transl>{{LegacyComps}}</transl>
     </text>
+    <text id="Subhead">
+     <orig>Unicode {1} ({2}) supports</orig>
+     <transl>Юникод {1} ({2}) поддерживает</transl>
+    </text>
    </group>
    <group id="ligature">
     <text id="Name">
@@ -15038,6 +15042,10 @@
      <transl>Sinclair ZX80 и ZX81 были самыми дешёвыми работающими компьютерами. Версия с 2 килобайтами продавалась за 70 фунтов.</transl>
     </text>
    </group>
+   <text id="See">
+    <orig>See [[pt:legacy|Legacy computers]].</orig>
+    <transl>См. [[pt:legacy|Старые компьютеры]].</transl>
+   </text>
   </group>
   <group id="Brk">
    <group id="BK">
