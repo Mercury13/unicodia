@@ -6943,11 +6943,6 @@
       <p />
       <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than common-Indic from Devanagari.</p>
      </orig>
-     <known-orig>
-      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
-      <p />
-      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
-     </known-orig>
      <transl>
       <p>Mahaguru Tika Ram Rai tarafından [[ps:Deva|Devanagari]]’ye yakın yerel betiklerden icat edilmiştir. 1995 yılında Hindistan’ın Sikkim eyaleti Bantawa’yı (daha geniş bir etnik grup olmasına rağmen ''Rai'' adıyla ve ''Kirat'' daha da geniş bir anlam ifade etmesine rağmen) tanımış ve Kirat’ı resmi betik haline getirmiştir.</p>
       <p />
@@ -11054,7 +11049,7 @@
     </text>
    </group>
    <group id="legacy">
-    <text id="Name" force-attention="true">
+    <text id="Name">
      <orig>legacy computers</orig>
      <transl>eski bilgisayarlar</transl>
     </text>
@@ -11063,13 +11058,13 @@
      <au-cmt>Just a template, but you can write anything before.</au-cmt>
      <transl>{{LegacyComps}}</transl>
     </text>
-    <text id="Subhead" force-attention="true">
+    <text id="Subhead">
      <orig>Unicode {1} ({2}) supports</orig>
      <au-cmt>
       <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
       <p>{2} = year (do not want month)</p>
      </au-cmt>
-     <transl>Unicode {1} ({2}) destekler</transl>
+     <transl>Unicode {1} ({2}) desteği mevcuttur</transl>
     </text>
    </group>
    <group id="ligature">
@@ -15037,7 +15032,7 @@
      <transl>Sinclair ZX80 ve ZX81 en ucuz çalışan bilgisayarlar oldu. 2 kilobaytlık sürümü 70 pounda satıldı.</transl>
     </text>
    </group>
-   <text id="See" force-attention="true">
+   <text id="See">
     <orig>See [[pt:legacy|Legacy computers]].</orig>
     <transl>[[pt:legacy|Eski bilgisayarlar]]ʼa bakın.</transl>
    </text>
