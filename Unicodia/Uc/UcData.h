@@ -298,7 +298,7 @@ namespace uc {
           Z_EAN_1,      // Backed up by Symbol2
         ETHIOPIC,
         ETHIOPIC_SMALLER,
-        GEORGIAN_NUSKHURI,  // Special bhv for Nuskhuri W7/10. First Sylfaen that covers all Nuskuri in W10.
+        GEORGIAN_NUSKHURI,  // Special bhv for Nuskhuri W7/10. First Sylfaen that covers all Nuskhuri in W10.
           Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
