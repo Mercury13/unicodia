@@ -203,8 +203,6 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },       // Egyptian
-      { "UnicodiaEgypFixupRegular.otf",
-            Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT, 105_pc },   // …1
       { { "NewGardiner.ttf",  ExTofu { .type = ExTofuType::GARDINER, .fname = "omitted.csv" } }, // …3
                 Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan

@@ -293,7 +293,6 @@ namespace uc {
         DOGRA,
         EGYPTIAN,
           Z_EGY_1,
-          Z_EGY_2,
         ELBASAN,
         ENCLOSED_ALNUM, // Korean
           Z_EAN_1,      // Backed up by Symbol2
