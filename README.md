@@ -110,18 +110,6 @@ I never rip fonts from Unicode charts, always use TTF form. But the authors of f
 
 Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
 
-## Egyptian
-* Legacy policy:
-  * Equiv. sequence = some core → invent a difference
-  * Equiv. sequence = flipped core → flip!
-  * Equiv. sequence = combination → combine somehow
-* Hieroglyphs w/o description just somehow resemble the sample image, no efforts are made to make them look exactly
-* Same if the sample image is not in harmony with description
-* Short-haired man has absolutely no beard unless specified
-* Other men may have any beard except god’s unless specified
-* Described but really small detail (ankh in the hand…) = thing of lower importance, fix if the hiero was touched for another reason.
-* The difference between duck and goose is ephemeral, no efforts to make them distinct. However, their necks are light.
-
 ## Data
 Data is as neutral as possible. Examples.
 * Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So just # of L1 speakers
