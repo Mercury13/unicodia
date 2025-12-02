@@ -59,14 +59,6 @@ https://www.endangeredalphabets.net/alphabets/vai/ — info on rare scripts
 Лоукотка Ч., Развитие письма, М., 1950
 
 
-EGYPTIAN
-
-https://jsesh.qenherkhopeshef.org/glyphs — JSesh base
-https://github.com/thesaurus-linguae-aegyptiae/tla-jsesh-glyphs — Werning’s JSesh extension
-https://thotsignlist.org/ — Thot Sign List
-https://www.phrp.be/ListAllSigns.php — real coloured hieros
-
-
 DATA BEYOND UNICODE
 https://github.com/cjkvi/cjkvi-ids — CJK bases
 https://github.com/yi-bai/ids — another CJK base
