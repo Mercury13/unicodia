@@ -11072,6 +11072,10 @@
     </text>
     <text id="Subhead">
      <orig>Unicode {1} ({2}) supports</orig>
+     <au-cmt>
+      <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
+      <p>{2} = year (do not want month)</p>
+     </au-cmt>
      <transl>Юникод {1} ({2}) поддерживает</transl>
     </text>
    </group>
@@ -14818,8 +14822,8 @@
    </group>
    <group id="AtariSt">
     <text id="Text">
-     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
-     <transl>Atari не пережила видеоигровой кризис 1983 и была продана Джеку Трэмиелу, бывшему основателю Commodore. Они сделали второй развитый домашний компьютер после Commodore Amiga. Он был любим музыкантами, музыкальные редакторы ''Cubase'' и ''Logic Pro'' родом с ST.</transl>
+     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, the former founder of Commodore. They made the second advanced home computer after the Commodore Amiga. Musicians praised it, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <transl>Atari не пережила видеоигровой кризис 1983 и была продана Джеку Трэмиелу, бывшему основателю Commodore. Они сделали второй развитый домашний компьютер после Commodore Amiga. Музыканты его любили, музыкальные редакторы ''Cubase'' и ''Logic Pro'' родом с ST.</transl>
     </text>
     <text id="Unenc">
      <orig>Atari logo, 2×2 portrait</orig>
