@@ -14426,8 +14426,8 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
-     <transl>Екстрений випуск Юнікоду, що містить лище один символ [[pc:32FF]]{{-}}еру Рейва японського традиційного календаря. Коли у 2016 старенький імператор Акіхіто вирішив зректися, за його наступником закріпили кодову позицію. Коли він остаточно зрікся 30 квітня 2019, символ швидко закодували.</transl>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], the Reiwa era of Japanese traditional calendar. In 2016, the old Emperor Akihito decided to abdicate, and a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>Екстрений випуск Юнікоду, що містить лище один символ [[pc:32FF]]{{-}}еру Рейва японського традиційного календаря. У 2016 старенький імператор Акіхіто вирішив зректися, і за його наступником закріпили кодову позицію. Коли він остаточно зрікся 30 квітня 2019, символ швидко закодували.</transl>
     </text>
    </group>
    <group id="15.1">
