@@ -8173,13 +8173,13 @@
      <orig>
       <p>'''Unicode transformation format, 7 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
       <p />
-      <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written. Plus + may be encoded in +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
+      <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
       <p />
-      <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodeable characters between two encodeable, it may be encoded too to save bytes.</p>
+      <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may be encoded too to save bytes.</p>
       <p />
       <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
-      <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that’s important for search. In World Wide Web UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
+      <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is used instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that is important for search. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
      </orig>
     </text>
    </group>
