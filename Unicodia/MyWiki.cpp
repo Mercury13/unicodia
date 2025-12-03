@@ -14,6 +14,7 @@
 #include "u_Qstrings.h"
 #include "u_Cmap.h"
 #include "u_EgypIndex.h"
+#include "function_ref.hpp"
 
 // Unicode
 #include "UcData.h"
@@ -1545,6 +1546,40 @@ namespace {
         appendPercent(s, num);
     }
 
+    using EvAppendObject = tl::function_ref<void(QString&, unsigned)>;
+
+    ///  Appends a generic two-column table
+    ///  @param [in] s      string
+    ///  @param [in] count  # of object
+    ///  @param [in] event  function that appends i’th object
+    void appendTwoCol(QString& s, unsigned count, unsigned minCount, EvAppendObject event)
+    {
+        if (count < minCount) { //  Simple version: one column
+            s += "<table><tr><td>";
+            for (unsigned i = 0; i < count; ++i) {
+                if (i != 0)
+                    s += "<br>";
+                event(s, i);
+            }
+            s += "</table>";
+        } else { // Advanced version: two columns
+            unsigned nRows = (count + 1) / 2;
+            s += "<table>";
+            for (unsigned i = 0; i < nRows; ++i) {
+                s += "<tr><td>";
+                event(s, i);
+                s += "<td style='padding-left:50px;'>";
+                unsigned obj2 = i + nRows;
+                if (obj2 < count) {
+                    event(s, obj2);
+                } else {
+                    s += "&nbsp;";
+                }
+            }
+            s += "</table>";
+        }
+    }
+
     ///
     /// @brief Appends legacy computer info
     ///
@@ -1568,27 +1603,15 @@ namespace {
             str::append(s, loc::get("Term.legacy.Subhead")
                         .arg(verLink, version.date.year));
             // Versions
-            s += "<table><tr><td>";
-            unsigned iColBreak = std::numeric_limits<unsigned>::max();
-            if (list.size() >= 3) {
-                // 3→1, 4→1, so (n−1)/2
-                iColBreak = (list.size() - 1) / 2;
-            }
-            for (size_t i = 0; i < list.size(); ++i) {
-                const auto& comp = *list[i];
-                s += "<a href='po:";
-                str::append(s, comp.key);
-                s += "' class='popup'>";
-                str::append(s, comp.locName());
-                s += "</a>";
-                // Break line/column
-                if (i == iColBreak) {
-                    s += "<td>";
-                } else if (i + 1 < list.size()) {
-                    s += "<br>";
-                }
-            }
-            s += "</table>";
+            appendTwoCol(s, list.size(), 3,
+                [&list](QString& s, unsigned index) {
+                    const auto& comp = *list[index];
+                    s += "<a href='po:";
+                    str::append(s, comp.key);
+                    s += "' class='popup'>";
+                    str::append(s, comp.locName());
+                    s += "</a>";
+                });
         }
     }
 
