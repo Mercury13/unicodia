@@ -11825,7 +11825,7 @@
       <p />
       <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
-      <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is used instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that is important for search. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
+      <p>Used only for E-mail messages, as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special unambigous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 7-bit'''{{-}}формат [[pt:serialization|сериализации]] Юникода в цепочку печатных [[pt:ascii|ASCII]]-символов. </p>
@@ -11836,7 +11836,7 @@
       <p />
       <p>Формат UTF-7 не{{_}}обладает хорошими свойствами [[pt:utf8|UTF-8]] и даже не{{_}}однозначен: один и тот же текст можно закодировать по-разному.</p>
       <p />
-      <p>Используется только в электронной почте, как альтернатива более громоздкому ''quoted-printable''. В протоколе IMAP для имён ящиков используется версия UTF-7, где вместо плюса '''+''' используется амперсанд '''&amp;''', 63=запятая, заключительный дефис пишется всегда, и из символов ASCII кодируется только &amp;. Такой UTF-7 уже однозначен, что важно для поиска. Во Всемирной паутине UTF-7 прямо запрещён: если обмануть браузер, чтобы он принял текст за UTF-7, можно сделать XSS-атаку.</p>
+      <p>Используется только для сообщений электронной почты, как альтернатива более громоздкому ''quoted-printable''. В протоколе IMAP для имён ящиков используется особая однозначная версия UTF-7, с 62='''&amp;''' и 63=запятая. Во Всемирной паутине UTF-7 прямо запрещён: если обмануть браузер, чтобы он принял текст за UTF-7, можно сделать XSS-атаку.</p>
      </transl>
     </text>
    </group>
