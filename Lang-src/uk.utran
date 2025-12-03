@@ -11854,14 +11854,14 @@
       <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
       <p />
       <p>Properties of UTF-8:</p>
-      <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced to Unicode with [[pt:utf16|UTF-16]] there’s no sequences longer than 4.</p>
+      <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
       <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that gives compatibility with program interfaces, terminal protocols.</p>
       <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from end of string 00.</p>
-      <p>* Self-synchronizing: if you add any erroneous bytes, the rest text remains readable. Search in correct UTF-8 with legacy program also won’t make false positives.</p>
+      <p>* Self-synchronizing: if you add any erroneous bytes, the rest of text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. [[pt:bom|Byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 8-bit'''{{-}}формат [[pt:serialization|серіалізації]] Юнікоду у ланцюжок байтів. Придуманий у 1992 в операційній системі Plan{{_}}9 для сумісності з наявними інтернет-протоколами. Кожна [[pt:codepoint|кодова позиція]] записується однією з таких послідовностей:</p>
@@ -11874,7 +11874,7 @@
       <p>* Теоретично може записувати 2{{_}}млрд кодових позицій послідовностями до 6 байтів. З обмеженнями, які накладає на Юнікод [[pt:utf16|UTF-16]], не{{_}}буває послідовностей довше 4.</p>
       <p>* Зворотна сумісність: латинський текст не{{_}}відрізнити від ASCII-текста. Байти 00 та 7F [[pt:control|керуючі]], байта FF не{{_}}буває, що дає сумісність з програмними інтерфейсами, термінальними протоколами.</p>
       <p>* Існує нестандартний формат UTF-8, де нульовий символ кодується як C0{{_}}80, відрізняючи його від символа кінця рядка 00.</p>
-      <p>* Самосинхронізуючийся: якщо додати будь-які помилкові байти, збережений текст залишиться читаємим. Пошук у коректному UTF-8 програмою, що не{{_}}розуміє UTF-8, також не{{_}}дасть хибних спрацьовувань.</p>
+      <p>* Самосинхронізуючийся: якщо додати будь-які помилкові байти, збережений текст залишиться читаємим. Пошук у коректному UTF-8 старою програмою також не{{_}}дасть хибних спрацьовувань.</p>
       <p>* Надійне впізнання: осмислений текст в однобайтовому кодуванні (якщо він не{{_}}чистий ASCII) або UTF-16 неможливо переплутати з UTF-8.</p>
       <p>* Монотонний: програма, що не{{_}}розуміє UTF-8, відсортує тексти у порядку кодів.</p>
       <p />
