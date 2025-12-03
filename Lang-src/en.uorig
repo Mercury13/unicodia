@@ -8230,6 +8230,7 @@
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
+     <au-cmt>“Bush hid the facts” is the exact string, and breaks because is even-odd-odd-odd.</au-cmt>
     </text>
    </group>
    <group id="utf32">
