@@ -191,6 +191,9 @@ namespace {
         case 0x14240:
             str::replace(s, "(T19)", "(T19E)");
             break;
+        case 0x14142:
+            str::replace(s, "(R109)", "(O49)");
+            break;
         default: ;
         }
         std::string r;
