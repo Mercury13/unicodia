@@ -909,17 +909,9 @@ FFFD......: NotoSerif-Regular
 13440.......: [Abbreviation]
 13441..13455: UnicodiaSesh
 == Egyptian Hieroglyphs Extended-A
-13460..1354C: UnicodiaSesh
-1354D.......: NewGardiner
-1354E..13563: UnicodiaSesh
-13564.......: NewGardiner
-13565..1357D: UnicodiaSesh
-1357E.......: NewGardiner
-1357F..13589: UnicodiaSesh
+13460..13589: UnicodiaSesh
 1358A..1358E: NewGardiner
-1358F.......: UnicodiaSesh
-13590.......: NewGardiner
-13591.......: UnicodiaSesh
+1358F..13591: UnicodiaSesh
 13592.......: NewGardiner
 13593..13597: UnicodiaSesh
 13598, 13599: NewGardiner
@@ -965,9 +957,7 @@ FFFD......: NotoSerif-Regular
 13632.......: NewGardiner
 13633..1363A: UnicodiaSesh
 1363B.......: NewGardiner
-1363C..1363E: UnicodiaSesh
-1363F.......: NewGardiner
-13640, 13641: UnicodiaSesh
+1363C..13641: UnicodiaSesh
 13642.......: NewGardiner
 13643..13645: UnicodiaSesh
 13646, 13647: NewGardiner
@@ -1021,17 +1011,13 @@ FFFD......: NotoSerif-Regular
 1376C.......: NewGardiner
 1376D..1377A: UnicodiaSesh
 1377B.......: NewGardiner
-1377C, 1377D: UnicodiaSesh
-1377E, 1377F: NewGardiner
-13780..13783: UnicodiaSesh
+1377C..13783: UnicodiaSesh
 13784.......: NewGardiner
 13785..13787: UnicodiaSesh
 13788, 13789: NewGardiner
 1378A.......: UnicodiaSesh
 1378B.......: NewGardiner
-1378C..13792: UnicodiaSesh
-13793, 13794: NewGardiner
-13795..137A2: UnicodiaSesh
+1378C..137A2: UnicodiaSesh
 137A3.......: NewGardiner
 137A4..137A7: UnicodiaSesh
 137A8, 137A9: NewGardiner
@@ -1097,9 +1083,7 @@ FFFD......: NotoSerif-Regular
 13895..13897: NewGardiner
 13898.......: UnicodiaSesh
 13899.......: NewGardiner
-1389A, 1389B: UnicodiaSesh
-1389C.......: NewGardiner
-1389D..138A3: UnicodiaSesh
+1389A..138A3: UnicodiaSesh
 138A4.......: NewGardiner
 138A5..138A8: UnicodiaSesh
 138A9.......: NewGardiner
@@ -1129,9 +1113,7 @@ FFFD......: NotoSerif-Regular
 13908.......: NewGardiner
 13909..1390B: UnicodiaSesh
 1390C..1390F: NewGardiner
-13910, 13911: UnicodiaSesh
-13912.......: NewGardiner
-13913..1392A: UnicodiaSesh
+13910..1392A: UnicodiaSesh
 1392B, 1392C: NewGardiner
 1392D..13933: UnicodiaSesh
 13934.......: NewGardiner
@@ -1147,9 +1129,7 @@ FFFD......: NotoSerif-Regular
 13997, 13998: NewGardiner
 13999.......: UnicodiaSesh
 1399A.......: NewGardiner
-1399B..1399F: UnicodiaSesh
-139A0.......: NewGardiner
-139A1.......: UnicodiaSesh
+1399B..139A1: UnicodiaSesh
 139A2.......: NewGardiner
 139A3.......: UnicodiaSesh
 139A4, 139A5: NewGardiner
@@ -1226,8 +1206,8 @@ FFFD......: NotoSerif-Regular
 13AD7..13AD9: UnicodiaSesh
 13ADA.......: NewGardiner
 13ADB..13AE0: UnicodiaSesh
-13AE1..13AE4: NewGardiner
-13AE5.......: UnicodiaSesh
+13AE1..13AE3: NewGardiner
+13AE4, 13AE5: UnicodiaSesh
 13AE6, 13AE7: NewGardiner
 13AE8..13AEE: UnicodiaSesh
 13AEF.......: NewGardiner
@@ -1288,7 +1268,9 @@ FFFD......: NotoSerif-Regular
 13BC1..13BC8: UnicodiaSesh
 13BC9.......: NewGardiner
 13BCA..13BD1: UnicodiaSesh
-13BD2..13BD5: NewGardiner
+13BD2.......: NewGardiner
+13BD3.......: UnicodiaSesh
+13BD4, 13BD5: NewGardiner
 13BD6..13BD9: UnicodiaSesh
 13BDA.......: NewGardiner
 13BDB..13BE3: UnicodiaSesh
@@ -1395,9 +1377,9 @@ FFFD......: NotoSerif-Regular
 13DAE, 13DAF: NewGardiner
 13DB0.......: UnicodiaSesh
 13DB1..13DB4: NewGardiner
-13DB5..13DBC: UnicodiaSesh
-13DBD..13DBF: NewGardiner
-13DC0..13DCC: UnicodiaSesh
+13DB5..13DBD: UnicodiaSesh
+13DBE.......: NewGardiner
+13DBF..13DCC: UnicodiaSesh
 13DCD..13DD0: NewGardiner
 13DD1.......: UnicodiaSesh
 13DD2.......: NewGardiner
@@ -1426,8 +1408,8 @@ FFFD......: NotoSerif-Regular
 13E0A.......: UnicodiaSesh
 13E0B.......: NewGardiner
 13E0C..13E0F: UnicodiaSesh
-13E10, 13E11: NewGardiner
-13E12..13E14: UnicodiaSesh
+13E10.......: NewGardiner
+13E11..13E14: UnicodiaSesh
 13E15.......: NewGardiner
 13E16..13E1B: UnicodiaSesh
 13E1C.......: NewGardiner
@@ -1447,8 +1429,8 @@ FFFD......: NotoSerif-Regular
 13E3F.......: NewGardiner
 13E40..13E43: UnicodiaSesh
 13E44, 13E45: NewGardiner
-13E46..13E49: UnicodiaSesh
-13E4A..13E4C: NewGardiner
+13E46..13E4A: UnicodiaSesh
+13E4B, 13E4C: NewGardiner
 13E4D..13E59: UnicodiaSesh
 13E5A.......: NewGardiner
 13E5B..13E76: UnicodiaSesh
@@ -1524,8 +1506,8 @@ FFFD......: NotoSerif-Regular
 13FB2..13FB4: UnicodiaSesh
 13FB5, 13FB6: NewGardiner
 13FB7, 13FB8: UnicodiaSesh
-13FB9, 13FBA: NewGardiner
-13FBB..13FCC: UnicodiaSesh
+13FB9.......: NewGardiner
+13FBA..13FCC: UnicodiaSesh
 13FCD.......: NewGardiner
 13FCE..13FDF: UnicodiaSesh
 13FE0.......: NewGardiner
@@ -1549,9 +1531,7 @@ FFFD......: NotoSerif-Regular
 1406D.......: NewGardiner
 1406E..14070: UnicodiaSesh
 14071.......: NewGardiner
-14072..14087: UnicodiaSesh
-14088.......: NewGardiner
-14089..14098: UnicodiaSesh
+14072..14098: UnicodiaSesh
 14099.......: NewGardiner
 1409A.......: UnicodiaSesh
 1409B.......: NewGardiner
@@ -1569,8 +1549,8 @@ FFFD......: NotoSerif-Regular
 140CC.......: NewGardiner
 140CD.......: UnicodiaSesh
 140CE.......: NewGardiner
-140CF..140DC: UnicodiaSesh
-140DD, 140DE: NewGardiner
+140CF..140DD: UnicodiaSesh
+140DE.......: NewGardiner
 140DF, 140E0: UnicodiaSesh
 140E1, 140E2: NewGardiner
 140E3..140E5: UnicodiaSesh
@@ -1597,21 +1577,15 @@ FFFD......: NotoSerif-Regular
 14136.......: NewGardiner
 14137..1413B: UnicodiaSesh
 1413C.......: NewGardiner
-1413D..14140: UnicodiaSesh
-14141.......: NewGardiner
-14142..14144: UnicodiaSesh
+1413D..14144: UnicodiaSesh
 14145.......: NewGardiner
 14146..14150: UnicodiaSesh
 14151.......: NewGardiner
-14152..14159: UnicodiaSesh
-1415A, 1415B: NewGardiner
-1415C, 1415D: UnicodiaSesh
-1415E.......: NewGardiner
-1415F..14164: UnicodiaSesh
+14152..1415A: UnicodiaSesh
+1415B.......: NewGardiner
+1415C..14164: UnicodiaSesh
 14165.......: NewGardiner
-14166..1416C: UnicodiaSesh
-1416D.......: NewGardiner
-1416E..14174: UnicodiaSesh
+14166..14174: UnicodiaSesh
 14175.......: NewGardiner
 14176..1417C: UnicodiaSesh
 1417D.......: NewGardiner
@@ -1723,9 +1697,7 @@ FFFD......: NotoSerif-Regular
 142D3..142D5: NewGardiner
 142D6..142D8: UnicodiaSesh
 142D9, 142DA: NewGardiner
-142DB..142DE: UnicodiaSesh
-142DF, 142E0: NewGardiner
-142E1..142F7: UnicodiaSesh
+142DB..142F7: UnicodiaSesh
 142F8.......: NewGardiner
 142F9..142FE: UnicodiaSesh
 142FF, 14300: NewGardiner
