@@ -191,8 +191,13 @@ namespace {
         case 0x14240:
             str::replace(s, "(T19)", "(T19E)");
             break;
+        case 0x1358A:
+        case 0x1358B:
+        case 0x1358C:
+            str::replace(s, "(M12B)", "(M12K)");
+            break;
         case 0x14142:
-            str::replace(s, "(R109)", "(O49)");
+            str::replace(s, "(R109)", "(O49)");  // links to itself :)
             break;
         default: ;
         }
