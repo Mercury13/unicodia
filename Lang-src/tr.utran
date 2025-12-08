@@ -12270,7 +12270,7 @@
      <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
      <transl>{1}, ayrık betik</transl>
     </text>
-    <text id="All" force-attention="true">
+    <text id="All">
      <orig>{1} (all)</orig>
      <au-cmt>smth like “25 characters (all)”</au-cmt>
      <transl>{1} (tümü)</transl>
