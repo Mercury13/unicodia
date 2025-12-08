@@ -60,7 +60,12 @@ namespace {
         }
         // 4. Tail
         for (; p != end && std::isalpha(*p); ++p) {
-            r += std::tolower(*p);
+            char tempC = std::tolower(*p);
+            // Final L is left as L
+            // No hyperlinks for now, but should work
+            if (tempC == 'l')
+                tempC = 'L';
+            r += tempC;
         }
         if (p != end) {
             throw std::logic_error(str::cat(
@@ -195,6 +200,9 @@ namespace {
         case 0x1358B:
         case 0x1358C:
             str::replace(s, "(M12B)", "(M12K)");
+            break;
+        case 0x13598:
+            str::replace(s, "(N5)", "(N14)");
             break;
         case 0x14142:
             str::replace(s, "(R109)", "(O49)");  // links to itself :)
