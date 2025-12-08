@@ -547,6 +547,10 @@ QVariant SearchModel::groupData(size_t index, int role) const
                         } else if (blk->wasFilledIn(version)) {
                             charsLine = loc::get("Search.Blk.Full").arg(charsLine);
                         }
+                    } else {
+                        if (group.size() == blk->nChars) {
+                            charsLine = loc::get("Search.Blk.All").arg(charsLine);
+                        }
                     }
                     return str::toQ(blk->loc.name) + '\n' + str::toQ(charsLine);
                 }

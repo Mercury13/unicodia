@@ -926,7 +926,7 @@ namespace uc {
         mutable QIcon* icon = nullptr;
         mutable const Cp* firstAllocated = nullptr;
         mutable const Cp* lastAllocated = nullptr;
-        mutable int nChars = 0;
+        mutable unsigned nChars = 0;
         mutable unsigned cachedIndex = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
         mutable EcVersion ecLastVersion = EcVersion::FIRST;

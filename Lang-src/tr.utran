@@ -11806,6 +11806,17 @@
      <orig>
       <p>'''Unicode transformation format, 7 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
       <p />
+      <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
+      <p />
+      <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may be encoded too to save bytes.</p>
+      <p />
+      <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
+      <p />
+      <p>Used only for E-mail messages, as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special unambigous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
+     </orig>
+     <known-orig>
+      <p>'''Unicode transformation format, 7 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
+      <p />
       <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written. Plus + may be encoded in +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
       <p />
       <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodeable characters between two encodeable, it may be encoded too to save bytes.</p>
@@ -11813,7 +11824,7 @@
       <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
       <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that’s important for search. In World Wide Web UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode dönüşüm biçimi, 7 bit''', Unicode [[pt:serialization|serileştirme]]nin yazdırılabilir [[pt:ascii|ASCII]] karakterlerinden oluşan bir zincire dönüştürülmesi biçimidir.</p>
       <p />
@@ -11841,6 +11852,23 @@
       <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
       <p />
       <p>Properties of UTF-8:</p>
+      <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
+      <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that gives compatibility with program interfaces, terminal protocols.</p>
+      <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from end of string 00.</p>
+      <p>* Self-synchronizing: if you add any erroneous bytes, the rest of text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
+      <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
+      <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
+      <p />
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+     </orig>
+     <known-orig>
+      <p>'''Unicode transformation format, 8 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
+      <p>* 0xxx.xxxx</p>
+      <p>* 110x.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p />
+      <p>Properties of UTF-8:</p>
       <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced to Unicode with [[pt:utf16|UTF-16]] there’s no sequences longer than 4.</p>
       <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that gives compatibility with program interfaces, terminal protocols.</p>
       <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from end of string 00.</p>
@@ -11849,7 +11877,7 @@
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
       <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. [[pt:bom|Byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode dönüşüm biçimi, 8 bit''', Unicode [[pt:serialization|serileştirme]]’nin bir bayt zincirine dönüştürülmesi biçimidir. Mevcut internet yazılımlarıyla uyumluluk sağlamak amacıyla 1992 yılında Plan{{_}}9 işletim sisteminde icat edilmiştir. Her [[pt:codepoint|kod noktası]] şu dizilerden biriyle yazılır:</p>
       <p>* 0xxx.xxxx</p>
@@ -11893,6 +11921,7 @@
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
+     <au-cmt>“Bush hid the facts” is the exact string, and breaks because is even-odd-odd-odd.</au-cmt>
      <transl>
       <p>'''Unicode dönüşüm biçimi, 16 bit''', Unicode’un iki baytlık makine sözcüklerinden oluşan bir zincire [[pt:serialization|serileştirme]] biçimidir.</p>
       <p />
@@ -12240,6 +12269,11 @@
      <orig>{1}, disunified script</orig>
      <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
      <transl>{1}, ayrık betik</transl>
+    </text>
+    <text id="All" force-attention="true">
+     <orig>{1} (all)</orig>
+     <au-cmt>smth like “25 characters (all)”</au-cmt>
+     <transl>{1} (tümü)</transl>
     </text>
    </group>
    <group id="Num">
@@ -14412,7 +14446,8 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], the Reiwa era of Japanese traditional calendar. In 2016, the old Emperor Akihito decided to abdicate, and a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <known-orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</known-orig>
      <transl>Japon geleneksel takviminin Reiwa dönemi olan [[pc:32FF]] karakterini içeren Unicode’un acil olarak yayınlanması. 2016 yılında eski İmparator Akihito tahttan çekilmeye karar verdiğinde, varisi için yeni bir kod noktası ayrıldı. 30 Nisan 2019’da nihayet tahttan çekildiğinde, karakter hızla kodlandı.</transl>
     </text>
    </group>
@@ -14808,7 +14843,8 @@
    </group>
    <group id="AtariSt">
     <text id="Text">
-     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, the former founder of Commodore. They made the second advanced home computer after the Commodore Amiga. Musicians praised it, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <known-orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</known-orig>
      <transl>Atari, 1983 video oyunu krizinden sağ çıkamadı ve Commodore’un eski kurucusu Jack Tramiel’e satıldı. Commodore Amiga’dan sonra ikinci gelişmiş ev bilgisayarını ürettiler. Müzisyenler tarafından övgüyle karşılandı ve müzik editörleri "Cubase" ve "Logic Pro" ST’den geldi.</transl>
     </text>
     <text id="Unenc">
