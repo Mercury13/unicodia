@@ -6,7 +6,7 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
-# Note about UnicodiaSesh font
+# Note about Egyptian font
 
 It has been moved to a separate repo. Visit https://github.com/Mercury13/unicodia-sesh
 
