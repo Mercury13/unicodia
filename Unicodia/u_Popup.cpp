@@ -159,7 +159,7 @@ void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
                 // Something was actually done?
         if (workingW > 0                        // assigned at least once
                 && (onceHadTroublesWithSpace    // troubles with space → act more aggressively
-                   || workingH < oldHeight)) {  // reduced height? → OK
+                   || workingH != oldHeight)) {  // reduced height? → OK
             me->resize(workingW, workingH);
         }
     }
