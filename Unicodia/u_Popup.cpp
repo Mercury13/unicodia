@@ -174,17 +174,18 @@ namespace bi {
         auto minInfo = infoFor(COOL_WIDTH);
         if (initialInfo.isCool() && initialInfo.isCoolerThan(minInfo))  // is initial just cooler?
             return initialInfo;
-        if (minInfo.isCool())   // Min info is never acceptable, but if it’s cool → just return
+        if (minInfo.isCool())   // If min info is just cool → just return
             return minInfo;
 
         // Max info
         const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
         const auto stillComfortableWidth = std::max(minInfo.width,
                     std::min(MAX_WIDTH, maxWidth));
+        // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
         auto maxInfo = infoFor(stillComfortableWidth);
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
-        if (!maxInfo.isAcceptable()) {   // Max info is OK, otherwise…
+        if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…
             if (maxInfo.width >= maxWidth)  // Width exceeded → do what you want
                 return maxInfo;
             // Switch to stillConfortableWidth..maxWidth
@@ -198,10 +199,10 @@ namespace bi {
         if (maxInfo.height >= minInfo.height)
             return minInfo;
 
-        // Min info is never OK, max is always OK
+        // Max info is cooler than min
         auto targetCoolness = maxInfo.coolness;
         while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
-            auto medWidth = (minInfo.width + maxInfo.width) / 2;
+            auto medWidth = (minInfo.width + maxInfo.width) >> 1;
             auto medInfo = infoFor(medWidth);
             if (medInfo.coolness >= targetCoolness) {
                 maxInfo = medInfo;
