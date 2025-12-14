@@ -122,48 +122,108 @@ void pop::popupAtY(
 }
 
 
+namespace bi {
+
+    enum class Coolness : unsigned char {
+        BAD,            ///< Cannot keep this
+        ACCEPTABLE,
+        COOL
+    };
+
+    struct Info {
+        int width;
+        int height;
+        Coolness coolness;  // [+] just acceptable
+
+        bool isCool() const { return (coolness == Coolness::COOL); }
+        bool isAcceptable() const { return (coolness >= Coolness::ACCEPTABLE); }
+
+        bool isCoolerThan(const Info& other) const {
+            return (width <= other.width
+                 && height <= other.height);
+        }
+    };
+
+    constexpr int MIN_CONTROLLED_HEIGHT = 350;
+    constexpr int MAX_WIDTH = 1100;       // maximum (non really tight) width
+    constexpr int COOL_WIDTH = 450;
+    constexpr int COOL_HEIGHT = 625;
+    constexpr int HEIGHT_LEEWAY = 35;
+    constexpr int WIDTH_LEEWAY = 20;
+    constexpr int WIDTH_PRECISION = 40;
+
+    Info bisectBest(WiAdjust* me, const QRect& screenRect) {
+        const auto acceptableHeight = screenRect.height() - HEIGHT_LEEWAY;
+        const auto coolHeight = std::min(COOL_HEIGHT, acceptableHeight);
+
+        auto infoFor = [me, acceptableHeight, coolHeight](int aWidth) -> Info {
+            auto h = me->layout()->heightForWidth(aWidth);
+            return {
+                .width = aWidth,
+                .height = h,
+                .coolness = (h <= coolHeight) ? Coolness::COOL
+                          : (h <= acceptableHeight) ? Coolness::ACCEPTABLE
+                          : Coolness::BAD,
+            };
+        };
+
+        // Initial info
+        auto initialInfo = infoFor(me->width());
+
+        // Min info
+        auto minInfo = infoFor(COOL_WIDTH);
+        if (initialInfo.isCool() && initialInfo.isCoolerThan(minInfo))  // is initial just cooler?
+            return initialInfo;
+        if (minInfo.isCool())   // Min info is never acceptable, but if it’s cool → just return
+            return minInfo;
+
+        // Max info
+        const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
+        const auto stillComfortableWidth = std::max(minInfo.width,
+                    std::min(MAX_WIDTH, maxWidth));
+        auto maxInfo = infoFor(stillComfortableWidth);
+        if (minInfo.isCoolerThan(maxInfo))
+            return minInfo;
+        if (!maxInfo.isAcceptable()) {   // Max info is OK, otherwise…
+            if (maxInfo.width >= maxWidth)  // Width exceeded → do what you want
+                return maxInfo;
+            // Switch to stillConfortableWidth..maxWidth
+            minInfo = maxInfo;
+            maxInfo = infoFor(maxWidth);
+            if (!maxInfo.isAcceptable())  // Still bad → do what you want
+                return maxInfo;
+        }
+
+        // Again check
+        if (maxInfo.height >= minInfo.height)
+            return minInfo;
+
+        // Min info is never OK, max is always OK
+        auto targetCoolness = maxInfo.coolness;
+        while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
+            auto medWidth = (minInfo.width + maxInfo.width) / 2;
+            auto medInfo = infoFor(medWidth);
+            if (medInfo.coolness >= targetCoolness) {
+                maxInfo = medInfo;
+            } else {
+                minInfo = medInfo;
+            }
+        }
+        return (minInfo.isCoolerThan(maxInfo)) ? minInfo : maxInfo;
+    }
+
+}   // anon namespace
+
+
 void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
 {
     // My params
-    static constexpr int MIN_CONTROLLED_HEIGHT = 350;
-    static constexpr int MAX_WIDTH = 1100;       // maximum (non really tight) width
-    static constexpr int WIDTH_STEP = 50;
-    static constexpr int COOL_WIDTH = 450;
-    static constexpr int COOL_HEIGHT = 650;
-    static constexpr int HEIGHT_LEEWAY = 35;
-    static constexpr int WIDTH_LEEWAY = 20;
-    //static constexpr int WIDTH_PRECISION = 40;
 
     me->adjustSize();
-    auto oldHeight = me->height();
-    if (oldHeight >= MIN_CONTROLLED_HEIGHT) {
-        auto maxWidth = std::min(MAX_WIDTH, screenRect.width() - WIDTH_LEEWAY);
-        auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
-        auto myW = std::max(me->width(), COOL_WIDTH - WIDTH_STEP);
-        int h;
-        bool haveTroublesWithSpace = false;
-        bool onceHadTroublesWithSpace = false;
-        int workingW = -1;
-        int workingH = std::numeric_limits<int>::max();
-        do {
-            // Took 2nd (maxWidth) → will surely break!
-            myW = std::min(myW + WIDTH_STEP, maxWidth);
-            h = me->layout()->heightForWidth(myW);
-            haveTroublesWithSpace = (h > rqHeight);
-            onceHadTroublesWithSpace |= haveTroublesWithSpace;
-            if (h > 0                           // have some height
-                    && (haveTroublesWithSpace   // troubles with space → act more aggressively
-                       || h < workingH)) {      // could not get reduce height → too bad
-                workingW = myW;
-                workingH = h;
-            }
-        } while (haveTroublesWithSpace && myW < maxWidth);
-                // Something was actually done?
-        if (workingW > 0                        // assigned at least once
-                && (onceHadTroublesWithSpace    // troubles with space → act more aggressively
-                   || workingH != oldHeight)) {  // reduced height? → OK
-            me->resize(workingW, workingH);
-        }
+    auto h = me->height();
+    if (h >= bi::MIN_CONTROLLED_HEIGHT) {
+        auto bestInfo = bi::bisectBest(me, screenRect);
+        me->resize(bestInfo.width, bestInfo.height);
     }
 }
 
