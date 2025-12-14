@@ -124,7 +124,7 @@ void pop::popupAtY(
 
 namespace bi {
 
-    enum class Coolness : unsigned char {
+    enum class Quality : unsigned char {
         BAD,            ///< Cannot keep this
         ACCEPTABLE,
         COOL
@@ -133,10 +133,10 @@ namespace bi {
     struct Info {
         int width;
         int height;
-        Coolness coolness;  // [+] just acceptable
+        Quality quality;  // [+] just acceptable
 
-        bool isCool() const { return (coolness == Coolness::COOL); }
-        bool isAcceptable() const { return (coolness >= Coolness::ACCEPTABLE); }
+        bool isCool() const { return (quality == Quality::COOL); }
+        bool isAcceptable() const { return (quality >= Quality::ACCEPTABLE); }
 
         bool isCoolerThan(const Info& other) const {
             return (width <= other.width
@@ -161,19 +161,19 @@ namespace bi {
             return {
                 .width = aWidth,
                 .height = h,
-                .coolness = (h <= coolHeight) ? Coolness::COOL
-                          : (h <= acceptableHeight) ? Coolness::ACCEPTABLE
-                          : Coolness::BAD,
+                .quality = (h <= coolHeight) ? Quality::COOL
+                         : (h <= acceptableHeight) ? Quality::ACCEPTABLE
+                         : Quality::BAD,
             };
         };
 
-        // Initial info
-        auto initialInfo = infoFor(me->width());
-
         // Min info
         auto minInfo = infoFor(COOL_WIDTH);
-        if (initialInfo.isCool() && initialInfo.isCoolerThan(minInfo))  // is initial just cooler?
-            return initialInfo;
+        if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
+            auto autoInfo = infoFor(me->width());
+            if (autoInfo.isCool() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
+                return autoInfo;
+        }
         if (minInfo.isCool())   // If min info is just cool → just return
             return minInfo;
 
@@ -200,11 +200,11 @@ namespace bi {
             return minInfo;
 
         // Max info is cooler than min
-        auto targetCoolness = maxInfo.coolness;
+        auto targetQuality = maxInfo.quality;
         while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
             auto medWidth = (minInfo.width + maxInfo.width) >> 1;
             auto medInfo = infoFor(medWidth);
-            if (medInfo.coolness >= targetCoolness) {
+            if (medInfo.quality >= targetQuality) {
                 maxInfo = medInfo;
             } else {
                 minInfo = medInfo;
