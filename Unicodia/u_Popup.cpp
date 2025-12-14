@@ -125,16 +125,18 @@ void pop::popupAtY(
 void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
 {
     // My params
+    static constexpr int MIN_CONTROLLED_HEIGHT = 350;
     static constexpr int MAX_WIDTH = 1100;       // maximum (non really tight) width
     static constexpr int WIDTH_STEP = 50;
     static constexpr int COOL_WIDTH = 450;
     static constexpr int COOL_HEIGHT = 650;
     static constexpr int HEIGHT_LEEWAY = 35;
     static constexpr int WIDTH_LEEWAY = 20;
+    //static constexpr int WIDTH_PRECISION = 40;
 
     me->adjustSize();
     auto oldHeight = me->height();
-    if (oldHeight >= 350) {
+    if (oldHeight >= MIN_CONTROLLED_HEIGHT) {
         auto maxWidth = std::min(MAX_WIDTH, screenRect.width() - WIDTH_LEEWAY);
         auto rqHeight = std::min(COOL_HEIGHT, screenRect.height() - HEIGHT_LEEWAY);
         auto myW = std::max(me->width(), COOL_WIDTH - WIDTH_STEP);
