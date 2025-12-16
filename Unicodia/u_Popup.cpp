@@ -125,10 +125,10 @@ void pop::popupAtY(
 namespace bi {
 
     enum class Quality : unsigned char {
-        BAD,            ///< Cannot keep this
-        ACCEPTABLE_TALL,
-        ACCEPTABLE,
-        COOL
+        BAD,                ///< Cannot keep this
+        ACCEPTABLE_TALL,    ///< Min. acceptable
+        ACCEPTABLE,         ///< Better
+        COOL                ///< The best ever
     };
 
     struct Info {
