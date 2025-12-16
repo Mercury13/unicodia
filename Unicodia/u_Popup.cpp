@@ -206,7 +206,8 @@ namespace bi {
         auto minInfo = meter.infoOf(minWidth);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
             auto autoInfo = meter.infoOf(me->width());
-            if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
+            // Is auto just cooler? — e.g. some tables when we increase width, height is the same
+            if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))
                 return autoInfo;
         }
         if (minInfo.isCoolest())   // If min info is just cool → just return
@@ -216,6 +217,7 @@ namespace bi {
         const auto stillReadableWidth = std::min(MAX_READABLE_WIDTH, maxWidth);
         // Can we ever make readable width and any height?
         auto maxInfo = meter.infoOf(stillReadableWidth);
+        // Same: min is just cooler because of e.g. tables
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
         if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…
