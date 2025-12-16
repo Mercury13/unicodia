@@ -148,8 +148,8 @@ namespace bi {
     constexpr bool TESTING_MODE = false;
 
     constexpr int MIN_CONTROLLED_HEIGHT = 350;
-    constexpr int MAX_WIDTH = 850;  // do not exceed unless you have to because of low screen
-    constexpr int COOL_WIDTH = 450;
+    constexpr int MIN_VARIABLE_WIDTH = 450;
+    constexpr int MAX_READABLE_WIDTH = 850;  // do not exceed unless you have to because of short screen
     constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
     constexpr int HEIGHT_LEEWAY = 35;
     constexpr int WIDTH_LEEWAY = 20;
@@ -181,7 +181,7 @@ namespace bi {
         };
 
         // Min info
-        auto minInfo = infoFor(COOL_WIDTH);
+        auto minInfo = infoFor(MIN_VARIABLE_WIDTH);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
             auto autoInfo = infoFor(me->width());
             if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
@@ -193,7 +193,7 @@ namespace bi {
         // Max info
         const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
         const auto stillComfortableWidth = std::max(minInfo.width,
-                    std::min(MAX_WIDTH, maxWidth));
+                    std::min(MAX_READABLE_WIDTH, maxWidth));
         // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
         auto maxInfo = infoFor(stillComfortableWidth);
         if (minInfo.isCoolerThan(maxInfo))
