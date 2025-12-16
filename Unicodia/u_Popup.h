@@ -82,7 +82,7 @@ namespace pop {
             int y);
     void myAdjustSize(
             WiAdjust* me,
-            const QRect& screenRect);
+            const QSize& screenSize);
     void popupAtScreen(
             WiAdjust* me, QWidget* owner, QScreen* screen, const QRect& absRect);
     QScreen* findScreen(QWidget* widget, const QRect& absRect);
@@ -132,8 +132,8 @@ protected:
         adjustAfterPopup();
     }
 
-    void myAdjustSize(const QRect& screenRect)
-        { pop::myAdjustSize(this, screenRect); }
+    void myAdjustSize(const QSize& screenSize)
+        { pop::myAdjustSize(this, screenSize); }
 
     void popupAtScreen(QScreen* screen, const QRect& absRect)
     {

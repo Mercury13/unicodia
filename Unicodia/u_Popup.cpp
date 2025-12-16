@@ -167,8 +167,8 @@ namespace bi {
         return Quality::BAD;
     }
 
-    Info bisectBest(WiAdjust* me, const QRect& screenRect) {
-        const auto acceptableHeight = screenRect.height() - HEIGHT_LEEWAY;
+    Info bisectBest(WiAdjust* me, const QSize& screenSize) {
+        const auto acceptableHeight = screenSize.height() - HEIGHT_LEEWAY;
         const auto coolHeight = std::min(COOL_HEIGHT, acceptableHeight);
 
         auto infoFor = [me, acceptableHeight, coolHeight](int aWidth) -> Info {
@@ -181,7 +181,7 @@ namespace bi {
         };
 
         // Min info
-        const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
+        const auto maxWidth = std::max(screenSize.width() - WIDTH_LEEWAY, 100);  // 100dip are always present :)
         auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
         auto minInfo = infoFor(minWidth);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
@@ -238,14 +238,14 @@ namespace bi {
 }   // anon namespace
 
 
-void pop::myAdjustSize(WiAdjust* me, const QRect& screenRect)
+void pop::myAdjustSize(WiAdjust* me, const QSize& screenSize)
 {
     // My params
 
     me->adjustSize();
     auto h = me->height();
     if (h >= bi::MIN_CONTROLLED_HEIGHT) {
-        auto bestInfo = bi::bisectBest(me, screenRect);
+        auto bestInfo = bi::bisectBest(me, screenSize);
         me->resize(bestInfo.width, bestInfo.height);
     }
 }
@@ -256,7 +256,7 @@ void pop::popupAtScreen(
 {
     auto screenRect = screen->availableGeometry();
     me->hide();  // if shown
-    myAdjustSize(me, screenRect);
+    myAdjustSize(me, screenRect.size());
     auto ownerRect = owner->geometry().intersected(screenRect);
     pop::eatBottomMargin(ownerRect, pop::BOTTOM_MARGIN);
 
