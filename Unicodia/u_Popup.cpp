@@ -229,7 +229,7 @@ namespace bi {
         if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…            
             if (maxInfo.width >= maxWidth)  // Width exceeded → do what you want
                 return maxInfo;
-            // Switch to stillConfortableWidth..maxWidth
+            // Switch to stillReadableWidth..maxWidth
             meter.switchToUnreadable();
             minInfo = maxInfo;
             maxInfo = meter.infoOf(maxWidth);
