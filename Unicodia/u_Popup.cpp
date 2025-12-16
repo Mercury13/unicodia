@@ -214,7 +214,7 @@ namespace bi {
 
         // Max info
         const auto stillReadableWidth = std::min(MAX_READABLE_WIDTH, maxWidth);
-        // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
+        // Can we ever make readable width and any height?
         auto maxInfo = meter.infoOf(stillReadableWidth);
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
