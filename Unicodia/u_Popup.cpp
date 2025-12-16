@@ -181,7 +181,9 @@ namespace bi {
         };
 
         // Min info
-        auto minInfo = infoFor(MIN_VARIABLE_WIDTH);
+        const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
+        auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
+        auto minInfo = infoFor(minWidth);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
             auto autoInfo = infoFor(me->width());
             if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
@@ -191,9 +193,7 @@ namespace bi {
             return minInfo;
 
         // Max info
-        const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
-        const auto stillReadableWidth = std::max(minInfo.width,
-                    std::min(MAX_READABLE_WIDTH, maxWidth));
+        const auto stillReadableWidth = std::min(MAX_READABLE_WIDTH, maxWidth);
         // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
         auto maxInfo = infoFor(stillReadableWidth);
         if (minInfo.isCoolerThan(maxInfo))
