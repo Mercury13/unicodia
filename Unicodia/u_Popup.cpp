@@ -136,8 +136,11 @@ namespace bi {
         int height;
         Quality quality;  // [+] just acceptable
 
+        /// @return [+] nothing more to strive for
         bool isCoolest() const { return (quality == Quality::COOL); }
-        bool isAcceptable() const { return (quality >= Quality::ACCEPTABLE_TALL); }
+
+        /// @return [+] at least everything is visible
+        bool isAcceptable() const { return (quality > Quality::BAD); }
 
         bool isCoolerThan(const Info& other) const {
             return (width <= other.width
