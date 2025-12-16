@@ -243,11 +243,7 @@ namespace bi {
 
         // Check quality: do we need a thing to chase for?
         if (maxInfo.quality <= minInfo.quality) {
-            if (maxInfo.quality < minInfo.quality  // Should not happen
-                    || meter.isUnreadable()) { // Unreadable → return closest to readable
-                return minInfo;
-            }
-            return maxInfo;
+            return minInfo;
         }
 
         // Max info is better than min
