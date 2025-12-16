@@ -248,7 +248,8 @@ namespace bi {
             if (minInfo.quality <= Quality::ACCEPTABLE_TALL
                     && maxInfo.quality <= Quality::ACCEPTABLE_TALL)
                 return maxInfo;
-            // Otherwise just min, really rare
+            // Otherwise just min, mostly in unreadable mode
+            // when both are acceptable
             return minInfo;
         }
 
