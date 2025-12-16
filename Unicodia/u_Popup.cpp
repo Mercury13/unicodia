@@ -126,6 +126,7 @@ namespace bi {
 
     enum class Quality : unsigned char {
         BAD,            ///< Cannot keep this
+        ACCEPTABLE_TALL,
         ACCEPTABLE,
         COOL
     };
@@ -135,8 +136,8 @@ namespace bi {
         int height;
         Quality quality;  // [+] just acceptable
 
-        bool isCool() const { return (quality == Quality::COOL); }
-        bool isAcceptable() const { return (quality >= Quality::ACCEPTABLE); }
+        bool isCoolest() const { return (quality == Quality::COOL); }
+        bool isAcceptable() const { return (quality >= Quality::ACCEPTABLE_TALL); }
 
         bool isCoolerThan(const Info& other) const {
             return (width <= other.width
@@ -144,13 +145,27 @@ namespace bi {
         }
     };
 
+    constexpr bool TESTING_MODE = false;
+
     constexpr int MIN_CONTROLLED_HEIGHT = 350;
-    constexpr int MAX_WIDTH = 1100;       // maximum (non really tight) width
+    constexpr int MAX_WIDTH = 850;  // do not exceed unless you have to because of low screen
     constexpr int COOL_WIDTH = 450;
-    constexpr int COOL_HEIGHT = 625;
+    constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
     constexpr int HEIGHT_LEEWAY = 35;
     constexpr int WIDTH_LEEWAY = 20;
     constexpr int WIDTH_PRECISION = 40;
+
+    inline Quality qualityOf(int w, int h, int acceptableHeight, int coolHeight)
+    {
+        if (h <= coolHeight) {
+            return Quality::COOL;
+        }
+        if (h <= acceptableHeight) {
+            return (2 * h > 3 * w) ? Quality::ACCEPTABLE_TALL
+                                   : Quality::ACCEPTABLE;
+        }
+        return Quality::BAD;
+    }
 
     Info bisectBest(WiAdjust* me, const QRect& screenRect) {
         const auto acceptableHeight = screenRect.height() - HEIGHT_LEEWAY;
@@ -161,9 +176,7 @@ namespace bi {
             return {
                 .width = aWidth,
                 .height = h,
-                .quality = (h <= coolHeight) ? Quality::COOL
-                         : (h <= acceptableHeight) ? Quality::ACCEPTABLE
-                         : Quality::BAD,
+                .quality = qualityOf(aWidth, h, acceptableHeight, coolHeight),
             };
         };
 
@@ -171,10 +184,10 @@ namespace bi {
         auto minInfo = infoFor(COOL_WIDTH);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
             auto autoInfo = infoFor(me->width());
-            if (autoInfo.isCool() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
+            if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
                 return autoInfo;
         }
-        if (minInfo.isCool())   // If min info is just cool → just return
+        if (minInfo.isCoolest())   // If min info is just cool → just return
             return minInfo;
 
         // Max info
@@ -199,7 +212,16 @@ namespace bi {
         if (maxInfo.height >= minInfo.height)
             return minInfo;
 
-        // Max info is cooler than min
+        // Check quality: do we need a thing to chase for?
+        if (maxInfo.quality <= minInfo.quality) {
+            // Should not happen
+            if (maxInfo.quality < minInfo.quality) {
+                return minInfo;
+            }
+            return maxInfo;
+        }
+
+        // Max info is better than min
         auto targetQuality = maxInfo.quality;
         while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
             auto medWidth = (minInfo.width + maxInfo.width) >> 1;
