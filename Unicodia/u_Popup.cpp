@@ -158,6 +158,7 @@ namespace bi {
     constexpr int WIDTH_LEEWAY = 20;
     constexpr int WIDTH_PRECISION = 40;
     constexpr int REASONABLE_SIDE = 100;  // 100dip are always present :)
+    constexpr int BAD_HEIGHT = -9999;
 
     inline int toReasonable(int x)
         { return std::max(x, REASONABLE_SIDE);  }
@@ -170,9 +171,14 @@ namespace bi {
               coolHeight(std::min(COOL_HEIGHT, acceptableHeight)) {}
         inline Quality qualityOf(int w, int h) const;
         Info infoOf(int aWidth) const;
+        /// Switches to “unreadable” mode that never says “cool”
+        void switchToUnreadable() { coolHeight = BAD_HEIGHT; }
+        /// @return [+] we are in “unreadable” mode that’s automatically uncool
+        bool isUnreadable() const { return (coolHeight < 0); }
     private:
-        WiAdjust* me;
-        const int acceptableHeight, coolHeight;
+        WiAdjust* const me;
+        const int acceptableHeight;
+        int coolHeight = BAD_HEIGHT;
     };
 
     Quality Qualimeter::qualityOf(int w, int h) const
@@ -220,10 +226,11 @@ namespace bi {
         // Same: min is just cooler because of e.g. tables
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
-        if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…
+        if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…            
             if (maxInfo.width >= maxWidth)  // Width exceeded → do what you want
                 return maxInfo;
             // Switch to stillConfortableWidth..maxWidth
+            meter.switchToUnreadable();
             minInfo = maxInfo;
             maxInfo = meter.infoOf(maxWidth);
             if (!maxInfo.isAcceptable())  // Still bad → do what you want
@@ -236,8 +243,8 @@ namespace bi {
 
         // Check quality: do we need a thing to chase for?
         if (maxInfo.quality <= minInfo.quality) {
-            // Should not happen
-            if (maxInfo.quality < minInfo.quality) {
+            if (maxInfo.quality < minInfo.quality  // Should not happen
+                    || meter.isUnreadable()) { // Unreadable → return closest to readable
                 return minInfo;
             }
             return maxInfo;
