@@ -147,13 +147,14 @@ namespace bi {
 
     constexpr bool TESTING_MODE = false;
 
-    constexpr int MIN_CONTROLLED_HEIGHT = 350;
+    constexpr int MIN_CONTROLLED_HEIGHT = 350;  // shorter? → let it be auto
     constexpr int MIN_VARIABLE_WIDTH = 450;
     constexpr int MAX_READABLE_WIDTH = 850;  // do not exceed unless you have to because of short screen
     constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
     constexpr int HEIGHT_LEEWAY = 35;
     constexpr int WIDTH_LEEWAY = 20;
     constexpr int WIDTH_PRECISION = 40;
+    constexpr int REASONABLE_SIDE = 100;  // 100dip are always present :)
 
     inline Quality qualityOf(int w, int h, int acceptableHeight, int coolHeight)
     {
@@ -167,8 +168,11 @@ namespace bi {
         return Quality::BAD;
     }
 
+    inline int toReasonable(int x)
+        { return std::max(x, REASONABLE_SIDE);  }
+
     Info bisectBest(WiAdjust* me, const QSize& screenSize) {
-        const auto acceptableHeight = screenSize.height() - HEIGHT_LEEWAY;
+        const auto acceptableHeight = toReasonable(screenSize.height() - HEIGHT_LEEWAY);
         const auto coolHeight = std::min(COOL_HEIGHT, acceptableHeight);
 
         auto infoFor = [me, acceptableHeight, coolHeight](int aWidth) -> Info {
@@ -181,7 +185,7 @@ namespace bi {
         };
 
         // Min info
-        const auto maxWidth = std::max(screenSize.width() - WIDTH_LEEWAY, 100);  // 100dip are always present :)
+        const auto maxWidth = toReasonable(screenSize.width() - WIDTH_LEEWAY);
         auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
         auto minInfo = infoFor(minWidth);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
