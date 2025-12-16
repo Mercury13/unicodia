@@ -192,10 +192,10 @@ namespace bi {
 
         // Max info
         const auto maxWidth = screenRect.width() - WIDTH_LEEWAY;
-        const auto stillComfortableWidth = std::max(minInfo.width,
+        const auto stillReadableWidth = std::max(minInfo.width,
                     std::min(MAX_READABLE_WIDTH, maxWidth));
         // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
-        auto maxInfo = infoFor(stillComfortableWidth);
+        auto maxInfo = infoFor(stillReadableWidth);
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
         if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…
