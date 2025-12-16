@@ -156,7 +156,23 @@ namespace bi {
     constexpr int WIDTH_PRECISION = 40;
     constexpr int REASONABLE_SIDE = 100;  // 100dip are always present :)
 
-    inline Quality qualityOf(int w, int h, int acceptableHeight, int coolHeight)
+    inline int toReasonable(int x)
+        { return std::max(x, REASONABLE_SIDE);  }
+
+    class Qualimeter {
+    public:
+        Qualimeter(WiAdjust* aMe, const QSize& screenSize)
+            : me(aMe),
+              acceptableHeight(toReasonable(screenSize.height() - HEIGHT_LEEWAY)),
+              coolHeight(std::min(COOL_HEIGHT, acceptableHeight)) {}
+        inline Quality qualityOf(int w, int h) const;
+        Info infoOf(int aWidth) const;
+    private:
+        WiAdjust* me;
+        const int acceptableHeight, coolHeight;
+    };
+
+    Quality Qualimeter::qualityOf(int w, int h) const
     {
         if (h <= coolHeight) {
             return Quality::COOL;
@@ -168,28 +184,25 @@ namespace bi {
         return Quality::BAD;
     }
 
-    inline int toReasonable(int x)
-        { return std::max(x, REASONABLE_SIDE);  }
+    Info Qualimeter::infoOf(int aWidth) const
+    {
+        auto h = me->layout()->heightForWidth(aWidth);
+        return {
+            .width = aWidth,
+            .height = h,
+            .quality = qualityOf(aWidth, h),
+        };
+    }
 
     Info bisectBest(WiAdjust* me, const QSize& screenSize) {
-        const auto acceptableHeight = toReasonable(screenSize.height() - HEIGHT_LEEWAY);
-        const auto coolHeight = std::min(COOL_HEIGHT, acceptableHeight);
-
-        auto infoFor = [me, acceptableHeight, coolHeight](int aWidth) -> Info {
-            auto h = me->layout()->heightForWidth(aWidth);
-            return {
-                .width = aWidth,
-                .height = h,
-                .quality = qualityOf(aWidth, h, acceptableHeight, coolHeight),
-            };
-        };
+        Qualimeter meter(me, screenSize);
 
         // Min info
         const auto maxWidth = toReasonable(screenSize.width() - WIDTH_LEEWAY);
         auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
-        auto minInfo = infoFor(minWidth);
+        auto minInfo = meter.infoOf(minWidth);
         if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
-            auto autoInfo = infoFor(me->width());
+            auto autoInfo = meter.infoOf(me->width());
             if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))  // is auto just cooler?
                 return autoInfo;
         }
@@ -199,7 +212,7 @@ namespace bi {
         // Max info
         const auto stillReadableWidth = std::min(MAX_READABLE_WIDTH, maxWidth);
         // The 1st iteration is on COOL_WIDTH..stillComfortableWidth
-        auto maxInfo = infoFor(stillReadableWidth);
+        auto maxInfo = meter.infoOf(stillReadableWidth);
         if (minInfo.isCoolerThan(maxInfo))
             return minInfo;
         if (!maxInfo.isAcceptable()) {   // Max info is acceptable, otherwise…
@@ -207,7 +220,7 @@ namespace bi {
                 return maxInfo;
             // Switch to stillConfortableWidth..maxWidth
             minInfo = maxInfo;
-            maxInfo = infoFor(maxWidth);
+            maxInfo = meter.infoOf(maxWidth);
             if (!maxInfo.isAcceptable())  // Still bad → do what you want
                 return maxInfo;
         }
@@ -229,7 +242,7 @@ namespace bi {
         auto targetQuality = maxInfo.quality;
         while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
             auto medWidth = (minInfo.width + maxInfo.width) >> 1;
-            auto medInfo = infoFor(medWidth);
+            auto medInfo = meter.infoOf(medWidth);
             if (medInfo.quality >= targetQuality) {
                 maxInfo = medInfo;
             } else {
