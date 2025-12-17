@@ -2,7 +2,7 @@
 
 It is a simple Unicode encyclopedia and the most comprehensive character map ever. Right now Windows only.
 
-**Lifecycle phase: 5** (production/stable). Minor troubles with sustainability, but generally survived four releases of Unicode. And will survive the fifth if I survive.
+**Lifecycle phase: 5** (production/stable). Minor troubles with sustainability, but generally survived five releases of Unicode, 14.0 to 17.0.
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
