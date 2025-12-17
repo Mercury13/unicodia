@@ -10,6 +10,12 @@ It is a simple Unicode encyclopedia and the most comprehensive character map eve
 
 It has been moved to a separate repo. Visit https://github.com/Mercury13/unicodia-sesh
 
+# How to get portable
+
+I was asked several times, but by this time it had already been portable.
+
+Open Unicodia.xml, it’s documented.
+
 # Privacy policy
 
 Unicodia does not collect data at all, but uses GitHub API for updating.
