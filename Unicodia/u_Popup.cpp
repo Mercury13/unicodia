@@ -243,10 +243,11 @@ namespace bi {
 
         // Check quality: do we need a thing to chase for?
         if (maxInfo.quality <= minInfo.quality) {
+            // At least they are both acceptable
+            // Max info is in the (roughly) same condition too
             // Unacceptable → return max: maybe it’s more acceptable, should not happen
             // Tall → return max: maybe it’s not so tall
-            if (minInfo.quality <= Quality::ACCEPTABLE_TALL
-                    && maxInfo.quality <= Quality::ACCEPTABLE_TALL)
+            if (minInfo.quality <= Quality::ACCEPTABLE_TALL)
                 return maxInfo;
             // Otherwise just min, mostly in unreadable mode
             // when both are acceptable
