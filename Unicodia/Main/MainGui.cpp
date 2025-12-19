@@ -210,7 +210,9 @@ void MyGui::closePopup(RestrictedPtr remainingThing)
 bool MyGui::hasEgypI() const
 {
     if (!fHasEgypI) {
-        auto metrics = wiMain->fontMetrics();
+        auto font = wiMain->font();
+        font.setStyleStrategy(QFont::StyleStrategy::NoFontMerging);
+        QFontMetrics metrics(font);
         fHasEgypI = metrics.inFontUcs4(cp::LATN_SM_GLOTTAL_I);
     }
     return *fHasEgypI;
