@@ -204,6 +204,9 @@ namespace {
         case 0x13598:
             str::replace(s, "(N5)", "(N14)");
             break;
+        case 0x13AA4:
+            str::replace(s, "(F1504)", "(E13C)");
+            break;
         case 0x14142:
             str::replace(s, "(R109)", "(O49)");  // links to itself :)
             break;
