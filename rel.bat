@@ -238,7 +238,7 @@
 
 @echo.
 @echo ===== Copying USesh font =====
-@copy Fonts/UnicodiaSesh.ttf %DEPLOY2%
+@copy Fonts\UnicodiaSesh.ttf %DEPLOY2%
 
 @echo.
 @echo ===== Running auto-tests =====
