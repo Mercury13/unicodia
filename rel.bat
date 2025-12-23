@@ -237,6 +237,10 @@
 @%INNO% /Qp /O%DEPLOY2% MiscFiles/Unicodia-w64.iss
 
 @echo.
+@echo ===== Copying USesh font =====
+@copy Fonts/UnicodiaSesh.ttf %DEPLOY2%
+
+@echo.
 @echo ===== Running auto-tests =====
 @set QAFONTS=%BUILD%\font_layout.txt
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
