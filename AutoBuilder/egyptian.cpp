@@ -375,6 +375,8 @@ namespace {
             snprintf(buf, std::size(buf), "%X", unsigned(k));
             osLog << buf << ": " << v.hgFrom << "->" << v.ukTo << '\n';
         }
+        osLog << "Total " << hgLinks.size() << " lines" "\n"
+                 "EOF" "\n";
     }
 
     bool contains(std::string_view haystack, std::string_view needle)
