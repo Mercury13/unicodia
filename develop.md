@@ -120,19 +120,12 @@
 * Repeat: ALL new icons will have placeholder colours instead of firm unless REALLY needed
 * Use lines thinner than 1dip (device-independent pixel) in exceptional circumstances
 
-## When Unicode transitions from beta to release:
-* Go to ``MiscFiles/RawData`` and change addresses to final ones
-* Load data, run AutoBuilder, replace files
-* Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
-* Check block extension history once again
-* Do not forget to remove ``Vfg::BETA`` flag
-
 ## Adding really optional data Unicodia can live without
 * Placeholders for emoji: see above
 * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
   * Add ``Vfg::TEXT`` flag to this version
   * Write about this version in UTranslator. Again, original is English, the rest are translations
-* Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check in Unicode charts, too!**
+* Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check everywhere:** in Unicodia’s images, Unicodia’s descriptions, Unicode charts!
 * Fonts
   * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
   * There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
@@ -147,6 +140,14 @@
 * Latin/Cyrillic in Library
   * AutoBuilder has some sort of forget-checker, and when the tofu is filled, you may write it to ``MiscFiles/library.xml`` and reduce number of forgotten characters
 * Recent data, see Unicodia/Uc/UcRecent.h
+
+## When Unicode transitions from beta to release:
+* Go to ``MiscFiles/RawData`` and change addresses to final ones
+* Load data, run AutoBuilder, replace files
+* Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
+* Check block extension history once again
+* Do not forget to remove ``Vfg::BETA`` flag
+* Check links to Hieroglyphica, see above: Egyptian bases are really buggy.
 
 # Decapitalization rules
 I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
