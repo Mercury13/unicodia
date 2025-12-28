@@ -206,6 +206,15 @@ namespace {
     };
     using MLink = std::multimap<char32_t, ReplLink>;
 
+    struct ManLink {
+        std::string_view from, to;
+        bool isOk;
+    };
+    struct ManLinks {
+        std::multimap<char32_t, ManLink> specials;
+        unsigned nCanals = 0;
+    };
+
     ///
     /// \brief fixupHg
     ///    Replaces Hieroglyphica’s links with Unicode’s ones
@@ -238,33 +247,42 @@ namespace {
         }
     }
 
+    void myRepl(std::string& s, char32_t cp,
+                std::string_view from, std::string_view to,
+                ManLinks& rManLinks)
+    {
+        auto nRepl = str::replace(s, from, to);
+        rManLinks.specials.emplace(cp, ManLink {
+                .from = from, .to = to, .isOk = (nRepl != 0), });
+    }
+
     void fixupUniDesc(
             std::string& s, char32_t cp, const HgMap& hgMap,
-            MLink& rLinks)
+            MLink& rLinks, ManLinks& rManLinks)
     {
         // Bugs
-        str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
+        rManLinks.nCanals += str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
         switch (cp) {
         case 0x13E27:
-            str::replace(s, "(HGx Q3A)", "(Q3A)");
+            myRepl(s, cp, "(HGx Q3A)", "(Q3A)", rManLinks);
             break;
         case 0x1423E:
         case 0x14240:
-            str::replace(s, "(T19)", "(T19E)");
+            myRepl(s, cp, "(T19)", "(T19E)", rManLinks);
             break;
         case 0x1358A:
         case 0x1358B:
         case 0x1358C:
-            str::replace(s, "(M12B)", "(M12K)");
+            myRepl(s, cp, "(M12B)", "(M12K)", rManLinks);
             break;
         case 0x13598:
-            str::replace(s, "(N5)", "(N14)");
+            myRepl(s, cp, "(N5)", "(N14)", rManLinks);
             break;
         case 0x13AA4:
-            str::replace(s, "(F1504)", "(E13C)");
+            myRepl(s, cp, "(F1504)", "(E13C)", rManLinks);
             break;
         case 0x14142:
-            str::replace(s, "(R109)", "(O49)");  // links to itself :)
+            myRepl(s, cp, "(R109)", "(O49)", rManLinks);  // links to itself :)
             break;
         default: ;
         }
@@ -365,8 +383,9 @@ namespace {
 
         // Fixup Unicode descriptions afterwards
         MLink hgLinks;
+        ManLinks manLinks;
         for (auto& [k, v] : r) {
-            fixupUniDesc(v.descUnicode, k, hgMap, hgLinks);
+            fixupUniDesc(v.descUnicode, k, hgMap, hgLinks, manLinks);
         }
 
         std::ofstream osLog("hieroglyphica.log");
@@ -377,6 +396,18 @@ namespace {
         }
         osLog << "Total " << hgLinks.size() << " lines" "\n"
                  "EOF" "\n";
+        osLog.close();
+
+        osLog.open("manlinks.log");
+        osLog << "Canal: " << manLinks.nCanals << " times" "\n";
+        for (auto& [k, v] : manLinks.specials) {
+            char buf[10];
+            snprintf(buf, std::size(buf), "%X", unsigned(k));
+            osLog << buf << ": " << v.from << "->" << v.to << " " <<
+                     (v.isOk ? "ok" : "BAD") << '\n';
+        }
+        osLog << "Total " << hgLinks.size() << " lines" "\n";
+        osLog << "EOF" "\n";
     }
 
     bool contains(std::string_view haystack, std::string_view needle)

@@ -125,7 +125,9 @@
 * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
   * Add ``Vfg::TEXT`` flag to this version
   * Write about this version in UTranslator. Again, original is English, the rest are translations
-* Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check everywhere:** in Unicodia’s images, Unicodia’s descriptions, Unicode charts!
+* Egyptian links
+  * Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check everywhere:** in Unicodia’s images, Unicodia’s descriptions, Unicode charts!
+  * Manually fixed links. Open ``manlinks.log`` left from AutoBuilder, check all lines, fix ``egyptian.cpp``.
 * Fonts
   * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
   * There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
@@ -147,7 +149,7 @@
 * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
 * Check block extension history once again
 * Do not forget to remove ``Vfg::BETA`` flag
-* Check links to Hieroglyphica once again, see above: Egyptian bases are really buggy.
+* Check Egyptian links once again, see above: Egyptian bases are really buggy.
 
 # Decapitalization rules
 I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
