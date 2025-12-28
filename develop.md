@@ -147,7 +147,7 @@
 * Delete LAST cached ``Blocks.txt`` from  ``BlockExtensionHistory`` build directory
 * Check block extension history once again
 * Do not forget to remove ``Vfg::BETA`` flag
-* Check links to Hieroglyphica, see above: Egyptian bases are really buggy.
+* Check links to Hieroglyphica once again, see above: Egyptian bases are really buggy.
 
 # Decapitalization rules
 I repeat, decapitalization rules convert “LATIN CAPITAL LETTER A” → “Latin capital letter A”.
