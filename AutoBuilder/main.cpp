@@ -436,8 +436,8 @@ int main()
         if (auto kv = egypBase.find(cp); kv != egypBase.end()) {
             auto& v = kv->second;
             egypReliability = v.reliability;
-            if (!v.index.empty()) {
-                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_INDEX, v.index);
+            if (!v.ukIndex.empty()) {
+                strings.forceRemember(pTech, cp, uc::TextRole::EGYP_INDEX, v.ukIndex);
             }
             if (!v.descEwp.empty()) {
                 strings.forceRemember(pTech, cp, uc::TextRole::EGYP_EWP, v.descEwp);

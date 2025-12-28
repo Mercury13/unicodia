@@ -4,6 +4,7 @@
 // STL
 #include <fstream>
 #include <stdexcept>
+#include <map>
 
 // Libs
 #include "u_Strings.h"
@@ -186,12 +187,66 @@ namespace {
         }
     }
 
-    void fixupUniDesc(std::string& s, char32_t cp)
+    // Hg = Hieroglyphica, Russian hiero base
+    struct HgInfo {
+        char32_t unicodeCp = 0;
+        // Uk = UniKemet, Unicode’s hiero base
+        std::string_view ukIndex {};
+    };
+
+    struct TrHash : public std::hash<std::string_view> {
+        using is_transparent = void;
+    };
+
+    using HgMap = std::unordered_map<std::string, HgInfo, TrHash, std::equal_to<>>;
+
+    struct ReplLink {
+        // Hieroglyphica from, UniKemet to
+        std::string hgFrom, ukTo;
+    };
+    using MLink = std::multimap<char32_t, ReplLink>;
+
+    ///
+    /// \brief fixupHg
+    ///    Replaces Hieroglyphica’s links with Unicode’s ones
+    /// \param s       string to process
+    /// \param prefix  Link’s prefix with parenthesis and space, usually “(HG ” or “(HGx ”
+    /// \param hgMap   Hieroglyphica’s mapping
+    ///
+    void fixupHg(std::string& s, std::string_view prefix,
+                 char32_t cp, const HgMap& hgMap, MLink& rLinks)
     {
-        str::replace(s, "canal (M36)"sv, "canal (N36)"sv);
-        str::replace(s, "HG N37A", "N37D");
-        str::replace(s, "(HG T19)", "(T19E)");
+        size_t where;
+        size_t nextPos = 0;
+        while ((where = s.find(prefix, nextPos)) != std::string::npos) {
+            auto whereNext = where + prefix.length();
+            auto whereParen = s.find(')', whereNext);
+            auto gotLength = whereParen - whereNext;
+            std::string_view hgIndex = static_cast<std::string_view>(s).substr(whereNext, gotLength);
+            auto it = hgMap.find(hgIndex);
+            if (it == hgMap.end() || it->second.ukIndex.empty()) {  // Not found
+                nextPos = whereParen;
+            } else {
+                std::string_view ukIndex = it->second.ukIndex;
+                rLinks.emplace(cp, ReplLink{ .hgFrom{hgIndex}, .ukTo{ukIndex} });
+                // Start replacing
+                std::string byWhat = str::cat("(", ukIndex);
+                s.replace(where, whereParen - where, byWhat);
+                nextPos = where + byWhat.length();
+            }
+        }
+    }
+
+    void fixupUniDesc(
+            std::string& s, char32_t cp, const HgMap& hgMap,
+            MLink& rLinks)
+    {
+        // Bugs
+        str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
         switch (cp) {
+        case 0x13E27:
+            str::replace(s, "(HGx Q3A)", "(Q3A)");
+            break;
         case 0x1423E:
         case 0x14240:
             str::replace(s, "(T19)", "(T19E)");
@@ -212,6 +267,11 @@ namespace {
             break;
         default: ;
         }
+
+        // Hieroglyphica’s indexes
+        fixupHg(s, "(HG ",  cp, hgMap, rLinks);
+
+        // Simplify indexes
         std::string r;
         r.reserve(s.length());
         int shortened = 0;
@@ -242,6 +302,9 @@ namespace {
         std::ifstream is(UCD_UNIKEMET);
         if (!is.is_open())
             throw std::logic_error("Cannot open Unikemet base!");
+
+        HgMap hgMap;
+
         for (std::string rawLine; std::getline(is, rawLine); ) {
             std::string_view line = str::trimSv(rawLine);
             if (line.empty() || line.starts_with('#'))
@@ -264,7 +327,6 @@ namespace {
                 // No need period at end
                 if (du.ends_with('.'))
                     du.pop_back();
-                fixupUniDesc(du, cp);
             } else if (sField == "kEH_Core"sv) {
                 auto& en = r[cp];
                 if (sValue == "C"sv) {
@@ -286,8 +348,30 @@ namespace {
                 en.pronunciation = sValue;
             } else if (sField == "kEH_UniK"sv) {
                 auto& en = r[cp];
-                en.index = simplifyIndex(sValue);
+                en.ukIndex = simplifyIndex(sValue);
+            } else if (sField == "kEH_HG"sv) {
+                hgMap[std::string(sValue)].unicodeCp = cp;
             }
+        }
+
+        // Complete Hieroglyphica map with UniKemet indexes
+        for (auto& [_, v] : hgMap) {
+            if (auto q = r.find(v.unicodeCp); q != r.end()) {
+                v.ukIndex = q->second.ukIndex;
+            }
+        }
+
+        // Fixup Unicode descriptions afterwards
+        MLink hgLinks;
+        for (auto& [k, v] : r) {
+            fixupUniDesc(v.descUnicode, k, hgMap, hgLinks);
+        }
+
+        std::ofstream osLog("hieroglyphica.log");
+        for (auto& [k, v] : hgLinks) {
+            char buf[10];
+            snprintf(buf, std::size(buf), "%X", unsigned(k));
+            osLog << buf << ": " << v.hgFrom << "->" << v.ukTo << '\n';
         }
     }
 

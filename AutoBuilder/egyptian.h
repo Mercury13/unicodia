@@ -9,7 +9,9 @@
 namespace egyp {
 
     struct Entry {
-        std::string index;          ///< UniKemet’s short index, like A1 or B13a
+            // Uk = UniKemet, Unicode’s hiero base
+            // Hg = Hieroglyphica, Russian hiero base, but we don’t need it here
+        std::string ukIndex;        ///< UniKemet’s short index, like A1 or B13a
         std::string descEwp;        ///< description from English Wikipedia
         std::string descUnicode;    ///< description from Unicode
         std::string meaning;        ///< meaning from UniKemet
