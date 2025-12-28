@@ -225,6 +225,7 @@ namespace {
             std::string_view hgIndex = static_cast<std::string_view>(s).substr(whereNext, gotLength);
             auto it = hgMap.find(hgIndex);
             if (it == hgMap.end() || it->second.ukIndex.empty()) {  // Not found
+                rLinks.emplace(cp, ReplLink{ .hgFrom{hgIndex}, .ukTo = "?" });
                 nextPos = whereParen;
             } else {
                 std::string_view ukIndex = it->second.ukIndex;
@@ -270,6 +271,7 @@ namespace {
 
         // Hieroglyphica’s indexes
         fixupHg(s, "(HG ",  cp, hgMap, rLinks);
+        fixupHg(s, "(HGx ",  cp, hgMap, rLinks);
 
         // Simplify indexes
         std::string r;
