@@ -132,7 +132,7 @@
 * Version texts. If the last version tells a story (an emergency release, a key person died, someone tried to hijack Unicode etc)…
   * Add ``Vfg::TEXT`` flag to this version
   * Write about this version in UTranslator. Again, original is English, the rest are translations
-* Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``.
+* Links to Hieroglyphica. Open ``hieroglyphica.log`` left from AutoBuilder, check all lines if everything’s right, fix ``egyptian.cpp``. **Check in Unicode charts, too!**
 * Fonts
   * Find somehow, write in ``UcData.h``/``UcFonts.cpp``
   * There are two ways to write a font, tie to script or tie to block. Block is stronger, and I tie to script if possible
