@@ -150,13 +150,16 @@ namespace bi {
 
     constexpr bool TESTING_MODE = false;
 
-    constexpr int MIN_CONTROLLED_HEIGHT = 350;  // shorter? → let it be auto
-    constexpr int MIN_VARIABLE_WIDTH = 450;
-    constexpr int MAX_READABLE_WIDTH = 850;  // do not exceed unless you have to because of short screen
+    // All these values are in dip’s = device-independent pixels
+    constexpr int MIN_CONTROLLED_HEIGHT = 350;  ///< shorter? → let it be auto
+    constexpr int MIN_VARIABLE_WIDTH = 350;
+    constexpr int MAX_READABLE_WIDTH = 850;  ///< do not exceed unless you have to because of short screen
     constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
-    constexpr int HEIGHT_LEEWAY = 35;
-    constexpr int WIDTH_LEEWAY = 20;
+    constexpr int HEIGHT_LEEWAY = 35;     ///< subtract from screen size
+    constexpr int WIDTH_LEEWAY = 20;      ///< subtract from screen size
     constexpr int WIDTH_PRECISION = 40;
+    constexpr int PARAGRAPH_UNPACK = 25;  ///< leeway to prevent packed paragraphs
+    static_assert(PARAGRAPH_UNPACK <= WIDTH_PRECISION);
     constexpr int REASONABLE_SIDE = 100;  // 100dip are always present :)
     constexpr int BAD_HEIGHT = -9999;
 
@@ -217,7 +220,7 @@ namespace bi {
     ///
     /// \brief Qualimeter::makeNiceInfo
     ///    Got a situation: both minInfo and maxInfo make the same height
-    ///    Probably it means that in minInfo the paragraph is almost full,
+    ///    Probably it means that in minInfo the paragraphs are tightly packed,
     ///    and it’s bad.
     ///
     Info Qualimeter::makeNiceInfo(const Info& minInfo, const Info& maxInfo)
@@ -229,7 +232,7 @@ namespace bi {
         if (maxInfo.width - minInfo.width <= WIDTH_PRECISION)
             return maxInfo;
         // Otherwise something in between
-        auto newInfo = infoOf(minInfo.width + WIDTH_PRECISION);
+        auto newInfo = infoOf(minInfo.width + PARAGRAPH_UNPACK);
         if (newInfo.height <= minInfo.height)  // check once again
             return newInfo;
         return minInfo;
@@ -288,6 +291,10 @@ namespace bi {
             return minInfo;
         }
 
+        // And check!
+        if (minInfo.isCoolerThan(maxInfo))
+            return meter.makeNiceInfo(minInfo, maxInfo);
+
         // Max info is better than min
         auto targetQuality = maxInfo.quality;
         while (maxInfo.width - minInfo.width > WIDTH_PRECISION) {
@@ -301,6 +308,7 @@ namespace bi {
             if (minInfo.isCoolerThan(maxInfo))
                 return meter.makeNiceInfo(minInfo, maxInfo);
         }
+        // maxInfo has targetquality, min doesn’t
         return maxInfo;
     }
 
