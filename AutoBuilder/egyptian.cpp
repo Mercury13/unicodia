@@ -263,6 +263,10 @@ namespace {
         // Bugs
         rManLinks.nCanals += str::replace(s, "canal (M36)"sv, "canal (N36)"sv);  // multiple times
         switch (cp) {
+        case 0x13BCC:
+        case 0x13BCD:
+            myRepl(s, cp, "(T11A)", "(T11B)", rManLinks);
+            break;
         case 0x13E27:
             myRepl(s, cp, "(HGx Q3A)", "(Q3A)", rManLinks);
             break;
