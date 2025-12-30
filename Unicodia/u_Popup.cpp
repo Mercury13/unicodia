@@ -179,18 +179,28 @@ namespace bi {
         WiAdjust* const me;
         const int acceptableHeight;
         int coolHeight = BAD_HEIGHT;
+
+        static bool isTall(int w, int h);
     };
+
+    bool Qualimeter::isTall(int w, int h)
+    {
+        [[assume(w >= 0)]];
+        [[assume(h >= 0)]];
+        return (3 * h > 4 * w);  // 1.33
+    }
 
     Quality Qualimeter::qualityOf(int w, int h) const
     {
-        if (h <= coolHeight) {
-            return Quality::COOL;
-        }
-        if (h <= acceptableHeight) {
-            return (2 * h > 3 * w) ? Quality::ACCEPTABLE_TALL
-                                   : Quality::ACCEPTABLE;
-        }
-        return Quality::BAD;
+        if (h > acceptableHeight)
+            return Quality::BAD;
+        // now at least ACCEPTABLE_TALL
+
+        if (isTall(w, h))
+            return Quality::ACCEPTABLE_TALL;
+        // now at least ACCEPTABLE
+
+        return (h <= coolHeight) ? Quality::COOL : Quality::ACCEPTABLE;
     }
 
     Info Qualimeter::infoOf(int aWidth) const
@@ -203,21 +213,23 @@ namespace bi {
         };
     }
 
-    Info bisectBest(WiAdjust* me, const QSize& screenSize) {
+    Info bisectBest(WiAdjust* me, const QSize& screenSize)
+    {
         Qualimeter meter(me, screenSize);
 
         // Min info
         const auto maxWidth = toReasonable(screenSize.width() - WIDTH_LEEWAY);
         auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
         auto minInfo = meter.infoOf(minWidth);
-        if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
-            auto autoInfo = meter.infoOf(me->width());
-            // Is auto just cooler? — e.g. some tables when we increase width, height is the same
-            if (autoInfo.isCoolest() && autoInfo.isCoolerThan(minInfo))
-                return autoInfo;
-        }
-        if (minInfo.isCoolest())   // If min info is just cool → just return
+        if (minInfo.isCoolest()) {
+            if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
+                auto autoInfo = meter.infoOf(me->width());
+                // Is auto just cooler? — e.g. some tables when we increase width, height is the same
+                if (autoInfo.isCoolerThan(minInfo))
+                    return autoInfo;
+            }
             return minInfo;
+        }
 
         // Max info
         const auto stillReadableWidth = std::min(MAX_READABLE_WIDTH, maxWidth);
