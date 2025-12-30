@@ -175,6 +175,7 @@ namespace bi {
         void switchToUnreadable() { coolHeight = BAD_HEIGHT; }
         /// @return [+] we are in “unreadable” mode that’s automatically uncool
         bool isUnreadable() const { return (coolHeight < 0); }
+        Info makeNiceInfo(const Info& minInfo, const Info& maxInfo);
     private:
         WiAdjust* const me;
         const int acceptableHeight;
@@ -211,6 +212,27 @@ namespace bi {
             .height = h,
             .quality = qualityOf(aWidth, h),
         };
+    }
+
+    ///
+    /// \brief Qualimeter::makeNiceInfo
+    ///    Got a situation: both minInfo and maxInfo make the same height
+    ///    Probably it means that in minInfo the paragraph is almost full,
+    ///    and it’s bad.
+    ///
+    Info Qualimeter::makeNiceInfo(const Info& minInfo, const Info& maxInfo)
+    {
+        // Unreadable mode → return smaller
+        if (isUnreadable())
+            return minInfo;
+        // Difference is small → return bigger
+        if (maxInfo.width - minInfo.width <= WIDTH_PRECISION)
+            return maxInfo;
+        // Otherwise something in between
+        auto newInfo = infoOf(minInfo.width + WIDTH_PRECISION);
+        if (newInfo.height <= minInfo.height)  // check once again
+            return newInfo;
+        return minInfo;
     }
 
     Info bisectBest(WiAdjust* me, const QSize& screenSize)
@@ -276,8 +298,10 @@ namespace bi {
             } else {
                 minInfo = medInfo;
             }
+            if (minInfo.isCoolerThan(maxInfo))
+                return meter.makeNiceInfo(minInfo, maxInfo);
         }
-        return (minInfo.isCoolerThan(maxInfo)) ? minInfo : maxInfo;
+        return maxInfo;
     }
 
 }   // anon namespace
