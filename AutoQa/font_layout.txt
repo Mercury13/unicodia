@@ -909,19 +909,7 @@ FFFD......: NotoSerif-Regular
 13440.......: [Abbreviation]
 13441..13455: UnicodiaSesh
 == Egyptian Hieroglyphs Extended-A
-13460..135DB: UnicodiaSesh
-135DC.......: NewGardiner
-135DD..135EA: UnicodiaSesh
-135EB.......: NewGardiner
-135EC.......: UnicodiaSesh
-135ED, 135EE: NewGardiner
-135EF.......: UnicodiaSesh
-135F0.......: NewGardiner
-135F1.......: UnicodiaSesh
-135F2..135FA: NewGardiner
-135FB..13602: UnicodiaSesh
-13603.......: NewGardiner
-13604..1360F: UnicodiaSesh
+13460..1360F: UnicodiaSesh
 13610.......: NewGardiner
 13611.......: UnicodiaSesh
 13612.......: NewGardiner
@@ -945,13 +933,7 @@ FFFD......: NotoSerif-Regular
 13663.......: NewGardiner
 13664..136B5: UnicodiaSesh
 136B6.......: NewGardiner
-136B7..136CB: UnicodiaSesh
-136CC.......: NewGardiner
-136CD..136FE: UnicodiaSesh
-136FF.......: NewGardiner
-13700..13743: UnicodiaSesh
-13744.......: NewGardiner
-13745..13751: UnicodiaSesh
+136B7..13751: UnicodiaSesh
 13752.......: NewGardiner
 13753.......: UnicodiaSesh
 13754.......: NewGardiner
@@ -1423,8 +1405,8 @@ FFFD......: NotoSerif-Regular
 13F43.......: NewGardiner
 13F44..13F5D: UnicodiaSesh
 13F5E, 13F5F: NewGardiner
-13F60, 13F61: UnicodiaSesh
-13F62..13F64: NewGardiner
+13F60..13F62: UnicodiaSesh
+13F63, 13F64: NewGardiner
 13F65.......: UnicodiaSesh
 13F66.......: NewGardiner
 13F67..13F6D: UnicodiaSesh
