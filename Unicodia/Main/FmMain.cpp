@@ -1566,9 +1566,6 @@ void FmMain::translateAbout()
     s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
     ui->vwAbout->setText(s);
 
-    // We used to have HTTPS only, but now have Easter eggs
-    connect(ui->vwAbout, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-
     // lbTofuStats
     ui->lbTofuStats->setText(qPopupLink("About.TofuStats", "ac:tofustats"));
 }
@@ -1582,6 +1579,9 @@ void FmMain::initAbout()
     ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
     connect(ui->btCheckForUpdate, &QPushButton::clicked, this, &This::startUpdate);
+
+    // We used to have HTTPS only, but now have Easter eggs
+    connect(ui->vwAbout, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
 }
 
 
