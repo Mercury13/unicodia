@@ -5,7 +5,7 @@
 #include <QLabel>
 
 // My libs
-#include <u_TinyOpt.h>
+#include "u_TinyOpt.h"
 
 enum class PopupMode : unsigned char {
     NATIVE,         ///< Use native popup window (default)

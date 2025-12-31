@@ -152,7 +152,8 @@ namespace bi {
 
     // All these values are in dip’s = device-independent pixels
     constexpr int MIN_CONTROLLED_HEIGHT = 350;  ///< shorter? → let it be auto
-    constexpr int MIN_VARIABLE_WIDTH = 350;
+    constexpr int MIN_SHRUNK_WIDTH = 150;    ///< narrower? → stop
+    constexpr int MIN_VARIABLE_WIDTH = 450;  ///< rather small because of e.g. “14.0”
     constexpr int MAX_READABLE_WIDTH = 850;  ///< do not exceed unless you have to because of short screen
     constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
     constexpr int HEIGHT_LEEWAY = 35;     ///< subtract from screen size
@@ -160,6 +161,8 @@ namespace bi {
     constexpr int WIDTH_PRECISION = 40;
     constexpr int PARAGRAPH_UNPACK = 25;  ///< leeway to prevent packed paragraphs
     static_assert(PARAGRAPH_UNPACK <= WIDTH_PRECISION);
+    constexpr int PROBE_BACK_DELTA = 50;
+    static_assert(PROBE_BACK_DELTA >= WIDTH_PRECISION);
     constexpr int REASONABLE_SIDE = 100;  // 100dip are always present :)
     constexpr int BAD_HEIGHT = -9999;
 
@@ -171,18 +174,22 @@ namespace bi {
         Qualimeter(WiAdjust* aMe, const QSize& screenSize)
             : me(aMe),
               acceptableHeight(toReasonable(screenSize.height() - HEIGHT_LEEWAY)),
-              coolHeight(std::min(COOL_HEIGHT, acceptableHeight)) {}
+              coolHeight(std::min(COOL_HEIGHT, acceptableHeight)),
+              fStrictMinWidth(me->minimumWidth() + PARAGRAPH_UNPACK) {}
         inline Quality qualityOf(int w, int h) const;
         Info infoOf(int aWidth) const;
         /// Switches to “unreadable” mode that never says “cool”
         void switchToUnreadable() { coolHeight = BAD_HEIGHT; }
         /// @return [+] we are in “unreadable” mode that’s automatically uncool
         bool isUnreadable() const { return (coolHeight < 0); }
-        Info makeNiceInfo(const Info& minInfo, const Info& maxInfo);
+        Info makeNiceInfo(const Info& minInfo, const Info& maxInfo) const;
+        int strictMinWidth() const { return fStrictMinWidth; }
+        Info probeBack(const Info& startingInfo, int minWidth) const;
     private:
         WiAdjust* const me;
         const int acceptableHeight;
         int coolHeight = BAD_HEIGHT;
+        int fStrictMinWidth = 0;
 
         static bool isTall(int w, int h);
     };
@@ -196,7 +203,7 @@ namespace bi {
 
     Quality Qualimeter::qualityOf(int w, int h) const
     {
-        if (h > acceptableHeight)
+        if (h > acceptableHeight || w < fStrictMinWidth)
             return Quality::BAD;
         // now at least ACCEPTABLE_TALL
 
@@ -218,12 +225,35 @@ namespace bi {
     }
 
     ///
+    /// Situation: we suspect that there’s just a table
+    ///
+    Info Qualimeter::probeBack(const Info& startingInfo, int maxWidth) const
+    {
+        int minWidth = std::max(MIN_SHRUNK_WIDTH, strictMinWidth());
+        Info currInfo = startingInfo;
+        // Shrink, but only while the window has the same height
+        while (currInfo.width > minWidth) {
+            auto newWidth = std::max(currInfo.width - WIDTH_PRECISION, minWidth);
+            auto newInfo = infoOf(newWidth);
+            if (newInfo.height > startingInfo.height)
+                break;
+            currInfo = newInfo;
+        }
+        // Fall back and unpack paragraphs
+        auto finalWidth = currInfo.width + PARAGRAPH_UNPACK;
+        if (finalWidth < maxWidth) {
+            return infoOf(finalWidth);
+        }
+        return startingInfo;
+    }
+
+    ///
     /// \brief Qualimeter::makeNiceInfo
     ///    Got a situation: both minInfo and maxInfo make the same height
     ///    Probably it means that in minInfo the paragraphs are tightly packed,
     ///    and it’s bad.
     ///
-    Info Qualimeter::makeNiceInfo(const Info& minInfo, const Info& maxInfo)
+    Info Qualimeter::makeNiceInfo(const Info& minInfo, const Info& maxInfo) const
     {
         // Unreadable mode → return smaller
         if (isUnreadable())
@@ -244,7 +274,7 @@ namespace bi {
 
         // Min info
         const auto maxWidth = toReasonable(screenSize.width() - WIDTH_LEEWAY);
-        auto minWidth = std::min(maxWidth, MIN_VARIABLE_WIDTH);
+        auto minWidth = std::min(maxWidth, std::max(meter.strictMinWidth(), MIN_VARIABLE_WIDTH));
         auto minInfo = meter.infoOf(minWidth);
         if (minInfo.isCoolest()) {
             if (me->width() < minInfo.width) {  // If our auto size is smaller than cool
@@ -253,7 +283,13 @@ namespace bi {
                 if (autoInfo.isCoolerThan(minInfo))
                     return autoInfo;
             }
-            return minInfo;
+            return meter.probeBack(minInfo, minWidth);
+        }
+
+        // Step as big as PROBE_BACK_DELTA does not change → try
+        auto probeInfo = meter.infoOf(minInfo.width - PROBE_BACK_DELTA);
+        if (probeInfo.isAcceptable() && probeInfo.height <= minInfo.height) {
+            return meter.probeBack(probeInfo, minWidth);
         }
 
         // Max info

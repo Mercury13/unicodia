@@ -3831,7 +3831,9 @@ namespace {
         text += "<a class='popup' href='";
         text += buf;
         text += "'>";
-        str::append(text, blk.loc.name);
+        std::u8string name1(blk.loc.name);
+        str::replace(name1, u8" ", u8"&nbsp;");
+        str::append(text, name1);
         text += "</a>";
     }
 
