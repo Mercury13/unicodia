@@ -1637,9 +1637,7 @@ FFFD......: NotoSerif-Regular
 14364.......: NewGardiner
 14365, 14366: UnicodiaSesh
 14367.......: NewGardiner
-14368..14372: UnicodiaSesh
-14373, 14374: NewGardiner
-14375..1437E: UnicodiaSesh
+14368..1437E: UnicodiaSesh
 1437F, 14380: NewGardiner
 14381..14388: UnicodiaSesh
 14389.......: NewGardiner
