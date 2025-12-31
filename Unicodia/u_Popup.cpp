@@ -143,7 +143,8 @@ namespace bi {
         bool isAcceptable() const { return (quality > Quality::BAD); }
 
         bool isCoolerThan(const Info& other) const {
-            return (width <= other.width
+            return (isAcceptable()
+                 && width <= other.width
                  && height <= other.height);
         }
     };
