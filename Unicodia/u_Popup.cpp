@@ -156,7 +156,7 @@ namespace bi {
     constexpr int MIN_SHRUNK_WIDTH = 150;    ///< narrower? → stop
     constexpr int MIN_VARIABLE_WIDTH = 450;  ///< rather small because of e.g. “14.0”
     constexpr int MAX_READABLE_WIDTH = 850;  ///< do not exceed unless you have to because of short screen
-    constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 625;
+    constexpr int COOL_HEIGHT = TESTING_MODE ? 300 : 650;
     constexpr int HEIGHT_LEEWAY = 35;     ///< subtract from screen size
     constexpr int WIDTH_LEEWAY = 20;      ///< subtract from screen size
     constexpr int WIDTH_PRECISION = 40;
