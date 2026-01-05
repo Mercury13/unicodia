@@ -49,6 +49,10 @@ namespace uc {
         Flags<Vfg> flags;
         std::u8string_view emojiName {};
         CoarseDate otherEmojiDate { 0, Month::NUL };
+        struct Disun {
+            EcScript from = EcScript::NONE,
+                     to   = EcScript::NONE;
+        } disun {};  ///< script disunification
 
         mutable struct Stats {
             struct Chars {

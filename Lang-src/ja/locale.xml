@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="日本語" international="Japanese" eng-terms="2" trigger-stamp="2024110">
-	<trigger-langs>
+<locale native="日本語" international="Japanese" eng-terms="2">
+	<trigger-langs stamp="2024110">
 		<lang iso="ja" />
 	</trigger-langs>
 	<alpha-sort>
@@ -160,6 +160,6 @@
 	<peculiarities still-uses-burmese="0" />
 	<punctuation key-value-colon="： " uniform-comma="、" semicolon="；"
 			left-paren="（" right-paren="）" indent-ellip="…"
-			range="〜" year-range="〜" />
+			range="〜" year-range="〜" to="&#160;→ " />
 	<rename-altcode />
 </locale>

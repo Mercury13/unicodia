@@ -208,10 +208,9 @@ namespace {
 
         mojibake::simpleCaseFold(r.name.international, r.name.sortKey);
 
-        r.stamp = hLocale.attribute("trigger-stamp").as_int(0);
-
         r.triggerLangs.clear();
         auto hTriggerLangs = hLocale.child("trigger-langs");
+        r.stamp = hTriggerLangs.attribute("stamp").as_int(0);
         for (auto& v : hTriggerLangs.children("lang")) {
             std::string_view iso = v.attribute("iso").as_string();
             if (!iso.empty()) {
@@ -353,6 +352,8 @@ namespace {
                     hPunctuation.attribute("range").as_string("~~~~~~"));
         r.punctuation.yearRange = str::toU8sv(
                     hPunctuation.attribute("year-range").as_string("~~~~~~"));
+        r.punctuation.toArrow = str::toU8sv(
+                    hPunctuation.attribute("to").as_string("->->->"));
 
         auto hRename = hLocale.child("rename-altcode");
         for (auto q : hRename.children("ren")) {

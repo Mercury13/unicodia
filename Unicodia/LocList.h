@@ -98,7 +98,8 @@ namespace loc
                     rightParen,    ///< right parenthesis
                     indentEllip,   ///< ellipsis for indent
                     range,         ///< range 1…2
-                    yearRange;     ///< range 2000-2010
+                    yearRange,     ///< range 2000-2010
+                    toArrow;       ///< change from→to
         } punctuation;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh

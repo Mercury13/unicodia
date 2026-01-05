@@ -1,6 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="汉语" international="Chinese" eng-terms="1" trigger-stamp="2025213">
-	<trigger-langs>
+﻿<!--
+	WARNING: unmaintained.
+	If someone attempts to translate again, it’s better to recreate from scratch
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<locale native="汉语" international="Chinese" eng-terms="1">
+	<trigger-langs stamp="2025020">
 		<lang iso="cn" />
 	</trigger-langs>
 	<alpha-sort>

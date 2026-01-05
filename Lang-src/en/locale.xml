@@ -6,18 +6,22 @@
 		1: show some
 		2: show ALL terms and use them as a sorting key
 			(as a workaround for complex languages like Japanese)
-	 trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
-		(may increase if someone checks blatant auto-translation)
-		For example, we are Spanish in US, and are forced to use English.
-		What we save: language — English, stamp — greatest of all present langs
-		When Spanish finally arrives, its trigger-stamp will be greater,
-			and the program will switch to Spanish automatically.
-		When the user says, “No, I want English,” max stamp will be new,
-			and auto-switch no more happens.
 -->
-<locale native="English" international="English" eng-terms="0" trigger-stamp="2022060">
-	<!-- If you find in the system some language from this list → you switch -->
-	<trigger-langs>
+<locale native="English" international="English" eng-terms="0">
+	<!-- If you find in the system some language from this list → you switch
+		stamp: some NUMBER (as you see, date-based), NEVER CHANGES
+			(may increase if someone checks blatant auto-translation)
+			For example, we are Spanish in the US, and are forced to use English.
+				What we save: language — English, stamp — greatest of all present langs
+				When Spanish finally arrives, its stamp will be greater,
+				and the program will switch to Spanish automatically
+				if it’s in trigger-langs.
+			When the user says, “No, I want English,” his max stamp will be new,
+				and auto-switch no more happens.
+		When the author says, “I retranslated Spanish, give it one more chance”,
+				he triggers auto-switch again.
+	-->
+	<trigger-langs stamp="2022060">
 		<lang iso="en" />
 	</trigger-langs>
 	<!-- Alphabetical sorting, right now very simple and locale-independent
@@ -132,10 +136,12 @@
 			range: ellipsis or dash for range (1…2)
 				(script’s language only, see Rejang)
 			year-range: ellipsis or dash for range (2000–2010)
-				(script’s language only, see Ethiopic A) -->
+				(script’s language only, see Ethiopic A)
+			to: arrow for first→second
+				(disunification only, see Unicode 4.1) -->
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" year-range="–" />
+			range="…" year-range="–" to="&#160;→ " />
 	<!-- Alt codes renaming for patriotism
 			Use for smaller languages that sit in the shadow of a bigger one 
 			and use its encoding, see Ukrainian -->

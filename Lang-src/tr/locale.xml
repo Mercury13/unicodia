@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Türkçe" international="Turkish" eng-terms="1" trigger-stamp="2025080">
-	<trigger-langs>
+<locale native="Türkçe" international="Turkish" eng-terms="1">
+	<trigger-langs stamp="2025080">
 		<lang iso="tr" />
 	</trigger-langs>
 	<alpha-sort>
@@ -47,6 +47,6 @@
 	<peculiarities still-uses-burmese="0" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" year-range="–" />
+			range="…" year-range="–"  to="&#160;→ " />
 	<rename-altcode />
 </locale>

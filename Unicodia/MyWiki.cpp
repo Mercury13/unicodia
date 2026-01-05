@@ -2317,11 +2317,9 @@ namespace {
     };
 
     template <class T>
-    inline void appendValuePopup(
-            QString& text, const T& value, std::string_view locKey, const char* scheme)
+    void appendValOnlyPopup(QString& text, const T& value, const char* scheme)
     {
         StrCache cache, buf;
-        appendNonBullet(text, locKey);
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
                  "<a href='%s:%.*s' class='popup' >",
@@ -2329,6 +2327,14 @@ namespace {
         str::append(text, buf);
         appendVal(text, value);
         str::append(text, "</a>");
+    }
+
+    template <class T>
+    inline void appendValuePopup(
+            QString& text, const T& value, std::string_view locKey, const char* scheme)
+    {
+        appendNonBullet(text, locKey);
+        appendValOnlyPopup(text, value, scheme);
     }
 
 }
@@ -3759,17 +3765,21 @@ QString mywiki::buildHtml(
 
 namespace {
 
+    void appendIndent(QString& s, unsigned depth)
+    {
+        if (depth != 0) {
+            auto q = str::toQ(loc::active::punctuation.indentEllip);
+            for (unsigned i = 0; i < depth; ++i)
+                s += q;
+        }
+    }
+
     void appendValue(str::QSep& sp, unsigned depth, const char* locKey,
                      const uc::EmojiCounter& value,
                      std::string_view schema, std::u8string_view unicodeLink)
     {
         sp.sep();
-        // Indent
-        if (depth != 0) {
-            auto q = str::toQ(loc::active::punctuation.indentEllip);
-            for (unsigned i = 0; i < depth; ++i)
-                sp.target() += q;
-        }
+        appendIndent(sp.target(), depth);
         mywiki::appendNoFont(sp.target(), loc::get(locKey), wiki::Mode::SPAN);
         str::append(sp.target(), loc::active::punctuation.keyValueColon);
         if (value.nSkintone == 0) {
@@ -3946,6 +3956,17 @@ QString mywiki::buildHtml(const uc::Version& version)
         }
         if (!version.isFirst()) {
             appendValue(sp, 0, "Version.Bullet.NewSc", version.stats.scripts.nNew, NO_SCHEMA, NO_LINK);
+            if (version.disun.from != uc::EcScript::NONE) {
+                sp.sep();
+                appendIndent(text, 1);
+                appendNonBullet(text, "Version.Bullet.Disun",
+                                "<a href='pt:unification' class='popup'>"sv, "</a>"sv);
+                auto& scFrom = uc::scriptInfo[static_cast<unsigned>(version.disun.from)];
+                auto& scTo = uc::scriptInfo[static_cast<unsigned>(version.disun.to)];
+                appendValOnlyPopup(text, scFrom, "ps");
+                str::append(text, loc::active::punctuation.toArrow);
+                appendValOnlyPopup(text, scTo, "ps");
+            }
         }
         appendValue(sp, 0, "Version.Bullet.TotalSc", version.stats.scripts.nTotal, NO_SCHEMA, NO_LINK);
     }

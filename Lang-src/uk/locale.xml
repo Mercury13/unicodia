@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Українська" international="Ukrainian" trigger-stamp="2022120" eng-terms="1">
-	<trigger-langs>
+<locale native="Українська" international="Ukrainian" eng-terms="1">
+	<trigger-langs stamp="2022120">
 		<lang iso="uk" />
 	</trigger-langs>
 	<alpha-sort>
@@ -63,7 +63,7 @@
 	<peculiarities still-uses-burmese="1" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" year-range="–" />
+			range="…" year-range="–" to="&#160;→ " />
 	<!-- Alt codes renaming for patriotism -->
 	<rename-altcode>
 		<ren src="ru" dest="uk" />

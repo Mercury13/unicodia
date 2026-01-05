@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Русский" international="Russian" trigger-stamp="2022010" eng-terms="1">
-	<trigger-langs>
+<locale native="Русский" international="Russian" eng-terms="1">
+	<trigger-langs stamp="2022010">
 		<lang iso="ru" /><!-- Russian -->
 		<lang iso="be" /><!-- Belarusian -->
 		<lang iso="mo" /><!-- Moldavian; some systems use ro-MD, but it’ll be English -->
@@ -74,6 +74,6 @@
 	<peculiarities still-uses-burmese="1" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"
-			range="…" year-range="–" />
+			range="…" year-range="–" to="&#160;→ " />
 	<rename-altcode />
 </locale>
