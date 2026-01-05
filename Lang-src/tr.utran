@@ -10260,6 +10260,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>For five scripts, sources do{{_}}not{{_}}agree on what they are.</p>
+      <p />
+      <p>[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.</p>
+      <p />
+      <p>[[ps:Thaa|Thaana]] ''(Maldivian)''{{-}}[[pt:abjad|consonant]] ''(Omniglot)'', [[pt:abugida|abugida]] ''(English Wikipedia)'' or alphabet ''(Unicode)''.</p>
+      <p />
+      <p>[[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]]{{-}}alphabet ''(English Wikipedia, Unicode)'' or abugida ''(Omniglot)''. Both are Indian, dropped most features of [[pt:brahmic|Brahmic abugidas]], but left the inherent vowel {{t|a}}.</p>
+      <p />
+      <p>[[ps:Phag|Phags-Pa]] (Mongolian square){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</p>
+     </orig>
+     <known-orig>
       <p>For five scripts sources do{{_}}not{{_}}agree what they are.</p>
       <p />
       <p>[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.</p>
@@ -10269,7 +10280,7 @@
       <p>[[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]]{{-}}alphabet ''(English Wikipedia, Unicode)'' or abugida ''(Omniglot)''. Both are Indian, dropped most features of [[pt:brahmic|Brahmic abugidas]], but left inherent vowel {{t|a}}.</p>
       <p />
       <p>[[ps:Phag|Phags-Pa]] (Mongolian square){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Beş betik için kaynaklar bunların ne olduğu konusunda hemfikir değil.</p>
       <p />
@@ -11096,12 +11107,25 @@
       <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
       <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
       <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
      </orig>
      <au-cmt>
       <p>up/down → write “top/bottom” if better in your language</p>
       <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
      </au-cmt>
+     <known-orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
+     </known-orig>
      <transl>
       <p>Genellikle ''hiyeroglif'' veya ''ideografik'' olarak bilinen fonetik olmayan betik sistemleri, daha doğru bir ifadeyle '''logografik''' olarak adlandırılır: Bir karakter (veya karakter grubu) bir kelimeyi veya kelimenin bir bölümünü ifade eder.</p>
       <p />
