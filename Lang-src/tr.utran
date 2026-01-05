@@ -10036,6 +10036,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Script where only consonant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. The name ''abjad'' comes from the autonym of the [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p />
+      <p>Despite obvious drawbacks, consonant scripts have some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}the root is a skeleton of consonants, and vowels work as suffixes. In Arabic, ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}differences in dialects are smoothed.</p>
+      <p>* Differences are smoothed not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
+      <p />
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. A phenomenon recorded in Hebrew: ''bayt'' → ''bet'' (house), and the letter Yod was reinterpreted to words where a diphthong had never existed. Another option is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod which sometimes represented “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+     </orig>
+     <known-orig>
       <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
       <p>Despite obvious drawbacks, consonant script has some advantages.</p>
@@ -10045,7 +10056,7 @@
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
       <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Sadece ünsüz seslerin yazıldığı yazı. Ünlüler ya tamamen atlanır ya da isteğe bağlı ünlü işaretleriyle yazılır. ''Ebced'' adı, [[ps:Arab|Arap]] alfabesinin özerk ismi olan{{-}}أبجد ''abjadiya''dan gelir.</p>
       <p />
@@ -10066,6 +10077,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Scholars disagree on the definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p />
+      <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
+      <p />
+      <p>[[ps:Ethi|Ethiopic]] and [[ps:Cans|Canadian syllabary]] are abugidas '''in most classifications'''.</p>
+      <p />
+      <p>[[ps:Thaa|Thaana]], [[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]] are abugidas '''in some sources'''.</p>
+      <p />
+      <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
+      <p />
+      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for the name “abugida” to the script where this name came from!</p>
+     </orig>
+     <known-orig>
       <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
@@ -10077,7 +10101,7 @@
       <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
       <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Bilim insanları abugida tanımına katılmamaktadır ve bunların en yaygın olanı, benzer hecelerin benzer karakterlerle yazıldığı [[pt:syllabic|hece]] yazısıdır.</p>
       <p />
@@ -10100,10 +10124,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>For letters: their names are some words starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
+      <p />
+      <p>For numbers and other things: the character comes from the first letter of the word. For example, the sign '''№''' comes from Latin ''numero''.</p>
+     </orig>
+     <known-orig>
       <p>For letter: its name is some word starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
       <p />
       <p>For numbers and other things: the character comes from the first letter of term: For example, '''№''' sign comes from Latin ''numero''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Harf için: Adı, harfin kendisiyle başlayan bir kelimedir, örneğin [[ps:Thai|Tayca]], eski [[ps:Cyrl|Kiril]]/[[ps:Glag|Glagolitik]] ve [[ps:Phnx|Fenikece]]’de olduğu gibi.</p>
       <p />
@@ -10120,10 +10149,17 @@
      <orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
       <p />
+      <p>Non-linear script where consonants and vowels are joined into syllables is considered an alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
+      <p />
+      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+     </orig>
+     <known-orig>
+      <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
+      <p />
       <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
       <p>With all advantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Hem ünsüz hem de ünlü harfleri yazan doğrusal betik. Bilinen ilk alfabe [[ps:Grek|Yunanca]]’dır.</p>
       <p />
@@ -10510,7 +10546,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], and [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
       <p>* sweeping writing with brush and ink (except Nüshu);</p>
@@ -10519,6 +10555,16 @@
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
+     <known-orig>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], and [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p />
+      <p>Features of CJK:</p>
+      <p>* sweeping writing with brush and ink (except Nüshu);</p>
+      <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
+      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
+      <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
+     </known-orig>
      <transl>
       <p>[[ps:Hani|Çince ideogramlara]] yakın bir betik grubu. Hecesel [[ps:Kana|Katakana]], [[ps:Hira|Hiragana]] ve [[pt:arguable|tartışmalı]] türünden [[ps:Hang|Hangul]] içerir. Tarihsel{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]] arasında yer alır.</p>
       <p />
