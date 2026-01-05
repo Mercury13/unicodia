@@ -11216,7 +11216,7 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files, and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
      <transl>
       <p>Запись других видов информации, кроме текста: музыки ([[pk:1D100|ноты]]), чертежей ([[pk:2300|технические символы]]), жестов ([[ps:Sgnw|жестовое письмо]]).</p>
