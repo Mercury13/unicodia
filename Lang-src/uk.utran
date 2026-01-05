@@ -10637,12 +10637,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. Purpose of such encoding is different:</p>
-      <p>* communication and signaling (flag semaphore, Morse code);</p>
-      <p>* aids for disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
-      <p>* shorthand{{-}}writing done by specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
+      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>* communication and signalling (flag semaphore, Morse code);</p>
+      <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
+      <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
       <p />
-      <p>Such systems often span many languages, and different languages have different code tables. For example, even British Braille differs from American.</p>
+      <p>Such systems often span many languages, with different code tables. Even British Braille differs from American.</p>
      </orig>
      <transl>
       <p>Код{{-}}це інша форма запису звичайного письмового тексту. Іншими словами, ми представляємо усне мовлення у вигляді літер за правилами правопису, а потім кодуємо. Мета такого запису буває різна:</p>
@@ -10650,7 +10650,7 @@
       <p>* реабілітація інвалідів ([[ps:Brai|шрифт Брайля]], жестовий алфавіт);</p>
       <p>* стенографія{{-}}письмо, що виконується спеціально навченим писарем та встигає за усним мовленням ([[ps:Dupl|система Дюплоє]]).</p>
       <p />
-      <p>Такі системи часто захоплюють багато мов, і в різних мовах кодові таблиці різні. Так, відрізняється навіть британський та американський Брайль.</p>
+      <p>Такі системи часто захоплюють багато мов, і в різних мовах кодові таблиці різні. Відрізняється навіть британський та американський Брайль.</p>
      </transl>
     </text>
    </group>

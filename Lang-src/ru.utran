@@ -10637,12 +10637,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. Purpose of such encoding is different:</p>
-      <p>* communication and signaling (flag semaphore, Morse code);</p>
-      <p>* aids for disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
-      <p>* shorthand{{-}}writing done by specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
+      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>* communication and signalling (flag semaphore, Morse code);</p>
+      <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
+      <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
       <p />
-      <p>Such systems often span many languages, and different languages have different code tables. For example, even British Braille differs from American.</p>
+      <p>Such systems often span many languages, with different code tables. Even British Braille differs from American.</p>
      </orig>
      <transl>
       <p>Код{{-}}это другая форма записи обычного письменного текста. Другими словами, мы представляем устную речь в виде букв по правилам правописания, а потом кодируем. Цель такой записи бывает разная:</p>
@@ -10650,7 +10650,7 @@
       <p>* реабилитация инвалидов ([[ps:Brai|шрифт Брайля]], жестовый алфавит);</p>
       <p>* стенография{{-}}письмо, выполняемое специально обученным писцом и успевающее за устной речью ([[ps:Dupl|система Дюплойе]]).</p>
       <p />
-      <p>Такие системы часто захватывают много языков, и в разных языках кодовые таблицы разные. Так, отличается даже британский и американский Брайль.</p>
+      <p>Такие системы часто захватывают много языков, и в разных языках кодовые таблицы разные. Отличается даже британский и американский Брайль.</p>
      </transl>
     </text>
    </group>
