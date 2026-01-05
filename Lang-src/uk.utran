@@ -10109,14 +10109,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>For letter: its name is some word starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
+      <p>For letters: their names are some words starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
       <p />
-      <p>For numbers and other things: the character comes from the first letter of term: For example, '''№''' sign comes from Latin ''numero''.</p>
+      <p>For numbers and other things: the character comes from the first letter of the word. For example, the sign '''№''' comes from Latin ''numero''.</p>
      </orig>
      <transl>
-      <p>Для літери{{-}}зветься словом, що починається з цієї літери, як у [[ps:Thai|тайській]], старій [[ps:Cyrl|кирилиці]] та [[ps:Phnx|фінікійській]].</p>
+      <p>Для літери: зветься словом, що починається з цієї літери, як у [[ps:Thai|тайській]], старій [[ps:Cyrl|кирилиці]] та [[ps:Phnx|фінікійській]].</p>
       <p />
-      <p>Для цифр та іншого{{-}}символ походить з першої літери поняття. Наприклад, знак '''№''' походить від лат. ''numero''.</p>
+      <p>Для цифр та іншого: символ походить з першої літери поняття. Наприклад, знак '''№''' походить від лат. ''numero''.</p>
      </transl>
     </text>
    </group>
@@ -10129,16 +10129,16 @@
      <orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
       <p />
-      <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
+      <p>Non-linear script where consonants and vowels are joined into syllables is considered an alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
-      <p>With all advantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
      <transl>
       <p>Лінійне письмо, що записує голосні та приголосні звуки. Першим відомим алфавітом вважається [[ps:Grek|грецький]].</p>
       <p />
       <p>Нелінійне письмо, в якому голосні та приголосні об’єднується у склади зі складним порядком, алфавітом вважають або не{{_}}всі дослідники ([[ps:Thaa|тана]], [[ps:Hang|хангиль]]), або зовсім ніхто ([[ps:Laoo|лаоська]]).</p>
       <p />
-      <p>При усіх перевагах алфавітів в них є один серйозний недолік. Через зсуви у вимові з’являється складна історично обумовлена орфографія, яку час від часу потрібно реформувати. Так, [[ps:Cyrl|руський]] ять '''ѣ''' був окремим звуком, у XVIII{{_}}столітті повністю зниклим, а скасували його у 1918{{-}}більш ніж століття потому. Орфографія [[ps:Latn|англійської]] та французької багато в чому історична.</p>
+      <p>При усіх перевагах алфавітів в них є один серйозний недолік. Через зсуви у вимові виробляється складна історично обумовлена орфографія, яку час від часу потрібно реформувати. Так, [[ps:Cyrl|руський]] ять '''ѣ''' був окремим звуком, у XVIII{{_}}столітті остаточно зниклим, а скасували його у 1918{{-}}більш ніж століття потому. Орфографія [[ps:Latn|англійської]] та французької багато в чому історична.</p>
      </transl>
     </text>
    </group>
