@@ -6299,7 +6299,7 @@
       <p>{{GrekCoptUni}}</p>
      </orig>
      <transl>
-      <p>Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский) ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
+      <p>Греческая сделана из [[ps:Phnx|финикийской]] без оглядки на раннегреческие системы{{-}}[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский) ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
       <p />
       <p>Греки добавили гласные звуки, и греческий{{-}}первый известный истинный алфавит, кодирующий как согласные, так и гласные. Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''.</p>
       <p />
@@ -9616,8 +9616,8 @@
     <transl>В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</transl>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
-    <transl>В Юникоде{{_}}1.0 коптский был в [[pt:unification|унификации]] с греческим, и все чисто коптские буквы тоже считались греческими. С Юникода 4.1 (2005) языки разунифицированы: исследования по коптскому часто содержали греческий текст. Более того, только одна коптская буква имеет значительно разный рисунок в заглавном и строчном регистре: {{smfunky|Ϧϧ}}.</transl>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <transl>В Юникоде{{_}}1.0 коптский был в [[pt:unification|унификации]] с греческим, и все чисто коптские буквы тоже считались греческими. Юникод 4.1 (2005) разунифицировал языки: исследования по коптскому часто содержат греческий текст. Более того, только одна коптская буква имеет значительно разный рисунок в заглавном и строчном регистре: {{smfunky|Ϧϧ}}.</transl>
    </text>
   </group>
   <group id="CharCat">
@@ -10047,26 +10047,26 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p>Script where only consonant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. The name ''abjad'' comes from the autonym of the [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
-      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
-      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
-      <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
-      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>Despite obvious drawbacks, consonant scripts have some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}the root is a skeleton of consonants, and vowels work as suffixes. In Arabic, ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}differences in dialects are smoothed.</p>
+      <p>* Differences are smoothed not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. A phenomenon recorded in Hebrew: ''bayt'' → ''bet'' (house), and the letter Yod was reinterpreted to words where a diphthong had never existed. Another option is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod which sometimes represented “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
      <transl>
       <p>Письменность, где записываются только согласные звуки. Гласные либо опускаются полностью, либо записываются опциональными огласовками. Название «абджад» происходит от самоназвания [[ps:Arab|арабского]] алфавита{{-}}أبجد ''абджадия''.</p>
       <p />
       <p>Несмотря на очевидные недостатки, у консонантной письменности есть и преимущества.</p>
-      <p>* В семитских языках{{-}}[[ps:Phnx|финикийском]], [[ps:Hebr|иврите]], арабском{{-}}корнем является костяк согласных, а гласные играют роль суффиксов. Так, в арабском ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
+      <p>* В семитских языках{{-}}[[ps:Phnx|финикийском]], [[ps:Hebr|иврите]], арабском{{-}}корнем является костяк согласных, а гласные играют роль суффиксов. В арабском ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
       <p>* Легче позволяет собирать обширные империи{{-}}сглаживаются различия в диалектах.</p>
       <p>* Различия сглаживаются не{{_}}только в пространстве, но и во времени{{-}}вековые надписи лучше отвечают современному языку.</p>
       <p>* Такое письмо короче, что удобно при плохом качестве «бумаги» и перьев.</p>
       <p />
-      <p>Во многих абджадах есть буквы ''матрес лекционис (матери чтения)''{{-}}согласные буквы, означающие гласный звук. Один из вариантов, зафиксированный в иврите{{,-}}''байт'' → ''бет'' (дом), и буква «йуд» переосмыслилась на слова, где двойного звука никогда не{{_}}было. Другой вариант{{-}}по артикуляции, и к финикийской букве «йод», иногда означавшей «и», восходит йота из [[ps:Grek|греческого]], первого известного алфавита. С появлением огласовок ''матрес лекционис'' не{{_}}исчезли, а стали дополнять их.</p>
+      <p>Во многих абджадах есть буквы ''матрес лекционис (матери чтения)''{{-}}согласные буквы, означающие гласный звук. Явление, зафиксированное в иврите{{,-}}''байт'' → ''бет'' (дом), и буква «йуд» переосмыслилась на слова, где двойного звука никогда не{{_}}было. Другой вариант{{-}}по артикуляции, и к финикийской букве «йод», иногда означавшей «и», восходит йота из [[ps:Grek|греческого]], первого известного алфавита. С появлением огласовок ''матрес лекционис'' не{{_}}исчезли, а стали дополнять их.</p>
      </transl>
     </text>
    </group>
@@ -10077,7 +10077,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p>Scholars disagree on the definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
       <p />
@@ -10087,7 +10087,7 @@
       <p />
       <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
-      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
+      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for the name “abugida” to the script where this name came from!</p>
      </orig>
      <transl>
       <p>Исследователи не{{_}}сходятся в определении абугиды, и самое широкое из них такое: [[pt:syllabic|слоговая]] азбука, где у сходных слогов сходные символы.</p>
@@ -10100,7 +10100,7 @@
       <p />
       <p>Абугидами '''не являются ни в одном источнике''' [[ps:Hang|хангыль]], [[ps:Yiii|и]].</p>
       <p />
-      <p>Что интересно, название «абугида» происходит от эфиопского {{sm|አቡጊዳ}} (а-бу-ги-да){{-}}получается, некоторые исследователи отказывают в праве называться абугидой той письменности, откуда это понятие пошло!</p>
+      <p>Что интересно, название «абугида» происходит от эфиопского {{sm|አቡጊዳ}} (а-бу-ги-да){{-}}получается, некоторые исследователи отказывают в праве называться абугидой той письменности, откуда понятие пошло!</p>
      </transl>
     </text>
    </group>
@@ -11861,7 +11861,7 @@
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 8-bit'''{{-}}формат [[pt:serialization|сериализации]] Юникода в цепочку байтов. Придуман в 1992 в операционной системе Plan{{_}}9 для совместимости с имеющимся интернет-ПО. Каждая [[pt:codepoint|кодовая позиция]] записывается одной из таких последовательностей:</p>
@@ -14377,6 +14377,11 @@
      <transl>{1} + {2} расовых</transl>
      <tr-cmt>расы ходят пятёрками, так что OK</tr-cmt>
     </text>
+    <text id="Disun">
+     <orig>disunified</orig>
+     <au-cmt>Test: 4.1</au-cmt>
+     <transl>разунифицировано</transl>
+    </text>
    </group>
    <group id="1.1">
     <text id="Text">
@@ -14416,6 +14421,13 @@
     <text id="Text">
      <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
      <transl>Первое использование [[pt:plane|плоскостей]] 1 и 2. [[pt:utf16|UTF-16]] и шестнадцать дополнительных плоскостей предложены пятью годами ранее.</transl>
+    </text>
+   </group>
+   <group id="4.1">
+    <text id="Text">
+     <orig>{{GrekCoptUni}}</orig>
+     <au-cmt>You see, snippet only and no need to translate</au-cmt>
+     <transl>{{GrekCoptUni}}</transl>
     </text>
    </group>
    <group id="6.2">

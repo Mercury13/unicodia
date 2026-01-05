@@ -6777,7 +6777,7 @@
     <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
    </text>
   </group>
   <group id="CharCat">
@@ -7095,15 +7095,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p>Script where only consonant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. The name ''abjad'' comes from the autonym of the [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
-      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
-      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
-      <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
-      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>Despite obvious drawbacks, consonant scripts have some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}the root is a skeleton of consonants, and vowels work as suffixes. In Arabic, ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}differences in dialects are smoothed.</p>
+      <p>* Differences are smoothed not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. A phenomenon recorded in Hebrew: ''bayt'' → ''bet'' (house), and the letter Yod was reinterpreted to words where a diphthong had never existed. Another option is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod which sometimes represented “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
     </text>
    </group>
@@ -7113,7 +7113,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p>Scholars disagree on the definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
       <p />
@@ -7123,7 +7123,7 @@
       <p />
       <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
-      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
+      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for the name “abugida” to the script where this name came from!</p>
      </orig>
     </text>
    </group>
@@ -8203,7 +8203,7 @@
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
      </orig>
     </text>
    </group>
@@ -10088,6 +10088,10 @@
       <p>But skintones come in fives, maybe that’ll save some programming :)</p>
      </au-cmt>
     </text>
+    <text id="Disun">
+     <orig>disunified</orig>
+     <au-cmt>Test: 4.1</au-cmt>
+    </text>
    </group>
    <group id="1.1">
     <text id="Text">
@@ -10115,6 +10119,12 @@
    <group id="3.1">
     <text id="Text">
      <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
+    </text>
+   </group>
+   <group id="4.1">
+    <text id="Text">
+     <orig>{{GrekCoptUni}}</orig>
+     <au-cmt>You see, snippet only and no need to translate</au-cmt>
     </text>
    </group>
    <group id="6.2">

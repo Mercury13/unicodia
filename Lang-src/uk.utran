@@ -9614,8 +9614,8 @@
     <transl>У звичайному письмі ці символи краще не{{_}}використовувати. Єдине законне застосування{{-}}навчальні матеріали, тому символам даний клас «арабська літера» (у багатьох тодішніх кодуваннях текст записувався зліва направо).</transl>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
-    <transl>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. З Юнікоду{{_}}4.1 (2005) мови розуніфіковані: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</transl>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <transl>У Юнікоді{{_}}1.0 коптська була в [[pt:unification|уніфікації]] з грецькою, і всі чисто коптські літери теж вважались грецькими. Юнікод{{_}}4.1 (2005) розуніфікував мови: дослідження з коптської часто містили грецький текст. Більш того, лише одна коптська літера має суттєво різний малюнок у великому та малому регістрі: {{sm|Ϧϧ}}.</transl>
    </text>
   </group>
   <group id="CharCat">
@@ -10045,26 +10045,26 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p>Script where only consonant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. The name ''abjad'' comes from the autonym of the [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
-      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
-      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
-      <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
-      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>Despite obvious drawbacks, consonant scripts have some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}the root is a skeleton of consonants, and vowels work as suffixes. In Arabic, ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}differences in dialects are smoothed.</p>
+      <p>* Differences are smoothed not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. A phenomenon recorded in Hebrew: ''bayt'' → ''bet'' (house), and the letter Yod was reinterpreted to words where a diphthong had never existed. Another option is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod which sometimes represented “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
      <transl>
       <p>Писемність, де записуються тільки приголосні літери. Голосні або опускаються повністю, або записуються опціональними оголосами. Назва «абджад» походить від самоназви [[ps:Arab|арабського]] алфавіту{{-}}أبجد ''абджадія''.</p>
       <p />
       <p>Незважаючи на очевидні недоліки, у консонантної писемності є й переваги.</p>
-      <p>* У семітських мовах{{-}}[[ps:Phnx|фінікійській]], [[ps:Hebr|івриті]], арабській{{-}}коренем є кістяк приголосних, а голосні грають роль суфіксів. Так, в арабській ''джихадом'' займається ''моджахед'' (або, точніше, ''муджахід'').</p>
+      <p>* У семітських мовах{{-}}[[ps:Phnx|фінікійській]], [[ps:Hebr|івриті]], арабській{{-}}коренем є кістяк приголосних, а голосні грають роль суфіксів. В арабській ''джихадом'' займається ''моджахед'' (або, точніше, ''муджахід'').</p>
       <p>* Легше дозволяє збирати великі імперії{{-}}згладжуються відмінності у діалектах.</p>
       <p>* Відмінності згладжуються не{{_}}тільки у просторі, але й у часі{{-}}столітні написи краще відповідають сучасній мові.</p>
       <p>* Таке письмо коротше, що важливо при поганій якості «паперу» та пер.</p>
       <p />
-      <p>У багатьох абджадах є літери ''матрес лекціоніс (матері читання)''{{-}}приголосні літери, що означають голосний звук. Один з варіантів, зафіксований у івриті{{,-}}зсув ''байт'' → ''бет'' (дім), і літера «йуд» переосмислилась на слова, де подвійного звука ніколи не{{_}}було. Інший варіант{{-}}за артикуляцією, і від фінікійської літери «йод», що іноді означала «i», пішла йота з [[ps:Grek|грецької]], першого відомого алфавіта. З появою оголосів ''матрес лекціоніс'' не{{_}}зникли, а стали доповнювати їх.</p>
+      <p>У багатьох абджадах є літери ''матрес лекціоніс (матері читання)''{{-}}приголосні літери, що означають голосний звук. Явище, зафіксоване в івриті{{,-}}зсув ''байт'' → ''бет'' (дім), і літера «йуд» переосмислилась на слова, де подвійного звука ніколи не{{_}}було. Інший варіант{{-}}за артикуляцією, і від фінікійської літери «йод», що іноді означала «i», пішла йота з [[ps:Grek|грецької]], першого відомого алфавіта. З появою оголосів ''матрес лекціоніс'' не{{_}}зникли, а стали доповнювати їх.</p>
      </transl>
     </text>
    </group>
@@ -10075,7 +10075,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p>Scholars disagree on the definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
       <p />
@@ -10085,7 +10085,7 @@
       <p />
       <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
-      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
+      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for the name “abugida” to the script where this name came from!</p>
      </orig>
      <transl>
       <p>Дослідники не{{_}}сходяться у визначенні абуґіди, і найширше з них таке: [[pt:syllabic|складова]] абетка, де у схожих складів схожі символи.</p>
@@ -10098,7 +10098,7 @@
       <p />
       <p>Абуґідами '''не є в жодному джерелі''' [[ps:Hang|хангиль]], [[ps:Yiii|ї]].</p>
       <p />
-      <p>Що цікаво, назва «абуґіда» походить від ефіопського {{sm|አቡጊዳ}} (а-бу-ґі-да){{-}}виходить, деякі дослідники відмовляють у праві зватись абуґідою тій писемності, звідки це поняття пішло!</p>
+      <p>Що цікаво, назва «абуґіда» походить від ефіопського {{sm|አቡጊዳ}} (а-бу-ґі-да){{-}}виходить, деякі дослідники відмовляють у праві зватись абуґідою тій писемності, звідки поняття пішло!</p>
      </transl>
     </text>
    </group>
@@ -11861,7 +11861,7 @@
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 8-bit'''{{-}}формат [[pt:serialization|серіалізації]] Юнікоду у ланцюжок байтів. Придуманий у 1992 в операційній системі Plan{{_}}9 для сумісності з наявними інтернет-протоколами. Кожна [[pt:codepoint|кодова позиція]] записується однією з таких послідовностей:</p>
@@ -14377,6 +14377,11 @@
      <transl>{1} + {2} расових</transl>
      <tr-cmt>OK, раси ходять п’ятірками</tr-cmt>
     </text>
+    <text id="Disun">
+     <orig>disunified</orig>
+     <au-cmt>Test: 4.1</au-cmt>
+     <transl>розуніфіковано</transl>
+    </text>
    </group>
    <group id="1.1">
     <text id="Text">
@@ -14416,6 +14421,13 @@
     <text id="Text">
      <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
      <transl>Перше використання [[pt:plane|площин]] 1 та 2. [[pt:utf16|UTF-16]] та шістнадцять додаткових площин запропоновані п’ятьма роками раніше.</transl>
+    </text>
+   </group>
+   <group id="4.1">
+    <text id="Text">
+     <orig>{{GrekCoptUni}}</orig>
+     <au-cmt>You see, snippet only and no need to translate</au-cmt>
+     <transl>{{GrekCoptUni}}</transl>
     </text>
    </group>
    <group id="6.2">

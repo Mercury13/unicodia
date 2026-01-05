@@ -9604,7 +9604,8 @@
     <transl>Normal metinlerde bu karakterlerden kaçınmak daha iyidir. Tek meşru kullanım alanı eğitim materyalleri olduğundan, karakterler "Arapça harf" sınıfına girer (birçok eski kodlamada metin soldan sağa yazılırdı).</transl>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <known-orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</known-orig>
     <transl>Unicode{{_}}1.0’da Kıpti dili Yunanca ile [[pt:unification|birleştirildi]] ve tüm saf Kıpti harfleri de Yunanca kabul edildi. Unicode{{_}}4.1’den (2005) bu yana bu diller birbirinden ayrıldı: Kıpti çalışmaları genellikle Yunanca metinler içeriyordu. Dahası, yalnızca bir Kıpti harfi büyük ve küçük harflerde önemli ölçüde farklı gliflere sahipti: {{smfunky|Ϧϧ}}.</transl>
    </text>
   </group>
@@ -11182,10 +11183,17 @@
      <orig>
       <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
-      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
+      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
       <p />
       <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
      </orig>
+     <known-orig>
+      <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
+      <p />
+      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
+      <p />
+      <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
+     </known-orig>
      <transl>
       <p>66 kod noktası ''karakter dışı''dır: On yedi düzlemde *FFFE ve *FFFF ve FDD0…FDEF. Unicode’da bir daha asla görünmezler.</p>
       <p />
@@ -11859,7 +11867,7 @@
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
      </orig>
      <known-orig>
       <p>'''Unicode transformation format, 8 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
@@ -11893,7 +11901,7 @@
       <p>* Güvenilir algılama: Tek bayt kodlamalı (saf ASCII olmadığı sürece) veya UTF-16’lı anlamlı metinlerin UTF-8 ile karıştırılması imkansızdır.</p>
       <p>* Monoton: UTF-8 baytlarına göre sıralama, karakter kodlarına göre sıralama ile aynıdır.</p>
       <p />
-      <p>UTF-8, çoğu İnternet formatı ve protokolü de dahil olmak üzere yazılımlar arası değişim formatı olarak yaygın olarak kullanılır. [[pt:bom|Bayt sırası işareti]] EF{{_}}BB{{_}}BF’dir. Program arayüzü formatı olarak UTF-8; Linux’ta ve SSL gibi platformlar arası kütüphanelerde kullanılır.</p>
+      <p>UTF-8, çoğu İnternet formatı ve protokolü de dahil olmak üzere yazılımlar arası değişim formatı olarak yaygın olarak kullanılır. [[pt:bom|Bayt sırası işareti]] EF{{_}}BB{{_}}BF’dir. Program arayüzü formatı olarak UTF-8; Linux’ta ve OpenSSL gibi platformlar arası kütüphanelerde kullanılır.</p>
      </transl>
     </text>
    </group>
@@ -14391,6 +14399,11 @@
      </au-cmt>
      <transl>{1} + {2} ten rengi</transl>
     </text>
+    <text id="Disun" force-attention="true">
+     <orig>disunified</orig>
+     <au-cmt>Test: 4.1</au-cmt>
+     <transl>ayrıştırıldı</transl>
+    </text>
    </group>
    <group id="1.1">
     <text id="Text">
@@ -14430,6 +14443,13 @@
     <text id="Text">
      <orig>The first use of [[pt:plane|planes]] 1 and 2. [[pt:utf16|UTF-16]] and sixteen supplementary planes were proposed five years before.</orig>
      <transl>[[pt:plane|düzlemler]] 1 ve 2’nin ilk kullanımı. [[pt:utf16|UTF-16]] ve on altı ek düzlemin kullanımı beş yıl önce önerildi.</transl>
+    </text>
+   </group>
+   <group id="4.1">
+    <text id="Text">
+     <orig>{{GrekCoptUni}}</orig>
+     <au-cmt>You see, snippet only and no need to translate</au-cmt>
+     <transl>{{GrekCoptUni}}</transl>
     </text>
    </group>
    <group id="6.2">
