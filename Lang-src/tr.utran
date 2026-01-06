@@ -5685,15 +5685,8 @@
       <p />
       <p>{{GrekCoptUni}}</p>
      </orig>
-     <known-orig>
-      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source of it, the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. The final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in 4th century, in 11th it was replaced with Bohairic (Lower Egypt).</p>
-      <p />
-      <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
-      <p />
-      <p>{{GrekCoptUni}}</p>
-     </known-orig>
      <transl>
-      <p>Dil [[ps:Egyp|Eski Mısır]]’dan gelir ve önemli bir kaynaktır, betik ise [[ps:Grek|Yunanca]]’dan gelir. Demotik yazı ideo-ünsüzdü ve MÖ 6. yüzyılda, İskender’in Mısır’ı fethinden çok önce, Yunan harfleriyle Mısır yazısı (Eski Kıpti) düzenli olarak kullanılıyordu. Demotikten Yunancaya son geçiş Hristiyanlar tarafından yaklaşık 3. yüzyılda yapıldı. Kıpti alfabesi, lehçeye bağlı olarak 6 veya 7 harfin Demotik yazıdan ödünç alınmasıyla ortaya çıktı. Kıpti (Yukarı Mısır) Sahid lehçesi 4. yüzyılda edebi hale geldi, 11. yüzyılda ise Bohairic (Aşağı Mısır) ile değiştirildi.</p>
+      <p>Dil [[ps:Egyp|Eski Mısır]]’dan gelir ve önemli bir kaynaktır, betik ise [[ps:Grek|Yunanca]]’dan gelir. Demotik yazı ideo-ünsüzdü ve MÖ 6. yüzyılda, İskender’in Mısır’ı fethinden çok önce, Yunan harfleriyle Mısır yazısı (Eski Kıpti) düzenli olarak kullanılıyordu. Demotikten Yunancaya son geçiş Hristiyanlar tarafından yaklaşık 3. yüzyılda yapıldı. Kıpti alfabesi, lehçeye bağlı olarak 6 veya 7 harfin Demotik yazıdan ödünç alınmasıyla ortaya çıktı. Kıpticenin (Yukarı Mısır) Sahid lehçesi 4. yüzyılda edebi bir dil haline geldi, 11. yüzyılda ise yerini Bohairic (Aşağı Mısır) lehçesine bıraktı.</p>
       <p />
       <p>"Kıpti" kelimesi, [[ps:Arab|Arapça]] etkisiyle "Mısır" kelimesinin kısaltılmış halidir. Anlamı tüm Mısır halkından Mısırlı Hristiyanlara kaymıştır. Dil ve betik, Kıptiler tarafından hala ayinlerde kullanılmaktadır. Kıptiler, konuşma dili olarak Arapça konuşurlar. Kıpti dili 17. ve 19. yüzyıllar arasında yok olmuştur.</p>
       <p />
@@ -6780,19 +6773,10 @@
       <p />
       <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people who use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
      </orig>
-     <known-orig>
-      <p>Old script of [[ps:Brah|Brahmic]] origin, ancestor of [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By 16th century it had been supplanted with other scripts.</p>
-      <p />
-      <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, carving in stone. The “standard” style of Kawi is taken from early copper plates, with some characters taken from later Kawi and redrawn to resemble early one.</p>
-      <p />
-      <p>There are no spaces, and the words that end with consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
-      <p />
-      <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people that use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
-     </known-orig>
      <transl>
       <p>[[ps:Brah|Brahmic]] kökenli eski yazı, [[ps:Java|Javanese]]’nın atası. Pallava’dan (erken [[ps:Gran|Grantha]]) gelir. 16. yüzyıla gelindiğinde yerini başka yazılar almıştı.</p>
       <p />
-      <p>Bakır levhalara baskı, palmiye yapraklarına mürekkeple yazma, taş oyma gibi farklı yazı biçimlerine uygun çeşitli Kawi stilleri vardır. Kawi’nin "standart" stili, erken dönem bakır levhalardan alınmış ve bazı karakterler daha sonraki Kawilerden alınarak erken dönem Kawilerine benzeyecek şekilde yeniden çizilmiştir.</p>
+      <p>Bakır levhalara baskı, palmiye yapraklarına mürekkeple yazma, taş oyma gibi farklı yazı biçimlerine uygun çeşitli Kawi stilleri vardır. Kawi’nin "standart" stili, erken dönem bakır levhalardan alınmıştır; daha sonraki karakterler de bu stile uyarlanmıştır.</p>
       <p />
       <p>Boşluk yoktur ve ünsüzle biten kelimeler, büyük bir kanca olan [[pt:virama|virama]] (katil) ile tamamlanır. Ayrıca ünsüz bağlaçları için sanal bir virama da vardır{{-}}harfler üst üste bindirilmiştir.</p>
       <p />
@@ -15449,8 +15433,7 @@
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break around this character.</orig>
-     <known-orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</known-orig>
-     <transl>Bu [[pt:virama|virama]] bir hecenin içinde '''olabilir'''. Bu nedenle bu karakterden sonra satır sonu yapmayın.</transl>
+     <transl>Bu [[pt:virama|virama]] bir hecenin içinde '''olabilir'''. Bu nedenle bu karakterin etrafında satır sonu yapmayın.</transl>
     </text>
    </group>
    <group id="VF">
