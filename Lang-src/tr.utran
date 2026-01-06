@@ -5679,12 +5679,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source for it, and the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in the 6th century BC, long before Alexander’s conquest of Egypt. Christians made the final transition from Demotic to Greek around the 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from the Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in the 4th century, and in 11th it was replaced with Bohairic (Lower Egypt).</p>
+      <p />
+      <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak Arabic, as a conversational language Coptic died in the 17th to 19th century.</p>
+      <p />
+      <p>{{GrekCoptUni}}</p>
+     </orig>
+     <known-orig>
       <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source of it, the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. The final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in 4th century, in 11th it was replaced with Bohairic (Lower Egypt).</p>
       <p />
       <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>{{GrekCoptUni}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Dil [[ps:Egyp|Eski Mısır]]’dan gelir ve önemli bir kaynaktır, betik ise [[ps:Grek|Yunanca]]’dan gelir. Demotik yazı ideo-ünsüzdü ve MÖ 6. yüzyılda, İskender’in Mısır’ı fethinden çok önce, Yunan harfleriyle Mısır yazısı (Eski Kıpti) düzenli olarak kullanılıyordu. Demotikten Yunancaya son geçiş Hristiyanlar tarafından yaklaşık 3. yüzyılda yapıldı. Kıpti alfabesi, lehçeye bağlı olarak 6 veya 7 harfin Demotik yazıdan ödünç alınmasıyla ortaya çıktı. Kıpti (Yukarı Mısır) Sahid lehçesi 4. yüzyılda edebi hale geldi, 11. yüzyılda ise Bohairic (Aşağı Mısır) ile değiştirildi.</p>
       <p />
@@ -15441,7 +15448,8 @@
      <transl>Brahmic/virama</transl>
     </text>
     <text id="Text">
-     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
+     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break around this character.</orig>
+     <known-orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</known-orig>
      <transl>Bu [[pt:virama|virama]] bir hecenin içinde '''olabilir'''. Bu nedenle bu karakterden sonra satır sonu yapmayın.</transl>
     </text>
    </group>
