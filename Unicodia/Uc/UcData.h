@@ -1233,7 +1233,7 @@ namespace uc {
     enum class BreakStrength : unsigned char {
         HARD,   ///< hard (non-tailorable) rule
         AMBI,   ///< ambivalent (hard+soft) rule
-        BRAH,   ///< soft, plus info on Brahmic
+        BRAH,   ///< soft, plus info on Brahmic, plus write those scripts
         SOFT    ///< soft (tailorable) rule
     };
 

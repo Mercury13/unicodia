@@ -10912,7 +10912,7 @@
      <orig>CJK/conditional Japanese starter</orig>
     </text>
     <text id="Text">
-     <orig>You can break before these characters in certain contexts only.</orig>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
     </text>
    </group>
    <group id="ID">

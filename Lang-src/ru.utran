@@ -15476,8 +15476,8 @@
      <transl>ККЯ/условный японский начальный</transl>
     </text>
     <text id="Text">
-     <orig>You can break before these characters in certain contexts only.</orig>
-     <transl>Перед этими символами можно разрывать только в определённых контекстах.</transl>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
+     <transl>Малая кана (одинокие согласные), плюс протяжный звук [[pc:30FC]]. Перед этими символами можно разрывать только в определённых контекстах (например, в газетах).</transl>
     </text>
    </group>
    <group id="ID">
