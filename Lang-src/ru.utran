@@ -11829,7 +11829,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 7 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
+      <p>'''Unicode transformation format, 7-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
       <p />
       <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
       <p />
@@ -11859,7 +11859,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 8 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
+      <p>'''Unicode transformation format, 8-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
       <p>* 0xxx.xxxx</p>
       <p>* 110x.xxxx{{_}}10xx.xxxx</p>
       <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
@@ -11901,7 +11901,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
+      <p>'''Unicode transformation format, 16-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
       <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte character, that simplified text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
       <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
@@ -11946,14 +11946,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
+      <p>'''Unicode transformation format, 32-bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Character codes are just written one after another.</p>
       <p />
       <p>Properties of UTF-32:</p>
       <p>* Constant-length encoding. That’s why it is the most suitable for complex text processing.</p>
       <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
       <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
       <p />
-      <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
+      <p>UTF-32 is almost never used as a format of inter-software exchange due to bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 32-bit''', он же '''UCS-4'''{{-}}формат [[pt:serialization|сериализации]] Юникода в цепочку четырёхбайтовых машинных слов. Коды символов просто записываются один за другим.</p>
