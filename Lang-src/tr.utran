@@ -5363,8 +5363,8 @@
    </group>
    <group id="Bopo">
     <text id="Name">
-     <orig>Bopomofo (Zhuin)</orig>
-     <transl>Bopomofo (Zhuin)</transl>
+     <orig>Bopomofo (Zhuyin)</orig>
+     <transl>Bopomofo (Zhuyin)</transl>
     </text>
     <text id="Lang">
      <orig>Chinese</orig>
