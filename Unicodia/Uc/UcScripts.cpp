@@ -35,56 +35,66 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::NO_STATS },
-    // Arrows pseudo-script
+    // Arrows pseudo-script → sorting
     { "ZARR", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Mathematical pseudo-script
+    // Mathematical pseudo-script → sorting
     { "ZMAT", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Symbols and pictographs pseudo-script
+    // Symbols and pictographs pseudo-script → sorting
     { "ZSYM", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Dingbats pseudo-script
+    // Dingbats pseudo-script → sorting
     { "ZDIN", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Diacritical pseudo-script
+    // Diacritical pseudo-script → sorting
     { "ZDIA", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Kangxi pseudo-script
+    // Kangxi pseudo-script → sorting
     { "ZKXI", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Old computers pseudo-script
+    // Old computers pseudo-script → sorting
     { "ZOLD", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Variation selectors pseudo-script
+    // Variation selectors pseudo-script → sorting
     { "ZVAR", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Shapes pseudo-script
+    // Shapes pseudo-script → sorting
     { "ZSHP", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
-    // Punctuation pseudo-script
+    // Punctuation pseudo-script → sorting
     { "ZPUN", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
+    // Emoji pseudo-script → line breaking
+    { "ZEMO", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::NO_STATS },
+    // CJK Latin pseudo-script → line breaking
+    { "ZCJL", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::NO_STATS },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,

@@ -9589,6 +9589,18 @@
      <transl>Birleştirici işaret birçok betikte kullanılır.</transl>
     </text>
    </group>
+   <group id="ZEMO">
+    <text id="Name">
+     <orig>Emoji</orig>
+     <transl>Emoji</transl>
+    </text>
+   </group>
+   <group id="ZCJL">
+    <text id="Name" force-attention="true">
+     <orig>Fullwidth Latin</orig>
+     <transl>Tam genişlikte Latin</transl>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="Albanian">
@@ -15462,7 +15474,8 @@
      <transl>CJK/koşullu Japonca başlangıç</transl>
     </text>
     <text id="Text">
-     <orig>You can break before these characters in certain contexts only.</orig>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
+     <known-orig>You can break before these characters in certain contexts only.</known-orig>
      <transl>Sadece belirli bağlamlarda bu karakterlerden önce satır sonu yapabilirsiniz.</transl>
     </text>
    </group>
@@ -15603,6 +15616,11 @@
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
     <transl>[[pt:linebreak|Satır sonu]]ʼna bakın.</transl>
+   </text>
+   <text id="Scr" force-attention="true">
+    <orig>Scripts</orig>
+    <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
+    <transl>Betikler</transl>
    </text>
   </group>
  </file>

@@ -1233,14 +1233,19 @@ namespace uc {
     enum class BreakStrength : unsigned char {
         HARD,   ///< hard (non-tailorable) rule
         AMBI,   ///< ambivalent (hard+soft) rule
-        BRAH,   ///< soft, plus info on Brahmic, plus write those scripts
+        BRAH,   ///< soft, plus info on Brahmic
         SOFT    ///< soft (tailorable) rule
+    };
+
+    enum class BreakFg : unsigned char {
+        SCRIPTS = 1,
     };
 
     struct BreakInfo1 {
         std::string_view id;
         std::string_view altId {};
         BreakStrength strength;
+        Flags<BreakFg> flags {};
 
         std::string_view textId() const noexcept { return altId.empty() ? id: altId; }
     };

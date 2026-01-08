@@ -9599,6 +9599,18 @@
      <transl>Комбінуюча мітка використовується в декількох різних писемностях.</transl>
     </text>
    </group>
+   <group id="ZEMO">
+    <text id="Name">
+     <orig>Emoji</orig>
+     <transl>Емодзі</transl>
+    </text>
+   </group>
+   <group id="ZCJL">
+    <text id="Name">
+     <orig>Fullwidth Latin</orig>
+     <transl>Повноширинна латинка</transl>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="Albanian">
@@ -15613,6 +15625,11 @@
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
     <transl>Див. [[pt:linebreak|Розбиття на рядки]].</transl>
+   </text>
+   <text id="Scr">
+    <orig>Scripts</orig>
+    <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
+    <transl>Писемності</transl>
    </text>
   </group>
  </file>

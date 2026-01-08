@@ -3,6 +3,7 @@
 // C++
 #include <ranges>
 #include <map>
+#include <set>
 
 // Qt
 #include <QWidget>
@@ -2059,6 +2060,8 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 
 QString mywiki::buildHtml(const uc::BreakInfo& x)
 {
+    auto myBreakClass = uc::breakInfo.toIndex(x);
+
     QString text;
     appendStylesheet(text);
     appendHeader(text, x, str::cat("l=", x.id));
@@ -2089,6 +2092,72 @@ QString mywiki::buildHtml(const uc::BreakInfo& x)
     snprintf(s, std::size(s), "Brk.%*s.Text", int(textId.size()), textId.data());
     auto& locText = loc::get(s);
     appendNoFont(text, locText, wiki::Mode::ARTICLE);
+
+    if (x.flags.have(uc::BreakFg::SCRIPTS)) {
+        std::set<uc::EcScript> ecScripts;
+        for (auto& cp : uc::cpInfo) {
+            if (cp.breakClass == myBreakClass) {
+                uc::EcScript ecs = cp.ecScript;
+                switch (ecs) {
+                case uc::EcScript::NONE:
+                    // Special chars
+                    switch (cp.subj.ch32()) {
+                        // Remove None from conditional Japanese
+                    case 0x30FC:  // Katakana-Hiragana prolonged sound mark
+                    case 0xFF70:  // halfwidth Katakana-Hiragana prolonged sound mark
+                        continue;
+                    default: ;
+                    }
+                    if (cp.isEmoji()) {
+                        ecs = uc::EcScript::ZEMO;
+                    }
+                    break;
+                case uc::EcScript::Latn:
+                    if (cp.block().startingCp == 0xFF00) {
+                        ecs = uc::EcScript::ZCJL;
+                    }
+                    break;
+                default: ;
+                }
+                ecScripts.insert(ecs);
+            }
+        }
+        if (!ecScripts.empty()) {
+            // Have Latin → erase CJK Latin
+            if (ecScripts.contains(uc::EcScript::Latn))
+                ecScripts.erase(uc::EcScript::ZCJL);
+            // Write
+            str::append(text, "<p>");
+            str::append(text, loc::get("Brk.Scr"));
+            str::append(text, loc::active::punctuation.keyValueColon);
+            str::QSep sp(text, loc::active::punctuation.uniformComma);
+            for (auto v : ecScripts) {
+                const auto& script = uc::scriptInfo[static_cast<unsigned>(v)];
+                sp.sep();
+                char bufA[200];
+                const char* schema;
+                std::string_view id = "BAD";
+                switch (v) {
+                case uc::EcScript::ZEMO:
+                    schema = "";  id = "pt:emoji";
+                    break;
+                case uc::EcScript::ZCJL:
+                    schema = "";  id = "ps:Latn";
+                    break;
+                default:
+                    schema = "ps:";  id = script.id;
+                }
+
+                snprintf(bufA, std::size(bufA),
+                         "<a href='%s%*s' class='popup'>",
+                         schema, unsigned(id.length()), id.data());
+
+                text += bufA;
+                str::append(text, script.loc.name);
+                text += "</a>";
+            }
+        }
+    }
 
     switch (x.strength) {
     case uc::BreakStrength::AMBI: break;

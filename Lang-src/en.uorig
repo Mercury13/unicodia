@@ -6765,6 +6765,16 @@
      <orig>Combining mark is used in several scripts.</orig>
     </text>
    </group>
+   <group id="ZEMO">
+    <text id="Name">
+     <orig>Emoji</orig>
+    </text>
+   </group>
+   <group id="ZCJL">
+    <text id="Name">
+     <orig>Fullwidth Latin</orig>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="Albanian">
@@ -11015,6 +11025,10 @@
    </text>
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
+   </text>
+   <text id="Scr">
+    <orig>Scripts</orig>
+    <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
    </text>
   </group>
  </file>

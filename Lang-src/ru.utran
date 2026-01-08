@@ -9601,6 +9601,18 @@
      <transl>Комбинирующая метка используется в нескольких разных письменностях.</transl>
     </text>
    </group>
+   <group id="ZEMO">
+    <text id="Name">
+     <orig>Emoji</orig>
+     <transl>Эмодзи</transl>
+    </text>
+   </group>
+   <group id="ZCJL">
+    <text id="Name">
+     <orig>Fullwidth Latin</orig>
+     <transl>Полноширинная латиница</transl>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="Albanian">
@@ -15617,6 +15629,11 @@
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
     <transl>См. [[pt:linebreak|Разбиение на строки]].</transl>
+   </text>
+   <text id="Scr">
+    <orig>Scripts</orig>
+    <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
+    <transl>Письменности</transl>
    </text>
   </group>
  </file>
