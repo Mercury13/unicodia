@@ -7919,17 +7919,17 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is assembled from character and mark, and '''á''' is one precomposed character.</p>
+      <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is assembled from a character and a mark, and '''á''' is one precomposed character.</p>
       <p />
       <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
       <p />
-      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with umlaut, so precomposed form exists. And Ю́ is just Ю (''yu'') with optional mark of accent, and there’s no{{_}}such precomposed character.</p>
+      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with umlaut, so a precomposed form exists. And Ю́ is just Ю (''yu'') with an optional mark of accent, and there’s no{{_}}such precomposed character.</p>
       <p />
-      <p>'''Compatibility:''' if limited typography engine cannot lay marks, or limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters are often taken from existing encodings.</p>
+      <p>'''Compatibility:''' if a limited typography engine cannot lay marks, or a limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters are often taken from existing encodings.</p>
       <p />
-      <p>'''Beauty:''' mechanisms of laying marks are often imperfect, especially if designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may become a warning for designer that ''this happens''.</p>
+      <p>'''Beauty:''' mechanisms of laying marks are often imperfect, especially if designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may serve as a warning to the designer that ''this happens''.</p>
       <p />
-      <p>In wider sense precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
+      <p>In a wider sense, precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
       <p />
       <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
      </orig>
