@@ -10,6 +10,14 @@
 // Libs
 #include "u_EcArray.h"
 
+///
+/// @brief
+///   Bans line breaking in string s,
+///   replacing  space → NBSP;  slash → slash+WJ
+/// @warning  Used in other places
+///
+void banBreaking(std::u8string& s);
+
 namespace uc {
 
     namespace old {

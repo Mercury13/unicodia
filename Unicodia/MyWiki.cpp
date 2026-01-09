@@ -1123,7 +1123,7 @@ namespace {
                 if (i > 1)
                     s += "&nbsp;";
                 auto u8 = str::toU8(v);
-                str::replace(u8, u8' ', u8"&nbsp;");
+                banBreaking(u8);
                 mywiki::append(s, u8, context, wiki::Mode::SPAN);
                 if (i + 1 < n)
                     s += "&nbsp;";
@@ -1745,9 +1745,7 @@ namespace {
                     char buf[40];
                     snprintf(buf, std::size(buf), "Brk.%*s.Name", (int)(info.id.length()), info.id.data());
                     auto q = loc::get(buf).str();
-                    // Do not break!
-                    str::replace(q, u8" ", u8"&nbsp;");
-                    str::replace(q, u8"/", u8"/&#8288;");  // 8288 = word joiner
+                    banBreaking(q);
                     str::append(s, q);
                     s += "</a>";
                     if (i == WHERE_TO_BREAK) {
@@ -3915,7 +3913,7 @@ namespace {
         text += buf;
         text += "'>";
         std::u8string name1(blk.loc.name);
-        str::replace(name1, u8" ", u8"&nbsp;");
+        banBreaking(name1);
         str::append(text, name1);
         text += "</a>";
     }

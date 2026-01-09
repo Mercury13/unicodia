@@ -12,6 +12,7 @@
 
 
 #define M_NBSP "\u00A0"
+#define M_WJ   "\u2060"
 
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
@@ -485,6 +486,14 @@ std::span<const uc::old::Info> uc::old::allInfo() { return info; }
 constexpr auto I_LAST_OLD_COMP = std::size(uc::old::info) - 1;
 static_assert((1 << I_LAST_OLD_COMP) == static_cast<int>(uc::OldComp::LAST));
 
+
+void banBreaking(std::u8string& s)
+{
+    str::replace(s, u8' ', u8"" M_NBSP);
+    str::replace(s, u8'/', u8"/" M_WJ);
+}
+
+
 std::u8string uc::old::Info::locName() const
 {
     if (!fixedName.empty()) {
@@ -493,7 +502,7 @@ std::u8string uc::old::Info::locName() const
         char buf[40];
         snprintf(buf, std::size(buf), "OldComp.%s.Name", key.data());
         std::u8string r = loc::get(buf);
-        str::replace(r, u8" ", u8"" M_NBSP);
+        banBreaking(r);
         return r;
     }
 }
