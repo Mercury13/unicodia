@@ -1744,10 +1744,14 @@ namespace {
                     s += "'>";
                     char buf[40];
                     snprintf(buf, std::size(buf), "Brk.%*s.Name", (int)(info.id.length()), info.id.data());
-                    str::append(s, loc::get(buf));
+                    auto q = loc::get(buf).str();
+                    // Do not break!
+                    str::replace(q, u8" ", u8"&nbsp;");
+                    str::replace(q, u8"/", u8"/&#8288;");  // 8288 = word joiner
+                    str::append(s, q);
                     s += "</a>";
                     if (i == WHERE_TO_BREAK) {
-                        s += "<td>";
+                        s += "<td>&nbsp;&nbsp;&nbsp;<td>";
                         sp.reset();
                     }
                 }
