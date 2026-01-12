@@ -47,6 +47,7 @@ https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_V
 https://commons.wikimedia.org/wiki/Category:Makasar_letters — Makasar font
 http://en.glyphwiki.org — Hani images
 http://en.glyphwiki.org/dump.tar.gz — dump GlyphWiki data
+https://www.alphabettes.org/buginese-script/ — cool Buginese
 
 
 SCRIPTS
