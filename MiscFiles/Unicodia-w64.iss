@@ -45,6 +45,7 @@ WizardStyle=modern
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
+Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
