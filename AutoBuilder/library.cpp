@@ -153,13 +153,14 @@ namespace {
     };
 
     const std::unordered_map<std::u32string_view, uc::Lfgs> MISRENDERS {
-        { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
-        { U"\U0001F1E6\U0001F1F6", uc::MISRENDER_SIMPLE }, // Antarctica
-        { U"\U0001F1E9\U0001F1EC", uc::MISRENDER_IO     }, // Diego Garcia
-        { U"\U0001F1ED\U0001F1F3", uc::MISRENDER_SIMPLE }, // Honduras
-        { U"\U0001F1EE\U0001F1F4", uc::MISRENDER_IO     }, // British Indian Ocean Territory
-        { U"\U0001F1F2\U0001F1F6", uc::MISRENDER_SIMPLE }, // Martinique
-        { U"\U0001F1F8\U0001F1FE", uc::MISRENDER_SIMPLE }, // Syria
+        { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // AF = Afghanistan
+        { U"\U0001F1E6\U0001F1F6", uc::MISRENDER_SIMPLE }, // AQ = Antarctica
+        { U"\U0001F1E9\U0001F1EC", uc::MISRENDER_IO     }, // DG = Diego Garcia
+        { U"\U0001F1ED\U0001F1F3", uc::MISRENDER_SIMPLE }, // HN = Honduras
+        { U"\U0001F1EE\U0001F1F4", uc::MISRENDER_IO     }, // IO = British Indian Ocean Territory
+        { U"\U0001F1EE\U0001F1F7", uc::MISRENDER_SIMPLE }, // IR = Iran
+        { U"\U0001F1F2\U0001F1F6", uc::MISRENDER_SIMPLE }, // MQ = Martinique
+        { U"\U0001F1F8\U0001F1FE", uc::MISRENDER_SIMPLE }, // SY = Syria
         { U"\U0001F46A",           uc::MISRENDER_SIMPLE }, // family
         { U"\U0001F52B",           uc::MISRENDER_SIMPLE }, // pistol
         { U"\U0001F68F",           uc::MISRENDER_SIMPLE }, // bus stop
