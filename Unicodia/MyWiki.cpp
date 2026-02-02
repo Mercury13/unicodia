@@ -1821,6 +1821,8 @@ namespace {
                 str::append(s, recent::V_LEFT_16);
             } else if (name == "vkhmer") {
                 str::append(s, recent::V_KHMER_DISCOUR);
+            } else if (name == "vtrap") {
+                str::append(s, recent::V_SPRING_TRAP);
             }
             break;
 

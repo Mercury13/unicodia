@@ -13743,6 +13743,7 @@
    <group id="Misr">
     <text id="Head">
      <orig>{{{{warn|Other images are possible!}} {1}</orig>
+     <au-cmt>{1} = placeholder for text, and {{ = escape for {. Right bracket } is not escaped.</au-cmt>
      <transl>{{{{warn|Возможны другие изображения!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
@@ -13800,8 +13801,8 @@
      <transl>Возможны любые микроскопические существа: амёба, бактерия, COVID-19 или другой вирус.</transl>
     </text>
     <text id="U+1FAA4">
-     <orig>As of 2023, the sample Unicode image depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
-     <transl>На 2023 образцовое изображение Юникода{{-}}пружинная мышеловка. Но поскольку это эмодзи значит «бесплатный сыр» и «ловушка», большинство производителей рисуют самодельную ловушку, которая ловит живой, с сыром внутри.</transl>
+     <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <transl>Образцовое изображение Юникода{{_}}{{vtrap}}{{-}}пружинная мышеловка. Но поскольку это эмодзи значит «бесплатный сыр» и «ловушка», большинство производителей рисуют самодельную ловушку, которая ловит живой, с сыром внутри.</transl>
     </text>
     <text id="Family">
      <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. And families often include grandparents and pets. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>

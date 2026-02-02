@@ -20,7 +20,7 @@ namespace recent {
     /// Template: {{yantarc}}
     /// Sample reaction: Horns and Hooves switched to the new flag in 2060
     /// Known status: still unanimous
-    constexpr unsigned YEAR_ANTARC = 2025;
+    constexpr unsigned YEAR_ANTARC = 2026;
 
     /// Facts to check:
     ///     1. Afghanistan is ruled by the Taliban
@@ -35,7 +35,7 @@ namespace recent {
     ///     1. Yes.
     ///     2. Only Russia recognized, and b/w flag is actually flown there.
     ///     3. Only Catrinity switched, ways before.
-    constexpr unsigned YEAR_TALIBAN = 2025;
+    constexpr unsigned YEAR_TALIBAN = 2026;
 
     /// Fact to check: Brodie Lockard is alive
     /// Piece of data: year
@@ -75,6 +75,15 @@ namespace recent {
     /// Sample reaction: “Mark is/was deprecated, PERIOD”
     /// Known status: still discouraged
     constexpr const char8_t* V_KHMER_DISCOUR = u8"17";
+
+    /// Fact to check: 1FAA4 (mouse trap) is spring-loaded in CODE CHART (b/w)
+    /// Piece of data: Unicode version, w/o “alpha” or “beta”
+    /// Article: U+1FAA4 mouse trap
+    /// L10n key: Lib.Misr.U+1FAA4
+    /// Template: {{vtrap}}
+    /// Sample reaction: “Unicode 33 changed it to XXX”
+    /// Known status: still spring-loaded
+    constexpr const char8_t* V_SPRING_TRAP = u8"17";
 
 }   // anmespace uc
 
