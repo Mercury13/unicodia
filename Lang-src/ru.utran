@@ -270,18 +270,18 @@
      <transl>Заливок и поворотов нет</transl>
     </text>
     <text id="NChars">
-     <orig>{1|one=? character|many=? characters}</orig>
+     <orig>{1|one=# character|many=# characters}</orig>
      <au-cmt>UNUSED, NChars2 instead</au-cmt>
-     <transl>{1|one=? символ|few=? символа|many=? символов}</transl>
+     <transl>{1|one=# символ|few=# символа|many=# символов}</transl>
     </text>
     <text id="NChars2">
-     <orig>{1} ({2|one=? character|many=? characters})</orig>
+     <orig>{1} ({2|one=# character|many=# characters})</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
       <p>Test: almost every header of pop-up window: Control, Latin, blocks…</p>
      </au-cmt>
-     <transl>{1} ({2|one=? символ|few=? символа|many=? символов})</transl>
+     <transl>{1} ({2|one=# символ|few=# символа|many=# символов})</transl>
     </text>
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
@@ -293,14 +293,14 @@
      <transl>без &lt;a {1} &gt;хэнтáйганы&lt;/a&gt;</transl>
     </text>
     <text id="NoHent3">
-     <orig>{1} ({2|one=? character|many=? characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
+     <orig>{1} ({2|one=# character|many=# characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
       <p>{3} = additional technical tags (e.g. href, style)</p>
       <p>Test: Hiragana</p>
      </au-cmt>
-     <transl>{1} ({2|one=? символ|few=? символа|many=? символов} без &lt;a {3} &gt;хэнтáйганы&lt;/a&gt;)</transl>
+     <transl>{1} ({2|one=# символ|few=# символа|many=# символов} без &lt;a {3} &gt;хэнтáйганы&lt;/a&gt;)</transl>
     </text>
     <text id="Comp">
      <orig>String content</orig>
@@ -1122,9 +1122,9 @@
      <transl>Ключ</transl>
     </text>
     <text id="Data">
-     <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
+     <orig>{1} {2} {3|one=# stroke|many=# strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
-     <transl>{1} {2} {3|one=? черта|few=? черты|many=? черт}</transl>
+     <transl>{1} {2} {3|one=# черта|few=# черты|many=# черт}</transl>
     </text>
    </group>
    <group id="Ver">

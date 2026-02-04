@@ -290,7 +290,7 @@ namespace loc {
         ///   unescaping data and replacing ? with value
         /// @return addition to “advance” variable
         template <class Sv1>
-        size_t replaceQuestion(
+        size_t replaceHash(
                 const Zsubst& sub,
                 size_t pos,
                 const Kv& byWhat,
@@ -513,7 +513,7 @@ void loc::Fmt<Ch>::nnnSv(Sv1 x, const Zchecker& chk)
                 auto plural = chk.check(loc.cardinalRule());
                 const Kv* tmpl = findPluralVal(plural);
                 if (tmpl) {
-                    newAdvance = replaceQuestion(currSub, currPos, *tmpl, x);
+                    newAdvance = replaceHash(currSub, currPos, *tmpl, x);
                 } else {
                     newAdvance = dumbReplace(currSub, currPos, x);
                 }
@@ -749,7 +749,7 @@ auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 
 
 template <loc::Char Ch> template <class Sv1>
-size_t loc::Fmt<Ch>::replaceQuestion(
+size_t loc::Fmt<Ch>::replaceHash(
         const Zsubst& sub, size_t pos, const Kv& byWhat, Sv1 value)
 {
     // byWhat is empty?
@@ -768,7 +768,7 @@ size_t loc::Fmt<Ch>::replaceQuestion(
                 goto brk;
             d[pOut++] = *ptrIn;
             break;
-        case '?':   // Replacement
+        case '#':   // Replacement
             smartSpans.push_back(pOut);
             break;
         default:

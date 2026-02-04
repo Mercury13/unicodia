@@ -173,8 +173,11 @@
     </text>
     <text id="YBefore">
      <orig>before $</orig>
-     <au-cmt>Years BC are unsupported</au-cmt>
      <transl>$ 以前</transl>
+    </text>
+    <text id="YBeforeBc">
+     <orig>before $ BC</orig>
+     <au-cmt>Test: CJK ideographs, that’s probably all</au-cmt>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
@@ -266,12 +269,12 @@
      <transl>塗りつぶしと回転なし</transl>
     </text>
     <text id="NChars">
-     <orig>{1|one=? character|many=? characters}</orig>
+     <orig>{1|one=# character|many=# characters}</orig>
      <au-cmt>UNUSED, NChars2 instead</au-cmt>
      <transl>{1} 文字</transl>
     </text>
     <text id="NChars2" force-attention="true">
-     <orig>{1} ({2|one=? character|many=? characters})</orig>
+     <orig>{1} ({2|one=# character|many=# characters})</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
@@ -289,7 +292,7 @@
      <transl>&lt;a {1} &gt;変体仮名&lt;/a&gt; なし</transl>
     </text>
     <text id="NoHent3" force-attention="true">
-     <orig>{1} ({2|one=? character|many=? characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
+     <orig>{1} ({2|one=# character|many=# characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
@@ -1115,7 +1118,7 @@
      <transl>部首</transl>
     </text>
     <text id="Data">
-     <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
+     <orig>{1} {2} {3|one=# stroke|many=# strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
      <transl>{1} {2} {3} 画</transl>
     </text>
@@ -5407,7 +5410,8 @@
    </group>
    <group id="Bopo">
     <text id="Name">
-     <orig>Bopomofo (Zhuin)</orig>
+     <orig>Bopomofo (Zhuyin)</orig>
+     <known-orig>Bopomofo (Zhuin)</known-orig>
      <transl>注音字母 (朱印)</transl>
     </text>
     <text id="Lang">
@@ -5716,12 +5720,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source for it, and the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in the 6th century BC, long before Alexander’s conquest of Egypt. Christians made the final transition from Demotic to Greek around the 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from the Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in the 4th century, and in 11th it was replaced with Bohairic (Lower Egypt).</p>
+      <p />
+      <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak Arabic, as a conversational language Coptic died in the 17th to 19th century.</p>
+      <p />
+      <p>{{GrekCoptUni}}</p>
+     </orig>
+     <known-orig>
       <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source of it, the script comes from [[ps:Grek|Greek]]. The demotic script was ideo-consonant, and writing in Egyptian with Greek letters (so-called Old Coptic) was regularly employed in 6th century BC, long before Alexander’s conquest of Egypt. The final transition from Demotic to Greek was done by Christians about 3rd century. The Coptic alphabet itself emerged when 6 or 7 letters (depending on dialect) were borrowed from Demotic script. The Sahidic dialect of Coptic (Upper Egypt) became literary in 4th century, in 11th it was replaced with Bohairic (Lower Egypt).</p>
       <p />
       <p>The word “Copt” is “Egypt” shortened under [[ps:Arab|Arabic]] influence. Its meaning shifted from all people of Egypt to Egyptian Christians. The language and script are still used by Copts as liturgical. Copts speak in Arabian, as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
       <p>{{GrekCoptUni}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>この言語は [[ps:Egyp|古代エジプト語]] に由来し、古代エジプト語の重要な源泉となっています。文字は [[ps:Grek|ギリシャ語]] に由来しています。デモティック文字は表意子音で、ギリシャ文字を使ったエジプト語の書き方 (いわゆる古代コプト語) は、アレクサンドロス大王がエジプトを征服するずっと前の紀元前 6 世紀によく使われていました。デモティックからギリシャ語への最終的な移行は、3 世紀頃にキリスト教徒によって行われました。コプト文字自体は、デモティック文字から 6 文字または 7 文字 (方言によって異なります) が借用されたときに出現しました。コプト語 (上エジプト) のサヒド方言は 4 世紀に文学的になり、11 世紀にはボハイル語 (下エジプト) に置き換えられました。</p>
       <p />
@@ -6471,6 +6482,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Archaeologists have discovered pictographs dating back to ≈6000{{_}}BC. The first inscriptions that were surely texts are questions on oracle bones from ≈1200{{_}}BC. By 200{{_}}BC, the characters got a style similar to modern.</p>
+      <p />
+      <p>People had abandoned ideographs by the common era, but China conserved the archaic script for several reasons:</p>
+      <p>* multiethnic population{{-}}besides the state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
+      <p>* suitable grammar{{-}}nuances of words’ meaning are indicated with function words;</p>
+      <p>* cult of tradition{{-}}even today the Chinese are rather conservative;</p>
+      <p>* meritocracy that worked somehow{{-}}thousands of signs and the ability to write them nicely detected trainable people.</p>
+      <p />
+      <p>In the 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).</p>
+      <p />
+      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
+      <p />
+      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses them very seldom.</p>
+      <p />
+      <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
+     </orig>
+     <known-orig>
       <p>First pictographs are dated with the 6th millennium BC, they were scratched or written with ink, later they were modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
       <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
       <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
@@ -6484,7 +6512,7 @@
       <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses them very seldom.</p>
       <p />
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>最初の象形文字は紀元前6千年紀にさかのぼり、インクで削ったり書いたりしていましたが、後に筆で書くようになりました。紀元前1千年紀に人々は表意文字を放棄し始めましたが、中国は古風な文字を保存しました。理由はいくつかあります。</p>
       <p>* 多民族人口{{-}}漢民族の国家形成者のほかに、約10人がいて、少なくとも書き言葉ではお互いを理解していました。</p>
@@ -6841,6 +6869,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Old script of [[ps:Brah|Brahmic]] origin, the ancestor of [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By the 16th century, it had been supplanted with other scripts.</p>
+      <p />
+      <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, and carving in stone. The “standard” style of Kawi is taken from early copper plates, with later characters adapted to that style.</p>
+      <p />
+      <p>There are no spaces, and the words that end with a consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
+      <p />
+      <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people who use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
+     </orig>
+     <known-orig>
       <p>Old script of [[ps:Brah|Brahmic]] origin, ancestor of [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By 16th century it had been supplanted with other scripts.</p>
       <p />
       <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, carving in stone. The “standard” style of Kawi is taken from early copper plates, with some characters taken from later Kawi and redrawn to resemble early one.</p>
@@ -6848,7 +6885,7 @@
       <p>There are no spaces, and the words that end with consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
       <p />
       <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people that use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[ps:Brah|ブラーフミー]] 起源の古い文字で、[[ps:Java|ジャワ語]] の祖先です。パッラヴァ文字 (初期の [[ps:Gran|グランタ]]) に由来します。16 世紀までに他の文字に取って代わられました。</p>
       <p />
@@ -7026,8 +7063,13 @@
      <orig>
       <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
       <p />
-      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than common-Indic from Devanagari.</p>
      </orig>
+     <known-orig>
+      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
+      <p />
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from Devanagari.</p>
+     </known-orig>
      <transl>
       <p>マハグル・ティカ・ラム・ライが [[ps:Deva|デーヴァナーガリー]] に近い現地の文字から発明しました。1995 年にインドのシッキム州はバンタワ語 (「ライ」という名前ですが、より広い民族グループであり、「キラット」はさらに広い) を承認し、キラットを公式の文字にしました。</p>
       <p />
@@ -9724,6 +9766,16 @@
      <transl>結合マークはいくつかのスクリプトで使用されます。</transl>
     </text>
    </group>
+   <group id="ZEMO">
+    <text id="Name">
+     <orig>Emoji</orig>
+    </text>
+   </group>
+   <group id="ZCJL">
+    <text id="Name">
+     <orig>Fullwidth Latin</orig>
+    </text>
+   </group>
   </group>
   <group id="Snip">
    <text id="Albanian" force-attention="true">
@@ -9739,7 +9791,8 @@
     <transl>通常のテキストではこれらの文字は避けた方がよいでしょう。正当な使用法は教育用資料のみであるため、これらの文字は「アラビア文字」クラスになります (多くの古いエンコーディングでは、テキストは左から右に書かれていました)。</transl>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <known-orig>In Unicode{{_}}1.0 Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Since Unicode{{_}}4.1 (2005) these languages were disunified: Coptic studies often contained Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</known-orig>
     <transl>Unicode{{_}}1.0 では、コプト語はギリシャ語と [[pt:unification|統合]] され、純粋なコプト語の文字はすべてギリシャ語とみなされました。Unicode{{_}}4.1 (2005) 以降、これらの言語は統合されなくなりました。コプト語の研究にはギリシャ語のテキストが含まれることが多かったのです。さらに、コプト語の文字のうち、大文字と小文字で大きく異なるグリフを持つのは、{{smfunky|Ϧϧ}} という 1 つの文字だけです。</transl>
    </text>
   </group>
@@ -10171,15 +10224,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
+      <p>Script where only consonant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. The name ''abjad'' comes from the autonym of the [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
-      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
-      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
-      <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
-      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>Despite obvious drawbacks, consonant scripts have some advantages.</p>
+      <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}the root is a skeleton of consonants, and vowels work as suffixes. In Arabic, ''jihad'' is done by ''mujahid''.</p>
+      <p>* Easier to assemble large empires{{-}}differences in dialects are smoothed.</p>
+      <p>* Differences are smoothed not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong had never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. A phenomenon recorded in Hebrew: ''bayt'' → ''bet'' (house), and the letter Yod was reinterpreted to words where a diphthong had never existed. Another option is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod which sometimes represented “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
      <known-orig>
       <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
@@ -10212,6 +10265,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Scholars disagree on the definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p />
+      <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
+      <p />
+      <p>[[ps:Ethi|Ethiopic]] and [[ps:Cans|Canadian syllabary]] are abugidas '''in most classifications'''.</p>
+      <p />
+      <p>[[ps:Thaa|Thaana]], [[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]] are abugidas '''in some sources'''.</p>
+      <p />
+      <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
+      <p />
+      <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for the name “abugida” to the script where this name came from!</p>
+     </orig>
+     <known-orig>
       <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
@@ -10223,7 +10289,7 @@
       <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
       <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>学者たちはアブギダの定義に同意していませんが、その最も広い定義は、[[pt:syllabic|音節文字]]であり、類似の音節は類似の文字で書かれています。</p>
       <p />
@@ -10246,10 +10312,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>For letters: their names are some words starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
+      <p />
+      <p>For numbers and other things: the character comes from the first letter of the word. For example, the sign '''№''' comes from Latin ''numero''.</p>
+     </orig>
+     <known-orig>
       <p>For letter: its name is some word starting with the letter itself, like in [[ps:Thai|Thai]], old [[ps:Cyrl|Cyrillic]]/[[ps:Glag|Glagolitic]] and [[ps:Phnx|Phoenician]].</p>
       <p />
       <p>For numbers and other things: the character comes from the first letter of term: For example, '''№''' sign comes from Latin ''numero''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>文字の場合: その名前は、[[ps:Thai|タイ文字]]、古い[[ps:Cyrl|キリル文字]]/[[ps:Glag|グラゴル文字]]、[[ps:Phnx|フェニキア文字]]のように、文字自体で始まる単語です。</p>
       <p />
@@ -10266,9 +10337,9 @@
      <orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
       <p />
-      <p>Non-linear script where consonants and vowels are joined into syllables is considered alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
+      <p>Non-linear script where consonants and vowels are joined into syllables is considered an alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
-      <p>With all advantages, alphabets have a severe disadvantage. Because of pronunciation shifts, complex historical othography appears, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in 18th century, and was dropped from writing in 1918, more than a century later. Spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
      <known-orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
@@ -10377,6 +10448,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>For five scripts, sources do{{_}}not{{_}}agree on what they are.</p>
+      <p />
+      <p>[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.</p>
+      <p />
+      <p>[[ps:Thaa|Thaana]] ''(Maldivian)''{{-}}[[pt:abjad|consonant]] ''(Omniglot)'', [[pt:abugida|abugida]] ''(English Wikipedia)'' or alphabet ''(Unicode)''.</p>
+      <p />
+      <p>[[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]]{{-}}alphabet ''(English Wikipedia, Unicode)'' or abugida ''(Omniglot)''. Both are Indian, dropped most features of [[pt:brahmic|Brahmic abugidas]], but left the inherent vowel {{t|a}}.</p>
+      <p />
+      <p>[[ps:Phag|Phags-Pa]] (Mongolian square){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</p>
+     </orig>
+     <known-orig>
       <p>For five scripts sources do{{_}}not{{_}}agree what they are.</p>
       <p />
       <p>[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.</p>
@@ -10386,7 +10468,7 @@
       <p>[[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]]{{-}}alphabet ''(English Wikipedia, Unicode)'' or abugida ''(Omniglot)''. Both are Indian, dropped most features of [[pt:brahmic|Brahmic abugidas]], but left inherent vowel {{t|a}}.</p>
       <p />
       <p>[[ps:Phag|Phags-Pa]] (Mongolian square){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>5 つのスクリプトについては、ソースが何であるかに関して一致していません。</p>
       <p />
@@ -10413,6 +10495,27 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
+      <p />
+      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some way across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
+      <p />
+      <p>Features of Brahmic abugidas:</p>
+      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
+      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
+      <p>* Written left to right, unlike Semitic languages.</p>
+      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
+      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
+      <p />
+      <p>There are several methods to convey complex syllables:</p>
+      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present at the end of words only. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. Small initial R ({{sm|र्क}} rka) is called ''repha''; small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
+      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
+      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
+      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
+     </orig>
+     <au-cmt>Russian: kssa = кша</au-cmt>
+     <known-orig>
       <p>Scholars disagree in definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
       <p>In Semitic languages word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practiced by ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce [[pt:abjad|consonant]] script. When [[ps:Armi|Aramaic]] script went eastwards and collided with Indo-European languages, syllabic script appeared that spread in some way across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
@@ -10431,8 +10534,7 @@
       <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
       <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimen degenerated to consonant scripts.</p>
       <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case it may not{{_}}always distinguish {{t|na}} and {{t|n}} and use virama in dictionaries.</p>
-     </orig>
-     <au-cmt>Russian: kssa = кша</au-cmt>
+     </known-orig>
      <transl>
       <p>学者たちは [[pt:abugida|アブギダ]] の定義について意見が分かれています。しかし、ある点については一致しています。それは、'''[[ps:Brah|ブラーフミー]] から来た一連の文字''' は間違いなくアブギダであるということです。</p>
       <p />
@@ -10663,7 +10765,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], and [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
       <p>* sweeping writing with brush and ink (except Nüshu);</p>
@@ -10672,6 +10774,16 @@
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
+     <known-orig>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], and [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p />
+      <p>Features of CJK:</p>
+      <p>* sweeping writing with brush and ink (except Nüshu);</p>
+      <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
+      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
+      <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
+     </known-orig>
      <transl>
       <p>[[ps:Hani|中国語の表意文字]] に近い文字のグループ。これには、音節 [[ps:Kana|カタカナ]]、[[ps:Hira|ひらがな]]、および [[pt:arguable|要議論]] タイプの [[ps:Hang|ハングル文字]] が含まれます。歴史上の{{-}}[[ps:Tang|西夏]]、[[ps:Kits|契丹]]、[[ps:Nshu|女書]]の中で。</p>
       <p />
@@ -10766,13 +10878,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>* communication and signalling (flag semaphore, Morse code);</p>
+      <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
+      <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
+      <p />
+      <p>Such systems often span many languages, with different code tables. Even British Braille differs from American.</p>
+     </orig>
+     <known-orig>
       <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. Purpose of such encoding is different:</p>
       <p>* communication and signaling (flag semaphore, Morse code);</p>
       <p>* aids for disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
       <p>* shorthand{{-}}writing done by specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
       <p />
       <p>Such systems often span many languages, and different languages have different code tables. For example, even British Braille differs from American.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>コードは、通常の文章の別の形式です。言い換えれば、話し言葉を通常の綴りのルールに従って文字に変換し、エンコードします。このようなエンコードの目的は異なります。:</p>
       <p>* 通信と信号（旗信号、モールス信号）;</p>
@@ -11156,7 +11276,7 @@
       <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
       <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
       <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except Chinese abandoned ideographs by the beginning of common era.</p>
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
      </orig>
      <au-cmt>
       <p>up/down → write “top/bottom” if better in your language</p>
@@ -11186,6 +11306,22 @@
     <text id="Name">
      <orig>Latin-1</orig>
      <transl>ラテン-1</transl>
+    </text>
+   </group>
+   <group id="legacy">
+    <text id="Name">
+     <orig>legacy computers</orig>
+    </text>
+    <text id="Text">
+     <orig>{{LegacyComps}}</orig>
+     <au-cmt>Just a template, but you can write anything before.</au-cmt>
+    </text>
+    <text id="Subhead">
+     <orig>Unicode {1} ({2}) supports</orig>
+     <au-cmt>
+      <p>{1} = version (1.0 etc), never emoji (such chars do not appear in emoji releases)</p>
+      <p>{2} = year (do not want month)</p>
+     </au-cmt>
     </text>
    </group>
    <group id="ligature">
@@ -11297,10 +11433,17 @@
      <orig>
       <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
-      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
+      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
       <p />
       <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
      </orig>
+     <known-orig>
+      <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
+      <p />
+      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
+      <p />
+      <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
+     </known-orig>
      <transl>
       <p>66 個のコード ポイントは「非文字」です: 17 個のプレーンすべてにおける *FFFE と *FFFF、および FDD0…FDEF。これらは Unicode で再び現れることはありません。</p>
       <p />
@@ -11319,8 +11462,13 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files, and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
+     <known-orig>
+      <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
+      <p />
+      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+     </known-orig>
      <transl>
       <p>テキスト以外の情報の書き込み: 音楽 ([[pk:1D100|音符]])、技術図面 ([[pk:2300|技術記号]])、ジェスチャー ([[ps:Sgnw|SingWriting]])。</p>
       <p />
@@ -11505,6 +11653,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is assembled from a character and a mark, and '''á''' is one precomposed character.</p>
+      <p />
+      <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
+      <p />
+      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with umlaut, so a precomposed form exists. And Ю́ is just Ю (''yu'') with an optional mark of accent, and there’s no{{_}}such precomposed character.</p>
+      <p />
+      <p>'''Compatibility:''' if a limited typography engine cannot lay marks, or a limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters are often taken from existing encodings.</p>
+      <p />
+      <p>'''Beauty:''' mechanisms of laying marks are often imperfect, especially if designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may serve as a warning to the designer that ''this happens''.</p>
+      <p />
+      <p>In a wider sense, precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
+      <p />
+      <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
+     </orig>
+     <known-orig>
       <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is assembled from character and mark, and '''á''' is one precomposed character.</p>
       <p />
       <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
@@ -11518,7 +11681,7 @@
       <p>In wider sense precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
       <p />
       <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>文字と [[pt:combining|結合マーク]] を 1 つにまとめたもの。たとえば、 '''á''' は文字とマークから組み立てられ、 '''á''' は 1 つの合成済み文字です。</p>
       <p />
@@ -11949,6 +12112,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 7-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
+      <p />
+      <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
+      <p />
+      <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may be encoded too to save bytes.</p>
+      <p />
+      <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
+      <p />
+      <p>Used only for E-mail messages, as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special unambigous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode transformation format, 7 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
       <p />
       <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written. Plus + may be encoded in +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
@@ -11958,7 +12132,7 @@
       <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
       <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that’s important for search. In World Wide Web UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 変換形式、7 ビット''' は、Unicode [[pt:serialization|シリアル化]] を印刷可能な [[pt:ascii|ASCII]] 文字のチェーンにシリアル化する形式です。</p>
       <p />
@@ -11979,6 +12153,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 8-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
+      <p>* 0xxx.xxxx</p>
+      <p>* 110x.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p />
+      <p>Properties of UTF-8:</p>
+      <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
+      <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that gives compatibility with program interfaces, terminal protocols.</p>
+      <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from end of string 00.</p>
+      <p>* Self-synchronizing: if you add any erroneous bytes, the rest of text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
+      <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
+      <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
+      <p />
+      <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode transformation format, 8 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
       <p>* 0xxx.xxxx</p>
       <p>* 110x.xxxx{{_}}10xx.xxxx</p>
@@ -11994,7 +12185,7 @@
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
       <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. [[pt:bom|Byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface UTF-8 is used in Linux, cross-platform libraries like SSL.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 変換形式、8 ビット''' は、Unicode [[pt:serialization|シリアル化]] をバイト チェーンにまとめる形式です。既存のインターネット ソフトウェアとの互換性のために、1992 年に Plan{{_}}9 オペレーティング システムで発明されました。すべての [[pt:codepoint|コード ポイント]] は、次のいずれかのシーケンスで書き込まれます:</p>
       <p>* 0xxx.xxxx</p>
@@ -12021,7 +12212,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
+      <p>'''Unicode transformation format, 16-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
       <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte character, that simplified text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
       <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
@@ -12038,6 +12229,7 @@
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
      </orig>
+     <au-cmt>“Bush hid the facts” is the exact string, and breaks because is even-odd-odd-odd.</au-cmt>
      <known-orig>
       <p>'''Unicode tranformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
@@ -12083,14 +12275,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
+      <p>'''Unicode transformation format, 32-bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Character codes are just written one after another.</p>
       <p />
       <p>Properties of UTF-32:</p>
       <p>* Constant-length encoding. That’s why it is the most suitable for complex text processing.</p>
       <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
       <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
       <p />
-      <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
+      <p>UTF-32 is almost never used as a format of inter-software exchange due to bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
      </orig>
      <known-orig>
       <p>'''Unicode transformation format, 32 bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Characters codes are just written one after another.</p>
@@ -12415,6 +12607,10 @@
      <orig>{1}, disunified script</orig>
      <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
      <transl>{1}, 不統一スクリプト</transl>
+    </text>
+    <text id="All">
+     <orig>{1} (all)</orig>
+     <au-cmt>smth like “25 characters (all)”</au-cmt>
     </text>
    </group>
    <group id="Num">
@@ -13857,6 +14053,7 @@
    <group id="Misr">
     <text id="Head">
      <orig>{{{{warn|Other images are possible!}} {1}</orig>
+     <au-cmt>{1} = placeholder for text, and {{ = escape for {. Right bracket } is not escaped.</au-cmt>
      <transl>{{{{warn|他の画像も可能!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
@@ -13877,6 +14074,9 @@
     <text id="U+1F1ED+1F1F3">
      <orig>In 2022 Honduras made the flag light blue instead of blue.</orig>
      <transl>2022年、ホンジュラスは国旗を青ではなく水色にしました。</transl>
+    </text>
+    <text id="U+1F1EE+1F1F7">
+     <orig>In early 2026, Twitter/X reverted to the pre-Islamic flag with a golden lion (1907–1979).</orig>
     </text>
     <text id="U+1F1F8+1F1FE">
      <orig>The Assads’ flag was red-white-black with two stars. The government fled in December 2024, and the flag was changed to green-white-black with three stars (older pre-Assad, but with different aspect ratio).</orig>
@@ -13911,7 +14111,8 @@
      <transl>アメーバ、細菌、COVID-19、その他のウイルスなど、あらゆる微小な生物が考えられます。</transl>
     </text>
     <text id="U+1FAA4">
-     <orig>As of 2023, the sample Unicode image depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <known-orig>As of 2023, the sample Unicode image depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</known-orig>
      <transl>2023 年現在、サンプルの Unicode 画像はバネ仕掛けの罠を描いています。しかし、この絵文字は主に「無料のチーズ」や「罠」を意味するため、ほとんどの売り手は、ネズミを生きたまま捕まえるための間に合わせの罠を描き、その中にチーズを入れています。</transl>
     </text>
     <text id="Family">
@@ -14256,67 +14457,95 @@
     <text id="Brk">
      <orig>{1} ({2})</orig>
      <au-cmt>
-      <p>In Western langs — no translation, in Asian — maybe</p>
-      <p>1 = reason, 2 = name</p>
+      <p>In Western langs — no translation, in Asian — maybe (special brackets or LtR marks)</p>
+      <p>1 = reason, always localized</p>
+      <p>2 = name, always Latin</p>
      </au-cmt>
     </text>
     <text id="Com">
      <orig>Local/foreign name</orig>
+     <au-cmt>Most countries, incl. Turkey</au-cmt>
     </text>
     <text id="Aut">
      <orig>Local name</orig>
+     <au-cmt>e.g. Germany=Deutschland</au-cmt>
     </text>
     <text id="Exo">
      <orig>Common foreign name</orig>
+     <au-cmt>common=widely used, rather than shared — e.g. Finland=Suomi, Russia=Rossiya, Montenegro=Crna Gora</au-cmt>
     </text>
     <text id="Old">
      <orig>Old name</orig>
+     <au-cmt>e.g. for Eswatini=Swaziland, Cambodia=Khmer</au-cmt>
     </text>
     <text id="Fre">
      <orig>Free code</orig>
+     <au-cmt>for some new/renamed countries like Benin, Guernsey, Serbia when it’s hard even to find a suitable code</au-cmt>
     </text>
     <text id="Eur">
      <orig>European name for land</orig>
+     <au-cmt>some scarcely inhabited islands</au-cmt>
     </text>
     <text id="Tur">
      <orig>Foreign name of Russian origin + old Romanization of local Cyrillic</orig>
+     <au-cmt>for Kazakhstan=Qazaqstan, Uzbekistan=Ozbekiston</au-cmt>
     </text>
     <text id="en">
      <orig>English</orig>
+     <au-cmt>for Hungary=Magyar and some islands</au-cmt>
     </text>
     <text id="es">
      <orig>Spanish</orig>
+     <au-cmt>for some colonies related to Spain, e.g. West Sahara</au-cmt>
     </text>
     <text id="fr">
      <orig>French</orig>
+     <au-cmt>For Antarctica=Antarctique and more</au-cmt>
     </text>
     <text id="la">
      <orig>Latin</orig>
+     <au-cmt>For Switzerland=Confoederatio Helvetica</au-cmt>
     </text>
     <text id="nl">
      <orig>Dutch</orig>
+     <au-cmt>For South Africa=Zuid Afrika</au-cmt>
     </text>
     <text id="ru">
      <orig>Russian</orig>
+     <au-cmt>For Belarus=Byelorussia</au-cmt>
     </text>
     <text id="BQ">
      <orig>Free code; another name is Bonaire, Saba, and Sint Eustatius</orig>
+     <au-cmt>For Caribbean Netherlands</au-cmt>
     </text>
     <text id="CQ">
      <orig>Free code; Norman French</orig>
+     <au-cmt>For Sark=Sercq</au-cmt>
     </text>
     <text id="SX">
      <orig>Free code; code for Princess Juliana Airport</orig>
+     <au-cmt>for Dutch St Martin</au-cmt>
+    </text>
+    <text id="TW">
+     <orig>The official name “Republic of China” is almost never used by foreigners</orig>
+     <au-cmt>For Taiwan</au-cmt>
     </text>
     <text id="UA">
      <orig>UK is reserved for Great Britain</orig>
+     <au-cmt>For Ukraine</au-cmt>
     </text>
     <text id="XK">
      <orig>Temporary EU code</orig>
+     <au-cmt>For Kosovo</au-cmt>
     </text>
    </group>
    <text id="Favs">
     <orig>Favourites work with single characters only</orig>
+    <au-cmt>
+     <p>Test:</p>
+     <p>1. Lib, complex emoji like Animals→Birds→phoenix</p>
+     <p>2. Click heart button that’s greyed</p>
+    </au-cmt>
     <transl>お気に入りは単一の文字のみで機能します</transl>
    </text>
   </group>
@@ -14439,6 +14668,10 @@
       <p>But skintones come in fives, maybe that’ll save some programming :)</p>
      </au-cmt>
     </text>
+    <text id="Disun">
+     <orig>disunified</orig>
+     <au-cmt>Test: 4.1</au-cmt>
+    </text>
    </group>
    <group id="1.1">
     <text id="Text">
@@ -14480,6 +14713,12 @@
      <transl>[[pt:plane|プレーン]] 1 と 2 の最初の使用。[[pt:utf16|UTF-16]] と 16 個の補助プレーンは 5 年前に提案されました。</transl>
     </text>
    </group>
+   <group id="4.1">
+    <text id="Text">
+     <orig>{{GrekCoptUni}}</orig>
+     <au-cmt>You see, snippet only and no need to translate</au-cmt>
+    </text>
+   </group>
    <group id="6.2">
     <text id="Text">
      <orig>Added Turkish lira sign [[pc:20BA]] presented in March 2012.</orig>
@@ -14494,7 +14733,8 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], the Reiwa era of Japanese traditional calendar. In 2016, the old Emperor Akihito decided to abdicate, and a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <known-orig>Emergency release of Unicode containing one character [[pc:32FF]], Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</known-orig>
      <transl>日本の伝統的な暦である令和の元号を表す [[pc:32FF]] という 1 つの文字を含む Unicode の緊急リリース。2016 年に明仁天皇が退位を決意されたとき、新しいコード ポイントが後継者のために確保されました。2019 年 4 月 30 日に天皇が退位されたとき、この文字はすぐにエンコードされました。</transl>
     </text>
    </group>
@@ -14888,7 +15128,8 @@
    </group>
    <group id="AtariSt">
     <text id="Text">
-     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, the former founder of Commodore. They made the second advanced home computer after the Commodore Amiga. Musicians praised it, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</orig>
+     <known-orig>Atari did not survive the 1983 video game crisis and was sold to Jack Tramiel, former founder of Commodore. They made the second advanced home computer after Commodore Amiga. It was praised by musicians, and music editors ''Cubase'' and ''Logic Pro'' originated from ST.</known-orig>
      <transl>Atari は 1983 年のビデオゲーム危機を乗り越えられず、コモドールの元創設者である Jack Tramiel に売却されました。彼らは、コモドール Amiga に次ぐ 2 番目の先進的な家庭用コンピュータを製造しました。これはミュージシャンに賞賛され、音楽エディタの「Cubase」と「Logic Pro」は ST から生まれました。</transl>
     </text>
     <text id="Unenc">
@@ -15114,6 +15355,9 @@
      <transl>Sinclair ZX80 と ZX81 は最も安価な実用コンピュータでした。2 キロバイトのバージョンは 70 ポンドで販売されました。</transl>
     </text>
    </group>
+   <text id="See">
+    <orig>See [[pt:legacy|Legacy computers]].</orig>
+   </text>
   </group>
   <group id="Brk">
    <group id="BK">
@@ -15395,7 +15639,7 @@
      <orig>Brahmic/virama</orig>
     </text>
     <text id="Text">
-     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break after this character.</orig>
+     <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break around this character.</orig>
     </text>
    </group>
    <group id="VF">
@@ -15419,7 +15663,7 @@
      <orig>CJK/conditional Japanese starter</orig>
     </text>
     <text id="Text">
-     <orig>You can break before these characters in certain contexts only.</orig>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
     </text>
    </group>
    <group id="ID">
@@ -15522,6 +15766,10 @@
    </text>
    <text id="See">
     <orig>See [[pt:linebreak|Line breaking]].</orig>
+   </text>
+   <text id="Scr">
+    <orig>Scripts</orig>
+    <au-cmt>Scripts: Alpha, Bravo…</au-cmt>
    </text>
   </group>
  </file>

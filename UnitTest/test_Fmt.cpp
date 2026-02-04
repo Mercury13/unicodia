@@ -460,7 +460,7 @@ TEST (FmtSimpleEmpty, EmptyBracketsDoNothing)
 ///
 TEST (FmtAdvNum, Simple)
 {
-    loc::Fmt fmt("{1|one=? lap|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=# lap|many=# laps} completed{2}");
     fmt(1)("!");
     EXPECT_EQ("1 lap completed!", fmt.str());
 }
@@ -471,7 +471,7 @@ TEST (FmtAdvNum, Simple)
 ///
 TEST (FmtAdvNum, Simple2)
 {
-    loc::Fmt fmt("{1|one=? lap|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=# lap|many=# laps} completed{2}");
     fmt(6, "!");
     EXPECT_EQ("6 laps completed!", fmt.str());
 }
@@ -482,7 +482,7 @@ TEST (FmtAdvNum, Simple2)
 ///
 TEST (FmtAdvNum, RepeatingQun)
 {
-    loc::Fmt fmt("{1|one=?? lap?|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=## lap#|many=# laps} completed{2}");
     fmt(1)("!");
     EXPECT_EQ("11 lap1 completed!", fmt.str());
 }
@@ -490,7 +490,7 @@ TEST (FmtAdvNum, RepeatingQun)
 
 TEST (FmtAdvNum, NoQun)
 {
-    loc::Fmt fmt("{1|one=One lap|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=One lap|many=# laps} completed{2}");
     fmt(1)("!");
     EXPECT_EQ("One lap completed!", fmt.str());
 }
@@ -501,9 +501,9 @@ TEST (FmtAdvNum, NoQun)
 ///
 TEST (FmtAdvNum, Escape)
 {
-    loc::Fmt fmt("{1|one={?? l{ap{{{|{}!?!|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|one={## l{ap{{{|{}!#!|many=# laps} completed{2}");
     fmt(1)("!");
-    EXPECT_EQ("?1 lap{|}!1! completed!", fmt.str());
+    EXPECT_EQ("#1 lap{|}!1! completed!", fmt.str());
 }
 
 
@@ -512,7 +512,7 @@ TEST (FmtAdvNum, Escape)
 
 TEST (FallbackNum, ToOther)
 {
-    loc::Fmt fmt("{1|one=One lap|other=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=One lap|other=# laps} completed{2}");
     fmt(3)("!");
     EXPECT_EQ("3 laps completed!", fmt.str());
 }
@@ -520,7 +520,7 @@ TEST (FallbackNum, ToOther)
 
 TEST (FallbackNum, ToMany)
 {
-    loc::Fmt fmt("{1|many=? laps} completed{2}");
+    loc::Fmt fmt("{1|many=# laps} completed{2}");
     fmt(1)("!");
     EXPECT_EQ("1 laps completed!", fmt.str());
 }
@@ -528,7 +528,7 @@ TEST (FallbackNum, ToMany)
 
 TEST (FallbackNum, ToFew)
 {
-    loc::Fmt fmt("{1|one=One lap|few=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=One lap|few=# laps} completed{2}");
     fmt(3)("!");
     EXPECT_EQ("3 laps completed!", fmt.str());
 }
@@ -536,7 +536,7 @@ TEST (FallbackNum, ToFew)
 
 TEST (FallbackNum, ToTwo)
 {
-    loc::Fmt fmt("{1|one=One lap|two=? laps} completed{2}");
+    loc::Fmt fmt("{1|one=One lap|two=# laps} completed{2}");
     fmt(3)("!");
     EXPECT_EQ("3 laps completed!", fmt.str());
 }

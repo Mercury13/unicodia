@@ -214,11 +214,11 @@
      <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
     </text>
     <text id="NChars">
-     <orig>{1|one=? character|many=? characters}</orig>
+     <orig>{1|one=# character|many=# characters}</orig>
      <au-cmt>UNUSED, NChars2 instead</au-cmt>
     </text>
     <text id="NChars2">
-     <orig>{1} ({2|one=? character|many=? characters})</orig>
+     <orig>{1} ({2|one=# character|many=# characters})</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
@@ -234,7 +234,7 @@
      </au-cmt>
     </text>
     <text id="NoHent3">
-     <orig>{1} ({2|one=? character|many=? characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
+     <orig>{1} ({2|one=# character|many=# characters} without &lt;a {3} &gt;Hentaigana&lt;/a&gt;)</orig>
      <au-cmt>
       <p>{1} = header</p>
       <p>{2} = # of characters</p>
@@ -892,7 +892,7 @@
      <au-cmt>Link will be auto-added</au-cmt>
     </text>
     <text id="Data">
-     <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
+     <orig>{1} {2} {3|one=# stroke|many=# strokes}</orig>
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
     </text>
    </group>
