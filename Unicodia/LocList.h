@@ -2,6 +2,7 @@
 
 // C++
 #include <filesystem>
+#include <set>
 #include <map>
 #include <unordered_map>
 
@@ -9,6 +10,7 @@
 #include "u_Vector.h"
 #include "LocFmt.h"
 #include "u_EnumSize.h"
+#include "u_DumbSp.h"
 
 // L10n
 #include "LocDefs.h"
@@ -17,7 +19,7 @@ class QTranslator;
 
 namespace loc
 {
-    struct CustomRule final : public PluralRule
+    struct CustomRule : public PluralRule
     {
         static constexpr unsigned MOD_DECLOOKUP = std::numeric_limits<unsigned>::max();
         using Outcomes = loc::Plural[10];
@@ -28,8 +30,10 @@ namespace loc
         SafeVector<Line> lines;
         loc::Plural defaultOutcome = loc::Plural::OTHER;
 
-        Plural ofUint(unsigned long long n) const override;
+        Plural ofUint(unsigned long long n) const final;
     };
+
+    struct CustomRule1 final : public CustomRule, public dumb::SpTarget {};
 
     DEFINE_ENUM_TYPE_IN_NS(loc, FracPolicy, unsigned char,
         NEVER, AVOID, ONEDIG, PREFER, EXCEPT1 )
@@ -46,6 +50,26 @@ namespace loc
     struct SHash : public std::hash<std::string_view> {
         using is_transparent = void;
         using std::hash<std::string_view>::operator ();
+    };
+
+    ///
+    ///  Channel for ordinal rules
+    ///
+    struct OrdChannel
+    {
+        std::string name;
+        std::u8string decisions[loc::Plural_N_Full];
+        dumb::Sp<CustomRule1> rule;
+
+        std::u8string_view decide(loc::Plural x) const;
+
+        std::u8string fmt(long long x) const;
+        std::u8string fmt(long long x, std::u8string_view text) const;
+        std::u8string fmt(bool x) const = delete;
+    };
+
+    struct OrdLess {
+        bool operator () (const OrdChannel& x, const OrdChannel& y) const { return (x.name < y.name); }
     };
 
     struct Lang final : public loc::Locale
@@ -111,6 +135,7 @@ namespace loc
         std::map<std::string, std::string, std::less<>> wikiTemplates;
         std::unordered_map<char32_t, int> sortOrder;
         CustomRule cardRule;  ///< rule for cardinal forms: 1 crow, 2 crows
+        std::set<OrdChannel, OrdLess> ordChannels;  // ordinal channels
         std::unordered_map<char32_t, std::u32string> alphaFixup;
         std::unordered_map<std::string, std::string, SHash, std::equal_to<>> altCodeRename;
 

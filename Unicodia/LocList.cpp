@@ -67,6 +67,46 @@ loc::Plural loc::CustomRule::ofUint(unsigned long long n) const
 }
 
 
+///// OrdChannel ///////////////////////////////////////////////////////////////
+
+std::u8string_view loc::OrdChannel::decide(loc::Plural x) const
+{
+    x = std::min(x, loc::Plural::LAST);  // Over-insurance
+    if (auto& decision1 = decisions[static_cast<unsigned>(x)]; !decision1.empty())
+        return decision1;
+    if (auto& decision2 = decisions[static_cast<unsigned>(loc::Plural::REST)]; !decision2.empty())
+        return decision2;
+    for (auto& v : decisions) {
+        if (!v.empty())
+            return v;
+    }
+    return u8"#";
+}
+
+
+std::u8string loc::OrdChannel::fmt(long long x, std::u8string_view text) const
+{
+    loc::Plural plural = rule->ofInt(x);
+    std::u8string what(decide(plural));
+    // Replace backwards
+    for (size_t i = what.length(); i != 0; ) { --i;
+        if (what[i] == '#') {
+            what.replace(i, 1, text);
+        };
+    }
+    return what;
+}
+
+
+std::u8string loc::OrdChannel::fmt(long long x) const
+{
+    char buf[20];
+    auto res = std::to_chars(std::begin(buf), std::end(buf), x);
+    std::string_view svNum { buf, res.ptr };
+    return fmt(x, str::toU8sv(svNum));
+}
+
+
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
