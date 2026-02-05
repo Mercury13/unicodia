@@ -72,14 +72,13 @@ loc::Plural loc::CustomRule::ofUint(unsigned long long n) const
 std::u8string_view loc::OrdChannel::decide(loc::Plural x) const
 {
     x = std::min(x, loc::Plural::LAST);  // Over-insurance
+    // Own
     if (auto& decision1 = decisions[static_cast<unsigned>(x)]; !decision1.empty())
         return decision1;
+    // Rest
     if (auto& decision2 = decisions[static_cast<unsigned>(loc::Plural::REST)]; !decision2.empty())
         return decision2;
-    for (auto& v : decisions) {
-        if (!v.empty())
-            return v;
-    }
+    // Nothing
     return u8"#";
 }
 
@@ -100,7 +99,7 @@ std::u8string loc::OrdChannel::fmt(long long x, std::u8string_view text) const
 
 std::u8string loc::OrdChannel::fmt(long long x) const
 {
-    char buf[20];
+    char buf[32];
     auto res = std::to_chars(std::begin(buf), std::end(buf), x);
     std::string_view svNum { buf, res.ptr };
     return fmt(x, str::toU8sv(svNum));
