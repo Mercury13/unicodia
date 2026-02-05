@@ -19,9 +19,17 @@
 
 namespace loc {
 
-    /// @warning  Locales should NEVER return REST and BAD
-    ///           REST may be used in strings, but not BAD
-    enum class Plural : unsigned char { ZERO, ONE, TWO, FEW, MANY, OTHER, REST, BAD = 9 };
+    /// @warning  Locales should NEVER return SPECIAL and BAD
+    ///           SPECIAL may be used:
+    ///           • in strings (as REST)
+    ///           • in decimal lookups (as NO_DECISION)
+    enum class Plural : unsigned char {
+        ZERO, ONE, TWO, FEW, MANY, OTHER, SPECIAL,
+        BAD = 9,
+        LAST = SPECIAL,
+        REST = SPECIAL,
+        NO_DECISION = SPECIAL,
+    };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::REST) + 1;
     extern const std::string_view pluralNames[Plural_N];
     inline Plural& operator ++ (Plural& x) {

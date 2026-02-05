@@ -46,6 +46,7 @@ class QTextBrowser;
 class QNetworkAccessManager;
 class QNetworkReply;
 class FmTofuStats;
+class FmDebugPlural;
 class WiLibCp;
 class WiShowcase;
 class BangButton;
@@ -196,6 +197,7 @@ private:
     FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
     Uptr<FmRespect> fmRespect;
+    Uptr<FmDebugPlural> fmDebugPlural;
     QFont fontTofu;
     QToolButton *btSort = nullptr,
                 *btAddCpToFavs = nullptr,
@@ -371,6 +373,7 @@ private slots:
     void addLibToFavsBanged();
     void acRemoveFromFavsTriggered();
     void slotSkinToneQa();
+    void debugPluralRules();
     void searchForVs16();
     void toggleSortingTelltales();
     void goToSearch();

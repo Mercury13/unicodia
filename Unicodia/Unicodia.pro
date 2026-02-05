@@ -42,6 +42,7 @@ SOURCES += \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
+    FmDebugPlural.cpp \
     FmFontSupport.cpp \
     FmPopupChar.cpp \
     Main/FmMain.cpp \
@@ -127,6 +128,7 @@ HEADERS += \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
     CharPaint/emoji.h \
+    FmDebugPlural.h \
     FmFontSupport.h \
     FmPopupChar.h \
     LocDefs.h \
@@ -173,6 +175,7 @@ HEADERS += \
     u_Popup.h
 
 FORMS += \
+    FmDebugPlural.ui \
     FmFontSupport.ui \
     FmPopupChar.ui \
     Main/FmMain.ui \

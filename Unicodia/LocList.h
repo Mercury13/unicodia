@@ -19,9 +19,11 @@ namespace loc
 {
     struct CustomRule final : public PluralRule
     {
+        static constexpr unsigned MOD_DECLOOKUP = std::numeric_limits<unsigned>::max();
+        using Outcomes = loc::Plural[10];
         struct Line {
-            unsigned mod, min, max;
-            loc::Plural outcome;
+            unsigned div = 0, mod = 0, min = 0, max = 0;
+            Outcomes outcomes { loc::Plural::OTHER };
         };
         SafeVector<Line> lines;
         loc::Plural defaultOutcome = loc::Plural::OTHER;

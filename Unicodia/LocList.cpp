@@ -47,9 +47,20 @@ loc::EngTerms loc::active::engTerms = loc::EngTerms::OFF;
 loc::Plural loc::CustomRule::ofUint(unsigned long long n) const
 {
     for (auto& v : lines) {
-        long long q = (v.mod == 0) ? n : n % v.mod;
-        if (q >= v.min && q <= v.max) {
-            return v.outcome;
+        // Div
+        unsigned long long q = (v.div == 0) ? n : n % v.div;
+        if (v.mod == MOD_DECLOOKUP) {  // MODE: Decimal lookup
+            if (auto decision = v.outcomes[q % 10];
+                     decision != Plural::NO_DECISION) {
+                return decision;
+            }
+        } else {    // MODE: mod/min/max
+            if (v.mod > 0) {
+                q = q % v.mod;
+            }
+            if (q >= v.min && q <= v.max) {
+                return v.outcomes[0];
+            }
         }
     }
     return defaultOutcome;
@@ -144,15 +155,69 @@ namespace {
         return loc::Plural::OTHER;
     }
 
+    loc::Plural parseOutcomeChar(char value)
+    {
+        switch (value) {
+        case 'z':
+        case 'Z':
+        case '0':
+            return loc::Plural::ZERO;
+        case '1':
+            return loc::Plural::ONE;
+        case '2':
+        case 't':
+        case 'T':
+            return loc::Plural::TWO;
+        case 'f':
+        case 'F':
+            return loc::Plural::FEW;
+        case 'm':
+        case 'M':
+            return loc::Plural::MANY;
+        case 'o':
+        case 'O':
+        case 'x':
+        case 'X':
+            return loc::Plural::OTHER;
+        case '?':
+            return loc::Plural::NO_DECISION;
+        default:  // Use space, period . or bar |
+            // The rest may be used eventually
+            return loc::Plural::BAD;
+        }
+    }
+
+    void parseOutcomeLookup(loc::CustomRule::Outcomes& r, std::string_view value)
+    {
+        auto p = std::begin(r);
+        const auto end = std::end(r);
+        std::fill(p, end, loc::Plural::NO_DECISION);
+        for (auto v : value) {
+            auto outcome = parseOutcomeChar(v);
+            if (outcome != loc::Plural::BAD) {
+                *(p++) = outcome;
+                if (p == end)
+                    break;
+            }
+        }
+    }
+
     void loadPluralRules(pugi::xml_node h, loc::CustomRule& r)
     {
         r.defaultOutcome = parseOutcome(h.attribute("default-outcome").as_string());
         for (auto hLine : h.children("rule")) {
             auto& line = r.lines.emplace_back();
-            line.mod = hLine.attribute("mod").as_uint();
-            line.min = hLine.attribute("min").as_uint();
-            line.max = hLine.attribute("max").as_uint();
-            line.outcome = parseOutcome(hLine.attribute("outcome").as_string());
+            line.div = hLine.attribute("div").as_uint(0);
+            line.mod = hLine.attribute("mod").as_uint(0);
+            line.min = hLine.attribute("min").as_uint(0);
+            line.max = hLine.attribute("max").as_uint(0);
+            line.outcomes[0] = parseOutcome(hLine.attribute("outcome").as_string());
+            // Try decimal lookup mode
+            if (std::string_view lookup = hLine.attribute("declookup").as_string();
+                     !lookup.empty()) {
+                parseOutcomeLookup(line.outcomes, lookup);
+                line.mod = loc::CustomRule::MOD_DECLOOKUP;
+            }
         }
     }
 

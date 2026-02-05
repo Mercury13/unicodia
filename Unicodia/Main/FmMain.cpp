@@ -62,6 +62,7 @@
 // Forms
 #include "FmTofuStats.h"
 #include "FmMessage.h"
+#include "FmDebugPlural.h"
 #include "WiOsStyle.h"
 #include "WiLibCp.h"
 
@@ -1011,6 +1012,10 @@ FmMain::FmMain(QWidget *parent)
     // Debug font layout
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_L), this);
     connect(shcut, &QShortcut::activated, this, &This::debugFontLayout);
+
+    // Plurals
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_P), this);
+    connect(shcut, &QShortcut::activated, this, &This::debugPluralRules);
 
     // Skin tone QA
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
@@ -2791,4 +2796,10 @@ void FmMain::findAll()
 {
     uc::CharFieldRequest rq({});
     searchForRequest(rq);
+}
+
+
+void FmMain::debugPluralRules()
+{
+    fmDebugPlural.ensure(this).exec();
 }

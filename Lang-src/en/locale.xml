@@ -114,11 +114,12 @@
 		<percent inverse="0" space="1" />
 	</num-format>
 	<!-- Rules for building cardinal plural forms: 1 lap, 2 laps
-			All lines are sequentially checked: take remainder by MOD,
-			and if it’s in MIN..MAX, take OUTCOME and stop.
+			All lines are sequentially checked: divide by DIV,
+			take remainder by MOD, and if it’s in MIN..MAX, take OUTCOME and stop.
 			Neither applies → take default-outcome.
 			Possible outcomes: zero, one, two, few, many, other
-				(Unicode states that six are enough for all languages) -->
+				(Unicode states that six are enough for all languages)
+			In Feb 2026, DECLOOKUP is introduced, see Russian/Ukrainian -->
 	<cardinal-rules default-outcome="many">
 		<rule mod="0" min="1" max="1" outcome="one" /><!-- 1 lap -->
 	</cardinal-rules>
