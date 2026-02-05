@@ -478,9 +478,9 @@ TEST (FmtAdvNum, Simple2)
 
 
 ///
-///  Repeating question mark → should work
+///  Repeating hash mark → should work
 ///
-TEST (FmtAdvNum, RepeatingQun)
+TEST (FmtAdvNum, RepeatingHash)
 {
     loc::Fmt fmt("{1|one=## lap#|many=# laps} completed{2}");
     fmt(1)("!");
@@ -488,7 +488,10 @@ TEST (FmtAdvNum, RepeatingQun)
 }
 
 
-TEST (FmtAdvNum, NoQun)
+///
+///  No hash mark → should work
+///
+TEST (FmtAdvNum, NoHash)
 {
     loc::Fmt fmt("{1|one=One lap|many=# laps} completed{2}");
     fmt(1)("!");
