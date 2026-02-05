@@ -49,6 +49,13 @@ QVariant PluralModel::headerData(int section, Qt::Orientation orientation,
 }
 
 
+void PluralModel::reset()
+{
+    beginResetModel();
+    endResetModel();
+}
+
+
 ///// FmDebugPlural ////////////////////////////////////////////////////////////
 
 
@@ -64,4 +71,14 @@ FmDebugPlural::FmDebugPlural(QWidget *parent) :
 FmDebugPlural::~FmDebugPlural()
 {
     delete ui;
+}
+
+
+int FmDebugPlural::exec()
+{
+    model.reset();
+    auto index0 = model.index(0, 0);
+    ui->treePlural->setCurrentIndex(index0);
+    ui->treePlural->setFocus();
+    return Super::exec();
 }

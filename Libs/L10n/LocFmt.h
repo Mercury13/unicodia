@@ -30,8 +30,11 @@ namespace loc {
         REST = SPECIAL,
         NO_DECISION = SPECIAL,
     };
-    constexpr unsigned Plural_N = static_cast<unsigned>(Plural::REST) + 1;
-    extern const std::string_view pluralNames[Plural_N];
+    /// Full #, with SPECIAL (=REST)
+    constexpr unsigned Plural_N_Full = static_cast<unsigned>(Plural::SPECIAL) + 1;
+    /// Normal values only: zero, one, two, few, many, other
+    constexpr unsigned Plural_N_Normal = static_cast<unsigned>(Plural::OTHER) + 1;
+    extern const std::string_view pluralNames[Plural_N_Full];
     inline Plural& operator ++ (Plural& x) {
         x = static_cast<Plural>(static_cast<unsigned char>(x) + 1);
         return x;
@@ -724,7 +727,7 @@ template <loc::Char Ch>
 auto loc::Fmt<Ch>::findPluralVal(loc::Plural plural) const noexcept -> const Kv*
 {
     auto mainKey = pluralNames[static_cast<unsigned char>(plural)];
-    const Kv* fallbacks[Plural_N] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
+    const Kv* fallbacks[Plural_N_Full] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
     bool hasFallback = false;
     for (const Kv& v : values) {
         if (v.isKey(mainKey)) {

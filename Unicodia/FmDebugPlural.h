@@ -10,12 +10,14 @@ class FmDebugPlural;
 
 class PluralModel : public QAbstractTableModel
 {
+    using Super = QAbstractTableModel;
 public:
     int rowCount(const QModelIndex&) const override { return N_ROWS; }
     int columnCount(const QModelIndex&) const override { return N_COLS; }
     QVariant data(const QModelIndex&, int role = Qt::DisplayRole) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
+    void reset();
 protected:
     static constexpr int N_ROWS = 102;
     static constexpr int COL_NUM = 0;
@@ -32,6 +34,8 @@ class FmDebugPlural : public QDialog
 public:
     explicit FmDebugPlural(QWidget *parent = nullptr);
     ~FmDebugPlural() override;
+
+    int exec() override;
 
 private:
     Ui::FmDebugPlural *ui;

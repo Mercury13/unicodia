@@ -148,7 +148,7 @@ namespace {
 
     loc::Plural parseOutcome(std::string_view value)
     {
-        for (size_t i = 0; i < loc::Plural_N; ++i) {
+        for (size_t i = 0; i < loc::Plural_N_Normal; ++i) {
             if (loc::pluralNames[i] == value)
                 return static_cast<loc::Plural>(i);
         }

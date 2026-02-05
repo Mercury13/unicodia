@@ -11,7 +11,7 @@ const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
 const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
 
-const std::string_view loc::pluralNames[loc::Plural_N] =
+const std::string_view loc::pluralNames[loc::Plural_N_Full] =
     { key::ZERO, key::ONE, key::TWO, key::FEW, key::MANY, key::OTHER, key::REST };
 
 ///// DefaultQtyRule ///////////////////////////////////////////////////////////
