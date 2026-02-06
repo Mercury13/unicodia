@@ -1862,7 +1862,7 @@
      </orig>
      <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
-      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. 17D3 {{sm|◌៓}} işareti, bazen bu karakter lehine (yararına) [[pt:deprecated|kullanımdan kaldırıldı]] ve Unicode{{_}}{{vkhmer}}’de hala önerilmemektedir.</p>
+      <p>{{sm|᧠}} bloğunun ilk karakteri, Budist güneş-ay takvimindeki 8. ayın adıdır (Khmerce ''Asat'' veya ''Băthámsath'', Sanskritçe ''Ashadha'', haziran-temmuza eşdeğerdir). Mevsim değişikliklerinin gerisinde kalmamak için bu ay iki veya üç yılda bir iki kez tekrarlanır. 17D3 {{sm|◌៓}} işareti, bazen bu karakter lehine (yararına) [[pt:deprecated|kullanımdan kaldırıldı]] ve Unicode{{_}}{{vkhmer|de}} hala önerilmemektedir.</p>
       <p />
       <p>Geri kalanlar, ay takviminde yeni aydan dolunaya ve tekrar dolunaya kadar olan günlerin adlarıdır.</p>
      </transl>
@@ -10964,7 +10964,7 @@
       <p />
       <p>Emoji birden fazla kişi içeriyorsa cinsiyet ve ten rengi duruma göre uygulanır. Emzirme döneminde {{em|🤱}} bebeğin cildi örtülür, öpücük {{em|💏}} sıfırdan {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}} şeklinde oluşturulur.</p>
       <p />
-      <p>ZWJ dizilerindeki değiştiricilerin sırası: temel karakter, cilt tonu (ZWJ olmadan), saç, diğer renkler {{em|⬛}}, cinsiyet, hareket yönü {{em|⬅}}+VS16. Unicode{{_}}{{version}}’da {{ncolor}} renkli emojiler bulunur, örneğin kara kedi {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
+      <p>ZWJ dizilerindeki değiştiricilerin sırası: temel karakter, cilt tonu (ZWJ olmadan), saç, diğer renkler {{em|⬛}}, cinsiyet, hareket yönü {{em|⬅}}+VS16. Unicode{{_}}{{version|de}} {{ncolor}} renkli emojiler bulunur, örneğin kara kedi {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Yüzler {{em|😂}} kapsayıcı{{_}}değildir{{_}}ve her zaman sarıdır.</p>
      </transl>
