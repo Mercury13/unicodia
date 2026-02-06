@@ -4,12 +4,20 @@
 // Qt
 #include <QDialogButtonBox>
 
+// Utils
+#include "u_Qstrings.h"
+
 // L10n
 #include "LocList.h"
 #include "LocFmt.h"
 
 
 ///// PluralModel //////////////////////////////////////////////////////////////
+
+
+int PluralModel::columnCount(const QModelIndex&) const
+    { return N_FIX_COLS + ordChannels.size(); }
+
 
 QVariant PluralModel::data(const QModelIndex& index, int role) const
 {
@@ -28,8 +36,13 @@ QVariant PluralModel::data(const QModelIndex& index, int role) const
             auto name = loc::pluralNames[static_cast<unsigned>(outcome)];
             return QString::fromLatin1(name.data(), name.size());
         }
-    default:
-        return {};
+    default: {
+            unsigned i = index.column() - N_FIX_COLS;
+            if (i >= ordChannels.size())
+                return "???";
+            auto text = ordChannels[i]->fmt(num);
+            return str::toQ(text);
+        }
     }
 }
 
@@ -43,8 +56,12 @@ QVariant PluralModel::headerData(int section, Qt::Orientation orientation,
     switch (section) {
     case COL_NUM: return "Number";
     case COL_CARD: return "Cardinal";
-    default:
-        return "???";
+    default: {
+            unsigned i = section - N_FIX_COLS;
+            if (i >= ordChannels.size())
+                return "???";
+            return QString::fromStdString(ordChannels[i]->name);
+        }
     }
 }
 
@@ -52,6 +69,11 @@ QVariant PluralModel::headerData(int section, Qt::Orientation orientation,
 void PluralModel::reset()
 {
     beginResetModel();
+    ordChannels.clear();
+    ordChannels.reserve(loc::currLang->ordChannels.size());
+    for (auto& v : loc::currLang->ordChannels) {
+        ordChannels.push_back(&v);
+    }
     endResetModel();
 }
 

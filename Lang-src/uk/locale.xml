@@ -57,9 +57,13 @@
 	</num-format>
 	<cardinal-rules default-outcome="many">
 		<rule mod="100" min="5" max="20" outcome="many" /><!-- 5 кіл …20 кіл, 105 кіл … 120 кіл -->
-		<!-- zero=0Zz  one=1  two=2  few=Ff  many=Mm  other=OoXx  no decision=?  divider=.| or space -->
+		<!-- zero=0Zz  one=1  two=2  few=Ff  many=Mm  other=OoXx  no decision=?  divider=.| or space
+				Also have outcomes A to D if need really many -->
 		<rule declookup="m1fff.mmmmm" /><!-- 0 кіл, 1 коло, 2…4 кола, 5 кіл -->
 	</cardinal-rules>
+	<!-- Ukrainian has no rules for ordinal plurals
+			(actually has one, but no need in Unicodia) -->
+	<ordinal-rules />
 	<peculiarities still-uses-burmese="1" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"

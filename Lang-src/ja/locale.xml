@@ -152,8 +152,10 @@
 		<moreless less="{1}以下" more="{1}以上" phase="unit" />
 		<percent inverse="0" space="1" />
 	</num-format>
-	<!-- Japanese has no plural rules -->
+	<!-- Japanese has no rules for cardinal plurals -->
 	<cardinal-rules default-outcome="other" />
+	<!-- Japanese has no rules for ordinal plurals -->
+	<ordinal-rules />
 	<!-- Misc. language peculiarities
 			still-uses-burmese: uses pair Myanmar/Burmese
 				(writes location of Myanmar for Burmese script) -->

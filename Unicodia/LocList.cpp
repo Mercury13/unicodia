@@ -48,11 +48,13 @@ loc::Plural loc::CustomRule::ofUint(unsigned long long n) const
 {
     for (auto& v : lines) {
         // Div
-        unsigned long long q = (v.div == 0) ? n : n % v.div;
+        unsigned long long q = (v.div == 0) ? n : n / v.div;
         if (v.mod == MOD_DECLOOKUP) {  // MODE: Decimal lookup
-            if (auto decision = v.outcomes[q % 10];
-                     decision != Plural::NO_DECISION) {
-                return decision;
+            if (q >= v.min && q <= v.max) {
+                if (auto decision = v.outcomes[q % 10];
+                         decision != Plural::NO_DECISION) {
+                    return decision;
+                }
             }
         } else {    // MODE: mod/min/max
             if (v.mod > 0) {
@@ -239,6 +241,18 @@ namespace {
         case 'x':
         case 'X':
             return loc::Plural::OTHER;
+        case 'a':
+        case 'A':
+            return loc::Plural::A;
+        case 'b':
+        case 'B':
+            return loc::Plural::B;
+        case 'c':
+        case 'C':
+            return loc::Plural::C;
+        case 'd':
+        case 'D':
+            return loc::Plural::D;
         case '?':
             return loc::Plural::NO_DECISION;
         default:  // Use space, period . or bar |
@@ -270,7 +284,7 @@ namespace {
             line.div = hLine.attribute("div").as_uint(0);
             line.mod = hLine.attribute("mod").as_uint(0);
             line.min = hLine.attribute("min").as_uint(0);
-            line.max = hLine.attribute("max").as_uint(0);
+            line.max = hLine.attribute("max").as_uint(std::numeric_limits<unsigned>::max());
             line.outcomes[0] = parseOutcome(hLine.attribute("outcome").as_string());
             // Try decimal lookup mode
             if (std::string_view lookup = hLine.attribute("declookup").as_string();
@@ -456,6 +470,27 @@ namespace {
 
         auto hCardinalRules = hLocale.child("cardinal-rules");
         loadPluralRules(hCardinalRules, r.cardRule);
+
+        auto hOrdinalRules = hLocale.child("ordinal-rules");
+        for (auto& hChannel : hOrdinalRules.children("channel")) {
+            std::string_view name = hChannel.attribute("name").as_string();
+            if (!name.empty()) {
+                loc::OrdChannel thing {
+                    .name{name}, .decisions{}, .rule{} };
+                // Decisions
+                for (unsigned i = 0; i < loc::Plural_N_Full; ++i) {
+                    // Surely null-terminated
+                    const char* attrName = loc::pluralNames[i].data();
+                    thing.decisions[i] =
+                            str::toU8(hChannel.attribute(attrName).as_string());
+                }
+                // Rules
+                thing.rule = dumb::makeSp<loc::CustomRule1>();
+                loadPluralRules(hChannel, *thing.rule);
+                // Try inserting
+                r.ordChannels.insert(std::move(thing));
+            }
+        }
 
         auto hPeculiarities = hLocale.child("peculiarities");
         r.peculiarities.stillUsesBurmese = hPeculiarities.attribute("still-uses-burmese").as_bool(false);

@@ -41,9 +41,18 @@
 		<moreless less="&lt;{1}" more="&gt;{1}" phase="num" />
 		<percent inverse="1" space="1" />
 	</num-format>
-	<cardinal-rules default-outcome="many">
-		<rule mod="0" min="1" max="1" outcome="one" /><!-- 1 lap -->
-	</cardinal-rules>
+	<!-- Turkish has no cardinal rules… -->
+	<cardinal-rules default-outcome="many" />
+	<!-- …but extensive ordinal, and not just for ordinal numerals,
+			but for adding a case to cardinal -->
+	<ordinal-rules>
+		<!-- Hundreds = yüzün = 100’ün, e.g. few -->
+		<channel name="in" zero="#’ın" one="#’in" two="#’nin" few="#’ün" many="#’nın" other="#’un" default-outcome="few">
+			<rule min="0" max="0" outcome="zero" />
+			<rule declookup="?12ff.1m21x" />
+			<rule div="10" declookup="?x2x0.20110" />
+		</channel>
+	</ordinal-rules>
 	<peculiarities still-uses-burmese="0" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"

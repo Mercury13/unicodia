@@ -19,13 +19,16 @@
 
 namespace loc {
 
+    /// @warning  As we counted EIGHT different endings in Turkish,
+    ///           made 10 channels; custom are just A to D
     /// @warning  Locales should NEVER return SPECIAL and BAD
     ///           SPECIAL may be used:
     ///           • in strings (as REST)
     ///           • in decimal lookups (as NO_DECISION)
     enum class Plural : unsigned char {
-        ZERO, ONE, TWO, FEW, MANY, OTHER, SPECIAL,
-        BAD = 9,
+        ZERO, ONE, TWO, FEW, MANY, OTHER, A, B, C, D,
+        SPECIAL,
+        BAD = 13,
         LAST = SPECIAL,
         REST = SPECIAL,
         NO_DECISION = SPECIAL,
@@ -51,6 +54,10 @@ namespace loc {
         constexpr std::string_view FEW = "few";
         constexpr std::string_view MANY = "many";
         constexpr std::string_view OTHER = "other";
+        constexpr std::string_view A = "a";
+        constexpr std::string_view B = "b";
+        constexpr std::string_view C = "c";
+        constexpr std::string_view D = "d";
         constexpr std::string_view REST = "rest";
         constexpr char ST_ZERO = ZERO[0];
         constexpr char ST_ONE_OTHER = ONE[0];

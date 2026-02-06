@@ -66,7 +66,6 @@ namespace loc
         std::u8string fmt(long long x) const;
         std::u8string fmt(long long x, std::u8string_view text) const;
         std::u8string fmt(std::u8string_view text) const;
-        std::u8string fmt(bool x) const = delete;
     };
 
     struct OrdLess {

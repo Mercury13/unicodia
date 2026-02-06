@@ -68,9 +68,12 @@
 	</num-format>
 	<cardinal-rules default-outcome="many">
 		<rule mod="100" min="5" max="20" outcome="many" /><!-- 5 кругов … 20 кругов, 105 кругов … 120 кругов -->
-		<!-- zero=0Zz  one=1  two=2  few=Ff  many=Mm  other=OoXx  no decision=?  divider=.| or space -->
+		<!-- zero=0Zz  one=1  two=2  few=Ff  many=Mm  other=OoXx  no decision=?  divider=.| or space
+				Also have outcomes A to D if need really many -->
 		<rule declookup="m1fff.mmmmm" /><!-- 0 кругов, 1 круг, 2…4 круга, 5 кругов -->
 	</cardinal-rules>
+	<!-- Russian has no rules for ordinal plurals -->
+	<ordinal-rules />
 	<peculiarities still-uses-burmese="1" />
 	<punctuation key-value-colon=": " uniform-comma=", " semicolon="; "
 			left-paren="(" right-paren=")" indent-ellip="…"

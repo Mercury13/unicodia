@@ -123,6 +123,9 @@
 	<cardinal-rules default-outcome="many">
 		<rule mod="0" min="1" max="1" outcome="one" /><!-- 1 lap -->
 	</cardinal-rules>
+	<!-- Rules for building ordinal rules: 1st, 2nd, 3rd
+			Unused in en/ru/uk, see Turkish -->
+	<ordinal-rules />
 	<!-- Misc. language peculiarities
 			still-uses-burmese: uses pair Myanmar/Burmese
 				(writes location of Myanmar for Burmese script) -->
