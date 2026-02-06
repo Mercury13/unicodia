@@ -1,5 +1,5 @@
 rem AFAIK, W10 1803+ has built-in cURL
-set VER=https://www.unicode.org/Public/17.0.0/
+set VER=https://www.unicode.org/Public/18.0.0/
 set UCD=%VER%/ucd
 curl %UCD%/DerivedAge.txt -L --output DerivedAge.txt
 curl %UCD%/NameAliases.txt -L --output NameAliases.txt
