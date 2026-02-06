@@ -25,7 +25,8 @@ namespace loc
         static constexpr unsigned MOD_DECLOOKUP = std::numeric_limits<unsigned>::max();
         using Outcomes = loc::Plural[10];
         struct Line {
-            unsigned div = 0, mod = 0, min = 0, max = 0;
+            unsigned long long max = std::numeric_limits<unsigned long long>::max();
+            unsigned div = 0, mod = 0, min = 0;
             Outcomes outcomes { loc::Plural::OTHER };
         };
         SafeVector<Line> lines;

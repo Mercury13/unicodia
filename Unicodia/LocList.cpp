@@ -297,7 +297,7 @@ namespace {
             line.div = hLine.attribute("div").as_uint(0);
             line.mod = hLine.attribute("mod").as_uint(0);
             line.min = hLine.attribute("min").as_uint(0);
-            line.max = hLine.attribute("max").as_uint(std::numeric_limits<unsigned>::max());
+            line.max = hLine.attribute("max").as_ullong(std::numeric_limits<unsigned long long>::max());
             line.outcomes[0] = parseOutcome(hLine.attribute("outcome").as_string());
             // Try decimal lookup mode
             if (std::string_view lookup = hLine.attribute("declookup").as_string();
