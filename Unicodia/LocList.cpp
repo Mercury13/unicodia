@@ -106,6 +106,27 @@ std::u8string loc::OrdChannel::fmt(long long x) const
 }
 
 
+std::u8string loc::OrdChannel::fmt(std::u8string_view text) const
+{
+    size_t pos = text.length();
+    // Get final number
+    while (pos > 0) {
+        auto pos1 = pos - 1;
+        auto c = text[pos1];
+        if (c < '0' || c > '9')
+            break;
+        pos = pos1;
+    }
+    std::u8string_view lastNum = text.substr(pos);
+    std::string_view lastNum1 = str::toSv(lastNum);
+    long long val;
+    auto res = std::from_chars(std::begin(lastNum1), std::end(lastNum1), val);
+    if (res.ec != std::errc{})
+        val = 0;
+    return fmt(val, text);
+}
+
+
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
