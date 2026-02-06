@@ -14,6 +14,7 @@
 namespace recent {
 
     /// Fact to check: all major vendors use UN blue emoji of Antarctica
+    /// How: go to big emoji library like Emojipedia
     /// Piece of data: year
     /// Article: flag of Antarctica (AQ)
     /// L10n key: Lib.Misr.U+1F1E6+1F1F6
@@ -26,6 +27,7 @@ namespace recent {
     ///     1. Afghanistan is ruled by the Taliban
     ///     2. They aren’t really recognized
     ///     3. All major vendors still use 2021 flag of Afghanistan
+    /// How: news, Wikipedia…
     /// Piece of data: year
     /// Article: flag of Afghanistan (AF)
     /// L10n key: Lib.Misr.U+1F1E6+1F1EB
@@ -38,6 +40,7 @@ namespace recent {
     constexpr unsigned YEAR_TALIBAN = 2026;
 
     /// Fact to check: Brodie Lockard is alive
+    /// How: news, Wikipedia…
     /// Piece of data: year
     /// Article: mahjong
     /// L10n key: Block.1F000.Text
@@ -47,6 +50,7 @@ namespace recent {
     constexpr unsigned YEAR_LOCKARD = 2025;
 
     /// Fact to check: Unicode has 15 deprecated chars
+    /// How: Terms → Character types → deprecated, count how many
     /// Piece of data: Unicode version, w/o “alpha” or “beta”
     /// Article: deprecated
     /// L10n key: Term.deprecated.Text
@@ -56,7 +60,7 @@ namespace recent {
     constexpr const char8_t* V_DEPREC_15 = u8"17";
 
     /// Fact to check: BMP has 16 unallocated chars, 2FE0…2FEF
-    ///     (go to “Ideo desc chars” 2FF0 and check what’s before)
+    /// How: in Unicodia go to “Ideo desc chars” 2FF0 and check what’s before
     /// Piece of data: Unicode version, w/o “alpha” or “beta”
     /// Article 1: BMP
     /// L10n key 1: Term.bmp.Text
@@ -68,6 +72,7 @@ namespace recent {
     constexpr const char8_t* V_LEFT_16 = u8"17";
 
     /// Fact to check: 17D3 (Khmer umlaut) is discouraged
+    /// How: go to “Khmer” chart and see
     /// Piece of data: Unicode version, w/o “alpha” or “beta”
     /// Article: Khmer symbols
     /// L10n key: Block.19E0.Text
@@ -77,6 +82,9 @@ namespace recent {
     constexpr const char8_t* V_KHMER_DISCOUR = u8"17";
 
     /// Fact to check: 1FAA4 (mouse trap) is spring-loaded in CODE CHART (b/w)
+    /// How: go to PDF chart “Symbols and Pictographs Extended-A” and see.
+    ///     Wikipedia has a direct link to the latest STABLE chart.
+    ///     For beta changes — search for “Unicode 33” or whatever version
     /// Piece of data: Unicode version, w/o “alpha” or “beta”
     /// Article: U+1FAA4 mouse trap
     /// L10n key: Lib.Misr.U+1FAA4
@@ -90,6 +98,7 @@ namespace recent {
 /// Also check
 
 /// Fact: Planes 4+ are untouched, plane 0E=14 contains just a few chars
+/// How: check new blocks
 /// Article: plane
 /// L10n key: Term.plane.Text
 /// Sample reactions: Plane 4 contains... Plane 0E now contains...
@@ -98,7 +107,8 @@ namespace recent {
 
 
 /// Fact: # of standard coloured emoji is not 21, 31, 41…
-/// Article: inclusion (check directly in that article)
+/// How: check Terms → inclusion and diversity
+/// Article: you understand, Inclusion and diversity
 /// L10n key: Term.inclusion.Text
 /// Sample reactions: implement in Russian/Ukrainian
 /// Known status: 4, added one-two at a time
