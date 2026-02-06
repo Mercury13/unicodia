@@ -1632,6 +1632,22 @@ namespace {
         return std::ranges::find(eqr, x) != eqr.end();
     }
 
+    void appendOrdinalVersion(QString& s, std::string_view channelName, std::u8string_view text)
+    {
+        if (auto channel = loc::currLang->ordChannel(channelName)) {
+            // Have ordinal channel
+            str::append(s, channel->fmt(text));
+        } else {
+            // No channel, simple string
+            str::append(s, text);
+        }
+    }
+
+    void appendOrdinalVersion(QString& s, Buf1d<const std::string_view> params, std::u8string_view text)
+    {
+        appendOrdinalVersion(s, params.safeGetV(1, ""sv), text);
+    }
+
     void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
     {
         auto name = x[0];
@@ -1814,15 +1830,16 @@ namespace {
 
         case 'v':
             if (name == "version"sv) {
-                str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
+                appendOrdinalVersion(s, x,
+                        uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
             } else if (name == "vdeprec15") {
-                str::append(s, recent::V_DEPREC_15);
+                appendOrdinalVersion(s, x, recent::V_DEPREC_15);
             } else if (name == "vleft16") {
-                str::append(s, recent::V_LEFT_16);
+                appendOrdinalVersion(s, x, recent::V_LEFT_16);
             } else if (name == "vkhmer") {
-                str::append(s, recent::V_KHMER_DISCOUR);
+                appendOrdinalVersion(s, x, recent::V_KHMER_DISCOUR);
             } else if (name == "vtrap") {
-                str::append(s, recent::V_SPRING_TRAP);
+                appendOrdinalVersion(s, x, recent::V_SPRING_TRAP);
             }
             break;
 

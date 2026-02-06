@@ -138,17 +138,25 @@ Just a transcription with nice brackets.
 
 V
 
-{{vdeprec15}} :: Version with 15 deprecated chars :: Data/ongoing :: No parameters
-Prints the version of Unicode that has 15 deprecated characters
+{{vdeprec15}} :: Version with 15 deprecated chars :: Data/ongoing :: 0/1 parameters
+Prints the version of Unicode that has 15 deprecated characters.
+Parameter, if present: ordinal channel (see Turkish Lib.Misr.U+1FAA4)
 
-{{version}} :: Latest version of Unicode :: Data/Unicode :: No parameters
+{{version}} :: Latest version of Unicode :: Data/Unicode :: 0/1 parameters
 Prints the latest version of Unicode (15.0, 15.1β etc)
+Parameter, if present: ordinal channel (see Turkish Lib.Misr.U+1FAA4)
 
-{{vkhmer}} :: Version that discourages 17D3 :: Data/ongoing / No parameters
+{{vkhmer}} :: Version that discourages 17D3 :: Data/ongoing :: 0/1 parameters
 Prints the version of Unicode that discourages Khmer umlaut 17D3
+Parameter, if present: ordinal channel (see Turkish Lib.Misr.U+1FAA4)
 
-{{vleft16}} :: Version that has 16 chars left in BMP :: Data/ongoing / No parameters
+{{vleft16}} :: Version that has 16 chars left in BMP :: Data/ongoing :: 0/1 parameters
 Prints the version of Unicode that has 16 unallocated characters in BMP, 2FE0…2FEF
+Parameter, if present: ordinal channel (see Turkish Lib.Misr.U+1FAA4)
+
+{{vtrap}} :: Version that has spring-loaded mouse trap as a sample image :: Data/ongoing :: 0/1 parameters
+Prints the version of Unicode that has 16 unallocated characters in BMP, 2FE0…2FEF
+Parameter, if present: ordinal channel (see Turkish Lib.Misr.U+1FAA4)
 
 Y
 

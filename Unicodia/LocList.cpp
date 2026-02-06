@@ -120,11 +120,13 @@ std::u8string loc::OrdChannel::fmt(std::u8string_view text) const
         pos = pos1;
     }
     std::u8string_view lastNum = text.substr(pos);
+    if (lastNum.empty())
+        return std::u8string{text};
     std::string_view lastNum1 = str::toSv(lastNum);
     long long val;
     auto res = std::from_chars(std::begin(lastNum1), std::end(lastNum1), val);
     if (res.ec != std::errc{})
-        val = 0;
+        return std::u8string{text};
     return fmt(val, text);
 }
 
@@ -197,6 +199,17 @@ void loc::Lang::unload()
         currLang = nullptr;
     if (translator)
         QApplication::removeTranslator(translator.get());
+}
+
+
+TinyOpt<const loc::OrdChannel> loc::Lang::ordChannel(std::string_view name) const
+{
+    if (!name.empty()) {
+        auto x = ordChannels.find(name);
+        if (x != ordChannels.end())
+            return *x;
+    }
+    return TINY_NULL;
 }
 
 
@@ -526,6 +539,7 @@ namespace {
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
         for (auto& v : di) {
+            /// @todo [urgent] defered translation
             if (v.is_regular_file() && v.path().extension() == ".qm") {
                 r.translator = std::make_unique<QTranslator>();
                 if (!r.translator->load(

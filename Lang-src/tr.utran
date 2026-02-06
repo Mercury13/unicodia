@@ -13789,7 +13789,7 @@
     </text>
     <text id="U+1FAA4">
      <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
-     <transl>Unicode{{_}}{{vtrap}}’nin örnek görseli yaylı bir tuzağı tasvir eder. Ancak bu emoji çoğunlukla “bedava peynir” ve “tuzağa düşürme” anlamlarında kullanıldığından, çoğu üretici içinde peynir bulunan ve fareyi canlı yakalamayı amaçlayan basit bir tuzak çizer.</transl>
+     <transl>Unicode{{_}}{{vtrap|in}} örnek görseli yaylı bir tuzağı tasvir eder. Ancak bu emoji çoğunlukla “bedava peynir” ve “tuzağa düşürme” anlamlarında kullanıldığından, çoğu üretici içinde peynir bulunan ve fareyi canlı yakalamayı amaçlayan basit bir tuzak çizer.</transl>
     </text>
     <text id="Family">
      <orig>Unicode Consortium in early 2023 demanded to draw genderless families as silhouettes (e.g. family film) and move them on “keyboards” from People to Symbols, and recommended to remove gendered ones from “keyboards” and fill with the same silhouettes, to prevent combinatorial explosion. And families often include grandparents and pets. In autumn 2023 Google released their emoji with silhouettes, in spring 2024 Apple did the same. Google’s silhouettes have a little twist: they show women’s haircuts.</orig>

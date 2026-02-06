@@ -11,6 +11,7 @@
 #include "LocFmt.h"
 #include "u_EnumSize.h"
 #include "u_DumbSp.h"
+#include "u_TinyOpt.h"
 
 // L10n
 #include "LocDefs.h"
@@ -69,7 +70,10 @@ namespace loc
     };
 
     struct OrdLess {
+        using is_transparent = void;
         bool operator () (const OrdChannel& x, const OrdChannel& y) const { return (x.name < y.name); }
+        bool operator () (const OrdChannel& x, std::string_view y) const { return (x.name < y); }
+        bool operator () (std::string_view x, const OrdChannel& y) const { return (x < y.name); }
     };
 
     struct Lang final : public loc::Locale
@@ -131,13 +135,15 @@ namespace loc
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
         EngTerms engTerms = EngTerms::NORMAL;
-        std::unique_ptr<QTranslator> translator;
         std::map<std::string, std::string, std::less<>> wikiTemplates;
         std::unordered_map<char32_t, int> sortOrder;
         CustomRule cardRule;  ///< rule for cardinal forms: 1 crow, 2 crows
         std::set<OrdChannel, OrdLess> ordChannels;  // ordinal channels
         std::unordered_map<char32_t, std::u32string> alphaFixup;
         std::unordered_map<std::string, std::string, SHash, std::equal_to<>> altCodeRename;
+
+        std::filesystem::path pendingTranslatorFname;
+        std::unique_ptr<QTranslator> translator;
 
         void load();
         void forceLoad();
@@ -150,8 +156,10 @@ namespace loc
         /// @warning  May return x, check its lifetime
         std::string_view renameAltCodeSv(std::string_view x) const noexcept;
 
+        TinyOpt<const OrdChannel> ordChannel(std::string_view name) const;
+
         // Locale
-        const PluralRule& cardinalRule() const override { return cardRule; }
+        const PluralRule& cardinalRule() const override { return cardRule; }        
     };
 
     struct NumFmtHelp {
