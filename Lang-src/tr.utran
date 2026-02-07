@@ -4887,6 +4887,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Characters from different computers and systems of the 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
+      <p />
+      <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], and [[po:Hp]].</p>
+      <p />
+      <p>'''Did not''' advance to standard:</p>
+      <p>* characters in intellectual property, like the Apple logo;</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p />
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
+     </orig>
+     <known-orig>
       <p>Characters from different computers and systems of 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
       <p />
       <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
@@ -4896,7 +4907,7 @@
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>1970’lerin ve 80’lerin farklı bilgisayar ve sistemlerinden karakterler: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po: Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}ve tesadüf eseri bir Sovyet bilgisayarı olan [[po:Korvet]].</p>
       <p />
@@ -13763,6 +13774,9 @@
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette.</orig>
      <transl>Satıcılar 2019 yılına kadar erkek, kadın ve çocuk olarak çiziyordu. Daha sonra cinsiyetsiz hale geldi. 2023 yılında silüete dönüştü.</transl>
     </text>
+    <text id="U+1F4CE">
+     <orig>In 2021, Microsoft drew ''Clippit'', the default Microsoft Office assistant. Used in versions 97 to 2003, it was loved for animations and hated for uselessness.</orig>
+    </text>
     <text id="U+1F52B">
      <orig>In 2018 the image was changed to a toy to curb threats over the Internet. Despite the consensus, Twitter/X reverted to live gun in 2024.</orig>
      <transl>2018’de internet üzerinden gelen tehditleri engellemek için görüntü bir oyuncak olarak değiştirildi. Fikir birliğine rağmen, Twitter/X 2024 yılında gerçek silaha geri döndü.</transl>
@@ -13775,6 +13789,10 @@
      <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
      <transl>Satıcılar tekerleği at arabasından, bisikletten veya otomobilden çekebilirler.</transl>
     </text>
+    <text id="U+1F9A0">
+     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
+     <transl>Tüm mikroskobik canlılar mümkündür: amip, bakteri, COVID-19 veya diğer virüsler.</transl>
+    </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
      <transl>Google Noto yıldız şeklinde pinyata çiziyor, Microsoft ise hayvan şeklinde pinyata çiziyor.</transl>
@@ -13782,10 +13800,6 @@
     <text id="U+1FA92">
      <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts a straight razor.</orig>
      <transl>Tüm satıcılar nispeten yakın bir zamanda, 2019-2021 yıllarında güvenlikli tıraş bıçağında karar kıldılar. Windows{{_}}10 emojisi düz bir tıraş bıçağını tasvir ediyor.</transl>
-    </text>
-    <text id="U+1F9A0">
-     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
-     <transl>Tüm mikroskobik canlılar mümkündür: amip, bakteri, COVID-19 veya diğer virüsler.</transl>
     </text>
     <text id="U+1FAA4">
      <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
