@@ -57,7 +57,7 @@
 		<channel name="de" zero="#’da" one="#’de" few="#’te" many="#’ta" default-outcome="one">
 			<rule min="0" max="0" outcome="zero" />
 			<rule declookup="?11ff.f0110" />
-			<rule div="10" declookup="?010m.1mm10" />
+			<rule div="10" declookup="?010m.1mf10" />
 		</channel>
 	</ordinal-rules>
 	<peculiarities still-uses-burmese="0" />
