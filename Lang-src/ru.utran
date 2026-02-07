@@ -13776,6 +13776,10 @@
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette.</orig>
      <transl>Производители до 2019 рисовали её как мужчину, женщину и ребёнка. Позже она стала бесполой. В 2023 она превратилась в силуэт.</transl>
     </text>
+    <text id="U+1F4CE">
+     <orig>In 2021, Microsoft drew ''Clippit'', the default Microsoft Office assistant. Used in versions 97 to 2003, it was loved for animations and hated for uselessness.</orig>
+     <transl>С 2021 у Microsoft здесь ''Скрепыш'', помощник Microsoft Office по умолчанию. Использовался в версиях с 97 по 2003, его любили за анимацию и ненавидели за бесполезность.</transl>
+    </text>
     <text id="U+1F52B">
      <orig>In 2018 the image was changed to a toy to curb threats over the Internet. Despite the consensus, Twitter/X reverted to live gun in 2024.</orig>
      <transl>В 2018 изображение сменили на игрушку, чтобы сдержать угрозы через интернет. Несмотря на консенсус, Twitter/X в 2024 вернулся к боевому оружию.</transl>
@@ -13788,6 +13792,10 @@
      <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
      <transl>Производители могут рисовать колесо от телеги, велосипеда или автомобиля.</transl>
     </text>
+    <text id="U+1F9A0">
+     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
+     <transl>Возможны любые микроскопические существа: амёба, бактерия, COVID-19 или другой вирус.</transl>
+    </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
      <transl>Google Noto рисует пиньяту в форме звезды, а Microsoft{{-}}в форме животного.</transl>
@@ -13795,10 +13803,6 @@
     <text id="U+1FA92">
      <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts a straight razor.</orig>
      <transl>Все производители остановились на безопасной бритве относительно недавно, в 2019–21. Эмодзи Windows{{_}}10 изображает опасную бритву.</transl>
-    </text>
-    <text id="U+1F9A0">
-     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
-     <transl>Возможны любые микроскопические существа: амёба, бактерия, COVID-19 или другой вирус.</transl>
     </text>
     <text id="U+1FAA4">
      <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>

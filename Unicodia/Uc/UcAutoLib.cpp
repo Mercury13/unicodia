@@ -3506,7 +3506,7 @@ constinit const uc::LibNode uc::libNodes[10181] {
 { U"\U0001F4CB", u8"clipboard", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3500
 { U"\U0001F4CC", u8"pushpin", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3501
 { U"\U0001F4CD", u8"round pushpin", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3502
-{ U"\U0001F4CE", u8"paperclip", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3503
+{ U"\U0001F4CE", u8"paperclip", 3319, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3503
 { U"\U0001F587\uFE0F", u8"linked paperclips", 3319, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3504
 { U"\U0001F4CF", u8"straight ruler", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3505
 { U"\U0001F4D0", u8"triangular ruler", 3319, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3506
