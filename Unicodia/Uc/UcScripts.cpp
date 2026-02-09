@@ -434,7 +434,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U18] Jurchen
     { "Jurc", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::century(12), EcFont::NORMAL },
+        Dating::century(-12), EcFont::NORMAL },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -709,7 +709,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U18] Proto-cuneiform
     { "Pcun", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::DECIPHERED, EcWritingDir::BOTH_LTR, EcContinent::ASIA,
-        Dating::century(-34), EcFont::NORMAL, Sfg::NO_LANGS },
+        Dating::yapprox(-3350, StdNote::FIRST_KNOWN), EcFont::NORMAL, Sfg::NO_LANGS },
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,

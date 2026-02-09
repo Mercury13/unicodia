@@ -1221,6 +1221,10 @@ std::u8string_view uc::Cp::autoName() const
         return u8"Nushu character-#";   // FOUR
     case uc::EcScript::Tang:
         return u8"Tangut ideograph-#"sv;    // Does not count (real auto, AFAIK no data at all)
+    case uc::EcScript::Seal:
+        return u8"seal character-#"sv;      // Does not count, same
+    case uc::EcScript::Jurc:
+        return u8"Jurchen character-#"sv;   // Does not count, same
     default: throw std::logic_error("No auto name!");
     }
     static_assert(uc::N_AUTO_NAMES == 4, "Check auto-names.log");

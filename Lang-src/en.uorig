@@ -3141,6 +3141,19 @@
      <orig>Components and radicals from the new dictionary (2021).</orig>
     </text>
    </group>
+   <group id="18E00">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+   </group>
+   <group id="191A0">
+    <text id="Name">
+     <orig>Jurchen radicals</orig>
+    </text>
+    <text id="Text">
+     <orig>Fifty radicals from the Jurchen dictionary of 1984. One radical is split into two, [[pc:191B6|23]] and [[pc:191B7|24]].</orig>
+    </text>
+   </group>
    <group id="1AFF0">
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
@@ -3367,7 +3380,7 @@
      <orig>Symbols and arrows miscellaneous extended</orig>
     </text>
     <text id="Text">
-     <orig>As of Unicode{{_}}18.0, only contains archaic mathematical symbols.</orig>
+     <orig>As of Unicode{{_}}18.0, it only contains archaic mathematical symbols.</orig>
     </text>
    </group>
    <group id="1DF00">
@@ -3753,6 +3766,11 @@
       <p />
       <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
      </orig>
+    </text>
+   </group>
+   <group id="3D000">
+    <text id="Name">
+     <orig>Seal (Zhuànshū)</orig>
     </text>
    </group>
    <group id="E0000">
