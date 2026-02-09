@@ -2692,7 +2692,11 @@
    </group>
    <group id="10EC0">
     <text id="Text">
-     <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
+     <orig>
+      <p>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
+      <p />
+      <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
+     </orig>
     </text>
    </group>
    <group id="10F00">
@@ -10283,8 +10287,8 @@
    <group id="18.0">
     <text id="Text">
      <orig>
-      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s classification. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
-      <p>* Multiple musical symbols, includind long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
+      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s list. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Multiple musical symbols, including long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
       <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
       <p>* Old mathematical notations.</p>
       <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
