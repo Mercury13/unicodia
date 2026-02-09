@@ -19,7 +19,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::TRIG_FORCE_FULL_DECAP },
     { "IMPERIAL",       Dicf::TRIG_SCRIPT },
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
-    { "ARMENIAN",       Dicf::TRIG_SCRIPT },
+    { "ARMENIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "AVESTAN",        Dicf::TRIG_SCRIPT },
     { "BACTRIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "BALINESE",       Dicf::TRIG_SCRIPT },
@@ -110,6 +110,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JUDEO-SPANISH",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Judeo-Spanish" } },
+    { "JURCHEN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KAKTOVIK",       Dicf::TRIG_SCRIPT },
     { "KANGXI",         Dicf::TRIG_SCRIPT },
     { "KANNADA",        Dicf::TRIG_SCRIPT },
@@ -383,12 +384,14 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "KHAKASSIAN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KIRGHIZ",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "NORDIC",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "OMANI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "RUSSIAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SAKHA",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SLAVONIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "TURKISH",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "UAE",            Dicf::CAP_ALL | Dicf::PART_ADJECTIVE },
     { "VULCAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
@@ -431,14 +434,17 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LINE",           Dicf::PART_NOUN },
     { "MACRON",         Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
+    { "MOON-JUPITER",   { Dicf::PART_NOUN, "moon-Jupiter" } },
     { "MUCAAD",         Dicf::PART_NOUN },
     { "NUKTA",          Dicf::PART_NOUN },
+    { "OMET",           Dicf::PART_NOUN },  // Znamenny, for adj “Curved”
     { "PLUS",           Dicf::PART_NOUN },
     { "PRIME",          Dicf::PART_NOUN },
     { "RANA",           Dicf::PART_NOUN },
     { "REDUPLICATION",  Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING",           Dicf::PART_NOUN },
+    { "SCRUPLE",        Dicf::PART_NOUN },
     { "SECANT",         Dicf::PART_NOUN },
     { "SECTION",        Dicf::PART_NOUN },
     { "SEPARATOR",      Dicf::PART_NOUN },
@@ -450,6 +456,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SPIRANT",        Dicf::PART_NOUN },  // One time, probably OK
     { "STEM",           Dicf::PART_NOUN },
     { "STOP",           Dicf::PART_NOUN },
+    { "STRESS",         Dicf::PART_NOUN },  // For music, seemingly OK in other chars
     { "STROKE",         Dicf::PART_NOUN },
     { "STROKES",        Dicf::PART_NOUN },
     { "SVARITA",        Dicf::PART_NOUN },
@@ -460,6 +467,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "TSHEG",          Dicf::PART_NOUN },
     { "UBADAMA",        Dicf::PART_NOUN },
     { "UNDERBAR",       Dicf::PART_NOUN },
+    { "UNSTRESS",       Dicf::PART_NOUN },
     { "VARIKA",         Dicf::PART_NOUN },
     { "VIRAMA",         Dicf::PART_NOUN },
     { "VISARGA",        Dicf::PART_NOUN },
@@ -526,6 +534,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SIX",            Dicf::PART_NUMERAL },
     { "SEVEN",          Dicf::PART_NUMERAL },
     { "EIGHT",          Dicf::PART_NUMERAL },
+    { "EIGHTH",         Dicf::PART_NUMERAL },
     { "NINE",           Dicf::PART_NUMERAL },
     { "TEN",            Dicf::PART_NUMERAL },
     { "ELEVEN",         Dicf::PART_NUMERAL },
@@ -567,6 +576,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "BARLINE",        Dicf::PART_NOUN },
     { "BOW",            Dicf::PART_NOUN },
     { "DOIT",           Dicf::PART_NOUN },
+    { "FERMATA",        Dicf::PART_NOUN },
     { "FLAG-1",         Dicf::PART_NOUN },
     { "FLAG-2",         Dicf::PART_NOUN },
     { "FLAG-3",         Dicf::PART_NOUN },
@@ -610,6 +620,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "BOTTOM",         Dicf::PART_ADJECTIVE },
     { "C-SIMPLIFIED",   Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "CAPITAL",        Dicf::PART_ADJECTIVE },
+    { "CARTESIAN",      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "CASKET",         Dicf::PART_ADJECTIVE }, // OK here, runes
     { "CHILLU",         Dicf::PART_ADJECTIVE }, // used for Malayalam
     { "CIRCLED",        Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
@@ -619,6 +630,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "CROSSED",        Dicf::PART_ADJECTIVE },
     { "CRYPTOGRAMMIC",  Dicf::PART_ADJECTIVE },
     { "CURLED",         Dicf::PART_ADJECTIVE },
+    { "CURVED",         Dicf::PART_ADJECTIVE },
     { "DENTAL",         Dicf::PART_ADJECTIVE },
     { "DIGRAMMA",       Dicf::PART_ADJECTIVE }, // Not really an adj, but works so
     { "DOUBLE",         Dicf::PART_ADJECTIVE },
@@ -629,6 +641,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DIAERESIZED",    Dicf::PART_ADJECTIVE },
     { "DIAGONAL",       Dicf::PART_ADJECTIVE },
     { "DIALECT-P",      { Dicf::PART_ADJECTIVE, "dialect-P" } },
+    { "DIPHTHONG",      Dicf::PART_ADJECTIVE },  // Noun but works
     { "EGYPTOLOGICAL",  Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "EPENTHETIC",     Dicf::PART_ADJECTIVE },
     { "EXCLAMATION",    Dicf::PART_ADJECTIVE },
@@ -663,6 +676,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LAZY",           Dicf::PART_ADJECTIVE },
     { "LEFT",           Dicf::PART_ADJECTIVE },
     { "LEFT-STEM",      Dicf::PART_ADJECTIVE },
+    { "LEIBNIZIAN",     Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "LIGATING",       Dicf::PART_ADJECTIVE },
     { "LONG",           Dicf::PART_ADJECTIVE },
     { "LONG-LEGGED",    Dicf::PART_ADJECTIVE },
@@ -697,6 +711,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "PHASE-D",        { Dicf::PART_ADJECTIVE, "phase-D" } },
     { "PHASE-E",        { Dicf::PART_ADJECTIVE, "phase-E" } },
     { "PHASE-F",        { Dicf::PART_ADJECTIVE, "phase-F" } },
+    { "PHONOTYPIC",     Dicf::PART_ADJECTIVE },
     { "PSALTER",        Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "QUARTER",        Dicf::PART_ADJECTIVE }, // Not really OK, but works somehow
     { "REFORMED",       Dicf::PART_ADJECTIVE },
@@ -708,6 +723,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ROMANIAN",       Dicf::PART_ADJECTIVE },
     { "ROTATED",        Dicf::PART_ADJECTIVE },
     { "ROUNDED",        Dicf::PART_ADJECTIVE },
+    { "ROUNDTOP",       Dicf::PART_ADJECTIVE },
     { "SARA",           Dicf::PART_ADJECTIVE }, // Used for Thai
     { "SCRIPT",         Dicf::PART_ADJECTIVE }, // “Khitan small script” OK
     { "SEMISOFT",       Dicf::PART_ADJECTIVE },
@@ -722,6 +738,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
     { "SPACING",        Dicf::PART_ADJECTIVE },
     { "SPIDERY",        Dicf::PART_ADJECTIVE },
+    { "SPLIT",          Dicf::PART_ADJECTIVE },
     { "SQUAT",          Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
     // Old SOUTH Arabian
@@ -924,6 +941,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "B",              Dicf::CAP_TITLE },
     { "C",              Dicf::CAP_TITLE },
     { "D",              Dicf::CAP_TITLE },
+    { "D-ETH",          { Dicf::PART_ADJECTIVE, "D-Eth" } },
+    { "D-LEZH",         { Dicf::PART_ADJECTIVE, "D-Lezh" } },
     { "DAD",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "DAL",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "DALET",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -975,6 +994,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SEEN",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SHEEN",          Dicf::PART_MAYBE_LETTER },
     { "T",              Dicf::CAP_TITLE },
+    { "T-THETA",        { Dicf::PART_ADJECTIVE, "T-Theta" } },
     { "TAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "TEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "THAL",           Dicf::CAP_TITLE | Dicf::PART_NOUN },

@@ -53,6 +53,7 @@ const std::multiset<IdiomEntry> idioms {
     { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
     { { "DUPLOYAN"sv, "LETTER"sv }, IsPrefix::YES, IdiomAction::REST_DETECT_LETTERS },
     { { "GEOMANTIC"sv, "FIGURE"sv }, IsPrefix::YES, IdiomAction::NEXT_CAP },
+    { { "MUSICAL"sv, "SYMBOL"sv, "DIGIT"sv }, IsPrefix::YES, IdiomAction::LAST_CAP },
     // Rest idioms
     { { "VOWEL"sv, "LENGTH"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
     { { "VEDIC"sv, "TONE"sv}, IsPrefix::NO, IdiomAction::NEXT_CAP },
@@ -60,6 +61,8 @@ const std::multiset<IdiomEntry> idioms {
     { { "SYLLABLE"sv, "LENGTHENER"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
     { { "SYLLABLE"sv, "ITERATION"sv, "MARK"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
     { { "YANGQIN"sv, "SIGN"sv }, IsPrefix::NO, IdiomAction::NEXT_CAP },
+    { { "FRACTION"sv, "REDUCTION"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },
+    { { "FLAT"sv, "AND"sv, "FLAT"sv }, IsPrefix::NO, IdiomAction::SECOND_THIRD_SMALL },  // strict but works somehow for music
 };
 
 
@@ -606,7 +609,8 @@ namespace {
     struct Word {
         std::string_view original, customCap;
         bool isAllCap = false;
-        bool isCapital = false;
+        bool isCapital = false;  /// Unlike other rules, isCapital respects orthography…
+        bool isForcedCapital = false;  /// …and isForcedCapital does not, always capitalizes
         bool nextNoun = false;
         bool nextAdjective = false;
         bool nextNumeral = false;
@@ -717,6 +721,9 @@ namespace {
             break;
         case IdiomAction::FIRST_CAP:
             words[iStart].isCapital = true;
+            break;
+        case IdiomAction::LAST_CAP:
+            words[iEndPlus - 1].isForcedCapital = true;
             break;
         }
     }
@@ -1044,14 +1051,15 @@ std::string decapitalize(
 
     // Cuneiform recapitalization
     if (words[0].original == "CUNEIFORM"sv) {
-        for (auto& word : words) {
-            auto q = dictionary.find(word.original);
+        for (auto& word : words) {            
             // 1. Symbols — YES
             if (cuneiformSymbols.contains(word.original)) {
                 word.isAllCap = true;
             // 2. Script/noun/adjective — NO
-            } else if (q != dictionary.end() && q->second.flags.haveAny(TRIG_ANY_SCRIPT
-                        | Dicf::PART_ADJECTIVE | Dicf::PART_NOUN | Dicf::PART_NUMERAL)) {
+            } else if (auto q = dictionary.find(word.original);
+                       q != dictionary.end()
+                         && q->second.flags.haveAny(TRIG_ANY_SCRIPT
+                            | Dicf::PART_ADJECTIVE | Dicf::PART_NOUN | Dicf::PART_NUMERAL)) {
                 // do nothing
             // 3. Suffix — initial capital
             } else if (cuneiformSuffixes.contains(word.original)) {
@@ -1073,6 +1081,8 @@ std::string decapitalize(
         WordState state = WordState::SMALL;        
         if (word.isAllCap) {
             state = WordState::ALL_CAP;
+        } else if (word.isForcedCapital) {
+            state = WordState::TITLE;
         } else if (word.dicFlags.have(Dicf::CAP_SMALL)) {
             state = WordState::SMALL;
         } else if (word.dicFlags.have(Dicf::CAP_ALL)) {

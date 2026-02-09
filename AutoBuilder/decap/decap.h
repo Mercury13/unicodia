@@ -83,6 +83,7 @@ enum class IdiomAction : unsigned char {
     // Work ON idiom
     SECOND_THIRD_SMALL,  ///< Second, third, fourth… words of idiom are small
     FIRST_CAP,           ///< First word of idiom is capital
+    LAST_CAP,            ///< Last word of idiom is capital
     // Special constants
     NOMATTER = 0,
     FIRST_ON_IDIOM = SECOND_THIRD_SMALL,  ///< First action that works ON idiom

@@ -72,6 +72,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX2("closed reversed Epsilon", decap::Exf::MIXCASE)
     EX2("closed Epsilon", decap::Exf::MIXCASE)
     EX2("reversed Epsilon", decap::Exf::MIXCASE)
+    EX("Latin small letter Stretched C-h digraph")  // Actually OK, but too strange letter
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
@@ -457,6 +458,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("omega below")
     EX("turned omega above")
     EX("turned omega below")
+    EX("modifier letter High and low vertical line")  // Do not want to coin And-related rules
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
@@ -528,6 +530,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("musical symbol Right repeat sign")      // The same
     EX("musical symbol Half pedal mark")        // The same
     EX("musical symbol Combining augmentation dot")  // Augmentation is a future landmine
+    EX("musical symbol Combining buzz roll stem")  // buzz and roll → adjectives?
+    EX("musical symbol Double square fermata")  // Square is noun!!
         // Music/Znamenny
     EX("Znamenny neume Dva v chelnu")  // Better not to make exception from V
         // Games
@@ -553,6 +557,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     MATH_SYM ("rho")
     MATH_SYM ("pi")
 #undef MATH_SYM
+    EX("mathematical italic small ligature Long S with descender S")  // exception is easier
     EX("Arabic mathematical Sad")    // Ambiguous
     EX("Arabic mathematical Sheen")  // Ambiguous
 

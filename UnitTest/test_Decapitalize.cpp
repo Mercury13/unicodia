@@ -1027,6 +1027,29 @@ TEST (Decap, VedicTone2)
 
 
 ///
+///  Old bug that existed all the time
+///
+TEST (Decap, EighthAsh)
+{
+    auto r = decapitalize("CUNEIFORM NUMERIC SIGN ONE EIGHTH ASH");
+    EXPECT_EQ("cuneiform numeric sign One eighth ASH", r);
+}
+
+
+///
+///  Strange U18’s bug
+///
+TEST (Decap, MusicalSeven)
+{
+    auto r = decapitalize("MUSICAL SYMBOL DIGIT SEVEN WITH STROKE");
+    EXPECT_EQ("musical symbol Digit Seven with stroke", r);
+}
+
+
+///// Short decapitalization ///////////////////////////////////////////////////
+
+
+///
 ///  Short decapitalization: found in table
 ///
 TEST (ShortDecap, InTable)

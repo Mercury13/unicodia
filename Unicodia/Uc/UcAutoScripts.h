@@ -23,6 +23,7 @@ Cans,  // Canadian Aboriginal
 Cari,  // Carian
 Cham,  // Cham
 Cher,  // Cherokee
+Chis,  // Chisoi
 Chrs,  // Chorasmian
 Copt,  // Coptic
 Cpmn,  // Cypro Minoan
@@ -61,6 +62,7 @@ Hmnp,  // Nyiakeng Puachue Hmong
 Hung,  // Old Hungarian
 Ital,  // Old Italic
 Java,  // Javanese
+Jurc,  // Jurchen
 Kali,  // Kayah Li
 Kana,  // Katakana
 Kawi,  // Kawi
@@ -114,6 +116,7 @@ Osma,  // Osmanya
 Ougr,  // Old Uyghur
 Palm,  // Palmyrene
 Pauc,  // Pau Cin Hau
+Pcun,  // Proto Cuneiform
 Perm,  // Old Permic
 Phag,  // Phags Pa
 Phli,  // Inscriptional Pahlavi
@@ -127,6 +130,7 @@ Runr,  // Runic
 Samr,  // Samaritan
 Sarb,  // Old South Arabian
 Saur,  // Saurashtra
+Seal,  // Seal
 Sgnw,  // SignWriting
 Shaw,  // Shavian
 Shrd,  // Sharada
