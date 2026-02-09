@@ -1240,6 +1240,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA, Ifg::SMALLER },
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapSubtype::DEAD, EcScript::Xsux },
+    /// @todo [urgent] Archaic cuneiform
+    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::MISSING },
+            "Archaic Cuneiform Numerals",
+            { EcScript::Xsux, 3 }, MapSubtype::DEAD, EcScript::Pcun },
     // Cypro-Minoan OK
     { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::HISTORICAL | Ifg::BIGGER },
             "Cypro-Minoan",
@@ -1297,10 +1301,10 @@ constinit const uc::Block uc::blocks[] {
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapSubtype::ALIVE, EcScript::Krai },
     /// @todo [U18] Chisoi
-    // { 0x16D80, 0x16DAF, { 0x16D80, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
-    //         "Chisoi",
-    //         { EcScript::Chis, 0 }, MapSubtype::ALIVE,
-    //         EcScript::Chis, EcFont::NORMAL },
+    { 0x16D80, 0x16DAF, { 0x16D80, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hy },
+            "Chisoi",
+            { EcScript::Chis, 0 }, MapSubtype::ALIVE,
+             EcScript::Chis, EcFont::NORMAL },
     // Medefaidrin OK
     { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin",
@@ -1348,6 +1352,16 @@ constinit const uc::Block uc::blocks[] {
             "Tangut Components Supplement",
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
+    /// @todo [U18] Jurchen
+    { 0x18E00, 0x1919F, { 0x18E00, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+            "Jurchen",
+            { EcScript::Jurc, 0 }, MapSubtype::DEAD,
+            EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
+    /// @todo [U18] Jurchen radicals
+    { 0x191A0, 0x191DF, { 0x191A0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+            "Jurchen Radicals",
+            { EcScript::Jurc, 1 }, MapSubtype::DEAD,
+            EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
@@ -1414,6 +1428,11 @@ constinit const uc::Block uc::blocks[] {
             "Ancient Greek Musical Notation",
             { EcScript::Grek, 3 }, MapSubtype::SYM_CODE,
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
+    /// @todo [U18] Music ex
+    { 0x1D250, 0x1D28F, { 0x1D250, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+            "Musical Symbols Supplement",
+            MyName::INST, MapSubtype::SYM_CODE,
+            EcScript::NONE },
     // Kaktovik numerals OK
     { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Kaktovik Numerals",
@@ -1444,7 +1463,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting",
             { EcScript::Sgnw, 0}, MapSubtype::SYM_CODE, EcScript::Sgnw },
-    // Latin ex G OK, drew in FunkySample
+    /// @todo [U18] Misc sym and arr
+    { 0x1DB00, 0x1DBFF, { 0x1DB00, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+            "Miscellaneous Symbols and Arrows Extended",
+            { EcScript::ZARR, 3 }, MapSubtype::SYM_OTHER,
+            EcScript::NONE },
+            // Latin ex G OK, drew in FunkySample
     { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_SMALL_PAINT, 4_hx + uc::ImbaX::RIGHT_3 },
             "Latin Extended-G",
             { EcScript::Latn, 'G'}, MapSubtype::LATIN,
@@ -1646,11 +1670,16 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
-    /// @todo [U17, semi-tofu] CJK J
+    // CJK J OK, works somehow
     { 0x323B0, 0x3347F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG, SvgHint { 11, 2, ImbaX::LEFT_3 } },
             "CJK Unified Ideographs Extension J",
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
+    /// @todo [U18] Seal
+    { 0x3D000, 0x3FC3F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+            "Seal",
+            MyName::INST, MapSubtype::DEAD,
+            EcScript::Seal, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::CJK },
     // Tags OK
     { 0xE0000, 0xE007F,
             { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::ENG_FORMAT },

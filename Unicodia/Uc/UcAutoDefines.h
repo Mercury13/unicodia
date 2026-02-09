@@ -60,7 +60,7 @@ namespace uc {
         ALPHA, BETA, RELEASE
     };
 
-    constexpr LatestState LATEST_STATE = LatestState::RELEASE;
+    constexpr LatestState LATEST_STATE = LatestState::ALPHA;
 
     enum class EcVersion : unsigned char
     {
@@ -98,6 +98,7 @@ namespace uc {
         V_15_1,
         V_16_0,
         V_17_0,
+        V_18_0,
         NN,
         TOO_HIGH = NN,
         ALL_BUILTIN = TOO_HIGH,
@@ -119,6 +120,7 @@ namespace uc {
         E15_1 = V_15_1,
         E16_0 = V_16_0,        
         E17_0 = V_17_0,
+        E18_0 = V_17_0,
     };
     inline EcVersion& operator ++ (EcVersion& x) noexcept
     {
