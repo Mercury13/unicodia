@@ -3559,7 +3559,12 @@
    </group>
    <group id="10EC0">
     <text id="Text">
-     <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
+     <orig>
+      <p>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
+      <p />
+      <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
+     </orig>
+     <known-orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</known-orig>
      <transl>Türkçe ve Libya dili Kur’an’ından karakterler ve Pegon’un nadir çeşitlemeleri (Arap harfleriyle [[ps:Java|Cava dili]] yazımı).</transl>
     </text>
    </group>
@@ -3905,6 +3910,11 @@
      <transl>Erken hanedanlık çivi yazısı</transl>
     </text>
    </group>
+   <group id="12550">
+    <text id="Name">
+     <orig>Archaic cuneiform numerals</orig>
+    </text>
+   </group>
    <group id="12F90">
     <text id="Name">
      <orig>Cypro-Minoan</orig>
@@ -4129,6 +4139,19 @@
      <transl>Yeni sözlükten bileşenler ve kökler (2021).</transl>
     </text>
    </group>
+   <group id="18E00">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+   </group>
+   <group id="191A0">
+    <text id="Name">
+     <orig>Jurchen radicals</orig>
+    </text>
+    <text id="Text">
+     <orig>Fifty radicals from the Jurchen dictionary of 1984. One radical is split into two, [[pc:191B6|23]] and [[pc:191B7|24]].</orig>
+    </text>
+   </group>
    <group id="1AFF0">
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
@@ -4281,10 +4304,21 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
-      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 added another notation ([[pc:1D1EB|half-sharp]], [[pc:1D1ED|half-flat]]) widely used by musical software.</p>
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
+     <known-orig>
+      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
+      <p />
+      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
+      <p />
+      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p />
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p />
+      <p>Also, this block has several characters from obsolete musical notations.</p>
+     </known-orig>
      <transl>
       <p>Modern görünümlü notalar 10. yüzyılda ortaya çıktı. Bu notalar kareydi çünkü kalın bir kalemle çiziliyordu. Şarkıcılar için porteye dört çizgi, enstrümanlar için ise daha fazla çizgi çiziliyordu. Mutlak frekanslar yoktu. 13. yüzyılda uzunluk işaretleri icat edildi. Orta kalınlıkta bir kalemle bir notayı el yazısıyla çizme girişimiyle yuvarlak notalar ortaya çıktı. Bugün bile müzisyenler için özel dolma kalemler üretilmektedir.</p>
       <p />
@@ -4314,6 +4348,14 @@
       <p />
       <p>Müzisyenler ve şarkıcılar için farklı nota sistemleri vardı ve bu, şarkıcıların şarkı sözlerini, müziklerini ve ipuçlarını paralel olarak yazmalarına olanak sağlıyordu. Notalar harflerle yazılıyordu ve normal Yunan harflerinden farklı karakterler herhangi bir sistem olmaksızın bu blokta toplanıyordu.</p>
      </transl>
+    </text>
+   </group>
+   <group id="1D250">
+    <text id="Name">
+     <orig>Musical symbols supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Rare musical symbols, both European and Arabic/Turkish.</orig>
     </text>
    </group>
    <group id="1D2C0">
@@ -4444,6 +4486,14 @@
     <text id="Name">
      <orig>Sutton SignWriting</orig>
      <transl>Sutton İşaret Yazısı</transl>
+    </text>
+   </group>
+   <group id="1DB00">
+    <text id="Name">
+     <orig>Symbols and arrows miscellaneous extended</orig>
+    </text>
+    <text id="Text">
+     <orig>As of Unicode{{_}}18.0, it only contains archaic mathematical symbols.</orig>
     </text>
    </group>
    <group id="1DF00">
@@ -5001,6 +5051,11 @@
       <p />
       <p>Unicode’un çatallanmasıyla her şey ertelendi [[pk:2EBF0|2022 Çin'in girişimi]], Unicode{{_}}16{{_}}beta için zaman kısaydı. Böylece yeni bir grup {{n|4000}}{{_}}ideograf sadece Unicode{{_}}17’ye girebildi.</p>
      </transl>
+    </text>
+   </group>
+   <group id="3D000">
+    <text id="Name">
+     <orig>Seal (Zhuànshū)</orig>
     </text>
    </group>
    <group id="E0000">
@@ -6710,6 +6765,23 @@
      <transl>[[ps:Kawi|Kawi]]’den gelir. İçsel ünlü {{t|a}}’dır. [[pt:virama|Virama]] işareti "pangkon" olarak adlandırılır ve eğik çizgi yerine uzun bir kancadır. Java betiği [[ps:Bali|Bali]]’ye yakındır. 20. yüzyılın ortalarına gelindiğinde, betik tamamen [[ps:Latn|Latin]] ile yer değiştirmiştir. Günümüzde ise gerçekten güzel olduğu için törensel olarak kullanılmaktadır.</transl>
     </text>
    </group>
+   <group id="Jurc">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Lang">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
+      <p />
+      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
+      <p />
+      <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
+     </orig>
+    </text>
+   </group>
    <group id="Kali">
     <text id="Name">
      <orig>Kayah Li</orig>
@@ -8092,6 +8164,19 @@
      </transl>
     </text>
    </group>
+   <group id="Pcun">
+    <text id="Name">
+     <orig>Proto-cuneiform</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Counting marks embossed on clay that would later become [[ps:Xsux|cuneiform]].</p>
+      <p />
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+     </orig>
+     <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
+    </text>
+   </group>
    <group id="Perm">
     <text id="Name">
      <orig>Old Permic (Komi Zyryan, Anbur)</orig>
@@ -8449,6 +8534,23 @@
       <p />
       <p>Diğer elle, diğer tarafa, yana dönük hareketler, şu karakterlerin birleştirilmesiyle yapılır: Doldurma{{_}}2…6’dan herhangi biri ve Döndürme{{_}}2…16’dan herhangi biri. Örneğin, "sinyal lambalarını kazıyıp çıkarmak/temizlemek" yazmak için {{sm|𝠎𝪟𝦆}}, 1D80E+Fill6+1D986 yazılmalıdır.</p>
      </transl>
+    </text>
+   </group>
+   <group id="Seal">
+    <text id="Name">
+     <orig>Seal script</orig>
+    </text>
+    <text id="Lang">
+     <orig>Old Chinese</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern paper-and-brush style.</p>
+      <p />
+      <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
+      <p />
+      <p>Ancient ideographs are still used in personal, business and government seals.</p>
+     </orig>
     </text>
    </group>
    <group id="Shaw">
@@ -14511,6 +14613,17 @@
       <p>* Son çok ırklı emoji{{-}}güreşçiler ve Playboy kızları eklendi.</p>
       <p>* 2025’in başlarında, Suudi Arabistan riyali simgesi benimsendi ve hızla [[pu:20C1]]’e uyarlandı.</p>
      </transl>
+    </text>
+   </group>
+   <group id="18.0">
+    <text id="Text">
+     <orig>
+      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s list. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Multiple musical symbols, including long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
+      <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
+      <p>* Old mathematical notations.</p>
+      <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
+     </orig>
     </text>
    </group>
   </group>
