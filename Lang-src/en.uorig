@@ -5839,8 +5839,9 @@
      <orig>
       <p>Counting marks embossed on clay that would later become [[ps:Xsux|cuneiform]].</p>
       <p />
-      <p>Matt Parker from Britain made a YouTube video “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
      </orig>
+     <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
     </text>
    </group>
    <group id="Perm">
@@ -6089,9 +6090,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces, until they were replaced with almost modern paper-and-brush style about 300{{_}}BC.</p>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern paper-and-brush style.</p>
       <p />
-      <p>Those ideographs were revived and standardized under the reign of Qin Shi as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
+      <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
       <p />
       <p>Ancient ideographs are still used in personal, business and government seals.</p>
      </orig>
@@ -10276,6 +10277,17 @@
       <p>* Added a [[pt:inclusion|genderless]] version of the last emoji{{-}}dancer: Latin for a woman, disco for a man, and ballet for genderless</p>
       <p>* Added the last multiracial emoji{{-}}wrestlers and Playboy girls</p>
       <p>* In early 2025, the sign for Saudi riyal was adopted and quickly put to [[pu:20C1]]</p>
+     </orig>
+    </text>
+   </group>
+   <group id="18.0">
+    <text id="Text">
+     <orig>
+      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s classification. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Multiple musical symbols, includind long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
+      <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
+      <p>* Old mathematical notations.</p>
+      <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
      </orig>
     </text>
    </group>
