@@ -1632,20 +1632,27 @@ namespace {
         return std::ranges::find(eqr, x) != eqr.end();
     }
 
-    void appendOrdinalVersion(QString& s, std::string_view channelName, std::u8string_view text)
+    void appendOrdinalVersion(QString& s, std::string_view channelName,
+            std::u8string_view alphaText, std::u8string_view cleanText)
     {
         if (auto channel = loc::currLang->ordChannel(channelName)) {
             // Have ordinal channel
-            str::append(s, channel->fmt(text));
+            str::append(s, channel->fmt(cleanText));
         } else {
             // No channel, simple string
-            str::append(s, text);
+            str::append(s, alphaText);
         }
     }
 
     void appendOrdinalVersion(QString& s, Buf1d<const std::string_view> params, std::u8string_view text)
     {
-        appendOrdinalVersion(s, params.safeGetV(1, ""sv), text);
+        appendOrdinalVersion(s, params.safeGetV(1, ""sv), text, text);
+    }
+
+    void appendOrdinalVersion(QString& s, Buf1d<const std::string_view> params,
+            std::u8string_view alphaText, std::u8string_view cleanText)
+    {
+        appendOrdinalVersion(s, params.safeGetV(1, ""sv), alphaText, cleanText);
     }
 
     void Eng::appendTemplate(Buf1d<const std::string_view> x, bool)
@@ -1830,8 +1837,8 @@ namespace {
 
         case 'v':
             if (name == "version"sv) {
-                appendOrdinalVersion(s, x,
-                        uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
+                auto& lastVer = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)];
+                appendOrdinalVersion(s, x, lastVer.locName(), lastVer.flexedName());
             } else if (name == "vdeprec15") {
                 appendOrdinalVersion(s, x, recent::V_DEPREC_15);
             } else if (name == "vleft16") {

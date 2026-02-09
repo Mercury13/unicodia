@@ -117,6 +117,14 @@ namespace uc {
         std::u8string locName() const;
         std::u8string locLongName() const;
         std::u8string techName() const;
+
+        /// @return  the shortest name for adding suffixes: “18” for “Unicode 18th”,
+        ///   particularly for Turkish
+        /// @warning Works while repertoire and emoji go hand-to-hand,
+        ///   and may stop working for the short period when they did not come
+        ///   in sync
+        std::u8string_view flexedName() const;
+
         /// @return  name in Terms
         std::u8string termName() const;
         std::u8string link(std::u8string_view prefix) const;
