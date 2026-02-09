@@ -1,9 +1,9 @@
 # Unihan_NumericValues.txt
-# Date: 2025-07-24 00:00:00 GMT [KL]
-# Unicode Version 17.0.0
+# Date: 2026-01-22 00:00:00 GMT [KL]
+# Unicode Version 18.0.0
 #
 # Unicode Character Database
-# © 2025 Unicode®, Inc.
+# © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
@@ -171,5 +171,13 @@ U+3197A	kVietnameseNumeric	1
 U+31EC7	kTayNumeric	4
 U+31FA3	kVietnameseNumeric	10000
 U+32226	kVietnameseNumeric	10000
+U+32403	kOtherNumeric	200
+U+32481	kVietnameseNumeric	6
+U+324DF	kOtherNumeric	50
+U+324E0	kVietnameseNumeric	10
+U+324E8	kVietnameseNumeric	10
+U+324E9	kVietnameseNumeric	10
+U+3276D	kVietnameseNumeric	5
+U+32C83	kVietnameseNumeric	100
 
 # EOF

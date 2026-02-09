@@ -343,10 +343,20 @@ ucd::MainProc ucd::processMainBase(
                 firstCp = info.cp;
                 needNumeric = false;
                 repeatedText = "Tangut ideograph-#"sv;
+            } else if (info.name == "<Jurchen Character, First>"sv) {
+                firstCp = info.cp;
+                needNumeric = false;
+                repeatedText = "Jurchen character-#"sv;
+            } else if (info.name == "<Seal Character, First>"sv) {
+                firstCp = info.cp;
+                needNumeric = false;
+                repeatedText = "Seal character-#"sv;
             } else if (info.name == "<CJK Ideograph Extension A, Last>"sv
                     || info.name == "<CJK Ideograph, Last>"sv
                     || info.name == "<Tangut Ideograph, Last>"sv
                     || info.name == "<Tangut Ideograph Supplement, Last>"sv
+                    || info.name == "<Jurchen Character, Last>"sv
+                    || info.name == "<Seal Character, Last>"sv
                     || info.name == "<CJK Ideograph Extension B, Last>"sv
                     || info.name == "<CJK Ideograph Extension C, Last>"sv
                     || info.name == "<CJK Ideograph Extension D, Last>"sv

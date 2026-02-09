@@ -1,9 +1,9 @@
 # Unihan_DictionaryLikeData.txt
-# Date: 2025-07-24 00:00:00 GMT [KL]
-# Unicode Version 17.0.0
+# Date: 2026-01-22 00:00:00 GMT [KL]
+# Unicode Version 18.0.0
 #
 # Unicode Character Database
-# © 2025 Unicode®, Inc.
+# © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
@@ -117384,7 +117384,7 @@ U+20131	kMojiJoho	MJ030477
 U+20134	kMojiJoho	MJ030478
 U+20135	kMojiJoho	MJ030479
 U+20137	kMojiJoho	MJ030480
-U+20137	kStrange	O
+U+20137	kStrange	O U
 U+20139	kMojiJoho	MJ030481
 U+2013F	kMojiJoho	MJ030482
 U+20141	kStrange	M:U+4EA1
@@ -119820,6 +119820,7 @@ U+20D4E	kUnihanCore2020	H
 U+20D51	kMojiJoho	MJ032339
 U+20D52	kMojiJoho	MJ032340
 U+20D53	kMojiJoho	MJ032341
+U+20D53	kStrange	O
 U+20D55	kPhonetic	850*
 U+20D58	kMojiJoho	MJ032342
 U+20D5C	kPhonetic	926*
@@ -122847,6 +122848,7 @@ U+21D24	kMojiJoho	MJ034464
 U+21D25	kMojiJoho	MJ034465
 U+21D26	kMojiJoho	MJ034466
 U+21D27	kMojiJoho	MJ034467
+U+21D27	kStrange	Y
 U+21D28	kMojiJoho	MJ034468
 U+21D29	kMojiJoho	MJ034469
 U+21D2B	kMojiJoho	MJ034470
@@ -122963,6 +122965,7 @@ U+21DC6	kMojiJoho	MJ034560
 U+21DC7	kMojiJoho	MJ034561
 U+21DC8	kMojiJoho	MJ034562
 U+21DC9	kMojiJoho	MJ034563
+U+21DC9	kStrange	O
 U+21DCA	kCangjie	HSYU
 U+21DCA	kUnihanCore2020	H
 U+21DCC	kMojiJoho	MJ034564
@@ -124313,7 +124316,7 @@ U+223FA	kCangjie	NMBN
 U+223FA	kUnihanCore2020	H
 U+223FC	kMojiJoho	MJ035643
 U+223FD	kMojiJoho	MJ035644
-U+223FD	kStrange	Y
+U+223FD	kStrange	M Y
 U+223FE	kMojiJoho	MJ035645
 U+223FF	kPhonetic	1622A*
 U+22400	kMojiJoho	MJ035646
@@ -135740,7 +135743,7 @@ U+25F20	kMojiJoho	MJ044329
 U+25F21	kMojiJoho	MJ044330
 U+25F23	kMojiJoho	MJ044332
 U+25F24	kMojiJoho	MJ044333
-U+25F26	kStrange	I
+U+25F26	kStrange	I:U+31E62
 U+25F29	kMojiJoho	MJ044334
 U+25F29	kPhonetic	716*
 U+25F2A	kMojiJoho	MJ044335
@@ -144218,6 +144221,7 @@ U+2867D	kMojiJoho	MJ051199
 U+2867D	kPhonetic	565*
 U+2867E	kMojiJoho	MJ051200
 U+28682	kMojiJoho	MJ051201
+U+28684	kStrange	O
 U+2868A	kMojiJoho	MJ051202
 U+2868B	kMojiJoho	MJ051203
 U+2868C	kMojiJoho	MJ051204
@@ -144504,7 +144508,7 @@ U+28799	kMojiJoho	MJ051415
 U+2879A	kMojiJoho	MJ051416
 U+2879B	kMojiJoho	MJ051417
 U+287A0	kMojiJoho	MJ051418
-U+287A0	kStrange	Y
+U+287A0	kStrange	Y:U+28794
 U+287A1	kMojiJoho	MJ051419
 U+287A3	kMojiJoho	MJ051420
 U+287A6	kMojiJoho	MJ051421
@@ -144520,7 +144524,7 @@ U+287AE	kMojiJoho	MJ051427
 U+287AF	kMojiJoho	MJ051428
 U+287AF	kPhonetic	934*
 U+287B0	kMojiJoho	MJ051429
-U+287B0	kStrange	Y
+U+287B0	kStrange	Y:U+287B8
 U+287B1	kMojiJoho	MJ051430
 U+287B2	kMojiJoho	MJ051431
 U+287B3	kMojiJoho	MJ051432
@@ -145434,6 +145438,7 @@ U+28C54	kUnihanCore2020	G
 U+28C55	kPhonetic	538*
 U+28C57	kMojiJoho	MJ051991
 U+28C58	kMojiJoho	MJ051992
+U+28C58	kStrange	O
 U+28C59	kMojiJoho	MJ051993
 U+28C5A	kMojiJoho	MJ051994
 U+28C5B	kMojiJoho	MJ051995
@@ -145909,7 +145914,7 @@ U+28E82	kMojiJoho	MJ052358
 U+28E83	kMojiJoho	MJ052359
 U+28E84	kMojiJoho	MJ052360
 U+28E85	kMojiJoho	MJ052361
-U+28E85	kStrange	Y
+U+28E85	kStrange	M Y
 U+28E86	kMojiJoho	MJ052362
 U+28E89	kMojiJoho	MJ052363
 U+28E89	kPhonetic	245*
@@ -153385,7 +153390,7 @@ U+2CD0A	kFourCornerCode	7915.9
 U+2CD0A	kPhonetic	852*
 U+2CD0A	kUnihanCore2020	G
 U+2CD10	kPhonetic	761*
-U+2CD18	kStrange	Y
+U+2CD18	kStrange	M Y
 U+2CD1C	kStrange	Y
 U+2CD20	kStrange	Y
 U+2CD21	kStrange	Y
@@ -153602,6 +153607,7 @@ U+2CF0C	kMojiJoho	MJ056863
 U+2CF0D	kMojiJoho	MJ059073
 U+2CF16	kMojiJoho	MJ056865
 U+2CF17	kMojiJoho	MJ056864
+U+2CF17	kStrange	O:U+0047
 U+2CF18	kMojiJoho	MJ057888 MJ057888:E0100 MJ057889:E0101
 U+2CF19	kMojiJoho	MJ056867
 U+2CF1A	kMojiJoho	MJ056868
@@ -155934,6 +155940,7 @@ U+30EB7	kPhonetic	1598*
 U+30ED3	kPhonetic	410*
 U+30EDD	kStrange	S:43
 U+30EDE	kStrange	S:58
+U+30F04	kStrange	I
 U+30F05	kPhonetic	1560*
 U+30F18	kStrange	H:U+3131
 U+30F24	kPhonetic	931*
@@ -156160,6 +156167,7 @@ U+31986	kStrange	U
 U+31993	kStrange	I:U+6D6E
 U+319E7	kPhonetic	832*
 U+31A1A	kPhonetic	645*
+U+31A37	kStrange	I
 U+31AC5	kStrange	I
 U+31AE3	kStrange	I
 U+31B31	kStrange	Y
@@ -156181,6 +156189,7 @@ U+31C75	kStrange	I:U+767B
 U+31C7C	kPhonetic	1081*
 U+31C85	kPhonetic	510*
 U+31CFE	kPhonetic	62*
+U+31D5A	kStrange	U
 U+31D6C	kPhonetic	1589*
 U+31D91	kPhonetic	421*
 U+31DFD	kPhonetic	62*
@@ -156252,6 +156261,7 @@ U+3232B	kPhonetic	926*
 U+3238A	kStrange	I
 U+323B0	kStrange	I:U+4E94
 U+323B1	kStrange	O:U+2114
+U+323C6	kStrange	B:U+310C
 U+32415	kStrange	I:U+4EDC
 U+3241A	kStrange	H:U+3145
 U+3244F	kStrange	U
