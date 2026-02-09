@@ -4901,6 +4901,23 @@
      <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
     </text>
    </group>
+   <group id="Jurc">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Lang">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script: first phonetic (“small”), then logographic (“large”).</p>
+      <p />
+      <p>In 1234 Jurchens were conquered by Mongols, and the script was gradually supplanted with [[ps:Mong|Mongolian]].</p>
+      <p />
+      <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
+     </orig>
+    </text>
+   </group>
    <group id="Kali">
     <text id="Name">
      <orig>Kayah Li</orig>
