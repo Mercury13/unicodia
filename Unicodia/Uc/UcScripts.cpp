@@ -433,8 +433,8 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(15), EcFont::JAVANESE },
     /// @todo [U18] Jurchen
     { "Jurc", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::century(-12), EcFont::NORMAL },
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL_COL, EcContinent::CJK,
+        Dating::century(12), EcFont::NORMAL },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -773,8 +773,8 @@ constinit const uc::Script uc::scriptInfo[] {
           .locations { LOC_INDIA_S } } },
     /// @todo [U18] Seal
     { "Seal", QFontDatabase::Any,
-        EcScriptType::HIEROGLYPH, EcLangLife::CONSERVED, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::ybefore(-700), EcFont::NORMAL },
+        EcScriptType::HIEROGLYPH, EcLangLife::CONSERVED, EcWritingDir::RTL_COL, EcContinent::CJK,
+        Dating::yapprox(-200), EcFont::NORMAL },
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,

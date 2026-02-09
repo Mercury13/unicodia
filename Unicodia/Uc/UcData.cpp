@@ -2129,6 +2129,14 @@ std::u8string uc::Version::techName() const
     }
 }
 
+std::u8string_view uc::Version::flexedName() const
+{
+    std::u8string_view r = unicodeName;
+    if (r.ends_with(u8".0"sv))
+        r = r.substr(0, r.length() - 2);
+    return r;
+}
+
 std::u8string uc::Version::link(std::u8string_view prefix) const
 {
     if (!unicodeName.empty()) {

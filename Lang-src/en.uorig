@@ -4910,9 +4910,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script: first phonetic (“small”), then logographic (“large”).</p>
+      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
       <p />
-      <p>In 1234 Jurchens were conquered by Mongols, and the script was gradually supplanted with [[ps:Mong|Mongolian]].</p>
+      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
       <p />
       <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
      </orig>
@@ -6077,6 +6077,23 @@
       <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs exist that can fix X/Y coordinates on a sheet{{-}}for example, vector graphic editors.</p>
       <p />
       <p>Gestures with other hand, to other side, turned sideways are made with combining characters: any of Fill{{_}}2…6, and any of Rotation{{_}}2…16. For example, to write “gouge blinkers out”, {{sm|𝠎𝪟𝦆}}, one should write 1D80E+Fill6+1D986.</p>
+     </orig>
+    </text>
+   </group>
+   <group id="Seal">
+    <text id="Name">
+     <orig>Seal script</orig>
+    </text>
+    <text id="Lang">
+     <orig>Old Chinese</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces, until they were replaced with almost modern paper-and-brush style about 300{{_}}BC.</p>
+      <p />
+      <p>Those ideographs were revived and standardized under the reign of Qin Shi as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
+      <p />
+      <p>Ancient ideographs are still used in personal, business and government seals.</p>
      </orig>
     </text>
    </group>
