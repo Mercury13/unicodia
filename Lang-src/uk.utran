@@ -3570,8 +3570,16 @@
    </group>
    <group id="10EC0">
     <text id="Text">
-     <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
-     <transl>Символи з турецького та лівійського Корану, та з рідких варіацій пегону (запису [[ps:Java|яванської]] арабськими літерами).</transl>
+     <orig>
+      <p>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
+      <p />
+      <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
+     </orig>
+     <transl>
+      <p>Символи з турецького та лівійського Корану, та з рідких варіацій пегону (запису [[ps:Java|яванської]] арабськими літерами).</p>
+      <p />
+      <p>«Великі» літери винайшов у 1932 єгипетський король Фуад{{_}}I.</p>
+     </transl>
     </text>
    </group>
    <group id="10F00">
@@ -3916,6 +3924,12 @@
      <transl>Ранньодинастичний клинопис</transl>
     </text>
    </group>
+   <group id="12550">
+    <text id="Name">
+     <orig>Archaic cuneiform numerals</orig>
+     <transl>Старі клинописні цифри</transl>
+    </text>
+   </group>
    <group id="12F90">
     <text id="Name">
      <orig>Cypro-Minoan</orig>
@@ -4140,6 +4154,22 @@
      <transl>Компоненти та ключі з нового словника (2021).</transl>
     </text>
    </group>
+   <group id="18E00">
+    <text id="Name">
+     <orig>Jurchen</orig>
+     <transl>Чжурчженьська</transl>
+    </text>
+   </group>
+   <group id="191A0">
+    <text id="Name">
+     <orig>Jurchen radicals</orig>
+     <transl>Чжурчженьська — ключі</transl>
+    </text>
+    <text id="Text">
+     <orig>Fifty radicals from the Jurchen dictionary of 1984. One radical is split into two, [[pc:191B6|23]] and [[pc:191B7|24]].</orig>
+     <transl>П’ятдесят ключів з чжурчженьського словника (1984). Один ключ розбито на два:  [[pc:191B6|23]] та [[pc:191B7|24]].</transl>
+    </text>
+   </group>
    <group id="1AFF0">
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
@@ -4292,7 +4322,7 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
-      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 added another notation ([[pc:1D1EB|half-sharp]], [[pc:1D1ED|half-flat]]) widely used by musical software.</p>
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
@@ -4303,7 +4333,7 @@
       <p />
       <p>Музика{{-}}[[pt:universality|нетекстова]] інформація і тому поза увагою Юнікоду. Однак привабливо використовувати наявні типографські движки для зберігання нот та їх частин у шрифтах, щоб спрощувати нотне ПЗ, скорочувати нотні PDF. У цьому світлі незрозуміле призначення восьми [[pt:format|форматуючих]] символів ([[pc:1D173|ребро]], [[pc:1D175|зв’язка]], [[pc:1D177|ліга]], [[pc:1D179|фраза]]). У 2013 вийшов відкритий стандарт ''Standard Music Font Layout'' (SMuFL), що розширює блок до більш ніж 2600 символів з використанням позицій для [[pt:private|приватного користування]].</p>
       <p />
-      <p>Мікротонова нотація, початково прийнята Юнікодом ([[pc:1D132]] та [[pc:1D133|33]]), широко не вживалась, небагато хто бачив ці знаки «вживу». Юнікод{{_}}18 додасть іншу нотацію (напівдієз, напівбемоль), широко вживану музичним ПЗ.</p>
+      <p>Мікротонова нотація, початково прийнята Юнікодом ([[pc:1D132]] та [[pc:1D133|33]]), широко не вживалась, небагато хто бачив ці знаки «вживу». Юнікод{{_}}18 додав іншу нотацію ([[pc:1D1EB|напівдієз]], [[pc:1D1ED|напівбемоль]]), широко вживану музичним ПЗ.</p>
       <p />
       <p>Також в цьому блоці є кілька символів з застарілих музичних нотацій.</p>
      </transl>
@@ -4325,6 +4355,16 @@
       <p />
       <p>Для музикантів та співаків були різні нотації, це дозволяло писати одночасно слова, музику і підказки для співаків. Ноти записувались літерами, и ті з них, що не{{_}}співпадають з грецькими, наведені у цьому блоці без усілякої системи.</p>
      </transl>
+    </text>
+   </group>
+   <group id="1D250">
+    <text id="Name">
+     <orig>Musical symbols supplement</orig>
+     <transl>Музичні символи додаткові</transl>
+    </text>
+    <text id="Text">
+     <orig>Rare musical symbols, both European and Arabic/Turkish.</orig>
+     <transl>Рідкісні музичні символи: і європейські, і арабські/турецькі.</transl>
     </text>
    </group>
    <group id="1D2C0">
@@ -4455,6 +4495,16 @@
     <text id="Name">
      <orig>Sutton SignWriting</orig>
      <transl>Жестове письмо Саттон</transl>
+    </text>
+   </group>
+   <group id="1DB00">
+    <text id="Name">
+     <orig>Symbols and arrows miscellaneous extended</orig>
+     <transl>Символи та стрілки різні розширені</transl>
+    </text>
+    <text id="Text">
+     <orig>As of Unicode{{_}}18.0, it only contains archaic mathematical symbols.</orig>
+     <transl>На Юнікод{{_}}18.0 містить тільки старі математичні символи.</transl>
     </text>
    </group>
    <group id="1DF00">
@@ -5012,6 +5062,12 @@
       <p />
       <p>[[pk:2EBF0|Спроба Китаю 2022]] відгалузитися від Юнікоду відклала інше, і часу не{{_}}було до бета-версії Юнікоду{{_}}16. Так що пакет з 4000 ієрогліфів дійшов тільки до Юнікоду{{_}}17.</p>
      </transl>
+    </text>
+   </group>
+   <group id="3D000">
+    <text id="Name">
+     <orig>Seal (Zhuànshū)</orig>
+     <transl>Ієрогліфи з печаток (чжуаньшу)</transl>
     </text>
    </group>
    <group id="E0000">
@@ -6720,6 +6776,32 @@
      <transl>Походить з [[ps:Kawi|каві]]. Голосна по замовчанню {{t|а}}. Знак «[[pt:virama|вірама]]» (стерти голосну) зветься «пангкон» і являє собою не{{_}}похилу рисочку, а довгий гак. Яванське письмо близьке до [[ps:Bali|балійського]]. До середини XX{{_}}століття повністю витіснене [[ps:Latn|латинкою]] і використовується як «парадне», тим більш воно дійсно красиве.</transl>
     </text>
    </group>
+   <group id="Jurc">
+    <text id="Name">
+     <orig>Jurchen</orig>
+     <transl>Чжурчженьська</transl>
+    </text>
+    <text id="Lang">
+     <orig>Jurchen</orig>
+     <transl>чжурчженьська</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
+      <p />
+      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
+      <p />
+      <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
+     </orig>
+     <transl>
+      <p>Чжурчжені (предки маньчжурів) повстали проти [[ps:Kits|киданів]] у 1115, і невдовзі зробили своє письмо.</p>
+      <p />
+      <p>У 1234 чжурчженів завоювали монголи. Китай скинув монголів у 1368, і зв’язувався чжурчженьським письмом з завойованим північним сусідом. У 1599 маньчжури перейшли на [[ps:Mong|монгольське]] письмо.</p>
+      <p />
+      <p>Майже усі наявні джерела{{-}}пам’ятники та господарчі предмети. Вижило усього кілька паперів.</p>
+     </transl>
+    </text>
+   </group>
    <group id="Kali">
     <text id="Name">
      <orig>Kayah Li</orig>
@@ -8100,6 +8182,25 @@
      </transl>
     </text>
    </group>
+   <group id="Pcun">
+    <text id="Name">
+     <orig>Proto-cuneiform</orig>
+     <transl>Прото-клинопис</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Counting marks embossed on clay that would later become [[ps:Xsux|cuneiform]].</p>
+      <p />
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+     </orig>
+     <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
+     <transl>
+      <p>Лічильні знаки, що вичавлювались на глині. Вони пізніше стануть [[ps:Xsux|клинописом]].</p>
+      <p />
+      <p>Британець Мет Паркер зробиі YouTube-[[https://www.youtube.com/watch?v=MZVs6wF7nC4|відео]] «Яка була перша (відома нам) математична помилка?» Якийсь Кушим працював на пивному складі між 3400 та 3000{{bc}}, і користувався цими символами. Хоча ім’я «Кушим»{{-}}гіпотеза, це пізня вимова 2900{{bc}}</p>
+     </transl>
+    </text>
+   </group>
    <group id="Perm">
     <text id="Name">
      <orig>Old Permic (Komi Zyryan, Anbur)</orig>
@@ -8457,6 +8558,32 @@
       <p>Хоча система не{{_}}є строго [[pt:universality|текстовою]]{{-}}положення жестів на сторінці ''грає'' роль{{-}}її у 2015 додали до Юнікоду. Додали тільки символи, без якогось форматування. Але існує багато програм, що фіксують координати X/Y на листі{{-}}наприклад, векторні редактори.</p>
       <p />
       <p>Жести іншою рукою, в інший бік, з поворотом задаються комбінуючими мітками{{-}}будь-які з Fill{{_}}2…6, і одночасно будь-яка з Rotation{{_}}2…16. Так, щоб передати «моргали виколю» {{sm|𝠎𝪟𝦆}}, треба написати 1D80E+Fill6+1D986.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="Seal">
+    <text id="Name">
+     <orig>Seal script</orig>
+     <transl>Ієрогліфи з печаток</transl>
+    </text>
+    <text id="Lang">
+     <orig>Old Chinese</orig>
+     <transl>стара китайська</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern paper-and-brush style.</p>
+      <p />
+      <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
+      <p />
+      <p>Ancient ideographs are still used in personal, business and government seals.</p>
+     </orig>
+     <transl>
+      <p>У широкому сенсі термін «ієрогліфи з печаток» означає старі ієрогліфи, надряпані на твердих предметах. Біля 300{{bc}} вони були замінені майже сучасним стилем пензлем на папері.</p>
+      <p />
+      <p>Ці ієрогліфи відродили і стандартизували під владою Цінь Ши (221‒210{{bc}}) як «офіційний» шрифт, схожий з готичним в [[ps:Latn|латинці]] та уставом у [[ps:Cyrl|кирилиці]]. Це{{-}}ієрогліфи з печаток у вузькому сенсі.</p>
+      <p />
+      <p>Давні ієрогліфи и понині використовуються в особистих, ділових та державних печатках.</p>
      </transl>
     </text>
    </group>
@@ -14524,6 +14651,24 @@
       <p>* Додано [[pt:inclusion|безстатеву]] версію останнього емодзі{{-}}танцюриста: латинські у жінки, диско у чоловіка, та балет у безстатевого</p>
       <p>* Додано останні багаторасові емодзі{{-}}борців та дівчат Плейбою</p>
       <p>* На початку 2025 прийняли знак саудівського ріяла, та швидко поставили на [[pu:20C1]]</p>
+     </transl>
+    </text>
+   </group>
+   <group id="18.0">
+    <text id="Text">
+     <orig>
+      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s list. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Multiple musical symbols, including long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
+      <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
+      <p>* Old mathematical notations.</p>
+      <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
+     </orig>
+     <transl>
+      <p>* Повзучі покращення у [[pt:egyp|єгипетських]] ієрогліфах для сумісності зі списком Ґардінера. Зокрема, обміняли [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Багато музичних символів, у тому числі довгоочікувані [[pc:1D1EB|напівдієз]] та [[pc:1D1ED|напівбемоль]] з сучасного ПЗ.</p>
+      <p>* Історична транскрипція [[ps:Latn|латинкою]].</p>
+      <p>* Старі математичні символи.</p>
+      <p>* [[ps:Arab|Арабські]] «великі» літери (Єгипет, 1932).</p>
      </transl>
     </text>
    </group>
