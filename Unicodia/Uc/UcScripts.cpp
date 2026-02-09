@@ -85,6 +85,11 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
+    // Musical pseudo-script → sorting
+    { "ZMUS", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Emoji pseudo-script → line breaking
     { "ZEMO", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
@@ -426,6 +431,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Java", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(15), EcFont::JAVANESE },
+    /// @todo [U18] Jurchen
+    { "Jurc", QFontDatabase::Any,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR_CJK, EcContinent::CJK,
+        Dating::century(12), EcFont::NORMAL },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -697,6 +706,10 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::FRANKEN_SANS, NO_FLAGS,
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 34, .numOrder = NumOrder::DEC_THOU, .flags = Langfg::NO_AUTO, .year = 1990 } },
+    /// @todo [U18] Proto-cuneiform
+    { "Pcun", QFontDatabase::Any,
+        EcScriptType::NONTEXT, EcLangLife::DECIPHERED, EcWritingDir::BOTH_LTR, EcContinent::ASIA,
+        Dating::century(-34), EcFont::NORMAL, Sfg::NO_LANGS },
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -758,6 +771,10 @@ constinit const uc::Script uc::scriptInfo[] {
         ScriptSpec::NONE, EcVersion::ALL_BUILTIN,
         { .mantissa = 25, .numOrder = NumOrder::DEC_THOU, .year = 2011,
           .locations { LOC_INDIA_S } } },
+    /// @todo [U18] Seal
+    { "Seal", QFontDatabase::Any,
+        EcScriptType::HIEROGLYPH, EcLangLife::CONSERVED, EcWritingDir::LTR_CJK, EcContinent::CJK,
+        Dating::ybefore(-700), EcFont::NORMAL },
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,

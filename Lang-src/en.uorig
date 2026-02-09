@@ -2971,6 +2971,11 @@
      <orig>Early dynastic cuneiform</orig>
     </text>
    </group>
+   <group id="12550">
+    <text id="Name">
+     <orig>Archaic cuneiform numerals</orig>
+    </text>
+   </group>
    <group id="12F90">
     <text id="Name">
      <orig>Cypro-Minoan</orig>
@@ -3267,6 +3272,14 @@
      </orig>
     </text>
    </group>
+   <group id="1D250">
+    <text id="Name">
+     <orig>Musical symbols supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Rare musical symbols, both European and Arabic/Turkish.</orig>
+    </text>
+   </group>
    <group id="1D2C0">
     <text id="Name">
      <orig>Kaktovik numerals</orig>
@@ -3347,6 +3360,14 @@
    <group id="1D800">
     <text id="Name">
      <orig>Sutton SignWriting</orig>
+    </text>
+   </group>
+   <group id="1DB00">
+    <text id="Name">
+     <orig>Symbols and arrows miscellaneous extended</orig>
+    </text>
+    <text id="Text">
+     <orig>As of Unicode{{_}}18.0, only contains archaic mathematical symbols.</orig>
     </text>
    </group>
    <group id="1DF00">

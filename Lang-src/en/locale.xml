@@ -62,6 +62,7 @@
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="12550" /><!-- Archaic cuneiform numerals -->
 		<blk start="1AFF0" /><!-- Kana extended-B -->
 		<blk start="1B000" /><!-- Kana supplement -->
 		<blk start="1B100" /><!-- Kana extended-A -->

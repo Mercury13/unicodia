@@ -24,18 +24,21 @@ namespace uc {
 
     enum class EcScript : unsigned char {
         Zyyy,
-        ZARR,   // Pseudo-script: arrows
-        ZMAT,   // Pseudo-script: mathemetical
-        ZSYM,   // Pseudo-script: symbols and pictographs
-        ZDIN,   // Pseudo-script: dingbats
-        ZDIA,   // Pseudo-script: diacritical marks
-        ZKXI,   // Pseudo-script: Kangxi
-        ZOLD,   // Pseudo-script: legacy computing
-        ZVAR,   // Pseudo-script: variation selectors
-        ZSHP,   // Pseudo-script: shapes
-        ZPUN,   // Pseudo-script: punctuation
-        ZEMO,   // Pseudo-script: emoji
-        ZCJL,   // Pseudo-script: CJK Latin
+        // Pseudo-scripts intended for sorting
+        ZARR,   // Arrows
+        ZMAT,   // Mathemetical
+        ZSYM,   // Symbols and pictographs
+        ZDIN,   // Dingbats
+        ZDIA,   // Diacritical marks
+        ZKXI,   // Kangxi
+        ZOLD,   // Legacy computing
+        ZVAR,   // Variation selectors
+        ZSHP,   // Shapes
+        ZPUN,   // Punctuation
+        ZMUS,   // Musical
+        // Pseudo-scripts intended for line breaking
+        ZEMO,   // Emoji
+        ZCJL,   // CJK Latin (ASCII symbols that fit to CJK cell)
 
 #ifndef Q_MOC_RUN
     // MOC creates CPPs rather than parses this enum, so probably OK

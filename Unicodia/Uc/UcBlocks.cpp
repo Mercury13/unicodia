@@ -1243,7 +1243,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [urgent] Archaic cuneiform
     { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::MISSING },
             "Archaic Cuneiform Numerals",
-            { EcScript::Xsux, 3 }, MapSubtype::DEAD, EcScript::Pcun },
+            { EcScript::Xsux, 3 }, MapSubtype::DEAD,
+            EcScript::Pcun, EcFont::NORMAL, Bfg::DESCRIBE_SCRIPT },
     // Cypro-Minoan OK
     { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::HISTORICAL | Ifg::BIGGER },
             "Cypro-Minoan",
@@ -1421,7 +1422,7 @@ constinit const uc::Block uc::blocks[] {
     // Music OK
     { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE, {}, 8_hx },
             "Musical Symbols",
-            MyName::INST, MapSubtype::SYM_CODE,
+            { EcScript::ZMUS, 0 }, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC },
     // Greek music OK
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE, Ifg::PAINT_SVG, 1_hx },
@@ -1431,7 +1432,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [U18] Music ex
     { 0x1D250, 0x1D28F, { 0x1D250, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Musical Symbols Supplement",
-            MyName::INST, MapSubtype::SYM_CODE,
+            { EcScript::ZMUS, 1 }, MapSubtype::SYM_CODE,
             EcScript::NONE },
     // Kaktovik numerals OK
     { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
@@ -1466,7 +1467,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [U18] Misc sym and arr
     { 0x1DB00, 0x1DBFF, { 0x1DB00, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Miscellaneous Symbols and Arrows Extended",
-            { EcScript::ZARR, 3 }, MapSubtype::SYM_OTHER,
+            { EcScript::ZSYM, 3 }, MapSubtype::SYM_OTHER,
             EcScript::NONE },
             // Latin ex G OK, drew in FunkySample
     { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_SMALL_PAINT, 4_hx + uc::ImbaX::RIGHT_3 },
