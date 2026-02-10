@@ -145,6 +145,8 @@ namespace {
         u8"index pointing up",              // Same
         u8"animal-amphibian",   // Scrap frog for the sake of spouting whale
         u8"bust in silhouette", // Scrapped for family silhouette
+        u8"leftwards thumb sign",  // Do not want four identical thumbs
+        u8"rightwards thumb sign"  // Same
     };
 
     /// Library items that forcefully make tiles

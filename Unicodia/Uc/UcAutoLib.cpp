@@ -404,13 +404,13 @@ constinit const uc::LibNode uc::libNodes[10217] {
 { U"\U0001F44E\U0001F3FD", u8"thumbs down: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 398
 { U"\U0001F44E\U0001F3FE", u8"thumbs down: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 399
 { U"\U0001F44E\U0001F3FF", u8"thumbs down: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 400
-{ U"\U0001FAF9", u8"leftwards thumb sign", 214, 0, -1, Lfg(1), EcVersion::E18_0 },   // 401
+{ U"\U0001FAF9", u8"leftwards thumb sign", 214, 0, -1, Lfg(3), EcVersion::E18_0 },   // 401
 { U"\U0001FAF9\U0001F3FB", u8"leftwards thumb sign: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 402
 { U"\U0001FAF9\U0001F3FC", u8"leftwards thumb sign: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 403
 { U"\U0001FAF9\U0001F3FD", u8"leftwards thumb sign: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 404
 { U"\U0001FAF9\U0001F3FE", u8"leftwards thumb sign: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 405
 { U"\U0001FAF9\U0001F3FF", u8"leftwards thumb sign: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 406
-{ U"\U0001FAFA", u8"rightwards thumb sign", 214, 0, -1, Lfg(1), EcVersion::E18_0 },   // 407
+{ U"\U0001FAFA", u8"rightwards thumb sign", 214, 0, -1, Lfg(3), EcVersion::E18_0 },   // 407
 { U"\U0001FAFA\U0001F3FB", u8"rightwards thumb sign: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 408
 { U"\U0001FAFA\U0001F3FC", u8"rightwards thumb sign: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 409
 { U"\U0001FAFA\U0001F3FD", u8"rightwards thumb sign: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E18_0 },   // 410
