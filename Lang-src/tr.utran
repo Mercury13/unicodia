@@ -3564,8 +3564,11 @@
       <p />
       <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
      </orig>
-     <known-orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</known-orig>
-     <transl>Türkçe ve Libya dili Kur’an’ından karakterler ve Pegon’un nadir çeşitlemeleri (Arap harfleriyle [[ps:Java|Cava dili]] yazımı).</transl>
+     <transl>
+      <p>Türkçe ve Libya dili Kur’an’ından karakterler ve Pegon’un nadir çeşitlemeleri (Arap harfleriyle [[ps:Java|Cava dili]] yazımı).</p>
+      <p />
+      <p>“Büyük harfler” 1932 yılında Mısır Kralı Fuad{{_}}I tarafından icat edildi.</p>
+     </transl>
     </text>
    </group>
    <group id="10F00">
@@ -3913,6 +3916,7 @@
    <group id="12550">
     <text id="Name">
      <orig>Archaic cuneiform numerals</orig>
+     <transl>Arkaik çivi yazısı sayı sistemleri</transl>
     </text>
    </group>
    <group id="12F90">
@@ -4142,14 +4146,17 @@
    <group id="18E00">
     <text id="Name">
      <orig>Jurchen</orig>
+     <transl>Cürçen</transl>
     </text>
    </group>
    <group id="191A0">
     <text id="Name">
      <orig>Jurchen radicals</orig>
+     <transl>Cürçen yazısının kök işaretleri</transl>
     </text>
     <text id="Text">
      <orig>Fifty radicals from the Jurchen dictionary of 1984. One radical is split into two, [[pc:191B6|23]] and [[pc:191B7|24]].</orig>
+     <transl>1984 tarihli Cürçen sözlüğünden elli radikal. Bir radikal ikiye ayrılmıştır: [[pc:191B6|23]] ve [[pc:191B7|24]].</transl>
     </text>
    </group>
    <group id="1AFF0">
@@ -4308,17 +4315,6 @@
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
-     <known-orig>
-      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
-      <p />
-      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
-      <p />
-      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
-      <p />
-      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
-      <p />
-      <p>Also, this block has several characters from obsolete musical notations.</p>
-     </known-orig>
      <transl>
       <p>Modern görünümlü notalar 10. yüzyılda ortaya çıktı. Bu notalar kareydi çünkü kalın bir kalemle çiziliyordu. Şarkıcılar için porteye dört çizgi, enstrümanlar için ise daha fazla çizgi çiziliyordu. Mutlak frekanslar yoktu. 13. yüzyılda uzunluk işaretleri icat edildi. Orta kalınlıkta bir kalemle bir notayı el yazısıyla çizme girişimiyle yuvarlak notalar ortaya çıktı. Bugün bile müzisyenler için özel dolma kalemler üretilmektedir.</p>
       <p />
@@ -4326,7 +4322,7 @@
       <p />
       <p>Müzik [[pt:universality|metin dışı]] bir bilgidir ve bu nedenle Unicode kapsamı dışındadır. Ancak, müzik yazılımlarını basitleştirmek ve sayfa PDF’lerini kısaltmak için notaları ve bölümlerini yazı tiplerinde depolamak için mevcut tipografi motorlarını kullanmak caziptir. Bu bağlamda, sekiz [[pt:format|biçim]] karakterinin ([[pc:1D173|kiriş]], [[pc:1D175|bağ]], [[pc:1D177|birleştirme]], [[pc:1D179|müzik cümlesi]]) amacı belirsizdir. 2013 yılında açık standart SMuFL ''(Standart Müzik Yazı Tipi Düzeni)'' geldi ve [[pt:private|özel kullanım]] kod noktalarını kullanarak bloğu 2600 karaktere çıkardı.</p>
       <p />
-      <p>Unicode tarafından başlangıçta kabul edilen mikroton notasyonu ([[pc:1D132]] ve [[pc:1D133|33]]) yaygın olarak kullanılmıyordu ve bu karakterleri "doğal hayatta" gören çok az kişi vardı. Unicode{{_}}18, müzik yazılımları tarafından yaygın olarak kullanılan başka bir notasyon (yarı diyez, yarı bemol) ekleyecek.</p>
+      <p>Unicode tarafından başlangıçta kabul edilen mikroton notasyonu ([[pc:1D132]] ve [[pc:1D133|33]]) yaygın olarak kullanılmadı; bu karakterleri “doğal yaşamda” görenlerin sayısı azdır. Unicode{{_}}18, müzik yazılımlarında yaygın biçimde kullanılan başka bir notasyonu ekledi ([[pc:1D1EB|yarım diyez]], [[pc:1D1ED|yarım bemol]]).</p>
       <p />
       <p>Ayrıca, bu blokta eski müzik notasyonlarından birkaç karakter bulunuyor.</p>
      </transl>
@@ -4353,9 +4349,11 @@
    <group id="1D250">
     <text id="Name">
      <orig>Musical symbols supplement</orig>
+     <transl>Müzik sembolleri eki</transl>
     </text>
     <text id="Text">
      <orig>Rare musical symbols, both European and Arabic/Turkish.</orig>
+     <transl>Hem Avrupa hem de Arap/Türk müziğine ait nadir müzik sembolleri.</transl>
     </text>
    </group>
    <group id="1D2C0">
@@ -4491,9 +4489,11 @@
    <group id="1DB00">
     <text id="Name">
      <orig>Symbols and arrows miscellaneous extended</orig>
+     <transl>Semboller ve oklar: çeşitli (genişletilmiş)</transl>
     </text>
     <text id="Text">
      <orig>As of Unicode{{_}}18.0, it only contains archaic mathematical symbols.</orig>
+     <transl>Unicode{{_}}18.0 itibarıyla, yalnızca arkaik matematiksel semboller içermektedir.</transl>
     </text>
    </group>
    <group id="1DF00">
@@ -5056,6 +5056,7 @@
    <group id="3D000">
     <text id="Name">
      <orig>Seal (Zhuànshū)</orig>
+     <transl>Seal (Zhuànshū)</transl>
     </text>
    </group>
    <group id="E0000">
@@ -6768,9 +6769,11 @@
    <group id="Jurc">
     <text id="Name">
      <orig>Jurchen</orig>
+     <transl>Cürçen</transl>
     </text>
     <text id="Lang">
      <orig>Jurchen</orig>
+     <transl>Cürçen</transl>
     </text>
     <text id="Text">
      <orig>
@@ -6780,6 +6783,13 @@
       <p />
       <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
      </orig>
+     <transl>
+      <p>Cürçenler (Mançuların ataları), 1115’te [[ps:Kits|Kitanlara]] karşı ayaklandı ve kısa süre sonra kendi yazı sistemlerini oluşturdular.</p>
+      <p />
+      <p>1234’te Cürçenler Moğollar tarafından fethedildi. Çin 1368’de Moğolları devirdi ve hâlâ fethedilmiş durumdaki kuzey komşusuyla Cürçen betiği kullanarak iletişim kurdu. 1599’da Mançular [[ps:Mong|Moğol]] betiğine geçti.</p>
+      <p />
+      <p>Günümüze ulaşan kaynakların neredeyse tamamı anıtlar ve ev eşyalarından oluşur. Yalnızca çok az sayıda yazılı belge hayatta kalmıştır.</p>
+     </transl>
     </text>
    </group>
    <group id="Kali">
@@ -8167,6 +8177,7 @@
    <group id="Pcun">
     <text id="Name">
      <orig>Proto-cuneiform</orig>
+     <transl>Proto-çivi yazısı</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8175,6 +8186,12 @@
       <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
      </orig>
      <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
+     <transl>
+      <p>Proto-çivi yazısı, kil üzerine çeşitli çubuklarla (yuvarlak, düz, prizmatik) bastırılarak yapılan sayma işaretleri ve resim yazılarından (piktogramlardan) oluşur.</p>
+      <p />
+      <p>İngiliz Matt Parker, YouTube’da “İlk (bilinen) matematik hatası neydi?” adlı bir [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video</p>
+      <p>]] hazırlamıştır. MÖ{{_}}3400–3000 yılları arasında bira deposunda çalışan Kushim adlı biri bu işaretleri kullanmıştır. “Kushim” adının kendisi varsayımsaldır; bu ad, MÖ{{_}}2900 civarındaki daha sonraki bir okunuşa dayanmaktadır.</p>
+     </transl>
     </text>
    </group>
    <group id="Perm">
@@ -8539,9 +8556,11 @@
    <group id="Seal">
     <text id="Name">
      <orig>Seal script</orig>
+     <transl>Seal betiği</transl>
     </text>
     <text id="Lang">
      <orig>Old Chinese</orig>
+     <transl>Eski Çince</transl>
     </text>
     <text id="Text">
      <orig>
@@ -8551,6 +8570,13 @@
       <p />
       <p>Ancient ideographs are still used in personal, business and government seals.</p>
      </orig>
+     <transl>
+      <p>Geniş anlamda “seal betiği” terimi, sert yüzeylere kazınmış tüm eski ideogramları kapsar. Yaklaşık MÖ{{_}}300 civarında bunların yerini, kâğıt ve fırça kullanımına dayanan neredeyse modern bir üslup aldı.</p>
+      <p />
+      <p>Bu ideogramlar, Qin Shi’nin (MÖ{{_}}221–210) hükümranlığı sırasında resmî bir betik olarak yeniden canlandırılıp standartlaştırıldı; bu durum, [[ps:Latn|Latin]] yazısındaki blackletter ve [[ps:Cyrl|Kiril]] yazısındaki uncial ile karşılaştırılabilir. Dar anlamda seal betiği denildiğinde kastedilen de budur.</p>
+      <p />
+      <p>Antik ideogramlar günümüzde hâlâ kişisel, ticari ve resmî işlerde kullanılmaktadır.</p>
+     </transl>
     </text>
    </group>
    <group id="Shaw">
@@ -14624,6 +14650,13 @@
       <p>* Old mathematical notations.</p>
       <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
      </orig>
+     <transl>
+      <p>* Gardiner listesiyle uyumluluk sağlamak amacıyla [[pt:egyp|Mısır hiyeroglifleri]]nde kademeli iyileştirmeler. Özellikle [[pc:13277]]↔[[pc:13FDC]] değiş tokuşu.</p>
+      <p>* Modern yazılımlarda kullanılan, uzun zamandır beklenen [[pc:1D1EB|yarım diyez]] ve [[pc:1D1ED|yarım bemol]] dâhil olmak üzere birden fazla müzik sembolü.</p>
+      <p>* Tarihsel, [[ps:Latn|Latin]] tabanlı transkripsiyon.</p>
+      <p>* Eski matematiksel gösterimler.</p>
+      <p>* [[ps:Arab|Arap]] yazısında “büyük harf” benzeri formlar (Mısır, 1932).</p>
+     </transl>
     </text>
    </group>
   </group>
