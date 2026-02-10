@@ -42,7 +42,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'A' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Latin extended B OK
-    { 0x0180, 0x024F, { 0x188, EcContinent::EUROPE },
+    { 0x0180, 0x024F, { 0x188, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Latin Extended-B",
             { EcScript::Latn, 'B' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
@@ -60,7 +60,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZDIA, 0 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::FUNKY },
     // Greek and Coptic OK
-    { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
+    { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Greek and Coptic",
             { EcScript::Grek, 0 }, MapSubtype::ALIVE,
             EcScript::Grek },
@@ -71,7 +71,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 0 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
     // Cyrillic supplement OK
-    { 0x0500, 0x052F, { 0x524, EcContinent::EUROPE },
+    { 0x0500, 0x052F, { 0x524, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Cyrillic Supplement",
             { EcScript::Cyrl, 1 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
@@ -222,7 +222,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Cans, EcFont::NORMAL,
             Bfg::WORD_IN | Bfg::WORD_ON | Bfg::WORD_TO },
     // Ogham OK
-    { 0x1680, 0x169F, { 0x168E, EcContinent::EUROPE },
+    { 0x1680, 0x169F, { 0x168E, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Ogham",
             { EcScript::Ogam, 0 }, MapSubtype::DEAD, EcScript::Ogam },
     // Runic OK
@@ -644,7 +644,7 @@ constinit const uc::Block uc::blocks[] {
             "Modifier Tone Letters",
             MyName::INST, MapSubtype::SYM_PUNCT },
     // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
-    { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE },
+    { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Latin Extended-D",
             { EcScript::Latn, 'D' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::LATIN, Bfg::STOCK_BLOCK_DESC },
@@ -721,7 +721,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Ethi, 'A' }, MapSubtype::ALIVE,
             EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Latin ex E OK, dereferenced bad chars of Google Noto
-    { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE },
+    { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Latin Extended-E",
             { EcScript::Latn, 'E' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::LATIN, Bfg::STOCK_BLOCK_DESC },
@@ -804,12 +804,12 @@ constinit const uc::Block uc::blocks[] {
             "Specials",
             MyName::INST, MapSubtype::TECHNICAL },
     // Linear B syll OK
-    { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE, {}, SvgHint { 7, 9 } },
+    { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE, Ifg::PAINT_SVG, SvgHint { 7, 9 } },
             "Linear B Syllabary",
             { EcScript::Linb, 0 }, MapSubtype::DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::WORD_TO | Bfg::INDEX_ANYWHERE },
     // Linear B hier OK
-    { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE, {}, 4_hy },
+    { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE, Ifg::PAINT_SVG, 4_hy },
             "Linear B Ideograms",
             { EcScript::Linb, 1 }, MapSubtype::DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::INDEX_ANYWHERE },
@@ -824,7 +824,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 2 }, MapSubtype::DEAD,
             EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Ancient symbols OK
-    { 0x10190, 0x101CF, { 0x10192, EcContinent::EUROPE, Ifg::CONTINENT_OK },
+    { 0x10190, 0x101CF, { 0x10192, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::PAINT_SVG },
             "Ancient Symbols",
             MyName::INST, MapSubtype::DEAD,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
@@ -847,15 +847,15 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Copt, 1 }, MapSubtype::DEAD,
             EcScript::Copt, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Old Italic OK
-    { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE, {}, 2_hx },
+    { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE, Ifg::PAINT_SVG, 2_hx },
             "Old Italic",
             { EcScript::Ital, 0 }, MapSubtype::DEAD, EcScript::Ital },
     // Gothic OK
-    { 0x10330, 0x1034F, { 0x10330, EcContinent::EUROPE },
+    { 0x10330, 0x1034F, { 0x10330, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Gothic",
             { EcScript::Goth, 0 }, MapSubtype::DEAD, EcScript::Goth },
     // Old Permic OK
-    { 0x10350, 0x1037F, { 0x10350, EcContinent::EUROPE, {}, SvgHint{ 3, 1 } },
+    { 0x10350, 0x1037F, { 0x10350, EcContinent::EUROPE, Ifg::PAINT_SVG, SvgHint{ 3, 1 } },
             "Old Permic",
             { EcScript::Perm, 0 }, MapSubtype::DEAD, EcScript::Perm },
     // Ugaritic OK
@@ -872,7 +872,7 @@ constinit const uc::Block uc::blocks[] {
             "Deseret",
             { EcScript::Dsrt, 0 }, MapSubtype::DEAD, EcScript::Dsrt },
     // Shavian OK
-    { 0x10450, 0x1047F, { 0x10459, EcContinent::EUROPE },
+    { 0x10450, 0x1047F, { 0x10459, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Shavian",
             { EcScript::Shaw, 0 }, MapSubtype::ALIVE,
             EcScript::Shaw, EcFont::NORMAL, Bfg::WORD_ON },
@@ -885,24 +885,24 @@ constinit const uc::Block uc::blocks[] {
             "Osage",
             { EcScript::Osge, 0 }, MapSubtype::ALIVE, EcScript::Osge },
     // Elbasan OK
-    { 0x10500, 0x1052F, { 0x10500, EcContinent::EUROPE },
+    { 0x10500, 0x1052F, { 0x10500, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Elbasan",
             { EcScript::Elba, 0 }, MapSubtype::DEAD, EcScript::Elba },
     // Caucasian OK
-    { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE, Ifg::HISTORICAL },
+    { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE, Ifg::HISTORICAL | Ifg::PAINT_SVG },
             "Caucasian Albanian",
             { EcScript::Aghb, 0 }, MapSubtype::DEAD,
             EcScript::Aghb, EcFont::NORMAL, Bfg::WORD_ON },
     // Vithkuqi OK
-    { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
+    { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Vithkuqi",
             { EcScript::Vith, 0 }, MapSubtype::DEAD, EcScript::Vith },
     // Todhri OK, drew in Funky
-    { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE },
+    { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Todhri",
             { EcScript::Todr, 0 }, MapSubtype::DEAD, EcScript::Todr },
     // Linear A OK; Lina indexes are perfectly searchable this way
-    { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE },
+    { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Linear A",
             { EcScript::Lina, 0 }, MapSubtype::DEAD, EcScript::Lina },
     // Latin ex F OK, drew in FunkySample
@@ -911,7 +911,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'F' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::FUNKY, Bfg::STOCK_BLOCK_DESC },
     // Cypriot OK
-    { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE },
+    { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Cypriot Syllabary",
             { EcScript::Cprt, 0 }, MapSubtype::DEAD,
             EcScript::Cprt, EcFont::NORMAL, Bfg::WORD_TO },
