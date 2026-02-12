@@ -582,6 +582,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "FLAG-3",         Dicf::PART_NOUN },
     { "FLAG-4",         Dicf::PART_NOUN },
     { "FLAG-5",         Dicf::PART_NOUN },
+    { "FLAG-6",         Dicf::PART_NOUN },
+    { "FLAG-7",         Dicf::PART_NOUN },
+    { "FLAG-8",         Dicf::PART_NOUN },
     { "FLIP",           Dicf::PART_NOUN },
     { "HARMONIC",       Dicf::PART_NOUN },      // OK, music only
     { "LOURE",          Dicf::PART_NOUN },
