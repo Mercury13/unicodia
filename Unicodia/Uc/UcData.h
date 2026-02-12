@@ -209,6 +209,7 @@ namespace uc {
            Z_MTH_2,
          MUSIC,
            Z_MUS_1,
+           Z_MUS_2,
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
