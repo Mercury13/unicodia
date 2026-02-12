@@ -1354,12 +1354,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tang, '2' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
     /// @todo [U18] Jurchen
-    { 0x18E00, 0x1919F, { 0x18E00, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x18E00, 0x1919F, { 0x18E49, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Jurchen",
             { EcScript::Jurc, 0 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
     /// @todo [U18] Jurchen radicals
-    { 0x191A0, 0x191DF, { 0x191A0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x191A0, 0x191DF, { 0x191B1, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Jurchen Radicals",
             { EcScript::Jurc, 1 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -1677,7 +1677,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'J' }, MapSubtype::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::STOCK_BLOCK_DESC },
     /// @todo [U18] Seal
-    { 0x3D000, 0x3FC3F, { 0x323B0, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x3D000, 0x3FC3F, { 0x3D002, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Seal",
             MyName::INST, MapSubtype::DEAD,
             EcScript::Seal, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::CJK },

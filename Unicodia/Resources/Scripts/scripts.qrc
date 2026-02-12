@@ -246,6 +246,8 @@
         <file>18B00.svg</file>
         <file>18D00.svg</file>
         <file>18D80.svg</file>
+        <file>18E00.svg</file>
+        <file>191A0.svg</file>
         <file>1AFF0.svg</file>
         <file>1B000.svg</file>
         <file>1B100.svg</file>
@@ -299,6 +301,7 @@
         <file>30000.svg</file>
         <file>31350.svg</file>
         <file>323B0.svg</file>
+        <file>3D000.svg</file>
         <file>E0000.svg</file>
         <file>E0100.svg</file>
     </qresource>
