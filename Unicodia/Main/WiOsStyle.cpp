@@ -86,7 +86,7 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
             ui->lbOs->setText({});
             ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
         } else {
-            QFontDatabase::WritingSystem ws = ch.scriptEx().qtCounterpart;
+            QFontDatabase::WritingSystem ws = ch.scriptSubstituted().qtCounterpart;
             auto font = fontMatch.sysFontFor(ch, ws, static_cast<int>(Fsz::BIG));
             if (font) {
                 char buf[300];

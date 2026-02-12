@@ -1523,10 +1523,21 @@ QString uc::Cp::osProxy() const
 }
 
 
-uc::EcScript uc::Cp::ecScriptEx() const
+uc::EcScript uc::Cp::ecScriptSubstituted() const
 {
     if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
         return ecScript;
+    return block().ecScript;
+}
+
+
+uc::EcScript uc::Cp::ecScriptDescribed() const
+{
+    auto& blk = block();
+    if (!blk.flags.have(Bfg::DESCRIBE_SCRIPT)) {
+        if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
+            return ecScript;
+    }
     return block().ecScript;
 }
 

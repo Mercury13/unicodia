@@ -446,8 +446,15 @@ namespace uc {
         const BidiClass& bidiClass() const;
         const Script& script() const;
         const Numeric& numeric() const;
-        EcScript ecScriptEx() const;
-        const Script& scriptEx() const;
+
+        ///  @return  Script used in font substitution
+        EcScript ecScriptSubstituted() const;
+        const Script& scriptSubstituted() const;
+
+        ///  @return  Script used in description
+        EcScript ecScriptDescribed() const;
+        const Script& scriptDecribed() const;
+
         const Font& firstFont() const;
         const BreakInfo& breakInfo() const;
 

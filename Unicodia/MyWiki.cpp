@@ -3440,7 +3440,7 @@ QString mywiki::buildHtml(
                     appendBlockSubhead(text);
                     // No link checking here, that’s OK for now
                     appendWiki(text, blk, blk.loc.description, wiki::Mode::ARTICLE, NO_LINKS);
-                } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
+                } else if (auto& sc = cp.scriptDecribed(); &sc != uc::scriptInfo){
                     // Script description
                     appendScriptSubhead(text);
                     mywiki::appendHtml(text, sc, false);

@@ -1465,8 +1465,10 @@ inline const uc::Category& uc::Cp::category() const { return categoryInfo[static
 inline const uc::BidiClass& uc::Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
 inline const uc::Script& uc::Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
 inline const uc::BreakInfo& uc::Cp::breakInfo() const { return ::uc::breakInfo[breakClass]; }
-inline const uc::Script& uc::Cp::scriptEx() const
-    { return scriptInfo[static_cast<int>(ecScriptEx())]; }
+inline const uc::Script& uc::Cp::scriptSubstituted() const
+    { return scriptInfo[static_cast<int>(ecScriptSubstituted())]; }
+inline const uc::Script& uc::Cp::scriptDecribed() const
+    { return scriptInfo[static_cast<int>(ecScriptDescribed())]; }
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
