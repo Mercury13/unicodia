@@ -1538,7 +1538,7 @@ uc::EcScript uc::Cp::ecScriptDescribed() const
         if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
             return ecScript;
     }
-    return block().ecScript;
+    return blk.ecScript;
 }
 
 
