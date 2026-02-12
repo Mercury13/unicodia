@@ -278,6 +278,7 @@ namespace uc {
          CJK_ENCLOSED,
            Z_CJE_1,
         CUNEIFORM,
+        CUNEIFORM_ARCHAIC,
         DEVANAGARI,
           DEVANAGARI_SYSTEM,
         DEVANAGARI_BIGGER,  ///< Also use fixup font

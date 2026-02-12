@@ -1240,11 +1240,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA, Ifg::SMALLER },
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapSubtype::DEAD, EcScript::Xsux },
-    /// @todo [urgent] Archaic cuneiform
-    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::MISSING | Ifg::PAINT_SVG },
+    // Archaic cuneiform: by Robin Leroy
+    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hx + ImbaX::LEFT_2 },
             "Archaic Cuneiform Numerals",
             { EcScript::Xsux, 3 }, MapSubtype::DEAD,
-            EcScript::Pcun, EcFont::NORMAL, Bfg::DESCRIBE_SCRIPT },
+            EcScript::Pcun, EcFont::CUNEIFORM_ARCHAIC, Bfg::DESCRIBE_SCRIPT },
     // Cypro-Minoan OK
     { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::HISTORICAL | Ifg::BIGGER },
             "Cypro-Minoan",
