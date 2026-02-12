@@ -1465,7 +1465,7 @@ constinit const uc::Block uc::blocks[] {
             "Sutton SignWriting",
             { EcScript::Sgnw, 0}, MapSubtype::SYM_CODE, EcScript::Sgnw },
     /// @todo [U18] Misc sym and arr
-    { 0x1DB00, 0x1DBFF, { 0x1DB00, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x1DB00, 0x1DBFF, { 0x1DB10, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Miscellaneous Symbols and Arrows Extended",
             { EcScript::ZSYM, 3 }, MapSubtype::SYM_OTHER,
             EcScript::NONE },
