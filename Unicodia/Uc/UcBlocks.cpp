@@ -1241,7 +1241,7 @@ constinit const uc::Block uc::blocks[] {
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapSubtype::DEAD, EcScript::Xsux },
     /// @todo [urgent] Archaic cuneiform
-    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::MISSING },
+    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::MISSING | Ifg::PAINT_SVG },
             "Archaic Cuneiform Numerals",
             { EcScript::Xsux, 3 }, MapSubtype::DEAD,
             EcScript::Pcun, EcFont::NORMAL, Bfg::DESCRIBE_SCRIPT },
@@ -1430,7 +1430,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 3 }, MapSubtype::SYM_CODE,
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
     /// @todo [U18] Music ex
-    { 0x1D250, 0x1D28F, { 0x1D250, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x1D250, 0x1D28F, { 0x1D257, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
             "Musical Symbols Supplement",
             { EcScript::ZMUS, 1 }, MapSubtype::SYM_CODE,
             EcScript::NONE },
