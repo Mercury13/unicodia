@@ -2207,6 +2207,7 @@ void FmMain::dumpTiles()
         }
     }
     doc.save_file("opt.xml");
+    QMessageBox::information(this, "Dump tiles", "Tiles dumped to opt.xml");
 }
 
 
