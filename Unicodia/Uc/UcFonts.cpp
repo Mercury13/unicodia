@@ -26,8 +26,9 @@ constexpr std::string_view FNAME_FUNKY = "UnicodiaFunky.ttf";
 constexpr uc::Family FAM_FUNKY { FNAME_FUNKY };
 constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHanBasic.ttf";
 constexpr uc::Family FAM_BABEL_23 { "BabelStoneHanExtra.ttf" };
-constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf" };
+constexpr uc::Family FNAME_KOREAN { "UtoSansKR-Regular.ttf" };
 constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
+constexpr uc::Family FAM_TANGUT_FIXUP { "UFSTangutFixup.ttf", uc::Fafg::STRONG_TOFU };
 
 constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
@@ -112,7 +113,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …2
     { FNAME_MUSIC_FIXUP, Ffg::FALL_TO_NEXT, 110_pc },                           // Music
       { FNAME_NOTOMUSIC, Ffg::FALL_TO_NEXT, 110_pc },                           // …1
-      { "UFSTangutFixup.ttf", 110_pc },                                         // …2
+      { FAM_TANGUT_FIXUP, 110_pc },                                             // …2
     { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 8_top, 155_pc },                    // Music bigger
     { FNAME_NOTOMUSIC, Ffg::GRAPHIC_SAMPLE, 20_top },                           // Music normal
     { "Gadugi" },                                                               // Gadugi
@@ -259,6 +260,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                           // Latin
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID },                     // …1
       { FNAME_NOTO },                                                           // …2
+    { FAM_FUNKY, Ffg::FALL_TO_NEXT },                                           // Latin G
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
+      { FAM_TANGUT_FIXUP },                                                     // …2
          // The biggest font possible w/o changes in height
     { "Mingzat-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 18_top, 80_pc },              // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
@@ -324,7 +328,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
-    { { "UFSTangutFixup.ttf", Fafg::STRONG_TOFU }, Ffg::FALL_TO_NEXT, 125_pc }, // Tangut
+    { FAM_TANGUT_FIXUP, Ffg::FALL_TO_NEXT, 125_pc },                            // Tangut
       { "NotoSerifTangut-Regular.ttf", 125_pc },                                // …1
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                       // Technical
       { FAM_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // …1

@@ -1473,7 +1473,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_SMALL_PAINT, 4_hx + uc::ImbaX::RIGHT_3 },
             "Latin Extended-G",
             { EcScript::Latn, 'G'}, MapSubtype::LATIN,
-            EcScript::Latn, EcFont::FUNKY, Bfg::STOCK_BLOCK_DESC },
+            EcScript::Latn, EcFont::LATIN_G, Bfg::STOCK_BLOCK_DESC },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE, Ifg::PAINT_SVG, 5_hy },
             "Glagolitic Supplement",
