@@ -243,8 +243,9 @@ namespace ie {
         const uc::SynthIcon& icon;
     };
 
-    /// Programmatic drawing of format pictures
-    /// Example: Tags
+    /// Programmatic drawing of format pictures.
+    ///     The image inside is hinted like in Margin.
+    /// Example: Tags, with dotted outside and image inside
     /// Type: lo-res, generic
     class Format : public Veng
     {
