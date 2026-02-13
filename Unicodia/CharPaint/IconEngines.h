@@ -332,6 +332,7 @@ namespace ie {
     enum class Mfg : unsigned char {
         IMBA_UP = 1,  ///< [+] The character is top-heavy, i.e. imbalance 0.5px−ε upwards
                       ///< (no fine-grained like ±0.4px here)
+                      ///< The only example: Kawi which is not complete square
     };
 
     enum class HalfPixelDown : unsigned char { NO, YES };
