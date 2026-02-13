@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1770953545
+ModificationTime: 1770954387
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -882,7 +882,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 33 13
+WinInfo: 330 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -896,7 +896,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Virama BR" "Common BLWM-1" "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1433
+BeginChars: 1114266 1434
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -43462,7 +43462,7 @@ SplineSet
  452 56 l 257,37,-1
  452 0 l 257,34,-1
 EndSplineSet
-Validated: 1592321
+Validated: 1068033
 EndChar
 
 StartChar: Pun.TwoDotLeader
@@ -194190,7 +194190,7 @@ SplineSet
  670 431 670 431 715 467 c 1,56,57
  673 484 673 484 673 530 c 0,0,1
 EndSplineSet
-Validated: 9980929
+Validated: 1068033
 EndChar
 
 StartChar: uni20C3
@@ -194516,7 +194516,7 @@ SplineSet
  214 297 l 1,38,-1
  532 297 l 1,0,1
 EndSplineSet
-Validated: 1592321
+Validated: 1068033
 EndChar
 
 StartChar: uni209D
@@ -194623,6 +194623,7 @@ SplineSet
  133 -96 l 1,49,-1
  48 167 l 2,0,1
 EndSplineSet
+Validated: 1068033
 EndChar
 
 StartChar: uni209E
@@ -194717,12 +194718,13 @@ SplineSet
  23 -238 l 1,43,-1
  23 -208 l 1,0,1
 EndSplineSet
+Validated: 1068033
 EndChar
 
 StartChar: uni209F
 Encoding: 8351 8351 1431
 Width: 335
-Flags: WO
+Flags: W
 HStem: -96 36<109 255.2> 190 36<82.2852 212>
 VStem: 34 31<137 143> 273 31<-11 4>
 TtInstrs:
@@ -194856,6 +194858,7 @@ SplineSet
  300 -96 l 1,19,-1
  23 -96 l 1,0,-1
 EndSplineSet
+Validated: 1068033
 EndChar
 
 StartChar: uni208F
@@ -194907,6 +194910,113 @@ SplineSet
  99 760 l 1,6,-1
  99 500 l 1,7,-1
  40 500 l 1,4,-1
+EndSplineSet
+Validated: 1068033
+EndChar
+
+StartChar: uniAB69
+Encoding: 43881 43881 1433
+Width: 559
+Flags: W
+HStem: 407 27<0 36.6853 98.6296 142 390 427.201 528.315 559> 668 61<149.771 161.844 374.309 386.109>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 39
+MDAP[rnd]
+PUSHB_2
+ 5
+ 23
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 40
+MDRP[min,rnd,black]
+PUSHB_3
+ 3
+ 7
+ 36
+SHP[rp2]
+SHP[rp2]
+SHP[rp2]
+PUSHB_1
+ 29
+MDAP[rnd]
+PUSHB_1
+ 18
+SHP[rp1]
+PUSHB_1
+ 45
+MDRP[min,rnd,black]
+PUSHB_1
+ 48
+SHP[rp2]
+SVTCA[x-axis]
+PUSHB_1
+ 50
+MDAP[rnd]
+PUSHB_2
+ 51
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 29
+ 40
+SRP1
+SRP2
+PUSHB_1
+ 47
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Umlaut" 286 729 basechar 0
+AnchorPoint: "Dot below" 268 409 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+511 466 m 2,0,1
+ 518 447 518 447 528 440.5 c 128,-1,2
+ 538 434 538 434 557 434 c 2,3,-1
+ 559 434 l 1,4,-1
+ 559 407 l 1,5,-1
+ 390 407 l 1,6,-1
+ 390 434 l 1,7,-1
+ 398 434 l 2,8,9
+ 418 434 418 434 427.5 439 c 128,-1,10
+ 437 444 437 444 437 459 c 0,11,12
+ 437 464 437 464 435.5 471 c 128,-1,13
+ 434 478 434 478 432 485 c 2,14,-1
+ 404 579 l 2,15,16
+ 397 601 397 601 390.5 627.5 c 128,-1,17
+ 384 654 384 654 382 668 c 1,18,-1
+ 380 668 l 1,19,20
+ 377 654 377 654 369.5 631 c 128,-1,21
+ 362 608 362 608 355 588 c 2,22,-1
+ 287 409 l 1,23,-1
+ 246 409 l 1,24,-1
+ 182 587 l 2,25,26
+ 175 606 175 606 167 630 c 128,-1,27
+ 159 654 159 654 157 668 c 1,28,-1
+ 155 668 l 1,29,30
+ 149 639 149 639 131 588 c 2,31,-1
+ 100 493 l 2,32,33
+ 94 475 94 475 94 463 c 0,34,35
+ 94 434 94 434 137 434 c 2,36,-1
+ 142 434 l 1,37,-1
+ 142 407 l 1,38,-1
+ 0 407 l 1,39,-1
+ 0 434 l 1,40,-1
+ 8 434 l 2,41,42
+ 27 434 27 434 37 442.5 c 128,-1,43
+ 47 451 47 451 57 481 c 2,44,-1
+ 141 729 l 1,45,-1
+ 198 729 l 1,46,-1
+ 282 492 l 1,47,-1
+ 369 729 l 1,48,-1
+ 426 729 l 1,49,-1
+ 511 466 l 2,0,1
 EndSplineSet
 EndChar
 EndChars
