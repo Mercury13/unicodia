@@ -1241,7 +1241,7 @@ constinit const uc::Block uc::blocks[] {
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapSubtype::DEAD, EcScript::Xsux },
     // Archaic cuneiform: by Robin Leroy
-    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::PAINT_SVG, 1_hx + ImbaX::LEFT_2 },
+    { 0x12550, 0x1268F, { 0x12550, EcContinent::ASIA, Ifg::PAINT_SVG | Ifg::BIGGER, 1_hx + ImbaX::LEFT_2 },
             "Archaic Cuneiform Numerals",
             { EcScript::Xsux, 3 }, MapSubtype::DEAD,
             EcScript::Pcun, EcFont::CUNEIFORM_ARCHAIC, Bfg::DESCRIBE_SCRIPT },
@@ -1271,7 +1271,7 @@ constinit const uc::Block uc::blocks[] {
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapSubtype::DEAD, EcScript::Hluw },
     // Gurung Khema now in Funky
-    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, {}, SvgHint{ 9, 1 } },
+    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, Ifg::BIGGER, SvgHint{ 9, 1 } },
             "Gurung Khema",
             { EcScript::Gukh, 0 }, MapSubtype::ALIVE, EcScript::Gukh },
     // Bamum supplement OK

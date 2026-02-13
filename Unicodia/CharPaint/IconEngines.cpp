@@ -557,8 +557,11 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         }
     }
     // Get size
-    if (si.flags.have(uc::Ifg::SMALLER))
+    if (si.flags.have(uc::Ifg::SMALLER)) {
         scale *= 0.8;
+    } else if (si.flags.have (uc::Ifg::BIGGER)) {
+        scale *= 1.25;
+    }
     auto size = lround(120 * scale);  // Draw icon a bit larger — 120%
     // Prepare sample string
     std::u32string_view sample = si.subj.sv();

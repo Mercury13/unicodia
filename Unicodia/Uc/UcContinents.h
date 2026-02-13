@@ -54,10 +54,10 @@ namespace uc {
         ROTATE_RTL_CCW    = 1<<7,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
         SHIFT_LEFT        = 1<<8,   ///< [+] To display a synth. icon, shift it to the left
         SHIFT_RIGHT       = 1<<9,   ///< [+] To display a synth. icon, shift it to the right
-        SHIFT_DOWN        = 1<<10,   ///< [+] To display a synth. icon, shift it down a bit
+        SHIFT_DOWN        = 1<<10,  ///< [+] To display a synth. icon, shift it down a bit
         SHIFT_UP          = 1<<11,  ///< [+] To display a synth. icon, shift it up a bit
         SMALL_SVG         = 1<<12,  ///< [+] Do not synthesize an icon, use small SVG from combobox
-        BIGGER            = 1<<13,  ///< [+] Bigger (SMALL_SVG only for now)
+        BIGGER            = 1<<13,  ///< [+] draw synth. icon bigger
         BIG_SVG           = 1<<14,  ///< [+] Do not synthesize an icon, use special big SVG
         BOTH_DOTTED       = 1<<15,  ///< [+] For Combining Half Marks: both characters sit on dotted circles
         PAINT_SVG         = 1<<16,  ///< [+] SVG is not in true colours and has placeholders instead
