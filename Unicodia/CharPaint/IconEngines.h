@@ -330,7 +330,8 @@ namespace ie {
     };
 
     enum class Mfg : unsigned char {
-        IMBA_UP = 1,  /// [+] imbalance 0.5px−ε upwards (no fine-grained like ±0.4px here)
+        IMBA_UP = 1,  ///< [+] The character is top-heavy, i.e. imbalance 0.5px−ε upwards
+                      ///< (no fine-grained like ±0.4px here)
     };
 
     enum class HalfPixelDown : unsigned char { NO, YES };
