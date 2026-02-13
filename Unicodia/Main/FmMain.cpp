@@ -264,8 +264,6 @@ namespace {
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
         case 0x104B0:   // Osage
             return new ie::Margin(block.synthIcon, ":ScCustom/osge.svg", ie::MRG_SIMPLER, NO_FLAGS);
-        case 0x10C80:   // Hungarian: specially-picked margin (top/bottom, of course, will wildly dance)
-            return new ie::Margin(block.synthIcon, ":ScCustom/hung.svg", MRG_3px, NO_FLAGS);
         case 0x11A00:   // Zanb square: margin=2px even on 1.25×
             return new ie::Margin(block.synthIcon, ":ScCustom/zanb.svg", ie::MRG_SIMPLER, NO_FLAGS);
         case 0x11F00:   // Kawi: margin=2dip

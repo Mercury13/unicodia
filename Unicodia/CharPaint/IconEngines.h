@@ -137,7 +137,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Block Elements icon
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class BlockElem : public Veng
     {
     public:
@@ -149,7 +149,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Box Drawings icon
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class BoxDraw : public Veng
     {
     public:
@@ -158,7 +158,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Control Pictures icon
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class ControlPic : public Veng
     {
     public:
@@ -166,8 +166,8 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
-    /// Programmatic drawing of Yijing icon
-    /// Type: lo-res
+    /// Programmatic drawing of pixel image, with pixel-perfect alignment
+    /// Type: lo-res, semi-custom (Yijing and Aegean)
     class CoarseImage : public Veng
     {
     public:
@@ -181,7 +181,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Tai Xuan Jing icons
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class Taixu : public Veng
     {
     public:
@@ -190,8 +190,8 @@ namespace ie {
     private:
     };
 
-    /// Programmatic drawing of Symbols for legacy computing
-    /// Type: lo-res
+    /// Programmatic drawing of wide pixel image; the right side may be obscured
+    /// Type: lo-res, semi-custom (both Legacy)
     class Legacy : public Veng
     {
     public:
@@ -203,7 +203,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Playing Cards
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class PlayingCard : public Veng
     {
     public:
@@ -216,7 +216,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Mahjong Tiles
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class Mahjong : public Veng
     {
     public:
@@ -228,8 +228,9 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
-    /// Programmatic drawing of Arrows
-    /// Type: lo-res
+    /// The most common engine: 16×16 image is hinted by some X and Y coords
+    /// Example: Devanagari (hinted by headstroke and stem)
+    /// Type: lo-res, generic
     class Hint : public Veng
     {
     public:
@@ -243,7 +244,8 @@ namespace ie {
     };
 
     /// Programmatic drawing of format pictures
-    /// Type: lo-res
+    /// Example: Tags
+    /// Type: lo-res, generic
     class Format : public Veng
     {
     public:
@@ -257,7 +259,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of Ideographic descriptions
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class CjkStructure : public Veng
     {
     public:
@@ -266,7 +268,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of tally marks
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class TallyMark : public Veng
     {
     public:
@@ -275,7 +277,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of enclosed alnum supp
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class ThreeD : public Veng
     {
     public:
@@ -288,7 +290,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of enclosed ideographic supp
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class SqIdeo : public Veng
     {
     public:
@@ -301,7 +303,7 @@ namespace ie {
     };
 
     /// Programmatic drawing of enclosed alnum ①
-    /// Type: lo-res
+    /// Type: lo-res, custom
     class OneCircle : public Veng
     {
     public:
@@ -313,6 +315,8 @@ namespace ie {
         dumb::Sp<LazySvg> texture;
     };
 
+    /// Programmatic drawing of Alphabetic Forms
+    /// Type: lo-res, custom
     class Ffi : public Veng
     {
     public:
@@ -336,8 +340,9 @@ namespace ie {
     /// For simpler chars: 2px even at 1.25×
     constexpr int MRG_SIMPLER = 13;
 
-    /// Drawing with constant margin around SVG (Kawi)
-    /// Type: lo-res
+    /// Drawing with constant margin around SVG
+    /// Example: Kawi, with smaller
+    /// Type: lo-res, generic
     class Margin : public Veng
     {
     public:
@@ -359,7 +364,7 @@ namespace ie {
     /// A tall W×14 image pixel-hinted by three lines:
     ///    top, bottom and some vertical line
     /// Example: Latin L is hinted by top serif, bottom line and stem
-    /// Type: lo-res
+    /// Type: lo-res, generic
     class Tall : public Veng
     {
     public:
@@ -387,6 +392,7 @@ namespace ie {
     /// A tall or wide thing hinted by both long sides
     /// Example: Hungarian rune looks like some sort of Cyrillic И,
     ///   and you need to align it to both vertical stems, the rest does not matter
+    /// Type: lo-res, generic
     class ByLong : public Veng
     {
     public:
@@ -402,8 +408,9 @@ namespace ie {
         QColor bgColor;
     };
 
-    /// Small letter (much shorter than 16×16 cell) hinted by top and bottom
-    ///
+    /// Accentuated small letter (much shorter than 16×16 cell) hinted by top and bottom
+    /// Example: Cherokee supp
+    /// Type: lo-res, generic
     class Small : public Veng
     {
     public:
