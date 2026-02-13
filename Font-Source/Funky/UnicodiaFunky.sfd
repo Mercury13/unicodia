@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1770944669
+ModificationTime: 1770953545
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -896,7 +896,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Virama BR" "Common BLWM-1" "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1429
+BeginChars: 1114266 1433
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -13549,7 +13549,7 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
-33 729 m 1,0,-1
+33 729 m 5,0,-1
  205 729 l 1,1,-1
  205 702 l 1,2,-1
  199 702 l 2,3,4
@@ -13584,7 +13584,7 @@ SplineSet
  85 688 85 688 71.5 695 c 128,-1,39
  58 702 58 702 40 702 c 2,40,-1
  33 702 l 1,41,-1
- 33 729 l 1,0,-1
+ 33 729 l 5,0,-1
 62 602 m 128,-1,43
  51 602 51 602 45 594.5 c 128,-1,44
  39 587 39 587 39 578 c 0,45,46
@@ -43462,7 +43462,7 @@ SplineSet
  452 56 l 257,37,-1
  452 0 l 257,34,-1
 EndSplineSet
-Validated: 1068033
+Validated: 1592321
 EndChar
 
 StartChar: Pun.TwoDotLeader
@@ -193785,6 +193785,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 413 -2 basechar 0
+AnchorPoint: "Umlaut" 354 713 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -193822,7 +193824,7 @@ SplineSet
  701 284 l 1,39,40
  697 241 697 241 679 201 c 1,6,-1
 EndSplineSet
-Validated: 19457
+Validated: 1068033
 EndChar
 
 StartChar: Onao.A
@@ -194145,6 +194147,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 250 -9 basechar 0
+AnchorPoint: "Umlaut" 977 661 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -194186,7 +194190,7 @@ SplineSet
  670 431 670 431 715 467 c 1,56,57
  673 484 673 484 673 530 c 0,0,1
 EndSplineSet
-Validated: 19457
+Validated: 9980929
 EndChar
 
 StartChar: uni20C3
@@ -194325,6 +194329,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 418 0 basechar 0
+AnchorPoint: "Umlaut" 418 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -194388,7 +194394,7 @@ SplineSet
  594 114 594 114 616 164 c 128,-1,72
  638 214 638 214 644 251 c 1,66,-1
 EndSplineSet
-Validated: 19457
+Validated: 1068033
 EndChar
 
 StartChar: uni20C4
@@ -194472,6 +194478,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Dot below" 772 0 basechar 0
+AnchorPoint: "Umlaut" 780 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -194507,6 +194515,398 @@ SplineSet
  158 196 l 1,37,-1
  214 297 l 1,38,-1
  532 297 l 1,0,1
+EndSplineSet
+Validated: 1592321
+EndChar
+
+StartChar: uni209D
+Encoding: 8349 8349 1429
+Width: 559
+Flags: W
+HStem: -96 60<172.204 184.312 396.492 409.122> 199 27<0 30.6853 131.799 169 417 459.919 521.799 559>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 48
+MDAP[rnd]
+PUSHB_1
+ 45
+SHP[rp1]
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+PUSHB_1
+ 28
+SHP[rp2]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_3
+ 7
+ 36
+ 40
+SHP[rp1]
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 5
+MDRP[min,rnd,black]
+PUSHB_2
+ 23
+ 38
+SHP[rp2]
+SHP[rp2]
+SVTCA[x-axis]
+PUSHB_1
+ 50
+MDAP[rnd]
+PUSHB_2
+ 51
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 4
+ 18
+SRP1
+SRP2
+PUSHB_1
+ 47
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Dot below" 277 -96 basechar 0
+AnchorPoint: "Umlaut" 292 224 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+48 167 m 2,0,1
+ 41 186 41 186 31 192.5 c 128,-1,2
+ 21 199 21 199 2 199 c 2,3,-1
+ 0 199 l 1,4,-1
+ 0 226 l 1,5,-1
+ 169 226 l 1,6,-1
+ 169 199 l 1,7,-1
+ 161 199 l 2,8,9
+ 141 199 141 199 131.5 193.5 c 128,-1,10
+ 122 188 122 188 122 173 c 0,11,12
+ 122 168 122 168 123.5 161 c 128,-1,13
+ 125 154 125 154 127 147 c 2,14,-1
+ 155 53 l 2,15,16
+ 161 32 161 32 167.5 5.5 c 128,-1,17
+ 174 -21 174 -21 177 -36 c 1,18,-1
+ 179 -36 l 1,19,20
+ 182 -21 182 -21 189 2 c 128,-1,21
+ 196 25 196 25 204 45 c 2,22,-1
+ 271 224 l 1,23,-1
+ 313 224 l 1,24,-1
+ 377 46 l 2,25,26
+ 384 26 384 26 391.5 2 c 128,-1,27
+ 399 -22 399 -22 402 -36 c 1,28,-1
+ 404 -36 l 1,29,30
+ 410 -7 410 -7 427 45 c 2,31,-1
+ 459 139 l 2,32,33
+ 465 158 465 158 465 169 c 0,34,35
+ 465 199 465 199 422 199 c 2,36,-1
+ 417 199 l 1,37,-1
+ 417 226 l 1,38,-1
+ 559 226 l 1,39,-1
+ 559 199 l 1,40,-1
+ 550 199 l 2,41,42
+ 531 199 531 199 521.5 190 c 128,-1,43
+ 512 181 512 181 502 152 c 2,44,-1
+ 418 -96 l 1,45,-1
+ 361 -96 l 1,46,-1
+ 277 140 l 1,47,-1
+ 189 -96 l 1,48,-1
+ 133 -96 l 1,49,-1
+ 48 167 l 2,0,1
+EndSplineSet
+EndChar
+
+StartChar: uni209E
+Encoding: 8350 8350 1430
+Width: 370
+Flags: W
+HStem: -238 30<23 96.1136> 199 27<2 30.7166 129.711 167 233 272.478 339.315 370>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 43
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[min,rnd,black]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_3
+ 11
+ 28
+ 32
+SHP[rp1]
+SHP[rp1]
+SHP[rp1]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_1
+ 30
+SHP[rp2]
+SVTCA[x-axis]
+PUSHB_1
+ 44
+MDAP[rnd]
+PUSHB_2
+ 45
+ 1
+CALL
+SVTCA[y-axis]
+PUSHB_2
+ 8
+ 0
+SRP1
+SRP2
+PUSHB_2
+ 20
+ 38
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Dot below" 138 -228 basechar 0
+AnchorPoint: "Umlaut" 200 226 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+23 -208 m 1,0,1
+ 89 -208 89 -208 120.5 -175.5 c 128,-1,2
+ 152 -143 152 -143 168 -95 c 1,3,-1
+ 49 168 l 2,4,5
+ 40 186 40 186 31 192.5 c 128,-1,6
+ 22 199 22 199 4 199 c 2,7,-1
+ 2 199 l 1,8,-1
+ 2 226 l 1,9,-1
+ 167 226 l 1,10,-1
+ 167 199 l 1,11,-1
+ 164 199 l 2,12,13
+ 126 199 126 199 126 171 c 0,14,15
+ 126 161 126 161 131 148 c 2,16,-1
+ 176 44 l 2,17,18
+ 185 24 185 24 193.5 -0.5 c 128,-1,19
+ 202 -25 202 -25 205 -39 c 1,20,21
+ 209 -23 209 -23 215.5 -5.5 c 128,-1,22
+ 222 12 222 12 228 28 c 2,23,-1
+ 271 144 l 2,24,25
+ 277 159 277 159 277 171 c 0,26,27
+ 277 198 277 198 235 199 c 2,28,-1
+ 233 199 l 1,29,-1
+ 233 226 l 1,30,-1
+ 370 226 l 1,31,-1
+ 370 199 l 1,32,-1
+ 368 199 l 2,33,34
+ 349 198 349 198 339 189 c 128,-1,35
+ 329 180 329 180 318 153 c 2,36,-1
+ 220 -98 l 2,37,38
+ 203 -141 203 -141 187.5 -168.5 c 128,-1,39
+ 172 -196 172 -196 152.5 -211 c 128,-1,40
+ 133 -226 133 -226 104 -232 c 128,-1,41
+ 75 -238 75 -238 30 -238 c 2,42,-1
+ 23 -238 l 1,43,-1
+ 23 -208 l 1,0,1
+EndSplineSet
+EndChar
+
+StartChar: uni209F
+Encoding: 8351 8351 1431
+Width: 335
+Flags: WO
+HStem: -96 36<109 255.2> 190 36<82.2852 212>
+VStem: 34 31<137 143> 273 31<-11 4>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 12
+MDRP[min,rnd,black]
+PUSHB_3
+ 12
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 12
+ 17
+ 9
+CALL
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_3
+ 3
+ 9
+ 10
+CALL
+PUSHB_4
+ 64
+ 3
+ 8
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 20
+MDAP[rnd]
+PUSHB_1
+ 8
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_1
+ 7
+SRP0
+PUSHB_2
+ 17
+ 1
+CALL
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+PUSHB_2
+ 21
+ 1
+CALL
+PUSHB_2
+ 7
+ 8
+SRP1
+SRP2
+PUSHB_1
+ 9
+IP
+PUSHB_1
+ 17
+SRP1
+PUSHB_2
+ 2
+ 12
+IP
+IP
+PUSHB_1
+ 18
+SRP2
+PUSHB_3
+ 11
+ 10
+ 19
+IP
+IP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 12
+ 0
+SRP1
+SRP2
+PUSHB_1
+ 1
+IP
+PUSHB_2
+ 9
+ 3
+SRP1
+SRP2
+PUSHB_1
+ 11
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Dot below" 166 -96 basechar 0
+AnchorPoint: "Umlaut" 175 226 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+23 -96 m 1,0,-1
+ 23 -72 l 1,1,-1
+ 212 190 l 1,2,-1
+ 116 190 l 2,3,4
+ 91 190 91 190 82 178.5 c 128,-1,5
+ 73 167 73 167 66 143 c 2,6,-1
+ 65 137 l 1,7,-1
+ 34 137 l 1,8,-1
+ 41 226 l 1,9,-1
+ 299 226 l 1,10,-1
+ 299 201 l 1,11,-1
+ 109 -60 l 1,12,-1
+ 223 -60 l 2,13,14
+ 246 -60 246 -60 255.5 -46 c 128,-1,15
+ 265 -32 265 -32 270 -11 c 2,16,-1
+ 273 4 l 1,17,-1
+ 304 4 l 1,18,-1
+ 300 -96 l 1,19,-1
+ 23 -96 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uni208F
+Encoding: 8335 8335 1432
+Width: 139
+Flags: W
+VStem: 40 59<-199 61 500 760>
+TtInstrs:
+SVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 4
+SHP[rp2]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+SHP[rp2]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_2
+ 9
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+AnchorPoint: "Dot below" 70 -199 basechar 0
+AnchorPoint: "Umlaut" 70 760 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+40 -199 m 1,0,-1
+ 40 61 l 1,1,-1
+ 99 61 l 1,2,-1
+ 99 -199 l 1,3,-1
+ 40 -199 l 1,0,-1
+40 500 m 1,4,-1
+ 40 760 l 1,5,-1
+ 99 760 l 1,6,-1
+ 99 500 l 1,7,-1
+ 40 500 l 1,4,-1
 EndSplineSet
 EndChar
 EndChars
