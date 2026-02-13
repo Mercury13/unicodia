@@ -341,7 +341,7 @@ namespace ie {
     constexpr int MRG_SIMPLER = 13;
 
     /// Drawing with constant margin around SVG
-    /// Example: Kawi, with smaller
+    /// Example: Kawi, with 2px margin around small square K
     /// Type: lo-res, generic
     class Margin : public Veng
     {
