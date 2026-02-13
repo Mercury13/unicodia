@@ -649,7 +649,9 @@
 			<!-- B --><d>฿ ₿</d>
 			<!-- C --><d>₵ ¢ ₡</d>
 			<!-- D --><sq v="💲" name="dollar emoji" />
-				<d>₫ ֏</d>
+			<d>⃃</d><!-- dirham -->
+			<d>₫</d><!-- dong -->
+			<d>֏</d><!-- dram -->
 			<!-- E --><d>€</d>
 			<!-- F --><sq v="ƒ" name="florin/guilder sign" />
 				<d>₣</d>
@@ -660,7 +662,13 @@
 			<!-- M --><d>₼</d>
 			<!-- N --><d>₦</d>
 			<!-- P --><d>₱ £</d>
-			<!-- R --><d>﷼  ៛  ₽ ₹ ৳ ૱ ௹ ₨</d>
+			<!-- R -->
+			<d>﷼ ⃄</d><!-- rial -->
+			<d>៛ </d><!-- riel -->
+			<d>⃁</d><!-- riyal -->
+			<d>₽</d><!-- ruble -->
+			<d>⃂</d><!-- rufiyaa -->
+			<d>₹ ৳ ૱ ௹ ₨</d><!-- misc rupees -->
 			<!-- How to add Sinhala rupee? රු -->
 			<!-- S --><d>₪ ⃀</d>
 			<!-- T --><d>₸ ₮</d>
