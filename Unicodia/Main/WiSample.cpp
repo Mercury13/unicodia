@@ -182,6 +182,12 @@ void WiSample::showCp(
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
             headToSample();
         } break;
+    case uc::DrawMethod::SPACE_FRAMED: {
+            auto qfont = showCpBriefly(ch);
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setSpaceFramed(qfont, ch.subj);
+            headToSample();
+        } break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
             auto qfont = showCpBriefly(ch);

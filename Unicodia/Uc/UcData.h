@@ -471,6 +471,7 @@ namespace uc {
         // Font-based methods
         SAMPLE,             ///< Take font and draw string
         SPACE,              ///< Take font, measure space width and draw 2 lines
+        SPACE_FRAMED,       ///< For non-breaking spaces: same, but also frame
         MARCHEN,            ///< Special drawing method for Marchen
         SAMPLED_CONTROL,    ///< Draw dotted square and sample
         VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW

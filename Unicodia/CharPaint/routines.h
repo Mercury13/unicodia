@@ -47,6 +47,8 @@ void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font,
         QColor color,  ///< @warning actually changed
+        uc::FontPlace place,
+        bool isFramed,
         char32_t subj);
 
 void drawVirtualVirama(
@@ -145,6 +147,7 @@ public:
     using Super::Super;
     void setAbbreviation(std::u8string_view x);
     void setSpace(const QFont& font, char32_t aSubj);
+    void setSpaceFramed(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
     void setEmoji(char32_t aSubj);
     void setEmoji(std::u32string_view aText);
@@ -159,8 +162,8 @@ protected:
     void paintEvent(QPaintEvent *event);
 private:
     QSize initialSize;
-    enum class Mode {
-        NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
+    enum class Mode : unsigned char {
+        NONE, SPACE, SPACE_FRAMED, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
         EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA, SAMPLED_CONTROL,
         CHAR_OVER_EMOJI, GRAPHIC_SAMPLE };
     Mode mode = Mode::NONE;

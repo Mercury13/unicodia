@@ -206,10 +206,13 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             drawCustomControl(&painter, geometry(), palette().windowText().color(),
                         uc::FontPlace::SAMPLE, subj);
         } break;
-    case Mode::SPACE: {
+    case Mode::SPACE:
+    case Mode::SPACE_FRAMED: {
             QPainter painter(this);
             drawSpace(&painter, geometry(), qfont,
                       palette().windowText().color(),
+                      uc::FontPlace::SAMPLE,
+                      (mode == Mode::SPACE_FRAMED),
                       subj);
         } break;
     case Mode::EMOJI_CHAR: {
@@ -333,6 +336,11 @@ void WiCustomDraw::setVertical(const QFont& font, const uc::SampleProxy& pr, int
 void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
 {
     setSpace1(font, aSubj, Mode::SPACE);
+}
+
+void WiCustomDraw::setSpaceFramed(const QFont& font, char32_t aSubj)
+{
+    setSpace1(font, aSubj, Mode::SPACE_FRAMED);
 }
 
 void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
@@ -472,11 +480,6 @@ struct Rc6Matrix : public Rc3Matrix {
         { return QRect( QPoint{ x0, y0 + side3 - sideOneAndHalf }, QSize { side3, sideOneAndHalf } ); }
 };
 
-struct ControlFrame {
-    QRectF r;
-    qreal thickness;
-};
-
 namespace {
 
     inline QPointF pround(const QPointF& p)
@@ -524,6 +527,11 @@ QRectF adjustedToPhysicalPixels(
                  QPointF { corner1again.x() - loFrame, corner1again.y() - loFrame } };
     }
 }
+
+struct ControlFrame {
+    QRectF r;
+    qreal thickness;
+};
 
 enum class Thinner { NO, YES };
 
@@ -850,8 +858,14 @@ QSize spaceDimensions(const QFont& font, char32_t subj)
 
 void drawSpace(
         QPainter* painter, const QRect& rect,
-        const QFont& font, QColor color, char32_t subj)
+        const QFont& font, QColor color,
+        uc::FontPlace place, bool isFramed,
+        char32_t subj)
 {
+    if (isFramed) {
+        drawControlFrame(painter, rect, color,
+            (place == uc::FontPlace::SAMPLE) ? Thinner::YES : Thinner::NO);
+    }
     painter->setRenderHint(QPainter::Antialiasing, painter->device()->devicePixelRatio() != 1.0);
     // Quotient to convert space height to line thickness
     constexpr auto Q_H2THICK = 1.0 / 25.0;
@@ -968,7 +982,10 @@ void drawChar(
         drawAbbreviation(painter, rect, cp.abbrev(), color);
         break;
     case uc::DrawMethod::SPACE:
-        drawSpace(painter, rect, *fontAt(method, sizePt, sizePc, cp), color, cp.subj);
+    case uc::DrawMethod::SPACE_FRAMED:
+        drawSpace(painter, rect, *fontAt(method, sizePt, sizePc, cp), color,
+                  uc::FontPlace::CELL, (method == uc::DrawMethod::SPACE_FRAMED),
+                  cp.subj);
         break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {

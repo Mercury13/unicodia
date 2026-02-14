@@ -1490,7 +1490,9 @@ uc::DrawMethod uc::Cp::drawMethod(
     }
     // Vertical scripts do not have spaces, so OK
     if (isTrueSpace()) {
-        return uc::DrawMethod::SPACE;
+        return (breakClass == BreakClass::GL)
+            ? uc::DrawMethod::SPACE_FRAMED
+            : uc::DrawMethod::SPACE;
     }
     switch (ecCategory) {
     case uc::EcCategory::CONTROL:
