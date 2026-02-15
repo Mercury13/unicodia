@@ -478,7 +478,6 @@ namespace uc {
         DrawMethod drawMethod(EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const;
         TofuInfo tofuInfo(SvgChecker& svgChecker) const;
         constexpr bool isAbbreviated() const noexcept { return ((flags & uc::m::ALL) == uc::m::ABBREVIATION); }
-        constexpr bool isNoAa() const noexcept { return ((flags & uc::m::ALL) == uc::m::NO_AA); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const noexcept { return flags.have(Cfg::U_DEPRECATED); }
         constexpr bool isDefaultIgnorable() const noexcept { return flags.have(Cfg::U_DEF_IGNORABLE); }

@@ -892,8 +892,8 @@ std::optional<QFont> fontAt(
         return {};
     auto font = cp.font(match::Normal::INST);
     Flags<uc::FontGetFg> flags;
-    if (cp.isNoAa())
-        flags |= uc::FontGetFg::NO_AA;
+    //if (cp.isNoAa())
+    //    flags |= uc::FontGetFg::NO_AA;
     if (cp.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         flags |= uc::FontGetFg::KNOWN_TOFU;
     auto r = font->get(uc::FontPlace::CELL, sizePt * sizePc / 100,

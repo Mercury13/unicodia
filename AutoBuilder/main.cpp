@@ -501,9 +501,6 @@ int main()
         // Tags
         if (cp >= ::cp::TAG_MIN && cp <= ::cp::TAG_MAX)
                     flags |= uc::m::CUSTOM_CONTROL;
-        // No anti-aliasing
-        if (isNoAa(cp))
-            flags |= uc::m::NO_AA;
         // Default-ignorable
         if (props.defaultIgnorable.contains(cp)) {
             flags |= uc::Cfg::U_DEF_IGNORABLE;

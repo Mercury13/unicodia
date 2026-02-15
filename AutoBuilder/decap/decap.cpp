@@ -350,9 +350,9 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2A79, 0x2AAD },  // greater-less
 };
 
-const std::set<RangeByEnd> noAaRanges {
+//const std::set<RangeByEnd> noAaRanges {
 //    { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
-};
+//};
 
 constexpr auto TWO_STYLES = uc::Cfg::G_STYLE_0 | uc::Cfg::G_STYLE_1;
 
@@ -1129,15 +1129,15 @@ bool isAlternate(char32_t x)
 }
 
 
-bool isNoAa(char32_t x)
-{
-    auto it = noAaRanges.lower_bound(RangeByEnd{x,x});
-    if (it == noAaRanges.end())
-        return false;
-    // so x <= it->b
-    // upper_bound gives x < it->b
-    return (it->a <= x);
-}
+// bool isNoAa(char32_t x)
+// {
+//     auto it = noAaRanges.lower_bound(RangeByEnd{x,x});
+//     if (it == noAaRanges.end())
+//         return false;
+//     // so x <= it->b
+//     // upper_bound gives x < it->b
+//     return (it->a <= x);
+// }
 
 
 std::string decapitalizeEmoji(

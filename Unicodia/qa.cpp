@@ -66,6 +66,7 @@ qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
             newFamily = "[Custom control]"; break;
         case uc::DrawMethod::SAMPLE:
         case uc::DrawMethod::SPACE:
+        case uc::DrawMethod::SPACE_FRAMED:
         case uc::DrawMethod::MARCHEN:
         case uc::DrawMethod::SAMPLED_CONTROL:
         case uc::DrawMethod::VERTICAL_CW:
@@ -121,6 +122,7 @@ qa::BlockFontStats qa::blockFontStats(const uc::Block& block)
             ++nNonFont; break;
         case uc::DrawMethod::SAMPLE:
         case uc::DrawMethod::SPACE:
+        case uc::DrawMethod::SPACE_FRAMED:
         case uc::DrawMethod::MARCHEN:
         case uc::DrawMethod::SAMPLED_CONTROL:
         case uc::DrawMethod::VERTICAL_CW:

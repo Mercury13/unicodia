@@ -191,7 +191,6 @@ std::string decapitalizeEmoji(
         DecapDebug debug = DecapDebug::NO);
 std::string decapitalizeByTable(std::string_view x);
 bool isAlternate(char32_t x);
-bool isNoAa(char32_t x);
 Flags<uc::Cfg> styleFlags(char32_t x);
 
 size_t nExceptions();
