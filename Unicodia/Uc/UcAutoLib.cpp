@@ -4177,8 +4177,8 @@ constinit const uc::LibNode uc::libNodes[10246] {
 { U"\u205F", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4171
 { U"\u3000", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4172
 { U"\u00A0", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4173
-{ U"\u2007", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4174
-{ U"\u202F", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4175
+{ U"\u202F", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4174
+{ U"\u2007", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4175
 { U"\u2060", {}, 4124, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4176
 { U"\u2191", {}, 4125, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4177
 { U"\u2197", {}, 4125, 0, -1, {}, EcVersion::NOT_EMOJI },   // 4178
