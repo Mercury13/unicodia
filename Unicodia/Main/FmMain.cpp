@@ -236,9 +236,6 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 namespace {
 
-    /// Margin for tall/wide object hinted by both long sides
-    constexpr int MRG_3px = 33;
-
     QIconEngine* getCustomEngine(const uc::Block& block)
     {
         switch (block.startingCp) {
@@ -1010,6 +1007,10 @@ FmMain::FmMain(QWidget *parent)
     // Debug font layout
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_L), this);
     connect(shcut, &QShortcut::activated, this, &This::debugFontLayout);
+
+    // Debug drawing method
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_M), this);
+    connect(shcut, &QShortcut::activated, this, &This::searchForDrawingMethod);
 
     // Plurals
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_P), this);
@@ -2492,6 +2493,57 @@ void FmMain::searchForVs16()
     uc::CharFields fields;
     fields.fgs |= uc::Cfg::U_VS16_EMOJI;
     uc::CharFieldRequest rq(fields);
+    searchForRequest(rq);
+}
+
+
+namespace {
+
+    class DrawMethodRequest final : public uc::Request {
+    public:
+        DrawMethodRequest(const uc::Cp& x);
+        bool hasChars() const noexcept override { return true; }
+        bool isOk(const uc::Cp& cp) const override;
+    private:
+        static constexpr auto MY_DRAW = uc::EmojiDraw::CONSERVATIVE;
+        static constexpr auto& MY_SETS = uc::GlyphStyleSets::EMPTY;
+        uc::DrawMethod method;
+    };
+
+    DrawMethodRequest::DrawMethodRequest(const uc::Cp& x)
+        : method(x.drawMethod(MY_DRAW, MY_SETS)) {}
+
+    bool DrawMethodRequest::isOk(const uc::Cp& cp) const
+    {
+        auto itsMethod = cp.drawMethod(MY_DRAW, MY_SETS);
+        return (itsMethod == method);
+    }
+
+}   // anon namespace
+
+
+void FmMain::searchForDrawingMethod()
+{
+    static constexpr auto HEAD = "Search for drawing method";
+    const uc::Cp* cp = nullptr;
+    switch (ui->tabsMain->currentIndex()) {
+    case I_BLOCKS:
+        cp = model.charAt(ui->tableChars->currentIndex()).cp;
+        break;
+    case I_FAVS:
+        cp = favsModel.charAt(ui->tableFavs->currentIndex()).cp;
+        break;
+    default:
+        QMessageBox::critical(this, HEAD, "First switch to Blocks/Favourites.");
+        return;
+    }
+    if (!cp) {
+        QMessageBox::warning(
+                this, HEAD,
+                "Please select some character!");
+        return;
+    }
+    DrawMethodRequest rq(*cp);
     searchForRequest(rq);
 }
 

@@ -14,10 +14,12 @@
 * Ctrl+Shift+H — highlight all chars served by that font, to check font dispatching/correctness
 * Ctrl+Shift+I — find all characters, to test rendering of synthesized block icons
 * Ctrl+Shift+L — test font dispatching
+* Ctrl+Shift+M — search for chars with the same drawing method
 * Ctrl+Shift+P — test plural rules
 * Ctrl+Shift+Q — test emoji repainting engine
 * Ctrl+Shift+S — font stats for a block
 * Ctrl+Shift+T — tofu stats
+* Ctrl+Shift+V — find all VS16 emoji
 * Ctrl+Shift+W — debug algorithms of sorting blocks
 
 # Update font: what to pay attention to?

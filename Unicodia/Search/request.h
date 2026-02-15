@@ -11,14 +11,14 @@ namespace uc {
     public:
         /// @return [+] reply may contain characters
         ///         [-] character version of isOk does not matter
-        virtual bool hasChars() const = 0;
+        virtual bool hasChars() const noexcept = 0;
 
         /// @return [+] reply may contain emoji
         ///         [-] emoji version of isOk does not matter
-        virtual bool hasEmoji() const { return false; }
+        virtual bool hasEmoji() const noexcept { return false; }
 
         /// @return   version is persent in query
-        virtual EcVersion ecVersion() const { return EcVersion::NO_VALUE; }
+        virtual EcVersion ecVersion() const noexcept { return EcVersion::NO_VALUE; }
 
         virtual PrimaryObj primaryObj() const { return PrimaryObj::DFLT; }
 
@@ -49,8 +49,8 @@ namespace uc {
     public:
         static_assert(std::is_trivially_copy_constructible_v<CharFields>, "Something went wrong");
         CharFieldRequest(const CharFields& x) : fields(x) {}
-        bool hasChars() const override { return true; }
-        EcVersion ecVersion() const override { return fields.ecVersion; }
+        bool hasChars() const noexcept override { return true; }
+        EcVersion ecVersion() const noexcept override { return fields.ecVersion; }
         bool isOk(const Cp& cp) const override;
         PrimaryObj primaryObj() const override;
     private:
@@ -67,11 +67,11 @@ namespace uc {
         static_assert(std::is_trivially_copy_constructible_v<CharFields>, "Something went wrong");
         EmojiFieldRequest(const EmojiFields& x) : fields(x) {}
         // Do not search for chars…
-        bool hasChars() const override { return false; }
+        bool hasChars() const noexcept override { return false; }
         bool isOk(const Cp&) const override { return false; }
         // …but search for emoji
-        EcVersion ecVersion() const override { return fields.ecVersion; }
-        bool hasEmoji() const override { return true; }
+        EcVersion ecVersion() const noexcept override { return fields.ecVersion; }
+        bool hasEmoji() const noexcept override { return true; }
         bool isOk(const uc::LibNode&) const override;
     private:
         EmojiFields fields;
