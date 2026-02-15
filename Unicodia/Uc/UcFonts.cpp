@@ -133,10 +133,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
       { FAM_FUNKY, Ffg::FALL_TO_NEXT,  20_top + 20_bot },                       // …2, new additions
-      { "UFSArabicFixup.ttf", Ffg::FALL_TO_NEXT },                              // …3, new additions
+      { "UFSArabicFixup.ttf", Ffg::FALL_TO_NEXT },                              // …3, new additions, just for tofu
         // Two fonts OK, as they both are built-in
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Armenian
-      { "NotoSerifArmenian-Regular.ttf" },                                      // …1
+    { FAM_SANS_FRANKEN, Ffg::FALL_TO_NEXT },                                    // Armenian
+      { FAM_FUNKY },                                                            // …1
     { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF | Ffg::FALL_TO_NEXT },     // Balinese
       { FAM_FUNKY },                                                            // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum

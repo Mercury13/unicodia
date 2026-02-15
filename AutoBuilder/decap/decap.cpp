@@ -351,7 +351,7 @@ const std::set<RangeByEnd> alternateRanges {
 };
 
 const std::set<RangeByEnd> noAaRanges {
-    { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
+//    { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
 constexpr auto TWO_STYLES = uc::Cfg::G_STYLE_0 | uc::Cfg::G_STYLE_1;
