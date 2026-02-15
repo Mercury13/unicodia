@@ -2538,9 +2538,7 @@ void FmMain::searchForDrawingMethod()
         return;
     }
     if (!cp) {
-        QMessageBox::warning(
-                this, HEAD,
-                "Please select some character!");
+        QMessageBox::critical(this, HEAD, "Please select some character!");
         return;
     }
     DrawMethodRequest rq(*cp);
