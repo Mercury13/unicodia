@@ -76,7 +76,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 1 }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::FORCE_BUILTIN },
     // Armenian OK
-    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, {}, 14_hy },
+    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, Ifg::PAINT_SVG,
+                            SvgHint{ 3, 13, ImbaX::LEFT_3, ImbaY::ABOVE_4 } },
             "Armenian",
             { EcScript::Armn, 0 }, MapSubtype::ALIVE,
             EcScript::Armn, EcFont::NORMAL, Bfg::WORD_TO },
