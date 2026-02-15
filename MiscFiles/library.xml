@@ -28,7 +28,6 @@
 			<d> </d><!-- m/3 -->
 			<d> </d><!-- m/4 -->
 			<d> </d><!-- m/6 -->
-			<d> </d><!-- figure -->
 			<d> </d><!-- punct -->
 			<d> </d><!-- thin -->
 			<d> </d><!-- hair -->
@@ -36,6 +35,7 @@
 			<d> </d><!-- med math -->
 			<d>　</d><!-- ideo -->
 			<d> </d><!-- NBSP -->
+			<d> </d><!-- figure -->
 			<d> </d><!-- narrow NBSP -->
 			<d>⁠</d><!-- word joiner -->
 		</f>
