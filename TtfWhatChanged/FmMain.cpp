@@ -81,13 +81,25 @@ void FmMain::go()
         return;
     }
 
+    ec::Array<bool, mf::ChangeAction> filter {
+        ui->chkAdd->isChecked(),
+        ui->chkDel->isChecked(),
+        ui->chkChg->isChecked(),
+    };
+    auto where = std::find(filter.begin(), filter.end(), true);
+    if (where == filter.end()) {
+        QMessageBox::critical(this, "Error", "Check at least one event: add/del/chg");
+    }
+
     auto changeList = mf::whatChanged(mfOld, mfNew);
     QString text;
     for (auto& q : changeList) {
-        char buf[40];
-        snprintf(buf, std::size(buf), "%04X %s\n",
-                 int(q.cp), actionNames[q.action]);
-        text += buf;
+        if (filter[q.action]) {
+            char buf[40];
+            snprintf(buf, std::size(buf), "%04X %s\n",
+                     int(q.cp), actionNames[q.action]);
+            text += buf;
+        }
     }
     ui->memoResult->setPlainText(text);
 }

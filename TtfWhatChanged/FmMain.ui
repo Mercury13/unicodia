@@ -55,6 +55,36 @@
        <item row="2" column="2">
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
+          <widget class="QCheckBox" name="chkAdd">
+           <property name="text">
+            <string>Add</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="chkDel">
+           <property name="text">
+            <string>Del</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="chkChg">
+           <property name="text">
+            <string>Chg</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -90,6 +120,9 @@
   <tabstop>btBrowseOld</tabstop>
   <tabstop>edNew</tabstop>
   <tabstop>btBrowseNew</tabstop>
+  <tabstop>chkAdd</tabstop>
+  <tabstop>chkDel</tabstop>
+  <tabstop>chkChg</tabstop>
   <tabstop>btGo</tabstop>
   <tabstop>memoResult</tabstop>
  </tabstops>
