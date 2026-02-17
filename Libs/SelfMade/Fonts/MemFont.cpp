@@ -540,7 +540,7 @@ bool MemFont::traverseSegmentCoverage(const mf::Cmap& cmap, mf::CbCpGlyph cb) co
 
 namespace {
 
-    enum class Prio { NONE, BMP };
+    enum class Prio : unsigned char { NONE, BMP };
     struct Best {
         const mf::Cmap* cmap  = nullptr;
         Prio prio = Prio::NONE;

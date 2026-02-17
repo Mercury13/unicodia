@@ -92,13 +92,16 @@ void FmMain::go()
         return;
     }
 
+    ec::Array<unsigned, mf::ChangeAction> counts { 0u, 0u, 0u };
+
     auto changeList = mf::whatChanged(mfOld, mfNew);
     QString text;
     for (auto& q : changeList) {
         if (filter[q.action]) {
             char buf[40];
-            snprintf(buf, std::size(buf), "%04X %s\n",
-                     int(q.cp), actionNames[q.action]);
+            snprintf(buf, std::size(buf), "%04X %s #%u\n",
+                     int(q.cp), actionNames[q.action],
+                     ++counts[q.action]);
             text += buf;
         }
     }
