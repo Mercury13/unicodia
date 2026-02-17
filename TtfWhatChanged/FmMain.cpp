@@ -89,6 +89,7 @@ void FmMain::go()
     auto where = std::find(filter.begin(), filter.end(), true);
     if (where == filter.end()) {
         QMessageBox::critical(this, "Error", "Check at least one event: add/del/chg");
+        return;
     }
 
     auto changeList = mf::whatChanged(mfOld, mfNew);
