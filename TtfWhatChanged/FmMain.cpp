@@ -25,7 +25,8 @@ FmMain::~FmMain()
 void FmMain::browseFor(QLineEdit* ed)
 {
     filedlg::Filters filters {
-        { L"TTF fonts", L"*.ttf" }
+        { L"TTF fonts", L"*.ttf" },
+        filedlg::ALL_FILES,
     };
     auto text = filedlg::open(
                     this,
