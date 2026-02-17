@@ -26,5 +26,6 @@ private:
 private slots:
     void browseForOld();
     void browseForNew();
+    void go();
 };
 #endif // FMMAIN_H

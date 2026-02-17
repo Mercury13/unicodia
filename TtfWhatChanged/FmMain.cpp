@@ -3,9 +3,17 @@
 
 // Qt
 #include <QPushButton>
+#include <QMessageBox>
 
 // Qt ex
 #include "i_OpenSave.h"
+
+// Libs
+#include "u_EcArray.h"
+
+// Fonts
+#include "MemFont.h"
+#include "MemWhatChanged.h"
 
 FmMain::FmMain(QWidget *parent)
     : Super(parent)
@@ -15,6 +23,7 @@ FmMain::FmMain(QWidget *parent)
 
     connect(ui->btBrowseOld, &QPushButton::clicked, this, &This::browseForOld);
     connect(ui->btBrowseNew, &QPushButton::clicked, this, &This::browseForNew);
+    connect(ui->btGo, &QPushButton::clicked, this, &This::go);
 }
 
 FmMain::~FmMain()
@@ -48,4 +57,37 @@ void FmMain::browseForOld()
 void FmMain::browseForNew()
 {
     browseFor(ui->edNew);
+}
+
+namespace {
+
+    ec::Array<const char*, mf::ChangeAction> actionNames {
+        "add", "del", "chg"
+    };
+
+}   // anon namespace
+
+void FmMain::go()
+{
+    MemFont mfOld;
+    if (!mfOld.load(ui->edOld->text())) {
+        QMessageBox::critical(this, "Error", "Cannot load old file");
+        return;
+    }
+
+    MemFont mfNew;
+    if (!mfNew.load(ui->edNew->text())) {
+        QMessageBox::critical(this, "Error", "Cannot load new file");
+        return;
+    }
+
+    auto changeList = mf::whatChanged(mfOld, mfNew);
+    QString text;
+    for (auto& q : changeList) {
+        char buf[40];
+        snprintf(buf, std::size(buf), "%04X %s\n",
+                 int(q.cp), actionNames[q.action]);
+        text += buf;
+    }
+    ui->memoResult->setPlainText(text);
 }
