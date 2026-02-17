@@ -101,7 +101,7 @@ void FmMain::go()
     for (auto& q : changeList) {
         if (filter[q.action]) {
             char buf[40];
-            snprintf(buf, std::size(buf), "%04X %s #%u\n",
+            snprintf(buf, std::size(buf), "%04X %s *%u\n",
                      int(q.cp), actionNames[q.action],
                      ++counts[q.action]);
             text += buf;
