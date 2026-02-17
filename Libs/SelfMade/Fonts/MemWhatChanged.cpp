@@ -39,6 +39,7 @@ std::vector<mf::ChangeLine> mf::whatChanged(MemFont& ol, MemFont& nw)
             try {
                 auto oldData = ol.glyphData(itOld->second);
                 auto newData = ol.glyphData(itNew->second);
+                /// @todo [urgent] Changed everything?
                 if (!std::ranges::equal(oldData.glyph, newData.glyph)) {
                     r.emplace_back(oldCp, ChangeAction::CHG);
                 }
