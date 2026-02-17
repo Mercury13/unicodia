@@ -62,7 +62,7 @@ void FmMain::browseForNew()
 namespace {
 
     ec::Array<const char*, mf::ChangeAction> actionNames {
-        "add", "del", "chg"
+        "add", "del", "chg", "BAD!!!!!!!!",
     };
 
 }   // anon namespace
@@ -85,14 +85,16 @@ void FmMain::go()
         ui->chkAdd->isChecked(),
         ui->chkDel->isChecked(),
         ui->chkChg->isChecked(),
+        true,
     };
-    auto where = std::find(filter.begin(), filter.end(), true);
-    if (where == filter.end()) {
+    auto end = filter.itOf(mf::ChangeAction::BAD);
+    auto where = std::find(filter.begin(), end, true);
+    if (where == end) {
         QMessageBox::critical(this, "Error", "Check at least one event: add/del/chg");
         return;
     }
 
-    ec::Array<unsigned, mf::ChangeAction> counts { 0u, 0u, 0u };
+    ec::Array<unsigned, mf::ChangeAction> counts { 0u, 0u, 0u, 0u };
 
     auto changeList = mf::whatChanged(mfOld, mfNew);
     QString text;

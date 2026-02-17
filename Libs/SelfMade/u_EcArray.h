@@ -79,6 +79,9 @@ namespace ec {
         constexpr       V& back()        noexcept { return a[Size - 1]; }
         constexpr const V& back()  const noexcept { return a[Size - 1]; }
 
+        constexpr       iterator itOf(Ec i)       noexcept { return begin() + static_cast<size_t>(i); }
+        constexpr const_iterator itOf(Ec i) const noexcept { return begin() + static_cast<size_t>(i); }
+
         /// @return  C array
         constexpr       CArray& cArray()       noexcept { return a; }
         constexpr const CArray& cArray() const noexcept { return a; }

@@ -276,7 +276,7 @@ mf::Block2 MemFont::rqBlock(mf::Char4 name, uint32_t len)
         snprintf(buf, sizeof(buf), "Block <%.4s> not found", name.d.asChars);
         throw std::logic_error(buf);
     }
-    if (r.b->length <= len) {
+    if (r.b->length < len) {
         snprintf(buf, sizeof(buf), "Block <%.4s> wanted %lu, found %lu",
                  name.d.asChars, long(len), long(r.b->length));
         throw std::logic_error(buf);

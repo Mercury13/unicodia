@@ -23,8 +23,7 @@ namespace {
 }   // anon namespace
 
 
-std::vector<mf::ChangeLine> mf::whatChanged(
-        const MemFont& ol, const MemFont& nw)
+std::vector<mf::ChangeLine> mf::whatChanged(MemFont& ol, MemFont& nw)
 {
     std::vector<mf::ChangeLine> r;
     MCp oldCps, newCps;
@@ -37,6 +36,15 @@ std::vector<mf::ChangeLine> mf::whatChanged(
         auto oldCp = itOld->first;
         auto newCp = itNew->first;
         if (oldCp == newCp) {
+            try {
+                auto oldData = ol.glyphData(itOld->second);
+                auto newData = ol.glyphData(itNew->second);
+                if (!std::ranges::equal(oldData.glyph, newData.glyph)) {
+                    r.emplace_back(oldCp, ChangeAction::CHG);
+                }
+            } catch (...) {
+                r.emplace_back(oldCp, ChangeAction::BAD);
+            }
             /// @todo [urgent] track change
             ++itOld; ++itNew;
         } else if (oldCp < newCp) {
