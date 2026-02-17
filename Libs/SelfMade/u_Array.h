@@ -384,6 +384,26 @@ struct Buf1d
         { return sliceMid(start, subsize); }
 
     //------------------------------------------------------------------------//
+    ///  @return  Buf1d of [start .. )
+    ///  @warning  Never throws!
+    Buf1d<Elem> sliceMid(size_t start) noexcept
+    {
+        start = std::min(start, _size);
+        auto subsize = _size - start;
+        return Buf1d<Elem>(subsize, _ptr + start);
+    }
+
+    Buf1d<const Elem> sliceMid(size_t start) const noexcept
+    {
+        start = std::min(start, _size);
+        auto subsize = _size - start;
+        return Buf1d<Elem>(subsize, _ptr + start);
+    }
+
+    Buf1d<const Elem> sliceMidC(size_t start) const noexcept
+        { return sliceMid(start); }
+
+    //------------------------------------------------------------------------//
     ///  @return  Buf1d of [beg .. end)
     ///  @warning  Never throws!
     Buf1d<Elem> sliceBegEnd(size_t beg, size_t end) noexcept;
