@@ -1,6 +1,4 @@
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       += core gui widgets
 
 CONFIG += c++2a
 
@@ -10,6 +8,10 @@ CONFIG += c++2a
 
 SOURCES += \
     ../Libs/SelfMade/Fonts/MemFont.cpp \
+    ../Libs/SelfMade/Fonts/MemWhatChanged.cpp \
+    ../Libs/SelfMade/Qt/i_OpenSave.cpp \
+    ../Libs/SelfMade/Qt/u_OpenSaveStrings.cpp \
+    ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
     main.cpp \
     FmMain.cpp
@@ -17,6 +19,10 @@ SOURCES += \
 HEADERS += \
     ../Libs/SelfMade/Fonts/MemFont.h \
     ../Libs/SelfMade/Fonts/MemFontDefs.h \
+    ../Libs/SelfMade/Fonts/MemWhatChanged.h \
+    ../Libs/SelfMade/Qt/i_OpenSave.h \
+    ../Libs/SelfMade/Qt/u_OpenSaveStrings.h \
+    ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/function_ref.hpp \
@@ -25,7 +31,9 @@ HEADERS += \
 INCLUDEPATH += \
     ../Libs \
     ../Libs/SelfMade \
-    ../Libs/SelfMade/Fonts
+    ../Libs/SelfMade/Fonts \
+    ../Libs/SelfMade/Qt \
+    ../Libs/SelfMade/Strings
 
 FORMS += \
     FmMain.ui
@@ -35,6 +43,10 @@ win32-g++ {
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
     # Qt — system headers
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
+}
+
+win32 {
+    LIBS += -lcomdlg32
 }
 
 # Default rules for deployment.

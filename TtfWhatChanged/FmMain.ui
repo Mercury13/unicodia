@@ -85,6 +85,14 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>edOld</tabstop>
+  <tabstop>btBrowseOld</tabstop>
+  <tabstop>edNew</tabstop>
+  <tabstop>btBrowseNew</tabstop>
+  <tabstop>btGo</tabstop>
+  <tabstop>memoResult</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
