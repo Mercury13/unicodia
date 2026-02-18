@@ -507,7 +507,7 @@ namespace uc {
         explicit operator bool() const noexcept { return value; }
     };
 
-    enum class ExTofuType : unsigned char { NONE, GARDINER };
+    enum class ExTofuType : unsigned char { NONE };
 
     struct ExTofu {
         ExTofuType type = ExTofuType::NONE;
@@ -520,7 +520,7 @@ namespace uc {
         Flags<Fafg> flags {};
         EvRecode recode = nullptr;
         ProbeChar probeChar {};
-        ExTofu exTofu {};   ///< external tofu list
+        //ExTofu exTofu {};   ///< external tofu list
 
         constexpr Family(std::string_view aText) : text(aText) {}
         constexpr Family(std::string_view aText, Fafg aFlag)
@@ -535,8 +535,6 @@ namespace uc {
             : text(aText), flags(aFlag), recode(aRecode) {}
         constexpr Family(std::string_view aText, Fafg aFlag, ProbeChar aProbeChar)
             : text(aText), flags(aFlag), probeChar(aProbeChar) {}
-        constexpr Family(std::string_view aText, ExTofu aTofu)
-            : text(aText), exTofu(aTofu) {}
     };
 
     /// Other set of styled characters is at alternate CPs → add/subtract some delta to code
@@ -637,7 +635,6 @@ namespace uc {
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;
-        void loadGardinerTofu() const;
     };
     extern const Font fontInfo[];
 

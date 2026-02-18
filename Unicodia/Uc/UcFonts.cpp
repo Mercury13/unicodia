@@ -206,8 +206,7 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "UnicodiaSesh.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 115_pc },       // Egyptian
-      { { "NewGardiner.ttf",  ExTofu { .type = ExTofuType::GARDINER, .fname = "omitted.csv" } }, // …3
-                Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },
+      { "NewGardiner.ttf", Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT, 110_pc },      // …1
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 15_top, 115_pc },// Enclosed alnum
       { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot, 130_pc },                  // …1

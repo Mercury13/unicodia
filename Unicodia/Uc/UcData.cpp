@@ -922,7 +922,7 @@ struct uc::LoadedFont : public dumb::SpTarget
     intptr_t tempId = FONT_NOT_INSTALLED;
     std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
-    CompressedBits cps;
+    CompressedBits cps;  ///< External tofu list → remove here
     QFont::StyleStrategy defaultStrategy;
     bool isRejected = false;
 
@@ -1025,29 +1025,6 @@ void uc::Font::newLoadedStruc() const
 }
 
 
-void uc::Font::loadGardinerTofu() const
-{
-    auto absPath = expandTempFontName(family.exTofu.fname).toStdU16String();
-    std::ifstream is(std::filesystem::path{absPath});
-    if (!is.is_open())
-        return;
-    std::string s;
-    while (std::getline(is, s)) {
-        auto s1 = str::trimSv(s);
-        if (s1.starts_with("0x")) {
-            auto s2 = s1.substr(2);
-            unsigned cp;
-            auto fcr = std::from_chars(
-                           std::to_address(s2.begin()),
-                           std::to_address(s2.end()), cp, 16);
-            if (fcr.ec == std::errc{}) {
-                q.loaded->cps.erase(cp);
-            }
-        }
-    }
-}
-
-
 void uc::Font::load(char32_t trigger) const
 {
 onceAgain:
@@ -1081,11 +1058,6 @@ onceAgain:
         }
 
         q.loaded->cps = std::move(tempFont.cps);
-        switch (family.exTofu.type) {
-        case ExTofuType::NONE: break;
-        case ExTofuType::GARDINER:
-            loadGardinerTofu(); break;
-        }
     } else {
         // FAMILY
         newLoadedStruc();
