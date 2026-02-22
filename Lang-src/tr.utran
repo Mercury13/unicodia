@@ -2501,7 +2501,8 @@
      <transl>Noktalama işaretleri - ek</transl>
     </text>
     <text id="Text">
-     <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
+     <orig>Special punctuation marks: textology of the New Testament, characters from ancient Greek papyri, German dictionary marks, characters from Typicon (statute of Orthodox worship of the 15th century) and more.</orig>
+     <known-orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</known-orig>
      <transl>Özel noktalama işaretleri: Yeni Ahit metinleri, antik Yunan papirüslerindeki karakterler, Alman sözlük işaretleri, Typicon’daki karakterler (15. yüzyıl Ortodoks ibadet tüzüğü) ve daha fazlası.</transl>
     </text>
    </group>
