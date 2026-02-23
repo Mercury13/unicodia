@@ -522,7 +522,7 @@
 2E00..2E16: NotoSerif-Regular
 2E17......: Cambria,Arial
 2E18..2E5D: NotoSerif-Regular
-2E60..2E63: [Tofu]
+2E60..2E63: UnicodiaFunky
 == CJK Radicals Supplement
 2E80..2EF3: BabelStoneHanBasic
 == Kangxi Radicals
@@ -978,9 +978,7 @@ FFFD......: NotoSerif-Regular
 1382A.......: NewGardiner
 1382B, 1382C: UnicodiaSesh
 1382D.......: NewGardiner
-1382E..13840: UnicodiaSesh
-13841, 13842: NewGardiner
-13843..13862: UnicodiaSesh
+1382E..13862: UnicodiaSesh
 13863.......: NewGardiner
 13864, 13865: UnicodiaSesh
 13866.......: NewGardiner
@@ -1234,9 +1232,7 @@ FFFD......: NotoSerif-Regular
 13D7C.......: NewGardiner
 13D7D..13D8D: UnicodiaSesh
 13D8E.......: NewGardiner
-13D8F, 13D90: UnicodiaSesh
-13D91.......: NewGardiner
-13D92..13D97: UnicodiaSesh
+13D8F..13D97: UnicodiaSesh
 13D98.......: NewGardiner
 13D99..13DA7: UnicodiaSesh
 13DA8.......: NewGardiner
