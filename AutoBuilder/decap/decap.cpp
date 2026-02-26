@@ -288,6 +288,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x1E68, 0x1E69 },     // Same
     { 0x2010, 0x203B },     // Several chars from Punctuation…
     { 0x203D, 0x203E },     // …Skip emoji and go on
+    { 0x238C },             // Technical: U18 misrender in Cambria
     { 0x23B4, 0x23B6 },     // Technical — horz brackets, misrender in Cambria
     { 0x23DC, 0x23E0 },     // Same
     { 0x25CC },             // Dotted circle
