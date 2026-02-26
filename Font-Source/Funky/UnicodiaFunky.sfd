@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1772101962
+ModificationTime: 1772103203
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -876,12 +876,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 9042 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -895,7 +896,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Virama BR" "Common BLWM-1" "Horn" "Horn" "Virama" "Common BLWM-1" "Matra 625" "Indic matra 625-1" "Maka uml right dot" "Common ABVM-3" "Umlaut RtL" "RtL ABVM-1" "Biguml mid" "Common ABVM-2" "Biguml left" "Common ABVM-2" "Biguml right" "Common ABVM-2" "TopRight Cap" "Common ABVM-1" "TopRight" "Common ABVM-1" "Dot below mark" "Common MKMK-1" "Umlaut mark" "Common MKMK-1" "Dot below" "Common BLWM-1" "Umlaut" "Common ABVM-1" "Nagm TR dot" "Nagm TR dot-1" "Arab Low""" 
-BeginChars: 1114266 1450
+BeginChars: 1114266 1452
 
 StartChar: Shape.Dotc
 Encoding: 9676 9676 0
@@ -196559,7 +196560,7 @@ EndChar
 StartChar: uni238C
 Encoding: 9100 9100 1449
 Width: 888
-Flags: WO
+Flags: W
 HStem: 54 56<128.176 229.695> 254 56<128.176 229.695> 551 59<365.462 557.081>
 VStem: 51 56<130.84 233.16> 251 56<131.176 232.695> 680 59<300.429 426.801>
 TtInstrs:
@@ -196809,6 +196810,32 @@ SplineSet
  107 152 107 152 128 131 c 128,-1,41
  149 110 149 110 179 110 c 128,-1,42
 EndSplineSet
+EndChar
+
+StartChar: uni1ADE
+Encoding: 6878 6878 1450
+Width: 0
+Flags: W
+AnchorPoint: "Umlaut" -333 536 mark 0
+AnchorPoint: "Umlaut mark" -333 536 mark 0
+AnchorPoint: "Umlaut mark" -333 766 basemark 0
+LayerCount: 2
+Fore
+Refer: 857 729 N 1 0 0 1 -352 -27 2
+Refer: 678 96 N 1 0 0 1 -585 0 2
+EndChar
+
+StartChar: uni1ADF
+Encoding: 6879 6879 1451
+Width: 0
+Flags: WO
+AnchorPoint: "Umlaut" -333 536 mark 0
+AnchorPoint: "Umlaut mark" -333 536 mark 0
+AnchorPoint: "Umlaut mark" -333 766 basemark 0
+LayerCount: 2
+Fore
+Refer: 855 180 N 1 0 0 1 -351 0 2
+Refer: 857 729 N 1 0 0 1 -505 -27 2
 EndChar
 EndChars
 EndSplineFont
