@@ -4,7 +4,7 @@
    viewBox="-10 0 708 1000"
    id="svg1"
    sodipodi:docname="my_u1F768.svg"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@
      showguides="true"
      inkscape:zoom="0.781"
      inkscape:cx="354.03329"
-     inkscape:cy="500"
+     inkscape:cy="501.28041"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -35,6 +35,16 @@
        orientation="1,0"
        id="guide1"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="314,200"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="60,914"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      fill="currentColor"
@@ -44,8 +54,8 @@
      style="fill:#4e9a06;fill-rule:evenodd;stroke:none;stroke-width:68;stroke-linejoin:round;stroke-miterlimit:2"
      id="rect1"
      width="90"
-     height="353.30984"
+     height="427.57361"
      x="-533"
-     y="172.34506"
+     y="135.21318"
      transform="rotate(-90)" />
 </svg>
