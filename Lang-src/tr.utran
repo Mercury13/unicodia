@@ -13880,8 +13880,9 @@
      <orig>Misc. punctuation</orig>
      <transl>Çeşitli noktalama işaretleri</transl>
     </text>
-    <text id="Greek">
+    <text id="Greek" force-attention="true">
      <orig>Greek</orig>
+     <transl>Yunanca</transl>
     </text>
    </group>
    <group id="Text">
