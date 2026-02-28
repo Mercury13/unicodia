@@ -9678,6 +9678,9 @@
     <text id="TypoMisc">
      <orig>Misc. punctuation</orig>
     </text>
+    <text id="Greek">
+     <orig>Greek</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

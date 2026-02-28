@@ -13880,6 +13880,9 @@
      <orig>Misc. punctuation</orig>
      <transl>Çeşitli noktalama işaretleri</transl>
     </text>
+    <text id="Greek">
+     <orig>Greek</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

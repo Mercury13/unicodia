@@ -13862,6 +13862,10 @@
      <orig>Misc. punctuation</orig>
      <transl>Різні розділові знаки</transl>
     </text>
+    <text id="Greek">
+     <orig>Greek</orig>
+     <transl>Грецькі</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
