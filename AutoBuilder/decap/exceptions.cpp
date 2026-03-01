@@ -73,6 +73,7 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX2("closed Epsilon", decap::Exf::MIXCASE)
     EX2("reversed Epsilon", decap::Exf::MIXCASE)
     EX("Latin small letter Stretched C-h digraph")  // Actually OK, but too strange letter
+    EX("Latin small ligature Long S with descender S")  // How to make last S up?
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
