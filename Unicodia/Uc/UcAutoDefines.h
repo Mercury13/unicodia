@@ -319,6 +319,7 @@ namespace uc {
         const uc::Block* block = nullptr;
     };
 
+    /// @warning  equiv. to false and true
     enum class Action : unsigned char { CONTINUE = 0, STOP = 1 };
 
     class TextSink {

@@ -1294,6 +1294,15 @@ std::u8string_view uc::Cp::techName() const
 }
 
 
+std::u8string_view uc::Cp::explicitMainName() const
+{
+    return traverseTextsT(AutoName::NO,
+        [](TextRole aRole, std::u8string_view) {
+            return static_cast<Action>(aRole == uc::TextRole::MAIN_NAME);
+        });
+}
+
+
 QString uc::Cp::viewableName() const
 {
     QString r = str::toQ(techName());

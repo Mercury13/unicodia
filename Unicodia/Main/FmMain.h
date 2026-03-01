@@ -376,6 +376,7 @@ private slots:
     void debugPluralRules();
     void searchForVs16();
     void searchForDrawingMethod();
+    void searchForBadFonts();
     void toggleSortingTelltales();
     void goToSearch();
     void goToBlocks();

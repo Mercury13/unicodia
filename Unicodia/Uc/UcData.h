@@ -492,11 +492,14 @@ namespace uc {
     enum class FontPlace : unsigned char { CELL, SAMPLE, PROBE };
 
     enum class Fafg : unsigned char {
-        // Now all fonts use
+        // Now all fonts are loaded as raw fonts
         DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
         BUILTIN     = 1 << 1,  ///< Built-in font
         STRONG_TOFU = 1 << 2,  ///< Strategy for tofu
+        FIND_LATMOD = 1 << 3,  ///< Find (Ct+Sh+N): Latin modifier
     };
+
+    DEFINE_ENUM_OPS(Fafg)
 
     using EvRecode = char32_t (*)(char32_t unicode);
 

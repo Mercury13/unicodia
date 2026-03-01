@@ -15,7 +15,7 @@ consteval uc::StyleSheet operator + (
 #define FAM_DEFAULT { FACE_DEFAULT, Fafg::BUILTIN }
 
 // File names
-constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC };
+constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC | uc::Fafg::FIND_LATMOD };
 constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf" };
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf" };

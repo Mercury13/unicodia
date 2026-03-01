@@ -1012,6 +1012,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_M), this);
     connect(shcut, &QShortcut::activated, this, &This::searchForDrawingMethod);
 
+    // Debug bad fonts
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_N), this);
+    connect(shcut, &QShortcut::activated, this, &This::searchForBadFonts);
+
     // Plurals
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_P), this);
     connect(shcut, &QShortcut::activated, this, &This::debugPluralRules);
@@ -2543,6 +2547,44 @@ void FmMain::searchForDrawingMethod()
     }
     DrawMethodRequest rq(*cp);
     searchForRequest(rq);
+}
+
+
+namespace {
+
+    class BadFontRequest final : public uc::Request {
+    public:
+        bool hasChars() const noexcept override { return true; }
+        bool isOk(const uc::Cp& cp) const override;
+        static const BadFontRequest INST;
+    };
+
+    const BadFontRequest BadFontRequest::INST;
+
+    bool BadFontRequest::isOk(const uc::Cp& cp) const
+    {
+        switch (cp.ecScript) {
+        case uc::EcScript::Grek:
+        case uc::EcScript::Latn:
+        case uc::EcScript::Cyrl: {
+                auto* font = cp.font(match::NullForTofu::INST);
+                if (!font || !font->family.flags.have(uc::Fafg::FIND_LATMOD))
+                    return false;
+                std::u8string_view q = cp.explicitMainName();
+                auto pos = q.find(u8"modifier"sv);
+                return (pos != std::u8string_view::npos);
+            }
+        default:
+            return false;
+        }
+    }
+
+}   // anon namespace
+
+
+void FmMain::searchForBadFonts()
+{
+    searchForRequest(BadFontRequest::INST);
 }
 
 
