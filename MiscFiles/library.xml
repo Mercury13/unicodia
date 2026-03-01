@@ -144,7 +144,10 @@
 		</f>
 		<f name="C">
 			<d>Ć ć Ĉ ĉ Ċ ċ Č č Ƈ ƈ Ꞓ ꞓ Ç ç Ꞔ ꞔ 𝼝 Ȼ ȼ ɕ ʗ 𝼏 Ḉ ḉ Ↄ ↄ Ꜿ ꜿ Ꝯ ꝯ ᴄ © 🄫</d>
-			<d>ꟲ ᶜ ᶝ 𐞽 ꝰ</d><!-- Superscripts -->
+			<d>ꟲ ᶜ</d><!-- Super bare -->
+			<d>𝿺</d><!-- Super top -->
+			<d>ᶝ 𐞽</d><!-- Super bottom -->
+			<d>ꝰ</d><!-- Super variants -->
 		</f>
 		<f name="D">
 			<f loc="OldForms">
@@ -212,7 +215,9 @@
 		</f>
 		<f name="K">
 			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ Ꝁ ꝁ Ꝃ ꝃ Ꞣ ꞣ Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ ĸ 𝼐</d>
-			<d>ᴷ ᵏ 𐞾</d><!-- Superscripts -->
+			<d>ᴷ ᵏ</d><!-- Super bare -->
+			<d>𝿻</d><!-- Super top -->
+			<d>𐞾</d><!-- Super variants -->
 			<d>ₖ</d><!-- Subscripts -->
 		</f>
 		<f name="L">
@@ -267,7 +272,11 @@
 			<f loc="TwoDiac">
 				<d>Ṥ ṥ Ṧ ṧ Ṩ ṩ</d>
 			</f>
-			<d>Ś ś Ŝ ŝ Š š Ṡ ṡ 𝼩 Ꟍ ꟍ ᵴ Ꞩ ꞩ Ꟊ ꟊ 𝼞 Ʂ ʂ Ş ş Ȿ ȿ ᶊ Ș ș Ṣ ṣ ꜱ 🄪 ꟱ ˢ 𐞺 ᶳ ₛ</d>
+			<d>Ś ś Ŝ ŝ Š š Ṡ ṡ 𝼩 Ꟍ ꟍ ᵴ Ꞩ ꞩ Ꟊ ꟊ 𝼞 Ʂ ʂ Ş ş Ȿ ȿ ᶊ Ș ș Ṣ ṣ</d>
+			<d>ꜱ 🄪</d><!-- Variants -->
+			<d>꟱ ˢ</d><!-- Super bare -->
+			<d>𐞺 ᶳ 𝿸</d><!-- Super bottom -->
+			<d>ₛ</d><!-- Subscripts -->
 		</f>
 		<f name="T">
 			<f loc="MiscForms">
@@ -305,7 +314,10 @@
 			<f loc="MiscForms">
 				<d>Ʒ ʒ Ǯ ǯ ʓ ᶚ ƺ 𝼘 Ƹ ƹ ᴣ ᶾ 𝿦 𝿧 Ꝣ ꝣ</d>
 			</f>
-			<d>Ź ź Ż ż Ž ž Ẑ ẑ Ƶ ƶ ᵶ ʑ Ȥ ȥ Ⱬ ⱬ Ᶎ ᶎ Ɀ ɀ ʐ Ẓ ẓ Ẕ ẕ ᴢ ᶻ ᶽ ᶼ ₟</d>
+			<d>Ź ź Ż ż Ž ž Ẑ ẑ Ƶ ƶ ᵶ ʑ Ȥ ȥ Ⱬ ⱬ Ᶎ ᶎ Ɀ ɀ ʐ Ẓ ẓ Ẕ ẕ ᴢ</d>
+			<d>ᶻ</d><!-- Super bare -->
+			<d>ᶽ 𝿹 ᶼ</d><!-- Super bottom -->
+			<d>₟</d><!-- Subscripts -->
 		</f>
 		<f name="Greek">
 			<d>Ꞵ ꞵ</d><!-- Beta -->
