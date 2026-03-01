@@ -7,8 +7,8 @@ template class loc::FmtL<char>;
 template class loc::FmtL<wchar_t>;
 template class loc::FmtL<char8_t>;
 
-const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
-const loc::DefaultLocale loc::DefaultLocale::INST;
+constinit const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
+constinit const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
 
 const std::string_view loc::pluralNames[loc::Plural_N_Full] =

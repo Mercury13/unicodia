@@ -2559,7 +2559,7 @@ namespace {
         static const BadFontRequest INST;
     };
 
-    const BadFontRequest BadFontRequest::INST;
+    constinit const BadFontRequest BadFontRequest::INST;
 
     bool BadFontRequest::isOk(const uc::Cp& cp) const
     {
