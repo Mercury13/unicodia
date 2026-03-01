@@ -15361,8 +15361,9 @@
      <transl>Розрив/перед</transl>
     </text>
     <text id="Text">
-     <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
-     <transl>Можна розривати перед цими символами. Усі п’ять європейських символів{{-}}зі словників.</transl>
+     <orig>You can break before these characters. All six European characters are from dictionaries.</orig>
+     <au-cmt>six as of U18</au-cmt>
+     <transl>Можна розривати перед цими символами. Усі шість європейських символів{{-}}зі словників.</transl>
     </text>
    </group>
    <group id="HY">

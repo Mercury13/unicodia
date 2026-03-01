@@ -10823,7 +10823,8 @@
      <orig>Break/before</orig>
     </text>
     <text id="Text">
-     <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
+     <orig>You can break before these characters. All six European characters are from dictionaries.</orig>
+     <au-cmt>six as of U18</au-cmt>
     </text>
    </group>
    <group id="HY">
