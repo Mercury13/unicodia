@@ -159,7 +159,8 @@
 				<d>𝼒</d><!-- Dzh pal -->
 				<d>𝼙 𝿡</d><!-- Dzh ret -->
 				<d>𝼫</d><!-- Dzh curl -->
-				<d>ȸ 𝼟 𝼠 𝼡</d><!-- Db etc -->
+				<d>ȸ 𝿞</d><!-- Db -->
+				<d>𝼟 𝼠 𝼡</d><!-- D-eth etc -->
 			</f>
 			<d>Ď ď Ḋ ḋ Đ đ Ɗ ɗ Ƌ ƌ ᵭ Ꟈ ꟈ 𝼥 Ɖ ɖ ȡ ᶁ Ḍ ḍ Ḏ ḏ Ḑ ḑ Ḓ ḓ 𝼭 ᴅ ⅅ ⅆ</d>
 			<d>ᴰ ᵈ</d><!-- Superscripts bare -->
@@ -236,7 +237,10 @@
 				<d>Ŋ ŋ ꬼ 𝼔 𝼇 ᵑ</d>
 			</f>
 			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ ɴ ᴎ Ǌ ǋ ǌ</d>
-			<d>ᴺ ᴻ ⁿ 𝿱 ᶮ ᶯ 𝿷 ᶰ</d><!-- Superscripts -->
+			<d>ᴺ ⁿ</d><!-- Super bare -->
+			<d>𝿱</d><!-- Super baseline -->
+			<d>ᶮ 𝿜 ᶯ 𝿷</d><!-- Super bottom -->
+			<d>ᴻ ᶰ</d><!-- Super variants -->
 			<d>ₙ</d><!-- Subscripts -->
 		</f>
 		<f name="O">
@@ -252,17 +256,33 @@
 			<d>Ò ò Ó ó Ô ô Õ õ Ö ö Ō ō Ŏ ŏ Ǒ ǒ Ȏ ȏ Ȯ ȯ Ỏ ỏ Ő ő Ȍ ȍ Ơ ơ Ꝍ ꝍ Ø ø Ꝋ ꝋ ⱺ Ǫ ǫ 𝼛 Ọ ọ ᴏ ꬽ ꬾ º ᴼ ᵒ 𐞢 ₒ</d>
 		</f>
 		<f name="P">
-			<d>Ṕ ṕ Ṗ ṗ Ƥ ƥ Ꝕ ꝕ Ᵽ ᵽ Ꝓ ꝓ Ꝑ ꝑ ᵱ ᶈ ꟼ ᴘ 🆊 ᴾ ᵖ 𝿑 ₚ</d>
+			<d>Ṕ ṕ Ṗ ṗ Ƥ ƥ Ꝕ ꝕ Ᵽ ᵽ Ꝓ ꝓ Ꝑ ꝑ ᵱ ᶈ</d>
+			<d>ꟼ ᴘ 🆊</d><!-- Variants -->
+			<d>ᴾ ᵖ</d><!-- Super bare -->
+			<d>𝿼</d><!-- Super top -->
+			<d>𝿑</d><!-- Super variants -->
+			<d>ₚ</d><!-- Subscripts -->
 		</f>
 		<f name="Q">
-			<d>ʠ Ꝙ ꝙ Ɋ ɋ Ꝗ ꝗ 𝼴 Ƣ ƣ ȹ ꞯ ꟴ 𐞥</d>
+			<d>ʠ Ꝙ ꝙ Ɋ ɋ Ꝗ ꝗ 𝼴</d>
+			<d>Ƣ ƣ ȹ ꞯ</d><!-- Variants -->
+			<d>ꟴ 𐞥</d><!-- Super bare -->
+			<d>𝿽</d><!-- Super top -->
+			<d>𝿟</d><!-- Super variants -->
 		</f>
 		<f name="R">
 			<f loc="MiscForms">
 				<d>ɹ ɺ ⱹ ɻ ɾ ɿ ᵳ Ꝛ ꝛ Ꝝ ꝝ Ꞃ ꞃ ꭅ ꭇ ꭈ ꭊ ꭋ ꭌ ꭨ 𝼈 𝼕 𝼖 ʁ 𝼶 ᴙ ᴚ ® 🄬</d>
 				<d>𐞩 ʴ ʵ 𝿫 ʶ 𐞦 𐞧 </d><!-- Superscripts -->
 			</f>
-			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ ꝵ Ɍ ɍ Ꞧ ꞧ 𝼨 ᵲ Ɽ ɽ ɼ ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ Ṝ ṝ 𝼷 Ʀ ʀ ꝶ 𝼵 ꭆ ᴿ ʳ 𐞨 𐞪 ᵣ</d>
+			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ</d><!-- Above -->
+			<d>ꝵ Ɍ ɍ Ꞧ ꞧ 𝼨 ᵲ Ɽ ɽ ɼ ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ</d>
+			<d>Ṝ ṝ 𝼷</d><!-- Two umlauts -->
+			<d>Ʀ ʀ ꝶ 𝼵 ꭆ</d><!-- Variants -->
+			<d>ᴿ ʳ</d><!-- Super bare -->
+			<d>𝿝 𐞨</d><!-- Super bottom -->
+			<d>𐞪</d><!-- Super variants -->
+			<d>ᵣ</d><!-- Subscripts -->
 		</f>
 		<f name="S">
 			<f loc="MiscForms">
@@ -285,7 +305,9 @@
 			</f>
 			<d>Ť ť Ṫ ṫ ẗ Ƭ ƭ ꝷ 𝼪 Ŧ ŧ ᵵ Ⱦ ⱦ ȶ Ţ ţ Ʈ ʈ ƫ Ț ț Ṭ ṭ Ṯ ṯ Ṱ ṱ 𝼉 ᴛ</d>
 			<d>ᵀ ᵗ</d><!-- Super bare -->
+			<d>𝿾</d><!-- Super top -->
 			<d>𝿲 𐞯 ᶵ</d><!-- Super bottom -->
+			<d>𝿿</d><!-- Super two diac -->
 			<d>ₜ</d><!-- Subscripts -->
 		</f>
 		<f name="U">
