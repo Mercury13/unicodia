@@ -2561,18 +2561,25 @@ namespace {
 
     constinit const BadFontRequest BadFontRequest::INST;
 
+    bool strHas(std::u8string_view hay, std::u8string_view nee)
+    {
+        auto pos = hay.find(nee);
+        return (pos != std::u8string_view::npos);
+    }
+
     bool BadFontRequest::isOk(const uc::Cp& cp) const
     {
         switch (cp.ecScript) {
         case uc::EcScript::Grek:
         case uc::EcScript::Latn:
         case uc::EcScript::Cyrl: {
-                auto* font = cp.font(match::NullForTofu::INST);
-                if (!font || !font->family.flags.have(uc::Fafg::FIND_LATMOD))
-                    return false;
-                std::u8string_view q = cp.explicitMainName();
-                auto pos = q.find(u8"modifier"sv);
-                return (pos != std::u8string_view::npos);
+                if (auto* font = cp.font(match::NullForTofu::INST)) {
+                    if (font->family.flags.have(uc::Fafg::FIND_LATMOD)) {
+                        std::u8string_view q = cp.explicitMainName();
+                        return strHas(q, u8"modifier") || strHas(q, u8"subscript");
+                    }
+                }
+                return false;
             }
         default:
             return false;
