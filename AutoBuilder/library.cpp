@@ -884,6 +884,7 @@ namespace {
         auto sub32 = str::splitSv(text32, ' ');
         result.children.reserve(result.children.size() + sub32.size());
         char32_t cap = '!';     // something odd
+        isForgetTest = tag.attribute("forgetTest").as_bool(isForgetTest);
         for (auto v : sub32) {
             auto& node = *result.children.emplace_back(new lib::Node);
             node.value = v;

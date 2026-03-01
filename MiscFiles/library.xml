@@ -159,7 +159,10 @@
 				<d>ȸ 𝼟 𝼠 𝼡</d><!-- Db etc -->
 			</f>
 			<d>Ď ď Ḋ ḋ Đ đ Ɗ ɗ Ƌ ƌ ᵭ Ꟈ ꟈ 𝼥 Ɖ ɖ ȡ ᶁ Ḍ ḍ Ḏ ḏ Ḑ ḑ Ḓ ḓ 𝼭 ᴅ ⅅ ⅆ</d>
-			<d>ᴰ ᵈ 𐞌 𝿓 𐞋 𝿯 𝿨</d><!-- Superscripts -->
+			<d>ᴰ ᵈ</d><!-- Superscripts bare -->
+			<d>𐞌 𝿓</d><!-- Superscripts top -->
+			<d>𝿯 𐞋 𝿵</d><!-- Superscripts bottom -->
+			<d>𝿨</d><!-- Superscripts variants -->
 			<d>ᶑ 𐞍</d><!-- Two diacritics -->
 			<d>🆥</d><!-- Strange -->
 		</f>
@@ -192,7 +195,12 @@
 			<f loc="MiscForms">
 				<d>Ɥ ɥ ʮ ʯ Ⱶ ⱶ Ꟶ ꟶ Ꜧ ꜧ ɧ Ƕ ƕ ᶣ 𝿭 𝿮 ꭜ 𐞗</d>
 			</f>
-			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ Ɦ ɦ Ħ ħ Ḩ ḩ Ⱨ ⱨ ꞕ Ḥ ḥ Ḫ ḫ ẖ 𝼲 ʜ ᴴ ʰ ʱ ꟸ 𐞕 𐞖 ₕ</d>
+			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ Ɦ ɦ Ħ ħ Ḩ ḩ Ⱨ ⱨ ꞕ Ḥ ḥ Ḫ ḫ ẖ 𝼲 ʜ</d>
+			<d>ᴴ ʰ</d><!-- Super bare -->
+			<d>ʱ ꟸ 𐞕</d><!-- Super top -->
+			<d>𝿶</d><!-- Super bottom -->
+			<d>𐞖</d><!-- Super variants -->
+			<d>ₕ</d><!-- Subscripts -->
 		</f>
 		<f name="I">
 			<d>Ì ì Í í Î î Ï ï Ĩ ĩ Ī ī Ĭ ĭ Ǐ ǐ Ȋ ȋ Ỉ ỉ Ȉ ȉ İ ı Ꞽ ꞽ Ɨ ɨ Į į ᶖ Ḭ ḭ Ị ị Ɩ ɩ ᵼ ᴉ ꟷ ꟾ Ɪ ɪ ᵻ ⅈ Ĳ ĳ Ꝭ ꝭ Ḯ ḯ 𝼚 ᴵ ⁱ ᶤ ᵎ ᶥ ᶦ ᶧ ᵢ</d>
@@ -212,7 +220,7 @@
 				<d>Ǉ ǈ ǉ Ỻ ỻ ɮ ʪ ʫ 𝼅 𐞞 𐞟 𐞙 𐞚</d>
 			</f>
 			<d>Ĺ ĺ Ľ ľ Ꝉ ꝉ Ŀ ŀ Ł ł Ƚ ƚ Ɫ ɫ Ɬ ɬ ꬹ ꬷ Ꝇ ꝇ 𝼑 𝼦 ꝲ ȴ ɭ ᶅ Ļ ļ Ḷ ḷ Ḻ ḻ Ḽ ḽ Ꞁ ꞁ Ḹ ḹ Ⱡ ⱡ ꞎ ꬸ 𝼓 𐞝 ʟ ᴌ 𝼄 ℓ</d>
-			<d>ᴸ ˡ 𝿕 𝿖 ꭝ ꭞ 𐞛 ᶩ ᶪ ᶫ 𐞜</d><!-- Superscripts -->
+			<d>ᴸ ˡ 𝿕 𝿖 ꭝ ꭞ 𐞛 𝿰 ᶩ ᶪ ᶫ 𐞜</d><!-- Superscripts -->
 			<d>ₗ</d><!-- Subscripts -->
 		</f>
 		<f name="M">
@@ -222,7 +230,9 @@
 			<f name="ŋ">
 				<d>Ŋ ŋ ꬼ 𝼔 𝼇 ᵑ</d>
 			</f>
-			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ ɴ ᴎ Ǌ ǋ ǌ ᴺ ᴻ ⁿ ᶮ ᶯ ᶰ ₙ</d>
+			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ ɴ ᴎ Ǌ ǋ ǌ</d>
+			<d>ᴺ ᴻ ⁿ 𝿱 ᶮ ᶯ 𝿷 ᶰ</d><!-- Superscripts -->
+			<d>ₙ</d><!-- Subscripts -->
 		</f>
 		<f name="O">
 			<f loc="MiscForms">
@@ -265,7 +275,8 @@
 				<d>𐞻 𐞫 𐞬 𐞭 𐞮 𝿥</d><!-- Superscripts -->
 			</f>
 			<d>Ť ť Ṫ ṫ ẗ Ƭ ƭ ꝷ 𝼪 Ŧ ŧ ᵵ Ⱦ ⱦ ȶ Ţ ţ Ʈ ʈ ƫ Ț ț Ṭ ṭ Ṯ ṯ Ṱ ṱ 𝼉 ᴛ</d>
-			<d>ᵀ ᵗ 𐞯 ᶵ</d><!-- Superscripts -->
+			<d>ᵀ ᵗ</d><!-- Super bare -->
+			<d>𝿲 𐞯 ᶵ</d><!-- Super bottom -->
 			<d>ₜ</d><!-- Subscripts -->
 		</f>
 		<f name="U">
@@ -303,7 +314,10 @@
 			<d>Ꟛ ꟛ Ƛ ƛ</d><!-- Lambda -->
 			<d>ɸ ⱷ 𝼳 ᶲ</d><!-- Phi -->
 			<d>Ꭓ ꭓ ꭔ ꭕ</d><!-- Chi -->
-			<d>Ꞷ ꞷ ɷ 𐞤</d><!-- Omega -->
+			<d forgetTest="0">𝿳</d><!-- Greek psi, disable forget testing -->
+			<d>Ꞷ ꞷ ɷ</d><!-- Omega 1 -->
+			<d forgetTest="0">𝿴</d><!-- Greek omega, disable forget testing -->
+			<d>𐞤</d><!-- Omega 2 -->
 		</f>
 		<f loc="MiscLat">
 			<f name="Ɂ">
