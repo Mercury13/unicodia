@@ -187,10 +187,7 @@
 1AB0..1AB2: NotoSerif-Regular
 1AB3......: UnicodiaFunky
 1AB4..1AC0: NotoSerif-Regular
-1AC1..1ADD: UnicodiaFunky
-1ADE, 1ADF: [Tofu]
-1AE0..1AEB: UnicodiaFunky
-1AEC..1AF0: [Tofu]
+1AC1..1AF0: UnicodiaFunky
 == Balinese
 1B00..1B4C: NotoSerifBalinese-Regular
 1B4E, 1B4F: UnicodiaFunky
@@ -337,7 +334,9 @@
 232C..232F: NotoSansSymbols-Regular
 2330..237C: Cambria
 237D......: DejaVuSerif
-237E..239A: Cambria
+237E..238B: Cambria
+238C......: UnicodiaFunky
+238D..239A: Cambria
 239B..23AE: UnicodiaFunky
 23AF......: Cambria
 23B0, 23B1: UnicodiaFunky
@@ -586,7 +585,9 @@ A640..A66D: NotoSerif-Regular
 A66E......: UnicodiaFunky
 A66F......: NotoSerif-Regular
 A670..A672: UnicodiaFunky
-A673..A69F: NotoSerif-Regular
+A673..A69B: NotoSerif-Regular
+A69C, A69D: UnicodiaFunky
+A69E, A69F: NotoSerif-Regular
 == Bamum
 A6A0..A6F7: NotoSansBamum-Regular
 == Modifier Tone Letters
@@ -596,7 +597,9 @@ A71B, A71C: NotoSerif-Regular
 A71D..A71F: UnicodiaFunky
 == Latin Extended-D
 A720, A721: Cambria
-A722..A7CA: NotoSerif-Regular
+A722..A76F: NotoSerif-Regular
+A770......: UnicodiaFunky
+A771..A7CA: NotoSerif-Regular
 A7CB..A7CF: UnicodiaFunky
 A7D0, A7D1: NotoSerif-Regular
 A7D2..A7D5: UnicodiaFunky
@@ -604,7 +607,9 @@ A7D6..A7D9: NotoSerif-Regular
 A7DA..A7DC: UnicodiaFunky
 A7DD..A7E2: [Tofu]
 A7F1..A7F4: UnicodiaFunky
-A7F5..A7FF: NotoSerif-Regular
+A7F5..A7F7: NotoSerif-Regular
+A7F8, A7F9: UnicodiaFunky
+A7FA..A7FF: NotoSerif-Regular
 == Syloti Nagri
 A800..A82C: UtoSansSylotiNagri-Regular
 == Common Indic Number Forms
@@ -640,7 +645,9 @@ AB01..AB2E: NotoSerifEthiopic-Regular
 == Latin Extended-E
 AB30..AB4A: NotoSerif-Regular
 AB4B, AB4C: UnicodiaFunky
-AB4D..AB68: NotoSerif-Regular
+AB4D..AB5B: NotoSerif-Regular
+AB5C..AB5F: UnicodiaFunky
+AB60..AB68: NotoSerif-Regular
 AB69......: UnicodiaFunky
 AB6A, AB6B: NotoSerif-Regular
 AB6C, AB6D: [Tofu]
@@ -749,8 +756,7 @@ FFFD......: NotoSerif-Regular
 == Linear A
 10600..10767: UtoSansFranken
 == Latin Extended-F
-10780..107BA: UnicodiaFunky
-107BB..107BF: [Tofu]
+10780..107BF: UnicodiaFunky
 == Cypriot Syllabary
 10800..1083F: Segoe UI Historic
 == Imperial Aramaic
@@ -940,11 +946,7 @@ FFFD......: NotoSerif-Regular
 13440.......: [Abbreviation]
 13441..13455: UnicodiaSesh
 == Egyptian Hieroglyphs Extended-A
-13460..13645: UnicodiaSesh
-13646, 13647: NewGardiner
-13648..13650: UnicodiaSesh
-13651.......: NewGardiner
-13652..13751: UnicodiaSesh
+13460..13751: UnicodiaSesh
 13752.......: NewGardiner
 13753.......: UnicodiaSesh
 13754.......: NewGardiner
@@ -958,9 +960,7 @@ FFFD......: NotoSerif-Regular
 1378B.......: NewGardiner
 1378C..137CA: UnicodiaSesh
 137CB.......: NewGardiner
-137CC..137F2: UnicodiaSesh
-137F3.......: NewGardiner
-137F4, 137F5: UnicodiaSesh
+137CC..137F5: UnicodiaSesh
 137F6.......: NewGardiner
 137F7..137FB: UnicodiaSesh
 137FC..137FE: NewGardiner
@@ -1144,9 +1144,7 @@ FFFD......: NotoSerif-Regular
 13BD4, 13BD5: NewGardiner
 13BD6..13BD9: UnicodiaSesh
 13BDA.......: NewGardiner
-13BDB..13BE3: UnicodiaSesh
-13BE4.......: NewGardiner
-13BE5..13BE7: UnicodiaSesh
+13BDB..13BE7: UnicodiaSesh
 13BE8.......: NewGardiner
 13BE9.......: UnicodiaSesh
 13BEA.......: NewGardiner
@@ -1362,8 +1360,8 @@ FFFD......: NotoSerif-Regular
 13FF1.......: NewGardiner
 13FF2..1400C: UnicodiaSesh
 1400D..1400F: NewGardiner
-14010..1404A: UnicodiaSesh
-1404B, 1404C: NewGardiner
+14010..1404B: UnicodiaSesh
+1404C.......: NewGardiner
 1404D..1406C: UnicodiaSesh
 1406D.......: NewGardiner
 1406E..14070: UnicodiaSesh
@@ -1379,8 +1377,8 @@ FFFD......: NotoSerif-Regular
 140A4..140AE: UnicodiaSesh
 140AF.......: NewGardiner
 140B0..140B2: UnicodiaSesh
-140B3, 140B4: NewGardiner
-140B5..140BB: UnicodiaSesh
+140B3.......: NewGardiner
+140B4..140BB: UnicodiaSesh
 140BC.......: NewGardiner
 140BD..140CB: UnicodiaSesh
 140CC.......: NewGardiner
@@ -1428,14 +1426,12 @@ FFFD......: NotoSerif-Regular
 141BF.......: NewGardiner
 141C0.......: UnicodiaSesh
 141C1.......: NewGardiner
-141C2..141CD: UnicodiaSesh
-141CE.......: NewGardiner
-141CF..141DC: UnicodiaSesh
+141C2..141DC: UnicodiaSesh
 141DD.......: NewGardiner
 141DE..141E5: UnicodiaSesh
 141E6, 141E7: NewGardiner
-141E8..141EC: UnicodiaSesh
-141ED, 141EE: NewGardiner
+141E8..141ED: UnicodiaSesh
+141EE.......: NewGardiner
 141EF.......: UnicodiaSesh
 141F0.......: NewGardiner
 141F1..141FA: UnicodiaSesh
@@ -1678,7 +1674,16 @@ FFFD......: NotoSerif-Regular
 1DF1F..1DF24: UFSTangutFixup
 1DF25..1DF2A: UnicodiaFunky
 1DF2B..1DF3A: UFSTangutFixup
-1DF3B..1DFFF: [Tofu]
+1DF3B..1DFCF: [Tofu]
+1DFD0..1DFD6: UnicodiaFunky
+1DFD7, 1DFD8: [Tofu]
+1DFD9, 1DFDA: UnicodiaFunky
+1DFDB.......: [Tofu]
+1DFDC..1DFDF: UnicodiaFunky
+1DFE0.......: [Tofu]
+1DFE1..1DFE3: UnicodiaFunky
+1DFE4.......: [Tofu]
+1DFE5..1DFFF: UnicodiaFunky
 == Glagolitic Supplement
 1E000..1E02A: Shafarik-Regular
 == Cyrillic Extended-D
