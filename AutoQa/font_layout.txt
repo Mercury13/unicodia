@@ -604,9 +604,7 @@ A7CB..A7CF: UnicodiaFunky
 A7D0, A7D1: NotoSerif-Regular
 A7D2..A7D5: UnicodiaFunky
 A7D6..A7D9: NotoSerif-Regular
-A7DA..A7DC: UnicodiaFunky
-A7DD..A7E2: [Tofu]
-A7F1..A7F4: UnicodiaFunky
+A7DA..A7F4: UnicodiaFunky
 A7F5..A7F7: NotoSerif-Regular
 A7F8, A7F9: UnicodiaFunky
 A7FA..A7FF: NotoSerif-Regular
@@ -1674,16 +1672,16 @@ FFFD......: NotoSerif-Regular
 1DF1F..1DF24: UFSTangutFixup
 1DF25..1DF2A: UnicodiaFunky
 1DF2B..1DF3A: UFSTangutFixup
-1DF3B..1DFCF: [Tofu]
-1DFD0..1DFD6: UnicodiaFunky
-1DFD7, 1DFD8: [Tofu]
-1DFD9, 1DFDA: UnicodiaFunky
-1DFDB.......: [Tofu]
-1DFDC..1DFDF: UnicodiaFunky
-1DFE0.......: [Tofu]
-1DFE1..1DFE3: UnicodiaFunky
-1DFE4.......: [Tofu]
-1DFE5..1DFFF: UnicodiaFunky
+1DF3B..1DF4F: [Tofu]
+1DF50.......: UnicodiaFunky
+1DF51..1DF56: [Tofu]
+1DF57.......: UnicodiaFunky
+1DF58..1DF65: [Tofu]
+1DF66.......: UnicodiaFunky
+1DF67..1DF6B: [Tofu]
+1DF6C, 1DF6D: UnicodiaFunky
+1DF6E..1DFCF: [Tofu]
+1DFD0..1DFFF: UnicodiaFunky
 == Glagolitic Supplement
 1E000..1E02A: Shafarik-Regular
 == Cyrillic Extended-D
@@ -20167,7 +20165,9 @@ FFFD......: NotoSerif-Regular
 2AA83..2AA87: SimSun-ExtB
 2AA88..2AA8B: BabelStoneHanExtra
 2AA8C, 2AA8D: SimSun-ExtB
-2AA8E..2AA91: BabelStoneHanExtra
+2AA8E, 2AA8F: BabelStoneHanExtra
+2AA90.......: SimSun-ExtB
+2AA91.......: BabelStoneHanExtra
 2AA92..2AA94: SimSun-ExtB
 2AA95, 2AA96: BabelStoneHanExtra
 2AA97.......: SimSun-ExtB
