@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 654 1000"
+   id="svg1"
+   sodipodi:docname="HturBar_Unmod.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.53386562"
+     inkscape:cx="478.58485"
+     inkscape:cy="566.62199"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="36,736"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="33,511"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="36,511"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="36,461"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="637,511"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M427 817c0 -39 3 -89 4 -94h-6c-29 56 -76 88 -147 88c-114 0 -175 -59 -175 -195v-235c0 -63 -28 -72 -73 -72h-4v-45h188v341c0 86 26 136 101 136c78 0 111 -67 111 -160v-205c0 -59 -34 -67 -78 -67h-4v-45h280v45h-7c-44 0 -80 9 -80 71v546c0 58 39 66 79 66h9v45 h-198v-220z"
+     id="path1" />
+  <rect
+     style="fill:#1a5fb4;fill-rule:evenodd;stroke-width:72;stroke-miterlimit:2.3"
+     id="rect5"
+     width="604"
+     height="50"
+     x="23"
+     y="489" />
+</svg>

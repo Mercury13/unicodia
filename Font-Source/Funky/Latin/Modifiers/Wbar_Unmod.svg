@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 880 1000"
+   id="svg1"
+   sodipodi:docname="Wbar_Unmod.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.3775"
+     inkscape:cx="663.57616"
+     inkscape:cy="830.46358"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="10,736"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="870,736"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10,736"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="214,200"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="949.09518,511"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="947.09518,461"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M74 362c-15 -42 -32 -53 -71 -53h-3v-45h260v45h-13c-40 0 -60 9 -60 42c0 11 4 28 8 43l44 157c12 48 28 116 33 148h4c5 -32 22 -89 38 -134l103 -298h64l99 296c15 44 33 106 39 137h3c6 -33 17 -77 35 -135l49 -157c5 -17 9 -39 9 -50c0 -34 -22 -49 -66 -49h-7v-45 h218v45h-13c-39 0 -55 13 -75 78l-129 413h-88l-129 -394l-135 394h-87z"
+     id="path1" />
+  <rect
+     style="fill:#1a5fb4;fill-rule:evenodd;stroke-width:72;stroke-miterlimit:2.3"
+     id="rect6"
+     width="860"
+     height="50"
+     x="0"
+     y="489" />
+</svg>

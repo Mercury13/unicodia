@@ -4508,7 +4508,8 @@
    </group>
    <group id="1DF00">
     <text id="Text">
-     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</orig>
+     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others. Archaic mathematical symbols. Typewriter-friendly symbols that were used by various linguists. Letters from various alphabets designed for initial teaching of English.</orig>
+     <known-orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</known-orig>
      <transl>Konuşma bozuklukları ve fonetik için çeşitli karakterler: damak ve retrofleks fonemler, tıklamalar ve diğerleri.</transl>
     </text>
    </group>
