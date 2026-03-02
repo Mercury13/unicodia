@@ -286,7 +286,9 @@
 				<d>𝿫 𐞩</d><!-- Super hooked -->
 			</f>
 			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ</d><!-- Above -->
-			<d>ꝵ Ɍ ɍ Ꞧ ꞧ 𝼨 ᵲ Ɽ ɽ ɼ ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ</d>
+			<d>ꝵ Ɍ ɍ Ꞧ ꞧ 𝼨 ᵲ Ɽ ɽ</d>
+			<d>꟢ ɼ</d><!-- Long leg, left here as capital is from some tiny lang, and small is phonetic -->
+			<d>ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ</d>
 			<d>Ṝ ṝ 𝼷</d><!-- Two umlauts -->
 			<d>Ʀ ʀ ꝶ 𝼵 ꭆ</d><!-- Variants -->
 			<d>ᴿ ʳ</d><!-- Super bare -->
@@ -355,16 +357,16 @@
 			<d>ᶽ 𝿹 ᶼ</d><!-- Super bottom -->
 			<d>₟</d><!-- Subscripts -->
 		</f>
-		<f name="Greek">
+		<f loc="Greek">
 			<d>Ꞵ ꞵ</d><!-- Beta -->
 			<d>Ɣ ɣ 𝼱 ˠ 𝿐</d><!-- Gamma -->
 			<d>ẟ ƍ</d><!-- Delta -->
 			<d>Ꟛ ꟛ Ƛ ƛ</d><!-- Lambda -->
 			<d>ɸ ⱷ 𝼳 ᶲ</d><!-- Phi -->
 			<d>Ꭓ ꭓ ꭔ ꭕ</d><!-- Chi -->
-			<d forgetTest="0">𝿳</d><!-- Greek psi, disable forget testing -->
-			<d>Ꞷ ꞷ ɷ</d><!-- Omega 1 -->
-			<d forgetTest="0">𝿴</d><!-- Greek omega, disable forget testing -->
+			<d forgetTest="0">𝿳</d><!-- Greek psi (Grek!!), DO NOT WRITE normal Latin here -->
+			<d>Ꞷ ꞷ ꟝ ɷ</d><!-- Omega 1 -->
+			<d forgetTest="0">𝿴</d><!-- Greek omega (Grek!!), DO NOT WRITE normal Latin here -->
 			<d>𐞤</d><!-- Omega 2 -->
 		</f>
 		<f loc="MiscLat">
