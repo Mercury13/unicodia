@@ -158,6 +158,8 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     // Vedic
     { 0x1CF5,  uc::m::SAMPLED_CONTROL }, // Upadh
     { 0x1CF6,  uc::m::SAMPLED_CONTROL }, // Jihva
+    // Punctuation
+    { 0x2011,  uc::m::SAMPLED_CONTROL }, // NBHY
     // Brai
     { 0x2800,  uc::m::SPACE           }, // Braille blank
     // CJK
