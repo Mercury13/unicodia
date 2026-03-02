@@ -12,7 +12,7 @@ consteval uc::StyleSheet operator + (
         const uc::StyleSheet& x, const uc::StyleSheet& y)
     { return { .topPc = short(x.topPc + y.topPc), .botPc = short(x.botPc + y.botPc) }; }
 
-#define FAM_DEFAULT { FACE_DEFAULT, Fafg::BUILTIN }
+constexpr uc::Family FAM_DEFAULT { FACE_DEFAULT, uc::Fafg::BUILTIN | uc::Fafg::FIND_LATMOD };
 
 // File names
 constexpr uc::Family FNAME_NOTO { "NotoSerif-Regular.ttf", uc::Fafg::DEHINT_DOTC | uc::Fafg::FIND_LATMOD };
