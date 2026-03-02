@@ -907,7 +907,7 @@ constinit const uc::Block uc::blocks[] {
             "Linear A",
             { EcScript::Lina, 0 }, MapSubtype::DEAD, EcScript::Lina },
     // Latin ex F OK, drew in FunkySample
-    { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
+    { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_SQUARE | Ifg::PAINT_SVG },
             "Latin Extended-F",
             { EcScript::Latn, 'F' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::FUNKY, Bfg::STOCK_BLOCK_DESC },
