@@ -314,6 +314,9 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x25963 },    // SimB (T-form)
     //{ 0x2615B },  // H-form; if choose between SimB and BS → BS better
 
+    // CJK C: SimSun B
+    { 0x2AA90 },    // SimB: erratum after West’s death
+
     // CJK E: SinSumB
     { 0x2C287 },    // SimB: BS drew a strange version
 
