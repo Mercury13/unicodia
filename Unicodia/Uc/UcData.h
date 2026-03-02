@@ -493,10 +493,11 @@ namespace uc {
 
     enum class Fafg : unsigned char {
         // Now all fonts are loaded as raw fonts
-        DEHINT_DOTC = 1 << 0,  ///< Dehint dotted circle
-        BUILTIN     = 1 << 1,  ///< Built-in font
-        STRONG_TOFU = 1 << 2,  ///< Strategy for tofu
-        FIND_LATMOD = 1 << 3,  ///< Find (Ct+Sh+N): Latin modifier
+        DEHINT_DOTC     = 1<<0, ///< Dehint dotted circle
+        BUILTIN         = 1<<1, ///< Built-in font
+        STRONG_TOFU     = 1<<2, ///< Strategy for tofu
+        FIND_LATMOD     = 1<<3, ///< Find (Ct+Sh+N): Latin/Cyrillic modifier
+        FIND_ANY_LATIN  = 1<<4, ///< Find (Ct+Sh+N): any Latin/Cyrillic
     };
 
     DEFINE_ENUM_OPS(Fafg)

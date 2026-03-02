@@ -28,7 +28,7 @@ constexpr std::string_view FNAME_BABEL_01 = "BabelStoneHanBasic.ttf";
 constexpr uc::Family FAM_BABEL_23 { "BabelStoneHanExtra.ttf" };
 constexpr uc::Family FNAME_KOREAN { "UtoSansKR-Regular.ttf" };
 constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
-constexpr uc::Family FAM_TANGUT_FIXUP { "UFSTangutFixup.ttf", uc::Fafg::STRONG_TOFU };
+constexpr uc::Family FAM_TANGUT_FIXUP { "UFSTangutFixup.ttf", uc::Fafg::STRONG_TOFU | uc::Fafg::FIND_ANY_LATIN };
 
 constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };

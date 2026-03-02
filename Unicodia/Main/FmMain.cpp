@@ -2578,6 +2578,9 @@ namespace {
                         std::u8string_view q = cp.explicitMainName();
                         return strHas(q, u8"modifier") || strHas(q, u8"subscript");
                     }
+                    if (font->family.flags.have(uc::Fafg::FIND_ANY_LATIN)) {
+                        return true;
+                    }
                 }
                 return false;
             }
