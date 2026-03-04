@@ -1339,7 +1339,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tang, '1' }, MapSubtype::DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Khitan small OK
-    { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
+    { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER | Ifg::PAINT_SVG },
             "Khitan Small Script",
             { EcScript::Kits, 0 }, MapSubtype::DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
@@ -1360,12 +1360,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Jurc, 0 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE },
     /// @todo [U18] Jurchen radicals
-    { 0x191A0, 0x191DF, { 0x191B1, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
+    { 0x191A0, 0x191DF, { 0x191B7, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::HISTORICAL },
             "Jurchen Radicals",
             { EcScript::Jurc, 1 }, MapSubtype::DEAD,
             EcScript::Jurc, EcFont::CJK_UHAN, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
-    { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
+    { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK, Ifg::PAINT_SVG },
             "Kana Extended-B",
             { EcScript::Hira, 'B' }, MapSubtype::DEAD,
             EcScript::Kana, EcFont::CJK_UHAN, Bfg::CJK | Bfg::STOCK_BLOCK_DESC },
