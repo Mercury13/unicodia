@@ -41,9 +41,14 @@
 /range 2F00 2FD5
 
 
+/country ORERASE
+/prefix unstable-u
+/range 191A0 191D2
+
 
 # Supplemental Taiwanese compatible hieros, a few are from Hong Kong
 /country t h m g j k v s UHAN STRICT ORERASE
+/prefix u
 /range 2F800 2FA1D
 
 

@@ -1363,7 +1363,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x191A0, 0x191DF, { 0x191B1, EcContinent::CJK, Ifg::PAINT_SVG | Ifg::MISSING },
             "Jurchen Radicals",
             { EcScript::Jurc, 1 }, MapSubtype::DEAD,
-            EcScript::Jurc, EcFont::NORMAL, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Jurc, EcFont::CJK_UHAN, Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",

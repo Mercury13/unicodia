@@ -317,7 +317,7 @@ int main()
 
         std::cout << "Reading LARGE Kage list..." << std::flush;
         KageCache largeCache;
-        auto nLarge = readKageList(kageList, largeCache, 6'500'000, "dump_all_versions.txt");
+        auto nLarge = readKageList(kageList, largeCache, 7'000'000, "dump_all_versions.txt");
         std::cout << "OK, " << nLarge << " entries" "\n";
 
         std::cout << "Archiving tasks..." << std::flush;
