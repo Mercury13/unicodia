@@ -201,7 +201,7 @@
 		</f>
 		<f name="H">
 			<f loc="MiscForms">
-				<d>Ɥ ɥ ʮ ʯ Ⱶ ⱶ Ꟶ ꟶ Ꜧ ꜧ ɧ Ƕ ƕ</d>
+				<d>Ɥ ɥ ʮ 𝼾  ʯ Ⱶ ⱶ Ꟶ ꟶ Ꜧ ꜧ ɧ Ƕ ƕ</d>
 				<d>ᶣ 𝿭 𝿘 𝿮</d><!-- Super misc -->
 				<d>ꭜ 𐞗</d><!-- Super heng -->
 			</f>
@@ -337,7 +337,7 @@
 			<d>Ṽ ṽ Ʋ ʋ ⱱ ⱴ Ꝟ ꝟ ᶌ Ṿ ṿ 𝼹 Ʌ ʌ Ỽ ỽ ᴠ Ꝡ ꝡ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
 		</f>
 		<f name="W">
-			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ Ẉ ẉ Ꟃ ꟃ ʍ ᴡ</d>
+			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ 𝼿 Ẉ ẉ Ꟃ ꟃ ʍ ᴡ</d>
 			<d>ᵂ ʷ 𝿛 ꭩ</d><!-- Superscripts -->
 			<d>₝</d><!-- Subscripts -->
 		</f>
@@ -358,12 +358,13 @@
 			<d>₟</d><!-- Subscripts -->
 		</f>
 		<f loc="Greek">
-			<d>Ꞵ ꞵ</d><!-- Beta -->
+			<d>Ꞵ ꞵ 𝼻</d><!-- Beta -->
 			<d>Ɣ ɣ 𝼱 ˠ 𝿐</d><!-- Gamma -->
 			<d>ẟ ƍ</d><!-- Delta -->
+			<d>𝼼</d><!-- Theta -->
 			<d>Ꟛ ꟛ Ƛ ƛ</d><!-- Lambda -->
 			<d>ɸ ⱷ 𝼳 ᶲ</d><!-- Phi -->
-			<d>Ꭓ ꭓ ꭔ ꭕ</d><!-- Chi -->
+			<d>Ꭓ ꭓ ꭕ 𝼽 ꭔ</d><!-- Chi -->
 			<d forgetTest="0">𝿳</d><!-- Greek psi (Grek!!), DO NOT WRITE normal Latin here -->
 			<d>Ꞷ ꞷ ꟝ ɷ</d><!-- Omega 1 -->
 			<d forgetTest="0">𝿴</d><!-- Greek omega (Grek!!), DO NOT WRITE normal Latin here -->
