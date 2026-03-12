@@ -2083,12 +2083,21 @@
      <orig>
       <p>The block contains superscript and subscript letters, signs and digits used in mathematics and phonetics.</p>
       <p />
+      <p>Long before the advent of the Internet, it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. The system (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense in forcing people to use more complex systems, or in simulating like “6.022e23” or “6.022×10^23”.</p>
+      <p />
+      <p>Also, superscripts drawn by typographers are often better than synthesized by word processors.</p>
+      <p />
+      <p>Many of important superscripts and subscripts are in other places: transposition of matrix Aᵀ{{-}}in the block of [[pk:1D40|phonetic extensions]].</p>
+     </orig>
+     <known-orig>
+      <p>The block contains superscript and subscript letters, signs and digits used in mathematics and phonetics.</p>
+      <p />
       <p>Long before the advent of the Internet, it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. System (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense in forcing people to move to other systems, or simulate like “6.022e23” or “6.022×10^23”.</p>
       <p />
       <p>Also, superscripts drawn by typographers are often better than synthesized by word processors.</p>
       <p />
       <p>Many of important superscripts and subscripts are in other places: transposition of matrix Aᵀ{{-}}in the block of [[pk:1D40|phonetic extenstios]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>このブロックには、数学や音声学で使用される上付き文字と下付き文字、記号、数字が含まれています。</p>
       <p />
@@ -2488,7 +2497,8 @@
      <transl>句読点 補足</transl>
     </text>
     <text id="Text">
-     <orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</orig>
+     <orig>Special punctuation marks: textology of the New Testament, characters from ancient Greek papyri, German dictionary marks, characters from Typicon (statute of Orthodox worship of the 15th century) and more.</orig>
+     <known-orig>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</known-orig>
      <transl>特殊な句読点: 新約聖書のテキスト、古代ギリシャのパピルスの文字、ドイツ語の辞書の記号、ティピコン（15 世紀の正教会の礼拝の法令）の文字など。</transl>
     </text>
    </group>
@@ -3571,7 +3581,12 @@
    </group>
    <group id="10EC0">
     <text id="Text">
-     <orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</orig>
+     <orig>
+      <p>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
+      <p />
+      <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
+     </orig>
+     <known-orig>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</known-orig>
      <transl>トルコ語とリビアのコーランからの文字、およびペゴン文字（アラビア文字でジャワ語を書く）の珍しいバリエーション。</transl>
     </text>
    </group>
@@ -3918,6 +3933,11 @@
      <transl>初期王朝くさび形文字</transl>
     </text>
    </group>
+   <group id="12550">
+    <text id="Name">
+     <orig>Archaic cuneiform numerals</orig>
+    </text>
+   </group>
    <group id="12F90">
     <text id="Name">
      <orig>Cypro-Minoan</orig>
@@ -4154,6 +4174,19 @@
      <orig>Components and radicals from the new dictionary (2021).</orig>
     </text>
    </group>
+   <group id="18E00">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+   </group>
+   <group id="191A0">
+    <text id="Name">
+     <orig>Jurchen radicals</orig>
+    </text>
+    <text id="Text">
+     <orig>Fifty radicals from the Jurchen dictionary of 1984. One radical is split into two, [[pc:191B6|23]] and [[pc:191B7|24]].</orig>
+    </text>
+   </group>
    <group id="1AFF0">
     <text id="Text">
      <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
@@ -4303,10 +4336,21 @@
       <p />
       <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
-      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 added another notation ([[pc:1D1EB|half-sharp]], [[pc:1D1ED|half-flat]]) widely used by musical software.</p>
       <p />
       <p>Also, this block has several characters from obsolete musical notations.</p>
      </orig>
+     <known-orig>
+      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
+      <p />
+      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
+      <p />
+      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p />
+      <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 will add another notation (half-sharp, half-flat) widely used by musical software.</p>
+      <p />
+      <p>Also, this block has several characters from obsolete musical notations.</p>
+     </known-orig>
      <transl>
       <p>現代風の音符は 10 世紀に登場しました。太いペンで描かれたため、四角い音符でした。歌手用に 1 段につき 4 本の線が描かれ、楽器用にはさらに線が描かれました。絶対的な周波数はありませんでした。13 世紀までに長さのマークが発明されました。中程度の太さのペンで音符を筆記体で描こ​​うと、丸い音符が登場しました。今日でも、音楽家用の特別な万年筆が製造されています。</p>
       <p />
@@ -4336,6 +4380,14 @@
       <p />
       <p>音楽家と歌手には異なる記譜法があり、歌詞、音楽、歌手へのヒントを並行して書くことができた。音符は文字で書かれ、通常のギリシャ文字とは異なる文字が体系なしにこのブロックに集められている。</p>
      </transl>
+    </text>
+   </group>
+   <group id="1D250">
+    <text id="Name">
+     <orig>Musical symbols supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Rare musical symbols, both European and Arabic/Turkish.</orig>
     </text>
    </group>
    <group id="1D2C0">
@@ -4468,9 +4520,18 @@
      <transl>サットン手話文字</transl>
     </text>
    </group>
+   <group id="1DB00">
+    <text id="Name">
+     <orig>Symbols and arrows miscellaneous extended</orig>
+    </text>
+    <text id="Text">
+     <orig>As of Unicode{{_}}18.0, it only contains archaic mathematical symbols.</orig>
+    </text>
+   </group>
    <group id="1DF00">
     <text id="Text">
-     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</orig>
+     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others. Archaic mathematical symbols. Typewriter-friendly symbols from various linguists’ field notes. Letters from various alphabets for initial teaching of English: unlike [[ps:Dsrt|Deseret]] or [[ps:Shaw|Shavian]], they eventually lead the child to ordinary English spelling.</orig>
+     <known-orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</known-orig>
      <transl>発話障害や音声学のためのさまざまな文字: 口蓋音や後屈音、クリック音など。</transl>
     </text>
    </group>
@@ -4938,6 +4999,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Characters from different computers and systems of the 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
+      <p />
+      <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], and [[po:Hp]].</p>
+      <p />
+      <p>'''Did not''' advance to the standard:</p>
+      <p>* characters in intellectual property, like the Apple logo;</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p />
+      <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
+     </orig>
+     <known-orig>
       <p>Characters from different computers and systems of 1970s and 80s: [[po:AmstradCpc]], [[po:Aquarius]], [[po:Atari400]], [[po:AtariSt]], [[po:Trs80]], [[po:CoCo]], [[po:Oric]], [[po:Apple2]], [[po:C64]], [[po:Zx80]], [[po:Msx]], [[po:RiscOs]], [[po:Teletext]], [[po:Minitel]]{{-}}and, by coincidence, [[po:Korvet]], a Soviet PC.</p>
       <p />
       <p>Unicode{{_}}16 added more systems: [[po:Smalltalk]], [[po:SharpMz]], [[po:Kaypro]], [[po:Ohio]], [[po:Robotron]], [[po:Hp]].</p>
@@ -4947,7 +5019,7 @@
       <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>1970 年代と 80 年代のさまざまなコンピューターとシステムのキャラクター: [[po:AmstradCpc]]、[[po:Aquarius]]、[[po:Atari400]]、[[po:AtariSt]]、[[po:Trs80]]、[[po:CoCo]]、[[po:Oric]]、[[po:Apple2]]、[[po:C64]]、[[po:Zx80]]、[[po:Msx]]、[[po:RiscOs]]、[[po:Teletext]]、[[po:Minitel]]{{-}}そして偶然にも、ソビエト PC の [[po:Korvet]]。</p>
       <p />
@@ -5047,6 +5119,11 @@
       <p />
       <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
      </orig>
+    </text>
+   </group>
+   <group id="3D000">
+    <text id="Name">
+     <orig>Seal (Zhuànshū)</orig>
     </text>
    </group>
    <group id="E0000">
@@ -5973,13 +6050,13 @@
      <orig>
       <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
-      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, 1BC05+1BC41+1BC36) looks like</p>
+      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
       <p>:{{DuplCats}}</p>
      </orig>
      <transl>
       <p>フランスの司祭エミール・デュプロイエが考案した速記システム。幾何学的（文字は点、線、円で構成されている）、アルファベット（子音と母音に同等の注意を払っている）に分類されます。</p>
       <p />
-      <p>単語は1本のストロークで書かれ、線からはるか上または下に書かれることがあります。''Unicodia''は、明瞭性のために古い''Noto Sans Duployan{{_}}2''フォントを使用しており、Unicode文字にいくつかのグリフを与えているだけです。2023年には、複雑な書き方を実際にモデル化したNoto{{_}}3が登場しました{{-}}これは2{{_}}メガバイトの大きさで、{{n|10000}}のグリフと500のルールが含まれており、英語のペローシステム（K+A+TS、1BC05+1BC41+1BC36）の「cats」という単語は次のようになります</p>
+      <p>単語は1本のストロークで書かれ、線からはるか上または下に書かれることがあります。''Unicodia''は、明瞭性のために古い''Noto Sans Duployan{{_}}2''フォントを使用しており、Unicode文字にいくつかのグリフを与えているだけです。2023年には、複雑な書き方を実際にモデル化したNoto{{_}}3が登場しました{{-}}これは2{{_}}メガバイトの大きさで、{{n|10000}}のグリフと500のルールが含まれており、英語のペローシステム（K+A+TS、[[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]）の「cats」という単語は次のようになります</p>
       <p>:{{DuplCats}}</p>
      </transl>
     </text>
@@ -6341,6 +6418,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Greek script is made from [[ps:Phnx|Phoenician]] without looking at early Greek systems, [[ps:Linb|Linear B]] and [[ps:Cprt|Cypriot]]. The Phoenician alphabet was [[pt:abjad|consonant]], and that’s good for Semitic languages where the word’s root is a skeleton of consonants, and vowels work as suffixes: in [[ps:Arab|Arabic]] (also a Semitic language) ''jihad'' is done by a ''mujahid''.</p>
+      <p />
+      <p>Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much, but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
+      <p />
+      <p>Greek script became the ancestor of [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
+      <p />
+      <p>{{GrekCoptUni}}</p>
+     </orig>
+     <known-orig>
       <p>Greek script is made from [[ps:Phnx|Phoenician]] without looking to early Greek systems, [[ps:Linb|Linear B]] and [[ps:Cprt|Cypriot]]. Phoenician alphabet was [[pt:abjad|consonant]], and that’s good for Semitic languages where word’s root is a skeleton of consonants, and vowels work as suffixes: in [[ps:Arab|Arabic]] (also Semitic) ''jihad'' is done by ''mujahid''.</p>
       <p />
       <p>Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much, but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
@@ -6348,7 +6434,7 @@
       <p>Greek script became the ancestor for [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
       <p />
       <p>{{GrekCoptUni}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>ギリシャ文字は、初期のギリシャ文字体系、[[ps:Linb|線文字B]]や[[ps:Cprt|キプロス文字]]を参考にせずに、[[ps:Phnx|フェニキア文字]]から作られています。フェニキア文字は[[pt:abjad|子音]]で、これはセム語系言語に適しています。セム語系言語では、語源は子音の骨組みで、母音は接尾辞として機能します。[[ps:Arab|アラビア語]]（これもセム語系）では、「ジハード」は「ムジャヒド」によって行われます。</p>
       <p />
@@ -6694,13 +6780,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Shong Lue Yang, the inventor of the script, said that the script was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam war was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, Shong was assassinated by pro-Americans.</p>
+      <p>Shong Lue Yang, the inventor of the script, said that the script was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam War was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, Shong was assassinated by pro-Americans.</p>
       <p />
       <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of vowel “oob”, consonant “qh” and a tack for tone.</p>
       <p />
-      <p>Four stages exist, the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
+      <p>Four stages exist; the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
       <p />
-      <p>Hmongs from the same clan are perceived to be like brothers and sisters, and should not do anything looking like relationships, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges, or drawn on doors. These characters have never been used widely.</p>
+      <p>Hmong people from the same clan are perceived to be like brothers and sisters, and should not do anything that looks romantic, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges or drawn on doors. These characters have never been used widely.</p>
      </orig>
      <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
      <known-orig>
@@ -6734,10 +6820,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>In the 1970s, Vietnamese and Lao Hmongs fled across countries; some settled in the USA. There is an excellent film, ''Gran Torino'' (2008), about the destiny of an American Hmong.</p>
+      <p />
+      <p>The script was invented in the 1980s by Chervang Kong, a priest of one of the American Evangelical churches. The church did active missionary work, and the script spread across the USA. Also used in Asia and Australia to a limited extent. Special signs are used for proper names instead of capital letters.</p>
+     </orig>
+     <known-orig>
       <p>In 1970s Vietnamese and Lao Hmongs fled across countries, some settled in USA. There is an excellent film ''Gran Torino'' (2008) about destiny of an American Hmong.</p>
       <p />
       <p>The script was invented in 1980s by Chervang Kong, priest of one of American Evangelist churches. The church did active missionary work, and script spread across USA. Also used in Asia and Australia to a limited extent. Special signs are used for proper names instead of capital letters.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>1970 年代、ベトナム人とラオス人のモン族は国を越えて逃げ、一部は米国に定住しました。アメリカのモン族の運命を描いた素晴らしい映画「グラン・トリノ」(2008 年) があります。</p>
       <p />
@@ -6812,6 +6903,23 @@
     <text id="Text">
      <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
      <transl>[[ps:Kawi|カウィ]] に由来します。固有の母音は {{t|a}} です。[[pt:virama|ヴィラマ]] 記号は「パンコン」と呼ばれ、斜めのダッシュではなく長いフックです。ジャワ文字は [[ps:Bali|バリ文字]] に近いです。20 世紀半ばまでに、この文字は [[ps:Latn|ラテン文字]] に完全に取って代わられました。今日では、それは本当に美しいので、儀式に使用されています。</transl>
+    </text>
+   </group>
+   <group id="Jurc">
+    <text id="Name">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Lang">
+     <orig>Jurchen</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
+      <p />
+      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
+      <p />
+      <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
+     </orig>
     </text>
    </group>
    <group id="Kali">
@@ -8247,6 +8355,19 @@
      </transl>
     </text>
    </group>
+   <group id="Pcun">
+    <text id="Name">
+     <orig>Proto-cuneiform</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
+      <p />
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+     </orig>
+     <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
+    </text>
+   </group>
    <group id="Perm">
     <text id="Name">
      <orig>Old Permic (Komi Zyryan, Anbur)</orig>
@@ -8622,6 +8743,23 @@
       <p />
       <p>もう一方の手、反対側、横向きのジェスチャーは、Fill{{_}}2…6 のいずれか、および Rotation{{_}}2…16 のいずれかの組み合わせ文字で行われます。たとえば、「目隠しを外す」と書くには、{{sm|𝠎𝪟𝦆}}、1D80E+Fill6+1D986 と書きます。</p>
      </transl>
+    </text>
+   </group>
+   <group id="Seal">
+    <text id="Name">
+     <orig>Seal script</orig>
+    </text>
+    <text id="Lang">
+     <orig>Old Chinese</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern ink-and-brush style.</p>
+      <p />
+      <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
+      <p />
+      <p>Ancient ideographs are still used in personal, business and government seals.</p>
+     </orig>
     </text>
    </group>
    <group id="Shaw">
@@ -11064,6 +11202,7 @@
       <p />
       <p>* A hieroglyph can have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 or more coils. These forms are encoded at scholars’ discretion.</p>
       <p>* Hieroglyphs are encoded in the most detailed form. Really fine details like armbands are omitted at scholars’ discretion.</p>
+      <p>* Sometimes scholars argue on the subject: [[pc:130FC]]{{-}}basket or alabaster basin? Unicode does not support either opinion and omits details.</p>
       <p>* Size and colour are not encoded.</p>
       <p>* If such fine details are truly important, Unicode is just not for you. Include the image.</p>
       <p>* Similar signs with different meanings are encoded separately. A circle might represent a tambourine, a ring, a pit…</p>
@@ -14043,6 +14182,9 @@
     <text id="TypoMisc">
      <orig>Misc. punctuation</orig>
     </text>
+    <text id="Greek">
+     <orig>Greek</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
@@ -14086,6 +14228,9 @@
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette.</orig>
      <transl>2019年までは、売り手は男性、女性、子供としてそれを描いていました。その後、性別がなくなりました。2023年にはシルエットに変わりました。</transl>
     </text>
+    <text id="U+1F4CE">
+     <orig>In 2021, Microsoft drew ''Clippit'', the default Microsoft Office assistant. Used in versions 97 to 2003, it was loved for animations and hated for uselessness.</orig>
+    </text>
     <text id="U+1F52B">
      <orig>In 2018 the image was changed to a toy to curb threats over the Internet. Despite the consensus, Twitter/X reverted to live gun in 2024.</orig>
      <transl>2018年、インターネット上の脅威を抑制するため、画像はおもちゃに変更されました。しかし、合意にもかかわらず、Twitter/Xは2024年に実銃の画像に戻りました。</transl>
@@ -14098,6 +14243,10 @@
      <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
      <transl>ベンダーは馬車、自転車、自動車の車輪を引くことができます。</transl>
     </text>
+    <text id="U+1F9A0">
+     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
+     <transl>アメーバ、細菌、COVID-19、その他のウイルスなど、あらゆる微小な生物が考えられます。</transl>
+    </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
      <transl>Google Noto は星型のピニャータを描き、Microsoft は動物型のピニャータを描きます。</transl>
@@ -14105,10 +14254,6 @@
     <text id="U+1FA92">
      <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts a straight razor.</orig>
      <transl>すべてのベンダーが安全カミソリに落ち着いたのは比較的最近の 2019 ～ 2021 年です。Windows {{_}}10 の絵文字はカミソリを表しています。</transl>
-    </text>
-    <text id="U+1F9A0">
-     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
-     <transl>アメーバ、細菌、COVID-19、その他のウイルスなど、あらゆる微小な生物が考えられます。</transl>
     </text>
     <text id="U+1FAA4">
      <orig>The sample image of Unicode{{_}}{{vtrap}} depicts a spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw a makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
@@ -14794,6 +14939,17 @@
      </orig>
     </text>
    </group>
+   <group id="18.0">
+    <text id="Text">
+     <orig>
+      <p>* Steady improvements in [[pt:egyp|Egyptian]] for compatibility with Gardiner’s list. In particular, swapped [[pc:13277]]↔[[pc:13FDC]].</p>
+      <p>* Multiple musical symbols, including long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
+      <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
+      <p>* Old mathematical notations.</p>
+      <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
+     </orig>
+    </text>
+   </group>
   </group>
   <group id="Update">
    <text id="Head">
@@ -15452,7 +15608,8 @@
      <orig>Break/before</orig>
     </text>
     <text id="Text">
-     <orig>You can break before these characters. All five European characters are from dictionaries.</orig>
+     <orig>You can break before these characters. All six European characters are from dictionaries.</orig>
+     <au-cmt>six as of U18</au-cmt>
     </text>
    </group>
    <group id="HY">

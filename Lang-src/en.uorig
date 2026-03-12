@@ -4388,7 +4388,7 @@
      <orig>
       <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
-      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, 1BC05+1BC41+1BC36) looks like</p>
+      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
       <p>:{{DuplCats}}</p>
      </orig>
     </text>
