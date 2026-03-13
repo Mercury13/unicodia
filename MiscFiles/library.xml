@@ -231,7 +231,11 @@
 			<d>ⱼ</d><!-- Subscripts -->
 		</f>
 		<f name="K">
-			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ Ꝁ ꝁ Ꝃ ꝃ Ꞣ ꞣ Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ ĸ 𝼐</d>
+			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ</d><!-- Top -->
+			<d>Ꝁ ꝁ</d><!-- Half-top -->
+			<d>𝽈 𝽉</d><!-- Mid -->
+			<d>Ꝃ ꝃ Ꞣ ꞣ</d><!-- Haf-bottom -->
+			<d>Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ ĸ 𝼐</d><!-- Bottom -->
 			<d>ᴷ ᵏ</d><!-- Super bare -->
 			<d>𝿻</d><!-- Super top -->
 			<d>𐞾</d><!-- Super variants -->
