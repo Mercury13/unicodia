@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    version="1.1"
-   viewBox="-10 0 586 1000"
+   viewBox="-10 0 881 1000"
    id="svg1"
-   sodipodi:docname="1DF3D.svg"
+   sodipodi:docname="1DF42.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,8 +21,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.755"
-     inkscape:cx="143.70861"
-     inkscape:cy="831.12583"
+     inkscape:cx="440.39735"
+     inkscape:cy="501.3245"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -31,23 +31,40 @@
      inkscape:current-layer="svg1"
      showguides="true">
     <sodipodi:guide
-       position="319,359"
-       orientation="0,-1"
+       position="11,694"
+       orientation="1,0"
        id="guide1"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="264.96688,303"
-       orientation="0,-1"
+       position="516.99779,508"
+       orientation="1,0"
        id="guide2"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="799,508"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="799,461"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="445.59796,508"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
   </sodipodi:namedview>
-  <path
-     d="m 278.80794,693 h 313.9404 v 53 c 0,55 -24,72 -57,72 -22,0 -36,-5 -52,-16 -9,9 -15,21 -15,37 0,36 29,55 76,55 75,0 104,-55 104,-148 V 641 h -369.9404 z"
-     style="fill:currentColor"
-     id="path1-1"
-     sodipodi:nodetypes="ccssscssccc" />
+  <rect
+     style="fill:#1a5fb4;fill-rule:evenodd;stroke-width:17;stroke-miterlimit:2.3"
+     id="rect4"
+     width="505.99777"
+     height="47"
+     x="1"
+     y="492" />
   <path
      fill="currentColor"
-     d="m 5,1040 v -42 h 9 c 38,0 62,-24 81,-64 L 229,652 106,359 C 89,317 58,306 28,306 H 15 v -42 h 235 v 42 h -3 c -46,0 -57,13 -57,29 0,14 1,22 10,46 l 86,204 77,-178 c 14,-32 16,-53 16,-71 0,-20 -21,-30 -62,-30 h -3 v -42 h 206 v 42 h -9 c -39,0 -59,14 -81,64 L 309,641 438,945 c 19,46 54,53 79,53 h 13 v 42 H 287 v -42 h 5 c 40,0 60,-11 60,-33 0,-14 -1,-23 -20,-69 L 252,708 166,898 c -14,31 -20,52 -20,70 0,20 19,30 60,30 h 5 v 42 z"
+     d="M 216,810 C 110,810 35,779 35,702 c 0,-38 32,-68 89,-68 0,96 19,126 91,126 81,0 125,-84 125,-226 0,-179 -49,-230 -126,-230 -67,0 -85,52 -85,115 -59,0 -89,-17 -89,-63 0,-69 91,-102 174,-102 127,0 223,67 223,281 0,196 -95,275 -221,275 z"
      id="path1" />
 </svg>
