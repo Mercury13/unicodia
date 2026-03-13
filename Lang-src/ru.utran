@@ -997,7 +997,7 @@
      <transl>расшифрованная ''(как клинопись)''</transl>
     </text>
     <text id="ForRev">
-     <orig>made for revival of dead language ''(like Osage)''</orig>
+     <orig>made for the revival of dead language ''(like Osage)''</orig>
      <transl>сделана для возрождения мёртвого языка ''(как осейдж)''</transl>
     </text>
    </group>
@@ -11784,13 +11784,13 @@
      <orig>
       <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
       <p />
-      <p>'''Endengered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
+      <p>'''Endangered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
       <p />
-      <p>'''Endangered due to script competition'''{{-}}all languages have alternate script, already stronger or gaining strength.</p>
+      <p>'''Endangered due to script competition'''{{-}}all languages have an alternate script, already stronger or gaining strength.</p>
       <p />
-      <p>'''Dead'''{{-}}script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
+      <p>'''Dead'''{{-}}the script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
       <p />
-      <p>'''Religious'''{{-}}the script is in use by important religion.</p>
+      <p>'''Religious'''{{-}}the script is in use by an important religion.</p>
       <p />
       <p>'''Historical, no{{_}}decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
       <p />
@@ -11800,7 +11800,7 @@
       <p />
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
       <p />
-      <p>'''Made for revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
+      <p>'''Made for the revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to liberation of Africa in 20th century.</p>
      </orig>
