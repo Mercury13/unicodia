@@ -976,13 +976,7 @@ FFFD......: NotoSerif-Regular
 1382D.......: NewGardiner
 1382E..13862: UnicodiaSesh
 13863.......: NewGardiner
-13864, 13865: UnicodiaSesh
-13866.......: NewGardiner
-13867..13869: UnicodiaSesh
-1386A.......: NewGardiner
-1386B.......: UnicodiaSesh
-1386C.......: NewGardiner
-1386D..1388D: UnicodiaSesh
+13864..1388D: UnicodiaSesh
 1388E, 1388F: NewGardiner
 13890..138A8: UnicodiaSesh
 138A9.......: NewGardiner
@@ -1006,8 +1000,8 @@ FFFD......: NotoSerif-Regular
 138F9.......: NewGardiner
 138FA..13907: UnicodiaSesh
 13908.......: NewGardiner
-13909..1390B: UnicodiaSesh
-1390C..1390F: NewGardiner
+13909..1390C: UnicodiaSesh
+1390D..1390F: NewGardiner
 13910..1392A: UnicodiaSesh
 1392B, 1392C: NewGardiner
 1392D..1394C: UnicodiaSesh
@@ -1090,9 +1084,7 @@ FFFD......: NotoSerif-Regular
 13AEF.......: NewGardiner
 13AF0..13AFE: UnicodiaSesh
 13AFF.......: NewGardiner
-13B00..13B0B: UnicodiaSesh
-13B0C.......: NewGardiner
-13B0D.......: UnicodiaSesh
+13B00..13B0D: UnicodiaSesh
 13B0E.......: NewGardiner
 13B0F..13B11: UnicodiaSesh
 13B12.......: NewGardiner
@@ -1124,9 +1116,7 @@ FFFD......: NotoSerif-Regular
 13B77.......: NewGardiner
 13B78..13BA2: UnicodiaSesh
 13BA3.......: NewGardiner
-13BA4..13BA8: UnicodiaSesh
-13BA9.......: NewGardiner
-13BAA..13BAD: UnicodiaSesh
+13BA4..13BAD: UnicodiaSesh
 13BAE.......: NewGardiner
 13BAF..13BB8: UnicodiaSesh
 13BB9.......: NewGardiner
@@ -1598,7 +1588,15 @@ FFFD......: NotoSerif-Regular
 == Jurchen
 18E00..19191: [Tofu]
 == Jurchen Radicals
-191A0..191D2: [Tofu]
+191A0..191A7: UnicodiaHan
+191A8..191AF: [Tofu]
+191B0.......: UnicodiaHan
+191B1..191B4: [Tofu]
+191B5..191B9: UnicodiaHan
+191BA..191BD: [Tofu]
+191BE, 191BF: UnicodiaHan
+191C0..191CC: [Tofu]
+191CD..191D2: UnicodiaHan
 == Kana Extended-B
 1AFF0..1AFFE: UnicodiaHan
 == Kana Supplement
@@ -1672,7 +1670,8 @@ FFFD......: NotoSerif-Regular
 1DF1F..1DF24: UFSTangutFixup
 1DF25..1DF2A: UnicodiaFunky
 1DF2B..1DF3A: UFSTangutFixup
-1DF3B..1DF4F: [Tofu]
+1DF3B..1DF45: UnicodiaFunky
+1DF46..1DF4F: [Tofu]
 1DF50.......: UnicodiaFunky
 1DF51..1DF56: [Tofu]
 1DF57.......: UnicodiaFunky
@@ -26873,11 +26872,11 @@ FFFD......: NotoSerif-Regular
 2EBF0..2EE5D: BabelStoneHanExtra
 == CJK Compatibility Ideographs Supplement
 2F800..2F841: UnicodiaHan
-2F842..2F844: BabelStoneHanBasic
-2F845, 2F846: UnicodiaHan
-2F847.......: BabelStoneHanBasic
-2F848.......: UnicodiaHan
-2F849..2F84D: BabelStoneHanBasic
+2F842, 2F843: BabelStoneHanBasic
+2F844..2F848: UnicodiaHan
+2F849.......: BabelStoneHanBasic
+2F84A.......: UnicodiaHan
+2F84B..2F84D: BabelStoneHanBasic
 2F84E..2F850: UnicodiaHan
 2F851..2F85A: BabelStoneHanBasic
 2F85B.......: UnicodiaHan
@@ -26885,7 +26884,9 @@ FFFD......: NotoSerif-Regular
 2F85D..2F860: UnicodiaHan
 2F861.......: BabelStoneHanBasic
 2F862, 2F863: UnicodiaHan
-2F864..2F86E: BabelStoneHanBasic
+2F864..2F867: BabelStoneHanBasic
+2F868.......: UnicodiaHan
+2F869..2F86E: BabelStoneHanBasic
 2F86F, 2F870: UnicodiaHan
 2F871.......: BabelStoneHanBasic
 2F872.......: UnicodiaHan
@@ -26893,19 +26894,23 @@ FFFD......: NotoSerif-Regular
 2F874, 2F875: UnicodiaHan
 2F876.......: BabelStoneHanBasic
 2F877..2F87B: UnicodiaHan
-2F87C..2F880: BabelStoneHanBasic
+2F87C.......: BabelStoneHanBasic
+2F87D.......: UnicodiaHan
+2F87E..2F880: BabelStoneHanBasic
 2F881, 2F882: UnicodiaHan
 2F883.......: BabelStoneHanBasic
 2F884.......: UnicodiaHan
 2F885, 2F886: BabelStoneHanBasic
 2F887.......: UnicodiaHan
-2F888..2F88C: BabelStoneHanBasic
+2F888.......: BabelStoneHanBasic
+2F889.......: UnicodiaHan
+2F88A..2F88C: BabelStoneHanBasic
 2F88D.......: UnicodiaHan
 2F88E, 2F88F: BabelStoneHanBasic
-2F890..2F892: UnicodiaHan
-2F893.......: BabelStoneHanBasic
-2F894.......: UnicodiaHan
-2F895..2F898: BabelStoneHanBasic
+2F890..2F894: UnicodiaHan
+2F895.......: BabelStoneHanBasic
+2F896, 2F897: UnicodiaHan
+2F898.......: BabelStoneHanBasic
 2F899.......: UnicodiaHan
 2F89A.......: BabelStoneHanBasic
 2F89B, 2F89C: UnicodiaHan
@@ -26915,15 +26920,19 @@ FFFD......: NotoSerif-Regular
 2F8A4.......: UnicodiaHan
 2F8A5.......: BabelStoneHanBasic
 2F8A6.......: UnicodiaHan
-2F8A7..2F8AC: BabelStoneHanBasic
+2F8A7..2F8A9: BabelStoneHanBasic
+2F8AA.......: UnicodiaHan
+2F8AB, 2F8AC: BabelStoneHanBasic
 2F8AD.......: UnicodiaHan
-2F8AE..2F8B0: BabelStoneHanBasic
-2F8B1, 2F8B2: UnicodiaHan
+2F8AE, 2F8AF: BabelStoneHanBasic
+2F8B0..2F8B2: UnicodiaHan
 2F8B3.......: BabelStoneHanBasic
 2F8B4.......: UnicodiaHan
 2F8B5.......: BabelStoneHanBasic
 2F8B6, 2F8B7: UnicodiaHan
-2F8B8..2F8C0: BabelStoneHanBasic
+2F8B8..2F8BC: BabelStoneHanBasic
+2F8BD.......: UnicodiaHan
+2F8BE..2F8C0: BabelStoneHanBasic
 2F8C1.......: UnicodiaHan
 2F8C2..2F8C8: BabelStoneHanBasic
 2F8C9.......: UnicodiaHan
@@ -26931,37 +26940,35 @@ FFFD......: NotoSerif-Regular
 2F8CB..2F8CD: UnicodiaHan
 2F8CE, 2F8CF: BabelStoneHanBasic
 2F8D0, 2F8D1: UnicodiaHan
-2F8D2..2F8D5: BabelStoneHanBasic
-2F8D6..2F8D8: UnicodiaHan
+2F8D2..2F8D4: BabelStoneHanBasic
+2F8D5..2F8D8: UnicodiaHan
 2F8D9.......: BabelStoneHanBasic
 2F8DA..2F8DC: UnicodiaHan
 2F8DD.......: BabelStoneHanBasic
-2F8DE.......: UnicodiaHan
-2F8DF..2F8E1: BabelStoneHanBasic
+2F8DE, 2F8DF: UnicodiaHan
+2F8E0, 2F8E1: BabelStoneHanBasic
 2F8E2..2F8E4: UnicodiaHan
 2F8E5.......: BabelStoneHanBasic
 2F8E6.......: UnicodiaHan
 2F8E7..2F8EB: BabelStoneHanBasic
-2F8EC.......: UnicodiaHan
-2F8ED..2F8EF: BabelStoneHanBasic
+2F8EC, 2F8ED: UnicodiaHan
+2F8EE, 2F8EF: BabelStoneHanBasic
 2F8F0.......: UnicodiaHan
 2F8F1..2F8F4: BabelStoneHanBasic
 2F8F5.......: UnicodiaHan
 2F8F6, 2F8F7: BabelStoneHanBasic
 2F8F8, 2F8F9: UnicodiaHan
-2F8FA..2F8FC: BabelStoneHanBasic
-2F8FD, 2F8FE: UnicodiaHan
-2F8FF.......: BabelStoneHanBasic
-2F900.......: UnicodiaHan
-2F901.......: BabelStoneHanBasic
-2F902.......: UnicodiaHan
-2F903, 2F904: BabelStoneHanBasic
+2F8FA, 2F8FB: BabelStoneHanBasic
+2F8FC..2F903: UnicodiaHan
+2F904.......: BabelStoneHanBasic
 2F905, 2F906: UnicodiaHan
 2F907, 2F908: BabelStoneHanBasic
 2F909, 2F90A: UnicodiaHan
 2F90B..2F90D: BabelStoneHanBasic
 2F90E.......: UnicodiaHan
-2F90F..2F917: BabelStoneHanBasic
+2F90F..2F913: BabelStoneHanBasic
+2F914.......: UnicodiaHan
+2F915..2F917: BabelStoneHanBasic
 2F918.......: UnicodiaHan
 2F919.......: BabelStoneHanBasic
 2F91A, 2F91B: UnicodiaHan
@@ -26977,47 +26984,47 @@ FFFD......: NotoSerif-Regular
 2F938.......: UnicodiaHan
 2F939.......: BabelStoneHanBasic
 2F93A.......: UnicodiaHan
-2F93B..2F93F: BabelStoneHanBasic
+2F93B..2F93D: BabelStoneHanBasic
+2F93E.......: UnicodiaHan
+2F93F.......: BabelStoneHanBasic
 2F940.......: UnicodiaHan
 2F941.......: BabelStoneHanBasic
 2F942, 2F943: UnicodiaHan
 2F944.......: BabelStoneHanBasic
 2F945..2F949: UnicodiaHan
 2F94A.......: BabelStoneHanBasic
-2F94B.......: UnicodiaHan
-2F94C..2F955: BabelStoneHanBasic
+2F94B, 2F94C: UnicodiaHan
+2F94D..2F955: BabelStoneHanBasic
 2F956, 2F957: UnicodiaHan
 2F958.......: BabelStoneHanBasic
-2F959.......: UnicodiaHan
-2F95A.......: BabelStoneHanBasic
-2F95B.......: UnicodiaHan
+2F959..2F95B: UnicodiaHan
 2F95C..2F960: BabelStoneHanBasic
 2F961.......: UnicodiaHan
 2F962..2F96D: BabelStoneHanBasic
 2F96E.......: UnicodiaHan
 2F96F..2F974: BabelStoneHanBasic
 2F975.......: UnicodiaHan
-2F976..2F97B: BabelStoneHanBasic
+2F976..2F979: BabelStoneHanBasic
+2F97A.......: UnicodiaHan
+2F97B.......: BabelStoneHanBasic
 2F97C.......: UnicodiaHan
 2F97D.......: BabelStoneHanBasic
 2F97E.......: UnicodiaHan
 2F97F.......: BabelStoneHanBasic
 2F980.......: UnicodiaHan
 2F981.......: BabelStoneHanBasic
-2F982.......: UnicodiaHan
-2F983.......: BabelStoneHanBasic
-2F984.......: UnicodiaHan
-2F985..2F989: BabelStoneHanBasic
-2F98A.......: UnicodiaHan
-2F98B..2F98E: BabelStoneHanBasic
+2F982..2F985: UnicodiaHan
+2F986..2F989: BabelStoneHanBasic
+2F98A, 2F98B: UnicodiaHan
+2F98C..2F98E: BabelStoneHanBasic
 2F98F, 2F990: UnicodiaHan
 2F991.......: BabelStoneHanBasic
 2F992..2F994: UnicodiaHan
 2F995, 2F996: BabelStoneHanBasic
 2F997, 2F998: UnicodiaHan
 2F999.......: BabelStoneHanBasic
-2F99A.......: UnicodiaHan
-2F99B..2F99E: BabelStoneHanBasic
+2F99A, 2F99B: UnicodiaHan
+2F99C..2F99E: BabelStoneHanBasic
 2F99F.......: UnicodiaHan
 2F9A0.......: BabelStoneHanBasic
 2F9A1, 2F9A2: UnicodiaHan
@@ -27032,8 +27039,8 @@ FFFD......: NotoSerif-Regular
 2F9B3.......: BabelStoneHanBasic
 2F9B4.......: UnicodiaHan
 2F9B5.......: BabelStoneHanBasic
-2F9B6.......: UnicodiaHan
-2F9B7..2F9BB: BabelStoneHanBasic
+2F9B6..2F9B8: UnicodiaHan
+2F9B9..2F9BB: BabelStoneHanBasic
 2F9BC..2F9BE: UnicodiaHan
 2F9BF..2F9C8: BabelStoneHanBasic
 2F9C9.......: UnicodiaHan
@@ -27049,13 +27056,21 @@ FFFD......: NotoSerif-Regular
 2F9E8..2F9EB: UnicodiaHan
 2F9EC, 2F9ED: BabelStoneHanBasic
 2F9EE.......: UnicodiaHan
-2F9EF..2F9FA: BabelStoneHanBasic
-2F9FB.......: UnicodiaHan
-2F9FC..2FA01: BabelStoneHanBasic
+2F9EF..2F9F9: BabelStoneHanBasic
+2F9FA, 2F9FB: UnicodiaHan
+2F9FC, 2F9FD: BabelStoneHanBasic
+2F9FE.......: UnicodiaHan
+2F9FF..2FA01: BabelStoneHanBasic
 2FA02.......: UnicodiaHan
-2FA03..2FA07: BabelStoneHanBasic
+2FA03.......: BabelStoneHanBasic
+2FA04.......: UnicodiaHan
+2FA05.......: BabelStoneHanBasic
+2FA06.......: UnicodiaHan
+2FA07.......: BabelStoneHanBasic
 2FA08.......: UnicodiaHan
-2FA09..2FA11: BabelStoneHanBasic
+2FA09, 2FA0A: BabelStoneHanBasic
+2FA0B.......: UnicodiaHan
+2FA0C..2FA11: BabelStoneHanBasic
 2FA12.......: UnicodiaHan
 2FA13, 2FA14: BabelStoneHanBasic
 2FA15.......: UnicodiaHan
