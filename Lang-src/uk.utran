@@ -998,7 +998,7 @@
      <transl>розшифрована ''(як клинопис)''</transl>
     </text>
     <text id="ForRev">
-     <orig>made for the revival of dead language ''(like Osage)''</orig>
+     <orig>made to revive a dead language ''(like Osage)''</orig>
      <transl>зроблена для відродження мертвої мови ''(як осейдж)''</transl>
     </text>
    </group>
@@ -7589,7 +7589,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. The revival of Modi started in 21st century.</p>
       <p />
       <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
@@ -11800,7 +11800,7 @@
       <p />
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
       <p />
-      <p>'''Made for the revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
+      <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to liberation of Africa in 20th century.</p>
      </orig>

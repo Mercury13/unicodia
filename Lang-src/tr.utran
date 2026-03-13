@@ -997,7 +997,7 @@
      <transl>çözülmüş ''(çivi yazısı gibi)'' </transl>
     </text>
     <text id="ForRev">
-     <orig>made for the revival of dead language ''(like Osage)''</orig>
+     <orig>made to revive a dead language ''(like Osage)''</orig>
      <known-orig>made for revival of dead language ''(like Osage)''</known-orig>
      <transl>''(Osage gibi)'' ölü dilin yeniden canlandırılması için yapıldı</transl>
     </text>
@@ -7600,7 +7600,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. The revival of Modi started in 21st century.</p>
       <p />
       <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
@@ -7610,6 +7610,17 @@
       <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </orig>
+     <known-orig>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
+      <p />
+      <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
+      <p>But methods of affixing vowel marks are rather bizarre and form ligatures for themselves: </p>
+      <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
+      <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
+      <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
+     </known-orig>
      <transl>
       <p>Betik [[ps:Deva|Devanagari]] ile akrabadır ancak önemli ölçüde [[pt:cursive|el yazısı]]’na yakındır. Kökenine dair iki standart teori vardır: Diplomat ve bakan Hemādri Paṇḍit (yaklaşık 1260) ve diplomat Khanderao Ballal (yaklaşık 1700). 1950’lere kadar Devanagari ile birlikte kullanılmış, ardından en azından 1800’den beri var olan Devanagari’nin el yazısı stili olan ''Balbodh'' (kelimenin tam anlamıyla "çocuklar tarafından anlaşılan") Marathi için standart betik olarak ilan edilmiştir. Modi’nin yeniden canlanması 21. yüzyılda başlamıştır.</p>
       <p />
@@ -11837,7 +11848,7 @@
       <p />
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
       <p />
-      <p>'''Made for the revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
+      <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to liberation of Africa in 20th century.</p>
      </orig>
@@ -11883,7 +11894,7 @@
       <p />
       <p>'''Yeniden Canlandırıldı'''{{-}}bir süre sessiz kaldıktan sonra tekrar kullanıma sunuldu. Yeniden Canlandırma, [[ps:Tfng|Tifinagh]]’da olduğu gibi türünü ve yazım yönünü değiştirebilir.</p>
       <p />
-      <p>'''Ölü bir dilin yeniden canlandırılması için'''{{-}}[[ps:Osge|Osage]] sadece (Latince yazmak kötü sonuç verdi).</p>
+      <p>'''Ölü bir dilin yeniden canlandırılması için'''{{-}}[[ps:Osge|Osage]] sadece ([[ps:Latn|Latince]] yazmak kötü sonuç verdi).</p>
       <p />
       <p>'''Deneysel'''{{-}}yazımsal bir reform yapma girişiminin başarısızlığı. Unicode’da bulunan tüm örnekler üç kategoriye ayrılıyor: 1){{_}}İngilizce: karmaşık tarihsel yazım; 2){{_}}Arnavutça: hem Türklerden gizlilik hem de kültürel özerklik arzusu 1800 civarında mevcuttu; 3){{_}}20. yüzyılda Afrika’nın kurtuluşuyla ilgili.</p>
      </transl>
