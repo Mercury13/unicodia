@@ -1670,9 +1670,7 @@ FFFD......: NotoSerif-Regular
 1DF1F..1DF24: UFSTangutFixup
 1DF25..1DF2A: UnicodiaFunky
 1DF2B..1DF3A: UFSTangutFixup
-1DF3B..1DF47: UnicodiaFunky
-1DF48..1DF4F: [Tofu]
-1DF50.......: UnicodiaFunky
+1DF3B..1DF50: UnicodiaFunky
 1DF51..1DF56: [Tofu]
 1DF57.......: UnicodiaFunky
 1DF58..1DF65: [Tofu]
