@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 881 1000"
+   id="svg1"
+   sodipodi:docname="1DF4C.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.755"
+     inkscape:cx="440.39735"
+     inkscape:cy="713.24503"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="799,508"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="799,461"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="38,200"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="927,200"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <rect
+     style="fill:#1a5fb4;fill-rule:evenodd;stroke-width:17;stroke-miterlimit:2.3"
+     id="rect4"
+     width="889"
+     height="47"
+     x="28"
+     y="492" />
+  <path
+     fill="currentColor"
+     d="m 680,1040 c -85,0 -130,-33 -130,-79 0,-36 24,-66 77,-67 0,68 18,100 52,100 42,0 64,-37 64,-185 V 455 c 0,-87 -28,-137 -105,-137 -83,0 -111,69 -111,149 v 219 c 0,63 32,72 77,72 h 3 v 42 H 433 V 455 c 0,-87 -28,-137 -105,-137 -87,0 -116,76 -116,162 v 211 c 0,59 38,67 82,67 h 3 v 42 H 28 v -42 h 13 c 45,0 77,-9 77,-72 V 374 c 0,-59 -33,-68 -77,-68 h -3 v -42 h 157 l 13,81 h 5 c 40,-75 89,-91 151,-91 64,0 120,24 145,91 h 8 c 40,-75 95,-91 157,-91 102,0 163,59 163,196 v 358 c 0,165 -62,232 -157,232 z"
+     id="path1-5" />
+</svg>

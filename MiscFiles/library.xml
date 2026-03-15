@@ -210,10 +210,12 @@
 				<d>ᶣ 𝿭 𝿘 𝿮</d><!-- Super misc -->
 				<d>ꭜ 𐞗</d><!-- Super heng -->
 			</f>
-			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ Ɦ ɦ</d><!-- Top -->
+			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ</d><!-- Above -->
+			<d>Ɦ ɦ</d><!-- Top -->
 			<d>Ħ ħ</d><!-- Top mid -->
 			<d>𝽆</d><!-- Mid -->
-			<d>Ḩ ḩ Ⱨ ⱨ ꞕ Ḥ ḥ Ḫ ḫ ẖ</d><!-- Bottom -->
+			<d>Ḩ ḩ Ⱨ ⱨ ꞕ</d><!-- Bottom -->
+			<d>Ḥ ḥ Ḫ ḫ ẖ</d><!-- Below -->
 			<d>𝼲 𝽇</d><!-- Two diacs -->
 			<d>ʜ</d><!-- Small cap -->
 			<d>ᴴ ʰ</d><!-- Super bare -->
@@ -231,11 +233,14 @@
 			<d>ⱼ</d><!-- Subscripts -->
 		</f>
 		<f name="K">
-			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ</d><!-- Top -->
+			<d>Ǩ ǩ Ḱ ḱ</d><!-- Above -->
+			<d>Ƙ ƙ</d><!-- Top -->
 			<d>Ꝁ ꝁ</d><!-- Half-top -->
 			<d>𝽈 𝽉</d><!-- Mid -->
 			<d>Ꝃ ꝃ Ꞣ ꞣ</d><!-- Haf-bottom -->
-			<d>Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ ĸ 𝼐</d><!-- Bottom -->
+			<d>Ⱪ ⱪ ᶄ</d><!-- Bottom -->
+			<d>Ķ ķ Ḳ ḳ Ḵ ḵ</d><!-- Below -->
+			<d>Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ ĸ 𝼐</d>
 			<d>ᴷ ᵏ</d><!-- Super bare -->
 			<d>𝿻</d><!-- Super top -->
 			<d>𐞾</d><!-- Super variants -->
@@ -252,13 +257,23 @@
 		<f name="M">
 			<d>Ḿ ḿ Ṁ ṁ</d><!-- Above -->
 			<d>𝽊 𝽋 ᵯ</d><!-- Mid -->
-			<d>ꬺ ꝳ Ɱ ɱ ᶆ Ṃ ṃ ꟽ ꟿ Ɯ ɯ ɰ ᴟ ꟺ ₘ ᴍ 🆭 ᴹ ᵐ ᶬ ᶭ ᵚ</d>
+			<d>ꬺ ꝳ</d><!-- Mid-bottom -->
+			<d>Ɱ ɱ ᶆ</d><!-- Bottom -->
+			<d>Ṃ ṃ</d><!-- Below -->
+			<d>𝽌</d><!-- Two diacritics -->
+			<d>ꟽ ꟿ Ɯ ɯ ɰ ᴟ ꟺ ₘ ᴍ 🆭 ᴹ ᵐ ᶬ ᶭ ᵚ</d>
 		</f>
 		<f name="N">
 			<f name="ŋ">
 				<d>Ŋ ŋ ꬼ 𝼔 𝼇 ᵑ</d>
 			</f>
-			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ ɴ ᴎ Ǌ ǋ ǌ</d>
+			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ</d><!-- Above -->
+			<d>𝼧</d><!-- Top-mid -->
+			<d>ᵰ Ꞥ ꞥ</d><!-- Mid -->
+			<d>ꬻ ȵ</d><!-- Mid-bottom -->
+			<d>ɳ ᶇ ꝴ Ꞑ ꞑ Ɲ ɲ Ƞ ƞ</d><!-- Misc bottom -->
+			<d>Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ</d><!-- Below -->
+			<d>ɴ ᴎ Ǌ ǋ ǌ</d>
 			<d>ᴺ ⁿ</d><!-- Super bare -->
 			<d>𝿱</d><!-- Super baseline -->
 			<d>ᶮ 𝿜 ᶯ 𝿷</d><!-- Super bottom -->
