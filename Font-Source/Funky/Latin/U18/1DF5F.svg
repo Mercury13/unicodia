@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 587 1000"
+   id="svg1"
+   sodipodi:docname="1DF5F.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.755"
+     inkscape:cx="370.19868"
+     inkscape:cy="435.09934"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="531.25882,498"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="531.25882,452"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="581.25882,200"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="360.83072,690"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="584.25882,690"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M287 810c-144 0 -232 -91 -232 -279c0 -187 80 -277 235 -277c144 0 232 90 232 277c0 188 -81 279 -235 279zM289 758c100 0 136 -78 136 -227s-37 -224 -137 -224s-136 75 -136 224s37 227 137 227z"
+     id="path1" />
+  <rect
+     style="fill:#1a5fb4;fill-rule:evenodd;stroke-width:16.9998;stroke-miterlimit:2.3"
+     id="rect2"
+     width="223.4281"
+     height="46"
+     x="350.83072"
+     y="264" />
+  <path
+     fill="currentColor"
+     d="m 821.25882,810 c -106,0 -165,-59 -165,-196 V 378 c 0,-59 -38,-68 -82,-68 h -3 v -46 h 179 v 345 c 0,87 24,137 105,137 88,0 126,-65 126,-162 V 378 c 0,-63 -37,-72 -82,-72 h -3 v -42 h 178.99988 v 427 c 0,59 38,67 82,67 h 3 v 42 h -158.9999 l -12.99998,-81 h -5 c -41,75 -97,91 -162,91 z"
+     id="path1-2"
+     sodipodi:nodetypes="sssscccssssscccsscccccs" />
+</svg>
