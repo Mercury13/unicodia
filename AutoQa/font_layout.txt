@@ -648,7 +648,7 @@ AB5C..AB5F: UnicodiaFunky
 AB60..AB68: NotoSerif-Regular
 AB69......: UnicodiaFunky
 AB6A, AB6B: NotoSerif-Regular
-AB6C, AB6D: [Tofu]
+AB6C, AB6D: UnicodiaFunky
 == Cherokee Supplement
 AB70..ABBF: UtoSansFranken
 == Meetei Mayek
