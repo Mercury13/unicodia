@@ -646,7 +646,9 @@ int main()
 
     ///// Processed data ///////////////////////////////////////////////////////
 
-    os.open("auto-names.log");
+    static constexpr const char* FN_AUTON = "auto-names.log";
+    os.open(FN_AUTON);
+    os << FN_AUTON << ": automatic names stored in UC bases in a straightforward way" "\n";
     for (auto& q : proc.autoNames) {
         os << q << '\n';
     }
@@ -755,7 +757,9 @@ int main()
 
     ///// Non-ASCII CPs ////////////////////////////////////////////////////////
 
-    os.open("non-ascii.log");
+    static constinit const char* FNAME_NONASC = "non-ascii.log";
+    os.open(FNAME_NONASC);
+    os << FNAME_NONASC << ": list of non-ASCII chars found in UC bases" "\n";
     for (auto c : strings.nonAscii()) {
         os << std::hex << (int)c << '\n';
     }

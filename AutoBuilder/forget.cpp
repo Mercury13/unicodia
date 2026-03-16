@@ -256,6 +256,8 @@ namespace {
 forget::Stats forget::postprocess(const Map& map, const char* fname)
 {
     std::ofstream os(fname);
+    os << fname << ": discrepancies in Library's Latin/Cyrillic" "\n";
+
     SectionMan secMan(os);
 
     auto print = [&os, &secMan](const Map::value_type& val) {

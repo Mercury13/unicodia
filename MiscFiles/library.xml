@@ -372,7 +372,10 @@
 			<d>Ù ù Ú ú Û û Ü ü Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ȕ ȕ Ǔ ǔ Ȗ ȗ Ủ ủ Ꞿ ꞿ ꭒ Ư ư Ʉ ʉ Ꞹ ꞹ Ų ų ᶙ Ṳ ṳ Ṵ ṵ Ṷ ṷ Ụ ụ ᴜ ᵾ ᵁ ᵘ ꭟ ᶶ ᶸ ᵤ</d>
 		</f>
 		<f name="V">
-			<d>Ṽ ṽ Ʋ ʋ ⱱ ⱴ Ꝟ ꝟ ᶌ Ṿ ṿ 𝼹 Ʌ ʌ Ỽ ỽ ᴠ Ꝡ ꝡ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
+			<d>Ṽ ṽ</d><!-- Above -->
+			<d>Ʋ ʋ ⱱ ⱴ</d><!-- Top -->
+			<d>𝽑 𝽒 Ꝟ ꝟ</d><!-- Mid -->
+			<d>ᶌ Ṿ ṿ 𝼹 Ʌ ʌ Ỽ ỽ ᴠ Ꝡ ꝡ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
 		</f>
 		<f name="W">
 			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ 𝼿 Ẉ ẉ Ꟃ ꟃ ʍ ᴡ</d>
@@ -383,7 +386,11 @@
 			<d>Ẋ ẋ Ẍ ẍ ꭖ ꭗ ꭙ ᶍ ꭘ ˣ ₓ</d>
 		</f>
 		<f name="Y">
-			<d>Ỳ ỳ Ý ý Ÿ ÿ Ŷ ŷ Ȳ ȳ Ẏ ẏ ẙ Ỷ ỷ Ỹ ỹ Ƴ ƴ Ɏ ɏ Ỿ ỿ Ỵ ỵ ʎ 𝼆 ꭚ ʏ ʸ 𐞠 𐞡 𐞲 ₞</d>
+			<d>Ỳ ỳ Ý ý Ÿ ÿ Ŷ ŷ Ȳ ȳ Ẏ ẏ ẙ Ỷ ỷ Ỹ ỹ</d><!-- Above -->
+			<d>Ƴ ƴ</d><!-- Top -->
+			<d>Ɏ ɏ</d><!-- Mid -->
+			<d>Ỿ ỿ 𝽕</d><!-- Mid-bottom -->
+			<d>Ỵ ỵ ʎ 𝼆 ꭚ ʏ ʸ 𐞠 𐞡 𐞲 ₞</d>
 		</f>
 		<f name="Z">
 			<f loc="MiscForms">
@@ -402,17 +409,20 @@
 			<d>𝼼</d><!-- Theta -->
 			<d>Ꟛ ꟛ Ƛ ƛ</d><!-- Lambda -->
 			<d>ɸ ⱷ 𝼳 ᶲ</d><!-- Phi -->
-			<d>Ꭓ ꭓ ꭕ 𝼽 ꭔ</d><!-- Chi -->
+			<d>Ꭓ ꭓ</d><!-- Chi bare -->
+			<d>𝽔 </d><!-- Chi mid -->
+			<d>ꭕ 𝼽 ꭔ</d><!-- Chi bottom -->
 			<d forgetTest="0">𝿳</d><!-- Greek psi (Grek!!), DO NOT WRITE normal Latin here -->
-			<d>Ꞷ ꞷ ꟝ ɷ</d><!-- Omega 1 -->
+			<d>Ꞷ ꞷ</d><!-- Omega -->
+			<d>꟝ ɷ 𝽓</d><!-- Closed omega -->
 			<d forgetTest="0">𝿴</d><!-- Greek omega (Grek!!), DO NOT WRITE normal Latin here -->
-			<d>𐞤</d><!-- Omega 2 -->
+			<d>𐞤</d><!-- More uppercase Omega -->
 		</f>
 		<f loc="MiscLat">
 			<f name="Ɂ">
 				<d>Ɂ ɂ ʔ</d>
 				<d>꟎ ꟏ ʕ</d>
-				<d>ʖ ʡ ʢ ƾ 𝼎 𝼺</d>
+				<d>ʖ ʡ 𝽖 ʢ ƾ 𝼎 𝼺</d>
 				<d> ˀ ˁ ˤ 𐞳 𐞴 𐞼</d><!-- Modifier GS -->
 				<d>Ꞌ ꞌ ᴥ ᵜ</d><!-- Misc modifiers -->
 			</f>

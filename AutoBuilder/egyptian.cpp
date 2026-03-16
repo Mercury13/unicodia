@@ -392,7 +392,9 @@ namespace {
             fixupUniDesc(v.descUnicode, k, hgMap, hgLinks, manLinks);
         }
 
-        std::ofstream osLog("hieroglyphica.log");
+        static constexpr const char* FNAME_HG = "hieroglyphica.log";
+        std::ofstream osLog(FNAME_HG);
+        osLog << FNAME_HG << ": link replacement Hieroglyphica->UniKemet" "\n";
         for (auto& [k, v] : hgLinks) {
             char buf[10];
             snprintf(buf, std::size(buf), "%X", unsigned(k));
@@ -402,7 +404,9 @@ namespace {
                  "EOF" "\n";
         osLog.close();
 
-        osLog.open("manlinks.log");
+        static constexpr const char* FNAME_MANL = "manlinks.log";
+        osLog.open(FNAME_MANL);
+        osLog << FNAME_MANL << ": manual fixups of Egyptian links" "\n";
         osLog << "Canal: " << manLinks.nCanals << " times" "\n";
         for (auto& [k, v] : manLinks.specials) {
             char buf[10];
