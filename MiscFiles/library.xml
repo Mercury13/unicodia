@@ -127,7 +127,8 @@
 	<f loc="Latin" forgetTest="1">
 		<f name="A">
 			<f loc="MiscForms">
-				<d>Ɐ ɐ Ɑ ɑ ꬰ ᶐ Ɒ ɒ Ꞛ ꞛ ꭤ Ɤ ɤ ᵄ ᵅ ᶛ 𐞑</d>
+				<d>Ɐ ɐ Ɑ ɑ ꬰ ᶐ Ɒ ɒ Ꞛ ꞛ ꭤ Ɤ ɤ 𝽚</d>
+				<d>ᵄ ᵅ ᶛ 𐞑</d><!-- Super -->
 			</f>
 			<f name="AE…">
 				<d>Æ æ Ǽ ǽ Ǣ ǣ ꬱ ᴂ ᴁ 𐞃 ᵆ ᴭ Ꜳ ꜳ 𐞀 Ꜵ ꜵ Ꜷ ꜷ Ꜹ ꜹ Ꜻ ꜻ Ꜽ ꜽ</d>
@@ -145,7 +146,13 @@
 			<d>ᴮ ᵇ 𐞅 𝿒 ᴯ 𐞄</d><!-- Superscripts -->
 		</f>
 		<f name="C">
-			<d>Ć ć Ĉ ĉ Ċ ċ Č č Ƈ ƈ Ꞓ ꞓ Ç ç Ꞔ ꞔ 𝼝 Ȼ ȼ ɕ ʗ 𝼏 Ḉ ḉ Ↄ ↄ Ꜿ ꜿ Ꝯ ꝯ ᴄ © 🄫</d>
+			<d>Ć ć Ĉ ĉ Ċ ċ Č č</d><!-- Above -->
+			<d>Ƈ ƈ</d><!-- Top -->
+			<d>Ꞓ ꞓ Ȼ ȼ</d><!-- Mid -->
+			<d>Ç ç Ꞔ ꞔ 𝼝 ɕ ʗ 𝼏</d><!-- Bottom -->
+			<d>Ḉ ḉ</d><!-- Two umlauts -->
+			<d>Ↄ ↄ Ꜿ ꜿ Ꝯ ꝯ ᴄ © 🄫</d><!-- Funky forms -->
+			<d>𝽛</d><!-- Ligatures -->
 			<d>ꟲ ᶜ</d><!-- Super bare -->
 			<d>𝿺</d><!-- Super top -->
 			<d>ᶝ 𐞽</d><!-- Super bottom -->
