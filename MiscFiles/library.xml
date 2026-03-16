@@ -424,10 +424,10 @@
 			<d>𝽔 </d><!-- Chi mid -->
 			<d>ꭕ 𝼽 ꭔ</d><!-- Chi bottom -->
 			<d forgetTest="0">𝿳</d><!-- Greek psi (Grek!!), DO NOT WRITE normal Latin here -->
-			<d>Ꞷ ꞷ</d><!-- Omega -->
+			<d>Ꞷ ꞷ 𝽠</d><!-- Omega -->
 			<d>꟝ ɷ 𝽓</d><!-- Closed omega -->
 			<d forgetTest="0">𝿴</d><!-- Greek omega (Grek!!), DO NOT WRITE normal Latin here -->
-			<d>𐞤</d><!-- More uppercase Omega -->
+			<d>𐞤</d><!-- More superscript Omega -->
 		</f>
 		<f loc="MiscLat">
 			<f name="Ɂ">

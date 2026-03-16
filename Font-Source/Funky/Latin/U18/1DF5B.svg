@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.3775"
-     inkscape:cx="268.87417"
-     inkscape:cy="528.47682"
+     inkscape:zoom="0.53386562"
+     inkscape:cx="44.018568"
+     inkscape:cy="575.98764"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -35,11 +35,22 @@
        orientation="1,0"
        id="guide1"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="42.10809,275.68329"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="281.55405,609.23779"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      fill="currentColor"
-     d="M283 1038c-143 0 -228 -134 -228 -388c0 -269 89 -396 228 -396c78 0 169 33 169 102c0 46 -30 63 -89 63c0 -63 -18 -115 -85 -115c-77 0 -126 77 -126 349c0 215 44 320 151 320c62 0 110 -29 133 -70c10 8 17 21 17 39c0 46 -57 96 -170 96z"
-     id="path1" />
+     d="m 260.10809,1038 c -143,0 -228,-134 -228,-388 0,-269 100.44596,-396 239.44596,-396 78,0 169,33 169,102 0,46 -18.55405,63 -77.55405,63 0,-63 -29.44595,-115 -96.44595,-115 -77,0 -137.44596,77 -137.44596,349 0,215 44,320 151,320 62,0 110,-29 133,-70 10,8 17,21 17,39 0,46 -57,96 -170,96 z"
+     id="path1"
+     sodipodi:nodetypes="sssscssscss" />
   <path
      fill="currentColor"
      d="m 273,800 v -42 h 8 c 45,0 82,-9 82,-72 V 150 C 363,91 325,82 281,82 h -8 V 40 h 184 v 220 c 0,36 -4,85 -4,85 h 5 c 30,-60 79,-91 147,-91 114,0 177,59 177,196 v 236 c 0,63 32,72 77,72 h 3 v 42 H 688 V 455 c 0,-87 -29,-137 -110,-137 -83,0 -121,64 -121,162 v 211 c 0,59 38,67 82,67 h 3 v 42 z"
