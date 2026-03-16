@@ -1658,7 +1658,7 @@ FFFD......: NotoSerif-Regular
 1D400..1D4C0: Cambria
 1D4C1.......: NotoSansMath-Regular
 1D4C2..1D6A5: Cambria
-1D6A6.......: [Tofu]
+1D6A6.......: UnicodiaFunky
 1D6A8..1D7FF: Cambria
 == Sutton SignWriting
 1D800..1DA8B: UnicodiaSutton-Regular
