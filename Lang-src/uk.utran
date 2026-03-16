@@ -13866,6 +13866,10 @@
      <orig>Greek</orig>
      <transl>Грецькі</transl>
     </text>
+    <text id="OldMathLig">
+     <orig>Archaic mathematical ligatures</orig>
+     <transl>Старі математичні лігатури</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

@@ -9681,6 +9681,9 @@
     <text id="Greek">
      <orig>Greek</orig>
     </text>
+    <text id="OldMathLig">
+     <orig>Archaic mathematical ligatures</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

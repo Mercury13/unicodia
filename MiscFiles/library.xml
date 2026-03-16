@@ -425,6 +425,9 @@
 			<d>Ꝩ ꝩ ƻ Ƨ ƨ Ꜫ ꜫ Ꜭ ꜭ Ꜯ ꜯ Ƽ ƽ Ƅ ƅ</d>
 			<d>ꭠ ᴤ Ꜣ ꜣ Ꜥ ꜥ ꞏ</d>
 		</f>
+		<f loc="OldMathLig">
+			<d>𝚦</d>
+		</f>
 	</f>
 	<f loc="Latin2" tilePattern="10010110">
 		<f loc="EnTran" tilePattern="">
