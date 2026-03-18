@@ -306,7 +306,7 @@
 			<f loc="MiscForms">
 				<d>Ɔ ɔ Ɵ ɵ ᴐ ᴑ ᴒ ᴓ ꬿ 𝽂</d>
 				<d>ᴖ ᴗ 𝽘</d><!-- Split -->
-				<d>ᶗ Ꟁ ꟁ Ꞝ ꞝ Ȣ ȣ ᴕ ᶱ ᵓ ᵔ ᵕ ᴽ</d>
+				<d>ᶗ Ꟁ ꟁ Ꞝ ꞝ Ȣ ȣ ᴕ 𝽲 𝽳 ᶱ ᵓ ᵔ ᵕ ᴽ</d>
 			</f>
 			<f loc="TwoDiac">
 				<d>Ȫ ȫ Ȭ ȭ Ȱ ȱ Ṍ ṍ Ṏ ṏ Ṑ ṑ Ṓ ṓ Ố ố Ồ ồ Ổ ổ Ỗ ỗ Ớ ớ Ờ ờ Ở ở Ỡ ỡ Ǿ ǿ Ộ ộ Ǭ ǭ Ợ ợ</d>
@@ -450,7 +450,7 @@
 			<d>ꭕ 𝼽 ꭔ</d><!-- Chi bottom -->
 			<d forgetTest="0">𝿳</d><!-- Greek psi (Grek!!), DO NOT WRITE normal Latin here -->
 			<d>Ꞷ ꞷ 𝽠</d><!-- Omega -->
-			<d>꟝ ɷ 𝽓</d><!-- Closed omega -->
+			<d>꟝ ɷ 𝽓 𝽴 𝽵 𝽶 𝽷</d><!-- Closed omega -->
 			<d forgetTest="0">𝿴</d><!-- Greek omega (Grek!!), DO NOT WRITE normal Latin here -->
 			<d>𐞤</d><!-- More superscript Omega -->
 		</f>
