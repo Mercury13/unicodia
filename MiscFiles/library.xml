@@ -335,7 +335,9 @@
 				<d>𝿫 𐞩</d><!-- Super hooked -->
 			</f>
 			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ</d><!-- Above -->
-			<d>ꝵ Ɍ ɍ Ꞧ ꞧ 𝼨 ᵲ Ɽ ɽ</d>
+			<d>𝽡 𝼨 ꝵ</d><!-- Top/left -->
+			<d>Ɍ ɍ Ꞧ ꞧ ᵲ</d><!-- Mid -->
+			<d>Ɽ ɽ</d><!-- Bottom -->
 			<d>꟢ ɼ</d><!-- Long leg, left here as capital is from some tiny lang, and small is phonetic -->
 			<d>ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ</d>
 			<d>Ṝ ṝ 𝼷</d><!-- Two umlauts -->
@@ -347,8 +349,11 @@
 		</f>
 		<f name="S">
 			<f loc="MiscForms">
-				<d>ẞ ß ſ ẛ ẝ ẜ Ꞅ ꞅ Ꟗ ꟗ Ꟙ ꟙ ﬅ ﬆ Ʃ ʃ ƪ 𝼋 ʆ  𝼌  ᶋ ᶘ ꭍ ʅ</d>
+				<d>ẞ ß ſ ẛ ẝ ẜ Ꞅ ꞅ Ꟗ ꟗ Ꟙ ꟙ Ʃ ʃ ƪ 𝼋 ʆ  𝼌  ᶋ ᶘ ꭍ ʅ</d>
 				<d>ᶴ 𐞿 𝿢 𝿣 𝿬</d><!-- Superscripts -->
+			</f>
+			<f name="ST…">
+				<d>ﬅ ﬆ 𝽢</d>
 			</f>
 			<f loc="TwoDiac">
 				<d>Ṥ ṥ Ṧ ṧ Ṩ ṩ</d>
@@ -361,9 +366,20 @@
 		</f>
 		<f name="T">
 			<f loc="MiscForms">
-				<d>Ʇ ʇ 𝼍 Ꞇ ꞇ ʨ ᵺ ʦ 𝼸 ꭧ ʧ 𝼬 𝼗 𝼜 Ꜩ ꜩ 𝼢 𝼣 𝼤</d>
-				<d>𐞻 𐞫 𐞬 𐞭</d><!-- Super misc -->
-				<d>𐞮 𝿤 𝿥</d><!-- Super Tesh -->
+				<d>Ʇ ʇ 𝼍 Ꞇ ꞇ</d>
+				<d>𐞻</d><!-- Super misc -->
+			</f>
+			<f name="tʃ…">
+				<d>ʧ 𝼬 𝼗 𝼜</d><!-- tʃ -->
+				<d>ʦ 𝼸 ꭧ</d><!-- ts -->
+				<d>ʨ</d><!-- tc -->
+				<d>ᵺ 𝽣 𝽤</d><!-- th -->
+				<d>Ꜩ ꜩ</d><!-- TƷ -->
+				<d>𝼢 𝼣</d><!-- tl -->
+				<d>𝼤</d><!-- t-theta -->
+				<d>𐞮 𝿤 𝿥</d><!-- Super tʃ -->
+				<d>𐞬 𐞭</d><!-- Super ts -->
+				<d>𐞫</d><!-- Super tc -->
 			</f>
 			<d>Ť ť Ṫ ṫ ẗ Ƭ ƭ ꝷ 𝼪 Ŧ ŧ ᵵ Ⱦ ⱦ ȶ Ţ ţ Ʈ ʈ ƫ Ț ț Ṭ ṭ Ṯ ṯ Ṱ ṱ 𝼉 ᴛ</d>
 			<d>ᵀ ᵗ</d><!-- Super bare -->
@@ -389,7 +405,7 @@
 			<d>ᶌ Ṿ ṿ 𝼹 Ʌ ʌ Ỽ ỽ ᴠ Ꝡ ꝡ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
 		</f>
 		<f name="W">
-			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ 𝼿 Ẉ ẉ Ꟃ ꟃ ʍ ᴡ</d>
+			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ 𝼿 Ẉ ẉ Ꟃ ꟃ 𝽥 ʍ ᴡ</d>
 			<d>ᵂ ʷ 𝿛 ꭩ</d><!-- Superscripts -->
 			<d>₝</d><!-- Subscripts -->
 		</f>

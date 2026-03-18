@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 881 1000"
+   id="svg1"
+   sodipodi:docname="1DF65.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.26693281"
+     inkscape:cx="-1.8731305"
+     inkscape:cy="275.35019"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="654,200"
+       orientation="-0.95513954,0.29615615"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="11,736"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="658.87167,394.13594"
+       orientation="-0.95534482,0.29549327"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="764,736"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="805.29801,736"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="M 75,359 C 60,317 43,306 4,306 H 1 v -42 h 247 v 42 h -13 c -40,0 -60,9 -60,42 0,11 4,28 8,43 l 47,168 c 13,48 29,120 35,153 h 3 c 6,-33 24,-94 41,-143 L 413,267 h 63 l 100,296 c 16,48 37,116 43,149 h 3 c 6,-33 19,-82 39,-146 L 810.19529,84.296565 828.33539,205.496 644,800 H 564 L 427,382 285,800 h -79 z"
+     id="path1"
+     sodipodi:nodetypes="csccccssccccccccccccccccccc" />
+  <path
+     fill="currentColor"
+     d="m 720.19529,800 v -42 h 8 c 45,0 82,-9 82,-72 V 150 c 0,-59 -38,-68 -82,-68 h -8 V 40 h 184 v 220 c 0,36 -4,85 -4,85 h 5 c 30,-60 79,-91 147.00001,-91 114,0 177,59 177,196 v 236 c 0,63 32,72 77,72 h 3 v 42 h -174 V 455 c 0,-87 -29,-137 -110,-137 -83.00001,0 -121.00001,64 -121.00001,162 v 211 c 0,59 38,67 82,67 h 3 v 42 z"
+     id="path1-6" />
+</svg>
