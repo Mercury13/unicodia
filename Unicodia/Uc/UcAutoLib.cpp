@@ -5637,7 +5637,7 @@ constinit const uc::LibNode uc::libNodes[10354] {
 { U"\u1E68", {}, 5560, 0, -1, {}, EcVersion::NOT_EMOJI },   // 5631
 { U"\u1E69", {}, 5560, 0, -1, {}, EcVersion::NOT_EMOJI },   // 5632
 { {}, u8"MiscForms", 4527, 6, 5673, Lfg(8), EcVersion::NOT_EMOJI },   // 5633
-{ {}, u8"tʃ…", 4527, 22, 5679, {}, EcVersion::NOT_EMOJI },   // 5634
+{ {}, u8"ʧ…", 4527, 22, 5679, {}, EcVersion::NOT_EMOJI },   // 5634
 { U"\u0164", {}, 4527, 0, -1, {}, EcVersion::NOT_EMOJI },   // 5635
 { U"\u0165", {}, 4527, 0, -1, {}, EcVersion::NOT_EMOJI },   // 5636
 { U"\u1E6A", {}, 4527, 0, -1, {}, EcVersion::NOT_EMOJI },   // 5637
