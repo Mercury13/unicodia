@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 767 1000"
+   id="svg1"
+   sodipodi:docname="1DF78.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.3775"
+     inkscape:cx="139.07285"
+     inkscape:cy="499.33775"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="226,800"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="30,914"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="531,381.5"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="505,703.4938"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="m 216,387 c 46,-22 121,-43 194,-43 142,0 212,61 212,197 v 145 c 0,63 37,72 82,72 h 13 v 42 H 426 v -42 h 13 c 45,0 82,-9 82,-72 V 551 c 0,-99 -49,-140 -149,-140 -54,0 -115,11 -156,30 v 245 c 0,63 37,72 82,72 h 13 v 42 H 20 v -42 h 13 c 44,0 82,-8 82,-67 V 195 C 115,136 77,128 33,128 H 20 V 86 h 196 z"
+     id="path1"
+     sodipodi:nodetypes="cssssccccsssscssccccsssscccc" />
+  <path
+     d="m 216,136 h 191 c 60,0 78,38 83,82 l 5,43 h 52 L 542,86 H 202.31788 Z"
+     style="fill:currentColor"
+     id="path1-9"
+     sodipodi:nodetypes="cccccsc" />
+</svg>

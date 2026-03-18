@@ -376,6 +376,7 @@
 		<f name="T">
 			<f loc="MiscForms">
 				<d>Ʇ ʇ 𝼍 Ꞇ ꞇ</d>
+				<d>𝽸 𝽹</d><!-- Let fused letters be here, as cap and small are different -->
 				<d>𐞻</d><!-- Super misc -->
 			</f>
 			<f name="ʧ…">
@@ -405,7 +406,14 @@
 			<f loc="TwoDiac">
 				<d> Ǖ ǖ Ǘ ǘ Ǚ ǚ Ǜ ǜ Ṹ ṹ Ṻ ṻ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự</d>
 			</f>
-			<d>Ù ù Ú ú Û û Ü ü Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ȕ ȕ Ǔ ǔ Ȗ ȗ Ủ ủ Ꞿ ꞿ ꭒ Ư ư Ʉ ʉ Ꞹ ꞹ Ų ų ᶙ Ṳ ṳ Ṵ ṵ Ṷ ṷ Ụ ụ ᴜ ᵾ ᵁ ᵘ ꭟ ᶶ ᶸ ᵤ</d>
+			<d>Ù ù Ú ú Û û Ü ü Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ȕ ȕ Ǔ ǔ Ȗ ȗ Ủ ủ</d><!-- Above -->
+			<d>Ꞿ ꞿ ꭒ Ư ư</d><!-- Top -->
+			<d>Ʉ ʉ Ꞹ ꞹ</d><!-- Mid -->
+			<d>Ų ų 𝽺 𝽻 ᶙ</d><!-- Bottom -->
+			<d>Ṳ ṳ Ṵ ṵ Ṷ ṷ Ụ ụ</d><!-- Below -->
+			<d>ᴜ ᵾ</d>
+			<d>ᵁ ᵘ ꭟ ᶶ ᶸ</d><!-- Super -->
+			<d>ᵤ</d><!-- Sub -->
 		</f>
 		<f name="V">
 			<d>Ṽ ṽ</d><!-- Above -->
