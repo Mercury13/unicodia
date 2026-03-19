@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 495 1000"
+   id="svg1"
+   sodipodi:docname="1DFCD.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0677312"
+     inkscape:cx="-157.81125"
+     inkscape:cy="208.38577"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="197.20023,608.9996"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="251.79941,676.7994"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     fill="currentColor"
+     d="m 296.4,69.4004 v 27 h -2.60059 c -29.25,0 -52,5.39941 -52,43.1992 v 173.14874 l -3.9004,19.45226 -23.69958,58.7998 -26.9992,0 -13,-58.7998 h -3.25 c -17.5498,37.7998 -35.1006,64.7998 -91,64.7998 -48.1006,0 -70.2002,-17.4004 -70.2002,-46.2002 0,-28.2002 20.1504,-45.5996 65.6504,-45.5996 0,33 8.44922,47.3994 33.7998,47.3994 45.5,0 61.0996,-76.1992 61.0996,-122.399 v -93.6006 c 0,-35.3994 -23.3994,-40.1992 -51.3496,-40.1992 h -18.8506 v -27 h 196.301 z"
+     id="path1"
+     sodipodi:nodetypes="ccssccccccsscsssscccc" />
+  <path
+     d="m 241.79941,230.201 c 0,46.1998 15.5996,122.399 61.0996,122.399 25.35058,0 33.7998,-14.3994 33.7998,-47.3994 45.5,0 65.6504,17.3994 65.6504,45.5996 0,28.7998 -22.0996,46.2002 -70.2002,46.2002 -55.8994,0 -73.4502,-27 -91,-64.7998 h -3.25 z"
+     style="fill:#082f60;fill-opacity:1"
+     id="path1-3" />
+</svg>
