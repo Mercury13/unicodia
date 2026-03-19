@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 654 1000"
+   id="svg1"
+   sodipodi:docname="1DFCF.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="0.755"
+     inkscape:cx="326.49007"
+     inkscape:cy="500"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="592.9008,809.4006"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="623.4502,753"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="path1"
+     d="M 15.599609 69.400391 L 15.599609 96.400391 L 17.548828 96.400391 C 46.798828 96.400391 68.25 102.39943 68.25 137.79883 L 68.25 190.59961 L 139.75 190.59961 L 139.75 69.400391 L 15.599609 69.400391 z M 225.54883 69.400391 L 225.54883 96.400391 L 228.15039 96.400391 C 256.09959 96.400391 278.19922 101.20019 278.19922 138.40039 L 278.19922 190.59961 L 349.69922 190.59961 L 349.69922 69.400391 L 225.54883 69.400391 z M 68.25 247 L 68.25 279.40039 C 68.25 361.00039 105.2998 397 175.5 397 C 218.4004 397 254.1504 386.19922 279.5 344.19922 L 282.75 344.19922 L 292.5 391 L 403 391 L 403 364 L 400.40039 364 C 372.45019 364 349.69922 359.79979 349.69922 324.40039 L 349.69922 247 L 278.19922 247 L 278.19922 259.59961 C 278.19922 317.20021 255.44923 355 202.79883 355 C 154.04883 355 139.75 324.39942 139.75 272.19922 L 139.75 247 L 68.25 247 z " />
+</svg>
