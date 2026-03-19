@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 727 1000"
+   id="svg1"
+   sodipodi:docname="1DF7C.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.1354625"
+     inkscape:cx="480.69213"
+     inkscape:cy="459.15113"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="543.31702,467.04132"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="491.09934,678.50025"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="479.81706,406.64595"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     id="use2"
+     d="m 15,86 v 42 h 13 c 44,0 82,9 82,68 v 388 c 0,163 86.12509,226 214.63867,226 91.27407,0 158.161,-42.3633 189.25977,-128.86523 h 5.83789 C 550.8351,767.6367 617.72007,810 708.99414,810 837.50772,810 923.63477,747 923.63477,584 V 196 c 0,-59 38,-68 82.00003,-68 h 13 V 86 H 727.63477 v 42 h 13 c 45,0 82,9 82,72 v 390 c 0,116 -54.08238,160 -129.02344,160 -88.84764,0 -129.79492,-65 -129.79492,-156 V 321.5 h -174 v 42 h 4 c 57,0 76,19 76,72 V 594 c 0,91 -40.94729,156 -129.79493,156 C 265.08042,750 211,706 211,590 V 200 c 0,-63 37,-72 82,-72 h 13 V 86 Z"
+     sodipodi:nodetypes="ccssssccssssccccssssccccsccssssccc" />
+</svg>
