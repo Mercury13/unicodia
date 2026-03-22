@@ -483,7 +483,8 @@
 			<d>ꭠ ᴤ Ꜣ ꜣ Ꜥ ꜥ ꞏ</d>
 		</f>
 		<f loc="OldMathLig">
-			<d>𝚦</d>
+			<d>𝾐 𝾑 𝾒 𝾓</d>
+			<d>𝚦</d><!-- Eszett w/descender (sursolidum) -->
 		</f>
 	</f>
 	<f loc="Latin2" tilePattern="10010110">

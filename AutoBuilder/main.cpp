@@ -749,7 +749,7 @@ int main()
 
     static constinit const char* FNAME_FORGET = "forget.log";
     auto forgetStats = forget::postprocess(manualLib.forgetMap, FNAME_FORGET);
-    std::cout << "Forgotten: " << std::dec
+    std::cout << "Forgotten Latn/Cyrl: " << std::dec
               << forgetStats.nRepeat << " repeating, "
               << forgetStats.nMissing << " missing, "
               << forgetStats.nExtra << " extra, "
