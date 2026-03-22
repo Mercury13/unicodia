@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="25A0.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -18,7 +18,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview7"
-     pagecolor="#cccccc"
+     pagecolor="#ffffff"
      bordercolor="#8d8d8d"
      borderopacity="1"
      inkscape:pageshadow="2"
@@ -30,7 +30,7 @@
      units="px"
      inkscape:zoom="29.582433"
      inkscape:cx="6.3720249"
-     inkscape:cy="10.682015"
+     inkscape:cy="10.698917"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -50,12 +50,13 @@
        originx="0"
        originy="0"
        spacingx="1"
-       spacingy="1" /></sodipodi:namedview><defs
+       spacingy="1"
+       units="px" /></sodipodi:namedview><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"><path
-       style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#c01c28;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 1.5,7.5 6,-6 6,6 -6,6 z"
        id="path21499"
        sodipodi:nodetypes="ccccc" /></g></svg>

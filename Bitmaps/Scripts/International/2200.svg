@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="2200.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -30,7 +30,7 @@
      units="px"
      inkscape:zoom="34.75778"
      inkscape:cx="6.430215"
-     inkscape:cy="9.3791951"
+     inkscape:cy="9.3935804"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -50,7 +50,8 @@
        originx="0"
        originy="0"
        spacingx="1"
-       spacingy="1" /><sodipodi:guide
+       spacingy="1"
+       units="px" /><sodipodi:guide
        position="7.5,16"
        orientation="-1,0"
        id="guide404"
@@ -62,5 +63,5 @@
      inkscape:groupmode="layer"
      id="layer1"><path
        d="M 5.1725022,7.6128867 7.6798572,13.124809 11.188737,1 H 13 V 1.944698 H 11.714357 L 7.8929482,15 h -0.68899 L 4.2633176,8.6783356 3.0629129,9.2110601 2.8427193,8.6783356 Z"
-       style="stroke-width:0.999999"
+       style="stroke-width:0.999999;fill:#c01c28"
        id="path446" /></g></svg>

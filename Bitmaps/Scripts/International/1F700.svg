@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="1F700.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -30,7 +30,7 @@
      units="px"
      inkscape:zoom="33.322407"
      inkscape:cx="10.18834"
-     inkscape:cy="8.8228921"
+     inkscape:cy="8.837897"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -50,15 +50,16 @@
        originx="0"
        originy="0"
        spacingx="1"
-       spacingy="1" /></sodipodi:namedview><defs
+       spacingy="1"
+       units="px" /></sodipodi:namedview><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"><path
-       style="fill:#000000;fill-opacity:1;stroke-width:0.999995"
+       style="fill:#c01c28;fill-opacity:1;stroke-width:0.999995"
        d="M 7.1196558,15 2.1310344,0.9881836 h 1.571651 l 3.1496784,8.987972 C 7.1914593,10.931209 7.7521995,12.664457 8,13.750339 8.3483036,12.483684 8.8011099,11.071821 9.1773362,9.9369067 L 12.307451,0.9881836 h 1.561515 L 8.880345,15 Z"
        id="path4790"
        sodipodi:nodetypes="cccccccccc" /><path
-       style="fill:#000000;fill-opacity:1;stroke-width:0.999995"
+       style="fill:#c01c28;fill-opacity:1;stroke-width:0.999995"
        d="m 7.9307994,5.9999997 q -0.8943919,0 -1.4143874,-0.2703962 V 4.6896118 q 0.5199955,0.3951966 1.14399,0.3951966 0.9983905,0 0.9983905,-0.6031941 0,-0.4575973 -0.5823945,-0.6655938 Q 7.4732033,3.5872221 6.9220088,3.1816261 6.3708134,2.7760297 6.3708134,2.0688363 q 0,-0.5823945 0.4367959,-1.0191908 0.4367958,-0.43679584 1.3727874,-0.43679584 0.9151916,0 1.4351867,0.3119982 L 9.386786,1.8400396 Q 8.9915893,1.5280413 8.3467955,1.5280413 q -0.7903929,0 -0.7903929,0.4783953 0,0.3951983 0.769593,0.7071939 0.7695931,0.3119983 1.1439892,0.6863936 0.3743972,0.3743968 0.3743972,1.0399897 0,0.7279939 -0.5719948,1.14399 -0.5719943,0.4159943 -1.3415878,0.4159959 z"
        id="path2" /></g></svg>

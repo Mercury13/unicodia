@@ -47,7 +47,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'B' }, MapSubtype::LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // IPA extensions OK
-    { 0x0250, 0x02AF, { 0x259, EcContinent::NONE },
+    { 0x0250, 0x02AF, { 0x259, EcContinent::NONE, Ifg::PAINT_SVG },
             "IPA Extensions", MyName::INST, MapSubtype::LATIN, },
     // Spacing letter modifiers OK
     { 0x02B0, 0x02FF, { 0x2D0, EcContinent::NONE, Ifg::ENG_TALL_PAINT | Ifg::HINT_PX_CENTER, 2_hx },
@@ -55,7 +55,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     // Basic umlauts OK
-    { 0x0300, 0x036F, { 0x301, EcContinent::NONE },
+    { 0x0300, 0x036F, { 0x301, EcContinent::NONE, Ifg::PAINT_SVG },
             "Combining Diacritical Marks",
             { EcScript::ZDIA, 0 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::FUNKY },
@@ -293,7 +293,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Lana, 0 }, MapSubtype::ALIVE,
             EcScript::Lana, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Diacritical ex OK
-    { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE },
+    { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE, Ifg::PAINT_SVG },
             "Combining Diacritical Marks Extended",
             { EcScript::ZDIA, 2 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::FUNKY },
@@ -340,17 +340,17 @@ constinit const uc::Block uc::blocks[] {
             "Vedic Extensions",
             MyName::INST, MapSubtype::DEAD, EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
-    { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
+    { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE, Ifg::PAINT_SVG },
             "Phonetic Extensions",
             MyName::INST, MapSubtype::LATIN,
             EcScript::NONE, EcFont::LATIN },
     // Phonetic ext supp OK
-    { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE, {}, SvgHint{ 12, 6 } },
+    { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE, Ifg::PAINT_SVG, SvgHint{ 12, 6 } },
             "Phonetic Extensions Supplement",
             MyName::INST, MapSubtype::LATIN,
             EcScript::NONE, EcFont::LATIN },
     // Combining supp OK, fixed manually in Noto
-    { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
+    { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE, Ifg::PAINT_SVG },
             "Combining Diacritical Marks Supplement",
             { EcScript::ZDIA, 1, }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NORMAL, Bfg::AVOID_BUILTIN },
@@ -365,46 +365,46 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Grek, 1 }, MapSubtype::DEAD,
             EcScript::Grek, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // General punct OK, changed 2-dot leader to low one.
-    { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
+    { 0x2000, 0x206F, { L'‰', EcContinent::NONE, Ifg::PAINT_SVG },
             "General Punctuation",
             { EcScript::ZPUN, 0 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
-    { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE },
+    { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE, Ifg::PAINT_SVG },
             "Superscripts and Subscripts",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Curr symbols OK
-    { 0x20A0, 0x20CF, { 0x20AC, EcContinent::NONE },
+    { 0x20A0, 0x20CF, { 0x20AC, EcContinent::NONE, Ifg::PAINT_SVG },
             "Currency Symbols",
             MyName::INST, MapSubtype::SYM_OTHER },
     // Marks for symbols OK, made optimized versions in Noto
-    { 0x20D0, 0x20FF, { 0x20E0, EcContinent::NONE },
+    { 0x20D0, 0x20FF, { 0x20E0, EcContinent::NONE, Ifg::PAINT_SVG },
             "Combining Diacritical Marks for Symbols",
             { EcScript::ZDIA, 'z' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::UMLAUT_SYMBOL },
     // Letterlike OK
-    { 0x2100, 0x214F, { 0x211D, EcContinent::NONE },
+    { 0x2100, 0x214F, { 0x211D, EcContinent::NONE, Ifg::PAINT_SVG },
             "Letterlike Symbols",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
-    { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
+    { 0x2150, 0x218F, { L'⅓', EcContinent::NONE, Ifg::PAINT_SVG },
             "Number Forms",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
-    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, 7_hx + ImbaX::LEFT_3 },
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, Ifg::PAINT_SVG, 7_hx + ImbaX::LEFT_3 },
             "Arrows",
             { EcScript::ZARR, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL },
     // Math op OK
-    { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
+    { 0x2200, 0x22FF, { L'√', EcContinent::NONE, Ifg::PAINT_SVG },
             "Mathematical Operators",
             { EcScript::ZMAT, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::MATH },
     // Misc tech OK
-    { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
+    { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE, Ifg::PAINT_SVG },
             "Miscellaneous Technical",
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::TECHNICAL, Bfg::WORD_ON },
@@ -435,7 +435,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DEJAVU },
     // Geometric OK
-    { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE },
+    { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE, Ifg::PAINT_SVG },
             "Geometric Shapes",
             { EcScript::ZSHP, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL },
@@ -445,41 +445,41 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZSYM, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Dingbats OK, need Cambria here!
-    { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
+    { 0x2700, 0x27BF, { L'❧', EcContinent::NONE, Ifg::PAINT_SVG },
             "Dingbats",
             { EcScript::ZDIN, 0 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS },
     // Misc math A OK
-    { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
+    { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE, Ifg::PAINT_SVG },
             "Miscellaneous Mathematical Symbols-A",
             { EcScript::ZMAT, 'A' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::MATH, Bfg::STOCK_BLOCK_DESC },
     // Arrows A OK
-    { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE },
+    { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE, Ifg::PAINT_SVG },
             "Supplemental Arrows-A",
             { EcScript::ZARR, 'A' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Braille OK
-    { 0x2800, 0x28FF, { L'⠝', EcContinent::NONE },
+    { 0x2800, 0x28FF, { L'⠝', EcContinent::NONE, Ifg::PAINT_SVG },
             "Braille Patterns",
             { EcScript::Brai, 0 }, MapSubtype::SYM_CODE, EcScript::Brai },
     // Arrows B OK
-    { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
+    { 0x2900, 0x297F, { L'⤶', EcContinent::NONE, Ifg::PAINT_SVG },
             "Supplemental Arrows-B",
             { EcScript::ZARR, 'B' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::STOCK_BLOCK_DESC },
     // Misc math B OK
-    { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
+    { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE, Ifg::PAINT_SVG },
             "Miscellaneous Mathematical Symbols-B",
             { EcScript::ZMAT, 'B' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::MATH, Bfg::STOCK_BLOCK_DESC },
     // Supp math ops OK
-    { 0x2A00, 0x2AFF, { L'⨔', EcContinent::NONE },
+    { 0x2A00, 0x2AFF, { L'⨔', EcContinent::NONE, Ifg::PAINT_SVG },
             "Supplemental Mathematical Operators",
             { EcScript::ZMAT, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
-    { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
+    { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE, Ifg::PAINT_SVG },
             "Miscellaneous Symbols and Arrows",
             { EcScript::ZSYM, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL },
@@ -518,7 +518,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 'A' }, MapSubtype::ALIVE,
             EcScript::Cyrl, EcFont::NOTO, Bfg::STOCK_BLOCK_DESC | Bfg::FORCE_BUILTIN },
     // Supp punct OK, drew U14 in FunkySample
-    { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
+    { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE, Ifg::PAINT_SVG },
             "Supplemental Punctuation",
             { EcScript::ZPUN, 1 }, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION },
@@ -641,7 +641,7 @@ constinit const uc::Block uc::blocks[] {
             "Bamum",
             { EcScript::Bamu, 0 }, MapSubtype::DEAD, EcScript::Bamu },
     // Modifier tone OK
-    { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE, {}, 7_hx },
+    { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE, Ifg::PAINT_SVG, 7_hx },
             "Modifier Tone Letters",
             MyName::INST, MapSubtype::SYM_PUNCT },
     // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
@@ -773,7 +773,8 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_VERTICAL },
     // Combining half marks OK
-    { 0xFE20, 0xFE2F, { U"\uFE20\uFE21", EcContinent::NONE, Ifg::BOTH_DOTTED },
+    { 0xFE20, 0xFE2F,
+            { U"\uFE20\uFE21", EcContinent::NONE, Ifg::BOTH_DOTTED | Ifg::PAINT_SVG },
             "Combining Half Marks",
             MyName::INST, MapSubtype::SYM_PUNCT,
             EcScript::NONE, EcFont::NOTO },
@@ -1421,7 +1422,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
     // Music OK
-    { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE, {}, 8_hx },
+    { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE, Ifg::PAINT_SVG, 8_hx },
             "Musical Symbols",
             { EcScript::ZMUS, 0 }, MapSubtype::SYM_CODE,
             EcScript::NONE, EcFont::MUSIC },
@@ -1462,14 +1463,14 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::MATH,
             Bfg::HIPRIO_NUMBERS },
     // Sutton SignWriting OK
-    { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
+    { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE, Ifg::PAINT_SVG },
             "Sutton SignWriting",
             { EcScript::Sgnw, 0}, MapSubtype::SYM_CODE, EcScript::Sgnw },
-    /// @todo [U18] Misc sym and arr
-    { 0x1DB00, 0x1DBFF, { 0x1DB10, EcContinent::NONE, Ifg::PAINT_SVG | Ifg::MISSING },
+    // Misc sym and arr gagged
+    { 0x1DB00, 0x1DBFF, { 0x1DB10, EcContinent::NONE, Ifg::PAINT_SVG },
             "Miscellaneous Symbols and Arrows Extended",
             { EcScript::ZSYM, 3 }, MapSubtype::SYM_OTHER,
-            EcScript::NONE },
+            EcScript::NONE, EcFont::LATIN_G },
             // Latin ex G OK, drew in FunkySample
     { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, Ifg::ENG_SMALL_PAINT, 4_hx + uc::ImbaX::RIGHT_3 },
             "Latin Extended-G",
@@ -1583,7 +1584,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Orna dingbats OK
-    { 0x1F650, 0x1F67F, { 0x1F656, EcContinent::NONE },
+    { 0x1F650, 0x1F67F, { 0x1F656, EcContinent::NONE, Ifg::PAINT_SVG },
             "Ornamental Dingbats",
             { EcScript::ZDIN, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
@@ -1593,16 +1594,16 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT, Bfg::VS16_GRAPHIC },
     // Alchem OK
-    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
+    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE, Ifg::PAINT_SVG },
             "Alchemical Symbols",
             MyName::INST, MapSubtype::SYM_OTHER },
     // Geo shapes ex OK
-    { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE },
+    { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE, Ifg::PAINT_SVG },
             "Geometric Shapes Extended",
             { EcScript::ZSHP, 1 }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Arrows C OK
-    { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE },
+    { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE, Ifg::PAINT_SVG },
             "Supplemental Arrows-C",
             { EcScript::ZARR, 'C' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2, Bfg::STOCK_BLOCK_DESC },
@@ -1611,8 +1612,8 @@ constinit const uc::Block uc::blocks[] {
             "Supplemental Symbols and Pictographs",
             { EcScript::ZSYM, '1' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
-    // Chess OK, turned bad pawn
-    { 0x1FA00, 0x1FA6F, { 0x1FA10, EcContinent::NONE },
+    // Chess OK
+    { 0x1FA00, 0x1FA6F, { 0x1FA10, EcContinent::NONE, Ifg::PAINT_SVG },
             "Chess Symbols",
             MyName::INST, MapSubtype::SYM_OTHER },
     // Sym and picto ext A OK

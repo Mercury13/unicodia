@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="0300.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -31,7 +31,7 @@
      units="px"
      inkscape:zoom="33.322407"
      inkscape:cx="2.2957525"
-     inkscape:cy="11.583797"
+     inkscape:cy="11.628812"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -52,7 +52,8 @@
        originx="0"
        originy="0"
        spacingx="1"
-       spacingy="1" />
+       spacingy="1"
+       units="px" />
     <sodipodi:guide
        position="8,10"
        orientation="1,0"
@@ -78,9 +79,9 @@
     <path
        d="M 5.9687131,6.5937451 Q 6.6562215,5.687484 7.437481,4.3749681 8.1874901,3.0624522 8.6874961,1.9999393 H 12.031287 V 2.3124431 Q 11.656283,2.8436995 10.812522,3.7499605 9.9687616,4.6562215 8.9999999,5.5624825 7.9999877,6.4374931 7.1562275,7 H 5.9687131 Z"
        id="path7358"
-       style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:2.84094" />
+       style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:2.84094;fill:#c01c28;stroke:none" />
     <ellipse
-       style="fill:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       style="fill:#c01c28"
        id="path353"
        cx="1.5602099"
        cy="14.183246"
@@ -90,31 +91,36 @@
        x="6.4397901"
        y="-4.3664917"
        xlink:href="#path353"
-       id="use420" />
+       id="use420"
+       style="fill:#c01c28" />
     <use
        x="11.403141"
        y="-2.3246067"
        xlink:href="#path353"
-       id="use428" />
+       id="use428"
+       style="fill:#c01c28" />
     <use
        x="12.87958"
-       y="0"
        xlink:href="#path353"
-       id="use426" />
+       id="use426"
+       style="fill:#c01c28" />
     <use
        x="1.4764398"
        y="-2.3246066"
        xlink:href="#path353"
-       id="use416" />
+       id="use416"
+       style="fill:#c01c28" />
     <use
        x="9.0785342"
        y="-3.8010467"
        xlink:href="#path353"
-       id="use422" />
+       id="use422"
+       style="fill:#c01c28" />
     <use
        x="3.8010471"
        y="-3.8010466"
        xlink:href="#path353"
-       id="use418" />
+       id="use418"
+       style="fill:#c01c28" />
   </g>
 </svg>

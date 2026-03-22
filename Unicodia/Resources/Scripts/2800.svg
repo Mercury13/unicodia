@@ -1,1 +1,1 @@
-<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle id="a" cx="5.5" cy="3.5" r="1.5"/><use transform="translate(5)" xlink:href="#a"/><use transform="translate(5 5)" xlink:href="#a"/><use transform="translate(0 10)" xlink:href="#a"/></svg>
+<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle id="a" cx="5.5" cy="3.5" fill="#c01c28" r="1.5"/><use x="5" xlink:href="#a"/><use x="5" xlink:href="#a" y="5"/><use xlink:href="#a" y="10"/></svg>

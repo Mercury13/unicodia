@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="FE20.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -31,7 +31,7 @@
      units="px"
      inkscape:zoom="47.125"
      inkscape:cx="4.530504"
-     inkscape:cy="10.228117"
+     inkscape:cy="10.259947"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -50,7 +50,10 @@
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
     <sodipodi:guide
        position="8,10"
        orientation="1,0"
@@ -64,83 +67,60 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#000000;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#c01c28;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 1.0000001,5.9999997 c 0,0 2,-2.9999997 5.9999997,-2.9999997 V 4.5 C 3.1195707,4.5 1,7.0136636 1,7 Z"
        id="path857"
        sodipodi:nodetypes="ccccc" />
     <use
-       x="0"
-       y="0"
        xlink:href="#path857"
        id="use1278"
-       transform="matrix(-1,0,0,1,16,0)"
-       width="100%"
-       height="100%" />
+       transform="matrix(-1,0,0,1,16,0)" />
     <g
        id="g1283"
-       transform="translate(-0.72132037,1.5)">
+       transform="translate(-0.72132037,1.5)"
+       style="fill:#c01c28">
       <circle
-         style="fill:#000000;stroke:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+         style="fill:#c01c28;stroke:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
          id="path1080"
          cx="5"
          cy="6"
-         inkscape:transform-center-y="-3"
-         r="0.60000002" />
+         r="0.6" />
       <use
-         x="0"
-         y="0"
+         x="-2.1213202"
+         y="0.87867976"
          xlink:href="#path1080"
-         inkscape:transform-center-y="-2.1213203"
-         id="use1186"
-         transform="rotate(-45,5,9)"
-         inkscape:transform-center-x="2.1213203" />
+         id="use1" />
       <use
-         x="0"
-         y="0"
+         x="-3"
+         y="3"
          xlink:href="#path1080"
-         id="use1192"
-         transform="rotate(-90,5,9)"
-         inkscape:transform-center-x="3" />
+         id="use2" />
       <use
-         x="0"
-         y="0"
+         x="-2.1213203"
+         y="5.1213206"
          xlink:href="#path1080"
-         inkscape:transform-center-y="2.1213203"
-         id="use1194"
-         transform="rotate(-135,5,9)"
-         inkscape:transform-center-x="2.1213203" />
+         id="use3" />
       <use
-         x="0"
-         y="0"
+         y="6"
          xlink:href="#path1080"
-         inkscape:transform-center-y="3"
-         id="use1198"
-         transform="rotate(180,5,9)" />
+         id="use4" />
       <use
-         x="0"
-         y="0"
+         x="2.1213205"
+         y="5.1213204"
          xlink:href="#path1080"
-         inkscape:transform-center-y="2.1213203"
-         id="use1200"
-         transform="rotate(135,5,9)"
-         inkscape:transform-center-x="-2.1213203" />
+         id="use6" />
       <use
-         x="0"
-         y="0"
+         x="2.1213205"
+         y="0.87867979"
          xlink:href="#path1080"
-         inkscape:transform-center-y="-2.1213203"
-         id="use1206"
-         transform="rotate(45,5,9)"
-         inkscape:transform-center-x="-2.1213203" />
+         id="use5" />
     </g>
     <use
-       x="0"
-       y="0"
        xlink:href="#g1283"
        id="use1285"
-       transform="matrix(-1,0,0,1,16,2.384186e-8)" />
+       transform="matrix(-1,0,0,1,16,0)" />
     <ellipse
-       style="fill:#000000;stroke:none;stroke-width:1.20001;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       style="fill:#c01c28;stroke:none;stroke-width:1.20001;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
        id="path1445"
        cx="8"
        cy="10.5"
