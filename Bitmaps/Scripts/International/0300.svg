@@ -31,7 +31,7 @@
      units="px"
      inkscape:zoom="33.322407"
      inkscape:cx="2.2957525"
-     inkscape:cy="11.628812"
+     inkscape:cy="11.658822"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -77,9 +77,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       d="M 5.9687131,6.5937451 Q 6.6562215,5.687484 7.437481,4.3749681 8.1874901,3.0624522 8.6874961,1.9999393 H 12.031287 V 2.3124431 Q 11.656283,2.8436995 10.812522,3.7499605 9.9687616,4.6562215 8.9999999,5.5624825 7.9999877,6.4374931 7.1562275,7 H 5.9687131 Z"
+       d="M 5.9687131,6.5937451 C 7.1730267,5.0062407 8.1918774,3.0531292 8.6874961,1.9999393 H 12.031287 V 2.3124431 C 11.715942,2.7591828 9.5249203,5.4208712 7.1562275,7 H 5.9687131 Z"
        id="path7358"
-       style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:2.84094;fill:#c01c28;stroke:none" />
+       style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#c01c28;stroke:none;stroke-width:2.84094"
+       sodipodi:nodetypes="ccccccc" />
     <ellipse
        style="fill:#c01c28"
        id="path353"
