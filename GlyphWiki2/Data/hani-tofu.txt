@@ -41,6 +41,12 @@
 /range 2F00 2FD5
 
 
+# New char of U18
+/country
+/prefix unstable-u
+2B81E
+
+
 /country ORERASE
 /prefix unstable-u
 /range 191A0 191D2
