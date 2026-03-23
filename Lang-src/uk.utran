@@ -3953,7 +3953,7 @@
       <p />
       <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
       <p />
-      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
       <p />
       <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
      </orig>
@@ -3962,7 +3962,7 @@
       <p />
       <p>Мітка горизонтального відображення може бути реалізована як на рівні движка, так і на рівні шрифтів.</p>
       <p />
-      <p>Два нерозривних ієрогліфічних пропуски та чотири заливки «ієрогліф знищений»{{-}}прості символи.</p>
+      <p>Два нерозривних ієрогліфічних пропуски та чотири заливки «ієрогліф знищений»{{-}}прості [[pt:spacing|протяжні]] символи.</p>
       <p />
       <p>П’ятнадцять штриховок «ієрогліф сильно пошкоджений» в ідеалі повинні адаптуватися під реальну ширину та висоту ієрогліфа.</p>
      </transl>

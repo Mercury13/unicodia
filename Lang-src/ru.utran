@@ -3952,7 +3952,7 @@
       <p />
       <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
       <p />
-      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
       <p />
       <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
      </orig>
@@ -3961,7 +3961,7 @@
       <p />
       <p>Метка горизонтального отражения может быть реализована как на уровне движка, так и на уровне шрифтов.</p>
       <p />
-      <p>Два неразрывных иероглифических пробела и четыре заливки «иероглиф уничтожен»{{-}}простые символы.</p>
+      <p>Два неразрывных иероглифических пробела и четыре заливки «иероглиф уничтожен»{{-}}простые [[pt:spacing|протяжённые]] символы.</p>
       <p />
       <p>Пятнадцать штриховок «иероглиф сильно повреждён» в идеале должны адаптироваться к реальной ширине и высоте иероглифа.</p>
      </transl>
