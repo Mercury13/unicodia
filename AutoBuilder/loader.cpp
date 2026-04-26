@@ -14,7 +14,7 @@ using namespace std::string_view_literals;
 
 void LocalFile::preload() const
 {
-    static constexpr int N_UPDIRS = 4;
+    static constexpr int N_UPDIRS = 5;
 
     std::filesystem::path rqPath(fname);
     auto destPath = rqPath.filename();
