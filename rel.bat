@@ -1,5 +1,5 @@
 @rem Settings
-@set QTDIR=c:\Qt\6.1.3\mingw81_64
+@set QTDIR=c:\Qt\6.2.4\mingw_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
 @set MINGW=c:\msys64\mingw64\bin
