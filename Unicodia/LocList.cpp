@@ -318,7 +318,7 @@ namespace {
         // Convert
         auto end = mojibake::copyLimS(std::string_view(attr), std::begin(buf), std::end(buf));
         if (end != buf && buf[0] < 65536) {
-            return buf[0];
+            return static_cast<char16_t>(buf[0]);
         }
         return dflt;
     }
