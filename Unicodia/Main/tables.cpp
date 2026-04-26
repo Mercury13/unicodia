@@ -155,7 +155,7 @@ void VirtualCharsModel::paintItem(
             // Workaround: draw selected item from Windows’ skin
             //   (Vista’s skin explicitly bans it from table)
             // 1. Set style
-            vi.state = QStyle::State_Selected | QStyle::State_MouseOver
+            vi.state = QStyle::State_Selected
                         | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
                         | QStyle::State_On | QStyle::State_KeyboardFocusChange;
             // 2. Use dummy list view as object instead of table view
