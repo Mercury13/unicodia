@@ -78,10 +78,14 @@
 @if not exist %BUILD_SC% md %BUILD_SC%
 @if not exist %BUILD% md %BUILD%
 
-@if exist Fonts\emoji.zip goto emoji_ok
+@set EMOJIARC=Fonts\emoji.zip
+@if exist %EMOJIARC% goto emoji_ok
 @echo.
 @echo ===== Building graphic emoji =====
-@call !tape.bat
+@call xtape.bat
+@if exist %EMOJIARC% goto emoji_ok
+@echo Emoji archive %EMOJIARC% not found!
+@goto end
 :emoji_ok
 
 @rem echo.
