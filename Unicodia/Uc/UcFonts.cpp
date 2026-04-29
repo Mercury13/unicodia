@@ -267,8 +267,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Mingzat-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 18_top, 80_pc },              // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
-    { FAM_SEMOJI, Ffg::FALL_TO_NEXT },                                          // Mahjong tiles
-      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                  // Dominoes
+    { FAM_SEMOJI, Ffg::QA_FALSE_SUPPORT | Ffg::FALL_TO_NEXT,                    // Mahjong tiles
+            uc::EcVersion::V_5_1 },
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 40_bot, 150_pc },                  // +Dominoes
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
