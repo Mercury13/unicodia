@@ -184,7 +184,7 @@
 @echo ===== Building L10n =====
 @md %DEPLOY%\Languages
 @rem ...
-@rem English
+@rem English, original
 @set DIR_EN=%DEPLOY%\Languages\English
 @md %DIR_EN%
 @copy lang-src\en\locale.xml %DIR_EN%
@@ -198,7 +198,7 @@
 @%UTRANSL% lang-src\ja.utran -update -build:%DIR_JA%
 @copy %QTDIR%\translations\qtbase_ja.qm %DIR_JA%
 @rem ...
-@rem Russian
+@rem Russian, known
 @set DIR_RU=%DEPLOY%\Languages\Russian
 @md %DIR_RU%
 @copy lang-src\ru\locale.xml %DIR_RU%
@@ -211,10 +211,9 @@
 @md %DIR_TR%
 @copy lang-src\tr\locale.xml %DIR_TR%
 @%UTRANSL% lang-src\tr.utran -update -build:%DIR_TR%
-@if errorlevel 1 goto end
 @copy %QTDIR%\translations\qtbase_tr.qm %DIR_TR%
 @rem ...
-@rem Ukrainian
+@rem Ukrainian, known
 @set DIR_UK=%DEPLOY%\Languages\Ukrainian
 @md %DIR_UK%
 @copy lang-src\uk\locale.xml %DIR_UK%
@@ -245,10 +244,16 @@
 @set QAFONTS=%BUILD%\font_layout.txt
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
 @rem Checking fonts
+if exist %QAFONTS% goto fqa_exists
+@echo FONTS FAILED. No font QA file for some reason.
+@echo It should have been at %QAFONTS%.
+@goto fqa_done
+:fqa_exists
 @fc %QAFONTS% AutoQa\font_layout.txt >nul
 @if not errorlevel 1 goto fqa_ok
 @echo.
 @echo FONTS FAILED. I use updated W10, different OS can fail.
+@echo The new fonts' QA is %QAFONTS%.
 @goto fqa_done
 :fqa_ok
 @echo Fonts OK
