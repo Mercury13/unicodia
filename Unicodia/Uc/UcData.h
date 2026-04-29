@@ -64,7 +64,7 @@ private:
     int fValue = 100;
 };
 
-constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
+constexpr Percent operator ""_pc (unsigned long long x) { return Percent(x); }
 
 namespace uc {
 
@@ -562,8 +562,11 @@ namespace uc {
         StyleSheet styleSheet {};
         Percent sizeAdjust {};
         StyleChange styleChange {};
+        /// Special bhv in QA:
+        /// [NO_VALUE] normal  [+] supports up to version X
+        EcVersion qaVersion = EcVersion::NO_VALUE;
 
-        mutable struct Q {
+        struct Q {
             dumb::Sp<LoadedFont> loaded {};
             /// Currently have one reason for rejection: probed and failed
             /// (Brahmi only)
@@ -571,7 +574,7 @@ namespace uc {
             bool isRejected = false;
             consteval Q() = default;
             consteval Q(const Q&) {};
-        } q {};
+        } mutable q {};
         void load(char32_t trigger) const;
 
         int computeSize(FontPlace place, int size) const;
