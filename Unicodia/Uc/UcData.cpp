@@ -34,6 +34,7 @@ const uc::GlyphStyleSets uc::GlyphStyleSets::EMPTY;
 constinit const match::MainFont match::MainFont::INST;
 constinit const match::Normal match::Normal::INST;
 constinit const match::NullForTofu match::NullForTofu::INST;
+constinit const match::Qa match::Qa::INST;
 
 constinit uc::PlaneInfo uc::planeInfo[N_PLANES];
 constinit ec::Array<unsigned, uc::EgypReliability> uc::egypByReliability { 0u, 0u, 0u, 0u, 0u };
@@ -1574,7 +1575,7 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
         if (avoidBuiltin)
             wantSkip |= v->family.flags.have(Fafg::BUILTIN);
         if (!wantSkip) {
-            if (matcher.check(sb, *v))
+            if (matcher.check(sb, ecVersion, *v))
                 return v;
         }
         // Once again if accepted and that flag is present
@@ -1585,12 +1586,12 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
             // e.g. have system → never check backup
             if (!v->flags.have(Ffg::FALL_TO_NEXT)) {
                 // what the frag to do?
-                return matcher.lastHopeMatch(sb, *v);
+                return matcher.lastHopeMatch(sb, ecVersion, *v);
             }
         }
         ++v;
     }
-    return matcher.lastHopeMatch(sb, *v);
+    return matcher.lastHopeMatch(sb, ecVersion, *v);
 }
 
 
@@ -1829,6 +1830,7 @@ void uc::finishTranslation(
     synthLocStrings.clear();
     char c[40];
 
+    const uc::Script* prevScript = nullptr;
     for (unsigned i = 0; i < uc::N_SCRIPTS; ++i) {
         auto& sc = uc::scriptInfo[i];
         if (!sc.flags.have(Sfg::SORT_KEY)) {
@@ -1844,13 +1846,12 @@ void uc::finishTranslation(
             sc.loc.timeComment = loc::get(c);
         }
         if (sc.flags.have(Sfg::DESC_FROM_PREV)) {
-            auto p = &sc;
-            --p;
-            sc.loc.description = p->loc.description;
+            sc.loc.description = prevScript->loc.description;
         } else {
             sc.printfLocKey(c, "Text");
             sc.loc.description = loc::get(c);
         }
+        prevScript = &sc;
     }
 
     // Blocks, pass 1 (retrieve keys)
@@ -2171,15 +2172,16 @@ std::u8string uc::Version::locLongName() const
 ///// Font matchers ////////////////////////////////////////////////////////////
 
 
-const uc::Font* uc::FontMatcher::lastHopeMatch(char32_t cp, const uc::Font& font) const
+const uc::Font* uc::FontMatcher::lastHopeMatch(
+    char32_t cp, EcVersion itsVersion, const uc::Font& font) const
 {
-    if (check(cp, font))
+    if (check(cp, itsVersion, font))
         return &font;
     return nullptr;
 }
 
 
-bool match::MainFont::check(char32_t, const uc::Font& font) const
+bool match::MainFont::check(char32_t, uc::EcVersion, const uc::Font& font) const
 {
     if (font.flags.haveAny(uc::Ffg::BUG_FIXUP | uc::Ffg::DESC_AVOID))
         return false;
@@ -2188,7 +2190,7 @@ bool match::MainFont::check(char32_t, const uc::Font& font) const
 }
 
 
-bool match::Normal::check(char32_t cp, const uc::Font& font) const
+bool match::Normal::check(char32_t cp, uc::EcVersion, const uc::Font& font) const
 {
     if (!font.flags.have(uc::Ffg::FALL_TO_NEXT))
         return true;
@@ -2196,9 +2198,33 @@ bool match::Normal::check(char32_t cp, const uc::Font& font) const
 }
 
 
-bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
+namespace {
+
+    bool nullForTofuCheck(char32_t cp, const uc::Font& font)
+    {
+        return !font.flags.have(uc::Ffg::COUNT_TOFU) && font.doesSupportChar(cp);
+    }
+
+}   // anon namespace
+
+
+bool match::NullForTofu::check(char32_t cp, uc::EcVersion, const uc::Font& font) const
 {
-    return !font.flags.have(uc::Ffg::COUNT_TOFU) && font.doesSupportChar(cp);
+    return nullForTofuCheck(cp, font);
+}
+
+
+bool match::Qa::check(char32_t cp, uc::EcVersion itsVersion, const uc::Font& font) const
+{
+    if (font.qaVersion == uc::EcVersion::NO_VALUE) {
+        return nullForTofuCheck(cp, font);
+    } else {
+        if (itsVersion > font.qaVersion)
+            return false;
+        if (font.flags.have(uc::Ffg::QA_FALSE_SUPPORT))
+            return true;  // falsely support
+            else return nullForTofuCheck(cp, font); // check
+    }
 }
 
 

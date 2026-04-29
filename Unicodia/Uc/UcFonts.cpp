@@ -147,7 +147,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { { "NotoSerifBengali-Regular.ttf", Fafg::DEHINT_DOTC, recodeBengali }, 120_pc }, // Bengali
     { "Kedebideri-Regular.ttf" },                                               // Beria
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
-    { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
+    { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER, EcVersion::V_13_0 },  // Brahmi
       { "NotoSansBrahmi-Regular.ttf", Ffg::DESC_BIGGER },                       // …1
     { "Leelawadee UI", Ffg::FALL_TO_NEXT, 110_pc },                             // Buginese
       { "NotoSansBuginese-Regular.ttf" },                                       // …1

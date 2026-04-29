@@ -121,7 +121,7 @@ namespace uc {
         E14_0 = V_14_0,
         E15_0 = V_15_0,
         E15_1 = V_15_1,
-        E16_0 = V_16_0,        
+        E16_0 = V_16_0,
         E17_0 = V_17_0,
         E18_0 = V_18_0,
     };
@@ -332,9 +332,11 @@ namespace uc {
     class FontMatcher { // interface
     public:
         virtual ~FontMatcher() = default;
-        virtual bool check(char32_t cp, const uc::Font& font) const = 0;
+        virtual bool check(char32_t cp, EcVersion itsVersion,
+                const uc::Font& font) const = 0;
 
-        const uc::Font* lastHopeMatch(char32_t cp, const uc::Font& font) const;
+        const uc::Font* lastHopeMatch(char32_t cp, EcVersion itsVersion,
+                const uc::Font& font) const;
     };
 
     enum class EcGlyphStyleChannel : unsigned char {

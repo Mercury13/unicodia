@@ -460,6 +460,7 @@ namespace uc {
         PLANE_2           = 1<<21,  ///< Same, plane 2
         PLANE_3           = 1<<22,  ///< Same, plane 3
         DESC_EXTENDED     = 1<<23,  ///< Build description’s samples from several fonts
+        QA_FALSE_SUPPORT  = 1<<24,  ///< In QA we falsely “support” w/o checking actual support
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
         PLANE_ANY = PLANE_0 | PLANE_1 | PLANE_2 | PLANE_3,  /// Mask of all planes
     };
@@ -564,6 +565,7 @@ namespace uc {
         StyleChange styleChange {};
         /// Special bhv in QA:
         /// [NO_VALUE] normal  [+] supports up to version X
+        /// Restricts by default, use a special flag for false support
         EcVersion qaVersion = EcVersion::NO_VALUE;
 
         struct Q {
@@ -640,6 +642,11 @@ namespace uc {
                 StyleChange aVariation)
             : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust),
               styleChange(aVariation) {}
+        consteval Font(
+                const Family& aFamily,
+                Flags<Ffg> aFlags,
+                EcVersion aQaVersion)
+            : family(aFamily), flags(aFlags), qaVersion(aQaVersion) {}
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;
@@ -1441,25 +1448,32 @@ namespace cou {
 namespace match {
 
     ///  Matcher that extracts “main” font
-    class MainFont : public uc::FontMatcher {
+    class MainFont final : public uc::FontMatcher {
     public:
-        bool check(char32_t, const uc::Font& font) const override;
+        bool check(char32_t, uc::EcVersion, const uc::Font& font) const override;
         static const MainFont INST;
     };
 
     ///  Normal matcher that extracts the 1st font that supports cp,
     ///  or last if no one supports
-    class Normal : public uc::FontMatcher {
+    class Normal final : public uc::FontMatcher {
     public:
-        bool check(char32_t cp, const uc::Font& font) const override;
+        bool check(char32_t cp, uc::EcVersion, const uc::Font& font) const override;
         static const Normal INST;
     };
 
     ///  Normal matcher that extracts font that ACTUALLY supports cp
-    class NullForTofu : public uc::FontMatcher {
+    class NullForTofu final : public uc::FontMatcher {
     public:
-        bool check(char32_t cp, const uc::Font& font) const override;
+        bool check(char32_t cp, uc::EcVersion, const uc::Font& font) const override;
         static const NullForTofu INST;
+    };
+
+    ///  Same + some QA workarounds
+    class Qa final : public uc::FontMatcher{
+    public:
+        bool check(char32_t cp, uc::EcVersion, const uc::Font& font) const override;
+        static const Qa INST;
     };
 
 }

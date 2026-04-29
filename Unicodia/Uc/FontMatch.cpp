@@ -123,7 +123,7 @@ FontMatch::Fn::Fn(QString aFamily, int aPriority)
 
     // Set supported writing systems
     auto wsList = QFontDatabase::writingSystems(family);
-    for (auto v : wsList) {
+    for (auto& v : wsList) {
         wsMask |= mask::of(v);
     }
     priority += PRIO_WS * wsList.size();   // Universal fonts will be rated lower
@@ -180,7 +180,7 @@ void FontMatch::retrieveFonts(const QString& myName)
 
     // Check for supported writing systems
     auto wsList = QFontDatabase::writingSystems();
-    for (auto v : wsList) {
+    for (auto& v : wsList) {
         allWss[v].isSupported = true;
     }
 
