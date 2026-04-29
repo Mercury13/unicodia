@@ -1,11 +1,5 @@
 @rem Settings
-@set QTDIR=c:\Qt\6.2.4\mingw_64
-@rem Workaround for that Qt, maybe QtcW7Compat.7z
-@set WORKAROUND=
-@set MINGW=c:\msys64\mingw64\bin
-@set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@set UTRANSL=UTransCon.exe
-@set INNO="c:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+@call xsetup.bat
 
 @rem Rest things
 @set /p VERSION=<VERSION.
