@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <locale native="汉语" international="Chinese" eng-terms="1">
 	<trigger-langs stamp="2026040">
-		<lang iso="cn" />
+		<lang iso="zh" />
 	</trigger-langs>
 	<!-- Sorting Rules:
 		1. Digits < Latin letters < Japanese / Cyrillic < Symbols < Chinese characters
