@@ -191,6 +191,13 @@
 @%UTRANSL% lang-src\en.uorig -build:%DIR_EN%
 @rem no QM for English
 @rem ...
+@rem Chinese
+@set DIR_ZH=%DEPLOY%\Languages\Chinese
+@md %DIR_ZH%
+@copy lang-src\zh\locale.xml %DIR_ZH%
+@%UTRANSL% lang-src\zh.utran -update -build:%DIR_ZH%
+@copy %QTDIR%\translations\qtbase_zh_CN.qm %DIR_ZH%
+@rem ...
 @rem Japanese
 @set DIR_JA=%DEPLOY%\Languages\Japanese
 @md %DIR_JA%
