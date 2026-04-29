@@ -12570,7 +12570,7 @@
     <orig>This program is not related to Unicode Consortium</orig>
     <transl>此程序与 Unicode 联盟无关</transl>
    </text>
-   <text id="Transl">
+   <text id="Transl" force-attention="true">
     <orig>Translators</orig>
     <transl>译者</transl>
    </text>
