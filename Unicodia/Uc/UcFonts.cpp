@@ -2,10 +2,10 @@
 
 #include "Skin.h"
 
-consteval uc::StyleSheet operator "" _top (unsigned long long x)
+consteval uc::StyleSheet operator ""_top (unsigned long long x)
     { return uc::StyleSheet{ .topPc = static_cast<short>(x), .botPc = 0 } ; }
 
-consteval uc::StyleSheet operator "" _bot (unsigned long long x)
+consteval uc::StyleSheet operator ""_bot (unsigned long long x)
     { return uc::StyleSheet{ .topPc = 0, .botPc = static_cast<short>(x) } ; }
 
 consteval uc::StyleSheet operator + (
