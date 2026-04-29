@@ -12566,6 +12566,10 @@
     <orig>This program is not related to Unicode Consortium</orig>
     <transl>Програма не має відношення до Консорціуму Юнікоду</transl>
    </text>
+   <text id="Transl">
+    <orig>Translators</orig>
+    <transl>Перекладачі</transl>
+   </text>
    <text id="FontDevs">
     <orig>Font designers, alphabetically</orig>
     <transl>Розробники шрифтів, за алфавітом</transl>
@@ -12605,15 +12609,6 @@
    <text id="OldMaka">
     <orig>for old Makasar font</orig>
     <transl>за старий макасарський шрифт</transl>
-   </text>
-   <text id="ToJa">
-    <orig>for translation to Japanese</orig>
-    <transl>за переклад на японську</transl>
-   </text>
-   <text id="ToTr">
-    <orig>for translation to Turkish</orig>
-    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
-    <transl>за переклад на турецьку</transl>
    </text>
   </group>
   <group id="Main">
@@ -14552,15 +14547,6 @@
       <p />
       <p>Version 1.1 added {{n|4306}} more Hangul characters, and deleted Tibetan.</p>
      </orig>
-     <known-orig>
-      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
-      <p />
-      <p>Version 1.0 (October 1991, ≈{{n|7200}} characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and {{n|2350}} [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
-      <p />
-      <p>Version 1.0.1 (June 1992, ≈{{n|28300}} characters) added {{n|20902}} [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
-      <p />
-      <p>Version 1.1 added {{n|4306}} more Hangul characters, and deleted Tibetan.</p>
-     </known-orig>
      <transl>
       <p>Перша версія, що стала стандартом ISO, та перша, що існує у базах Юнікоду. Бази 1.0 та 1.0.1 реконструйовані.</p>
       <p />
@@ -14575,7 +14561,6 @@
    <group id="2.0">
     <text id="Text">
      <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry, Unicode adopted the main [[pt:stability|stability]] guarantee: the character will not move or disappear.</orig>
-     <known-orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted main [[pt:stability|stability]] guarantee: the character will not move or disappear.</known-orig>
      <transl>Версія 2.0 перенесла [[pt:precomposed|монолітні]] склади [[ps:Hang|хангилю]] на їх поточне місце. Галас здійнявся такий, що Юнікод прийняв головну гарантію [[pt:stability|стабільності]]: символ не{{_}}зсунеться та не{{_}}зникне.</transl>
     </text>
    </group>
@@ -14625,13 +14610,6 @@
       <p />
       <p>A very big release 16.0 is expected in 2024.</p>
      </orig>
-     <known-orig>
-      <p>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
-      <p />
-      <p>Chinese government also forced to do an urgent job, see [[pk:2EBF0|CJK ideographs extension I]].</p>
-      <p />
-      <p>A very big release 16.0 is expected in 2024.</p>
-     </known-orig>
      <transl>
       <p>Консорціум Юнікоду мав проблеми з персоналом: менеджер з випуску пішов, а китаєзнавець вмер. Так що вони вирішили зробити невеликий випуск: п’ять символів опису ієрогліфів, 18 правосторонніх емодзі та 10 емодзі-послідовностей, у тому числі лайм, фенікса та силуети сімей.</p>
       <p />
@@ -14652,15 +14630,6 @@
       <p />
       <p>Unicode{{_}}16 might have exactly {{n|155000}} characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
-     <known-orig>
-      <p>Besides character additions, there were many internal changes in Unicode.</p>
-      <p>* Rewrote algorithms of rendering Arabic text.</p>
-      <p>* Wrote character sequences that should not exist in Unicode text.</p>
-      <p>* Added base of Egyptian hieroglyphs.</p>
-      <p>* Turned PDF specification to HTML site.</p>
-      <p />
-      <p>Unicode{{_}}16 might have exactly {{n|155000}} characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
-     </known-orig>
      <transl>
       <p>Окрім додавань символів, було багато внутрішніх змін у Юнікоді.</p>
       <p>* Переписано алгоритм відображення арабського тексту.</p>

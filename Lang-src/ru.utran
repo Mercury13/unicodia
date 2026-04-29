@@ -12566,6 +12566,10 @@
     <orig>This program is not related to Unicode Consortium</orig>
     <transl>Программа не имеет отношения к Консорциуму Юникода</transl>
    </text>
+   <text id="Transl">
+    <orig>Translators</orig>
+    <transl>Переводчики</transl>
+   </text>
    <text id="FontDevs">
     <orig>Font designers, alphabetically</orig>
     <transl>Разработчики шрифтов, по алфавиту</transl>
@@ -12605,15 +12609,6 @@
    <text id="OldMaka">
     <orig>for old Makasar font</orig>
     <transl>за старый макасарский шрифт</transl>
-   </text>
-   <text id="ToJa">
-    <orig>for translation to Japanese</orig>
-    <transl>за перевод на японский</transl>
-   </text>
-   <text id="ToTr">
-    <orig>for translation to Turkish</orig>
-    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
-    <transl>за перевод на турецкий</transl>
    </text>
   </group>
   <group id="Main">

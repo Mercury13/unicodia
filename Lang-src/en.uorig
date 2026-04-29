@@ -8692,6 +8692,9 @@
    <text id="NoUnicode">
     <orig>This program is not related to Unicode Consortium</orig>
    </text>
+   <text id="Transl">
+    <orig>Translators</orig>
+   </text>
    <text id="FontDevs">
     <orig>Font designers, alphabetically</orig>
    </text>
@@ -8721,13 +8724,6 @@
    </text>
    <text id="OldMaka">
     <orig>for old Makasar font</orig>
-   </text>
-   <text id="ToJa">
-    <orig>for translation to Japanese</orig>
-   </text>
-   <text id="ToTr">
-    <orig>for translation to Turkish</orig>
-    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
    </text>
   </group>
   <group id="Main">
