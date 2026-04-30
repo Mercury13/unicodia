@@ -45,6 +45,7 @@ SOURCES += \
     FmDebugPlural.cpp \
     FmFontSupport.cpp \
     FmPopupChar.cpp \
+    FontBase.cpp \
     Main/FmMain.cpp \
     Main/MainGui.cpp \
     Main/WiLibCp.cpp \
@@ -131,6 +132,7 @@ HEADERS += \
     FmDebugPlural.h \
     FmFontSupport.h \
     FmPopupChar.h \
+    FontBase.h \
     LocDefs.h \
     Main/FmMain.h \
     Main/MainGui.h \
