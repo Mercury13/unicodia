@@ -47,6 +47,7 @@ SOURCES += \
     FmPopupChar.cpp \
     FontBase.cpp \
     Main/FmMain.cpp \
+    Main/HintableLabel.cpp \
     Main/MainGui.cpp \
     Main/WiLibCp.cpp \
     Main/WiOsStyle.cpp \
@@ -135,6 +136,7 @@ HEADERS += \
     FontBase.h \
     LocDefs.h \
     Main/FmMain.h \
+    Main/HintableLabel.h \
     Main/MainGui.h \
     Main/tables.h \
     Main/WiLibCp.h \
