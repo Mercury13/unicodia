@@ -3,9 +3,6 @@
 @rem Qt we compile against
 @set QTDIR=c:\Qt\6.2.4\mingw_64
 
-@rem Workaround for Qt 4.2, maybe QtcW7Compat.7z
-@set WORKAROUND=
-
 @rem MinGW we compile with; also needed for tape
 @set MINGW=c:\msys64\mingw64\bin
 

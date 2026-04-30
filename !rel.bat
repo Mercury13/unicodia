@@ -174,9 +174,6 @@
 @md %DEPLOY%\Start
 @md %DEPLOY%\Start\en-US
 @copy MiscFiles\WinManifest\Root\Start\en-US\*.png %DEPLOY%\Start\en-US
-@if [%WORKAROUND%] == [] goto no_workaround
-@%SEVENZIP% x MiscFiles\%WORKAROUND% -o%DEPLOY%
-:no_workaround
 
 @echo.
 @echo ===== Building L10n =====
@@ -243,6 +240,10 @@
 @echo.
 @echo ===== Copying USesh font =====
 @copy Fonts\UnicodiaSesh.ttf %DEPLOY2%
+
+@echo.
+@echo ===== Copying W7/8 compat layer =====
+@copy MiscFiles\Win7.8_Compatibility.7z %DEPLOY2%
 
 @echo.
 @echo ===== Running auto-tests =====
