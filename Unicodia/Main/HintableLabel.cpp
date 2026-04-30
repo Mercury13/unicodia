@@ -3,12 +3,10 @@
 bool HintableLabel::setSmall(bool x)
 {
     bool r = (fIsSmall != x);
-    if (r) {
-        fIsSmall = x;
-        auto pol = sizePolicy();
-        pol.setVerticalPolicy(
-            x ? QSizePolicy::MinimumExpanding : QSizePolicy::Expanding);
-    }
+    fIsSmall = x;
+    auto pol = sizePolicy();
+    pol.setVerticalPolicy(
+        x ? QSizePolicy::MinimumExpanding : QSizePolicy::Expanding);
     return r;
 }
 
