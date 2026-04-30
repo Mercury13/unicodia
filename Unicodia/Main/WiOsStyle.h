@@ -26,12 +26,15 @@ public:
     void setCp(const uc::Cp& ch, FontMatch& fontMatch);
     void setNothing();
     void setEmojiText(std::u32string_view text, FontMatch& fontMatch);
-    void setTofu();
     void setCustomText(std::u32string_view text, FontMatch& fontMatch);
 
 private:
     Ui::WiOsStyle *ui;
     QFont fontBig, fontTofu;
+
+    void setTofu();
+    void setInvisible();
+    void setSmall(bool isSmall);
 
 signals:
     void linkActivated(QWidget* widget, const QString& url);

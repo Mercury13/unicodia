@@ -17,7 +17,10 @@
 
 // Project-local
 #include "Skin.h"
+#include "FontBase.h"
 
+constexpr int SMALL_SIZE = 108;
+constexpr int BIG_SIZE = 300;
 
 namespace {
     constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
@@ -38,6 +41,7 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, static_cast<int>(Fsz::BIG), NO_FLAGS, nullptr));
 
     connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::slotLinkActivated);
+    setSmall(false);
 }
 
 WiOsStyle::~WiOsStyle()
@@ -74,6 +78,16 @@ void WiOsStyle::setTofu()
     ui->lbOs->setFont(fontTofu);
     ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
     ui->lbOsTitle->setText(qPopupLink("Prop.Os.Tofu", "pt:tofu"));
+    setSmall(true);
+}
+
+
+void WiOsStyle::setInvisible()
+{
+    ui->lbOs->setFont(fontBig);
+    ui->lbOs->setText({});
+    ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
+    setSmall(true);
 }
 
 
@@ -82,9 +96,7 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
     const bool wantSysFont = ch.hasGlyph();
     if (wantSysFont) {
         if (display.isEmpty()) {
-            ui->lbOs->setFont(fontBig);
-            ui->lbOs->setText({});
-            ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
+            setInvisible();
         } else {
             QFontDatabase::WritingSystem ws = ch.scriptSubstituted().qtCounterpart;
             auto font = fontMatch.sysFontFor(ch, ws, static_cast<int>(Fsz::BIG));
@@ -92,6 +104,9 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
                 char buf[300];
                 ui->lbOs->setFont(*font);
                 ui->lbOs->setText(display);
+                std::string key = font->family().toStdString();
+                auto info = fb::getOrEmpty(key);
+                setSmall(info->flags.have(fb::Fg::SMALL_CELL));
                 snprintf(buf, std::size(buf),
                         "<a href='pf:%d/%d' style='" STYLE_POPUP "'>",
                         ch.subj.val(), static_cast<int>(ws));
@@ -105,6 +120,7 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
         ui->lbOs->setFont(fontBig);
         ui->lbOs->setText({});
         ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
+        setSmall(true);
     }
 }
 
@@ -128,6 +144,7 @@ void WiOsStyle::setNothing()
 {
     ui->lbOs->clear();
     ui->lbOsTitle->setText(loc::get("Prop.Os.Style"));
+    setSmall(true);
 }
 
 
@@ -177,4 +194,11 @@ void WiOsStyle::setCustomText(
             setEmptyCode(c0);
         }
     }
+}
+
+
+void WiOsStyle::setSmall(bool isSmall)
+{
+    ui->lbOs->setMaximumHeight(
+        isSmall ? SMALL_SIZE : BIG_SIZE);
 }
