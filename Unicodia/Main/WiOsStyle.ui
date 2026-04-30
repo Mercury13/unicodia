@@ -55,7 +55,7 @@
        <number>2</number>
       </property>
       <item>
-       <widget class="QLabel" name="lbOs">
+       <widget class="HintableLabel" name="lbOs">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>1</horstretch>
@@ -90,6 +90,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HintableLabel</class>
+   <extends>QLabel</extends>
+   <header>HintableLabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

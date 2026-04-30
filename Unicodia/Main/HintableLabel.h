@@ -12,6 +12,7 @@ public:
     /// @return [+] was changed
     bool setSmall(bool x);
     QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 private:
     bool fIsSmall = false;
 };

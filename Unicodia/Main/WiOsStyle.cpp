@@ -19,9 +19,6 @@
 #include "Skin.h"
 #include "FontBase.h"
 
-constexpr int SMALL_SIZE = 108;
-constexpr int BIG_SIZE = 300;
-
 namespace {
     constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
@@ -199,6 +196,6 @@ void WiOsStyle::setCustomText(
 
 void WiOsStyle::setSmall(bool isSmall)
 {
-    ui->lbOs->setMaximumHeight(
-        isSmall ? SMALL_SIZE : BIG_SIZE);
+    if (ui->lbOs->setSmall(isSmall))
+        ui->grpOs->adjustSize();
 }
