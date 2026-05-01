@@ -7828,7 +7828,7 @@
       <p />
       <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
+      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
@@ -7854,11 +7854,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put characters in visual order.</p>
+      <p>Unicode stores characters in logical order that roughly corresponds to the order of pronunciation or typing on a keyboard. This order does not{{_}}correspond to the on-screen progression order, and algorithms of [[pt:bidi|bidirecitional text]] are designed to place characters in visual order.</p>
       <p />
       <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
       <p />
-      <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before consonant, even if read after.</p>
+      <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before a consonant, even if pronounced after.</p>
      </orig>
     </text>
    </group>
