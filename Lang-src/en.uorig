@@ -7612,14 +7612,14 @@
       <p />
       <p>One of Unicode’s [[pt:stability|stability]] guarantees: once a character is assigned, it won’t move or disappear. If the character is bad, it becomes deprecated. The reasons for deprecation are different.</p>
       <p />
-      <p>The Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
+      <p>The Unicode Consortium consists of people from Western culture, and they can only refer to studies of rare-language specialists{{-}}this happened for five characters in [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
       <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (another algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
       <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 they are just not{{_}}recommended.</p>
-      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2, it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding a font where ligatures fit into the cell.</p>
+      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2, it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding a font in which ligatures fit within the cell.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
@@ -7632,7 +7632,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] by using dynamic composition{{-}}a character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
+      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] through dynamic composition{{-}}a character’s image is constructed on the fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
       <p />
       <p>To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</p>
      </orig>
@@ -7677,11 +7677,11 @@
      <orig>
       <p>From Japanese {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol''.</p>
       <p />
-      <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: the highest school grade {{em|💯}} turned to “fully agree”.</p>
+      <p>Invented by cellphone operator NTT DoCoMo around 1999 to save characters in SMS. Western operators began developing their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emojis are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: the highest school grade {{em|💯}} became “fully agree”.</p>
       <p />
       <p>Several old pre-2010 pictograms are guaranteed to display as emoji only with the [[pu:FE0F]] character (''aka'' variation selector 16).</p>
       <p />
-      <p>All emoji are [[pt:spacing|spacing]] characters.</p>
+      <p>All emojis are [[pt:spacing|spacing]] characters.</p>
      </orig>
     </text>
    </group>
@@ -7693,7 +7693,7 @@
      <orig>
       <p>Unicode strives to make efficient implementations possible. Particularly:</p>
       <p />
-      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Conversely, telegraph code 1 means E on the letter page and 3 on the figure page.</p>
+      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Conversely, telegraph code 1 corresponds to E on the letter page and to 3 on the figure page.</p>
       <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
       <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if working right in UTF-8/16 is impossible, lookup tables still work.</p>
       <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
@@ -7717,7 +7717,7 @@
      <orig>
       <p>A character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
       <p />
-      <p>A [[pc:200B|zero-width space]] is considered format rather than space{{-}}so it is '''not'''{{_}}graphic.</p>
+      <p>A [[pc:200B|zero-width space]] is a format character rather than a space, so it is '''not'''{{_}}graphic.</p>
       <p />
       <p>Paradox: invisible marks are simultaneously graphic and [[pt:ignorable|default-ignorable]].</p>
       <p />
