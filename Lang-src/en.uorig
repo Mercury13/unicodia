@@ -6905,7 +6905,7 @@
       <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to a preprogrammed position. Makes printing on existing forms faster and quieter;</p>
       <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
       <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
-      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital in file servers and MUD games.</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital on file servers and in MUD games.</p>
       <p />
       <p>All 65 characters from the Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>
@@ -7465,7 +7465,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character is a unit of meaning. Glyph is a specific image contained in a font and drawn on screen/paper.</p>
+      <p>A character is a unit of meaning. A glyph is a specific image in a font, drawn on screen/paper.</p>
       <p />
       <p>Characters and glyphs do{{_}}not{{_}}relate one-to-one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
      </orig>
