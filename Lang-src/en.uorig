@@ -6888,7 +6888,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In the first years, when it was often needed to repeat exchange sessions by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
+      <p>In the early years, when it was often necessary to repeat exchange sessions by hand (using punched tape or console), control characters were used instead of data formats and network protocols. The {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
       <p />
       <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
       <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
