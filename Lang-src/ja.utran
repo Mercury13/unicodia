@@ -993,7 +993,8 @@
      <transl>解読 ''(楔形文字など)''</transl>
     </text>
     <text id="ForRev">
-     <orig>made for revival of dead language ''(like Osage)''</orig>
+     <orig>made to revive a dead language ''(like Osage)''</orig>
+     <known-orig>made for revival of dead language ''(like Osage)''</known-orig>
      <transl>死語 ''(オセージ語など)' 'の復活のために作られた</transl>
     </text>
    </group>
@@ -1384,6 +1385,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''American Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in a wrong encoding.</p>
+      <p />
+      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character was punched by mistake and should{{_}}not be read.</p>
+      <p />
+      <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
+      <p />
+      <p>The remaining 128 characters could be filled with anything. One such 8-bit encoding, [[pt:latin1|Latin-1]], was also adopted by Unicode.</p>
+     </orig>
+     <known-orig>
       <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
       <p />
       <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character is punched by mistake and should{{_}}not be read.</p>
@@ -1391,7 +1401,7 @@
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
       <p>The rest 128 characters could be filled with everything. One such 8-bit encoding, [[pt:latin1|Latin-1]], also came to Unicode.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''アメリカ標準情報交換コード (ASCII)''' は、1963 年に米国で開発された 7 ビットの文字エンコーディングです。7 ビットの幅は、電信によるデータ転送の妥協策として選択されました。幅が広すぎる場合は、ASCII を 6 ビットに簡単に削減して、40…5F と 20…3F の文字を残すことができます。Unicode の '''基本ラテン文字''' は ASCII と同じなので、英語の Unicode テキストは間違ったエンコーディングでも読み取ることができます。</p>
       <p />
@@ -3961,10 +3971,19 @@
       <p />
       <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
       <p />
-      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
       <p />
       <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
      </orig>
+     <known-orig>
+      <p>Sixteen characters provide complete formatting of Egyptian hieroglyphs. They need a special layout engine.</p>
+      <p />
+      <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
+      <p />
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p />
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
+     </known-orig>
      <transl>
       <p>16 文字でエジプトの象形文字の完全な書式設定ができます。特別なレイアウト エンジンが必要です。</p>
       <p />
@@ -4530,7 +4549,7 @@
    </group>
    <group id="1DF00">
     <text id="Text">
-     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others. Archaic mathematical symbols. Typewriter-friendly symbols from various linguists’ field notes. Letters from various alphabets for initial teaching of English: unlike [[ps:Dsrt|Deseret]] or [[ps:Shaw|Shavian]], they eventually lead the child to ordinary English spelling.</orig>
+     <orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others. Archaic mathematical symbols. Letters from local phonetic systems. Typewriter-friendly symbols from various linguists’ field notes. Letters from various alphabets for initial teaching of English: unlike [[ps:Dsrt|Deseret]] or [[ps:Shaw|Shavian]], they eventually lead the child to ordinary English spelling.</orig>
      <known-orig>Various characters for speech disorders and phonetics: palatal and retroflex phonemes, clicks and others.</known-orig>
      <transl>発話障害や音声学のためのさまざまな文字: 口蓋音や後屈音、クリック音など。</transl>
     </text>
@@ -7744,7 +7763,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. The revival of Modi started in 21st century.</p>
       <p />
       <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
@@ -7754,6 +7773,17 @@
       <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
      </orig>
+     <known-orig>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. Revival of Modi started in 21st century.</p>
+      <p />
+      <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
+      <p>But methods of affixing vowel marks are rather bizarre and form ligatures for themselves: </p>
+      <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
+      <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
+      <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
+     </known-orig>
      <transl>
       <p>この文字は [[ps:Deva|デーヴァナーガリー]] と関連があるが、はるかに [[pt:cursive|筆記体]] に近い。起源については 2 つの標準的な説がある。外交官兼大臣のヘマードリ・パンディット (約 1260 年) と外交官のカンデラオ・バラル (約 1700 年) である。1950 年代までデーヴァナーガリーと共に使用され、その後、少なくとも 1800 年以降存在していたデーヴァナーガリーの筆記体である「バルボド」(文字通り「子供にもわかる」) がマラーティー語の標準文字と宣言された。モディの復活は 21 世紀に始まった。</p>
       <p />
@@ -10258,7 +10288,8 @@
      <transl>記号/数学</transl>
     </text>
     <text id="Text">
-     <orig>Initially several systems were used for computer mathematics, the most well-known of them are TᴇX (pronounced “tech”) and MathType (aka ''Microsoft Equation''). Unicode gives hope that computer mathematics will receive some standard{{-}}and limited ability to write equations in general-purpose systems like Internet forums.</orig>
+     <orig>Initially, several systems were used for computer mathematics; the most well-known of them are TᴇX (pronounced “tech”) and MathType (aka ''Microsoft Equation''). Unicode offers a hope that computer mathematics will receive some standard{{-}}and a limited ability to write equations in general-purpose systems such as Internet forums.</orig>
+     <known-orig>Initially several systems were used for computer mathematics, the most well-known of them are TᴇX (pronounced “tech”) and MathType (aka ''Microsoft Equation''). Unicode gives hope that computer mathematics will receive some standard{{-}}and limited ability to write equations in general-purpose systems like Internet forums.</known-orig>
      <transl>当初、コンピュータ数学にはいくつかのシステムが使用されていましたが、その中で最もよく知られているのは TᴇX (「テック」と発音) と MathType (別名「Microsoft Equation」) です。Unicode により、コンピュータ数学がインターネット フォーラムなどの汎用システムで方程式を記述するための標準的かつ限定的な機能を獲得することを期待できます。</transl>
     </text>
    </group>
@@ -10335,13 +10366,24 @@
       <p>Standard order for ordering text strings. The oldest known is [[ps:Ugar|Ugaritic]].</p>
       <p />
       <p>Origin of order:</p>
+      <p>* [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]], [[ps:Arab|Arabic]], [[ps:Geor|Georgian]], [[ps:Armn|Armenian]], [[ps:Hebr|Hebrew]], [[ps:Ethi|Ethiopic]]{{-}}from [[ps:Phnx|Phoenician]]. The Phoenician order probably comes from earlier Semitic languages.</p>
+      <p>* [[ps:Runr|Runes]] (''Futhark''){{-}}unknown;</p>
+      <p>* All [[pt:brahmic|Brahmic abugidas]], [[pt:cjk|CJK]] by pronunciation{{-}}phonological order, from throat {{t|k}} to teeth {{t|s}};</p>
+      <p>* CJK by [[ps:Hani|writing]]{{-}}using so-called radicals.</p>
+      <p />
+      <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If the alphabetical order changes, the country itself changes it without consulting the Unicode Consortium.</p>
+     </orig>
+     <known-orig>
+      <p>Standard order for ordering text strings. The oldest known is [[ps:Ugar|Ugaritic]].</p>
+      <p />
+      <p>Origin of order:</p>
       <p>* [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]], [[ps:Arab|Arabic]], [[ps:Geor|Georgian]], [[ps:Armn|Armenian]], [[ps:Hebr|Hebrew]], [[ps:Ethi|Ethiopic]]{{-}}from [[ps:Phnx|Phoenician]]. Phoenician order probably comes from earlier Semitic languages.</p>
       <p>* [[ps:Runr|Runes]] (''Futhark''){{-}}unknown;</p>
       <p>* All [[pt:brahmic|Brahmic abugidas]], [[pt:cjk|CJK]] by pronunciation{{-}}phonological order, from throat {{t|k}} to teeth {{t|s}};</p>
       <p>* CJK by [[ps:Hani|writing]]{{-}}using so-called radicals.</p>
       <p />
       <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If an alphabetical order changes, the country itself changes it without consulting Unicode Consortium.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>テキスト文字列を並べる標準的な順序。最も古いものは [[ps:Ugar|ウガリット文字]] です。</p>
       <p />
@@ -10502,6 +10544,29 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Method of character entry by its code introduced in the BIOS (firmware) of the [[po:Ibm|IBM PC]]. The NT family of Windows has three types of codes.</p>
+      <p />
+      <p>'''DOS codes'''</p>
+      <p />
+      <p>Holding {{kb|Alt}} (left{{-}}everywhere, right{{-}}depends on keyboard layout), type on the '''numeric''' keypad '''decimal''' character code from 1 to 255. For example, {{k|Alt|51}} makes digit 3.</p>
+      <p />
+      <p>The encoding is common for all users, is one of DOS encodings (437, 866 etc), and depends on the chosen language for non-Unicode applications. Codes 1 to 31 and 127 make printable versions of those characters: 1={{em|☺}}.</p>
+      <p />
+      <p>'''Windows codes'''</p>
+      <p />
+      <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
+      <p />
+      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p />
+      <p>'''Unicode codes'''</p>
+      <p />
+      <p>Experimental, do{{_}}not{{_}}work in all applications. To make them work, into the registry key</p>
+      <p>: HKEY_CURRENT_USER\Control Panel\Input Method</p>
+      <p>add '''string''' parameter EnableHexNumpad=1 and reboot the computer.</p>
+      <p />
+      <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from the main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
+     </orig>
+     <known-orig>
       <p>Method of character entry by its code introduced in BIOS (firmware) of [[po:Ibm|IBM PC]]. NT family of Windows has three types of codes.</p>
       <p />
       <p>'''DOS codes'''</p>
@@ -10523,7 +10588,7 @@
       <p>add '''string''' parameter EnableHexNumpad=1 and reboot the computer.</p>
       <p />
       <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[po:Ibm|IBM PC]] の BIOS (ファームウェア) で導入されたコードによる文字入力方式。Windows の NT ファミリには 3 種類のコードがあります。</p>
       <p />
@@ -10558,6 +10623,17 @@
      <orig>
       <p>'''Libre and Microsoft Office'''</p>
       <p />
+      <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to a character{{-}}in this case, {{em|☯}} [[pu:262F]] Yin and yang.</p>
+      <p />
+      <p>'''UnicodeInput'''</p>
+      <p />
+      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
+      <p />
+      <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
+     </orig>
+     <known-orig>
+      <p>'''Libre and Microsoft Office'''</p>
+      <p />
       <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to character{{-}}in this case {{em|☯}} [[pu:262F]] Yin and yang.</p>
       <p />
       <p>'''UnicodeInput'''</p>
@@ -10565,7 +10641,7 @@
       <p>Resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Libre と Microsoft Office'''</p>
       <p />
@@ -12077,6 +12153,29 @@
      <orig>
       <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
       <p />
+      <p>'''Endangered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
+      <p />
+      <p>'''Endangered due to script competition'''{{-}}all languages have an alternate script, already stronger or gaining strength.</p>
+      <p />
+      <p>'''Dead'''{{-}}the script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
+      <p />
+      <p>'''Religious'''{{-}}the script is in use by an important religion.</p>
+      <p />
+      <p>'''Historical, no{{_}}decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
+      <p />
+      <p>'''(Un)deciphered'''{{-}}historical script is not{{_}}yet{{_}}deciphered (partly deciphered, deciphered).</p>
+      <p />
+      <p>'''New'''{{-}}invented too recently to tell exactly about its status.</p>
+      <p />
+      <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
+      <p />
+      <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
+      <p />
+      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa the in 20th century.</p>
+     </orig>
+     <known-orig>
+      <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
+      <p />
       <p>'''Endengered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
       <p />
       <p>'''Endangered due to script competition'''{{-}}all languages have alternate script, already stronger or gaining strength.</p>
@@ -12096,7 +12195,7 @@
       <p>'''Made for revival of dead language'''{{-}}[[ps:Osge|Osage]] only (writing in Latin proved bad).</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to liberation of Africa in 20th century.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''生存'''{{-}}少なくとも 1 つの言語が「安全」ステータスにあり、その文字は唯一のものであるか、重要性を失っていません。</p>
       <p />
@@ -12914,6 +13013,9 @@
     <orig>This program is not related to Unicode Consortium</orig>
     <transl>このプログラムはUnicodeコンソーシアムとは関係ありません</transl>
    </text>
+   <text id="Transl">
+    <orig>Translators</orig>
+   </text>
    <text id="FontDevs">
     <orig>Font designers, alphabetically</orig>
     <transl>フォントデザイナー (アルファベット順)</transl>
@@ -12953,14 +13055,6 @@
    <text id="OldMaka">
     <orig>for old Makasar font</orig>
     <transl>古いマカッサルフォント</transl>
-   </text>
-   <text id="ToJa">
-    <orig>for translation to Japanese</orig>
-    <transl>日本語への翻訳</transl>
-   </text>
-   <text id="ToTr">
-    <orig>for translation to Turkish</orig>
-    <au-cmt>UNUSED for now, but Turkish comes soon</au-cmt>
    </text>
   </group>
   <group id="Main">
@@ -14185,6 +14279,9 @@
     <text id="Greek">
      <orig>Greek</orig>
     </text>
+    <text id="OldMathLig">
+     <orig>Archaic mathematical ligatures</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
@@ -14821,7 +14918,7 @@
    <group id="1.1">
     <text id="Text">
      <orig>
-      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
+      <p>The first version that became an ISO standard, and the first existing in Unicode bases. The bases of 1.0 and 1.0.1 are reconstructed.</p>
       <p />
       <p>Version 1.0 (October 1991, ≈{{n|7200}} characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and {{n|2350}} [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
       <p />
@@ -14829,6 +14926,15 @@
       <p />
       <p>Version 1.1 added {{n|4306}} more Hangul characters, and deleted Tibetan.</p>
      </orig>
+     <known-orig>
+      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
+      <p />
+      <p>Version 1.0 (October 1991, ≈{{n|7200}} characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and {{n|2350}} [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Version 1.0.1 (June 1992, ≈{{n|28300}} characters) added {{n|20902}} [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
+      <p />
+      <p>Version 1.1 added {{n|4306}} more Hangul characters, and deleted Tibetan.</p>
+     </known-orig>
      <transl>
       <p>ISO 標準となった最初のバージョンであり、Unicode ベースに存在する最初のバージョンです。1.0 と 1.0.1 のベースが再構築されています。</p>
       <p />
@@ -14842,7 +14948,8 @@
    </group>
    <group id="2.0">
     <text id="Text">
-     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted main [[pt:stability|stability]] guarantee: the character will not move or disappear.</orig>
+     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry, Unicode adopted the main [[pt:stability|stability]] guarantee: the character will not move or disappear.</orig>
+     <known-orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted main [[pt:stability|stability]] guarantee: the character will not move or disappear.</known-orig>
      <transl>バージョン 2.0 では、[[pt:precomposed|合成]] [[ps:Hang|ハングル]] 音節が現在の位置に移動されました。大きな抗議を受けて、Unicode は主要な [[pt:stability|安定性]] 保証を採用しました。つまり、文字は移動したり消えたりしません。</transl>
     </text>
    </group>
@@ -14886,12 +14993,19 @@
    <group id="15.1">
     <text id="Text">
      <orig>
+      <p>Unicode Consortium experienced staff problems: the release manager had gone, and the Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
+      <p />
+      <p>The Chinese government also forced to do an urgent job, see [[pk:2EBF0|CJK ideographs extension I]].</p>
+      <p />
+      <p>A very big release 16.0 is expected in 2024.</p>
+     </orig>
+     <known-orig>
       <p>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
       <p />
       <p>Chinese government also forced to do an urgent job, see [[pk:2EBF0|CJK ideographs extension I]].</p>
       <p />
       <p>A very big release 16.0 is expected in 2024.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode コンソーシアムはスタッフの問題を抱え、リリース マネージャーは去り、Sinologist は亡くなりました。そこで、彼らはマイナー リリースを行うことを決定しました。5 つの表意文字説明文字、18 個の右向き絵文字、ライム、フェニックス、家族のシルエットを含む 10 個の絵文字シーケンスです。</p>
       <p />
@@ -14905,10 +15019,10 @@
     <text id="Text">
      <orig>
       <p>Besides character additions, there were many internal changes in Unicode.</p>
-      <p>* Rewrote algorithms of rendering Arabic text.</p>
+      <p>* Rewrote algorithms for rendering Arabic text.</p>
       <p>* Wrote character sequences that should not exist in Unicode text.</p>
       <p>* Added base of Egyptian hieroglyphs.</p>
-      <p>* Turned PDF specification to HTML site.</p>
+      <p>* Turned the PDF specification into an HTML site.</p>
       <p />
       <p>Unicode{{_}}16 might have exactly {{n|155000}} characters (excluding 65 [[pt:control|control]]){{-}}but two Indic [[pt:ligature|ligatures]] were removed.</p>
      </orig>
@@ -14946,7 +15060,7 @@
       <p>* Multiple musical symbols, including long-awaited [[pc:1D1EB|half-sharp]] and [[pc:1D1ED|half-flat]] from modern software.</p>
       <p>* Historical [[ps:Latn|Latin]]-based transcription.</p>
       <p>* Old mathematical notations.</p>
-      <p>* [[ps:Arab|Arabic]] “capital” letters (Egypt, 1932).</p>
+      <p>* [[pk:10EC0|Arabic]] “capital” letters (Egypt, 1932).</p>
      </orig>
     </text>
    </group>
