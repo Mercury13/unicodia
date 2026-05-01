@@ -10410,7 +10410,7 @@
      <orig>
       <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
-      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some way across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
+      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by a ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some form across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
       <p />
       <p>Features of Brahmic abugidas:</p>
       <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
@@ -10422,7 +10422,7 @@
       <p />
       <p>There are several methods to convey complex syllables:</p>
       <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
-      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present at the end of words only. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. Small initial R ({{sm|र्क}} rka) is called ''repha''; small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but a visible virama is only present at the end of words. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. The small initial R ({{sm|र्क}} rka) is called ''repha''; the small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
       <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
       <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
       <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
@@ -10443,7 +10443,7 @@
       <p />
       <p>Є різні методи передачі складних складів:</p>
       <p>* Через віраму (умовно ба-н_-ка){{-}}одинока приголосна є окремим складом ([[ps:Tglg|байбаїн]]).</p>
-      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але в явному вигляді вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє). Літера R часто зменшується у цих стиках. Мале початкове R ({{sm|र्क}} рка) зветься ''repha'', мале додаткове R ({{sm|क्र}} кра){{-}}''rakar''.</p>
+      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але видима вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє). Літера R часто зменшується у цих стиках. Мале початкове R ({{sm|र्क}} рка) зветься ''repha'', мале додаткове R ({{sm|क्र}} кра){{-}}''rakar''.</p>
       <p>* Через кінцеву приголосну (бан-ка){{-}}[[ps:Phag|монгольська Пагба-лами]]. Вірами нема. Може існувати віртуальна вірама або інші методи передати стик на початку слова.</p>
       <p>* Неповна, погано передає складні склади (ба-ка){{-}}[[ps:Bugi|лонтара]]. Окремі зразки виродились до консонантних.</p>
       <p>* Втратила голосну по замовчанню (ба-нᵊ-ка){{-}}реформою ([[ps:Laoo|лаоська]]) чи природним розвитком ([[ps:Guru|ґурмукхі]]). У другому випадку може не{{_}}завжди відрізняти «на» від «н» та користуватися вірамою у словниках.</p>
@@ -10457,25 +10457,25 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Text that contains at least one character written right-to-left. Algorithm of processing such a text is complex, let’s describe it in general.</p>
+      <p>Text that contains at least one character written right-to-left. The algorithm for processing such a text is complex, let’s describe it in general.</p>
       <p />
-      <p>1. Split text to independent lines.</p>
+      <p>1. Split the text into independent lines.</p>
       <p />
-      <p>2. Split every line into nested segments: the entire line is left-to-right, there are segments right-to-left inside it, they contain left-to-right segments, and so on. In iOS there was a bug: deep nesting of segments rebooted phone.</p>
+      <p>2. Split each line into nested segments: the entire line is left-to-right, there are segments right-to-left inside it, they contain left-to-right segments, and so on. There was a bug in iOS: deeply nested segments rebooted the phone.</p>
       <p />
       <p>3. Isolate European numbers, give them direction left-to-right.</p>
       <p />
-      <p>4. Give direction to the rest of characters. Reflect if they go right-to-left and are mirrored.</p>
+      <p>4. Give direction to the remaining neutral characters. Reflect if they go right-to-left and are mirrored.</p>
       <p />
-      <p>5. Execute higher-level protocols{{-}}for example, define direction of tables.</p>
+      <p>5. Execute higher-level protocols{{-}}for example, define the direction of tables.</p>
       <p />
       <p>For example: “XX,YY 1.00&amp;lt;2.00 XX” = “ثث,حح 1.00&amp;lt;2.00 ثث”</p>
       <p />
       <p>'''What to do for a simple user?'''</p>
       <p />
-      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]], and finish with [[pc:PDF]].</p>
-      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
-      <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
+      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]] and finish with [[pc:PDF]].</p>
+      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
+      <p>* If you want to write from right to left in a left-to-right language or vice versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
      </orig>
      <transl>
       <p>Текст, що містить хоча б один символ з написанням «справа наліво». Алгоритм обробки такого текста складний, і опишемо його узагальнено.</p>
@@ -10507,7 +10507,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes in two anguages, English (USA) and Russian, their special keys are identical. Types the following characters using {{k|AltGr}} in Windows, Alt in MacOS:</p>
+      <p>Comes in two languages, English (USA) and Russian, their special keys are identical. Types the following characters using {{k|AltGr}} in Windows, Alt in MacOS:</p>
       <p />
       <p>* European letters and punctuation ó ò ö ŏ ǒ ő õ ç ß ¡ ¿</p>
       <p>* pre-1918 Cyrillic ѣ і ѵ ѳ</p>
@@ -10521,7 +10521,7 @@
       <p>* measurement units ⌀ ° ‰</p>
       <p>* intellectual property signs ™ ©</p>
       <p />
-      <p>Version 3.7, last as of January 2022, has a [[pt:private|private-use]] character on {{k|AltGr|G}}, Apple logo.</p>
+      <p>Version 3.7, the last as of January 2022, has a [[pt:private|private-use]] character on {{k|AltGr|G}}, Apple logo.</p>
       <p />
       <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
      </orig>
@@ -10555,13 +10555,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of alive languages are encoded in Basic Plane, allowing processing of these languages right in [[pt:utf16|UTF-16]].</p>
+      <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of living languages are encoded in the Basic Plane, allowing these language to be processed directly in [[pt:utf16|UTF-16]].</p>
       <p />
-      <p>Unicode had beed two-byte encoding until 1996, that gave capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
+      <p>Unicode had been a two-byte encoding until 1996, which gave a capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to a compromise in the form of Basic Plane and UTF-16.</p>
       <p />
       <p>As of Unicode{{_}}{{vleft16}}, only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
-      <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
+      <p>The Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
      </orig>
      <au-cmt>{{vleft16}} = version that has those 16 chars left</au-cmt>
      <transl>
@@ -10582,16 +10582,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character [[pu:FEFF]]. It may (not must) be put in the beginning of Unicode text file to indicate [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
+      <p>Character [[pu:FEFF]]. It may (not must) be placed at the beginning of a Unicode text file to indicate the [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
       <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
       <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (most significant byte first);</p>
       <p>* FF{{_}}FE, then everything except 00{{_}}00{{-}}UTF-16LE (least significant byte first);</p>
       <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
       <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
       <p />
-      <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do{{_}}not{{_}}occur as a format of text files. UTF-32 is extremely rare.</p>
+      <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do{{_}}not{{_}}occur as text file formats. UTF-32 is extremely rare.</p>
       <p />
-      <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need byte order mark.</p>
+      <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need a byte order mark.</p>
      </orig>
      <transl>
       <p>Символ [[pu:FEFF]]. Його можна (не обов’язково) ставити на початку юнікодного текстового файлу, щоб вказати формат [[pt:serialization|серіалізації]]. Закодованою мітка порядку байтів буде виглядати так:</p>
@@ -10601,7 +10601,7 @@
       <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
       <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
       <p />
-      <p>[[pt:utf7|UTF-7]] та [[pt:punycode|Punycode]] не{{_}}зустрічаються як формат текстових файлів. UTF-32 зустрічається вкрай рідко.</p>
+      <p>[[pt:utf7|UTF-7]] та [[pt:punycode|Punycode]] не{{_}}зустрічаються як формати текстових файлів. UTF-32 зустрічається вкрай рідко.</p>
       <p />
       <p>У двійкових файлах формат серіалізації жорстко зафіксований, і мітка порядку байтів не{{_}}потрібна.</p>
      </transl>

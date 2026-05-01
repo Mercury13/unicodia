@@ -7366,7 +7366,7 @@
       <p />
       <p>3. Isolate European numbers, give them direction left-to-right.</p>
       <p />
-      <p>4. Give direction to the remaining characters. Reflect if they go right-to-left and are mirrored.</p>
+      <p>4. Give direction to the remaining neutral characters. Reflect if they go right-to-left and are mirrored.</p>
       <p />
       <p>5. Execute higher-level protocols{{-}}for example, define the direction of tables.</p>
       <p />
