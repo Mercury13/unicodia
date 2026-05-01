@@ -7741,7 +7741,7 @@
       <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
       <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
       <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
+      <p>The transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
      </orig>
      <au-cmt>
       <p>up/down → write “top/bottom” if better in your language</p>
@@ -7755,15 +7755,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p>One of the [[pt:emoji|emoji]] principles, which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
-      <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
+      <p>Initially, people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with a special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
       <p />
-      <p>Most emoji are genderless; if you want you may add gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emoji: {{em|🤱}}{{_}}breast feeding and {{em|🧕}}{{_}}woman in headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
+      <p>Most emojis are genderless. If you want, you may add a gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emojis: {{em|🤱}}{{_}}breastfeeding and {{em|🧕}}{{_}}woman in a headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in a tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
       <p />
-      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change glyph.</p>
+      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change the glyph.</p>
       <p />
-      <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
+      <p>If an emoji contains several people, gender and skin tone are handled case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
       <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
@@ -7777,16 +7777,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even a large font collection does{{_}}not{{_}}support the entire Unicode.</p>
+      <p>Unicode is large and is constantly expanding: version {{version}} has {{nchars}} characters. So even a large font collection does{{_}}not{{_}}support the entire Unicode.</p>
       <p />
-      <p>If no glyph found in fonts, the character is usually displayed as [[pt:tofu|tofu]]{{-}}white box. '''But some characters are just omitted.'''</p>
+      <p>If no glyph is found in fonts, the character is usually displayed as a [[pt:tofu|tofu]]{{-}}a white box. '''But some characters are just omitted.'''</p>
       <p />
       <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
       <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
-      <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
-      <p>* Zero width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner [[pt:zwnj|ZWNJ]].</p>
+      <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when the ligature is missing, regardless of whether ZWJ is present in the font.</p>
+      <p>* Zero-width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also a zero-width space; zero-width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
       <p>These characters '''are{{_}}not''' default-ignorable:</p>
