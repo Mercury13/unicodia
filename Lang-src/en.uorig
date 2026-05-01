@@ -6920,13 +6920,13 @@
      <orig>
       <p>Invisible character that controls various text-processing algorithms:</p>
       <p />
-      <p>* Wraps text into lines: 00AD{{-}}soft hyphen.</p>
+      <p>* Wraps text into lines: [[pc:00AD]]{{-}}soft hyphen.</p>
       <p />
-      <p>* Adds semantics to text: 2062{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application 2061.</p>
+      <p>* Adds semantics to text: [[pc:2062]]{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application [[pc:2061]].</p>
       <p />
-      <p>* Builds/breaks [[pt:ligature|ligatures]]: 200D{{-}}zero-width joiner.</p>
+      <p>* Builds/breaks [[pt:ligature|ligatures]]: [[pc:200D]]{{-}}zero-width joiner.</p>
       <p />
-      <p>* Specifies writing direction: 2066{{-}}isolate a span of text that goes left-to-right.</p>
+      <p>* Specifies writing direction: [[pc:2066]]{{-}}isolate a span of text that goes left-to-right.</p>
       <p />
       <p>* Does script-specific tasks that are impossible to implement using font: [[pc:1D173]]{{-}}start a group of musical notes connected with a beam.</p>
      </orig>

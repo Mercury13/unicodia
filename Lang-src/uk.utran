@@ -9821,28 +9821,28 @@
      <orig>
       <p>Invisible character that controls various text-processing algorithms:</p>
       <p />
-      <p>* Wraps text into lines: 00AD{{-}}soft hyphen.</p>
+      <p>* Wraps text into lines: [[pc:00AD]]{{-}}soft hyphen.</p>
       <p />
-      <p>* Adds semantics to text: 2062{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application 2061.</p>
+      <p>* Adds semantics to text: [[pc:2062]]{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application [[pc:2061]].</p>
       <p />
-      <p>* Builds/breaks [[pt:ligature|ligatures]]: 200D{{-}}zero-width joiner.</p>
+      <p>* Builds/breaks [[pt:ligature|ligatures]]: [[pc:200D]]{{-}}zero-width joiner.</p>
       <p />
-      <p>* Specifies writing direction: 2066{{-}}isolate a span of text that goes left-to-right.</p>
+      <p>* Specifies writing direction: [[pc:2066]]{{-}}isolate a span of text that goes left-to-right.</p>
       <p />
-      <p>* Does script-specific tasks that are impossible to implement using font: 1D173{{-}}start a group of musical notes connected with beam.</p>
+      <p>* Does script-specific tasks that are impossible to implement using font: [[pc:1D173]]{{-}}start a group of musical notes connected with a beam.</p>
      </orig>
      <transl>
       <p>Невидимий символ, що керує різними алгоритмами обробки тексту:</p>
       <p />
-      <p>* Розбиває текст на рядки: 00AD{{-}}м’який перенос.</p>
+      <p>* Розбиває текст на рядки: [[pc:00AD]]{{-}}м’який перенос.</p>
       <p />
-      <p>* Задає семантику тексту: 2062{{-}}невидимий знак множення у формулі, який можна перенести a×{{_}}//{{_}}×b, на відміну від невидимого виклику функції 2061.</p>
+      <p>* Задає семантику тексту: [[pc:2062]]{{-}}невидимий знак множення у формулі, який можна перенести a×{{_}}//{{_}}×b, на відміну від невидимого виклику функції [[pc:2061]].</p>
       <p />
-      <p>* Бере участь у [[pt:ligature|лігатурах]] або, навпаки, розриває їх: 200D{{-}}нульовий з’єднувач.</p>
+      <p>* Бере участь у [[pt:ligature|лігатурах]] або, навпаки, розриває їх: [[pc:200D]]{{-}}нульовий з’єднувач.</p>
       <p />
-      <p>* Задає напрямок письма: 2066{{-}}ізолювати ділянку, що йде зліва направо.</p>
+      <p>* Задає напрямок письма: [[pc:2066]]{{-}}ізолювати ділянку, що йде зліва направо.</p>
       <p />
-      <p>* Виконує специфічні для писемності задачі, які неможливо реалізувати через шрифт: 1D173{{-}}почати групу з кількох нот, з’єднаних ребром.</p>
+      <p>* Виконує специфічні для писемності задачі, які неможливо реалізувати через шрифт: [[pc:1D173]]{{-}}почати групу з кількох нот, з’єднаних ребром.</p>
      </transl>
     </text>
    </group>
@@ -10878,16 +10878,16 @@
      <orig>
       <p>Character whose use is strongly discouraged.</p>
       <p />
-      <p>One of Unicode’s [[pt:stability|stability]] guarantees: once the character is assigned, it won’t move or disappear. If the character is bad, it becomes deprecated. The reasons for deprecation are different.</p>
+      <p>One of Unicode’s [[pt:stability|stability]] guarantees: once a character is assigned, it won’t move or disappear. If the character is bad, it becomes deprecated. The reasons for deprecation are different.</p>
       <p />
-      <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
+      <p>The Unicode Consortium consists of people from Western culture, and they can only refer to studies of rare-language specialists{{-}}this happened for five characters in [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
       <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (another algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
       <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 they are just not{{_}}recommended.</p>
-      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding font where ligatures fit into the cell.</p>
+      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2, it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding a font in which ligatures fit within the cell.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
@@ -10917,7 +10917,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] by using dynamic composition{{-}}character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
+      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] through dynamic composition{{-}}a character’s image is constructed on the fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
       <p />
       <p>To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</p>
      </orig>
@@ -10947,7 +10947,7 @@
       <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* The hieroglyph is extended if it’s widely used in modern publications.</p>
-      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in multiple forms, some may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. They have an equivalent sequence: how would they have been encoded today?</p>
       <p>* The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
       <p />
@@ -10992,16 +10992,16 @@
      <orig>
       <p>From Japanese {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol''.</p>
       <p />
-      <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: highest school grade {{em|💯}} turned to “fully agree”.</p>
+      <p>Invented by cellphone operator NTT DoCoMo around 1999 to save characters in SMS. Western operators began developing their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emojis are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: the highest school grade {{em|💯}} became “fully agree”.</p>
       <p />
-      <p>Several old pre-2010 pictograms are guaranteed to show as emoji only with [[pu:FE0F]] character (''aka'' variation selector 16).</p>
+      <p>Several old pre-2010 pictograms are guaranteed to display as emoji only with the [[pu:FE0F]] character (''aka'' variation selector 16).</p>
       <p />
-      <p>All emoji are [[pt:spacing|spacing]] characters.</p>
+      <p>All emojis are [[pt:spacing|spacing]] characters.</p>
      </orig>
      <transl>
       <p>Від японської {{sm|絵}} ''е{{-}}картинка'' + {{sm|文字}} ''модзі{{-}}знак, символ''.</p>
       <p />
-      <p>Придумані мобільним оператором NTT DoCoMo біля 1999 для економії місця у SMS. Західні оператори почали розробляти свої набори з 2004, і у 2010 кодування DoCoMo вневли до Юнікоду 6.0. Багато емодзі специфічні для Японії: бізнесмен, що кланяється {{em|🙇}}, знак водія-початківця {{em|🔰}}… Інші змінили значення за межами Японії: знак вищого балу {{em|💯}} перетворилося на «цілком згоден».</p>
+      <p>Придумані мобільним оператором NTT DoCoMo біля 1999 для економії місця у SMS. Західні оператори почали розробляти свої набори з 2004, і у 2010 кодування DoCoMo вневли до Юнікоду 6.0. Багато емодзі специфічні для Японії: бізнесмен, що кланяється {{em|🙇}}, знак водія-початківця {{em|🔰}}… Інші змінили значення за межами Японії: знак вищого балу {{em|💯}} став «цілком згоден».</p>
       <p />
       <p>Декілька старих піктограм, що з’явилися до 2010, гарантовано стають емодзі тільки з символом [[pu:FE0F]] (селектор написання 16).</p>
       <p />
@@ -11018,14 +11018,14 @@
      <orig>
       <p>Unicode strives to make efficient implementations possible. Particularly:</p>
       <p />
-      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Contrary, in telegraph code 1 means E in letter page and 3 in figure page.</p>
+      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Conversely, telegraph code 1 corresponds to E on the letter page and to 3 on the figure page.</p>
       <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
-      <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if work right in UTF-8/16 is impossible, lookup tables still work.</p>
+      <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if working right in UTF-8/16 is impossible, lookup tables still work.</p>
       <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
       <p>* Characters of one script are grouped together as far as practical.</p>
       <p>* Punctuation marks are common for all scripts.</p>
       <p>* Format characters are described as much as possible.</p>
-      <p>* [[pt:format|Format]] characters that change inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
+      <p>* [[pt:format|Format]] characters that change the inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
      </orig>
      <transl>
       <p>Юнікод намагається, щоб ефективні реалізації були можливі. Зокрема:</p>
@@ -11054,9 +11054,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
+      <p>A character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
       <p />
-      <p>Zero-width space is considered format rather than space{{-}}so it is '''not'''{{_}}graphic.</p>
+      <p>A [[pc:200B|zero-width space]] is a format character rather than a space, so it is '''not'''{{_}}graphic.</p>
       <p />
       <p>Paradox: invisible marks are simultaneously graphic and [[pt:ignorable|default-ignorable]].</p>
       <p />
@@ -11065,11 +11065,49 @@
      <transl>
       <p>Символ, який друкується на екрані або папері. Будь-який, окрім [[pt:control|керуючих]], [[pt:format|форматуючих]], роздільників рядків та абзаців{{-}}навіть [[pt:space|пропуски]] та невидимі [[pt:combining|мітки]].</p>
       <p />
-      <p>Пропуск нульової ширини вважається форматуючим, а не{{_}}пропуском{{-}}а значить, він '''не''' графічний.</p>
+      <p>[[pc:200B|Пропуск нульової ширини]] вважається форматуючим, а не{{_}}пропуском{{-}}а значить, він '''не''' графічний.</p>
       <p />
       <p>Парадокс: невидимі мітки одночасно графічні та [[pt:ignorable|ігноровані]].</p>
       <p />
       <p>Не плутати з [[pt:pseudographics|псевдографікою]].</p>
+     </transl>
+    </text>
+   </group>
+   <group id="hiero">
+    <text id="Name">
+     <orig>logographic (ideographic, hieroglyphic) script</orig>
+     <transl>логографічне письмо (ідеографічне, ієрогліфи)</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
+     </orig>
+     <au-cmt>
+      <p>up/down → write “top/bottom” if better in your language</p>
+      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
+     </au-cmt>
+     <transl>
+      <p>Нефонетичні писемності, відомі як ''ієрогліфічні'' або ''ідеографічні'', більш точно звуться '''логографічними''': символ (або група символів) означає слово чи його частину.</p>
+      <p />
+      <p>Устрій таких писемностей добре видно на '''[[ps:Hani|китайських ієрогліфах]]'''. Символи традиційно діляться на шість типів.</p>
+      <p>* Піктограми означають намальований об’єкт: {{sm|山}} гора</p>
+      <p>* Ідеограми показують абстрактні концепції: {{sm|上}} верх, {{sm|下}} низ</p>
+      <p>* Складені ієрогліфи: &lt;big&gt;休&lt;/big&gt; відпочинок = {{sm|人}} людина + {{sm|木}} дерево</p>
+      <p>* Нові значення з іншою вимовою: {{sm|樂}} (традиційний) / {{sm|乐}} (спр.Китай) yuè (музика), і{{_}}також lè (радість)</p>
+      <p>* Запозичено за вимовою: {{sm|自}} ніс → сам (у старокитайській вимовлялися схоже)</p>
+      <p>* Вимова+класифікатор: {{sm|樑}} liáng (балка) = {{sm|木}} дерево + {{sm|梁}} liáng</p>
+      <p />
+      <p>Перехід від ієрогліфів до [[pt:syllabic|складового письма]] простий: досить записати незнайоме слово відповідними односкладовими ієрогліфами. Усі великі цивілізації Євразії, окрім китайської, до початку нашої ери кинули ієрогліфи.</p>
      </transl>
     </text>
    </group>
@@ -11154,44 +11192,6 @@
       <p>* [[pt:control|Керуючі]], роздільники рядків.</p>
       <p>* Символи, задіяні у шрифтових механізмах, які пропускати не{{_}}можна{{-}}наприклад, віртуальні [[pt:virama|вірами]]. Адже якщо вірама зникла, «кта» перетворюється на «ката».</p>
       <p>* Символи складного форматування [[ps:Egyp|єгипетських ієрогліфів]].</p>
-     </transl>
-    </text>
-   </group>
-   <group id="hiero">
-    <text id="Name">
-     <orig>logographic (ideographic, hieroglyphic) script</orig>
-     <transl>логографічне письмо (ідеографічне, ієрогліфи)</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
-      <p />
-      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
-      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
-      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
-      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
-      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
-      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
-      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
-      <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
-     </orig>
-     <au-cmt>
-      <p>up/down → write “top/bottom” if better in your language</p>
-      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
-     </au-cmt>
-     <transl>
-      <p>Нефонетичні писемності, відомі як ''ієрогліфічні'' або ''ідеографічні'', більш точно звуться '''логографічними''': символ (або група символів) означає слово чи його частину.</p>
-      <p />
-      <p>Устрій таких писемностей добре видно на '''[[ps:Hani|китайських ієрогліфах]]'''. Символи традиційно діляться на шість типів.</p>
-      <p>* Піктограми означають намальований об’єкт: {{sm|山}} гора</p>
-      <p>* Ідеограми показують абстрактні концепції: {{sm|上}} верх, {{sm|下}} низ</p>
-      <p>* Складені ієрогліфи: &lt;big&gt;休&lt;/big&gt; відпочинок = {{sm|人}} людина + {{sm|木}} дерево</p>
-      <p>* Нові значення з іншою вимовою: {{sm|樂}} (традиційний) / {{sm|乐}} (спр.Китай) yuè (музика), і{{_}}також lè (радість)</p>
-      <p>* Запозичено за вимовою: {{sm|自}} ніс → сам (у старокитайській вимовлялися схоже)</p>
-      <p>* Вимова+класифікатор: {{sm|樑}} liáng (балка) = {{sm|木}} дерево + {{sm|梁}} liáng</p>
-      <p />
-      <p>Перехід від ієрогліфів до [[pt:syllabic|складового письма]] простий: досить записати незнайоме слово відповідними односкладовими ієрогліфами. Усі великі цивілізації Євразії, окрім китайської, до початку нашої ери кинули ієрогліфи.</p>
      </transl>
     </text>
    </group>
