@@ -7763,7 +7763,7 @@
       <p />
       <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change the glyph.</p>
       <p />
-      <p>If an emoji contains several people, gender and skin tone are handled case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
+      <p>If an emoji depicts several people, gender and skin tone are handled case-by-case. In breastfeeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
       <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
@@ -7785,7 +7785,7 @@
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
       <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
-      <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when the ligature is missing, regardless of whether ZWJ is present in the font.</p>
+      <p>* Font mechanisms that are safe to skip silently: zero-width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when the ligature is missing, regardless of whether the font has ZWJ.</p>
       <p>* Zero-width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also a zero-width space; zero-width non-joiner [[pt:zwnj|ZWNJ]].</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
