@@ -339,7 +339,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH },                                                       // …5
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Telugu
       { FAM_FUNKY },                                                            // …1
-    { "MV Boli", Ffg::GRAPHIC_SAMPLE, 110_pc },                                 // Thaana
+    { "MV Boli", Ffg::GRAPHIC_SAMPLE, 9_bot, 110_pc },                          // Thaana
     { "Leelawadee,Leelawadee UI", 10_bot, 110_pc },                             // Thai
     { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
