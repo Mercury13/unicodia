@@ -7824,11 +7824,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ligature is several characters fused into one:</p>
+      <p>A ligature is several characters fused into one:</p>
       <p />
-      <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
+      <p>1. In typography: a character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. In [[pt:brahmic|Brahmic abugidas]], such ligatures are numerous.</p>
+      <p>2. In fonts: a [[pt:character|glyph]] corresponding to a sequence of [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. In [[pt:brahmic|Brahmic abugidas]], such ligatures are numerous.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
@@ -7854,7 +7854,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode stores characters in logical order that roughly corresponds to the order of pronunciation or typing on a keyboard. This order does not{{_}}correspond to the on-screen progression order, and algorithms of [[pt:bidi|bidirecitional text]] are designed to place characters in visual order.</p>
+      <p>Unicode stores characters in logical order that roughly corresponds to the order of pronunciation or typing on a keyboard. This order does not{{_}}correspond to the on-screen progression order, and algorithms of [[pt:bidi|bidirectional text]] are designed to place characters in visual order.</p>
       <p />
       <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
       <p />
