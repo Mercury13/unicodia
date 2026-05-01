@@ -9766,7 +9766,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
+      <p>In the early years, when it was often necessary to repeat exchange sessions by hand (using punched tape or console), control characters were used instead of data formats and network protocols. The {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
       <p />
       <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
       <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
@@ -9783,7 +9783,7 @@
       <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to a preprogrammed position. Makes printing on existing forms faster and quieter;</p>
       <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
       <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
-      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital in file servers and MUD games.</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital on file servers and in MUD games.</p>
       <p />
       <p>All 65 characters from the Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>
@@ -10268,9 +10268,9 @@
      <orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
       <p />
-      <p>Non-linear script where consonants and vowels are joined into syllables is considered an alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
+      <p>Non-linear scripts in which consonants and vowels are joined into syllables are considered alphabets by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by no one at all ([[ps:Laoo|Lao]]).</p>
       <p />
-      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it sometimes must be reformed. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
      </orig>
      <transl>
       <p>Лінійне письмо, що записує голосні та приголосні звуки. Першим відомим алфавітом вважається [[ps:Grek|грецький]].</p>
@@ -10348,7 +10348,7 @@
       <p />
       <p>'''UnicodeInput'''</p>
       <p />
-      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
+      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character into any program.</p>
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
      </orig>
@@ -10401,55 +10401,6 @@
      <transl>ASCII</transl>
     </text>
    </group>
-   <group id="brahmic">
-    <text id="Name">
-     <orig>Brahmic abugida, Indic script</orig>
-     <transl>брахмійська абуґіда</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
-      <p />
-      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by a ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some form across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
-      <p />
-      <p>Features of Brahmic abugidas:</p>
-      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
-      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
-      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
-      <p>* Written left to right, unlike Semitic languages.</p>
-      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
-      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
-      <p />
-      <p>There are several methods to convey complex syllables:</p>
-      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
-      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but a visible virama is only present at the end of words. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. The small initial R ({{sm|र्क}} rka) is called ''repha''; the small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
-      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
-      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
-      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
-     </orig>
-     <au-cmt>Russian: kssa = кша</au-cmt>
-     <transl>
-      <p>Дослідники розходяться в означенні [[pt:abugida|абуґіди]]. Але в одному вони одностайні: абуґідами є '''група писемностей, що походять від [[ps:Brah|брахмі]]'''.</p>
-      <p />
-      <p>У семітських мовах коренем слова будуть приголосні звуки, а голосні{{-}}суфікси та закінчення: у [[ps:Arab|арабській]] ''джихадом'' займається ''моджахед'' (або, точніше, ''муджахід''). Для них природно було ввести [[pt:abjad|консонантну]] писемність. Коли [[ps:Armi|арамейське]] письмо пішло на схід і стикнулось з індоєвропейськими мовами, з’явилась складова писемність, яка в тому чи іншому вигляді розповсюдилась на усю Південно-Східну Азію, крім [[pt:cjk|Китаю, Японії та Кореї]].</p>
-      <p />
-      <p>Особливості брахмійських абуґід:</p>
-      <p>* Приголосна літера означає склад з деякою голосною по замовчанню, решта додається оголосами: [[ps:Deva|деванáґарі]] &lt;nobr&gt;ка {{sm|क}} + і {{sm| ि}} = кі {{sm|कि}}&lt;/nobr&gt;.</p>
-      <p>* Щоб одержати одиноку приголосну, використовується знак «[[pt:virama|вірама]]» &lt;nobr&gt;ка {{sm|क}} + {{sm|्}} = к {{sm|क्}}&lt;/nobr&gt;.</p>
-      <p>* Інші діакритичні знаки{{-}}анусвара (носовий призвук у голосному), чандрабінду (уся голосна вимовляється через ніс), нукта (запозичені звуки; до речі, літера «к» у цьому слові запозичена і пишеться з нуктою), вісарга (звук {{t|h}} у санскриті).</p>
-      <p>* Написання зліва направо, на відміну від семітських мов.</p>
-      <p>* Алфавітний порядок{{-}}фонологічний: спочатку голосні, потім приголосні від глотки {{t|к}} до зубів {{t|с}}, і на кінці видих {{t|h}}.</p>
-      <p>* Часті власні [[pt:number|цифри]]{{-}}як у сучасному використанні, так і [[pt:obsolete|застарілі]].</p>
-      <p />
-      <p>Є різні методи передачі складних складів:</p>
-      <p>* Через віраму (умовно ба-н_-ка){{-}}одинока приголосна є окремим складом ([[ps:Tglg|байбаїн]]).</p>
-      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але видима вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє). Літера R часто зменшується у цих стиках. Мале початкове R ({{sm|र्क}} рка) зветься ''repha'', мале додаткове R ({{sm|क्र}} кра){{-}}''rakar''.</p>
-      <p>* Через кінцеву приголосну (бан-ка){{-}}[[ps:Phag|монгольська Пагба-лами]]. Вірами нема. Може існувати віртуальна вірама або інші методи передати стик на початку слова.</p>
-      <p>* Неповна, погано передає складні склади (ба-ка){{-}}[[ps:Bugi|лонтара]]. Окремі зразки виродились до консонантних.</p>
-      <p>* Втратила голосну по замовчанню (ба-нᵊ-ка){{-}}реформою ([[ps:Laoo|лаоська]]) чи природним розвитком ([[ps:Guru|ґурмукхі]]). У другому випадку може не{{_}}завжди відрізняти «на» від «н» та користуватися вірамою у словниках.</p>
-     </transl>
-    </text>
-   </group>
    <group id="bidi">
     <text id="Name">
      <orig>bidirectional text</orig>
@@ -10461,7 +10412,7 @@
       <p />
       <p>1. Split the text into independent lines.</p>
       <p />
-      <p>2. Split each line into nested segments: the entire line is left-to-right, there are segments right-to-left inside it, they contain left-to-right segments, and so on. There was a bug in iOS: deeply nested segments rebooted the phone.</p>
+      <p>2. Split each line into nested segments: the entire line is left-to-right, there are segments right-to-left inside it, they contain left-to-right segments, and so on. There was a bug in iOS: deeply nested segments caused the phone to reboot.</p>
       <p />
       <p>3. Isolate European numbers, give them direction left-to-right.</p>
       <p />
@@ -10555,9 +10506,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of living languages are encoded in the Basic Plane, allowing these language to be processed directly in [[pt:utf16|UTF-16]].</p>
+      <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of living languages are encoded in the Basic Plane, allowing these languages to be processed directly in [[pt:utf16|UTF-16]].</p>
       <p />
-      <p>Unicode had been a two-byte encoding until 1996, which gave a capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to a compromise in the form of Basic Plane and UTF-16.</p>
+      <p>Unicode had been a two-byte encoding until 1996, which gave a capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to a compromise in the form of the Basic Plane and UTF-16.</p>
       <p />
       <p>As of Unicode{{_}}{{vleft16}}, only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
@@ -10607,21 +10558,52 @@
      </transl>
     </text>
    </group>
-   <group id="character">
+   <group id="brahmic">
     <text id="Name">
-     <orig>characters, not glyphs</orig>
-     <transl>символи, не гліфи</transl>
+     <orig>Brahmic abugida, Indic script</orig>
+     <transl>брахмійська абуґіда</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Character is a unit of meaning. Glyph is a specific image contained in font and drawn on screen/paper.</p>
+      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
-      <p>Characters and glyphs do{{_}}not{{_}}relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by a ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some form across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
+      <p />
+      <p>Features of Brahmic abugidas:</p>
+      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
+      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
+      <p>* Written left to right, unlike Semitic languages.</p>
+      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
+      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
+      <p />
+      <p>There are several methods to convey complex syllables:</p>
+      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but a visible virama is only present at the end of words. Often at the ends of words it’s also absent (the inherent vowel becomes silent). Letter R often becomes small in these conjuncts. The small initial R ({{sm|र्क}} rka) is called ''repha''; the small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
+      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
+      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
+      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
      </orig>
+     <au-cmt>Russian: kssa = кша</au-cmt>
      <transl>
-      <p>Символ{{-}}одиниця змісту. Гліф{{-}}зображення, що міститься у шрифті та виводиться на екран/друк.</p>
+      <p>Дослідники розходяться в означенні [[pt:abugida|абуґіди]]. Але в одному вони одностайні: абуґідами є '''група писемностей, що походять від [[ps:Brah|брахмі]]'''.</p>
       <p />
-      <p>Символи та гліфи співвідносяться не{{_}}1:1. ''Насталíк'', стиль [[ps:Arab|арабського]] тексту, потребує тисячі гліфів у шрифті. Але у кодуванні всього дві сотні символів, що передають ''зміст''. І навпаки, у різних символів, незважаючи на [[pt:unification|уніфікацію]], буває один гліф.</p>
+      <p>У семітських мовах коренем слова будуть приголосні звуки, а голосні{{-}}суфікси та закінчення: у [[ps:Arab|арабській]] ''джихадом'' займається ''моджахед'' (або, точніше, ''муджахід''). Для них природно було ввести [[pt:abjad|консонантну]] писемність. Коли [[ps:Armi|арамейське]] письмо пішло на схід і стикнулось з індоєвропейськими мовами, з’явилась складова писемність, яка в тому чи іншому вигляді розповсюдилась на усю Південно-Східну Азію, крім [[pt:cjk|Китаю, Японії та Кореї]].</p>
+      <p />
+      <p>Особливості брахмійських абуґід:</p>
+      <p>* Приголосна літера означає склад з деякою голосною по замовчанню, решта додається оголосами: [[ps:Deva|деванáґарі]] &lt;nobr&gt;ка {{sm|क}} + і {{sm| ि}} = кі {{sm|कि}}&lt;/nobr&gt;.</p>
+      <p>* Щоб одержати одиноку приголосну, використовується знак «[[pt:virama|вірама]]» &lt;nobr&gt;ка {{sm|क}} + {{sm|्}} = к {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>* Інші діакритичні знаки{{-}}анусвара (носовий призвук у голосному), чандрабінду (уся голосна вимовляється через ніс), нукта (запозичені звуки; до речі, літера «к» у цьому слові запозичена і пишеться з нуктою), вісарга (звук {{t|h}} у санскриті).</p>
+      <p>* Написання зліва направо, на відміну від семітських мов.</p>
+      <p>* Алфавітний порядок{{-}}фонологічний: спочатку голосні, потім приголосні від глотки {{t|к}} до зубів {{t|с}}, і на кінці видих {{t|h}}.</p>
+      <p>* Часті власні [[pt:number|цифри]]{{-}}як у сучасному використанні, так і [[pt:obsolete|застарілі]].</p>
+      <p />
+      <p>Є різні методи передачі складних складів:</p>
+      <p>* Через віраму (умовно ба-н_-ка){{-}}одинока приголосна є окремим складом ([[ps:Tglg|байбаїн]]).</p>
+      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але видима вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє). Літера R часто зменшується у цих стиках. Мале початкове R ({{sm|र्क}} рка) зветься ''repha'', мале додаткове R ({{sm|क्र}} кра){{-}}''rakar''.</p>
+      <p>* Через кінцеву приголосну (бан-ка){{-}}[[ps:Phag|монгольська Пагба-лами]]. Вірами нема. Може існувати віртуальна вірама або інші методи передати стик на початку слова.</p>
+      <p>* Неповна, погано передає складні склади (ба-ка){{-}}[[ps:Bugi|лонтара]]. Окремі зразки виродились до консонантних.</p>
+      <p>* Втратила голосну по замовчанню (ба-нᵊ-ка){{-}}реформою ([[ps:Laoo|лаоська]]) чи природним розвитком ([[ps:Guru|ґурмукхі]]). У другому випадку може не{{_}}завжди відрізняти «на» від «н» та користуватися вірамою у словниках.</p>
      </transl>
     </text>
    </group>
@@ -10637,7 +10619,7 @@
       <p>* Full (unfolds [[pt:ligature|ligatures]]): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
       <p>* Turkic (special rules for Turkish and Azeri): &lt;big&gt;I → ı&lt;/big&gt;</p>
       <p />
-      <p>Usually, case folding is conversion to lowercase. But for [[ps:Cher|Cherokee]], it is conversion to uppercase: capital letter were encoded first.</p>
+      <p>Usually, case folding is conversion to lowercase. But for [[ps:Cher|Cherokee]], it is conversion to uppercase: capital letters were encoded first.</p>
       <p />
       <p>Case folding is idempotent: CF(CF(s))=CF(s), i.e. the second folding does nothing.</p>
      </orig>
@@ -10650,6 +10632,24 @@
       <p>Зазвичай згортка{{-}}це переведення до нижнього регістру. Але для [[ps:Cher|черокі]] це переведення до верхнього: великі літери закодували першими.</p>
       <p />
       <p>Згортка ідемпотентна: CF(CF(s)) = CF(s), тобто друга згортка нічого не{{_}}зробить.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="character">
+    <text id="Name">
+     <orig>characters, not glyphs</orig>
+     <transl>символи, не гліфи</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>A character is a unit of meaning. A glyph is a specific image in a font, drawn on screen/paper.</p>
+      <p />
+      <p>Characters and glyphs do{{_}}not{{_}}relate one-to-one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+     </orig>
+     <transl>
+      <p>Символ{{-}}одиниця змісту. Гліф{{-}}зображення у шрифті, що виводиться на екран/друк.</p>
+      <p />
+      <p>Символи та гліфи співвідносяться не{{_}}1:1. ''Насталíк'', стиль [[ps:Arab|арабського]] тексту, потребує тисячі гліфів у шрифті. Але у кодуванні всього дві сотні символів, що передають ''зміст''. І навпаки, у різних символів, незважаючи на [[pt:unification|уніфікацію]], буває один гліф.</p>
      </transl>
     </text>
    </group>
@@ -10852,7 +10852,7 @@
       <p>* Scribe seldom lifts quill{{-}}hence joined letters, one stroke followed back and forth, loops in ascenders and descenders.</p>
       <p>* Letters join into [[pt:ligature|ligatures]].</p>
       <p />
-      <p>''Italic'' type comes from cursive, and in some languages is named with the same word as cursive.</p>
+      <p>''Italic'' type came from cursive, and in some languages it is named with the same term as cursive.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with ''shorthand'', where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
      </orig>
