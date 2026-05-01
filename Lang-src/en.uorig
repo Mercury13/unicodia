@@ -6888,7 +6888,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Currently few of them are used:</p>
+      <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
       <p />
       <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
       <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
@@ -6902,12 +6902,12 @@
       <p />
       <p>Other interesting commands:</p>
       <p />
-      <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
+      <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to a preprogrammed position. Makes printing on existing forms faster and quieter;</p>
       <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
       <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
-      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital in file servers and MUD games.</p>
       <p />
-      <p>All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
+      <p>All 65 characters from the Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
      </orig>
     </text>
    </group>
@@ -7460,12 +7460,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>String conversion used for (mostly) locale-independent case-insensitive string somparison. It has two main types and one auxiliary:</p>
+      <p>String conversion used for (mostly) locale-independent case-insensitive string comparison. It has two main types and one auxiliary:</p>
       <p>* Simple (does{{_}}not{{_}}change length): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
       <p>* Full (unfolds [[pt:ligature|ligatures]]): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
       <p>* Turkic (special rules for Turkish and Azeri): &lt;big&gt;I → ı&lt;/big&gt;</p>
       <p />
-      <p>Usually case folding is conversion to lower case. But for [[ps:Cher|Cherokee]] it is conversion to upper case: capital letter appeared first.</p>
+      <p>Usually, case folding is conversion to lowercase. But for [[ps:Cher|Cherokee]], it is conversion to uppercase: capital letter were encoded first.</p>
       <p />
       <p>Case folding is idempotent: CF(CF(s))=CF(s), i.e. the second folding does nothing.</p>
      </orig>
@@ -7477,7 +7477,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of an [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
       <p>* sweeping writing with brush and ink (except Nüshu);</p>
@@ -7503,7 +7503,7 @@
       <p>* [[pt:noncharacter|Non-character]] (removed from encoding).</p>
       <p>* Vacant (reserved).</p>
       <p />
-      <p>See also [[pt:unification|unification]] (writing different characters with one code point) and duplication (writing a single character with different code points).</p>
+      <p>See also [[pt:unification|unification]] (writing different characters with the same code point) and duplication (writing a single character with different code points).</p>
      </orig>
     </text>
    </group>
@@ -7518,9 +7518,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode is used for interchange with other text standards: national, international, vendor-specific. If variations of one character get different codes in such standards, they are disunified in Unicode. This makes possible conversion between encodings through Unicode, lossless round-trip conversion (from encoding to Unicode and vice-versa).</p>
+      <p>Unicode is used for interchange with other text standards: national, international, and vendor-specific. If variations of a character receive different codes in such standards, they are not [[pt:unification|unified]] in Unicode. This makes possible conversion between encodings through Unicode, lossless round-trip conversion (from encoding to Unicode and vice versa).</p>
       <p />
-      <p>However, sometimes a single code point of other encoding converts to several characters of Unicode, or vice-versa.</p>
+      <p>However, sometimes a single code point in another encoding converts to several characters of Unicode, or vice versa.</p>
      </orig>
     </text>
    </group>
@@ -7530,16 +7530,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The Unicode Consortium does not define what is a country and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Among unusual reasons:</p>
+      <p>The Unicode Consortium does not define what a country is and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Among unusual reasons:</p>
       <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after independence.</p>
-      <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and rename.</p>
+      <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and renaming.</p>
       <p>* PS (Palestine): way to recognition.</p>
       <p>* DG (Diego Garcia) and others: telecommunication sites.</p>
-      <p>* EA (Ceuta and Melilla), IC (Canary Islands): special customs rules different from common-European.</p>
+      <p>* EA (Ceuta and Melilla), IC (Canary Islands): special customs rules different from the common-European.</p>
       <p>* GG (Guernsey) and others: issue their own postal stamps.</p>
       <p>* XK (Kosovo): temporary code used by EU.</p>
       <p />
-      <p>Image on country emoji (usually flag) is up to vendor.</p>
+      <p>The image of the country emoji (usually flag) is up to the vendor.</p>
      </orig>
     </text>
    </group>
@@ -7549,7 +7549,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>Code is another form of ordinary written text. In other words, we write spoken words with letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
       <p>* communication and signalling (flag semaphore, Morse code);</p>
       <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
       <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
@@ -7573,14 +7573,14 @@
       <p>Unicode divides marks into [[pt:spacing|spacing]], non-spacing and enclosing.</p>
       <p />
       <p>Combining marks are put in several ways in fonts, starting from the most beautiful:</p>
-      <p>* Ligature: special [[pt:character|glyph]] for marked character.</p>
-      <p>* Glyph substitution: when put to glyph A, mark B gets shape C. This is used for “squished” diacritics on capital letters, adjusting size of Indic vowel marks.</p>
-      <p>* Anchor: binding point that is put manually.</p>
-      <p>* And default anchor: the mark is put at positive or negative coordinates. When drawn relative to caret, it finds itself in the right place.</p>
+      <p>* Ligature: a special [[pt:character|glyph]] for the marked character.</p>
+      <p>* Glyph substitution: when put to glyph A, mark B gets shape C. This is used for “squished” diacritics on capital letters, for adjusting the size of Indic vowel marks.</p>
+      <p>* Anchor: a binding point that is put manually.</p>
+      <p>* And default anchor: the mark is put at positive or negative coordinates. When drawn relative to the caret, it finds itself in the right place.</p>
       <p />
       <p>Unicode cannot cover several characters with one mark, but exploits some font mechanisms for this:</p>
-      <p>* Some marks are placed halfway above character, and the other half hangs out, so they cover two characters: {{sm|a͡b}}.</p>
-      <p>* The first character is covered with initial fragment, the second one etc with repeating one, and the last one with final fragment. This method is implemented badly in most fonts.</p>
+      <p>* Some marks are placed halfway above a character, and the other half hangs out, so they cover two characters: {{sm|a͡b}}.</p>
+      <p>* The first character is covered with an initial fragment, the second one etc. with a repeating one, and the last one with a final fragment. This method is implemented badly in most fonts.</p>
      </orig>
     </text>
    </group>
@@ -7590,15 +7590,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Writing style where the scribe quickly writes something down, especially with fragile goose quill. Features vary from language to language, but generally:</p>
+      <p>Writing style where the scribe quickly writes something down, especially with a fragile goose quill. Features vary from language to language, but generally:</p>
       <p>* Simple shapes of letters.</p>
       <p>* Corners are rounded, except sharp ones.</p>
       <p>* Scribe seldom lifts quill{{-}}hence joined letters, one stroke followed back and forth, loops in ascenders and descenders.</p>
       <p>* Letters join into [[pt:ligature|ligatures]].</p>
       <p />
-      <p>''Italic'' type comes from cursive, and in some languages is named with same word as cursive.</p>
+      <p>''Italic'' type comes from cursive, and in some languages is named with the same word as cursive.</p>
       <p />
-      <p>Do{{_}}not{{_}}confuse with ''shorthand'' where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
+      <p>Do{{_}}not{{_}}confuse with ''shorthand'', where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
      </orig>
     </text>
    </group>
