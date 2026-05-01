@@ -1109,13 +1109,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
+      <p>'''American Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in a wrong encoding.</p>
       <p />
-      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character is punched by mistake and should{{_}}not be read.</p>
+      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character was punched by mistake and should{{_}}not be read.</p>
       <p />
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
-      <p>The rest 128 characters could be filled with everything. One such 8-bit encoding, [[pt:latin1|Latin-1]], also came to Unicode.</p>
+      <p>The remaining 128 characters could be filled with anything. One such 8-bit encoding, [[pt:latin1|Latin-1]], was also adopted by Unicode.</p>
      </orig>
     </text>
    </group>
@@ -7180,12 +7180,12 @@
       <p>Standard order for ordering text strings. The oldest known is [[ps:Ugar|Ugaritic]].</p>
       <p />
       <p>Origin of order:</p>
-      <p>* [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]], [[ps:Arab|Arabic]], [[ps:Geor|Georgian]], [[ps:Armn|Armenian]], [[ps:Hebr|Hebrew]], [[ps:Ethi|Ethiopic]]{{-}}from [[ps:Phnx|Phoenician]]. Phoenician order probably comes from earlier Semitic languages.</p>
+      <p>* [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]], [[ps:Arab|Arabic]], [[ps:Geor|Georgian]], [[ps:Armn|Armenian]], [[ps:Hebr|Hebrew]], [[ps:Ethi|Ethiopic]]{{-}}from [[ps:Phnx|Phoenician]]. The Phoenician order probably comes from earlier Semitic languages.</p>
       <p>* [[ps:Runr|Runes]] (''Futhark''){{-}}unknown;</p>
       <p>* All [[pt:brahmic|Brahmic abugidas]], [[pt:cjk|CJK]] by pronunciation{{-}}phonological order, from throat {{t|k}} to teeth {{t|s}};</p>
       <p>* CJK by [[ps:Hani|writing]]{{-}}using so-called radicals.</p>
       <p />
-      <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If an alphabetical order changes, the country itself changes it without consulting Unicode Consortium.</p>
+      <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If the alphabetical order changes, the country itself changes it without consulting the Unicode Consortium.</p>
      </orig>
     </text>
    </group>
@@ -7259,27 +7259,27 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Method of character entry by its code introduced in BIOS (firmware) of [[po:Ibm|IBM PC]]. NT family of Windows has three types of codes.</p>
+      <p>Method of character entry by its code introduced in the BIOS (firmware) of the [[po:Ibm|IBM PC]]. The NT family of Windows has three types of codes.</p>
       <p />
       <p>'''DOS codes'''</p>
       <p />
-      <p>Holding {{kb|Alt}} (left{{-}}everywhere, right{{-}}depends on keyboard layout), type on '''numeric''' keypad '''decimal''' character code from 1 to 255. For example, {{k|Alt|51}} makes digit 3.</p>
+      <p>Holding {{kb|Alt}} (left{{-}}everywhere, right{{-}}depends on keyboard layout), type on the '''numeric''' keypad '''decimal''' character code from 1 to 255. For example, {{k|Alt|51}} makes digit 3.</p>
       <p />
-      <p>The encoding is common for all users, is one of DOS encodings (437, 866 etc) and depends on chosen language for non-Unicode applications. Codes 1 to 31 and 127 make printable versions of those characters: 1={{em|☺}}.</p>
+      <p>The encoding is common for all users, is one of DOS encodings (437, 866 etc), and depends on the chosen language for non-Unicode applications. Codes 1 to 31 and 127 make printable versions of those characters: 1={{em|☺}}.</p>
       <p />
       <p>'''Windows codes'''</p>
       <p />
-      <p>Holding {{kb|Alt}}, type on numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes letter ð.</p>
+      <p>Holding {{kb|Alt}}, type on the numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes the letter ð.</p>
       <p />
-      <p>Encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>The encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />
-      <p>Experimental, do{{_}}not{{_}}work in all applications. To make them work, into registry key</p>
+      <p>Experimental, do{{_}}not{{_}}work in all applications. To make them work, into the registry key</p>
       <p>: HKEY_CURRENT_USER\Control Panel\Input Method</p>
       <p>add '''string''' parameter EnableHexNumpad=1 and reboot the computer.</p>
       <p />
-      <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
+      <p>Holding {{kb|Alt}}, type {{kb|Num+}} and '''hexadecimal''' character code. Letters A…F are entered from the main keyboard. Only [[pt:bmp|Basic Plane]] works. {{k|Alt|+262F}} makes Yin and yang {{em|☯}}.</p>
      </orig>
     </text>
    </group>
@@ -7291,11 +7291,11 @@
      <orig>
       <p>'''Libre and Microsoft Office'''</p>
       <p />
-      <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to character{{-}}in this case {{em|☯}} [[pu:262F]] Yin and yang.</p>
+      <p>Type hexadecimal character code (for example, 262F) and press {{kb|Alt|X}}. The code will be converted to a character{{-}}in this case, {{em|☯}} [[pu:262F]] Yin and yang.</p>
       <p />
       <p>'''UnicodeInput'''</p>
       <p />
-      <p>Resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
+      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
      </orig>
