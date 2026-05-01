@@ -566,6 +566,8 @@ const std::unordered_map<std::string_view, decap::Exception> exceptions{
     EX("PNP transistor")
     EX("logic gate Or")
     EX("logic gate And")
+    EX("logic gate Buffer")
+    EX("logic gate Buffer with inverted input")
 
     // Hand-checked CJK Latin
     EX("squared HV")                            // Just manually, small block
