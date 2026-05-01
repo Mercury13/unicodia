@@ -1427,9 +1427,9 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private-use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
-      <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but the French delegate insisted that OE was enough.</p>
+      <p>We see characters × and ÷ among letters. Initially, Œœ should have been there, but the French delegate insisted that OE was enough.</p>
      </orig>
      <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
      <transl>
@@ -11227,11 +11227,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ligature is several characters fused into one:</p>
+      <p>A ligature is several characters fused into one:</p>
       <p />
-      <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
+      <p>1. In typography: a character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” makes ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
+      <p>2. In fonts: a [[pt:character|glyph]] corresponding to a sequence of [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. In [[pt:brahmic|Brahmic abugidas]], such ligatures are numerous.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
@@ -11240,9 +11240,9 @@
      <transl>
       <p>Лигатура{{-}}это несколько символов в одном:</p>
       <p />
-      <p>1. В типографике{{-}}символ, составленный из нескольких. Так, амперсанд '''&amp;''' является лигатурой латинского ''et{{-}}и''.</p>
+      <p>1. В типографике: символ, составленный из нескольких. Так, амперсанд '''&amp;''' является лигатурой латинского ''et{{-}}и''.</p>
       <p />
-      <p>2. В шрифтовом деле{{-}}[[pt:character|глиф]], означающий последовательность из нескольких [[pt:codepoint|кодовых позиций]]. Так, в некоторых шрифтах набор «fi» пропечатывает лигатуру '''ﬁ'''. Много таких лигатур в [[pt:brahmic|брахмийских абугидах]].</p>
+      <p>2. В шрифтовом деле: [[pt:character|глиф]], соответствующий последовательности из нескольких [[pt:codepoint|кодовых позиций]]. Так, в некоторых шрифтах набор «fi» пропечатывает лигатуру '''ﬁ'''. Много таких лигатур в [[pt:brahmic|брахмийских абугидах]].</p>
       <p />
       <p>Все лигатуры{{-}}[[pt:spacing|протяжённые]] символы.</p>
       <p />
@@ -11275,11 +11275,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put characters in visual order.</p>
+      <p>Unicode stores characters in logical order that roughly corresponds to the order of pronunciation or typing on a keyboard. This order does not{{_}}correspond to the on-screen progression order, and algorithms of [[pt:bidi|bidirectional text]] are designed to place characters in visual order.</p>
       <p />
       <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
       <p />
-      <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before consonant, even if read after.</p>
+      <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before a consonant, even if pronounced after.</p>
      </orig>
      <transl>
       <p>Юникод хранит символы в логическом порядке, который примерно соответствует порядку произношения или набора с клавиатуры. Этот порядок не{{_}}совпадает с порядком отображения текста на экране, и алгоритмы [[pt:bidi|двунаправленного текста]] призваны расставить символы в визуальном порядке.</p>
