@@ -1127,9 +1127,9 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private-use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
-      <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but the French delegate insisted that OE was enough.</p>
+      <p>We see characters × and ÷ among letters. Initially, Œœ should have been there, but the French delegate insisted that OE was enough.</p>
      </orig>
      <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
     </text>
@@ -7828,7 +7828,7 @@
       <p />
       <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
       <p />
-      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. [[pt:brahmic|Brahmic abugidas]] have such ligatures in large numbers.</p>
+      <p>2. In fonts{{-}}[[pt:character|glyph]] meaning a sequence of several [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. In [[pt:brahmic|Brahmic abugidas]], such ligatures are numerous.</p>
       <p />
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
