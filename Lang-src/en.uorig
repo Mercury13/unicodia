@@ -7725,6 +7725,30 @@
      </orig>
     </text>
    </group>
+   <group id="hiero">
+    <text id="Name">
+     <orig>logographic (ideographic, hieroglyphic) script</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
+     </orig>
+     <au-cmt>
+      <p>up/down → write “top/bottom” if better in your language</p>
+      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
+     </au-cmt>
+    </text>
+   </group>
    <group id="inclusion">
     <text id="Name">
      <orig>inclusion and diversity</orig>
@@ -7771,30 +7795,6 @@
       <p>* Characters that work in font mechanisms that are impossible to skip silently{{-}}for example, virtual [[pt:virama|viramas]]. If the virama disappears, “kta” turns to “kata”.</p>
       <p>* Characters for complex formatting of [[ps:Egyp|Egyptian hieroglyphs]].</p>
      </orig>
-    </text>
-   </group>
-   <group id="hiero">
-    <text id="Name">
-     <orig>logographic (ideographic, hieroglyphic) script</orig>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
-      <p />
-      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
-      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
-      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
-      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
-      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
-      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
-      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
-      <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
-     </orig>
-     <au-cmt>
-      <p>up/down → write “top/bottom” if better in your language</p>
-      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
-     </au-cmt>
     </text>
    </group>
    <group id="latin1">
