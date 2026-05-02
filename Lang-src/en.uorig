@@ -8016,7 +8016,7 @@
       <p />
       <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with diaeresis, so a precomposed form exists. And Ю́ is just Ю (''yu'') with an optional accent mark, and there’s no{{_}}such precomposed character.</p>
       <p />
-      <p>'''Compatibility:''' if a limited typography engine cannot lay marks, or a limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters are often taken from existing encodings.</p>
+      <p>'''Compatibility:''' if a limited typography engine cannot lay marks, or a limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters often come from existing encodings.</p>
       <p />
       <p>'''Beauty:''' mechanisms for laying marks are often imperfect, especially if the designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may serve as a warning to the designer that ''this happens''.</p>
       <p />
@@ -8034,14 +8034,14 @@
      <orig>
       <p>{{n|6400}} characters E000…F8FF in [[pt:bmp|Basic Plane]], and {{n|131068}} characters in two [[pt:plane|planes]] 0F and 10 (except *FFFE and *FFFF which are [[pt:noncharacter|non-characters]]) are given to everyone’s own needs.</p>
       <p />
-      <p>By mutual agreement, people can encode everything they want in these ranges, including characters that are not eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
+      <p>By mutual agreement, people can encode anything they want in these ranges, including characters not eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
       <p />
       <p>* OS vendors often encode their own logos here. End users grab codes starting from E000 and up, and software vendors{{-}}starting from F8FF and down.</p>
       <p>* ConScript Unicode Registry and its ancestor Under-ConScript Unicode Registry{{-}}over 60 constructed languages, scripts from films, literature and games. Three of them, [[pk:101D0|Phaistos Disc]], [[ps:Shaw|Shavian alphabet]], and [[ps:Dsrt|Deseret alphabet]], were accepted by real Unicode.</p>
       <p>* Standard Music Font Layout (SMuFL){{-}}an open standard of musical fonts to abbreviate [[pk:1D100|sheet music]] PDFs.</p>
       <p>* Proposals to Unicode{{-}}block is not{{_}}yet allocated, and an implementation font has to be made.</p>
       <p />
-      <p>Unofficially, [[pt:control|control]] characters are taken for custom control and format characters: in most cases, they cannot appear in text.</p>
+      <p>Unofficially, [[pt:control|control]] characters are used for custom control and format characters: in most cases, they cannot appear in text.</p>
      </orig>
     </text>
    </group>
@@ -8067,7 +8067,7 @@
      <orig>
       <p>Format for [[pt:serialization|serializing]] a short Unicode string into a chain of printable ASCII characters.</p>
       <p />
-      <p>First, all ASCII characters are written, then a dash, and finally non-ASCII characters are encoded using a complex procedure.</p>
+      <p>First, all ASCII characters are written, then a dash, and finally, non-ASCII characters are encoded using a complex procedure.</p>
       <p>: München = Mnchen-3ya</p>
       <p />
       <p>If the string is purely ASCII, just a dash is appended:</p>
