@@ -11297,7 +11297,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Writing style with low line and plenty of ascenders and descenders. Was used in Middle Ages for economy of parchment, widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
+      <p>Writing style with low line and plenty of ascenders and descenders. It was used in the Middle Ages to save parchment, and was widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], and [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
       <p />
       <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is{{_}}not{{_}}considered minuscule.</p>
      </orig>
@@ -11315,9 +11315,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Imaginable cell monospace text is divided to.</p>
+      <p>Imaginable cell monospace text is divided into.</p>
       <p />
-      <p>[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, alphanumeric printers.</p>
+      <p>[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, and alphanumeric printers.</p>
      </orig>
      <transl>
       <p>Воображаемая клетка, на которые разбивается моноширинный текст. </p>
