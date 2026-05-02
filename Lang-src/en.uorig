@@ -7892,11 +7892,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
+      <p>66 [[pt:codepoint|code points]] are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
-      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal for the program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as a normal unknown character.</p>
+      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal to the program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as a normal unknown character.</p>
       <p />
-      <p>It is '''prohibited''' to enter these characters with the keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent from Unicode.</p>
+      <p>It is '''prohibited''' to enter these characters using the keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent from Unicode.</p>
      </orig>
     </text>
    </group>
@@ -7908,7 +7908,7 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with [[pt:plaintext|plain text]] and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
     </text>
    </group>
