@@ -1436,11 +1436,18 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
+      <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p />
+      <p>We see characters × and ÷ among letters. Initially, Œœ should have been there, but the French delegate insisted that OE was enough.</p>
+     </orig>
+     <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
+     <known-orig>
+      <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
+      <p />
       <p>The first 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: early mail programs discarded the upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are no longer used as intended and often repurposed for [[pt:private|private-use]]. For example, Windows-1252 is a modified version of Latin-1 where control positions are replaced with typographical characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
       <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but the French delegate insisted that OE was enough.</p>
-     </orig>
-     <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
+     </known-orig>
      <transl>
       <p>拉丁文字西欧语言（Latin-1）是 8 位编码 '''ISO{{_}}8859-1''' 的别称， 该编码于 1987 年推出，将 [[pt:ascii|ASCII]] 扩展以支持欧洲语言。</p>
       <p />
@@ -9779,6 +9786,28 @@
     </text>
     <text id="Text">
      <orig>
+      <p>In the early years, when it was often necessary to repeat exchange sessions by hand (using punched tape or console), control characters were used instead of data formats and network protocols. The {{k|Ctrl}} key was initially used to enter control characters. Nowadays, few of them are used:</p>
+      <p />
+      <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
+      <p>* end of file [[pc:04]] (Unix) and [[pc:1A]] (DOS/Windows){{-}}entered from console as {{k|Ctrl|D}}/{{k|Ctrl|Z}} to finish text input;</p>
+      <p>* bell [[pc:07]]{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;</p>
+      <p>* backspace [[pc:08]]{{-}}moves carriage one step back;</p>
+      <p>* tabulation [[pc:09]]{{-}}moves to positions 9, 17, 25, 33… for table formatting;</p>
+      <p>* line feed [[pc:0A]]{{-}}end of line in text file (Unix), turns drum one line forward;</p>
+      <p>* form feed [[pc:0C]]{{-}}printer ejects the sheet;</p>
+      <p>* carriage return [[pc:0D]]. Hence end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;</p>
+      <p>* escape [[pc:1B]]{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
+      <p />
+      <p>Other interesting commands:</p>
+      <p />
+      <p>* vertical tabulation [[pc:0B]]{{-}}turn the drum to a preprogrammed position. Makes printing on existing forms faster and quieter;</p>
+      <p>* shift out/in [[pc:0E]]/[[pc:0F]]{{-}}other ribbon colour, other character set;</p>
+      <p>* data link escape [[pc:10]]{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
+      <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals, the FF character plays this role, that’s why the [[ps:Cyrl|Russian]] “я” was replaced with a capital on file servers and in MUD games.</p>
+      <p />
+      <p>All 65 characters from the Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
+     </orig>
+     <known-orig>
       <p>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats and network protocols. {{k|Ctrl}} key was initially used to enter control characters. Currently few of them are used:</p>
       <p />
       <p>* null character [[pc:00]]{{-}}end of string in memory;</p>
@@ -9799,7 +9828,7 @@
       <p>* delete [[pc:7F]]{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.</p>
       <p />
       <p>All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>在最初的几年里，当经常需要手动重复交换会话（使用打孔纸带或控制台）时，控制字符被用来替代数据格式和网络协议。{{k|Ctrl}} 键最初就是用来输入控制字符的。目前只有少数几个还在使用：</p>
       <p>* 空字符 [[pc:00]]——内存中字符串的结束标记；</p>
@@ -9833,6 +9862,19 @@
      <orig>
       <p>Invisible character that controls various text-processing algorithms:</p>
       <p />
+      <p>* Wraps text into lines: [[pc:00AD]]{{-}}soft hyphen.</p>
+      <p />
+      <p>* Adds semantics to text: [[pc:2062]]{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application [[pc:2061]].</p>
+      <p />
+      <p>* Builds/breaks [[pt:ligature|ligatures]]: [[pc:200D]]{{-}}zero-width joiner.</p>
+      <p />
+      <p>* Specifies writing direction: [[pc:2066]]{{-}}isolate a span of text that goes left-to-right.</p>
+      <p />
+      <p>* Does script-specific tasks that are impossible to implement using font: [[pc:1D173]]{{-}}start a group of musical notes connected with a beam.</p>
+     </orig>
+     <known-orig>
+      <p>Invisible character that controls various text-processing algorithms:</p>
+      <p />
       <p>* Wraps text into lines: 00AD{{-}}soft hyphen.</p>
       <p />
       <p>* Adds semantics to text: 2062{{-}}invisible multiplication sign in equation, and it’s possible to break the line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application 2061.</p>
@@ -9842,7 +9884,7 @@
       <p>* Specifies writing direction: 2066{{-}}isolate a span of text that goes left-to-right.</p>
       <p />
       <p>* Does script-specific tasks that are impossible to implement using font: 1D173{{-}}start a group of musical notes connected with beam.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是一类控制各种文本处理算法的不可见字符：</p>
       <p />
@@ -10282,10 +10324,17 @@
      <orig>
       <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
       <p />
+      <p>Non-linear scripts in which consonants and vowels are joined into syllables are considered alphabets by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by no one at all ([[ps:Laoo|Lao]]).</p>
+      <p />
+      <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it sometimes must be reformed. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
+     </orig>
+     <known-orig>
+      <p>Linear script that writes both consonants and vowels. The first known alphabet is [[ps:Grek|Greek]].</p>
+      <p />
       <p>Non-linear script where consonants and vowels are joined into syllables is considered an alphabet by some sources ([[ps:Thaa|Thaana]], [[ps:Hang|Hangul]]), or by nobody at all ([[ps:Laoo|Lao]]).</p>
       <p />
       <p>With all advantages, alphabets have a severe disadvantage. Due to pronunciation shifts, complex historical orthography emerges, and it must be reformed sometimes. Well, [[ps:Cyrl|Russian]] Yat '''ѣ''' was a separate phoneme that completely disappeared in the 18th century, and was dropped from writing in 1918, more than a century later. The spelling of [[ps:Latn|English]] and French is mostly historical.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>线性文字，同时书写辅音和元音。已知最早的字母文字是 [[ps:Grek|希腊文字]]。</p>
       <p />
@@ -10385,7 +10434,7 @@
       <p />
       <p>'''UnicodeInput'''</p>
       <p />
-      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character to any program.</p>
+      <p>A resident program for Windows that solves drawbacks of [[pt:altcode|Alt codes]]. Sits in the notification area, triggers on {{kb|Alt|Num+}} key and enters any Unicode character into any program.</p>
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Download here]]</p>
      </orig>
@@ -10449,55 +10498,6 @@
      <transl>美国信息交换标准代码</transl>
     </text>
    </group>
-   <group id="brahmic">
-    <text id="Name">
-     <orig>Brahmic abugida, Indic script</orig>
-     <transl>婆罗米系元音附标文字，印度系文字</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
-      <p />
-      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some way across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
-      <p />
-      <p>Features of Brahmic abugidas:</p>
-      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
-      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
-      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
-      <p>* Written left to right, unlike Semitic languages.</p>
-      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
-      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
-      <p />
-      <p>There are several methods to convey complex syllables:</p>
-      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
-      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present at the end of words only. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. Small initial R ({{sm|र्क}} rka) is called ''repha''; small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
-      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
-      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
-      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
-     </orig>
-     <au-cmt>Russian: kssa = кша</au-cmt>
-     <transl>
-      <p>学者们对 [[pt:abugida|元音附标文字]] 的定义存在分歧。但在一点上他们是一致的：'''源自 [[ps:Brah|婆罗米文字]] 的那组文字''' 绝对是元音附标文字。</p>
-      <p />
-      <p>在闪米特语系中，词根由辅音构成，元音用于后缀：在 [[ps:Arab|阿拉伯语]] 中，''Islam''（伊斯兰教）由 ''Muslim''（穆斯林）实践。因此，他们自然地引入了 [[pt:abjad|辅音音素文字]]。当 [[ps:Armi|亚拉姆文字]] 向东传播并与印欧语系碰撞时，出现了一种音节文字，除了 [[pt:cjk|中国、韩国和日本]] 之外，这种文字以某种方式被整个东南亚采纳。</p>
-      <p />
-      <p>婆罗米系元音附标文字的特征：</p>
-      <p>* 辅音字母表示带有某个固有元音的音节，其余元音通过添加元音符号来表示：[[ps:Deva|天城文字]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;。</p>
-      <p>* 要获得单独的辅音，使用 [[pt:virama|怛达点画]]（virama）符号：&lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;。</p>
-      <p>* 其他变音符号：止声（anusvara，辅音后的鼻音）、月点（candrabindu，元音鼻化）、下标点（nukta，借用的音位；这个词中的字母“k”是借用的，写作带下标点）、送气符（visarga，梵语中的 {{t|h}} 音位）。</p>
-      <p>* 与闪米特语言不同，从左向右书写。</p>
-      <p>* 字母顺序是语音学的：首先是元音，然后是从喉咙 {{t|k}} 到牙齿 {{t|s}} 的辅音，最后是送气音 {{t|h}}。</p>
-      <p>* 经常拥有自己的 [[pt:number|数字]]，包括实际使用的和 [[pt:obsolete|废弃的]]。</p>
-      <p />
-      <p>有几种方法来传达复杂的音节：</p>
-      <p>* 使用怛达点画（类似于 pa-n_-da）：单独的辅音是一个独立的音节（[[ps:Tglg|贝贝因文字]]）。</p>
-      <p>* 使用辅音合体（pa-nda）：天城文字 {{sm|क्ष}} kša。输入时就像没有连字一样：ka+怛达点画+ša{{-}}但在显式形式中，怛达点画仅出现在词尾。通常在词尾它也不存在（固有元音变为静音）。在这些合体中，字母 R 经常变小。小的词首 R（{{sm|र्क}} rka）称为 ''repha''；小的下附 R（{{sm|क्र}} kra）是 ''rakar''。</p>
-      <p>* 使用尾辅音（pan-da）{{-}}[[ps:Phag|八思巴文字]]。没有怛达点画。可能存在虚拟怛达点画或其他构成词首辅音合体的手段。</p>
-      <p>* 不完整，难以传达复杂音节（pa-da）{{-}}[[ps:Bugi|布吉文字]]。有些样本退化成了辅音音素文字。</p>
-      <p>* 失去固有元音（pa-nᵊ-da）{{-}}通过改革（[[ps:Laoo|老挝文字]]）或通过自然演变（[[ps:Guru|古木基文字]]）。在后一种情况下，它可能并不总是区分 {{t|na}} 和 {{t|n}}，并在字典中使用怛达点画。</p>
-     </transl>
-    </text>
-   </group>
    <group id="bidi">
     <text id="Name">
      <orig>bidirectional text</orig>
@@ -10505,6 +10505,27 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Text that contains at least one character written right-to-left. The algorithm for processing such a text is complex, let’s describe it in general.</p>
+      <p />
+      <p>1. Split the text into independent lines.</p>
+      <p />
+      <p>2. Split each line into nested segments: the entire line is left-to-right, there are segments right-to-left inside it, they contain left-to-right segments, and so on. There was a bug in iOS: deeply nested segments caused the phone to reboot.</p>
+      <p />
+      <p>3. Isolate European numbers, give them direction left-to-right.</p>
+      <p />
+      <p>4. Give direction to the remaining neutral characters. Reflect if they go right-to-left and are mirrored.</p>
+      <p />
+      <p>5. Execute higher-level protocols{{-}}for example, define the direction of tables.</p>
+      <p />
+      <p>For example: “XX,YY 1.00&amp;lt;2.00 XX” = “ثث,حح 1.00&amp;lt;2.00 ثث”</p>
+      <p />
+      <p>'''What to do for a simple user?'''</p>
+      <p />
+      <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]] and finish with [[pc:PDF]].</p>
+      <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
+      <p>* If you want to write from right to left in a left-to-right language or vice versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
+     </orig>
+     <known-orig>
       <p>Text that contains at least one character written right-to-left. Algorithm of processing such a text is complex, let’s describe it in general.</p>
       <p />
       <p>1. Split text to independent lines.</p>
@@ -10524,7 +10545,7 @@
       <p>* If you write a Hebrew quotation in English text and the system formats it incorrectly, start the quotation with [[pc:LRE]]/[[pc:RLE]], and finish with [[pc:PDF]].</p>
       <p>* You can use [[pc:LRM]], [[pc:RLM]] and [[pc:ALM]] for small bits of text. These are empty characters with strongly-specified direction, and this direction will be maintained until the system finds a character whose direction is known.</p>
       <p>* If you want to write from right to left in a left-to-right language or vice-versa, start the text with [[pc:LRO]]/[[pc:RLO]], and finish with PDF. Avoid this notation, it’s a security issue.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>包含至少一个从右向左书写的字符的文本。处理此类文本的算法非常复杂，我们在此简要描述一下。</p>
       <p />
@@ -10556,6 +10577,25 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes in two languages, English (USA) and Russian, their special keys are identical. Types the following characters using {{k|AltGr}} in Windows, Alt in MacOS:</p>
+      <p />
+      <p>* European letters and punctuation ó ò ö ŏ ǒ ő õ ç ß ¡ ¿</p>
+      <p>* pre-1918 Cyrillic ѣ і ѵ ѳ</p>
+      <p>* mathematics − ± ≠ ≈ ′ ″ × · ∞</p>
+      <p>* some superscripts and fractions ¹²³ ½⅓¼</p>
+      <p>* typography punctuation «» “” „“ ‹› ‘’ • — –</p>
+      <p>* currencies € £ ₽ ¢</p>
+      <p>* arrows ← → ↓ ↑</p>
+      <p>* MacOS interface ⌘ ⌥ ⌃ ⇧</p>
+      <p>* entry of ASCII characters from Russian layout [ { $</p>
+      <p>* measurement units ⌀ ° ‰</p>
+      <p>* intellectual property signs ™ ©</p>
+      <p />
+      <p>Version 3.7, the last as of January 2022, has a [[pt:private|private-use]] character on {{k|AltGr|G}}, Apple logo.</p>
+      <p />
+      <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
+     </orig>
+     <known-orig>
       <p>Comes in two anguages, English (USA) and Russian, their special keys are identical. Types the following characters using {{k|AltGr}} in Windows, Alt in MacOS:</p>
       <p />
       <p>* European letters and punctuation ó ò ö ŏ ǒ ő õ ç ß ¡ ¿</p>
@@ -10573,7 +10613,7 @@
       <p>Version 3.7, last as of January 2022, has a [[pt:private|private-use]] character on {{k|AltGr|G}}, Apple logo.</p>
       <p />
       <p>[[https://ilyabirman.net/typography-layout/|Download here]]</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>提供两种语言版本，英语（美国）和俄语，它们的特殊键位是相同的。在 Windows 中使用 {{k|AltGr}} ，在 MacOS 中使用 Alt 键输入以下字符：</p>
       <p />
@@ -10602,6 +10642,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of living languages are encoded in the Basic Plane, allowing these languages to be processed directly in [[pt:utf16|UTF-16]].</p>
+      <p />
+      <p>Unicode had been a two-byte encoding until 1996, which gave a capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to a compromise in the form of the Basic Plane and UTF-16.</p>
+      <p />
+      <p>As of Unicode{{_}}{{vleft16}}, only 16 positions are unallocated, 2FE0…2FEF.</p>
+      <p />
+      <p>The Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
+     </orig>
+     <au-cmt>{{vleft16}} = version that has those 16 chars left</au-cmt>
+     <known-orig>
       <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of alive languages are encoded in Basic Plane, allowing processing of these languages right in [[pt:utf16|UTF-16]].</p>
       <p />
       <p>Unicode had beed two-byte encoding until 1996, that gave capacity of {{n|65536}} characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
@@ -10609,8 +10659,7 @@
       <p>As of Unicode{{_}}{{vleft16}}, only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and {{n|6400}} [[pt:private|private-use]] characters.</p>
-     </orig>
-     <au-cmt>{{vleft16}} = version that has those 16 chars left</au-cmt>
+     </known-orig>
      <transl>
       <p>包含字符 0000…FFFD 的 Unicode [[pt:plane|平面]] #0 。现存语言中最常用的字符都编码在基本平面中，从而允许直接在 [[pt:utf16|UTF-16]] 中处理这些语言。</p>
       <p />
@@ -10629,6 +10678,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Character [[pu:FEFF]]. It may (not must) be placed at the beginning of a Unicode text file to indicate the [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
+      <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
+      <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (most significant byte first);</p>
+      <p>* FF{{_}}FE, then everything except 00{{_}}00{{-}}UTF-16LE (least significant byte first);</p>
+      <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
+      <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
+      <p />
+      <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do{{_}}not{{_}}occur as text file formats. UTF-32 is extremely rare.</p>
+      <p />
+      <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need a byte order mark.</p>
+     </orig>
+     <known-orig>
       <p>Character [[pu:FEFF]]. It may (not must) be put in the beginning of Unicode text file to indicate [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:</p>
       <p>* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];</p>
       <p>* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (most significant byte first);</p>
@@ -10639,7 +10700,7 @@
       <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do{{_}}not{{_}}occur as a format of text files. UTF-32 is extremely rare.</p>
       <p />
       <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need byte order mark.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>字符 [[pu:FEFF]]。它可以（但不是必须）放在 Unicode 文本文件的开头，以指示[[pt:serialization|序列化]] 格式。编码后的字节顺序标记如下所示：</p>
       <p />
@@ -10655,21 +10716,72 @@
      </transl>
     </text>
    </group>
-   <group id="character">
+   <group id="brahmic">
     <text id="Name">
-     <orig>characters, not glyphs</orig>
-     <transl>字符，而非字形</transl>
+     <orig>Brahmic abugida, Indic script</orig>
+     <transl>婆罗米系元音附标文字，印度系文字</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Character is a unit of meaning. Glyph is a specific image contained in font and drawn on screen/paper.</p>
+      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
-      <p>Characters and glyphs do{{_}}not{{_}}relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by a ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some form across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
+      <p />
+      <p>Features of Brahmic abugidas:</p>
+      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
+      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
+      <p>* Written left to right, unlike Semitic languages.</p>
+      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
+      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
+      <p />
+      <p>There are several methods to convey complex syllables:</p>
+      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but a visible virama is only present at the end of words. Often at the ends of words it’s also absent (the inherent vowel becomes silent). Letter R often becomes small in these conjuncts. The small initial R ({{sm|र्क}} rka) is called ''repha''; the small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
+      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
+      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
+      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
      </orig>
-     <transl>
-      <p>字符是意义的单位。字形是字体中包含的特定图像，绘制在屏幕或纸张上。</p>
+     <au-cmt>Russian: kssa = кша</au-cmt>
+     <known-orig>
+      <p>Scholars disagree on the definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''the group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
-      <p>字符和字形并不是一一对应的关系。''Nastaliq''（纳斯塔利克体），一种 [[ps:Arab|阿拉伯文字]] 文本风格，要求字体中包含数千个字形。但编码只有两百个传达意义的字符。反之亦然，尽管有 [[pt:unification|统一]]，不同的字符也可能共享一个字。</p>
+      <p>In Semitic languages, a word’s root consists of consonants, and vowels are used for suffixes: ''Islam'' is practised by ''Muslim'' in [[ps:Arab|Arabic]]. It was natural for them to introduce a [[pt:abjad|consonant]] script. When the [[ps:Armi|Aramaic]] script spread eastwards and collided with Indo-European languages, a syllabic script emerged which was adopted in some way across all South-East Asia except [[pt:cjk|China, Korea and Japan]].</p>
+      <p />
+      <p>Features of Brahmic abugidas:</p>
+      <p>* Consonant letter means syllable with some inherent vowel, the rest are added with vowel marks: [[ps:Deva|Devanagari]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;.</p>
+      <p>* To get a lone consonant, the [[pt:virama|virama]] sign is used: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>* Other diacritical marks: anusvara (nasal sound after consonant), candrabindu (the vowel is nasalized), nukta (borrowed phonemes; letter “k” in this word is borrowed and is written with nukta), visarga (phoneme {{t|h}} in Sanskrit).</p>
+      <p>* Written left to right, unlike Semitic languages.</p>
+      <p>* Alphabetical order is phonological: first vowels, then consonants from throat {{t|k}} to teeth {{t|s}}, and finally aspirate {{t|h}}.</p>
+      <p>* Own [[pt:number|numerals]] are frequent, both actually used and [[pt:obsolete|obsolete]].</p>
+      <p />
+      <p>There are several methods to convey complex syllables:</p>
+      <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present at the end of words only. Often at the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. Small initial R ({{sm|र्क}} rka) is called ''repha''; small subjoined R ({{sm|क्र}} kra) is ''rakar''.</p>
+      <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
+      <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimens degenerated to consonant scripts.</p>
+      <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case, it may not{{_}}always distinguish {{t|na}} and {{t|n}}, and use virama in dictionaries.</p>
+     </known-orig>
+     <transl>
+      <p>学者们对 [[pt:abugida|元音附标文字]] 的定义存在分歧。但在一点上他们是一致的：'''源自 [[ps:Brah|婆罗米文字]] 的那组文字''' 绝对是元音附标文字。</p>
+      <p />
+      <p>在闪米特语系中，词根由辅音构成，元音用于后缀：在 [[ps:Arab|阿拉伯语]] 中，''Islam''（伊斯兰教）由 ''Muslim''（穆斯林）实践。因此，他们自然地引入了 [[pt:abjad|辅音音素文字]]。当 [[ps:Armi|亚拉姆文字]] 向东传播并与印欧语系碰撞时，出现了一种音节文字，除了 [[pt:cjk|中国、韩国和日本]] 之外，这种文字以某种方式被整个东南亚采纳。</p>
+      <p />
+      <p>婆罗米系元音附标文字的特征：</p>
+      <p>* 辅音字母表示带有某个固有元音的音节，其余元音通过添加元音符号来表示：[[ps:Deva|天城文字]] &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;。</p>
+      <p>* 要获得单独的辅音，使用 [[pt:virama|怛达点画]]（virama）符号：&lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;。</p>
+      <p>* 其他变音符号：止声（anusvara，辅音后的鼻音）、月点（candrabindu，元音鼻化）、下标点（nukta，借用的音位；这个词中的字母“k”是借用的，写作带下标点）、送气符（visarga，梵语中的 {{t|h}} 音位）。</p>
+      <p>* 与闪米特语言不同，从左向右书写。</p>
+      <p>* 字母顺序是语音学的：首先是元音，然后是从喉咙 {{t|k}} 到牙齿 {{t|s}} 的辅音，最后是送气音 {{t|h}}。</p>
+      <p>* 经常拥有自己的 [[pt:number|数字]]，包括实际使用的和 [[pt:obsolete|废弃的]]。</p>
+      <p />
+      <p>有几种方法来传达复杂的音节：</p>
+      <p>* 使用怛达点画（类似于 pa-n_-da）：单独的辅音是一个独立的音节（[[ps:Tglg|贝贝因文字]]）。</p>
+      <p>* 使用辅音合体（pa-nda）：天城文字 {{sm|क्ष}} kša。输入时就像没有连字一样：ka+怛达点画+ša{{-}}但在显式形式中，怛达点画仅出现在词尾。通常在词尾它也不存在（固有元音变为静音）。在这些合体中，字母 R 经常变小。小的词首 R（{{sm|र्क}} rka）称为 ''repha''；小的下附 R（{{sm|क्र}} kra）是 ''rakar''。</p>
+      <p>* 使用尾辅音（pan-da）{{-}}[[ps:Phag|八思巴文字]]。没有怛达点画。可能存在虚拟怛达点画或其他构成词首辅音合体的手段。</p>
+      <p>* 不完整，难以传达复杂音节（pa-da）{{-}}[[ps:Bugi|布吉文字]]。有些样本退化成了辅音音素文字。</p>
+      <p>* 失去固有元音（pa-nᵊ-da）{{-}}通过改革（[[ps:Laoo|老挝文字]]）或通过自然演变（[[ps:Guru|古木基文字]]）。在后一种情况下，它可能并不总是区分 {{t|na}} 和 {{t|n}}，并在字典中使用怛达点画。</p>
      </transl>
     </text>
    </group>
@@ -10680,6 +10792,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>String conversion used for (mostly) locale-independent case-insensitive string comparison. It has two main types and one auxiliary:</p>
+      <p>* Simple (does{{_}}not{{_}}change length): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
+      <p>* Full (unfolds [[pt:ligature|ligatures]]): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
+      <p>* Turkic (special rules for Turkish and Azeri): &lt;big&gt;I → ı&lt;/big&gt;</p>
+      <p />
+      <p>Usually, case folding is conversion to lowercase. But for [[ps:Cher|Cherokee]], it is conversion to uppercase: capital letters were encoded first.</p>
+      <p />
+      <p>Case folding is idempotent: CF(CF(s))=CF(s), i.e. the second folding does nothing.</p>
+     </orig>
+     <known-orig>
       <p>String conversion used for (mostly) locale-independent case-insensitive string somparison. It has two main types and one auxiliary:</p>
       <p>* Simple (does{{_}}not{{_}}change length): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
       <p>* Full (unfolds [[pt:ligature|ligatures]]): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
@@ -10688,7 +10810,7 @@
       <p>Usually case folding is conversion to lower case. But for [[ps:Cher|Cherokee]] it is conversion to upper case: capital letter appeared first.</p>
       <p />
       <p>Case folding is idempotent: CF(CF(s))=CF(s), i.e. the second folding does nothing.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>用于（主要是）不依赖区域设置的不区分大小写的字符串比较的字符串转换。它有两种主要类型和一种辅助类型：</p>
       <p />
@@ -10702,6 +10824,29 @@
      </transl>
     </text>
    </group>
+   <group id="character">
+    <text id="Name">
+     <orig>characters, not glyphs</orig>
+     <transl>字符，而非字形</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>A character is a unit of meaning. A glyph is a specific image in a font, drawn on screen/paper.</p>
+      <p />
+      <p>Characters and glyphs do{{_}}not{{_}}relate one-to-one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+     </orig>
+     <known-orig>
+      <p>Character is a unit of meaning. Glyph is a specific image contained in font and drawn on screen/paper.</p>
+      <p />
+      <p>Characters and glyphs do{{_}}not{{_}}relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+     </known-orig>
+     <transl>
+      <p>字符是意义的单位。字形是字体中包含的特定图像，绘制在屏幕或纸张上。</p>
+      <p />
+      <p>字符和字形并不是一一对应的关系。''Nastaliq''（纳斯塔利克体），一种 [[ps:Arab|阿拉伯文字]] 文本风格，要求字体中包含数千个字形。但编码只有两百个传达意义的字符。反之亦然，尽管有 [[pt:unification|统一]]，不同的字符也可能共享一个字。</p>
+     </transl>
+    </text>
+   </group>
    <group id="cjk">
     <text id="Name">
      <orig>CJK = Chinese, Japanese, Korean</orig>
@@ -10709,7 +10854,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of an [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
       <p>* sweeping writing with brush and ink (except Nüshu);</p>
@@ -10718,6 +10863,16 @@
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
+     <known-orig>
+      <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
+      <p />
+      <p>Features of CJK:</p>
+      <p>* sweeping writing with brush and ink (except Nüshu);</p>
+      <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
+      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
+      <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
+     </known-orig>
      <transl>
       <p>与[[ps:Hani|汉字]] 相近的一组文字。它包含音节的[[ps:Kana|片假名]] 和[[ps:Hira|平假名]]，以及[[pt:arguable|有争议的]] 类型的[[ps:Hang|谚文]]。历史文字包括—— [[ps:Tang|西夏文字]]、[[ps:Kits|契丹小字]]、[[ps:Nshu|女书]]。</p>
       <p />
@@ -10746,8 +10901,20 @@
       <p>* [[pt:noncharacter|Non-character]] (removed from encoding).</p>
       <p>* Vacant (reserved).</p>
       <p />
-      <p>See also [[pt:unification|unification]] (writing different characters with one code point) and duplication (writing a single character with different code points).</p>
+      <p>See also [[pt:unification|unification]] (writing different characters with the same code point) and duplication (writing a single character with different code points).</p>
      </orig>
+     <known-orig>
+      <p>The term “character” is ambiguous, so Unicode refers to its own codes (numbers from 0 to {{n|1114111}}₁₀={{h|10FFFF}}₁₆) as '''code points'''. A code point can be:</p>
+      <p>* [[pt:graphic|Graphic]] (printable) character.</p>
+      <p>* [[pt:control|Control]] command.</p>
+      <p>* [[pt:format|Formatting]] command.</p>
+      <p>* Left for [[pt:private|private]] use.</p>
+      <p>* Left for [[pt:utf16|UTF-16]] surrogate pairs.</p>
+      <p>* [[pt:noncharacter|Non-character]] (removed from encoding).</p>
+      <p>* Vacant (reserved).</p>
+      <p />
+      <p>See also [[pt:unification|unification]] (writing different characters with one code point) and duplication (writing a single character with different code points).</p>
+     </known-orig>
      <transl>
       <p>“字符”一词含义模糊，因此 Unicode 将其自身的代码（从 0 到 {{n|1114111}} ₁₀= {{h|10FFFF}} ₁₆ 的数字）称为 '''码点'''。码点可以是：</p>
       <p />
@@ -10776,10 +10943,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Unicode is used for interchange with other text standards: national, international, and vendor-specific. If variations of a character receive different codes in such standards, they are not [[pt:unification|unified]] in Unicode. This makes possible conversion between encodings through Unicode, lossless round-trip conversion (from encoding to Unicode and vice versa).</p>
+      <p />
+      <p>However, sometimes a single code point in another encoding converts to several characters of Unicode, or vice versa.</p>
+     </orig>
+     <known-orig>
       <p>Unicode is used for interchange with other text standards: national, international, vendor-specific. If variations of one character get different codes in such standards, they are disunified in Unicode. This makes possible conversion between encodings through Unicode, lossless round-trip conversion (from encoding to Unicode and vice-versa).</p>
       <p />
       <p>However, sometimes a single code point of other encoding converts to several characters of Unicode, or vice-versa.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 用于与其他文本标准（国家的、国际的、供应商特定的）进行交换。如果某个字符的变体在这些标准中获得了不同的代码，它们在 Unicode 中就会被取消统一。这使得通过 Unicode 在编码之间进行转换成为可能，实现无损往返转换（从编码到 Unicode，反之亦然）。</p>
       <p>然而，有时其他编码的单个码点会转换为 Unicode 的多个字符，反之亦然。</p>
@@ -10793,6 +10965,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Unicode Consortium does not define what a country is and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Among unusual reasons:</p>
+      <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after independence.</p>
+      <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and renaming.</p>
+      <p>* PS (Palestine): way to recognition.</p>
+      <p>* DG (Diego Garcia) and others: telecommunication sites.</p>
+      <p>* EA (Ceuta and Melilla), IC (Canary Islands): special customs rules different from the common-European.</p>
+      <p>* GG (Guernsey) and others: issue their own postal stamps.</p>
+      <p>* XK (Kosovo): temporary code used by EU.</p>
+      <p />
+      <p>The image of the country emoji (usually flag) is up to the vendor.</p>
+     </orig>
+     <known-orig>
       <p>The Unicode Consortium does not define what is a country and how its flag should look. Instead, it relies on two-letter codes from ISO{{_}}3166. It contains all recognized countries, some dependent territories, and some disputed regions. Among unusual reasons:</p>
       <p>* UA (Ukraine), BY (Belarus): UN members within the USSR, kept their codes after independence.</p>
       <p>* KI (Kiribati, formerly GE=Gilbert Islands) and others: got a new code after liberation and rename.</p>
@@ -10803,7 +10987,7 @@
       <p>* XK (Kosovo): temporary code used by EU.</p>
       <p />
       <p>Image on country emoji (usually flag) is up to vendor.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 联盟不定义什么是国家以及其国旗应该长什么样。相反，它依赖于 ISO{{_}}3166 的双字母代码。它包含所有公认的国家、一些属地以及一些有争议的地区。其中一些不寻常的原因包括：</p>
       <p />
@@ -10826,13 +11010,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>Code is another form of ordinary written text. In other words, we write spoken words with letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
       <p>* communication and signalling (flag semaphore, Morse code);</p>
       <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
       <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
       <p />
       <p>Such systems often span many languages, with different code tables. Even British Braille differs from American.</p>
      </orig>
+     <known-orig>
+      <p>Code is another form of ordinary written text. In other words, we turn spoken words to letters using ordinary spelling rules, and then encode. The purpose of such encoding is different:</p>
+      <p>* communication and signalling (flag semaphore, Morse code);</p>
+      <p>* aids for the disabled ([[ps:Brai|Braille]] embossings, gesture alphabet);</p>
+      <p>* shorthand{{-}}writing done by a specially trained scribe and designed to keep pace with spoken words ([[ps:Dupl|Duployan system]]).</p>
+      <p />
+      <p>Such systems often span many languages, with different code tables. Even British Braille differs from American.</p>
+     </known-orig>
      <transl>
       <p>代码是普通书面文本的另一种形式。换句话说，我们先使用普通的拼写规则将口语转化为字母，然后进行编码。这种编码的目的各不相同：</p>
       <p>* 通信和信号传递（旗语、摩尔斯电码）；</p>
@@ -10859,6 +11051,25 @@
       <p>Unicode divides marks into [[pt:spacing|spacing]], non-spacing and enclosing.</p>
       <p />
       <p>Combining marks are put in several ways in fonts, starting from the most beautiful:</p>
+      <p>* Ligature: a special [[pt:character|glyph]] for the marked character.</p>
+      <p>* Glyph substitution: when put to glyph A, mark B gets shape C. This is used for “squished” diacritics on capital letters, for adjusting the size of Indic vowel marks.</p>
+      <p>* Anchor: a binding point that is put manually.</p>
+      <p>* And default anchor: the mark is put at positive or negative coordinates. When drawn relative to the caret, it finds itself in the right place.</p>
+      <p />
+      <p>Unicode cannot cover several characters with one mark, but exploits some font mechanisms for this:</p>
+      <p>* Some marks are placed halfway above a character, and the other half hangs out, so they cover two characters: {{sm|a͡b}}.</p>
+      <p>* The first character is covered with an initial fragment, the second one etc. with a repeating one, and the last one with a final fragment. This method is implemented badly in most fonts.</p>
+     </orig>
+     <known-orig>
+      <p>Dependent character affixed to the base one. Marks are used for:</p>
+      <p />
+      <p>* diacritics{{-}}marks added to the base letter;</p>
+      <p>* vowel marks in [[pt:abjad|consonant]] scripts and [[pt:abugida|abugidas]];</p>
+      <p>* various “hacks” using [[pt:ligature|ligatures]] in fonts: for example, letter + variation selector = letter of other shape.</p>
+      <p />
+      <p>Unicode divides marks into [[pt:spacing|spacing]], non-spacing and enclosing.</p>
+      <p />
+      <p>Combining marks are put in several ways in fonts, starting from the most beautiful:</p>
       <p>* Ligature: special [[pt:character|glyph]] for marked character.</p>
       <p>* Glyph substitution: when put to glyph A, mark B gets shape C. This is used for “squished” diacritics on capital letters, adjusting size of Indic vowel marks.</p>
       <p>* Anchor: binding point that is put manually.</p>
@@ -10867,7 +11078,7 @@
       <p>Unicode cannot cover several characters with one mark, but exploits some font mechanisms for this:</p>
       <p>* Some marks are placed halfway above character, and the other half hangs out, so they cover two characters: {{sm|a͡b}}.</p>
       <p>* The first character is covered with initial fragment, the second one etc with repeating one, and the last one with final fragment. This method is implemented badly in most fonts.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>附着在基础字符上的从属字符。标记用于：</p>
       <p />
@@ -10898,6 +11109,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Writing style where the scribe quickly writes something down, especially with a fragile goose quill. Features vary from language to language, but generally:</p>
+      <p>* Simple shapes of letters.</p>
+      <p>* Corners are rounded, except sharp ones.</p>
+      <p>* Scribe seldom lifts quill{{-}}hence joined letters, one stroke followed back and forth, loops in ascenders and descenders.</p>
+      <p>* Letters join into [[pt:ligature|ligatures]].</p>
+      <p />
+      <p>''Italic'' type came from cursive, and in some languages it is named with the same term as cursive.</p>
+      <p />
+      <p>Do{{_}}not{{_}}confuse with ''shorthand'', where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
+     </orig>
+     <known-orig>
       <p>Writing style where the scribe quickly writes something down, especially with fragile goose quill. Features vary from language to language, but generally:</p>
       <p>* Simple shapes of letters.</p>
       <p>* Corners are rounded, except sharp ones.</p>
@@ -10907,7 +11129,7 @@
       <p>''Italic'' type comes from cursive, and in some languages is named with same word as cursive.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with ''shorthand'' where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>一种书写风格，书记员快速地写下内容，特别是使用易损的鹅毛笔时。特征因语言而异，但通常包括：</p>
       <p />
@@ -10931,6 +11153,23 @@
      <orig>
       <p>Character whose use is strongly discouraged.</p>
       <p />
+      <p>One of Unicode’s [[pt:stability|stability]] guarantees: once a character is assigned, it won’t move or disappear. If the character is bad, it becomes deprecated. The reasons for deprecation are different.</p>
+      <p />
+      <p>The Unicode Consortium consists of people from Western culture, and they can only refer to studies of rare-language specialists{{-}}this happened for five characters in [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
+      <p />
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (another algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}{{vdeprec15}}.</p>
+      <p />
+      <p>Several cases of returning characters to use are known:</p>
+      <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
+      <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 they are just not{{_}}recommended.</p>
+      <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2, it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding a font in which ligatures fit within the cell.</p>
+      <p />
+      <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
+     </orig>
+     <au-cmt>vdeprec15 = version of Unicode with 15 deprecated characters</au-cmt>
+     <known-orig>
+      <p>Character whose use is strongly discouraged.</p>
+      <p />
       <p>One of Unicode’s [[pt:stability|stability]] guarantees: once the character is assigned, it won’t move or disappear. If the character is bad, it becomes deprecated. The reasons for deprecation are different.</p>
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
@@ -10943,8 +11182,7 @@
       <p>* 17D3 (Khmer mark ''bathamasat''). With the advent of [[pt:precomposed|precomposed]] characters of the [[pk:19E0|moon calendar]], it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 it is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. The author of ''Unicodia'' had trouble finding font where ligatures fit into the cell.</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
-     </orig>
-     <au-cmt>vdeprec15 = version of Unicode with 15 deprecated characters</au-cmt>
+     </known-orig>
      <transl>
       <p>强烈不鼓励使用的字符。</p>
       <p />
@@ -10971,10 +11209,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] by using dynamic composition{{-}}character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
+      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] through dynamic composition{{-}}a character’s image is constructed on the fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
       <p />
       <p>To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</p>
      </orig>
+     <known-orig>
+      <p>Unicode achieves such an ambitious goal as [[pt:universality|universality]] by using dynamic composition{{-}}character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.</p>
+      <p />
+      <p>To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</p>
+     </known-orig>
      <transl>
       <p>Unicode 通过使用动态组合实现了 [[pt:universality|通用性]] 这样一个雄心勃勃的目标——字符的图像是即时由各个部分构建而成的。有时为了方便会制作 [[pt:precomposed|预组]] 字符，但通常来说 &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;。</p>
       <p />
@@ -11001,7 +11244,7 @@
       <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
       <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
       <p>* The hieroglyph is extended if it’s widely used in modern publications.</p>
-      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in multiple forms, some may be excluded from the core list.</p>
       <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. They have an equivalent sequence: how would they have been encoded today?</p>
       <p>* The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
       <p />
@@ -11012,6 +11255,29 @@
       <p>* special characters: {{hspecial}}</p>
      </orig>
      <au-cmt>JSesh, Hieroglyphica are always Latin</au-cmt>
+     <known-orig>
+      <p>In early 2025, principles for encoding [[ps:Egyp|Egyptian hieroglyphs]] were written.</p>
+      <p />
+      <p>* A hieroglyph can have plenty of forms: a man bowing down slightly or deeply, a snake with 2, 3 or more coils. These forms are encoded at scholars’ discretion.</p>
+      <p>* Hieroglyphs are encoded in the most detailed form. Really fine details like armbands are omitted at scholars’ discretion.</p>
+      <p>* Sometimes scholars argue on the subject: [[pc:130FC]]{{-}}basket or alabaster basin? Unicode does not support either opinion and omits details.</p>
+      <p>* Size and colour are not encoded.</p>
+      <p>* If such fine details are truly important, Unicode is just not for you. Include the image.</p>
+      <p>* Similar signs with different meanings are encoded separately. A circle might represent a tambourine, a ring, a pit…</p>
+      <p>* If a hieroglyph can be constructed by mirroring, rotation and combining, it does not get a separate [[pt:codepoint|code point]].</p>
+      <p>* But if such a form carries special meaning (leg+knife=injury), it will get.</p>
+      <p>* Hieroglyphs are divided into three types: core, legacy and extended.</p>
+      <p>* The hieroglyph is extended if it’s widely used in modern publications.</p>
+      <p>* The hieroglyph is core if it’s verified with a reliable image (photo or trustworthy tracing). If it’s attested in hieratic texts, its hieroglyphic form must be easily reconstructable. If it’s encoded in several forms, some of the forms may be excluded from the core list.</p>
+      <p>* Trivial forms and combinations from Unicode{{_}}5.2 are legacy. They have an equivalent sequence: how would they have been encoded today?</p>
+      <p>* The rest of Unicode{{_}}5.2 (based on Gardiner’s list) is automatically core.</p>
+      <p />
+      <p>Unicode {{version}} contains:</p>
+      <p>* core hieroglyphs: {{hcore}}</p>
+      <p>* legacy: {{hlegacy}}</p>
+      <p>* extended: {{hextended}}</p>
+      <p>* special characters: {{hspecial}}</p>
+     </known-orig>
      <transl>
       <p>2025 年初，[[ps:Egyp|埃及象形文字]] 的编码原则被制定出来。</p>
       <p />
@@ -11047,12 +11313,21 @@
      <orig>
       <p>From Japanese {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol''.</p>
       <p />
+      <p>Invented by cellphone operator NTT DoCoMo around 1999 to save characters in SMS. Western operators began developing their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emojis are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: the highest school grade {{em|💯}} became “fully agree”.</p>
+      <p />
+      <p>Several old pre-2010 pictograms are guaranteed to display as emoji only with the [[pu:FE0F]] character (''aka'' variation selector 16).</p>
+      <p />
+      <p>All emojis are [[pt:spacing|spacing]] characters.</p>
+     </orig>
+     <known-orig>
+      <p>From Japanese {{sm|絵}} ''e{{-}}picture'' + {{sm|文字}} ''moji{{-}}character, symbol''.</p>
+      <p />
       <p>Invented by cellphone operator NTT DoCoMo about 1999 for economy of characters in SMS. Western operators started to develop their sets in 2004, and in 2010 DoCoMo’s encoding was brought to Unicode{{_}}6.0. Many emoji are specific to Japan: bowing businessman {{em|🙇}}, beginner driver sign {{em|🔰}}… Others changed their meaning outside Japan: highest school grade {{em|💯}} turned to “fully agree”.</p>
       <p />
       <p>Several old pre-2010 pictograms are guaranteed to show as emoji only with [[pu:FE0F]] character (''aka'' variation selector 16).</p>
       <p />
       <p>All emoji are [[pt:spacing|spacing]] characters.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>源自日语 {{sm|絵}} ''e—图片'' + {{sm|文字}} ''moji—字符、符号''。</p>
       <p />
@@ -11073,6 +11348,18 @@
      <orig>
       <p>Unicode strives to make efficient implementations possible. Particularly:</p>
       <p />
+      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Conversely, telegraph code 1 corresponds to E on the letter page and to 3 on the figure page.</p>
+      <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
+      <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if working right in UTF-8/16 is impossible, lookup tables still work.</p>
+      <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
+      <p>* Characters of one script are grouped together as far as practical.</p>
+      <p>* Punctuation marks are common for all scripts.</p>
+      <p>* Format characters are described as much as possible.</p>
+      <p>* [[pt:format|Format]] characters that change the inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
+     </orig>
+     <known-orig>
+      <p>Unicode strives to make efficient implementations possible. Particularly:</p>
+      <p />
       <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Contrary, in telegraph code 1 means E in letter page and 3 in figure page.</p>
       <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
       <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if work right in UTF-8/16 is impossible, lookup tables still work.</p>
@@ -11081,7 +11368,7 @@
       <p>* Punctuation marks are common for all scripts.</p>
       <p>* Format characters are described as much as possible.</p>
       <p>* [[pt:format|Format]] characters that change inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 致力于使高效的实现成为可能。特别是：</p>
       <p />
@@ -11109,6 +11396,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
+      <p />
+      <p>A [[pc:200B|zero-width space]] is a format character rather than a space, so it is '''not'''{{_}}graphic.</p>
+      <p />
+      <p>Paradox: invisible marks are simultaneously graphic and [[pt:ignorable|default-ignorable]].</p>
+      <p />
+      <p>Do{{_}}not{{_}}confuse with [[pt:pseudographics|pseudographics]].</p>
+     </orig>
+     <known-orig>
       <p>Character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
       <p />
       <p>Zero-width space is considered format rather than space{{-}}so it is '''not'''{{_}}graphic.</p>
@@ -11116,7 +11412,7 @@
       <p>Paradox: invisible marks are simultaneously graphic and [[pt:ignorable|default-ignorable]].</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[pt:pseudographics|pseudographics]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>在屏幕和纸张上书写的字符。任何除了 [[pt:control|控制]]、[[pt:format|格式]]、行和段落分隔符之外的字符——甚至包括空格和不可见的 [[pt:combining|标记]]。</p>
       <p />
@@ -11128,6 +11424,57 @@
      </transl>
     </text>
    </group>
+   <group id="hiero">
+    <text id="Name">
+     <orig>logographic (ideographic, hieroglyphic) script</orig>
+     <transl>语标（表意、象形）文字系统</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>The transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
+     </orig>
+     <au-cmt>
+      <p>up/down → write “top/bottom” if better in your language</p>
+      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
+     </au-cmt>
+     <known-orig>
+      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
+      <p />
+      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
+      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
+      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
+      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
+      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
+      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
+      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
+      <p />
+      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
+     </known-orig>
+     <transl>
+      <p>通常被称为''象形''或''表意''的非拼音文字系统，更准确的称呼是'''语标文字'''：一个字符（或一组字符）代表一个单词或其组成部分。</p>
+      <p />
+      <p>这些文字系统的构造在 ''' [[ps:Hani|中日韩表意文字]] ''' 中体现得尤为明显。字符传统上分为六类。</p>
+      <p>* 象形字指代所描绘的具体物体：{{sm|山}} 山</p>
+      <p>* 指事字将抽象概念可视化：{{sm|上}} 上，{{sm|下}} 下</p>
+      <p>* 会意字： {{sm|休}} 休 = {{sm|人}} 人 + {{sm|木}} 木</p>
+      <p>* 意义不同读音也不同的新字（转注）：{{sm|樂}} （繁体）/ {{sm|乐}} （简体）yuè（音乐），以及 lè（快乐）</p>
+      <p>* 假借读音（假借）：{{sm|自}} 鼻 → 自己（在古汉语中读音相似）</p>
+      <p>* 形声字（读音+部首）：{{sm|樑}} liáng（梁，建筑中的横梁）= {{sm|木}} 木 + {{sm|梁}} liáng</p>
+      <p />
+      <p>从表意文字向 [[pt:syllabic|音节文字]] 的过渡很简单：只需用合适的单音节表意字来书写一个生僻词就足够了。除了中国以外，欧亚大陆的所有主要文明在公元纪元开始时都已经放弃了表意文字。</p>
+     </transl>
+    </text>
+   </group>
    <group id="inclusion">
     <text id="Name">
      <orig>inclusion and diversity</orig>
@@ -11135,6 +11482,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>One of the [[pt:emoji|emoji]] principles, which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p />
+      <p>Initially, people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with a special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
+      <p />
+      <p>Most emojis are genderless. If you want, you may add a gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emojis: {{em|🤱}}{{_}}breastfeeding and {{em|🧕}}{{_}}woman in a headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in a tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
+      <p />
+      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change the glyph.</p>
+      <p />
+      <p>If an emoji depicts several people, gender and skin tone are handled case-by-case. In breastfeeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
+      <p />
+      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
+      <p />
+      <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
+     </orig>
+     <known-orig>
       <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion: families of various racial composition would have been {{n|4225}} glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
       <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
@@ -11148,7 +11510,7 @@
       <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. Unicode{{_}}{{version}} has {{ncolor}} coloured emoji, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[pt:emoji|表情符号]] 的原则之一，然而，它并非从一开始就存在。它意味着表情符号必须在尽可能不导致组合爆炸的情况下支持种族、性别和其他少数群体：各种种族构成的家庭本将会有 {{n|4225}} 个字形。''（Unicode{{_}}{{version}} 包含 {{nemoji}} 个表情符号。）''</p>
       <p />
@@ -11173,6 +11535,25 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Unicode is large and is constantly expanding: version {{version}} has {{nchars}} characters. So even a large font collection does{{_}}not{{_}}support the entire Unicode.</p>
+      <p />
+      <p>If no glyph is found in fonts, the character is usually displayed as a [[pt:tofu|tofu]]{{-}}a white box. '''But some characters are just omitted.'''</p>
+      <p />
+      <p>Most default-ignorable characters are [[pt:format|format]], but nonspacing [[pt:combining|marks]] are present. Default-ignorable characters fall into these categories:</p>
+      <p />
+      <p>* Characters that convey ancillary semantics: soft hyphen [[pc:00AD]], grapheme joiner [[pc:034F]], [[pk:E0000|tags]]…</p>
+      <p>* Writing [[pt:bidi|direction]] tags: marks [[pc:LRM]] and [[pc:RLM]].</p>
+      <p>* Font mechanisms that are safe to skip silently: zero-width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when the ligature is missing, regardless of whether the font has ZWJ.</p>
+      <p>* Zero-width space [[pc:ZWSP]]; [[pt:bom|byte order mark]] BOM that’s also a zero-width space; zero-width non-joiner [[pt:zwnj|ZWNJ]].</p>
+      <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
+      <p />
+      <p>These characters '''are{{_}}not''' default-ignorable:</p>
+      <p>* All having graphic form, all [[pt:spacing|spacing]].</p>
+      <p>* [[pt:control|Control]], line separators.</p>
+      <p>* Characters that work in font mechanisms that are impossible to skip silently{{-}}for example, virtual [[pt:virama|viramas]]. If the virama disappears, “kta” turns to “kata”.</p>
+      <p>* Characters for complex formatting of [[ps:Egyp|Egyptian hieroglyphs]].</p>
+     </orig>
+     <known-orig>
       <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even a large font collection does{{_}}not{{_}}support the entire Unicode.</p>
       <p />
       <p>If no glyph found in fonts, the character is usually displayed as [[pt:tofu|tofu]]{{-}}white box. '''But some characters are just omitted.'''</p>
@@ -11190,7 +11571,7 @@
       <p>* [[pt:control|Control]], line separators.</p>
       <p>* Characters that work in font mechanisms that are impossible to skip silently{{-}}for example, virtual [[pt:virama|viramas]]. If the virama disappears, “kta” turns to “kata”.</p>
       <p>* Characters for complex formatting of [[ps:Egyp|Egyptian hieroglyphs]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 庞大且不断扩展：版本 {{version}} 拥有 {{nchars}} 个字符。所以即使是庞大的字体集合也不支持整个 Unicode。</p>
       <p />
@@ -11209,44 +11590,6 @@
       <p>* [[pt:control|控制]]，行分隔符。</p>
       <p>* 在无法静默跳过的字体机制中工作的字符——例如，虚拟 [[pt:virama|止音符]]。如果止音符消失，“kta” 会变成 “kata”。</p>
       <p>* 用于 [[ps:Egyp|埃及象形文字]] 复杂格式化的字符。</p>
-     </transl>
-    </text>
-   </group>
-   <group id="hiero">
-    <text id="Name">
-     <orig>logographic (ideographic, hieroglyphic) script</orig>
-     <transl>语标（表意、象形）文字系统</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Non-phonetic scripts commonly known as ''hieroglyphic'' or ''ideographic'' are more precisely called '''logographic''': a character (or a group of characters) denotes a word or its part.</p>
-      <p />
-      <p>The anatomy of these scripts is well seen in '''[[ps:Hani|CJK ideographs]]'''. Characters are traditionally classified into six types.</p>
-      <p>* Pictograms mean the very object that’s drawn: {{sm|山}} mountain</p>
-      <p>* Ideograms visualize abstract concepts: {{sm|上}} up, {{sm|下}} down</p>
-      <p>* Compound ideographs: {{sm|休}} rest = {{sm|人}} person + {{sm|木}} tree</p>
-      <p>* New meanings with different pronunciations: {{sm|樂}} (traditional) / {{sm|乐}} (simp.China) yuè (music), and also lè (pleasure)</p>
-      <p>* Loaned by pronunciation: {{sm|自}} nose → self (in Old Chinese had similar pronunciation)</p>
-      <p>* Pronunciation+classifier: {{sm|樑}} liáng (beam in construction) = {{sm|木}} wood + {{sm|梁}} liáng</p>
-      <p />
-      <p>Transition from ideographs to [[pt:syllabic|syllabic script]] is simple: it’s enough to write an unknown word with suitable one-syllable ideographs. All major civilizations of Eurasia except the Chinese had abandoned ideographs by the beginning of the common era.</p>
-     </orig>
-     <au-cmt>
-      <p>up/down → write “top/bottom” if better in your language</p>
-      <p>Of course, if BEAM has no homonyms, don’t write “in construction”</p>
-     </au-cmt>
-     <transl>
-      <p>通常被称为''象形''或''表意''的非拼音文字系统，更准确的称呼是'''语标文字'''：一个字符（或一组字符）代表一个单词或其组成部分。</p>
-      <p />
-      <p>这些文字系统的构造在 ''' [[ps:Hani|中日韩表意文字]] ''' 中体现得尤为明显。字符传统上分为六类。</p>
-      <p>* 象形字指代所描绘的具体物体：{{sm|山}} 山</p>
-      <p>* 指事字将抽象概念可视化：{{sm|上}} 上，{{sm|下}} 下</p>
-      <p>* 会意字： {{sm|休}} 休 = {{sm|人}} 人 + {{sm|木}} 木</p>
-      <p>* 意义不同读音也不同的新字（转注）：{{sm|樂}} （繁体）/ {{sm|乐}} （简体）yuè（音乐），以及 lè（快乐）</p>
-      <p>* 假借读音（假借）：{{sm|自}} 鼻 → 自己（在古汉语中读音相似）</p>
-      <p>* 形声字（读音+部首）：{{sm|樑}} liáng（梁，建筑中的横梁）= {{sm|木}} 木 + {{sm|梁}} liáng</p>
-      <p />
-      <p>从表意文字向 [[pt:syllabic|音节文字]] 的过渡很简单：只需用合适的单音节表意字来书写一个生僻词就足够了。除了中国以外，欧亚大陆的所有主要文明在公元纪元开始时都已经放弃了表意文字。</p>
      </transl>
     </text>
    </group>
@@ -11282,6 +11625,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A ligature is several characters fused into one:</p>
+      <p />
+      <p>1. In typography: a character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
+      <p />
+      <p>2. In fonts: a [[pt:character|glyph]] corresponding to a sequence of [[pt:codepoint|code points]]. For example, in some fonts typing “fi” produces the ligature '''ﬁ'''. In [[pt:brahmic|Brahmic abugidas]], such ligatures are numerous.</p>
+      <p />
+      <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
+      <p />
+      <p>[[pt:casefolding|Case folding]] ''can'' break ligatures.</p>
+     </orig>
+     <known-orig>
       <p>Ligature is several characters fused into one:</p>
       <p />
       <p>1. In typography{{-}}character consisting of several. For example, ampersand '''&amp;''' is a ligature of Latin ''et'' “and”.</p>
@@ -11291,7 +11645,7 @@
       <p>All ligatures are [[pt:spacing|spacing]] characters.</p>
       <p />
       <p>[[pt:casefolding|Case folding]] ''can'' break ligatures.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>合字是将多个字符融合为一个：</p>
       <p />
@@ -11331,12 +11685,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Unicode stores characters in logical order that roughly corresponds to the order of pronunciation or typing on a keyboard. This order does not{{_}}correspond to the on-screen progression order, and algorithms of [[pt:bidi|bidirectional text]] are designed to place characters in visual order.</p>
+      <p />
+      <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
+      <p />
+      <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before a consonant, even if pronounced after.</p>
+     </orig>
+     <known-orig>
       <p>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put characters in visual order.</p>
       <p />
       <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
       <p />
       <p>Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before consonant, even if read after.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 以逻辑顺序存储字符，该顺序大致对应于发音顺序或通过键盘输入的顺序。此顺序并不对应于屏幕上的显示顺序，而 [[pt:bidi|双向文本]] 的算法正是为了将字符转换为视觉顺序而设计的。</p>
       <p />
@@ -11353,10 +11714,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Writing style with low line and plenty of ascenders and descenders. Was used in Middle Ages for economy of parchment, widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
+      <p>Writing style with low line and plenty of ascenders and descenders. It was used in the Middle Ages to save parchment, and was widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], and [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
       <p />
       <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is{{_}}not{{_}}considered minuscule.</p>
      </orig>
+     <known-orig>
+      <p>Writing style with low line and plenty of ascenders and descenders. Was used in Middle Ages for economy of parchment, widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
+      <p />
+      <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is{{_}}not{{_}}considered minuscule.</p>
+     </known-orig>
      <transl>
       <p>一种具有低基线以及大量上升笔画和下降笔画的书写风格。这种风格在中世纪被用于节省羊皮纸，广泛流行于 [[ps:Latn|拉丁文字]]、[[ps:Geor|格鲁吉亚文字]] 和 [[ps:Grek|希腊文字]] 中。在拉丁文中，它演变成了小写字母。相比之下，格鲁吉亚文仅在技术上属于双态文字。</p>
       <p />
@@ -11371,10 +11737,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Imaginable cell monospace text is divided into.</p>
+      <p />
+      <p>[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, and alphanumeric printers.</p>
+     </orig>
+     <known-orig>
       <p>Imaginable cell monospace text is divided to.</p>
       <p />
       <p>[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, alphanumeric printers.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>可以将等宽文本划分成的假想单元格。</p>
       <p />
@@ -11389,12 +11760,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>66 [[pt:codepoint|code points]] are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
+      <p />
+      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal to the program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as a normal unknown character.</p>
+      <p />
+      <p>It is '''prohibited''' to enter these characters using the keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent from Unicode.</p>
+     </orig>
+     <known-orig>
       <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
       <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
       <p />
       <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>66 个码点是“非字符”：所有 17 个平面中的 *FFFE 和 *FFFF，以及 FDD0…FDEF。它们将永远不会在 Unicode 中再次出现。</p>
       <p />
@@ -11413,8 +11791,13 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files, and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with [[pt:plaintext|plain text]] and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
+     <known-orig>
+      <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
+      <p />
+      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files, and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+     </known-orig>
      <transl>
       <p>非文本信息的书写：音乐（[[pk:1D100|音符]]）、技术图纸（[[pk:2300|技术符号]]）、手势（[[ps:Sgnw|手语书写]]）。</p>
       <p />
@@ -11435,12 +11818,25 @@
       <p />
       <p>2. NFC = canonical composition. NFD, then assembly of precomposed characters and Hangul syllables.</p>
       <p />
+      <p>3. NFKD = compatible decomposition. NFD + disassembly of [[pt:ligature|ligatures]], replacement of letter-like characters with letters, subscripts with numbers, half-width to standard and so on.</p>
+      <p />
+      <p>4. NFKC = compatible composition. NFKD, then '''canonical''' composition of characters, as in NFC.</p>
+      <p />
+      <p>All four normalizations are idempotent: NFD(NFD(s))=NFD(s) and so on. In other words, the second normalization will do nothing.</p>
+     </orig>
+     <known-orig>
+      <p>String conversion for fuzzy comparison. Unicode has four types of normalization:</p>
+      <p />
+      <p>1. NFD = canonical decomposition: disassembly of [[pt:precomposed|precomposed]] characters, [[ps:Hang|Hangul]] syllables into jamo (letters), replacement of some signs like Ohm and Ångström, sorting of [[pt:combining|marks]] into standard order.</p>
+      <p />
+      <p>2. NFC = canonical composition. NFD, then assembly of precomposed characters and Hangul syllables.</p>
+      <p />
       <p>3. NFKD = compatible decomposition. NFD + disassembly of [[pt:ligature|ligatures]], replacement of letterlike characters with letters, subscripts with numbers, half-width to standard and so on.</p>
       <p />
       <p>4. NFKC = compatible composition. NFKD, then '''canonical''' composition of characters, as in NFC.</p>
       <p />
       <p>All four normalizations are idempotent: NFD(NFD(s))=NFD(s) and so on. In ither words, the second normalization will do nothing.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>用于模糊比较的字符串转换。Unicode 有四种归一化类型：</p>
       <p />
@@ -11470,10 +11866,21 @@
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and numbers: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
-      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang, Vietnamese and Tay.</p>
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changes to numbers), Zhuang, Vietnamese and Tay.</p>
       <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
+     <known-orig>
+      <p>Unicode divides number characters into three classes.</p>
+      <p />
+      <p>* Decimal positional digits{{-}}both standard [[pt:ascii|ASCII]] digits 0…9 and digits of other scripts ([[ps:Deva|Devanagari]] ०…९).</p>
+      <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
+      <p>* Other digits and numbers: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
+      <p />
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang, Vietnamese and Tay.</p>
+      <p />
+      <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
+     </known-orig>
      <transl>
       <p>Unicode 将数字字符分为三类。</p>
       <p />
@@ -11498,8 +11905,15 @@
       <p />
       <p>It is legitimate to use it in an appropriate context: “ƿið” = ''with''.</p>
       <p />
-      <p>Do{{_}}not{{_}}confuse with [[pt:deprecated|deprecated character]].</p>
+      <p>Do{{_}}not{{_}}confuse with a [[pt:deprecated|deprecated character]].</p>
      </orig>
+     <known-orig>
+      <p>Character that fell out of use. For example, [[ps:Latn|Latin]] Wynn &lt;big&gt;'''Ƿ'''&lt;/big&gt; evolved into '''W''' in Middle English.</p>
+      <p />
+      <p>It is legitimate to use it in an appropriate context: “ƿið” = ''with''.</p>
+      <p />
+      <p>Do{{_}}not{{_}}confuse with [[pt:deprecated|deprecated character]].</p>
+     </known-orig>
      <transl>
       <p>不再使用的字符。例如，[[ps:Latn|拉丁文字]] 中的 Wynn '''Ƿ''' 在中古英语中演变成了 '''W'''。</p>
       <p />
@@ -11516,6 +11930,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Plain text is a sequence of character codes, unlike ''rich/formatted text'', which may contain visual elements such as colours, fonts, and hyperlinks. If those elements are stripped from rich text, everything that remains is plain text.</p>
+      <p />
+      <p>To turn plain text data into a line of visible text, a process named ''rendering'' is involved. If you feed the plain text to another renderer, the text will probably look different.</p>
+      <p />
+      <p>The standard contains two short phrases.</p>
+      <p />
+      <p>1. The Unicode Standard encodes plain text.</p>
+      <p />
+      <p>2. Plain text must contain enough information to permit the text to be rendered legibly, and nothing more.</p>
+     </orig>
+     <known-orig>
       <p>Plain text is a sequence of character codes, contrary to ''rich/formatted text'' that may contain visual elements like colours, fonts, hyperlinks. If those elements are stripped from rich text, everything remaining is plain text.</p>
       <p />
       <p>To turn plain text data into a line of visible text, a process named ''rendering'' is involved. If you feed the plain text to another implementation of renderer, the text will probably look different.</p>
@@ -11525,7 +11950,7 @@
       <p>1. The Unicode Standard encodes plain text.</p>
       <p />
       <p>2. Plain text must contain enough information to permit the text to be rendered legibly, and nothing more.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>纯文本是一串字符代码，这与可能包含颜色、字体、超链接等视觉元素的 ''富文本/格式化文本'' 相反。如果从富文本中剥离这些元素，剩下的所有内容就是纯文本。</p>
       <p />
@@ -11548,6 +11973,21 @@
      <orig>
       <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
       <p />
+      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most living languages. There are 16 unassigned positions in Unicode{{_}}{{vleft16}}.</p>
+      <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is {{plane%|1}} full.</p>
+      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{plane%|2}} full.</p>
+      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{plane%|3}} full.</p>
+      <p>* Planes 4 to 0D are unused.</p>
+      <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains fewer than {{approx14}} special characters.</p>
+      <p>* Planes 0F and 10 are left for [[pt:private|private use]].</p>
+     </orig>
+     <au-cmt>
+      <p>{{vleft16}} = version that has those 16 chars left</p>
+      <p>{{plane%}} = plane fill %</p>
+     </au-cmt>
+     <known-orig>
+      <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
+      <p />
       <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}{{vleft16}}.</p>
       <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is {{plane%|1}} full.</p>
       <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{plane%|2}} full.</p>
@@ -11555,11 +11995,7 @@
       <p>* Planes 4 to 0D are unused.</p>
       <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than {{approx14}} special characters.</p>
       <p>* Planes 0F and 10 are left for [[pt:private|private use]].</p>
-     </orig>
-     <au-cmt>
-      <p>{{vleft16}} = version that has those 16 chars left</p>
-      <p>{{plane%}} = plane fill %</p>
-     </au-cmt>
+     </known-orig>
      <transl>
       <p>字符范围从 *0000 到 *FFFD。每个平面的最后两个 [[pt:codepoint|码位]]，即 *FFFE 和 *FFFF，是 [[pt:noncharacter|非字符]]。由于 [[pt:utf16|UTF-16]] 的限制，Unicode 共有十七个平面。</p>
       <p />
@@ -11580,6 +12016,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is composed of a character and a mark, whereas '''á''' is a single precomposed character.</p>
+      <p />
+      <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
+      <p />
+      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with diaeresis, so a precomposed form exists. And Ю́ is just Ю (''yu'') with an optional accent mark, and there’s no{{_}}such precomposed character.</p>
+      <p />
+      <p>'''Compatibility:''' if a limited typography engine cannot lay marks, or a limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters often come from existing encodings.</p>
+      <p />
+      <p>'''Beauty:''' mechanisms for laying marks are often imperfect, especially if the designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may serve as a warning to the designer that ''this happens''.</p>
+      <p />
+      <p>In a wider sense, precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
+      <p />
+      <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
+     </orig>
+     <known-orig>
       <p>Character and [[pt:combining|combining mark]] in one. For example, '''á''' is assembled from a character and a mark, and '''á''' is one precomposed character.</p>
       <p />
       <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
@@ -11593,7 +12044,7 @@
       <p>In a wider sense, precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
       <p />
       <p>All precomposed characters are [[pt:spacing|spacing]]. See also [[pt:normalization|Normalization]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>一个字符和一个 [[pt:combining|组合标记]] 合二为一。例如，'''á''' 是由一个字符和一个标记组装而成的，而 '''á''' 是一个预组合字符。</p>
       <p />
@@ -11618,6 +12069,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>{{n|6400}} characters E000…F8FF in [[pt:bmp|Basic Plane]], and {{n|131068}} characters in two [[pt:plane|planes]] 0F and 10 (except [[pt:noncharacter|non-characters]] *FFFE and *FFFF) are given to everyone’s own needs.</p>
+      <p />
+      <p>By mutual agreement, people can encode anything they want in these ranges, including characters not eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. The Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
+      <p />
+      <p>* OS vendors often encode their own logos here. End users grab codes starting from E000 and up, and software vendors{{-}}starting from F8FF and down.</p>
+      <p>* ConScript Unicode Registry and its ancestor Under-ConScript Unicode Registry{{-}}over 60 constructed languages, scripts from films, literature and games. Three of them, [[pk:101D0|Phaistos Disc]], [[ps:Shaw|Shavian alphabet]], and [[ps:Dsrt|Deseret alphabet]], were accepted by real Unicode.</p>
+      <p>* Standard Music Font Layout (SMuFL){{-}}an open standard of musical fonts to abbreviate [[pk:1D100|sheet music]] PDFs.</p>
+      <p>* Proposals to Unicode{{-}}the block is not{{_}}yet allocated, and an implementation font has to be made.</p>
+      <p />
+      <p>Unofficially, [[pt:control|control]] characters are used for custom control and format characters: in most cases, they cannot appear in text.</p>
+     </orig>
+     <known-orig>
       <p>{{n|6400}} characters E000…F8FF in [[pt:bmp|Basic Plane]], and {{n|131068}} characters in two [[pt:plane|planes]] 0F and 10 (except *FFFE and *FFFF that are [[pt:noncharacter|non-characters]]) are given to everyone’s own needs.</p>
       <p />
       <p>By mutual negotiation, people can encode in these ranges everything they want, including characters that are non-eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
@@ -11628,7 +12091,7 @@
       <p>* Proposals to Unicode{{-}}block is not{{_}}yet allocated, and implemetation font has to be made.</p>
       <p />
       <p>Unofficially [[pt:control|control]] characters are taken for custom control and format characters: in most cases they cannot appear in text.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[pt:bmp|基本平面]] 中的 E000…F8FF 共 {{n|6400}} 个字符，以及两个 [[pt:plane|平面]] 0F 和 10 中的 {{n|131068}} 个字符（*FFFE 和 *FFFF 这两个 [[pt:noncharacter|非字符]] 除外），被留作满足每个人的个性化需求。</p>
       <p />
@@ -11650,12 +12113,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Characters for drawing geometric shapes{{-}}lines, boxes, frames{{-}}in text mode. They were widely used to liven up text user interfaces.</p>
+      <p />
+      <p>They have no{{_}}sense in modern graphic operating systems: real graphics are available, and most fonts are proportional and lines do{{_}}not{{_}}link together precisely. But even today text consoles exist, and they have pseudographics inside.</p>
+      <p />
+      <p>All pseudographic characters are [[pt:spacing|spacing]].</p>
+     </orig>
+     <known-orig>
       <p>Characters for drawing geometric shapes{{-}}lines, boxes, frames{{-}}in text mode. Were widely used to liven up text user interfaces.</p>
       <p />
       <p>In modern graphic operating systems they have no{{_}}sense: real graphics are available, and most fonts are proportional and lines do{{_}}not{{_}}link together precisely. But even today text consoles exist, and they have pseudographics inside.</p>
       <p />
       <p>All pseudographic characters are [[pt:spacing|spacing]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>用于在文本模式下绘制几何形状——线条、方框、框架——的字符。曾被广泛用于美化文本用户界面。</p>
       <p />
@@ -11672,6 +12142,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Format for [[pt:serialization|serializing]] a short Unicode string into a chain of printable ASCII characters.</p>
+      <p />
+      <p>First, all ASCII characters are written, then a dash, and finally, non-ASCII characters are encoded using a complex procedure.</p>
+      <p>: München = Mnchen-3ya</p>
+      <p />
+      <p>If the string is purely ASCII, just a dash is appended:</p>
+      <p>: test{{_}}={{_}}test-</p>
+      <p />
+      <p>If there are no ASCII characters, the initial dash is omitted:</p>
+      <p>: правда{{_}}={{_}}80aafi6cg</p>
+      <p />
+      <p>Used only in the Internet domain name system, where brevity and readability are more important than efficiency. The prefix “xn--” is prepended to international names:</p>
+      <p>: münchen.example.com = xn--mnchen-3ya.example.com</p>
+     </orig>
+     <known-orig>
       <p>Format of [[pt:serialization|serialization]] of a short Unicode string into a chain of printable ASCII characters.</p>
       <p />
       <p>First all ASCII characters are written, then after dash the rest characters are encoded using a complex procedure.</p>
@@ -11685,7 +12170,7 @@
       <p />
       <p>Used only in Internet domain name system, where byte economy and readability are more important than efficiency. Prefix “xn--” is prepended to international names:</p>
       <p>: münchen.example.com = xn--mnchen-3ya.example.com</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>短 Unicode 字符串序列化为可打印 ASCII 字符串的格式。</p>
       <p />
@@ -11710,6 +12195,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], fewer than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#8288;🔌&amp;#8288;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
+      <p />
+      <p>Two fictional scripts are rejected: ''Aiha'' by Ursula Le Guin and ''Klingon'' from the ''Star Trek'' series. But ''Tengwar'' and ''Cirth'' invented by John Tolkien are en route to encoding.</p>
+      <p />
+      <p>The [[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts were rejected. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may eventually be encoded.</p>
+      <p />
+      <p>''Jindai'' was also rejected. The purported pre-[[ps:Hani|Kanji]] script from Japan is considered a 17th-century forgery.</p>
+     </orig>
+     <known-orig>
       <p>The Unicode Consortium routinely rejects encoding [[pt:emoji|emoji]], less than a quarter are actually released, and folks are surprisingly creative in combining emoji ({{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = utility bills). Flags and texts are no{{_}}longer encoded.</p>
       <p />
       <p>Two fictional scripts are rejected, ''Aiha'' by Ursula Le Guin and ''Klingon'' from ''Star Trek'' series. But ''Tengwar'' and ''Cirth'' invented by John Tolkien are en route to encoding.</p>
@@ -11717,9 +12211,9 @@
       <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts were rejected. Undeciphered but well-enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may eventually be encoded.</p>
       <p />
       <p>''Jindai'' was also rejected. The supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of the 17th century.</p>
-     </orig>
+     </known-orig>
      <transl>
-      <p>Unicode 联盟通常会拒绝编码 [[pt:emoji|表情符号]]，实际发布的不到四分之一，而人们在组合表情符号方面表现出了惊人的创造力（ {{em|💦&amp;#xFEFF;🔌&amp;#xFEFF;🔥}} = 水电费账单）。旗帜和文本类表情不再被编码。</p>
+      <p>Unicode 联盟通常会拒绝编码 [[pt:emoji|表情符号]]，实际发布的不到四分之一，而人们在组合表情符号方面表现出了惊人的创造力（ {{em|💦&amp;#8288;🔌&amp;#8288;🔥}} = 水电费账单）。旗帜和文本类表情不再被编码。</p>
       <p />
       <p>两种虚构文字被拒绝，分别是厄休拉·勒古恩的 ''Aiha'' 和《星际迷航》系列中的 ''Klingon''。但约翰·托尔金发明的 ''Tengwar'' 和 ''Cirth'' 正在编码途中。</p>
       <p />
