@@ -2,7 +2,7 @@
 <ut type="full-transl">
  <info>
   <orig lang="en" fname="en.uorig" />
-  <transl lang="cn" pseudoloc="false" />
+  <transl lang="zh" pseudoloc="false" />
  </info>
  <file name="lang.ini" idless="false">
   <format name="ini">
