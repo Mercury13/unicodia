@@ -8034,7 +8034,7 @@
      <orig>
       <p>{{n|6400}} characters E000…F8FF in [[pt:bmp|Basic Plane]], and {{n|131068}} characters in two [[pt:plane|planes]] 0F and 10 (except [[pt:noncharacter|non-characters]] *FFFE and *FFFF) are given to everyone’s own needs.</p>
       <p />
-      <p>By mutual agreement, people can encode anything they want in these ranges, including characters not eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
+      <p>By mutual agreement, people can encode anything they want in these ranges, including characters not eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. The Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
       <p />
       <p>* OS vendors often encode their own logos here. End users grab codes starting from E000 and up, and software vendors{{-}}starting from F8FF and down.</p>
       <p>* ConScript Unicode Registry and its ancestor Under-ConScript Unicode Registry{{-}}over 60 constructed languages, scripts from films, literature and games. Three of them, [[pk:101D0|Phaistos Disc]], [[ps:Shaw|Shavian alphabet]], and [[ps:Dsrt|Deseret alphabet]], were accepted by real Unicode.</p>
