@@ -11333,14 +11333,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
+      <p>66 [[pt:codepoint|code points]] are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
-      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
+      <p>Programmers '''may''' use them as error codes, substitution marks, “weights” that affect sorting or something else internal to the program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as a normal unknown character.</p>
       <p />
-      <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
+      <p>It is '''prohibited''' to enter these characters using the keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent from Unicode.</p>
      </orig>
      <transl>
-      <p>Выброшены (''non-characters'') 66 позиций: *FFFE и *FFFF во всех семнадцати плоскостях, а также FDD0…FDEF. Их никогда не{{_}}будет в Юникоде.</p>
+      <p>Выброшены (''non-characters'') 66 [[pt:codepoint|позиций]]: *FFFE и *FFFF во всех семнадцати плоскостях, а также FDD0…FDEF. Их никогда не{{_}}будет в Юникоде.</p>
       <p />
       <p>Эти коды '''можно''' использовать как коды ошибок, знаки подстановки, «утяжелитель» при сортировке или что-то другое, внутреннее для программы, перекодировать в [[pt:utf8|UTF-8]] или [[pt:utf16|UTF-16]]. Если программа никак не{{_}}использует данный код, она может обращаться с ним как с обычным неизвестным символом.</p>
       <p />
@@ -11357,7 +11357,7 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files, and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with [[pt:plaintext|plain text]] and is{{_}}not{{_}}designed for encoding such information. However, encoding such characters shortens PDF files and extends the functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
      <transl>
       <p>Запись других видов информации, кроме текста: музыки ([[pk:1D100|ноты]]), чертежей ([[pk:2300|технические символы]]), жестов ([[ps:Sgnw|жестовое письмо]]).</p>
@@ -11379,11 +11379,11 @@
       <p />
       <p>2. NFC = canonical composition. NFD, then assembly of precomposed characters and Hangul syllables.</p>
       <p />
-      <p>3. NFKD = compatible decomposition. NFD + disassembly of [[pt:ligature|ligatures]], replacement of letterlike characters with letters, subscripts with numbers, half-width to standard and so on.</p>
+      <p>3. NFKD = compatible decomposition. NFD + disassembly of [[pt:ligature|ligatures]], replacement of letter-like characters with letters, subscripts with numbers, half-width to standard and so on.</p>
       <p />
       <p>4. NFKC = compatible composition. NFKD, then '''canonical''' composition of characters, as in NFC.</p>
       <p />
-      <p>All four normalizations are idempotent: NFD(NFD(s))=NFD(s) and so on. In ither words, the second normalization will do nothing.</p>
+      <p>All four normalizations are idempotent: NFD(NFD(s))=NFD(s) and so on. In other words, the second normalization will do nothing.</p>
      </orig>
      <transl>
       <p>Преобразование строк для нежёсткого сравнения. В Юникоде существуют четыре варианта нормализации:</p>
@@ -11413,7 +11413,7 @@
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and numbers: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
-      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changing numbers), Zhuang, Vietnamese and Tay.</p>
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-forgery (used in accounting documents to prevent changes to numbers), Zhuang, Vietnamese and Tay.</p>
       <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
