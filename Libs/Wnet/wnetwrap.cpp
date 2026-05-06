@@ -21,6 +21,10 @@ struct TRPARAMS {
 	std::string headers = "";
 };
 
+struct UriInfo {
+    std::string scheme, host, path, urlfile;
+};
+
 //-----------------------UTILITY DECLARATIONS
 static inline void ltrim(std::string& s); //whitespace removal
 //static inline void rtrim(std::string& s);
@@ -31,13 +35,13 @@ std::string hex_encode(char const c);
 static std::string base64_encode(const std::string& in); //used for basic auth
 
 //----------------------HTTP REQ DECLARATIONS
-static inline std::map<std::string, std::string> handleURI(wrap::req& request, wrap::Response& output, INTERNET_PORT& port);
+static inline UriInfo handleURI(wrap::req& request, wrap::Response& output, INTERNET_PORT& port);
 static inline bool TimeoutInternetConnect(HINTERNET& hInternet, HINTERNET& hConnect, wrap::Response& output, std::string host, INTERNET_PORT port, DWORD service);
 static inline bool TimeoutInternetRequest(HINTERNET& hRequest, std::string final_headers, wrap::Response& output);
-static inline std::string prepare_headers(wrap::req& request, std::map<std::string, std::string>& URI);
+static inline std::string prepare_headers(wrap::req& request, const UriInfo& URI);
 static inline std::string get_response(HINTERNET& hRequest, wrap::Response& output, wrap::req& request);
 static inline std::string get_statuscode_redirect(HINTERNET& hRequest, wrap::Response& output);
-static inline void get_recd_headers(HINTERNET& hRequest, wrap::req& request, wrap::Response& output, std::string& redirect, std::map<std::string, std::string>& URI);
+static inline void get_recd_headers(HINTERNET& hRequest, wrap::req& request, wrap::Response& output, std::string& redirect, UriInfo& URI);
 static inline void get_sent_headers(HINTERNET hRequest, wrap::Response& output);
 static inline void get_secinfo(HINTERNET hRequest, wrap::Response& output); //get all security info and put it into response obj
 DWORD WINAPI WorkerInternetConnect(LPVOID); //worker thread functions for timeouts
@@ -84,13 +88,13 @@ wrap::Response wrap::httpsreq(wrap::req request) {
 
 	DWORD service = INTERNET_SERVICE_HTTP;
 	INTERNET_PORT port = INTERNET_DEFAULT_HTTPS_PORT;
-	std::map<std::string, std::string> URI = handleURI(request, output, port); //get host (for InternetConnect) from path (used in HttpOpenRequest) and get protocol 
+    UriInfo URI = handleURI(request, output, port); //get host (for InternetConnect) from path (used in HttpOpenRequest) and get protocol
 
 	HINTERNET hConnect = NULL;
 	if (wrap::toSource.TimeoutConnect == 0) { //if no timeout set then just do normal call
-        hConnect = InternetConnectA(wrap::toSource.session_handle, URI["host"].c_str(), port, nullptr, nullptr, service, 0, 0);
+        hConnect = InternetConnectA(wrap::toSource.session_handle, URI.host.c_str(), port, nullptr, nullptr, service, 0, 0);
 	} else { //if timeout set then use threads due to MS bug https://mskb.pkisolutions.com/kb/224318
-		TimeoutInternetConnect(wrap::toSource.session_handle, hConnect, output, URI["host"], port, service);
+        TimeoutInternetConnect(wrap::toSource.session_handle, hConnect, output, URI.host, port, service);
 	}
 	if (hConnect == NULL)
 	{
@@ -99,7 +103,7 @@ wrap::Response wrap::httpsreq(wrap::req request) {
 	}
 
 	connectionopened: //used for relative URI redirect where only path (not host) changes
-	HINTERNET hRequest = HttpOpenRequestA(hConnect, request.Method.c_str(), URI["path"].c_str(), NULL , NULL, NULL, INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT, 0);
+    HINTERNET hRequest = HttpOpenRequestA(hConnect, request.Method.c_str(), URI.path.c_str(), NULL , NULL, NULL, INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT, 0);
 
 	if (hRequest == NULL)
 	{
@@ -169,28 +173,28 @@ wrap::Response wrap::HttpsRequest(Ts&& ...args);
 ///////////////////////////// HttpRequest Functions ///////////////////
 ///////////////////////////////////////////////////////////////////////
 
-static inline std::map<std::string, std::string> handleURI(wrap::req& request, wrap::Response& output, INTERNET_PORT& port) {
+static inline UriInfo handleURI(wrap::req& request, wrap::Response& output, INTERNET_PORT& port) {
 	//do some very basic URI parsing to separate host (for InternetConnect) from path (used in HttpOpenRequest)
 	//also to see what protocol is specified
-	std::map<std::string, std::string> URI;
-	URI["host"], URI["path"], URI["scheme"], URI["urlfile"] = "";
+    UriInfo URI;
 	//scheme and host
-	URI["host"] = request.Url;
-	if (URI["host"].find("://") != std::string::npos) { //get scheme if available
-		URI["scheme"] = URI["host"].substr(0, URI["host"].find(":"));
-		URI["host"] = URI["host"].substr(URI["host"].find("://") + 3);
+    URI.host = request.Url;
+    if (auto pColonSlash = URI.host.find("://");
+            pColonSlash != std::string::npos) { //get scheme if available
+        URI.scheme = URI.host.substr(0, URI.host.find(":"));
+        URI.host = URI.host.substr(pColonSlash + 3);
 		//cout << "clipped host: " + URI["host"]<< endl;
 	}
 	else { //otherwise assume it's https 
-		URI["scheme"] = "https";
+        URI.scheme = "https";
 	}
 	//default is https
 
 	//update port
-	if (URI["scheme"] == "https") {
+    if (URI.scheme == "https") {
 		port = INTERNET_DEFAULT_HTTPS_PORT;
 	}
-	else if (URI["scheme"] == "http") {
+    else if (URI.scheme == "http") {
 		port = INTERNET_DEFAULT_HTTP_PORT;
 	}
 	else {
@@ -200,47 +204,51 @@ static inline std::map<std::string, std::string> handleURI(wrap::req& request, w
 
 	//path (includes fragments, params etc)
 	//assume there is a path if url has a further ? or /
-	if ((URI["host"].find("/") != std::string::npos) || (URI["host"].find("?") != std::string::npos)) {
+    if ((URI.host.find("/") != std::string::npos) || (URI.host.find("?") != std::string::npos)) {
 		//and something actually comes after it - i.e. the ? or / isnt the last char
-		if ((URI["host"].back() != '?') && (URI["host"].back() != '/')) {
-			if (URI["host"].find("/") != std::string::npos) {
-				URI["path"] = URI["host"].substr(URI["host"].find("/"));
-				URI["host"]= URI["host"].substr(0, URI["host"].find("/"));
+        if ((URI.host.back() != '?') && (URI.host.back() != '/')) {
+            if (auto pSlash = URI.host.find("/"); pSlash != std::string::npos) {
+                URI.path = URI.host.substr(pSlash);
+                URI.host = URI.host.substr(0, pSlash);
 			}
 			else {
-				URI["path"] = URI["host"].substr(URI["host"].find("?"));
-				URI["host"]= URI["host"].substr(0, URI["host"].find("?"));
+                auto pQun = URI.host.find("?");
+                URI.path = URI.host.substr(pQun);
+                URI.host = URI.host.substr(0, pQun);
 			}
 			//if theres a file extension, store filename
-			if (URI["path"].find_last_of("/") != std::string::npos) { // dot after last /
-				if (URI["path"].substr(URI["path"].find_last_of("/") + 1).find(".") != std::string::npos) {
-					URI["urlfile"] = URI["path"].substr(URI["path"].find_last_of("/") + 1);
+            if (auto pLastSlash = URI.path.find_last_of('/');
+                    pLastSlash != std::string::npos) { // dot after last /
+                if (URI.path.find('.', pLastSlash + 1) != std::string::npos) {
+                    URI.urlfile = URI.path.substr(pLastSlash + 1);
 				}
 			}
 			else {
-				if (URI["path"].find_last_of("?") != std::string::npos) { // dot after ?
-					if (URI["path"].substr(URI["path"].find_last_of("?") + 1).find(".") != std::string::npos) {
-						URI["urlfile"] = URI["path"].substr(URI["path"].find_last_of("?") + 1);
+                if (auto pQun = URI.path.find_last_of('?');
+                         pQun != std::string::npos) { // dot after ?
+                    if (URI.path.find('.', pQun + 1) != std::string::npos) {
+                        URI.urlfile = URI.path.substr(pQun + 1);
 					}
 				}
 			}
 		}
 		else { //if its the last char, trim because wininet doesnt like a trailing / or ?
-			URI["host"]= URI["host"].substr(0, URI["host"].size() - 1);
+            if (!URI.host.empty())
+                URI.host.pop_back();
 			//std::cout << "trimmed last char of host" << std::endl;
 		}
 	}
 
 	//add params that were passed as Parameters map
 	if (request.Params != "") {
-		URI["path"] += request.Params;
+        URI.path += request.Params;
 	}
 
-	output.url = URI["scheme"] + "://" + URI["host"]+ URI["path"];
+    output.url = URI.scheme + "://" + URI.host + URI.path;
 
 	//entering dl means the file is saved as its original filename
 	if (request.Dl == "dl") {
-		request.Dl = URI["urlfile"];
+        request.Dl = URI.urlfile;
 	}
 
 	return URI;
@@ -269,7 +277,7 @@ static inline void prepare_cookies() {
 	wrap::toSource.cookies_tosend.clear();
 }
 
-static inline std::string prepare_headers(wrap::req& request, std::map<std::string, std::string>& URI) {
+static inline std::string prepare_headers(wrap::req& request, const UriInfo& URI) {
 	//this has to be here so that its processed after any change in cookie encoding settings
 	prepare_cookies();
 	// POST stuff done before headers to potentially add content-type if needed, before header assembly
@@ -299,7 +307,7 @@ static inline std::string prepare_headers(wrap::req& request, std::map<std::stri
 		//this is done because WinINet automatically strips the Cookie header
 		//and just goes by the cookies it can see that were set via WinINet (as below)
 		if (elem.first == "Cookie") {
-			std::string cookie_url = URI["scheme"] + "://" + URI["host"];//ignoring path for now
+            std::string cookie_url = URI.scheme + "://" + URI.host;//ignoring path for now
 			InternetSetCookieA(&cookie_url[0], NULL, &elem.second[0]); //set cookie via WinINet
 		}
 	}
@@ -365,9 +373,9 @@ static inline std::string get_statuscode_redirect(HINTERNET& hRequest, wrap::Res
 	return redirect;
 }
 
-static inline void get_recd_headers(HINTERNET& hRequest,wrap::req& request, wrap::Response & output, std::string& redirect, std::map<std::string, std::string>& URI) {
-
-
+static inline void get_recd_headers(HINTERNET& hRequest,wrap::req& request, wrap::Response & output,
+                std::string& redirect, UriInfo& URI)
+{
 	//get headers recd
 	std::string received_headers;
 	//get the size headers
@@ -424,7 +432,7 @@ static inline void get_recd_headers(HINTERNET& hRequest,wrap::req& request, wrap
 					if (fieldname == "set-cookie") {
 						std::string cname = value.substr(0, value.find("=")); //if theres more data than name=value, include it for now
 						//std::cout <<"cookie set: "<< cname << std::endl;
-						std::string cookie_url = URI["scheme"] + "://";
+                        std::string cookie_url = URI.scheme + "://";
 						//if domain or path fields were set in cookie then use them, otherwise construct url from current host url
 						size_t dm, DM, pth, PTH;
 						dm = value.find("domain=") + 7; DM = value.find("Domain=") + 7; pth = value.find("path=") + 5; PTH = value.find("Path=") + 5;
@@ -444,12 +452,12 @@ static inline void get_recd_headers(HINTERNET& hRequest,wrap::req& request, wrap
 							else if (PTH != std::string::npos) {
 								cookie_url += value.substr(PTH);
 							}
-							if (cookie_url.find(";") != std::string::npos) {//if there was additional value data after then clip it off
-								cookie_url = cookie_url.substr(0, cookie_url.find(";"));
+                            if (auto pSemi = cookie_url.find(';'); pSemi != std::string::npos) {//if there was additional value data after then clip it off
+                                cookie_url = cookie_url.substr(0, pSemi);
 							}
 						}
 						else {
-							cookie_url += URI["host"];//ignoring path for now
+                            cookie_url += URI.host;//ignoring path for now
 						}
 
 						InternetSetCookieA(&cookie_url[0], &cname[0], &value[0]); //set cookie via WinINet
@@ -470,7 +478,7 @@ static inline void get_recd_headers(HINTERNET& hRequest,wrap::req& request, wrap
 							//if theres no scheme :// at the start assume this is a relative URI
 							if (value[0] == '/') {
 								//std::cout << "changing path" << std::endl ;
-								URI["path"] = value;
+                                URI.path = value;
 							}
 							redirect = "relative";
 						}
