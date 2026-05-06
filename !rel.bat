@@ -148,12 +148,16 @@
 @copy %MINGW%\libgcc_s_seh-1.dll %DEPLOY%
 @copy "%MINGW%\libstdc++-6.dll" %DEPLOY%
 @copy %MINGW%\libwinpthread-1.dll %DEPLOY%
+@copy %MINGW%\libcrypto-3-x64.dll %DEPLOY%
+@copy %MINGW%\libssl-3-x64.dll %DEPLOY%
+@copy %MINGW%\libPocoFoundation-112.dll %DEPLOY%
+@copy %MINGW%\libPocoNet-112.dll %DEPLOY%
+@copy %MINGW%\libPocoNetSSL-112.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Core.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Svg.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6SvgWidgets.dll %DEPLOY%
-@copy %QTDIR%\bin\Qt6Network.dll %DEPLOY%
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
 @rem Used! — need for toolbar icons
@@ -166,7 +170,6 @@
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
-@%SEVENZIP% x MiscFiles\OpenSsl_1.1.1zb.zip -o%DEPLOY%
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
 @copy MiscFiles\WinManifest\Resources.pri %DEPLOY%
