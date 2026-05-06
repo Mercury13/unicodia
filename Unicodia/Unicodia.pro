@@ -49,6 +49,7 @@ SOURCES += \
     Main/FmMain.cpp \
     Main/HintableLabel.cpp \
     Main/MainGui.cpp \
+    Main/MyHttpClient.cpp \
     Main/WiLibCp.cpp \
     Main/WiOsStyle.cpp \
     Main/WiSample.cpp \
@@ -138,6 +139,7 @@ HEADERS += \
     Main/FmMain.h \
     Main/HintableLabel.h \
     Main/MainGui.h \
+    Main/MyHttpClient.h \
     Main/tables.h \
     Main/WiLibCp.h \
     Main/WiOsStyle.h \
@@ -200,7 +202,7 @@ INCLUDEPATH += \
     ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
-	Main \
+    Main \
     Uc
 
 LIBS += -lz
