@@ -30,7 +30,6 @@ SOURCES += \
     ../Libs/L10n/LocFmt.cpp \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
-    ../Libs/Mongoose/mongoose.c \
     ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Fonts/MemFont.cpp \
     ../Libs/SelfMade/GitHub/parsers.cpp \
@@ -100,7 +99,6 @@ HEADERS += \
     ../Libs/L10n/LocFmt.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
-    ../Libs/Mongoose/mongoose.h \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Fonts/MemFont.h \
@@ -199,7 +197,6 @@ INCLUDEPATH += \
     ../Libs \
     ../Libs/L10n \
     ../Libs/MagicEnum \
-    ../Libs/Mongoose \
     ../Libs/PugiXml \
     ../Libs/RapidJson \
     ../Libs/SelfMade \
@@ -210,7 +207,7 @@ INCLUDEPATH += \
     Main \
     Uc
 
-LIBS += -lz -lws2_32 -lcrypto -lssl
+LIBS += -lz -lPocoFoundation -lPocoNet -lPocoNetSSL
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,66 +1,21 @@
 #include "MyHttpClient.h"
 
-#include "mongoose.h"
-
 #include <iostream>
 
+// Poco
+#include <Poco/Net/HTTPSClientSession.h>
+#include <Poco/Net/HTTPRequest.h>
+#include <Poco/Net/HTTPResponse.h>
+#include <Poco/Net/Context.h>
+#include <Poco/Net/SSLManager.h>
+#include <Poco/Net/AcceptCertificateHandler.h>
+#include <Poco/Net/InvalidCertificateHandler.h>
+#include <Poco/URI.h>
 
-namespace mg {
-
-    class Mgr : public mg_mgr {
-    public:
-        Mgr();
-        ~Mgr();
-    };
-
-}
-
-mg::Mgr::Mgr()  { mg_mgr_init(this); }
-mg::Mgr::~Mgr() { mg_mgr_free(this); }
-
+using namespace Poco::Net;
+using namespace Poco;
 
 ///// MyHttpThread /////////////////////////////////////////////////////////////
-
-namespace {
-
-    constinit const mg_str EMPTY_STR { .buf = nullptr, .len = 0 };
-
-    static void ev_handler(struct mg_connection *c, int ev, void *p) {
-        auto* that = reinterpret_cast<detail::MyHttpThread*>(c->fn_data);
-        switch (ev) {
-        case MG_EV_CONNECT: {
-                // Connected to server. Extract host name from URL
-                if (c->is_tls) {
-                    auto host = mg_url_host(that->owner.url().c_str());
-                    mg_tls_opts opts {
-                            .ca = EMPTY_STR, .cert = EMPTY_STR,
-                            .key = EMPTY_STR, .name = host,
-                            .skip_verification = 1 };
-                    mg_tls_init(c, &opts);
-                }
-            } break;
-        case MG_EV_HTTP_HDRS: {
-                std::cout << "Headers!" << std::endl;
-            } break;
-        case MG_EV_HTTP_MSG: {
-                auto* hm = reinterpret_cast<mg_http_message*>(p);
-                that->tempResponse.append(hm->body.buf, hm->body.len);
-                c->is_closing = 1;
-            } break;
-        case MG_EV_ERROR: {
-                auto* msg = reinterpret_cast<char*>(p);
-                std::cout << "Error: " << msg << std::endl;
-                that->error = MyHttpError::MISC;
-                that->state = detail::MyHttpThread::State::HALT;
-            } break;
-        case MG_EV_CLOSE: {
-                that->state = detail::MyHttpThread::State::HALT;
-            } break;
-        default:;
-        }
-    }
-
-}   // anon mamespace
 
 void detail::MyHttpThread::run()
 {
@@ -69,11 +24,40 @@ void detail::MyHttpThread::run()
     httpCode = 0;
     error = MyHttpError::OK;
 
-    mg::Mgr mgr;
-    mg_http_connect(&mgr, owner.url().c_str(), ev_handler, this);
+    // 1. Инициализация SSL-подсистемы
+    // Используем AcceptCertificateHandler, чтобы не мучиться с сертификатами (для теста)
+    SharedPtr<InvalidCertificateHandler> pHandler = new AcceptCertificateHandler(false);
 
-    while (state == State::WORKING) {
-        mg_mgr_poll(&mgr, 1000);
+    // Создаем контекст. TLS 1.2+ обычно включен по умолчанию в современных версиях
+    Context::Ptr pContext = new Context(Context::CLIENT_USE, "", "", "", Context::VERIFY_NONE, 9, false, "ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH");
+
+    SSLManager::instance().initializeClient(nullptr, pHandler, pContext);
+
+    try {
+        URI uri(owner.url());
+
+        // 2. Создаем сессию
+        HTTPSClientSession session(uri.getHost(), uri.getPort(), pContext);
+
+        // 3. Формируем запрос
+        HTTPRequest request(HTTPRequest::HTTP_GET, uri.getPathAndQuery(), HTTPMessage::HTTP_1_1);
+        request.set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36");
+        session.sendRequest(request);
+
+        // 4. Получаем ответ
+        HTTPResponse response;
+        std::istream& rs = session.receiveResponse(response);
+
+        std::cout << "Status: " << response.getStatus() << " " << response.getReason() << std::endl;
+        this->httpCode = response.getStatus();
+
+        // Читаем тело ответа
+        Poco::StreamCopier::copyToString(rs, this->tempResponse);
+        std::cout << "Body length: " << tempResponse.length() << std::endl;
+
+    } catch (Poco::Exception& ex) {
+        std::cout << "Poco Exception: " << ex.displayText() << std::endl;
+        error = MyHttpError::MISC;
     }
 }
 
