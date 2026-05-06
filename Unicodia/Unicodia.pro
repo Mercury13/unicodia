@@ -205,7 +205,7 @@ INCLUDEPATH += \
     Main \
     Uc
 
-LIBS += -lz
+LIBS += -lz -lmongoose
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

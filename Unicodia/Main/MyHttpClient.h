@@ -11,7 +11,7 @@
 class MyHttpClient;
 
 enum class MyHttpError : unsigned char {
-    Ok
+    OK
 };
 
 namespace detail {
@@ -19,7 +19,11 @@ namespace detail {
     class MyHttpThread : public QThread
     {
     public:
+        enum class State : unsigned char {
+            WORKING, HALT };
         MyHttpClient& owner;
+        State state = State::WORKING;
+        std::string tempResponse;
 
         MyHttpThread(MyHttpClient& aOwner) : owner(aOwner) {}
     protected:
@@ -64,6 +68,7 @@ public:
     // MyHttpObject
     int httpCode() const override;
     const std::string& response() const override;
+    MyHttpError error() const override;
 
 private:
     detail::MyHttpThread thread;
@@ -71,6 +76,7 @@ private:
     std::atomic<int> fHttpCode { 0 };
     std::string fUrl;
     std::string fResponse;
+    MyHttpError fError = MyHttpError::OK;
 
 signals:
     void requestEnded(const MyHttpObject& obj);
