@@ -25,14 +25,9 @@
 #include <QDesktopServices>
 #include <QListView>
 
-// Qt net
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#include <QNetworkAccessManager>
-#include <QUrl>
-
 // GitHub
 #include "GitHub/parsers.h"
+#include "MyHttpClient.h"
 
 // Misc
 #include "u_Strings.h"
@@ -2279,37 +2274,37 @@ void FmMain::setUpdating(bool value)
 }
 
 
-void FmMain::ensureNetMan()
+void FmMain::ensureHtClient()
 {
-    if (!netMan) {
-        netMan.reset(new QNetworkAccessManager);
-        connect(netMan.get(), &QNetworkAccessManager::finished, this, &This::updateFinished);
+    if (!htClient) {
+        htClient.reset(new MyHttpClient);
+        connect(htClient.get(), &MyHttpClient::requestEnded, this, &This::updateFinished);
     }
 }
 
 
 void FmMain::startUpdate()
 {
-    ensureNetMan();
-    QNetworkRequest rq(QUrl{URL_UPDATE});
-    netMan->get(rq);
-    setUpdating(true);
+    ensureHtClient();
+    if (htClient->start(URL_UPDATE)) {
+        setUpdating(true);
+    }
 }
 
 
-void FmMain::updateFinished(QNetworkReply* reply)
+void FmMain::updateFinished(const MyHttpObject& reply)
 {
-    if (reply) {
-        int err = reply->error();
+    auto head = loc::get("Update.Head").q();
+    auto err = reply.error();
+    if (err == MyHttpError::OK) {
+        auto code = reply.httpCode();
         // Debug
         if (updatever::version == github::VER_BAD_REQUEST)
-            err = 418;  // I’m a teapot
+            code = HT_IM_A_TEAPOT;
 
-        auto head = loc::get("Update.Head").q();
         char8_t buf[50], buf2[50];
-        if (err == QNetworkReply::NoError) {
-            auto bytes = reply->readAll();
-            std::string_view sv(bytes.data(), bytes.length());
+        if (code == HT_OK) {
+            std::string_view sv = reply.response();
             auto res = github::checkPageForUpdate(
                         sv, updatever::version, updatever::equivPlatforms);
             switch (res.code) {
@@ -2347,14 +2342,13 @@ void FmMain::updateFinished(QNetworkReply* reply)
                                 str::toU8sv(res.myPlatform)));
                 break;
             }
-        } else if (err < 100) {
-            // System error
-            QMessageBox::warning(this, head, loc::get("Update.Connect"));
         } else {
             // HTTP error
-            QMessageBox::critical(this, head, loc::get("Update.Err").argQ(err));
+            QMessageBox::critical(this, head, loc::get("Update.Err").argQ(code));
         }
-        reply->deleteLater();
+    } else {
+        // System error
+        QMessageBox::warning(this, head, loc::get("Update.Connect"));
     }
     setUpdating(false);
 }

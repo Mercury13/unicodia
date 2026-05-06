@@ -10,8 +10,12 @@
 
 class MyHttpClient;
 
+constexpr int HT_OK = 200;
+constexpr int HT_IM_A_TEAPOT = 418;
+
 enum class MyHttpError : unsigned char {
-    OK
+    OK,
+    MISC,  // misc errors
 };
 
 namespace detail {
@@ -24,6 +28,8 @@ namespace detail {
         MyHttpClient& owner;
         State state = State::WORKING;
         std::string tempResponse;
+        int httpCode = 0;
+        MyHttpError error = MyHttpError::MISC;
 
         MyHttpThread(MyHttpClient& aOwner) : owner(aOwner) {}
     protected:
@@ -38,6 +44,8 @@ public:
     virtual int httpCode() const = 0;
     virtual const std::string& response() const = 0;
     virtual MyHttpError error() const = 0;
+
+    bool isOk() const { return (error() == MyHttpError::OK); }
 };
 
 
@@ -72,7 +80,7 @@ public:
 
 private:
     detail::MyHttpThread thread;
-    std::atomic<State> fState = State::WORKING;
+    std::atomic<State> fState = State::IDLE;
     std::atomic<int> fHttpCode { 0 };
     std::string fUrl;
     std::string fResponse;

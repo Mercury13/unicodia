@@ -40,11 +40,11 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
 QT_END_NAMESPACE
 
-
+class MyHttpObject;
+class MyHttpClient;
 class QToolButton;
 class QTextBrowser;
-class QNetworkAccessManager;
-class QNetworkReply;
+class MyHttp;
 class FmTofuStats;
 class FmDebugPlural;
 class WiLibCp;
@@ -208,7 +208,7 @@ private:
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
     PopupGui popupGui{mainGui};
-    std::unique_ptr<QNetworkAccessManager> netMan;
+    std::unique_ptr<MyHttpClient> htClient;
     QColor clCollapse;
     mutable int pixSizeCache = -1;
 
@@ -293,7 +293,7 @@ private:
     void cjkReflectCollapseState();
     void rebuildBlocks();
     void setUpdating(bool value);
-    void ensureNetMan();
+    void ensureHtClient();
     void redrawFavsTab();
     void redrawFavsTable();
     /// @param [in]  initiator [0] default [+] some other widget
@@ -367,7 +367,7 @@ private slots:
 
     bool goToNode(const uc::LibNode& node);
     void startUpdate();
-    void updateFinished(QNetworkReply* reply);
+    void updateFinished(const MyHttpObject& obj);
     void acAddCpToFavsTriggered(bool isChecked);
     void acAddLibToFavsTriggered(bool isChecked);
     void addLibToFavsBanged();
