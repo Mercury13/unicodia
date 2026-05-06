@@ -2,6 +2,7 @@ QT += core gui widgets svg svgwidgets
 CONFIG += c++2a c++20
 
 win32-g++ {
+    DEFINES += SECURITY_WIN32
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
     # Qt — system headers
@@ -40,6 +41,7 @@ SOURCES += \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     ../Libs/SelfMade/i_DarkMode.cpp \
     ../Libs/SelfMade/u_Version.cpp \
+    ../Libs/Wnet/wnetwrap.cpp \
     CharPaint/SkinToneQa.cpp \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
@@ -127,6 +129,7 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
+    ../Libs/Wnet/wnetwrap.h \
     ../Libs/Zippy/Zippy.hpp \
     CharPaint/SkinToneQa.h \
     CharPaint/routines.h \
@@ -203,11 +206,13 @@ INCLUDEPATH += \
     ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings \
+    ../Libs/Wnet \
     ../Libs/Zippy \
     Main \
     Uc
 
-LIBS += -lz -lPocoFoundation -lPocoNet -lPocoNetSSL
+LIBS += -lz -lwininet -lurlmon -lole32
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
