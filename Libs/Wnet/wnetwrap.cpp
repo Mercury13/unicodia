@@ -103,7 +103,8 @@ wrap::Response wrap::httpsreq(wrap::req request) {
 	}
 
 	connectionopened: //used for relative URI redirect where only path (not host) changes
-    HINTERNET hRequest = HttpOpenRequestA(hConnect, request.Method.c_str(), URI.path.c_str(), NULL , NULL, NULL, INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT, 0);
+    HINTERNET hRequest = HttpOpenRequestA(hConnect, request.Method.c_str(), URI.path.c_str(), NULL , NULL, NULL,
+                                    INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT | INTERNET_FLAG_DONT_CACHE, 0);
 
 	if (hRequest == NULL)
 	{
