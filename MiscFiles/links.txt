@@ -75,4 +75,9 @@ http://www.kreativekorp.com/ucsur/ — Unicode ConScript Registry
 
 LIBRARIES
 https://github.com/cubicdaiya/dtl — compare strings
+
+
+W7 SUPPORT FOR QT
 https://github.com/cristianadam/api-ms-win-core-synch-Win7 — Win7 support for QtC
+https://github.com/SanyaNya/qt6base_win7 — Qt 6.4.1 backport
+https://github.com/crystalidea/qt6windows7 — lots of backports starting from 6.5.3
