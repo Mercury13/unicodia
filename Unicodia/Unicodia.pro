@@ -14,6 +14,8 @@ win32-g++ {
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS QT_STRINGS
 
+DEFINES += MG_TLS=2
+
 CONFIG(debug, debug|release) {
     DEFINES += AT_RANGE_CHECK
 }
@@ -28,6 +30,7 @@ SOURCES += \
     ../Libs/L10n/LocFmt.cpp \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
+    ../Libs/Mongoose/mongoose.c \
     ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Fonts/MemFont.cpp \
     ../Libs/SelfMade/GitHub/parsers.cpp \
@@ -97,6 +100,7 @@ HEADERS += \
     ../Libs/L10n/LocFmt.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
+    ../Libs/Mongoose/mongoose.h \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Fonts/MemFont.h \
@@ -195,6 +199,7 @@ INCLUDEPATH += \
     ../Libs \
     ../Libs/L10n \
     ../Libs/MagicEnum \
+    ../Libs/Mongoose \
     ../Libs/PugiXml \
     ../Libs/RapidJson \
     ../Libs/SelfMade \
@@ -205,7 +210,7 @@ INCLUDEPATH += \
     Main \
     Uc
 
-LIBS += -lz -lmongoose
+LIBS += -lz -lws2_32 -lcrypto -lssl
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
