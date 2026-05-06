@@ -44,7 +44,8 @@ namespace {
             } break;
         case MG_EV_HTTP_MSG: {
                 auto* hm = reinterpret_cast<mg_http_message*>(p);
-                that->tempResponse.append(hm->message.buf, hm->message.len);
+                that->tempResponse.append(hm->body.buf, hm->body.len);
+                c->is_closing = 1;
             } break;
         case MG_EV_ERROR: {
                 auto* msg = reinterpret_cast<char*>(p);
