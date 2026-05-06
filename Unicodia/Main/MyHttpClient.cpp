@@ -31,10 +31,10 @@ namespace {
         case MG_EV_CONNECT: {
                 // Connected to server. Extract host name from URL
                 if (c->is_tls) {
-                    //auto host = mg_url_host(that->owner.url().c_str());
+                    auto host = mg_url_host(that->owner.url().c_str());
                     mg_tls_opts opts {
                             .ca = EMPTY_STR, .cert = EMPTY_STR,
-                            .key = EMPTY_STR, .name = EMPTY_STR, //host,
+                            .key = EMPTY_STR, .name = host,
                             .skip_verification = 1 };
                     mg_tls_init(c, &opts);
                 }
