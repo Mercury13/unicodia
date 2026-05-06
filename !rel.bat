@@ -153,6 +153,10 @@
 @copy %MINGW%\libPocoFoundation-112.dll %DEPLOY%
 @copy %MINGW%\libPocoNet-112.dll %DEPLOY%
 @copy %MINGW%\libPocoNetSSL-112.dll %DEPLOY%
+@copy %MINGW%\libPocoCrypto-112.dll %DEPLOY%
+@copy %MINGW%\libPocoUtil-112.dll %DEPLOY%
+@copy %MINGW%\libpcre2-8-0.dll %DEPLOY%
+@copy %MINGW%\libutf8proc.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Core.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
