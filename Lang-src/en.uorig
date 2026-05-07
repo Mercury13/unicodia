@@ -8220,13 +8220,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A [[pt:character|Glyph]] displayed when the character is missing from the font. Usually, tofu is a white box, hence the name after Japanese soybean cheese cut into dice.</p>
+      <p>A [[pt:character|glyph]] displayed when the character is missing from the font. Usually, tofu is a white box, hence the name after Japanese soybean cheese cut into dice.</p>
       <p />
       <p>Some fonts have creative tofu: a rectangle with a question mark, a cross or a sketchy script mark.</p>
       <p />
       <p>Some Unicode characters are [[pt:ignorable|default-ignorable]]{{-}}not showing as tofu.</p>
       <p />
-      <p>The ''Noto'' set of fonts used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
+      <p>The ''Noto'' font set used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
      </orig>
     </text>
    </group>
