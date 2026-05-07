@@ -98,16 +98,22 @@ wrap::Response wrap::httpsreq(wrap::req request) {
 	}
 	if (hConnect == NULL)
 	{
+        wrap::toSource.newsession = true;
         output.err = "InternetConnect failed: " + std::to_string(GetLastError());
 		return output;
 	}
 
-	connectionopened: //used for relative URI redirect where only path (not host) changes
-    HINTERNET hRequest = HttpOpenRequestA(hConnect, request.Method.c_str(), URI.path.c_str(), NULL , NULL, NULL,
-                                    INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT | INTERNET_FLAG_DONT_CACHE, 0);
+    constexpr auto FLAGS = INTERNET_FLAG_SECURE | INTERNET_FLAG_NO_AUTO_REDIRECT
+            | INTERNET_FLAG_DONT_CACHE | INTERNET_FLAG_RELOAD
+            | INTERNET_FLAG_NO_CACHE_WRITE | INTERNET_FLAG_PRAGMA_NOCACHE;
 
-	if (hRequest == NULL)
-	{
+	connectionopened: //used for relative URI redirect where only path (not host) changes
+    HINTERNET hRequest = HttpOpenRequestA(
+            hConnect, request.Method.c_str(), URI.path.c_str(), NULL , NULL, NULL,
+            FLAGS, 0);
+
+    if (hRequest == NULL) {
+        wrap::toSource.newsession = true;
         output.err = "HttpOpenRequest failed: " + std::to_string(GetLastError());
 		return output;
 	}
@@ -124,6 +130,7 @@ wrap::Response wrap::httpsreq(wrap::req request) {
 	}
 	if (!sendr)
 	{
+        wrap::toSource.newsession = true;
         output.err = "HttpSendRequest failed with error code " + std::to_string(GetLastError());
 		return output;
 	}
