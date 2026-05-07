@@ -34,11 +34,9 @@ void detail::MyHttpThread::run()
     initIx();
 
     ix::HttpClient httpClient;
-
-     ix::WebSocketHttpHeaders headers;
+    ix::WebSocketHttpHeaders headers;
 
     auto args = httpClient.createRequest(owner.url());
-
     args->extraHeaders = headers;
     args->followRedirects = true;
     args->maxRedirects = 10;
