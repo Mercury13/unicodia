@@ -5,19 +5,23 @@
 
 ///// MyHttpThread /////////////////////////////////////////////////////////////
 
-std::mutex initMutex;
-std::atomic<bool> isIxHere = false;
+namespace {
 
-void initIx()
-{
-    if (!isIxHere) {
-        std::lock_guard _(initMutex);
+    std::mutex initMutex;
+    constinit std::atomic<bool> isIxHere = false;
+
+    void initIx()
+    {
         if (!isIxHere) {
-            ix::initNetSystem();
-            isIxHere = true;
+            std::lock_guard _(initMutex);
+            if (!isIxHere) {
+                ix::initNetSystem();
+                isIxHere = true;
+            }
         }
     }
-}
+
+} // anon namespace
 
 
 void detail::MyHttpThread::run()
