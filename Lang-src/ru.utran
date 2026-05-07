@@ -10128,11 +10128,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to next line.</p>
+      <p>Character intended for leaving empty space. A well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different, too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to the next line.</p>
       <p />
-      <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
+      <p>Spaces usually have no{{_}}graphical representation and just move the caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
       <p />
-      <p>In ''Unicodia'' spaces are marked exactly by body’s size, so narrowness is deceptive. Hair space [[pu:200A]] is often enough to leave a little space.</p>
+      <p>In ''Unicodia'', spaces are marked exactly by the body’s size, so narrowness is deceptive. Hair space [[pu:200A]] is often enough to leave a little space.</p>
       <p />
       <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
      </orig>
@@ -11678,7 +11678,7 @@
      <transl>семантика</transl>
     </text>
     <text id="Text">
-     <orig>Character’s behaviour is mainly specified with complex tables rather than with its name or position in code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</orig>
+     <orig>A character’s behaviour is mainly specified by complex tables rather than by its name or position in the code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</orig>
      <transl>Поведение символа в первую очередь задаётся не{{_}}названием, а сложными таблицами. Отрывки этих таблиц приведены и в «Юникодии»: [[pt:number|числовое]] значение, регистр, [[pt:bidi|направление]] письма…</transl>
     </text>
    </group>
@@ -11689,9 +11689,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Method of converting data (for example, Unicode text) to a chain of ''code units''{{-}}bytes for [[pt:utf8|UTF-8]], two-byte words for [[pt:utf16|UTF-16]], four-byte words for [[pt:utf32|UTF-32]], printable ASCII characters for [[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]].</p>
+      <p>Method of converting data (for example, Unicode text) into a sequence of ''code units''{{-}}bytes for [[pt:utf8|UTF-8]], two-byte words for [[pt:utf16|UTF-16]], four-byte words for [[pt:utf32|UTF-32]], printable ASCII characters for [[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]].</p>
       <p />
-      <p>Disks and data channels work with bytes. So when transmitting UTF-16/32, order of bytes in word begins to mean, and they split into UTF-16BE, UTF-32BE (big-endian, most significant byte first) and UTF-16LE, UTF-32LE (little-endian, least significant byte first).</p>
+      <p>Disks and data channels work with bytes. So when transmitting UTF-16/32, the order of bytes within a word becomes significant, and they split into UTF-16BE, UTF-32BE (big-endian, most significant byte first) and UTF-16LE, UTF-32LE (little-endian, least significant byte first).</p>
       <p />
       <p>[[pt:bom|Byte order mark]] lets software distinguish between these formats.</p>
      </orig>
@@ -11717,7 +11717,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character that occupies room in a line.</p>
+      <p>A character that occupies room in the line.</p>
       <p />
       <p>Spacing are letters, [[pt:number|numbers]], punctuation marks, [[pt:space|whitespace]], miscellaneous symbols and spacing [[pt:combining|combining marks]].</p>
       <p />
@@ -11739,21 +11739,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode Consortium guarantees that it will{{_}}not{{_}}change some properties of characters.</p>
+      <p>The Unicode Consortium guarantees that they will{{_}}not{{_}}change certain properties of characters.</p>
       <p />
-      <p>'''A character will{{_}}not{{_}}move or disappear''' (2.0+). Every new Unicode will be a superset of previous. Text is sorted using national sorting order.</p>
+      <p>'''A character will{{_}}not{{_}}move or disappear''' (2.0+). Every new Unicode version will be a superset of the previous one. Text is sorted using the national sorting order.</p>
       <p />
-      <p>'''Character’s name will{{_}}not{{_}}change''' (2.0+). Though correction names exist, and '''they''' are shown by ''Unicodia''. Synonyms also won’t change, including corrections (5.0+).</p>
+      <p>'''Character’s name will{{_}}not{{_}}change''' (2.0+). Though correction names exist, and Unicodia shows '''them'''. Synonyms also won’t change, including corrections (5.0+).</p>
       <p />
-      <p>'''[[pt:normalization|Normalization]] of string will{{_}}not{{_}}change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other frequent scripts where normalization matters.</p>
+      <p>'''[[pt:normalization|Normalization]] of string will{{_}}not{{_}}change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other widely used scripts where normalization matters.</p>
       <p />
-      <p>'''Character’s properties may change, but not{{_}}so{{_}}much that its nature will change''' (1.1+). For example, capital letter will{{_}}not{{_}}turn to small, and [[pt:noncharacter|non-character]] will{{_}}not{{_}}return to use. In later versions of Unicode this rule was clarified.</p>
+      <p>'''A character’s properties may change, but not{{_}}so{{_}}much that its nature changes''' (1.1+). For example, a capital letter will{{_}}not{{_}}turn to lowercase, and a [[pt:noncharacter|non-character]] will{{_}}not{{_}}return to use. In later versions of Unicode, this rule was clarified.</p>
       <p />
-      <p>'''Normative and informational properties of character will{{_}}not{{_}}disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
+      <p>'''Normative and informational properties of character will{{_}}not{{_}}disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take others’ place on rename.</p>
       <p />
-      <p>'''[[pt:casefolding|Case folding]] will{{_}}not{{_}}change''' (5.0+). Case folding is intended for locale-independent comparison of strings, and is generally (but not{{_}}necessarily) conversion into lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
+      <p>'''[[pt:casefolding|Case folding]] will{{_}}not{{_}}change''' (5.0+). Case folding is intended for locale-independent string comparison, and is generally (but not{{_}}necessarily) conversion to lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
       <p />
-      <p>'''If two characters were (or were{{_}}not) in case pair, they will remain there''' (5.0+). Small letter may get capital counterpart (or vice-versa, like in Cherokee), and this is the only way for a letter to enter a case pair.</p>
+      <p>'''If two characters were (or were{{_}}not) in a case pair, they will remain there''' (5.0+). A small letter may get a capital counterpart (or vice versa, as in Cherokee), and this is the only way for a letter to enter a case pair.</p>
      </orig>
      <transl>
       <p>Консорциум Юникода гарантирует, что не{{_}}изменит часть характеристик символов.</p>
@@ -11802,8 +11802,31 @@
       <p />
       <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
       <p />
-      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa the in 20th century.</p>
+      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa in the 20th century.</p>
      </orig>
+     <known-orig>
+      <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
+      <p />
+      <p>'''Endangered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
+      <p />
+      <p>'''Endangered due to script competition'''{{-}}all languages have an alternate script, already stronger or gaining strength.</p>
+      <p />
+      <p>'''Dead'''{{-}}the script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
+      <p />
+      <p>'''Religious'''{{-}}the script is in use by an important religion.</p>
+      <p />
+      <p>'''Historical, no{{_}}decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
+      <p />
+      <p>'''(Un)deciphered'''{{-}}historical script is not{{_}}yet{{_}}deciphered (partly deciphered, deciphered).</p>
+      <p />
+      <p>'''New'''{{-}}invented too recently to tell exactly about its status.</p>
+      <p />
+      <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
+      <p />
+      <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
+      <p />
+      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa the in 20th century.</p>
+     </known-orig>
      <transl>
       <p>'''Живая'''{{-}}хотя бы у одного языка статус «В безопасности», а письменность единственная или не{{_}}теряющая важности.</p>
       <p />
@@ -11836,18 +11859,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script whose letter means a syllable made of consonant and vowel. Usually contain 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script where similar syllables have similar letters.</p>
+      <p>Script whose letters represent syllables made of a consonant and a vowel. Usually contains 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script in which similar syllables use similar letters.</p>
       <p />
-      <p>Syllabic script is easy to invent from [[pt:hiero|ideographic]]: people talk with syllables rather than phonemes, and it’s enough to write unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
+      <p>Syllabic script is easy to invent from an [[pt:hiero|ideographic]] one: people talk with syllables rather than phonemes, and it’s enough to write an unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
       <p />
-      <p>There are several ways to write consonant conjuncts and lone consonants (let’s take word “stop” as an example):</p>
-      <p>* Make a character for lone consonant: s-to-p ([[ps:Cans|Canadian syllabics]]).</p>
+      <p>There are several ways to write consonant conjuncts and lone consonants (let’s take the word “stop” as an example):</p>
+      <p>* Make a character for a lone consonant: s-to-p ([[ps:Cans|Canadian syllabics]]).</p>
       <p>* Make this character by adding a diacritic ([[pt:virama|virama]]) to a syllable: sⱥ-to-pⱥ (many [[pt:brahmic|Brahmic]] abugidas, especially underdeveloped).</p>
-      <p>* Some Brahmic abugidas ([[ps:Laoo|Lao]], [[ps:Tavt|Tai Viet]]) in 20th century reformed writing and got rid of virama. Main character started to mean a consonant.</p>
+      <p>* Some Brahmic abugidas ([[ps:Laoo|Lao]], [[ps:Tavt|Tai Viet]]) in the 20th century reformed writing and got rid of virama. The main character started to mean a consonant.</p>
       <p>* Ban conjuncts and finals, adding vowels when borrowing: su-to-pu (Japanese). ''Japanese would have borrowed su-to-ppu, but that’s a question of phonetics.''</p>
-      <p>* In some conditions that vowel actually becomes silent: sᵊ-to-pᵊ ([[ps:Guru|Gurmukhi]], partly Japanese).</p>
+      <p>* In some conditions, that vowel actually becomes silent: sᵊ-to-pᵊ ([[ps:Guru|Gurmukhi]], partly Japanese).</p>
       <p>* Make [[pt:ligature|ligatures]]:  sᵀo-p? (major Brahmic abugidas like [[ps:Deva|Devanagari]]) or s?-toᴾ ([[ps:Limb|Limbu]]).</p>
-      <p>* Drop final consonant: s?-to ([[ps:Linb|Mycenaean]], [[ps:Buhd|Buhid]]).</p>
+      <p>* Drop the final consonant: s?-to ([[ps:Linb|Mycenaean]], [[ps:Buhd|Buhid]]).</p>
      </orig>
      <transl>
       <p>Письменность, в которой каждая буква записывает слог из гласной и согласной. Обычно содержат 80–120 букв. Разновидностью слоговой письменности является [[pt:abugida|абугида]], где у сходных слогов сходные буквы.</p>
