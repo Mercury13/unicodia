@@ -7,6 +7,8 @@
 #include "IXSocketFactory.h"
 
 #include "IXUniquePtr.h"
+#include "IXSocket.h"
+
 #ifdef IXWEBSOCKET_USE_TLS
 
 #ifdef IXWEBSOCKET_USE_MBED_TLS
@@ -16,10 +18,6 @@
 #elif __APPLE__
 #include "IXSocketAppleSSL.h"
 #endif
-
-#else
-
-#include "IXSocket.h"
 
 #endif
 

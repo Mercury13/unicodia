@@ -9,7 +9,7 @@ win32-g++ {
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
 }
 
-DEFINES += IXWEBSOCKET_USE_OPENSSL
+DEFINES += IXWEBSOCKET_USE_TLS IXWEBSOCKET_USE_OPENSSL IXWEBSOCKET_USE_OPEN_SSL
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
