@@ -2,7 +2,6 @@
 
 #include <ixwebsocket/IXNetSystem.h>
 #include <ixwebsocket/IXHttpClient.h>
-#include <ixwebsocket/IXSocketTLSOptions.h>
 
 ///// MyHttpThread /////////////////////////////////////////////////////////////
 
@@ -32,11 +31,7 @@ void detail::MyHttpThread::run()
 
     ix::HttpClient httpClient;
 
-    ix::SocketTLSOptions tlsOptions;
-    tlsOptions.caFile = "NONE"; //"cacert.pem";
-    tlsOptions.tls = true;
-    httpClient.setTLSOptions(tlsOptions);
-    ix::WebSocketHttpHeaders headers;
+     ix::WebSocketHttpHeaders headers;
 
     auto args = httpClient.createRequest(owner.url());
 
