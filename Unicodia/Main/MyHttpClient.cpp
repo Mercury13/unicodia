@@ -1,8 +1,25 @@
 #include "MyHttpClient.h"
 
-#include "wnetwrap.h"
+#include <ixwebsocket/IXNetSystem.h>
+#include <ixwebsocket/IXHttpClient.h>
+#include <ixwebsocket/IXSocketTLSOptions.h>
 
 ///// MyHttpThread /////////////////////////////////////////////////////////////
+
+std::mutex initMutex;
+std::atomic<bool> isIxHere = false;
+
+void initIx()
+{
+    if (!isIxHere) {
+        std::lock_guard _(initMutex);
+        if (!isIxHere) {
+            ix::initNetSystem();
+            isIxHere = true;
+        }
+    }
+}
+
 
 void detail::MyHttpThread::run()
 {
@@ -11,10 +28,28 @@ void detail::MyHttpThread::run()
     httpCode = 0;
     error = MyHttpError::OK;
 
-    wrap::Response r = wrap::HttpsRequest(wrap::Url{owner.url()});
-    tempResponse = std::move(r.text);
-    httpCode = atoi(r.status_code.c_str());
-    error = r.err.empty() ? MyHttpError::OK : MyHttpError::MISC;
+    initIx();
+
+    ix::HttpClient httpClient;
+
+    ix::SocketTLSOptions tlsOptions;
+    tlsOptions.caFile = "NONE"; //"cacert.pem";
+    tlsOptions.tls = true;
+    httpClient.setTLSOptions(tlsOptions);
+    ix::WebSocketHttpHeaders headers;
+
+    auto args = httpClient.createRequest(owner.url());
+
+    args->extraHeaders = headers;
+    args->followRedirects = true;
+    args->maxRedirects = 10;
+
+    auto response = httpClient.get(owner.url(), args);
+
+    tempResponse = std::move(response->body);
+    httpCode = response->statusCode;
+    error = (response->errorCode == ix::HttpErrorCode::Ok)
+                ? MyHttpError::OK : MyHttpError::MISC;
 }
 
 
@@ -30,7 +65,6 @@ MyHttpClient::MyHttpClient() : thread(*this)
 int MyHttpClient::httpCode() const { return fHttpCode; }
 const std::string& MyHttpClient::response() const { return fResponse; }
 MyHttpError MyHttpClient::error() const { return fError; }
-
 
 bool MyHttpClient::start(std::string_view url)
 {

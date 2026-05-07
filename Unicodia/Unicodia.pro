@@ -9,7 +9,7 @@ win32-g++ {
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
 }
 
-DEFINES += MG_TLS=2
+DEFINES += IXWEBSOCKET_USE_OPENSSL
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -41,7 +41,23 @@ SOURCES += \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     ../Libs/SelfMade/i_DarkMode.cpp \
     ../Libs/SelfMade/u_Version.cpp \
-    ../Libs/Wnet/wnetwrap.cpp \
+    ../Libs/ixwebsocket/IXCancellationRequest.cpp \
+    ../Libs/ixwebsocket/IXDNSLookup.cpp \
+    ../Libs/ixwebsocket/IXHttp.cpp \
+    ../Libs/ixwebsocket/IXHttpClient.cpp \
+    ../Libs/ixwebsocket/IXNetSystem.cpp \
+    ../Libs/ixwebsocket/IXSelectInterrupt.cpp \
+    ../Libs/ixwebsocket/IXSelectInterruptEvent.cpp \
+    ../Libs/ixwebsocket/IXSelectInterruptFactory.cpp \
+    ../Libs/ixwebsocket/IXSocket.cpp \
+    ../Libs/ixwebsocket/IXSocketConnect.cpp \
+    ../Libs/ixwebsocket/IXSocketFactory.cpp \
+    ../Libs/ixwebsocket/IXSocketOpenSSL.cpp \
+    ../Libs/ixwebsocket/IXSocketTLSOptions.cpp \
+    ../Libs/ixwebsocket/IXStrCaseCompare.cpp \
+    ../Libs/ixwebsocket/IXUrlParser.cpp \
+    ../Libs/ixwebsocket/IXUserAgent.cpp \
+    ../Libs/ixwebsocket/IXWebSocketHttpHeaders.cpp \
     CharPaint/SkinToneQa.cpp \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
@@ -129,8 +145,24 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
-    ../Libs/Wnet/wnetwrap.h \
     ../Libs/Zippy/Zippy.hpp \
+    ../Libs/ixwebsocket/IXCancellationRequest.h \
+    ../Libs/ixwebsocket/IXDNSLookup.h \
+    ../Libs/ixwebsocket/IXHttp.h \
+    ../Libs/ixwebsocket/IXHttpClient.h \
+    ../Libs/ixwebsocket/IXNetSystem.h \
+    ../Libs/ixwebsocket/IXSelectInterrupt.h \
+    ../Libs/ixwebsocket/IXSelectInterruptEvent.h \
+    ../Libs/ixwebsocket/IXSelectInterruptFactory.h \
+    ../Libs/ixwebsocket/IXSocket.h \
+    ../Libs/ixwebsocket/IXSocketConnect.h \
+    ../Libs/ixwebsocket/IXSocketFactory.h \
+    ../Libs/ixwebsocket/IXSocketOpenSSL.h \
+    ../Libs/ixwebsocket/IXSocketTLSOptions.h \
+    ../Libs/ixwebsocket/IXStrCaseCompare.h \
+    ../Libs/ixwebsocket/IXUrlParser.h \
+    ../Libs/ixwebsocket/IXUserAgent.h \
+    ../Libs/ixwebsocket/IXWebSocketHttpHeaders.h \
     CharPaint/SkinToneQa.h \
     CharPaint/routines.h \
     CharPaint/IconEngines.h \
@@ -206,12 +238,11 @@ INCLUDEPATH += \
     ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings \
-    ../Libs/Wnet \
     ../Libs/Zippy \
     Main \
     Uc
 
-LIBS += -lz -lwininet -lurlmon -lole32
+LIBS += -lz -lws2_32 -lcrypt32 -lcrypto -lssl
 
 
 # Default rules for deployment.
