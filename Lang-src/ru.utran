@@ -11895,13 +11895,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:character|Glyph]] that is displayed when the character is missing from font. Usually tofu is a white box, hence name after Japanese soybean cheese cut in dice.</p>
+      <p>A [[pt:character|glyph]] displayed when the character is missing from the font. Usually, tofu is a white box, hence the name after Japanese soybean cheese cut into dice.</p>
       <p />
-      <p>Some fonts have creative tofu: rectangle with question mark, with cross or with sketchy mark of script.</p>
+      <p>Some fonts have creative tofu: a rectangle with a question mark, a cross or a sketchy script mark.</p>
       <p />
-      <p>Some characters of Unicode are [[pt:ignorable|default-ignorable]]{{-}}not showing as tofu.</p>
+      <p>Some Unicode characters are [[pt:ignorable|default-ignorable]]{{-}}not showing as tofu.</p>
       <p />
-      <p>''Noto'' set of fonts used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
+      <p>The ''Noto'' font set used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
      </orig>
      <transl>
       <p>[[pt:character|Глиф]], отображаемый, если символа нет в шрифте. Обычно белый прямоугольник, отсюда название в честь японского соевого сыра, нарезаемого кубиками.</p>
