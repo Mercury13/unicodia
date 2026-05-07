@@ -8199,9 +8199,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script whose letter represents a syllable made of a consonant and a vowel. Usually contains 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script in which similar syllables use similar letters.</p>
+      <p>Script whose letters represent syllables made of a consonant and a vowel. Usually contains 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script in which similar syllables use similar letters.</p>
       <p />
-      <p>Syllabic script is easy to invent from [[pt:hiero|ideographic]] one: people talk with syllables rather than phonemes, and it’s enough to write an unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
+      <p>Syllabic script is easy to invent from an [[pt:hiero|ideographic]] one: people talk with syllables rather than phonemes, and it’s enough to write an unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
       <p />
       <p>There are several ways to write consonant conjuncts and lone consonants (let’s take the word “stop” as an example):</p>
       <p>* Make a character for a lone consonant: s-to-p ([[ps:Cans|Canadian syllabics]]).</p>
