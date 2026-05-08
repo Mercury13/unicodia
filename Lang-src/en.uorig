@@ -8276,11 +8276,11 @@
       <p />
       <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
       <p />
-      <p>If the code is followed with any character other than Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may also be encoded to save bytes.</p>
+      <p>If the code is followed by any character other than Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may also be encoded to save bytes.</p>
       <p />
-      <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and is even ambiguous: the same text may be encoded in multiple ways.</p>
+      <p>UTF-7 does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and is even ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
-      <p>Used only for email messages, as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special unambiguous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can executer an XSS attack by tricking the browser into thinking the page is UTF-7.</p>
+      <p>Used only for email messages, as an alternative to the more bulky ''quoted-printable''. In IMAP protocol, a special unambiguous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can execute an XSS attack by tricking the browser into thinking the page is UTF-7.</p>
      </orig>
     </text>
    </group>
@@ -8290,7 +8290,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Unicode transformation format, 8-bit''' is a format for [[pt:serialization|serializing]] Unicode into a chain of bytes. Invented in 1992 in the Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
+      <p>'''Unicode transformation format, 8-bit''' is a format for [[pt:serialization|serializing]] Unicode into a chain of bytes. Invented in 1992 for the Plan{{_}}9 operating system to ensure compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
       <p>* 0xxx.xxxx</p>
       <p>* 110x.xxxx{{_}}10xx.xxxx</p>
       <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
@@ -8299,12 +8299,12 @@
       <p>Properties of UTF-8:</p>
       <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
       <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that ensures compatibility with program interfaces and terminal protocols.</p>
-      <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from the end of string 00.</p>
+      <p>* Non-standard format of UTF-8 exists where a null character is encoded as C0{{_}}80, distinguishing it from the end of string 00.</p>
       <p>* Self-synchronizing: if you add any erroneous bytes, the rest of the text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used for inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux and cross-platform libraries like OpenSSL.</p>
+      <p>UTF-8 is widely used for inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a program interface format, UTF-8 is used in Linux and cross-platform libraries like OpenSSL.</p>
      </orig>
     </text>
    </group>
@@ -8324,7 +8324,7 @@
       <p />
       <p>Properties of UTF-16:</p>
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} characters.</p>
-      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lies in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
+      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language is in the Basic Plane and characters from other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
       <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest of the text remains readable. Searching in UTF-16, even for a single character, will{{_}}not{{_}}cause false positives.</p>
       <p>* Unreliable detection: without a [[pt:bom|byte order mark]], the UTF-16 format and byte order are detectable only on indirect evidence, by statistics or surrogate pairs if they are present. The well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
