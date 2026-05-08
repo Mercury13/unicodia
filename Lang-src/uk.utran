@@ -12170,7 +12170,7 @@
    </group>
    <group id="zwj">
     <text id="Name">
-     <orig>ZWJ = zero width joiner</orig>
+     <orig>ZWJ = zero-width joiner</orig>
      <transl>нульовий з’єднувач</transl>
     </text>
     <text id="Text">
@@ -12184,9 +12184,9 @@
       <p>'''[[pt:emoji|Emoji]]'''</p>
       <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
       <p />
-      <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: vendor invents a sequence without anyone’s permission, and if it proves successful, Consortium encodes it.</p>
+      <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: a vendor invents a sequence without anyone’s permission, and if it proves successful, the Consortium encodes it.</p>
       <p />
-      <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
+      <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags.</p>
      </orig>
      <transl>
       <p>[[pt:format|Форматуючий]] символ [[pu:200D]], призначенній для об’єднання символів у [[pt:ligature|лігатуру]]. Він [[pt:ignorable|ігнорований]]: його можна спокійно пропускати.</p>
@@ -12206,7 +12206,7 @@
    </group>
    <group id="zwnj">
     <text id="Name">
-     <orig>ZWNJ = zero width non-joiner</orig>
+     <orig>ZWNJ = zero-width non-joiner</orig>
      <transl>нульовий роз’єднувач</transl>
     </text>
     <text id="Text">

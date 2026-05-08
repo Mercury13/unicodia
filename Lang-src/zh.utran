@@ -10172,6 +10172,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Character intended for leaving empty space. A well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different, too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to the next line.</p>
+      <p />
+      <p>Spaces usually have no{{_}}graphical representation and just move the caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
+      <p />
+      <p>In ''Unicodia'', spaces are marked exactly by the body’s size, so narrowness is deceptive. Hair space [[pu:200A]] is often enough to leave a little space.</p>
+      <p />
+      <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
+     </orig>
+     <known-orig>
       <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to next line.</p>
       <p />
       <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
@@ -10179,7 +10188,7 @@
       <p>In ''Unicodia'' spaces are marked exactly by body’s size, so narrowness is deceptive. Hair space [[pu:200A]] is often enough to leave a little space.</p>
       <p />
       <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种字符旨在留出空白。排版精良的文本会预留恰到好处的空间：146%{{-}}（太窄），146{{_}}%（太宽），{{%|146}}（刚刚好）。正因如此，空格也有多种不同的类型。其中一些是“不换行”的：它们在两端对齐的文本中不会被拉伸，也不会换行到下一行。</p>
       <p />
@@ -12229,7 +12238,8 @@
      <transl>语义</transl>
     </text>
     <text id="Text">
-     <orig>Character’s behaviour is mainly specified with complex tables rather than with its name or position in code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</orig>
+     <orig>A character’s behaviour is mainly specified by complex tables rather than by its name or position in the code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</orig>
+     <known-orig>Character’s behaviour is mainly specified with complex tables rather than with its name or position in code table. Excerpts from these tables are present in ''Unicodia'': [[pt:number|numeric]] value, case, writing [[pt:bidi|direction]]…</known-orig>
      <transl>字符的行为主要通过复杂的表格来指定，而不是通过其名称或代码表中的位置。这些表格的摘录出现在「Unicodia」中：[[pt:number|数值]]、大小写、书写 [[pt:bidi|方向]]……</transl>
     </text>
    </group>
@@ -12240,12 +12250,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Method of converting data (for example, Unicode text) into a sequence of ''code units''{{-}}bytes for [[pt:utf8|UTF-8]], two-byte words for [[pt:utf16|UTF-16]], four-byte words for [[pt:utf32|UTF-32]], printable ASCII characters for [[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]].</p>
+      <p />
+      <p>Disks and data channels work with bytes. So when transmitting UTF-16/32, the order of bytes within a word becomes significant, and they split into UTF-16BE, UTF-32BE (big-endian, most significant byte first) and UTF-16LE, UTF-32LE (little-endian, least significant byte first).</p>
+      <p />
+      <p>[[pt:bom|Byte order mark]] lets software distinguish between these formats.</p>
+     </orig>
+     <known-orig>
       <p>Method of converting data (for example, Unicode text) to a chain of ''code units''{{-}}bytes for [[pt:utf8|UTF-8]], two-byte words for [[pt:utf16|UTF-16]], four-byte words for [[pt:utf32|UTF-32]], printable ASCII characters for [[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]].</p>
       <p />
       <p>Disks and data channels work with bytes. So when transmitting UTF-16/32, order of bytes in word begins to mean, and they split into UTF-16BE, UTF-32BE (big-endian, most significant byte first) and UTF-16LE, UTF-32LE (little-endian, least significant byte first).</p>
       <p />
       <p>[[pt:bom|Byte order mark]] lets software distinguish between these formats.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>将数据（例如 Unicode 文本）转换为 ''码元'' 链的方法——对于 [[pt:utf8|UTF-8]] 是字节，对于 [[pt:utf16|UTF-16]] 是双字节字，对于 [[pt:utf32|UTF-32]] 是四字节字，对于 [[pt:utf7|UTF-7]] 和 [[pt:punycode|Punycode]] 是可打印 ASCII 字符。</p>
       <p />
@@ -12268,12 +12285,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character that occupies room in a line.</p>
+      <p>A character that occupies room in the line.</p>
       <p />
       <p>Spacing are letters, [[pt:number|numbers]], punctuation marks, [[pt:space|whitespace]], miscellaneous symbols and spacing [[pt:combining|combining marks]].</p>
       <p />
       <p>Non-spacing are [[pt:control|control characters]], [[pt:format|format characters]] and other types of marks.</p>
      </orig>
+     <known-orig>
+      <p>Character that occupies room in a line.</p>
+      <p />
+      <p>Spacing are letters, [[pt:number|numbers]], punctuation marks, [[pt:space|whitespace]], miscellaneous symbols and spacing [[pt:combining|combining marks]].</p>
+      <p />
+      <p>Non-spacing are [[pt:control|control characters]], [[pt:format|format characters]] and other types of marks.</p>
+     </known-orig>
      <transl>
       <p>在一行中占据空间的字符。</p>
       <p />
@@ -12290,6 +12314,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Unicode Consortium guarantees that they will{{_}}not{{_}}change certain properties of characters.</p>
+      <p />
+      <p>'''A character will{{_}}not{{_}}move or disappear''' (2.0+). Every new Unicode version will be a superset of the previous one. Text is sorted using the national sorting order.</p>
+      <p />
+      <p>'''Character’s name will{{_}}not{{_}}change''' (2.0+). Though correction names exist, and Unicodia shows '''them'''. Synonyms also won’t change, including corrections (5.0+).</p>
+      <p />
+      <p>'''[[pt:normalization|Normalization]] of string will{{_}}not{{_}}change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other widely used scripts where normalization matters.</p>
+      <p />
+      <p>'''A character’s properties may change, but not{{_}}so{{_}}much that its nature changes''' (1.1+). For example, a capital letter will{{_}}not{{_}}turn to lowercase, and a [[pt:noncharacter|non-character]] will{{_}}not{{_}}return to use. In later versions of Unicode, this rule was clarified.</p>
+      <p />
+      <p>'''Normative and informational properties of character will{{_}}not{{_}}disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take others’ place on rename.</p>
+      <p />
+      <p>'''[[pt:casefolding|Case folding]] will{{_}}not{{_}}change''' (5.0+). Case folding is intended for locale-independent string comparison, and is generally (but not{{_}}necessarily) conversion to lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
+      <p />
+      <p>'''If two characters were (or were{{_}}not) in a case pair, they will remain there''' (5.0+). A small letter may get a capital counterpart (or vice versa, as in Cherokee), and this is the only way for a letter to enter a case pair.</p>
+     </orig>
+     <known-orig>
       <p>Unicode Consortium guarantees that it will{{_}}not{{_}}change some properties of characters.</p>
       <p />
       <p>'''A character will{{_}}not{{_}}move or disappear''' (2.0+). Every new Unicode will be a superset of previous. Text is sorted using national sorting order.</p>
@@ -12305,7 +12346,7 @@
       <p>'''[[pt:casefolding|Case folding]] will{{_}}not{{_}}change''' (5.0+). Case folding is intended for locale-independent comparison of strings, and is generally (but not{{_}}necessarily) conversion into lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
       <p />
       <p>'''If two characters were (or were{{_}}not) in case pair, they will remain there''' (5.0+). Small letter may get capital counterpart (or vice-versa, like in Cherokee), and this is the only way for a letter to enter a case pair.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Unicode 联盟保证不会更改字符的某些属性。</p>
       <p />
@@ -12353,8 +12394,31 @@
       <p />
       <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
       <p />
-      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa the in 20th century.</p>
+      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa in the 20th century.</p>
      </orig>
+     <known-orig>
+      <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
+      <p />
+      <p>'''Endangered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
+      <p />
+      <p>'''Endangered due to script competition'''{{-}}all languages have an alternate script, already stronger or gaining strength.</p>
+      <p />
+      <p>'''Dead'''{{-}}the script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
+      <p />
+      <p>'''Religious'''{{-}}the script is in use by an important religion.</p>
+      <p />
+      <p>'''Historical, no{{_}}decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
+      <p />
+      <p>'''(Un)deciphered'''{{-}}historical script is not{{_}}yet{{_}}deciphered (partly deciphered, deciphered).</p>
+      <p />
+      <p>'''New'''{{-}}invented too recently to tell exactly about its status.</p>
+      <p />
+      <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
+      <p />
+      <p>'''Made to revive a dead language'''{{-}}[[ps:Osge|Osage]] only (writing in [[ps:Latn|Latin]] proved bad).</p>
+      <p />
+      <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}related to the liberation of Africa the in 20th century.</p>
+     </known-orig>
      <transl>
       <p>'''活跃'''——至少有一种语言的状态为“安全”，该文字是唯一的文字或者没有失去重要性。</p>
       <p />
@@ -12387,6 +12451,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Script whose letters represent syllables made of a consonant and a vowel. Usually contains 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script in which similar syllables use similar letters.</p>
+      <p />
+      <p>Syllabic script is easy to invent from an [[pt:hiero|ideographic]] one: people talk with syllables rather than phonemes, and it’s enough to write an unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
+      <p />
+      <p>There are several ways to write consonant conjuncts and lone consonants (let’s take the word “stop” as an example):</p>
+      <p>* Make a character for a lone consonant: s-to-p ([[ps:Cans|Canadian syllabics]]).</p>
+      <p>* Make this character by adding a diacritic ([[pt:virama|virama]]) to a syllable: sⱥ-to-pⱥ (many [[pt:brahmic|Brahmic]] abugidas, especially underdeveloped).</p>
+      <p>* Some Brahmic abugidas ([[ps:Laoo|Lao]], [[ps:Tavt|Tai Viet]]) in the 20th century reformed writing and got rid of virama. The main character started to mean a consonant.</p>
+      <p>* Ban conjuncts and finals, adding vowels when borrowing: su-to-pu (Japanese). ''Japanese would have borrowed su-to-ppu, but that’s a question of phonetics.''</p>
+      <p>* In some conditions, that vowel actually becomes silent: sᵊ-to-pᵊ ([[ps:Guru|Gurmukhi]], partly Japanese).</p>
+      <p>* Make [[pt:ligature|ligatures]]:  sᵀo-p? (major Brahmic abugidas like [[ps:Deva|Devanagari]]) or s?-toᴾ ([[ps:Limb|Limbu]]).</p>
+      <p>* Drop the final consonant: s?-to ([[ps:Linb|Mycenaean]], [[ps:Buhd|Buhid]]).</p>
+     </orig>
+     <known-orig>
       <p>Script whose letter means a syllable made of consonant and vowel. Usually contain 80 to 120 letters. [[pt:abugida|Abugida]] is a type of syllabic script where similar syllables have similar letters.</p>
       <p />
       <p>Syllabic script is easy to invent from [[pt:hiero|ideographic]]: people talk with syllables rather than phonemes, and it’s enough to write unknown word with appropriate one-syllable hieroglyphs. Such a process is recorded in [[ps:Xsux|cuneiform]] and [[ps:Hira|Japanese]].</p>
@@ -12399,7 +12477,7 @@
       <p>* In some conditions that vowel actually becomes silent: sᵊ-to-pᵊ ([[ps:Guru|Gurmukhi]], partly Japanese).</p>
       <p>* Make [[pt:ligature|ligatures]]:  sᵀo-p? (major Brahmic abugidas like [[ps:Deva|Devanagari]]) or s?-toᴾ ([[ps:Limb|Limbu]]).</p>
       <p>* Drop final consonant: s?-to ([[ps:Linb|Mycenaean]], [[ps:Buhd|Buhid]]).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>一种文字，其字母代表由辅音和元音组成的音节。通常包含 80 到 120 个字母。[[pt:abugida|元音附标文字]] 是一种音节文字，其中相似的音节拥有相似的字母。</p>
       <p />
@@ -12423,6 +12501,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A [[pt:character|glyph]] displayed when the character is missing from the font. Usually, tofu is a white box, hence the name after Japanese soybean cheese cut into dice.</p>
+      <p />
+      <p>Some fonts have creative tofu: a rectangle with a question mark, a cross or a sketchy script mark.</p>
+      <p />
+      <p>Some Unicode characters are [[pt:ignorable|default-ignorable]]{{-}}not showing as tofu.</p>
+      <p />
+      <p>The ''Noto'' font set used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
+     </orig>
+     <known-orig>
       <p>[[pt:character|Glyph]] that is displayed when the character is missing from font. Usually tofu is a white box, hence name after Japanese soybean cheese cut in dice.</p>
       <p />
       <p>Some fonts have creative tofu: rectangle with question mark, with cross or with sketchy mark of script.</p>
@@ -12430,7 +12517,7 @@
       <p>Some characters of Unicode are [[pt:ignorable|default-ignorable]]{{-}}not showing as tofu.</p>
       <p />
       <p>''Noto'' set of fonts used in ''Unicodia'' as well as in other software means ''no{{_}}tofu''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>当字体中缺少某个字符时显示的 [[pt:character|字形]]。通常豆腐块是一个白色的方框，因此得名于切成丁的日本大豆奶酪（豆腐）。</p>
       <p />
@@ -12449,6 +12536,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Unification is writing different characters with the same [[pt:codepoint|code point]]. Duplication is writing the same character with different code points.</p>
+      <p />
+      <p>Unicode avoids duplication. Punctuation marks are encoded once and shared across all Western languages{{-}}and the Eastern ones they penetrated into. Unicode does{{_}}not{{_}}distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
+      <p />
+      <p>There are several important exceptions:</p>
+      <p>* Completely different entities: letter A from [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]] and [[ps:Cher|Cherokee]] is{{_}}not the{{_}}same character.</p>
+      <p>* Ease of processing: simple and non-break hyphen exists. Unicode has as many as three letters Ð, with different small counterparts.</p>
+      <p>* Ease of fontmaking: every South-Asian language has its own virtual [[pt:virama|virama]] (special character for constructing consonant conjuncts). The designer should read the standard and understand what virama does.</p>
+      <p>* Historical reasons{{-}}for [[pt:convertibility|round-trip convertibility]]: Chinese ideographs from old encodings are always Chinese and do{{_}}not{{_}}have Japanese counterparts.</p>
+      <p>* Ordinary overlook may also take place: angle brackets ⟨ mathematical and 〈 technical, the latter is [[pt:deprecated|deprecated]].</p>
+      <p />
+      <p>If the characters were unified, but then Unicode started to distinguish them, it’s disunification. For example, [[ps:Grek|Greek]] and [[ps:Copt|Coptic]] were disunified in 2005.</p>
+     </orig>
+     <known-orig>
       <p>Unification is writing different characters with the same [[pt:codepoint|code point]]. Duplication is writing a single character with different code points.</p>
       <p />
       <p>Unicode avoids duplication. Punctuation marks are encoded once and are shared between all Western languages{{-}}and Eastern ones they penetrated to. Unicode does{{_}}not{{_}}distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
@@ -12461,7 +12562,7 @@
       <p>* Ordinary overlook may also take place: angle brackets ⟨ mathematical and 〈 technical, the latter is [[pt:deprecated|deprecated]].</p>
       <p />
       <p>If the characters were unified, but then Unicode started to distinguish them, it’s disunification. For example, in 2005 [[ps:Grek|Greek]] and [[ps:Copt|Coptic]] were disunified.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>统一是用同一个 [[pt:codepoint|码位]] 书写不同的字符。重复编码是用不同的码位书写同一个字符。</p>
       <p />
@@ -12509,6 +12610,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 7-bit''' is a format for [[pt:serialization|serializing]] Unicode into a chain of printable [[pt:ascii|ASCII]] characters.</p>
+      <p />
+      <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
+      <p />
+      <p>If the code is followed by any character other than Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodable character between two encodable ones, it may also be encoded to save bytes.</p>
+      <p />
+      <p>UTF-7 does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and is even ambiguous: the same text may be encoded in multiple ways.</p>
+      <p />
+      <p>Used only for email messages, as an alternative to the more bulky ''quoted-printable''. In IMAP protocol, a special unambiguous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can execute an XSS attack by tricking the browser into thinking the page is UTF-7.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode transformation format, 7-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of printable [[pt:ascii|ASCII]] characters.</p>
       <p />
       <p>52 letters, 10 digits and '(),-./:? are just written. Sometimes other ASCII characters except ~\+ may be just written too. Plus + may be encoded as +- (plus-hyphen). The rest characters are encoded to [[pt:utf16|UTF-16BE]], then into Base64 (62='''+''', 63='''/''') and enclosed with +…- characters (for example, &lt;nobr&gt;'''£1''' = +AKM-1&lt;/nobr&gt;).</p>
@@ -12518,7 +12630,7 @@
       <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
       <p>Used only for E-mail messages, as an alternative to more bulky ''quoted-printable''. In IMAP protocol, a special unambigous version of UTF-7 is used for mailbox names, with 62='''&amp;''' and 63=comma. On the World Wide Web, UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 转换格式，7 位''' 是一种将 Unicode [[pt:serialization|序列化]] 为可打印 [[pt:ascii|ASCII]] 字符链的格式。</p>
       <p />
@@ -12539,6 +12651,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 8-bit''' is a format for [[pt:serialization|serializing]] Unicode into a chain of bytes. Invented in 1992 for the Plan{{_}}9 operating system to ensure compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
+      <p>* 0xxx.xxxx</p>
+      <p>* 110x.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1110.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p>* 1111.0xxx{{_}}10xx.xxxx{{_}}10xx.xxxx{{_}}10xx.xxxx</p>
+      <p />
+      <p>Properties of UTF-8:</p>
+      <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
+      <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that ensures compatibility with program interfaces and terminal protocols.</p>
+      <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from the end of string 00.</p>
+      <p>* Self-synchronizing: if you add any erroneous bytes, the rest of the text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
+      <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
+      <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
+      <p />
+      <p>UTF-8 is widely used for inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a program interface format, UTF-8 is used in Linux and cross-platform libraries such as OpenSSL.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode transformation format, 8-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of bytes. Invented in 1992 in Plan{{_}}9 operating system for compatibility with existing Internet software. Every [[pt:codepoint|code point]] is written with one of these sequences:</p>
       <p>* 0xxx.xxxx</p>
       <p>* 110x.xxxx{{_}}10xx.xxxx</p>
@@ -12554,7 +12683,7 @@
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
       <p>UTF-8 is widely used as a format of inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a format of program interface, UTF-8 is used in Linux, cross-platform libraries like OpenSSL.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 转换格式，8 位''' 是一种将 Unicode [[pt:serialization|序列化]] 为字节链的格式。于 1992 年在 Plan{{_}}9 操作系统中发明，以兼容现有的互联网软件。每个 [[pt:codepoint|码位]] 都使用以下序列之一书写：</p>
       <p>* 0xxx.xxxx</p>
@@ -12581,6 +12710,25 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 16-bit''' is a format for [[pt:serialization|serializing]] Unicode into a chain of two-byte machine words.</p>
+      <p />
+      <p>Unicode was initially thought of as a two-byte encoding, and writing text with two-byte characters was called UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte characters to simplify text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was adopted as a compromise and named UTF-16.</p>
+      <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
+      <p>* Characters D800…DFFF are forbidden;</p>
+      <p>* Characters 10000 and greater are written as a '''surrogate pair''':</p>
+      <p>: 1101.10yy.yyyy.yyyy{{_}}1101.11yy.yyyy.yyyy, where y=x−10000₁₆.</p>
+      <p />
+      <p>Properties of UTF-16:</p>
+      <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;={{n|1112064}} characters.</p>
+      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language is in the Basic Plane and characters from other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
+      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest of the text remains readable. Searching in UTF-16, even for a single character, will{{_}}not{{_}}cause false positives.</p>
+      <p>* Unreliable detection: without a [[pt:bom|byte order mark]], the UTF-16 format and byte order are detectable only on indirect evidence, by statistics or surrogate pairs if they are present. The well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
+      <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
+      <p />
+      <p>As a format of inter-software exchange, UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a program interface format, it’s used in Windows, Java, JavaScript, Qt.</p>
+     </orig>
+     <au-cmt>“Bush hid the facts” is the exact string, and breaks because is even-odd-odd-odd.</au-cmt>
+     <known-orig>
       <p>'''Unicode transformation format, 16-bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
       <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of that time, such as Java and Windows{{_}}NT, quickly adopted two-byte character, that simplified text processing. However, it soon became clear that two bytes were{{_}}not{{_}}enough, and in 1996 encoding with a variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
@@ -12597,8 +12745,7 @@
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need a byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, JavaScript, Qt.</p>
-     </orig>
-     <au-cmt>“Bush hid the facts” is the exact string, and breaks because is even-odd-odd-odd.</au-cmt>
+     </known-orig>
      <transl>
       <p>'''Unicode 转换格式，16 位''' 是一种将 Unicode [[pt:serialization|序列化]] 为双字节机器字链的格式。</p>
       <p />
@@ -12626,6 +12773,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>'''Unicode transformation format, 32-bit''', aka '''UCS-4''', is a format for [[pt:serialization|serializing]] Unicode into a chain of four-byte machine words. Character codes are just written one after another.</p>
+      <p />
+      <p>Properties of UTF-32:</p>
+      <p>* Constant-length encoding. That’s why it is the most suitable for complex text processing.</p>
+      <p>* Extremely bulky: in [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]] maximum character size is 4 bytes, and in UTF-32 all character are four-byte.</p>
+      <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
+      <p />
+      <p>UTF-32 is almost never used for inter-software exchange due to its bulk. If you need{{-}}the [[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a program interface format, UTF-32 is used in new versions of Unix-like OSes, including MacOS.</p>
+     </orig>
+     <known-orig>
       <p>'''Unicode transformation format, 32-bit''' aka '''UCS-4''' is a format of Unicode [[pt:serialization|serialization]] into a chain of four-byte machine words. Character codes are just written one after another.</p>
       <p />
       <p>Properties of UTF-32:</p>
@@ -12634,7 +12791,7 @@
       <p>* Detected reliably by eleven most significant bits, they are always zeros.</p>
       <p />
       <p>UTF-32 is almost never used as a format of inter-software exchange due to bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>'''Unicode 转换格式，32 位''' 又名 '''UCS-4'''，是一种将 Unicode [[pt:serialization|序列化]] 为四字节机器字链的格式。字符代码只是一个接一个地书写。</p>
       <p />
@@ -12654,6 +12811,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas that means “erase the inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p />
+      <p>In reality, in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
+      <p />
+      <p>Some languages do{{_}}not{{_}}use virama often. For example:</p>
+      <p>* [[pt:ligature|ligatures]] for consonant conjuncts{{-}}Devanagari {{sm|क्ष}} кša. They are written and encoded as if there were no ligature, ka+virama+ša. To tear a ligature and input two letters and virama, one should type ka+virama+ZWNJ+ša;</p>
+      <p>* sings for final consonant{{-}}[[ps:Cham|Cham]], [[ps:Limb|Limbu]];</p>
+      <p>* inherent vowel reduced to nothing{{-}}[[ps:Guru|Punjabi]]. Many languages of India, including Hindi, omit virama at the end of words;</p>
+      <p>* spelling reform dropped the inherent vowel{{-}}[[ps:Laoo|Lao]];</p>
+      <p>* virama may be a single entity with a letter{{-}}[[ps:Talu|New Tai Lue]];</p>
+      <p>* unable to write “extra” consonants{{-}}[[ps:Bugi|Buginese]].</p>
+      <p />
+      <p>Most viramas are [[pt:combining|combining marks]]. But some are [[pt:spacing|spacing]] ([[ps:Java|Javanese]]).</p>
+      <p />
+      <p>Some scripts ([[ps:Khar|Kharoshthi]], [[ps:Mtei|Meitei Mayek]]) feature “virtual virama” to form ligatures. Sometimes even ([[ps:Sund|Sundanese]], [[ps:Cakm|Chakma]]) together with visible virama. Virtual virama looks like a cross, but leaving it visible in ordinary text is a mistake.</p>
+     </orig>
+     <known-orig>
       <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas meaning “erase inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
       <p />
       <p>In reality in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
@@ -12669,7 +12843,7 @@
       <p>Most viramas are [[pt:combining|combining marks]]. But some are [[pt:spacing|spacing]] ([[ps:Java|Javanese]]).</p>
       <p />
       <p>Some scripts ([[ps:Khar|Kharoshthi]], [[ps:Mtei|Meitei Mayek]]) feature “virtual virama” for assembling ligatures. Sometimes even ([[ps:Sund|Sundanese]], [[ps:Cakm|Chakma]]) together with visible virama. Virtual virama looks like a cross, but leaving it visible in ordinary text is a mistake.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Virama（梵语“停止”）是 [[pt:brahmic|婆罗米系]] 元音附标文字中的一个符号，意为“擦除固有元音”。例如，在 [[ps:Deva|天城文字]] 中：ka {{sm|क}} + {{sm|्}} = k {{sm|क्}} 。</p>
       <p />
@@ -12697,6 +12871,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>In Windows{{_}}10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open the emoji panel. Can enter:</p>
+      <p>* [[pt:emoji|emoji]] existing in standard font. When the font extended, the panel extended too;</p>
+      <p>* text smilies;</p>
+      <p>* typography characters;</p>
+      <p>* Latin with diacritics;</p>
+      <p>* currency symbols;</p>
+      <p>* [[ps:Grek|Greek]];</p>
+      <p>* arrows;</p>
+      <p>* superscripts, fractions, mathematical operators.</p>
+     </orig>
+     <known-orig>
       <p>In Windows{{_}}10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open emoji panel. Can enter:</p>
       <p>* [[pt:emoji|emoji]] existing in standard font. When the font extended, panel extended too;</p>
       <p>* text smilies;</p>
@@ -12706,7 +12891,7 @@
       <p>* [[ps:Grek|Greek]];</p>
       <p>* arrows;</p>
       <p>* superscripts, fractions, mathematical operators.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>在 Windows{{_}}10/11 中，按 {{kb|Win|;}} 或 {{kb|Win|.}} 打开表情符号面板。可以输入：</p>
       <p>* 标准字体中存在的 [[pt:emoji|表情符号]]。当字体扩展时，面板也会扩展；</p>
@@ -12722,7 +12907,8 @@
    </group>
    <group id="zwj">
     <text id="Name">
-     <orig>ZWJ = zero width joiner</orig>
+     <orig>ZWJ = zero-width joiner</orig>
+     <known-orig>ZWJ = zero width joiner</known-orig>
      <transl>零宽连字</transl>
     </text>
     <text id="Text">
@@ -12736,10 +12922,24 @@
       <p>'''[[pt:emoji|Emoji]]'''</p>
       <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
       <p />
+      <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: a vendor invents a sequence without anyone’s permission, and if it proves successful, the Consortium encodes it.</p>
+      <p />
+      <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags.</p>
+     </orig>
+     <known-orig>
+      <p>[[pt:format|Format]] character [[pu:200D]] intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
+      <p />
+      <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]:</p>
+      <p>{{smtable|*क|ka +|**◌्|[[pt:virama|virama]] +|*ष|ša =|*क्ष|kša}}</p>
+      <p>{{smtable|*क|ka +|**◌्|virama + ZWJ +|*ष|ša =|*क्‍ष|alternate kša}}</p>
+      <p />
+      <p>'''[[pt:emoji|Emoji]]'''</p>
+      <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
+      <p />
       <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: vendor invents a sequence without anyone’s permission, and if it proves successful, Consortium encodes it.</p>
       <p />
       <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[pt:format|格式]] 字符 [[pu:200D]] 旨在将字符合并为 [[pt:ligature|连字]]。它是 [[pt:ignorable|默认可忽略的]]，即静默跳过它是完全安全的。</p>
       <p />
@@ -12758,7 +12958,8 @@
    </group>
    <group id="zwnj">
     <text id="Name">
-     <orig>ZWNJ = zero width non-joiner</orig>
+     <orig>ZWNJ = zero-width non-joiner</orig>
+     <known-orig>ZWNJ = zero width non-joiner</known-orig>
      <transl>零宽不连字</transl>
     </text>
     <text id="Text">
