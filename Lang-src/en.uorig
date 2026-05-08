@@ -10568,7 +10568,7 @@
    <group id="BbcMaster">
     <text id="Text">
      <orig>
-      <p>It was created by Acorn Computers as the second educational computer (after BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches and hit none. Low price and TV support led to an 8-bit processor and non-square pixel, and the scientific model was cancelled due to low memory.</p>
+      <p>It was created by Acorn Computers as the second educational computer (after the BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches and hit none. Low price and TV support led to an 8-bit processor and non-square pixel, and the scientific model was cancelled due to low memory.</p>
       <p />
       <p>A later model had a second Intel CPU, but IBM compatibility was basic{{-}}though it could run several important programs like ''Turbo{{_}}C'' and, with a memory expansion module, even ''WordPerfect''.</p>
      </orig>
@@ -10597,7 +10597,7 @@
      <orig>
       <p>PC became the ''de facto'' standard in the late 1980s: it had been cloned in 1982, and newer models grew increasingly powerful while retaining compatibility with older software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made rather nice games possible{{-}}and, more importantly, diverse, not restricted by low memory or capabilities of the graphics accelerator.</p>
       <p />
-      <p>The other IBM’s strengths were excellent text quality (80×25 cells 9×16 each in later adapters) and ease of localization (done entirely in software).</p>
+      <p>The other IBM strengths were excellent text quality (80×25 cells 9×16 each in later adapters) and ease of localization (done entirely in software).</p>
       <p />
       <p>For many years, it ran obsolete DOS, until Microsoft introduced Windows{{_}}95. Earlier OS like Unix or Windows{{_}}NT were rare.</p>
       <p />
