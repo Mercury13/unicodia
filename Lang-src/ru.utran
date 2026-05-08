@@ -12103,21 +12103,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas meaning “erase inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas that means “erase the inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
       <p />
-      <p>In reality in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
+      <p>In reality, in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
       <p />
       <p>Some languages do{{_}}not{{_}}use virama often. For example:</p>
-      <p>* [[pt:ligature|ligatures]] for consonant conjuncts{{-}}Devanagari {{sm|क्ष}} кša. They are written and encoded as if there’s no ligature, ka+virama+ša. To tear a ligature and input two letters and virama, one should type ka+virama+ZWNJ+ša;</p>
+      <p>* [[pt:ligature|ligatures]] for consonant conjuncts{{-}}Devanagari {{sm|क्ष}} кša. They are written and encoded as if there were no ligature, ka+virama+ša. To tear a ligature and input two letters and virama, one should type ka+virama+ZWNJ+ša;</p>
       <p>* sings for final consonant{{-}}[[ps:Cham|Cham]], [[ps:Limb|Limbu]];</p>
-      <p>* inherent vowel reduced to nothing{{-}}[[ps:Guru|Punjabi]]. Many languages of India, including Hindi, omit virama in the end of words;</p>
-      <p>* spelling reform dropped inherent vowel{{-}}[[ps:Laoo|Lao]];</p>
-      <p>* virama may be a single entity with letter{{-}}[[ps:Talu|New Tai Lue]];</p>
+      <p>* inherent vowel reduced to nothing{{-}}[[ps:Guru|Punjabi]]. Many languages of India, including Hindi, omit virama at the end of words;</p>
+      <p>* spelling reform dropped the inherent vowel{{-}}[[ps:Laoo|Lao]];</p>
+      <p>* virama may be a single entity with a letter{{-}}[[ps:Talu|New Tai Lue]];</p>
       <p>* unable to write “extra” consonants{{-}}[[ps:Bugi|Buginese]].</p>
       <p />
       <p>Most viramas are [[pt:combining|combining marks]]. But some are [[pt:spacing|spacing]] ([[ps:Java|Javanese]]).</p>
       <p />
-      <p>Some scripts ([[ps:Khar|Kharoshthi]], [[ps:Mtei|Meitei Mayek]]) feature “virtual virama” for assembling ligatures. Sometimes even ([[ps:Sund|Sundanese]], [[ps:Cakm|Chakma]]) together with visible virama. Virtual virama looks like a cross, but leaving it visible in ordinary text is a mistake.</p>
+      <p>Some scripts ([[ps:Khar|Kharoshthi]], [[ps:Mtei|Meitei Mayek]]) feature “virtual virama” to form ligatures. Sometimes even ([[ps:Sund|Sundanese]], [[ps:Cakm|Chakma]]) together with visible virama. Virtual virama looks like a cross, but leaving it visible in ordinary text is a mistake.</p>
      </orig>
      <transl>
       <p>Вирама (санскрит «остановка»){{-}}знак в [[pt:brahmic|брахмийских]] абугидах, означающий «стереть гласную по умолчанию». Например, в [[ps:Deva|деванáгари]]: &lt;nobr&gt;ка {{sm|क}} + {{sm|्}} = к {{sm|क्}}&lt;/nobr&gt;.</p>
@@ -12145,8 +12145,8 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In Windows{{_}}10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open emoji panel. Can enter:</p>
-      <p>* [[pt:emoji|emoji]] existing in standard font. When the font extended, panel extended too;</p>
+      <p>In Windows{{_}}10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open the emoji panel. Can enter:</p>
+      <p>* [[pt:emoji|emoji]] existing in standard font. When the font extended, the panel extended too;</p>
       <p>* text smilies;</p>
       <p>* typography characters;</p>
       <p>* Latin with diacritics;</p>
