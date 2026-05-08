@@ -8299,7 +8299,7 @@
       <p>Properties of UTF-8:</p>
       <p>* Theoretically can write 2 billion code points with sequences up to 6 bytes. With limitations enforced on Unicode with [[pt:utf16|UTF-16]], there are no sequences longer than 4.</p>
       <p>* Backwards compatibility: Latin text is indistinguishable from ASCII text. Bytes 00 and 7F are [[pt:control|control]], byte FF is impossible, that ensures compatibility with program interfaces and terminal protocols.</p>
-      <p>* Non-standard format of UTF-8 exists where a null character is encoded as C0{{_}}80, distinguishing it from the end of string 00.</p>
+      <p>* Non-standard format of UTF-8 exists where null character is encoded as C0{{_}}80, distinguishing it from the end of string 00.</p>
       <p>* Self-synchronizing: if you add any erroneous bytes, the rest of the text remains readable. Searching in correct UTF-8 with a legacy program also won’t make false positives.</p>
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
