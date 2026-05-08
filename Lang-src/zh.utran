@@ -15773,10 +15773,15 @@
    <group id="BbcMaster">
     <text id="Text">
      <orig>
+      <p>It was created by Acorn Computers as the second educational computer (after the BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches and hit none. Low price and TV support led to an 8-bit processor and non-square pixel, and the scientific model was cancelled due to low memory.</p>
+      <p />
+      <p>A later model had a second Intel CPU, but IBM compatibility was basic{{-}}though it could run several important programs like ''Turbo{{_}}C'' and, with a memory expansion module, even ''WordPerfect''.</p>
+     </orig>
+     <known-orig>
       <p>Was created by Acorn Computers as the second educational computer (after BBC Micro). It had a nice graphical OS, but it was a strange computer that aimed at several niches and hit none. Low price and TV support led to 8-bit processor and non-square pixel, and the scientific model was cancelled because of low memory.</p>
       <p />
       <p>A later model had a second Intel CPU, but IBM compatibility was basic{{-}}though it could run several important programs like ''Turbo{{_}}C'', and with memory expansion module even ''WordPerfect''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>由 Acorn 计算机创建，作为第二款教育电脑（继 BBC Micro 之后）。它拥有不错的图形操作系统，但这款电脑针对多个细分市场却未能成功打入任何一个。低价和电视支持导致其采用了 8 位处理器和非方形像素，科学模型因内存不足而被取消。</p>
       <p />
@@ -15809,6 +15814,15 @@
    <group id="Ibm">
     <text id="Text">
      <orig>
+      <p>PC became the ''de facto'' standard in the late 1980s: it had been cloned in 1982, and newer models grew increasingly powerful while retaining compatibility with older software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made rather nice games possible{{-}}and, more importantly, diverse, not restricted by low memory or capabilities of the graphics accelerator.</p>
+      <p />
+      <p>The other IBM strengths were excellent text quality (80×25 cells 9×16 each in later adapters) and ease of localization (performed entirely in software).</p>
+      <p />
+      <p>For many years, it ran obsolete DOS, until Microsoft introduced Windows{{_}}95. Earlier OS like Unix or Windows{{_}}NT were rare.</p>
+      <p />
+      <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in the 2010s). Only portable and special-purpose systems use other architectures.</p>
+     </orig>
+     <known-orig>
       <p>PC became the ''de facto'' standard in the late 1980s: it had been cloned in 1982, and newer models became more and more powerful, retaining compatibility with old software. Games were poor initially, but VGA (320×200, 256 colours, 1987) and sheer CPU power made possible rather nice games{{-}}and, more importantly, diverse, not restricted by low memory or capabilities of the graphic accelerator.</p>
       <p />
       <p>Another IBM’s strengths were excellent text quality (80×25 cells 9×16 each in later adapters) and ease of localization (done completely in software).</p>
@@ -15816,7 +15830,7 @@
       <p>For many years it ran obsolete DOS, until Microsoft presented Windows{{_}}95. Earlier OS like Unix or Windows{{_}}NT were rare.</p>
       <p />
       <p>Most modern general-purpose computers are descendants of IBM compatibles (DOS compatibility was finally broken in the 2010s). Only portable and special-purpose systems use other architectures.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>到 20 世纪 80 年代末，这台电脑已成为“事实上的”标准：它在 1982 年被克隆，新型号越来越强大，同时保持了与旧软件的兼容性。游戏最初很匮乏，但 VGA（320×200，256 色，1987 年）和纯粹的 CPU 性能使得相当不错的游戏成为可能——而且，更重要的是，游戏多样化，不再受低内存或图形加速器功能的限制。</p>
       <p />
@@ -15863,10 +15877,15 @@
    <group id="Mac">
     <text id="Text">
      <orig>
+      <p>Mac had a mouse and an excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came out only in 1987. The same Mac became 32-bit.</p>
+      <p />
+      <p>System fonts had UI symbols in non-standard positions; the author of ''Unicodia'' attempted to find them all.</p>
+     </orig>
+     <known-orig>
       <p>Mac had mouse and excellent OS, and its encoding was not encumbered with [[pt:pseudographics|pseudographics]], so it was praised by typesetters. Most design software, including ''Adobe Photoshop'', came from Mac. But the first colour Mac came only in 1987. The same Mac became 32-bit.</p>
       <p />
       <p>System fonts had UI symbols in non-standard positions, author of ''Unicodia'' attempted to find them all.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Mac 配备了鼠标和出色的操作系统，其编码没有受到 [[pt:pseudographics|伪图形]] 的困扰，因此受到了排版人员的称赞。大多数设计软件，包括“Adobe Photoshop”，都源自 Mac。但第一台彩色 Mac 直到 1987 年才出现。同一款 Mac 也变成了 32 位。</p>
       <p />
@@ -15922,6 +15941,16 @@
      <transl>它几乎从未卖给过客户，而是被用作教育电脑。</transl>
     </text>
    </group>
+   <group id="SharpMz">
+    <text id="Text">
+     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+     <transl>它没有在 ROM 中预装编程语言，因此拥有多家竞争公司开发的多种语言。但用户必须从磁带或磁盘中加载它们。</transl>
+    </text>
+    <text id="Unenc">
+     <orig>Pac-Man</orig>
+     <transl>Pac-Man</transl>
+    </text>
+   </group>
    <group id="Smalltalk">
     <text id="Text">
      <orig>Early editions of language had their own special characters.</orig>
@@ -15931,10 +15960,15 @@
    <group id="Spectrum">
     <text id="Text">
      <orig>
+      <p>The ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds) and had a diverse range of games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
+      <p />
+      <p>The most interesting story started in the late 80s: DIYers from the Eastern Bloc reconstructed the graphic chip from discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and rising incomes made [[po:Ibm|IBM compatibles]] more widespread.</p>
+     </orig>
+     <known-orig>
       <p>ZX Spectrum was the main British home PC: it was cheap (&amp;lt;200 pounds), and had diverse games. It had no graphic acceleration, and all games except the simplest were really slow.</p>
       <p />
       <p>The most interesting story started in late 80s: DIYers from Eastern Bloc reconstructed the graphic chip out of discrete logic gates, and Spectrum clones became the main computers of the xUSSR for a brief time, until Windows and increased income made [[po:Ibm|IBM compatibles]] more widespread.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>ZX Spectrum 是英国主要的家用电脑：它很便宜（&lt;200英镑），并且游戏种类繁多。它没有图形加速，除了最简单的游戏外，所有游戏都非常慢。</p>
       <p />
@@ -15948,16 +15982,6 @@
     <text id="SalesNote">
      <orig>(Sinclair’s original)</orig>
      <transl>（Sinclair 的原装产品）</transl>
-    </text>
-   </group>
-   <group id="SharpMz">
-    <text id="Text">
-     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
-     <transl>它没有在 ROM 中预装编程语言，因此拥有多家竞争公司开发的多种语言。但用户必须从磁带或磁盘中加载它们。</transl>
-    </text>
-    <text id="Unenc">
-     <orig>Pac-Man</orig>
-     <transl>Pac-Man</transl>
     </text>
    </group>
    <group id="Teletext">
