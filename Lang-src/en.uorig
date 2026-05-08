@@ -10681,6 +10681,14 @@
      <orig>Early editions of language had their own special characters.</orig>
     </text>
    </group>
+   <group id="SharpMz">
+    <text id="Text">
+     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+    </text>
+    <text id="Unenc">
+     <orig>Pac-Man</orig>
+    </text>
+   </group>
    <group id="Spectrum">
     <text id="Text">
      <orig>
@@ -10694,14 +10702,6 @@
     </text>
     <text id="SalesNote">
      <orig>(Sinclair’s original)</orig>
-    </text>
-   </group>
-   <group id="SharpMz">
-    <text id="Text">
-     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
-    </text>
-    <text id="Unenc">
-     <orig>Pac-Man</orig>
     </text>
    </group>
    <group id="Teletext">
