@@ -8238,7 +8238,7 @@
      <orig>
       <p>Unification is writing different characters with the same [[pt:codepoint|code point]]. Duplication is writing the same character with different code points.</p>
       <p />
-      <p>Unicode avoids duplication. Punctuation marks are encoded once and are shared across all Western languages{{-}}and the Eastern ones they penetrated. Unicode does{{_}}not{{_}}distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
+      <p>Unicode avoids duplication. Punctuation marks are encoded once and shared across all Western languages{{-}}and the Eastern ones they penetrated into. Unicode does{{_}}not{{_}}distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
       <p />
       <p>There are several important exceptions:</p>
       <p>* Completely different entities: letter A from [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]] and [[ps:Cher|Cherokee]] is{{_}}not the{{_}}same character.</p>
@@ -8304,7 +8304,7 @@
       <p>* Reliable detection: meaningful text in single-byte encoding (unless it is pure ASCII) or UTF-16 is impossible to confuse with UTF-8.</p>
       <p>* Monotonous: sorting by UTF-8 bytes is the same as sorting by character codes.</p>
       <p />
-      <p>UTF-8 is widely used for inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a program interface format, UTF-8 is used in Linux and cross-platform libraries like OpenSSL.</p>
+      <p>UTF-8 is widely used for inter-software exchange, including most Internet formats and protocols. The [[pt:bom|byte order mark]] is EF{{_}}BB{{_}}BF. As a program interface format, UTF-8 is used in Linux and cross-platform libraries such as OpenSSL.</p>
      </orig>
     </text>
    </group>
