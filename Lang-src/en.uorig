@@ -8357,9 +8357,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas meaning “erase inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
+      <p>Virama (Sanskrit “stop”) is a sign in [[pt:brahmic|Brahmic]] abugidas that means “erase the inherent vowel”. For example, in [[ps:Deva|Devanagari]]: &lt;nobr&gt;ka {{sm|क}} + {{sm|्}} = k {{sm|क्}}&lt;/nobr&gt;.</p>
       <p />
-      <p>In reality in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
+      <p>In reality, in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
       <p />
       <p>Some languages do{{_}}not{{_}}use virama often. For example:</p>
       <p>* [[pt:ligature|ligatures]] for consonant conjuncts{{-}}Devanagari {{sm|क्ष}} кša. They are written and encoded as if there were no ligature, ka+virama+ša. To tear a ligature and input two letters and virama, one should type ka+virama+ZWNJ+ša;</p>
