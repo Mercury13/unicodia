@@ -10576,12 +10576,12 @@
    </group>
    <group id="C64">
     <text id="Text">
-     <orig>Commodore 64, the main American home computer, inherited encoding from the earlier Commodore PET. It put the formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison, IBM CGA had 320×200, 4 colours and no clash cells. Those 16 colours were very drab, making games more realistic.</orig>
+     <orig>Commodore 64, the main American home computer, inherited encoding from the earlier Commodore PET. It put the formula of home computers “many colours, low resolution” to the limit: the main mode for games was 160×200, 16 colours total, 4 colours per 4×8 cell. For comparison, IBM CGA had 320×200, 4 colours, and no clash cells. Those 16 colours were very drab, making games more realistic.</orig>
     </text>
    </group>
    <group id="CoCo">
     <text id="Text">
-     <orig>Completely incompatible with old TRS-80, it was a low-cost home computer.</orig>
+     <orig>Completely incompatible with the old TRS-80, it was a low-cost home computer.</orig>
     </text>
    </group>
    <group id="Hp">
@@ -10622,9 +10622,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The most advanced educational computer of the USSR. The computer was interesting and had good graphics, but production quality was poor, and 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
+      <p>The most advanced educational computer of the USSR. The computer was interesting and had good graphics, but production quality was poor, and the 8-bit CPU was too weak for it, there were few scrolling games. After the fall of the USSR, cases made for Korvet were reused for smaller computers.</p>
       <p />
-      <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was made with [[pt:pseudographics|pseudographics]].</p>
+      <p>In one of the smoothest Korvet games, ''Rally'', only cars were graphical, the road was rendered with [[pt:pseudographics|pseudographics]].</p>
      </orig>
     </text>
    </group>
@@ -10668,7 +10668,7 @@
    </group>
    <group id="RiscOs">
     <text id="Text">
-     <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out.</orig>
+     <orig>Acorn Archimedes, RISC PC and others were in limited use by professionals (television, musicians) until IBM compatibles running Windows{{_}}NT and Unix drove them out of use.</orig>
     </text>
    </group>
    <group id="Robotron">
@@ -10717,12 +10717,12 @@
    </group>
    <group id="Trs80">
     <text id="Text">
-     <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of innate problems, from radio interferences to poorly working cassette interface. Later models had diskettes.</orig>
+     <orig>The computer was sold in RadioShack, Tandy’s chain of electronic stores. It had lots of inherent problems, from radio interference to a poorly functioning cassette interface. Later models had diskettes.</orig>
     </text>
    </group>
    <group id="Zx80">
     <text id="Text">
-     <orig>Sinclair ZX80 and ZX81 were the cheapest working computers. Version with 2 kilobytes was sold for 70 pounds.</orig>
+     <orig>Sinclair ZX80 and ZX81 were the cheapest working computers. The 2-kilobyte version was sold for 70 pounds.</orig>
     </text>
    </group>
    <text id="See">
