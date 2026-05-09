@@ -9755,7 +9755,7 @@
     <transl>В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</transl>
    </text>
    <text id="GrekCoptUni">
-    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were considered Greek too. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in capital and small case: {{smfunky|Ϧϧ}}.</orig>
+    <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were treated as Greek. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in uppercase and lowercase: {{smfunky|Ϧϧ}}.</orig>
     <transl>В Юникоде{{_}}1.0 коптский был в [[pt:unification|унификации]] с греческим, и все чисто коптские буквы тоже считались греческими. Юникод 4.1 (2005) разунифицировал языки: исследования по коптскому часто содержат греческий текст. Более того, только одна коптская буква имеет значительно разный рисунок в заглавном и строчном регистре: {{smfunky|Ϧϧ}}.</transl>
    </text>
   </group>
@@ -14597,14 +14597,14 @@
    </group>
    <group id="12.1">
     <text id="Text">
-     <orig>Emergency release of Unicode containing one character [[pc:32FF]], the Reiwa era of Japanese traditional calendar. In 2016, the old Emperor Akihito decided to abdicate, and a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <orig>Emergency release of Unicode containing one character [[pc:32FF]], the Reiwa era of the Japanese traditional calendar. In 2016, the old Emperor Akihito decided to abdicate, and a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
      <transl>Экстренный выпуск Юникода, содержащий ровно один символ [[pc:32FF]]{{-}}эру Рэйва японского традиционного календаря. В 2016 престарелый император Акихито решил отречься, и за его наследником застолбили кодовую позицию. Когда он окончательно отрёкся 30 апреля 2019, символ быстро закодировали.</transl>
     </text>
    </group>
    <group id="15.1">
     <text id="Text">
      <orig>
-      <p>Unicode Consortium experienced staff problems: the release manager had gone, and the Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
+      <p>The Unicode Consortium experienced staff problems: the release manager had left, and the Sinologist had died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
       <p />
       <p>The Chinese government also forced to do an urgent job, see [[pk:2EBF0|CJK ideographs extension I]].</p>
       <p />
