@@ -14989,8 +14989,8 @@
    </group>
    <group id="Apple2">
     <text id="Text">
-     <orig>Despite the advent of Macintosh (1984), modest Apple{{_}}II generated most of company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles made lots of interference to nearby TV sets), but the monitor was connected using composite wire, like TV (composite input was rare those years).</orig>
-     <transl>Незважаючи на появу Macintosh (1984), скромний Apple{{_}}II робив більшість прибутку компанії. Він ішов з монітором (можливо, через вимоги, що недовго існували{{-}}приставки робили багато завад на сусідні телевізори), але монітор підключався композитним проводом, як телевізор (композитний вхід був рідким у ті роки).</transl>
+     <orig>Despite the advent of the Macintosh (1984), the modest Apple{{_}}II continued to generate most of the company’s income. It came with a monitor (probably because of short-lived regulations{{-}}consoles caused lots of interference to nearby TV sets), but the monitor was connected using a composite cable, like a TV (composite input was rare in those years).</orig>
+     <transl>Незважаючи на появу Macintosh (1984), скромний Apple{{_}}II продовжував робити більшість прибутку компанії. Він ішов з монітором (можливо, через вимоги, що недовго існували{{-}}приставки робили багато завад на сусідні телевізори), але монітор підключався композитним проводом, як телевізор (композитний вхід був рідким у ті роки).</transl>
     </text>
     <text id="Unenc">
      <orig>Apple logo</orig>
@@ -15005,7 +15005,7 @@
    </group>
    <group id="Atari400">
     <text id="Text">
-     <orig>TV consoles made lots of interference to nearby TV sets, and that led to new regulations on radio frequency hardware (later they were weakened). To make a computer pluggable to TV’s aerial socket, Atari ended up with cast aluminum case and a ROM cartridge inside. The computer’s video architecture resembled a console (scrolling text and hardware sprites) and was praised for ease of programming.</orig>
+     <orig>TV consoles caused significant interference with nearby TV sets, leading to new regulations on radio-frequency hardware (which were later weakened). To make a computer pluggable into a TV’s aerial socket, Atari ended up with a cast aluminium case and a ROM cartridge inside. The computer’s video architecture resembled a console’s (scrolling text and hardware sprites) and was praised for its ease of programming.</orig>
      <transl>Телевізійні приставки робили багато завад на сусідні телевізори, і це призвело до нових вимог на радіочастотне устаткування (пізніше їх ослаблять). Щоб зробити комп’ютер, що підключається до антенного гнізда, Atari зробила литий алюмінієвий корпус та картридж ПЗП всередині. Архітектура відео нагадувала приставку (текст з прокруткою та апаратні спрайти), її хвалили за простоту програмування.</transl>
     </text>
    </group>
@@ -15137,13 +15137,13 @@
    </group>
    <group id="Minitel">
     <text id="Text">
-     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent of 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking, and more. France even had a small “dotcom bubble”, long before American in 2000! The system was closed only in 2012.</orig>
+     <orig>Terminals were installed for free, the fee was collected for minutes of usage (equivalent to 30€¢ per minute). The system provided messaging, dating, phone directory, games, ticket booking, and more. France even had a small “dotcom bubble” long before the American one in 2000! The system was closed only in 2012.</orig>
      <transl>Термінали ставили безкоштовно, гроші збирали за хвилини користування (еквівалент 30{{_}}€¢ за хвилину). Система давала повідомлення, знайомства, телефонний довідник, ігри, замовлення квитків та інше. У Франції був навіть свій маленький «пузир доткомів», задовго до американського у 2000! Систему закрили тільки у 2012.</transl>
     </text>
    </group>
    <group id="Msx">
     <text id="Text">
-     <orig>Japanese open standard of home computers, made by Sony, Philips and others. Well-known games ''Bomberman'' and ''Metal Gear'' were initially made for these computers. USSR attempted to use them as educational computers, dubbed KUVT Yamaha.</orig>
+     <orig>Japanese open standard for home computers, produced by Sony, Philips and others. The well-known games ''Bomberman'' and ''Metal Gear'' were initially developed for these computers. The USSR attempted to use them as educational computers, dubbed KUVT Yamaha.</orig>
      <transl>Японський відкритий стандарт домашніх комп’ютерів, вироблялися Sony, Philips та іншими. Відомі ігри ''Bomberman'' та ''Metal Gear'' початково робили під ці комп’ютери. СРСР спробував використовувати їх як навчальні, під назвою КУВТ Ямаха ''(комплекс навчальної обчислювальної техніки)''.</transl>
     </text>
    </group>
@@ -15155,7 +15155,7 @@
    </group>
    <group id="Oric">
     <text id="Text">
-     <orig>Not a successful computer, it was cloned in Yugoslavia (Nova 64) and Bulgaria (Pravetz 8D).</orig>
+     <orig>Although it was not a successful computer, it was nevertheless cloned in Yugoslavia (Nova{{_}}64) and Bulgaria (Pravetz{{_}}8D).</orig>
      <transl>Не дуже успішний комп’ютер, він був склонований у Югославії (Нова-64) та у Болгарії (Правець-8D).</transl>
     </text>
    </group>

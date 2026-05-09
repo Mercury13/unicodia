@@ -10554,7 +10554,7 @@
    </group>
    <group id="Atari400">
     <text id="Text">
-     <orig>TV consoles caused significant interference with nearby TV sets, leading to new regulations on radio-frequency hardware (which were later weakened). To make a computer pluggable into a TV’s aerial socket, Atari ended up with a cast aluminium case and a ROM cartridge inside. The computer’s video architecture resembled a console’s (with scrolling text and hardware sprites) and was praised for its ease of programming.</orig>
+     <orig>TV consoles caused significant interference with nearby TV sets, leading to new regulations on radio-frequency hardware (which were later weakened). To make a computer pluggable into a TV’s aerial socket, Atari ended up with a cast aluminium case and a ROM cartridge inside. The computer’s video architecture resembled a console’s (scrolling text and hardware sprites) and was praised for its ease of programming.</orig>
     </text>
    </group>
    <group id="AtariSt">
