@@ -13868,7 +13868,7 @@
    </group>
    <group id="Text">
     <text id="SmallCap">
-     <orig>Small-capital type is used in phonetics, so Unicode has small-capital style for all basic Latin except X.</orig>
+     <orig>Small-capital print is used in phonetics, so Unicode has small-capital style for all basic Latin letters except X.</orig>
      <transl>Капітельні (малі великі) літери використовуються у фонетиці, так що Юнікод має капітель для усієї базової латинки, окрім X.</transl>
     </text>
    </group>
