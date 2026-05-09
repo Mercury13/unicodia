@@ -14983,7 +14983,7 @@
    </group>
    <group id="AmstradCpc">
     <text id="Text">
-     <orig>Designed to be as luxurious as possible for a home computer, it was the second British home computer after ZX Spectrum. It was not plugged into a TV, instead it came with a monitor.</orig>
+     <orig>Designed to be as luxurious as possible for a home computer, it was the second British home computer after the ZX Spectrum. It was not plugged into a TV, instead it came with a monitor.</orig>
      <transl>Сделанный максимально роскошным для домашнего компьютера, он был вторым британским домашним компьютером после ZX Spectrum. Он не подключался к телевизору, а шёл с монитором.</transl>
     </text>
    </group>
@@ -14999,7 +14999,7 @@
    </group>
    <group id="Aquarius">
     <text id="Text">
-     <orig>The computer was obsolete from the beginning, and was produced for a few months only.</orig>
+     <orig>The computer was obsolete from the beginning, and was produced for only a few months.</orig>
      <transl>Компьютер был изначально устаревший, и выпускался всего несколько месяцев.</transl>
     </text>
    </group>
@@ -15173,7 +15173,7 @@
    </group>
    <group id="SharpMz">
     <text id="Text">
-     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from cassette or disk.</orig>
+     <orig>It had no programming languages in ROM, and thus boasted several languages developed by competing companies. But the user had to load them from a cassette or a disk.</orig>
      <transl>У него не было языка программирования в ПЗУ, и он хвастался несколькими языками, разработанными конкурирующими фирмами. Но пользователь должен загружать их с кассеты или диска.</transl>
     </text>
     <text id="Unenc">
@@ -15219,7 +15219,7 @@
      <transl>(первые телевизоры)</transl>
     </text>
     <text id="Text">
-     <orig>Teletext transmits text and [[pt:pseudographics|pseudographics]] in blanking fields of TV signal. Nowadays most channels transmit only subtitles.</orig>
+     <orig>Teletext transmits text and [[pt:pseudographics|pseudographics]] in blanking fields of the TV signal. Nowadays, most channels transmit only subtitles.</orig>
      <transl>Телетекст передаёт текст и [[pt:pseudographics|псевдографику]] в полях гашения телевизионного сигнала. Сейчас большинство каналов транслируют только субтитры.</transl>
     </text>
    </group>
