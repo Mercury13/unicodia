@@ -85,10 +85,7 @@
 	<!-- Chinese has no rules for cardinal plurals -->
 	<cardinal-rules default-outcome="other" />
 	<ordinal-rules />
-	<!-- Misc. language peculiarities
-			still-uses-burmese: uses pair Myanmar/Burmese
-				(writes location of Myanmar for Burmese script) -->
-	<peculiarities still-uses-burmese="0" />
+	<peculiarities still-uses-burmese="0" hiero-bigger="1" />
 	<punctuation key-value-colon="：" uniform-comma="，" semicolon="；"
 			left-paren="（" right-paren="）" indent-ellip="……"
 			range="…" year-range="—" to=" →" />
