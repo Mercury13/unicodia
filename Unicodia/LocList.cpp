@@ -507,6 +507,7 @@ namespace {
 
         auto hPeculiarities = hLocale.child("peculiarities");
         r.peculiarities.stillUsesBurmese = hPeculiarities.attribute("still-uses-burmese").as_bool(false);
+        r.peculiarities.biggerForHiero   = hPeculiarities.attribute("hiero-bigger").as_bool(false);
 
         auto hPunctuation = hLocale.child("punctuation");
         r.punctuation.keyValueColon = str::toU8sv(
@@ -580,9 +581,10 @@ void loc::LangList::collect(const std::filesystem::path& programPath)
         }
     }
 
+    using PLang = std::unique_ptr<Lang>;
     // Sort languages
     std::sort(begin(), end(),
-        [](const auto& x, const auto& y) {
+        [](const PLang& x, const PLang& y) {
             return (x->name.sortKey < y->name.sortKey);
         });
 }

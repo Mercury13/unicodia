@@ -84,7 +84,7 @@ namespace loc
                 tech,           ///< CHINESE
                 native,         ///< Chinese (simplified)
                 international;  ///< 简体中文
-            std::u32string sortKey;  ///< CHINESE (SIMPLIFIED)
+            std::u32string sortKey;  ///< chinese (simplified)
         } name;
         struct Icons {
             std::string sortAZ;
@@ -100,8 +100,9 @@ namespace loc
                 static constexpr unsigned DEFAULT_PERIOD = 3;
                 unsigned minLength = DEFAULT_MIN_LENGTH;
                 // There’ll be other problems
-            } thousand;
-            Thousand denseThousand;  ///< thousand format in dense text
+            };
+            Thousand thousand;      ///< thousand format in tables
+            Thousand denseThousand; ///< thousand format in dense text
             struct MoreLess {
                 std::string less, more;
                 MoreLessPhase phase = MoreLessPhase::RAW;
@@ -118,7 +119,8 @@ namespace loc
             std::u32string blocks;  ///< just initial codes, sorted asc
         } ellipsis;
         struct Peculiarities {
-            bool stillUsesBurmese = false;  ///< uses Myanmar/Burmese
+            bool stillUsesBurmese = false;  ///< [+] Burmese [-] Myanmar-ese??
+            bool biggerForHiero = false;    ///< [+] bigger font (ideographic script)
         } peculiarities;
         struct Punctuation {
             std::u8string
