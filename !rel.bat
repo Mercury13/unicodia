@@ -252,7 +252,7 @@
 @if exist %QAFONTS% del %QAFONTS%
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
 @rem Checking fonts
-if exist %QAFONTS% goto fqa_exists
+@if exist %QAFONTS% goto fqa_exists
 @echo FONTS FAILED. No font QA file for some reason.
 @echo It should have been at %QAFONTS%.
 @goto fqa_done
