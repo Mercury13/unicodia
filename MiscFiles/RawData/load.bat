@@ -1,4 +1,15 @@
 rem AFAIK, W10 1803+ has built-in cURL
+@call ../../xsetup.bat
+@if exist ../../~setup_local.bat call ../../~setup_local.bat
+
+@echo ===== Checking for tools =====
+
+@if exist %SEVENZIP% goto sz_ok
+@echo BAD: 7-zip not found. Install it into standard directory, or change SEVENZIP variable.
+@goto end
+:sz_ok
+@echo 7-zip OK
+
 set VER=https://www.unicode.org/Public/18.0.0
 set UCD=%VER%/ucd
 curl %UCD%/DerivedAge.txt -L --output DerivedAge.txt
@@ -25,5 +36,7 @@ rem curl https://babelstone.co.uk/CJK/IDS.TXT --output IDS.txt
 del Unihan_DictionaryLikeData.txt
 del Unihan_NumericValues.txt
 del Unihan_IRGSources.txt
-"c:\Program Files\7-zip\7z.exe" e Unihan.zip Unihan_DictionaryLikeData.txt Unihan_NumericValues.txt Unihan_IRGSources.txt
+%SEVENZIP% e Unihan.zip Unihan_DictionaryLikeData.txt Unihan_NumericValues.txt Unihan_IRGSources.txt
 del Unihan.zip
+:end
+@pause
