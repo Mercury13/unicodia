@@ -1,4 +1,5 @@
 @call xsetup.bat
+@if exist ~setup_local.bat call ~setup_local.bat
 
 @echo ===== Checking for tools =====
 

@@ -1,5 +1,6 @@
 @rem Settings
 @call xsetup.bat
+@if exist ~setup_local.bat call ~setup_local.bat
 
 @rem Rest things
 @set /p VERSION=<VERSION.
@@ -248,6 +249,7 @@
 @echo.
 @echo ===== Running auto-tests =====
 @set QAFONTS=%BUILD%\font_layout.txt
+@if exist %QAFONTS% del %QAFONTS%
 @%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
 @rem Checking fonts
 if exist %QAFONTS% goto fqa_exists
