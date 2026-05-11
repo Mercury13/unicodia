@@ -12,6 +12,7 @@
 #include "u_TinyOpt.h"
 #include "FontDef.h"
 #include "u_DumbSp.h"
+#include "u_TypedFlags.h"
 
 // Links
 #include "WikiLink.h"
@@ -207,6 +208,11 @@ namespace mywiki {
     };
     using PCMEgyp = dumb::Sp<const MEgyp>;
 
+    enum class Stylefg {
+        HAS_SIGNWRITING = 1, ///< [+] add Sutton SingWriting-specific things
+        FORBID_BIGGER = 2    ///< [+] disallow bigger font (by default allowed)
+    };
+
     std::unique_ptr<Link> makeCpLink(const uc::Cp& cp);
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view link);
@@ -248,7 +254,7 @@ namespace mywiki {
     QString buildHtml(const uc::GlyphStyleChannel& channel);
     QString buildHtml(const uc::old::Info& info);
     QString buildEmptyFavsHtml();
-    void appendStylesheet(QString& text, bool hasSignWriting = false);
+    void appendStylesheet(QString& text, Flags<Stylefg> flags = NO_FLAGS);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyTag(QString& text, const QString& x, std::string_view clazz="copy");
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");

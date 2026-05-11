@@ -15,6 +15,12 @@
 
 namespace loc {
 
+    enum class TextState : unsigned char {
+        NOT_FOUND,      // Just not found
+        UNTRANSLATED,   // Found in backup L10n resource
+        NORMAL          // Found in L10n resource
+    };
+
     class Text
     {
     public:
@@ -25,14 +31,13 @@ namespace loc {
         Text& operator = (Text&&) = default;
 
         template <class T>
-        explicit Text(T&& x) : fSrc(std::forward<T>(x)), fIsFull(true) {}
+        explicit Text(T&& x, TextState state)
+            : fSrc(std::forward<T>(x)), fState(state) {}
 
         template <class T>
-        Text& operator = (T&& x)
-        {
+        void assign(T&& x, TextState state) {
             fSrc = std::forward<T>(x);
-            fIsFull = true;
-            return *this;
+            fState = state;
         }
 
         std::u8string_view u8() const { return fSrc; }
@@ -40,9 +45,11 @@ namespace loc {
         operator const std::u8string&() const { return fSrc; }
         const char* c_str() const { return str::toC(fSrc); }
         const std::u8string& str() const { return fSrc; }
-        bool isFull() const { return fIsFull; }
+        TextState state() const { return fState; }
         template <class... T>
             std::u8string arg(const T&... x) const;
+
+        /// Equiv. to arg, but the number is preformatted
         template <std::integral T>
             std::u8string preformNum(std::string_view preform, T val) const;
 
@@ -56,7 +63,7 @@ namespace loc {
 
     private:
         std::u8string fSrc;
-        bool fIsFull = false;
+        TextState fState = TextState::UNTRANSLATED;
     };
 
     class Dic

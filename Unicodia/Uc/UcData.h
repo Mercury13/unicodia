@@ -973,6 +973,7 @@ namespace uc {
                 : script().font();
         }
         unsigned nNonChars() const;
+        /// @return  # of places in the block, including vacant and non-characters
         constexpr unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
         unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
         constexpr bool hasDescription() const

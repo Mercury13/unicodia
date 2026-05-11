@@ -465,7 +465,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoCpLink(std::string_view target)
 
 std::unique_ptr<mywiki::Link> mywiki::parseGotoLibCpLink(std::string_view target)
 {
-    int code = 0;
+    unsigned code = 0;
     str::fromChars(target, code, 16);
     if (code >= uc::CAPACITY || !uc::cpsByCode[code])
         return {};
@@ -1010,10 +1010,16 @@ namespace {
         }
     }
 
+    enum class Affg : unsigned char {
+        SMTABLE = 1,   ///< [+] inside smtable (not enlarged, disable bigger-font policy)
+    };
+
     constexpr int SIZE_SAMPLE = -1;
 
     template <class Ch>
-    void appendNormalFont(QString& s, const uc::Font& font, std::basic_string_view<Ch> x, int size)
+    void appendNormalFont(QString& s,
+            const uc::Font& font, std::basic_string_view<Ch> x, int size,
+            Flags<Affg> flags)
     {
         if (x.empty())
             return;
@@ -1024,6 +1030,11 @@ namespace {
             if (size < 0) {
                 size =  font.flags.have(uc::Ffg::DESC_BIGGER) ? 3
                       : font.flags.have(uc::Ffg::DESC_SMALLER) ? 1 : 2;
+            }
+            // Smaller texts NEVER come with samples
+            if (size == 3 && !flags.have(Affg::SMTABLE)
+                    && loc::currLang->peculiarities.biggerForHiero) {
+                size = 2;
             }
             s += " size='+";
             s += QChar(size + '0');
@@ -1045,7 +1056,8 @@ namespace {
         return font;
     }
 
-    void appendExtendedFont(QString& s, const uc::Font& font, std::string_view x, int size)
+    void appendExtendedFont(QString& s, const uc::Font& font, std::string_view x,
+            int size, Flags<Affg> flags)
     {
         if (x.empty())
             return;
@@ -1059,38 +1071,41 @@ namespace {
             auto newFont = getExtendedFont(&font, cps[i]);
             if (newFont != workingFont) {
                 std::u32string_view part = std::u32string_view{cps}.substr(iWritten, i - iWritten);
-                appendNormalFont(s, *workingFont, part, size);
+                appendNormalFont(s, *workingFont, part, size, flags);
                 iWritten = i;
                 workingFont = newFont;
             }
         }
         if (workingFont) {  // Should always really
             std::u32string_view tail = std::u32string_view{cps}.substr(iWritten);
-            appendNormalFont(s, *workingFont, tail, size);
+            appendNormalFont(s, *workingFont, tail, size, flags);
         }
     }
 
-    void appendFont(QString& s, const uc::Font& font, std::string_view x, int size)
+    void appendFont(QString& s, const uc::Font& font, std::string_view x, int size,
+                    Flags<Affg> flags)
     {
         if (font.flags.have(uc::Ffg::DESC_EXTENDED)) {
             // Extended font
-            appendExtendedFont(s, font, x, size);
+            appendExtendedFont(s, font, x, size, flags);
         } else {
-            appendNormalFont(s, font, x, size);
+            appendNormalFont(s, font, x, size, flags);
         }
     }
 
-    void appendFont(QString& s, uc::EcFont fontId, std::string_view x, int size)
+    void appendFont(QString& s, uc::EcFont fontId, std::string_view x, int size,
+                    Flags<Affg> flags)
     {
         auto& font = uc::fontInfo[static_cast<int>(fontId)];
-        appendFont(s, font, x, size);
+        appendFont(s, font, x, size, flags);
     }
 
     template <class Font>
     inline void appendFont(QString& s, Font&& fontId,
-                    Buf1d<const std::string_view> x, int size)
+                    Buf1d<const std::string_view> x, int size,
+                    Flags<Affg> flags)
     {
-        appendFont(s, std::forward<Font>(fontId), x.safeGetV(1, {}), size);
+        appendFont(s, std::forward<Font>(fontId), x.safeGetV(1, {}), size, flags);
     }
 
     void appendSmTable(
@@ -1114,10 +1129,10 @@ namespace {
                 if (v.starts_with("**")) {  // Glitching sample
                     s += "<td>";
                     auto w = v.substr(2);
-                    appendFont(s, *context.font, w, SIZE_SAMPLE);
+                    appendFont(s, *context.font, w, SIZE_SAMPLE, Affg::SMTABLE);
                 } else {    // Normal sample
                     auto w = v.substr(1);
-                    appendFont(s, *context.font, w, SIZE_SAMPLE);
+                    appendFont(s, *context.font, w, SIZE_SAMPLE, Affg::SMTABLE);
                 }
             } else {
                 if (i > 1)
@@ -1692,7 +1707,8 @@ namespace {
         case 'D':
             if (name == "DuplCats"sv) {
                 uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
-                appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
+                appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>",
+                           0, NO_FLAGS);
             }
             break;
 
@@ -1708,7 +1724,7 @@ namespace {
             if (name == "fontface"sv) {
                     s += context.font->familiesComma();
             } else if (name == "funky"sv) {
-                appendFont(s, uc::EcFont::FUNKY, x, 0);
+                appendFont(s, uc::EcFont::FUNKY, x, 0, NO_FLAGS);
             }
             break;
 
@@ -1794,7 +1810,7 @@ namespace {
                 auto nEmoji = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.total.n;
                 appendNum(s, nEmoji, Subf::DENSE, mywiki::NumPlace::HTML);
             } else if (name == "noto"sv) {
-                appendFont(s, uc::EcFont::NOTO, x, 0);
+                appendFont(s, uc::EcFont::NOTO, x, 0, NO_FLAGS);
             } else if (name == "ncolor"sv) {
                 auto nColor = uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].stats.emoji.total.nColor;
                 appendNum(s, nColor, Subf::DENSE, mywiki::NumPlace::HTML);
@@ -1816,12 +1832,12 @@ namespace {
 
         case 's':
             if (name == "sm"sv) {
-                appendFont(s, context.font, x, SIZE_SAMPLE);
+                appendFont(s, context.font, x, SIZE_SAMPLE, NO_FLAGS);
             } else if (name == "smb"sv) {
                 /// @todo [future] Plane 2 in text?
-                appendFont(s, uc::EcFont::CJK, x, 3);
+                appendFont(s, uc::EcFont::CJK, x, 3, NO_FLAGS);
             } else if (name == "smfunky"sv) {
-                appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE);
+                appendFont(s, uc::EcFont::FUNKY, x, SIZE_SAMPLE, NO_FLAGS);
             } else if (name == "smtable"sv) {
                 appendSmTable(s, x, context);
             }
@@ -2660,13 +2676,14 @@ void mywiki::appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32stri
     char buf[30];
 
     // UTF-8
-    auto sChar = str::toQ(value);
-    auto u8 = sChar.toUtf8();
+    char8_t u8Place[uc::LONGEST_LIB * 5];  // actually *4
+    auto end = mojibake::copyLimS(value, u8Place, std::size(u8Place));
+    std::u8string_view u8(u8Place, end);
     QString u8Hex;
     { str::QSep spU8(u8Hex, " ");
         for (unsigned char v : u8) {
             spU8.sep();
-            snprintf(buf, std::size(buf), "%02X", static_cast<int>(v));
+            snprintf(buf, std::size(buf), "%02X", static_cast<unsigned>(v));
             str::append(u8Hex, buf);
         }
     }
@@ -2677,11 +2694,14 @@ void mywiki::appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32stri
     appendCopyable(text, u8Hex);
 
     // UTF-16: QString is UTF-16
+    char16_t u16Place[uc::LONGEST_LIB * 3];  // actually *2
+    auto u16end = mojibake::copyLimS(value, u16Place, std::size(u16Place));
+    std::u16string_view u16(u16Place, u16end);
     QString u16Hex;
     { str::QSep spU16(u16Hex, " ");
-        for (auto v : sChar) {
+        for (char16_t v : u16) {
             spU16.sep();
-            snprintf(buf, std::size(buf), "%04X", static_cast<int>(v.unicode()));
+            snprintf(buf, std::size(buf), "%04X", v);
             str::append(u16Hex, buf);
         }
     }
@@ -2695,7 +2715,7 @@ void mywiki::appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32stri
     if (want32 != Want32::NO) {
         QString u32Hex;
         { str::QSep spU32(u32Hex, " ");
-            for (auto v : value) {
+            for (char32_t v : value) {
                 spU32.sep();
                 snprintf(buf, std::size(buf), "%04X", static_cast<int>(v));
                 str::append(u32Hex, buf);
@@ -2804,7 +2824,7 @@ namespace {
 }   // anon namespace
 
 
-void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
+void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
 {
     str::append(text, "<style>");
     str::append(text, STYLES_WIKI);
@@ -2812,7 +2832,7 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
     // SignWriting: add more styles
     auto color = QApplication::palette().windowText().color();
     color.setAlpha(20);
-    if (hasSignWriting) {
+    if (flags.have(Stylefg::HAS_SIGNWRITING)) {
         auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::SIGNWRITING)];
         text += ".swt { border-collapse:collapse; margin:0.8ex 0; } "
                 ".swt td { border:1px solid ";
@@ -2822,6 +2842,15 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
             text += "; } ";
         text += ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
                 ".swt th { vertical-align:middle; } ";
+    }
+    if (!flags.have(Stylefg::FORBID_BIGGER)
+            && loc::currLang->peculiarities.biggerForHiero) {
+        QFont font = QApplication::font();
+        double newSz = font.pointSizeF() * 1.1;
+        char buf[70];
+        snprintf(buf, std::size(buf),
+                "p { font-size:%.1f" "pt; } ", newSz);
+        text += buf;
     }
 
     str::append(text, "</style>");
@@ -3340,9 +3369,12 @@ QString mywiki::buildHtml(
     QString text;
 
     sw::Info sw(cp);
-    bool hasSgnw = sw && (var.size >= HtmlSize::FULL);
+    Flags<Stylefg> flags = NO_FLAGS;
+    const bool hasSgnw = sw && (var.size >= HtmlSize::FULL);
+    if (hasSgnw)
+        flags &= Stylefg::HAS_SIGNWRITING;
 
-    appendStylesheet(text, hasSgnw);
+    appendStylesheet(text, flags);
     str::append(text, var.headStart);
     QString name = cp.viewableName();
     appendCopyable(text, name, var.headCopyStyle);

@@ -14,7 +14,8 @@ loc::Dic loc::dic;
 
 void loc::Dic::add(std::string_view id, std::u8string translation)
 {
-    fMap.emplace(std::string{id}, std::move(translation));
+    fMap.emplace(std::string{id},
+            Text(std::move(translation), TextState::NORMAL));
 }
 
 
@@ -31,9 +32,9 @@ void loc::Dic::dump(size_t maxSize)
 const loc::Text& loc::Dic::get(std::string_view id)
 {
     auto& data = fMap[std::string{id}];
-    if (!data.isFull()) {
+    if (data.state() == TextState::NOT_FOUND) {
         auto r = str::cat(u8'[', str::toU8sv(id), u8']');
-        data = std::move(r);
+        data.assign(std::move(r), TextState::NOT_FOUND);
     }
     return data;
 }
