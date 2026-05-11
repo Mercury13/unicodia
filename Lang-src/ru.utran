@@ -9855,7 +9855,7 @@
      <transl>Буква/строчная</transl>
     </text>
     <text id="Text">
-     <orig>[[pt:minuscule|Minuscule]] writing appeared in early Middle Ages for economy of expensive parchment, turned to small letters, and made Latin a very expressive alphabet.</orig>
+     <orig>[[pt:minuscule|Minuscule]] writing appeared in the early Middle Ages to save expensive parchment. It turned to small letters, making Latin a very expressive alphabet.</orig>
      <transl>Письмо «[[pt:minuscule|минускул]]», появившееся в раннее средневековье для экономии дорогого пергамента, превратилось в строчные буквы и сделало латиницу очень выразительным алфавитом.</transl>
     </text>
    </group>
@@ -9866,7 +9866,7 @@
      <transl>Буква/модифицирующая</transl>
     </text>
     <text id="Text">
-     <orig>Such “unter-letters” are commonly used in phonetics, and add additional meaning to letters. For example, modifier letter is prime xʹ sometimes used for palatal consonants, unlike mathematical prime x′.</orig>
+     <orig>Such “unter-letters” are commonly used in phonetics and add additional meaning to letters. For example, modifying prime xʹ is sometimes used for palatal consonants, unlike mathematical prime x′.</orig>
      <transl>Такие «недобуквы», приделывающие к букве оттенки смысла, чаще всего встречаются в фонетике. Так, модифицирующей буквой является штрих мягкости xʹ, в отличие от похожего математического штриха x′.</transl>
     </text>
    </group>
@@ -9888,7 +9888,7 @@
      <transl>Буква/смешанный регистр</transl>
     </text>
     <text id="Text">
-     <orig>Digraph characters consisting of capital and small letter. For example, Croatian Latin has digraph ǈ. Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
+     <orig>Digraphs consisting of a capital and a small letter. For example, Croatian Latin has the digraph ǈ. The Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
      <transl>Символы-диграфы, состоящие из заглавной и строчной букв. Так, в хорватской латинице есть диграф ǈ. Сербский аналог Љ не{{_}}является диграфом и потому смешанного регистра не{{_}}имеет.</transl>
     </text>
    </group>
@@ -9899,7 +9899,7 @@
      <transl>Буква/заглавная</transl>
     </text>
     <text id="Text">
-     <orig>Scripts that adopted small (lowercase, minuscule) letters, started to call old-shaped letters capital, uppercase or majuscule.</orig>
+     <orig>Scripts that adopted small (lowercase, minuscule) letters began to refer to the old-style letters as capital, uppercase, or majuscule.</orig>
      <transl>Те письменности, которые приняли маленькие (строчные) буквы, буквы старой формы стали называть большими, заглавными или прописными.</transl>
     </text>
    </group>
