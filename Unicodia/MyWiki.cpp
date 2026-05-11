@@ -56,6 +56,8 @@ const mywiki::Context DEFAULT_CONTEXT {
 
 constexpr std::span<std::string> NO_LINKS {};
 
+bool mywiki::allowBigFont = true;
+
 /////  //////////////////////////////////////////////////////////////////////
 
 void mywiki::Gui::popupAtRel(
@@ -2845,10 +2847,12 @@ void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
         text += ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
                 ".swt th { vertical-align:middle; } ";
     }
-    if (!flags.have(Stylefg::FORBID_BIGGER)
-            && loc::currLang->peculiarities.biggerForHiero) {
+    // We use this function in articles (wiki) and Terms
+    // Similar About has its own stylesheet
+    if (loc::currLang->peculiarities.biggerForHiero
+            && allowBigFont) {
         QFont font = QApplication::font();
-        double newSz = font.pointSizeF() * 1.1;
+        double newSz = font.pointSizeF() * 1.12;
         char buf[70];
         snprintf(buf, std::size(buf),
                 "p { font-size:%.1f" "pt; } ", newSz);

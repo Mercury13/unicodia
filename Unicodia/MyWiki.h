@@ -210,8 +210,9 @@ namespace mywiki {
 
     enum class Stylefg {
         HAS_SIGNWRITING = 1, ///< [+] add Sutton SingWriting-specific things
-        FORBID_BIGGER = 2    ///< [+] disallow bigger font (by default allowed)
     };
+
+    extern bool allowBigFont;
 
     std::unique_ptr<Link> makeCpLink(const uc::Cp& cp);
     std::unique_ptr<Link> parseLink(std::string_view link);

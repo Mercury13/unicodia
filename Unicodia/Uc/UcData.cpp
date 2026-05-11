@@ -1846,9 +1846,11 @@ void uc::finishTranslation(
             sc.loc.timeComment = loc::get(c);
         }
         if (sc.flags.have(Sfg::DESC_FROM_PREV)) {
-            if (!prevScript)
+            if (prevScript) {
+                sc.loc.description = prevScript->loc.description;
+            } else {
                 throw std::logic_error("DESC_FROM_PREV must actually have prev");
-            sc.loc.description = prevScript->loc.description;
+            }
         } else {
             sc.printfLocKey(c, "Text");
             sc.loc.description = loc::get(c);

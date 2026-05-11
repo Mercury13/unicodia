@@ -312,6 +312,11 @@ private:
     void gotoLibCp(QWidget* initiator, char32_t cp) override;
     void searchForRequest(const uc::Request& request) override;
     void blinkRespect(QWidget* initiator, TinyOpt<QRect> r) override;
+
+    /// @warning  Forces, checks nothing.  Does not retranslate combobox.
+    void doBlocksChanged();
+    void doLibChanged();
+    void doFavsChanged();
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
@@ -378,6 +383,7 @@ private slots:
     void searchForDrawingMethod();
     void searchForBadFonts();
     void toggleSortingTelltales();
+    void toggleBigFont();
     void goToSearch();
     void goToBlocks();
     void goToLib();

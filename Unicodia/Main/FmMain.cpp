@@ -991,6 +991,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F), this);
     connect(shcut, &QShortcut::activated, this, &This::goToSearch);
 
+    // Big
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_B), this);
+    connect(shcut, &QShortcut::activated, this, &This::toggleBigFont);
+
     // Highlight
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_H), this);
     connect(shcut, &QShortcut::activated, this, &This::highlightFont);
@@ -1381,7 +1385,7 @@ void FmMain::configLoaded()
     favsModel.endResetModel();
 
     if (config::favs.isEmpty()) {
-        favsCurrentChanged(ui->tableFavs->currentIndex());
+        doFavsChanged();
     } else {
         auto index = model.index(0, 0);
         ui->tableFavs->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
@@ -1422,6 +1426,25 @@ namespace {
 }   // anon namespace
 
 
+void FmMain::doBlocksChanged()
+{
+    if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
+        forceShowCp(*p);
+}
+
+
+void FmMain::doLibChanged()
+{
+    libChanged(ui->treeLibrary->currentIndex());
+}
+
+
+void FmMain::doFavsChanged()
+{
+    favsCurrentChanged(ui->tableFavs->currentIndex());
+}
+
+
 void FmMain::translateMe()
 {
     Form::translateMe();
@@ -1453,8 +1476,7 @@ void FmMain::translateMe()
 
     // Main tab
     localBlocks.translate();
-    if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
-        forceShowCp(*p);    
+    doBlocksChanged();
 
     // Search
     // Go changes dynamically
@@ -1465,11 +1487,11 @@ void FmMain::translateMe()
     localLib.acCopyBare->setText(loc::get("Main.Local.CopyBare"));
     localLib.acCopyVs15->setText(loc::get("Main.Local.CopyVs15"));
     emit libModel.dataChanged({}, {});
-    libChanged(ui->treeLibrary->currentIndex());
+    doLibChanged();
 
     // Favs tab
     localFavs.translate();
-    favsCurrentChanged(ui->tableFavs->currentIndex());
+    doFavsChanged();
 }
 
 
@@ -2358,7 +2380,7 @@ void FmMain::redrawFavsTable()
 {
     emit favsModel.dataChanged({}, {});
     emit favsModel.headerDataChanged(Qt::Vertical, 0, favsModel.rowCount());
-    favsCurrentChanged(ui->tableFavs->currentIndex());
+    doFavsChanged();
     redrawFavsTab();
 }
 
@@ -2897,4 +2919,26 @@ void FmMain::findAll()
 void FmMain::debugPluralRules()
 {
     fmDebugPlural.ensure(this).exec();
+}
+
+
+void FmMain::toggleBigFont()
+{
+    constexpr const char* HEAD = "Big font";
+    if (!loc::currLang->peculiarities.biggerForHiero) {
+        QMessageBox::warning(this, HEAD,
+                "This locale does not have big font. Did nothing.");
+        return;
+    }
+    mywiki::allowBigFont = !mywiki::allowBigFont;
+
+    // React
+    doBlocksChanged();
+    doLibChanged();
+    doFavsChanged();
+
+    // Display
+    const char* text = mywiki::allowBigFont
+            ? "Big font ON." : "Big font OFF.";
+    QMessageBox::information(this, HEAD, text);
 }
