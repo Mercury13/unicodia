@@ -20,7 +20,7 @@
 @rem Possible replacement:
 @rem set SEVENZIP="c:\Program Files\PeaZip\res\bin\7z\7z.exe"
 
-@rem Comsole UTranslator
+@rem Console UTranslator
 @set UTRANSL=UTransCon.exe
 
 @rem Inno Setup
