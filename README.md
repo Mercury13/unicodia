@@ -46,7 +46,7 @@ Is **Old** in the front or in the back? It depends. 1) In Scripts — as conven
 
 **English.** The dialect called “International English” or “English as a lingua franca”: use the best word for non-native audience. Examples: truck > lorry, petrol > gas, -ize > -ise. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
 
-Though the grammar must be close to the British/American origin. Unless you are native/proficient, every new sufficiently large text must be grammar-checked with Grammarly or a similar AI tool. 
+Though the grammar must be close to the British/American origin, with articles and tenses. Unless you are native/proficient, every new sufficiently large text must be grammar-checked with Grammarly or a similar AI tool. 
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
