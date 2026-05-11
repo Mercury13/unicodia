@@ -1,4 +1,5 @@
 @call xsetup.bat
+@rem Local unversioned setup that overrides the main one
 @if exist ~setup_local.bat call ~setup_local.bat
 
 @echo ===== Checking for tools =====
