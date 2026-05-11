@@ -42,7 +42,11 @@ Unicodia does not collect data at all, but uses GitHub API for updating.
 
 Is **Old** in the front or in the back? It depends. 1) In Scripts — as convenient. In Blocks… 2) Old is the main word (Ancient symbols) → better front. 3) Auxiliary block (Old Sogdian, Ancient Greek) → no matter, we’ll find it anyway by looking around Greek. 4) Old is an adjective to something more important (Italic old, Mongolian old, Permic old) → better back. It’s just ease of finding a block in the long list of 300 blocks.
 
-**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
+**AI as a translator.** Allowed, but at least check it somehow.
+
+**English.** A dialect called “International English” or “English as a lingua franca”: use the best word for non-native audience. Examples: truck > lorry, petrol > gas, -ize > -ise. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
+
+Unless you are native/proficient, every new sufficiently large text must be grammar-checked with Grammarly or a similar AI tool. 
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
