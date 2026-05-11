@@ -1032,6 +1032,8 @@ namespace {
                       : font.flags.have(uc::Ffg::DESC_SMALLER) ? 1 : 2;
             }
             // Smaller texts NEVER come with samples
+            // so we don’t check for overall context,
+            // only smtable that is not enlarged
             if (size == 3 && !flags.have(Affg::SMTABLE)
                     && loc::currLang->peculiarities.biggerForHiero) {
                 size = 2;
