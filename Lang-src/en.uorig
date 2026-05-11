@@ -6938,7 +6938,7 @@
      <orig>Letter/lowercase</orig>
     </text>
     <text id="Text">
-     <orig>[[pt:minuscule|Minuscule]] writing appeared in early Middle Ages for economy of expensive parchment, turned to small letters, and made Latin a very expressive alphabet.</orig>
+     <orig>[[pt:minuscule|Minuscule]] writing appeared in early Middle Ages to save expensive parchment, turned to small letters, and made Latin a very expressive alphabet.</orig>
     </text>
    </group>
    <group id="Lm">
@@ -6947,7 +6947,7 @@
      <orig>Letter/modifier</orig>
     </text>
     <text id="Text">
-     <orig>Such “unter-letters” are commonly used in phonetics, and add additional meaning to letters. For example, modifier letter is prime xʹ sometimes used for palatal consonants, unlike mathematical prime x′.</orig>
+     <orig>Such “unter-letters” are commonly used in phonetics and add additional meaning to letters. For example, modifying prime xʹ is sometimes used for palatal consonants, unlike mathematical prime x′.</orig>
     </text>
    </group>
    <group id="Lo">
@@ -6965,7 +6965,7 @@
      <orig>Letter/mixed case</orig>
     </text>
     <text id="Text">
-     <orig>Digraph characters consisting of capital and small letter. For example, Croatian Latin has digraph ǈ. Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
+     <orig>Digraphs consisting of a capital and a small letter. For example, Croatian Latin has the digraph ǈ. The Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
     </text>
    </group>
    <group id="Lu">
@@ -6974,7 +6974,7 @@
      <orig>Letter/uppercase</orig>
     </text>
     <text id="Text">
-     <orig>Scripts that adopted small (lowercase, minuscule) letters, started to call old-shaped letters capital, uppercase or majuscule.</orig>
+     <orig>Scripts that adopted small (lowercase, minuscule) letters started to call old-shaped letters capital, uppercase or majuscule.</orig>
     </text>
    </group>
    <group id="Mc">
