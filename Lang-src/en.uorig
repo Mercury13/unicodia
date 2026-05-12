@@ -443,7 +443,7 @@
       <orig>→</orig>
      </text>
      <text id="Text">
-      <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
+      <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous script in Unicode, Left-to-right is the largest class.</orig>
      </text>
     </group>
     <group id="NSM">
@@ -458,7 +458,7 @@
       <orig>Non-spacing mark</orig>
      </text>
      <text id="Text">
-      <orig>Non-spacing and enclosing combining marks. Writing direction is borrowed from base character.</orig>
+      <orig>Non-spacing and enclosing combining marks. Writing direction is borrowed from the base character.</orig>
      </text>
     </group>
     <group id="ON">
@@ -470,7 +470,7 @@
       <orig>Other neutral</orig>
      </text>
      <text id="Text">
-      <orig>Adapts to direction of surrounding text.</orig>
+      <orig>Adapts to the direction of the surrounding text.</orig>
      </text>
     </group>
     <group id="NM">
@@ -482,7 +482,7 @@
       <orig>Mirroring neutral</orig>
      </text>
      <text id="Text">
-      <orig>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to direction of surrounding text.</orig>
+      <orig>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to the direction of the surrounding text.</orig>
      </text>
     </group>
     <group id="R">
@@ -495,7 +495,7 @@
      </text>
      <text id="Text">
       <orig>
-       <p>[[ps:Hebr|Hebrew]] and historical scripts of Middle East.</p>
+       <p>[[ps:Hebr|Hebrew]] and historical scripts of the Middle East.</p>
        <p />
        <p>[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</p>
       </orig>
@@ -513,7 +513,7 @@
       <orig>Segment separator</orig>
      </text>
      <text id="Text">
-      <orig>Three control characters: 09 (tabulation), 0B (vertical tabulation), 1F (separator 1).</orig>
+      <orig>Three control characters: [[pc:09]] (tabulation), [[pc:0B]] (vertical tabulation), [[pc:1F]] (separator 1).</orig>
      </text>
     </group>
     <group id="WS">

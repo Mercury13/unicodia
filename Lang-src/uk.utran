@@ -486,7 +486,7 @@
       <transl>Цифровий роздільник</transl>
      </text>
      <text id="Text">
-      <orig>When appear in European or Arabic number, these characters become its part.</orig>
+      <orig>When they appear in a European or Arabic number, these characters become a part of it.</orig>
       <transl>Опинившись у врабському або європейському числі, ці символи стають його частиною.</transl>
      </text>
     </group>
@@ -522,7 +522,7 @@
       <transl>Європейський ±</transl>
      </text>
      <text id="Text">
-      <orig>+ and − characters inside a European number become its part. ± character is outside of this class.</orig>
+      <orig>+ and − characters within a European number become a part of it. The ± character is outside of this class.</orig>
       <transl>Символи + та − всередині європейського числа стають його частиною. Символ ± до цього класу не{{_}}відноситься.</transl>
      </text>
     </group>
@@ -540,7 +540,7 @@
       <transl>Європейська одиниця виміру</transl>
      </text>
      <text id="Text">
-      <orig>Currency and other characters that commonly appear near numbers. When near a European number, these characters become its part.</orig>
+      <orig>Currency and other characters that commonly appear near numbers. When near a European number, these characters become a part of it.</orig>
       <transl>Валютні та інші символи, що зустрічаються разом з числами. Опинившись поруч з європейським числом, вони стають частиною числа.</transl>
      </text>
     </group>
@@ -555,7 +555,7 @@
       <transl>→</transl>
      </text>
      <text id="Text">
-      <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</orig>
+      <orig>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous script in Unicode, Left-to-right is the largest class.</orig>
       <transl>Латинка, кирилиця та інші алфавіти з написанням зліва направо. Оскільки значна частка Юнікоду{{-}}[[ps:Hani|китайські ієрогліфи]], це найбільш численний клас.</transl>
      </text>
     </group>
@@ -573,7 +573,7 @@
       <transl>Непротяжна мітка</transl>
      </text>
      <text id="Text">
-      <orig>Non-spacing and enclosing combining marks. Writing direction is borrowed from base character.</orig>
+      <orig>Non-spacing and enclosing combining marks. Writing direction is borrowed from the base character.</orig>
       <transl>Непротяжні та охоплюючі комбінуючі мітки. Напрямок написання{{-}}як у основного символа.</transl>
      </text>
     </group>
@@ -588,7 +588,7 @@
       <transl>Інший нейтральний</transl>
      </text>
      <text id="Text">
-      <orig>Adapts to direction of surrounding text.</orig>
+      <orig>Adapts to the direction of the surrounding text.</orig>
       <transl>Пристосовується до напрямку оточуючого тексту.</transl>
      </text>
     </group>
@@ -603,7 +603,7 @@
       <transl>Віддзеркалюючийся</transl>
      </text>
      <text id="Text">
-      <orig>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to direction of surrounding text.</orig>
+      <orig>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to the direction of the surrounding text.</orig>
       <transl>Дужки та інші символи при написанні справа наліво віддзеркалюються. Усі такі символи є нейтральними: пристосовуються до напрямку оточуючого тексту.</transl>
      </text>
     </group>
@@ -619,7 +619,7 @@
      </text>
      <text id="Text">
       <orig>
-       <p>[[ps:Hebr|Hebrew]] and historical scripts of Middle East.</p>
+       <p>[[ps:Hebr|Hebrew]] and historical scripts of the Middle East.</p>
        <p />
        <p>[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</p>
       </orig>
@@ -644,8 +644,8 @@
       <transl>Роздільник відрізків</transl>
      </text>
      <text id="Text">
-      <orig>Three control characters: 09 (tabulation), 0B (vertical tabulation), 1F (separator 1).</orig>
-      <transl>Три керуючих символи: 09 (табуляція), 0B (вертикальна табуляція), 1F (роздільник 1)</transl>
+      <orig>Three control characters: [[pc:09]] (tabulation), [[pc:0B]] (vertical tabulation), [[pc:1F]] (separator 1).</orig>
+      <transl>Три керуючих символи: [[pc:09]] (табуляція), [[pc:0B]] (вертикальна табуляція), [[pc:1F]] (роздільник 1).</transl>
      </text>
     </group>
     <group id="WS">
