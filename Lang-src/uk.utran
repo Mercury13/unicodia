@@ -10051,7 +10051,7 @@
      <transl>Символ/валютний</transl>
     </text>
     <text id="Text">
-     <orig>Currency character is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does{{_}}not{{_}}need a{{_}}special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
+     <orig>Currency symbol is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; that looks like a tombstone. At the end of 1990s, Artemy Lebedev said that the Russian ruble did{{_}}not{{_}}need a{{_}}special character, but later his PR advanced the sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
      <transl>Валютний символ{{-}}важлива частина іміджу країни, і навіть у монголів є тугрик &lt;font size='+1'&gt;₮&lt;/font&gt;, що нагадує могильний хрест. Артемій Лебедєв у кінці 1990-х казав, що російському рублю не{{_}}потрібен особливий знак, але пізніше саме його піар зробив знак &lt;font size='+1'&gt;₽&lt;/font&gt; офіційним.</transl>
     </text>
    </group>
@@ -10063,9 +10063,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character like circumfex ^ that look like [[pt:combining|combining]] marks, but have no their special properties. And some other characters.</p>
+      <p>Characters that look like [[pt:combining|combining]] marks but have no special properties, such as circumfex ^. And some other characters.</p>
       <p />
-      <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type accent in the same [[pt:mono|character cell]]. The glyph was drawn in such a fashion that the same character is suitable for both apostrophe and accent.</p>
+      <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type the accent in the same [[pt:mono|character cell]]. The glyph was drawn so that the same character is suitable for both an apostrophe and an accent.</p>
      </orig>
      <transl>
       <p>Символи на кшталт кришки ^, що зовні співпадають з [[pt:combining|комбінуючими]] мітками, але позбавлені особливих властивостей. А також деякі інші символи.</p>
@@ -10092,7 +10092,7 @@
      <transl>Символ/інший</transl>
     </text>
     <text id="Text">
-     <orig>Unicode contains plenty of different characters, including commercial, technical and [[pt:emoji|emoji]].</orig>
+     <orig>Unicode contains many different characters, including commercial, technical and [[pt:emoji|emoji]].</orig>
      <transl>Юнікод містить багато різних символів, у тому числі комерційні, технічні та [[pt:emoji|емодзі]].</transl>
     </text>
    </group>

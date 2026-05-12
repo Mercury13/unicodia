@@ -7110,7 +7110,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters like the circumfex ^ that look like [[pt:combining|combining]] marks, but have no special properties. And some other characters.</p>
+      <p>Characters that look like [[pt:combining|combining]] marks but have no special properties, such as circumfex ^. And some other characters.</p>
       <p />
       <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type the accent in the same [[pt:mono|character cell]]. The glyph was drawn so that the same character is suitable for both an apostrophe and an accent.</p>
      </orig>
