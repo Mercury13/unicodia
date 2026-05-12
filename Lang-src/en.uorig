@@ -307,9 +307,9 @@
      </text>
      <text id="Text">
       <orig>
-       <p>Format characters that correct operation of Unicode bidirectional algorithm.</p>
+       <p>Format characters that affect the Unicode bidirectional algorithm.</p>
        <p />
-       <p>Strictly saying, each of these characters is a separate class in bidirectional algorithm, but for non-programmers it’s enough to know: these are direction tags.</p>
+       <p>Strictly speaking, each of these characters is a separate class in the bidirectional algorithm, but for non-programmers, it’s enough to know: these are direction tags.</p>
       </orig>
      </text>
     </group>
@@ -337,7 +337,7 @@
       <orig>Arabic number</orig>
      </text>
      <text id="Text">
-      <orig>Written right to left. There are some subtle rules related no nesting levels.</orig>
+      <orig>Written right to left. There are some subtle rules related to nesting levels.</orig>
      </text>
     </group>
     <group id="B">
@@ -352,7 +352,7 @@
       <orig>Paragraph separator</orig>
      </text>
      <text id="Text">
-      <orig>Every paragraph is processed separately with bidirectional algorithm.</orig>
+      <orig>Every paragraph is processed separately with the bidirectional algorithm.</orig>
      </text>
     </group>
     <group id="BN">
