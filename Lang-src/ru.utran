@@ -9987,7 +9987,7 @@
      <transl>Знак препинания/черта</transl>
     </text>
     <text id="Text">
-     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as mathematical sign.</orig>
+     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as a mathematical sign.</orig>
      <transl>Дефисы и тире. Минус также является чертой, но отнесён к математическим знакам.</transl>
     </text>
    </group>
@@ -10031,7 +10031,7 @@
      <transl>Знак препинания/другой</transl>
     </text>
     <text id="Text">
-     <orig>Period, comma, percent, list bullet and many other characters.</orig>
+     <orig>Period, comma, per cent, list bullet, and many other characters.</orig>
      <transl>Точка, запятая, процент, маркер списка и многое что ещё.</transl>
     </text>
    </group>

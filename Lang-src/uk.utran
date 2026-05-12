@@ -9985,7 +9985,7 @@
      <transl>Розділовий знак/риска</transl>
     </text>
     <text id="Text">
-     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as mathematical sign.</orig>
+     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as a mathematical sign.</orig>
      <transl>Дефіси та тире. Мінус також є рискою, але віднесений до математичних знаків.</transl>
     </text>
    </group>
@@ -10029,7 +10029,7 @@
      <transl>Розділовий знак/інший</transl>
     </text>
     <text id="Text">
-     <orig>Period, comma, percent, list bullet and many other characters.</orig>
+     <orig>Period, comma, per cent, list bullet, and many other characters.</orig>
      <transl>Крапка, кома, процент, маркер списку та багато інших.</transl>
     </text>
    </group>
