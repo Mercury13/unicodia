@@ -6166,10 +6166,10 @@
     </text>
     <text id="Text">
      <orig>
-      <p>No one knows when the Georgian script was created and what was the prototype. The widespread opinion that the Georgian alphabet was made by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet, is rejected by scientists. Alphabetical order is [[ps:Grek|Greek]].</p>
+      <p>No one knows when the Georgian script was created or what the prototype was. The widespread belief that the Georgian alphabet was invented by Mesrop Mashtots, the creator of the [[ps:Armn|Armenian]] alphabet, is rejected by scientists. Alphabetical order is [[ps:Grek|Greek]].</p>
       <p />
-      <p>Georgian language is unicameral, but historically Unicode has four styles of writing, in order of codes:</p>
-      <p>* Asomtavruli{{-}}obsolete capital letters. Because of poor sample [[pt:character|glyphs]], this range affixed to Asomtavruli style;</p>
+      <p>The Georgian language is unicameral, but historically, Unicode has four styles of writing, in order of codes:</p>
+      <p>* Asomtavruli{{-}}obsolete capital letters. Because of poor sample [[pt:character|glyphs]], this range is affixed to the Asomtavruli style;</p>
       <p>* Mkhedruli{{-}}ordinary Georgian with many ascenders and descenders;</p>
       <p>* [[pk:1C90|Mtavruli]]{{-}}“capital” form of ordinary Georgian without ascenders and descenders;</p>
       <p>* [[pk:2D00|Nuskhuri]]{{-}}italic church [[pt:minuscule|minuscule]].</p>
