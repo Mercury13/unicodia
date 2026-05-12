@@ -7046,7 +7046,7 @@
      <orig>Punctuation/dash</orig>
     </text>
     <text id="Text">
-     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as mathematical sign.</orig>
+     <orig>Hyphens and dashes. Minus is also a dash, but it is classified as a mathematical sign.</orig>
     </text>
    </group>
    <group id="Pe">
@@ -7082,7 +7082,7 @@
      <orig>Punctuation/other</orig>
     </text>
     <text id="Text">
-     <orig>Period, comma, percent, list bullet and many other characters.</orig>
+     <orig>Period, comma, per cent, list bullet, and many other characters.</orig>
     </text>
    </group>
    <group id="Ps">
