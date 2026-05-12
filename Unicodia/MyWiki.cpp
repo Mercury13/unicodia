@@ -2851,8 +2851,10 @@ void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
     // Similar About has its own stylesheet
     if (loc::currLang->peculiarities.biggerForHiero
             && allowBigFont) {
-        QFont font = QApplication::font();
-        double newSz = font.pointSizeF() * 1.12;
+        auto oldSize = QApplication::font().pointSizeF();
+        static constexpr double FONT_RATIO = 1.12;
+        // Want at least 1pt bigger (8*1.12 is ju-ust below 9)
+        double newSz = std::max(oldSize * FONT_RATIO, oldSize + 1);
         char buf[70];
         snprintf(buf, std::size(buf),
                 "p { font-size:%.1f" "pt; } ", newSz);
