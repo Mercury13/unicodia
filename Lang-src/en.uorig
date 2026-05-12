@@ -7010,7 +7010,7 @@
      <orig>Number/decimal</orig>
     </text>
     <text id="Text">
-     <orig>People count in tens, because they have ten fingers. Words “digit” and “finger” are related in many languages. Positional numeral system invented in India is used by all the world, but in languages of Middle East and South-East Asia digits are weird.</orig>
+     <orig>People count in tens, because they have ten fingers. The words “digit” and “finger” are related in many languages. The positional numeral system invented in India is used all over the world, but in the languages of the Middle East and South-East Asia, digits are weird.</orig>
     </text>
    </group>
    <group id="Nl">
@@ -7019,7 +7019,7 @@
      <orig>Number/letter</orig>
     </text>
     <text id="Text">
-     <orig>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses for them ordinary А, В, Г… with combining marks.</orig>
+     <orig>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses the ordinary А, В, Г… with combining marks.</orig>
     </text>
    </group>
    <group id="No">
