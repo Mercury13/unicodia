@@ -9941,7 +9941,7 @@
      <transl>Числовий/десятковий</transl>
     </text>
     <text id="Text">
-     <orig>People count in tens, because they have ten fingers. Words “digit” and “finger” are related in many languages. Positional numeral system invented in India is used by all the world, but in languages of Middle East and South-East Asia digits are weird.</orig>
+     <orig>People count in tens, because they have ten fingers. The words “digit” and “finger” are related in many languages. The positional numeral system invented in India is used all over the world, but in the languages of the Middle East and South-East Asia, digits are weird.</orig>
      <transl>Люди рахують десятками, оскільки в них десять пальців. Слова «цифра» і «палець» в багатьох мовах близькі. Винайдена в Індії позиційна система числення використовується усім світом, однак у мовах Ближнього Сходу та Південно-Східної Азії цифри бувають химерні.</transl>
     </text>
    </group>
@@ -9952,7 +9952,7 @@
      <transl>Числовий/буквений</transl>
     </text>
     <text id="Text">
-     <orig>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses for them ordinary А, В, Г… with combining marks.</orig>
+     <orig>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses the ordinary А, В, Г… with combining marks.</orig>
      <transl>Римські, китайські та інші цифри, засновані на літерах. Давньоруські також базуються на літерах, але в Юнікоді для цього використовуються звичайні А, В, Г… з комбінуючими мітками.</transl>
     </text>
    </group>
