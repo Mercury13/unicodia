@@ -386,7 +386,7 @@
       <orig>Common separator</orig>
      </text>
      <text id="Text">
-      <orig>When appear in European or Arabic number, these characters become its part.</orig>
+      <orig>When they appear in a European or Arabic number, these characters become a part of it.</orig>
      </text>
     </group>
     <group id="EN">
@@ -416,7 +416,7 @@
       <orig>European separator</orig>
      </text>
      <text id="Text">
-      <orig>+ and − characters inside a European number become its part. ± character is outside of this class.</orig>
+      <orig>+ and − characters within a European number become a part of it. The ± character is outside of this class.</orig>
      </text>
     </group>
     <group id="ET">
@@ -431,7 +431,7 @@
       <orig>European terminator</orig>
      </text>
      <text id="Text">
-      <orig>Currency and other characters that commonly appear near numbers. When near a European number, these characters become its part.</orig>
+      <orig>Currency and other characters that commonly appear near numbers. When near a European number, these characters become a part of it.</orig>
      </text>
     </group>
     <group id="L">
