@@ -9919,7 +9919,7 @@
      <transl>Мітка/охоплююча</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
      <transl>Охоплюючі мітки використовуються у давньоруських буквених цифрах (А҈). Також існують охоплюючі квадрат, коло та інші фігури. Жоден перевірений типографський движок на Windows{{_}}10 20H2 (GDI, Cairo, Skia) не{{_}}підтримує подібні символи ідеально, але на гарних шрифтах на кшталт DejaVu результат дуже непоганий.</transl>
     </text>
    </group>
@@ -9930,8 +9930,8 @@
      <transl>Мітка/непротяжна</transl>
     </text>
     <text id="Text">
-     <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
-     <transl>Непротяжні мітки (наприклад, знак на́голосу) влаштовані як символи нульової ширини, звідси назва. В гарних шрифтах дизайнер вручну розміщує мітки на найбільш поширені літери. Але якщо подібної комбінації не{{_}}передбачено (8́), символи накладаються як попало, і результат зазвичай поганий.</transl>
+     <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts, the designer manually puts marks on the most common letters. But if such a combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
+     <transl>Непротяжні мітки (наприклад, знак на́голосу) влаштовані як символи нульової ширини, звідси назва. В гарних шрифтах дизайнер вручну розміщує мітки на найбільш поширені літери. Але якщо подібної комбінації не{{_}}передбачено (8́), мітки накладаються як попало, і результат зазвичай поганий.</transl>
     </text>
    </group>
    <group id="Nd">

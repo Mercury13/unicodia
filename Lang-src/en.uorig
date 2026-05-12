@@ -6992,7 +6992,7 @@
      <orig>Mark/enclosing</orig>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also enclosing square, circle and other shapes exist. None of the tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
     </text>
    </group>
    <group id="Mn">
@@ -7001,7 +7001,7 @@
      <orig>Mark/nonspacing</orig>
     </text>
     <text id="Text">
-     <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
+     <orig>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts, the designer manually puts marks on the most common letters. But if such a combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</orig>
     </text>
    </group>
    <group id="Nd">
