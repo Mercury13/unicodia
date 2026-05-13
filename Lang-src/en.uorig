@@ -11002,7 +11002,15 @@
      <orig>Brahmic/context-dependent</orig>
     </text>
     <text id="Text">
-     <orig>Complex analysis similar to auto-hyphenation is required to decide whether you can break here.</orig>
+     <orig>Complex analysis, similar to auto-hyphenation, is required to determine whether you can break here.</orig>
+    </text>
+   </group>
+   <group id="VF">
+    <text id="Name">
+     <orig>Brahmic/final virama</orig>
+    </text>
+    <text id="Text">
+     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' a consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
     </text>
    </group>
    <group id="VI">
@@ -11011,14 +11019,6 @@
     </text>
     <text id="Text">
      <orig>This [[pt:virama|virama]] '''can''' be inside a syllable. So do not break around this character.</orig>
-    </text>
-   </group>
-   <group id="VF">
-    <text id="Name">
-     <orig>Brahmic/final virama</orig>
-    </text>
-    <text id="Text">
-     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
     </text>
    </group>
    <group id="AI">
