@@ -11127,7 +11127,7 @@
     </text>
    </group>
    <text id="Hard">
-    <orig>This rule is '''important''': must exist in some form in every program.</orig>
+    <orig>This rule is '''important''': it must exist in some form in every program.</orig>
    </text>
    <text id="Soft">
     <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
