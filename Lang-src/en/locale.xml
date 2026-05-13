@@ -8,9 +8,12 @@
 			(as a workaround for complex languages like Japanese)
 -->
 <locale native="English" international="English" eng-terms="0">
-	<!-- ini: c:\path\to\lang.ini (avoid relative paths)
-			Use as an alternative to symlinks:
-			simple and does not require admin rights -->
+	<!-- ini: working lang.ini, e.g. c:\path\to\lang.ini
+			In a freshly-released program it’s always empty!
+			Use as an alternative to symlinks while translating/proofreading:
+			simple and does not require admin rights
+			Avoid relative paths, better use absolute
+			(Unicodia is almost independent from the current directory) -->
 	<debug ini="" />
 	<!-- If you find in the system some language from this list → you switch
 		stamp: some NUMBER (as you see, date-based), NEVER CHANGES
@@ -22,7 +25,7 @@
 				if it’s in trigger-langs.
 			When the user says, “No, I want English,” his max stamp will be new,
 				and auto-switch no more happens.
-		When the author says, “I retranslated Spanish, give it one more chance”,
+			When the author says, “I retranslated Spanish, give it one more chance”,
 				he triggers auto-switch again.
 	-->
 	<trigger-langs stamp="2022060">
