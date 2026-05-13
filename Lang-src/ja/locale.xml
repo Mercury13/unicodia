@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <locale native="日本語" international="Japanese" eng-terms="2">
-	<debug ini="">
+	<debug ini="" />
 	<trigger-langs stamp="2024110">
 		<lang iso="ja" />
 	</trigger-langs>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <locale native="Українська" international="Ukrainian" eng-terms="1">
-	<debug ini="">
+	<debug ini="" />
 	<trigger-langs stamp="2022120">
 		<lang iso="uk" />
 	</trigger-langs>

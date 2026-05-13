@@ -87,7 +87,7 @@ namespace loc
             std::u32string sortKey;  ///< chinese (simplified)
         } name;
         struct Debug {
-            std::filesystem::path alternateIni;  ///> c:\path\xxx.ini
+            std::filesystem::path fnAlternateIni;  ///> c:\path\xxx.ini
         } debug;
         struct Icons {
             std::string sortAZ;

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <locale native="Türkçe" international="Turkish" eng-terms="1">
-	<debug ini="">
+	<debug ini="" />
 	<trigger-langs stamp="2025080">
 		<lang iso="tr" />
 	</trigger-langs>

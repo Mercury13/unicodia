@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <locale native="汉语" international="Chinese" eng-terms="1">
-	<debug ini="">
+	<debug ini="" />
 	<trigger-langs stamp="2026040">
 		<lang iso="zh" />
 	</trigger-langs>

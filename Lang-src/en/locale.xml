@@ -8,10 +8,10 @@
 			(as a workaround for complex languages like Japanese)
 -->
 <locale native="English" international="English" eng-terms="0">
-	<!-- ini: c:\path\to\lang.ini
+	<!-- ini: c:\path\to\lang.ini (avoid relative paths)
 			Use as an alternative to symlinks:
 			simple and does not require admin rights -->
-	<debug ini="">
+	<debug ini="" />
 	<!-- If you find in the system some language from this list → you switch
 		stamp: some NUMBER (as you see, date-based), NEVER CHANGES
 			(may increase if someone checks blatant auto-translation)

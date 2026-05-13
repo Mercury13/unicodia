@@ -153,7 +153,7 @@ void loc::Lang::forceLoad()
         currLang->unload();
     if (translator)
         QApplication::installTranslator(translator.get());
-    if (!loc::loadIni(loc::dic, debug.alternateIni)) {
+    if (!loc::loadIni(loc::dic, debug.fnAlternateIni)) {
         loc::loadIni(loc::dic, fnLang);
     }
     currLang = this;
@@ -361,6 +361,9 @@ namespace {
         r.engTerms = static_cast<loc::EngTerms>(et);
 
         mojibake::simpleCaseFold(r.name.international, r.name.sortKey);
+
+        auto hDebug = hLocale.child("debug");
+        r.debug.fnAlternateIni = hDebug.attribute("ini").as_string();
 
         r.triggerLangs.clear();
         auto hTriggerLangs = hLocale.child("trigger-langs");
