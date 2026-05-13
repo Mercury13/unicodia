@@ -11026,7 +11026,7 @@
      <orig>CJK/letter or ideograph</orig>
     </text>
     <text id="Text">
-     <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
+     <orig>In [[pt:cjk|CJK]] text, you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
     </text>
    </group>
    <group id="CJ">
@@ -11034,7 +11034,7 @@
      <orig>CJK/conditional Japanese starter</orig>
     </text>
     <text id="Text">
-     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters only in certain contexts (e.g. in newspapers).</orig>
     </text>
    </group>
    <group id="ID">
@@ -11047,7 +11047,7 @@
       <p />
       <p>You cannot break ideographs from numbers.</p>
       <p />
-      <p>Some non-CJK characters also fall to this class.</p>
+      <p>Some non-CJK characters also fall into this class.</p>
      </orig>
     </text>
    </group>
