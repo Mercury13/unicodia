@@ -1450,7 +1450,7 @@
    </group>
    <group id="0180">
     <text id="Text">
-     <orig>Contains characters of Slovene, Croatian, Romanian, Livonian, Zhuang, Pinyin (Latin transcription of Chinese), African, Native American languages, and old (pre-1930) Latin of xUSSR languages.</orig>
+     <orig>Contains characters from Slovene, Croatian, Romanian, Livonian, Zhuang, Pinyin (Latin transcription of Chinese), African, Native American languages, as well as old (pre-1930) Latin of xUSSR languages.</orig>
      <transl>Містить символи словенської, хорватської, румунської, лівської, чжуанської, піньїню (латинізації китайської), африканських, індіанських мов, а також старої (до 1930) латинки мов колишнього СРСР.</transl>
     </text>
    </group>
@@ -1461,20 +1461,20 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The International Phonetic Alphabet based on Latin is used by linguists, speech therapists, singers and actors to convey transcription of languages. To convey additional speech disorders such as tooth gnashing and lisping, IPA extensions are used.</p>
+      <p>The International Phonetic Alphabet, based on the Latin alphabet, is used by linguists, speech therapists, singers and actors to convey pronunciation. To convey additional speech disorders such as tooth gnashing and lisping, IPA extensions are used.</p>
       <p />
-      <p>In reality, most characters of this block are not{{_}}extensions but ordinary IPA: for example, {{sm|ɦ}} is present in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'' and Czech “hrad” ''(town)''.</p>
+      <p>In reality, most characters in this block are not{{_}}extensions but ordinary IPA symbols: for example, {{sm|ɦ}} appears in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'', and Czech “hrad” ''(town)''.</p>
       <p />
-      <p>Opera singers often sing in unknown languages, and their ability to read transcription signs is often used by dictionary authors. Particularly, the well-known sound “Yanny or Laurel” was recorded by opera singer Jay Aubrey Jones{{-}}low male voice that came through low-quality speaker and microphone of the same quality turned to Yanny.</p>
+      <p>Opera singers often sing in unfamiliar languages, and their ability to read transcription is often used by dictionary authors. In particular, the well-known “Yanny or Laurel” sound was recorded by opera singer Jay Aubrey Jones{{-}}a low male voice came through a low-quality speaker and a microphone of the same quality, which turned it into Yanny.</p>
       <p />
-      <p>Also using IPA characters you can turn a text upside-down for a joke.</p>
+      <p>Also, using IPA characters, you can turn a text upside down for a joke.</p>
      </orig>
      <transl>
       <p>Міжнародний фонетичний алфавіт на основі латинки вікиристовується мовознавцями, логопедами, співаками та акторами, щоб передавати промову мов. Для передачі додаткових особливостей мовлення{{-}}шепелявості, рипіння зубів та іншого{{-}}використовуються розширення МФА.</p>
       <p />
       <p>Насправді більша частина цього блоку{{-}}не розширення, а звичайний МФА: так, {{sm|ɦ}} є в українському «гривня», російському «ага» та чеському «hrad» (місто).</p>
       <p />
-      <p>Оперні співаки часто співають чужою мовою, і їх здатність читати знаки транскрипції часто використовують складачі звукових словників. Зокрема, відомий звук «Янні чи Лорел» начитав співак Джей Обрі Джонс{{-}}низький чоловічий голос, что пройшов через неякісний динамік і настільки ж неякісний мікрофон, став сприйматися як «Янні».</p>
+      <p>Оперні співаки часто співають чужою мовою, і їх здатність читати знаки транскрипції часто використовують складачі звукових словників. Зокрема, відомий звук «Янні чи Лорел» начитав співак Джей Обрі Джонс{{-}}низький чоловічий голос, що пройшов через неякісний динамік і настільки ж неякісний мікрофон, став сприйматися як «Янні».</p>
       <p />
       <p>А ще символи МФА дозволяють заради жарту перевернути текст.</p>
      </transl>
