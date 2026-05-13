@@ -15267,7 +15267,7 @@
      <transl>Важливий/з’єднувач слів</transl>
     </text>
     <text id="Text">
-     <orig>Do not break a line before and after [[pu:2060]] Word joiner.</orig>
+     <orig>Do not break a line before or after [[pu:2060]] Word joiner.</orig>
      <transl>Не розривати рядок перед та після з’єднувача слів [[pu:2060]].</transl>
     </text>
    </group>
@@ -15306,7 +15306,7 @@
      <transl>Важливий/пропуск</transl>
     </text>
     <text id="Text">
-     <orig>You can break after a chain of [[pu:0020]] spaces, unless other characters prohibit this.</orig>
+     <orig>You can break after a sequence of [[pu:0020]] spaces, unless other characters prohibit it.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
      <transl>Можна розривати після ланцюжка пропусків [[pu:0020]], якщо інші символи не забороняють.</transl>
     </text>
@@ -15337,7 +15337,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>You can break before and after [[pu:2014]] Em dash, unless other characters prohibit.</p>
+      <p>You can break before and after [[pu:2014]] Em dash, unless other characters prohibit it.</p>
       <p />
       <p>Do not break chains of dashes, even after spaces.</p>
      </orig>
@@ -15371,7 +15371,7 @@
      <transl>Розрив/дефіс-мінус</transl>
     </text>
     <text id="Text">
-     <orig>[[pu:002D]] Hyphen-minus can have a multitude of uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by [[pl:HH|hyphen’s]] rules.</orig>
+     <orig>[[pu:002D]] Hyphen-minus has multiple uses: hyphen, minus, numeric dash. If further analysis shows it’s a hyphen, you can break after it by the [[pl:HH|hyphen’s]] rules.</orig>
      <transl>[[pu:002D]] дефіс-мінус може мати безліч застосувань: дефіс, мінус, цифрове тире. Якщо аналіз показав, що це дефіс, можна розривати за правилами [[pl:HH|дефіса]].</transl>
     </text>
    </group>
@@ -15407,7 +15407,7 @@
      <transl>Розрив/умовний</transl>
     </text>
     <text id="Text">
-     <orig>You can or cannot break near [[pu:FFFC]] Object replacement character depending on object type.</orig>
+     <orig>You can or cannot break near [[pu:FFFC]] Object replacement character, depending on the object type.</orig>
      <transl>Поруч з підстановкою об’єкта [[pu:FFFC]] можна розривати або ні, залежно від типу об’єкта.</transl>
     </text>
    </group>
@@ -15455,8 +15455,8 @@
      <transl>Заборона/неподільний</transl>
     </text>
     <text id="Text">
-     <orig>These characters are often used in chains. Do not break these chains.</orig>
-     <transl>Ці символи часто використовуються ланцюжками. Не{{_}}розривати ці ланцюжки.</transl>
+     <orig>These characters often come in chains. Do not break these chains.</orig>
+     <transl>Ці символи часто зустрічаються ланцюжками. Не{{_}}розривати ці ланцюжки.</transl>
     </text>
    </group>
    <group id="NS">
@@ -15476,9 +15476,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break after these characters, even if they are followed with spaces.</p>
+      <p>Do not break after these characters, even if they are followed by spaces.</p>
       <p />
-      <p>Do not break between letters/numbers and non-CJK openinng punctuation.</p>
+      <p>Do not break between letters/numbers and non-CJK opening punctuation.</p>
      </orig>
      <transl>
       <p>Не розривати після цих символів, навіть якщо там пропуски.</p>
@@ -15504,7 +15504,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In numbers: it’s a part of number, do not break.</p>
+      <p>In numbers: it’s a part of the number, do not break.</p>
       <p />
       <p>In words: do not break before these characters, even after spaces.</p>
      </orig>
@@ -15554,9 +15554,9 @@
      <orig>
       <p>Do not break before [[pu:002F]] Slash.</p>
       <p />
-      <p>Do not break after slash in numbers, in Hebrew.</p>
+      <p>Do not break after a slash in numbers and in Hebrew.</p>
       <p />
-      <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
+      <p>You can break after a slash in other places. As a side effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
      <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
      <transl>
@@ -15604,8 +15604,18 @@
      <transl>Брахмійський/залежить від контексту</transl>
     </text>
     <text id="Text">
-     <orig>Complex analysis similar to auto-hyphenation is required to decide whether you can break here.</orig>
+     <orig>Complex analysis, similar to auto-hyphenation, is required to determine whether you can break here.</orig>
      <transl>Щоб вирішити, чи можна тут розривати, потрібен складний аналіз, схожий на автоперенесення.</transl>
+    </text>
+   </group>
+   <group id="VF">
+    <text id="Name">
+     <orig>Brahmic/final virama</orig>
+     <transl>Брахмійський/кінцева вірама</transl>
+    </text>
+    <text id="Text">
+     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' a consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
+     <transl>Ця [[pt:virama|вірама]] завжди на кінці слова. Не розривати '''перед''' приголосною з цією вірамою. Але можна розривати '''після''' цієї вірами.</transl>
     </text>
    </group>
    <group id="VI">
@@ -15618,23 +15628,13 @@
      <transl>Ця [[pt:virama|вірама]] '''може''' бути всередині складу. Не розривати навколо цього символа.</transl>
     </text>
    </group>
-   <group id="VF">
-    <text id="Name">
-     <orig>Brahmic/final virama</orig>
-     <transl>Брахмійський/кінцева вірама</transl>
-    </text>
-    <text id="Text">
-     <orig>This [[pt:virama|virama]] is always at the end of a word. Do not break '''before''' consonant with this virama. But it’s safe to break '''after''' this virama.</orig>
-     <transl>Ця [[pt:virama|вірама]] завжди на кінці слова. Не розривати '''перед''' приголосною з цією вірамою. Але можна розривати '''після''' цієї вірами.</transl>
-    </text>
-   </group>
    <group id="AI">
     <text id="Name">
      <orig>CJK/letter or ideograph</orig>
      <transl>ККЯ/літера або ієрогліф</transl>
     </text>
     <text id="Text">
-     <orig>In [[pt:cjk|CJK]] text you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
+     <orig>In [[pt:cjk|CJK]] text, you can break here, as it were an ideograph. Otherwise, works as a letter.</orig>
      <transl>У [[pt:cjk|ККЯ]]-тексті тут можна розірвати, ніби це ієрогліф. Інакше працює як літера.</transl>
     </text>
    </group>
@@ -15644,7 +15644,7 @@
      <transl>ККЯ/умовний японський початковий</transl>
     </text>
     <text id="Text">
-     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters in certain contexts only (e.g. in newspapers).</orig>
+     <orig>Small kana (lone consonants), plus prolonged sound [[pc:30FC]]. You can break before these characters only in certain contexts (e.g. in newspapers).</orig>
      <transl>Мала кана (одинокі приголосні), плюс подовжений звук [[pc:30FC]]. Перед цими символами можна розривати тільки в певних контекстах (наприклад, у газетах).</transl>
     </text>
    </group>
@@ -15659,7 +15659,7 @@
       <p />
       <p>You cannot break ideographs from numbers.</p>
       <p />
-      <p>Some non-CJK characters also fall to this class.</p>
+      <p>Some non-CJK characters also fall into this class.</p>
      </orig>
      <transl>
       <p>Можна розривати між ієрогліфами.</p>
@@ -15771,11 +15771,11 @@
     </text>
    </group>
    <text id="Hard">
-    <orig>This rule is '''important''': must exist in some form in every program.</orig>
+    <orig>This rule is '''important''': it must exist in some form in every program.</orig>
     <transl>Це правило '''важливе''': повинно існувати у якійсь формі у будь-якій програмі.</transl>
    </text>
    <text id="Soft">
-    <orig>This rule is '''soft''': may be removed or changed depending on language, context (mathematics, Web links etc), or program’s audience.</orig>
+    <orig>This rule is '''soft''': it may be removed or changed depending on language, context (mathematics, Web links etc.), or program’s audience.</orig>
     <transl>Це правило '''м’яке''': може бути вилучено або змінено залежно від мови, контексту (математика, інтернет-посилання та{{_}}ін.) або публіки програми.</transl>
    </text>
    <text id="Brah">
