@@ -142,8 +142,7 @@
 				but disable size +3 for samples
 				Do not use where alphabets are extensively used and the
 				text is readable as is, it may garble bigger articles
-				such as Egyptian hiero!
-				(does not work for now!) -->
+				such as Egyptian hiero! -->
 	<peculiarities still-uses-burmese="0" hiero-bigger="0" />
 	<!-- Punctuation
 			key-value-colon: in “UTF-8: 00”
