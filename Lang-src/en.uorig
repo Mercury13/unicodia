@@ -10780,7 +10780,7 @@
      <orig>Important/space</orig>
     </text>
     <text id="Text">
-     <orig>You can break after a sequence of [[pu:0020]] spaces, unless other characters prevent it.</orig>
+     <orig>You can break after a sequence of [[pu:0020]] spaces, unless other characters prohibit it.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
     </text>
    </group>
@@ -10803,7 +10803,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>You can break before and after [[pu:2014]] Em dash, unless other characters prohibit.</p>
+      <p>You can break before and after [[pu:2014]] Em dash, unless other characters prohibit it.</p>
       <p />
       <p>Do not break chains of dashes, even after spaces.</p>
      </orig>
