@@ -10751,7 +10751,7 @@
      <orig>Important/word joiner</orig>
     </text>
     <text id="Text">
-     <orig>Do not break a line before and after [[pu:2060]] Word joiner.</orig>
+     <orig>Do not break a line before or after [[pu:2060]] Word joiner.</orig>
     </text>
    </group>
    <group id="ZW">
@@ -10780,7 +10780,7 @@
      <orig>Important/space</orig>
     </text>
     <text id="Text">
-     <orig>You can break after a chain of [[pu:0020]] spaces, unless other characters prohibit this.</orig>
+     <orig>You can break after a sequence of [[pu:0020]] spaces, unless other characters prevent it.</orig>
      <au-cmt>You CAN translate char name to your language</au-cmt>
     </text>
    </group>
