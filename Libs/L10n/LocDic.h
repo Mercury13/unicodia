@@ -80,7 +80,10 @@ namespace loc {
 
     extern Dic dic;
 
-    void loadIni(Dic& d, const std::filesystem::path& path);
+    ///  @return  [+] OK [-] troubles
+    ///  @warning  Always clears, even if returns false
+    bool loadIni(Dic& d, const std::filesystem::path& path);
+
     inline const Text& get(std::string_view id) { return dic.get(id); }
 
 }   // namespace loc

@@ -52,10 +52,15 @@ const loc::Text* loc::Dic::getIf(std::string_view id) const
 ///// Misc loaders /////////////////////////////////////////////////////////////
 
 
-void loc::loadIni(Dic& d, const std::filesystem::path& path)
+bool loc::loadIni(Dic& d, const std::filesystem::path& path)
 {
     d.clear();
+    if (path.empty())
+        return false;
+
     std::ifstream is(path);
+    if (!is.is_open())
+        return false;
     std::string s;
 
     std::string head;       // = empty
@@ -130,4 +135,5 @@ void loc::loadIni(Dic& d, const std::filesystem::path& path)
             }
         }
     }
+    return true;
 }

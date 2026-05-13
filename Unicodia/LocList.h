@@ -86,6 +86,9 @@ namespace loc
                 international;  ///< 简体中文
             std::u32string sortKey;  ///< chinese (simplified)
         } name;
+        struct Debug {
+            std::filesystem::path alternateIni;  ///> c:\path\xxx.ini
+        } debug;
         struct Icons {
             std::string sortAZ;
         } icons;

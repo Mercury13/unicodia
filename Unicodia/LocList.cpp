@@ -153,7 +153,9 @@ void loc::Lang::forceLoad()
         currLang->unload();
     if (translator)
         QApplication::installTranslator(translator.get());
-    loc::loadIni(loc::dic, fnLang);
+    if (!loc::loadIni(loc::dic, debug.alternateIni)) {
+        loc::loadIni(loc::dic, fnLang);
+    }
     currLang = this;
 
     // Active
