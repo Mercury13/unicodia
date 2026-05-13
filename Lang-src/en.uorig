@@ -10891,7 +10891,7 @@
      <orig>Prohibit/inseparable</orig>
     </text>
     <text id="Text">
-     <orig>These characters are often used in chains. Do not break these chains.</orig>
+     <orig>These characters often come in chains. Do not break these chains.</orig>
     </text>
    </group>
    <group id="NS">
@@ -10908,9 +10908,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Do not break after these characters, even if they are followed with spaces.</p>
+      <p>Do not break after these characters, even if they are followed by spaces.</p>
       <p />
-      <p>Do not break between letters/numbers and non-CJK openinng punctuation.</p>
+      <p>Do not break between letters/numbers and non-CJK opening punctuation.</p>
      </orig>
     </text>
    </group>
@@ -10928,7 +10928,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In numbers: it’s a part of number, do not break.</p>
+      <p>In numbers: it’s a part of the number, do not break.</p>
       <p />
       <p>In words: do not break before these characters, even after spaces.</p>
      </orig>
@@ -10966,9 +10966,9 @@
      <orig>
       <p>Do not break before [[pu:002F]] Slash.</p>
       <p />
-      <p>Do not break after slash in numbers, in Hebrew.</p>
+      <p>Do not break after a slash in numbers and in Hebrew.</p>
       <p />
-      <p>You can break after slash in other places. As a side-effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
+      <p>You can break after a slash in other places. As a side effect, abbreviations like “w/o” get broken, and software is allowed to break here only if other opportunities are far away.</p>
      </orig>
      <au-cmt>Of course, be as patriotic as possible. In Russian: railway. In Ukrainian: used, second-hand.</au-cmt>
     </text>
