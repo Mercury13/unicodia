@@ -113,7 +113,7 @@ I never rip fonts from Unicode charts, always use TTF form. But the authors of f
 * Preference of countries
   * confirmed Chinese (G)
   * = modernized confirmed Chinese
-  * &gt; confirmed other (J, K, H, M, KP, V)
+  * &gt; confirmed other (J, K, T, H, M, KP, V)
   * &gt; hypothetical Chinese, country-independent (JV)
 * It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
   * SimSun makes the same decision
