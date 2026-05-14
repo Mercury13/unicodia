@@ -24,11 +24,11 @@ Unicodia does not collect data at all, but uses GitHub API for updating.
 * Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic, Katakana and Chinese versions. The rest are unchangeable for now… until needed.
 * Download Lang-src/en.uorig from this repo.
   * If you are able to use Git, better use it. We’ll be able to work together on one translation.
-* Put Unicodia to writeable location.
+* Put Unicodia to a writeable location.
 * Create a language directory, edit locale.xml for that language.
 * Download [UTranslator](https://github.com/Mercury13/utranslator). New → Translation of *.uorig.
   * If you don’t know English, use another \*.utran file as a reference translation.
-* After saving, UTranslator created lang.xml. Put it to language directory. Or use a symlinking tool to tie these files forever and avoid handwork.
+* After saving, UTranslator created build-xx\lang.ini. Put it to the language directory. Or use a symlinking tool to tie these files forever and avoid handwork. Or write ``<debug ini="c:\path\to\build-xx\lang.ini">`` in locale.xml.
 * Press F12 in Unicodia to reload translation without reopening the entire program.
   * Warning, it reloads strings only; all locales are loaded on startup.
 * nspk template parameters: 1=language name (or script name, non-localizable), 2=pre-comment (e.g. synonym, localizable).
