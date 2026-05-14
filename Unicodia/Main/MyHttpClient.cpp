@@ -3,7 +3,7 @@
 #include <ixwebsocket/IXNetSystem.h>
 #include <ixwebsocket/IXHttpClient.h>
 
-///// MyHttpThread /////////////////////////////////////////////////////////////
+///// detail::Thread ///////////////////////////////////////////////////////////
 
 namespace {
 
@@ -21,49 +21,64 @@ namespace {
         }
     }
 
+    class InitIx {
+    public:
+        InitIx() { initIx(); }
+        ~InitIx() = default;
+    };
+
 } // anon namespace
 
 
-void detail::MyHttpThread::run()
+class myht::ClientImpl
 {
-    state = State::WORKING;
-    tempResponse.clear();
-    httpCode = 0;
-    error = MyHttpError::OK;
+public:
+    Result run(const std::string& url);
+private:
+    InitIx initIx;
+    ix::HttpClient client;
+};
 
-    initIx();
-
-    ix::HttpClient httpClient;
+myht::Result myht::ClientImpl::run(const std::string& url)
+{
     ix::WebSocketHttpHeaders headers;
 
-    auto args = httpClient.createRequest(owner.url());
+    std::string urlCopy(url);
+    auto args = client.createRequest(url);
     args->extraHeaders = headers;
     args->followRedirects = true;
     args->maxRedirects = 10;
 
-    auto response = httpClient.get(owner.url(), args);
+    auto response = client.get(url, args);
 
-    tempResponse = std::move(response->body);
-    httpCode = response->statusCode;
-    error = (response->errorCode == ix::HttpErrorCode::Ok)
-                ? MyHttpError::OK : MyHttpError::MISC;
+    return {
+        .body = std::move(response->body),
+        .code = response->statusCode,
+        .error = (response->errorCode == ix::HttpErrorCode::Ok)
+                    ? Error::OK : Error::MISC
+    };
+}
+
+void myht::detail::Thread::run()
+{
+    state = State::WORKING;
+    result = Result();
+
+    myht::ClientImpl client;
+    result = client.run(owner.url());
 }
 
 
-///// MyHttpClient /////////////////////////////////////////////////////////////
+///// AsyncClient //////////////////////////////////////////////////////////////
 
-MyHttpClient::MyHttpClient() : thread(*this)
+myht::AsyncClient::AsyncClient() : thread(*this)
 {
-    connect(&thread, &detail::MyHttpThread::finished,
+    connect(&thread, &detail::Thread::finished,
             this, &This::threadEnded);
 }
 
 
-int MyHttpClient::httpCode() const { return fHttpCode; }
-const std::string& MyHttpClient::response() const { return fResponse; }
-MyHttpError MyHttpClient::error() const { return fError; }
-
-bool MyHttpClient::start(std::string_view url)
+bool myht::AsyncClient::start(std::string_view url)
 {
     if (fState == State::WORKING)
         return false;
@@ -75,19 +90,17 @@ bool MyHttpClient::start(std::string_view url)
 }
 
 
-MyHttpClient::~MyHttpClient()
+myht::AsyncClient::~AsyncClient()
 {
-    thread.state = detail::MyHttpThread::State::HALT;
+    thread.state = detail::Thread::State::HALT;
     thread.wait();
 }
 
 
-void MyHttpClient::threadEnded()
+void myht::AsyncClient::threadEnded()
 {
-    fResponse = std::move(thread.tempResponse);
-    fError = thread.error;
-    fHttpCode = thread.httpCode;
+    fResult = std::move(thread.result);
     fState = State::IDLE;
 
-    emit requestEnded(*this);
+    emit requestEnded(fResult);
 }

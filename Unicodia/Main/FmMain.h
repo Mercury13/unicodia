@@ -40,8 +40,6 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
 QT_END_NAMESPACE
 
-class MyHttpObject;
-class MyHttpClient;
 class QToolButton;
 class QTextBrowser;
 class MyHttp;
@@ -53,6 +51,10 @@ class BangButton;
 
 class FmRespect;
 
+namespace myht {
+    struct Result;
+    class AsyncClient;
+}
 
 namespace uc {
     enum class CopiedChannel;
@@ -208,7 +210,7 @@ private:
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
     PopupGui popupGui{mainGui};
-    std::unique_ptr<MyHttpClient> htClient;
+    std::unique_ptr<myht::AsyncClient> htClient;
     QColor clCollapse;
     mutable int pixSizeCache = -1;
 
@@ -372,7 +374,7 @@ private slots:
 
     bool goToNode(const uc::LibNode& node);
     void startUpdate();
-    void updateFinished(const MyHttpObject& obj);
+    void updateFinished(const myht::Result& result);
     void acAddCpToFavsTriggered(bool isChecked);
     void acAddLibToFavsTriggered(bool isChecked);
     void addLibToFavsBanged();

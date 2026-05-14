@@ -2299,8 +2299,8 @@ void FmMain::setUpdating(bool value)
 void FmMain::ensureHtClient()
 {
     if (!htClient) {
-        htClient.reset(new MyHttpClient);
-        connect(htClient.get(), &MyHttpClient::requestEnded, this, &This::updateFinished);
+        htClient.reset(new myht::AsyncClient);
+        connect(htClient.get(), &myht::AsyncClient::requestEnded, this, &This::updateFinished);
     }
 }
 
@@ -2314,21 +2314,19 @@ void FmMain::startUpdate()
 }
 
 
-void FmMain::updateFinished(const MyHttpObject& reply)
+void FmMain::updateFinished(const myht::Result& reply)
 {
     auto head = loc::get("Update.Head").q();
-    auto err = reply.error();
-    if (err == MyHttpError::OK) {
-        auto code = reply.httpCode();
+    if (reply) {
+        auto code = reply.code;
         // Debug
         if (updatever::version == github::VER_BAD_REQUEST)
-            code = HT_IM_A_TEAPOT;
+            code = myht::C_IM_A_TEAPOT;
 
         char8_t buf[50], buf2[50];
-        if (code == HT_OK) {
-            std::string_view sv = reply.response();
+        if (code == myht::C_OK) {
             auto res = github::checkPageForUpdate(
-                        sv, updatever::version, updatever::equivPlatforms);
+                        reply.body, updatever::version, updatever::equivPlatforms);
             switch (res.code) {
             case github::UpdateCode::BAD_DOCUMENT:
                 QMessageBox::critical(this, head, loc::get("Update.Parse"));
