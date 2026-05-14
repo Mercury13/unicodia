@@ -5362,11 +5362,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Belongs to the eastern branch of Indic script. Originates from [[ps:Sidd|Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese script differ insignificantly and [[pt:unification|unified]]. The inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
+      <p>Belongs to the eastern branch of Indic scripts. Originates from [[ps:Sidd|Siddham]] via ''Gaudi'', ancestor of Bengali and [[ps:Orya|Oriya]]. Bengali and Assamese scripts differ insignificantly and are [[pt:unification|unified]]. The inherent vowel is {{t|ɔ}}, in Unicode named “a” by convention, in other sources also “ô”. To change the vowel, vowel marks are added: {{sm|ক}}=kô, {{sm|কি}}=ki.</p>
       <p />
-      <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] made of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts in the world. Ligature input is standard: first letter, virama, second letter.</p>
+      <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts in the world. Ligature input is standard: first letter, virama, second letter.</p>
       <p />
-      <p>Bangladesh is one of two Islamic states with own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not{{_}}[[ps:Cyrl|Cyrillic]]). The other is [[ps:Thaa|Maldives]].</p>
+      <p>Bangladesh is one of two Islamic states with its own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not{{_}}[[ps:Cyrl|Cyrillic]]). The other is the [[ps:Thaa|Maldives]].</p>
      </orig>
      <transl>
       <p>Относится к восточной ветви индийского письма. Происходит из [[ps:Sidd|сиддхама]] через ''гауди'', предок бенгальского и [[ps:Orya|ории]]. Бенгальское и ассамское письмо незначительно отличаются и [[pt:unification|унифицированы]]. Гласная по умолчанию{{-}}{{t|ɔ}}, в Юникоде условно обозначается «а», в других источниках также «ô». Чтобы заменить гласную, добавляются огласовки: {{sm|ক}}=кô, {{sm|কি}}=ки.</p>
@@ -5849,14 +5849,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Devanagari (literally ''from the city of the gods'') emerged from Brahmi script and became the alphabet for most Indian languages. A distinctive feature of Devanagari: letters hang from a horizontal line.</p>
+      <p>Devanagari (literally ''from the city of the gods'') emerged from the Brahmi script and became the alphabet for most Indian languages. A distinctive feature of Devanagari: letters hang from a horizontal line.</p>
       <p />
-      <p>Consonant letters mean syllables with vowel {{t|a}} (in some languages and dialects {{t|ə}}). To display other syllables, vowel mark is needed: &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;. To get a single consonant, [[pt:virama|virama]] (''stop'' or ''killer'') mark is added: k{{_}}{{sm|क्}}.</p>
+      <p>Consonant letters mean syllables with the vowel {{t|a}} (in some languages and dialects {{t|ə}}). To display other syllables, a vowel mark is needed: &lt;nobr&gt;ka {{sm|क}} + i {{sm| ि}} = ki {{sm|कि}}&lt;/nobr&gt;. To get a single consonant, the [[pt:virama|virama]] (''stop'' or ''killer'') mark is added: k{{_}}{{sm|क्}}.</p>
       <p />
       <p>Viramas in Devanagari are rare, and mostly occur at the end of words because of [[pt:ligature|ligatures]]:</p>
       <p>: ka {{sm|क}} + virama {{sm|◌्}} + ša {{sm|ष}} = kša {{sm|क्ष}}</p>
       <p />
-      <p>''Unicodia'' uses ''Noto Serif Devanagari'' font due to wide coverage. In real-life text it’s better to use other fonts: for example, [[http://www.sanskritweb.net/itrans/index.html#SIDDHANTA|Siddhanta]] or [[https://software.sil.org/annapurna/|Annapurna SIL]].</p>
+      <p>''Unicodia'' uses the ''Noto Serif Devanagari'' font for its broad coverage. In real-life text, it’s better to use other fonts, such as [[http://www.sanskritweb.net/itrans/index.html#SIDDHANTA|Siddhanta]] or [[https://software.sil.org/annapurna/|Annapurna SIL]].</p>
      </orig>
      <transl>
       <p>Деванáгари (буквально «язык божественного города») развился из письма брахми и стал алфавитом для многих языков Индии. Особенность деванагари{{-}}все буквы свисают с горизонтальной черты.</p>
@@ -6428,11 +6428,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Since 10th century Punjab used [[ps:Shrd|Sharada]] script that badly conveyed local language. New script was invented by Sikh guru Angad, one of founders of religion. He founded schools where people learned native Punjabi instead of classic Sanskrit, and public canteens where people sat together regardless of Hindu varna.</p>
+      <p>Since the 10th century, Punjab has used the [[ps:Shrd|Sharada]] script, which poorly conveyed the local language. A new script was invented by Sikh guru Angad, one of the religion’s founders. He founded schools where people learned native Punjabi rather than classical Sanskrit, and public canteens where people sat together regardless of Hindu varna.</p>
       <p />
-      <p>Inherent vowel is {{t|ə}} (in Unicode by convention “a”). The rest vowels are added with vowel marks: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Vowel {{t|ə}} greatly reduced in unstressed syllables, and is completely silent in the end of words, that’s seen well in autonym: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Also there are subjoined letters{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}}, they are typed in standard way: main letter, [[pt:virama|virama]], subjoined letter. That’s why Punjabi needs virama on a keyboard but not{{_}}in type, but virama in used in dictionaries and Sanskrit. To start a word with vowel, vowel marks are affixed to zero consonant that differs between vowels.</p>
+      <p>The inherent vowel is {{t|ə}} (in Unicode by convention “a”). The rest vowels are shown with marks: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. The vowel {{t|ə}} is greatly reduced in unstressed syllables and is completely silent at the ends of words; this is well seen in the autonym: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Also, there are subjoined letters{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}}, they are typed in the standard way: main letter, [[pt:virama|virama]], subjoined letter. That’s why Punjabi needs virama on a keyboard but not{{_}}on the screen/paper, though it is used in dictionaries and Sanskrit. To start a word with a vowel, vowel marks are affixed to zero consonants that differ between vowels.</p>
       <p />
-      <p>Gurmukhi is tightly connected with Sikhism, its name means “said by Guru”. Punjabi Muslims use Shahmukhi (“said by Shah”), a form of [[ps:Arab|Arabic]] alphabet.</p>
+      <p>Gurmukhi is closely connected with Sikhism; its name means “said by Guru”. Punjabi Muslims use Shahmukhi (“said by Shah”), a form of the [[ps:Arab|Arabic]] alphabet.</p>
      </orig>
      <transl>
       <p>С X века в Пенджабе использовалась письменность [[ps:Shrd|шарада]], плохо отвечавшая местному языку. Новую письменность придумал сикхский гуру Ангад, один из основателей религии. Он основывал школы, где учились родному пенджабскому, а не{{_}}классическому санскриту, и общественные столовые, где все сидели вместе, независимо от индуистской касты.</p>
