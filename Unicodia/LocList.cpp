@@ -34,7 +34,7 @@
 loc::LangList loc::allLangs;
 loc::Lang* loc::currLang = nullptr;
 
-loc::Lang::Icons loc::active::icons;
+loc::Lang::Design loc::active::design;
 loc::Lang::Numfmt loc::active::numfmt;
 loc::NumFmtHelp loc::active::numfmtHelp;
 loc::Lang::Punctuation loc::active::punctuation;
@@ -159,7 +159,7 @@ void loc::Lang::forceLoad()
     currLang = this;
 
     // Active
-    active::icons = icons;
+    active::design = design;
     active::numfmt = numfmt;
     active::engTerms = engTerms;
     active::punctuation = punctuation;
@@ -436,8 +436,11 @@ namespace {
             }
         }
 
-        auto hIcons =  hLocale.child("icons");
-        r.icons.sortAZ = hIcons.attribute("sort-az").as_string();
+        auto hDesign = hLocale.child("design");
+        r.design.biggerForHiero = hDesign.attribute("hiero-bigger").as_bool(false);
+
+        auto hIcons =  hDesign.child("icons");
+        r.design.icons.sortAZ = hIcons.attribute("sort-az").as_string();
 
         auto hNumFormat = hLocale.child("num-format");
         r.numfmt.decimalPoint  = readChar16(hNumFormat, "dec-point",  loc::Lang::Numfmt::DEFAULT_DECIMAL_POINT);
@@ -512,7 +515,6 @@ namespace {
 
         auto hPeculiarities = hLocale.child("peculiarities");
         r.peculiarities.stillUsesBurmese = hPeculiarities.attribute("still-uses-burmese").as_bool(false);
-        r.peculiarities.biggerForHiero   = hPeculiarities.attribute("hiero-bigger").as_bool(false);
 
         auto hPunctuation = hLocale.child("punctuation");
         r.punctuation.keyValueColon = str::toU8sv(

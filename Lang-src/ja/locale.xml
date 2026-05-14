@@ -138,7 +138,9 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
-	<icons sort-az="sort_kana" />
+	<design hiero-bigger="1">
+		<icons sort-az="sort_kana" />
+	</design>
 	<num-format dec-point="." thou-point="," thou-min-length="4" thou-min-length-dense="4">
 		<imprecise>
 			<!-- Bigger units specially for Japanese:
@@ -157,10 +159,7 @@
 	<cardinal-rules default-outcome="other" />
 	<!-- Japanese has no rules for ordinal plurals -->
 	<ordinal-rules />
-	<!-- Misc. language peculiarities
-			still-uses-burmese: uses pair Myanmar/Burmese
-				(writes location of Myanmar for Burmese script) -->
-	<peculiarities still-uses-burmese="0" hiero-bigger="1" />
+	<peculiarities still-uses-burmese="0" />
 	<punctuation key-value-colon="： " uniform-comma="、" semicolon="；"
 			left-paren="（" right-paren="）" indent-ellip="…"
 			range="〜" year-range="〜" to="&#160;→ " />

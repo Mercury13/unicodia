@@ -57,7 +57,9 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
-	<icons sort-az="sort_AYa" />
+	<design hiero-bigger="0">
+		<icons sort-az="sort_AYa" />
+	</design>
 	<num-format dec-point="," thou-point=" " thou-min-length="4" thou-min-length-dense="5">
 		<imprecise>
 			<fmt shift="0" text="{1} человек" frac="never" />

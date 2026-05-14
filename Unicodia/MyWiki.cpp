@@ -1037,7 +1037,7 @@ namespace {
             // so we don’t check for overall context,
             // only smtable that is not enlarged
             if (size == 3 && !flags.have(Affg::SMTABLE)
-                    && loc::currLang->peculiarities.biggerForHiero) {
+                    && loc::active::design.biggerForHiero) {
                 size = 2;
             }
             s += " size='+";
@@ -2849,7 +2849,7 @@ void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
     }
     // We use this function in articles (wiki) and Terms
     // Similar About has its own stylesheet
-    if (loc::currLang->peculiarities.biggerForHiero
+    if (loc::active::design.biggerForHiero
             && allowBigFont) {
         auto oldSize = QApplication::font().pointSizeF();
         static constexpr double FONT_RATIO = 1.12;

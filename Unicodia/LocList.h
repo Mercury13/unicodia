@@ -89,9 +89,12 @@ namespace loc
         struct Debug {
             std::filesystem::path fnAlternateIni;  ///> c:\path\xxx.ini
         } debug;
-        struct Icons {
-            std::string sortAZ;
-        } icons;
+        struct Design {
+            struct Icons {
+                std::string sortAZ;
+            } icons;
+            bool biggerForHiero = false;    ///< [+] bigger font (ideographic script)
+        } design;
         struct Numfmt {
             SafeVector<ImpreciseInfo> imprecise;
             static constexpr char16_t DEFAULT_DECIMAL_POINT = '.';
@@ -123,7 +126,6 @@ namespace loc
         } ellipsis;
         struct Peculiarities {
             bool stillUsesBurmese = false;  ///< [+] Burmese [-] Myanmar-ese??
-            bool biggerForHiero = false;    ///< [+] bigger font (ideographic script)
         } peculiarities;
         struct Punctuation {
             std::u8string
@@ -173,7 +175,7 @@ namespace loc
     };
 
     namespace active {
-        extern Lang::Icons icons;
+        extern Lang::Design design;
         extern Lang::Numfmt numfmt;
         extern NumFmtHelp numfmtHelp;
         extern Lang::Punctuation punctuation;

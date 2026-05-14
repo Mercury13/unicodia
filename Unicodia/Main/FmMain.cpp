@@ -1465,7 +1465,7 @@ void FmMain::translateMe()
     ui->comboBlock->resizeView();
 
     // International icons
-    loadIcon(sortIcons[BlockOrder::ALPHA], loc::active::icons.sortAZ);
+    loadIcon(sortIcons[BlockOrder::ALPHA], loc::active::design.icons.sortAZ);
 
     // Search
     ui->edSearch->lineEdit()->setPlaceholderText(loc::get("Main.Search"));
@@ -2937,7 +2937,7 @@ void FmMain::debugPluralRules()
 void FmMain::toggleBigFont()
 {
     constexpr const char* HEAD = "Big font";
-    if (!loc::currLang->peculiarities.biggerForHiero) {
+    if (!loc::active::design.biggerForHiero) {
         QMessageBox::warning(this, HEAD,
                 "This locale does not have big font. Did nothing.");
         return;

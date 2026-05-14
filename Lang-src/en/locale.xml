@@ -84,8 +84,16 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
-	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
-	<icons sort-az="sort_AZ" />
+	<!-- Variations of program’s appearance
+			hiero-bigger: logographic script, make some UI elements bigger,
+				but disable size +3 for samples
+				Do not use where alphabets are extensively used and the
+				text is readable as is, it may garble bigger articles
+				such as Egyptian hiero!	-->
+	<design hiero-bigger="0">
+		<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
+		<icons sort-az="sort_AZ" />
+	</design>
 	<!-- Numeric format. Decimal point → BMP char only, test in Tibetan fractions
 		 thou-point → BMP char only, special bhv for space
 		 thou-min-length — minimum length to get thousand separator
@@ -136,13 +144,8 @@
 	<ordinal-rules />
 	<!-- Misc. language peculiarities
 			still-uses-burmese: uses pair Myanmar/Burmese
-				(writes location of Myanmar for Burmese script)
-			hiero-bigger: logographic script, make some UI elements bigger,
-				but disable size +3 for samples
-				Do not use where alphabets are extensively used and the
-				text is readable as is, it may garble bigger articles
-				such as Egyptian hiero! -->
-	<peculiarities still-uses-burmese="0" hiero-bigger="0" />
+				(writes location of Myanmar for Burmese script) -->
+	<peculiarities still-uses-burmese="0" />
 	<!-- Punctuation
 			key-value-colon: in “UTF-8: 00”
 			uniform-comma: in uniform words “first, second”
