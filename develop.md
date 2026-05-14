@@ -19,6 +19,7 @@
 * Ctrl+Shift+Q — test emoji repainting engine
 * Ctrl+Shift+S — font stats for a block
 * Ctrl+Shift+T — tofu stats
+* Ctrl+Shift+U — test HTTP
 * Ctrl+Shift+V — find all VS16 emoji
 * Ctrl+Shift+W — debug algorithms of sorting blocks
 
@@ -27,6 +28,7 @@
 * Then display of characters and samples
 * If some character hangs → check whether it was fixed professionally. Most hanging characters are done in UnicodiaFunky font, some in *Fixup.
 * Check license what was done by author of Unicodia, and whether we need it now.
+* Ctrl+Shift+L, compare this ``font_layout.txt`` with ``AutoQa``: what was actually changed and is it OK?
 
 # How to update emoji?
 * Simple emoji (no skintones)
