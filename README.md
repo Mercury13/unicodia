@@ -28,6 +28,7 @@ Unicodia does not collect data at all, but uses GitHub API for updating.
 * Create a language directory, edit locale.xml for that language.
 * Download [UTranslator](https://github.com/Mercury13/utranslator). New → Translation of *.uorig.
   * If you don’t know English, use another \*.utran file as a reference translation.
+  * Keys Ctrl+↕ are not documented, but greatly reduce mouse use.
 * After saving, UTranslator created build-xx\lang.ini. Put it to the language directory. Or use a symlinking tool to tie these files forever and avoid handwork. Or write ``<debug ini="c:\path\to\build-xx\lang.ini">`` in locale.xml.
 * Press F12 in Unicodia to reload translation without reopening the entire program.
   * Warning, it reloads strings only; all locales are loaded on startup.
