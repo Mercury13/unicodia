@@ -7,6 +7,8 @@ win32-g++ {
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
     # Qt — system headers
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
+    QMAKE_CXXFLAGS_RELEASE += -flto
+    QMAKE_LFLAGS_RELEASE += -flto
 }
 
 DEFINES += IXWEBSOCKET_USE_TLS IXWEBSOCKET_USE_OPENSSL IXWEBSOCKET_USE_OPEN_SSL
