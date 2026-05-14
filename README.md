@@ -2,72 +2,72 @@
 
 It is a simple Unicode encyclopedia and the most comprehensive character map ever. Right now Windows only.
 
-**Lifecycle phase: 5/7** (production/stable, inactive). Minor troubles with sustainability, but generally survived five releases of Unicode, 14.0 to 17.0. Probably won’t survive 18.0, just because…
+**Lifecycle phase: 5/7** (production/stable, inactive). Minor troubles with sustainability, but generally survived five Unicode releases, 14.0 to 17.0. Probably won’t survive 18.0, just because…
 
 **I’m a Ukrainian officer now.** Everything may happen: maybe I’ll start the work again. Maybe I’ll just get killed.
 
-# Note about Egyptian font
+# Note about the Egyptian font
 
 It has been moved to a separate repo. Visit https://github.com/Mercury13/unicodia-sesh
 
 # How to get portable
 
-I was asked several times, but by this time it had already been portable.
+I was asked several times, but by this time, it had already been portable.
 
 Open Unicodia.xml, it’s documented.
 
 # Privacy policy
 
-Unicodia does not collect data at all, but uses GitHub API for updating.
+Unicodia does not collect data at all, but uses GitHub API for updates.
 
 # How to translate?
-* Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic, Katakana and Chinese versions. The rest are unchangeable for now… until needed.
+* Ask the programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic, Katakana and Chinese versions. The rest are unchangeable for now… until needed.
 * Download Lang-src/en.uorig from this repo.
   * If you are able to use Git, better use it. We’ll be able to work together on one translation.
-* Put Unicodia to a writeable location.
+* Put Unicodia in a writeable location.
 * Create a language directory, edit locale.xml for that language.
 * Download [UTranslator](https://github.com/Mercury13/utranslator). New → Translation of *.uorig.
   * If you don’t know English, use another \*.utran file as a reference translation.
   * Keys Ctrl+↕ are not documented, but greatly reduce mouse use.
-* After saving, UTranslator created build-xx\lang.ini. Put it to the language directory. Or use a symlinking tool to tie these files forever and avoid handwork. Or write ``<debug ini="c:\path\to\build-xx\lang.ini">`` in locale.xml.
+* After saving, UTranslator created build-xx\lang.ini. Put it in the language directory. Or use a symlinking tool to link these files forever and avoid handwork. Or write ``<debug ini="c:\path\to\build-xx\lang.ini">`` in locale.xml.
 * Press F12 in Unicodia to reload translation without reopening the entire program.
-  * Warning, it reloads strings only; all locales are loaded on startup.
+  * Warning: it reloads strings only; all locales are loaded on startup.
 * nspk template parameters: 1=language name (or script name, non-localizable), 2=pre-comment (e.g. synonym, localizable).
-  * If there’s no {{nspk}} in languages and there’s language data, default {{nspk}} is added automatically. So: {{nspk}} at the end → delete, it’ll be added! Need e.g. synonym → add {{nspk||=Klingon}}. Synonym is the SECOND parameter. See _Script.Mroo_ in English/Russian.
-* To test alphabetic sorting, especially in troublesome languages like Japanese: press Ct+Sh+W and look into Blocks drop-down list (does not work in Sort by tech name). There’s only one telltale, [1] when the 1st character does not belong to the sorting alphabet. These [1]’s are often mistakes and always signs of attention.
+  * If there’s no {{nspk}} in languages and there’s language data, the default {{nspk}} is added automatically. So: {{nspk}} at the end → delete, it’ll be added! Need e.g. synonym → add {{nspk||=Klingon}}. Synonym is the SECOND parameter. See _Script.Mroo_ in English/Russian.
+* To test alphabetic sorting, especially in troublesome languages like Japanese: press Ct+Sh+W and look into the Blocks drop-down list (does not work in Sort by tech name). There’s only one telltale, [1] when the 1st character does not belong to the sorting alphabet. These [1]’s are often mistakes and always signs of attention.
 * When a new original has arrived: open the translation, press _File → Update data_ (Ctrl+F5). The interface will guide you. The command _Go → Find warnings → All_ (F6) can also help.
-  * Do not forget to reset the red eye/warning icon when the translation finally reflects the new original! Either double click, or Ctrl+Enter.
+  * Do not forget to reset the red eye/warning icon when the translation finally reflects the new original! Either double-click, or Ctrl+Enter.
 
 ## Language policy
-**Common.** No war jargon. Describe 2022 war as neutral as possible. Every _lingua franca_ (English, Russian, French) in its international form. Make examples as patriotic as possible for the language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in the English language. Apostrophe is U+2019.
+**Common.** No war jargon. Describe the 2022 war as neutrally as possible. Every _lingua franca_ (English, Russian, French) is in its international form. Make examples as patriotic as possible for the language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in the English language. Apostrophe is U+2019.
 
-Is **Old** in the front or in the back? It depends. 1) In Scripts — as convenient. In Blocks… 2) Old is the main word (Ancient symbols) → better front. 3) Auxiliary block (Old Sogdian, Ancient Greek) → no matter, we’ll find it anyway by looking around Greek. 4) Old is an adjective to something more important (Italic old, Mongolian old, Permic old) → better back. It’s just ease of finding a block in the long list of 300 blocks.
+Is **Old** in the front or in the back? It depends. 1) In Scripts — as convenient. In Blocks… 2) Old is the main word (Ancient symbols) → better front. 3) Auxiliary block (Old Sogdian, Ancient Greek) → no matter, we’ll find it anyway by looking around Greek. 4) Old is an adjective to something more important (Italic old, Mongolian old, Permic old) → better back. It’s just the ease of finding a block in the long list of 300 blocks.
 
 **AI as a translator.** Allowed, but at least check it somehow.
 
-**English.** The dialect called “International English” or “English as a lingua franca”: use the best word for non-native audience. Examples: truck > lorry, petrol > gas, -ize > -ise. Prefer British form if both are good. Punctuation around quotes is British/international: it’s inside quotes if it’s a part of “phrase being quoted”.
+**English.** The dialect called “International English” or “English as a lingua franca”: use the best word for a non-native audience. Examples: truck > lorry, petrol > gas, -ize > -ise. Prefer the British form if both are good. Punctuation around quotes is British/international: it’s inside the quotes if it’s part of the “phrase being quoted”.
 
 Though the grammar must be close to the British/American origin, with articles and tenses. Unless you are native/proficient, every new sufficiently large text must be grammar-checked with Grammarly or a similar AI tool. 
 
 **Russian.** Ё is mandatory. No grammatical concessions to Ukrainian.
 
-_(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree to _script_ (_письменность_, female in Russian), or to _language_ (_язык_, male). The rules are…
-* BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise to script _(батакская=Batak [script])_.
+_(May apply to new languages as well.)_ Adjectives like _Georgian_ may agree with _script_ (_письменность_, female in Russian), or with _language_ (_язык_, male). The rules are…
+* BLOCKS: strongly connected to language → to language _(грузинский=Georgian [language])_. Otherwise, to script _(батакская=Batak [script])_.
 * SCRIPTS: of course agree to script _(грузинская=Georgian [script])_.
 
 **Ukrainian.** See [Lang-src/Ukrainian.md](Lang-src/Ukrainian.md).
 
 **New languages.**
-* As English uses lots of capital letters, translations to other languages may use small where English is capital. Refer to Russian/Ukrainian for letter case.
-* See Russian script/language rule.
+* As English uses lots of capital letters, translations into other languages may use small where English is capitalized. Refer to Russian/Ukrainian for letter case.
+* See the Russian script/language rule.
 
-_About war jargon._ Open-source software with neutral license and without special purpose (e.g. censorship circumvention) should be neutral. Period.
+_About war jargon._ Open-source software with a neutral license and without a special purpose (e.g. censorship circumvention) should be neutral. Period.
 
 # How to build?
 * Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
 * Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator), [SvgCleaner](https://github.com/RazrFalcon/svgcleaner).
 * Run ``!rel.bat`` file.
-  * If there are troubles with paths, make a local configuration by creating ``~setup_local.bat``. Write only the keys that are bad in default ``xsetup.bat``.
+  * If there are troubles with paths, make a local configuration by creating ``~setup_local.bat``. Write only the keys that are bad in the default ``xsetup.bat``.
 
 # How to develop?
 See [develop.md](develop.md).
@@ -81,30 +81,30 @@ See [develop.md](develop.md).
 * Though W11 is not the main OS, I did many W11-specific improvements.
 
 ## Tofu/misrenderings
-* **W10/11 should support everything possible, W7 just runs somehow.** At the time of testing still no BMP tofu, per old policy.
-* Previously W7 supported the entire base plane and three important plane 1 scripts. I dropped that guarantee, though I did nothing against it, just did not test
-* Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
+* **W10/11 should support everything possible, W7 just runs somehow.** At the time of testing, still no BMP tofu, per old policy.
+* Previously, W7 supported the entire base plane and three important plane 1 scripts. I dropped that guarantee, though I did nothing against it, just did not test
+* Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad or if the font has other problems.
 
 ## Update Unicode
-Wartime: as soon as base arrives, and release date is frozen, even on alpha review stage
+Wartime: as soon as the base arrives and the release date is frozen, even on alpha review stage
 
-Peacetime (probably): stable release + some big font covering a major set arrives. Han too if the coverage is really high
+Peacetime (probably): stable release + some big font covering a major set arrives. Han too, if the coverage is really high
 
 Emergency releases of a few characters (e.g. currency, Japanese era): instantly, even if they are tofu
 
 ## Fonts
-Fonts are always updated to release versions. Font is updated to alpha/beta if fixes a major misrender, and/or professionally implements a new character.
+Fonts are always updated to release versions. A font is updated to alpha/beta if it fixes a major misrender, and/or professionally implements a new character.
 
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
-These fonts are taken to Unicodia without author’s consent:
+These fonts are taken to Unicodia without the author’s consent:
 * Craggy font with missing/trivial tables. Examples: Garay, Tolong Siki
-* Font without license belonging to the author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
+* Font without a license, belonging to the author of Unicode request and released by him/her. Examples: Makasar (now replaced), Tangsa
 * The author is surely SIL, even if found elsewhere. Example: Toto
-* Incomplete fonts that have only a few fixup characters, if found in requests in TTF form. Example: a few rare CJK chars.
+* Incomplete fonts with only a few fixup characters, if found in requests in TTF format. Example: a few rare CJK chars.
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
-I never rip fonts from Unicode charts, always use a TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
+I never rip fonts from Unicode charts, always use a TTF form. But the authors of fixup fonts can do that on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
 
 ## CJK
 **The only person I could ask about ideographs has died. Let these rules be for history, maybe I’ll coin others.**
@@ -118,18 +118,18 @@ I never rip fonts from Unicode charts, always use a TTF form. But the authors of
 * It’s perfectly OK to take hypothetical Chinese if it’s wrong in…
   * SimSun makes the same decision
   * stroke types and stroke joins only (what is invisible or barely seen in sans style), even pointy vs dot
-  * whether the strokes leave a small gap or written together, even two crosses (T) vs horizontal dagger (G)
+  * whether the strokes leave a small gap or are written together, even two crosses (T) vs a horizontal dagger (G)
   * whether a stroke is convex up or down
   * minor difference of stroke length e.g. in “three”
   * style of roof stroke e.g. in 2F34: straight S (31D1, older) vs backslash dot D (31D4, current)
   * number of strokes if off by one e.g. in 2E3D9: one dot in Chinese, two in SAT
 
-Anyway, Unicodia will never be a good ideograph guide, everything I write about ideographs I suck from other sources.
+Anyway, Unicodia will never be a good ideograph guide. Everything I write about ideographs I suck from other sources.
 
 ## Data
 Data is as neutral as possible. Examples.
-* Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under the current world war. So just # of L1 speakers
-* Number of people speaking Ukrainian. Under this war, people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so total number
+* Number of people speaking Russian. Its current status is Lingua franca, so the # of L2 speakers is always shaky, especially amid the current world war. So just # of L1 speakers
+* Number of people speaking Ukrainian. Amid this war, people tend to conceal their native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so the total number
 * Disputable territory. Disputable, who currently controls, and maybe who is disputing
 
 ## Future functionality
