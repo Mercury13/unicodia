@@ -5,7 +5,6 @@ CONFIG -= qt
 
 win32-g++: {
     QMAKE_CXXFLAGS += -static-libgcc -static-libstdc++
-    QMAKE_LFLAGS += -fuse-ld=lld
     LIBS += -static -lpthread
 }
 
