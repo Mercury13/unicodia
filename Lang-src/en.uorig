@@ -3865,9 +3865,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script developed from [[ps:Armi|Aramaic]] through [[ps:Syrc|Syriac]] and/or [[ps:Nbat|Nabataean]]. Arabic language is closely related to Islam; Quran (610–632) is written in that language. Copyists of Quran were those who settled the final alphabet. Arab Caliphate enforced both Islam and script. Many Islamic peoples (Turks, Kazakhs, Bashkirs) used Arabic until the early 20th century.</p>
+      <p>The script developed from [[ps:Armi|Aramaic]] through [[ps:Syrc|Syriac]] and/or [[ps:Nbat|Nabataean]]. The Arabic language is associated with Islam; the Quran (610–632) is written in it. Copyists of the Quran were those who finalized the alphabet. The Arab Caliphate enforced both Islam and the script. Many Islamic peoples (Turks, Kazakhs, Bashkirs) used Arabic until the early 20th century.</p>
       <p />
-      <p>Computer Arabic is complicated with the writing of Arabic letters: each has isolated, initial, medial and final forms. In normal text “[[pt:character|general-form]]” letters adapting to position in the word are preferred. But if you need the final form in an isolated letter, Unicode has “rigid” variants.</p>
+      <p>Computer Arabic is complicated with the writing of Arabic letters: each has isolated, initial, medial and final forms. In normal text, “[[pt:character|general-form]]” letters that adapt to their position in the word are preferred. But if you need the final form in an isolated letter, Unicode has “rigid” variants.</p>
      </orig>
     </text>
    </group>
@@ -4763,11 +4763,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Around 500{{_}}BC, under the rule of Babylon, Jews switched from Paleo-Hebrew, almost exact copy of [[ps:Phnx|Phoenician]], to [[ps:Armi|Aramaic]]. The alphabet is almost a pillar of the universe in Jewish mysticism, and 22 Aramaic letters survived until today, having obtained modern form by 2nd century BC.</p>
+      <p>Around 500{{_}}BC, under the Babylonian rule, Jews switched from Paleo-Hebrew, an almost exact copy of [[ps:Phnx|Phoenician]], to [[ps:Armi|Aramaic]]. The alphabet is almost a pillar of the universe in Jewish mysticism, and 22 Aramaic letters have survived to this day, having taken the modern form by the 2nd century BC.</p>
       <p />
-      <p>Only consonant phonemes are written, but four letters {{sm|אהוי}} can mean vowels, such letters are named [[pt:abjad|matres lectionis]]. In 6–8th centuries vowel marks were invented{{-}}dots above letters that are important for exact reading of the Torah.</p>
+      <p>Only consonant phonemes are written, but four letters {{sm|אהוי}} can mean vowels; such letters are named [[pt:abjad|matres lectionis]]. In the 6–8th centuries, vowel marks were invented{{-}}dots above letters that are important for the exact reading of the Torah.</p>
       <p />
-      <p>By 10th century Hebrew had gone from conversation and stayed as a book language only, but Hebrew letters were also used for conversational Jewish languages: Yiddish, Ladino and others. With the advent of the state of Israel, Hebrew was revived as a language of everyday conversation.</p>
+      <p>By the 10th century, Hebrew had gone from conversation and remained a book language only, but Hebrew letters were also used in conversational Jewish languages: Yiddish, Ladino, and others. With the advent of the state of Israel, Hebrew was revived as a language of everyday conversation.</p>
      </orig>
     </text>
    </group>
@@ -6346,11 +6346,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Child script of [[ps:Armi|Aramaic]] alphabet, later developed to [[ps:Arab|Arabic]]. The script is used by minor Semitic ethnic groups. Some features of Arabic are already seen in Syriac: linked letters written with a single line (except vowel marks), different forms of isolated, initial, medial and final letter.</p>
+      <p>A child script of the [[ps:Armi|Aramaic]] alphabet, later developed into [[ps:Arab|Arabic]]. The script is used by minor Semitic ethnic groups. Some features of Arabic are already seen in Syriac: linked letters written with a single line (except vowel marks), different forms of isolated, initial, medial, and final letters.</p>
       <p />
-      <p>The script of early Christian manuscripts (50–400) is known as Estrangelo (Greek στρογγύλη{{-}}round). West Syria (Syria, Palestine) belonged to Greeks, and East (Persia, Mesopotamia) to Persians. This divided church, language and script into two forms: East Syriac (Nestorian, Chaldean) and Weat Syriac (Jacobite, Maronite). They use different styles of writing and vowel marks. The script was used approximately up to 14th century.</p>
+      <p>The script of early Christian manuscripts (50–400) is known as Estrangelo (Greek στρογγύλη{{-}}round). West Syria (Syria, Palestine) belonged to the Greeks, and East Syria (Persia, Mesopotamia) to the Persians. This divided church, language and script into two forms: East Syriac (Nestorian, Chaldean) and West Syriac (Jacobite, Maronite). They use different writing styles and vowel marks. The script was used until approximately the 14th century.</p>
       <p />
-      <p>You will probably find Estrangelo in your system{{-}}it is considered the main style of Syriac by Western historians. And ''Unicodia'' carries Western variant for diversity{{-}}it was created by diplomat and printer Savary de Brèves (1560–1627), and turned to computer font by ''Beth Mardutho'' institute for publishing Antioch Bible.</p>
+      <p>You will probably find Estrangelo in your system{{-}}it is considered the main style of Syriac by Western historians. And ''Unicodia'' carries the Western variant for diversity{{-}}it was created by diplomat and printer Savary de Brèves (1560–1627), and converted into a computer font by ''Beth Mardutho'' Institute for publishing the Antioch Bible.</p>
      </orig>
     </text>
    </group>
