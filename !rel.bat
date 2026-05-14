@@ -280,7 +280,7 @@
 @fc %QAHTTP% AutoQa\http_test.txt >nul
 @if not errorlevel 1 goto hqa_ok
 @echo.
-@echo HTTP(s) FAILED, it's the new file
+@echo HTTP(s) FAILED, this is the new file
 @type %QA_HTTP%
 @echo .
 @goto hqa_done
