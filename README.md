@@ -104,7 +104,7 @@ These fonts are taken to Unicodia without author’s consent:
 * Incomplete fonts that have only a few fixup characters, if found in requests in TTF form. Example: a few rare CJK chars.
 * ASCII mapping is NOT a reason. Example: Ol Onal (wrote own)
 
-I never rip fonts from Unicode charts, always use TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
+I never rip fonts from Unicode charts, always use a TTF form. But the authors of fixup fonts can on completely unrelated characters. Examples: PlanGothic P2 (now probably OK).
 
 ## CJK
 **The only person I could ask about ideographs has died. Let these rules be for history, maybe I’ll coin others.**
