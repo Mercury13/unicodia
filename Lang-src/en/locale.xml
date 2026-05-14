@@ -26,8 +26,7 @@
 			When the user says, “No, I want English”, his max stamp will be new,
 				and auto-switch no longer happens.
 			When the author says, “I retranslated Spanish, give it one more chance”,
-				he triggers auto-switch again.
-	-->
+				he triggers auto-switch again. -->
 	<trigger-langs stamp="2022060">
 		<lang iso="en" />
 	</trigger-langs>
