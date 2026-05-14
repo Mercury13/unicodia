@@ -1504,13 +1504,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Diacritical marks are above-line, below-line and inline characters affixed to letters, and modifying or clarifying their meanings. For example, accent like in ''résumé''.</p>
+      <p>Diacritical marks are above-line, below-line, and inline characters affixed to letters to modify or clarify their meanings. For example, an accent like in ''résumé''.</p>
       <p />
-      <p>Unicode provides two ways of conveying diacritics, [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify search in such a mess, Unicode has an algorithm of [[pt:normalization|normalization]].</p>
+      <p>Unicode represents diacritics in two ways: [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify searching in such a mess, Unicode has a [[pt:normalization|normalization]] algorithm.</p>
       <p />
-      <p>Characters [[pc:034F]] CGJ is not{{_}}a{{_}}joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
+      <p>The character [[pc:034F]] CGJ is not{{_}}a{{_}}joiner but a ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew, and some other languages.</p>
       <p />
-      <p>Character [[pc:0310]] Candrabindu is intended for writing Indic languages in Latin and Cyrillic. Every [[pt:brahmic|Indic]] script has its own candrabindu.</p>
+      <p>The character [[pc:0310]] Candrabindu is intended for writing Indic languages in the Latin and Cyrillic scripts. Every [[pt:brahmic|Indic]] script has its own candrabindu.</p>
      </orig>
      <transl>
       <p>Диакритические знаки{{-}}надстрочные, подстрочные или внутристрочные знаки, прикрепляемые к букве и изменяющие или уточняющие её значение. Например, точки над Ё или ударéние.</p>
@@ -6346,16 +6346,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Greek script is made from [[ps:Phnx|Phoenician]] without looking at early Greek systems, [[ps:Linb|Linear B]] and [[ps:Cprt|Cypriot]]. The Phoenician alphabet was [[pt:abjad|consonant]], and that’s good for Semitic languages where the word’s root is a skeleton of consonants, and vowels work as suffixes: in [[ps:Arab|Arabic]] (also a Semitic language) ''jihad'' is done by a ''mujahid''.</p>
+      <p>The Greek script is derived from [[ps:Phnx|Phoenician]] without regard to early Greek systems: [[ps:Linb|Linear B]] and [[ps:Cprt|Cypriot]]. The Phoenician alphabet was [[pt:abjad|consonant]], and that’s good for Semitic languages where the word’s root is a skeleton of consonants, and vowels work as suffixes: in [[ps:Arab|Arabic]] (also a Semitic language), ''jihad'' is done by a ''mujahid''.</p>
       <p />
-      <p>Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much, but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
+      <p>The Greeks added vowels, and Greek is the first known true alphabet that encodes both consonants and vowels. Letter names didn’t change much but lost all meaning: ''alef=ox''{{_}}→ ''alpha''.</p>
       <p />
       <p>Greek script became the ancestor of [[ps:Latn|Latin]], [[ps:Cyrl|Cyrillic]], [[ps:Copt|Coptic]], and possibly [[ps:Armn|Armenian]] and [[ps:Runr|runes]].</p>
       <p />
       <p>{{GrekCoptUni}}</p>
      </orig>
      <transl>
-      <p>Греческая сделана из [[ps:Phnx|финикийской]] без оглядки на раннегреческие системы{{-}}[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский язык) ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
+      <p>Греческая письменность сделана из [[ps:Phnx|финикийской]] без оглядки на раннегреческие системы{{-}}[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский язык) ''джихадом'' занимается ''моджахед'' (или, точнее, ''муджахид'').</p>
       <p />
       <p>Греки добавили гласные звуки, и греческий{{-}}первый известный истинный алфавит, кодирующий как согласные, так и гласные. Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''.</p>
       <p />
