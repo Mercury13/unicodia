@@ -1618,16 +1618,16 @@
      <transl>Сирійська додаткова</transl>
     </text>
     <text id="Text">
-     <orig>'''Suriyani''' or '''Karshoni''', unusual form of writing [[ps:Mlym|Malayalam]] with Syriac letters. Was used by Indian Christians until 19th century.</orig>
+     <orig>'''Suriyani''' or '''Karshoni''', an unusual form of writing [[ps:Mlym|Malayalam]] using Syriac letters. It was used by Indian Christians until the 19th century.</orig>
      <transl>Незвичайний запис мови [[ps:Mlym|малая́лам]] сирійськими літерами, що зветься '''суріані''' або '''каршоні'''. Використовувалась індійськими християнами до XIX{{_}}століття.</transl>
     </text>
    </group>
    <group id="0870">
     <text id="Text">
      <orig>
-      <p>Characters for comments to Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
+      <p>Characters for comments on the Quran. Also Bosnian (a dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (a writing system for Indonesian languages using Arabic letters), Egyptian piastre (currency before 1834), and Egyptian pound (modern currency).</p>
       <p />
-      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks beforehand, and range 0590…08FF was already right-to-left.</p>
+      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks in advance, and the range 0590…08FF was already right-to-left.</p>
      </orig>
      <transl>
       <p>Символи з коментарів до Корану. Також боснійська (запис сербохорватської арабськими літерами), пегон (запис індонезійських мов арабськими літерами), єгипетський піастр (валюта до 1834) і єгипетський фунт (сучасна валюта).</p>
@@ -1638,7 +1638,7 @@
    </group>
    <group id="08A0">
     <text id="Text">
-     <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</orig>
+     <orig>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belarusian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languages (e.g. Berber). Also, signs of comments on the Quran.</orig>
      <transl>Додаткові арабські літери для [[ps:Rohg|рохінджа]] ''(М’янма)'', білоруської, татарської, башкірської, арві ''(Індія, Шрі-Ланка)'', шахмукхі ''([[ps:Guru|пенджабської]])'', хіндко ''(Пакістан)'' та африканських мов (зокрема, берберської). Також знаки коментарів до Корану.</transl>
     </text>
    </group>
@@ -7399,7 +7399,7 @@
      <transl>мандейська ''(Іран та Ірак)''</transl>
     </text>
     <text id="Text">
-     <orig>Came from [[ps:Armi|Aramaic]] or [[ps:Prti|Parthian]] script. Used by so-called “marsh Arabs” that live near confluence of Tigris and Euphrates and profess Mandaeism, unusual Gnostic religion. Their number in Iraq is greatly reducing from {{n|45000}} (1996) to {{n|5000}} (2007), {{n|60000}} more are spread across the world, and probably as refugees they will quickly disappear.</orig>
+     <orig>Came from [[ps:Armi|Aramaic]] or [[ps:Prti|Parthian]] script. Used by so-called “marsh Arabs” who live near the confluence of the Tigris and Euphrates and profess Mandaeism, an unusual Gnostic religion. Their number in Iraq is greatly reducing from {{n|45000}} (1996) to {{n|5000}} (2007), {{n|60000}} more are spread across the world, and probably as refugees they will quickly disappear.</orig>
      <au-cmt>In Russian: Marsh Arabs = болотные арабы</au-cmt>
      <transl>Пішла від [[ps:Armi|арамейського]] або [[ps:Prti|парфянського]] письма. Використовується так званими «болотними арабами», що живуть біля злиття рік Тигр та Євфрат та сповідують мандеїзм, незвичайну гностичну релігію. Їх кількість в Іраку швидко зменшується з {{n|45000}} (1996) до 5000 (2007), біля 60{{_}}тисяч розкидані по світу, і, ймовірно, на правах біженців вони швидко зникнуть.</transl>
     </text>
@@ -7879,9 +7879,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was invented in 1949 by Guinean writer Solomana Kante. In 1950s someone from Soviet Bloc made two N’Ko typewriters for Solomana. Used mainly in Guinea, Ivory Coast and Mali. “N’Ko” means “I say”. Letters are joined together.</p>
+      <p>The alphabet was invented in 1949 by Guinean writer Solomana Kante. In the 1950s, someone from the Soviet Bloc made two N’Ko typewriters for Solomana. Used mainly in Guinea, the Ivory Coast and Mali. “N’Ko” means “I say”. Letters are joined together.</p>
       <p />
-      <p>Different languages of Manding group use [[ps:Latn|Latin]] and [[ps:Arab|Arabic]], but N’Ko is more widespread. Literary form of Manding languages is also named N’Ko.</p>
+      <p>Different languages of the Manding group use the [[ps:Latn|Latin]] and [[ps:Arab|Arabic]] scripts, but N’Ko is more widespread. The literary form of the Manding languages is also called N’Ko.</p>
      </orig>
      <au-cmt>Typewriters: https://www.nytimes.com/2011/12/11/magazine/everyone-speaks-text-message.html</au-cmt>
      <transl>
@@ -8491,7 +8491,7 @@
      <transl>іврит, самаритянська арамейська</transl>
     </text>
     <text id="Text">
-     <orig>Comes from Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to Bible, Samaritans came to Palestine from Mesopotamia and adopted Jewish religion and culture. As of 2021, no more than 700 Samaritans exist.</orig>
+     <orig>Comes from the Paleo-Hebrew ([[ps:Phnx|Phoenician]]) script. According to the Bible, Samaritans came to Palestine from Mesopotamia and adopted the Jewish religion and culture. As of 2021, there are no{{_}}more than 700 Samaritans.</orig>
      <transl>Походить з палеоєврейського ([[ps:Phnx|фінікійського]]) письма. За Біблією, самаритяни прийшли у Палестину з Міжріччя, і прийняли єврейську релігію та культуру. На 2021 існує не{{_}}більше 700 самаритян.</transl>
     </text>
    </group>
@@ -9286,9 +9286,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In 1153, the Maldives were converted from Buddhism to Islam. ''Gabulhi Thaana'' (''incomplete script''), probably invented for Islamic quotes, started to supplant [[ps:Diak|Dives Akuru]] in the 17th century. The origin is unique: its consonants came from Arabic numerals and pre-Islamic digits, and vowels from [[ps:Arab|Arabic]] vowel marks. Over time the lines became smoother, and the elegant 45-degree slanted writing style became widespread. The explorer Thor Heyerdahl once compared Thaana to noodles.</p>
+      <p>In 1153, the Maldives were converted from Buddhism to Islam. ''Gabulhi Thaana'' (''incomplete script''), probably invented for Islamic quotes, started to supplant [[ps:Diak|Dives Akuru]] in the 17th century. The origin is unique: its consonants came from Arabic numerals and pre-Islamic digits, and vowels from [[ps:Arab|Arabic]] vowel marks. Over time, the lines became smoother, and the elegant 45-degree-slanted writing style became widespread. The explorer Thor Heyerdahl once compared Thaana to noodles.</p>
       <p />
-      <p>In the 1970s, Thaana was on the verge of extinction: President Ibrahim Nasir established telex communication, and the government switched to a poorly designed [[ps:Latn|Latin]] transliteration. However, the next president, Maumoon Abdul Gayoom, restored Thaana. Today both scripts are used in parallel.</p>
+      <p>In the 1970s, Thaana was on the verge of extinction: President Ibrahim Nasir established telex communication, and the government switched to a poorly designed [[ps:Latn|Latin]] transliteration. However, the next president, Maumoon Abdul Gayoom, restored Thaana. Today, both scripts are used in parallel.</p>
      </orig>
      <transl>
       <p>У 1153 році Мальдивські острови були обернені з буддизму до ісламу. ''Габулі-тана'' (''неповне письмо''), ймовірно винайдене для ісламських цитат, з XVII{{_}}століття стало витісняти [[ps:Diak|дивес-акуру]]. Походження тани унікальне: приголосні пішли з арабських та доісламських цифр, голосні{{-}}з [[ps:Arab|арабських]] оголосів. З часом лінії згладилися, стали писати з витонченим 45-градусним нахилом. Мандрівник Тур Хеєрдал якось порівняв тану з нарізаною лапшею.</p>
