@@ -128,8 +128,8 @@ Anyway, Unicodia will never be a good ideograph guide, everything I write about 
 
 ## Data
 Data is as neutral as possible. Examples.
-* Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under current world war. So just # of L1 speakers
-* Number of people speaking Ukrainian. Under this war people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so total number
+* Number of people speaking Russian. Its current status is Lingua franca, so # of L2 speakers is always shaky, especially under the current world war. So just # of L1 speakers
+* Number of people speaking Ukrainian. Under this war, people tend to conceal native Russian, and Ukrainian’s status is Alive, so # of L1 speakers is ⪢ L2 → so total number
 * Disputable territory. Disputable, who currently controls, and maybe who is disputing
 
 ## Future functionality
