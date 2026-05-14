@@ -53,6 +53,7 @@
 #include "Skin.h"
 #include "MyWiki.h"
 #include "qa.h"
+#include "UpdateUrl.h"
 
 // Forms
 #include "FmTofuStats.h"
@@ -71,11 +72,6 @@ template class LruCache<char32_t, QPixmap>;
 using namespace std::string_view_literals;
 
 namespace {
-#define N_CHECKED_VERSIONS "8"
-#define SUBURL_REPO "Mercury13/unicodia/releases"
-    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=" N_CHECKED_VERSIONS;
-    constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
-
     enum : unsigned char {
         I_BLOCKS,
         I_LIBRARY,
@@ -1030,6 +1026,10 @@ FmMain::FmMain(QWidget *parent)
     // Tofu stats
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
+
+    // HTTP(s) test
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_U), this);
+    connect(shcut, &QShortcut::activated, this, &This::debugHttp);
 
     // Search for all VS16 emoji
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_V), this);
@@ -2308,7 +2308,7 @@ void FmMain::ensureHtClient()
 void FmMain::startUpdate()
 {
     ensureHtClient();
-    if (htClient->start(URL_UPDATE)) {
+    if (htClient->start(upd::URL_API)) {
         setUpdating(true);
     }
 }
@@ -2353,7 +2353,7 @@ void FmMain::updateFinished(const myht::Result& reply)
                     msg.setButtonText(QMessageBox::Yes, loc::get("Update.Go"));
                     msg.setButtonText(QMessageBox::No,  loc::get("Update.Close"));
                     if (msg.exec() == QMessageBox::Yes) {
-                        QDesktopServices::openUrl(QUrl{URL_REPO});
+                        QDesktopServices::openUrl(QUrl{upd::URL_REPO});
                     }
                 } break;
             case github::UpdateCode::ABANDONED:
@@ -2809,12 +2809,26 @@ void FmMain::goToFavs()
 void FmMain::debugFontLayout()
 {
     switch (qa::testFonts("font_layout.txt")) {
-    case qa::TestFonts::EMPTY_FNAME:    // should not happen
-    case qa::TestFonts::CANNOT_CREATE:
+    case qa::TestResult::EMPTY_FNAME:    // should not happen
+    case qa::TestResult::CANNOT_CREATE:
         QMessageBox::information(this, "Hidden feature", "Cannot create font_layout.txt");
         break;
-    case qa::TestFonts::OK:
+    case qa::TestResult::OK:
         QMessageBox::information(this, "Hidden feature", "Font layout dumped to font_layout.txt!");
+        break;
+    }
+}
+
+
+void FmMain::debugHttp()
+{
+    switch (qa::testHttp("http_test.txt")) {
+    case qa::TestResult::EMPTY_FNAME:    // should not happen
+    case qa::TestResult::CANNOT_CREATE:
+        QMessageBox::information(this, "Hidden feature", "Cannot create http_test.txt");
+        break;
+    case qa::TestResult::OK:
+        QMessageBox::information(this, "Hidden feature", "HTTP test dumped to http_test.txt!");
         break;
     }
 }

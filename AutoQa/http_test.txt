@@ -1,0 +1,3 @@
+https://api.github.com/repos/Mercury13/unicodia/releases?per_page=8: 200
+https://api.github.com/404: 404
+http://localhost:1: ERROR

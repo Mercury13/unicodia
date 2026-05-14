@@ -4,10 +4,13 @@
 
 struct Cmdline {
     struct Qa {
-        std::filesystem::path fonts;
+        std::filesystem::path fonts, http;
+
+        bool hasFonts() const noexcept { return !fonts.empty(); }
+        bool hasHttp()  const noexcept { return !http .empty(); }
 
         bool isPresent() const noexcept {
-            return !fonts.empty();
+            return hasFonts() || hasHttp();
         }
         operator bool () const noexcept { return isPresent(); }
     } qa;

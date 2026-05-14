@@ -364,6 +364,7 @@ private slots:
     void searchLocalMenuRequested(const QPoint& where);
     void copyCurrentSearch();
     void debugFontLayout();
+    void debugHttp();
     void highlightFont();
     void showBlockFontStats();
     void findAll();

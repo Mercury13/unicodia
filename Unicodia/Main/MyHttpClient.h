@@ -24,11 +24,12 @@ namespace myht {
     };
 
     struct Result {
-        std::string body {};
+        std::string body;
+        std::string errorMsg;
         int code = 0;
         Error error = Error::DID_NOT_RUN;
 
-        constexpr operator bool() const { return (error == Error::OK); }
+        constexpr operator bool() const noexcept { return (error == Error::OK); }
     };
 
     class ClientImpl;
@@ -82,10 +83,19 @@ namespace myht {
         std::string fUrl;
         Result fResult;
     signals:
-        void requestEnded(const Result& result);
+        void requestEnded(const myht::Result& result);
 
     private slots:
         void threadEnded();
     };
 
+    class SyncClient
+    {
+    public:
+        SyncClient();
+        ~SyncClient();
+        [[nodiscard]] Result run(const std::string& url);
+    private:
+        std::unique_ptr<ClientImpl> impl;
+    };
 }

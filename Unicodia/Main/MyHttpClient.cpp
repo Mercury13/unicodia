@@ -33,7 +33,7 @@ namespace {
 class myht::ClientImpl
 {
 public:
-    Result run(const std::string& url);
+    [[nodiscard]] Result run(const std::string& url);
 private:
     InitIx initIx;
     ix::HttpClient client;
@@ -53,9 +53,10 @@ myht::Result myht::ClientImpl::run(const std::string& url)
 
     return {
         .body = std::move(response->body),
+        .errorMsg = std::move(response->errorMsg),
         .code = response->statusCode,
         .error = (response->errorCode == ix::HttpErrorCode::Ok)
-                    ? Error::OK : Error::MISC
+                    ? Error::OK : Error::MISC,
     };
 }
 
@@ -103,4 +104,15 @@ void myht::AsyncClient::threadEnded()
     fState = State::IDLE;
 
     emit requestEnded(fResult);
+}
+
+
+///// SyncClient ///////////////////////////////////////////////////////////////
+
+myht::SyncClient::SyncClient() : impl(new ClientImpl) {}
+myht::SyncClient::~SyncClient() = default;
+
+myht::Result myht::SyncClient::run(const std::string& url)
+{
+    return impl->run(url);
 }

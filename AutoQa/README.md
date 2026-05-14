@@ -8,4 +8,10 @@
 
 **Purpose:** debugging character→font mapping
 
-**When to run:** when changed those things, or extended a font. Maybe I’ll auto-run during every build
+**When to run:** when changed those things, or extended a font. Auto-runs during every build
+
+# http_test.txt
+
+**Purpose:** checking that HTTP(s) library works, makes HTTPS requests and registers codes/errors
+
+**When to run:** almost never. But it auto-runs during every build

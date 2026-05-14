@@ -65,6 +65,8 @@ Cmdline Cmdline::parse()
             case 'q':
                 if (p.key == "qafonts") {
                     r.qa.fonts = toSv(p.value);
+                } else if (p.key == "qahttp") {
+                    r.qa.http = toSv(p.value);
                 }
             }
         }

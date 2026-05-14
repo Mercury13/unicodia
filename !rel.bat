@@ -250,8 +250,10 @@
 @echo.
 @echo ===== Running auto-tests =====
 @set QAFONTS=%BUILD%\font_layout.txt
+@set QAHTTP=%BUILD%\http_test.txt
 @if exist %QAFONTS% del %QAFONTS%
-@%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS%
+@if exist %QAHTTP% del %QAHTTP%
+@%DEPLOY%\Unicodia.exe /qafonts:%QAFONTS% /qahttp:%QAHTTP%
 @rem Checking fonts
 @if exist %QAFONTS% goto fqa_exists
 @echo FONTS FAILED. No font QA file for some reason.
@@ -267,6 +269,23 @@
 :fqa_ok
 @echo Fonts OK
 :fqa_done
+
+@rem Checking HTTP
+@if exist %QAHTTP% goto hqa_exists
+@echo HTTP FAILED. No HTTP(s) QA file for some reason.
+@echo It should have been at %QAHTTP%.
+@goto hqa_done
+:hqa_exists
+@fc %QAHTTP% AutoQa\http_test.txt >nul
+@if not errorlevel 1 goto hqa_ok
+@echo.
+@echo HTTP(s) FAILED, it's the new file
+@type %QA_HTTP%
+@echo .
+@goto hqa_done
+:hqa_ok
+@echo HTTP(s) OK
+:hqa_done
 
 @echo.
 

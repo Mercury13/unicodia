@@ -9,10 +9,10 @@ namespace uc {
 
 namespace qa {
 
-    enum class TestFonts : unsigned char {
+    enum class TestResult : unsigned char {
         OK, CANNOT_CREATE, EMPTY_FNAME };
 
-    TestFonts testFonts(const std::filesystem::path& fname);
+    TestResult testFonts(const std::filesystem::path& fname);
 
     enum class BlockFontSpecial : unsigned char {
          NORMAL, NONFONT, TOFU
@@ -31,5 +31,7 @@ namespace qa {
     };
 
     BlockFontStats blockFontStats(const uc::Block& block);
+
+    TestResult testHttp(const std::filesystem::path& fname);
 
 }   // namespace qa

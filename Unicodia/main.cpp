@@ -104,8 +104,12 @@ int main(int argc, char *argv[])
 
     auto cmdline = Cmdline::parse();
     if (cmdline.qa) {
-        // Sanity-check is inside
-        qa::testFonts(cmdline.qa.fonts);
+        if (cmdline.qa.hasFonts()) {
+            qa::testFonts(cmdline.qa.fonts);
+        }
+        if (cmdline.qa.hasHttp()) {
+            qa::testHttp(cmdline.qa.http);
+        }
         return 0;
     }
 

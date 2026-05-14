@@ -209,6 +209,7 @@ HEADERS += \
     Uc/UcOldInput.h \
     Uc/UcRecent.h \
     Uc/UcSkin.h \
+    UpdateUrl.h \
     Wiki.h \
     WikiLink.h \
     c_SearchEdit.h \

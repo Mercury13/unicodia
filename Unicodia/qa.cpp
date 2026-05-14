@@ -10,14 +10,18 @@
 // Lib
 #include "u_Strings.h"
 
-qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
+// HTTP
+#include "UpdateUrl.h"
+#include "MyHttpClient.h"
+
+qa::TestResult qa::testFonts(const std::filesystem::path& fname)
 {
     if (fname.empty())
-        return TestFonts::EMPTY_FNAME;
+        return TestResult::EMPTY_FNAME;
 
     std::ofstream os(fname);
     if (!os.is_open()) {
-        return TestFonts::CANNOT_CREATE;
+        return TestResult::CANNOT_CREATE;
     }
 
     constexpr char32_t BAD_CP = 0xFFFFFF;
@@ -90,7 +94,7 @@ qa::TestFonts qa::testFonts(const std::filesystem::path& fname)
     }
     dump();
     os.close();
-    return TestFonts::OK;
+    return TestResult::OK;
 }
 
 
@@ -154,4 +158,36 @@ qa::BlockFontStats qa::blockFontStats(const uc::Block& block)
                 return x.sortKey < y.sortKey;
             });
     return r;
+}
+
+
+qa::TestResult qa::testHttp(const std::filesystem::path& fname)
+{
+    if (fname.empty())
+        return TestResult::EMPTY_FNAME;
+
+    std::ofstream os(fname);
+    if (!os.is_open()) {
+        return TestResult::CANNOT_CREATE;
+    }
+
+    static constinit const std::string_view urls[] {
+        upd::URL_API,
+        "https://api.github.com/404",
+        "http://localhost:1",
+    };
+
+    myht::SyncClient client;
+    for (const std::string_view& v : urls) {
+        std::string url(v);
+        os << v << ": ";
+        if (auto res = client.run(url)) {
+            os << res.code;
+        } else {
+            os << "ERROR";
+        }
+        os << '\n';
+    }
+
+    return TestResult::OK;
 }
