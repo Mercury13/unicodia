@@ -4641,11 +4641,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost distinctive headstroke. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in the title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entering a ligature, a consonant loses right stem if present.</p>
+      <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost its distinctive headstroke. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in the title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entering a ligature, a consonant loses its right stem if present.</p>
       <p>{{smtable|kə|*ક|+ i|**◌િ|= ki|*કિ}}</p>
       <p>{{smtable|dhə|*ધ|+ virama|**◌્|+ kə|*ક|= dhkə|*ધ્ક}}</p>
       <p />
-      <p>Zoroastrians fled from Muslims to India and started to write [[ps:Avst|Avesta]] with local scripts, traditionally Gujarati. The most famous of these Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar). Letter {{t|z}} is missing in Gujarati, and it’s written as “j” with nukta (dot below).</p>
+      <p>Zoroastrians fled from Muslims to India and began writing the [[ps:Avst|Avesta]] in local scripts, traditionally Gujarati. The most famous of these Zoroastrians is Freddie Mercury (but his parents moved all the way to Zanzibar). The letter {{t|z}} is missing in Gujarati, and it’s written as “j” with a nukta (dot below).</p>
      </orig>
     </text>
    </group>
@@ -5745,13 +5745,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken headstroke, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
+      <p>Odia or Oriya (traditionally but inaccurately considered related to the ''Aryans'') evolved from [[ps:Sidd|Siddham]], a script with a broken headstroke, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
       <p />
-      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, headstroke became an arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
+      <p>By widespread opinion, letters got a rounded shape because of writing on palm leaves{{-}}to prevent the leaf from being cut along the veins, the headstroke became an arc. This arc is larger than the main elements of the letter, so the letters are hard to distinguish. The earliest known leaf is from the 15th century.</p>
       <p />
-      <p>The inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
+      <p>The inherent vowel is {{t|ɔ}}, removed with the [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In the Odia language, unlike other Indic languages, this vowel is never removed on its own, without a virama. But virama is infrequent due to multiple consonant-consonant ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
       <p />
-      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+      <p>Punctuation signs are ''danda'' bar from the [[ps:Deva|Devanagari]] block used as a full stop and surrounded by spaces, and ordinary European punctuation.</p>
      </orig>
     </text>
    </group>
