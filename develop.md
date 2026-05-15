@@ -27,7 +27,9 @@
 
 # Hidden command-line keys
 * /qafonts:filename.ext — test font layout, equiv. to Ctrl+Shift+L
-* /qaHTTP:filename.ext — test HTTP and GitHub, equiv to Ctrl+Shift+U
+* /qahttp:filename.ext — test HTTP and GitHub, equiv to Ctrl+Shift+U
+
+All QA methods CAN be run together.
 
 # Update font: what to pay attention to?
 * First of all tofu stats (About → Tofu statistics / Ctrl+Shift+T): there should be no new tofu
