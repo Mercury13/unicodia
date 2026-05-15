@@ -5678,9 +5678,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ogham alphabet was used by ancient Celts and Picts of Ireland and Britain in 4–10th centuries. In parallel [[ps:Latn|Latin]] was in use, so there’s an opinion that it’s steganography (concealed writing). The script is designed for notches on planks and sticks. Inscriptions start with {{sm|᚛}} and end with {{sm|᚜}}.</p>
+      <p>The Ogham alphabet was used by ancient Celts and Picts of Ireland and Britain from the 4th to 10th centuries. In parallel, [[ps:Latn|Latin]] was in use, so there’s an opinion that it’s steganography (concealed writing). The script is designed for notches on planks and sticks. Inscriptions start with {{sm|᚛}} and end with {{sm|᚜}}.</p>
       <p />
-      <p>Ogham space is the only space in Unicode that draws something. Otherwise it’s a normal space, and you can wrap along it.</p>
+      <p>Ogham space is the only space in Unicode that draws something. Otherwise, it’s a normal space, and you can wrap along it.</p>
      </orig>
     </text>
    </group>
@@ -6011,21 +6011,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Runes have distinctive angular shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes changed for cursive writing with quill. About {{n|5000}} runic inscriptions survive, with the oldest dating to the 2nd century.</p>
+      <p>Runes have a distinctive angular shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes evolved into cursive writing with a quill. About {{n|5000}} runic inscriptions survive, with the oldest dating to the 2nd century.</p>
       <p />
       <p>The block is a union of several runic alphabets:</p>
-      <p>* Elder Futhark, after first six letters{{-}}Scandinavian runes of 1st to 8th century, 24 letters</p>
-      <p>* Younger Futhark{{-}}Scandinavian runes since 9th century, 16 letters</p>
+      <p>* Elder Futhark, after the first six letters{{-}}Scandinavian runes of the 1st to 8th century, 24 letters</p>
+      <p>* Younger Futhark{{-}}Scandinavian runes since the 9th century, 16 letters</p>
       <p>* Futhorc{{-}}Anglo-Saxon runes (5th–11th century), derived from Elder Futhark and gradually expanded to 34 letters</p>
       <p>* 19 calendar runes (Younger Futhark + 3 more)</p>
       <p>* Three runes for modern English attributed to J.{{_}}Tolkien</p>
       <p>* Five unique runes from Franks Casket, relic of the 8th century</p>
       <p />
-      <p>Runes were gradually supplanted with [[ps:Latn|Latin]] following Christianization: by the 11th century in Western Europe, the 15th in Scandinavia, and lingering until the 20th century in some villages.</p>
+      <p>Runes were gradually supplanted by [[ps:Latn|Latin]] following Christianization: by the 11th century in Western Europe, the 15th in Scandinavia, and lingered until the 20th century in some villages.</p>
       <p />
-      <p>Nazi Germany liked esoterics, and runes together with it. Runes are popular in New Age and Neo-Paganism.</p>
+      <p>Nazi Germany liked esoterics, and runes together with them. Runes are popular in New Age and Neo-Paganism.</p>
       <p />
-      <p>Scripts of arbitrary design are called “runes” in mass culture, even those unsuitable for carving. Alphabets of ancient [[ps:Orkh|Turks]], Bulgars and [[ps:Hung|Hungarians]] of similar angular shape are called runes too.</p>
+      <p>Scripts of arbitrary design are called “runes” in mass culture, even those unsuitable for carving. The alphabets of ancient [[ps:Orkh|Turks]], Bulgars and [[ps:Hung|Hungarians]], with similar angular shapes, are also called runes.</p>
      </orig>
     </text>
    </group>
