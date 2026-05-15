@@ -80,7 +80,7 @@ namespace {
         I_ABOUT
     };
 
-}
+}   // anon namespace
 
 
 class FmRespect : public FmMessage
@@ -288,6 +288,14 @@ bool BlocksModel::toggleSortingTelltales()
 }
 
 
+bool BlocksModel::toggleBlockNumbers()
+{
+    showBlockNumbers = !showBlockNumbers;
+    emit dataChanged({}, {}, { Qt::DisplayRole });
+    return showBlockNumbers;
+}
+
+
 void BlocksModel::prependTelltales(QString& s, const uc::Block* block) const
 {
     if (!showSortingTelltales || !block)
@@ -297,6 +305,15 @@ void BlocksModel::prependTelltales(QString& s, const uc::Block* block) const
     }
 }
 
+
+void BlocksModel::prependNumber(QString& s, int index) const
+{
+    if (!showBlockNumbers)
+        return;
+    char buf[15];
+    snprintf(buf, std::size(buf), "%i. ", index + 1);
+    s = buf + s;
+}
 
 QVariant BlocksModel::data(const QModelIndex& index, int role) const
 {
@@ -317,17 +334,22 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                 if (block->loc.hasEllipsis) {
                     QString s = str::toQ(str::cat(
                             loc::currLang->ellipsis.text, block->loc.name));
+                    prependNumber(s, index.row());
                     prependTelltales(s, block);
                     return s;
                 }
                 [[fallthrough]];
             case BlockOrder::CODE: {
                     QString s = str::toQ(block->loc.name);
+                    prependNumber(s, index.row());
                     prependTelltales(s, block);
                     return s;
                 };
-            case BlockOrder::TECH:
-                return str::toQ(block->name);
+            case BlockOrder::TECH: {
+                    QString s = str::toQ(block->name);
+                    prependNumber(s, index.row());
+                    return s;
+                }
             }
             __builtin_unreachable();
         }
@@ -986,6 +1008,10 @@ FmMain::FmMain(QWidget *parent)
     // Find
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F), this);
     connect(shcut, &QShortcut::activated, this, &This::goToSearch);
+
+    // Numbers
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_3), this);
+    connect(shcut, &QShortcut::activated, this, &This::toggleBlockNumbers);
 
     // Big
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_B), this);
@@ -2953,4 +2979,13 @@ void FmMain::toggleBigFont()
     const char* text = mywiki::allowBigFont
             ? "Big font ON." : "Big font OFF.";
     QMessageBox::information(this, HEAD, text);
+}
+
+
+void FmMain::toggleBlockNumbers()
+{
+    bool isOn = blocksModel.toggleBlockNumbers();
+    const char* text = isOn ? "Block numbers ON." : "Block numbers OFF.";
+    emit blocksModel.dataChanged({}, {}, { Qt::DisplayRole });
+    QMessageBox::information(this, "Block numbers", text);
 }

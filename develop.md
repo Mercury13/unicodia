@@ -11,15 +11,17 @@
 # Hidden commands
 * F12 — reload translation from disk. Locale does NOT reload
 * Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat, the first chunk of emoji.zip will contains all emoji needed for tiles
+* Ctrl+Shift+3 — toggle block numbers 1..max, e.g. to track translation progress
 * Ctrl+Shift+H — highlight all chars served by that font, to check font dispatching/correctness
 * Ctrl+Shift+I — find all characters, to test rendering of synthesized block icons
-* Ctrl+Shift+L — test font dispatching
+* Ctrl+Shift+L — test font dispatching (repeats a command-line key)
 * Ctrl+Shift+M — search for chars with the same drawing method
+* Ctrl+Shift+N — search for chars Unicodia is currently brushing up (at the time of writing, super/subscripts)
 * Ctrl+Shift+P — test plural rules
 * Ctrl+Shift+Q — test emoji repainting engine
 * Ctrl+Shift+S — font stats for a block
 * Ctrl+Shift+T — tofu stats
-* Ctrl+Shift+U — test HTTP
+* Ctrl+Shift+U — test HTTP (repeats a command-line key)
 * Ctrl+Shift+V — find all VS16 emoji
 * Ctrl+Shift+W — debug algorithms of sorting blocks
 

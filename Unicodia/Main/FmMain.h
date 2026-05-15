@@ -87,14 +87,19 @@ public:
     /// @return [+] are those telltales on AFTERWARDS
     bool toggleSortingTelltales();
 
+    /// @return [+] are those block numbers on AFTERWARDS
+    bool toggleBlockNumbers();
+
     using Super::beginResetModel;
     using Super::endResetModel;
 private:    
     Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };    
     BlockOrder order = BlockOrder::DEFAULT;
     bool showSortingTelltales = false;
+    bool showBlockNumbers = false;
 
     void prependTelltales(QString& s, const uc::Block* block) const;
+    void prependNumber(QString& s, int index) const;
 };
 
 
@@ -368,6 +373,7 @@ private slots:
     void highlightFont();
     void showBlockFontStats();
     void findAll();
+    void toggleBlockNumbers();
 
     // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
