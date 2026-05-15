@@ -4112,7 +4112,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Used by Mangyan, a small ethnic group of the Philippines. The script goes back to [[ps:Brah|Brahmi]] and is a sister script of [[ps:Tglg|Tagalog]].</p>
+      <p>Used by the Mangyan, a small ethnic group of the Philippines. The script goes back to [[ps:Brah|Brahmi]] and is a sister script of [[ps:Tglg|Tagalog]].</p>
       <p />
       <p>The language has just 15 consonants and three vowels: {{t|a}} is inherent, {{t|i}} and {{t|u}} are vowel marks. Initial vowels are separate letters. Other consonants may appear between syllables, they are just omitted: {{sm|ᝐᝒᝑᝋᝓ}} means ''sihamu'', but is pronounced ''singhanmu''.</p>
      </orig>
@@ -4737,9 +4737,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Hanunó’o derives from [[ps:Brah|Brahmi]]. Like close relative [[ps:Tglg|Tagalog]], it was originally written on bamboo planks out from body, and read left-to-right.</p>
+      <p>Hanunó’o derives from [[ps:Brah|Brahmi]]. Like the closely related [[ps:Tglg|Tagalog]], it was originally written on bamboo planks outwards from the body, and read left to right.</p>
       <p />
-      <p>Mark {{t|i}} is always above the letter, and {{t|u}} is attached where convenient: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Historically {{t|r}} looked like horizontal or slanted dash, but in 2010s it changed shape.</p>
+      <p>The mark {{t|i}} is always above the letter, and {{t|u}} is attached where convenient: {{sm|ᜪᜳ}} bu, {{sm|ᜱᜳ}} hu. Historically, {{t|r}} looked like a horizontal or slanted dash, but in the 2010s it changed shape.</p>
      </orig>
     </text>
    </group>
@@ -6016,8 +6016,8 @@
       <p>The block is a union of several runic alphabets:</p>
       <p>* Elder Futhark, after the first six letters{{-}}Scandinavian runes of the 1st to 8th century, 24 letters</p>
       <p>* Younger Futhark{{-}}Scandinavian runes since the 9th century, 16 letters</p>
-      <p>* Futhorc{{-}}Anglo-Saxon runes (5th–11th century), derived from Elder Futhark and gradually expanded to 34 letters</p>
-      <p>* 19 calendar runes (Younger Futhark + 3 more)</p>
+      <p>* Futhorc{{-}}Anglo-Saxon runes (5th–11th century), derived from the Elder Futhark and gradually expanded to 34 letters</p>
+      <p>* 19 calendar runes (the Younger Futhark + 3 more)</p>
       <p>* Three runes for modern English attributed to J.{{_}}Tolkien</p>
       <p>* Five unique runes from Franks Casket, relic of the 8th century</p>
       <p />
@@ -6363,9 +6363,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tglg|Tagalog]]. There are less than {{n|25000}} people speaking Tagbanwa, new generation prefer Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
+      <p>Comes from [[ps:Tglg|Tagalog]]. Fewer than {{n|25000}} people speak Tagbanwa; the younger generation prefers Tagalog. But the script is used by other Palawan languages ({{n|97000}} as of 2010), together with [[ps:Latn|Latin]].</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
+      <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] and signs for final consonants are absent, so these phonemes are guessed from context, like in [[ps:Buhd|Buhid]].</p>
      </orig>
     </text>
    </group>
@@ -6537,13 +6537,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
+      <p>A Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
       <p />
-      <p>Spanish missionaries (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did{{_}}not{{_}}understand direction of writing: the text was carved on bamboo planks, the knife was directed out from body, so they could write in one direction and read in another.</p>
+      <p>Spanish missionaries (16th century) discovered that the islanders were almost {{%|100}} literate and began teaching Baybayin themselves. Initially, they did{{_}}not understand the direction of writing: the text was carved on bamboo planks, the knife was directed outward from the body, so they could write in one direction and read in another.</p>
       <p />
-      <p>There are several causes of fall of Baybayin: Spanish imported paper, pen and printing, Tagalog started to distinguish {{t|r/d}}, {{t|u/o}}, {{t|i/e}} under their influence. The last but not{{_}}the least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office job. By 19th century Baybayin had been almost dead, and the only thing remaining is to order Latin alphabet. There are modern attempts to revive Baybayin.</p>
+      <p>There are several causes of the fall of Baybayin: the Spanish imported paper, pen and printing; Tagalog began to distinguish {{t|r/d}}, {{t|u/o}} and {{t|i/e}} under their influence. Last but not{{_}}least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office job. By the 19th century, Baybayin had almost died out, and the only thing remaining was to arrange the Latin alphabet. There are modern attempts to revive Baybayin.</p>
       <p />
-      <p>In 2021 a new phoneme {{t|r}} was encoded{{-}}both versions are from 19th century, and the one that survived until today unofficially (before Unicode 14) was put into position 170D. Also a second virama appeared: the cross is invented by Spanish and reminds of colonial past, and is just badly legible in small pitch.</p>
+      <p>In 2021, a new phoneme {{t|r}} was encoded{{-}}both versions are from the 19th century, and the one that survived until today unofficially (before Unicode 14) was assigned position 170D. Also, a second virama appeared: the cross, invented by the Spanish, reminds one of the colonial past  and is just illegible at small pitch.</p>
      </orig>
     </text>
    </group>
