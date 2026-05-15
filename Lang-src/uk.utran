@@ -7107,13 +7107,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Lao script was standardized in 14th century. Like [[ps:Thai|Thai]], originated from [[ps:Khmr|Khmer]]. After reform conducted by communists in 1960, inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules of writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. Lao language is tonal, and we see here both vowel mark of three (!) characters and tone above {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] characters for historical reasons.</p>
+      <p>The Lao script was standardized in the 14th century. Like [[ps:Thai|Thai]], it originated from [[ps:Khmr|Khmer]]. After the reform conducted by communists in 1960, inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules for writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. The Lao language is tonal, and we see here both a vowel mark of three (!) characters and a tone above the {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] characters for historical reasons.</p>
       <p />
-      <p>There are no spaces between words. Like in Thai, letters are [[pt:acrophonic|acrophonic]], that is named with suitable words: {{sm|ບ}} is “bo-be” or just “be” (goat). Letter {{sm|ຣ}} (r) became silent or turned to “L” and disappeared from orthography, remaining for foreign names only.</p>
+      <p>There are no spaces between words. Like in Thai, letters are [[pt:acrophonic|acrophonic]], i.e. named with suitable words: {{sm|ບ}} is “bo-be” or just “be” (goat). Letter {{sm|ຣ}} (r) became silent or turned to “L” and disappeared from orthography, remaining for foreign names only.</p>
       <p />
-      <p>Buddhism uses Pali as religious language, several additional letters and virama are used to write that language.</p>
+      <p>Buddhism uses Pali as a religious language; several additional letters and a virama are used to write it.</p>
       <p />
-      <p>Unicode uses a dotted circle for empty place under mark. Laos traditionally use X mark that’s absent in Unicode. Sometimes [[ps:Latn|Latin]] “x” is used instead.</p>
+      <p>Unicode uses a dotted circle for an empty place under a mark. The Lao traditionally use the X mark that’s absent in Unicode. Sometimes [[ps:Latn|Latin]] “x” is used instead.</p>
      </orig>
      <transl>
       <p>Лаоський алфавіт стандартизовано у XIV{{_}}столітті. Як і [[ps:Thai|тайський]], походить з [[ps:Khmr|кхмерського]]. Після реформи, зробленої комуністами у 1960-і, зникли голосна по замовчанню і знак [[pt:virama|вірами]], і у лаоського залишилася остання ознака абуґіди{{-}}складні правила запису голосних: {{sm|ເກົ້າ}} ''kao'' «дев’ять». Лаоська мова тонова, і в цьому слові ми бачимо над приголосною {{sm|ກ}} як оголос з трьох (!) символів, так і тон. З історичних причин багато оголосів{{-}}звичайні [[pt:spacing|протяжні]] символи.</p>
@@ -9308,9 +9308,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Khmr|Old Khmer]], that in turn comes from [[ps:Brah|Brahmi]]. The alphabet was arranged and approved by King Ramkhamhaeng the Great in 1283.</p>
+      <p>Comes from [[ps:Khmr|Old Khmer]], which in turn comes from [[ps:Brah|Brahmi]]. The alphabet was arranged and approved by King Ramkhamhaeng the Great in 1283.</p>
       <p />
-      <p>Inherent vowel is {{t|a}} in open syllables and {{t|o}} in closed ones: {{sm|ถนน}}={{t|thanon}} (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</p>
+      <p>The inherent vowel is {{t|a}} in open syllables and {{t|o}} in closed ones: {{sm|ถนน}}={{t|thanon}} (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</p>
      </orig>
      <transl>
       <p>Пішла від [[ps:Khmr|старокхмерської]], яка, в свою чергу, пішла від [[ps:Brah|брахмі]]. Алфавіт впорядкував та затвердив король Рамакхамхаєнг Великий у 1283.</p>
@@ -9330,14 +9330,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Like most script of South-East Asia, came from Brahmi, inherent vowel is {{t|a}}.</p>
+      <p>Like most scripts of South-East Asia, it came from Brahmi. The inherent vowel is {{t|a}}.</p>
       <p />
-      <p>It’s commonly accepted that the script was invented by Thonmi Sambhota who traveled to India and laid the foundation of Tibetan Buddhism. From that time orthography did{{_}}not{{_}}change much, and language changed, so writing greatly differs from pronunciation.</p>
+      <p>It’s commonly accepted that the script was invented by Thonmi Sambhota, who travelled to India and laid the foundation for Tibetan Buddhism. From that time, orthography did{{_}}not{{_}}change much, while language did, so writing greatly differs from pronunciation.</p>
      </orig>
      <transl>
       <p>Як і більшість писемностей Південно-Східної Азії, пашла з [[ps:Brah|брахмі]], голосна по замовчанню {{t|a}}.</p>
       <p />
-      <p>Вважається, що писемність винайшов Тхонмі Самбхота, що з’їздив до Індії та заклав основи тибетського буддизму. За цей час орфографія мало мінялася, а мова змінилася, тому вимова сильно розбігається з написанням.</p>
+      <p>Вважається, що писемність винайшов Тхонмі Самбхота, що з’їздив до Індії та заклав основи тибетського буддизму. З того часу орфографія мало мінялася, а мова змінилася, тому вимова сильно розбігається з написанням.</p>
      </transl>
     </text>
    </group>
