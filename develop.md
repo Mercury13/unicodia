@@ -25,6 +25,10 @@
 * Ctrl+Shift+V — find all VS16 emoji
 * Ctrl+Shift+W — debug algorithms of sorting blocks
 
+# Hidden command-line keys
+* /qafonts:filename.ext — test font layout, equiv. to Ctrl+Shift+L
+* /qaHTTP:filename.ext — test HTTP and GitHub, equiv to Ctrl+Shift+U
+
 # Update font: what to pay attention to?
 * First of all tofu stats (About → Tofu statistics / Ctrl+Shift+T): there should be no new tofu
 * Then display of characters and samples
