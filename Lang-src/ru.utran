@@ -1738,7 +1738,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Hangul (Korean alphabet) comprises 51 letters ''(jamo)''. The block is much larger: the same letter at the beginning and end of a syllable is encoded with different characters, and the block has many obsolete jamo.</p>
+      <p>Hangul (Korean alphabet) comprises 51 letters ''(jamo)''. The block is much larger: the same letter at the beginning and end of a syllable is encoded as different characters, and the block includes many obsolete jamo.</p>
       <p />
       <p>Choseong are initial letters, jungseong are medial, and jongseong are final. The block’s design is simple: the distance between the original and medial letter, and between the medial and final is negative, and two or three letters written together automatically form a syllable.</p>
      </orig>
@@ -6105,11 +6105,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ethiopic script was used for the Ge’ez language that fell out of use in 13th century. Script of [[ps:Sarb|South Arabian]] origin, with the advent of Christianity in 4th century vowel marks appeared. Ge’ez is still used by Ethiopian Christians as liturgical{{-}}and the script spread to other languages of Ethiopia.</p>
+      <p>The Ethiopic script was used for the Ge’ez language, which fell out of use in the 13th century. A script of [[ps:Sarb|South Arabian]] origin; with the advent of Christianity in the 4th century, vowel marks appeared. Ge’ez is still used by Ethiopian Christians as liturgical{{-}}and the script spread to other languages of Ethiopia.</p>
       <p />
-      <p>It has a numeral system of [[ps:Grek|Greek]] type, only 1 to 9 and 10 to 90 are writable with 26 consonants. 83692={{sm|፰፼፴፮፻፺፪}}, i.e. 8-10000-30-6-100-90-2.</p>
+      <p>It has a [[ps:Grek|Greek]]-type numeral system, only 1 to 9 and 10 to 90 are writable with 26 consonants. 83692={{sm|፰፼፴፮፻፺፪}}, i.e. 8-10000-30-6-100-90-2.</p>
       <p />
-      <p>Loses influence since the late 20th century. For all languages except Ethiosemitic (Blin{{-}}Kushitic family, Mekan{{-}}Nilo-Saharan) [[ps:Latn|Latin]] script is introduced.</p>
+      <p>Loses influence since the late 20th century. For all languages except Ethiosemitic (Blin{{-}}Kushitic family, Mekan{{-}}Nilo-Saharan), the [[ps:Latn|Latin]] script is introduced.</p>
      </orig>
      <transl>
       <p>Эфиопская письменность использовалась для записи языка гéэз, вышедшего из употребления в XIII{{_}}веке. Письменность [[ps:Sarb|южноаравийского]] происхождения, огласовывать начали в IV{{_}}веке с приходом христианства. Геэз всё ещё используется эфиопскими христианами как литургический{{-}}а письменность распространилась на другие языки Эфиопии.</p>
@@ -7741,9 +7741,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Like most other scripts of South-East Asia, comes from [[ps:Brah|Brahmi]]. In open syllables inherent vowel is {{t|a}}, often reduces to {{t|ə}}. In closed syllables it depends on final consonant: {{sm|နှစ်}} {{t|n̥iʔ}} “year”. To set another vowel, vowel marks are used, to remove{{-}}[[pt:virama|virama]] sign, “a-sat” in Myanmar. Another virtual virama is used just for assembling [[pt:ligature|ligatures]]{{-}}two letters stacked together.</p>
+      <p>Like most other scripts of South-East Asia, it comes from [[ps:Brah|Brahmi]]. In open syllables, the inherent vowel is {{t|a}}, often reducing to {{t|ə}}. In closed syllables, it depends on the final consonant: {{sm|နှစ်}} {{t|n̥iʔ}} “year”. To set another vowel, vowel marks are used, to remove it{{-}}the [[pt:virama|virama]] sign, “a-sat” in Myanmar. Another virtual virama is used solely for assembling [[pt:ligature|ligatures]]{{-}}two letters stacked together.</p>
       <p />
-      <p>Early Myanmar script was square. It became round about 17th century when writing on palm leaves became widespread: straight line could cut a leaf along veins.</p>
+      <p>Early Myanmar script was square. It became round about the 17th century when writing on palm leaves became widespread: a straight line could cut a leaf along the veins.</p>
      </orig>
      <transl>
       <p>Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. В открытых слогах гласная по умолчанию {{t|а}}, часто редуцируется до {{t|ə}}. В закрытых{{-}}зависит от конечной согласной: {{sm|နှစ်}} {{t|n̥iʔ}} «год». Чтобы поставить другую гласную, используются огласовки, чтобы убрать{{-}}знак «[[pt:virama|вирама]]», которая по-бирмански называется «а-сат». Вторая виртуальная вирама служит для сборки [[pt:ligature|лигатур]]{{-}}две буквы друг под другом.</p>
