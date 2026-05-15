@@ -1377,7 +1377,7 @@
      <orig>Ethiopic supplement</orig>
     </text>
     <text id="Text">
-     <orig>Letters of Sebat Bet language {{nspk|sgw}}, and tone marks.</orig>
+     <orig>Letters of the Sebat Bet language {{nspk|sgw}}, and tone marks.</orig>
     </text>
    </group>
    <group id="13A0">
@@ -4160,7 +4160,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by missionary James Evans in 1833. While working on Ojibwe languages, he experienced two troubles: lots of repeating syllables made writing very long, and students often confused rules for English and native. That’s why he made a brand new script for Cree (later adopted by some Ojibwe tribes).</p>
+      <p>Invented by missionary James Evans in 1833. While working on Ojibwe languages, he encountered two problems: repeated syllables made writing very long, and students often confused the rules of English with those of Ojibwe. That’s why he created a brand-new script for Cree (which was later adopted by some Ojibwe tribes).</p>
       <p />
       <p>Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. A plain consonant is a small letter: k={{sm|ᒃ}}.</p>
      </orig>
@@ -4191,11 +4191,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Future chief Sequoia, inventor of Cherokee script, was illiterate but took characters from existing books{{-}}so letters have different meanings than in prototype languages. For example, vowel {{t|i}} is written with the letter {{sm|Ꭲ}}.</p>
+      <p>Future chief Sequoia, the inventor of the Cherokee script, was illiterate but took characters from existing books, so letters have different meanings than in prototype languages. For example, vowel {{t|i}} is written with the letter {{sm|Ꭲ}}.</p>
       <p />
-      <p>The first pupil was Ayoka, his six-year-old daughter. The invention of script was received with mistrust, he was taken for possessed, but Sequoia and Ayoka brilliantly passed a test, reading each other’s notes. The script quickly spread among the tribe, and {{%|90}} of Cherokee were literate by 1830.</p>
+      <p>Ayoka, his six-year-old daughter, became the first pupil. The invention of script was met with mistrust; he was taken for possessed, but Sequoia and Ayoka brilliantly passed a test by reading each other’s notes. The script quickly spread among the tribe, and {{%|90}} of the Cherokee were literate by 1830.</p>
       <p />
-      <p>Since 1828, Sequoia took part in negotiations with the USA for Cherokee lands.</p>
+      <p>Since 1828, Sequoia has participated in negotiations with the USA over Cherokee lands.</p>
      </orig>
     </text>
    </group>
