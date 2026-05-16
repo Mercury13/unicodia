@@ -1946,11 +1946,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>''Mtavruli'' is a capital form of the standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.</p>
+      <p>''Mtavruli'' is a capital form of the standard Georgian type ''Mkhedruli''. Capital letters from the [[pk:10A0|main block]] are called ''Asomtavruli'' and are considered obsolete.</p>
       <p />
-      <p>Mtavruli is used in highlights and captions, and for a long time was considered a variant of font. However, scholars found documents from the 19th and early 20th centuries where Mkhedruli and Mtavruli were mixed. Also, Georgian fonts come in pairs, Mkhedruli and Mtavruli, complicating daily work and making Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received a translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.</p>
+      <p>Mtavruli is used in highlights and captions and, for a long time, was considered a font variant. However, scholars found documents from the 19th and early 20th centuries where Mkhedruli and Mtavruli were mixed. Also, Georgian fonts come in pairs, Mkhedruli and Mtavruli, complicating daily work and making Georgian text less expressive if font change is impossible. Michael Everson, a typographer at the Consortium, received a translation of ''Alice in Wonderland'' in 8-bit encoding with “DRINK ME” typed in Mtavruli.</p>
       <p />
-      <p>Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. The double line below barely visible on the icon is an editorial mark meaning capital letter.</p>
+      <p>Now, Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with different rules of use{{-}}the entire word is capitalized. The double line below, barely visible on the icon, is an editorial mark meaning “capital letter”.</p>
      </orig>
      <transl>
       <p>''Мтаврулі''{{-}}верхній регістр стандартного грузинського письма ''мхедрулі''. Великі літери з [[pk:10A0|головного блоку]] звуться ''асомтаврулі'' і вважаються застарілими.</p>
@@ -1978,9 +1978,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters from Vedas used in [[ps:Deva|Devanagari]] and other Indic scripts. Pronunciation of those times greatly differed from modern, and they are mainly phonetical signs.</p>
+      <p>Characters from the Vedas that are used in [[ps:Deva|Devanagari]] and other Indic scripts. Pronunciation at those times differed greatly from the modern one, and they are mainly phonetic signs.</p>
       <p />
-      <p>Part of symbols vary from language to language. 1CF5 in Devanagari looks like an hourglass, in Bengali like a cross. 1CF6 in Devanagari looks like breve ˘, in Bengali{{-}}like upright or inverted small omega ω. Glyph looking like an upright omega over inverted one existed in Unicode for some time, and is more often found in research than in original sources.</p>
+      <p>Some symbols vary from language to language. 1CF5 in Devanagari looks like an hourglass, in Bengali like a cross. 1CF6 in Devanagari looks like breve ˘, in Bengali{{-}}like upright or inverted small omega ω. A glyph resembling an upright omega over an inverted one existed in Unicode for some time, and is more often found in research than in original sources.</p>
      </orig>
      <transl>
       <p>Символи з Вед, що застосовуються в [[ps:Deva|деванáґарі]] та інших індійських писемностях. Вимова тих часів сильно відрізнялася від сучасної, і в основному це фонетичні знаки.</p>
@@ -1995,7 +1995,7 @@
      <transl>Фонетичні розширення</transl>
     </text>
     <text id="Text">
-     <orig>Characters from Uralic Phonetic Alphabet, Old Irish phonetic notation, the Oxford English Dictionary, Americanist and Russianist phonetic notations.</orig>
+     <orig>Characters from the Uralic Phonetic Alphabet, Old Irish phonetic notation, the Oxford English Dictionary, Americanist and Russianist phonetic notations.</orig>
      <transl>Символи Уральського фонетичного алфавіту, фонетики давньоірландських мов, Оксфордського словника англійської мови, фонетики індіанських і російської.</transl>
     </text>
    </group>
@@ -2005,7 +2005,7 @@
      <transl>Фонетичні розширення додаткові</transl>
     </text>
     <text id="Text">
-     <orig>Specialized and obsolete forms of International Phonetic Alphabet.</orig>
+     <orig>Specialized and obsolete forms of the International Phonetic Alphabet.</orig>
      <transl>Спеціалізовані та застарілі форми Міжнародного фонетичного алфавіту.</transl>
     </text>
    </group>
@@ -2015,7 +2015,7 @@
      <transl>Діакритичні мітки додаткові</transl>
     </text>
     <text id="Text">
-     <orig>Characters of Uralic Phonetic Alphabet, medieval abbreviations and Teuthonista (system for writing German dialects).</orig>
+     <orig>Characters of the Uralic Phonetic Alphabet, medieval abbreviations and Teuthonista (a system for writing German dialects).</orig>
      <transl>Символи Уральського фонетичного алфавіту, середньовічних скорочень та Teuthonista (системи запису німецьких діалектів).</transl>
     </text>
    </group>
@@ -2025,7 +2025,7 @@
      <transl>Латинка розширена додаткова</transl>
     </text>
     <text id="Text">
-     <orig>[[pt:precomposed|Precomposed]] characters with various marks. Ninety of them are Vietnamese, about dozen are medieval, including capital Eszett '''ẞ'''.</orig>
+     <orig>[[pt:precomposed|Precomposed]] characters with various marks. Ninety of them are Vietnamese, about a dozen are medieval, including the capital Eszett '''ẞ'''.</orig>
      <transl>[[pt:precomposed|Монолітні]] символи з різними мітками. Дев’яносто з цих символів в’єтнамські, біля десятку{{-}}середньовічні, у тому числі великий есцет '''ẞ'''.</transl>
     </text>
    </group>
@@ -2047,7 +2047,7 @@
       <p>* macron{{-}}long vowel;</p>
       <p>* diaeresis{{-}}separare pronunciation of vowels.</p>
       <p />
-      <p>Added in the beginning of common era, removed only in 1982 when such complex phonetics did{{_}}not{{_}}exist for many centuries.</p>
+      <p>Added at the beginning of the common era, removed only in 1982, when such complex phonetics had{{_}}not{{_}}existed for many centuries.</p>
      </orig>
      <transl>
       <p>Політонічна фонетика, що існувала в деяких діалектах давньогрецької:</p>
@@ -2072,7 +2072,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Punctuation (Latin ''punctum'' “point”) is a system of marks that convey syntax and intonation of speech, and also rules of putting these marks in text.</p>
+      <p>Punctuation (Latin ''punctum'' “point”) is a system of marks that convey the syntax and intonation of speech, as well as the rules for their placement in text.</p>
       <p />
       <p>Obviously, basic punctuation marks (period, comma, colon…) are encoded in [[pt:ascii|ASCII]] and [[pt:latin1|Latin-1]]. And punctuation blocks contain so-called ''typography marks'' for beautiful typesetting of text.</p>
      </orig>
@@ -2092,11 +2092,11 @@
      <orig>
       <p>The block contains superscript and subscript letters, signs and digits used in mathematics and phonetics.</p>
       <p />
-      <p>Long before the advent of the Internet, it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. The system (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense in forcing people to use more complex systems, or in simulating like “6.022e23” or “6.022×10^23”.</p>
+      <p>Long before the advent of the Internet, it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. The system (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense in forcing people to use more complex systems, or simulating them like “6.022e23” or “6.022×10^23”.</p>
       <p />
-      <p>Also, superscripts drawn by typographers are often better than synthesized by word processors.</p>
+      <p>Also, superscripts drawn by typographers are often better than those synthesized by word processors.</p>
       <p />
-      <p>Many of important superscripts and subscripts are in other places: transposition of matrix Aᵀ{{-}}in the block of [[pk:1D40|phonetic extensions]].</p>
+      <p>Many of the important superscripts and subscripts are elsewhere: transposition of matrix Aᵀ{{-}}in the block of [[pk:1D40|phonetic extensions]].</p>
      </orig>
      <transl>
       <p>Блок містить надрядкові та підрядкові літери, знаки та цифри, що застосовуються в математиці та фонетиці.</p>
@@ -2116,9 +2116,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Currency characters fall into two clear categories. One group emerged in 17–19th century with evolution of business language: dollar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupee sign {{sm|௹}}. Others are introduced by state since late 20th century: euro {{sm|€}}, hryvnia {{sm|₴}}, ruble {{sm|₽}}, rupee {{sm|₹}}.</p>
+      <p>Currency characters fall into two clear categories. One group emerged in the 17–19th centuries with the evolution of business language: dollar {{sm|$}}, pound {{sm|£}}, [[ps:Taml|Tamil]] rupee sign {{sm|௹}}. Others are introduced by the state since the late 20th century: euro {{sm|€}}, hryvnia {{sm|₴}}, ruble {{sm|₽}}, rupee {{sm|₹}}.</p>
       <p />
-      <p>Expecting that the Russian ruble symbol would be accepted someday, Paratype company in 2009 filled the remainder of the block with it. The fonts of PT family proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with ₽ sign.</p>
+      <p>Expecting that the Russian ruble symbol would be accepted someday, the Paratype company filled the remaining space in the block with it in 2009. The PT family of fonts proved good and spread across the Internet. So don’t be surprised if the new symbol of 2021 is “supported” with the ₽ sign.</p>
      </orig>
      <transl>
       <p>Символи валют діляться на дві чіткі категорії. Одна група виникла у XVII–XIX{{_}}столітті з розвитком ділової мови: долар {{sm|$}}, фунт {{sm|£}}, [[ps:Taml|тамільський]] знак рупії {{sm|௹}}. Інша{{-}}прийнята державою з кінця XX{{_}}століття: євро {{sm|€}}, гривня {{sm|₴}}, рубль {{sm|₽}}, рупія {{sm|₹}}.</p>
