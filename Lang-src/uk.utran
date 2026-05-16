@@ -2133,8 +2133,8 @@
      <transl>Діакритичні мітки для символів</transl>
     </text>
     <text id="Text">
-     <orig>Almost all of these characters work properly if the font has a [[pt:ligature|ligature]]{{-}}for example, {{sm| 1⃣}}. Author of ''Unicodia'' had to assemble all samples except three in font editor.</orig>
-     <transl>Практично всі з цих символів нормально працюють, якщо в шрифті є відповідна [[pt:ligature|лігатура]]{{-}}наприклад, {{sm| 1⃣}}. Зразки усіх символів, окрім трьох, довелося збирати у редакторі шрифтів.</transl>
+     <orig>Almost all of these characters render properly if the font has [[pt:ligature|ligatures]]{{-}}for example, {{sm| 1⃣}}. The author of ''Unicodia'' had to assemble all samples except three in the font editor.</orig>
+     <transl>Практично всі з цих символів нормально відображаються, якщо в шрифті є відповідна [[pt:ligature|лігатура]]{{-}}наприклад, {{sm| 1⃣}}. Зразки усіх символів, окрім трьох, довелося збирати у редакторі шрифтів.</transl>
     </text>
    </group>
    <group id="2100">
@@ -2146,9 +2146,9 @@
      <orig>
       <p>Mathematical, technical and business symbols originated from letters.</p>
       <p />
-      <p>Blackboard bold {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. Spread with prominent textbook on complex analysis of 1965 by Gunning and Rossi.</p>
+      <p>Blackboard bold {{sm|ℕℤℚℝℂ}} comes from chalk-written bold type. Spread with a prominent textbook on complex analysis of 1965 by Gunning and Rossi.</p>
       <p />
-      <p>Character {{sm|ℵ}} for cardinality of a set is introduced by Georg Cantor.</p>
+      <p>The character {{sm|ℵ}} for cardinality of a set was introduced by Georg Cantor.</p>
      </orig>
      <transl>
       <p>Математичні, технічні та ділові символи буквеного походження.</p>
@@ -2166,7 +2166,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Precomposed vulgar fractions and Roman numerals. Fraction {{sm|↉}} is used in baseball, {{sm|↊}} and {{sm|↋}}{{-}}in duodecimal numeral system.</p>
+      <p>Precomposed vulgar fractions and Roman numerals. Fraction {{sm|↉}} is used in baseball, {{sm|↊}} and {{sm|↋}} in the duodecimal numeral system.</p>
       <p />
       <p>Three fractions are encoded in [[pt:latin1|Latin-1]].</p>
      </orig>
@@ -2184,7 +2184,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arrows are characters used to indicate direction. Here are several uses for arrows:</p>
+      <p>Arrows are characters that indicate direction. Here are several uses for arrows:</p>
       <p>* for marking buttons;</p>
       <p>* on road signs, transport maps;</p>
       <p>* in mathematics{{-}}map, consequence, limit, vector, monotonic function;</p>
@@ -2205,7 +2205,7 @@
      <transl>Математичні знаки</transl>
     </text>
     <text id="Text">
-     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. System of mathematical notation emerged in centuries and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality by definition.</orig>
+     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. The system of mathematical notation has emerged over centuries, and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality by definition.</orig>
      <transl>Найпростіші математичні знаки: математичні операції, порівняння, інтеграли, теорія множин. Система математичних позначень складалась століттями і відрізняється для різних країн, галузей математики і навіть математичних шкіл. Наприклад, плюс у колі {{smfunky|⊕}} може означати виключне АБО в формальній логіці та машинне додавання в чисельних методах. Для рівності за означенням використовують {{sm|≔}}, {{sm|≝}}, {{sm|≡}}.</transl>
     </text>
    </group>
@@ -2218,12 +2218,12 @@
      <orig>
       <p>Symbols used in technical drawing, electronics, programming, dentistry, poetry, chemistry, optics, user interfaces.</p>
       <p />
-      <p>Also characters used in systems of computer mathematics like MathType (aka ''Microsoft Equation'') and TᴇX (pronounced “tech”) for building multiline brackets.</p>
+      <p>Also, parts of multiline brackets that are used in systems of computer mathematics, such as MathType (aka ''Microsoft Equation'') and TᴇX (pronounced “tech”).</p>
      </orig>
      <transl>
       <p>Символи, що застосовуються в кресленні, електроніці, програмуванні, стоматології, поезії, хімії, оптиці, інтерфейсах користувача.</p>
       <p />
-      <p>Також символи, що використовуються в системах комп’ютерної математики на кшталт MathType (він же ''Microsoft Equation'') та TᴇX (читається «тех») для створення багатоповерхових дужок.</p>
+      <p>Також фрагменти багатоповерхових дужок, що використовуються в системах комп’ютерної математики на кшталт MathType (він же ''Microsoft Equation'') та TᴇX (читається «тех»).</p>
      </transl>
     </text>
    </group>

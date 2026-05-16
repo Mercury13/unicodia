@@ -1650,7 +1650,7 @@
      <orig>Combining diacritical marks for symbols</orig>
     </text>
     <text id="Text">
-     <orig>Almost all of these characters work properly if the font has a [[pt:ligature|ligature]]{{-}}for example, {{sm| 1⃣}}. Author of ''Unicodia'' had to assemble all samples except three in font editor.</orig>
+     <orig>Almost all of these characters render properly if the font has [[pt:ligature|ligatures]]{{-}}for example, {{sm| 1⃣}}. The author of ''Unicodia'' had to assemble all samples except three in the font editor.</orig>
     </text>
    </group>
    <group id="2100">
@@ -1661,9 +1661,9 @@
      <orig>
       <p>Mathematical, technical and business symbols originated from letters.</p>
       <p />
-      <p>Blackboard bold {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. Spread with prominent textbook on complex analysis of 1965 by Gunning and Rossi.</p>
+      <p>Blackboard bold {{sm|ℕℤℚℝℂ}} comes from chalk-written bold type. Spread with a prominent textbook on complex analysis of 1965 by Gunning and Rossi.</p>
       <p />
-      <p>Character {{sm|ℵ}} for cardinality of a set is introduced by Georg Cantor.</p>
+      <p>The character {{sm|ℵ}} for cardinality of a set was introduced by Georg Cantor.</p>
      </orig>
     </text>
    </group>
@@ -1673,7 +1673,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Precomposed vulgar fractions and Roman numerals. Fraction {{sm|↉}} is used in baseball, {{sm|↊}} and {{sm|↋}}{{-}}in duodecimal numeral system.</p>
+      <p>Precomposed vulgar fractions and Roman numerals. Fraction {{sm|↉}} is used in baseball, {{sm|↊}} and {{sm|↋}} in the duodecimal numeral system.</p>
       <p />
       <p>Three fractions are encoded in [[pt:latin1|Latin-1]].</p>
      </orig>
@@ -1685,7 +1685,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arrows are characters used to indicate direction. Here are several uses for arrows:</p>
+      <p>Arrows are characters that indicate direction. Here are several uses for arrows:</p>
       <p>* for marking buttons;</p>
       <p>* on road signs, transport maps;</p>
       <p>* in mathematics{{-}}map, consequence, limit, vector, monotonic function;</p>
@@ -1698,7 +1698,7 @@
      <orig>Mathematical operators</orig>
     </text>
     <text id="Text">
-     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. System of mathematical notation emerged in centuries and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality by definition.</orig>
+     <orig>Simplest mathematical signs: operators, comparison, integrals, set theory. The system of mathematical notation has emerged over centuries, and differs by country, domain of mathematics and even by mathematical school. For example, circled plus {{smfunky|⊕}} may mean exclusive OR in formal logic, or machine addition in numerical methods. {{sm|≔}}, {{sm|≝}}, {{sm|≡}} are used for equality by definition.</orig>
     </text>
    </group>
    <group id="2300">
@@ -1709,7 +1709,7 @@
      <orig>
       <p>Symbols used in technical drawing, electronics, programming, dentistry, poetry, chemistry, optics, user interfaces.</p>
       <p />
-      <p>Also characters used in systems of computer mathematics like MathType (aka ''Microsoft Equation'') and TᴇX (pronounced “tech”) for building multiline brackets.</p>
+      <p>Also, parts of multiline brackets that are used in systems of computer mathematics, such as MathType (aka ''Microsoft Equation'') and TᴇX (pronounced “tech”).</p>
      </orig>
     </text>
    </group>
