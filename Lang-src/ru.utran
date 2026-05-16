@@ -5281,7 +5281,7 @@
      <transl>балийский, сасакский</transl>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. Balinese script is supplanted with [[ps:Latn|Latin]] in everyday use, but is still important in Hindu religion.</orig>
+     <orig>Comes from [[ps:Kawi|Kawi]]. The inherent vowel is {{t|a}}. The Balinese script is supplanted by [[ps:Latn|Latin]] in everyday use, but remains important in the Hindu religion.</orig>
      <transl>Происходит из [[ps:Kawi|кави]]. Гласная по умолчанию {{t|а}}. Балийская письменность не{{_}}используется в общении (вместо неё [[ps:Latn|латиница]]), но важна в индуизме.</transl>
     </text>
    </group>
@@ -5532,9 +5532,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Buginese script, or Lontara is a descendant of [[ps:Brah|Brahmi]] via [[ps:Kawi|Kawi]], and works similarly. Since Dutch colonization is being supplanted with [[ps:Latn|Latin]]. “Lontara” name means a local palm tree whose leaves Buginese used for writing.</p>
+      <p>The Buginese script, or Lontara, is a descendant of [[ps:Brah|Brahmi]] via [[ps:Kawi|Kawi]], and works similarly. Since Dutch colonization, it has been supplanted by [[ps:Latn|Latin]]. The name “Lontara” means a local palm tree whose leaves the Buginese used for writing.</p>
       <p />
-      <p>Inherend vowel is {{t|a}}: {{sm|ᨀ}}=kа, {{sm|ᨀᨚ}}=kо. Initial vowels are appended to letter {{sm|ᨕ}}: {{sm|ᨕᨚ}}=o. [[pt:virama|Virama]] is absent: the most used consonant conjuncts are separate letters, the rest are not{{_}}written. This deficiency of Lontara is even used as a conundrum: read the pun correctly and find hidden meaning. Some specialists in old writing use virama.</p>
+      <p>The inherent vowel is {{t|a}}: {{sm|ᨀ}}=kа, {{sm|ᨀᨚ}}=kо. Initial vowels are appended to letter {{sm|ᨕ}}: {{sm|ᨕᨚ}}=o. [[pt:virama|Virama]] is absent: the most common consonant conjuncts are separate letters, the rest are not{{_}}written. This deficiency of Lontara is even used as a conundrum: read the pun correctly and find hidden meaning. Some specialists in old writing use virama.</p>
      </orig>
      <transl>
       <p>Бугийская письменность, или лонтара{{-}}потомок [[ps:Brah|брахми]] через [[ps:Kawi|кави]], и работает по тому же принципу. Со времён голландской колонизации заменяется [[ps:Latn|латиницей]]. Название «лонтара» означает местную пальму, на чьих листьях и писали бугийцы.</p>
@@ -7075,14 +7075,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from Nothern Thai kingdom of Lanna or Lannathai (1296–1558). Then it was conquered by Burma, and in 1774 it was taken over by Siam (Thailand). Siam was multicultural, but since failed 1912 coup the king started to promote nationalism. In 1933 nationalists took power and destroyed many specimen of Tai Tham.</p>
+      <p>Comes from the Northern Thai kingdom of Lanna or Lannathai (1296–1558). Then it was conquered by Burma, and in 1774 it was taken over by Siam (Thailand). Siam was multicultural, but after the failed 1912 coup, the king began promoting nationalism. In 1933, nationalists took power and destroyed many specimens of Tai Tham.</p>
       <p />
-      <p>Like in other similar scripts, round letters come from writing on palm leaves (straight line will cut the leaf by veins). Inherent vowel is {{t|a}}. There are no spaces between words. There are two types of vowels: independent and vowel marks. No [[pt:virama|virama]], there is a similar character for assembling syllabes instead:</p>
+      <p>As in other similar scripts, round letters come from writing on palm leaves (a straight line will cut the leaf along the veins). The inherent vowel is {{t|a}}. There are no spaces between words. There are two types of vowels: independent and vowel marks. No [[pt:virama|virama]], there is a similar character for assembling syllables instead:</p>
       <p>: high ha {{sm|ᩉ}} + i {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + na {{sm|ᨶ}} = hin {{sm|ᩉᩥ᩠ᨶ}}</p>
       <p />
       <p>Has two sets of digits: Hora (daily) and Tham (sacred).</p>
       <p />
-      <p>There are several million people speaking Yuan, but since 20th century few are literate in Lanna, [[ps:Thai|Thai]] is used more often. Only small Khün language {{nspk|kkh}} uses Tai Tham as primary script.</p>
+      <p>There are several million people who speak Yuan, but since the 20th century, few have been literate in Lanna; [[ps:Thai|Thai]] is used more often. Only the small Khün language {{nspk|kkh}} uses Tai Tham as its primary script.</p>
      </orig>
      <transl>
       <p>Происходит из северотайского государства Ланна или Ланнатай (1296—1558). После оно было завоёвано Бирмой, и в 1774 перешло к Сиаму (Таиланду). Сиам был многокультурным, но с неудачного переворота 1912 король начал продвигать национализм. В 1933 националисты пришли к власти и уничтожили много образцов ланны.</p>
@@ -8882,11 +8882,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language of Sunda {{nspk}}, widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
+      <p>Language of the Sunda {{nspk}}, widespread in Western Java. A script of [[ps:Kawi|Kawi]] origin, the inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and the [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
       <p />
-      <p>The script was used until 18th century, after that [[ps:Java|Javanese]] and Pegon (local variant of [[ps:Arab|Arabic]]) were used, in 20th century [[ps:Latn|Latin]] was introduced. In 1997 authorities of Indonesia decide to give Sunda their own script, making it from Old Sundanese.</p>
+      <p>The script was used until the 18th century. After that, [[ps:Java|Javanese]] and Pegon (a local variant of [[ps:Arab|Arabic]]) have been used. In the 20th century, the [[ps:Latn|Latin]] script was adopted. In 1997, Indonesian authorities decided to give Sunda its own script, based on Old Sundanese.</p>
       <p />
-      <p>The second virtual virama is only for typing historical [[pt:ligature|ligatures]]. They are absent in current font, but the author of ''Unicodia'' drew one in [[pt:private|private-use]] position:</p>
+      <p>The second virtual virama is only for typing historical [[pt:ligature|ligatures]]. They are absent in the current font, but the author of ''Unicodia'' drew one in a [[pt:private|private-use]] position:</p>
       <p>: ka {{sm|ᮊ}} + virama {{sm|◌᮫}} + ta {{sm|ᮒ}} = kta {{sm|&amp;#xE000;}}</p>
      </orig>
      <transl>
