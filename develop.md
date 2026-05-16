@@ -1,7 +1,7 @@
 ﻿# How to develop?
 * The toolkit can probably run on W7, but Qt Creator, the main development environment, absolutely needs W10
 * Download/find all tools for building.
-* Ensure that your Qt has MinGW 11+. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.3, 6.7.0. I actually use 6.1.3 as the last supporting W7 and fast enough on W10.
+* Ensure that your Qt has MinGW 11+ and OpenSSL3. Probably MSYS is absolutely needed now. So you need to make a custom kit from some Qt (tested 6.1.3, 6.2.4, 6.7.0). I switched to 6.4.2 in the spring 2026.
 * Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
