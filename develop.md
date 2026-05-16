@@ -29,7 +29,7 @@
 * ``/qafonts:filename.ext`` — test font layout, equiv. to Ctrl+Shift+L
 * ``/qahttp:filename.ext`` — test HTTP and GitHub, equiv. to Ctrl+Shift+U
 
-All tests (``/qa*``) immediately exit, CAN be run together, and produce files with respective names. Difference in files is a reason for investigation: in fonts, it can be something forgotten, and in HTTP — something really sinister.
+All tests (``/qa*``) immediately exit, CAN be run together, and produce files with respective names. A difference in files is a reason for investigation: in fonts, it can be something forgotten, and in HTTP — something really sinister.
 
 # Update font: what to pay attention to?
 * First of all tofu stats (About → Tofu statistics / Ctrl+Shift+T): there should be no new tofu
