@@ -183,7 +183,7 @@ Some types of dictionary entries:
 * Scripts (TRIG_SCRIPT, e.g. CYRILLIC): capitalize, trigger script-based rules
 * Keywords (TRIG_CAP_NEXT, e.g. TONE): capitalize next to it
 * Adjectives (PART_ADJECTIVE, e.g. BREATHY): if capitalized, push capitalization to the right
-  * If chain of capitalization occurred, e.g. “letter Breathy long Foobar”, only the first adjective is capitalized
+  * If a chain of capitalization occurred, e.g. “letter Breathy long Foobar”, only the first adjective is capitalized
 * Nouns (PART_NOUN, e.g. COMMA): if capitalization pushed, stop and do not capitalize: “letter Breathy long Foobar”, but “letter Breathy long comma”
 
 ## Idioms
