@@ -3964,9 +3964,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Batak, like other Indonesian scripts, comes from [[ps:Kawi|Kawi]]. Germans, then Dutch started to teach both Batak script and [[ps:Latn|Latin]] to islanders. Short before World War{{_}}I Batak alphabet was dropped and finally supplanted with Latin, the main script of the Indonesian language.</p>
+      <p>Batak, like other Indonesian scripts, comes from [[ps:Kawi|Kawi]]. The Germans, and later the Dutch, taught both the Batak script and [[ps:Latn|Latin]] to the islanders. Shortly before World War{{_}}I, the Batak alphabet was dropped and finally supplanted by Latin, the main script of the Indonesian language.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. In different languages (Karo, Mandailing, Pakpak, Toba, Simalungun) letters are a bit different. There are two [[pt:virama|viramas]]: horizontal one is used in Karo and Simalungun, slanted in the rest of the languages.</p>
+      <p>The inherent vowel is {{t|a}}. In different languages (Karo, Mandailing, Pakpak, Toba, Simalungun), letters vary slightly. There are two [[pt:virama|viramas]]: the horizontal one is used in Karo and Simalungun, and the slanted one in the other languages.</p>
       <p>: ba {{sm|ᯅ}} + virama {{sm|◌᯳}} = b {{sm|ᯅ᯳}}</p>
       <p>: ba {{sm|ᯅ}} + i {{sm|◌ᯪ}} + ng {{sm|◌ᯰ}} = bing {{sm|ᯅᯪᯰ}}</p>
      </orig>
@@ -5161,9 +5161,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Tibt|Tibetan]] and was initially written top-down. Later, horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
+      <p>Comes from [[ps:Tibt|Tibetan]] and was initially written top-down. Later, horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaries and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew (1845).</p>
       <p />
-      <p>The inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to a null letter looking like ampersand. No [[pt:virama|virama]]. Instead, to get a syllable of three phonemes, first a vowel mark is added, then a final consonant.</p>
+      <p>The inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have a special shape; instead, they are affixed to a null letter that looks like an ampersand. No [[pt:virama|virama]]. Instead, to get a syllable of three phonemes, first a vowel mark is added, then a final consonant.</p>
      </orig>
     </text>
    </group>
@@ -5693,9 +5693,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not{{_}}Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
+      <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of the population was illiterate. The Santali language is not{{_}}Indo-European, but Austro-Asian, and Brahmi-based alphabets are ill-suited. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
       <p />
-      <p>Ol Chiki consists of 30 letters, names correspond to look. First three: {{sm|ᱚ}}{{_}}fire, {{sm|ᱛ}}{{_}}earth, {{sm|ᱜ}}{{_}}vomit.</p>
+      <p>Ol Chiki consists of 30 letters, and the names correspond to their looks. The first three: {{sm|ᱚ}}{{_}}fire, {{sm|ᱛ}}{{_}}earth, {{sm|ᱜ}}{{_}}vomit.</p>
      </orig>
      <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal to encode]</au-cmt>
     </text>
