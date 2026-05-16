@@ -5,7 +5,7 @@
 * Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
-* Then you need to recreate working directory, symlinking all files/folders existing in original Unicodia.
+* Then you need to recreate the working directory, symlinking all files/folders existing in original Unicodia.
 * Congratulations! You can now run Unicodia directly from Qt Creator!
 
 # Hidden commands
