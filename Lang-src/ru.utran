@@ -2233,12 +2233,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:control|Control]] characters by themselves have no graphic representation. This block gathers notations used to display control characters. The most important to us is character {{sm|␣}} meaning [[pt:space|space]].</p>
+      <p>[[pt:control|Control]] characters by themselves have no graphic representation. This block gathers [[pt:graphic|graphic]] notations for these characters. The most important to us is {{sm|␣}} for [[pt:space|space]].</p>
       <p />
-      <p>Several images of control characters are present in other blocks: {{sm|↵←⌫}}.</p>
+      <p>Several images of control characters are in other blocks: {{sm|↵←⌫}}.</p>
      </orig>
      <transl>
-      <p>Сами по себе [[pt:control|управляющие]] символы не{{_}}имеют никакого графического представления. В этом блоке собраны условные знаки, которыми изображают управляющие символы. В первую очередь нам важен символ {{sm|␣}}, изображающий [[pt:space|пробел]].</p>
+      <p>Сами по себе [[pt:control|управляющие]] символы не{{_}}имеют никакого графического представления. В этом блоке собраны условные знаки для управляющих символов. В первую очередь нам важен символ {{sm|␣}}, изображающий [[pt:space|пробел]].</p>
       <p />
       <p>Несколько изображений управляющих символов есть в и других блоках: {{sm|↵←⌫}}.</p>
      </transl>
@@ -2251,13 +2251,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Optical and magnetic ink character recognition is used for automatic document entry, mostly passports, bank cheques, and transport tickets. Unlike barcodes, the same characters are recognized by both people and machines to diminish fraud. Both technologies use special monospace fonts. These fonts (sometimes in distorted form) are widely used in films and video games of the cyberpunk genre.</p>
+      <p>Optical and magnetic ink character recognition is used for automatic document entry, mostly passports, bank cheques, and transport tickets. Unlike barcodes, the same characters are recognized by both people and machines, reducing fraud. Both technologies use special monospace fonts. These fonts (sometimes distorted) are widely used in films and video games of the cyberpunk genre.</p>
       <p />
-      <p>In 1956 the USA demonstrated magnetic ink character recognition (MICR). The system understands ten digits and four special characters identifying the field’s meaning. Magnetic recognition is significantly more reliable than optical. If you see a square font where part of the vertical strokes is thick (for example, on the box of ''Magnavox Odyssey'' console){{-}}this is stylized MICR.</p>
+      <p>In 1956, the USA demonstrated magnetic ink character recognition (MICR). The system understands ten digits and four special characters that identify the field’s meaning. Magnetic recognition is significantly more reliable than optical. If you see a boxy font in which vertical strokes are partially thick (for example, on the box of the ''Magnavox Odyssey'' console), this is stylized MICR.</p>
       <p />
-      <p>In 1968 the USA made the first working technology of optical recognition, OCR-A. Understands the entire [[ps:Latn|Latin]] alphabet with small letters. To separate fields, special characters are used: hook, chair, fork, buckle and bowtie. The font is found in films ''13 Hours: The Secret Soldiers of Benghazi'', ''The Blacklist'', ''The Pretender'', ''Bugs'' and others.</p>
+      <p>In 1968, the USA developed the first working optical recognition technology, OCR-A. Understands the entire [[ps:Latn|Latin]] alphabet, including small letters. To separate fields, special characters are used: hook, chair, fork, buckle and bowtie. The font is used in films ''13 Hours: The Secret Soldiers of Benghazi'', ''The Blacklist'', ''The Pretender'', ''Bugs'' and others.</p>
       <p />
-      <p>Only in the 1990s font-independent optical recognition was developed. It is used for digitization of books and processing of questionnaires, and is much less reliable. So foreign passport with a machine-readable page written in OCR-B font is not{{_}}an{{_}}anachronism.</p>
+      <p>Only in the 1990s was font-independent optical recognition developed. It is used for book digitization and questionnaire processing, and is much less reliable. So a foreign passport with a machine-readable page in OCR-B font is not{{_}}an{{_}}anachronism.</p>
      </orig>
      <transl>
       <p>Оптическое и магнитное распознавание символов служит для автоматического ввода документов, в первую очередь паспортов, банковских чеков, транспортных билетов. В отличие от штрих-кодов, одни и те же символы распознаются людьми и машинами, что исключает подлог. Обе технологии используют специальные моноширинные шрифты. Эти шрифты (иногда в несколько искажённом виде) широко встречаются в фильмах и играх жанра «киберпанк».</p>
@@ -2266,7 +2266,7 @@
       <p />
       <p>В 1968 в США сделали первую действующую технологию оптического распознавания{{-}}OCR-A. Понимает весь [[ps:Latn|латинский]] алфавит с малыми буквами. Для разделения полей используются специальные символы: крючок, стул, вилка, пряжка и бабочка. Шрифт встречается в фильмах «13 часов: Тайные солдаты Бенгази», «Чёрный список», «Притворщик», «Электронные жучки» и других.</p>
       <p />
-      <p>Шрифтонезависимое оптическое распознавание появилось лишь в 1990‑е. Оно используется для оцифровки книг, обработки анкет и значительно менее надёжное. Так что загранпаспорт с машиночитаемой страницей, написанной шрифтом OCR-B{{,-}}не{{_}}анахронизм.</p>
+      <p>Шрифтонезависимое оптическое распознавание появилось лишь в 1990‑е. Оно используется для оцифровки книг, обработки анкет и значительно менее надёжное. Так что загранпаспорт с машиночитаемой страницей шрифтом OCR-B{{-}}не{{_}}анахронизм.</p>
      </transl>
     </text>
    </group>
@@ -2276,7 +2276,7 @@
      <transl>Обрамлённые буквы и цифры</transl>
     </text>
     <text id="Text">
-     <orig>According to English Wikipedia, these characters are mainly used for lists{{-}}“half numbered, half bulleted”. {{em|Ⓜ}} is used as [[pt:emoji|emoji]] for metro/subway.</orig>
+     <orig>According to English Wikipedia, these characters are mainly used for lists{{-}}“half numbered, half bulleted”. {{em|Ⓜ}} is used as an [[pt:emoji|emoji]] for metro/subway.</orig>
      <transl>По данным английской Википедии, эти символы в основном предназначены для списков{{-}}«наполовину маркированных, наполовину нумерованных». {{em|Ⓜ}} используется как [[pt:emoji|эмодзи]] для метро.</transl>
     </text>
    </group>
@@ -2291,7 +2291,7 @@
       <p />
       <p>[[po:Ibm]] compatibles had two types of lines, single and double. Unicode adds heavy, dotted and heavy dotted lines.</p>
       <p />
-      <p>''[[po:BbcMaster]]'' computer has rounded corners.</p>
+      <p>The ''[[po:BbcMaster]]'' computer has rounded corners.</p>
      </orig>
      <transl>
       <p>Элементы [[pt:pseudographics|псевдографики]], используемые для рисования рамок. Как и любая псевдографика, чаще всего используются в моноширинных шрифтах.</p>
@@ -2309,11 +2309,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Elements of [[pt:pseudographics|pseudographics]] used for solid fill. Like all pseudographics, they are mostly used in monospace fonts. In proportional fonts half fill {{sm|▀}}, shaded fill {{sm|░}} and other characters from IBM are usually vertically stretched, and quarter fill from ZX{{_}}Spectrum {{sm|▚}} is square. In this font{{-}}it’s open fint DejaVu abandoned in 2016{{-}}everything is right.</p>
+      <p>Elements of [[pt:pseudographics|pseudographics]] used for solid fill. Like all pseudographics, they are mostly used in monospace fonts. In proportional fonts, half fill {{sm|▀}}, shaded fill {{sm|░}} and other characters from IBM are usually vertically stretched, and quarter fill from ZX{{_}}Spectrum {{sm|▚}} is square. In this font{{-}}it’s the open-source DejaVu, abandoned in 2016{{-}}everything is right.</p>
       <p />
       <p>Pseudographics usually have no inter-character interval.</p>
       <p />
-      <p>Part of pseudographics from legacy computers, for example 2×3 blocks, are missing here and were [[pk:1FB00|added]] only in 2020.</p>
+      <p>Some pseudographics from legacy computers, for example, 2×3 blocks, are missing here and were [[pk:1FB00|added]] only in 2020.</p>
      </orig>
      <transl>
       <p>Элементы [[pt:pseudographics|псевдографики]], используемые для сплошной заливки. Как и любая псевдографика, чаще всего используются в моноширинных шрифтах. В пропорциональных шрифтах половинная заливка {{sm|▀}}, растровая заливка {{sm|░}} и другие символы с IBM обычно вытянуты по вертикали, а четвертная заливка с ZX{{_}}Spectrum {{sm|▚}}{{-}}квадратная. В данном{{-}}это открытый шрифт DejaVu, брошенный в 2016{{-}}всё правильно.</p>
@@ -2330,7 +2330,7 @@
      <transl>Геометрические фигуры</transl>
     </text>
     <text id="Text">
-     <orig>Geometric shapes are used for button marking, rough drawing of user interfaces. For instance, four buttons of ''Sony Playstation'' {{sm|🞩○△□}}{{-}}three of them are taken from this block. Character {{sm|◌}} is used in Unicode for showcasing [[pt:combining|combining]] marks.</orig>
+     <orig>Geometric shapes are used for button marking, crude drawing of user interfaces. For instance, four buttons of the ''Sony PlayStation'' {{sm|🞩○△□}}{{-}}three of them are taken from this block. Character {{sm|◌}} is used in Unicode for showcasing [[pt:combining|combining]] marks.</orig>
      <transl>Геометрические фигуры используются для маркировки кнопок, грубого рисования пользовательских интерфейсов. Вот, например, четыре кнопки ''Sony Playstation'' {{sm|🞩○△□}}{{-}}три из них взяты из этого блока. Символ {{sm|◌}} используется в Юникоде для маркировки [[pt:combining|комбинирующих]] знаков.</transl>
     </text>
    </group>
