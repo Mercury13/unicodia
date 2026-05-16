@@ -1832,7 +1832,7 @@
      <transl>Канадська складова розширена</transl>
     </text>
     <text id="Text">
-     <orig>Letters for Cree, Ojibwe ''(Algonquin)'', Carrier, Dene ''(Atabascan)''.</orig>
+     <orig>Letters for Cree, Ojibwe ''(Algonquin)'', Carrier, Dene ''(Athabascan)''.</orig>
      <transl>Літери для крі, оджибве ''(алгонкінської)'', керієр, дене ''(атабаскських)''.</transl>
     </text>
    </group>
@@ -1861,9 +1861,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of the 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this character, and in Unicode{{_}}{{vkhmer}} is still not{{_}}recommended.</p>
+      <p>The first character of the block {{sm|᧠}} is the name of the 8th month in the Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this character, and in Unicode{{_}}{{vkhmer}}, it is still not{{_}}recommended.</p>
       <p />
-      <p>The rest are the names of days in the lunar calendar from the new moon to full and back.</p>
+      <p>The rest are the names of days in the lunar calendar from the new moon to the full one, and back.</p>
      </orig>
      <au-cmt>{{vkhmer}} = version that discourages that umlaut</au-cmt>
      <transl>
@@ -7189,11 +7189,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>According to tradition, the script was invented in 9th century by King Sirijunga and revived eight centuries later by scholar with the same who is considered King’s reincarnation. More down-to-earth version states that it comes from [[ps:Lepc|Lepcha]] and cannot be so ancient.</p>
+      <p>According to tradition, the script was invented in the 9th century by King Sirijunga and revived eight centuries later by a scholar of the same name, who is considered the King’s reincarnation. A more down-to-earth version states that it comes from [[ps:Lepc|Lepcha]] and cannot be that ancient.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}.</p>
+      <p>The inherent vowel is {{t|ɔ}}.</p>
       <p />
-      <p>Initial vowels do{{_}}not{{_}}have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. To get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. Underscore-like [[pt:virama|virama]] is used in loadwords for letters that do not have final form, and sometimes in syllables with long vowel {{sm|ᤁᤁ᤻}} {{t|kɔ:k}}.</p>
+      <p>Initial vowels do{{_}}not{{_}}have a special shape, but are instead written with a “null” consonant {{sm|ᤀ}}, which resembles the Nepal flag. To get a syllable of three phonemes, first a vowel mark is added, then a final consonant: {{sm|ᤐᤳᤗᤥ}} {{t|pɔtlo}}. An underscore-like [[pt:virama|virama]] is used in loadwords for letters that do not have final form, and sometimes in syllables with long vowel {{sm|ᤁᤁ᤻}} {{t|kɔ:k}}.</p>
      </orig>
      <transl>
       <p>Традиційно вважається, що писемність була створена у IX{{_}}столітті королем Сіріджонгою та відроджена восьма століттями пізніше одноіменним філософом, що став його реінкарнацією. За більш приземленою версією, походить з [[ps:Lepc|лепчі]] і не{{_}}може бути таким давнім.</p>
@@ -9036,13 +9036,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script of [[ps:Mymr|Burmese]] origin. Tones weren’t written initially. After several reforms of 20th century (last in 1988) the script almost turned to alphabet, and it remains an abugida because of empty consonant {{sm|ᥟ}} if the word starts with vowel, and tone letters after final consonant of syllable (if it’s present).</p>
+      <p>A script of [[ps:Mymr|Burmese]] origin. Tones weren’t written initially. After several 20th-century reforms (the last in 1988), the script almost became an alphabet, and it remains an abugida because of an empty consonant {{sm|ᥟ}} when a word starts with a vowel, and tone letters after the final consonant of the syllable (if present).</p>
       <p />
-      <p>Spaces are written between sentences rather that words.</p>
+      <p>Spaces are written between sentences rather than words.</p>
       <p />
-      <p>In Tai Le of 3rd reform (1963–1988) usual European umlauts were used for tones: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
+      <p>In Tai Le of the 3rd reform (1963–1988), European diacritics were used for tones: &lt;big&gt;à, á, ȧ, ä, ǎ&lt;/big&gt;.</p>
       <p />
-      <p>There are about {{n|500000}} Tai Nüa in China, but the language is being quickly supplanted with Chinese and thus is classified vulnarable. Less than {{n|500000}} more are scattered across other countries.</p>
+      <p>There are about {{n|500000}} Tai Nüa in China, but the language is being rapidly supplanted by Chinese and is therefore classified as vulnerable. Fewer than {{n|500000}} more are scattered across other countries.</p>
      </orig>
      <transl>
       <p>Писемність [[ps:Mymr|бірманського]] походження. Тони початково не{{_}}записувалися. Після кількох реформ XX{{_}}століття (остання{{-}}1988) писемність майже перетворилася на алфавітну, і абуґідою її залишає «порожня» приголосна {{sm|ᥟ}} на початку слова, якщо воно починається з голосної, та тонові літери після концевої приголосної слога (якщо така є).</p>
@@ -9066,9 +9066,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is not related to [[ps:Tale|Tai Le]], though languages are close relatives. Created in 1950s by Chinese authorities to replace [[ps:Lana|Lanna]].</p>
+      <p>The script is not related to [[ps:Tale|Tai Le]], though languages are close relatives. Created in the 1950s by Chinese authorities to replace [[ps:Lana|Lanna]].</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. Virama looks like a looped hook and is written together with consonant in Unicode: {{sm|ᧇ}}. Writing of tones is unusual: consonants are in two cases, and the syllable may be followed with two signs {{sm|ᧈᧉ}}, total 2×3=6 tones.</p>
+      <p>The inherent vowel is {{t|a}}. Virama looks like a looped hook and is fused with a consonant in Unicode: {{sm|ᧇ}}. The writing of tones is unusual: consonants are in two cases, and the syllable may be followed by two signs {{sm|ᧈᧉ}}, for a total of 2×3=6 tones.</p>
      </orig>
      <transl>
       <p>Письмо не пов’язане з [[ps:Tale|тай-ниа]], хоча мови{{-}}близькі родичі. Створене у 1950-і китайською владою для заміни [[ps:Lana|ланни]].</p>
