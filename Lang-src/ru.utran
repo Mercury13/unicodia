@@ -2669,7 +2669,7 @@
       <p>* upward horizontal line T;</p>
       <p>* clockwise curve W.</p>
       <p />
-      <p>Among supplementary elements: flat part B, circle Q, slant X, break Z. For every stroke it’s codified in what direction it must be written.</p>
+      <p>Among supplementary elements: flat part B, circle Q, slant X, break Z. For every stroke, it’s codified in what direction it must be written.</p>
       <p />
       <p>All names are Chinese: for example, B from ''biǎn'' “flat”.</p>
      </orig>
@@ -2697,7 +2697,7 @@
      <transl>Катакана — фонетические расширения</transl>
     </text>
     <text id="Text">
-     <orig>Small Katakana characters for conveying phonemes of Ainu languages.</orig>
+     <orig>Small Katakana characters for conveying phonemes of the Ainu languages.</orig>
      <transl>Символы катáканы для передачи звуков айнского языка.</transl>
     </text>
    </group>
@@ -2710,9 +2710,9 @@
      <orig>
       <p>[[ps:Kana|Katakana]], [[ps:Hang|Hangul]] and [[ps:Hani|ideographs]] enclosed in brackets and circles.</p>
       <p />
-      <p>Also several characters that should have been in other blocks: abbreviations of measuring units, digits 21 to 50 in circles, speed limit signs (10…80 in circles and squares).</p>
+      <p>Also, several characters that should have been in other blocks: abbreviations of measuring units, digits 21 to 50 in circles, speed limit signs (10…80 in circles and squares).</p>
       <p />
-      <p>In 2019 Reiwa sign was added{{-}}ideograph for reign of new Emperor Naruhito.</p>
+      <p>In 2019, the Reiwa sign was added{{-}}the ideograph for the reign of the new Emperor Naruhito.</p>
      </orig>
      <transl>
       <p>[[ps:Kana|Катáкана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах.</p>
@@ -2729,16 +2729,16 @@
      <transl>ККЯ символы совместимости</transl>
     </text>
     <text id="Text">
-     <orig>Characters for compatibility with [[pt:cjk|CJK]] encodings. Various Japanese abbreviations (apartment, alpha, ampere, are=100{{_}}m²…), telegraph symbols, eras of Japanese emperors’ reign, measurement units fitting into CJK squares.</orig>
+     <orig>Characters for compatibility with [[pt:cjk|CJK]] encodings. Various Japanese abbreviations (apartment, alpha, ampere, are=100{{_}}m²…), telegraph symbols, eras of Japanese emperors’ reigns, measurement units that fit within CJK squares.</orig>
      <transl>Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.</transl>
     </text>
    </group>
    <group id="3400">
     <text id="Text">
      <orig>
-      <p>{{n|6582}} rare [[ps:Hani|Chinese ideographs]]. In 2020 ten more were added, filling the block completely.</p>
+      <p>{{n|6582}} rare [[ps:Hani|Chinese ideographs]]. In 2020, ten more were added, filling the block completely.</p>
       <p />
-      <p>The first of ideographs means “hill, mound, grave”, and currently replaced with character {{sm|丘}}. The second is an obsolete ideograph that means in different sources “lick”, “woven mat”, “bamboo sheath”, “unilluminated”.</p>
+      <p>The first ideograph means “hill, mound, grave” and has been replaced by {{sm|丘}}. The second is an obsolete ideograph that, in different sources, means “lick”, “woven mat”, “bamboo sheath”, “unilluminated”.</p>
      </orig>
      <transl>
       <p>6582 редких [[ps:Hani|китайских иероглифа]]. В 2020 добавили ещё 10, заполнив блок до отказа.</p>
@@ -2754,11 +2754,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Book of Changes (Yi Jing or I Ching) is a Chinese esoterical text written by several generations. The oldest part was written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must random a hexagram and read its meaning.</p>
+      <p>The Book of Changes (Yi Jing or I Ching) is a Chinese esoteric text compiled over several generations. The oldest part was written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must randomly select a hexagram and read its meaning.</p>
       <p />
       <p>It is known that divination used a bundle of 50 sticks, traditionally stalks of yarrow, but it’s unknown how exactly. Methods with coin flipping appeared later, and modern divination using sticks is a reconstruction.</p>
       <p />
-      <p>Hexagrams are encoded in the same order as in the book: you take its number 1…64, add offset 4DBF₁₆=19903₁₀, and get a Unicode point.</p>
+      <p>Hexagrams are encoded in the same order as in the book: you take a number 1…64, add offset 4DBF₁₆=19903₁₀, and get a Unicode point.</p>
       <p />
       <p>There was also a philosopher named Yijing in China, unrelated to the book.</p>
      </orig>
