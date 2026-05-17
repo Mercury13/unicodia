@@ -2383,7 +2383,7 @@
    </group>
    <group id="2900">
     <text id="Text">
-     <orig>Intersecting arrows from theory of knots, harpoons, curved arrows, and other symbols.</orig>
+     <orig>Intersecting arrows from the theory of knots, harpoons, curved arrows, and other symbols.</orig>
      <transl>Схрещені стрілки з теорії вузлів, гарпуни, викривлені стрілки та інші символи.</transl>
     </text>
    </group>
@@ -2410,9 +2410,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arrows of different use, geometric shapes, characters from ''Wingdings'' and ''Webdings'' fonts, Japanese television symbols, astrological symbols, stars of ratings, chess comments.</p>
+      <p>Arrows for different uses, geometric shapes, characters from ''Wingdings'' and ''Webdings'' fonts, Japanese television symbols, astrological symbols, rating stars, chess comments.</p>
       <p />
-      <p>''Hellschreiber pause symbol'' was used in German telegraph machines.</p>
+      <p>The ''Hellschreiber pause symbol'' was used in German telegraph machines.</p>
      </orig>
      <transl>
       <p>Стрілки різного призначення, геометричні фігури, символі зі шрифтів ''Wingdings'' та ''Webdings'', японські телевізійні символи, астрологічні символи, зірки оцінок, шахові коментарі.</p>
@@ -5507,16 +5507,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Braille is a dot writing system for blind people. It uses groups 2×3{{_}}dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
+      <p>Braille is a dot writing system for blind people. It uses groups of 2×3{{_}}dots with binary encoding; the fourth row is sometimes added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight), “switched” with special characters.</p>
       <p />
-      <p>Louis Braille, son of a leatherer, at the age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for the blind and used line-embossed type there. The other prototype for Braille is Charles Barbier’s “night writing”. Barbier used a 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officers sometimes reading by touch, but bad for blind person who reads long texts. Braille reduced the matrix by using binary code. Braille invented his code at the age of 15, and worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
+      <p>Louis Braille, son of a leatherer, was wounded with an awl at the age of 3 and lost vision. Braille managed to enter Valentin Haüy’s school for the blind and used line-embossed type there. The other prototype for Braille is Charles Barbier’s “night writing”. Barbier used a 2×6{{_}}matrix, with 1 to 6 dots embossed in each column. That’s OK for sighted officers who sometimes read by touch, but it’s bad for a blind person who reads long texts. Braille reduced the matrix by using binary code. Braille invented his code at the age of 15, and worked at Haüy’s school, but sighted teachers were so opposed to it that only 2{{_}}years after his death, blind students convinced teachers to adopt the system.</p>
       <p />
-      <p>Braille industrialized assistive technologies for the blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to the normal text for sighted people or even over it.</p>
+      <p>Braille industrialized assistive technologies for the blind: easy to emboss; does{{_}}not{{_}}come into view when embossed next to normal text for sighted people, or even over it.</p>
      </orig>
      <transl>
       <p>Шрифт Брайля{{-}}крапковий шрифт для сліпих. У ньому використовуються групи 2×3{{_}}крапки з двійковим кодуванням; іноді додається і четвертий рядок. Кодування відрізняється навіть для британського і американського Брайля. Має декілька «регістрів» (літери, цифри, виділення), що «перемикаються» спеціальними символами.</p>
       <p />
-      <p>Луї Брайль, син шорника, у 3 роки поранився шилом і втратив зір. Брайль зумів потрапити у школу для сліпих Валентина Гаюḯ та користувався там рельєфно-лінійним шрифтом. Інший прообраз шрифту Брайля{{-}}нічна абетка Шарля Барб’є. У цій абетці матриця мала розмір 2×6{{_}}комірок, від 1 до 6 крапок у кожній колонці вичавлені, що підходить для зрячого військового, що зрідка читає навпомацки, і зовсім не{{_}}придатне для сліпого, що читає багато. Брайль скоротив матрицю, скористувавшись двійковим кодом. Брайль винайшов код у віці 15{{_}}років, працював у школі Гаюї, але зрячі вчителі були так проти, що тільки через 2{{_}}роки після його смерті сліпі учні переконали вчителів прийняти систему.</p>
+      <p>Луї Брайль, син шорника, у 3 роки поранився шилом і втратив зір. Брайль зумів потрапити у школу для сліпих Валентина Гаюḯ та користувався там рельєфно-лінійним шрифтом. Інший прообраз шрифту Брайля{{-}}нічна абетка Шарля Барб’є. У цій абетці матриця мала розмір 2×6{{_}}комірок, від 1 до 6 крапок у кожній колонці вичавлені, що підходить для зрячого військового, що зрідка читає навпомацки, і зовсім не{{_}}придатне для сліпого, що читає багато. Брайль скоротив матрицю, скориставшись двійковим кодом. Брайль винайшов код у віці 15{{_}}років, працював у школі Гаюї, але зрячі вчителі були так проти, що тільки через 2{{_}}роки після його смерті сліпі учні переконали вчителів прийняти систему.</p>
       <p />
       <p>Шрифт Брайля поставив реабілітацію сліпих на промислові рейки: легко зробити пристрій для тиснення Брайлем, він не{{_}}кидається в очі, будучи вичавлений поряд зі звичайним текстом для зрячих чи навіть поверх нього.</p>
      </transl>

@@ -1822,7 +1822,7 @@
    </group>
    <group id="2900">
     <text id="Text">
-     <orig>Intersecting arrows from theory of knots, harpoons, curved arrows, and other symbols.</orig>
+     <orig>Intersecting arrows from the theory of knots, harpoons, curved arrows, and other symbols.</orig>
     </text>
    </group>
    <group id="2980">
@@ -1844,9 +1844,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arrows of different use, geometric shapes, characters from ''Wingdings'' and ''Webdings'' fonts, Japanese television symbols, astrological symbols, stars of ratings, chess comments.</p>
+      <p>Arrows for different uses, geometric shapes, characters from ''Wingdings'' and ''Webdings'' fonts, Japanese television symbols, astrological symbols, rating stars, chess comments.</p>
       <p />
-      <p>''Hellschreiber pause symbol'' was used in German telegraph machines.</p>
+      <p>The ''Hellschreiber pause symbol'' was used in German telegraph machines.</p>
      </orig>
     </text>
    </group>
@@ -4077,11 +4077,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Braille is a dot writing system for blind people. It uses groups 2×3{{_}}dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
+      <p>Braille is a dot writing system for blind people. It uses groups of 2×3{{_}}dots with binary encoding; the fourth row is sometimes added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight), “switched” with special characters.</p>
       <p />
-      <p>Louis Braille, son of a leatherer, at the age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for the blind and used line-embossed type there. The other prototype for Braille is Charles Barbier’s “night writing”. Barbier used a 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officers sometimes reading by touch, but bad for blind person who reads long texts. Braille reduced the matrix by using binary code. Braille invented his code at the age of 15, and worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
+      <p>Louis Braille, son of a leatherer, was wounded with an awl at the age of 3 and lost vision. Braille managed to enter Valentin Haüy’s school for the blind and used line-embossed type there. The other prototype for Braille is Charles Barbier’s “night writing”. Barbier used a 2×6{{_}}matrix, with 1 to 6 dots embossed in each column. That’s OK for sighted officers who sometimes read by touch, but it’s bad for a blind person who reads long texts. Braille reduced the matrix by using binary code. Braille invented his code at the age of 15, and worked at Haüy’s school, but sighted teachers were so opposed to it that only 2{{_}}years after his death, blind students convinced teachers to adopt the system.</p>
       <p />
-      <p>Braille industrialized assistive technologies for the blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to the normal text for sighted people or even over it.</p>
+      <p>Braille industrialized assistive technologies for the blind: easy to emboss; does{{_}}not{{_}}come into view when embossed next to normal text for sighted people, or even over it.</p>
      </orig>
     </text>
    </group>
