@@ -193,8 +193,8 @@ namespace uc {
           Z_NOR_7,
          NOTO,
           Z_NOT_1,      ///< Funky, do not delete, needed for alias GREEK_COPTIC
-         NOTO1,         ///< Funky → Noto, samples Noto
-          Z_NO1_1,
+         NOTO1,         ///< Funky → Noto, samples just Noto
+          Z_NO1_1,      ///< ...for Tone Letters
          NOTO_SYMBOL2,
           Z_NS2_1,      ///< Backed by Pseudographica
           Z_NS2_2,      ///< Backed by Funky
