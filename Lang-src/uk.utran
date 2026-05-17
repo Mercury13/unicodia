@@ -2787,7 +2787,7 @@
      <transl>Ї — ключі</transl>
     </text>
     <text id="Text">
-     <orig>Radicals used for “alphabetical sorting” of Yi dictionaries.</orig>
+     <orig>Radicals for “alphabetical sorting” of Yi dictionaries.</orig>
      <transl>Ключі для алфавітного сортування словників мови '''[[ps:Yiii|ї]]'''.</transl>
     </text>
    </group>
@@ -6487,7 +6487,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Archaeologists have discovered pictographs dating back to ≈6000{{_}}BC. The first inscriptions that were surely texts are questions on oracle bones from ≈1200{{_}}BC. By 200{{_}}BC, the characters got a style similar to modern.</p>
+      <p>Archaeologists have discovered pictographs dating back to ≈6000{{_}}BC. The first inscriptions that were surely texts are questions on oracle bones from ≈1200{{_}}BC. By 200{{_}}BC, the characters had a style similar to modern.</p>
       <p />
       <p>People had abandoned ideographs by the common era, but China conserved the archaic script for several reasons:</p>
       <p>* multiethnic population{{-}}besides the state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
@@ -6495,13 +6495,13 @@
       <p>* cult of tradition{{-}}even today the Chinese are rather conservative;</p>
       <p>* meritocracy that worked somehow{{-}}thousands of signs and the ability to write them nicely detected trainable people.</p>
       <p />
-      <p>In the 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).</p>
+      <p>In the 3rd century CE, ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined by context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching the moon).</p>
       <p />
-      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
+      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong, it’s understandable what they are writing about.</p>
       <p />
-      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses them very seldom.</p>
+      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South Korea uses them very seldom.</p>
       <p />
-      <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
+      <p>The Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
      <transl>
       <p>Археологи знайшли піктограми аж ≈6000{{bc}} Перші точно тексти{{-}}запитання на гадальних кістках ≈1200{{bc}} До 200{{bc}} символи набули стилю, близького до сучасного.</p>
@@ -7270,13 +7270,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was invented by Myanmar preacher Sara Ba Thaw and British missionary James Fraser. Consists of capital [[ps:Latn|Latin]] letters, both upright and turned. There are no small letters. Due to missionaries’ efforts {{%|40}} of Lisu are protestants. China recognized the script in 1992.</p>
+      <p>The alphabet was invented by Myanmar preacher Sara Ba Thaw and British missionary James Fraser. Consists of capital [[ps:Latn|Latin]] letters, both upright and turned. There are no small letters. Due to missionaries’ efforts, {{%|40}} of the Lisu are Protestants. China recognized the script in 1992.</p>
       <p />
-      <p>There were other attempts to teach Lisu write: syllabic script resembling [[ps:Hani|Chinese ideographs]] (≈1925), Pinyin-based (Latin transliteration of Chinese) Latin (1957), [[ps:Plrd|Pollard alphabet]] (Miao) and [[ps:Mymr|Myanmar]]-based script.</p>
+      <p>There were other attempts to teach Lisu to write: a syllabic script resembling [[ps:Hani|Chinese ideographs]] (≈1925), a Pinyin-based (Latin transliteration of Chinese) Latin script (1957), the [[ps:Plrd|Pollard alphabet]] (Miao), and a [[ps:Mymr|Myanmar]]-based script.</p>
      </orig>
      <au-cmt>In Russian: Sara Ba Thaw = Сара Ба Тау</au-cmt>
      <transl>
-      <p>Алфавіт придуманий бірманським проповідником Сара Ба Тау та британським місіонером Джеймсом Фрейзером. Складається з великих [[ps:Latn|латинських]] літер, як звичайних, так і повернутих. Малого регістра нема. Завдяки зусиллям місіонерів {{%|40}} лісу{{-}}протестанти. Китайці визнали писемність у 1992.</p>
+      <p>Алфавіт придуманий бірманським проповідником Сара Ба Тау та британським місіонером Джеймсом Фрейзером. Складається з великих [[ps:Latn|латинських]] літер, як звичайних, так і повернутих. Малого регістру нема. Завдяки зусиллям місіонерів {{%|40}} лісу{{-}}протестанти. Китайці визнали писемність у 1992.</p>
       <p />
       <p>Були і інші спроби навчити лісу писати: складове письмо, що нагадує [[ps:Hani|китайські ієрогліфи]] (≈1925), заснована на піньїні (латинському записі китайської) латинка (1957), [[ps:Plrd|алфавіт Полларда]] (мяо) і писемність на [[ps:Mymr|бірманській]] основі.</p>
      </transl>
