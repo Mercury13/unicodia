@@ -2808,7 +2808,7 @@
      <orig>
       <p>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.</p>
       <p />
-      <p>Rare [[pt:ligature|ligature]] “multiocular O” is used only in the church epithet “many-eyed” (мног{{funky|ꙮ}}кий). In Unicode{{_}}15 seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</p>
+      <p>Rare [[pt:ligature|ligature]] “multiocular O” is used only in the church epithet “many-eyed” (мног{{funky|ꙮ}}кий). In Unicode{{_}}15, seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</p>
      </orig>
      <transl>
       <p>Старо- та церковнослов’янська, дореволюційна абхазька (кирилиця Услара, 1862), знаки інтонації для литовської діалектології.</p>
@@ -5297,9 +5297,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did{{_}}not{{_}}convey all tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but the script continued to work in limited volume until Njoya’s death in the 1930s. In 2007 a revival project started, but the progress is insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
+      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases), A to G, were released, starting with ideographic and ending with syllabic. But Njoya’s alphabet did{{_}}not{{_}}convey all tones, and there were many homographs. The French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but the script continued to be used in limited volume until Njoya’s death in the 1930s. In 2007, a revival project began, but the progress has been minimal. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
       <p />
-      <p>Consonants are initially voiceless, adding the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… The top line works as [[pt:virama|virama]] removing a vowel from syllable, and is attested above just 13 signs.</p>
+      <p>Consonants are initially voiceless, adding the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. A vowel after a syllable puts another vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. A circumflex over a character changes the syllable somehow{{-}}puts a glottal stop, removes nasalization, changes the vowel… The top line works as a [[pt:virama|virama]], removing a vowel from a syllable, and is attested above just 13 signs.</p>
      </orig>
      <transl>
       <p>Писемність придумав Ібрагім Нджоя, султан Бамуму (захід Камеруну). Було випущено сім версій (A…G), починаючи з ієрогліфів та закінчуючи складовою. Правда, алфавіт Нджої передавав не{{_}}усі тони, і виникло багато омографів. Французи, що прийшли у 1918, вигнали Нджою і перевели мову на [[ps:Latn|латинку]], але письмо продовжило обмежено працювати аж до смерті Нджої у 1930-х. У 2007 почато проєкт по відродженню, прогрес незначний. Більш ранні витвори Нджої [[pk:16800|можна побачити]] у додаткових площинах Юнікоду.</p>
@@ -9529,9 +9529,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Script appeared about 1833. It was invented by Momolu Duwalu Bukele, probably under influence of [[ps:Cher|Cherokee]] (along with Africans several Native Americans migrated to Liberia, one even became a Vai chief).</p>
+      <p>The script appeared about 1833. It was invented by Momolu Duwalu Bukele, probably under the influence of the [[ps:Cher|Cherokee]] (along with Africans, several Native Americans migrated to Liberia, one even became a Vai chief).</p>
       <p />
-      <p>One of causes of Vai survival is good character set borrowed from African culture. The other is because it was used in trade with Dutch and Portuguese. In 1962 University of Liberia added characters for missing syllables.</p>
+      <p>One of the causes of Vai’s survival is a good character set borrowed from African culture. The other is because it was used in trade with the Dutch and Portuguese. In 1962, the University of Liberia added characters for missing syllables.</p>
      </orig>
      <transl>
       <p>Письмо з’явилося біля 1833. Розробив його Момолу Дувалу Букеле, вважають, що під впливом [[ps:Cher|письма черокі]] (разом з неграми у Ліберію емігрували і індіанці, один став навіть вождем ваї).</p>
