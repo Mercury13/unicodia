@@ -1873,7 +1873,7 @@
      <orig>
       <p>Obsolete [[pt:minuscule|minuscule]] Georgian type ''Nuskhuri''. Letters are slanted to the right and very boxy. Initials were typed in ''Asomtavruli'' from the main block.</p>
       <p />
-      <p>Back in 2000 Georgian State Department of Information Technology and Catholicos Patriarch (head of the Georgian church) asked to encode Nushkhuri, and the Consortium came forward.</p>
+      <p>Back in 2000, the Georgian State Department of Information Technology and the Catholicos-Patriarch (head of the Georgian church) asked to encode Nushkhuri, and the Consortium came forward.</p>
      </orig>
     </text>
    </group>
@@ -1914,7 +1914,7 @@
      <orig>CJK radicals supplement</orig>
     </text>
     <text id="Text">
-     <orig>Alternate forms of Kangxi radicals used as headers in dictionary indices.</orig>
+     <orig>Alternate forms of Kangxi radicals that are used as headers in dictionary indices.</orig>
     </text>
    </group>
    <group id="2F00">
@@ -1925,11 +1925,11 @@
      <orig>
       <p>You might ask: how to find a CJK ideograph in the dictionary if you don’t know the pronunciation? The solution is to identify a ''radical''{{-}}a key stroke or component within the character.</p>
       <p />
-      <p>Kangxi dictionary of Chinese language was compiled in 1710–1716 under the order of the Kangxi Emperor of China and contains {{n|49030}} entries. It remained the standard reference until the late 19th century. A revised edition of 1831 fixed about {{n|2500}} mistakes caused by the hurry of initial authors.</p>
+      <p>The Kangxi Dictionary of the Chinese language was compiled in 1710–1716 at the order of the Kangxi Emperor of China and contains {{n|49030}} entries. It remained the standard reference until the late 19th century. A revised edition in 1831 corrected about {{n|2500}} mistakes caused by the haste of the original authors.</p>
       <p />
       <p>The system of “alphabetical” sorting of ideographs by 214 radicals was first devised in 1615. However, it was the Kangxi dictionary that ultimately standardized that method.</p>
       <p />
-      <p>The sample Unicode glyphs were heavily debated, and are as country-agnostic as possible now.</p>
+      <p>The sample Unicode glyphs were heavily debated, and are now as country-agnostic as possible.</p>
      </orig>
     </text>
    </group>
@@ -1939,9 +1939,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</p>
+      <p>Unicode has a mechanism for describing an unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split into and what’s inside each part. This block makes the first thing.</p>
       <p />
-      <p>All characters are visible, renderers usually do{{_}}not{{_}}recreate ideograph’s look. Zhuang character [[pu:2DA21]] {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
+      <p>All characters are visible, renderers usually do{{_}}not{{_}}recreate the ideograph’s look. Zhuang character [[pu:2DA21]] {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1, the block is completely filled, and one character is even allocated within [[pk:31C0|CJK strokes]].</p>
      </orig>
     </text>
    </group>
@@ -1951,14 +1951,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Punctuation sings and other characters used in [[pt:cjk|CJK]]:</p>
+      <p>Punctuation signs and other characters used in [[pt:cjk|CJK]]:</p>
       <p>* Ideograph-wide [[pt:space|space]].</p>
-      <p>* CJK does{{_}}not{{_}}write the same ideograph twice in a row, and if need so{{-}}write iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadays repeat in printed text, but still use iteration mark in writing.)</p>
+      <p>* CJK does{{_}}not{{_}}write the same ideograph twice in a row, and if needed, uses an iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadays repeat in printed text, but still use an iteration mark in writing.)</p>
       <p>* Some Japanese emblems.</p>
       <p>* Japanese brackets and quotes.</p>
       <p>* Ditto mark —//— widely used in our lists, just in ideographic form.</p>
       <p />
-      <p>Ideographic variation indicator 303E has no special meaning in Unicode, and was encoded for compatibility with two-byte GBK encoding used in China.</p>
+      <p>Ideographic variation indicator 303E has no special meaning in Unicode and was encoded for compatibility with two-byte GBK encoding used in China.</p>
      </orig>
     </text>
    </group>
@@ -6522,9 +6522,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Origin of Old Lybian script is unclear, it’s usually thought that from [[ps:Phnx|Phoenician]]. The oldest specimen are two bilinguals of 2nd century{{_}}BC, from monument to Prince Ateban and from temple of King Masinissa. The script was [[pt:abjad|consonant]], it was usually written bottom-up or right to left.</p>
+      <p>The origin of the Old Libyan script is unclear; it’s usually thought to be derived from [[ps:Phnx|Phoenician]]. The oldest specimens are two bilinguals from the 2nd century{{_}}BC, a monument to Prince Ateban and the temple of King Masinissa. The script was [[pt:abjad|consonant]], it was usually written bottom-up or right-to-left.</p>
       <p />
-      <p>In 20th century a new script was created from Old Lybian, written left to right. Muslim states (particularly Gaddafi’s Lybia and Morocco of 80s) banned the script, but in 2003 the king of Morocco permitted Tifinagh. Transitional Council of Libya also permitted Berber languages and Tifinagh.</p>
+      <p>In the 20th century, a new script was created from Old Libyan, written left to right. Muslim states (particularly Gaddafi’s Libya and Morocco in the 80s) banned the script, but in 2003, the king of Morocco permitted Tifinagh. The Transitional Council of Libya also permitted the Berber languages and Tifinagh.</p>
      </orig>
     </text>
    </group>
