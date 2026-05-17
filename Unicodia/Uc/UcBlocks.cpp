@@ -3,10 +3,10 @@
 
 // Long and glitchy, that’s why I moved out from UcData
 
-consteval uc::TmpHx operator "" _hx (unsigned long long x)
+consteval uc::TmpHx operator ""_hx (unsigned long long x)
     { return { .v = static_cast<unsigned char>(x) }; }
 
-consteval uc::TmpHy operator "" _hy (unsigned long long y)
+consteval uc::TmpHy operator ""_hy (unsigned long long y)
     { return { .v = static_cast<unsigned char>(y) }; }
 
 consteval uc::SvgHint operator + (uc::TmpHx x, uc::ImbaX ix)
@@ -643,7 +643,8 @@ constinit const uc::Block uc::blocks[] {
     // Modifier tone OK
     { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE, Ifg::PAINT_SVG, 7_hx },
             "Modifier Tone Letters",
-            MyName::INST, MapSubtype::SYM_PUNCT },
+            MyName::INST, MapSubtype::SYM_PUNCT,
+            EcScript::NONE, EcFont::NOTO1 },
     // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
     { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE, Ifg::PAINT_SVG },
             "Latin Extended-D",

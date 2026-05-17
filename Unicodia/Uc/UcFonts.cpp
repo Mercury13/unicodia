@@ -96,6 +96,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
       { FAM_FUNKY },                                                            // …1
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT | Ffg::DESC_AVOID },                       // Noto1
+      { FNAME_NOTO },                                                           // …1
     { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },        // Noto symbol2
       { "BabelStonePseudographica.ttf", Ffg::FALL_TO_NEXT },                    // …1
       { FAM_FUNKY },                                                            // …2
