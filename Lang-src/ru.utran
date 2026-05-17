@@ -2340,7 +2340,7 @@
      <transl>Символы разные</transl>
     </text>
     <text id="Text">
-     <orig>This block contains [[pt:emoji|emoji]], characters from astronomy, astrology, tabletop games, Eastern esoteric, religion, politics, and just for adorning printed text. Many characters are taken from Japanese encoding ARIB STD B24 used for broadcasting news, weather, traffic jams over digital television.</orig>
+     <orig>This block contains [[pt:emoji|emoji]], characters from astronomy, astrology, tabletop games, Eastern esotericism, religion, politics, and just for adorning printed text. Many characters are taken from the Japanese encoding ARIB STD B24 used for broadcasting news, weather, and traffic jams over digital television.</orig>
      <transl>В этом разделе есть [[pt:emoji|эмодзи]], знаки из астрономии, астрологии, настольных игр, восточной эзотерики, религии, политики и просто для украшения печатного текста. Многие символы взяты из японской кодировки ARIB STD B24, используемой для передачи новостей, погоды, информации о дорожных заторах через цифровое телевидение.</transl>
     </text>
    </group>
@@ -2351,7 +2351,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, and is guaranteed to exist in every PDF viewer. The block contains several [[pc:VS16]] [[pt:emoji|emoji]].</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). It was widely distributed as PostScript fonts, and is guaranteed to be available in every PDF viewer. The block contains several [[pc:VS16]] [[pt:emoji|emojis]].</p>
       <p />
       <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
@@ -2364,8 +2364,8 @@
    </group>
    <group id="27C0">
     <text id="Text">
-     <orig>Several characters used in geometry, formal logic, program verification, database theory, and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</orig>
-     <transl>Несколько символов, используемых в геометрии, формальной логике, верификации программ, теории баз данных и других разделах математики. Также западный символ деления столбиком.</transl>
+     <orig>Several characters from geometry, formal logic, program verification, database theory, and other fields of mathematics. Also, the Western symbol of long division (the former USSR primarily uses a turned T or a straight L).</orig>
+     <transl>Несколько символов из геометрии, формальной логики, верификации программ, теории баз данных и других разделов математики. Также западный символ деления столбиком.</transl>
     </text>
    </group>
    <group id="27F0">
