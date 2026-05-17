@@ -2375,9 +2375,11 @@ void FmMain::updateFinished(const myht::Result& reply)
                     QMessageBox msg(QMessageBox::Question, head,
                             loc::get("Update.Later").argQ(
                                 updatever::version.toSv(buf), res.version.toSv(buf2)),
-                            QMessageBox::Yes | QMessageBox::No, this);
-                    msg.setButtonText(QMessageBox::Yes, loc::get("Update.Go"));
-                    msg.setButtonText(QMessageBox::No,  loc::get("Update.Close"));
+                            QMessageBox::NoButton, this);
+                    auto& txGo    = loc::get("Update.Go");
+                    auto& txClose = loc::get("Update.Close");
+                    msg.addButton(QMessageBox::Yes)->setText(txGo);
+                    msg.addButton(QMessageBox::No )->setText(txClose);
                     if (msg.exec() == QMessageBox::Yes) {
                         QDesktopServices::openUrl(QUrl{upd::URL_REPO});
                     }
