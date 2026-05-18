@@ -49,7 +49,7 @@ char32_t recodeBengali(char32_t x)
 {
     /// @todo [U18, gag] Recode Bengali
     switch (x) {
-    case 0x09FF: return 0x09F0;
+    case 0x11DF1: return 0x09F0;
     default: return x;
     }
 }

@@ -137,7 +137,8 @@ constinit const uc::Block uc::blocks[] {
             "Devanagari",
             { EcScript::Deva, 0 }, MapSubtype::ALIVE, EcScript::Deva },
     // Bengali OK
-    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA, {}, SvgHint{ 8, 2, ImbaY::BELOW_3 } },
+    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA, Ifg::PAINT_SVG,
+                        SvgHint{ 9, 2, ImbaX::LEFT_3, ImbaY::BELOW_3 } },
             "Bengali",
             { EcScript::Beng, 0 }, MapSubtype::ALIVE, EcScript::Beng },
     // Gurmukhi OK
@@ -1202,7 +1203,8 @@ constinit const uc::Block uc::blocks[] {
             "Tolong Siki",
             { EcScript::Tols, 0 }, MapSubtype::ALIVE,
             EcScript::Tols, EcFont::NORMAL },
-    { 0x11DF0, 0x11DFF, { 0x11DF0, EcContinent::ASIA, Ifg::MISSING },
+    /// @todo [u18, tofu] Bengali supplement
+    { 0x11DF0, 0x11DFF, { 0x11DF1, EcContinent::ASIA, Ifg::PAINT_SVG, SvgHint { 12, 1 } },
             "Bengali Supplement",
             { EcScript::Beng, 1 }, MapSubtype::DEAD,
             EcScript::Beng, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },

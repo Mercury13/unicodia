@@ -3867,8 +3867,8 @@
      <transl>Бенгальский дополнительный</transl>
     </text>
     <text id="Text">
-     <orig>Two old characters of Unicode{{_}}18.0 were moved out from the Base Plane, to minimize the risk of rejection by ISO.</orig>
-     <transl>Два старых символа Юникода{{_}}18.0 были перемещены из базовой плоскости, чтобы снизить риск отказа ISO.</transl>
+     <orig>Two Sanskrit characters from Unicode{{_}}18.0 were moved out of the Base Plane to minimize the risk of rejection by ISO.</orig>
+     <transl>Два санскритских символа Юникода{{_}}18.0 перемещены из базовой плоскости, чтобы снизить риск отказа ISO.</transl>
     </text>
    </group>
    <group id="11EE0">

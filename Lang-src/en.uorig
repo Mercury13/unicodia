@@ -2932,7 +2932,7 @@
      <orig>Bengali supplement</orig>
     </text>
     <text id="Text">
-     <orig>Two old characters of Unicode{{_}}18.0 were moved out from the Base Plane, to minimize the risk of rejection by ISO.</orig>
+     <orig>Two Sanskrit characters from Unicode{{_}}18.0 were moved out of the Base Plane to minimize the risk of rejection by ISO.</orig>
     </text>
    </group>
    <group id="11EE0">
