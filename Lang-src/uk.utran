@@ -3865,7 +3865,7 @@
    <group id="11DF0">
     <text id="Name">
      <orig>Bengali supplement</orig>
-     <transl>Бенгальський додатковий</transl>
+     <transl>Бенгальська додаткова</transl>
     </text>
     <text id="Text">
      <orig>Two old characters of Unicode{{_}}18.0 were moved out from the Base Plane, to minimize the risk of rejection by ISO.</orig>
