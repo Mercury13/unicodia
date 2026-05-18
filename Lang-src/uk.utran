@@ -2830,15 +2830,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Characters of International Phonetic Alphabet used in Chinese, Chinantec ''(natives of Mexico)'' and African languages to convey tone{{-}}change of pitch within a single phoneme.</p>
+      <p>Characters of the International Phonetic Alphabet used in Chinese, Chinantec ''(natives of Mexico)'' and African languages to convey tone{{-}}a change in pitch within a single phoneme.</p>
       <p />
-      <p>Characters {{sm|꜀꜁}} and others are used in etymological analysis of Chinese tones.</p>
+      <p>Characters {{sm|꜀꜁}} and others are used in the etymological analysis of Chinese tones.</p>
       <p />
-      <p>{{sm|꜈꜉}} and others{{-}}for direct specification of pitch and ''tone sandhi''. (''Sandhi'' is a Sanskrit term meaning change of phoneme depending on surrounding phonemes. For example, English &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}but this sandhi is{{_}}not{{_}}tone, English does{{_}}not have tones.)</p>
+      <p>{{sm|꜈꜉}} and others{{-}}for direct specification of pitch and ''tone sandhi''. (''Sandhi'' is a Sanskrit term meaning change in phonemes depending on surrounding phonemes. For example, English &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}but this sandhi is{{_}}not{{_}}tone, English does{{_}}not have tones.)</p>
       <p />
       <p>{{sm|ꜗꜘꜙꜚ}} are used in Chinantec.</p>
       <p />
-      <p>Arrows are used for ''tone steps'' (the next syllable has lower or higher tone). Exclamation marks are a frequent surrogate that was used before wide IPA support in fonts.</p>
+      <p>Arrows indicate ''tone steps'' (the next syllable has a lower or higher tone). Exclamation marks were a common surrogate before the widespread support for IPA in fonts.</p>
      </orig>
      <transl>
       <p>Символи Міжнародного фонетичного алфавіту, що застосовуються у китайському, чинантекському ''(індіанці Мексики)'' і африканських мовах для вказання тону{{-}}зміни висоти звуку у границях однієї фонеми.</p>
@@ -2849,14 +2849,14 @@
       <p />
       <p>{{sm|ꜗꜘꜙꜚ}} застосовуються у чинантекському.</p>
       <p />
-      <p>Стрілки застосовуються для ''тонових кроків'' (у наступному складі тон вище, ніж у попередньому). Знаки оклику{{-}}частий сурогат, що вживався до широкої підтримки МФА у шрифтах.</p>
+      <p>Стрілки позначають ''тонові кроки'' (у наступному складі тон вище або нижче, ніж у попередньому). Знаки оклику{{-}}частий сурогат, що вживався до широкої підтримки МФА у шрифтах.</p>
      </transl>
     </text>
    </group>
    <group id="A720">
     <text id="Text">
-     <orig>Letters from Uralic Phonetic Alphabet, from medieval transcription and notation systems, ancillary Mayan letters used during colonial period, and others.</orig>
-     <transl>Літери, що застосовуються в Уральському фонетичному алфавіті, при вивченні давніх мов, додаткові літери алфавіту мая, що вживалися у колоніальний період, та інші.</transl>
+     <orig>Letters from the Uralic Phonetic Alphabet, medieval transcription and notation systems, ancillary Mayan letters used during the colonial period, and others.</orig>
+     <transl>Літери з застосовуються Уральського фонетичного алфавіту, з середньовічних транскрипцій за записів, додаткові літери алфавіту мая, що вживалися у колоніальний період, та інші.</transl>
     </text>
    </group>
    <group id="A800">
@@ -2871,7 +2871,7 @@
      <transl>Загальноіндійські числові символи</transl>
     </text>
     <text id="Text">
-     <orig>Such characters are found in sources of 16th century, and are used even today in North India, Pakistan and Nepal for writing fractions of size, weight or price.</orig>
+     <orig>Such characters are found in 16th-century sources, and are used even today in North India, Pakistan and Nepal for writing fractions of size, weight or price.</orig>
      <transl>Такі знаки присутні у джерелах XVI{{_}}століття, і застосовуються до сьогоднішніх днів у Північній Індії, Пакістані та Непалі для запису дробів: наприклад, розміру, ваги або ціни.</transl>
     </text>
    </group>
@@ -8241,22 +8241,22 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Mong|Mongolians]] used [[ps:Ougr|Uyghur]] alphabet with minor changes. When Mongols conquered China, Kublai Khan got a problem of communication between court and multinational people, and the task was solved by Phagpa (1235–1280), Kublai’s guru. The script was introduced with great efforts, Uyghur alphabet was banned at least twice. In 1368 Chinese overthrew Mongols, the script was quickly forgotten. Today it’s used sometimes in seals of monasteries of Tibet and Bhutan.</p>
+      <p>[[ps:Mong|Mongolians]] used the [[ps:Ougr|Uyghur]] alphabet with minor changes. When Mongols conquered China, Kublai Khan faced a communication problem between the court and the multinational population, which was solved by Phagpa (1235–1280), Kublai’s guru. The script was introduced with great efforts, the Uyghur alphabet was banned at least twice. In 1368, the Chinese overthrew the Mongols, and the script was quickly forgotten. Today, it’s sometimes used in seals of monasteries of Tibet and Bhutan.</p>
       <p />
-      <p>In fonts it’s usually drawn turned 90° to the left to write in lines. Letters are written one after other, like in usual alphabetic script. Letters in a syllable are joined together, there’s a narrow space between syllables. Vowel {{t|a}} is inherent and written only if it’s initial.</p>
+      <p>In fonts, it’s usually drawn turned 90° to the left to write in lines. Letters are written one after another, as in a usual alphabetic script. Letters in a syllable are joined together, there’s a narrow space between syllables. Vowel {{t|a}} is inherent and written only if it’s initial.</p>
       <p>: {{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol</p>
       <p />
-      <p>Thee styles existed: book (main), seal (mimicked old Chinese calligraphy that was used in seals), and Tibetan (resembles [[ps:Marc|Marchen]]).</p>
+      <p>Three styles existed: book (main), seal (mimicking the [[ps:Seal|old Chinese]] calligraphy used on seals), and Tibetan (resembling [[ps:Marc|Marchen]]).</p>
       <p />
-      <p>Numbers are spelled out in all specimen. Most specimen have no punctuation; some used Mongolian marks or middle circular full-stop unified with [[pu:3002]].</p>
+      <p>Numbers are spelt out in all specimens. Most specimens have no punctuation; some use Mongolian marks or a middle circular full stop, unified with [[pu:3002]].</p>
      </orig>
      <transl>
-      <p>[[ps:Mong|Монгольське]] письмо використовувало [[ps:Ougr|уйгурський]] алфавіт з мінімальними змінами. З завоюванням монголами Китаю у імператора Хубілая виникли проблеми з комуникацією між двором та багатонаціональним народом, і ці задачу виконав Пагба-лама (1235–1280), наставник Хубілая. Письмо впроваджувалося туго, уйгурський алфавіт забороняли як мінімум двічі. У 1368 році китайці вибили монголів, письмо швидко забули. Нині зрідка вживається у печатках монастирів Тибету і Бутану.</p>
+      <p>[[ps:Mong|Монгольське]] письмо використовувало [[ps:Ougr|уйгурський]] алфавіт з мінімальними змінами. З завоюванням монголами Китаю у імператора Хубілая виникли проблеми з комуникацією між двором та багатонаціональним народом, і їх розв’язав Пагба-лама (1235–1280), наставник Хубілая. Письмо впроваджувалось туго, уйгурський алфавіт забороняли як мінімум двічі. У 1368 році китайці вибили монголів, письмо швидко забули. Нині зрідка вживається у печатках монастирів Тибету і Бутану.</p>
       <p />
       <p>У шрифтах письмо зазвичай малюється повернутим на 90° вліво, щоб писати рядками. Літери пишуться одна за іншою, як у звичайному алфавітному запису. Літери у складі з’єднані, між складами вузький пропуск. Голосна {{t|а}} промовляється по замовчанню і пишеться, якщо вона початкова.</p>
       <p>: {{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol</p>
       <p />
-      <p>Існували три стилі: книжний (головний), з печаток (імітував стару китайську каліграфію, що використовувалася у печатках) і тибетський (схожий на [[ps:Marc|марчхен]]).</p>
+      <p>Існували три стилі: книжний (головний), з печаток (імітував [[ps:Seal|стару китайську]] каліграфію, що використовувалася у печатках) і тибетський (схожий на [[ps:Marc|марчхен]]).</p>
       <p />
       <p>В усіх джерелах числа прописом. Розділових знаків у більшості джерел нема; іноді брали монгольські і центральну крапку-кружечок, уніфіковану з [[pu:3002]].</p>
      </transl>
@@ -8943,6 +8943,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>According to one of the theories, the script came from [[ps:Kthi|Kaithi]] and was invented by Muslims. It was favoured by 19th-century poets for simplicity, but it had been supplanted by [[ps:Beng|Bengali]] until the mid-20th century. In the 2000s, learning of Syloti Nagri resumed in Bangladesh.</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|ɔ}} and [[pt:virama|virama]] ''(hasanta)'': {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Another variant of virama exists, {{sm|ꠇ꠬}}=k, as in other Brahmic scripts. Initial vowels are separate letters. Text hangs from a headstroke, but unlike [[ps:Deva|Devanagari]], “holds” it tightly.</p>
+      <p />
+      <p>Virama in Syloti is infrequent for two reasons. First, double consonants and some conjuncts form ligatures: {{sm|ꠇ꠆ꠇ}}=kkɔ, {{sm|ꠇ꠆ꠔ}}=ktɔ. Such ligatures are typed in the standard way: first letter, virama, second letter. Second, sometimes final {{t|ɔ}} becomes silent.</p>
+      <p />
+      <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
+     </orig>
+     <known-orig>
       <p>By one of theories, the script came from [[ps:Kthi|Kaithi]] and was invented by Muslims. It was favoured by poets of 19th century for simplicity, but it had been supplanted with [[ps:Beng|Bengali]] until mid 20th century. In 2000s learning of Syloti Nagri resumed in Bangladesh.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ɔ}} and [[pt:virama|virama]] ''(hasanta)'': {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Other variant of virama exists, {{sm|ꠇ꠬}}=k, like in other Brahmic scripts. Initial vowels are separate letters. Text hangs from a headstroke, but unlike [[ps:Deva|Devanagari]], “holds” it tightly.</p>
@@ -8950,7 +8959,7 @@
       <p>Virama in Syloti is infrequent for two reasons. First, double consonants and some conjuncts form ligatures: {{sm|ꠇ꠆ꠇ}}=kkɔ, {{sm|ꠇ꠆ꠔ}}=ktɔ. Such ligatures are typed in standard way: first letter, virama, second letter. Second, sometimes final {{t|ɔ}} becomes silent.</p>
       <p />
       <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>За однією з теорій, писемність пішла від [[ps:Kthi|кайтхі]] та винайдена мусульманами. За простоту писемність любили поети XIX{{_}}століття, але до середини XX{{_}}століття поступилася [[ps:Beng|бенгальській]]. У 2000-і роки у Бангладеш знову почали вивчати силхеті.</p>
       <p />
