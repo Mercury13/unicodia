@@ -2959,7 +2959,7 @@
      <transl>Маніпурі — розширення</transl>
     </text>
     <text id="Text">
-     <orig>Obsolete characters from Meetei language, including [[pt:virama|virama]] for assembling old [[pt:ligature|ligatures]].</orig>
+     <orig>Obsolete characters from the Meetei language, including a [[pt:virama|virama]] used to assemble old [[pt:ligature|ligatures]].</orig>
      <transl>Застарілі символи з мови маніпурі, у тому числі [[pt:virama|вірама]] для складання старих [[pt:ligature|лігатур]].</transl>
     </text>
    </group>
@@ -7703,16 +7703,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>By widespread opinion, the script emerged in 11th century. In 18th century [[ps:Beng|Bengali]] was adopted. In 1930s the script was revived, in 1976 adjusted to modern phonetics.</p>
+      <p>By widespread opinion, the script emerged in the 11th century. In the 18th century, [[ps:Beng|Bengali]] was adopted. In the 1930s, the script was revived, and in 1976 it was adjusted to modern phonetics.</p>
       <p />
-      <p>Letters are named after body parts: the first is “kok” (head). Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is purely virtual and is used for assembly of old [[pt:ligature|ligatures]]: a single consonant is indicated with reduced letters.</p>
+      <p>Letters are named after body parts: the first is “kok” (head). The inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is purely virtual and is used to assemble old [[pt:ligature|ligatures]]: a single consonant is indicated with reduced letters.</p>
       <p>: kə {{sm|ꯀ}} + i {{sm|◌ꯤ}} = ki {{sm|ꯀꯤ}}</p>
       <p>: k {{sm|ꯛ}}</p>
      </orig>
      <transl>
       <p>Вважається, що письмо з’явилося у XI{{_}}столітті. З XVIII{{_}}століття перейшли на [[ps:Beng|бенгальську]]. Писемність відродили у 1930-х, у 1976 підігнали під сучасну фонетику.</p>
       <p />
-      <p>Літери звуться за частинами тіла: скажімо, перша{{-}}«kok» (голова). Голосна по замовчанню {{t|ə}}. [[pt:virama|Вірама]] віртуальна і слугує для складання старовинних [[pt:ligature|лігатур]]: одинокий звук позначається обрізаними версіями приголосних.</p>
+      <p>Літери звуться за частинами тіла: скажімо, перша{{-}}«kok» (голова). Голосна по замовчанню {{t|ə}}. [[pt:virama|Вірама]] віртуальна і слугує для складання старовинних [[pt:ligature|лігатур]]: одинокий звук позначається обрізаними приголосними.</p>
       <p>: кə {{sm|ꯀ}} + і {{sm|◌ꯤ}} = кі {{sm|ꯀꯤ}}</p>
       <p>: к {{sm|ꯛ}}</p>
      </transl>
