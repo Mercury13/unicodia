@@ -2893,8 +2893,8 @@
      <transl>Деванáґарі розширений</transl>
     </text>
     <text id="Text">
-     <orig>Chanting from Samaveda (book of religious songs), variants of ''candrabindu'' sign (nasal vowel), editorial marks, religious symbols, vowel “ay” invented by Europeans for small non-written languages of India.</orig>
-     <transl>Розспіви з Самаведи (книги релігійних пісень), варіанти знака чандрабінду (носова голосна), редакторські помітки, релігійні символи, голосна «ай» для дрібних неписьмових мов Індії, придумана європейцями.</transl>
+     <orig>Chanting from the Samaveda (book of religious songs), variants of the ''candrabindu'' sign (nasal vowel), editorial marks, religious symbols, and the vowel “ay” invented by Europeans for small non-written languages of India.</orig>
+     <transl>Розспіви з Самаведи (книги релігійних пісень), варіанти знака чандрабінду (носова голосна), редакторські помітки, релігійні символи, та голосна «ай» для дрібних неписьмових мов Індії, придумана європейцями.</transl>
     </text>
    </group>
    <group id="A900">
@@ -2915,8 +2915,8 @@
      <transl>Хангиль — розширені чамо A</transl>
     </text>
     <text id="Text">
-     <orig>Initial ''(choseong)'' old consonants of the Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
-     <transl>Початкові ''(чхосон)'' старі приголосні літери корейської мови. За їх допомогою можна динамічно будувати склади, яких нема у сучасній корейській{{-}}а значить, нема у [[pt:precomposed|монолітному]] вигляді.</transl>
+     <orig>Initial ''(choseong)'' old consonants in Korean. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <transl>Початкові ''(чхосон)'' старі приголосні корейської мови. За їх допомогою можна динамічно будувати склади, яких нема у сучасній корейській{{-}}а значить, нема у [[pt:precomposed|монолітному]] вигляді.</transl>
     </text>
    </group>
    <group id="A980">
@@ -2927,8 +2927,8 @@
    </group>
    <group id="A9E0">
     <text id="Text">
-     <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
-     <transl>Літери і цифри для мов палі ''(літургічна у буддизмі)'' та червоних тай ''(М’янма, 100{{_}}тис. на 2010)''.</transl>
+     <orig>Letters and digits for languages: Pali ''(liturgical in Buddhism)'' and Red Tai {{nspk|tjl}}.</orig>
+     <transl>Літери і цифри для мов палі ''(літургічна у буддизмі)'' та червоних тай {{nspk|tjl}}.</transl>
     </text>
    </group>
    <group id="AA00">
@@ -5455,13 +5455,6 @@
       <p />
       <p>In 2007, the BlackBerry smartphone hit Taiwanese shelves; it supported entry only via Pinyin and suffered from low demand. In future versions, Research In Motion promised Zhuyin as well.</p>
      </orig>
-     <known-orig>
-      <p>Bopomofo (by first four letters), or Zhuyin Fuhao is a Chinese phonetic system invented by Wu Zhihui in 1912–13 and adopted in 1918.</p>
-      <p />
-      <p>The author achieved a high position in Kuomintang, and that predestined the fate of the system: after Mao Zedong gained power (1949) it was used only in Taiwan. There Bopomofo is also steadily supplanted with usual pinyin (Romanization of Chinese syllables), and used mainly for initial teaching of children, input into cellphones, and search in dictionaries by pronunciation.</p>
-      <p />
-      <p>In 2007 in Taiwan Blackberry smartphone hit shelves, it supported entry only via Pinyin and suffered from low demand. In the next versions, Research In Motion promised Zhuyin too.</p>
-     </known-orig>
      <transl>
       <p>Бопомофо (за першими чотирма літерами), або чжуїнь фухао{{-}}китайська фонетична система, придумана У Чжихуеєм у 1912–13 та прийнята у 1918.</p>
       <p />
@@ -6789,7 +6782,7 @@
      <transl>яванська, дрібні мови Яви</transl>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
+     <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. The [[pt:virama|virama]] sign is named “pangkon” and is a long hook rather than a slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By the mid-20th century, the script had been completely supplanted by [[ps:Latn|Latin]]. Nowadays, it’s used ceremonially, as it is indeed beautiful.</orig>
      <transl>Походить з [[ps:Kawi|каві]]. Голосна по замовчанню {{t|а}}. Знак «[[pt:virama|вірама]]» (стерти голосну) зветься «пангкон» і являє собою не{{_}}похилу рисочку, а довгий гак. Яванське письмо близьке до [[ps:Bali|балійського]]. До середини XX{{_}}століття повністю витіснене [[ps:Latn|латинкою]] і використовується як «парадне», тим більш воно дійсно красиве.</transl>
     </text>
    </group>
@@ -6830,14 +6823,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Kayah Li comes from [[ps:Brah|Brahmi]], created by Htae Bu Phae in 1962 in response to spread of [[ps:Latn|Latin]]{{-}}but letters do{{_}}not{{_}}have inherent vowel, and this it is not{{_}}an{{_}}[[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
+      <p>Loosely based on local Brahmic scripts, it was created by Htae Bu Phae in 1962 in response to the spread of [[ps:Latn|Latin]]{{-}}but the letters lack inherent vowels, and thus it is not{{_}}an{{_}}[[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
       <p />
-      <p>Kayah Li is an alphabet of refugees in many ways: in Thai refugee camps {{%|90}} of inhabitants are Karens that fled from atrociries of Myanmar military, and in near-prison conditions everything that unites is important. Karens are diverse group of peoples that includes Red, Black, White and others, by colour of national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Maynmar]].</p>
+      <p>Kayah Li is an alphabet of refugees: in Thai refugee camps, {{%|90}} of inhabitants are Karens who suffered from the Myanmar counter-insurgent strategy since the 1980s, and in near-prison conditions, everything that unites is important. Karens are a diverse group of people who include Red, Black, White, and others, by the colour of their national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Myanmar]].</p>
      </orig>
      <transl>
-      <p>Кая-лі походить з [[ps:Brah|брахмі]], створена Хтае Бу Пхае у 1962 у відповідь на поширення [[ps:Latn|латинки]]{{-}}але літери не{{_}}мають голосної по замовчанню, і тому це не{{_}}[[pt:abugida|абуґіда]]. Чотири голосних пишуться окремими літерами, інші діакритикою над {{sm|ꤢ}}. Ще кілька голосних з запозичених слів пишуться діакритикою над {{sm|ꤣ}}.</p>
+      <p>Віддалено заснована на місцевому брахмійському письмі, створена Хтае Бу Пхае у 1962 у відповідь на поширення [[ps:Latn|латинки]]{{-}}але літери не{{_}}мають голосної по замовчанню, і тому це не{{_}}[[pt:abugida|абуґіда]]. Чотири голосних пишуться окремими літерами, інші діакритикою над {{sm|ꤢ}}. Ще кілька голосних з запозичених слів пишуться діакритикою над {{sm|ꤣ}}.</p>
       <p />
-      <p>Кая-лі{{-}}здебільшого алфавіт біженців: {{%|90}} мешканців у тайських таборах біженців{{-}}карени, що втекли від звірств бірманських військових, і в майже тюремних умовах важливо усе, що поєднує. Карени{{-}}різнорідна група народів, серед них є червоні, чорні, білі та інші, за кольором національного костюма. Окрім кая-лі, пишуть [[ps:Thai|тайським]], латинкою і [[ps:Mymr|бірманським]].</p>
+      <p>Кая-лі{{-}}алфавіт біженців: {{%|90}} мешканців у тайських таборах біженців{{-}}карени, що постраждали від антипартизанської тактики Бірми, і в майже тюремних умовах важливо усе, що поєднує. Карени{{-}}різнорідна група народів, серед них є червоні, чорні, білі та інші, за кольором національного костюма. Окрім кая-лі, пишуть [[ps:Thai|тайським]], латинкою і [[ps:Mymr|бірманським]].</p>
      </transl>
     </text>
    </group>
@@ -8414,9 +8407,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Most of speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
+      <p>Most of the speakers are illiterate. Completely supplanted by [[ps:Latn|Latin]].</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: there are signs for few final consonants existing in language.</p>
+      <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally, Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: it includes symbols for a few final consonants that occur in the language.</p>
      </orig>
      <transl>
       <p>Більшість носіїв неписьменні. Повністю замінена [[ps:Latn|латинкою]].</p>
@@ -8532,17 +8525,17 @@
      <transl>Саураштра</transl>
     </text>
     <text id="Lang">
-     <orig>Saurashtra {{nspk}}, script is used in Tamil Nadu only</orig>
+     <orig>Saurashtra {{nspk}}, the script is used in Tamil Nadu only</orig>
      <transl>саураштра {{nspk}}, письмо використовується тільки у штаті Тамілнад</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>The origin is unclear, all [[ps:Taml|Tamil]] Saurashtra are bilingual, and the rest of states write in [[ps:Deva|Devanagari]], [[ps:Gujr|Gujarati]], [[ps:Telu|Telugu]].</p>
+      <p>The origin is unclear; all [[ps:Taml|Tamil]] Saurashtrians are bilingual, and other states write in [[ps:Deva|Devanagari]], [[ps:Gujr|Gujarati]], and [[ps:Telu|Telugu]].</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. Initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. The initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
      </orig>
      <transl>
-      <p>Походження не{{_}}з’ясоване, усі [[ps:Taml|тамільські]] саураштра двомовні, а в інших штатах пишуть [[ps:Deva|деванáґарі]], [[ps:Gujr|гуджараті]], [[ps:Telu|тéлуґу]].</p>
+      <p>Походження не{{_}}з’ясоване, усі [[ps:Taml|тамільські]] саураштра двомовні, а в інших штатах пишуть [[ps:Deva|деванáґарі]], [[ps:Gujr|гуджараті]] та [[ps:Telu|тéлуґу]].</p>
       <p />
       <p>Брахмійська абуґіда з голосною по замовчанню {{t|ə}} та вірамою: {{sm|ꢒ}}=кə, {{sm|ꢒꢶ}}=кі, {{sm|ꢒ꣄}}=к. [[pt:virama|Вірама]] вживається часто. Початкова голосна{{-}}окремий символ: {{sm|ꢄ}}=і.</p>
      </transl>
@@ -8961,19 +8954,10 @@
       <p />
       <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
      </orig>
-     <known-orig>
-      <p>By one of theories, the script came from [[ps:Kthi|Kaithi]] and was invented by Muslims. It was favoured by poets of 19th century for simplicity, but it had been supplanted with [[ps:Beng|Bengali]] until mid 20th century. In 2000s learning of Syloti Nagri resumed in Bangladesh.</p>
-      <p />
-      <p>Brahmic abugida with inherent vowel {{t|ɔ}} and [[pt:virama|virama]] ''(hasanta)'': {{sm|ꠇ}}=kɔ, {{sm|ꠇꠣ}}=ka, {{sm|ꠇ꠆}}=k. Other variant of virama exists, {{sm|ꠇ꠬}}=k, like in other Brahmic scripts. Initial vowels are separate letters. Text hangs from a headstroke, but unlike [[ps:Deva|Devanagari]], “holds” it tightly.</p>
-      <p />
-      <p>Virama in Syloti is infrequent for two reasons. First, double consonants and some conjuncts form ligatures: {{sm|ꠇ꠆ꠇ}}=kkɔ, {{sm|ꠇ꠆ꠔ}}=ktɔ. Such ligatures are typed in standard way: first letter, virama, second letter. Second, sometimes final {{t|ɔ}} becomes silent.</p>
-      <p />
-      <p>Written left to right, but Syloti books are bound right to left as a tribute to Islam. Digits are [[pt:unification|unified]] with Bengali.</p>
-     </known-orig>
      <transl>
       <p>За однією з теорій, писемність пішла від [[ps:Kthi|кайтхі]] та винайдена мусульманами. За простоту писемність любили поети XIX{{_}}століття, але до середини XX{{_}}століття поступилася [[ps:Beng|бенгальській]]. У 2000-і роки у Бангладеш знову почали вивчати силхеті.</p>
       <p />
-      <p>Брахмійська абуґіда з голосною по замовчанню {{t|ɔ}} і [[pt:virama|вірамою]] ''(хасанта)'': {{sm|ꠇ}}=кɔ, {{sm|ꠇꠣ}}=ка, {{sm|ꠇ꠆}}=к. Існує і інший запис вірами, {{sm|ꠇ꠬}}=к, на кшталт інших брахмійських писемностей. Початкові голосні пишуться окремими літерами. Текст звисає зі спільної риски{{-}}але, на відміну від [[ps:Deva|деванáґарі]], міцно за неї «тримається».</p>
+      <p>Брахмійська абуґіда з голосною по замовчанню {{t|ɔ}} і [[pt:virama|вірамою]] ''(хасанта)'': {{sm|ꠇ}}=кɔ, {{sm|ꠇꠣ}}=ка, {{sm|ꠇ꠆}}=к. Існує і інший запис вірами, {{sm|ꠇ꠬}}=к, як в інших брахмійських писемностях. Початкові голосні пишуться окремими літерами. Текст звисає зі спільної риски{{-}}але, на відміну від [[ps:Deva|деванáґарі]], міцно за неї «тримається».</p>
       <p />
       <p>Вірама у силхеті нечаста з двох причин. По-перше, подвійні приголосні и деякі стики утворюють лігатури: {{sm|ꠇ꠆ꠇ}}=ккɔ, {{sm|ꠇ꠆ꠔ}}=ктɔ. Набір таких лігатур стандартний: перша літера, вірама, друга літера. Окрім того, іноді кінцева {{t|ɔ}} стає німою.</p>
       <p />

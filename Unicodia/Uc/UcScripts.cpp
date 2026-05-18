@@ -1062,11 +1062,15 @@ extern const uc::SideLang uc::sideLangInfo[] {
                     // 2007 census
     { .id = "nxq",  // Naxi ← Lisu
       .lang { .mantissa = 3,  .numOrder = NumOrder::HUN_THOU, .year = 2000,
-                    .locations { LOC_CHINA_SW } } },
+              .locations { LOC_CHINA_SW } } },
     { .id= "sgw",   // Sebat Beit ← Ethi
       .lang { .mantissa = 15, .hiMantissa = 22, .numOrder = NumOrder::HUN_THOU, .year = 2022,
               .locations { LOC_ETHIOPIA } } },
                     // No reliable source, 1.5M to 3M is the greatest
+    { .id = "tjl",  // Red Tai (Tai Laing) ← Mymr
+      .lang { .mantissa = 1,  .numOrder = NumOrder::HUN_THOU, .year = 2010,
+              .locations { LOC_MYANMAR } } },
+                    // Ethnologue, citing SIL studies
     { .id = "uk",   // Ukrainian ← Cyrl
       .lang { .mantissa = 39, .numOrder = NumOrder::MILLION, .year = 2024 } },
                     // Ethnologue, counted diasporas (millions of L1 Ukrainians),

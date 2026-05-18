@@ -2180,7 +2180,7 @@
      <orig>Devanagari extended</orig>
     </text>
     <text id="Text">
-     <orig>Chanting from Samaveda (book of religious songs), variants of ''candrabindu'' sign (nasal vowel), editorial marks, religious symbols, vowel “ay” invented by Europeans for small non-written languages of India.</orig>
+     <orig>Chanting from the Samaveda (book of religious songs), variants of the ''candrabindu'' sign (nasal vowel), editorial marks, religious symbols, and the vowel “ay” invented by Europeans for small non-written languages of India.</orig>
     </text>
    </group>
    <group id="A900">
@@ -2198,7 +2198,7 @@
      <orig>Hangul jamo extended A</orig>
     </text>
     <text id="Text">
-     <orig>Initial ''(choseong)'' old consonants of the Korean language. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <orig>Initial ''(choseong)'' old consonants in Korean. They are used to dynamically make syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
     </text>
    </group>
    <group id="A980">
@@ -2208,7 +2208,7 @@
    </group>
    <group id="A9E0">
     <text id="Text">
-     <orig>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</orig>
+     <orig>Letters and digits for languages: Pali ''(liturgical in Buddhism)'' and Red Tai {{nspk|tjl}}.</orig>
     </text>
    </group>
    <group id="AA00">
@@ -4910,7 +4910,7 @@
      <orig>Javanese, small languages of Java</orig>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] sign is named “pangkon” and is a long hook rather than slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By mid-20th century the script has been completely supplanted with [[ps:Latn|Latin]]. Nowadays it’s used as ceremonial, as it is indeed beautiful.</orig>
+     <orig>Comes from [[ps:Kawi|Kawi]]. Inherent vowel is {{t|a}}. The [[pt:virama|virama]] sign is named “pangkon” and is a long hook rather than a slanted dash. Javanese script is close to [[ps:Bali|Balinese]]. By the mid-20th century, the script had been completely supplanted by [[ps:Latn|Latin]]. Nowadays, it’s used ceremonially, as it is indeed beautiful.</orig>
     </text>
    </group>
    <group id="Jurc">
@@ -4939,9 +4939,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Kayah Li comes from [[ps:Brah|Brahmi]], created by Htae Bu Phae in 1962 in response to spread of [[ps:Latn|Latin]]{{-}}but letters do{{_}}not{{_}}have inherent vowel, and this it is not{{_}}an{{_}}[[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
+      <p>Loosely based on local Brahmic scripts, it was created by Htae Bu Phae in 1962 in response to the spread of [[ps:Latn|Latin]]{{-}}but the letters lack inherent vowels, and thus it is not{{_}}an{{_}}[[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
       <p />
-      <p>Kayah Li is an alphabet of refugees in many ways: in Thai refugee camps {{%|90}} of inhabitants are Karens that fled from atrociries of Myanmar military, and in near-prison conditions everything that unites is important. Karens are diverse group of peoples that includes Red, Black, White and others, by colour of national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Maynmar]].</p>
+      <p>Kayah Li is an alphabet of refugees: in Thai refugee camps, {{%|90}} of inhabitants are Karens who suffered from the Myanmar counter-insurgent strategy since the 1980s, and in near-prison conditions, everything that unites is important. Karens are a diverse group of people who include Red, Black, White, and others, by the colour of their national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Myanmar]].</p>
      </orig>
     </text>
    </group>
@@ -5986,9 +5986,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Most of speakers are illiterate. Completely supplanted with [[ps:Latn|Latin]].</p>
+      <p>Most of the speakers are illiterate. Completely supplanted by [[ps:Latn|Latin]].</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: there are signs for few final consonants existing in language.</p>
+      <p>Brahmic abugida with inherent vowel {{t|a}} and virama: {{sm|ꤰ}}=ka, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. The script degraded for the same reason as [[ps:Runr|runes]]: it’s easier to carve in wood. But generally, Rejang is more developed than similar [[ps:Bugi|Lontara]] or [[ps:Batk|Batak]]: it includes symbols for a few final consonants that occur in the language.</p>
      </orig>
     </text>
    </group>
@@ -6064,13 +6064,13 @@
      <orig>Saurashtra</orig>
     </text>
     <text id="Lang">
-     <orig>Saurashtra {{nspk}}, script is used in Tamil Nadu only</orig>
+     <orig>Saurashtra {{nspk}}, the script is used in Tamil Nadu only</orig>
     </text>
     <text id="Text">
      <orig>
-      <p>The origin is unclear, all [[ps:Taml|Tamil]] Saurashtra are bilingual, and the rest of states write in [[ps:Deva|Devanagari]], [[ps:Gujr|Gujarati]], [[ps:Telu|Telugu]].</p>
+      <p>The origin is unclear; all [[ps:Taml|Tamil]] Saurashtrians are bilingual, and other states write in [[ps:Deva|Devanagari]], [[ps:Gujr|Gujarati]], and [[ps:Telu|Telugu]].</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. Initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. The initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
      </orig>
     </text>
    </group>
