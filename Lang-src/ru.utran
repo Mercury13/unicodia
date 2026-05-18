@@ -1197,6 +1197,10 @@
      <au-cmt>Garay</au-cmt>
      <transl>Западная Африка</transl>
     </text>
+    <text id="Assam">
+     <orig>Assam</orig>
+     <transl>Ассам</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>Бангладеш</transl>
@@ -2938,8 +2942,8 @@
    </group>
    <group id="AA60">
     <text id="Text">
-     <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
-     <transl>Буквы для языков кхамти ''(Мьянма, Индия, 13{{_}}тыс. на 2007)'' и тай-айтонского ''(Ассам, 1500 на 2006)''.</transl>
+     <orig>Letters for Khamti {{nspk|kht}} and Tai Aiton {{nspk|aio}}.</orig>
+     <transl>Буквы для языков кхамти {{nspk|kht}} и тай-айтонского {{nspk|aio}}.</transl>
     </text>
    </group>
    <group id="AA80">

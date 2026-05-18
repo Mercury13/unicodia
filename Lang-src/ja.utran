@@ -1214,6 +1214,10 @@
      <au-cmt>Garay</au-cmt>
      <transl>西アフリカ</transl>
     </text>
+    <text id="Assam" force-attention="true">
+     <orig>Assam</orig>
+     <transl>アッサム</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>バングラデシュ</transl>
@@ -3223,9 +3227,9 @@
     </text>
    </group>
    <group id="AA60">
-    <text id="Text">
-     <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
-     <transl>カムティ文字。（ミャンマー、インド、2007 年現在 13,000 人）とタイ・アイトン（アッサム、2006 年現在 1,500 人）</transl>
+    <text id="Text" force-attention="true">
+     <orig>Letters for Khamti {{nspk|kht}} and Tai Aiton {{nspk|aio}}.</orig>
+     <transl>カムティ文字。{{nspk|kht}}とタイ・アイトン{{nspk|aio}}</transl>
     </text>
    </group>
    <group id="AA80">

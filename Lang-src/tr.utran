@@ -1218,6 +1218,10 @@
      <au-cmt>Garay</au-cmt>
      <transl>Batı Afrika</transl>
     </text>
+    <text id="Assam">
+     <orig>Assam</orig>
+     <transl>Assam</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>Bangladeş</transl>
@@ -3237,9 +3241,9 @@
     </text>
    </group>
    <group id="AA60">
-    <text id="Text">
-     <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
-     <transl>Khamti ‘’(Myanmar, Hindistan, 2007 itibarıyla 13 bin kişi)‘’ ve Tai-Aiton ‘’(Assam, 2006 itibarıyla 1500 kişi)‘’ için harf.</transl>
+    <text id="Text" force-attention="true">
+     <orig>Letters for Khamti {{nspk|kht}} and Tai Aiton {{nspk|aio}}.</orig>
+     <transl>Khamti {{nspk|kht}} ve Tai-Aiton {{nspk|aio}} için harf.</transl>
     </text>
    </group>
    <group id="AA80">

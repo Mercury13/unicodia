@@ -1217,6 +1217,10 @@
      <au-cmt>Garay</au-cmt>
      <transl>西非</transl>
     </text>
+    <text id="Assam" force-attention="true">
+     <orig>Assam</orig>
+     <transl>阿萨姆邦</transl>
+    </text>
     <text id="Bangladesh">
      <orig>Bangladesh</orig>
      <transl>孟加拉国</transl>
@@ -3236,9 +3240,9 @@
     </text>
    </group>
    <group id="AA60">
-    <text id="Text">
-     <orig>Letter for Khamti ''(Myanmar, India, 13k as of 2007)'' and Tai-Aiton ''(Assam, 1500 people as of 2006)''.</orig>
-     <transl>用于克钦语（缅甸、印度，截至 2007 年约有 1.3 万使用者）和傣艾通语（阿萨姆邦，截至 2006 年约有 1500 人使用）的文字。</transl>
+    <text id="Text" force-attention="true">
+     <orig>Letters for Khamti {{nspk|kht}} and Tai Aiton {{nspk|aio}}.</orig>
+     <transl>用于克钦语{{nspk|kht}}和傣艾通语{{nspk|aio}}的文字。</transl>
     </text>
    </group>
    <group id="AA80">
