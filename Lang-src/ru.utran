@@ -3013,7 +3013,7 @@
      <orig>
       <p>[[pt:precomposed|Precomposed]] Hangul syllables, mainly for compatibility with other encodings.</p>
       <p />
-      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to the final place in the hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “the great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
+      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0, the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996), the block was placed at the final position in the hope that there wasn’t much Korean Unicode text yet. This case was dubbed “the great Korean mess”. In response, the Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
      </orig>
      <transl>
       <p>[[pt:precomposed|Монолитные]] слоги хангыля, большей частью для совместимости со старыми кодировками.</p>
@@ -3028,7 +3028,7 @@
      <transl>Хангыль — расширенные чамо B</transl>
     </text>
     <text id="Text">
-     <orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit dynamic composition of syllables absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit the dynamic composition of syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
      <transl>Средние и конечные ''(чунсон и чонсон)'' старые буквы корейского языка. С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}а значит, нет в [[pt:precomposed|монолитном виде]].</transl>
     </text>
    </group>
@@ -3038,8 +3038,8 @@
      <transl>ККЯ совместимые иероглифы</transl>
     </text>
     <text id="Text">
-     <orig>The block contains [[ps:Hani|CJK ideographs]] that are present in other encodings several times, to prevent information loss during [[pt:convertibility|round-trip conversion]]. Their shape is strictly specified. However, ordinary [[pt:unification|unified]] ideographs are found here too{{-}}for example, FA0E and 0F, 11, 13, 14…</orig>
-     <transl>Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, чтобы не{{_}}терять информацию при круговом [[pt:convertibility|преобразовании]]. У них жёстко задано начертание. Впрочем, встречаются и обычные [[pt:unification|унифицированные]]{{-}}например, FA0E и 0F, 11, 13, 14…</transl>
+     <orig>The block contains [[ps:Hani|CJK ideographs]] that appear several times in other encodings, to prevent information loss during [[pt:convertibility|round-trip conversion]]. Their shape is strictly specified. However, ordinary [[pt:unification|unified]] ideographs are found here too{{-}}for example, [[pc:FA0E]] and [[pc:FA0F|0F]], [[pc:FA11|11]], [[pc:FA13|13]], [[pc:FA14|14]]…</orig>
+     <transl>Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, чтобы не{{_}}терять информацию при круговом [[pt:convertibility|преобразовании]]. У них жёстко задано начертание. Впрочем, встречаются и обычные [[pt:unification|унифицированные]]{{-}}например, [[pc:FA0E]] и [[pc:FA0F|0F]], [[pc:FA11|11]], [[pc:FA13|13]], [[pc:FA14|14]]…</transl>
     </text>
    </group>
    <group id="FB00">
