@@ -57,7 +57,7 @@ namespace recent {
     /// Template: {{vdeprec15}}
     /// Sample reaction: blah-blah, and character X, total {{vdeprec16}}
     /// Known status: still 15 as of U17
-    constexpr const char8_t* V_DEPREC_15 = u8"17";
+    constexpr const char8_t* V_DEPREC_15 = u8"18";
 
     /// Fact to check: BMP has 16 unallocated chars, 2FE0…2FEF
     /// How: in Unicodia go to “Ideo desc chars” 2FF0 and check what’s before
@@ -69,7 +69,7 @@ namespace recent {
     /// Template: {{vleft16}}
     /// Sample reaction: Since Unicode 33 the entire BMP is allocated
     /// Known status: still unallocated
-    constexpr const char8_t* V_LEFT_16 = u8"17";
+    constexpr const char8_t* V_LEFT_16 = u8"18";
 
     /// Fact to check: 17D3 (Khmer umlaut) is discouraged
     /// How: go to “Khmer” chart and see
@@ -79,7 +79,7 @@ namespace recent {
     /// Template: {{vkhmer}}
     /// Sample reaction: “Mark is/was deprecated, PERIOD”
     /// Known status: still discouraged
-    constexpr const char8_t* V_KHMER_DISCOUR = u8"17";
+    constexpr const char8_t* V_KHMER_DISCOUR = u8"18";
 
     /// Fact to check: 1FAA4 (mouse trap) is spring-loaded in CODE CHART (b/w)
     /// How: go to PDF chart “Symbols and Pictographs Extended-A” and see.
@@ -91,7 +91,7 @@ namespace recent {
     /// Template: {{vtrap}}
     /// Sample reaction: “Unicode 33 changed it to XXX”
     /// Known status: still spring-loaded
-    constexpr const char8_t* V_SPRING_TRAP = u8"17";
+    constexpr const char8_t* V_SPRING_TRAP = u8"18";
 
 }   // anmespace uc
 

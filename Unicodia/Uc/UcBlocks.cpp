@@ -1202,6 +1202,10 @@ constinit const uc::Block uc::blocks[] {
             "Tolong Siki",
             { EcScript::Tols, 0 }, MapSubtype::ALIVE,
             EcScript::Tols, EcFont::NORMAL },
+    { 0x11DF0, 0x11DFF, { 0x11DF0, EcContinent::ASIA, Ifg::MISSING },
+            "Bengali Supplement",
+            { EcScript::Beng, 1 }, MapSubtype::DEAD,
+            EcScript::Beng, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Gunjala Gondi OK
     { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_4 } },
             "Gunjala Gondi",

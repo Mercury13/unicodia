@@ -3862,6 +3862,16 @@
      <transl>Толонг-сікі</transl>
     </text>
    </group>
+   <group id="11DF0">
+    <text id="Name">
+     <orig>Bengali supplement</orig>
+     <transl>Бенгальський додатковий</transl>
+    </text>
+    <text id="Text">
+     <orig>Two old characters of Unicode{{_}}18.0 were moved out from the Base Plane, to minimize the risk of rejection by ISO.</orig>
+     <transl>Два старі символи Юнікоду{{_}}18.0 були переміщені з базової площини, щоб знизити ризик відмови ISO.</transl>
+    </text>
+   </group>
    <group id="11EE0">
     <text id="Name">
      <orig>Makasar (bird script)</orig>

@@ -182,6 +182,7 @@ blk; Bamum_Sup                        ; Bamum_Supplement
 blk; Bassa_Vah                        ; Bassa_Vah
 blk; Batak                            ; Batak
 blk; Bengali                          ; Bengali
+blk; Bengali_Sup                      ; Bengali_Supplement
 blk; Beria_Erfe                       ; Beria_Erfe
 blk; Bhaiksuki                        ; Bhaiksuki
 blk; Block_Elements                   ; Block_Elements

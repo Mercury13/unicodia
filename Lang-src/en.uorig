@@ -2927,6 +2927,14 @@
      <orig>Tolong Siki</orig>
     </text>
    </group>
+   <group id="11DF0">
+    <text id="Name">
+     <orig>Bengali supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>Two old characters of Unicode{{_}}18.0 were moved out from the Base Plane, to minimize the risk of rejection by ISO.</orig>
+    </text>
+   </group>
    <group id="11EE0">
     <text id="Name">
      <orig>Makasar (bird script)</orig>

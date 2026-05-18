@@ -23,7 +23,7 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { {}, u8"Food & Drink", 1, 7, 2864, Lfg(8), EcVersion::NOT_EMOJI },   // 17
 { {}, u8"Travel & Places", 1, 11, 3003, Lfg(8), EcVersion::NOT_EMOJI },   // 18
 { {}, u8"Activities", 1, 5, 3235, Lfg(8), EcVersion::NOT_EMOJI },   // 19
-{ {}, u8"Objects", 1, 18, 3326, Lfg(8), EcVersion::NOT_EMOJI },   // 20
+{ {}, u8"Objects", 1, 18, 3325, Lfg(8), EcVersion::NOT_EMOJI },   // 20
 { {}, u8"Symbols", 1, 14, 3611, Lfg(8), EcVersion::NOT_EMOJI },   // 21
 { {}, u8"Flags", 1, 3, 3849, Lfg(8), EcVersion::NOT_EMOJI },   // 22
 { {}, u8"face-smiling", 13, 15, 39, Lfg(8), EcVersion::NOT_EMOJI },   // 23
@@ -3008,11 +3008,11 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001F3FA", u8"amphora", 2870, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3002
 { {}, u8"place-map", 18, 7, 3014, Lfg(8), EcVersion::NOT_EMOJI },   // 3003
 { {}, u8"place-geographic", 18, 10, 3021, Lfg(8), EcVersion::NOT_EMOJI },   // 3004
-{ {}, u8"place-building", 18, 28, 3031, Lfg(8), EcVersion::NOT_EMOJI },   // 3005
-{ {}, u8"place-religious", 18, 6, 3059, Lfg(8), EcVersion::NOT_EMOJI },   // 3006
-{ {}, u8"place-other", 18, 17, 3065, Lfg(8), EcVersion::NOT_EMOJI },   // 3007
-{ {}, u8"transport-ground", 18, 50, 3082, Lfg(8), EcVersion::NOT_EMOJI },   // 3008
-{ {}, u8"transport-water", 18, 9, 3132, Lfg(8), EcVersion::NOT_EMOJI },   // 3009
+{ {}, u8"place-building", 18, 27, 3031, Lfg(8), EcVersion::NOT_EMOJI },   // 3005
+{ {}, u8"place-religious", 18, 6, 3058, Lfg(8), EcVersion::NOT_EMOJI },   // 3006
+{ {}, u8"place-other", 18, 17, 3064, Lfg(8), EcVersion::NOT_EMOJI },   // 3007
+{ {}, u8"transport-ground", 18, 50, 3081, Lfg(8), EcVersion::NOT_EMOJI },   // 3008
+{ {}, u8"transport-water", 18, 10, 3131, Lfg(8), EcVersion::NOT_EMOJI },   // 3009
 { {}, u8"transport-air", 18, 13, 3141, Lfg(8), EcVersion::NOT_EMOJI },   // 3010
 { {}, u8"hotel", 18, 2, 3154, Lfg(8), EcVersion::NOT_EMOJI },   // 3011
 { {}, u8"time", 18, 31, 3156, Lfg(8), EcVersion::NOT_EMOJI },   // 3012
@@ -3061,80 +3061,80 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001F492", u8"wedding", 3005, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3055
 { U"\U0001F5FC", u8"Tokyo tower", 3005, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3056
 { U"\U0001F5FD", u8"Statue of Liberty", 3005, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3057
-{ U"\U0001F6D9", u8"lighthouse", 3005, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3058
-{ U"\u26EA", u8"church", 3006, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3059
-{ U"\U0001F54C", u8"mosque", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3060
-{ U"\U0001F6D5", u8"Hindu temple", 3006, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3061
-{ U"\U0001F54D", u8"synagogue", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3062
-{ U"\u26E9\uFE0F", u8"Shinto shrine", 3006, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3063
-{ U"\U0001F54B", u8"Kaaba", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3064
-{ U"\u26F2", u8"fountain", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3065
-{ U"\u26FA", u8"tent", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3066
-{ U"\U0001F301", u8"foggy", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3067
-{ U"\U0001F303", u8"night with stars", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3068
-{ U"\U0001F3D9\uFE0F", u8"cityscape", 3007, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3069
-{ U"\U0001F304", u8"sunrise over mountains", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3070
-{ U"\U0001F305", u8"sunrise", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3071
-{ U"\U0001F306", u8"cityscape at dusk", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3072
-{ U"\U0001F307", u8"sunset", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3073
-{ U"\U0001F309", u8"bridge at night", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3074
-{ U"\u2668\uFE0F", u8"hot springs", 3007, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3075
-{ U"\U0001F3A0", u8"carousel horse", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3076
-{ U"\U0001F6DD", u8"playground slide", 3007, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3077
-{ U"\U0001F3A1", u8"Ferris wheel", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3078
-{ U"\U0001F3A2", u8"roller coaster", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3079
-{ U"\U0001F488", u8"barber pole", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3080
-{ U"\U0001F3AA", u8"circus tent", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3081
-{ U"\U0001F682", u8"locomotive", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3082
-{ U"\U0001F683", u8"railway car", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3083
-{ U"\U0001F684", u8"high-speed train", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3084
-{ U"\U0001F685", u8"bullet train", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3085
-{ U"\U0001F686", u8"train", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3086
-{ U"\U0001F687", u8"metro", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3087
-{ U"\U0001F688", u8"light rail", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3088
-{ U"\U0001F689", u8"station", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3089
-{ U"\U0001F68A", u8"tram", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3090
-{ U"\U0001F69D", u8"monorail", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3091
-{ U"\U0001F69E", u8"mountain railway", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3092
-{ U"\U0001F68B", u8"tram car", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3093
-{ U"\U0001F68C", u8"bus", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3094
-{ U"\U0001F68D", u8"oncoming bus", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3095
-{ U"\U0001F68E", u8"trolleybus", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3096
-{ U"\U0001F690", u8"minibus", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3097
-{ U"\U0001F691", u8"ambulance", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3098
-{ U"\U0001F692", u8"fire engine", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3099
-{ U"\U0001F693", u8"police car", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3100
-{ U"\U0001F694", u8"oncoming police car", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3101
-{ U"\U0001F695", u8"taxi", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3102
-{ U"\U0001F696", u8"oncoming taxi", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3103
-{ U"\U0001F697", u8"automobile", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3104
-{ U"\U0001F698", u8"oncoming automobile", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3105
-{ U"\U0001F699", u8"sport utility vehicle", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3106
-{ U"\U0001F6FB", u8"pickup truck", 3008, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3107
-{ U"\U0001F69A", u8"delivery truck", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3108
-{ U"\U0001F69B", u8"articulated lorry", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3109
-{ U"\U0001F69C", u8"tractor", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3110
-{ U"\U0001F3CE\uFE0F", u8"racing car", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3111
-{ U"\U0001F3CD\uFE0F", u8"motorcycle", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3112
-{ U"\U0001F6F5", u8"motor scooter", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3113
-{ U"\U0001F9BD", u8"manual wheelchair", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3114
-{ U"\U0001F9BC", u8"motorized wheelchair", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3115
-{ U"\U0001F6FA", u8"auto rickshaw", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3116
-{ U"\U0001F6B2", u8"bicycle", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3117
-{ U"\U0001F6F4", u8"kick scooter", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3118
-{ U"\U0001F6F9", u8"skateboard", 3008, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3119
-{ U"\U0001F6FC", u8"roller skate", 3008, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3120
-{ U"\U0001F68F", u8"bus stop", 3008, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3121
-{ U"\U0001F6E3\uFE0F", u8"motorway", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3122
-{ U"\U0001F6E4\uFE0F", u8"railway track", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3123
-{ U"\U0001F6E2\uFE0F", u8"oil drum", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3124
-{ U"\u26FD", u8"fuel pump", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3125
-{ U"\U0001F6DE", u8"wheel", 3008, 0, -1, Lfg(257), EcVersion::E14_0 },   // 3126
-{ U"\U0001F6A8", u8"police car light", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3127
-{ U"\U0001F6A5", u8"horizontal traffic light", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3128
-{ U"\U0001F6A6", u8"vertical traffic light", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3129
-{ U"\U0001F6D1", u8"stop sign", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3130
-{ U"\U0001F6A7", u8"construction", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3131
+{ U"\u26EA", u8"church", 3006, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3058
+{ U"\U0001F54C", u8"mosque", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3059
+{ U"\U0001F6D5", u8"Hindu temple", 3006, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3060
+{ U"\U0001F54D", u8"synagogue", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3061
+{ U"\u26E9\uFE0F", u8"Shinto shrine", 3006, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3062
+{ U"\U0001F54B", u8"Kaaba", 3006, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3063
+{ U"\u26F2", u8"fountain", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3064
+{ U"\u26FA", u8"tent", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3065
+{ U"\U0001F301", u8"foggy", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3066
+{ U"\U0001F303", u8"night with stars", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3067
+{ U"\U0001F3D9\uFE0F", u8"cityscape", 3007, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3068
+{ U"\U0001F304", u8"sunrise over mountains", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3069
+{ U"\U0001F305", u8"sunrise", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3070
+{ U"\U0001F306", u8"cityscape at dusk", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3071
+{ U"\U0001F307", u8"sunset", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3072
+{ U"\U0001F309", u8"bridge at night", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3073
+{ U"\u2668\uFE0F", u8"hot springs", 3007, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3074
+{ U"\U0001F3A0", u8"carousel horse", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3075
+{ U"\U0001F6DD", u8"playground slide", 3007, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3076
+{ U"\U0001F3A1", u8"Ferris wheel", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3077
+{ U"\U0001F3A2", u8"roller coaster", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3078
+{ U"\U0001F488", u8"barber pole", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3079
+{ U"\U0001F3AA", u8"circus tent", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3080
+{ U"\U0001F682", u8"locomotive", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3081
+{ U"\U0001F683", u8"railway car", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3082
+{ U"\U0001F684", u8"high-speed train", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3083
+{ U"\U0001F685", u8"bullet train", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3084
+{ U"\U0001F686", u8"train", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3085
+{ U"\U0001F687", u8"metro", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3086
+{ U"\U0001F688", u8"light rail", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3087
+{ U"\U0001F689", u8"station", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3088
+{ U"\U0001F68A", u8"tram", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3089
+{ U"\U0001F69D", u8"monorail", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3090
+{ U"\U0001F69E", u8"mountain railway", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3091
+{ U"\U0001F68B", u8"tram car", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3092
+{ U"\U0001F68C", u8"bus", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3093
+{ U"\U0001F68D", u8"oncoming bus", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3094
+{ U"\U0001F68E", u8"trolleybus", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3095
+{ U"\U0001F690", u8"minibus", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3096
+{ U"\U0001F691", u8"ambulance", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3097
+{ U"\U0001F692", u8"fire engine", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3098
+{ U"\U0001F693", u8"police car", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3099
+{ U"\U0001F694", u8"oncoming police car", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3100
+{ U"\U0001F695", u8"taxi", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3101
+{ U"\U0001F696", u8"oncoming taxi", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3102
+{ U"\U0001F697", u8"automobile", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3103
+{ U"\U0001F698", u8"oncoming automobile", 3008, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3104
+{ U"\U0001F699", u8"sport utility vehicle", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3105
+{ U"\U0001F6FB", u8"pickup truck", 3008, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3106
+{ U"\U0001F69A", u8"delivery truck", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3107
+{ U"\U0001F69B", u8"articulated lorry", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3108
+{ U"\U0001F69C", u8"tractor", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3109
+{ U"\U0001F3CE\uFE0F", u8"racing car", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3110
+{ U"\U0001F3CD\uFE0F", u8"motorcycle", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3111
+{ U"\U0001F6F5", u8"motor scooter", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3112
+{ U"\U0001F9BD", u8"manual wheelchair", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3113
+{ U"\U0001F9BC", u8"motorized wheelchair", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3114
+{ U"\U0001F6FA", u8"auto rickshaw", 3008, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3115
+{ U"\U0001F6B2", u8"bicycle", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3116
+{ U"\U0001F6F4", u8"kick scooter", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3117
+{ U"\U0001F6F9", u8"skateboard", 3008, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3118
+{ U"\U0001F6FC", u8"roller skate", 3008, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3119
+{ U"\U0001F68F", u8"bus stop", 3008, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3120
+{ U"\U0001F6E3\uFE0F", u8"motorway", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3121
+{ U"\U0001F6E4\uFE0F", u8"railway track", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3122
+{ U"\U0001F6E2\uFE0F", u8"oil drum", 3008, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3123
+{ U"\u26FD", u8"fuel pump", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3124
+{ U"\U0001F6DE", u8"wheel", 3008, 0, -1, Lfg(257), EcVersion::E14_0 },   // 3125
+{ U"\U0001F6A8", u8"police car light", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3126
+{ U"\U0001F6A5", u8"horizontal traffic light", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3127
+{ U"\U0001F6A6", u8"vertical traffic light", 3008, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3128
+{ U"\U0001F6D1", u8"stop sign", 3008, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3129
+{ U"\U0001F6A7", u8"construction", 3008, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3130
+{ U"\U0001F6D9", u8"lighthouse", 3009, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3131
 { U"\u2693", u8"anchor", 3009, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3132
 { U"\U0001F6DF", u8"ring buoy", 3009, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3133
 { U"\u26F5", u8"sailboat", 3009, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3134
@@ -3242,7 +3242,7 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { {}, u8"award-medal", 19, 6, 3261, Lfg(8), EcVersion::NOT_EMOJI },   // 3236
 { {}, u8"sport", 19, 27, 3267, Lfg(8), EcVersion::NOT_EMOJI },   // 3237
 { {}, u8"game", 19, 24, 3294, Lfg(8), EcVersion::NOT_EMOJI },   // 3238
-{ {}, u8"arts & crafts", 19, 8, 3318, Lfg(8), EcVersion::NOT_EMOJI },   // 3239
+{ {}, u8"arts & crafts", 19, 7, 3318, Lfg(8), EcVersion::NOT_EMOJI },   // 3239
 { U"\U0001F383", u8"jack-o-lantern", 3235, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3240
 { U"\U0001F384", u8"Christmas tree", 3235, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3241
 { U"\U0001F386", u8"fireworks", 3235, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3242
@@ -3328,292 +3328,292 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001FAA1", u8"sewing needle", 3239, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3322
 { U"\U0001F9F6", u8"yarn", 3239, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3323
 { U"\U0001FAA2", u8"knot", 3239, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3324
-{ U"\U0001FA8C", u8"eraser", 3239, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3325
-{ {}, u8"clothing", 20, 47, 3344, Lfg(8), EcVersion::NOT_EMOJI },   // 3326
-{ {}, u8"sound", 20, 9, 3391, Lfg(8), EcVersion::NOT_EMOJI },   // 3327
-{ {}, u8"music", 20, 9, 3400, Lfg(8), EcVersion::NOT_EMOJI },   // 3328
-{ {}, u8"musical-instrument", 20, 13, 3409, Lfg(8), EcVersion::NOT_EMOJI },   // 3329
-{ {}, u8"phone", 20, 6, 3422, Lfg(8), EcVersion::NOT_EMOJI },   // 3330
-{ {}, u8"computer", 20, 14, 3428, Lfg(8), EcVersion::NOT_EMOJI },   // 3331
-{ {}, u8"light & video", 20, 16, 3442, Lfg(8), EcVersion::NOT_EMOJI },   // 3332
-{ {}, u8"book-paper", 20, 17, 3458, Lfg(8), EcVersion::NOT_EMOJI },   // 3333
-{ {}, u8"money", 20, 11, 3475, Lfg(8), EcVersion::NOT_EMOJI },   // 3334
-{ {}, u8"mail", 20, 13, 3486, Lfg(8), EcVersion::NOT_EMOJI },   // 3335
-{ {}, u8"writing", 20, 7, 3499, Lfg(8), EcVersion::NOT_EMOJI },   // 3336
-{ {}, u8"office", 20, 23, 3506, Lfg(8), EcVersion::NOT_EMOJI },   // 3337
-{ {}, u8"lock", 20, 6, 3529, Lfg(8), EcVersion::NOT_EMOJI },   // 3338
-{ {}, u8"tool", 20, 28, 3535, Lfg(8), EcVersion::NOT_EMOJI },   // 3339
-{ {}, u8"science", 20, 7, 3563, Lfg(8), EcVersion::NOT_EMOJI },   // 3340
-{ {}, u8"medical", 20, 7, 3570, Lfg(8), EcVersion::NOT_EMOJI },   // 3341
-{ {}, u8"household", 20, 25, 3577, Lfg(8), EcVersion::NOT_EMOJI },   // 3342
-{ {}, u8"other-object", 20, 9, 3602, Lfg(8), EcVersion::NOT_EMOJI },   // 3343
-{ U"\U0001F453", u8"glasses", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3344
-{ U"\U0001F576\uFE0F", u8"sunglasses", 3326, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3345
-{ U"\U0001F97D", u8"goggles", 3326, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3346
-{ U"\U0001F97C", u8"lab coat", 3326, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3347
-{ U"\U0001F9BA", u8"safety vest", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3348
-{ U"\U0001F454", u8"necktie", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3349
-{ U"\U0001F455", u8"T-shirt", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3350
-{ U"\U0001F456", u8"jeans", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3351
-{ U"\U0001F9E3", u8"scarf", 3326, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3352
-{ U"\U0001F9E4", u8"gloves", 3326, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3353
-{ U"\U0001F9E5", u8"coat", 3326, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3354
-{ U"\U0001F9E6", u8"socks", 3326, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3355
-{ U"\U0001F457", u8"dress", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3356
-{ U"\U0001F458", u8"kimono", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3357
-{ U"\U0001F97B", u8"sari", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3358
-{ U"\U0001FA71", u8"one-piece swimsuit", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3359
-{ U"\U0001FA72", u8"briefs", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3360
-{ U"\U0001FA73", u8"shorts", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3361
-{ U"\U0001F459", u8"bikini", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3362
-{ U"\U0001F45A", u8"woman’s clothes", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3363
-{ U"\U0001FAAD", u8"folding hand fan", 3326, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3364
-{ U"\U0001F45B", u8"purse", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3365
-{ U"\U0001F45C", u8"handbag", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3366
-{ U"\U0001F45D", u8"clutch bag", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3367
-{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3326, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3368
-{ U"\U0001F392", u8"backpack", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3369
-{ U"\U0001FA74", u8"thong sandal", 3326, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3370
-{ U"\U0001F45E", u8"man’s shoe", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3371
-{ U"\U0001F45F", u8"running shoe", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3372
-{ U"\U0001F97E", u8"hiking boot", 3326, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3373
-{ U"\U0001F97F", u8"flat shoe", 3326, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3374
-{ U"\U0001F460", u8"high-heeled shoe", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3375
-{ U"\U0001F461", u8"woman’s sandal", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3376
-{ U"\U0001FA70", u8"ballet shoes", 3326, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3377
-{ U"\U0001F462", u8"woman’s boot", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3378
-{ U"\U0001FAAE", u8"hair pick", 3326, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3379
-{ U"\U0001F451", u8"crown", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3380
-{ U"\U0001F452", u8"woman’s hat", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3381
-{ U"\U0001F3A9", u8"top hat", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3382
-{ U"\U0001F393", u8"graduation cap", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3383
-{ U"\U0001F9E2", u8"billed cap", 3326, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3384
-{ U"\U0001FA96", u8"military helmet", 3326, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3385
-{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3326, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3386
-{ U"\U0001F4FF", u8"prayer beads", 3326, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3387
-{ U"\U0001F484", u8"lipstick", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3388
-{ U"\U0001F48D", u8"ring", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3389
-{ U"\U0001F48E", u8"gem stone", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3390
-{ U"\U0001F507", u8"muted speaker", 3327, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3391
-{ U"\U0001F508", u8"speaker low volume", 3327, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3392
-{ U"\U0001F509", u8"speaker medium volume", 3327, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3393
-{ U"\U0001F50A", u8"speaker high volume", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3394
-{ U"\U0001F4E2", u8"loudspeaker", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3395
-{ U"\U0001F4E3", u8"megaphone", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3396
-{ U"\U0001F4EF", u8"postal horn", 3327, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3397
-{ U"\U0001F514", u8"bell", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3398
-{ U"\U0001F515", u8"bell with slash", 3327, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3399
-{ U"\U0001F3BC", u8"musical score", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3400
-{ U"\U0001F3B5", u8"musical note", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3401
-{ U"\U0001F3B6", u8"musical notes", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3402
-{ U"\U0001F399\uFE0F", u8"studio microphone", 3328, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3403
-{ U"\U0001F39A\uFE0F", u8"level slider", 3328, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3404
-{ U"\U0001F39B\uFE0F", u8"control knobs", 3328, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3405
-{ U"\U0001F3A4", u8"microphone", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3406
-{ U"\U0001F3A7", u8"headphone", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3407
-{ U"\U0001F4FB", u8"radio", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3408
-{ U"\U0001F3B7", u8"saxophone", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3409
-{ U"\U0001F3BA", u8"trumpet", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3410
-{ U"\U0001FA8A", u8"trombone", 3329, 0, -1, Lfg(1), EcVersion::E17_0 },   // 3411
-{ U"\U0001FA97", u8"accordion", 3329, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3412
-{ U"\U0001F3B8", u8"guitar", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3413
-{ U"\U0001F3B9", u8"musical keyboard", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3414
-{ U"\U0001F3BB", u8"violin", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3415
-{ U"\U0001FA95", u8"banjo", 3329, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3416
-{ U"\U0001F941", u8"drum", 3329, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3417
-{ U"\U0001FA98", u8"long drum", 3329, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3418
-{ U"\U0001FA87", u8"maracas", 3329, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3419
-{ U"\U0001FA88", u8"flute", 3329, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3420
-{ U"\U0001FA89", u8"harp", 3329, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3421
-{ U"\U0001F4F1", u8"mobile phone", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3422
-{ U"\U0001F4F2", u8"mobile phone with arrow", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3423
-{ U"\u260E\uFE0F", u8"telephone", 3330, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3424
-{ U"\U0001F4DE", u8"telephone receiver", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3425
-{ U"\U0001F4DF", u8"pager", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3426
-{ U"\U0001F4E0", u8"fax machine", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3427
-{ U"\U0001F50B", u8"battery", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3428
-{ U"\U0001FAAB", u8"low battery", 3331, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3429
-{ U"\U0001F50C", u8"electric plug", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3430
-{ U"\U0001F4BB", u8"laptop", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3431
-{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3432
-{ U"\U0001F5A8\uFE0F", u8"printer", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3433
-{ U"\u2328\uFE0F", u8"keyboard", 3331, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3434
-{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3435
-{ U"\U0001F5B2\uFE0F", u8"trackball", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3436
-{ U"\U0001F4BD", u8"computer disk", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
-{ U"\U0001F4BE", u8"floppy disk", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3438
-{ U"\U0001F4BF", u8"optical disk", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3439
-{ U"\U0001F4C0", u8"DVD", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3440
-{ U"\U0001F9EE", u8"abacus", 3331, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3441
-{ U"\U0001F3A5", u8"movie camera", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3442
-{ U"\U0001F39E\uFE0F", u8"film frames", 3332, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3443
-{ U"\U0001F4FD\uFE0F", u8"film projector", 3332, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3444
-{ U"\U0001F3AC", u8"clapper board", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3445
-{ U"\U0001F4FA", u8"television", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3446
-{ U"\U0001F4F7", u8"camera", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3447
-{ U"\U0001F4F8", u8"camera with flash", 3332, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3448
-{ U"\U0001F4F9", u8"video camera", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3449
-{ U"\U0001F4FC", u8"videocassette", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3450
-{ U"\U0001F50D", u8"magnifying glass tilted left", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3451
-{ U"\U0001F50E", u8"magnifying glass tilted right", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3452
-{ U"\U0001F56F\uFE0F", u8"candle", 3332, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3453
-{ U"\U0001F4A1", u8"light bulb", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3454
-{ U"\U0001F526", u8"flashlight", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3455
-{ U"\U0001F3EE", u8"red paper lantern", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3456
-{ U"\U0001FA94", u8"diya lamp", 3332, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3457
-{ U"\U0001F4D4", u8"notebook with decorative cover", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3458
-{ U"\U0001F4D5", u8"closed book", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3459
-{ U"\U0001F4D6", u8"open book", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3460
-{ U"\U0001F4D7", u8"green book", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3461
-{ U"\U0001F4D8", u8"blue book", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3462
-{ U"\U0001F4D9", u8"orange book", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3463
-{ U"\U0001F4DA", u8"books", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3464
-{ U"\U0001F4D3", u8"notebook", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3465
-{ U"\U0001F4D2", u8"ledger", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3466
-{ U"\U0001F4C3", u8"page with curl", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3467
-{ U"\U0001F4DC", u8"scroll", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3468
-{ U"\U0001F4C4", u8"page facing up", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3469
-{ U"\U0001F4F0", u8"newspaper", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3470
-{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3333, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3471
-{ U"\U0001F4D1", u8"bookmark tabs", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3472
-{ U"\U0001F516", u8"bookmark", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3473
-{ U"\U0001F3F7\uFE0F", u8"label", 3333, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3474
-{ U"\U0001FA99", u8"coin", 3334, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3475
-{ U"\U0001F4B0", u8"money bag", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3476
-{ U"\U0001FA8E", u8"treasure chest", 3334, 0, -1, Lfg(1), EcVersion::E17_0 },   // 3477
-{ U"\U0001F4B4", u8"yen banknote", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3478
-{ U"\U0001F4B5", u8"dollar banknote", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3479
-{ U"\U0001F4B6", u8"euro banknote", 3334, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3480
-{ U"\U0001F4B7", u8"pound banknote", 3334, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3481
-{ U"\U0001F4B8", u8"money with wings", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3482
-{ U"\U0001F4B3", u8"credit card", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3483
-{ U"\U0001F9FE", u8"receipt", 3334, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3484
-{ U"\U0001F4B9", u8"chart increasing with yen", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3485
-{ U"\u2709\uFE0F", u8"envelope", 3335, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3486
-{ U"\U0001F4E7", u8"e-mail", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3487
-{ U"\U0001F4E8", u8"incoming envelope", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3488
-{ U"\U0001F4E9", u8"envelope with arrow", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3489
-{ U"\U0001F4E4", u8"outbox tray", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3490
-{ U"\U0001F4E5", u8"inbox tray", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3491
-{ U"\U0001F4E6", u8"package", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3492
-{ U"\U0001F4EB", u8"closed mailbox with raised flag", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3493
-{ U"\U0001F4EA", u8"closed mailbox with lowered flag", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3494
-{ U"\U0001F4EC", u8"open mailbox with raised flag", 3335, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3495
-{ U"\U0001F4ED", u8"open mailbox with lowered flag", 3335, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3496
-{ U"\U0001F4EE", u8"postbox", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3497
-{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3335, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3498
-{ U"\u270F\uFE0F", u8"pencil", 3336, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3499
-{ U"\u2712\uFE0F", u8"black nib", 3336, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3500
-{ U"\U0001F58B\uFE0F", u8"fountain pen", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3501
-{ U"\U0001F58A\uFE0F", u8"pen", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3502
-{ U"\U0001F58C\uFE0F", u8"paintbrush", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3503
-{ U"\U0001F58D\uFE0F", u8"crayon", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3504
-{ U"\U0001F4DD", u8"memo", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3505
-{ U"\U0001F4BC", u8"briefcase", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3506
-{ U"\U0001F4C1", u8"file folder", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3507
-{ U"\U0001F4C2", u8"open file folder", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3508
-{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3509
-{ U"\U0001F4C5", u8"calendar", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3510
-{ U"\U0001F4C6", u8"tear-off calendar", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3511
-{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3512
-{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3513
-{ U"\U0001F4C7", u8"card index", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3514
-{ U"\U0001F4C8", u8"chart increasing", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3515
-{ U"\U0001F4C9", u8"chart decreasing", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3516
-{ U"\U0001F4CA", u8"bar chart", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3517
-{ U"\U0001F4CB", u8"clipboard", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3518
-{ U"\U0001F4CC", u8"pushpin", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3519
-{ U"\U0001F4CD", u8"round pushpin", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3520
-{ U"\U0001F4CE", u8"paperclip", 3337, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3521
-{ U"\U0001F587\uFE0F", u8"linked paperclips", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3522
-{ U"\U0001F4CF", u8"straight ruler", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3523
-{ U"\U0001F4D0", u8"triangular ruler", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3524
-{ U"\u2702\uFE0F", u8"scissors", 3337, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3525
-{ U"\U0001F5C3\uFE0F", u8"card file box", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3526
-{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3527
-{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3528
-{ U"\U0001F512", u8"locked", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3529
-{ U"\U0001F513", u8"unlocked", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3530
-{ U"\U0001F50F", u8"locked with pen", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3531
-{ U"\U0001F510", u8"locked with key", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3532
-{ U"\U0001F511", u8"key", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3533
-{ U"\U0001F5DD\uFE0F", u8"old key", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3534
-{ U"\U0001F528", u8"hammer", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3535
-{ U"\U0001FA93", u8"axe", 3339, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3536
-{ U"\u26CF\uFE0F", u8"pick", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3537
-{ U"\u2692\uFE0F", u8"hammer and pick", 3339, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3538
-{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3539
-{ U"\U0001F5E1\uFE0F", u8"dagger", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3540
-{ U"\u2694\uFE0F", u8"crossed swords", 3339, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3541
-{ U"\U0001F4A3", u8"bomb", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3542
-{ U"\U0001FA83", u8"boomerang", 3339, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3543
-{ U"\U0001F3F9", u8"bow and arrow", 3339, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3544
-{ U"\U0001F6E1\uFE0F", u8"shield", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3545
-{ U"\U0001FA9A", u8"carpentry saw", 3339, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3546
-{ U"\U0001F527", u8"wrench", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3547
-{ U"\U0001FA9B", u8"screwdriver", 3339, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3548
-{ U"\U0001F529", u8"nut and bolt", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3549
-{ U"\u2699\uFE0F", u8"gear", 3339, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3550
-{ U"\U0001F5DC\uFE0F", u8"clamp", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3551
-{ U"\u2696\uFE0F", u8"balance scale", 3339, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3552
-{ U"\U0001F9AF", u8"white cane", 3339, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3553
-{ U"\U0001F517", u8"link", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3554
-{ U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3339, 0, -1, Lfg(97), EcVersion::E15_1 },   // 3555
-{ U"\u26D3\uFE0F", u8"chains", 3339, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3556
-{ U"\U0001FA9D", u8"hook", 3339, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3557
-{ U"\U0001F9F0", u8"toolbox", 3339, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3558
-{ U"\U0001F9F2", u8"magnet", 3339, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3559
-{ U"\U0001FA9C", u8"ladder", 3339, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3560
-{ U"\U0001FA8F", u8"shovel", 3339, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3561
-{ U"\U0001FA8D", u8"net with handle", 3339, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3562
-{ U"\u2697\uFE0F", u8"alembic", 3340, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3563
-{ U"\U0001F9EA", u8"test tube", 3340, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3564
-{ U"\U0001F9EB", u8"Petri dish", 3340, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3565
-{ U"\U0001F9EC", u8"DNA", 3340, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3566
-{ U"\U0001F52C", u8"microscope", 3340, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3567
-{ U"\U0001F52D", u8"telescope", 3340, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3568
-{ U"\U0001F4E1", u8"satellite antenna", 3340, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3569
-{ U"\U0001F489", u8"syringe", 3341, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3570
-{ U"\U0001FA78", u8"drop of blood", 3341, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3571
-{ U"\U0001F48A", u8"pill", 3341, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3572
-{ U"\U0001FA79", u8"adhesive bandage", 3341, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3573
-{ U"\U0001FA7C", u8"crutch", 3341, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3574
-{ U"\U0001FA7A", u8"stethoscope", 3341, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3575
-{ U"\U0001FA7B", u8"X-ray", 3341, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3576
-{ U"\U0001F6AA", u8"door", 3342, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3577
-{ U"\U0001F6D7", u8"elevator", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3578
-{ U"\U0001FA9E", u8"mirror", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3579
-{ U"\U0001FA9F", u8"window", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3580
-{ U"\U0001F6CF\uFE0F", u8"bed", 3342, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3581
-{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3342, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3582
-{ U"\U0001FA91", u8"chair", 3342, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3583
-{ U"\U0001F6BD", u8"toilet", 3342, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3584
-{ U"\U0001FAA0", u8"plunger", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3585
-{ U"\U0001F6BF", u8"shower", 3342, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3586
-{ U"\U0001F6C1", u8"bathtub", 3342, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3587
-{ U"\U0001FAA4", u8"mouse trap", 3342, 0, -1, Lfg(257), EcVersion::E13_0 },   // 3588
-{ U"\U0001FA92", u8"razor", 3342, 0, -1, Lfg(257), EcVersion::E12_0 },   // 3589
-{ U"\U0001F9F4", u8"lotion bottle", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3590
-{ U"\U0001F9F7", u8"safety pin", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3591
-{ U"\U0001F9F9", u8"broom", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3592
-{ U"\U0001F9FA", u8"basket", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3593
-{ U"\U0001F9FB", u8"roll of paper", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3594
-{ U"\U0001FAA3", u8"bucket", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3595
-{ U"\U0001F9FC", u8"soap", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3596
-{ U"\U0001FAE7", u8"bubbles", 3342, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3597
-{ U"\U0001FAA5", u8"toothbrush", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3598
-{ U"\U0001F9FD", u8"sponge", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3599
-{ U"\U0001F9EF", u8"fire extinguisher", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3600
-{ U"\U0001F6D2", u8"shopping cart", 3342, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3601
-{ U"\U0001F6AC", u8"cigarette", 3343, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3602
-{ U"\u26B0\uFE0F", u8"coffin", 3343, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3603
-{ U"\U0001FAA6", u8"headstone", 3343, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3604
-{ U"\u26B1\uFE0F", u8"funeral urn", 3343, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3605
-{ U"\U0001F9FF", u8"nazar amulet", 3343, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3606
-{ U"\U0001FAAC", u8"hamsa", 3343, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3607
-{ U"\U0001F5FF", u8"moai", 3343, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3608
-{ U"\U0001FAA7", u8"placard", 3343, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3609
-{ U"\U0001FAAA", u8"identification card", 3343, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3610
+{ {}, u8"clothing", 20, 47, 3343, Lfg(8), EcVersion::NOT_EMOJI },   // 3325
+{ {}, u8"sound", 20, 9, 3390, Lfg(8), EcVersion::NOT_EMOJI },   // 3326
+{ {}, u8"music", 20, 9, 3399, Lfg(8), EcVersion::NOT_EMOJI },   // 3327
+{ {}, u8"musical-instrument", 20, 13, 3408, Lfg(8), EcVersion::NOT_EMOJI },   // 3328
+{ {}, u8"phone", 20, 6, 3421, Lfg(8), EcVersion::NOT_EMOJI },   // 3329
+{ {}, u8"computer", 20, 14, 3427, Lfg(8), EcVersion::NOT_EMOJI },   // 3330
+{ {}, u8"light & video", 20, 16, 3441, Lfg(8), EcVersion::NOT_EMOJI },   // 3331
+{ {}, u8"book-paper", 20, 17, 3457, Lfg(8), EcVersion::NOT_EMOJI },   // 3332
+{ {}, u8"money", 20, 11, 3474, Lfg(8), EcVersion::NOT_EMOJI },   // 3333
+{ {}, u8"mail", 20, 13, 3485, Lfg(8), EcVersion::NOT_EMOJI },   // 3334
+{ {}, u8"writing", 20, 8, 3498, Lfg(8), EcVersion::NOT_EMOJI },   // 3335
+{ {}, u8"office", 20, 23, 3506, Lfg(8), EcVersion::NOT_EMOJI },   // 3336
+{ {}, u8"lock", 20, 6, 3529, Lfg(8), EcVersion::NOT_EMOJI },   // 3337
+{ {}, u8"tool", 20, 28, 3535, Lfg(8), EcVersion::NOT_EMOJI },   // 3338
+{ {}, u8"science", 20, 7, 3563, Lfg(8), EcVersion::NOT_EMOJI },   // 3339
+{ {}, u8"medical", 20, 7, 3570, Lfg(8), EcVersion::NOT_EMOJI },   // 3340
+{ {}, u8"household", 20, 25, 3577, Lfg(8), EcVersion::NOT_EMOJI },   // 3341
+{ {}, u8"other-object", 20, 9, 3602, Lfg(8), EcVersion::NOT_EMOJI },   // 3342
+{ U"\U0001F453", u8"glasses", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3343
+{ U"\U0001F576\uFE0F", u8"sunglasses", 3325, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3344
+{ U"\U0001F97D", u8"goggles", 3325, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3345
+{ U"\U0001F97C", u8"lab coat", 3325, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3346
+{ U"\U0001F9BA", u8"safety vest", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3347
+{ U"\U0001F454", u8"necktie", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3348
+{ U"\U0001F455", u8"T-shirt", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3349
+{ U"\U0001F456", u8"jeans", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3350
+{ U"\U0001F9E3", u8"scarf", 3325, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3351
+{ U"\U0001F9E4", u8"gloves", 3325, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3352
+{ U"\U0001F9E5", u8"coat", 3325, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3353
+{ U"\U0001F9E6", u8"socks", 3325, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3354
+{ U"\U0001F457", u8"dress", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3355
+{ U"\U0001F458", u8"kimono", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3356
+{ U"\U0001F97B", u8"sari", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3357
+{ U"\U0001FA71", u8"one-piece swimsuit", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3358
+{ U"\U0001FA72", u8"briefs", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3359
+{ U"\U0001FA73", u8"shorts", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3360
+{ U"\U0001F459", u8"bikini", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3361
+{ U"\U0001F45A", u8"woman’s clothes", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3362
+{ U"\U0001FAAD", u8"folding hand fan", 3325, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3363
+{ U"\U0001F45B", u8"purse", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3364
+{ U"\U0001F45C", u8"handbag", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3365
+{ U"\U0001F45D", u8"clutch bag", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3366
+{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3325, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3367
+{ U"\U0001F392", u8"backpack", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3368
+{ U"\U0001FA74", u8"thong sandal", 3325, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3369
+{ U"\U0001F45E", u8"man’s shoe", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3370
+{ U"\U0001F45F", u8"running shoe", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3371
+{ U"\U0001F97E", u8"hiking boot", 3325, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3372
+{ U"\U0001F97F", u8"flat shoe", 3325, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3373
+{ U"\U0001F460", u8"high-heeled shoe", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3374
+{ U"\U0001F461", u8"woman’s sandal", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3375
+{ U"\U0001FA70", u8"ballet shoes", 3325, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3376
+{ U"\U0001F462", u8"woman’s boot", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3377
+{ U"\U0001FAAE", u8"hair pick", 3325, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3378
+{ U"\U0001F451", u8"crown", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3379
+{ U"\U0001F452", u8"woman’s hat", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3380
+{ U"\U0001F3A9", u8"top hat", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3381
+{ U"\U0001F393", u8"graduation cap", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3382
+{ U"\U0001F9E2", u8"billed cap", 3325, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3383
+{ U"\U0001FA96", u8"military helmet", 3325, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3384
+{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3325, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3385
+{ U"\U0001F4FF", u8"prayer beads", 3325, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3386
+{ U"\U0001F484", u8"lipstick", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3387
+{ U"\U0001F48D", u8"ring", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3388
+{ U"\U0001F48E", u8"gem stone", 3325, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3389
+{ U"\U0001F507", u8"muted speaker", 3326, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3390
+{ U"\U0001F508", u8"speaker low volume", 3326, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3391
+{ U"\U0001F509", u8"speaker medium volume", 3326, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3392
+{ U"\U0001F50A", u8"speaker high volume", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3393
+{ U"\U0001F4E2", u8"loudspeaker", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3394
+{ U"\U0001F4E3", u8"megaphone", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3395
+{ U"\U0001F4EF", u8"postal horn", 3326, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3396
+{ U"\U0001F514", u8"bell", 3326, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3397
+{ U"\U0001F515", u8"bell with slash", 3326, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3398
+{ U"\U0001F3BC", u8"musical score", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3399
+{ U"\U0001F3B5", u8"musical note", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3400
+{ U"\U0001F3B6", u8"musical notes", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3401
+{ U"\U0001F399\uFE0F", u8"studio microphone", 3327, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3402
+{ U"\U0001F39A\uFE0F", u8"level slider", 3327, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3403
+{ U"\U0001F39B\uFE0F", u8"control knobs", 3327, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3404
+{ U"\U0001F3A4", u8"microphone", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3405
+{ U"\U0001F3A7", u8"headphone", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3406
+{ U"\U0001F4FB", u8"radio", 3327, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3407
+{ U"\U0001F3B7", u8"saxophone", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3408
+{ U"\U0001F3BA", u8"trumpet", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3409
+{ U"\U0001FA8A", u8"trombone", 3328, 0, -1, Lfg(1), EcVersion::E17_0 },   // 3410
+{ U"\U0001FA97", u8"accordion", 3328, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3411
+{ U"\U0001F3B8", u8"guitar", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3412
+{ U"\U0001F3B9", u8"musical keyboard", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3413
+{ U"\U0001F3BB", u8"violin", 3328, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3414
+{ U"\U0001FA95", u8"banjo", 3328, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3415
+{ U"\U0001F941", u8"drum", 3328, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3416
+{ U"\U0001FA98", u8"long drum", 3328, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3417
+{ U"\U0001FA87", u8"maracas", 3328, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3418
+{ U"\U0001FA88", u8"flute", 3328, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3419
+{ U"\U0001FA89", u8"harp", 3328, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3420
+{ U"\U0001F4F1", u8"mobile phone", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3421
+{ U"\U0001F4F2", u8"mobile phone with arrow", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3422
+{ U"\u260E\uFE0F", u8"telephone", 3329, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3423
+{ U"\U0001F4DE", u8"telephone receiver", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3424
+{ U"\U0001F4DF", u8"pager", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3425
+{ U"\U0001F4E0", u8"fax machine", 3329, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3426
+{ U"\U0001F50B", u8"battery", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3427
+{ U"\U0001FAAB", u8"low battery", 3330, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3428
+{ U"\U0001F50C", u8"electric plug", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3429
+{ U"\U0001F4BB", u8"laptop", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3430
+{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3330, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3431
+{ U"\U0001F5A8\uFE0F", u8"printer", 3330, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3432
+{ U"\u2328\uFE0F", u8"keyboard", 3330, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3433
+{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3330, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3434
+{ U"\U0001F5B2\uFE0F", u8"trackball", 3330, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3435
+{ U"\U0001F4BD", u8"computer disk", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3436
+{ U"\U0001F4BE", u8"floppy disk", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
+{ U"\U0001F4BF", u8"optical disk", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3438
+{ U"\U0001F4C0", u8"DVD", 3330, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3439
+{ U"\U0001F9EE", u8"abacus", 3330, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3440
+{ U"\U0001F3A5", u8"movie camera", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3441
+{ U"\U0001F39E\uFE0F", u8"film frames", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3442
+{ U"\U0001F4FD\uFE0F", u8"film projector", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3443
+{ U"\U0001F3AC", u8"clapper board", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3444
+{ U"\U0001F4FA", u8"television", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3445
+{ U"\U0001F4F7", u8"camera", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3446
+{ U"\U0001F4F8", u8"camera with flash", 3331, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3447
+{ U"\U0001F4F9", u8"video camera", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3448
+{ U"\U0001F4FC", u8"videocassette", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3449
+{ U"\U0001F50D", u8"magnifying glass tilted left", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3450
+{ U"\U0001F50E", u8"magnifying glass tilted right", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3451
+{ U"\U0001F56F\uFE0F", u8"candle", 3331, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3452
+{ U"\U0001F4A1", u8"light bulb", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3453
+{ U"\U0001F526", u8"flashlight", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3454
+{ U"\U0001F3EE", u8"red paper lantern", 3331, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3455
+{ U"\U0001FA94", u8"diya lamp", 3331, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3456
+{ U"\U0001F4D4", u8"notebook with decorative cover", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3457
+{ U"\U0001F4D5", u8"closed book", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3458
+{ U"\U0001F4D6", u8"open book", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3459
+{ U"\U0001F4D7", u8"green book", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3460
+{ U"\U0001F4D8", u8"blue book", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3461
+{ U"\U0001F4D9", u8"orange book", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3462
+{ U"\U0001F4DA", u8"books", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3463
+{ U"\U0001F4D3", u8"notebook", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3464
+{ U"\U0001F4D2", u8"ledger", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3465
+{ U"\U0001F4C3", u8"page with curl", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3466
+{ U"\U0001F4DC", u8"scroll", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3467
+{ U"\U0001F4C4", u8"page facing up", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3468
+{ U"\U0001F4F0", u8"newspaper", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3469
+{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3332, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3470
+{ U"\U0001F4D1", u8"bookmark tabs", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3471
+{ U"\U0001F516", u8"bookmark", 3332, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3472
+{ U"\U0001F3F7\uFE0F", u8"label", 3332, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3473
+{ U"\U0001FA99", u8"coin", 3333, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3474
+{ U"\U0001F4B0", u8"money bag", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3475
+{ U"\U0001FA8E", u8"treasure chest", 3333, 0, -1, Lfg(1), EcVersion::E17_0 },   // 3476
+{ U"\U0001F4B4", u8"yen banknote", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3477
+{ U"\U0001F4B5", u8"dollar banknote", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3478
+{ U"\U0001F4B6", u8"euro banknote", 3333, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3479
+{ U"\U0001F4B7", u8"pound banknote", 3333, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3480
+{ U"\U0001F4B8", u8"money with wings", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3481
+{ U"\U0001F4B3", u8"credit card", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3482
+{ U"\U0001F9FE", u8"receipt", 3333, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3483
+{ U"\U0001F4B9", u8"chart increasing with yen", 3333, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3484
+{ U"\u2709\uFE0F", u8"envelope", 3334, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3485
+{ U"\U0001F4E7", u8"e-mail", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3486
+{ U"\U0001F4E8", u8"incoming envelope", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3487
+{ U"\U0001F4E9", u8"envelope with arrow", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3488
+{ U"\U0001F4E4", u8"outbox tray", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3489
+{ U"\U0001F4E5", u8"inbox tray", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3490
+{ U"\U0001F4E6", u8"package", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3491
+{ U"\U0001F4EB", u8"closed mailbox with raised flag", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3492
+{ U"\U0001F4EA", u8"closed mailbox with lowered flag", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3493
+{ U"\U0001F4EC", u8"open mailbox with raised flag", 3334, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3494
+{ U"\U0001F4ED", u8"open mailbox with lowered flag", 3334, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3495
+{ U"\U0001F4EE", u8"postbox", 3334, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3496
+{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3334, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3497
+{ U"\u270F\uFE0F", u8"pencil", 3335, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3498
+{ U"\u2712\uFE0F", u8"black nib", 3335, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3499
+{ U"\U0001F58B\uFE0F", u8"fountain pen", 3335, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3500
+{ U"\U0001F58A\uFE0F", u8"pen", 3335, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3501
+{ U"\U0001F58C\uFE0F", u8"paintbrush", 3335, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3502
+{ U"\U0001F58D\uFE0F", u8"crayon", 3335, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3503
+{ U"\U0001F4DD", u8"memo", 3335, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3504
+{ U"\U0001FA8C", u8"eraser", 3335, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3505
+{ U"\U0001F4BC", u8"briefcase", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3506
+{ U"\U0001F4C1", u8"file folder", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3507
+{ U"\U0001F4C2", u8"open file folder", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3508
+{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3509
+{ U"\U0001F4C5", u8"calendar", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3510
+{ U"\U0001F4C6", u8"tear-off calendar", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3511
+{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3512
+{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3513
+{ U"\U0001F4C7", u8"card index", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3514
+{ U"\U0001F4C8", u8"chart increasing", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3515
+{ U"\U0001F4C9", u8"chart decreasing", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3516
+{ U"\U0001F4CA", u8"bar chart", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3517
+{ U"\U0001F4CB", u8"clipboard", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3518
+{ U"\U0001F4CC", u8"pushpin", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3519
+{ U"\U0001F4CD", u8"round pushpin", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3520
+{ U"\U0001F4CE", u8"paperclip", 3336, 0, -1, Lfg(257), EcVersion::E0_6 },   // 3521
+{ U"\U0001F587\uFE0F", u8"linked paperclips", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3522
+{ U"\U0001F4CF", u8"straight ruler", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3523
+{ U"\U0001F4D0", u8"triangular ruler", 3336, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3524
+{ U"\u2702\uFE0F", u8"scissors", 3336, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3525
+{ U"\U0001F5C3\uFE0F", u8"card file box", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3526
+{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3527
+{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3336, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3528
+{ U"\U0001F512", u8"locked", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3529
+{ U"\U0001F513", u8"unlocked", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3530
+{ U"\U0001F50F", u8"locked with pen", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3531
+{ U"\U0001F510", u8"locked with key", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3532
+{ U"\U0001F511", u8"key", 3337, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3533
+{ U"\U0001F5DD\uFE0F", u8"old key", 3337, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3534
+{ U"\U0001FA8D", u8"net with handle", 3338, 0, -1, Lfg(1), EcVersion::E18_0 },   // 3535
+{ U"\U0001F528", u8"hammer", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3536
+{ U"\U0001FA93", u8"axe", 3338, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3537
+{ U"\u26CF\uFE0F", u8"pick", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3538
+{ U"\u2692\uFE0F", u8"hammer and pick", 3338, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3539
+{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3540
+{ U"\U0001F5E1\uFE0F", u8"dagger", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3541
+{ U"\u2694\uFE0F", u8"crossed swords", 3338, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3542
+{ U"\U0001F4A3", u8"bomb", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3543
+{ U"\U0001FA83", u8"boomerang", 3338, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3544
+{ U"\U0001F3F9", u8"bow and arrow", 3338, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3545
+{ U"\U0001F6E1\uFE0F", u8"shield", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3546
+{ U"\U0001FA9A", u8"carpentry saw", 3338, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3547
+{ U"\U0001F527", u8"wrench", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3548
+{ U"\U0001FA9B", u8"screwdriver", 3338, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3549
+{ U"\U0001F529", u8"nut and bolt", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3550
+{ U"\u2699\uFE0F", u8"gear", 3338, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3551
+{ U"\U0001F5DC\uFE0F", u8"clamp", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3552
+{ U"\u2696\uFE0F", u8"balance scale", 3338, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3553
+{ U"\U0001F9AF", u8"white cane", 3338, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3554
+{ U"\U0001F517", u8"link", 3338, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3555
+{ U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3338, 0, -1, Lfg(97), EcVersion::E15_1 },   // 3556
+{ U"\u26D3\uFE0F", u8"chains", 3338, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3557
+{ U"\U0001FA9D", u8"hook", 3338, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3558
+{ U"\U0001F9F0", u8"toolbox", 3338, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3559
+{ U"\U0001F9F2", u8"magnet", 3338, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3560
+{ U"\U0001FA9C", u8"ladder", 3338, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3561
+{ U"\U0001FA8F", u8"shovel", 3338, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3562
+{ U"\u2697\uFE0F", u8"alembic", 3339, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3563
+{ U"\U0001F9EA", u8"test tube", 3339, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3564
+{ U"\U0001F9EB", u8"Petri dish", 3339, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3565
+{ U"\U0001F9EC", u8"DNA", 3339, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3566
+{ U"\U0001F52C", u8"microscope", 3339, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3567
+{ U"\U0001F52D", u8"telescope", 3339, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3568
+{ U"\U0001F4E1", u8"satellite antenna", 3339, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3569
+{ U"\U0001F489", u8"syringe", 3340, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3570
+{ U"\U0001FA78", u8"drop of blood", 3340, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3571
+{ U"\U0001F48A", u8"pill", 3340, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3572
+{ U"\U0001FA79", u8"adhesive bandage", 3340, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3573
+{ U"\U0001FA7C", u8"crutch", 3340, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3574
+{ U"\U0001FA7A", u8"stethoscope", 3340, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3575
+{ U"\U0001FA7B", u8"X-ray", 3340, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3576
+{ U"\U0001F6AA", u8"door", 3341, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3577
+{ U"\U0001F6D7", u8"elevator", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3578
+{ U"\U0001FA9E", u8"mirror", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3579
+{ U"\U0001FA9F", u8"window", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3580
+{ U"\U0001F6CF\uFE0F", u8"bed", 3341, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3581
+{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3341, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3582
+{ U"\U0001FA91", u8"chair", 3341, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3583
+{ U"\U0001F6BD", u8"toilet", 3341, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3584
+{ U"\U0001FAA0", u8"plunger", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3585
+{ U"\U0001F6BF", u8"shower", 3341, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3586
+{ U"\U0001F6C1", u8"bathtub", 3341, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3587
+{ U"\U0001FAA4", u8"mouse trap", 3341, 0, -1, Lfg(257), EcVersion::E13_0 },   // 3588
+{ U"\U0001FA92", u8"razor", 3341, 0, -1, Lfg(257), EcVersion::E12_0 },   // 3589
+{ U"\U0001F9F4", u8"lotion bottle", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3590
+{ U"\U0001F9F7", u8"safety pin", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3591
+{ U"\U0001F9F9", u8"broom", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3592
+{ U"\U0001F9FA", u8"basket", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3593
+{ U"\U0001F9FB", u8"roll of paper", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3594
+{ U"\U0001FAA3", u8"bucket", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3595
+{ U"\U0001F9FC", u8"soap", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3596
+{ U"\U0001FAE7", u8"bubbles", 3341, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3597
+{ U"\U0001FAA5", u8"toothbrush", 3341, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3598
+{ U"\U0001F9FD", u8"sponge", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3599
+{ U"\U0001F9EF", u8"fire extinguisher", 3341, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3600
+{ U"\U0001F6D2", u8"shopping cart", 3341, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3601
+{ U"\U0001F6AC", u8"cigarette", 3342, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3602
+{ U"\u26B0\uFE0F", u8"coffin", 3342, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3603
+{ U"\U0001FAA6", u8"headstone", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3604
+{ U"\u26B1\uFE0F", u8"funeral urn", 3342, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3605
+{ U"\U0001F9FF", u8"nazar amulet", 3342, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3606
+{ U"\U0001FAAC", u8"hamsa", 3342, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3607
+{ U"\U0001F5FF", u8"moai", 3342, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3608
+{ U"\U0001FAA7", u8"placard", 3342, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3609
+{ U"\U0001FAAA", u8"identification card", 3342, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3610
 { {}, u8"transport-sign", 21, 13, 3625, Lfg(8), EcVersion::NOT_EMOJI },   // 3611
 { {}, u8"warning", 21, 13, 3638, Lfg(8), EcVersion::NOT_EMOJI },   // 3612
 { {}, u8"arrow", 21, 21, 3651, Lfg(8), EcVersion::NOT_EMOJI },   // 3613
@@ -3964,7 +3964,7 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001F1EC\U0001F1FC", u8"flag: Guinea-Bissau", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3958
 { U"\U0001F1EC\U0001F1FE", u8"flag: Guyana", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3959
 { U"\U0001F1ED\U0001F1F0", u8"flag: Hong Kong SAR China", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3960
-{ U"\U0001F1ED\U0001F1F2", u8"flag: Heard & McDonald Islands", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3961
+{ U"\U0001F1ED\U0001F1F2", u8"flag: Heard Island & McDonald Islands", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3961
 { U"\U0001F1ED\U0001F1F3", u8"flag: Honduras", 3850, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3962
 { U"\U0001F1ED\U0001F1F7", u8"flag: Croatia", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3963
 { U"\U0001F1ED\U0001F1F9", u8"flag: Haiti", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3964
@@ -4068,7 +4068,7 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001F1F8\U0001F1E9", u8"flag: Sudan", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4062
 { U"\U0001F1F8\U0001F1EA", u8"flag: Sweden", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4063
 { U"\U0001F1F8\U0001F1EC", u8"flag: Singapore", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4064
-{ U"\U0001F1F8\U0001F1ED", u8"flag: St. Helena", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4065
+{ U"\U0001F1F8\U0001F1ED", u8"flag: St. Helena, Ascension & Tristan da Cunha", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4065
 { U"\U0001F1F8\U0001F1EE", u8"flag: Slovenia", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4066
 { U"\U0001F1F8\U0001F1EF", u8"flag: Svalbard & Jan Mayen", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4067
 { U"\U0001F1F8\U0001F1F0", u8"flag: Slovakia", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4068
@@ -4086,7 +4086,7 @@ constinit const uc::LibNode uc::libNodes[10391] {
 { U"\U0001F1F9\U0001F1E6", u8"flag: Tristan da Cunha", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4080
 { U"\U0001F1F9\U0001F1E8", u8"flag: Turks & Caicos Islands", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4081
 { U"\U0001F1F9\U0001F1E9", u8"flag: Chad", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4082
-{ U"\U0001F1F9\U0001F1EB", u8"flag: French Southern Territories", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4083
+{ U"\U0001F1F9\U0001F1EB", u8"flag: French Southern and Antarctic Lands", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4083
 { U"\U0001F1F9\U0001F1EC", u8"flag: Togo", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4084
 { U"\U0001F1F9\U0001F1ED", u8"flag: Thailand", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4085
 { U"\U0001F1F9\U0001F1EF", u8"flag: Tajikistan", 3850, 0, -1, Lfg(97), EcVersion::E2_0 },   // 4086

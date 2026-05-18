@@ -1,15 +1,19 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 18.0.0
 @@@+	NamesList-18.0.0.txt
-@+	Generation Date: 2026-01-31, 16:06:55 GMT
+@+	Generation Date: 2026-05-04, 11:55:12 GMT
 	Unicode 18.0.0 names list.
-	Adjusted for repertoire additions post UTC186.
-	Removed extraneous TAB in one subhead.
-	Added xref from 1D83 to 0261.
-	Annotations updates for 231B, 29D6, 1F76E.
-	More cuneiform annotations from L2/24-239.
-	Add xref from 02AE to 0265.
-	Repertoire synched with UnicodeData-18.0.0d7.txt.
+	Adjusted for repertoire changes post UTC187.
+	Repertoire synched with UnicodeData-18.0.0d9.txt.
+	Alpha review fixes.
+	Add SVS for CJK strokes.
+	Corrected spelling of subhead at 13864.
+	Updated notice for Tai Le script to include Dehong Dai name.
+	Added xrefs between 06C4 and 1EE85.
+	Added notice at 1BAE.
+	Added alias and xref to A77A.
+	Added xref between A76D and 1DF92.
+	Added xref between A7D7 and 1DF95.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -4048,7 +4052,7 @@
 	x (hebrew point sheva - 05B0)
 05C9	HEBREW POINT DAGESH HAZAQ MUDGASH
 	x (hebrew point dagesh or mapiq - 05BC)
-	* used in texts that distinguish dagesh hazaq from dagesh gal
+	* used in texts that distinguish dagesh hazaq from dagesh qal
 @		Based on ISO 8859-8
 05D0	HEBREW LETTER ALEF
 	= aleph
@@ -4520,6 +4524,7 @@
 	* Urdu
 06C4	ARABIC LETTER WAW WITH RING
 	* Kashmiri
+	x (arabic mathematical looped waw - 1EE85)
 06C5	ARABIC LETTER KIRGHIZ OE
 	* Kyrgyz
 	* a glyph variant occurs which replaces the looped tail with a horizontal bar through the tail
@@ -5576,7 +5581,6 @@
 0981	BENGALI SIGN CANDRABINDU
 0982	BENGALI SIGN ANUSVARA
 0983	BENGALI SIGN VISARGA
-0984	BENGALI SIGN COMBINING ANUSVARA ABOVE
 @		Independent vowels
 0985	BENGALI LETTER A
 0986	BENGALI LETTER AA
@@ -5724,8 +5728,6 @@
 	x (bengali sign avagraha - 09BD)
 	x (sharada sandhi mark - 111C9)
 	x (newa sandhi mark - 1145E)
-@		Addition for Sanskrit
-09FF	BENGALI LETTER SANSKRIT BA
 @@	0A00	Gurmukhi	0A7F
 @		Various signs
 0A01	GURMUKHI SIGN ADAK BINDI
@@ -10138,10 +10140,6 @@
 1877	MONGOLIAN LETTER MANCHU ZHA
 @		Buryat letter
 1878	MONGOLIAN LETTER CHA WITH TWO DOTS
-@		Transliteration letter
-1879	MONGOLIAN LETTER ALTERNATE UE
-	* same shape also appears in some Old Manchu literature
-	x (mongolian letter ue - 1826)
 @		Extensions for Sanskrit and Tibetan
 1880	MONGOLIAN LETTER ALI GALI ANUSVARA ONE
 	x (tibetan sign sna ldan - 0F83)
@@ -10364,7 +10362,7 @@
 194E	LIMBU DIGIT EIGHT
 194F	LIMBU DIGIT NINE
 @@	1950	Tai Le	197F
-@+		Note the similarly named but distinct New Tai Lue script encoded at 1980-19DF.
+@+		Note the similarly named but distinct New Tai Lue script encoded at 1980-19DF. The Tai Le script is also known as Dehong Dai.
 @		Consonants
 1950	TAI LE LETTER KA
 1951	TAI LE LETTER XA
@@ -10814,7 +10812,7 @@
 	x (combining down tack below - 031E)
 1ADC	COMBINING DIAERESIS WITH RAISED LEFT DOT
 1ADD	COMBINING DOT-AND-RING BELOW
-@		Chao diacritics
+@		Intermediate tone diacritics
 1ADE	COMBINING GRAVE-DOT
 1ADF	COMBINING DOT-ACUTE
 @		IPA positional variants
@@ -10855,7 +10853,7 @@
 	x (combining upwards arrow below - 034E)
 1AEB	COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
 	x (combining double rightwards arrow below - 0362)
-@		Khoe diacritics
+@		Compound tone diacritics
 1AEC	COMBINING CARON-ACUTE
 1AED	COMBINING VERTICAL-LINE-DOUBLE-ACUTE
 1AEE	COMBINING DOUBLE GRAVE ACCENT BELOW
@@ -10863,6 +10861,7 @@
 1AF0	COMBINING DOUBLE COMMA ABOVE
 	x (combining comma above - 0313)
 	x (modifier letter double apostrophe - 02EE)
+	x (combining double open mark below - 1AB8)
 @@	1B00	Balinese	1B7F
 @		Various signs
 1B00	BALINESE SIGN ULU RICEM
@@ -11156,6 +11155,7 @@
 1BAD	SUNDANESE CONSONANT SIGN PASANGAN WA
 	= subjoined wa
 @		Additional consonants
+@+		These two letters are no longer used in modern Sundanese orthography.
 1BAE	SUNDANESE LETTER KHA
 1BAF	SUNDANESE LETTER SYA
 @		Digits
@@ -15270,6 +15270,7 @@
 	* symbol for Negative Acknowledge
 @		Miscellaneous technical
 237C	RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
+	= azimuth
 @		Graphics for control codes
 237D	SHOULDERED OPEN BOX
 	* from ISO 9995-7
@@ -18164,7 +18165,7 @@
 	x (succeeds - 227B)
 	x (right-pointing angle bracket - 232A)
 @		Symbols used in game theory
-@+		TINY (pronounced "teenie") and MINY (pronounced "meenie") are symbols that yield infinitesimal values when applied to numbers in combinatorial game theory.
+@+		TINY and MINY are symbols that yield infinitesimal values when applied to numbers in combinatorial game theory.
 29FE	TINY
 	x (plus sign - 002B)
 29FF	MINY
@@ -21772,6 +21773,7 @@
 @		CJK strokes
 31C0	CJK STROKE T
 	* 2nd stroke of 51B0
+	~ 31C0 FE00 dotted T form
 31C1	CJK STROKE WG
 	* 2nd stroke of 72D0
 31C2	CJK STROKE XG
@@ -21788,6 +21790,8 @@
 31C6	CJK STROKE HZG
 	* 1st stroke of 7FBD
 	* 1st stroke of 4E5F
+	~ 31C6 FE00 curved Z form
+	~ 31C6 FE01 rising H form
 31C7	CJK STROKE HP
 	* 1st stroke of 53C8
 	* 4th stroke of 4ECA
@@ -21796,6 +21800,7 @@
 31C9	CJK STROKE SZWG
 	* 3rd stroke of 5F13
 	* 2nd stroke of 9A6C
+	~ 31C9 FE00 slanted S form
 31CA	CJK STROKE HZT
 	* 2nd stroke of 8BA1
 	* 2nd stroke of 9CE9
@@ -21810,25 +21815,33 @@
 	* 1st stroke of 51F8
 31CF	CJK STROKE N
 	* 3rd stroke of 5927
+	~ 31CF FE00 curved starting N form
+	~ 31CF FE01 flat N form
 31D0	CJK STROKE H
 	* 1st stroke of 5927
 	* 1st stroke of 4E03
+	~ 31D0 FE00 rising H form
 31D1	CJK STROKE S
 	* 4th stroke of 4E2D
+	~ 31D1 FE00 slanted S form
 31D2	CJK STROKE P
 	* 1st stroke of 4E4F
+	~ 31D2 FE00 flat P form
 31D3	CJK STROKE SP
 	* 1st stroke of 6708
 31D4	CJK STROKE D
 	* 3rd stroke of 4E38
+	~ 31D4 FE00 to bottom left form
 31D5	CJK STROKE HZ
 	* 2nd stroke of 56DB
+	~ 31D5 FE00 slanted Z form
 31D6	CJK STROKE HG
 	* 1st stroke of 758B
 	* 1st stroke of 5B50
 31D7	CJK STROKE SZ
 	* 2nd stroke of 5C71
 	* 2nd stroke of 4E1C
+	~ 31D7 FE00 slanted S form
 31D8	CJK STROKE SWZ
 	* 6th stroke of 8085
 31D9	CJK STROKE ST
@@ -21838,11 +21851,15 @@
 31DB	CJK STROKE PD
 	* 1st stroke of 5DE1
 	* 1st stroke of 5973
+	~ 31DB FE00 slanted SD form
 31DC	CJK STROKE PZ
 	* 3rd stroke of 516C
 	* 4th stroke of 5F18
+	~ 31DC FE00 upwards T form
 31DD	CJK STROKE TN
 	* 8th stroke of 5EFB
+	~ 31DD FE00 horizontal H curved N form
+	~ 31DD FE01 upwards T flat N form
 31DE	CJK STROKE SZZ
 	* 1st stroke of 5350
 	* 4th stroke of 4E9E
@@ -21861,10 +21878,12 @@
 	* 1st stroke of 98DE
 31E5	CJK STROKE SZP
 	* 8th stroke of 594A
+	~ 31E5 FE00 slanted S form
 @		Ideographic description character
 @+		This is a visibly displayed graphic character, not an invisible composition control. It is used with other characters from the Ideographic Description Characters block.
 31EF	IDEOGRAPHIC DESCRIPTION CHARACTER SUBTRACTION
 	* used to describe a character or a component with a stroke (or other component) removed
+@~	Standardized Variation Sequences
 @@	31F0	Katakana Phonetic Extensions	31FF
 @		Phonetic extensions for Ainu
 31F0	KATAKANA LETTER SMALL KU
@@ -25172,6 +25191,7 @@ A76B	LATIN SMALL LETTER ET
 	x (latin small letter yogh - 021D)
 A76C	LATIN CAPITAL LETTER IS
 A76D	LATIN SMALL LETTER IS
+	x (latin small letter c with right loop - 1DF92)
 A76E	LATIN CAPITAL LETTER CON
 	x (digit nine - 0039)
 A76F	LATIN SMALL LETTER CON
@@ -25190,9 +25210,11 @@ A778	LATIN SMALL LETTER UM
 @+		These letters are meant for transcriptions of medieval manuscripts, or for modern phonetic notations, for cases where the letters contrast with their Carolingian forms. For representing whole texts in an Insular style, one should use the regular Latin letters and display them with an Insular typeface.
 A779	LATIN CAPITAL LETTER INSULAR D
 A77A	LATIN SMALL LETTER INSULAR D
+	= d rotunda
 	* dental fricative [ð]
 	x (latin small letter eth - 00F0)
 	x (latin small letter delta - 1E9F)
+	x (latin small letter d rotunda with descending crossing loop - 1DF93)
 A77B	LATIN CAPITAL LETTER INSULAR F
 A77C	LATIN SMALL LETTER INSULAR F
 A77D	LATIN CAPITAL LETTER INSULAR G
@@ -25429,6 +25451,7 @@ A7D6	LATIN CAPITAL LETTER MIDDLE SCOTS S
 A7D7	LATIN SMALL LETTER MIDDLE SCOTS S
 	* used in Middle Scots for s, ss, ser, sir, is, sis, etc.
 	x (latin small letter sharp s - 00DF)
+	x (latin small ligature long s with descender s - 1DF95)
 A7D8	LATIN CAPITAL LETTER SIGMOID S
 A7D9	LATIN SMALL LETTER SIGMOID S
 	* used in Middle Cornish, Middle English, and Middle Scots
@@ -36501,6 +36524,7 @@ FFFF	<not a character>
 	x (devanagari digit zero - 0966)
 @		Sindhi implosive letter
 11B0A	DEVANAGARI LETTER ALTERNATE DDDA
+	* used for digitization purposes but not in current use
 	x (devanagari letter da - 0926)
 @@	11B60	Sharada Supplement	11B7F
 @		Kashmiri vowel signs
@@ -36974,6 +36998,11 @@ FFFF	<not a character>
 11DE7	TOLONG SIKI DIGIT SEVEN
 11DE8	TOLONG SIKI DIGIT EIGHT
 11DE9	TOLONG SIKI DIGIT NINE
+@@	11DF0	Bengali Supplement	11DFF
+@		Sign
+11DF0	BENGALI SIGN COMBINING ANUSVARA ABOVE
+@		Addition for Sanskrit
+11DF1	BENGALI LETTER ALTERNATE BARGIYA BA
 @@	11EE0	Makasar	11EFF
 @+		This script is known indigenously as Ukiri' Jangangjangang and in English as Old Makasar.
 @		Consonants
@@ -39480,7 +39509,7 @@ FFFF	<not a character>
 	* classifier grasping/holding : ꜣmm
 130AD	EGYPTIAN HIEROGLYPH D050
 	* not to be confused with 130B7
-	* 10000
+	* \10000
 	* logogram (finger) : ḏbꜥ
 130AE	EGYPTIAN HIEROGLYPH D050A
 	* \20000
@@ -40082,7 +40111,7 @@ FFFF	<not a character>
 131BB	EGYPTIAN HIEROGLYPH M011
 	* logogram (to offer) : wdn
 131BC	EGYPTIAN HIEROGLYPH M012
-	* 1000
+	* \1000
 	* phonemogram : ḫꜣ
 131BD	EGYPTIAN HIEROGLYPH M012A
 	* \2000
@@ -43634,7 +43663,7 @@ FFFF	<not a character>
 	* phonemogram : sw
 13863	EGYPTIAN HIEROGLYPH-13863
 	* logogram (Tatenen) : tꜣ-ṯnn
-@		C31. Thot
+@		C31. Thoth
 13864	EGYPTIAN HIEROGLYPH-13864
 	* logogram (Thoth) : ḏhwty
 13865	EGYPTIAN HIEROGLYPH-13865
@@ -44473,7 +44502,7 @@ FFFF	<not a character>
 13A05	EGYPTIAN HIEROGLYPH-13A05
 	* phono-repeater : fꜥg
 13A06	EGYPTIAN HIEROGLYPH-13A06
-	* logogram (Prosopopite nome) : mtr
+	* logogram (Prosopite nome) : mtr
 @		D31. Male genitals
 13A07	EGYPTIAN HIEROGLYPH-13A07
 	* classifier copulating : nk
@@ -51701,7 +51730,9 @@ FFFF	<not a character>
 16D95	CHISOI LETTER CA
 16D96	CHISOI LETTER JA
 16D97	CHISOI LETTER PA
+@		Sign
 16D98	CHISOI SIGN ANUSVARA
+@		Letters
 16D99	CHISOI LETTER YA
 16D9A	CHISOI LETTER DDA
 16D9B	CHISOI LETTER TTA
@@ -56877,6 +56908,7 @@ FFFF	<not a character>
 @+		Used in figured bass music notation in Baroque and neo-Baroque compositions.
 1D1F7	MUSICAL SYMBOL DIGIT TWO WITH STROKE
 	= raised 2nd
+	x (latin capital letter rum rotunda - A75C)
 1D1F8	MUSICAL SYMBOL DIGIT FOUR WITH STROKE
 	= raised 4th
 1D1F9	MUSICAL SYMBOL DIGIT FIVE WITH STROKE
@@ -57071,7 +57103,7 @@ FFFF	<not a character>
 1D251	MUSICAL SYMBOL COMBINING FLAG-7
 	* creates 512th notes
 1D252	MUSICAL SYMBOL COMBINING FLAG-8
-	* creates 1024th notes
+	* creates \1024th notes
 @		Rests
 1D253	MUSICAL SYMBOL TWO HUNDRED FIFTY-SIXTH REST
 1D254	MUSICAL SYMBOL FIVE HUNDRED TWELFTH REST
@@ -60235,7 +60267,7 @@ FFFF	<not a character>
 1DF22	LATIN SMALL LETTER TL DIGRAPH WITH BELT
 1DF23	LATIN SMALL LETTER TL DIGRAPH WITH RETROFLEX HOOK AND BELT
 1DF24	LATIN SMALL LETTER T-THETA DIGRAPH
-@		Letters for Malayalam transliteration
+@		Letters for romanized Malayalam
 1DF25	LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
 1DF26	LATIN SMALL LETTER L WITH MID-HEIGHT LEFT HOOK
 1DF27	LATIN SMALL LETTER N WITH MID-HEIGHT LEFT HOOK
@@ -60263,7 +60295,7 @@ FFFF	<not a character>
 1DF3B	LATIN SMALL LETTER BETA WITH PALATAL HOOK
 1DF3C	LATIN SMALL LETTER THETA WITH PALATAL HOOK
 1DF3D	LATIN SMALL LETTER CHI WITH PALATAL HOOK
-@		IPA barred letters
+@		Barred letters
 1DF3E	LATIN SMALL LETTER BARRED TURNED H
 1DF3F	LATIN SMALL LETTER BARRED W
 1DF40	LATIN CAPITAL LETTER BARRED A
@@ -60307,6 +60339,7 @@ FFFF	<not a character>
 1DF5F	LATIN SMALL LETTER OU DIGRAPH
 	x (latin small letter ou - 0223)
 1DF60	LATIN SMALL LETTER OMEGA WITH LOOP
+	x (latin small letter oo - A74F)
 1DF61	LATIN SMALL LETTER R WITH LEFT TIE
 1DF62	LATIN SMALL LETTER ESH-H DIGRAPH
 1DF63	LATIN SMALL LETTER STRETCHED T-H DIGRAPH
@@ -60324,7 +60357,7 @@ FFFF	<not a character>
 1DF6A	LATIN CAPITAL LETTER PHONOTYPIC ROUNDTOP A
 1DF6B	LATIN SMALL LETTER PHONOTYPIC ROUNDTOP A
 	* italic and handwriting forms usually do not show a reversed a
-	* also used for Malayalam transliteration
+	* also used for romanized Malayalam
 1DF6C	LATIN CAPITAL LETTER REVERSED SCRUPLE
 	* denotes the sound [tʃ] in the English Phonotypic Alphabet
 	* denotes the sound [e] in the Slovene Metelko alphabet
@@ -60334,12 +60367,11 @@ FFFF	<not a character>
 1DF6D	LATIN SMALL LETTER REVERSED SCRUPLE
 	x (greek lunate epsilon symbol - 03F5)
 1DF6E	LATIN CAPITAL LETTER PHONOTYPIC DIPHTHONG AI
-	* denotes the diphthong [ai] in the English Phonotypic Alphabet
 	x (latin capital letter i with stroke - 0197)
 	x (cross of jerusalem - 2629)
 	x (maltese cross - 2720)
 1DF6F	LATIN SMALL LETTER PHONOTYPIC DIPHTHONG AI
-	* also used for Malayalam transliteration
+	* also used for romanized Malayalam
 	* glyphic variants may show a hook tail instead of a curved descender
 	* handwritten forms may show a large crossbar like the capital form
 1DF70	LATIN SMALL LETTER I WITH PIGTAIL AT BOTTOM
@@ -60350,11 +60382,12 @@ FFFF	<not a character>
 1DF72	LATIN CAPITAL LETTER O WITH CURL
 	* the italic form may have the curl directed to the left
 1DF73	LATIN SMALL LETTER O WITH CURL
-	* also used for Malayalam transliteration
+	* also used for romanized Malayalam
 1DF74	LATIN CAPITAL LETTER CLOSED OMEGA WITH LONG STEM
 	x (latin capital letter oo - A74E)
 	x (latin capital letter closed omega - A7DD)
 1DF75	LATIN SMALL LETTER CLOSED OMEGA WITH LONG STEM
+	x (latin small letter closed omega - 0277)
 1DF76	LATIN CAPITAL LETTER TURNED CLOSED OMEGA
 1DF77	LATIN SMALL LETTER TURNED CLOSED OMEGA
 1DF78	LATIN CAPITAL LETTER PHONOTYPIC TH
@@ -60363,7 +60396,7 @@ FFFF	<not a character>
 	* the hook tail may take the shape of the tail of a capital Q 
 1DF7B	LATIN SMALL LETTER U WITH HOOK TAIL
 	x (latin small letter u with retroflex hook - 1D99)
-	* also used for Malayalam transliteration
+	* also used for romanized Malayalam
 1DF7C	LATIN CAPITAL LETTER U WITH NOTCH AT BOTTOM
 1DF7D	LATIN SMALL LETTER U WITH NOTCH AT BOTTOM
 	x (latin small letter ui - AB50)
@@ -60374,16 +60407,17 @@ FFFF	<not a character>
 1DF80	LATIN CAPITAL LETTER A WITH TOPBAR
 1DF81	LATIN CAPITAL LETTER E WITH BENT TOPBAR
 @		Cossic letters
-1DF90	LATIN SMALL LETTER C WITH SMALL SLASH
+1DF90	LATIN SMALL LETTER C WITH LOW SLASH
 	= cubus
 	* denotes cube of the unknown
-1DF91	LATIN SMALL LETTER C WITH DESCENDING LOOP
+1DF91	LATIN SMALL LETTER C WITH LOOPED CEDILLA
 	= census
 	* denotes square of the unknown
 1DF92	LATIN SMALL LETTER C WITH RIGHT LOOP
 	= cubus
 	* denotes cube of the unknown
-1DF93	LATIN SMALL LETTER D ROTUNDA WITH CROSSING LOOP
+	x (latin small letter is - A76D)
+1DF93	LATIN SMALL LETTER D ROTUNDA WITH DESCENDING CROSSING LOOP
 	= dragma
 	* denotes numerus/constant
 	x (latin small letter delta - 1E9F)
@@ -60420,7 +60454,7 @@ FFFF	<not a character>
 @		Subscript letter for phonetic transcription
 1DFD0	LATIN SUBSCRIPT SMALL LETTER GAMMA
 	# <sub> 0263
-@		IPA phonetic modifier letters
+@		Phonetic modifier letters
 1DFD1	MODIFIER LETTER SMALL CAPITAL P
 	# <super> 1D18
 1DFD2	MODIFIER LETTER SMALL B WITH STROKE
@@ -60467,14 +60501,14 @@ FFFF	<not a character>
 	# <super> 0293
 1DFE7	MODIFIER LETTER SMALL EZH WITH RETROFLEX HOOK
 	# <super> 1D9A
-@		IPA small capital modifier letters
+@		Small capital modifier letters
 1DFE8	MODIFIER LETTER SMALL CAPITAL D
 	# <super> 1D05
 1DFE9	MODIFIER LETTER SMALL CAPITAL A
 	# <super> 1D00
 1DFEA	MODIFIER LETTER SMALL CAPITAL E
 	# <super> 1D07
-@		IPA sinological modifier letters
+@		Sinological modifier letters
 1DFEB	MODIFIER LETTER SMALL REVERSED R WITH FISHHOOK
 	# <super> 027F
 1DFEC	MODIFIER LETTER SMALL SQUAT REVERSED ESH
@@ -60491,7 +60525,7 @@ FFFF	<not a character>
 	# <super> 0235
 1DFF2	MODIFIER LETTER SMALL T WITH CURL
 	# <super> 0236
-@		IPA Greek modifier letters
+@		Greek modifier letters
 1DFF3	MODIFIER LETTER SMALL GREEK PSI
 	x (modifier letter retroflex click with retroflex hook - 107B9)
 	# <super> 03C8
@@ -61937,6 +61971,7 @@ FFFF	<not a character>
 1EE84	ARABIC MATHEMATICAL LOOPED HEH
 	# <font> 0647 arabic letter heh
 1EE85	ARABIC MATHEMATICAL LOOPED WAW
+	x (arabic letter waw with ring - 06C4)
 	# <font> 0648 arabic letter waw
 1EE86	ARABIC MATHEMATICAL LOOPED ZAIN
 	# <font> 0632 arabic letter zain
@@ -65668,6 +65703,7 @@ FFFF	<not a character>
 1F989	OWL
 1F98A	FOX FACE
 1F98B	BUTTERFLY
+	x (monarch butterfly - 1FACC)
 1F98C	DEER
 1F98D	GORILLA
 1F98E	LIZARD
@@ -66097,6 +66133,7 @@ FFFF	<not a character>
 @		Animals and nature
 1FAC8	HAIRY CREATURE
 1FACC	MONARCH BUTTERFLY
+	x (butterfly - 1F98B)
 1FACD	ORCA
 1FACE	MOOSE
 1FACF	DONKEY
@@ -66618,7 +66655,7 @@ FFFF	<not a character>
 	x 20984
 	: 5349
 2F82D	CJK COMPATIBILITY IDEOGRAPH-2F82D
-	x 20161
+	x 2D161
 	: 5351
 2F82E	CJK COMPATIBILITY IDEOGRAPH-2F82E
 	: 535A
@@ -67646,7 +67683,7 @@ FFFF	<not a character>
 @@	30000	CJK Unified Ideographs Extension G	3134A
 @@	31350	CJK Unified Ideographs Extension H	323AF
 @@	323B0	CJK Unified Ideographs Extension J	33479
-@@	3D000	Seal	3FC3F
+@@	3D000	Small Seal	3FC3F
 @@	3FF80	Unassigned	3FFFF
 @		Noncharacters
 @+		These codes are intended for process-internal uses.

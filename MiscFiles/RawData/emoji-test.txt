@@ -1,5 +1,5 @@
 # emoji-test.txt
-# Date: 2026-01-30, 22:25:35 GMT
+# Date: 2026-04-30, 22:40:18 GMT
 # © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -4200,7 +4200,6 @@
 1F492                                                  ; fully-qualified     # 💒 E0.6 wedding
 1F5FC                                                  ; fully-qualified     # 🗼 E0.6 Tokyo tower
 1F5FD                                                  ; fully-qualified     # 🗽 E0.6 Statue of Liberty
-1F6D9                                                  ; fully-qualified     # 🛙 E18.0 lighthouse
 
 # subgroup: place-religious
 26EA                                                   ; fully-qualified     # ⛪ E0.6 church
@@ -4290,6 +4289,7 @@
 1F6A7                                                  ; fully-qualified     # 🚧 E0.6 construction
 
 # subgroup: transport-water
+1F6D9                                                  ; fully-qualified     # 🛙 E18.0 lighthouse
 2693                                                   ; fully-qualified     # ⚓ E0.6 anchor
 1F6DF                                                  ; fully-qualified     # 🛟 E14.0 ring buoy
 26F5                                                   ; fully-qualified     # ⛵ E0.6 sailboat
@@ -4540,10 +4540,9 @@
 1FAA1                                                  ; fully-qualified     # 🪡 E13.0 sewing needle
 1F9F6                                                  ; fully-qualified     # 🧶 E11.0 yarn
 1FAA2                                                  ; fully-qualified     # 🪢 E13.0 knot
-1FA8C                                                  ; fully-qualified     # 🪌 E18.0 eraser
 
-# Activities subtotal:		97
-# Activities subtotal:		97	w/o modifiers
+# Activities subtotal:		96
+# Activities subtotal:		96	w/o modifiers
 
 # group: Objects
 
@@ -4755,6 +4754,7 @@
 1F58D FE0F                                             ; fully-qualified     # 🖍️ E0.7 crayon
 1F58D                                                  ; unqualified         # 🖍 E0.7 crayon
 1F4DD                                                  ; fully-qualified     # 📝 E0.6 memo
+1FA8C                                                  ; fully-qualified     # 🪌 E18.0 eraser
 
 # subgroup: office
 1F4BC                                                  ; fully-qualified     # 💼 E0.6 briefcase
@@ -4799,6 +4799,7 @@
 1F5DD                                                  ; unqualified         # 🗝 E0.7 old key
 
 # subgroup: tool
+1FA8D                                                  ; fully-qualified     # 🪍 E18.0 net with handle
 1F528                                                  ; fully-qualified     # 🔨 E0.6 hammer
 1FA93                                                  ; fully-qualified     # 🪓 E12.0 axe
 26CF FE0F                                              ; fully-qualified     # ⛏️ E0.7 pick
@@ -4837,7 +4838,6 @@
 1F9F2                                                  ; fully-qualified     # 🧲 E11.0 magnet
 1FA9C                                                  ; fully-qualified     # 🪜 E13.0 ladder
 1FA8F                                                  ; fully-qualified     # 🪏 E16.0 shovel
-1FA8D                                                  ; fully-qualified     # 🪍 E18.0 net with handle
 
 # subgroup: science
 2697 FE0F                                              ; fully-qualified     # ⚗️ E1.0 alembic
@@ -4900,8 +4900,8 @@
 1FAA7                                                  ; fully-qualified     # 🪧 E13.0 placard
 1FAAA                                                  ; fully-qualified     # 🪪 E14.0 identification card
 
-# Objects subtotal:		317
-# Objects subtotal:		317	w/o modifiers
+# Objects subtotal:		318
+# Objects subtotal:		318	w/o modifiers
 
 # group: Symbols
 
@@ -5361,7 +5361,7 @@
 1F1EC 1F1FC                                            ; fully-qualified     # 🇬🇼 E2.0 flag: Guinea-Bissau
 1F1EC 1F1FE                                            ; fully-qualified     # 🇬🇾 E2.0 flag: Guyana
 1F1ED 1F1F0                                            ; fully-qualified     # 🇭🇰 E2.0 flag: Hong Kong SAR China
-1F1ED 1F1F2                                            ; fully-qualified     # 🇭🇲 E2.0 flag: Heard & McDonald Islands
+1F1ED 1F1F2                                            ; fully-qualified     # 🇭🇲 E2.0 flag: Heard Island & McDonald Islands
 1F1ED 1F1F3                                            ; fully-qualified     # 🇭🇳 E2.0 flag: Honduras
 1F1ED 1F1F7                                            ; fully-qualified     # 🇭🇷 E2.0 flag: Croatia
 1F1ED 1F1F9                                            ; fully-qualified     # 🇭🇹 E2.0 flag: Haiti
@@ -5465,7 +5465,7 @@
 1F1F8 1F1E9                                            ; fully-qualified     # 🇸🇩 E2.0 flag: Sudan
 1F1F8 1F1EA                                            ; fully-qualified     # 🇸🇪 E2.0 flag: Sweden
 1F1F8 1F1EC                                            ; fully-qualified     # 🇸🇬 E2.0 flag: Singapore
-1F1F8 1F1ED                                            ; fully-qualified     # 🇸🇭 E2.0 flag: St. Helena
+1F1F8 1F1ED                                            ; fully-qualified     # 🇸🇭 E2.0 flag: St. Helena, Ascension & Tristan da Cunha
 1F1F8 1F1EE                                            ; fully-qualified     # 🇸🇮 E2.0 flag: Slovenia
 1F1F8 1F1EF                                            ; fully-qualified     # 🇸🇯 E2.0 flag: Svalbard & Jan Mayen
 1F1F8 1F1F0                                            ; fully-qualified     # 🇸🇰 E2.0 flag: Slovakia
@@ -5483,7 +5483,7 @@
 1F1F9 1F1E6                                            ; fully-qualified     # 🇹🇦 E2.0 flag: Tristan da Cunha
 1F1F9 1F1E8                                            ; fully-qualified     # 🇹🇨 E2.0 flag: Turks & Caicos Islands
 1F1F9 1F1E9                                            ; fully-qualified     # 🇹🇩 E2.0 flag: Chad
-1F1F9 1F1EB                                            ; fully-qualified     # 🇹🇫 E2.0 flag: French Southern Territories
+1F1F9 1F1EB                                            ; fully-qualified     # 🇹🇫 E2.0 flag: French Southern and Antarctic Lands
 1F1F9 1F1EC                                            ; fully-qualified     # 🇹🇬 E2.0 flag: Togo
 1F1F9 1F1ED                                            ; fully-qualified     # 🇹🇭 E2.0 flag: Thailand
 1F1F9 1F1EF                                            ; fully-qualified     # 🇹🇯 E2.0 flag: Tajikistan
