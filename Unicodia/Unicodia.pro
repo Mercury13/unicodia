@@ -2,7 +2,6 @@ QT += core gui widgets svg svgwidgets
 CONFIG += c++2a c++20
 
 win32-g++ {
-    DEFINES += SECURITY_WIN32
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
     # Qt — system headers
