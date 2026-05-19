@@ -14061,7 +14061,7 @@
     <orig>This program is not related to Unicode Consortium</orig>
     <transl>此程序与 Unicode 联盟无关</transl>
    </text>
-   <text id="Transl" force-attention="true">
+   <text id="Transl">
     <orig>Translators</orig>
     <transl>译者</transl>
    </text>
