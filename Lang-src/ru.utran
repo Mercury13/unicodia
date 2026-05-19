@@ -3085,9 +3085,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very often (for example, in browsers) one or another variation of character is chosen by selecting another font, or by enabling OpenType features. Unicode permits another method: creating ligature from character and selector.</p>
+      <p>Very often (for example, in browsers) one or another variation of a character is chosen by selecting a different font, or by enabling OpenType features. Unicode permits another method: creating a ligature from a character and a selector.</p>
       <p />
-      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and some more scrtips use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
+      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and other scripts use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
      </orig>
      <transl>
       <p>Чаще всего (например, в браузерах) тот или иной вариант написания символа включают, выбирая другой шрифт или включая функции OpenType. Юникод позволяет это ещё одним методом: созданием лигатур из символа и селектора.</p>
@@ -3103,9 +3103,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Hani|Chinese]] was initially written right to left in columns, and it’s still written this way for artistic purposes: poems, postcards, signs.</p>
+      <p>[[ps:Hani|Chinese]] was initially written right-to-left in columns, and it’s still written this way for artistic purposes: in poems, on postcards, and on signs.</p>
       <p />
-      <p>The block encodes characters from Chinese encoding GB{{_}}18030 (2000) intended for vertical writing.</p>
+      <p>The block encodes characters from the Chinese GB{{_}}18030 encoding (2000) intended for vertical writing.</p>
      </orig>
      <transl>
       <p>[[ps:Hani|Китайский язык]] изначально писался по столбцам справа налево, и сейчас так пишут в художественных целях: стихи, открытки, вывески.</p>
@@ -3120,7 +3120,7 @@
      <transl>Комбинирующие полузнаки</transl>
     </text>
     <text id="Text">
-     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
+     <orig>Parts of diacritical marks that span several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
      <transl>Части диакритических знаков, охватывающих несколько символов. Например, можно накрыть три буквы {{sm|a︤c︦e︥}} одной чертой. В большинстве шрифтов реализованы плохо, и автор «Юникодии» специально подобрал три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо.</transl>
     </text>
    </group>
@@ -8530,7 +8530,6 @@
     </text>
     <text id="Lang">
      <orig>Saurashtra {{nspk}}, the script is used in Tamil Nadu only</orig>
-     <known-orig>Saurashtra {{nspk}}, script is used in Tamil Nadu only</known-orig>
      <transl>саураштра {{nspk}}, письменность используется только в штате Тамилнад</transl>
     </text>
     <text id="Text">
@@ -8539,11 +8538,6 @@
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. The initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
      </orig>
-     <known-orig>
-      <p>The origin is unclear, all [[ps:Taml|Tamil]] Saurashtra are bilingual, and the rest of states write in [[ps:Deva|Devanagari]], [[ps:Gujr|Gujarati]], [[ps:Telu|Telugu]].</p>
-      <p />
-      <p>Brahmic abugida with inherent vowel {{t|ə}} and virama: {{sm|ꢒ}}=kə, {{sm|ꢒꢶ}}=ki, {{sm|ꢒ꣄}}=k. [[pt:virama|Virama]] is used frequently. Initial vowel is a separate character: {{sm|ꢄ}}=i.</p>
-     </known-orig>
      <transl>
       <p>Происхождение неясно, все [[ps:Taml|тамильские]] саураштра двуязычны, а в остальных штатах пишут на [[ps:Deva|деванáгари]], [[ps:Gujr|гуджарати]], [[ps:Telu|тéлугу]]. </p>
       <p />
@@ -9767,11 +9761,11 @@
     <transl>Есть несколько причин большого количества албанских алфавитов ([[ps:Elba|эльбасанский]], [[ps:Vith|виткутьский]], [[ps:Todr|Тодри]], Весо-Бея, Веллары): мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции).</transl>
    </text>
    <text id="ArabPres1">
-    <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <orig>The block is created for [[pt:convertibility|compatibility]] with older encodings like CP864 (DOS), where different codes were used for isolated, initial, medial, and final letters due to [[pt:dynamic|limited]] typographic engines.</orig>
     <transl>Блок создан для [[pt:convertibility|совместимости]] со старыми кодировками вроде CP864 (DOS), где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.</transl>
    </text>
    <text id="ArabPres2">
-    <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <orig>It’s better to avoid these characters in normal text. The only legitimate use is in educational materials, so the characters have the “Arabic letter” class (in many old encodings, text was written left to right).</orig>
     <transl>В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</transl>
    </text>
    <text id="GrekCoptUni">

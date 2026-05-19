@@ -3086,9 +3086,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very often (for example, in browsers) one or another variation of character is chosen by selecting another font, or by enabling OpenType features. Unicode permits another method: creating ligature from character and selector.</p>
+      <p>Very often (for example, in browsers) one or another variation of a character is chosen by selecting a different font, or by enabling OpenType features. Unicode permits another method: creating a ligature from a character and a selector.</p>
       <p />
-      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and some more scrtips use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
+      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and other scripts use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
      </orig>
      <transl>
       <p>Частіше за все (наприклад, у браузерах) той чи інший варіант написання символа вмикають, обираючи інший шрифт або вмикаючи функції OpenType. Юнікод дозволяє це ще одним методом: створенням лігатур з символа і селектора.</p>
@@ -3104,9 +3104,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Hani|Chinese]] was initially written right to left in columns, and it’s still written this way for artistic purposes: poems, postcards, signs.</p>
+      <p>[[ps:Hani|Chinese]] was initially written right-to-left in columns, and it’s still written this way for artistic purposes: in poems, on postcards, and on signs.</p>
       <p />
-      <p>The block encodes characters from Chinese encoding GB{{_}}18030 (2000) intended for vertical writing.</p>
+      <p>The block encodes characters from the Chinese GB{{_}}18030 encoding (2000) intended for vertical writing.</p>
      </orig>
      <transl>
       <p>[[ps:Hani|Китайська мова]] початково писалася стовпцями справа наліво, і зараз так пишуть в художніх цілях: вірші, листівки, вивіски.</p>
@@ -3121,7 +3121,7 @@
      <transl>Комбінуючі напівзнаки</transl>
     </text>
     <text id="Text">
-     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
+     <orig>Parts of diacritical marks that span several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
      <transl>Частини діакритичних знаків, що охоплюють кілька символів. Наприклад, можна накрити три літери {{sm|a︤c︦e︥}} однією рискою. У більшості шрифтів реалізовані погано, і автор «Юнікодії» умисне підібрав три вдалих символи. А ось церковнослов’янське скорочення {{sm|Х︮с︯}} виглядає погано.</transl>
     </text>
    </group>
@@ -9761,11 +9761,11 @@
     <transl>Є декілька причин великої кількості албанських алфавітів ([[ps:Elba|ельбасанський]], [[ps:Vith|віткутьський]], [[ps:Todr|Тодрі]], Весо-Бея, Веллари): мислителі национально-визвольного руху дивились на слов’ян, греків та турків і хотіли свій алфавіт, і просто конспірація від турків (албанці одержали незалежність у 1912 з розпадом Туреччини).</transl>
    </text>
    <text id="ArabPres1">
-    <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <orig>The block is created for [[pt:convertibility|compatibility]] with older encodings like CP864 (DOS), where different codes were used for isolated, initial, medial, and final letters due to [[pt:dynamic|limited]] typographic engines.</orig>
     <transl>Блок створений для [[pt:convertibility|сумісності]] зі старими кодуваннями на кшталт CP864 (DOS), де через [[pt:dynamic|обмеженість]] типографських движків доводилося використовувати різні коди для відокремлених, початкових, середніх та кінцевих літер.</transl>
    </text>
    <text id="ArabPres2">
-    <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <orig>It’s better to avoid these characters in normal text. The only legitimate use is in educational materials, so the characters have the “Arabic letter” class (in many old encodings, text was written left to right).</orig>
     <transl>У звичайному письмі ці символи краще не{{_}}використовувати. Єдине законне застосування{{-}}навчальні матеріали, тому символам даний клас «арабська літера» (у багатьох тодішніх кодуваннях текст записувався зліва направо).</transl>
    </text>
    <text id="GrekCoptUni">

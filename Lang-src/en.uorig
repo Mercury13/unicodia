@@ -2326,9 +2326,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very often (for example, in browsers) one or another variation of character is chosen by selecting another font, or by enabling OpenType features. Unicode permits another method: creating ligature from character and selector.</p>
+      <p>Very often (for example, in browsers) one or another variation of a character is chosen by selecting a different font, or by enabling OpenType features. Unicode permits another method: creating a ligature from a character and a selector.</p>
       <p />
-      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and some more scrtips use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
+      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and other scripts use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
      </orig>
     </text>
    </group>
@@ -2338,9 +2338,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Hani|Chinese]] was initially written right to left in columns, and it’s still written this way for artistic purposes: poems, postcards, signs.</p>
+      <p>[[ps:Hani|Chinese]] was initially written right-to-left in columns, and it’s still written this way for artistic purposes: in poems, on postcards, and on signs.</p>
       <p />
-      <p>The block encodes characters from Chinese encoding GB{{_}}18030 (2000) intended for vertical writing.</p>
+      <p>The block encodes characters from the Chinese GB{{_}}18030 encoding (2000) intended for vertical writing.</p>
      </orig>
     </text>
    </group>
@@ -2349,7 +2349,7 @@
      <orig>Combining half marks</orig>
     </text>
     <text id="Text">
-     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
+     <orig>Parts of diacritical marks that span several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
     </text>
    </group>
    <group id="FE30">
@@ -6882,10 +6882,10 @@
     <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
    </text>
    <text id="ArabPres1">
-    <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <orig>The block is created for [[pt:convertibility|compatibility]] with older encodings like CP864 (DOS), where different codes were used for isolated, initial, medial, and final letters due to [[pt:dynamic|limited]] typographic engines.</orig>
    </text>
    <text id="ArabPres2">
-    <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <orig>It’s better to avoid these characters in normal text. The only legitimate use is in educational materials, so the characters have the “Arabic letter” class (in many old encodings, text was written left to right).</orig>
    </text>
    <text id="GrekCoptUni">
     <orig>In Unicode{{_}}1.0, Coptic was [[pt:unification|unified]] with Greek, and all purely Coptic letters were treated as Greek. Unicode{{_}}4.1 (2005) disunified these languages: Coptic studies often contain Greek text. Moreover, only one Coptic letter has significantly different glyphs in uppercase and lowercase: {{smfunky|Ϧϧ}}.</orig>
