@@ -91,9 +91,11 @@
 				Do not use where alphabets are extensively used and the
 				text is readable as is, it may garble bigger articles
 				such as Egyptian hieroglyphs!
-		<!-- allow-italic: allow italic script; off for Chinese -->
+			 allow-italic: allow italic script in some programmatic things:
+				language info and comments in legacy computers
+				Turned off for Chinese only -->
 		<font hiero-bigger="0" allow-italic="1" />
-		<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
+		<!-- Localized icons. Fixed set: if you want a new one, ask the programmer -->
 		<icons sort-az="sort_AZ" />
 	</design>
 	<!-- Numeric format. Decimal point → BMP char only, test in Tibetan fractions
