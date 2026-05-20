@@ -101,7 +101,7 @@
 	<!-- Numeric format. Decimal point → BMP char only, test in Tibetan fractions
 		 thou-point → BMP char only, special bhv for space
 		 thou-min-length — minimum length to get thousand separator
-			Test in numeric values: click e.g. 1, “Digit” link, search icon
+			Test: click e.g. ASCII “1”, “Digit” link, search icon
 		 thou-min-length-dense — same in dense text
 			Test with Latin (N characters) and CJK ideographs (N characters):
 			click Latin/CJK char, “Latin/CJK ideo” link -->
