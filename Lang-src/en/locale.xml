@@ -109,6 +109,8 @@
 		<!-- Policy for imprecise numbers (people speaking the language)
 		     Shifts always increase, 0=unit, 3=thousand, 6=million, 9=billion
 			   Shift 0 may exist, but the system will auto-insert {1}/never
+			   The author guarantees that the numbers will be divisible by 10,
+				and they are now divisible by 100: there are no languages that dead.
 			 Frac: never = always whole number (1230, 12300)
 			       avoid = avoid fractions (1230, 12.3k)
 				   onedig = only if one-digit fraction (1230, 1.2k, 12.3k)
