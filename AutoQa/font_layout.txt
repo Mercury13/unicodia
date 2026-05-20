@@ -17767,7 +17767,9 @@ FFFD......: NotoSerif-Regular
 2932C.......: BabelStoneHanExtra
 2932D..2932F: SimSun-ExtB
 29330.......: BabelStoneHanExtra
-29331..29333: SimSun-ExtB
+29331.......: SimSun-ExtB
+29332.......: BabelStoneHanExtra
+29333.......: SimSun-ExtB
 29334, 29335: BabelStoneHanExtra
 29336..2933D: SimSun-ExtB
 2933E.......: BabelStoneHanExtra
