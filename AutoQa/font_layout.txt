@@ -90,9 +90,7 @@
 == Devanagari
 0900..097F: NotoSerifDevanagari-Regular
 == Bengali
-0980..0983: NotoSerifBengali-Regular
-0984......: [Tofu]
-0985..09FF: NotoSerifBengali-Regular
+0980..09FE: NotoSerifBengali-Regular
 == Gurmukhi
 0A01..0A76: NotoSerifGurmukhi-Regular
 == Gujarati
@@ -160,9 +158,7 @@
 == Mongolian
 1800..180A: NotoSansMongolian-Regular
 180B..180F: [Abbreviation]
-1810..1878: NotoSansMongolian-Regular
-1879......: [Tofu]
-1880..1884: NotoSansMongolian-Regular
+1810..1884: NotoSansMongolian-Regular
 1885, 1886: UnicodiaMongolFixup
 1887..18A8: NotoSansMongolian-Regular
 18A9......: UnicodiaMongolFixup
@@ -591,9 +587,7 @@ A69E, A69F: NotoSerif-Regular
 == Bamum
 A6A0..A6F7: NotoSansBamum-Regular
 == Modifier Tone Letters
-A700..A716: NotoSerif-Regular
-A717..A71A: Cambria
-A71B, A71C: NotoSerif-Regular
+A700..A71C: NotoSerif-Regular
 A71D..A71F: UnicodiaFunky
 == Latin Extended-D
 A720, A721: Cambria
@@ -909,6 +903,9 @@ FFFD......: NotoSerif-Regular
 11D98..11DA9: NotoSansGunjalaGondi-Regular
 == Tolong Siki
 11DB0..11DE9: UnicodiaFunky
+== Bengali Supplement
+11DF0.......: [Tofu]
+11DF1.......: NotoSerifBengali-Regular
 == Makasar
 11EE0..11EF8: UnicodiaFunky
 == Kawi
@@ -17770,9 +17767,7 @@ FFFD......: NotoSerif-Regular
 2932C.......: BabelStoneHanExtra
 2932D..2932F: SimSun-ExtB
 29330.......: BabelStoneHanExtra
-29331.......: SimSun-ExtB
-29332.......: BabelStoneHanExtra
-29333.......: SimSun-ExtB
+29331..29333: SimSun-ExtB
 29334, 29335: BabelStoneHanExtra
 29336..2933D: SimSun-ExtB
 2933E.......: BabelStoneHanExtra
