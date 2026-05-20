@@ -3252,7 +3252,8 @@
      <transl>曼尼普尔文字扩展（Meetei Mayek Extensions）</transl>
     </text>
     <text id="Text">
-     <orig>Obsolete characters from Meetei language, including [[pt:virama|virama]] for assembling old [[pt:ligature|ligatures]].</orig>
+     <orig>Obsolete characters from the Meetei language, including a [[pt:virama|virama]] used to assemble old [[pt:ligature|ligatures]].</orig>
+     <known-orig>Obsolete characters from Meetei language, including [[pt:virama|virama]] for assembling old [[pt:ligature|ligatures]].</known-orig>
      <transl>来自曼尼普尔语（Meetei）的废弃字符，包括用于组合旧式 [[pt:ligature|连字]] 的 [[pt:virama|Virama]]（元音省略符）。</transl>
     </text>
    </group>
@@ -3307,8 +3308,13 @@
      <orig>
       <p>[[pt:precomposed|Precomposed]] Hangul syllables, mainly for compatibility with other encodings.</p>
       <p />
-      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to the final place in the hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “the great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
+      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0, the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996), the block was placed at the final position in the hope that there wasn’t much Korean Unicode text yet. This case was dubbed “the great Korean mess”. In response, the Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
      </orig>
+     <known-orig>
+      <p>[[pt:precomposed|Precomposed]] Hangul syllables, mainly for compatibility with other encodings.</p>
+      <p />
+      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to the final place in the hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “the great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
+     </known-orig>
      <transl>
       <p>[[pt:precomposed|预组合]]谚文音节，主要用于与其他编码标准的兼容性。</p>
       <p />
@@ -3322,7 +3328,8 @@
      <transl>谚文字母扩展 B（Hangul Jamo Extended-B）</transl>
     </text>
     <text id="Text">
-     <orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit dynamic composition of syllables absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit the dynamic composition of syllables that are absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</orig>
+     <known-orig>Old medial and final ''(jungseong and jongseong)'' letters of Korean. They permit dynamic composition of syllables absent in modern Korean{{-}}and thus absent in [[pt:precomposed|precomposed]] form.</known-orig>
      <transl>韩语的古中声（jungseong）和古终声（jongseong）字母。它们允许动态组合现代韩语中不存在的音节——因此在 [[pt:precomposed|预组合]] 形式中也不存在。</transl>
     </text>
    </group>
@@ -3332,7 +3339,8 @@
      <transl>中日韩兼容表意文字（CJK Compatibility Ideographs）</transl>
     </text>
     <text id="Text">
-     <orig>The block contains [[ps:Hani|CJK ideographs]] that are present in other encodings several times, to prevent information loss during [[pt:convertibility|round-trip conversion]]. Their shape is strictly specified. However, ordinary [[pt:unification|unified]] ideographs are found here too{{-}}for example, FA0E and 0F, 11, 13, 14…</orig>
+     <orig>The block contains [[ps:Hani|CJK ideographs]] that appear several times in other encodings, to prevent information loss during [[pt:convertibility|round-trip conversion]]. Their shape is strictly specified. However, ordinary [[pt:unification|unified]] ideographs are found here too{{-}}for example, [[pc:FA0E]] and [[pc:FA0F|0F]], [[pc:FA11|11]], [[pc:FA13|13]], [[pc:FA14|14]]…</orig>
+     <known-orig>The block contains [[ps:Hani|CJK ideographs]] that are present in other encodings several times, to prevent information loss during [[pt:convertibility|round-trip conversion]]. Their shape is strictly specified. However, ordinary [[pt:unification|unified]] ideographs are found here too{{-}}for example, FA0E and 0F, 11, 13, 14…</known-orig>
      <transl>该区块包含在其他编码标准中多次出现的 [[ps:Hani|中日韩表意文字]]，以防止在 [[pt:convertibility|往返转换]] 过程中丢失信息。这些文字的字形是严格规定的。不过，这里也能找到普通的[[pt:unification|统一]] 表意文字——例如 FA0E、FA0F、FA11、FA13、FA14……</transl>
     </text>
    </group>
@@ -3378,10 +3386,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Very often (for example, in browsers) one or another variation of a character is chosen by selecting a different font, or by enabling OpenType features. Unicode permits another method: creating a ligature from a character and a selector.</p>
+      <p />
+      <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and other scripts use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
+     </orig>
+     <known-orig>
       <p>Very often (for example, in browsers) one or another variation of character is chosen by selecting another font, or by enabling OpenType features. Unicode permits another method: creating ligature from character and selector.</p>
       <p />
       <p>[[ps:Latn|Latin]], [[ps:Mymr|Myanmar]] and some more scrtips use VS1. [[ps:Hani|CJK ideographs]] use VS1 to VS3. [[pt:emoji|Emoji]] can be made coloured (VS16) or text (VS15).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>通常（例如在浏览器中），通过选择另一种字体或启用 OpenType 特性来选择字符的某种变体。</p>
       <p />
@@ -3398,10 +3411,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>[[ps:Hani|Chinese]] was initially written right-to-left in columns, and it’s still written this way for artistic purposes: in poems, on postcards, and on signs.</p>
+      <p />
+      <p>The block encodes characters from the Chinese GB{{_}}18030 encoding (2000) intended for vertical writing.</p>
+     </orig>
+     <known-orig>
       <p>[[ps:Hani|Chinese]] was initially written right to left in columns, and it’s still written this way for artistic purposes: poems, postcards, signs.</p>
       <p />
       <p>The block encodes characters from Chinese encoding GB{{_}}18030 (2000) intended for vertical writing.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>[[ps:Hani|中文]] 最初是按列从右向左书写的，出于艺术目的（如诗歌、明信片、招牌），至今仍采用这种书写方式。</p>
       <p />
@@ -3415,7 +3433,8 @@
      <transl>组合用半记号（Combining Half Marks）</transl>
     </text>
     <text id="Text">
-     <orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
+     <orig>Parts of diacritical marks that span several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</orig>
+     <known-orig>Parts of diacritical marks spanning several characters. For example, you can cover three letters {{sm|a︤c︦e︥}} with a single line. It’s poorly implemented in most fonts, and the author of ''Unicodia'' intentionally picked three good letters. And Church Slavonic {{sm|Х︮с︯}} looks bad.</known-orig>
      <transl>跨越多个字符的变音符号部件。例如，你可以用一条线覆盖三个字母 {{sm|a︤c︦e︥}}。这一功能在大多数字体中实现得很差，而「Unicodia」的作者特意挑选了三个显示效果较好的字母。而教会斯拉夫语的 {{sm|Х︮с︯}} 看起来就很糟糕。</transl>
     </text>
    </group>
@@ -3425,7 +3444,8 @@
      <transl>中日韩兼容标点符号（CJK Compatibility Forms）</transl>
     </text>
     <text id="Text">
-     <orig>Characters for vertical [[pt:cjk|CJK]] writing, mostly for compatibility with existing encodings. Particularly with Chinese encoding CNS{{_}}11643{{-}}hence name in Unicode 1.0, ''CNS 11643 Compatibility''.</orig>
+     <orig>Characters for vertical [[pt:cjk|CJK]] writing, primarily for compatibility with existing encodings. Particularly with Chinese encoding CNS{{_}}11643{{-}}hence the name in Unicode 1.0: ''CNS 11643 Compatibility''.</orig>
+     <known-orig>Characters for vertical [[pt:cjk|CJK]] writing, mostly for compatibility with existing encodings. Particularly with Chinese encoding CNS{{_}}11643{{-}}hence name in Unicode 1.0, ''CNS 11643 Compatibility''.</known-orig>
      <transl>用于 [[pt:cjk|中日韩]] 竖排书写的字符，主要是为了与现有编码标准兼容。特别是与中文编码标准 CNS 11643 兼容——因此在 Unicode 1.0 中，该区块名为“CNS 11643 兼容性”。</transl>
     </text>
    </group>
@@ -3485,10 +3505,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A short block at the end of [[pt:bmp|Basic Plane]]. Of the 14 characters (two are [[pt:noncharacter|non-characters]]), only five are assigned: three interlinear annotation characters, a substitution character in a composite document (“picture here”), and a sign of failed reading.</p>
+      <p />
+      <p>The latter, {{sm|�}}, we see most of all. It means that the “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually, someone attempts to read the text as [[pt:utf8|UTF-8]], even though it’s in a single-byte encoding.</p>
+     </orig>
+     <known-orig>
       <p>A short block at the end of [[pt:bmp|Basic Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear annotations, substitution character in a composite document (“picture here”), and sign of failed reading.</p>
       <p />
       <p>The latter, {{sm|�}}, we see most of all. It means that “mojibake” appeared not{{_}}because of a missing glyph in the font, but because of failed decoding. Usually{{-}}someone attempted to read the text in single-byte encoding as [[pt:utf8|UTF-8]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是位于 [[pt:bmp|基本多文种平面]] 末尾的一个短小区块。该区块共有 14 个码位（其中两个是[[pt:noncharacter|非字符]]），但仅分配了 5 个：三个用于行间注释的字符、复合文档中的替代字符（表示“此处有图”），以及一个表示读取失败的符号。</p>
       <p />
@@ -3514,7 +3539,8 @@
      <transl>爱琴数字（Aegean Numbers）</transl>
     </text>
     <text id="Text">
-     <orig>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with number 100 was found.</orig>
+     <orig>A very simple decimal numeral system used by the Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In the [[ps:Cprt|Cypriot]] syllabary, one tablet with the number 100 was found.</orig>
+     <known-orig>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with number 100 was found.</known-orig>
      <transl>米诺斯文明和克里特-迈锡尼文明使用的一种非常简单的十进制数字系统。见于 [[ps:Lina|线形文字A]]和[[ps:Linb|线形文字 B]] 中。在 [[ps:Cprt|塞浦路斯音节文字]] 中，曾发现一块刻有数字 100 的泥板。</transl>
     </text>
    </group>
@@ -3525,6 +3551,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Attic numeral system was [[pt:acrophonic|acrophonic]]{{-}}the first letters of words were used for digits:</p>
+      <p>* I = 1, ἴος</p>
+      <p>* trimmed Π = 5, πέντε</p>
+      <p>* Δ = 10, δέκα</p>
+      <p>* Η = 100, ηἑκατόν</p>
+      <p>* Χ = {{n|1000}}, χίλιοι</p>
+      <p>* Μ = {{n|10000}}, μύριοι</p>
+      <p />
+      <p>Characters consisting of Π and 10/100/{{n|1000}}… were used for 50, 500, and so on.</p>
+      <p />
+      <p>Later, the Attic system was supplanted by the [[ps:Grek|Ionian]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), but cultural interchange influenced the Etruscans, leading to Roman numerals.</p>
+      <p />
+      <p>This block also contains symbols of Ancient Greek measuring units.</p>
+      <p />
+      <p>The funny word ''Litra'' (used by Russian alcoholics for a one-litre bottle) is actually related to litre. In Ancient Greece, ''litra'' was both a coin and a unit of weight. In France, the ''litron'' was a measure of dry volume, hence the ''litre''.</p>
+     </orig>
+     <known-orig>
       <p>Attic numeral system was [[pt:acrophonic|acrophonic]]{{-}}first letters of words were used for digits:</p>
       <p>* I = 1, ἴος</p>
       <p>* trimmed Π = 5, πέντε</p>
@@ -3540,7 +3583,7 @@
       <p>This block also contains symbols of Ancient Greek measuring units.</p>
       <p />
       <p>The funny word ''Litra'' (used by Russian alcoholics for one-litre bottle) is actually related to litre. In Ancient Greece ''litra'' was a coin and unit of weight. In France ''litron'' was a measure of dry volume, hence ''litre''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>阿提卡数字系统是 [[pt:acrophonic|首音字符]]——即使用单词的首字母来代表数字：</p>
       <p>* I = 1，来自 ἴος</p>
@@ -3566,7 +3609,8 @@
      <transl>古代符号（Ancient Symbols）</transl>
     </text>
     <text id="Text">
-     <orig>Roman symbols for money, weights and measures. Also Greek abbreviation “cross” (less often “Christ”).</orig>
+     <orig>Roman symbols for money, weights and measures. Also, the Greek abbreviation “cross” (less often “Christ”).</orig>
+     <known-orig>Roman symbols for money, weights and measures. Also Greek abbreviation “cross” (less often “Christ”).</known-orig>
      <transl>用于货币、重量和度量衡的罗马符号。此外还包括希腊语的缩写符号“十字形”（较少情况下表示“基督”）。</transl>
     </text>
    </group>
@@ -3577,12 +3621,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Phaistos Disc is an artefact of Crete-Minoan (proto-Greek) culture. A clay disc made without a pottery wheel was found in 1908 in Crete. It is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC, and contains two inscriptions made in a spiral with an unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
+      <p />
+      <p>The hypothesis that text is read from the edge to the centre (right-to-left) is generally accepted. Many characters are mirrored when written left-to-right: originally, PEDESTRIAN walks to the right. Nobody knows whether it is a Cretan script or what type it belongs to. Among the unusual hypotheses: forgery by the artist who worked on the excavations, a list of the Cretan king’s territories, and a race game.</p>
+      <p />
+      <p>In 2002, the Phaistos Disc was proposed to the [[pt:private|ConScript Unicode Registry]] as E6D0–E6FF; the character order is the same (numbered by Arthur Evans, 1905). Withdrawn after the inclusion of the Phaistos Disc in the actual Unicode. Two characters from the Registry did{{_}}not{{_}}enter Unicode and are taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
+     </orig>
+     <known-orig>
       <p>Phaistos Disc is an artifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without a pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in a spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
       <p />
       <p>The hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, originally PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by the artist who worked at excavations, a list of the Cretan king’s territories, and a race game.</p>
       <p />
       <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; the character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did{{_}}not{{_}}come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>费斯托斯圆盘是克里特-米诺斯（原始希腊）文化的文物。1908 年在克里特岛出土，这是一个未使用陶轮制作的粘土圆盘，直径 160 毫米，厚度 20 毫米。其年代约为公元前 2100–1100 年，圆盘两面刻有螺旋状的铭文，使用的是未知的文字系统，且通过印章压印而成。现陈列于伊拉克利翁考古博物馆（克里特岛）。</p>
       <p />
@@ -3611,12 +3662,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The word ''epact'' (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from the solar calendar to lunar or for determining the date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in the Coptic-Arabic world from the 10th to the 19th century, particularly in astronomical tables ≈1800. Written left-to-right.</p>
+      <p />
+      <p>Because of this non-standard use, these numbers are encoded as a separate block, rather than a{{_}}variant of Coptic.</p>
+      <p />
+      <p>In character samples, you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', an expert in ancient scripts, traced old ink symbols, and the ''Google Noto'' project attempted to reproduce them with lines of constant width.</p>
+     </orig>
+     <known-orig>
       <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from the solar calendar to lunar or for determining the date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in the Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
       <p />
       <p>Because of such non-standard use, these numbers are encoded as a separate block, not{{_}}as a{{_}}variant of Coptic.</p>
       <p />
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这里的“Epact”一词（源自希腊语 ἐπακτός）意为“借用的”，而不是指那些用于从阳历转换为阴历或计算复活节日期的“积日”公式。事实上，这些数字是借用自 [[ps:Grek|希腊文字]] 的普通 [[ps:Copt|科普特文字]] 记数法的后代，在 10 至 19 世纪的科普特-阿拉伯世界中曾被广泛使用，特别是在公元 1800 年左右的天文表中。书写方向为从左到右。</p>
       <p />
@@ -5982,10 +6040,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>It was used from the 7th to the 1st century{{_}}BC. Many variants of the alphabet existed. In Anatolia, left-to-right writing prevailed, and mercenaries in Egypt wrote right-to-left.</p>
+      <p />
+      <p>In 1960, then-Soviet scientist Vitaly Shevoroshkin showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came out in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
+     </orig>
+     <known-orig>
       <p>Was used from 7th to 1st century{{_}}BC. Many variants of the alphabet existed. In Anatolia left-to-right writing prevailed, and mercenaries in Egypt wrote right-to-left.</p>
       <p />
       <p>Then-Soviet scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字使用于公元前 7 世纪至公元前 1 世纪。字母表存在许多变体。在安纳托利亚（小亚细亚），从左到右的书写方式占主导地位，而在埃及的雇佣兵则使用从右到左的书写方式。</p>
       <p />
@@ -6032,10 +6095,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Cham script originated from Pallava (early [[ps:Gran|Grantha]]). The inherent vowel is {{t|a}}. No [[pt:virama|virama]] (“remove vowel” sign); instead, it writes final consonants: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
+      <p />
+      <p>Most Chams practice Islam and write in [[ps:Arab|Arabic]] script. Just some Cham people in Vietnam use the Cham script.</p>
+     </orig>
+     <known-orig>
       <p>Cham script came from Pallava (early [[ps:Gran|Grantha]]), the inherent vowel is {{t|a}}. No [[pt:virama|virama]] (“remove vowel” sign), final consonants are written instead: {{sm|ꨆ}}=ka, {{sm|ꨆꨯ}}=ko, {{sm|ꨆꨯꩃ}}=kong.</p>
       <p />
       <p>Most Chams practice Islam and write with [[ps:Arab|Arabic]] script, just some Chams of Vietnam use Cham script.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>占文源自帕拉瓦文（Pallava，早期的[[ps:Gran|古兰塔文字]]），其固有元音是 {{t|a}}。它没有 [[pt:virama|止音符]]（即“去除元音”的符号），而是通过书写词尾辅音来表示：{{sm|ꨆ}}=ka，{{sm|ꨆꨯ}}=ko，{{sm|ꨆꨯꩃ}}=kong。</p>
       <p />
@@ -6713,12 +6781,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Bishop Wulfila is believed to have created the alphabet: he translated the Bible into Gothic and did{{_}}not{{_}}want sacred texts to be written in [[ps:Runr|runes]]. Sources of the Gothic language of the 4th to 6th centuries are written in this script.</p>
+      <p />
+      <p>The alphabet is taken from [[ps:Grek|Greek]], letter names are the same as the runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of the script’s origin, “canonically looking” Gothic letters are written with a thick pen rather than a sharp instrument.</p>
+      <p />
+      <p>The letter {{sm|𐌹̈}} consists of the letter {{sm|𐌹}} and a combining umlaut [[pu:0308]].</p>
+     </orig>
+     <known-orig>
       <p>Bishop Wulfila is believed to have created the alphabet: he translated Bible into Gothic and did{{_}}not{{_}}want sacred text to be written with [[ps:Runr|runes]]. Sources of Gothic language of 4–6th centuries are written with this script.</p>
       <p />
       <p>Alphabet is taken from [[ps:Grek|Greek]], letter names are same as runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of such origin of script, “canonically looking” Gothic letters are written with a thick pen rather than a sharp object.</p>
       <p />
       <p>Letter {{sm|𐌹̈}} consists of letter {{sm|𐌹}} and combining umlaut [[pu:0308]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>人们认为乌尔菲拉主教创造了这套字母：他将《圣经》翻译成了哥特语，并且不希望神圣的文本是用 [[ps:Runr|如尼文字]] 书写的。公元 4 至 6 世纪的哥特语资料都是用这种文字书写的。</p>
       <p />
@@ -7245,10 +7320,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Old Italic alphabets were made from the [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved into [[ps:Latn|Latin]].</p>
+      <p />
+      <p>Unicode does{{_}}not{{_}}distinguish among Italy’s languages, [[pt:unification|unifying]] them into a single block{{-}}both left-to-right and right-to-left.</p>
+     </orig>
+     <known-orig>
       <p>Old Italic alphabets were made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
       <p />
       <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}both left-to-right and right-to-left.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>古意大利字母表源自 [[ps:Phnx|腓尼基]] 文字和早期 [[ps:Grek|希腊]] 文字。后来演变成了 [[ps:Latn|拉丁]] 文字。</p>
       <p />
@@ -7781,12 +7861,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The date of the conquest of Crete by the Greeks is known rather precisely: 1450{{_}}BC. [[ps:Lina|Linear A]] began to fall out of use.</p>
+      <p />
+      <p>The curly shape of the characters suggests they were written on leather or papyrus; furthermore, Linear A was indeed written with ink. But all surviving specimens are written on clay tablets that were hardened in fires and preserved for millennia. The script was used by a narrow caste of scribes who adhered to the grammar of the Minoan language rather than Greek. All known inscriptions are business documents: rental contracts, lists of craftsmen, property inventories…</p>
+      <p />
+      <p>Discovered in the early 20th century by Arthur Evans. Deciphered in the 1950s.</p>
+     </orig>
+     <known-orig>
       <p>The moment of conquest of Crete by Greeks is known rather precisely, 1450{{_}}BC. [[ps:Lina|Linear A]] started to fall from use.</p>
       <p />
       <p>Curly shape of characters suggests that they were written on leather or papyrus, furthermore Linear A was actually written with ink. But all survived specimen are written on clay tablets that were burned in fires and preserved for millennia. The script was used by narrow caste of scribes that adhered to grammar of Minoan language rather than Greek. All known inscriptions are business documents: rental contracts, lists of craftsmen, property inventories…</p>
       <p />
       <p>Discovered in early 20th century by Arthur Evans. Deciphered in 1950s.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>希腊人征服克里特岛的时刻相当确切，即公元前 1450 年。[[ps:Lina|线形文字 A]] 开始逐渐停止使用。</p>
       <p />
@@ -7835,12 +7922,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The alphabet was invented under the influence of [[ps:Phnx|Phoenician]] and [[ps:Grek|Greek]]. So resemblance to Greek is deceiving: some letters are Phoenician. Supplanted by Greek about the 3rd century{{_}}BC, when Lycia was conquered by Alexander the Great.</p>
+      <p />
+      <p>Lycia is a Greek name rather than an autonym. The autonym of language is ''trm̃mili''.</p>
+      <p />
+      <p>Deciphered in the early 20th century.</p>
+     </orig>
+     <known-orig>
       <p>The alphabet was invented under influence of [[ps:Phnx|Phoenician]] and [[ps:Grek|Greek]]. So recemblance to Greek is deceiving: some letters are Phoenician. Supplanted with Greek about 3rd century{{_}}BC when Lycia was conquered by Alexander the Great.</p>
       <p />
       <p>Lycia is a Greek name rather than autonym. The autonym of language is ''trm̃mili''.</p>
       <p />
       <p>Deciphered in early 20th century.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种字母表是在 [[ps:Phnx|腓尼基文字]] 和 [[ps:Grek|希腊文字]] 的影响下发明的。因此，它与希腊文字的相似具有欺骗性：其中一些字母其实源自腓尼基文字。大约在公元前 3 世纪，随着吕基亚被亚历山大大帝征服，它被希腊文字所取代。</p>
       <p />
@@ -8262,12 +8356,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>By widespread opinion, the script emerged in the 11th century. In the 18th century, [[ps:Beng|Bengali]] was adopted. In the 1930s, the script was revived, and in 1976 it was adjusted to modern phonetics.</p>
+      <p />
+      <p>Letters are named after body parts: the first is “kok” (head). The inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is purely virtual and is used to assemble old [[pt:ligature|ligatures]]: a single consonant is indicated with reduced letters.</p>
+      <p>: kə {{sm|ꯀ}} + i {{sm|◌ꯤ}} = ki {{sm|ꯀꯤ}}</p>
+      <p>: k {{sm|ꯛ}}</p>
+     </orig>
+     <known-orig>
       <p>By widespread opinion, the script emerged in 11th century. In 18th century [[ps:Beng|Bengali]] was adopted. In 1930s the script was revived, in 1976 adjusted to modern phonetics.</p>
       <p />
       <p>Letters are named after body parts: the first is “kok” (head). Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is purely virtual and is used for assembly of old [[pt:ligature|ligatures]]: a single consonant is indicated with reduced letters.</p>
       <p>: kə {{sm|ꯀ}} + i {{sm|◌ꯤ}} = ki {{sm|ꯀꯤ}}</p>
       <p>: k {{sm|ꯛ}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>根据普遍观点，这种文字起源于 11 世纪。18 世纪，[[ps:Beng|孟加拉文字]] 被采用。1930 年代，该文字得以复兴，并于 1976 年根据现代语音进行了调整。</p>
       <p />
@@ -8813,10 +8914,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Old Permic script was proposed in 1372 by missionary Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cypher for Russian. In the 17th century, it was finally supplanted by Cyrillic.</p>
+      <p />
+      <p>Anbur is an important source for Finno-Ugric languages. Only the [[ps:Hung|Hungarian runes]] are more ancient.</p>
+     </orig>
+     <known-orig>
       <p>The Old Permic script was proposed in 1372 by missionary Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.</p>
       <p />
       <p>Anbur is an important source for Finno-Ugric languages. Only [[ps:Hung|Hungarian runes]] are more ancient.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>古彼尔姆文字由传教士彼尔姆的斯蒂芬（Stephen of Perm）于 1372 年提出，是 [[ps:Cyrl|西里尔文字]] 的一种变体，并插入了 [[ps:Grek|希腊文字]] 和本地如尼文字。其名称来源于前两个字母 An 和 Bur。有时它被用作俄语的密码。在 17 世纪，它最终被西里尔文字取代。</p>
       <p />
@@ -9846,10 +9952,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes from [[ps:Thai|Old Thai]] (Sukhothai Kingdom). First standardized in 1961, and later at a UNESCO-sponsored workshop in 2006.</p>
+      <p />
+      <p>There is no inherent vowel, but the script remains an abugida because of bizarre vowel marks on the left, top and right: {{sm|ꪶꪀ}}=ko, {{sm|ꪀꪱ}}=ka, {{sm|ꪀꪲ}}=ki. Traditionally, readers were expected to guess the tone; the first standardization introduced tone marks.</p>
+     </orig>
+     <known-orig>
       <p>Comes from [[ps:Thai|Old Thai]] (Sukhothai Kingdom). First standardized in 1961, later at UNESCO-sponsored workshop in 2006.</p>
       <p />
       <p>There is no inherent vowel, but the script remains an abugida because of bizarre vowel marks on the left, top and right: {{sm|ꪶꪀ}}=ko, {{sm|ꪀꪱ}}=ka, {{sm|ꪀꪲ}}=ki. Traditionally the reader should guess the tone, back in the first standardization tone marks were added.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>源自 [[ps:Thai|古泰文字]]（素可泰王国）。1961 年首次标准化，后来在 2006 年的一次联合国教科文组织赞助的研讨会上再次标准化。</p>
       <p />
@@ -10224,6 +10335,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Semites that inhabited the Levant (modern Syria) could{{_}}not{{_}}boast of economic, cultural or military power, but instead were at an intersection of trade routes. So they borrowed principles of [[ps:Xsux|cuneiform]] for their needs, creating an alphabet of 30 consonants written left to right; no one knows how it was made and what had been before. The names of many letters are reconstructions and are unknown for sure. The only punctuation mark is a word divider.</p>
+      <p />
+      <p>Many books and business documents survived, providing insight into different aspects of Ugaritic life. There’s a suspicion that the alphabet was designed by a single author because of economic design{{-}}frequent letters have fewer wedges.</p>
+      <p />
+      <p>It is believed that Ugaritic had no daughter scripts, though its letter order is close to [[ps:Phnx|Phoenician]], and two unusual variants exist: a shortened alphabet of 21 letters written right-to-left and a tablet with a [[ps:Sarb|South Arabic]] letter order.</p>
+      <p />
+      <p>The city of Ugarit was abandoned about 1200{{_}}BC during the Bronze Age Collapse, a total decline of debatable nature that occurred in the ancient world of that time.</p>
+     </orig>
+     <known-orig>
       <p>Semites that inhabited Levant (modern Syria) could{{_}}not{{_}}boast of economic, cultural or military power, but instead were on an intersection of trade routes. So they borrowed principles of [[ps:Xsux|cuneiform]] for their needs creating an alphabet of 30 consonants written left to right; no one knows how it was made and what had been before. Names of many letters are reconstructions and unknown for sure. The only punctuation mark is word divider.</p>
       <p />
       <p>Many books and business documents survived, they gave understanding of different sides of Ugaritic life. There’s a suspicion that the alphabet is made by a single author because of economic design{{-}}frequent letters have less wedges.</p>
@@ -10231,7 +10351,7 @@
       <p>It is believed that Ugaritic had no daughter scripts, though letter order is close to [[ps:Phnx|Phoenician]], and two unusual variants exist: shortened alphabet of 21 letter written right to left, and a tablet with [[ps:Sarb|South Arabic]] letter order.</p>
       <p />
       <p>City of Ugarit was abandoned about 1200{{_}}BC with Bronze Age Collapse, total decline of arguable nature that happened in ancient world of that time.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>居住在黎凡特（现代叙利亚）的闪米特人无法夸耀其经济、文化或军事实力，但他们处于贸易路线的十字路口。因此，他们为了自身需求借用了 [[ps:Xsux|楔形文字]] 的原理，创造了一个由 30 个辅音组成、从左向右书写的字母表；没人知道它是如何制造的，也不知道在此之前有过什么。许多字母的名称都是重构的，无法确切知晓。唯一的标点符号是词分隔符。</p>
       <p />
@@ -10344,10 +10464,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The principle of writing was taken from the [[ps:Xsux|Sumero-Akkadian]] cuneiform, but the letters are almost completely different. The most widespread version: the script was authored to record the achievements of the kings of the Achaemenid dynasty. All known inscriptions cover just two centuries, 520–330{{_}}BC.</p>
+      <p />
+      <p>By 1800, the word “king” had been identified. In 1802, Georg Grotefend deciphered kings’ names{{-}}he did{{_}}not{{_}}have a{{_}}bilingual, he just knew Greek pronunciations like “Darius” or “Xerxes”, originally “Dārayavaʰuš” and “Xšaya-ṛšā”. In 1823, François Champollion found an [[ps:Egyp|Egyptian]]-cuneiform bilingual and confirmed that Grotefend was right. In 1936, Eugène Burnouf guessed that one of the inscriptions was a list of Darius’ satrapies, and deciphered almost the entire alphabet. Decipherment of Persian cuneiform became a{{_}}key to Sumerian.</p>
+     </orig>
+     <known-orig>
       <p>The principle of writing was taken from [[ps:Xsux|Sumero-Akkadian]] cuneiform, but letters are almost completely different. The most widespread version: the script was invented artificially to fix achievements of kings of Achaemenid dynasty. All known inscriptions cover just two centuries 520–330{{_}}BC.</p>
       <p />
       <p>By 1800 the word “king” had been identified. In 1802 Georg Grotefend deciphered kings’ names{{-}}he did{{_}}not{{_}}have a{{_}}bilingual, just knew Greek pronunciations like “Darius” or “Xerxes”, originally “Dārayavaʰuš” and “Xšaya-ṛšā”. In 1823 François Champollion found an [[ps:Egyp|Egyptian]]-cuneiform bilingual, and confirmed that Grotefend was right. In 1936 Eugène Burnouf guessed that one of inscriptions is a list of Daruis’ satrapies, and deciphered almost all alphabet. Decipherment of Persian cuneiform became a{{_}}key to Sumerian.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>书写原则取自 [[ps:Xsux|苏美尔-阿卡德]] 楔形文字，但字母却几乎完全不同。最普遍的观点是：这套文字是为了记录阿契美尼德王朝君主的功绩而人为发明的。所有已知的铭文仅覆盖了公元前 520 年至 330 年这短短两个世纪。</p>
       <p />
@@ -10484,11 +10609,13 @@
     <transl>阿尔巴尼亚语之所以存在多种字母系统（[[ps:Elba|爱尔巴桑文字]]、[[ps:Vith|维特库奇文字]]、[[ps:Todr|托兹里文字]]、维索贝伊、韦拉拉），主要有几个原因：民族解放运动的学者们观察周边的斯拉夫人、希腊人和土耳其人，决心创造属于自己的文字；同时，也是为了在奥斯曼帝国统治下保持秘密性（阿尔巴尼亚于 1912 年随着奥斯曼帝国的解体而获得独立）。</transl>
    </text>
    <text id="ArabPres1">
-    <orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</orig>
+    <orig>The block is created for [[pt:convertibility|compatibility]] with older encodings like CP864 (DOS), where different codes were used for isolated, initial, medial, and final letters due to [[pt:dynamic|limited]] typographic engines.</orig>
+    <known-orig>The block is created for [[pt:convertibility|compatibility]] with old encodings like CP864 (DOS), where different codes were used for isolated, initial, medial and final letters due to [[pt:dynamic|limited]] typography engines.</known-orig>
     <transl>设立该（Unicode）区块是为了与 CP864（DOS 系统）等旧编码保持 [[pt:convertibility|兼容]]。由于早期排版引擎功能的 [[pt:dynamic|局限]]，这些旧编码针对字母的独立、词首、词中和词尾形式使用了完全不同的编码。</transl>
    </text>
    <text id="ArabPres2">
-    <orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</orig>
+    <orig>It’s better to avoid these characters in normal text. The only legitimate use is in educational materials, so the characters have the “Arabic letter” class (in many old encodings, text was written left to right).</orig>
+    <known-orig>It’s better to avoid these characters in normal text. The only legitimate use is educational materials, so the characters have “Arabic letter” class (in many old encodings text was written left to right).</known-orig>
     <transl>最好在普通文本中避免使用这些字符。它们唯一的合法用途是在教育材料中（用于展示字母形态），因此这些字符被归类为“阿拉伯文字”类（因为在许多旧编码中，文本是从左到右书写的）。</transl>
    </text>
    <text id="GrekCoptUni">
