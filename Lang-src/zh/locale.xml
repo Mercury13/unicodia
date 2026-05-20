@@ -72,7 +72,8 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
-	<design hiero-bigger="1">
+	<design>
+		<font hiero-bigger="1" allow-italic="0" />
 		<icons sort-az="sort_cn" />
 	</design>
 	<num-format dec-point="." thou-point=" " thou-min-length="4" thou-min-length-dense="5">

@@ -84,13 +84,15 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
-	<!-- Variations of program’s appearance
-			hiero-bigger: logographic script, make some UI elements bigger,
+	<!-- Variations of program’s appearance -->
+	<design>
+		<!-- hiero-bigger: logographic script, make some UI elements bigger,
 				but disable size +3 for samples
 				Do not use where alphabets are extensively used and the
 				text is readable as is, it may garble bigger articles
-				such as Egyptian hiero!	-->
-	<design hiero-bigger="0">
+				such as Egyptian hieroglyphs!
+		<!-- allow-italic: allow italic script; off for Chinese -->
+		<font hiero-bigger="0" allow-italic="1" />
 		<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
 		<icons sort-az="sort_AZ" />
 	</design>
