@@ -437,7 +437,9 @@ namespace {
         }
 
         auto hDesign = hLocale.child("design");
-        r.design.biggerForHiero = hDesign.attribute("hiero-bigger").as_bool(false);
+        auto hFont =  hDesign.child("font");
+        r.design.font.biggerForHiero = hFont.attribute("hiero-bigger").as_bool(false);
+        r.design.font.allowItalic = hFont.attribute("allow-italic").as_bool(true);
 
         auto hIcons =  hDesign.child("icons");
         r.design.icons.sortAZ = hIcons.attribute("sort-az").as_string();

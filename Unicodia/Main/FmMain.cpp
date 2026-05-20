@@ -2965,7 +2965,7 @@ void FmMain::debugPluralRules()
 void FmMain::toggleBigFont()
 {
     constexpr const char* HEAD = "Big font";
-    if (!loc::active::design.biggerForHiero) {
+    if (!loc::active::design.font.biggerForHiero) {
         QMessageBox::warning(this, HEAD,
                 "This locale does not have big font. Did nothing.");
         return;

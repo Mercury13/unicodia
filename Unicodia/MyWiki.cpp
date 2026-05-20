@@ -1037,7 +1037,7 @@ namespace {
             // so we don’t check for overall context,
             // only smtable that is not enlarged
             if (size == 3 && !flags.have(Affg::SMTABLE)
-                    && loc::active::design.biggerForHiero) {
+                    && loc::active::design.font.biggerForHiero) {
                 size = 2;
             }
             s += " size='+";
@@ -1404,6 +1404,20 @@ namespace {
         }
     }
 
+    void openItalic(QString& s)
+    {
+        if (loc::active::design.font.allowItalic) {
+            s += "<i>";
+        }
+    }
+
+    void closeItalic(QString& s)
+    {
+        if (loc::active::design.font.allowItalic) {
+            s += "</i>";
+        }
+    }
+
     void Eng::appendNSpeakers(const TextLang& x, Flags<Nspkf> fgs)
     {
         char locBuf[40];
@@ -1429,7 +1443,7 @@ namespace {
             }
         }
         if (fgs.have(Nspkf::ITALIC_PARENS)) {
-            s += "<i>";
+            openItalic(s);
             str::append(s, loc::active::punctuation.leftParen);
         }
         if (lang) {
@@ -1499,7 +1513,7 @@ namespace {
         // End
         if (fgs.have(Nspkf::ITALIC_PARENS)) {
             str::append(s, loc::active::punctuation.rightParen);
-            s += "</i>";
+            closeItalic(s);
         }
     }
 
@@ -2849,7 +2863,7 @@ void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
     }
     // We use this function in articles (wiki) and Terms
     // Similar About has its own stylesheet
-    if (loc::active::design.biggerForHiero
+    if (loc::active::design.font.biggerForHiero
             && allowBigFont) {
         auto oldSize = QApplication::font().pointSizeF();
         static constexpr double FONT_RATIO = 1.12;
@@ -4219,10 +4233,10 @@ namespace {
     {
         if (info.flags.have(trigger)) {
             char buf[40];
-            text += " <i>";
+            openItalic(text);
             snprintf(buf, std::size(buf), "OldComp.%s.%s", info.key.data(), subKey);
             mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::SPAN);
-            text += "</i>";
+            closeItalic(text);
         }
     }
 

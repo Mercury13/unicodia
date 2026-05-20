@@ -93,7 +93,10 @@ namespace loc
             struct Icons {
                 std::string sortAZ;
             } icons;
-            bool biggerForHiero = false;    ///< [+] bigger font (ideographic script)
+            struct Font {
+                bool biggerForHiero = false;    ///< [+] bigger font (ideographic script)
+                bool allowItalic = true;        ///< [+] allow italic (except Chinese)
+            } font;
         } design;
         struct Numfmt {
             SafeVector<ImpreciseInfo> imprecise;
