@@ -2421,7 +2421,7 @@
      <orig>Aegean numbers</orig>
     </text>
     <text id="Text">
-     <orig>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with number 100 was found.</orig>
+     <orig>A very simple decimal numeral system used by the Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In the [[ps:Cprt|Cypriot]] syllabary, one tablet with the number 100 was found.</orig>
     </text>
    </group>
    <group id="10140">
@@ -2430,7 +2430,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Attic numeral system was [[pt:acrophonic|acrophonic]]{{-}}first letters of words were used for digits:</p>
+      <p>The Attic numeral system was [[pt:acrophonic|acrophonic]]{{-}}the first letters of words were used for digits:</p>
       <p>* I = 1, ἴος</p>
       <p>* trimmed Π = 5, πέντε</p>
       <p>* Δ = 10, δέκα</p>
@@ -2438,13 +2438,13 @@
       <p>* Χ = {{n|1000}}, χίλιοι</p>
       <p>* Μ = {{n|10000}}, μύριοι</p>
       <p />
-      <p>Characters consisting of Π and 10/100/{{n|1000}}… were used for 50, 500 etc.</p>
+      <p>Characters consisting of Π and 10/100/{{n|1000}}… were used for 50, 500, and so on.</p>
       <p />
-      <p>Later Attic system was supplanted with [[ps:Grek|Ionian]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), but cultural interchange influenced Etruscans, and that led to Roman numerals.</p>
+      <p>Later, the Attic system was supplanted by the [[ps:Grek|Ionian]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), but cultural interchange influenced the Etruscans, leading to Roman numerals.</p>
       <p />
       <p>This block also contains symbols of Ancient Greek measuring units.</p>
       <p />
-      <p>The funny word ''Litra'' (used by Russian alcoholics for one-litre bottle) is actually related to litre. In Ancient Greece ''litra'' was a coin and unit of weight. In France ''litron'' was a measure of dry volume, hence ''litre''.</p>
+      <p>The funny word ''Litra'' (used by Russian alcoholics for a one-litre bottle) is actually related to litre. In Ancient Greece, ''litra'' was both a coin and a unit of weight. In France, the ''litron'' was a measure of dry volume, hence the ''litre''.</p>
      </orig>
     </text>
    </group>
@@ -2453,7 +2453,7 @@
      <orig>Ancient symbols</orig>
     </text>
     <text id="Text">
-     <orig>Roman symbols for money, weights and measures. Also Greek abbreviation “cross” (less often “Christ”).</orig>
+     <orig>Roman symbols for money, weights and measures. Also, the Greek abbreviation “cross” (less often “Christ”).</orig>
     </text>
    </group>
    <group id="101D0">
@@ -2462,11 +2462,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Phaistos Disc is an artifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without a pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in a spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
+      <p>The Phaistos Disc is an artefact of Crete-Minoan (proto-Greek) culture. A clay disc made without a pottery wheel was found in 1908 in Crete. It is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC, and contains two inscriptions made in a spiral with an unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
       <p />
-      <p>The hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, originally PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by the artist who worked at excavations, a list of the Cretan king’s territories, and a race game.</p>
+      <p>The hypothesis that text is read from the edge to the centre (right-to-left) is generally accepted. Many characters are mirrored when written left-to-right: originally, PEDESTRIAN walks to the right. Nobody knows whether it is a Cretan script or what type it belongs to. Among the unusual hypotheses: forgery by the artist who worked on the excavations, a list of the Cretan king’s territories, and a race game.</p>
       <p />
-      <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; the character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did{{_}}not{{_}}come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
+      <p>In 2002, the Phaistos Disc was proposed to the [[pt:private|ConScript Unicode Registry]] as E6D0–E6FF; the character order is the same (numbered by Arthur Evans, 1905). Withdrawn after the inclusion of the Phaistos Disc in the actual Unicode. Two characters from the Registry did{{_}}not{{_}}enter Unicode and are taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
      </orig>
     </text>
    </group>
@@ -2486,11 +2486,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from the solar calendar to lunar or for determining the date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in the Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
+      <p>The word ''epact'' (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from the solar calendar to lunar or for determining the date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in the Coptic-Arabic world from the 10th to the 19th century, particularly in astronomical tables ≈1800. Written left-to-right.</p>
       <p />
-      <p>Because of such non-standard use, these numbers are encoded as a separate block, not{{_}}as a{{_}}variant of Coptic.</p>
+      <p>Because of this non-standard use, these numbers are encoded as a separate block, rather than a{{_}}variant of Coptic.</p>
       <p />
-      <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
+      <p>In character samples, you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', an expert in ancient scripts, traced old ink symbols, and the ''Google Noto'' project attempted to reproduce them with lines of constant width.</p>
      </orig>
     </text>
    </group>
@@ -4156,9 +4156,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Was used from 7th to 1st century{{_}}BC. Many variants of the alphabet existed. In Anatolia left-to-right writing prevailed, and mercenaries in Egypt wrote right-to-left.</p>
+      <p>It was used from the 7th to the 1st century{{_}}BC. Many variants of the alphabet existed. In Anatolia, left-to-right writing prevailed, and mercenaries in Egypt wrote right-to-left.</p>
       <p />
-      <p>Then-Soviet scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
+      <p>In 1960, then-Soviet scientist Vitaly Shevoroshkin showed that the script is alphabetic, not{{_}}syllabic. The key book on deciphering (Ignasi-Xavier Adiego) came out in 1993. A bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</p>
      </orig>
     </text>
    </group>
@@ -4590,11 +4590,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Bishop Wulfila is believed to have created the alphabet: he translated Bible into Gothic and did{{_}}not{{_}}want sacred text to be written with [[ps:Runr|runes]]. Sources of Gothic language of 4–6th centuries are written with this script.</p>
+      <p>Bishop Wulfila is believed to have created the alphabet: he translated the Bible into Gothic and did{{_}}not{{_}}want sacred texts to be written in [[ps:Runr|runes]]. Sources of the Gothic language of the 4th to 6th centuries are written in this script.</p>
       <p />
-      <p>Alphabet is taken from [[ps:Grek|Greek]], letter names are same as runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of such origin of script, “canonically looking” Gothic letters are written with a thick pen rather than a sharp object.</p>
+      <p>The alphabet is taken from [[ps:Grek|Greek]], letter names are the same as the runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of the script’s origin, “canonically looking” Gothic letters are written with a thick pen rather than a sharp instrument.</p>
       <p />
-      <p>Letter {{sm|𐌹̈}} consists of letter {{sm|𐌹}} and combining umlaut [[pu:0308]].</p>
+      <p>The letter {{sm|𐌹̈}} consists of the letter {{sm|𐌹}} and a combining umlaut [[pu:0308]].</p>
      </orig>
     </text>
    </group>
@@ -4899,9 +4899,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Old Italic alphabets were made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
+      <p>Old Italic alphabets were made from the [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved into [[ps:Latn|Latin]].</p>
       <p />
-      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}both left-to-right and right-to-left.</p>
+      <p>Unicode does{{_}}not{{_}}distinguish among Italy’s languages, [[pt:unification|unifying]] them into a single block{{-}}both left-to-right and right-to-left.</p>
      </orig>
     </text>
    </group>
@@ -5219,11 +5219,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The moment of conquest of Crete by Greeks is known rather precisely, 1450{{_}}BC. [[ps:Lina|Linear A]] started to fall from use.</p>
+      <p>The date of the conquest of Crete by the Greeks is known rather precisely: 1450{{_}}BC. [[ps:Lina|Linear A]] began to fall out of use.</p>
       <p />
-      <p>Curly shape of characters suggests that they were written on leather or papyrus, furthermore Linear A was actually written with ink. But all survived specimen are written on clay tablets that were burned in fires and preserved for millennia. The script was used by narrow caste of scribes that adhered to grammar of Minoan language rather than Greek. All known inscriptions are business documents: rental contracts, lists of craftsmen, property inventories…</p>
+      <p>The curly shape of the characters suggests they were written on leather or papyrus; furthermore, Linear A was indeed written with ink. But all surviving specimens are written on clay tablets that were hardened in fires and preserved for millennia. The script was used by a narrow caste of scribes who adhered to the grammar of the Minoan language rather than Greek. All known inscriptions are business documents: rental contracts, lists of craftsmen, property inventories…</p>
       <p />
-      <p>Discovered in early 20th century by Arthur Evans. Deciphered in 1950s.</p>
+      <p>Discovered in the early 20th century by Arthur Evans. Deciphered in the 1950s.</p>
      </orig>
     </text>
    </group>
@@ -5252,11 +5252,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was invented under influence of [[ps:Phnx|Phoenician]] and [[ps:Grek|Greek]]. So recemblance to Greek is deceiving: some letters are Phoenician. Supplanted with Greek about 3rd century{{_}}BC when Lycia was conquered by Alexander the Great.</p>
+      <p>The alphabet was invented under the influence of [[ps:Phnx|Phoenician]] and [[ps:Grek|Greek]]. So resemblance to Greek is deceiving: some letters are Phoenician. Supplanted by Greek about the 3rd century{{_}}BC, when Lycia was conquered by Alexander the Great.</p>
       <p />
-      <p>Lycia is a Greek name rather than autonym. The autonym of language is ''trm̃mili''.</p>
+      <p>Lycia is a Greek name rather than an autonym. The autonym of language is ''trm̃mili''.</p>
       <p />
-      <p>Deciphered in early 20th century.</p>
+      <p>Deciphered in the early 20th century.</p>
      </orig>
     </text>
    </group>
