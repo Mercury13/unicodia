@@ -43,6 +43,7 @@ win32-g++ {
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
     # Qt — system headers
     QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
+    LIBS += -static -lpthread
 }
 
 win32 {
