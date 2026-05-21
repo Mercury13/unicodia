@@ -168,6 +168,7 @@ namespace {
         {
             dark = TRUE;
         }
+        /// @todo [dark, future] Probably turn off dark mode support for OS that old
         if (darkOs == DarkOs::PRE_18362)
             SetPropW(hWnd, L"UseImmersiveDarkModeColors", reinterpret_cast<HANDLE>(static_cast<INT_PTR>(dark)));
         else if (_SetWindowCompositionAttribute)
