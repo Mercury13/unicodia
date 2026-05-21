@@ -24,7 +24,7 @@ namespace {
 
     enum class DarkOs : unsigned char {
         UNSUPPORTED,
-        PRE_18362,
+        //PRE_18362,  Won't support W10 THAT old
         NEW
     };
     DarkOs darkOs = DarkOs::UNSUPPORTED;
@@ -37,8 +37,8 @@ namespace {
         if ( os.majorVersion() == 10 ) {
             if (os.microVersion() >= 18362) {
                 darkOs = DarkOs::NEW;
-            } else if (os.microVersion() >= 17763) {
-                darkOs = DarkOs::PRE_18362;
+            //} else if (os.microVersion() >= 17763) {
+            //    darkOs = DarkOs::PRE_18362;
             } else {
                 darkOs = DarkOs::UNSUPPORTED;
             }
@@ -168,9 +168,8 @@ namespace {
         {
             dark = TRUE;
         }
-        /// @todo [dark, future] Probably turn off dark mode support for OS that old
-        if (darkOs == DarkOs::PRE_18362)
-            SetPropW(hWnd, L"UseImmersiveDarkModeColors", reinterpret_cast<HANDLE>(static_cast<INT_PTR>(dark)));
+        //if (darkOs == DarkOs::PRE_18362)
+        //    SetPropW(hWnd, L"UseImmersiveDarkModeColors", reinterpret_cast<HANDLE>(static_cast<INT_PTR>(dark)));
         else if (_SetWindowCompositionAttribute)
         {
             WINDOWCOMPOSITIONATTRIBDATA data = { WCA_USEDARKMODECOLORS, &dark, sizeof(dark) };
@@ -250,9 +249,9 @@ namespace {
             _AllowDarkModeForWindow = funcTo<fnAllowDarkModeForWindow>(GetProcAddress(hUxtheme, MAKEINTRESOURCEA(133)));
 
             auto ord135 = GetProcAddress(hUxtheme, MAKEINTRESOURCEA(135));
-            if (darkOs == DarkOs::PRE_18362)
-                _AllowDarkModeForApp = funcTo<fnAllowDarkModeForApp>(ord135);
-            else
+//            if (darkOs == DarkOs::PRE_18362)
+//                _AllowDarkModeForApp = funcTo<fnAllowDarkModeForApp>(ord135);
+//            else
                 _SetPreferredAppMode = funcTo<fnSetPreferredAppMode>(ord135);
 
             //_FlushMenuThemes = reinterpret_cast<fnFlushMenuThemes>(GetProcAddress(hUxtheme, MAKEINTRESOURCEA(136)));
