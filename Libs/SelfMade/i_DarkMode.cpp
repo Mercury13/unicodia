@@ -142,12 +142,11 @@ namespace {
     //fnShouldSystemUseDarkMode _ShouldSystemUseDarkMode = nullptr;
     fnSetPreferredAppMode _SetPreferredAppMode = nullptr;
 
-    bool g_darkModeSupported = false;
     bool g_darkModeEnabled = false;
 
     [[maybe_unused]] bool AllowDarkModeForWindow(HWND hWnd, bool allow)
     {
-        if (g_darkModeSupported)
+        if (doesWindowsSupportDarkMode())
             return _AllowDarkModeForWindow(hWnd, allow);
         return false;
     }
@@ -233,10 +232,7 @@ namespace {
     }
 
     template <class Func>
-    Func funcTo(FARPROC x)
-    {
-        return (Func)(void*)x;
-    }
+    Func funcTo(FARPROC x) { return (Func)(void*)x; }
 
     [[maybe_unused]] void InitDarkMode()
     {
@@ -271,7 +267,7 @@ namespace {
                 //_FlushMenuThemes &&
                 _IsDarkModeAllowedForWindow)
             {
-                g_darkModeSupported = true;
+                darkOs = DarkOs::UNSUPPORTED;
 
                 AllowDarkModeForApp(true);
                 _RefreshImmersiveColorPolicyState();
