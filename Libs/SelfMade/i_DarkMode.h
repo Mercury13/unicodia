@@ -16,6 +16,8 @@ namespace dark {
         ALWAYS_DARK
     };
 
+    void init();
+
     /// @return [+] whether dark is on according to OS settings
     bool doesSystemWant();
 

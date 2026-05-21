@@ -123,6 +123,7 @@ HEADERS += \
     ../Libs/SelfMade/Fonts/MemFont.h \
     ../Libs/SelfMade/Fonts/TempFont.h \
     ../Libs/SelfMade/GitHub/parsers.h \
+    ../Libs/SelfMade/IatHook.h \
     ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/Qt/QtMultiRadio.h \
     ../Libs/SelfMade/Qt/RememberWindow.h \
