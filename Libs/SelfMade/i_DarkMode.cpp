@@ -384,15 +384,9 @@ void dark::forceOff()
 void dark::init()
 {
 #ifdef _WIN32
-    // Sorry, works just partly
-    //InitDarkMode();
-#endif
-}
-
-void dark::enable(QWidget* wi)
-{
-#ifdef _WIN32
-    AllowDarkModeForWindow((HWND)wi->winId(), true);
-    RefreshTitleBarThemeColor((HWND)wi->winId());
+    // InitDarkMode() is unneeded, but we've got nice checking
+    //   whether we HAVE dark mode
+    // This works, but partly
+    //qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
 #endif
 }
