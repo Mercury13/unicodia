@@ -25,3 +25,12 @@
 
 @rem Inno Setup
 @set INNO="c:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+
+
+@rem As 7-zip is banned sometimes, but it's ubiquitous...
+@if exist %SEVENZIP% goto szexists
+
+@set SEVENZIP1="C:\Program Files\PeaZip\res\bin\7z\7z.exe"
+@if exist %SEVENZIP1% set SEVENZIP=%SEVENZIP1%
+
+:szexists
