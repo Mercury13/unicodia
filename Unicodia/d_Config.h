@@ -28,7 +28,7 @@ DEFINE_ENUM_TYPE (BlockOrder, unsigned char,
 
 namespace progsets {
     enum class DirMode : unsigned char {
-        INSTALLED = 0, PORTABLE = 1, DEFAULT = PORTABLE };
+        INSTALLED = false, PORTABLE = true, DEFAULT = PORTABLE };
     constexpr bool DEFAULT_PORTABLE = static_cast<bool>(DirMode::DEFAULT);
     extern DirMode dirMode;
 }
