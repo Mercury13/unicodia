@@ -1073,10 +1073,10 @@ FmMain::FmMain(QWidget *parent)
 
 namespace {
 
-    void paintTo(QWidget* widget, const char* role)
+    void paintAsButton(QWidget* widget)
     {
         widget->setStyleSheet("#" + widget->objectName()
-                + " { background-color: palette(" + role + "); }");
+                    + " { background-color: palette(button); }");
     }
 
 }   // anon namespace
@@ -1189,9 +1189,9 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
 
-    paintTo(ui->wiCharBar, "button");
-    paintTo(ui->pageInfo, "button");
-    paintTo(ui->pageSearch, "button");
+    paintAsButton(ui->wiCharBar);
+    paintAsButton(ui->pageInfo);
+    paintAsButton(ui->pageSearch);
 
     // Fill chars
     model.build();
@@ -1286,7 +1286,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 void FmMain::initLibrary(const InitBlocks& ib)
 {
     ui->wiLibShowcase->switchToLib();
-    paintTo(ui->wiLibContainer, "button");
+    paintAsButton(ui->wiLibContainer);
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
@@ -1351,7 +1351,7 @@ void FmMain::initFavs(const InitBlocks& ib)
 {    
     setMyHeader(ui->tableFavs);
 
-    paintTo(ui->wiFavsBar, "button");
+    paintAsButton(ui->wiFavsBar);
     ui->wiFavsShowcase->enableGoto();
 
     ui->tableFavs->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
