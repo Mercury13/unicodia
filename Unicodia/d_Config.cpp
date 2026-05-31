@@ -27,7 +27,7 @@
 ///// Vars /////////////////////////////////////////////////////////////////////
 
 // progsets
-progsets::DirMode progsets::dirMode = progsets::DirMode::PORTABLE;
+progsets::DirMode progsets::dirMode = progsets::DirMode::DEFAULT;
 
 Version updatever::version;
 bool updatever::isDebuggingVersion = false;
@@ -118,8 +118,8 @@ namespace {
         pugi::xml_document doc;
         doc.load_file(fname::progsets.c_str());
         auto hRoot = doc.child("program");
-        if (hRoot.attribute("portable").as_bool(true))
-            progsets::dirMode = progsets::DirMode::PORTABLE;
+        progsets::dirMode = static_cast<progsets::DirMode>(
+                hRoot.attribute("portable").as_bool(progsets::DEFAULT_PORTABLE));
         // debug-update
         auto hDebugUpdate = hRoot.child("debug-update");
         if (auto ver = Version::parsePermissive(hDebugUpdate.attribute("version").as_string())) {
