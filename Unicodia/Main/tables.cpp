@@ -149,27 +149,25 @@ void VirtualCharsModel::paintItem1(
 void VirtualCharsModel::paintItem(
         QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if (!dark::isActuallyOn()) {
-        if (option.state.testFlag(QStyle::State_HasFocus)) {
-            QStyleOptionViewItem vi = option;
-            // Workaround: draw selected item from Windows’ skin
-            //   (Vista’s skin explicitly bans it from table)
-            // 1. Set style
-            vi.state = QStyle::State_Selected
-                        | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
-                        | QStyle::State_On | QStyle::State_KeyboardFocusChange;
-            // 2. Use dummy list view as object instead of table view
-            QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &vi, painter, dummyLv.get());
-            paintItem1(painter, option, index, owner->palette().windowText().color());
-            return;
-        } else if (option.state.testFlag(QStyle::State_Selected)) {
-            // Selected, not focused? Initial style is bad
-            auto opt2 = option;
-            opt2.state.setFlag(QStyle::State_Selected, false);
-            owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-            paintItem1(painter, option, index, owner->palette().windowText().color());
-            return;
-        }
+    if (option.state.testFlag(QStyle::State_HasFocus)) {
+        QStyleOptionViewItem vi = option;
+        // Workaround: draw selected item from Windows’ skin
+        //   (Vista’s skin explicitly bans it from table)
+        // 1. Set style
+        vi.state = QStyle::State_Selected
+                    | QStyle::State_Active | QStyle::State_Enabled | QStyle::State_Item
+                    | QStyle::State_On | QStyle::State_KeyboardFocusChange;
+        // 2. Use dummy list view as object instead of table view
+        QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &vi, painter, dummyLv.get());
+        paintItem1(painter, option, index, owner->palette().windowText().color());
+        return;
+    } else if (option.state.testFlag(QStyle::State_Selected)) {
+        // Selected, not focused? Initial style is bad
+        auto opt2 = option;
+        opt2.state.setFlag(QStyle::State_Selected, false);
+        owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
+        paintItem1(painter, option, index, owner->palette().windowText().color());
+        return;
     }
     paintItem1(painter, option, index, owner->palette().windowText().color());
 }

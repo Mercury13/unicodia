@@ -1,0 +1,34 @@
+QTabBar::tab
+{
+	color: #ffffff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #555;
+	border-bottom: none;
+	padding: 3px 10px;
+}
+
+QTabBar::tab:selected
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	margin-bottom: 0px;
+}
+
+
+QTabBar::tab:!selected:hover
+{
+	border-top-color: #b78620;
+}
+
+QTabWidget::pane 
+{
+	border: none;
+	border-top: 1px solid #555;
+	top: 1px;
+}
+
+QGroupBox 
+{
+    border: 1px solid;
+    border-color: #666666;
+}

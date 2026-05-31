@@ -75,8 +75,11 @@ QPalette darkPalette()
     pal.setColor(QPalette::ButtonText, Qt::white);
     pal.setColor(QPalette::BrightText, Qt::red);
     pal.setColor(QPalette::Link, QColor(42, 130, 218));
+    pal.setColor(QPalette::Light, QColor(99, 99, 99));
+    pal.setColor(QPalette::Shadow, QColor(99, 99, 99));
+    pal.setColor(QPalette::Midlight, QColor(99, 99, 99));
     pal.setColor(QPalette::Highlight, QColor(42, 130, 218));
-    pal.setColor(QPalette::HighlightedText, QColor(35, 35, 35));
+    pal.setColor(QPalette::HighlightedText,QColor(35, 35, 35));
     pal.setColor(QPalette::Active, QPalette::Button, QColor(53, 53, 53));
     pal.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
     pal.setColor(QPalette::Disabled, QPalette::WindowText, Qt::darkGray);
@@ -91,9 +94,8 @@ int main(int argc, char *argv[])
     dark::init();
     //qputenv("QT_SCALE_FACTOR", "1.5");
     QApplication a(argc, argv);
-    //a.setStyle("fusion");  Try other styles
 
-    dark::fileName = ":/Combinear.qss";
+    dark::fileName = ":/Dark.qss";
     dark::palette = darkPalette();
     //dark::turnOn();
 
