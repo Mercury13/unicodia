@@ -99,6 +99,7 @@ public:
     explicit WiShowcase(QWidget *parent = nullptr);
     ~WiShowcase() override;
 
+    /// Enables the curved arrow "Find in Blocks"
     void enableGoto() { hasGoto = true; }
 
     // loc::Form
