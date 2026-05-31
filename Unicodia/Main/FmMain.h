@@ -258,7 +258,6 @@ private:
     } pullUpDetector;
 
     struct InitBlocks {
-        QString buttonColor;
         QList<int> sizes;
     };
 

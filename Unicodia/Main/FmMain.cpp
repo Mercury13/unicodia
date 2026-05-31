@@ -1073,9 +1073,10 @@ FmMain::FmMain(QWidget *parent)
 
 namespace {
 
-    void paintTo(QWidget* widget, const QString& color)
+    void paintTo(QWidget* widget, const char* role)
     {
-        widget->setStyleSheet("#" + widget->objectName() + " { background-color: " + color + "; }");
+        widget->setStyleSheet("#" + widget->objectName()
+                + " { background-color: palette(" + role + "); }");
     }
 
 }   // anon namespace
@@ -1187,12 +1188,10 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
-    const QColor& color = pal.color(QPalette::Normal, QPalette::Window);
-    r.buttonColor = color.name();
 
-    paintTo(ui->wiCharBar, r.buttonColor);
-    paintTo(ui->pageInfo, r.buttonColor);
-    paintTo(ui->pageSearch, r.buttonColor);
+    paintTo(ui->wiCharBar, "button");
+    paintTo(ui->pageInfo, "button");
+    paintTo(ui->pageSearch, "button");
 
     // Fill chars
     model.build();
@@ -1287,7 +1286,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 void FmMain::initLibrary(const InitBlocks& ib)
 {
     ui->wiLibShowcase->switchToLib();
-    paintTo(ui->wiLibContainer, ib.buttonColor);
+    paintTo(ui->wiLibContainer, "button");
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
@@ -1352,7 +1351,7 @@ void FmMain::initFavs(const InitBlocks& ib)
 {    
     setMyHeader(ui->tableFavs);
 
-    paintTo(ui->wiFavsBar, ib.buttonColor);
+    paintTo(ui->wiFavsBar, "button");
     ui->wiFavsShowcase->enableGoto();
 
     ui->tableFavs->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
