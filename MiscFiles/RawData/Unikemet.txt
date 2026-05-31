@@ -1,5 +1,5 @@
 # Unikemet-18.0.0.txt
-# Date: 2026-02-03
+# Date: 2026-05-19
 # © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -722,7 +722,7 @@ U+13054	kEH_HG	B5
 U+13054	kEH_IFAO	54,8
 U+13055	kEH_Cat	B-02-010
 U+13055	kEH_Core	C
-U+13055	kEH_Desc	Woman, seated, both knees down, with long hair and a band of cloth around the head, bound at the back, with two sticks forming a cross-like structure over the legs.
+U+13055	kEH_Desc	Woman, seated, both knees down, with a band of cloth around the head, bound at the back, with two sticks forming a cross-like structure over the legs.
 U+13055	kEH_Func	Logogram weaver or nurse
 U+13055	kEH_FVal	? | mnḫ.t
 U+13055	kEH_UniK	B005A
@@ -4941,7 +4941,7 @@ U+1325F	kEH_FVal	ḥw.t-ꜥꜣ.t
 U+1325F	kEH_UniK	O008
 U+1325F	kEH_JSesh	O8
 U+1325F	kEH_IFAO	285,6
-U+1325F	kEH_AltSeq	13257 13439 133CF 13436 1327B 
+U+1325F	kEH_AltSeq	13257 13436 13437 133CF 13430 1327B 13438
 U+13260	kEH_Cat	O-03-175
 U+13260	kEH_Core	L
 U+13260	kEH_Desc	A wickerwork basket (V30), on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6), with a half round loaf of bread (X1), written inside the enclosure.
@@ -5701,7 +5701,7 @@ U+132BE	kEH_JSesh	R12
 U+132BE	kEH_HG	R12
 U+132BF	kEH_Cat	G-12-116
 U+132BF	kEH_Core	C
-U+132BF	kEH_Desc	A falcon (G5) on a standard with a rounded top, with a feather (H6), angled forwards, attached to the standard in front of the falcon.
+U+132BF	kEH_Desc	A falcon (G5) on a standard, with a feather (H6), angled forwards, attached to the standard in front of the falcon.
 U+132BF	kEH_Func	Logogram (west, right side)
 U+132BF	kEH_FVal	ꞽmn.t
 U+132BF	kEH_UniK	R013
@@ -6893,7 +6893,7 @@ U+1334C	kEH_IFAO	397,14
 U+1334C	kEH_AltSeq	1334B
 U+1334D	kEH_Cat	U-09-085
 U+1334D	kEH_Core	C
-U+1334D	kEH_Desc	A drill, with a half-circle handle, with a backward tick over the handle, with a forked drill-bit with a horizontal line on top of the forked drill-bit, with a short vertical stroke next to the drill, connected to the handle.
+U+1334D	kEH_Desc	A drill, with a half-circle handle, with a backward tick on top of the handle, with a forked drill-bit with a horizontal line over the forked drill-bit, with a short vertical stroke next to the drill, connected to the handle.
 U+1334D	kEH_Func	Logogram (craftsman)
 U+1334D	kEH_FVal	ḥmw.w
 U+1334D	kEH_UniK	U024
@@ -7490,7 +7490,7 @@ U+1339D	kEH_HG	V29
 U+1339D	kEH_IFAO	440,14
 U+1339E	kEH_Cat	V-08-047
 U+1339E	kEH_Core	L
-U+1339E	kEH_Desc	A swab made from a hank of fiber with two loops (V29), overliad with a wickerwork basket with a handle, orientated with the handle to the back (V31).
+U+1339E	kEH_Desc	A swab made from a hank of fiber with two loops (V29), overlaid with a wickerwork basket with a handle, orientated with the handle to the back (V31).
 U+1339E	kEH_Func	Phonemogram
 U+1339E	kEH_FVal	sk
 U+1339E	kEH_UniK	V029A
@@ -19100,7 +19100,7 @@ U+13A05	kEH_IFAO	116,10
 U+13A06	kEH_Cat	D-30-018
 U+13A06	kEH_Core	C
 U+13A06	kEH_Desc	Two vertical human fingers on top of a standard used for carrying religious symbols (R12).
-U+13A06	kEH_Func	Logogram (Prosopopite nome)
+U+13A06	kEH_Func	Logogram (Prosopite nome)
 U+13A06	kEH_FVal	mtr
 U+13A06	kEH_UniK	D445
 U+13A07	kEH_Cat	D-31-004
@@ -35864,7 +35864,7 @@ U+142C8	kEH_HG	U24G
 U+142C8	kEH_IFAO	399,2
 U+142C9	kEH_Cat	U-09-071
 U+142C9	kEH_Core	C
-U+142C9	kEH_Desc	A drill, with a half-circle handle, with a feather (H6) on top, with a round drill-bit with a horizontal line on top of the circle, with a short vertical stroke next to the drill, connected to the handle.
+U+142C9	kEH_Desc	A drill, with a half-circle handle, with a feather (H006) on top, with a forked drill-bit with a horizontal line on top of the circle, with a short vertical stroke next to the drill, connected to the handle.
 U+142C9	kEH_Func	Logogram (craftsman)
 U+142C9	kEH_FVal	ḥmw.w
 U+142C9	kEH_UniK	U074

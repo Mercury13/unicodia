@@ -1,5 +1,5 @@
 # DerivedCoreProperties-18.0.0.txt
-# Date: 2026-05-04, 17:20:31 GMT
+# Date: 2026-05-12, 22:09:55 GMT
 # © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
@@ -13356,6 +13356,7 @@ ABED          ; Grapheme_Link # Mn       MEETEI MAYEK APUN IYEK
 1A60          ; InCB; Linker # Mn       TAI THAM SIGN SAKOT
 1B44          ; InCB; Linker # Mc       BALINESE ADEG ADEG
 1BAB          ; InCB; Linker # Mn       SUNDANESE SIGN VIRAMA
+1CF5..1CF6    ; InCB; Linker # Lo   [2] VEDIC SIGN JIHVAMULIYA..VEDIC SIGN UPADHMANIYA
 A9C0          ; InCB; Linker # Mc       JAVANESE PANGKON
 AAF6          ; InCB; Linker # Mn       MEETEI MAYEK VIRAMA
 10A3F         ; InCB; Linker # Mn       KHAROSHTHI VIRAMA
@@ -13367,7 +13368,7 @@ AAF6          ; InCB; Linker # Mn       MEETEI MAYEK VIRAMA
 11A99         ; InCB; Linker # Mn       SOYOMBO SUBJOINER
 11F42         ; InCB; Linker # Mn       KAWI CONJOINER
 
-# Total code points: 21
+# Total code points: 23
 
 # ================================================
 
