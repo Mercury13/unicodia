@@ -110,7 +110,7 @@ namespace {
     {
         static std::string myCoincidingPlatforms;
 
-        progsets::dirMode = progsets::DirMode::INSTALLED;
+        progsets::dirMode = progsets::DirMode::DEFAULT;
 
         if (fname::progsets.empty() || !std::filesystem::exists(fname::progsets))
             return;
