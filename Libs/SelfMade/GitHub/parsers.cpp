@@ -70,6 +70,14 @@ namespace {
         return badResult;
     }
 
+    bool isTrue(
+            const rapidjson::Value& doc,
+            const char* name)
+    {
+        auto what = doc.FindMember(name);
+        return what->value.IsBool() && what->value.GetBool();
+    }
+
     SmallRes checkJsonVersionForUpdate(
             const rapidjson::Value& doc,
             const Version& myVersion,
@@ -78,6 +86,10 @@ namespace {
     {
         if (!doc.IsObject())
             return SmallRes::BAD_JSON;
+        // Drafts/pre-releases are skipped
+        if (isTrue(doc, "draft") || isTrue(doc, "prerelease"))
+            return SmallRes::GO_NEXT;
+        // Name!
         auto data = doc.FindMember("name");
         if (!data->value.IsString())
             return SmallRes::BAD_JSON;
