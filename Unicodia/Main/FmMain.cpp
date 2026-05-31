@@ -965,6 +965,8 @@ FmMain::FmMain(QWidget *parent)
 {
     ui->setupUi(this);
 
+    dark::enable(this);
+
     // Tabs to 0
     ui->tabsMain->setCurrentIndex(0);
 

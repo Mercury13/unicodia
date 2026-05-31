@@ -88,6 +88,7 @@ QPalette darkPalette()
 
 int main(int argc, char *argv[])
 {
+    dark::init();
     //qputenv("QT_SCALE_FACTOR", "1.5");
     //qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
     QApplication a(argc, argv);

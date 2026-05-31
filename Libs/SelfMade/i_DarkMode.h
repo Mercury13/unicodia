@@ -4,6 +4,7 @@
 
 class QString;
 class QPalette;
+class QWidget;
 
 namespace dark {
 
@@ -44,4 +45,6 @@ namespace dark {
 
     /// Sets application to dark/light mode depending on mode etc
     void set(Mode mode);
+
+    void enable(QWidget* wi);
 }

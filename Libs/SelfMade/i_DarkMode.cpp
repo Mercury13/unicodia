@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QApplication>
 #include <QPalette>
+#include <QWidget>
 
 QString dark::fileName;
 std::optional<QPalette> dark::palette;
@@ -148,8 +149,6 @@ namespace {
     //fnShouldSystemUseDarkMode _ShouldSystemUseDarkMode = nullptr;
     fnSetPreferredAppMode _SetPreferredAppMode = nullptr;
 
-    bool g_darkModeEnabled = false;
-
     [[maybe_unused]] bool AllowDarkModeForWindow(HWND hWnd, bool allow)
     {
         if (doesWindowsSupportDarkMode())
@@ -167,6 +166,8 @@ namespace {
 
     [[maybe_unused]] void RefreshTitleBarThemeColor(HWND hWnd)
     {
+        if (!doesWindowsSupportDarkMode())
+            return;
         BOOL dark = FALSE;
         if (_IsDarkModeAllowedForWindow(hWnd) &&
             _ShouldAppsUseDarkMode() &&
@@ -176,7 +177,8 @@ namespace {
         }
         //if (darkOs == DarkOs::PRE_18362)
         //    SetPropW(hWnd, L"UseImmersiveDarkModeColors", reinterpret_cast<HANDLE>(static_cast<INT_PTR>(dark)));
-        else if (_SetWindowCompositionAttribute)
+        //else
+        if (_SetWindowCompositionAttribute)
         {
             WINDOWCOMPOSITIONATTRIBDATA data = { WCA_USEDARKMODECOLORS, &dark, sizeof(dark) };
             _SetWindowCompositionAttribute(hWnd, &data);
@@ -271,14 +273,13 @@ namespace {
                 _AllowDarkModeForWindow &&
                 (_AllowDarkModeForApp || _SetPreferredAppMode) &&
                 //_FlushMenuThemes &&
-                _IsDarkModeAllowedForWindow)
+                _IsDarkModeAllowedForWindow &&
+                !IsHighContrast())
             {
-                darkOs = DarkOs::UNSUPPORTED;
+                darkOs = DarkOs::NEW;
 
                 AllowDarkModeForApp(true);
                 _RefreshImmersiveColorPolicyState();
-
-                g_darkModeEnabled = _ShouldAppsUseDarkMode() && !IsHighContrast();
 
                 FixDarkScrollBar();
             }
@@ -383,7 +384,15 @@ void dark::forceOff()
 void dark::init()
 {
 #ifdef _WIN32
-    // Sorry, cannot test
+    // Sorry, works just partly
     //InitDarkMode();
+#endif
+}
+
+void dark::enable(QWidget* wi)
+{
+#ifdef _WIN32
+    AllowDarkModeForWindow((HWND)wi->winId(), true);
+    RefreshTitleBarThemeColor((HWND)wi->winId());
 #endif
 }
