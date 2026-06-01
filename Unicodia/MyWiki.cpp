@@ -1886,7 +1886,9 @@ namespace {
 
         case 'w':
             if (name == "warn") {
-                s += "<b style='"  STYLE_MISRENDER "'>";
+                s += "<b style='";
+                s += styleMisrender();
+                s += "'>";
                 str::append(s, x.safeGetV(1, {}));
                 s += "</b>";
             }
@@ -2845,7 +2847,7 @@ namespace {
 void mywiki::appendStylesheet(QString& text, Flags<Stylefg> flags)
 {
     str::append(text, "<style>");
-    str::append(text, STYLES_WIKI);
+    text += stylesWiki();
 
     // SignWriting: add more styles
     auto color = QApplication::palette().windowText().color();

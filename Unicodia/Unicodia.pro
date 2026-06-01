@@ -83,6 +83,7 @@ SOURCES += \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
+    Skin.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/Fonts/TempFont.cpp \

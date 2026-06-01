@@ -21,7 +21,7 @@ namespace dark {
     bool doesSystemWant();
 
     /// @return [+] dark mode [-] light mode
-    bool isActuallyOn();
+    bool isActuallyOn() noexcept;
 
     /// Forcefully sets application to dark mode
     void forceOn();
@@ -33,10 +33,10 @@ namespace dark {
     void set(bool x);
 
     /// @return  relative colour lightness
-    int lightness(const QColor& color);
+    int lightness(const QColor& color) noexcept;
 
     /// @return [+] palette is dark  [-] unknown
-    bool isPaletteDark(const QPalette& palette);
+    bool isPaletteDark(const QPalette& palette) noexcept;
 
     void processNewPalette();
 }

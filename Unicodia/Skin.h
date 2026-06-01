@@ -19,13 +19,16 @@ constexpr int ALPHA_BORDER = 30;
 constexpr int ALPHA_INTERNATIONAL = 15;
 
 
+// Light = light PALETTE rather than light colour
 // Color names
 #define CNAME_BG_POPUP "LightYellow"
-#define CNAME_LINK_POPUP "ForestGreen"
-#define CNAME_LINK_POPUP_DARK "DarkGreen"
+#define CNAME_LINK_POPUP_LIGHT "ForestGreen"
+#define CNAME_LINK_POPUP_DARK "MediumSpringGreen"
+#define CNAME_LINK_POPUP_LO "DarkGreen"
 /// @todo [future, #528] style unused, but let it be for now
 //#define CNAME_LINK_CODE "#0000CC"
-#define CNAME_LINK_DEPRECATED "#CC0000"
+#define CNAME_LINK_DEPRECATED_LIGHT "#CC0000"
+#define CNAME_LINK_DEPRECATED_DARK  "#EF2929"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_U_COPY "#808080"
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
@@ -45,30 +48,24 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 // Camouflaged link
 #define STYLE_LINK_CAMO(color,place)    STYLE_LINK2("palette(window-text)",color,place)
 
-#define STYLE_POPUP        STYLE_LINK(CNAME_LINK_POPUP, "0.05")
-#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK, "0.04")
-#define STYLE_DEPRECATED   STYLE_LINK(CNAME_LINK_DEPRECATED, "0.04")
+#define STYLE_POPUP_LIGHT  STYLE_LINK(CNAME_LINK_POPUP_LIGHT, "0.05")
+#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK,  "0.05")
+#define STYLE_POPUP_LO     STYLE_LINK(CNAME_LINK_POPUP_LO, "0.04")
+#define STYLE_DEPREC_LIGHT STYLE_LINK(CNAME_LINK_DEPRECATED_LIGHT, "0.04")
+#define STYLE_DEPREC_DARK  STYLE_LINK(CNAME_LINK_DEPRECATED_DARK, "0.04")
 #define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
 #define STYLE_BIGINET      STYLE_LINK2(CNAME_LINK_OUTSIDE, CNAME_U_BIGOUTSIDE, "0.05")
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
 #define STYLE_ALTNAME      STYLE_LINK2(CNAME_ALTNAME, CNAME_U_COPY, "0.05") " font-weight:bold;"
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 //#define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
-#define STYLE_MISRENDER    "color:" CNAME_LINK_DEPRECATED
+#define STYLE_MISRENDER_LIGHT "color:" CNAME_LINK_DEPRECATED_LIGHT
+#define STYLE_MISRENDER_DARK  "color:" CNAME_LINK_DEPRECATED_DARK
 #define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
 
-#define STYLES_WIKI \
-        ".copy { " STYLE_COPY " } "                                             \
-        ".altname { " STYLE_ALTNAME " } "                                       \
-        ".bigcopy { " STYLE_BIGCOPY " } "                                       \
-        ".popup { " STYLE_POPUP " } "                                           \
-        ".deprecated { " STYLE_DEPRECATED " } "                                 \
-        ".deph { color: " CNAME_TEXT_DEPRECATED "; } "                          \
-        ".inet { " STYLE_INET " } "                                             \
-        ".missing { color: " CNAME_LINK_DEPRECATED "; } "                       \
-        ".tr { color: " CNAME_TRANSCRIPTION "; }"                               \
-        ".query { " STYLE_QUERY " } "                                           \
-        ".popdark { " STYLE_POPUP_DARK " }"
+const char* stylesWiki();
+const char* styleMisrender();
+const char* stylePopup();
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"

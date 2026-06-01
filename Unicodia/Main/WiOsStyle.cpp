@@ -58,7 +58,7 @@ void WiOsStyle::setEmptyCode(char32_t code)
 QString qPopupLinkNoLoc(
         const QString& text, const char* target)
 {
-    return QString("<a href='") + target + "' style='" STYLE_POPUP "'>"
+    return QString("<a href='") + target + "' style='" + stylePopup() + "'>"
             + text + "</a>";
 }
 
@@ -105,8 +105,9 @@ void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fon
                 auto info = fb::getOrEmpty(key);
                 setSmall(info->flags.have(fb::Fg::SMALL_CELL));
                 snprintf(buf, std::size(buf),
-                        "<a href='pf:%d/%d' style='" STYLE_POPUP "'>",
-                        ch.subj.val(), static_cast<int>(ws));
+                        "<a href='pf:%d/%d' style='%s'>",
+                        ch.subj.val(), static_cast<int>(ws),
+                        stylePopup());
                 ui->lbOsTitle->setText(
                     buf + font->family().toHtmlEscaped() + "</a>");
             } else {

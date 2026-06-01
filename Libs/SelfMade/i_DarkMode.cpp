@@ -23,8 +23,6 @@ namespace {
 // Win32 dark mode
 #include <QOperatingSystemVersion>
 #include <QSettings>
-#include <windows.h>
-#include <uxtheme.h>
 
 namespace {
 
@@ -85,7 +83,7 @@ bool dark::doesSystemSupport()
 #endif
 }
 
-bool dark::isActuallyOn() { return isDarkOn; }
+bool dark::isActuallyOn() noexcept { return isDarkOn; }
 
 
 void dark::set(bool x)
@@ -107,7 +105,7 @@ namespace {
         return qobject_cast<QApplication*>(QApplication::instance());
     }
 
-}
+}   // anon namespace
 
 
 namespace {
@@ -198,9 +196,6 @@ void dark::init1()
             darkOs = DarkOs::UNSUPPORTED;
             return;
         }
-        // InitDarkMode() is unneeded, but we've got nice checking
-        //   whether we HAVE dark mode
-        // This works, but partly
         qputenv("QT_QPA_PLATFORM", "windows:darkmode=2");
     }
 #endif
@@ -215,14 +210,14 @@ void dark::init2(const QString& aFname)
     }
 }
 
-int dark::lightness(const QColor& color)
+int dark::lightness(const QColor& color) noexcept
 {
     return color.red()   * 2
          + color.green() * 4
          + color.blue();
 }
 
-bool dark::isPaletteDark(const QPalette& palette)
+bool dark::isPaletteDark(const QPalette& palette) noexcept
 {
     auto liWinText = lightness(palette.windowText().color());
     auto liWindow = lightness(palette.window().color());
