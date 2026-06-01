@@ -71,3 +71,9 @@ QHeaderView::section:hover
 {
     background-color: DarkSlateGray;
 }
+
+QToolTip {
+	color: white;
+	background-color: #1E3333;
+	border: 1px solid SlateGray;
+}
