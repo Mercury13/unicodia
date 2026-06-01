@@ -66,6 +66,9 @@ constexpr const char* STYLES_WIKI_DARK = STYLES_WIKI_OF(
     STYLE_ALTNAME_DARK, STYLE_POPUP_LO_DARK, STYLE_INET_DARK,
     STYLE_QUERY_DARK);
 
+constexpr QColor CLA_MESSAGE_LIGHT { 0, 0, 0, 180 };
+constexpr QColor CLA_MESSAGE_DARK { 70, 130, 180, 220 };  // SteelBlue
+
 const char* stylesWiki()
 {
     return dark::isActuallyOn() ? STYLES_WIKI_DARK : STYLES_WIKI_LIGHT;
@@ -109,4 +112,9 @@ const char* styleBigInet()
 const char* cnameInet()
 {
     return dark::isActuallyOn() ? CNAME_LINK_OUTSIDE_DARK : CNAME_LINK_OUTSIDE_LIGHT;
+}
+
+QColor claMessage()
+{
+    return dark::isActuallyOn() ? CLA_MESSAGE_DARK : CLA_MESSAGE_LIGHT;
 }

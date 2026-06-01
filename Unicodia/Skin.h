@@ -46,6 +46,8 @@ const char* styleBigInet();
 const char* cnameBgPopup();
 const char* cnameBorderPopup();
 const char* cnameInet();
+/// QColor + alpha
+QColor claMessage();
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"

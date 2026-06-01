@@ -10,6 +10,8 @@
 #include <QApplication>
 #include <QScreen>
 
+#include "Skin.h"
+
 constexpr auto FGS_MESSAGE =
         Qt::Tool
         | Qt::FramelessWindowHint
@@ -23,7 +25,6 @@ constexpr auto STY_LABEL =
         "font-size: %1pt; "
         "margin: 6px 10px; }";
 
-constexpr auto ALPHA_DEFAULT = 180;
 constexpr auto CORNER_RADIUS = 10;
 constexpr auto SHADOW_GAP = 0;
 constexpr auto WINDOW_GAP = 4;
@@ -128,7 +129,8 @@ void FmMessage::paintEvent(QPaintEvent*)
     roundedRect.setWidth(rect().width() - SHADOW_GAP * 2);
     roundedRect.setHeight(rect().height() - SHADOW_GAP * 2);
 
-    painter.setBrush(QBrush(QColor(0,0,0, ALPHA_DEFAULT)));
+    QColor cl = claMessage();
+    painter.setBrush(cl);
     painter.setPen(Qt::NoPen);
 
     painter.drawRoundedRect(roundedRect, CORNER_RADIUS, CORNER_RADIUS);
