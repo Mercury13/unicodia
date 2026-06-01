@@ -1888,7 +1888,7 @@ namespace {
             if (name == "warn") {
                 s += "<b style='";
                 s += styleMisrender();
-                s += "'>";
+                s +=  "'>";
                 str::append(s, x.safeGetV(1, {}));
                 s += "</b>";
             }
@@ -3039,7 +3039,7 @@ namespace {
                 case uc::TextRole::EMOJI_NAME:
                     if (isInitial) {
                         isInitial = false;
-                        text += "<p style='" CNAME_ALTNAME "'>";
+                        text += "<p class='altname2'>";
                     } else {
                         text += EURO_SEMICOLON;
                     }
@@ -3797,7 +3797,7 @@ QString mywiki::buildHtml(
                         if (s != title1) {
                             if (isInitial) {
                                 isInitial = false;
-                                text += "<p style='" CNAME_ALTNAME "'>";
+                                text += "<p class='altname2'>";
                             } else {
                                 text += EURO_SEMICOLON;  // names/abbreviations are euro
                             }
