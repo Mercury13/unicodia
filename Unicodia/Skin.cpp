@@ -4,7 +4,8 @@
 #include "i_DarkMode.h"
 
 // Missing is a technical style, let it be this way
-#define STYLES_WIKI_OF(popup, deprRed, deprGray, altname) \
+#define STYLES_WIKI_OF(popup, deprRed, deprGray, altname, \
+        popupLo) \
     ".copy { " STYLE_COPY " } "                               \
     ".altname { " altname " } "                               \
     ".bigcopy { " STYLE_BIGCOPY " } "                         \
@@ -15,15 +16,15 @@
     ".missing { color: " CNAME_LINK_DEPRECATED_DARK "; } "    \
     ".tr { color: " CNAME_TRANSCRIPTION "; }"                 \
     ".query { " STYLE_QUERY " } "                             \
-    ".popdark { " STYLE_POPUP_DARK " }"
+    ".popdark { " popupLo " }"
 
 constexpr const char* STYLES_WIKI_LIGHT = STYLES_WIKI_OF(
     STYLE_POPUP_LIGHT, STYLE_DEPREC_LIGHT, CNAME_ALTNAME_LIGHT,
-    STYLE_ALTNAME_LIGHT);
+    STYLE_ALTNAME_LIGHT, STYLE_POPUP_LO_LIGHT);
 
 constexpr const char* STYLES_WIKI_DARK = STYLES_WIKI_OF(
     STYLE_POPUP_DARK, STYLE_DEPREC_DARK, CNAME_ALTNAME_DARK,
-    STYLE_ALTNAME_DARK);
+    STYLE_ALTNAME_DARK, STYLE_POPUP_LO_DARK);
 
 const char* stylesWiki()
 {
@@ -38,4 +39,9 @@ const char* styleMisrender()
 const char* stylePopup()
 {
     return dark::isActuallyOn() ? STYLE_POPUP_DARK : STYLE_POPUP_LIGHT;
+}
+
+const char* stylePopupLo()
+{
+    return dark::isActuallyOn() ? STYLE_POPUP_LO_DARK : STYLE_POPUP_LO_LIGHT;
 }

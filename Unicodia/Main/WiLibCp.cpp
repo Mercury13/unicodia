@@ -96,8 +96,8 @@ void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
     ui->wiImage->setCp(cp, glyphSets);
     char q[200];
     snprintf(q, std::size(q),
-             "<a href='g' style='" STYLE_POPUP_LO "'>" "%04X" "</a>",
-             static_cast<int>(cp));
+             "<a href='g' style='%s'>" "%04X" "</a>",
+             stylePopupLo(), static_cast<int>(cp));
     ui->lbCode->setText(q);
     currentCp = cp;
 }

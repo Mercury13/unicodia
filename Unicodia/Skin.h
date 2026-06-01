@@ -24,7 +24,8 @@ constexpr int ALPHA_INTERNATIONAL = 15;
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP_LIGHT "ForestGreen"
 #define CNAME_LINK_POPUP_DARK "MediumSpringGreen"
-#define CNAME_LINK_POPUP_LO "DarkGreen"
+#define CNAME_LINK_POPUP_LO_LIGHT "DarkGreen"
+#define CNAME_LINK_POPUP_LO_DARK "#CCFFCC"
 #define CNAME_LINK_DEPRECATED_LIGHT "#CC0000"
 #define CNAME_LINK_DEPRECATED_DARK  "#EF2929"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
@@ -49,8 +50,9 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 #define STYLE_LINK_CAMO(color,place)    STYLE_LINK2("palette(window-text)",color,place)
 
 #define STYLE_POPUP_LIGHT  STYLE_LINK(CNAME_LINK_POPUP_LIGHT, "0.05")
-#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK,  "0.05")
-#define STYLE_POPUP_LO     STYLE_LINK(CNAME_LINK_POPUP_LO, "0.04")
+#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK,  "0.04")
+#define STYLE_POPUP_LO_LIGHT STYLE_LINK(CNAME_LINK_POPUP_LO_LIGHT, "0.04")
+#define STYLE_POPUP_LO_DARK  STYLE_LINK(CNAME_LINK_POPUP_LO_DARK,  "0.04")
 #define STYLE_DEPREC_LIGHT STYLE_LINK(CNAME_LINK_DEPRECATED_LIGHT, "0.04")
 #define STYLE_DEPREC_DARK  STYLE_LINK(CNAME_LINK_DEPRECATED_DARK, "0.04")
 #define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
@@ -67,6 +69,7 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 const char* stylesWiki();
 const char* styleMisrender();
 const char* stylePopup();
+const char* stylePopupLo();
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"
