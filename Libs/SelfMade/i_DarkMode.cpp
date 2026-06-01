@@ -1,9 +1,3 @@
-///
-/// Untested. Turned off.
-/// An explosive mixture of two approaches:
-/// artificial (QSS) and Windows UxTheme
-///
-
 #include "i_DarkMode.h"
 
 #include <QString>
