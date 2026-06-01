@@ -25,8 +25,6 @@ constexpr int ALPHA_INTERNATIONAL = 15;
 #define CNAME_LINK_POPUP_LIGHT "ForestGreen"
 #define CNAME_LINK_POPUP_DARK "MediumSpringGreen"
 #define CNAME_LINK_POPUP_LO "DarkGreen"
-/// @todo [future, #528] style unused, but let it be for now
-//#define CNAME_LINK_CODE "#0000CC"
 #define CNAME_LINK_DEPRECATED_LIGHT "#CC0000"
 #define CNAME_LINK_DEPRECATED_DARK  "#EF2929"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
@@ -62,7 +60,6 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 #define STYLE_ALTNAME_LIGHT STYLE_ALTNAME_OF(CNAME_ALTNAME_LIGHT, "0.04")
 #define STYLE_ALTNAME_DARK  STYLE_ALTNAME_OF(CNAME_ALTNAME_DARK, "0.04")
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
-//#define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
 #define STYLE_MISRENDER_LIGHT "color:" CNAME_LINK_DEPRECATED_LIGHT
 #define STYLE_MISRENDER_DARK  "color:" CNAME_LINK_DEPRECATED_DARK
 #define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
