@@ -5,25 +5,20 @@
 class QString;
 class QPalette;
 class QWidget;
+struct QColor;
 
 namespace dark {
 
-    extern QString fileName;
-    extern std::optional<QPalette> palette;
+    /// @return [+] whether OS supports dark mode
+    bool doesSystemSupport();
 
-    enum class Mode : unsigned char {
-        AUTO,
-        ALWAYS_LIGHT,
-        ALWAYS_DARK
-    };
-
-    void init();
+    /// @warning Call it BEFORE QApplication
+    void init1();
+    /// @warning Call it AFTER QAllpication
+    void init2(const QString& aFname);
 
     /// @return [+] whether dark is on according to OS settings
     bool doesSystemWant();
-
-    /// @return [+] whether dark is on according to OS settings and mode
-    bool doesUserWant(Mode mode);
 
     /// @return [+] dark mode [-] light mode
     bool isActuallyOn();
@@ -34,15 +29,14 @@ namespace dark {
     /// Forcefully sets application to light mode
     void forceOff();
 
-    /// Sets application to dark mode unless it’s actually dark
-    void turnOn();
-
-    /// Sets application to light mode unless it’s actually light
-    void turnOff();
-
     /// Sets application to dark/light mode depending on x and whether we already set
     void set(bool x);
 
-    /// Sets application to dark/light mode depending on mode etc
-    void set(Mode mode);
+    /// @return  relative colour lightness
+    int lightness(const QColor& color);
+
+    /// @return [+] palette is dark  [-] unknown
+    bool isPaletteDark(const QPalette& palette);
+
+    void processNewPalette();
 }
