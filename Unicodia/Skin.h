@@ -18,25 +18,11 @@ constexpr int ALPHA_BORDER = 30;
 // Alpha of international char’s BG
 constexpr int ALPHA_INTERNATIONAL = 15;
 
-
-// Light = light PALETTE rather than light colour
-// Color names
-#define CNAME_BG_POPUP "LightYellow"
-#define CNAME_LINK_POPUP_LIGHT "ForestGreen"
-#define CNAME_LINK_POPUP_DARK "MediumSpringGreen"
-#define CNAME_LINK_POPUP_LO_LIGHT "DarkGreen"
-#define CNAME_LINK_POPUP_LO_DARK "#CCFFCC"
-#define CNAME_LINK_DEPRECATED_LIGHT "#CC0000"
-#define CNAME_LINK_DEPRECATED_DARK  "#EF2929"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_U_COPY "#808080"
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
 #define CNAME_U_BIGOUTSIDE "rgba(21,101,192,35%)"
 #define CNAME_TRANSCRIPTION "Goldenrod"
-#define CNAME_ALTNAME_LIGHT "#808080"
-#define CNAME_ALTNAME_DARK  "#A0A0A0"
-#define CNAME_TEXT_DEPRECATED_LIGHT CNAME_ALTNAME_LIGHT
-#define CNAME_TEXT_DEPRECATED_DARK  CNAME_ALTNAME_DARK
 
 constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 
@@ -49,27 +35,18 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 // Camouflaged link
 #define STYLE_LINK_CAMO(color,place)    STYLE_LINK2("palette(window-text)",color,place)
 
-#define STYLE_POPUP_LIGHT  STYLE_LINK(CNAME_LINK_POPUP_LIGHT, "0.05")
-#define STYLE_POPUP_DARK   STYLE_LINK(CNAME_LINK_POPUP_DARK,  "0.04")
-#define STYLE_POPUP_LO_LIGHT STYLE_LINK(CNAME_LINK_POPUP_LO_LIGHT, "0.04")
-#define STYLE_POPUP_LO_DARK  STYLE_LINK(CNAME_LINK_POPUP_LO_DARK,  "0.04")
-#define STYLE_DEPREC_LIGHT STYLE_LINK(CNAME_LINK_DEPRECATED_LIGHT, "0.04")
-#define STYLE_DEPREC_DARK  STYLE_LINK(CNAME_LINK_DEPRECATED_DARK, "0.04")
 #define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
 #define STYLE_BIGINET      STYLE_LINK2(CNAME_LINK_OUTSIDE, CNAME_U_BIGOUTSIDE, "0.05")
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
-#define STYLE_ALTNAME_OF(color, ratio) STYLE_LINK2(color, CNAME_U_COPY, ratio) " font-weight:bold;"
-#define STYLE_ALTNAME_LIGHT STYLE_ALTNAME_OF(CNAME_ALTNAME_LIGHT, "0.04")
-#define STYLE_ALTNAME_DARK  STYLE_ALTNAME_OF(CNAME_ALTNAME_DARK, "0.04")
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
-#define STYLE_MISRENDER_LIGHT "color:" CNAME_LINK_DEPRECATED_LIGHT
-#define STYLE_MISRENDER_DARK  "color:" CNAME_LINK_DEPRECATED_DARK
 #define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
 
 const char* stylesWiki();
 const char* styleMisrender();
 const char* stylePopup();
 const char* stylePopupLo();
+const char* cnameBgPopup();
+const char* cnameBorderPopup();
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"

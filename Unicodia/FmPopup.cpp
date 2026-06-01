@@ -9,7 +9,8 @@
 ///// FmPopup //////////////////////////////////////////////////////////////////
 
 
-FmPopup::FmPopup(QWidget* owner, pop::ClickMemory& memory, const char* color)
+FmPopup::FmPopup(QWidget* owner, pop::ClickMemory& memory,
+                 const char* cnameBg, const char* cnameBorder)
     : Super(owner, memory)
 {
     layout = new QVBoxLayout(this);
@@ -36,8 +37,8 @@ FmPopup::FmPopup(QWidget* owner, pop::ClickMemory& memory, const char* color)
 
     char buf[100];
     snprintf(buf, std::size(buf),
-             "QLabel { background-color: %s; padding: 10px; border: 1px solid black }",
-             color);
+             "QLabel { background-color: %s; padding: 10px; border: 1px solid %s }",
+             cnameBg, cnameBorder);
     lbText->setStyleSheet(buf);
     connect(lbText, &ClickableLabel::clicked, this, &This::hide);
 }

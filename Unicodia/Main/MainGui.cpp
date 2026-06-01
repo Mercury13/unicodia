@@ -34,7 +34,8 @@ public:
 };
 
 
-FmPopup2::FmPopup2(MyGui& owner) : Super(owner.wiMain, owner.memory, CNAME_BG_POPUP)
+FmPopup2::FmPopup2(MyGui& owner)
+    : Super(owner.wiMain, owner.memory, cnameBgPopup(), cnameBorderPopup())
 {
     auto vw = viewport();
     vw->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);

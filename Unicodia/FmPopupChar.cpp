@@ -25,7 +25,8 @@ FmPopupChar::FmPopupChar(QWidget *parent, pop::ClickMemory& memory) :
     ui->wiSample->hideHead();
 
     ui->wiBg->setStyleSheet(
-        "#wiBg { background-color: " CNAME_BG_POPUP "; border: 1px solid black; }");
+        QString("#wiBg { background-color: ") + cnameBgPopup() + "; "
+                    "border: 1px solid " + cnameBorderPopup()  + "; }");
     // ClickableLabel’s
     connect(ui->lbCode, &ClickableLabel::clicked, this, &This::hide);
     connect(ui->lbText, &ClickableLabel::clicked, this, &This::hide);
