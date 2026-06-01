@@ -128,7 +128,7 @@ namespace {
         pal.setColor(QPalette::Shadow, QColor(99, 99, 99));
         pal.setColor(QPalette::Midlight, QColor(99, 99, 99));
         pal.setColor(QPalette::Highlight, QColor(42, 130, 218));
-        pal.setColor(QPalette::HighlightedText,QColor(35, 35, 35));
+        pal.setColor(QPalette::HighlightedText, Qt::white);
         pal.setColor(QPalette::Active, QPalette::Button, QColor(53, 53, 53));
         pal.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
         pal.setColor(QPalette::Disabled, QPalette::WindowText, Qt::darkGray);
