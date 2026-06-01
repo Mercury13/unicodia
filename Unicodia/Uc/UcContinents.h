@@ -36,7 +36,15 @@ namespace uc {
         } icon;
 
         struct Collapse {
-            QColor bgColor, textColor;
+            QColor bgColor, textColor,
+                   darkBgColor, darkTextColor;
+
+            /// @return  BG colour depending on palette darkness
+            const QColor& dynBgColor(bool isDark) const noexcept
+                { return isDark ? darkBgColor : bgColor; }
+            /// @return  text colour depending on palette darkness
+            const QColor& dynTextColor(bool isDark) const noexcept
+                { return isDark ? darkTextColor : textColor; }
         } collapse;
 
         bool isInternational;

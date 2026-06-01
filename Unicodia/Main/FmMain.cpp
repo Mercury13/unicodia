@@ -1838,7 +1838,8 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->comboBlock->setCurrentIndex(newIBlock);
     bool isCollapsible = block->flags.have(uc::Bfg::COLLAPSIBLE);
     if (isCollapsible) {
-        setCollapseColor(block->synthIcon.normalContinent().collapse.bgColor);
+        setCollapseColor(block->synthIcon.normalContinent().collapse.dynBgColor(
+                                                            dark::isActuallyOn()));
     }
     ui->wiCollapse->setVisible(isCollapsible);
 }

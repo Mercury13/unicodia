@@ -245,7 +245,8 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
         if (isCjkCollapsed) {
             auto block = uc::blockOf(cp.subj);
             if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                return block->synthIcon.normalContinent().collapse.textColor;
+                return block->synthIcon.normalContinent().collapse.dynTextColor(
+                                                            dark::isActuallyOn());
             }
         }
     }
@@ -255,17 +256,20 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 
 QVariant CharsModel::data(const QModelIndex& index, int role) const
 {
+    static constexpr QColor HILITE_LIGHT { 255, 255, 0 };  // simple yellow
+    static constexpr QColor HILITE_DARK  { 111, 78, 55 };  // Some brown from inet
     switch (role) {
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (cp) {
                 if (auto q = hiHost.get(); q && q->isHighlighted(cp.cp)) {
-                    return QColor { Qt::yellow };
+                    return dark::isActuallyOn() ? HILITE_DARK : HILITE_LIGHT;
                 }
                 if (isCjkCollapsed) {
                     auto block = uc::blockOf(cp->subj);
                     if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                        return block->synthIcon.normalContinent().collapse.bgColor;
+                        return block->synthIcon.normalContinent().collapse.dynBgColor(
+                                                                dark::isActuallyOn());
                     }
                 }
             } else {

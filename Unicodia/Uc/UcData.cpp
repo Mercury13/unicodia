@@ -370,34 +370,40 @@ constinit const uc::Term* uc::sortedTerms[std::size(terms)] { nullptr };
 
 size_t uc::nTerms() { return std::size(terms); }
 
+/// It means: the continent does not collapse
+///  (only two do: CJK (almost all) and Africa (Egyp)
+constexpr const uc::Continent::Collapse NO_COLLAPSE
+    { NO_COLOR, NO_COLOR, NO_COLOR, NO_COLOR };
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { BG_INTER,             FG_INTER             }, { NO_COLOR, NO_COLOR }, true },
+    { { BG_INTER,             FG_INTER             }, NO_COLLAPSE, true },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour
             { 0x66, 0xff, 0x00 } },
-            { NO_COLOR, NO_COLOR }, false },
+            NO_COLLAPSE, false },
     // Europe
-    { { BG_EUROPE,            FG_EUROPE,           }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_EUROPE,            FG_EUROPE,           }, NO_COLLAPSE, false  },
     // Asia RtL
-    { { BG_ASIA_R,            FG_ASIA_R            }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_ASIA_R,            FG_ASIA_R            }, NO_COLLAPSE, false  },
     // Asia
-    { { BG_ASIA_L,            { 0xF5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_ASIA_L,            { 0xF5, 0x79, 0x00 } }, NO_COLLAPSE, false  },
     // CJK
-    { { BG_CJK,               FG_CJK               }, { BG_CJK,  TX_CJK    }, false  },
+    { { BG_CJK,               FG_CJK               },
+      { BG_CJK, TX_CJK, FG_CJK, DT_CJK }, false  },
     // Ocean
-    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
+    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, NO_COLLAPSE, false  },
     // Africa
-    { { BG_AFRICA,            FG_AFRICA            }, { CO_AFRICA, TX_AFRICA }, false},
+    { { BG_AFRICA,            FG_AFRICA            },
+      { CO_AFRICA, TX_AFRICA, DK_AFRICA, DT_AFRICA }, false},
     // America
-    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
+    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, NO_COLLAPSE, false  },
 };
 
 // Missing
 constinit const uc::Continent MISSING_CONTINENT
-    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } }, { NO_COLOR, NO_COLOR }, false };
+    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } }, NO_COLLAPSE, false };
 
 
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
