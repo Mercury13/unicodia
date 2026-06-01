@@ -257,7 +257,7 @@ void WiShowcase::set(
             auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::DEJAVU)];
             font.load(NO_TRIGGER);
             ucName += loc::Fmt(" <a href='gc:{1}' style='{2}; font-family:{3}'>↪</a>")
-                              (buf)(STYLE_BIGINET)  // 1-2
+                              (buf)(styleBigInet())  // 1-2
                               (font.familiesComma().toStdString()).q();
         }
         ui->lbCharCode->setText(ucName);

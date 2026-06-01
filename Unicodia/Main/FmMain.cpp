@@ -1613,7 +1613,7 @@ void FmMain::translateAbout()
         s.insert(pos, loc::get(key));
     }
 
-    s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
+    s = QString("<style>a { text-decoration: none; color: ") + cnameInet() + "; }</style>" + s;
     ui->vwAbout->setText(s);
 
     // lbTofuStats

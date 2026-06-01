@@ -55,15 +55,16 @@ auto FmPopupChar::setCp(
     mywiki::appendCopyable(s, buf, "' style='" STYLE_BIGCOPY);
     ui->lbCode->setText(s);
 
+    auto* stInet = styleInet();
     // Find in Blocks: let it be this way, change every time
     s = loc::Fmt("<a href='gi:xxx' style='{1}'>{2}</a>")
-                (STYLE_INET)
+                (stInet)
                 (str::toSv(loc::get("Main.Local.FindBlk"))).q();
     ui->lbToBlocks->setText(s);
 
     // Copy
     s = loc::Fmt("<a href='gi:xxx' style='{1}'>{2}</a>")
-                (STYLE_INET)
+                (stInet)
                 (str::toSv(loc::get("Main.Local.Copy"))).q();
     ui->lbCopy->setText(s);
 
@@ -71,7 +72,7 @@ auto FmPopupChar::setCp(
     bool hasVs16 = cp.isVs16Emoji();
     if (hasVs16) {
         s = loc::Fmt("<a href='gi:xxx' style='{1}'>{2}</a>")
-                    (STYLE_INET)
+                    (stInet)
                     (str::toSv(loc::get("Main.Popup.CopyVs16"))).q();
         ui->lbCopyVs16->setText(s);
     }

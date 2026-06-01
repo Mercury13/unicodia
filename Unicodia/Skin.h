@@ -18,7 +18,6 @@ constexpr int ALPHA_BORDER = 30;
 // Alpha of international char’s BG
 constexpr int ALPHA_INTERNATIONAL = 15;
 
-#define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_U_COPY "#808080"
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
 #define CNAME_U_BIGOUTSIDE "rgba(21,101,192,35%)"
@@ -35,18 +34,18 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 // Camouflaged link
 #define STYLE_LINK_CAMO(color,place)    STYLE_LINK2("palette(window-text)",color,place)
 
-#define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
-#define STYLE_BIGINET      STYLE_LINK2(CNAME_LINK_OUTSIDE, CNAME_U_BIGOUTSIDE, "0.05")
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
-#define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
 
 const char* stylesWiki();
 const char* styleMisrender();
 const char* stylePopup();
 const char* stylePopupLo();
+const char* styleInet();
+const char* styleBigInet();
 const char* cnameBgPopup();
 const char* cnameBorderPopup();
+const char* cnameInet();
 
 #ifdef _WIN32
     #define FACE_DEFAULT "Cambria"

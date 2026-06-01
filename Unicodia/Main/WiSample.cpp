@@ -276,7 +276,8 @@ void WiSample::headToLib(char32_t subj)
 {
     headMode = HeadMode::TOLIB;
     char buf[200];
-    snprintf(buf, std::size(buf), "<a href='glc:%04X' style='" STYLE_INET "'>", int(subj));
+    snprintf(buf, std::size(buf), "<a href='glc:%04X' style='%s'>",
+             int(subj), styleInet());
     ui->lbSampleTitle->setText(buf + sToLib + "</a>");
 }
 
