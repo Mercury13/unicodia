@@ -257,7 +257,7 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 QVariant CharsModel::data(const QModelIndex& index, int role) const
 {
     static constexpr QColor HILITE_LIGHT { 255, 255, 0 };  // simple yellow
-    static constexpr QColor HILITE_DARK  { 111, 78, 55 };  // Some brown from inet
+    static constexpr QColor HILITE_DARK  { 25, 25, 112 };  // Midnight blue
     switch (role) {
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
