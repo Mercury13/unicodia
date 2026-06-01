@@ -1888,7 +1888,7 @@ namespace {
             if (name == "warn") {
                 s += "<b style='";
                 s += styleMisrender();
-                s +=  "'>";
+                s += "'>";
                 str::append(s, x.safeGetV(1, {}));
                 s += "</b>";
             }
