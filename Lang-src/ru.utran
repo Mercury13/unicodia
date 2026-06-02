@@ -6901,12 +6901,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Kharoshthi (Indobactrian, Kabul script) was used in Middle Asia and Afghanistan up to 3rd century. Originates from [[ps:Armi|Aramaic]], is considered sister script with [[ps:Brah|Brahmi]], no descendants. Has one of properties of [[pt:brahmic|Brahmic]] abugida{{-}}inherent vowel “a” is changed by vowel marks. [[pt:virama|Virama]] is purely virtual, final consonant is written as a subscript. Also about 30 [[pt:ligature|ligatures]] of double consonants are known:</p>
+      <p>Kharoshthi (Indo-Bactrian, Kabul script) was used in Central Asia and Afghanistan up to the 3rd century. Originates from [[ps:Armi|Aramaic]], considered a sister script of [[ps:Brah|Brahmi]], no descendants. Has one of the properties of [[pt:brahmic|Brahmic]] abugida{{-}}the inherent vowel “a” is changed by vowel marks. [[pt:virama|Virama]] is purely virtual; the final consonant is written as a subscript. Also, about 30 [[pt:ligature|ligatures]] of double consonants are known:</p>
       <p>: ka {{sm|𐨐}} + i {{sm|◌𐨁}} = ki {{sm|𐨐𐨁}}</p>
       <p>: dha {{sm|𐨢}} + i {{sm|◌𐨁}} + ka {{sm|𐨐}} + virama {{sm|◌𐨿}} = dhik {{sm|&amp;rlm;&amp;#68130;&amp;#68097;&amp;#68112;&amp;#68159;}}</p>
       <p>: ka {{sm|𐨐}} + virama {{sm|◌𐨿}} + ta {{sm|𐨟}} = kta {{sm|&amp;rlm;&amp;#68112;&amp;#68159;&amp;#68127;}}</p>
       <p />
-      <p>Non-positional numerals resembling Roman exist. Kharoshthi was discovered in 19th century and quickly deciphered.</p>
+      <p>Numerals are non-positional, resembling Roman. Kharoshthi was discovered in the 19th century and quickly deciphered.</p>
      </orig>
      <transl>
       <p>Кхароштхи (индобактрийское, кабульское письмо) применялось в Средней Азии и Афганистане до III{{_}}века. Происходит из [[ps:Armi|арамейского]] и считается сестринским с [[ps:Brah|брахми]], потомков нет. Обладает одним из свойств [[pt:brahmic|брахмийской абугиды]]{{-}}гласная по умолчанию меняется огласовками. [[pt:virama|Вирама]] чисто виртуальная, конечная согласная записывается нижним индексом. Также известно около 30 [[pt:ligature|лигатур]] из сдвоенных согласных:</p>
@@ -7832,8 +7832,8 @@
      <transl>североаравийский оазисов, сафаитский, хисмайский и другие</transl>
     </text>
     <text id="Text">
-     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
-     <transl>Понятие «древняя североаравийская» относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. Происходят из протосинайской письменности. Известны по кратким надписям III{{_}}века{{bc}}{{_}}— IV{{_}}века, но письмо значительно более древнее; вероятно, VIII{{_}}века{{bc}}</transl>
+     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from the Proto-Sinaitic script. The script is known for short inscriptions from the 3rd century{{_}}BC to the 4th century, but it is much older; maybe the 8th century BC.</orig>
+     <transl>Понятие «древняя североаравийская» относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. Происходят из протосинайской письменности. Письмо известно по кратким надписям III{{_}}века{{bc}}{{-}}IV{{_}}века, но оно значительно более древнее; вероятно, VIII{{_}}века{{bc}}</transl>
     </text>
    </group>
    <group id="Nbat">
@@ -8519,7 +8519,7 @@
      <transl>южноаравийские ''(сабейский, катабанский и прочие)'', гéэз</transl>
     </text>
     <text id="Text">
-     <orig>Old South Arabian is an ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
+     <orig>Old South Arabian is an ancestor of the [[ps:Ethi|Ethiopic]] script and comes from the poorly explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in the 7th century with the expansion of the Arabs.</orig>
      <transl>Древнее южноаравийское{{-}}предок [[ps:Ethi|эфиопского]] письма, происходит из малоизученной протосинайской письменности. В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].</transl>
     </text>
    </group>
