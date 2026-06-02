@@ -268,7 +268,7 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
-    /// Programmatic drawing of tally marks
+    /// Programmatic drawing of Counting Rod Numerals
     /// Type: lo-res, custom
     class TallyMark : public Veng
     {

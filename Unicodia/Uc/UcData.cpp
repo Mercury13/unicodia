@@ -370,6 +370,28 @@ constinit const uc::Term* uc::sortedTerms[std::size(terms)] { nullptr };
 
 size_t uc::nTerms() { return std::size(terms); }
 
+
+const QColor& uc::Continent::Icon::bgColor(bool isDark) const noexcept
+{
+    switch (dark) {
+    case ContDark::LEAVE: return xbgColor;
+    case ContDark::INVERT:
+        return isDark ? xfgColor : xbgColor;
+    }
+    __builtin_unreachable();
+}
+
+const QColor& uc::Continent::Icon::fgColor(bool isDark) const noexcept
+{
+    switch (dark) {
+    case ContDark::LEAVE: return xfgColor;
+    case ContDark::INVERT:
+        return isDark ? xbgColor : xfgColor;
+    }
+    __builtin_unreachable();
+}
+
+
 /// It means: the continent does not collapse
 ///  (only two do: CJK (almost all) and Africa (Egyp)
 constexpr const uc::Continent::Collapse NO_COLLAPSE
@@ -377,7 +399,7 @@ constexpr const uc::Continent::Collapse NO_COLLAPSE
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { BG_INTER,             FG_INTER             }, NO_COLLAPSE, true },
+    { { BG_INTER,             FG_INTER, ContDark::INVERT }, NO_COLLAPSE, true },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour

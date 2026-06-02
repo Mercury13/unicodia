@@ -10,6 +10,7 @@
 
 // Utils
 #include "u_Qstrings.h"
+#include "i_DarkMode.h"
 
 // Unicode data
 #include "UcCp.h"
@@ -453,8 +454,8 @@ ie::LazySvg::LazySvg(const uc::SynthIcon& icon, char32_t startingCp)
 void ie::LazySvg::loadPalette(const uc::Continent& continent)
 {
     IconPalette pal {
-        .fg = continent.icon.fgColor,
-        .bg = continent.icon.bgColor,
+        .fg = continent.icon.fgColor(dark::isActuallyOn()),
+        .bg = continent.icon.bgColor(dark::isActuallyOn()),
     };
     setPalette(pal);
 }
@@ -514,9 +515,9 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (cont.isInternational) {
         drawMurkyRect(painter, rect, clFg);
     } else {
-        painter->fillRect(rect, cont.icon.bgColor);
+        painter->fillRect(rect, cont.icon.bgColor(dark::isActuallyOn()));
         drawCharBorder(painter, rect, clFg);
-        clFg = cont.icon.fgColor;
+        clFg = cont.icon.fgColor(dark::isActuallyOn());
     }
 
     // Texture?
@@ -614,6 +615,26 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// BlockElem ////////////////////////////////////////////////////////////////
 
+namespace {
+
+struct ColorPair {
+    QColor bg, fg;
+
+    ColorPair(uc::EcContinent x);
+
+    /// @return [+] is inverse, e.g. fg is lighter than bg
+    bool isInverse() const { return (dark::lightness(fg) > dark::lightness(bg)); }
+};
+
+ColorPair::ColorPair(uc::EcContinent x)
+{
+    const auto& cont = uc::continentInfo[static_cast<int>(x)];
+    bg = cont.icon.bgColor(dark::isActuallyOn());
+    fg = cont.icon.fgColor(dark::isActuallyOn());
+}
+
+}   // anon namespace
+
 ie::BlockElem::BlockElem()
 {
     texture.load(":ScCustom/blockelem.png");
@@ -621,8 +642,9 @@ ie::BlockElem::BlockElem()
 
 void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
 {
+    ColorPair cp(uc::EcContinent::NONE);
     // White BG
-    painter->fillRect(rect, BG_INTER);
+    painter->fillRect(rect, cp.bg);
 
     // Get width
     auto width = rect.height() * 3 / 5;
@@ -635,7 +657,7 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
     // Top margin: top line of texture is empty, this precise 1
     // Bottom: 0/1 is somehow nicer than 1/2, let it be
     QRect newRect { x0, rect.top(), width, rect.height()};
-    QBrush brush(FG_INTER, texture);
+    QBrush brush(cp.fg, texture);
     painter->fillRect(newRect, brush);
 }
 
@@ -654,7 +676,8 @@ namespace {
 
 void ie::BoxDraw::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     const int pxSide = std::min(rect.width(), rect.height());
     auto thickness = roundDiv(pxSide, BASE_SIZE);
@@ -665,11 +688,11 @@ void ie::BoxDraw::paint1(QPainter *painter, const QRect &rect, qreal)
 
     auto doubleX = (pxSide - doubleWidth + 1) / 2;
     auto doubleLeft = rect.x() + doubleX;
-    painter->fillRect(doubleLeft,              rect.y(), thickness, pxSide, FG_INTER);
-    painter->fillRect(doubleLeft + doubleStep, rect.y(), thickness, pxSide, FG_INTER);
+    painter->fillRect(doubleLeft,              rect.y(), thickness, pxSide, cp.fg);
+    painter->fillRect(doubleLeft + doubleStep, rect.y(), thickness, pxSide, cp.fg);
 
     auto armY = (pxSide + 1 - thickness) / 2;
-    painter->fillRect(doubleLeft - armLength, rect.y() + armY, armLength, thickness, FG_INTER);
+    painter->fillRect(doubleLeft - armLength, rect.y() + armY, armLength, thickness, cp.fg);
 }
 
 
@@ -678,7 +701,9 @@ void ie::BoxDraw::paint1(QPainter *painter, const QRect &rect, qreal)
 
 void ie::ControlPic::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, BG_INTER);
+    const ColorPair cp(uc::EcContinent::NONE);
+
+    painter->fillRect(rect, cp.bg);
     static constexpr int BASE_SIZE_TEN = BASE_SIZE * 10;
     static constexpr int BASE_SIZE_TEN_LOHALF = (BASE_SIZE_TEN / 2) - 1;
 
@@ -693,9 +718,9 @@ void ie::ControlPic::paint1(QPainter *painter, const QRect &rect, qreal)
     auto yLo = pxSide - pxBorder - pxThickness;
     auto yArm = yLo - pxArmHeight;
 
-    painter->fillRect(x, yLo,  pxTotalWidth, pxThickness, FG_INTER);
-    painter->fillRect(x,            yArm, pxThickness, pxArmHeight, FG_INTER);
-    painter->fillRect(x + pxLoSide, yArm, pxThickness, pxArmHeight, FG_INTER);
+    painter->fillRect(x, yLo,  pxTotalWidth, pxThickness, cp.fg);
+    painter->fillRect(x,            yArm, pxThickness, pxArmHeight, cp.fg);
+    painter->fillRect(x + pxLoSide, yArm, pxThickness, pxArmHeight, cp.fg);
 }
 
 ///// CoarseImage //////////////////////////////////////////////////////////////
@@ -818,7 +843,8 @@ ie::PlayingCard::~PlayingCard() = default;
 
 void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     // Get dimensions
     // (point’s dimensions are baked into SVG)
@@ -828,9 +854,14 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Frame
     painter->setBrush(Qt::white);  // Card’s face is always white, regardless of colour
-    painter->setPen(QPen{Qt::black, dim.thickness});
     painter->setRenderHint(QPainter::Antialiasing, true);
-    painter->drawRoundedRect(dim.rcFrame, radius, radius);
+    if (cp.isInverse()) { // On inverse, no frame
+        painter->setPen(Qt::NoPen);
+        painter->drawRoundedRect(dim.rcPixel, radius, radius);
+    } else {
+        painter->setPen(QPen{cp.fg, dim.thickness});
+        painter->drawRoundedRect(dim.rcFrame, radius, radius);
+    }
 
     // Top index
     static constexpr QColor HEART_RED { 0xD4, 0x00, 0x00 };
@@ -863,7 +894,8 @@ ie::Mahjong::~Mahjong() = default;
 
 void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     // Get dimensions
     auto dim = util::cardDimensions(rect, scale, 10, 0.25);
@@ -900,7 +932,7 @@ ie::Hint::~Hint() {}
 
 void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, icon.maybeMissingContinent().icon.bgColor);
+    painter->fillRect(rect, icon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn()));
     util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
 }
 
@@ -920,7 +952,7 @@ ie::Format::~Format() = default;
 void ie::Format::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     auto& continent = icon.maybeMissingContinent().icon;
-    painter->fillRect(rect, continent.bgColor);
+    painter->fillRect(rect, continent.bgColor(dark::isActuallyOn()));
 
     auto fi = util::getFormatInfo(rect, scale);
     util::drawLoResFormat(painter, fi.frameRect, fi.dashSize, continent.frameColor);
@@ -948,7 +980,8 @@ void ie::CjkStructure::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     // Sticks
     static constexpr auto N_STICKS = 4;
@@ -965,7 +998,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
     auto stickX0 = rect.left() + (rect.width() - stickTotalWidth) / 2;
     auto x = stickX0;
     for (int i = 0; i < N_STICKS; ++i) {
-        painter->fillRect(x, stickY, stickThickness, stickHeight, FG_INTER);
+        painter->fillRect(x, stickY, stickThickness, stickHeight, cp.fg);
         x += stickStep;
     }
 
@@ -979,7 +1012,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
     auto slashY1 = stickY + stickHeight * SLASH_RELY;
     auto slashY2 = stickY + stickHeight * SLASH_RELY2;
     painter->setRenderHint(QPainter::Antialiasing);
-    QPen pen(FG_INTER, stickThickness - MINUS_FOR_GAMMA);
+    QPen pen(cp.fg, stickThickness - MINUS_FOR_GAMMA);
     painter->setPen(pen);
     painter->drawLine(QPointF{slashX1, slashY1}, QPointF{slashX2, slashY2});
 }
@@ -995,10 +1028,11 @@ ie::ThreeD::~ThreeD() = default;
 
 void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     auto fi = util::getFormatInfo(rect, scale);
-    util::drawPixelBorder(painter, fi.frameRect, fi.dashSize, FG_INTER);
+    util::drawPixelBorder(painter, fi.frameRect, fi.dashSize, cp.fg);
 
     util::drawHintedSvg(painter, fi.contentRect, *texture->get(), {});
 }
@@ -1034,7 +1068,8 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
     // Should be 2 at 1.5×
     static constexpr int BASE_SIZE_HIHALF = (BASE_SIZE / 2) + 1;
 
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
 
     // Frame rect
     unsigned margin = (rect.width() + BASE_SIZE_HIHALF) / BASE_SIZE;
@@ -1047,7 +1082,7 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
     rcEllipse = rcEllipse.marginsRemoved({th2, th2, th2, th2});
 
     painter->setRenderHint(QPainter::Antialiasing);
-    painter->setPen(QPen(FG_INTER, thick));
+    painter->setPen(QPen(cp.fg, thick));
     painter->setBrush(Qt::NoBrush);
     painter->drawEllipse(rcEllipse);
 
@@ -1093,7 +1128,8 @@ void ie::Ffi::paint1(QPainter *painter, const QRect &rect, qreal scale)
     QRectF rcNew ( rect.x() + xRealOrigin, rect.y() + yRealOrigin,
                    PIC_W * xScale, PIC_H * yScale);
 
-    painter->fillRect(rect, BG_INTER);
+    ColorPair cp(uc::EcContinent::NONE);
+    painter->fillRect(rect, cp.bg);
     texture->get(Qt::IgnoreAspectRatio)->render(painter, rcNew);
 }
 
@@ -1105,7 +1141,7 @@ ie::Margin::Margin(const uc::SynthIcon& synthIcon,
                    std::string_view aName, int aValue,
                    Flags<Mfg> aFlags)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
-      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+    bgColor(synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())),
       value(aValue), flags(aFlags) {}
 
 ie::Margin::~Margin() = default;
@@ -1136,13 +1172,13 @@ ie::Tall::Tall(const uc::SynthIcon& synthIcon, std::string_view aName,
                unsigned char aHintX, uc::ImbaX aImbaX,
                bool aHintPixelCenter)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
-      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+    bgColor(synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())),
       hintX(aHintX),
       imbaX(static_cast<signed char>(aImbaX)),
       hintPixelCenter(aHintPixelCenter) {}
 
 ie::Tall::Tall(const uc::Block& block)
-    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor),
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())),
       hintX(block.synthIcon.svgHint.pos.x),
       imbaX(block.synthIcon.svgHint.imba.x),
       hintPixelCenter(block.synthIcon.flags.have(uc::Ifg::HINT_PX_CENTER))
@@ -1202,10 +1238,10 @@ void ie::Tall::paint1(QPainter *painter, const QRect &rect, qreal)
 
 ie::ByLong::ByLong(const uc::SynthIcon& synthIcon, std::string_view aName)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(aName))),
-      bgColor(synthIcon.maybeMissingContinent().icon.bgColor) {}
+    bgColor(synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())) {}
 
 ie::ByLong::ByLong(const uc::Block& block)
-    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor)
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn()))
 {
     char buf[48];
     snprintf(buf, std::size(buf), ":/ScLong/%04X.svg", int(block.startingCp));
@@ -1259,12 +1295,12 @@ void ie::ByLong::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ie::Small::Small(const uc::SynthIcon& synthIcon, std::string_view name,
                  unsigned char aHintX, uc::ImbaX aImbaX)
     : texture(dumb::makeSp<LazySvg>(synthIcon, str::toQ(name))),
-      bgColor(synthIcon.maybeMissingContinent().icon.bgColor),
+    bgColor(synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())),
       hintX(aHintX),
       imbaX(static_cast<unsigned char>(aImbaX)) {}
 
 ie::Small::Small(const uc::Block& block)
-    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor),
+    : bgColor(block.synthIcon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn())),
       hintX(block.synthIcon.svgHint.pos.x),
       imbaX(block.synthIcon.svgHint.imba.x)
 {

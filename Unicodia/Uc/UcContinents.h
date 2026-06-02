@@ -21,18 +21,27 @@ namespace uc {
         NN
     };
 
+    enum class ContDark : unsigned char {
+        LEAVE, INVERT };
+
     struct Continent
     {
         // Colors used on 16×16 icons: BG and FG
         // We use the same colors for synthesized icons
         struct Icon {
-            QColor bgColor, fgColor, frameColor;
+            QColor xbgColor, xfgColor, frameColor;
+            ContDark dark = ContDark::LEAVE;
+
+            const QColor& bgColor(bool isDark) const noexcept;
+            const QColor& fgColor(bool isDark) const noexcept;
 
             Icon() = delete;
+            consteval Icon(const QColor& aBg, const QColor& aFg, const ContDark& aDark) noexcept
+                : xbgColor(aBg), xfgColor(aFg), dark(aDark) {}
             consteval Icon(const QColor& aBg, const QColor& aFg) noexcept
-                : bgColor(aBg), fgColor(aFg), frameColor(aFg) {}
+                : xbgColor(aBg), xfgColor(aFg), frameColor(aFg) {}
             consteval Icon(const QColor& aBg, const QColor& aFg, const QColor& aFrame) noexcept
-                : bgColor(aBg), fgColor(aFg), frameColor(aFrame) {}
+                : xbgColor(aBg), xfgColor(aFg), frameColor(aFrame) {}
         } icon;
 
         struct Collapse {
