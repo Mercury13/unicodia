@@ -6561,7 +6561,7 @@
      <transl>хатранский (ашшурский) арамейский</transl>
     </text>
     <text id="Text">
-     <orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</orig>
+     <orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before the 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</orig>
      <transl>Потомок [[ps:Armi|арамейского]]. Использовался в Хатре (современный Ирак) до III{{_}}века, когда Хатру разрушил Шапур{{_}}I Сасанид. Все известные надписи очень короткие, самая длинная{{-}}13 строк.</transl>
     </text>
    </group>
@@ -7846,7 +7846,7 @@
      <transl>набатейский</transl>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Armi|Aramaic]]. The language was in use in Nabataea (the capital is Petra in modern Jordan) since 2nd century{{_}}BC. In 106 Trajan annexed Nabataea to Roman Empire, and the script existed until 6th century, and probably evolved to [[ps:Arab|Arabic]] via badly-explored New Sinai script. There are no spaces between words. Numbers were written right-to left using non-positional system resembling Roman.</orig>
+     <orig>Comes from [[ps:Armi|Aramaic]]. The language has been in use in Nabataea (the capital is Petra in modern Jordan) since the 2nd century{{_}}BC. In 106, Trajan annexed Nabataea to the Roman Empire, and the script persisted until the 6th century, probably evolving into [[ps:Arab|Arabic]] via the poorly explored New Sinai script. There are no spaces between words. Numbers were written right-to-left using a non-positional system resembling Roman.</orig>
      <transl>Происходит из [[ps:Armi|арамейского]]. Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II{{_}}века{{bc}} В 106 Траян присоединил Набатею к Римской империи, а письменность просуществовала до IV{{_}}века и, возможно, стала предком [[ps:Arab|арабского]] через плохо изученное новосинайское письмо. Между словами нет пробелов. Числа писались справа налево непозиционной системой счисления, похожей на римские цифры.</transl>
     </text>
    </group>
@@ -8159,9 +8159,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left.</p>
+      <p>The script was used from 100{{_}}BC to 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of which has two variants. There are no spaces or punctuation. Numbers were written with a non-positional system resembling Roman numerals, right to left.</p>
       <p />
-      <p>Deciphered in 1754 using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
+      <p>In 1754, using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758, he deciphered [[ps:Phnx|Phoenician]].</p>
      </orig>
      <transl>
       <p>Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). Происходит из [[ps:Armi|арамейского]]. В алфавите 22 согласных буквы, одна в двух вариантах. Пробелов и знаков препинания нет. Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево.</p>
