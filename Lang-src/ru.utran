@@ -5260,21 +5260,13 @@
     </text>
    </group>
    <group id="Avst">
-    <text id="Name">
-     <orig>Avestan</orig>
-     <transl>Авестийская</transl>
-    </text>
-    <text id="Lang">
-     <orig>Avestan, Middle Persian</orig>
-     <transl>авестийский, среднеперсидский</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>The alphabet is related to Zoroastrianism and its holy text Avesta. About 400 a special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created in Sasanid Persia to codify Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
+      <p>The alphabet is related to Zoroastrianism and its holy text, the Avesta. About 400, a special alphabet based on Book Pahlavi (the script of Middle-Persian manuscripts) was created in Sasanid Persia to codify the Avesta. By that time, Zoroastrianism was many centuries old, and the language was little understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
       <p />
-      <p>Under Arabs Zoroastrians started to move to India, and since 12th century wrote in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar).</p>
+      <p>Under the Arabs, the Zoroastrians started to move to India, and since the 12th century, have written in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as Zanzibar).</p>
       <p />
-      <p>In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for a place in [[pt:bmp|Basic Plane]]. But another opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in the supplementary plane. A hole was left for the unencoded Book Pahlavi.</p>
+      <p>In 2000, ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodable{{-}}[[ps:Egyp|Egyptian hieroglyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}the [[pk:101D0|Phaistos Disc]]). Avestan fell into the most important category A, which gave it a chance for a place in [[pt:bmp|Basic Plane]]. But another opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] side by side, in the supplementary plane. A hole was left for the unencoded Book Pahlavi.</p>
      </orig>
      <transl>
       <p>Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит на основе книжного пехлеви (письма среднеперсидских рукописей). К тому времени зороастризму было много веков и язык был малопонятен, а для действенности молитв важно точное повторение{{-}}так что алфавит снабдили настоящими гласными, позаимствованными из других письменностей.</p>
@@ -5283,6 +5275,14 @@
       <p />
       <p>В 2000 древние письменности разделили на пять категорий: A (используемые{{-}}[[ps:Copt|коптский]], [[ps:Runr|руны]]), B1 (изученные, поддаются [[pt:character|кодированию]]{{-}}[[ps:Xpeo|персидская клинопись]]), B2 (изученные, не{{_}}поддаются кодированию{{-}}[[ps:Egyp|египетские иероглифы]]), C1 (несистематизируемые, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), и C2 (малоизученные, запросы от любителей{{-}}[[pk:101D0|Фестский диск]]). Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. Для незакодированного книжного пехлеви в Юникоде оставлена дыра.</p>
      </transl>
+    </text>
+    <text id="Name">
+     <orig>Avestan</orig>
+     <transl>Авестийская</transl>
+    </text>
+    <text id="Lang">
+     <orig>Avestan, Middle Persian</orig>
+     <transl>авестийский, среднеперсидский</transl>
     </text>
    </group>
    <group id="Bali">
@@ -7429,7 +7429,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Syrc|Syriac]] script and is closely related to religion of Manichaeism. When Sasanid Persia expelled Manichaeans about 300, the specimen started to appear to the north, in Middle Asia. Last inscriptions are dated 10th century and are found in modern Xinjian Region.</p>
+      <p>Comes from the [[ps:Syrc|Syriac]] script and is closely related to the religion of Manichaeism. When Sasanid Persia expelled Manichaeans around 300, the specimens started to appear in the north, in Central Asia. The last inscriptions date to the 10th century and were found in the modern Xinjiang Region.</p>
       <p />
       <p>Letters are joined, like in Syriac.</p>
       <p />
@@ -8388,7 +8388,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian with [[ps:Phli|Pahlavi]] script but was used sporadically. Contains seven ligatures [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
+      <p>Used in inscriptions and coins before the dawn of the Sasanid Empire (the 3rd century). Later, it was supplanted by Persian with [[ps:Phli|Pahlavi]] script, but was still used sporadically. Contains seven [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (right to left!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
