@@ -6149,7 +6149,7 @@
       <p />
       <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
-      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a large swash extending from the last letter.</p>
       <p />
       <p>Vowels are marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
       <p />
@@ -6733,17 +6733,13 @@
      <orig>Old Hungarian (Székely) runes</orig>
      <transl>Угорські (секейські) руни</transl>
     </text>
-    <text id="Lang">
-     <orig>Hungarian</orig>
-     <transl>угорська</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]]: originated from them or sister scripts.</p>
+      <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]] ones: whether originated from them or are sister scripts.</p>
       <p />
-      <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but the use of runes continued, gradually declining. The last inscriptions are dated ≈1800.</p>
+      <p>Istvan{{_}}I, the first King of Hungary, united the Hungarian tribes, converted to Christianity and switched to [[ps:Latn|Latin]] around 1000, but the use of runes continued, gradually declining. The last inscriptions are dated ≈1800.</p>
       <p />
-      <p>Studying started in the 18th century, the main work was conducted about 1900, and even new runes were made for the remaining phonemes of Hungarian. Hungarians are proud of runes and even duplicate signs sometimes, but few can read them: in 2017 some pranksters replaced sign of Érd town with “Szia” (“hi”, both words are 3 runes long), and that was unnoticed for a month.</p>
+      <p>Studying began in the 18th century, the main work was conducted around 1900, and even new runes were created for the remaining phonemes of Hungarian. Hungarians are proud of runes and sometimes even duplicate signs, but few can read them: in 2017, some pranksters replaced the Érd town sign with “Szia” (“hi”, both words are 3 runes long), and it went unnoticed for a month.</p>
      </orig>
      <transl>
       <p>Невідомо, як староугорські руни пов’язані з [[ps:Orkh|тюркськими]]: чи пішли від них, чи сестринські писемності.</p>
@@ -6752,6 +6748,10 @@
       <p />
       <p>З XVII{{_}}століття почалося вивчення, біля 1900 проведено основну роботу і навіть придумали руни для бракуючих звуків угорської. Угорці пишаються рунами та іноді дублюють ними написи. Але мало хто вміє читати руни: у 2017 жартівники замінили знак міста Ерд (Érd) на «Szia» (''привіт'', обидва слова довжиною 3 руни), і помітили це через місяць.</p>
      </transl>
+    </text>
+    <text id="Lang">
+     <orig>Hungarian</orig>
+     <transl>угорська</transl>
     </text>
    </group>
    <group id="Ital">
@@ -8029,11 +8029,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Russian explorers began collecting information back under Peter the Great (early 18th century), the inscriptions were compared to [[ps:Runr|Germanic runes]]. Furthermore, the Swedes imprisoned after the Battle of Poltava actually helped Daniel Messerschmidt. The Finns were quick to attribute runes to their ancestors.</p>
+      <p>Russian explorers began collecting information back under Peter the Great (early 18th century), the inscriptions were compared to [[ps:Runr|Germanic runes]]. Furthermore, the Swedes imprisoned after the Battle of Poltava actually helped Daniel Messerschmidt. The Finns were quick to attribute the runes to their ancestors.</p>
       <p />
       <p>Danish scientist Vilhelm Thomsen deciphered the script in 1893 and confounded the Finns: it was Turkic text.</p>
       <p />
-      <p>About 200 inscriptions of the 7–10th centuries are known, as well as several manuscripts of the 9–10th centuries. The Second Turkic Khaganate was 682–744, the Uyghur Khaganate 744–840. After a defeat to the Yenisei Kyrgyz, Uyghurs went south and were conquered by the [[ps:Tang|Tanguts]] in 1030. The story of the Kyrgyz is vague; it’s well known that they submitted to Genghis Khan in the 13th century.</p>
+      <p>About 200 inscriptions of the 7–10th centuries are known, as well as several manuscripts of the 9–10th centuries. The Second Turkic Khaganate was 682–744, the Uyghur Khaganate 744–840. After a defeat to the Yenisei Kyrgyz, the Uyghurs went south and were conquered by the [[ps:Tang|Tanguts]] in 1030. The story of the Kyrgyz is vague; it’s well known that they submitted to Genghis Khan in the 13th century.</p>
       <p />
       <p>The glyph {{sm|𐱇}} was changed in autumn 2021.</p>
      </orig>
@@ -8433,11 +8433,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Rohingya or Ruáingga is a small mostly Muslim ethnic group spread across Bangladesh, Myanmar and bordering countries. [[ps:Arab|Arabic]] writing is known since 19th century .</p>
+      <p>Rohingya or Ruáingga is a small, mostly Muslim ethnic group spread across Bangladesh, Myanmar and neighbouring countries. [[ps:Arab|Arabic]] writing has been known since the 19th century.</p>
       <p />
-      <p>Since 1980 Islamic preacher Mohammad Hanif invented more suitable script for Rohingya. The script uses own set of decimal digits. Letters are joined, like in Arabic, try to decipher autonym: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
+      <p>Since 1980, Islamic preacher Mohammad Hanif invented a more suitable script for Rohingya. The script uses its own set of decimal digits. Letters are joined, like in Arabic, try to decipher autonym: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
       <p />
-      <p>The language has thee tones denoted with diacritics. Punctuation marks are ordinary Arabic: exclamation mark '''!''', semicolon ''':''' and sometimes period '''.''' are [[pt:ascii|ASCII]], the rest are reversed from Arabic block.</p>
+      <p>The language has three tones denoted with diacritics. Punctuation marks are ordinary Arabic: exclamation mark '''!''', semicolon ''':''' and sometimes period '''.''' are [[pt:ascii|ASCII]], the rest are reversed from the Arabic block.</p>
      </orig>
      <au-cmt>Spelling taken from en-wiki</au-cmt>
      <transl>
