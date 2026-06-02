@@ -5169,9 +5169,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The country has{{_}}no{{_}}relation to Balkan Albania, and its autonym is unknown: ''Albania'' is a Greek name, ''Aghwank'' is a modern Armenian. People spoke Lezgic languages. Since 1st century BC had a strong kingdom. In 461 was conquered by Persians, in 7th century submitted to Khazars for a short time and got liberty again. From 10th century part of Albania was Turkified and transformed into Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in the ethnogenesis of Armenians, Georgians of Kakheti, Dagestanians. Possibly the alphabet was used up to 12th century by descendant languages. The country spans modern Russia and Georgia, and is thus conventionally classified as Europe.</p>
+      <p>The country has{{_}}no{{_}}relation to Balkan Albania, and its autonym is unknown: ''Albania'' is a Greek name, and ''Aghwank'' is a modern Armenian one. People spoke Lezgic languages. Since the 1st century BC, it has had a strong kingdom. In 461, it was conquered by the Persians, in the 7th century, it submitted to the Khazars for a short time and regained liberty. From the 10th century, a part of Albania was Turkified and transformed into Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in the ethnogenesis of the Armenians, Georgians of Kakheti, and Dagestanians. Possibly, the alphabet was used by descendant languages until the 12th century. The country spans modern Russia and Georgia, and is thus conventionally classified as Europe.</p>
       <p />
-      <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886 a 16th century note in Armenian with Albanian script was found. In 1937 Soviet Armenologists found the full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. In 1996 Sinai Palimpsest was found, the Bible written in Albanian, then erased and written in Georgian. It helped in decipherment, and the first one came in 2008.</p>
+      <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of the [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886, a 16th-century note in Armenian written in Albanian script was found. In 1937, Soviet Armenologists found the full alphabet. In 1948, an early Christian temple from the 6th century with authentic inscriptions was excavated while building a hydropower plant. In 1996, the Sinai Palimpsest was found{{-}}a Bible written in Albanian, then erased and rewritten in Georgian. It helped in decipherment, and the first one came in 2008.</p>
      </orig>
      <transl>
       <p>Ніякого відношення до балканської Албанії країна не{{_}}має, і взагалі самоназва невідома: ''Албанія''{{-}}назва грецька, ''Агванк''{{-}}сучасна вірменська. Заселена людьми, що розмовляли лезгінськими мовами. З I{{_}}століття{{bc}} мала сильне царство. У 461 завойована персами, у VII{{_}}столітті ненадовго підкорилась хазарам та знову отримала свободу. З X{{_}}століття частина Албанії тюркізувалася і перетворилася на Ширван (сучасний Азербайджан) та Карабах. Інші частини брали участь в етногенезі вірмен, грузин Кахетії, дагестанців. Алфавіт, можливо, вживався і у XII{{_}}столітті у мовах-нащадках. Оскільки країна захоплює сучасні Росію та Грузію, умовно віднесена до Європи.</p>
@@ -6062,11 +6062,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The only source is the 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
+      <p>The only source is the 59-page Elbasan Gospel of the mid-18th century,  measuring just 7×10{{_}}cm. In 1945, Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and was soon sentenced to death, and the manuscript was found in his collection. The authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
       <p>{{Albanian}}</p>
       <p />
-      <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
+      <p>Do{{_}}not{{_}}confuse with the [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
      </orig>
      <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
      <transl>
@@ -8089,9 +8089,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented in 2006 by Herman Mongrain Lookout for Osage language (under revival, the last native speaker died in 2005, several dozens of second-language speakers remain). He discovered that students transferred English orthography to American language. [[ps:Latn|Latin]] was taken as a base, but greatly modified. European digits and punctuation are used.</p>
+      <p>The script was invented in 2006 by Herman Mongrain Lookout for the Osage language (under revival, the last native speaker died in 2005, several dozen second-language speakers remain). He discovered that students transferred English orthography to American language. [[ps:Latn|Latin]] was taken as a base, but greatly modified. European digits and punctuation are used.</p>
       <p />
-      <p>Since 2012, when work on bringing into Unicode commenced, the script was reformed.</p>
+      <p>Since 2012, when work to bring it into Unicode commenced, the script has been reformed.</p>
      </orig>
      <transl>
       <p>Писемність придумав у 2006 Герман Монґрейн Лукаут для відроджуваної мови осейдж (остання носителька померла у 2005, залишилися десятки тих, що вивчили). Він з’ясував, що учні переносили англійську орфографію на індіанську. За основу взято сильно змінену [[ps:Latn|латинку]]. Використовуються європейські цифри та розділові знаки.</p>
@@ -9757,7 +9757,7 @@
   </group>
   <group id="Snip">
    <text id="Albanian">
-    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
+    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from the Turks (Albania got independence in 1912 with the collapse of the Ottoman Empire).</orig>
     <transl>Є декілька причин великої кількості албанських алфавітів ([[ps:Elba|ельбасанський]], [[ps:Vith|віткутьський]], [[ps:Todr|Тодрі]], Весо-Бея, Веллари): мислителі национально-визвольного руху дивились на слов’ян, греків та турків і хотіли свій алфавіт, і просто конспірація від турків (албанці одержали незалежність у 1912 з розпадом Туреччини).</transl>
    </text>
    <text id="ArabPres1">
