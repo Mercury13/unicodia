@@ -623,7 +623,9 @@ struct ColorPair {
     ColorPair(uc::EcContinent x);
 
     /// @return [+] is inverse, e.g. fg is lighter than bg
-    bool isInverse() const { return (dark::lightness(fg) > dark::lightness(bg)); }
+    /// @warning  As BG is always far from FG and have similar hue,
+    ///         comparing green is enough
+    bool isInverse() const { return (fg.green() > bg.green()); }
 };
 
 ColorPair::ColorPair(uc::EcContinent x)
