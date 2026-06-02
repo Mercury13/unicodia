@@ -196,10 +196,13 @@ namespace ie {
     {
     public:
         Legacy(const char* fname);
+        Legacy(const Legacy&);
+        Legacy(Legacy&&) = default;
         Legacy* clone() const override { return new Legacy(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        QPixmap texture;
+        QImage texture;
+        std::unique_ptr<QImage>invertedTexture;
     };
 
     /// Programmatic drawing of Playing Cards

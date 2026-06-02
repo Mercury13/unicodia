@@ -805,10 +805,15 @@ ie::Legacy::Legacy(const char* fname)
 }
 
 
+ie::Legacy::Legacy(const Legacy& x)
+    : texture(x.texture) {}
+
+
 void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
+    ColorPair cp(uc::EcContinent::NONE);
     // Fill BG
-    painter->fillRect(rect, BG_INTER);
+    painter->fillRect(rect, cp.bg);
 
     static constexpr unsigned MIN_WIDTH = 11;
 
@@ -829,7 +834,16 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     QRect rcDest { x0, y0, ww, hh };
     painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
-    painter->drawPixmap(rcDest, texture);
+
+    QImage* srcTex = &texture;
+    if (cp.isInverse()) {
+        if (!invertedTexture) {
+            invertedTexture = std::make_unique<QImage>(texture);
+            invertedTexture->invertPixels();
+        }
+        srcTex = invertedTexture.get();
+    }
+    painter->drawImage(rcDest, *srcTex);
 }
 
 
