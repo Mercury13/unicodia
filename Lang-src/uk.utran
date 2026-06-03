@@ -5477,21 +5477,17 @@
      <orig>Sanskrit, Pali, old Indian languages</orig>
      <transl>санскрит, палі, праіндійські мови</transl>
     </text>
-    <text id="Note">
-     <orig>before 3rd century BC (for sure), 8–7th century BC (main hypothesis)</orig>
-     <transl>до III{{_}}століття до н.е. (точно), VIII–VII{{_}}ст.{{bc}} (основна гіпотеза)</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>No one knows when Brahmi emerged and what was the ancestor{{-}}it’s usually thought that from [[ps:Armi|Aramaic]] in 8–7th century{{_}}BC. Other scholars connect Brahmi to more ancient and yet undeciphered Indus script. The most ancient from reliable sources are pillars of King Ashoka (3rd century{{_}}BC). Earlier sources are poorly dated.</p>
+      <p>No one knows when Brahmi emerged or what its ancestor was{{-}}it’s usually thought to have originated from [[ps:Armi|Aramaic]] in the 8–7th century{{_}}BC. Other scholars connect Brahmi to the more ancient and yet undeciphered Indus script. The most ancient reliable source is the pillars of King Ashoka (3rd century{{_}}BC). Earlier sources are poorly dated.</p>
       <p />
-      <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest of vowels are added with diacritic marks, inherent {{t|a}} is removed with the sign of [[pt:virama|virama]].</p>
+      <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest of the vowels are added with diacritic marks, inherent {{t|a}} is removed with the sign of [[pt:virama|virama]].</p>
       <p />
       <p>Scripts of Brahmic origin greatly change the graphics of characters and the inherent phoneme, but conserve these features and are named “Brahmic abugidas”.</p>
       <p />
-      <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (not rendered properly in Windows{{_}}7/8).</p>
+      <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}}.</p>
       <p />
-      <p>Unicode does{{_}}not{{_}}distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
+      <p>Unicode does{{_}}not{{_}}distinguish Brahmi by time and place; most fonts are close to the geometric writings of Ashoka’s pillars. By the 5th century, Brahmi had transformed into two major branches:</p>
       <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
       <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
      </orig>
@@ -5508,6 +5504,10 @@
       <p>* північна (=гупта, пізнє брахмі, північне брахмі) → [[ps:Shrd|шарада]], [[ps:Sidd|сиддхаматрика]], [[ps:Deva|наґарі]], [[ps:Tibt|тибетська]], [[ps:Bhks|бхайкшукі]];</p>
       <p>* південна → [[ps:Gran|грантха]], [[ps:Khmr|кхмерська]]… Кхмерську, [[ps:Sinh|сингальську]] та інші писемності, що розвинулися за межами Індії, іноді виділяють у окрему гілку{{-}}південно-східну.</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>before 3rd century BC (for sure), 8–7th century BC (main hypothesis)</orig>
+     <transl>до III{{_}}століття до н.е. (точно), VIII–VII{{_}}ст.{{bc}} (основна гіпотеза)</transl>
     </text>
    </group>
    <group id="Brai">
@@ -7067,9 +7067,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The name comes from Kayastha caste of office workers. It is in fact a very [[pt:cursive|cursive]] variant of [[ps:Deva|Devanagari]]. Kaithi was used in Mughal period in North-East India, was recognized in courts, and in 1950–1954 was the official legal script. Wider use was expected, but the script was opposed by Brahmins, and modern Hindus can barely read Kaithi.</p>
+      <p>The name comes from the Kayastha caste of office workers. It is, in fact, a very [[pt:cursive|cursive]] variant of [[ps:Deva|Devanagari]]. Kaithi was used in the Mughal period in North-East India, recognized in courts, and, in 1950–1954, served as the official legal script. Wider use was expected, but Brahmins opposed the script, and modern Hindus can barely read Kaithi.</p>
       <p />
-      <p>Digits look like Devanagari, except 5 and 9, and [[pt:unification|unified]] with it.</p>
+      <p>Digits look like Devanagari, except 5 and 9, and are [[pt:unification|unified]] with it.</p>
      </orig>
      <transl>
       <p>Назва писемності пішло від касти «каястха» (конторщики). Є дуже [[pt:cursive|біглим]] варіантом [[ps:Deva|деванáґарі]]. Використовувалося у Імперії великих моголів у північно-східній Індії, дозволялось у судах, а з 1950 до 1954 було основною судовою писемністю. Розраховували розширити використання кайтхі, але каста брахманів спротивилась цьому, і сучасні індійці ледве читають кайтхі.</p>
