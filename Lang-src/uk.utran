@@ -5595,9 +5595,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. The script comes from [[ps:Mymr|Myanmar]] and is very old, probably older than the known Myanmar specimen (11th century).</p>
+      <p>There are many Chakma speakers, and it is absent from lists of endangered languages, but [[ps:Beng|Bengali]] is supplanting the script. It comes from [[ps:Mymr|Myanmar]] and is very old, probably older than the known Myanmar specimens (11th century).</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is for construction of ligatures, most of them were abolished with the reform of 2001.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is for the construction of ligatures; most of them were abolished with the 2001 reform.</p>
       <p>: kā {{sm|𑄇}} + i {{sm|◌𑄨}} = ki {{sm|𑄇𑄨}}</p>
       <p>: kā {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = k {{sm|𑄇𑄴}}</p>
       <p>: kā {{sm|𑄇}} + virama {{sm|◌𑄳}} + tā {{sm|𑄖}} = ktā {{sm|𑄇𑄳𑄖}}</p>
@@ -7358,9 +7358,9 @@
      <orig>
       <p>One more remnant of the Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in minimal use.</p>
       <p />
-      <p>The script degraded almost to the point of being a [[pt:abjad|consonant]]: the same letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions important for accounting books. Many of them are badly explored and haven’t been encoded yet.</p>
+      <p>The script degraded almost to the point of being a [[pt:abjad|consonant]]: the same letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions that are important in accounting books. Many of them are badly explored and haven’t been encoded yet.</p>
       <p />
-      <p>Headstrokes are attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
+      <p>Headstrokes are attested in headings only. Digits resembling [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were observed; in Unicode, they are [[pt:unification|unified]] with the former.</p>
      </orig>
      <transl>
       <p>Ще одне, як і [[ps:Kthi|кайтхі]], відлуння індійської кастової системи: ця писемність використовувалася банкірами та бухгалтерами аж до XX{{_}}століття, і понині у вкрай малому вжитку.</p>
@@ -8834,9 +8834,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
+      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango; [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}it has no phonemes borrowed from neighbouring languages. Also, Sora is written in [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
       <p />
-      <p>Most sources consider Sora an alphabet, but it has inherent vowel {{t|a}}, as in [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
+      <p>Most sources consider Sora an alphabet, but it has an inherent vowel {{t|a}}, like in a [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
      </orig>
      <transl>
       <p>Сора або савара{{-}}невелика вразлива австроазійська (не індоєвропейська) мова Індії. Писемність придумав у 1936 Мангей Гоманго, до цього писали [[ps:Latn|латинкою]]. Писемність дещо невдала{{-}}нема звуків, запозичених із сусідніх мов. Також на сора пишуть [[ps:Orya|орією]] та [[ps:Telu|тéлуґу]].</p>
