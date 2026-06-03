@@ -972,7 +972,7 @@ void ie::PaintEmoji::paint1(QPainter *painter, const QRect &rect, qreal)
         QFile file(fname);
         file.open(QIODeviceBase::ReadOnly);
         QByteArray content = file.readAll();
-        if (dark::isActuallyOn()) {
+        if (pair.isInverse()) {
             IconPalette::replaceColor(content, needle, target);
         }
         texture = dumb::makeSp<MyRenderer>(content);
