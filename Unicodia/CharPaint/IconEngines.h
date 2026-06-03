@@ -13,9 +13,11 @@
 namespace uc {
     struct SynthIcon;
     enum class ImbaX : signed char;
+    enum class EcContinent : unsigned char;
 }
 
 class QSvgRenderer;
+class MyRenderer;
 
 namespace ie {
     class LazySvg;
@@ -244,6 +246,23 @@ namespace ie {
     private:
         dumb::Sp<LazySvg> texture;
         const uc::SynthIcon& icon;
+    };
+
+    /// The most common engine: 16×16 image is hinted by some X and Y coords
+    /// Example: Devanagari (hinted by headstroke and stem)
+    /// Type: lo-res, generic
+    class PaintEmoji : public Veng
+    {
+    public:
+        PaintEmoji(const char* aFname, const char* aNeedle, const char* aTarget,
+                   uc::EcContinent aCont);
+        ~PaintEmoji();
+        PaintEmoji* clone() const override;
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const char *fname, *needle, *target;
+        uc::EcContinent continent;
+        dumb::Sp<MyRenderer> texture;
     };
 
     /// Programmatic drawing of format pictures.

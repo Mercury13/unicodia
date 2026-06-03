@@ -942,14 +942,43 @@ ie::Hint::Hint(const uc::Block& blk)
     texture = dumb::makeSp<LazySvg>(blk);
 }
 
-// -warn: complains about =default
-ie::Hint::~Hint() {}
+ie::Hint::~Hint() = default;
 
 
 void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     painter->fillRect(rect, icon.maybeMissingContinent().icon.bgColor(dark::isActuallyOn()));
     util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
+}
+
+
+///// PaintEmoji ///////////////////////////////////////////////////////////////
+
+
+ie::PaintEmoji::PaintEmoji(
+        const char* aFname, const char* aNeedle, const char* aTarget,
+        uc::EcContinent aCont)
+    : fname(aFname), needle(aNeedle), target(aTarget), continent(aCont) {}
+
+ie::PaintEmoji::~PaintEmoji() = default;
+
+ie::PaintEmoji* ie::PaintEmoji::clone() const { return new PaintEmoji(*this); }
+
+void ie::PaintEmoji::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    ColorPair pair(continent);
+    painter->fillRect(rect, pair.bg);
+
+    if (!texture) {
+        QFile file(fname);
+        file.open(QIODeviceBase::ReadOnly);
+        QByteArray content = file.readAll();
+        if (dark::isActuallyOn()) {
+            IconPalette::replaceColor(content, needle, target);
+        }
+        texture = dumb::makeSp<MyRenderer>(content);
+    }
+    texture->render(painter, rect);
 }
 
 
