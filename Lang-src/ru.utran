@@ -3722,16 +3722,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Birga character that leaked to Mongolian from [[ps:Tibt|Tibetan]] and used as initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
+      <p>The ''birga'' character, which leaked from [[ps:Tibt|Tibetan]] into Mongolian and was used as an initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
       <p />
-      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in ancillary plane, not{{_}}[[pt:bmp|Base]].</p>
+      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in the ancillary plane.</p>
       <p />
-      <p>Icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
+      <p>The icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
      </orig>
      <transl>
       <p>Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. Поскольку монгольский пишется сверху вниз, а тибетский{{-}}слева направо, тибетские ''yig-mgo'' использовать нельзя.</p>
       <p />
-      <p>Юникод расщедрился не{{_}}на варианты написания, а на настоящие кодовые позиции{{-}}правда, не{{_}}в [[pt:bmp|базовой плоскости]], а в дополнительной.</p>
+      <p>Юникод расщедрился не{{_}}на варианты написания, а на настоящие кодовые позиции{{-}}правда, в дополнительной плоскости.</p>
       <p />
       <p>Иконка соответствует написанию сверху вниз{{-}}а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.</p>
      </transl>

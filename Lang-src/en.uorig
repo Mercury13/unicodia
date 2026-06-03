@@ -2816,11 +2816,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Birga character that leaked to Mongolian from [[ps:Tibt|Tibetan]] and used as initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
+      <p>The ''birga'' character, which leaked from [[ps:Tibt|Tibetan]] into Mongolian and was used as an initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
       <p />
-      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in ancillary plane, not{{_}}[[pt:bmp|Base]].</p>
+      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in the ancillary plane.</p>
       <p />
-      <p>Icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
+      <p>The icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
      </orig>
     </text>
    </group>
