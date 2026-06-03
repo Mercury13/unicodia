@@ -2762,7 +2762,7 @@
      <orig>Sinhala archaic numbers</orig>
     </text>
     <text id="Text">
-     <orig>The old non-positional number system used in Sri Lanka up to the early 19th century.</orig>
+     <orig>The old non-positional number system used in Sri Lanka until the early 19th century.</orig>
     </text>
    </group>
    <group id="11200">
@@ -5025,14 +5025,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tradition states that Khojki was invented by Pir Sadardin (14th century) who was sent to India to spread Islam. By more down-to-earth version, it emerged in 16th century as a variant of Landa, very cursive [[ps:Shrd|Sharada]]. Used and studied even nowadays by Indian Shiites.</p>
+      <p>Tradition states that Khojki was invented by Pir Sadardin (14th century), who was sent to India to spread Islam. By a more down-to-earth version, it emerged in the 16th century as a variant of Landa, very cursive [[ps:Shrd|Sharada]]. Still used and studied by Indian Shiites today.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}}, [[pt:virama|virama]] and four ligatures of consonant conjuncts, one of them for the lack of “ša” letter is written through nukta sign:</p>
       <p>: ka {{sm|𑈈}} + i {{sm|◌𑈭}} = ki {{sm|𑈈𑈭}}</p>
       <p>: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} = k {{sm|𑈈𑈵}}</p>
       <p>: ta {{sm|𑈙}} + virama {{sm|◌𑈵}} + ra {{sm|𑈦}} = tra {{sm|𑈙𑈵𑈦}}&amp;nbsp;&amp;nbsp; (also “jnya” and “dra”)</p>
       <p>: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} + sa {{sm|𑈩}} + nukta {{sm|◌𑈶}} = kša {{sm|𑈈𑈵𑈩𑈶}}</p>
-      <p>Virama may look like slash {{sm|𑈈/}}. Digits resemble [[ps:Gujr|Gujarati]] and [[pt:unification|unified]] with it.</p>
+      <p>Virama may look like slash {{sm|𑈈/}}. Digits resemble [[ps:Gujr|Gujarati]] and are [[pt:unification|unified]] with it.</p>
      </orig>
     </text>
    </group>
@@ -6139,9 +6139,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Sharada comes from Gupta (northern branch of [[ps:Brah|Brahmi]]), was widespread in 8–12th centuries in North-West India and Afghanistan. Later Sharada became less and less suitable for Kashmiri and fell out of use. Ancestor of [[ps:Guru|Gurmukhi]] script.</p>
+      <p>Sharada derived from Gupta (the northern branch of [[ps:Brah|Brahmi]]), and was widespread in the 8–12th centuries in North-West India and Afghanistan. Later, Sharada became less and less suitable for Kashmiri and fell out of use. It is the ancestor of the [[ps:Guru|Gurmukhi]] script.</p>
       <p />
-      <p>Currently it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
+      <p>Currently, it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
       <p />
       <p>Bhahmic abugida with inherent vowel {{t|a}}. [[pt:virama|Virama]], unusual for Indic scripts, is situated on the right and used frequently. There are many [[pt:ligature|ligatures]] “consonant-virama-consonant”.</p>
       <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
