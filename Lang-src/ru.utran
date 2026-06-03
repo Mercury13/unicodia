@@ -6319,16 +6319,16 @@
      <transl>санскрит, тамильский</transl>
     </text>
     <text id="Note">
-     <orig>4th century (artifacts of Pallava), 7th century (artifacts of Middle Grantha)</orig>
+     <orig>4th century (artefacts of Pallava), 7th century (artefacts of Middle Grantha)</orig>
      <transl>IV век (памятники паллавы), VII век (памятники средней грантхи)</transl>
     </text>
     <text id="Text">
      <orig>
-      <p>Grantha is an intermediate stage of evolution of southern branch of [[ps:Brah|Brahmi]]. Early variant of Grantha is named ''Pallava'' and was used in Pallava Kingdom (275–897). Grantha was used for Tamil language until 17th century, for Sanskrit until 19th. Influenced [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]]. About 200{{_}}thousand specimen are stored in libraries of India, both written on palm leaves and printed.</p>
+      <p>Grantha is an intermediate stage of the evolution of the southern branch of [[ps:Brah|Brahmi]]. The early variant of Grantha, called ''Pallava'', was used in the Pallava Kingdom (275–897). Grantha was used for the Tamil language until the 17th century, and for Sanskrit until the 19th. Influenced [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], and [[ps:Sinh|Sinhala]]. About 200{{_}}thousand specimens are stored in Indian libraries, both written on palm leaves and printed.</p>
       <p />
-      <p>About 2010 an attempt to introduce Grantha in [[pt:unification|unification]] with Tamil failed. Because of uproar (nationalism is strong among Tamils) the scripts were disunified, leaving only digits that coincide in Tamil and late Grantha.</p>
+      <p>About 2010, an attempt to introduce Grantha in [[pt:unification|unification]] with Tamil failed. Because of uproar (nationalism is strong among Tamils), the scripts were disunified, leaving only digits that coincide in Tamil and late Grantha.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. There are multiple [[pt:ligature|ligatures]] for consonant conjuncts.</p>
+      <p>The inherent vowel is {{t|a}}. There are multiple [[pt:ligature|ligatures]] for consonant conjuncts.</p>
       <p>: ka {{sm|𑌕}} + i {{sm|◌𑌿}} {{_}} = ki {{sm|𑌕𑌿}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} = k {{sm|𑌕𑍍}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
@@ -7729,11 +7729,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Siraiki are almost all Muslims. As of 2010s they number 14…19M by different sources in Pakistan only.</p>
+      <p>Siraiki are almost all Muslims. As of the 2010s, they number 14…19M by different sources in Pakistan only.</p>
       <p />
-      <p>The script emerged in 18th century. The first printed source is New Testament of 1819. In late 19th century British administration invented [[ps:Arab|Arabic]] script, and by 20th century Siraiki adopted it.</p>
+      <p>The script emerged in the 18th century. The first printed source is the 1819 New Testament. In the late 19th century, the British administration invented the [[ps:Arab|Arabic]] script, and by the 20th century, Siraiki adopted it.</p>
       <p />
-      <p>All sources consider Multani script a Brahmic abugida, but in fact it degraded to [[pt:abjad|consonant]]: no vowel marks, vowels are written extremely selectively. Digits are [[pt:unification|unified]] with [[ps:Guru|Gurmukhi]]: there’s minor difference in 6 and 7.</p>
+      <p>All sources consider the Multani script a Brahmic abugida, but in fact it has degraded to [[pt:abjad|consonant]]: no vowel marks, and vowels are written extremely selectively. Digits are [[pt:unification|unified]] with [[ps:Guru|Gurmukhi]]: there’s a minor difference in 6 and 7.</p>
      </orig>
      <transl>
       <p>Сирайки{{-}}почти поголовно мусульмане. На 2010‑е их 14…19{{_}}млн по разным источникам только в Пакистане. </p>
@@ -8736,13 +8736,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was named after city of Khudabad, Pakistan. In 1868 Khudawadi was declared the main script of Sindhi by British administration. By 20th century Sindhi, mainly Muslims, moved to [[ps:Arab|Arabic]], but the script is still alive.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used, historically [[ps:Khoj|Khojki]] was in use.</p>
+      <p>The script was named after the city of Khudabad, Pakistan. In 1868, Khudawadi was declared the main script of Sindhi by the British administration. By the 20th century, Sindhis, mainly Muslims, had adopted [[ps:Arab|Arabic]], but the script is alive even today.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used; historically, [[ps:Khoj|Khojki]] was in use.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
       <p>{{smtable|ka|*𑊺|+ i|**◌𑋡|= ki|*𑊺𑋡}}</p>
       <p>{{smtable|ka|*𑊺|+ virama|**◌𑋪|= k|*𑊺𑋪}}</p>
       <p />
-      <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
+      <p>Try to read the autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </orig>
      <transl>
       <p>Письмо названо в честь пакистанского города Кхудабад. В 1868 году объявлено британской администрацией основным письмом синдхов. К XX{{_}}веку синдхи, преимущественно мусульмане, перебрались на [[ps:Arab|арабицу]], но письмо живо и поныне. Также пользуются [[ps:Deva|деванáгари]] и [[ps:Guru|гурмукхи]], исторически использовали [[ps:Khoj|ходжки]].</p>
