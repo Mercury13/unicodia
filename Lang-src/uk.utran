@@ -5738,9 +5738,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The language was used in Chorasm near the river of Amu Darya until 13th century, gradually losing to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but the script of [[ps:Armi|Aramaic]] origin back in 8th century was replaced with [[ps:Arab|Arabic]].</p>
+      <p>The language was used in Chorasm near the Amu Darya river until the 13th century, gradually giving way to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but back in the 8th century, the script of [[ps:Armi|Aramaic]] origin was supplanted by [[ps:Arab|Arabic]].</p>
       <p />
-      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, less frequently joined if shape permits.</p>
+      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, or sometimes joined if the shape permits.</p>
      </orig>
      <transl>
       <p>Мова використовувалася у Хорезмі у районі Амудар’ї до XIII{{_}}століття, поступово замінюючись перською. Цією мовою говорили вчений Біруні та проповідник Замахшарі{{-}}але писемність [[ps:Armi|арамейського]] походження ще у VIII{{_}}столітті замінили [[ps:Arab|арабицею]].</p>
@@ -6089,11 +6089,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Persia ceased existence after military defeats by Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
+      <p>Persia ceased to exist after military defeats from Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
       <p />
-      <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
+      <p>The state existed from 147{{_}}BC to 224{{_}}CE, often fell under the Parthian reign, and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides the space are known. Native letter names are unknown and taken from Aramaic.</p>
       <p />
-      <p>Do not confuse with Linear Elamite (2000{{_}}BC, deciphered in 2020) and Elamite cuneiform (1st millennium{{_}}BC, deciphered in 1840s).</p>
+      <p>Do not confuse with Linear Elamite (2000{{_}}BC, deciphered in 2020) and Elamite cuneiform (1st millennium{{_}}BC, deciphered in the 1840s).</p>
      </orig>
      <transl>
       <p>Після військових поразок від Олександра Македонського Персія припинила своє існування. Послідовники Олександра не{{_}}змогли втримати величезну багатонаціональну державу, і в результаті розпаду з’явився у тому числі Елам.</p>
@@ -8137,9 +8137,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Old Uyghur script is an intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
+      <p>The Old Uyghur script is an intermediate stage between the [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] scripts. Sogdians wrote right to left, greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, some vowels got their letters. The script was used in Xinjiang until the 18th century.</p>
       <p />
-      <p>Modern scholars alro write Uyghur right to left, hence encoding model.</p>
+      <p>Modern scholars also write Uyghur right-to-left, hence the encoding model.</p>
      </orig>
      <transl>
       <p>Староуйгурське письмо{{-}}проміжна стадія між [[ps:Sogd|согдійським]] та [[ps:Mong|монгольським]] письмом. Согдійці писали справа наліво, сильно завалюючи текст вліво{{-}}звідси письмо зліва направо стовпцями. Проміжним стало і за типом{{-}}частина голосних одержали свої літери. Письмо використовувалося у сучасному Сінцзян-Уйгурському окрузі до XVIII{{_}}століття.</p>
