@@ -5931,9 +5931,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]], standardized in the middle of 19th century under Maharaja Ranbir Singh. After Ranbir died in 1885, under British pressure [[ps:Arab|Urdu]] was chosen as the official language. In 20th century writing in [[ps:Deva|Devanagari]] prevailed, and since 21st century people started to be interested in native script.</p>
+      <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]] and standardized in the mid-19th century under Maharaja Ranbir Singh. After Ranbir died in 1885, [[ps:Arab|Urdu]] was chosen as the official language under British pressure. In the 20th century, writing in [[ps:Deva|Devanagari]] prevailed, and since the 21st century, people have become interested in native scripts.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also [[pt:ligature|ligatures]] exist in Dogri, unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s seen in autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
+      <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also, [[pt:ligature|ligatures]] exist in Dogri, but are unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s seen in the autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
       <p />
       <p>Digits are taken from Takri.</p>
      </orig>
