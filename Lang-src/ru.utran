@@ -7859,15 +7859,11 @@
      <orig>Bhasa {{nspk||=Newa}}, Sanskrit, Pali</orig>
      <transl>бхаса {{nspk||=неварский}}, санскрит, пали</transl>
     </text>
-    <text id="Note">
-     <orig>first evidence</orig>
-     <transl>первое свидетельство</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>Origins are unknown, different styles of script existed since 10th century. The first evidence: Nepal king Pratap Malla wrote “Newara script” in 1654. Actually survived specimen are from 18th century. In 1905 Nepal dictators of Rana dynasty banned language and script. In 1951 India invaded, expelled usurpers, put old Shah dynasty and allowed again. Since 1960 kings dismissed parliament and restarted nationalist policy, banning everything except Hundiusm and Nepali written in [[ps:Deva|Devanagari]], but due to economic troubles extended democracy about 1989.</p>
+      <p>Origins are unknown, different styles of script have existed since the 10th century. The first evidence: Nepal king Pratap Malla wrote “Newara script” in 1654. Actually surviving specimens are from the 18th century. In 1905, the Nepalese dictators of the Rana dynasty banned the language and script. In 1951, India invaded, expelled the usurpers, reinstalled the old Shah dynasty and allowed it again. Since 1960, the kings dismissed parliament and restarted nationalist policy, banning everything except Hundiusm and Nepali written in [[ps:Deva|Devanagari]], but due to economic troubles, extended democracy about 1989.</p>
       <p />
-      <p>Classic Brahmic abugida. Despite multiple [[pt:ligature|ligatures]] made of small consonants, [[pt:virama|virama]] occurs sometimes.</p>
+      <p>Classic Brahmic abugida. Despite multiple [[pt:ligature|ligatures]] of small consonants, the [[pt:virama|virama]] sometimes occurs.</p>
       <p>{{smtable|ka|*𑐎|+ i|**◌𑐶|= ki|*𑐎𑐶}}</p>
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|= k|*𑐎𑑂}}</p>
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|+ ta|*𑐟|= kta|*𑐎𑑂𑐟}}</p>
@@ -7880,6 +7876,10 @@
       <p>{{smtable|ка|*𑐎|+ вирама|**◌𑑂|= к|*𑐎𑑂}}</p>
       <p>{{smtable|ка|*𑐎|+ вирама|**◌𑑂|+ та|*𑐟|= кта|*𑐎𑑂𑐟}}</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>first evidence</orig>
+     <transl>первое свидетельство</transl>
     </text>
    </group>
    <group id="Nkoo">
@@ -9479,11 +9479,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very close ancient scripts ''Tulu'' and ''Tigalari'', some even consider them a single script. Maybe characters of sister-script ''Grantha-Malayalam'' will be added soon. They all are related to [[ps:Gran|Grantha]], and are rarely used nowadays in Hinduism. The first known inscription is 1159, but the script is much older. As a language of minority, Tulu was neglected by British authorities, and the script almost died.</p>
+      <p>Very close ancient scripts ''Tulu'' and ''Tigalari'', some even consider them a single script. Maybe characters from the sister script ''Grantha-Malayalam'' will be added soon. They are all related to [[ps:Gran|Grantha]] and are rarely used in Hinduism nowadays. The first known inscription is 1159, but the script is much older. As a minority language, Tulu was neglected by British authorities, and its script nearly died out.</p>
       <p />
-      <p>Modern Tulu is written in [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]], or in revived script commonly [[pt:unification|unified]] with Malayalam. There’s a consensus to not unify ancient and modern Tulu: live Brahmic scripts tend to simplify typing, and dead ones simplify font design and convey author’s spelling even on flawed fonts.</p>
+      <p>Modern Tulu is written in [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]], or in the revived script commonly [[pt:unification|unified]] with Malayalam. There’s a consensus to not unify ancient and modern Tulu: live Brahmic scripts tend to simplify typing, and dead ones simplify font design and convey the author’s spelling even on flawed fonts.</p>
       <p />
-      <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks looking like subscript + (will probably be encoded later as a pan-Indic punctuation), so picture for virtual [[pt:virama|virama]] has plus inside rather than below. ''Danda'' bar is ordinary, and was encoded to prevent problems in multilingual text.</p>
+      <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks that look like a subscript + (will probably be encoded later as a pan-Indic punctuation), so the picture for virtual [[pt:virama|virama]] has plus inside rather than below. The ''danda'' bar is ordinary and was encoded to prevent problems in multilingual text.</p>
      </orig>
      <au-cmt>1159 is actually inscription on stone rather than palm leaf</au-cmt>
      <transl>
