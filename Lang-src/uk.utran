@@ -7603,9 +7603,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. The revival of Modi started in 21st century.</p>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). It was used alongside Devanagari until the 1950s, then ''Balbodh'' (literally “understood by children”), the cursive style of Devanagari that had existed at least since 1800, was declared the standard script for Marathi. The revival of Modi started in the 21st century.</p>
       <p />
-      <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
+      <p>The headstroke is usually ruled before writing, and spaces are barely seen. In conjuncts, one of the consonants (usually the first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
       <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
       <p>But methods of affixing vowel marks are rather bizarre and form ligatures for themselves: </p>
@@ -8672,13 +8672,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Medieval North-Indic script related to Buddhism that evolved from [[ps:Brah|Brahmi]]. It is often written with brush like Chinese do. There are no spaces between words.</p>
+      <p>Medieval North Indic script related to Buddhism, derived from [[ps:Brah|Brahmi]]. It is often written with a brush, as the Chinese do. There are no spaces between words.</p>
       <p />
-      <p>It was spread across all Buddhist East, including Japan, but in 9th century China made several purges of “foreign religions”, cutting Japan from mainland sources. By 1200 Siddham was supplanted with other scripts, and nowadays is conserved in Japanese Buddhism only, named ''Sittan'' or ''Bonji''.</p>
+      <p>It spread across all Buddhist East, including Japan, but in the 9th century, China carried out several purges of “foreign religions”, cutting Japan off from mainland sources. By 1200, Siddham had been supplanted by other scripts, and is now preserved only in Japanese Buddhism, where it is called ''Sittan'' or ''Bonji''.</p>
       <p />
-      <p>There are no digits in Japanese ''Bonji'', and some room was left for old Indic digits. Many punctuation marks and decorations specific for religious texts are encoded.</p>
+      <p>There are no digits in Japanese ''Bonji'', and some room was left for old Indic digits. Many punctuation marks and decorations specific to religious texts are encoded.</p>
       <p />
-      <p>[[pt:virama|Virama]] is extremely rare, and is found only in the end of words because of multiple [[pt:ligature|ligatures]]{{-}}letters are written top-down.</p>
+      <p>[[pt:virama|Virama]] is extremely rare and occurs only at the ends of words because of multiple [[pt:ligature|ligatures]]{{-}}letters are written top-down.</p>
       <p>{{smtable|ka|*𑖎|+ i|**◌𑖰|= ki|*𑖎𑖰}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
@@ -9366,15 +9366,11 @@
      <orig>Maithili ''(India)'', Sanskrit</orig>
      <transl>майтхілі ''(Індія)'', санскрит</transl>
     </text>
-    <text id="Note">
-     <orig>separated from ''Gaudi''{{-}}proto-Bengali</orig>
-     <transl>відокремилась від ''гауді''{{-}}прото-бенгальської</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible because of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, and the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
+      <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible due to different [[pt:ligature|ligatures]]. The first metal type was made in the 1920s, and the first digital font in the 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in the 20th century, and the script is used mainly in Hinduism. For a long time, Maithili was considered a dialect of Hindi or Bengali, but in 2003, it was recognized as a separate language, with Devanagari as the main script.</p>
       <p />
-      <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent at the end of words.</p>
+      <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used only in Sanskrit: consonant conjuncts are written as ligatures, and the vowel becomes silent at the end of words.</p>
       <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </orig>
@@ -9385,6 +9381,10 @@
       <p>{{smtable|ка|*𑒏|+ і|**◌𑒱|= кі|*𑒏𑒱}}</p>
       <p>{{smtable|ка|*𑒏|+ вірама|**◌𑓂|+ та|*𑒞|= кта|*𑒏𑓂𑒞}}</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>separated from ''Gaudi''{{-}}proto-Bengali</orig>
+     <transl>відокремилась від ''гауді''{{-}}прото-бенгальської</transl>
     </text>
    </group>
    <group id="Tnsa">
