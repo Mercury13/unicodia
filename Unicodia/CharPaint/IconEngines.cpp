@@ -956,9 +956,8 @@ void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::PaintEmoji::PaintEmoji(
-        const char* aFname, const char* aNeedle, const char* aTarget,
-        uc::EcContinent aCont)
-    : fname(aFname), needle(aNeedle), target(aTarget), continent(aCont) {}
+        const char* aFname, const char* aNeedle, const char* aTarget)
+    : fname(aFname), needle(aNeedle), target(aTarget) {}
 
 ie::PaintEmoji::~PaintEmoji() = default;
 
@@ -966,7 +965,7 @@ ie::PaintEmoji* ie::PaintEmoji::clone() const { return new PaintEmoji(*this); }
 
 void ie::PaintEmoji::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    ColorPair pair(continent);
+    ColorPair pair(uc::EcContinent::NONE);
     painter->fillRect(rect, pair.bg);
 
     if (!texture) {

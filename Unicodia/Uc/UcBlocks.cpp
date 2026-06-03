@@ -1624,7 +1624,7 @@ constinit const uc::Block uc::blocks[] {
             "Chess Symbols",
             MyName::INST, MapSubtype::SYM_OTHER },
     // Sym and picto ext A OK
-    { 0x1FA70, 0x1FAFF, { 0x1FA82, EcContinent::NONE },
+    { 0x1FA70, 0x1FAFF, { 0x1FA82, EcContinent::NONE, Ifg::ENG_CUSTOM },
             "Symbols and Pictographs Extended-A",
             { EcScript::ZSYM, 'A' }, MapSubtype::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },

@@ -13,7 +13,6 @@
 namespace uc {
     struct SynthIcon;
     enum class ImbaX : signed char;
-    enum class EcContinent : unsigned char;
 }
 
 class QSvgRenderer;
@@ -254,14 +253,12 @@ namespace ie {
     class PaintEmoji : public Veng
     {
     public:
-        PaintEmoji(const char* aFname, const char* aNeedle, const char* aTarget,
-                   uc::EcContinent aCont);
+        PaintEmoji(const char* aFname, const char* aNeedle, const char* aTarget);
         ~PaintEmoji();
         PaintEmoji* clone() const override;
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         const char *fname, *needle, *target;
-        uc::EcContinent continent;
         dumb::Sp<MyRenderer> texture;
     };
 

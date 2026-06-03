@@ -272,6 +272,8 @@ namespace {
             return new ie::SqIdeo;
         case 0x1FB00:   // Legacy computing
             return new ie::Legacy(":ScCustom/legacy.png");
+        case 0x1FA70:   // Parachute emoji
+            return new ie::PaintEmoji(":ScCustom/chute.svg", "#000", "#CCC");
         default:
             throw std::logic_error("No custom engine right now");
         }
