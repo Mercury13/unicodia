@@ -4235,6 +4235,7 @@ namespace {
     {
         if (info.flags.have(trigger)) {
             char buf[40];
+            text += ' ';
             openItalic(text);
             snprintf(buf, std::size(buf), "OldComp.%s.%s", info.key.data(), subKey);
             mywiki::append(text, loc::get(buf), DEFAULT_CONTEXT, wiki::Mode::SPAN);
