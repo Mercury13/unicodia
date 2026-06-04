@@ -190,7 +190,7 @@ namespace {
     std::filesystem::path w32ProgramPath()
     {
         std::wstring s;
-        // Debug: 20 or so-so small
+        // Debug: 20 or so-so small, to test several iterations
         // Production: MAX_PATH, 95% enough
         size_t currSize = MAX_PATH;
         while (true) {
