@@ -64,6 +64,7 @@ void initTranslation()
 int main(int argc, char *argv[])
 {
     //qputenv("QT_SCALE_FACTOR", "1.5");
+    config::init1();
     dark::init1();
     QApplication a(argc, argv);
     dark::init2(":/Dark.qss");
@@ -93,7 +94,7 @@ int main(int argc, char *argv[])
         auto order = BlockOrder::DEFAULT;
         config::window::State state(w);
 
-        config::init(state, order);
+        config::init2(state, order);
 
         w.chooseFirstLanguage();
         w.setBlockOrder(order);  // Strange interaction: first language, then order, not vice-versa

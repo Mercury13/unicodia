@@ -169,7 +169,8 @@ namespace {
 
 }   // anon namespace
 
-void config::init(window::State& state, BlockOrder& blockOrder)
+
+void config::init1()
 {
     path::exeBundled = QCoreApplication::applicationFilePath().toStdWString();
 #ifdef _WIN32
@@ -177,22 +178,28 @@ void config::init(window::State& state, BlockOrder& blockOrder)
     path::exeAdmined = path::exeBundled;
     fname::progsets = path::exeAdmined / APP_XML;
 #else
-    #error Unknown OS
+#error Unknown OS
 #endif
 
     loadProgSets();
+}
 
+
+void config::init2(window::State& state, BlockOrder& blockOrder)
+{
     switch (progsets::dirMode) {
     case progsets::DirMode::INSTALLED: {
-            std::filesystem::path localDir {
-                QStandardPaths::writableLocation(QStandardPaths::AppDataLocation).toStdWString() };
-            path::config = localDir;
-        } break;
+        std::filesystem::path localDir {
+                                       QStandardPaths::writableLocation(
+                                           QStandardPaths::AppDataLocation).toStdWString() };
+        path::config = localDir;
+    } break;
     case progsets::DirMode::PORTABLE:
         path::config = path::exeAdmined;
         break;
     }
     fname::config = path::config / CONFIG_NAME;
+
     loadConfig(state, blockOrder);
 }
 

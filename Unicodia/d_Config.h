@@ -89,8 +89,12 @@ namespace config {
 
     extern Favs favs;
 
+    /// Called before the app is created
+    void init1();
+
+    /// Called after the window is created
     /// All params should be initialized!
-    void init(window::State& state, BlockOrder& blockOrder);
+    void init2(window::State& state, BlockOrder& blockOrder);
 
     void save(const window::State& state, BlockOrder blockOrder);
 
