@@ -108,11 +108,6 @@ namespace {
         return qobject_cast<QApplication*>(QApplication::instance());
     }
 
-}   // anon namespace
-
-
-namespace {
-
     QPalette getDarkPalette()
     {
         QPalette pal;
@@ -140,7 +135,7 @@ namespace {
         return pal;
     }
 
-}
+}   // anon namespace
 
 
 void dark::forceOn()
