@@ -191,7 +191,7 @@ namespace {
     {
         std::wstring s;
         // Debug: 20 or so-so small
-        // Production: MAX_PATH, will probably enough
+        // Production: MAX_PATH, 95% enough
         size_t currSize = MAX_PATH;
         while (true) {
             s.resize(currSize);
