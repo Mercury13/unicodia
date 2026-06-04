@@ -6,6 +6,7 @@
 #include <QPalette>
 #include <QWidget>
 
+#include <QStyleFactory>
 namespace {
     QString fileName;
     QPalette oldPalette;
@@ -14,7 +15,14 @@ namespace {
     std::optional<QPalette> darkPalette;
 }
 
+enum class Os {
+    UNKNOWN,    // generic OS
+    WINDOWS     // Windows: special bhv in forced dark
+};
+
 #ifdef _WIN32
+constexpr Os CURR_OS = Os::WINDOWS;
+
 // Win32 dark mode
 #include <QOperatingSystemVersion>
 #include <QSettings>
@@ -205,6 +213,14 @@ void dark::init1(Setting setting)
 void dark::init2(const QString& aFname)
 {
     fileName = aFname;
+    if constexpr (CURR_OS == Os::WINDOWS) {
+        // Dark Windows: set legacy, palette-controlled style
+        // (Light Windows: totally get rid of dark mode
+        //  Dynamic Windows: do it automatically)
+        if (progSetting == Setting::DARK) {
+            getApp()->setStyle(QStyleFactory::create("Windows"));
+        }
+    }
     if (doesSystemSupport()) {
         processNewPalette();
     }

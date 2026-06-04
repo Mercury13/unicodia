@@ -59,16 +59,14 @@ QPushButton::pressed {
 
 }
 
-QHeaderView::section
-{
+QHeaderView::section {
     background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(50, 50, 50, 255),stop:1 rgba(30, 30, 30, 255));
 	border-color: black;
 	border-width: 0 1px 1px 0;
 	border-style: solid;
 }
 
-QHeaderView::section:hover
-{
+QHeaderView::section:hover {
     background-color: DarkSlateGray;
 }
 
