@@ -3,6 +3,7 @@
 	<f loc="Typo">
 		<f loc="Dash">
 			<d>‑ ­ ‒ – — ― −</d>
+			<d>⸺ ⸻</d><!-- really long dashes -->
 		</f>
 		<f loc="Quote">
 			<f loc="QuoTop">
@@ -33,6 +34,8 @@
 			<d> </d><!-- hair -->
 			<d>​</d><!-- ZWSP -->
 			<d> </d><!-- med math -->
+			<d> </d><!-- n -->
+			<d> </d><!-- m -->
 			<d>　</d><!-- ideo -->
 			<d> </d><!-- NBSP -->
 			<d> </d><!-- narrow NBSP -->
