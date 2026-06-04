@@ -9,6 +9,7 @@
 namespace {
     QString fileName;
     QPalette oldPalette;
+    dark::Setting progSetting = dark::Setting::AUTO;
     bool isDarkOn = false;
     std::optional<QPalette> darkPalette;
 }
@@ -165,7 +166,7 @@ void dark::forceOff()
 
 void dark::processNewPalette()
 {
-    if (!doesSystemWant())
+    if (!doesSystemSupport())
         return;
     auto palette = QApplication::palette();
     if (bool isDark = isPaletteDark(palette);
@@ -180,13 +181,18 @@ void dark::processNewPalette()
 }
 
 
-void dark::init1()
+void dark::init1(Setting setting)
 {
+    progSetting = setting;
+    if (setting == Setting::LIGHT)
+        return;     // do nothing if forced light
+
 #ifdef _WIN32
     discoverWindowsVersion();
     if (doesSystemSupport()) {
         oldPalette = QApplication::palette();
-        if (isPaletteDark(oldPalette)) {
+        // Auto setting, dark palette → do not switch dark/light
+        if (setting == Setting::AUTO && isPaletteDark(oldPalette)) {
             darkOs = DarkOs::UNSUPPORTED;
             return;
         }
@@ -213,6 +219,14 @@ int dark::lightness(const QColor& color) noexcept
 
 bool dark::isPaletteDark(const QPalette& palette) noexcept
 {
+    switch (progSetting) {
+    case Setting::DARK:
+        return true;
+    case Setting::LIGHT:
+        return false;
+    case Setting::AUTO: break;
+    }
+
     auto liWinText = lightness(palette.windowText().color());
     auto liWindow = lightness(palette.window().color());
     auto liGray = lightness(Qt::gray);          // liGray > liDarkGray

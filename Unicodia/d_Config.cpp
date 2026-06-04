@@ -16,6 +16,9 @@
 // L10n
 #include "LocList.h"
 
+#ifdef _WIN32
+    #include <windows.h>
+#endif
 
 #ifdef _WIN64
     constexpr std::string_view EQUIV_PLATFORMS = "win64|w64";
@@ -28,6 +31,7 @@
 
 // progsets
 progsets::DirMode progsets::dirMode = progsets::DirMode::DEFAULT;
+dark::Setting progsets::darkSetting = dark::Setting::DEFAULT;
 
 Version updatever::version;
 bool updatever::isDebuggingVersion = false;
@@ -38,8 +42,8 @@ std::filesystem::path fname::config;
 std::filesystem::path fname::progsets;
 
 // path
-std::filesystem::path path::exeBundled;
-std::filesystem::path path::exeAdmined;
+std::filesystem::path path::exeData;
+std::filesystem::path path::exeConfig;
 std::filesystem::path path::config;
 
 // config
@@ -102,15 +106,15 @@ TinySizet config::Favs::erase(char32_t code)
 
 namespace {
 
-    constinit const ec::Array<std::string_view, BlockOrder> orderNames {
-        "alpha", "continent", "code", "tech"
-    };
+    constinit const ec::Array<std::string_view, dark::Setting> darkNames {
+        "auto", "light", "dark" };
 
     void loadProgSets()
     {
         static std::string myCoincidingPlatforms;
 
         progsets::dirMode = progsets::DirMode::DEFAULT;
+        progsets::darkSetting = dark::Setting::DEFAULT;
 
         if (fname::progsets.empty() || !std::filesystem::exists(fname::progsets))
             return;
@@ -120,6 +124,10 @@ namespace {
         auto hRoot = doc.child("program");
         progsets::dirMode = static_cast<progsets::DirMode>(
                 hRoot.attribute("portable").as_bool(progsets::DEFAULT_PORTABLE));
+
+        auto sPalette = hRoot.attribute("palette").as_string();
+        progsets::darkSetting = darkNames.findDef(sPalette, progsets::darkSetting);
+
         // debug-update
         auto hDebugUpdate = hRoot.child("debug-update");
         if (auto ver = Version::parsePermissive(hDebugUpdate.attribute("version").as_string())) {
@@ -132,6 +140,10 @@ namespace {
             updatever::isDebuggingVersion = true;
         }
     }
+
+    constinit const ec::Array<std::string_view, BlockOrder> orderNames {
+        "alpha", "continent", "code", "tech"
+    };
 
     void loadConfig(config::window::State& state, BlockOrder& blockOrder)
     {
@@ -167,16 +179,35 @@ namespace {
         }
     }
 
+#ifdef _WIN32
+    std::filesystem::path w32ProgramPath()
+    {
+        std::wstring s;
+        // Debug: 20 or so-so small
+        // Production: MAX_PATH, will probably enough
+        size_t currSize = MAX_PATH;
+        while (true) {
+            s.resize(currSize);
+            auto wantedSize = GetModuleFileNameW(nullptr, s.data(), currSize);
+            if (wantedSize < currSize) {
+                return std::wstring_view(s.data(), wantedSize);
+            }
+            // Some versions of Windows return currSize, some more
+            currSize = std::max<size_t>(currSize, wantedSize * 4);
+        }
+    }
+#endif
+
 }   // anon namespace
 
 
 void config::init1()
 {
-    path::exeBundled = QCoreApplication::applicationFilePath().toStdWString();
 #ifdef _WIN32
-    path::exeBundled.remove_filename();
-    path::exeAdmined = path::exeBundled;
-    fname::progsets = path::exeAdmined / APP_XML;
+    path::exeData = w32ProgramPath();
+    path::exeData.remove_filename();
+    path::exeConfig = path::exeData;
+    fname::progsets = path::exeConfig / APP_XML;
 #else
 #error Unknown OS
 #endif
@@ -195,7 +226,7 @@ void config::init2(window::State& state, BlockOrder& blockOrder)
         path::config = localDir;
     } break;
     case progsets::DirMode::PORTABLE:
-        path::config = path::exeAdmined;
+        path::config = path::exeConfig;
         break;
     }
     fname::config = path::config / CONFIG_NAME;

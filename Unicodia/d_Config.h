@@ -15,6 +15,7 @@
 #include "u_Version.h"
 #include "u_EnumSize.h"
 #include "u_TinyOpt.h"
+#include "i_DarkMode.h"
 
 
 DEFINE_ENUM_TYPE (BlockOrder, unsigned char,
@@ -25,13 +26,13 @@ DEFINE_ENUM_TYPE (BlockOrder, unsigned char,
     DEFAULT = CONTINENT,
 )
 
-
 namespace progsets {
     enum class DirMode : unsigned char {
         INSTALLED = false, PORTABLE = true, DEFAULT = PORTABLE };
     constexpr bool DEFAULT_PORTABLE = static_cast<bool>(DirMode::DEFAULT);
     static_assert(static_cast<int>(DirMode::PORTABLE) == 1);
     extern DirMode dirMode;
+    extern dark::Setting darkSetting;
 }
 
 namespace updatever {
@@ -46,12 +47,14 @@ namespace fname {
 }
 
 namespace path {
-    // Some path within app’s filesystem to store bundled data
-    extern std::filesystem::path exeBundled;
-    // Some path within app’s filesystem that’s somehow accessible to admin
-    // In Windows exeAdmined == exeBundled
-    extern std::filesystem::path exeAdmined;
-    // Some writeable path within system’s/app’s filesystem where configs are placed
+    // Some path (read-only) within app’s filesystem to store bundled data
+    extern std::filesystem::path exeData;
+    // Some path within app’s filesystem that’s possible to write by a user,
+    //   e.g. if the program is run from a flash drive;
+    //   and possible to write by admin, if the program is neatly installed
+    // In Windows exeData == exeConfig
+    extern std::filesystem::path exeConfig;
+    // Some writable path within system’s/app’s filesystem where configs are placed
     extern std::filesystem::path config;
 }
 

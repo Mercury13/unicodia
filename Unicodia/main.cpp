@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 {
     //qputenv("QT_SCALE_FACTOR", "1.5");
     config::init1();
-    dark::init1();
+    dark::init1(progsets::darkSetting);
     QApplication a(argc, argv);
     dark::init2(":/Dark.qss");
 

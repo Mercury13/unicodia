@@ -1,6 +1,6 @@
 #pragma once
 
-#include <optional>
+#include "u_EnumSize.h"
 
 class QString;
 class QPalette;
@@ -9,11 +9,15 @@ struct QColor;
 
 namespace dark {
 
+    DEFINE_ENUM_TYPE_IN_NS(dark, Setting, unsigned char,
+            AUTO, LIGHT, DARK,
+            DEFAULT = AUTO)
+
     /// @return [+] whether OS supports dark mode
     bool doesSystemSupport();
 
     /// @warning Call it BEFORE QApplication
-    void init1();
+    void init1(dark::Setting setting);
     /// @warning Call it AFTER QAllpication
     void init2(const QString& aFname);
 
