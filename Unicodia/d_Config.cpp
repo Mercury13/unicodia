@@ -180,6 +180,13 @@ namespace {
     }
 
 #ifdef _WIN32
+    /// Closed circle here:
+    ///   1. Read prog.path/Uni.xml
+    ///   2. Init. dark mode
+    ///   3. Create application
+    ///   4. Discover prog.path
+    /// To break this circle, you need to check program path
+    /// outside QApplication
     std::filesystem::path w32ProgramPath()
     {
         std::wstring s;
