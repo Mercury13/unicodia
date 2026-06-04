@@ -36,7 +36,7 @@ namespace dark {
     /// Sets application to dark/light mode depending on x and whether we already set
     void set(bool x);
 
-    /// @return  relative colour lightness
+    /// @return  quick relative colour lightness = 2r + 4g + b
     int lightness(const QColor& color) noexcept;
 
     /// Checks if the palette is dark, overridden with forced dark/light
