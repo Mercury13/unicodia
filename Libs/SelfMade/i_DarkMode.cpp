@@ -195,7 +195,7 @@ void dark::init1(Setting setting)
     if (doesSystemSupport()) {
         oldPalette = QApplication::palette();
         // Auto setting, dark palette → do not switch dark/light
-        if (setting == Setting::AUTO && isPaletteDark(oldPalette)) {
+        if (setting == Setting::AUTO && isPaletteReallyDark(oldPalette)) {
             darkOs = DarkOs::UNSUPPORTED;
             return;
         }
@@ -235,9 +235,14 @@ bool dark::isPaletteDark(const QPalette& palette) noexcept
         return true;
     case Setting::LIGHT:
         return false;
-    case Setting::AUTO: break;
+    case Setting::AUTO:
+        return isPaletteReallyDark(palette);
     }
+    __builtin_unreachable();
+}
 
+bool dark::isPaletteReallyDark(const QPalette& palette) noexcept
+{
     auto liWinText = lightness(palette.windowText().color());
     auto liWindow = lightness(palette.window().color());
     auto liGray = lightness(Qt::gray);          // liGray > liDarkGray

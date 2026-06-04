@@ -39,8 +39,13 @@ namespace dark {
     /// @return  relative colour lightness
     int lightness(const QColor& color) noexcept;
 
+    /// Checks if the palette is dark, overridden with forced dark/light
     /// @return [+] palette is dark  [-] unknown
     bool isPaletteDark(const QPalette& palette) noexcept;
+
+    /// Same, but no overrides, just actual lightness
+    /// @return [+] palette is dark  [-] unknown
+    bool isPaletteReallyDark(const QPalette& palette) noexcept;
 
     void processNewPalette();
 }
