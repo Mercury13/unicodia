@@ -4036,7 +4036,7 @@
      <transl>Бамум дополнительный</transl>
     </text>
     <text id="Text">
-     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</orig>
+     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. The final syllabic phase G is in the [[pt:bmp|Basic Plane]].</orig>
      <transl>Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].</transl>
     </text>
    </group>
@@ -5335,7 +5335,7 @@
      <transl>басса</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
+     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
      <transl>Басса по имени Томас Льюис открыл, что бывшие рабы басса из Америки используют необычное письмо. По другим данным, он создал письмо сам. Сами басса называют письмо ''вах''{{-}}«ставить знак». Самобытное письмо было распространено в XX{{_}}веке, но в XXI всё больше заменяется [[ps:Latn|латиницей]].</transl>
     </text>
    </group>
@@ -6035,23 +6035,6 @@
       <p />
       <p>In Unicode{{_}}5.2 (2009), the sample characters were historic enough (from Alan Gardiner’s 1957 book), but primitive. In Unicode{{_}}9.0 (2016), they were redrawn by a professional designer, somewhat deviating from the truth. Since Unicode{{_}}14.0 (2021), Egyptologists are fixing mistakes; some characters (e.g. 1309A) have been changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
      </orig>
-     <known-orig>
-      <p>Egyptian script passed an ordinary way from pictographic writing (words are conveyed with illustrative pictures) through ideographic (abstract concepts appear{{-}}hieroglyph “sun” means day) to [[pt:abjad|consonant]] (phonetic signs start to emerge). We’ve seen the same way in other well-developed civilizations, for example, [[ps:Xsux|Sumerian]].</p>
-      <p />
-      <p>Writing was mostly right-to-left, sometimes left-to-right or top-down. People and animals are always faced towards the beginning of a line. Encoded as left-to-right script, because scholars tend to mirror text for convenience.</p>
-      <p />
-      <p>Besides hieroglyphs, there were two non-encoded scripts:</p>
-      <p>* hieratic (''sacred'') script{{-}}greatly reduced hieroglyphs; used in books and business documents;</p>
-      <p>* demotic (''people’s'') script{{-}}appeared in 7th century{{_}}BC, more alphabetical characters; first letters and business documents, then books.</p>
-      <p />
-      <p>But we know hieroglyphs best of all, because they are preserved well carved in stone. Despite the expansion of demotic, hieroglyphs were still in use, though the number of people who understood complex script constantly reduced. With the advent of Christianity hieroglyphs were finally abandoned, the last inscription is dated 394{{_}}CE.</p>
-      <p />
-      <p>Using a bilingual with [[ps:Grek|Greek]] and knowledge of [[ps:Copt|Coptic]], in 1820s Jean-François Champollion managed to read first names, then text, and soon died. His works were validated in 1860s, long after his death.</p>
-      <p />
-      <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
-      <p />
-      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by a professional designer, deviating from the truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1309A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
-     </known-orig>
      <transl>
       <p>Египетская письменность прошла обычный путь от пиктографического письма (слова изображаются наглядными рисунками) через идеографическое (появляются абстрактные понятия{{-}}знаком «солнце» обозначают день) к [[pt:abjad|консонантному]] (начали появляться звуковые знаки). Подобное мы видели и в других развитых цивилизациях{{-}}например, [[ps:Xsux|шумерской]].</p>
       <p />
@@ -7698,11 +7681,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Most Mro are Buddhists, and authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
+      <p>Most Mro are Buddhists, and the authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
       <p />
-      <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Krama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
+      <p>The Mro script was invented in the 1980s by Menlay Murang, founder of the ''Krama'' religion. In the 2000s, the Murang alphabet became popular and even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also, the existing Latin badly conveys the Mro phonetics.</p>
       <p />
-      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard. Punctuation is European, with addition of local version of ''danda'' bar.</p>
+      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters or [[pt:combining|combining marks]], the [[pt:abc|alphabetical order]] corresponds to encoding, and line-breaking rules are standard. Punctuation is European, with the addition of a local version of the ''danda'' bar.</p>
      </orig>
      <transl>
       <p>Большинство мру{{-}}буддисты, и власти исламской Бангладеш не{{_}}желают поддерживать их.</p>
@@ -8229,11 +8212,6 @@
       <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation from 2900{{_}}BC.</p>
      </orig>
      <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
-     <known-orig>
-      <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
-      <p />
-      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
-     </known-orig>
      <transl>
       <p>Прото-клинопись{{-}}счётные знаки и пиктограммы, выдавливавшиеся на глине разными палками: круглыми, плоскими, призматическими.</p>
       <p />
@@ -9424,9 +9402,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990 Lakhum Mossang from India created the alphabet and teached about 100 people until his death in 2020.</p>
+      <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990, Lakhum Mossang from India created a new alphabet and taught it to about 100 people until he died in 2020.</p>
       <p />
-      <p>Vowel names are phoneme + one of four tones. In comparison, in Hmong Latin tones are also written with letters.</p>
+      <p>Vowel names are phoneme + one of four tones. For comparison, tones in Hmong Latin are also written with letters.</p>
      </orig>
      <transl>
       <p>Небольшое семейство сино-тибетских языков; письменность{{-}}различные виды [[ps:Latn|латиницы]]. В 1990 индиец Лакхум Моссанг создал алфавит и до смерти в 2020 обучил ему около 100 человек.</p>

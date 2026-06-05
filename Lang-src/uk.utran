@@ -4037,7 +4037,7 @@
      <transl>Бамум додатковий</transl>
     </text>
     <text id="Text">
-     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</orig>
+     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. The final syllabic phase G is in the [[pt:bmp|Basic Plane]].</orig>
      <transl>Ранні варіанти [[ps:Bamu|бамуму]] A…F, як ієрогліфічні, так і складові. Остаточна складова версія G{{-}}у [[pt:bmp|базовій площині]].</transl>
     </text>
    </group>
@@ -5336,7 +5336,7 @@
      <transl>басса</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
+     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
      <transl>Басса на ім’я Томас Льюїс відкрив, що колишні раби з Америки користуються незвичайним письмом. За іншими даними, він створив письмо сам. Самі басса звуть письмо ''вах''{{-}}бставити знак». Самобутнє письмо будо поширене у XX{{_}}столітті, але у XXI все більше замінюється [[ps:Latn|латинкою]].</transl>
     </text>
    </group>
@@ -7681,11 +7681,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Most Mro are Buddhists, and authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
+      <p>Most Mro are Buddhists, and the authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
       <p />
-      <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Krama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
+      <p>The Mro script was invented in the 1980s by Menlay Murang, founder of the ''Krama'' religion. In the 2000s, the Murang alphabet became popular and even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also, the existing Latin badly conveys the Mro phonetics.</p>
       <p />
-      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard. Punctuation is European, with addition of local version of ''danda'' bar.</p>
+      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters or [[pt:combining|combining marks]], the [[pt:abc|alphabetical order]] corresponds to encoding, and line-breaking rules are standard. Punctuation is European, with the addition of a local version of the ''danda'' bar.</p>
      </orig>
      <transl>
       <p>Більшість мру{{-}}буддисти, і влада ісламської Бангладеш не{{_}}бажає підтримувати іх.</p>
@@ -8212,11 +8212,6 @@
       <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation from 2900{{_}}BC.</p>
      </orig>
      <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
-     <known-orig>
-      <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
-      <p />
-      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
-     </known-orig>
      <transl>
       <p>Прото-клинопис{{-}}лічильні знаки та піктограми, що вичавлювались на глині різними палицями: круглими, пласкими, призматичними.</p>
       <p />
@@ -9407,9 +9402,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990 Lakhum Mossang from India created the alphabet and teached about 100 people until his death in 2020.</p>
+      <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990, Lakhum Mossang from India created a new alphabet and taught it to about 100 people until he died in 2020.</p>
       <p />
-      <p>Vowel names are phoneme + one of four tones. In comparison, in Hmong Latin tones are also written with letters.</p>
+      <p>Vowel names are phoneme + one of four tones. For comparison, tones in Hmong Latin are also written with letters.</p>
      </orig>
      <transl>
       <p>Невелике сімейство сино-тибетських мов; писемність{{-}}різноманітні види [[ps:Latn|латинки]]. У 1990 індієць Лакхум Моссанг створив алфавіт і до смерті у 2020 навчив йому близько 100 чоловік.</p>
