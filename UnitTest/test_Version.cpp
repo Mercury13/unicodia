@@ -6,6 +6,9 @@
 
 using namespace std::string_view_literals;
 
+///
+/// Ctor, 0 params
+///
 TEST (Version, Ctor0)
 {
     Version v;
@@ -15,6 +18,9 @@ TEST (Version, Ctor0)
 }
 
 
+///
+/// Ctor, 1 param
+///
 TEST (Version, Ctor1)
 {
     Version v{ 5 };
@@ -24,6 +30,9 @@ TEST (Version, Ctor1)
 }
 
 
+///
+/// Ctor, 2 params
+///
 TEST (Version, Ctor2)
 {
     Version v{ 2, 3 };
@@ -33,7 +42,9 @@ TEST (Version, Ctor2)
 }
 
 
-
+///
+/// Ctor, 3 params
+///
 TEST (Version, Ctor3)
 {
     Version v{ 1, 3, 5 };
@@ -43,7 +54,9 @@ TEST (Version, Ctor3)
 }
 
 
-
+///
+/// Compare, equal
+///
 TEST (Version, Cmp1)
 {
     Version v1{ 1, 3, 5 };
@@ -52,7 +65,9 @@ TEST (Version, Cmp1)
 }
 
 
-
+///
+/// Compare, the 3rd digit
+///
 TEST (Version, Cmp2)
 {
     Version v1{ 1, 3, 4 };
@@ -62,7 +77,9 @@ TEST (Version, Cmp2)
 }
 
 
-
+///
+/// Compare, the 2nd digit
+///
 TEST (Version, Cmp3)
 {
     Version v1{ 1, 2, 100 };
@@ -72,6 +89,9 @@ TEST (Version, Cmp3)
 }
 
 
+///
+/// Compare, the 1st digit
+///
 TEST (Version, Cmp4)
 {
     Version v1{ 1, 99, 100 };
@@ -81,6 +101,9 @@ TEST (Version, Cmp4)
 }
 
 
+///
+/// HasSmth: empty/false
+///
 TEST (Version, HasSmth1)
 {
     Version v;
@@ -88,6 +111,9 @@ TEST (Version, HasSmth1)
 }
 
 
+///
+/// HasSmth: the 1st digit
+///
 TEST (Version, HasSmth2)
 {
     Version v{ 1 };
@@ -95,6 +121,9 @@ TEST (Version, HasSmth2)
 }
 
 
+///
+/// HasSmth: the 2nd digit
+///
 TEST (Version, HasSmth3)
 {
     Version v{ 0, 2 };
@@ -102,6 +131,9 @@ TEST (Version, HasSmth3)
 }
 
 
+///
+/// HasSmth: the 3rd digit
+///
 TEST (Version, HasSmth4)
 {
     Version v{ 0, 0, 3 };
@@ -109,6 +141,9 @@ TEST (Version, HasSmth4)
 }
 
 
+///
+/// Sprintf: empty
+///
 TEST (Version, Sprintf1)
 {
     char c[30];
@@ -118,6 +153,9 @@ TEST (Version, Sprintf1)
 }
 
 
+///
+/// Sprintf: the 1st digit
+///
 TEST (Version, Sprintf2)
 {
     char c[30];
@@ -127,6 +165,9 @@ TEST (Version, Sprintf2)
 }
 
 
+///
+/// Sprintf: the 2nd digit
+///
 TEST (Version, Sprintf3)
 {
     char c[30];
@@ -136,6 +177,9 @@ TEST (Version, Sprintf3)
 }
 
 
+///
+/// Sprintf: the 3rd digit
+///
 TEST (Version, Sprintf4)
 {
     char c[30];
@@ -145,6 +189,9 @@ TEST (Version, Sprintf4)
 }
 
 
+///
+/// Sprintf: too short buffer
+///
 TEST (Version, Sprintf5)
 {
     char c[7];
@@ -155,6 +202,9 @@ TEST (Version, Sprintf5)
 }
 
 
+///
+/// Sprintf: UTF-8 version
+///
 TEST (Version, SprintfU8)
 {
     char8_t c[30];
@@ -164,6 +214,9 @@ TEST (Version, SprintfU8)
 }
 
 
+///
+/// toSv: simple workability
+///
 TEST (Version, ToSv1)
 {
     char8_t c[30];
@@ -173,6 +226,9 @@ TEST (Version, ToSv1)
 }
 
 
+///
+/// toSv: same but char
+///
 TEST (Version, ToSv2)
 {
     char c[30];
@@ -182,6 +238,9 @@ TEST (Version, ToSv2)
 }
 
 
+///
+/// toSv: short buffer
+///
 TEST (Version, ToSv3)
 {
     char c[7];
@@ -191,6 +250,9 @@ TEST (Version, ToSv3)
 }
 
 
+///
+/// toS: simple workability
+///
 TEST (Version, ToS)
 {
     Version v { 12, 34, 56 };
@@ -198,6 +260,9 @@ TEST (Version, ToS)
 }
 
 
+///
+/// parsePermissive: empty string, false
+///
 TEST (Version, ParseP1)
 {
     auto v = Version::parsePermissive("");
@@ -205,6 +270,9 @@ TEST (Version, ParseP1)
 }
 
 
+///
+/// parsePermissive: one number, false here
+///
 TEST (Version, ParseP2)
 {
     auto v = Version::parsePermissive("23");
@@ -212,6 +280,9 @@ TEST (Version, ParseP2)
 }
 
 
+///
+/// parsePermissive: let it be this way
+///
 TEST (Version, ParseP3)
 {
     auto v = Version::parsePermissive("a.a.a23.0");
@@ -220,6 +291,9 @@ TEST (Version, ParseP3)
 }
 
 
+///
+/// parsePermissive: 23., false
+///
 TEST (Version, ParseP4)
 {
     auto v = Version::parsePermissive("23.");
@@ -227,6 +301,9 @@ TEST (Version, ParseP4)
 }
 
 
+///
+/// parsePermissive: let it be this way
+///
 TEST (Version, Parse5)
 {
     auto v = Version::parsePermissive("23.a34");
@@ -234,6 +311,9 @@ TEST (Version, Parse5)
 }
 
 
+///
+/// parsePermissive: 23.0, OK
+///
 TEST (Version, Parse5a)
 {
     auto v = Version::parsePermissive("23.0");
@@ -242,6 +322,9 @@ TEST (Version, Parse5a)
 }
 
 
+///
+/// parsePermissive: 23.34, OK
+///
 TEST (Version, Parse6)
 {
     auto v = Version::parsePermissive("23.34");
@@ -250,6 +333,9 @@ TEST (Version, Parse6)
 }
 
 
+///
+/// parsePermissive: 23.34., OK
+///
 TEST (Version, Parse7)
 {
     auto v = Version::parsePermissive("23.34.");
@@ -258,6 +344,9 @@ TEST (Version, Parse7)
 }
 
 
+///
+/// parsePermissive: 23.34.a56, let it be this way
+///
 TEST (Version, Parse8)
 {
     auto v = Version::parsePermissive("23.34.a56");
@@ -266,6 +355,9 @@ TEST (Version, Parse8)
 }
 
 
+///
+/// parsePermissive: 23.34.35, OK
+///
 TEST (Version, Parse9)
 {
     auto v = Version::parsePermissive("23.34.35");
@@ -274,6 +366,9 @@ TEST (Version, Parse9)
 }
 
 
+///
+/// parsePermissive: 23.34.35a, OK
+///
 TEST (Version, Parse10)
 {
     auto v = Version::parsePermissive("23.34.35a");
@@ -282,6 +377,9 @@ TEST (Version, Parse10)
 }
 
 
+///
+/// parsePermissive: v.3.4alpha, OK
+///
 TEST (Version, Parse11)
 {
     auto v = Version::parsePermissive("v.3.4alpha");
