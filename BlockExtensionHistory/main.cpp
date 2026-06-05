@@ -76,7 +76,8 @@ Version versions[] {
     { "15.0.0",      "",       FileVer::UCD  },
     { "15.1.0",      "",       FileVer::UCD  },
     { "16.0.0",      "",       FileVer::UCD  },
-    { "17.0.0",      "",       FileVer::UCD,  Stability::BETA },
+    { "17.0.0",      "",       FileVer::UCD  },
+    { "18.0.0",      "",       FileVer::UCD,  Stability::BETA },
     // Now Unicode keeps beta in place of future release
 };
 
