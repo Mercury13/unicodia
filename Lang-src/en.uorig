@@ -3109,15 +3109,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
+      <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], and old [[ps:Hani|Chinese ideographs]].</p>
       <p />
-      <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} [[pu:3005]].</p>
+      <p>An identical ideograph is{{_}}not{{_}}written twice in a row, an iteration mark is written instead. In modern printed Chinese, iteration is allowed; Chinese informally and Japanese use {{sm|々}} [[pu:3005]].</p>
       <p />
       <p>Hook means the end of a sentence or section in old manuscripts.</p>
       <p />
       <p>If a block of Khitan Small starts with a single ideograph instead of two, a [[pc:16FE4|filler]] is put in the vacant place.</p>
       <p />
-      <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and thus [[pt:unification|unified]]. The second form looks like arrow &lt;big&gt;↑&lt;/big&gt; and lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
+      <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and are thus [[pt:unification|unified]]. The second form looks like an arrow &lt;big&gt;↑&lt;/big&gt; and a lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
      </orig>
     </text>
    </group>
@@ -3131,7 +3131,7 @@
      <orig>Tangut components</orig>
     </text>
     <text id="Text">
-     <orig>Components and radicals used in modern studying of Tangut script.</orig>
+     <orig>Components and radicals used in the modern study of the Tangut script.</orig>
     </text>
    </group>
    <group id="18B00">
@@ -5049,13 +5049,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Was used in Liao empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on [[ps:Ougr|Uighur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters 125 are ideographs, 115 are phonetical, the rest are{{_}}not{{_}}deciphered.</p>
+      <p>It was used in the Liao Empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on the [[ps:Ougr|Uyghur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters, 125 are ideographs, 115 are phonetical, the rest are{{_}}not{{_}}deciphered.</p>
       <p />
-      <p>Large and small script were used in parallel, small is simpler (large is purely ideographic). Khitan books did{{_}}not{{_}}survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216 Khitans were finally defeated by Mongols and Chinese.</p>
+      <p>Large and small scripts were used in parallel, the small is simpler (the large is purely ideographic). Khitan books did{{_}}not{{_}}survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216, the Khitans were finally defeated by the Mongols and Koreans.</p>
       <p />
-      <p>Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, icon shows one of characters from Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern italic assembled by Google.</p>
+      <p>Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in the book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, the icon shows one of the characters from a Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern italic assembled by Google.</p>
       <p />
-      <p>The last square looking like [[pt:tofu|tofu]] is illegible character. It forms blocks like the rest Khitan characters.</p>
+      <p>The last square, looking like a [[pt:tofu|tofu]], is an illegible character. It forms blocks like the other Khitan characters.</p>
      </orig>
     </text>
    </group>
@@ -5961,9 +5961,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented in 1936 by Methodist missionary Samuel Pollard. Based on [[ps:Cans|Canadian syllabary]]. The first attempt to encode was in 1997. Because of complex tonal structure of Hmong languages, only in 2010 the encoding was ready.</p>
+      <p>Invented in 1936 by Methodist missionary Samuel Pollard. Based on the [[ps:Cans|Canadian syllabary]]. The first attempt to encode was in 1997. Because of the complex tonal structure of Hmong languages, only in 2010 the encoding was ready.</p>
       <p />
-      <p>Encoding scheme is</p>
+      <p>The encoding scheme is</p>
       <p>: {{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</p>
      </orig>
     </text>
@@ -6459,15 +6459,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very complex ideographic system that existed in Tangut kingdom of Xi Xia (North-West China). The simplest ideographs consist of 4 lines, ideograph “one” has 6. The most widespread version: the script was designed by Emperor Jingzong (=Li Yuanhao) and scientist Yeli Renrong.</p>
+      <p>A very complex ideographic system that existed in the Tangut kingdom of Xi Xia (North-West China). The simplest ideographs consist of 4 lines, ideograph “one” has 6. The most widespread version: the script was designed by Emperor Jingzong (=Li Yuanhao) and scientist Yeli Renrong.</p>
       <p />
-      <p>Like in China, Tangut calligraphy was well-developed, one ideograph had up to 4 forms. In Unicode thay are encoded with one character unless occur in the same source. Glyphs that have similar shape but different names are also unified.</p>
+      <p>As in China, Tangut calligraphy was well developed, one ideograph could have up to 4 forms. In Unicode, they are encoded as a single character unless occur in the same source. Glyphs with similar shapes but different names are also unified.</p>
       <p />
-      <p>Tangut kingdom was destroyed by Genghis Khan in 1227, but the script was used for several centuries more: the last specimen is 1502, also a handwritten mark later than 1680 exists.</p>
+      <p>The Tangut kingdom was destroyed by Genghis Khan in 1227, but the script was used for several more centuries: the last specimen dates to 1502, and a handwritten mark later than 1680 exists.</p>
       <p />
-      <p>Europeans started to study dead script since 1870, the key role was played by Soviet scientist Nikolai Nevsky.</p>
+      <p>Europeans have been studying the dead script since 1870, the key role was played by Soviet scientist Nikolai Nevsky.</p>
       <p />
-      <p>Because of copyright issues, icons are original (traced by Prof. Jǐng Yǒngshí), and the font is modern Roman redrawn by Google company.</p>
+      <p>Because of copyright issues, icons are original (traced by Prof. Jǐng Yǒngshí), and the font is modern Roman redrawn by Google.</p>
      </orig>
     </text>
    </group>
