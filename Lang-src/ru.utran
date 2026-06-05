@@ -3893,7 +3893,7 @@
      <transl>Лису дополнительный</transl>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
+     <orig>One character from the Naxi language {{nspk|nxq}}.</orig>
      <transl>Один символ из языка наси {{nspk|nxq}}.</transl>
     </text>
    </group>
@@ -3920,14 +3920,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Babylonians about 2000{{_}}BC devised the first positional number system, it was 60-based. {{sm|𒐕}} is a unit from 0 to 9, {{sm|𒌋}} is ten from 0 to 5. Zero {{sm|𒑊}} was written only between positions, not{{_}}at the end of the number, number’s order is deducible only from context.</p>
+      <p>About 2000{{_}}BC, the Babylonians devised the first positional number system, which was 60-based. {{sm|𒐕}}{{_}}is a unit from 0 to 9, and {{sm|𒌋}}{{_}}is ten from 0 to 5. Zero {{sm|𒑊}}{{_}}was written only between positions, not{{_}}at the end of the number; the number’s order is deducible only from context.</p>
       <p />
-      <p>Before that, a non-positional system was used, when different objects and different positions were written with different signs.</p>
+      <p>Before that, a [[ps:Pcun|non-positional system]] was used, in which different objects and positions were written with different signs.</p>
      </orig>
+     <au-cmt>
+      <p>NBSPs after 1/10/0 are workarounds for some linebreaking glitch</p>
+      <p>NBSP after NOT is usual "do not break NOT from following"</p>
+     </au-cmt>
      <transl>
-      <p>Вавилонянам около 2000{{bc}} приписывается первая позиционная система счисления, основание у неё было 60. {{sm|𒐕}}{{-}}единица от 0 до 9 штук, {{sm|𒌋}}{{-}}десятка от 0 до 5. Ноль {{sm|𒑊}} писали только между разрядами, но не{{_}}на конце числа, порядок можно определить только из контекста.</p>
+      <p>Вавилонянам около 2000{{bc}} приписывается первая позиционная система счисления, основание у неё было 60. {{sm|𒐕}}{{-}}единица от 0 до 9 штук, {{sm|𒌋}}{{-}}десятка от 0 до 5. Ноль {{sm|𒑊}}{{_}}писали только между разрядами, но не{{_}}на конце числа, порядок можно определить только из контекста.</p>
       <p />
-      <p>До этого использовалась непозиционная система, когда разные предметы и разные разряды записывались разными знаками.</p>
+      <p>До этого использовалась [[ps:Pcun|непозиционная система]], когда разные предметы и разные разряды записывались разными знаками.</p>
      </transl>
     </text>
    </group>
@@ -6871,13 +6875,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Old script of [[ps:Brah|Brahmic]] origin, the ancestor of [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By the 16th century, it had been supplanted with other scripts.</p>
+      <p>An old script of [[ps:Brah|Brahmic]] origin, the ancestor of the [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By the 16th century, it had been supplanted by other scripts.</p>
       <p />
-      <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, and carving in stone. The “standard” style of Kawi is taken from early copper plates, with later characters adapted to that style.</p>
+      <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, and carving in stone. The “standard” style of Kawi is taken from early copper plates, with later characters adapted to it.</p>
       <p />
       <p>There are no spaces, and the words that end with a consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
       <p />
-      <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people who use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
+      <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community that uses Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}modern Kawi characters were encoded, only some room was left.</p>
      </orig>
      <transl>
       <p>Старая письменность [[ps:Brah|брахмийского]] происхождения, предок [[ps:Java|яванской]]. Происходит из паллавы (ранней [[ps:Gran|грантхи]]). К XVI{{_}}веку заменяется другими письменностями.</p>
@@ -6886,7 +6890,7 @@
       <p />
       <p>Пишут без пробелов, при этом в конце слов, заканчивающихся на согласный, стоит [[pt:virama|вирама]] (killer){{-}}большой крюк. Существует и виртуальная вирама для стечений согласных{{-}}буквы пишутся в столбик.</p>
       <p />
-      <p>В Индонезии пишут [[ps:Latn|латиницей]], и существует активное сообщество людей, переписывающихся кави на современных языках. Для этого использовали блоки [[ps:Bali|балийского]] или [[ps:Java|яванского]]. Ни один символ современного кави не{{_}}закодирован, но на них оставлено место.</p>
+      <p>В Индонезии пишут [[ps:Latn|латиницей]], и существует активное сообщество, переписывающееся кави на современных языках. Для этого использовали блоки [[ps:Bali|балийского]] или [[ps:Java|яванского]]. Ни один символ современного кави не{{_}}закодирован, но на них оставлено место.</p>
      </transl>
     </text>
    </group>
@@ -9643,16 +9647,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Initially (≈3500{{_}}BC) business documents were written on clay (10 cows). Ideographs had appeared by 3200, and use of ideographs as syllables started by 3000{{_}}BC. Style changed in parallel: characters turned 90° counterclockwise, embossing with prismatic stylus started{{-}}hence elements of script, sharp wedges.</p>
+      <p>[[ps:Pcun|Initially]] (≈3500{{_}}BC), business documents were written on clay (10 cows). Ideographs appeared by 3200, and their use as syllables began by 3000{{_}}BC. Style changed in parallel: characters turned 90° counterclockwise, and embossing with a prismatic stylus began{{-}}hence the elements of script, sharp wedges.</p>
       <p />
-      <p>Cuneiform was supplanted with more progressive scripts during 1st millennium{{_}}BC. For example, [[ps:Xpeo|Persian cuneiform]] (1st millennium{{_}}BC) was alphasyllabic rather that ideosyllabic. The last known specimen is 75{{_}}CE.</p>
+      <p>More progressive script supplanted cuneiform during the 1st millennium{{_}}BC. For example, [[ps:Xpeo|Persian cuneiform]] (1st millennium{{_}}BC) was alphasyllabic rather than ideosyllabic. The last known specimen is 75{{_}}CE.</p>
       <p />
-      <p>Tablets were preserved for several millennia in deserts of Persia and Iraq, and Persian cuneiform had been deciphered by mid 19th century. It became a key to Sumerian. All known languages had been deciphered by 1900.</p>
+      <p>Tablets were preserved for several millennia in the deserts of Persia and Iraq, and Persian cuneiform had been deciphered by the mid-19th century. It became a key to Sumerian. All known languages had been deciphered by 1900.</p>
       <p />
-      <p>“Cuneiform” block approximately corresponds to cuneiform of Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier characters ≈2900{{_}}BC.</p>
+      <p>The “Cuneiform” block approximately corresponds to the cuneiform of the Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier characters from ≈2900{{_}}BC.</p>
      </orig>
      <transl>
-      <p>Изначально (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров), но к 3200 появились иероглифы, а к 3000{{bc}} иероглифы стали использовать как слоги. Параллельно менялся и стиль: символы повернулись на 90° против часовой стрелки, стали выдавливаться палочкой в виде призмы{{-}}отсюда элементы письма, острые клинышки.</p>
+      <p>[[ps:Pcun|Изначально]] (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров). К 3200 появились иероглифы, а к 3000{{bc}} иероглифы стали использовать как слоги. Параллельно менялся и стиль: символы повернулись на 90° против часовой стрелки, стали выдавливаться палочкой в виде призмы{{-}}отсюда элементы письма, острые клинышки.</p>
       <p />
       <p>В 1 тысячелетии{{bc}} клинопись стала вытесняться более прогрессивным письмом. Так, [[ps:Xpeo|персидская клинопись]] (1{{_}}тыс.{{bc}}) была уже алфавитно-слоговой. Последний известный памятник{{-}}75 уже нашей эры.</p>
       <p />
