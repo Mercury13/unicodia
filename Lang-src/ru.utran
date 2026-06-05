@@ -6690,9 +6690,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Shong Lue Yang, the inventor of the script, said that the script was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam War was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, Shong was assassinated by pro-Americans.</p>
+      <p>Shong Lue Yang, the inventor of the script, said that it was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam War was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, pro-Americans assassinated Shong.</p>
       <p />
-      <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of vowel “oob”, consonant “qh” and a tack for tone.</p>
+      <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of the vowel “oob”, the consonant “qh” and a tack for tone.</p>
       <p />
       <p>Four stages exist; the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
       <p />
@@ -7049,9 +7049,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
+      <p>Invented by Mahaguru Tika Ram Rai from local scripts close to [[ps:Deva|Devanagari]]. In 1995, the Indian state of Sikkim recognized Bantawa (under the name ''Rai'', though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
       <p />
-      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than common-Indic from Devanagari.</p>
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks, or other complex rendering; all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than the common-Indic from Devanagari.</p>
      </orig>
      <transl>
       <p>Создал Махагуру Тика Рам Раи из местных письменностей, близких к [[ps:Deva|деванагари]]. В 1995 индийский штат Сикким признал бантаву (под названием ''раи'', хотя это более широкая группа народов, а ''кират''{{-}}ещё шире) и сделал кират официальным письмом.</p>
@@ -7479,21 +7479,21 @@
      <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
      <transl>Обэри-окаимэ (медефайдрин)</transl>
     </text>
-    <text id="Lang">
-     <orig>Obɛri Ɔkaimɛ/Medefaidrin ''(Nigeria)''</orig>
-     <transl>обэри-окаимэ/медефайдрин ''(Нигерия)''</transl>
-    </text>
     <text id="Text">
      <orig>
-      <p>Constructed language and script for it were created by Michael Ukpong and Akpan Akpan Udofia about 1931 in Nigerian para-Christian church ''Obɛri Ɔkaimɛ''. Words are constructed, grammar is a mixture of English and Ibibio, the local language. Numerals are positional base-20, reflect counting habits of Ibibio. Punctuation marks are original.</p>
+      <p>The constructed language and its script were created by Michael Ukpong and Akpan Akpan Udofia around 1931 in the Nigerian para-Christian church ''Obɛri Ɔkaimɛ''. Words are constructed, and grammar is a mixture of English and Ibibio, the local language. Numerals are positional base-20, reflecting the counting habits of the Ibibio. Punctuation marks are original.</p>
       <p />
-      <p>New language was used in liturgy, taught in school. This violated local education law, the school was oppressed and fined, and teaching was ceased. Several manuscripts remain, all are in bad condition. Scholars discovered Medefaidrin in 1947. About 4000 Obɛri exist today, but few know the language. Nigerian authorities are heavily exploring the language and scanning remaining documents.</p>
+      <p>The new language was used in liturgy and taught in school. This violated local education law, the school was oppressed and fined, and teaching ceased. Several manuscripts remain, all are in bad condition. Scholars discovered Medefaidrin in 1947. About 4000 Obɛri exist today, but few know the language. Nigerian authorities are heavily exploring the language and scanning remaining documents.</p>
      </orig>
      <transl>
       <p>Искусственный язык и письменность для него создали Майкл Укпонг и Акпан Акпан Удофиа около 1931 в нигерийской околохристианской церкви ''обэри-окаимэ''. Слова собственные, грамматика{{-}}помесь английского и местного языка ибибио. Система счисления позиционная двадцатеричная, передаёт счётные привычки ибибио. Знаки препинания собственные.</p>
       <p />
       <p>Новый язык использовали в богослужениях, преподавали в школе. Это нарушало местный закон об образовании, школа подвергалась преследованиям и штрафам, и обучение свернули. Осталось несколько рукописей, и те в плохом состоянии. Исследователи узнали о медефайдрине в 1947. Около 4000 обэри существует и поныне (2020), но носителей языка единицы. Нигерийские власти усиленно исследуют язык и сканируют сохранившиеся документы.</p>
      </transl>
+    </text>
+    <text id="Lang">
+     <orig>Obɛri Ɔkaimɛ/Medefaidrin ''(Nigeria)''</orig>
+     <transl>обэри-окаимэ/медефайдрин ''(Нигерия)''</transl>
     </text>
    </group>
    <group id="Mend">
@@ -10681,9 +10681,9 @@
       <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of an [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
-      <p>* sweeping writing with brush and ink (except Nüshu);</p>
+      <p>* sweeping writing with a brush and ink (except Nüshu);</p>
       <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
-      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays, Japanese comics ''manga'' are read right-to-left;</p>
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
