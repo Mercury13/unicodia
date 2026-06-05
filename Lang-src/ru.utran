@@ -7805,7 +7805,7 @@
      <orig>
       <p>Comes from Nagari, an intermediate form of the Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from the sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until the 19th century.</p>
       <p />
-      <p>The inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama is used in Sanskrit only: Kannada prefers open syllables, and rare consonant conjuncts are written with ligatures.</p>
+      <p>The inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama is used only in Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are written with ligatures.</p>
       <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
       <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
@@ -8856,9 +8856,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Buddhist monk Zanabazar, artist and author of square script [[ps:Zanb|named for himself]]. The name comes from Sanskrit ''svayambhu'' “self-created”. The script from very begginning was used for religion only{{-}}on prayer wheels, seals, signs of temples. Character 11A9E also known as ''Soyombo'' is a symbol of Mongolia.</p>
+      <p>The script was invented by Buddhist monk Zanabazar, an artist and the author of the square script [[ps:Zanb|named after him]]. The name comes from the Sanskrit ''svayambhu'' “self-created”. From the very beginning, the script was used only for religion{{-}}on prayer wheels, seals, and temple signs. Character [[pc:11A9E]], also known as ''Soyombo'', is a symbol of Mongolia.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|a}} and unusual design: the frame contains of vertical stem on the right and triangle above. This frame carries main consonant, vowel mark, final consonant, length mark and diphtong mark.</p>
+      <p>Brahmic abugida with an inherent vowel {{t|a}} and unusual design: the frame consists of a vertical stem on the right and a triangle above. This frame carries the main consonant, a vowel mark, a final consonant, a length mark and a diphthong mark.</p>
       <p>{{smtable|ra|*𑩼|+ i|*◌𑩑|+ au|*◌𑩘|+ final ℓ|*◌𑪒|= riul|*𑩼𑩑𑩘𑪒}}</p>
       <p />
       <p>[[pt:virama|Virama]] is purely virtual, for consonant conjuncts:</p>
@@ -8870,7 +8870,7 @@
       <p>Numbers aren’t attested in sources.</p>
      </orig>
      <transl>
-      <p>Письменность придумал буддийский монах Дзанабáдзар, художник и автор квадратного письма [[ps:Zanb|имени себя]]. Название из санскритского ''сваямбху{{-}}сотворение самого себя''. Письменность с самого начала использовалась только в религиозных целях{{-}}в надписях на молитвенных барабанах, в печатях, вывесках храмов. Символ 11A9E, также известный как ''соёмбо'', стал символом Монголии.</p>
+      <p>Письменность придумал буддийский монах Дзанабáдзар, художник и автор квадратного письма [[ps:Zanb|имени себя]]. Название из санскритского ''сваямбху{{-}}сотворение самого себя''. Письменность с самого начала использовалась только в религиозных целях{{-}}в надписях на молитвенных барабанах, в печатях, вывесках храмов. Символ [[pc:11A9E]], также известный как ''соёмбо'', стал символом Монголии.</p>
       <p />
       <p>Брахмийская абугида с гласной по умолчанию {{t|а}} и необычным устройством: каркас состоит из вертикальной палки справа и треугольника сверху. К этому каркасу прикрепляются основная согласная, огласовка, конечная согласная, знак длины и знак дифтонга.</p>
       <p>{{smtable|ра|*𑩼|+ и|*◌𑩑|+ ау|*◌𑩘|+ конечное л|*◌𑪒|= риул|*𑩼𑩑𑩘𑪒}}</p>
@@ -9721,9 +9721,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Buddhist monk Zanabazar (1635–1723), linguist and artist, is known for development of [[ps:Soyo|Soyombo]] script. Less known that he designed Mongolian horizontal square script, also based on [[ps:Tibt|Tibetan]]{{-}}it’s unknown before or after Soyombo (main hypothesis: before), why and how wide it was used. Rediscovered in 1801, a few specimen survived.</p>
+      <p>Buddhist monk Zanabazar (1635–1723), a linguist and artist, is known for developing the [[ps:Soyo|Soyombo]] script. Less known is that he designed the Mongolian horizontal square script, also based on [[ps:Tibt|Tibetan]]{{-}}it’s unknown whether it came before or after Soyombo (main hypothesis: before), why and how widely it was used. Rediscovered in 1801, a few specimens survived.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. Moreover, it has two physical viramas, both are seen in sources and have no control meaning, one for the last letter in a word, the other for consonant conjuncts. There are two more ways to implement consonant conjuncts: using the third virtual virama (letters stack together, sometimes squishing in height), and using small signs of final consonants. These methods mix bizarrely: for example, one consonant with virama, and three stacked together. Initial vowels form by fixing vowel marks to {{sm|𑨀}}. None of sources has digits. Vertical writing is bizarre and outside the scope of Unicode: a mark that is initially above the second letter may appear above the entire word.</p>
+      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. Moreover, it has two physical viramas, both of which are seen in sources and have no control meaning: one for the last letter in a word, the other for consonant conjuncts. There are two more ways to implement consonant conjuncts: using the third virtual virama (letters stack together, sometimes squishing in height), and using small signs of final consonants. These methods mix bizarrely: for example, one consonant with virama, and three stacked together. Initial vowels are formed by fixing vowel marks to {{sm|𑨀}}. None of the sources has digits. Vertical writing is bizarre and outside the scope of Unicode: a mark that is initially above the second letter may appear above the entire word.</p>
      </orig>
      <transl>
       <p>Буддийский монах Дзанабáдзар (1635–1723), языковед и художник, известен разработкой письма [[ps:Soyo|соёмбо]]. Менее известно, что он придумал монгольское горизонтально-квадратное письмо, также на основе [[ps:Tibt|тибетского]]{{-}}неизвестно, раньше или позже соёмбо (основная гипотеза{{-}}раньше), зачем и насколько широко использовалось. Заново открыто в 1801, сохранилось лишь немного источников.</p>
