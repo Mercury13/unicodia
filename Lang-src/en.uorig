@@ -4553,9 +4553,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In 2006, documents from 1750 were found in the village of Gunjala. People who could read the script confirmed later that this was Gondi. The discovery was shown in 2014, and the state of Andhra Pradesh started to revive the script. Moreover, the language is virtually unwritten, people sporadically write in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]].</p>
+      <p>In 2006, documents from 1750 were found in the village of Gunjala. People who could read the script confirmed later that this was Gondi. The discovery was shown in 2014, and the state of Andhra Pradesh began reviving the script. Moreover, the language is virtually unwritten, people sporadically write in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]].</p>
       <p />
-      <p>Each letter means a syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does{{_}}not{{_}}distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introducing new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible at the end of words only. In consonant conjuncts it detaches a letter from headstroke.</p>
+      <p>Each letter means a syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does{{_}}not{{_}}distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introducing new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible at the end of words only. In consonant conjuncts, it detaches a letter from the headstroke.</p>
       <p>: ka {{sm|𑵱}} + i {{sm|◌𑶋}} = ki {{sm|𑵱𑶋}}</p>
       <p>: ka {{sm|𑵱}} + virama = k {{sm|𑵱𑶗}}</p>
       <p>: ka {{sm|𑵱}} + virama + ta {{sm|𑵳}} = kta {{sm|𑵱𑶗𑵳}}</p>
@@ -5305,11 +5305,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s{{_}}not{{_}}ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
+      <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after the shape of the letters. There are arguments about when the script appeared, but it’s{{_}}not{{_}}ancient: the known form is suited for quill and paper rather than palm leaves. The first known specimen is a signature on a treaty with the Dutch East India Company (1667).</p>
       <p />
-      <p>Brahmic abugida consisting of 17 consonants, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces, words and phrases are divided with vertical ellipsis. With such functionality the script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
+      <p>Brahmic abugida consisting of 17 consonants, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces: words and phrases are divided with vertical ellipses. With such functionality, the script is clearly incomplete, and by the 19th century, it had been completely supplanted by [[ps:Bugi|Lontara]], which is considered a sister script.</p>
       <p />
-      <p>Both European and Arabic-Indic digits are attested. In one of manuscripts there’s a punctuation mark resembling a palm-tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
+      <p>Both European and Arabic-Indic digits are attested. In one of the manuscripts, there’s a punctuation mark resembling a palm tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
       <p />
       <p>''Angka'' sign means “same consonant”: {{sm|𑻧𑻴𑻲}} duda, {{sm|𑻧𑻲𑻴}} dadu.&lt;br&gt;</p>
       <p>Two identical syllables are even simpler: {{sm|𑻧𑻴𑻴}} dudu.</p>
@@ -6666,7 +6666,7 @@
      <orig>Kurukh {{nspk||=Kurux, Oraon}}</orig>
     </text>
     <text id="Text">
-     <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
+     <orig>Created by Narayan Oraon. It’s a pure alphabet without an inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
     </text>
    </group>
    <group id="Toto">
