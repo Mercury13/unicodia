@@ -3017,7 +3017,7 @@
       <p />
       <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
       <p />
-      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to the hieroglyphs’ actual width and height.</p>
      </orig>
     </text>
    </group>
@@ -3027,7 +3027,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
+      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, which led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped [[pc:130FB]]↔[[pc:13AE8|AE8]] and others), and inconsistencies between glyphs and their descriptions.</p>
       <p />
@@ -4270,11 +4270,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Came supposedly from [[ps:Lina|Linear A]]. About 11th century{{_}}BC transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
+      <p>It supposedly came from [[ps:Lina|Linear A]]. About the 11th century{{_}}BC, it transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
       <p />
-      <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with a total of {{n|2500}} characters. For comparison: in undeciphered Linear A{{-}}{n|7000}}, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}{{n|30000}}.</p>
+      <p>Scholars have a consensus on about 30 characters, but perspectives on complete decipherment are vague: only 250 inscriptions exist, with a total of {{n|2500}} characters. For comparison: in undeciphered Linear A{{-}}{n|7000}}, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}{{n|30000}}.</p>
       <p />
-      <p>The image on the icon is authentic, font is based on Michael Everson’s tracings (2020).</p>
+      <p>The image on the icon is authentic, and the font is based on Michael Everson’s tracings (2020).</p>
      </orig>
     </text>
    </group>
@@ -4417,21 +4417,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Egyptian script passed an ordinary way from pictographic writing (words are conveyed with illustrative pictures) through ideographic (abstract concepts appear{{-}}hieroglyph “sun” means day) to [[pt:abjad|consonant]] (phonetic signs start to emerge). We’ve seen the same way in other well-developed civilizations, for example, [[ps:Xsux|Sumerian]].</p>
+      <p>Egyptian script passed through an ordinary way from pictographic writing (words are conveyed with illustrative pictures) through ideographic (abstract concepts appear{{-}}hieroglyph “sun” means day) to [[pt:abjad|consonant]] (phonetic signs start to emerge). We’ve seen the same in other well-developed civilizations, for example, [[ps:Xsux|Sumerian]].</p>
       <p />
-      <p>Writing was mostly right-to-left, sometimes left-to-right or top-down. People and animals are always faced towards the beginning of a line. Encoded as left-to-right script, because scholars tend to mirror text for convenience.</p>
+      <p>Writing was mostly right-to-left, sometimes left-to-right or top-down. People and animals are always facing towards the beginning of a line. Encoded as a left-to-right script, because scholars tend to mirror text for convenience.</p>
       <p />
       <p>Besides hieroglyphs, there were two non-encoded scripts:</p>
       <p>* hieratic (''sacred'') script{{-}}greatly reduced hieroglyphs; used in books and business documents;</p>
-      <p>* demotic (''people’s'') script{{-}}appeared in 7th century{{_}}BC, more alphabetical characters; first letters and business documents, then books.</p>
+      <p>* demotic (''people’s'') script{{-}}appeared in the 7th century{{_}}BC, with more alphabetical characters; first letters and business documents, then books.</p>
       <p />
-      <p>But we know hieroglyphs best of all, because they are preserved well carved in stone. Despite the expansion of demotic, hieroglyphs were still in use, though the number of people who understood complex script constantly reduced. With the advent of Christianity hieroglyphs were finally abandoned, the last inscription is dated 394{{_}}CE.</p>
+      <p>But we know hieroglyphs best of all because they are well preserved, carved in stone. Despite the expansion of demotic, hieroglyphs remained in use, though the number of people who understood complex script was steadily declining. With the advent of Christianity, hieroglyphs were finally abandoned; the last inscription is dated 394{{_}}CE.</p>
       <p />
-      <p>Using a bilingual with [[ps:Grek|Greek]] and knowledge of [[ps:Copt|Coptic]], in 1820s Jean-François Champollion managed to read first names, then text, and soon died. His works were validated in 1860s, long after his death.</p>
+      <p>Using a bilingual with [[ps:Grek|Greek]] and knowledge of [[ps:Copt|Coptic]], in the 1820s Jean-François Champollion managed to read first names, then text, and soon died. His works were validated in the 1860s, long after his death.</p>
       <p />
-      <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
+      <p>In Windows fonts, three hieroglyphs of a penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
       <p />
-      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by a professional designer, deviating from the truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1309A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
+      <p>In Unicode{{_}}5.2 (2009), the sample characters were historic enough (from Alan Gardiner’s 1957 book), but primitive. In Unicode{{_}}9.0 (2016), they were redrawn by a professional designer, somewhat deviating from the truth. Since Unicode{{_}}14.0 (2021), Egyptologists are fixing mistakes; some characters (e.g. 1309A) have been changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
      </orig>
     </text>
    </group>
@@ -5858,7 +5858,7 @@
      <orig>
       <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
       <p />
-      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation from 2900{{_}}BC.</p>
      </orig>
      <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
     </text>
