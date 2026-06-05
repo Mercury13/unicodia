@@ -4027,9 +4027,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>It was used in East India in 11–12th centuries, and was mentioned by Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized that it’s Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. The initial letter for long vocalic L is also unknown.</p>
+      <p>It was used in East India in the 11–12th centuries, and was mentioned by a Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized to be Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. The initial letter for long vocalic L is also unknown.</p>
       <p />
-      <p>The inherent vowel is {{t|a}}, the rest are added with vowel marks, turned to plain consonants with [[pt:virama|virama]]. Because of an extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only at the end of words.</p>
+      <p>The inherent vowel is {{t|a}}, the rest are added with vowel marks, and turned to plain consonants with [[pt:virama|virama]]. Because of an extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only at the end of words.</p>
       <p>: ka {{sm|𑰎}} + i {{sm|◌𑰰}} = ki {{sm|𑰎𑰰}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} = k {{sm|𑰎𑰿}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} + ta {{sm|𑰝}} = kta {{sm|𑰎𑰿𑰝}}</p>
@@ -4571,12 +4571,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>According to 2011 census, 13{{_}}million people identify as Gondi, but just 3{{_}}million know language. Gondi usually is written in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]], but Munshi Mangal Singh Masaram in 1918 made a script based on other Indic scripts. Modern use of this script is insignificant.</p>
+      <p>According to the 2011 census, 13{{_}}million people identify as Gondi, but only 3{{_}}million know the language. Gondi is usually written in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]], but in 1918 Munshi Mangal Singh Masaram made a script based on other Indic scripts. Modern use of this script is insignificant.</p>
       <p />
-      <p>Every letter has a horizontal stroke meaning {{t|a}} vowel. To get other vowels, vowel marks are put to this stroke. There are two [[pt:virama|viramas]]: one is visible, to leave just one consonant in the end of a word, the other is invisible, removes horizontal stroke in consonant conjuncts:</p>
+      <p>Every letter has a horizontal stroke, meaning the vowel {{t|a}}. To get other vowels, vowel marks are put on this stroke. There are two [[pt:virama|viramas]]: one is visible, to leave just one consonant at the end of a word, the other is invisible, removing the horizontal stroke in consonant conjuncts:</p>
       <p>: ka {{sm|𑴌}} + virama + ta {{sm|𑴛}} + virama + va {{sm|𑴨}} = ktva {{sm|𑴌𑵅𑴛𑵅𑴨}}</p>
       <p />
-      <p>There are several [[pt:ligature|ligatures]] with {{t|r}} phoneme:</p>
+      <p>There are several [[pt:ligature|ligatures]] with the {{t|r}} phoneme:</p>
       <p>: ka {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = kra {{sm|𑴌𑵇}}</p>
      </orig>
     </text>
@@ -5354,11 +5354,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Zhang-Zhung is a Sino-Tibetan language that died in 10th century, it was written with minimum of five scripts. Unicode has only Marchen, the rest are not even [[pt:unification|unified]]. Probably all these scripts were only in religious use. It’s unknown how they wrote in everyday life.</p>
+      <p>Zhang-Zhung is a Sino-Tibetan language that died out in the 10th century, it was written with a minimum of five scripts. Unicode has only Marchen, the rest are not even [[pt:unification|unified]]. Probably all these scripts were only for religious use. It’s unknown how they wrote in everyday life.</p>
       <p />
-      <p>In syllables several letters are stacked together, and vowel marks relate to lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
+      <p>In syllables, several letters are stacked together, and vowel marks relate to the lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
       <p />
-      <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bön''.</p>
+      <p>Nowadays, it’s used in ''Bön'', a Tibetan para-Buddhist religion that originated in early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). The left-hand swastika became the symbol of ''Bön''.</p>
      </orig>
     </text>
    </group>
