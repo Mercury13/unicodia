@@ -3813,7 +3813,7 @@
      <transl>Деванáгари расширенный A</transl>
     </text>
     <text id="Text">
-     <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</orig>
+     <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrases like “may it be blessed”.</orig>
      <transl>Джайнские знаки препинания и [[pt:ligature|лигатуры]] для фраз вроде «да будет оно благословлено».</transl>
     </text>
    </group>
@@ -3824,7 +3824,7 @@
      <transl>Шарада дополнительная</transl>
     </text>
     <text id="Text">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or another initial vowel. Kashmiri {{nspk|ks}} is usually written in the [[ps:Arab|Arabic-Urdu]] script.</orig>
      <transl>Огласовки современной шарады для кашмирского, позаимствованные из [[ps:Deva|деванагари]]. Чтобы получить начальные буквы, эти метки крепятся к [[pu:11183]] или другой начальной гласной. Кашмирский {{nspk|ks}} обычно пишется [[ps:Arab|арабским-урду]].</transl>
     </text>
    </group>
@@ -8185,9 +8185,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Tedim man Pau Cin Hau (1859–1948), founder of a new religion. The religion was called ''Laipian'', “script religion”. First the script was ideographic, then alphabetical. The script has consonants R, F, Ch and some tones missing in Tedim, so Pau Cin Hau intended to make a script for all Kuki-Chin languages.</p>
+      <p>The script was invented by Tedim man Pau Cin Hau (1859–1948), founder of a new religion. The religion was called ''Laipian'', “script religion”. First, the script was ideographic, then alphabetical. The script has consonants R, F, Ch and some tones missing in Tedim, so Pau Cin Hau intended to make a script for all Kuki-Chin languages.</p>
       <p />
-      <p>Later the script was retaken by Christians, and it is still in limited use by Tedim {{nspk}}, together with [[ps:Latn|Latin]]. Cousin languages are written exclusively with Latin.</p>
+      <p>Later, the script was retaken by Christians, and it is still in limited use by Tedim {{nspk}}, together with [[ps:Latn|Latin]]. Cousin languages are written exclusively in Latin.</p>
      </orig>
      <transl>
       <p>Письмо изобретено По Чин Хо (1859–1948), основателем новой религии из народа тедим. Религия называлась ''Laipian''{{-}}«религия письма». Сначала письмо было иероглифическим, потом алфавитным. В письме есть согласные R, F, Ch и несколько тонов, отсутствующие в тедиме{{-}}так что По Чин Хо намеревался сделать письмо для всех куки-чинских языков.</p>
