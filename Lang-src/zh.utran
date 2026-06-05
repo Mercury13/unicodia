@@ -1420,7 +1420,7 @@
      <orig>
       <p>'''American Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in the USA in 1963. A width of 7 bits was chosen as a compromise for telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is the same as ASCII, so English Unicode text is readable even in a wrong encoding.</p>
       <p />
-      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character was punched by mistake and should{{_}}not be read.</p>
+      <p>The first 32 characters, 00…1F, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back, and type a backquote. The last character, 7F=DEL, goes back to punched tapes{{-}}holes punched in all tracks tell that the character was punched by mistake and should{{_}}not be read.</p>
       <p />
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
@@ -3926,10 +3926,15 @@
    <group id="10EC0">
     <text id="Text">
      <orig>
+      <p>Characters from the Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
+      <p />
+      <p>“Capital” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
+     </orig>
+     <known-orig>
       <p>Characters from Turkish and Libyan Quran, and rare variations of Pegon (writing [[ps:Java|Javanese]] with Arabic letters).</p>
       <p />
       <p>“Captial” letters were invented in 1932 by the Egyptian king Fuad{{_}}I.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>来自土耳其和利比亚《古兰经》的字符，以及用阿拉伯字母书写 [[ps:Java|爪哇语]] 的佩贡文（Pegon）的罕见变体。</p>
       <p />
@@ -4009,7 +4014,8 @@
      <transl>僧伽罗古代数字（Sinhala Archaic Numbers）</transl>
     </text>
     <text id="Text">
-     <orig>The old non-positional number system used in Sri Lanka up to the early 19th century.</orig>
+     <orig>The old non-positional number system used in Sri Lanka until the early 19th century.</orig>
+     <known-orig>The old non-positional number system used in Sri Lanka up to the early 19th century.</known-orig>
      <transl>这是直到 19 世纪早期在斯里兰卡使用的一种古老的非位值数字系统。</transl>
     </text>
    </group>
@@ -4074,12 +4080,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The ''birga'' character, which leaked from [[ps:Tibt|Tibetan]] into Mongolian and was used as an initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
+      <p />
+      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in the ancillary plane.</p>
+      <p />
+      <p>The icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
+     </orig>
+     <known-orig>
       <p>Birga character that leaked to Mongolian from [[ps:Tibt|Tibetan]] and used as initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
       <p />
       <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in ancillary plane, not{{_}}[[pt:bmp|Base]].</p>
       <p />
       <p>Icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Birga 字符是从 [[ps:Tibt|藏文]] “泄露”到蒙古文中的，用作句首标记。蒙古文是竖排书写（从上到下），而藏文是横排书写（从左到右），因此无法直接使用藏文的“句首符号”。</p>
       <p>Unicode 慷慨地为其分配了真正的码位，而不是将其作为书写变体——但它位于辅助平面，而不是 [[pt:bmp|基本多文种平面]]。</p>
@@ -4164,7 +4177,8 @@
      <transl>天城文字扩展 A（Devanagari Extended-A）</transl>
     </text>
     <text id="Text">
-     <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</orig>
+     <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrases like “may it be blessed”.</orig>
+     <known-orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</known-orig>
      <transl>用于“愿它受祝福”等短语的耆那教标点符号和 [[pt:ligature|连字]]。</transl>
     </text>
    </group>
@@ -4175,7 +4189,8 @@
      <transl>夏拉达文字补充（Sharada Supplement）</transl>
     </text>
     <text id="Text">
-     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</orig>
+     <orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or another initial vowel. Kashmiri {{nspk|ks}} is usually written in the [[ps:Arab|Arabic-Urdu]] script.</orig>
+     <known-orig>Vowel marks of modern Sharada for Kashmiri, adapted from [[ps:Deva|Devanagari]]. To get initial letters, these marks are attached to [[pu:11183]] or other initial vowel. Kashmiri {{nspk|ks}} is usually written in [[ps:Arab|Arabic-Urdu]].</known-orig>
      <transl>用于克什米尔语现代夏拉达文的元音标记，改编自 [[ps:Deva|天城文]]。要构成独立的首字母形式，这些标记需要附加在 [[pu:11183]]（即夏拉达文的辅音载体符号）或其他初始元音上。克什米尔语 {{nspk|ks}} 通常使用 [[ps:Arab|阿拉伯-乌尔都文]] 书写。</transl>
     </text>
    </group>
@@ -4244,7 +4259,8 @@
      <transl>老傈僳文字补充（Lisu Supplement）</transl>
     </text>
     <text id="Text">
-     <orig>One character from Naxi language {{nspk|nxq}}.</orig>
+     <orig>One character from the Naxi language {{nspk|nxq}}.</orig>
+     <known-orig>One character from Naxi language {{nspk|nxq}}.</known-orig>
      <transl>一个来自纳西语{{nspk|nxq}}的字符。</transl>
     </text>
    </group>
@@ -4271,10 +4287,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>About 2000{{_}}BC, the Babylonians devised the first positional number system, which was 60-based. {{sm|𒐕}}{{_}}is a unit from 0 to 9, and {{sm|𒌋}}{{_}}is ten from 0 to 5. Zero {{sm|𒑊}}{{_}}was written only between positions, not{{_}}at the end of the number; the number’s order is deducible only from context.</p>
+      <p />
+      <p>Before that, a [[ps:Pcun|non-positional system]] was used, in which different objects and positions were written with different signs.</p>
+     </orig>
+     <au-cmt>
+      <p>NBSPs after 1/10/0 are workarounds for some linebreaking glitch</p>
+      <p>NBSP after NOT is usual "do not break NOT from following"</p>
+     </au-cmt>
+     <known-orig>
       <p>Babylonians about 2000{{_}}BC devised the first positional number system, it was 60-based. {{sm|𒐕}} is a unit from 0 to 9, {{sm|𒌋}} is ten from 0 to 5. Zero {{sm|𒑊}} was written only between positions, not{{_}}at the end of the number, number’s order is deducible only from context.</p>
       <p />
       <p>Before that, a non-positional system was used, when different objects and different positions were written with different signs.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>公元前 2000 年左右的巴比伦人设计了第一个位值制数字系统，它是六十进制的。{{sm|𒐕}} 代表 0 到 9 的单位，{{sm|𒌋}} 代表 0 到 5 的十位。零 {{sm|𒑊}} 仅写在数位之间，而不出现在数字的末尾，数字的位值顺序只能通过上下文来推断。</p>
       <p>在此之前，人们使用的是非位值制系统，即不同的物体和不同的位置用不同的符号来表示。</p>
@@ -4318,8 +4343,17 @@
       <p />
       <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
       <p />
-      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to the hieroglyphs’ actual width and height.</p>
      </orig>
+     <known-orig>
+      <p>Sixteen characters provide complete formatting of Egyptian hieroglyphs. They need a special layout engine.</p>
+      <p />
+      <p>Horizontal mirroring mark may be implemented either in an engine or in a font.</p>
+      <p />
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple [[pt:spacing|spacing]] characters.</p>
+      <p />
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
+     </known-orig>
      <transl>
       <p>十六个字符提供了埃及象形文字的完整排版格式化功能。它们需要一个专门的排版引擎来支持。</p>
       <p />
@@ -4338,7 +4372,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
+      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, which led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
       <p />
       <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped [[pc:130FB]]↔[[pc:13AE8|AE8]] and others), and inconsistencies between glyphs and their descriptions.</p>
       <p />
@@ -4347,6 +4381,15 @@
       <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
      </orig>
      <au-cmt>Laptop: https://www.mail-archive.com/unicode@unicode.org/msg42374.html</au-cmt>
+     <known-orig>
+      <p>3995 more hieroglyphs from sources other than Alan Gardiner. The first proposals were so bad that a man with a laptop somehow slipped in, but scholars checked everything, and that led to ''Unikemet'', Unicode’s base of Egyptian hieroglyphs. (''Kemet'' is the autonym of ancient Egypt.)</p>
+      <p />
+      <p>However, the work was sub-par, and closer review revealed sloppy [[pt:unification|disunification]] (Unicode{{_}}17 swapped [[pc:130FB]]↔[[pc:13AE8|AE8]] and others), and inconsistencies between glyphs and their descriptions.</p>
+      <p />
+      <p>Egyptologists developed special arrows for reading direction, [[pu:1F8C0]] and [[pc:1F8C1|C1]].</p>
+      <p />
+      <p>In early 2025, [[pt:egyp|rules for encoding]] hieroglyphs were written.</p>
+     </known-orig>
      <transl>
       <p>来自艾伦·加德纳（Alan Gardiner）标准列表之外的 3995 个象形文字。最初的提案质量很差，甚至不知怎的混入了一个带着笔记本电脑的人形符号，但学者们审核了所有内容，从而诞生了 Unikemet——Unicode 的埃及象形文字库。（Kemet 是古埃及的自称。）</p>
       <p />
@@ -4382,7 +4425,8 @@
      <transl>巴穆姆文字补充（Bamum Supplement）</transl>
     </text>
     <text id="Text">
-     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</orig>
+     <orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. The final syllabic phase G is in the [[pt:bmp|Basic Plane]].</orig>
+     <known-orig>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Basic Plane]].</known-orig>
      <transl>巴穆姆文字 A 到 F 阶段的早期形态，兼具表意和音节特征。最终的音节化 G 阶段位于 [[pt:bmp|基本多文种平面]]。</transl>
     </text>
    </group>
@@ -4443,6 +4487,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], and old [[ps:Hani|Chinese ideographs]].</p>
+      <p />
+      <p>An identical ideograph is{{_}}not{{_}}written twice in a row, an iteration mark is written instead. In modern printed Chinese, iteration is allowed; Chinese informally and Japanese use {{sm|々}} [[pu:3005]].</p>
+      <p />
+      <p>Hook means the end of a sentence or section in old manuscripts.</p>
+      <p />
+      <p>If a block of Khitan Small starts with a single ideograph instead of two, a [[pc:16FE4|filler]] is put in the vacant place.</p>
+      <p />
+      <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and are thus [[pt:unification|unified]]. The second form looks like an arrow &lt;big&gt;↑&lt;/big&gt; and a lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
+     </orig>
+     <known-orig>
       <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
       <p />
       <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} [[pu:3005]].</p>
@@ -4452,7 +4507,7 @@
       <p>If a block of Khitan Small starts with a single ideograph instead of two, a [[pc:16FE4|filler]] is put in the vacant place.</p>
       <p />
       <p>While Vietnam wrote with ideographs, two characters were used to convey local pronunciation. Both have two variants that never occur in a single text and thus [[pt:unification|unified]]. The second form looks like arrow &lt;big&gt;↑&lt;/big&gt; and lightning &lt;big&gt;ϟ&lt;/big&gt; respectively.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>用于旧式 [[pt:cjk|中日韩]] 文字的各种字符：[[ps:Nshu|女书]]、[[ps:Tang|西夏文]]、[[ps:Kits|契丹小字]]、以及旧式 [[ps:Hani|汉字]]。</p>
       <p />
@@ -4478,7 +4533,8 @@
      <transl>西夏文字部件（Tangut Components）</transl>
     </text>
     <text id="Text">
-     <orig>Components and radicals used in modern studying of Tangut script.</orig>
+     <orig>Components and radicals used in the modern study of the Tangut script.</orig>
+     <known-orig>Components and radicals used in modern studying of Tangut script.</known-orig>
      <transl>用于西夏文现代研究的部件和部首。</transl>
     </text>
    </group>
@@ -4495,10 +4551,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words, all nine are someone’s homographs. For example, ''pair'' stayed in the same place [[pc:17134]], and the homograph ''foolish'' got a new number [[pc:18D00]].</p>
+      <p />
+      <p>A Tangut dictionary was published in China in 2021, boosting the encoding of new ideographs.</p>
+     </orig>
+     <known-orig>
       <p>Nine characters were [[pt:unification|disunified]] in 2020. In other words: all nine are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</p>
       <p />
       <p>A Tangut dictionary came in 2021 in China, boosting encoding new ideographs.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>有九个字符在 2020 年被 [[pt:unification|分离]] 了。换句话说：这九个字符都是某人的同形字。例如，“pair”（一对）留在了原来的位置 17134，而同形字“foolish”（愚蠢）则获得了一个新编号 18D00。</p>
       <p />
@@ -5526,10 +5587,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The country has{{_}}no{{_}}relation to Balkan Albania, and its autonym is unknown: ''Albania'' is a Greek name, and ''Aghwank'' is a modern Armenian one. People spoke Lezgic languages. Since the 1st century BC, it has had a strong kingdom. In 461, it was conquered by the Persians, in the 7th century, it submitted to the Khazars for a short time and regained liberty. From the 10th century, a part of Albania was Turkified and transformed into Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in the ethnogenesis of the Armenians, Georgians of Kakheti, and Dagestanians. Possibly, the alphabet was used by descendant languages until the 12th century. The country spans modern Russia and Georgia, and is thus conventionally classified as Europe.</p>
+      <p />
+      <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of the [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886, a 16th-century note in Armenian written in Albanian script was found. In 1937, Soviet Armenologists found the full alphabet. In 1948, an early Christian temple from the 6th century with authentic inscriptions was excavated while building a hydropower plant. In 1996, the Sinai Palimpsest was found{{-}}a Bible written in Albanian, then erased and rewritten in Georgian. It helped in decipherment, and the first one came in 2008.</p>
+     </orig>
+     <known-orig>
       <p>The country has{{_}}no{{_}}relation to Balkan Albania, and its autonym is unknown: ''Albania'' is a Greek name, ''Aghwank'' is a modern Armenian. People spoke Lezgic languages. Since 1st century BC had a strong kingdom. In 461 was conquered by Persians, in 7th century submitted to Khazars for a short time and got liberty again. From 10th century part of Albania was Turkified and transformed into Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in the ethnogenesis of Armenians, Georgians of Kakheti, Dagestanians. Possibly the alphabet was used up to 12th century by descendant languages. The country spans modern Russia and Georgia, and is thus conventionally classified as Europe.</p>
       <p />
       <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886 a 16th century note in Armenian with Albanian script was found. In 1937 Soviet Armenologists found the full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. In 1996 Sinai Palimpsest was found, the Bible written in Albanian, then erased and written in Georgian. It helped in decipherment, and the first one came in 2008.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该国与巴尔干半岛的阿尔巴尼亚毫无关系，其自称已不可考：“Albania”是希腊语名称，“Aghwank”则是现代亚美尼亚语的称呼。当地居民讲的是列兹金语族语言。自公元前 1 世纪起，这里曾拥有一个强大的王国。公元 461 年，该国被波斯人征服；7 世纪时，曾短暂臣服于可萨汗国，随后重获自由。从 10 世纪开始，阿尔巴尼亚的部分地区经历了突厥化，演变为希尔万（即现代阿塞拜疆的一部分）和卡拉巴赫。其他地区的居民则融入了亚美尼亚人、卡赫季格鲁吉亚人以及达吉斯坦人的民族形成过程。这种文字可能一直沿用到 12 世纪，才被其后继语言所取代。该国疆域跨越了现代的俄罗斯和格鲁吉亚，因此在传统上被归类为欧洲国家。</p>
       <p />
@@ -5547,7 +5613,8 @@
      <transl>泰-阿洪姆语 （Tai-Ahom，印度阿萨姆邦，正处于复兴中）</transl>
     </text>
     <text id="Text">
-     <orig>Tais who settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived since 1954, decimal numbers without historical justification were added to the script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</orig>
+     <orig>The Tais, who settled in the valley of the Brahmaputra River, created a script based on a local abugida. By the 19th century, the language had been  finally supplanted by Assamese with the [[ps:Beng|Bengali]] script. Revived since 1954, decimal numbers without historical justification have been added to the script. The tonal system of Tai-Ahom is entirely lost{{-}}the script did{{_}}not{{_}}convey it.</orig>
+     <known-orig>Tais who settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived since 1954, decimal numbers without historical justification were added to the script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</known-orig>
      <transl>定居在布拉马普特拉河谷的泰人创造了一种基于印度元音附标文字（Abugida）的文字系统。到了 19 世纪，这种语言最终被使用 [[ps:Beng|孟加拉]] 文字的阿萨姆语所取代。自 1954 年起该文字开始复兴，当时向其中添加了缺乏历史依据的阿拉伯数字。泰-阿洪姆语的声调系统已经完全失传——其文字系统原本并未记录声调。</transl>
     </text>
    </group>
@@ -5589,10 +5656,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In 593{{_}}BC Achaemenid Persia conquered Babylon and created a book language based on Aramaic, so codified that it’s extremely difficult to identify the place and date of a specific document. With the conquest of Persia by Alexander the Great (330{{_}}BC) fragmentation of language started, and [[ps:Syrc|Syriac]] (ancestors of [[ps:Arab|Arabic]]) and Jewish (ancestors of [[ps:Hebr|Hebrew]]) languages began to form.</p>
+      <p>In 593{{_}}BC, the Achaemenid Persia conquered Babylon and created a book language based on Aramaic, so codified that it’s extremely difficult to identify the place and date of a specific document. With the conquest of Persia by Alexander the Great (330{{_}}BC), language fragmentation began, and [[ps:Syrc|Syriac]] (ancestors of [[ps:Arab|Arabic]]) and Jewish (ancestors of [[ps:Hebr|Hebrew]]) languages began to form.</p>
       <p />
       <p>Numbers are made by combining numerals 1, 2, 3, 10, 20, 100, {{n|1000}} and {{n|10000}}: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (right to left!)</p>
      </orig>
+     <known-orig>
+      <p>In 593{{_}}BC Achaemenid Persia conquered Babylon and created a book language based on Aramaic, so codified that it’s extremely difficult to identify the place and date of a specific document. With the conquest of Persia by Alexander the Great (330{{_}}BC) fragmentation of language started, and [[ps:Syrc|Syriac]] (ancestors of [[ps:Arab|Arabic]]) and Jewish (ancestors of [[ps:Hebr|Hebrew]]) languages began to form.</p>
+      <p />
+      <p>Numbers are made by combining numerals 1, 2, 3, 10, 20, 100, {{n|1000}} and {{n|10000}}: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (right to left!)</p>
+     </known-orig>
      <transl>
       <p>公元前 593 年，阿契美尼德波斯征服了巴比伦，并基于亚拉姆语创造了一种书面通用语。这种语言规范化程度极高，以至于很难确定具体文献的出土地点和年代。随着亚历山大大帝征服波斯（公元前 330 年），语言开始分化，[[ps:Syrc|叙利亚语]]（[[ps:Arab|阿拉伯语]]的祖先）和犹太语（[[ps:Hebr|希伯来语]]的祖先）开始形成。</p>
       <p />
@@ -5628,22 +5700,21 @@
     </text>
    </group>
    <group id="Avst">
-    <text id="Name">
-     <orig>Avestan</orig>
-     <transl>阿维斯陀文字（Avestan）</transl>
-    </text>
-    <text id="Lang">
-     <orig>Avestan, Middle Persian</orig>
-     <transl>阿维斯陀语（Avestan），中古波斯语</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>The alphabet is related to Zoroastrianism and its holy text, the Avesta. About 400, a special alphabet based on Book Pahlavi (the script of Middle-Persian manuscripts) was created in Sasanid Persia to codify the Avesta. By that time, Zoroastrianism was many centuries old, and the language was little understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
+      <p />
+      <p>Under the Arabs, the Zoroastrians started to move to India, and since the 12th century, have written in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as Zanzibar).</p>
+      <p />
+      <p>In 2000, ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodable{{-}}[[ps:Egyp|Egyptian hieroglyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}the [[pk:101D0|Phaistos Disc]]). Avestan fell into the most important category A, which gave it a chance for a place in [[pt:bmp|Basic Plane]]. But another opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] side by side, in the supplementary plane. A hole was left for the unencoded Book Pahlavi.</p>
+     </orig>
+     <known-orig>
       <p>The alphabet is related to Zoroastrianism and its holy text Avesta. About 400 a special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created in Sasanid Persia to codify Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.</p>
       <p />
       <p>Under Arabs Zoroastrians started to move to India, and since 12th century wrote in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar).</p>
       <p />
       <p>In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for a place in [[pt:bmp|Basic Plane]]. But another opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in the supplementary plane. A hole was left for the unencoded Book Pahlavi.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这字母表与祆教（拜火教）及其圣典《阿维斯陀》密切相关。公元 400 年左右，萨珊波斯为了编纂《阿维斯陀》，基于巴列维文（中古波斯语手稿的文字系统）创造了一种专用字母表。当时祆教已有数百年历史，其语言已鲜为人知，而祈祷文必须被精确复诵才能生效——因此，这套字母表借鉴了邻近文字系统，配备了真正的元音字母。</p>
       <p />
@@ -5657,6 +5728,14 @@
       <p>* C2 类（未探索，业余爱好者请求——[[pk:101D0|费斯托斯圆盘]]）。</p>
       <p>阿维斯陀文最初被归入最重要的 A 类，这让它有机会被分配在 [[pt:bmp|基本多文种平面]]（BMP）中。但最终另一种观点占了上风：将阿维斯陀文和 [[ps:Phlp|巴列维文]] 编码在相邻位置，置于辅助平面中。这就为尚未编码的巴列维文书（Book Pahlavi）留下了一个空位。</p>
      </transl>
+    </text>
+    <text id="Name">
+     <orig>Avestan</orig>
+     <transl>阿维斯陀文字（Avestan）</transl>
+    </text>
+    <text id="Lang">
+     <orig>Avestan, Middle Persian</orig>
+     <transl>阿维斯陀语（Avestan），中古波斯语</transl>
     </text>
    </group>
    <group id="Bali">
@@ -5711,7 +5790,8 @@
      <transl>巴萨语（Bassa）</transl>
     </text>
     <text id="Text">
-     <orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</orig>
+     <orig>Bassa named Thomas Lewis discovered that former slaves from America used an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in the 20th century, and, in the 21st, it is being steadily supplanted by [[ps:Latn|Latin]].</orig>
+     <known-orig>Bassa named Thomas Lewis discovered that former slaves from America use an unusual script. By other data, he created the script for himself. Bassa call the script ''Vah''{{-}}“throw a sign”. The authentic script was widespread in 20th century, and in 21st it is being steadily supplanted with [[ps:Latn|Latin]].</known-orig>
      <transl>一位名叫托马斯·刘易斯（Thomas Lewis）的巴萨族人发现，来自美洲的前奴隶们使用一种奇特的文字。不过也有其他资料显示，这套文字其实是他自己创造的。巴萨人称这种文字为 Vah——意为“抛出一个符号”（throw a sign）。这种本土文字在 20 世纪曾广泛流传，但在 21 世纪，它正被 [[ps:Latn|拉丁文字]] 稳步取代。</transl>
     </text>
    </group>
@@ -5818,13 +5898,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>It was used in East India in the 11–12th centuries, and was mentioned by a Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized to be Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. The initial letter for long vocalic L is also unknown.</p>
+      <p />
+      <p>The inherent vowel is {{t|a}}, the rest are added with vowel marks, and turned to plain consonants with [[pt:virama|virama]]. Because of an extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only at the end of words.</p>
+      <p>: ka {{sm|𑰎}} + i {{sm|◌𑰰}} = ki {{sm|𑰎𑰰}}</p>
+      <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} = k {{sm|𑰎𑰿}}</p>
+      <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} + ta {{sm|𑰝}} = kta {{sm|𑰎𑰿𑰝}}</p>
+     </orig>
+     <known-orig>
       <p>It was used in East India in 11–12th centuries, and was mentioned by Chorasmian (modern Turkmenistan/Uzbekistan) scientist Al-Biruni. The first inscription was discovered in Kathmandu in 1884, it was hypothesized that it’s Biruni’s “Bhaiksuki”. 4 manuscripts and 11 inscriptions exist, all are Buddhist texts. Digits 0 and 3 are unknown and taken from similar scripts. The initial letter for long vocalic L is also unknown.</p>
       <p />
       <p>The inherent vowel is {{t|a}}, the rest are added with vowel marks, turned to plain consonants with [[pt:virama|virama]]. Because of an extensive system of [[pt:ligature|ligatures]] “consonant-consonant”, virama in explicit form is seen only at the end of words.</p>
       <p>: ka {{sm|𑰎}} + i {{sm|◌𑰰}} = ki {{sm|𑰎𑰰}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} = k {{sm|𑰎𑰿}}</p>
       <p>: ka {{sm|𑰎}} + virama {{sm|◌𑰿}} + ta {{sm|𑰝}} = kta {{sm|𑰎𑰿𑰝}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>它曾在 11 至 12 世纪 的东印度地区使用，并被花剌子模（今土库曼斯坦/乌兹别克斯坦一带）的学者比鲁尼（Al-Biruni）所记载。第一块铭文于 1884 年在加德满都被发现，据推测这就是比鲁尼笔下的“拜克舒基文”。目前仅存 4 部手稿和 11 块铭文，且全部为佛教文献。数字 0 和 3 的写法尚不明确，通常借用相似文字的写法。代表长元音 L 的起首字母也是未知的。</p>
       <p />
@@ -5877,12 +5965,21 @@
      <orig>Sanskrit, Pali, old Indian languages</orig>
      <transl>梵语，巴利语，古印度语言</transl>
     </text>
-    <text id="Note">
-     <orig>before 3rd century BC (for sure), 8–7th century BC (main hypothesis)</orig>
-     <transl>公元前 3 世纪之前（确凿无疑），公元前 8-7 世纪（主流假说）</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>No one knows when Brahmi emerged or what its ancestor was{{-}}it’s usually thought to have originated from [[ps:Armi|Aramaic]] in the 8–7th century{{_}}BC. Other scholars connect Brahmi to the more ancient and yet undeciphered Indus script. The most ancient reliable source is the pillars of King Ashoka (3rd century{{_}}BC). Earlier sources are poorly dated.</p>
+      <p />
+      <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest of the vowels are added with diacritic marks, inherent {{t|a}} is removed with the sign of [[pt:virama|virama]].</p>
+      <p />
+      <p>Scripts of Brahmic origin greatly change the graphics of characters and the inherent phoneme, but conserve these features and are named “Brahmic abugidas”.</p>
+      <p />
+      <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}}.</p>
+      <p />
+      <p>Unicode does{{_}}not{{_}}distinguish Brahmi by time and place; most fonts are close to the geometric writings of Ashoka’s pillars. By the 5th century, Brahmi had transformed into two major branches:</p>
+      <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
+      <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
+     </orig>
+     <known-orig>
       <p>No one knows when Brahmi emerged and what was the ancestor{{-}}it’s usually thought that from [[ps:Armi|Aramaic]] in 8–7th century{{_}}BC. Other scholars connect Brahmi to more ancient and yet undeciphered Indus script. The most ancient from reliable sources are pillars of King Ashoka (3rd century{{_}}BC). Earlier sources are poorly dated.</p>
       <p />
       <p>Brahmi has such features: written left-to-right, consonant letter means syllable with {{t|a}} phoneme, the rest of vowels are added with diacritic marks, inherent {{t|a}} is removed with the sign of [[pt:virama|virama]].</p>
@@ -5894,7 +5991,7 @@
       <p>Unicode does{{_}}not{{_}}distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
       <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
       <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into a separate south-eastern branch.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>没人确切知道婆罗米文字是何时出现的，它的祖先是谁——通常认为它源于公元前8-7世纪的[[ps:Armi|阿拉米文字]]（Aramaic）。另一些学者则将婆罗米文字与更古老且尚未破译的印度河文字（Indus script）联系起来。来自可靠来源的最古老实物是阿育王石柱（公元前3世纪）。更早的来源年代测定模糊不清。</p>
       <p />
@@ -5908,6 +6005,10 @@
       <p>* 北系（=笈多文，后婆罗米文，北婆罗米文）→ [[ps:Shrd|夏拉达文字]]（Sharada），[[ps:Sidd|悉昙文字]]（Siddham），[[ps:Deva|天城文字]]（Nagari），[[ps:Tibt|藏文字]]（Tibetan），[[ps:Bhks|拜克舒基文字]]（Bhaiksuki）；</p>
       <p>* 南系 → [[ps:Gran|古兰塔文字]]（Grantha），[[ps:Khmr|高棉文字]]（Khmer）……高棉文字、[[ps:Sinh|僧伽罗文字]]（Sinhala）以及其他非印度文字通常被单独划分为东南支系。</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>before 3rd century BC (for sure), 8–7th century BC (main hypothesis)</orig>
+     <transl>公元前 3 世纪之前（确凿无疑），公元前 8-7 世纪（主流假说）</transl>
     </text>
    </group>
    <group id="Brai">
@@ -6012,13 +6113,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>There are many Chakma speakers, and it is absent from lists of endangered languages, but [[ps:Beng|Bengali]] is supplanting the script. It comes from [[ps:Mymr|Myanmar]] and is very old, probably older than the known Myanmar specimens (11th century).</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is for the construction of ligatures; most of them were abolished with the 2001 reform.</p>
+      <p>: kā {{sm|𑄇}} + i {{sm|◌𑄨}} = ki {{sm|𑄇𑄨}}</p>
+      <p>: kā {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = k {{sm|𑄇𑄴}}</p>
+      <p>: kā {{sm|𑄇}} + virama {{sm|◌𑄳}} + tā {{sm|𑄖}} = ktā {{sm|𑄇𑄳𑄖}}</p>
+     </orig>
+     <known-orig>
       <p>There are many Chakma speakers and it is absent in lists of endangered languages, but the script is being supplanted with [[ps:Beng|Bengali]]. The script comes from [[ps:Mymr|Myanmar]] and is very old, probably older than the known Myanmar specimen (11th century).</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ā}} (long a) and frequently used [[pt:virama|virama]] ''(maayaa)''. The second virama is for construction of ligatures, most of them were abolished with the reform of 2001.</p>
       <p>: kā {{sm|𑄇}} + i {{sm|◌𑄨}} = ki {{sm|𑄇𑄨}}</p>
       <p>: kā {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = k {{sm|𑄇𑄴}}</p>
       <p>: kā {{sm|𑄇}} + virama {{sm|◌𑄳}} + tā {{sm|𑄖}} = ktā {{sm|𑄇𑄳𑄖}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>说查克马语的人很多，它并未出现在濒危语言列表中，但这种文字正逐渐被[[ps:Beng|孟加拉文字]]（Bengali）所取代。这种文字源自[[ps:Mymr|缅甸文字]]（Myanmar），历史非常悠久，可能比已知的缅甸文实物（11世纪）还要早。</p>
       <p />
@@ -6177,10 +6286,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The language was used in Chorasm near the Amu Darya river until the 13th century, gradually giving way to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but back in the 8th century, the script of [[ps:Armi|Aramaic]] origin was supplanted by [[ps:Arab|Arabic]].</p>
+      <p />
+      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, or sometimes joined if the shape permits.</p>
+     </orig>
+     <known-orig>
       <p>The language was used in Chorasm near the river of Amu Darya until 13th century, gradually losing to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but the script of [[ps:Armi|Aramaic]] origin back in 8th century was replaced with [[ps:Arab|Arabic]].</p>
       <p />
       <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, 21 letters in total. In most inscriptions, letters are not{{_}}joined, less frequently joined if shape permits.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该语言在阿姆河（Amu Darya）附近的花剌子模地区使用，直到13世纪，逐渐被波斯语取代。科学家比鲁尼（Biruni）和神学家扎马赫沙里（Zamakhshari）都讲这种语言——但源自[[ps:Armi|阿拉米文字]]（Aramaic）的古老文字在8世纪被[[ps:Arab|阿拉伯文字]]（Arabic）所取代。</p>
       <p />
@@ -6232,12 +6346,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>It supposedly came from [[ps:Lina|Linear A]]. About the 11th century{{_}}BC, it transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
+      <p />
+      <p>Scholars have a consensus on about 30 characters, but perspectives on complete decipherment are vague: only 250 inscriptions exist, with a total of {{n|2500}} characters. For comparison: in undeciphered Linear A{{-}}{n|7000}}, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}{{n|30000}}.</p>
+      <p />
+      <p>The image on the icon is authentic, and the font is based on Michael Everson’s tracings (2020).</p>
+     </orig>
+     <known-orig>
       <p>Came supposedly from [[ps:Lina|Linear A]]. About 11th century{{_}}BC transformed into [[ps:Cprt|Cypriot]]. Inscriptions were found in Cyprus and Palestine.</p>
       <p />
       <p>Scholars have a consensus on about 30 characters, but perspectives of complete decipherment are vague: only 250 inscriptions exist, with a total of {{n|2500}} characters. For comparison: in undeciphered Linear A{{-}}{n|7000}}, in [[ps:Linb|Linear B]] at the moment of decipherment{{-}}{{n|30000}}.</p>
       <p />
       <p>The image on the icon is authentic, font is based on Michael Everson’s tracings (2020).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>据推测，该文字源自[[ps:Lina|线性文字 A]]（Linear A）。约在公元前11世纪，它演变成了[[ps:Cprt|塞浦路斯音节文字]]（Cypriot）。铭文发现于塞浦路斯和巴勒斯坦地区。</p>
       <p />
@@ -6258,10 +6379,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Came from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not{{_}}found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
+      <p>Came from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) It was used from the 11th to the 3rd century{{_}}BC. Inscriptions from the 9–8th centuries{{_}}BC have not{{_}}been found. Later, the script fragmented into two branches: Paphos, which retained direction →, and common-Cyprus, which flipped to ←.</p>
       <p />
       <p>Partly deciphered in 1871 through newly-found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
      </orig>
+     <known-orig>
+      <p>Came from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not{{_}}found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
+      <p />
+      <p>Partly deciphered in 1871 through newly-found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
+     </known-orig>
      <transl>
       <p>它源自[[ps:Lina|线性文字 A]]（Linear A），经由[[ps:Cpmn|塞浦路斯-米诺斯文字]]（Cypro-Minoan）演变而来（请勿混淆！）。使用时间从公元前11世纪持续到公元前 3 世纪。目前尚未发现公元前 9 至 8 世纪的铭文，之后该文字分化为两个分支：帕福斯（Paphos）分支保留了从右向左（→）的书写方向，而塞浦路斯通用分支则翻转为从左向右（←）。</p>
       <p />
@@ -6361,6 +6487,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Developed in the Maldives from [[ps:Gran|Grantha]] and existed until the 18th century, and in some islands until the 20th. The early form (before the 12th century) scholars call ''Evela Akuru'' (a retronym, not{{_}}an autonym!). With the conversion from Buddhism to Islam in 1153, ''Evela'' transformed to ''Dives'', remaining left-to-right. Since the 17th century, it has been gradually supplanted with [[ps:Thaa|Thaana]].</p>
+      <p />
+      <p>The Ancient Maldivian language had plenty of both phonemes and letter variants: the same document contained initial vowels both as separate letters and as marks upon [[pu:11925]]. ''Dives'' script retained the latter form, dropped palatal and aspirated consonants.</p>
+      <p />
+      <p>Inherent vowel is {{t|a}}, replaced by other vowels with vowel [[pt:combining|marks]], removed at the end of words with the [[pt:virama|virama]] sign ''(halanta)''. In the middle of words, virama means the alternate pronunciation of the “u” vowel. Another virama is purely virtual and serves for consonant conjuncts{{-}}two letters are just stuck together (also, there are 13 [[pt:ligature|ligatures]], such as “sta”).</p>
+      <p>: ka {{sm|𑤌}} + i {{sm|◌𑤱}} = ki {{sm|𑤌𑤱}}</p>
+      <p>: ka {{sm|𑤌}} + halanta {{sm|◌𑤽}} = k {{sm|𑤌𑤽}}</p>
+      <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
+      <p>: sa {{sm|𑤬}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = sta {{sm|𑤬𑤾𑤛}}</p>
+      <p>: sa + halanta + ṭa + halanta + na = súṭúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
+     </orig>
+     <known-orig>
       <p>Developed in Maldives from [[ps:Gran|Grantha]] and existed until 18th century, and in some islands until 20th. Early form (before 12th century) scholars call ''Evela Akuru'' (retronym, not{{_}}autonym!). With the conversion from Buddhism to Islam in 1153, ''Evela'' transformed to ''Dives'', remaining left-to-right. Since the 17th century, it was gradually supplanted with [[ps:Thaa|Thaana]].</p>
       <p />
       <p>Ancient Maldivian had plenty of both phonemes and letter variants: the same document contained initial vowels both as separate letters and as marks upon [[pu:11925]]. ''Dives'' script retained the latter form, dropped palatal and aspirated consonants.</p>
@@ -6371,7 +6509,7 @@
       <p>: ka {{sm|𑤌}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = kta {{sm|𑤌𑤾𑤛}}</p>
       <p>: sa {{sm|𑤬}} + virama {{sm|◌𑤾}} + ta {{sm|𑤛}} = sta {{sm|𑤬𑤾𑤛}}</p>
       <p>: sa + halanta + ṭa + halanta + na = súṭúna {{sm|𑤬𑤽𑤖𑤽𑤟}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字在马尔代夫由[[ps:Gran|古兰塔文字]]（Grantha）演变而来，一直使用到 18 世纪，在部分岛屿甚至延续到 20 世纪。学者将早期的形式（12 世纪以前）称为“埃维拉阿库鲁文”（Evela Akuru）（这是后世术语，并非当时的自称！）。随着 1153 年从佛教改信伊斯兰教，“埃维拉”演变成了“迪维希”，但仍保持从左向右的书写方向。自 17 世纪以来，它逐渐被 [[ps:Thaa|它拿文字]]（Thaana）取代。</p>
       <p />
@@ -6397,12 +6535,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]] and standardized in the mid-19th century under Maharaja Ranbir Singh. After Ranbir died in 1885, [[ps:Arab|Urdu]] was chosen as the official language under British pressure. In the 20th century, writing in [[ps:Deva|Devanagari]] prevailed, and since the 21st century, people have become interested in native scripts.</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also, [[pt:ligature|ligatures]] exist in Dogri, but are unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s seen in the autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
+      <p />
+      <p>Digits are taken from Takri.</p>
+     </orig>
+     <known-orig>
       <p>Language of Dogri, people of India. The script is borrowed from [[ps:Takr|Takri]], standardized in the middle of 19th century under Maharaja Ranbir Singh. After Ranbir died in 1885, under British pressure [[ps:Arab|Urdu]] was chosen as the official language. In 20th century writing in [[ps:Deva|Devanagari]] prevailed, and since 21st century people started to be interested in native script.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|ə}} (In Unicode conventionally “a”) that’s greatly reduced in unstressed syllables, like in [[ps:Guru|Punjabi]]. Also [[pt:ligature|ligatures]] exist in Dogri, unencoded in this font. That’s why [[pt:virama|virama]] is rare in Dogri, it’s seen in autonym: {{sm|𑠖𑠵𑠌𑠤𑠬}} {{t|do-gᵊ-rā}}.</p>
       <p />
       <p>Digits are taken from Takri.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>多格拉语是印度的一种语言。其文字借用自[[ps:Takr|塔克里文字]]（Takri），于 19 世纪中叶在兰比尔·辛格（Ranbir Singh）大君统治时期进行了标准化。兰比尔于 1885 年去世后，在英国人的压力下，[[ps:Arab|乌尔都语]]（Urdu）被选为官方语言。20 世纪，使用[[ps:Deva|天城文字]]（Devanagari）书写逐渐占据主导地位，而自 21 世纪以来，人们开始对本土文字重新产生兴趣。</p>
       <p />
@@ -6423,6 +6568,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>In the 19th century, there were many attempts to create a phonetic script for English, and Brigham Young, the second leader of the Mormon Church, was neither the first nor the last. Supposedly, it would offer immigrants an opportunity to learn English more easily. The main job was done by Parley Pratt and George Watt.</p>
+      <p />
+      <p>''Deseret'' (“honeybee” in one of the languages of the Book of Mormon) is a project of the Mormon state, implemented to a lesser extent as ''Utah'', and has symbolic meaning among Mormons (for example, the ''University of Deseret'', now the ''University of Utah'').</p>
+      <p />
+      <p>The alphabet intentionally has no ascenders and descenders, which would reduce wear on metal type. Ascenders and descenders are sometimes added in modern fonts.</p>
+      <p />
+      <p>Four books were published in the new alphabet. When Young realized how much it would cost to publish the entire library, experiments stopped.</p>
+      <p />
+      <p>In 1997, the alphabet was encoded in the [[pt:private|ConScript Unicode Registry]]. Removed in 2001, when Deseret appeared in real Unicode.</p>
+     </orig>
+     <known-orig>
       <p>In 19th century there were many attempts to make a phonetical script for English, and Brigham Young, the second leader of the Mormon church, was neither the first nor the last. Supposedly it would offer immigrants an opportunity to learn English more easily. The main job was done by Parley Pratt and George Watt.</p>
       <p />
       <p>''Deseret'' (“honeybee” in one of the languages of the Book of Mormon) is a project of the Mormon state implemented to a lesser extent as ''Utah'' and has symbolic meaning among Mormons (for example, ''University of Deseret'', now ''University of Utah'').</p>
@@ -6432,7 +6588,7 @@
       <p>Four books were published in the new alphabet. When Young realized how much publishing of the entire library costs, experiments stopped.</p>
       <p />
       <p>In 1997 the alphabet was encoded in [[pt:private|ConScript Unicode Registry]]. Removed in 2001, when Deseret appeared in real Unicode.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>19 世纪曾有许多尝试为英语创造一种表音文字，摩门教（耶稣基督后期圣徒教会）的第二任领袖杨百翰（Brigham Young）既不是第一个，也不是最后一个。据称，这种文字将为移民提供一个更容易学习英语的机会。主要工作由帕利·普拉特（Parley Pratt）和乔治·瓦特（George Watt）完成。</p>
       <p />
@@ -6481,6 +6637,23 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Egyptian script passed through an ordinary way from pictographic writing (words are conveyed with illustrative pictures) through ideographic (abstract concepts appear{{-}}hieroglyph “sun” means day) to [[pt:abjad|consonant]] (phonetic signs start to emerge). We’ve seen the same in other well-developed civilizations, for example, [[ps:Xsux|Sumerian]].</p>
+      <p />
+      <p>Writing was mostly right-to-left, sometimes left-to-right or top-down. People and animals are always facing towards the beginning of a line. Encoded as a left-to-right script, because scholars tend to mirror text for convenience.</p>
+      <p />
+      <p>Besides hieroglyphs, there were two non-encoded scripts:</p>
+      <p>* hieratic (''sacred'') script{{-}}greatly reduced hieroglyphs; used in books and business documents;</p>
+      <p>* demotic (''people’s'') script{{-}}appeared in the 7th century{{_}}BC, with more alphabetical characters; first letters and business documents, then books.</p>
+      <p />
+      <p>But we know hieroglyphs best of all because they are well preserved, carved in stone. Despite the expansion of demotic, hieroglyphs remained in use, though the number of people who understood complex script was steadily declining. With the advent of Christianity, hieroglyphs were finally abandoned; the last inscription is dated 394{{_}}CE.</p>
+      <p />
+      <p>Using a bilingual with [[ps:Grek|Greek]] and knowledge of [[ps:Copt|Coptic]], in the 1820s Jean-François Champollion managed to read first names, then text, and soon died. His works were validated in the 1860s, long after his death.</p>
+      <p />
+      <p>In Windows fonts, three hieroglyphs of a penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
+      <p />
+      <p>In Unicode{{_}}5.2 (2009), the sample characters were historic enough (from Alan Gardiner’s 1957 book), but primitive. In Unicode{{_}}9.0 (2016), they were redrawn by a professional designer, somewhat deviating from the truth. Since Unicode{{_}}14.0 (2021), Egyptologists are fixing mistakes; some characters (e.g. 1309A) have been changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
+     </orig>
+     <known-orig>
       <p>Egyptian script passed an ordinary way from pictographic writing (words are conveyed with illustrative pictures) through ideographic (abstract concepts appear{{-}}hieroglyph “sun” means day) to [[pt:abjad|consonant]] (phonetic signs start to emerge). We’ve seen the same way in other well-developed civilizations, for example, [[ps:Xsux|Sumerian]].</p>
       <p />
       <p>Writing was mostly right-to-left, sometimes left-to-right or top-down. People and animals are always faced towards the beginning of a line. Encoded as left-to-right script, because scholars tend to mirror text for convenience.</p>
@@ -6496,7 +6669,7 @@
       <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
       <p />
       <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by a professional designer, deviating from the truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1309A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>埃及文字经历了一条常规的发展道路：从表意文字（用图画传达词义），发展到表意符号（出现抽象概念——例如“太阳”的象形字意味着“白天”），再到辅音文字（开始出现表音符号）。我们在其他发达文明中也见过同样的路径，例如 [[ps:Xsux|苏美尔文明]]。</p>
       <p />
@@ -6526,13 +6699,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The only source is the 59-page Elbasan Gospel of the mid-18th century,  measuring just 7×10{{_}}cm. In 1945, Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and was soon sentenced to death, and the manuscript was found in his collection. The authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
+      <p />
+      <p>{{Albanian}}</p>
+      <p />
+      <p>Do{{_}}not{{_}}confuse with the [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
+     </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
+     <known-orig>
       <p>The only source is the 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. In 1945 Lef Nosi, a pro-Nazi philologist and collector, was arrested by the socialist government and soon was sentenced to death, and the manuscript was found in his collection. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
       <p>{{Albanian}}</p>
       <p />
       <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
-     </orig>
-     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
+     </known-orig>
      <transl>
       <p>唯一的来源是 18 世纪中叶的《埃尔巴桑福音书》，全书仅 59 页，尺寸只有 7×10 厘米。1945 年，亲纳粹的语言学家兼收藏家莱夫·诺西被社会主义政府逮捕，随后被判处死刑，而这份手稿正是在他的收藏中被发现的。其作者通常被认为是阿尔巴尼亚修士格里戈尔·杜什卡（Gregory of Durrës）。</p>
       <p />
@@ -6554,12 +6734,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Persia ceased to exist after military defeats from Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
+      <p />
+      <p>The state existed from 147{{_}}BC to 224{{_}}CE, often fell under the Parthian reign, and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides the space are known. Native letter names are unknown and taken from Aramaic.</p>
+      <p />
+      <p>Do not confuse with Linear Elamite (2000{{_}}BC, deciphered in 2020) and Elamite cuneiform (1st millennium{{_}}BC, deciphered in the 1840s).</p>
+     </orig>
+     <known-orig>
       <p>Persia ceased existence after military defeats by Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown, Elymais appeared among other nations.</p>
       <p />
       <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
       <p />
       <p>Do not confuse with Linear Elamite (2000{{_}}BC, deciphered in 2020) and Elamite cuneiform (1st millennium{{_}}BC, deciphered in 1840s).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>波斯帝国在亚历山大大帝的军事打击下灭亡后便不复存在。亚历山大的继承者们无力维持这个庞大的多民族帝国，在帝国分崩离析后，埃利迈斯王国便与其他国家一同出现了。</p>
       <p />
@@ -6621,13 +6808,24 @@
       <p />
       <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
       <p />
-      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a large swash extending from the last letter.</p>
       <p />
       <p>Vowels are marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
       <p />
       <p>Read the autonym: {{sm|&amp;rlm;&amp;#68953;&amp;#68938;&amp;#68990;&amp;#68938;&amp;#68988;}}</p>
      </orig>
      <au-cmt>Cave: https://www.endangeredalphabets.net/alphabets/garay/</au-cmt>
+     <known-orig>
+      <p>After the liberation of Africa, many new scripts appeared. This one was created by Assane Faye from Senegal. Garay is the name of a local cave.</p>
+      <p />
+      <p>The current community is small, about 200 people. Wolof and Mandinka are written with [[ps:Latn|Latin]], [[ps:Arab|Arabic]] and [[ps:Nkoo|N’Ko]].</p>
+      <p />
+      <p>Capital letters have a big hook. Scripts of Arabic origin often feature joined letters, but Garay doesn’t. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+      <p />
+      <p>Vowels are marks attached to consonants. Initial vowels hang on the vowel carrier letter (A).</p>
+      <p />
+      <p>Read the autonym: {{sm|&amp;rlm;&amp;#68953;&amp;#68938;&amp;#68990;&amp;#68938;&amp;#68988;}}</p>
+     </known-orig>
      <transl>
       <p>非洲独立后，涌现出了许多新的文字系统。这一种是由来自塞内加尔的阿萨内·法耶创造的。加莱（Garay）这个名字来源于当地的一个洞穴。</p>
       <p>目前的使用群体很小，大约有 200 人。沃洛夫语和曼丁卡语通常使用 [[ps:Latn|拉丁文字]]、[[ps:Arab|阿拉伯文字]] 和 [[ps:Nkoo|西非书面文字]] 书写。</p>
@@ -6723,13 +6921,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>In 2006, documents from 1750 were found in the village of Gunjala. People who could read the script confirmed later that this was Gondi. The discovery was shown in 2014, and the state of Andhra Pradesh began reviving the script. Moreover, the language is virtually unwritten, people sporadically write in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]].</p>
+      <p />
+      <p>Each letter means a syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does{{_}}not{{_}}distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introducing new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible at the end of words only. In consonant conjuncts, it detaches a letter from the headstroke.</p>
+      <p>: ka {{sm|𑵱}} + i {{sm|◌𑶋}} = ki {{sm|𑵱𑶋}}</p>
+      <p>: ka {{sm|𑵱}} + virama = k {{sm|𑵱𑶗}}</p>
+      <p>: ka {{sm|𑵱}} + virama + ta {{sm|𑵳}} = kta {{sm|𑵱𑶗𑵳}}</p>
+     </orig>
+     <known-orig>
       <p>In 2006, documents from 1750 were found in the village of Gunjala. People who could read the script confirmed later that this was Gondi. The discovery was shown in 2014, and the state of Andhra Pradesh started to revive the script. Moreover, the language is virtually unwritten, people sporadically write in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]].</p>
       <p />
       <p>Each letter means a syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does{{_}}not{{_}}distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introducing new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible at the end of words only. In consonant conjuncts it detaches a letter from headstroke.</p>
       <p>: ka {{sm|𑵱}} + i {{sm|◌𑶋}} = ki {{sm|𑵱𑶋}}</p>
       <p>: ka {{sm|𑵱}} + virama = k {{sm|𑵱𑶗}}</p>
       <p>: ka {{sm|𑵱}} + virama + ta {{sm|𑵳}} = kta {{sm|𑵱𑶗𑵳}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>2006 年，在贡贾拉村发现了一些 1750 年的文件。能够阅读这种文字的人后来证实，这是贡德语。这一发现于 2014 年公布，安得拉邦政府随后开始着手复兴这种文字。此外，这种语言实际上没有书面文字，人们偶尔会使用 [[ps:Deva|天城文字]] 和 [[ps:Telu|泰卢固文字]] 来书写。</p>
       <p />
@@ -6751,6 +6957,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>According to the 2011 census, 13{{_}}million people identify as Gondi, but only 3{{_}}million know the language. Gondi is usually written in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]], but in 1918 Munshi Mangal Singh Masaram made a script based on other Indic scripts. Modern use of this script is insignificant.</p>
+      <p />
+      <p>Every letter has a horizontal stroke, meaning the vowel {{t|a}}. To get other vowels, vowel marks are put on this stroke. There are two [[pt:virama|viramas]]: one is visible, to leave just one consonant at the end of a word, the other is invisible, removing the horizontal stroke in consonant conjuncts:</p>
+      <p>: ka {{sm|𑴌}} + virama + ta {{sm|𑴛}} + virama + va {{sm|𑴨}} = ktva {{sm|𑴌𑵅𑴛𑵅𑴨}}</p>
+      <p />
+      <p>There are several [[pt:ligature|ligatures]] with the {{t|r}} phoneme:</p>
+      <p>: ka {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = kra {{sm|𑴌𑵇}}</p>
+     </orig>
+     <known-orig>
       <p>According to 2011 census, 13{{_}}million people identify as Gondi, but just 3{{_}}million know language. Gondi usually is written in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]], but Munshi Mangal Singh Masaram in 1918 made a script based on other Indic scripts. Modern use of this script is insignificant.</p>
       <p />
       <p>Every letter has a horizontal stroke meaning {{t|a}} vowel. To get other vowels, vowel marks are put to this stroke. There are two [[pt:virama|viramas]]: one is visible, to leave just one consonant in the end of a word, the other is invisible, removes horizontal stroke in consonant conjuncts:</p>
@@ -6758,7 +6973,7 @@
       <p />
       <p>There are several [[pt:ligature|ligatures]] with {{t|r}} phoneme:</p>
       <p>: ka {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = kra {{sm|𑴌𑵇}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>根据 2011 年的人口普查，有 1300 万人自认为是贡德人，但只有 300 万人掌握贡德语。贡德语通常使用 [[ps:Deva|天城文字]] 和 [[ps:Telu|泰卢固文字]] 书写，但蒙希·曼加尔·辛格·马萨拉姆在 1918 年基于其他印度文字创造了一种文字。这种文字的现代使用率微不足道。</p>
       <p />
@@ -6813,11 +7028,22 @@
      <transl>梵语（Sanskrit），泰米尔语（Tamil）</transl>
     </text>
     <text id="Note">
-     <orig>4th century (artifacts of Pallava), 7th century (artifacts of Middle Grantha)</orig>
+     <orig>4th century (artefacts of Pallava), 7th century (artefacts of Middle Grantha)</orig>
+     <known-orig>4th century (artifacts of Pallava), 7th century (artifacts of Middle Grantha)</known-orig>
      <transl>4 世纪（帕拉瓦文物），7 世纪（中古古兰塔文物）</transl>
     </text>
     <text id="Text">
      <orig>
+      <p>Grantha is an intermediate stage of the evolution of the southern branch of [[ps:Brah|Brahmi]]. The early variant of Grantha, called ''Pallava'', was used in the Pallava Kingdom (275–897). Grantha was used for the Tamil language until the 17th century, and for Sanskrit until the 19th. Influenced [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], and [[ps:Sinh|Sinhala]]. About 200{{_}}thousand specimens are stored in Indian libraries, both written on palm leaves and printed.</p>
+      <p />
+      <p>About 2010, an attempt to introduce Grantha in [[pt:unification|unification]] with Tamil failed. Because of uproar (nationalism is strong among Tamils), the scripts were disunified, leaving only digits that coincide in Tamil and late Grantha.</p>
+      <p />
+      <p>The inherent vowel is {{t|a}}. There are multiple [[pt:ligature|ligatures]] for consonant conjuncts.</p>
+      <p>: ka {{sm|𑌕}} + i {{sm|◌𑌿}} {{_}} = ki {{sm|𑌕𑌿}}</p>
+      <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} = k {{sm|𑌕𑍍}}</p>
+      <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
+     </orig>
+     <known-orig>
       <p>Grantha is an intermediate stage of evolution of southern branch of [[ps:Brah|Brahmi]]. Early variant of Grantha is named ''Pallava'' and was used in Pallava Kingdom (275–897). Grantha was used for Tamil language until 17th century, for Sanskrit until 19th. Influenced [[ps:Taml|Tamil]], [[ps:Mlym|Malayalam]], [[ps:Sinh|Sinhala]]. About 200{{_}}thousand specimen are stored in libraries of India, both written on palm leaves and printed.</p>
       <p />
       <p>About 2010 an attempt to introduce Grantha in [[pt:unification|unification]] with Tamil failed. Because of uproar (nationalism is strong among Tamils) the scripts were disunified, leaving only digits that coincide in Tamil and late Grantha.</p>
@@ -6826,7 +7052,7 @@
       <p>: ka {{sm|𑌕}} + i {{sm|◌𑌿}} {{_}} = ki {{sm|𑌕𑌿}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} = k {{sm|𑌕𑍍}}</p>
       <p>: ka {{sm|𑌕}} + virama {{sm|◌𑍍}} + ta {{sm|𑌤}} = kta {{sm|𑌕𑍍𑌤}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>古兰塔文字是 [[ps:Brah|婆罗米文字]] 南部分支演化过程中的一个中间阶段。古兰塔文字的早期变体被称为“帕拉瓦文字”，曾在帕拉瓦王国（275–897）使用。古兰塔文字用于泰米尔语直到 17 世纪，用于梵语直到 19 世纪。它影响了 [[ps:Taml|泰米尔文字]]、[[ps:Mlym|马拉雅拉姆文字]]、[[ps:Sinh|僧伽罗文字]]。印度图书馆中保存了约 20 万件样本，既有写在棕榈叶上的，也有印刷品。</p>
       <p />
@@ -6926,12 +7152,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Invented by Bal Narsingh Gurung. In 1997, the Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
+      <p />
+      <p>No ligatures for consonant conjuncts, [[pt:virama|virama]] (''tholhoma'') is always visible. The vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus the vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+      <p />
+      <p>At the moment of writing, Khema has no Unicode fonts, but in handwriting, the anusvara (nasalization mark) is a tick when empty, and a smile when it houses a circle inside (e.g. in E+anusvara).</p>
+     </orig>
+     <known-orig>
       <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
       <p />
       <p>No ligatures for consonant conjuncts, [[pt:virama|virama]] (''tholhoma'') is always visible. Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
       <p />
       <p>At the moment of writing Khema has no Unicode fonts, but in handwriting anusvara (nasalization mark) is tick when empty, and smile when houses a circle inside (e.g. in E+anusvara).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>由巴尔·纳尔辛格·古隆（Bal Narsingh Gurung）发明。1997 年，印度锡金邦承认了古隆语，并将凯玛文定为官方文字。</p>
       <p />
@@ -7100,7 +7333,8 @@
      <transl>哈特拉（Hatran，亚述（Ashurian））阿拉米语（Aramaic）</transl>
     </text>
     <text id="Text">
-     <orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</orig>
+     <orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before the 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</orig>
+     <known-orig>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</known-orig>
      <transl>[[ps:Armi|阿拉米文字]] 的后裔。在公元 3 世纪之前一直用于哈特拉（现代伊拉克境内），直到哈特拉被萨珊王朝的沙普尔一世（Shapur I）摧毁。所有已知的铭文都很简短，最长的一篇也只有 13 行。</transl>
     </text>
    </group>
@@ -7211,12 +7445,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The hieroglyphs are named after the place they have been found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrect: the Hittite language was never written with those hieroglyphs, though the first of them were invented in Hittite-Luwian bilingualism. In the 12th and 11th centuries{{_}}BC, there was the Bronze Age Collapse with a lack of materials; since the 10th century, they have appeared again. About the 7th century{{_}}BC, hieroglyphs were replaced with an [[pt:alphabet|alphabetic]] script and forgotten.</p>
+      <p />
+      <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not{{_}}just a concept but a syllable, but they are few.</p>
+      <p />
+      <p>Around 1800, the hieroglyphs drew scholars’ attention; it was hypothesized that they were Hittite. In 1915, the Luwian language was finally deciphered via [[ps:Xsux|cuneiform]]. In the 1930s, the first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</p>
+     </orig>
+     <known-orig>
       <p>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrect, Hittite language had never been written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.</p>
       <p />
       <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not{{_}}just concept but syllable, but they are few.</p>
       <p />
       <p>About 1800 hieroglyphs drew scholars’ attention, it was hypothesized that they are Hittite. In 1915 Luwian language was finally deciphered via [[ps:Xsux|cuneiform]], in 1930s first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种象形文字是根据发现地点（安纳托利亚 = 小亚细亚）或其记录的语言（卢维语）来命名的。“赫梯”这一名称是不正确的，赫梯语从未用这些圣书体文字书写，尽管最早的圣书体是在赫梯-卢维双语环境下发明的。公元前 12 世纪和 11 世纪发生了青铜时代大崩溃，导致材料匮乏（铭文减少），直到公元前 10 世纪它们才再次出现。约公元前 7 世纪，这些圣书体文字被 [[pt:alphabet|字母]] 文字取代并逐渐被遗忘。</p>
       <p />
@@ -7241,6 +7482,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Shong Lue Yang, the inventor of the script, said that it was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam War was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, pro-Americans assassinated Shong.</p>
+      <p />
+      <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of the vowel “oob”, the consonant “qh” and a tack for tone.</p>
+      <p />
+      <p>Four stages exist; the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
+      <p />
+      <p>Hmong people from the same clan are perceived to be like brothers and sisters, and should not do anything that looks romantic, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges or drawn on doors. These characters have never been used widely.</p>
+     </orig>
+     <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
+     <known-orig>
       <p>Shong Lue Yang, the inventor of the script, said that the script was given to him by God. The name “Pahawh” means “unite”. Development lasted from 1959 to 1971. Vietnam War was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation, Shong was assassinated by pro-Americans.</p>
       <p />
       <p>Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, the word “Hmong” {{sm|𖬌𖬣𖬵}} consists of vowel “oob”, consonant “qh” and a tack for tone.</p>
@@ -7248,8 +7499,7 @@
       <p>Four stages exist; the last was proposed just a month before the assassination. Stages two and three are in use by different Hmong groups, and this block encodes all but the initial.</p>
       <p />
       <p>Hmong people from the same clan are perceived to be like brothers and sisters, and should not do anything that looks romantic, even spend time alone together. As Hmongs lost their homeland, clan signs might be worn as badges or drawn on doors. These characters have never been used widely.</p>
-     </orig>
-     <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
+     </known-orig>
      <transl>
       <p>该文字的发明者舒·李（Shong Lue Yang）称，这套文字是神赐予他的。“Pahawh”这个名字意为“联合”。其开发工作从 1959 年持续到 1971 年。当时越南战争正在进行，舒·李的团体受到共产主义势力和亲美势力的双重怀疑，而在文字创造后不久，舒·李就被亲美势力暗杀了。</p>
       <p />
@@ -7288,18 +7538,21 @@
      <orig>Old Hungarian (Székely) runes</orig>
      <transl>古匈牙利（塞凯伊）卢恩文字（Old Hungarian (Székely) runes）</transl>
     </text>
-    <text id="Lang">
-     <orig>Hungarian</orig>
-     <transl>匈牙利语（Hungarian）</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]] ones: whether originated from them or are sister scripts.</p>
+      <p />
+      <p>Istvan{{_}}I, the first King of Hungary, united the Hungarian tribes, converted to Christianity and switched to [[ps:Latn|Latin]] around 1000, but the use of runes continued, gradually declining. The last inscriptions are dated ≈1800.</p>
+      <p />
+      <p>Studying began in the 18th century, the main work was conducted around 1900, and even new runes were created for the remaining phonemes of Hungarian. Hungarians are proud of runes and sometimes even duplicate signs, but few can read them: in 2017, some pranksters replaced the Érd town sign with “Szia” (“hi”, both words are 3 runes long), and it went unnoticed for a month.</p>
+     </orig>
+     <known-orig>
       <p>It’s unknown how Old Hungarian runes are related to [[ps:Orkh|Turkic]]: originated from them or sister scripts.</p>
       <p />
       <p>Istvan{{_}}I, the first King of Hungary, united Hungarian tribes, turned to Christianity and switched to [[ps:Latn|Latin]] about 1000, but the use of runes continued, gradually declining. The last inscriptions are dated ≈1800.</p>
       <p />
       <p>Studying started in the 18th century, the main work was conducted about 1900, and even new runes were made for the remaining phonemes of Hungarian. Hungarians are proud of runes and even duplicate signs sometimes, but few can read them: in 2017 some pranksters replaced sign of Érd town with “Szia” (“hi”, both words are 3 runes long), and that was unnoticed for a month.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>目前尚不清楚古匈牙利卢恩文字与 [[ps:Orkh|突厥]] 文字之间究竟有何关联：是源于突厥文字，还是互为“姐妹”文字？</p>
       <p />
@@ -7307,6 +7560,10 @@
       <p />
       <p>对这种文字的研究始于 18 世纪，主要工作在 1900 年左右展开，当时甚至为匈牙利语中剩余的音位创造了新的卢恩符号。匈牙利人以这些卢恩文字为荣，有时会重复使用某些符号，但几乎没人能读懂它们：2017 年，一些恶作剧者将埃尔德（Érd）镇的路牌换成了“Szia”（意为“你好”，这两个词都由 3 个卢恩符号组成），而这一情况竟然一个月都没人发现。</p>
      </transl>
+    </text>
+    <text id="Lang">
+     <orig>Hungarian</orig>
+     <transl>匈牙利语（Hungarian）</transl>
     </text>
    </group>
    <group id="Ital">
@@ -7442,6 +7699,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>An old script of [[ps:Brah|Brahmic]] origin, the ancestor of the [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By the 16th century, it had been supplanted by other scripts.</p>
+      <p />
+      <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, and carving in stone. The “standard” style of Kawi is taken from early copper plates, with later characters adapted to it.</p>
+      <p />
+      <p>There are no spaces, and the words that end with a consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
+      <p />
+      <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community that uses Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}modern Kawi characters were encoded, only some room was left.</p>
+     </orig>
+     <known-orig>
       <p>Old script of [[ps:Brah|Brahmic]] origin, the ancestor of [[ps:Java|Javanese]]. Comes from Pallava (early [[ps:Gran|Grantha]]). By the 16th century, it had been supplanted with other scripts.</p>
       <p />
       <p>There are several styles of Kawi suitable for different forms of writing: impressing on copper plates, writing with ink on palm leaves, and carving in stone. The “standard” style of Kawi is taken from early copper plates, with later characters adapted to that style.</p>
@@ -7449,7 +7715,7 @@
       <p>There are no spaces, and the words that end with a consonant are finished with [[pt:virama|virama]] (killer), a big hook. There’s also a virtual virama for consonant conjuncts{{-}}letters are stacked together.</p>
       <p />
       <p>Indonesia uses [[ps:Latn|Latin]], and there’s an active community of people who use Kawi in modern correspondence. Blocks of [[ps:Bali|Balinese]] and [[ps:Java|Javanese]] were used. No{{_}}characters of modern Kawi were encoded, just some room was left.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>源自 [[ps:Brah|婆罗米]] 系的古老文字，是 [[ps:Java|爪哇文字]] 的祖先。它源自帕拉瓦文（早期的 [[ps:Gran|古兰塔文字]]）。到了 16 世纪，它已被其他文字取代。</p>
       <p />
@@ -7472,13 +7738,21 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Kharoshthi (Indo-Bactrian, Kabul script) was used in Central Asia and Afghanistan up to the 3rd century. Originates from [[ps:Armi|Aramaic]], considered a sister script of [[ps:Brah|Brahmi]], no descendants. Has one of the properties of [[pt:brahmic|Brahmic]] abugida{{-}}the inherent vowel “a” is changed by vowel marks. [[pt:virama|Virama]] is purely virtual; the final consonant is written as a subscript. Also, about 30 [[pt:ligature|ligatures]] of double consonants are known:</p>
+      <p>: ka {{sm|𐨐}} + i {{sm|◌𐨁}} = ki {{sm|𐨐𐨁}}</p>
+      <p>: dha {{sm|𐨢}} + i {{sm|◌𐨁}} + ka {{sm|𐨐}} + virama {{sm|◌𐨿}} = dhik {{sm|&amp;rlm;&amp;#68130;&amp;#68097;&amp;#68112;&amp;#68159;}}</p>
+      <p>: ka {{sm|𐨐}} + virama {{sm|◌𐨿}} + ta {{sm|𐨟}} = kta {{sm|&amp;rlm;&amp;#68112;&amp;#68159;&amp;#68127;}}</p>
+      <p />
+      <p>Numerals are non-positional, resembling Roman. Kharoshthi was discovered in the 19th century and quickly deciphered.</p>
+     </orig>
+     <known-orig>
       <p>Kharoshthi (Indobactrian, Kabul script) was used in Middle Asia and Afghanistan up to 3rd century. Originates from [[ps:Armi|Aramaic]], is considered sister script with [[ps:Brah|Brahmi]], no descendants. Has one of properties of [[pt:brahmic|Brahmic]] abugida{{-}}inherent vowel “a” is changed by vowel marks. [[pt:virama|Virama]] is purely virtual, final consonant is written as a subscript. Also about 30 [[pt:ligature|ligatures]] of double consonants are known:</p>
       <p>: ka {{sm|𐨐}} + i {{sm|◌𐨁}} = ki {{sm|𐨐𐨁}}</p>
       <p>: dha {{sm|𐨢}} + i {{sm|◌𐨁}} + ka {{sm|𐨐}} + virama {{sm|◌𐨿}} = dhik {{sm|&amp;rlm;&amp;#68130;&amp;#68097;&amp;#68112;&amp;#68159;}}</p>
       <p>: ka {{sm|𐨐}} + virama {{sm|◌𐨿}} + ta {{sm|𐨟}} = kta {{sm|&amp;rlm;&amp;#68112;&amp;#68159;&amp;#68127;}}</p>
       <p />
       <p>Non-positional numerals resembling Roman exist. Kharoshthi was discovered in 19th century and quickly deciphered.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>佉卢文字（印度-巴克特里亚文字，喀布尔文字）在中亚和阿富汗地区使用至公元 3 世纪。它起源于 [[ps:Armi|阿拉米文字]]，被认为是 [[ps:Brah|婆罗米文字]] 的“姐妹文字”，且没有后代文字。它具有 [[pt:brahmic|婆罗米系]] 元音附标文字的一个特征——固有元音“a”可以通过元音符号进行改变。[[pt:virama|止音符（Virama）]]纯粹是虚拟的，词尾辅音写作下标形式。此外，已知还有约30种双辅音 [[pt:ligature|连字]]：</p>
       <p>: ka {{sm|𐨐}} + i {{sm|◌𐨁}} = ki {{sm|𐨐𐨁}}</p>
@@ -7530,6 +7804,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Tradition states that Khojki was invented by Pir Sadardin (14th century), who was sent to India to spread Islam. By a more down-to-earth version, it emerged in the 16th century as a variant of Landa, very cursive [[ps:Shrd|Sharada]]. Still used and studied by Indian Shiites today.</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|a}}, [[pt:virama|virama]] and four ligatures of consonant conjuncts, one of them for the lack of “ša” letter is written through nukta sign:</p>
+      <p>: ka {{sm|𑈈}} + i {{sm|◌𑈭}} = ki {{sm|𑈈𑈭}}</p>
+      <p>: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} = k {{sm|𑈈𑈵}}</p>
+      <p>: ta {{sm|𑈙}} + virama {{sm|◌𑈵}} + ra {{sm|𑈦}} = tra {{sm|𑈙𑈵𑈦}}&amp;nbsp;&amp;nbsp; (also “jnya” and “dra”)</p>
+      <p>: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} + sa {{sm|𑈩}} + nukta {{sm|◌𑈶}} = kša {{sm|𑈈𑈵𑈩𑈶}}</p>
+      <p>Virama may look like slash {{sm|𑈈/}}. Digits resemble [[ps:Gujr|Gujarati]] and are [[pt:unification|unified]] with it.</p>
+     </orig>
+     <known-orig>
       <p>Tradition states that Khojki was invented by Pir Sadardin (14th century) who was sent to India to spread Islam. By more down-to-earth version, it emerged in 16th century as a variant of Landa, very cursive [[ps:Shrd|Sharada]]. Used and studied even nowadays by Indian Shiites.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}}, [[pt:virama|virama]] and four ligatures of consonant conjuncts, one of them for the lack of “ša” letter is written through nukta sign:</p>
@@ -7538,7 +7822,7 @@
       <p>: ta {{sm|𑈙}} + virama {{sm|◌𑈵}} + ra {{sm|𑈦}} = tra {{sm|𑈙𑈵𑈦}}&amp;nbsp;&amp;nbsp; (also “jnya” and “dra”)</p>
       <p>: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} + sa {{sm|𑈩}} + nukta {{sm|◌𑈶}} = kša {{sm|𑈈𑈵𑈩𑈶}}</p>
       <p>Virama may look like slash {{sm|𑈈/}}. Digits resemble [[ps:Gujr|Gujarati]] and [[pt:unification|unified]] with it.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>据传统说法，可吉文是由 14 世纪被派往印度传播伊斯兰教的皮尔·萨达尔丁（Pir Sadardin）发明的。而在更接地气的版本中，它出现于 16 世纪，是兰达文（Landa，一种非常草书的 [[ps:Shrd|夏拉达文字]]）的一个变体。如今，印度的什叶派穆斯林仍在使用和研究它。</p>
       <p />
@@ -7562,6 +7846,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>It was used in the Liao Empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on the [[ps:Ougr|Uyghur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters, 125 are ideographs, 115 are phonetical, the rest are{{_}}not{{_}}deciphered.</p>
+      <p />
+      <p>Large and small scripts were used in parallel, the small is simpler (the large is purely ideographic). Khitan books did{{_}}not{{_}}survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216, the Khitans were finally defeated by the Mongols and Koreans.</p>
+      <p />
+      <p>Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in the book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, the icon shows one of the characters from a Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern italic assembled by Google.</p>
+      <p />
+      <p>The last square, looking like a [[pt:tofu|tofu]], is an illegible character. It forms blocks like the other Khitan characters.</p>
+     </orig>
+     <known-orig>
       <p>Was used in Liao empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on [[ps:Ougr|Uighur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters 125 are ideographs, 115 are phonetical, the rest are{{_}}not{{_}}deciphered.</p>
       <p />
       <p>Large and small script were used in parallel, small is simpler (large is purely ideographic). Khitan books did{{_}}not{{_}}survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216 Khitans were finally defeated by Mongols and Chinese.</p>
@@ -7569,7 +7862,7 @@
       <p>Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, icon shows one of characters from Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern italic assembled by Google.</p>
       <p />
       <p>The last square looking like [[pt:tofu|tofu]] is illegible character. It forms blocks like the rest Khitan characters.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种文字曾在辽国（中国东北）使用。大约于公元 925 年由一位名叫耶律迭剌的学者发明，其基础是 [[ps:Ougr|回鹘文字]]。单词由多达 7 个字符组成的方块书写。截至 1987 年，在已知的 378 个字符中，有 125 个是表意符号，115 个是表音符号，其余的尚未破译。</p>
       <p />
@@ -7629,10 +7922,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Invented by Mahaguru Tika Ram Rai from local scripts close to [[ps:Deva|Devanagari]]. In 1995, the Indian state of Sikkim recognized Bantawa (under the name ''Rai'', though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
+      <p />
+      <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks, or other complex rendering; all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than the common-Indic from Devanagari.</p>
+     </orig>
+     <known-orig>
       <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Deva|Devanagari]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s a broader ethnic group, and ''Kirat'' is even broader) and made Kirat the official script.</p>
       <p />
       <p>Though it’s a Brahmic abugida, it has no [[pt:ligature|ligatures]], marks on marks and other complex rendering, all characters are ordinary [[pt:spacing|spacing]]. Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script uses its own danda rather than common-Indic from Devanagari.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>由马哈古鲁·蒂卡·拉姆·拉伊（Mahaguru Tika Ram Rai）发明，其灵感来源于接近 [[ps:Deva|天城文]] 的当地手稿。1995 年，印度锡金邦承认了班塔瓦语（尽管使用了“拉伊”这个更广泛的族群名称，而“基拉特”的范围甚至更广），并指定基拉特文为其官方文字。</p>
       <p />
@@ -7651,10 +7949,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The name comes from the Kayastha caste of office workers. It is, in fact, a very [[pt:cursive|cursive]] variant of [[ps:Deva|Devanagari]]. Kaithi was used in the Mughal period in North-East India, recognized in courts, and, in 1950–1954, served as the official legal script. Wider use was expected, but Brahmins opposed the script, and modern Hindus can barely read Kaithi.</p>
+      <p />
+      <p>Digits look like Devanagari, except 5 and 9, and are [[pt:unification|unified]] with it.</p>
+     </orig>
+     <known-orig>
       <p>The name comes from Kayastha caste of office workers. It is in fact a very [[pt:cursive|cursive]] variant of [[ps:Deva|Devanagari]]. Kaithi was used in Mughal period in North-East India, was recognized in courts, and in 1950–1954 was the official legal script. Wider use was expected, but the script was opposed by Brahmins, and modern Hindus can barely read Kaithi.</p>
       <p />
       <p>Digits look like Devanagari, except 5 and 9, and [[pt:unification|unified]] with it.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这个名字源于书记员种姓（Kayastha）。事实上，它是一种非常 [[pt:cursive|草书]] 风格的 [[ps:Deva|天城文字]] 变体。凯提文在莫卧儿时期的印度东北部被使用，曾被法庭认可，并在 1950–1954 年间作为官方法律文字。人们曾预期它会有更广泛的用途，但该文字遭到了婆罗门的反对，现代印度教徒几乎看不懂凯提文字。</p>
       <p />
@@ -7839,10 +8142,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was used on the islands of Cyprus and the Cyclades. Most inscriptions are business-related and written on clay. Writings with ink on vessels and other objects also exist. But the shape of the signs suggests that the script was written in ink on leather or another soft material. Around 1450{{_}}BC, with the Greek invasion, it was supplanted by [[ps:Linb|Linear B]].</p>
+      <p />
+      <p>Arthur Evans found the script in the late 19th century, and part of the artefacts perished{{-}}some were thrown by untrained workmen, some were destroyed by rain at the warehouse. He called the script linear because it consisted of lines, unlike earlier Cretan hieroglyphs (absent from Unicode). He delayed publication of the discovery, hoping to decipher it on his own, until he died in 1941. There is no comprehensive decipherment, unlike the later Linear B.</p>
+     </orig>
+     <known-orig>
       <p>The script was used in islands of Cyprus and Cyclades. Most inscriptions are business-related and written on clay. Writings with ink on vessels and other objects also exist. But shape of signs suggests that the script was written with ink on leather or other soft material. About 1450{{_}}BC, with invasion of Greeks, it was supplanted with [[ps:Linb|Linear B]].</p>
       <p />
       <p>Arthur Evans found the script in late 19th century, and part of artifacts perished{{-}}some were thrown by untrained workmen, some were destroyed with rain at the warehouse. He called the script linear becuse it was made of lines, unlike earlier Cretan hieroglyphs (absent in Unicode). He delayed publication of discovery hoping to decipher on his own, until his death in 1941. There is no comprehensive decipherment{{-}}unlike later Linear B.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种文字曾用于塞浦路斯岛和基克拉泽斯群岛。大多数铭文都是与商业有关的，写在粘土（泥板）上。但也存在用墨水写在器皿和其他物体上的文字。不过，符号的形状表明，这种文字最初是用墨水写在皮革或其他柔软材料上的。大约在公元前 1450 年，随着希腊人的入侵，它被 [[ps:Linb|线形文字 B]] 所取代。</p>
       <p />
@@ -7954,6 +8262,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The alphabet is close to the [[ps:Lyci|Lycian]] and comes from the [[ps:Phnx|Phoenician]]. Supplanted by the [[ps:Grek|Greek]] about the 3rd century{{_}}BC, when Alexander the Great conquered Lydia.</p>
+      <p />
+      <p>Early inscriptions were in both directions, late ones right-to-left only. The unique feature is a triangular quote.</p>
+      <p />
+      <p>Lydia is{{_}}not{{_}}an autonym; the Lydians named the region after Sardis, its capital.</p>
+      <p />
+      <p>Deciphered in 1916 and well explored despite a small number of inscriptions (only 109 as of 1986).</p>
+     </orig>
+     <known-orig>
       <p>The alphabet is close to [[ps:Lyci|Lycian]], comes from [[ps:Phnx|Phoenician]]. Supplanted with [[ps:Grek|Greek]] about 3rd century{{_}}BC, when Lydia was conquered by Alexander the Great.</p>
       <p />
       <p>Early inscriptions were in both directions, late ones right-to-left only. The unique feature is a triangular quote.</p>
@@ -7961,7 +8278,7 @@
       <p>Lydia is{{_}}not{{_}}autonym, Lydians named the region by Sardis, its capital.</p>
       <p />
       <p>Deciphered in 1916 and well-explored despite small number of inscriptions (only 109 as of 1986).</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种字母表与 [[ps:Lyci|吕基亚文字]] 非常接近，源自 [[ps:Phnx|腓尼基文字]]。大约在公元前 3 世纪，随着吕底亚被亚历山大大帝征服，它被 [[ps:Grek|希腊文字]] 所取代。</p>
       <p />
@@ -7985,10 +8302,17 @@
      <orig>
       <p>One more remnant of the Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in minimal use.</p>
       <p />
+      <p>The script degraded almost to the point of being a [[pt:abjad|consonant]]: the same letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions that are important in accounting books. Many of them are badly explored and haven’t been encoded yet.</p>
+      <p />
+      <p>Headstrokes are attested in headings only. Digits resembling [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were observed; in Unicode, they are [[pt:unification|unified]] with the former.</p>
+     </orig>
+     <known-orig>
+      <p>One more remnant of the Indian caste system, like [[ps:Kthi|Kaithi]]: this script was used by bankers and accountants until the 20th century, and is currently in minimal use.</p>
+      <p />
       <p>The script degraded almost to the point of being a [[pt:abjad|consonant]]: the same letter means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If a vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On the other hand, there are many abbreviations and fractions important for accounting books. Many of them are badly explored and haven’t been encoded yet.</p>
       <p />
       <p>Headstrokes are attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with the former.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是印度种姓制度的又一遗存，就像 [[ps:Kthi|凯提文字]] 一样：这种文字曾被银行家和会计师使用直到 20 世纪，目前仅有极少量的使用。</p>
       <p />
@@ -8009,6 +8333,16 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after the shape of the letters. There are arguments about when the script appeared, but it’s{{_}}not{{_}}ancient: the known form is suited for quill and paper rather than palm leaves. The first known specimen is a signature on a treaty with the Dutch East India Company (1667).</p>
+      <p />
+      <p>Brahmic abugida consisting of 17 consonants, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces: words and phrases are divided with vertical ellipses. With such functionality, the script is clearly incomplete, and by the 19th century, it had been completely supplanted by [[ps:Bugi|Lontara]], which is considered a sister script.</p>
+      <p />
+      <p>Both European and Arabic-Indic digits are attested. In one of the manuscripts, there’s a punctuation mark resembling a palm tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
+      <p />
+      <p>''Angka'' sign means “same consonant”: {{sm|𑻧𑻴𑻲}} duda, {{sm|𑻧𑻲𑻴}} dadu.&lt;br&gt;</p>
+      <p>Two identical syllables are even simpler: {{sm|𑻧𑻴𑻴}} dudu.</p>
+     </orig>
+     <known-orig>
       <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s{{_}}not{{_}}ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
       <p />
       <p>Brahmic abugida consisting of 17 consonants, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces, words and phrases are divided with vertical ellipsis. With such functionality the script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
@@ -8017,7 +8351,7 @@
       <p />
       <p>''Angka'' sign means “same consonant”: {{sm|𑻧𑻴𑻲}} duda, {{sm|𑻧𑻲𑻴}} dadu.&lt;br&gt;</p>
       <p>Two identical syllables are even simpler: {{sm|𑻧𑻴𑻴}} dudu.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种文字源自 [[ps:Kawi|卡维文字]]（古爪哇语）。因其字母的形状而被称为“鸟书”。关于这种文字何时出现尚有争议，但它并不古老：其已知的形式更适合羽毛笔和纸张，而不是棕榈叶。已知最早的样本是（1667年）与荷兰东印度公司签订条约上的签名。</p>
       <p />
@@ -8057,12 +8391,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Syrc|Syriac]] script and is closely related to religion of Manichaeism. When Sasanid Persia expelled Manichaeans about 300, the specimen started to appear to the north, in Middle Asia. Last inscriptions are dated 10th century and are found in modern Xinjian Region.</p>
+      <p>Comes from the [[ps:Syrc|Syriac]] script and is closely related to the religion of Manichaeism. When Sasanid Persia expelled Manichaeans around 300, the specimens started to appear in the north, in Central Asia. The last inscriptions date to the 10th century and were found in the modern Xinjiang Region.</p>
       <p />
       <p>Letters are joined, like in Syriac.</p>
       <p />
       <p>The term was introduced by Friedrich Müller, who read the script in 1903.</p>
      </orig>
+     <known-orig>
+      <p>Comes from [[ps:Syrc|Syriac]] script and is closely related to religion of Manichaeism. When Sasanid Persia expelled Manichaeans about 300, the specimen started to appear to the north, in Middle Asia. Last inscriptions are dated 10th century and are found in modern Xinjian Region.</p>
+      <p />
+      <p>Letters are joined, like in Syriac.</p>
+      <p />
+      <p>The term was introduced by Friedrich Müller, who read the script in 1903.</p>
+     </known-orig>
      <transl>
       <p>这种文字源自 [[ps:Syrc|叙利亚文字]]，并与摩尼教（Manichaeism）这一宗教紧密相关。大约在公元 300 年，当萨珊波斯驱逐摩尼教徒时，这种文字的样本开始出现在北方的中亚地区。最后的铭文可追溯至 10 世纪，发现于现代的新疆地区。</p>
       <p />
@@ -8083,12 +8424,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Zhang-Zhung is a Sino-Tibetan language that died out in the 10th century, it was written with a minimum of five scripts. Unicode has only Marchen, the rest are not even [[pt:unification|unified]]. Probably all these scripts were only for religious use. It’s unknown how they wrote in everyday life.</p>
+      <p />
+      <p>In syllables, several letters are stacked together, and vowel marks relate to the lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
+      <p />
+      <p>Nowadays, it’s used in ''Bön'', a Tibetan para-Buddhist religion that originated in early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). The left-hand swastika became the symbol of ''Bön''.</p>
+     </orig>
+     <known-orig>
       <p>Zhang-Zhung is a Sino-Tibetan language that died in 10th century, it was written with minimum of five scripts. Unicode has only Marchen, the rest are not even [[pt:unification|unified]]. Probably all these scripts were only in religious use. It’s unknown how they wrote in everyday life.</p>
       <p />
       <p>In syllables several letters are stacked together, and vowel marks relate to lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
       <p />
       <p>Nowadays it’s used in ''Bön'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bön''.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>象雄语是一种汉藏语系的语言，于 10 世纪消亡，它至少曾使用五种文字书写。Unicode 目前只收录了玛钦文字（Marchen），其余的文字甚至尚未进行 [[pt:unification|统一]]。很可能所有这些文字仅用于宗教场合。至于他们在日常生活中如何书写，目前尚不清楚。</p>
       <p />
@@ -8103,21 +8451,26 @@
      <orig>Medefaidrin (Obɛri Ɔkaimɛ)</orig>
      <transl>梅德法伊德林文字（Medefaidrin，Obɛri Ɔkaimɛ）</transl>
     </text>
-    <text id="Lang">
-     <orig>Obɛri Ɔkaimɛ/Medefaidrin ''(Nigeria)''</orig>
-     <transl>奥贝里·奥凯梅语（Obɛri Ɔkaimɛ） / 梅德法伊德林语（Medefaidrin，尼日利亚）</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>The constructed language and its script were created by Michael Ukpong and Akpan Akpan Udofia around 1931 in the Nigerian para-Christian church ''Obɛri Ɔkaimɛ''. Words are constructed, and grammar is a mixture of English and Ibibio, the local language. Numerals are positional base-20, reflecting the counting habits of the Ibibio. Punctuation marks are original.</p>
+      <p />
+      <p>The new language was used in liturgy and taught in school. This violated local education law, the school was oppressed and fined, and teaching ceased. Several manuscripts remain, all are in bad condition. Scholars discovered Medefaidrin in 1947. About 4000 Obɛri exist today, but few know the language. Nigerian authorities are heavily exploring the language and scanning remaining documents.</p>
+     </orig>
+     <known-orig>
       <p>Constructed language and script for it were created by Michael Ukpong and Akpan Akpan Udofia about 1931 in Nigerian para-Christian church ''Obɛri Ɔkaimɛ''. Words are constructed, grammar is a mixture of English and Ibibio, the local language. Numerals are positional base-20, reflect counting habits of Ibibio. Punctuation marks are original.</p>
       <p />
       <p>New language was used in liturgy, taught in school. This violated local education law, the school was oppressed and fined, and teaching was ceased. Several manuscripts remain, all are in bad condition. Scholars discovered Medefaidrin in 1947. About 4000 Obɛri exist today, but few know the language. Nigerian authorities are heavily exploring the language and scanning remaining documents.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种人造语言及其文字是由迈克尔·乌孔（Michael Ukpong）和阿潘·阿克潘·乌多菲亚（Akpan Akpan Udofia）于 1931 年左右在尼日利亚的类基督教教会“奥贝里·奥凯梅”（Obɛri Ɔkaimɛ）中创造的。词汇是人造的，语法则是英语和当地伊比比奥语（Ibibio）的混合体。数字系统采用二十进制的位值制，反映了伊比比奥人的计数习惯。标点符号也是原创的。</p>
       <p />
       <p>这种新语言曾被用于礼拜仪式，并在学校中教授。但这违反了当地的教育法，学校遭到镇压并被罚款，教学活动被迫停止。目前仅存几份手稿，且状况都很糟糕。学者们于 1947 年发现了梅德法伊德林文。如今大约有 4000 名奥贝里信徒，但很少有人还掌握这门语言。尼日利亚当局正在大力研究这门语言，并扫描现存的文献。</p>
      </transl>
+    </text>
+    <text id="Lang">
+     <orig>Obɛri Ɔkaimɛ/Medefaidrin ''(Nigeria)''</orig>
+     <transl>奥贝里·奥凯梅语（Obɛri Ɔkaimɛ） / 梅德法伊德林语（Medefaidrin，尼日利亚）</transl>
     </text>
    </group>
    <group id="Mend">
@@ -8153,10 +8506,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Meroitic script was used in Nubia and Sudan to write local languages until the 7th century. Has two forms, hieroglyphic and cursive. The hieroglyphic form comes from [[ps:Egyp|Egyptian hieroglyphs]] and was written right-to-left in columns; only inscriptions carved on monuments are known. The cursive is derived from the Demotic script and was written right-to-left, {{%|90}} of all inscriptions.</p>
+      <p />
+      <p>More than 2000 inscriptions exist. The alphabet was deciphered in the early 20th century through the Meroitic pronunciation of Egyptian names. But the language is still unclear.</p>
+     </orig>
+     <known-orig>
       <p>Meroitic script was used in Nubia and Sudan for writing local languages until 7th century. Has two forms, hieroglyphic and cursive. Hieroglyphic form comes from [[ps:Egyp|Egyptian hieroglyphs]] and was written right-to-left in columns; only inscriptions carved on monuments are known. Cursive is derived from Demotic script and was written right-to-left, {{%|90}} of all inscriptions.</p>
       <p />
       <p>More than 2000 inscripitons exist. The alphabet was deciphered in early 20th century via Meroitic pronunciation of Egyptian names. But the language is still unclear.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>麦罗埃文字曾在努比亚和苏丹地区用于书写当地语言，一直使用到公元 7 世纪。它有两种形式：圣书体（Hieroglyphic）和草书体（Cursive）。圣书体源自 [[ps:Egyp|埃及象形文字]]，刻在纪念碑上，按列从右向左书写；目前已知的仅有铭文形式。草书体则衍生自世俗体（Demotic script），同样从右向左书写，占据了所有铭文的 {{%|90}}。</p>
       <p />
@@ -8245,6 +8603,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). It was used alongside Devanagari until the 1950s, then ''Balbodh'' (literally “understood by children”), the cursive style of Devanagari that had existed at least since 1800, was declared the standard script for Marathi. The revival of Modi started in the 21st century.</p>
+      <p />
+      <p>The headstroke is usually ruled before writing, and spaces are barely seen. In conjuncts, one of the consonants (usually the first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + tə {{sm|𑘝}} = ktə {{sm|𑘎𑘿𑘝}}</p>
+      <p>: kə {{sm|𑘎}} + virama {{sm|◌𑘿}} + rə {{sm|𑘨}} = krə {{sm|𑘎𑘿𑘨}}</p>
+      <p>But methods of affixing vowel marks are rather bizarre and form ligatures for themselves: </p>
+      <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
+      <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
+      <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
+     </orig>
+     <known-orig>
       <p>The script is relative to [[ps:Deva|Devanagari]] but is significantly more [[pt:cursive|cursive]]. There are two standard theories of origin: Hemādri Paṇḍit, diplomat and minister (about 1260), and Khanderao Ballal, diplomat (about 1700). Was used together with Devanagari until 1950s, then ''Balbodh'' (literally “understood by children”), cursive style of Devanagari existing at least since 1800 was declared the standard script for Marathi. The revival of Modi started in 21st century.</p>
       <p />
       <p>Head-line is usually ruled before writing, and spaces are barely seen. In conjuncts one of consonants (usually first) is just reduced. There are only two consonant conjunct [[pt:ligature|ligatures]], {{t|ksə}} and {{t|trə}}.</p>
@@ -8254,7 +8623,7 @@
       <p>: gə {{sm|𑘐}} + ū {{sm|◌𑘴}} = gū {{sm|𑘐𑘴}}</p>
       <p>[[pt:virama|Virama]] is never used in Marathi. Lower sign looking like virama is actually a ligature with {{t|r}}:</p>
       <p>: kə {{sm|𑘎}} + rə {{sm|𑘨}} = kərə {{sm|𑘎𑘨}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种文字与 [[ps:Deva|天城文字]] 有亲缘关系，但具有显著的 [[pt:cursive|草书]] 特征。关于其起源主要有两种理论：一是赫马德里·潘迪特（Hemādri Paṇḍit），一位外交官兼大臣（约 1260 年）；二是坎德拉奥·巴拉尔（Khanderao Ballal），一位外交官（约 1700 年）。它曾与天城体并用，直到 1950 年代，随后“巴尔博德”（Balbodh，字面意思为“儿童易懂”）——一种至少自 1800 年起就存在的天城体草书风格——被宣布为马拉地语的标准文字。莫迪文的复兴始于 21 世纪。</p>
       <p />
@@ -8330,12 +8699,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Most Mro are Buddhists, and the authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
+      <p />
+      <p>The Mro script was invented in the 1980s by Menlay Murang, founder of the ''Krama'' religion. In the 2000s, the Murang alphabet became popular and even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also, the existing Latin badly conveys the Mro phonetics.</p>
+      <p />
+      <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters or [[pt:combining|combining marks]], the [[pt:abc|alphabetical order]] corresponds to encoding, and line-breaking rules are standard. Punctuation is European, with the addition of a local version of the ''danda'' bar.</p>
+     </orig>
+     <known-orig>
       <p>Most Mro are Buddhists, and authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
       <p />
       <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Krama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
       <p />
       <p>There are no technical difficulties: writing left-to-right, no [[pt:format|format]] characters and [[pt:combining|combining marks]], [[pt:abc|alphabetical order]] corresponds to encoding, line wrapping rules are standard. Punctuation is European, with addition of local version of ''danda'' bar.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>大多数默禄人是佛教徒，而孟加拉国作为一个伊斯兰国家，其当局并不愿意支持他们。</p>
       <p />
@@ -8389,12 +8765,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Siraiki are almost all Muslims. As of the 2010s, they number 14…19M by different sources in Pakistan only.</p>
+      <p />
+      <p>The script emerged in the 18th century. The first printed source is the 1819 New Testament. In the late 19th century, the British administration invented the [[ps:Arab|Arabic]] script, and by the 20th century, Siraiki adopted it.</p>
+      <p />
+      <p>All sources consider the Multani script a Brahmic abugida, but in fact it has degraded to [[pt:abjad|consonant]]: no vowel marks, and vowels are written extremely selectively. Digits are [[pt:unification|unified]] with [[ps:Guru|Gurmukhi]]: there’s a minor difference in 6 and 7.</p>
+     </orig>
+     <known-orig>
       <p>Siraiki are almost all Muslims. As of 2010s they number 14…19M by different sources in Pakistan only.</p>
       <p />
       <p>The script emerged in 18th century. The first printed source is New Testament of 1819. In late 19th century British administration invented [[ps:Arab|Arabic]] script, and by 20th century Siraiki adopted it.</p>
       <p />
       <p>All sources consider Multani script a Brahmic abugida, but in fact it degraded to [[pt:abjad|consonant]]: no vowel marks, vowels are written extremely selectively. Digits are [[pt:unification|unified]] with [[ps:Guru|Gurmukhi]]: there’s minor difference in 6 and 7.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>萨拉伊基人几乎都是穆斯林。截至 2010 年代，仅在巴基斯坦境内，他们的人数就在 1400 万到 1900 万之间（根据不同来源）。</p>
       <p />
@@ -8468,6 +8851,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes from Nagari, an intermediate form of the Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from the sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until the 19th century.</p>
+      <p />
+      <p>The inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama is used only in Sanskrit: Kannada prefers open syllables, and rare consonant conjuncts are written with ligatures.</p>
+      <p>: ka {{sm|𑦮}} + u {{sm|◌𑧔}} = ku {{sm|𑦮𑧔}}</p>
+      <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
+      <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
+      <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and are [[pt:unification|unified]] with it.</p>
+     </orig>
+     <known-orig>
       <p>Comes from Nagari, intermediate form of Indic script. Sister to [[ps:Deva|Devanagari]], “Nandinagari” means “from sacred city”. If they weren’t different{{-}}broken headstroke, other [[pt:ligature|ligatures]] and digits{{-}}Nandi could have been a variation of Devanagari. The script was used until 19th century.</p>
       <p />
       <p>Inherent vowel is {{t|a}}, replaced with vowel [[pt:combining|marks]]. All marks, including [[pt:virama|virama]], are stuck to letters. Virama serves for Sanskrit only: Kannada prefers open syllables, and rare consonant conjuncts are conveyed with ligatures.</p>
@@ -8475,7 +8867,7 @@
       <p>: ṭa {{sm|𑦸}} + u {{sm|◌𑧔}} = ṭu {{sm|𑦸𑧔}}</p>
       <p>: ka {{sm|𑦮}} + virama {{sm|◌𑧠}} + ta {{sm|𑦽}} = kta {{sm|𑦮𑧠𑦽}}</p>
       <p>Digits resemble [[ps:Knda|Kannada]] (there are differences in 2 and 6) and [[pt:unification|unified]] with it.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>它源自那加里文字（Nagari），这是印度文字的一种中间形态。作为 [[ps:Deva|天城文字]] 的“姐妹”，“南迪城文字”意为“来自圣城”。如果它们没有那些差异——断裂的顶线、不同的 [[pt:ligature|连字]] 和数字——南迪文本可以成为天城文的一种变体。这种文字一直使用到 19 世纪。</p>
       <p />
@@ -8497,7 +8889,8 @@
      <transl>绿洲古阿拉伯语，萨法伊提克语，希斯迈提克语等</transl>
     </text>
     <text id="Text">
-     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</orig>
+     <orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from the Proto-Sinaitic script. The script is known for short inscriptions from the 3rd century{{_}}BC to the 4th century, but it is much older; maybe the 8th century BC.</orig>
+     <known-orig>The term “Old North Arabian” refers to all South Semitic scripts except [[ps:Sarb|South Arabian]]. Comes from Proto-Sinaitic script. Known for short inscriptions of 3rd century{{_}}BC to 4th century, but the script it much more ancient; maybe 8th century BC.</known-orig>
      <transl>“古北阿拉伯文字”这一术语指代除 [[ps:Sarb|南阿拉伯文字]] 之外的所有南闪米特文字。它源自原始西奈文字（Proto-Sinaitic script）。目前已知的铭文多为公元前 3 世纪至公元 4 世纪的短篇，但这种文字的历史要古老得多；可能追溯至公元前 8 世纪。</transl>
     </text>
    </group>
@@ -8511,7 +8904,8 @@
      <transl>纳巴泰语（Nabataean）</transl>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Armi|Aramaic]]. The language was in use in Nabataea (the capital is Petra in modern Jordan) since 2nd century{{_}}BC. In 106 Trajan annexed Nabataea to Roman Empire, and the script existed until 6th century, and probably evolved to [[ps:Arab|Arabic]] via badly-explored New Sinai script. There are no spaces between words. Numbers were written right-to left using non-positional system resembling Roman.</orig>
+     <orig>Comes from [[ps:Armi|Aramaic]]. The language has been in use in Nabataea (the capital is Petra in modern Jordan) since the 2nd century{{_}}BC. In 106, Trajan annexed Nabataea to the Roman Empire, and the script persisted until the 6th century, probably evolving into [[ps:Arab|Arabic]] via the poorly explored New Sinai script. There are no spaces between words. Numbers were written right-to-left using a non-positional system resembling Roman.</orig>
+     <known-orig>Comes from [[ps:Armi|Aramaic]]. The language was in use in Nabataea (the capital is Petra in modern Jordan) since 2nd century{{_}}BC. In 106 Trajan annexed Nabataea to Roman Empire, and the script existed until 6th century, and probably evolved to [[ps:Arab|Arabic]] via badly-explored New Sinai script. There are no spaces between words. Numbers were written right-to left using non-positional system resembling Roman.</known-orig>
      <transl>它源自 [[ps:Armi|亚拉姆文字]]。自公元前 2 世纪起，这种语言就在纳巴泰（首都是现代约旦境内的佩特拉）使用。公元 106 年，图拉真将纳巴泰并入罗马帝国，而这种文字一直使用到公元 6 世纪，并可能通过鲜为人知的新西奈文字（New Sinai script）演变成了 [[ps:Arab|阿拉伯文字]]。词与词之间没有空格。数字采用类似罗马数字的非位值制系统，从右向左书写。</transl>
     </text>
    </group>
@@ -8524,19 +8918,23 @@
      <orig>Bhasa {{nspk||=Newa}}, Sanskrit, Pali</orig>
      <transl>尼瓦尔语（Nepal Bhasa）、梵语（Sanskrit）、巴利语</transl>
     </text>
-    <text id="Note">
-     <orig>first evidence</orig>
-     <transl>最早证据</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>Origins are unknown, different styles of script have existed since the 10th century. The first evidence: Nepal king Pratap Malla wrote “Newara script” in 1654. Actually surviving specimens are from the 18th century. In 1905, the Nepalese dictators of the Rana dynasty banned the language and script. In 1951, India invaded, expelled the usurpers, reinstalled the old Shah dynasty and allowed it again. Since 1960, the kings dismissed parliament and restarted nationalist policy, banning everything except Hundiusm and Nepali written in [[ps:Deva|Devanagari]], but due to economic troubles, extended democracy about 1989.</p>
+      <p />
+      <p>Classic Brahmic abugida. Despite multiple [[pt:ligature|ligatures]] of small consonants, the [[pt:virama|virama]] sometimes occurs.</p>
+      <p>{{smtable|ka|*𑐎|+ i|**◌𑐶|= ki|*𑐎𑐶}}</p>
+      <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|= k|*𑐎𑑂}}</p>
+      <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|+ ta|*𑐟|= kta|*𑐎𑑂𑐟}}</p>
+     </orig>
+     <known-orig>
       <p>Origins are unknown, different styles of script existed since 10th century. The first evidence: Nepal king Pratap Malla wrote “Newara script” in 1654. Actually survived specimen are from 18th century. In 1905 Nepal dictators of Rana dynasty banned language and script. In 1951 India invaded, expelled usurpers, put old Shah dynasty and allowed again. Since 1960 kings dismissed parliament and restarted nationalist policy, banning everything except Hundiusm and Nepali written in [[ps:Deva|Devanagari]], but due to economic troubles extended democracy about 1989.</p>
       <p />
       <p>Classic Brahmic abugida. Despite multiple [[pt:ligature|ligatures]] made of small consonants, [[pt:virama|virama]] occurs sometimes.</p>
       <p>{{smtable|ka|*𑐎|+ i|**◌𑐶|= ki|*𑐎𑐶}}</p>
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|= k|*𑐎𑑂}}</p>
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|+ ta|*𑐟|= kta|*𑐎𑑂𑐟}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>起源不详，自 10 世纪起就存在不同的书写风格。最早的证据：尼泊尔国王普拉塔普·马拉（Pratap Malla）于 1654 年写下了“尼瓦尔文字”（Newara script）。实际上现存的样本来自 18 世纪。1905 年，尼泊尔拉纳王朝（Rana dynasty）的独裁者禁止了该语言和文字。1951 年，印度入侵，驱逐了篡权者，恢复了旧的沙阿王朝（Shah dynasty）并再次允许使用。自 1960 年起，国王解散议会并重启民族主义政策，禁止除印度教和用 [[ps:Deva|天城文字]] 书写的尼泊尔语以外的一切，但由于经济困难，大约在 1989 年又恢复了民主。</p>
       <p />
@@ -8545,6 +8943,10 @@
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|= k|*𑐎𑑂}}</p>
       <p>{{smtable|ka|*𑐎|+ virama|**◌𑑂|+ ta|*𑐟|= kta|*𑐎𑑂𑐟}}</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>first evidence</orig>
+     <transl>最早证据</transl>
     </text>
    </group>
    <group id="Nkoo">
@@ -8709,6 +9111,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Russian explorers began collecting information back under Peter the Great (early 18th century), the inscriptions were compared to [[ps:Runr|Germanic runes]]. Furthermore, the Swedes imprisoned after the Battle of Poltava actually helped Daniel Messerschmidt. The Finns were quick to attribute the runes to their ancestors.</p>
+      <p />
+      <p>Danish scientist Vilhelm Thomsen deciphered the script in 1893 and confounded the Finns: it was Turkic text.</p>
+      <p />
+      <p>About 200 inscriptions of the 7–10th centuries are known, as well as several manuscripts of the 9–10th centuries. The Second Turkic Khaganate was 682–744, the Uyghur Khaganate 744–840. After a defeat to the Yenisei Kyrgyz, the Uyghurs went south and were conquered by the [[ps:Tang|Tanguts]] in 1030. The story of the Kyrgyz is vague; it’s well known that they submitted to Genghis Khan in the 13th century.</p>
+      <p />
+      <p>The glyph {{sm|𐱇}} was changed in autumn 2021.</p>
+     </orig>
+     <known-orig>
       <p>Russian explorers started to collect information back under Peter the Great (early 18th century), the inscriptions were compared to [[ps:Runr|Germanic runes]]. Futhermore, Swedes imprisoned after Battle of Poltava actually helped Daniel Messerschmidt. Finns were quick to attribute runes to their ancestors.</p>
       <p />
       <p>Danish scientist Vilhelm Thomsen deciphered script in 1893 and confounded Finns: that’s Turkic text.</p>
@@ -8716,7 +9127,7 @@
       <p>About 200 inscriptions of 7–10th centuries are known, and several manuscripts of 9–10th centuries. Second Turkic Khaganate was 682–744, Uyghur Khaganate 744–840. After defeat to Yenisei Kyrghyz, Uyghurs went south and were conquered by [[ps:Tang|Tanguts]] in 1030. The story of Kyrghyz is vague; it’s well-known that they submitted to Genghis Khan in 13th century.</p>
       <p />
       <p>Glyph {{sm|𐱇}} was changed in autumn 2021.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>俄罗斯探险家早在彼得大帝时期（18 世纪初）就开始收集相关信息，这些铭文曾被拿来与 [[ps:Runr|日耳曼符文]] 进行比较。此外，在波尔塔瓦战役后被俘的瑞典人实际上曾协助过丹尼尔·梅瑟施密特。芬兰人曾急于将这些符文归功于他们的祖先。</p>
       <p />
@@ -8777,10 +9188,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was invented in 2006 by Herman Mongrain Lookout for the Osage language (under revival, the last native speaker died in 2005, several dozen second-language speakers remain). He discovered that students transferred English orthography to American language. [[ps:Latn|Latin]] was taken as a base, but greatly modified. European digits and punctuation are used.</p>
+      <p />
+      <p>Since 2012, when work to bring it into Unicode commenced, the script has been reformed.</p>
+     </orig>
+     <known-orig>
       <p>The script was invented in 2006 by Herman Mongrain Lookout for Osage language (under revival, the last native speaker died in 2005, several dozens of second-language speakers remain). He discovered that students transferred English orthography to American language. [[ps:Latn|Latin]] was taken as a base, but greatly modified. European digits and punctuation are used.</p>
       <p />
       <p>Since 2012, when work on bringing into Unicode commenced, the script was reformed.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字由赫尔曼·蒙格莱恩·卢考特（Herman Mongrain Lookout）于2006年为欧塞奇语发明（该语言正处于复兴中，最后一位母语者于2005年去世，目前仅剩几十位第二语言使用者）。他发现学生们将英语的正字法（拼写习惯）套用到了美洲原住民语言上。[[ps:Latn|拉丁文字]] 被作为基础，但经过了大幅修改。使用的是欧洲数字和标点符号。</p>
       <p />
@@ -8799,12 +9215,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Invented about 1920 by Osman Yusuf Kenadid, brother of Sultan Ali Yusuf Kenadid. The script gained some acceptance in Somalia, though the competition from newly imported [[ps:Latn|Latin]] and traditional [[ps:Arab|Arabic]] was intense.</p>
+      <p />
+      <p>In 1961, Osmanya became the official script, alongside Latin. In 1972, dictator Mohammed Barre banned Osmanya, firstly because of the spread of typewriters.</p>
+      <p />
+      <p>Because of the unstable situation in Somalia, there is no modern data.</p>
+     </orig>
+     <known-orig>
       <p>Invented about 1920 by Osman Yusuf Kenadid, brother of Sultan Ali Yusuf Kenadid. The script got some acceptance in Somalia, though competition with newly-imported [[ps:Latn|Latin]] and traditional [[ps:Arab|Arabic]] was great.</p>
       <p />
       <p>In 1961 Osmanya became the official script together with Latin. In 1972 dictator Mohammed Barre banned Osmanya, firstly because of spread of typewriters.</p>
       <p />
       <p>Because of unstable situation in Somalia, there is no modern data.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>约 1920 年由奥斯曼·尤瑟夫·肯纳迪（Osman Yusuf Kenadid）发明，他是苏丹阿里·尤瑟夫·肯纳迪（Ali Yusuf Kenadid）的兄弟。该文字在索马里获得了一定程度的接受，尽管面临着新引入的 [[ps:Latn|拉丁文字]] 和传统的 [[ps:Arab|阿拉伯文字]] 的激烈竞争。</p>
       <p />
@@ -8825,10 +9248,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Old Uyghur script is an intermediate stage between the [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] scripts. Sogdians wrote right to left, greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, some vowels got their letters. The script was used in Xinjiang until the 18th century.</p>
+      <p />
+      <p>Modern scholars also write Uyghur right-to-left, hence the encoding model.</p>
+     </orig>
+     <known-orig>
       <p>Old Uyghur script is an intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.</p>
       <p />
       <p>Modern scholars alro write Uyghur right to left, hence encoding model.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>回鹘文字是 [[ps:Sogd|粟特文字]] 与 [[ps:Mong|蒙古文字]] 之间的一个中间阶段。粟特人从右向左书写，通过将文本大幅向左旋转，从而形成了从左向右的竖排书写方式。它在类型上也成为了一个中间阶段，部分元音拥有了自己的字母。该文字在新疆一直使用到 18 世纪。</p>
       <p />
@@ -8847,10 +9275,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was used from 100{{_}}BC to 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of which has two variants. There are no spaces or punctuation. Numbers were written with a non-positional system resembling Roman numerals, right to left.</p>
+      <p />
+      <p>In 1754, using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758, he deciphered [[ps:Phnx|Phoenician]].</p>
+     </orig>
+     <known-orig>
       <p>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left.</p>
       <p />
       <p>Deciphered in 1754 using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字自公元前 100 年至公元 300 年间在帕尔米拉（现代叙利亚）周边地区使用。它源自 [[ps:Armi|阿拉米文字]]。该字母表包含 22 个辅音，其中一个有两个变体。没有空格和标点符号。数字是用类似于罗马数字的非位置制系统书写的，从右向左。</p>
       <p />
@@ -8873,10 +9306,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was invented by Tedim man Pau Cin Hau (1859–1948), founder of a new religion. The religion was called ''Laipian'', “script religion”. First, the script was ideographic, then alphabetical. The script has consonants R, F, Ch and some tones missing in Tedim, so Pau Cin Hau intended to make a script for all Kuki-Chin languages.</p>
+      <p />
+      <p>Later, the script was retaken by Christians, and it is still in limited use by Tedim {{nspk}}, together with [[ps:Latn|Latin]]. Cousin languages are written exclusively in Latin.</p>
+     </orig>
+     <known-orig>
       <p>The script was invented by Tedim man Pau Cin Hau (1859–1948), founder of a new religion. The religion was called ''Laipian'', “script religion”. First the script was ideographic, then alphabetical. The script has consonants R, F, Ch and some tones missing in Tedim, so Pau Cin Hau intended to make a script for all Kuki-Chin languages.</p>
       <p />
       <p>Later the script was retaken by Christians, and it is still in limited use by Tedim {{nspk}}, together with [[ps:Latn|Latin]]. Cousin languages are written exclusively with Latin.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字由特丁人包钦豪（Pau Cin Hau，1859–1948）发明，他是一位新宗教的创始人。该宗教被称为 ''Laipian''，意为“经文宗教”。起初该文字是表意文字，后来改为拼音文字。该文字包含了特丁语中缺失的辅音 R、F、Ch 以及一些声调，因此包钦豪旨在创造一套适用于所有库基-钦语支的语言文字。</p>
       <p />
@@ -8893,9 +9331,14 @@
      <orig>
       <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
       <p />
-      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation from 2900{{_}}BC.</p>
      </orig>
      <au-cmt>If someone translates video to your language → put the translation!</au-cmt>
+     <known-orig>
+      <p>Proto-cuneiform refers to counting marks and pictograms embossed on clay with various sticks: round, flat, prismatic.</p>
+      <p />
+      <p>Matt Parker from Britain made a YouTube [[https://www.youtube.com/watch?v=MZVs6wF7nC4|video]] “What was the first (known) maths mistake?” Someone Kushim worked at the beer warehouse between 3400 and 3000{{_}}BC and used these characters. Though the name “Kushim” is a speculation, it’s the later pronunciation of 2900{{_}}BC.</p>
+     </known-orig>
      <transl>
       <p>原始楔形文字指的是用各种棍棒（圆的、扁的、棱柱形的）在黏土上压印出的计数标记和象形符号。</p>
       <p />
@@ -8982,7 +9425,8 @@
      <transl>中古伊朗语</transl>
     </text>
     <text id="Text">
-     <orig>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, heyday of Sasanid Empire.</orig>
+     <orig>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. It was used until the 5th century, the heyday of the Sasanid Empire.</orig>
+     <known-orig>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, heyday of Sasanid Empire.</known-orig>
      <transl>用于陶土铭文的伊朗语言，是巴列维文字的最早变体。一直使用到公元 5 世纪，即萨珊帝国的鼎盛时期。</transl>
     </text>
    </group>
@@ -8997,10 +9441,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Very cursive script identified as intermediate form of Pahlavi. There are only two specimen: 12-page fragment of 6th{{_}}century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.</p>
+      <p>Very cursive script identified as an intermediate form of Pahlavi. There are only two specimens: a 12-page fragment of a 6th-century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.</p>
       <p />
       <p>''Book Pahlavi'', the final form of script, still failed to enter Unicode, a hole was left for it.</p>
      </orig>
+     <known-orig>
+      <p>Very cursive script identified as intermediate form of Pahlavi. There are only two specimen: 12-page fragment of 6th{{_}}century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.</p>
+      <p />
+      <p>''Book Pahlavi'', the final form of script, still failed to enter Unicode, a hole was left for it.</p>
+     </known-orig>
      <transl>
       <p>一种非常潦草的文字，被认为是巴列维文的中间形态。目前仅存两件标本：一件是在新疆地区发现的 6 世纪 12 页诗篇残卷，另一件是来自阿富汗的十字架。段落标记采用一半黑色、一半红色的写法。</p>
       <p />
@@ -9019,6 +9468,24 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes from the poorly-explored Proto-Sinaitic script. Letter names are [[pt:acrophonic|acrophonic]]: Alef=ox, Bet=house, Gaml=camel…</p>
+      <p />
+      <p>Though [[ps:Ugar|Ugaritic]] rather than Phoenician is the most ancient deciphered consonant script and the first well-known alphabetic order, the importance of the Phoenician script is hard to overestimate: Phoenicians were good sailors and spread the script across the entire ancient world.</p>
+      <p />
+      <p>Scripts emerged from the Phoenician:</p>
+      <p>* Anatolian alphabets (for example, [[ps:Lyci|Lycian]]{{-}}died);</p>
+      <p>* Old Libyan (ancestor of [[ps:Tfng|Tifinagh]]);</p>
+      <p>* Paleohispanic, or Iberian (died);</p>
+      <p>* [[ps:Armi|Aramaic]] (ancestor of [[ps:Syrc|Syriac]], [[ps:Arab|Arabic]] and, by widespread hypothesis, [[ps:Brah|Brahmi]]);</p>
+      <p>* [[ps:Grek|Greek]] (ancestor of [[ps:Latn|Latin]] and [[ps:Cyrl|Cyrillic]]).</p>
+      <p />
+      <p>So a large part of the literate world is indebted to the Phoenicians.</p>
+      <p />
+      <p>Disappeared about 150{{_}}BC with the destruction of Carthage; Phoenicia itself had been using daughter scripts for a long time.</p>
+      <p />
+      <p>Jean-Jacques Barthélemy deciphered [[ps:Palm|Palmyrene]] in 1754 and Phoenician in 1758, also using a Greek-Phoenician bilingual.</p>
+     </orig>
+     <known-orig>
       <p>Comes from poorly-explored Proto-Sinaitic script. Letter names are [[pt:acrophonic|acrophonic]]: Alef=ox, Bet=house, Gaml=camel…</p>
       <p />
       <p>Though [[ps:Ugar|Ugaritic]] rather than Phoenician is the most ancient deciphered consonant script and the first well-known alphabetic order, importance of Phoenician script is hard to over-estimate: Phoenicians were good sailors and spread the script across all ancient world.</p>
@@ -9035,7 +9502,7 @@
       <p>Disappeared about 150{{_}}BC with destruction of Carthage; Phoenicia itself had been using daughter scripts for a long time.</p>
       <p />
       <p>Jean-Jacques Barthélemy deciphered [[ps:Palm|Palmyrene]] in 1754, and Phoenician in 1758, also using a bilingual with Greek.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>它源自鲜为人知的原始西奈文字。字母名称遵循[[pt:acrophonic|首音原则]]：Alef=牛，Bet=房子，Gaml=骆驼……</p>
       <p />
@@ -9066,11 +9533,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Invented in 1936 by Methodist missionary Samuel Pollard. Based on the [[ps:Cans|Canadian syllabary]]. The first attempt to encode was in 1997. Because of the complex tonal structure of Hmong languages, only in 2010 the encoding was ready.</p>
+      <p />
+      <p>The encoding scheme is</p>
+      <p>: {{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</p>
+     </orig>
+     <known-orig>
       <p>Invented in 1936 by Methodist missionary Samuel Pollard. Based on [[ps:Cans|Canadian syllabary]]. The first attempt to encode was in 1997. Because of complex tonal structure of Hmong languages, only in 2010 the encoding was ready.</p>
       <p />
       <p>Encoding scheme is</p>
       <p>: {{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>由卫理公会传教士塞缪尔·柏格理（Samuel Pollard）于 1936 年创制。基于 [[ps:Cans|加拿大原住民音节文字]]（Canadian syllabary）。首次尝试编码是在 1997 年。由于苗语复杂的声调结构，直到2010年编码方案才准备就绪。</p>
       <p />
@@ -9090,10 +9563,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian with [[ps:Phli|Pahlavi]] script but was used sporadically. Contains seven ligatures [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
+      <p>Used in inscriptions and coins before the dawn of the Sasanid Empire (the 3rd century). Later, it was supplanted by Persian with [[ps:Phli|Pahlavi]] script, but was still used sporadically. Contains seven [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (right to left!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
+     <known-orig>
+      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian with [[ps:Phli|Pahlavi]] script but was used sporadically. Contains seven ligatures [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
+      <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (right to left!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
+      <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
+     </known-orig>
      <transl>
       <p>在萨珊帝国（公元 3 世纪）黎明之前，用于铭文和钱币。后来被使用 [[ps:Phli|巴列维]] 文字的波斯语所取代，但仍偶有使用。包含七个 [[pt:ligature|连字]] 和两个带有花饰尾部的字母：</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw（从右向左！）{{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
@@ -9140,13 +9618,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Rohingya or Ruáingga is a small, mostly Muslim ethnic group spread across Bangladesh, Myanmar and neighbouring countries. [[ps:Arab|Arabic]] writing has been known since the 19th century.</p>
+      <p />
+      <p>Since 1980, Islamic preacher Mohammad Hanif invented a more suitable script for Rohingya. The script uses its own set of decimal digits. Letters are joined, like in Arabic, try to decipher autonym: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
+      <p />
+      <p>The language has three tones denoted with diacritics. Punctuation marks are ordinary Arabic: exclamation mark '''!''', semicolon ''':''' and sometimes period '''.''' are [[pt:ascii|ASCII]], the rest are reversed from the Arabic block.</p>
+     </orig>
+     <au-cmt>Spelling taken from en-wiki</au-cmt>
+     <known-orig>
       <p>Rohingya or Ruáingga is a small mostly Muslim ethnic group spread across Bangladesh, Myanmar and bordering countries. [[ps:Arab|Arabic]] writing is known since 19th century .</p>
       <p />
       <p>Since 1980 Islamic preacher Mohammad Hanif invented more suitable script for Rohingya. The script uses own set of decimal digits. Letters are joined, like in Arabic, try to decipher autonym: {{sm|&amp;rlm;𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝}}</p>
       <p />
       <p>The language has thee tones denoted with diacritics. Punctuation marks are ordinary Arabic: exclamation mark '''!''', semicolon ''':''' and sometimes period '''.''' are [[pt:ascii|ASCII]], the rest are reversed from Arabic block.</p>
-     </orig>
-     <au-cmt>Spelling taken from en-wiki</au-cmt>
+     </known-orig>
      <transl>
       <p>罗兴亚语（Rohingya），或者说 Ruáingga，是一个规模不大、以穆斯林为主的族群，主要分布在孟加拉国、缅甸及其周边国家。使用 [[ps:Arab|阿拉伯字母]] 书写的历史最早可以追溯到 19 世纪。</p>
       <p />
@@ -9244,7 +9729,8 @@
      <transl>南阿拉伯语（萨巴语、卡塔班语等），吉兹语</transl>
     </text>
     <text id="Text">
-     <orig>Old South Arabian is an ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</orig>
+     <orig>Old South Arabian is an ancestor of the [[ps:Ethi|Ethiopic]] script and comes from the poorly explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in the 7th century with the expansion of the Arabs.</orig>
+     <known-orig>Old South Arabian is an ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</known-orig>
      <transl>古南阿拉伯文字是 [[ps:Ethi|埃塞俄比亚文字]]（即吉兹文字）的祖先，其自身源自探索尚不充分的原始西奈文字（Proto-Sinaic script）。公元 7 世纪，随着阿拉伯人的扩张，它被 [[ps:Arab|阿拉伯文字]] 所取代。</transl>
     </text>
    </group>
@@ -9343,12 +9829,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Irish writer George Bernard Shaw (1856–1950) was obsessed with shorthand and worked on the BBC’s Advisory Committee on Spoken English, where he met several proponents of phonetic writing. So he willed to make a phonetic alphabet for English, far from [[ps:Latn|Latin]], to prevent it from looking like pidgin English. The contest was won by Ronald Kingsley Read.</p>
+      <p />
+      <p>The alphabet consists of three types of letters: short, tall and deep. Short letters are vowels, vocalic ({{t|r}}, {{t|ℓ}}) and nasal consonants, tall are voiceless consonants. When turned 180°, a tall letter becomes deep and starts to mean a corresponding voiced consonant (except the pair {{t|ŋ}}{{t|h}}).</p>
+      <p />
+      <p>The first work in the new alphabet was Shaw’s play ''Androcles and the Lion'', bilingual with English (1962). In 2013, the first non-bilingual came, ''Alice in Wonderland''. Anyway, publications in the new alphabet are sporadic.</p>
+     </orig>
+     <known-orig>
       <p>Irish writer George Bernard Shaw (1856–1950) was obsessed with shorthand, and worked on BBC’s Advisory Committee on Spoken English where he met several proponents of phonetic writing. So he willed to make a phonetic alphabet for English, far from [[ps:Latn|Latin]] to prevent from looking like pidgin English. The contest was won by Ronald Kingsley Read.</p>
       <p />
       <p>The alphabet consists of three types of letters: short, tall and deep. Short letters are vowels, vocalic ({{t|r}}, {{t|ℓ}}) and nasal consonants, tall are voiceless consonants. When turned 180°, tall letter becomes deep and starts to mean a corresponding voiced consonant (except pair {{t|ŋ}}{{t|h}}).</p>
       <p />
       <p>The first work that came in new alphabet was Shaw’s play ''Androcles and Lion'', in bilingual with English (1962). In 2013 the first non-bilingual came, ''Alice in Wonderland''. Anyway, publications in the new alphabet are sporadic.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>爱尔兰作家乔治·萧伯纳（1856–1950）对速记痴迷不已，并曾在 BBC 口语咨询委员会任职，期间结识了几位拼音文字（phonetic writing）的倡导者。因此，他在遗嘱中要求为英语创造一套拼音字母，且必须远离 [[ps:Latn|拉丁文字]]，以防止看起来像洋泾浜英语（pidgin English）。这场设计竞赛最终由罗纳德·金斯利·里德（Ronald Kingsley Read）获胜。</p>
       <p />
@@ -9369,6 +9862,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Sharada derived from Gupta (the northern branch of [[ps:Brah|Brahmi]]), and was widespread in the 8–12th centuries in North-West India and Afghanistan. Later, Sharada became less and less suitable for Kashmiri and fell out of use. It is the ancestor of the [[ps:Guru|Gurmukhi]] script.</p>
+      <p />
+      <p>Currently, it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
+      <p />
+      <p>Bhahmic abugida with inherent vowel {{t|a}}. [[pt:virama|Virama]], unusual for Indic scripts, is situated on the right and used frequently. There are many [[pt:ligature|ligatures]] “consonant-virama-consonant”.</p>
+      <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
+      <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
+     </orig>
+     <known-orig>
       <p>Sharada comes from Gupta (northern branch of [[ps:Brah|Brahmi]]), was widespread in 8–12th centuries in North-West India and Afghanistan. Later Sharada became less and less suitable for Kashmiri and fell out of use. Ancestor of [[ps:Guru|Gurmukhi]] script.</p>
       <p />
       <p>Currently it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
@@ -9378,7 +9882,7 @@
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
       <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
       <p>The headstroke may be solid, broken or have arbitrary breaks.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>夏拉达文字源自笈多文（Gupta，[[ps:Brah|婆罗米文]] 的北部分支），在公元 8 至 12 世纪曾广泛流行于印度西北部和阿富汗地区。后来，夏拉达文对克什米尔语的适用性逐渐降低，并最终不再被日常使用。它是 [[ps:Guru|古木基文字]]（Gurmukhi）的祖先。</p>
       <p />
@@ -9403,6 +9907,18 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Medieval North Indic script related to Buddhism, derived from [[ps:Brah|Brahmi]]. It is often written with a brush, as the Chinese do. There are no spaces between words.</p>
+      <p />
+      <p>It spread across all Buddhist East, including Japan, but in the 9th century, China carried out several purges of “foreign religions”, cutting Japan off from mainland sources. By 1200, Siddham had been supplanted by other scripts, and is now preserved only in Japanese Buddhism, where it is called ''Sittan'' or ''Bonji''.</p>
+      <p />
+      <p>There are no digits in Japanese ''Bonji'', and some room was left for old Indic digits. Many punctuation marks and decorations specific to religious texts are encoded.</p>
+      <p />
+      <p>[[pt:virama|Virama]] is extremely rare and occurs only at the ends of words because of multiple [[pt:ligature|ligatures]]{{-}}letters are written top-down.</p>
+      <p>{{smtable|ka|*𑖎|+ i|**◌𑖰|= ki|*𑖎𑖰}}</p>
+      <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
+      <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
+     </orig>
+     <known-orig>
       <p>Medieval North-Indic script related to Buddhism that evolved from [[ps:Brah|Brahmi]]. It is often written with brush like Chinese do. There are no spaces between words.</p>
       <p />
       <p>It was spread across all Buddhist East, including Japan, but in 9th century China made several purges of “foreign religions”, cutting Japan from mainland sources. By 1200 Siddham was supplanted with other scripts, and nowadays is conserved in Japanese Buddhism only, named ''Sittan'' or ''Bonji''.</p>
@@ -9413,7 +9929,7 @@
       <p>{{smtable|ka|*𑖎|+ i|**◌𑖰|= ki|*𑖎𑖰}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
       <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是一种源自 [[ps:Brah|婆罗米文字]] 的中世纪北印度文字，与佛教关系密切。它常像中国书法那样用毛笔书写，且词与词之间没有空格。</p>
       <p />
@@ -9439,13 +9955,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Language and script used near Side (modern-day Turkey), last mentioned in the 2nd century BC. All 13 known inscriptions predate this mention. The language is considered deciphered, though letters’ pronunciation is arguable:</p>
+      <p>Language and script used near Side (modern-day Turkey), last mentioned in the 2nd century BC. All 13 known inscriptions predate this mention. The language is considered deciphered, though the pronunciation of letters is arguable:</p>
       <p />
       <p>A E I O Ŭ? W Y P&lt;br&gt;</p>
       <p>ð? M T D Th S S₂ N&lt;br&gt;</p>
       <p>L Ts? G χ R V/U K B/V&lt;br&gt;</p>
       <p>N₂ Z</p>
      </orig>
+     <known-orig>
+      <p>Language and script used near Side (modern-day Turkey), last mentioned in the 2nd century BC. All 13 known inscriptions predate this mention. The language is considered deciphered, though letters’ pronunciation is arguable:</p>
+      <p />
+      <p>A E I O Ŭ? W Y P&lt;br&gt;</p>
+      <p>ð? M T D Th S S₂ N&lt;br&gt;</p>
+      <p>L Ts? G χ R V/U K B/V&lt;br&gt;</p>
+      <p>N₂ Z</p>
+     </known-orig>
      <transl>
       <p>一种在锡德（今土耳其境内）附近使用的语言和文字，最后一次被提及是在公元前 2 世纪。目前已知的 13 篇铭文均早于这一记载。该语言被认为已被破译，但字母的发音仍存争议：</p>
       <p />
@@ -9467,6 +9991,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was named after the city of Khudabad, Pakistan. In 1868, Khudawadi was declared the main script of Sindhi by the British administration. By the 20th century, Sindhis, mainly Muslims, had adopted [[ps:Arab|Arabic]], but the script is alive even today.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used; historically, [[ps:Khoj|Khojki]] was in use.</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
+      <p>{{smtable|ka|*𑊺|+ i|**◌𑋡|= ki|*𑊺𑋡}}</p>
+      <p>{{smtable|ka|*𑊺|+ virama|**◌𑋪|= k|*𑊺𑋪}}</p>
+      <p />
+      <p>Try to read the autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
+     </orig>
+     <known-orig>
       <p>The script was named after city of Khudabad, Pakistan. In 1868 Khudawadi was declared the main script of Sindhi by British administration. By 20th century Sindhi, mainly Muslims, moved to [[ps:Arab|Arabic]], but the script is still alive.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used, historically [[ps:Khoj|Khojki]] was in use.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
@@ -9474,7 +10007,7 @@
       <p>{{smtable|ka|*𑊺|+ virama|**◌𑋪|= k|*𑊺𑋪}}</p>
       <p />
       <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>该文字得名于巴基斯坦的库达巴德（Khudabad）城。1868年，库达瓦迪文字被英国殖民政府宣布为信德语的主要文字。到了 20 世纪，信德人（主要是穆斯林）转向了 [[ps:Arab|阿拉伯文字]]，但这套文字依然具有生命力。[[ps:Deva|天城文字]] 和 [[ps:Guru|古木基文字]] 也被使用，历史上 [[ps:Khoj|可吉文字]]（Khojki）也曾流行。</p>
       <p />
@@ -9539,12 +10072,19 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The Sogdian script came from [[ps:Syrc|Syriac]] about 100{{_}}CE. The [[ps:Ougr|Old Uyghur]] script derives from Sogdian, and [[ps:Mong|Mongolian]] from Uyghur. The script was used until the 10th century; after that, Sogdiana was finally converted to Islam and adopted [[ps:Arab|Arabic]]. The last specimen is ≈1200. Letters are joined.</p>
+      <p />
+      <p>Unicode encodes two variants of Sogdian: old (≈300) and new (after Buddhist manuscripts since the 6th century).</p>
+      <p />
+      <p>It’s clear how the Mongolian script became vertical: sometimes Sogdians laid the text 90° to the left, and this variant was adopted by the Uyghurs.</p>
+     </orig>
+     <known-orig>
       <p>Sogdian script came from [[ps:Syrc|Syriac]] about 100{{_}}CE. [[ps:Ougr|Old Uyghur]] script derives from Sogdian, and [[ps:Mong|Mongolian]] from Uyghur. The script was used until 10th century, after that Sogdiana was finally turned to Islam and switched to [[ps:Arab|Arabic]]. The last specimen is ≈1200. Letters are joined.</p>
       <p />
       <p>Unicode encodes two variants of Sogdian: old (≈300) and new (after Buddhist manuscripts since 6th century).</p>
       <p />
       <p>It’s clear how Mongolian script became vertical: sometimes Sogdians laid text 90° to the left, and such a variant was borrowed by Uyghurs.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>粟特文字大约在公元 100 年左右源自 [[ps:Syrc|叙利亚文字]]。[[ps:Ougr|古回鹘文字]] 衍生自粟特文，而 [[ps:Mong|蒙古文字]] 则源自回鹘文字。这套文字一直使用到 10 世纪，此后粟特地区最终伊斯兰化，并转而使用 [[ps:Arab|阿拉伯文字]]。最后的实物样本大约在 1200 年左右。字母之间是相连的。</p>
       <p />
@@ -9575,10 +10115,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango; [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}it has no phonemes borrowed from neighbouring languages. Also, Sora is written in [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
+      <p />
+      <p>Most sources consider Sora an alphabet, but it has an inherent vowel {{t|a}}, like in a [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
+     </orig>
+     <known-orig>
       <p>Sora or Savara is a small vulnerable Austro-Asian (not Indo-European) language of India. The script was invented in 1936 by Mangei Gomango, [[ps:Latn|Latin]] was used before that. The script is somewhat poor{{-}}no phonemes borrowed from neighbouring languages. Also Sora is written with [[ps:Orya|Odia]] and [[ps:Telu|Telugu]].</p>
       <p />
       <p>Most sources consider Sora an alphabet, but it has inherent vowel {{t|a}}, as in [[pt:brahmic|Brahmic abugida]]. Try to read the autonym {{sm|𑃐𑃦𑃝𑃗 𑃐𑃦𑃖𑃛𑃣𑃗}}.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>索拉语（或称萨瓦拉语）是印度一种弱势的小型南亚语系（非印欧语系）语言。这套文字由曼盖·戈曼戈（Mangei Gomango）于 1936 年创制，在此之前使用的是 [[ps:Latn|拉丁文字]]。这套文字的功能相对“贫乏”——它无法拼写从邻近语言借来的语音。此外，索拉语也用 [[ps:Orya|奥里亚文字]] 和 [[ps:Telu|泰卢固文字]] 书写。</p>
       <p />
@@ -9597,6 +10142,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was invented by Buddhist monk Zanabazar, an artist and the author of the square script [[ps:Zanb|named after him]]. The name comes from the Sanskrit ''svayambhu'' “self-created”. From the very beginning, the script was used only for religion{{-}}on prayer wheels, seals, and temple signs. Character [[pc:11A9E]], also known as ''Soyombo'', is a symbol of Mongolia.</p>
+      <p />
+      <p>Brahmic abugida with an inherent vowel {{t|a}} and unusual design: the frame consists of a vertical stem on the right and a triangle above. This frame carries the main consonant, a vowel mark, a final consonant, a length mark and a diphthong mark.</p>
+      <p>{{smtable|ra|*𑩼|+ i|*◌𑩑|+ au|*◌𑩘|+ final ℓ|*◌𑪒|= riul|*𑩼𑩑𑩘𑪒}}</p>
+      <p />
+      <p>[[pt:virama|Virama]] is purely virtual, for consonant conjuncts:</p>
+      <p>{{smtable|ka|*𑩜|+ subjoiner|*◌𑪙|+ va|*𑩾|= kva|*𑩜𑪙𑩾}}</p>
+      <p />
+      <p>Other conjuncts are encoded using initial consonants:</p>
+      <p>{{smtable|initial la|*𑪇|+ ka|*𑩜|= lka|*𑪇𑩜}}</p>
+      <p />
+      <p>Numbers aren’t attested in sources.</p>
+     </orig>
+     <known-orig>
       <p>The script was invented by Buddhist monk Zanabazar, artist and author of square script [[ps:Zanb|named for himself]]. The name comes from Sanskrit ''svayambhu'' “self-created”. The script from very begginning was used for religion only{{-}}on prayer wheels, seals, signs of temples. Character 11A9E also known as ''Soyombo'' is a symbol of Mongolia.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and unusual design: the frame contains of vertical stem on the right and triangle above. This frame carries main consonant, vowel mark, final consonant, length mark and diphtong mark.</p>
@@ -9609,7 +10168,7 @@
       <p>{{smtable|initial la|*𑪇|+ ka|*𑩜|= lka|*𑪇𑩜}}</p>
       <p />
       <p>Numbers aren’t attested in sources.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这套文字由佛教僧侣、艺术家扎那巴扎尔（Zanabazar）创制，他也是 [[ps:Zanb|以其名字命名的方形文字]] 的作者。其名称源自梵语 svayambhu，意为“自我创造”。这套文字从一开始就仅用于宗教目的——刻在转经筒、印章和寺庙的牌匾上。字符 11A9E（即索永布符号）也被称为“索永布”，是蒙古国的国家象征。</p>
       <p />
@@ -9798,10 +10357,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Comes from [[ps:Shrd|Sharada]]. Takri was used in business documentation, but the post-war liberation of India quickly replaced it with [[ps:Deva|Devanagari]].</p>
+      <p />
+      <p>Every state has its own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but it is [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable in the autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|ṭa:‑kᵊ‑ri:}}. But virama is used in ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
+     </orig>
+     <known-orig>
       <p>Comes from [[ps:Shrd|Sharada]]. Takri was used in business documentation, but post-war liberation of India quickly replaced it with [[ps:Deva|Devanagari]].</p>
       <p />
       <p>Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} {{t|ṭa:‑kᵊ‑ri:}}. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a second sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} {{t|prᵊ}}.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>它源自 [[ps:Shrd|夏拉达文字]]。塔克里文字曾被用于商业文书，但战后印度的独立迅速将其替换为 [[ps:Deva|天城文字]]。</p>
       <p />
@@ -9918,6 +10482,17 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A very complex ideographic system that existed in the Tangut kingdom of Xi Xia (North-West China). The simplest ideographs consist of 4 lines, ideograph “one” has 6. The most widespread version: the script was designed by Emperor Jingzong (=Li Yuanhao) and scientist Yeli Renrong.</p>
+      <p />
+      <p>As in China, Tangut calligraphy was well developed, one ideograph could have up to 4 forms. In Unicode, they are encoded as a single character unless occur in the same source. Glyphs with similar shapes but different names are also unified.</p>
+      <p />
+      <p>The Tangut kingdom was destroyed by Genghis Khan in 1227, but the script was used for several more centuries: the last specimen dates to 1502, and a handwritten mark later than 1680 exists.</p>
+      <p />
+      <p>Europeans have been studying the dead script since 1870, the key role was played by Soviet scientist Nikolai Nevsky.</p>
+      <p />
+      <p>Because of copyright issues, icons are original (traced by Prof. Jǐng Yǒngshí), and the font is modern Roman redrawn by Google.</p>
+     </orig>
+     <known-orig>
       <p>Very complex ideographic system that existed in Tangut kingdom of Xi Xia (North-West China). The simplest ideographs consist of 4 lines, ideograph “one” has 6. The most widespread version: the script was designed by Emperor Jingzong (=Li Yuanhao) and scientist Yeli Renrong.</p>
       <p />
       <p>Like in China, Tangut calligraphy was well-developed, one ideograph had up to 4 forms. In Unicode thay are encoded with one character unless occur in the same source. Glyphs that have similar shape but different names are also unified.</p>
@@ -9927,7 +10502,7 @@
       <p>Europeans started to study dead script since 1870, the key role was played by Soviet scientist Nikolai Nevsky.</p>
       <p />
       <p>Because of copyright issues, icons are original (traced by Prof. Jǐng Yǒngshí), and the font is modern Roman redrawn by Google company.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是一套存在于西夏王国（中国西北）的非常复杂的表意文字系统。最简单的表意字由 4 画组成，就连“一”字都有 6 画。最通行的版本是：这套文字由景宗皇帝（即李元昊）和学者野利仁荣设计。</p>
       <p />
@@ -10195,18 +10770,21 @@
      <orig>Maithili ''(India)'', Sanskrit</orig>
      <transl>迈蒂利语（Maithili，印度），梵语（Sanskrit）</transl>
     </text>
-    <text id="Note">
-     <orig>separated from ''Gaudi''{{-}}proto-Bengali</orig>
-     <transl>从“高达文字”（原始孟加拉文字）中分离出来</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible due to different [[pt:ligature|ligatures]]. The first metal type was made in the 1920s, and the first digital font in the 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in the 20th century, and the script is used mainly in Hinduism. For a long time, Maithili was considered a dialect of Hindi or Bengali, but in 2003, it was recognized as a separate language, with Devanagari as the main script.</p>
+      <p />
+      <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used only in Sanskrit: consonant conjuncts are written as ligatures, and the vowel becomes silent at the end of words.</p>
+      <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
+      <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
+     </orig>
+     <known-orig>
       <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible because of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, and the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
       <p />
       <p>The inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent at the end of words.</p>
       <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这种文字与 [[ps:Beng|孟加拉文字]] 非常接近，大多数字符都很相似，但由于存在不同的 [[pt:ligature|连字]] 规则，两者无法进行 [[pt:unification|统一]]。它的第一副金属活字制作于20世纪20年代，而第一个数字字体则出现在20世纪90年代。大多数使用者（截至2000年约为3400万）在20世纪转用了 [[ps:Deva|天城文字]]，如今这种文字主要用于印度教仪式。在很长一段时间里，迈蒂利语被认为是印地语或孟加拉语的一种方言，但在2003年它被宣布为一种独立的语言，而天城体则被保留为主要书写文字。</p>
       <p />
@@ -10214,6 +10792,10 @@
       <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
       <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </transl>
+    </text>
+    <text id="Note">
+     <orig>separated from ''Gaudi''{{-}}proto-Bengali</orig>
+     <transl>从“高达文字”（原始孟加拉文字）中分离出来</transl>
     </text>
    </group>
    <group id="Tnsa">
@@ -10227,10 +10809,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990, Lakhum Mossang from India created a new alphabet and taught it to about 100 people until he died in 2020.</p>
+      <p />
+      <p>Vowel names are phoneme + one of four tones. For comparison, tones in Hmong Latin are also written with letters.</p>
+     </orig>
+     <known-orig>
       <p>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990 Lakhum Mossang from India created the alphabet and teached about 100 people until his death in 2020.</p>
       <p />
       <p>Vowel names are phoneme + one of four tones. In comparison, in Hmong Latin tones are also written with letters.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这是一个使用不同类型的 [[ps:Latn|拉丁文字]] 书写的汉藏语系小语族。1990 年，来自印度的拉胡姆·莫桑（Lakhum Mossang）创造了这套字母表，并一直教授给大约 100 人，直到他于 2020 年去世。</p>
       <p />
@@ -10243,12 +10830,18 @@
      <orig>Todhri (Elbasan) alphabet for Albanian</orig>
      <transl>托兹里文字（Todhri，埃尔巴桑（Elbasan）），阿尔巴尼亚文字</transl>
     </text>
-    <text id="Lang">
-     <orig>Albanian</orig>
-     <transl>阿尔巴尼亚语（Albanian）</transl>
-    </text>
     <text id="Text">
      <orig>
+      <p>Invented by Theodhor Haxhifilipi, also known as Teacher Todhri. He translated multiple Christian texts into Albanian, purportedly even the entire Bible. Only few texts survived, particularly the Gospel of John and some prayers. The script was used around Elbasan long after he died in 1805: it was discovered around 1849 by Johann von Hahn (he suspected it was ancient despite the name Todhri), and was quite rare. In 1900, an old monk literate in Todhri was found, the last literate person purportedly died around 1930.</p>
+      <p />
+      <p>The encoding order is different from Hahn’s and is suitable for modern Albanian studies.</p>
+      <p />
+      <p>{{Albanian}}</p>
+      <p />
+      <p>Do not confuse with the [[ps:Elba|alphabet of the Elbasan Gospel]]!</p>
+     </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
+     <known-orig>
       <p>Invented by Theodhor Haxhifilipi also known as Teacher Todhri. He translated multiple Christian texts to Albanian, purportedly even the entire Bible. Only few texts survived, particularly Gospel of John and some prayers. The script was used around Elbasan long after his death in 1805: it was discovered about 1849 by Johann von Hahn (he suspected that it’s ancient despite name Todhri), and was quite rare. In 1900 an old monk literate in Todhri was found, the last literate people purportedly died about 1930.</p>
       <p />
       <p>Encoding order is different from Hahn’s, and is sutable for modern Albanian studies.</p>
@@ -10256,8 +10849,7 @@
       <p>{{Albanian}}</p>
       <p />
       <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
-     </orig>
-     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian</au-cmt>
+     </known-orig>
      <transl>
       <p>由特奥多尔·哈吉菲利皮（Theodhor Haxhifilipi），也被称为托兹里老师（Teacher Todhri）所创制。他将多部基督教文本翻译成阿尔巴尼亚语，据说甚至包括整部《圣经》。只有少数文本幸存下来，特别是《约翰福音》和一些祈祷文。这种文字在他于 1805 年去世后，仍在埃尔巴桑地区使用了很长一段时间：它大约在 1849 年被约翰·冯·哈恩（Johann von Hahn）发现（尽管名字里有“托兹里”，哈恩当时怀疑这是一种古代文字），且当时已相当罕见。1900 年，人们发现了一位通晓托兹里文字的老僧侣，据说最后一批识读写的人大约在 1930 年去世。</p>
       <p />
@@ -10267,6 +10859,10 @@
       <p />
       <p>请勿与 [[ps:Elba|爱尔巴桑福音书文字]] 混淆！</p>
      </transl>
+    </text>
+    <text id="Lang">
+     <orig>Albanian</orig>
+     <transl>阿尔巴尼亚语（Albanian）</transl>
     </text>
    </group>
    <group id="Tols">
@@ -10279,7 +10875,8 @@
      <transl>库鲁克语（Kurukh）{{nspk||=库鲁克斯语，奥拉翁语（Kurux, Oraon）}}</transl>
     </text>
     <text id="Text">
-     <orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
+     <orig>Created by Narayan Oraon. It’s a pure alphabet without an inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</orig>
+     <known-orig>Created by Narayan Oraon. It’s a pure alphabet without inherent vowel. The new alphabet better conveys the language than [[ps:Deva|Devanagari]], the main script for Kurukh.</known-orig>
      <transl>由纳拉扬·奥拉翁（Narayan Oraon）创制。这是一种纯粹的字母表，没有固有元音。相比于作为库鲁克语主要文字的 [[ps:Deva|天城文字]]，这套新字母能更好地传达该语言的特点。</transl>
     </text>
    </group>
@@ -10308,13 +10905,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Very close ancient scripts ''Tulu'' and ''Tigalari'', some even consider them a single script. Maybe characters from the sister script ''Grantha-Malayalam'' will be added soon. They are all related to [[ps:Gran|Grantha]] and are rarely used in Hinduism nowadays. The first known inscription is 1159, but the script is much older. As a minority language, Tulu was neglected by British authorities, and its script nearly died out.</p>
+      <p />
+      <p>Modern Tulu is written in [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]], or in the revived script commonly [[pt:unification|unified]] with Malayalam. There’s a consensus to not unify ancient and modern Tulu: live Brahmic scripts tend to simplify typing, and dead ones simplify font design and convey the author’s spelling even on flawed fonts.</p>
+      <p />
+      <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks that look like a subscript + (will probably be encoded later as a pan-Indic punctuation), so the picture for virtual [[pt:virama|virama]] has plus inside rather than below. The ''danda'' bar is ordinary and was encoded to prevent problems in multilingual text.</p>
+     </orig>
+     <au-cmt>1159 is actually inscription on stone rather than palm leaf</au-cmt>
+     <known-orig>
       <p>Very close ancient scripts ''Tulu'' and ''Tigalari'', some even consider them a single script. Maybe characters of sister-script ''Grantha-Malayalam'' will be added soon. They all are related to [[ps:Gran|Grantha]], and are rarely used nowadays in Hinduism. The first known inscription is 1159, but the script is much older. As a language of minority, Tulu was neglected by British authorities, and the script almost died.</p>
       <p />
       <p>Modern Tulu is written in [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]], or in revived script commonly [[pt:unification|unified]] with Malayalam. There’s a consensus to not unify ancient and modern Tulu: live Brahmic scripts tend to simplify typing, and dead ones simplify font design and convey author’s spelling even on flawed fonts.</p>
       <p />
       <p>Ancient digits are very rarely attested and not encoded, modern ones are unified with Kannada. Tulu manuscripts contain editorial marks looking like subscript + (will probably be encoded later as a pan-Indic punctuation), so picture for virtual [[pt:virama|virama]] has plus inside rather than below. ''Danda'' bar is ordinary, and was encoded to prevent problems in multilingual text.</p>
-     </orig>
-     <au-cmt>1159 is actually inscription on stone rather than palm leaf</au-cmt>
+     </known-orig>
      <transl>
       <p>非常古老的图卢文字（Tulu）和提加拉里文字（Tigalari）十分相近，有些人甚至认为它们是同一种文字。也许很快会加入其“姐妹文字”古兰塔-马拉雅拉姆文字（Grantha-Malayalam）的字符。它们都与 [[ps:Gran|古兰塔文字]] 有关，如今在印度教中已很少使用。已知最早的铭文可追溯至 1159 年，但这种文字的历史要古老得多。作为一种少数民族语言，图卢语曾被英国当局忽视，这种文字也因此濒临消亡。</p>
       <p />
@@ -10401,13 +11005,20 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The alphabet was created by Naum Veqilharxhi, writer, translator and lawyer. He worked on the alphabet for 20 years, 1824–1844. Naum died two years later, and the alphabet did{{_}}not{{_}}gain significant traction. Named after Vithkuq, the village where Naum was born. Also, Germanized “Büthakukye” is widespread.</p>
+      <p />
+      <p>The alphabet suits the phonetics of Albanian well, but for some reason has no{{_}}letters for the digraphs “gj”, “rr”, “xh” and “zh” in modern Albanian.</p>
+      <p />
+      <p>{{Albanian}} Naum’s reason is surely the former: his letters survived where he responded to criticism, and the alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
+     </orig>
+     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian. The former = cultural autonomy, the latter = secrecy from Turks.</au-cmt>
+     <known-orig>
       <p>The alphabet was created by Naum Veqilharxhi, writer, translator and lawyer. He worked on alphabet for 20 years, 1824–1844. Naum died two years later, and alphabet did{{_}}not{{_}}get significant spread. Named after Vithkuq, village where Naum was born. Also Germanized “Büthakukye” is widespread.</p>
       <p />
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
       <p>{{Albanian}} Naum’s reason is surely the former: his letters survived where he responded to criticism, and the alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
-     </orig>
-     <au-cmt>{{Albanian}} = snippet of text, Snip.Albanian. The former = cultural autonomy, the latter = secrecy from Turks.</au-cmt>
+     </known-orig>
      <transl>
       <p>这套字母表是由作家、翻译家和律师纳乌姆·韦基尔哈尔吉（Naum Veqilharxhi）创造的。他从 1824 年到 1844 年，为这套字母表工作了 20 年。纳乌姆在两年后去世，这套字母表并没有得到广泛传播。它以纳乌姆出生的村庄维斯库克（Vithkuq）命名。此外，德语化的 “Büthakukye” 也很流行。</p>
       <p />
@@ -10442,10 +11053,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>The script was made from scratch by community leader Lako Bodra. He claimed that it came to him in divine revelation from someone Dhawan Turi from the 13th century. The alphabet starts with the Om character{{-}}the first sound of creation of the universe. Ho is an{{_}}unwritten language, about {{%|2}} write in Warang Citi, and the same number write in [[ps:Orya|Odia]].</p>
+      <p />
+      <p>The type is arguable: every letter has an inherent vowel {{t|a}} (some have {{t|ɔ}} or {{t|ɛ}}), like in [[pt:brahmic|Brahmic abugidas]]. It also has alphabetic features: two cases, all vowels are full rather than marks. Pronunciation is{{_}}not{{_}}always consistent: it’s unknown whether the inherent vowel becomes silent (in the final position, it’s always silent). Read the autonym {{sm|𑢹𑣗𑣁𑣜𑣊 𑣏𑣂𑣕𑣂}}: letters are pronounced by the last phoneme of the name, except {{sm|𑢹}}=h и {{sm|𑣗}}=b, this digraph is read {{t|w}}.</p>
+     </orig>
+     <known-orig>
       <p>The script was made from scratch by community leader Lako Bodra. He claimed that it came to him in divine revelation from someone Dhawan Turi from 13th century. The alphabet starts with Om character{{-}}the first sound of creation of the universe. Ho is an{{_}}unwritten language, about {{%|2}} write with Warang Citi and the same number write with [[ps:Orya|Odia]].</p>
       <p />
       <p>The type is arguable: every letter has an inherent vowel {{t|a}} (some have {{t|ɔ}} or {{t|ɛ}}), like in [[pt:brahmic|Brahmic abugidas]]. It also has alphabetic features: two cases, all vowels are full rather than marks. Pronunciation is{{_}}not{{_}}always consistent: it’s unknown whether inherent vowel becomes silent (in final position it’s always silent). Read autonym {{sm|𑢹𑣗𑣁𑣜𑣊 𑣏𑣂𑣕𑣂}}: letters are pronounced by the last phoneme of name except {{sm|𑢹}}=h и {{sm|𑣗}}=b, this digraph is read {{t|w}}.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>这套文字是由社区领袖拉科·博德拉（Lako Bodra）从零开始创造的。他声称这是来自 13 世纪一位名叫达万·图里（Dhawan Turi）的人的神圣启示。这套字母表以“Om”字符开头——这是宇宙创生的第一声。霍语是一种没有文字的语言，大约 {{%|2}} 的人使用瓦兰齐地文字书写，同样数量的人使用 [[ps:Orya|奥里亚文字]] 书写。</p>
       <p />
@@ -10491,6 +11107,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>[[ps:Pcun|Initially]] (≈3500{{_}}BC), business documents were written on clay (10 cows). Ideographs appeared by 3200, and their use as syllables began by 3000{{_}}BC. Style changed in parallel: characters turned 90° counterclockwise, and embossing with a prismatic stylus began{{-}}hence the elements of script, sharp wedges.</p>
+      <p />
+      <p>More progressive script supplanted cuneiform during the 1st millennium{{_}}BC. For example, [[ps:Xpeo|Persian cuneiform]] (1st millennium{{_}}BC) was alphasyllabic rather than ideosyllabic. The last known specimen is 75{{_}}CE.</p>
+      <p />
+      <p>Tablets were preserved for several millennia in the deserts of Persia and Iraq, and Persian cuneiform had been deciphered by the mid-19th century. It became a key to Sumerian. All known languages had been deciphered by 1900.</p>
+      <p />
+      <p>The “Cuneiform” block approximately corresponds to the cuneiform of the Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier characters from ≈2900{{_}}BC.</p>
+     </orig>
+     <known-orig>
       <p>Initially (≈3500{{_}}BC) business documents were written on clay (10 cows). Ideographs had appeared by 3200, and use of ideographs as syllables started by 3000{{_}}BC. Style changed in parallel: characters turned 90° counterclockwise, embossing with prismatic stylus started{{-}}hence elements of script, sharp wedges.</p>
       <p />
       <p>Cuneiform was supplanted with more progressive scripts during 1st millennium{{_}}BC. For example, [[ps:Xpeo|Persian cuneiform]] (1st millennium{{_}}BC) was alphasyllabic rather that ideosyllabic. The last known specimen is 75{{_}}CE.</p>
@@ -10498,7 +11123,7 @@
       <p>Tablets were preserved for several millennia in deserts of Persia and Iraq, and Persian cuneiform had been deciphered by mid 19th century. It became a key to Sumerian. All known languages had been deciphered by 1900.</p>
       <p />
       <p>“Cuneiform” block approximately corresponds to cuneiform of Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier characters ≈2900{{_}}BC.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>最初（约公元前 3500 年），商业文书是写在粘土上的（例如“10 头牛”）。到了公元前 3200 年出现了表意符号（Ideographs），而到了公元前 3000 年，人们开始将表意符号当作音节符号使用。书写风格也随之发生了平行演变：字符逆时针旋转了 90°，并开始使用棱柱形书写笔进行压印——因此产生了由尖锐楔形元素构成的文字。</p>
       <p />
@@ -10521,10 +11146,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Yezidis are a part of the Kurdish people who profess the religion of Yezidism, derived from [[ps:Avst|Zoroastrianism]]. Yezidi holy books, the ''Book of Revelation'' and the ''Black Book'', are written with a special script (earlier versions in [[ps:Arab|Arabic]] are also known). There is no consensus on the dating of these books.</p>
+      <p />
+      <p>Muslims have constantly oppressed Yezidis, so the religion is mostly oral, few have witnessed the books in written form. The Islamic State committed genocide against Yezidis in 2014–2017: about 5000 were killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became the UN Goodwill Ambassador, and was awarded the Nobel Peace Prize in 2018.</p>
+     </orig>
+     <known-orig>
       <p>Yezidis are a part of the Kurdish people who profess the religion of Yezidism derived from [[ps:Avst|Zoroastrianism]]. Yezidi holy books, ''Book of Revelation'' and ''Black Book'', are written with a special script (earlier versions in [[ps:Arab|Arabic]] are also known). There is no consensus on dating of these books.</p>
       <p />
       <p>Yezidis were constantly oppressed by Muslims, so their religion is mostly oral, few witnessed books in written form. Islamic State made a genocide of Yezidis in 2014–2017: about 5000 were killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became the UN Goodwill Ambassador, and was awarded the Nobel Peace Prize in 2018.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>雅兹迪人是库尔德民族的一部分，他们信奉源于 [[ps:Avst|琐罗亚斯德教]] 的雅兹迪教。雅兹迪圣书——《启示书》（Book of Revelation）和《黑书》（Black Book）——是用一种特殊的文字书写的（尽管也已知有早期的 [[ps:Arab|阿拉伯文字]] 版本）。关于这些书籍的年代测定，目前尚无定论。</p>
       <p />
@@ -10569,10 +11199,15 @@
     </text>
     <text id="Text">
      <orig>
+      <p>Buddhist monk Zanabazar (1635–1723), a linguist and artist, is known for developing the [[ps:Soyo|Soyombo]] script. Less known is that he designed the Mongolian horizontal square script, also based on [[ps:Tibt|Tibetan]]{{-}}it’s unknown whether it came before or after Soyombo (main hypothesis: before), why and how widely it was used. Rediscovered in 1801, a few specimens survived.</p>
+      <p />
+      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. Moreover, it has two physical viramas, both of which are seen in sources and have no control meaning: one for the last letter in a word, the other for consonant conjuncts. There are two more ways to implement consonant conjuncts: using the third virtual virama (letters stack together, sometimes squishing in height), and using small signs of final consonants. These methods mix bizarrely: for example, one consonant with virama, and three stacked together. Initial vowels are formed by fixing vowel marks to {{sm|𑨀}}. None of the sources has digits. Vertical writing is bizarre and outside the scope of Unicode: a mark that is initially above the second letter may appear above the entire word.</p>
+     </orig>
+     <known-orig>
       <p>Buddhist monk Zanabazar (1635–1723), linguist and artist, is known for development of [[ps:Soyo|Soyombo]] script. Less known that he designed Mongolian horizontal square script, also based on [[ps:Tibt|Tibetan]]{{-}}it’s unknown before or after Soyombo (main hypothesis: before), why and how wide it was used. Rediscovered in 1801, a few specimen survived.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. Moreover, it has two physical viramas, both are seen in sources and have no control meaning, one for the last letter in a word, the other for consonant conjuncts. There are two more ways to implement consonant conjuncts: using the third virtual virama (letters stack together, sometimes squishing in height), and using small signs of final consonants. These methods mix bizarrely: for example, one consonant with virama, and three stacked together. Initial vowels form by fixing vowel marks to {{sm|𑨀}}. None of sources has digits. Vertical writing is bizarre and outside the scope of Unicode: a mark that is initially above the second letter may appear above the entire word.</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>佛教僧侣札那巴札尔（1635–1723），语言学家兼艺术家，因开发 [[ps:Soyo|索永布文字]] 文字而闻名。鲜为人知的是，他还设计了蒙古横写方块文字，同样基于 [[ps:Tibt|藏文字]]——目前尚不清楚它是在索永布文文字之前还是之后创制的（主要假设认为是在之前），以及它为何被创制和使用范围有多广。该文字于 1801 年被重新发现，仅存少量样本。</p>
       <p />
@@ -10605,7 +11240,8 @@
   </group>
   <group id="Snip">
    <text id="Albanian">
-    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</orig>
+    <orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from the Turks (Albania got independence in 1912 with the collapse of the Ottoman Empire).</orig>
+    <known-orig>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], [[ps:Vith|Vithkuqi]], [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of the national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secrecy from Turks (Albania got independence in 1912 with the collapse of Ottoman Empire).</known-orig>
     <transl>阿尔巴尼亚语之所以存在多种字母系统（[[ps:Elba|爱尔巴桑文字]]、[[ps:Vith|维特库奇文字]]、[[ps:Todr|托兹里文字]]、维索贝伊、韦拉拉），主要有几个原因：民族解放运动的学者们观察周边的斯拉夫人、希腊人和土耳其人，决心创造属于自己的文字；同时，也是为了在奥斯曼帝国统治下保持秘密性（阿尔巴尼亚于 1912 年随着奥斯曼帝国的解体而获得独立）。</transl>
    </text>
    <text id="ArabPres1">
@@ -11735,9 +12371,9 @@
       <p>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], as well as [[ps:Hang|Hangul]] of an [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].</p>
       <p />
       <p>Features of CJK:</p>
-      <p>* sweeping writing with brush and ink (except Nüshu);</p>
+      <p>* sweeping writing with a brush and ink (except Nüshu);</p>
       <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
-      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays, Japanese comics ''manga'' are read right-to-left;</p>
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
@@ -15513,10 +16149,9 @@
      <known-orig>As of {{yantarc}}, all vendors use the flag created in 1996 for ''3D World Atlas'' multimedia encyclopedia: UN blue with white continent. A competing flag, navy blue and white with a diamond, has existed since 2018.</known-orig>
      <transl>截至 {{yantarc}}，所有的商贩都在使用一面最初为《3D世界地图集》多媒体百科全书（1996年版）设计的旗帜：那是联合国蓝的底色，上面绘有白色的大陆轮廓。此外，自 2018 年起还出现了一面与之“分庭抗礼”的旗帜，设计为深蓝色底，中间带有白色的菱形图案。</transl>
     </text>
-    <text id="U+1F1ED+1F1F3">
-     <orig>In 2022, Honduras changed its flag from blue to light blue.</orig>
-     <known-orig>In 2022 Honduras made the flag light blue instead of blue.</known-orig>
-     <transl>2022 年，洪都拉斯将国旗的颜色由原本的蓝色改为了浅蓝色。</transl>
+    <text id="U+1F1ED+1F1F3" force-attention="true">
+     <orig>From 2022 to 2026, Honduras’ flag was light blue.</orig>
+     <transl>2022年至2026年，洪都拉斯国旗为浅蓝色。</transl>
     </text>
     <text id="U+1F1EE+1F1F7">
      <orig>In early 2026, Twitter/X reverted to the pre-Islamic flag with a golden lion (1907–1979).</orig>

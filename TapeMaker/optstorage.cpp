@@ -94,7 +94,7 @@ bool OptStorage::findOptimizer()
             pathToOptimizer = std::move(newPath);
             return true;
         }
-        if (i >= 4)
+        if (i >= 6)
             break;
         newPath = ".." / newPath;
     }
