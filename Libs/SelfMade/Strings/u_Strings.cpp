@@ -23,17 +23,17 @@ template void str::trimRight<char8_t>(const char8_t*&, const char8_t*&);
 template void str::trimRight<char16_t>(const char16_t*&, const char16_t*&);
 template void str::trimRight<char32_t>(const char32_t*&, const char32_t*&);
 
-template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
-template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);
-template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, char8_t, bool);
-template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
-template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
+template std::vector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
+template std::vector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);
+template std::vector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, char8_t, bool);
+template std::vector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
+template std::vector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
 
-template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, std::string_view, bool);
-template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, std::wstring_view, bool);
-template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
-template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
-template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
+template std::vector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, std::string_view, bool);
+template std::vector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, std::wstring_view, bool);
+template std::vector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
+template std::vector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
+template std::vector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
 
 template bool lat::detail::isUpper<std::string_view>(std::string_view);
 template bool lat::detail::isUpper<std::wstring_view>(std::wstring_view);

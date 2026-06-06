@@ -1,9 +1,8 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include <charconv>
-
-#include "u_Vector.h"
 
 namespace str {
     static_assert(sizeof(char) == sizeof(char8_t), "Strange machine with char != char8");
@@ -279,20 +278,20 @@ namespace str {
         template <class Sv> Sv trimRightSv(Sv s);
 
         template <class Sv>
-        [[nodiscard]] SafeVector<Sv> splitSv(
+        [[nodiscard]] std::vector<Sv> splitSv(
                 Sv s, trait::Ch<Sv> comma, bool skipEmpty = true);
 
         template <class Sv>
-        [[nodiscard]] SafeVector<Sv> splitSv(
+        [[nodiscard]] std::vector<Sv> splitSv(
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
-        [[nodiscard]] SafeVector<Sv> splitByAnySv(
+        [[nodiscard]] std::vector<Sv> splitByAnySv(
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
         void splitByAnySvTo(
-                Sv s, Sv comma, SafeVector<Sv>& r, bool skipEmpty = true);
+                Sv s, Sv comma, std::vector<Sv>& r, bool skipEmpty = true);
 
         template <class Sv>
         Sv prefixSv(Sv s, trait::Ch<Sv> comma) noexcept
@@ -471,7 +470,7 @@ namespace str {
         { return detail::trimRightSv<trait::Sv<S>>(s); }
 
     template <class S, class Co>
-    [[nodiscard]] inline SafeVector<trait::Sv<S>> splitSv(
+    [[nodiscard]] inline std::vector<trait::Sv<S>> splitSv(
             const S& s, const Co& comma, bool skipEmpty = true)
     {
         using Sv = trait::Sv<S>;
@@ -486,7 +485,7 @@ namespace str {
 
     /// All characters of ‘comma’ are treated as commas
     template <class S, class Co>
-    [[nodiscard]] inline SafeVector<trait::Sv<S>> splitByAnySv(
+    [[nodiscard]] inline std::vector<trait::Sv<S>> splitByAnySv(
         const S& s, const Co& comma, bool skipEmpty = true)
     {
         using Sv = trait::Sv<S>;
@@ -496,7 +495,7 @@ namespace str {
     /// @warning  r is not cleared
     template <class S, class Co>
     inline void splitByAnySvTo(
-        const S& s, const Co& comma, SafeVector<trait::Sv<S>>& r, bool skipEmpty = true)
+        const S& s, const Co& comma, std::vector<trait::Sv<S>>& r, bool skipEmpty = true)
     {
         using Sv = trait::Sv<S>;
         return detail::splitByAnySvTo<Sv>(s, comma, r, skipEmpty);
@@ -859,10 +858,10 @@ template <class Sv> inline Sv str::detail::trimRightSv(Sv s)
 
 
 template <class Sv>
-[[nodiscard]] SafeVector<Sv> str::detail::splitSv(
+[[nodiscard]] std::vector<Sv> str::detail::splitSv(
         Sv s, str::trait::Ch<Sv> comma, bool skipEmpty)
 {
-    SafeVector<Sv> r;
+    std::vector<Sv> r;
     using Ch = str::trait::Ch<Sv>;
 
     const Ch* start = s.data();
@@ -889,17 +888,17 @@ template <class Sv>
 
 
 template <class Sv>
-[[nodiscard]] SafeVector<Sv> str::detail::splitByAnySv(
+[[nodiscard]] std::vector<Sv> str::detail::splitByAnySv(
         Sv s, Sv comma, bool skipEmpty)
 {
-    SafeVector<Sv> r;
+    std::vector<Sv> r;
     splitByAnySvTo(s, comma, r, skipEmpty);
     return r;
 }
 
 template <class Sv>
 void str::detail::splitByAnySvTo(
-        Sv s, Sv comma, SafeVector<Sv>& r, bool skipEmpty)
+        Sv s, Sv comma, std::vector<Sv>& r, bool skipEmpty)
 {
     using Ch = str::trait::Ch<Sv>;
 
@@ -926,10 +925,10 @@ void str::detail::splitByAnySvTo(
 
 
 template <class Sv>
-[[nodiscard]] SafeVector<Sv> str::detail::splitSv(
+[[nodiscard]] std::vector<Sv> str::detail::splitSv(
         Sv s, Sv comma, bool skipEmpty)
 {
-    SafeVector<Sv> r;
+    std::vector<Sv> r;
     using Ch = str::trait::Ch<Sv>;
 
     const Ch* start = std::to_address(s.begin());
@@ -964,17 +963,17 @@ template <class Sv>
 }
 
 
-extern template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
-extern template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);
-extern template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, char8_t, bool);
-extern template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
-extern template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
+extern template std::vector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
+extern template std::vector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);
+extern template std::vector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, char8_t, bool);
+extern template std::vector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
+extern template std::vector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
 
-extern template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, std::string_view, bool);
-extern template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, std::wstring_view, bool);
-extern template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
-extern template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
-extern template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
+extern template std::vector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, std::string_view, bool);
+extern template std::vector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, std::wstring_view, bool);
+extern template std::vector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
+extern template std::vector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
+extern template std::vector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
 
 extern template bool lat::detail::isUpper<std::string_view>(std::string_view);
 extern template bool lat::detail::isUpper<std::wstring_view>(std::wstring_view);
