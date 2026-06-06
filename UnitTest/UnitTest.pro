@@ -16,8 +16,10 @@ SOURCES += \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
     ../Libs/L10n/LocFmt.cpp \
+    ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/u_Version.cpp \
+    ../SvgOpt/Lib/Xsvg.cpp \
     ../Unicodia/Search/engine.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
@@ -29,15 +31,18 @@ SOURCES += \
     test_Strings.cpp \
     test_Trie.cpp \
     test_Version.cpp \
-    test_Wiki.cpp
+    test_Wiki.cpp \
+    text_Xsvg.cpp
 
 HEADERS += \
     ../AutoBuilder/data.h \
     ../AutoBuilder/forget.h \
     ../Libs/L10n/LocFmt.h \
+    ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
+    ../SvgOpt/Lib/Xsvg.h \
     ../Unicodia/Search/engine.h \
     ../Unicodia/Search/trie.h \
     ../Unicodia/Wiki.h
@@ -47,7 +52,9 @@ INCLUDEPATH += \
     ../Libs/GoogleTest \
     ../Libs/GoogleTest/include \
     ../Libs/L10n \
+    ../Libs/PugiXml \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings \
+    ../SvgOpt/Lib \
     ../Unicodia \
     ../Unicodia/Uc

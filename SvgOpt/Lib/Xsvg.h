@@ -43,10 +43,12 @@ namespace xs {
 namespace xsin {
 
     struct NsInfo {
-        std::string prefix;
-        std::string triggerAttr;
+        std::string prefix {};
+        std::string triggerAttr {};
+        bool isNsFound = false;
     };
 
-    NsInfo detectNamespace(pugi::xml_node node, std::string_view url);
+    constexpr std::string_view NS_SVG = "http://www.w3.org/2000/svg";
+    NsInfo detectNamespace(pugi::xml_node node, std::string_view url = NS_SVG);
 
 }   // namespace xsin

@@ -14,13 +14,17 @@ xsin::NsInfo xsin::detectNamespace(pugi::xml_node node, std::string_view url)
         std::string_view name = q.name();
         if (name == "xmlns"sv) {  // xmlns=
             if (q.value() == url)
-                return {};
+                return {
+                    .triggerAttr = "xmlns",
+                    .isNsFound = true,
+                };
         } else if (name.length() > NS_PREF_LEN
                    && name.starts_with(NS_PREF)) {  // xmlns:q=
             if (q.value() == url) {
                 return {
                     .prefix = str::cat(name.substr(NS_PREF_LEN), ':' ),
                     .triggerAttr { name },
+                    .isNsFound = true
                 };
             }
         }
@@ -43,7 +47,7 @@ void xs::Svg::loadFile(const std::filesystem::path& s)
     if (res.status != pugi::status_ok) {
         throw std::logic_error(res.description());
     }
-    auto root = doc.root();
+    auto root = doc.root().first_child();
     LoadContext context;
-    context.ns = xsin::detectNamespace(root, "http://www.w3.org/2000/svg");
+    context.ns = xsin::detectNamespace(root);
 }
