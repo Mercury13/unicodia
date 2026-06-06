@@ -122,7 +122,7 @@ I never rip fonts from Unicode charts, always use a TTF form. But the authors of
   * whether a stroke is convex up or down
   * minor difference of stroke length e.g. in “three”
   * style of roof stroke e.g. in 2F34: straight S (31D1, older) vs backslash dot D (31D4, current)
-  * number of strokes if off by one e.g. in 2E3D9: one dot in Chinese, two in SAT
+  * the number of strokes is off by one e.g. in 2E3D9: one dot in Chinese, two in SAT
 
 Anyway, Unicodia will never be a good ideograph guide. Everything I write about ideographs I suck from other sources.
 
