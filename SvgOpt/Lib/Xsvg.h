@@ -10,22 +10,24 @@ namespace pugi {
 
 namespace xs {
 
-    enum class Channel : unsigned char {
-        ALWAYS, ONE, TWO };
+    enum class AttrChannel : unsigned char {
+        BOTH = 0, ONE = 1, TWO = 2 };
     enum class NodeChannel : unsigned char {
-        ALWAYS, ONE, TWO, ONE_TRANSP, TWO_TRANSP
+        BOTH = 0, ONE = 1, TWO = 2, ONE_TRANSP = 3, TWO_TRANSP = 4
     };
+    enum class SaveChannel : unsigned char {
+        ONE = 1, TWO = 2  };
 
     struct Attr {
         std::string key, value;
-        Channel channel = Channel::ALWAYS;
+        AttrChannel channel = AttrChannel::BOTH;
     };
 
     struct Node {
         std::string name;
         std::vector<Attr> attrs;
         std::vector<std::unique_ptr<Node>> children;
-        NodeChannel channel = NodeChannel::ALWAYS;
+        NodeChannel channel = NodeChannel::BOTH;
     };
 
     struct Svg
@@ -34,8 +36,8 @@ namespace xs {
 
         void clear();
         void loadFile(const std::filesystem::path& s);
-        std::string saveString(Channel channel);
-        void saveFile(const std::filesystem::path& s, Channel channel = Channel::ONE);
+        std::string saveString(SaveChannel channel);
+        void saveFile(const std::filesystem::path& s, SaveChannel channel = SaveChannel::ONE);
     };
 
 }   // namespace xs
