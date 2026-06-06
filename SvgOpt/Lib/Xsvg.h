@@ -22,6 +22,7 @@ namespace xs {
     };
 
     struct Node {
+        std::string name;
         std::vector<Attr> attrs;
         std::vector<std::unique_ptr<Node>> children;
         NodeChannel channel = NodeChannel::ALWAYS;
@@ -46,6 +47,9 @@ namespace xsin {
         std::string prefix {};
         std::string triggerAttr {};
         bool isNsFound = false;
+
+        std::string_view launderAttr(std::string_view name) const noexcept;
+        std::string_view launderObj(std::string_view name) const noexcept;
     };
 
     constexpr std::string_view NS_SVG = "http://www.w3.org/2000/svg";
