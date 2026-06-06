@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  portable: Where to store the config
-	[1] program’s directory [0] AppData
-  palette: auto, light, dark
--->
+<?xml version="1.0" encoding="utf-8" ?>
 <program portable="0" palette="auto">
 <!--
-  version: change program’s version to test some strings from
-    “Check for update”. Set…
-    • something small (e.g. 1.2.3) = found update
-    • something big (e.g. 10.10.10) = strange things with repo
-    • 0.0.1 = bad JSON
-    • 0.0.2 = bad version string in JSON
-    • 0.0.3 = bad HTTP code 418
-    • Cannot connect — just disconnect wire/WiFi, no special code
-  platforms: change program’s platform to test update existence
-    for that platform, e.g. "win64|w64"
-    Set something wrong (e.g. "xxx") to test abandoned platform
++ `portable`: Where to store config
+    + `0` — AppData
+    + `1` — program's directory
++ `palette`: Color theme
+    + `auto`
+    + `light`
+    + `dark`
 -->
-	<debug-update version="" platforms="" />
+<debug-update version="" platforms="" />
+<!--
++ `version`: change program's version to test some strings from `Check for update`. Set...
+    + something small (e.g. `1.2.3`) — found update
+    + something big (e.g. `10.10.10`) — strange things with repo
+    + `0.0.1` — bad JSON
+    + `0.0.2` — bad version string in JSON
+    + `0.0.3` — bad HTTP code 418
+    + Cannot connect — just disconnect wire/WiFi, no special code
++ `platforms`: change program's platform to test update existence for that platform, e.g...
+    + `win64|w64`
+    + something wrong like `xxx` to test abandoned platform
+-->
 </program>
