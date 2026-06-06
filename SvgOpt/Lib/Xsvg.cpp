@@ -8,6 +8,15 @@ using namespace std::string_view_literals;
 constexpr std::string_view NS_PREF = "xmlns:";
 constexpr auto NS_PREF_LEN = NS_PREF.length();
 
+namespace {
+
+    inline bool noMoreColon(std::string_view x, size_t p)
+    {
+        return (x.find(':', p) == std::string_view::npos);
+    }
+
+}   // anon namespace
+
 std::string_view xsin::NsInfo::launderAttr(std::string_view name) const noexcept
 {
     if (name.empty() || name == triggerAttr)
@@ -15,8 +24,11 @@ std::string_view xsin::NsInfo::launderAttr(std::string_view name) const noexcept
     auto p = name.find(':');
     if (p == std::string_view::npos)
         return name;
-    if ((p + 1 == prefix.size()) && name.starts_with(prefix))
+    if ((p + 1 == prefix.size())
+            && name.starts_with(prefix)
+            && noMoreColon(name, prefix.size())) {
         return name.substr(prefix.size());
+    }
     return {};
 }
 
@@ -29,7 +41,8 @@ std::string_view xsin::NsInfo::launderObj(std::string_view name) const noexcept
             return {};
         }
     } else {  // Have prefix
-        if (name.starts_with(prefix)) {
+        if (name.starts_with(prefix)
+                && noMoreColon(name, prefix.size())) {
             return name.substr(prefix.size());
         } else {
             return {};
