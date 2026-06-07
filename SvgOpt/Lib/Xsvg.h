@@ -52,6 +52,25 @@ namespace xs {
         std::string text;
         bool operator == (const Special&) const noexcept = default;
     };
+    using MaybeColorFather = std::variant<Inherit, Color, Special>;
+    class MaybeColor : public MaybeColorFather {
+    public:
+        static constexpr int I_INHERIT = 0;
+        static constexpr int I_COLOR = 1;
+        static constexpr int I_SPECIAL = 2;
+        static constexpr int I_N = 3;
+        static_assert(I_N == std::variant_size_v<MaybeColorFather>);
+
+        bool operator == (const MaybeColor&) const noexcept = default;
+        using MaybeColorFather::MaybeColorFather;
+        using MaybeColorFather::operator =;
+
+        void encodeAttr(std::string& text) const;
+        void writeAttrIf(std::string& dest, std::string_view key) const;
+        void parse(std::string_view x);
+        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
+        operator bool() const noexcept { return hasSmth(); }
+    };
     using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
     class Fill : public FillFather {
     public:
@@ -76,6 +95,7 @@ namespace xs {
 
     struct Style {
         Fill fill;
+        MaybeColor stopColor;
         std::vector<Attr> attrs;
 
         bool hasSmth() const noexcept;

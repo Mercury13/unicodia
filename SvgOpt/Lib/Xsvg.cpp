@@ -11,6 +11,53 @@ using namespace std::string_view_literals;
 constexpr std::string_view NS_PREF = "xmlns:";
 constexpr auto NS_PREF_LEN = NS_PREF.length();
 
+///// MaybeColor ///////////////////////////////////////////////////////////////
+
+void xs::MaybeColor::encodeAttr(std::string& dest) const
+{
+    switch (index()) {
+    case I_INHERIT:
+    default:
+        break;
+    case I_COLOR:
+        if (auto* q = std::get_if<Color>(this))
+            q->encodeAttr(dest);
+        break;
+    case I_SPECIAL:
+        if (auto* q = std::get_if<Special>(this)) {
+            xsin::encodeAttr(dest, q->text);
+        }
+        break;
+    }
+}
+
+void xs::MaybeColor::writeAttrIf(std::string& dest, std::string_view key) const
+{
+    if (!hasSmth())
+        return;
+    xsin::startAttr(dest, key);
+    encodeAttr(dest);
+    dest += '"';
+}
+
+
+void xs::MaybeColor::parse(std::string_view x)
+{
+    x = str::trimSv(x);
+    if (x.empty()) {
+        *this = Inherit{};
+        return;
+    }
+    if (auto q = Color::parse(x)) {
+        *this = *q;
+        return;
+    }
+    *this = Special{ .text = std::string{x} };
+}
+
+
+///// Fill /////////////////////////////////////////////////////////////////////
+
 void xs::Fill::encodeAttr(std::string& dest) const
 {
     switch (index()) {
@@ -63,6 +110,7 @@ void xs::Fill::parse(std::string_view x)
         *this = *q;
         return;
     }
+    /// @todo [urgent] URL is still Special now
     *this = Special{ .text = std::string{x} };
 }
 
@@ -70,6 +118,7 @@ void xs::Fill::parse(std::string_view x)
 bool xs::Style::hasSmth() const noexcept
 {
     return fill.hasSmth()
+        || stopColor.hasSmth()
         || !attrs.empty();
 }
 
@@ -85,6 +134,11 @@ void xs::Style::encodeAttr(std::string& dest) const
     if (fill.hasSmth()) {
         dest += "fill:";
         fill.encodeAttr(dest);
+    }
+    writeSemicolon();
+    if (stopColor.hasSmth()) {
+        dest += "stop-color:";
+        stopColor.encodeAttr(dest);
     }
     // Misc
     for (auto& q : attrs) {
@@ -127,6 +181,14 @@ void xs::Style::add(std::string_view key, std::string_view value)
             fill.parse(value);
             return;
         }
+        break;
+    case 's':
+        if (key == "stop-color"sv) {
+            stopColor.parse(value);
+            return;
+        }
+        break;
+    default:;
     }
     attrs.emplace_back(std::string(key), std::string(value));
 }
