@@ -3,7 +3,7 @@
 
 #include "Xsvg.h"
 
-constexpr const char* FNAME_IN = "../NotoEmoji/Remakes/Flags/A/1f1e6-1f1e8.svg";
+constexpr const char* FNAME_IN = "../NotoEmoji/Remakes/emoji_u1f9d1_200d_1f692.svg";
 constexpr const char* FNAME_OUT = "opt.svg";
 constexpr int MAX_UPPER = 6;
 

@@ -79,6 +79,34 @@ xsin::NsInfo xsin::detectNamespace(pugi::xml_node node, std::string_view url)
 
 namespace {
 
+    std::unique_ptr<xs::Node> createNode(std::string_view name)
+    {
+        auto doesDraw = xs::DoesDraw::YES;
+        switch (name[0]) {
+        case 'd':
+            if (name == "defs"sv) {
+                doesDraw = xs::DoesDraw::SPECIAL;
+            }
+            break;
+        case 'g':
+            if (name == "g") {
+                doesDraw = xs::DoesDraw:: MAYBE;
+            }
+            break;
+        case 'l':
+            if (name == "linearGradient") {
+                doesDraw = xs::DoesDraw::NO;
+            }
+            break;
+        case 'r':
+            if (name == "radialGradient") {
+                doesDraw = xs::DoesDraw::NO;
+            }
+            break;
+        }
+        return std::make_unique<xs::FreeNode>(std::string{name}, doesDraw);
+    }
+
     struct LoadContext {
         xsin::NsInfo ns;
     };
@@ -93,7 +121,30 @@ namespace {
             std::string_view name = v.name();
             if (auto lau = context.ns.launderAttr(name);
                     !lau.empty()) {
+                switch (lau[0]) {
+                case 'f':
+                    if (lau == "fill"sv) {
+                        dest.sa.fill = v.value();
+                        goto ok;
+                    } break;
+                case 'i':
+                    if (lau == "id"sv) {
+                        dest.sa.id = v.value();
+                        goto ok;
+                    } break;
+                case 's':
+                    if (lau == "style") {
+                        dest.sa.style = v.value();
+                        goto ok;
+                    } break;
+                case 't':
+                    if (lau == "transform") {
+                        dest.sa.transform = v.value();
+                        goto ok;
+                    } break;
+                }
                 dest.attrs.emplace_back(std::string{lau}, v.value());
+            ok:;
             }
         }
         // Objects
@@ -113,9 +164,9 @@ namespace {
             case pugi::node_element: {
                     std::string_view name = v.name();
                     if (auto lau = context.ns.launderObj(name);
-                        !lau.empty()) {
-                        auto& bk = dest.children.emplace_back(std::make_unique<xs::Node>());
-                        bk->name = lau;
+                            !lau.empty()) {
+                        auto node = createNode(lau);
+                        auto& bk = dest.children.emplace_back(std::move(node));
                         loadRecurse(*bk, v, context);
                     }
                 } break;
@@ -142,16 +193,15 @@ void xs::Svg::loadFile(const std::filesystem::path& s)
     if (xroot.name() != context.ns.prefix + "svg") {
         throw std::logic_error("SVG's root must be <svg>");
     }
-    root.name = "svg";
     loadRecurse(root, xroot, context);
 }
 
 void xs::Svg::clear()
 {
-    root.name.clear();
     root.attrs.clear();
     root.children.clear();
     root.channel = NodeChannel::BOTH;
+    root.sa = Node::StdAttrs{};
 }
 
 
@@ -171,16 +221,33 @@ void xs::Node::encodeAttr(std::string& dest, std::string_view x)
 }
 
 
+void xs::Node::writeAttrIf(std::string& dest, std::string_view key, std::string_view value)
+{
+    if (!value.empty())
+        writeAttr(dest, key, value);
+}
+
+void xs::Node::writeAttr(std::string& dest, std::string_view key, std::string_view value)
+{
+    dest += ' ';
+    dest += key;
+    dest += R"(=")";
+    encodeAttr(dest, value);
+    dest += '"';
+}
+
 void xs::Node::write(std::string& dest, Channel channel)
 {
     dest += "<";
-    dest += name;
+    dest += name();
+    // Standard attrs
+    writeAttrIf(dest, "id", sa.id);
+    writeAttrIf(dest, "fill", sa.fill);
+    writeAttrIf(dest, "style", sa.style);
+    writeAttrIf(dest, "transform", sa.transform);
+    // Custom attrs
     for (auto& v : attrs) {
-        dest += ' ';
-        dest += v.key;
-        dest += R"(=")";
-        encodeAttr(dest, v.value);
-        dest += '"';
+        writeAttr(dest, v.key, v.value);
     }
     bool isTagOpen = true;
     for (auto& v : children) {
@@ -196,7 +263,7 @@ void xs::Node::write(std::string& dest, Channel channel)
         dest += "/>";
     } else {
         dest += "</";
-        dest += name;
+        dest += name();
         dest += '>';
     }
 }

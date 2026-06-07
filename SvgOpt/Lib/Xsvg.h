@@ -23,15 +23,52 @@ namespace xs {
         Channel channel = Channel::BOTH;
     };
 
-    struct Node {
-        std::string name;
+    enum class DoesDraw : unsigned char {
+        NO,         ///< Does not draw, never: <linearGradient>
+        MAYBE,      ///< Maybe draws, check children: <g>
+        YES,        ///< Yep, draws: <path>
+        SPECIAL,    ///< Special rules: <defs>
+    };
+
+    class Node {
+    public:
+        virtual std::string_view name() const noexcept = 0;
+        virtual DoesDraw doesDraw() const noexcept = 0;
+
+        struct StdAttrs {
+            std::string id;
+            std::string fill;
+            std::string style;
+            std::string transform;
+        } sa;
         std::vector<Attr> attrs;
         std::vector<std::unique_ptr<Node>> children;
         NodeChannel channel = NodeChannel::BOTH;
 
         void write(std::string& dest, Channel channel);
+        static void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
+        static void writeAttr(std::string& dest, std::string_view key, std::string_view value);
         static void encodeAttr(std::string& dest, std::string_view x);
     private:
+    };
+
+    class RootNode : public Node {
+    public:
+        virtual std::string_view name() const noexcept override
+            { return "svg"; }
+        virtual DoesDraw doesDraw() const noexcept override
+            { return DoesDraw::MAYBE; }
+    };
+
+    class FreeNode : public Node {
+    public:
+        std::string myName;
+        DoesDraw myDoesDraw;
+
+        FreeNode(std::string aName, DoesDraw aDoesDraw)
+            : myName(std::move(aName)), myDoesDraw(aDoesDraw) {}
+        std::string_view name() const noexcept override { return myName; }
+        DoesDraw doesDraw() const noexcept override { return myDoesDraw; }
     };
 
     struct SaveSets {
@@ -41,7 +78,7 @@ namespace xs {
 
     struct Svg
     {
-        Node root;
+        RootNode root;
 
         void clear();
         void loadFile(const std::filesystem::path& s);
