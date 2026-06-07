@@ -3,6 +3,9 @@
 #include <vector>
 #include <memory>
 #include <filesystem>
+#include <variant>
+
+#include "Xcolor.h"
 
 namespace pugi {
     class xml_node;
@@ -35,6 +38,42 @@ namespace xs {
     // YES: never
     // SPECIAL: really empty
 
+    struct IdLink {
+        std::string wantedId;
+        bool operator == (const IdLink&) const noexcept = default;
+    };
+    struct Inherit {
+        bool operator == (const Inherit&) const noexcept { return true; }
+    };
+    struct None {
+        bool operator == (const None&) const noexcept { return true; }
+    };
+    struct Special {
+        std::string text;
+        bool operator == (const Special&) const noexcept = default;
+    };
+    using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
+    class Fill : public FillFather {
+    public:
+        static constexpr int I_INHERIT = 0;
+        static constexpr int I_NONE = 1;
+        static constexpr int I_COLOR = 2;
+        static constexpr int I_IDLINK = 3;
+        static constexpr int I_SPECIAL = 4;
+        static constexpr int I_N = 5;
+        static_assert(I_N == std::variant_size_v<FillFather>);
+
+        bool operator == (const Fill&) const noexcept = default;
+        using FillFather::FillFather;
+        using FillFather::operator =;
+
+        void encodeAttr(std::string& text) const;
+        void writeAttrIf(std::string& dest, std::string_view key) const;
+        void parse(std::string_view x);
+        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
+        operator bool() const noexcept { return hasSmth(); }
+    };
+
     class Node {
     public:
         virtual std::string_view name() const noexcept = 0;
@@ -45,7 +84,7 @@ namespace xs {
 
         struct StdAttrs {
             std::string id;
-            std::string fill;
+            Fill fill { Inherit {} };
             std::string style;
             std::string transform;
         } sa;
@@ -55,9 +94,6 @@ namespace xs {
 
         void write(std::string& dest, Channel channel);
         void writeAttrs(std::string& dest);
-        static void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
-        static void writeAttr(std::string& dest, std::string_view key, std::string_view value);
-        static void encodeAttr(std::string& dest, std::string_view x);
     private:
     };
 
@@ -106,6 +142,10 @@ namespace xs {
         bool optimizeViewBoxWh = true;
 
         /// NOT IMPLEMENTED.
+        /// [+] Remove colour if it is default black #000
+        bool useDefaultBlack = true;
+
+        /// NOT IMPLEMENTED.
         /// coordinate precision, digits after point
         unsigned char coordPrecision = 2;
     };
@@ -142,5 +182,9 @@ namespace xsin {
 
     constexpr std::string_view NS_SVG = "http://www.w3.org/2000/svg";
     NsInfo detectNamespace(pugi::xml_node node, std::string_view url = NS_SVG);
+    void startAttr(std::string& dest, std::string_view key);
+    void encodeAttr(std::string& dest, std::string_view value);
+    void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
+    void writeAttr(std::string& dest, std::string_view key, std::string_view value);
 
 }   // namespace xsin

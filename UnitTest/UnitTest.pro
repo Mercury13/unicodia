@@ -19,6 +19,7 @@ SOURCES += \
     ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/u_Version.cpp \
+    ../SvgOpt/Lib/Xcolor.cpp \
     ../SvgOpt/Lib/Xsvg.cpp \
     ../Unicodia/Search/engine.cpp \
     ../Unicodia/Wiki.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
     test_Trie.cpp \
     test_Version.cpp \
     test_Wiki.cpp \
+    test_Xcolor.cpp \
     text_Xsvg.cpp
 
 HEADERS += \
@@ -42,6 +44,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
+    ../SvgOpt/Lib/Xcolor.h \
     ../SvgOpt/Lib/Xsvg.h \
     ../Unicodia/Search/engine.h \
     ../Unicodia/Search/trie.h \

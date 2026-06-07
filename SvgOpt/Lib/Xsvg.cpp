@@ -5,11 +5,68 @@
 
 // STL
 #include <fstream>
+#include <span>
 
 using namespace std::string_view_literals;
 
 constexpr std::string_view NS_PREF = "xmlns:";
 constexpr auto NS_PREF_LEN = NS_PREF.length();
+
+void xs::Fill::encodeAttr(std::string& dest) const
+{
+    switch (index()) {
+    case I_INHERIT:
+    default:
+        break;
+    case I_COLOR:
+        if (auto* q = std::get_if<Color>(this))
+            q->encodeAttr(dest);
+        break;
+    case I_NONE:
+        dest += "none"sv;
+        break;
+    case I_IDLINK:
+        if (auto* q = std::get_if<IdLink>(this)) {
+            dest += "url(#";
+            dest += q->wantedId;
+            dest += ')';
+        }
+        break;
+    case I_SPECIAL:
+        if (auto* q = std::get_if<Special>(this)) {
+            xsin::encodeAttr(dest, q->text);
+        }
+        break;
+    }
+}
+
+void xs::Fill::writeAttrIf(std::string& dest, std::string_view key) const
+{
+    if (!hasSmth())
+        return;
+    xsin::startAttr(dest, key);
+    encodeAttr(dest);
+    dest += '"';
+}
+
+void xs::Fill::parse(std::string_view x)
+{
+    x = str::trimSv(x);
+    if (x.empty()) {
+        *this = Inherit{};
+        return;
+    }
+    if (lat::areCaseEqual(x, "none"sv)) {
+        *this = None{};
+        return;
+    }
+    if (auto q = Color::parse(x)) {
+        *this = *q;
+        return;
+    }
+    *this = Special{ .text = std::string{x} };
+}
+
 
 namespace {
 
@@ -20,13 +77,14 @@ namespace {
 
 }   // anon namespace
 
+
 std::string_view xsin::NsInfo::launderAttr(std::string_view name) const noexcept
 {
     if (name.empty())
         return {};
     if (name == triggerAttr)
         return "xmlns"sv;
-    if (name == "xmlns"sv)  // Only one XMLNS
+    if (name == "xmlns"sv)  // When a different NS, "xmlns" is bad
         return {};
     auto p = name.find(':');
     if (p == std::string_view::npos)
@@ -193,7 +251,7 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
     switch (key[0]) {
     case 'f':
         if (key == "fill"sv) {
-            sa.fill = value;
+            sa.fill.parse(value);
             return true;
         } break;
     case 'i':
@@ -215,7 +273,7 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
     return false;
 }
 
-void xs::Node::encodeAttr(std::string& dest, std::string_view x)
+void xsin::encodeAttr(std::string& dest, std::string_view x)
 {
     dest.reserve(dest.length() + x.length());
     for (auto c : x) {
@@ -231,27 +289,32 @@ void xs::Node::encodeAttr(std::string& dest, std::string_view x)
 }
 
 
-void xs::Node::writeAttrIf(std::string& dest, std::string_view key, std::string_view value)
+void xsin::writeAttrIf(std::string& dest, std::string_view key, std::string_view value)
 {
     if (!value.empty())
         writeAttr(dest, key, value);
 }
 
-void xs::Node::writeAttr(std::string& dest, std::string_view key, std::string_view value)
+void xsin::startAttr(std::string& dest, std::string_view key)
 {
     dest += ' ';
     dest += key;
     dest += R"(=")";
-    encodeAttr(dest, value);
+}
+
+void xsin::writeAttr(std::string& dest, std::string_view key, std::string_view value)
+{
+    xsin::startAttr(dest, key);
+    xsin::encodeAttr(dest, value);
     dest += '"';
 }
 
 void xs::Node::writeSpecificAttrs(std::string& dest)
 {
-    writeAttrIf(dest, "id", sa.id);
-    writeAttrIf(dest, "fill", sa.fill);
-    writeAttrIf(dest, "style", sa.style);
-    writeAttrIf(dest, "transform", sa.transform);
+    xsin::writeAttrIf(dest, "id", sa.id);
+    sa.fill.writeAttrIf(dest, "fill");
+    xsin::writeAttrIf(dest, "style", sa.style);
+    xsin::writeAttrIf(dest, "transform", sa.transform);
 }
 
 void xs::Node::writeAttrs(std::string& dest)
@@ -259,7 +322,7 @@ void xs::Node::writeAttrs(std::string& dest)
     writeSpecificAttrs(dest);
     // Custom attrs
     for (auto& v : attrs) {
-        writeAttr(dest, v.key, v.value);
+        xsin::writeAttr(dest, v.key, v.value);
     }
 }
 
