@@ -28,6 +28,10 @@ int main()
     xs::Svg svg;
     svg.loadFile(pathIn);
 
+    xs::OptSets osets;
+    osets.removeXmlns = false;
+    svg.optimize(osets);
+
     xs::SaveSets sets;
     sets.writeDocType = false;
     svg.saveFile(FNAME_OUT, sets);

@@ -62,10 +62,13 @@ namespace xs {
         /// Type: cunning move
         StyleToAttr styleToAttr = StyleToAttr::IF_SHORTER;
 
-        /// NOT IMPLEMENTED
         /// [+] remove xmlns="....."
         /// Type: deviation from standard
         bool removeXmlns = true;
+
+        /// [+] remove version="1.1"
+        /// Type: deviation from standard
+        bool removeVersion = true;
 
         /// NOT IMPLEMENTED.
         /// coordinate precision, digits after point
@@ -147,6 +150,27 @@ namespace xs {
         using FillFather::operator =;
 
         void clear() { *this = Inherit{}; }
+        void encodeAttr(std::string& dest) const;
+        void writeAttrIf(std::string& dest, std::string_view key) const;
+        void parse(std::string_view x);
+        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
+        operator bool() const noexcept { return hasSmth(); }
+    };
+    enum class FillRule : unsigned char { NONZERO, EVENODD };
+    using MaybeFillRuleFather = std::variant<Inherit, FillRule, Special>;
+    class MaybeFillRule : public MaybeFillRuleFather {
+    public:
+        static constexpr int I_INHERIT = 0;
+        static constexpr int I_FILLRULE = 1;
+        static constexpr int I_SPECIAL = 2;
+        static constexpr int I_N = 3;
+        static_assert(I_N == std::variant_size_v<MaybeFillRuleFather>);
+
+        bool operator == (const MaybeFillRule&) const noexcept = default;
+        using MaybeFillRuleFather::MaybeFillRuleFather;
+        using MaybeFillRuleFather::operator =;
+
+        void clear() { *this = Inherit{}; }
         void encodeAttr(std::string& text) const;
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
@@ -156,6 +180,7 @@ namespace xs {
 
     struct Style {
         Fill fill;
+        MaybeFillRule fillRule;
         MaybeColor stopColor;
         std::vector<Attr> attrs;
 
@@ -181,6 +206,7 @@ namespace xs {
         struct StdAttrs {
             std::string id;
             Fill fill { Inherit {} };
+            MaybeFillRule fillRule { Inherit {} };
             Style style;
             std::string transform;
         } sa;
@@ -191,16 +217,25 @@ namespace xs {
         void write(std::string& dest, Channel channel);
         void writeAttrs(std::string& dest);
         void recurseBasicOptimizations(const OptSets& sets);
+        void deleteAttr(std::string_view key);
     private:
     };
 
     class RootNode : public Node {
+        using Super = Node;
     public:
+        struct SaSvg {
+            std::string xmlns {};
+            std::string version {};
+        } saSvg;
+
+        bool trySpecificAttr(std::string_view key, std::string_view value) override;
+        void writeSpecificAttrs(std::string& dest) override;
         virtual std::string_view name() const noexcept override
             { return "svg"; }
         virtual DoesDraw doesDraw() const noexcept override
             { return DoesDraw::MAYBE; }
-        void basicOptimizations(const OptSets& sets);
+        void basicOptimizations(const OptSets& sets) override;
     };
 
     class FreeNode : public Node {
@@ -236,12 +271,15 @@ namespace xs {
 // Inner, used for testing only
 namespace xsin {
 
+    enum class Place : unsigned char { MISC, ROOT };
+
     struct NsInfo {
         std::string prefix {};
         std::string triggerAttr {};
         bool isNsFound = false;
 
-        std::string_view launderAttr(std::string_view name) const noexcept;
+        std::string_view launderAttr(
+            std::string_view name, Place place) const noexcept;
         std::string_view launderObj(std::string_view name) const noexcept;
     };
 

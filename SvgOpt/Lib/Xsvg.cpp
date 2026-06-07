@@ -125,32 +125,89 @@ bool xs::Style::hasSmth() const noexcept
 
 void xs::Style::encodeAttr(std::string& dest) const
 {
-    const auto oldLength = dest.length();
+    auto oldLength = dest.length();
     auto writeSemicolon = [&]() {
         if (dest.length() != oldLength)
             dest += ';';
+        oldLength = dest.length();
     };
     // Known, semicolons in between
-    if (fill.hasSmth()) {
+    if (fill) {
         dest += "fill:";
         fill.encodeAttr(dest);
     }
-    writeSemicolon();
-    if (stopColor.hasSmth()) {
+    if (fillRule) {
+        writeSemicolon();
+        dest += "fill-rule:";
+        fillRule.encodeAttr(dest);
+    }
+    if (stopColor) {
+        writeSemicolon();
         dest += "stop-color:";
         stopColor.encodeAttr(dest);
     }
     // Misc
     for (auto& q : attrs) {
-        writeSemicolon();
         if (!q.key.empty()) {
+            writeSemicolon();
             xsin::encodeAttr(dest, q.key);
             dest += ':';
+            xsin::encodeAttr(dest, q.value);
         }
-        xsin::encodeAttr(dest, q.value);
-
     }
 }
+
+
+///// MaybeFillRule ////////////////////////////////////////////////////////////
+
+
+void xs::MaybeFillRule::encodeAttr(std::string& dest) const
+{
+    switch (index()) {
+    case I_INHERIT:
+    default:
+        break;
+    case I_FILLRULE:
+        if (auto* q = std::get_if<FillRule>(this)) {
+            if (*q == FillRule::EVENODD) {
+                dest += "evenodd";
+            } else {
+                dest += "nonzero";
+            }
+        }
+        break;
+    case I_SPECIAL:
+        if (auto* q = std::get_if<Special>(this)) {
+            xsin::encodeAttr(dest, q->text);
+        }
+        break;
+    }
+}
+
+void xs::MaybeFillRule::writeAttrIf(std::string& dest, std::string_view key) const
+{
+    if (!hasSmth())
+        return;
+    xsin::startAttr(dest, key);
+    encodeAttr(dest);
+    dest += '"';
+}
+
+void xs::MaybeFillRule::parse(std::string_view x)
+{
+    x = str::trimSv(x);
+    if (x.empty()) {
+        *this = Inherit{};
+    } else if (lat::areCaseEqual(x, "evenodd"sv)) {
+        *this = FillRule::EVENODD;
+    } else if (lat::areCaseEqual(x, "nonzero"sv)) {
+        *this = FillRule::NONZERO;
+    }
+}
+
+
+///// Style ////////////////////////////////////////////////////////////////////
+
 
 void xs::Style::writeAttrIf(std::string& dest) const
 {
@@ -179,6 +236,10 @@ void xs::Style::add(std::string_view key, std::string_view value)
     case 'f':
         if (key == "fill"sv) {
             fill.parse(value);
+            return;
+        }
+        if (key == "fill-rule"sv) {
+            fillRule.parse(value);
             return;
         }
         break;
@@ -266,11 +327,12 @@ namespace {
 }   // anon namespace
 
 
-std::string_view xsin::NsInfo::launderAttr(std::string_view name) const noexcept
+std::string_view xsin::NsInfo::launderAttr(
+        std::string_view name, Place place) const noexcept
 {
     if (name.empty())
         return {};
-    if (name == triggerAttr)
+    if (name == triggerAttr && place == Place::ROOT)
         return "xmlns"sv;
     if (name == "xmlns"sv)  // When a different NS, "xmlns" is bad
         return {};
@@ -349,7 +411,11 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
         if (key == "fill"sv) {
             sa.fill.parse(value);
             return true;
-        } break;
+        } else if (key == "fill-rule"sv) {
+            sa.fillRule.parse(value);
+            return true;
+        }
+        break;
     case 'i':
         if (key == "id"sv) {
             sa.id = value;
@@ -382,6 +448,7 @@ void xs::Node::writeSpecificAttrs(std::string& dest)
 {
     xsin::writeAttrIf(dest, "id", sa.id);
     sa.fill.writeAttrIf(dest, "fill");
+    sa.fill.writeAttrIf(dest, "fill-rule");
     sa.style.writeAttrIf(dest);
     xsin::writeAttrIf(dest, "transform", sa.transform);
 }
@@ -418,6 +485,61 @@ void xs::Node::write(std::string& dest, Channel channel)
         dest += name();
         dest += '>';
     }
+}
+
+
+void xs::Node::deleteAttr(std::string_view key)
+{
+    auto q = std::ranges::find_if(attrs,
+        [key](const Attr& v) -> bool {
+            return (v.key == key);
+        });
+    if (q != attrs.end())
+        attrs.erase(q);
+}
+
+
+///// RootNode /////////////////////////////////////////////////////////////////
+
+
+void xs::RootNode::basicOptimizations(const OptSets& sets)
+{
+    Super::basicOptimizations(sets);
+    if (sets.removeXmlns)
+        saSvg.xmlns.clear();
+    if (sets.removeVersion)
+        saSvg.version.clear();
+}
+
+
+bool xs::RootNode::trySpecificAttr(std::string_view key, std::string_view value)
+{
+    if (Super::trySpecificAttr(key, value))
+        return true;
+    switch (key[0]) {
+    case 'x':
+        if (key == "xmlns") {
+            saSvg.xmlns = std::string{value};
+            return true;
+        }
+        return false;
+    case 'v':
+        if (key == "version") {
+            saSvg.version = std::string{value};
+            return true;
+        }
+        return false;
+    }
+    return false;
+}
+
+
+void xs::RootNode::writeSpecificAttrs(std::string& dest)
+{
+    xsin::writeAttrIf(dest, "xmlns", saSvg.xmlns);
+    xsin::writeAttrIf(dest, "version", saSvg.version);
+
+    Super::writeSpecificAttrs(dest);
 }
 
 
@@ -461,12 +583,13 @@ namespace {
     void loadRecurse(
             xs::Node& dest,
             pugi::xml_node src,
-            const LoadContext& context)
+            const LoadContext& context,
+            xsin::Place place)
     {
         // Attributes
         for (auto& v : src.attributes()) {
             std::string_view name = v.name();
-            if (auto lau = context.ns.launderAttr(name);
+            if (auto lau = context.ns.launderAttr(name, place);
                     !lau.empty()) {
                 std::string_view val = v.value();
                 if (!dest.trySpecificAttr(lau, val)) {
@@ -494,7 +617,7 @@ namespace {
                             !lau.empty()) {
                         auto node = createNode(lau);
                         auto& bk = dest.children.emplace_back(std::move(node));
-                        loadRecurse(*bk, v, context);
+                        loadRecurse(*bk, v, context, xsin::Place::MISC);
                     }
                 } break;
             case pugi::node_pcdata:
@@ -520,11 +643,13 @@ void xs::Svg::loadFile(const std::filesystem::path& s)
     if (xroot.name() != context.ns.prefix + "svg") {
         throw std::logic_error("SVG's root must be <svg>");
     }
-    loadRecurse(root, xroot, context);
+    loadRecurse(root, xroot, context, xsin::Place::ROOT);
 }
 
 void xs::Svg::clear()
 {
+    root.saSvg.xmlns.clear();
+    root.saSvg.version.clear();
     root.attrs.clear();
     root.children.clear();
     root.channel = NodeChannel::BOTH;
@@ -546,7 +671,6 @@ void xsin::encodeAttr(std::string& dest, std::string_view x)
     }
 }
 
-
 void xsin::writeAttrIf(std::string& dest, std::string_view key, std::string_view value)
 {
     if (!value.empty())
@@ -566,7 +690,6 @@ void xsin::writeAttr(std::string& dest, std::string_view key, std::string_view v
     xsin::encodeAttr(dest, value);
     dest += '"';
 }
-
 
 std::string xs::Svg::saveString(const SaveSets& sets)
 {
