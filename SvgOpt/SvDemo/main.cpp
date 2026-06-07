@@ -29,7 +29,6 @@ int main()
     svg.loadFile(pathIn);
 
     xs::OptSets osets;
-    osets.removeXmlns = false;
     svg.optimize(osets);
 
     xs::SaveSets sets;

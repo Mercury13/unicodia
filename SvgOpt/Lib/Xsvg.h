@@ -3,9 +3,8 @@
 #include <vector>
 #include <memory>
 #include <filesystem>
-#include <variant>
 
-#include "Xcolor.h"
+#include "Xstyle.h"
 
 namespace pugi {
     class xml_node;
@@ -76,19 +75,6 @@ namespace xs {
         unsigned char coordPrecision = 2;
     };
 
-    enum class Channel : unsigned char {
-        BOTH = 0, ONE = 1, TWO = 2, GENERAL = BOTH };
-    enum class NodeChannel : unsigned char {
-        BOTH = 0, ONE = 1, TWO = 2,
-        ONE_TRANSP = 3,     // 1 → written, 2 → transparent
-        TWO_TRANSP = 4
-    };
-
-    struct Attr {
-        std::string key, value;
-        Channel channel = Channel::BOTH;
-    };
-
     enum class DoesDraw : unsigned char {
         NO,         ///< Does not draw, never: <linearGradient>
         MAYBE,      ///< Maybe draws, check children: <g>
@@ -101,99 +87,6 @@ namespace xs {
     // YES: never
     // SPECIAL: really empty
 
-    struct IdLink {
-        std::string wantedId;
-        bool operator == (const IdLink&) const noexcept = default;
-    };
-    struct Inherit {
-        bool operator == (const Inherit&) const noexcept { return true; }
-    };
-    struct None {
-        bool operator == (const None&) const noexcept { return true; }
-    };
-    struct Special {
-        std::string text;
-        bool operator == (const Special&) const noexcept = default;
-    };
-    using MaybeColorFather = std::variant<Inherit, Color, Special>;
-    class MaybeColor : public MaybeColorFather {
-    public:
-        static constexpr int I_INHERIT = 0;
-        static constexpr int I_COLOR = 1;
-        static constexpr int I_SPECIAL = 2;
-        static constexpr int I_N = 3;
-        static_assert(I_N == std::variant_size_v<MaybeColorFather>);
-
-        bool operator == (const MaybeColor&) const noexcept = default;
-        using MaybeColorFather::MaybeColorFather;
-        using MaybeColorFather::operator =;
-
-        void encodeAttr(std::string& text) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
-        void parse(std::string_view x);
-        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
-    };
-    using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
-    class Fill : public FillFather {
-    public:
-        static constexpr int I_INHERIT = 0;
-        static constexpr int I_NONE = 1;
-        static constexpr int I_COLOR = 2;
-        static constexpr int I_IDLINK = 3;
-        static constexpr int I_SPECIAL = 4;
-        static constexpr int I_N = 5;
-        static_assert(I_N == std::variant_size_v<FillFather>);
-
-        bool operator == (const Fill&) const noexcept = default;
-        using FillFather::FillFather;
-        using FillFather::operator =;
-
-        void clear() { *this = Inherit{}; }
-        void encodeAttr(std::string& dest) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
-        void parse(std::string_view x);
-        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
-    };
-    enum class FillRule : unsigned char { NONZERO, EVENODD };
-    using MaybeFillRuleFather = std::variant<Inherit, FillRule, Special>;
-    class MaybeFillRule : public MaybeFillRuleFather {
-    public:
-        static constexpr int I_INHERIT = 0;
-        static constexpr int I_FILLRULE = 1;
-        static constexpr int I_SPECIAL = 2;
-        static constexpr int I_N = 3;
-        static_assert(I_N == std::variant_size_v<MaybeFillRuleFather>);
-
-        bool operator == (const MaybeFillRule&) const noexcept = default;
-        using MaybeFillRuleFather::MaybeFillRuleFather;
-        using MaybeFillRuleFather::operator =;
-
-        void clear() { *this = Inherit{}; }
-        void encodeAttr(std::string& text) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
-        void parse(std::string_view x);
-        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
-    };
-
-    struct Style {
-        Fill fill;
-        MaybeFillRule fillRule;
-        MaybeColor stopColor;
-        std::vector<Attr> attrs;
-
-        bool hasSmth() const noexcept;
-        operator bool() const noexcept { return hasSmth(); }
-        void encodeAttr(std::string& dest) const;
-        /// The key is fixed: style
-        void writeAttrIf(std::string& dest) const;
-        void clear();
-        void add(std::string_view key, std::string_view value);
-        void parse(std::string_view x);
-    };
-
     class Node {
     public:
         virtual std::string_view name() const noexcept = 0;
@@ -202,6 +95,13 @@ namespace xs {
         virtual bool trySpecificAttr(std::string_view key, std::string_view value);
         virtual void writeSpecificAttrs(std::string& dest);
         virtual void basicOptimizations(const OptSets& sets);
+        /// a = stdattr, b = style
+        virtual void traverseRepeats(const MultiTypeCallback& x);
+
+        template <class U>
+        void traverseRepeatsT(const U& u)
+            { traverseRepeats(MultiTypeCallbackT<U>(u)); }
+        void removeOverriddenAttrs();
 
         struct StdAttrs {
             std::string id;
@@ -285,9 +185,5 @@ namespace xsin {
 
     constexpr std::string_view NS_SVG = "http://www.w3.org/2000/svg";
     NsInfo detectNamespace(pugi::xml_node node, std::string_view url = NS_SVG);
-    void startAttr(std::string& dest, std::string_view key);
-    void encodeAttr(std::string& dest, std::string_view value);
-    void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
-    void writeAttr(std::string& dest, std::string_view key, std::string_view value);
 
 }   // namespace xsin
