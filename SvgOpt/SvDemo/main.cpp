@@ -23,10 +23,13 @@ std::filesystem::path findFile(const std::filesystem::path& path)
 int main()
 {
     auto pathIn = findFile(FNAME_IN);
-    std::cout << "Found " << pathIn << '\n';
+    std::cout << "Found " << pathIn.string() << '\n';
 
     xs::Svg svg;
     svg.loadFile(pathIn);
+
+    xs::SaveSets sets;
+    svg.saveFile(FNAME_OUT, sets);
 
     return 0;
 }

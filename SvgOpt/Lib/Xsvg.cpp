@@ -3,6 +3,9 @@
 #include "pugixml.hpp"
 #include "u_Strings.h"
 
+// STL
+#include <fstream>
+
 using namespace std::string_view_literals;
 
 constexpr std::string_view NS_PREF = "xmlns:";
@@ -95,12 +98,30 @@ namespace {
         }
         // Objects
         for (auto& v : src.children()) {
-            std::string_view name = v.name();
-            if (auto lau = context.ns.launderObj(name);
-                    !lau.empty()) {
-                auto& bk = dest.children.emplace_back(std::make_unique<xs::Node>());
-                bk->name = lau;
-                loadRecurse(*bk, v, context);
+            switch (v.type()) {
+            case pugi::node_null:
+            case pugi::node_comment:
+                break;
+            case pugi::node_document:
+                throw std::logic_error("PugiXml error, document in a strange place");
+            case pugi::node_declaration:
+                throw std::logic_error("PugiXml error, declaration in a strange place");
+            case pugi::node_doctype:
+                throw std::logic_error("SVG cannot have a doctype");
+            case pugi::node_pi:
+                throw std::logic_error("Processing instructions are unsupported");
+            case pugi::node_element: {
+                    std::string_view name = v.name();
+                    if (auto lau = context.ns.launderObj(name);
+                        !lau.empty()) {
+                        auto& bk = dest.children.emplace_back(std::make_unique<xs::Node>());
+                        bk->name = lau;
+                        loadRecurse(*bk, v, context);
+                    }
+                } break;
+            case pugi::node_pcdata:
+            case pugi::node_cdata:
+                throw std::logic_error("IDK what to do with text");
             }
         }
     }
@@ -109,6 +130,7 @@ namespace {
 
 void xs::Svg::loadFile(const std::filesystem::path& s)
 {
+    clear();
     pugi::xml_document doc;
     auto res = doc.load_file(s.native().c_str());
     if (res.status != pugi::status_ok) {
@@ -120,5 +142,84 @@ void xs::Svg::loadFile(const std::filesystem::path& s)
     if (xroot.name() != context.ns.prefix + "svg") {
         throw std::logic_error("SVG's root must be <svg>");
     }
+    root.name = "svg";
     loadRecurse(root, xroot, context);
+}
+
+void xs::Svg::clear()
+{
+    root.name.clear();
+    root.attrs.clear();
+    root.children.clear();
+    root.channel = NodeChannel::BOTH;
+}
+
+
+void xs::Node::encodeAttr(std::string& dest, std::string_view x)
+{
+    dest.reserve(dest.length() + x.length());
+    for (auto c : x) {
+        switch (c) {
+        case '"':
+            dest += "&quot;";
+            break;
+        default:
+            dest += c;
+            break;
+        }
+    }
+}
+
+
+void xs::Node::write(std::string& dest, Channel channel)
+{
+    dest += "<";
+    dest += name;
+    for (auto& v : attrs) {
+        dest += ' ';
+        dest += v.key;
+        dest += R"(=")";
+        encodeAttr(dest, v.value);
+        dest += '"';
+    }
+    bool isTagOpen = true;
+    for (auto& v : children) {
+        if (!v)
+            continue;
+        if (isTagOpen) {
+            dest += '>';
+            isTagOpen = false;
+        }
+        v->write(dest, channel);
+    }
+    if (isTagOpen) {
+        dest += "/>";
+    } else {
+        dest += "</";
+        dest += name;
+        dest += '>';
+    }
+}
+
+
+std::string xs::Svg::saveString(const SaveSets& sets)
+{
+    std::string s;
+    if (sets.writeDocType) {
+        s += R"(<?xml version="1.0" encoding="UTF-8"?>)";
+    }
+    root.write(s, sets.channel);
+    return s;
+}
+
+void xs::Svg::saveFile(
+            const std::filesystem::path& s,
+            const SaveSets& sets)
+{
+    auto str = saveString(sets);
+    std::ofstream os(s, std::ios::binary);
+    if (!os.is_open()) {
+        throw std::logic_error("Cannot open file " + s.string());
+    }
+    os.write(str.data(), str.length());
 }

@@ -10,17 +10,17 @@ namespace pugi {
 
 namespace xs {
 
-    enum class AttrChannel : unsigned char {
-        BOTH = 0, ONE = 1, TWO = 2 };
+    enum class Channel : unsigned char {
+        BOTH = 0, ONE = 1, TWO = 2, GENERAL = BOTH };
     enum class NodeChannel : unsigned char {
-        BOTH = 0, ONE = 1, TWO = 2, ONE_TRANSP = 3, TWO_TRANSP = 4
+        BOTH = 0, ONE = 1, TWO = 2,
+        ONE_TRANSP = 3,     // 1 → written, 2 → transparent
+        TWO_TRANSP = 4
     };
-    enum class SaveChannel : unsigned char {
-        ONE = 1, TWO = 2  };
 
     struct Attr {
         std::string key, value;
-        AttrChannel channel = AttrChannel::BOTH;
+        Channel channel = Channel::BOTH;
     };
 
     struct Node {
@@ -28,6 +28,15 @@ namespace xs {
         std::vector<Attr> attrs;
         std::vector<std::unique_ptr<Node>> children;
         NodeChannel channel = NodeChannel::BOTH;
+
+        void write(std::string& dest, Channel channel);
+        static void encodeAttr(std::string& dest, std::string_view x);
+    private:
+    };
+
+    struct SaveSets {
+        Channel channel = Channel::GENERAL;
+        bool writeDocType = true;
     };
 
     struct Svg
@@ -36,8 +45,9 @@ namespace xs {
 
         void clear();
         void loadFile(const std::filesystem::path& s);
-        std::string saveString(SaveChannel channel);
-        void saveFile(const std::filesystem::path& s, SaveChannel channel = SaveChannel::ONE);
+        std::string saveString(const SaveSets& sets);
+        void saveFile(const std::filesystem::path& s,
+                      const SaveSets& sets);
     };
 
 }   // namespace xs
