@@ -139,11 +139,21 @@ void xs::Node::basicOptimizations(const OptSets&)
 }
 
 
-void xs::Node::writeSpecificAttrs(std::string& dest)
-{
+void xs::Node::writeSpecificAttrs1(std::string& dest)
+{    
     xsin::writeAttrIf(dest, "id", sa.id);
-    sa.fill.writeAttrIf(dest, "fill");
-    sa.fill.writeAttrIf(dest, "fill-rule");
+}
+
+void xs::Node::writeRepeatingAttrs(std::string& dest)
+{
+    traverseRepeatsT([&dest]
+        (std::string_view key, auto& attr, auto&) {
+            attr.writeAttrIf(dest, key);
+        });
+}
+
+void xs::Node::writeSpecificAttrs2(std::string& dest)
+{
     sa.style.writeAttrIf(dest);
     xsin::writeAttrIf(dest, "transform", sa.transform);
 }
@@ -151,7 +161,9 @@ void xs::Node::writeSpecificAttrs(std::string& dest)
 
 void xs::Node::writeAttrs(std::string& dest)
 {
-    writeSpecificAttrs(dest);
+    writeSpecificAttrs1(dest);
+    writeRepeatingAttrs(dest);
+    writeSpecificAttrs2(dest);
     // Custom attrs
     for (auto& v : attrs) {
         xsin::writeAttr(dest, v.key, v.value);
@@ -246,12 +258,12 @@ bool xs::RootNode::trySpecificAttr(std::string_view key, std::string_view value)
 }
 
 
-void xs::RootNode::writeSpecificAttrs(std::string& dest)
+void xs::RootNode::writeSpecificAttrs1(std::string& dest)
 {
     xsin::writeAttrIf(dest, "xmlns", saSvg.xmlns);
     xsin::writeAttrIf(dest, "version", saSvg.version);
 
-    Super::writeSpecificAttrs(dest);
+    Super::writeSpecificAttrs1(dest);
 }
 
 

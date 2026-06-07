@@ -94,7 +94,9 @@ namespace xs {
         virtual DoesDraw doesDraw() const noexcept = 0;
         /// @return [+] was inserted to specific structures
         virtual bool trySpecificAttr(std::string_view key, std::string_view value);
-        virtual void writeSpecificAttrs(std::string& dest);
+        virtual void writeSpecificAttrs1(std::string& dest);
+        void writeRepeatingAttrs(std::string& dest);
+        virtual void writeSpecificAttrs2(std::string& dest);
         virtual void basicOptimizations(const OptSets& sets);
         /// a = stdattr, b = style
         virtual void traverseRepeats(const MultiTypeCallback& x);
@@ -131,7 +133,7 @@ namespace xs {
         } saSvg;
 
         bool trySpecificAttr(std::string_view key, std::string_view value) override;
-        void writeSpecificAttrs(std::string& dest) override;
+        void writeSpecificAttrs1(std::string& dest) override;
         virtual std::string_view name() const noexcept override
             { return "svg"; }
         virtual DoesDraw doesDraw() const noexcept override
