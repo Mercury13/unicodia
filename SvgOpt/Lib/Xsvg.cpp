@@ -99,6 +99,22 @@ void xs::Node::recurseBasicOptimizations(const OptSets& sets)
 }
 
 
+void xs::Node::recurseStyleToAttrIfPossible()
+{
+    for (auto& v : children) {
+        if (v) {
+            v->recurseStyleToAttrIfPossible();
+        }
+    }
+    traverseRepeatsT(
+        [](std::string_view, auto& attr, auto& style) {
+            if (style) {
+                attr = std::move(style);
+                style.clear();
+            }
+        });
+}
+
 bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
 {
     switch (key[0]) {
@@ -223,6 +239,16 @@ void xs::Node::removeOverriddenAttrs()
 }
 
 
+///// StopNode /////////////////////////////////////////////////////////////////
+
+
+void xs::StopNode::traverseRepeats(const MultiTypeCallback& x)
+{
+    Super::traverseRepeats(x);
+    x.onColor("stop-color", saStop.stopColor, sa.style.stopColor);
+}
+
+
 ///// RootNode /////////////////////////////////////////////////////////////////
 
 
@@ -296,6 +322,10 @@ namespace {
                 doesDraw = xs::DoesDraw::NO;
             }
             break;
+        case 's':
+            if (name == "stop") {
+                return std::make_unique<xs::StopNode>();
+            }
         }
         return std::make_unique<xs::FreeNode>(std::string{name}, doesDraw);
     }
@@ -405,4 +435,11 @@ void xs::Svg::saveFile(
 void xs::Svg::optimize(const OptSets& sets)
 {
     root.recurseBasicOptimizations(sets);
+    switch (sets.styleToAttr) {
+    case xs::StyleToAttr::LEAVE: break;
+    case xs::StyleToAttr::IF_SHORTER: break;
+    case xs::StyleToAttr::IF_POSSIBLE:
+        root.recurseStyleToAttrIfPossible();
+    case xs::StyleToAttr::DISBAND_STYLE: break;
+    }
 }

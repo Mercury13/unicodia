@@ -29,6 +29,7 @@ int main()
     svg.loadFile(pathIn);
 
     xs::OptSets osets;
+    osets.styleToAttr = xs::StyleToAttr::IF_POSSIBLE;
     svg.optimize(osets);
 
     xs::SaveSets sets;

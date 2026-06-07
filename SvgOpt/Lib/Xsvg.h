@@ -16,7 +16,10 @@ namespace xs {
         LEAVE, CLEAN, CLEAN_SHRINK };
 
     enum class StyleToAttr : unsigned char {
-        LEAVE, IF_SHORTER, ALWAYS };
+        LEAVE,              ///< Do not change
+        IF_SHORTER,         ///< If so is shorter
+        IF_POSSIBLE,        ///< Everytime it's possible
+        DISBAND_STYLE };    ///< Totally disband styles, pushing them to attrs
 
     struct OptSets {  // the default is rather strong and unsafe
         /// NOT IMPLEMENTED.
@@ -121,6 +124,7 @@ namespace xs {
         void writeAttrs(std::string& dest);
         void recurseBasicOptimizations(const OptSets& sets);
         void deleteAttr(std::string_view key);
+        void recurseStyleToAttrIfPossible();
     private:
     };
 
@@ -134,11 +138,24 @@ namespace xs {
 
         bool trySpecificAttr(std::string_view key, std::string_view value) override;
         void writeSpecificAttrs1(std::string& dest) override;
-        virtual std::string_view name() const noexcept override
+        std::string_view name() const noexcept override
             { return "svg"; }
-        virtual DoesDraw doesDraw() const noexcept override
+        DoesDraw doesDraw() const noexcept override
             { return DoesDraw::MAYBE; }
         void basicOptimizations(const OptSets& sets) override;
+    };
+
+    class StopNode : public Node {
+        using Super = Node;
+    public:
+        struct SaStop {
+            MaybeColor stopColor {};
+        } saStop;
+        std::string_view name() const noexcept override
+            { return "stop"; }
+        virtual DoesDraw doesDraw() const noexcept override
+            { return DoesDraw::NO; }
+        void traverseRepeats(const MultiTypeCallback& x) override;
     };
 
     class FreeNode : public Node {
