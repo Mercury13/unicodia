@@ -29,11 +29,19 @@ namespace xs {
         YES,        ///< Yep, draws: <path>
         SPECIAL,    ///< Special rules: <defs>
     };
+    // When to delete:
+    // NO: no links to id
+    // MAYBE: no objects that are actually drawn
+    // YES: never
+    // SPECIAL: really empty
 
     class Node {
     public:
         virtual std::string_view name() const noexcept = 0;
         virtual DoesDraw doesDraw() const noexcept = 0;
+        /// @return [+] was inserted to specific structures
+        virtual bool trySpecificAttr(std::string_view key, std::string_view value);
+        virtual void writeSpecificAttrs(std::string& dest);
 
         struct StdAttrs {
             std::string id;
@@ -46,6 +54,7 @@ namespace xs {
         NodeChannel channel = NodeChannel::BOTH;
 
         void write(std::string& dest, Channel channel);
+        void writeAttrs(std::string& dest);
         static void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
         static void writeAttr(std::string& dest, std::string_view key, std::string_view value);
         static void encodeAttr(std::string& dest, std::string_view x);
@@ -69,6 +78,36 @@ namespace xs {
             : myName(std::move(aName)), myDoesDraw(aDoesDraw) {}
         std::string_view name() const noexcept override { return myName; }
         DoesDraw doesDraw() const noexcept override { return myDoesDraw; }
+    };
+
+    enum class IdAction : unsigned char {
+        LEAVE, CLEAN, CLEAN_SHRINK };
+
+    struct OptSets {  // the default is rather strong and unsafe
+        /// NOT IMPLEMENTED.
+        /// Editors make lots of unused IDs, what to do?
+        IdAction idAction = IdAction::CLEAN_SHRINK;
+
+        /// NOT IMPLEMENTED.
+        /// [+] transform="translate:1,5" to x="1" y="5"
+        bool transformToXy = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] clean unused objects
+        /// (foreign namespaces are NOT EVEN LOADED and auto-cleaned)
+        bool cleanUnused = true;
+
+        /// Will remove unused groups, move styles etc
+        bool groupOptimization = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] width="10" height="10" (22) will be shrunken to
+        ///     viewBox="0 0 10 10" (19)
+        bool optimizeViewBoxWh = true;
+
+        /// NOT IMPLEMENTED.
+        /// coordinate precision, digits after point
+        unsigned char coordPrecision = 2;
     };
 
     struct SaveSets {

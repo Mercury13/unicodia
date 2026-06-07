@@ -22,8 +22,12 @@ namespace {
 
 std::string_view xsin::NsInfo::launderAttr(std::string_view name) const noexcept
 {
-    if (name.empty() || name == triggerAttr)
-        return name;
+    if (name.empty())
+        return {};
+    if (name == triggerAttr)
+        return "xmlns"sv;
+    if (name == "xmlns"sv)  // Only one XMLNS
+        return {};
     auto p = name.find(':');
     if (p == std::string_view::npos)
         return name;
@@ -90,7 +94,7 @@ namespace {
             break;
         case 'g':
             if (name == "g") {
-                doesDraw = xs::DoesDraw:: MAYBE;
+                doesDraw = xs::DoesDraw::MAYBE;
             }
             break;
         case 'l':
@@ -121,30 +125,10 @@ namespace {
             std::string_view name = v.name();
             if (auto lau = context.ns.launderAttr(name);
                     !lau.empty()) {
-                switch (lau[0]) {
-                case 'f':
-                    if (lau == "fill"sv) {
-                        dest.sa.fill = v.value();
-                        goto ok;
-                    } break;
-                case 'i':
-                    if (lau == "id"sv) {
-                        dest.sa.id = v.value();
-                        goto ok;
-                    } break;
-                case 's':
-                    if (lau == "style") {
-                        dest.sa.style = v.value();
-                        goto ok;
-                    } break;
-                case 't':
-                    if (lau == "transform") {
-                        dest.sa.transform = v.value();
-                        goto ok;
-                    } break;
+                std::string_view val = v.value();
+                if (!dest.trySpecificAttr(lau, val)) {
+                    dest.attrs.emplace_back(std::string{lau}, v.value());
                 }
-                dest.attrs.emplace_back(std::string{lau}, v.value());
-            ok:;
             }
         }
         // Objects
@@ -204,6 +188,32 @@ void xs::Svg::clear()
     root.sa = Node::StdAttrs{};
 }
 
+bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
+{
+    switch (key[0]) {
+    case 'f':
+        if (key == "fill"sv) {
+            sa.fill = value;
+            return true;
+        } break;
+    case 'i':
+        if (key == "id"sv) {
+            sa.id = value;
+            return true;
+        } break;
+    case 's':
+        if (key == "style") {
+            sa.style = value;
+            return true;
+        } break;
+    case 't':
+        if (key == "transform") {
+            sa.transform = value;
+            return true;
+        } break;
+    }
+    return false;
+}
 
 void xs::Node::encodeAttr(std::string& dest, std::string_view x)
 {
@@ -236,19 +246,28 @@ void xs::Node::writeAttr(std::string& dest, std::string_view key, std::string_vi
     dest += '"';
 }
 
-void xs::Node::write(std::string& dest, Channel channel)
+void xs::Node::writeSpecificAttrs(std::string& dest)
 {
-    dest += "<";
-    dest += name();
-    // Standard attrs
     writeAttrIf(dest, "id", sa.id);
     writeAttrIf(dest, "fill", sa.fill);
     writeAttrIf(dest, "style", sa.style);
     writeAttrIf(dest, "transform", sa.transform);
+}
+
+void xs::Node::writeAttrs(std::string& dest)
+{
+    writeSpecificAttrs(dest);
     // Custom attrs
     for (auto& v : attrs) {
         writeAttr(dest, v.key, v.value);
     }
+}
+
+void xs::Node::write(std::string& dest, Channel channel)
+{
+    dest += "<";
+    dest += name();
+    writeAttrs(dest);
     bool isTagOpen = true;
     for (auto& v : children) {
         if (!v)

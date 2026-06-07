@@ -29,6 +29,7 @@ int main()
     svg.loadFile(pathIn);
 
     xs::SaveSets sets;
+    sets.writeDocType = false;
     svg.saveFile(FNAME_OUT, sets);
 
     return 0;
