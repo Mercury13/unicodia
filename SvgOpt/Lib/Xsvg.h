@@ -74,6 +74,20 @@ namespace xs {
         operator bool() const noexcept { return hasSmth(); }
     };
 
+    struct Style {
+        Fill fill;
+        std::vector<Attr> attrs;
+
+        bool hasSmth() const noexcept;
+        operator bool() const noexcept { return hasSmth(); }
+        void encodeAttr(std::string& dest) const;
+        /// The key is fixed: style
+        void writeAttrIf(std::string& dest) const;
+        void clear();
+        void add(std::string_view key, std::string_view value);
+        void parse(std::string_view x);
+    };
+
     class Node {
     public:
         virtual std::string_view name() const noexcept = 0;
@@ -85,7 +99,7 @@ namespace xs {
         struct StdAttrs {
             std::string id;
             Fill fill { Inherit {} };
-            std::string style;
+            Style style;
             std::string transform;
         } sa;
         std::vector<Attr> attrs;
@@ -119,34 +133,60 @@ namespace xs {
     enum class IdAction : unsigned char {
         LEAVE, CLEAN, CLEAN_SHRINK };
 
+    enum class StyleToAttr : unsigned char {
+        LEAVE, IF_SHORTER, ALWAYS };
+
     struct OptSets {  // the default is rather strong and unsafe
         /// NOT IMPLEMENTED.
         /// Editors make lots of unused IDs, what to do?
+        /// Type: garbage collection
         IdAction idAction = IdAction::CLEAN_SHRINK;
 
         /// NOT IMPLEMENTED.
         /// [+] transform="translate:1,5" to x="1" y="5"
+        /// Type: cunning move
         bool transformToXy = true;
 
         /// NOT IMPLEMENTED.
         /// [+] clean unused objects
         /// (foreign namespaces are NOT EVEN LOADED and auto-cleaned)
-        bool cleanUnused = true;
+        /// Type: garbage collection
+        bool cleanUnusedObjects = true;
+
+        /// NOT IMPLEMENTED
+        /// [+] clean unused styles: e.g. delete font if there are no
+        ///     texts nearby
+        /// Type: garbage collection
+        bool cleanUnusedStyles = true;
 
         /// Will remove unused groups, move styles etc
+        /// Type: garbage collection / cunning move
         bool groupOptimization = true;
 
         /// NOT IMPLEMENTED.
         /// [+] width="10" height="10" (22) will be shrunken to
         ///     viewBox="0 0 10 10" (19)
+        /// Type: cunning move
         bool optimizeViewBoxWh = true;
 
         /// NOT IMPLEMENTED.
         /// [+] Remove colour if it is default black #000
+        /// Type: cunning move
         bool useDefaultBlack = true;
 
         /// NOT IMPLEMENTED.
+        /// [+] style="stop-color:#D32F2F" → stop-color="#d32f2f"
+        /// Type: cunning move
+        StyleToAttr styleToAttr = StyleToAttr::IF_SHORTER;
+
+        /// NOT IMPLEMENTED
+        /// [+] remove xmlns="....."
+        /// Type: deviation from standard
+        bool removeXmlns = true;
+
+        /// NOT IMPLEMENTED.
         /// coordinate precision, digits after point
+        /// Type: lossy compression
         unsigned char coordPrecision = 2;
     };
 
