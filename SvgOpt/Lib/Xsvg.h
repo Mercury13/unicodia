@@ -13,6 +13,66 @@ namespace pugi {
 
 namespace xs {
 
+    enum class IdAction : unsigned char {
+        LEAVE, CLEAN, CLEAN_SHRINK };
+
+    enum class StyleToAttr : unsigned char {
+        LEAVE, IF_SHORTER, ALWAYS };
+
+    struct OptSets {  // the default is rather strong and unsafe
+        /// NOT IMPLEMENTED.
+        /// Editors make lots of unused IDs, what to do?
+        /// Type: garbage collection
+        IdAction idAction = IdAction::CLEAN_SHRINK;
+
+        /// NOT IMPLEMENTED.
+        /// [+] transform="translate:1,5" to x="1" y="5"
+        /// Type: cunning move
+        bool transformToXy = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] clean unused objects
+        /// (foreign namespaces are NOT EVEN LOADED and auto-cleaned)
+        /// Type: garbage collection
+        bool cleanUnusedObjects = true;
+
+        /// NOT IMPLEMENTED
+        /// [+] clean unused styles: e.g. delete font if there are no
+        ///     texts nearby
+        /// Type: garbage collection
+        bool cleanUnusedStyles = true;
+
+        /// Will remove unused groups, move styles etc
+        /// Type: garbage collection / cunning move
+        bool groupOptimization = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] width="10" height="10" (22) will be shrunken to
+        ///     viewBox="0 0 10 10" (19)
+        /// Type: cunning move
+        bool optimizeViewBoxWh = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] Remove colour if it is default black #000
+        /// Type: cunning move
+        bool useDefaultBlack = true;
+
+        /// NOT IMPLEMENTED.
+        /// [+] style="stop-color:#D32F2F" → stop-color="#d32f2f"
+        /// Type: cunning move
+        StyleToAttr styleToAttr = StyleToAttr::IF_SHORTER;
+
+        /// NOT IMPLEMENTED
+        /// [+] remove xmlns="....."
+        /// Type: deviation from standard
+        bool removeXmlns = true;
+
+        /// NOT IMPLEMENTED.
+        /// coordinate precision, digits after point
+        /// Type: lossy compression
+        unsigned char coordPrecision = 2;
+    };
+
     enum class Channel : unsigned char {
         BOTH = 0, ONE = 1, TWO = 2, GENERAL = BOTH };
     enum class NodeChannel : unsigned char {
@@ -86,6 +146,7 @@ namespace xs {
         using FillFather::FillFather;
         using FillFather::operator =;
 
+        void clear() { *this = Inherit{}; }
         void encodeAttr(std::string& text) const;
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
@@ -115,6 +176,7 @@ namespace xs {
         /// @return [+] was inserted to specific structures
         virtual bool trySpecificAttr(std::string_view key, std::string_view value);
         virtual void writeSpecificAttrs(std::string& dest);
+        virtual void basicOptimizations(const OptSets& sets);
 
         struct StdAttrs {
             std::string id;
@@ -128,6 +190,7 @@ namespace xs {
 
         void write(std::string& dest, Channel channel);
         void writeAttrs(std::string& dest);
+        void recurseBasicOptimizations(const OptSets& sets);
     private:
     };
 
@@ -137,6 +200,7 @@ namespace xs {
             { return "svg"; }
         virtual DoesDraw doesDraw() const noexcept override
             { return DoesDraw::MAYBE; }
+        void basicOptimizations(const OptSets& sets);
     };
 
     class FreeNode : public Node {
@@ -150,66 +214,6 @@ namespace xs {
         DoesDraw doesDraw() const noexcept override { return myDoesDraw; }
     };
 
-    enum class IdAction : unsigned char {
-        LEAVE, CLEAN, CLEAN_SHRINK };
-
-    enum class StyleToAttr : unsigned char {
-        LEAVE, IF_SHORTER, ALWAYS };
-
-    struct OptSets {  // the default is rather strong and unsafe
-        /// NOT IMPLEMENTED.
-        /// Editors make lots of unused IDs, what to do?
-        /// Type: garbage collection
-        IdAction idAction = IdAction::CLEAN_SHRINK;
-
-        /// NOT IMPLEMENTED.
-        /// [+] transform="translate:1,5" to x="1" y="5"
-        /// Type: cunning move
-        bool transformToXy = true;
-
-        /// NOT IMPLEMENTED.
-        /// [+] clean unused objects
-        /// (foreign namespaces are NOT EVEN LOADED and auto-cleaned)
-        /// Type: garbage collection
-        bool cleanUnusedObjects = true;
-
-        /// NOT IMPLEMENTED
-        /// [+] clean unused styles: e.g. delete font if there are no
-        ///     texts nearby
-        /// Type: garbage collection
-        bool cleanUnusedStyles = true;
-
-        /// Will remove unused groups, move styles etc
-        /// Type: garbage collection / cunning move
-        bool groupOptimization = true;
-
-        /// NOT IMPLEMENTED.
-        /// [+] width="10" height="10" (22) will be shrunken to
-        ///     viewBox="0 0 10 10" (19)
-        /// Type: cunning move
-        bool optimizeViewBoxWh = true;
-
-        /// NOT IMPLEMENTED.
-        /// [+] Remove colour if it is default black #000
-        /// Type: cunning move
-        bool useDefaultBlack = true;
-
-        /// NOT IMPLEMENTED.
-        /// [+] style="stop-color:#D32F2F" → stop-color="#d32f2f"
-        /// Type: cunning move
-        StyleToAttr styleToAttr = StyleToAttr::IF_SHORTER;
-
-        /// NOT IMPLEMENTED
-        /// [+] remove xmlns="....."
-        /// Type: deviation from standard
-        bool removeXmlns = true;
-
-        /// NOT IMPLEMENTED.
-        /// coordinate precision, digits after point
-        /// Type: lossy compression
-        unsigned char coordPrecision = 2;
-    };
-
     struct SaveSets {
         Channel channel = Channel::GENERAL;
         bool writeDocType = true;
@@ -221,6 +225,7 @@ namespace xs {
 
         void clear();
         void loadFile(const std::filesystem::path& s);
+        void optimize(const OptSets& sets);
         std::string saveString(const SaveSets& sets);
         void saveFile(const std::filesystem::path& s,
                       const SaveSets& sets);

@@ -327,6 +327,103 @@ xsin::NsInfo xsin::detectNamespace(pugi::xml_node node, std::string_view url)
     return {};
 }
 
+
+///// Node /////////////////////////////////////////////////////////////////////
+
+
+void xs::Node::recurseBasicOptimizations(const OptSets& sets)
+{
+    for (auto& v : children) {
+        if (v) {
+            v->recurseBasicOptimizations(sets);
+        }
+    }
+    basicOptimizations(sets);
+}
+
+
+bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
+{
+    switch (key[0]) {
+    case 'f':
+        if (key == "fill"sv) {
+            sa.fill.parse(value);
+            return true;
+        } break;
+    case 'i':
+        if (key == "id"sv) {
+            sa.id = value;
+            return true;
+        } break;
+    case 's':
+        if (key == "style") {
+            sa.style.parse(value);
+            return true;
+        } break;
+    case 't':
+        if (key == "transform") {
+            sa.transform = value;
+            return true;
+        } break;
+    }
+    return false;
+}
+
+
+void xs::Node::basicOptimizations(const OptSets&)
+{
+    // This optimization (style > inline) is automatic
+    if (sa.style.fill && sa.fill)
+        sa.fill.clear();
+}
+
+
+void xs::Node::writeSpecificAttrs(std::string& dest)
+{
+    xsin::writeAttrIf(dest, "id", sa.id);
+    sa.fill.writeAttrIf(dest, "fill");
+    sa.style.writeAttrIf(dest);
+    xsin::writeAttrIf(dest, "transform", sa.transform);
+}
+
+
+void xs::Node::writeAttrs(std::string& dest)
+{
+    writeSpecificAttrs(dest);
+    // Custom attrs
+    for (auto& v : attrs) {
+        xsin::writeAttr(dest, v.key, v.value);
+    }
+}
+
+void xs::Node::write(std::string& dest, Channel channel)
+{
+    dest += "<";
+    dest += name();
+    writeAttrs(dest);
+    bool isTagOpen = true;
+    for (auto& v : children) {
+        if (!v)
+            continue;
+        if (isTagOpen) {
+            dest += '>';
+            isTagOpen = false;
+        }
+        v->write(dest, channel);
+    }
+    if (isTagOpen) {
+        dest += "/>";
+    } else {
+        dest += "</";
+        dest += name();
+        dest += '>';
+    }
+}
+
+
+///// Svg //////////////////////////////////////////////////////////////////////
+
+
 namespace {
 
     std::unique_ptr<xs::Node> createNode(std::string_view name)
@@ -434,33 +531,6 @@ void xs::Svg::clear()
     root.sa = Node::StdAttrs{};
 }
 
-bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
-{
-    switch (key[0]) {
-    case 'f':
-        if (key == "fill"sv) {
-            sa.fill.parse(value);
-            return true;
-        } break;
-    case 'i':
-        if (key == "id"sv) {
-            sa.id = value;
-            return true;
-        } break;
-    case 's':
-        if (key == "style") {
-            sa.style.parse(value);
-            return true;
-        } break;
-    case 't':
-        if (key == "transform") {
-            sa.transform = value;
-            return true;
-        } break;
-    }
-    return false;
-}
-
 void xsin::encodeAttr(std::string& dest, std::string_view x)
 {
     dest.reserve(dest.length() + x.length());
@@ -497,47 +567,6 @@ void xsin::writeAttr(std::string& dest, std::string_view key, std::string_view v
     dest += '"';
 }
 
-void xs::Node::writeSpecificAttrs(std::string& dest)
-{
-    xsin::writeAttrIf(dest, "id", sa.id);
-    sa.fill.writeAttrIf(dest, "fill");
-    sa.style.writeAttrIf(dest);
-    xsin::writeAttrIf(dest, "transform", sa.transform);
-}
-
-void xs::Node::writeAttrs(std::string& dest)
-{
-    writeSpecificAttrs(dest);
-    // Custom attrs
-    for (auto& v : attrs) {
-        xsin::writeAttr(dest, v.key, v.value);
-    }
-}
-
-void xs::Node::write(std::string& dest, Channel channel)
-{
-    dest += "<";
-    dest += name();
-    writeAttrs(dest);
-    bool isTagOpen = true;
-    for (auto& v : children) {
-        if (!v)
-            continue;
-        if (isTagOpen) {
-            dest += '>';
-            isTagOpen = false;
-        }
-        v->write(dest, channel);
-    }
-    if (isTagOpen) {
-        dest += "/>";
-    } else {
-        dest += "</";
-        dest += name();
-        dest += '>';
-    }
-}
-
 
 std::string xs::Svg::saveString(const SaveSets& sets)
 {
@@ -559,4 +588,9 @@ void xs::Svg::saveFile(
         throw std::logic_error("Cannot open file " + s.string());
     }
     os.write(str.data(), str.length());
+}
+
+void xs::Svg::optimize(const OptSets& sets)
+{
+    root.recurseBasicOptimizations(sets);
 }
