@@ -117,9 +117,12 @@ namespace xs {
 
     class MultiTypeCallback {   // interface
     public:
-        virtual void onColor(MaybeColor& a, MaybeColor& b) const = 0;
-        virtual void onFill(Fill& a, Fill& b) const = 0;
-        virtual void onFillRule(MaybeFillRule& a, MaybeFillRule& b) const = 0;
+        virtual void onColor(
+            std::string_view key, MaybeColor& a, MaybeColor& b) const = 0;
+        virtual void onFill(
+            std::string_view key, Fill& a, Fill& b) const = 0;
+        virtual void onFillRule(
+            std::string_view key, MaybeFillRule& a, MaybeFillRule& b) const = 0;
         virtual ~MultiTypeCallback() = default;
     };
 
@@ -127,9 +130,12 @@ namespace xs {
             : public MultiTypeCallback {
     public:
         MultiTypeCallbackT(const U& uu) : u(uu) {}
-        void onColor(MaybeColor& a, MaybeColor& b) const override { u(a, b); }
-        void onFill(Fill& a, Fill& b) const override { u(a, b); }
-        void onFillRule(MaybeFillRule& a, MaybeFillRule& b) const override  { u(a, b); };
+        void onColor(std::string_view key, MaybeColor& a, MaybeColor& b) const override
+            { u(key, a, b); }
+        void onFill(std::string_view key, Fill& a, Fill& b) const override
+            { u(key, a, b); }
+        void onFillRule(std::string_view key, MaybeFillRule& a, MaybeFillRule& b) const override
+            { u(key, a, b); };
     private:
         const U& u;
     };

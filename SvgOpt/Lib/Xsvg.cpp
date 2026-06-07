@@ -196,14 +196,14 @@ void xs::Node::deleteAttr(std::string_view key)
 
 void xs::Node::traverseRepeats(const MultiTypeCallback& x)
 {
-    x.onFill(sa.fill, sa.style.fill);
-    x.onFillRule(sa.fillRule, sa.style.fillRule);
+    x.onFill("fill"sv, sa.fill, sa.style.fill);
+    x.onFillRule("fill-rule", sa.fillRule, sa.style.fillRule);
 }
 
 
 void xs::Node::removeOverriddenAttrs()
 {
-    traverseRepeatsT([](auto& attr, auto& style) {
+    traverseRepeatsT([](std::string_view, auto& attr, auto& style) {
         if (style) {
             attr.clear();
         }
