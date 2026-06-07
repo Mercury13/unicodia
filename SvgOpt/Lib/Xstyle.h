@@ -48,6 +48,7 @@ namespace xs {
         using MaybeColorFather::MaybeColorFather;
         using MaybeColorFather::operator =;
 
+        void clear() { *this = Inherit(); }
         void encodeAttr(std::string& text) const;
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);

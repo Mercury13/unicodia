@@ -63,7 +63,8 @@ namespace xs {
 
         /// [+] remove xmlns="....."
         /// Type: deviation from standard
-        bool removeXmlns = true;
+        ///   As most software ceases to open, made FALSE
+        bool removeXmlns = false;
 
         /// [+] remove version="1.1"
         /// Type: deviation from standard

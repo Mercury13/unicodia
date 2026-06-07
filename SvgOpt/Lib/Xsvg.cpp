@@ -94,6 +94,7 @@ void xs::Node::recurseBasicOptimizations(const OptSets& sets)
             v->recurseBasicOptimizations(sets);
         }
     }
+    removeOverriddenAttrs();
     basicOptimizations(sets);
 }
 
@@ -202,9 +203,9 @@ void xs::Node::traverseRepeats(const MultiTypeCallback& x)
 
 void xs::Node::removeOverriddenAttrs()
 {
-    traverseRepeatsT([](auto& a, auto& b) {
-        if (b) {
-            a = Inherit{};
+    traverseRepeatsT([](auto& attr, auto& style) {
+        if (style) {
+            attr.clear();
         }
     });
 }
