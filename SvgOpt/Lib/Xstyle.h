@@ -99,6 +99,23 @@ namespace xs {
         operator bool() const noexcept { return hasSmth(); }
     };
 
+    template <class T>
+    concept Stylish = requires(
+            T x, T y, std::string s, std::string_view sv) {
+        x.operator = (y);
+        x.clear();
+        x.writeAttrIf(s, sv);
+        static_cast<bool>(x);
+        x.encodeAttr(s);
+    };
+
+    template <Stylish T>
+    struct StyleObj {
+        T attr, style;
+        T& active() noexcept { return style ? style : attr; }
+        const T& active() const noexcept { return style ? style : attr; }
+    };
+
     struct Style {
         Fill fill;
         MaybeFillRule fillRule;
