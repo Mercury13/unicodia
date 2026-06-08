@@ -319,23 +319,25 @@ namespace {
             }
             break;
         case 'g':
-            if (name == "g") {
+            if (name == "g"sv) {
                 doesDraw = xs::DoesDraw::MAYBE;
             }
             break;
         case 'l':
-            if (name == "linearGradient") {
+            if (name == "linearGradient"sv) {
                 doesDraw = xs::DoesDraw::NO;
             }
             break;
         case 'r':
-            if (name == "radialGradient") {
+            if (name == "radialGradient"sv) {
                 doesDraw = xs::DoesDraw::NO;
             }
             break;
         case 's':
-            if (name == "stop") {
+            if (name == "stop"sv) {
                 return std::make_unique<xs::StopNode>();
+            } else if (name == "symbol"sv) {
+                doesDraw = xs::DoesDraw::NO;
             }
         }
         return std::make_unique<xs::FreeNode>(std::string{name}, doesDraw);
