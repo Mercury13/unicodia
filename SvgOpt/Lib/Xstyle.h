@@ -3,11 +3,22 @@
 #include <string>
 #include <variant>
 #include <vector>
-#include <limits>
+#include <cmath>
+#include <algorithm>
 
 #include "Xcolor.h"
 
 #include "u_TypedFlags.h"
+
+namespace xsi {
+
+    constexpr inline int toPermille(double x, int unit) noexcept
+    {
+        int r = std::round(x * unit);
+        return std::clamp(r, 0, 1000);
+    }
+
+}   // namespace xsi
 
 namespace xs {
 
@@ -38,6 +49,7 @@ namespace xs {
         std::string text;
         bool operator == (const Special&) const noexcept = default;
     };
+
     using MaybeColorFather = std::variant<Inherit, Color, Special>;
     class MaybeColor : public MaybeColorFather {
     public:
@@ -58,6 +70,7 @@ namespace xs {
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
     };
+
     using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
     class Fill : public FillFather {
     public:
@@ -80,6 +93,7 @@ namespace xs {
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
     };
+
     enum class FillRule : unsigned char { NONZERO, EVENODD };
     using MaybeFillRuleFather = std::variant<Inherit, FillRule, Special>;
     class MaybeFillRule : public MaybeFillRuleFather {
@@ -99,6 +113,47 @@ namespace xs {
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
+        explicit operator bool() const noexcept { return hasSmth(); }
+    };
+
+    // Three digits are always enough!
+    constexpr int OPACITY_UNIT = 1000;
+    constexpr int OPACITY_DIGITS = 3;
+    enum class OpacityUnit : unsigned short {
+        UNIT = OPACITY_UNIT, PERCENT = OPACITY_UNIT / 100, PERMILLE = OPACITY_UNIT / 1000 };
+    class Opacity {
+    public:
+        constexpr Opacity() noexcept = default;
+        constexpr Opacity(double x) noexcept
+            : permille(xsi::toPermille(x, OPACITY_UNIT)) {}
+        constexpr Opacity(double x, OpacityUnit unit) noexcept
+            : permille(xsi::toPermille(x, static_cast<int>(unit))) {}
+        bool operator == (const Opacity&) const noexcept = default;
+        void encode(std::string& dest) const;
+        int raw() const noexcept { return permille; }
+    private:
+        int permille = OPACITY_UNIT;
+    };
+    constexpr Opacity OPAQUE {};
+
+    /// The default opacity is ONE!! → so no Inherit
+    using MaybeOpacityFather = std::variant<Opacity, Special>;
+    class MaybeOpacity : public MaybeOpacityFather {
+    public:
+        static constexpr int I_OPACITY = 0;
+        static constexpr int I_SPECIAL = 1;
+        static constexpr int I_N = 2;
+        static_assert(I_N == std::variant_size_v<MaybeOpacityFather>);
+
+        bool operator == (const MaybeOpacity&) const noexcept = default;
+        using MaybeOpacityFather::MaybeOpacityFather;
+        using MaybeOpacityFather::operator =;
+
+        void clear() { *this = OPAQUE; }
+        void encodeAttr(std::string& dest) const;
+        void writeAttrIf(std::string& dest, std::string_view key) const;
+        void parse(std::string_view x);
+        bool hasSmth() const noexcept { return (*this != OPAQUE); }
         explicit operator bool() const noexcept { return hasSmth(); }
     };
 
@@ -136,6 +191,8 @@ namespace xs {
                 StyleObj<Fill>& x, bool mayHaveAttr) const = 0;
         virtual void onFillRule(std::string_view key,
                 StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const = 0;
+        virtual void onOpacity(std::string_view key,
+                StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const = 0;
         virtual ~MultiTypeCallback() = default;
     };
 
@@ -152,6 +209,9 @@ namespace xs {
         void onFillRule(std::string_view key,
                 StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const override
             { u(key, x, mayHaveAttr); }
+        void onOpacity(std::string_view key,
+                StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
     private:
         const U& u;
     };
@@ -159,7 +219,11 @@ namespace xs {
     struct Style {
         StyleObj<Fill> fill;
         StyleObj<MaybeFillRule> fillRule;
+
+        // Stop-related
         StyleObj<MaybeColor> stopColor;
+        StyleObj<MaybeOpacity> stopOpacity;
+
         std::vector<Attr> attrs;
 
         bool hasSmth() noexcept;

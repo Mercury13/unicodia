@@ -7,6 +7,7 @@
 // Libs
 #include "pugixml.hpp"
 
+
 xsin::NsInfo getNsInfo(std::string_view x)
 {
     pugi::xml_document doc;

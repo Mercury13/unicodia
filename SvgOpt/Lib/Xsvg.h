@@ -73,6 +73,10 @@ namespace xs {
         /// Type: deviation from standard
         bool removeVersion = true;
 
+        /// [+] remove metadata
+        /// Type: garbage collection
+        bool removeMeta = true;
+
         /// NOT IMPLEMENTED.
         /// coordinate precision, digits after point
         /// Type: lossy compression
@@ -98,6 +102,9 @@ namespace xs {
             std::string id;
             std::string transform;
         } sa;
+        struct Meta {
+            std::string desc, metadata, title;
+        } meta;
         std::vector<Attr> attrs;
         std::vector<std::unique_ptr<Node>> children;
         NodeChannel channel = NodeChannel::BOTH;
@@ -119,6 +126,7 @@ namespace xs {
         void traverseT(const U& u)
             { traverse(MultiTypeCallbackT<U>(u)); }
         void removeOverriddenAttrs();
+        void removeMeta();
 
         void write(std::string& dest, Channel channel);
         void writeAttrs(std::string& dest);

@@ -95,6 +95,8 @@ void xs::Node::recurseBasicOptimizations(const OptSets& sets)
         }
     }
     removeOverriddenAttrs();
+    if (sets.removeMeta)
+        removeMeta();
     basicOptimizations(sets);
 }
 
@@ -115,6 +117,13 @@ void xs::Node::recurseStyleToAttrIfPossible()
         });
 }
 
+constexpr std::string_view K_DESC = "desc";
+constexpr std::string_view K_ID = "id";
+constexpr std::string_view K_METADATA = "metadata";
+constexpr std::string_view K_TITLE = "title";
+constexpr std::string_view K_STYLE = "style";
+constexpr std::string_view K_TRANSFORM = "transform";
+
 bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
 {
     if (key.empty())
@@ -122,19 +131,35 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
     if (style.trySpecificAttr(key, value))
         return true;
     switch (key[0]) {
-    case 'i':
-        if (key == "id"sv) {
-            sa.id = value;
+    case 'd':
+        if (key == K_DESC) {
+            meta.desc = value;
             return true;
         } break;
+    case 'i':
+        if (key == K_ID) {
+            sa.id = value;
+            return true;
+        }
+        break;
+    case 'm':
+        if (key == K_METADATA) {
+            meta.metadata = value;
+            return true;
+        }
+        break;
     case 's':
-        if (key == "style") {
+        if (key == K_STYLE) {
             style.parse(value);
             return true;
         } break;
     case 't':
+        if (key == K_TITLE) {
+            meta.title = value;
+            return true;
+        }
         /// @todo [urgent] is transform stylable?
-        if (key == "transform") {
+        if (key == K_TRANSFORM) {
             sa.transform = value;
             return true;
         } break;
@@ -143,13 +168,16 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
 }
 
 
-void xs::Node::basicOptimizations(const OptSets&)
-{}
+void xs::Node::basicOptimizations(const OptSets&) {}
+
 
 
 void xs::Node::writeSpecificAttrs1(std::string& dest)
 {    
-    xsin::writeAttrIf(dest, "id", sa.id);
+    xsin::writeAttrIf(dest, K_ID, sa.id);
+    xsin::writeAttrIf(dest, K_METADATA, meta.metadata);
+    xsin::writeAttrIf(dest, K_DESC, meta.desc);
+    xsin::writeAttrIf(dest, K_TITLE, meta.title);
 }
 
 void xs::Node::writeRepeatingAttrs(std::string& dest)
@@ -163,7 +191,7 @@ void xs::Node::writeRepeatingAttrs(std::string& dest)
 void xs::Node::writeSpecificAttrs2(std::string& dest)
 {
     style.writeAttrIf(dest);
-    xsin::writeAttrIf(dest, "transform", sa.transform);
+    xsin::writeAttrIf(dest, K_TRANSFORM, sa.transform);
 }
 
 
@@ -221,6 +249,14 @@ void xs::Node::removeOverriddenAttrs()
             obj.attr.clear();
         }
     });
+}
+
+
+void xs::Node::removeMeta()
+{
+    meta.metadata.clear();
+    meta.desc.clear();
+    meta.title.clear();
 }
 
 

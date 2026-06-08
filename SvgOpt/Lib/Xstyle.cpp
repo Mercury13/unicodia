@@ -1,5 +1,7 @@
 #include "Xstyle.h"
 
+#include <charconv>
+
 #include "u_Strings.h"
 
 using namespace std::string_view_literals;
@@ -153,6 +155,74 @@ void xs::MaybeFillRule::parse(std::string_view x)
     } else if (lat::areCaseEqual(x, "nonzero"sv)) {
         *this = FillRule::NONZERO;
     }
+}
+
+
+///// MaybeOpacity /////////////////////////////////////////////////////////////
+
+
+void xs::Opacity::encode(std::string& dest) const
+{
+    if (permille <= 0) {
+        dest += '0';
+        return;
+    }
+    if (permille >= OPACITY_UNIT) {
+        dest += '1';
+        return;
+    }
+    // Otherwise fraction
+    dest += '.';
+    auto q = permille;
+    // 500 → 50 → 5;   520 → 52
+    while (q % 10 == 0)
+        q /= 10;
+    char buf[10];
+    auto convres = std::to_chars(std::begin(buf), std::end(buf), q);
+    dest.append(std::begin(buf), convres.ptr);
+}
+
+
+void xs::MaybeOpacity::encodeAttr(std::string& dest) const
+{
+    switch (index()) {
+    case I_OPACITY:
+        if (auto* q = std::get_if<Opacity>(this))
+            q->encode(dest);
+        break;
+    case I_SPECIAL:
+        if (auto* q = std::get_if<Special>(this)) {
+            xsin::encodeAttr(dest, q->text);
+        }
+        break;
+    }
+}
+
+void xs::MaybeOpacity::writeAttrIf(std::string& dest, std::string_view key) const
+{
+    /// @todo [repeat] move to xsin??
+    if (!hasSmth())
+        return;
+    xsin::startAttr(dest, key);
+    encodeAttr(dest);
+    dest += '"';
+}
+
+void xs::MaybeOpacity::parse(std::string_view x)
+{
+    auto s = x;
+    auto unit = OpacityUnit::UNIT;
+    if (s.ends_with('%')) {
+        unit = OpacityUnit::PERCENT;
+        s = str::trimRightSv(s.substr(0, s.length() - 1));
+    }
+    double val;
+    auto r = std::from_chars(x.begin(), x.end(), val);
+    if (r.ec == std::errc{}) {
+        *this = Opacity(val, unit);
+        return;
+    }
+    *this = Special{ .text = std::string{x} };
 }
 
 
