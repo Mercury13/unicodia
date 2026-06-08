@@ -3,8 +3,11 @@
 #include <string>
 #include <variant>
 #include <vector>
+#include <limits>
 
 #include "Xcolor.h"
+
+#include "u_TypedFlags.h"
 
 namespace xs {
 
@@ -53,7 +56,7 @@ namespace xs {
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
+        explicit operator bool() const noexcept { return hasSmth(); }
     };
     using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
     class Fill : public FillFather {
@@ -75,7 +78,7 @@ namespace xs {
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
+        explicit operator bool() const noexcept { return hasSmth(); }
     };
     enum class FillRule : unsigned char { NONZERO, EVENODD };
     using MaybeFillRuleFather = std::variant<Inherit, FillRule, Special>;
@@ -96,7 +99,7 @@ namespace xs {
         void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        operator bool() const noexcept { return hasSmth(); }
+        explicit operator bool() const noexcept { return hasSmth(); }
     };
 
     template <class T>
@@ -109,17 +112,54 @@ namespace xs {
         x.encodeAttr(s);
     };
 
+    enum class AllowAttr : unsigned int {
+        DRAW = 1<<0,    // draw-related: fill, fillRule
+        STOP = 1<<1,    // stop-related: stopColor
+    };
+    DEFINE_ENUM_OPS(AllowAttr)
+
     template <Stylish T>
     struct StyleObj {
         T attr, style;
         T& active() noexcept { return style ? style : attr; }
         const T& active() const noexcept { return style ? style : attr; }
+        bool hasSmth() const noexcept { return attr || style; }
+        explicit operator bool() const noexcept { return hasSmth(); }
+        void clear() { attr.clear(); style.clear(); }
+    };
+
+    class MultiTypeCallback {   // interface
+    public:
+        virtual void onColor(std::string_view key,
+                StyleObj<MaybeColor>& x, bool mayHaveAttr) const = 0;
+        virtual void onFill(std::string_view key,
+                StyleObj<Fill>& x, bool mayHaveAttr) const = 0;
+        virtual void onFillRule(std::string_view key,
+                StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const = 0;
+        virtual ~MultiTypeCallback() = default;
+    };
+
+    template <class U> class MultiTypeCallbackT final
+        : public MultiTypeCallback {
+    public:
+        MultiTypeCallbackT(const U& uu) : u(uu) {}
+        void onColor(std::string_view key,
+                StyleObj<MaybeColor>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
+        void onFill(std::string_view key,
+                StyleObj<Fill>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
+        void onFillRule(std::string_view key,
+                StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
+    private:
+        const U& u;
     };
 
     struct Style {
-        Fill fill;
-        MaybeFillRule fillRule;
-        MaybeColor stopColor;
+        StyleObj<Fill> fill;
+        StyleObj<MaybeFillRule> fillRule;
+        StyleObj<MaybeColor> stopColor;
         std::vector<Attr> attrs;
 
         bool hasSmth() const noexcept;
@@ -127,34 +167,20 @@ namespace xs {
         void encodeAttr(std::string& dest) const;
         /// The key is fixed: style
         void writeAttrIf(std::string& dest) const;
+        void traverse(Flags<AllowAttr> allowed, const MultiTypeCallback& x);
+        /// @return [+] was called
+        bool find(std::string_view key, Flags<AllowAttr> allowed,
+                const MultiTypeCallback& cb);
         void clear();
         void add(std::string_view key, std::string_view value);
         void parse(std::string_view x);
-    };
 
-    class MultiTypeCallback {   // interface
-    public:
-        virtual void onColor(
-            std::string_view key, MaybeColor& a, MaybeColor& b) const = 0;
-        virtual void onFill(
-            std::string_view key, Fill& a, Fill& b) const = 0;
-        virtual void onFillRule(
-            std::string_view key, MaybeFillRule& a, MaybeFillRule& b) const = 0;
-        virtual ~MultiTypeCallback() = default;
-    };
-
-    template <class U> class MultiTypeCallbackT final
-            : public MultiTypeCallback {
-    public:
-        MultiTypeCallbackT(const U& uu) : u(uu) {}
-        void onColor(std::string_view key, MaybeColor& a, MaybeColor& b) const override
-            { u(key, a, b); }
-        void onFill(std::string_view key, Fill& a, Fill& b) const override
-            { u(key, a, b); }
-        void onFillRule(std::string_view key, MaybeFillRule& a, MaybeFillRule& b) const override
-            { u(key, a, b); };
-    private:
-        const U& u;
+        template <class T>
+        void traverseT(Flags<AllowAttr> allowed, const T& cb)
+            { traverse(allowed, MultiTypeCallbackT<T>(cb)); }
+        template <class T>
+        bool findT(std::string_view key, Flags<AllowAttr> allowed, const T& cb)
+            { return find(key, allowed, MultiTypeCallbackT<T>(cb)); }
     };
 
 }   // namespace xs

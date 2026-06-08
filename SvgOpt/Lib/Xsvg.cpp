@@ -106,11 +106,11 @@ void xs::Node::recurseStyleToAttrIfPossible()
             v->recurseStyleToAttrIfPossible();
         }
     }
-    traverseRepeatsT(
-        [](std::string_view, auto& attr, auto& style) {
-            if (style) {
-                attr = std::move(style);
-                style.clear();
+    traverseT(
+        [](std::string_view, auto& obj, bool isAllowed) {
+            if (isAllowed && obj.style) {
+                obj.attr = std::move(obj.style);
+                obj.style.clear();
             }
         });
 }
@@ -120,10 +120,10 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
     switch (key[0]) {
     case 'f':
         if (key == "fill"sv) {
-            sa.fill.parse(value);
+            style.fill.attr.parse(value);
             return true;
         } else if (key == "fill-rule"sv) {
-            sa.fillRule.parse(value);
+            style.fill.attr.parse(value);
             return true;
         }
         break;
@@ -134,7 +134,7 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
         } break;
     case 's':
         if (key == "style") {
-            sa.style.parse(value);
+            style.parse(value);
             return true;
         } break;
     case 't':
@@ -148,11 +148,7 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
 
 
 void xs::Node::basicOptimizations(const OptSets&)
-{
-    // This optimization (style > inline) is automatic
-    if (sa.style.fill && sa.fill)
-        sa.fill.clear();
-}
+{}
 
 
 void xs::Node::writeSpecificAttrs1(std::string& dest)
@@ -162,15 +158,15 @@ void xs::Node::writeSpecificAttrs1(std::string& dest)
 
 void xs::Node::writeRepeatingAttrs(std::string& dest)
 {
-    traverseRepeatsT([&dest]
-        (std::string_view key, auto& attr, auto&) {
-            attr.writeAttrIf(dest, key);
+    traverseT([&dest]
+        (std::string_view key, auto& obj, bool) {
+            obj.attr.writeAttrIf(dest, key);
         });
 }
 
 void xs::Node::writeSpecificAttrs2(std::string& dest)
 {
-    sa.style.writeAttrIf(dest);
+    style.writeAttrIf(dest);
     xsin::writeAttrIf(dest, "transform", sa.transform);
 }
 
@@ -222,30 +218,13 @@ void xs::Node::deleteAttr(std::string_view key)
 }
 
 
-void xs::Node::traverseRepeats(const MultiTypeCallback& x)
-{
-    x.onFill("fill"sv, sa.fill, sa.style.fill);
-    x.onFillRule("fill-rule", sa.fillRule, sa.style.fillRule);
-}
-
-
 void xs::Node::removeOverriddenAttrs()
 {
-    traverseRepeatsT([](std::string_view, auto& attr, auto& style) {
-        if (style) {
-            attr.clear();
+    traverseT([](std::string_view, auto& obj, bool) {
+        if (obj.style) {
+            obj.attr.clear();
         }
     });
-}
-
-
-///// StopNode /////////////////////////////////////////////////////////////////
-
-
-void xs::StopNode::traverseRepeats(const MultiTypeCallback& x)
-{
-    Super::traverseRepeats(x);
-    x.onColor("stop-color", saStop.stopColor, sa.style.stopColor);
 }
 
 

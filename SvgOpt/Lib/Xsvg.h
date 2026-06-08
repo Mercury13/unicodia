@@ -93,6 +93,15 @@ namespace xs {
 
     class Node {
     public:
+        Style style;
+        struct StdAttrs {
+            std::string id;
+            std::string transform;
+        } sa;
+        std::vector<Attr> attrs;
+        std::vector<std::unique_ptr<Node>> children;
+        NodeChannel channel = NodeChannel::BOTH;
+
         virtual std::string_view name() const noexcept = 0;
         virtual DoesDraw doesDraw() const noexcept = 0;
         /// @return [+] was inserted to specific structures
@@ -101,24 +110,15 @@ namespace xs {
         void writeRepeatingAttrs(std::string& dest);
         virtual void writeSpecificAttrs2(std::string& dest);
         virtual void basicOptimizations(const OptSets& sets);
-        /// a = stdattr, b = style
-        virtual void traverseRepeats(const MultiTypeCallback& x);
+        virtual Flags<AllowAttr> allowAttr() const noexcept = 0;
+
+        void traverse(const MultiTypeCallback& cb)
+            { style.traverse(allowAttr(), cb); }
 
         template <class U>
-        void traverseRepeatsT(const U& u)
-            { traverseRepeats(MultiTypeCallbackT<U>(u)); }
+        void traverseT(const U& u)
+            { traverse(MultiTypeCallbackT<U>(u)); }
         void removeOverriddenAttrs();
-
-        struct StdAttrs {
-            std::string id;
-            Fill fill { Inherit {} };
-            MaybeFillRule fillRule { Inherit {} };
-            Style style;
-            std::string transform;
-        } sa;
-        std::vector<Attr> attrs;
-        std::vector<std::unique_ptr<Node>> children;
-        NodeChannel channel = NodeChannel::BOTH;
 
         void write(std::string& dest, Channel channel);
         void writeAttrs(std::string& dest);
@@ -143,6 +143,8 @@ namespace xs {
         DoesDraw doesDraw() const noexcept override
             { return DoesDraw::MAYBE; }
         void basicOptimizations(const OptSets& sets) override;
+        Flags<AllowAttr> allowAttr() const noexcept override
+            { return AllowAttr::DRAW; }
     };
 
     class StopNode : public Node {
@@ -155,7 +157,8 @@ namespace xs {
             { return "stop"; }
         virtual DoesDraw doesDraw() const noexcept override
             { return DoesDraw::NO; }
-        void traverseRepeats(const MultiTypeCallback& x) override;
+        Flags<AllowAttr> allowAttr() const noexcept override
+            { return AllowAttr::STOP; }
     };
 
     class FreeNode : public Node {
@@ -167,6 +170,8 @@ namespace xs {
             : myName(std::move(aName)), myDoesDraw(aDoesDraw) {}
         std::string_view name() const noexcept override { return myName; }
         DoesDraw doesDraw() const noexcept override { return myDoesDraw; }
+        Flags<AllowAttr> allowAttr() const noexcept override
+            { return AllowAttr::DRAW; }
     };
 
     struct SaveSets {

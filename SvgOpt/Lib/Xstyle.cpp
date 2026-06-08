@@ -125,19 +125,19 @@ void xs::Style::encodeAttr(std::string& dest) const
         oldLength = dest.length();
     };
     // Known, semicolons in between
-    if (fill) {
+    if (fill.style) {
         dest += "fill:";
-        fill.encodeAttr(dest);
+        fill.style.encodeAttr(dest);
     }
-    if (fillRule) {
+    if (fillRule.style) {
         writeSemicolon();
         dest += "fill-rule:";
-        fillRule.encodeAttr(dest);
+        fillRule.style.encodeAttr(dest);
     }
     if (stopColor) {
         writeSemicolon();
         dest += "stop-color:";
-        stopColor.encodeAttr(dest);
+        stopColor.style.encodeAttr(dest);
     }
     // Misc
     for (auto& q : attrs) {
@@ -212,9 +212,56 @@ void xs::Style::writeAttrIf(std::string& dest) const
 }
 
 
+constexpr std::string_view K_FILL = "fill";
+constexpr std::string_view K_FILL_RULE = "fill-rule";
+constexpr std::string_view K_STOP_COLOR = "stop-color";
+
+
+void xs::Style::traverse(
+        Flags<AllowAttr> allowed, const MultiTypeCallback& x)
+{
+    bool canDraw = allowed.have(AllowAttr::DRAW);
+    x.onFill(K_FILL, fill, canDraw);
+    x.onFillRule(K_FILL_RULE, fillRule, canDraw);
+
+    bool isStop = allowed.have(AllowAttr::STOP);
+    x.onColor(K_STOP_COLOR, stopColor, isStop);
+}
+
+
+bool xs::Style::find(
+        std::string_view key, Flags<AllowAttr> allowed,
+        const MultiTypeCallback& x)
+{
+#define CHECK(kkey, method, object, flag) \
+    if (key == kkey) {  \
+        x.method(kkey, object, allowed.have(flag)); \
+        return true; \
+    }
+
+    if (key.empty())
+        return false;
+    switch (key[0]) {
+    case 'f':
+        CHECK(K_FILL, onFill, fill, AllowAttr::DRAW);
+        CHECK(K_FILL_RULE, onFillRule, fillRule, AllowAttr::DRAW);
+        return false;
+    case 's':
+        CHECK(K_STOP_COLOR, onColor, stopColor, AllowAttr::STOP);
+        return false;
+    default:
+        return false;
+    }
+#undef CHECK
+}
+
+
 void xs::Style::clear()
 {
-    fill = Inherit{};
+    traverseT(NO_FLAGS,
+        [](std::string_view, auto& x, bool) {
+            x.clear();
+        });
     attrs.clear();
 }
 
@@ -228,17 +275,17 @@ void xs::Style::add(std::string_view key, std::string_view value)
     switch (key[0]) {
     case 'f':
         if (key == "fill"sv) {
-            fill.parse(value);
+            fill.style.parse(value);
             return;
         }
         if (key == "fill-rule"sv) {
-            fillRule.parse(value);
+            fillRule.style.parse(value);
             return;
         }
         break;
     case 's':
         if (key == "stop-color"sv) {
-            stopColor.parse(value);
+            stopColor.style.parse(value);
             return;
         }
         break;

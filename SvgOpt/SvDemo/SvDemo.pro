@@ -14,12 +14,14 @@ SOURCES += \
 HEADERS += \
     ../../Libs/PugiXml/pugixml.hpp \
     ../../Libs/SelfMade/Strings/u_Strings.h \
+    ../../Libs/SelfMade/u_TypedFlags.h \
     ../Lib/Xcolor.h \
     ../Lib/Xstyle.h \
     ../Lib/Xsvg.h
 
 INCLUDEPATH += \
     ../../Libs/PugiXml \
+    ../../Libs/SelfMade \
     ../../Libs/SelfMade/Strings \
     ../Lib
 
