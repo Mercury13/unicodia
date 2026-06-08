@@ -241,6 +241,7 @@ void xs::Style::writeAttrIf(std::string& dest)
 constexpr std::string_view K_FILL = "fill";
 constexpr std::string_view K_FILL_RULE = "fill-rule";
 constexpr std::string_view K_STOP_COLOR = "stop-color";
+constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
 
 
 void xs::Style::traverse(
@@ -252,6 +253,7 @@ void xs::Style::traverse(
 
     bool isStop = allowed.have(AllowAttr::STOP);
     x.onColor(K_STOP_COLOR, stopColor, isStop);
+    x.onOpacity(K_STOP_OPACITY, stopOpacity, isStop);
 }
 
 
@@ -274,6 +276,7 @@ bool xs::Style::find(
         return false;
     case 's':
         CHECK(K_STOP_COLOR, onColor, stopColor, AllowAttr::STOP);
+        CHECK(K_STOP_OPACITY, onOpacity, stopOpacity, AllowAttr::STOP);
         return false;
     default:
         return false;
