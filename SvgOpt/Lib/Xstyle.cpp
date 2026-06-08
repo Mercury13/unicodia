@@ -108,49 +108,6 @@ void xs::Fill::parse(std::string_view x)
 }
 
 
-bool xs::Style::hasSmth() const noexcept
-{
-    return fill.hasSmth()
-    || stopColor.hasSmth()
-        || !attrs.empty();
-}
-
-
-void xs::Style::encodeAttr(std::string& dest) const
-{
-    auto oldLength = dest.length();
-    auto writeSemicolon = [&]() {
-        if (dest.length() != oldLength)
-            dest += ';';
-        oldLength = dest.length();
-    };
-    // Known, semicolons in between
-    if (fill.style) {
-        dest += "fill:";
-        fill.style.encodeAttr(dest);
-    }
-    if (fillRule.style) {
-        writeSemicolon();
-        dest += "fill-rule:";
-        fillRule.style.encodeAttr(dest);
-    }
-    if (stopColor) {
-        writeSemicolon();
-        dest += "stop-color:";
-        stopColor.style.encodeAttr(dest);
-    }
-    // Misc
-    for (auto& q : attrs) {
-        if (!q.key.empty()) {
-            writeSemicolon();
-            xsin::encodeAttr(dest, q.key);
-            dest += ':';
-            xsin::encodeAttr(dest, q.value);
-        }
-    }
-}
-
-
 ///// MaybeFillRule ////////////////////////////////////////////////////////////
 
 
@@ -202,15 +159,14 @@ void xs::MaybeFillRule::parse(std::string_view x)
 ///// Style ////////////////////////////////////////////////////////////////////
 
 
-void xs::Style::writeAttrIf(std::string& dest) const
+void xs::Style::writeAttrIf(std::string& dest)
 {
-    if (!hasSmth())
+    if (!hasStyle())
         return;
     dest += R"( style=")";
     encodeAttr(dest);
     dest += '"';
 }
-
 
 constexpr std::string_view K_FILL = "fill";
 constexpr std::string_view K_FILL_RULE = "fill-rule";
@@ -255,6 +211,13 @@ bool xs::Style::find(
 #undef CHECK
 }
 
+bool xs::Style::trySpecificAttr(std::string_view key, std::string_view value)
+{
+    return findT(key, NO_FLAGS,
+        [value](std::string_view, auto obj, bool) {
+            obj.attr.parse(value);
+        });
+}
 
 void xs::Style::clear()
 {
@@ -272,26 +235,12 @@ void xs::Style::add(std::string_view key, std::string_view value)
         return;
     if ((value = str::trimSv(value)).empty())
         return;
-    switch (key[0]) {
-    case 'f':
-        if (key == "fill"sv) {
-            fill.style.parse(value);
-            return;
-        }
-        if (key == "fill-rule"sv) {
-            fillRule.style.parse(value);
-            return;
-        }
-        break;
-    case 's':
-        if (key == "stop-color"sv) {
-            stopColor.style.parse(value);
-            return;
-        }
-        break;
-    default:;
-    }
-    attrs.emplace_back(std::string(key), std::string(value));
+    auto wasFound = findT(key, NO_FLAGS,
+        [value](std::string_view, auto& obj, bool) {
+            obj.style.parse(value);
+        });
+    if (!wasFound)
+        attrs.emplace_back(std::string(key), std::string(value));
 }
 
 
@@ -354,6 +303,60 @@ void xs::Style::parse(std::string_view x)
         }
     }
     process(x.end());
+}
+
+bool xs::Style::hasSmth() noexcept
+{
+    if (!attrs.empty())
+        return true;
+    bool r = false;
+    traverseT(NO_FLAGS,
+        [&r](std::string_view, auto& obj, bool) {
+            r |= obj.hasSmth();
+        });
+    return r;
+}
+
+
+bool xs::Style::hasStyle() noexcept
+{
+    if (!attrs.empty())
+        return true;
+    bool r = false;
+    traverseT(NO_FLAGS,
+        [&r](std::string_view, auto& obj, bool) {
+            r |= obj.style.hasSmth();
+        });
+    return r;
+}
+
+
+void xs::Style::encodeAttr(std::string& dest)
+{
+    auto oldLength = dest.length();
+    auto writeSemicolon = [&]() {
+        if (dest.length() != oldLength)
+            dest += ';';
+        oldLength = dest.length();
+    };
+    traverseT(NO_FLAGS,
+        [&](std::string_view key, auto& obj, bool) {
+            if (obj.style.hasSmth()) {
+                writeSemicolon();
+                dest += key;
+                dest += ':';
+                obj.style.encodeAttr(dest);
+            }
+        });
+    // Misc
+    for (auto& q : attrs) {
+        if (!q.key.empty()) {
+            writeSemicolon();
+            xsin::encodeAttr(dest, q.key);
+            dest += ':';
+            xsin::encodeAttr(dest, q.value);
+        }
+    }
 }
 
 ///// xsin /////////////////////////////////////////////////////////////////////

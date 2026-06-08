@@ -117,16 +117,11 @@ void xs::Node::recurseStyleToAttrIfPossible()
 
 bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
 {
+    if (key.empty())
+        return false;
+    if (style.trySpecificAttr(key, value))
+        return true;
     switch (key[0]) {
-    case 'f':
-        if (key == "fill"sv) {
-            style.fill.attr.parse(value);
-            return true;
-        } else if (key == "fill-rule"sv) {
-            style.fill.attr.parse(value);
-            return true;
-        }
-        break;
     case 'i':
         if (key == "id"sv) {
             sa.id = value;
@@ -138,6 +133,7 @@ bool xs::Node::trySpecificAttr(std::string_view key, std::string_view value)
             return true;
         } break;
     case 't':
+        /// @todo [urgent] is transform stylable?
         if (key == "transform") {
             sa.transform = value;
             return true;

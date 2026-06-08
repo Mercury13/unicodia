@@ -162,11 +162,11 @@ namespace xs {
         StyleObj<MaybeColor> stopColor;
         std::vector<Attr> attrs;
 
-        bool hasSmth() const noexcept;
-        operator bool() const noexcept { return hasSmth(); }
-        void encodeAttr(std::string& dest) const;
+        bool hasSmth() noexcept;
+        bool hasStyle() noexcept;
+        void encodeAttr(std::string& dest);
         /// The key is fixed: style
-        void writeAttrIf(std::string& dest) const;
+        void writeAttrIf(std::string& dest);
         void traverse(Flags<AllowAttr> allowed, const MultiTypeCallback& x);
         /// @return [+] was called
         bool find(std::string_view key, Flags<AllowAttr> allowed,
@@ -174,6 +174,7 @@ namespace xs {
         void clear();
         void add(std::string_view key, std::string_view value);
         void parse(std::string_view x);
+        bool trySpecificAttr(std::string_view key, std::string_view value);
 
         template <class T>
         void traverseT(Flags<AllowAttr> allowed, const T& cb)
