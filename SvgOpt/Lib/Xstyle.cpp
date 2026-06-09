@@ -9,6 +9,7 @@ using namespace std::string_view_literals;
 
 ///// Fill /////////////////////////////////////////////////////////////////////
 
+
 void xs::Fill::encodeAttr(std::string& dest) const
 {
     switch (index()) {
@@ -57,42 +58,28 @@ void xs::Fill::parse(std::string_view x)
 }
 
 
-///// MaybeFillRule ////////////////////////////////////////////////////////////
+///// FillRuleWrap /////////////////////////////////////////////////////////////
 
+constexpr std::string_view V_EVENODD = "evenodd";
+constexpr std::string_view V_NONZERO = "nonzero";
 
-void xs::MaybeFillRule::encodeAttr(std::string& dest) const
+void xs::FillRuleWrap::encodeAttr(std::string& dest) const
 {
-    switch (index()) {
-    case I_INHERIT:
-    default:
-        break;
-    case I_FILLRULE:
-        if (auto* q = std::get_if<FillRule>(this)) {
-            if (*q == FillRule::EVENODD) {
-                dest += "evenodd";
-            } else {
-                dest += "nonzero";
-            }
-        }
-        break;
-    case I_SPECIAL:
-        if (auto* q = std::get_if<Special>(this)) {
-            xsin::encodeAttr(dest, q->text);
-        }
-        break;
+    if (v == FillRule::EVENODD) {
+        dest += V_EVENODD;
+    } else {
+        dest += V_NONZERO;
     }
 }
 
-void xs::MaybeFillRule::parse(std::string_view x)
+std::optional<xs::FillRuleWrap> xs::FillRuleWrap::parse(std::string_view x) noexcept
 {
-    x = str::trimSv(x);
-    if (x.empty()) {
-        *this = Inherit{};
-    } else if (lat::areCaseEqual(x, "evenodd"sv)) {
-        *this = FillRule::EVENODD;
-    } else if (lat::areCaseEqual(x, "nonzero"sv)) {
-        *this = FillRule::NONZERO;
+    if (lat::areCaseEqual(x, V_EVENODD)) {
+        return FillRule::EVENODD;
+    } else if (lat::areCaseEqual(x, V_NONZERO)) {
+        return FillRule::NONZERO;
     }
+    return std::nullopt;
 }
 
 

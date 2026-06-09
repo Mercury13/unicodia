@@ -118,25 +118,16 @@ namespace xs {
     };
 
     enum class FillRule : unsigned char { NONZERO, EVENODD };
-    using MaybeFillRuleFather = std::variant<Inherit, FillRule, Special>;
-    class MaybeFillRule : public MaybeFillRuleFather {
-    public:
-        static constexpr int I_INHERIT = 0;
-        static constexpr int I_FILLRULE = 1;
-        static constexpr int I_SPECIAL = 2;
-        static constexpr int I_N = 3;
-        static_assert(I_N == std::variant_size_v<MaybeFillRuleFather>);
+    struct FillRuleWrap {
+        FillRule v = FillRule::NONZERO;
 
-        bool operator == (const MaybeFillRule&) const noexcept = default;
-        using MaybeFillRuleFather::MaybeFillRuleFather;
-        using MaybeFillRuleFather::operator =;
+        constexpr FillRuleWrap() noexcept = default;
+        constexpr FillRuleWrap(FillRule x) noexcept : v(x) {}
 
-        void clear() { *this = Inherit{}; }
-        void encodeAttr(std::string& text) const;
-        void parse(std::string_view x);
-        bool hasSmth() const noexcept { return (index() != I_INHERIT); }
-        explicit operator bool() const noexcept { return hasSmth(); }
+        void encodeAttr(std::string& dest) const;
+        static std::optional<FillRuleWrap> parse(std::string_view x) noexcept;
     };
+    using MaybeFillRule = TripleMaybe<FillRuleWrap>;
 
     // Three digits are always enough!
     constexpr int OPACITY_UNIT = 1000;
