@@ -336,6 +336,8 @@ namespace {
         case 's':
             if (name == "stop"sv) {
                 return std::make_unique<xs::StopNode>();
+            } else if (name == "style"sv) {
+                throw std::logic_error("CSS unsupported");
             } else if (name == "symbol"sv) {
                 doesDraw = xs::DoesDraw::NO;
             }

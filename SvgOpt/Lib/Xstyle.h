@@ -24,6 +24,13 @@ namespace xsin {
 
 namespace xs {
 
+#define DEFINE_DEFAULT_5(T) \
+T() = default;   \
+    T(const T&) = default;  \
+    T(T&&) = default;  \
+    T& operator = (const T&) = default;  \
+    T& operator = (T&&) = default;
+
     enum class Channel : unsigned char {
         BOTH = 0, ONE = 1, TWO = 2, GENERAL = BOTH };
     enum class NodeChannel : unsigned char {
@@ -37,9 +44,20 @@ namespace xs {
         Channel channel = Channel::BOTH;
     };
 
+    enum class CharType : unsigned char { BAN, NEXT, START };
+
     struct IdLink {
-        std::string wantedId;
+        std::string refId;
+
         bool operator == (const IdLink&) const noexcept = default;
+        DEFINE_DEFAULT_5(IdLink)
+        template <class T> explicit IdLink(T&& x)
+            : refId(std::forward<T>(x)) {}
+        static CharType charType(unsigned char x) noexcept;
+        static CharType charType(char x) noexcept { return charType(static_cast<unsigned char>(x)); }
+        static bool isId(std::string_view x) noexcept;
+        static std::optional<IdLink> parse(std::string_view x);
+        void encodeAttr(std::string& dest) const;
     };
     struct Inherit {
         bool operator == (const Inherit&) const noexcept { return true; }
@@ -49,8 +67,8 @@ namespace xs {
     };
     struct Special {
         std::string text;
-        Special() = default;
-        template <class T> Special(T&& x) : text(std::forward<T>(x)) {}
+        DEFINE_DEFAULT_5(Special)
+        template <class T> explicit Special(T&& x) : text(std::forward<T>(x)) {}
         bool operator == (const Special&) const noexcept = default;
         void encodeAttr(std::string& dest) const
             { xsin::encodeAttr(dest, text); }
@@ -79,7 +97,8 @@ namespace xs {
         bool operator == (const TripleMaybe&) const noexcept = default;
         // Inherited ctor and op= (e.g. for *this = Inherit{};)
         using Super::Super;
-        using Super::operator =;
+
+        DEFINE_DEFAULT_5(TripleMaybe)
 
         // Functions borrowed from templated father
         using Super::index;
@@ -109,6 +128,7 @@ namespace xs {
         bool operator == (const Fill&) const noexcept = default;
         using FillFather::FillFather;
         using FillFather::operator =;
+        DEFINE_DEFAULT_5(Fill)
 
         void clear() { *this = Inherit{}; }
         void encodeAttr(std::string& dest) const;
@@ -171,6 +191,8 @@ namespace xs {
         explicit operator bool() const noexcept { return hasSmth(); }
     };
 
+    using MaybeLink = TripleMaybe<IdLink>;
+
     template <class T>
     concept Stylish = requires(
             T x, T y, std::string s, std::string_view sv) {
@@ -204,6 +226,8 @@ namespace xs {
                 StyleObj<Fill>& x, bool mayHaveAttr) const = 0;
         virtual void onFillRule(std::string_view key,
                 StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const = 0;
+        virtual void onLink(std::string_view key,
+                StyleObj<MaybeLink>& x, bool mayHaveAttr) const = 0;
         virtual void onOpacity(std::string_view key,
                 StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const = 0;
         virtual ~MultiTypeCallback() = default;
@@ -222,6 +246,9 @@ namespace xs {
         void onFillRule(std::string_view key,
                 StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const override
             { u(key, x, mayHaveAttr); }
+        void onLink(std::string_view key,
+                StyleObj<MaybeLink>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
         void onOpacity(std::string_view key,
                 StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const override
             { u(key, x, mayHaveAttr); }
@@ -232,6 +259,7 @@ namespace xs {
     struct Style {
         StyleObj<Fill> fill;
         StyleObj<MaybeFillRule> fillRule;
+        StyleObj<MaybeLink> clipPath;
 
         // Stop-related
         StyleObj<MaybeColor> stopColor;

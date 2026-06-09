@@ -7,6 +7,94 @@
 using namespace std::string_view_literals;
 
 
+///// IdLink ///////////////////////////////////////////////////////////////////
+
+
+static_assert('0' == 48, "Non-ASCII machine");
+static_assert('A' == 65, "Non-ASCII machine");
+static_assert('a' == 97, "Non-ASCII machine");
+
+namespace {
+
+#define TWO_OF(x) (x), (x)
+#define FOUR_OF(x) TWO_OF(x), TWO_OF(x)
+#define EIGHT_OF(x) FOUR_OF(x), FOUR_OF(x)
+#define TEN_OF(x) EIGHT_OF(x), TWO_OF(x)
+#define ROW_OF(x) EIGHT_OF(x), EIGHT_OF(x)
+#define ALPH_OF(x) ROW_OF(x), TEN_OF(x)  // 16+10
+#define ba xs::CharType::BAN
+#define ST xs::CharType::START
+#define NX xs::CharType::NEXT
+
+    constinit const xs::CharType charTypes[] {
+        ROW_OF(ba), ROW_OF(ba), // 32 control
+        ba,ba,ba,ba,  ba,ba,ba,ba,  ba,ba,ba,ba, ba,NX,NX,ba,  // only 2D -, 2E .
+        TEN_OF(NX),                       NX,ba, ba,ba,ba,ba,  // digs and 3A :
+        ba, ALPH_OF(ST),                     ba, ba,ba,ba,ST,  // letters and 5F _
+        ba, ALPH_OF(ST),                     ba, ba,ba,ba,ba,  // letters only
+        ROW_OF(ST), ROW_OF(ST), ROW_OF(ST), ROW_OF(ST),  // last 128
+        ROW_OF(ST), ROW_OF(ST), ROW_OF(ST), ROW_OF(ST),
+    };
+    static_assert(std::size(charTypes) == 256);
+
+#undef ba
+#undef ST
+#undef NX
+#undef TWO_OF
+#undef FOUR_OF
+#undef EIGHT_OF
+#undef TEN_OF
+#undef ROW_OF
+#undef ALPH_OF
+
+}   // anon namespace
+
+inline xs::CharType xs::IdLink::charType(unsigned char x) noexcept
+{
+    return charTypes[x];
+}
+
+
+bool xs::IdLink::isId(std::string_view x) noexcept
+{
+    if (x.empty())
+        return false;
+    if (charType(x[0]) != CharType::START)
+        return false;
+    x = x.substr(1);
+    for (auto c : x)
+        if (charType(c) == CharType::BAN)
+            return false;
+    return true;
+}
+
+
+std::optional<xs::IdLink> xs::IdLink::parse(std::string_view x)
+{
+    if (!x.starts_with("url"sv) || !x.ends_with(')'))
+        return std::nullopt;
+    x = str::trimSv(x.substr(3, x.length() - 4));
+    if (!x.starts_with('('))
+        return std::nullopt;
+    x = str::trimLeftSv(x.substr(1));
+    if (!x.starts_with('#'))
+        return std::nullopt;
+    x = str::trimLeftSv(x.substr(1));
+    if (!isId(x))
+        return std::nullopt;
+    return xs::IdLink(x);
+}
+
+
+void xs::IdLink::encodeAttr(std::string& dest) const
+{
+    dest += "url(#"sv;
+    xsin::encodeAttr(dest, refId);
+    dest += ')';
+}
+
+
+
 ///// Fill /////////////////////////////////////////////////////////////////////
 
 
@@ -25,9 +113,7 @@ void xs::Fill::encodeAttr(std::string& dest) const
         break;
     case I_IDLINK:
         if (auto* q = std::get_if<IdLink>(this)) {
-            dest += "url(#";
-            dest += q->wantedId;
-            dest += ')';
+            q->encodeAttr(dest);
         }
         break;
     case I_SPECIAL:
@@ -53,7 +139,10 @@ void xs::Fill::parse(std::string_view x)
         *this = *q;
         return;
     }
-    /// @todo [urgent] URL is still Special now
+    if (auto q = IdLink::parse(x)) {
+        *this = std::move(*q);
+        return;
+    }
     *this = Special(x);
 }
 
@@ -157,6 +246,7 @@ void xs::Style::writeAttrIf(std::string& dest)
 
 constexpr std::string_view K_FILL = "fill";
 constexpr std::string_view K_FILL_RULE = "fill-rule";
+constexpr std::string_view K_CLIP_PATH = "clip-path";
 constexpr std::string_view K_STOP_COLOR = "stop-color";
 constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
 
@@ -167,6 +257,7 @@ void xs::Style::traverse(
     bool canDraw = allowed.have(AllowAttr::DRAW);
     x.onFill(K_FILL, fill, canDraw);
     x.onFillRule(K_FILL_RULE, fillRule, canDraw);
+    x.onLink(K_CLIP_PATH, clipPath, canDraw);
 
     bool isStop = allowed.have(AllowAttr::STOP);
     x.onColor(K_STOP_COLOR, stopColor, isStop);
