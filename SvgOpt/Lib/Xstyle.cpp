@@ -127,7 +127,7 @@ void xs::Fill::encodeAttr(std::string& dest) const
 void xs::Fill::parse(std::string_view x)
 {
     x = str::trimSv(x);
-    if (x.empty()) {
+    if (x.empty() || lat::areCaseEqual(x, xsin::V_INHERIT)) {
         *this = Inherit{};
         return;
     }
@@ -212,7 +212,7 @@ void xs::Opacity::encodeAttr(std::string& dest) const
     dest.append(std::begin(buf), convres.ptr);
 }
 
-void xs::MaybeOpacity::encodeAttr(std::string& dest) const
+void xs::MaybeTotalOpacity::encodeAttr(std::string& dest) const
 {
     std::visit(
         [&dest](const auto& v) {
@@ -221,7 +221,7 @@ void xs::MaybeOpacity::encodeAttr(std::string& dest) const
         *this);
 }
 
-int xs::MaybeOpacity::parse(std::string_view x)
+int xs::MaybeTotalOpacity::parse(std::string_view x)
 {
     if (auto q = Opacity::parse(x)) {
         *this = *q;
@@ -244,9 +244,10 @@ void xs::Style::writeAttrIf(std::string& dest)
     dest += '"';
 }
 
-constexpr std::string_view K_FILL = "fill";
-constexpr std::string_view K_FILL_RULE = "fill-rule";
 constexpr std::string_view K_CLIP_PATH = "clip-path";
+constexpr std::string_view K_FILL = "fill";
+constexpr std::string_view K_FILL_OPACITY = "fill-opacity";
+constexpr std::string_view K_FILL_RULE = "fill-rule";
 constexpr std::string_view K_STOP_COLOR = "stop-color";
 constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
 
@@ -254,14 +255,18 @@ constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
 void xs::Style::traverse(
         Flags<AllowAttr> allowed, const MultiTypeCallback& x)
 {
-    bool canDraw = allowed.have(AllowAttr::DRAW);
-    x.onFill(K_FILL, fill, canDraw);
-    x.onFillRule(K_FILL_RULE, fillRule, canDraw);
+    bool canFill = allowed.have(AllowAttr::FILL);
+    bool canStroke = allowed.have(AllowAttr::STROKE);
+    x.onFill(K_FILL, fill, canFill);
+    x.onPartOpacity(K_FILL_OPACITY, fillOpacity, canFill);
+    x.onFillRule(K_FILL_RULE, fillRule, canFill);
+
+    bool canDraw = canFill | canStroke;
     x.onLink(K_CLIP_PATH, clipPath, canDraw);
 
     bool isStop = allowed.have(AllowAttr::STOP);
     x.onColor(K_STOP_COLOR, stopColor, isStop);
-    x.onOpacity(K_STOP_OPACITY, stopOpacity, isStop);
+    x.onPartOpacity(K_STOP_OPACITY, stopOpacity, isStop);
 }
 
 
@@ -271,20 +276,24 @@ bool xs::Style::find(
 {
 #define CHECK(kkey, method, object, flag) \
     if (key == kkey) {  \
-        x.method(kkey, object, allowed.have(flag)); \
+        x.method(kkey, object, allowed.haveAny(flag)); \
         return true; \
     }
 
     if (key.empty())
         return false;
     switch (key[0]) {
+    case 'c':
+        CHECK(K_CLIP_PATH, onLink, clipPath, AllowAttr::ANYDRAW)
+        return false;
     case 'f':
-        CHECK(K_FILL, onFill, fill, AllowAttr::DRAW);
-        CHECK(K_FILL_RULE, onFillRule, fillRule, AllowAttr::DRAW);
+        CHECK(K_FILL, onFill, fill, AllowAttr::FILL);
+        CHECK(K_FILL_OPACITY, onPartOpacity, fillOpacity, AllowAttr::FILL);
+        CHECK(K_FILL_RULE, onFillRule, fillRule, AllowAttr::FILL);
         return false;
     case 's':
         CHECK(K_STOP_COLOR, onColor, stopColor, AllowAttr::STOP);
-        CHECK(K_STOP_OPACITY, onOpacity, stopOpacity, AllowAttr::STOP);
+        CHECK(K_STOP_OPACITY, onPartOpacity, stopOpacity, AllowAttr::STOP);
         return false;
     default:
         return false;

@@ -9,6 +9,7 @@
 #include "Xcolor.h"
 
 #include "u_TypedFlags.h"
+#include "u_Strings.h"
 
 namespace xsin {
 
@@ -171,18 +172,20 @@ T() = default;   \
     };
     constexpr Opacity OPAQUE {};
 
+    using MaybePartOpacity = TripleMaybe<Opacity>;
+
     /// The default opacity is ONE!! → so no Inherit, no TripleMaybe
-    using MaybeOpacityFather = std::variant<Opacity, Special>;
-    class MaybeOpacity : public MaybeOpacityFather {
+    using MaybeTotalOpacityFather = std::variant<Opacity, Special>;
+    class MaybeTotalOpacity : public MaybeTotalOpacityFather {
     public:
         static constexpr int I_OPACITY = 0;
         static constexpr int I_SPECIAL = 1;
         static constexpr int I_N = 2;
-        static_assert(I_N == std::variant_size_v<MaybeOpacityFather>);
+        static_assert(I_N == std::variant_size_v<MaybeTotalOpacityFather>);
 
-        bool operator == (const MaybeOpacity&) const noexcept = default;
-        using MaybeOpacityFather::MaybeOpacityFather;
-        using MaybeOpacityFather::operator =;
+        bool operator == (const MaybeTotalOpacity&) const noexcept = default;
+        using MaybeTotalOpacityFather::MaybeTotalOpacityFather;
+        using MaybeTotalOpacityFather::operator =;
 
         void clear() { *this = OPAQUE; }
         void encodeAttr(std::string& dest) const;
@@ -203,8 +206,10 @@ T() = default;   \
     };
 
     enum class AllowAttr : unsigned int {
-        DRAW = 1<<0,    // draw-related: fill, fillRule
-        STOP = 1<<1,    // stop-related: stopColor
+        FILL   = 1<<0,  // fill-related: fill, fillRule
+        STROKE = 1<<1,  // stroke-related: stroke
+        ANYDRAW = FILL | STROKE,
+        STOP   = 1<<1,  // stop-related: stopColor
     };
     DEFINE_ENUM_OPS(AllowAttr)
 
@@ -228,8 +233,10 @@ T() = default;   \
                 StyleObj<MaybeFillRule>& x, bool mayHaveAttr) const = 0;
         virtual void onLink(std::string_view key,
                 StyleObj<MaybeLink>& x, bool mayHaveAttr) const = 0;
-        virtual void onOpacity(std::string_view key,
-                StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const = 0;
+        virtual void onPartOpacity(std::string_view key,
+                StyleObj<MaybePartOpacity>& x, bool mayHaveAttr) const = 0;
+        virtual void onTotalOpacity(std::string_view key,
+            StyleObj<MaybePartOpacity>& x, bool mayHaveAttr) const = 0;
         virtual ~MultiTypeCallback() = default;
     };
 
@@ -249,8 +256,11 @@ T() = default;   \
         void onLink(std::string_view key,
                 StyleObj<MaybeLink>& x, bool mayHaveAttr) const override
             { u(key, x, mayHaveAttr); }
-        void onOpacity(std::string_view key,
-                StyleObj<MaybeOpacity>& x, bool mayHaveAttr) const override
+        void onPartOpacity(std::string_view key,
+                StyleObj<MaybePartOpacity>& x, bool mayHaveAttr) const override
+            { u(key, x, mayHaveAttr); }
+        void onTotalOpacity(std::string_view key,
+                StyleObj<MaybePartOpacity>& x, bool mayHaveAttr) const override
             { u(key, x, mayHaveAttr); }
     private:
         const U& u;
@@ -258,12 +268,13 @@ T() = default;   \
 
     struct Style {
         StyleObj<Fill> fill;
+        StyleObj<MaybePartOpacity> fillOpacity;
         StyleObj<MaybeFillRule> fillRule;
         StyleObj<MaybeLink> clipPath;
 
         // Stop-related
         StyleObj<MaybeColor> stopColor;
-        StyleObj<MaybeOpacity> stopOpacity;
+        StyleObj<MaybePartOpacity> stopOpacity;
 
         std::vector<Attr> attrs;
 
@@ -307,6 +318,8 @@ namespace xsin {
     template <xs::Stylish T>
     void writeAttrIf(std::string& dest, std::string_view key, T& value);
 
+    constexpr std::string_view V_INHERIT = "inherit";
+
 }   // namespace xsin
 
 
@@ -330,7 +343,7 @@ void xs::TripleMaybe<Payload>::encodeAttr(std::string& dest) const
 template <xs::SimpleStyleType Payload>
 int xs::TripleMaybe<Payload>::parse(std::string_view x)
 {
-    if (x.empty()) {
+    if (x.empty() || lat::areCaseEqual(x, xsin::V_INHERIT)) {
         *this = Inherit();
         return I_INHERIT;
     }

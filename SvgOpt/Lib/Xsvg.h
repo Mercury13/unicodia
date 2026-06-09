@@ -152,7 +152,7 @@ namespace xs {
             { return DoesDraw::MAYBE; }
         void basicOptimizations(const OptSets& sets) override;
         Flags<AllowAttr> allowAttr() const noexcept override
-            { return AllowAttr::DRAW; }
+            { return AllowAttr::ANYDRAW; }
     };
 
     class StopNode : public Node {
@@ -179,7 +179,7 @@ namespace xs {
         std::string_view name() const noexcept override { return myName; }
         DoesDraw doesDraw() const noexcept override { return myDoesDraw; }
         Flags<AllowAttr> allowAttr() const noexcept override
-            { return AllowAttr::DRAW; }
+            { return AllowAttr::ANYDRAW; }
     };
 
     struct SaveSets {
