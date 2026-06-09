@@ -129,7 +129,8 @@ namespace xs {
     };
     using MaybeFillRule = TripleMaybe<FillRuleWrap>;
 
-    // Three digits are always enough!
+    /// Three digits are always enough,
+    ///   as most renderers work in 8 bits
     constexpr int OPACITY_UNIT = 1000;
     constexpr int OPACITY_DIGITS = 3;
     enum class OpacityUnit : unsigned short {

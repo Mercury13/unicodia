@@ -50,3 +50,4 @@ TEST (Xopacity, CtorBig)
     xs::Opacity op(1001, xs::OpacityUnit::PERMILLE);
     EXPECT_EQ(1000, op.raw());
 }
+
