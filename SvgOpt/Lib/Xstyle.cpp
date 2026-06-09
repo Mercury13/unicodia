@@ -86,6 +86,22 @@ std::optional<xs::FillRuleWrap> xs::FillRuleWrap::parse(std::string_view x) noex
 ///// MaybeOpacity /////////////////////////////////////////////////////////////
 
 
+std::optional<xs::Opacity> xs::Opacity::parse(std::string_view x) noexcept
+{
+    auto s = x;
+    auto unit = OpacityUnit::UNIT;
+    if (s.ends_with('%')) {
+        unit = OpacityUnit::PERCENT;
+        s = str::trimRightSv(s.substr(0, s.length() - 1));
+    }
+    double val;
+    auto r = std::from_chars(x.begin(), x.end(), val);
+    if (r.ec == std::errc{}) {
+        return Opacity(val, unit);
+    }
+    return std::nullopt;
+}
+
 void xs::Opacity::encodeAttr(std::string& dest) const
 {
     if (permille <= 0) {
@@ -107,7 +123,6 @@ void xs::Opacity::encodeAttr(std::string& dest) const
     dest.append(std::begin(buf), convres.ptr);
 }
 
-
 void xs::MaybeOpacity::encodeAttr(std::string& dest) const
 {
     std::visit(
@@ -117,21 +132,14 @@ void xs::MaybeOpacity::encodeAttr(std::string& dest) const
         *this);
 }
 
-void xs::MaybeOpacity::parse(std::string_view x)
+int xs::MaybeOpacity::parse(std::string_view x)
 {
-    auto s = x;
-    auto unit = OpacityUnit::UNIT;
-    if (s.ends_with('%')) {
-        unit = OpacityUnit::PERCENT;
-        s = str::trimRightSv(s.substr(0, s.length() - 1));
-    }
-    double val;
-    auto r = std::from_chars(x.begin(), x.end(), val);
-    if (r.ec == std::errc{}) {
-        *this = Opacity(val, unit);
-        return;
+    if (auto q = Opacity::parse(x)) {
+        *this = *q;
+        return I_OPACITY;
     }
     *this = Special(x);
+    return I_SPECIAL;
 }
 
 

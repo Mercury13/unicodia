@@ -145,6 +145,7 @@ namespace xs {
         bool operator == (const Opacity&) const noexcept = default;
         void encodeAttr(std::string& dest) const;
         int raw() const noexcept { return permille; }
+        static std::optional<Opacity> parse(std::string_view x) noexcept;
     private:
         int permille = OPACITY_UNIT;
     };
@@ -165,7 +166,7 @@ namespace xs {
 
         void clear() { *this = OPAQUE; }
         void encodeAttr(std::string& dest) const;
-        void parse(std::string_view x);
+        int parse(std::string_view x);
         bool hasSmth() const noexcept { return (*this != OPAQUE); }
         explicit operator bool() const noexcept { return hasSmth(); }
     };

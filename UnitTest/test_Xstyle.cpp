@@ -51,3 +51,16 @@ TEST (Xopacity, CtorBig)
     EXPECT_EQ(1000, op.raw());
 }
 
+TEST (Xopacity, ParseSimple)
+{
+    auto q = xs::Opacity::parse(".3456");
+    EXPECT_TRUE(q);
+    EXPECT_EQ(346, q->raw());
+}
+
+TEST (Xopacity, ParsePc)
+{
+    auto q = xs::Opacity::parse("34.56    %");
+    EXPECT_TRUE(q);
+    EXPECT_EQ(346, q->raw());
+}
