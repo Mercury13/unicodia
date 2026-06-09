@@ -10,13 +10,15 @@
 
 #include "u_TypedFlags.h"
 
-namespace xsi {
+namespace xsin {
 
     constexpr inline int toPermille(double x, int unit) noexcept
     {
         int r = std::round(x * unit);
         return std::clamp(r, 0, 1000);
     }
+
+    void encodeAttr(std::string& dest, std::string_view value);
 
 }   // namespace xsi
 
@@ -47,28 +49,51 @@ namespace xs {
     };
     struct Special {
         std::string text;
+        Special() = default;
+        template <class T> Special(T&& x) : text(std::forward<T>(x)) {}
         bool operator == (const Special&) const noexcept = default;
+        void encodeAttr(std::string& dest) const
+            { xsin::encodeAttr(dest, text); }
     };
 
-    using MaybeColorFather = std::variant<Inherit, Color, Special>;
-    class MaybeColor : public MaybeColorFather {
+    template <class T>
+    concept SimpleStyleType = requires (
+        T x, std::optional<T> opt, std::string_view sv, std::string dest) {
+        opt = T::parse(sv);
+        x.encodeAttr(dest);
+    };
+
+    template <SimpleStyleType Payload>
+    using TripleMaybeFather = std::variant<Inherit, Payload, Special>;
+
+    template <SimpleStyleType Payload>
+    class TripleMaybe : public TripleMaybeFather<Payload> {
+        using Super = TripleMaybeFather<Payload>;
     public:
         static constexpr int I_INHERIT = 0;
-        static constexpr int I_COLOR = 1;
+        static constexpr int I_PAYLOAD = 1;
         static constexpr int I_SPECIAL = 2;
         static constexpr int I_N = 3;
-        static_assert(I_N == std::variant_size_v<MaybeColorFather>);
+        static_assert(I_N == std::variant_size_v<Super>);
 
-        bool operator == (const MaybeColor&) const noexcept = default;
-        using MaybeColorFather::MaybeColorFather;
-        using MaybeColorFather::operator =;
+        bool operator == (const TripleMaybe&) const noexcept = default;
+        // Inherited ctor and op= (e.g. for *this = Inherit{};)
+        using Super::Super;
+        using Super::operator =;
 
-        void clear() { *this = Inherit(); }
-        void encodeAttr(std::string& text) const;
-        void parse(std::string_view x);
+        // Functions borrowed from templated father
+        using Super::index;
+
+        void clear() { *this = Inherit{}; }
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
+
+        void encodeAttr(std::string& dest) const;
+        /// @return  index
+        int parse(std::string_view x);
     };
+
+    using MaybeColor = TripleMaybe<Color>;
 
     using FillFather = std::variant<Inherit, None, Color, IdLink, Special>;
     class Fill : public FillFather {
@@ -122,18 +147,18 @@ namespace xs {
     public:
         constexpr Opacity() noexcept = default;
         constexpr Opacity(double x) noexcept
-            : permille(xsi::toPermille(x, OPACITY_UNIT)) {}
+            : permille(xsin::toPermille(x, OPACITY_UNIT)) {}
         constexpr Opacity(double x, OpacityUnit unit) noexcept
-            : permille(xsi::toPermille(x, static_cast<int>(unit))) {}
+            : permille(xsin::toPermille(x, static_cast<int>(unit))) {}
         bool operator == (const Opacity&) const noexcept = default;
-        void encode(std::string& dest) const;
+        void encodeAttr(std::string& dest) const;
         int raw() const noexcept { return permille; }
     private:
         int permille = OPACITY_UNIT;
     };
     constexpr Opacity OPAQUE {};
 
-    /// The default opacity is ONE!! → so no Inherit
+    /// The default opacity is ONE!! → so no Inherit, no TripleMaybe
     using MaybeOpacityFather = std::variant<Opacity, Special>;
     class MaybeOpacity : public MaybeOpacityFather {
     public:
@@ -249,7 +274,6 @@ namespace xsin {
     // xs, inner
 
     void startAttr(std::string& dest, std::string_view key);
-    void encodeAttr(std::string& dest, std::string_view value);
     void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
     void writeAttr(std::string& dest, std::string_view key, std::string_view value);
 
@@ -257,18 +281,58 @@ namespace xsin {
     ///   to resolve overload reliably
     /// So no need to writeAttrT
     template <xs::Stylish T>
-    void writeAttr(std::string& dest, std::string_view key, T& value)
-    {
-        startAttr(dest, key);
-        value.encodeAttr(dest);
-        dest += '"';
-    }
+    void writeAttr(std::string& dest, std::string_view key, T& value);
 
     template <xs::Stylish T>
-    void writeAttrIf(std::string& dest, std::string_view key, T& value)
-    {
-        if (value)
-            writeAttr<T>(dest, key, value);
-    }
+    void writeAttrIf(std::string& dest, std::string_view key, T& value);
 
 }   // namespace xsin
+
+
+///// Template implementations /////////////////////////////////////////////////
+
+template <xs::SimpleStyleType Payload>
+void xs::TripleMaybe<Payload>::encodeAttr(std::string& dest) const
+{
+    std::visit(
+        [&dest](const auto& thing) {
+            using T = std::decay_t<decltype(thing)>;
+            if constexpr (std::is_same_v<T, Inherit>) {
+                // do nothing
+            } else {
+                thing.encodeAttr(dest);
+            }
+        },
+        *this);
+}
+
+template <xs::SimpleStyleType Payload>
+int xs::TripleMaybe<Payload>::parse(std::string_view x)
+{
+    if (x.empty()) {
+        *this = Inherit();
+        return I_INHERIT;
+    }
+    if (auto q = Payload::parse(x)) {
+        *this = std::move(*q);
+        return I_PAYLOAD;
+    }
+    *this = Special(x);
+    return I_SPECIAL;
+}
+
+template <xs::Stylish T>
+void xsin::writeAttr(std::string& dest, std::string_view key, T& value)
+{
+    startAttr(dest, key);
+    value.encodeAttr(dest);
+    dest += '"';
+}
+
+template <xs::Stylish T>
+void xsin::writeAttrIf(std::string& dest, std::string_view key, T& value)
+{
+    if (value)
+        writeAttr<T>(dest, key, value);
+}
+

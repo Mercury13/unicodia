@@ -6,40 +6,6 @@
 
 using namespace std::string_view_literals;
 
-///// MaybeColor ///////////////////////////////////////////////////////////////
-
-void xs::MaybeColor::encodeAttr(std::string& dest) const
-{
-    switch (index()) {
-    case I_INHERIT:
-    default:
-        break;
-    case I_COLOR:
-        if (auto* q = std::get_if<Color>(this))
-            q->encodeAttr(dest);
-        break;
-    case I_SPECIAL:
-        if (auto* q = std::get_if<Special>(this)) {
-            xsin::encodeAttr(dest, q->text);
-        }
-        break;
-    }
-}
-
-void xs::MaybeColor::parse(std::string_view x)
-{
-    x = str::trimSv(x);
-    if (x.empty()) {
-        *this = Inherit{};
-        return;
-    }
-    if (auto q = Color::parse(x)) {
-        *this = *q;
-        return;
-    }
-    *this = Special{ .text = std::string{x} };
-}
-
 
 ///// Fill /////////////////////////////////////////////////////////////////////
 
@@ -87,7 +53,7 @@ void xs::Fill::parse(std::string_view x)
         return;
     }
     /// @todo [urgent] URL is still Special now
-    *this = Special{ .text = std::string{x} };
+    *this = Special(x);
 }
 
 
@@ -133,7 +99,7 @@ void xs::MaybeFillRule::parse(std::string_view x)
 ///// MaybeOpacity /////////////////////////////////////////////////////////////
 
 
-void xs::Opacity::encode(std::string& dest) const
+void xs::Opacity::encodeAttr(std::string& dest) const
 {
     if (permille <= 0) {
         dest += '0';
@@ -157,17 +123,11 @@ void xs::Opacity::encode(std::string& dest) const
 
 void xs::MaybeOpacity::encodeAttr(std::string& dest) const
 {
-    switch (index()) {
-    case I_OPACITY:
-        if (auto* q = std::get_if<Opacity>(this))
-            q->encode(dest);
-        break;
-    case I_SPECIAL:
-        if (auto* q = std::get_if<Special>(this)) {
-            xsin::encodeAttr(dest, q->text);
-        }
-        break;
-    }
+    std::visit(
+        [&dest](const auto& v) {
+            v.encodeAttr(dest);
+        },
+        *this);
 }
 
 void xs::MaybeOpacity::parse(std::string_view x)
@@ -184,7 +144,7 @@ void xs::MaybeOpacity::parse(std::string_view x)
         *this = Opacity(val, unit);
         return;
     }
-    *this = Special{ .text = std::string{x} };
+    *this = Special(x);
 }
 
 
