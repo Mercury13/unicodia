@@ -255,6 +255,7 @@ namespace xsin {
 
     /// Probably distinction string_view vs Stylish is enough
     ///   to resolve overload reliably
+    /// So no need to writeAttrT
     template <xs::Stylish T>
     void writeAttr(std::string& dest, std::string_view key, T& value)
     {
