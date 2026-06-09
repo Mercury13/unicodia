@@ -65,7 +65,6 @@ namespace xs {
 
         void clear() { *this = Inherit(); }
         void encodeAttr(std::string& text) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
@@ -88,7 +87,6 @@ namespace xs {
 
         void clear() { *this = Inherit{}; }
         void encodeAttr(std::string& dest) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
@@ -110,7 +108,6 @@ namespace xs {
 
         void clear() { *this = Inherit{}; }
         void encodeAttr(std::string& text) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (index() != I_INHERIT); }
         explicit operator bool() const noexcept { return hasSmth(); }
@@ -151,7 +148,6 @@ namespace xs {
 
         void clear() { *this = OPAQUE; }
         void encodeAttr(std::string& dest) const;
-        void writeAttrIf(std::string& dest, std::string_view key) const;
         void parse(std::string_view x);
         bool hasSmth() const noexcept { return (*this != OPAQUE); }
         explicit operator bool() const noexcept { return hasSmth(); }
@@ -162,7 +158,6 @@ namespace xs {
             T x, T y, std::string s, std::string_view sv) {
         x.operator = (y);
         x.clear();
-        x.writeAttrIf(s, sv);
         static_cast<bool>(x);
         x.encodeAttr(s);
     };
@@ -257,5 +252,22 @@ namespace xsin {
     void encodeAttr(std::string& dest, std::string_view value);
     void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
     void writeAttr(std::string& dest, std::string_view key, std::string_view value);
+
+    /// Probably distinction string_view vs Stylish is enough
+    ///   to resolve overload reliably
+    template <xs::Stylish T>
+    void writeAttr(std::string& dest, std::string_view key, T& value)
+    {
+        startAttr(dest, key);
+        value.encodeAttr(dest);
+        dest += '"';
+    }
+
+    template <xs::Stylish T>
+    void writeAttrIf(std::string& dest, std::string_view key, T& value)
+    {
+        if (value)
+            writeAttr<T>(dest, key, value);
+    }
 
 }   // namespace xsin

@@ -26,16 +26,6 @@ void xs::MaybeColor::encodeAttr(std::string& dest) const
     }
 }
 
-void xs::MaybeColor::writeAttrIf(std::string& dest, std::string_view key) const
-{
-    if (!hasSmth())
-        return;
-    xsin::startAttr(dest, key);
-    encodeAttr(dest);
-    dest += '"';
-}
-
-
 void xs::MaybeColor::parse(std::string_view x)
 {
     x = str::trimSv(x);
@@ -79,15 +69,6 @@ void xs::Fill::encodeAttr(std::string& dest) const
         }
         break;
     }
-}
-
-void xs::Fill::writeAttrIf(std::string& dest, std::string_view key) const
-{
-    if (!hasSmth())
-        return;
-    xsin::startAttr(dest, key);
-    encodeAttr(dest);
-    dest += '"';
 }
 
 void xs::Fill::parse(std::string_view x)
@@ -134,15 +115,6 @@ void xs::MaybeFillRule::encodeAttr(std::string& dest) const
         }
         break;
     }
-}
-
-void xs::MaybeFillRule::writeAttrIf(std::string& dest, std::string_view key) const
-{
-    if (!hasSmth())
-        return;
-    xsin::startAttr(dest, key);
-    encodeAttr(dest);
-    dest += '"';
 }
 
 void xs::MaybeFillRule::parse(std::string_view x)
@@ -196,16 +168,6 @@ void xs::MaybeOpacity::encodeAttr(std::string& dest) const
         }
         break;
     }
-}
-
-void xs::MaybeOpacity::writeAttrIf(std::string& dest, std::string_view key) const
-{
-    /// @todo [repeat] move to xsin??
-    if (!hasSmth())
-        return;
-    xsin::startAttr(dest, key);
-    encodeAttr(dest);
-    dest += '"';
 }
 
 void xs::MaybeOpacity::parse(std::string_view x)

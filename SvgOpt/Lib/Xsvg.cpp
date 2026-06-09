@@ -184,7 +184,7 @@ void xs::Node::writeRepeatingAttrs(std::string& dest)
 {
     traverseT([&dest]
         (std::string_view key, auto& obj, bool) {
-            obj.attr.writeAttrIf(dest, key);
+            xsin::writeAttrIf(dest, key, obj.attr);
         });
 }
 
