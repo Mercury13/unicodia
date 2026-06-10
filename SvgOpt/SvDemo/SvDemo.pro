@@ -16,8 +16,10 @@ HEADERS += \
     ../../Libs/PugiXml/pugixml.hpp \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../../Libs/SelfMade/u_TypedFlags.h \
+    ../Lib/Xbit.h \
     ../Lib/Xdic.h \
     ../Lib/Xcolor.h \
+    ../Lib/Xid.h \
     ../Lib/Xstyle.h \
     ../Lib/Xsvg.h
 

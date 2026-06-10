@@ -6,46 +6,40 @@
 
 static_assert(std::numeric_limits<unsigned char>::max() == 255, "Strange machine");
 
-// C = 1
-constexpr std::string_view K_CLIP_PATH = "clip-path";
-// D = 1
-constexpr std::string_view K_DESC = "desc";
-// F = 3
-constexpr std::string_view K_FILL = "fill";
-constexpr std::string_view K_FILL_OPACITY = "fill-opacity";
-constexpr std::string_view K_FILL_RULE = "fill-rule";
-// M = 1
-constexpr std::string_view K_METADATA = "metadata";
-// S = 1
-constexpr std::string_view K_STOP_COLOR = "stop-color";
-constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
-constexpr std::string_view K_STYLE = "style";
-// T = 1
-static constexpr std::string_view K_TITLE = "title";
+static_assert(xid::CLIP_PATH.index() == 0, "The 1st object");
+static_assert(xid::DESC     .index() == 1, "The 2nd object");
+static_assert( xid::STOP_COLOR.has(xs::IdBit::STOP));
+static_assert(!xid::STOP_COLOR.has(xs::IdBit::FILL));
 
-constinit xs::IdInfo xs::idInfo[] {
-    { .name = K_STYLE },
-    { .name = K_DESC },
-    { .name = K_METADATA },
-    { .name = K_TITLE },
-    { .name = K_FILL },
-    // 5
-    { .name = K_CLIP_PATH },
-    { .name = K_FILL_OPACITY },
-    { .name = K_FILL_RULE },
-    { .name = K_STOP_COLOR },
-    { .name = K_STOP_OPACITY },
-    // 10
-};
+namespace {
 
-static_assert(std::size(xs::idInfo) == xs::MAX_INDEX);
+    #define XACT(id, str, bit) { str, xid::id },
+    constexpr xs::IdInfo CE_ALL[] {
+        #include "Xid.h"
+    };
+    static_assert(std::size(CE_ALL) == xs::MAX_INDEX);
+
+    consteval size_t checkAscending(const xs::IdInfo (&x)[xs::MAX_INDEX]) {
+        for (size_t i = 1; i < xs::MAX_INDEX; ++i) {
+            auto& prev = x[i - 1];
+            auto& curr = x[i];
+            if (prev.name >= curr.name)
+                return i;
+        }
+        return 0;
+    }
+    constexpr size_t ASC_TEST = checkAscending(CE_ALL);
+    static_assert(ASC_TEST == 0);
+
+}
 
 std::string_view xs::DicId::key() const noexcept
 {
     auto ind = index();
     if (ind > MAX_INDEX)
         return {};
-    return idInfo[ind].name;
+    //return idInfo[ind].name;
+    return "test";
 }
 
 xs::Dic::Dic()

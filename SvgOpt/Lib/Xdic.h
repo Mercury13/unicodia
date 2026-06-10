@@ -6,20 +6,22 @@
 #include <variant>
 #include <limits>
 
-namespace xs
-{
-    enum class IdBit : unsigned int {
-        FILL = 1 << 8,          ///< Useful where there is fill
-        STROKE = 1 << 9,        ///< Useful where there is stroke
-        TEXT = 1 << 10,         ///< Useful where there is text
-        META = 1 << 11,         ///< Useless, just metadata
-        STOP = 1 << 12,         ///< Related to gradient stop
-        ATTR_ONLY = 1 << 28,    ///< Only attribute, forbidden in style
-        SPECIAL = 1 << 29,      ///< Special cases
-        FREE_STRING = 1 << 30,  ///< The type is free unparsed string
-        COMBO_META = META | ATTR_ONLY | FREE_STRING,
-        COMBO_DRAW = FILL | STROKE | TEXT,
+#include "Xbit.h"
+#undef XACT
+
+namespace xsin {
+
+    #define XACT(id, str, bit)  id,
+    enum class IdIndex : unsigned char {
+        #include "Xid.h"
+        NN
     };
+    // Simple check
+    static_assert(static_cast<int>(IdIndex::NN) > 9);
+
+}   // namespace xsin
+
+namespace xs {
 
     template <class T>
     concept IsIdBit = std::same_as<std::decay_t<T>, IdBit>;
@@ -29,36 +31,36 @@ namespace xs
         constexpr DicId() noexcept = default;
 
         template <IsIdBit... T>
-        explicit constexpr DicId(unsigned char aIndex, T... bits) noexcept
+        explicit consteval DicId(unsigned char aIndex, T... bits) noexcept
             : value((... | static_cast<unsigned>(bits)) | aIndex) {}
 
         constexpr unsigned index() const { return static_cast<unsigned char>(value); }
         constexpr bool hasSmth() const { return (value != BAD); }
         std::string_view key() const noexcept;
         static DicId byKey(std::string_view key) noexcept;
+        constexpr bool has(IdBit x) const noexcept { return (value & static_cast<unsigned>(x)); }
     private:
         static constexpr unsigned BAD = std::numeric_limits<unsigned char>::max();
         unsigned value = BAD;
     };
 
+}   // xs
+
+namespace xid {
+
+    #define XID_OF(id, bit) { static_cast<int>(xsin::IdIndex::id), bit }
+    #define XACT(id, str, bit) \
+        constexpr xs::DicId id XID_OF(id, bit);
+    #include "Xid.h"
+
+}   // namespace xid
+
+namespace xs {
+
     struct IdInfo {
         std::string_view name;
+        DicId fullId;
     };
-
-    /// @todo [future] It'd be cool if IDs are created
-    ///       automatically and alphabetically, but IDK
-    constexpr DicId ID_STYLE { 0, IdBit::SPECIAL };
-    constexpr DicId ID_DESC { 1, IdBit::COMBO_META };
-    constexpr DicId ID_METADATA { 2, IdBit::COMBO_META };
-    constexpr DicId ID_TITLE { 3, IdBit::COMBO_META };
-    constexpr DicId ID_FILL { 4, IdBit::FILL };
-    constexpr DicId ID_CLIP_PATH { 5, IdBit::COMBO_DRAW };
-    constexpr DicId ID_FILL_OPACITY { 6, IdBit::FILL };
-    constexpr DicId ID_FILL_RULE { 7, IdBit::FILL };
-    constexpr DicId ID_STOP_COLOR { 8, IdBit::STOP };
-    constexpr DicId ID_STOP_OPACITY { 9, IdBit::STOP };
-    constexpr unsigned char MAX_INDEX = 10;
-    extern IdInfo idInfo[];
 
 #define DEFINE_DEFAULT_5(T) \
     T() = default;   \
@@ -86,6 +88,8 @@ namespace xs
     };
 
     using ValueVar = std::variant<Inherit, IdLink>;
+
+    constexpr auto MAX_INDEX = static_cast<unsigned>(xsin::IdIndex::NN);
 
     constexpr size_t NO_INDEX = std::numeric_limits<size_t>::max();
 
