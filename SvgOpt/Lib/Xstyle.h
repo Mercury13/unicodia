@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include "Xcolor.h"
+#include "Xdic.h"
 
 #include "u_TypedFlags.h"
 #include "u_Strings.h"
@@ -45,24 +46,6 @@ T() = default;   \
         Channel channel = Channel::BOTH;
     };
 
-    enum class CharType : unsigned char { BAN, NEXT, START };
-
-    struct IdLink {
-        std::string refId;
-
-        bool operator == (const IdLink&) const noexcept = default;
-        DEFINE_DEFAULT_5(IdLink)
-        template <class T> explicit IdLink(T&& x)
-            : refId(std::forward<T>(x)) {}
-        static CharType charType(unsigned char x) noexcept;
-        static CharType charType(char x) noexcept { return charType(static_cast<unsigned char>(x)); }
-        static bool isId(std::string_view x) noexcept;
-        static std::optional<IdLink> parse(std::string_view x);
-        void encodeAttr(std::string& dest) const;
-    };
-    struct Inherit {
-        bool operator == (const Inherit&) const noexcept { return true; }
-    };
     struct None {
         bool operator == (const None&) const noexcept { return true; }
     };

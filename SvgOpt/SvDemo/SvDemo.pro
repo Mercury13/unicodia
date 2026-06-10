@@ -6,6 +6,7 @@ CONFIG -= qt
 SOURCES += \
         ../../Libs/PugiXml/pugixml.cpp \
         ../../Libs/SelfMade/Strings/u_Strings.cpp \
+        ../Lib/XDic.cpp \
         ../Lib/Xcolor.cpp \
         ../Lib/Xstyle.cpp \
         ../Lib/Xsvg.cpp \
@@ -15,6 +16,7 @@ HEADERS += \
     ../../Libs/PugiXml/pugixml.hpp \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../../Libs/SelfMade/u_TypedFlags.h \
+    ../Lib/XDic.h \
     ../Lib/Xcolor.h \
     ../Lib/Xstyle.h \
     ../Lib/Xsvg.h
