@@ -11,12 +11,14 @@ namespace xs
     enum class IdBit : unsigned int {
         FILL = 1 << 8,          ///< Useful where there is fill
         STROKE = 1 << 9,        ///< Useful where there is stroke
-        TEXT = 1 << 10,         ///< Useful wher ethere is text
+        TEXT = 1 << 10,         ///< Useful where there is text
         META = 1 << 11,         ///< Useless, just metadata
+        STOP = 1 << 12,         ///< Related to gradient stop
         ATTR_ONLY = 1 << 28,    ///< Only attribute, forbidden in style
         SPECIAL = 1 << 29,      ///< Special cases
         FREE_STRING = 1 << 30,  ///< The type is free unparsed string
         COMBO_META = META | ATTR_ONLY | FREE_STRING,
+        COMBO_DRAW = FILL | STROKE | TEXT,
     };
 
     template <class T>
@@ -47,7 +49,12 @@ namespace xs
     constexpr DicId ID_METADATA { 2, IdBit::COMBO_META };
     constexpr DicId ID_TITLE { 3, IdBit::COMBO_META };
     constexpr DicId ID_FILL { 4, IdBit::FILL };
-    constexpr unsigned char MAX_INDEX = 5;
+    constexpr DicId ID_CLIP_PATH { 5, IdBit::COMBO_DRAW };
+    constexpr DicId ID_FILL_OPACITY { 6, IdBit::FILL };
+    constexpr DicId ID_FILL_RULE { 7, IdBit::FILL };
+    constexpr DicId ID_STOP_COLOR { 8, IdBit::STOP };
+    constexpr DicId ID_STOP_OPACITY { 9, IdBit::STOP };
+    constexpr unsigned char MAX_INDEX = 10;
     extern IdInfo idInfo[];
 
 #define DEFINE_DEFAULT_5(T) \

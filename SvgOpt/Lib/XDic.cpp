@@ -6,14 +6,20 @@
 
 static_assert(std::numeric_limits<unsigned char>::max() == 255, "Strange machine");
 
+// C = 1
+constexpr std::string_view K_CLIP_PATH = "clip-path";
 // D = 1
-static constexpr std::string_view K_DESC = "desc";
-// F = 1
-static constexpr std::string_view K_FILL = "fill";
+constexpr std::string_view K_DESC = "desc";
+// F = 3
+constexpr std::string_view K_FILL = "fill";
+constexpr std::string_view K_FILL_OPACITY = "fill-opacity";
+constexpr std::string_view K_FILL_RULE = "fill-rule";
 // M = 1
-static constexpr std::string_view K_METADATA = "metadata";
+constexpr std::string_view K_METADATA = "metadata";
 // S = 1
-static constexpr std::string_view K_STYLE = "style";
+constexpr std::string_view K_STOP_COLOR = "stop-color";
+constexpr std::string_view K_STOP_OPACITY = "stop-opacity";
+constexpr std::string_view K_STYLE = "style";
 // T = 1
 static constexpr std::string_view K_TITLE = "title";
 
@@ -24,6 +30,12 @@ xs::IdInfo xs::idInfo[] {
     { .name = K_TITLE },
     { .name = K_FILL },
     // 5
+    { .name = K_CLIP_PATH },
+    { .name = K_FILL_OPACITY },
+    { .name = K_FILL_RULE },
+    { .name = K_STOP_COLOR },
+    { .name = K_STOP_OPACITY },
+    // 10
 };
 
 static_assert(std::size(xs::idInfo) == xs::MAX_INDEX);
