@@ -85,10 +85,12 @@ namespace xs
         std::string key;
         Place place = Place::DELETED;
         ValueVar value;
-        size_t nextAttr = NO_INDEX;  // actually a linked list
-        size_t prevAttr = NO_INDEX;
-        size_t nextStyle = NO_INDEX;
-        size_t prevStyle = NO_INDEX;
+        struct L {
+            struct Pair {
+                size_t next = NO_INDEX;  // actually a linked list
+                size_t prev = NO_INDEX;
+            } at, st;
+        } l; // links
     };
 
     class Dic {
@@ -96,12 +98,11 @@ namespace xs
         Dic();
         [[nodiscard]] ValueVar& putAt(DicId id, Place place);
     private:
+        static constexpr size_t II_FIRST = 0;
+        static constexpr size_t II_LAST = 1;
+        static constexpr size_t N_INITIAL = 2;
         std::vector<Entry> entries;
         size_t byId[MAX_INDEX];
-        size_t firstStyle = NO_INDEX;
-        size_t lastStyle = NO_INDEX;
-        size_t firstAttr = NO_INDEX;
-        size_t lastAttr = NO_INDEX;
         Entry& addEntry(DicId id, Place place);
         void unlinkEntry(size_t index);
         void linkEntry(size_t index, Place place);

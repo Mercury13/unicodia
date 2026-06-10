@@ -39,6 +39,13 @@ std::string_view xs::DicId::key() const noexcept
 xs::Dic::Dic()
 {
     std::fill(std::begin(byId), std::end(byId), NO_INDEX);
+    entries.resize(N_INITIAL);
+    auto& first = entries[II_FIRST];
+    first.l.at.prev = II_FIRST;
+    first.l.at.next = II_LAST;
+    first.l.st = first.l.at;
+    auto& last = entries[II_LAST];
+    last.l = first.l;
 }
 
 
@@ -77,19 +84,11 @@ void xs::Dic::unlinkEntry(size_t index)
 {
     auto& entry = entries[index];
     if (entry.place == Place::ATTR) {
-        auto& prevLink = (entry.prevAttr == NO_INDEX)
-                ? firstAttr : entries[entry.prevAttr].nextAttr;
-        prevLink = entry.nextAttr;
-        auto& nextLink = (entry.nextAttr == NO_INDEX)
-                ? lastAttr : entries[entry.nextAttr].prevAttr;
-        nextLink = entry.nextAttr;
+        entries[entry.l.at.prev].l.at.next = entry.l.at.next;
+        entries[entry.l.at.next].l.at.prev = entry.l.at.prev;
     } else {
-        auto& prevLink = (entry.prevStyle == NO_INDEX)
-                ? firstStyle : entries[entry.prevStyle].nextStyle;
-        prevLink = entry.nextStyle;
-        auto& nextLink = (entry.nextStyle == NO_INDEX)
-                ? lastStyle : entries[entry.nextStyle].prevStyle;
-        nextLink = entry.nextStyle;
+        entries[entry.l.st.prev].l.st.next = entry.l.st.next;
+        entries[entry.l.st.next].l.st.prev = entry.l.st.prev;
     }
 }
 
@@ -97,19 +96,12 @@ void xs::Dic::linkEntry(size_t index, Place place)
 {
     auto& entry = entries[index];
     entry.place = place;
+    auto& last = entries[II_LAST];
     if (place == Place::ATTR) {
-        if (lastAttr == NO_INDEX) {
-            firstAttr = lastAttr = index;
-        } else {
-            entry.prevAttr = lastAttr;
-            lastAttr = index;
-        }
+        entry.l.at.prev = last.l.at.prev;
+        last.l.at.prev = index;
     } else {
-        if (lastStyle == NO_INDEX) {
-            firstStyle = lastStyle = index;
-        } else {
-            entry.prevStyle = lastStyle;
-            lastStyle = index;
-        }
+        entry.l.st.prev = last.l.st.prev;
+        last.l.st.prev = index;
     }
 }
