@@ -7,7 +7,7 @@
 static_assert(std::numeric_limits<unsigned char>::max() == 255, "Strange machine");
 
 static_assert(xid::CLIP_PATH.index() == 0, "The 1st object");
-static_assert(xid::DESC     .index() == 1, "The 2nd object");
+static_assert(xid::CLIP_RULE.index() == 1, "The 2nd object");
 static_assert( xid::STOP_COLOR.has(xs::IdBit::STOP));
 static_assert(!xid::STOP_COLOR.has(xs::IdBit::FILL));
 
@@ -38,8 +38,7 @@ std::string_view xs::DicId::key() const noexcept
     auto ind = index();
     if (ind > MAX_INDEX)
         return {};
-    //return idInfo[ind].name;
-    return "test";
+    return CE_ALL[ind].name;
 }
 
 xs::Dic::Dic()
