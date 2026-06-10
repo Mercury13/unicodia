@@ -35,6 +35,7 @@ namespace xs
         constexpr unsigned index() const { return static_cast<unsigned char>(value); }
         constexpr bool hasSmth() const { return (value != BAD); }
         std::string_view key() const noexcept;
+        static DicId byKey(std::string_view key) noexcept;
     private:
         static constexpr unsigned BAD = std::numeric_limits<unsigned char>::max();
         unsigned value = BAD;
@@ -44,6 +45,8 @@ namespace xs
         std::string_view name;
     };
 
+    /// @todo [future] It'd be cool if IDs are created
+    ///       automatically and alphabetically, but IDK
     constexpr DicId ID_STYLE { 0, IdBit::SPECIAL };
     constexpr DicId ID_DESC { 1, IdBit::COMBO_META };
     constexpr DicId ID_METADATA { 2, IdBit::COMBO_META };

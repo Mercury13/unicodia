@@ -23,7 +23,7 @@ constexpr std::string_view K_STYLE = "style";
 // T = 1
 static constexpr std::string_view K_TITLE = "title";
 
-xs::IdInfo xs::idInfo[] {
+constinit xs::IdInfo xs::idInfo[] {
     { .name = K_STYLE },
     { .name = K_DESC },
     { .name = K_METADATA },
