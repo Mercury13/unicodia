@@ -4,7 +4,21 @@
 
 #include "Xbit.h"
 
+// A
+XACT( ACCUMULATE,     "accumulate",    xs::IdBit::COMBO_ANIMATION )
+XACT( ADDITIVE,       "additive",      xs::IdBit::COMBO_ANIMATION )
+XACT( AMPLITUDE,      "amplitude",     xs::IdBit::COMBO_EFFECT )
+        // We will check ARIA (assistive technilogies) by name!
+XACT( ATTRIBUTE_NAME, "attributeName", xs::IdBit::COMBO_ANIMATION )
+XACT( AZIMUTH,        "azimuth",       xs::IdBit::COMBO_EFFECT )
+// B
+XACT( BASE_FREQ, "baseFrequency", xs::IdBit::COMBO_EFFECT )
+XACT( BEGIN,     "begin",         xs::IdBit::COMBO_ANIMATION )
+XACT( BIAS,      "bias",          xs::IdBit::COMBO_EFFECT )
+XACT( BY,        "by",            xs::IdBit::COMBO_ANIMATION )
 // C
+XACT( CALC_MODE, "calcMode",  xs::IdBit::COMBO_ANIMATION )
+XACT( CLASS,     "class",     xs::IdBit::JUST_LEAVE )
 XACT( CLIP_PATH, "clip-path", xs::IdBit::COMBO_ID_CLIP_PATH )
 XACT( CLIP_RULE, "clip-rule", xs::IdBit::COMBO_DRAW )  // clip-rule is inherited!
 XACT( COLOR,     "color",     xs::IdBit::CURRENT_COLOR )
@@ -35,6 +49,7 @@ XACT( MARKER_END,   "marker-end",   xs::IdBit::SHAPE_STROKE )
 XACT( MARKER_MID,   "marker-mid",   xs::IdBit::SHAPE_STROKE )
 XACT( MARKER_START, "marker-start", xs::IdBit::SHAPE_STROKE )
 XACT( MASK,         "mask",         xs::IdBit::JUST_LEAVE )
+XACT( MEDIA,        "media",        xs::IdBit::JUST_LEAVE )
 XACT( METADATA,     "metadata",     xs::IdBit::COMBO_META )
 // O
 XACT( OPACITY,  "opacity",  xs::IdBit::COMBO_ID_OPACITY )

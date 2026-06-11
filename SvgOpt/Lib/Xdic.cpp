@@ -6,8 +6,9 @@
 
 static_assert(std::numeric_limits<unsigned char>::max() == 255, "Strange machine");
 
-static_assert(xid::CLIP_PATH.index() == 0, "The 1st object");
-static_assert(xid::CLIP_RULE.index() == 1, "The 2nd object");
+// Simple unit-test-like
+static_assert(xid::ACCUMULATE.index() == 0, "The 1st object");
+static_assert(xid::ADDITIVE.index() == 1, "The 2nd object");
 static_assert( xid::STOP_COLOR.has(xs::IdBit::STOP));
 static_assert(!xid::STOP_COLOR.has(xs::IdBit::FILL));
 

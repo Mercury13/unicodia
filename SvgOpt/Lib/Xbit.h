@@ -17,6 +17,8 @@ namespace xs {
         SHAPE_STROKE = 1 << 19, ///< Stroke + shape (for markers)
         OPEN_STROKE = 1 << 20,  ///< Open strokes (for butt)
         SHARP_STROKE = STROKE,  ///< Strokes with sharp corners
+        ANIMATION = 1 << 21,    ///< Animation-related
+        EFFECT = 1 << 22,       ///< Effect-related
         JUST_LEAVE = 1 << 25,   ///< Just leave
         RENDERING_HINT = 1<< 26, ///< Rendering hint
         NOT_INHERITED = 1<< 27, ///< Is not inherited
@@ -34,6 +36,8 @@ namespace xs {
         COMBO_ID_POINTER_EVENTS = COMBO_DRAW | INTERACTION,
         COMBO_ID_SHAPE_RENDER = FILL | STROKE | RENDERING_HINT,
         COMBO_ID_TEXT_RENDER = TEXT | RENDERING_HINT,
+        COMBO_ANIMATION = ANIMATION | ATTR_ONLY,
+        COMBO_EFFECT = EFFECT | ATTR_ONLY,
     };
 
 }   // namespace xs
