@@ -20,6 +20,7 @@ SOURCES += \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Libs/SelfMade/u_Version.cpp \
     ../SvgOpt/Lib/Xcolor.cpp \
+    ../SvgOpt/Lib/Xdic.cpp \
     ../SvgOpt/Lib/Xstyle.cpp \
     ../SvgOpt/Lib/Xsvg.cpp \
     ../Unicodia/Search/engine.cpp \
@@ -35,6 +36,7 @@ SOURCES += \
     test_Version.cpp \
     test_Wiki.cpp \
     test_Xcolor.cpp \
+    test_Xdic.cpp \
     test_Xstyle.cpp \
     text_Xsvg.cpp
 
@@ -47,6 +49,8 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
     ../SvgOpt/Lib/Xcolor.h \
+    ../SvgOpt/Lib/Xdic.h \
+    ../SvgOpt/Lib/Xid.h \
     ../SvgOpt/Lib/Xstyle.h \
     ../SvgOpt/Lib/Xsvg.h \
     ../Unicodia/Search/engine.h \

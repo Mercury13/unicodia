@@ -46,12 +46,18 @@ xs::Dic::Dic()
 {
     std::fill(std::begin(byId), std::end(byId), NO_INDEX);
     entries.resize(N_INITIAL);
-    auto& first = entries[II_FIRST];
-    first.l.at.prev = II_FIRST;
-    first.l.at.next = II_LAST;
-    first.l.st = first.l.at;
-    auto& last = entries[II_LAST];
-    last.l = first.l;
+    // Attribute
+    auto& firstAttr = entries[II_FIRST_ATTR];
+    firstAttr.l.prev = II_FIRST_ATTR;
+    firstAttr.l.next = II_LAST_ATTR;
+    auto& lastAttr = entries[II_LAST_ATTR];
+    lastAttr.l = firstAttr.l;
+    // Style
+    auto& firstStyle = entries[II_FIRST_STYLE];
+    firstStyle.l.prev = II_FIRST_STYLE;
+    firstStyle.l.next = II_LAST_STYLE;
+    auto& lastStyle = entries[II_LAST_STYLE];
+    lastStyle.l = firstStyle.l;
 }
 
 
@@ -79,9 +85,7 @@ xs::ValueVar& xs::Dic::putAt(DicId id, Place place)
 xs::Entry& xs::Dic::addEntry(DicId id, Place place)
 {
     auto internalIndex = entries.size();
-    auto& entry = entries.emplace_back();
-    entry.id = id;
-    entry.key = id.key();
+    auto& entry = entries.emplace_back(id);
     linkEntry(internalIndex, place);
     return entry;
 }
@@ -89,25 +93,33 @@ xs::Entry& xs::Dic::addEntry(DicId id, Place place)
 void xs::Dic::unlinkEntry(size_t index)
 {
     auto& entry = entries[index];
-    if (entry.place == Place::ATTR) {
-        entries[entry.l.at.prev].l.at.next = entry.l.at.next;
-        entries[entry.l.at.next].l.at.prev = entry.l.at.prev;
-    } else {
-        entries[entry.l.st.prev].l.st.next = entry.l.st.next;
-        entries[entry.l.st.next].l.st.prev = entry.l.st.prev;
-    }
+    entries[entry.l.prev].l.next = entry.l.next;
+    entries[entry.l.next].l.prev = entry.l.prev;
 }
 
 void xs::Dic::linkEntry(size_t index, Place place)
 {
     auto& entry = entries[index];
     entry.place = place;
-    auto& last = entries[II_LAST];
-    if (place == Place::ATTR) {
-        entry.l.at.prev = last.l.at.prev;
-        last.l.at.prev = index;
-    } else {
-        entry.l.st.prev = last.l.st.prev;
-        last.l.st.prev = index;
-    }
+    auto lastIndex = (place == Place::ATTR) ? II_LAST_ATTR : II_LAST_STYLE;
+    auto& last = entries[lastIndex];
+    auto& prev = entries[last.l.prev];
+    entry.l.prev = last.l.prev;
+    entry.l.next = lastIndex;
+    last.l.prev = index;
+    prev.l.next = index;
+}
+
+size_t xs::Dic::countAttr() const noexcept
+{
+    size_t r = 0;
+    traverseAttr([&r](auto&) { ++r; });
+    return r;
+}
+
+size_t xs::Dic::countStyle() const noexcept
+{
+    size_t r = 0;
+    traverseStyle([&r](auto&) { ++r; });
+    return r;
 }

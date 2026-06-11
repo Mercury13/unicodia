@@ -34,11 +34,13 @@ namespace xs {
         explicit consteval DicId(unsigned char aIndex, T... bits) noexcept
             : value((... | static_cast<unsigned>(bits)) | aIndex) {}
 
-        constexpr unsigned index() const { return static_cast<unsigned char>(value); }
-        constexpr bool hasSmth() const { return (value != BAD); }
+        constexpr unsigned index() const noexcept { return static_cast<unsigned char>(value); }
+        constexpr bool hasSmth() const noexcept { return (value != BAD); }
+        constexpr explicit operator bool() const noexcept { return hasSmth(); }
         std::string_view key() const noexcept;
         static DicId byKey(std::string_view key) noexcept;
         constexpr bool has(IdBit x) const noexcept { return (value & static_cast<unsigned>(x)); }
+        constexpr bool operator == (const DicId& x) const noexcept = default;
     private:
         static constexpr unsigned BAD = std::numeric_limits<unsigned char>::max();
         unsigned value = BAD;
@@ -94,31 +96,92 @@ namespace xs {
     constexpr size_t NO_INDEX = std::numeric_limits<size_t>::max();
 
     enum class Place { DELETED, ATTR, STYLE };
-    struct Entry {
-        DicId id;
-        std::string key;
-        Place place = Place::DELETED;
+    struct Kv {
+        Kv() = default;
+        explicit Kv(const DicId& aId) : id(aId) {}
+        const DicId id;
+        const std::string storedKey;
+        std::string_view key() const
+            { return id ? id.key() : storedKey; }
         ValueVar value;
+    };
+    struct Entry : public Kv {
+        Place place = Place::DELETED;
         struct L {
-            struct Pair {
-                size_t next = NO_INDEX;  // actually a linked list
-                size_t prev = NO_INDEX;
-            } at, st;
+            size_t next = NO_INDEX;  // actually a linked list
+            size_t prev = NO_INDEX;
         } l; // links
+        using Kv::Kv;
     };
 
     class Dic {
     public:
         Dic();
         [[nodiscard]] ValueVar& putAt(DicId id, Place place);
+
+        /// @todo [bad] everything is changeable!! - Kv must have been const
+        template <class Body> void traverseAttr(const Body& body);
+        template <class Body> void traverseStyle(const Body& body);
+        template <class Body> void traverseAttr(const Body& body) const;
+        template <class Body> void traverseStyle(const Body& body) const;
+
+        size_t countAttr() const noexcept;
+        size_t countStyle() const noexcept;
     private:
-        static constexpr size_t II_FIRST = 0;
-        static constexpr size_t II_LAST = 1;
-        static constexpr size_t N_INITIAL = 2;
+        static constexpr size_t II_FIRST_ATTR = 0;
+        static constexpr size_t II_LAST_ATTR = 1;
+        static constexpr size_t II_FIRST_STYLE = 2;
+        static constexpr size_t II_LAST_STYLE = 3;
+        static constexpr size_t N_INITIAL = 4;
         std::vector<Entry> entries;
         size_t byId[MAX_INDEX];
         Entry& addEntry(DicId id, Place place);
         void unlinkEntry(size_t index);
         void linkEntry(size_t index, Place place);
     };
+
+}   // namespace xs
+
+template <class Body>
+void xs::Dic::traverseAttr(const Body& body)
+{
+    auto index = entries[II_FIRST_ATTR].l.next;
+    while (index != II_LAST_ATTR) {
+        auto& entry = entries[index];
+        body(static_cast<Kv&>(entry));
+        index = entry.l.next;
+    }
+}
+
+template <class Body>
+void xs::Dic::traverseAttr(const Body& body) const
+{
+    auto index = entries[II_FIRST_ATTR].l.next;
+    while (index != II_LAST_ATTR) {
+        auto& entry = entries[index];
+        body(static_cast<const Kv&>(entry));
+        index = entry.l.next;
+    }
+}
+
+template <class Body>
+void xs::Dic::traverseStyle(const Body& body)
+{
+    auto index = entries[II_FIRST_STYLE].l.next;
+    while (index != II_LAST_STYLE) {
+        auto& entry = entries[index];
+        body(static_cast<Kv&>(entry));
+        index = entry.l.next;
+    }
+}
+
+template <class Body>
+void xs::Dic::traverseStyle(const Body& body) const
+{
+    auto index = entries[II_FIRST_STYLE].l.next;
+    while (index != II_LAST_STYLE) {
+        auto& entry = entries[index];
+        body(static_cast<const Kv&>(entry));
+        index = entry.l.next;
+    }
 }
