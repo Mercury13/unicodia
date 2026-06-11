@@ -86,6 +86,7 @@ xs::Entry& xs::Dic::addEntry(DicId id, Place place)
 {
     auto internalIndex = entries.size();
     auto& entry = entries.emplace_back(id);
+    byId[id.index()] = internalIndex;
     linkEntry(internalIndex, place);
     return entry;
 }

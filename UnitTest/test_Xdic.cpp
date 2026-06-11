@@ -106,3 +106,75 @@ TEST (Xdic, MultiStyle)
     });
     EXPECT_EQ("alphabravocharliedelta", sum);
 }
+
+TEST (Xdic, Change)
+{
+    xs::Dic dic;
+    dic.putAt(xid::COLOR, xs::Place::STYLE) = xs::IdLink{"alpha"};
+    dic.putAt(xid::AZIMUTH, xs::Place::STYLE) = xs::IdLink{"bravo"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"charlie"};
+    dic.putAt(xid::MEDIA, xs::Place::STYLE) = xs::IdLink{"delta"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"ECHO"};
+
+    EXPECT_EQ(0u, dic.countAttr());
+    EXPECT_EQ(4u, dic.countStyle());
+
+    std::string sum;
+    dic.traverseStyle([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("alphabravoECHOdelta", sum);
+}
+
+TEST (Xdic, StyleToAttr)
+{
+    xs::Dic dic;
+    dic.putAt(xid::COLOR, xs::Place::STYLE) = xs::IdLink{"alpha"};
+    dic.putAt(xid::AZIMUTH, xs::Place::STYLE) = xs::IdLink{"bravo"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"charlie"};
+    dic.putAt(xid::MEDIA, xs::Place::STYLE) = xs::IdLink{"delta"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::ATTR) = xs::IdLink{"ECHO"};
+
+    EXPECT_EQ(1u, dic.countAttr());
+    EXPECT_EQ(3u, dic.countStyle());
+
+    std::string sum;
+    dic.traverseAttr([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("ECHO", sum);
+
+    sum.clear();
+    dic.traverseStyle([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("alphabravodelta", sum);
+}
+
+TEST (Xdic, StyleToAttrAndBack)
+{
+    xs::Dic dic;
+    dic.putAt(xid::COLOR, xs::Place::STYLE) = xs::IdLink{"alpha"};
+    dic.putAt(xid::AZIMUTH, xs::Place::STYLE) = xs::IdLink{"bravo"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"charlie"};
+    dic.putAt(xid::MEDIA, xs::Place::STYLE) = xs::IdLink{"delta"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::ATTR) = xs::IdLink{"ECHO"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"FOXTROT"};
+
+    EXPECT_EQ(0u, dic.countAttr());
+    EXPECT_EQ(4u, dic.countStyle());
+
+    std::string sum;
+    dic.traverseStyle([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("alphabravodeltaFOXTROT", sum);
+}
