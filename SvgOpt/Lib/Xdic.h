@@ -5,6 +5,7 @@
 #include <string>
 #include <variant>
 #include <limits>
+#include <unordered_map>
 
 #include "Xbit.h"
 #undef XACT
@@ -66,13 +67,15 @@ namespace xs {
 
     enum class Place { DELETED, ATTR, STYLE };
     struct Kv {
-        Kv() = default;
-        explicit Kv(const DicId& aId) : id(aId) {}
         const DicId id;
         const std::string storedKey;
         std::string_view key() const
             { return id ? id.key() : storedKey; }
         ValueVar value;
+
+        Kv() = default;
+        explicit Kv(const DicId& aId) : id(aId) {}
+        explicit Kv(std::string_view aSk) : storedKey(aSk) {}
     };
     struct Entry : public Kv {
         Place place = Place::DELETED;
@@ -83,10 +86,20 @@ namespace xs {
         using Kv::Kv;
     };
 
+    struct IndexWrap {
+        size_t v = NO_INDEX;
+    };
+
+    struct SvLess : public std::hash<std::string_view> {
+        using std::hash<std::string_view>::operator ();
+        using is_transparent = void;
+    };
+
     class Dic {
     public:
         Dic();
         [[nodiscard]] ValueVar& putAt(DicId id, Place place);
+        [[nodiscard]] ValueVar& putAt(std::string_view key, Place place);
 
         template <class Body> void traverseAttr(const Body& body);
         template <class Body> void traverseStyle(const Body& body);
@@ -110,9 +123,13 @@ namespace xs {
         static constexpr size_t N_INITIAL = 4;
         std::vector<Entry> entries;
         size_t byId[MAX_INDEX];
+        using UM = std::unordered_map<std::string, IndexWrap, SvLess, std::equal_to<>>;
+        UM byUnknown;
         Entry& addEntry(DicId id, Place place);
+        Entry& addEntry(UM::value_type& um, Place place);
         void unlinkEntry(size_t index);
         void linkEntry(size_t index, Place place);
+        ValueVar& putIndexAt(size_t internalIndex, Place place);
     };
 
 }   // namespace xs

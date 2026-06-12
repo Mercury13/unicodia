@@ -37,7 +37,7 @@ namespace {
     constexpr size_t ASC_TEST = checkAscending(CE_ALL);
     static_assert(ASC_TEST == 0);
 
-}
+}   // anon namespace
 
 std::string_view xs::DicId::key() const noexcept
 {
@@ -45,6 +45,17 @@ std::string_view xs::DicId::key() const noexcept
     if (ind > MAX_INDEX)
         return {};
     return CE_ALL[ind].name;
+}
+
+
+xs::DicId xs::DicId::byKey(std::string_view key) noexcept
+{
+    /// @todo [urgent] Non-optimal version
+    for (auto& v : CE_ALL) {
+        if (v.name == key)
+            return v.fullId;
+    }
+    return {};
 }
 
 xs::Dic::Dic()
@@ -66,6 +77,17 @@ xs::Dic::Dic()
 }
 
 
+xs::ValueVar& xs::Dic::putIndexAt(size_t internalIndex, Place place)
+{
+    auto& entry = entries[internalIndex];
+    if (entry.place != place) {
+        unlinkEntry(internalIndex);
+        linkEntry(internalIndex, place);
+    }
+    return entry.value;
+}
+
+
 xs::ValueVar& xs::Dic::putAt(DicId id, Place place)
 {
     if (place == Place::DELETED)
@@ -78,12 +100,25 @@ xs::ValueVar& xs::Dic::putAt(DicId id, Place place)
         auto& entry = addEntry(id, place);
         return entry.value;
     } else {
-        auto& entry = entries[internalIndex];
-        if (entry.place != place) {
-            unlinkEntry(internalIndex);
-            linkEntry(internalIndex, place);
-        }
+        return putIndexAt(internalIndex, place);
+    }
+}
+
+[[nodiscard]] xs::ValueVar& xs::Dic::putAt(std::string_view key, Place place)
+{
+    if (place == Place::DELETED)
+        throw std::invalid_argument("[putAt] Cannot use Place::DELETED");
+    if (auto id = DicId::byKey(key)) {
+        return putAt(id, place);
+    }
+    // Probably OK - put-misses must be rare
+    auto [it,_] = byUnknown.try_emplace(std::string{key});
+    auto internalIndex = it->second.v;
+    if (internalIndex == NO_INDEX) {
+        auto& entry = addEntry(*it, place);
         return entry.value;
+    } else {
+        return putIndexAt(internalIndex, place);
     }
 }
 
@@ -92,6 +127,15 @@ xs::Entry& xs::Dic::addEntry(DicId id, Place place)
     auto internalIndex = entries.size();
     auto& entry = entries.emplace_back(id);
     byId[id.index()] = internalIndex;
+    linkEntry(internalIndex, place);
+    return entry;
+}
+
+xs::Entry& xs::Dic::addEntry(UM::value_type& um, Place place)
+{
+    auto internalIndex = entries.size();
+    auto& entry = entries.emplace_back(um.first);
+    um.second.v = internalIndex;
     linkEntry(internalIndex, place);
     return entry;
 }
