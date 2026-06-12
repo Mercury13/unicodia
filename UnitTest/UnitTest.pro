@@ -24,6 +24,7 @@ SOURCES += \
     ../SvgOpt/Lib/Xstyle.cpp \
     ../SvgOpt/Lib/Xsvg.cpp \
     ../SvgOpt/Lib/Xtypes.cpp \
+    ../SvgOpt/UnitTest/test_Xtypes.cpp \
     ../Unicodia/Search/engine.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \

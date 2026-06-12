@@ -5,35 +5,6 @@
 // Google test
 #include "gtest/gtest.h"
 
-///
-///  Prerequisites for to_chars:
-///   strange documentation
-///
-TEST (Xdic, Prereq1)
-{
-    char buf[40];
-    auto res = std::to_chars(std::begin(buf), std::end(buf),
-        0.14159265,
-        std::chars_format::general, 4);
-    EXPECT_EQ(std::errc{}, res.ec);
-    std::string_view sv(std::begin(buf), res.ptr);
-    EXPECT_EQ("0.1416", sv);
-}
-
-///
-///  Prerequisites for to_chars:
-///    precision + non-meaning digits
-///
-TEST (Xdic, Prereq2)
-{
-    char buf[40];
-    auto res = std::to_chars(std::begin(buf), std::end(buf),
-        0.10000000001,
-        std::chars_format::general, 4);
-    EXPECT_EQ(std::errc{}, res.ec);
-    std::string_view sv(std::begin(buf), res.ptr);
-    EXPECT_EQ("0.1", sv);
-}
 
 TEST (Xdic, Empty)
 {

@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <stdexcept>
+#include <algorithm>
 
 #include "u_Strings.h"
 
@@ -51,18 +52,82 @@ void xsin::writeAttr(std::string& dest, std::string_view key, std::string_view v
 ///// Number ///////////////////////////////////////////////////////////////////
 
 
-void xs::Number::encodeAttr(std::string&) const
+void xs::Number::encodeAttr(double value, std::string& dest, int precision)
 {
     if (!std::isfinite(value)) {
         throw std::logic_error("Finished out with an infinite number");
     }
     char buf[40];
-    auto res = std::to_chars(std::begin(buf), std::end(buf), value,
-            std::chars_format::general, 15);
+    auto res = std::to_chars(std::begin(buf), std::end(buf) - 1,
+            value, std::chars_format::general, precision);
     if (res.ec != std::errc()) {
         throw std::logic_error("Somehow cannot convert number");
     }
-    std::string_view sv(std::begin(buf), res.ptr);
+    auto beg = buf;
+    auto end = res.ptr;
+    *end = '\0';   // just for simplicity
+    auto len = end - beg;
+    // Ways to shorten the string
+    if (len >= 3) {
+        // 0.5 → .5
+        if (buf[0] == '0' && buf[1] == '.') {
+            ++beg;
+        } else if (buf[0] == '-' && buf[1] == '0' && buf[2] == '.') {
+            // -0.5 → -.5
+            ++beg;
+            *beg = '-';
+        }
+        static std::string_view EXP = "Ee";
+        auto pE = std::find_first_of(beg, end, EXP.begin(), EXP.end());
+        if (pE != end) {
+            // Parse numeric exp part and write again
+            *pE = 'e';
+            auto pExpNum = pE + 1;
+            int expValue;
+            // from_chars cannot parse +1
+            auto pParse = pExpNum;
+            if (*pParse == '+')
+                ++pParse;
+            auto res2 = std::from_chars(pParse, end, expValue);
+            if (res2.ec != std::errc{}) {
+                throw std::logic_error("Cannot parse exponent back");
+            }
+            if (auto pPoint = std::find(beg, pE, '.');
+                    pPoint != pE) {   // Have dec.point
+                auto nDigs = pE - pPoint - 1;
+                expValue -= nDigs;
+                if (expValue == 0) {
+                    throw std::logic_error("Strange, wrote in exp.form, though can in simple");
+                }
+                pExpNum = std::copy(pPoint + 1, pExpNum, pPoint);
+            }
+            auto res3 = std::to_chars(pExpNum, std::end(buf), expValue);
+            if (res3.ec != std::errc{}) {
+                throw std::logic_error("Cannot write exponent once again");
+            }
+            end = res3.ptr;
+        } else {
+            // No exponent, but 1000=e3 would be cool!
+            if (len >= 4) {
+                unsigned expValue = 0;
+                auto p = end - 1;
+                while (*p == '0') {
+                    ++expValue;
+                    --p;
+                }
+                if (expValue >= 3) {
+                    ++p;
+                    *(p++) = 'e';
+                    auto res4 = std::to_chars(p, end, expValue);
+                    if (res4.ec != std::errc{}) {
+                        throw std::logic_error("Cannot write exponent, or it is not smaller");
+                    }
+                    end = res4.ptr;
+                }
+            }
+        }
+    }
+    dest.append(beg, end);
 }
 
 

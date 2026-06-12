@@ -44,7 +44,8 @@ namespace xs {
     struct Number {
         double value = std::numeric_limits<double>::quiet_NaN();
 
-        void encodeAttr(std::string&) const;
+        static void encodeAttr(double value, std::string& dest, int precision);
+        void encodeAttr(std::string& dest) const { encodeAttr(value, dest, 15); }
         bool operator == (const Number&) const noexcept = default;
     };
 
