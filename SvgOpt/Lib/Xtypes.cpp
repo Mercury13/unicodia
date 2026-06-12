@@ -107,7 +107,7 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
             }
             end = res3.ptr;
         } else {
-            // No exponent, but 1000=e3 would be cool!
+            // No exponent, but 1000=1e3 would be cool!
             if (len >= 4) {
                 unsigned expValue = 0;
                 auto p = end - 1;
