@@ -19,7 +19,7 @@ namespace xs {
         SHARP_STROKE = STROKE,      ///< Strokes with sharp corners
         ANIMATION = 1 << 21,        ///< Animation-related
         FORMAL_STRING = 1LL << 55,  ///< Formalized string, just trim for now
-        TAG_SPECIFIC = 1LL << 56,   ///< Effect-related
+        TAG_SPECIFIC = 1LL << 56,   ///< Specific for some few tags
         JUST_LEAVE = 1LL << 57,     ///< Just leave, do not touch
         RENDERING_HINT = 1LL << 58, ///< Rendering hint
         NOT_INHERITED = 1LL << 59,  ///< Is not inherited
