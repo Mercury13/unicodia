@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "Xcolor.h"
-#include "Xdic.h"
+#include "Xtypes.h"
 
 #include "u_TypedFlags.h"
 #include "u_Strings.h"
