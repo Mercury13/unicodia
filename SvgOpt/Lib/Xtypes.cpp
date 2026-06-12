@@ -84,7 +84,7 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
             *pE = 'e';  // Most stdlib's do E, but need e!
             auto pExpNum = pE + 1;
             int expValue;
-            // from_chars cannot parse +1
+            // from_chars cannot parse '+1', needs exactly 1
             auto pParse = pExpNum;
             if (*pParse == '+')
                 ++pParse;
