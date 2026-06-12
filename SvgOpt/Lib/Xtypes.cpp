@@ -63,8 +63,8 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
     if (res.ec != std::errc()) {
         throw std::logic_error("Somehow cannot convert number");
     }
-    auto beg = buf;
-    auto end = res.ptr;
+    auto* beg = buf;
+    auto* end = res.ptr;
     *end = '\0';   // just for simplicity
     auto len = end - beg;
     // Ways to shorten the string
@@ -78,21 +78,21 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
             *beg = '-';
         }
         static std::string_view EXP = "Ee";
-        auto pE = std::find_first_of(beg, end, EXP.begin(), EXP.end());
+        auto* pE = std::find_first_of(beg, end, EXP.begin(), EXP.end());
         if (pE != end) {
             // Parse numeric exp part and write again
             *pE = 'e';  // Most stdlib's do E, but need e!
-            auto pExpNum = pE + 1;
+            auto* pExpNum = pE + 1;
             int expValue;
             // from_chars cannot parse '+1', needs exactly 1
-            auto pParse = pExpNum;
+            auto* pParse = pExpNum;
             if (*pParse == '+')
                 ++pParse;
             auto res2 = std::from_chars(pParse, end, expValue);
             if (res2.ec != std::errc{}) {
                 throw std::logic_error("Cannot parse exponent back");
             }
-            if (auto pPoint = std::find(beg, pE, '.');
+            if (auto* pPoint = std::find(beg, pE, '.');
                     pPoint != pE) {   // Have dec.point
                 auto nDigs = pE - pPoint - 1;
                 expValue -= nDigs;
@@ -110,7 +110,7 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
             // No exponent, but 1000=1e3 would be cool!
             if (len >= 4) {
                 unsigned expValue = 0;
-                auto p = end - 1;
+                auto* p = end - 1;
                 while (*p == '0') {
                     ++expValue;
                     --p;
