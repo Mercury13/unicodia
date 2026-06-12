@@ -19,7 +19,7 @@ namespace xs {
         SHARP_STROKE = STROKE,      ///< Strokes with sharp corners
         ANIMATION = 1 << 21,        ///< Animation-related
         FORMAL_STRING = 1LL << 55,  ///< Formalized string, just trim for now
-        EFFECT = 1LL << 56,         ///< Effect-related
+        TAG_SPECIFIC = 1LL << 56,   ///< Effect-related
         JUST_LEAVE = 1LL << 57,     ///< Just leave, do not touch
         RENDERING_HINT = 1LL << 58, ///< Rendering hint
         NOT_INHERITED = 1LL << 59,  ///< Is not inherited
@@ -30,7 +30,7 @@ namespace xs {
         COMBO_DRAW = FILL | STROKE | TEXT,
         COMBO_VECTOR = SHAPE | TEXT,
         COMBO_ANIMATION = ANIMATION | ATTR_ONLY,
-        COMBO_EFFECT = EFFECT | ATTR_ONLY,
+        COMBO_TAG_SPEC = TAG_SPECIFIC | ATTR_ONLY,
         COMBO_ID_CLIP_PATH = COMBO_DRAW | NOT_INHERITED,
         COMBO_ALL = COMBO_DRAW | GRADIENT | STOP,
         COMBO_ID_CURSOR = COMBO_ALL | INTERACTION,

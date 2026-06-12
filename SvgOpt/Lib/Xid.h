@@ -7,14 +7,14 @@
 // A
 XACT( ACCUMULATE,     "accumulate",    xs::IdBit::COMBO_ANIMATION )
 XACT( ADDITIVE,       "additive",      xs::IdBit::COMBO_ANIMATION )
-XACT( AMPLITUDE,      "amplitude",     xs::IdBit::COMBO_EFFECT )
+XACT( AMPLITUDE,      "amplitude",     xs::IdBit::COMBO_TAG_SPEC )
         // We will check ARIA (assistive technilogies) by name!
 XACT( ATTRIBUTE_NAME, "attributeName", xs::IdBit::COMBO_ANIMATION )
-XACT( AZIMUTH,        "azimuth",       xs::IdBit::COMBO_EFFECT )
+XACT( AZIMUTH,        "azimuth",       xs::IdBit::COMBO_TAG_SPEC )
 // B
-XACT( BASE_FREQ, "baseFrequency", xs::IdBit::COMBO_EFFECT )
+XACT( BASE_FREQ, "baseFrequency", xs::IdBit::COMBO_TAG_SPEC )
 XACT( BEGIN,     "begin",         xs::IdBit::COMBO_ANIMATION )
-XACT( BIAS,      "bias",          xs::IdBit::COMBO_EFFECT )
+XACT( BIAS,      "bias",          xs::IdBit::COMBO_TAG_SPEC )
 XACT( BY,        "by",            xs::IdBit::COMBO_ANIMATION )
 // C
 XACT( CALC_MODE, "calcMode",  xs::IdBit::COMBO_ANIMATION )
@@ -26,6 +26,7 @@ XACT( COLOR_INTERP, "color-interpolation", xs::IdBit::COMBO_DRAW )
 XACT( COLOR_RENDER, "color-rendering", xs::IdBit::COMBO_DRAW )
 XACT( CURSOR,    "cursor",    xs::IdBit::COMBO_ID_CURSOR )
 // D
+XACT( D,        "d",       xs::IdBit::COMBO_TAG_SPEC )
 XACT( DESC,    "desc",    xs::IdBit::COMBO_META )
 XACT( DISPLAY, "display", xs::IdBit::COMBO_DRAW )
 // F
@@ -76,6 +77,7 @@ XACT( TEXT_DECORATION, "text-decoration", xs::IdBit::TEXT )
 XACT( TEXT_OVERFLOW,   "text-overflow",   xs::IdBit::TEXT )
 XACT( TEXT_RENDER,     "text-rendering",  xs::IdBit::COMBO_ID_TEXT_RENDER )
 XACT( TITLE,           "title",           xs::IdBit::COMBO_META )
+XACT( TRANSFORM,       "transform",       xs::IdBit::COMBO_DRAW )
 // U
 XACT( UNICODE_BIDI, "unicode-bidi", xs::IdBit::SPECIAL )
 // V
@@ -85,5 +87,9 @@ XACT( VISIBILITY,    "visibility",    xs::IdBit::COMBO_DRAW )
 // W
 XACT( WHITE_SPACE,  "white-space",  xs::IdBit::TEXT )
 XACT( WRITING_MODE, "writing-mode", xs::IdBit::TEXT )
+// X
+XACT( X, "x", xs::IdBit::COMBO_TAG_SPEC )
+// Y
+XACT( Y, "y", xs::IdBit::COMBO_TAG_SPEC )
 
 #undef XACT
