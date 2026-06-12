@@ -80,6 +80,7 @@ XACT( TITLE,           "title",           xs::IdBit::COMBO_META )
 XACT( UNICODE_BIDI, "unicode-bidi", xs::IdBit::SPECIAL )
 // V
 XACT( VECTOR_EFFECT, "vector-effect", xs::IdBit::COMBO_DRAW )
+XACT( VERSION,       "version",       xs::IdBit::COMBO_ID_VERSION )
 XACT( VISIBILITY,    "visibility",    xs::IdBit::COMBO_DRAW )
 // W
 XACT( WHITE_SPACE,  "white-space",  xs::IdBit::TEXT )
