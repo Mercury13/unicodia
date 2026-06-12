@@ -129,7 +129,7 @@ namespace xs {
         Entry& addEntry(UM::value_type& um, Place place);
         void unlinkEntry(size_t index);
         void linkEntry(size_t index, Place place);
-        ValueVar& putIndexAt(size_t internalIndex, Place place);
+        ValueVar& putAtIndex(size_t internalIndex, Place place);
     };
 
 }   // namespace xs

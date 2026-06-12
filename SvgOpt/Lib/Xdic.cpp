@@ -77,7 +77,7 @@ xs::Dic::Dic()
 }
 
 
-xs::ValueVar& xs::Dic::putIndexAt(size_t internalIndex, Place place)
+xs::ValueVar& xs::Dic::putAtIndex(size_t internalIndex, Place place)
 {
     auto& entry = entries[internalIndex];
     if (entry.place != place) {
@@ -100,7 +100,7 @@ xs::ValueVar& xs::Dic::putAt(DicId id, Place place)
         auto& entry = addEntry(id, place);
         return entry.value;
     } else {
-        return putIndexAt(internalIndex, place);
+        return putAtIndex(internalIndex, place);
     }
 }
 
@@ -118,7 +118,7 @@ xs::ValueVar& xs::Dic::putAt(DicId id, Place place)
         auto& entry = addEntry(*it, place);
         return entry.value;
     } else {
-        return putIndexAt(internalIndex, place);
+        return putAtIndex(internalIndex, place);
     }
 }
 
