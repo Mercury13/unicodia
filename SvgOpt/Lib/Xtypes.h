@@ -3,6 +3,7 @@
 #include <string>
 #include <optional>
 #include <variant>
+#include <limits>
 
 #include "Xcolor.h"
 
@@ -32,6 +33,21 @@ namespace xs {
         x.encodeAttr(s);
     };
 
+    ///
+    ///  @warning  The objects must check default values for themselves!
+    ///
+    struct Inherit {
+        bool operator == (const Inherit&) const noexcept { return true; }
+        void encodeAttr(std::string&) const {}  // do nothing
+    };
+
+    struct Number {
+        double value = std::numeric_limits<double>::quiet_NaN();
+
+        void encodeAttr(std::string&) const;
+        bool operator == (const Number&) const noexcept = default;
+    };
+
     enum class CharType : unsigned char { BAN, NEXT, START };
     struct IdLink {
         std::string refId;
@@ -46,13 +62,6 @@ namespace xs {
         static std::optional<IdLink> parse(std::string_view x);
         void encodeAttr(std::string& dest) const;
     };
-    ///
-    ///  @warning  The objects must check default values for themselves!
-    ///
-    struct Inherit {
-        bool operator == (const Inherit&) const noexcept { return true; }
-        void encodeAttr(std::string&) const {}  // do nothing
-    };
 
     struct Special {
         std::string text;
@@ -62,15 +71,16 @@ namespace xs {
         void encodeAttr(std::string& dest) const { xsin::encodeAttr(dest, text); }
     };
 
-    using ValueVarFather = std::variant<Inherit, Color, IdLink, Special>;
+    using ValueVarFather = std::variant<Inherit, Number, Color, IdLink, Special>;
     class ValueVar : public ValueVarFather {
         using Super = ValueVarFather;
     public:
         static constexpr int I_INHERIT = 0;
-        static constexpr int I_COLOR = 1;
-        static constexpr int I_IDLINK = 2;
-        static constexpr int I_SPECIAL = 3;
-        static constexpr int I_N = 4;
+        static constexpr int I_NUMBER = 1;
+        static constexpr int I_COLOR = 2;
+        static constexpr int I_IDLINK = 3;
+        static constexpr int I_SPECIAL = 4;
+        static constexpr int I_N = 5;
         static_assert(I_N == std::variant_size_v<Super>);
 
         bool operator == (const ValueVar&) const noexcept = default;

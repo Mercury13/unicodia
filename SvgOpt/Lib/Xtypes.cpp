@@ -1,6 +1,9 @@
 // My header
 #include "Xtypes.h"
 
+#include <cmath>
+#include <stdexcept>
+
 #include "u_Strings.h"
 
 using namespace std::string_view_literals;
@@ -42,6 +45,24 @@ void xsin::writeAttr(std::string& dest, std::string_view key, std::string_view v
     xsin::startAttr(dest, key);
     xsin::encodeAttr(dest, value);
     dest += '"';
+}
+
+
+///// Number ///////////////////////////////////////////////////////////////////
+
+
+void xs::Number::encodeAttr(std::string&) const
+{
+    if (!std::isfinite(value)) {
+        throw std::logic_error("Finished out with an infinite number");
+    }
+    char buf[40];
+    auto res = std::to_chars(std::begin(buf), std::end(buf), value,
+            std::chars_format::general, 15);
+    if (res.ec != std::errc()) {
+        throw std::logic_error("Somehow cannot convert number");
+    }
+    std::string_view sv(std::begin(buf), res.ptr);
 }
 
 
