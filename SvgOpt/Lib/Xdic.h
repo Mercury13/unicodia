@@ -44,7 +44,7 @@ namespace xs {
         constexpr bool operator == (const DicId& x) const noexcept = default;
     private:
         static constexpr unsigned BAD = std::numeric_limits<unsigned char>::max();
-        unsigned value = BAD;
+        unsigned long long value = BAD;
     };
 
 }   // xs
