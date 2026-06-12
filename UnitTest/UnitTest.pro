@@ -23,6 +23,7 @@ SOURCES += \
     ../SvgOpt/Lib/Xdic.cpp \
     ../SvgOpt/Lib/Xstyle.cpp \
     ../SvgOpt/Lib/Xsvg.cpp \
+    ../SvgOpt/Lib/Xtypes.cpp \
     ../Unicodia/Search/engine.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
     ../SvgOpt/Lib/Xid.h \
     ../SvgOpt/Lib/Xstyle.h \
     ../SvgOpt/Lib/Xsvg.h \
+    ../SvgOpt/Lib/Xtypes.h \
     ../Unicodia/Search/engine.h \
     ../Unicodia/Search/trie.h \
     ../Unicodia/Wiki.h
