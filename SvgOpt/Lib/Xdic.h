@@ -119,14 +119,20 @@ namespace xs {
         Dic();
         [[nodiscard]] ValueVar& putAt(DicId id, Place place);
 
-        /// @todo [bad] everything is changeable!! - Kv must have been const
         template <class Body> void traverseAttr(const Body& body);
         template <class Body> void traverseStyle(const Body& body);
         template <class Body> void traverseAttr(const Body& body) const;
         template <class Body> void traverseStyle(const Body& body) const;
 
+        /// @return [+] # of entries in attributes
         size_t countAttr() const noexcept;
+        /// @return [+] # of entries in styles
         size_t countStyle() const noexcept;
+
+        /// @return [+] has at least one entry in attributes
+        bool hasAttr() const noexcept;
+        /// @return [+] has at least one entry in styles
+        bool hasStyle() const noexcept;
     private:
         static constexpr size_t II_FIRST_ATTR = 0;
         static constexpr size_t II_LAST_ATTR = 1;

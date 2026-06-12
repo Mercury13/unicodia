@@ -9,6 +9,8 @@ TEST (Xdic, Empty)
     xs::Dic dic;
     EXPECT_EQ(0u, dic.countAttr());
     EXPECT_EQ(0u, dic.countStyle());
+    EXPECT_FALSE(dic.hasAttr());
+    EXPECT_FALSE(dic.hasStyle());
 }
 
 TEST (Xdic, OneAttr)
@@ -17,6 +19,8 @@ TEST (Xdic, OneAttr)
     dic.putAt(xid::COLOR, xs::Place::ATTR) = xs::IdLink{"test"};
     EXPECT_EQ(1u, dic.countAttr());
     EXPECT_EQ(0u, dic.countStyle());
+    EXPECT_TRUE(dic.hasAttr());
+    EXPECT_FALSE(dic.hasStyle());
 
     dic.traverseAttr([](const xs::Kv& k) {
         EXPECT_EQ(xid::COLOR, k.id);
@@ -33,6 +37,8 @@ TEST (Xdic, OneStyle)
     dic.putAt(xid::FILL, xs::Place::STYLE) = xs::IdLink{"test"};
     EXPECT_EQ(0u, dic.countAttr());
     EXPECT_EQ(1u, dic.countStyle());
+    EXPECT_FALSE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     dic.traverseStyle([](const xs::Kv& k) {
         EXPECT_EQ(xid::FILL, k.id);
@@ -50,6 +56,8 @@ TEST (Xdic, OnePlusOne)
     dic.putAt(xid::AZIMUTH, xs::Place::STYLE) = xs::IdLink{"bravo"};
     EXPECT_EQ(1u, dic.countAttr());
     EXPECT_EQ(1u, dic.countStyle());
+    EXPECT_TRUE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     dic.traverseAttr([](const xs::Kv& k) {
         EXPECT_EQ(xid::COLOR, k.id);
@@ -77,6 +85,8 @@ TEST (Xdic, MultiAttr)
 
     EXPECT_EQ(4u, dic.countAttr());
     EXPECT_EQ(0u, dic.countStyle());
+    EXPECT_TRUE(dic.hasAttr());
+    EXPECT_FALSE(dic.hasStyle());
 
     std::string sum;
     dic.traverseAttr([&sum](const xs::Kv& k) {
@@ -97,6 +107,8 @@ TEST (Xdic, MultiStyle)
 
     EXPECT_EQ(0u, dic.countAttr());
     EXPECT_EQ(4u, dic.countStyle());
+    EXPECT_FALSE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     std::string sum;
     dic.traverseStyle([&sum](const xs::Kv& k) {
@@ -118,6 +130,8 @@ TEST (Xdic, Change)
 
     EXPECT_EQ(0u, dic.countAttr());
     EXPECT_EQ(4u, dic.countStyle());
+    EXPECT_FALSE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     std::string sum;
     dic.traverseStyle([&sum](const xs::Kv& k) {
@@ -128,6 +142,9 @@ TEST (Xdic, Change)
     EXPECT_EQ("alphabravoECHOdelta", sum);
 }
 
+///
+///  Moving style to attribute works
+///
 TEST (Xdic, StyleToAttr)
 {
     xs::Dic dic;
@@ -139,6 +156,8 @@ TEST (Xdic, StyleToAttr)
 
     EXPECT_EQ(1u, dic.countAttr());
     EXPECT_EQ(3u, dic.countStyle());
+    EXPECT_TRUE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     std::string sum;
     dic.traverseAttr([&sum](const xs::Kv& k) {
@@ -157,6 +176,46 @@ TEST (Xdic, StyleToAttr)
     EXPECT_EQ("alphabravodelta", sum);
 }
 
+///
+///  Moving style to attribute, more things
+///
+TEST (Xdic, StyleToAttr2)
+{
+    xs::Dic dic;
+    dic.putAt(xid::COLOR, xs::Place::STYLE) = xs::IdLink{"alpha"};
+    dic.putAt(xid::AZIMUTH, xs::Place::STYLE) = xs::IdLink{"bravo"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::STYLE) = xs::IdLink{"charlie"};
+    dic.putAt(xid::MEDIA, xs::Place::STYLE) = xs::IdLink{"delta"};
+    dic.putAt(xid::FONT_WEIGHT, xs::Place::ATTR) = xs::IdLink{"echo"};
+    dic.putAt(xid::STROKE_OPACITY, xs::Place::ATTR) = xs::IdLink{"FOXTROT"};
+    dic.putAt(xid::AZIMUTH, xs::Place::ATTR) = xs::IdLink{"GOLF"};
+
+    EXPECT_EQ(3u, dic.countAttr());
+    EXPECT_EQ(2u, dic.countStyle());
+    EXPECT_TRUE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
+
+    std::string sum;
+    dic.traverseAttr([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("echoFOXTROTGOLF", sum);
+
+    sum.clear();
+    dic.traverseStyle([&sum](const xs::Kv& k) {
+        auto* q = std::get_if<xs::IdLink>(&k.value);
+        EXPECT_TRUE(q);
+        sum += q->refId;
+    });
+    EXPECT_EQ("alphadelta", sum);
+}
+
+///
+///  Moving style to attribute and back works,
+///  and does not preserve order
+///
 TEST (Xdic, StyleToAttrAndBack)
 {
     xs::Dic dic;
@@ -169,6 +228,8 @@ TEST (Xdic, StyleToAttrAndBack)
 
     EXPECT_EQ(0u, dic.countAttr());
     EXPECT_EQ(4u, dic.countStyle());
+    EXPECT_FALSE(dic.hasAttr());
+    EXPECT_TRUE(dic.hasStyle());
 
     std::string sum;
     dic.traverseStyle([&sum](const xs::Kv& k) {

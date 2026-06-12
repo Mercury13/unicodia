@@ -124,3 +124,15 @@ size_t xs::Dic::countStyle() const noexcept
     traverseStyle([&r](auto&) { ++r; });
     return r;
 }
+
+bool xs::Dic::hasAttr() const noexcept
+{
+    auto& entry = entries[II_FIRST_ATTR];
+    return (entry.l.next != II_LAST_ATTR);
+}
+
+bool xs::Dic::hasStyle() const noexcept
+{
+    auto& entry = entries[II_FIRST_STYLE];
+    return (entry.l.next != II_LAST_STYLE);
+}
