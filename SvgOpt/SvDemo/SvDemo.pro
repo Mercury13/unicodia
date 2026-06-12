@@ -10,6 +10,7 @@ SOURCES += \
         ../Lib/Xcolor.cpp \
         ../Lib/Xstyle.cpp \
         ../Lib/Xsvg.cpp \
+        ../Lib/Xtypes.cpp \
         main.cpp
 
 HEADERS += \
@@ -21,7 +22,8 @@ HEADERS += \
     ../Lib/Xcolor.h \
     ../Lib/Xid.h \
     ../Lib/Xstyle.h \
-    ../Lib/Xsvg.h
+    ../Lib/Xsvg.h \
+    ../Lib/Xtypes.h
 
 INCLUDEPATH += \
     ../../Libs/PugiXml \

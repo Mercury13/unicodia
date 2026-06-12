@@ -20,18 +20,9 @@ namespace xsin {
         return std::clamp(r, 0, 1000);
     }
 
-    void encodeAttr(std::string& dest, std::string_view value);
-
 }   // namespace xsi
 
 namespace xs {
-
-#define DEFINE_DEFAULT_5(T) \
-T() = default;   \
-    T(const T&) = default;  \
-    T(T&&) = default;  \
-    T& operator = (const T&) = default;  \
-    T& operator = (T&&) = default;
 
     enum class Channel : unsigned char {
         BOTH = 0, ONE = 1, TWO = 2, GENERAL = BOTH };
@@ -179,15 +170,6 @@ T() = default;   \
 
     using MaybeLink = TripleMaybe<IdLink>;
 
-    template <class T>
-    concept Stylish = requires(
-            T x, T y, std::string s, std::string_view sv) {
-        x.operator = (y);
-        x.clear();
-        static_cast<bool>(x);
-        x.encodeAttr(s);
-    };
-
     enum class AllowAttr : unsigned int {
         FILL   = 1<<0,  // fill-related: fill, fillRule
         STROKE = 1<<1,  // stroke-related: stroke
@@ -285,26 +267,6 @@ T() = default;   \
 
 }   // namespace xs
 
-namespace xsin {
-    // xs, inner
-
-    void startAttr(std::string& dest, std::string_view key);
-    void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
-    void writeAttr(std::string& dest, std::string_view key, std::string_view value);
-
-    /// Probably distinction string_view vs Stylish is enough
-    ///   to resolve overload reliably
-    /// So no need to writeAttrT
-    template <xs::Stylish T>
-    void writeAttr(std::string& dest, std::string_view key, T& value);
-
-    template <xs::Stylish T>
-    void writeAttrIf(std::string& dest, std::string_view key, T& value);
-
-    constexpr std::string_view V_INHERIT = "inherit";
-
-}   // namespace xsin
-
 
 ///// Template implementations /////////////////////////////////////////////////
 
@@ -337,19 +299,3 @@ int xs::TripleMaybe<Payload>::parse(std::string_view x)
     *this = Special(x);
     return I_SPECIAL;
 }
-
-template <xs::Stylish T>
-void xsin::writeAttr(std::string& dest, std::string_view key, T& value)
-{
-    startAttr(dest, key);
-    value.encodeAttr(dest);
-    dest += '"';
-}
-
-template <xs::Stylish T>
-void xsin::writeAttrIf(std::string& dest, std::string_view key, T& value)
-{
-    if (value)
-        writeAttr<T>(dest, key, value);
-}
-

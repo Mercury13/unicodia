@@ -8,6 +8,7 @@
 
 #include "Xbit.h"
 #undef XACT
+#include "Xtypes.h"
 
 namespace xsin {
 
@@ -59,38 +60,6 @@ namespace xid {
 
 namespace xs {
 
-    struct IdInfo {
-        std::string_view name;
-        DicId fullId;
-    };
-
-#define DEFINE_DEFAULT_5(T) \
-    T() = default;   \
-        T(const T&) = default;  \
-        T(T&&) = default;  \
-        T& operator = (const T&) = default;  \
-        T& operator = (T&&) = default;
-
-    enum class CharType : unsigned char { BAN, NEXT, START };
-    struct IdLink {
-        std::string refId;
-
-        bool operator == (const IdLink&) const noexcept = default;
-        DEFINE_DEFAULT_5(IdLink)
-        template <class T> explicit IdLink(T&& x)
-            : refId(std::forward<T>(x)) {}
-        static CharType charType(unsigned char x) noexcept;
-        static CharType charType(char x) noexcept { return charType(static_cast<unsigned char>(x)); }
-        static bool isId(std::string_view x) noexcept;
-        static std::optional<IdLink> parse(std::string_view x);
-        void encodeAttr(std::string& dest) const;
-    };
-    struct Inherit {
-        bool operator == (const Inherit&) const noexcept { return true; }
-    };
-
-    using ValueVar = std::variant<Inherit, IdLink>;
-
     constexpr auto MAX_INDEX = static_cast<unsigned>(xsin::IdIndex::NN);
 
     constexpr size_t NO_INDEX = std::numeric_limits<size_t>::max();
@@ -110,7 +79,7 @@ namespace xs {
         struct L {
             size_t next = NO_INDEX;  // actually a linked list
             size_t prev = NO_INDEX;
-        } l; // links
+        } l; // linksl
         using Kv::Kv;
     };
 

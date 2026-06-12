@@ -14,13 +14,18 @@ static_assert(!xid::STOP_COLOR.has(xs::IdBit::FILL));
 
 namespace {
 
+    struct IdInfo {
+        std::string_view name;
+        xs::DicId fullId;
+    };
+
     #define XACT(id, str, bit) { str, xid::id },
-    constexpr xs::IdInfo CE_ALL[] {
+    constexpr IdInfo CE_ALL[] {
         #include "Xid.h"
     };
     static_assert(std::size(CE_ALL) == xs::MAX_INDEX);
 
-    consteval size_t checkAscending(const xs::IdInfo (&x)[xs::MAX_INDEX]) {
+    consteval size_t checkAscending(const IdInfo (&x)[xs::MAX_INDEX]) {
         for (size_t i = 1; i < xs::MAX_INDEX; ++i) {
             auto& prev = x[i - 1];
             auto& curr = x[i];
