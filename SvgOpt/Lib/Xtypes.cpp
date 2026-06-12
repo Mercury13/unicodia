@@ -81,7 +81,7 @@ void xs::Number::encodeAttr(double value, std::string& dest, int precision)
         auto pE = std::find_first_of(beg, end, EXP.begin(), EXP.end());
         if (pE != end) {
             // Parse numeric exp part and write again
-            *pE = 'e';
+            *pE = 'e';  // Most stdlib's do E, but need e!
             auto pExpNum = pE + 1;
             int expValue;
             // from_chars cannot parse +1
