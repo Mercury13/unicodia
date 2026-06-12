@@ -130,3 +130,16 @@ void xs::IdLink::encodeAttr(std::string& dest) const
     xsin::encodeAttr(dest, refId);
     dest += ')';
 }
+
+
+///// ValueVar /////////////////////////////////////////////////////////////////
+
+
+void xs::ValueVar::encodeAttr(std::string& dest) const
+{
+    std::visit(
+        [&dest](const auto& x) {
+            x.encodeAttr(dest);
+        },
+        *this);
+}

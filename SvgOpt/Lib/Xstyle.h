@@ -40,14 +40,6 @@ namespace xs {
     struct None {
         bool operator == (const None&) const noexcept { return true; }
     };
-    struct Special {
-        std::string text;
-        DEFINE_DEFAULT_5(Special)
-        template <class T> explicit Special(T&& x) : text(std::forward<T>(x)) {}
-        bool operator == (const Special&) const noexcept = default;
-        void encodeAttr(std::string& dest) const
-            { xsin::encodeAttr(dest, text); }
-    };
 
     template <class T>
     concept SimpleStyleType = requires (

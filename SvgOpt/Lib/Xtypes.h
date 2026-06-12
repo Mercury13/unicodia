@@ -4,6 +4,8 @@
 #include <optional>
 #include <variant>
 
+#include "Xcolor.h"
+
 //
 //  Basic types
 //
@@ -14,6 +16,10 @@ T() = default;   \
     T(T&&) = default;  \
     T& operator = (const T&) = default;  \
     T& operator = (T&&) = default;
+
+namespace xsin {
+    void encodeAttr(std::string& dest, std::string_view value);
+}   // nsmespace xsin
 
 namespace xs {
 
@@ -40,18 +46,45 @@ namespace xs {
         static std::optional<IdLink> parse(std::string_view x);
         void encodeAttr(std::string& dest) const;
     };
+    ///
+    ///  @warning  The objects must check default values for themselves!
+    ///
     struct Inherit {
         bool operator == (const Inherit&) const noexcept { return true; }
+        void encodeAttr(std::string&) const {}  // do nothing
     };
 
-    using ValueVar = std::variant<Inherit, IdLink>;
+    struct Special {
+        std::string text;
+        DEFINE_DEFAULT_5(Special)
+        template <class T> explicit Special(T&& x) : text(std::forward<T>(x)) {}
+        bool operator == (const Special&) const noexcept = default;
+        void encodeAttr(std::string& dest) const { xsin::encodeAttr(dest, text); }
+    };
 
+    using ValueVarFather = std::variant<Inherit, Color, IdLink, Special>;
+    class ValueVar : public ValueVarFather {
+        using Super = ValueVarFather;
+    public:
+        static constexpr int I_INHERIT = 0;
+        static constexpr int I_COLOR = 1;
+        static constexpr int I_IDLINK = 2;
+        static constexpr int I_SPECIAL = 3;
+        static constexpr int I_N = 4;
+        static_assert(I_N == std::variant_size_v<Super>);
+
+        bool operator == (const ValueVar&) const noexcept = default;
+        using Super::Super;
+
+        DEFINE_DEFAULT_5(ValueVar)
+
+        void encodeAttr(std::string& dest) const;
+    };
 }   // xs
 
 namespace xsin {
     // xs, inner
 
-    void encodeAttr(std::string& dest, std::string_view value);
     void startAttr(std::string& dest, std::string_view key);
     void writeAttrIf(std::string& dest, std::string_view key, std::string_view value);
     void writeAttr(std::string& dest, std::string_view key, std::string_view value);
