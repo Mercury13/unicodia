@@ -18,7 +18,7 @@ namespace xs {
         OPEN_STROKE = 1 << 20,      ///< Open strokes (for butt)
         SHARP_STROKE = STROKE,      ///< Strokes with sharp corners
         ANIMATION = 1 << 21,        ///< Animation-related
-        FORMAL_STRING = 1LL << 55,  ///< Formalized string
+        FORMAL_STRING = 1LL << 55,  ///< Formalized string, just trim for now
         EFFECT = 1LL << 56,         ///< Effect-related
         JUST_LEAVE = 1LL << 57,     ///< Just leave, do not touch
         RENDERING_HINT = 1LL << 58, ///< Rendering hint
