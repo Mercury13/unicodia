@@ -4237,7 +4237,7 @@
      <transl>Форматирующие символы стенографии</transl>
     </text>
     <text id="Text">
-     <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Natives Americans, North-West USA)'' shorthand.</orig>
+     <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Native Americans, North-West USA)'' shorthand.</orig>
      <transl>[[pt:ignorable|Невидимые]] символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.</transl>
     </text>
    </group>
@@ -4248,7 +4248,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There probably will be no more big additions of such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
+      <p>The final bit of symbols from old computers. Rare [[pt:pseudographics|pseudographics]], game sprites (some of those computers had no graphics), big letters spanning multiple [[pt:mono|character cells]]… There will probably be no more major additions to such symbols, as microcomputers of the 2010s tend to stick to standard encodings.</p>
       <p />
       <p>Unicode{{_}}17 [[pt:unification|disunified]] console symbols from [[pt:emoji|emoji]].</p>
      </orig>
@@ -4267,11 +4267,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Asteroid signs are from astronomy of the 19th century, when people started to discover them. Modern astronomers do not use these signs.</p>
+      <p>Asteroid signs date back to 19th-century astronomy, when people began discovering them. Modern astronomers do not use these signs.</p>
       <p />
       <p>Arabic geomancy (actually divination using random numbers, like [[pk:4DC0|Yijing]]) involved drawing random figures on the sand.</p>
       <p />
-      <p>Circle with a bar (in superscripted form) in modern chemistry means “standard” (convenient for calculations) state of mixture when its composition depends on temperature and pressure.</p>
+      <p>Circle with a bar (in superscripted form) in modern chemistry denotes the “standard” (convenient for calculations) state of a mixture, whose composition depends on temperature and pressure.</p>
      </orig>
      <transl>
       <p>Знаки астероидов{{-}}из астрономии XIX{{_}}века, когда стали открывать их. Современные астрономы не пользуются этими знаками.</p>
@@ -4289,15 +4289,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially, marks were written in red; Alexander Mezenets (17th century) invented a system of marks that does{{_}}not{{_}}need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
+      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially, marks were written in red; Alexander Mezenets (17th century) invented a system of marks that did{{_}}not{{_}}need cinnabar. Unlike European notes, which are encoded mainly to simplify programmers’ life and convey only rhythm in [[pt:plaintext|plain text]], Znamenny encoding is fully functional.</p>
       <p />
       <p>Banners convey a figure that is sung (up to 10 notes), and the pitch is specified with marks.</p>
       <p />
-      <p>The earliest Znamenny scores are dated to 11th century. During the church reform (“schism”) of 17th century banners were replaced with Kievan notation (“axes”). Until 19th century it was gradually supplanted with polyphonic chant that’s present in churches nowadays. And Znamenny chant and monophony became a feature of Old Believers.</p>
+      <p>The earliest Znamenny scores date to the 11th century. During the church reform (“schism”) of the 17th century, banners were replaced with Kyivan/Kievan notation (“axes”). Until the 19th century, it was gradually supplanted by polyphonic chant, which is present in churches nowadays. And Znamenny chant and monophony became a feature of Old Believers.</p>
       <p />
-      <p>There are several types of chant: Kondak (type of church song), Stolp (pole), Put (way), and Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
+      <p>There are several types of chant: Kondak (a type of church song), Stolp (pole), Put (way), and Demestvo (origin unclear, maybe from Latin ''domesticus''). The last one features elements of polyphony.</p>
       <p />
-      <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project that draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
+      <p>There are modern attempts to revive the Znamenny chant. Dvoyeznamenniki (double-banners), scores written with both banners and notes, gave the key to understanding Znamenny notation. It was brought to Unicode by the Ponomar project, which draws fonts, builds Church Slavonic spelling and recognition dictionaries, and digitizes books.</p>
      </orig>
      <au-cmt>
       <p>Priznaks = Russian “признáк=priznak” conveyed in your alphabet + ending of plural</p>
@@ -4333,11 +4333,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Notes looking like modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century length marks were invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today special fountain pens for musicians are produced.</p>
+      <p>Notes resembling modern appeared in the 10th century. Those notes were square because they were drawn with a thick pen. Four lines per staff were drawn for singers, and more for instruments. There were no absolute frequencies. By the 13th century, length marks had been invented. Round notes appeared in an attempt to cursively draw a note with a pen of medium thickness. Even today, special fountain pens for musicians are produced.</p>
       <p />
-      <p>Notes evolved to their current form in the 17th century with equal temperament which made possible porting music to other instruments, playing in orchestras.</p>
+      <p>Notes evolved to their current form in the 17th century with equal temperament, which made it possible to port music to other instruments and to play in orchestras.</p>
       <p />
-      <p>Music is [[pt:universality|non-text]] information and thus is outside scope of Unicode. But it’s tempting to use existing typography engines for storing notes and their parts in fonts to simplify music software, and shorten sheet PDFs. In this light the purpose of eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013 open standard SMuFL ''(Standard Music Font Layout)'' came, it extended the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
+      <p>Music is [[pt:universality|non-text]] information and thus is outside the scope of Unicode. But it’s tempting to use existing typography engines to store and their parts in fonts, thereby simplifying music software and shortening sheet PDFs. In this light, the purpose of the eight [[pt:format|format]] characters ([[pc:1D173|beam]], [[pc:1D175|tie]], [[pc:1D177|slur]], [[pc:1D179|phrase]]) is unclear. In 2013, the open standard SMuFL ''(Standard Music Font Layout)'' came out, extending the block to 2600 characters using [[pt:private|private-use]] codepoints.</p>
       <p />
       <p>Microtone notation initially accepted by Unicode ([[pc:1D132]] and [[pc:1D133|33]]) wasn’t widely used, few have seen these characters “in the wild”. Unicode{{_}}18 added another notation ([[pc:1D1EB|half-sharp]], [[pc:1D1ED|half-flat]]) widely used by musical software.</p>
       <p />
@@ -4363,7 +4363,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Little is known about ancient Greeks. Initially they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
+      <p>Little is known about ancient Greeks. Initially, they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
       <p />
       <p>There were different notations for musicians and singers, it allowed parallel writing of lyrics, music and hints for singers. Notes were written with letters, and characters that differ from normal Greek letters are gathered in this block without any system.</p>
      </orig>
@@ -4391,11 +4391,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Positional base-20 numerals invented in 1980s by Inuit (Eskimo) schoolchildren from town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before the introduction of this system, they were among the worst in mathematics across all USA, after{{-}}a little above average, like bilingual people are often better in linguistics.</p>
+      <p>Positional base-20 numerals invented in the 1980s by Inuit (Eskimo) schoolchildren from the town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before the introduction of this system, they were among the worst in mathematics across the USA, after that{{-}}a little above average, like bilingual people are often better in linguistics.</p>
       <p />
-      <p>A base-20 abacus was designed. It looks like Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
+      <p>A base-20 abacus was designed. It looks like a Japanese ''soroban'', but there are three “heavenly” beads. As in Japan, the bead is “off” if it’s near the edge, and “on” if near the middle wall. There are simple algorithms for conversion from base-20 to decimal.</p>
       <p />
-      <p>There is no special character for fractional part (“vigesimal point”). Sometimes middle dot is used.</p>
+      <p>There is no special character for the fractional part (“vigesimal point”). Sometimes a middle dot is used.</p>
      </orig>
      <transl>
       <p>Позиционные двадцатеричные цифры, придуманные в 1980-е инуитскими (эскимосскими) школьниками из городка Кактовик (Аляска). Инуиты считают двадцатками &lt;nobr&gt;(74 = 3·20 + 15 − 1)&lt;/nobr&gt;, и до введения новой системы они были в числе худших в математике по всем США, после{{-}}несколько лучше среднего, как двуязычный часто лучше ориентируется в лингвистике.</p>
@@ -4413,9 +4413,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Maya used a base-20 positional numeral system. Digits were written top-down. Sometimes face of the corresponding god was drawn instead of a digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before the common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
+      <p>Maya used a base-20 positional numeral system. Digits were written top-down. Sometimes the face of the corresponding god was drawn instead of a digit. By common opinion, positional counting and zero were invented before Maya (maybe by Olmecs) before the common era. Shells, rods and dots tell that such numerals originate from counting boards.</p>
       <p />
-      <p>Some sources state that in everyday life Maya used simpler non-positional numerals.</p>
+      <p>Some sources state that Maya used simpler non-positional numerals in everyday life.</p>
      </orig>
      <transl>
       <p>Майя пользовались двадцатеричной позиционной системой счисления. Разряды записывались сверху вниз. Иногда вместо цифры рисовали лицо соответствующего бога. Считают, что позиционный счёт и ноль были изобретены до майя (возможно, ольмеками) до нашей эры. Ракушки, палочки и точки говорят, что такая система счисления родом со счётных досок.</p>
@@ -4431,11 +4431,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
+      <p>The Tài Xuán Jīng (the Canon of Supreme Mystery) is a Chinese divination book dating to 2{{_}}CE, inspired by the [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should randomly choose a number four times, get a tetragram and read its meaning in the book.</p>
       <p />
-      <p>Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees the only thing remaining is to explain this evil mistake in comments.</p>
+      <p>The Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees, the only thing remaining is to explain this evil mistake in the comments.</p>
       <p />
-      <p>Some monograms and digrams are already present in Base Plane.</p>
+      <p>Some monograms and digrams are already present in the Base Plane.</p>
      </orig>
      <transl>
       <p>Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый [[pk:4DC0|Книгой перемен]]. В трактате описана 81 тетраграмма. Каждая линия бывает в трёх вариантах: сплошная (天 тянь = небеса), с одним разрывом (地 ди = земля), и с двумя разрывами (人 жэнь = человек). Надлежало четыре раза выкинуть случайное число, получить тетраграмму и прочитать её расшифровку в книге.</p>
@@ -5995,11 +5995,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
+      <p>The shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
-      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
+      <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses the old ''Noto Sans Duployan{{_}}2'' font for clarity, it just assigns some glyphs to Unicode characters. In 2023, Noto{{_}}3 came out, which actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains {{n|10000}} glyphs and 500 rules, and the word “cats” in the Perrault system for English (K+A+TS, [[pc:1BC05]]+[[pc:1BC41]]+[[pc:1BC36]]) looks like</p>
       <p>:{{DuplCats}}</p>
      </orig>
+     <au-cmt>Of course, you must write CATS as is. Maybe, explaining in your lang (not necessary).</au-cmt>
      <transl>
       <p>Система стенографии, придуманная французским священником Эмилем Дюплойе. По классификации стенографий{{-}}геометрическая (основы знаков{{-}}точки, линии, круги), алфавитная (отдаёт одинаковое внимание гласным и согласным).</p>
       <p />
