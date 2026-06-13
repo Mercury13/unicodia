@@ -3175,7 +3175,7 @@
    </group>
    <group id="1AFF0">
     <text id="Text">
-     <orig>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
+     <orig>Writing of the Taiwanese dialect of the Southern Min language with kana. Invented by Japanese linguists before World War 2.</orig>
     </text>
    </group>
    <group id="1B000">
@@ -3188,7 +3188,7 @@
    </group>
    <group id="1B100">
     <text id="Text">
-     <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana.</orig>
+     <orig>31 characters of [[ps:Hent|Hentaigana]] (old [[ps:Hira|Hiragana]]), and 4 characters of [[ps:Kana|Katakana]] and Hiragana (as of Unicode{{_}}14).</orig>
     </text>
    </group>
    <group id="1B130">
@@ -3196,7 +3196,7 @@
      <orig>Small kana extension</orig>
     </text>
     <text id="Text">
-     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding characters of [[ps:Hira|Hiragana]] are added.</orig>
+     <orig>Small [[ps:Kana|Katakana]] characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also, corresponding [[ps:Hira|Hiragana]] characters are added.</orig>
     </text>
    </group>
    <group id="1B170">
@@ -4929,9 +4929,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Jurchens (ancestors of Manchu) rebelled against [[ps:Kits|Khitans]] in 1115, and soon created their own script.</p>
+      <p>The Jurchens (ancestors of the Manchu) rebelled against the [[ps:Kits|Khitans]] in 1115 and soon created their own script.</p>
       <p />
-      <p>In 1234, Jurchens were conquered by Mongols. China overthrew Mongols in 1368, and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
+      <p>In 1234, the Jurchens were conquered by the Mongols. China overthrew the Mongols in 1368 and communicated with the still-conquered northern neighbour in the Jurchen script. In 1599, the Manchu converted to the [[ps:Mong|Mongolian]] script.</p>
       <p />
       <p>Almost all available sources are monuments and household items. Only a few papers survived.</p>
      </orig>
@@ -5670,17 +5670,17 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Nüshu existed for centuries and was used as women’s script: men were trained in [[ps:Hani|literacy]], and women used simpler syllabic script. Unlike sweeping ideographs, Nüshu was written with a thin sliver. Many of Nüshu specimen are ''third day missives'': a girl departs to another village to marry, and her sisters and friend girls embroid wishes to her, often in poetry.</p>
+      <p>Nüshu existed for centuries and was used as a women’s script: men were trained in [[ps:Hani|literacy]], while women used a simpler syllabic script. Unlike sweeping ideographs, Nüshu was written with a thin sliver. Many Nüshu specimens are ''third-day missives'': a girl departs for another village to marry, and her sisters and female friends embroider wishes for her, often in poetry.</p>
       <p />
-      <p>Despite common misconception, Nüshu was not{{_}}a{{_}}cipher; men just considered it “low” script. The first known specimen was made in early 20th century, but shape of characters states that Nüshu existed in 1300.</p>
+      <p>Despite the common misconception, Nüshu was not{{_}}a{{_}}cypher; men just considered it “low” script. The first known specimen was made in the early 20th century, but the shape of the characters states that Nüshu existed in 1300.</p>
       <p />
-      <p>Unlike Japanese [[ps:Hira|Hiragana]] of similar use, Nüshu remained unofficial script. Campaigns against illiteracy and spread of sewing machines in 20th century put Nüshu to decline. Japanese invaders banned Nüshu seeing a cipher in it, and Red Guards during Cultural Revolution destroyed antique things, including embroideries.</p>
+      <p>Unlike the Japanese [[ps:Hira|Hiragana]], which is used for similar purposes, Nüshu remained an unofficial script. Campaigns against illiteracy and the spread of sewing machines in the 20th century put Nüshu into decline. Japanese invaders banned Nüshu, seeing a cypher in it, and the Red Guards during the Cultural Revolution destroyed antiques, including embroideries.</p>
       <p />
-      <p>Nüshu was discovered again in 1980s. Yang Huanyi, the last woman proficient in Nüshu, died in 2004 in age of 98{{-}}after her Nüshu was known by scholars only. Embroideries with Nüshu became a populat tourist souvenir; there are concerns that tourism will distort an ancient script.</p>
+      <p>Nüshu was discovered again in the 1980s. Yang Huanyi, the last woman proficient in Nüshu, died in 2004 at the age of 98{{-}}after her death, Nüshu was known only to scholars. Embroideries featuring Nüshu have become a popular tourist souvenir; there are concerns that tourism will distort an ancient script.</p>
       <p />
       <p>About 1800 characters are known, but most mean the same syllable.</p>
       <p />
-      <p>''Unicodia'' uses ''Noto Sans Nushu'' font. The main typographer is a lady{{-}}Lisa Huang, a Frenchwoman of Chinese origin.</p>
+      <p>''Unicodia'' uses the ''Noto Sans Nushu'' font. The main typographer is a lady{{-}}Lisa Huang, a Frenchwoman of Chinese origin.</p>
      </orig>
     </text>
    </group>
