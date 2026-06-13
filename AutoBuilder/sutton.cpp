@@ -9,6 +9,7 @@
 
 // Libs
 #include "u_Strings.h"
+#include "u_Vector.h"
 
 // Project-local
 #include "loader.h"

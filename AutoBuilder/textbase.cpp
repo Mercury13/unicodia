@@ -6,6 +6,7 @@
 
 // Libs
 #include "u_Strings.h"
+#include "u_Vector.h"
 
 // Project-local
 #include "loader.h"
@@ -180,7 +181,7 @@ tx::Base tx::loadBase()
                 if (trimmed.starts_with('@')) {
                     // Subtitle, do nothing
                 } else {
-                    auto names = str::splitSv(trimmed, '\t');
+                    SafeVector names = str::splitSv(trimmed, '\t');
                     std::string_view sCode = names.safeGetV(0, ""sv);
                     currChar = fromHex(sCode);
                     mainName = names.safeGetV(1, "");
