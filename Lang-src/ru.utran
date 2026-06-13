@@ -4621,9 +4621,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arabic non-positional numbers used in India since the 17th century (back under Mogul rule) up to mid 20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
+      <p>Arabic non-positional numbers used in India since the 17th century (under the Mughal rule) up to the mid-20th century. Arabic ''siyaq'' means “order”. Also known as ''raqm'', Arabic “account”.</p>
       <p />
-      <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], from Arabic, starting from {{n|100000}} are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
+      <p>Numbers up to {{n|90000}} are [[pt:acrophonic|acrophonic]], of Arabic origin; from {{n|100000}} onwards are Indian words. Written right to left, the order is complex: 515 is written as 500, 5 (''prefixed'' variation), 10.</p>
      </orig>
      <transl>
       <p>Арабские непозиционные цифры, применявшиеся в Индии с XVII{{_}}века (ещё под империей Великих Моголов) до середины XX{{_}}века. Арабское «сийяк» означает «порядок». Также цифры известны под названием «ракм», арабское «счёт».</p>
@@ -4641,7 +4641,7 @@
      <orig>
       <p>Arabic non-positional [[pt:acrophonic|acrophonic]] numerals used in late-medieval Turkey, also “rakkamları” (Arabic ''raqm'' “account”). Arabic ''siyaq'' means “order”.</p>
       <p />
-      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. ''Marratan'' symbol is written with thousands to denote millions.</p>
+      <p>Written right-to-left, the order is complex: 123 is written as 100, 3, 20. The ''marratan'' symbol is written with thousands to denote millions.</p>
      </orig>
      <transl>
       <p>Арабские непозиционные [[pt:acrophonic|акрофонические]] цифры, использовавшиеся в Турции позднего средневековья, также «раккамлары»{{-}}от арабского ''ракм'' «счёт». Арабское «сийяк» означает «порядок».</p>
@@ -4657,9 +4657,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Arabs have their own mathematical notation. They use [[ps:Arab|own]] letters written right-to-left. Like Westerns have Roman, bold, italic and others, Arabs have isolated, initial, tailed, stretched, looped and double-struck letters. Signs are international mirrored, but own exist too{{-}}for example, sum. Even signs “for all” and “exists” are mirrored.</p>
+      <p>Arabs have their own mathematical notation. They use their [[ps:Arab|own]] letters written right-to-left. As Westerns have Roman, bold, italic, and others, Arabs have isolated, initial, tailed, stretched, looped, and double-struck letters. Signs are international mirrored, but own exist too{{-}}for example, sum. Even signs “for all” and “exists” are mirrored.</p>
       <p />
-      <p>First this set was implemented in system of mathematical text TᴇX (pronounced “tech”), and in 2012, after seven years of agreeing on, these works were moved to Unicode.</p>
+      <p>This set was first implemented in the mathematical typesetting system TᴇX (pronounced “tech”), and in 2012, after seven years of agreement, these characters were adopted by Unicode.</p>
      </orig>
      <transl>
       <p>У арабов своя математическая нотация. Они пользуются [[ps:Arab|собственными]] буквами с написанием справа налево, и как на Западе есть прямой, жирный, курсив и другие, у арабов есть буквы изолированные, начальные, с хвостом, с оттяжкой, с петлей и ажурные. Знаки общеевропейские отзеркаленные, но встречаются и собственные{{-}}например, сумма. Отзеркаливают даже знаки «существует» или «частный дифференциал».</p>
@@ -4675,13 +4675,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The gambling game májiàng (often named ''mahjong'' through Romanization) was invented late 19th century, the first surviving set dates to 1870. The game itself is little known to the Western world, but solitaire is widespread: remove identical tiles from the sides of the figure.</p>
+      <p>The gambling game májiàng (often Romanized as ''mahjong'') was invented in the late 19th century; the first surviving set dates to 1870. The game itself is little known to the Western world, but the solitaire is widespread: remove identical tiles from the sides of the figure.</p>
       <p />
-      <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed on it holding a stick with teeth. The solitaire was a mixture of two Chinese games, mahjong and “demolish the turtle” played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
+      <p>The solitaire was invented by student Brodie Lockard in 1981{{-}}he fell from a trampoline and was completely paralyzed. For the time of rehab, he convinced the CDC company to install a terminal, and he programmed it by holding a stick with teeth. The solitaire was a mixture of two Chinese games: mahjong and “demolish the turtle”, played with dominoes. A terminal of the PLATO system was monochrome with 512×512 resolution{{-}}this was enough for such a complex game.</p>
       <p />
       <p>Mahjong suits come from one coin (rings), a bundle of 100 coins (bamboos) and {{n|10000}} coins (the ideograph below means ten thousand). Trumps are four winds, three dragons, four seasons and four flowers. Some variants contain other trumps{{-}}professions (fisherman, lumberjack, peasant, scholar) or arts (music, Go, calligraphy, drawing).</p>
       <p />
-      <p>…Lockard remained wheelchair-bound, but got fame as a developer of games and assistive software, and alive as of {{ylockard}}.</p>
+      <p>…Lockard remained wheelchair-bound, but gained fame as a developer of games and assistive software, and is alive as of {{ylockard}}.</p>
      </orig>
      <au-cmt>
       <p>{{ylockard}} = 2025 at the time of writing</p>
@@ -4705,11 +4705,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Dominoes were invented by the Chinese about 13th century. In 18th century the game got to Italy.</p>
+      <p>The Chinese invented dominoes around the 13th century. In the 18th century, the game got to Italy.</p>
       <p />
-      <p>There are three versions of name etymology. By the first one, the winner became the lord, ''domino''. By the second one, the game was permitted in monasteries, and monks started every job from prayer to Lord, italian ''Domino''. By the third version, in the honour of black-and-white carnival suit ''domino'' portraying monk.</p>
+      <p>There are three versions of name etymology. By the first one, the winner became the lord, the ''domino''. By the second one, the game was permitted in monasteries, and monks started every job from prayer to the Lord, Italian ''Domino''. By the third version, in honour of the black-and-white carnival suit ''domino'' portraying a monk.</p>
       <p />
-      <p>After rethinking the word ''domino'', in mathematics ''trimino'', ''tetramino'' etc appeared{{-}}figures of 3, 4 etc squares.</p>
+      <p>After rethinking the word ''domino'', in mathematics ''trimino'', ''tetramino'', etc. appeared{{-}}figures of 3, 4, etc. squares.</p>
      </orig>
      <transl>
       <p>Домино изобрели китайцы около XIII{{_}}века. В XVIII{{_}}веке игра попала в Италию.</p>
@@ -4727,15 +4727,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The block unites standard cards and Tarot deck.</p>
+      <p>The block unites standard cards and the Tarot deck.</p>
       <p />
-      <p>The game of cards was invented about 12th century in East Asia. In Europe, cards were first mentioned in 14th century. Though Muslims deny that they transferred cards to the West, it turned out that Mamluks had their own deck looking like Tarot.</p>
+      <p>The game of cards was invented about the 12th century in East Asia. In Europe, cards were first mentioned in the 14th century. Though Muslims deny that they transferred cards to the West, it turned out that Mamluks had their own deck resembling Tarot.</p>
       <p />
-      <p>Joker has no relation to Tarot trumps, it was added in 19th century.</p>
+      <p>Joker has no relation to Tarot trumps{{-}}it was added in the 19th century.</p>
       <p />
       <p>Unicode names of trumps correspond to the French Tarot deck (divination is usually done with an Italian deck). Exactly: 0){{_}}fool, 1){{_}}individual, 2){{_}}childhood, 3){{_}}youth, 4){{_}}maturity, 5){{_}}old age, 6){{_}}morning, 7){{_}}afternoon, 8){{_}}evening, 9){{_}}night, 10){{_}}earth and air, 11){{_}}water and fire, 12){{_}}dance, 13){{_}}shopping, 14){{_}}open air leisure, 15){{_}}arts, 16){{_}}spring, 17){{_}}summer, 18){{_}}autumn, 19){{_}}winter, 20){{_}}game, 21){{_}}collective.</p>
       <p />
-      <p>The block has one [[pt:emoji|emoji]], black joker.</p>
+      <p>The block has one [[pt:emoji|emoji]], a black joker.</p>
      </orig>
      <transl>
       <p>Блок объединяет стандартные карты и колоду таро.</p>
@@ -4757,11 +4757,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Japanese television characters, characters from ''Webdings'' font, characters of intellectual property…</p>
+      <p>Japanese television characters, characters from the ''Webdings'' font, characters of intellectual property…</p>
       <p />
-      <p>Blood groups, parking sign and some other characters are [[pt:emoji|emoji]].</p>
+      <p>Blood groups, the parking sign and some other characters are [[pt:emoji|emojis]].</p>
       <p />
-      <p>[[pt:country|Flag]] emoji are assembled from regional indicators: if you write “GB” emoji, you’ll get flag of Great Britain.</p>
+      <p>[[pt:country|Flag]] emojis are assembled from regional indicators: if you write “GB” emoji, you’ll get the flag of Great Britain.</p>
      </orig>
      <transl>
       <p>Японские телевизионные символы, символы из шрифта Webdings, символы интеллектуальной собственности…</p>
@@ -4779,18 +4779,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Ideographs in brackets, squares, circles used in Japanese placards and television.</p>
+      <p>Ideographs in brackets, squares, and circles used in Japanese placards and on television.</p>
       <p />
-      <p>1F227…1F231, 1F240…1F248 are signs from Japanese baseball reports: pitcher, catcher, 1st base… This sport is popular in Japan, in Tokyo Olympics 2021 they got gold in baseball and softball! 1F214 has double purpose: two-language broadcasting and 2nd base player.</p>
+      <p>[[pc:1F227]]…[[pc:1F231]], [[pc:1F240]]…[[pc:1F248]] are signs from Japanese baseball reports: pitcher, catcher, 1st base… This sport is popular in Japan: at the Tokyo 2021 Olympics, they won gold in baseball and softball! [[pc:1F214]] has a dual purpose: two-language broadcasting and 2nd-base player.</p>
       <p />
-      <p>1F260…1F265 are six characters from Chinese folk beliefs: luck, prosperity, longevity, happiness, love, plenty.</p>
+      <p>[[pc:1F260]]…[[pc:1F265]] are six characters from Chinese folk beliefs: luck, prosperity, longevity, happiness, love, and plenty.</p>
      </orig>
      <transl>
       <p>Иероглифы в скобках, квадратах, кругах. Используются в Японии в плакатах, телевидении.</p>
       <p />
-      <p>1F227…1F231, 1F240…1F248{{-}}знаки из японских бейсбольных сводок: подающий, ловец, игрок на 1-й базе… Этот спорт в Японии популярен, на Олимпиаде 2021 в Токио у них золото по бейсболу и софтболу! У 1F214 двойное назначение: двуязычная трансляция и игрок на 2-й базе.</p>
+      <p>[[pc:1F227]]…[[pc:1F231]], [[pc:1F240]]…[[pc:1F248]]{{-}}знаки из японских бейсбольных сводок: подающий, ловец, игрок на 1-й базе… Этот спорт в Японии популярен, на Олимпиаде 2021 в Токио у них золото по бейсболу и софтболу! У [[pc:1F214]] двойное назначение: двуязычная трансляция и игрок на 2-й базе.</p>
       <p />
-      <p>1F260…1F265{{-}}шесть символов из китайских народных верований: удача, процветание, долголетие, счастье, любовь, изобилие.</p>
+      <p>[[pc:1F260]]…[[pc:1F265]]{{-}}шесть символов из китайских народных верований: удача, процветание, долголетие, счастье, любовь, изобилие.</p>
      </transl>
     </text>
    </group>
@@ -5138,15 +5138,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Fula, Fulani, or Fulbe are nomadic herders, anthropologically the closest to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
+      <p>Fula, Fulani, or Fulbe are nomadic herders, the most anthropologically similar to Europeans in Sub-Saharan Africa and the most avid advocates of Islam in West Africa.</p>
       <p />
-      <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey Fula languages better than Latin or Arabic. The new script caught on, and it is taught in schools if Guinea, Liberia and other countries, Android is localized.</p>
+      <p>The alphabet was invented by brothers Ibrahima and Abdoulaye Barry, who were teenagers, to convey the Fula languages better than Latin or Arabic. The new script caught on and is taught in schools in Guinea, Liberia, and other countries; Android is localized.</p>
       <p />
-      <p>Alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects peoples from vanishing”.</p>
+      <p>The alphabet is named after four letters: A, D, L, M. These letters mean “Alkule Dandayɗe Leñol Mulugol”{{-}}“alphabet that protects the peoples from vanishing”.</p>
       <p />
       <p>Letters are joined, though many modern publications do not join.</p>
       <p />
-      <p>Before that there were two attempts to make the Fula alphabet, both are absent in Unicode: Dita script (≈1958, inspired with pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
+      <p>Before that, there were two attempts to make the Fula alphabet, both absent from Unicode: Dita script (≈1958, inspired by pre-Arabic culture) and Ba’s alphabet (1963). Sometimes Ajami or Wolofal is used{{-}}a greatly modified [[ps:Arab|Arabic]] type. The main script is [[ps:Latn|Latin]].</p>
      </orig>
      <transl>
       <p>Фулá или фульбе{{-}}кочевники-скотоводы, антропологически самые близкие в Чёрной Африке к европейцам и самые ярые проповедники ислама в западной Африке.</p>
@@ -7508,9 +7508,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Islamic preacher Mohamed Turay. Initial script of 42 characters was an [[pt:abugida|abugida]], but with additions made by his pupils it lost consistency. Named after first three syllables. Also a non-positional numeral system came into script.</p>
+      <p>The script was invented by Islamic preacher Mohamed Turay. The initial script of 42 characters was an [[pt:abugida|abugida]], but with additions made by his pupils, it lost consistency. Named after the first three syllables. Also, a non-positional numeral system came into script.</p>
       <p />
-      <p>Was widely used in early 20th century, but later Mende adopted [[ps:Latn|Latin]]. There are several hundreds of modern (2010s) people literate in Kikakui.</p>
+      <p>It was widely used in the early 20th century, but later, Mende adopted [[ps:Latn|Latin]]. There are several hundred modern (2010s) people literate in Kikakui.</p>
      </orig>
      <transl>
       <p>Изобрёл кикакуи исламский проповедник Мохаммед Турай. Изначальное письмо из 42 символов было [[pt:abugida|абугидой]], но с дальнейшими добавлениями, сделанными учениками, оно растеряло системность. Название{{-}}по первым трём слогам в азбуке. Также в письмо вошла своя непозиционная система счисления.</p>
