@@ -1,9 +1,13 @@
+// C
+#include <cstring>
+
 // STL
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <set>
 #include <unordered_map>
+#include <algorithm>
 
 // XML
 #include "pugixml.hpp"

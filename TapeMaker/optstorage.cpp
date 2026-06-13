@@ -6,6 +6,7 @@
 #include "u_Strings.h"
 
 // C++
+#include <iostream>
 #include <cstdlib>
 #include <stdexcept>
 
