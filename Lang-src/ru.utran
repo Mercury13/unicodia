@@ -4803,12 +4803,12 @@
      <orig>
       <p>This block contains [[pt:emoji|emoji]] (both Japanese and international), dingbats and characters from user interfaces.</p>
       <p />
-      <p>Destiny of pistol {{em|🔫}} is remarkable: starting from Apple, vendors settled on toy to diminish Internet threatenings.</p>
+      <p>The destiny of the pistol {{em|🔫}} is remarkable: starting with Apple, vendors settled on a toy to discourage people from threatening one another online.</p>
      </orig>
      <transl>
       <p>В блоке содержатся [[pt:emoji|эмодзи]] (как японские, так и международные), а также типографские узоры и символы из пользовательских интерфейсов.</p>
       <p />
-      <p>Примечательна судьба символа «пистолет» {{em|🔫}}{{-}}с подачи ''Apple'' производители остановились на игрушечном для снижения сетевых угроз.</p>
+      <p>Примечательна судьба символа «пистолет» {{em|🔫}}{{-}}с подачи ''Apple'' производители остановились на игрушечном, чтобы меньше угрожали через интернет.</p>
      </transl>
     </text>
    </group>
@@ -4818,7 +4818,7 @@
      <transl>Смайлики</transl>
     </text>
     <text id="Text">
-     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the moment of proposal (2008) emoticons had been circulating in Japanese cellular networks for about 9 years. According to Consortium’s study (2019), six of the ten most used [[pt:emoji|emoji]] are smilies.</orig>
+     <orig>Emoticons or smilies are characters and pictograms that display emotions. By the time of the proposal (2008), emoticons had been circulating in Japanese cellular networks for about 9 years. According to the Consortium’s study (2019), six of the ten most used [[pt:emoji|emojis]] are smilies.</orig>
      <transl>Эмоциконы или смайлики{{-}}символы и пиктограммы, изображающие эмоции. К моменту предложения (2008) смайлики ходили в японских мобильных сетях около 9{{_}}лет. По исследованию Консорциума 2019, из десяти самых используемых [[pt:emoji|эмодзи]] шесть{{-}}смайлики.</transl>
     </text>
    </group>
@@ -4849,9 +4849,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Antoine Lavoisier (end of 18th century) is often considered the founder of chemistry. He closed down, for example, the phlogiston theory. And before him, different theories of why substances react existed, sometimes weird. Some alchemists even speculated that science could make gold or create artificial life. Their signs for various substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
+      <p>Antoine Lavoisier (the late 18th century) is often considered the founder of chemistry. He closed down, for example, the phlogiston theory. And before him, different theories of why substances react existed, sometimes weird. Some alchemists even speculated that science could make gold or create artificial life. Their signs for various substances and methods of processing them were systemless but understandable for anyone who knows Latin and ancient doctrines.</p>
       <p />
-      <p>In Unicode{{_}}15.0 eight characters from astronomy and astrology are added.</p>
+      <p>In Unicode{{_}}15.0, eight characters from astronomy and astrology were added.</p>
      </orig>
      <transl>
       <p>Основоположником химии считается Антуан Лавуазье (конец XVIII{{_}}века), закрывший, например, понятие «флогистон». А до этого были очень разные теории, почему и как вещества взаимодействуют, подчас дикие. Отдельные алхимики даже предполагали, что наука сможет сделать золото или получить искусственную жизнь. У них были бессистемные, но понятные любому знакомому с латынью и древними учениями знаки для разных веществ и методов обработки.</p>
@@ -4869,7 +4869,7 @@
      <orig>
       <p>This block was introduced in an attempt to encode dingbat fonts ''Wingdings'' and ''Webdings''. It also allowed putting an arrow or cross exactly as thick as needed.</p>
       <p />
-      <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
+      <p>Characters for the game of Go and colour icons were added later{{-}}even if there’s no [[pt:ligature|ligature]] of a yellow ribbon, pair {{em|🎀🟨}} will be understandable.</p>
      </orig>
      <transl>
       <p>Блок появился в попытке перенести в Юникод пиктографические шрифты ''Wingdings'' и ''Webdings''. К тому же он позволил поставить стрелку или крест именно той толщины, что надо. </p>
@@ -4881,9 +4881,9 @@
    <group id="1F800">
     <text id="Text">
      <orig>
-      <p>148 arrows from ''Wingdings'' and ''Webdings'' fonts. Also arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
+      <p>148 arrows from the ''Wingdings'' and ''Webdings'' fonts. Also, arrows from [[pk:1FB00|legacy]] computers, [[ps:Egyp|Egyptology]] (reading direction of columnwise text), and chemistry.</p>
       <p />
-      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but Consortium decided to draw them in normal thickness.</p>
+      <p>Arrows 1F8B8…BB are very thick on [[po:Ohio]], but the Consortium decided to draw them in normal thickness.</p>
      </orig>
      <transl>
       <p>148 стрелок из шрифтов ''Wingdings'' и ''Webdings''. Также стрелки со [[pk:1FB00|старых]] компьютеров, [[ps:Egyp|египтологии]] (направление чтения текста по столбцам) и химии.</p>
@@ -4898,7 +4898,7 @@
      <transl>Символы и пиктограммы дополнительные</transl>
     </text>
     <text id="Text">
-     <orig>Introduced in 2015 and contains characters of various use, mainly [[pt:emoji|emoji]]. Also several characters from Typicon, a standard statute of Orthodox worship codified about 1100, last major edits 1695.</orig>
+     <orig>Introduced in 2015, it contains characters of various uses, mainly [[pt:emoji|emojis]]. Also, several characters from Typicon, the standard statute of Orthodox worship codified about 1100, with the last major edits in 1695.</orig>
      <transl>Появившийся в 2015 блок символов разного назначения, в основном [[pt:emoji|эмодзи]]. Также несколько символов из Типикона{{-}}типового устава православного богослужения, кодифицированного около 1100, последние крупные правки 1695.</transl>
     </text>
    </group>
@@ -4909,17 +4909,17 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In movable-type printing turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
+      <p>In movable-type printing, turned pieces were often used for fairy chess pieces as the only option. Well-established non-standard pieces (except weakened and borrowed from other games) are:</p>
       <p>* neutral piece: both players may move it;</p>
       <p>* knight-queen{{-}}also superqueen, omnipotent queen, maharajah, amazon, dragon, terror;</p>
       <p>* knight-bishop{{-}}also archbishop, cardinal, princess, centaur;</p>
-      <p>* knight-rook{{-}}also empress, marshal, chancelor;</p>
-      <p>* grasshopper{{-}}queen that must jump over a piece (own or opponent’s) to do a move, drawn as inverted queen;</p>
-      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as inverted king;</p>
+      <p>* knight-rook{{-}}also empress, marshal, chancellor;</p>
+      <p>* grasshopper{{-}}queen that must jump over a piece (own or opponent’s) to do a move, drawn as an inverted queen;</p>
+      <p>* mann, man, prince{{-}}moves like a king but isn’t royal (cannot castle, no need to protect), drawn as an inverted king;</p>
       <p>* berolina, Berlin pawn, antipawn{{-}}moves one square diagonally forward and takes one square forward, in contrast to ordinary pawn, drawn as an inverted or slanted pawn;</p>
       <p>* nightrider, knightrider, knightmare, unicorn{{-}}does several knight’s leaps in a single direction, blocked with own pieces and takes opponent’s in landing points, drawn as inverted or altered knight;</p>
       <p>* other knights (3-2, 4-1, combined with pawn…) are rare but exist;</p>
-      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
+      <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on the other side. If it leaps in eight cardinal directions, all squares from start to end except the springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
       <p>Two pieces from proto-chess:</p>
       <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
@@ -4971,7 +4971,7 @@
       <p />
       <p>'''Did not''' advance to the standard:</p>
       <p>* characters in intellectual property, like the Apple logo;</p>
-      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts, old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
