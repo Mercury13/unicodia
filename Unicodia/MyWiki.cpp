@@ -3396,7 +3396,7 @@ QString mywiki::buildHtml(
     Flags<Stylefg> flags = NO_FLAGS;
     const bool hasSgnw = sw && (var.size >= HtmlSize::FULL);
     if (hasSgnw)
-        flags &= Stylefg::HAS_SIGNWRITING;
+        flags |= Stylefg::HAS_SIGNWRITING;
 
     appendStylesheet(text, flags);
     str::append(text, var.headStart);
