@@ -4,6 +4,7 @@
 @if exist ~setup_local.bat call ~setup_local.bat
 
 @rem Rest things
+@call xsetup2.bat
 @set /p VERSION=<VERSION.
 @set PRONAME=Unicodia\Unicodia.pro
 @set PRONAME_AB=AutoBuilder\AutoBuilder.pro
@@ -67,82 +68,6 @@
 @goto end
 :inno_ok
 @echo Inno Setup OK
-
-@echo ===== Creating directories =====
-@if exist %DEPLOY% del /S /Q %DEPLOY% >nul
-@if exist %DEPLOY% rmdir /S /Q %DEPLOY% >nul
-@if exist %DEPLOY2% del /S /Q %DEPLOY2% >nul
-@if exist %DEPLOY2% rmdir /S /Q %DEPLOY2% >nul
-@if not exist %DEPLOY% md %DEPLOY%
-@if not exist %DEPLOY1% md %DEPLOY1%
-@if not exist %DEPLOY2% md %DEPLOY2%
-@if not exist %BUILD_AB% md %BUILD_AB%
-@if not exist %BUILD_SC% md %BUILD_SC%
-@if not exist %BUILD% md %BUILD%
-
-@set EMOJIARC=Fonts\emoji.zip
-@if exist %EMOJIARC% goto emoji_ok
-@echo.
-@echo ===== Building graphic emoji =====
-@call xtape.bat
-@if exist %EMOJIARC% goto emoji_ok
-@echo Emoji archive %EMOJIARC% not found!
-@goto end
-:emoji_ok
-
-@rem echo.
-@rem echo ===== Pulling UTranslator =====
-@rem cd utranslator
-@rem git reset --hard
-@rem git pull
-@rem cd ..
-
-@echo.
-@echo ===== Building SmartCopy =====
-@cd %BUILD_SC%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-@cd ..
-
-@echo.
-@echo ===== Building AutoBuilder =====
-@cd %BUILD_AB%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-
-@echo.
-@echo ===== Running AutoBuilder =====
-@release\AutoBuilder.exe
-@cd ..
-
-@echo.
-@echo ===== Checking for file existence =====
-@if not exist %AB_UCAUTO% goto end
-@if not exist %AB_UCLIB% goto end
-@if not exist %AB_UCCOUNT% goto end
-@if not exist %AB_UCSUTTON% goto end
-
-@echo.
-@echo ===== Running SmartCopy =====
-@%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
-@%SMARTCOPY% %AB_UCLIB% Unicodia\Uc\%UCLIB%
-@%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
-@%SMARTCOPY% %AB_UCSUTTON% Unicodia\Uc\%UCSUTTON%
-@%SMARTCOPY% %AB_UCSCRIPT% Unicodia\Uc\%UCSCRIPT%
-@%SMARTCOPY% %AB_UCOLDCOMP% Unicodia\Uc\%UCOLDCOMP%
-@if errorlevel 1 goto end
-
-@echo.
-@echo ===== Building for Win64 =====
-@cd %BUILD%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-@cd ..
-
-@if exist %BUILD%\release\%EXENAME% goto exe_ok
-@echo BAD: EXE NOT FOUND
-@goto end
-:exe_ok
 
 @echo.
 @echo ===== Copying files =====
