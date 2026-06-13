@@ -68,52 +68,7 @@
 :inno_ok
 @echo Inno Setup OK
 
-@echo ===== Creating directories =====
-@if exist %DEPLOY% del /S /Q %DEPLOY% >nul
-@if exist %DEPLOY% rmdir /S /Q %DEPLOY% >nul
-@if exist %DEPLOY2% del /S /Q %DEPLOY2% >nul
-@if exist %DEPLOY2% rmdir /S /Q %DEPLOY2% >nul
-@if not exist %DEPLOY% md %DEPLOY%
-@if not exist %DEPLOY1% md %DEPLOY1%
-@if not exist %DEPLOY2% md %DEPLOY2%
-@if not exist %BUILD_AB% md %BUILD_AB%
-@if not exist %BUILD_SC% md %BUILD_SC%
-@if not exist %BUILD% md %BUILD%
-
-@set EMOJIARC=Fonts\emoji.zip
-@if exist %EMOJIARC% goto emoji_ok
-@echo.
-@echo ===== Building graphic emoji =====
-@call xtape.bat
-@if exist %EMOJIARC% goto emoji_ok
-@echo Emoji archive %EMOJIARC% not found!
-@goto end
-:emoji_ok
-
-@rem echo.
-@rem echo ===== Pulling UTranslator =====
-@rem cd utranslator
-@rem git reset --hard
-@rem git pull
-@rem cd ..
-
-@echo.
-@echo ===== Building SmartCopy =====
-@cd %BUILD_SC%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-@cd ..
-
-@echo.
-@echo ===== Building AutoBuilder =====
-@cd %BUILD_AB%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-
-@echo.
-@echo ===== Running AutoBuilder =====
-@release\AutoBuilder.exe
-@cd ..
+@call xprebuild.bat
 
 @echo.
 @echo ===== Checking for file existence =====
