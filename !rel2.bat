@@ -202,11 +202,11 @@
 @echo It should have been at %QAHTTP%.
 @goto hqa_done
 :hqa_exists
-@fc %QAHTTP% AutoQa\http_test.txt >nul
+fc %QAHTTP% AutoQa\http_test.txt
 @if not errorlevel 1 goto hqa_ok
 @echo.
 @echo HTTP(s) FAILED, this is the new file
-@type %QA_HTTP%
+@type %QAHTTP%
 @echo .
 @goto hqa_done
 :hqa_ok
