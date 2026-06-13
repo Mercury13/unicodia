@@ -3358,11 +3358,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Counting rods are an excellent tool for teaching counting to children. Old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until the 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
+      <p>Counting rods are an excellent tool for teaching counting to children. The old Chinese used a true positional system made of rods laid on a counting board, starting from the Warring States (5th century{{_}}BC) until the 16th century. There was a notation for fractions and even for negative numbers (with rods of another colour).</p>
       <p />
-      <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are sometimes written on paper.</p>
+      <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice versa{{-}}in this form, the rods came into Unicode. Symbols of counting rods are sometimes written on paper.</p>
       <p />
-      <p>If you need to count something and memorize the number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
+      <p>If you need to count something and memorize the number, you can use tally marks. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens in both America and the former USSR (as noted in a book by Ya.I.{{_}}Perelman), but this method has{{_}}not{{_}}been adopted by Unicode.</p>
      </orig>
     </text>
    </group>
@@ -3381,11 +3381,11 @@
       <p>* functions{{-}}in different fonts: expected value {{sm|𝖤ξ}} is often sans-serif;</p>
       <p>* constants{{-}}in bold or double-struck: limits of lattice {{sm|𝟘}} and {{sm|𝟙}}, imaginary units {{sm|𝕚𝕛𝕜}}…</p>
       <p />
-      <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with the textbook on complex analysis by Gunning and Rossi (1965).</p>
+      <p>The double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with the textbook on complex analysis by Gunning and Rossi (1965).</p>
       <p />
-      <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With the extension of Unicode beyond Base Plane, the complete Latin alphabet and digits written with various fonts were added.</p>
+      <p>The most widespread of such notations are already in the [[pt:bmp|Basic Plane]], in the block of [[pk:2100|letterlike symbols]]. With the extension of Unicode beyond the Basic Plane, the complete Latin alphabet and digits in various fonts were added.</p>
       <p />
-      <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
+      <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including those used in Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
      </orig>
     </text>
    </group>
@@ -6091,13 +6091,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The system was created in 1974 by dancer Valerie Sutton. It was based on DanceWriting created by her two years before. Later she made systems for writing pantomime, other sports (figure skating, karate…), physical excercises, body language of people and animals, but they weren’t so successful.</p>
+      <p>The system was created in 1974 by dancer Valerie Sutton. It was based on DanceWriting, which she created two years earlier. Later, she devised systems for writing pantomime, other sports (figure skating, karate…), physical exercises, and the body language of people and animals, but they weren’t so successful.</p>
       <p />
-      <p>It is not{{_}}stated whose side the gestures are written from, performer or spectator. Most publications are performer-oriented. There are lots of character, they convey motions of fingers, arms, shoulders, sight, also touches and face expressions. For hands there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
+      <p>It is not{{_}}stated whose side the gestures are written from, the performer or the spectator. Most publications are performer-oriented. There are lots of characters that convey finger movements, arms and shoulder movements, sight, touch, and facial expressions. For hands, there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
       <p />
-      <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs exist that can fix X/Y coordinates on a sheet{{-}}for example, vector graphic editors.</p>
+      <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs can fix X/Y coordinates on a sheet{{-}}for example, vector graphics editors.</p>
       <p />
-      <p>Gestures with other hand, to other side, turned sideways are made with combining characters: any of Fill{{_}}2…6, and any of Rotation{{_}}2…16. For example, to write “gouge blinkers out”, {{sm|𝠎𝪟𝦆}}, one should write 1D80E+Fill6+1D986.</p>
+      <p>Gestures with the other hand, to the other side, turned sideways are made with combining characters: any of Fill{{_}}2…6, and any of Rotation{{_}}2…16. For example, to write “gouge the blinkers out”, {{sm|𝠎𝪟𝦆}}, one should write 1D80E+Fill6+1D986.</p>
      </orig>
     </text>
    </group>
