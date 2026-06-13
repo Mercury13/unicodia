@@ -4551,7 +4551,7 @@
    </group>
    <group id="1E030">
     <text id="Text">
-     <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</orig>
+     <orig>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across the former USSR.</orig>
      <transl>Літери-модифікатори для кирилічного запису транскрипції. Такий запис розповсюджений у школах та інститутах усього колишнього СРСР.</transl>
     </text>
    </group>
@@ -4599,7 +4599,7 @@
      <transl>Ефіопська розширена B</transl>
     </text>
     <text id="Text">
-     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</orig>
+     <orig>The new orthography of the Gurage languages (Ethio-Semitic group, up to 5M) was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 {{nspk|sgw}}. Some old letters are now [[pt:obsolete|obsolete]].</orig>
      <transl>Нова орфографія мов гураге (ефіосемітська група, до 5{{_}}млн), що з’явилася у 2013 та зробила писемним усе сімейство, не{{_}}тільки закодований у 2005 себат-бет {{nspk|sgw}}. Кілька старих себатбетських літер оголошені [[pt:obsolete|застарілими]].</transl>
     </text>
    </group>
@@ -7782,9 +7782,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Non-written Austro-Asian (not Indo-European) language. According to 2011 census, 1.1{{_}}million people in India speak Mundari and 500{{_}}thousand more speak some ''Munda''{{-}}it’s unknown whether it is the same language.</p>
+      <p>Non-written Austro-Asian (not Indo-European) language. According to the 2011 census, 1.1{{_}}million people in India speak Mundari, and 500{{_}}thousand more speak some ''Munda''{{-}}it’s unknown whether it is the same language.</p>
       <p />
-      <p>Writing systems are [[ps:Orya|Odia]], [[ps:Deva|Devanagari]], [[ps:Beng|Bengali]], [[ps:Latn|Latin]]{{-}}but phonemes are exotic for Latin, and abugidas badly suit Austro-Asian languages. No wonder Rohidas Singh Nag invented a new alphabet in 1949, and it even took root. About 1982 he shortened the alphabet to 27 characters and showed to local authorities, and reformed in 2008.</p>
+      <p>Writing systems are [[ps:Orya|Odia]], [[ps:Deva|Devanagari]], [[ps:Beng|Bengali]], and [[ps:Latn|Latin]]{{-}}but phonemes are exotic for Latin, and abugidas badly suit Austro-Asian languages. No wonder Rohidas Singh Nag invented a new alphabet in 1949, and it even took root. Around 1982, he shortened the alphabet to 27 characters and showed it to local authorities, and reformed it in 2008.</p>
       <p />
       <p>Digits are own. Punctuation is European.</p>
      </orig>
@@ -8008,11 +8008,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Small Austroasiatic language from Munda group, relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
+      <p>A small Austroasiatic language from the Munda group, a relative of [[ps:Nagm|Mundari]] and [[ps:Olck|Santali]].</p>
       <p />
-      <p>The script was invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
+      <p>The script was invented by Mahendra Nath Sardar. In 1992, the Bhumij community held a contest for a new script, and it was already done, winning the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</p>
       <p />
-      <p>Punctuation marks are [[pt:ascii|ASCII]], plus ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
+      <p>Punctuation marks are [[pt:ascii|ASCII]], plus the ''danda'' bar from [[ps:Deva|Devanagari]]. Double danda is not attested.</p>
      </orig>
      <transl>
       <p>Маленька австроазійська мова з групи мунда, родичка [[ps:Nagm|мундарі]] та [[ps:Olck|сантальської]].</p>
@@ -9204,9 +9204,9 @@
      <orig>
       <p>Abugida of [[ps:Khmr|Khmer]] origin, with two unique twists:</p>
       <p>* It’s written right-to-left in columns, clearly influenced by [[ps:Hani|Chinese]]. If it’s impossible, the entire text is rotated, like in [[ps:Mong|Mongolian]].</p>
-      <p>* All vowel marks are written below or on the right. There’re no preceding or enclosing vowel marks.</p>
+      <p>* All vowel marks are written below or on the right. There are no preceding or enclosing vowel marks.</p>
       <p />
-      <p>Inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese [[pu:3001]] and [[pc:3002|02]] are used. Sometimes syllables are separated with a small space. Numbers are spelled out in all sources. Modern texts use [[pk:FF00|fullwidth]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
+      <p>The inherent vowel is {{t|ɔ}}.  No tone marks. No punctuation marks, sometimes Chinese [[pu:3001]] and [[pc:3002|02]] are used. Sometimes syllables are separated with a small space. Numbers are spelt out in all sources. Modern texts use [[pk:FF00|full-width]] Western punctuation and digits, and two unencoded tone marks on the left. </p>
       <p />
       <p>The language still exists, and is written in [[ps:Latn|Latin]] or [[ps:Thai|Thai]].</p>
      </orig>
@@ -9480,7 +9480,7 @@
      <transl>тото</transl>
     </text>
     <text id="Text">
-     <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
+     <orig>A small Sino-Tibetan language used in the village of Totopara by the Toto tribe. The status is critically endangered: language transfer is already broken. About ⅓ are literate. The writing system is [[ps:Beng|Bengali]] or the own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
      <transl>Маленька сино-тибетська мова, що використовується у селі Тотопара племенем тото. Стан{{-}}на грані зникнення: передача мови вже порушена. Письменні біля третини. Пишуть [[ps:Beng|бенгальською]] або власною писемністю, яку придумав у 2015 старійшина племені Дханірам Тото.</transl>
     </text>
    </group>
@@ -9600,7 +9600,7 @@
      <transl>ванчо</transl>
     </text>
     <text id="Text">
-     <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
+     <orig>Wancho, a small Sino-Tibetan language, is ordinarily written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012, a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</orig>
      <transl>Зазвичай на ванчо, невеликій сино-тибетській мові, пишуть [[ps:Deva|деванáґарі]] або [[ps:Latn|латинкою]]. Між 2001 та 2012 вчитель Банванг Лосу придумав свій алфавіт. Чотири тони позначаються діакритикою. Розділові знаки звичайні європейські.</transl>
     </text>
    </group>
