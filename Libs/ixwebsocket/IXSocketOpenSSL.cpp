@@ -10,7 +10,6 @@
 #include "IXSocketOpenSSL.h"
 
 #include "IXSocketConnect.h"
-#include "IXUniquePtr.h"
 #include <cassert>
 #include <errno.h>
 #include <vector>

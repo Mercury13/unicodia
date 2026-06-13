@@ -14,6 +14,10 @@
 #include "UpdateUrl.h"
 #include "MyHttpClient.h"
 
+#ifdef _WIN32
+    #include "windows.h"
+#endif
+
 qa::TestResult qa::testFonts(const std::filesystem::path& fname)
 {
     if (fname.empty())
@@ -178,13 +182,16 @@ qa::TestResult qa::testHttp(const std::filesystem::path& fname)
     };
 
     myht::SyncClient client;
+#ifdef _WIN32
+    Sleep(2000);
+#endif
     for (const std::string_view& v : urls) {
         std::string url(v);
         os << v << ": ";
         if (auto res = client.run(url)) {
             os << res.code;
         } else {
-            os << "ERROR";
+            os << "ERROR: " << res.errorMsg;
         }
         os << '\n';
     }
