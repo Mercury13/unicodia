@@ -4972,7 +4972,7 @@
       <p />
       <p>'''Did not''' advance to the standard:</p>
       <p>* characters in intellectual property, like the Apple logo;</p>
-      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In right fonts, old and new pseudographics should tile together: {{sm|█🬗}}</p>
+      <p>* signs [[pt:unification|already present]] in existing [[pt:pseudographics|pseudographics]] blocks. In the right fonts, old and new pseudographics should tile together: {{sm|█🬗}}</p>
       <p />
       <p>Initially (since version 1.0) supported: [[po:Ibm]], [[po:Mac]], [[po:Spectrum]], [[po:BbcMaster]].</p>
      </orig>
@@ -4991,13 +4991,13 @@
    </group>
    <group id="20000">
     <text id="Text">
-     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard font “SimSun-ExtB” for Windows. Later many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
-     <transl>Рідкі та історичні [[ps:Hani|китайські ієрогліфи]]. Ці ієрогліфи упакували у стандартний шрифт  «SimSun-ExtB» для Windows. Пізніше у блоці знайшли багато помилок, і навіть вісім помилково продубльованих ієрогліфів.</transl>
+     <orig>Rare and historical [[ps:Hani|CJK ideographs]]. These ideographs were packed into the standard Windows font “SimSun-ExtB”. Later, many mistakes in the block were found, and even eight erroneously duplicated ideographs.</orig>
+     <transl>Рідкі та історичні [[ps:Hani|китайські ієрогліфи]]. Ці ієрогліфи упакували у стандартний шрифт Windows «SimSun-ExtB». Пізніше у блоці знайшли багато помилок, і навіть вісім помилково продубльованих ієрогліфів.</transl>
     </text>
    </group>
    <group id="2A700">
     <text id="Text">
-     <orig>{{n|4149}} rare and old ideographs added in 2009. In 2021 4 more were added.</orig>
+     <orig>{{n|4149}} rare and old ideographs added in 2009. In 2021, 4 more were added.</orig>
      <transl>4149 рідких і старих ієрогліфів, доданих у 2009. У 2021 додали ще 4 штуки.</transl>
     </text>
    </group>
@@ -5015,8 +5015,8 @@
    </group>
    <group id="2CEB0">
     <text id="Text">
-     <orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from Zhuang language.</orig>
-     <transl>7473 ієрогліфа, додані у 2017. Включають рідкі, старі, а також більше тисячі чжуанських (одна з мов Китаю).</transl>
+     <orig>{{n|7473}} ideographs added in 2017, including rare, old and more than {{n|1000}} from the Zhuang language.</orig>
+     <transl>7473 ієрогліфи, додані у 2017. Включають рідкі, старі, а також більше тисячі чжуанських (одна з мов Китаю).</transl>
     </text>
    </group>
    <group id="2EBF0">
@@ -5024,7 +5024,7 @@
      <orig>
       <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p>Character repertoire is usually frozen long before the beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time, characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
       <p />
       <p>All other ideographs were postponed for the sake of this urgent job. Only half a year left since fixing characters (August 2023) to the next beta (spring 2024), and Unicode{{_}}16 added no new ideographs.</p>
      </orig>
@@ -5050,7 +5050,7 @@
    <group id="30000">
     <text id="Text">
      <orig>
-      <p>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated {{n|4939}} old and rare characters there. This block contains two record-beating ideographs:</p>
+      <p>In 2020, Unicode stepped into [[pt:plane|plane]] number 3 and allocated {{n|4939}} old and rare characters there. This block contains two record-breaking ideographs:</p>
       <p>* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': [[pu:30EDD]] simplified 42 strokes, [[pu:30EDE]] traditional 58 strokes;</p>
       <p>* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', [[pu:3106C]].</p>
      </orig>
@@ -5073,7 +5073,7 @@
      <orig>
       <p>Ideographs from various sources: Chinese names, Korean history site, newspaper archives, Taiwanese encoding…</p>
       <p />
-      <p>[[pk:2EBF0|2022 China’s attempt]] to fork Unicode postponed everything else, and time was short to Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
+      <p>[[pk:2EBF0|China’s 2022 attempt]] to fork Unicode postponed everything else, leaving little time before Unicode{{_}}16{{_}}beta. So a new bunch of {{n|4000}}{{_}}ideographs made it to Unicode{{_}}17 only.</p>
      </orig>
      <transl>
       <p>Ієрогліфи з різних джерел: китайські імена, корейський сайт з історії, газетні архіви, тайванське кодування…</p>
@@ -5094,7 +5094,7 @@
      <transl>Теги</transl>
     </text>
     <text id="Text">
-     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags were used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</orig>
+     <orig>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001), tags were used to specify language by agreement between the sender and the receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017), tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, and Scotland.</orig>
      <transl>Блок тегів повторює [[pt:ascii|ASCII]]. Початково (Unicode 3.1, 2001) теги застосовувались для задання мови за домовленістю між відправником та одержувачем. Це застосування повністю [[pt:deprecated|заборонили]], але у Юнікоді{{_}}9.0 (2017) теги повернули як модифікатори [[pt:emoji|емодзі]]. Використовуються тільки для прапорів регіонів, визначені три регіони: Англія, Уельс, Шотландія.</transl>
     </text>
    </group>
@@ -5104,7 +5104,7 @@
      <transl>Селектори написання додаткові</transl>
     </text>
     <text id="Text">
-     <orig>Supplemental variation selectors are used with [[ps:Hani|CJK ideographs]] only to set specific regional variation. But nothing prevents from using them with other characters by discretion of font designer.</orig>
+     <orig>Supplemental variation selectors are only used with [[ps:Hani|CJK ideographs]] to set a specific regional variation. But nothing prevents us from using them with other characters at the font designer’s discretion.</orig>
      <transl>Додаткові селектори написання використовуються тільки з [[ps:Hani|китайськими ієрогліфами]], щоб дати той чи інший варіант написання. Хоча ніщо не{{_}}заважає використовувати їх з іншими символами за бажанням дизайнера шрифта.</transl>
     </text>
    </group>
@@ -8591,7 +8591,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. About 300{{_}}BC, they were replaced with almost modern ink-and-brush style.</p>
+      <p>In a broader sense, the term “seal script” refers to all old ideographs scratched on hard surfaces. Around 300{{_}}BC, they were replaced by an almost modern ink-and-brush style.</p>
       <p />
       <p>Those ideographs were revived and standardized under the reign of Qin Shi (221‒210{{_}}BC) as a formal script, similar to blackletter in [[ps:Latn|Latin]] and uncial in [[ps:Cyrl|Cyrillic]]. That’s the seal script in a narrower sense.</p>
       <p />
