@@ -94,6 +94,7 @@
 @echo ===== Building SmartCopy =====
 @%CMAKE_CMD% -S ./SmartCopy -B ./%BUILD_SC%
 @%CMAKE% --build ./%BUILD_SC% --config Release
+@if not exist %SMARTCOPY% goto end
 
 @echo.
 @echo ===== Building AutoBuilder =====
