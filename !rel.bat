@@ -77,7 +77,6 @@
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %DEPLOY2% md %DEPLOY2%
 @if not exist %BUILD_AB% md %BUILD_AB%
-@if not exist %BUILD_SC% md %BUILD_SC%
 @if not exist %BUILD% md %BUILD%
 
 @set EMOJIARC=Fonts\emoji.zip
