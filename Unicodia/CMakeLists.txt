@@ -6,13 +6,6 @@ string(STRIP "${VERSION_STR_RAW}" VERSION_STR)
 # Convert "1.2.3.4" → "1,2,3,4" for FILEVERSION
 string(REPLACE "." "," VERSION_COMMA "${VERSION_STR}")
 
-# Configure resource file
-configure_file(
-    "${CMAKE_SOURCE_DIR}/version.rc.in"
-    "${CMAKE_BINARY_DIR}/version.rc"
-    @ONLY
-)
-
 project(Unicodia VERSION ${VERSION_STR} LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
@@ -26,13 +19,23 @@ find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
 
-if(WIN32)
-    enable_language(RC) # Enable resource compiler
-    set(APP_ICON_RESOURCE "${CMAKE_CURRENT_SOURCE_DIR}/Unicodia-win.rc")
-endif()
+include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/CharPaint)
+include_directories(${CMAKE_SOURCE_DIR}/Main)
+include_directories(${CMAKE_SOURCE_DIR}/Uc)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/L10n)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/RapidJson)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/L10n)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Mojibake)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Qt)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/Zippy)
 
-set(PROJECT_SOURCES
-    # Libs: misc
+qt_add_executable(Unicodia
+    MANUAL_FINALIZATION
     ../Libs/PugiXml/pugiconfig.hpp ../Libs/PugiXml/pugixml.cpp ../Libs/PugiXml/pugixml.hpp
     ../Libs/ixwebsocket/IXCancellationRequest.cpp ../Libs/ixwebsocket/IXCancellationRequest.h
         ../Libs/ixwebsocket/IXDNSLookup.cpp ../Libs/ixwebsocket/IXDNSLookup.h
@@ -100,29 +103,20 @@ set(PROJECT_SOURCES
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
-    ${APP_ICON_RESOURCE}
-    ${CMAKE_BINARY_DIR}/version.rc
 )
 
-include_directories(${CMAKE_SOURCE_DIR})
-include_directories(${CMAKE_SOURCE_DIR}/CharPaint)
-include_directories(${CMAKE_SOURCE_DIR}/Main)
-include_directories(${CMAKE_SOURCE_DIR}/Uc)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/L10n)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/RapidJson)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/L10n)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Mojibake)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Qt)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/Zippy)
-
-qt_add_executable(Unicodia
-    MANUAL_FINALIZATION
-    ${PROJECT_SOURCES}
-)
+if (WIN32)
+    # Configure resource file
+    configure_file(
+        "${CMAKE_SOURCE_DIR}/version.rc.in"
+        "${CMAKE_BINARY_DIR}/version.rc"
+        @ONLY
+    )
+    enable_language(RC) # Enable resource compiler
+    target_sources(Unicodia PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/Unicodia-win.rc
+        ${CMAKE_BINARY_DIR}/version.rc)
+endif()
 
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
