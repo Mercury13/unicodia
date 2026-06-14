@@ -19,21 +19,6 @@ find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
 
-include_directories(${CMAKE_SOURCE_DIR})
-include_directories(${CMAKE_SOURCE_DIR}/CharPaint)
-include_directories(${CMAKE_SOURCE_DIR}/Main)
-include_directories(${CMAKE_SOURCE_DIR}/Uc)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/L10n)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/RapidJson)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/L10n)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Mojibake)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Qt)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
-include_directories(${CMAKE_SOURCE_DIR}/../Libs/Zippy)
-
 qt_add_executable(Unicodia
     MANUAL_FINALIZATION
     ../Libs/PugiXml/pugiconfig.hpp ../Libs/PugiXml/pugixml.cpp ../Libs/PugiXml/pugixml.hpp
@@ -103,6 +88,7 @@ qt_add_executable(Unicodia
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
+    Main/MyHttpDefs.h
 )
 
 if (WIN32)
@@ -117,6 +103,21 @@ if (WIN32)
         ${CMAKE_CURRENT_SOURCE_DIR}/Unicodia-win.rc
         ${CMAKE_BINARY_DIR}/version.rc)
 endif()
+
+include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/CharPaint)
+include_directories(${CMAKE_SOURCE_DIR}/Main)
+include_directories(${CMAKE_SOURCE_DIR}/Uc)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/L10n)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/PugiXml)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/RapidJson)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/L10n)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Mojibake)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Qt)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
+include_directories(${CMAKE_SOURCE_DIR}/../Libs/Zippy)
 
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
