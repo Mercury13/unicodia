@@ -31,7 +31,7 @@
 @rem Somehow CMake understands our MinGW 16.1
 @set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 @set QCMAKE=%QTDIR%/lib/cmake
-@set CMAKE_CMD_QT=%CMAKE_CMD% -DQT6=1 -DCMAKE_PREFIX_PATH=%QCMAKE% -DQt6_DIR=%QCMAKE%/Qt6
+@set CMAKE_CMD_QT=%CMAKE_CMD% -DCMAKE_PREFIX_PATH=%QCMAKE% -DQt6_DIR=%QCMAKE%/Qt6
 @set CMAKE_PAR=--config Release -j%NUMBER_OF_PROCESSORS%
 
 @rem Needed by Qt

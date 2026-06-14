@@ -1,6 +1,19 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Unicodia VERSION 1.2.3 LANGUAGES CXX)
+file(READ "${CMAKE_SOURCE_DIR}/../VERSION" VERSION_STR_RAW)
+string(STRIP "${VERSION_STR_RAW}" VERSION_STR)
+
+# Convert "1.2.3.4" → "1,2,3,4" for FILEVERSION
+string(REPLACE "." "," VERSION_COMMA "${VERSION_STR}")
+
+# Configure resource file
+configure_file(
+    "${CMAKE_SOURCE_DIR}/version.rc.in"
+    "${CMAKE_BINARY_DIR}/version.rc"
+    @ONLY
+)
+
+project(Unicodia VERSION ${VERSION_STR} LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -12,6 +25,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
+
+if(WIN32)
+    enable_language(RC) # Enable resource compiler
+    set(APP_ICON_RESOURCE "${CMAKE_CURRENT_SOURCE_DIR}/Unicodia-win.rc")
+endif()
 
 set(PROJECT_SOURCES
     # Libs: misc
@@ -82,6 +100,8 @@ set(PROJECT_SOURCES
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
+    ${APP_ICON_RESOURCE}
+    ${CMAKE_BINARY_DIR}/version.rc
 )
 
 include_directories(${CMAKE_SOURCE_DIR})
