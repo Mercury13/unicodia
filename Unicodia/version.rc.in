@@ -15,8 +15,9 @@ BEGIN
         BEGIN
             VALUE "FileDescription", "Unicodia: encyclopedia of characters\0"
             VALUE "FileVersion", "@VERSION_STR@\0"
-            VALUE "ProductVersion", "@VERSION_ST@\0"
+            VALUE "ProductVersion", "@VERSION_STR@\0"
             VALUE "CompanyName", "Mikhail Merkuryev\0"
+            VALUE "LegalCopyright", "Mikhail Merkuryev\0"
             VALUE "ProductName", "Unicodia\0"
         END
     END
