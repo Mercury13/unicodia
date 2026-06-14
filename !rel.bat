@@ -29,6 +29,7 @@
 @set AB_UCSCRIPT=%BUILD_AB%/%UCSCRIPT%
 @set AB_UCOLDCOMP=%BUILD_AB%/%UCOLDCOMP%
 @set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=%MINGW% -DCMAKE_BUILD_TYPE=Release
+@set CMAKE_PAR=--config Release -j%NUMBER_OF_PROCESSORS%
 
 @path %MINGW%;%PATH%
 
@@ -82,7 +83,6 @@
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %DEPLOY2% md %DEPLOY2%
-@if not exist %BUILD_AB% md %BUILD_AB%
 @if not exist %BUILD% md %BUILD%
 
 @set EMOJIARC=Fonts\emoji.zip
@@ -98,18 +98,19 @@
 @echo.
 @echo ===== Building SmartCopy =====
 @%CMAKE_CMD% -S ./SmartCopy -B ./%BUILD_SC%
-@%CMAKE% --build ./%BUILD_SC% --config Release
+@%CMAKE% --build ./%BUILD_SC% %CMAKE_PAR%
 @if not exist %SMARTCOPY% goto end
 
 @echo.
 @echo ===== Building AutoBuilder =====
-@cd %BUILD_AB%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@%CMAKE_CMD% -S ./AutoBuilder -B ./%BUILD_AB%
+@%CMAKE% --build ./%BUILD_AB% %CMAKE_PAR%
+@if not exist %BUILD_AB%/AutoBuilder.exe goto end
 
 @echo.
 @echo ===== Running AutoBuilder =====
-@release\AutoBuilder.exe
+@cd %BUILD_AB%
+@AutoBuilder.exe
 @cd ..
 
 @echo.
