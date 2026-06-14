@@ -17,7 +17,7 @@
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set DEPLOY2=~Installer
-@set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
+@set SMARTCOPY=%BUILD_SC%\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
 @set UCLIB=UcAutoLib.cpp
 @set UCCOUNT=UcAutoCount.h
@@ -71,7 +71,7 @@
 
 @echo.
 @echo ===== Copying files =====
-@copy %BUILD%\release\%EXENAME% %DEPLOY%
+@copy %BUILD%\%EXENAME% %DEPLOY%
 @copy %MINGW%\libgcc_s_seh-1.dll %DEPLOY%
 @copy "%MINGW%\libstdc++-6.dll" %DEPLOY%
 @copy %MINGW%\libwinpthread-1.dll %DEPLOY%

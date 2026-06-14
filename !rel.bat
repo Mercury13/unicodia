@@ -31,6 +31,9 @@
 @set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=%MINGW% -DCMAKE_BUILD_TYPE=Release
 @set CMAKE_PAR=--config Release -j%NUMBER_OF_PROCESSORS%
 
+@rem Needed by Qt
+rem @set Qt6_DIR=%QTDIR%/lib/cmake/Qt6
+
 @path %MINGW%;%PATH%
 
 @echo My version is %VERSION%
@@ -50,6 +53,7 @@
 :cm_ok
 @echo CMake OK
 
+@rem Still need to to build TapeMaker, let it be...
 @if exist %QTDIR%\bin\qmake.exe goto qt_ok
 @echo BAD: Qmake not found. Install Qt, and set QTDIR variable.
 @goto end
@@ -83,7 +87,6 @@
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %DEPLOY2% md %DEPLOY2%
-@if not exist %BUILD% md %BUILD%
 
 @set EMOJIARC=Fonts\emoji.zip
 @if exist %EMOJIARC% goto emoji_ok
@@ -134,12 +137,10 @@
 
 @echo.
 @echo ===== Building for Win64 =====
-@cd %BUILD%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-@cd ..
+@%CMAKE_CMD% -S ./Unicodia -B ./%BUILD%
+@%CMAKE% --build ./%BUILD% %CMAKE_PAR%
 
-@if exist %BUILD%\release\%EXENAME% goto exe_ok
+@if exist %BUILD%\%EXENAME% goto exe_ok
 @echo BAD: EXE NOT FOUND
 @goto end
 :exe_ok
