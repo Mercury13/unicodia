@@ -3,7 +3,7 @@
 #include <string>
 
 //
-// Workaround: under CMake, object shouldn't be half-defined!
+// Workaround: under CMake, objects in slots shouldn't be half-defined!
 //
 
 namespace myht {
