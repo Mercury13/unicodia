@@ -43,6 +43,12 @@
 :sz_ok
 @echo 7-zip OK
 
+@if exist %CMAKE% goto cm_ok
+@echo BAD: CMake not found. It's the main build system of Qt now.
+@goto end
+:cm_ok
+@echo Qt OK
+
 @if exist %QTDIR%\bin\qmake.exe goto qt_ok
 @echo BAD: Qmake not found. Install Qt, and set QTDIR variable.
 @goto end
