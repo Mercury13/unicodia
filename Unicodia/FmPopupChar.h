@@ -35,6 +35,14 @@ public:
     void deselectLink();
 
 protected:
+    // QMake can include ui_**, CMake cannot
+    QLabel* lbText() const;
+    QLabel* lbCode() const;
+    QLabel* lbToBlocks() const;
+    QLabel* lbCopy() const;
+    QLabel* lbCopyVs16() const;
+
+private:
     Ui::FmPopupChar *ui;
 };
 

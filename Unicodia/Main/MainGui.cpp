@@ -11,7 +11,6 @@
 #include "FmPopup.h"
 #include "FmMessage.h"
 #include "FmPopupChar.h"
-#include "ui_FmPopupChar.h"
 
 // L10n
 #include "LocDic.h"
@@ -59,26 +58,26 @@ public:
 FmPopupChar2::FmPopupChar2(MyGui& owner)
     : Super(owner.wiMain, owner.memory)
 {
-    connect(ui->lbText, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
-    connect(ui->lbCode, &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
-    connect(ui->lbToBlocks, &QLabel::linkActivated,
+    connect(lbText(), &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
+    connect(lbCode(), &QLabel::linkActivated, &owner, &MyGui::popupLinkActivated);
+    connect(lbToBlocks(), &QLabel::linkActivated,
             this, // context object — who owns the lambda function
             [this, &owner]() {
                 hide();
                 owner.linkWalker().gotoCp(nullptr, charCode);
             });
-    connect(ui->lbCopy, &QLabel::linkActivated,
+    connect(lbCopy(), &QLabel::linkActivated,
             this, // context object — who owns the lambda function
             [this, &owner]() {
                 QString text = QString::fromUcs4(&charCode, 1);
-                owner.copyTextRel(ui->lbCopy, {}, text, LK_COPIED);
+                owner.copyTextRel(lbCopy(), {}, text, LK_COPIED);
             });
-    connect(ui->lbCopyVs16, &QLabel::linkActivated,
+    connect(lbCopyVs16(), &QLabel::linkActivated,
             this, // context object — who owns the lambda function
             [this, &owner]() {
                 char32_t cps[2] { charCode, cp::VS16 };
                 QString text = QString::fromUcs4(cps, 2);
-                owner.copyTextRel(ui->lbCopyVs16, {}, text, LK_COPIED);
+                owner.copyTextRel(lbCopyVs16(), {}, text, LK_COPIED);
             });
 }
 

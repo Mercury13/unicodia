@@ -100,3 +100,10 @@ void FmPopupChar::deselectLink()
 {
     ui->lbText->setSelection(0, 0);
 }
+
+
+QLabel* FmPopupChar::lbText() const { return ui->lbText; }
+QLabel* FmPopupChar::lbCode() const { return ui->lbCode; }
+QLabel* FmPopupChar::lbToBlocks() const { return ui->lbToBlocks; }
+QLabel* FmPopupChar::lbCopy() const { return ui->lbCopy; }
+QLabel* FmPopupChar::lbCopyVs16() const { return ui->lbCopyVs16; }
