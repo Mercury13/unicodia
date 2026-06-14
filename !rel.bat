@@ -29,10 +29,10 @@
 @set AB_UCSCRIPT=%BUILD_AB%/%UCSCRIPT%
 @set AB_UCOLDCOMP=%BUILD_AB%/%UCOLDCOMP%
 @set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=%MINGW% -DCMAKE_BUILD_TYPE=Release
+@set CMAKE_CMD_QT=%CMAKE_CMD% -DQT6=1 -DCMAKE_PREFIX_PATH=%MINGW%,%QTDIR%/lib/cmake/Qt6 -DQT_DIR=%QTDIR%/lib/cmake/Qt6 -DQt6_DIR=%QTDIR%/lib/cmake/Qt6
 @set CMAKE_PAR=--config Release -j%NUMBER_OF_PROCESSORS%
 
 @rem Needed by Qt
-rem @set Qt6_DIR=%QTDIR%/lib/cmake/Qt6
 
 @path %MINGW%;%PATH%
 
@@ -137,7 +137,7 @@ rem @set Qt6_DIR=%QTDIR%/lib/cmake/Qt6
 
 @echo.
 @echo ===== Building for Win64 =====
-@%CMAKE_CMD% -S ./Unicodia -B ./%BUILD%
+@%CMAKE_CMD_QT% -S ./Unicodia -B ./%BUILD%
 @%CMAKE% --build ./%BUILD% %CMAKE_PAR%
 
 @if exist %BUILD%\%EXENAME% goto exe_ok

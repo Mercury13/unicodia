@@ -9,10 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Svg)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SvgWidgets)
+find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
 
@@ -102,12 +99,10 @@ include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Qt)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/Zippy)
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Unicodia
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-    )
-endif()
+qt_add_executable(Unicodia
+    MANUAL_FINALIZATION
+    ${PROJECT_SOURCES}
+)
 
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
