@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
+# Just to have it in the "Projects" pane
+configure_file("${CMAKE_SOURCE_DIR}/../VERSION"
+               "${CMAKE_BINARY_DIR}/VERSION" COPYONLY)
+
 file(READ "${CMAKE_SOURCE_DIR}/../VERSION" VERSION_STR_RAW)
 string(STRIP "${VERSION_STR_RAW}" VERSION_STR)
 
