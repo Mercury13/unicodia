@@ -48,7 +48,7 @@
 @echo BAD: CMake not found. It's the main build system of Qt now.
 @goto end
 :cm_ok
-@echo Qt OK
+@echo CMake OK
 
 @if exist %QTDIR%\bin\qmake.exe goto qt_ok
 @echo BAD: Qmake not found. Install Qt, and set QTDIR variable.
@@ -119,6 +119,8 @@
 @if not exist %AB_UCLIB% goto end
 @if not exist %AB_UCCOUNT% goto end
 @if not exist %AB_UCSUTTON% goto end
+@if not exist %AB_UCSCRIPT% goto end
+@if not exist %AB_UCOLDCOMP% goto end
 
 @echo.
 @echo ===== Running SmartCopy =====
