@@ -7,7 +7,6 @@
 @set /p VERSION=<VERSION.
 @set PRONAME=Unicodia\Unicodia.pro
 @set PRONAME_AB=AutoBuilder\AutoBuilder.pro
-@set PRONAME_SC=SmartCopy\SmartCopy.pro
 @set EXENAME=Unicodia.exe
 @set ARCNAME=Unicodia-w64-%VERSION%.7z
 @set BUILD=~Build-win64
@@ -92,9 +91,8 @@
 
 @echo.
 @echo ===== Building SmartCopy =====
-@cd %BUILD_SC%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@cd SmartCopy
+@%CMAKE% --build ../%BUILD_SC% --target all
 @cd ..
 
 @echo.

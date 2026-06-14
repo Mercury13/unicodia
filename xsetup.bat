@@ -6,6 +6,9 @@
 @rem 2. Some program is installed as portable.
 @rem 3. You use the newer Qt.
 
+@rem CMake
+@set CMAKE=C:\Qt\Tools\CMake_64\bin\cmake.exe
+
 @rem Qt we compile against
 @set QTDIR=c:\Qt\6.2.4\mingw_64
 
@@ -17,8 +20,6 @@
 
 @rem 7-Zip, needed for everything: Unicodia, tape, data loading
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@rem Possible replacement:
-@rem set SEVENZIP="c:\Program Files\PeaZip\res\bin\7z\7z.exe"
 
 @rem Console UTranslator
 @set UTRANSL=UTransCon.exe
