@@ -8,6 +8,8 @@
 #include <QObject>
 #include <QThread>
 
+// Local
+#include "MyHttpDefs.h"
 
 class MyHttpClient;
 
@@ -15,21 +17,6 @@ namespace myht {
 
     constexpr int C_OK = 200;
     constexpr int C_IM_A_TEAPOT = 418;
-
-    enum class Error : unsigned char {
-        OK,
-        MISC,  // misc errors
-        DID_NOT_RUN,
-    };
-
-    struct Result {
-        std::string body;
-        std::string errorMsg;
-        int code = 0;
-        Error error = Error::DID_NOT_RUN;
-
-        constexpr operator bool() const noexcept { return (error == Error::OK); }
-    };
 
     class ClientImpl;
     class AsyncClient;

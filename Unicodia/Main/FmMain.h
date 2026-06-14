@@ -26,6 +26,7 @@
 #include "MyWiki.h"
 #include "MainGui.h"
 #include "d_Config.h"
+#include "MyHttpDefs.h"
 
 // Unicode data
 #include "UcData.h"
@@ -52,7 +53,6 @@ class BangButton;
 class FmRespect;
 
 namespace myht {
-    struct Result;
     class AsyncClient;
 }
 
