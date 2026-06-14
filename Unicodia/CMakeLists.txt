@@ -70,8 +70,13 @@ qt_add_executable(Unicodia
         CharPaint/IconEngines.h CharPaint/routines.cpp CharPaint/routines.h
         CharPaint/SkinToneQa.cpp CharPaint/SkinToneQa.h
     Main/FmMain.cpp Main/FmMain.h Main/FmMain.ui Main/HintableLabel.cpp Main/HintableLabel.h
-        Main/MainGui.cpp Main/MainGui.h Main/MyHttpClient.cpp Main/MyHttpClient.h
-        Main/tables.cpp Main/tables.h Main/WiLibCp.cpp Main/WiLibCp.h Main/WiLibCp.ui Main/WiOsStyle.cpp Main/WiOsStyle.h Main/WiOsStyle.ui Main/WiSample.cpp Main/WiSample.h Main/WiSample.ui Main/WiShowcase.cpp Main/WiShowcase.h Main/WiShowcase.ui
+        Main/MainGui.cpp Main/MainGui.h
+        Main/MyHttpDefs.h Main/MyHttpClient.cpp Main/MyHttpClient.h
+        Main/tables.cpp Main/tables.h
+        Main/WiLibCp.cpp Main/WiLibCp.h Main/WiLibCp.ui
+        Main/WiOsStyle.cpp Main/WiOsStyle.h Main/WiOsStyle.ui
+        Main/WiSample.cpp Main/WiSample.h Main/WiSample.ui
+        Main/WiShowcase.cpp Main/WiShowcase.h Main/WiShowcase.ui
     Search/defs.h Search/engine.cpp Search/engine.h Search/nonAscii.cpp Search/nonAscii.h
         Search/request.cpp Search/request.h Search/trie.h Search/uc.cpp Search/uc.h
     Uc/FontDef.h Uc/FontMatch.cpp Uc/FontMatch.h Uc/UcAuto.cpp Uc/UcAutoCount.h
@@ -92,7 +97,6 @@ qt_add_executable(Unicodia
     # Resources
     Resources/res.qrc
     Resources/Scripts/scripts.qrc
-    Main/MyHttpDefs.h
 )
 
 if (WIN32)
