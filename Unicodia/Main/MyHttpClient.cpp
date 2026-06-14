@@ -3,6 +3,14 @@
 #include <ixwebsocket/IXNetSystem.h>
 #include <ixwebsocket/IXHttpClient.h>
 
+
+// Simple G++ check, to ensure that CMake will run MY G++
+// rather than Qt's
+//#if __GNUC__ < 14
+//    #error Bad GCC
+//#endif
+
+
 ///// detail::Thread ///////////////////////////////////////////////////////////
 
 namespace {

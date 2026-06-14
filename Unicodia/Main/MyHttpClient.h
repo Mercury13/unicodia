@@ -8,7 +8,6 @@
 #include <QObject>
 #include <QThread>
 
-// Libs
 
 class MyHttpClient;
 
