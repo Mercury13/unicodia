@@ -15,7 +15,7 @@
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set DEPLOY2=~Installer
-@set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
+@set SMARTCOPY=%BUILD_SC%\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
 @set UCLIB=UcAutoLib.cpp
 @set UCCOUNT=UcAutoCount.h
@@ -28,6 +28,7 @@
 @set AB_UCSUTTON=%BUILD_AB%/%UCSUTTON%
 @set AB_UCSCRIPT=%BUILD_AB%/%UCSCRIPT%
 @set AB_UCOLDCOMP=%BUILD_AB%/%UCOLDCOMP%
+@set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=%MINGW% -DCMAKE_BUILD_TYPE=Release
 
 @path %MINGW%;%PATH%
 
@@ -91,9 +92,8 @@
 
 @echo.
 @echo ===== Building SmartCopy =====
-@cd SmartCopy
-@%CMAKE% --build ../%BUILD_SC% --target all
-@cd ..
+@%CMAKE_CMD% -S ./SmartCopy -B ./%BUILD_SC%
+@%CMAKE% --build ./%BUILD_SC% --config Release
 
 @echo.
 @echo ===== Building AutoBuilder =====
