@@ -72,6 +72,9 @@ uc::MultiResult uc::doRequest(const Request& rq)
 
 namespace {
 
+    /// @return
+    ///    [-] NO_VALUE in fields structure (OK), or really equal (OK too)
+    ///    [+] the fields are really inequal
     template <class Ec>
     inline bool isIneq(Ec inFields, Ec inCp)
         { return (inFields != Ec::NO_VALUE && inFields != inCp); }
