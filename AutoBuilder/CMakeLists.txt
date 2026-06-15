@@ -22,6 +22,12 @@ include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Mojibake)
 include_directories(${CMAKE_SOURCE_DIR}/../Libs/SelfMade/Strings)
 include_directories(${CMAKE_SOURCE_DIR}/../Unicodia/Uc)
 
+# MinGW: statically link libs
+if(MINGW)
+    add_compile_options(-static-libgcc -static-libstdc++)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -lpthread")
+endif()
+
 include(GNUInstallDirs)
 install(TARGETS AutoBuilder
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
