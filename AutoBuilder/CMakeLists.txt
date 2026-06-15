@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(AutoBuilder main.cpp
     decap/decap.cpp decap/decap.h decap/dic.cpp decap/exceptions.cpp
     egyptian.cpp egyptian.h entities.cpp entities.h forget.cpp forget.h legacy.cpp legacy.h
-    library.cpp library.h linebreak.cpp linebreak.h loader.cpp loader.h main.cpp stringlib.cpp stringlib.h sutton.cpp sutton.h textbase.cpp textbase.h ucdcom.cpp ucdcom.h unibase.cpp unibase.h
+    library.cpp library.h linebreak.cpp linebreak.h loader.cpp loader.h main.cpp
+    stringlib.cpp stringlib.h sutton.cpp sutton.h textbase.cpp textbase.h ucdcom.cpp ucdcom.h
+    unibase.cpp unibase.h
     ../Libs/PugiXml/pugiconfig.hpp ../Libs/PugiXml/pugixml.cpp ../Libs/PugiXml/pugixml.hpp
     ../Unicodia/Uc/UcFlags.h
     ../Libs/SelfMade/Strings/u_EgypIndex.cpp ../Libs/SelfMade/Strings/u_EgypIndex.h
