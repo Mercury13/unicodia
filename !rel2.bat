@@ -3,8 +3,6 @@
 @rem Local unversioned setup that overrides the main one
 @if exist ~setup_local.bat call ~setup_local.bat
 
-@rem Rest things
-@call xsetup2.bat
 @set /p VERSION=<VERSION.
 @set PRONAME=Unicodia\Unicodia.pro
 @set PRONAME_AB=AutoBuilder\AutoBuilder.pro
