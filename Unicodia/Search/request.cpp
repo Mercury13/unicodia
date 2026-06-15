@@ -32,7 +32,7 @@ namespace {
         }
         const auto a = node.iFirstChild;
         const auto b = a + node.nChildren;
-        for (short i = a; i < b; ++i)
+        for (int i = a; i < b; ++i)
             recurseEmoji(state, category, i);
     }
 
