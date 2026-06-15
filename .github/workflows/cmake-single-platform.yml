@@ -35,7 +35,7 @@ jobs:
       run: ${{github.workspace}}/build-AB/AutoBuilder.exe
 
     - name: Copy AB's artifacts
-      run: ${{github.workspace}}/.github/copy_ab.bat ${{github.workspace}}
+      run: bash ${{github.workspace}}/.github/copy_ab.sh ${{github.workspace}}
 
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
