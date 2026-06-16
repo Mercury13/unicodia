@@ -21,7 +21,7 @@ filesToCheck = [ 'UcAutoLib.cpp', 'UcAutoCount.h',
 destDir = sys.argv[1]
 for x in filesToCopy:
     shutil.copy(x, destDir)
-    print('Copied {x} to dir {destDir}')
+    print(f'Copied {x} to dir {destDir}')
 
 for x in filesToCheck:
     with open(x, 'rb') as file:
