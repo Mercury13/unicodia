@@ -29,7 +29,7 @@ for v in FILES:
     subdirFile = v[(whereBar + 1):]
     # @todo [urgent] no paths
     paths = subdirFile.split('/')
-    if len(paths > 1):
+    if len(paths) > 1:
         print(f'Additional subpaths unsupported!')
         sys.exit(1)
     destDir = DIR_DEPLOY
