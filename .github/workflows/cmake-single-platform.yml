@@ -45,7 +45,7 @@ jobs:
       run: ${{github.workspace}}/build-AB/AutoBuilder.exe
 
     - name: Copy AB's artifacts
-      run: bash ${{github.workspace}}/.github/copy_ab.sh ${{github.workspace}}
+      run: {{github.workspace}}/.github/copy_ab.py ${{github.workspace}}
 
     - name: Configure CMake for Unicodia
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
