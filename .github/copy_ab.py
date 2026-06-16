@@ -30,6 +30,6 @@ for x in filesToCheck:
     with open(destPath, 'rb') as file:
         destData = file.read()
     if srcData != destData:
-        print('Files {x} and {destPath} are inequal!')
+        print(f'Files {x} and {destPath} are inequal!')
         sys.exit(1)
-    print('Files {x} and {destPath} are equal')
+    print(f'Files {x} and {destPath} are equal')
