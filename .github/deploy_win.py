@@ -26,10 +26,10 @@ for v in FILES:
     if whereBar < 0:
         print(f'Cannot find a bar in "{1}"')
         sys.exit(1)
-    subDirAndFile = v[(whereBar + 1):]
+    subdirFile = v[(whereBar + 1):]
     # @todo [urgent] no paths
-    paths = whereBar.split('/')
-    if len(paths > 0):
+    paths = subdirFile.split('/')
+    if len(paths > 1):
         print(f'Additional subpaths unsupported!')
         sys.exit(1)
     destDir = DIR_DEPLOY
