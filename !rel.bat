@@ -32,7 +32,7 @@
 @set CMAKE_CMD=%CMAKE% -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 @set QCMAKE=%QTDIR%/lib/cmake
 @set CMAKE_CMD_QT=%CMAKE_CMD% -DCMAKE_PREFIX_PATH=%QCMAKE% -DQt6_DIR=%QCMAKE%/Qt6
-@set CMAKE_PAR=--config Release -j%NUMBER_OF_PROCESSORS%
+@set CMAKE_PAR=--config Release --parallel
 
 @rem Needed by Qt
 
