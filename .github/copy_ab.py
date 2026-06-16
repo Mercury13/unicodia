@@ -24,10 +24,10 @@ for x in filesToCopy:
     print('Copied {x} to dir {destDir}')
 
 for x in filesToCheck:
-    with open(x, 'r') as file:
+    with open(x, 'rb') as file:
         srcData = file.read()    
     destPath = os.path.join(sys.argv[1], x)
-    with open(destPath, 'r') as file:
+    with open(destPath, 'rb') as file:
         destData = file.read()
     if srcData != destData:
         print('Files {x} and {destPath} are inequal!')
