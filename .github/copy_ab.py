@@ -13,7 +13,7 @@ if len(params) < 1:
     print('Usage: copy_ab.py dest_dir')
     sys.exit(1)
     
-filesToCopy = [ 'UcAuto.py' ]
+filesToCopy = [ 'UcAuto.cpp' ]
 
 filesToCheck = [ 'UcAutoLib.cpp', 'UcAutoCount.h',
     'UcAutoScripts.h', 'UcAutoOldComp.cpp', 'UcAutoSutton.cpp' ]
