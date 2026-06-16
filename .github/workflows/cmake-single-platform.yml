@@ -25,6 +25,12 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 
+    - name: Setup Qt
+      uses: trollixx/setup-qt@v1.1.1
+      with:
+        version: 6.2.4
+        arch: mingw_64
+
     - name: Configure CMake for AutoBuilder
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
