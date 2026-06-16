@@ -55,6 +55,9 @@ jobs:
     - name: Build Unicodia
       run: cmake --build ${{github.workspace}}/build-UC --config ${{env.BUILD_TYPE}} --parallel
 
+    - name: Deploy Unicodia
+      run: python ${{github.workspace}}/.github/deploy_win.py ${{QT_ROOT_DIR}}
+
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.
