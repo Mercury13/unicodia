@@ -39,13 +39,21 @@ jobs:
 
     - name: Build AutoBuilder
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel ${{env.NUMBER_OF_PROCESSORS}}
+      run: cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Run AutoBuilder
       run: ${{github.workspace}}/build-AB/AutoBuilder.exe
 
     - name: Copy AB's artifacts
       run: bash ${{github.workspace}}/.github/copy_ab.sh ${{github.workspace}}
+
+    - name: Configure CMake for Unicodia
+      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+      run: cmake -G "MinGW Makefiles" -S ${{github.workspace}}/Unicodia -B ${{github.workspace}}/build-UC -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build Unicodia
+      run: cmake --build ${{github.workspace}}/build-UC --config ${{env.BUILD_TYPE}} --parallel
 
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
