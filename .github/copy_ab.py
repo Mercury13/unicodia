@@ -18,10 +18,10 @@ filesToCopy = [ 'UcAuto.cpp' ]
 filesToCheck = [ 'UcAutoLib.cpp', 'UcAutoCount.h',
     'UcAutoScripts.h', 'UcAutoOldComp.cpp', 'UcAutoSutton.cpp' ]
 
+destDir = sys.argv[1]
 for x in filesToCopy:
-    destPath = os.path.join(sys.argv[1], x)
-    shutil.copy(x, destPath)
-    print('Copied {x} to {destPath}')
+    shutil.copy(x, destDir)
+    print('Copied {x} to dir {destDir}')
 
 for x in filesToCheck:
     with open(x, 'r') as file:
