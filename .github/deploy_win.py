@@ -29,7 +29,7 @@ FILES = [
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
 
-hasBadFiles = false
+hasBadFiles = False
 for v in FILES:
     v = v.replace('//', '/')
     v = v.replace('/|', '|')
