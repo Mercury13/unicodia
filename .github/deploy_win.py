@@ -5,12 +5,14 @@ import shutil
 print('Deploy Unicodia on Windows')
 
 params = sys.argv[1:]
-if len(params) < 1:
-    print('Usage: deploy_win.py qtdir [--rel]')
+if len(params) < 2:
+    print('Usage: deploy_win.py srcdir qtdir [--rel]')
     exit(1)
 
 QT_DIR = sys.argv[1]
+SRC_DIR = sys.argv[2]
 print(f'The Qt dir is {QT_DIR}.')
+print(f'The source dir is {SRC_DIR}.')
 
 isRelease = False
 for v in params:
@@ -18,13 +20,26 @@ for v in params:
         isRelease = True
 print(f'Release: {isRelease}')
 
+print('Copying files')
 FILES = [
     'build-UC|Unicodia.exe',
+    SRC_DIR + '/MiscFiles|Unicodia.xml',
+    SRC_DIR + '|LICENSE',
+    SRC_DIR + '/MiscFiles/WinManifest|Resources.pri',
+    SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-80.png',
+    SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-100.png',
+    SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-140.png',
+    SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-180.png',
+    SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_150.scale-180.png',
     QT_DIR + '/bin|Qt6Core.dll',
+    QT_DIR + '/bin|Qt6Gui.dll',
     QT_DIR + '/bin|Qt6Widgets.dll',
-    QT_DIR + '/bin|Qt6Widgets1.dll',
     QT_DIR + '/bin|Qt6Svg.dll',
     QT_DIR + '/bin|Qt6SvgWidgets.dll',
+    QT_DIR + '/plugins|imageformats/qsvg.dll',
+    QT_DIR + '/plugins|platforms/qwindows.dll',
+    QT_DIR + '/plugins|styles/qwindowsvistastyle.dll',
+    # @todo [urgent] MinGW files
 ]
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
@@ -49,7 +64,8 @@ for v in FILES:
     paths = subdirFile.split('/')
     if len(paths) > 1:
         print(f'Additional subpaths unsupported!')
-        sys.exit(1)
+        hasBadFiles = True
+        continue
     destDir = DIR_DEPLOY
     srcName = v.replace('|', '/')
     if os.path.isfile(srcName):
