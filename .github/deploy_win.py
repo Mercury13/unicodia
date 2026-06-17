@@ -54,22 +54,22 @@ for v in FILES:
     # Some files are release-only
     if v.endswith('.dll'):
         isReleaseOnly = True
-    # Split into subdirs
+    # Get destination path`
     whereBar = v.find('|')
     if whereBar < 0:
         print(f'Cannot find a bar in "{1}"')
         sys.exit(1)
     subdirFile = v[(whereBar + 1):]
-    # @todo [urgent] no paths
+    # Extract destination subdirs
     additionalSubpath = ''
-    pSlash = subdirFile.rfind('/')
-    if pShash >= 0:
-        additionalSubpath = subdirFile[:pShash]
-        continue
     destDir = DIR_DEPLOY
-    if additionalSubpath != '':
+    pSlash = subdirFile.rfind('/')
+    if pSlash >= 0:
+        additionalSubpath = subdirFile[:pSlash]
         destDir = os.path.join(destDir, additionalSubpath)
+    # Get src name
     srcName = v.replace('|', '/')
+    # Copy or register errors
     if os.path.isfile(srcName):
         # Could reverse and elif, but this branch is good,
         # and (actual) else is bad
