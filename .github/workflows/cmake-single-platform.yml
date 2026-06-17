@@ -35,7 +35,7 @@ jobs:
     - name: Install MSYS
       uses: msys2/setup-msys2@v2
       with:
-        install: mbedtls
+        install: mingw-w64-x86_64-mbedtls
     
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4.3.1
