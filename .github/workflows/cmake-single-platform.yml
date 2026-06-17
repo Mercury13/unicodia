@@ -29,13 +29,17 @@ jobs:
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: windows-latest
 
+    defaults:
+      run:
+        shell: msys2 {0}
+
     steps:
-    - uses: actions/checkout@v6
-    
-    - name: Install MSYS
+    - name: Install MSYS2
       uses: msys2/setup-msys2@v2
       with:
-        install: mingw-w64-x86_64-mbedtls
+        install: git mingw-w64-x86_64-mbedtls
+    
+    - uses: actions/checkout@v6
     
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4.3.1
