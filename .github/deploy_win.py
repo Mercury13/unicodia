@@ -90,6 +90,10 @@ if hasBadFiles:
 
 print('Copying files OK')
 
-print('Archiving START')
-shutil.make_archive('Unicodia-win64', 'zip', root_dir=DIR_DEPLOY, verbose=1)
-print('Archiving OK')
+#DIR_ARTIF = 'artif-UC'
+#os.mkdir(DIR_ARTIF)
+#
+#print('Archiving START')
+#shutil.make_archive(DIR_ARTIF + '/Unicodia-win64',
+#                'zip', root_dir=DIR_DEPLOY, verbose=1)
+#print('Archiving OK')

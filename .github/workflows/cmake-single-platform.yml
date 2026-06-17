@@ -62,3 +62,11 @@ jobs:
 
     - name: Deploy Unicodia
       run: python ${{github.workspace}}/.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
+
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v7
+      with:
+        name: 'Unicodia-w64'
+        path: 'deploy-UC'
+        retention-days: 7
+        compression-level: 9
