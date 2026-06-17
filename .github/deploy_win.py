@@ -22,6 +22,8 @@ os.mkdir(DIR_DEPLOY)
 for v in FILES:
     v = v.replace('//', '/')
     v = v.replace('/|', '|')
+    v = v.replace('\\/', '/')
+    v = v.replace('\\|', '|')
     whereBar = v.find('|')
     if whereBar < 0:
         print(f'Cannot find a bar in "{1}"')
