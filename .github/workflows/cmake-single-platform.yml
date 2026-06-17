@@ -36,7 +36,7 @@ jobs:
       run: |
         git clone https://github.com/Mbed-TLS/mbedtls.git
         cd mbedtls
-        git submodule update --init
+        git submodule update --init --recursive
         cd ..
 
     - name: Build MbedTls
