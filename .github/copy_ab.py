@@ -8,8 +8,8 @@ import os
 
 print('Python SmartCopy!')
 
-openSllPath = os.environ['OPENSSL']
-print(f'OpenSSL is at "{openSslPath}"')
+#openSllPath = os.environ['OPENSSL']
+#print(f'OpenSSL is at "{openSslPath}"')
 
 params = sys.argv[1:]
 if len(params) < 1:
