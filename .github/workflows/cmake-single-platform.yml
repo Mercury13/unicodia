@@ -34,18 +34,17 @@ jobs:
     
     - name: Clone MbedTls
       run: |
-        md ~MbedTls
-        cd ~MbedTls
         git clone https://github.com/Mbed-TLS/mbedtls.git
+        cd mbedtls
         git submodule update --init
         cd ..
 
-    - name: Build MbedTLls
+    - name: Build MbedTls
       run: |
-        cd ~MbedTls
-        cmake .. -DCMAKE_BUILD_TYPE=Release
-        cmake --parallel
-        cmake --install
+        cd mbedtls
+        cmake -G "MinGW Makefiles" -B build -DCMAKE_BUILD_TYPE=Release
+        cmake --build build --parallel
+        cmake --install build
 
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4.3.1
