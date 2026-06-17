@@ -66,7 +66,7 @@ for v in FILES:
     pSlash = subdirFile.rfind('/')
     if pSlash >= 0:
         additionalSubpath = subdirFile[:pSlash]
-        destDir = destDir + additionalSubpath)
+        destDir = destDir + additionalSubpath
     # Get src name
     srcName = v.replace('|', '/')
     # Copy or register errors
