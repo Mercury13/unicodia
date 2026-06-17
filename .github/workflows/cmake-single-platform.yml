@@ -55,8 +55,6 @@ jobs:
       run: python ${{github.workspace}}/.github/copy_ab.py ${{github.workspace}}/Unicodia/Uc
 
     - name: Configure CMake for Unicodia
-      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: cmake -G "MinGW Makefiles" -S ${{github.workspace}}/Unicodia -B ${{github.workspace}}/build-UC -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build Unicodia
@@ -64,16 +62,3 @@ jobs:
 
     - name: Deploy Unicodia
       run: python ${{github.workspace}}/.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
-
-    - name: Archive Unicodia
-      uses: ihiroky/archive-action@v1
-      with:
-        root_dir: ${{github.workspace}}
-        file_path: Unicodia-win64.zip
-
-    #- name: Test
-    #  working-directory: ${{github.workspace}}/build
-      # Execute tests defined by the CMake configuration.
-      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      #run: ctest -C ${{env.BUILD_TYPE}}
-
