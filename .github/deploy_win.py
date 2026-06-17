@@ -42,12 +42,12 @@ FILES = [
     QT_DIR + '/plugins|platforms/qwindows.dll',
     QT_DIR + '/plugins|styles/qwindowsvistastyle.dll',
     # MinGW
-    MINGW_DIR + '/libgcc_s_seh-1.dll',
-    MINGW_DIR + '/libstdc++-6.dll',
-    MINGW_DIR + 'libwinpthread-1.dll',
+    MINGW_DIR + '|libgcc_s_seh-1.dll',
+    MINGW_DIR + '|libstdc++-6.dll',
+    MINGW_DIR + '|libwinpthread-1.dll',
     # OpenSSL
-    MINGW_DIR + '/libcrypto-3-x64.dll',
-    MINGW_DIR + '/libssl-3-x64.dll',
+    MINGW_DIR + '|libcrypto-3-x64.dll',
+    MINGW_DIR + '|libssl-3-x64.dll',
 ]
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
@@ -65,7 +65,7 @@ for v in FILES:
     # Get destination path`
     whereBar = v.find('|')
     if whereBar < 0:
-        print(f'Cannot find a bar in "{1}"')
+        print(f'Cannot find a bar in "{v}"')
         sys.exit(1)
     subdirFile = v[(whereBar + 1):]
     # Extract destination subdirs
