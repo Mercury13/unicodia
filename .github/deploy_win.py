@@ -9,8 +9,8 @@ if len(params) < 2:
     print('Usage: deploy_win.py srcdir qtdir [--rel]')
     exit(1)
 
-QT_DIR = sys.argv[1]
-SRC_DIR = sys.argv[2]
+SRC_DIR = sys.argv[1]
+QT_DIR = sys.argv[2]
 print(f'The Qt dir is {QT_DIR}.')
 print(f'The source dir is {SRC_DIR}.')
 
@@ -61,17 +61,21 @@ for v in FILES:
         sys.exit(1)
     subdirFile = v[(whereBar + 1):]
     # @todo [urgent] no paths
-    paths = subdirFile.split('/')
-    if len(paths) > 1:
-        print(f'Additional subpaths unsupported!')
-        hasBadFiles = True
+    additionalSubpath = ''
+    pSlash = subdirFile.rfind('/')
+    if pShash >= 0:
+        additionalSubpath = subdirFile[:pShash]
         continue
     destDir = DIR_DEPLOY
+    if additionalSubpath != '':
+        destDir = os.path.join(destDir, additionalSubpath)
     srcName = v.replace('|', '/')
     if os.path.isfile(srcName):
         # Could reverse and elif, but this branch is good,
         # and (actual) else is bad
         if isRelease or (not isReleaseOnly):
+            if additionalSubpath != '':
+                os.mkdir(destDir)
             shutil.copy(srcName, destDir)
             print(f'Copied {srcName} --> {destDir}.')
         else:
