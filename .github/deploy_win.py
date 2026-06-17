@@ -20,6 +20,7 @@ for v in params:
         isRelease = True
 print(f'Release: {isRelease}')
 
+MINGW_DIR = 'C:/mingw64/bin'
 print('Copying files START')
 FILES = [
     'build-UC|Unicodia.exe',
@@ -40,7 +41,13 @@ FILES = [
     QT_DIR + '/plugins|iconengines/qsvgicon.dll',
     QT_DIR + '/plugins|platforms/qwindows.dll',
     QT_DIR + '/plugins|styles/qwindowsvistastyle.dll',
-    # @todo [urgent] MinGW files
+    # MinGW
+    MINGW_DIR + '/libgcc_s_seh-1.dll',
+    MINGW_DIR + '/libstdc++-6.dll',
+    MINGW_DIR + 'libwinpthread-1.dll',
+    # OpenSSL
+    MINGW_DIR + '/libcrypto-3-x64.dll',
+    MINGW_DIR + '/libssl-3-x64.dll',
 ]
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
