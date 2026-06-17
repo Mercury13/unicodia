@@ -20,7 +20,7 @@ for v in params:
         isRelease = True
 print(f'Release: {isRelease}')
 
-print('Copying files')
+print('Copying files START')
 FILES = [
     'build-UC|Unicodia.exe',
     SRC_DIR + '/MiscFiles|Unicodia.xml',
@@ -87,3 +87,9 @@ for v in FILES:
 if hasBadFiles:
     print('Have bad files, exiting')
     sys.exit(1)
+
+print('Copying files OK')
+
+print('Archiving START')
+shutil.make_archive('Unicodia-win64', 'zip', root_dir=DIR_DEPLOY, verbose=1)
+print('Archiving OK')
