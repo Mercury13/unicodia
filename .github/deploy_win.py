@@ -36,7 +36,7 @@ FILES = [
     QT_DIR + '/bin|Qt6Widgets.dll',
     QT_DIR + '/bin|Qt6Svg.dll',
     QT_DIR + '/bin|Qt6SvgWidgets.dll',
-    QT_DIR + '/plugins|imageformats/qsvg.dll',
+    QT_DIR + '/plugins|iconengines/qsvgicon.dll',
     QT_DIR + '/plugins|platforms/qwindows.dll',
     QT_DIR + '/plugins|styles/qwindowsvistastyle.dll',
     # @todo [urgent] MinGW files
@@ -66,7 +66,7 @@ for v in FILES:
     pSlash = subdirFile.rfind('/')
     if pSlash >= 0:
         additionalSubpath = subdirFile[:pSlash]
-        destDir = destDir + additionalSubpath
+        destDir = destDir + '/' + additionalSubpath
     # Get src name
     srcName = v.replace('|', '/')
     # Copy or register errors
