@@ -22,6 +22,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
+add_compile_definitions(IXWEBSOCKET_USE_TLS IXWEBSOCKET_USE_OPENSSL IXWEBSOCKET_USE_OPEN_SSL)
 
 qt_add_executable(Unicodia
     MANUAL_FINALIZATION
@@ -132,8 +133,10 @@ target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
 target_link_libraries(Unicodia PRIVATE Qt${QT_VERSION_MAJOR}::SvgWidgets)
 
 if (WIN32)
-    target_link_libraries(Unicodia PRIVATE ws2_32)
+    target_link_libraries(Unicodia PRIVATE ws2_32 crypt32)
 endif()
+
+target_link_libraries(Unicodia PRIVATE z crypto ssl)
 
 set_target_properties(Unicodia PROPERTIES
     ${BUNDLE_ID_OPTION}
