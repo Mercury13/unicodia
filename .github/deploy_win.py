@@ -26,6 +26,7 @@ FILES = [
     SRC_DIR + '/MiscFiles|Unicodia.xml',
     SRC_DIR + '|LICENSE',
     SRC_DIR + '/MiscFiles/WinManifest|Resources.pri',
+    SRC_DIR + '/MiscFiles/WinManifest|Unicodia.VisualElementsManifest.xml',
     SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-80.png',
     SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-100.png',
     SRC_DIR + '/MiscFiles/WinManifest/Root|Start/en-US/Start_70.scale-140.png',
@@ -89,11 +90,3 @@ if hasBadFiles:
     sys.exit(1)
 
 print('Copying files OK')
-
-#DIR_ARTIF = 'artif-UC'
-#os.mkdir(DIR_ARTIF)
-#
-#print('Archiving START')
-#shutil.make_archive(DIR_ARTIF + '/Unicodia-win64',
-#                'zip', root_dir=DIR_DEPLOY, verbose=1)
-#print('Archiving OK')
