@@ -51,6 +51,9 @@ jobs:
         cmake -G "MinGW Makefiles" -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
         cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
 
+    - name: Run AutoBuilder
+      run: ${{github.workspace}}/build-AB/AutoBuilder.exe
+
     - name: Copy AutoBuilder's artifacts
       run: python ${{github.workspace}}/.github/copy_ab.py ${{github.workspace}}/Unicodia/Uc
 
