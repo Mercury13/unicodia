@@ -8,6 +8,13 @@ permissions:
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '.github/**'
+      - 'AutoBuilder/**'
+      - 'Lang-src/**'
+      - 'Libs/**'
+      - 'MiscFiles/**'
+      - 'Unicodia/**'
   pull_request:
     branches: [ "main" ]
 
@@ -57,6 +64,12 @@ jobs:
 
     - name: Deploy Unicodia
       run: python ${{github.workspace}}/.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
+
+    - name: Archive Unicodia
+      uses: ihiroky/archive-action@v1
+      with:
+        root_dir: ${{github.workspace}}
+        file_path: Unicodia-w64.zip
 
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
