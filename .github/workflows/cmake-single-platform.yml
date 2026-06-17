@@ -69,7 +69,7 @@ jobs:
       uses: ihiroky/archive-action@v1
       with:
         root_dir: ${{github.workspace}}
-        file_path: Unicodia-w64.zip
+        file_path: Unicodia-win64.zip
 
     #- name: Test
     #  working-directory: ${{github.workspace}}/build
