@@ -34,7 +34,26 @@ jobs:
       uses: msys2/setup-msys2@v2
       with:
         install: mingw-w64-x86_64-gcc mingw-w64-x86_64-mbedtls
-    
+      # Step 3: Set up environment for MSYS2 MinGW-w64
+
+    - name: Set MSYS2 MinGW64 environment
+      shell: bash
+      run: |
+        set -e
+        # Use MinGW-w64 64-bit environment
+        source /usr/bin/msystem.sh MINGW64
+
+        # Add MinGW binaries to PATH
+        export PATH=/mingw64/bin:$PATH
+
+        # Set C++ compiler explicitly
+        export CC=gcc
+        export CXX=g++
+
+        # Confirm versions
+        gcc --version
+        g++ --version
+
     - uses: actions/checkout@v6
     
     - name: Setup Qt
