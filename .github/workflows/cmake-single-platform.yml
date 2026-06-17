@@ -31,6 +31,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v6
+    
+    - name: Clone MbedTls
+      run: |
+        md ~MbedTls
+        cd ~MbedTls
+        git clone https://github.com/Mbed-TLS/mbedtls.git
+        git submodule update --init
+        cd ..
+
+    - name: Build MbedTLls
+      run: |
+        cd ~MbedTls
+        cmake .. -DCMAKE_BUILD_TYPE=Release
+        cmake --parallel
+        cmake --install
 
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4.3.1
@@ -39,19 +54,14 @@ jobs:
         arch: win64_mingw
         archives: qtbase qtsvg qttranslations
 
-    - name: Configure CMake for AutoBuilder
+    - name: Build AutoBuilder
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: cmake -G "MinGW Makefiles" -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: |
+        cmake -G "MinGW Makefiles" -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
 
-    - name: Build AutoBuilder
-      # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
-
-    - name: Run AutoBuilder
-      run: ${{github.workspace}}/build-AB/AutoBuilder.exe
-
-    - name: Copy AB's artifacts
+    - name: Copy AutoBuilder's artifacts
       run: python ${{github.workspace}}/.github/copy_ab.py ${{github.workspace}}/Unicodia/Uc
 
     - name: Configure CMake for Unicodia
