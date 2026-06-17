@@ -29,15 +29,11 @@ jobs:
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: windows-latest
 
-    defaults:
-      run:
-        shell: msys2 {0}
-
     steps:
     - name: Install MSYS2
       uses: msys2/setup-msys2@v2
       with:
-        install: git cmake mingw-w64-x86_64-mbedtls
+        install: mingw-w64-x86_64-gcc mingw-w64-x86_64-mbedtls
     
     - uses: actions/checkout@v6
     
@@ -52,6 +48,7 @@ jobs:
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
+        path c:\msys64\mingw64\bin;%PATH%
         cmake -G "MinGW Makefiles" -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
         cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
 
