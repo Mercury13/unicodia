@@ -40,7 +40,7 @@ jobs:
         archives: qtbase qtsvg qttranslations
 
     - name: Setup OpenSSL
-      run: choco install openssl
+      run: choco install openssl --version=3.6.3
 
     - name: Configure CMake for AutoBuilder
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
