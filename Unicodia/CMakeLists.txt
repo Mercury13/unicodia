@@ -22,7 +22,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 COMPONENTS Core Widgets Svg SvgWidgets REQUIRED)
 
 add_compile_definitions(QT_STRINGS)
-add_compile_definitions(IXWEBSOCKET_USE_TLS IXWEBSOCKET_USE_OPENSSL IXWEBSOCKET_USE_OPEN_SSL)
+add_compile_definitions(IXWEBSOCKET_USE_TLS=1 IXWEBSOCKET_USE_MBED_TLS=1 IXWEBSOCKET_USE_MBED_TLS_MIN_VERSION_3)
 
 qt_add_executable(Unicodia
     MANUAL_FINALIZATION
@@ -39,13 +39,13 @@ qt_add_executable(Unicodia
         ../Libs/ixwebsocket/IXSelectInterruptFactory.h ../Libs/ixwebsocket/IXSocket.cpp
         ../Libs/ixwebsocket/IXSocket.h ../Libs/ixwebsocket/IXSocketConnect.cpp
         ../Libs/ixwebsocket/IXSocketConnect.h ../Libs/ixwebsocket/IXSocketFactory.cpp
-        ../Libs/ixwebsocket/IXSocketFactory.h ../Libs/ixwebsocket/IXSocketOpenSSL.cpp
-        ../Libs/ixwebsocket/IXSocketOpenSSL.h ../Libs/ixwebsocket/IXSocketTLSOptions.cpp
-        ../Libs/ixwebsocket/IXSocketTLSOptions.h ../Libs/ixwebsocket/IXStrCaseCompare.cpp
-        ../Libs/ixwebsocket/IXStrCaseCompare.h ../Libs/ixwebsocket/IXUrlParser.cpp
-        ../Libs/ixwebsocket/IXUrlParser.h ../Libs/ixwebsocket/IXUserAgent.cpp
-        ../Libs/ixwebsocket/IXUserAgent.h ../Libs/ixwebsocket/IXWebSocketHttpHeaders.cpp
-        ../Libs/ixwebsocket/IXWebSocketHttpHeaders.h
+        ../Libs/ixwebsocket/IXSocketFactory.h
+        ../Libs/ixwebsocket/IXSocketTLSOptions.cpp ../Libs/ixwebsocket/IXSocketTLSOptions.h
+        ../Libs/ixwebsocket/IXStrCaseCompare.cpp ../Libs/ixwebsocket/IXStrCaseCompare.h
+        ../Libs/ixwebsocket/IXUrlParser.cpp ../Libs/ixwebsocket/IXUrlParser.h
+        ../Libs/ixwebsocket/IXUserAgent.cpp ../Libs/ixwebsocket/IXUserAgent.h
+        ../Libs/ixwebsocket/IXWebSocketHttpHeaders.cpp ../Libs/ixwebsocket/IXWebSocketHttpHeaders.h
+        ../Libs/ixwebsocket/IXSocketMbedTLS.cpp ../Libs/ixwebsocket/IXSocketMbedTLS.h
     ../Libs/L10n/LocDic.cpp ../Libs/L10n/LocDic.h ../Libs/L10n/LocFmt.cpp
         ../Libs/L10n/LocFmt.h ../Libs/L10n/LocManager.cpp ../Libs/L10n/LocManager.h
         ../Libs/L10n/LocQt.cpp ../Libs/L10n/LocQt.h
@@ -136,7 +136,7 @@ if (WIN32)
     target_link_libraries(Unicodia PRIVATE ws2_32 crypt32)
 endif()
 
-target_link_libraries(Unicodia PRIVATE z crypto ssl)
+target_link_libraries(Unicodia PRIVATE z mbedtls mbedcrypto mbedx509)
 
 set_target_properties(Unicodia PROPERTIES
     ${BUNDLE_ID_OPTION}
