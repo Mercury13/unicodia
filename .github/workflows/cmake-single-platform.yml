@@ -32,19 +32,11 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     
-    - name: Clone MbedTls
-      run: |
-        git clone https://github.com/Mbed-TLS/mbedtls.git
-        cd mbedtls
-        git submodule update --init --recursive
-        cd ..
-
-    - name: Build MbedTls
-      run: |
-        cmake -G "MinGW Makefiles" -S mbedtls -B build -DCMAKE_BUILD_TYPE=Release
-        cmake --build build --config Release --parallel
-        cmake --install build
-
+    - name: Install MSYS
+      uses: msys2/setup-msys2@v2
+      with:
+        install: mbedtls
+    
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4.3.1
       with:
