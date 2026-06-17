@@ -75,7 +75,7 @@ for v in FILES:
         # and (actual) else is bad
         if isRelease or (not isReleaseOnly):
             if additionalSubpath != '':
-                os.mkdir(destDir)
+                os.makedirs(destDir, exist_ok=True)
             shutil.copy(srcName, destDir)
             print(f'Copied {srcName} --> {destDir}.')
         else:
