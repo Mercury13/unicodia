@@ -76,13 +76,13 @@ jobs:
       run: ./build-AB/AutoBuilder.exe
 
     - name: Copy AutoBuilder's artifacts
-      run: python ./.github/copy_ab.py ./Unicodia/Uc
-
-    - name: Configure CMake for Unicodia
-      run: cmake -S ./Unicodia -B ./build-UC -DCMAKE_PREFIX_PATH="${{env.QT_ROOT_DIR}}" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: python ${{github.workspace}}/.github/copy_ab.py ${{github.workspace}}/Unicodia/Uc
 
     - name: Build Unicodia
-      run: cmake --build ./build-UC --config ${{env.BUILD_TYPE}} --parallel
+      shell: msys2 {0}
+      run: |
+        cmake -G "MinGW Makefiles" -S ./Unicodia -B ./build-UC -DCMAKE_PREFIX_PATH="${{env.QT_ROOT_DIR}}" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        cmake --build ./build-UC --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Deploy Unicodia
       run: python ./.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
