@@ -1,3 +1,7 @@
+import os
+import sys
+import shutil
+
 def simpleFile(v : str, destDir : str, isRelease : bool) -> bool:
     v = v.replace('//', '/')
     v = v.replace('/|', '|')
