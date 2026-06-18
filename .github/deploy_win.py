@@ -10,7 +10,7 @@ if len(params) < 3:
     exit(1)
 
 SRC_DIR = sys.argv[1]
-MSYS_DIR = sys.argv[2]
+MSYS_DIR = sys.argv[2] + '/mingw64/bin'
 QT_DIR = sys.argv[3]
 print(f'The source dir is {SRC_DIR}.')
 print(f'The MSYS dir is {MSYS_DIR}.')
@@ -43,13 +43,13 @@ FILES = [
     QT_DIR + '/plugins|platforms/qwindows.dll',
     QT_DIR + '/plugins|styles/qwindowsvistastyle.dll',
     # MinGW
-    MSYS_DIR + '/bin|libgcc_s_seh-1.dll',
-    MSYS_DIR + '/bin|libstdc++-6.dll',
-    MSYS_DIR + '/bin|libwinpthread-1.dll',
+    MSYS_DIR + '|libgcc_s_seh-1.dll',
+    MSYS_DIR + '|libstdc++-6.dll',
+    MSYS_DIR + '|libwinpthread-1.dll',
     # MbedTLS
-    MSYS_DIR + '/bin|libmbedcrypto-16.dll',
-    MSYS_DIR + '/bin|libmbedtls-21.dll',
-    MSYS_DIR + '/bin|libmbedx509-7.dll',
+    MSYS_DIR + '|libmbedcrypto-16.dll',
+    MSYS_DIR + '|libmbedtls-21.dll',
+    MSYS_DIR + '|libmbedx509-7.dll',
 ]
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
