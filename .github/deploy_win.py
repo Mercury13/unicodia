@@ -20,7 +20,7 @@ for v in params:
         isRelease = True
 print(f'Release: {isRelease}')
 
-MINGW_DIR = 'C:/mingw64'
+MINGW_DIR = 'C:/msys64/mingw64'
 print('Copying files START')
 FILES = [
     'build-UC|Unicodia.exe',
@@ -45,9 +45,10 @@ FILES = [
     MINGW_DIR + '/bin|libgcc_s_seh-1.dll',
     MINGW_DIR + '/bin|libstdc++-6.dll',
     MINGW_DIR + '/bin|libwinpthread-1.dll',
-    # OpenSSL
-    MINGW_DIR + '/lib|libcrypto-3-x64.dll',
-    MINGW_DIR + '/lib|libssl-3-x64.dll',
+    # MbedTLS
+    MINGW_DIR + '/bin|libmbedcrypto-16.dll',
+    MINGW_DIR + '/bin|libmbedtls-21.dll',
+    MINGW_DIR + '/bin|libmbedx509-7.dll',
 ]
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
