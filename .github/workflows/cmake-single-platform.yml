@@ -29,10 +29,6 @@ jobs:
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: windows-latest
 
-    defaults:
-      run:
-        shell: msys2 {0}
-
     steps:
     - name: Install MSYS2
       uses: msys2/setup-msys2@v2
@@ -40,7 +36,7 @@ jobs:
         install: |
           mingw-w64-x86_64-binutils mingw-w64-x86_64-crt mingw-w64-x86_64-gcc
           mingw-w64-x86_64-libwinpthread mingw-w64-x86_64-make mingw-w64-x86_64-cmake
-          python mingw-w64-x86_64-mbedtls
+          mingw-w64-x86_64-mbedtls
       # Step 3: Set up environment for MSYS2 MinGW-w64
 
     - name: Set MSYS2 MinGW64 environment
@@ -65,6 +61,7 @@ jobs:
         archives: qtbase qtsvg qttranslations
 
     - name: Build AutoBuilder
+      shell: msys2 {0}
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       #run: |
@@ -75,6 +72,7 @@ jobs:
         cmake --build ./build-AB --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Run AutoBuilder
+      shell: msys2 {0}
       run: ./build-AB/AutoBuilder.exe
 
     - name: Copy AutoBuilder's artifacts
