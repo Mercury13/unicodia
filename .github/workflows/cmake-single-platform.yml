@@ -31,6 +31,7 @@ jobs:
 
     steps:
     - name: Install MSYS2
+      id: msys2-setup
       uses: msys2/setup-msys2@v2
       with:
         install: |
@@ -85,7 +86,7 @@ jobs:
         cmake --build ./build-UC --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Deploy Unicodia
-      run: python ./.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
+      run: python ./.github/deploy_win.py ${{github.workspace}} ${{steps.msys2-setup.outputs.msys2-location}} ${{env.QT_ROOT_DIR}}
 
     - name: Archive build artifacts
       uses: actions/upload-artifact@v7
