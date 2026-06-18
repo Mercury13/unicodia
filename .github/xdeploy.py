@@ -1,4 +1,4 @@
-def simpleFile(v : str, dest : str, isRelease : bool) -> bool:
+def simpleFile(v : str, destDir : str, isRelease : bool) -> bool:
     v = v.replace('//', '/')
     v = v.replace('/|', '|')
     v = v.replace('\\/', '/')
@@ -15,7 +15,6 @@ def simpleFile(v : str, dest : str, isRelease : bool) -> bool:
     subdirFile = v[(whereBar + 1):]
     # Extract destination subdirs
     additionalSubpath = ''
-    destDir = DIR_DEPLOY
     pSlash = subdirFile.rfind('/')
     if pSlash >= 0:
         additionalSubpath = subdirFile[:pSlash]
