@@ -68,23 +68,23 @@ jobs:
       #  cmake -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
       #  cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
       run: |
-        cmake -S AutoBuilder -B /build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-        cmake --build $build-AB --config ${{env.BUILD_TYPE}} --parallel
+        cmake -S ./AutoBuilder -B ./build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        cmake --build ./build-AB --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Run AutoBuilder
-      run: ${{github.workspace}}/build-AB/AutoBuilder.exe
+      run: ./build-AB/AutoBuilder.exe
 
     - name: Copy AutoBuilder's artifacts
-      run: python ${{github.workspace}}/.github/copy_ab.py ${{github.workspace}}/Unicodia/Uc
+      run: python ./.github/copy_ab.py ./Unicodia/Uc
 
     - name: Configure CMake for Unicodia
-      run: cmake -S ${{github.workspace}}/Unicodia -B ${{github.workspace}}/build-UC -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cmake -S ./Unicodia -B ./build-UC -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build Unicodia
-      run: cmake --build ${{github.workspace}}/build-UC --config ${{env.BUILD_TYPE}} --parallel
+      run: cmake ./build-UC --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Deploy Unicodia
-      run: python ${{github.workspace}}/.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
+      run: python ./.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
 
     - name: Archive build artifacts
       uses: actions/upload-artifact@v7
