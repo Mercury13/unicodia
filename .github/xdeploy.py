@@ -1,4 +1,4 @@
-def simpleFile(v : string, dest : string, isRelease : bool) : bool
+def simpleFile(v : string, dest : string, isRelease : bool) -> bool:
     v = v.replace('//', '/')
     v = v.replace('/|', '|')
     v = v.replace('\\/', '/')
