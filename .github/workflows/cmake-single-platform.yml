@@ -64,9 +64,12 @@ jobs:
     - name: Build AutoBuilder
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+      #run: |
+      #  cmake -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      #  cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
       run: |
-        cmake -S ${{github.workspace}}/AutoBuilder -B ${{github.workspace}}/build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-        cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
+        cmake -S AutoBuilder -B /build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        cmake --build $build-AB --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Run AutoBuilder
       run: ${{github.workspace}}/build-AB/AutoBuilder.exe
