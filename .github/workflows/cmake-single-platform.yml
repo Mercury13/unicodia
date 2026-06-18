@@ -70,7 +70,7 @@ jobs:
       #  cmake --build ${{github.workspace}}/build-AB --config ${{env.BUILD_TYPE}} --parallel
       run: |
         cmake -S ./AutoBuilder -B ./build-AB -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-        cmake --build ./build-AB --config ${{env.BUILD_TYPE}} j $(nproc)
+        cmake --build ./build-AB --config ${{env.BUILD_TYPE}} -j $(nproc)
 
     - name: Run AutoBuilder
       shell: msys2 {0}
@@ -83,7 +83,7 @@ jobs:
       shell: msys2 {0}
       run: |
         cmake -S ./Unicodia -B ./build-UC -DCMAKE_PREFIX_PATH="${{env.QT_ROOT_DIR}}" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-        cmake --build ./build-UC --config ${{env.BUILD_TYPE}} j $(nproc)
+        cmake --build ./build-UC --config ${{env.BUILD_TYPE}} -j $(nproc)
 
     - name: Deploy Unicodia
       run: python ./.github/deploy_win.py ${{github.workspace}} ${{steps.msys2-setup.outputs.msys2-location}} ${{env.QT_ROOT_DIR}}
