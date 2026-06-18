@@ -55,12 +55,12 @@ FILES = [
 DIR_DEPLOY = 'deploy-UC'
 os.mkdir(DIR_DEPLOY)
 
-hasBadFiles = False
+isOk = True
 for v in FILES:
     result = xdeploy.simpleFile(v, DIR_DEPLOY, isRelease)
-    hasBadFiles = hasBadFiles or result
+    isOk = isOk and result
 
-if hasBadFiles:
+if not isOk:
     print('Have bad files, exiting')
     sys.exit(1)
 
