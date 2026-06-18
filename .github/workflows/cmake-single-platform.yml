@@ -37,7 +37,10 @@ jobs:
     - name: Install MSYS2
       uses: msys2/setup-msys2@v2
       with:
-        install: base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake mingw-w64-x86_64-mbedtls
+        install: |
+          base-devel mingw-w64-x86_64-binutils mingw-w64-x86_64-crt mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-libwinpthread mingw-w64-x86_64-make mingw-w64-x86_64-cmake
+          mingw-w64-x86_64-mbedtls
       # Step 3: Set up environment for MSYS2 MinGW-w64
 
     - name: Set MSYS2 MinGW64 environment
@@ -78,10 +81,10 @@ jobs:
       run: python ./.github/copy_ab.py ./Unicodia/Uc
 
     - name: Configure CMake for Unicodia
-      run: cmake -S ./Unicodia -B ./build-UC -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cmake -S ./Unicodia -B ./build-UC -DCMAKE_PREFIX_PATH="${{env.QT_ROOT_DIR}}" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build Unicodia
-      run: cmake ./build-UC -DCMAKE_PREFIX_PATH="${{env.QT_ROOT_DIR }}" --config ${{env.BUILD_TYPE}} --parallel
+      run: cmake ./build-UC --config ${{env.BUILD_TYPE}} --parallel
 
     - name: Deploy Unicodia
       run: python ./.github/deploy_win.py ${{github.workspace}} ${{env.QT_ROOT_DIR}}
