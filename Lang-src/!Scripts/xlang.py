@@ -8,7 +8,7 @@ def _readTextMaybe(node, subname : str) -> str | None:
         return None
     paras = q.findall('p')
     if len(paras) == 0:
-        return node.text
+        return q.text
     else:
         isNext = False
         r = ''
@@ -16,7 +16,7 @@ def _readTextMaybe(node, subname : str) -> str | None:
             if isNext:
                 r += '\n'
             q = v.text
-            if q is str:
+            if isinstance(q, str):
                 r += q
             isNext = True
         return r
@@ -27,10 +27,20 @@ def _readText(node, chain : str, subname : str) -> str:
         raise Exception(f'Chain {chain}: cannot find text <{subname}>')
     return q
 
+BACKSLASH = '\\'
+BACKSLASH_ESC = '\\\\'
+NEWLINE = '\n'
+NEWLINE_ESC = '\\n'
+
+def iniEscape(x : str) -> str:
+    x = x.replace(BACKSLASH, BACKSLASH_ESC)
+    x = x.replace(NEWLINE, NEWLINE_ESC)
+    return x
+
 class Xstring:
     def __init__(self, knownOrig : str, value : str):
         self.knownOrig = knownOrig
-        self.value = str
+        self.value = value
         self.tag = 0
 
 class Xgroup:
@@ -40,7 +50,6 @@ class Xgroup:
     def clear(self):
         self.children = dict()
         self.strings = dict()
-        self.original = ''
 
     def childAt(self, key : str) -> Xlang:
         '''
@@ -76,8 +85,8 @@ class Xgroup:
             translation = None
             if isTransl:
                 knownOrig = _readTextMaybe(v, 'known-orig')
-                if knowLang and not(knownOrig is None):
-                    raise Exception(f'Know language, string {chain2} is untranslated')
+                if knowLang and (knownOrig is not None):
+                    raise Exception(f'Know language, string "{chain2}" is untranslated')
                 translation = _readTextMaybe(v, 'transl')
             if knownOrig is None:
                 knownOrig = orig
@@ -85,12 +94,44 @@ class Xgroup:
                 translation = orig
             self.putStr(iid, knownOrig, translation)
 
+    def _recurseExportIni(self, file, prefix : str, separator : str, nWritten : int) -> int:
+        ''' @return  new # of lines written'''
+        # Strings
+        if len(self.strings) > 0:
+            if prefix != '':
+                if nWritten > 0:
+                    file.write('\n')
+                file.write('[' + prefix + ']\n')
+            for k,v in self.strings.items():
+                esc = iniEscape(v.value)
+                file.write(k)
+                file.write('=')
+                file.write(esc)
+                file.write('\n')
+            nWritten = nWritten + len(self.strings)
+        # Children
+        newSeparator = separator
+        if prefix == '':
+            newSeparator = ''
+        for k,v in self.children.items():
+            newPrefix = prefix + newSeparator + k
+            nWritten = v._recurseExportIni(file, newPrefix, separator, nWritten)
+        return nWritten
+            
+    def exportIni(self, fname: str, separator : str):
+        file = open(fname, 'w', encoding='UTF-8')
+        self._recurseExportIni(file, '', separator, 0)
+
 class Xlang:
     def __init__(self):
         self.clear()
 
     def clear(self):
         self.files = dict()
+        self.original = ''
+
+    def isOriginal(self) -> bool:
+        return (self.original == '')
 
     def nFiles(self):
         return len(self.files)
@@ -111,9 +152,9 @@ class Xlang:
         if sType == 'original':
             print(f'Object {fname} is an original.')
             self.original = ''
+            knowLang = False
         elif sType == 'full-transl':
             isTransl = True
-            knowLang = False
             hInfo = root.find('info')
             if hInfo is None:
                 raise Exception('Translation has no <info> tag')
@@ -123,6 +164,7 @@ class Xlang:
             self.original = hOrig.get('fname', '')
             if self.original == '':
                 raise Exception('Translation does not link to original')
+            print(f'Object {fname} is a full translation.')
         else:
             raise Exception(f'Unknown XML type {sType}')
         # Load files
@@ -134,8 +176,14 @@ class Xlang:
             file = Xgroup()
             self.files[fname] = file
             file._loadXml(v, '', isTransl, knowLang)
+            
+    def exportInis(self, outdir : str, separator : str):
+        os.makedirs(outdir, exist_ok=True)
+        for k,v in self.files.items():
+            v.exportIni(outdir + '/' + k, separator)
 
-def exportXml(indir : str, fname : str, tech: str, outdir : str, knowLang : bool):
+def exportXml(indir : str, fname : str, tech: str, outdir : str, knowLang : bool) -> str:
+    '''  @return   output directory, to dump locale.xml and Qt translations there  '''
     iso,_ = os.path.splitext(fname)
     print(f'Export language START: lang={iso} ({tech}), know={knowLang}')
     lang = Xlang()
@@ -143,4 +191,13 @@ def exportXml(indir : str, fname : str, tech: str, outdir : str, knowLang : bool
     nf = lang.nFiles()
     ns = lang.nStrings()
     print(f'Loaded {nf} files, {ns} strings.')
+    newOutDir = outdir + '/' + tech
+    if lang.isOriginal():
+        lang.exportInis(newOutDir, '.')
+    else:
+        orig = Xlang()
+        orig.loadXml(indir + '/' + lang.original, False)
+        if not orig.isOriginal():
+            raise Exception('The original is actually not!')
     print(f'Export language END')
+    return newOutDir
