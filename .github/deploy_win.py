@@ -2,6 +2,7 @@ import os
 import sys
 
 import xdeploy
+import xlang
 
 print('Deploy Unicodia on Windows')
 
@@ -65,3 +66,9 @@ if not isOk:
     sys.exit(1)
 
 print('Copying files OK')
+
+print('Exporting langs START')
+dirLangsIn = SRC_DIR + '/Lang-src'
+dirLangsOut = DIR_DEPLOY + '/Languages'
+xlang.exportAll(dirLangsIn, dirLangsOut, QT_DIR, isRelease)
+print('Exporting langs OK')
