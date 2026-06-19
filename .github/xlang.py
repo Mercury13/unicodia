@@ -51,7 +51,7 @@ class Xgroup:
         self.children = dict()
         self.strings = dict()
 
-    def childAt(self, key : str) -> Xlang:
+    def childAt(self, key : str) -> Xgroup:
         '''
            @return  never None
         '''
