@@ -38,10 +38,9 @@ def iniEscape(x : str) -> str:
     return x
 
 class Xstring:
-    def __init__(self, knownOrig : str, value : str, tag : int = 0):
+    def __init__(self, knownOrig : str, value : str):
         self.knownOrig = knownOrig
         self.value = value
-        self.tag = tag
 
 class Xgroup:
     def __init__(self):
@@ -62,21 +61,21 @@ class Xgroup:
             self.children[key] = r
             return r
 
-    def putStr(self, iid : str, knownOrig : str, value : str, tag : int = 0):
-        self.strings[iid] = Xstring(knownOrig, value, tag)
+    def putStr(self, iid : str, knownOrig : str, value : str):
+        self.strings[iid] = Xstring(knownOrig, value)
 
     def nStrings(self):
         r = len(self.strings)
         for v in self.children.values():
             r += v.nStrings()
         return r
-        
-    def _loadXml(self, node, chain : str, isTransl : bool, knowLang : bool, tag : int = 0):
+
+    def _loadXml(self, node, chain : str, isTransl : bool, knowLang : bool):
         for v in node.findall('group'):
             iid = v.get('id', '')
             child = Xgroup()
             self.children[iid] = child
-            child._loadXml(v, chain + '/' + iid, isTransl, knowLang, tag)
+            child._loadXml(v, chain + '/' + iid, isTransl, knowLang)
         for v in node.findall('text'):
             iid = v.get('id', '')
             chain2 = chain + ':' + iid
@@ -92,7 +91,7 @@ class Xgroup:
                 knownOrig = orig
             if translation is None:
                 translation = orig
-            self.putStr(iid, knownOrig, translation, tag)
+            self.putStr(iid, knownOrig, translation)
 
     def _recurseExportIni(self, file, prefix : str, separator : str, nWritten : int) -> int:
         ''' @return  new # of lines written'''
@@ -117,19 +116,30 @@ class Xgroup:
             newPrefix = prefix + newSeparator + k
             nWritten = v._recurseExportIni(file, newPrefix, separator, nWritten)
         return nWritten
-            
+
+    def retranslate(self, other : Xlang, prefix : str, knowLang : bool):
+        '''  @param [in]  prefix  just for error-checking
+             @param [in]  knowLang  [+] throw error on something untranslated
+        '''
+        for k,v in self.children.items():
+            if k in other.children:
+                v.retranslate(other.children[k], prefix + '/' + k, knowLang)
+            else:
+                if knowLang:
+                    raise Exception(f'Know language, group "{prefix}/{k}" is untranslated')
+        for k,v in self.strings.items():
+            if k in other.strings:
+                w = other.strings[k]
+                if knowLang and (v.value != w.knownOrig):
+                    raise Exception(f'Know language, string "{prefix}:{k}" is obsolete')
+                v.value = w.value
+            else:
+                if knowLang:
+                    raise Exception(f'Know language, string "{prefix}:{k}" is untranslated')
+
     def exportIni(self, fname: str, separator : str):
         file = open(fname, 'w', encoding='UTF-8')
         self._recurseExportIni(file, '', separator, 0)
-
-    def countTag(self, needle : int) -> int:
-        r = 0
-        for v in self.strings.values():
-            if v.tag == needle:
-                r = r + 1
-        for v in self.children.values():
-            r += v.countTag(needle)
-        return r
 
 class Xlang:
     def __init__(self):
@@ -148,17 +158,11 @@ class Xlang:
     def nStrings(self):
         '''  @return  total # of strings in all files  '''
         r = 0
-        for _,v in self.files.items():
+        for v in self.files.values():
             r += v.nStrings()
         return r
-        
-    def countTag(self, needle : int) -> int:
-        r = 0
-        for _,v in self.files.items():
-            r += v.countTag(needle)
-        return r
 
-    def loadXml(self, fname : str, knowLang : bool, tag : int = 0):
+    def loadXml(self, fname : str, knowLang : bool):
         self.clear()
         xml = ET.parse(fname)
         root = xml.getroot()
@@ -190,14 +194,22 @@ class Xlang:
                 raise Exception('Found a file without name')
             file = Xgroup()
             self.files[fname] = file
-            file._loadXml(v, '', isTransl, knowLang, tag)
-            
+            file._loadXml(v, fname + ':', isTransl, knowLang)
+
+    def retranslate(self, other : Xlang, knowLang : bool):
+        for k,v in self.files.items():
+            if k in other.files:
+                v.retranslate(other.files[k], k + ':', knowLang)
+            else:
+                if knowLang:
+                    raise Exception(f'Know language, file "{k}" is untranslated')
+
     def exportInis(self, outdir : str, separator : str):
         os.makedirs(outdir, exist_ok=True)
         for k,v in self.files.items():
             v.exportIni(outdir + '/' + k, separator)
 
-def exportXml(indir : str, fname : str, tech: str, outdir : str, knowLang : bool) -> str:
+def exportToIni(indir : str, fname : str, tech: str, outdir : str, knowLang : bool) -> str:
     '''  @return   output directory, to dump locale.xml and Qt translations there  '''
     iso,_ = os.path.splitext(fname)
     print(f'Export language START: lang={iso} ({tech}), know={knowLang}')
@@ -211,10 +223,10 @@ def exportXml(indir : str, fname : str, tech: str, outdir : str, knowLang : bool
         lang.exportInis(newOutDir, '.')
     else:
         orig = Xlang()
-        orig.loadXml(indir + '/' + lang.original, False, 1)
-        nt = orig.countTag(1)
-        print(f'Loaded {nt} strings tagged "1".')        
+        orig.loadXml(indir + '/' + lang.original, False)
         if not orig.isOriginal():
             raise Exception('The original is actually not!')
+        orig.retranslate(lang, knowLang)
+        orig.exportInis(newOutDir, '.')
     print(f'Export language END')
     return newOutDir
