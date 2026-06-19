@@ -15,9 +15,8 @@ on:
       - 'Libs/**'
       - 'MiscFiles/**'
       - 'Unicodia/**'
-    paths-ignore:
-      - '**.md'
-      - 'Lang-src/Scripts/**'
+      - '!**.md'
+      - '!Lang-src/Scripts/**'
   pull_request:
     branches: [ "main" ]
 
