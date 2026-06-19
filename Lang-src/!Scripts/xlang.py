@@ -51,7 +51,7 @@ class Xgroup:
         self.children = dict()
         self.strings = dict()
 
-    def childAt(self, key : str) -> Xgroup:
+    def childAt(self, key : str):
         '''
            @return  never None
         '''
@@ -118,7 +118,7 @@ class Xgroup:
             nWritten = v._recurseExportIni(file, newPrefix, separator, nWritten)
         return nWritten
 
-    def retranslate(self, other : Xlang, prefix : str, knowLang : bool):
+    def retranslate(self, other, prefix : str, knowLang : bool):
         '''  @param [in]  prefix  just for error-checking
              @param [in]  knowLang  [+] throw error on something untranslated
         '''
@@ -197,7 +197,7 @@ class Xlang:
             self.files[fname] = file
             file._loadXml(v, fname + ':', isTransl, knowLang)
 
-    def retranslate(self, other : Xlang, knowLang : bool):
+    def retranslate(self, other, knowLang : bool):
         for k,v in self.files.items():
             if k in other.files:
                 v.retranslate(other.files[k], k + ':', knowLang)
