@@ -197,7 +197,7 @@ class Xlang:
             self.files[fname] = file
             file._loadXml(v, fname + ':', isTransl, knowLang)
 
-    def retranslate(self, other : Xlang, knowLang : bool):
+    def retranslate(self, other, knowLang : bool):
         for k,v in self.files.items():
             if k in other.files:
                 v.retranslate(other.files[k], k + ':', knowLang)
