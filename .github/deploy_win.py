@@ -24,7 +24,7 @@ for v in params:
         isRelease = True
 print(f'Release: {isRelease}')
 
-print('Copying files START')
+print('Copy files START')
 FILES = [
     'build-UC|Unicodia.exe',
     SRC_DIR + '/MiscFiles|Unicodia.xml',
@@ -65,10 +65,10 @@ if not isOk:
     print('Have bad files, exiting')
     sys.exit(1)
 
-print('Copying files OK')
+print('Copy files OK')
 
-print('Exporting langs START')
+print('Export langs START')
 dirLangsIn = SRC_DIR + '/Lang-src'
 dirLangsOut = DIR_DEPLOY + '/Languages'
 xlang.exportAll(dirLangsIn, dirLangsOut, QT_DIR, isRelease)
-print('Exporting langs OK')
+print('Export langs OK')
