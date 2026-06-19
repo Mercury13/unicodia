@@ -118,7 +118,7 @@ class Xgroup:
             nWritten = v._recurseExportIni(file, newPrefix, separator, nWritten)
         return nWritten
 
-    def retranslate(self, other : Xlang, prefix : str, knowLang : bool):
+    def retranslate(self, other, prefix : str, knowLang : bool):
         '''  @param [in]  prefix  just for error-checking
              @param [in]  knowLang  [+] throw error on something untranslated
         '''
