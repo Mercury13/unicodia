@@ -1,4 +1,5 @@
 import os
+import shutil
 import xml.etree.ElementTree as ET
 from enum import Enum
 
@@ -209,8 +210,9 @@ class Xlang:
         for k,v in self.files.items():
             v.exportIni(outdir + '/' + k, separator)
 
-def exportToIni(indir : str, fname : str, tech: str, outdir : str, knowLang : bool) -> str:
-    '''  @return   output directory, to dump locale.xml and Qt translations there  '''
+def exportToIni(indir : str, fname : str, tech: str, outdir : str, knowLang : bool):
+    '''  @return   1) output directory, to dump locale.xml and Qt translations there
+                   2) ISO code  '''
     iso,_ = os.path.splitext(fname)
     print(f'Export language START: lang={iso} ({tech}), know={knowLang}')
     lang = Xlang()
@@ -229,4 +231,35 @@ def exportToIni(indir : str, fname : str, tech: str, outdir : str, knowLang : bo
         orig.retranslate(lang, knowLang)
         orig.exportInis(newOutDir, '.')
     print(f'Export language END')
-    return newOutDir
+    return newOutDir, iso
+
+def _copy(fnIn : str, dirOut : str, wantCopy : bool) -> bool:
+    if os.path.isfile(fnIn):
+        if wantCopy:
+            shutil.copy(fnIn, dirOut)
+            print(f'Copied {fnIn} --> {dirOut}.')
+        else:
+            print(f'Skipped {fnIn} --> {dirOut}, not a release.')
+        return True
+    else:
+        print(f'File {fnIn} is missing, skipping.')
+        return False
+
+
+def exportFull(indir : str, fname : str, tech : str, outdir : str,
+            knowLang : bool, qtdir : str | None, isRelease : bool,
+            altIso : str = ''):
+    isOk = True
+    outDir, iso = exportToIni(indir, fname, tech, outdir, knowLang)
+    print('Exporting supplemental files...')
+    r = _copy(indir + '/' + iso + '/locale.xml', outdir, True)
+    isOk = isOk and r
+    if qtdir is not None:
+        iso1 = iso
+        if altIso != '':
+            iso1 = altIso
+        trfname = f'{qtdir}/translations/qtbase_{iso1}.qm'
+        r = _copy(trfname, outdir, isRelease)
+        isOk = isOk and r
+    if not isOk:
+        raise Exception('Have bad files!')

@@ -38,6 +38,5 @@ def simpleFile(v : str, destDir : str, isRelease : bool) -> bool:
             print(f'Skipped {srcName} --> {destDir}, not a release.')
         return True
     else:
-        hasBadFiles = True
         print(f'File {srcName} is missing, skipping.')
         return False
