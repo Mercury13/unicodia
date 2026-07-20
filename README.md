@@ -41,7 +41,7 @@ Unicodia does not collect data at all, but uses GitHub API for updates.
 ## Language policy
 **Common.** No war jargon. Describe the 2022 war as neutrally as possible. Every _lingua franca_ (English, Russian, French) is in its international form. Make examples as patriotic as possible for the language we’re writing in: the same letter is Russian and Ukrainian in respective L10n’s. And English if the same phenomenon exists in the English language. Apostrophe is U+2019.
 
-Is **Old** in the front or in the back? It depends. 1) In Scripts — as convenient (they are not gathered to a large list). In Blocks… 2) Old is the main word (_Ancient symbols_) → better front. 3) Auxiliary block (_Old Sogdian, Ancient Greek_) → no matter, we’ll find it anyway by looking around Sogdian/Greek. 4) Old is an adjective to something more important (_Italic old, Mongolian old, Permic old_) → better back. It’s just the ease of finding a block in the long list of 300 blocks.
+Is **Old** in the front or in the back? It depends. 1) **In Scripts** — as convenient (they are not gathered to a large list). **In Blocks**… 2) Old is the main word (_Ancient symbols_) → better front. 3) Auxiliary block (_Old Sogdian, Ancient Greek_) → no matter, we’ll find it anyway by looking around Sogdian/Greek. 4) Old is an adjective to something more important (_Italic old, Mongolian old, Permic old_) → better back. It’s just the ease of finding a block in the long list of 300 blocks.
 
 **AI as a translator.** Allowed, but at least check it somehow.
 
