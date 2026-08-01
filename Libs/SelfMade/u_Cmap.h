@@ -177,8 +177,8 @@ template <std::unsigned_integral K, size_t N>
 class DoubleCmap : public Cmap<K, unsigned char, N>
 {
     using Super = Cmap<K, unsigned char, N>;
-    using typename Super::value_type;
 public:
+    using typename Super::value_type;
     consteval DoubleCmap() {}
 
     template <size_t N1>

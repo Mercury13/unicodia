@@ -728,6 +728,24 @@ namespace {
         { u'œ', 156 }, { u'ž', 158 }, { u'Ÿ', 159 },
     }};
 
+    // unchanged
+    consteval ReverseMap::value_type unc(unsigned x)  { return { x, x}; }
+
+    constinit const ReverseMap rmWinRu {{
+        { u'Ђ', 0x80 }, { u'Ѓ', 0x81 },	{ u'‚', 0x82 }, { u'ѓ', 0x83 },
+        { u'„', 0x84 }, { u'…', 0x85 }, { u'†', 0x86 }, { u'‡', 0x87 },
+        { u'€', 0x88 }, { u'‰', 0x89 }, { u'Љ', 0x8A }, { u'‹', 0x8B },
+        { u'Њ', 0x8C }, { u'Ќ', 0x8D }, { u'Ћ', 0x8E }, { u'Џ', 0x8F },
+        { u'ђ', 0x90 }, { u'‘', 0x91 }, { u'’', 0x92 }, { u'“', 0x93 },
+        { u'”', 0x94 }, { u'•', 0x95 }, { u'–', 0x96 }, { u'—', 0x97 },
+                        { u'™', 0x99 }, { u'љ', 0x9A }, { u'›', 0x9B },
+        { u'њ', 0x9C }, { u'ќ', 0x9D }, { u'ћ', 0x9E }, { u'џ', 0x9F },
+        unc(0xA0)     , { u'Ў', 0xA1 }, { u'ў', 0xA2 }, { u'Ј', 0xA3 },
+        { u'¤', 0xA4 }, { u'Ґ', 0xA5 }, { u'¦', 0xA6 }, { u'§', 0xA7 },
+        { u'Ё', 0xA8 }, { u'©', 0xA9 }, { u'Є', 0xAA }, { u'«', 0xAB },
+        { u'¬', 0xAC }, unc(0xAD)     , { u'®', 0xAE }, { u'Ї', 0xAF },
+    }};
+
     using AltgrPair = std::pair<char16_t, uc::AltgrKey>;
 
     consteval AltgrPair altgr(char16_t subj, char key)
