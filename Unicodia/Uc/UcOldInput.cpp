@@ -22,9 +22,9 @@ template class Cmap<char16_t, unsigned char, 128>;
 using ReverseMap = DoubleCmap<char16_t, 128>;
 template class DoubleCmap<char16_t, 128>;
 
-constexpr unsigned short operator "" _mb (unsigned long long x) { return x * 1024; }
+constexpr unsigned short operator ""_mb (unsigned long long x) { return x * 1024; }
 
-unsigned char uc::AltCode::LocDos::singleCode() const noexcept
+unsigned char uc::AltCode::LocSet::singleCode() const noexcept
 {
     unsigned char r = 0;
     for (auto x : *this) {
@@ -42,7 +42,7 @@ unsigned char uc::AltCode::LocDos::singleCode() const noexcept
 }
 
 
-bool uc::AltCode::LocDos::hasOtherThan(unsigned char x) const noexcept
+bool uc::AltCode::LocSet::hasOtherThan(unsigned char x) const noexcept
 {
     for (auto c : *this) {
         // x is never CMAP_NO_COMMON, so OK
