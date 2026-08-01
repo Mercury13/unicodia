@@ -193,6 +193,12 @@ public:
     ///  If k is found: changes v, returns true
     ///  If k is not found: v intact, returns false
     template <std::integral K1>
+    bool oldQuery(K1 k, unsigned char& v) const
+        { return Super::query(k, v); }
+
+    ///  If k is found: changes v, returns true
+    ///  If k is not found: v intact, returns false
+    template <std::integral K1>
     bool query(K1 k, unsigned char commonValue, unsigned char& v) const;
 private:
     static_assert(N <= 256);

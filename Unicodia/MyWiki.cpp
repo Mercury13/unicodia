@@ -3293,7 +3293,9 @@ namespace {
                             };
                             im.alt.locDos.run(addLang);
                             text += ")";
-                            needLocale = true;
+                            // Need locale, but only when Windows' common locale is absent
+                            if (im.alt.winCommon == 0)
+                                needLocale = true;
                         }
                     }
                     if (im.alt.winCommon) {

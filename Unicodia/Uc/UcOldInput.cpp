@@ -1039,9 +1039,9 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         rmDosEl.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::EL]);
         rmDosTr.query(cp, r.alt.dosCommon, r.alt.locDos[DosLang::TR]);
         // Windows encoding
-        rmWinEn.query(cp, 0, r.alt.locWin[WinLang::EN]);
-        rmWinRu.query(cp, 0, r.alt.locWin[WinLang::RU]);
-        rmWinEl.query(cp, 0, r.alt.locWin[WinLang::EL]);
+        rmWinEn.oldQuery(cp, r.alt.locWin[WinLang::EN]);
+        rmWinRu.oldQuery(cp, r.alt.locWin[WinLang::RU]);
+        rmWinEl.oldQuery(cp, r.alt.locWin[WinLang::EL]);
         r.alt.winCommon = r.alt.locWin.strongSingleCode();
         if (r.alt.winCommon != 0)
             r.alt.locWin.clear();
