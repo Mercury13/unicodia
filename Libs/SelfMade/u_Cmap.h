@@ -196,7 +196,7 @@ public:
     bool query(K1 k, unsigned char commonValue, unsigned char& v) const;
 private:
     static_assert(N <= 256);
-    unsigned BASE = 256 - N;
+    static constexpr unsigned BASE = 256 - N;
     K revMap [N];
 };
 
